@@ -102,7 +102,12 @@ function ShapeSvg({shapeType, strokeColor, backgroundColor}: ShapeSvgProps) {
   return null;
 }
 
-function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
+function ShapeNode({
+  id,
+  data,
+  selected,
+  isConnectable,
+}: NodeProps<ShapeNodeType>) {
   const readOnly = useSketchLabReadOnly();
   const {updateNodeData} = useReactFlow();
   const pushSnapshot = usePushSnapshot();
@@ -247,7 +252,11 @@ function ShapeNode({id, data, selected}: NodeProps<ShapeNodeType>) {
         </div>
       </div>
 
-      <ConnectionHandles visible={showHandles} shapeType={shapeType} />
+      <ConnectionHandles
+        visible={showHandles}
+        isConnectable={isConnectable}
+        shapeType={shapeType}
+      />
     </div>
   );
 }

@@ -12,7 +12,7 @@ Scenario: Stage Locking Dialog
   Then I open the lesson lock dialog
   And I see no difference for "stage lock dialog"
   Then I unlock the lesson for students
-  And I wait until element ".modal-backdrop" is gone
+  And I wait until element "[role='dialog']" is not visible
   And I scroll our lockable lesson into view
   And I see no difference for "course overview for authorized teacher"
   And I close my eyes
@@ -29,7 +29,7 @@ Scenario: Readonly view does not show teacher only boxes
   And I open the lesson lock dialog for lockable lesson 3
   # need to open lesson lock dialog for right lesson
   And I show lesson answers for students
-  And I wait until element ".modal-backdrop" is gone
+  And I wait until element "[role='dialog']" is not visible
 
   # now unlocked/submitted for student
 
@@ -67,7 +67,7 @@ Scenario: Lock settings for students in survey
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the lesson lock dialog
   And I unlock the lesson for students
-  And I wait until element ".modal-backdrop" is gone
+  And I wait until element "[role='dialog']" is not visible
 
   # now unlocked/not tried for student
 
@@ -100,7 +100,7 @@ Scenario: Lock settings for students in survey
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the lesson lock dialog
   And I show lesson answers for students
-  And I wait until element ".modal-backdrop" is gone
+  And I wait until element "[role='dialog']" is not visible
 
   # now unlocked/submitted for student
 
@@ -138,7 +138,7 @@ Scenario: Lock settings for students who never submit
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the lesson lock dialog
   And I unlock the lesson for students
-  And I wait until element ".modal-backdrop" is gone
+  And I wait until element "[role='dialog']" is not visible
 
   # now unlocked/not tried for student
 
@@ -158,7 +158,7 @@ Scenario: Lock settings for students who never submit
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the lesson lock dialog
   And I show lesson answers for students
-  And I wait until element ".modal-backdrop" is gone
+  And I wait until element "[role='dialog']" is not visible
 
   # now unlocked/not submitted for student
 

@@ -15,8 +15,8 @@ class TeacherApplicationMailerTest < ActionMailer::TestCase
     end
     assert email.to.include?(@application_with_partner.user.email)
     assert email.subject.include?(@regional_partner.name)
-    assert_equal @regional_partner.contact_email, email['reply-to']
-    assert_equal "\"Code.org\" <noreply@code.org>", email['from'].to_s
+    assert_nil email['reply-to']
+    assert_equal "CodeAI <noreply@code.org>", email['from'].to_s
   end
 
   test 'confirmation email sends without regional partner' do
@@ -25,7 +25,7 @@ class TeacherApplicationMailerTest < ActionMailer::TestCase
       email.deliver_now
     end
     assert email.to.include?(@application_without_partner.user.email)
-    assert email.subject.include?('We\'ve received your application for Code.org\'s Professional Learning Program!')
+    assert email.subject.include?('We\'ve received your application for CodeAI\'s Professional Learning Program!')
     assert_includes email.from, "teacher@code.org"
   end
 
@@ -36,8 +36,8 @@ class TeacherApplicationMailerTest < ActionMailer::TestCase
     end
     assert email.to.include?(@application_with_partner.user.email)
     assert email.subject.include?('Your Administrator/School Leader has approved your application')
-    assert_equal @regional_partner.contact_email, email['reply-to']
-    assert_equal "\"Code.org\" <noreply@code.org>", email['from'].to_s
+    assert_nil email['reply-to']
+    assert_equal "CodeAI <noreply@code.org>", email['from'].to_s
   end
 
   test 'admin approval teacher receipt email sends without regional partner' do
@@ -58,7 +58,7 @@ class TeacherApplicationMailerTest < ActionMailer::TestCase
     end
     assert email.to.include?(@application_with_partner.user.email)
     assert email.subject.include?('Congratulations from')
-    assert_equal @regional_partner.contact_email, email['reply-to']
-    assert_equal "\"Code.org\" <noreply@code.org>", email['from'].to_s
+    assert_nil email['reply-to']
+    assert_equal "CodeAI <noreply@code.org>", email['from'].to_s
   end
 end

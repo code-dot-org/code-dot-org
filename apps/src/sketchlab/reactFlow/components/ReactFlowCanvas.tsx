@@ -93,6 +93,11 @@ function stripDisplayFields<T extends object>(item: T): T {
   delete result.domAttributes;
   delete result.className;
   delete result.selected;
+  // draggable/connectable/deletable are derived from data.locked/readOnly at render
+  // time.
+  delete result.draggable;
+  delete result.connectable;
+  delete result.deletable;
   return result as T;
 }
 
@@ -478,11 +483,11 @@ export default function ReactFlowCanvas({
         return {
           ...node,
           selected,
-          ...(locked && {
-            draggable: false,
-            connectable: false,
-            deletable: false,
-          }),
+          // Derive draggable/connectable/deletable from locked/read-only state
+          draggable: !locked && !readOnly,
+          deletable: !locked && !readOnly,
+          // Nodes are still connectable when locked, but not in read-only
+          connectable: !readOnly,
           // Override React Flow's default "{type} node" aria-label on the
           // wrapper div for line anchors so it reads as "Line endpoint" instead
           // of "Line endpoint node".
@@ -503,7 +508,7 @@ export default function ReactFlowCanvas({
         return {
           ...edge,
           selected,
-          ...(locked && {deletable: false}),
+          deletable: !locked && !readOnly,
           ariaLabel: getEdgeLabel(
             edge,
             nodeMap,

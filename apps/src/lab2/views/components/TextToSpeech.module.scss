@@ -1,18 +1,17 @@
-@import '../../../mixins.scss';
+@use '@cdo/apps/mixins.scss' as mixins;
 
 .playButton {
-  @include remove-button-styles;
-  opacity: 35%;
+  @include mixins.remove-button-styles;
+  @include mixins.focus-styles;
+  border-radius: 4px;
   cursor: pointer;
-  transition: opacity 0.2s ease;
-  color: var(--text-neutral-primary);
+  color: var(--text-neutral-quaternary);
+  transition: color 0.2s ease;
 
-  &Playing {
-    opacity: 100%;
-  }
-
-  &:hover {
-    opacity: 100%;
+  &Playing,
+  &:hover,
+  &:focus-visible {
+    color: var(--text-neutral-primary);
   }
 }
 

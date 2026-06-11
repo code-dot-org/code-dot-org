@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -10,7 +11,6 @@ import {
   BubbleSize,
   BubbleShape,
 } from '@cdo/apps/templates/progress/BubbleFactory';
-import color from '@cdo/apps/util/color';
 
 describe('BubbleBadge', () => {
   it('renders an AssessmentBadge for BadgeType.assessment', () => {
@@ -81,7 +81,9 @@ describe('BubbleBadge', () => {
   describe('KeepWorkingBadge', () => {
     it('has a red background', () => {
       const wrapper = mount(<KeepWorkingBadge />);
-      expect(wrapper.find('div').props().style.backgroundColor).toBe(color.red);
+      expect(wrapper.find('div').props().style.backgroundColor).toBe(
+        'var(--background-error-primary)'
+      );
     });
   });
 
@@ -90,22 +92,36 @@ describe('BubbleBadge', () => {
       const wrapper = mount(<AssessmentBadge />);
       expect(
         wrapper
-          .find('FontAwesome[icon="circle"]')
-          .filterWhere(n => n.prop('iconStyle') !== 'regular')
+          .find(FontAwesomeV6Icon)
+          .filterWhere(
+            n =>
+              n.prop('iconName') === 'circle' &&
+              n.prop('iconStyle') !== 'regular'
+          )
           .props().style.color
-      ).toBe(color.purple);
+      ).toBe('var(--text-brand-purple-primary)');
     });
 
     it('has a check icon', () => {
       const wrapper = mount(<AssessmentBadge />);
-      expect(wrapper.find('FontAwesome[icon="check"]')).toHaveLength(1);
+      expect(
+        wrapper
+          .find(FontAwesomeV6Icon)
+          .filterWhere(n => n.prop('iconName') === 'check')
+      ).toHaveLength(1);
     });
 
     describe('displays a white border when hasWhiteBorder is true', () => {
       it('has a exclamation icon', () => {
         const wrapper = mount(<AssessmentBadge hasWhiteBorder={true} />);
         expect(
-          wrapper.find('FontAwesome[icon="circle"][iconStyle="regular"]')
+          wrapper
+            .find(FontAwesomeV6Icon)
+            .filterWhere(
+              n =>
+                n.prop('iconName') === 'circle' &&
+                n.prop('iconStyle') === 'regular'
+            )
         ).toHaveLength(1);
       });
     });

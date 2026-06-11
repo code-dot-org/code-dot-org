@@ -1,12 +1,12 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
+import {Button as MuiButton} from '@mui/material';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import ReactTooltip from 'react-tooltip';
 
 import {toggleHiddenLesson} from '@cdo/apps/code-studio/hiddenLessonRedux';
-import Button from '@cdo/apps/legacySharedComponents/Button';
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {getStore} from '@cdo/apps/redux';
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 import i18n from '@cdo/locale';
@@ -24,29 +24,46 @@ function toggleHiddenLessons(unitName, sectionId, lessons, hidden) {
 }
 
 function BulkLessonVisibilityToggle({lessons, sectionId, unitName}) {
-  const tooltipId = _.uniqueId();
+  const tooltipId = _.uniqueId('bulk-lesson-visibility-tip-');
 
   return (
     <div className={style.container}>
-      <Button
-        text={i18n.showAllLessons()}
-        icon="eye"
-        iconStyleProp="regular"
-        color={Button.ButtonColor.gray}
+      <MuiButton
+        variant="outlined"
+        color="secondary"
+        size="small"
+        startIcon={<FontAwesomeV6Icon iconName="eye" iconStyle="regular" />}
         onClick={() => toggleHiddenLessons(unitName, sectionId, lessons, false)}
-      />
-      <Button
-        text={i18n.hideAllLessons()}
-        icon="eye-slash"
-        color={Button.ButtonColor.gray}
+      >
+        {i18n.showAllLessons()}
+      </MuiButton>
+      <MuiButton
+        variant="outlined"
+        color="secondary"
+        size="small"
+        startIcon={<FontAwesomeV6Icon iconName="eye-slash" />}
         onClick={() => toggleHiddenLessons(unitName, sectionId, lessons, true)}
-      />
-      <span data-tip data-for={tooltipId}>
-        <FontAwesome icon="circle-info" className={style.infoTipIcon} />
-      </span>
-      <ReactTooltip id={tooltipId} effect="solid">
-        <p>{i18n.bulkLessonVisibilityToggleTip()}</p>
-      </ReactTooltip>
+      >
+        {i18n.hideAllLessons()}
+      </MuiButton>
+      <WithTooltip
+        tooltipProps={{
+          text: i18n.bulkLessonVisibilityToggleTip(),
+          size: 's',
+          tooltipId,
+        }}
+      >
+        <button
+          type="button"
+          aria-label={i18n.bulkLessonVisibilityToggleTip()}
+          className={style.infoTipButton}
+        >
+          <FontAwesomeV6Icon
+            iconName="circle-info"
+            className={style.infoTipIcon}
+          />
+        </button>
+      </WithTooltip>
     </div>
   );
 }

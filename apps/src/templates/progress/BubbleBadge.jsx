@@ -1,10 +1,8 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import color from '@cdo/apps/util/color';
 import {makeEnum} from '@cdo/apps/utils';
-
-import FontAwesome from '../../legacySharedComponents/FontAwesome';
 
 import {BubbleSize, BubbleShape} from './BubbleFactory';
 
@@ -81,18 +79,22 @@ KeepWorkingBadge.propTypes = {
 export function AssessmentBadge() {
   return (
     <span className="fa-stack" style={styles.container}>
-      <FontAwesome
-        icon="circle"
+      <FontAwesomeV6Icon
+        iconName="circle"
         className="fa-stack-2x"
         style={styles.purple}
       />
-      <FontAwesome
-        icon="circle"
+      <FontAwesomeV6Icon
+        iconName="circle"
         iconStyle="regular"
         className="fa-stack-2x"
         style={styles.white}
       />
-      <FontAwesome icon="check" className="fa-stack-1x" style={styles.white} />
+      <FontAwesomeV6Icon
+        iconName="check"
+        className="fa-stack-1x"
+        style={styles.white}
+      />
     </span>
   );
 }
@@ -116,10 +118,10 @@ const styles = {
     right: -17,
   },
   purple: {
-    color: color.purple,
+    color: 'var(--text-brand-purple-primary)',
   },
   white: {
-    color: color.white,
+    color: 'var(--text-neutral-inverse)',
   },
   keepWorkingSmallBadgePosition: {
     position: 'absolute',
@@ -133,7 +135,7 @@ const styles = {
   },
   keepWorkingBadge: {
     borderRadius: '50%',
-    backgroundColor: color.red,
+    backgroundColor: 'var(--background-error-primary)',
   },
   keepWorkingBadgeFullSize: {
     width: 10,

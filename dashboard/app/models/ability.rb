@@ -97,7 +97,17 @@ class Ability
       can :create, Activity, user_id: user.id
       can :create, UserLevel, user_id: user.id
       can :update, UserLevel, user_id: user.id
-      can :create, StudentWorkEvaluation, user_id: user.id
+      can :create, StudentWorkEvaluation do |evaluation|
+        evaluation.requester_id == user.id &&
+          (
+            evaluation.student_id == user.id ||
+            (
+              !user.student? &&
+              user.students.exists?(id: evaluation.student_id) &&
+              !Policies::DemoSections.demo_student?(evaluation.student_id)
+            )
+          )
+      end
       can :create, StudentWorkEvaluationSummary
       can :create, UserLevelInteraction, user_id: user.id
       can :create, Follower, student_user_id: user.id
@@ -203,9 +213,6 @@ class Ability
         can :manage, Follower
         can :manage, UserLevel do |user_level|
           !user.students.where(id: user_level.user_id).empty? && !Policies::DemoSections.demo_student?(user_level.user_id)
-        end
-        can :create, UserLevelEvaluation do |ule|
-          !user.students.where(id: ule.user_id).empty? && !Policies::DemoSections.demo_student?(ule.user_id)
         end
         can :read, Plc::UserCourseEnrollment, user_id: user.id
         can :view_level_solutions, Unit do |script|
