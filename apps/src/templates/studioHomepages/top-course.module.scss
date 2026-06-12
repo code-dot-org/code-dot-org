@@ -1,23 +1,22 @@
-@import 'color';
 @import 'style-constants';
 
 .card {
     overflow: hidden;
     border-width: 1px;
     border-style: solid;
-    border-color: $light_gray_200;
+    border-color: var(--borders-neutral-primary);
     position: relative;
     height: 200px;
     width: $content-width;
     margin-bottom: 20px;
-    background-color: $neutral_light;
+    background-color: var(--background-neutral-secondary);
 }
 
 .header {
     position: absolute;
     width: $content-width;
     height: 80px;
-    background-color: $brand_primary_default;
+    background-color: var(--background-brand-teal-primary);
 }
 
 .name {
@@ -27,7 +26,7 @@
     padding-right: 25px;
     margin-top: 15px;
     font-size: 30px;
-    color: $neutral_white;
+    color: var(--text-neutral-white-fixed);
     width: $content-width - 35;
     z-index: 2;
     position: absolute;
@@ -45,7 +44,7 @@
     margin-top: 80px;
     font-size: 14px;
     line-height: 1.5;
-    color: $neutral_dark;
+    color: var(--text-neutral-primary);
     width: 65%;
     box-sizing: border-box;
     position: absolute;
