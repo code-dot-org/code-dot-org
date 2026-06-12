@@ -28,13 +28,13 @@ trap 'echo "WARNING: Playwright e2e tests failed (non-blocking)"' ERR
 echo "--- running Playwright e2e tests against $TARGET_URL (non-blocking) ---"
 
 yarn install --immutable
-# In CI (Drone) the browsers are baked into the image, so skip the install —
-# re-running install-deps hits apt every build, a needless flake/hang source.
-# Off CI (the DTT daemon) install them at runtime; install-deps needs root/apt,
-# so guard it best-effort. $CI is the repo's CI signal (prepare_ci_env.sh sets
-# it; CI::Utils.running_on_ci? reads it).
+# Skip in CI (browsers are baked into the Drone image). On the DTT daemon, make
+# sure the pinned build is present: `playwright install` is version-aware, so it's
+# a fast no-op when it's already there and only fetches after a version bump.
+# We don't run `install-deps` here — it hits apt every run (root, network, can
+# hang) for OS libs that rarely change; provision those once on the daemon with
+# `sudo yarn exec playwright install-deps`.
 if [ -z "${CI:-}" ]; then
-  yarn exec playwright install-deps chromium firefox webkit || echo "WARN: playwright install-deps failed; continuing"
   yarn exec playwright install chromium firefox webkit
 fi
 yarn run test:ui:ci

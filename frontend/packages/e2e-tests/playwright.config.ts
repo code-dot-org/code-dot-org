@@ -1,6 +1,10 @@
 import {defineConfig, devices} from '@playwright/test';
 
 const isCI = !!process.env.CI;
+// Drone sets CI; the DTT daemon doesn't — but both run `yarn test:ui:ci`, which
+// sets PLAYWRIGHT_CI. Gate the report artifacts on this, not isCI, to cover both
+// lanes. Local runs (`test:ui:local`) set neither and stay lean.
+const isAutomated = isCI || !!process.env.PLAYWRIGHT_CI;
 const htmlReport = {outputFolder: 'playwright-report', open: 'never'} as const;
 
 /**
@@ -25,14 +29,14 @@ export default defineConfig({
   // since Playwright 1.42; use {tag: '@no_ci'} in test definitions, not title embedding.
   grepInvert: isCI ? /@no_ci/ : undefined,
   workers: isCI ? '100%' : undefined,
-  // 'list' streams per-test pass/fail to the console. Essential while the suite
-  // runs non-blocking in Drone/DTT: failures don't fail the job, so the live log
-  // is the only place they surface unless you open the uploaded HTML report.
-  reporter: isCI
+  // 'list' always streams pass/fail to the live log — the only place failures show
+  // while the suite runs non-blocking. 'html' (uploaded + linked in Slack) and
+  // 'json' (the #infra-test summary) are CI/DTT-only; local stays list-only.
+  reporter: isAutomated
     ? [
         ['list'],
         ['html', htmlReport],
-        ['junit', {outputFile: 'test-results/junit.xml'}],
+        ['json', {outputFile: 'test-results/results.json'}],
       ]
     : 'list',
   timeout: 90_000,
