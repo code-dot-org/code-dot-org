@@ -39,7 +39,10 @@ COPY --chown=${UID} \
   ./dashboard/engines/*/lib/*/version.rb \
   ./
 
-RUN --mount=type=cache,sharing=locked,uid=${UID},gid=${GID},target=${HOME}/.rbenv/versions/3.0.5/lib/ruby/gems/3.0.0/cache <<EOF
+# NOTE: the gem cache path must track .ruby-version: versions/<full> and
+# gems/<major.minor.0>. Update both when bumping Ruby or the mount silently
+# stops caching (it mounts at a dead path, bundle install still works, just slow).
+RUN --mount=type=cache,sharing=locked,uid=${UID},gid=${GID},target=${HOME}/.rbenv/versions/3.2.11/lib/ruby/gems/3.2.0/cache <<EOF
   bundle install --jobs 8 --quiet
 EOF
 
@@ -132,6 +135,10 @@ COPY --chown=${UID} --link \
 # grunt exec:generateSharedConstants => bundle exec ./script/generateSharedConstants.rb => (lib/cdo/shared_constants.rb, lib/cdo/shared_constants/**)
 # grunt exec:generateRegionConfigurations => bundle exec ./script/generateRegionConfigurations.rb => (lib/cdo.rb, lib/cdo/global_edition.rb)
 COPY --chown=${UID} ./lib/ ./lib/
+
+# shared_constants.rb requires the repo-root deployment.rb to bootstrap CDO and
+# $LOAD_PATH before requiring cdo/i18n (PR #72278).
+COPY --chown=${UID} ./deployment.rb ./
 
 # grunt exec:convertScssVars => ./script/convert-scss-variables.js
 COPY --chown=${UID} ./shared/css/ ./shared/css/
@@ -227,17 +234,20 @@ COPY --chown=${UID} --link \
   --from=code-dot-org-uv-sync ${HOME}/.local/share/uv \
   ${HOME}/.local/share/uv
 
-# Link in the full JS build layer, includes:
-# - `yarn build` output
+# Link in the JS build layer from ${SRC}, includes:
+# - `yarn build` output (apps/build/package, served via the public/blockly symlink)
 # - installed npm / yarn packages (node_modules)
-# - weirdly, rbenv gets added here because its required by this step, and more perf to link once
+#
+# Copy ${SRC}/ (not /): `COPY <dir> <dest>` copies the CONTENTS of <dir>, so
+# `COPY / ./` would place the `code-dot-org` dir *inside* ${SRC}, nesting the
+# whole tree at ${SRC}/code-dot-org and leaving the blockly symlink dangling.
 COPY --chown=${UID} --link \
-  --from=code-dot-org-yarn-build / \
+  --from=code-dot-org-yarn-build ${SRC}/ \
   ./
 
-# Re-apply the bundle-install rbenv tree directly for runtime.
-# Copying the full yarn-build filesystem is not preserving the installed bundle
-# correctly in the final image, which breaks `bundle exec rails` in mimic.
+# rbenv lives outside ${SRC} (under ${HOME}), so the copy above does not include
+# it. Re-apply the bundle-install rbenv tree directly for runtime; this is also
+# what makes `bundle exec rails` work in mimic.
 COPY --chown=${UID} --link \
   --from=code-dot-org-bundle-install ${HOME}/.rbenv \
   ${HOME}/.rbenv
