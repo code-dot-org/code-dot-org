@@ -26,16 +26,16 @@ class AuthenticationOption < ApplicationRecord
   export_to_analytics
 
   data_classification(
-    id: :confidential,
-    email: :confidential,
-    hashed_email: :confidential,
-    credential_type: :confidential,
-    authentication_id: :confidential,
-    data: :confidential,
-    deleted_at: :confidential,
-    user_id: :confidential,
-    created_at: :confidential,
-    updated_at: :confidential,
+    id: :restricted,
+    email: :restricted,
+    hashed_email: :restricted,
+    credential_type: :restricted,
+    authentication_id: :restricted,
+    data: :highly_restricted,
+    deleted_at: :restricted,
+    user_id: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
     version: :restricted,
   )
 
