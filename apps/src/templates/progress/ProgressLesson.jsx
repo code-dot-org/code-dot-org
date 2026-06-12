@@ -214,11 +214,10 @@ class ProgressLesson extends React.Component {
                 {viewAs === ViewType.Participant &&
                   lesson.student_lesson_plan_html_url && (
                     <MuiButton
-                      size="small"
                       className="ui-test-lesson-resources"
                       href={lesson.student_lesson_plan_html_url}
-                      variant="outlined"
-                      color="secondary"
+                      variant="contained"
+                      color="white"
                       target="_blank"
                       rel="noopener noreferrer"
                       startIcon={<FontAwesomeV6Icon iconName="file-lines" />}
@@ -232,9 +231,8 @@ class ProgressLesson extends React.Component {
                   ) && (
                     <MuiButton
                       href={lesson.lessonTutorPath}
-                      variant="outlined"
-                      color="secondary"
-                      size="small"
+                      variant="contained"
+                      color="white"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={this.handleLessonTutorClick}
@@ -287,7 +285,7 @@ const styles = {
     display: 'table',
     width: '100%',
     height: '100%',
-    background: 'var(--background-neutral-primary)',
+    background: 'var(--background-neutral-secondary)',
     borderColor: 'var(--borders-neutral-primary)',
     borderStyle: 'solid',
     borderRadius: 2,
