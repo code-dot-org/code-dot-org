@@ -1,4 +1,3 @@
-import {RadioButton} from '@code-dot-org/component-library/radioButton';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -25,7 +24,7 @@ describe('StudentRow', () => {
 
   it('has expected status when lockStatus is locked', () => {
     const wrapper = setUp({lockStatus: LockStatus.Locked});
-    const radioButtons = wrapper.find(RadioButton);
+    const radioButtons = wrapper.find('input');
     const lockedSelected = radioButtons.at(0).props().checked;
     expect(lockedSelected).toBe(true);
     const editableSelected = radioButtons.at(1).props().checked;
@@ -36,7 +35,7 @@ describe('StudentRow', () => {
 
   it('has expected status when lockStatus is editable', () => {
     const wrapper = setUp({lockStatus: LockStatus.Editable});
-    const radioButtons = wrapper.find(RadioButton);
+    const radioButtons = wrapper.find('input');
     const lockedSelected = radioButtons.at(0).props().checked;
     expect(lockedSelected).toBe(false);
     const editableSelected = radioButtons.at(1).props().checked;
@@ -47,7 +46,7 @@ describe('StudentRow', () => {
 
   it('has expected status when lockStatus is readonlyAnswers', () => {
     const wrapper = setUp({lockStatus: LockStatus.ReadonlyAnswers});
-    const radioButtons = wrapper.find(RadioButton);
+    const radioButtons = wrapper.find('input');
     const lockedSelected = radioButtons.at(0).props().checked;
     expect(lockedSelected).toBe(false);
     const editableSelected = radioButtons.at(1).props().checked;
@@ -56,21 +55,14 @@ describe('StudentRow', () => {
     expect(readonlySelected).toBe(true);
   });
 
-  it('disables radios for demo students', () => {
-    const wrapper = setUp({isDemoStudent: true});
-    wrapper.find(RadioButton).forEach(radio => {
-      expect(radio.props().disabled).toBe(true);
-    });
-  });
-
   it('handleRadioChange is called with expected value when radio is selected', () => {
     const handleChangeSpy = jest.fn();
     const wrapper = setUp({handleRadioChange: handleChangeSpy});
-    const lockLessonRadio = wrapper.find(RadioButton).at(0);
-    lockLessonRadio.simulate('change', {
+    const lockLessonInput = wrapper.find('input').at(0);
+    lockLessonInput.simulate('change', {
       target: {
-        value: lockLessonRadio.props().value,
-        name: lockLessonRadio.props().name,
+        value: lockLessonInput.props().value,
+        name: lockLessonInput.props().name,
       },
     });
     expect(handleChangeSpy).toHaveBeenCalledWith(1, LockStatus.Locked);

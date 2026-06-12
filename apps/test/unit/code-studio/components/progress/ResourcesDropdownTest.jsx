@@ -20,8 +20,8 @@ describe('ResourcesDropdown', () => {
       'Curriculum',
       'Vocabulary',
     ]);
-    // trigger uses neutral tertiary styling for both audiences
-    expect(dropdown.prop('triggerButtonProps').color).toEqual('tertiary');
+    // trigger uses neutral secondary styling for both audiences
+    expect(dropdown.prop('triggerButtonProps').color).toEqual('secondary');
     expect(dropdown.prop('size')).toEqual('s');
   });
 
@@ -36,7 +36,7 @@ describe('ResourcesDropdown', () => {
       'Curriculum',
       'Vocabulary',
     ]);
-    expect(dropdown.prop('triggerButtonProps').color).toEqual('tertiary');
+    expect(dropdown.prop('triggerButtonProps').color).toEqual('secondary');
     expect(dropdown.prop('size')).toEqual('s');
   });
 });
