@@ -20,4 +20,16 @@ export class BasePage {
   async waitForLocaleDropdownVisible(): Promise<void> {
     await expect(this.localeDropdown).toBeVisible();
   }
+
+  /**
+   * Switch Global Edition region via the ?ge_region=<code> override, which the
+   * Rails Global Edition middleware honors on any path. Waits for the /<code>/
+   * URL prefix.
+   */
+  async switchToGlobalEditionRegion(regionCode: string): Promise<void> {
+    const url = new URL(this.page.url());
+    url.searchParams.set('ge_region', regionCode);
+    await this.page.goto(url.toString());
+    await expect(this.page).toHaveURL(new RegExp(`/${regionCode}/`));
+  }
 }

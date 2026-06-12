@@ -1,4 +1,4 @@
-@chrome
+@chrome @playwright
 @no_mobile
 Feature: Global Edition - Farsi MVP - Teacher Dashboard
 
