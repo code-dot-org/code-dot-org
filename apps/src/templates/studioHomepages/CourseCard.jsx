@@ -6,8 +6,6 @@ import {connect} from 'react-redux';
 import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
 
-import color from '../../util/color';
-
 /**
  * A card used on the homepage to display information about a particular course
  * or script for a user.
@@ -49,19 +47,19 @@ const styles = {
     overflow: 'hidden',
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: color.neutral_dark20,
+    borderColor: 'var(--borders-neutral-primary)',
     position: 'relative',
     height: 245,
     width: 473,
     float: 'left',
     marginBottom: 20,
-    backgroundColor: color.neutral_light,
+    backgroundColor: 'var(--background-neutral-secondary)',
   },
   header: {
     position: 'absolute',
     width: 473,
     height: 130,
-    backgroundColor: color.brand_primary_default,
+    backgroundColor: 'var(--background-brand-teal-primary)',
   },
   title: {
     paddingTop: 10,
@@ -69,7 +67,7 @@ const styles = {
     marginTop: 15,
     fontSize: 20,
     ...fontConstants['main-font-regular'],
-    color: color.white,
+    color: 'var(--text-neutral-white-fixed)',
     zIndex: 2,
     position: 'absolute',
     display: 'inline',
@@ -82,7 +80,7 @@ const styles = {
     marginTop: 15,
     fontSize: 20,
     ...fontConstants['main-font-regular'],
-    color: color.white,
+    color: 'var(--text-neutral-white-fixed)',
     zIndex: 2,
     position: 'absolute',
     display: 'inline',
@@ -98,38 +96,13 @@ const styles = {
     fontSize: 14,
     lineHeight: 1.5,
     ...fontConstants['main-font-regular'],
-    color: color.neutral_dark,
-    background: color.neutral_light,
+    color: 'var(--text-neutral-primary)',
+    background: 'var(--background-neutral-secondary)',
     height: 130,
     width: '100%',
     boxSizing: 'border-box',
     position: 'absolute',
     zIndex: 2,
-  },
-  continueLink: {
-    color: color.teal,
-    fontSize: 14,
-    ...fontConstants['main-font-regular'],
-    marginTop: -5,
-    display: 'inline',
-  },
-  chevron: {
-    display: 'inline',
-    color: color.teal,
-    fontSize: 12,
-    fontWeight: 'bold',
-    marginLeft: 8,
-  },
-  chevronRtl: {
-    display: 'inline',
-    color: color.teal,
-    fontSize: 12,
-    fontWeight: 'bold',
-    marginRight: 8,
-  },
-  linkBox: {
-    display: 'block',
-    textDecoration: 'none',
   },
 };
 
