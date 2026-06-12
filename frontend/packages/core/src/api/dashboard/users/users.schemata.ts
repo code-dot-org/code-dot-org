@@ -1,49 +1,24 @@
-import {z} from 'zod';
 import camelcaseKeys from 'camelcase-keys';
+import {z} from 'zod';
 
-export const UserTypes = ['student', 'teacher'] as const;
+import {
+  CurrentUserResponseSignedInSchema,
+  CurrentUserResponseSignedOutSchema,
+} from './currentUserTypes';
 
-export const SignedInCurrentUserSchema = z
-  .object({
-    id: z.number(),
-    username: z.string(),
-    display_name: z.string(),
-    user_type: z.enum(UserTypes),
-    is_signed_in: z.literal(true),
-    short_name: z.string(),
-    is_verified_instructor: z.boolean(),
-    is_lti: z.boolean(),
-    mute_music: z.boolean(),
-    under_13: z.boolean(),
-    over_21: z.boolean(),
-    sort_by_family_name: z.boolean(),
-    ai_rubrics_disabled: z.boolean(),
-    progress_table_v2_closed_beta: z.boolean(),
-    ai_tutor_access_denied: z.boolean(),
-    has_seen_progress_table_v2_invitation: z.boolean(),
-    has_seen_homepage_welcome: z.boolean(),
-    has_dismissed_personalization_alert: z.boolean(),
-    date_progress_table_invitation_last_delayed: z.string(),
-    child_account_compliance_state: z.string(),
-    country_code: z.string(),
-    us_state_code: z.string(),
-    age: z.number(),
-    in_section: z.boolean().nullable(),
-    created_at: z.string(),
-    has_seen_ai_assessments_announcement: z.boolean(),
-    ai_differentiation_enabled: z.boolean(),
-    has_completed_ai_differentiation_welcome: z.boolean(),
-    educator_role: z.string(),
-    sharing_disabled: z.boolean(),
-    ai_tutor_enabled_for_pilot: z.boolean(),
-  })
-  .transform(data => camelcaseKeys(data, {deep: true}));
+// Camelcased views over the canonical /api/v1/users/current schemas in
+// currentUserTypes (the single source of truth for the endpoint's shape).
+// Deriving here, rather than re-declaring fields, keeps the two from drifting —
+// an earlier hand-copied duplicate had silently diverged from the endpoint.
+export const SignedInCurrentUserSchema =
+  CurrentUserResponseSignedInSchema.transform(data =>
+    camelcaseKeys(data, {deep: true}),
+  );
 
-export const SignedOutCurrentUserSchema = z
-  .object({
-    is_signed_in: z.literal(false),
-  })
-  .transform(data => camelcaseKeys(data, {deep: true}));
+export const SignedOutCurrentUserSchema =
+  CurrentUserResponseSignedOutSchema.transform(data =>
+    camelcaseKeys(data, {deep: true}),
+  );
 
 export const CurrentUserSchema = z.union([
   SignedInCurrentUserSchema,

@@ -11,12 +11,14 @@ import {useCallback} from 'react';
 
 import Header from '@code-dot-org/component-library/header';
 import {CdoTheme} from '@code-dot-org/component-library/themes';
+import {QueryClientProvider} from '@code-dot-org/core/api';
 
 import StudioFooter from '@/components/footer';
 import CdoLogo from '@/config/brand/assets/cdo-logo-inverse.webp';
-import {fetchAuthOutcome, useAuth} from '@/modules/auth';
+import {fetchAuthOutcome, primeCurrentUser, useAuth} from '@/modules/auth';
 import Bootstrap from '@/modules/bootstrap';
 import {AuthErrorPage} from '@/modules/errors';
+import {queryClient} from '@/modules/queryClient';
 
 /** Top-level navigation items shared across all routes. */
 const MENU_ITEMS = [
@@ -87,20 +89,28 @@ function RootContent() {
 /** Root layout: applies the CDO MUI theme and Bootstrap providers to all routes. */
 function RootLayout() {
   return (
-    <ThemeProvider theme={CdoTheme}>
-      <Bootstrap locale="en-US">
-        <RootContent />
-      </Bootstrap>
-    </ThemeProvider>
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider theme={CdoTheme}>
+        <Bootstrap locale="en-US">
+          <RootContent />
+        </Bootstrap>
+      </ThemeProvider>
+    </QueryClientProvider>
   );
 }
 
 /**
  * TanStack Router root route definition.
  * `beforeLoad` fetches auth once per navigation before any component renders,
- * eliminating the useEffect bootstrap pattern and StrictMode double-fetch.
+ * eliminating the useEffect bootstrap pattern and StrictMode double-fetch. The
+ * resolved user primes the shared query cache so feature modules read it via
+ * `useCurrentUser` without a second request (design D4).
  */
 export const Route = createRootRoute({
-  beforeLoad: async () => ({auth: await fetchAuthOutcome()}),
+  beforeLoad: async () => {
+    const auth = await fetchAuthOutcome();
+    primeCurrentUser(queryClient, auth);
+    return {auth};
+  },
   component: RootLayout,
 });
