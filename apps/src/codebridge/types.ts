@@ -58,6 +58,12 @@ export type OnRunFunction = (
 ) => Promise<void>;
 export type OnStopFunction = () => void;
 export type SendConsoleInputFunction = (input: string) => void;
+// Called after a file is deleted from the file browser, so labs can clean up
+// records backing the file (e.g. a level's starter-asset mapping).
+export type OnFileDeleteFunction = (file: ProjectFile) => void;
+// Called after a file is renamed in the file browser; `file` carries the old
+// name. Lets labs update records keyed by filename.
+export type OnFileRenameFunction = (file: ProjectFile, newName: string) => void;
 
 export type ReducerAction = {
   type: string;

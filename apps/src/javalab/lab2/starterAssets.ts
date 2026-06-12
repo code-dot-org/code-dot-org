@@ -8,8 +8,14 @@
 
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 
-import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {
+  MultiFileSource,
+  ProjectFile,
+  ProjectFileType,
+} from '@cdo/apps/lab2/types';
 import {getNextFileId} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 const STARTER_ASSETS_PATH = '/level_starter_assets/';
 
@@ -24,6 +30,36 @@ export function starterAssetUrl(levelName: string, uuidName: string): string {
 // live under /v3/assets/<channelId>/.
 export function isStarterAssetUrl(url: string): boolean {
   return url.startsWith(STARTER_ASSETS_PATH);
+}
+
+// Start-mode delete or rename of a starter-asset file: remove the file's
+// (old) friendly-name entry from the level's starter_assets mapping.
+// Otherwise mergeStarterAssets re-appends the stale name from the mapping
+// on the next load. The DELETE endpoint leaves the S3 object alone (other
+// levels may reference it) and is a no-op for names not in the mapping.
+// Renamed files keep working: their url is the mapping-independent uuid
+// route, and the run path derives assetUrls from the source entries.
+export async function removeStarterAssetMapping(
+  file: ProjectFile,
+  levelName: string,
+  isStartMode: boolean
+): Promise<void> {
+  if (!isStartMode || !file.url || !isStarterAssetUrl(file.url)) {
+    return;
+  }
+  try {
+    await HttpClient.delete(
+      `${STARTER_ASSETS_PATH}${encodeURIComponent(
+        levelName
+      )}/${encodeURIComponent(file.name)}`
+    );
+  } catch (error) {
+    // On failure the mapping entry goes stale and the asset re-appears in
+    // fresh seeds; nothing breaks, so just report it.
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError('Error removing starter asset mapping', error as Error);
+  }
 }
 
 // Append one STARTER file per mapping entry not already present by name.

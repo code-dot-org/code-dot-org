@@ -152,13 +152,12 @@ still on the TODO list. Differences from legacy use:
   inline for images, stripped into `assetUrls` server-side for
   Javabuilder. Legacy `starter_assets` levels seed their assets into the
   start sources. 
-  Known limitations: starter assets aren't locked yet (students can
-  rename/delete them; locking comes with locked-starter-files support),
-  and deleting a starter-asset image in start mode removes the source
-  entry but not the level's `starter_assets` mapping entry, so the asset
-  stays reachable at run time and reappears in fresh seeds (follow-up:
-  codebridge delete/rename hooks that call the starter-assets DELETE
-  endpoint).
+  Deleting or renaming a starter-asset file in start mode also removes
+  its (old) name from the level's `starter_assets` mapping (via the
+  codebridge `onFileDelete`/`onFileRename` hooks), so stale names don't
+  re-appear in fresh seeds.
+  Known limitation: starter assets aren't locked yet (students can
+  rename/delete them; locking comes with locked-starter-files support).
 
 ## To Dos
 - **Support locked starter files** you can lock starter files in start mode,

@@ -1,5 +1,5 @@
 import {RenameFileFunction} from '@codebridge/codebridgeContext/types';
-import {ProjectFile, FileId} from '@codebridge/types';
+import {OnFileRenameFunction, ProjectFile, FileId} from '@codebridge/types';
 import {validateFileNameForModal} from '@codebridge/utils';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
@@ -22,6 +22,7 @@ type RenameNewFilePromptArgsType = {
     eventName: string,
     payload?: Record<string, string>
   ) => void;
+  onFileRename?: OnFileRenameFunction;
 };
 
 export const openRenameFilePrompt = async ({
@@ -33,6 +34,7 @@ export const openRenameFilePrompt = async ({
   isStartMode,
   validationFile,
   validFileTypes,
+  onFileRename,
 }: RenameNewFilePromptArgsType) => {
   const file = projectFiles[fileId];
   const results = await dialogControl?.showDialog({
@@ -70,6 +72,9 @@ export const openRenameFilePrompt = async ({
 
   const newName = extractUserInput(results);
   renameFile(fileId, newName);
+  if (newName !== file.name) {
+    onFileRename?.(file, newName);
+  }
   sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_RENAME_FILE, {
     fileType: newName.split('.').pop()?.toLowerCase() || '',
   });

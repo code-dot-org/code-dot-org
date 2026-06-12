@@ -3,6 +3,7 @@ import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {
   isStarterAssetUrl,
   mergeStarterAssets,
+  removeStarterAssetMapping,
   starterAssetUrl,
 } from '@cdo/apps/javalab/lab2/starterAssets';
 import {
@@ -10,6 +11,11 @@ import {
   ProjectFile,
   ProjectFileType,
 } from '@cdo/apps/lab2/types';
+import HttpClient from '@cdo/apps/util/HttpClient';
+
+jest.mock('@cdo/apps/util/HttpClient', () => ({
+  delete: jest.fn().mockResolvedValue({}),
+}));
 
 const LEVEL_NAME = 'CSA Unit 1';
 
@@ -109,6 +115,65 @@ describe('javalab2 starterAssets', () => {
       const names = Object.values(merged.files).map(f => f.name);
       expect(names.sort()).toEqual(['cat.png', 'dog.png']);
       expect(merged.files['0'].url).toBeUndefined();
+    });
+  });
+
+  describe('removeStarterAssetMapping', () => {
+    beforeEach(() => {
+      (HttpClient.delete as jest.Mock).mockClear();
+    });
+
+    function starterAssetFile(name: string): ProjectFile {
+      return {
+        id: '0',
+        name,
+        contents: '',
+        folderId: DEFAULT_FOLDER_ID,
+        url: starterAssetUrl(LEVEL_NAME, 'uuid-1.png'),
+      };
+    }
+
+    it('removes the mapping entry for a starter-asset file in start mode', async () => {
+      await removeStarterAssetMapping(
+        starterAssetFile('cute dog.png'),
+        LEVEL_NAME,
+        /* isStartMode */ true
+      );
+      expect(HttpClient.delete).toHaveBeenCalledWith(
+        '/level_starter_assets/CSA%20Unit%201/cute%20dog.png'
+      );
+    });
+
+    it('does nothing outside start mode', async () => {
+      await removeStarterAssetMapping(
+        starterAssetFile('cat.png'),
+        LEVEL_NAME,
+        /* isStartMode */ false
+      );
+      expect(HttpClient.delete).not.toHaveBeenCalled();
+    });
+
+    it('does nothing for channel-asset or non-url files', async () => {
+      const channelAsset: ProjectFile = {
+        ...starterAssetFile('cat.png'),
+        url: '/v3/assets/abc123/uuid-1.png',
+      };
+      await removeStarterAssetMapping(channelAsset, LEVEL_NAME, true);
+      await removeStarterAssetMapping(
+        javaFile('1', 'Main.java'),
+        LEVEL_NAME,
+        true
+      );
+      expect(HttpClient.delete).not.toHaveBeenCalled();
+    });
+
+    it('does not throw when the request fails', async () => {
+      (HttpClient.delete as jest.Mock).mockRejectedValueOnce(
+        new Error('network')
+      );
+      await expect(
+        removeStarterAssetMapping(starterAssetFile('cat.png'), LEVEL_NAME, true)
+      ).resolves.toBeUndefined();
     });
   });
 });

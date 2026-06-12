@@ -70,4 +70,38 @@ describe('openConfirmDeleteFile', function () {
 
     expect(analyticsData.event).toBeUndefined();
   });
+
+  it('calls onFileDelete with the deleted file on confirm', async function () {
+    const [, sendLab2AnalyticsEvent] = getAnalyticsMock();
+    const fileId = '4';
+    const [, deleteFileDataMock] = getDeleteFileMock();
+    const onFileDelete = jest.fn();
+
+    await openConfirmDeleteFile({
+      file: testProject.files[fileId],
+      dialogControl: getDialogAlertMock('confirm'),
+      deleteFile: deleteFileDataMock,
+      sendLab2AnalyticsEvent,
+      onFileDelete,
+    });
+
+    expect(onFileDelete).toHaveBeenCalledWith(testProject.files[fileId]);
+  });
+
+  it('does not call onFileDelete on cancel', async function () {
+    const [, sendLab2AnalyticsEvent] = getAnalyticsMock();
+    const fileId = '1';
+    const [, deleteFileDataMock] = getDeleteFileMock();
+    const onFileDelete = jest.fn();
+
+    await openConfirmDeleteFile({
+      file: testProject.files[fileId],
+      dialogControl: getDialogAlertMock('cancel'),
+      deleteFile: deleteFileDataMock,
+      sendLab2AnalyticsEvent,
+      onFileDelete,
+    });
+
+    expect(onFileDelete).not.toHaveBeenCalled();
+  });
 });

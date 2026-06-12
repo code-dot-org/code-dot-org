@@ -8,6 +8,8 @@ import {setWidgetViewShowCode} from '@codebridge/redux/workspaceRedux';
 import {
   ConfigType,
   SetConfigFunction,
+  OnFileDeleteFunction,
+  OnFileRenameFunction,
   OnRunFunction,
   SendConsoleInputFunction,
   CodebridgeLevelProperties,
@@ -59,6 +61,8 @@ type CodebridgeProps = {
   secondaryBackpackAppNames?: AppName[];
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
   onAssetRemoved?: (asset: ChatAsset) => void;
+  onFileDelete?: OnFileDeleteFunction;
+  onFileRename?: OnFileRenameFunction;
   aiTutorInitialWelcomeMessage?: string;
   allowMultipleValidationFiles?: boolean;
 };
@@ -83,6 +87,8 @@ export const Codebridge = React.memo(
     secondaryBackpackAppNames,
     onAssetUploaded,
     onAssetRemoved,
+    onFileDelete,
+    onFileRename,
     aiTutorInitialWelcomeMessage,
     allowMultipleValidationFiles,
   }: CodebridgeProps) => {
@@ -240,6 +246,8 @@ export const Codebridge = React.memo(
           aiTutorDisabled,
           onAssetUploaded,
           onAssetRemoved,
+          onFileDelete,
+          onFileRename,
           aiTutorInitialWelcomeMessage,
           allowMultipleValidationFiles,
         }}

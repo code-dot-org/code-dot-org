@@ -7,14 +7,26 @@ import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {java} from '@codemirror/lang-java';
 import {json} from '@codemirror/lang-json';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useContext, useEffect, useMemo, useRef, useState} from 'react';
+import React, {
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import TestResultValidator from '@cdo/apps/lab2/progress/TestResultValidator';
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {setLoadedCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
-import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import {
+  LabProps,
+  MultiFileSource,
+  ProjectFile,
+  ProjectSources,
+} from '@cdo/apps/lab2/types';
 import {
   AppDispatch,
   useAppDispatch,
@@ -40,7 +52,7 @@ import {
   multiFileToFlat,
   splitForLevelbuilderSave,
 } from './sourceConverter';
-import {mergeStarterAssets} from './starterAssets';
+import {mergeStarterAssets, removeStarterAssetMapping} from './starterAssets';
 import {
   flatSourceFromLevelProperties,
   JavalabFlatSource,
@@ -209,6 +221,16 @@ const Javalab2View: React.FunctionComponent<
     };
   }, [channel?.id]);
 
+  // When a levelbuilder deletes or renames a starter-asset file in the
+  // tree, also drop its (old) name from the level's starter_assets mapping
+  // so the stale name doesn't re-appear in fresh seeds.
+  const onStarterAssetFileRemoved = useCallback(
+    (file: ProjectFile) => {
+      removeStarterAssetMapping(file, levelProperties.name, getIsStartMode());
+    },
+    [levelProperties.name]
+  );
+
   const onRun = async (
     runTests: boolean,
     dispatch: AppDispatch,
@@ -237,6 +259,8 @@ const Javalab2View: React.FunctionComponent<
           sendConsoleInput={sendJavaConsoleInput}
           levelProperties={codebridgeLevelProperties}
           allowMultipleValidationFiles={true}
+          onFileDelete={onStarterAssetFileRemoved}
+          onFileRename={onStarterAssetFileRemoved}
         />
       )}
     </div>

@@ -1,5 +1,5 @@
 import {DeleteFileFunction} from '@codebridge/codebridgeContext/types';
-import {ProjectFile} from '@codebridge/types';
+import {OnFileDeleteFunction, ProjectFile} from '@codebridge/types';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
@@ -14,6 +14,7 @@ type OpenConfirmDeleteFileArgsType = {
     eventName: string,
     payload?: Record<string, string>
   ) => void;
+  onFileDelete?: OnFileDeleteFunction;
 };
 
 // this is ~technically~ not a prompt in that it's merely a confirmation dialog,
@@ -23,6 +24,7 @@ export const openConfirmDeleteFile = async ({
   dialogControl,
   deleteFile,
   sendLab2AnalyticsEvent,
+  onFileDelete,
 }: OpenConfirmDeleteFileArgsType) => {
   const results = await dialogControl?.showDialog({
     type: DialogType.GenericConfirmation,
@@ -34,6 +36,7 @@ export const openConfirmDeleteFile = async ({
 
   if (results.type === 'confirm') {
     deleteFile({fileId: file.id});
+    onFileDelete?.(file);
     sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FILE, {
       fileType: getFileExtension(file.name),
     });
