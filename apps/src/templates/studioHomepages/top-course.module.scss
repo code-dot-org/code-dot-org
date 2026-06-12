@@ -10,6 +10,34 @@
     width: $content-width;
     margin-bottom: 20px;
     background-color: var(--background-neutral-secondary);
+
+    .title {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-top: 15px;
+        color: var(--text-neutral-inverse);
+        width: $content-width - 35;
+        z-index: 2;
+        position: absolute;
+        display: inline;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .description {
+        padding: 20px 25px 5px;
+        margin-top: 80px;
+        font-size: 14px;
+        line-height: 1.5;
+        color: var(--text-neutral-primary);
+        width: 65%;
+        box-sizing: border-box;
+        position: absolute;
+        z-index: 2;
+    }
 }
 
 .header {
@@ -17,38 +45,6 @@
     width: $content-width;
     height: 80px;
     background-color: var(--background-brand-teal-primary);
-}
-
-.name {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 25px;
-    padding-right: 25px;
-    margin-top: 15px;
-    font-size: 30px;
-    color: var(--text-neutral-white-fixed);
-    width: $content-width - 35;
-    z-index: 2;
-    position: absolute;
-    display: inline;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-.description {
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 20px;
-    padding-bottom: 5px;
-    margin-top: 80px;
-    font-size: 14px;
-    line-height: 1.5;
-    color: var(--text-neutral-primary);
-    width: 65%;
-    box-sizing: border-box;
-    position: absolute;
-    z-index: 2;
 }
 
 .details {

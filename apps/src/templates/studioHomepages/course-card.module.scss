@@ -1,0 +1,42 @@
+.card {
+    overflow: hidden;
+    border: 1px solid var(--borders-neutral-primary);
+    position: relative;
+    height: 245px;
+    width: 473px;
+    float: left;
+    margin-bottom: 20px;
+    background-color: var(--background-neutral-secondary);
+}
+
+.header {
+    position: absolute;
+    width: 473px;
+    height: 130px;
+    background-color: var(--background-brand-teal-primary);
+}
+
+.title {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    // padding-inline auto-flips for RTL (replaces the old isRtl prop).
+    padding-inline-start: 25px;
+    padding-inline-end: 10px;
+    margin-top: 15px;
+    color: var(--text-neutral-inverse);
+    z-index: 2;
+    position: absolute;
+    display: inline;
+}
+
+.description {
+    padding: 20px 25px 5px;
+    margin-top: 115px;
+    color: var(--text-neutral-primary);
+    background: var(--background-neutral-secondary);
+    height: 130px;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 2;
+}
