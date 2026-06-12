@@ -162,10 +162,11 @@ export default class VersionHistory extends React.Component {
           </MuiButton>
           <MuiButton
             type="button"
-            color="tertiary"
+            color="secondary"
             size="small"
             variant="outlined"
             id="again-button"
+            className={styles.cancelButton}
             style={{float: 'right'}}
             onClick={this.onCancelClearPuzzle}
           >

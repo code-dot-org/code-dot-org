@@ -2,6 +2,20 @@
   padding-right: 16px;
 }
 
+.cancelButton {
+  background-color: var(--background-neutral-primary) !important;
+  border-color: var(--borders-neutral-solid) !important;
+  color: var(--text-neutral-primary) !important;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--background-neutral-tertiary) !important;
+    border-color: var(--borders-neutral-solid) !important;
+    color: var(--text-neutral-primary) !important;
+  }
+}
+
 .viewVersionButton {
   &:hover,
   &:focus,
