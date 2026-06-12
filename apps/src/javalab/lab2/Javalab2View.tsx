@@ -41,7 +41,11 @@ import {
   splitForLevelbuilderSave,
 } from './sourceConverter';
 import {mergeStarterAssets} from './starterAssets';
-import {flatSourceFromLevelProperties, JavalabLevelProperties} from './types';
+import {
+  flatSourceFromLevelProperties,
+  JavalabFlatSource,
+  JavalabLevelProperties,
+} from './types';
 
 const javalabLangMapping: {[key: string]: LanguageSupport} = {
   java: java(),
@@ -103,11 +107,8 @@ const Javalab2View: React.FunctionComponent<
   }, [dispatch]);
 
   // Codebridge expects MultiFileSource, but legacy Java lab/Javabuilder expects a flat source.
-  // Convert here before passing to codebridge. Starter assets authored in
-  // legacy Java Lab exist only as the level's starterAssets mapping, so each
-  // conversion merges them in as url-backed files. Loaded projects are not
-  // merged — like any start-source change, assets reach a student's project
-  // only when it is seeded from the level (fresh load or start over).
+  // Convert here before passing to codebridge. Also merge in the level's starter assets
+  // when loading from the level rather than an active project.
   const codebridgeLevelProperties = useMemo<CodebridgeLevelProperties>(() => {
     const flatTemplate = flatSourceFromLevelProperties(
       levelProperties.templateSources
@@ -122,7 +123,7 @@ const Javalab2View: React.FunctionComponent<
       ? mergeValidationIntoStart(flatStartRaw, levelProperties.validation)
       : flatStartRaw;
 
-    const convert = (flat: ReturnType<typeof flatSourceFromLevelProperties>) =>
+    const includeStarterAsserts = (flat: JavalabFlatSource | undefined) =>
       flat
         ? mergeStarterAssets(
             flatToMultiFile(flat),
@@ -134,9 +135,9 @@ const Javalab2View: React.FunctionComponent<
     return {
       ...levelProperties,
       miniApp: labConfig?.miniApp?.name,
-      startSources: convert(flatStart),
-      templateSources: convert(flatTemplate),
-      exemplarSources: convert(flatExemplar),
+      startSources: includeStarterAsserts(flatStart),
+      templateSources: includeStarterAsserts(flatTemplate),
+      exemplarSources: includeStarterAsserts(flatExemplar),
     };
   }, [levelProperties, labConfig]);
 

@@ -24,7 +24,8 @@ function projectFileType(flat: JavalabFlatFile): ProjectFileType | undefined {
   if (!flat.isVisible) return ProjectFileType.SUPPORT;
   // Url-backed (asset) files stay untyped: lab2 treats typed url files as
   // levelbuilder-owned and skips the S3 delete + abuse unflag on removal
-  // (see getStudentFileAssetInfo).
+  // We validate whether a url-based file is levelbuilder owned separately,
+  // based on whether the url is a channel-based url or not (see getStudentFileAssetInfo).
   if (flat.url) return undefined;
   return ProjectFileType.STARTER;
 }

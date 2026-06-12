@@ -1,19 +1,17 @@
 // Bridges legacy Java Lab starter assets into the codebridge file tree.
 // Legacy levels store assets only as a level property mapping
-// {friendlyName => uuidName} with the bytes in S3; their start_sources have
-// no url-backed entries. Lab2 represents each asset as a ProjectFile with a
-// `url`, so we synthesize those entries from the mapping when converting the
-// level's sources. Projects loaded from S3 are never merged: like any other
-// start-source change, assets reach a student's project only when it is
-// seeded from the level (fresh load or start over).
+// {friendlyName => uuidName}, where the uuidName is the filename of an S3 asset in level_starter_assets.
+// Lab2 represents each asset as a ProjectFile with a`url`, so we synthesize those
+// entries from the mapping when converting the level's sources. Projects loaded
+// from S3 are never merged: like any other start-source change, assets reach a student's
+// project only when it is seeded from the level (fresh load or start over).
 
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import {getNextFileId} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 
-// The uuid route serves bytes straight from S3, independent of the level's
-// friendly-name mapping and of project templates, and is public.
+// Return the full url for a starter asset based on the level name and asset uuidName.
 export function starterAssetUrl(levelName: string, uuidName: string): string {
   return `/level_starter_assets/${encodeURIComponent(
     levelName

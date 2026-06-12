@@ -32,7 +32,7 @@ module JavalabFilesHelper
 
     # get main.json
     source_data = SourceBucket.new.get(channel_id, "main.json")
-    all_files["sources"]["main.json"] = strip_asset_entries(source_data[:body].string, all_files["assetUrls"])
+    all_files["sources"]["main.json"] = strip_and_extract_assets(source_data[:body].string, all_files["assetUrls"])
 
     # get level assets
     get_assets_for_channel(channel_id, all_files)
@@ -147,7 +147,7 @@ module JavalabFilesHelper
   # understands code files plus the assetUrls map, so pull those entries out
   # of the main.json blob and fold them into asset_urls. Blobs that aren't
   # the expected {source: {filename => {...}}} shape pass through untouched.
-  def self.strip_asset_entries(main_json, asset_urls)
+  def self.strip_and_extract_assets(main_json, asset_urls)
     parsed = JSON.parse(main_json)
     return main_json unless parsed.is_a?(Hash) && parsed["source"].is_a?(Hash)
     parsed["source"] = extract_asset_entries(parsed["source"], asset_urls)

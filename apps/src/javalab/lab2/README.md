@@ -147,8 +147,7 @@ still on the TODO list. Differences from legacy use:
   codebridge file browser in both student and start mode, displayed
   inline for images, stripped into `assetUrls` server-side for
   Javabuilder. Legacy `starter_assets` levels seed their assets into the
-  start sources (fresh load or start over only — saved projects aren't
-  retrofitted). Runtime use of the assets lands with the Theater port.
+  start sources. 
   Known limitations: starter assets aren't locked yet (students can
   rename/delete them; locking comes with locked-starter-files support),
   and deleting a starter-asset image in start mode removes the source
