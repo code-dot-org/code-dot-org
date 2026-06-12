@@ -130,9 +130,9 @@ export async function evaluatePrompt(
     runWithThrottle(fn, rt.rc, rt.maxRetries, rt.signal);
 
   const start = performance.now();
-  const base = {prompt: item.prompt, category: item.category};
+  const base = {prompt: item.prompt, label: item.label};
   const finish = (
-    partial: Omit<EvalResult, 'prompt' | 'category' | 'elapsedMs'>
+    partial: Omit<EvalResult, 'prompt' | 'label' | 'elapsedMs'>
   ): EvalResult => ({
     ...base,
     ...partial,

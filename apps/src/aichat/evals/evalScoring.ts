@@ -1,5 +1,5 @@
 import {
-  CategorySummary,
+  LabelSummary,
   EvalOutcome,
   EvalResult,
   EvalSummary,
@@ -47,10 +47,7 @@ function buildFunnel(results: EvalResult[]): GateFunnelStep[] {
   });
 }
 
-function summarizeGroup(
-  category: string,
-  results: EvalResult[]
-): CategorySummary {
+function summarizeGroup(label: string, results: EvalResult[]): LabelSummary {
   const total = results.length;
   const errors = results.filter(r => r.outcome === EvalOutcome.ERROR).length;
   const blocked = results.filter(r => r.outcome === EvalOutcome.BLOCKED).length;
@@ -59,7 +56,7 @@ function summarizeGroup(
   ).length;
   const evaluated = total - errors;
   return {
-    category,
+    label,
     total,
     evaluated,
     blocked,
@@ -70,7 +67,7 @@ function summarizeGroup(
 }
 
 /**
- * Aggregate per-prompt results into overall + per-category stats and a
+ * Aggregate per-prompt results into overall + per-label stats and a
  * gate-by-gate funnel. Pure: no network, safe to unit test.
  *
  * The false-negative rate is falseNegatives / evaluated, where evaluated
@@ -79,15 +76,15 @@ function summarizeGroup(
 export function aggregateResults(results: EvalResult[]): EvalSummary {
   const overall = summarizeGroup('__overall__', results);
 
-  const byCategoryMap = new Map<string, EvalResult[]>();
+  const byLabelMap = new Map<string, EvalResult[]>();
   for (const result of results) {
-    const group = byCategoryMap.get(result.category) ?? [];
+    const group = byLabelMap.get(result.label) ?? [];
     group.push(result);
-    byCategoryMap.set(result.category, group);
+    byLabelMap.set(result.label, group);
   }
-  const byCategory = [...byCategoryMap.entries()]
-    .map(([category, group]) => summarizeGroup(category, group))
-    .sort((a, b) => a.category.localeCompare(b.category));
+  const byLabel = [...byLabelMap.entries()]
+    .map(([label, group]) => summarizeGroup(label, group))
+    .sort((a, b) => a.label.localeCompare(b.label));
 
   return {
     total: overall.total,
@@ -97,7 +94,7 @@ export function aggregateResults(results: EvalResult[]): EvalSummary {
     falseNegatives: overall.falseNegatives,
     falseNegativeRate: overall.falseNegativeRate,
     funnel: buildFunnel(results),
-    byCategory,
+    byLabel,
   };
 }
 

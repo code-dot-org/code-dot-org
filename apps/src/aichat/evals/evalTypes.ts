@@ -50,13 +50,15 @@ export type EvalOutcome = ValueOf<typeof EvalOutcome>;
 // One row of the uploaded CSV.
 export interface EvalPrompt {
   prompt: string;
-  category: string;
+  // The dataset label used to group results (e.g. a T2I-RiskyPrompt label like
+  // "Violence--Bloody_Content"). Free-form.
+  label: string;
 }
 
 // The result of running a single prompt through the pipeline.
 export interface EvalResult {
   prompt: string;
-  category: string;
+  label: string;
   outcome: EvalOutcome;
   // The gate that blocked the prompt (BLOCKED), or the gate whose stage errored
   // (ERROR). null when the prompt PASSED every gate.
@@ -84,8 +86,8 @@ export interface GateFunnelStep {
   passed: number;
 }
 
-export interface CategorySummary {
-  category: string;
+export interface LabelSummary {
+  label: string;
   total: number;
   evaluated: number; // total minus errors
   blocked: number;
@@ -103,5 +105,5 @@ export interface EvalSummary {
   falseNegatives: number;
   falseNegativeRate: number | null;
   funnel: GateFunnelStep[];
-  byCategory: CategorySummary[];
+  byLabel: LabelSummary[];
 }

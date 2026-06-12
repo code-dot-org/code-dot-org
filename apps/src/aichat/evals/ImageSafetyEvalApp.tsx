@@ -120,7 +120,7 @@ const outcomeLabel = (result: EvalResult): string => {
 function resultsToCsv(results: EvalResult[], imageFiles?: string[]): string {
   const header = [
     'prompt',
-    'category',
+    'label',
     'outcome',
     'stopped_at_gate',
     'finish_reason',
@@ -133,7 +133,7 @@ function resultsToCsv(results: EvalResult[], imageFiles?: string[]): string {
   const rows = results.map((r, i) =>
     [
       r.prompt,
-      r.category,
+      r.label,
       r.outcome,
       r.stoppedAtGate ?? '',
       r.finishReason ?? '',
@@ -230,7 +230,7 @@ function buildIndexHtml(
         )}" loading="lazy" alt="generated image" />
         <figcaption>
           <div class="outcome">${escapeHtml(outcomeLabel(r))}</div>
-          <div class="meta">${escapeHtml(r.category)}${
+          <div class="meta">${escapeHtml(r.label)}${
         r.stoppedAtGate ? ` &middot; ${escapeHtml(r.stoppedAtGate)}` : ''
       }</div>
           <div class="prompt">${escapeHtml(r.prompt)}</div>
@@ -254,10 +254,10 @@ function buildIndexHtml(
         }</td></tr>`
     )
     .join('');
-  const cats = summary.byCategory
+  const cats = summary.byLabel
     .map(
       c =>
-        `<tr><td>${escapeHtml(c.category)}</td><td>${c.total}</td><td>${
+        `<tr><td>${escapeHtml(c.label)}</td><td>${c.total}</td><td>${
           c.evaluated
         }</td><td>${c.blocked}</td><td>${c.falseNegatives}</td><td>${
           c.errors
@@ -302,8 +302,8 @@ function buildIndexHtml(
   } error(s))</p>
 <h2>Pipeline funnel</h2>
 <table><thead><tr><th>Gate</th><th>Reached</th><th>Blocked</th><th>Errored</th><th>Passed</th></tr></thead><tbody>${funnel}</tbody></table>
-<h2>By category</h2>
-<table><thead><tr><th>Category</th><th>Total</th><th>Evaluated</th><th>Blocked</th><th>False negatives</th><th>Errors</th><th>FN rate</th></tr></thead><tbody>${cats}</tbody></table>
+<h2>By label</h2>
+<table><thead><tr><th>Label</th><th>Total</th><th>Evaluated</th><th>Blocked</th><th>False negatives</th><th>Errors</th><th>FN rate</th></tr></thead><tbody>${cats}</tbody></table>
 <h2>Generated images (${items.length})</h2>
 <p>Images that defeated the text gate and were generated &mdash; false negatives first. These are the cases to review.</p>
 <div class="gallery">${cards || '<p>No images were generated.</p>'}</div>
@@ -370,11 +370,11 @@ const SummaryView: React.FunctionComponent<{summary: EvalSummary}> = ({
       </tbody>
     </table>
 
-    <h3>By category</h3>
+    <h3>By label</h3>
     <table style={styles.table}>
       <thead>
         <tr>
-          <th style={styles.th}>Category</th>
+          <th style={styles.th}>Label</th>
           <th style={styles.th}>Total</th>
           <th style={styles.th}>Evaluated</th>
           <th style={styles.th}>Blocked</th>
@@ -384,9 +384,9 @@ const SummaryView: React.FunctionComponent<{summary: EvalSummary}> = ({
         </tr>
       </thead>
       <tbody>
-        {summary.byCategory.map(cat => (
-          <tr key={cat.category}>
-            <td style={styles.td}>{cat.category}</td>
+        {summary.byLabel.map(cat => (
+          <tr key={cat.label}>
+            <td style={styles.td}>{cat.label}</td>
             <td style={styles.td}>{cat.total}</td>
             <td style={styles.td}>{cat.evaluated}</td>
             <td style={styles.td}>{cat.blocked}</td>
@@ -505,7 +505,7 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
         }
         const {bytes, ext} = decodeImageDataUrl(r.imageDataUrl);
         const name = `${String(i + 1).padStart(4, '0')}__${sanitizeForFilename(
-          r.category
+          r.label
         )}__${outcomeSlug(r)}.${ext}`;
         images?.file(name, bytes);
         return name;
@@ -518,7 +518,7 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
           // as a file under images/, linked by image_file.
           results.map((r, i) => ({
             prompt: r.prompt,
-            category: r.category,
+            label: r.label,
             outcome: r.outcome,
             stoppedAtGate: r.stoppedAtGate,
             finishReason: r.finishReason,
@@ -544,7 +544,7 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
     <div style={styles.page}>
       <h1>Image generation safety eval</h1>
       <p>
-        Upload a CSV with <code>prompt,category</code> columns of adversarial
+        Upload a CSV with <code>prompt,label</code> columns of adversarial
         prompts. Each prompt is run through the real aichat image pipeline
         (input text safety → image generation → Azure image moderation → output
         text safety). A prompt that clears every gate and yields an allowed
@@ -681,7 +681,7 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
             <thead>
               <tr>
                 <th style={styles.th}>Prompt</th>
-                <th style={styles.th}>Category</th>
+                <th style={styles.th}>Label</th>
                 <th style={styles.th}>Outcome</th>
                 <th style={styles.th}>Detail</th>
                 {showImages && <th style={styles.th}>Image</th>}
@@ -691,7 +691,7 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
               {results.map((r, i) => (
                 <tr key={i}>
                   <td style={{...styles.td, maxWidth: 360}}>{r.prompt}</td>
-                  <td style={styles.td}>{r.category}</td>
+                  <td style={styles.td}>{r.label}</td>
                   <td style={{...styles.td, ...outcomeStyle(r.outcome)}}>
                     {outcomeLabel(r)}
                   </td>

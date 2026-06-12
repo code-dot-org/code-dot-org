@@ -9,7 +9,7 @@ import {
 function result(partial: Partial<EvalResult>): EvalResult {
   return {
     prompt: 'p',
-    category: 'uncategorized',
+    label: 'unlabeled',
     outcome: EvalOutcome.BLOCKED,
     stoppedAtGate: EvalGate.INPUT_TEXT,
     elapsedMs: 0,
@@ -19,21 +19,21 @@ function result(partial: Partial<EvalResult>): EvalResult {
 
 describe('aggregateResults', () => {
   const results: EvalResult[] = [
-    result({category: 'violence', stoppedAtGate: EvalGate.INPUT_TEXT}),
-    result({category: 'violence', stoppedAtGate: EvalGate.GENERATION}),
-    result({category: 'sexual', stoppedAtGate: EvalGate.IMAGE_MODERATION}),
+    result({label: 'violence', stoppedAtGate: EvalGate.INPUT_TEXT}),
+    result({label: 'violence', stoppedAtGate: EvalGate.GENERATION}),
+    result({label: 'sexual', stoppedAtGate: EvalGate.IMAGE_MODERATION}),
     result({
-      category: 'benign',
+      label: 'benign',
       outcome: EvalOutcome.PASSED,
       stoppedAtGate: null,
     }),
     result({
-      category: 'sexual',
+      label: 'sexual',
       outcome: EvalOutcome.PASSED,
       stoppedAtGate: null,
     }),
     result({
-      category: 'hate',
+      label: 'hate',
       outcome: EvalOutcome.ERROR,
       stoppedAtGate: EvalGate.GENERATION,
     }),
@@ -79,17 +79,15 @@ describe('aggregateResults', () => {
     });
   });
 
-  it('breaks down per category, sorted by name', () => {
-    expect(summary.byCategory.map(c => c.category)).toEqual([
+  it('breaks down per label, sorted by name', () => {
+    expect(summary.byLabel.map(c => c.label)).toEqual([
       'benign',
       'hate',
       'sexual',
       'violence',
     ]);
 
-    const byName = Object.fromEntries(
-      summary.byCategory.map(c => [c.category, c])
-    );
+    const byName = Object.fromEntries(summary.byLabel.map(c => [c.label, c]));
     expect(byName.violence).toMatchObject({
       total: 2,
       evaluated: 2,
@@ -109,7 +107,7 @@ describe('aggregateResults', () => {
       falseNegatives: 1,
       falseNegativeRate: 1,
     });
-    // A category with only errors has no evaluable prompts: rate is null.
+    // A label with only errors has no evaluable prompts: rate is null.
     expect(byName.hate).toMatchObject({
       total: 1,
       evaluated: 0,

@@ -13,10 +13,9 @@ export interface ParseResult {
 /**
  * Parse an uploaded CSV of adversarial prompts into EvalPrompts.
  *
- * The CSV must have a header row with `prompt` and `category` columns. Standard
+ * The CSV must have a header row with `prompt` and `label` columns. Standard
  * CSV quoting is honored (so prompts may contain commas). Rows with an empty
- * prompt are skipped with a warning; a missing category defaults to
- * "uncategorized".
+ * prompt are skipped with a warning; a missing label defaults to "unlabeled".
  */
 export function parseEvalCsv(text: string): ParseResult {
   const warnings: string[] = [];
@@ -34,10 +33,11 @@ export function parseEvalCsv(text: string): ParseResult {
       error: 'CSV is missing a required "prompt" column header.',
     };
   }
-  const hasCategory = fields.includes('category');
-  if (!hasCategory) {
+  // Group prompts by the "label" column.
+  const hasLabel = fields.includes('label');
+  if (!hasLabel) {
     warnings.push(
-      'No "category" column found; all prompts grouped as "uncategorized".'
+      'No "label" column found; all prompts grouped as "unlabeled".'
     );
   }
 
@@ -50,8 +50,8 @@ export function parseEvalCsv(text: string): ParseResult {
       warnings.push(`Row ${lineNumber}: empty prompt, skipped.`);
       return;
     }
-    const category = (row.category ?? '').trim() || 'uncategorized';
-    prompts.push({prompt, category});
+    const label = (row.label ?? '').trim() || 'unlabeled';
+    prompts.push({prompt, label});
   });
 
   parsed.errors.forEach(err => {
