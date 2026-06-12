@@ -96,6 +96,7 @@ export default class VersionRow extends React.Component {
           color="primary"
           size="small"
           variant="contained"
+          className={styles.viewVersionButton}
         >
           {msg.view()}
         </MuiButton>

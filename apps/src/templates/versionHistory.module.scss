@@ -2,6 +2,16 @@
   padding-right: 16px;
 }
 
+.viewVersionButton {
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--background-brand-purple-strong);
+    color: var(--text-neutral-white-fixed);
+    text-decoration: none;
+  }
+}
+
 // The disabled "View" on the selected row. The theme's default disabled state is
 // white-on-light-gray (fails contrast); we want a muted-but-legible dark fill. No
 // --background-* semantic token resolves to a dark-enough gray in the light theme,
