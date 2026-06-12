@@ -48,7 +48,7 @@ export default LessonExtrasFlagIcon;
 
 const styles = {
   default: {
-    color: 'var(--text-neutral-secondary)',
+    color: 'var(--text-neutral-tertiary)',
   },
   selected: {
     color: 'var(--text-neutral-primary)',

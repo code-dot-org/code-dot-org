@@ -37,10 +37,10 @@ describe('ProgressLesson', () => {
     expect(wrapper.props().id).toEqual('progress-lesson-3');
   });
 
-  it('renders with gray background when not hidden', () => {
+  it('renders with primary background when not hidden', () => {
     const wrapper = shallow(<ProgressLesson {...defaultProps} />);
     expect(wrapper.props().style.background).toEqual(
-      'var(--background-neutral-secondary)'
+      'var(--background-neutral-primary)'
     );
   });
 
@@ -66,7 +66,7 @@ describe('ProgressLesson', () => {
       />
     );
     expect(wrapper.props().style.background).toEqual(
-      'var(--background-neutral-secondary)'
+      'var(--background-neutral-primary)'
     );
     expect(wrapper.props().style.borderWidth).toEqual(4);
     expect(wrapper.props().style.borderStyle).toEqual('dashed');
@@ -82,7 +82,7 @@ describe('ProgressLesson', () => {
       />
     );
     expect(wrapper.props().style.background).toEqual(
-      'var(--background-neutral-secondary)'
+      'var(--background-neutral-primary)'
     );
     expect(wrapper.props().style.borderWidth).toEqual(4);
     expect(wrapper.props().style.borderStyle).toEqual('dashed');
@@ -98,7 +98,7 @@ describe('ProgressLesson', () => {
       />
     );
     expect(wrapper.props().style.background).toEqual(
-      'var(--background-neutral-secondary)'
+      'var(--background-neutral-primary)'
     );
     expect(wrapper.props().style.borderWidth).toEqual(4);
     expect(wrapper.props().style.borderStyle).toEqual('dashed');
@@ -118,7 +118,7 @@ describe('ProgressLesson', () => {
     );
   });
 
-  it('renders with gray background when lesson is lockable but unlocked and lockStatusLoaded', () => {
+  it('renders with primary background when lesson is lockable but unlocked and lockStatusLoaded', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
@@ -128,7 +128,7 @@ describe('ProgressLesson', () => {
       />
     );
     expect(wrapper.props().style.background).toEqual(
-      'var(--background-neutral-secondary)'
+      'var(--background-neutral-primary)'
     );
   });
 
