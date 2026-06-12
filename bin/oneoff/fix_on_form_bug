@@ -4,8 +4,8 @@
 # the allow_contact_b field to '1' for VolunteerEngineerSubmission2015 form
 # submissions. These values were recorded as 'on' (rather than '1') by error.
 
-require File.expand_path('../../../pegasus/src/env', __FILE__)
-require src_dir 'database'
+require File.expand_path('../../../lib/cdo/pegasus/src/env', __FILE__)
+require 'cdo/pegasus/src/database'
 require 'cdo/solr'
 
 time_now = Time.now

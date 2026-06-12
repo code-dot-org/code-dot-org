@@ -7,7 +7,7 @@
 # with the ones given here, or, if the value is 'false', it removes the
 # component from the page.
 
-locales: [en-IN, hi-IN, ta-IN, te-IN, mr-IN, kn-IN]
+locales: [en-IN, hi-IN, ta-IN, te-IN, mr-IN, kn-IN, or-IN, gu-IN]
 locale_lock: true
 countries: [IN]
 
@@ -174,4 +174,4 @@ pages:
         hideMyPLStaticRecommendedPL: false
         hideMyPLStaticRecommendedPLMidHighBlock: true
         hideMyPLStaticRecommendedPLSelfPacedBlock: false
-        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /global
+        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /in/en/professional-learning/courses

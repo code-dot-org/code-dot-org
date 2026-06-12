@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-28T16:55:34.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-brendan-intro-3d-space-5be0104d-065d-4d99-989d-d1a0888438dd",
+        "text": "Imagine a world not just flat, but with depth! This is 3D space, where objects have height, width, and depth.",
+        "imageUrl": "https://images.code.org/89f2c4117be6d92132bdc9f2123ddb86-test-brendan-intro-3d-space-panel-1-ac51cb7f-c2d8-469a-aa27-92ff3afded6c.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-brendan-intro-3d-space-5e159052-d480-459f-98d6-62794439a468",
+        "text": "We use three axes—X, Y, and Z—to map this space. X is left/right, Y is up/down, and Z is forward/backward.",
+        "imageUrl": "https://images.code.org/c2c4034ac2f387e09a32bfdcf5e7ec10-test-brendan-intro-3d-space-panel-2-80e201d6-b243-4dfa-b415-fd2c73f4859a.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-brendan-intro-3d-space-abf5ead3-c209-4a20-a0ab-b4747f68ecfc",
+        "text": "Every point, or *vertex*, in this 3D world can be located by its unique set of (X, Y, Z) coordinates. By connecting these vertices, we form edges and faces.",
+        "imageUrl": "https://images.code.org/91d3f9d394cbef3320e3b93373b4b516-test-brendan-intro-3d-space-panel-3-9dc5bdf6-63f7-4a75-bdde-90cef323b1fa.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-brendan-intro-3d-space-7a76c41a-e3e1-4c01-951e-ca46f8376d2e",
+        "text": "These connected vertices are the fundamental building blocks for all 3D objects. More complex shapes, like spheres, use many vertices to appear smooth.",
+        "imageUrl": "https://images.code.org/0fa07ce5e452fe5125dfe752890afde0-test-brendan-intro-3d-space-panel-4-82793ab8-d1a6-4ef7-9f5f-e3ae44f34d43.png",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "generate_outline": "Introduce the concept of 3D space, focusing on the Cartesian coordinate system (X, Y, Z axes). Explain how points (vertices) are defined by these coordinates and how basic shapes (geometric primitives) like cubes and spheres are constructed from them."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-28 16:56:12 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-28 16:56:12 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

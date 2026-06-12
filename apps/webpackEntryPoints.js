@@ -113,6 +113,7 @@ const CODE_STUDIO_ENTRIES = {
   'projects/index': './src/sites/studio/pages/projects/index.js',
   'report_abuse/report_abuse_form': './src/sites/studio/pages/report_abuse/report_abuse_form.js',
   'reference_guides/show': './src/sites/studio/pages/reference_guides/show.js',
+  'routing': './src/sites/studio/pages/routing.js',
   'scripts/show': './src/sites/studio/pages/scripts/show.js',
   'scripts/vocab': './src/sites/studio/pages/scripts/vocab.js',
   'scripts/resources': './src/sites/studio/pages/scripts/resources.js',
@@ -147,6 +148,9 @@ const INTERNAL_ENTRIES = {
   'datasets/edit_manifest': './src/sites/studio/pages/datasets/edit_manifest.js',
   'lessons/edit': './src/sites/studio/pages/lessons/edit.js',
   'lessons/generate': './src/sites/studio/pages/lessons/generate.js',
+  'lessons/slides/generate': './src/sites/studio/pages/lessons/slides/generate.js',
+  'lessons/slides/show': './src/sites/studio/pages/lessons/slides/show.js',
+  'lessons/slides/edit': './src/sites/studio/pages/lessons/slides/edit.js',
   'levelbuilder': './src/sites/studio/pages/levelbuilder.js',
   'levels/editors/_applab': './src/sites/studio/pages/levels/editors/_applab.js',
   'levels/editors/_craft': './src/sites/studio/pages/levels/editors/_craft.js',
@@ -195,6 +199,7 @@ const INTERNAL_ENTRIES = {
   'rubrics/edit': './src/sites/studio/pages/rubrics/edit.js',
   'sections/new': './src/sites/studio/pages/sections/new.js',
   'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
+  'scripts/generate': './src/sites/studio/pages/scripts/generate.js',
   'scripts/new': './src/sites/studio/pages/scripts/new.js',
   'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
   'shared_blockly_functions/edit': './src/sites/studio/pages/shared_blockly_functions/edit.js',
@@ -248,8 +253,6 @@ const SHARED_ENTRIES = {
   cookieBanner: './src/cookieBanner/cookieBanner.js',
   userHeaderEventLogger: './src/userHeaderEventLogger/userHeaderEventLogger.js',
   statsigWebAnalytics: './src/metrics/statsigWebAnalytics.js',
-  'global_edition/region_switch_confirm':
-    './src/globalEdition/regionSwitchConfirm.js',
 };
 
 // prettier-ignore

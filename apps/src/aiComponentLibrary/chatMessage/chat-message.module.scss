@@ -1,4 +1,3 @@
-@import 'color.scss';
 @import 'font.scss';
 @import '@code-dot-org/component-library-styles/typography.module';
 
@@ -151,16 +150,18 @@ $vertical-gap: 0.375rem;
   justify-content: center;
   align-items: center;
   border-radius: 58px;
-  // $ai_rubric_cyan is an AI-product accent shared across rubrics, music,
-  // and the aiDifferentiation header; no DSCO semantic token covers it yet.
-  background: $ai_rubric_cyan;
+  background: var(--background-brand-aqua-primary);
   border-width: 1px;
   border-color: var(--borders-neutral-light);
   border-style: solid;
 
   span {
     @include main-font-medium;
-    color: var(--text-neutral-primary);
+    // `-fixed` because the parent `.botOverlay` background is
+    // `--background-brand-aqua-primary` which stays bright aqua in both Light
+    // and Dark cdo themes. A theme-following text token would resolve to
+    // white in Dark mode and lose contrast on the aqua background.
+    color: var(--text-neutral-black-fixed);
     font-size: 8px;
     font-style: normal;
     line-height: 100%;

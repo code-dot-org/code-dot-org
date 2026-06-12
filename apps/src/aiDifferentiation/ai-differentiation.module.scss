@@ -1,4 +1,4 @@
-@import 'color', 'font';
+@import 'font';
 @import '@code-dot-org/component-library-styles/font';
 @import '@code-dot-org/component-library-styles/typography.module';
 @import '@code-dot-org/component-library-styles/mixins';
@@ -34,24 +34,11 @@ $sidebar-tooltip-z-index: 2010;
   fabOriginY: $fab-bottom + $fab-height + 16;
 }
 
-// Styles for AI diff drawer
-.aiDiffDrawer {
-  position: fixed;
-  left: 10px;
-  bottom: 106px;
-  z-index: 2000;
-
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  width: 400px;
-}
-
 .fabBackgroundDrawer {
   display: flex;
   flex-direction: column;
-  border-right: 0.125rem solid var(--borders-neutral-solid);
-  border-left: 0.125rem solid var(--borders-neutral-solid);
+  border-right: 0.125rem solid var(--borders-neutral-strong);
+  border-left: 0.125rem solid var(--borders-neutral-strong);
   background: var(--background-neutral-primary);
   flex: 1;
   overflow-x: hidden;
@@ -59,7 +46,7 @@ $sidebar-tooltip-z-index: 2010;
 
   &:last-child {
     border-radius: 0 0 0.25rem 0.25rem;
-    border-bottom: 0.125rem solid var(--borders-neutral-solid);
+    border-bottom: 0.125rem solid var(--borders-neutral-strong);
   }
 
   h2 {
@@ -195,13 +182,15 @@ $sidebar-tooltip-z-index: 2010;
   justify-content: center;
   align-items: center;
   border-radius: 58px;
-  // $ai_rubric_cyan is an AI-product accent shared across rubrics, chat-message,
-  // music, and this header; no DSCO semantic token covers it yet, so leaving as-is.
-  background: $ai_rubric_cyan;
+  background: var(--background-brand-aqua-primary);
 
   span {
     @include main-font-medium;
-    color: var(--text-neutral-primary);
+    // `-fixed` because the parent `.taOverlayHeader` background is
+    // `--background-brand-aqua-primary` which stays bright aqua in both
+    // Light and Dark cdo themes. A theme-following text token would resolve
+    // to white in Dark mode and lose contrast on the aqua background.
+    color: var(--text-neutral-black-fixed);
     font-size: 8px;
     font-style: normal;
     line-height: 100%;
@@ -217,9 +206,9 @@ $sidebar-tooltip-z-index: 2010;
   background: var(--background-neutral-primary-inverse);
   color: var(--text-neutral-inverse);
 
-  border-top: 2px solid var(--borders-neutral-solid);
-  border-right: 2px solid var(--borders-neutral-solid);
-  border-left: 2px solid var(--borders-neutral-solid);
+  border-top: 2px solid var(--borders-neutral-strong);
+  border-right: 2px solid var(--borders-neutral-strong);
+  border-left: 2px solid var(--borders-neutral-strong);
 
   padding-inline-start: 0.75rem;
 
@@ -267,8 +256,8 @@ $sidebar-tooltip-z-index: 2010;
 .fabBackground {
   display: flex;
   flex-direction: column;
-  border-right: 0.125rem solid var(--borders-neutral-solid);
-  border-left: 0.125rem solid var(--borders-neutral-solid);
+  border-right: 0.125rem solid var(--borders-neutral-strong);
+  border-left: 0.125rem solid var(--borders-neutral-strong);
   background: var(--background-neutral-primary);
   box-shadow: 0.25rem 0.25rem 0.375rem 0 rgba(0 0 0 / 0.25);
   height: $body-height * 1px;
@@ -277,7 +266,7 @@ $sidebar-tooltip-z-index: 2010;
 
   &:last-child {
     border-radius: 0 0 0.25rem 0.25rem;
-    border-bottom: 0.125rem solid var(--borders-neutral-solid);
+    border-bottom: 0.125rem solid var(--borders-neutral-strong);
   }
 
   h2 {
@@ -403,7 +392,7 @@ $sidebar-tooltip-z-index: 2010;
   background-color: var(--background-neutral-secondary);
   height: auto;
   display: flex;
-  border-right: 1px solid var(--borders-neutral-solid);
+  border-right: 1px solid var(--borders-neutral-strong);
   transition: all 0.2s ease-in-out;
 
   &.sidebarContainerCollapsed {
@@ -542,7 +531,7 @@ html body .sidebarActionTooltip {
   gap: 12px;
   padding-left: 16px;
   text-decoration: none;
-  color: var(--text-neutral-inverse);
+  color: var(--text-neutral-black-fixed);
   border: 0;
   font-size: var(--font-size-body-sm, 14px);
   margin: 0;
@@ -654,7 +643,7 @@ html body .sidebarActionTooltip {
       align-self: stretch;
 
       a {
-        color: var(--text-brand-purple-primary);
+        color: #9660bf;
         text-decoration: underline;
         font-weight: 600;
         font-size: 14px;
@@ -818,11 +807,11 @@ html body .sidebarActionTooltip {
   }
 
   &Red {
-    background: var(--background-accent-strawberry-primary, #ed6060);
+    background: var(--accent-strawberry-50, #ed6060);
   }
 
   &Purple {
-    background: var(--background-brand-purple-primary, #8c52ba);
+    background: var(--borders-brand-purple-primary, #8c52ba);
   }
 }
 

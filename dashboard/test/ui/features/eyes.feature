@@ -58,7 +58,6 @@ Scenario:
 
   Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1/lang/ar-sa"
   And I wait for the lab page to fully load
-  And The header is finished animating
   And I see no difference for "maze RTL"
   Given I am on "http://studio.code.org/reset_session/lang/en"
   And I wait for 2 seconds

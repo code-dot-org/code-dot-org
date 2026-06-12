@@ -387,9 +387,7 @@ class UnitGroup < ApplicationRecord
   # @param section_id [Integer, String, nil] The ID of the section to include in the query parameter. Defaults to nil.
   # @return [String] The URL for the course, which may include a section ID query parameter.
   def link(section_id: nil)
-    path = course_path(self)
-    path += "?section_id=#{section_id}" if section_id
-    path
+    course_path(self, section_id:)
   end
 
   def summarize_short

@@ -1,6 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 68,
   "created_at": "2026-05-20T18:08:36.000Z",
   "level_num": "custom",
@@ -13,18 +12,28 @@
     "csa_view_mode": "console",
     "start_sources": {
       "MyClass.java": {
-        "text": "import java.util.Scanner;\n\npublic class MyClass {\n  public static void main(String[] args) {\n    Scanner myScanner = new Scanner(System.in);\n    System.out.println(\"What's your name?\");\n    String response = myScanner.nextLine();\n    System.out.println(\"Hello \" + response + \"!\");\n  }\n}\n",
-        "isVisible": true
+        "text": "import java.util.Scanner;\n\npublic class MyClass {\n  public static void main(String[] args) {\n    Scanner myScanner = new Scanner(System.in);\n    System.out.println(\"What's your name?\");\n    String response = myScanner.nextLine();\n    System.out.println(\"Hello \" + response + \"!!\");\n    HiddenClass.printHi();\n  }\n}\n",
+        "isVisible": true,
+        "isValidation": false,
+        "isOpen": true,
+        "isActive": true,
+        "tabOrder": 0
+      },
+      "HiddenClass.java": {
+        "text": "public class HiddenClass {\n  public static void printHi() {\n    System.out.println(\"hi\");\n  }\n}",
+        "isVisible": false,
+        "isValidation": false,
+        "isOpen": false,
+        "isActive": false
       }
     },
     "ai_tutor_available": "false",
     "submittable": "false",
-    "encrypted_examples": [
-
-    ],
-    "uses_lab2": "true"
+    "uses_lab2": "true",
+    "encrypted_exemplar_sources": "9GX4UPN79MdAyB+utpiM72FMwaC592n9mWMaicNgBOIVSv9DT9muAR7vQ0qT\no2PC2gjNPPCrnhm7swXWL6NBaDS2oO5yCHGQOSQlorTUNTHmnnxajBv6dSiS\nWW/L6MbPrirG1VkJ7I+ruqw6myr+uW6isuvSetHc6tjW7QX/5+YkvtLE0lDi\nswTJhVQEEHdxhvLam1cpmiJN0sSq6HCjQ/tuq0K2gbCSv/PCXDjdHKf77Nfb\nVtmBywpngN2HQ6jCa62u7piLxlo2QQwU5yT3HxyttvOkzFKbWMl4OX48+tk7\nA8o0peOwEay6Kstt3XctDyGxyNeoN63hWIUXfUmnMDuCfOgfrEnFHic9++D5\nBKBGmFJfdLfiysDNBW5hl+q2TLjsYT9VcGhaj+Ez3XhR2exGoI1Gw0+E1ZD5\ncC032KPrJftR6zQr9X1Kyjv5TWayHP+QkSDG8hkon9V4As7Mjnb4lwIjJmlk\nCWn1kjS16Efz/BB64q9w0/yLZxFQUWmnhwgsqI2ZjojxJdDrAs5QjW8F980r\nBNugoDVm7mFo8APgpyYpvhjCRnN4/G/ACwou2JHyP9XJgRs0hHw5dn3qK55r\nc7T5LAIS69atB6s40bTHhLe67YU9Dh5zXQVJeSNSAuvhz1Pf51/93RM6yxDI\nfaB4uT5MZgCVGr+NR2PqXMo+yfG1f/mWOeinkPYX4l83Wt1CsUYP9OmK6VE9\nr3FTk/6V0o1VYcl5xhOD/qbxrKewgDriaaUirUCUHk8og48I0LsOqD5/LDLh\nXcEyDTU//Ky3V4ISGvWuDg8/TJqE2DZoJBnXOtsKai0KWqAeYx8NqWHdVlWv\nv9Jq1+649cpMFw==\n"
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2026-05-20T11:08:36.389-07:00\",\"changed\":[\"cloned from \\\"Allthethings Java Lab 2\\\"\"],\"cloned_from\":\"Allthethings Java Lab 2\"},{\"changed_at\":\"2026-05-20 11:08:53 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-20T11:08:36.389-07:00\",\"changed\":[\"cloned from \\\"Allthethings Java Lab 2\\\"\"],\"cloned_from\":\"Allthethings Java Lab 2\"},{\"changed_at\":\"2026-05-20 11:08:53 -0700\",\"changed\":[\"long_instructions\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-28 10:35:18 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-28 10:35:25 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-28 11:59:23 -0700\",\"changed\":[],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-28 14:29:33 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

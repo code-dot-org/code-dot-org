@@ -3,10 +3,14 @@ import z from 'zod/v3';
 
 import {generateText} from '@cdo/apps/aiGateway';
 
+import {LessonContext} from '../../curriculum-generator/ai/context';
+import {
+  getTextModel,
+  logPrompt,
+  logResponse,
+  PROMPT_TAGS,
+} from '../../curriculum-generator/ai/shared';
 import {LabType, SUPPORTED_LAB_TYPES} from '../types';
-
-import {LessonContext} from './context';
-import {getTextModel, logPrompt, logResponse, PROMPT_TAGS} from './shared';
 
 // Build the labType enum from SUPPORTED_LAB_TYPES so adding a new lab is
 // a single-line change. zod's z.enum requires a non-empty tuple, so we
@@ -61,8 +65,10 @@ export async function generateLessonOutline(
   ctx: LessonContext
 ): Promise<OutlineLevel[]> {
   const prompt = [
-    'You are helping a curriculum author plan a single lesson for a',
-    'middle-school CS class. Break the outline below into a sequence of',
+    'You are helping a curriculum author plan a single lesson for a CS',
+    'class. Assume a middle-school audience unless the outline below names',
+    'a different grade band or target audience, in which case follow the',
+    'outline. Break the outline below into a sequence of',
     '2 to 8 levels that, in order, take the student through the learning',
     'experience. Each level is one of:',
     '  - Panels: a short comic-strip-like sequence used for narrative,',
@@ -80,6 +86,16 @@ export async function generateLessonOutline(
     '  - description: a 1-3 sentence description of what the level should',
     '    teach or do. This becomes the AI prompt that builds the actual',
     '    level content, so be concrete.',
+    ...(ctx.unitOutline
+      ? [
+          '',
+          `Unit context — this lesson sits inside the unit "${
+            ctx.unitName ?? ''
+          }". Keep the level sequence consistent with the unit's arc (including its intended audience/grade), but`,
+          'only plan levels for the specific lesson outline below:',
+          ctx.unitOutline,
+        ]
+      : []),
     ...(ctx.targetProject
       ? [
           '',

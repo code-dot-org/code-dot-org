@@ -4,13 +4,26 @@
   align-items: center;
   align-self: end;
   margin-left: 10px;
+  gap: 0.5rem;
+}
+
+.infoTipButton {
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  line-height: 1;
+  color: var(--text-neutral-secondary);
+
+  &:hover,
+  &:focus-visible {
+    color: var(--text-neutral-primary);
+  }
 }
 
 .infoTipIcon {
-  cursor: pointer;
   margin-left: 5px;
   margin-right: 5px;
   font-size: 18px;
   vertical-align: middle;
-  color: gray;
 }

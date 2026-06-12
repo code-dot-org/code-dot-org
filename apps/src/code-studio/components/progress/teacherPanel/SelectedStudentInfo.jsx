@@ -106,10 +106,13 @@ export default class SelectedStudentInfo extends React.Component {
   };
 
   render() {
+    const {students} = this.props;
     const selectedStudent = this.getSelectedUser();
     const levelWithProgress = this.getLevelWithProgressForUser(
       selectedStudent.id
     );
+    const arrowsDisabled = students.length <= 1;
+    const arrowStyle = arrowsDisabled ? styles.arrowDisabled : styles.arrow;
 
     // While levelWithProgress is loading display arrows and student name only
     if (!levelWithProgress) {
@@ -117,16 +120,18 @@ export default class SelectedStudentInfo extends React.Component {
         <div style={styles.main}>
           <FontAwesome
             icon="caret-left"
-            onClick={this.previousStudent}
-            style={styles.arrow}
+            onClick={arrowsDisabled ? undefined : this.previousStudent}
+            style={arrowStyle}
+            aria-disabled={arrowsDisabled}
           />
           <div style={styles.studentInfo}>
             <div style={styles.name}>{selectedStudent.name}</div>
           </div>
           <FontAwesome
             icon="caret-right"
-            onClick={this.nextStudent}
-            style={styles.arrow}
+            onClick={arrowsDisabled ? undefined : this.nextStudent}
+            style={arrowStyle}
+            aria-disabled={arrowsDisabled}
           />
         </div>
       );
@@ -139,8 +144,9 @@ export default class SelectedStudentInfo extends React.Component {
       <div style={styles.main}>
         <FontAwesome
           icon="caret-left"
-          onClick={this.previousStudent}
-          style={styles.arrow}
+          onClick={arrowsDisabled ? undefined : this.previousStudent}
+          style={arrowStyle}
+          aria-disabled={arrowsDisabled}
         />
         <div style={styles.studentInfo}>
           <div style={styles.name}>{selectedStudent.name}</div>
@@ -188,8 +194,9 @@ export default class SelectedStudentInfo extends React.Component {
         </div>
         <FontAwesome
           icon="caret-right"
-          onClick={this.nextStudent}
-          style={styles.arrow}
+          onClick={arrowsDisabled ? undefined : this.nextStudent}
+          style={arrowStyle}
+          aria-disabled={arrowsDisabled}
         />
       </div>
     );
@@ -225,6 +232,13 @@ const styles = {
     cursor: 'pointer',
     position: 'relative',
     top: 30,
+  },
+  arrowDisabled: {
+    fontSize: 40,
+    cursor: 'default',
+    position: 'relative',
+    top: 30,
+    opacity: 0.3,
   },
   button: {
     margin: 0,

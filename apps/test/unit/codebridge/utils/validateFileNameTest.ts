@@ -1,4 +1,4 @@
-import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
+import {DEFAULT_FOLDER_ID, INVALID_NAME_ERROR} from '@codebridge/constants';
 import {validateFileName} from '@codebridge/utils';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -35,7 +35,7 @@ describe('validateFileName', function () {
         validationFile,
         isStartMode: false,
       })
-    ).toEqual(codebridgeI18n.invalidNameError());
+    ).toEqual(INVALID_NAME_ERROR);
 
     expect(
       validateFileName({
@@ -133,7 +133,7 @@ describe('validateFileName', function () {
         isStartMode: false,
         validFileTypes,
       })
-    ).toEqual(codebridgeI18n.invalidNameError());
+    ).toEqual(INVALID_NAME_ERROR);
 
     // Valid file name/type has no return.
     expect(
@@ -146,5 +146,62 @@ describe('validateFileName', function () {
         validFileTypes,
       })
     ).toBeUndefined();
+
+    // When the extension comes from the dropdown (selectedFileType), the bare
+    // base name must still be combined with it for the duplicate check.
+    // testFile1.txt already exists in DEFAULT_FOLDER_ID.
+    expect(
+      validateFileName({
+        fileName: 'testFile1',
+        folderId: DEFAULT_FOLDER_ID,
+        projectFiles: testProject.files,
+        validationFile,
+        isStartMode: false,
+        validFileTypes,
+        selectedFileType: 'txt',
+      })
+    ).toEqual(codebridgeI18n.duplicateFileError({fileName: 'testFile1.txt'}));
+
+    // A duplicate support file is likewise detected via the recombined name.
+    expect(
+      validateFileName({
+        fileName: 'support_file',
+        folderId: DEFAULT_FOLDER_ID,
+        projectFiles: testProject.files,
+        validationFile,
+        isStartMode: false,
+        validFileTypes: ['vld'],
+        selectedFileType: 'vld',
+      })
+    ).toEqual(
+      codebridgeI18n.duplicateSupportFileError({fileName: 'support_file.vld'})
+    );
+
+    // A unique base name with a dropdown extension is still allowed.
+    expect(
+      validateFileName({
+        fileName: 'brandNewFile',
+        folderId: DEFAULT_FOLDER_ID,
+        projectFiles: testProject.files,
+        validationFile,
+        isStartMode: false,
+        validFileTypes,
+        selectedFileType: 'txt',
+      })
+    ).toBeUndefined();
+
+    // With the dropdown supplying the extension, a period in the base name is
+    // invalid: "My.Class" + "java" would otherwise create "My.Class.java".
+    expect(
+      validateFileName({
+        fileName: 'My.Class',
+        folderId: DEFAULT_FOLDER_ID,
+        projectFiles: testProject.files,
+        validationFile,
+        isStartMode: false,
+        validFileTypes,
+        selectedFileType: 'txt',
+      })
+    ).toEqual(INVALID_NAME_ERROR);
   });
 });

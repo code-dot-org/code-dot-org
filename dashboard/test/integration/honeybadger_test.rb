@@ -15,9 +15,10 @@ class HoneybadgerTest < ActionDispatch::IntegrationTest
     let(:user) {create(:user)}
 
     around do |test|
-      Rails.application.routes.draw do
-        get :notify_error, controller: ErrorController.new.controller_path, action: :notify
+      Rails.application.routes.append do
+        get :notify_error, to: "#{ErrorController.new.controller_path}#notify"
       end
+      Rails.application.reload_routes!
 
       test.call
     ensure

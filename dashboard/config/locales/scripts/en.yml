@@ -414,6 +414,8 @@ en:
               name: Unplugged level
             lesson-59:
               name: Java Lab2
+            lesson-60:
+              name: AI Lab Lab2
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -24235,8 +24237,8 @@ en:
           title: Preparing to Teach Problem Solving and Computing
           description_audience: ''
           description_short: ''
-          description: "##### This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n##### **In this professional learning module, you will:**\n* ##### Get an introduction to Problem Solving and Computing.\n* ##### Learn the key problem solving frameworks utilized in the unit\n* ##### Practice key concepts included in the unit.\n* ##### Explore end-of-chapter projects.\n\n##### **Suggested time:** 40 minutes"
-          student_description: "##### This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n##### **In this professional learning module, you will:**\n* ##### Get an introduction to Problem Solving and Computing.\n* ##### Learn the key problem solving frameworks utilized in the unit\n* ##### Practice key concepts included in the unit.\n* ##### Explore end-of-chapter projects.\n\n##### **Suggested time:** 40 minutes"
+          description: "##### This professional learning module is designed to help you prepare to teach CodeAI's Problem Solving and Computing unit. \n\n##### **In this professional learning module, you will:**\n* ##### Get an introduction to Problem Solving and Computing.\n* ##### Learn the key problem solving frameworks utilized in the unit\n* ##### Practice key concepts included in the unit.\n* ##### Explore end-of-chapter projects.\n\n##### **Suggested time:** 40 minutes"
+          student_description: "##### This professional learning module is designed to help you prepare to teach CodeAI's Problem Solving and Computing unit. \n\n##### **In this professional learning module, you will:**\n* ##### Get an introduction to Problem Solving and Computing.\n* ##### Learn the key problem solving frameworks utilized in the unit\n* ##### Practice key concepts included in the unit.\n* ##### Explore end-of-chapter projects.\n\n##### **Suggested time:** 40 minutes"
         self-paced-pl-teaching-csd-unit0-2025:
           lessons: {}
           lesson_groups:
@@ -24276,7 +24278,7 @@ en:
           description_audience: ''
           description_short: ''
           description: |-
-            This professional learning module is designed to help you prepare to teach Code.org's Web Development unit.
+            This professional learning module is designed to help you prepare to teach CodeAI's Web Development unit.
 
             **In this professional learning module, you will:**
 
@@ -24287,7 +24289,7 @@ en:
 
             **Suggested time**: 120 minutes
           student_description: |-
-            This professional learning module is designed to help you prepare to teach Code.org's Web Development unit.
+            This professional learning module is designed to help you prepare to teach CodeAI's Web Development unit.
 
             **In this professional learning module, you will:**
 
@@ -24315,8 +24317,8 @@ en:
           title: Preparing to Teach Interactive Animations and Games
           description_audience: ''
           description_short: ''
-          description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
-          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
+          description: "This professional learning module is designed to help you prepare to teach CodeAI's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach CodeAI's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
         self-paced-pl-teaching-csd-unit4-0-2025:
           lessons: {}
           lesson_groups:
@@ -25057,7 +25059,7 @@ en:
           description_short: ''
           description: |-
             #### **In this unit, you will:**
-            - #### Learn Java programming basics in Code.org's Java Lab.
+            - #### Learn Java programming basics in CodeAI's Java Lab.
             - #### Understand Variables in Java.
             - #### Practice making conditional statements in Java.
             - #### Read, write, and debug for loops in Java.
@@ -25065,7 +25067,7 @@ en:
             #### **Estimated time:** 2.5 hours
           student_description: |-
             ####**In this unit, you will:**
-            - #### Learn Java programming basics in Code.org's Java Lab.
+            - #### Learn Java programming basics in CodeAI's Java Lab.
             - #### Understand Variables in Java.
             - #### Practice making conditional statements in Java.
             - #### Read, write, and debug for loops in Java.
@@ -28257,7 +28259,7 @@ en:
               name: Unit Projects
           lesson_groups: {}
           name: self-paced-pl-thinking-critically-about-ai-2026
-          title: Preparing to Teach Thinking Critically about AI
+          title: Teaching Thinking Critically about AI
           description_audience: ''
           description_short: ''
           description: |-
@@ -28327,7 +28329,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-web-dev-2026
-          title: Preparing to Teach Web Development
+          title: Teaching Web Development
           description_audience: ''
           description_short: ''
           description: |-
@@ -28356,7 +28358,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-programming-with-music-lab-2026
-          title: Preparing to Teach Programming with Music Lab
+          title: Teaching Programming with Music Lab
           description_audience: ''
           description_short: ''
           description: |-
@@ -28385,7 +28387,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-data-and-society-2026
-          title: Preparing to Teach Data and Society
+          title: Teaching Data and Society
           description_audience: "'26-'27"
           description_short: ''
           description: |-
@@ -28412,7 +28414,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-design-process-2026
-          title: Preparing to Teach the Design Process
+          title: Teaching The Design Process
           description_audience: ''
           description_short: ''
           description: |-
@@ -28441,7 +28443,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-interactive-animations-and-games-2026
-          title: Preparing to Teach Interactive Animations and Games
+          title: Teaching Interactive Animations and Games
           description_audience: "'26-'27"
           description_short: ''
           description: |-
@@ -28470,7 +28472,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-creating-apps-with-devices-circuit-2026
-          title: Preparing to Teach Creating Apps for Devices (Circuit Playground)
+          title: Teaching Creating Apps for Devices (Circuit Playground)
           description_audience: ''
           description_short: ''
           description: "This professional learning module is designed to help you prepare to teach Creating Apps with Devices (Circuit Playground).\n\nIn this professional learning module, you will:\n\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end-of-chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
@@ -28479,7 +28481,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-creating-apps-with-devices-microbit-2026
-          title: Preparing to Teach Creating Apps with Devices (micro:bit)
+          title: Teaching Creating Apps with Devices (micro:bit)
           description_audience: ''
           description_short: ''
           description: "This professional learning module is designed to help you prepare to teach Creating Apps with Devices (micro:bit).\n\nIn this professional learning module, you will:\n\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end-of-chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
@@ -28490,7 +28492,7 @@ en:
               name: Teaching AI and Machine Learning
           lesson_groups: {}
           name: self-paced-pl-teaching-ai-and-ml-2026
-          title: 'Preparing to Teach AI and Machine Learning '
+          title: 'Teaching AI and Machine Learning '
           description_audience: ''
           description_short: ''
           description: |-
@@ -28527,13 +28529,13 @@ en:
           description: |-
             ##Start Here!
 
-            #### This professional learning module is designed to help you prepare to teach Code.org’s [**Exploring AI & CS Curriculum**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026). It provides an overview of the curriculum, teaching resources, and learning foundations.
+            #### This professional learning module is designed to help you prepare to teach CodeAI’s [**Exploring AI & CS Curriculum**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026). It provides an overview of the curriculum, teaching resources, and learning foundations.
 
             #### It is recommended that you complete this module before working through any of the unit specific modules.
           student_description: |-
             ##Start Here!
 
-            #### This professional learning module is designed to help you prepare to teach Code.org’s [**Exploring AI & CS Curriculum**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026). It provides an overview of the curriculum, teaching resources, and learning foundations.
+            #### This professional learning module is designed to help you prepare to teach CodeAI's [**Exploring AI & CS Curriculum**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026). It provides an overview of the curriculum, teaching resources, and learning foundations.
 
             #### It is recommended that you complete this module before working through any of the unit specific modules.
         self-paced-pl-teaching-ai-generated-design-2026:
@@ -28543,24 +28545,18 @@ en:
           title: Teaching AI Generated Design
           description_audience: ''
           description_short: ''
-          description: |+
-            ## Welcome
-            #### This professional learning module prepares you to teach **Unit 1: AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.
+          description: |-
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 1</span>
 
-            #### Here, you will explore and create with Web Lab and learn the skills needed to build websites with AI.
+            Students start by thinking like designers: building personas, mapping site structure, and developing a brand identity. You will explore how to teach design thinking alongside Web Lab, and how students use AI to generate and refine HTML and CSS while staying grounded in human-centered principles.
 
-            #### **Suggested Time: 60 minutes**
+            **Suggested time:** 60 minutes
+          student_description: |-
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 1</span>
 
+            Students start by thinking like designers: building personas, mapping site structure, and developing a brand identity. You will explore how to teach design thinking alongside Web Lab, and how students use AI to generate and refine HTML and CSS while staying grounded in human-centered principles.
 
-          student_description: |+
-            ## Welcome
-            #### This professional learning module prepares you to teach **Unit 1: AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.
-
-            #### Here, you will explore and create with Web Lab and learn the skills needed to build websites with AI.
-
-            #### **Suggested Time: 60 minutes**
-
-
+            **Suggested time:** 60 minutes
         self-paced-pl-teaching-ai-and-algorithmic-decisions-2026:
           lessons: {}
           lesson_groups: {}
@@ -28577,18 +28573,18 @@ en:
           title: Teaching Data-Driven Systems
           description_audience: ''
           description_short: ''
-          description: |2
+          description: |
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 3</span>
 
-            #### This professional learning module prepares you to teach Unit 3: Building Data-Driven Systems with A. In this unit, students expand their skills as developers by creating web apps that organize, display, and manipulate meaningful datasets.
-            #### In this module, you will prepare to teach a unit where students shift from writing isolated interactions to building full web apps that manage and display meaningful datasets through arrays, objects, and schema-informed design.
+            Students scale up from single interactions to full data-driven apps, organizing information with arrays and objects, defining schemas, and building features like search and filtering. This module also covers how to facilitate conversations about data ethics, bias, fairness, and user trust.
 
-            #### **Suggested Time: 75 minutes**
-          student_description: |2
+             **Suggested time:** 75 minutes
+          student_description: |-
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 3</span>
 
-            #### This professional learning module prepares you to teach Unit 3: Building Data-Driven Systems with A. In this unit, students expand their skills as developers by creating web apps that organize, display, and manipulate meaningful datasets.
-            #### In this module, you will prepare to teach a unit where students shift from writing isolated interactions to building full web apps that manage and display meaningful datasets through arrays, objects, and schema-informed design.
+            Students scale up from single interactions to full data-driven apps, organizing information with arrays and objects, defining schemas, and building features like search and filtering. This module also covers how to facilitate conversations about data ethics, bias, fairness, and user trust.
 
-            #### **Suggested Time: 75 minutes**
+             **Suggested time:** 75 minutes
         self-paced-pl-teaching-iterating-with-ai-2026:
           lessons: {}
           lesson_groups: {}
@@ -28861,11 +28857,11 @@ en:
           description_audience: ''
           description_short: ''
           description: |-
-            #### This professional learning module is designed to help you prepare to teach Code.org’s [**Problem-Solving with AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1).
+            #### This professional learning module is designed to help you prepare to teach CodeAI’s [**Problem-Solving with AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1).
 
             ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/1) but can also stand alone for grades 9-12.
           student_description: |-
-            #### This professional learning module is designed to help you prepare to teach Code.org’s [**Problem-Solving with AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1).
+            #### This professional learning module is designed to help you prepare to teach CodeAI's [**Problem-Solving with AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1).
 
             ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/1) but can also stand alone for grades 9-12.
         self-paced-pl-teaching-ai-and-the-systems-that-power-it-2026:
@@ -28876,11 +28872,11 @@ en:
           description_audience: ''
           description_short: ''
           description: |-
-            #### This professional learning module is designed to help you prepare to teach Code.org’s [**AI and the Systems that Power It Unit**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/2).
+            #### This professional learning module is designed to help you prepare to teach CodeAI’s [**AI and the Systems that Power It Unit**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/2).
 
             ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/2) but can also stand alone for grades 9-12.
           student_description: |-
-            #### This professional learning module is designed to help you prepare to teach Code.org’s [**AI and the Systems that Power It Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/3).
+            #### This professional learning module is designed to help you prepare to teach CodeAI’s [**AI and the Systems that Power It Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/3).
 
             ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/2) but can also stand alone for grades 9-12.
         self-paced-pl-teaching-fabric-of-the-internet-2026:
@@ -28891,11 +28887,11 @@ en:
           description_audience: ''
           description_short: ''
           description: |-
-            #### This professional learning module is designed to help you prepare to teach Code.org’s [**The Fabric of the Internet and AI Unit**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/3).
+            #### This professional learning module is designed to help you prepare to teach CodeAI's [**The Fabric of the Internet and AI Unit**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/3).
 
             ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/) but can also stand alone for grades 9-12.
           student_description: |-
-            #### This professional learning module is designed to help you prepare to teach Code.org’s [**The Fabric of the Internet and AI Unit**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/3).
+            #### This professional learning module is designed to help you prepare to teach CodeAI’s [**The Fabric of the Internet and AI Unit**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/3).
 
             ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/) but can also stand alone for grades 9-12.
         self-paced-pl-teaching-ai-powered-threats-and-defenses-2026:
@@ -28906,11 +28902,11 @@ en:
           description_audience: ''
           description_short: ''
           description: |-
-            #### This professional learning module is designed to help you prepare to teach Code.org’s [**AI-Powered Threats and Defenses Unit**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/4).
+            #### This professional learning module is designed to help you prepare to teach CodeAI’s [**AI-Powered Threats and Defenses Unit**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/4).
 
             ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/) but can also stand alone for grades 9-12.
           student_description: |-
-            #### This professional learning module is designed to help you prepare to teach Code.org’s [**AI-Powered Threats and Defenses Unit**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/4).
+            #### This professional learning module is designed to help you prepare to teach CodeAI’s [**AI-Powered Threats and Defenses Unit**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/4).
 
             ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/) but can also stand alone for grades 9-12.
         self-paced-pl-teaching-insights-from-data-and-ai-2026:
@@ -28921,11 +28917,11 @@ en:
           description_audience: ''
           description_short: ''
           description: |-
-            #### This professional learning module is designed to help you prepare to teach Code.org’s [**Insights from Data and AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/6).
+            #### This professional learning module is designed to help you prepare to teach CodeAI’s [**Insights from Data and AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/6).
 
             ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
           student_description: |-
-            #### This professional learning module is designed to help you prepare to teach Code.org’s [**Insights from Data and AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/6).
+            #### This professional learning module is designed to help you prepare to teach CodeAI’s [**Insights from Data and AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/6).
 
             ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
         self-paced-pl-teaching-foundations-of-ai-programming-2026:
@@ -28936,11 +28932,11 @@ en:
           description_audience: ''
           description_short: ''
           description: |-
-            #### This professional learning module is designed to help you prepare to teach Code.org’s [**Foundations of AI Programming Unit**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/5).
+            #### This professional learning module is designed to help you prepare to teach CodeAI’s [**Foundations of AI Programming Unit**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/5).
 
             ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/5) but can also stand alone for grades 9-12.
           student_description: |-
-            #### This professional learning module is designed to help you prepare to teach Code.org’s [**Foundations of AI Programming Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/2).
+            #### This professional learning module is designed to help you prepare to teach CodeAI’s [**Foundations of AI Programming Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/2).
 
             ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
         self-paced-pl-intro-to-designing-and-building-with-ai-2026:
@@ -28951,15 +28947,17 @@ en:
           description_audience: ''
           description_short: ''
           description: |-
-            # Welcome!
-            #### This short professional learning module introduces you to the concepts in **AI Foundations: Designing & Building with AI** course— a curriculum where students code alongside AI to build real-world interactive projects.
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#F5F5F5; color:#666; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Start here</span>
 
-            #### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about.
+            An orientation to the course as a whole, covering its structure, teaching philosophy, and how AI is used as a collaborative coding partner throughout. You will get a feel for the student experience before diving into unit-specific modules.
+
+            **Suggested tme:** 20 minutes
           student_description: |-
-            # Welcome!
-            #### This short professional learning module introduces you to the concepts in **AI Foundations: Designing & Building with AI** course— a curriculum where students code alongside AI to build real-world interactive projects.
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#F5F5F5; color:#666; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Start here</span>
 
-            #### This is a new, future-ready curriculum that offers students a chance to learn coding and computer science in a new way and the purpose of this module is to give you an understanding of what this new course is about.
+            An orientation to the course as a whole, covering its structure, teaching philosophy, and how AI is used as a collaborative coding partner throughout. You will get a feel for the student experience before diving into unit-specific modules.
+
+            **Suggested time:** 20 minute
         self-paced-pl-teaching-ai-algorithmic-decisions-2026:
           lessons: {}
           lesson_groups: {}
@@ -28967,20 +28965,18 @@ en:
           title: Teaching AI and Algorithmic Decisions
           description_audience: ''
           description_short: ''
-          description: |2-
+          description: |-
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 2</span>
 
-            #### This professional learning module prepares you to teach **Unit 2: AI and Algorithmic Decisions.**  In this unit,  students bring their web apps to life with JavaScript, using AI as a debugging partner and coding coach.
+            Students bring their web pages to life with JavaScript, adding event handlers, conditional logic, and functions while using AI as a debugging and brainstorming partner. You will prepare to teach students how to evaluate AI-generated code critically and decide when to write their own.
 
-            #### Here, you will prepare to teach event-driven programming, explaining how user interactions drive algorithms and conditional logic in interactive apps.
+             **Suggested time**: 75 minutes
+          student_description: |-
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 2</span>
 
-            #### **Suggested Time: 75 minutes**
-          student_description: |2-
+            Students bring their web pages to life with JavaScript, adding event handlers, conditional logic, and functions while using AI as a debugging and brainstorming partner. You will prepare to teach students how to evaluate AI-generated code critically and decide when to write their own.
 
-            #### This professional learning module prepares you to teach **Unit 2: AI and Algorithmic Decisions.**  In this unit,  students bring their web apps to life with JavaScript, using AI as a debugging partner and coding coach.
-
-            #### Here, you will prepare to teach event-driven programming, explaining how user interactions drive algorithms and conditional logic in interactive apps.
-
-            #### **Suggested Time: 75 minutes**
+             **Suggested time**: 75 minutes
         pl-embeddings:
           lessons:
             lesson-1:
@@ -29171,11 +29167,41 @@ en:
               name: Lesson 12
           lesson_groups: {}
           name: aif-year2-semester1-unit1
-          title: AIF Year 2 Semester 1 Unit 1
+          title: Logic-Based AI
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            This unit introduces students to what artificial intelligence is and to how programming concepts can be applied to build programs that behave intelligently.
+
+            Students begin by examining what it means for a computer to be artificially intelligent and what types of problems AI can be used to solve. The unit focuses on developing students’ comfort with programming in Python: students practice programming concepts introduced in AI Foundations Year 1, including variables, data flow, conditional statements, loops, and functions. They are also introduced to Python data structures like lists, tuples, dictionaries, and sets. As students build programs that solve problems with logic, students also reflect on the limits and challenges of logic-based AI as motivation for the following unit on machine learning.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Identify different types of AI and their applications.
+            - Make use of variables, conditional statements, loops, and functions in Python code.
+            - Choose appropriate data structures to represent data in Python.
+            - Translate algorithmic ideas to code.
+            - Analyze code for bugs and identify how to fix them.
+            - Write Python code to build AI systems capable of solving problems logically.
+            - Design heuristics that can help AI make informed decisions.
+            - Implement search algorithms to build systems that can find solutions to problems.
+            - Evaluate the limitations of logic-based AI for problem-solving.
+            :::
+          student_description: |-
+            In this unit, you'll learn what artificial intelligence is and how to build simple programs that behave intelligently.
+
+            You'll begin by examining what it means for a computer to be artificially intelligent and what types of problems AI can be used to solve. Along the way, you'll develop greater comfort with programming in Python: in fact, you'll review concepts including variables, data flow, conditional statements, loops, and functions. You'll also be introduced to Python data structures like lists, tuples, dictionaries, and sets. As you build programs that solve problems with logic, you'll also see the limits and challenges of logic-based AI.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you'll be able to . . .**]
+            - Identify different types of AI and their applications.
+            - Make use of variables, conditional statements, loops, and functions in Python code.
+            - Choose appropriate data structures to represent data in Python.
+            - Translate algorithmic ideas to code.
+            - Analyze code for bugs and identify how to fix them.
+            - Write Python code to build AI systems capable of solving problems logically.
+            - Design heuristics that can help AI make informed decisions.
+            - Implement search algorithms to build systems that can find solutions to problems.
+            - Evaluate the limitations of logic-based AI for problem-solving.
+            :::
         aif-year2-semester1-unit2:
           lessons: {}
           lesson_groups: {}
@@ -29332,7 +29358,7 @@ en:
               name: Big Ideas in Thinking Critically About AI
           lesson_groups: {}
           name: self-paced-pl-teaching-thinking-critically-about-ai-2026
-          title: Preparing to Teach Thinking Critically about AI
+          title: Teaching Thinking Critically about AI
           description_audience: ''
           description_short: ''
           description: |-
@@ -29357,3 +29383,23 @@ en:
             * Understand how the unit project develops and supports authentic student voice, inquiry, critique, and reflection.
 
             **Suggested time:** 70 minutes
+        test-brendan:
+          lessons: {}
+          lesson_groups: {}
+          name: test-brendan
+          title: test brendan
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        international-pedagogy-u1:
+          lessons:
+            lesson-1:
+              name: CodeAI Pedagogy
+          lesson_groups: {}
+          name: international-pedagogy-u1
+          title: CodeAI Pedagogy - International Course
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
