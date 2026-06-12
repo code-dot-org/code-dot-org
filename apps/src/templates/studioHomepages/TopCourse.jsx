@@ -27,7 +27,7 @@ class TopCourse extends Component {
     return (
       <div className={styles.card}>
         <div className={styles.header} />
-        <MuiTypography className={styles.title} variant="h4">
+        <MuiTypography className={styles.title} variant="h4" component="h5">
           {assignableName}
         </MuiTypography>
         <div className={styles.description}>
