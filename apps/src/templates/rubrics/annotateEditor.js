@@ -15,12 +15,12 @@ const RUBRIC_ANNOTATION_COLOR = 'var(--background-brand-aqua-primary)';
  */
 const tipStyle = {
   backgroundImage: `url(${tipIcon})`,
-  backgroundColor: '#333',
+  backgroundColor: 'var(--background-neutral-black-fixed)',
   backgroundPosition: '2px center',
   backgroundSize: '24px',
   backgroundRepeat: 'no-repeat',
-  borderColor: '#555',
-  color: 'white',
+  borderColor: 'var(--borders-neutral-strong)',
+  color: 'var(--text-neutral-white-fixed)',
   borderRadius: '6px',
   padding: '6px',
   paddingLeft: '30px',
