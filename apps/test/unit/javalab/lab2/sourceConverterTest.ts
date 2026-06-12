@@ -564,10 +564,10 @@ describe('javalab2 sourceConverter', () => {
       url: '/v3/assets/abc123/uuid-1.png',
     };
 
-    it('flatToMultiFile leaves url-backed visible files untyped and copies url', () => {
-      // Untyped is load-bearing: lab2 treats typed url files as
-      // levelbuilder-owned and skips the S3 delete + abuse unflag when a
-      // student removes them (getStudentFileAssetInfo).
+    it('flatToMultiFile leaves channel-asset files untyped and copies url', () => {
+      // Untyped is load-bearing for student uploads: lab2 treats typed url
+      // files as levelbuilder-owned and skips the S3 delete + abuse unflag
+      // when a student removes them (getStudentFileAssetInfo).
       const mf = flatToMultiFile({
         'Main.java': flatFile('class Main {}', 0),
         'cat.png': {...assetEntry, tabOrder: 1},
@@ -576,6 +576,20 @@ describe('javalab2 sourceConverter', () => {
       expect(image.type).toBeUndefined();
       expect(image.url).toBe(assetEntry.url);
       expect(image.contents).toBe('');
+    });
+
+    it('flatToMultiFile types starter-asset files STARTER', () => {
+      // Assets under /level_starter_assets/ are levelbuilder-owned shared
+      // level assets; typing them keeps lab2 from attempting S3 cleanup.
+      const mf = flatToMultiFile({
+        'cat.png': {
+          text: '',
+          isVisible: true,
+          url: '/level_starter_assets/My%20Level/uuid/uuid-1.png',
+        },
+      });
+      const image = Object.values(mf.files).find(f => f.name === 'cat.png')!;
+      expect(image.type).toBe(ProjectFileType.STARTER);
     });
 
     it('flatToMultiFile passes flagged through and omits absent url/flagged', () => {

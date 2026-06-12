@@ -56,15 +56,19 @@ URL) it already sends, so the Javabuilder contract is unchanged.
 Starter assets authored in legacy Java Lab exist only as the level's
 `starter_assets` property (`{friendlyName => uuidName}`); their levels'
 start sources carry no url entries. `starterAssets.ts` merges the
-mapping into the level's start/template/exemplar sources as plain
-`STARTER` files. Projects loaded from S3 are never merged: like any
-other start-source change, assets reach a student's project only when
-it is seeded from the level (fresh load or start over). Locking starter
+mapping into the level's start/template/exemplar sources as `STARTER`
+files. Projects loaded from S3 are never merged: like any other
+start-source change, assets reach a student's project only when it is
+seeded from the level (fresh load or start over). Locking starter
 assets against student edits will arrive with the broader
-locked-starter-files support. User-uploaded url-backed files stay
-untyped in the converter: lab2 treats typed url files as
-levelbuilder-owned and would skip the S3 delete + abuse unflag when a
-student removes one.
+locked-starter-files support.
+
+The flat shape doesn't persist file types, so the converter re-derives
+asset types from where the url points: `/level_starter_assets/...` is a
+levelbuilder-owned shared level asset (`STARTER`), while
+`/v3/assets/<channelId>/...` is the student's own upload and stays
+untyped — lab2 treats typed url files as levelbuilder-owned and would
+otherwise skip the S3 delete + abuse unflag when a student removes one.
 
 Codebridge, on the other hand, speaks `MultiFileSource`:
 
@@ -183,7 +187,8 @@ but we don't persist that information yet.
 - `types.ts` — `JavalabLevelProperties` extends
   `CodebridgeLevelProperties` with `csaViewMode`.
 - `starterAssets.ts` — merges the level's legacy `starter_assets`
-  mapping into the level's sources as STARTER files.
+  mapping into the level's sources as `STARTER` files; also home of the
+  starter-asset url helpers the converter uses for typing.
 - `layout/HorizontalLayout.tsx` — three-panel layout (InfoPanel |
   Editor over Console). Vertical/share/widget slots all point at the
   same horizontal layout for now.

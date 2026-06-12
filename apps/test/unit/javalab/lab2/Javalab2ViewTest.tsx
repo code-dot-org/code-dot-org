@@ -205,7 +205,7 @@ describe('Javalab2View', () => {
       return (useSource as jest.Mock).mock.calls.at(-1);
     }
 
-    it('merges mapping entries into startSources as url-backed starter files', () => {
+    it('merges mapping entries into startSources as url-backed STARTER files', () => {
       renderWithAssets(undefined);
       const codebridgeProps = (
         Codebridge as unknown as jest.Mock

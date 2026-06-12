@@ -1,6 +1,7 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 
 import {
+  isStarterAssetUrl,
   mergeStarterAssets,
   starterAssetUrl,
 } from '@cdo/apps/javalab/lab2/starterAssets';
@@ -36,6 +37,15 @@ describe('javalab2 starterAssets', () => {
       expect(starterAssetUrl(LEVEL_NAME, 'uuid-1.png')).toBe(
         '/level_starter_assets/CSA%20Unit%201/uuid/uuid-1.png'
       );
+    });
+  });
+
+  describe('isStarterAssetUrl', () => {
+    it('distinguishes level starter assets from channel assets', () => {
+      expect(isStarterAssetUrl(starterAssetUrl(LEVEL_NAME, 'uuid-1.png'))).toBe(
+        true
+      );
+      expect(isStarterAssetUrl('/v3/assets/abc123/uuid-1.png')).toBe(false);
     });
   });
 

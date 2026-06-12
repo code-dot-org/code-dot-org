@@ -17,16 +17,18 @@ import {
   ProjectFileType,
 } from '@cdo/apps/lab2/types';
 
+import {isStarterAssetUrl} from './starterAssets';
 import {JavalabFlatFile, JavalabFlatSource} from './types';
 
 function projectFileType(flat: JavalabFlatFile): ProjectFileType | undefined {
   if (flat.isValidation) return ProjectFileType.VALIDATION;
   if (!flat.isVisible) return ProjectFileType.SUPPORT;
-  // Url-backed (asset) files stay untyped: lab2 treats typed url files as
-  // levelbuilder-owned and skips the S3 delete + abuse unflag on removal
-  // We validate whether a url-based file is levelbuilder owned separately,
-  // based on whether the url is a channel-based url or not (see getStudentFileAssetInfo).
-  if (flat.url) return undefined;
+  // The flat shape doesn't persist types, so asset files are typed by where
+  // their url points: level starter assets are levelbuilder-owned (STARTER),
+  // while a student's own uploads stay untyped.
+  if (flat.url) {
+    return isStarterAssetUrl(flat.url) ? ProjectFileType.STARTER : undefined;
+  }
   return ProjectFileType.STARTER;
 }
 

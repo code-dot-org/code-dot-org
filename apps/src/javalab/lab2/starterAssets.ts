@@ -11,11 +11,19 @@ import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import {getNextFileId} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 
+const STARTER_ASSETS_PATH = '/level_starter_assets/';
+
 // Return the full url for a starter asset based on the level name and asset uuidName.
 export function starterAssetUrl(levelName: string, uuidName: string): string {
-  return `/level_starter_assets/${encodeURIComponent(
+  return `${STARTER_ASSETS_PATH}${encodeURIComponent(
     levelName
   )}/uuid/${uuidName}`;
+}
+
+// Levelbuilder-owned assets live under level_starter_assets; student uploads
+// live under /v3/assets/<channelId>/.
+export function isStarterAssetUrl(url: string): boolean {
+  return url.startsWith(STARTER_ASSETS_PATH);
 }
 
 // Append one STARTER file per mapping entry not already present by name.
