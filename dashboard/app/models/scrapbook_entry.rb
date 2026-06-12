@@ -7,8 +7,8 @@
 #  script_id        :integer
 #  level_id         :integer
 #  channel_id       :string(255)
-#  before_asset_url :text(16777215)
-#  after_asset_url  :text(16777215)
+#  before_asset_url :string(255)
+#  after_asset_url  :string(255)
 #  entry_text       :text(65535)
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
@@ -33,6 +33,17 @@ class ScrapbookEntry < ApplicationRecord
   validates :user_id, uniqueness: {scope: [:script_id, :level_id]}, if: -> {channel_id.blank?}
   validates :user_id, uniqueness: {scope: :channel_id}, if: -> {channel_id.present?}
   validate :entry_text_values_within_limit
+
+  # The asset columns hold a bare S3 filename (see Scrapbook::ImageStore). Reject
+  # anything else so a stored value can never escape the user's prefix when it is
+  # used to build an S3 key in the serving path.
+  validates :before_asset_url, format: {with: Scrapbook::ImageStore::FILENAME_PATTERN}, allow_blank: true
+  validates :after_asset_url, format: {with: Scrapbook::ImageStore::FILENAME_PATTERN}, allow_blank: true
+
+  # Best-effort S3 cleanup: an orphaned image wastes space but is otherwise
+  # harmless, so a failed delete must not block the DB write.
+  before_update :delete_replaced_images
+  after_destroy :delete_all_images
 
   private def keyed_by_script_level_or_channel
     has_script_level = script_id.present? && level_id.present?
@@ -60,5 +71,22 @@ class ScrapbookEntry < ApplicationRecord
         errors.add(:entry_text, "value for #{key} exceeds #{STEM_TEXT_MAX} characters")
       end
     end
+  end
+
+  private def delete_replaced_images
+    delete_image(before_asset_url_was) if before_asset_url_changed? && before_asset_url_was.present?
+    delete_image(after_asset_url_was) if after_asset_url_changed? && after_asset_url_was.present?
+  end
+
+  private def delete_all_images
+    delete_image(before_asset_url)
+    delete_image(after_asset_url)
+  end
+
+  private def delete_image(filename)
+    return if filename.blank?
+    Scrapbook::ImageStore.delete(user_id, filename)
+  rescue StandardError => exception
+    Rails.logger.warn("scrapbook image cleanup failed for user #{user_id}: #{exception.message}")
   end
 end

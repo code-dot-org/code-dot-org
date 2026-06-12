@@ -2207,8 +2207,8 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_29_211033) do
     t.integer "script_id"
     t.integer "level_id"
     t.string "channel_id"
-    t.text "before_asset_url", size: :medium
-    t.text "after_asset_url", size: :medium
+    t.string "before_asset_url"
+    t.string "after_asset_url"
     t.text "entry_text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

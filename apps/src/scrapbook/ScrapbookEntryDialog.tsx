@@ -26,19 +26,9 @@ interface ExistingEntry {
 const emptyForm = (): EntryText =>
   Object.fromEntries(SCRAPBOOK_STEMS.map(s => [s.key, '']));
 
-// Cap uploaded images at ~5MB pre-base64 so we don't blow up the JSON payload
-// to the scrapbook_entries endpoint.
+// Fast-fail mirror of the server-side cap in Scrapbook::ImageStore::MAX_BYTES.
+// The server re-checks, so this only spares the user a doomed upload.
 const MAX_UPLOAD_BYTES = 5 * 1024 * 1024;
-
-function readFileAsDataUrl(file: File): Promise<string> {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = () => resolve(reader.result as string);
-    reader.onerror = () =>
-      reject(reader.error || new Error('file read failed'));
-    reader.readAsDataURL(file);
-  });
-}
 
 export default function ScrapbookEntryDialog({
   isOpen,
@@ -52,6 +42,7 @@ export default function ScrapbookEntryDialog({
   const [afterUrl, setAfterUrl] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
+  const [uploading, setUploading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const hasKey = !!channelId || (!!scriptId && !!levelId);
@@ -123,12 +114,24 @@ export default function ScrapbookEntryDialog({
       setError('Image is too large. Please choose one under 5 MB.');
       return;
     }
+    // Upload to S3 up front and keep only the returned proxy URL; the image
+    // bytes never travel in the entry-save JSON payload.
+    const formData = new FormData();
+    formData.append('image', file);
+    setUploading(true);
     try {
-      const dataUrl = await readFileAsDataUrl(file);
-      if (slot === 'before') setBeforeUrl(dataUrl);
-      else setAfterUrl(dataUrl);
+      const response = await HttpClient.post(
+        '/api/v1/scrapbook_entries/image',
+        formData,
+        true
+      );
+      const {url} = await response.json();
+      if (slot === 'before') setBeforeUrl(url);
+      else setAfterUrl(url);
     } catch {
-      setError('Could not read the selected file.');
+      setError('Could not upload the image. Try again.');
+    } finally {
+      setUploading(false);
     }
   };
 
@@ -166,7 +169,7 @@ export default function ScrapbookEntryDialog({
     }
   };
 
-  const canSave = !saving && !loading && hasKey;
+  const canSave = !saving && !loading && !uploading && hasKey;
 
   return createPortal(
     <Dialog
@@ -196,13 +199,13 @@ export default function ScrapbookEntryDialog({
               label="Before"
               url={beforeUrl}
               onFileSelected={file => handleFileSelected('before', file)}
-              disabled={saving || loading}
+              disabled={saving || loading || uploading}
             />
             <ScreenshotSlot
               label="After"
               url={afterUrl}
               onFileSelected={file => handleFileSelected('after', file)}
-              disabled={saving || loading}
+              disabled={saving || loading || uploading}
             />
           </div>
           <div className={moduleStyles.stems}>
