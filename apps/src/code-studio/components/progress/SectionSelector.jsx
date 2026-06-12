@@ -1,5 +1,3 @@
-import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -15,7 +13,7 @@ import {updateQueryParam} from '../../utils';
 export const NO_SELECTED_SECTION_VALUE = '';
 
 function SectionSelector({
-  className,
+  style,
   requireSelection,
   sections,
   selectedSectionId,
@@ -43,28 +41,37 @@ function SectionSelector({
     return null;
   }
 
-  const items = (
-    requireSelection
-      ? []
-      : [{value: NO_SELECTED_SECTION_VALUE, text: i18n.selectSection()}]
-  ).concat(sections.map(({id, name}) => ({value: String(id), text: name})));
-
   return (
-    <SimpleDropdown
-      className={classNames('uitest-sectionselect', className)}
+    <select
+      className="uitest-sectionselect"
       name="sections"
-      size="s"
-      labelText={i18n.selectSection()}
-      isLabelVisible={false}
-      items={items}
-      selectedValue={String(selectedSectionId || NO_SELECTED_SECTION_VALUE)}
+      aria-label={i18n.selectSection()}
+      style={{
+        ...styles.select,
+        ...style,
+      }}
+      value={selectedSectionId || NO_SELECTED_SECTION_VALUE}
       onChange={handleSelectChange}
-    />
+    >
+      {!requireSelection && (
+        <option
+          key={NO_SELECTED_SECTION_VALUE}
+          value={NO_SELECTED_SECTION_VALUE}
+        >
+          {i18n.selectSection()}
+        </option>
+      )}
+      {sections.map(({id, name}) => (
+        <option key={id} value={id}>
+          {name}
+        </option>
+      ))}
+    </select>
   );
 }
 
 SectionSelector.propTypes = {
-  className: PropTypes.string,
+  style: PropTypes.object,
   // If false, the first option is "Select Section"
   requireSelection: PropTypes.bool,
   // If true, we'll show even if we don't have any lockable or hidden lessons
@@ -81,6 +88,12 @@ SectionSelector.propTypes = {
   ).isRequired,
   selectedSectionId: PropTypes.number,
   selectSection: PropTypes.func.isRequired,
+};
+
+const styles = {
+  select: {
+    width: 180,
+  },
 };
 
 export const UnconnectedSectionSelector = SectionSelector;

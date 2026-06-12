@@ -170,7 +170,6 @@ class UnitOverviewHeader extends Component {
           <NotificationBanner
             className="announcement-notification"
             variant="warning"
-            style="filled"
             icon={WARNING_ICON}
             title={i18n.redirectCourseVersionWarningDetails()}
             onClose={this.handleDismissRedirectWarning}
@@ -180,7 +179,6 @@ class UnitOverviewHeader extends Component {
           <NotificationBanner
             className="announcement-notification"
             variant="warning"
-            style="filled"
             icon={WARNING_ICON}
             title={i18n.wrongCourseVersionWarningNotice()}
             description={versionWarningDetails}
@@ -191,7 +189,6 @@ class UnitOverviewHeader extends Component {
           <NotificationBanner
             className="announcement-notification"
             variant="warning"
-            style="filled"
             icon={WARNING_ICON}
             title={i18n.hiddenUnitWarningNotice()}
             description={i18n.hiddenUnitWarningDetails()}
@@ -213,7 +210,7 @@ class UnitOverviewHeader extends Component {
           <div className={styles.heading}>
             <div className={styles.titleWrapper}>
               <Typography
-                variant="h2"
+                variant="h1"
                 component="h1"
                 className={styles.title}
                 id="script-title"

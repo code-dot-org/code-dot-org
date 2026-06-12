@@ -780,6 +780,10 @@ module SharedConstants
     SCRAMBLE: 'scramble',
   }.freeze
 
+  PRACTICE_PROBLEM_DELIVERY_CONTEXT = {
+    AI_TUTOR_LESSON_DEEP_DIVE: 'ai_tutor_lesson_deep_dive'
+  }.freeze
+
   AI_TUTOR_TYPES = {
     COMPILATION: 'compilation',
     VALIDATION: 'validation',

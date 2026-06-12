@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_05_29_211033) do
+ActiveRecord::Schema[7.0].define(version: 2026_06_01_152016) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -2701,6 +2701,20 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_29_211033) do
     t.datetime "created_at", precision: nil
     t.datetime "updated_at", precision: nil
     t.index ["user_id", "permission"], name: "index_user_permissions_on_user_id_and_permission", unique: true
+  end
+
+  create_table "user_practice_problem_attempts", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "practice_problem_id", null: false
+    t.json "attempt", null: false
+    t.boolean "correct", null: false
+    t.text "ai_feedback"
+    t.string "delivery_context_type", null: false
+    t.json "delivery_context_metadata"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["practice_problem_id"], name: "index_user_practice_problem_attempts_on_practice_problem_id"
+    t.index ["user_id"], name: "index_user_practice_problem_attempts_on_user_id"
   end
 
   create_table "user_preferences", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
