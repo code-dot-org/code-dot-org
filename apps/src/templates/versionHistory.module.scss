@@ -2,6 +2,8 @@
   padding-right: 16px;
 }
 
+// State overrides need !important here because this legacy modal still has
+// global App Lab/Bootstrap rules and MUI Emotion state styles in play.
 .cancelButton {
   background-color: var(--background-neutral-primary) !important;
   border-color: var(--borders-neutral-solid) !important;
@@ -26,11 +28,7 @@
   }
 }
 
-// The disabled "View" on the selected row. The theme's default disabled state is
-// white-on-light-gray (fails contrast); we want a muted-but-legible dark fill. No
-// --background-* semantic token resolves to a dark-enough gray in the light theme,
-// so fall to the gray-90 primitive (white on #576575 = 5.96:1, AA). !important is
-// required to beat MUI's runtime emotion styles for the .Mui-disabled state.
+// Keep the selected-row View button legible while disabled.
 .disabledViewButton {
   &:global(.Mui-disabled) {
     background-color: var(--neutral-gray-90) !important;
