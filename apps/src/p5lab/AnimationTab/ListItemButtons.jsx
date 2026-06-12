@@ -4,7 +4,6 @@ import React from 'react';
 import {OverlayTrigger, Tooltip} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 import SpeedSlider from '@cdo/apps/templates/SpeedSlider';
-import color from '@cdo/apps/util/color';
 
 import DeleteAnimationDialog from './DeleteAnimationDialog';
 import ItemLoopToggle from './ItemLoopToggle';
@@ -108,7 +107,7 @@ const styles = {
     marginLeft: 6,
     marginTop: 6,
     textAlign: 'center',
-    color: color.white,
+    color: 'var(--text-neutral-white-fixed)',
     fontSize: 24,
   },
   icon: {
