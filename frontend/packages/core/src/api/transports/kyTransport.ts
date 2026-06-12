@@ -55,6 +55,15 @@ export function createKyTransport(opts: {
     req: RequestOptions,
   ): Promise<ApiError> {
     const res = error.response;
+    let body: unknown;
+    try {
+      const contentType = res.headers.get('content-type') ?? '';
+      body = contentType.includes('application/json')
+        ? await res.clone().json()
+        : await res.clone().text();
+    } catch {
+      body = undefined;
+    }
     return new ApiError(
       `Request failed: ${req.method} ${res.url} -> ${res.status}`,
       {
@@ -64,6 +73,7 @@ export function createKyTransport(opts: {
         url: res.url,
         method: req.method,
         headers: res.headers,
+        body,
       },
     );
   }

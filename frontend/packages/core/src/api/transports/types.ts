@@ -60,6 +60,12 @@ export class ApiError extends Error {
   readonly type?: string;
   readonly details?: unknown;
   readonly headers?: Headers;
+  /**
+   * Parsed error-response body (JSON when the response was JSON, else text).
+   * Lets callers read validation errors (e.g. Rails 422 `{field: [messages]}`)
+   * without re-reading the consumed Response.
+   */
+  readonly body?: unknown;
   name = 'ApiError' as const;
 
   constructor(
@@ -71,6 +77,7 @@ export class ApiError extends Error {
       url: string;
       method: HttpMethod;
       headers?: Headers;
+      body?: unknown;
     },
   ) {
     super(message);
@@ -81,6 +88,7 @@ export class ApiError extends Error {
     this.url = details.url;
     this.method = details.method;
     this.headers = details.headers;
+    this.body = details.body;
   }
 
   getDetails(): ApiErrorDetails {

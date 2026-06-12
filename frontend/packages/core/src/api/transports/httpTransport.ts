@@ -104,6 +104,7 @@ export function createHttpTransport(opts: {
             url,
             method: req.method,
             headers: res.headers,
+            body: payload,
           },
         );
       }

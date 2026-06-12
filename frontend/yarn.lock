@@ -1311,6 +1311,7 @@ __metadata:
     vite-plugin-dts: "catalog:"
     vite-plugin-externalize-deps: "catalog:"
     vitest: "catalog:"
+    zod: "catalog:"
   peerDependencies:
     "@tanstack/react-query": "*"
     react: ^18.0.0 || ^19.0.0
