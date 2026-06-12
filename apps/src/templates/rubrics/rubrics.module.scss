@@ -1180,6 +1180,14 @@ p.evidenceLevelHeaderText {
   }
 }
 
+.evidenceLevelDescriptionV2 {
+  // Always occupy its own full-width line and reserve a constant height so the
+  // container doesn't resize as descriptions of different lengths are shown.
+  // 1.64 is the body-four line-height; reserve room for 3 lines.
+  flex-basis: 100%;
+  min-height: calc(3 * 1.64em);
+}
+
 .evidenceLevelOptionV2 {
   display: flex;
   flex-direction: row;

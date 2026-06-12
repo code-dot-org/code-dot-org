@@ -1,4 +1,4 @@
-import {Button as MuiButton, Typography} from '@mui/material';
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {
@@ -115,9 +115,7 @@ export default function EvidenceLevelsForTeachersV2({
         </Typography>
         <div className={style.evidenceLevelSetHorizontalV2} ref={ref}>
           {evidenceLevels.map(evidenceLevel => (
-            <MuiButton
-              variant="text"
-              color="secondary"
+            <button
               data-ai-suggested={
                 suggestedEvidenceLevels.includes(evidenceLevel.understanding)
                   ? ''
@@ -150,9 +148,13 @@ export default function EvidenceLevelsForTeachersV2({
               )}
             >
               {UNDERSTANDING_LEVEL_STRINGS_V2[evidenceLevel.understanding]}
-            </MuiButton>
+            </button>
           ))}
-          <Typography variant="body4" gutterBottom>
+          <Typography
+            className={style.evidenceLevelDescriptionV2}
+            variant="body4"
+            gutterBottom
+          >
             {showDescription !== INVALID_UNDERSTANDING
               ? evidenceLevels.find(e => e.understanding === showDescription)
                   ?.teacherDescription

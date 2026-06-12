@@ -1,8 +1,8 @@
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
+import ReactTooltip from 'react-tooltip';
 
 import {RubricAiEvaluationLimits} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
@@ -59,21 +59,6 @@ export default function RubricTabButtons({
   };
 
   const runButtonTooltipId = _.uniqueId();
-  const tooltipText = statusText();
-
-  const runAiAssessmentButton = (
-    <RunAIAssessmentButton
-      canProvideFeedback={canProvideFeedback}
-      teacherHasEnabledAi={teacherHasEnabledAi}
-      studentUserId={studentUserId}
-      refreshAiEvaluations={refreshAiEvaluations}
-      rubric={rubric}
-      studentName={studentName}
-      status={status}
-      setStatus={setStatus}
-      reportingData={reportingData}
-    />
-  );
 
   return (
     <div className="uitest-rubric-tab-buttons">
@@ -96,21 +81,31 @@ export default function RubricTabButtons({
           ]}
           onChange={value => tabSelectCallback(value)}
         />
-        {selectedTab === TAB_NAMES.RUBRIC &&
-          teacherHasEnabledAi &&
-          (tooltipText ? (
-            <WithTooltip
-              tooltipProps={{
-                text: tooltipText,
-                tooltipId: runButtonTooltipId,
-                direction: 'onBottom',
-              }}
-            >
-              <div>{runAiAssessmentButton}</div>
-            </WithTooltip>
-          ) : (
-            runAiAssessmentButton
-          ))}
+        {selectedTab === TAB_NAMES.RUBRIC && teacherHasEnabledAi && (
+          <div data-tip data-for={runButtonTooltipId}>
+            <RunAIAssessmentButton
+              canProvideFeedback={canProvideFeedback}
+              teacherHasEnabledAi={teacherHasEnabledAi}
+              studentUserId={studentUserId}
+              refreshAiEvaluations={refreshAiEvaluations}
+              rubric={rubric}
+              studentName={studentName}
+              status={status}
+              setStatus={setStatus}
+              reportingData={reportingData}
+            />
+            {!!statusText() && (
+              <ReactTooltip
+                id={runButtonTooltipId}
+                role="tooltip"
+                effect="solid"
+                place="bottom"
+              >
+                {statusText()}
+              </ReactTooltip>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );
