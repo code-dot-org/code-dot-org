@@ -6,9 +6,9 @@
   &:hover,
   &:focus,
   &:active {
-    background-color: var(--background-brand-purple-strong);
-    color: var(--text-neutral-white-fixed);
-    text-decoration: none;
+    background-color: var(--background-brand-purple-strong) !important;
+    color: var(--text-neutral-white-fixed) !important;
+    text-decoration: none !important;
   }
 }
 
