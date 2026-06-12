@@ -146,10 +146,10 @@ const styles = {
     position: 'absolute',
     width: '100%',
     height: '100%',
-    border: 'solid thin var(--borders-neutral-strong)',
+    border: 'solid thin var(--borders-neutral-primary)',
   },
   emptyPiskelEl: {
-    backgroundColor: 'var(--background-neutral-senary)',
+    backgroundColor: 'var(--background-neutral-tertiary)',
     position: 'absolute',
     width: '100%',
     height: '100%',
@@ -159,7 +159,7 @@ const styles = {
     fontSize: 14,
   },
   helpText: {
-    color: 'var(--text-neutral-primary)',
+    color: 'var(--text-neutral-secondary)',
     position: 'relative',
     top: '50%',
     transform: 'translateY(-50%)',
