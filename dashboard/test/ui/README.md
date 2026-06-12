@@ -28,6 +28,33 @@ The UI tests run as part of our deployment during the Deploy To Test (DTT) via `
 
 Each suite uploads its own status page (`test_status_{Safari_iPad_iPhone_UI,Chrome_Firefox_UI,Eyes}.html`) to the test machine and to S3.
 
+## Concurrency limits
+
+SauceLabs and Device Farm each have their own cost structure and concurrency
+limits. SauceLabs charges by maximum concurrency. Device Farm charges per test
+run, but also has separate concurrency limits for desktop and mobile within each
+AWS account. Device Farm limits can be increased at no additional cost by
+negotiating with AWS support based on current need an availability.
+
+Today, the relevant concurrency limits are:
+
+| Provider            | AWS Account | Concurrency | Usage                   |
+|---------------------|-------------|-------------|-------------------------|
+| SauceLabs           | —           | 65          | DTT + local development |
+| Device Farm Desktop | codeorg     | 150         | DTT + local development |
+| Device Farm Desktop | codeorg-dev | 150         | Drone (CI)              |
+
+Staying under concurrency limits in DTT is straightforward, because only one DTT
+runs at a time. Staying under limits in Drone is less predictable, because there
+is no limit to the number of concurrent Drone runs, and each concurrent drone
+run might not be running the maximum number of UI tests at a given time.
+Therefore, the simplest plan is to request additional increases to Device Farm
+Desktop (codeorg-dev) concurrency if/when we start seeing UI tests fail in Drone
+with concurrency errors like this one:
+```
+Cannot exceed 150 concurrent sessions. Currently active=130, pending=20, failed=0 (Selenium::WebDriver::Error::SessionNotCreatedError)
+```
+
 ## Local Setup
 
 ### On your machine: Chrome webdriver
