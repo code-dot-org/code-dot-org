@@ -162,7 +162,7 @@ export default class VersionHistory extends React.Component {
           </MuiButton>
           <MuiButton
             type="button"
-            color="secondary"
+            color="tertiary"
             size="small"
             variant="outlined"
             id="again-button"
