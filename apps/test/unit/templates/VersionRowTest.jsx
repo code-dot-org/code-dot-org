@@ -1,3 +1,4 @@
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
@@ -13,6 +14,9 @@ describe('VersionRow', () => {
     lastModified: new Date(),
   };
 
+  const findButtonByText = (wrapper, text) =>
+    wrapper.find(MuiButton).filterWhere(button => button.text() === text);
+
   it('renders preview and restore buttons for a non-latest version', () => {
     const wrapper = shallow(
       <VersionRow
@@ -22,19 +26,24 @@ describe('VersionRow', () => {
         isReadOnly={false}
       />
     );
+    const viewButton = findButtonByText(wrapper, msg.view());
+    const restoreButton = findButtonByText(wrapper, msg.restore());
+
     expect(wrapper).to.not.have.className('highlight');
-    expect(wrapper).to.containMatchingElement(
-      <a target="_blank">
-        <button type="button" className="btn-info">
-          {msg.view()}
-        </button>
-      </a>
-    );
-    expect(wrapper).to.containMatchingElement(
-      <button type="button" className="img-upload">
-        {msg.restore()}
-      </button>
-    );
+    expect(viewButton).to.have.length(1);
+    expect(viewButton.prop('component')).to.equal('a');
+    expect(viewButton.prop('target')).to.equal('_blank');
+    expect(viewButton.prop('rel')).to.equal('noopener noreferrer');
+    expect(viewButton.prop('color')).to.equal('primary');
+    expect(viewButton.prop('size')).to.equal('small');
+    expect(viewButton.prop('variant')).to.equal('contained');
+    expect(viewButton.prop('href')).to.contain('version=abcdef');
+
+    expect(restoreButton).to.have.length(1);
+    expect(restoreButton.prop('type')).to.equal('button');
+    expect(restoreButton.prop('color')).to.equal('tertiary');
+    expect(restoreButton.prop('size')).to.equal('small');
+    expect(restoreButton.prop('variant')).to.equal('outlined');
   });
 
   it('renders restore button and disabled view button for selected version', () => {
@@ -46,17 +55,22 @@ describe('VersionRow', () => {
         isReadOnly={false}
       />
     );
+    const viewButton = findButtonByText(wrapper, msg.view());
+    const restoreButton = findButtonByText(wrapper, msg.restore());
+
     expect(wrapper).to.have.className('highlight');
-    expect(wrapper).to.containMatchingElement(
-      <button type="button" className="btn-default">
-        {msg.view()}
-      </button>
-    );
-    expect(wrapper).to.containMatchingElement(
-      <button type="button" className="btn-info">
-        {msg.restore()}
-      </button>
-    );
+    expect(viewButton).to.have.length(1);
+    expect(viewButton.prop('type')).to.equal('button');
+    expect(viewButton.prop('color')).to.equal('secondary');
+    expect(viewButton.prop('size')).to.equal('small');
+    expect(viewButton.prop('variant')).to.equal('contained');
+    expect(viewButton.prop('disabled')).to.be.true;
+
+    expect(restoreButton).to.have.length(1);
+    expect(restoreButton.prop('type')).to.equal('button');
+    expect(restoreButton.prop('color')).to.equal('primary');
+    expect(restoreButton.prop('size')).to.equal('small');
+    expect(restoreButton.prop('variant')).to.equal('contained');
   });
 
   it('renders a disabled button for the latest version', () => {
@@ -64,21 +78,19 @@ describe('VersionRow', () => {
       <VersionRow
         {...MINIMUM_PROPS}
         isLatest={true}
-        isSelectedVersion={false}
+        isSelectedVersion={true}
         isReadOnly={false}
       />
     );
-    expect(wrapper).to.containMatchingElement(
-      <button
-        key={'latest-version-message'}
-        type="button"
-        className="btn-default"
-        disabled="disabled"
-        style={{cursor: 'default', background: 'none', border: 'none'}}
-      >
-        {msg.latestVersion()}
-      </button>
-    );
+    const latestVersionMessage = wrapper
+      .find(MuiTypography)
+      .filterWhere(typography => typography.text() === msg.latestVersion());
+    const viewButton = findButtonByText(wrapper, msg.view());
+
+    expect(latestVersionMessage).to.have.length(1);
+    expect(latestVersionMessage.prop('component')).to.equal('span');
+    expect(latestVersionMessage.prop('variant')).to.equal('body2');
+    expect(viewButton.prop('disabled')).to.be.true;
   });
 
   it('calls onChoose when restore button is clicked', () => {
@@ -94,7 +106,7 @@ describe('VersionRow', () => {
     );
     expect(onChoose).not.to.have.been.called;
 
-    wrapper.find('.img-upload').simulate('click');
+    findButtonByText(wrapper, msg.restore()).simulate('click');
     expect(onChoose).to.have.been.calledOnce;
   });
 });
