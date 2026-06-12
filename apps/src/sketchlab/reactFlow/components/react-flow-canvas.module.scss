@@ -26,11 +26,19 @@
     border-radius: 4px;
   }
 
-  // Additional focus outline support on standalone line edges for click/programmatic focus.
-  :global(.react-flow__edge).lineEdge:focus {
+  // Focus or selection outline for standalone line edges.
+  // :focus covers click/programmatic focus; :global(.selected) covers
+  // multi-selection where the edge has selected=true but no DOM focus.
+  :global(.react-flow__edge).lineEdge:focus,
+  :global(.react-flow__edge.selected).lineEdge {
     outline: 2px solid var(--borders-brand-teal-primary);
     outline-offset: 2px;
     border-radius: 4px;
+  }
+
+  // Show anchor dots when a lineAnchor node is part of a multi-selection.
+  :global(.react-flow__node-lineAnchor.selected .react-flow__handle) {
+    opacity: 1;
   }
 
   // Group nodes: transparent background; React Flow provides the focus indicator.
