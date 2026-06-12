@@ -68,11 +68,13 @@ export default class VersionRow extends React.Component {
       );
     } else if (!this.props.isReadOnly) {
       const variant = this.props.isSelectedVersion ? 'contained' : 'outlined';
+      const color = this.props.isSelectedVersion ? 'primary' : 'tertiary';
       buttons.push(
         <MuiButton
           key={'restore-version-button'}
           type="button"
-          color="primary"
+          color={color}
+          size="small"
           variant={variant}
           onClick={this.props.onChoose}
         >
@@ -83,18 +85,20 @@ export default class VersionRow extends React.Component {
 
     if (!this.props.isSelectedVersion) {
       buttons.push(
-        <a
+        <MuiButton
           key={'not-selected-version-button'}
+          component="a"
           href={
             location.origin + location.pathname + '?' + this.getQueryParams()
           }
           target="_blank"
           rel="noopener noreferrer"
+          color="primary"
+          size="small"
+          variant="contained"
         >
-          <MuiButton type="button" color="primary" variant="contained">
-            {msg.view()}
-          </MuiButton>
-        </a>
+          {msg.view()}
+        </MuiButton>
       );
     } else {
       buttons.push(
@@ -102,6 +106,7 @@ export default class VersionRow extends React.Component {
           key={'disabled-view-button'}
           type="button"
           color="secondary"
+          size="small"
           variant="contained"
           disabled
           className={styles.disabledViewButton}

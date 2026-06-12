@@ -152,6 +152,7 @@ export default class VersionHistory extends React.Component {
           <MuiButton
             type="button"
             color="error"
+            size="small"
             variant="contained"
             id="start-over-button"
             style={{marginLeft: 0}}
@@ -162,6 +163,7 @@ export default class VersionHistory extends React.Component {
           <MuiButton
             type="button"
             color="secondary"
+            size="small"
             variant="outlined"
             id="again-button"
             style={{float: 'right'}}
@@ -215,6 +217,7 @@ export default class VersionHistory extends React.Component {
                       <MuiButton
                         type="button"
                         color="error"
+                        size="small"
                         variant="contained"
                         onClick={this.onConfirmClearPuzzle}
                         style={{float: 'right'}}
