@@ -570,12 +570,7 @@ const DanceView: React.FunctionComponent<{
     return () => {
       programExecutor.current?.destroy();
     };
-  }, [
-    levelProperties,
-    resetProgram,
-    onPuzzleComplete,
-    readonlyWorkspace,
-  ]);
+  }, [levelProperties, resetProgram, onPuzzleComplete, readonlyWorkspace]);
 
   // Create dance validator.
   const danceValidator = useRef(new DanceValidator());

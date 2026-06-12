@@ -414,7 +414,6 @@ Dance.prototype.afterInject_ = function () {
   this.nativeAPI = new DanceParty({
     onPuzzleComplete: this.onPuzzleComplete.bind(this),
     playSound: this.playSong.bind(this),
-    recordReplayLog,
     showMeasureLabel: !this.share,
     onHandleEvents: this.onHandleEvents.bind(this),
     onInit: async nativeAPI => {
@@ -467,7 +466,6 @@ Dance.prototype.afterInject_ = function () {
       ...this.performanceData_,
     }),
   };
-
 };
 
 Dance.prototype.playSong = function (url, callback, onEnded) {
