@@ -4,7 +4,6 @@
 import $ from 'jquery';
 import QRCode from 'qrcode.react';
 import React from 'react';
-import {Provider} from 'react-redux';
 
 import {
   blockLimitExceeded,
@@ -21,7 +20,6 @@ import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 import msg from '@cdo/locale';
 
-import DownloadReplayVideoButton from './code-studio/components/DownloadReplayVideoButton';
 import project from './code-studio/initApp/project';
 import LegacyDialog from './code-studio/LegacyDialog';
 import testImageAccess from './code-studio/url_test';
@@ -863,13 +861,6 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
 
   options.assetUrl = this.studioApp_.assetUrl;
 
-  // An early optimization; only render the container for
-  // DownloadReplayVideoButton if we think we're actually going to use it.
-  // @see DownloadReplayVideoButton.hasReplayVideo
-  options.downloadReplayVideo =
-    getStore().getState().pageConstants.appType === 'dance' &&
-    window.appOptions.signedReplayLogUrl;
-
   var sharingDiv = document.createElement('div');
   sharingDiv.setAttribute('id', 'sharing');
   sharingDiv.innerHTML = require('./templates/sharing.html.ejs')({
@@ -986,22 +977,6 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
       $(sendToPhone).hide();
     }
   });
-
-  var downloadReplayVideoContainer = sharingDiv.querySelector(
-    '#download-replay-video-container'
-  );
-  if (downloadReplayVideoContainer) {
-    const onDownloadError = () => $('#download-replay-video-error').show();
-    createReactRoot(
-      <Provider store={getStore()}>
-        <DownloadReplayVideoButton onError={onDownloadError} />
-      </Provider>,
-      downloadReplayVideoContainer,
-      {
-        legacyReactDomRender: true,
-      }
-    );
-  }
 
   return sharingDiv;
 };

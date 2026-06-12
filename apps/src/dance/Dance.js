@@ -13,7 +13,6 @@ import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
-import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
 import {SongTitlesToArtistTwitterHandle} from '../code-studio/dancePartySongArtistTags';
 import project from '../code-studio/initApp/project';
 import {TestResults} from '../constants';
@@ -412,9 +411,6 @@ Dance.prototype.afterInject_ = function () {
     return acc;
   }, {});
 
-  // record a replay log (and generate a video) for both project levels and any
-  // course levels that have sharing enabled
-  const recordReplayLog = this.shouldShowSharing() || this.level.isProjectLevel;
   this.nativeAPI = new DanceParty({
     onPuzzleComplete: this.onPuzzleComplete.bind(this),
     playSound: this.playSong.bind(this),
@@ -472,9 +468,6 @@ Dance.prototype.afterInject_ = function () {
     }),
   };
 
-  if (recordReplayLog) {
-    getStore().dispatch(saveReplayLog(this.nativeAPI.getReplayLog()));
-  }
 };
 
 Dance.prototype.playSong = function (url, callback, onEnded) {
