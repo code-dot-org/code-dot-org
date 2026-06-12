@@ -74,6 +74,28 @@ class LevelStarterAssetsController < ApplicationController
     upload_and_respond(uuid_name, upload_data)
   end
 
+  # POST /level_starter_assets/:level_name/rename/:filename
+  # Re-keys an existing starter asset under a new friendly name
+  # (params[:new_filename]). The S3 object is untouched.
+  def rename
+    old_name = "#{params[:filename]}.#{params[:format]}"
+    new_name = params.require(:new_filename)
+    return head :unprocessable_entity unless VALID_FILE_EXTENSIONS.include?(File.extname(new_name))
+
+    uuid_name = @level.starter_assets&.[](old_name)
+    return head :not_found unless uuid_name
+    # add-then-remove of the same key would delete the entry.
+    return head :no_content if new_name == old_name
+
+    # Add first so a failure between the two calls leaves the asset
+    # reachable under both names rather than neither.
+    if @level.add_starter_asset!(new_name, uuid_name) && @level.remove_starter_asset!(old_name)
+      head :no_content
+    else
+      head :unprocessable_entity
+    end
+  end
+
   # DELETE /level_starter_assets/:level_name/:filename
   # *NOTE:* This deletes the image asset from the .level definition,
   # but does not delete the asset from S3 as other levels may still be

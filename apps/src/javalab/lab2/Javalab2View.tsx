@@ -52,7 +52,11 @@ import {
   multiFileToFlat,
   splitForLevelbuilderSave,
 } from './sourceConverter';
-import {mergeStarterAssets, removeStarterAssetMapping} from './starterAssets';
+import {
+  mergeStarterAssets,
+  removeStarterAssetMapping,
+  renameStarterAssetMapping,
+} from './starterAssets';
 import {
   flatSourceFromLevelProperties,
   JavalabFlatSource,
@@ -221,12 +225,23 @@ const Javalab2View: React.FunctionComponent<
     };
   }, [channel?.id]);
 
-  // When a levelbuilder deletes or renames a starter-asset file in the
-  // tree, also drop its (old) name from the level's starter_assets mapping
-  // so the stale name doesn't re-appear in fresh seeds.
-  const onStarterAssetFileRemoved = useCallback(
+  // Keep the level's starter_assets mapping in sync with start-mode edits:
+  // deletes drop the entry, renames re-key it. Otherwise the stale old name
+  // re-appears in fresh seeds.
+  const onFileDelete = useCallback(
     (file: ProjectFile) => {
       removeStarterAssetMapping(file, levelProperties.name, getIsStartMode());
+    },
+    [levelProperties.name]
+  );
+  const onFileRename = useCallback(
+    (file: ProjectFile, newName: string) => {
+      renameStarterAssetMapping(
+        file,
+        newName,
+        levelProperties.name,
+        getIsStartMode()
+      );
     },
     [levelProperties.name]
   );
@@ -259,8 +274,8 @@ const Javalab2View: React.FunctionComponent<
           sendConsoleInput={sendJavaConsoleInput}
           levelProperties={codebridgeLevelProperties}
           allowMultipleValidationFiles={true}
-          onFileDelete={onStarterAssetFileRemoved}
-          onFileRename={onStarterAssetFileRemoved}
+          onFileDelete={onFileDelete}
+          onFileRename={onFileRename}
         />
       )}
     </div>

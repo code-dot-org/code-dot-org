@@ -4,6 +4,7 @@ import {
   isStarterAssetUrl,
   mergeStarterAssets,
   removeStarterAssetMapping,
+  renameStarterAssetMapping,
   starterAssetUrl,
 } from '@cdo/apps/javalab/lab2/starterAssets';
 import {
@@ -15,6 +16,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   delete: jest.fn().mockResolvedValue({}),
+  post: jest.fn().mockResolvedValue({}),
 }));
 
 const LEVEL_NAME = 'CSA Unit 1';
@@ -121,6 +123,7 @@ describe('javalab2 starterAssets', () => {
   describe('removeStarterAssetMapping', () => {
     beforeEach(() => {
       (HttpClient.delete as jest.Mock).mockClear();
+      (HttpClient.post as jest.Mock).mockClear();
     });
 
     function starterAssetFile(name: string): ProjectFile {
@@ -174,6 +177,41 @@ describe('javalab2 starterAssets', () => {
       await expect(
         removeStarterAssetMapping(starterAssetFile('cat.png'), LEVEL_NAME, true)
       ).resolves.toBeUndefined();
+    });
+
+    it('rename re-keys the mapping entry via the rename endpoint', async () => {
+      await renameStarterAssetMapping(
+        starterAssetFile('cute dog.png'),
+        'happy dog.png',
+        LEVEL_NAME,
+        /* isStartMode */ true
+      );
+      expect(HttpClient.post).toHaveBeenCalledWith(
+        '/level_starter_assets/CSA%20Unit%201/rename/cute%20dog.png',
+        JSON.stringify({new_filename: 'happy dog.png'}),
+        true,
+        {'Content-Type': 'application/json'}
+      );
+    });
+
+    it('rename does nothing outside start mode or for non-starter files', async () => {
+      await renameStarterAssetMapping(
+        starterAssetFile('cat.png'),
+        'dog.png',
+        LEVEL_NAME,
+        /* isStartMode */ false
+      );
+      const channelAsset: ProjectFile = {
+        ...starterAssetFile('cat.png'),
+        url: '/v3/assets/abc123/uuid-1.png',
+      };
+      await renameStarterAssetMapping(
+        channelAsset,
+        'dog.png',
+        LEVEL_NAME,
+        true
+      );
+      expect(HttpClient.post).not.toHaveBeenCalled();
     });
   });
 });

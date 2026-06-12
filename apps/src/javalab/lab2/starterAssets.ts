@@ -32,19 +32,17 @@ export function isStarterAssetUrl(url: string): boolean {
   return url.startsWith(STARTER_ASSETS_PATH);
 }
 
-// Start-mode delete or rename of a starter-asset file: remove the file's
-// (old) friendly-name entry from the level's starter_assets mapping.
-// Otherwise mergeStarterAssets re-appends the stale name from the mapping
-// on the next load. The DELETE endpoint leaves the S3 object alone (other
-// levels may reference it) and is a no-op for names not in the mapping.
-// Renamed files keep working: their url is the mapping-independent uuid
-// route, and the run path derives assetUrls from the source entries.
+// Start-mode delete of a starter-asset file: remove its friendly-name entry
+// from the level's starter_assets mapping. Otherwise mergeStarterAssets
+// re-appends the stale name from the mapping on the next load. The DELETE
+// endpoint leaves the S3 object alone (other levels may reference it) and
+// is a no-op for names not in the mapping.
 export async function removeStarterAssetMapping(
   file: ProjectFile,
   levelName: string,
   isStartMode: boolean
 ): Promise<void> {
-  if (!isStartMode || !file.url || !isStarterAssetUrl(file.url)) {
+  if (!isStarterAssetMappingChange(file, isStartMode)) {
     return;
   }
   try {
@@ -54,12 +52,50 @@ export async function removeStarterAssetMapping(
       )}/${encodeURIComponent(file.name)}`
     );
   } catch (error) {
-    // On failure the mapping entry goes stale and the asset re-appears in
-    // fresh seeds; nothing breaks, so just report it.
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .logError('Error removing starter asset mapping', error as Error);
+    reportMappingError('Error removing starter asset mapping', error);
   }
+}
+
+// Start-mode rename of a starter-asset file: re-key the level's
+// starter_assets mapping entry from the file's old name to the new one, so
+// the mapping keeps tracking the level's assets and the old name doesn't
+// re-appear in fresh seeds. The file's url (the uuid route) is unaffected.
+export async function renameStarterAssetMapping(
+  file: ProjectFile,
+  newName: string,
+  levelName: string,
+  isStartMode: boolean
+): Promise<void> {
+  if (!isStarterAssetMappingChange(file, isStartMode)) {
+    return;
+  }
+  try {
+    await HttpClient.post(
+      `${STARTER_ASSETS_PATH}${encodeURIComponent(
+        levelName
+      )}/rename/${encodeURIComponent(file.name)}`,
+      JSON.stringify({new_filename: newName}),
+      /* useAuthenticityToken */ true,
+      {'Content-Type': 'application/json'}
+    );
+  } catch (error) {
+    reportMappingError('Error renaming starter asset mapping', error);
+  }
+}
+
+function isStarterAssetMappingChange(
+  file: ProjectFile,
+  isStartMode: boolean
+): boolean {
+  return isStartMode && !!file.url && isStarterAssetUrl(file.url);
+}
+
+// On failure the mapping entry goes stale and the old name re-appears in
+// fresh seeds; nothing breaks, so just report it.
+function reportMappingError(message: string, error: unknown) {
+  Lab2Registry.getInstance()
+    .getMetricsReporter()
+    .logError(message, error as Error);
 }
 
 // Append one STARTER file per mapping entry not already present by name.
