@@ -58,8 +58,9 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
   const isMiniTutorialEnabled =
     experiments.isEnabled(experiments.ONBOARDING) ||
     DCDO.get('onboarding-enabled', false);
-  // TODO: replace with real data once teacher grade level is stored on the platform
-  const isElementaryTeacher = true;
+  const gradesTeaching = useAppSelector(
+    state => state.currentUser.gradesTeaching
+  );
   const sections = useAppSelector(state => state.teacherSections.sections);
 
   const demoSectionDemoType = React.useMemo<DemoType | null>(() => {
@@ -69,7 +70,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
     return demo?.demoType ?? null;
   }, [sections]);
 
-  const tour = useCreateSectionTour(isElementaryTeacher);
+  const tour = useCreateSectionTour(gradesTeaching);
   const reviewSyllabusTour = useReviewSyllabusTour(demoSectionDemoType);
   const learnHowToEvaluateTour = useLearnHowToEvaluateTour(demoSectionDemoType);
   const isDemoSectionEnabled = experiments.isEnabled('demo-section');

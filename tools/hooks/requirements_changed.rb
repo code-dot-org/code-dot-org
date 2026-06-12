@@ -12,9 +12,16 @@ REQUIREMENTS = {
   "schema.rb" => {cmd: "bundle exec rake db:migrate", dir: ".."},
 }.freeze
 
+NULL_SHA = /\A0+\z/
+
 def get_modified_files
   prev_head = ARGV[1]
   new_head = ARGV[2]
+  # On a new worktree or the initial checkout of a fresh clone, git passes the
+  # null SHA (0000…) as the previous HEAD. There is no prior state to diff
+  # against, and `git diff <null> <new>` aborts with "fatal: bad object".
+  return [] if prev_head.nil? || prev_head.empty? || prev_head =~ NULL_SHA
+
   Dir.chdir REPO_DIR
   return `git diff --name-only #{prev_head} #{new_head}`.split("\n").map(&:chomp)
 end
