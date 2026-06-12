@@ -105,7 +105,7 @@ class UnitOverviewTopRow extends React.Component {
                   href={`${scriptPath}/next`}
                   variant="contained"
                   color="primary"
-                  size="medium"
+                  size="small"
                   style={{marginRight: 10, boxShadow: 'none'}}
                   onClick={() => this.logTryNowButtonClick(unitProgress)}
                 >
@@ -124,7 +124,7 @@ class UnitOverviewTopRow extends React.Component {
                 href="//support.code.org"
                 variant="outlined"
                 color="secondary"
-                size="medium"
+                size="small"
                 style={
                   hasButtonMargin
                     ? {...buttonMarginStyle, boxShadow: 'none'}
@@ -222,7 +222,6 @@ const styles = {
     justifyContent: 'space-between',
   },
   detailToggle: {
-    minWidth: 84,
     alignSelf: 'end',
     marginLeft: 10,
   },
