@@ -2,10 +2,11 @@ require 'aws-sdk-devicefarm'
 
 # Manages AWS Device Farm sessions for both desktop and mobile browser testing.
 #
-# Desktop Browser Testing uses TestGrid projects and create_test_grid_url to get
-# a one-shot WebDriver endpoint. Mobile Device Testing uses standard Device Farm
-# projects with create_remote_access_session to provision a real iOS/Android
-# device and return an Appium-compatible WebDriver endpoint.
+# Desktop Browser Testing uses TestGrid projects and create_test_grid_url to mint
+# a signed WebDriver hub URL, reused across many sessions (see test_grid_url).
+# Mobile Device Testing uses standard Device Farm projects with
+# create_remote_access_session to provision a real iOS/Android device and return
+# an Appium-compatible WebDriver endpoint.
 #
 # Neither path requires a proxy tunnel -- browsers/devices run in AWS and connect
 # directly to whatever URL the test points them at (e.g. test-studio.code.org).
@@ -21,11 +22,19 @@ require 'aws-sdk-devicefarm'
 module Cdo
   module AWS
     module DeviceFarm
-      # A test session that runs longer than this fails with
-      # "URL has expired". Picked to comfortably exceed the AWS-side
-      # per-session runtime cap (~1h) so this isn't the limit a long
-      # test hits first. AWS API accepts 60..86400.
-      SESSION_EXPIRY_SECONDS = 7200 # 2 hours
+      # How long a freshly minted TestGrid URL stays valid. The URL is the
+      # Selenium hub endpoint, so its signature must remain valid for the
+      # entire lifetime of every session created from it -- a session still
+      # running when the URL expires fails with "URL has expired". Picked to
+      # comfortably exceed the AWS-side per-session runtime cap (~1h) so the
+      # URL isn't the limit a long test hits first. AWS accepts 60..86400.
+      URL_EXPIRY_SECONDS = 7200 # 2 hours
+
+      # Stop handing out a cached URL once less than this much validity
+      # remains, and mint a fresh one. Must exceed the longest a single
+      # session might run so a session started just before the cutoff still
+      # finishes before the URL expires. Set to the ~1h AWS per-session cap.
+      URL_REUSE_BUFFER_SECONDS = 3600 # 1 hour
 
       # Polling parameters for mobile session provisioning. The three timeouts
       # correspond to the three gating statuses AWS walks a session through:
@@ -67,14 +76,35 @@ module Cdo
 
       # ---- Desktop (TestGrid) -------------------------------------------------
 
-      # Returns a one-time WebDriver endpoint URL for a desktop browser session.
-      def self.create_test_grid_url
+      # Returns a signed WebDriver hub URL for desktop browser sessions, reused
+      # across sessions. CreateTestGridUrl is throttled (10 TPS) and AWS
+      # recommends minting one short-term URL and passing it to many
+      # RemoteWebDriver constructors rather than minting one URL per session
+      # (API_CreateTestGridUrl). We cache the URL with its expiry and re-mint
+      # only when too little validity remains to safely cover another full
+      # session, or when the caller forces it (e.g. after a failed connect that
+      # a stale URL may have caused).
+      #
+      # The cache is per-process and unsynchronized: Cucumber runs a worker's
+      # scenarios sequentially, and parallel workers are separate processes with
+      # independent caches.
+      def self.test_grid_url(force: false)
+        return mint_test_grid_url if force || @test_grid_url.nil?
+        return mint_test_grid_url if Time.now >= @test_grid_url_expires_at - URL_REUSE_BUFFER_SECONDS
+        @test_grid_url
+      end
+
+      # Mints a fresh signed TestGrid URL via the (throttled) AWS API and
+      # caches it with its expiry. Prefer test_grid_url, which reuses the cache.
+      def self.mint_test_grid_url
         arn = project_arn_for(mobile: false)
         resp = client.create_test_grid_url(
           project_arn: arn,
-          expires_in_seconds: SESSION_EXPIRY_SECONDS
+          expires_in_seconds: URL_EXPIRY_SECONDS
         )
-        resp.url
+        @test_grid_url = resp.url
+        @test_grid_url_expires_at = Time.now + URL_EXPIRY_SECONDS
+        @test_grid_url
       end
 
       # AWS console URL for a desktop TestGrid session's Selenium logs.
@@ -269,13 +299,15 @@ module Cdo
         # `::` prefix makes intent unambiguous at the call site.
         #
         # retry_mode: 'adaptive' + retry_limit: 20 absorbs DF's per-account
-        # API TPS throttling (separate from the session-concurrency quota)
-        # when many workers burst create_test_grid_url at once. The token
-        # bucket is per-process (post-fork), so this softens each worker's
-        # response to ThrottlingException rather than coordinating workers.
-        # 20 retries gives a worst-case backoff window of ~350s (full
-        # jitter, capped at 20s/attempt) -- enough to ride out a multi-
-        # minute sustained throttle without giving up.
+        # API TPS throttling (separate from the session-concurrency quota).
+        # URL reuse (see test_grid_url) cuts steady-state CreateTestGridUrl
+        # volume to ~1 call per worker per validity window; this backstops the
+        # residual burst when many workers mint their first URL at startup. The
+        # token bucket is per-process (post-fork), so this softens each
+        # worker's response to ThrottlingException rather than coordinating
+        # workers. 20 retries gives a worst-case backoff window of ~350s (full
+        # jitter, capped at 20s/attempt) -- enough to ride out a multi-minute
+        # sustained throttle without giving up.
         @client ||= ::Aws::DeviceFarm::Client.new(
           region: REGION,
           retry_mode: 'adaptive',
@@ -283,8 +315,8 @@ module Cdo
         )
       end
 
-      private_class_method :lookup_devices, :pick_best_device, :project_arn_for,
-        :wait_for_mobile_session_endpoint, :client
+      private_class_method :mint_test_grid_url, :lookup_devices, :pick_best_device,
+        :project_arn_for, :wait_for_mobile_session_endpoint, :client
     end
   end
 end

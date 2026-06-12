@@ -87,9 +87,11 @@ def saucelabs_browser(test_run_name, http_client: nil)
   return browser
 end
 
-def device_farm_desktop_browser(http_client: nil)
-  # One-shot TestGrid URL, ready immediately.
-  url = Cdo::AWS::DeviceFarm.create_test_grid_url
+def device_farm_desktop_browser(http_client: nil, fresh_url: false)
+  # Reuse a signed TestGrid URL across sessions; mint a fresh one only when the
+  # cached URL is near expiry or a prior connect failed (fresh_url). AWS
+  # recommends this to stay under the CreateTestGridUrl TPS limit.
+  url = Cdo::AWS::DeviceFarm.test_grid_url(force: fresh_url)
 
   capabilities = Selenium::WebDriver::Remote::Capabilities.new(
     $device_farm_browser_config.except(*Cdo::AWS::DeviceFarm::INTERNAL_KEYS)
@@ -208,8 +210,13 @@ def get_device_farm_browser
       # may need a few seconds after the session reaches RUNNING).
       device_farm_mobile_browser(http_client: $selenium_http_client)
     else
-      Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
-        device_farm_desktop_browser(http_client: $selenium_http_client)
+      Retryable.retryable(tries: MAX_CONNECT_RETRIES) do |_try, exception|
+        # On a retry, force a fresh URL in case a stale cached one caused the
+        # previous connect failure.
+        device_farm_desktop_browser(
+          http_client: $selenium_http_client,
+          fresh_url: !exception.nil?
+        )
       end
     end
   console_url =
