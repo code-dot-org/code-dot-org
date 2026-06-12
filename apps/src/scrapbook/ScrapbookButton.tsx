@@ -7,7 +7,7 @@ import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
 
 import ScrapbookEntryDialog from './ScrapbookEntryDialog';
 
-import moduleStyles from './ScrapbookButton.module.scss';
+import moduleStyles from './scrapbook-button.module.scss';
 
 // An entry is keyed either by (scriptId, levelId) for in-curriculum levels,
 // or by channelId for standalone projects.

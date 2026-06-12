@@ -7,7 +7,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {EntryText, SCRAPBOOK_STEMS} from './stems';
 
-import moduleStyles from './ScrapbookEntryDialog.module.scss';
+import moduleStyles from './scrapbook-entry-dialog.module.scss';
 
 interface Props {
   isOpen: boolean;

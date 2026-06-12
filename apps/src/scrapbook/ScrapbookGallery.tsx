@@ -25,7 +25,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import ScrapbookEntryDialog from './ScrapbookEntryDialog';
 import {EntryText, SCRAPBOOK_STEMS} from './stems';
 
-import moduleStyles from './ScrapbookGallery.module.scss';
+import moduleStyles from './scrapbook-gallery.module.scss';
 
 interface ScrapbookEntry {
   id: number;
