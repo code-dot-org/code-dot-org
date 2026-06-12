@@ -18,7 +18,7 @@
   }
 
   // Focus outline for keyboard navigation, matching the component library pattern.
-  // Group nodes are excluded — they use a dashed border instead (see below).
+  // Group nodes are excluded — React Flow provides their focus indicator.
   :global(.react-flow__node:not(.react-flow__node-group):focus-visible),
   :global(.react-flow__edge:focus-visible) {
     outline: 2px solid var(--borders-brand-teal-primary);
