@@ -1,5 +1,13 @@
 .teacherPanelContainer {
   color: var(--text-neutral-primary);
+
+  .sectionSelector {
+    margin: 0 10px;
+
+    select {
+      margin: 0;
+    }
+  }
 }
 
 .sortDropdown {
@@ -15,8 +23,4 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.sectionSelector {
-  margin: 0 10px;
 }
