@@ -33,17 +33,11 @@
     border-radius: 4px;
   }
 
-  // Group nodes: transparent by default; dashed border appears on DOM focus only.
+  // Group nodes: transparent background; React Flow provides the focus indicator.
   // Override the wrapper background that React Flow injects via CSS variables.
   :global(.react-flow__node-group) {
     background: transparent;
     border: none;
-  }
-
-  :global(.react-flow__node-group:focus-visible) {
-    border: 2px dashed var(--neutral-dark-300, #aaa);
-    border-radius: 8px;
-    outline: none;
   }
 
   // Line anchors are tiny nodes; apply focus ring to the handle itself so it
