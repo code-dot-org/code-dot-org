@@ -34,9 +34,9 @@ class ScreenSelector extends React.Component {
 
   handleChange = evt => {
     let screenId = evt.target.value;
-    if (screenId === constants.NEW_SCREEN) {
+    if (screenId === localization.translate(constants.NEW_SCREEN)) {
       screenId = this.props.onCreate();
-    } else if (screenId === constants.IMPORT_SCREEN) {
+    } else if (screenId === localization.translate(constants.IMPORT_SCREEN)) {
       this.props.onImport();
       return;
     }
