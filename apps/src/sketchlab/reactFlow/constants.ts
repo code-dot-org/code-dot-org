@@ -34,3 +34,8 @@ export const MIN_ZOOM = 0.1;
 
 // Stable class used by focus and pointer-down handlers.
 export const SKETCHLAB_TOOLBAR_PANEL_CLASS = 'sketchlab-toolbar-panel';
+
+// React Flow's class for the invisible reconnect-drag circles on an edge.
+// Not part of the library's public API; verify it still matches when
+// upgrading @xyflow/react.
+export const REACT_FLOW_EDGE_UPDATER_CLASS = 'react-flow__edgeupdater';
