@@ -19,6 +19,7 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "dependencies": {
+    "@code-dot-org/accounts": "workspace:*",
     "@code-dot-org/component-library": "workspace:*",
     "@code-dot-org/component-library-styles": "workspace:*",
     "@code-dot-org/core": "workspace:*",
