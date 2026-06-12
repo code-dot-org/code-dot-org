@@ -55,13 +55,20 @@ URL) it already sends, so the Javabuilder contract is unchanged.
 
 Starter assets authored in legacy Java Lab exist only as the level's
 `starter_assets` property (`{friendlyName => uuidName}`); their levels'
-start sources carry no url entries. `starterAssets.ts` merges the
-mapping into the level's start/template/exemplar sources as `STARTER`
-files. Projects loaded from S3 are never merged: like any other
-start-source change, assets reach a student's project only when it is
-seeded from the level (fresh load or start over). Locking starter
-assets against student edits will arrive with the broader
-locked-starter-files support.
+start sources carry no url entries. Lab2 treats that mapping as frozen
+legacy data: `Javalab#add_starter_asset!` is a no-op for `uses_lab2`
+levels (the weblab2 pattern), so lab2 uploads/deletes/renames never
+touch it — the url entries in the sources are the single source of
+truth. `starterAssets.ts` merges the mapping into the level's
+start/template/exemplar sources as `STARTER` files, but only when the
+source has no url-backed entries of its own; once a lab2 save persists
+url entries, the mapping is never consulted for tree contents again
+(so deletes and renames stick — known edge: deleting the last asset
+from a legacy level brings the merge back). Projects loaded from S3
+are never merged: like any other start-source change, assets reach a
+student's project only when it is seeded from the level (fresh load or
+start over). Locking starter assets against student edits will arrive
+with the broader locked-starter-files support.
 
 The flat shape doesn't persist file types, so the converter re-derives
 asset types from where the url points: `/level_starter_assets/...` is a
@@ -152,11 +159,10 @@ still on the TODO list. Differences from legacy use:
   inline for images, stripped into `assetUrls` server-side for
   Javabuilder. Legacy `starter_assets` levels seed their assets into the
   start sources. 
-  Start-mode edits keep the level's `starter_assets` mapping in sync via
-  the codebridge `onFileDelete`/`onFileRename` hooks: deletes drop the
-  entry, renames re-key it to the new name (POST
-  `/level_starter_assets/:level_name/rename/:filename`), so stale names
-  don't re-appear in fresh seeds.
+  The level's `starter_assets` mapping is never updated by lab2
+  (`add_starter_asset!` no-ops for `uses_lab2` levels); it survives as
+  frozen legacy data consulted only when seeding a source that has no
+  url entries yet.
   Known limitation: starter assets aren't locked yet (students can
   rename/delete them; locking comes with locked-starter-files support).
 
@@ -187,8 +193,8 @@ but we don't persist that information yet.
 - `types.ts` — `JavalabLevelProperties` extends
   `CodebridgeLevelProperties` with `csaViewMode`.
 - `starterAssets.ts` — merges the level's legacy `starter_assets`
-  mapping into the level's sources as `STARTER` files; also home of the
-  starter-asset url helpers the converter uses for typing.
+  mapping into url-free level sources as `STARTER` files; also home of
+  the starter-asset url helpers the converter uses for typing.
 - `layout/HorizontalLayout.tsx` — three-panel layout (InfoPanel |
   Editor over Console). Vertical/share/widget slots all point at the
   same horizontal layout for now.

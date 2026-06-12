@@ -9,8 +9,6 @@ import {ProjectSources} from '@cdo/apps/lab2/types';
 import {
   ConfigType,
   SetConfigFunction,
-  OnFileDeleteFunction,
-  OnFileRenameFunction,
   OnRunFunction,
   OnStopFunction,
   SendConsoleInputFunction,
@@ -42,8 +40,6 @@ export type CodebridgeContextType = {
   aiTutorDisabled?: boolean;
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
   onAssetRemoved?: (asset: ChatAsset) => void;
-  onFileDelete?: OnFileDeleteFunction;
-  onFileRename?: OnFileRenameFunction;
   aiTutorInitialWelcomeMessage?: string;
   allowMultipleValidationFiles?: boolean;
 };

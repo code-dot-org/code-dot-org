@@ -5,17 +5,15 @@
 // entries from the mapping when converting the level's sources. Projects loaded
 // from S3 are never merged: like any other start-source change, assets reach a student's
 // project only when it is seeded from the level (fresh load or start over).
+//
+// Lab2 never writes the mapping (Javalab#add_starter_asset! is a no-op for
+// uses_lab2 levels), so it's frozen legacy data: the url entries in the
+// sources are the single source of truth for lab2-authored assets.
 
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {
-  MultiFileSource,
-  ProjectFile,
-  ProjectFileType,
-} from '@cdo/apps/lab2/types';
+import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import {getNextFileId} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
-import HttpClient from '@cdo/apps/util/HttpClient';
 
 const STARTER_ASSETS_PATH = '/level_starter_assets/';
 
@@ -32,73 +30,12 @@ export function isStarterAssetUrl(url: string): boolean {
   return url.startsWith(STARTER_ASSETS_PATH);
 }
 
-// Start-mode delete of a starter-asset file: remove its friendly-name entry
-// from the level's starter_assets mapping. Otherwise mergeStarterAssets
-// re-appends the stale name from the mapping on the next load. The DELETE
-// endpoint leaves the S3 object alone (other levels may reference it) and
-// is a no-op for names not in the mapping.
-export async function removeStarterAssetMapping(
-  file: ProjectFile,
-  levelName: string,
-  isStartMode: boolean
-): Promise<void> {
-  if (!isStarterAssetMappingChange(file, isStartMode)) {
-    return;
-  }
-  try {
-    await HttpClient.delete(
-      `${STARTER_ASSETS_PATH}${encodeURIComponent(
-        levelName
-      )}/${encodeURIComponent(file.name)}`
-    );
-  } catch (error) {
-    reportMappingError('Error removing starter asset mapping', error);
-  }
-}
-
-// Start-mode rename of a starter-asset file: re-key the level's
-// starter_assets mapping entry from the file's old name to the new one, so
-// the mapping keeps tracking the level's assets and the old name doesn't
-// re-appear in fresh seeds. The file's url (the uuid route) is unaffected.
-export async function renameStarterAssetMapping(
-  file: ProjectFile,
-  newName: string,
-  levelName: string,
-  isStartMode: boolean
-): Promise<void> {
-  if (!isStarterAssetMappingChange(file, isStartMode)) {
-    return;
-  }
-  try {
-    await HttpClient.post(
-      `${STARTER_ASSETS_PATH}${encodeURIComponent(
-        levelName
-      )}/rename/${encodeURIComponent(file.name)}`,
-      JSON.stringify({new_filename: newName}),
-      /* useAuthenticityToken */ true,
-      {'Content-Type': 'application/json'}
-    );
-  } catch (error) {
-    reportMappingError('Error renaming starter asset mapping', error);
-  }
-}
-
-function isStarterAssetMappingChange(
-  file: ProjectFile,
-  isStartMode: boolean
-): boolean {
-  return isStartMode && !!file.url && isStarterAssetUrl(file.url);
-}
-
-// On failure the mapping entry goes stale and the old name re-appears in
-// fresh seeds; nothing breaks, so just report it.
-function reportMappingError(message: string, error: unknown) {
-  Lab2Registry.getInstance()
-    .getMetricsReporter()
-    .logError(message, error as Error);
-}
-
-// Append one STARTER file per mapping entry not already present by name.
+// Append one STARTER file per mapping entry not already present by name —
+// but only when the source has no url-backed files at all (a source never
+// touched by lab2 asset editing). Once a lab2 save has persisted url
+// entries, the frozen mapping is no longer consulted for tree contents, so
+// a levelbuilder's delete or rename isn't undone by re-merging it. (Known
+// edge: deleting the last asset from a legacy level brings the merge back.)
 // Locking starter assets against student edits will arrive with the broader
 // locked-starter-files support.
 export function mergeStarterAssets(
@@ -111,6 +48,10 @@ export function mergeStarterAssets(
   }
 
   const existingFiles = Object.values(source.files);
+  if (existingFiles.some(file => file.url)) {
+    return source;
+  }
+
   const existingNames = new Set(existingFiles.map(file => file.name));
   const files = {...source.files};
   let nextId = Number(getNextFileId(existingFiles));

@@ -357,54 +357,16 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     end
   end
 
-  test 'rename: forbidden for non-levelbuilders' do
-    sign_in create(:student)
-    post :rename, params: {level_name: create(:applab).name, filename: 'my-file', format: 'png', new_filename: 'new.png'}
-
-    assert_response :forbidden
-  end
-
-  test 'rename: re-keys the mapping entry and keeps the uuid name' do
-    level = create(:applab, starter_assets: {'my-file.png' => '123-abc.png', 'other.jpg' => '456-def.jpg'})
+  test 'upload_by_uuid: does not update starter_assets for lab2 javalab levels' do
+    LevelStarterAssetsHelper.expects(:get_object).returns(@file_obj)
+    @file_obj.stubs(:upload_file).returns(true)
+    level = create(:javalab, properties: {uses_lab2: true})
 
     sign_in create(:levelbuilder)
-    post :rename, params: {level_name: level.name, filename: 'my-file', format: 'png', new_filename: 'renamed.png'}
+    post :upload_by_uuid, params: {level_name: level.name, uuid: @uuid, files: [@file]}
 
-    assert_response :no_content
-    assert_equal(
-      {'renamed.png' => '123-abc.png', 'other.jpg' => '456-def.jpg'},
-      level.reload.starter_assets
-    )
-  end
-
-  test 'rename: returns not_found when the old name is not in the mapping' do
-    level = create(:applab, starter_assets: {'my-file.png' => '123-abc.png'})
-
-    sign_in create(:levelbuilder)
-    post :rename, params: {level_name: level.name, filename: 'missing', format: 'png', new_filename: 'renamed.png'}
-
-    assert_response :not_found
-    assert_equal({'my-file.png' => '123-abc.png'}, level.reload.starter_assets)
-  end
-
-  test 'rename: rejects invalid new file extensions' do
-    level = create(:applab, starter_assets: {'my-file.png' => '123-abc.png'})
-
-    sign_in create(:levelbuilder)
-    post :rename, params: {level_name: level.name, filename: 'my-file', format: 'png', new_filename: 'renamed.exe'}
-
-    assert_response :unprocessable_entity
-    assert_equal({'my-file.png' => '123-abc.png'}, level.reload.starter_assets)
-  end
-
-  test 'rename: keeps the entry when renaming to the same name' do
-    level = create(:applab, starter_assets: {'my-file.png' => '123-abc.png'})
-
-    sign_in create(:levelbuilder)
-    post :rename, params: {level_name: level.name, filename: 'my-file', format: 'png', new_filename: 'my-file.png'}
-
-    assert_response :no_content
-    assert_equal({'my-file.png' => '123-abc.png'}, level.reload.starter_assets)
+    assert_response :success
+    assert_nil level.reload.starter_assets
   end
 end
 

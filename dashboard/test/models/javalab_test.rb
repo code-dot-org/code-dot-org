@@ -133,6 +133,25 @@ class JavalabTest < ActiveSupport::TestCase
     assert_equal({"template.png" => "uuid-t.png"}, summary['starterAssets'])
   end
 
+  test 'add_starter_asset! is a no-op for lab2 levels' do
+    # Lab2 levels track assets as url entries in start_sources; the mapping
+    # is frozen legacy data.
+    level = Javalab.create(
+      game_id: 68,
+      level_num: "custom",
+      name: "javalab_lab2_no_mapping_writes",
+      properties: {uses_lab2: true}
+    )
+    assert level.add_starter_asset!("cat.png", "uuid-1.png")
+    assert_nil level.reload.starter_assets
+  end
+
+  test 'add_starter_asset! updates the mapping for legacy levels' do
+    level = Javalab.create(game_id: 68, level_num: "custom", name: "javalab_legacy_mapping_writes")
+    assert level.add_starter_asset!("cat.png", "uuid-1.png")
+    assert_equal({"cat.png" => "uuid-1.png"}, level.reload.starter_assets)
+  end
+
   test 'get_serialized_maze returns template level maze if level doesnt have one' do
     template_data = {game_id: 68, level_num: "custom", name: "template_neighborhood"}
     serialized_maze = "[[{\"tileType\": 0, \"assetId\": 13, \"value\": 0}],[{\"tileType\":1,\"value\":0}]]"

@@ -43,8 +43,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
  *   - **openSaveToBackpackPrompt:** Opens a prompt for saving a file to the user's backpack.
  */
 export const usePrompts = () => {
-  const {levelProperties, config, onFileDelete, onFileRename} =
-    useCodebridgeContext();
+  const {levelProperties, config} = useCodebridgeContext();
   const {validationFile} = levelProperties;
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const dialogControl = useDialogControl();
@@ -94,7 +93,6 @@ export const usePrompts = () => {
     dialogControl,
     deleteFile,
     sendLab2AnalyticsEvent,
-    onFileDelete,
   } satisfies PAFunctionArgs<typeof globalOpenConfirmDeleteFile>);
 
   const openConfirmDeleteFolder = usePartialApply(
@@ -149,7 +147,6 @@ export const usePrompts = () => {
     sendLab2AnalyticsEvent,
     isStartMode,
     validationFile,
-    onFileRename,
   } satisfies PAFunctionArgs<typeof globalOpenRenameFilePrompt>);
 
   const openRenameFolderPrompt = usePartialApply(globalOpenRenameFolderPrompt, {

@@ -3,8 +3,6 @@ import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {
   isStarterAssetUrl,
   mergeStarterAssets,
-  removeStarterAssetMapping,
-  renameStarterAssetMapping,
   starterAssetUrl,
 } from '@cdo/apps/javalab/lab2/starterAssets';
 import {
@@ -12,13 +10,6 @@ import {
   ProjectFile,
   ProjectFileType,
 } from '@cdo/apps/lab2/types';
-import HttpClient from '@cdo/apps/util/HttpClient';
-
-jest.mock('@cdo/apps/util/HttpClient', () => ({
-  delete: jest.fn().mockResolvedValue({}),
-  post: jest.fn().mockResolvedValue({}),
-}));
-
 const LEVEL_NAME = 'CSA Unit 1';
 
 function javaFile(id: string, name: string): ProjectFile {
@@ -105,6 +96,24 @@ describe('javalab2 starterAssets', () => {
       expect(merged.files['4']).toBe(image);
     });
 
+    it('does not append when the source already has any url-backed file', () => {
+      // The frozen-mapping guard: lab2 never updates the mapping, so once a
+      // lab2 save has persisted url entries, a levelbuilder's delete or
+      // rename must not be undone by re-merging the mapping.
+      const source = sourceWith(javaFile('0', 'Main.java'), {
+        ...javaFile('1', 'kept.png'),
+        type: undefined,
+        url: starterAssetUrl(LEVEL_NAME, 'uuid-9.png'),
+      });
+      const merged = mergeStarterAssets(
+        source,
+        {'deleted.png': 'uuid-1.png'},
+        LEVEL_NAME
+      );
+      const names = Object.values(merged.files).map(f => f.name);
+      expect(names.sort()).toEqual(['Main.java', 'kept.png']);
+    });
+
     it('dedups appended entries by file name', () => {
       // A file already named like the asset wins; the mapping entry is
       // skipped rather than shadowed.
@@ -117,101 +126,6 @@ describe('javalab2 starterAssets', () => {
       const names = Object.values(merged.files).map(f => f.name);
       expect(names.sort()).toEqual(['cat.png', 'dog.png']);
       expect(merged.files['0'].url).toBeUndefined();
-    });
-  });
-
-  describe('removeStarterAssetMapping', () => {
-    beforeEach(() => {
-      (HttpClient.delete as jest.Mock).mockClear();
-      (HttpClient.post as jest.Mock).mockClear();
-    });
-
-    function starterAssetFile(name: string): ProjectFile {
-      return {
-        id: '0',
-        name,
-        contents: '',
-        folderId: DEFAULT_FOLDER_ID,
-        url: starterAssetUrl(LEVEL_NAME, 'uuid-1.png'),
-      };
-    }
-
-    it('removes the mapping entry for a starter-asset file in start mode', async () => {
-      await removeStarterAssetMapping(
-        starterAssetFile('cute dog.png'),
-        LEVEL_NAME,
-        /* isStartMode */ true
-      );
-      expect(HttpClient.delete).toHaveBeenCalledWith(
-        '/level_starter_assets/CSA%20Unit%201/cute%20dog.png'
-      );
-    });
-
-    it('does nothing outside start mode', async () => {
-      await removeStarterAssetMapping(
-        starterAssetFile('cat.png'),
-        LEVEL_NAME,
-        /* isStartMode */ false
-      );
-      expect(HttpClient.delete).not.toHaveBeenCalled();
-    });
-
-    it('does nothing for channel-asset or non-url files', async () => {
-      const channelAsset: ProjectFile = {
-        ...starterAssetFile('cat.png'),
-        url: '/v3/assets/abc123/uuid-1.png',
-      };
-      await removeStarterAssetMapping(channelAsset, LEVEL_NAME, true);
-      await removeStarterAssetMapping(
-        javaFile('1', 'Main.java'),
-        LEVEL_NAME,
-        true
-      );
-      expect(HttpClient.delete).not.toHaveBeenCalled();
-    });
-
-    it('does not throw when the request fails', async () => {
-      (HttpClient.delete as jest.Mock).mockRejectedValueOnce(
-        new Error('network')
-      );
-      await expect(
-        removeStarterAssetMapping(starterAssetFile('cat.png'), LEVEL_NAME, true)
-      ).resolves.toBeUndefined();
-    });
-
-    it('rename re-keys the mapping entry via the rename endpoint', async () => {
-      await renameStarterAssetMapping(
-        starterAssetFile('cute dog.png'),
-        'happy dog.png',
-        LEVEL_NAME,
-        /* isStartMode */ true
-      );
-      expect(HttpClient.post).toHaveBeenCalledWith(
-        '/level_starter_assets/CSA%20Unit%201/rename/cute%20dog.png',
-        JSON.stringify({new_filename: 'happy dog.png'}),
-        true,
-        {'Content-Type': 'application/json'}
-      );
-    });
-
-    it('rename does nothing outside start mode or for non-starter files', async () => {
-      await renameStarterAssetMapping(
-        starterAssetFile('cat.png'),
-        'dog.png',
-        LEVEL_NAME,
-        /* isStartMode */ false
-      );
-      const channelAsset: ProjectFile = {
-        ...starterAssetFile('cat.png'),
-        url: '/v3/assets/abc123/uuid-1.png',
-      };
-      await renameStarterAssetMapping(
-        channelAsset,
-        'dog.png',
-        LEVEL_NAME,
-        true
-      );
-      expect(HttpClient.post).not.toHaveBeenCalled();
     });
   });
 });
