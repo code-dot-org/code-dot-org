@@ -400,7 +400,7 @@ gem 'rack-cors', '~> 2.0.1'
 # Speculatively target 5.3 specifically to diagnose some S3 networking errors
 gem 'http', '~> 5.3.1'
 
-gem 'statsig', '~> 2.5.5'
+gem 'statsig', '~> 2.9.2'
 
 gem 'mailgun-ruby', '~>1.2.14'
 gem 'mailjet', '~> 1.7.3'

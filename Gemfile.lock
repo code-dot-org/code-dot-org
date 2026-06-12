@@ -1137,13 +1137,13 @@ GEM
     sshkit (1.20.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
-    statsig (2.5.5)
+    statsig (2.9.2)
       concurrent-ruby (~> 1.1)
       connection_pool (~> 2.4, >= 2.4.1)
       http (>= 4.4, < 6.0)
       ip3country (~> 0.2.1)
       user_agent_parser (~> 2.18.0)
-      zlib (~> 3.1.0)
+      zlib (>= 3.1, < 4.0)
     stringex (2.5.2)
     stringio (3.1.5)
     sysexits (1.2.0)
@@ -1221,7 +1221,7 @@ GEM
     youtube-dl.rb (0.3.1.2016.08.19)
       cocaine (>= 0.5.4)
     zeitwerk (2.6.18)
-    zlib (3.1.1)
+    zlib (3.2.3)
 
 PLATFORMS
   arm64-darwin-25
@@ -1417,7 +1417,7 @@ DEPENDENCIES
   sprockets!
   sprockets-rails (= 3.3.0)
   sshkit
-  statsig (~> 2.5.5)
+  statsig (~> 2.9.2)
   stringex (~> 2.5.2)
   syslog
   thin
