@@ -95,9 +95,44 @@ const SCOUT_SCHEMA = {
         'Repo-root-relative spec path: frontend/packages/e2e-tests/tests/' +
         '{featureGroup-kebab}/[{name}/]{name}.spec.ts',
     },
-    targetPom: {
+    pageObjects: {
+      type: 'array',
+      description:
+        'The object-model plan: ONE page object per distinct page/route the scenarios ' +
+        'drive (e.g. SignInPage for /users/sign_in, ArtistLab for the artist project) — ' +
+        'NOT one POM per feature. A scenario that spans several pages is NOT itself a page ' +
+        'object; the spec coordinates these. Reuse/extend an existing page object when one ' +
+        'fits; never duplicate.',
+      items: {
+        type: 'object',
+        required: ['className', 'role'],
+        properties: {
+          className: {type: 'string', description: 'e.g. SignInPage, ArtistLab'},
+          path: {
+            type: 'string',
+            description:
+              'Repo-root-relative KEBAB-CASE file (e.g. .../tests/sign-in/sign-in.ts); ' +
+              '"" when an existing page object is reused unchanged',
+          },
+          extends: {
+            type: 'string',
+            description:
+              'Parent: the shared base (BasePage), a lab base (LegacyBlocklyLab/Lab2Lab), ' +
+              'or another page object. Bases compose.',
+          },
+          role: {type: 'string', description: 'The page/route it models, e.g. /users/sign_in'},
+          reused: {type: 'boolean', description: 'true if an existing page object is reused as-is'},
+        },
+      },
+    },
+    sharedChrome: {
       type: 'string',
-      description: 'Repo-root-relative path for a NEW POM, or "" if an existing POM is reused',
+      description:
+        'Global UI present across pages that THESE scenarios touch (locale/language ' +
+        'switcher, header, footer) — it belongs ONCE on a shared base class the page ' +
+        'objects extend, never duplicated per page and never faked behind one ' +
+        'selector-parameterized component for genuinely different widgets. Name the ' +
+        'element(s) + the base class, or "" if none.',
     },
     targetBlocks: {
       type: 'string',
@@ -222,6 +257,18 @@ FEATURE FILE (authoritative): ${featureFile}
   appear in the path — it only selects the POM base. Set specAlreadyExists if the target
   spec already exists in the working tree. Set workingTreeFoundationPresent from whether
   tests/shared/ exists in the working tree.
+
+─── STEP 4b — Design the object model ─────────────────────────────────────────
+  Plan pageObjects + sharedChrome — this is test DESIGN, not authoring:
+    - ONE page object per distinct page/route the scenarios drive. A scenario that spans
+      several pages is NOT a page object; the spec coordinates them. Never plan an
+      "XyzPage" that is really a scenario.
+    - Global UI shared across pages (locale/language switcher, header, footer) -> sharedChrome,
+      modeled ONCE on a shared base class (BasePage) the page objects extend — not
+      duplicated per page, not a selector-parameterized component for distinct widgets.
+    - Reuse/extend an existing page object when one fits (working tree or reference branch);
+      plan the inheritance — a lab page extends a lab base that extends the shared base.
+    - Filenames are KEBAB-CASE (sign-in.ts, artist-lab.ts), never PascalCase.
 
 ─── STEP 5 — Step resolution (RECOMMENDATIONS only) ───────────────────────────
   The shared library prevents duplicated auth/nav/UI code across independent ports.
@@ -403,7 +450,8 @@ conventions) exactly — this message is only the per-port brief.
 SCOUT PLAN
   architecture:       ${plan.architecture} / ${plan.featureGroup}
   targetSpec:         ${plan.targetSpec}
-  targetPom:          ${plan.targetPom || '(reuse existing)'}
+  pageObjects:        ${JSON.stringify(plan.pageObjects || [])}
+  sharedChrome:       ${plan.sharedChrome || '(none)'}
   targetBlocks:       ${plan.targetBlocks || '(none)'}
   reuseOrExtend:      ${plan.existingPomToReuseOrExtend || '(none)'}
   foundationPresent:  ${plan.workingTreeFoundationPresent}
@@ -416,9 +464,11 @@ DRY RUN READINESS (wait-strategy guidance only — never implementation)
   ${JSON.stringify(readiness)}
 
 AUTHORITATIVE SOURCE: ${featureFile} and its step definitions. Re-read them — the Scout
-plan guides, the Cucumber is the contract. Author the spec, POM, blocks, and any NEW
-shared helpers per your instructions. Drive test-studio.code.org live to verify EVERY
-locator. Wire waits from the readiness guidance (never networkidle, never waitForTimeout;
+plan guides, the Cucumber is the contract. Author the spec, the planned page objects (one
+per page per pageObjects; global chrome on the shared base per sharedChrome; the spec
+coordinates pages and does the assertions on exposed locators), blocks, and any NEW shared
+helpers per your instructions. Drive test-studio.code.org live to verify EVERY locator.
+Wire waits from the readiness guidance (never networkidle, never waitForTimeout;
 respect the descendant-vs-container notes). Reuse shared/ and existing POMs per
 stepResolution; add NEW helpers to shared/. If foundationPresent is false, materialize
 the shared helpers/POM bases you import from the reference branch first (inside

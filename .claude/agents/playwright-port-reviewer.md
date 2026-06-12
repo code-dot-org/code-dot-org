@@ -53,12 +53,21 @@ For each dimension: actively look for failures, do not stop at the first clean s
    - Every scenario present; none silently dropped or merged.
    - No OUT-OF-SCOPE scenarios inherited from a sibling feature or reference port (BLOCKING removal).
 2. BEST PRACTICES (skill + Code.org deltas):
-   - POM encapsulation: the spec body reads as requirements. Any raw page.locator() in spec
-     body is a BLOCKING fix — move it to the POM.
+   - Object model: one page object per page/route. A scenario spanning pages modeled as a
+     single `XyzPage` is a BLOCKING fix — coordinate the pages in the spec. Global cross-page
+     UI must live on a shared base class, not duplicated per page and not faked behind a
+     selector-parameterized component for genuinely different widgets.
+   - POM encapsulation: page objects expose `readonly` Locators and own the interactions;
+     the SPEC performs the assertions on those locators. A single-assertion POM wrapper
+     (`expectXVisible()`) is a finding — expose the locator and assert in the spec (a reused
+     composite assertion belongs in the spec file, not the POM). A locator CONSTRUCTED in
+     the spec from `page` (page.locator/getByRole in a spec body) is a BLOCKING fix — move it
+     onto the page object and reference it.
    - Readiness: every async transition has a real DOM/network signal. waitForTimeout and
      networkidle are BLOCKING. Probe each wait — does it actually guard the subsequent action?
-   - Selector policy: getByRole/Label/Text first. Every CSS selector needs a documented
-     reason. Treat undocumented CSS selectors as a finding.
+   - Selector policy: prefer getByRole/Label from the accessibility tree. Every CSS selector
+     needs a documented reason (no accessible name, or the name is the text under test).
+     Treat undocumented CSS selectors as a finding.
 3. DRY vs the shared library:
    - Grep tests/shared/ and the base POM for every helper the generator wrote. Any
      re-implementation of existing logic is a BLOCKING fix — delete the duplicate and import.
