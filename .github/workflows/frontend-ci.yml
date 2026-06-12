@@ -33,6 +33,7 @@ jobs:
       studio-changed: ${{ steps.changes.outputs.studio }}
       oceans-changed: ${{ steps.changes.outputs.oceans }}
       e2e-tests-changed: ${{ steps.changes.outputs.e2e-tests }}
+      playwright-image-tag: ${{ env.PLAYWRIGHT_IMAGE_TAG }}
     steps:
       # Determine what changed to later skip workflows
       # Github Actions does not offer conditional runtime path filtering, thus use this action to calculate the
@@ -81,7 +82,7 @@ jobs:
     needs: setup
     uses: ./.github/workflows/component-library-ci.yml
     with:
-      playwright-image-tag: ${{ env.PLAYWRIGHT_IMAGE_TAG }}
+      playwright-image-tag: ${{ needs.setup.outputs.playwright-image-tag }}
     secrets: inherit
 
   # Start the oceans lab CI workflow
@@ -97,7 +98,7 @@ jobs:
     needs: setup
     uses: ./.github/workflows/e2e-tests-ci.yml
     with:
-      playwright-image-tag: ${{ env.PLAYWRIGHT_IMAGE_TAG }}
+      playwright-image-tag: ${{ needs.setup.outputs.playwright-image-tag }}
     secrets: inherit
 
   # Common teardown actions that must occur after _all_ workflows have completed.

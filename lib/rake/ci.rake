@@ -171,14 +171,6 @@ namespace :ci do
       container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
       eyes_features = `grep -lr '@eyes' features`.split("\n")
       container_eyes_features = container_features & eyes_features
-      # The concurrency limit for Device Farm desktop sessions in the
-      # codeorg-dev AWS account is 50. This concurrency limit is shared across
-      # all CI jobs. This limit is not shared by sessions running in local
-      # development or the chef-managed test environment, which run in the prod
-      # AWS account. This limit must be taken into consideration when choosing
-      # parallelism as well as when choosing to run on Device Farm vs SauceLabs
-      # or local chromedriver.
-      #
       # Use --local to configure the UI tests to run against localhost, and
       # --config to override the local webdriver with the remote provider
       # (Device Farm Chrome by default, SauceLabs under [use saucelabs] or any

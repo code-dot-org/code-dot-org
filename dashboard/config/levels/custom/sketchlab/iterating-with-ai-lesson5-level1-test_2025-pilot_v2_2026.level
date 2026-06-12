@@ -60,20 +60,23 @@
             "id": "k6N3a3hmJZUnB-QaTJCVJ",
             "type": "text",
             "position": {
-              "x": 1022.6737245495865,
-              "y": 27.54931015941567
+              "x": 999.1480835239454,
+              "y": 35.30828451839003
             },
             "data": {
               "text": "CARD VIEW",
               "fontColor": "#1e1e1e",
-              "fontSize": "large",
+              "fontSize": "extra-large",
               "showHandles": false
             },
             "measured": {
-              "width": 138,
-              "height": 46
+              "width": 224,
+              "height": 70
             },
-            "dragging": false
+            "dragging": false,
+            "width": 224,
+            "height": 70,
+            "resizing": false
           },
           {
             "id": "TIBRtnhBQpMbqvds0h3ur",
@@ -346,7 +349,7 @@
             "type": "shape",
             "position": {
               "x": 780.9110017414753,
-              "y": 93.78807174047043
+              "y": 96.22128362247884
             },
             "style": {
               "width": 627.0448853689527,
@@ -359,12 +362,12 @@
               "strokeColor": "#1e1e1e"
             },
             "measured": {
-              "width": 635,
-              "height": 849
+              "width": 661,
+              "height": 824
             },
             "dragging": false,
-            "width": 635,
-            "height": 849,
+            "width": 661,
+            "height": 824,
             "resizing": false
           },
           {
@@ -1678,7 +1681,7 @@
             },
             "position": {
               "x": 125.70651916734187,
-              "y": 223.8537925074459
+              "y": 318.1230232766766
             },
             "width": 451,
             "height": 77,
@@ -1698,8 +1701,8 @@
               "backgroundColor": "var(--sketchlab-bg-yellow)"
             },
             "position": {
-              "x": 125.70651916734178,
-              "y": 320.4830595307334
+              "x": 129.8962627570854,
+              "y": 421.0369056845796
             },
             "width": 451,
             "height": 77,
@@ -1719,8 +1722,8 @@
               "backgroundColor": "var(--sketchlab-bg-yellow)"
             },
             "position": {
-              "x": 125.7065191673419,
-              "y": 420.54089988228895
+              "x": 129.8962627570855,
+              "y": 518.9998742412633
             },
             "width": 451,
             "height": 77,
@@ -1740,8 +1743,8 @@
               "backgroundColor": "var(--sketchlab-bg-yellow)"
             },
             "position": {
-              "x": 128.82338671681313,
-              "y": 520.2806614653682
+              "x": 128.8233867168132,
+              "y": 618.7396358243426
             },
             "width": 451,
             "height": 77,
@@ -1762,8 +1765,8 @@
               "textAlign": "center"
             },
             "position": {
-              "x": 130.38182049154875,
-              "y": 621.5788568231831
+              "x": 128.28694869667697,
+              "y": 221.45834400267012
             },
             "width": 451,
             "height": 77,
@@ -1805,12 +1808,12 @@
             "data": {
               "text": "MOVIE DATA",
               "fontColor": "#1e1e1e",
-              "fontSize": "large",
+              "fontSize": "extra-large",
               "showHandles": false
             },
             "measured": {
-              "width": 148,
-              "height": 46
+              "width": 195,
+              "height": 57
             },
             "dragging": false
           },
@@ -1862,8 +1865,8 @@
               "textAlign": "left"
             },
             "position": {
-              "x": 119.80106004077004,
-              "y": 946.2597113095244
+              "x": 126.08567542538543,
+              "y": 1063.572531822345
             },
             "width": 451,
             "height": 77,
@@ -1906,8 +1909,8 @@
               "textAlign": "left"
             },
             "position": {
-              "x": 121.80199131820996,
-              "y": 1044.3053439040773
+              "x": 123.89686311308174,
+              "y": 1153.2386772374107
             },
             "width": 451,
             "height": 77,
@@ -1929,8 +1932,8 @@
               "textAlign": "left"
             },
             "position": {
-              "x": 123.80292259564976,
-              "y": 1144.3519077760702
+              "x": 125.89779439052154,
+              "y": 1247.0006257247883
             },
             "width": 451,
             "height": 77,
@@ -1953,7 +1956,7 @@
             },
             "position": {
               "x": 125.80385387308968,
-              "y": 1244.398471648063
+              "y": 1334.4779588275503
             },
             "width": 451,
             "height": 77,
@@ -1975,8 +1978,8 @@
               "textAlign": "left"
             },
             "position": {
-              "x": 125.80385387309002,
-              "y": 1340.443172965176
+              "x": 123.70898207821818,
+              "y": 969.650865272868
             },
             "width": 451,
             "height": 77,
@@ -2029,140 +2032,6 @@
               "height": 46
             },
             "dragging": false
-          },
-          {
-            "id": "e30a7366-78de-4f02-b757-51bcf9d3fb48",
-            "type": "text",
-            "data": {
-              "text": "image area\ndrop here"
-            },
-            "position": {
-              "x": 1017.0220303264982,
-              "y": 276.4585729955425
-            },
-            "measured": {
-              "width": 96,
-              "height": 59
-            },
-            "dragging": false,
-            "zIndex": 3
-          },
-          {
-            "id": "3ce91867-b1c1-4c98-b172-89391561b264",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "fontColor": "#000000",
-              "strokeColor": "#808080"
-            },
-            "position": {
-              "x": 806.5886969931648,
-              "y": 174.19190632887586
-            },
-            "width": 567,
-            "height": 283,
-            "measured": {
-              "width": 567,
-              "height": 283
-            },
-            "dragging": false,
-            "resizing": false
-          },
-          {
-            "id": "e8313e57-62df-42c6-acbd-34ae931023ec",
-            "type": "text",
-            "data": {
-              "text": "title area\ndrop here"
-            },
-            "position": {
-              "x": 1035.7053636598314,
-              "y": 508.5252396622094
-            },
-            "measured": {
-              "width": 87,
-              "height": 59
-            },
-            "dragging": false,
-            "zIndex": 3
-          },
-          {
-            "id": "08714451-89d0-417d-aee7-abf8cb4b2b55",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "fontColor": "#000000",
-              "strokeColor": "#808080"
-            },
-            "position": {
-              "x": 821.3386969931647,
-              "y": 494.7585729955425
-            },
-            "width": 545,
-            "height": 82,
-            "measured": {
-              "width": 545,
-              "height": 82
-            },
-            "dragging": false,
-            "resizing": false
-          },
-          {
-            "id": "af6c50b6-497c-41c7-babc-6d26be1a9b1a",
-            "type": "text",
-            "data": {
-              "text": "details area\ndrop here"
-            },
-            "position": {
-              "x": 1029.098285187695,
-              "y": 658.776269175884
-            },
-            "measured": {
-              "width": 99,
-              "height": 59
-            },
-            "dragging": false,
-            "zIndex": 4
-          },
-          {
-            "id": "63e7d8dd-91ab-4c94-8c71-7a1798de2b28",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "fontColor": "#000000",
-              "strokeColor": "#808080"
-            },
-            "position": {
-              "x": 817.32807928496,
-              "y": 795.1948667463137
-            },
-            "width": 547,
-            "height": 105,
-            "measured": {
-              "width": 547,
-              "height": 105
-            },
-            "dragging": false,
-            "resizing": false
-          },
-          {
-            "id": "5c592791-9dd0-477d-8501-9c4bbfd84740",
-            "type": "text",
-            "data": {
-              "text": "description area\ndrop here"
-            },
-            "position": {
-              "x": 1021.7068438685505,
-              "y": 823.4467976500766
-            },
-            "measured": {
-              "width": 133,
-              "height": 59
-            },
-            "dragging": false,
-            "zIndex": 3
           },
           {
             "id": "d3f09917-c438-4b95-a160-5f803c57dd8e",
@@ -2273,45 +2142,48 @@
             "zIndex": -4
           },
           {
-            "id": "4599eb39-5383-4720-964f-6e0d54496722",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "fontColor": "#000000",
-              "strokeColor": "#808080"
-            },
+            "id": "27f60b98-73e2-4f2d-a814-a0bbb6629e9e",
+            "type": "image",
             "position": {
-              "x": 821.6783798753422,
-              "y": 612.1403838401781
+              "x": 859.6590292434113,
+              "y": 110.15637523652848
             },
-            "width": 541,
-            "height": 60,
+            "style": {
+              "width": 163.17394229218516,
+              "height": 149.79902898954705
+            },
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/79c46a678c6ad7bec738f3e0dcd3d77a712711cc.png",
+              "altText": "",
+              "showHandles": false
+            },
             "measured": {
-              "width": 541,
-              "height": 60
+              "width": 496,
+              "height": 308
             },
             "dragging": false,
+            "width": 496,
+            "height": 308,
             "resizing": false
           },
           {
-            "id": "a4c0d216-b49e-4140-a5f8-657a59339003",
+            "id": "f36afbf9-a885-46f3-a51e-db3f0ff16a31",
             "type": "shape",
             "data": {
               "shapeType": "rectangle",
-              "label": "",
-              "fontColor": "#000000",
-              "strokeColor": "#808080"
+              "label": "    imageURL:                                                    \"hollow_signal.jpg\"",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "textAlign": "center"
             },
             "position": {
-              "x": 823.0258701529488,
-              "y": 704.3845911288892
+              "x": 1028.8720363342877,
+              "y": 219.40313045756824
             },
-            "width": 541,
-            "height": 60,
+            "width": 158,
+            "height": 83,
             "measured": {
-              "width": 541,
-              "height": 60
+              "width": 158,
+              "height": 83
             },
             "dragging": false,
             "resizing": false
@@ -2394,12 +2266,33 @@
             },
             "sourceHandle": "line-anchor-source",
             "targetHandle": "line-anchor-target"
+          },
+          {
+            "id": "fc7125a2-9868-4343-b0da-e8a320cfaccb",
+            "source": "4e68a7a4-5556-4d3a-8a9c-c2e826c7d02f",
+            "target": "f36afbf9-a885-46f3-a51e-db3f0ff16a31",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-red)",
+              "strokeWidth": 5
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-red)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 5
+            },
+            "ariaLabel": "Line 9",
+            "zIndex": 3,
+            "sourceHandle": "right-source",
+            "targetHandle": "left-target"
           }
         ],
         "viewport": {
-          "x": -86.63524376997236,
-          "y": -128.6898557204945,
-          "zoom": 0.7480144502086727
+          "x": 395.716404497276,
+          "y": 66.14479177538135,
+          "zoom": 0.3538323952405786
         }
       }
     },
@@ -4058,8 +3951,8 @@
       }
     },
     "name_suffix": "_2026",
-    "long_instructions": "# Design Your Card\r\n\r\nYou are designing the layout for a single movie card. Before writing any code, you need to decide which fields belong on the card, where they go, and what happens when data is missing.\r\n\r\n## Steps\r\n1. **Review the movie data:** Look at the Example Object and the data plan. Notice the field names, their types, and which ones might be null.\r\n2. **Design your card layout:** In the Card View, arrange the fields from the data plan where you think they belong on the card. Not every field needs to appear — make intentional choices about what a user actually needs to see.\r\n3. **Plan your fallbacks:** For any field that might be null, add a note in the Card View with your fallback plan — what should the card show instead?\r\n4. **Save your work to your Backpack:** You'll need your data plan and card layout in the next level. "
+    "long_instructions": "# Design Your Card\r\n\r\nYou are designing the layout for movie cards. Before writing any code, you need to decide which fields belong on the card, where they go, and what happens when data is missing.\r\n\r\n## Steps\r\n1. **Review the movie data:** Look at the Example Object and data plan. Notice which fields might be null.\r\n2. **Design your card:** Use the wireframe components to build your card layout in the Card View. Draw a line from each field you want to include to where it belongs on the card.\r\n3. **Plan your fallbacks:** For any null field you included, add a note with your fallback plan.\r\n4. **Save to your Backpack** before moving on."
   },
-  "audit_log": "[{\"changed_at\":\"2026-05-07T14:10:36.949+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson11-template-sketchlab_v2_2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson11-template-sketchlab_v2_2026\"},{\"changed_at\":\"2026-05-07 14:11:03 +0000\",\"changed\":[],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-07 14:16:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-06-09 16:50:17 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 16:50:25 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 17:36:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 17:36:16 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 21:11:01 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 21:23:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 21:24:18 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 21:39:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 21:50:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 21:54:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 21:55:01 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 21:55:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-07T14:10:36.949+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson11-template-sketchlab_v2_2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson11-template-sketchlab_v2_2026\"},{\"changed_at\":\"2026-05-07 14:11:03 +0000\",\"changed\":[],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-07 14:16:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-06-09 16:50:17 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 16:50:25 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 17:36:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 17:36:16 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 21:11:01 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 21:23:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 21:24:18 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 21:39:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 21:50:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 21:54:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 21:55:01 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 21:55:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-10 17:59:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-10 18:02:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

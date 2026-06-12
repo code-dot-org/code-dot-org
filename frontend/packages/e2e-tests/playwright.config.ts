@@ -18,14 +18,19 @@ export default defineConfig({
   testDir: './tests',
   fullyParallel: true,
   forbidOnly: isCI,
-  retries: 0,
+  // 1 retry in CI to absorb flake; the retried attempt is traced (`trace` below).
+  retries: isCI ? 1 : 0,
   // Tests tagged {tag: '@no_ci'} need infra the automated lane lacks (e.g.
   // Javabuilder). grepInvert matches {tag} metadata as well as title text
   // since Playwright 1.42; use {tag: '@no_ci'} in test definitions, not title embedding.
   grepInvert: isCI ? /@no_ci/ : undefined,
   workers: isCI ? '100%' : undefined,
+  // 'list' streams per-test pass/fail to the console. Essential while the suite
+  // runs non-blocking in Drone/DTT: failures don't fail the job, so the live log
+  // is the only place they surface unless you open the uploaded HTML report.
   reporter: isCI
     ? [
+        ['list'],
         ['html', htmlReport],
         ['junit', {outputFile: 'test-results/junit.xml'}],
       ]

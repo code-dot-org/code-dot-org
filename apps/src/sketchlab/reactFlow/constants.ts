@@ -37,3 +37,8 @@ export const SKETCHLAB_TOOLBAR_PANEL_CLASS = 'sketchlab-toolbar-panel';
 
 // Padding (px) added around child nodes when computing initial group bounds.
 export const GROUP_PADDING_PX = 24;
+
+// React Flow's class for the invisible reconnect-drag circles on an edge.
+// Not part of the library's public API; verify it still matches when
+// upgrading @xyflow/react.
+export const REACT_FLOW_EDGE_UPDATER_CLASS = 'react-flow__edgeupdater';

@@ -18,7 +18,8 @@
   }
 
   // Focus outline for keyboard navigation, matching the component library pattern.
-  :global(.react-flow__node:focus-visible),
+  // Group nodes are excluded — they use a dashed border instead (see below).
+  :global(.react-flow__node:not(.react-flow__node-group):focus-visible),
   :global(.react-flow__edge:focus-visible) {
     outline: 2px solid var(--borders-brand-teal-primary);
     outline-offset: 2px;
@@ -39,10 +40,9 @@
     border: none;
   }
 
-  :global(.react-flow__node-group:focus) {
+  :global(.react-flow__node-group:focus-visible) {
     border: 2px dashed var(--neutral-dark-300, #aaa);
     border-radius: 8px;
-    // Replace the generic teal focus ring with the dashed group border.
     outline: none;
   }
 
@@ -53,11 +53,11 @@
   }
 
   :global(.react-flow__node-lineAnchor:focus .react-flow__handle) {
-    // Override the hidden-handle styling (opacity 0 / pointer-events none)
-    // applied by default to all anchor handles. Without this, a focused
-    // anchor would leave keyboard focus invisible.
+    // Override the hidden-handle opacity so keyboard focus stays visible.
+    // pointer-events stays off (as in .lineAnchorOnFocusedEdge below) so
+    // drags on the dot fall through to the anchor node and move the
+    // endpoint, rather than hitting the handle.
     opacity: 1;
-    pointer-events: auto;
     box-shadow: 0 0 0 2px var(--borders-brand-teal-primary);
   }
 
