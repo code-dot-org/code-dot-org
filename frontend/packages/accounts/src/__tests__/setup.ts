@@ -4,9 +4,12 @@
 
 import '@testing-library/jest-dom/vitest';
 
-import {afterAll, afterEach, beforeAll} from 'vitest';
+import {afterAll, afterEach, beforeAll, expect} from 'vitest';
+import * as axeMatchers from 'vitest-axe/matchers';
 
 import {mockServer} from '@code-dot-org/core/api/mocks/server';
+
+expect.extend(axeMatchers);
 
 beforeAll(() => mockServer.listen({onUnhandledRequest: 'error'}));
 afterEach(() => mockServer.resetHandlers());

@@ -68,6 +68,7 @@
     "vite-plugin-dts": "catalog:",
     "vite-plugin-externalize-deps": "catalog:",
     "vitest": "catalog:",
+    "vitest-axe": "^0.1.0",
     "zod": "catalog:"
   },
   "peerDependencies": {
