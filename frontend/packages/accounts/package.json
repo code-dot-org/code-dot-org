@@ -34,6 +34,7 @@
     "prettier:fix": "prettier --write .",
     "preview": "vite preview",
     "test": "vitest --run",
+    "test:ui": "playwright test",
     "typecheck": "tsc -b --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
@@ -41,6 +42,7 @@
     "@code-dot-org/core": "workspace:*"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.10.1",
     "@code-dot-org/component-library": "workspace:*",
     "@code-dot-org/component-library-styles": "workspace:*",
     "@code-dot-org/fonts": "workspace:*",
@@ -48,6 +50,7 @@
     "@emotion/react": "catalog:",
     "@emotion/styled": "catalog:",
     "@mui/material": "catalog:",
+    "@playwright/test": "^1.59.1",
     "@tanstack/react-query": "catalog:",
     "@testing-library/dom": "catalog:",
     "@testing-library/jest-dom": "catalog:",

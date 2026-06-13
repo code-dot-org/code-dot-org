@@ -39,7 +39,9 @@ const TabButton = styled('button')({
   color: 'var(--text-neutral-secondary)',
   cursor: 'pointer',
   "&[aria-selected='true']": {
-    color: 'var(--text-brand-teal-primary)',
+    // teal-70 (~5:1 on white), not teal-50 (3.67:1) — the selected label is
+    // 20px/600, which axe scores as normal text needing 4.5:1 (WCAG 1.4.3).
+    color: 'var(--text-brand-teal-secondary)',
     borderBottomColor: 'var(--borders-brand-teal-primary)',
     fontWeight: 600,
   },
