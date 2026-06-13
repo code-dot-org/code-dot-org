@@ -266,3 +266,64 @@ describe('AccountSettingsPage — Language (5.7)', () => {
     ).toBeInTheDocument();
   });
 });
+
+describe('AccountSettingsPage — Account Actions (5.8)', () => {
+  it('confirms an account-type change in an alertdialog and reverts the dropdown on cancel', async () => {
+    renderPage('teacher');
+    await screen.findByRole('tablist');
+
+    const select = screen.getByRole('combobox', {name: /account type/i});
+    fireEvent.change(select, {target: {value: 'student'}});
+
+    const dialog = await screen.findByRole('alertdialog', {
+      name: /change account type/i,
+    });
+    expect(dialog).toBeInTheDocument();
+
+    fireEvent.click(within(dialog).getByRole('button', {name: /cancel/i}));
+    await waitFor(() =>
+      expect(screen.queryByRole('alertdialog')).not.toBeInTheDocument(),
+    );
+    expect(screen.getByRole('combobox', {name: /account type/i})).toHaveValue(
+      'teacher',
+    );
+  });
+
+  it('hides the account-type control when the user cannot change type', async () => {
+    renderPage('student');
+    await screen.findByRole('tablist');
+    expect(
+      screen.queryByRole('combobox', {name: /account type/i}),
+    ).not.toBeInTheDocument();
+  });
+
+  it('opens a delete alertdialog with the dependent-students warning and a self-describing button', async () => {
+    renderPage('teacher');
+    await screen.findByRole('tablist');
+
+    fireEvent.click(screen.getByRole('button', {name: /delete my account/i}));
+    const dialog = await screen.findByRole('alertdialog', {name: /delete/i});
+    expect(within(dialog).getByText(/2.*student/i)).toBeInTheDocument();
+    expect(
+      within(dialog).getByRole('button', {name: /delete my account/i}),
+    ).toBeInTheDocument();
+  });
+
+  it('shows the server error in the delete dialog on a wrong password', async () => {
+    renderPage('teacher');
+    await screen.findByRole('tablist');
+
+    fireEvent.click(screen.getByRole('button', {name: /delete my account/i}));
+    const dialog = await screen.findByRole('alertdialog');
+    fireEvent.change(within(dialog).getByLabelText(/password/i), {
+      target: {value: 'wrong'},
+    });
+    fireEvent.click(within(dialog).getByRole('checkbox'));
+    fireEvent.click(
+      within(dialog).getByRole('button', {name: /delete my account/i}),
+    );
+    expect(
+      await within(dialog).findByText('Current password is invalid'),
+    ).toBeInTheDocument();
+  });
+});

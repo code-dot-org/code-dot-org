@@ -1,15 +1,81 @@
+import {Box, Button, Typography} from '@mui/material';
+import {useState} from 'react';
+
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+
+import type {UserType} from '../api/accounts.types';
+import AccountTypeModal from '../components/AccountTypeModal';
+import DeleteAccountModal from '../components/DeleteAccountModal';
+
 import Section from './Section';
 import type {SectionProps} from './types';
 
-// Read-only for now. The account-type confirmation modal and the delete-account
-// alertdialog flow land in task 5.8.
+const TYPE_ITEMS = [
+  {value: 'student', text: 'Student'},
+  {value: 'teacher', text: 'Educator'},
+];
+
 export default function AccountActions({settings}: SectionProps) {
+  // The dropdown stays bound to the current type; a selection only opens the
+  // confirmation modal with the prospective value, so dismissing reverts it.
+  const [prospectiveType, setProspectiveType] = useState<UserType | null>(null);
+  const [deleteOpen, setDeleteOpen] = useState(false);
+
+  const onTypeSelect = (value: string) => {
+    if (
+      (value === 'student' || value === 'teacher') &&
+      value !== settings.userType
+    ) {
+      setProspectiveType(value);
+    }
+  };
+
   return (
     <Section id="account-actions" title="Account Actions">
-      <dl>
-        <dt>Account type</dt>
-        <dd>{settings.userType === 'teacher' ? 'Educator' : 'Student'}</dd>
-      </dl>
+      {settings.canChangeUserType && (
+        <Box sx={{mb: 3, maxWidth: 360}}>
+          <SimpleDropdown
+            name="user_type"
+            labelText="Account type"
+            items={TYPE_ITEMS}
+            selectedValue={settings.userType}
+            onChange={event => onTypeSelect(event.target.value)}
+          />
+          <AccountTypeModal
+            open={prospectiveType !== null}
+            prospectiveType={prospectiveType}
+            onClose={() => setProspectiveType(null)}
+          />
+        </Box>
+      )}
+
+      <Box>
+        <Typography
+          component="p"
+          sx={{
+            textTransform: 'uppercase',
+            fontWeight: 600,
+            fontSize: '0.75rem',
+            color: 'var(--text-error-primary)',
+            mb: 1,
+          }}
+        >
+          Danger zone
+        </Typography>
+        <Button
+          color="error"
+          onClick={() => setDeleteOpen(true)}
+          disabled={!settings.canDeleteOwnAccount}
+          sx={{px: 0}}
+        >
+          Delete my account
+        </Button>
+        <DeleteAccountModal
+          open={deleteOpen}
+          onClose={() => setDeleteOpen(false)}
+          settings={settings}
+        />
+      </Box>
     </Section>
   );
 }
