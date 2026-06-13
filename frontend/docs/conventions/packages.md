@@ -180,6 +180,36 @@ The standalone `index.html` shall include a development-safe
 `<meta name="app-config" content='{"observability":{"provider":"none"}}' />`
 stub so observability-enabled labs initialize cleanly outside Rails.
 
+## App-shaped feature packages
+
+A feature package lives under `packages/` (not `packages/labs/`) but adopts the
+lab _app shape_: a standalone dev server (`index.html` + `src/main.tsx`), MSW
+fixtures, a `./mocks` export subpath, and a default export the host lazy-loads.
+It is **not** a lab — it registers no lab entry (`modules/labs/config/labs.ts`,
+`getLabEntrypoint.ts`, `getLabFixtures.ts` stay untouched) and has no
+channel/level model. `@code-dot-org/accounts` is the first; it is the template
+for the next (promote to a `gen module` generator only when a second appears).
+
+How it differs from a lab:
+
+- **Hosting.** Studio declares an explicit route file (e.g.
+  `routes/users/edit.tsx`) that gates auth, then `React.lazy`-imports the
+  package default export inside `Suspense` with a route `errorComponent`. There
+  is no `$labType`/`$channelId` route. The host owns the route, the auth/sign-in
+  redirect, and the header/footer chrome.
+- **Fixtures register at boot, not from a route loader.** A lab registers its
+  fixtures lazily in the route loader keyed by `channelId`. A feature package
+  whose fixtures include the current-user route must register them in Studio's
+  MSW boot (`modules/mocks/enableMocks.ts`) and select a default scenario there,
+  because the root route's `beforeLoad` resolves auth before any route loader
+  runs. `?scenario=` selects the persona for dev preview.
+- **Shared current-user cache.** The page reads the current user from core's
+  `useCurrentUser`; Studio primes that cache from its auth bootstrap, so the
+  page issues no duplicate `GET /api/v1/users/current`.
+
+Everything else (build/test/lint config, standalone dev server, `./mocks`
+subpath) follows the lab conventions above.
+
 ## Runtime config
 
 Runtime values (API endpoints, feature flags, DSNs) come from `@code-dot-org/core`'s
