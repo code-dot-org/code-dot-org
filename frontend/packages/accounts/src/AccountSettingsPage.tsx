@@ -25,6 +25,18 @@ const TABS: AccountTab[] = [
 // host passes no onTabChange.
 const NO_OP = () => {};
 
+// Visually-hidden status for the brief pending window: the heading stays, the
+// footer is held in place by the host layout's content reserve (CLS is a
+// layout-level concern, not the page's), so no visible loading flash is needed.
+const visuallyHidden = {
+  position: 'absolute',
+  width: 1,
+  height: 1,
+  overflow: 'hidden',
+  clip: 'rect(0 0 0 0)',
+  whiteSpace: 'nowrap',
+};
+
 export interface AccountSettingsPageProps {
   /** Active tab id, supplied by the host (design D11). */
   tab?: string;
@@ -81,7 +93,7 @@ export default function AccountSettingsPage({
       </Typography>
 
       {isPending && (
-        <Typography role="status" sx={{mt: 3}}>
+        <Typography role="status" sx={visuallyHidden}>
           Loading your account…
         </Typography>
       )}

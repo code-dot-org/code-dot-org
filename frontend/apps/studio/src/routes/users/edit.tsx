@@ -46,12 +46,21 @@ function AccountsRoute() {
   );
 }
 
+// Minimal fallback for the lazy-chunk window. No height reserve here — the root
+// layout holds the content area open so the footer never jumps (CLS).
 function AccountsSkeleton() {
   return (
     <Box
       role="status"
       aria-busy="true"
-      sx={{maxWidth: 880, mx: 'auto', px: {xs: 2, sm: 3}, py: 3}}
+      sx={{
+        position: 'absolute',
+        width: 1,
+        height: 1,
+        overflow: 'hidden',
+        clip: 'rect(0 0 0 0)',
+        whiteSpace: 'nowrap',
+      }}
     >
       <Typography>Loading your account…</Typography>
     </Box>
