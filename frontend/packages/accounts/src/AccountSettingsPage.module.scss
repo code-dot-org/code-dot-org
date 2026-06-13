@@ -1,0 +1,15 @@
+.page {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 24px;
+  color: var(--text-neutral-primary);
+}
+
+.error {
+  color: var(--text-error-primary);
+}
+
+.retryButton {
+  min-height: 44px;
+  cursor: pointer;
+}
