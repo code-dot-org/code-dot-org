@@ -108,6 +108,8 @@ export default function AccountSettingsPage({
                 family_name: settings.data.familyName ?? '',
                 name: settings.data.displayName,
                 username: settings.data.username ?? '',
+                age: settings.data.age != null ? String(settings.data.age) : '',
+                us_state: settings.data.usState ?? '',
               }}
             >
               <AccountDetailsForm settings={settings.data} />

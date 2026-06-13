@@ -327,3 +327,24 @@ describe('AccountSettingsPage — Account Actions (5.8)', () => {
     ).toBeInTheDocument();
   });
 });
+
+describe('AccountSettingsPage — student variant (5.9)', () => {
+  it('shows age and US state for a student and excludes last name', async () => {
+    renderPage('student');
+    await screen.findByRole('heading', {level: 2, name: 'My Information'});
+
+    expect(screen.getByRole('combobox', {name: /^age$/i})).toBeInTheDocument();
+    expect(screen.getByRole('combobox', {name: /state/i})).toBeInTheDocument();
+    expect(screen.queryByLabelText('Last name')).not.toBeInTheDocument();
+  });
+
+  it('keeps last name for a teacher and omits age/state', async () => {
+    renderPage('teacher');
+    await screen.findByRole('heading', {level: 2, name: 'My Information'});
+
+    expect(screen.getByLabelText('Last name')).toBeInTheDocument();
+    expect(
+      screen.queryByRole('combobox', {name: /^age$/i}),
+    ).not.toBeInTheDocument();
+  });
+});
