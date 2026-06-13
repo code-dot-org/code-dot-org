@@ -16,11 +16,20 @@ const TYPE_ITEMS = [
   {value: 'teacher', text: 'Educator'},
 ];
 
+// Upfront consequences, stated in context before the button (legacy parity:
+// DeleteAccount.jsx deleteAccount_student/teacherWarning); the modal then
+// confirms. The teacher variant calls out the section/student-account fallout.
+const STUDENT_DELETE_WARNING =
+  'Deleting your account will permanently erase all personal information, coursework, and projects connected to this account.';
+const TEACHER_DELETE_WARNING =
+  "Deleting your account will permanently erase all personal information, coursework, projects, and professional learning information connected to this account after 28 days. It will also delete your sections and your students' accounts that don't have a personal login or aren't in another teacher's section. Please make sure you have the authority to delete these students' education records before deleting your own account.";
+
 export default function AccountActions({settings}: SectionProps) {
   // The dropdown stays bound to the current type; a selection only opens the
   // confirmation modal with the prospective value, so dismissing reverts it.
   const [prospectiveType, setProspectiveType] = useState<UserType | null>(null);
   const [deleteOpen, setDeleteOpen] = useState(false);
+  const isTeacher = settings.userType === 'teacher';
 
   const onTypeSelect = (value: string) => {
     if (
@@ -61,19 +70,41 @@ export default function AccountActions({settings}: SectionProps) {
         >
           Danger zone
         </Typography>
-        <Button
-          color="error"
-          onClick={() => setDeleteOpen(true)}
-          disabled={!settings.canDeleteOwnAccount}
-          sx={{px: 0}}
+        <Typography
+          variant="label1"
+          component="h3"
+          sx={{color: 'var(--text-neutral-primary)', mb: 1}}
         >
-          Delete my account
-        </Button>
-        <DeleteAccountModal
-          open={deleteOpen}
-          onClose={() => setDeleteOpen(false)}
-          settings={settings}
-        />
+          Delete account
+        </Typography>
+        {settings.canDeleteOwnAccount ? (
+          <>
+            <Typography variant="body2" sx={{mb: 2}}>
+              {isTeacher ? TEACHER_DELETE_WARNING : STUDENT_DELETE_WARNING}
+            </Typography>
+            <Button
+              color="error"
+              onClick={() => setDeleteOpen(true)}
+              sx={{px: 0}}
+            >
+              Delete my account
+            </Button>
+            <DeleteAccountModal
+              open={deleteOpen}
+              onClose={() => setDeleteOpen(false)}
+              settings={settings}
+            />
+          </>
+        ) : (
+          // Legacy parity: a teacher-managed or in-section student can't delete
+          // their own account — explain why instead of a dead disabled button
+          // (devise/registrations/edit.html.haml else-branch).
+          <Typography variant="body2">
+            You do not have permission to delete this account because it is
+            managed by your teacher. Your teacher(s) will need to remove you
+            from their sections before you can delete your account.
+          </Typography>
+        )}
       </Box>
     </Section>
   );
