@@ -17,7 +17,7 @@ export default function SaveBar() {
     <Box
       role="region"
       aria-live="polite"
-      aria-label="Unsaved changes"
+      aria-label="Save status"
       sx={{
         position: 'sticky',
         bottom: 0,
@@ -39,15 +39,18 @@ export default function SaveBar() {
               ? 'Your changes have been saved!'
               : 'You’ve made some changes.'}
           </Typography>
-          {save.status === 'error' &&
-            save.formErrors.map(message => (
-              <Typography
-                key={message}
-                sx={{color: 'var(--text-error-primary)'}}
-              >
-                {message}
-              </Typography>
-            ))}
+          {save.status === 'error' && (
+            <Box role="alert" sx={{flex: 1}}>
+              {save.formErrors.map(message => (
+                <Typography
+                  key={message}
+                  sx={{color: 'var(--text-error-primary)'}}
+                >
+                  {message}
+                </Typography>
+              ))}
+            </Box>
+          )}
           {save.status !== 'saved' && (
             <Button
               type="submit"

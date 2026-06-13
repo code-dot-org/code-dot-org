@@ -4,6 +4,7 @@ import {
   DialogActions,
   DialogContent,
   DialogContentText,
+  DialogTitle,
   FormControlLabel,
   Checkbox,
   Typography,
@@ -74,10 +75,8 @@ export default function DeleteAccountModal({
       slotProps={{paper: {role: 'alertdialog'}}}
     >
       <form onSubmit={handleSubmit} noValidate>
+        <DialogTitle id="delete-account-title">Delete my account</DialogTitle>
         <DialogContent sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
-          <Typography variant="h2" component="h2" id="delete-account-title">
-            Delete my account
-          </Typography>
           <DialogContentText id="delete-account-desc">
             This permanently deletes your account
             {dependents > 0
@@ -95,6 +94,7 @@ export default function DeleteAccountModal({
               label="Password"
               name="password_confirmation"
               inputType="password"
+              autoComplete="current-password"
               value={password}
               onChange={event => setPassword(event.target.value)}
               errorMessage={errors.fieldErrors.current_password?.[0]}

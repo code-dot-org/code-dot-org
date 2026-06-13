@@ -10,8 +10,10 @@ export type AuthenticationOptionSummary =
 
 export type UserType = AccountSettings['userType'];
 
-/** Server validation messages keyed by form field (Rails snake_case key). */
-export type FieldErrors = Record<string, string[]>;
+// Server validation messages keyed by form field (Rails snake_case key).
+// Partial so indexed access is `string[] | undefined`, making the `?.` guards
+// at every read site load-bearing rather than defensive-by-convention.
+export type FieldErrors = Partial<Record<string, string[]>>;
 
 export interface UpdateProfileParams {
   givenName?: string;

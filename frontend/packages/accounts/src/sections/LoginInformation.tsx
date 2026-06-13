@@ -36,51 +36,59 @@ export default function LoginInformation({settings}: SectionProps) {
         />
       </Box>
 
-      <Box sx={{mb: 3}}>
-        <Typography sx={{fontWeight: 600}}>Email address</Typography>
-        {settings.shouldSeeEditEmailLink ? (
-          <>
-            <Typography>{settings.email}</Typography>
-            <Button onClick={() => setEmailOpen(true)} sx={{px: 0}}>
-              Update email
-            </Button>
-            <UpdateEmailModal
-              open={emailOpen}
-              onClose={() => setEmailOpen(false)}
-            />
-          </>
-        ) : (
-          <Typography>
-            {settings.email ?? 'Your email is hidden and can’t be edited.'}
-          </Typography>
-        )}
-      </Box>
+      {/* dl pairs each read-only label with its value so the relationship is
+          programmatic, not just visual. */}
+      <Box component="dl" sx={{m: 0}}>
+        <Typography component="dt" sx={{fontWeight: 600}}>
+          Email address
+        </Typography>
+        <Box component="dd" sx={{m: 0, mb: 3}}>
+          {settings.shouldSeeEditEmailLink ? (
+            <>
+              <Typography>{settings.email}</Typography>
+              <Button onClick={() => setEmailOpen(true)} sx={{px: 0}}>
+                Update email
+              </Button>
+              <UpdateEmailModal
+                open={emailOpen}
+                onClose={() => setEmailOpen(false)}
+              />
+            </>
+          ) : (
+            <Typography>
+              {settings.email ?? 'Your email is hidden and can’t be edited.'}
+            </Typography>
+          )}
+        </Box>
 
-      <Box>
-        <Typography sx={{fontWeight: 600}}>Password</Typography>
-        {settings.hasPassword ? (
-          <>
-            <Typography>Password set</Typography>
-            <Button onClick={() => setPasswordOpen(true)} sx={{px: 0}}>
-              Update password
-            </Button>
-            <UpdatePasswordModal
-              open={passwordOpen}
-              onClose={() => setPasswordOpen(false)}
-            />
-          </>
-        ) : (
-          <>
-            <Typography>Signed in with {providers}</Typography>
-            <Button onClick={() => setCreatePasswordOpen(true)} sx={{px: 0}}>
-              Create password
-            </Button>
-            <CreatePasswordModal
-              open={createPasswordOpen}
-              onClose={() => setCreatePasswordOpen(false)}
-            />
-          </>
-        )}
+        <Typography component="dt" sx={{fontWeight: 600}}>
+          Password
+        </Typography>
+        <Box component="dd" sx={{m: 0}}>
+          {settings.hasPassword ? (
+            <>
+              <Typography>Password set</Typography>
+              <Button onClick={() => setPasswordOpen(true)} sx={{px: 0}}>
+                Update password
+              </Button>
+              <UpdatePasswordModal
+                open={passwordOpen}
+                onClose={() => setPasswordOpen(false)}
+              />
+            </>
+          ) : (
+            <>
+              <Typography>Signed in with {providers}</Typography>
+              <Button onClick={() => setCreatePasswordOpen(true)} sx={{px: 0}}>
+                Create password
+              </Button>
+              <CreatePasswordModal
+                open={createPasswordOpen}
+                onClose={() => setCreatePasswordOpen(false)}
+              />
+            </>
+          )}
+        </Box>
       </Box>
     </Section>
   );

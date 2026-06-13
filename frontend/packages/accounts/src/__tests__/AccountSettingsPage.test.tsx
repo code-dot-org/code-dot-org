@@ -289,6 +289,30 @@ describe('AccountSettingsPage — Account Actions (5.8)', () => {
     );
   });
 
+  it('keeps the account-type dialog open with an error when the change fails', async () => {
+    renderPage('teacher');
+    await screen.findByRole('tablist');
+    mockServer.use(
+      http.patch(
+        '*/users/user_type',
+        () => new HttpResponse(null, {status: 500}),
+      ),
+    );
+
+    fireEvent.change(screen.getByRole('combobox', {name: /account type/i}), {
+      target: {value: 'student'},
+    });
+    const dialog = await screen.findByRole('alertdialog', {
+      name: /change account type/i,
+    });
+    fireEvent.click(
+      within(dialog).getByRole('button', {name: /change to student/i}),
+    );
+
+    expect(await within(dialog).findByRole('alert')).toBeInTheDocument();
+    expect(screen.getByRole('alertdialog')).toBeInTheDocument();
+  });
+
   it('hides the account-type control when the user cannot change type', async () => {
     renderPage('student');
     await screen.findByRole('tablist');
