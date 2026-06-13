@@ -1,4 +1,4 @@
-import {render, screen} from '@testing-library/react';
+import {render, screen, within} from '@testing-library/react';
 import {describe, expect, it} from 'vitest';
 
 import {createQueryClient, QueryClientProvider} from '@code-dot-org/core/api';
@@ -49,6 +49,24 @@ describe('LoginInformation password affordances', () => {
     renderSection({hasPassword: true, canEditPassword: true});
     expect(updatePassword()).toBeInTheDocument();
     expect(createPassword()).toBeNull();
+  });
+
+  it('marks the update-email and update-password actions with a pencil icon', () => {
+    renderSection({
+      hasPassword: true,
+      canEditPassword: true,
+      shouldSeeEditEmailLink: true,
+    });
+    expect(
+      within(screen.getByRole('button', {name: 'Update email'})).getByTestId(
+        'font-awesome-v6-icon',
+      ),
+    ).toHaveClass('fa-pencil');
+    expect(
+      within(screen.getByRole('button', {name: 'Update password'})).getByTestId(
+        'font-awesome-v6-icon',
+      ),
+    ).toHaveClass('fa-pencil');
   });
 
   it('offers Create password only when the server grants the entitlement', () => {

@@ -1,7 +1,12 @@
 import {Box, Button, Typography} from '@mui/material';
 import {useState} from 'react';
 
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
+
+// Edit affordance for the Update email/password links (Figma); decorative — the
+// button text carries the accessible name.
+const EditIcon = () => <FontAwesomeV6Icon iconName="pencil" aria-hidden />;
 
 import CreatePasswordModal from '../components/CreatePasswordModal';
 import Field from '../components/Field';
@@ -81,7 +86,11 @@ export default function LoginInformation({settings}: SectionProps) {
           </Field>
           {settings.shouldSeeEditEmailLink && (
             <>
-              <Button onClick={() => setEmailOpen(true)} sx={{px: 0}}>
+              <Button
+                onClick={() => setEmailOpen(true)}
+                startIcon={<EditIcon />}
+                sx={{px: 0}}
+              >
                 Update email
               </Button>
               <UpdateEmailModal
@@ -121,7 +130,11 @@ export default function LoginInformation({settings}: SectionProps) {
               entitlement (e.g. an oauth-only student) gets neither button. */}
           {settings.hasPassword && settings.canEditPassword && (
             <>
-              <Button onClick={() => setPasswordOpen(true)} sx={{px: 0}}>
+              <Button
+                onClick={() => setPasswordOpen(true)}
+                startIcon={<EditIcon />}
+                sx={{px: 0}}
+              >
                 Update password
               </Button>
               <UpdatePasswordModal
