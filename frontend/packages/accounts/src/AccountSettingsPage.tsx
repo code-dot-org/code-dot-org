@@ -81,7 +81,10 @@ export default function AccountSettingsPage({
       aria-labelledby="account-page-heading"
       aria-busy={isPending}
       sx={{
-        maxWidth: 880,
+        // Matches the production account page's content cap: the legacy
+        // `.container` is width: 970px (centered). Responsive here — caps at 970
+        // and stays fluid below.
+        maxWidth: 970,
         mx: 'auto',
         px: {xs: 2, sm: 3},
         py: 3,
