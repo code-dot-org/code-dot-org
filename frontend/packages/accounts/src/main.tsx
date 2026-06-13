@@ -25,8 +25,10 @@ import {
   registerAccountsFixtures,
   type AccountsScenarioTag,
 } from './fixtures';
+import {loadIconFont} from './iconFont';
 
 initializeCore({plugins: [localizationPlugin, observabilityPlugin]});
+loadIconFont();
 
 function activeScenario(): AccountsScenarioTag {
   const tag = new URLSearchParams(window.location.search).get('scenario');
