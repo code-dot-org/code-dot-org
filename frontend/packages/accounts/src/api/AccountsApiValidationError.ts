@@ -45,8 +45,8 @@ function unwrapErrors(error: ApiError): Record<string, unknown> {
 
 /**
  * Typed validation failure surfaced from a Rails mutation. Carries field-level
- * messages (mapped to form fields) and form-level messages separately. See
- * design.md "Spike Findings" for the captured wire shapes this parses.
+ * messages (mapped to form fields) and form-level messages separately. The
+ * wire shapes this parses were captured from the real Rails controllers.
  */
 export class AccountsApiValidationError extends Error {
   readonly status: number;

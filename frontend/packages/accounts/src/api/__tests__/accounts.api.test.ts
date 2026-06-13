@@ -16,9 +16,9 @@ import {
 } from '../accounts.api';
 import {AccountsApiValidationError} from '../AccountsApiValidationError';
 
-// Error bodies captured verbatim from the real Rails controllers (design.md
-// "Spike Findings"). The MSW fixtures serve exactly these so the parser is
-// tested against reality, not invented shapes.
+// Error bodies captured verbatim from the real Rails controllers. The MSW
+// fixtures serve exactly these so the parser is tested against reality, not
+// invented shapes.
 const TAKEN_USERNAME = {username: ['Username has already been taken']};
 const SHORT_PASSWORD = {
   password: ['Password is too short (minimum is 6 characters)'],

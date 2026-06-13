@@ -22,7 +22,7 @@ describe('AccountTabs', () => {
   it('selects the active tab and disables placeholders', () => {
     const [a, b, c] = setup();
     expect(a).toHaveAttribute('aria-selected', 'true');
-    // Placeholder tabs (#73223+) are HTML-disabled until their panels ship.
+    // Placeholder tabs are HTML-disabled until their panels ship.
     expect(b).toBeDisabled();
     expect(c).toBeDisabled();
   });

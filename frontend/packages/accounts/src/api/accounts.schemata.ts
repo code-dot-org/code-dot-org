@@ -2,7 +2,7 @@ import {z} from 'zod';
 
 // Wire (snake_case) shape of GET /api/v1/account/settings, transformed to the
 // camelCase model the page consumes. Mirrors core's schemata→types→api
-// structure (D12). Not exported from the package root.
+// structure. Not exported from the package root.
 
 const AuthenticationOptionSchema = z.object({
   credential_type: z.string(),

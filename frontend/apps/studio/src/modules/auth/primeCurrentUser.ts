@@ -9,7 +9,7 @@ import type {AuthOutcome} from './types';
 /**
  * Primes the shared current-user query cache from a resolved auth outcome, so a
  * feature module reading via `useCurrentUser` does not issue a second
- * `/api/v1/users/current` request (design D4). The auth bootstrap already
+ * `/api/v1/users/current` request. The auth bootstrap already
  * fetched the snake_case response; re-parse it into the camelCase shape the
  * hook expects. `CurrentUserSchema` strips the extra `status` discriminant.
  */

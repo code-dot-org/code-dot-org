@@ -1,6 +1,6 @@
 module Account
   # Read model for GET /api/v1/account/settings: a NAMED ALLOWLIST, strictly
-  # narrower than the legacy getScriptData('edit') payload.
+  # narrower than the legacy account-edit payload.
   #
   # NEVER serialize: oauth/refresh tokens, authentication_id, auth-option ids,
   # hashed_email, encrypted_password, secret words/pictures, failed_attempts,

@@ -5,7 +5,7 @@ import type {CurrentUserResponseSignedIn} from '@code-dot-org/core/api';
 import type {AccountSettingsResponseSchema} from '../api/accounts.schemata';
 
 // The settings read body in WIRE (snake_case) format. Typed as the schema's
-// input so fixture drift fails `tsc` at the fixture (D12).
+// input so fixture drift fails `tsc` at the fixture.
 export type AccountSettingsWire = z.input<typeof AccountSettingsResponseSchema>;
 
 export const ACCOUNTS_SCENARIO_TAGS = [

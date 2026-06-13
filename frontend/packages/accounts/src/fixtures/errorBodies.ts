@@ -1,6 +1,6 @@
-// Rails error bodies captured verbatim from the real controllers (design.md
-// "Spike Findings"). Served by the mutation fixtures so dev and tests exercise
-// the actual wire shapes, not invented ones.
+// Rails error bodies captured verbatim from the real controllers. Served by the
+// mutation fixtures so dev and tests exercise the actual wire shapes, not
+// invented ones.
 
 export const TAKEN_USERNAME = {
   username: ['Username has already been taken'],

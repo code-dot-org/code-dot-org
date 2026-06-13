@@ -49,7 +49,7 @@ describe('AccountSettingsPage', () => {
     const tabs = within(tablist).getAllByRole('tab');
     expect(tabs).toHaveLength(4);
     expect(tabs[0]).toHaveAttribute('aria-selected', 'true');
-    // Placeholder tabs (#73223+) ship disabled until their panels exist.
+    // Placeholder tabs ship disabled until their panels exist.
     expect(tabs[1]).toBeDisabled();
 
     for (const name of [
@@ -69,9 +69,8 @@ describe('AccountSettingsPage', () => {
   });
 
   it('hides the educator-only Educator Profile tab for students', async () => {
-    // Legacy parity: SchoolInformation renders nothing for students, so the
-    // Educator Profile tab does not apply. Communications (parent-email prefs)
-    // and Integrations (linked accounts) still do.
+    // Students have no educator profile, so that tab is hidden. Communications
+    // (parent-email prefs) and Integrations (linked accounts) still apply.
     renderPage('student');
     const tablist = await screen.findByRole('tablist');
     const tabs = within(tablist).getAllByRole('tab');
@@ -160,7 +159,7 @@ describe('AccountSettingsPage save flow', () => {
   });
 });
 
-describe('AccountSettingsPage — Login Information (5.5)', () => {
+describe('AccountSettingsPage — Login Information', () => {
   it('updates the email through a modal that closes on success and reflects the new value', async () => {
     renderPage('teacher');
     await screen.findByRole('tablist');
@@ -239,7 +238,7 @@ describe('AccountSettingsPage — Login Information (5.5)', () => {
   });
 });
 
-describe('AccountSettingsPage — SSO variant (5.6)', () => {
+describe('AccountSettingsPage — SSO variant', () => {
   it('shows the SSO provider and a Create password action, not Update password', async () => {
     renderPage('sso-teacher');
     await screen.findByRole('tablist');
@@ -290,7 +289,7 @@ describe('AccountSettingsPage — SSO variant (5.6)', () => {
   });
 });
 
-describe('AccountSettingsPage — Account Actions (5.8)', () => {
+describe('AccountSettingsPage — Account Actions', () => {
   it('confirms an account-type change in an alertdialog and reverts the dropdown on cancel', async () => {
     renderPage('teacher');
     await screen.findByRole('tablist');
@@ -375,7 +374,7 @@ describe('AccountSettingsPage — Account Actions (5.8)', () => {
   });
 });
 
-describe('AccountSettingsPage — student variant (5.9)', () => {
+describe('AccountSettingsPage — student variant', () => {
   it('shows age and US state for a student and excludes last name', async () => {
     renderPage('student');
     await screen.findByRole('heading', {level: 2, name: 'My Information'});

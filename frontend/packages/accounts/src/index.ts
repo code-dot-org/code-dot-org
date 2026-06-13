@@ -5,7 +5,7 @@
 export {default, default as AccountSettingsPage} from './AccountSettingsPage';
 export type {AccountSettingsPageProps} from './AccountSettingsPage';
 
-// Error class and save-state type are public (D12); zod schemas and the API
+// Error class and save-state type are public; zod schemas and the API
 // functions stay internal to the package.
 export {AccountsApiValidationError} from './api/AccountsApiValidationError';
 export type {SaveState} from './state/saveState';

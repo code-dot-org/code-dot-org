@@ -16,7 +16,7 @@ const GENERIC_ERROR = 'Something went wrong. Please try again.';
 
 /**
  * The Account Details tab body: one `<form>` whose save bar persists all
- * pending My Information edits in a single PATCH (design D13). Email, password,
+ * pending My Information edits in a single PATCH. Email, password,
  * account type, and deletion are their own flows (modals), not this form.
  */
 export default function AccountDetailsForm({

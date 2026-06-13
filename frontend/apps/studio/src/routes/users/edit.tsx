@@ -6,8 +6,7 @@ import {signInRedirectHref} from '@/modules/auth';
 import {ErrorPage} from '@/modules/errors';
 
 // Lazy so the accounts package lands in its own Vite chunk, fetched only on the
-// first navigation to this route (design D5). The package's default export is
-// the page component.
+// first navigation. The package's default export is the page component.
 const AccountSettingsPage = lazy(() => import('@code-dot-org/accounts'));
 
 interface AccountsSearch {
@@ -15,13 +14,12 @@ interface AccountsSearch {
 }
 
 export const Route = createFileRoute('/users/edit')({
-  // Tab is deep-linkable via ?tab= and owned by the router (design D11).
+  // Tab is deep-linkable via ?tab= and owned by the router.
   validateSearch: (search: Record<string, unknown>): AccountsSearch => ({
     tab: typeof search.tab === 'string' ? search.tab : undefined,
   }),
   beforeLoad: ({context}) => {
-    // Build the return-to from our own browser path, never from query params
-    // (design D5 / studio-accounts-route auth gate).
+    // Build the return-to from our own browser path, never from query params.
     const returnTo = window.location.pathname + window.location.search;
     const href = signInRedirectHref(context.auth, returnTo);
     if (href) {

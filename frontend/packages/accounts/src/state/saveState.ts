@@ -1,6 +1,6 @@
 import type {FieldErrors} from '../api/accounts.types';
 
-// The save lifecycle of the Account Details form (D12). The full form reducer
+// The save lifecycle of the Account Details form. The full form reducer
 // (task 5.3) holds field values and derives these transitions; modeling the
 // save status as its own pure reducer keeps the lifecycle testable in isolation.
 export type SaveState =

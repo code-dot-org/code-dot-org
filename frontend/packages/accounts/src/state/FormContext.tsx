@@ -15,7 +15,7 @@ import {
   type FormValues,
 } from './formReducer';
 
-// Values and dispatch live in separate contexts (design D13) so a component
+// Values and dispatch live in separate contexts so a component
 // that only dispatches doesn't re-render when unrelated values change.
 const FormStateContext = createContext<FormState | null>(null);
 const FormDispatchContext = createContext<Dispatch<FormAction> | null>(null);

@@ -1,5 +1,5 @@
 // MSW fixtures for the account settings endpoints, registered through core's
-// generic `registerMockFixture` registry (design D6). The standalone dev server
+// generic `registerMockFixture` registry. The standalone dev server
 // and Studio's MSW mode both consume them. Reads layer scenario-store
 // write-through over seed data so a successful mutation shows up on the next
 // read; the mutation routes also serve the real captured 422/400 bodies for

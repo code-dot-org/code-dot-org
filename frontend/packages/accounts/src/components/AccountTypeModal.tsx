@@ -22,7 +22,7 @@ const TYPE_LABEL: Record<UserType, string> = {
 };
 
 /**
- * Confirmation alertdialog for an account-type change (design D10). The
+ * Confirmation alertdialog for an account-type change. The
  * prospective type lives in the caller's state and is committed only on
  * confirm; dismissing leaves the account unchanged. role="alertdialog" with the
  * heading as label and the warning as description; Cancel takes initial focus.

@@ -7,7 +7,7 @@ export interface AccountTab {
   /** Stable tab id, also the `?tab=` value. */
   id: string;
   label: string;
-  /** Future tabs (#73223+): disabled placeholders until their panels ship. */
+  /** Future tabs: disabled placeholders until their panels ship. */
   disabled?: boolean;
   /** Hidden for students (legacy parity — e.g. the educator-only profile). */
   educatorOnly?: boolean;
@@ -23,8 +23,8 @@ export interface AccountTabsProps {
 
 /**
  * Account-settings tabs on the design-system `Tabs`. v1 has one live tab; the
- * rest are disabled placeholders (#73223+). DSCO disables them via HTML
- * `disabled` (not focusable, no `aria-label`) — accepted for non-functional tabs.
+ * rest are disabled placeholders. DSCO disables them via HTML `disabled` (not
+ * focusable, no `aria-label`) — accepted for non-functional tabs.
  */
 export default function AccountTabs({
   tabs,

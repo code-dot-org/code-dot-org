@@ -18,7 +18,7 @@ const US_STATE_ITEMS = [
   ...US_STATE_OPTIONS,
 ];
 
-// Student variant (D8): no last name; adds age + US state.
+// Student variant: no last name; adds age + US state.
 export default function MyInformation({settings}: SectionProps) {
   const isTeacher = settings.userType === 'teacher';
   const givenName = useField('given_name');

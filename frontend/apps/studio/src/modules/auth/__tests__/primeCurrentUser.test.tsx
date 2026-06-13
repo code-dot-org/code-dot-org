@@ -81,7 +81,7 @@ function wrapper(queryClient: ReturnType<typeof createQueryClient>) {
   };
 }
 
-describe('shared current-user cache (D4)', () => {
+describe('shared current-user cache', () => {
   it('issues exactly one current-user GET across the bootstrap and the page read', async () => {
     const queryClient = createQueryClient();
 

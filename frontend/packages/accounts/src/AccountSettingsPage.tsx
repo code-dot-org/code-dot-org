@@ -12,7 +12,7 @@ import {FormProvider} from './state/FormContext';
 
 const ACCOUNT_DETAILS_TAB = 'account-details';
 
-// Account Details is the only live v1 tab; the rest are placeholders (#73223+).
+// Account Details is the only live v1 tab; the rest are placeholders.
 // Educator Profile is educator-only (legacy hides it for students).
 const TABS: AccountTab[] = [
   {id: ACCOUNT_DETAILS_TAB, label: 'Account Details'},
@@ -41,9 +41,9 @@ const visuallyHidden = {
 };
 
 export interface AccountSettingsPageProps {
-  /** Active tab id, supplied by the host (design D11). */
+  /** Active tab id, supplied by the host. */
   tab?: string;
-  /** Called when the user selects a different tab (design D11). */
+  /** Called when the user selects a different tab. */
   onTabChange?: (tab: string) => void;
 }
 
