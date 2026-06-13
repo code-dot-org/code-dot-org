@@ -1,10 +1,22 @@
+// Standalone dev host. Mirrors Studio's root styling foundation so the page
+// looks like code.org outside the host: design-system fonts, color tokens, and
+// the CdoTheme. (Studio supplies the header/footer chrome; the package exports
+// only the page.)
+import '@code-dot-org/fonts/brands/code.org/index.css';
+import '@code-dot-org/component-library-styles/fontVariables.css';
+import '@code-dot-org/component-library-styles/primitiveColors.css';
+import '@code-dot-org/component-library-styles/colors.css';
+
+import {CssBaseline, ThemeProvider} from '@mui/material';
 import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
 
+import {CdoTheme} from '@code-dot-org/component-library/themes';
 import {initializeCore} from '@code-dot-org/core';
 import {QueryClientProvider} from '@code-dot-org/core/api';
 import {localizationPlugin} from '@code-dot-org/core/plugins/localization';
 import {observabilityPlugin} from '@code-dot-org/core/plugins/observability';
+import FontLoader from '@code-dot-org/fonts/FontLoader';
 
 import AccountSettingsPage from './AccountSettingsPage';
 import {
@@ -78,9 +90,13 @@ await bootMocks(scenario);
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <QueryClientProvider>
-      <ScenarioSwitcher value={scenario} />
-      <AccountSettingsPage />
-    </QueryClientProvider>
+    <ThemeProvider theme={CdoTheme}>
+      <FontLoader locale="en-US" />
+      <CssBaseline />
+      <QueryClientProvider>
+        <ScenarioSwitcher value={scenario} />
+        <AccountSettingsPage />
+      </QueryClientProvider>
+    </ThemeProvider>
   </StrictMode>,
 );
