@@ -3,6 +3,10 @@
   margin: 0 auto;
   padding: 24px;
   color: var(--text-neutral-primary);
+
+  @media (max-width: 600px) {
+    padding: 16px;
+  }
 }
 
 .error {
