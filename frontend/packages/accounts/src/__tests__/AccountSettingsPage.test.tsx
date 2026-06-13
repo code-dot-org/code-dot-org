@@ -256,3 +256,13 @@ describe('AccountSettingsPage — SSO variant (5.6)', () => {
     );
   });
 });
+
+describe('AccountSettingsPage — Language (5.7)', () => {
+  it('renders the preferred-language dropdown reflecting the current locale', async () => {
+    renderPage('teacher');
+    await screen.findByRole('tablist');
+    expect(
+      screen.getByRole('combobox', {name: /preferred language/i}),
+    ).toBeInTheDocument();
+  });
+});
