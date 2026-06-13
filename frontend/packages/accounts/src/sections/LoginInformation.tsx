@@ -3,9 +3,11 @@ import {useState} from 'react';
 
 import TextField from '@code-dot-org/component-library/textField';
 
+import CreatePasswordModal from '../components/CreatePasswordModal';
 import UpdateEmailModal from '../components/UpdateEmailModal';
 import UpdatePasswordModal from '../components/UpdatePasswordModal';
 import {useField} from '../state/FormContext';
+import {providerName} from '../util/providerName';
 
 import Section from './Section';
 import type {SectionProps} from './types';
@@ -14,6 +16,12 @@ export default function LoginInformation({settings}: SectionProps) {
   const username = useField('username');
   const [emailOpen, setEmailOpen] = useState(false);
   const [passwordOpen, setPasswordOpen] = useState(false);
+  const [createPasswordOpen, setCreatePasswordOpen] = useState(false);
+
+  const providers =
+    settings.authenticationOptions
+      .map(option => providerName(option.credentialType))
+      .join(', ') || 'SSO';
 
   return (
     <Section id="login-information" title="Login Information">
@@ -62,8 +70,16 @@ export default function LoginInformation({settings}: SectionProps) {
             />
           </>
         ) : (
-          // SSO "Create password" flow lands in task 5.6.
-          <Typography>Signed in with SSO</Typography>
+          <>
+            <Typography>Signed in with {providers}</Typography>
+            <Button onClick={() => setCreatePasswordOpen(true)} sx={{px: 0}}>
+              Create password
+            </Button>
+            <CreatePasswordModal
+              open={createPasswordOpen}
+              onClose={() => setCreatePasswordOpen(false)}
+            />
+          </>
         )}
       </Box>
     </Section>

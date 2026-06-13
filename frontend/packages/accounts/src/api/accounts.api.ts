@@ -81,6 +81,24 @@ export function updatePassword(params: UpdatePasswordParams): Promise<void> {
   });
 }
 
+// SSO-only accounts add a first password (no current password to confirm).
+export function createPassword(params: {
+  newPassword: string;
+  newPasswordConfirmation: string;
+}): Promise<void> {
+  return mutate({
+    method: 'PATCH',
+    url: '/dashboardapi/users',
+    headers: JSON_ACCEPT,
+    body: {
+      user: {
+        password: params.newPassword,
+        password_confirmation: params.newPasswordConfirmation,
+      },
+    },
+  });
+}
+
 export function updateEmail(params: UpdateEmailParams): Promise<void> {
   return mutate({
     method: 'PATCH',

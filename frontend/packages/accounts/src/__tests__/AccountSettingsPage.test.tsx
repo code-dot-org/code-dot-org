@@ -218,3 +218,41 @@ describe('AccountSettingsPage — Login Information (5.5)', () => {
     ).not.toBeInTheDocument();
   });
 });
+
+describe('AccountSettingsPage — SSO variant (5.6)', () => {
+  it('shows the SSO provider and a Create password action, not Update password', async () => {
+    renderPage('sso-only');
+    await screen.findByRole('tablist');
+
+    expect(screen.getByText(/signed in with google/i)).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', {name: /create password/i}),
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', {name: 'Update password'}),
+    ).not.toBeInTheDocument();
+  });
+
+  it('creates a password through a modal that closes on success', async () => {
+    renderPage('sso-only');
+    await screen.findByRole('tablist');
+
+    fireEvent.click(screen.getByRole('button', {name: /create password/i}));
+    const dialog = await screen.findByRole('dialog', {
+      name: /create password/i,
+    });
+    fireEvent.change(within(dialog).getByLabelText('New password'), {
+      target: {value: 'newpassword1'},
+    });
+    fireEvent.change(within(dialog).getByLabelText(/confirm/i), {
+      target: {value: 'newpassword1'},
+    });
+    fireEvent.click(
+      within(dialog).getByRole('button', {name: /create password/i}),
+    );
+
+    await waitFor(() =>
+      expect(screen.queryByRole('dialog')).not.toBeInTheDocument(),
+    );
+  });
+});
