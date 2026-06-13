@@ -27,6 +27,11 @@ trap 'echo "WARNING: Playwright e2e tests failed (non-blocking)"' ERR
 
 echo "--- running Playwright e2e tests against $TARGET_URL (non-blocking) ---"
 
+# Clear the previous run's report and results first, so a failure before the
+# suite starts (e.g. a bad install) can't leave stale artifacts for the caller
+# to upload or summarize as this run's.
+rm -rf playwright-report test-results
+
 yarn install --immutable
 # Skip in CI (browsers are baked into the Drone image). On the DTT daemon, make
 # sure the pinned build is present: `playwright install` is version-aware, so it's

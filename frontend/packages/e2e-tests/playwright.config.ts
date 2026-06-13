@@ -29,9 +29,9 @@ export default defineConfig({
   // since Playwright 1.42; use {tag: '@no_ci'} in test definitions, not title embedding.
   grepInvert: isCI ? /@no_ci/ : undefined,
   workers: isCI ? '100%' : undefined,
-  // 'list' always streams pass/fail to the live log — the only place failures show
-  // while the suite runs non-blocking. 'html' (uploaded + linked in Slack) and
-  // 'json' (the #infra-test summary) are CI/DTT-only; local stays list-only.
+  // 'list' always streams pass/fail to the live log. 'html' and 'json' are the
+  // automated-lane artifacts (the report and machine-readable results); local
+  // runs stay list-only.
   reporter: isAutomated
     ? [
         ['list'],

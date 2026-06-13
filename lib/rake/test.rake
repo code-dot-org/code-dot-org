@@ -130,8 +130,9 @@ namespace :test do
   # the DTT. Targets TARGET_URL (default: this env's studio URL). Non-blocking —
   # a failure warns but never fails the deploy or PR build.
   timed_task_with_logging :playwright_ui do
-    target_url = ENV['TARGET_URL'] || CDO.studio_url('')
-    script = frontend_dir('packages', 'e2e-tests', 'bin', 'run-playwright-tests-ci.sh')
+    target_url = ENV['TARGET_URL'].presence || CDO.studio_url('')
+    e2e_dir = frontend_dir('packages', 'e2e-tests')
+    script = File.join(e2e_dir, 'bin', 'run-playwright-tests-ci.sh')
 
     # Link the report up front — the key is stable, so it resolves once this run ends.
     pending_report = Cdo::PlaywrightReport.index_url
@@ -152,8 +153,8 @@ namespace :test do
       end
     duration = Time.now - start_time
 
-    report_url = Cdo::PlaywrightReport.upload(frontend_dir('packages', 'e2e-tests', 'playwright-report'))
-    summary = playwright_results_summary(frontend_dir('packages', 'e2e-tests', 'test-results', 'results.json'))
+    report_url = Cdo::PlaywrightReport.upload(File.join(e2e_dir, 'playwright-report'))
+    summary = playwright_results_summary(File.join(e2e_dir, 'test-results', 'results.json'))
 
     # Cucumber-style finish report (see runner.rb): headline, counts, then link.
     status = passed ? '<b>✅ PASSED</b>' : '<b>❌ FAILED</b> (non-blocking)'
