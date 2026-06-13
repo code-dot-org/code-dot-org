@@ -1313,7 +1313,6 @@ __metadata:
     prettier: "catalog:"
     react: "catalog:"
     react-dom: "catalog:"
-    stylelint: "catalog:"
     typescript: "catalog:"
     vite: "catalog:"
     vite-plugin-dts: "catalog:"

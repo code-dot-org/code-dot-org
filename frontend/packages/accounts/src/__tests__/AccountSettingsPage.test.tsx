@@ -1,4 +1,10 @@
-import {render, screen, within} from '@testing-library/react';
+import {
+  fireEvent,
+  render,
+  screen,
+  waitFor,
+  within,
+} from '@testing-library/react';
 import {http, HttpResponse} from 'msw';
 import {afterEach, describe, expect, it} from 'vitest';
 
@@ -84,5 +90,58 @@ describe('AccountSettingsPage', () => {
     expect(
       within(alert).getByRole('button', {name: 'Try again'}),
     ).toBeInTheDocument();
+  });
+});
+
+describe('AccountSettingsPage save flow', () => {
+  it('reveals the save bar on edit, then confirms a successful save', async () => {
+    renderPage('teacher');
+    const displayName = await screen.findByLabelText(/Display name/);
+
+    fireEvent.change(displayName, {target: {value: 'Dr. Ada'}});
+
+    const save = await screen.findByRole('button', {name: 'Save changes'});
+    expect(screen.getByText('You’ve made some changes.')).toBeInTheDocument();
+
+    fireEvent.click(save);
+
+    expect(
+      await screen.findByText('Your changes have been saved!'),
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', {name: 'Save changes'}),
+    ).not.toBeInTheDocument();
+  });
+
+  it('shows a server field error and keeps the value on a 422', async () => {
+    renderPage('teacher');
+    mockServer.use(
+      http.patch(
+        '*/dashboardapi/users',
+        () =>
+          new HttpResponse(
+            JSON.stringify({name: ['Display name is too long']}),
+            {
+              status: 422,
+              headers: {'content-type': 'application/json'},
+            },
+          ),
+      ),
+    );
+    const displayName = await screen.findByLabelText(/Display name/);
+
+    fireEvent.change(displayName, {target: {value: 'x'.repeat(80)}});
+    fireEvent.click(await screen.findByRole('button', {name: 'Save changes'}));
+
+    expect(
+      await screen.findByText('Display name is too long'),
+    ).toBeInTheDocument();
+    // Pending value is preserved, and the field is marked invalid.
+    await waitFor(() =>
+      expect(screen.getByLabelText(/Display name/)).toHaveAttribute(
+        'aria-invalid',
+        'true',
+      ),
+    );
   });
 });

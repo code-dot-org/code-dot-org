@@ -1,6 +1,5 @@
+import {styled} from '@mui/material/styles';
 import {useRef, type KeyboardEvent, type ReactNode} from 'react';
-
-import styles from './AccountTabs.module.scss';
 
 export interface AccountTab {
   /** Stable tab id, also the `?tab=` value. */
@@ -18,6 +17,42 @@ export interface AccountTabsProps {
   /** The active tab's panel content. */
   children: ReactNode;
 }
+
+const TabList = styled('div')(({theme}) => ({
+  display: 'flex',
+  // Wrap rather than force horizontal page scroll at narrow widths / 400% zoom
+  // (WCAG 1.4.10 reflow).
+  flexWrap: 'wrap',
+  columnGap: theme.spacing(3),
+  borderBottom: '1px solid var(--borders-neutral-light)',
+}));
+
+const TabButton = styled('button')({
+  appearance: 'none',
+  minHeight: 44,
+  padding: '12px 4px',
+  marginBottom: -1, // overlap the tablist's bottom border
+  border: 'none',
+  borderBottom: '3px solid transparent',
+  background: 'none',
+  font: 'inherit',
+  color: 'var(--text-neutral-secondary)',
+  cursor: 'pointer',
+  "&[aria-selected='true']": {
+    color: 'var(--text-brand-teal-primary)',
+    borderBottomColor: 'var(--borders-brand-teal-primary)',
+    fontWeight: 600,
+  },
+  "&[aria-disabled='true']": {
+    color: 'var(--text-neutral-disabled)',
+    cursor: 'not-allowed',
+  },
+  '&:focus-visible': {
+    outline: '2px solid var(--borders-brand-teal-strong)',
+    outlineOffset: 2,
+    borderRadius: 2,
+  },
+});
 
 /**
  * ARIA tabs pattern (WAI-ARIA APG) with roving tabindex and
@@ -65,15 +100,11 @@ export default function AccountTabs({
 
   return (
     <>
-      <div
-        role="tablist"
-        aria-label="Account settings sections"
-        className={styles.tablist}
-      >
+      <TabList role="tablist" aria-label="Account settings sections">
         {tabs.map((tab, index) => {
           const selected = tab.id === activeTab;
           return (
-            <button
+            <TabButton
               key={tab.id}
               ref={element => {
                 tabRefs.current[tab.id] = element;
@@ -85,17 +116,16 @@ export default function AccountTabs({
               aria-controls={selected ? panelDomId(tab.id) : undefined}
               aria-disabled={tab.disabled || undefined}
               tabIndex={selected ? 0 : -1}
-              className={styles.tab}
               onKeyDown={event => onKeyDown(event, index)}
               onClick={() => {
                 if (!tab.disabled) onTabChange(tab.id);
               }}
             >
               {tab.label}
-            </button>
+            </TabButton>
           );
         })}
-      </div>
+      </TabList>
       {/*
         No tabindex on the panel: the roving tablist leaves only the active tab
         tabbable, so Tab moves from it into the first focusable element in the
@@ -105,7 +135,7 @@ export default function AccountTabs({
         role="tabpanel"
         id={panelDomId(activeTab)}
         aria-labelledby={tabDomId(activeTab)}
-        className={styles.tabpanel}
+        style={{paddingTop: 24}}
       >
         {children}
       </div>
