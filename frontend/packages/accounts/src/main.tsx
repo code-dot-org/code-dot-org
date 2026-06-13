@@ -51,17 +51,14 @@ async function bootMocks(tag: AccountsScenarioTag): Promise<void> {
   await startMockWorker();
 }
 
-// Suppress the standalone host's dev-only chrome (the scenario switcher).
-// Tool-agnostic and explicit: any consumer — a visual-comparison run, an iframe
-// embed, a manual clean screenshot — opts in the same way via `?devChrome=off`,
-// rather than the host sniffing the runtime (e.g. `navigator.webdriver`).
+// Tool-agnostic opt-out for the dev chrome: any consumer (visual test, embed,
+// clean screenshot) passes `?devChrome=off`, rather than sniffing the runtime.
 function devChromeHidden(): boolean {
   return new URLSearchParams(window.location.search).get('devChrome') === 'off';
 }
 
-// Dev-only scenario switcher: reloading with `?scenario=` re-boots MSW under
-// the chosen tag. Scenario selection itself is the `?scenario=` param, so
-// hiding this widget never changes behavior.
+// Dev-only scenario switcher; `?scenario=` drives selection, so hiding it
+// changes nothing.
 function ScenarioSwitcher({value}: {value: AccountsScenarioTag}) {
   if (devChromeHidden()) return null;
   return (

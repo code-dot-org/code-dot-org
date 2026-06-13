@@ -4,8 +4,7 @@ import {useState} from 'react';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
 
-// Edit affordance for the Update email/password links (Figma); decorative — the
-// button text carries the accessible name.
+// Decorative edit icon for the Update links; button text is the label.
 const EditIcon = () => <FontAwesomeV6Icon iconName="pencil" aria-hidden />;
 
 import CreatePasswordModal from '../components/CreatePasswordModal';
@@ -18,14 +17,11 @@ import {providerName} from '../util/providerName';
 import Section from './Section';
 import type {SectionProps} from './types';
 
-// Email and password are display-only (disabled) fields; editing happens in the
-// modals (Figma). Their values aren't part of the profile PATCH. The masked
-// values are visual; the aria-labels carry the meaning for screen readers
-// (otherwise SR reads "asterisk asterisk…" / a run of bullets).
+// Email/password are display-only (disabled); editing is in the modals. Masked
+// values are visual — the aria-labels carry the meaning for screen readers.
 const MASKED_PASSWORD = '••••••••••••';
 
-// Display-only fields are disabled, but the controlled TextField still wants a
-// handler.
+// Controlled disabled fields still want an onChange.
 const NOOP = () => {};
 
 export default function LoginInformation({settings}: SectionProps) {
@@ -39,8 +35,7 @@ export default function LoginInformation({settings}: SectionProps) {
       .map(option => providerName(option.credentialType))
       .join(', ') || 'SSO';
 
-  // Students never see their real email — it's masked (parity with the legacy
-  // account page, which shows `***encrypted***`).
+  // Students never see their real email (legacy masks it as ***encrypted***).
   const isStudent = settings.userType === 'student';
   const emailValue = isStudent ? '***encrypted***' : (settings.email ?? '');
 
@@ -125,9 +120,8 @@ export default function LoginInformation({settings}: SectionProps) {
               }
             />
           </Field>
-          {/* The add/update action is a server-granted entitlement, not an
-              inference from `hasPassword`: an SSO-only account with no
-              entitlement (e.g. an oauth-only student) gets neither button. */}
+          {/* Server-granted entitlement, not inferred from hasPassword: an
+              oauth-only student without it gets neither button. */}
           {settings.hasPassword && settings.canEditPassword && (
             <>
               <Button

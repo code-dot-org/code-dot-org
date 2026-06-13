@@ -1,8 +1,7 @@
 import {expect, test, type Page} from '@playwright/test';
 
-// Field widths are a layout concern (jsdom has no layout), so they're asserted
-// here in a real browser: text inputs and dropdowns share one width, full-width
-// on mobile and capped on tablet/desktop.
+// Field widths are a layout concern (jsdom has none), so they're asserted in a
+// real browser: inputs and dropdowns share one width, capped on desktop.
 
 const controlWidth = (page: Page, selector: string) =>
   page

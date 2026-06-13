@@ -16,9 +16,8 @@ const TYPE_ITEMS = [
   {value: 'teacher', text: 'Educator'},
 ];
 
-// Upfront consequences, stated in context before the button (legacy parity:
-// DeleteAccount.jsx deleteAccount_student/teacherWarning); the modal then
-// confirms. The teacher variant calls out the section/student-account fallout.
+// Upfront consequences before the button (legacy parity); the modal confirms.
+// Teacher variant adds the section/student-account fallout.
 const STUDENT_DELETE_WARNING =
   'Deleting your account will permanently erase all personal information, coursework, and projects connected to this account.';
 const TEACHER_DELETE_WARNING =
@@ -96,9 +95,8 @@ export default function AccountActions({settings}: SectionProps) {
             />
           </>
         ) : (
-          // Legacy parity: a teacher-managed or in-section student can't delete
-          // their own account — explain why instead of a dead disabled button
-          // (devise/registrations/edit.html.haml else-branch).
+          // Legacy parity: can't delete (teacher-managed / in-section) —
+          // explain why, not a dead disabled button.
           <Typography variant="body2">
             You do not have permission to delete this account because it is
             managed by your teacher. Your teacher(s) will need to remove you

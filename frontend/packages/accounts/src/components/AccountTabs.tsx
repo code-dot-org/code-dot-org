@@ -22,18 +22,9 @@ export interface AccountTabsProps {
 }
 
 /**
- * Account-settings tabs, built on the design-system `Tabs` (type=primary, size
- * m) for design-faithful sizing rather than a hand-rolled widget. v1 ships one
- * live tab (Account Details); the rest are disabled placeholders (#73223+).
- *
- * Tradeoff accepted because the placeholders are non-functional: DSCO renders
- * disabled tabs with the HTML `disabled` attribute (not focusable, no
- * arrow-key roving, and the tablist carries no `aria-label`) — weaker than the
- * APG focusable-disabled pattern, but acceptable for tabs that do nothing yet.
- *
- * The tablist scrolls horizontally on narrow viewports instead of forcing
- * page-level horizontal scroll (WCAG 1.4.10 reflow); DSCO's `ul` is
- * `inline-flex` with no overflow handling of its own.
+ * Account-settings tabs on the design-system `Tabs`. v1 has one live tab; the
+ * rest are disabled placeholders (#73223+). DSCO disables them via HTML
+ * `disabled` (not focusable, no `aria-label`) — accepted for non-functional tabs.
  */
 export default function AccountTabs({
   tabs,
@@ -51,9 +42,8 @@ export default function AccountTabs({
   return (
     <Box
       sx={{
-        // Scroll only the tablist (DSCO's first child div) when the tabs exceed
-        // the viewport; the panel below must not scroll with it. Vertical
-        // padding keeps the focus outline from clipping; the scrollbar is hidden.
+        // Scroll the tablist (DSCO's first child div), not the panel; pad for
+        // the focus ring (WCAG 1.4.10 reflow).
         '& > div:first-of-type': {
           overflowX: 'auto',
           py: '3px',
@@ -61,10 +51,8 @@ export default function AccountTabs({
           '&::-webkit-scrollbar': {display: 'none'},
         },
         '& > div:nth-of-type(2)': {pt: 3},
-        // Color override to match the Figma, which inverts DSCO's canonical
-        // primary tabs: active label is teal (teal-70, >=4.5:1 for 16px/600),
-        // inactive/placeholder labels are dark rather than grey. `&&&` outweighs
-        // DSCO's `.tabs-primary.tabs-light …:disabled` selector.
+        // The design inverts DSCO's canonical tabs: teal active label, dark
+        // inactive. `&&&` beats DSCO's `:disabled` selector.
         '&&& button[role="tab"]': {color: 'var(--text-neutral-primary)'},
         '&&& button[role="tab"]:disabled': {
           color: 'var(--text-neutral-primary)',

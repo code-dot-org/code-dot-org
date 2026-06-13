@@ -12,9 +12,8 @@ import {FormProvider} from './state/FormContext';
 
 const ACCOUNT_DETAILS_TAB = 'account-details';
 
-// Account Details is the only live v1 tab; the rest are disabled placeholders
-// (#73223+). Educator Profile is educator-only — legacy parity: the account
-// page's SchoolInformation renders nothing for students.
+// Account Details is the only live v1 tab; the rest are placeholders (#73223+).
+// Educator Profile is educator-only (legacy hides it for students).
 const TABS: AccountTab[] = [
   {id: ACCOUNT_DETAILS_TAB, label: 'Account Details'},
   {
@@ -27,13 +26,11 @@ const TABS: AccountTab[] = [
   {id: 'integrations', label: 'Integrations', disabled: true},
 ];
 
-// Stable identity so the tablist isn't handed a new fn each render when the
-// host passes no onTabChange.
+// Stable identity for the no-onTabChange case.
 const NO_OP = () => {};
 
-// Visually-hidden status for the brief pending window: the heading stays, the
-// footer is held in place by the host layout's content reserve (CLS is a
-// layout-level concern, not the page's), so no visible loading flash is needed.
+// Visually-hidden pending status; the host reserves content height, so no
+// visible loading flash.
 const visuallyHidden = {
   position: 'absolute',
   width: 1,
@@ -90,9 +87,7 @@ export default function AccountSettingsPage({
       aria-labelledby="account-page-heading"
       aria-busy={isPending}
       sx={{
-        // Matches the production account page's content cap: the legacy
-        // `.container` is width: 970px (centered). Responsive here — caps at 970
-        // and stays fluid below.
+        // Production parity: legacy `.container` caps at 970px, fluid below.
         maxWidth: 970,
         mx: 'auto',
         px: {xs: 2, sm: 3},

@@ -153,9 +153,8 @@ const ssoTeacher: AccountScenario = {
   },
 };
 
-// Oauth-only student: signed in with Google, no password. Legacy routes them to
-// the "Create personal login" flow, not add-password, so the entitlement is
-// false — the page must offer neither password button.
+// Oauth-only student: no password; legacy routes them to "Create personal
+// login", not add-password, so the entitlement is false (no password button).
 const ssoStudent: AccountScenario = {
   currentUser: {
     ...baseCurrentUser,
@@ -192,11 +191,8 @@ const ssoStudent: AccountScenario = {
   },
 };
 
-// The least-populated account we can render: a word/picture student with no
-// name parts, email, password, age, state, or auth providers and the most
-// restrictive permissions. Exercises the all-null / empty-affordance paths —
-// age/state placeholders, masked email with no edit, no password action, and a
-// disabled delete in an otherwise-empty Account Actions.
+// Least-populated account: a word/picture student with optional fields null and
+// edits locked. Exercises the all-null / empty-affordance paths.
 const minimal: AccountScenario = {
   currentUser: {
     ...baseCurrentUser,

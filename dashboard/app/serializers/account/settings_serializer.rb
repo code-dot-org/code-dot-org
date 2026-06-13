@@ -1,17 +1,11 @@
 module Account
-  # Read model for GET /api/v1/account/settings.
+  # Read model for GET /api/v1/account/settings: a NAMED ALLOWLIST, strictly
+  # narrower than the legacy getScriptData('edit') payload.
   #
-  # A NAMED ALLOWLIST, strictly narrower than the legacy /users/edit
-  # getScriptData('edit') payload. The legacy payload over-exposes: it ships
-  # the whole User#properties hash (oauth_token/oauth_refresh_token),
-  # AuthenticationOption#summarize (per-option id and hashed_email), and the
-  # top-level hashed_email. None of that is reproduced here.
-  #
-  # NEVER serialize: oauth tokens or refresh tokens, authentication_id,
-  # auth-option ids, hashed_email (top-level or per option), encrypted_password,
-  # secret words or pictures, failed_attempts/locked_at, IP addresses, or admin
-  # flags. Field-visibility policy (student email masking, edit-affordance
-  # gating) is computed here, server-side — never left to the client.
+  # NEVER serialize: oauth/refresh tokens, authentication_id, auth-option ids,
+  # hashed_email, encrypted_password, secret words/pictures, failed_attempts,
+  # locked_at, IPs, or admin flags. Field-visibility (student email masking,
+  # edit-affordance gating) is computed here server-side, never on the client.
   class SettingsSerializer
     def initialize(user)
       @user = user

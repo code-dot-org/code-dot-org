@@ -5,9 +5,8 @@ import type {AuthOutcome} from '@/modules/auth/types';
 
 import {Route} from '../edit';
 
-// Exercises the route's own `beforeLoad` wiring (return-to from the live browser
-// path, then throw a redirect) — distinct from the signInRedirectHref unit test,
-// which never runs through the route. The guard only reads `context`.
+// Exercises the route's own `beforeLoad` wiring (return-to + redirect), not just
+// the signInRedirectHref helper. The guard only reads `context`.
 const runGuard = (auth: AuthOutcome) =>
   (Route.options.beforeLoad as (arg: {context: {auth: AuthOutcome}}) => void)({
     context: {auth},

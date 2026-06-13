@@ -10,20 +10,15 @@ import {AGE_OPTIONS, US_STATE_OPTIONS} from '../util/profileOptions';
 import Section from './Section';
 import type {SectionProps} from './types';
 
-// Lead with an empty placeholder so a student whose age/us_state is unset shows
-// a neutral "Select …" rather than silently displaying the first real option
-// (legacy parity: registrations_controller prepends a blank age option and
-// AccountInformation prepends "Select a state").
+// Lead with an empty placeholder so an unset age/state shows "Select …" rather
+// than silently the first option (legacy parity).
 const AGE_ITEMS = [{value: '', text: 'Select age'}, ...AGE_OPTIONS];
 const US_STATE_ITEMS = [
   {value: '', text: 'Select a state'},
   ...US_STATE_OPTIONS,
 ];
 
-// Single-column stack of form fields, each full-width on mobile and capped at a
-// readable width above (see Field). Student variant (D8): last name dropped, age
-// + US state added. Field-level server errors set aria-invalid; the save bar
-// persists all pending changes in one PATCH.
+// Student variant (D8): no last name; adds age + US state.
 export default function MyInformation({settings}: SectionProps) {
   const isTeacher = settings.userType === 'teacher';
   const givenName = useField('given_name');
