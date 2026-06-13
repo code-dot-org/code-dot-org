@@ -37,7 +37,7 @@ function auditBody() {
 afterEach(() => resetAccountsFixtures());
 
 describe('AccountSettingsPage — accessibility (5.10)', () => {
-  it.each(['teacher', 'student', 'sso-teacher', 'sso-student'])(
+  it.each(['teacher', 'student', 'sso-teacher', 'sso-student', 'minimal'])(
     'has no axe violations on the loaded page (%s)',
     async tag => {
       renderPage(tag);

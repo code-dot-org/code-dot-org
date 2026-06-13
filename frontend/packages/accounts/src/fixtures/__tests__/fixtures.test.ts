@@ -54,6 +54,16 @@ describe('account fixtures', () => {
     expect(settings.shouldSeeAddPasswordForm).toBe(false);
   });
 
+  it('exposes a minimal account with optional fields null and edits locked', async () => {
+    activate('minimal');
+    const settings = await getAccountSettings();
+    expect(settings.givenName).toBeNull();
+    expect(settings.age).toBeNull();
+    expect(settings.usState).toBeNull();
+    expect(settings.canEditEmail).toBe(false);
+    expect(settings.canDeleteOwnAccount).toBe(false);
+  });
+
   it('reflects a successful email update on the next read (write-through)', async () => {
     activate('teacher');
     await updateEmail({

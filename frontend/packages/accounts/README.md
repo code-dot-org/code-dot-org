@@ -47,8 +47,9 @@ yarn dev   # from frontend/packages/accounts/
 
 Runs the page in isolation against MSW (`src/main.tsx` + `index.html`). A
 `?scenario=` switch picks the persona — `teacher` (default), `student`,
-`sso-teacher` (SSO-only educator), or `sso-student` (oauth-only student) — and a
-corner dropdown switches it live. Append `?devChrome=off` to suppress that
+`sso-teacher` (SSO-only educator), `sso-student` (oauth-only student), or
+`minimal` (word/picture student with optional fields null and edits locked) —
+and a corner dropdown switches it live. Append `?devChrome=off` to suppress that
 dropdown (tool-agnostic: visual-comparison runs, embeds, or a clean screenshot
 opt in the same way). The host page's chrome (header/footer) is Studio's;
 standalone only loads the design-system styling foundation so the page looks

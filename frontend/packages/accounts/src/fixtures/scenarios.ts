@@ -13,6 +13,7 @@ export const ACCOUNTS_SCENARIO_TAGS = [
   'student',
   'sso-teacher',
   'sso-student',
+  'minimal',
 ] as const;
 
 export type AccountsScenarioTag = (typeof ACCOUNTS_SCENARIO_TAGS)[number];
@@ -191,9 +192,51 @@ const ssoStudent: AccountScenario = {
   },
 };
 
+// The least-populated account we can render: a word/picture student with no
+// name parts, email, password, age, state, or auth providers and the most
+// restrictive permissions. Exercises the all-null / empty-affordance paths —
+// age/state placeholders, masked email with no edit, no password action, and a
+// disabled delete in an otherwise-empty Account Actions.
+const minimal: AccountScenario = {
+  currentUser: {
+    ...baseCurrentUser,
+    id: 5,
+    user_type: 'student',
+    username: 'coder',
+    display_name: 'coder',
+    short_name: 'coder',
+    is_verified_instructor: false,
+    educator_role: null,
+    grades_teaching: [],
+    over_21: false,
+    age: 9,
+    us_state_code: null,
+  },
+  settings: {
+    user_type: 'student',
+    given_name: null,
+    family_name: null,
+    display_name: 'coder',
+    username: 'coder',
+    email: null,
+    has_password: false,
+    can_edit_email: false,
+    can_edit_password: false,
+    should_see_add_password_form: false,
+    should_see_edit_email_link: false,
+    authentication_options: [],
+    can_change_user_type: false,
+    can_delete_own_account: false,
+    age: null,
+    us_state: null,
+    dependent_students_count: 0,
+  },
+};
+
 export const ACCOUNT_SCENARIOS: Record<AccountsScenarioTag, AccountScenario> = {
   teacher,
   student,
   'sso-teacher': ssoTeacher,
   'sso-student': ssoStudent,
+  minimal,
 };
