@@ -102,13 +102,20 @@ function scenarioRoutes(tag: AccountsScenarioTag): MockRoute[] {
       respond: async ctx => {
         const user = await readUserBody(ctx);
         if (user.username === 'taken') return json(TAKEN_USERNAME, 422);
-        if (typeof user.password === 'string' && user.password.length < 6) {
-          return json(SHORT_PASSWORD, 422);
+        if (typeof user.password === 'string') {
+          if (
+            scenario.password &&
+            user.current_password !== scenario.password
+          ) {
+            return json(WRONG_PASSWORD, 422);
+          }
+          if (user.password.length < 6) return json(SHORT_PASSWORD, 422);
         }
 
         const givenName = asNullableString(user.given_name);
         const familyName = asNullableString(user.family_name);
         const displayName = asString(user.name);
+        const username = asString(user.username);
         const age = asStringOrNumber(user.age);
         const usState = asNullableString(user.us_state);
 
@@ -117,6 +124,7 @@ function scenarioRoutes(tag: AccountsScenarioTag): MockRoute[] {
           ...(givenName !== undefined && {given_name: givenName}),
           ...(familyName !== undefined && {family_name: familyName}),
           ...(displayName !== undefined && {display_name: displayName}),
+          ...(username !== undefined && {username}),
           ...(age !== undefined && {age}),
           ...(usState !== undefined && {us_state: usState}),
           ...(typeof user.password === 'string' && {has_password: true}),

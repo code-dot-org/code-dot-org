@@ -145,3 +145,76 @@ describe('AccountSettingsPage save flow', () => {
     );
   });
 });
+
+describe('AccountSettingsPage — Login Information (5.5)', () => {
+  it('updates the email through a modal that closes on success and reflects the new value', async () => {
+    renderPage('teacher');
+    await screen.findByRole('tablist');
+
+    fireEvent.click(screen.getByRole('button', {name: 'Update email'}));
+    const dialog = await screen.findByRole('dialog', {name: /update email/i});
+    fireEvent.change(within(dialog).getByLabelText(/new email/i), {
+      target: {value: 'ada@newschool.org'},
+    });
+    fireEvent.change(within(dialog).getByLabelText(/current password/i), {
+      target: {value: 'currentpass'},
+    });
+    fireEvent.click(
+      within(dialog).getByRole('button', {name: /update email/i}),
+    );
+
+    await waitFor(() =>
+      expect(screen.queryByRole('dialog')).not.toBeInTheDocument(),
+    );
+    expect(await screen.findByText('ada@newschool.org')).toBeInTheDocument();
+  });
+
+  it('keeps the update-password modal open with the server error on a wrong current password', async () => {
+    renderPage('teacher');
+    await screen.findByRole('tablist');
+
+    fireEvent.click(screen.getByRole('button', {name: 'Update password'}));
+    const dialog = await screen.findByRole('dialog', {
+      name: /update password/i,
+    });
+    fireEvent.change(within(dialog).getByLabelText(/current password/i), {
+      target: {value: 'wrong'},
+    });
+    fireEvent.change(within(dialog).getByLabelText('New password'), {
+      target: {value: 'newpassword1'},
+    });
+    fireEvent.change(within(dialog).getByLabelText(/confirm/i), {
+      target: {value: 'newpassword1'},
+    });
+    fireEvent.click(
+      within(dialog).getByRole('button', {name: /update password/i}),
+    );
+
+    expect(
+      await within(dialog).findByText('Current password is invalid'),
+    ).toBeInTheDocument();
+    expect(screen.getByRole('dialog')).toBeInTheDocument();
+  });
+
+  it('closes a modal on Escape without submitting', async () => {
+    renderPage('teacher');
+    await screen.findByRole('tablist');
+
+    fireEvent.click(screen.getByRole('button', {name: 'Update email'}));
+    const dialog = await screen.findByRole('dialog');
+    fireEvent.keyDown(dialog, {key: 'Escape'});
+
+    await waitFor(() =>
+      expect(screen.queryByRole('dialog')).not.toBeInTheDocument(),
+    );
+  });
+
+  it('renders a student masked email as static text with no edit affordance', async () => {
+    renderPage('student');
+    await screen.findByRole('tablist');
+
+    expect(
+      screen.queryByRole('button', {name: 'Update email'}),
+    ).not.toBeInTheDocument();
+  });
+});

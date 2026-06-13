@@ -1,0 +1,108 @@
+import {
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  Typography,
+} from '@mui/material';
+import {useMutation, useQueryClient} from '@tanstack/react-query';
+import {useState, type FormEvent} from 'react';
+
+import TextField from '@code-dot-org/component-library/textField';
+
+import {updateEmail} from '../api/accounts.api';
+import {accountsKeys} from '../api/accounts.keys';
+import {hashEmail} from '../util/hashEmail';
+
+import {modalErrors, type ModalErrors} from './modalErrors';
+
+const NO_ERRORS: ModalErrors = {fieldErrors: {}, formError: null};
+
+/**
+ * Update-email modal. MUI Dialog supplies focus trap, Escape-to-close, and
+ * focus return to the trigger. On success the settings query is invalidated so
+ * the displayed email refreshes; on failure the modal stays open with the
+ * server's field error (or a form-level message) and the input preserved.
+ */
+export default function UpdateEmailModal({
+  open,
+  onClose,
+}: {
+  open: boolean;
+  onClose: () => void;
+}) {
+  const queryClient = useQueryClient();
+  const mutation = useMutation({mutationFn: updateEmail});
+  const [email, setEmail] = useState('');
+  const [currentPassword, setCurrentPassword] = useState('');
+  const [errors, setErrors] = useState<ModalErrors>(NO_ERRORS);
+
+  const close = () => {
+    setEmail('');
+    setCurrentPassword('');
+    setErrors(NO_ERRORS);
+    onClose();
+  };
+
+  const handleSubmit = async (event: FormEvent) => {
+    event.preventDefault();
+    setErrors(NO_ERRORS);
+    try {
+      await mutation.mutateAsync({
+        newEmail: email,
+        hashedEmail: hashEmail(email),
+        currentPassword,
+      });
+      await queryClient.invalidateQueries({queryKey: accountsKeys.settings()});
+      close();
+    } catch (error) {
+      setErrors(modalErrors(error));
+    }
+  };
+
+  return (
+    <Dialog open={open} onClose={close} aria-labelledby="update-email-title">
+      <form onSubmit={handleSubmit} noValidate>
+        <DialogTitle id="update-email-title">Update email</DialogTitle>
+        <DialogContent sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
+          {errors.formError && (
+            <Typography role="alert" sx={{color: 'var(--text-error-primary)'}}>
+              {errors.formError}
+            </Typography>
+          )}
+          <TextField
+            label="New email"
+            name="email"
+            inputType="email"
+            value={email}
+            onChange={event => setEmail(event.target.value)}
+            errorMessage={errors.fieldErrors.email?.[0]}
+            aria-invalid={errors.fieldErrors.email ? true : undefined}
+          />
+          <TextField
+            label="Current password"
+            name="current_password"
+            inputType="password"
+            value={currentPassword}
+            onChange={event => setCurrentPassword(event.target.value)}
+            errorMessage={errors.fieldErrors.current_password?.[0]}
+            aria-invalid={
+              errors.fieldErrors.current_password ? true : undefined
+            }
+          />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={close}>Cancel</Button>
+          <Button
+            type="submit"
+            variant="contained"
+            disabled={mutation.isPending}
+          >
+            Update email
+          </Button>
+        </DialogActions>
+      </form>
+    </Dialog>
+  );
+}

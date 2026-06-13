@@ -17,6 +17,7 @@ export interface UpdateProfileParams {
   givenName?: string;
   familyName?: string;
   displayName?: string;
+  username?: string;
   age?: number | string;
   usState?: string;
 }

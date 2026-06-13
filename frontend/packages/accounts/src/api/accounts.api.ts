@@ -58,6 +58,7 @@ export function updateProfile(params: UpdateProfileParams): Promise<void> {
           family_name: params.familyName,
         }),
         ...(params.displayName !== undefined && {name: params.displayName}),
+        ...(params.username !== undefined && {username: params.username}),
         ...(params.age !== undefined && {age: params.age}),
         ...(params.usState !== undefined && {us_state: params.usState}),
       },

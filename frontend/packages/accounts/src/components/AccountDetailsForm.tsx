@@ -39,6 +39,7 @@ export default function AccountDetailsForm({
       ...(dirty.given_name !== undefined && {givenName: dirty.given_name}),
       ...(dirty.family_name !== undefined && {familyName: dirty.family_name}),
       ...(dirty.name !== undefined && {displayName: dirty.name}),
+      ...(dirty.username !== undefined && {username: dirty.username}),
     };
 
     try {

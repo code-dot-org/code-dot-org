@@ -1,19 +1,71 @@
+import {Box, Button, Typography} from '@mui/material';
+import {useState} from 'react';
+
+import TextField from '@code-dot-org/component-library/textField';
+
+import UpdateEmailModal from '../components/UpdateEmailModal';
+import UpdatePasswordModal from '../components/UpdatePasswordModal';
+import {useField} from '../state/FormContext';
+
 import Section from './Section';
 import type {SectionProps} from './types';
 
-// Read-only for now. Editable username, the update-email/update-password modals,
-// and the SSO variant land in tasks 5.5 and 5.6.
 export default function LoginInformation({settings}: SectionProps) {
+  const username = useField('username');
+  const [emailOpen, setEmailOpen] = useState(false);
+  const [passwordOpen, setPasswordOpen] = useState(false);
+
   return (
     <Section id="login-information" title="Login Information">
-      <dl>
-        <dt>Username</dt>
-        <dd>{settings.username || '—'}</dd>
-        <dt>Email address</dt>
-        <dd>{settings.email || 'Hidden'}</dd>
-        <dt>Password</dt>
-        <dd>{settings.hasPassword ? 'Password set' : 'Signed in with SSO'}</dd>
-      </dl>
+      <Box sx={{mb: 3, maxWidth: 360}}>
+        <TextField
+          label="Username"
+          name="username"
+          value={username.value}
+          onChange={event => username.onChange(event.target.value)}
+          errorMessage={username.errors[0]}
+          aria-invalid={username.errors.length > 0 || undefined}
+        />
+      </Box>
+
+      <Box sx={{mb: 3}}>
+        <Typography sx={{fontWeight: 600}}>Email address</Typography>
+        {settings.shouldSeeEditEmailLink ? (
+          <>
+            <Typography>{settings.email}</Typography>
+            <Button onClick={() => setEmailOpen(true)} sx={{px: 0}}>
+              Update email
+            </Button>
+            <UpdateEmailModal
+              open={emailOpen}
+              onClose={() => setEmailOpen(false)}
+            />
+          </>
+        ) : (
+          <Typography>
+            {settings.email ?? 'Your email is hidden and can’t be edited.'}
+          </Typography>
+        )}
+      </Box>
+
+      <Box>
+        <Typography sx={{fontWeight: 600}}>Password</Typography>
+        {settings.hasPassword ? (
+          <>
+            <Typography>Password set</Typography>
+            <Button onClick={() => setPasswordOpen(true)} sx={{px: 0}}>
+              Update password
+            </Button>
+            <UpdatePasswordModal
+              open={passwordOpen}
+              onClose={() => setPasswordOpen(false)}
+            />
+          </>
+        ) : (
+          // SSO "Create password" flow lands in task 5.6.
+          <Typography>Signed in with SSO</Typography>
+        )}
+      </Box>
     </Section>
   );
 }
