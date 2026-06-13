@@ -6,6 +6,7 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import type {UserType} from '../api/accounts.types';
 import AccountTypeModal from '../components/AccountTypeModal';
 import DeleteAccountModal from '../components/DeleteAccountModal';
+import Field from '../components/Field';
 
 import Section from './Section';
 import type {SectionProps} from './types';
@@ -33,14 +34,17 @@ export default function AccountActions({settings}: SectionProps) {
   return (
     <Section id="account-actions" title="Account Actions">
       {settings.canChangeUserType && (
-        <Box sx={{mb: 3, maxWidth: 360}}>
-          <SimpleDropdown
-            name="user_type"
-            labelText="Account type"
-            items={TYPE_ITEMS}
-            selectedValue={settings.userType}
-            onChange={event => onTypeSelect(event.target.value)}
-          />
+        <Box sx={{mb: 3}}>
+          <Field>
+            <SimpleDropdown
+              name="user_type"
+              labelText="Account type"
+              items={TYPE_ITEMS}
+              selectedValue={settings.userType}
+              onChange={event => onTypeSelect(event.target.value)}
+              styleAsFormField
+            />
+          </Field>
           <AccountTypeModal
             open={prospectiveType !== null}
             prospectiveType={prospectiveType}
@@ -51,14 +55,9 @@ export default function AccountActions({settings}: SectionProps) {
 
       <Box>
         <Typography
+          variant="overline2"
           component="p"
-          sx={{
-            textTransform: 'uppercase',
-            fontWeight: 600,
-            fontSize: '0.75rem',
-            color: 'var(--text-error-primary)',
-            mb: 1,
-          }}
+          sx={{color: 'var(--text-neutral-secondary)', mb: 1}}
         >
           Danger zone
         </Typography>

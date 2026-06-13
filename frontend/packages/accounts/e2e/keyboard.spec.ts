@@ -25,22 +25,22 @@ function focusIsInModal(page: Page) {
   });
 }
 
-test('tablist is a roving tabstop navigated with arrow keys', async ({
+test('the live tab is keyboard-focusable; placeholder tabs are disabled', async ({
   page,
 }) => {
   await gotoLoaded(page);
 
   const tabs = page.getByRole('tab');
+  await expect(tabs).toHaveCount(4);
+
+  // Account Details is the only live tab; it takes focus.
   await tabs.first().focus();
   await expect(tabs.first()).toBeFocused();
 
-  // Roving: arrows move focus across tabs (disabled future tabs stay reachable).
-  await page.keyboard.press('ArrowRight');
-  await expect(tabs.nth(1)).toBeFocused();
-  await page.keyboard.press('End');
-  await expect(tabs.last()).toBeFocused();
-  await page.keyboard.press('Home');
-  await expect(tabs.first()).toBeFocused();
+  // Placeholder tabs (#73223+) ship disabled — not keyboard-reachable until
+  // their panels exist (accepted tradeoff for using the design-system Tabs).
+  await expect(tabs.nth(1)).toBeDisabled();
+  await expect(tabs.last()).toBeDisabled();
 });
 
 test('form fields are reachable by Tab and Enter submits the save bar', async ({

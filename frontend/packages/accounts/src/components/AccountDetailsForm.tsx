@@ -5,7 +5,6 @@ import {updateProfile} from '../api/accounts.api';
 import type {AccountSettings, UpdateProfileParams} from '../api/accounts.types';
 import {AccountsApiValidationError} from '../api/AccountsApiValidationError';
 import AccountActions from '../sections/AccountActions';
-import LanguageSection from '../sections/Language';
 import LoginInformation from '../sections/LoginInformation';
 import MyInformation from '../sections/MyInformation';
 import {useFormDispatch, useFormState} from '../state/FormContext';
@@ -68,7 +67,6 @@ export default function AccountDetailsForm({
     <form onSubmit={handleSubmit} noValidate>
       <MyInformation settings={settings} />
       <LoginInformation settings={settings} />
-      <LanguageSection />
       <AccountActions settings={settings} />
       <SaveBar />
     </form>

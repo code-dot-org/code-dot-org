@@ -19,29 +19,12 @@ function setup(onTabChange = vi.fn()) {
 }
 
 describe('AccountTabs', () => {
-  it('applies roving tabindex — only the active tab is tabbable', () => {
+  it('selects the active tab and disables placeholders', () => {
     const [a, b, c] = setup();
-    expect(a).toHaveAttribute('tabindex', '0');
-    expect(b).toHaveAttribute('tabindex', '-1');
-    expect(c).toHaveAttribute('tabindex', '-1');
-    expect(b).toHaveAttribute('aria-disabled', 'true');
-  });
-
-  it('arrow keys move focus through every tab, including disabled ones', () => {
-    const [a, b, c] = setup();
-    a.focus();
-
-    fireEvent.keyDown(a, {key: 'ArrowRight'});
-    expect(document.activeElement).toBe(b); // disabled but reachable
-
-    fireEvent.keyDown(a, {key: 'ArrowLeft'});
-    expect(document.activeElement).toBe(c); // wraps to the last tab
-
-    fireEvent.keyDown(c, {key: 'Home'});
-    expect(document.activeElement).toBe(a);
-
-    fireEvent.keyDown(a, {key: 'End'});
-    expect(document.activeElement).toBe(c);
+    expect(a).toHaveAttribute('aria-selected', 'true');
+    // Placeholder tabs (#73223+) are HTML-disabled until their panels ship.
+    expect(b).toBeDisabled();
+    expect(c).toBeDisabled();
   });
 
   it('activates only enabled tabs on click', () => {

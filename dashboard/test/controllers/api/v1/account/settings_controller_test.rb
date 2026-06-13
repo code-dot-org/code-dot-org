@@ -30,6 +30,8 @@ class Api::V1::Account::SettingsControllerTest < ActionController::TestCase
     assert_equal teacher.username, body['username']
     assert_equal teacher.email, body['email']
     assert_equal true, body['has_password']
+    # A user who already has a password is not offered the add-password form.
+    assert_equal false, body['should_see_add_password_form']
     assert body.key?('can_edit_email')
     assert body.key?('can_edit_password')
     assert body.key?('should_see_edit_email_link')
@@ -61,6 +63,9 @@ class Api::V1::Account::SettingsControllerTest < ActionController::TestCase
     assert_response :success
     body = JSON.parse(@response.body)
     assert_equal false, body['has_password']
+    # An SSO-only teacher (no password, not sponsored/LTI-restricted) is
+    # entitled to add a first password.
+    assert_equal true, body['should_see_add_password_form']
     credential_types = body['authentication_options'].map {|o| o['credential_type']}
     assert_includes credential_types, AuthenticationOption::GOOGLE
   end

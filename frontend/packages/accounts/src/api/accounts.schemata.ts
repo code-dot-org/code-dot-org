@@ -20,6 +20,7 @@ export const AccountSettingsResponseSchema = z
     has_password: z.boolean(),
     can_edit_email: z.boolean(),
     can_edit_password: z.boolean(),
+    should_see_add_password_form: z.boolean(),
     should_see_edit_email_link: z.boolean(),
     authentication_options: z.array(AuthenticationOptionSchema),
     can_change_user_type: z.boolean(),
@@ -38,6 +39,7 @@ export const AccountSettingsResponseSchema = z
     hasPassword: r.has_password,
     canEditEmail: r.can_edit_email,
     canEditPassword: r.can_edit_password,
+    shouldSeeAddPasswordForm: r.should_see_add_password_form,
     shouldSeeEditEmailLink: r.should_see_edit_email_link,
     authenticationOptions: r.authentication_options.map(option => ({
       credentialType: option.credential_type,

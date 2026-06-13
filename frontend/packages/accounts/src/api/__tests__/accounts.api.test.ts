@@ -47,6 +47,7 @@ const TEACHER_SETTINGS = {
   has_password: true,
   can_edit_email: true,
   can_edit_password: true,
+  should_see_add_password_form: false,
   should_see_edit_email_link: true,
   authentication_options: [
     {credential_type: 'email', email: 'ada@example.com'},

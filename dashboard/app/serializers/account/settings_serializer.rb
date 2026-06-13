@@ -30,6 +30,10 @@ module Account
         has_password: user.encrypted_password.present?,
         can_edit_email: user.can_edit_email?,
         can_edit_password: user.can_edit_password?,
+        # Entitlement to add a first password (SSO-only accounts). Composite,
+        # server-computed gate: false for oauth-only students (they get the
+        # personal-login flow instead), sponsored, and LTI-restricted users.
+        should_see_add_password_form: user.should_see_add_password_form?,
         should_see_edit_email_link: user.should_see_edit_email_link?,
         authentication_options: serialized_authentication_options,
         can_change_user_type: user.can_change_own_user_type?,

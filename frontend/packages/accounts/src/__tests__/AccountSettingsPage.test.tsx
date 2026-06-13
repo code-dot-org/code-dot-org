@@ -40,9 +40,7 @@ describe('AccountSettingsPage', () => {
     expect(screen.getByRole('main')).toHaveAttribute('aria-busy', 'true');
 
     // The tablist only renders once both queries resolve.
-    const tablist = await screen.findByRole('tablist', {
-      name: 'Account settings sections',
-    });
+    const tablist = await screen.findByRole('tablist');
     expect(
       screen.getByRole('heading', {level: 1, name: 'My Account'}),
     ).toBeInTheDocument();
@@ -51,12 +49,12 @@ describe('AccountSettingsPage', () => {
     const tabs = within(tablist).getAllByRole('tab');
     expect(tabs).toHaveLength(4);
     expect(tabs[0]).toHaveAttribute('aria-selected', 'true');
-    expect(tabs[1]).toHaveAttribute('aria-disabled', 'true');
+    // Placeholder tabs (#73223+) ship disabled until their panels exist.
+    expect(tabs[1]).toBeDisabled();
 
     for (const name of [
       'My Information',
       'Login Information',
-      'Language',
       'Account Actions',
     ]) {
       expect(screen.getByRole('heading', {level: 2, name})).toBeInTheDocument();
@@ -68,6 +66,22 @@ describe('AccountSettingsPage', () => {
     // Wait for the loaded state (the section heading) before asserting fields.
     await screen.findByRole('heading', {level: 2, name: 'My Information'});
     expect(screen.queryByText('Last name')).not.toBeInTheDocument();
+  });
+
+  it('hides the educator-only Educator Profile tab for students', async () => {
+    // Legacy parity: SchoolInformation renders nothing for students, so the
+    // Educator Profile tab does not apply. Communications (parent-email prefs)
+    // and Integrations (linked accounts) still do.
+    renderPage('student');
+    const tablist = await screen.findByRole('tablist');
+    const tabs = within(tablist).getAllByRole('tab');
+    expect(tabs).toHaveLength(3);
+    expect(
+      within(tablist).queryByRole('tab', {name: 'Educator Profile'}),
+    ).toBeNull();
+    expect(
+      within(tablist).getByRole('tab', {name: 'Account Details'}),
+    ).toBeInTheDocument();
   });
 
   it('shows an error with a retry control when settings fail to load', async () => {
@@ -166,7 +180,10 @@ describe('AccountSettingsPage — Login Information (5.5)', () => {
     await waitFor(() =>
       expect(screen.queryByRole('dialog')).not.toBeInTheDocument(),
     );
-    expect(await screen.findByText('ada@newschool.org')).toBeInTheDocument();
+    // Email shows in the disabled display input now, not as static text.
+    expect(
+      await screen.findByDisplayValue('ada@newschool.org'),
+    ).toBeInTheDocument();
   });
 
   it('keeps the update-password modal open with the server error on a wrong current password', async () => {
@@ -209,19 +226,22 @@ describe('AccountSettingsPage — Login Information (5.5)', () => {
     );
   });
 
-  it('renders a student masked email as static text with no edit affordance', async () => {
+  it('masks a student email as ***encrypted*** but can still update it', async () => {
     renderPage('student');
     await screen.findByRole('tablist');
 
+    // Students never see their real email (parity with the legacy page) but can
+    // still change it via the Update email flow.
+    expect(screen.getByDisplayValue('***encrypted***')).toBeInTheDocument();
     expect(
-      screen.queryByRole('button', {name: 'Update email'}),
-    ).not.toBeInTheDocument();
+      screen.getByRole('button', {name: 'Update email'}),
+    ).toBeInTheDocument();
   });
 });
 
 describe('AccountSettingsPage — SSO variant (5.6)', () => {
   it('shows the SSO provider and a Create password action, not Update password', async () => {
-    renderPage('sso-only');
+    renderPage('sso-teacher');
     await screen.findByRole('tablist');
 
     expect(screen.getByText(/signed in with google/i)).toBeInTheDocument();
@@ -234,7 +254,7 @@ describe('AccountSettingsPage — SSO variant (5.6)', () => {
   });
 
   it('creates a password through a modal that closes on success', async () => {
-    renderPage('sso-only');
+    renderPage('sso-teacher');
     await screen.findByRole('tablist');
 
     fireEvent.click(screen.getByRole('button', {name: /create password/i}));
@@ -255,15 +275,18 @@ describe('AccountSettingsPage — SSO variant (5.6)', () => {
       expect(screen.queryByRole('dialog')).not.toBeInTheDocument(),
     );
   });
-});
 
-describe('AccountSettingsPage — Language (5.7)', () => {
-  it('renders the preferred-language dropdown reflecting the current locale', async () => {
-    renderPage('teacher');
+  it('offers no password action for an oauth-only student (no entitlement)', async () => {
+    renderPage('sso-student');
     await screen.findByRole('tablist');
+
+    expect(screen.getByText(/signed in with google/i)).toBeInTheDocument();
     expect(
-      screen.getByRole('combobox', {name: /preferred language/i}),
-    ).toBeInTheDocument();
+      screen.queryByRole('button', {name: /create password/i}),
+    ).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', {name: 'Update password'}),
+    ).not.toBeInTheDocument();
   });
 });
 

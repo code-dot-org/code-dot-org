@@ -4,7 +4,7 @@ import {expect, test} from '@playwright/test';
 // Real-browser axe scans. Unlike the jsdom vitest-axe pass (5.10), color-contrast
 // IS computed here, so this is where the design's deferred contrast concern
 // (focus ring, error text) gets verified.
-const SCENARIOS = ['teacher', 'student', 'sso-only'] as const;
+const SCENARIOS = ['teacher', 'student', 'sso-teacher', 'sso-student'] as const;
 
 const WCAG_TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'];
 

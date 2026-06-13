@@ -37,7 +37,7 @@ function auditBody() {
 afterEach(() => resetAccountsFixtures());
 
 describe('AccountSettingsPage — accessibility (5.10)', () => {
-  it.each(['teacher', 'student', 'sso-only'])(
+  it.each(['teacher', 'student', 'sso-teacher', 'sso-student'])(
     'has no axe violations on the loaded page (%s)',
     async tag => {
       renderPage(tag);
@@ -90,7 +90,7 @@ describe('AccountSettingsPage — accessibility (5.10)', () => {
   });
 
   it('has no axe violations with the create-password modal open (sso)', async () => {
-    renderPage('sso-only');
+    renderPage('sso-teacher');
     await screen.findByRole('tablist');
     fireEvent.click(screen.getByRole('button', {name: /create password/i}));
     await screen.findByRole('dialog', {name: /create password/i});

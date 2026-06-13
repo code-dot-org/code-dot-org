@@ -31,18 +31,27 @@ describe('account fixtures', () => {
     const settings = await getAccountSettings();
     expect(settings.userType).toBe('student');
     expect(settings.email).toBeNull();
-    expect(settings.shouldSeeEditEmailLink).toBe(false);
+    expect(settings.shouldSeeEditEmailLink).toBe(true);
     expect(settings.age).toBe(14);
     expect(settings.usState).toBe('WA');
   });
 
-  it('exposes an SSO-only account with no password and a Google provider', async () => {
-    activate('sso-only');
+  it('exposes an SSO-only teacher with no password and a Google provider', async () => {
+    activate('sso-teacher');
     const settings = await getAccountSettings();
     expect(settings.hasPassword).toBe(false);
+    expect(settings.shouldSeeAddPasswordForm).toBe(true);
     expect(settings.authenticationOptions[0].credentialType).toBe(
       'google_oauth2',
     );
+  });
+
+  it('exposes an oauth-only student with no add-password entitlement', async () => {
+    activate('sso-student');
+    const settings = await getAccountSettings();
+    expect(settings.userType).toBe('student');
+    expect(settings.hasPassword).toBe(false);
+    expect(settings.shouldSeeAddPasswordForm).toBe(false);
   });
 
   it('reflects a successful email update on the next read (write-through)', async () => {

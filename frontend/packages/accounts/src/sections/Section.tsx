@@ -14,7 +14,7 @@ export default function Section({
   const headingId = `${id}-heading`;
   return (
     <Box component="section" aria-labelledby={headingId} sx={{mb: 4}}>
-      <Typography variant="h2" component="h2" id={headingId} sx={{mb: 2}}>
+      <Typography variant="h5" component="h2" id={headingId} sx={{mb: 2}}>
         {title}
       </Typography>
       {children}

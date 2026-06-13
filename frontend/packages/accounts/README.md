@@ -46,10 +46,13 @@ yarn dev   # from frontend/packages/accounts/
 ```
 
 Runs the page in isolation against MSW (`src/main.tsx` + `index.html`). A
-`?scenario=` switch picks the persona — `teacher` (default), `student`, or
-`sso-only` — and a corner dropdown switches it live. The host page's chrome
-(header/footer) is Studio's; standalone only loads the design-system styling
-foundation so the page looks like code.org.
+`?scenario=` switch picks the persona — `teacher` (default), `student`,
+`sso-teacher` (SSO-only educator), or `sso-student` (oauth-only student) — and a
+corner dropdown switches it live. Append `?devChrome=off` to suppress that
+dropdown (tool-agnostic: visual-comparison runs, embeds, or a clean screenshot
+opt in the same way). The host page's chrome (header/footer) is Studio's;
+standalone only loads the design-system styling foundation so the page looks
+like code.org.
 
 ## Mocks
 

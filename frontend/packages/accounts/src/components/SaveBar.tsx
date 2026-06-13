@@ -34,7 +34,7 @@ export default function SaveBar() {
     >
       {hasContent && (
         <>
-          <Typography sx={{flex: 1}}>
+          <Typography variant="body2" sx={{flex: 1}}>
             {save.status === 'saved'
               ? 'Your changes have been saved!'
               : 'You’ve made some changes.'}
@@ -44,6 +44,7 @@ export default function SaveBar() {
               {save.formErrors.map(message => (
                 <Typography
                   key={message}
+                  variant="body2"
                   sx={{color: 'var(--text-error-primary)'}}
                 >
                   {message}

@@ -3,15 +3,17 @@ import {Box} from '@mui/material';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import TextField from '@code-dot-org/component-library/textField';
 
+import Field from '../components/Field';
 import {useField} from '../state/FormContext';
 import {AGE_OPTIONS, US_STATE_OPTIONS} from '../util/profileOptions';
 
 import Section from './Section';
 import type {SectionProps} from './types';
 
-// Field-level server errors set aria-invalid on the input and render the
-// message; the save bar persists all pending changes in one PATCH (task 5.3).
-// Student variant (D8): last name dropped, age + US state added.
+// Single-column stack of form fields, each full-width on mobile and capped at a
+// readable width above (see Field). Student variant (D8): last name dropped, age
+// + US state added. Field-level server errors set aria-invalid; the save bar
+// persists all pending changes in one PATCH.
 export default function MyInformation({settings}: SectionProps) {
   const isTeacher = settings.userType === 'teacher';
   const givenName = useField('given_name');
@@ -22,73 +24,70 @@ export default function MyInformation({settings}: SectionProps) {
 
   return (
     <Section id="my-information" title="My Information">
-      <Box
-        sx={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          gap: 2,
-          mb: 2,
-          '& > *': {flex: '1 1 240px'},
-        }}
-      >
-        <TextField
-          label="First name"
-          name="given_name"
-          value={givenName.value}
-          onChange={event => givenName.onChange(event.target.value)}
-          errorMessage={givenName.errors[0]}
-          aria-invalid={givenName.errors.length > 0 || undefined}
-        />
-        {isTeacher && (
+      <Box sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
+        <Field>
           <TextField
-            label="Last name"
-            name="family_name"
-            value={familyName.value}
-            onChange={event => familyName.onChange(event.target.value)}
-            errorMessage={familyName.errors[0]}
-            aria-invalid={familyName.errors.length > 0 || undefined}
+            label="First name"
+            name="given_name"
+            value={givenName.value}
+            onChange={event => givenName.onChange(event.target.value)}
+            errorMessage={givenName.errors[0]}
+            aria-invalid={givenName.errors.length > 0 || undefined}
           />
+        </Field>
+
+        {isTeacher && (
+          <Field>
+            <TextField
+              label="Last name"
+              name="family_name"
+              value={familyName.value}
+              onChange={event => familyName.onChange(event.target.value)}
+              errorMessage={familyName.errors[0]}
+              aria-invalid={familyName.errors.length > 0 || undefined}
+            />
+          </Field>
         )}
+
+        {!isTeacher && (
+          <>
+            <Field>
+              <SimpleDropdown
+                name="age"
+                labelText="Age"
+                items={AGE_OPTIONS}
+                selectedValue={age.value}
+                onChange={event => age.onChange(event.target.value)}
+                errorMessage={age.errors[0]}
+                styleAsFormField
+              />
+            </Field>
+            <Field>
+              <SimpleDropdown
+                name="us_state"
+                labelText="State"
+                items={US_STATE_OPTIONS}
+                selectedValue={usState.value}
+                onChange={event => usState.onChange(event.target.value)}
+                errorMessage={usState.errors[0]}
+                styleAsFormField
+              />
+            </Field>
+          </>
+        )}
+
+        <Field>
+          <TextField
+            label="Display name"
+            name="name"
+            value={displayName.value}
+            onChange={event => displayName.onChange(event.target.value)}
+            errorMessage={displayName.errors[0]}
+            aria-invalid={displayName.errors.length > 0 || undefined}
+            helperMessage="This is what your students will see."
+          />
+        </Field>
       </Box>
-
-      {!isTeacher && (
-        <Box
-          sx={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            gap: 2,
-            mb: 2,
-            '& > *': {flex: '1 1 240px'},
-          }}
-        >
-          <SimpleDropdown
-            name="age"
-            labelText="Age"
-            items={AGE_OPTIONS}
-            selectedValue={age.value}
-            onChange={event => age.onChange(event.target.value)}
-            errorMessage={age.errors[0]}
-          />
-          <SimpleDropdown
-            name="us_state"
-            labelText="State"
-            items={US_STATE_OPTIONS}
-            selectedValue={usState.value}
-            onChange={event => usState.onChange(event.target.value)}
-            errorMessage={usState.errors[0]}
-          />
-        </Box>
-      )}
-
-      <TextField
-        label="Display name"
-        name="name"
-        value={displayName.value}
-        onChange={event => displayName.onChange(event.target.value)}
-        errorMessage={displayName.errors[0]}
-        aria-invalid={displayName.errors.length > 0 || undefined}
-        helperMessage="This is what your students will see."
-      />
     </Section>
   );
 }

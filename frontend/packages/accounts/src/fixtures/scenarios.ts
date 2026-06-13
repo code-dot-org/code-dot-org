@@ -11,7 +11,8 @@ export type AccountSettingsWire = z.input<typeof AccountSettingsResponseSchema>;
 export const ACCOUNTS_SCENARIO_TAGS = [
   'teacher',
   'student',
-  'sso-only',
+  'sso-teacher',
+  'sso-student',
 ] as const;
 
 export type AccountsScenarioTag = (typeof ACCOUNTS_SCENARIO_TAGS)[number];
@@ -68,6 +69,7 @@ const teacher: AccountScenario = {
     has_password: true,
     can_edit_email: true,
     can_edit_password: true,
+    should_see_add_password_form: false,
     should_see_edit_email_link: true,
     authentication_options: [
       {credential_type: 'email', email: 'ada@example.com'},
@@ -104,9 +106,10 @@ const student: AccountScenario = {
     username: 'curious_otter_42',
     email: null,
     has_password: true,
-    can_edit_email: false,
+    can_edit_email: true,
     can_edit_password: true,
-    should_see_edit_email_link: false,
+    should_see_add_password_form: false,
+    should_see_edit_email_link: true,
     authentication_options: [],
     can_change_user_type: false,
     can_delete_own_account: true,
@@ -117,7 +120,7 @@ const student: AccountScenario = {
   password: 'currentpass',
 };
 
-const ssoOnly: AccountScenario = {
+const ssoTeacher: AccountScenario = {
   currentUser: {
     ...baseCurrentUser,
     id: 3,
@@ -136,6 +139,7 @@ const ssoOnly: AccountScenario = {
     has_password: false,
     can_edit_email: true,
     can_edit_password: true,
+    should_see_add_password_form: true,
     should_see_edit_email_link: true,
     authentication_options: [
       {credential_type: 'google_oauth2', email: 'grace@example.com'},
@@ -148,8 +152,48 @@ const ssoOnly: AccountScenario = {
   },
 };
 
+// Oauth-only student: signed in with Google, no password. Legacy routes them to
+// the "Create personal login" flow, not add-password, so the entitlement is
+// false — the page must offer neither password button.
+const ssoStudent: AccountScenario = {
+  currentUser: {
+    ...baseCurrentUser,
+    id: 4,
+    user_type: 'student',
+    username: 'brave_fox_88',
+    display_name: 'Max Rivera',
+    short_name: 'Max',
+    is_verified_instructor: false,
+    educator_role: null,
+    grades_teaching: [],
+    over_21: false,
+    age: 13,
+  },
+  settings: {
+    user_type: 'student',
+    given_name: 'Max',
+    family_name: null,
+    display_name: 'Max Rivera',
+    username: 'brave_fox_88',
+    email: null,
+    has_password: false,
+    can_edit_email: true,
+    can_edit_password: true,
+    should_see_add_password_form: false,
+    // Oauth-only students don't see edit-email (no stored cleartext address).
+    should_see_edit_email_link: false,
+    authentication_options: [{credential_type: 'google_oauth2', email: null}],
+    can_change_user_type: false,
+    can_delete_own_account: true,
+    age: 13,
+    us_state: 'WA',
+    dependent_students_count: 0,
+  },
+};
+
 export const ACCOUNT_SCENARIOS: Record<AccountsScenarioTag, AccountScenario> = {
   teacher,
   student,
-  'sso-only': ssoOnly,
+  'sso-teacher': ssoTeacher,
+  'sso-student': ssoStudent,
 };

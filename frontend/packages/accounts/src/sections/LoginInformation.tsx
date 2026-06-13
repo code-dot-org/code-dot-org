@@ -4,6 +4,7 @@ import {useState} from 'react';
 import TextField from '@code-dot-org/component-library/textField';
 
 import CreatePasswordModal from '../components/CreatePasswordModal';
+import Field from '../components/Field';
 import UpdateEmailModal from '../components/UpdateEmailModal';
 import UpdatePasswordModal from '../components/UpdatePasswordModal';
 import {useField} from '../state/FormContext';
@@ -11,6 +12,16 @@ import {providerName} from '../util/providerName';
 
 import Section from './Section';
 import type {SectionProps} from './types';
+
+// Email and password are display-only (disabled) fields; editing happens in the
+// modals (Figma). Their values aren't part of the profile PATCH. The masked
+// values are visual; the aria-labels carry the meaning for screen readers
+// (otherwise SR reads "asterisk asterisk…" / a run of bullets).
+const MASKED_PASSWORD = '••••••••••••';
+
+// Display-only fields are disabled, but the controlled TextField still wants a
+// handler.
+const NOOP = () => {};
 
 export default function LoginInformation({settings}: SectionProps) {
   const username = useField('username');
@@ -23,29 +34,53 @@ export default function LoginInformation({settings}: SectionProps) {
       .map(option => providerName(option.credentialType))
       .join(', ') || 'SSO';
 
+  // Students never see their real email — it's masked (parity with the legacy
+  // account page, which shows `***encrypted***`).
+  const isStudent = settings.userType === 'student';
+  const emailValue = isStudent ? '***encrypted***' : (settings.email ?? '');
+
   return (
     <Section id="login-information" title="Login Information">
-      <Box sx={{mb: 3, maxWidth: 360}}>
-        <TextField
-          label="Username"
-          name="username"
-          value={username.value}
-          onChange={event => username.onChange(event.target.value)}
-          errorMessage={username.errors[0]}
-          aria-invalid={username.errors.length > 0 || undefined}
-        />
-      </Box>
+      <Typography variant="body2" sx={{mb: 2}}>
+        Make sure you can receive notifications at the email provided.
+      </Typography>
 
-      {/* dl pairs each read-only label with its value so the relationship is
-          programmatic, not just visual. */}
-      <Box component="dl" sx={{m: 0}}>
-        <Typography component="dt" sx={{fontWeight: 600}}>
-          Email address
-        </Typography>
-        <Box component="dd" sx={{m: 0, mb: 3}}>
-          {settings.shouldSeeEditEmailLink ? (
+      <Box sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
+        <Field>
+          <TextField
+            label="Username"
+            name="username"
+            value={username.value}
+            onChange={event => username.onChange(event.target.value)}
+            errorMessage={username.errors[0]}
+            aria-invalid={username.errors.length > 0 || undefined}
+          />
+        </Field>
+
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+          }}
+        >
+          <Field>
+            <TextField
+              label="Email address"
+              name="email-display"
+              value={emailValue}
+              onChange={NOOP}
+              disabled
+              aria-label={isStudent ? 'Email address, encrypted' : undefined}
+              helperMessage={
+                !isStudent && settings.hasPassword
+                  ? 'Your password is needed to update your email.'
+                  : undefined
+              }
+            />
+          </Field>
+          {settings.shouldSeeEditEmailLink && (
             <>
-              <Typography>{settings.email}</Typography>
               <Button onClick={() => setEmailOpen(true)} sx={{px: 0}}>
                 Update email
               </Button>
@@ -54,20 +89,38 @@ export default function LoginInformation({settings}: SectionProps) {
                 onClose={() => setEmailOpen(false)}
               />
             </>
-          ) : (
-            <Typography>
-              {settings.email ?? 'Your email is hidden and can’t be edited.'}
-            </Typography>
           )}
         </Box>
 
-        <Typography component="dt" sx={{fontWeight: 600}}>
-          Password
-        </Typography>
-        <Box component="dd" sx={{m: 0}}>
-          {settings.hasPassword ? (
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+          }}
+        >
+          <Field>
+            <TextField
+              label="Password"
+              name="password-display"
+              value={settings.hasPassword ? MASKED_PASSWORD : ''}
+              onChange={NOOP}
+              disabled
+              aria-label={
+                settings.hasPassword
+                  ? 'Password, set'
+                  : `Password, none set — signed in with ${providers}`
+              }
+              helperMessage={
+                settings.hasPassword ? undefined : `Signed in with ${providers}`
+              }
+            />
+          </Field>
+          {/* The add/update action is a server-granted entitlement, not an
+              inference from `hasPassword`: an SSO-only account with no
+              entitlement (e.g. an oauth-only student) gets neither button. */}
+          {settings.hasPassword && settings.canEditPassword && (
             <>
-              <Typography>Password set</Typography>
               <Button onClick={() => setPasswordOpen(true)} sx={{px: 0}}>
                 Update password
               </Button>
@@ -76,9 +129,9 @@ export default function LoginInformation({settings}: SectionProps) {
                 onClose={() => setPasswordOpen(false)}
               />
             </>
-          ) : (
+          )}
+          {!settings.hasPassword && settings.shouldSeeAddPasswordForm && (
             <>
-              <Typography>Signed in with {providers}</Typography>
               <Button onClick={() => setCreatePasswordOpen(true)} sx={{px: 0}}>
                 Create password
               </Button>

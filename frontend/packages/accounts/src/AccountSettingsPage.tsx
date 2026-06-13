@@ -12,11 +12,17 @@ import {FormProvider} from './state/FormContext';
 
 const ACCOUNT_DETAILS_TAB = 'account-details';
 
-// Account Details is the only v1 tab; the rest are placeholders (#73223+),
-// rendered aria-disabled within the tablist per the a11y spec.
+// Account Details is the only live v1 tab; the rest are disabled placeholders
+// (#73223+). Educator Profile is educator-only — legacy parity: the account
+// page's SchoolInformation renders nothing for students.
 const TABS: AccountTab[] = [
   {id: ACCOUNT_DETAILS_TAB, label: 'Account Details'},
-  {id: 'educator-profile', label: 'Educator Profile', disabled: true},
+  {
+    id: 'educator-profile',
+    label: 'Educator Profile',
+    disabled: true,
+    educatorOnly: true,
+  },
   {id: 'communications', label: 'Communications', disabled: true},
   {id: 'integrations', label: 'Integrations', disabled: true},
 ];
@@ -62,6 +68,9 @@ export default function AccountSettingsPage({
     queryFn: ({signal}) => getAccountSettings(signal),
   });
 
+  const isStudent = settings.data?.userType === 'student';
+  const visibleTabs = TABS.filter(t => !(t.educatorOnly && isStudent));
+
   const activeTab =
     tab && TABS.some(t => t.id === tab && !t.disabled)
       ? tab
@@ -91,7 +100,7 @@ export default function AccountSettingsPage({
         color: 'var(--text-neutral-primary)',
       }}
     >
-      <Typography variant="h1" component="h1" id="account-page-heading">
+      <Typography variant="h3" component="h1" id="account-page-heading">
         My Account
       </Typography>
 
@@ -103,7 +112,9 @@ export default function AccountSettingsPage({
 
       {!isPending && isError && (
         <Box role="alert" sx={{mt: 3, color: 'var(--text-error-primary)'}}>
-          <Typography>We couldn’t load your account settings.</Typography>
+          <Typography variant="body2">
+            We couldn’t load your account settings.
+          </Typography>
           <Button variant="contained" onClick={retry} sx={{mt: 1}}>
             Try again
           </Button>
@@ -113,7 +124,7 @@ export default function AccountSettingsPage({
       {!isPending && !isError && settings.data && (
         <Box sx={{mt: 3}}>
           <AccountTabs
-            tabs={TABS}
+            tabs={visibleTabs}
             activeTab={activeTab}
             onTabChange={onTabChange ?? NO_OP}
           >
