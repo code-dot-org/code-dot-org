@@ -42,3 +42,18 @@ test('fields fill the column on mobile', async ({page}) => {
   // Fills the 375px viewport (minus side padding); the cap isn't hit.
   expect(input).toBeGreaterThan(300);
 });
+
+test('the delete-account modal does not overflow horizontally', async ({
+  page,
+}) => {
+  await gotoLoaded(page, 'teacher');
+  await page.getByRole('button', {name: /delete my account/i}).click();
+  await expect(page.getByRole('alertdialog', {name: /delete/i})).toBeVisible();
+
+  // The acknowledge checkbox row must fit the dialog: a full-width control with
+  // a non-zero horizontal margin pushes the scroll region past its client box.
+  const overflow = await page
+    .locator('.MuiDialogContent-root')
+    .evaluate(el => el.scrollWidth - el.clientWidth);
+  expect(overflow).toBeLessThanOrEqual(0);
+});

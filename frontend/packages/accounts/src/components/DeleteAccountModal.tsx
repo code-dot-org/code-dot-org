@@ -98,6 +98,9 @@ export default function DeleteAccountModal({
             />
           )}
           <FormControlLabel
+            // mx:0 — the shared dialog sx forces width:100%, and MuiFormControlLabel's
+            // default -11px/+16px margins then overflow the content box (x-scroll).
+            sx={{mx: 0}}
             control={
               <Checkbox
                 checked={acknowledged}
