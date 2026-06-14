@@ -40,6 +40,7 @@ export default function CreatePasswordModal({
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
+    event.stopPropagation(); // keep this submit off the page form (portal bubbles)
     setErrors(NO_ERRORS);
     try {
       await mutation.mutateAsync({

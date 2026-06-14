@@ -57,6 +57,7 @@ export default function ParentEmailModal({
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
+    event.stopPropagation(); // keep this submit off the page form (portal bubbles)
     setErrors(NO_ERRORS);
     if (email !== confirmEmail) {
       setMismatch(true);

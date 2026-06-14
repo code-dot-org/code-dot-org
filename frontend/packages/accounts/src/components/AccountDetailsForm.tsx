@@ -36,9 +36,13 @@ export default function AccountDetailsForm({
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
     if (state.save.status === 'saving') return; // double-submit guard
-    dispatch({type: 'saveStarted'});
 
     const dirty = dirtyValues(state);
+    // Nothing changed — skip the request. A bare {user:{}} 400s, and a modal
+    // submit bubbling up here must not fire an empty save.
+    if (Object.keys(dirty).length === 0) return;
+
+    dispatch({type: 'saveStarted'});
     const params: UpdateProfileParams = {
       ...(dirty.given_name !== undefined && {givenName: dirty.given_name}),
       ...(dirty.family_name !== undefined && {familyName: dirty.family_name}),

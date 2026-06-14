@@ -122,6 +122,27 @@ describe('AccountSettingsPage save flow', () => {
     ).not.toBeInTheDocument();
   });
 
+  it('does not save when submitted with no net changes', async () => {
+    // Edit-then-revert leaves the save bar up but nothing dirty. Saving then
+    // must skip the request: a bare {user:{}} 400s as ParameterMissing: user.
+    renderPage('teacher');
+    const displayName = await screen.findByLabelText(/Display name/);
+    const original = (displayName as HTMLInputElement).value;
+
+    fireEvent.change(displayName, {target: {value: `${original} edited`}});
+    const save = await screen.findByRole('button', {name: 'Save changes'});
+    fireEvent.change(displayName, {target: {value: original}});
+
+    fireEvent.click(save);
+
+    await waitFor(() =>
+      expect(
+        screen.queryByText('Your changes have been saved!'),
+      ).not.toBeInTheDocument(),
+    );
+    expect(screen.getByText('You’ve made some changes.')).toBeInTheDocument();
+  });
+
   it('shows a server field error and keeps the value on a 422', async () => {
     renderPage('teacher');
     mockServer.use(
