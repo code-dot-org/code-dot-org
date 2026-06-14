@@ -7,12 +7,13 @@ import {
   DialogTitle,
   Typography,
 } from '@mui/material';
-import {useMutation, useQueryClient} from '@tanstack/react-query';
 import {useState} from 'react';
 
-import {updateUserType} from '../api/accounts.api';
-import {accountsKeys} from '../api/accounts.keys';
-import type {UserType} from '../api/accounts.types';
+import {
+  DashboardApiClient,
+  useUpdateUserType,
+  type UserType,
+} from '@code-dot-org/core/api';
 
 import {modalErrors} from './modalErrors';
 
@@ -35,8 +36,7 @@ export default function AccountTypeModal({
   prospectiveType: UserType | null;
   onClose: () => void;
 }) {
-  const queryClient = useQueryClient();
-  const mutation = useMutation({mutationFn: updateUserType});
+  const mutation = useUpdateUserType(DashboardApiClient);
   const [formError, setFormError] = useState<string | null>(null);
 
   // Stay open and show the error on failure; close only once the change commits.
@@ -45,7 +45,6 @@ export default function AccountTypeModal({
     setFormError(null);
     try {
       await mutation.mutateAsync({userType: prospectiveType});
-      await queryClient.invalidateQueries({queryKey: accountsKeys.settings()});
       onClose();
     } catch (error) {
       setFormError(modalErrors(error).formError);

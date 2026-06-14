@@ -2,8 +2,8 @@ import {render, screen, within} from '@testing-library/react';
 import {describe, expect, it} from 'vitest';
 
 import {createQueryClient, QueryClientProvider} from '@code-dot-org/core/api';
+import type {AccountSettings} from '@code-dot-org/core/api';
 
-import type {AccountSettings} from '../../api/accounts.types';
 import {FormProvider} from '../../state/FormContext';
 import LoginInformation from '../LoginInformation';
 
@@ -24,6 +24,7 @@ const BASE: AccountSettings = {
   canDeleteOwnAccount: true,
   age: '21+',
   usState: 'WA',
+  parentEmail: null,
   dependentStudentsCount: 0,
 };
 

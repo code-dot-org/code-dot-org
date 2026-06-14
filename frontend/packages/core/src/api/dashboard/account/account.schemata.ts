@@ -26,6 +26,7 @@ export const AccountSettingsResponseSchema = z
     can_delete_own_account: z.boolean(),
     age: z.union([z.number(), z.string()]).nullable(),
     us_state: z.string().nullable(),
+    parent_email: z.string().nullable(),
     dependent_students_count: z.number(),
   })
   .transform(r => ({
@@ -48,5 +49,6 @@ export const AccountSettingsResponseSchema = z
     canDeleteOwnAccount: r.can_delete_own_account,
     age: r.age,
     usState: r.us_state,
+    parentEmail: r.parent_email,
     dependentStudentsCount: r.dependent_students_count,
   }));

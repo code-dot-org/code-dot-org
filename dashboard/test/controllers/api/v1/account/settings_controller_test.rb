@@ -46,6 +46,19 @@ class Api::V1::Account::SettingsControllerTest < ActionController::TestCase
     assert_equal 'WA', body['us_state']
   end
 
+  test 'student with a parent email gets it; absent when none is set' do
+    with_parent = create(:student, parent_email: 'parent@example.com')
+    sign_in with_parent
+    get :show
+    assert_equal 'parent@example.com', JSON.parse(@response.body)['parent_email']
+
+    sign_out with_parent
+    without_parent = create(:student)
+    sign_in without_parent
+    get :show
+    assert_nil JSON.parse(@response.body)['parent_email']
+  end
+
   test 'sso-only user reports no password and lists the oauth provider' do
     teacher = create(:teacher, :google_sso_provider)
     sign_in teacher

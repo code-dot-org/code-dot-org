@@ -7,10 +7,12 @@ import {
   DialogTitle,
   Typography,
 } from '@mui/material';
-import {useMutation} from '@tanstack/react-query';
 import {useState, type FormEvent} from 'react';
 
-import {signOutOtherSessions} from '../api/accounts.api';
+import {
+  DashboardApiClient,
+  useSignOutOtherSessions,
+} from '@code-dot-org/core/api';
 
 import {modalErrors, type ModalErrors} from './modalErrors';
 
@@ -29,7 +31,7 @@ export default function SignOutOtherSessionsModal({
   onClose: () => void;
   onSignedOut: () => void;
 }) {
-  const mutation = useMutation({mutationFn: signOutOtherSessions});
+  const mutation = useSignOutOtherSessions(DashboardApiClient);
   const [errors, setErrors] = useState<ModalErrors>(NO_ERRORS);
 
   const close = () => {

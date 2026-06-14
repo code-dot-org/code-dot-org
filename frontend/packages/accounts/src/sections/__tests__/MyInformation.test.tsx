@@ -1,7 +1,8 @@
 import {render, screen, within} from '@testing-library/react';
 import {describe, expect, it} from 'vitest';
 
-import type {AccountSettings} from '../../api/accounts.types';
+import type {AccountSettings} from '@code-dot-org/core/api';
+
 import {FormProvider} from '../../state/FormContext';
 import MyInformation from '../MyInformation';
 

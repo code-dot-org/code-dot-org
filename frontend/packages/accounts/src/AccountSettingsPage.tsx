@@ -1,11 +1,12 @@
 import {Box, Button, Typography} from '@mui/material';
-import {useQuery} from '@tanstack/react-query';
 import {useEffect} from 'react';
 
-import {DashboardApiClient, useCurrentUser} from '@code-dot-org/core/api';
+import {
+  DashboardApiClient,
+  useAccountSettings,
+  useCurrentUser,
+} from '@code-dot-org/core/api';
 
-import {getAccountSettings} from './api/accounts.api';
-import {accountsKeys} from './api/accounts.keys';
 import AccountDetailsForm from './components/AccountDetailsForm';
 import AccountTabs, {type AccountTab} from './components/AccountTabs';
 import {FormProvider} from './state/FormContext';
@@ -54,10 +55,7 @@ export default function AccountSettingsPage({
   }, []);
 
   const currentUser = useCurrentUser(DashboardApiClient);
-  const settings = useQuery({
-    queryKey: accountsKeys.settings(),
-    queryFn: ({signal}) => getAccountSettings(signal),
-  });
+  const settings = useAccountSettings(DashboardApiClient);
 
   const isStudent = settings.data?.userType === 'student';
   const visibleTabs = TABS.filter(t => !(t.educatorOnly && isStudent));

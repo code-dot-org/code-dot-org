@@ -1,4 +1,4 @@
-import type {ApiError} from '@code-dot-org/core/api';
+import {ApiError} from '@code-dot-org/core/api';
 
 import type {FieldErrors} from './accounts.types';
 
@@ -17,6 +17,7 @@ const KNOWN_FIELDS = new Set([
   'user_type',
   'age',
   'us_state',
+  'parent_email',
 ]);
 
 function dedupe(messages: string[]): string[] {
@@ -89,4 +90,18 @@ export class AccountsApiValidationError extends Error {
       formErrors,
     );
   }
+}
+
+// PATCH endpoints reject with 422, DELETE /users with 400. Other failures
+// (network, 5xx) are not field-level and stay generic.
+export function asAccountsValidationError(
+  error: unknown,
+): AccountsApiValidationError | null {
+  if (
+    error instanceof ApiError &&
+    (error.status === 422 || error.status === 400)
+  ) {
+    return AccountsApiValidationError.fromApiError(error);
+  }
+  return null;
 }

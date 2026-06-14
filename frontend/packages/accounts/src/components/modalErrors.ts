@@ -1,5 +1,5 @@
 import type {FieldErrors} from '../api/accounts.types';
-import {AccountsApiValidationError} from '../api/AccountsApiValidationError';
+import {asAccountsValidationError} from '../api/AccountsApiValidationError';
 
 export interface ModalErrors {
   fieldErrors: FieldErrors;
@@ -14,10 +14,11 @@ const GENERIC = 'Something went wrong. Please try again.';
  * form-level message, keeping the modal open with the user's input preserved.
  */
 export function modalErrors(error: unknown): ModalErrors {
-  if (error instanceof AccountsApiValidationError && !error.isEmpty) {
+  const validation = asAccountsValidationError(error);
+  if (validation && !validation.isEmpty) {
     return {
-      fieldErrors: error.fieldErrors,
-      formError: error.formErrors[0] ?? null,
+      fieldErrors: validation.fieldErrors,
+      formError: validation.formErrors[0] ?? null,
     };
   }
   return {fieldErrors: {}, formError: GENERIC};

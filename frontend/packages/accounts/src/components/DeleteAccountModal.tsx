@@ -9,13 +9,14 @@ import {
   Checkbox,
   Typography,
 } from '@mui/material';
-import {useMutation} from '@tanstack/react-query';
 import {useState, type FormEvent} from 'react';
 
 import TextField from '@code-dot-org/component-library/textField';
-
-import {deleteAccount} from '../api/accounts.api';
-import type {AccountSettings} from '../api/accounts.types';
+import {
+  DashboardApiClient,
+  useDeleteAccount,
+  type AccountSettings,
+} from '@code-dot-org/core/api';
 
 import {modalErrors, type ModalErrors} from './modalErrors';
 
@@ -36,7 +37,7 @@ export default function DeleteAccountModal({
   onClose: () => void;
   settings: AccountSettings;
 }) {
-  const mutation = useMutation({mutationFn: deleteAccount});
+  const mutation = useDeleteAccount(DashboardApiClient);
   const [password, setPassword] = useState('');
   const [acknowledged, setAcknowledged] = useState(false);
   const [errors, setErrors] = useState<ModalErrors>(NO_ERRORS);

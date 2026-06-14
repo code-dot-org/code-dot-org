@@ -1,9 +1,13 @@
-import {useMutation} from '@tanstack/react-query';
 import type {FormEvent} from 'react';
 
-import {updateProfile} from '../api/accounts.api';
-import type {AccountSettings, UpdateProfileParams} from '../api/accounts.types';
-import {AccountsApiValidationError} from '../api/AccountsApiValidationError';
+import {
+  DashboardApiClient,
+  useUpdateProfile,
+  type AccountSettings,
+  type UpdateProfileParams,
+} from '@code-dot-org/core/api';
+
+import {asAccountsValidationError} from '../api/AccountsApiValidationError';
 import AccountActions from '../sections/AccountActions';
 import LoginInformation from '../sections/LoginInformation';
 import MyInformation from '../sections/MyInformation';
@@ -26,7 +30,7 @@ export default function AccountDetailsForm({
 }) {
   const state = useFormState();
   const dispatch = useFormDispatch();
-  const mutation = useMutation({mutationFn: updateProfile});
+  const mutation = useUpdateProfile(DashboardApiClient);
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
@@ -47,11 +51,14 @@ export default function AccountDetailsForm({
       await mutation.mutateAsync(params);
       dispatch({type: 'saveSucceeded'});
     } catch (error) {
-      if (error instanceof AccountsApiValidationError) {
+      const validation = asAccountsValidationError(error);
+      if (validation && !validation.isEmpty) {
         dispatch({
           type: 'saveFailed',
-          fieldErrors: error.fieldErrors,
-          formErrors: error.isEmpty ? [GENERIC_ERROR] : error.formErrors,
+          fieldErrors: validation.fieldErrors,
+          formErrors: validation.formErrors.length
+            ? validation.formErrors
+            : [GENERIC_ERROR],
         });
       } else {
         dispatch({

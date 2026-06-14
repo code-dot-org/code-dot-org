@@ -6,13 +6,11 @@ import {
   DialogTitle,
   Typography,
 } from '@mui/material';
-import {useMutation, useQueryClient} from '@tanstack/react-query';
 import {useState, type FormEvent} from 'react';
 
 import TextField from '@code-dot-org/component-library/textField';
+import {DashboardApiClient, useUpdateEmail} from '@code-dot-org/core/api';
 
-import {updateEmail} from '../api/accounts.api';
-import {accountsKeys} from '../api/accounts.keys';
 import {hashEmail} from '../util/hashEmail';
 
 import {modalErrors, type ModalErrors} from './modalErrors';
@@ -31,8 +29,7 @@ export default function UpdateEmailModal({
   open: boolean;
   onClose: () => void;
 }) {
-  const queryClient = useQueryClient();
-  const mutation = useMutation({mutationFn: updateEmail});
+  const mutation = useUpdateEmail(DashboardApiClient);
   const [email, setEmail] = useState('');
   const [currentPassword, setCurrentPassword] = useState('');
   const [errors, setErrors] = useState<ModalErrors>(NO_ERRORS);
@@ -53,7 +50,6 @@ export default function UpdateEmailModal({
         hashedEmail: hashEmail(email),
         currentPassword,
       });
-      await queryClient.invalidateQueries({queryKey: accountsKeys.settings()});
       close();
     } catch (error) {
       setErrors(modalErrors(error));

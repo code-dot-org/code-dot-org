@@ -31,6 +31,8 @@ module Account
         can_delete_own_account: user.can_delete_own_account?,
         age: user.age,
         us_state: user.us_state,
+        # Student-only "For Parents and Guardians" value; absent when unset.
+        parent_email: user.parent_email.presence,
         dependent_students_count: dependent_students_count,
       }
     end

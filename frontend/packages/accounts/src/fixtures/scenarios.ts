@@ -1,8 +1,9 @@
 import type {z} from 'zod';
 
-import type {CurrentUserResponseSignedIn} from '@code-dot-org/core/api';
-
-import type {AccountSettingsResponseSchema} from '../api/accounts.schemata';
+import type {
+  CurrentUserResponseSignedIn,
+  AccountSettingsResponseSchema,
+} from '@code-dot-org/core/api';
 
 // Wire (snake_case) settings body, typed as the schema's input so fixture
 // drift fails tsc here.
@@ -78,6 +79,7 @@ const teacher: AccountScenario = {
     can_delete_own_account: true,
     age: '21+',
     us_state: 'WA',
+    parent_email: null,
     dependent_students_count: 2,
   },
   password: 'currentpass',
@@ -115,6 +117,7 @@ const student: AccountScenario = {
     can_delete_own_account: true,
     age: 14,
     us_state: 'WA',
+    parent_email: 'parent@example.com',
     dependent_students_count: 0,
   },
   password: 'currentpass',
@@ -148,6 +151,7 @@ const ssoTeacher: AccountScenario = {
     can_delete_own_account: true,
     age: '21+',
     us_state: null,
+    parent_email: null,
     dependent_students_count: 0,
   },
 };
@@ -186,6 +190,7 @@ const ssoStudent: AccountScenario = {
     can_delete_own_account: true,
     age: 13,
     us_state: 'WA',
+    parent_email: null,
     dependent_students_count: 0,
   },
 };
@@ -224,6 +229,7 @@ const minimal: AccountScenario = {
     can_delete_own_account: false,
     age: null,
     us_state: null,
+    parent_email: null,
     dependent_students_count: 0,
   },
 };

@@ -1,0 +1,113 @@
+import {describe, expect, it} from 'vitest';
+
+import {ApiError} from '@code-dot-org/core/api';
+
+import {
+  AccountsApiValidationError,
+  asAccountsValidationError,
+} from '../AccountsApiValidationError';
+
+// Error bodies captured verbatim from the real Rails controllers, so the parser
+// is tested against reality, not invented shapes.
+const TAKEN_USERNAME = {username: ['Username has already been taken']};
+const MALFORMED_EMAIL = {
+  email: [
+    'Email does not appear to be a valid e-mail address',
+    'Email does not appear to be a valid e-mail address',
+  ],
+  'authentication_options.email': [
+    'Authentication options email does not appear to be a valid e-mail address',
+  ],
+};
+const PARENT_EMAIL_INVALID = {parent_email: ['Parent email is invalid']};
+const DELETE_WRONG_PASSWORD = {
+  error: {current_password: ['Current password is invalid']},
+};
+
+function apiError(status: number, body: unknown): ApiError {
+  return new ApiError(`Request failed -> ${status}`, {
+    status,
+    statusText: '',
+    type: 'default',
+    url: '/x',
+    method: 'PATCH',
+    headers: new Headers(),
+    body,
+  });
+}
+
+describe('AccountsApiValidationError.fromApiError', () => {
+  it('routes a known field key to fieldErrors', () => {
+    const error = AccountsApiValidationError.fromApiError(
+      apiError(422, TAKEN_USERNAME),
+    );
+    expect(error.status).toBe(422);
+    expect(error.fieldErrors.username).toEqual([
+      'Username has already been taken',
+    ]);
+    expect(error.formErrors).toEqual([]);
+  });
+
+  it('routes parent_email to a field error', () => {
+    const error = AccountsApiValidationError.fromApiError(
+      apiError(422, PARENT_EMAIL_INVALID),
+    );
+    expect(error.fieldErrors.parent_email).toEqual(['Parent email is invalid']);
+  });
+
+  it('dedupes repeated messages and sends dotted/unknown keys form-level', () => {
+    const error = AccountsApiValidationError.fromApiError(
+      apiError(422, MALFORMED_EMAIL),
+    );
+    expect(error.fieldErrors.email).toEqual([
+      'Email does not appear to be a valid e-mail address',
+    ]);
+    expect(error.formErrors).toEqual([
+      'Authentication options email does not appear to be a valid e-mail address',
+    ]);
+  });
+
+  it('routes base and unknown keys to form-level errors', () => {
+    const error = AccountsApiValidationError.fromApiError(
+      apiError(422, {base: ['Something went wrong']}),
+    );
+    expect(error.fieldErrors).toEqual({});
+    expect(error.formErrors).toEqual(['Something went wrong']);
+  });
+
+  it('treats an empty 422 body as a failure with no specific messages', () => {
+    const error = AccountsApiValidationError.fromApiError(apiError(422, {}));
+    expect(error.isEmpty).toBe(true);
+  });
+
+  it('unwraps the DELETE 400 {error:{...}} envelope', () => {
+    const error = AccountsApiValidationError.fromApiError(
+      apiError(400, DELETE_WRONG_PASSWORD),
+    );
+    expect(error.status).toBe(400);
+    expect(error.fieldErrors.current_password).toEqual([
+      'Current password is invalid',
+    ]);
+  });
+});
+
+describe('asAccountsValidationError', () => {
+  it('converts a 422 ApiError', () => {
+    expect(
+      asAccountsValidationError(apiError(422, TAKEN_USERNAME)),
+    ).toBeInstanceOf(AccountsApiValidationError);
+  });
+
+  it('converts a 400 ApiError', () => {
+    expect(
+      asAccountsValidationError(apiError(400, DELETE_WRONG_PASSWORD)),
+    ).toBeInstanceOf(AccountsApiValidationError);
+  });
+
+  it('ignores non-validation failures (5xx, network) and non-ApiErrors', () => {
+    expect(
+      asAccountsValidationError(apiError(500, {message: 'boom'})),
+    ).toBeNull();
+    expect(asAccountsValidationError(new Error('network'))).toBeNull();
+  });
+});

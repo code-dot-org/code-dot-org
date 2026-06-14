@@ -9,9 +9,9 @@ import {http, HttpResponse} from 'msw';
 import {describe, expect, it} from 'vitest';
 
 import {createQueryClient, QueryClientProvider} from '@code-dot-org/core/api';
+import type {AccountSettings} from '@code-dot-org/core/api';
 import {mockServer} from '@code-dot-org/core/api/mocks/server';
 
-import type {AccountSettings} from '../../api/accounts.types';
 import AccountActions from '../AccountActions';
 
 const BASE: AccountSettings = {
@@ -31,6 +31,7 @@ const BASE: AccountSettings = {
   canDeleteOwnAccount: true,
   age: 14,
   usState: 'WA',
+  parentEmail: null,
   dependentStudentsCount: 0,
 };
 

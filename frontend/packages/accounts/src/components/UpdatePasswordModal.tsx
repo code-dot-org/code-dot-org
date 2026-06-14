@@ -6,12 +6,10 @@ import {
   DialogTitle,
   Typography,
 } from '@mui/material';
-import {useMutation} from '@tanstack/react-query';
 import {useState, type FormEvent} from 'react';
 
 import TextField from '@code-dot-org/component-library/textField';
-
-import {updatePassword} from '../api/accounts.api';
+import {DashboardApiClient, useUpdatePassword} from '@code-dot-org/core/api';
 
 import {modalErrors, type ModalErrors} from './modalErrors';
 
@@ -28,7 +26,7 @@ export default function UpdatePasswordModal({
   open: boolean;
   onClose: () => void;
 }) {
-  const mutation = useMutation({mutationFn: updatePassword});
+  const mutation = useUpdatePassword(DashboardApiClient);
   const [currentPassword, setCurrentPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');

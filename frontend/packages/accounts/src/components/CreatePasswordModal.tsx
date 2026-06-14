@@ -6,13 +6,10 @@ import {
   DialogTitle,
   Typography,
 } from '@mui/material';
-import {useMutation, useQueryClient} from '@tanstack/react-query';
 import {useState, type FormEvent} from 'react';
 
 import TextField from '@code-dot-org/component-library/textField';
-
-import {createPassword} from '../api/accounts.api';
-import {accountsKeys} from '../api/accounts.keys';
+import {DashboardApiClient, useCreatePassword} from '@code-dot-org/core/api';
 
 import {modalErrors, type ModalErrors} from './modalErrors';
 
@@ -26,8 +23,7 @@ export default function CreatePasswordModal({
   open: boolean;
   onClose: () => void;
 }) {
-  const queryClient = useQueryClient();
-  const mutation = useMutation({mutationFn: createPassword});
+  const mutation = useCreatePassword(DashboardApiClient);
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [errors, setErrors] = useState<ModalErrors>(NO_ERRORS);
@@ -47,7 +43,6 @@ export default function CreatePasswordModal({
         newPassword,
         newPasswordConfirmation: confirmPassword,
       });
-      await queryClient.invalidateQueries({queryKey: accountsKeys.settings()});
       close();
     } catch (error) {
       setErrors(modalErrors(error));

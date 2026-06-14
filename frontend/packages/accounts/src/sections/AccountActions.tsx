@@ -2,8 +2,8 @@ import {Box, Button, Typography} from '@mui/material';
 import {useState} from 'react';
 
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import type {UserType} from '@code-dot-org/core/api';
 
-import type {UserType} from '../api/accounts.types';
 import AccountTypeModal from '../components/AccountTypeModal';
 import DeleteAccountModal from '../components/DeleteAccountModal';
 import Field from '../components/Field';
