@@ -122,6 +122,16 @@ describe('AccountSettingsPage save flow', () => {
     ).not.toBeInTheDocument();
   });
 
+  it('shows a success toast after a profile save', async () => {
+    renderPage('teacher');
+    const displayName = await screen.findByLabelText(/Display name/);
+
+    fireEvent.change(displayName, {target: {value: 'Dr. Ada'}});
+    fireEvent.click(await screen.findByRole('button', {name: 'Save changes'}));
+
+    expect(await screen.findByText('Changes saved.')).toBeInTheDocument();
+  });
+
   it('does not save when submitted with no net changes', async () => {
     // Edit-then-revert leaves the save bar up but nothing dirty. Saving then
     // must skip the request: a bare {user:{}} 400s as ParameterMissing: user.
@@ -396,6 +406,14 @@ describe('AccountSettingsPage — student variant', () => {
     expect(screen.getByRole('combobox', {name: /^age$/i})).toBeInTheDocument();
     expect(screen.getByRole('combobox', {name: /state/i})).toBeInTheDocument();
     expect(screen.queryByLabelText('Last name')).not.toBeInTheDocument();
+  });
+
+  it('disables the placeholder so a set age or state cannot be cleared', async () => {
+    renderPage('student');
+    await screen.findByRole('heading', {level: 2, name: 'My Information'});
+
+    expect(screen.getByRole('option', {name: 'Select age'})).toBeDisabled();
+    expect(screen.getByRole('option', {name: 'Select a state'})).toBeDisabled();
   });
 
   it('keeps last name for a teacher and omits age/state', async () => {

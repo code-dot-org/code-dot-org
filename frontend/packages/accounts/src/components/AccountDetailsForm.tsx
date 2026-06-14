@@ -16,6 +16,7 @@ import {useFormDispatch, useFormState} from '../state/FormContext';
 import {dirtyValues} from '../state/formReducer';
 
 import SaveBar from './SaveBar';
+import {useToast} from './Toast';
 
 const GENERIC_ERROR = 'Something went wrong. Please try again.';
 
@@ -31,6 +32,7 @@ export default function AccountDetailsForm({
 }) {
   const state = useFormState();
   const dispatch = useFormDispatch();
+  const toast = useToast();
   const mutation = useUpdateProfile(DashboardApiClient);
 
   const handleSubmit = async (event: FormEvent) => {
@@ -55,6 +57,7 @@ export default function AccountDetailsForm({
     try {
       await mutation.mutateAsync(params);
       dispatch({type: 'saveSucceeded'});
+      toast('Changes saved.');
     } catch (error) {
       const validation = asAccountsValidationError(error);
       if (validation && !validation.isEmpty) {

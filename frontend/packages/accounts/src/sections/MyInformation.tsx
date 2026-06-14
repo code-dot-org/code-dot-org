@@ -10,11 +10,15 @@ import {AGE_OPTIONS, US_STATE_OPTIONS} from '../util/profileOptions';
 import Section from './Section';
 import type {SectionProps} from './types';
 
-// Empty placeholder first, so an unset age/state shows "Select …" rather than
-// silently defaulting to the first option (legacy parity).
-const AGE_ITEMS = [{value: '', text: 'Select age'}, ...AGE_OPTIONS];
+// Disabled placeholder: shows "Select …" while unset, but can't be re-selected
+// to blank a value. Age and (US-student) state are required — and a blank age
+// is a server no-op, so the SPA would otherwise show "saved" yet desync.
+const AGE_ITEMS = [
+  {value: '', text: 'Select age', disabled: true},
+  ...AGE_OPTIONS,
+];
 const US_STATE_ITEMS = [
-  {value: '', text: 'Select a state'},
+  {value: '', text: 'Select a state', disabled: true},
   ...US_STATE_OPTIONS,
 ];
 
