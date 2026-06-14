@@ -9,6 +9,7 @@ import {
 import {
   deleteAccount,
   getAccountSettings,
+  signOutOtherSessions,
   updateEmail,
   updatePassword,
   updateProfile,
@@ -191,6 +192,23 @@ describe('422 → AccountsApiValidationError', () => {
 
     expect(error).toBeInstanceOf(AccountsApiValidationError);
     expect(error.isEmpty).toBe(true);
+  });
+});
+
+describe('signOutOtherSessions', () => {
+  it('issues DELETE /expire_other and resolves through the redirect', async () => {
+    // expire_other redirects to the settings page; fetch follows it to a 200
+    // HTML body, which the transport reads as text (no JSON parse).
+    registerMockFixture({
+      method: 'delete',
+      path: '*/expire_other',
+      respond: () =>
+        new Response('<html></html>', {
+          status: 200,
+          headers: {'content-type': 'text/html'},
+        }),
+    });
+    await expect(signOutOtherSessions()).resolves.toBeUndefined();
   });
 });
 

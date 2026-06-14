@@ -130,6 +130,13 @@ export function updateUserType(params: UpdateUserTypeParams): Promise<void> {
   });
 }
 
+// Signs the user out of every OTHER browser/device; this session is re-issued
+// server-side, so the request resolves (following the redirect) and no client
+// re-auth is needed.
+export function signOutOtherSessions(): Promise<void> {
+  return mutate({method: 'DELETE', url: '/expire_other', headers: JSON_ACCEPT});
+}
+
 export function deleteAccount(params: DeleteAccountParams): Promise<void> {
   return mutate({
     method: 'DELETE',

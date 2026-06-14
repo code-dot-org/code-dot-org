@@ -113,4 +113,16 @@ describe('AccountSettingsPage — accessibility', () => {
     await screen.findByRole('alertdialog', {name: /delete/i});
     expect(await auditBody()).toHaveNoViolations();
   });
+
+  it('has no axe violations with the sign-out-sessions alertdialog open', async () => {
+    renderPage('teacher');
+    await screen.findByRole('tablist');
+    fireEvent.click(
+      screen.getByRole('button', {name: /sign out all other sessions/i}),
+    );
+    await screen.findByRole('alertdialog', {
+      name: /sign out all other sessions/i,
+    });
+    expect(await auditBody()).toHaveNoViolations();
+  });
 });

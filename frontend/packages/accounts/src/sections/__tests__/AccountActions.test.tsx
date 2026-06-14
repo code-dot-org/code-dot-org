@@ -1,7 +1,15 @@
-import {render, screen} from '@testing-library/react';
+import {
+  fireEvent,
+  render,
+  screen,
+  waitFor,
+  within,
+} from '@testing-library/react';
+import {http, HttpResponse} from 'msw';
 import {describe, expect, it} from 'vitest';
 
 import {createQueryClient, QueryClientProvider} from '@code-dot-org/core/api';
+import {mockServer} from '@code-dot-org/core/api/mocks/server';
 
 import type {AccountSettings} from '../../api/accounts.types';
 import AccountActions from '../AccountActions';
@@ -65,5 +73,52 @@ describe('AccountActions delete affordance', () => {
     expect(deleteHeading()).toBeInTheDocument();
     expect(deleteButton()).toBeNull();
     expect(cannotDeleteNote()).toBeInTheDocument();
+  });
+});
+
+const sessionsButton = () =>
+  screen.getByRole('button', {name: 'Sign Out All Other Sessions'});
+
+describe('AccountActions manage other sessions', () => {
+  it('offers the manage-other-sessions block to any user', () => {
+    renderSection({canDeleteOwnAccount: false});
+    expect(
+      screen.getByRole('heading', {level: 3, name: 'Manage Other Sessions'}),
+    ).toBeInTheDocument();
+    expect(sessionsButton()).toBeInTheDocument();
+  });
+
+  it('confirms in an alertdialog before signing out', async () => {
+    renderSection({});
+    fireEvent.click(sessionsButton());
+    expect(
+      await screen.findByRole('alertdialog', {
+        name: /sign out all other sessions/i,
+      }),
+    ).toBeInTheDocument();
+  });
+
+  it('signs out and announces success on confirm', async () => {
+    mockServer.use(
+      http.delete(
+        '*/expire_other',
+        () =>
+          new HttpResponse('<html></html>', {
+            status: 200,
+            headers: {'content-type': 'text/html'},
+          }),
+      ),
+    );
+    renderSection({});
+    fireEvent.click(sessionsButton());
+    const dialog = await screen.findByRole('alertdialog');
+    fireEvent.click(
+      within(dialog).getByRole('button', {name: 'Sign out all other sessions'}),
+    );
+
+    await waitFor(() =>
+      expect(screen.queryByRole('alertdialog')).not.toBeInTheDocument(),
+    );
+    expect(screen.getByRole('status')).toHaveTextContent(/signed out/i);
   });
 });

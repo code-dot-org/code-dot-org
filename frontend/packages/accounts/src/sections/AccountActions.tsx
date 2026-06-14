@@ -7,6 +7,7 @@ import type {UserType} from '../api/accounts.types';
 import AccountTypeModal from '../components/AccountTypeModal';
 import DeleteAccountModal from '../components/DeleteAccountModal';
 import Field from '../components/Field';
+import SignOutOtherSessionsModal from '../components/SignOutOtherSessionsModal';
 
 import Section from './Section';
 import type {SectionProps} from './types';
@@ -27,6 +28,8 @@ export default function AccountActions({settings}: SectionProps) {
   // confirmation modal, so dismissing reverts it.
   const [prospectiveType, setProspectiveType] = useState<UserType | null>(null);
   const [deleteOpen, setDeleteOpen] = useState(false);
+  const [sessionsOpen, setSessionsOpen] = useState(false);
+  const [signedOutOthers, setSignedOutOthers] = useState(false);
   const isTeacher = settings.userType === 'teacher';
 
   const onTypeSelect = (value: string) => {
@@ -59,6 +62,33 @@ export default function AccountActions({settings}: SectionProps) {
           />
         </Box>
       )}
+
+      <Box sx={{mb: 3}}>
+        <Typography
+          variant="label1"
+          component="h3"
+          sx={{color: 'var(--text-neutral-primary)', mb: 1}}
+        >
+          Manage Other Sessions
+        </Typography>
+        <Typography variant="body2" sx={{mb: 2}}>
+          Click the button below to sign out of any other browsers and devices
+          where you might be signed in.
+        </Typography>
+        <Button onClick={() => setSessionsOpen(true)} sx={{px: 0}}>
+          Sign Out All Other Sessions
+        </Button>
+        {signedOutOthers && (
+          <Typography role="status" variant="body2" sx={{mt: 1}}>
+            You’ve been signed out of all other sessions.
+          </Typography>
+        )}
+        <SignOutOtherSessionsModal
+          open={sessionsOpen}
+          onClose={() => setSessionsOpen(false)}
+          onSignedOut={() => setSignedOutOthers(true)}
+        />
+      </Box>
 
       <Box>
         <Typography
