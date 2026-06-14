@@ -1,27 +1,15 @@
 import camelcaseKeys from 'camelcase-keys';
 import {z} from 'zod';
 
-import {
-  CurrentUserResponseSignedInSchema,
-  CurrentUserResponseSignedOutSchema,
-} from './currentUserTypes';
+import {CurrentUserResponseSchema} from './currentUserTypes';
 
-// Derived (not re-declared) from the canonical currentUserTypes schemas; a
-// prior hand-copied duplicate silently diverged from the endpoint.
-export const SignedInCurrentUserSchema =
-  CurrentUserResponseSignedInSchema.transform(data =>
-    camelcaseKeys(data, {deep: true}),
-  );
-
-export const SignedOutCurrentUserSchema =
-  CurrentUserResponseSignedOutSchema.transform(data =>
-    camelcaseKeys(data, {deep: true}),
-  );
-
-export const CurrentUserSchema = z.union([
-  SignedInCurrentUserSchema,
-  SignedOutCurrentUserSchema,
-]);
+// Derived (not re-declared) from the canonical currentUserTypes schema; a prior
+// hand-copied duplicate silently diverged from the endpoint. Discriminate on
+// is_signed_in (a targeted error on a bad field, not an opaque union failure)
+// before camelCasing.
+export const CurrentUserSchema = CurrentUserResponseSchema.transform(data =>
+  camelcaseKeys(data, {deep: true}),
+);
 
 export const SignedInResponseSchema = z.object({
   is_signed_in: z.boolean(),

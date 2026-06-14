@@ -16,11 +16,13 @@ import {
   DashboardApiClient,
   QueryClientProvider,
   useCurrentUser,
+  usersKeys,
 } from '@code-dot-org/core/api';
 import {mockServer} from '@code-dot-org/core/api/mocks/server';
 
 import {fetchAuthOutcome} from '../fetchAuthOutcome';
 import {primeCurrentUser} from '../primeCurrentUser';
+import type {AuthOutcome} from '../types';
 
 const SIGNED_IN_RESPONSE = {
   is_signed_in: true as const,
@@ -99,6 +101,20 @@ describe('shared current-user cache', () => {
       userType: 'student',
       displayName: 'Coder',
     });
+  });
+
+  it('does not throw or prime when the auth shape is unexpected (defensive)', () => {
+    const queryClient = createQueryClient();
+    // A signed-in outcome missing required fields (a Rails drift) must never
+    // crash the root beforeLoad.
+    const malformed = {
+      status: 'signed-in',
+      is_signed_in: true,
+      id: 1,
+    } as unknown as AuthOutcome;
+
+    expect(() => primeCurrentUser(queryClient, malformed)).not.toThrow();
+    expect(queryClient.getQueryData(usersKeys.currentUser())).toBeUndefined();
   });
 
   it('control: without priming the hook fetches its own current user', async () => {

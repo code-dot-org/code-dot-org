@@ -17,8 +17,10 @@ export function primeCurrentUser(
   auth: AuthOutcome,
 ): void {
   if (auth.status !== 'signed-in') return;
-  queryClient.setQueryData(
-    usersKeys.currentUser(),
-    CurrentUserSchema.parse(auth),
-  );
+  // Defensive: getCurrent already validated this, but never throw from the root
+  // beforeLoad. On an unexpected shape, skip priming and let useCurrentUser
+  // refetch (where a parse error surfaces through react-query, not a crash).
+  const parsed = CurrentUserSchema.safeParse(auth);
+  if (!parsed.success) return;
+  queryClient.setQueryData(usersKeys.currentUser(), parsed.data);
 }

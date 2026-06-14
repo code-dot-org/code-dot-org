@@ -1,5 +1,8 @@
 import type {Transport} from '../../transports/types';
-import type {CurrentUserResponse} from './currentUserTypes';
+import {
+  CurrentUserResponseSchema,
+  type CurrentUserResponse,
+} from './currentUserTypes';
 import {
   ContactDetailsSchema,
   CurrentPermissionsSchema,
@@ -14,12 +17,19 @@ import {
 
 export function createUsersApi(transport: Transport) {
   return {
-    /** GET /api/v1/users/current — raw snake_case response, used by auth bootstrap. */
-    getCurrent(): Promise<CurrentUserResponse> {
-      return transport.request<CurrentUserResponse>({
+    /**
+     * GET /api/v1/users/current — validated snake_case response, used by the
+     * auth bootstrap. Parsing here (not just casting) means a Rails response
+     * that drifts from our schema surfaces as a ZodError the bootstrap catches
+     * and degrades to an error outcome, rather than crashing later at the point
+     * of use.
+     */
+    async getCurrent(): Promise<CurrentUserResponse> {
+      const raw = await transport.request<unknown>({
         method: 'GET',
         url: '/api/v1/users/current',
       });
+      return CurrentUserResponseSchema.parse(raw);
     },
 
     /**
