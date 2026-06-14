@@ -63,15 +63,16 @@ import {registerAccountsFixtures} from '@code-dot-org/accounts/mocks';
 
 Fixtures register through core's `registerMockFixture` registry (one scenario
 per persona, with write-through state for the mutation flows). The standalone
-host and Studio's MSW boot both consume them; `resetAccountsFixtures()` clears
-them between tests.
+host and this package's own tests consume them; `resetAccountsFixtures()` clears
+them between tests. Studio does not consume them — see below.
 
 ## Studio integration
 
-Studio depends on this package (`workspace:*`), declares the route
+Studio depends on this package (`workspace:*`) and declares the route
 `apps/studio/src/routes/users/edit.tsx` (auth gate + `React.lazy` + `Suspense` +
-`errorComponent`), and registers the fixtures in its MSW boot. The lab registry
-is untouched. Header, footer, and the auth/sign-in redirect are the host's job.
+`errorComponent`). Header, footer, and the auth/sign-in redirect are the host's
+job. Studio does not mock this package's API: the route runs against the real
+backend, and these fixtures are only for the standalone host and tests.
 
 ## Testing
 
