@@ -58,7 +58,7 @@ export default function UpdatePasswordModal({
       fullWidth
       maxWidth="xs"
       aria-labelledby="update-password-title"
-      TransitionProps={{onEntered: focusFirstControl}}
+      slotProps={{transition: {onEntered: focusFirstControl}}}
     >
       <form onSubmit={handleSubmit} noValidate>
         <DialogTitle id="update-password-title">Update password</DialogTitle>

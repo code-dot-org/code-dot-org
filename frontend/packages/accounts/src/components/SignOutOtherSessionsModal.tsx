@@ -51,8 +51,10 @@ export default function SignOutOtherSessionsModal({
       maxWidth="xs"
       aria-labelledby="sign-out-sessions-title"
       aria-describedby="sign-out-sessions-desc"
-      slotProps={{paper: {role: 'alertdialog'}}}
-      TransitionProps={{onEntered: focusFirstControl}}
+      slotProps={{
+        paper: {role: 'alertdialog'},
+        transition: {onEntered: focusFirstControl},
+      }}
     >
       <form onSubmit={handleSubmit} noValidate>
         <DialogTitle id="sign-out-sessions-title">

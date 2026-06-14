@@ -74,8 +74,10 @@ export default function AccountTypeModal({
       maxWidth="xs"
       aria-labelledby="account-type-title"
       aria-describedby="account-type-desc"
-      slotProps={{paper: {role: 'alertdialog'}}}
-      TransitionProps={{onEntered: focusFirstControl}}
+      slotProps={{
+        paper: {role: 'alertdialog'},
+        transition: {onEntered: focusFirstControl},
+      }}
     >
       <form onSubmit={handleSubmit} noValidate>
         <DialogTitle id="account-type-title">Change account type?</DialogTitle>

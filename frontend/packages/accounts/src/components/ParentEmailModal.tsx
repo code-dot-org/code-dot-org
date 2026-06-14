@@ -72,7 +72,7 @@ export default function ParentEmailModal({
       maxWidth="xs"
       aria-labelledby="parent-email-title"
       aria-describedby="parent-email-desc"
-      TransitionProps={{onEntered: focusFirstControl}}
+      slotProps={{transition: {onEntered: focusFirstControl}}}
     >
       <form onSubmit={handleSubmit} noValidate>
         <DialogTitle id="parent-email-title">

@@ -59,7 +59,7 @@ export default function UpdateEmailModal({
       fullWidth
       maxWidth="xs"
       aria-labelledby="update-email-title"
-      TransitionProps={{onEntered: focusFirstControl}}
+      slotProps={{transition: {onEntered: focusFirstControl}}}
     >
       <form onSubmit={handleSubmit} noValidate>
         <DialogTitle id="update-email-title">Update email</DialogTitle>

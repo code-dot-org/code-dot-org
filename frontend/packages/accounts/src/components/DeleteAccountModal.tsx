@@ -67,8 +67,10 @@ export default function DeleteAccountModal({
       maxWidth="xs"
       aria-labelledby="delete-account-title"
       aria-describedby="delete-account-desc"
-      slotProps={{paper: {role: 'alertdialog'}}}
-      TransitionProps={{onEntered: focusFirstControl}}
+      slotProps={{
+        paper: {role: 'alertdialog'},
+        transition: {onEntered: focusFirstControl},
+      }}
     >
       <form onSubmit={handleSubmit} noValidate>
         <DialogTitle id="delete-account-title">Delete my account</DialogTitle>

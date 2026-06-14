@@ -52,7 +52,7 @@ export default function CreatePasswordModal({
       fullWidth
       maxWidth="xs"
       aria-labelledby="create-password-title"
-      TransitionProps={{onEntered: focusFirstControl}}
+      slotProps={{transition: {onEntered: focusFirstControl}}}
     >
       <form onSubmit={handleSubmit} noValidate>
         <DialogTitle id="create-password-title">Create password</DialogTitle>
