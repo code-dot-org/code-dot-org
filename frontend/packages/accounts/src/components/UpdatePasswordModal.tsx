@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/no-autofocus -- this modal moves initial focus to a control inside the dialog on open (WAI-ARIA dialog pattern); MUI's default focuses an unannounced wrapper outside role="dialog" */
 import {
   Button,
   Dialog,
@@ -11,7 +10,7 @@ import {useState} from 'react';
 import TextField from '@code-dot-org/component-library/textField';
 import {DashboardApiClient, useUpdatePassword} from '@code-dot-org/core/api';
 
-import {formDialogContentSx} from './formDialog';
+import {focusFirstControl, formDialogContentSx} from './formDialog';
 import FormError from './FormError';
 import {useToast} from './Toast';
 import {useModalForm} from './useModalForm';
@@ -59,6 +58,7 @@ export default function UpdatePasswordModal({
       fullWidth
       maxWidth="xs"
       aria-labelledby="update-password-title"
+      TransitionProps={{onEntered: focusFirstControl}}
     >
       <form onSubmit={handleSubmit} noValidate>
         <DialogTitle id="update-password-title">Update password</DialogTitle>
@@ -74,7 +74,6 @@ export default function UpdatePasswordModal({
             aria-invalid={
               errors.fieldErrors.current_password ? true : undefined
             }
-            autoFocus
           />
           <TextField
             label="New password"

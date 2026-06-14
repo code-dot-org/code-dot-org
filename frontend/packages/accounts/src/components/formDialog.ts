@@ -11,3 +11,17 @@ export const formDialogContentSx: SxProps<Theme> = {
   '&&& > *': {width: '100%', minWidth: 0},
   '&&& input:not([type="radio"])': {width: '100%'},
 };
+
+const FOCUSABLE =
+  'input:not([disabled]), button:not([disabled]), select:not([disabled]), textarea:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])';
+
+// MUI's FocusTrap parks initial focus on the dialog's role="presentation"
+// container — outside role="dialog", so screen readers don't announce it. Once
+// the open transition settles, move focus to the first control inside the paper
+// (in DOM order: the first field, else the checkbox, else the safe Cancel —
+// never a destructive action, which always follows Cancel). autoFocus on the
+// child loses the race to the trap; this wins. Wire as the Dialog's
+// TransitionProps={{onEntered: focusFirstControl}}.
+export function focusFirstControl(paper: HTMLElement): void {
+  paper.querySelector<HTMLElement>(FOCUSABLE)?.focus();
+}

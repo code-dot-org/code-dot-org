@@ -5,18 +5,35 @@ async function gotoLoaded(page: Page, scenario = 'teacher') {
   await page.getByRole('heading', {level: 1, name: 'My Account'}).waitFor();
 }
 
-// MUI puts initial focus on the dialog's presentation container, an ancestor
-// of the role="dialog" paper, so accept focus on the paper, inside it, or on it.
-function focusIsInModal(page: Page) {
+const FOCUSABLE_CONTROL =
+  'input, button, select, textarea, a[href], [tabindex]:not([tabindex="-1"])';
+
+// Initial focus must land on an interactive control INSIDE role="dialog" — not
+// MUI's presentation-container ancestor, which announces nothing. Rejecting the
+// container is the point: accepting it would pass on the unannounced-modal bug.
+// Focus moves in the dialog's onEntered (after the open transition), so callers
+// must expect.poll this rather than read it the instant the dialog appears.
+function initialFocusInsideModal(page: Page) {
+  return page.evaluate(sel => {
+    const dialog = document.querySelector(
+      '[role="dialog"],[role="alertdialog"]',
+    );
+    const active = document.activeElement;
+    if (!dialog || !active || active === dialog || !dialog.contains(active)) {
+      return false;
+    }
+    return active.matches(sel);
+  }, FOCUSABLE_CONTROL);
+}
+
+// Focus stayed trapped within the dialog (used after tabbing).
+function focusWithinModal(page: Page) {
   return page.evaluate(() => {
     const dialog = document.querySelector(
       '[role="dialog"],[role="alertdialog"]',
     );
     const active = document.activeElement;
-    if (!dialog || !active) return false;
-    return (
-      active === dialog || dialog.contains(active) || active.contains(dialog)
-    );
+    return !!dialog && !!active && dialog.contains(active);
   });
 }
 
@@ -80,9 +97,9 @@ test('update-email modal traps focus, closes on Escape, and returns focus', asyn
   const dialog = page.getByRole('dialog', {name: /update email/i});
   await expect(dialog).toBeVisible();
 
-  expect(await focusIsInModal(page)).toBe(true);
+  await expect.poll(() => initialFocusInsideModal(page)).toBe(true);
   for (let i = 0; i < 6; i++) await page.keyboard.press('Tab');
-  expect(await focusIsInModal(page)).toBe(true);
+  expect(await focusWithinModal(page)).toBe(true);
 
   await page.keyboard.press('Escape');
   await expect(dialog).toBeHidden();
@@ -100,6 +117,8 @@ test('update-password modal closes on Escape and returns focus', async ({
     page.getByRole('dialog', {name: /update password/i}),
   ).toBeVisible();
 
+  await expect.poll(() => initialFocusInsideModal(page)).toBe(true);
+
   await page.keyboard.press('Escape');
   await expect(page.getByRole('dialog')).toBeHidden();
   await expect(trigger).toBeFocused();
@@ -116,6 +135,8 @@ test('account-type change opens an alertdialog and reverts the select on Cancel'
   const dialog = page.getByRole('alertdialog', {name: /change account type/i});
   await expect(dialog).toBeVisible();
 
+  await expect.poll(() => initialFocusInsideModal(page)).toBe(true);
+
   await dialog.getByRole('button', {name: /cancel/i}).click();
   await expect(dialog).toBeHidden();
   await expect(select).toHaveValue('teacher');
@@ -129,6 +150,28 @@ test('delete-account alertdialog opens and closes on Escape with focus returned'
   const trigger = page.getByRole('button', {name: /delete my account/i});
   await trigger.click();
   await expect(page.getByRole('alertdialog', {name: /delete/i})).toBeVisible();
+
+  await expect.poll(() => initialFocusInsideModal(page)).toBe(true);
+
+  await page.keyboard.press('Escape');
+  await expect(page.getByRole('alertdialog')).toBeHidden();
+  await expect(trigger).toBeFocused();
+});
+
+test('sign-out alertdialog moves initial focus inside and returns it on Escape', async ({
+  page,
+}) => {
+  await gotoLoaded(page);
+
+  const trigger = page.getByRole('button', {
+    name: /sign out all other sessions/i,
+  });
+  await trigger.click();
+  await expect(
+    page.getByRole('alertdialog', {name: /sign out all other sessions/i}),
+  ).toBeVisible();
+
+  await expect.poll(() => initialFocusInsideModal(page)).toBe(true);
 
   await page.keyboard.press('Escape');
   await expect(page.getByRole('alertdialog')).toBeHidden();

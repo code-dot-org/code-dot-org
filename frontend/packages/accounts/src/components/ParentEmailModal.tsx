@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/no-autofocus -- this modal moves initial focus to a control inside the dialog on open (WAI-ARIA dialog pattern); MUI's default focuses an unannounced wrapper outside role="dialog" */
 import {
   Box,
   Button,
@@ -18,7 +17,7 @@ import {
   type ParentEmailOptIn,
 } from '@code-dot-org/core/api';
 
-import {formDialogContentSx} from './formDialog';
+import {focusFirstControl, formDialogContentSx} from './formDialog';
 import FormError from './FormError';
 import {useToast} from './Toast';
 import {useModalForm} from './useModalForm';
@@ -73,6 +72,7 @@ export default function ParentEmailModal({
       maxWidth="xs"
       aria-labelledby="parent-email-title"
       aria-describedby="parent-email-desc"
+      TransitionProps={{onEntered: focusFirstControl}}
     >
       <form onSubmit={handleSubmit} noValidate>
         <DialogTitle id="parent-email-title">
@@ -94,7 +94,6 @@ export default function ParentEmailModal({
             aria-invalid={errors.fieldErrors.parent_email ? true : undefined}
             autoComplete="off"
             data-1p-ignore
-            autoFocus
           />
           <TextField
             label="Confirm parent/guardian email address"

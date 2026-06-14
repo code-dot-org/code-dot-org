@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/no-autofocus -- this modal moves initial focus to a control inside the dialog on open (WAI-ARIA dialog pattern); MUI's default focuses an unannounced wrapper outside role="dialog" */
 import {
   Button,
   Dialog,
@@ -18,7 +17,7 @@ import {
   type AccountSettings,
 } from '@code-dot-org/core/api';
 
-import {formDialogContentSx} from './formDialog';
+import {focusFirstControl, formDialogContentSx} from './formDialog';
 import FormError from './FormError';
 import {useModalForm} from './useModalForm';
 
@@ -69,6 +68,7 @@ export default function DeleteAccountModal({
       aria-labelledby="delete-account-title"
       aria-describedby="delete-account-desc"
       slotProps={{paper: {role: 'alertdialog'}}}
+      TransitionProps={{onEntered: focusFirstControl}}
     >
       <form onSubmit={handleSubmit} noValidate>
         <DialogTitle id="delete-account-title">Delete my account</DialogTitle>
@@ -93,17 +93,13 @@ export default function DeleteAccountModal({
               aria-invalid={
                 errors.fieldErrors.current_password ? true : undefined
               }
-              autoFocus
             />
           )}
-          {/* Initial focus lands inside the dialog (so it's announced) on a safe
-              control — the password or this checkbox, never the delete button. */}
           <FormControlLabel
             control={
               <Checkbox
                 checked={acknowledged}
                 onChange={event => setAcknowledged(event.target.checked)}
-                autoFocus={!requiresPassword}
               />
             }
             label="I understand this is permanent."

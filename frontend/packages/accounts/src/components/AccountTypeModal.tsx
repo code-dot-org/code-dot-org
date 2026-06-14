@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/no-autofocus -- this modal moves initial focus to a control inside the dialog on open (WAI-ARIA dialog pattern); MUI's default focuses an unannounced wrapper outside role="dialog" */
 import {
   Button,
   Dialog,
@@ -18,7 +17,7 @@ import {
 
 import {hashEmail} from '../util/hashEmail';
 
-import {formDialogContentSx} from './formDialog';
+import {focusFirstControl, formDialogContentSx} from './formDialog';
 import FormError from './FormError';
 import {useToast} from './Toast';
 import {useModalForm} from './useModalForm';
@@ -76,6 +75,7 @@ export default function AccountTypeModal({
       aria-labelledby="account-type-title"
       aria-describedby="account-type-desc"
       slotProps={{paper: {role: 'alertdialog'}}}
+      TransitionProps={{onEntered: focusFirstControl}}
     >
       <form onSubmit={handleSubmit} noValidate>
         <DialogTitle id="account-type-title">Change account type?</DialogTitle>
@@ -98,16 +98,13 @@ export default function AccountTypeModal({
               errorMessage={errors.fieldErrors.email?.[0]}
               aria-invalid={errors.fieldErrors.email ? true : undefined}
               helperMessage="Educator accounts need an email address."
-              autoFocus
             />
           )}
         </DialogContent>
         <DialogActions>
-          {/* Initial focus lands inside the dialog (so it's announced): the email
-            field when upgrading, otherwise the safe Cancel — never Confirm. */}
-          <Button onClick={close} autoFocus={!isUpgrade}>
-            Cancel
-          </Button>
+          {/* focusFirstControl lands initial focus on the email field when
+              upgrading, otherwise the safe Cancel — never Confirm. */}
+          <Button onClick={close}>Cancel</Button>
           <Button
             type="submit"
             variant="contained"

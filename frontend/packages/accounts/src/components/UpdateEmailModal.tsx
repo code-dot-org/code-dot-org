@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/no-autofocus -- this modal moves initial focus to a control inside the dialog on open (WAI-ARIA dialog pattern); MUI's default focuses an unannounced wrapper outside role="dialog" */
 import {
   Button,
   Dialog,
@@ -13,7 +12,7 @@ import {DashboardApiClient, useUpdateEmail} from '@code-dot-org/core/api';
 
 import {hashEmail} from '../util/hashEmail';
 
-import {formDialogContentSx} from './formDialog';
+import {focusFirstControl, formDialogContentSx} from './formDialog';
 import FormError from './FormError';
 import {useToast} from './Toast';
 import {useModalForm} from './useModalForm';
@@ -60,6 +59,7 @@ export default function UpdateEmailModal({
       fullWidth
       maxWidth="xs"
       aria-labelledby="update-email-title"
+      TransitionProps={{onEntered: focusFirstControl}}
     >
       <form onSubmit={handleSubmit} noValidate>
         <DialogTitle id="update-email-title">Update email</DialogTitle>
@@ -73,7 +73,6 @@ export default function UpdateEmailModal({
             onChange={event => setEmail(event.target.value)}
             errorMessage={errors.fieldErrors.email?.[0]}
             aria-invalid={errors.fieldErrors.email ? true : undefined}
-            autoFocus
           />
           <TextField
             label="Current password"

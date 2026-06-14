@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/no-autofocus -- this modal moves initial focus to a control inside the dialog on open (WAI-ARIA dialog pattern); MUI's default focuses an unannounced wrapper outside role="dialog" */
 import {
   Button,
   Dialog,
@@ -13,7 +12,7 @@ import {
   useSignOutOtherSessions,
 } from '@code-dot-org/core/api';
 
-import {formDialogContentSx} from './formDialog';
+import {focusFirstControl, formDialogContentSx} from './formDialog';
 import FormError from './FormError';
 import {useToast} from './Toast';
 import {useModalForm} from './useModalForm';
@@ -53,6 +52,7 @@ export default function SignOutOtherSessionsModal({
       aria-labelledby="sign-out-sessions-title"
       aria-describedby="sign-out-sessions-desc"
       slotProps={{paper: {role: 'alertdialog'}}}
+      TransitionProps={{onEntered: focusFirstControl}}
     >
       <form onSubmit={handleSubmit} noValidate>
         <DialogTitle id="sign-out-sessions-title">
@@ -66,11 +66,7 @@ export default function SignOutOtherSessionsModal({
           <FormError message={errors.formError} />
         </DialogContent>
         <DialogActions>
-          {/* autoFocus lands initial focus inside the dialog (so it's announced)
-              on the safe Cancel, never the destructive action. */}
-          <Button onClick={close} autoFocus>
-            Cancel
-          </Button>
+          <Button onClick={close}>Cancel</Button>
           <Button
             type="submit"
             variant="contained"
