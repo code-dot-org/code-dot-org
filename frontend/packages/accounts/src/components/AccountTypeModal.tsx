@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-autofocus -- this modal moves initial focus to a control inside the dialog on open (WAI-ARIA dialog pattern); MUI's default focuses an unannounced wrapper outside role="dialog" */
 import {
   Button,
   Dialog,
@@ -107,11 +108,16 @@ export default function AccountTypeModal({
             errorMessage={errors.fieldErrors.email?.[0]}
             aria-invalid={errors.fieldErrors.email ? true : undefined}
             helperMessage="Educator accounts need an email address."
+            autoFocus
           />
         )}
       </DialogContent>
       <DialogActions>
-        <Button onClick={close}>Cancel</Button>
+        {/* Initial focus lands inside the dialog (so it's announced): the email
+            field when upgrading, otherwise the safe Cancel — never Confirm. */}
+        <Button onClick={close} autoFocus={!isUpgrade}>
+          Cancel
+        </Button>
         <Button
           onClick={confirm}
           variant="contained"

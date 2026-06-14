@@ -100,6 +100,33 @@ describe('AccountSettingsPage', () => {
       within(alert).getByRole('button', {name: 'Try again'}),
     ).toBeInTheDocument();
   });
+
+  it('moves focus to the heading after recovering from a load error', async () => {
+    registerAccountsFixtures();
+    setActiveScenario({labKey: ACCOUNTS_LAB_KEY, tag: 'teacher'});
+    // Fail once; the retry falls through to the scenario's success handler.
+    mockServer.use(
+      http.get(
+        '*/api/v1/account/settings',
+        () => new HttpResponse(null, {status: 500}),
+        {once: true},
+      ),
+    );
+    const client = createQueryClient({queries: {retry: false}});
+    render(
+      <QueryClientProvider client={client}>
+        <AccountSettingsPage tab="account-details" onTabChange={() => {}} />
+      </QueryClientProvider>,
+    );
+
+    fireEvent.click(await screen.findByRole('button', {name: 'Try again'}));
+
+    const heading = await screen.findByRole('heading', {
+      level: 1,
+      name: 'My Account',
+    });
+    await waitFor(() => expect(heading).toHaveFocus());
+  });
 });
 
 describe('AccountSettingsPage save flow', () => {
@@ -132,7 +159,11 @@ describe('AccountSettingsPage save flow', () => {
     fireEvent.change(displayName, {target: {value: 'Dr. Ada'}});
     fireEvent.click(await screen.findByRole('button', {name: 'Save changes'}));
 
-    expect(await screen.findByText('Changes saved.')).toBeInTheDocument();
+    // The confirmation lands in the persistent polite live region (it also
+    // shows in the visible toast, hence the role-scoped assertion).
+    await waitFor(() =>
+      expect(screen.getByRole('status')).toHaveTextContent('Changes saved.'),
+    );
   });
 
   it('does not save when submitted with no net changes', async () => {
@@ -183,6 +214,15 @@ describe('AccountSettingsPage save flow', () => {
         'true',
       ),
     );
+
+    // The save-status bar is one polite live region with no nested live region
+    // (an assertive role="alert" inside aria-live="polite" has contradictory
+    // politeness across screen readers).
+    const saveRegion = screen.getByRole('region', {name: 'Save status'});
+    expect(saveRegion).toHaveAttribute('aria-live', 'polite');
+    expect(
+      saveRegion.querySelector('[role="alert"], [role="status"], [aria-live]'),
+    ).toBeNull();
   });
 });
 
@@ -209,7 +249,9 @@ describe('AccountSettingsPage — Login Information', () => {
     expect(
       await screen.findByDisplayValue('ada@newschool.org'),
     ).toBeInTheDocument();
-    expect(await screen.findByText('Email updated.')).toBeInTheDocument();
+    await waitFor(() =>
+      expect(screen.getByRole('status')).toHaveTextContent('Email updated.'),
+    );
   });
 
   it('keeps the update-password modal open with the server error on a wrong current password', async () => {
@@ -437,6 +479,27 @@ describe('AccountSettingsPage — student variant', () => {
     ).toBeInTheDocument();
   });
 
+  it('moves initial focus inside the dialog so it is announced on open', async () => {
+    // MUI focuses a wrapper outside role="dialog" by default (silent for SRs);
+    // autoFocus lands focus on a control inside the dialog instead.
+    renderPage('student');
+    await screen.findByRole('heading', {
+      level: 2,
+      name: 'For Parents and Guardians',
+    });
+    fireEvent.click(
+      screen.getByRole('button', {name: 'Update parent/guardian email'}),
+    );
+    const dialog = await screen.findByRole('dialog', {
+      name: /update parent.guardian email/i,
+    });
+    await waitFor(() =>
+      expect(dialog).toContainElement(
+        document.activeElement as HTMLElement | null,
+      ),
+    );
+  });
+
   it('offers selectable opt-in radios in the parent/guardian modal', async () => {
     renderPage('student');
     await screen.findByRole('heading', {
@@ -444,10 +507,17 @@ describe('AccountSettingsPage — student variant', () => {
       name: 'For Parents and Guardians',
     });
 
-    fireEvent.click(screen.getByRole('button', {name: /^Update$/}));
+    fireEvent.click(
+      screen.getByRole('button', {name: 'Update parent/guardian email'}),
+    );
     const dialog = await screen.findByRole('dialog', {
       name: /update parent.guardian email/i,
     });
+
+    // The group is named by the consent question, not just the qualifier.
+    expect(within(dialog).getByRole('radiogroup')).toHaveAccessibleName(
+      /Can we email you/,
+    );
 
     const yes = within(dialog).getByRole('radio', {name: 'Yes'});
     const no = within(dialog).getByRole('radio', {name: 'No'});

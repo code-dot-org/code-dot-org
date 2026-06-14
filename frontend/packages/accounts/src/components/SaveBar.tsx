@@ -3,8 +3,9 @@ import {Box, Button, Typography} from '@mui/material';
 import {useFormState} from '../state/FormContext';
 
 /**
- * Sticky save bar. The aria-live region is always present (content toggles on
- * dirty state, never injected on demand) and sits last in the form's DOM order.
+ * Sticky save bar. The whole bar is one polite live region, always present
+ * (content toggles on dirty state, never injected on demand), so dirty/saving/
+ * error changes are announced without nesting a second live region inside it.
  * Save is a submit button, disabled while saving as a double-submit guard. A
  * successful save clears the bar entirely — the success toast confirms it.
  */
@@ -37,7 +38,9 @@ export default function SaveBar() {
             You’ve made some changes.
           </Typography>
           {save.status === 'error' && (
-            <Box role="alert" sx={{flex: 1}}>
+            // No role here: the bar is already a polite live region, and an
+            // assertive role="alert" nested in it has contradictory politeness.
+            <Box sx={{flex: 1}}>
               {save.formErrors.map(message => (
                 <Typography
                   key={message}

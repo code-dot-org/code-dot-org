@@ -47,7 +47,10 @@ test('form fields are reachable by Tab and Enter submits the save bar', async ({
   await expect(save).toBeVisible();
 
   await displayName.press('Enter');
-  await expect(page.getByText('Your changes have been saved!')).toBeVisible();
+  // Success now confirms via the toast (a polite live region) and the save bar
+  // clears, rather than a lingering "saved" message in the bar.
+  await expect(page.getByRole('status')).toHaveText('Changes saved.');
+  await expect(save).toBeHidden();
 });
 
 test('Save button submits on Enter when focused', async ({page}) => {
@@ -58,7 +61,10 @@ test('Save button submits on Enter when focused', async ({page}) => {
   await save.focus();
   await expect(save).toBeFocused();
   await save.press('Enter');
-  await expect(page.getByText('Your changes have been saved!')).toBeVisible();
+  // Success now confirms via the toast (a polite live region) and the save bar
+  // clears, rather than a lingering "saved" message in the bar.
+  await expect(page.getByRole('status')).toHaveText('Changes saved.');
+  await expect(save).toBeHidden();
 });
 
 test('update-email modal traps focus, closes on Escape, and returns focus', async ({

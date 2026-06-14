@@ -1,5 +1,5 @@
 import {Box, Button, Typography} from '@mui/material';
-import {useEffect} from 'react';
+import {useEffect, useRef} from 'react';
 
 import {
   DashboardApiClient,
@@ -74,6 +74,18 @@ export default function AccountSettingsPage({
     if (settings.isError) void settings.refetch();
   };
 
+  // On recovery (error → loaded) the "Try again" button unmounts and focus
+  // would fall to <body>; move it to the page heading so a keyboard/SR user
+  // isn't dropped to the top silently. Not on first load — only after an error.
+  const headingRef = useRef<HTMLHeadingElement>(null);
+  const wasError = useRef(false);
+  useEffect(() => {
+    if (wasError.current && !isPending && !isError && settings.data) {
+      headingRef.current?.focus();
+    }
+    wasError.current = isError;
+  }, [isPending, isError, settings.data]);
+
   return (
     <Box
       component="main"
@@ -88,7 +100,13 @@ export default function AccountSettingsPage({
         color: 'var(--text-neutral-primary)',
       }}
     >
-      <Typography variant="h3" component="h1" id="account-page-heading">
+      <Typography
+        variant="h3"
+        component="h1"
+        id="account-page-heading"
+        ref={headingRef}
+        tabIndex={-1}
+      >
         My Account
       </Typography>
 

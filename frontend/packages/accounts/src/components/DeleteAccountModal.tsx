@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-autofocus -- this modal moves initial focus to a control inside the dialog on open (WAI-ARIA dialog pattern); MUI's default focuses an unannounced wrapper outside role="dialog" */
 import {
   Button,
   Dialog,
@@ -105,13 +106,17 @@ export default function DeleteAccountModal({
               aria-invalid={
                 errors.fieldErrors.current_password ? true : undefined
               }
+              autoFocus
             />
           )}
+          {/* Initial focus lands inside the dialog (so it's announced) on a safe
+              control — the password or this checkbox, never the delete button. */}
           <FormControlLabel
             control={
               <Checkbox
                 checked={acknowledged}
                 onChange={event => setAcknowledged(event.target.checked)}
+                autoFocus={!requiresPassword}
               />
             }
             label="I understand this is permanent."

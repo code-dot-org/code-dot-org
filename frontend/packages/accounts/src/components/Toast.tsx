@@ -1,3 +1,4 @@
+import {Box} from '@mui/material';
 import Snackbar from '@mui/material/Snackbar';
 import {
   createContext,
@@ -12,6 +13,18 @@ import Alert from '@code-dot-org/component-library/alert';
 type Show = (message: string) => void;
 
 const ToastContext = createContext<Show | null>(null);
+
+const visuallyHidden = {
+  position: 'absolute',
+  width: '1px',
+  height: '1px',
+  p: 0,
+  m: '-1px',
+  overflow: 'hidden',
+  clip: 'rect(0 0 0 0)',
+  whiteSpace: 'nowrap',
+  border: 0,
+} as const;
 
 /**
  * Transient success confirmation for discrete account mutations (email,
@@ -30,6 +43,14 @@ export function ToastProvider({children}: {children: ReactNode}) {
   return (
     <ToastContext.Provider value={show}>
       {children}
+      {/* The announcer: a polite live region that is always mounted (empty), so
+          a screen reader reliably announces the moment its text changes. A node
+          inserted already containing text (as the Snackbar's Alert is) often
+          goes unannounced. The Snackbar is the visual surface only — its Alert
+          role is dropped to 'presentation' so the message isn't announced twice. */}
+      <Box role="status" aria-live="polite" sx={visuallyHidden}>
+        {message ?? ''}
+      </Box>
       <Snackbar
         open={message !== null}
         autoHideDuration={5000}
@@ -37,6 +58,7 @@ export function ToastProvider({children}: {children: ReactNode}) {
         anchorOrigin={{vertical: 'bottom', horizontal: 'center'}}
       >
         <Alert
+          role="presentation"
           type="success"
           text={message ?? ''}
           isImmediateImportance={false}

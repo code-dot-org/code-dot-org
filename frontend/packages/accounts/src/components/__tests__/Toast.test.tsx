@@ -1,4 +1,4 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import {describe, expect, it} from 'vitest';
 
 import {ToastProvider, useToast} from '../Toast';
@@ -9,15 +9,21 @@ function Trigger({message}: {message: string}) {
 }
 
 describe('Toast', () => {
-  it('shows a success message when triggered within the provider', async () => {
+  it('announces the message via a persistent polite live region', async () => {
     render(
       <ToastProvider>
         <Trigger message="Saved!" />
       </ToastProvider>,
     );
-    expect(screen.queryByText('Saved!')).toBeNull();
+    // The live region exists and is empty BEFORE any toast, so a screen reader
+    // reliably announces when its text changes (rather than a node inserted
+    // already containing the text).
+    const liveRegion = screen.getByRole('status');
+    expect(liveRegion).toBeEmptyDOMElement();
+
     fireEvent.click(screen.getByRole('button', {name: 'fire'}));
-    expect(await screen.findByText('Saved!')).toBeInTheDocument();
+
+    await waitFor(() => expect(liveRegion).toHaveTextContent('Saved!'));
   });
 
   it('no-ops without a provider', () => {

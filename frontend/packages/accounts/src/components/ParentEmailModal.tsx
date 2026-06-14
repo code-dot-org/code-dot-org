@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-autofocus -- this modal moves initial focus to a control inside the dialog on open (WAI-ARIA dialog pattern); MUI's default focuses an unannounced wrapper outside role="dialog" */
 import {
   Box,
   Button,
@@ -108,6 +109,7 @@ export default function ParentEmailModal({
             aria-invalid={errors.fieldErrors.parent_email ? true : undefined}
             autoComplete="off"
             data-1p-ignore
+            autoFocus
           />
           <TextField
             label="Confirm parent/guardian email address"
@@ -120,22 +122,27 @@ export default function ParentEmailModal({
             autoComplete="off"
             data-1p-ignore
           />
-          {/* fieldset + legend groups the opt-in radios for assistive tech;
-              reset the native fieldset chrome so it lays out flush. */}
-          <Box component="fieldset" sx={{m: 0, p: 0, border: 0, minWidth: 0}}>
+          {/* radiogroup named by BOTH the qualifier and the consent question,
+              so a screen reader hears what it's answering — not just the
+              "For parent/guardian only" qualifier. */}
+          <Box>
             <Typography
-              component="legend"
+              id="parent-optin-qualifier"
               variant="body2"
-              sx={{p: 0, fontWeight: 600, mb: 0.5}}
+              sx={{fontWeight: 600, mb: 0.5}}
             >
               For parent/guardian only
             </Typography>
-            <Typography variant="body2" sx={{mb: 1}}>
+            <Typography id="parent-optin-question" variant="body2" sx={{mb: 1}}>
               Only answer the question below if the email address above belongs
               to you. Can we email you with occasional updates on your child’s
               progress, projects, and course?
             </Typography>
-            <Box sx={{display: 'flex', gap: 3}}>
+            <Box
+              role="radiogroup"
+              aria-labelledby="parent-optin-qualifier parent-optin-question"
+              sx={{display: 'flex', gap: 3}}
+            >
               <RadioButton
                 name="parent_email_opt_in"
                 value="yes"

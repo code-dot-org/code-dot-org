@@ -31,11 +31,18 @@ export default function ParentGuardianEmail({settings}: SectionProps) {
           <strong>Parent/guardian email:</strong> {parentEmail ?? 'None'}
         </Typography>
         <Box sx={{display: 'flex', gap: 2}}>
-          <Button onClick={() => setModalOpen(true)} sx={{px: 0}}>
+          {/* aria-label disambiguates the bare "Update"/"Remove" labels out of
+              context; each contains its visible text (WCAG 2.5.3). */}
+          <Button
+            aria-label="Update parent/guardian email"
+            onClick={() => setModalOpen(true)}
+            sx={{px: 0}}
+          >
             Update
           </Button>
           {parentEmail && (
             <Button
+              aria-label="Remove parent/guardian email"
               onClick={() =>
                 removeMutation.mutate(undefined, {
                   onSuccess: () => toast('Parent/guardian email removed.'),

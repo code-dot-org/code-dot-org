@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-autofocus -- this modal moves initial focus to a control inside the dialog on open (WAI-ARIA dialog pattern); MUI's default focuses an unannounced wrapper outside role="dialog" */
 import {
   Button,
   Dialog,
@@ -79,8 +80,11 @@ export default function SignOutOtherSessionsModal({
           )}
         </DialogContent>
         <DialogActions>
-          {/* First in DOM order, so MUI's focus trap lands here on open. */}
-          <Button onClick={close}>Cancel</Button>
+          {/* autoFocus lands initial focus inside the dialog (so it's announced)
+              on the safe Cancel, never the destructive action. */}
+          <Button onClick={close} autoFocus>
+            Cancel
+          </Button>
           <Button
             type="submit"
             variant="contained"

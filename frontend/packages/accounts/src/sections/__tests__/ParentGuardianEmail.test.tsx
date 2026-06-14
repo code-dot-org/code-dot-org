@@ -34,18 +34,24 @@ describe('ParentGuardianEmail', () => {
       screen.getByRole('heading', {name: 'For Parents and Guardians'}),
     ).toBeInTheDocument();
     expect(screen.getByText('parent@example.com')).toBeInTheDocument();
-    expect(screen.getByRole('button', {name: 'Remove'})).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', {name: 'Remove parent/guardian email'}),
+    ).toBeInTheDocument();
   });
 
   it('shows None and no Remove affordance when no parent email is set', () => {
     renderSection({parentEmail: null});
     expect(screen.getByText('None')).toBeInTheDocument();
-    expect(screen.queryByRole('button', {name: 'Remove'})).toBeNull();
+    expect(
+      screen.queryByRole('button', {name: 'Remove parent/guardian email'}),
+    ).toBeNull();
   });
 
   it('opens the email modal from Update', async () => {
     renderSection();
-    fireEvent.click(screen.getByRole('button', {name: 'Update'}));
+    fireEvent.click(
+      screen.getByRole('button', {name: 'Update parent/guardian email'}),
+    );
     const dialog = await screen.findByRole('dialog', {
       name: /parent\/guardian email/i,
     });
@@ -65,7 +71,9 @@ describe('ParentGuardianEmail', () => {
       }),
     );
     renderSection();
-    fireEvent.click(screen.getByRole('button', {name: 'Update'}));
+    fireEvent.click(
+      screen.getByRole('button', {name: 'Update parent/guardian email'}),
+    );
     const dialog = await screen.findByRole('dialog');
     fireEvent.change(
       within(dialog).getByRole('textbox', {
@@ -92,7 +100,9 @@ describe('ParentGuardianEmail', () => {
       ),
     );
     renderSection();
-    fireEvent.click(screen.getByRole('button', {name: 'Update'}));
+    fireEvent.click(
+      screen.getByRole('button', {name: 'Update parent/guardian email'}),
+    );
     const dialog = await screen.findByRole('dialog');
     fireEvent.change(
       within(dialog).getByRole('textbox', {
@@ -120,7 +130,9 @@ describe('ParentGuardianEmail', () => {
       }),
     );
     renderSection();
-    fireEvent.click(screen.getByRole('button', {name: 'Remove'}));
+    fireEvent.click(
+      screen.getByRole('button', {name: 'Remove parent/guardian email'}),
+    );
     await waitFor(() =>
       expect(removedBody).toEqual({user: {parent_email: ''}}),
     );

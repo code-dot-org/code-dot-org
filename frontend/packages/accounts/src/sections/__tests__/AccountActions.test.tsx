@@ -123,9 +123,11 @@ describe('AccountActions manage other sessions', () => {
     await waitFor(() =>
       expect(screen.queryByRole('alertdialog')).not.toBeInTheDocument(),
     );
-    expect(
-      await screen.findByText('Signed out of all other sessions.'),
-    ).toBeInTheDocument();
+    await waitFor(() =>
+      expect(screen.getByRole('status')).toHaveTextContent(
+        'Signed out of all other sessions.',
+      ),
+    );
   });
 
   it('keeps the dialog open with an error when sign-out fails', async () => {

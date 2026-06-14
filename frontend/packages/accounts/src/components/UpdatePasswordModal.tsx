@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-autofocus -- this modal moves initial focus to a control inside the dialog on open (WAI-ARIA dialog pattern); MUI's default focuses an unannounced wrapper outside role="dialog" */
 import {
   Button,
   Dialog,
@@ -86,6 +87,7 @@ export default function UpdatePasswordModal({
             aria-invalid={
               errors.fieldErrors.current_password ? true : undefined
             }
+            autoFocus
           />
           <TextField
             label="New password"
