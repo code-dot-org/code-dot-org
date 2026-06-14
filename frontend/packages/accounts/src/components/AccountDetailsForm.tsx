@@ -15,9 +15,9 @@ import SaveBar from './SaveBar';
 const GENERIC_ERROR = 'Something went wrong. Please try again.';
 
 /**
- * The Account Details tab body: one `<form>` whose save bar persists all
- * pending My Information edits in a single PATCH. Email, password,
- * account type, and deletion are their own flows (modals), not this form.
+ * The Account Details tab body: one form that persists all pending My
+ * Information edits in a single PATCH. Email, password, account type, and
+ * deletion are separate modal flows.
  */
 export default function AccountDetailsForm({
   settings,

@@ -1,17 +1,12 @@
 import {expect, test, type Page} from '@playwright/test';
 
-// Keyboard-only operation of the Account Details page (a11y spec). Drives the
-// standalone page; the same component Studio hosts.
-
 async function gotoLoaded(page: Page, scenario = 'teacher') {
   await page.goto(`/?scenario=${scenario}`);
   await page.getByRole('heading', {level: 1, name: 'My Account'}).waitFor();
 }
 
-// True when keyboard focus is within the open modal (focus-trap check). MUI puts
-// initial focus on the dialog's presentation container — an ancestor of the
-// role="dialog" paper — so we accept focus on the paper, inside it, or on the
-// container that wraps it.
+// MUI puts initial focus on the dialog's presentation container, an ancestor
+// of the role="dialog" paper, so accept focus on the paper, inside it, or on it.
 function focusIsInModal(page: Page) {
   return page.evaluate(() => {
     const dialog = document.querySelector(
@@ -33,12 +28,9 @@ test('the live tab is keyboard-focusable; placeholder tabs are disabled', async 
   const tabs = page.getByRole('tab');
   await expect(tabs).toHaveCount(4);
 
-  // Account Details is the only live tab; it takes focus.
   await tabs.first().focus();
   await expect(tabs.first()).toBeFocused();
 
-  // Placeholder tabs (#73223+) ship disabled — not keyboard-reachable until
-  // their panels exist (accepted tradeoff for using the design-system Tabs).
   await expect(tabs.nth(1)).toBeDisabled();
   await expect(tabs.last()).toBeDisabled();
 });
@@ -51,11 +43,9 @@ test('form fields are reachable by Tab and Enter submits the save bar', async ({
   const displayName = page.getByLabel(/Display name/);
   await displayName.fill('Dr. Ada');
 
-  // The save bar reveals on edit and its Save control is keyboard-reachable.
   const save = page.getByRole('button', {name: 'Save changes'});
   await expect(save).toBeVisible();
 
-  // Enter from within the form submits it (native single-form submit).
   await displayName.press('Enter');
   await expect(page.getByText('Your changes have been saved!')).toBeVisible();
 });
@@ -82,7 +72,6 @@ test('update-email modal traps focus, closes on Escape, and returns focus', asyn
   const dialog = page.getByRole('dialog', {name: /update email/i});
   await expect(dialog).toBeVisible();
 
-  // Focus starts inside the modal and stays trapped across Tabs.
   expect(await focusIsInModal(page)).toBe(true);
   for (let i = 0; i < 6; i++) await page.keyboard.press('Tab');
   expect(await focusIsInModal(page)).toBe(true);
@@ -121,7 +110,6 @@ test('account-type change opens an alertdialog and reverts the select on Cancel'
 
   await dialog.getByRole('button', {name: /cancel/i}).click();
   await expect(dialog).toBeHidden();
-  // Controlled revert, not visual-only.
   await expect(select).toHaveValue('teacher');
 });
 
@@ -145,7 +133,6 @@ test('critical flows work at 400% zoom (320px reflow) without horizontal scroll'
   await page.setViewportSize({width: 320, height: 900});
   await gotoLoaded(page);
 
-  // No horizontal scroll at reflow width (WCAG 1.4.10).
   const overflows = await page.evaluate(
     () =>
       document.documentElement.scrollWidth >
@@ -153,7 +140,6 @@ test('critical flows work at 400% zoom (320px reflow) without horizontal scroll'
   );
   expect(overflows).toBe(false);
 
-  // A modal still opens and closes by keyboard at this width.
   const trigger = page.getByRole('button', {name: 'Update email'});
   await trigger.click();
   await expect(page.getByRole('dialog', {name: /update email/i})).toBeVisible();

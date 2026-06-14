@@ -22,10 +22,9 @@ const TYPE_LABEL: Record<UserType, string> = {
 };
 
 /**
- * Confirmation alertdialog for an account-type change. The
- * prospective type lives in the caller's state and is committed only on
- * confirm; dismissing leaves the account unchanged. role="alertdialog" with the
- * heading as label and the warning as description; Cancel takes initial focus.
+ * Confirmation alertdialog for an account-type change. The prospective type
+ * lives in the caller's state and is committed only on confirm; dismissing
+ * leaves the account unchanged. Cancel takes initial focus.
  */
 export default function AccountTypeModal({
   open,
@@ -40,8 +39,7 @@ export default function AccountTypeModal({
   const mutation = useMutation({mutationFn: updateUserType});
   const [formError, setFormError] = useState<string | null>(null);
 
-  // Keep the dialog open and surface the message on failure (mirroring the
-  // other account modals); only close once the change actually commits.
+  // Stay open and show the error on failure; close only once the change commits.
   const confirm = async () => {
     if (!prospectiveType) return;
     setFormError(null);

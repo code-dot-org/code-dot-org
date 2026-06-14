@@ -4,7 +4,6 @@ import {useState} from 'react';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
 
-// Decorative edit icon for the Update links; button text is the label.
 const EditIcon = () => <FontAwesomeV6Icon iconName="pencil" aria-hidden />;
 
 import CreatePasswordModal from '../components/CreatePasswordModal';
@@ -17,8 +16,7 @@ import {providerName} from '../util/providerName';
 import Section from './Section';
 import type {SectionProps} from './types';
 
-// Email/password are display-only (disabled); editing is in the modals. Masked
-// values are visual — the aria-labels carry the meaning for screen readers.
+// Masked values are visual only; the aria-labels carry meaning for screen readers.
 const MASKED_PASSWORD = '••••••••••••';
 
 // Controlled disabled fields still want an onChange.
@@ -35,7 +33,7 @@ export default function LoginInformation({settings}: SectionProps) {
       .map(option => providerName(option.credentialType))
       .join(', ') || 'SSO';
 
-  // Students never see their real email (legacy masks it as ***encrypted***).
+  // Legacy parity: students never see their real email.
   const isStudent = settings.userType === 'student';
   const emailValue = isStudent ? '***encrypted***' : (settings.email ?? '');
 

@@ -61,9 +61,8 @@ export class ApiError extends Error {
   readonly details?: unknown;
   readonly headers?: Headers;
   /**
-   * Parsed error-response body (JSON when the response was JSON, else text).
-   * Lets callers read validation errors (e.g. Rails 422 `{field: [messages]}`)
-   * without re-reading the consumed Response.
+   * Parsed error body, so callers can read validation errors (e.g. Rails 422)
+   * without re-reading the already-consumed Response.
    */
   readonly body?: unknown;
   name = 'ApiError' as const;

@@ -1,5 +1,4 @@
-// Static option lists for the student profile dropdowns, mirroring the legacy
-// User::AGE_DROPDOWN_OPTIONS and us_state options.
+// Mirrors the legacy User::AGE_DROPDOWN_OPTIONS and us_state options.
 
 interface Option {
   value: string;

@@ -4,12 +4,10 @@ import type {ReactNode} from 'react';
 import Tabs, {type TabModel} from '@code-dot-org/component-library/tabs';
 
 export interface AccountTab {
-  /** Stable tab id, also the `?tab=` value. */
   id: string;
   label: string;
-  /** Future tabs: disabled placeholders until their panels ship. */
   disabled?: boolean;
-  /** Hidden for students (legacy parity — e.g. the educator-only profile). */
+  /** Hidden for students, per legacy parity. */
   educatorOnly?: boolean;
 }
 
@@ -17,14 +15,12 @@ export interface AccountTabsProps {
   tabs: AccountTab[];
   activeTab: string;
   onTabChange: (id: string) => void;
-  /** The active tab's panel content. */
   children: ReactNode;
 }
 
 /**
- * Account-settings tabs on the design-system `Tabs`. v1 has one live tab; the
- * rest are disabled placeholders. DSCO disables them via HTML `disabled` (not
- * focusable, no `aria-label`) — accepted for non-functional tabs.
+ * Account-settings tabs on the design-system Tabs. Disabled tabs use HTML
+ * `disabled` (not focusable, no aria-label), accepted for non-functional tabs.
  */
 export default function AccountTabs({
   tabs,
@@ -42,8 +38,7 @@ export default function AccountTabs({
   return (
     <Box
       sx={{
-        // Scroll the tablist (DSCO's first child div), not the panel; pad for
-        // the focus ring (WCAG 1.4.10 reflow).
+        // Scroll the tablist (DSCO's first child div), not the panel; pad for the focus ring.
         '& > div:first-of-type': {
           overflowX: 'auto',
           py: '3px',
@@ -51,8 +46,7 @@ export default function AccountTabs({
           '&::-webkit-scrollbar': {display: 'none'},
         },
         '& > div:nth-of-type(2)': {pt: 3},
-        // The design inverts DSCO's canonical tabs: teal active label, dark
-        // inactive. `&&&` beats DSCO's `:disabled` selector.
+        // Teal active label, dark inactive; `&&&` beats DSCO's `:disabled` selector.
         '&&& button[role="tab"]': {color: 'var(--text-neutral-primary)'},
         '&&& button[role="tab"]:disabled': {
           color: 'var(--text-neutral-primary)',

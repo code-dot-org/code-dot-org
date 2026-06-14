@@ -6,10 +6,8 @@ import {
   CurrentUserResponseSignedOutSchema,
 } from './currentUserTypes';
 
-// Camelcased views over the canonical /api/v1/users/current schemas in
-// currentUserTypes (the single source of truth for the endpoint's shape).
-// Deriving here, rather than re-declaring fields, keeps the two from drifting —
-// an earlier hand-copied duplicate had silently diverged from the endpoint.
+// Derived (not re-declared) from the canonical currentUserTypes schemas; a
+// prior hand-copied duplicate silently diverged from the endpoint.
 export const SignedInCurrentUserSchema =
   CurrentUserResponseSignedInSchema.transform(data =>
     camelcaseKeys(data, {deep: true}),

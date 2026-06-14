@@ -83,8 +83,7 @@ describe('LoginInformation password affordances', () => {
   });
 
   it('offers no password action when SSO-only without the entitlement', () => {
-    // e.g. an oauth-only student — legacy routes them to a personal-login flow,
-    // not add-password.
+    // An oauth-only student: legacy routes them to personal-login, not add-password.
     renderSection({
       userType: 'student',
       hasPassword: false,

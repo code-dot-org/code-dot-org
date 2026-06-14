@@ -5,8 +5,7 @@ import type {AccountSettings} from '../../api/accounts.types';
 import {FormProvider} from '../../state/FormContext';
 import MyInformation from '../MyInformation';
 
-// MyInformation only reads settings.userType (teacher vs student variant); the
-// field values come from FormContext, so a minimal cast is enough.
+// MyInformation reads only settings.userType, so a minimal cast suffices.
 const STUDENT = {userType: 'student'} as AccountSettings;
 const TEACHER = {userType: 'teacher'} as AccountSettings;
 
@@ -35,7 +34,6 @@ describe('MyInformation age/state dropdowns', () => {
     renderSection(STUDENT, {age: '', us_state: ''});
 
     const state = screen.getByRole('combobox', {name: 'State'});
-    // The selected option must be the empty placeholder, not "Alabama".
     expect(within(state).getAllByRole('option')[0]).toHaveValue('');
     expect(state).toHaveValue('');
 

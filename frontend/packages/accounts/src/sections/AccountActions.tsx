@@ -16,8 +16,7 @@ const TYPE_ITEMS = [
   {value: 'teacher', text: 'Educator'},
 ];
 
-// Upfront consequences before the button (legacy parity); the modal confirms.
-// Teacher variant adds the section/student-account fallout.
+// Consequences shown upfront, before the button, per legacy parity.
 const STUDENT_DELETE_WARNING =
   'Deleting your account will permanently erase all personal information, coursework, and projects connected to this account.';
 const TEACHER_DELETE_WARNING =
@@ -25,7 +24,7 @@ const TEACHER_DELETE_WARNING =
 
 export default function AccountActions({settings}: SectionProps) {
   // The dropdown stays bound to the current type; a selection only opens the
-  // confirmation modal with the prospective value, so dismissing reverts it.
+  // confirmation modal, so dismissing reverts it.
   const [prospectiveType, setProspectiveType] = useState<UserType | null>(null);
   const [deleteOpen, setDeleteOpen] = useState(false);
   const isTeacher = settings.userType === 'teacher';
@@ -95,8 +94,7 @@ export default function AccountActions({settings}: SectionProps) {
             />
           </>
         ) : (
-          // Legacy parity: can't delete (teacher-managed / in-section) —
-          // explain why, not a dead disabled button.
+          // Legacy parity: explain why deletion is blocked, not a dead disabled button.
           <Typography variant="body2">
             You do not have permission to delete this account because it is
             managed by your teacher. Your teacher(s) will need to remove you

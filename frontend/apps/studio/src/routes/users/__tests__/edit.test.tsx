@@ -5,8 +5,7 @@ import type {AuthOutcome} from '@/modules/auth/types';
 
 import {Route} from '../edit';
 
-// Exercises the route's own `beforeLoad` wiring (return-to + redirect), not just
-// the signInRedirectHref helper. The guard only reads `context`.
+// Exercises the route's own beforeLoad wiring, not just the signInRedirectHref helper.
 const runGuard = (auth: AuthOutcome) =>
   (Route.options.beforeLoad as (arg: {context: {auth: AuthOutcome}}) => void)({
     context: {auth},

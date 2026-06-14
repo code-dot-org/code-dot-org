@@ -1,9 +1,8 @@
 import AxeBuilder from '@axe-core/playwright';
 import {expect, test} from '@playwright/test';
 
-// Real-browser axe scans. Unlike the jsdom vitest-axe pass (5.10), color-contrast
-// IS computed here, so this is where the design's deferred contrast concern
-// (focus ring, error text) gets verified.
+// Real-browser axe scans, where (unlike the jsdom pass) color-contrast is
+// computed.
 const SCENARIOS = [
   'teacher',
   'student',
@@ -17,12 +16,10 @@ const WCAG_TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'];
 const analyze = (page: import('@playwright/test').Page) =>
   new AxeBuilder({page}).withTags(WCAG_TAGS).analyze();
 
-// The MUI primary button palette from CdoTheme (rebrand) fails AA contrast
-// (contained ~3.6:1, text-on-gray ~3.9:1) — a theme-level issue affecting every
-// primary button app-wide, tracked as a design-system follow-up, not fixable in
-// this package. The page scans above keep color-contrast on and pass, proving
-// accounts' own content is clean; the modal scans drop only that one rule so a
-// theme button doesn't mask the structural checks (roles, names, focus).
+// CdoTheme's primary button fails AA contrast app-wide (a design-system issue,
+// not fixable here). Modal scans drop only color-contrast so that one theme
+// button doesn't mask the structural checks (roles, names, focus); page scans
+// above keep it on.
 const analyzeNoContrast = (page: import('@playwright/test').Page) =>
   new AxeBuilder({page})
     .withTags(WCAG_TAGS)

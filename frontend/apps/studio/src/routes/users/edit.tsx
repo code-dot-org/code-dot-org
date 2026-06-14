@@ -5,8 +5,7 @@ import {lazy, Suspense} from 'react';
 import {signInRedirectHref} from '@/modules/auth';
 import {ErrorPage} from '@/modules/errors';
 
-// Lazy so the accounts package lands in its own Vite chunk, fetched only on the
-// first navigation. The package's default export is the page component.
+// Lazy so the accounts package lands in its own chunk, fetched on first nav.
 const AccountSettingsPage = lazy(() => import('@code-dot-org/accounts'));
 
 interface AccountsSearch {
@@ -14,12 +13,11 @@ interface AccountsSearch {
 }
 
 export const Route = createFileRoute('/users/edit')({
-  // Tab is deep-linkable via ?tab= and owned by the router.
   validateSearch: (search: Record<string, unknown>): AccountsSearch => ({
     tab: typeof search.tab === 'string' ? search.tab : undefined,
   }),
   beforeLoad: ({context}) => {
-    // Build the return-to from our own browser path, never from query params.
+    // Return-to from our own browser path, never from query params.
     const returnTo = window.location.pathname + window.location.search;
     const href = signInRedirectHref(context.auth, returnTo);
     if (href) {
@@ -44,8 +42,8 @@ function AccountsRoute() {
   );
 }
 
-// Minimal fallback for the lazy-chunk window. No height reserve here — the root
-// layout holds the content area open so the footer never jumps (CLS).
+// No height reserve: the root layout holds the content area open, so the footer
+// never jumps (CLS) during the lazy-chunk window.
 function AccountsSkeleton() {
   return (
     <Box

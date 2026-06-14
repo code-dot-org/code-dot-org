@@ -1,8 +1,7 @@
 import type {FieldErrors} from '../api/accounts.types';
 
-// The save lifecycle of the Account Details form. The full form reducer
-// (task 5.3) holds field values and derives these transitions; modeling the
-// save status as its own pure reducer keeps the lifecycle testable in isolation.
+// The form's save lifecycle as its own pure reducer, testable in isolation;
+// the full form reducer holds field values and delegates these transitions.
 export type SaveState =
   | {status: 'idle'}
   | {status: 'dirty'}
@@ -25,12 +24,11 @@ export function saveStateReducer(
 ): SaveState {
   switch (action.type) {
     case 'edit':
-      // Inputs are disabled while saving, so an edit cannot land then; from any
-      // other state an edit means there are unsaved changes.
+      // Inputs are disabled while saving, so ignore a stray edit then.
       return state.status === 'saving' ? state : {status: 'dirty'};
     case 'save':
-      // Only a dirty or previously-errored form starts a save. A second 'save'
-      // while already saving is the double-submit guard (no-op).
+      // Only a dirty or previously-errored form starts a save; a 'save' while
+      // already saving is the double-submit no-op.
       return state.status === 'dirty' || state.status === 'error'
         ? {status: 'saving'}
         : state;

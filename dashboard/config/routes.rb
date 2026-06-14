@@ -1108,7 +1108,6 @@ Dashboard::Application.routes.draw do
         concerns :api_v1_pd_routes
         concerns :section_api_routes
 
-        # Read model for the Account Details page (frontend/packages/accounts).
         namespace :account do
           resource :settings, only: :show
         end

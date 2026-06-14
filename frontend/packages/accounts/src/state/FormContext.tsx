@@ -15,8 +15,7 @@ import {
   type FormValues,
 } from './formReducer';
 
-// Values and dispatch live in separate contexts so a component
-// that only dispatches doesn't re-render when unrelated values change.
+// Separate contexts so a dispatch-only component doesn't re-render when values change.
 const FormStateContext = createContext<FormState | null>(null);
 const FormDispatchContext = createContext<Dispatch<FormAction> | null>(null);
 
@@ -62,7 +61,6 @@ export interface FieldBinding {
   onChange: (value: string) => void;
 }
 
-/** Binds one form field to its value, server errors, and edit dispatch. */
 export function useField(field: string): FieldBinding {
   const state = useFormState();
   const dispatch = useFormDispatch();

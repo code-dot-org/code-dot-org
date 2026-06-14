@@ -18,9 +18,8 @@ import {modalErrors, type ModalErrors} from './modalErrors';
 const NO_ERRORS: ModalErrors = {fieldErrors: {}, formError: null};
 
 /**
- * Update-password modal. On a wrong current password (or a too-short new one)
- * the modal stays open and shows the server's error against the offending
- * field; on a network failure it keeps the input and shows a form-level message.
+ * Update-password modal. A validation error stays open and shows against the
+ * offending field; a network failure shows a form-level message, input preserved.
  */
 export default function UpdatePasswordModal({
   open,

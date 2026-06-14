@@ -2,13 +2,13 @@ import type {FieldErrors} from '../api/accounts.types';
 
 import {initialSaveState, saveStateReducer, type SaveState} from './saveState';
 
-// Editable profile fields are keyed by their Rails wire name (given_name,
-// family_name, name, username, ...) so server validation errors map directly.
+// Keyed by Rails wire name (given_name, family_name, ...) so server validation
+// errors map directly.
 export type FormValues = Record<string, string>;
 
 export interface FormState {
   values: FormValues;
-  /** Last-saved values; the form is dirty when `values` differs from this. */
+  /** Last-saved values; the form is dirty when `values` differs from these. */
   initial: FormValues;
   save: SaveState;
 }
@@ -30,7 +30,6 @@ export function isDirty(state: FormState): boolean {
   );
 }
 
-/** Fields whose value differs from the last save. */
 export function dirtyValues(state: FormState): FormValues {
   return Object.fromEntries(
     Object.entries(state.values).filter(
@@ -42,8 +41,7 @@ export function dirtyValues(state: FormState): FormValues {
 export function formReducer(state: FormState, action: FormAction): FormState {
   switch (action.type) {
     case 'edit':
-      // Editing moves the save lifecycle back to `dirty`, which drops any prior
-      // field/form errors (they're re-derived on the next save).
+      // Editing returns the save lifecycle to `dirty`, dropping any prior errors.
       return {
         ...state,
         values: {...state.values, [action.field]: action.value},
@@ -75,7 +73,6 @@ export function formReducer(state: FormState, action: FormAction): FormState {
   }
 }
 
-/** Server error messages for a field, when the last save failed. */
 export function fieldError(state: FormState, field: string): string[] {
   return state.save.status === 'error'
     ? (state.save.fieldErrors[field] ?? [])

@@ -20,10 +20,9 @@ import {modalErrors, type ModalErrors} from './modalErrors';
 const NO_ERRORS: ModalErrors = {fieldErrors: {}, formError: null};
 
 /**
- * Update-email modal. MUI Dialog supplies focus trap, Escape-to-close, and
- * focus return to the trigger. On success the settings query is invalidated so
- * the displayed email refreshes; on failure the modal stays open with the
- * server's field error (or a form-level message) and the input preserved.
+ * Update-email modal. On success the settings query is invalidated so the
+ * displayed email refreshes; on failure it stays open with the server's error
+ * and the input preserved.
  */
 export default function UpdateEmailModal({
   open,

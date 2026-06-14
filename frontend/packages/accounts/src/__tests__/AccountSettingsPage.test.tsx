@@ -39,7 +39,6 @@ describe('AccountSettingsPage', () => {
     expect(screen.getByRole('status')).toBeInTheDocument();
     expect(screen.getByRole('main')).toHaveAttribute('aria-busy', 'true');
 
-    // The tablist only renders once both queries resolve.
     const tablist = await screen.findByRole('tablist');
     expect(
       screen.getByRole('heading', {level: 1, name: 'My Account'}),
@@ -49,7 +48,6 @@ describe('AccountSettingsPage', () => {
     const tabs = within(tablist).getAllByRole('tab');
     expect(tabs).toHaveLength(4);
     expect(tabs[0]).toHaveAttribute('aria-selected', 'true');
-    // Placeholder tabs ship disabled until their panels exist.
     expect(tabs[1]).toBeDisabled();
 
     for (const name of [
@@ -63,14 +61,12 @@ describe('AccountSettingsPage', () => {
 
   it('renders the student variant without a last name', async () => {
     renderPage('student');
-    // Wait for the loaded state (the section heading) before asserting fields.
     await screen.findByRole('heading', {level: 2, name: 'My Information'});
     expect(screen.queryByText('Last name')).not.toBeInTheDocument();
   });
 
   it('hides the educator-only Educator Profile tab for students', async () => {
-    // Students have no educator profile, so that tab is hidden. Communications
-    // (parent-email prefs) and Integrations (linked accounts) still apply.
+    // Students hide Educator Profile; Communications and Integrations still apply.
     renderPage('student');
     const tablist = await screen.findByRole('tablist');
     const tabs = within(tablist).getAllByRole('tab');
@@ -149,7 +145,6 @@ describe('AccountSettingsPage save flow', () => {
     expect(
       await screen.findByText('Display name is too long'),
     ).toBeInTheDocument();
-    // Pending value is preserved, and the field is marked invalid.
     await waitFor(() =>
       expect(screen.getByLabelText(/Display name/)).toHaveAttribute(
         'aria-invalid',
@@ -179,7 +174,6 @@ describe('AccountSettingsPage — Login Information', () => {
     await waitFor(() =>
       expect(screen.queryByRole('dialog')).not.toBeInTheDocument(),
     );
-    // Email shows in the disabled display input now, not as static text.
     expect(
       await screen.findByDisplayValue('ada@newschool.org'),
     ).toBeInTheDocument();
@@ -229,8 +223,6 @@ describe('AccountSettingsPage — Login Information', () => {
     renderPage('student');
     await screen.findByRole('tablist');
 
-    // Students never see their real email (parity with the legacy page) but can
-    // still change it via the Update email flow.
     expect(screen.getByDisplayValue('***encrypted***')).toBeInTheDocument();
     expect(
       screen.getByRole('button', {name: 'Update email'}),

@@ -3,17 +3,15 @@ import {AccountsApiValidationError} from '../api/AccountsApiValidationError';
 
 export interface ModalErrors {
   fieldErrors: FieldErrors;
-  /** A form-level message shown at the top of the modal (network/base errors). */
   formError: string | null;
 }
 
 const GENERIC = 'Something went wrong. Please try again.';
 
 /**
- * Maps a caught mutation error to a modal's field- and form-level messages. A
- * validation error with specific fields surfaces them per field; anything else
- * (network failure, empty body) becomes a generic form-level message so the
- * modal stays open with the user's input preserved.
+ * Maps a caught mutation error to a modal's field- and form-level messages.
+ * Anything that isn't a field-specific validation error becomes a generic
+ * form-level message, keeping the modal open with the user's input preserved.
  */
 export function modalErrors(error: unknown): ModalErrors {
   if (error instanceof AccountsApiValidationError && !error.isEmpty) {

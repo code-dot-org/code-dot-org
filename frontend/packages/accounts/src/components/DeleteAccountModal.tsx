@@ -23,10 +23,9 @@ const NO_ERRORS: ModalErrors = {fieldErrors: {}, formError: null};
 
 /**
  * Destructive delete-account alertdialog. Requires explicit acknowledgment (and
- * the password where the account has one) before DELETE /users; warns about
- * dependent students. role="alertdialog", heading as label and warning as
- * description, the password field (or checkbox) takes initial focus — not the
- * destructive button — and that button's name states the consequence.
+ * the password where the account has one) before DELETE /users. The password
+ * field or checkbox takes initial focus, never the destructive button, whose
+ * name states the consequence.
  */
 export default function DeleteAccountModal({
   open,

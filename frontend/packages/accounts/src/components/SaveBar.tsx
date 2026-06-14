@@ -3,11 +3,9 @@ import {Box, Button, Typography} from '@mui/material';
 import {useFormState} from '../state/FormContext';
 
 /**
- * Sticky save bar. The region is always present with `aria-live="polite"` (its
- * content toggles on dirty state — never injected on demand, per the a11y
- * spec), sits last in the form's DOM order, and is sticky for visual position
- * only. The Save control is a submit button (Enter-to-submit) disabled while
- * saving (double-submit guard).
+ * Sticky save bar. The aria-live region is always present (content toggles on
+ * dirty state, never injected on demand) and sits last in the form's DOM order.
+ * Save is a submit button, disabled while saving as a double-submit guard.
  */
 export default function SaveBar() {
   const {save} = useFormState();

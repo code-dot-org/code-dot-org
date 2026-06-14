@@ -13,9 +13,6 @@ export type {
   CurrentUserResponseSignedOut,
 } from './users/currentUserTypes';
 
-// Current-user query surface for host apps that prime and read the shared
-// TanStack Query cache (the accounts module's host contract; see
-// accounts-module-v1 design D4).
 export {usersKeys} from './users/users.keys';
 export {useCurrentUser} from './users/users.query';
 export {CurrentUserSchema} from './users/users.schemata';

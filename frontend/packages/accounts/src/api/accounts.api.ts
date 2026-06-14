@@ -12,9 +12,8 @@ import type {
 } from './accounts.types';
 import {AccountsApiValidationError} from './AccountsApiValidationError';
 
-// These endpoints signal validation failures with 422 (the PATCH endpoints) or
-// 400 (DELETE /users). Every request sends `Accept: application/json` so a
-// signed-out response is 401 JSON, not a navigational redirect.
+// PATCH endpoints reject with 422, DELETE /users with 400. Accept: application/json
+// keeps a signed-out response 401 JSON, not a navigational redirect.
 const JSON_ACCEPT = {Accept: 'application/json'} as const;
 
 function isValidationError(error: unknown): error is ApiError {
@@ -136,8 +135,8 @@ export function deleteAccount(params: DeleteAccountParams): Promise<void> {
     method: 'DELETE',
     url: '/users',
     headers: JSON_ACCEPT,
-    // DELETE reads a TOP-LEVEL `password_confirmation` (see design Spike
-    // Findings), not a nested `user[...]`. Word/picture accounts send none.
+    // DELETE reads a top-level password_confirmation, not a nested user[...].
+    // Word/picture accounts send none.
     body:
       params.password !== undefined
         ? {password_confirmation: params.password}

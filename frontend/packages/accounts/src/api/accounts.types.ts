@@ -2,7 +2,6 @@ import type {z} from 'zod';
 
 import type {AccountSettingsResponseSchema} from './accounts.schemata';
 
-/** The Account Details read model, camelCased from the Rails response. */
 export type AccountSettings = z.infer<typeof AccountSettingsResponseSchema>;
 
 export type AuthenticationOptionSummary =
@@ -10,9 +9,8 @@ export type AuthenticationOptionSummary =
 
 export type UserType = AccountSettings['userType'];
 
-// Server validation messages keyed by form field (Rails snake_case key).
-// Partial so indexed access is `string[] | undefined`, making the `?.` guards
-// at every read site load-bearing rather than defensive-by-convention.
+// Partial so indexed access is `string[] | undefined`; the `?.` guards at
+// every read site are load-bearing, not defensive-by-convention.
 export type FieldErrors = Partial<Record<string, string[]>>;
 
 export interface UpdateProfileParams {

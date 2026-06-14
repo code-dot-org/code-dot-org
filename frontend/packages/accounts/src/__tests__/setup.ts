@@ -1,6 +1,5 @@
-// Vitest setup: jest-dom matchers, plus the MSW node server so tests exercise
-// the real DashboardApiClient transport end to end. Per-test overrides via
-// `mockServer.use(...)`.
+// jest-dom matchers plus the MSW node server, so tests exercise the real
+// DashboardApiClient transport end to end. Per-test overrides via mockServer.use().
 
 import '@testing-library/jest-dom/vitest';
 

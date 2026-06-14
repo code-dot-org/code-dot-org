@@ -1,11 +1,9 @@
 module Account
-  # Read model for GET /api/v1/account/settings: a NAMED ALLOWLIST, strictly
-  # narrower than the legacy account-edit payload.
-  #
-  # NEVER serialize: oauth/refresh tokens, authentication_id, auth-option ids,
-  # hashed_email, encrypted_password, secret words/pictures, failed_attempts,
-  # locked_at, IPs, or admin flags. Field-visibility (student email masking,
-  # edit-affordance gating) is computed here server-side, never on the client.
+  # A named allowlist, deliberately narrower than the legacy account-edit
+  # payload. NEVER serialize: oauth/refresh tokens, authentication_id,
+  # auth-option ids, hashed_email, encrypted_password, secret words/pictures,
+  # failed_attempts, locked_at, IPs, or admin flags. Field visibility (student
+  # email masking, edit-affordance gating) is computed server-side, not the client.
   class SettingsSerializer
     def initialize(user)
       @user = user
@@ -18,15 +16,14 @@ module Account
         family_name: user.family_name,
         display_name: user.name,
         username: user.username,
-        # User#email returns '' for students with no stored cleartext address
-        # (the natural server-side masking); `.presence` makes that absent.
+        # User#email is '' for students with no stored cleartext address;
+        # .presence turns that masking into an absent field.
         email: user.email.presence,
         has_password: user.encrypted_password.present?,
         can_edit_email: user.can_edit_email?,
         can_edit_password: user.can_edit_password?,
-        # Entitlement to add a first password (SSO-only accounts). Composite,
-        # server-computed gate: false for oauth-only students (they get the
-        # personal-login flow instead), sponsored, and LTI-restricted users.
+        # Entitlement to add a first password (SSO-only accounts); false for
+        # oauth-only students, sponsored, and LTI-restricted users.
         should_see_add_password_form: user.should_see_add_password_form?,
         should_see_edit_email_link: user.should_see_edit_email_link?,
         authentication_options: serialized_authentication_options,
@@ -40,9 +37,7 @@ module Account
 
     private attr_reader :user
 
-    # Provider type and associated email only — never the per-option id or
-    # hashed_email. The email mirrors what the legacy page already exposed for
-    # this user (blank for word/picture students who have no stored address).
+    # Provider type and email only — never the per-option id or hashed_email.
     private def serialized_authentication_options
       user.authentication_options.map do |option|
         {

@@ -7,8 +7,6 @@ const SIGNED_IN = {status: 'signed-in', is_signed_in: true} as AuthOutcome;
 const SIGNED_OUT: AuthOutcome = {status: 'signed-out'};
 const ERROR: AuthOutcome = {status: 'error'};
 
-// Route-agnostic: the caller passes its own relative path, so the paths below
-// are illustrative, not a specific app route.
 describe('signInRedirectHref', () => {
   it('redirects a signed-out visitor to Rails sign-in with an encoded return-to', () => {
     expect(signInRedirectHref(SIGNED_OUT, '/some/protected/page')).toBe(

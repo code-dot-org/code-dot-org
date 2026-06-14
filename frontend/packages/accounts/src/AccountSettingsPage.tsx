@@ -12,8 +12,7 @@ import {FormProvider} from './state/FormContext';
 
 const ACCOUNT_DETAILS_TAB = 'account-details';
 
-// Account Details is the only live v1 tab; the rest are placeholders.
-// Educator Profile is educator-only (legacy hides it for students).
+// Educator Profile is hidden for students, per legacy parity.
 const TABS: AccountTab[] = [
   {id: ACCOUNT_DETAILS_TAB, label: 'Account Details'},
   {
@@ -26,11 +25,8 @@ const TABS: AccountTab[] = [
   {id: 'integrations', label: 'Integrations', disabled: true},
 ];
 
-// Stable identity for the no-onTabChange case.
 const NO_OP = () => {};
 
-// Visually-hidden pending status; the host reserves content height, so no
-// visible loading flash.
 const visuallyHidden = {
   position: 'absolute',
   width: 1,
@@ -41,15 +37,13 @@ const visuallyHidden = {
 };
 
 export interface AccountSettingsPageProps {
-  /** Active tab id, supplied by the host. */
   tab?: string;
-  /** Called when the user selects a different tab. */
   onTabChange?: (tab: string) => void;
 }
 
 /**
- * The "My Account" Account Details page. Reads the current user from the shared
- * query cache and the editable settings from `GET /api/v1/account/settings`.
+ * The "My Account" page. Reads the current user from the shared query cache and
+ * the editable settings from GET /api/v1/account/settings.
  */
 export default function AccountSettingsPage({
   tab,
@@ -87,7 +81,7 @@ export default function AccountSettingsPage({
       aria-labelledby="account-page-heading"
       aria-busy={isPending}
       sx={{
-        // Production parity: legacy `.container` caps at 970px, fluid below.
+        // Legacy parity: .container caps at 970px, fluid below.
         maxWidth: 970,
         mx: 'auto',
         px: {xs: 2, sm: 3},

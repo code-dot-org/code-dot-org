@@ -1,9 +1,8 @@
 import {QueryClient, type QueryClientConfig} from '@tanstack/react-query';
 
 /**
- * Creates a QueryClient with Code.org's shared defaults (no refetch on focus,
- * skip retry on 401/403). Exported so a host can own one instance to both prime
- * the cache (e.g. in a router `beforeLoad`) and pass to `QueryClientProvider`.
+ * QueryClient with Code.org's shared defaults. Exported so a host can own one
+ * instance to both prime the cache (e.g. in a router beforeLoad) and provide it.
  */
 export function createQueryClient(
   defaultOptions?: QueryClientConfig['defaultOptions'],

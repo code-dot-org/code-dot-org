@@ -1,14 +1,12 @@
 class Api::V1::Account::SettingsController < Api::V1::JSONApiController
-  # `force_json` before `authenticate_user!` so a signed-out request gets 401
-  # JSON, not a navigational 302 to sign-in (Devise treats `Accept: */*` as
-  # navigational). Do NOT add a CSRF-token skip or `allow_cdo_cors` in this
-  # namespace.
+  # force_json must precede authenticate_user! so a signed-out request gets 401
+  # JSON, not Devise's navigational 302 to sign-in. Do not add a CSRF skip or
+  # allow_cdo_cors here.
   before_action :force_json
   before_action :authenticate_user!
   before_action :prevent_caching
 
-  # GET /api/v1/account/settings. Singular resource (no user id, reads only
-  # current_user), so a cross-user (IDOR) read is impossible by route shape.
+  # Singular resource keyed on current_user only, so no cross-user (IDOR) read.
   def show
     render json: ::Account::SettingsSerializer.new(current_user).as_json
   end

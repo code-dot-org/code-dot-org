@@ -1,7 +1,6 @@
 import {Box, Typography} from '@mui/material';
 import type {ReactNode} from 'react';
 
-/** A titled Account Details section: a labelled region with its own h2. */
 export default function Section({
   id,
   title,

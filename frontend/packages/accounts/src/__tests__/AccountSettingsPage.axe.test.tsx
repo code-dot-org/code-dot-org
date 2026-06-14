@@ -14,8 +14,8 @@ import {
   resetAccountsFixtures,
 } from '../fixtures';
 
-// Axe needs the whole document: MUI Dialogs portal to document.body, outside
-// the render container.
+// Audit the whole document: MUI Dialogs portal to document.body, outside the
+// render container.
 function renderPage(tag: string) {
   registerAccountsFixtures();
   setActiveScenario({labKey: ACCOUNTS_LAB_KEY, tag});
@@ -27,9 +27,8 @@ function renderPage(tag: string) {
   );
 }
 
-// color-contrast can't be computed in jsdom (no layout/paint, no canvas), so we
-// disable it here and verify contrast in a real browser (Playwright + manual,
-// tasks 7.x/8.2). Every other rule runs.
+// jsdom can't compute color-contrast (no layout/paint), so disable it here;
+// the Playwright a11y spec verifies contrast in a real browser.
 function auditBody() {
   return axe(document.body, {rules: {'color-contrast': {enabled: false}}});
 }

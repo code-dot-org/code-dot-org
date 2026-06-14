@@ -2,10 +2,9 @@ import type {ApiError} from '@code-dot-org/core/api';
 
 import type {FieldErrors} from './accounts.types';
 
-// Form fields the server keys validation errors by (Rails snake_case). A key
-// whose leaf segment is in this set becomes a field error; everything else
-// (Rails `base`, dotted association paths like `authentication_options.email`,
-// unknown keys) becomes a form-level error.
+// A server error key in this set becomes a field error; everything else (Rails
+// `base`, dotted paths like `authentication_options.email`, unknown keys) is
+// form-level.
 const KNOWN_FIELDS = new Set([
   'given_name',
   'family_name',
@@ -44,9 +43,9 @@ function unwrapErrors(error: ApiError): Record<string, unknown> {
 }
 
 /**
- * Typed validation failure surfaced from a Rails mutation. Carries field-level
- * messages (mapped to form fields) and form-level messages separately. The
- * wire shapes this parses were captured from the real Rails controllers.
+ * Typed validation failure from a Rails mutation, carrying field- and
+ * form-level messages separately. Parses wire shapes captured from the real
+ * controllers.
  */
 export class AccountsApiValidationError extends Error {
   readonly status: number;
@@ -61,16 +60,13 @@ export class AccountsApiValidationError extends Error {
     this.formErrors = formErrors;
   }
 
-  /** True when the server returned a failure with no specific messages. */
   get isEmpty(): boolean {
     return (
       this.formErrors.length === 0 && Object.keys(this.fieldErrors).length === 0
     );
   }
 
-  // Messages are de-duplicated (some fields fire two validators and repeat).
-  // Exact-match known fields become field errors; `base`, dotted association
-  // paths (`authentication_options.email`), and unknown keys are form-level.
+  // Messages are de-duplicated; a field can fire two validators and repeat.
   static fromApiError(error: ApiError): AccountsApiValidationError {
     const entries = Object.entries(unwrapErrors(error))
       .map(([key, value]) => [key, toMessages(value)] as const)

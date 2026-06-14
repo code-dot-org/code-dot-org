@@ -1,9 +1,6 @@
-// MSW fixtures for the account settings endpoints, registered through core's
-// generic `registerMockFixture` registry. The standalone dev server
-// and Studio's MSW mode both consume them. Reads layer scenario-store
-// write-through over seed data so a successful mutation shows up on the next
-// read; the mutation routes also serve the real captured 422/400 bodies for
-// invalid input.
+// MSW fixtures for the account settings endpoints. Reads layer a scenario-store
+// write-through over seed data, so a successful mutation shows up on the next
+// read; mutation routes serve the real captured 422/400 bodies for invalid input.
 
 import {
   clearActiveScenario,
@@ -95,7 +92,6 @@ function scenarioRoutes(tag: AccountsScenarioTag): MockRoute[] {
       path: '*/api/v1/account/settings',
       respond: ctx => readSettings(ctx, scenario),
     },
-    // Profile + password save bar — PATCH /dashboardapi/users.
     {
       method: 'patch',
       path: '*/dashboardapi/users',
@@ -141,7 +137,6 @@ function scenarioRoutes(tag: AccountsScenarioTag): MockRoute[] {
         return json(null, 204);
       },
     },
-    // Email change — PATCH /users/email.
     {
       method: 'patch',
       path: '*/users/email',
@@ -160,7 +155,6 @@ function scenarioRoutes(tag: AccountsScenarioTag): MockRoute[] {
         return json(null, 204);
       },
     },
-    // Account type — PATCH /users/user_type.
     {
       method: 'patch',
       path: '*/users/user_type',
@@ -176,7 +170,7 @@ function scenarioRoutes(tag: AccountsScenarioTag): MockRoute[] {
         return json(null, 204);
       },
     },
-    // Account deletion — DELETE /users (top-level password_confirmation; 400).
+    // DELETE /users reads a top-level password_confirmation and rejects with 400.
     {
       method: 'delete',
       path: '*/users',
@@ -194,14 +188,12 @@ function scenarioRoutes(tag: AccountsScenarioTag): MockRoute[] {
   ];
 }
 
-/** Registers every account scenario's routes. Call before starting the worker. */
 export function registerAccountsFixtures(): void {
   for (const tag of ACCOUNTS_SCENARIO_TAGS) {
     registerMockFixture({labKey: ACCOUNTS_LAB_KEY, tag}, scenarioRoutes(tag));
   }
 }
 
-/** Clears account fixtures and write-through state between tests. */
 export function resetAccountsFixtures(): void {
   clearMockFixtures({labKey: ACCOUNTS_LAB_KEY});
   resetScenarioStore();

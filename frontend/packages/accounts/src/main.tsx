@@ -1,7 +1,5 @@
-// Standalone dev host. Mirrors Studio's root styling foundation so the page
-// looks like code.org outside the host: design-system fonts, color tokens, and
-// the CdoTheme. (Studio supplies the header/footer chrome; the package exports
-// only the page.)
+// Standalone dev host. Mirrors Studio's styling foundation (fonts, color
+// tokens, CdoTheme) so the page looks like code.org outside the host.
 import '@code-dot-org/fonts/brands/code.org/index.css';
 import '@code-dot-org/component-library-styles/fontVariables.css';
 import '@code-dot-org/component-library-styles/primitiveColors.css';
@@ -37,8 +35,7 @@ function activeScenario(): AccountsScenarioTag {
     : 'teacher';
 }
 
-// MSW mode: register fixtures and select the scenario before any fetch fires,
-// then start the worker. A no-op when VITE_API_MODE is unset.
+// Selects the scenario before any fetch fires. A no-op unless VITE_API_MODE=msw.
 async function bootMocks(tag: AccountsScenarioTag): Promise<void> {
   if (import.meta.env.VITE_API_MODE !== 'msw') return;
 
@@ -51,14 +48,12 @@ async function bootMocks(tag: AccountsScenarioTag): Promise<void> {
   await startMockWorker();
 }
 
-// Tool-agnostic opt-out for the dev chrome: any consumer (visual test, embed,
-// clean screenshot) passes `?devChrome=off`, rather than sniffing the runtime.
+// `?devChrome=off` opts out of the dev chrome (visual tests, embeds, clean
+// screenshots) without sniffing the runtime.
 function devChromeHidden(): boolean {
   return new URLSearchParams(window.location.search).get('devChrome') === 'off';
 }
 
-// Dev-only scenario switcher; `?scenario=` drives selection, so hiding it
-// changes nothing.
 function ScenarioSwitcher({value}: {value: AccountsScenarioTag}) {
   if (devChromeHidden()) return null;
   return (

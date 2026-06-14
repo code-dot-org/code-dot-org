@@ -10,15 +10,14 @@ import {AGE_OPTIONS, US_STATE_OPTIONS} from '../util/profileOptions';
 import Section from './Section';
 import type {SectionProps} from './types';
 
-// Lead with an empty placeholder so an unset age/state shows "Select …" rather
-// than silently the first option (legacy parity).
+// Empty placeholder first, so an unset age/state shows "Select …" rather than
+// silently defaulting to the first option (legacy parity).
 const AGE_ITEMS = [{value: '', text: 'Select age'}, ...AGE_OPTIONS];
 const US_STATE_ITEMS = [
   {value: '', text: 'Select a state'},
   ...US_STATE_OPTIONS,
 ];
 
-// Student variant: no last name; adds age + US state.
 export default function MyInformation({settings}: SectionProps) {
   const isTeacher = settings.userType === 'teacher';
   const givenName = useField('given_name');

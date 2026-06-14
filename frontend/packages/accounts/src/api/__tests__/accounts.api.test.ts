@@ -16,9 +16,8 @@ import {
 } from '../accounts.api';
 import {AccountsApiValidationError} from '../AccountsApiValidationError';
 
-// Error bodies captured verbatim from the real Rails controllers. The MSW
-// fixtures serve exactly these so the parser is tested against reality, not
-// invented shapes.
+// Error bodies captured verbatim from the real Rails controllers, so the parser
+// is tested against reality, not invented shapes.
 const TAKEN_USERNAME = {username: ['Username has already been taken']};
 const SHORT_PASSWORD = {
   password: ['Password is too short (minimum is 6 characters)'],
@@ -150,8 +149,8 @@ describe('422 → AccountsApiValidationError', () => {
     }).catch(e => e);
 
     expect(error).toBeInstanceOf(AccountsApiValidationError);
-    // The two duplicate `email` messages collapse to one field error; the
-    // dotted `authentication_options.email` key is form-level (not a known field).
+    // Duplicate `email` messages collapse to one; the dotted
+    // `authentication_options.email` key is form-level, not a known field.
     expect(error.fieldErrors.email).toEqual([
       'Email does not appear to be a valid e-mail address',
     ]);

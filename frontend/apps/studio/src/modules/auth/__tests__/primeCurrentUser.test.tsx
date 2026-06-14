@@ -85,13 +85,11 @@ describe('shared current-user cache', () => {
   it('issues exactly one current-user GET across the bootstrap and the page read', async () => {
     const queryClient = createQueryClient();
 
-    // Root route beforeLoad: one fetch, then prime the cache.
     const auth = await fetchAuthOutcome();
     primeCurrentUser(queryClient, auth);
     expect(auth.status).toBe('signed-in');
     expect(currentUserCalls).toBe(1);
 
-    // The accounts page reads the current user via the hook — from cache.
     const {result} = renderHook(() => useCurrentUser(DashboardApiClient), {
       wrapper: wrapper(queryClient),
     });

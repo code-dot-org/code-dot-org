@@ -1,18 +1,13 @@
 import type {AuthOutcome} from './types';
 
 /**
- * Sign-in redirect target for a protected route, or null to proceed.
+ * Sign-in redirect target for a protected route, or null to proceed. Only
+ * `signed-out` redirects; `error` proceeds because the root layout already
+ * renders the auth error page, so redirecting would loop.
  *
- * Fail-closed gate: only the `signed-out` outcome redirects to the Rails
- * sign-in page with a return-to. `signed-in` proceeds; `error` proceeds too —
- * the root layout already renders the auth error page for that outcome, so
- * redirecting would loop.
- *
- * @param auth - The resolved auth outcome from the root route context.
- * @param returnToPath - The caller's own relative path (`pathname + search`)
- *   to return to after sign-in. Must never be an absolute URL or
- *   attacker-influenceable input; Rails' open-redirect protection is the
- *   backstop, not the validation.
+ * `returnToPath` must be the caller's own relative path, never an absolute URL
+ * or attacker-influenceable input; Rails' open-redirect protection is only a
+ * backstop.
  */
 export function signInRedirectHref(
   auth: AuthOutcome,

@@ -19,10 +19,8 @@ export async function enableMocks(): Promise<void> {
   // before any handler reads from the store.
   maybeResetFromUrl();
 
-  // The accounts feature module is not a lab, so its fixtures register at boot
-  // rather than from a route loader: the current-user route they provide must
-  // exist before the root route's `beforeLoad` resolves auth (design D6).
-  // `?scenario=` selects the persona for dev preview; default is teacher.
+  // Register at boot, not from a route loader: the current-user route these
+  // fixtures provide must exist before the root route's beforeLoad resolves auth.
   registerAccountsFixtures();
   const requested = new URLSearchParams(window.location.search).get('scenario');
   const tag: AccountsScenarioTag =

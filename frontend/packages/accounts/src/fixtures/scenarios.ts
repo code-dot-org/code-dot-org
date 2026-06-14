@@ -4,8 +4,8 @@ import type {CurrentUserResponseSignedIn} from '@code-dot-org/core/api';
 
 import type {AccountSettingsResponseSchema} from '../api/accounts.schemata';
 
-// The settings read body in WIRE (snake_case) format. Typed as the schema's
-// input so fixture drift fails `tsc` at the fixture.
+// Wire (snake_case) settings body, typed as the schema's input so fixture
+// drift fails tsc here.
 export type AccountSettingsWire = z.input<typeof AccountSettingsResponseSchema>;
 
 export const ACCOUNTS_SCENARIO_TAGS = [
@@ -153,8 +153,8 @@ const ssoTeacher: AccountScenario = {
   },
 };
 
-// Oauth-only student: no password; legacy routes them to "Create personal
-// login", not add-password, so the entitlement is false (no password button).
+// Oauth-only student: legacy routes them to "Create personal login", not
+// add-password, so the entitlement is false.
 const ssoStudent: AccountScenario = {
   currentUser: {
     ...baseCurrentUser,
@@ -191,8 +191,8 @@ const ssoStudent: AccountScenario = {
   },
 };
 
-// Least-populated account: a word/picture student with optional fields null and
-// edits locked. Exercises the all-null / empty-affordance paths.
+// A word/picture student with optional fields null and edits locked; exercises
+// the all-null / empty-affordance paths.
 const minimal: AccountScenario = {
   currentUser: {
     ...baseCurrentUser,

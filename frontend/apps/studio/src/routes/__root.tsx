@@ -79,10 +79,8 @@ function RootContent() {
         menuItems={MENU_ITEMS}
         userAuth={auth}
       />
-      {/* Reserve ~a viewport for the route content so the footer starts at/below
-          the fold while a route's chunk or data loads, and doesn't jump down when
-          the content arrives. Layout-level concern shared by every async route;
-          the offset approximates the header height. */}
+      {/* Hold the content area open (minus the header height) so the footer
+          doesn't jump down when an async route's chunk or data arrives. */}
       <Box sx={{minHeight: 'calc(100vh - 48px)'}}>
         {renderRouteArea(auth, onRetry)}
       </Box>
@@ -110,7 +108,7 @@ function RootLayout() {
  * `beforeLoad` fetches auth once per navigation before any component renders,
  * eliminating the useEffect bootstrap pattern and StrictMode double-fetch. The
  * resolved user primes the shared query cache so feature modules read it via
- * `useCurrentUser` without a second request (design D4).
+ * `useCurrentUser` without a second request.
  */
 export const Route = createRootRoute({
   beforeLoad: async () => {
