@@ -3,13 +3,11 @@ import {
   Dialog,
   DialogActions,
   DialogContent,
-  DialogContentText,
+  DialogTitle,
   FormControl,
   FormControlLabel,
-  FormLabel,
   Radio,
   RadioGroup,
-  DialogTitle,
   Typography,
 } from '@mui/material';
 import {useState, type FormEvent} from 'react';
@@ -71,18 +69,27 @@ export default function ParentEmailModal({
   };
 
   return (
-    <Dialog open={open} onClose={close} aria-labelledby="parent-email-title">
+    <Dialog
+      open={open}
+      onClose={close}
+      aria-labelledby="parent-email-title"
+      aria-describedby="parent-email-desc"
+    >
       <form onSubmit={handleSubmit} noValidate>
         <DialogTitle id="parent-email-title">
           Update parent/guardian email address
         </DialogTitle>
         <DialogContent sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
-          <DialogContentText>
-            This email address will have the ability to recover/reset the
-            password of this account.
-          </DialogContentText>
+          <Typography id="parent-email-desc" variant="body2">
+            This email address will have the ability to recover or reset this
+            account’s password.
+          </Typography>
           {errors.formError && (
-            <Typography role="alert" sx={{color: 'var(--text-error-primary)'}}>
+            <Typography
+              role="alert"
+              variant="body2"
+              sx={{color: 'var(--text-error-primary)'}}
+            >
               {errors.formError}
             </Typography>
           )}
@@ -104,26 +111,42 @@ export default function ParentEmailModal({
             errorMessage={mismatch ? MISMATCH : undefined}
             aria-invalid={mismatch || undefined}
           />
-          <FormControl>
-            <FormLabel id="parent-optin-label">
+          {/* fieldset + legend groups the opt-in radios for assistive tech;
+              reset the native fieldset/legend chrome so it lays out flush. */}
+          <FormControl
+            component="fieldset"
+            variant="standard"
+            sx={{m: 0, p: 0, border: 0, minWidth: 0}}
+          >
+            <Typography
+              component="legend"
+              variant="body2"
+              sx={{p: 0, fontWeight: 600, mb: 0.5}}
+            >
               For parent/guardian only
-            </FormLabel>
-            <Typography variant="body3" sx={{mb: 1}}>
-              Only fill out the following question if the email address above
-              belongs to you. Can we email you with occasional updates on your
-              child’s progress and projects, and updates about their course and
-              computer science?
+            </Typography>
+            <Typography variant="body2" sx={{mb: 1}}>
+              Only answer the question below if the email address above belongs
+              to you. Can we email you with occasional updates on your child’s
+              progress, projects, and course?
             </Typography>
             <RadioGroup
               row
-              aria-labelledby="parent-optin-label"
               value={optIn}
               onChange={event =>
                 setOptIn(event.target.value as ParentEmailOptIn)
               }
             >
-              <FormControlLabel value="yes" control={<Radio />} label="Yes" />
-              <FormControlLabel value="no" control={<Radio />} label="No" />
+              <FormControlLabel
+                value="yes"
+                control={<Radio />}
+                label={<Typography variant="body2">Yes</Typography>}
+              />
+              <FormControlLabel
+                value="no"
+                control={<Radio />}
+                label={<Typography variant="body2">No</Typography>}
+              />
             </RadioGroup>
           </FormControl>
         </DialogContent>
