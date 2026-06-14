@@ -20,6 +20,14 @@ const KNOWN_FIELDS = new Set([
   'parent_email',
 ]);
 
+// Server attribute names the SPA folds onto one of its fields. set_parent_email
+// maps parent_email -> parent_email_preference_email, so a validation error
+// comes back under that key; surface it on the parent_email field, not as a
+// form-level message.
+const FIELD_ALIASES: Record<string, string> = {
+  parent_email_preference_email: 'parent_email',
+};
+
 function dedupe(messages: string[]): string[] {
   return [...new Set(messages)];
 }
@@ -70,7 +78,10 @@ export class AccountsApiValidationError extends Error {
   // Messages are de-duplicated; a field can fire two validators and repeat.
   static fromApiError(error: ApiError): AccountsApiValidationError {
     const entries = Object.entries(unwrapErrors(error))
-      .map(([key, value]) => [key, toMessages(value)] as const)
+      .map(
+        ([key, value]) =>
+          [FIELD_ALIASES[key] ?? key, toMessages(value)] as const,
+      )
       .filter(([, messages]) => messages.length > 0);
 
     const fieldErrors: FieldErrors = Object.fromEntries(

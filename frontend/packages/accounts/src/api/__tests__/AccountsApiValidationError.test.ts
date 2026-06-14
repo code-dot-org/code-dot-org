@@ -55,6 +55,25 @@ describe('AccountsApiValidationError.fromApiError', () => {
     expect(error.fieldErrors.parent_email).toEqual(['Parent email is invalid']);
   });
 
+  it('aliases the server parent_email_preference_email key onto parent_email', () => {
+    // set_parent_email maps parent_email -> parent_email_preference_email, so a
+    // validation error returns under that key; it must show on the field.
+    const error = AccountsApiValidationError.fromApiError(
+      apiError(422, {
+        parent_email_preference_email: ['Parent email is invalid'],
+      }),
+    );
+    expect(error.fieldErrors.parent_email).toEqual(['Parent email is invalid']);
+    expect(error.formErrors).toEqual([]);
+  });
+
+  it('treats an unparseable (non-object) 422 body as empty, not a crash', () => {
+    const error = AccountsApiValidationError.fromApiError(
+      apiError(422, 'Unprocessable Entity'),
+    );
+    expect(error.isEmpty).toBe(true);
+  });
+
   it('dedupes repeated messages and sends dotted/unknown keys form-level', () => {
     const error = AccountsApiValidationError.fromApiError(
       apiError(422, MALFORMED_EMAIL),

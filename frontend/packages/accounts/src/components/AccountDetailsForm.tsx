@@ -7,7 +7,6 @@ import {
   type UpdateProfileParams,
 } from '@code-dot-org/core/api';
 
-import {asAccountsValidationError} from '../api/AccountsApiValidationError';
 import AccountActions from '../sections/AccountActions';
 import LoginInformation from '../sections/LoginInformation';
 import MyInformation from '../sections/MyInformation';
@@ -15,10 +14,9 @@ import ParentGuardianEmail from '../sections/ParentGuardianEmail';
 import {useFormDispatch, useFormState} from '../state/FormContext';
 import {dirtyValues} from '../state/formReducer';
 
+import {toFormErrors} from './modalErrors';
 import SaveBar from './SaveBar';
 import {useToast} from './Toast';
-
-const GENERIC_ERROR = 'Something went wrong. Please try again.';
 
 /**
  * The Account Details tab body: one form that persists all pending My
@@ -40,9 +38,14 @@ export default function AccountDetailsForm({
     if (state.save.status === 'saving') return; // double-submit guard
 
     const dirty = dirtyValues(state);
-    // Nothing changed — skip the request. A bare {user:{}} 400s, and a modal
-    // submit bubbling up here must not fire an empty save.
-    if (Object.keys(dirty).length === 0) return;
+    // Nothing net-changed — don't fire a request (a bare {user:{}} 400s, and a
+    // bubbled modal submit must not save). Clear the bar rather than leaving it
+    // stuck showing "made changes" with a Save button that no-ops (the user
+    // edited then reverted a field).
+    if (Object.keys(dirty).length === 0) {
+      dispatch({type: 'reset'});
+      return;
+    }
 
     dispatch({type: 'saveStarted'});
     const params: UpdateProfileParams = {
@@ -59,22 +62,8 @@ export default function AccountDetailsForm({
       dispatch({type: 'saveSucceeded'});
       toast('Changes saved.');
     } catch (error) {
-      const validation = asAccountsValidationError(error);
-      if (validation && !validation.isEmpty) {
-        dispatch({
-          type: 'saveFailed',
-          fieldErrors: validation.fieldErrors,
-          formErrors: validation.formErrors.length
-            ? validation.formErrors
-            : [GENERIC_ERROR],
-        });
-      } else {
-        dispatch({
-          type: 'saveFailed',
-          fieldErrors: {},
-          formErrors: [GENERIC_ERROR],
-        });
-      }
+      const {fieldErrors, formErrors} = toFormErrors(error);
+      dispatch({type: 'saveFailed', fieldErrors, formErrors});
     }
   };
 

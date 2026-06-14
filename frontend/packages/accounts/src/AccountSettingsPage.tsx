@@ -11,6 +11,7 @@ import AccountDetailsForm from './components/AccountDetailsForm';
 import AccountTabs, {type AccountTab} from './components/AccountTabs';
 import {ToastProvider} from './components/Toast';
 import {FormProvider} from './state/FormContext';
+import {visuallyHidden} from './util/visuallyHidden';
 
 const ACCOUNT_DETAILS_TAB = 'account-details';
 
@@ -28,15 +29,6 @@ const TABS: AccountTab[] = [
 ];
 
 const NO_OP = () => {};
-
-const visuallyHidden = {
-  position: 'absolute',
-  width: 1,
-  height: 1,
-  overflow: 'hidden',
-  clip: 'rect(0 0 0 0)',
-  whiteSpace: 'nowrap',
-};
 
 export interface AccountSettingsPageProps {
   tab?: string;

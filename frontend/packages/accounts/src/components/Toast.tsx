@@ -10,6 +10,8 @@ import {
 
 import Alert from '@code-dot-org/component-library/alert';
 
+import {visuallyHidden} from '../util/visuallyHidden';
+
 type Show = (message: string) => void;
 
 const ToastContext = createContext<Show | null>(null);
@@ -17,18 +19,6 @@ const ToastContext = createContext<Show | null>(null);
 // Stable identity for the no-provider fallback, so a consumer that puts `toast`
 // in a dep array doesn't see a new function each render.
 const NOOP_TOAST: Show = () => {};
-
-const visuallyHidden = {
-  position: 'absolute',
-  width: '1px',
-  height: '1px',
-  p: 0,
-  m: '-1px',
-  overflow: 'hidden',
-  clip: 'rect(0 0 0 0)',
-  whiteSpace: 'nowrap',
-  border: 0,
-} as const;
 
 /**
  * Transient success confirmation for discrete account mutations (email,

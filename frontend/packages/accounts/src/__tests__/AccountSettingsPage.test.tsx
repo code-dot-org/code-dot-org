@@ -166,9 +166,10 @@ describe('AccountSettingsPage save flow', () => {
     );
   });
 
-  it('does not save when submitted with no net changes', async () => {
-    // Edit-then-revert leaves the save bar up but nothing dirty. Saving then
-    // must skip the request: a bare {user:{}} 400s as ParameterMissing: user.
+  it('skips the request and clears the bar when submitted with no net changes', async () => {
+    // Edit-then-revert leaves the save bar up but nothing net-dirty. Saving then
+    // must not fire a request (a bare {user:{}} 400s as ParameterMissing) and
+    // must clear the bar rather than leave it stuck.
     renderPage('teacher');
     const displayName = await screen.findByLabelText(/Display name/);
     const original = (displayName as HTMLInputElement).value;
@@ -179,10 +180,16 @@ describe('AccountSettingsPage save flow', () => {
 
     fireEvent.click(save);
 
+    // No save fired (no toast), and the bar cleared (not stuck on "made changes").
     await waitFor(() =>
-      expect(screen.queryByText('Changes saved.')).not.toBeInTheDocument(),
+      expect(
+        screen.queryByRole('button', {name: 'Save changes'}),
+      ).not.toBeInTheDocument(),
     );
-    expect(screen.getByText('You’ve made some changes.')).toBeInTheDocument();
+    expect(screen.queryByText('Changes saved.')).not.toBeInTheDocument();
+    expect(
+      screen.queryByText('You’ve made some changes.'),
+    ).not.toBeInTheDocument();
   });
 
   it('shows a server field error and keeps the value on a 422', async () => {

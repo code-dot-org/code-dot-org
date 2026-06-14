@@ -44,6 +44,11 @@ export function dirtyValues(state: FormState): FormValues {
 export function formReducer(state: FormState, action: FormAction): FormState {
   switch (action.type) {
     case 'edit':
+      // Ignore edits mid-save: the fields are controlled by `values`, so this
+      // also freezes them during the in-flight PATCH. Otherwise a keystroke
+      // would land in `values` (but never be sent) and 'saveSucceeded' would
+      // rebase it into `initial`, recording an un-saved edit as the baseline.
+      if (state.save.status === 'saving') return state;
       // Editing returns the save lifecycle to `dirty`, dropping any prior errors.
       return {
         ...state,
