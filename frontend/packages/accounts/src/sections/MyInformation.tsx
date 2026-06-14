@@ -35,6 +35,8 @@ export default function MyInformation({settings}: SectionProps) {
         onChange={event => displayName.onChange(event.target.value)}
         errorMessage={displayName.errors[0]}
         aria-invalid={displayName.errors.length > 0 || undefined}
+        autoComplete="off"
+        data-1p-ignore
         helperMessage={
           isTeacher ? 'This is what your students will see.' : undefined
         }
@@ -55,6 +57,8 @@ export default function MyInformation({settings}: SectionProps) {
                 onChange={event => givenName.onChange(event.target.value)}
                 errorMessage={givenName.errors[0]}
                 aria-invalid={givenName.errors.length > 0 || undefined}
+                autoComplete="off"
+                data-1p-ignore
               />
             </Field>
             <Field>
@@ -65,6 +69,8 @@ export default function MyInformation({settings}: SectionProps) {
                 onChange={event => familyName.onChange(event.target.value)}
                 errorMessage={familyName.errors[0]}
                 aria-invalid={familyName.errors.length > 0 || undefined}
+                autoComplete="off"
+                data-1p-ignore
               />
             </Field>
             {displayNameField}

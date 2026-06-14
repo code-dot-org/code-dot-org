@@ -101,6 +101,8 @@ export default function ParentEmailModal({
             onChange={event => setEmail(event.target.value)}
             errorMessage={errors.fieldErrors.parent_email?.[0]}
             aria-invalid={errors.fieldErrors.parent_email ? true : undefined}
+            autoComplete="off"
+            data-1p-ignore
           />
           <TextField
             label="Confirm parent/guardian email address"
@@ -110,6 +112,8 @@ export default function ParentEmailModal({
             onChange={event => setConfirmEmail(event.target.value)}
             errorMessage={mismatch ? MISMATCH : undefined}
             aria-invalid={mismatch || undefined}
+            autoComplete="off"
+            data-1p-ignore
           />
           {/* fieldset + legend groups the opt-in radios for assistive tech;
               reset the native fieldset/legend chrome so it lays out flush. */}
