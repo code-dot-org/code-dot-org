@@ -208,6 +208,18 @@ function scenarioRoutes(tag: AccountsScenarioTag): MockRoute[] {
       path: '*/expire_other',
       respond: () => json(null, 204),
     },
+    // CSRF refresh after a session-rotating action (e.g. expire_other). The
+    // token rides the `csrf-token` response header; without this the request
+    // escapes MSW to the network and errors in the standalone.
+    {
+      method: 'get',
+      path: '*/get_token',
+      respond: () =>
+        new Response(null, {
+          status: 200,
+          headers: {'csrf-token': 'mock-csrf-token'},
+        }),
+    },
     // DELETE /users reads a top-level password_confirmation and rejects with 400.
     {
       method: 'delete',

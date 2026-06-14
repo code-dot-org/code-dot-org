@@ -39,12 +39,15 @@ function activeScenario(): AccountsScenarioTag {
 async function bootMocks(tag: AccountsScenarioTag): Promise<void> {
   if (import.meta.env.VITE_API_MODE !== 'msw') return;
 
-  const {setActiveScenario, startMockWorker} = await import(
+  const {maybeResetFromUrl, setActiveScenario, startMockWorker} = await import(
     '@code-dot-org/core/api/mocks'
   );
 
   registerAccountsFixtures();
   setActiveScenario({labKey: ACCOUNTS_LAB_KEY, tag});
+  // The write-through store survives reload (sessionStorage); ?cdoMockReset=1
+  // wipes it for a clean slate.
+  maybeResetFromUrl();
   await startMockWorker();
 }
 
