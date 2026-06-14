@@ -8,9 +8,8 @@ import {
   DialogTitle,
   FormControlLabel,
   Checkbox,
-  Typography,
 } from '@mui/material';
-import {useState, type FormEvent} from 'react';
+import {useState} from 'react';
 
 import TextField from '@code-dot-org/component-library/textField';
 import {
@@ -20,9 +19,8 @@ import {
 } from '@code-dot-org/core/api';
 
 import {formDialogContentSx} from './formDialog';
-import {modalErrors, type ModalErrors} from './modalErrors';
-
-const NO_ERRORS: ModalErrors = {fieldErrors: {}, formError: null};
+import FormError from './FormError';
+import {useModalForm} from './useModalForm';
 
 /**
  * Destructive delete-account alertdialog. Requires explicit acknowledgment (and
@@ -40,9 +38,9 @@ export default function DeleteAccountModal({
   settings: AccountSettings;
 }) {
   const mutation = useDeleteAccount(DashboardApiClient);
+  const {errors, resetErrors, onSubmit} = useModalForm();
   const [password, setPassword] = useState('');
   const [acknowledged, setAcknowledged] = useState(false);
-  const [errors, setErrors] = useState<ModalErrors>(NO_ERRORS);
 
   const requiresPassword = settings.hasPassword;
   const canDelete = acknowledged && (!requiresPassword || password.length > 0);
@@ -50,22 +48,15 @@ export default function DeleteAccountModal({
   const close = () => {
     setPassword('');
     setAcknowledged(false);
-    setErrors(NO_ERRORS);
+    resetErrors();
     onClose();
   };
 
-  const handleSubmit = async (event: FormEvent) => {
-    event.preventDefault();
-    event.stopPropagation(); // keep this submit off the page form (portal bubbles)
-    setErrors(NO_ERRORS);
-    try {
-      await mutation.mutateAsync(requiresPassword ? {password} : {});
-      // The server signs the user out; leave the SPA.
-      window.location.assign('/');
-    } catch (error) {
-      setErrors(modalErrors(error));
-    }
-  };
+  const handleSubmit = onSubmit(async () => {
+    await mutation.mutateAsync(requiresPassword ? {password} : {});
+    // The server signs the user out; leave the SPA.
+    window.location.assign('/');
+  });
 
   const dependents = settings.dependentStudentsCount;
 
@@ -89,11 +80,7 @@ export default function DeleteAccountModal({
               : ''}
             . This can’t be undone.
           </DialogContentText>
-          {errors.formError && (
-            <Typography role="alert" sx={{color: 'var(--text-error-primary)'}}>
-              {errors.formError}
-            </Typography>
-          )}
+          <FormError message={errors.formError} />
           {requiresPassword && (
             <TextField
               label="Password"

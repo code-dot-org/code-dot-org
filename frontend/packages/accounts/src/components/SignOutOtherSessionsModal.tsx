@@ -6,9 +6,7 @@ import {
   DialogContent,
   DialogContentText,
   DialogTitle,
-  Typography,
 } from '@mui/material';
-import {useState, type FormEvent} from 'react';
 
 import {
   DashboardApiClient,
@@ -16,10 +14,9 @@ import {
 } from '@code-dot-org/core/api';
 
 import {formDialogContentSx} from './formDialog';
-import {modalErrors, type ModalErrors} from './modalErrors';
+import FormError from './FormError';
 import {useToast} from './Toast';
-
-const NO_ERRORS: ModalErrors = {fieldErrors: {}, formError: null};
+import {useModalForm} from './useModalForm';
 
 /**
  * Confirms signing out every other browser/device. Reversible, so the confirm
@@ -34,25 +31,18 @@ export default function SignOutOtherSessionsModal({
 }) {
   const mutation = useSignOutOtherSessions(DashboardApiClient);
   const toast = useToast();
-  const [errors, setErrors] = useState<ModalErrors>(NO_ERRORS);
+  const {errors, resetErrors, onSubmit} = useModalForm();
 
   const close = () => {
-    setErrors(NO_ERRORS);
+    resetErrors();
     onClose();
   };
 
-  const handleSubmit = async (event: FormEvent) => {
-    event.preventDefault();
-    event.stopPropagation(); // keep this submit off the page form (portal bubbles)
-    setErrors(NO_ERRORS);
-    try {
-      await mutation.mutateAsync();
-      toast('Signed out of all other sessions.');
-      close();
-    } catch (error) {
-      setErrors(modalErrors(error));
-    }
-  };
+  const handleSubmit = onSubmit(async () => {
+    await mutation.mutateAsync();
+    toast('Signed out of all other sessions.');
+    close();
+  });
 
   return (
     <Dialog
@@ -73,11 +63,7 @@ export default function SignOutOtherSessionsModal({
             This signs you out on every other browser and device. You’ll stay
             signed in here.
           </DialogContentText>
-          {errors.formError && (
-            <Typography role="alert" sx={{color: 'var(--text-error-primary)'}}>
-              {errors.formError}
-            </Typography>
-          )}
+          <FormError message={errors.formError} />
         </DialogContent>
         <DialogActions>
           {/* autoFocus lands initial focus inside the dialog (so it's announced)

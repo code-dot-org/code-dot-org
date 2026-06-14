@@ -5,18 +5,16 @@ import {
   DialogActions,
   DialogContent,
   DialogTitle,
-  Typography,
 } from '@mui/material';
-import {useState, type FormEvent} from 'react';
+import {useState} from 'react';
 
 import TextField from '@code-dot-org/component-library/textField';
 import {DashboardApiClient, useCreatePassword} from '@code-dot-org/core/api';
 
 import {formDialogContentSx} from './formDialog';
-import {modalErrors, type ModalErrors} from './modalErrors';
+import FormError from './FormError';
 import {useToast} from './Toast';
-
-const NO_ERRORS: ModalErrors = {fieldErrors: {}, formError: null};
+import {useModalForm} from './useModalForm';
 
 /** Create-password modal for SSO-only accounts (no current password to confirm). */
 export default function CreatePasswordModal({
@@ -28,32 +26,25 @@ export default function CreatePasswordModal({
 }) {
   const mutation = useCreatePassword(DashboardApiClient);
   const toast = useToast();
+  const {errors, resetErrors, onSubmit} = useModalForm();
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [errors, setErrors] = useState<ModalErrors>(NO_ERRORS);
 
   const close = () => {
     setNewPassword('');
     setConfirmPassword('');
-    setErrors(NO_ERRORS);
+    resetErrors();
     onClose();
   };
 
-  const handleSubmit = async (event: FormEvent) => {
-    event.preventDefault();
-    event.stopPropagation(); // keep this submit off the page form (portal bubbles)
-    setErrors(NO_ERRORS);
-    try {
-      await mutation.mutateAsync({
-        newPassword,
-        newPasswordConfirmation: confirmPassword,
-      });
-      toast('Password created.');
-      close();
-    } catch (error) {
-      setErrors(modalErrors(error));
-    }
-  };
+  const handleSubmit = onSubmit(async () => {
+    await mutation.mutateAsync({
+      newPassword,
+      newPasswordConfirmation: confirmPassword,
+    });
+    toast('Password created.');
+    close();
+  });
 
   return (
     <Dialog
@@ -66,11 +57,7 @@ export default function CreatePasswordModal({
       <form onSubmit={handleSubmit} noValidate>
         <DialogTitle id="create-password-title">Create password</DialogTitle>
         <DialogContent sx={formDialogContentSx}>
-          {errors.formError && (
-            <Typography role="alert" sx={{color: 'var(--text-error-primary)'}}>
-              {errors.formError}
-            </Typography>
-          )}
+          <FormError message={errors.formError} />
           <TextField
             label="New password"
             name="password"

@@ -8,7 +8,7 @@ import {
   DialogTitle,
   Typography,
 } from '@mui/material';
-import {useState, type FormEvent} from 'react';
+import {useState} from 'react';
 
 import RadioButton from '@code-dot-org/component-library/radioButton';
 import TextField from '@code-dot-org/component-library/textField';
@@ -19,10 +19,10 @@ import {
 } from '@code-dot-org/core/api';
 
 import {formDialogContentSx} from './formDialog';
-import {modalErrors, type ModalErrors} from './modalErrors';
+import FormError from './FormError';
 import {useToast} from './Toast';
+import {useModalForm} from './useModalForm';
 
-const NO_ERRORS: ModalErrors = {fieldErrors: {}, formError: null};
 const MISMATCH = 'The email addresses don’t match.';
 
 /**
@@ -39,38 +39,31 @@ export default function ParentEmailModal({
 }) {
   const mutation = useUpdateParentEmail(DashboardApiClient);
   const toast = useToast();
+  const {errors, resetErrors, onSubmit} = useModalForm();
   const [email, setEmail] = useState('');
   const [confirmEmail, setConfirmEmail] = useState('');
   const [optIn, setOptIn] = useState<ParentEmailOptIn>('');
-  const [errors, setErrors] = useState<ModalErrors>(NO_ERRORS);
   const [mismatch, setMismatch] = useState(false);
 
   const close = () => {
     setEmail('');
     setConfirmEmail('');
     setOptIn('');
-    setErrors(NO_ERRORS);
+    resetErrors();
     setMismatch(false);
     onClose();
   };
 
-  const handleSubmit = async (event: FormEvent) => {
-    event.preventDefault();
-    event.stopPropagation(); // keep this submit off the page form (portal bubbles)
-    setErrors(NO_ERRORS);
+  const handleSubmit = onSubmit(async () => {
     if (email !== confirmEmail) {
       setMismatch(true);
       return;
     }
     setMismatch(false);
-    try {
-      await mutation.mutateAsync({parentEmail: email, optIn});
-      toast('Parent/guardian email updated.');
-      close();
-    } catch (error) {
-      setErrors(modalErrors(error));
-    }
-  };
+    await mutation.mutateAsync({parentEmail: email, optIn});
+    toast('Parent/guardian email updated.');
+    close();
+  });
 
   return (
     <Dialog
@@ -90,15 +83,7 @@ export default function ParentEmailModal({
             This email address will have the ability to recover or reset this
             account’s password.
           </Typography>
-          {errors.formError && (
-            <Typography
-              role="alert"
-              variant="body2"
-              sx={{color: 'var(--text-error-primary)'}}
-            >
-              {errors.formError}
-            </Typography>
-          )}
+          <FormError message={errors.formError} />
           <TextField
             label="Parent/guardian email address"
             name="parent_email"

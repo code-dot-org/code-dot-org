@@ -6,9 +6,8 @@ import {
   DialogContent,
   DialogContentText,
   DialogTitle,
-  Typography,
 } from '@mui/material';
-import {useState, type FormEvent} from 'react';
+import {useState} from 'react';
 
 import TextField from '@code-dot-org/component-library/textField';
 import {
@@ -20,15 +19,14 @@ import {
 import {hashEmail} from '../util/hashEmail';
 
 import {formDialogContentSx} from './formDialog';
-import {modalErrors, type ModalErrors} from './modalErrors';
+import FormError from './FormError';
 import {useToast} from './Toast';
+import {useModalForm} from './useModalForm';
 
 const TYPE_LABEL: Record<UserType, string> = {
   student: 'Student',
   teacher: 'Educator',
 };
-
-const NO_ERRORS: ModalErrors = {fieldErrors: {}, formError: null};
 
 /**
  * Confirmation alertdialog for an account-type change. Committed only on
@@ -46,35 +44,28 @@ export default function AccountTypeModal({
 }) {
   const mutation = useUpdateUserType(DashboardApiClient);
   const toast = useToast();
+  const {errors, resetErrors, onSubmit} = useModalForm();
   const [email, setEmail] = useState('');
-  const [errors, setErrors] = useState<ModalErrors>(NO_ERRORS);
 
   const isUpgrade = prospectiveType === 'teacher';
 
-  // Stay open and show the error on failure; close only once the change commits.
-  const handleSubmit = async (event: FormEvent) => {
-    event.preventDefault();
-    event.stopPropagation(); // keep this submit off the page form (portal bubbles)
-    if (!prospectiveType) return;
-    setErrors(NO_ERRORS);
-    try {
-      await mutation.mutateAsync(
-        isUpgrade
-          ? {userType: 'teacher', email, hashedEmail: hashEmail(email)}
-          : {userType: prospectiveType},
-      );
-      toast(`Account type changed to ${TYPE_LABEL[prospectiveType]}.`);
-      close();
-    } catch (error) {
-      setErrors(modalErrors(error));
-    }
-  };
-
   const close = () => {
     setEmail('');
-    setErrors(NO_ERRORS);
+    resetErrors();
     onClose();
   };
+
+  // Stay open and show the error on failure; close only once the change commits.
+  const handleSubmit = onSubmit(async () => {
+    if (!prospectiveType) return;
+    await mutation.mutateAsync(
+      isUpgrade
+        ? {userType: 'teacher', email, hashedEmail: hashEmail(email)}
+        : {userType: prospectiveType},
+    );
+    toast(`Account type changed to ${TYPE_LABEL[prospectiveType]}.`);
+    close();
+  });
 
   return (
     <Dialog
@@ -95,11 +86,7 @@ export default function AccountTypeModal({
             affect your sections, students, and other account data, and may not
             be reversible.
           </DialogContentText>
-          {errors.formError && (
-            <Typography role="alert" sx={{color: 'var(--text-error-primary)'}}>
-              {errors.formError}
-            </Typography>
-          )}
+          <FormError message={errors.formError} />
           {isUpgrade && (
             <TextField
               label="Email address"

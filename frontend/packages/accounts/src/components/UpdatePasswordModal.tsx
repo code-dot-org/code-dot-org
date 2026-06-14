@@ -5,18 +5,16 @@ import {
   DialogActions,
   DialogContent,
   DialogTitle,
-  Typography,
 } from '@mui/material';
-import {useState, type FormEvent} from 'react';
+import {useState} from 'react';
 
 import TextField from '@code-dot-org/component-library/textField';
 import {DashboardApiClient, useUpdatePassword} from '@code-dot-org/core/api';
 
 import {formDialogContentSx} from './formDialog';
-import {modalErrors, type ModalErrors} from './modalErrors';
+import FormError from './FormError';
 import {useToast} from './Toast';
-
-const NO_ERRORS: ModalErrors = {fieldErrors: {}, formError: null};
+import {useModalForm} from './useModalForm';
 
 /**
  * Update-password modal. A validation error stays open and shows against the
@@ -31,35 +29,28 @@ export default function UpdatePasswordModal({
 }) {
   const mutation = useUpdatePassword(DashboardApiClient);
   const toast = useToast();
+  const {errors, resetErrors, onSubmit} = useModalForm();
   const [currentPassword, setCurrentPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [errors, setErrors] = useState<ModalErrors>(NO_ERRORS);
 
   const close = () => {
     setCurrentPassword('');
     setNewPassword('');
     setConfirmPassword('');
-    setErrors(NO_ERRORS);
+    resetErrors();
     onClose();
   };
 
-  const handleSubmit = async (event: FormEvent) => {
-    event.preventDefault();
-    event.stopPropagation(); // keep this submit off the page form (portal bubbles)
-    setErrors(NO_ERRORS);
-    try {
-      await mutation.mutateAsync({
-        currentPassword,
-        newPassword,
-        newPasswordConfirmation: confirmPassword,
-      });
-      toast('Password updated.');
-      close();
-    } catch (error) {
-      setErrors(modalErrors(error));
-    }
-  };
+  const handleSubmit = onSubmit(async () => {
+    await mutation.mutateAsync({
+      currentPassword,
+      newPassword,
+      newPasswordConfirmation: confirmPassword,
+    });
+    toast('Password updated.');
+    close();
+  });
 
   return (
     <Dialog
@@ -72,11 +63,7 @@ export default function UpdatePasswordModal({
       <form onSubmit={handleSubmit} noValidate>
         <DialogTitle id="update-password-title">Update password</DialogTitle>
         <DialogContent sx={formDialogContentSx}>
-          {errors.formError && (
-            <Typography role="alert" sx={{color: 'var(--text-error-primary)'}}>
-              {errors.formError}
-            </Typography>
-          )}
+          <FormError message={errors.formError} />
           <TextField
             label="Current password"
             name="current_password"
