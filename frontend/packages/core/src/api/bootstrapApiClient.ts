@@ -1,4 +1,5 @@
 import {createApiClient, type ApiClient} from './client/createApiClient';
+import {resolveCsrfToken} from './csrfToken';
 import {createHttpTransport} from './transports/httpTransport';
 import {createKyTransport} from './transports/kyTransport';
 import {createReplayTransport} from './transports/replayTransport';
@@ -16,20 +17,13 @@ function getApiMode(): ApiMode {
   return raw;
 }
 
-function getCsrfToken(): string | null {
-  return (
-    document.querySelector<HTMLMetaElement>('meta[name="csrf-token"]')
-      ?.content ?? null
-  );
-}
-
 export function bootstrapApiClient(): ApiClient {
   const mode = getApiMode();
 
   const http = createKyTransport({
     baseUrl: getDashboardApiUrl(CodeStudioConfig.environment),
     credentials: 'same-origin',
-    getCsrfToken,
+    getCsrfToken: resolveCsrfToken,
   });
 
   const transport =
@@ -37,7 +31,7 @@ export function bootstrapApiClient(): ApiClient {
       ? createHttpTransport({
           baseUrl: '',
           credentials: 'same-origin',
-          getCsrfToken,
+          getCsrfToken: resolveCsrfToken,
         })
       : mode === 'replay'
         ? createReplayTransport({

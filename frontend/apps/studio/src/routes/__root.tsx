@@ -15,7 +15,12 @@ import {QueryClientProvider} from '@code-dot-org/core/api';
 
 import StudioFooter from '@/components/footer';
 import CdoLogo from '@/config/brand/assets/cdo-logo-inverse.webp';
-import {fetchAuthOutcome, primeCurrentUser, useAuth} from '@/modules/auth';
+import {
+  fetchAuthOutcome,
+  primeCsrfToken,
+  primeCurrentUser,
+  useAuth,
+} from '@/modules/auth';
 import Bootstrap from '@/modules/bootstrap';
 import {AuthErrorPage} from '@/modules/errors';
 import {queryClient} from '@/modules/queryClient';
@@ -114,6 +119,9 @@ export const Route = createRootRoute({
   beforeLoad: async () => {
     const auth = await fetchAuthOutcome();
     primeCurrentUser(queryClient, auth);
+    // Prime a CSRF token when the shell lacks the meta, so mutations work on a
+    // hard load of a subroute (and after the sign-in redirect returns here).
+    await primeCsrfToken();
     return {auth};
   },
   component: RootLayout,
