@@ -15,6 +15,12 @@ export const ACCOUNTS_SCENARIO_TAGS = [
   'sso-teacher',
   'sso-student',
   'minimal',
+  'student-no-parent',
+  'one-dependent',
+  'teacher-locked-type',
+  'age-state-unset',
+  'long-strings',
+  'student-can-switch',
 ] as const;
 
 export type AccountsScenarioTag = (typeof ACCOUNTS_SCENARIO_TAGS)[number];
@@ -234,10 +240,104 @@ const minimal: AccountScenario = {
   },
 };
 
+// QA-only scenarios filling gaps the base five can't reach. Not shipped.
+
+// Student with no parent email yet: exercises the pure parent-email ADD path
+// (base `student` already has one, so only tests update/remove).
+const studentNoParent: AccountScenario = {
+  ...student,
+  currentUser: {...student.currentUser, id: 6},
+  settings: {...student.settings, parent_email: null},
+};
+
+// Deletable teacher with exactly one dependent: verifies the SINGULAR delete
+// copy ("1 dependent student account", no trailing "s"); base teacher has 2.
+const oneDependent: AccountScenario = {
+  ...teacher,
+  currentUser: {...teacher.currentUser, id: 7},
+  settings: {...teacher.settings, dependent_students_count: 1},
+};
+
+// Teacher who can't change account type: the type switcher should be absent.
+const teacherLockedType: AccountScenario = {
+  ...teacher,
+  currentUser: {...teacher.currentUser, id: 8},
+  settings: {...teacher.settings, can_change_user_type: false},
+};
+
+// Student with age + state unset but editable: verifies the disabled "Select …"
+// placeholder shows, and that once a value is picked it can't be re-blanked.
+const ageStateUnset: AccountScenario = {
+  ...student,
+  currentUser: {...student.currentUser, id: 9, us_state_code: null},
+  settings: {
+    ...student.settings,
+    age: null,
+    us_state: null,
+    parent_email: null,
+  },
+};
+
+// Overflow / truncation / unicode probe: very long names + an emoji display
+// name, at narrow viewports.
+const longStrings: AccountScenario = {
+  currentUser: {
+    ...baseCurrentUser,
+    id: 10,
+    display_name:
+      'Maximiliana Wolfeschlegelsteinhausenbergerdorff 🦄✨ the Magnificent',
+  },
+  settings: {
+    user_type: 'teacher',
+    given_name:
+      'Maximilianaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+    family_name:
+      'Wolfeschlegelsteinhausenbergerdorffwelchevoralternwarengewissenhaft',
+    display_name:
+      'Maximiliana Wolfeschlegelsteinhausenbergerdorff 🦄✨ the Magnificent',
+    username: 'maximiliana_wolfeschlegelsteinhausenbergerdorff_the_magnificent',
+    email:
+      'maximiliana.wolfeschlegelsteinhausenbergerdorff.the.magnificent@an-extremely-long-subdomain.example.org',
+    has_password: true,
+    can_edit_email: true,
+    can_edit_password: true,
+    should_see_add_password_form: false,
+    should_see_edit_email_link: true,
+    authentication_options: [
+      {
+        credential_type: 'email',
+        email:
+          'maximiliana.wolfeschlegelsteinhausenbergerdorff.the.magnificent@an-extremely-long-subdomain.example.org',
+      },
+    ],
+    can_change_user_type: true,
+    can_delete_own_account: true,
+    age: '21+',
+    us_state: 'WA',
+    parent_email: null,
+    dependent_students_count: 0,
+  },
+  password: 'currentpass',
+};
+
+// Student who CAN change type: exercises the student->teacher upgrade path,
+// where the confirm modal additionally prompts for a (required) email address.
+const studentCanSwitch: AccountScenario = {
+  ...student,
+  currentUser: {...student.currentUser, id: 11},
+  settings: {...student.settings, can_change_user_type: true},
+};
+
 export const ACCOUNT_SCENARIOS: Record<AccountsScenarioTag, AccountScenario> = {
   teacher,
   student,
   'sso-teacher': ssoTeacher,
   'sso-student': ssoStudent,
   minimal,
+  'student-no-parent': studentNoParent,
+  'one-dependent': oneDependent,
+  'teacher-locked-type': teacherLockedType,
+  'age-state-unset': ageStateUnset,
+  'long-strings': longStrings,
+  'student-can-switch': studentCanSwitch,
 };
