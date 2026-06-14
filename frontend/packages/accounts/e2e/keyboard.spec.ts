@@ -35,7 +35,7 @@ test('the live tab is keyboard-focusable; placeholder tabs are disabled', async 
   await expect(tabs.last()).toBeDisabled();
 });
 
-test('form fields are reachable by Tab and Enter submits the save bar', async ({
+test('editing reveals the save bar and the Save button persists changes', async ({
   page,
 }) => {
   await gotoLoaded(page);
@@ -43,12 +43,14 @@ test('form fields are reachable by Tab and Enter submits the save bar', async ({
   const displayName = page.getByLabel(/Display name/);
   await displayName.fill('Dr. Ada');
 
+  // The page is intentionally not a <form> (so modal submits can't bubble into
+  // a profile save), so editing reveals the save bar and the Save button — not
+  // Enter in a field — commits.
   const save = page.getByRole('button', {name: 'Save changes'});
   await expect(save).toBeVisible();
 
-  await displayName.press('Enter');
-  // Success now confirms via the toast (a polite live region) and the save bar
-  // clears, rather than a lingering "saved" message in the bar.
+  await save.click();
+  // Success confirms via the toast (a polite live region); the save bar clears.
   await expect(page.getByRole('status')).toHaveText('Changes saved.');
   await expect(save).toBeHidden();
 });

@@ -3,13 +3,11 @@ import {Box, Button, Typography} from '@mui/material';
 import {useFormState} from '../state/FormContext';
 
 /**
- * Sticky save bar. The whole bar is one polite live region, always present
- * (content toggles on dirty state, never injected on demand), so dirty/saving/
- * error changes are announced without nesting a second live region inside it.
- * Save is a submit button, disabled while saving as a double-submit guard. A
- * successful save clears the bar entirely — the success toast confirms it.
+ * Sticky save bar: one always-present polite live region (no nested live region)
+ * so dirty/saving/error changes announce; cleared on success (the toast confirms).
+ * Save is a plain button — the page is not a <form> — disabled while saving.
  */
-export default function SaveBar() {
+export default function SaveBar({onSave}: {onSave: () => void}) {
   const {save} = useFormState();
   const hasContent = save.status !== 'idle';
 
@@ -53,8 +51,9 @@ export default function SaveBar() {
             </Box>
           )}
           <Button
-            type="submit"
+            type="button"
             variant="contained"
+            onClick={onSave}
             disabled={save.status === 'saving'}
           >
             {save.status === 'saving' ? 'Saving…' : 'Save changes'}

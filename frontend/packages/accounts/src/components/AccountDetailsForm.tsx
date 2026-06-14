@@ -1,5 +1,3 @@
-import type {FormEvent} from 'react';
-
 import {
   DashboardApiClient,
   useUpdateProfile,
@@ -33,15 +31,13 @@ export default function AccountDetailsForm({
   const toast = useToast();
   const mutation = useUpdateProfile(DashboardApiClient);
 
-  const handleSubmit = async (event: FormEvent) => {
-    event.preventDefault();
+  const handleSave = async () => {
     if (state.save.status === 'saving') return; // double-submit guard
 
     const dirty = dirtyValues(state);
-    // Nothing net-changed — don't fire a request (a bare {user:{}} 400s, and a
-    // bubbled modal submit must not save). Clear the bar rather than leaving it
-    // stuck showing "made changes" with a Save button that no-ops (the user
-    // edited then reverted a field).
+    // Nothing net-changed (the user edited then reverted a field): don't fire a
+    // request — a bare {user:{}} 400s — and clear the bar rather than leave it
+    // stuck showing "made changes" with a Save button that no-ops.
     if (Object.keys(dirty).length === 0) {
       dispatch({type: 'reset'});
       return;
@@ -68,14 +64,16 @@ export default function AccountDetailsForm({
   };
 
   return (
-    <form onSubmit={handleSubmit} noValidate>
+    // Not a <form>: portaled modal submits still bubble through the React tree,
+    // so a form here would catch them and fire a spurious save.
+    <div>
       <MyInformation settings={settings} />
       <LoginInformation settings={settings} />
       {settings.userType === 'student' && (
         <ParentGuardianEmail settings={settings} />
       )}
       <AccountActions settings={settings} />
-      <SaveBar />
-    </form>
+      <SaveBar onSave={handleSave} />
+    </div>
   );
 }
