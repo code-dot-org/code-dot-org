@@ -1,21 +1,31 @@
-import {expect, test, type Page} from '@playwright/test';
+import {expect, test, type Locator, type Page} from '@playwright/test';
 
 // Field widths are a layout concern jsdom can't compute, so assert them here.
+// boundingBox auto-waits for the element, unlike a raw evaluate on a CSS match.
+async function controlWidth(control: Locator): Promise<number> {
+  const box = await control.boundingBox();
+  if (!box) throw new Error('control has no bounding box');
+  return Math.round(box.width);
+}
 
-const controlWidth = (page: Page, selector: string) =>
-  page
-    .locator(selector)
-    .evaluate(el => Math.round(el.getBoundingClientRect().width));
+async function gotoLoaded(page: Page, scenario: string): Promise<void> {
+  await page.goto(`/?scenario=${scenario}`);
+  await page.getByRole('heading', {level: 1, name: 'My Account'}).waitFor();
+}
 
 test('inputs and dropdowns share one width, capped on desktop', async ({
   page,
 }) => {
   await page.setViewportSize({width: 1280, height: 900});
-  await page.goto('/?scenario=student');
-  await page.getByRole('heading', {level: 1, name: 'My Account'}).waitFor();
+  await gotoLoaded(page, 'student');
 
-  const input = await controlWidth(page, 'input[name="given_name"]');
-  const dropdown = await controlWidth(page, 'select[name="age"]');
+  // Display name and Age share the Field wrapper; given_name is teacher-only.
+  const input = await controlWidth(
+    page.getByRole('textbox', {name: 'Display name'}),
+  );
+  const dropdown = await controlWidth(
+    page.getByRole('combobox', {name: 'Age'}),
+  );
 
   expect(input).toBe(dropdown);
   // Capped on desktop, not stretched to the full content column.
@@ -24,10 +34,11 @@ test('inputs and dropdowns share one width, capped on desktop', async ({
 
 test('fields fill the column on mobile', async ({page}) => {
   await page.setViewportSize({width: 375, height: 800});
-  await page.goto('/?scenario=teacher');
-  await page.getByRole('heading', {level: 1, name: 'My Account'}).waitFor();
+  await gotoLoaded(page, 'teacher');
 
-  const input = await controlWidth(page, 'input[name="given_name"]');
+  const input = await controlWidth(
+    page.getByRole('textbox', {name: 'First name'}),
+  );
   // Fills the 375px viewport (minus side padding); the cap isn't hit.
   expect(input).toBeGreaterThan(300);
 });

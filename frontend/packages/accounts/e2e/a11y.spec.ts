@@ -1,5 +1,5 @@
 import AxeBuilder from '@axe-core/playwright';
-import {expect, test} from '@playwright/test';
+import {expect, test, type Page} from '@playwright/test';
 
 // Real-browser axe scans, where (unlike the jsdom pass) color-contrast is
 // computed.
@@ -13,14 +13,14 @@ const SCENARIOS = [
 
 const WCAG_TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'];
 
-const analyze = (page: import('@playwright/test').Page) =>
+const analyze = (page: Page) =>
   new AxeBuilder({page}).withTags(WCAG_TAGS).analyze();
 
 // CdoTheme's primary button fails AA contrast app-wide (a design-system issue,
 // not fixable here). Modal scans drop only color-contrast so that one theme
 // button doesn't mask the structural checks (roles, names, focus); page scans
 // above keep it on.
-const analyzeNoContrast = (page: import('@playwright/test').Page) =>
+const analyzeNoContrast = (page: Page) =>
   new AxeBuilder({page})
     .withTags(WCAG_TAGS)
     .disableRules(['color-contrast'])

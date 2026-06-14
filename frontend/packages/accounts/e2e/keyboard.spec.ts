@@ -133,12 +133,16 @@ test('critical flows work at 400% zoom (320px reflow) without horizontal scroll'
   await page.setViewportSize({width: 320, height: 900});
   await gotoLoaded(page);
 
-  const overflows = await page.evaluate(
-    () =>
-      document.documentElement.scrollWidth >
-      document.documentElement.clientWidth + 1,
-  );
-  expect(overflows).toBe(false);
+  // Poll: a late webfont swap can widen content for a frame after the H1 paints.
+  await expect
+    .poll(() =>
+      page.evaluate(
+        () =>
+          document.documentElement.scrollWidth -
+          document.documentElement.clientWidth,
+      ),
+    )
+    .toBeLessThanOrEqual(1);
 
   const trigger = page.getByRole('button', {name: 'Update email'});
   await trigger.click();
