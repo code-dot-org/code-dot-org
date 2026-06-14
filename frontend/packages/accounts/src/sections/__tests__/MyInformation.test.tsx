@@ -57,3 +57,48 @@ describe('MyInformation age/state dropdowns', () => {
     ).toBeInTheDocument();
   });
 });
+
+describe('MyInformation name fields by user type', () => {
+  it('shows first and last name for a teacher', () => {
+    renderSection(TEACHER, {family_name: 'Lovelace'});
+    expect(
+      screen.getByRole('textbox', {name: 'First name'}),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('textbox', {name: 'Last name'}),
+    ).toBeInTheDocument();
+  });
+
+  it('shows only display name for a student (no first/last)', () => {
+    renderSection(STUDENT);
+    expect(screen.queryByRole('textbox', {name: 'First name'})).toBeNull();
+    expect(screen.queryByRole('textbox', {name: 'Last name'})).toBeNull();
+    expect(
+      screen.getByRole('textbox', {name: 'Display name'}),
+    ).toBeInTheDocument();
+  });
+
+  it('orders display name ahead of age and state for a student', () => {
+    renderSection(STUDENT);
+    const displayName = screen.getByRole('textbox', {name: 'Display name'});
+    const age = screen.getByRole('combobox', {name: 'Age'});
+    expect(
+      displayName.compareDocumentPosition(age) &
+        Node.DOCUMENT_POSITION_FOLLOWING,
+    ).toBeTruthy();
+  });
+});
+
+describe('MyInformation display-name helper', () => {
+  const HELPER = 'This is what your students will see.';
+
+  it('shows the students-will-see helper for a teacher', () => {
+    renderSection(TEACHER, {family_name: 'Lovelace'});
+    expect(screen.getByText(HELPER)).toBeInTheDocument();
+  });
+
+  it('hides the students-will-see helper for a student', () => {
+    renderSection(STUDENT);
+    expect(screen.queryByText(HELPER)).toBeNull();
+  });
+});

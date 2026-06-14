@@ -28,9 +28,15 @@ describe('/users/edit auth guard (beforeLoad)', () => {
       thrown = error;
     }
     expect(isRedirect(thrown)).toBe(true);
-    expect((thrown as {options: {href: string}}).options.href).toBe(
+    const options = (
+      thrown as {options: {href: string; reloadDocument?: boolean}}
+    ).options;
+    expect(options.href).toBe(
       '/users/sign_in?user_return_to=%2Fusers%2Fedit%3Ftab%3Ddetails',
     );
+    // Hard navigation so the href hits Rails, not the SPA basepath (which would
+    // 404 in the router).
+    expect(options.reloadDocument).toBe(true);
   });
 
   it('lets a signed-in visitor through (no redirect)', () => {

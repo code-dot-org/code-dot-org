@@ -26,35 +26,53 @@ export default function MyInformation({settings}: SectionProps) {
   const age = useField('age');
   const usState = useField('us_state');
 
+  const displayNameField = (
+    <Field>
+      <TextField
+        label="Display name"
+        name="name"
+        value={displayName.value}
+        onChange={event => displayName.onChange(event.target.value)}
+        errorMessage={displayName.errors[0]}
+        aria-invalid={displayName.errors.length > 0 || undefined}
+        helperMessage={
+          isTeacher ? 'This is what your students will see.' : undefined
+        }
+      />
+    </Field>
+  );
+
   return (
     <Section id="my-information" title="My Information">
       <Box sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
-        <Field>
-          <TextField
-            label="First name"
-            name="given_name"
-            value={givenName.value}
-            onChange={event => givenName.onChange(event.target.value)}
-            errorMessage={givenName.errors[0]}
-            aria-invalid={givenName.errors.length > 0 || undefined}
-          />
-        </Field>
-
-        {isTeacher && (
-          <Field>
-            <TextField
-              label="Last name"
-              name="family_name"
-              value={familyName.value}
-              onChange={event => familyName.onChange(event.target.value)}
-              errorMessage={familyName.errors[0]}
-              aria-invalid={familyName.errors.length > 0 || undefined}
-            />
-          </Field>
-        )}
-
-        {!isTeacher && (
+        {isTeacher ? (
           <>
+            <Field>
+              <TextField
+                label="First name"
+                name="given_name"
+                value={givenName.value}
+                onChange={event => givenName.onChange(event.target.value)}
+                errorMessage={givenName.errors[0]}
+                aria-invalid={givenName.errors.length > 0 || undefined}
+              />
+            </Field>
+            <Field>
+              <TextField
+                label="Last name"
+                name="family_name"
+                value={familyName.value}
+                onChange={event => familyName.onChange(event.target.value)}
+                errorMessage={familyName.errors[0]}
+                aria-invalid={familyName.errors.length > 0 || undefined}
+              />
+            </Field>
+            {displayNameField}
+          </>
+        ) : (
+          <>
+            {/* Students lead with display name; first/last are teacher-only. */}
+            {displayNameField}
             <Field>
               <SimpleDropdown
                 name="age"
@@ -79,18 +97,6 @@ export default function MyInformation({settings}: SectionProps) {
             </Field>
           </>
         )}
-
-        <Field>
-          <TextField
-            label="Display name"
-            name="name"
-            value={displayName.value}
-            onChange={event => displayName.onChange(event.target.value)}
-            errorMessage={displayName.errors[0]}
-            aria-invalid={displayName.errors.length > 0 || undefined}
-            helperMessage="This is what your students will see."
-          />
-        </Field>
       </Box>
     </Section>
   );

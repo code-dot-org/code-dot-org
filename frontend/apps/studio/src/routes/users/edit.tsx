@@ -21,7 +21,9 @@ export const Route = createFileRoute('/users/edit')({
     const returnTo = window.location.pathname + window.location.search;
     const href = signInRedirectHref(context.auth, returnTo);
     if (href) {
-      throw redirect({href});
+      // reloadDocument: hard-nav to Rails sign-in. A client redirect would
+      // prefix the SPA basepath and 404 in the router.
+      throw redirect({href, reloadDocument: true});
     }
   },
   component: AccountsRoute,

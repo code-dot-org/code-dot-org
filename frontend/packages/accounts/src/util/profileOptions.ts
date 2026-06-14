@@ -14,6 +14,8 @@ export const AGE_OPTIONS: Option[] = [
 ];
 
 export const US_STATE_OPTIONS: Option[] = [
+  // Leads the list, mirroring legacy User.us_state_dropdown_options.
+  ['??', 'I live somewhere not listed here'],
   ['AL', 'Alabama'],
   ['AK', 'Alaska'],
   ['AZ', 'Arizona'],
@@ -22,7 +24,6 @@ export const US_STATE_OPTIONS: Option[] = [
   ['CO', 'Colorado'],
   ['CT', 'Connecticut'],
   ['DE', 'Delaware'],
-  ['DC', 'District of Columbia'],
   ['FL', 'Florida'],
   ['GA', 'Georgia'],
   ['HI', 'Hawaii'],
@@ -62,6 +63,7 @@ export const US_STATE_OPTIONS: Option[] = [
   ['VT', 'Vermont'],
   ['VA', 'Virginia'],
   ['WA', 'Washington'],
+  ['DC', 'Washington, D.C.'],
   ['WV', 'West Virginia'],
   ['WI', 'Wisconsin'],
   ['WY', 'Wyoming'],
