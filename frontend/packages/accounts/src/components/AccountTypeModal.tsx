@@ -9,23 +9,28 @@ import {
 } from '@mui/material';
 import {useState} from 'react';
 
+import TextField from '@code-dot-org/component-library/textField';
 import {
   DashboardApiClient,
   useUpdateUserType,
   type UserType,
 } from '@code-dot-org/core/api';
 
-import {modalErrors} from './modalErrors';
+import {hashEmail} from '../util/hashEmail';
+
+import {modalErrors, type ModalErrors} from './modalErrors';
 
 const TYPE_LABEL: Record<UserType, string> = {
   student: 'Student',
   teacher: 'Educator',
 };
 
+const NO_ERRORS: ModalErrors = {fieldErrors: {}, formError: null};
+
 /**
- * Confirmation alertdialog for an account-type change. The prospective type
- * lives in the caller's state and is committed only on confirm; dismissing
- * leaves the account unchanged. Cancel takes initial focus.
+ * Confirmation alertdialog for an account-type change. Committed only on
+ * confirm; dismissing leaves the account unchanged. Upgrading to an educator
+ * account requires a cleartext email, so that case prompts for one.
  */
 export default function AccountTypeModal({
   open,
@@ -37,22 +42,30 @@ export default function AccountTypeModal({
   onClose: () => void;
 }) {
   const mutation = useUpdateUserType(DashboardApiClient);
-  const [formError, setFormError] = useState<string | null>(null);
+  const [email, setEmail] = useState('');
+  const [errors, setErrors] = useState<ModalErrors>(NO_ERRORS);
+
+  const isUpgrade = prospectiveType === 'teacher';
 
   // Stay open and show the error on failure; close only once the change commits.
   const confirm = async () => {
     if (!prospectiveType) return;
-    setFormError(null);
+    setErrors(NO_ERRORS);
     try {
-      await mutation.mutateAsync({userType: prospectiveType});
-      onClose();
+      await mutation.mutateAsync(
+        isUpgrade
+          ? {userType: 'teacher', email, hashedEmail: hashEmail(email)}
+          : {userType: prospectiveType},
+      );
+      close();
     } catch (error) {
-      setFormError(modalErrors(error).formError);
+      setErrors(modalErrors(error));
     }
   };
 
   const close = () => {
-    setFormError(null);
+    setEmail('');
+    setErrors(NO_ERRORS);
     onClose();
   };
 
@@ -65,20 +78,30 @@ export default function AccountTypeModal({
       slotProps={{paper: {role: 'alertdialog'}}}
     >
       <DialogTitle id="account-type-title">Change account type?</DialogTitle>
-      <DialogContent>
+      <DialogContent sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
         <DialogContentText id="account-type-desc">
           Changing your account type
           {prospectiveType ? ` to ${TYPE_LABEL[prospectiveType]}` : ''} can
           affect your sections, students, and other account data, and may not be
           reversible.
         </DialogContentText>
-        {formError && (
-          <Typography
-            role="alert"
-            sx={{mt: 2, color: 'var(--text-error-primary)'}}
-          >
-            {formError}
+        {errors.formError && (
+          <Typography role="alert" sx={{color: 'var(--text-error-primary)'}}>
+            {errors.formError}
           </Typography>
+        )}
+        {isUpgrade && (
+          <TextField
+            label="Email address"
+            name="email"
+            inputType="email"
+            autoComplete="email"
+            value={email}
+            onChange={event => setEmail(event.target.value)}
+            errorMessage={errors.fieldErrors.email?.[0]}
+            aria-invalid={errors.fieldErrors.email ? true : undefined}
+            helperMessage="Educator accounts need an email address."
+          />
         )}
       </DialogContent>
       <DialogActions>
@@ -86,7 +109,9 @@ export default function AccountTypeModal({
         <Button
           onClick={confirm}
           variant="contained"
-          disabled={mutation.isPending}
+          disabled={
+            mutation.isPending || (isUpgrade && email.trim().length === 0)
+          }
         >
           {prospectiveType
             ? `Change to ${TYPE_LABEL[prospectiveType]}`
