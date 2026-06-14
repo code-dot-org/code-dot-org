@@ -46,6 +46,7 @@ export function createHttpTransport(opts: {
       method: req.method,
       credentials,
       headers,
+      redirect: req.redirect,
       body: hasBody
         ? isFormData
           ? (req.body as FormData)
@@ -92,6 +93,13 @@ export function createHttpTransport(opts: {
     ): Promise<ApiResponse<T>> {
       const {res, url} = await doFetch(req);
       const meta = extractMeta(res, url);
+
+      // A manual-redirect request the server 302'd: the action ran; don't
+      // follow it. Treat as success-empty (matches the ky transport).
+      if (res.type === 'opaqueredirect') {
+        return {data: undefined as T, meta};
+      }
+
       const payload = await parseResponse(res, blob);
 
       if (!res.ok) {

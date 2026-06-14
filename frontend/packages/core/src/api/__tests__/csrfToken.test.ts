@@ -7,6 +7,22 @@ import {
   resolveCsrfToken,
   setSpaCsrfToken,
 } from '../csrfToken';
+import type {Transport} from '../transports/types';
+
+// Minimal transport whose requestWithMeta returns the given response headers.
+function transportWithHeaders(
+  headers: Record<string, string>,
+  reject = false,
+): Transport {
+  return {
+    requestWithMeta: reject
+      ? vi.fn().mockRejectedValue(new Error('boom'))
+      : vi.fn().mockResolvedValue({
+          data: undefined,
+          meta: {status: 200, headers, url: '/get_token'},
+        }),
+  } as unknown as Transport;
+}
 
 function setMeta(content: string | null) {
   document.querySelector('meta[name="csrf-token"]')?.remove();
@@ -49,31 +65,24 @@ describe('resolveCsrfToken', () => {
 });
 
 describe('refreshCsrfToken', () => {
-  it('fetches /get_token and stores the rotated token', async () => {
+  it('reads the rotated token from the /get_token response header via the transport', async () => {
     setSpaCsrfToken('stale');
-    const fetchMock = vi
-      .fn()
-      .mockResolvedValue(
-        new Response(null, {status: 200, headers: {'csrf-token': 'rotated'}}),
-      );
-    vi.stubGlobal('fetch', fetchMock);
+    const transport = transportWithHeaders({'csrf-token': 'rotated'});
 
-    await refreshCsrfToken();
+    await refreshCsrfToken(transport);
 
-    expect(fetchMock).toHaveBeenCalledWith('/get_token', {
-      credentials: 'same-origin',
+    expect(transport.requestWithMeta).toHaveBeenCalledWith({
+      method: 'GET',
+      url: '/get_token',
     });
     expect(getSpaCsrfToken()).toBe('rotated');
-    vi.unstubAllGlobals();
   });
 
-  it('keeps the current token when the fetch fails', async () => {
+  it('keeps the current token when the request fails', async () => {
     setSpaCsrfToken('keep');
-    vi.stubGlobal('fetch', vi.fn().mockRejectedValue(new Error('network')));
 
-    await refreshCsrfToken();
+    await refreshCsrfToken(transportWithHeaders({}, true));
 
     expect(getSpaCsrfToken()).toBe('keep');
-    vi.unstubAllGlobals();
   });
 });

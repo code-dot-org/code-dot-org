@@ -4,6 +4,10 @@
 // of an SPA subroute can be served a static shell without it. In that case the
 // host primes a token fetched from GET /get_token via setSpaCsrfToken.
 
+// Type-only import: the transports depend on this module (getCsrfToken), so a
+// value import would cycle. refreshCsrfToken takes the transport as an argument.
+import type {Transport} from './transports/types';
+
 let spaCsrfToken: string | null = null;
 
 export function setSpaCsrfToken(token: string | null): void {
@@ -30,18 +34,17 @@ export function resolveCsrfToken(): string | null {
 }
 
 // Re-fetch the session CSRF token from GET /get_token (returned in the
-// `csrf-token` response header, with an empty body) and store it. Call after a
-// server action that rotates the session token. A failure is swallowed — the
-// next mutation surfaces a stale token if one was needed.
-//
-// The relative URL assumes the SPA is served same-origin with the dashboard
-// (true in Studio hosting and under the dev MSW). If this is ever hosted on a
-// distinct origin, this — and the raw `fetch`es in account.api.ts — must take
-// the dashboard base URL instead of the page origin.
-export async function refreshCsrfToken(): Promise<void> {
+// `csrf-token` response header, with an empty body) through the transport — so
+// it inherits baseUrl, credentials, and mock interception — and store it. Call
+// after a server action that rotates the session token. A failure is swallowed:
+// the next mutation surfaces a stale token if one was needed.
+export async function refreshCsrfToken(transport: Transport): Promise<void> {
   try {
-    const response = await fetch('/get_token', {credentials: 'same-origin'});
-    const token = response.headers.get('csrf-token');
+    const {meta} = await transport.requestWithMeta({
+      method: 'GET',
+      url: '/get_token',
+    });
+    const token = meta.headers['csrf-token'];
     if (token) setSpaCsrfToken(token);
   } catch {
     // leave the current token in place

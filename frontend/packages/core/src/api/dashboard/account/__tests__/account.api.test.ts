@@ -7,8 +7,12 @@ import {createAccountApi} from '../account.api';
 
 function fakeTransport(result: unknown = undefined) {
   const request = vi.fn().mockResolvedValue(result);
-  const transport = {request} as unknown as Transport;
-  return {api: createAccountApi(transport), request};
+  const requestWithMeta = vi.fn().mockResolvedValue({
+    data: undefined,
+    meta: {status: 204, headers: {}, url: '/x'},
+  });
+  const transport = {request, requestWithMeta} as unknown as Transport;
+  return {api: createAccountApi(transport), request, requestWithMeta};
 }
 
 const WIRE_SETTINGS = {
@@ -109,65 +113,48 @@ describe('createAccountApi mutations target the right routes', () => {
     );
   });
 
-  it('signOutOtherSessions DELETEs /expire_other without following the redirect', async () => {
-    const fetchMock = vi
-      .fn()
-      .mockResolvedValue(new Response(null, {status: 204}));
-    vi.stubGlobal('fetch', fetchMock);
-    const {api} = fakeTransport();
+  it('signOutOtherSessions DELETEs /expire_other with redirect:manual', async () => {
+    const {api, requestWithMeta} = fakeTransport();
     await expect(api.signOutOtherSessions()).resolves.toBeUndefined();
-    expect(fetchMock).toHaveBeenCalledWith(
-      '/expire_other',
-      expect.objectContaining({method: 'DELETE', redirect: 'manual'}),
+    expect(requestWithMeta).toHaveBeenCalledWith(
+      expect.objectContaining({
+        method: 'DELETE',
+        url: '/expire_other',
+        redirect: 'manual',
+      }),
     );
-    vi.unstubAllGlobals();
   });
 
   it('signOutOtherSessions refreshes the CSRF token after expiring sessions', async () => {
     // expire_other rotates the session's CSRF token, so the next mutation 422s
-    // unless we re-fetch it from /get_token.
+    // unless we re-fetch it from /get_token (read off the response header).
     setSpaCsrfToken('stale');
-    const fetchMock = vi.fn((url: string) =>
-      url === '/get_token'
-        ? Promise.resolve(
-            new Response(null, {
-              status: 200,
-              headers: {'csrf-token': 'fresh'},
-            }),
-          )
-        : Promise.resolve(new Response(null, {status: 204})),
+    const {api, requestWithMeta} = fakeTransport();
+    requestWithMeta.mockImplementation((req: {url: string}) =>
+      req.url === '/get_token'
+        ? Promise.resolve({
+            data: undefined,
+            meta: {status: 200, headers: {'csrf-token': 'fresh'}, url: req.url},
+          })
+        : Promise.resolve({
+            data: undefined,
+            meta: {status: 0, headers: {}, url: req.url},
+          }),
     );
-    vi.stubGlobal('fetch', fetchMock);
-    const {api} = fakeTransport();
 
     await api.signOutOtherSessions();
 
-    expect(fetchMock).toHaveBeenCalledWith('/get_token', {
-      credentials: 'same-origin',
-    });
+    expect(requestWithMeta).toHaveBeenCalledWith(
+      expect.objectContaining({method: 'GET', url: '/get_token'}),
+    );
     expect(getSpaCsrfToken()).toBe('fresh');
     setSpaCsrfToken(null);
-    vi.unstubAllGlobals();
   });
 
-  it('signOutOtherSessions treats an unfollowed redirect as success', async () => {
-    vi.stubGlobal(
-      'fetch',
-      vi.fn().mockResolvedValue({type: 'opaqueredirect', ok: false, status: 0}),
-    );
-    const {api} = fakeTransport();
-    await expect(api.signOutOtherSessions()).resolves.toBeUndefined();
-    vi.unstubAllGlobals();
-  });
-
-  it('signOutOtherSessions throws on a real failure response', async () => {
-    vi.stubGlobal(
-      'fetch',
-      vi.fn().mockResolvedValue(new Response(null, {status: 500})),
-    );
-    const {api} = fakeTransport();
+  it('signOutOtherSessions rejects when the sign-out request fails', async () => {
+    const {api, requestWithMeta} = fakeTransport();
+    requestWithMeta.mockRejectedValue(new Error('Sign-out failed'));
     await expect(api.signOutOtherSessions()).rejects.toThrow();
-    vi.unstubAllGlobals();
   });
 
   it('deleteAccount sends a top-level password_confirmation when given', async () => {

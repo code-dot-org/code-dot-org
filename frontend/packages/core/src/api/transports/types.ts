@@ -7,6 +7,10 @@ export type RequestOptions = {
   body?: unknown;
   headers?: Record<string, string>;
   signal?: AbortSignal;
+  // 'manual' for endpoints that 302 on success (e.g. /expire_other): the
+  // transport does not follow the redirect (which would re-fire the verb at the
+  // target) and treats the resulting opaqueredirect as success.
+  redirect?: RequestRedirect;
 };
 
 export type ResponseMeta = {
