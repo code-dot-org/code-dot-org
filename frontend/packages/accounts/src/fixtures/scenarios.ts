@@ -30,6 +30,8 @@ export interface AccountScenario {
   settings: AccountSettingsWire;
   /** Cleartext password the mock auth checks accept; absent for SSO-only. */
   password?: string;
+  /** What this scenario is for; shown in the standalone scenario switcher. */
+  description: string;
 }
 
 const baseCurrentUser: CurrentUserResponseSignedIn = {
@@ -89,6 +91,7 @@ const teacher: AccountScenario = {
     dependent_students_count: 2,
   },
   password: 'currentpass',
+  description: 'Educator with a password + email; can change type and delete.',
 };
 
 const student: AccountScenario = {
@@ -127,6 +130,8 @@ const student: AccountScenario = {
     dependent_students_count: 0,
   },
   password: 'currentpass',
+  description:
+    'Student: display name only, masked email, existing parent email.',
 };
 
 const ssoTeacher: AccountScenario = {
@@ -160,6 +165,7 @@ const ssoTeacher: AccountScenario = {
     parent_email: null,
     dependent_students_count: 0,
   },
+  description: 'Google-only educator: no password, shows Create password.',
 };
 
 // Oauth-only student: legacy routes them to "Create personal login", not
@@ -199,6 +205,7 @@ const ssoStudent: AccountScenario = {
     parent_email: null,
     dependent_students_count: 0,
   },
+  description: 'Google-only student: no add-password, no edit-email link.',
 };
 
 // A word/picture student with optional fields null and edits locked; exercises
@@ -238,6 +245,7 @@ const minimal: AccountScenario = {
     parent_email: null,
     dependent_students_count: 0,
   },
+  description: 'Word/picture student, everything locked (no edit, no delete).',
 };
 
 // QA-only scenarios filling gaps the base five can't reach. Not shipped.
@@ -248,6 +256,7 @@ const studentNoParent: AccountScenario = {
   ...student,
   currentUser: {...student.currentUser, id: 6},
   settings: {...student.settings, parent_email: null},
+  description: 'Student with no parent email — the add-parent flow.',
 };
 
 // Deletable teacher with exactly one dependent: verifies the SINGULAR delete
@@ -256,6 +265,7 @@ const oneDependent: AccountScenario = {
   ...teacher,
   currentUser: {...teacher.currentUser, id: 7},
   settings: {...teacher.settings, dependent_students_count: 1},
+  description: 'Deletable account with 1 dependent — singular delete copy.',
 };
 
 // Teacher who can't change account type: the type switcher should be absent.
@@ -263,6 +273,7 @@ const teacherLockedType: AccountScenario = {
   ...teacher,
   currentUser: {...teacher.currentUser, id: 8},
   settings: {...teacher.settings, can_change_user_type: false},
+  description: "Educator who can't change type — switcher hidden.",
 };
 
 // Student with age + state unset but editable: verifies the disabled "Select …"
@@ -276,6 +287,7 @@ const ageStateUnset: AccountScenario = {
     us_state: null,
     parent_email: null,
   },
+  description: 'Student with age/state unset — placeholders + reblank guard.',
 };
 
 // Overflow / truncation / unicode probe: very long names + an emoji display
@@ -318,6 +330,7 @@ const longStrings: AccountScenario = {
     dependent_students_count: 0,
   },
   password: 'currentpass',
+  description: 'Very long + emoji names — overflow / truncation probe.',
 };
 
 // Student who CAN change type: exercises the student->teacher upgrade path,
@@ -326,6 +339,7 @@ const studentCanSwitch: AccountScenario = {
   ...student,
   currentUser: {...student.currentUser, id: 11},
   settings: {...student.settings, can_change_user_type: true},
+  description: 'Student who can upgrade — type change prompts for email.',
 };
 
 export const ACCOUNT_SCENARIOS: Record<AccountsScenarioTag, AccountScenario> = {

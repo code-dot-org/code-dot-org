@@ -18,6 +18,7 @@ import FontLoader from '@code-dot-org/fonts/FontLoader';
 
 import AccountSettingsPage from './AccountSettingsPage';
 import {
+  ACCOUNT_SCENARIOS,
   ACCOUNTS_LAB_KEY,
   ACCOUNTS_SCENARIO_TAGS,
   registerAccountsFixtures,
@@ -66,6 +67,7 @@ function ScenarioSwitcher({value}: {value: AccountsScenarioTag}) {
         top: 8,
         right: 8,
         zIndex: 9999,
+        maxWidth: 240,
         background: '#fff',
         border: '1px solid #ccc',
         borderRadius: 4,
@@ -83,11 +85,18 @@ function ScenarioSwitcher({value}: {value: AccountsScenarioTag}) {
         }}
       >
         {ACCOUNTS_SCENARIO_TAGS.map(tag => (
-          <option key={tag} value={tag}>
+          <option
+            key={tag}
+            value={tag}
+            title={ACCOUNT_SCENARIOS[tag].description}
+          >
             {tag}
           </option>
         ))}
       </select>
+      <div style={{marginTop: 4, fontSize: 11, color: '#555'}}>
+        {ACCOUNT_SCENARIOS[value].description}
+      </div>
     </label>
   );
 }

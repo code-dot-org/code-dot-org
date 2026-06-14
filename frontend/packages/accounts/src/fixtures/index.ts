@@ -27,7 +27,7 @@ import {
   type AccountsScenarioTag,
 } from './scenarios';
 
-export {ACCOUNTS_SCENARIO_TAGS};
+export {ACCOUNT_SCENARIOS, ACCOUNTS_SCENARIO_TAGS};
 export type {AccountsScenarioTag};
 
 export const ACCOUNTS_LAB_KEY = 'accounts';
