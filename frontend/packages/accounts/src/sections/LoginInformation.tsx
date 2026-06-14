@@ -39,10 +39,6 @@ export default function LoginInformation({settings}: SectionProps) {
 
   return (
     <Section id="login-information" title="Login Information">
-      <Typography variant="body2" sx={{mb: 2}}>
-        Make sure you can receive notifications at the email provided.
-      </Typography>
-
       <Box sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
         <Field>
           <TextField
@@ -71,12 +67,20 @@ export default function LoginInformation({settings}: SectionProps) {
               disabled
               aria-label={isStudent ? 'Email address, encrypted' : undefined}
               helperMessage={
-                !isStudent && settings.hasPassword
-                  ? 'Your password is needed to update your email.'
-                  : undefined
+                isStudent
+                  ? undefined
+                  : 'Make sure you can receive notifications at the email provided.'
               }
             />
           </Field>
+          {!isStudent && settings.hasPassword && (
+            <Typography
+              variant="body3"
+              sx={{color: 'var(--text-neutral-secondary)', mt: 0.5}}
+            >
+              Your password is needed to update your email.
+            </Typography>
+          )}
           {settings.shouldSeeEditEmailLink && (
             <>
               <Button
