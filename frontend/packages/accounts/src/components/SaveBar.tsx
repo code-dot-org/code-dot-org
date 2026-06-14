@@ -5,7 +5,8 @@ import {useFormState} from '../state/FormContext';
 /**
  * Sticky save bar. The aria-live region is always present (content toggles on
  * dirty state, never injected on demand) and sits last in the form's DOM order.
- * Save is a submit button, disabled while saving as a double-submit guard.
+ * Save is a submit button, disabled while saving as a double-submit guard. A
+ * successful save clears the bar entirely — the success toast confirms it.
  */
 export default function SaveBar() {
   const {save} = useFormState();
@@ -33,9 +34,7 @@ export default function SaveBar() {
       {hasContent && (
         <>
           <Typography variant="body2" sx={{flex: 1}}>
-            {save.status === 'saved'
-              ? 'Your changes have been saved!'
-              : 'You’ve made some changes.'}
+            You’ve made some changes.
           </Typography>
           {save.status === 'error' && (
             <Box role="alert" sx={{flex: 1}}>
@@ -50,15 +49,13 @@ export default function SaveBar() {
               ))}
             </Box>
           )}
-          {save.status !== 'saved' && (
-            <Button
-              type="submit"
-              variant="contained"
-              disabled={save.status === 'saving'}
-            >
-              {save.status === 'saving' ? 'Saving…' : 'Save changes'}
-            </Button>
-          )}
+          <Button
+            type="submit"
+            variant="contained"
+            disabled={save.status === 'saving'}
+          >
+            {save.status === 'saving' ? 'Saving…' : 'Save changes'}
+          </Button>
         </>
       )}
     </Box>

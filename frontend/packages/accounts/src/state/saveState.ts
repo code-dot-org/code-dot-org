@@ -6,7 +6,6 @@ export type SaveState =
   | {status: 'idle'}
   | {status: 'dirty'}
   | {status: 'saving'}
-  | {status: 'saved'}
   | {status: 'error'; fieldErrors: FieldErrors; formErrors: string[]};
 
 export type SaveStateAction =
@@ -33,7 +32,9 @@ export function saveStateReducer(
         ? {status: 'saving'}
         : state;
     case 'saveSucceeded':
-      return state.status === 'saving' ? {status: 'saved'} : state;
+      // Straight back to idle: the success toast confirms the save, so the bar
+      // just clears rather than lingering with a redundant "saved" message.
+      return state.status === 'saving' ? initialSaveState : state;
     case 'saveFailed':
       return state.status === 'saving'
         ? {

@@ -16,7 +16,6 @@ describe('saveStateReducer', () => {
   describe('edit', () => {
     it.each<SaveState>([
       {status: 'idle'},
-      {status: 'saved'},
       {status: 'error', fieldErrors: {}, formErrors: ['x']},
     ])('marks the form dirty from %j', state => {
       expect(saveStateReducer(state, {type: 'edit'})).toEqual({
@@ -53,19 +52,17 @@ describe('saveStateReducer', () => {
       expect(saveStateReducer(saving, {type: 'save'})).toBe(saving);
     });
 
-    it.each<SaveState>([{status: 'idle'}, {status: 'saved'}])(
-      'does nothing when not dirty (%j)',
-      state => {
-        expect(saveStateReducer(state, {type: 'save'})).toBe(state);
-      },
-    );
+    it('does nothing when not dirty (idle)', () => {
+      const idle: SaveState = {status: 'idle'};
+      expect(saveStateReducer(idle, {type: 'save'})).toBe(idle);
+    });
   });
 
   describe('saveSucceeded', () => {
-    it('moves saving → saved', () => {
+    it('moves saving → idle (the toast confirms; no lingering bar)', () => {
       expect(
         saveStateReducer({status: 'saving'}, {type: 'saveSucceeded'}),
-      ).toEqual({status: 'saved'});
+      ).toEqual({status: 'idle'});
     });
 
     it('is ignored unless a save is in flight', () => {

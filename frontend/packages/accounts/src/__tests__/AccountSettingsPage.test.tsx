@@ -103,7 +103,7 @@ describe('AccountSettingsPage', () => {
 });
 
 describe('AccountSettingsPage save flow', () => {
-  it('reveals the save bar on edit, then confirms a successful save', async () => {
+  it('reveals the save bar on edit, then clears it after a successful save', async () => {
     renderPage('teacher');
     const displayName = await screen.findByLabelText(/Display name/);
 
@@ -114,11 +114,14 @@ describe('AccountSettingsPage save flow', () => {
 
     fireEvent.click(save);
 
+    // The toast confirms the save; the bar just clears (no redundant message).
+    await waitFor(() =>
+      expect(
+        screen.queryByRole('button', {name: 'Save changes'}),
+      ).not.toBeInTheDocument(),
+    );
     expect(
-      await screen.findByText('Your changes have been saved!'),
-    ).toBeInTheDocument();
-    expect(
-      screen.queryByRole('button', {name: 'Save changes'}),
+      screen.queryByText('You’ve made some changes.'),
     ).not.toBeInTheDocument();
   });
 
@@ -146,9 +149,7 @@ describe('AccountSettingsPage save flow', () => {
     fireEvent.click(save);
 
     await waitFor(() =>
-      expect(
-        screen.queryByText('Your changes have been saved!'),
-      ).not.toBeInTheDocument(),
+      expect(screen.queryByText('Changes saved.')).not.toBeInTheDocument(),
     );
     expect(screen.getByText('You’ve made some changes.')).toBeInTheDocument();
   });

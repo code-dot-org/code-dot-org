@@ -40,7 +40,7 @@ describe('formReducer', () => {
     expect(state.save.status).toBe('saving');
 
     state = formReducer(state, {type: 'saveSucceeded'});
-    expect(state.save.status).toBe('saved');
+    expect(state.save.status).toBe('idle');
     expect(isDirty(state)).toBe(false);
     expect(dirtyValues(state)).toEqual({});
   });
