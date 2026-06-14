@@ -144,4 +144,24 @@ class Api::V1::Account::SettingsControllerTest < ActionController::TestCase
     assert_equal 'Self', body['given_name']
     assert_equal teacher.username, body['username']
   end
+
+  test 'each signed-in user receives only their own settings (no horizontal access)' do
+    alice = create(:teacher, given_name: 'Alice', name: 'Alice A')
+    bob = create(:teacher, given_name: 'Bob', name: 'Bob B')
+
+    sign_in alice
+    get :show
+    alice_body = JSON.parse(@response.body)
+    assert_equal 'Alice', alice_body['given_name']
+    assert_equal alice.username, alice_body['username']
+
+    sign_out alice
+    sign_in bob
+    get :show
+    bob_body = JSON.parse(@response.body)
+    assert_equal 'Bob', bob_body['given_name']
+    assert_equal bob.username, bob_body['username']
+
+    refute_equal alice.username, bob_body['username']
+  end
 end
