@@ -385,4 +385,22 @@ describe('AccountSettingsPage — student variant', () => {
       screen.queryByRole('combobox', {name: /^age$/i}),
     ).not.toBeInTheDocument();
   });
+
+  it('shows the For Parents and Guardians section for a student', async () => {
+    renderPage('student');
+    expect(
+      await screen.findByRole('heading', {
+        level: 2,
+        name: 'For Parents and Guardians',
+      }),
+    ).toBeInTheDocument();
+  });
+
+  it('hides For Parents and Guardians for a teacher', async () => {
+    renderPage('teacher');
+    await screen.findByRole('heading', {level: 2, name: 'My Information'});
+    expect(
+      screen.queryByRole('heading', {name: 'For Parents and Guardians'}),
+    ).toBeNull();
+  });
 });

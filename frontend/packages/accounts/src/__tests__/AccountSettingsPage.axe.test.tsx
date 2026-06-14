@@ -125,4 +125,12 @@ describe('AccountSettingsPage — accessibility', () => {
     });
     expect(await auditBody()).toHaveNoViolations();
   });
+
+  it('has no axe violations with the parent-email dialog open (student)', async () => {
+    renderPage('student');
+    await screen.findByRole('tablist');
+    fireEvent.click(screen.getByRole('button', {name: 'Update'}));
+    await screen.findByRole('dialog', {name: /parent\/guardian email/i});
+    expect(await auditBody()).toHaveNoViolations();
+  });
 });

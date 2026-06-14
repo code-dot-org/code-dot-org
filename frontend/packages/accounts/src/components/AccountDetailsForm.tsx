@@ -11,6 +11,7 @@ import {asAccountsValidationError} from '../api/AccountsApiValidationError';
 import AccountActions from '../sections/AccountActions';
 import LoginInformation from '../sections/LoginInformation';
 import MyInformation from '../sections/MyInformation';
+import ParentGuardianEmail from '../sections/ParentGuardianEmail';
 import {useFormDispatch, useFormState} from '../state/FormContext';
 import {dirtyValues} from '../state/formReducer';
 
@@ -74,6 +75,9 @@ export default function AccountDetailsForm({
     <form onSubmit={handleSubmit} noValidate>
       <MyInformation settings={settings} />
       <LoginInformation settings={settings} />
+      {settings.userType === 'student' && (
+        <ParentGuardianEmail settings={settings} />
+      )}
       <AccountActions settings={settings} />
       <SaveBar />
     </form>
