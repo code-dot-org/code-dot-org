@@ -39,7 +39,6 @@ export const CurrentUserResponseSignedInSchema = z.object({
 
   // AI gating
   ai_chat_access_level: z.union([z.string(), z.number()]),
-  ai_tutor_access_denied: z.boolean(),
   ai_rubrics_disabled: z.boolean().nullable(),
   ai_differentiation_enabled: z.boolean(),
   has_seen_ai_assessments_announcement: z.boolean(),
@@ -47,7 +46,8 @@ export const CurrentUserResponseSignedInSchema = z.object({
 
   // Session context
   is_lti: z.boolean(),
-  in_section: z.number().nullable(),
+  // boolean for students (whether they're in a section); null for non-students.
+  in_section: z.boolean().nullable(),
   created_at: z.string(),
 });
 
