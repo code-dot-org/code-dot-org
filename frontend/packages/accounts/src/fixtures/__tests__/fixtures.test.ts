@@ -91,4 +91,31 @@ describe('account fixtures', () => {
       'Current password is invalid',
     ]);
   });
+
+  it('adds a parent email and reflects it on the next read', async () => {
+    activate('student');
+    await account.updateParentEmail({parentEmail: 'p@new.org', optIn: 'yes'});
+    expect((await account.getSettings()).parentEmail).toBe('p@new.org');
+  });
+
+  it('serves a 422 for an invalid parent email', async () => {
+    activate('student');
+    const error = await account
+      .updateParentEmail({parentEmail: 'bad', optIn: ''})
+      .catch((e: unknown) => e);
+    expect(
+      asAccountsValidationError(error)?.fieldErrors.parent_email,
+    ).toBeDefined();
+  });
+
+  it('removes the parent email', async () => {
+    activate('student'); // seed carries parent@example.com
+    await account.removeParentEmail();
+    expect((await account.getSettings()).parentEmail).toBeNull();
+  });
+
+  it('resolves signing out other sessions', async () => {
+    activate('student');
+    await expect(account.signOutOtherSessions()).resolves.toBeUndefined();
+  });
 });

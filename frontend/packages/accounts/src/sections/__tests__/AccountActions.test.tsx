@@ -122,4 +122,24 @@ describe('AccountActions manage other sessions', () => {
     );
     expect(screen.getByRole('status')).toHaveTextContent(/signed out/i);
   });
+
+  it('keeps the dialog open with an error when sign-out fails', async () => {
+    mockServer.use(
+      http.delete(
+        '*/expire_other',
+        () => new HttpResponse(null, {status: 500}),
+      ),
+    );
+    renderSection({});
+    fireEvent.click(sessionsButton());
+    const dialog = await screen.findByRole('alertdialog');
+    fireEvent.click(
+      within(dialog).getByRole('button', {name: 'Sign out all other sessions'}),
+    );
+
+    expect(await within(dialog).findByRole('alert')).toHaveTextContent(
+      /something went wrong/i,
+    );
+    expect(screen.queryByRole('status')).toBeNull();
+  });
 });

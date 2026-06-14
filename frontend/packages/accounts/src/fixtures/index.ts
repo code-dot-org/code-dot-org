@@ -13,6 +13,7 @@ import {
 
 import {
   DELETE_WRONG_PASSWORD,
+  INVALID_PARENT_EMAIL,
   MALFORMED_EMAIL,
   SHORT_PASSWORD,
   TAKEN_USERNAME,
@@ -169,6 +170,43 @@ function scenarioRoutes(tag: AccountsScenarioTag): MockRoute[] {
         });
         return json(null, 204);
       },
+    },
+    // Add/update a student's parent/guardian email.
+    {
+      method: 'patch',
+      path: '*/users/parent_email',
+      respond: async ctx => {
+        const user = await readUserBody(ctx);
+        const parentEmail = asString(user.parent_email);
+        if (typeof parentEmail !== 'string' || !parentEmail.includes('@')) {
+          return json(INVALID_PARENT_EMAIL, 422);
+        }
+        ctx.store.write('settings', {
+          ...readSettings(ctx, scenario),
+          parent_email: parentEmail,
+        });
+        return json(null, 204);
+      },
+    },
+    // Registration update; the page uses it only to clear the parent email.
+    // Ordered after */dashboardapi/users so it never shadows the profile PATCH.
+    {
+      method: 'patch',
+      path: '*/users',
+      respond: async ctx => {
+        const user = await readUserBody(ctx);
+        ctx.store.write('settings', {
+          ...readSettings(ctx, scenario),
+          parent_email: asNullableString(user.parent_email) || null,
+        });
+        return json(null, 204);
+      },
+    },
+    // Sign out other sessions; this one stays signed in.
+    {
+      method: 'delete',
+      path: '*/expire_other',
+      respond: () => json(null, 204),
     },
     // DELETE /users reads a top-level password_confirmation and rejects with 400.
     {

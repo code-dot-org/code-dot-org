@@ -23,6 +23,10 @@ export const WRONG_PASSWORD = {
   current_password: ['Current password is invalid'],
 };
 
+export const INVALID_PARENT_EMAIL = {
+  parent_email: ['Parent/guardian email is invalid'],
+};
+
 // DELETE /users returns 400 with the extra `error` envelope.
 export const DELETE_WRONG_PASSWORD = {
   error: {current_password: ['Current password is invalid']},

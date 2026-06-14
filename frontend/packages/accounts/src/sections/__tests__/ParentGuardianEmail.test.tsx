@@ -82,6 +82,35 @@ describe('ParentGuardianEmail', () => {
     expect(patched).toBe(false);
   });
 
+  it('surfaces a server validation error on the parent-email field', async () => {
+    mockServer.use(
+      http.patch('*/users/parent_email', () =>
+        HttpResponse.json(
+          {parent_email: ['Parent email is invalid']},
+          {status: 422},
+        ),
+      ),
+    );
+    renderSection();
+    fireEvent.click(screen.getByRole('button', {name: 'Update'}));
+    const dialog = await screen.findByRole('dialog');
+    fireEvent.change(
+      within(dialog).getByRole('textbox', {
+        name: /^parent\/guardian email address$/i,
+      }),
+      {target: {value: 'p@x.com'}},
+    );
+    fireEvent.change(within(dialog).getByRole('textbox', {name: /confirm/i}), {
+      target: {value: 'p@x.com'},
+    });
+    fireEvent.click(within(dialog).getByRole('button', {name: 'Update'}));
+
+    expect(
+      await within(dialog).findByText('Parent email is invalid'),
+    ).toBeInTheDocument();
+    expect(screen.getByRole('dialog')).toBeInTheDocument();
+  });
+
   it('removes the parent email through PATCH /users', async () => {
     let removedBody: unknown;
     mockServer.use(
