@@ -21,6 +21,7 @@ import {
 
 import {formDialogContentSx} from './formDialog';
 import {modalErrors, type ModalErrors} from './modalErrors';
+import {useToast} from './Toast';
 
 const NO_ERRORS: ModalErrors = {fieldErrors: {}, formError: null};
 const MISMATCH = 'The email addresses don’t match.';
@@ -38,6 +39,7 @@ export default function ParentEmailModal({
   onClose: () => void;
 }) {
   const mutation = useUpdateParentEmail(DashboardApiClient);
+  const toast = useToast();
   const [email, setEmail] = useState('');
   const [confirmEmail, setConfirmEmail] = useState('');
   const [optIn, setOptIn] = useState<ParentEmailOptIn>('');
@@ -63,6 +65,7 @@ export default function ParentEmailModal({
     setMismatch(false);
     try {
       await mutation.mutateAsync({parentEmail: email, optIn});
+      toast('Parent/guardian email updated.');
       close();
     } catch (error) {
       setErrors(modalErrors(error));

@@ -29,7 +29,6 @@ export default function AccountActions({settings}: SectionProps) {
   const [prospectiveType, setProspectiveType] = useState<UserType | null>(null);
   const [deleteOpen, setDeleteOpen] = useState(false);
   const [sessionsOpen, setSessionsOpen] = useState(false);
-  const [signedOutOthers, setSignedOutOthers] = useState(false);
   const isTeacher = settings.userType === 'teacher';
 
   const onTypeSelect = (value: string) => {
@@ -78,15 +77,9 @@ export default function AccountActions({settings}: SectionProps) {
         <Button onClick={() => setSessionsOpen(true)} sx={{px: 0}}>
           Sign Out All Other Sessions
         </Button>
-        {signedOutOthers && (
-          <Typography role="status" variant="body2" sx={{mt: 1}}>
-            You’ve been signed out of all other sessions.
-          </Typography>
-        )}
         <SignOutOtherSessionsModal
           open={sessionsOpen}
           onClose={() => setSessionsOpen(false)}
-          onSignedOut={() => setSignedOutOthers(true)}
         />
       </Box>
 

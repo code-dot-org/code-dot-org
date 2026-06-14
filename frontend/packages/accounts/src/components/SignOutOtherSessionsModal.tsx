@@ -14,7 +14,9 @@ import {
   useSignOutOtherSessions,
 } from '@code-dot-org/core/api';
 
+import {formDialogContentSx} from './formDialog';
 import {modalErrors, type ModalErrors} from './modalErrors';
+import {useToast} from './Toast';
 
 const NO_ERRORS: ModalErrors = {fieldErrors: {}, formError: null};
 
@@ -25,13 +27,12 @@ const NO_ERRORS: ModalErrors = {fieldErrors: {}, formError: null};
 export default function SignOutOtherSessionsModal({
   open,
   onClose,
-  onSignedOut,
 }: {
   open: boolean;
   onClose: () => void;
-  onSignedOut: () => void;
 }) {
   const mutation = useSignOutOtherSessions(DashboardApiClient);
+  const toast = useToast();
   const [errors, setErrors] = useState<ModalErrors>(NO_ERRORS);
 
   const close = () => {
@@ -44,7 +45,7 @@ export default function SignOutOtherSessionsModal({
     setErrors(NO_ERRORS);
     try {
       await mutation.mutateAsync();
-      onSignedOut();
+      toast('Signed out of all other sessions.');
       close();
     } catch (error) {
       setErrors(modalErrors(error));
@@ -55,6 +56,8 @@ export default function SignOutOtherSessionsModal({
     <Dialog
       open={open}
       onClose={close}
+      fullWidth
+      maxWidth="xs"
       aria-labelledby="sign-out-sessions-title"
       aria-describedby="sign-out-sessions-desc"
       slotProps={{paper: {role: 'alertdialog'}}}
@@ -63,7 +66,7 @@ export default function SignOutOtherSessionsModal({
         <DialogTitle id="sign-out-sessions-title">
           Sign out all other sessions
         </DialogTitle>
-        <DialogContent sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
+        <DialogContent sx={formDialogContentSx}>
           <DialogContentText id="sign-out-sessions-desc">
             This signs you out on every other browser and device. You’ll stay
             signed in here.

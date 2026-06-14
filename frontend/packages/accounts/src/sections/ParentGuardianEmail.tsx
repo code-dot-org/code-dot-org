@@ -4,6 +4,7 @@ import {useState} from 'react';
 import {DashboardApiClient, useRemoveParentEmail} from '@code-dot-org/core/api';
 
 import ParentEmailModal from '../components/ParentEmailModal';
+import {useToast} from '../components/Toast';
 
 import Section from './Section';
 import type {SectionProps} from './types';
@@ -15,6 +16,7 @@ import type {SectionProps} from './types';
 export default function ParentGuardianEmail({settings}: SectionProps) {
   const [modalOpen, setModalOpen] = useState(false);
   const removeMutation = useRemoveParentEmail(DashboardApiClient);
+  const toast = useToast();
   const {parentEmail} = settings;
 
   return (
@@ -34,7 +36,11 @@ export default function ParentGuardianEmail({settings}: SectionProps) {
           </Button>
           {parentEmail && (
             <Button
-              onClick={() => removeMutation.mutate()}
+              onClick={() =>
+                removeMutation.mutate(undefined, {
+                  onSuccess: () => toast('Parent/guardian email removed.'),
+                })
+              }
               disabled={removeMutation.isPending}
               sx={{px: 0}}
             >

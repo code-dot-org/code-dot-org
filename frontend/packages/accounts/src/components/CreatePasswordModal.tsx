@@ -13,6 +13,7 @@ import {DashboardApiClient, useCreatePassword} from '@code-dot-org/core/api';
 
 import {formDialogContentSx} from './formDialog';
 import {modalErrors, type ModalErrors} from './modalErrors';
+import {useToast} from './Toast';
 
 const NO_ERRORS: ModalErrors = {fieldErrors: {}, formError: null};
 
@@ -25,6 +26,7 @@ export default function CreatePasswordModal({
   onClose: () => void;
 }) {
   const mutation = useCreatePassword(DashboardApiClient);
+  const toast = useToast();
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [errors, setErrors] = useState<ModalErrors>(NO_ERRORS);
@@ -44,6 +46,7 @@ export default function CreatePasswordModal({
         newPassword,
         newPasswordConfirmation: confirmPassword,
       });
+      toast('Password created.');
       close();
     } catch (error) {
       setErrors(modalErrors(error));

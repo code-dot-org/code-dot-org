@@ -177,6 +177,7 @@ describe('AccountSettingsPage — Login Information', () => {
     expect(
       await screen.findByDisplayValue('ada@newschool.org'),
     ).toBeInTheDocument();
+    expect(await screen.findByText('Email updated.')).toBeInTheDocument();
   });
 
   it('keeps the update-password modal open with the server error on a wrong current password', async () => {

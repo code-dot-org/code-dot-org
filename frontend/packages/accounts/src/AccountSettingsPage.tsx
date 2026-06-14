@@ -9,6 +9,7 @@ import {
 
 import AccountDetailsForm from './components/AccountDetailsForm';
 import AccountTabs, {type AccountTab} from './components/AccountTabs';
+import {ToastProvider} from './components/Toast';
 import {FormProvider} from './state/FormContext';
 
 const ACCOUNT_DETAILS_TAB = 'account-details';
@@ -109,26 +110,29 @@ export default function AccountSettingsPage({
       )}
 
       {!isPending && !isError && settings.data && (
-        <Box sx={{mt: 3}}>
-          <AccountTabs
-            tabs={visibleTabs}
-            activeTab={activeTab}
-            onTabChange={onTabChange ?? NO_OP}
-          >
-            <FormProvider
-              initialValues={{
-                given_name: settings.data.givenName ?? '',
-                family_name: settings.data.familyName ?? '',
-                name: settings.data.displayName,
-                username: settings.data.username ?? '',
-                age: settings.data.age != null ? String(settings.data.age) : '',
-                us_state: settings.data.usState ?? '',
-              }}
+        <ToastProvider>
+          <Box sx={{mt: 3}}>
+            <AccountTabs
+              tabs={visibleTabs}
+              activeTab={activeTab}
+              onTabChange={onTabChange ?? NO_OP}
             >
-              <AccountDetailsForm settings={settings.data} />
-            </FormProvider>
-          </AccountTabs>
-        </Box>
+              <FormProvider
+                initialValues={{
+                  given_name: settings.data.givenName ?? '',
+                  family_name: settings.data.familyName ?? '',
+                  name: settings.data.displayName,
+                  username: settings.data.username ?? '',
+                  age:
+                    settings.data.age != null ? String(settings.data.age) : '',
+                  us_state: settings.data.usState ?? '',
+                }}
+              >
+                <AccountDetailsForm settings={settings.data} />
+              </FormProvider>
+            </AccountTabs>
+          </Box>
+        </ToastProvider>
       )}
     </Box>
   );

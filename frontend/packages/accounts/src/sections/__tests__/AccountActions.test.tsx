@@ -12,6 +12,7 @@ import {createQueryClient, QueryClientProvider} from '@code-dot-org/core/api';
 import type {AccountSettings} from '@code-dot-org/core/api';
 import {mockServer} from '@code-dot-org/core/api/mocks/server';
 
+import {ToastProvider} from '../../components/Toast';
 import AccountActions from '../AccountActions';
 
 const BASE: AccountSettings = {
@@ -39,7 +40,9 @@ function renderSection(overrides: Partial<AccountSettings>) {
   const settings = {...BASE, ...overrides};
   render(
     <QueryClientProvider client={createQueryClient({queries: {retry: false}})}>
-      <AccountActions settings={settings} />
+      <ToastProvider>
+        <AccountActions settings={settings} />
+      </ToastProvider>
     </QueryClientProvider>,
   );
 }
@@ -120,7 +123,9 @@ describe('AccountActions manage other sessions', () => {
     await waitFor(() =>
       expect(screen.queryByRole('alertdialog')).not.toBeInTheDocument(),
     );
-    expect(screen.getByRole('status')).toHaveTextContent(/signed out/i);
+    expect(
+      await screen.findByText('Signed out of all other sessions.'),
+    ).toBeInTheDocument();
   });
 
   it('keeps the dialog open with an error when sign-out fails', async () => {

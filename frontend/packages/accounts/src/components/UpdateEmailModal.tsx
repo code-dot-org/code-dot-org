@@ -15,6 +15,7 @@ import {hashEmail} from '../util/hashEmail';
 
 import {formDialogContentSx} from './formDialog';
 import {modalErrors, type ModalErrors} from './modalErrors';
+import {useToast} from './Toast';
 
 const NO_ERRORS: ModalErrors = {fieldErrors: {}, formError: null};
 
@@ -31,6 +32,7 @@ export default function UpdateEmailModal({
   onClose: () => void;
 }) {
   const mutation = useUpdateEmail(DashboardApiClient);
+  const toast = useToast();
   const [email, setEmail] = useState('');
   const [currentPassword, setCurrentPassword] = useState('');
   const [errors, setErrors] = useState<ModalErrors>(NO_ERRORS);
@@ -51,6 +53,7 @@ export default function UpdateEmailModal({
         hashedEmail: hashEmail(email),
         currentPassword,
       });
+      toast('Email updated.');
       close();
     } catch (error) {
       setErrors(modalErrors(error));

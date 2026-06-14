@@ -20,6 +20,7 @@ import {hashEmail} from '../util/hashEmail';
 
 import {formDialogContentSx} from './formDialog';
 import {modalErrors, type ModalErrors} from './modalErrors';
+import {useToast} from './Toast';
 
 const TYPE_LABEL: Record<UserType, string> = {
   student: 'Student',
@@ -43,6 +44,7 @@ export default function AccountTypeModal({
   onClose: () => void;
 }) {
   const mutation = useUpdateUserType(DashboardApiClient);
+  const toast = useToast();
   const [email, setEmail] = useState('');
   const [errors, setErrors] = useState<ModalErrors>(NO_ERRORS);
 
@@ -58,6 +60,7 @@ export default function AccountTypeModal({
           ? {userType: 'teacher', email, hashedEmail: hashEmail(email)}
           : {userType: prospectiveType},
       );
+      toast(`Account type changed to ${TYPE_LABEL[prospectiveType]}.`);
       close();
     } catch (error) {
       setErrors(modalErrors(error));

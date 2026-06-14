@@ -13,6 +13,7 @@ import {DashboardApiClient, useUpdatePassword} from '@code-dot-org/core/api';
 
 import {formDialogContentSx} from './formDialog';
 import {modalErrors, type ModalErrors} from './modalErrors';
+import {useToast} from './Toast';
 
 const NO_ERRORS: ModalErrors = {fieldErrors: {}, formError: null};
 
@@ -28,6 +29,7 @@ export default function UpdatePasswordModal({
   onClose: () => void;
 }) {
   const mutation = useUpdatePassword(DashboardApiClient);
+  const toast = useToast();
   const [currentPassword, setCurrentPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -50,6 +52,7 @@ export default function UpdatePasswordModal({
         newPassword,
         newPasswordConfirmation: confirmPassword,
       });
+      toast('Password updated.');
       close();
     } catch (error) {
       setErrors(modalErrors(error));
