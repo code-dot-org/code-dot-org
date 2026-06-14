@@ -70,12 +70,12 @@ $card-bg: #424d59;
   height: 2.5rem;
   border: none;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgb(0 0 0 / 0.55);
   color: #fff;
   cursor: pointer;
 
   &:hover {
-    background: rgba(0, 0, 0, 0.75);
+    background: rgb(0 0 0 / 0.75);
   }
 
   &:focus-visible {
