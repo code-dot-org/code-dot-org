@@ -437,6 +437,27 @@ describe('AccountSettingsPage — student variant', () => {
     ).toBeInTheDocument();
   });
 
+  it('offers selectable opt-in radios in the parent/guardian modal', async () => {
+    renderPage('student');
+    await screen.findByRole('heading', {
+      level: 2,
+      name: 'For Parents and Guardians',
+    });
+
+    fireEvent.click(screen.getByRole('button', {name: /^Update$/}));
+    const dialog = await screen.findByRole('dialog', {
+      name: /update parent.guardian email/i,
+    });
+
+    const yes = within(dialog).getByRole('radio', {name: 'Yes'});
+    const no = within(dialog).getByRole('radio', {name: 'No'});
+    expect(yes).not.toBeChecked();
+
+    fireEvent.click(yes);
+    expect(yes).toBeChecked();
+    expect(no).not.toBeChecked();
+  });
+
   it('hides For Parents and Guardians for a teacher', async () => {
     renderPage('teacher');
     await screen.findByRole('heading', {level: 2, name: 'My Information'});

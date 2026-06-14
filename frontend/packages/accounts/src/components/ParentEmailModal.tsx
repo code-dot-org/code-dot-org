@@ -1,17 +1,15 @@
 import {
+  Box,
   Button,
   Dialog,
   DialogActions,
   DialogContent,
   DialogTitle,
-  FormControl,
-  FormControlLabel,
-  Radio,
-  RadioGroup,
   Typography,
 } from '@mui/material';
 import {useState, type FormEvent} from 'react';
 
+import RadioButton from '@code-dot-org/component-library/radioButton';
 import TextField from '@code-dot-org/component-library/textField';
 import {
   DashboardApiClient,
@@ -123,12 +121,8 @@ export default function ParentEmailModal({
             data-1p-ignore
           />
           {/* fieldset + legend groups the opt-in radios for assistive tech;
-              reset the native fieldset/legend chrome so it lays out flush. */}
-          <FormControl
-            component="fieldset"
-            variant="standard"
-            sx={{m: 0, p: 0, border: 0, minWidth: 0}}
-          >
+              reset the native fieldset chrome so it lays out flush. */}
+          <Box component="fieldset" sx={{m: 0, p: 0, border: 0, minWidth: 0}}>
             <Typography
               component="legend"
               variant="body2"
@@ -141,25 +135,27 @@ export default function ParentEmailModal({
               to you. Can we email you with occasional updates on your child’s
               progress, projects, and course?
             </Typography>
-            <RadioGroup
-              row
-              value={optIn}
-              onChange={event =>
-                setOptIn(event.target.value as ParentEmailOptIn)
-              }
-            >
-              <FormControlLabel
+            <Box sx={{display: 'flex', gap: 3}}>
+              <RadioButton
+                name="parent_email_opt_in"
                 value="yes"
-                control={<Radio />}
-                label={<Typography variant="body2">Yes</Typography>}
+                label="Yes"
+                checked={optIn === 'yes'}
+                onChange={event =>
+                  setOptIn(event.target.value as ParentEmailOptIn)
+                }
               />
-              <FormControlLabel
+              <RadioButton
+                name="parent_email_opt_in"
                 value="no"
-                control={<Radio />}
-                label={<Typography variant="body2">No</Typography>}
+                label="No"
+                checked={optIn === 'no'}
+                onChange={event =>
+                  setOptIn(event.target.value as ParentEmailOptIn)
+                }
               />
-            </RadioGroup>
-          </FormControl>
+            </Box>
+          </Box>
         </DialogContent>
         <DialogActions>
           <Button onClick={close}>Cancel</Button>
