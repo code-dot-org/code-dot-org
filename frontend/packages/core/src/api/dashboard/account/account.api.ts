@@ -1,3 +1,4 @@
+import {resolveCsrfToken} from '../../csrfToken';
 import type {Transport} from '../../transports/types';
 
 import {AccountSettingsResponseSchema} from './account.schemata';
@@ -147,15 +148,23 @@ export function createAccountApi(transport: Transport) {
       });
     },
 
-    // DELETE /expire_other — signs the user out of every OTHER browser/device;
-    // this session is re-issued server-side, so it resolves (following the
-    // redirect) with no client re-auth.
-    signOutOtherSessions(): Promise<unknown> {
-      return transport.request<unknown>({
+    // DELETE /expire_other signs the user out of every OTHER browser/device,
+    // then re-issues this session and 302s to the account page. We must NOT
+    // follow that redirect: a redirected DELETE re-fires as DELETE /users/edit
+    // and 404s. With redirect:'manual' the action still runs server-side (the
+    // rotated session cookie is applied from the 302 response); the
+    // opaqueredirect — or a 204 from the mock — is success. Bypasses the
+    // transport because ky always follows redirects and throws on the result.
+    async signOutOtherSessions(): Promise<void> {
+      const response = await fetch('/expire_other', {
         method: 'DELETE',
-        url: '/expire_other',
-        headers: JSON_ACCEPT,
+        credentials: 'same-origin',
+        redirect: 'manual',
+        headers: {...JSON_ACCEPT, 'X-CSRF-Token': resolveCsrfToken() ?? ''},
       });
+      if (response.type !== 'opaqueredirect' && !response.ok) {
+        throw new Error(`Sign-out request failed: ${response.status}`);
+      }
     },
 
     /** DELETE /users */

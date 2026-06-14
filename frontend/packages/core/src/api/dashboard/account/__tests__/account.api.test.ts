@@ -1,3 +1,4 @@
+// @vitest-environment jsdom
 import {describe, expect, it, vi} from 'vitest';
 
 import type {Transport} from '../../../transports/types';
@@ -107,12 +108,38 @@ describe('createAccountApi mutations target the right routes', () => {
     );
   });
 
-  it('signOutOtherSessions DELETEs /expire_other', async () => {
-    const {api, request} = fakeTransport();
-    await api.signOutOtherSessions();
-    expect(request).toHaveBeenCalledWith(
-      expect.objectContaining({method: 'DELETE', url: '/expire_other'}),
+  it('signOutOtherSessions DELETEs /expire_other without following the redirect', async () => {
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValue(new Response(null, {status: 204}));
+    vi.stubGlobal('fetch', fetchMock);
+    const {api} = fakeTransport();
+    await expect(api.signOutOtherSessions()).resolves.toBeUndefined();
+    expect(fetchMock).toHaveBeenCalledWith(
+      '/expire_other',
+      expect.objectContaining({method: 'DELETE', redirect: 'manual'}),
     );
+    vi.unstubAllGlobals();
+  });
+
+  it('signOutOtherSessions treats an unfollowed redirect as success', async () => {
+    vi.stubGlobal(
+      'fetch',
+      vi.fn().mockResolvedValue({type: 'opaqueredirect', ok: false, status: 0}),
+    );
+    const {api} = fakeTransport();
+    await expect(api.signOutOtherSessions()).resolves.toBeUndefined();
+    vi.unstubAllGlobals();
+  });
+
+  it('signOutOtherSessions throws on a real failure response', async () => {
+    vi.stubGlobal(
+      'fetch',
+      vi.fn().mockResolvedValue(new Response(null, {status: 500})),
+    );
+    const {api} = fakeTransport();
+    await expect(api.signOutOtherSessions()).rejects.toThrow();
+    vi.unstubAllGlobals();
   });
 
   it('deleteAccount sends a top-level password_confirmation when given', async () => {
