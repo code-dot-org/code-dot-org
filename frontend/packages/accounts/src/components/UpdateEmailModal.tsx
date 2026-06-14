@@ -13,6 +13,7 @@ import {DashboardApiClient, useUpdateEmail} from '@code-dot-org/core/api';
 
 import {hashEmail} from '../util/hashEmail';
 
+import {formDialogContentSx} from './formDialog';
 import {modalErrors, type ModalErrors} from './modalErrors';
 
 const NO_ERRORS: ModalErrors = {fieldErrors: {}, formError: null};
@@ -57,10 +58,16 @@ export default function UpdateEmailModal({
   };
 
   return (
-    <Dialog open={open} onClose={close} aria-labelledby="update-email-title">
+    <Dialog
+      open={open}
+      onClose={close}
+      fullWidth
+      maxWidth="xs"
+      aria-labelledby="update-email-title"
+    >
       <form onSubmit={handleSubmit} noValidate>
         <DialogTitle id="update-email-title">Update email</DialogTitle>
-        <DialogContent sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
+        <DialogContent sx={formDialogContentSx}>
           {errors.formError && (
             <Typography role="alert" sx={{color: 'var(--text-error-primary)'}}>
               {errors.formError}

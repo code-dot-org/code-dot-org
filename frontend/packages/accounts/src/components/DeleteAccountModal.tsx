@@ -18,6 +18,7 @@ import {
   type AccountSettings,
 } from '@code-dot-org/core/api';
 
+import {formDialogContentSx} from './formDialog';
 import {modalErrors, type ModalErrors} from './modalErrors';
 
 const NO_ERRORS: ModalErrors = {fieldErrors: {}, formError: null};
@@ -70,13 +71,15 @@ export default function DeleteAccountModal({
     <Dialog
       open={open}
       onClose={close}
+      fullWidth
+      maxWidth="xs"
       aria-labelledby="delete-account-title"
       aria-describedby="delete-account-desc"
       slotProps={{paper: {role: 'alertdialog'}}}
     >
       <form onSubmit={handleSubmit} noValidate>
         <DialogTitle id="delete-account-title">Delete my account</DialogTitle>
-        <DialogContent sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
+        <DialogContent sx={formDialogContentSx}>
           <DialogContentText id="delete-account-desc">
             This permanently deletes your account
             {dependents > 0

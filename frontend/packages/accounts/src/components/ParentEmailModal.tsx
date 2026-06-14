@@ -19,6 +19,7 @@ import {
   type ParentEmailOptIn,
 } from '@code-dot-org/core/api';
 
+import {formDialogContentSx} from './formDialog';
 import {modalErrors, type ModalErrors} from './modalErrors';
 
 const NO_ERRORS: ModalErrors = {fieldErrors: {}, formError: null};
@@ -72,6 +73,8 @@ export default function ParentEmailModal({
     <Dialog
       open={open}
       onClose={close}
+      fullWidth
+      maxWidth="xs"
       aria-labelledby="parent-email-title"
       aria-describedby="parent-email-desc"
     >
@@ -79,7 +82,7 @@ export default function ParentEmailModal({
         <DialogTitle id="parent-email-title">
           Update parent/guardian email address
         </DialogTitle>
-        <DialogContent sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
+        <DialogContent sx={formDialogContentSx}>
           <Typography id="parent-email-desc" variant="body2">
             This email address will have the ability to recover or reset this
             account’s password.

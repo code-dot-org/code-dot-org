@@ -11,6 +11,7 @@ import {useState, type FormEvent} from 'react';
 import TextField from '@code-dot-org/component-library/textField';
 import {DashboardApiClient, useUpdatePassword} from '@code-dot-org/core/api';
 
+import {formDialogContentSx} from './formDialog';
 import {modalErrors, type ModalErrors} from './modalErrors';
 
 const NO_ERRORS: ModalErrors = {fieldErrors: {}, formError: null};
@@ -56,10 +57,16 @@ export default function UpdatePasswordModal({
   };
 
   return (
-    <Dialog open={open} onClose={close} aria-labelledby="update-password-title">
+    <Dialog
+      open={open}
+      onClose={close}
+      fullWidth
+      maxWidth="xs"
+      aria-labelledby="update-password-title"
+    >
       <form onSubmit={handleSubmit} noValidate>
         <DialogTitle id="update-password-title">Update password</DialogTitle>
-        <DialogContent sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
+        <DialogContent sx={formDialogContentSx}>
           {errors.formError && (
             <Typography role="alert" sx={{color: 'var(--text-error-primary)'}}>
               {errors.formError}

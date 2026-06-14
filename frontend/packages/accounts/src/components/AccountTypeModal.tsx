@@ -18,6 +18,7 @@ import {
 
 import {hashEmail} from '../util/hashEmail';
 
+import {formDialogContentSx} from './formDialog';
 import {modalErrors, type ModalErrors} from './modalErrors';
 
 const TYPE_LABEL: Record<UserType, string> = {
@@ -73,12 +74,14 @@ export default function AccountTypeModal({
     <Dialog
       open={open}
       onClose={close}
+      fullWidth
+      maxWidth="xs"
       aria-labelledby="account-type-title"
       aria-describedby="account-type-desc"
       slotProps={{paper: {role: 'alertdialog'}}}
     >
       <DialogTitle id="account-type-title">Change account type?</DialogTitle>
-      <DialogContent sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
+      <DialogContent sx={formDialogContentSx}>
         <DialogContentText id="account-type-desc">
           Changing your account type
           {prospectiveType ? ` to ${TYPE_LABEL[prospectiveType]}` : ''} can
