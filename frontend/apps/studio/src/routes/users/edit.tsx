@@ -1,4 +1,4 @@
-import {Box, Button, Typography} from '@mui/material';
+import {Button} from '@mui/material';
 import {createFileRoute, redirect} from '@tanstack/react-router';
 import {lazy, Suspense} from 'react';
 
@@ -33,33 +33,14 @@ function AccountsRoute() {
   const navigate = Route.useNavigate();
 
   return (
-    <Suspense fallback={<AccountsSkeleton />}>
+    // null fallback: the root layout reserves the content height (no footer
+    // jump) and the page renders its own loading status once the chunk loads.
+    <Suspense fallback={null}>
       <AccountSettingsPage
         tab={tab}
         onTabChange={next => navigate({search: {tab: next}, replace: true})}
       />
     </Suspense>
-  );
-}
-
-// No height reserve: the root layout holds the content area open, so the footer
-// never jumps (CLS) during the lazy-chunk window.
-function AccountsSkeleton() {
-  return (
-    <Box
-      role="status"
-      aria-busy="true"
-      sx={{
-        position: 'absolute',
-        width: 1,
-        height: 1,
-        overflow: 'hidden',
-        clip: 'rect(0 0 0 0)',
-        whiteSpace: 'nowrap',
-      }}
-    >
-      <Typography>Loading your account…</Typography>
-    </Box>
   );
 }
 
