@@ -14,6 +14,10 @@ type Show = (message: string) => void;
 
 const ToastContext = createContext<Show | null>(null);
 
+// Stable identity for the no-provider fallback, so a consumer that puts `toast`
+// in a dep array doesn't see a new function each render.
+const NOOP_TOAST: Show = () => {};
+
 const visuallyHidden = {
   position: 'absolute',
   width: '1px',
@@ -32,7 +36,7 @@ const visuallyHidden = {
  * component can render standalone in tests.
  */
 export function useToast(): Show {
-  return useContext(ToastContext) ?? (() => {});
+  return useContext(ToastContext) ?? NOOP_TOAST;
 }
 
 export function ToastProvider({children}: {children: ReactNode}) {

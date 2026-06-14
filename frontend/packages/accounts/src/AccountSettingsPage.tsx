@@ -55,6 +55,8 @@ export default function AccountSettingsPage({
     document.title = 'My Account — Code.org';
   }, []);
 
+  // current_user gates loading/error (and warms the shared cache the host
+  // relies on); the page's own fields all come from `settings`, not its data.
   const currentUser = useCurrentUser(DashboardApiClient);
   const settings = useAccountSettings(DashboardApiClient);
 

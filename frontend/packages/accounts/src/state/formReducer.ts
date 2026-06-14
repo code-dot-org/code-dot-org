@@ -24,6 +24,9 @@ export function createFormState(initial: FormValues): FormState {
   return {values: initial, initial, save: initialSaveState};
 }
 
+// Both diffs iterate `values`. `values` and `initial` are seeded from the same
+// object (createFormState; 'saveSucceeded' rebases initial = values), so their
+// keysets are always equal — a field's value can change, but never appear/vanish.
 export function isDirty(state: FormState): boolean {
   return Object.keys(state.values).some(
     field => state.values[field] !== state.initial[field],

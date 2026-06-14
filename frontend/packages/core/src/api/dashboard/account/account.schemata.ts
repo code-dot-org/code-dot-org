@@ -24,6 +24,10 @@ export const AccountSettingsResponseSchema = z
     authentication_options: z.array(AuthenticationOptionSchema),
     can_change_user_type: z.boolean(),
     can_delete_own_account: z.boolean(),
+    // Nullable on read (a student may have neither yet). The server requires
+    // age/us_state for students on save; the SPA blocks re-blanking via a
+    // disabled dropdown placeholder, and a still-blank save surfaces the
+    // server's field error rather than being enforced here.
     age: z.union([z.number(), z.string()]).nullable(),
     us_state: z.string().nullable(),
     parent_email: z.string().nullable(),

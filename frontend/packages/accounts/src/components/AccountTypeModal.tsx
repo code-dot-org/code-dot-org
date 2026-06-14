@@ -8,7 +8,7 @@ import {
   DialogTitle,
   Typography,
 } from '@mui/material';
-import {useState} from 'react';
+import {useState, type FormEvent} from 'react';
 
 import TextField from '@code-dot-org/component-library/textField';
 import {
@@ -52,7 +52,9 @@ export default function AccountTypeModal({
   const isUpgrade = prospectiveType === 'teacher';
 
   // Stay open and show the error on failure; close only once the change commits.
-  const confirm = async () => {
+  const handleSubmit = async (event: FormEvent) => {
+    event.preventDefault();
+    event.stopPropagation(); // keep this submit off the page form (portal bubbles)
     if (!prospectiveType) return;
     setErrors(NO_ERRORS);
     try {
@@ -84,52 +86,54 @@ export default function AccountTypeModal({
       aria-describedby="account-type-desc"
       slotProps={{paper: {role: 'alertdialog'}}}
     >
-      <DialogTitle id="account-type-title">Change account type?</DialogTitle>
-      <DialogContent sx={formDialogContentSx}>
-        <DialogContentText id="account-type-desc">
-          Changing your account type
-          {prospectiveType ? ` to ${TYPE_LABEL[prospectiveType]}` : ''} can
-          affect your sections, students, and other account data, and may not be
-          reversible.
-        </DialogContentText>
-        {errors.formError && (
-          <Typography role="alert" sx={{color: 'var(--text-error-primary)'}}>
-            {errors.formError}
-          </Typography>
-        )}
-        {isUpgrade && (
-          <TextField
-            label="Email address"
-            name="email"
-            inputType="email"
-            autoComplete="email"
-            value={email}
-            onChange={event => setEmail(event.target.value)}
-            errorMessage={errors.fieldErrors.email?.[0]}
-            aria-invalid={errors.fieldErrors.email ? true : undefined}
-            helperMessage="Educator accounts need an email address."
-            autoFocus
-          />
-        )}
-      </DialogContent>
-      <DialogActions>
-        {/* Initial focus lands inside the dialog (so it's announced): the email
+      <form onSubmit={handleSubmit} noValidate>
+        <DialogTitle id="account-type-title">Change account type?</DialogTitle>
+        <DialogContent sx={formDialogContentSx}>
+          <DialogContentText id="account-type-desc">
+            Changing your account type
+            {prospectiveType ? ` to ${TYPE_LABEL[prospectiveType]}` : ''} can
+            affect your sections, students, and other account data, and may not
+            be reversible.
+          </DialogContentText>
+          {errors.formError && (
+            <Typography role="alert" sx={{color: 'var(--text-error-primary)'}}>
+              {errors.formError}
+            </Typography>
+          )}
+          {isUpgrade && (
+            <TextField
+              label="Email address"
+              name="email"
+              inputType="email"
+              autoComplete="email"
+              value={email}
+              onChange={event => setEmail(event.target.value)}
+              errorMessage={errors.fieldErrors.email?.[0]}
+              aria-invalid={errors.fieldErrors.email ? true : undefined}
+              helperMessage="Educator accounts need an email address."
+              autoFocus
+            />
+          )}
+        </DialogContent>
+        <DialogActions>
+          {/* Initial focus lands inside the dialog (so it's announced): the email
             field when upgrading, otherwise the safe Cancel — never Confirm. */}
-        <Button onClick={close} autoFocus={!isUpgrade}>
-          Cancel
-        </Button>
-        <Button
-          onClick={confirm}
-          variant="contained"
-          disabled={
-            mutation.isPending || (isUpgrade && email.trim().length === 0)
-          }
-        >
-          {prospectiveType
-            ? `Change to ${TYPE_LABEL[prospectiveType]}`
-            : 'Confirm'}
-        </Button>
-      </DialogActions>
+          <Button onClick={close} autoFocus={!isUpgrade}>
+            Cancel
+          </Button>
+          <Button
+            type="submit"
+            variant="contained"
+            disabled={
+              mutation.isPending || (isUpgrade && email.trim().length === 0)
+            }
+          >
+            {prospectiveType
+              ? `Change to ${TYPE_LABEL[prospectiveType]}`
+              : 'Confirm'}
+          </Button>
+        </DialogActions>
+      </form>
     </Dialog>
   );
 }

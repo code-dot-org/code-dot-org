@@ -33,6 +33,11 @@ export function resolveCsrfToken(): string | null {
 // `csrf-token` response header, with an empty body) and store it. Call after a
 // server action that rotates the session token. A failure is swallowed — the
 // next mutation surfaces a stale token if one was needed.
+//
+// The relative URL assumes the SPA is served same-origin with the dashboard
+// (true in Studio hosting and under the dev MSW). If this is ever hosted on a
+// distinct origin, this — and the raw `fetch`es in account.api.ts — must take
+// the dashboard base URL instead of the page origin.
 export async function refreshCsrfToken(): Promise<void> {
   try {
     const response = await fetch('/get_token', {credentials: 'same-origin'});

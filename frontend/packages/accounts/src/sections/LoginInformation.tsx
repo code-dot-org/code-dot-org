@@ -4,8 +4,6 @@ import {useState} from 'react';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
 
-const EditIcon = () => <FontAwesomeV6Icon iconName="pencil" aria-hidden />;
-
 import CreatePasswordModal from '../components/CreatePasswordModal';
 import Field from '../components/Field';
 import UpdateEmailModal from '../components/UpdateEmailModal';
@@ -21,6 +19,8 @@ const MASKED_PASSWORD = '••••••••••••';
 
 // Controlled disabled fields still want an onChange.
 const NOOP = () => {};
+
+const EditIcon = () => <FontAwesomeV6Icon iconName="pencil" aria-hidden />;
 
 export default function LoginInformation({settings}: SectionProps) {
   const username = useField('username');

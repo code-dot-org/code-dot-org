@@ -64,6 +64,27 @@ describe('AccountTypeModal', () => {
     });
   });
 
+  it('submits on form submit (Enter in the email field) when upgrading', async () => {
+    let body: unknown;
+    mockServer.use(
+      http.patch('*/users/user_type', async ({request}) => {
+        body = await request.json();
+        return new HttpResponse(null, {status: 204});
+      }),
+    );
+    const onClose = renderModal('teacher');
+    fireEvent.change(emailField()!, {target: {value: 'new@teacher.org'}});
+    const form = screen
+      .getByRole('button', {name: /change to educator/i})
+      .closest('form');
+    fireEvent.submit(form!);
+
+    await waitFor(() => expect(onClose).toHaveBeenCalled());
+    expect(body).toMatchObject({
+      user: {user_type: 'teacher', email: 'new@teacher.org'},
+    });
+  });
+
   it('shows a server email error on the field and stays open', async () => {
     mockServer.use(
       http.patch('*/users/user_type', () =>
