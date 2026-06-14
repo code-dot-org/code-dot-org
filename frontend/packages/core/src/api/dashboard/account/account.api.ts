@@ -1,4 +1,4 @@
-import {resolveCsrfToken} from '../../csrfToken';
+import {refreshCsrfToken, resolveCsrfToken} from '../../csrfToken';
 import type {Transport} from '../../transports/types';
 
 import {AccountSettingsResponseSchema} from './account.schemata';
@@ -165,6 +165,9 @@ export function createAccountApi(transport: Transport) {
       if (response.type !== 'opaqueredirect' && !response.ok) {
         throw new Error(`Sign-out request failed: ${response.status}`);
       }
+      // expire_other drops _csrf_token before re-signing-in, so the session
+      // token rotates; refresh ours or the next mutation 422s on a stale token.
+      await refreshCsrfToken();
     },
 
     /** DELETE /users */

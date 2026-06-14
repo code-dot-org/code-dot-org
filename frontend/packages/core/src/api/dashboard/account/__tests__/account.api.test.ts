@@ -1,6 +1,7 @@
 // @vitest-environment jsdom
 import {describe, expect, it, vi} from 'vitest';
 
+import {getSpaCsrfToken, setSpaCsrfToken} from '../../../csrfToken';
 import type {Transport} from '../../../transports/types';
 import {createAccountApi} from '../account.api';
 
@@ -119,6 +120,33 @@ describe('createAccountApi mutations target the right routes', () => {
       '/expire_other',
       expect.objectContaining({method: 'DELETE', redirect: 'manual'}),
     );
+    vi.unstubAllGlobals();
+  });
+
+  it('signOutOtherSessions refreshes the CSRF token after expiring sessions', async () => {
+    // expire_other rotates the session's CSRF token, so the next mutation 422s
+    // unless we re-fetch it from /get_token.
+    setSpaCsrfToken('stale');
+    const fetchMock = vi.fn((url: string) =>
+      url === '/get_token'
+        ? Promise.resolve(
+            new Response(null, {
+              status: 200,
+              headers: {'csrf-token': 'fresh'},
+            }),
+          )
+        : Promise.resolve(new Response(null, {status: 204})),
+    );
+    vi.stubGlobal('fetch', fetchMock);
+    const {api} = fakeTransport();
+
+    await api.signOutOtherSessions();
+
+    expect(fetchMock).toHaveBeenCalledWith('/get_token', {
+      credentials: 'same-origin',
+    });
+    expect(getSpaCsrfToken()).toBe('fresh');
+    setSpaCsrfToken(null);
     vi.unstubAllGlobals();
   });
 
