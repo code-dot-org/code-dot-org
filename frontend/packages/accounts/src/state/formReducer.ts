@@ -24,9 +24,8 @@ export function createFormState(initial: FormValues): FormState {
   return {values: initial, initial, save: initialSaveState};
 }
 
-// Both diffs iterate `values`. `values` and `initial` are seeded from the same
-// object (createFormState; 'saveSucceeded' rebases initial = values), so their
-// keysets are always equal — a field's value can change, but never appear/vanish.
+// `values` and `initial` are seeded from one object and 'saveSucceeded' rebases
+// initial = values, so their keysets stay equal: values change, keys never do.
 export function isDirty(state: FormState): boolean {
   return Object.keys(state.values).some(
     field => state.values[field] !== state.initial[field],
@@ -44,12 +43,9 @@ export function dirtyValues(state: FormState): FormValues {
 export function formReducer(state: FormState, action: FormAction): FormState {
   switch (action.type) {
     case 'edit':
-      // Ignore edits mid-save: the fields are controlled by `values`, so this
-      // also freezes them during the in-flight PATCH. Otherwise a keystroke
-      // would land in `values` (but never be sent) and 'saveSucceeded' would
-      // rebase it into `initial`, recording an un-saved edit as the baseline.
+      // Ignore edits mid-save: otherwise a keystroke lands in `values` (never
+      // sent) and 'saveSucceeded' rebases it into `initial` as a phantom baseline.
       if (state.save.status === 'saving') return state;
-      // Editing returns the save lifecycle to `dirty`, dropping any prior errors.
       return {
         ...state,
         values: {...state.values, [action.field]: action.value},

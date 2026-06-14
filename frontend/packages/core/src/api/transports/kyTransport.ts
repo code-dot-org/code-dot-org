@@ -110,9 +110,8 @@ export function createKyTransport(opts: {
         ? req.url.slice(1)
         : req.url;
 
-    // A manual-redirect request resolves to an opaqueredirect (status 0); ky
-    // would treat that as an error, so disable its throwing and surface real
-    // failures ourselves below.
+    // A manual-redirect request resolves to an opaqueredirect (status 0), which
+    // ky treats as an error; disable its throwing and surface real failures below.
     const isManualRedirect = req.redirect === 'manual';
 
     const kyOpts: KyOptions = {
@@ -133,8 +132,8 @@ export function createKyTransport(opts: {
         ? await ky(input, kyOpts)
         : await instance(input, kyOpts);
 
-      // The server 302'd a manual-redirect request (e.g. /expire_other): the
-      // action ran; we deliberately don't follow it. Treat as success-empty.
+      // Server 302'd a manual-redirect request: the action ran, we don't follow
+      // it. Treat as success-empty.
       if (res.type === 'opaqueredirect') {
         return {data: undefined, meta: extractMeta(res, res.url)};
       }

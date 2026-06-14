@@ -148,11 +148,9 @@ export function createAccountApi(transport: Transport) {
       });
     },
 
-    // DELETE /expire_other signs the user out of every OTHER browser/device,
-    // then re-issues this session and 302s to the account page. redirect:'manual'
-    // keeps the transport from following the 302 (a followed DELETE would
-    // re-fire at /users/edit and 404); the action still runs server-side and the
-    // transport treats the opaqueredirect (or a 204 from the mock) as success.
+    // DELETE /expire_other signs out every OTHER session, then re-signs this one
+    // and 302s. redirect:'manual' stops the transport following it (a followed
+    // DELETE would re-fire at the target and 404); the action still runs.
     async signOutOtherSessions(): Promise<void> {
       await transport.requestWithMeta({
         method: 'DELETE',
@@ -160,8 +158,8 @@ export function createAccountApi(transport: Transport) {
         redirect: 'manual',
         headers: JSON_ACCEPT,
       });
-      // expire_other drops _csrf_token before re-signing-in, so the session
-      // token rotates; refresh ours or the next mutation 422s on a stale token.
+      // expire_other rotates the session token; refresh ours or the next
+      // mutation 422s on a stale token.
       await refreshCsrfToken(transport);
     },
 
