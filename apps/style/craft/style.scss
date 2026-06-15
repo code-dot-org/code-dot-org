@@ -1439,7 +1439,7 @@ $height-to-width: math.div(434, 477);
     #score-inner {
       @include scoreboard-background;
       top: -411px;
-      height: 17px;
+      height: 25px;
       float: left;
       position: relative;
       left: -50%;
