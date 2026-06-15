@@ -18,7 +18,7 @@ import type {UserType} from '../../shared/types';
  * Account-menu trigger (teal pill with the display name + chevron).
  */
 const accountTriggerSx: SxProps = {
-  color: 'var(--neutral-base-white)',
+  color: 'var(--text-neutral-inverse)',
   '&:focus-visible': {
     outline: '2px solid var(--text-neutral-inverse)',
     outlineOffset: '2px',
@@ -38,13 +38,13 @@ const accountTriggerSx: SxProps = {
   '&:hover, &:active, &:focus-visible': {
     backgroundColor: 'var(--background-brand-teal-primary)',
     boxShadow: 'none',
-    color: 'var(--neutral-base-white)',
+    color: 'var(--text-neutral-inverse)',
     // Re-pin the white outline; the theme's Button :active rule recolors it otherwise.
     border: '1px solid var(--neutral-base-white)',
   },
   '& .MuiButton-endIcon, & .MuiButton-endIcon i': {
     width: 'auto',
-    color: 'var(--neutral-base-white)',
+    color: 'var(--text-neutral-inverse)',
     fontSize: '14px',
   },
 };

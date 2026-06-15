@@ -34,7 +34,7 @@ export const barsIconSx: SxProps = {
 
 /** Trigger: always visible (the hamburger shows at every width). */
 export const hamburgerTriggerSx: SxProps = {
-  color: 'var(--neutral-base-white)',
+  color: 'var(--text-neutral-inverse)',
   '&:focus-visible': {
     outline: '2px solid var(--text-neutral-inverse)',
     outlineOffset: '2px',
@@ -108,13 +108,13 @@ export const hamburgerCreateAccountSx = {
   marginTop: '4px',
   padding: '8px',
   textAlign: 'center',
-  color: 'var(--neutral-base-white)',
+  color: 'var(--text-neutral-inverse)',
   backgroundColor: 'var(--background-brand-purple-primary)',
   fontSize: '16px',
   fontWeight: 400,
   textDecoration: 'none',
   borderRadius: '4px',
-  '&:visited, &:active, &:hover': {color: 'var(--neutral-base-white)'},
+  '&:visited, &:active, &:hover': {color: 'var(--text-neutral-inverse)'},
 };
 
 /** Separator after the signed-out auth block; mobile-only like the auth itself. */

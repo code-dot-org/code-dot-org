@@ -37,16 +37,14 @@ describe('Header', () => {
     expect(screen.getByText('Alice')).toBeInTheDocument();
   });
 
-  it('renders Sign In and Create Account links when signed-out', () => {
+  it('renders Sign in and Create account links when signed-out', () => {
     render(<Header {...BASE_PROPS} userAuth={{status: 'signed-out'}} />);
-    // hidden: true — the auth area is mobile-first display:none and its
-    // min-width media query doesn't apply under jsdom, so the links are in the
-    // DOM but not "visible" to getByRole's default accessibility filter.
+    // The auth pills are authored default-visible (hidden only below mobileAuth
+    // via a max-width media query, which jsdom ignores), so they resolve without
+    // the hidden filter.
+    expect(screen.getByRole('link', {name: 'Sign in'})).toBeInTheDocument();
     expect(
-      screen.getByRole('link', {name: 'Sign in', hidden: true}),
-    ).toBeInTheDocument();
-    expect(
-      screen.getByRole('link', {name: 'Create account', hidden: true}),
+      screen.getByRole('link', {name: 'Create account'}),
     ).toBeInTheDocument();
     expect(screen.queryByText('Alice')).not.toBeInTheDocument();
   });
@@ -98,6 +96,28 @@ describe('Header', () => {
     // Legal lives in the hamburger (closed here), never on the bar.
     expect(
       screen.queryByRole('link', {name: 'Privacy & Legal', hidden: true}),
+    ).not.toBeInTheDocument();
+  });
+
+  it('skips a global nav entry that resolves to no href', () => {
+    render(
+      <Header
+        {...BASE_PROPS}
+        menuItems={[]}
+        globalNavItems={[
+          {label: 'Districts', href: '//code.org/administrators'},
+          // A group with no sub-items yields no overview href.
+          {label: 'Empty', subItems: []},
+        ]}
+        userAuth={{status: 'signed-out'}}
+      />,
+    );
+    expect(
+      screen.getByRole('link', {name: 'Districts', hidden: true}),
+    ).toBeInTheDocument();
+    // No '#' placeholder link — the entry is dropped, not rendered broken.
+    expect(
+      screen.queryByRole('link', {name: 'Empty', hidden: true}),
     ).not.toBeInTheDocument();
   });
 

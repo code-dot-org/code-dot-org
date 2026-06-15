@@ -73,10 +73,12 @@ const Header: FunctionComponent<HeaderProps> = ({
     ? menuItems
     : globalNavItems
         .filter(item => !item.hamburgerOnly)
-        .map(item => ({
-          label: item.label,
-          href: item.href ?? item.subItems?.[0]?.href ?? '#',
-        }));
+        .flatMap(item => {
+          // A group links to its overview (first sub-item's href). Drop entries
+          // that resolve to no real href rather than render a broken '#' link.
+          const href = item.href ?? item.subItems?.[0]?.href;
+          return href ? [{label: item.label, href}] : [];
+        });
 
   return (
     <Box component="header">
