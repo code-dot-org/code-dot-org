@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-11 18:35:26 UTC",
+    "serialized_at": "2026-06-12 16:29:41 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -715,7 +715,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl-aif-2-U4-filter-panel"
+          "pl-aif-2-U4-filtering-for-transparency-video"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -723,7 +723,7 @@
         "activity_section.key": "5a6f4092-5503-42ef-94fd-1265729b3cc0"
       },
       "level_keys": [
-        "pl-aif-2-U4-filter-panel"
+        "pl-aif-2-U4-filtering-for-transparency-video"
       ]
     },
     {
@@ -732,15 +732,12 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl-aif-2-U4-filtering-boolean-logic-weblab"
-        ],
         "progression": "Filtering and Transparency (15 min)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl-aif-2-U4-filtering-boolean-logic-weblab"
+          "pl-aif-2-U4-improve-filters-weblab"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -748,7 +745,7 @@
         "activity_section.key": "5a6f4092-5503-42ef-94fd-1265729b3cc0"
       },
       "level_keys": [
-        "pl-aif-2-U4-filtering-boolean-logic-weblab"
+        "pl-aif-2-U4-improve-filters-weblab"
       ]
     },
     {
@@ -1372,9 +1369,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-aif-2-U4-filter-panel",
+        "level.key": "pl-aif-2-U4-filtering-for-transparency-video",
         "script_level.level_keys": [
-          "pl-aif-2-U4-filter-panel"
+          "pl-aif-2-U4-filtering-for-transparency-video"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1384,9 +1381,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-aif-2-U4-filtering-boolean-logic-weblab",
+        "level.key": "pl-aif-2-U4-improve-filters-weblab",
         "script_level.level_keys": [
-          "pl-aif-2-U4-filtering-boolean-logic-weblab"
+          "pl-aif-2-U4-improve-filters-weblab"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

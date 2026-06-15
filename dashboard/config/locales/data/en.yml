@@ -933,6 +933,7 @@ en:
         pl-aif2-filtering-data-u3: Filtering Data U3 Movie filter
         pl-aif2-teaching-moves-coding-with-ai: Teaching Coding + AI
         pl-aif2-debug-for-loop: Debugging For Loops
+        pl-aif2-filter-for-transparency: Filtering for Transparency
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
