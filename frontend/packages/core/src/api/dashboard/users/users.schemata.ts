@@ -1,54 +1,15 @@
-import {z} from 'zod';
 import camelcaseKeys from 'camelcase-keys';
+import {z} from 'zod';
 
-export const UserTypes = ['student', 'teacher'] as const;
+import {CurrentUserResponseSchema} from './currentUserTypes';
 
-export const SignedInCurrentUserSchema = z
-  .object({
-    id: z.number(),
-    username: z.string(),
-    display_name: z.string(),
-    user_type: z.enum(UserTypes),
-    is_signed_in: z.literal(true),
-    short_name: z.string(),
-    is_verified_instructor: z.boolean(),
-    is_lti: z.boolean(),
-    mute_music: z.boolean(),
-    under_13: z.boolean(),
-    over_21: z.boolean(),
-    sort_by_family_name: z.boolean(),
-    ai_rubrics_disabled: z.boolean(),
-    progress_table_v2_closed_beta: z.boolean(),
-    ai_tutor_access_denied: z.boolean(),
-    has_seen_progress_table_v2_invitation: z.boolean(),
-    has_seen_homepage_welcome: z.boolean(),
-    has_dismissed_personalization_alert: z.boolean(),
-    date_progress_table_invitation_last_delayed: z.string(),
-    child_account_compliance_state: z.string(),
-    country_code: z.string(),
-    us_state_code: z.string(),
-    age: z.number(),
-    in_section: z.boolean().nullable(),
-    created_at: z.string(),
-    has_seen_ai_assessments_announcement: z.boolean(),
-    ai_differentiation_enabled: z.boolean(),
-    has_completed_ai_differentiation_welcome: z.boolean(),
-    educator_role: z.string(),
-    sharing_disabled: z.boolean(),
-    ai_tutor_enabled_for_pilot: z.boolean(),
-  })
-  .transform(data => camelcaseKeys(data, {deep: true}));
-
-export const SignedOutCurrentUserSchema = z
-  .object({
-    is_signed_in: z.literal(false),
-  })
-  .transform(data => camelcaseKeys(data, {deep: true}));
-
-export const CurrentUserSchema = z.union([
-  SignedInCurrentUserSchema,
-  SignedOutCurrentUserSchema,
-]);
+// Derived (not re-declared) from the canonical currentUserTypes schema; a prior
+// hand-copied duplicate silently diverged from the endpoint. Discriminate on
+// is_signed_in (a targeted error on a bad field, not an opaque union failure)
+// before camelCasing.
+export const CurrentUserSchema = CurrentUserResponseSchema.transform(data =>
+  camelcaseKeys(data, {deep: true}),
+);
 
 export const SignedInResponseSchema = z.object({
   is_signed_in: z.boolean(),
