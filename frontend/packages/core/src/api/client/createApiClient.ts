@@ -1,6 +1,5 @@
 import type {Transport} from '../transports/types';
 
-import {createAccountApi} from '../dashboard/account';
 import {createAuthApi} from '../dashboard/auth';
 import {createChannelsApi} from '../dashboard/channels';
 import {createCoursesApi} from '../dashboard/courses';
@@ -14,7 +13,6 @@ import {createUsersApi} from '../dashboard/users';
 
 export const createApiClient = (transport: Transport) => ({
   transport,
-  account: createAccountApi(transport),
   auth: createAuthApi(transport),
   channels: createChannelsApi(transport),
   courses: createCoursesApi(transport),
