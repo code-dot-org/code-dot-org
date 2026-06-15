@@ -76,6 +76,7 @@ export interface DemoPresetView {
   grades: string[];
   unit: DemoPresetUnit | null;
   unitGroup: DemoPresetCourse | null;
+  studentSnapshotDefaultTourLesson: number | null;
 }
 
 type Course = {
@@ -186,6 +187,7 @@ export interface ServerDemoPresetView {
   grades: string[];
   unit: ServerDemoPresetUnit | null;
   unit_group: ServerDemoPresetCourse | null;
+  student_snapshot_default_tour_lesson: number | null;
 }
 
 //TODO: better types here

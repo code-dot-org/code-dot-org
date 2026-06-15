@@ -2,10 +2,12 @@ require_relative '../../../../test_helper'
 require_relative '../../../../../i18n/resources/dashboard/course_content/sync_in'
 
 class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
+  def around(&block)
+    FakeFS.with_fresh(&block)
+  end
+
   def setup
     I18n::Metrics.stubs(:report_runtime).yields(nil)
-    File.stubs(:write)
-    FileUtils.stubs(:mkdir_p)
   end
 
   def test_base_class_inheriting

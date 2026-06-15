@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-10 15:44:52 UTC",
+    "serialized_at": "2026-06-12 16:29:41 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -519,15 +519,12 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl-aif-2-U4-while-debug-weblab-guess"
-        ],
         "progression": "Introducing Loops (20 min)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl-aif-2-U4-while-debug-weblab-guess"
+          "pl-sandbox-aif-sem2-iterating-with-ai-while-16"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -535,7 +532,7 @@
         "activity_section.key": "a1560013-e82c-4d0e-a0b5-66dd0d523a4c"
       },
       "level_keys": [
-        "pl-aif-2-U4-while-debug-weblab-guess"
+        "pl-sandbox-aif-sem2-iterating-with-ai-while-16"
       ]
     },
     {
@@ -718,7 +715,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl-aif-2-U4-filter-panel"
+          "pl-aif-2-U4-filtering-for-transparency-video"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -726,7 +723,7 @@
         "activity_section.key": "5a6f4092-5503-42ef-94fd-1265729b3cc0"
       },
       "level_keys": [
-        "pl-aif-2-U4-filter-panel"
+        "pl-aif-2-U4-filtering-for-transparency-video"
       ]
     },
     {
@@ -735,15 +732,12 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl-aif-2-U4-filtering-boolean-logic-weblab"
-        ],
         "progression": "Filtering and Transparency (15 min)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl-aif-2-U4-filtering-boolean-logic-weblab"
+          "pl-aif-2-U4-improve-filters-weblab"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -751,7 +745,7 @@
         "activity_section.key": "5a6f4092-5503-42ef-94fd-1265729b3cc0"
       },
       "level_keys": [
-        "pl-aif-2-U4-filtering-boolean-logic-weblab"
+        "pl-aif-2-U4-improve-filters-weblab"
       ]
     },
     {
@@ -1279,9 +1273,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-aif-2-U4-while-debug-weblab-guess",
+        "level.key": "pl-sandbox-aif-sem2-iterating-with-ai-while-16",
         "script_level.level_keys": [
-          "pl-aif-2-U4-while-debug-weblab-guess"
+          "pl-sandbox-aif-sem2-iterating-with-ai-while-16"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1375,9 +1369,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-aif-2-U4-filter-panel",
+        "level.key": "pl-aif-2-U4-filtering-for-transparency-video",
         "script_level.level_keys": [
-          "pl-aif-2-U4-filter-panel"
+          "pl-aif-2-U4-filtering-for-transparency-video"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1387,9 +1381,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-aif-2-U4-filtering-boolean-logic-weblab",
+        "level.key": "pl-aif-2-U4-improve-filters-weblab",
         "script_level.level_keys": [
-          "pl-aif-2-U4-filtering-boolean-logic-weblab"
+          "pl-aif-2-U4-improve-filters-weblab"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

@@ -1,8 +1,8 @@
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useEffect, useMemo, useState} from 'react';
 import {connect} from 'react-redux';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {setUserAiEvalStatus} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
@@ -194,16 +194,18 @@ function RunAIAssessmentButton({
     <div>
       {canProvideFeedback && (
         <div>
-          <Button
+          <MuiButton
             className="uitest-run-ai-assessment"
-            text={studentButtonText()}
-            color={Button.ButtonColor.neutralDark}
+            variant="outlined"
+            color="secondary"
+            size="small"
+            type="button"
             onClick={handleRunAiAssessment}
-            style={{margin: 0}}
             disabled={status !== STATUS.READY && status !== STATUS.ERROR}
+            loading={polling}
           >
-            {polling && <i className="fa-solid fa-spinner fa-spin" />}
-          </Button>
+            {studentButtonText()}
+          </MuiButton>
         </div>
       )}
     </div>

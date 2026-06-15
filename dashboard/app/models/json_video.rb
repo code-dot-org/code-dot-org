@@ -34,7 +34,7 @@ class JSONVideo < ApplicationRecord
     Dir.glob(root_dir.join(glob)).each do |path|
       seed_record(path)
     rescue => exception
-      CDO.log.error "Failed to seed json video #{path}: #{exception.message}"
+      raise "Failed to seed json video #{path}: #{exception.message}"
     end
   end
 

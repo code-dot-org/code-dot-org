@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-21 11:35:59 UTC",
+    "serialized_at": "2026-06-11 20:51:07 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -6746,7 +6746,244 @@
     }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Sorting and Chaining",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Sorting and Chaining",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Sorting and Chaining",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DI-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Value Explorer Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-IM-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Value Explorer Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DC-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Value Explorer Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-PD-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Value Explorer Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Value Explorer Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-VD-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Intro to Data Structures",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Intro to Data Structures",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-VD-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Turning Data Into Displays",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DC-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Turning Data Into Displays",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-IM-27"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Turning Data Into Displays",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-VD-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Basic Array Methods",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-PD-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Basic Array Methods",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Basic Array Methods",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-VD-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Objects for Real-World Data",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-IM-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Objects for Real-World Data",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DC-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Objects for Real-World Data",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-VD-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Lists of Objects",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-ML-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Lists of Objects",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DC-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Lists of Objects",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-IM-27"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Rendering Lists of Objects",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DI-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Rendering Lists of Objects",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-PD-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Rendering Lists of Objects",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-VD-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Evaluating Fairness and Accessibility",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-IM-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Evaluating Fairness and Accessibility",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-IM-27"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Evaluating Fairness and Accessibility",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-TR-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Filtering",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Filtering",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Filtering",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-TR-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Searching",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Searching",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Searching",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-18"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

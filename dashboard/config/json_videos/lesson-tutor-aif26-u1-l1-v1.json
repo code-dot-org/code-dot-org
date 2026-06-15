@@ -1,0 +1,11 @@
+{
+  "key": "lesson-tutor-aif26-u1-l1-v1",
+  "description": "AIF 2026 Unit 1 Lesson 1 Video 1",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/aif2026_unit1_lesson1_video1.json",
+  "labs": [],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "bf88171c-e71a-4930-8eaf-35a1a55f4941"
+  ]
+}

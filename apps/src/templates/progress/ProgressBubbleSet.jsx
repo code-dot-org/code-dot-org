@@ -109,7 +109,7 @@ class ProgressBubbleSet extends React.Component {
 const inlineStyles = {
   background: {
     height: 10,
-    backgroundColor: 'var(--background-neutral-secondary)',
+    backgroundColor: 'var(--background-neutral-quinary)',
     position: 'absolute',
     left: 0,
     right: 0,

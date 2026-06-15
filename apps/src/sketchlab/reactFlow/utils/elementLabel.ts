@@ -3,6 +3,8 @@ import {
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 
+import {isAnchorEndpoint} from './connectionRules';
+
 /**
  * Human-readable label for a node, used in screen-reader announcements.
  */
@@ -46,8 +48,8 @@ export function getEdgeLabel(
   const sourceNode = nodeMap.get(edge.source);
   const targetNode = nodeMap.get(edge.target);
 
-  const sourceIsAnchor = !sourceNode || sourceNode.type === 'lineAnchor';
-  const targetIsAnchor = !targetNode || targetNode.type === 'lineAnchor';
+  const sourceIsAnchor = isAnchorEndpoint(sourceNode);
+  const targetIsAnchor = isAnchorEndpoint(targetNode);
 
   if (sourceIsAnchor && targetIsAnchor) {
     return lineIndex !== undefined ? `Line ${lineIndex}` : 'Line';

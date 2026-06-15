@@ -28,6 +28,33 @@ The UI tests run as part of our deployment during the Deploy To Test (DTT) via `
 
 Each suite uploads its own status page (`test_status_{Safari_iPad_iPhone_UI,Chrome_Firefox_UI,Eyes}.html`) to the test machine and to S3.
 
+## Concurrency limits
+
+SauceLabs and Device Farm each have their own cost structure and concurrency
+limits. SauceLabs charges by maximum concurrency. Device Farm charges per test
+run, but also has separate concurrency limits for desktop and mobile within each
+AWS account. Device Farm limits can be increased at no additional cost by
+negotiating with AWS support based on current need an availability.
+
+Today, the relevant concurrency limits are:
+
+| Provider            | AWS Account | Concurrency | Usage                   |
+|---------------------|-------------|-------------|-------------------------|
+| SauceLabs           | —           | 65          | DTT + local development |
+| Device Farm Desktop | codeorg     | 150         | DTT + local development |
+| Device Farm Desktop | codeorg-dev | 150         | Drone (CI)              |
+
+Staying under concurrency limits in DTT is straightforward, because only one DTT
+runs at a time. Staying under limits in Drone is less predictable, because there
+is no limit to the number of concurrent Drone runs, and each concurrent drone
+run might not be running the maximum number of UI tests at a given time.
+Therefore, the simplest plan is to request additional increases to Device Farm
+Desktop (codeorg-dev) concurrency if/when we start seeing UI tests fail in Drone
+with concurrency errors like this one:
+```
+Cannot exceed 150 concurrent sessions. Currently active=130, pending=20, failed=0 (Selenium::WebDriver::Error::SessionNotCreatedError)
+```
+
 ## Local Setup
 
 ### On your machine: Chrome webdriver
@@ -70,6 +97,21 @@ saucelabs_authkey: 'xxxxxx-xxxx-xxxx-xxx-xxxxxxxxx'
 # can be anything, if you use multiple machines (e.g. EC2), should be unique to each:
 saucelabs_tunnel_name: cdo-tunnel
 ```
+
+### With remote browsers: Device Farm
+
+Currently, we do not support running Device Farm against development machines which do not have public IP addresses, because Device Farm does not provide an equivalent to Sauce Connect. The current workarounds are:
+- local chromedriver (see above). This is a great option for debugging UI test failures in drone, which must have failed initially in chromedriver before falling back to Device Farm (see `--first-run-local` flag in `runner.rb`).
+- local saucelabs (see above).
+
+If you can't repro in chromedriver or SauceLabs:
+- run Device Farm locally against test-studio.code.org: `runner.rb --html --device-farm -c Chrome -f ...`
+
+If you can't repro an issue in chromedriver of SauceLabs AND you need to test against modified application code:
+- connect to a drone UI test container via `bin/drone/shell` and rerun the test there, or
+- run Device Farm locally against an adhoc
+
+If the above workarounds become too cumbersome, we could implement tunneling via [Connecting to Amazon VPC](https://docs.aws.amazon.com/devicefarm/latest/testgrid/techref-vpc.html).
 
 ## Running UI Tests with Sauce Labs
 

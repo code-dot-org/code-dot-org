@@ -39,6 +39,9 @@ jobs:
         # GitHub Actions, which flips playwright.config to its CI reporter lane.
         env:
           PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+          # Firefox/WebKit won't launch as root unless $HOME is owned by the user;
+          # the image's /github/home is pwuser's, so point HOME at root's own dir.
+          HOME: /root
           # Explicit target: the deployed test env. Repoint at a PR adhoc to gate PR code.
           TARGET_URL: https://test-studio.code.org
         run: yarn workspace @code-dot-org/e2e-tests test:ui:ci

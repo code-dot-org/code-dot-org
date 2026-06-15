@@ -96,6 +96,8 @@ const demoPresetFromServerDemoPreset = (
         displayName: demoPreset.unit_group.display_name,
       }
     : null,
+  studentSnapshotDefaultTourLesson:
+    demoPreset.student_snapshot_default_tour_lesson ?? null,
 });
 
 export class DemoSectionCreationError extends Error {

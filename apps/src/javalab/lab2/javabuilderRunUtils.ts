@@ -24,8 +24,9 @@ import {splitForLevelbuilderSave} from './sourceConverter';
 // Module-local cache so onStop can close the active connection.
 let activeConnection: JavabuilderConnection | null = null;
 
-// Set when stop is clicked before a connection exists.
-let runInterrupted = false;
+// Monotonic run id. stopJavaCode and each new run bump it; a run
+// suspended in an await aborts when it wakes to find its id stale.
+let mostRecentRunId = 0;
 
 // Javabuilder explicitly sends newline messages,
 // so any other console output is written as a partial line
@@ -48,7 +49,7 @@ export async function handleRunClick(
   progressManager: ProgressManager | null,
   needsInitialSourcesSave: boolean
 ): Promise<void> {
-  runInterrupted = false;
+  const thisRunId = ++mostRecentRunId;
 
   const state = getStore().getState();
 
@@ -86,9 +87,9 @@ export async function handleRunClick(
     csrfToken = null;
   }
 
-  // The user may have stopped during the save or token fetch, before a
-  // connection existed to interrupt.
-  if (runInterrupted) {
+  // The user may have stopped, or started a newer run, while this one was
+  // suspended on the save or token fetch.
+  if (thisRunId !== mostRecentRunId) {
     return;
   }
 
@@ -204,9 +205,9 @@ export async function handleRunClick(
 }
 
 export function stopJavaCode(): void {
-  // Record the stop even when no connection exists yet (still saving or
-  // fetching the token); handleRunClick checks this before connecting.
-  runInterrupted = true;
+  // Invalidate any run that has no connection yet (still saving or fetching
+  // the token); handleRunClick rechecks its captured id before connecting.
+  mostRecentRunId++;
   // If the neighborhood exists, stop it. This prevents extra animation
   // from occurring after stop.
   CodebridgeRegistry.getInstance().getNeighborhood()?.onStop();
