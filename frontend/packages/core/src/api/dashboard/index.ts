@@ -1,4 +1,3 @@
-export * from './account';
 export * from './auth';
 export * from './channels';
 export * from './courses';
@@ -15,6 +14,34 @@ export type {
 } from './users/currentUserTypes';
 
 export {usersKeys} from './users/users.keys';
-export {useCurrentUser} from './users/users.query';
-export {CurrentUserSchema} from './users/users.schemata';
-export type {CurrentUser} from './users/users.types';
+export {
+  useCurrentUser,
+  useUserSettings,
+  useUpdateProfile,
+  useUpdateEmail,
+  useUpdatePassword,
+  useCreatePassword,
+  useUpdateUserType,
+  useUpdateParentEmail,
+  useRemoveParentEmail,
+  useDeleteUser,
+  useSignOutOtherSessions,
+} from './users/users.query';
+export {
+  CurrentUserSchema,
+  UserSettingsResponseSchema,
+} from './users/users.schemata';
+export type {
+  CurrentUser,
+  UserSettings,
+  AuthenticationOptionSummary,
+  UserType,
+  UpdateProfileParams,
+  UpdateEmailParams,
+  UpdatePasswordParams,
+  CreatePasswordParams,
+  UpdateUserTypeParams,
+  DeleteUserParams,
+  ParentEmailOptIn,
+  UpdateParentEmailParams,
+} from './users/users.types';

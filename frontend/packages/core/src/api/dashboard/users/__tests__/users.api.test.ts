@@ -3,7 +3,7 @@ import {describe, expect, it, vi} from 'vitest';
 
 import {getSpaCsrfToken, setSpaCsrfToken} from '../../../csrfToken';
 import type {Transport} from '../../../transports/types';
-import {createAccountApi} from '../account.api';
+import {createUsersApi} from '../users.api';
 
 function fakeTransport(result: unknown = undefined) {
   const request = vi.fn().mockResolvedValue(result);
@@ -12,7 +12,7 @@ function fakeTransport(result: unknown = undefined) {
     meta: {status: 204, headers: {}, url: '/x'},
   });
   const transport = {request, requestWithMeta} as unknown as Transport;
-  return {api: createAccountApi(transport), request, requestWithMeta};
+  return {api: createUsersApi(transport), request, requestWithMeta};
 }
 
 const WIRE_SETTINGS = {
@@ -40,12 +40,15 @@ const WIRE_SETTINGS = {
   us_state_options: [{value: 'WA', text: 'Washington'}],
 };
 
-describe('createAccountApi.getSettings', () => {
+describe('createUsersApi.getSettings', () => {
   it('GETs the settings endpoint and camelCases the response', async () => {
     const {api, request} = fakeTransport(WIRE_SETTINGS);
     const settings = await api.getSettings();
     expect(request).toHaveBeenCalledWith(
-      expect.objectContaining({method: 'GET', url: '/api/v1/account/settings'}),
+      expect.objectContaining({
+        method: 'GET',
+        url: '/api/v1/users/me/settings',
+      }),
     );
     expect(settings.userType).toBe('teacher');
     expect(settings.parentEmail).toBeNull();
@@ -64,7 +67,7 @@ describe('createAccountApi.getSettings', () => {
   });
 });
 
-describe('createAccountApi mutations target the right routes', () => {
+describe('createUsersApi mutations target the right routes', () => {
   it('updateProfile PATCHes /dashboardapi/users with only the given fields', async () => {
     const {api, request} = fakeTransport();
     await api.updateProfile({givenName: 'Grace', usState: 'WA'});
@@ -163,9 +166,9 @@ describe('createAccountApi mutations target the right routes', () => {
     await expect(api.signOutOtherSessions()).rejects.toThrow();
   });
 
-  it('deleteAccount sends a top-level password_confirmation when given', async () => {
+  it('deleteUser sends a top-level password_confirmation when given', async () => {
     const {api, request} = fakeTransport();
-    await api.deleteAccount({password: 'pw'});
+    await api.deleteUser({password: 'pw'});
     expect(request).toHaveBeenCalledWith(
       expect.objectContaining({
         method: 'DELETE',
@@ -175,9 +178,9 @@ describe('createAccountApi mutations target the right routes', () => {
     );
   });
 
-  it('deleteAccount omits the body for word/picture accounts', async () => {
+  it('deleteUser omits the body for word/picture accounts', async () => {
     const {api, request} = fakeTransport();
-    await api.deleteAccount({});
+    await api.deleteUser({});
     expect(request).toHaveBeenCalledWith(
       expect.objectContaining({
         method: 'DELETE',
