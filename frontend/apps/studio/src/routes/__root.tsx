@@ -4,7 +4,7 @@ import '@code-dot-org/component-library-styles/fontVariables.css';
 import '@code-dot-org/component-library-styles/primitiveColors.css';
 import '@code-dot-org/component-library-styles/colors.css';
 
-import {ThemeProvider} from '@mui/material';
+import {Box, ThemeProvider} from '@mui/material';
 import {createRootRoute, Outlet, useRouter} from '@tanstack/react-router';
 import {TanStackRouterDevtools} from '@tanstack/react-router-devtools';
 import {useCallback} from 'react';
@@ -60,7 +60,13 @@ function RootContent() {
   return (
     <>
       <SiteHeader />
-      {renderRouteArea(auth, onRetry)}
+      {/* Reserve ~a viewport for the route content so the footer starts at/below
+          the fold while a route's chunk or data loads, and doesn't jump down when
+          the content arrives. Layout-level concern shared by every async route;
+          the offset approximates the header height. */}
+      <Box sx={{minHeight: 'calc(100vh - 50px)'}}>
+        {renderRouteArea(auth, onRetry)}
+      </Box>
       <StudioFooter />
       <TanStackRouterDevtools />
     </>
