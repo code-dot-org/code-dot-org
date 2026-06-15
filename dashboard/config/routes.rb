@@ -1108,8 +1108,8 @@ Dashboard::Application.routes.draw do
         concerns :api_v1_pd_routes
         concerns :section_api_routes
 
-        namespace :account do
-          resource :settings, only: :show
+        namespace :users do
+          resource :settings, only: :show, path: 'me/settings'
         end
 
         post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'

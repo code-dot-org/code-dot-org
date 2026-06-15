@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::Account::SettingsControllerTest < ActionDispatch::IntegrationTest
+class Api::V1::Users::SettingsControllerTest < ActionDispatch::IntegrationTest
   # Secret material that must never appear in the response. 'password' alone is
   # excluded: it is a substring of allowlisted booleans like has_password.
   FORBIDDEN_KEYS = %w[
@@ -8,14 +8,14 @@ class Api::V1::Account::SettingsControllerTest < ActionDispatch::IntegrationTest
     encrypted_password secret_words secret_picture failed_attempts locked_at
   ].freeze
 
-  describe 'GET /api/v1/account/settings' do
-    subject(:get_settings) {get api_v1_account_settings_path}
+  describe 'GET /api/v1/users/me/settings' do
+    subject(:get_settings) {get api_v1_users_settings_path}
 
     let(:body) {JSON.parse(response.body)}
 
     context 'when signed out' do
       it 'is rejected with 401 JSON, not an HTML redirect' do
-        get api_v1_account_settings_path, headers: {'Accept' => '*/*'}
+        get api_v1_users_settings_path, headers: {'Accept' => '*/*'}
 
         must_respond_with :unauthorized
         _(body.key?('user_type')).must_equal false
@@ -168,7 +168,7 @@ class Api::V1::Account::SettingsControllerTest < ActionDispatch::IntegrationTest
         other = create(:teacher, given_name: 'Some', family_name: 'Else')
         sign_in user
 
-        get api_v1_account_settings_path, params: {user_id: other.id, id: other.id}
+        get api_v1_users_settings_path, params: {user_id: other.id, id: other.id}
 
         must_respond_with :success
         _(body['given_name']).must_equal 'Self'
@@ -180,14 +180,14 @@ class Api::V1::Account::SettingsControllerTest < ActionDispatch::IntegrationTest
         bob = create(:teacher, given_name: 'Bob', name: 'Bob B')
 
         sign_in alice
-        get api_v1_account_settings_path
+        get api_v1_users_settings_path
         alice_body = JSON.parse(response.body)
         _(alice_body['given_name']).must_equal 'Alice'
         _(alice_body['username']).must_equal alice.username
 
         sign_out alice
         sign_in bob
-        get api_v1_account_settings_path
+        get api_v1_users_settings_path
         bob_body = JSON.parse(response.body)
         _(bob_body['given_name']).must_equal 'Bob'
         _(bob_body['username']).must_equal bob.username
