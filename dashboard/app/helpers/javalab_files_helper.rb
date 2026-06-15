@@ -39,8 +39,6 @@ module JavalabFilesHelper
     # backwards compatiblity.
     get_assets_for_channel(channel_id, all_files)
 
-    puts all_files.to_json
-
     all_files
   end
 
