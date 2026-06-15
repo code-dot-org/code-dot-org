@@ -240,7 +240,7 @@ $level-cell-width: 53;
     margin: 0;
     height: 46px;
     line-height: 42px;
-    min-width: 54px;
+    min-width: 56px;
     margin-bottom: 32px;
     text-align: center;
     background-color: var(--background-neutral-secondary);
@@ -297,7 +297,7 @@ $level-cell-width: 53;
     &LessonCell {
       border-top: 1px solid var(--borders-neutral-strong);
       border-left: 1px solid var(--borders-neutral-strong);
-      height: 46px;
+      height: 42px;
       line-height: 42px;
       min-width: 84px;
       border: 0;
@@ -339,13 +339,14 @@ $level-cell-width: 53;
 
       & .expandedHeaderLevelCell:last-child {
         border-right: 1px solid var(--borders-neutral-strong);
+        width: ($level-cell-width + 1) + px;
       }
     }
 
     &LevelCell {
       width: $level-cell-width + px;
       text-align: center;
-      height: 33px;
+      height: 34px;
       line-height: 32px;
       display: flex;
       flex-direction: row;
