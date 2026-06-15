@@ -52,7 +52,7 @@ $border-radius: 4px;
 }
 
 .entryContainer {
-  width: 50%;
+  width: calc(50% + 30px);
   background-color: $neutral_light;
   padding: 15px 15px 0 15px;
   border-radius: 5px;
