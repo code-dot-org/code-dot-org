@@ -36,8 +36,8 @@ export function useAccountSettings(
 // --- Mutations that change the settings payload (invalidate the read) ---
 
 function useSettingsMutation<TParams>(
-  mutationFn: (params: TParams) => Promise<unknown>,
-  options?: Omit<UseMutationOptions<unknown, Error, TParams>, 'mutationFn'>,
+  mutationFn: (params: TParams) => Promise<void>,
+  options?: Omit<UseMutationOptions<void, Error, TParams>, 'mutationFn'>,
 ) {
   const queryClient = useQueryClient();
   return useMutation({
@@ -52,7 +52,7 @@ function useSettingsMutation<TParams>(
 export function useUpdateProfile(
   api: ApiClient,
   options?: Omit<
-    UseMutationOptions<unknown, Error, UpdateProfileParams>,
+    UseMutationOptions<void, Error, UpdateProfileParams>,
     'mutationFn'
   >,
 ) {
@@ -65,7 +65,7 @@ export function useUpdateProfile(
 export function useUpdateEmail(
   api: ApiClient,
   options?: Omit<
-    UseMutationOptions<unknown, Error, UpdateEmailParams>,
+    UseMutationOptions<void, Error, UpdateEmailParams>,
     'mutationFn'
   >,
 ) {
@@ -78,7 +78,7 @@ export function useUpdateEmail(
 export function useUpdatePassword(
   api: ApiClient,
   options?: Omit<
-    UseMutationOptions<unknown, Error, UpdatePasswordParams>,
+    UseMutationOptions<void, Error, UpdatePasswordParams>,
     'mutationFn'
   >,
 ) {
@@ -91,7 +91,7 @@ export function useUpdatePassword(
 export function useCreatePassword(
   api: ApiClient,
   options?: Omit<
-    UseMutationOptions<unknown, Error, CreatePasswordParams>,
+    UseMutationOptions<void, Error, CreatePasswordParams>,
     'mutationFn'
   >,
 ) {
@@ -104,7 +104,7 @@ export function useCreatePassword(
 export function useUpdateUserType(
   api: ApiClient,
   options?: Omit<
-    UseMutationOptions<unknown, Error, UpdateUserTypeParams>,
+    UseMutationOptions<void, Error, UpdateUserTypeParams>,
     'mutationFn'
   >,
 ) {
@@ -117,7 +117,7 @@ export function useUpdateUserType(
 export function useUpdateParentEmail(
   api: ApiClient,
   options?: Omit<
-    UseMutationOptions<unknown, Error, UpdateParentEmailParams>,
+    UseMutationOptions<void, Error, UpdateParentEmailParams>,
     'mutationFn'
   >,
 ) {
@@ -129,7 +129,7 @@ export function useUpdateParentEmail(
 
 export function useRemoveParentEmail(
   api: ApiClient,
-  options?: Omit<UseMutationOptions<unknown, Error, void>, 'mutationFn'>,
+  options?: Omit<UseMutationOptions<void, Error, void>, 'mutationFn'>,
 ) {
   return useSettingsMutation(() => api.account.removeParentEmail(), options);
 }
@@ -139,7 +139,7 @@ export function useRemoveParentEmail(
 export function useDeleteAccount(
   api: ApiClient,
   options?: Omit<
-    UseMutationOptions<unknown, Error, DeleteAccountParams>,
+    UseMutationOptions<void, Error, DeleteAccountParams>,
     'mutationFn'
   >,
 ) {
@@ -152,7 +152,7 @@ export function useDeleteAccount(
 
 export function useSignOutOtherSessions(
   api: ApiClient,
-  options?: Omit<UseMutationOptions<unknown, Error, void>, 'mutationFn'>,
+  options?: Omit<UseMutationOptions<void, Error, void>, 'mutationFn'>,
 ) {
   return useMutation({
     mutationFn: () => api.account.signOutOtherSessions(),

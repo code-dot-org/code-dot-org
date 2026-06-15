@@ -3,10 +3,8 @@ import {z} from 'zod';
 
 import {CurrentUserResponseSchema} from './currentUserTypes';
 
-// Derived (not re-declared) from the canonical currentUserTypes schema; a prior
-// hand-copied duplicate silently diverged from the endpoint. Discriminate on
-// is_signed_in (a targeted error on a bad field, not an opaque union failure)
-// before camelCasing.
+// Derived from the canonical currentUserTypes schema, not re-declared: a
+// hand-copied duplicate previously diverged from the endpoint.
 export const CurrentUserSchema = CurrentUserResponseSchema.transform(data =>
   camelcaseKeys(data, {deep: true}),
 );
