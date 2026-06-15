@@ -7,6 +7,19 @@
     float: left;
     margin-bottom: 20px;
     background-color: var(--background-neutral-secondary);
+
+    .title {
+        padding-top: 10px;
+        padding-bottom: 5px;
+        // padding-inline auto-flips for RTL (replaces the old isRtl prop).
+        padding-inline-start: 25px;
+        padding-inline-end: 10px;
+        margin-top: 15px;
+        color: var(--text-neutral-inverse);
+        z-index: 2;
+        position: absolute;
+        display: inline;
+    }
 }
 
 .header {
@@ -14,19 +27,6 @@
     width: 473px;
     height: 130px;
     background-color: var(--background-brand-teal-primary);
-}
-
-.title {
-    padding-top: 10px;
-    padding-bottom: 5px;
-    // padding-inline auto-flips for RTL (replaces the old isRtl prop).
-    padding-inline-start: 25px;
-    padding-inline-end: 10px;
-    margin-top: 15px;
-    color: var(--text-neutral-inverse);
-    z-index: 2;
-    position: absolute;
-    display: inline;
 }
 
 .description {
