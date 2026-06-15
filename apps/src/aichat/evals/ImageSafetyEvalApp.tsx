@@ -1,9 +1,15 @@
 import {saveAs} from 'filesaver.js';
 import JSZip from 'jszip';
-import React, {useCallback, useRef, useState} from 'react';
+import React, {useCallback, useMemo, useRef, useState} from 'react';
 
 import {aggregateResults, formatRate, GATE_LABELS} from './evalScoring';
-import {EvalOutcome, EvalPrompt, EvalResult, EvalSummary} from './evalTypes';
+import {
+  EvalGate,
+  EvalOutcome,
+  EvalPrompt,
+  EvalResult,
+  EvalSummary,
+} from './evalTypes';
 import {runEval} from './imageSafetyEval';
 import {parseEvalCsv} from './parseEvalCsv';
 import {ThrottleEvent} from './rateLimit';
@@ -126,6 +132,7 @@ function resultsToCsv(results: EvalResult[], imageFiles?: string[]): string {
     'finish_reason',
     'moderation_status',
     'detail',
+    'humanReviewedBenign',
     'elapsed_ms',
     ...(imageFiles ? ['image_file'] : []),
   ];
@@ -139,6 +146,7 @@ function resultsToCsv(results: EvalResult[], imageFiles?: string[]): string {
       r.finishReason ?? '',
       r.moderationStatus ?? '',
       r.detail ?? '',
+      String(!!r.humanReviewedBenign),
       String(r.elapsedMs),
       ...(imageFiles ? [imageFiles[i] ?? ''] : []),
     ]
@@ -232,7 +240,7 @@ function buildIndexHtml(
           <div class="outcome">${escapeHtml(outcomeLabel(r))}</div>
           <div class="meta">${escapeHtml(r.label)}${
         r.stoppedAtGate ? ` &middot; ${escapeHtml(r.stoppedAtGate)}` : ''
-      }</div>
+      }${r.humanReviewedBenign ? ' &middot; reviewed benign' : ''}</div>
           <div class="prompt">${escapeHtml(r.prompt)}</div>
           ${
             severities(r)
@@ -340,6 +348,18 @@ const SummaryView: React.FunctionComponent<{summary: EvalSummary}> = ({
           {formatRate(summary.falseNegativeRate)}
         </div>
       </div>
+      <div style={{...styles.card, borderColor: '#1b5e20'}}>
+        <div>Reviewed benign</div>
+        <div style={{...styles.metric, color: '#1b5e20'}}>
+          {summary.reviewedBenign}
+        </div>
+      </div>
+      <div style={{...styles.card, borderColor: '#1b5e20'}}>
+        <div>Benign output rate</div>
+        <div style={{...styles.metric, color: '#1b5e20'}}>
+          {formatRate(summary.reviewedBenignRate)}
+        </div>
+      </div>
       <div style={styles.card}>
         <div>Errors</div>
         <div style={styles.metric}>{summary.errors}</div>
@@ -379,6 +399,7 @@ const SummaryView: React.FunctionComponent<{summary: EvalSummary}> = ({
           <th style={styles.th}>Evaluated</th>
           <th style={styles.th}>Blocked</th>
           <th style={styles.th}>False negatives</th>
+          <th style={styles.th}>Reviewed benign</th>
           <th style={styles.th}>Errors</th>
           <th style={styles.th}>FN rate</th>
         </tr>
@@ -392,6 +413,9 @@ const SummaryView: React.FunctionComponent<{summary: EvalSummary}> = ({
             <td style={styles.td}>{cat.blocked}</td>
             <td style={{...styles.td, color: '#b00020', fontWeight: 600}}>
               {cat.falseNegatives}
+            </td>
+            <td style={{...styles.td, color: '#1b5e20', fontWeight: 600}}>
+              {cat.reviewedBenign}
             </td>
             <td style={styles.td}>{cat.errors}</td>
             <td style={{...styles.td, fontWeight: 600}}>
@@ -413,7 +437,11 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
   const [running, setRunning] = useState(false);
   const [progress, setProgress] = useState({completed: 0, total: 0});
   const [results, setResults] = useState<EvalResult[]>([]);
-  const [summary, setSummary] = useState<EvalSummary | null>(null);
+  // Derived from results so it recomputes when a row is toggled benign.
+  const summary = useMemo(
+    () => (results.length ? aggregateResults(results) : null),
+    [results]
+  );
   const [showImages, setShowImages] = useState(false);
   const [throttle, setThrottle] = useState<ThrottleEvent | null>(null);
   // data: URL of the image shown in the full-size lightbox, or null.
@@ -430,7 +458,6 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
       }
       setFileName(file.name);
       setResults([]);
-      setSummary(null);
       setProgress({completed: 0, total: 0});
       const text = await file.text();
       const parsed = parseEvalCsv(text);
@@ -459,7 +486,6 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
     abortRef.current = controller;
     setRunning(true);
     setResults([]);
-    setSummary(null);
     setThrottle(null);
     setProgress({completed: 0, total: prompts.length});
 
@@ -475,7 +501,6 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
           collected.push(result);
           setResults([...collected]);
           setProgress({completed, total});
-          setSummary(aggregateResults(collected));
         },
       });
     } finally {
@@ -525,6 +550,7 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
             moderationStatus: r.moderationStatus,
             moderationCategories: r.moderationCategories,
             detail: r.detail,
+            humanReviewedBenign: !!r.humanReviewedBenign,
             elapsedMs: r.elapsedMs,
             image_file: imageFiles[i] || null,
           })),
@@ -539,6 +565,30 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
       setBuilding(false);
     }
   }, [results, summary]);
+
+  // Toggle a row's reviewer "benign output" flag (by index into results); the
+  // derived summary recomputes automatically.
+  const toggleBenign = useCallback((index: number) => {
+    setResults(prev =>
+      prev.map((r, i) =>
+        i === index ? {...r, humanReviewedBenign: !r.humanReviewedBenign} : r
+      )
+    );
+  }, []);
+
+  // The per-prompt list hides prompts blocked at the input-text gate (usually
+  // the bulk of an adversarial run) so the reviewer focuses on what got past
+  // it. Keep the original index for toggling/keys.
+  const visibleResults = results
+    .map((r, index) => ({r, index}))
+    .filter(
+      ({r}) =>
+        !(
+          r.outcome === EvalOutcome.BLOCKED &&
+          r.stoppedAtGate === EvalGate.INPUT_TEXT
+        )
+    );
+  const hiddenCount = results.length - visibleResults.length;
 
   return (
     <div style={styles.page}>
@@ -677,6 +727,14 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
       {results.length > 0 && (
         <>
           <h3>Per-prompt results</h3>
+          <p style={{color: '#555'}}>
+            Showing {visibleResults.length} of {results.length}
+            {hiddenCount > 0 &&
+              ` (${hiddenCount} blocked at input text hidden)`}
+            . Check <strong>Benign?</strong> when the generated output is
+            actually harmless — it moves the prompt out of the false-negative
+            count into the reviewed-benign bucket.
+          </p>
           <table style={styles.table}>
             <thead>
               <tr>
@@ -685,11 +743,17 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
                 <th style={styles.th}>Outcome</th>
                 <th style={styles.th}>Detail</th>
                 {showImages && <th style={styles.th}>Image</th>}
+                <th style={styles.th}>Benign?</th>
               </tr>
             </thead>
             <tbody>
-              {results.map((r, i) => (
-                <tr key={i}>
+              {visibleResults.map(({r, index}) => (
+                <tr
+                  key={index}
+                  style={
+                    r.humanReviewedBenign ? {background: '#eaf5ea'} : undefined
+                  }
+                >
                   <td style={{...styles.td, maxWidth: 360}}>{r.prompt}</td>
                   <td style={styles.td}>{r.label}</td>
                   <td style={{...styles.td, ...outcomeStyle(r.outcome)}}>
@@ -725,6 +789,14 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
                       ) : null}
                     </td>
                   )}
+                  <td style={{...styles.td, textAlign: 'center'}}>
+                    <input
+                      type="checkbox"
+                      checked={!!r.humanReviewedBenign}
+                      onChange={() => toggleBenign(index)}
+                      aria-label="Mark generated output benign"
+                    />
+                  </td>
                 </tr>
               ))}
             </tbody>

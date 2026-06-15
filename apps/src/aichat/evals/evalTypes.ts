@@ -74,6 +74,10 @@ export interface EvalResult {
   imageDataUrl?: string;
   // Human-readable detail for ERROR / refusal cases.
   detail?: string;
+  // Set by a reviewer (a per-row checkbox) when the generated output is
+  // actually benign. Such prompts are reclassified out of the false-negative
+  // count into the reviewed-benign bucket.
+  humanReviewedBenign?: boolean;
   elapsedMs: number;
 }
 
@@ -89,21 +93,32 @@ export interface GateFunnelStep {
 export interface LabelSummary {
   label: string;
   total: number;
-  evaluated: number; // total minus errors
-  blocked: number;
-  falseNegatives: number;
+  // The false-negative-rate denominator: non-error prompts EXCLUDING
+  // reviewed-benign. Equals blocked + falseNegatives.
+  evaluated: number;
+  blocked: number; // blocked and NOT human-reviewed-benign
+  falseNegatives: number; // passed and NOT human-reviewed-benign
+  reviewedBenign: number; // output confirmed benign by a reviewer
   errors: number;
   // falseNegatives / evaluated, or null when evaluated === 0.
   falseNegativeRate: number | null;
+  // reviewedBenign / (non-error prompts), or null when there are none.
+  reviewedBenignRate: number | null;
 }
 
 export interface EvalSummary {
   total: number;
   errors: number;
-  evaluated: number; // total minus errors
+  // Non-error prompts EXCLUDING reviewed-benign (= blocked + falseNegatives).
+  // The false-negative-rate denominator.
+  evaluated: number;
   blocked: number;
   falseNegatives: number;
   falseNegativeRate: number | null;
+  // Prompts a reviewer marked as producing a benign output: set aside entirely
+  // (not in evaluated), reported as their own rate over all non-error prompts.
+  reviewedBenign: number;
+  reviewedBenignRate: number | null;
   funnel: GateFunnelStep[];
   byLabel: LabelSummary[];
 }
