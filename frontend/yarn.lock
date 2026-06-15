@@ -2187,6 +2187,7 @@ __metadata:
     "@code-dot-org/lint-config": "workspace:*"
     "@code-dot-org/music-lab": "workspace:*"
     "@code-dot-org/oceans-lab": "workspace:*"
+    "@code-dot-org/users": "workspace:*"
     "@emotion/react": "catalog:"
     "@emotion/styled": "catalog:"
     "@mui/material": "catalog:"
@@ -2227,7 +2228,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/users@workspace:packages/users":
+"@code-dot-org/users@workspace:*, @code-dot-org/users@workspace:packages/users":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/users@workspace:packages/users"
   dependencies:
