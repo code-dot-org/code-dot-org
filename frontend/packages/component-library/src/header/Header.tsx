@@ -36,12 +36,6 @@ export interface HeaderProps {
   supportLinks?: MenuItem[];
 }
 
-// Layout lives in Header.module.scss. These two stay in `sx` because they
-// override MUI's runtime styles (AppBar's themed background, Toolbar's
-// min-height) — a plain module class can't out-specify those.
-const appBarSx = {backgroundColor: 'var(--background-brand-teal-primary)'};
-const toolbarSx = {'&&': {minHeight: '50px'}, alignItems: 'stretch'};
-
 /** Primary site navigation bar. Renders logo, nav menu, and user auth area. */
 const Header: FunctionComponent<HeaderProps> = ({
   logoImageUrl,
@@ -73,9 +67,13 @@ const Header: FunctionComponent<HeaderProps> = ({
         elevation={0}
         position="relative"
         aria-label="Main navigation"
-        sx={appBarSx}
+        className={moduleStyles.appBar}
       >
-        <Toolbar variant="dense" disableGutters sx={toolbarSx}>
+        <Toolbar
+          variant="dense"
+          disableGutters
+          className={moduleStyles.toolbar}
+        >
           <NavLogo logoImageUrl={logoImageUrl} brandName={brandName} />
           <NavMenu menuItems={barNavItems} />
 

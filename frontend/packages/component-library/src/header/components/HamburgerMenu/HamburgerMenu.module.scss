@@ -1,9 +1,29 @@
-// Static styles for the hamburger menu panel. The MUI-component styles
-// (IconButton trigger, Popover surface) stay in `sx` in HamburgerMenu.tsx —
-// they must out-specify MUI's runtime theme styles, which a module class can't.
+// Static styles for the hamburger menu panel. The trigger override wins because
+// MUI's emotion styles are in `@layer mui` (enableCssLayer) and this module class
+// is unlayered. The Popover surface reuses the shared `.menuPaper` from
+// headerMenu.module.scss (applied to the paper slot in HamburgerMenu.tsx).
 // @media values are static px; the originals derive from HEADER_BREAKPOINTS.
 
 @use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+
+// Hamburger (☰) trigger: always visible (the hamburger shows at every width).
+.trigger {
+  min-width: 0;
+  min-height: 0;
+  // Symmetric horizontal padding centers the bars so the focus ring frames them evenly.
+  padding: 18px 6px 20px 6px;
+  color: var(--text-neutral-white-fixed);
+
+  &:hover,
+  &:active {
+    background-color: transparent;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--text-neutral-white-fixed);
+    outline-offset: 2px;
+  }
+}
 
 // 3-bar hamburger icon: 25x3px bars with 1px border-radius, 8px gaps. Paired
 // with the literal `barsIcon` class (a stable hook for layout tests/stories).

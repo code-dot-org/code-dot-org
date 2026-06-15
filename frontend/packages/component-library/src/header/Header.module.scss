@@ -1,6 +1,15 @@
-// Static layout for the header composition. MUI-overriding styles (AppBar
-// background, Toolbar min-height) stay in `sx` in Header.tsx — they must
-// out-specify MUI's runtime theme styles, which a plain module class can't do.
+// Static layout for the header composition. These classes also override MUI's
+// AppBar / Toolbar theme styles; they win because MUI's emotion styles are in
+// `@layer mui` (enableCssLayer) and these module classes are unlayered.
+
+.appBar {
+  background-color: var(--background-brand-teal-primary);
+}
+
+.toolbar {
+  min-height: 50px;
+  align-items: stretch;
+}
 
 .spacer {
   flex: 1;

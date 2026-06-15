@@ -2,54 +2,14 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import type {SxProps} from '@mui/material/styles';
 import {useId, useMemo, useState, type FunctionComponent} from 'react';
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
-import {
-  headerMenuItemSx,
-  headerMenuListSx,
-  headerMenuPaperSx,
-} from '../../shared/headerMenu';
 import type {UserType} from '../../shared/types';
 
 import moduleStyles from './SignedInUserButton.module.scss';
-
-/**
- * Account-menu trigger (teal pill with the display name + chevron).
- */
-const accountTriggerSx: SxProps = {
-  color: 'var(--text-neutral-white-fixed)',
-  '&:focus-visible': {
-    outline: '2px solid var(--text-neutral-white-fixed)',
-    outlineOffset: '2px',
-  },
-  minWidth: 0,
-  height: '35px',
-  padding: '6.5px 1rem',
-  columnGap: '8px',
-  border: '1px solid var(--neutral-base-white)',
-  borderRadius: '4px',
-  backgroundColor: 'var(--background-brand-teal-primary)',
-  boxShadow: 'none',
-  fontSize: '14px',
-  fontWeight: 400,
-  lineHeight: 1.5,
-  textTransform: 'none',
-  '&:hover, &:active, &:focus-visible': {
-    backgroundColor: 'var(--background-brand-teal-primary)',
-    boxShadow: 'none',
-    color: 'var(--text-neutral-white-fixed)',
-    // Re-pin the white outline; the theme's Button :active rule recolors it otherwise.
-    border: '1px solid var(--neutral-base-white)',
-  },
-  '& .MuiButton-endIcon, & .MuiButton-endIcon i': {
-    width: 'auto',
-    color: 'var(--text-neutral-white-fixed)',
-    fontSize: '14px',
-  },
-};
+import headerMenuStyles from '../../shared/headerMenu.module.scss';
 
 /**
  * Discriminated union of auth states consumed by header auth components.
@@ -98,7 +58,7 @@ const SignedInUserButton: FunctionComponent<SignedInUserButtonProps> = ({
   return (
     <>
       <Button
-        sx={accountTriggerSx}
+        className={moduleStyles.accountTrigger}
         aria-label="Account menu"
         aria-haspopup="true"
         aria-expanded={open}
@@ -127,14 +87,14 @@ const SignedInUserButton: FunctionComponent<SignedInUserButtonProps> = ({
         anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}
         transformOrigin={{vertical: 'top', horizontal: 'right'}}
         slotProps={{
-          paper: {elevation: 0, sx: headerMenuPaperSx},
-          list: {sx: headerMenuListSx, 'aria-label': 'Account'},
+          paper: {elevation: 0, className: headerMenuStyles.menuPaper},
+          list: {className: headerMenuStyles.menuList, 'aria-label': 'Account'},
         }}
       >
         {menuItems.map(item => (
           <MenuItem
             key={item.label}
-            sx={headerMenuItemSx}
+            className={headerMenuStyles.menuItem}
             component="a"
             href={item.href}
             onClick={() => setAnchorEl(null)}

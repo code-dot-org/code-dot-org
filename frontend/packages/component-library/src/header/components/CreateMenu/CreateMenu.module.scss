@@ -1,8 +1,8 @@
 // CreateMenu styles. These override MUI's Button / List / MenuItem theme styles;
 // they win because MUI's emotion styles are in `@layer mui` (enableCssLayer) and
 // these module classes are unlayered. @media values are static px (originals
-// derive from HEADER_BREAKPOINTS). The Menu paper still reuses the shared
-// `headerMenuPaperSx` in CreateMenu.tsx.
+// derive from HEADER_BREAKPOINTS). The Menu paper reuses the shared
+// `.menuPaper` from headerMenu.module.scss in CreateMenu.tsx.
 
 // "New project" trigger: transparent outline pill on the teal bar.
 .createTrigger {

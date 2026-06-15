@@ -6,9 +6,8 @@ import {useId, useState, type FunctionComponent} from 'react';
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
-import {headerMenuPaperSx} from '../../shared/headerMenu';
-
 import moduleStyles from './CreateMenu.module.scss';
+import headerMenuStyles from '../../shared/headerMenu.module.scss';
 
 export interface CreateMenuItem {
   id: string;
@@ -52,7 +51,7 @@ const CreateMenu: FunctionComponent<CreateMenuProps> = ({items}) => {
         anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}
         transformOrigin={{vertical: 'top', horizontal: 'right'}}
         slotProps={{
-          paper: {elevation: 0, sx: headerMenuPaperSx},
+          paper: {elevation: 0, className: headerMenuStyles.menuPaper},
           list: {
             className: moduleStyles.createList,
             'aria-label': 'New project',

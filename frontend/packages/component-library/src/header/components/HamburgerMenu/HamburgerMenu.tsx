@@ -18,9 +18,8 @@ import {AUTH_LINKS} from '../../shared/authLinks';
 import type {GlobalNavItem, MenuItem} from '../../shared/types';
 import type {UserAuthProp} from '../SignedInUserButton/SignedInUserButton';
 
-import {hamburgerTriggerSx, popoverSx} from './HamburgerMenu.styles';
-
 import moduleStyles from './HamburgerMenu.module.scss';
+import headerMenuStyles from '../../shared/headerMenu.module.scss';
 
 interface HamburgerMenuProps {
   /** Top-bar app nav, re-listed in the drawer below the top-nav breakpoint. */
@@ -237,7 +236,7 @@ const HamburgerMenu: FunctionComponent<HamburgerMenuProps> = ({
   return (
     <>
       <IconButton
-        sx={hamburgerTriggerSx}
+        className={moduleStyles.trigger}
         aria-label="Open navigation menu"
         aria-haspopup="true"
         aria-expanded={open}
@@ -254,7 +253,6 @@ const HamburgerMenu: FunctionComponent<HamburgerMenuProps> = ({
       </Box>
       <Popover
         id={menuId}
-        sx={popoverSx}
         anchorEl={anchorEl}
         open={open}
         onClose={() => setAnchorEl(null)}
@@ -262,7 +260,9 @@ const HamburgerMenu: FunctionComponent<HamburgerMenuProps> = ({
         marginThreshold={0}
         anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}
         transformOrigin={{vertical: 'top', horizontal: 'right'}}
-        slotProps={{paper: {elevation: 0}}}
+        slotProps={{
+          paper: {elevation: 0, className: headerMenuStyles.menuPaper},
+        }}
       >
         <HamburgerPanel
           menuItems={menuItems}
