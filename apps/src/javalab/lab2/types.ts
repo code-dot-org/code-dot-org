@@ -17,9 +17,7 @@ export interface JavalabFlatFile {
   // At most one file in a source should set this true.
   isActive?: boolean;
   // Asset (image/audio) entries set this to where the bytes live
-  // (/v3/assets/... or /level_starter_assets/...) and carry text: ''.
-  // Javabuilder never sees these entries — JavalabFilesHelper strips
-  // them out of main.json and folds them into the assetUrls map.
+  // (/v3/assets/... or /level_starter_assets/...)
   url?: string;
   // Set when image moderation flagged an uploaded asset.
   flagged?: boolean;

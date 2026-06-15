@@ -123,7 +123,7 @@ const Javalab2View: React.FunctionComponent<
       ? mergeValidationIntoStart(flatStartRaw, levelProperties.validation)
       : flatStartRaw;
 
-    const includeStarterAsserts = (flat: JavalabFlatSource | undefined) =>
+    const includeStarterAssets = (flat: JavalabFlatSource | undefined) =>
       flat
         ? mergeStarterAssets(
             flatToMultiFile(flat),
@@ -135,9 +135,9 @@ const Javalab2View: React.FunctionComponent<
     return {
       ...levelProperties,
       miniApp: labConfig?.miniApp?.name,
-      startSources: includeStarterAsserts(flatStart),
-      templateSources: includeStarterAsserts(flatTemplate),
-      exemplarSources: includeStarterAsserts(flatExemplar),
+      startSources: includeStarterAssets(flatStart),
+      templateSources: includeStarterAssets(flatTemplate),
+      exemplarSources: includeStarterAssets(flatExemplar),
     };
   }, [levelProperties, labConfig]);
 

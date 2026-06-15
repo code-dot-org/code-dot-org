@@ -156,9 +156,8 @@ class Javalab < Level
   #   "welcome.png" => "123-abc-456.png"
   # }
   # Lab2 levels don't maintain this mapping: their start_sources carry a
-  # url entry per asset, which is the single source of truth (weblab2
-  # pattern). Any existing mapping is frozen legacy data, still read to
-  # migrate legacy-authored levels and serve their old student projects.
+  # url entry per asset, which is the single source of truth.
+  # Existing mappings are frozen legacy data.
   def add_starter_asset!(friendly_name, uuid_name)
     return true if uses_lab2?
     self.starter_assets ||= {}

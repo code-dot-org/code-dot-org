@@ -1,14 +1,6 @@
-// Bridges legacy Java Lab starter assets into the codebridge file tree.
-// Legacy levels store assets only as a level property mapping
-// {friendlyName => uuidName}, where the uuidName is the filename of an S3 asset in level_starter_assets.
-// Lab2 represents each asset as a ProjectFile with a`url`, so we synthesize those
-// entries from the mapping when converting the level's sources. Projects loaded
-// from S3 are never merged: like any other start-source change, assets reach a student's
-// project only when it is seeded from the level (fresh load or start over).
-//
-// Lab2 never writes the mapping (Javalab#add_starter_asset! is a no-op for
-// uses_lab2 levels), so it's frozen legacy data: the url entries in the
-// sources are the single source of truth for lab2-authored assets.
+// Synthesize ProjectFile asset entries from a legacy level's
+// {friendlyName => uuidName} starter_assets mapping. Lab2 never writes the
+// mapping, so it's consulted only when seeding a level's sources.
 
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 
@@ -32,10 +24,7 @@ export function isStarterAssetUrl(url: string): boolean {
 
 // Append one STARTER file per mapping entry not already present by name —
 // but only when the source has no url-backed files at all (a source never
-// touched by lab2 asset editing). Once a lab2 save has persisted url
-// entries, the frozen mapping is no longer consulted for tree contents, so
-// a levelbuilder's delete or rename isn't undone by re-merging it. (Known
-// edge: deleting the last asset from a legacy level brings the merge back.)
+// touched by lab2 asset editing).
 // Locking starter assets against student edits will arrive with the broader
 // locked-starter-files support.
 export function mergeStarterAssets(
