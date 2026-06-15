@@ -32,3 +32,19 @@ export interface PythonValidationResult {
   name: string;
   result: string;
 }
+
+export const AI_TUTOR_ANSWER_TYPES = [
+  'ask',
+  'buildPython',
+  'buildCSV',
+  'buildJSON',
+  'debug',
+  'documentation',
+  'example',
+  'explainCode',
+  'hint',
+  'pseudocode',
+  'refusal',
+  'refusalPythonSnippets',
+  'testCase',
+] as const;
