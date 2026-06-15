@@ -160,19 +160,29 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
     )
   end
 
-  test 'preset_view returns nil when the unit cannot be resolved' do
+  test 'preset_view still returns a view with nil unit when the unit cannot be resolved' do
     CDO.stubs(:rack_env?).returns(false)
     CDO.stubs(:ci_webserver?).returns(false)
 
-    assert_nil Policies::DemoSections.preset_view(:high)
+    view = Policies::DemoSections.preset_view(:high)
+    refute_nil view
+    assert_equal 'high', view[:demo_type]
+    assert_nil view[:unit]
+    assert_nil view[:unit_group]
+    assert_equal 1, view[:review_syllabus_quiz_lesson]
+    refute_nil view[:review_syllabus_quiz_options]
   end
 
-  test 'preset_view returns nil when the unit group cannot be resolved' do
+  test 'preset_view still returns a view with nil unit_group when the unit group cannot be resolved' do
     CDO.stubs(:rack_env?).returns(false)
     CDO.stubs(:ci_webserver?).returns(false)
     create(:unit, name: 'aif2-2025')
 
-    assert_nil Policies::DemoSections.preset_view(:high)
+    view = Policies::DemoSections.preset_view(:high)
+    refute_nil view
+    refute_nil view[:unit]
+    assert_nil view[:unit_group]
+    assert_equal 1, view[:review_syllabus_quiz_lesson]
   end
 
   test 'preset_views_for_all_types skips misconfigured presets' do

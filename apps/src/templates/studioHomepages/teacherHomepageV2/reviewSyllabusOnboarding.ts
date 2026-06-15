@@ -8,7 +8,10 @@ import {
 } from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 import {trySetSessionStorage} from '@cdo/apps/utils';
 
-import {DemoType} from '../../teacherDashboard/types/teacherSectionTypes';
+import {
+  DemoType,
+  ReviewSyllabusQuizOption,
+} from '../../teacherDashboard/types/teacherSectionTypes';
 
 export const REVIEW_SYLLABUS_ONBOARDING_STEP_KEY =
   'reviewSyllabusOnboardingCurrentStep';
@@ -71,47 +74,26 @@ const highlightAttachedElement = (selector: string) => ({
 });
 
 // ── Quiz content ──────────────────────────────────────────────────────────────
-const QUIZ_LEVEL_QUESTION_HIGH = `
-  <div class="onboarding-step-content">
-    <i class="fa-solid fa-sparkle onboarding-sparkle-icon"></i>
-    <span class="onboarding-step-text">When you're prepping a lesson, you don't have time to review every single level — and you don't need to. CodeAI highlights the levels most worth your attention. For Lesson 1, which level would you prioritize reviewing?</span>
-  </div>
-  <div class="quiz-options-grid">
-    <button class="quiz-option" data-answer="wrong" type="button">Level 1</button>
-    <button class="quiz-option" data-answer="wrong" type="button">Level 2</button>
-    <button class="quiz-option" data-answer="wrong" type="button">Level 3</button>
-    <button class="quiz-option" data-answer="correct" type="button">Level 4</button>
-  </div>
-  <div class="quiz-feedback" aria-live="polite"></div>
-`;
 
-const QUIZ_LEVEL_QUESTION_MIDDLE = `
-  <div class="onboarding-step-content">
-    <i class="fa-solid fa-sparkle onboarding-sparkle-icon"></i>
-    <span class="onboarding-step-text">When you're prepping a lesson, you don't have time to review every single level — and you don't need to. CodeAI highlights the levels most worth your attention. For Lesson 3, which level would you prioritize reviewing?</span>
-  </div>
-  <div class="quiz-options-grid">
-    <button class="quiz-option" data-answer="correct" type="button">Level 4</button>
-    <button class="quiz-option" data-answer="wrong" type="button">Level 5</button>
-    <button class="quiz-option" data-answer="wrong" type="button">Level 8</button>
-    <button class="quiz-option" data-answer="wrong" type="button">Level 11</button>
-  </div>
-  <div class="quiz-feedback" aria-live="polite"></div>
-`;
-
-const QUIZ_LEVEL_QUESTION_ELEM = `
-  <div class="onboarding-step-content">
-    <i class="fa-solid fa-sparkle onboarding-sparkle-icon"></i>
-    <span class="onboarding-step-text">When you're prepping a lesson, you don't have time to review every single level — and you don't need to. CodeAI highlights the levels most worth your attention. For Lesson 1, which level would you prioritize reviewing?</span>
-  </div>
-  <div class="quiz-options-grid">
-    <button class="quiz-option" data-answer="wrong" type="button">Level 1</button>
-    <button class="quiz-option" data-answer="wrong" type="button">Level 3</button>
-    <button class="quiz-option" data-answer="wrong" type="button">Level 4</button>
-    <button class="quiz-option" data-answer="correct" type="button">Level 6</button>
-  </div>
-  <div class="quiz-feedback" aria-live="polite"></div>
-`;
+const buildQuizHtml = (
+  lesson: number,
+  options: ReviewSyllabusQuizOption[]
+): string =>
+  `<div class="onboarding-step-content">` +
+  `<i class="fa-solid fa-sparkle onboarding-sparkle-icon"></i>` +
+  `<span class="onboarding-step-text">When you're prepping a lesson, you don't have time to review every single level — and you don't need to. CodeAI highlights the levels most worth your attention. For Lesson ${lesson}, which level would you prioritize reviewing?</span>` +
+  `</div>` +
+  `<div class="quiz-options-grid">` +
+  options
+    .map(
+      opt =>
+        `<button class="quiz-option" data-answer="${
+          opt.correct ? 'correct' : 'wrong'
+        }" type="button">${opt.label}</button>`
+    )
+    .join('') +
+  `</div>` +
+  `<div class="quiz-feedback" aria-live="polite"></div>`;
 
 // ── Step builders ─────────────────────────────────────────────────────────────
 
@@ -154,22 +136,25 @@ const createLessonResourcesStep = (
 const createQuizStep = (
   tour: Tour,
   controller: AbortController,
-  quizContent: string,
-  lessonSelector: string
-): StepOptions => ({
-  id: 'quiz-level-priority',
-  attachTo: {
-    element: lessonSelector,
-    on: 'left',
-  },
-  text: quizContent,
-  buttons: [],
-  beforeShowPromise: () => waitForElement(lessonSelector, controller.signal),
-  when: createQuizWhenHandlers(
-    tour,
-    'Take another look. The purple checkmark indicator on a level means CodeAI recommends teachers review it.'
-  ),
-});
+  lesson: number,
+  options: ReviewSyllabusQuizOption[]
+): StepOptions => {
+  const lessonSelector = `#progress-lesson-${lesson}`;
+  return {
+    id: 'quiz-level-priority',
+    attachTo: {
+      element: lessonSelector,
+      on: 'left',
+    },
+    text: buildQuizHtml(lesson, options),
+    buttons: [],
+    beforeShowPromise: () => waitForElement(lessonSelector, controller.signal),
+    when: createQuizWhenHandlers(
+      tour,
+      'Take another look. The purple checkmark indicator on a level means CodeAI recommends teachers review it.'
+    ),
+  };
+};
 
 const createBreadcrumbStep = (
   tour: Tour,
@@ -343,10 +328,16 @@ export const createReviewSyllabusHomepageSteps = (
   }
 };
 
+export interface ReviewSyllabusQuizConfig {
+  lesson: number;
+  options: ReviewSyllabusQuizOption[];
+}
+
 // Steps shown on the unit overview page after navigating from the homepage.
 export const createReviewSyllabusUnitOverviewSteps = (
   tour: Tour,
-  demoType: DemoType
+  demoType: DemoType,
+  quizConfig: ReviewSyllabusQuizConfig | null
 ): StepOptions[] => {
   const controller = new AbortController();
   tour.on('cancel', () => controller.abort());
@@ -359,42 +350,24 @@ export const createReviewSyllabusUnitOverviewSteps = (
     'Stay on this page'
   );
 
+  const quizStep = quizConfig
+    ? createQuizStep(tour, controller, quizConfig.lesson, quizConfig.options)
+    : null;
+
   switch (demoType) {
     case 'high':
-      return [
-        createBreadcrumbStep(tour, controller),
-        createTeacherResourcesStep(tour, controller),
-        createQuizStep(
-          tour,
-          controller,
-          QUIZ_LEVEL_QUESTION_HIGH,
-          '#progress-lesson-1'
-        ),
-        lessonResourcesStep,
-        completionStep,
-      ];
     case 'middle':
       return [
         createBreadcrumbStep(tour, controller),
         createTeacherResourcesStep(tour, controller),
-        createQuizStep(
-          tour,
-          controller,
-          QUIZ_LEVEL_QUESTION_MIDDLE,
-          '#progress-lesson-3'
-        ),
+        ...(quizStep ? [quizStep] : []),
         lessonResourcesStep,
         completionStep,
       ];
     case 'elementary':
       return [
         createTeacherResourcesStep(tour, controller),
-        createQuizStep(
-          tour,
-          controller,
-          QUIZ_LEVEL_QUESTION_ELEM,
-          '#progress-lesson-1'
-        ),
+        ...(quizStep ? [quizStep] : []),
         lessonResourcesStep,
         completionStep,
       ];
