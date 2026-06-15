@@ -2118,6 +2118,7 @@ describe('teacherSectionsRedux', () => {
       assert.deepEqual(getState().teacherSections.demoPresets.high, {
         demoType: 'high',
         sectionName: 'High School Practice Section',
+        studentSnapshotDefaultTourLesson: null,
         avatarColor: 8,
         avatarEmoji: 5,
         loginType: 'email',
