@@ -98,6 +98,21 @@ saucelabs_authkey: 'xxxxxx-xxxx-xxxx-xxx-xxxxxxxxx'
 saucelabs_tunnel_name: cdo-tunnel
 ```
 
+### With remote browsers: Device Farm
+
+Currently, we do not support running Device Farm against development machines which do not have public IP addresses, because Device Farm does not provide an equivalent to Sauce Connect. The current workarounds are:
+- local chromedriver (see above). This is a great option for debugging UI test failures in drone, which must have failed initially in chromedriver before falling back to Device Farm (see `--first-run-local` flag in `runner.rb`).
+- local saucelabs (see above).
+
+If you can't repro in chromedriver or SauceLabs:
+- run Device Farm locally against test-studio.code.org: `runner.rb --html --device-farm -c Chrome -f ...`
+
+If you can't repro an issue in chromedriver of SauceLabs AND you need to test against modified application code:
+- connect to a drone UI test container via `bin/drone/shell` and rerun the test there, or
+- run Device Farm locally against an adhoc
+
+If the above workarounds become too cumbersome, we could implement tunneling via [Connecting to Amazon VPC](https://docs.aws.amazon.com/devicefarm/latest/testgrid/techref-vpc.html).
+
 ## Running UI Tests with Sauce Labs
 
 1. Start the sauce connect proxy:

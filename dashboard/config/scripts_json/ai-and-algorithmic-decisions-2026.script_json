@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-11 20:43:12 UTC",
+    "serialized_at": "2026-06-13 04:28:54 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -282,7 +282,7 @@
       "relative_position": 11,
       "properties": {
         "overview": "**How can I design and build an interactive web app that responds to users in meaningful ways?**\n\nThe unit capstone — five days, four milestones, one student-designed interactive app. Students plan with a wireframe and flowchart, build, test, peer-review (TAG: Tell / Ask / Give), and finalize. Reflection prompts at each milestone push students to distinguish what AI did from what they did, building toward the Claim step they'll formalize in later units. Every Phase 1 concept comes together here: event-driven design, variables, functions, and conditionals including combined conditions.",
-        "preparation": "- Print copies of the Reactive Logic Project Planning Guide (one for each student)",
+        "preparation": "- Print copies of the Reactive Logic Project Rubric (one for each student)",
         "student_overview": "**How can I design and build an interactive web app that responds to users in meaningful ways?**\n\nFive days. One app. Your idea, your plan, your code. You use everything you've learned this unit — events, variables, functions, if/else, AND/OR, NOT — to build an interactive app that responds to the user. You plan it, build it in code, get feedback from your peers, and reflect on what worked, what didn't, and where AI helped vs. where you figured it out yourself. By the end, you have something to show — and to keep."
       },
       "seeding_key": {
@@ -5328,6 +5328,34 @@
       "seeding_key": {
         "resource.key": "making_decisions_with_if_else"
       }
+    },
+    {
+      "name": "Reactive Logic Project",
+      "url": "https://docs.google.com/presentation/d/1ceIjAopwi--ANvdc2VVBncdz9PrpLB_lWOk-QGNDuqM/edit?usp=drive_link",
+      "key": "reactive_logic_project",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "reactive_logic_project"
+      }
+    },
+    {
+      "name": "Reactive Logic Project Rubric",
+      "url": "https://docs.google.com/document/d/1X021QnqLwRY6l76aiCUluE56ARKPdgLPC2K3SXcCD90/edit?usp=drive_link",
+      "key": "rubric_-_reactive_logic_project",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "rubric_-_reactive_logic_project"
+      }
     }
   ],
   "lessons_resources": [
@@ -5335,6 +5363,18 @@
       "seeding_key": {
         "lesson.key": "Lesson 10: Adding NOT and Complex Conditions",
         "resource.key": "ai_and_algorithmic_decisions_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "resource.key": "reactive_logic_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "resource.key": "rubric_-_reactive_logic_project"
       }
     },
     {
