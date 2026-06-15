@@ -1,0 +1,16 @@
+// Layout for the logo wordmark box. The wrapping IconButton (with its
+// focus-visible ring) stays in `sx` (MUI-override).
+
+// Logo is a wide wordmark (≈ 5.9:1 ratio); fix height and let width flow
+// from the image's natural aspect ratio instead of constraining to a square.
+.logoBox {
+  height: 22px;
+  display: flex;
+  align-items: center;
+
+  & img {
+    height: 100%;
+    width: auto;
+    display: block;
+  }
+}

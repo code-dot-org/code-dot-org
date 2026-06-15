@@ -10,6 +10,8 @@ import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 import {HEADER_BREAKPOINTS} from '../../shared/breakpoints';
 import {headerMenuPaperSx} from '../../shared/headerMenu';
 
+import moduleStyles from './CreateMenu.module.scss';
+
 export interface CreateMenuItem {
   id: string;
   label: string;
@@ -94,14 +96,6 @@ const createTileSx: SxProps = {
   },
 };
 
-const tileIconSx = {
-  width: '2.5rem',
-  height: '2.5rem',
-  flexShrink: 0,
-  objectFit: 'contain',
-  borderRadius: '4px',
-};
-
 /** "New project +" button with a project-type picker. Hidden below the desktop-full breakpoint. */
 const CreateMenu: FunctionComponent<CreateMenuProps> = ({items}) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -145,7 +139,12 @@ const CreateMenu: FunctionComponent<CreateMenuProps> = ({items}) => {
             href={item.href}
             onClick={() => setAnchorEl(null)}
           >
-            <Box component="img" src={item.iconUrl} alt="" sx={tileIconSx} />
+            <Box
+              component="img"
+              src={item.iconUrl}
+              alt=""
+              className={moduleStyles.tileIcon}
+            />
             <span>{item.label}</span>
           </MenuItem>
         ))}

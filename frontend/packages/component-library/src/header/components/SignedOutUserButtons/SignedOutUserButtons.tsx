@@ -3,7 +3,8 @@ import Button from '@mui/material/Button';
 import type {FunctionComponent} from 'react';
 
 import {AUTH_LINKS} from '../../shared/authLinks';
-import {HEADER_BREAKPOINTS} from '../../shared/breakpoints';
+
+import moduleStyles from './SignedOutUserButtons.module.scss';
 
 // Signed-out auth pills on the teal bar (match prod): Sign in is the outlined
 // variant (white border, transparent); Create account is filled white with teal text.
@@ -53,18 +54,7 @@ const createAccountSx = {
 
 /** Sign in / Create account pills shown when no user session is active. */
 const SignedOutUserButtons: FunctionComponent = () => (
-  <Box
-    sx={{
-      // On the bar at >=768px; hidden below (the hamburger surfaces these).
-      // Authored default-visible so jsdom (which ignores @media) keeps the buttons testable.
-      display: 'flex',
-      alignItems: 'center',
-      columnGap: '8px',
-      [`@media (max-width:${HEADER_BREAKPOINTS.mobileAuth - 1}px)`]: {
-        display: 'none',
-      },
-    }}
-  >
+  <Box className={moduleStyles.buttons}>
     <Button
       href={AUTH_LINKS.signIn}
       color="inherit"

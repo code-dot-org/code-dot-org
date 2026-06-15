@@ -1,0 +1,10 @@
+// Layout for the project-tile icon in the "New project" menu rows. The trigger
+// Button, the Menu list, and the MenuItem tiles stay in `sx` (MUI-override).
+
+.tileIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  object-fit: contain;
+  border-radius: 4px;
+}

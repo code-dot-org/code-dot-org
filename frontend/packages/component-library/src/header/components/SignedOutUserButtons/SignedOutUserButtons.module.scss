@@ -1,0 +1,15 @@
+// Layout for the signed-out auth pill row. The pill Buttons themselves stay in
+// `sx` (MUI-override).
+
+// On the bar at >=768px; hidden below (the hamburger surfaces these).
+// Authored default-visible so jsdom (which ignores @media) keeps the buttons testable.
+.buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+
+  @media (max-width: 767px) {
+    // < HEADER_BREAKPOINTS.mobileAuth
+    display: none;
+  }
+}

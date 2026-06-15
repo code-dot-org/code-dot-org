@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import Popover from '@mui/material/Popover';
 import {visuallyHidden} from '@mui/utils';
+import classnames from 'classnames';
 import {
   Fragment,
   useId,
@@ -17,20 +18,9 @@ import {AUTH_LINKS} from '../../shared/authLinks';
 import type {GlobalNavItem, MenuItem} from '../../shared/types';
 import type {UserAuthProp} from '../SignedInUserButton/SignedInUserButton';
 
-import {
-  authDividerSx,
-  barsIconSx,
-  dividerSx,
-  expandTextSx,
-  hamburgerListSx,
-  hamburgerSectionSx,
-  hamburgerTriggerSx,
-  linkSx,
-  mobileAuthOnlyItemSx,
-  mobileOnlyItemSx,
-  popoverSx,
-  subListSx,
-} from './HamburgerMenu.styles';
+import {hamburgerTriggerSx, popoverSx} from './HamburgerMenu.styles';
+
+import moduleStyles from './HamburgerMenu.module.scss';
 
 interface HamburgerMenuProps {
   /** Top-bar app nav, re-listed in the drawer below the top-nav breakpoint. */
@@ -51,9 +41,13 @@ const ExpandableSection: FunctionComponent<{entry: GlobalNavItem}> = ({
   entry,
 }) => (
   <li>
-    <Box component="details" name={ACCORDION_NAME} sx={hamburgerSectionSx}>
+    <Box
+      component="details"
+      name={ACCORDION_NAME}
+      className={moduleStyles.hamburgerSection}
+    >
       <summary>
-        <Box component="span" sx={expandTextSx}>
+        <Box component="span" className={moduleStyles.expandText}>
           {entry.label}
         </Box>
         <FontAwesomeV6Icon
@@ -62,10 +56,10 @@ const ExpandableSection: FunctionComponent<{entry: GlobalNavItem}> = ({
           className="chevron"
         />
       </summary>
-      <Box component="ul" sx={subListSx}>
+      <Box component="ul" className={moduleStyles.subList}>
         {entry.subItems?.map(sub => (
           <li key={sub.label}>
-            <Box component="a" href={sub.href} sx={linkSx}>
+            <Box component="a" href={sub.href} className={moduleStyles.link}>
               {sub.label}
             </Box>
           </li>
@@ -106,20 +100,23 @@ const HamburgerPanel: FunctionComponent<
   const showSupportDivider = supportLinks.length > 0 && hasGlobal;
 
   const incubatorItem = incubator ? (
-    <Box component="li" className="mobileOnly" sx={mobileOnlyItemSx}>
-      <Box component="a" href={incubator.href} sx={linkSx}>
+    <Box
+      component="li"
+      className={classnames('mobileOnly', moduleStyles.mobileOnlyItem)}
+    >
+      <Box component="a" href={incubator.href} className={moduleStyles.link}>
         {incubator.label}
       </Box>
     </Box>
   ) : null;
 
   return (
-    <Box component="ul" sx={hamburgerListSx}>
+    <Box component="ul" className={moduleStyles.hamburgerList}>
       {/* Signed-out auth — shown only below mobileAuth, where the bar hides it
           (prod's #hamburger-sign-up-buttons). */}
       {userAuth?.status === 'signed-out' && (
         <>
-          <Box component="li" sx={mobileAuthOnlyItemSx}>
+          <Box component="li" className={moduleStyles.mobileAuthOnlyItem}>
             <Button
               href={AUTH_LINKS.signIn}
               variant="outlined"
@@ -129,7 +126,7 @@ const HamburgerPanel: FunctionComponent<
               Sign in
             </Button>
           </Box>
-          <Box component="li" sx={mobileAuthOnlyItemSx}>
+          <Box component="li" className={moduleStyles.mobileAuthOnlyItem}>
             <Button
               href={AUTH_LINKS.createAccount}
               variant="contained"
@@ -140,7 +137,7 @@ const HamburgerPanel: FunctionComponent<
               Create account
             </Button>
           </Box>
-          <Box component="li" sx={authDividerSx} />
+          <Box component="li" className={moduleStyles.authDivider} />
         </>
       )}
 
@@ -149,17 +146,19 @@ const HamburgerPanel: FunctionComponent<
         <Box
           component="li"
           key={item.label}
-          className="mobileOnly"
-          sx={mobileOnlyItemSx}
+          className={classnames('mobileOnly', moduleStyles.mobileOnlyItem)}
         >
-          <Box component="a" href={item.href} sx={linkSx}>
+          <Box component="a" href={item.href} className={moduleStyles.link}>
             {item.label}
           </Box>
         </Box>
       ))}
 
       {showAppNavDivider && (
-        <Box component="li" className="mobileOnly divider" sx={dividerSx} />
+        <Box
+          component="li"
+          className={classnames('mobileOnly', 'divider', moduleStyles.divider)}
+        />
       )}
 
       {/* Support links — gated below the top-nav breakpoint */}
@@ -167,13 +166,12 @@ const HamburgerPanel: FunctionComponent<
         <Box
           component="li"
           key={link.label}
-          className="mobileOnly"
-          sx={mobileOnlyItemSx}
+          className={classnames('mobileOnly', moduleStyles.mobileOnlyItem)}
         >
           <Box
             component="a"
             href={link.href}
-            sx={linkSx}
+            className={moduleStyles.link}
             target="_blank"
             rel="noopener noreferrer"
             aria-describedby={newTabId}
@@ -184,7 +182,10 @@ const HamburgerPanel: FunctionComponent<
       ))}
 
       {showSupportDivider && (
-        <Box component="li" className="mobileOnly divider" sx={dividerSx} />
+        <Box
+          component="li"
+          className={classnames('mobileOnly', 'divider', moduleStyles.divider)}
+        />
       )}
 
       {/* Global site nav — always visible. Incubator (app-nav-gated) is placed
@@ -194,7 +195,7 @@ const HamburgerPanel: FunctionComponent<
           <ExpandableSection entry={entry} />
         ) : (
           <li>
-            <Box component="a" href={entry.href} sx={linkSx}>
+            <Box component="a" href={entry.href} className={moduleStyles.link}>
               {entry.label}
             </Box>
           </li>
@@ -243,7 +244,10 @@ const HamburgerMenu: FunctionComponent<HamburgerMenuProps> = ({
         aria-controls={open ? menuId : undefined}
         onClick={event => setAnchorEl(event.currentTarget)}
       >
-        <Box component="span" className="barsIcon" sx={barsIconSx} />
+        <Box
+          component="span"
+          className={classnames('barsIcon', moduleStyles.barsIcon)}
+        />
       </IconButton>
       <Box component="span" id={newTabId} sx={visuallyHidden}>
         Opens in a new tab

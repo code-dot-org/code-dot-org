@@ -14,6 +14,8 @@ import {UserAuthProp} from './components/SignedInUserButton/SignedInUserButton';
 import UserAuthArea from './components/UserAuthArea/UserAuthArea';
 import type {GlobalNavItem, MenuItem} from './shared/types';
 
+import moduleStyles from './Header.module.scss';
+
 export type {CreateMenuItem};
 
 /** Props for {@link Header}. */
@@ -34,27 +36,11 @@ export interface HeaderProps {
   supportLinks?: MenuItem[];
 }
 
+// Layout lives in Header.module.scss. These two stay in `sx` because they
+// override MUI's runtime styles (AppBar's themed background, Toolbar's
+// min-height) — a plain module class can't out-specify those.
 const appBarSx = {backgroundColor: 'var(--background-brand-teal-primary)'};
 const toolbarSx = {'&&': {minHeight: '50px'}, alignItems: 'stretch'};
-const spacerSx = {flex: 1};
-// 6px gap keeps each icon target clear of its neighbor (WCAG 2.5.8 spacing);
-// prod packs these flush, so the space beside the name opens Help.
-const rightClusterSx = {
-  display: 'flex',
-  alignItems: 'center',
-  gap: '6px',
-  pr: '13px',
-};
-// Create + auth share an 8px gap between them, matching prod.
-const createAuthSx = {display: 'flex', alignItems: 'center', gap: 1};
-const hamburgerWrapSx = {flexShrink: 0};
-// Auth control stays on the bar at every width, matching prod (the legacy
-// #sign_in_or_user account pill / sign-in buttons are visible down to mobile).
-const authAreaSx = {
-  display: 'flex',
-  alignSelf: 'stretch',
-  alignItems: 'stretch',
-};
 
 /** Primary site navigation bar. Renders logo, nav menu, and user auth area. */
 const Header: FunctionComponent<HeaderProps> = ({
@@ -94,16 +80,16 @@ const Header: FunctionComponent<HeaderProps> = ({
           <NavMenu menuItems={barNavItems} />
 
           {/* Flex spacer pushes right items to the edge */}
-          <Box sx={spacerSx} />
+          <Box className={moduleStyles.spacer} />
 
           {/* Right cluster: create → auth → help → hamburger (matches prod order) */}
-          <Box sx={rightClusterSx}>
-            <Box sx={createAuthSx}>
+          <Box className={moduleStyles.rightCluster}>
+            <Box className={moduleStyles.createAuth}>
               {createMenuItems && createMenuItems.length > 0 && (
                 <CreateMenu items={createMenuItems} />
               )}
               {userAuth && (
-                <Box sx={authAreaSx}>
+                <Box className={moduleStyles.authArea}>
                   <UserAuthArea userAuth={userAuth} />
                 </Box>
               )}
@@ -111,7 +97,7 @@ const Header: FunctionComponent<HeaderProps> = ({
             {supportLinks.length > 0 && (
               <HelpButton supportLinks={supportLinks} />
             )}
-            <Box sx={hamburgerWrapSx}>
+            <Box className={moduleStyles.hamburgerWrap}>
               <HamburgerMenu
                 menuItems={menuItems}
                 globalNavItems={globalNavItems}

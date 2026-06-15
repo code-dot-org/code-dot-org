@@ -14,6 +14,8 @@ import {
 } from '../../shared/headerMenu';
 import type {UserType} from '../../shared/types';
 
+import moduleStyles from './SignedInUserButton.module.scss';
+
 /**
  * Account-menu trigger (teal pill with the display name + chevron).
  */
@@ -47,15 +49,6 @@ const accountTriggerSx: SxProps = {
     color: 'var(--text-neutral-white-fixed)',
     fontSize: '14px',
   },
-};
-
-/** Display name: truncate to 120px so the button auto-sizes to prod's ~176px. */
-const accountNameSx = {
-  maxWidth: '120px',
-  overflow: 'hidden',
-  textOverflow: 'ellipsis',
-  whiteSpace: 'nowrap',
-  flexShrink: 0,
 };
 
 /**
@@ -120,7 +113,7 @@ const SignedInUserButton: FunctionComponent<SignedInUserButtonProps> = ({
           />
         }
       >
-        <Box component="span" sx={accountNameSx}>
+        <Box component="span" className={moduleStyles.accountName}>
           {userAuth.display_name}
         </Box>
       </Button>

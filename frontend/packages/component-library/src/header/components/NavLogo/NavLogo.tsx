@@ -2,6 +2,8 @@ import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import type {FunctionComponent} from 'react';
 
+import moduleStyles from './NavLogo.module.scss';
+
 /** Props for {@link NavLogo}. */
 interface NavLogoProps {
   /** URL of the brand logo image. */
@@ -9,21 +11,6 @@ interface NavLogoProps {
   /** Brand name used for aria-label and alt text. */
   brandName?: string;
 }
-
-/**
- * Logo is a wide wordmark (≈ 5.9:1 ratio); fix height and let width flow
- * from the image's natural aspect ratio instead of constraining to a square.
- */
-const logoBoxSx = {
-  height: '22px',
-  display: 'flex',
-  alignItems: 'center',
-  '& img': {
-    height: '100%',
-    width: 'auto',
-    display: 'block',
-  },
-};
 
 /** MUI sx styles for the icon button wrapping the logo. */
 const logoIconButtonSx = {
@@ -55,7 +42,7 @@ const NavLogo: FunctionComponent<NavLogoProps> = ({
     sx={logoIconButtonSx}
     href="/"
   >
-    <Box sx={logoBoxSx}>
+    <Box className={moduleStyles.logoBox}>
       {/* Decorative: the wrapping IconButton already names the link "<brand> Home". */}
       <img src={logoImageUrl} alt="" />
     </Box>

@@ -1,0 +1,11 @@
+// Layout for the truncated display name inside the account-menu trigger. The
+// trigger Button and the Menu items stay in `sx` (MUI-override).
+
+// Display name: truncate to 120px so the button auto-sizes to prod's ~176px.
+.accountName {
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-shrink: 0;
+}

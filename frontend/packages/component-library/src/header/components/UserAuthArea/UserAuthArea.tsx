@@ -8,17 +8,13 @@ import SignedInUserButton, {
 } from '../SignedInUserButton/SignedInUserButton';
 import SignedOutUserButtons from '../SignedOutUserButtons/SignedOutUserButtons';
 
+import moduleStyles from './UserAuthArea.module.scss';
+
 /** Props for {@link UserAuthArea}. */
 interface UserAuthAreaProps {
   /** Current auth status and associated data. */
   userAuth: UserAuthProp;
 }
-
-/** Auth container — layout (margin, padding) is owned by the Header toolbar. */
-const containerSx = {
-  display: 'flex',
-  alignItems: 'center',
-};
 
 /**
  * Selects the appropriate auth UI for the current status.
@@ -69,7 +65,7 @@ function renderUserAuth(userAuth: UserAuthProp) {
 
 /** Right-hand auth area of the header toolbar. Switches on auth status exhaustively. */
 const UserAuthArea: FunctionComponent<UserAuthAreaProps> = ({userAuth}) => (
-  <Box sx={containerSx}>{renderUserAuth(userAuth)}</Box>
+  <Box className={moduleStyles.container}>{renderUserAuth(userAuth)}</Box>
 );
 
 export default UserAuthArea;
