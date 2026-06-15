@@ -74,7 +74,6 @@ class DCDOBase < DynamicConfigBase
       'ai-diff-drawer': DCDO.get('ai-diff-drawer', false),
       'latam-ge-region-notice-enabled-until': DCDO.get('latam-ge-region-notice-enabled-until', nil),
       'codeai-rebrand-banner': DCDO.get('codeai-rebrand-banner', false)
-      'language-deprecation-warning-enabled': DCDO.get('language-deprecation-warning-enabled', false)
     }
   end
 end
