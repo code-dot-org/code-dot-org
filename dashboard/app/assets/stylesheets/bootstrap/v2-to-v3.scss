@@ -97,10 +97,13 @@ select.form-control {
   width: 220px;
 }
 
+/* bootstrap-sass-2.3.2.2/vendor/assets/stylesheets/bootstrap/_forms.scss:64 */
+textarea.form-control {
+  line-height: 20px;
+}
+
 /* bootstrap-sass-2.3.2.2/vendor/assets/stylesheets/bootstrap/_forms.scss:94 */
-input,
-textarea,
-.uneditable-input {
+input, textarea, .uneditable-input {
   width: 220px;
 }
 
