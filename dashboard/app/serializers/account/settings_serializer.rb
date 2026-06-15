@@ -34,8 +34,6 @@ module Account
         # Student-only "For Parents and Guardians" value; absent when unset.
         parent_email: user.parent_email.presence,
         dependent_students_count: dependent_students_count,
-        # Dropdown choices, served from the single Rails source so the client
-        # doesn't duplicate them.
         age_options: age_options,
         us_state_options: us_state_options,
       }
