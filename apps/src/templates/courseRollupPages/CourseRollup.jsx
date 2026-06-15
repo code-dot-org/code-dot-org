@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import color from '@cdo/apps/util/color';
 import {linkWithQueryParams} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
@@ -60,12 +59,12 @@ export default class CourseRollup extends Component {
 
 const styles = {
   h1: {
-    color: color.teal,
+    color: 'var(--text-brand-teal-primary)',
   },
   navLink: {
     fontSize: 14,
     lineHeight: '22px',
-    color: color.purple,
+    color: 'var(--text-brand-purple-primary)',
     margin: '10px 0px',
   },
 };
