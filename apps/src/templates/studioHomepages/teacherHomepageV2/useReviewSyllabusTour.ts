@@ -40,9 +40,15 @@ export const resumeReviewSyllabusOnboardingTour = () => {
     REVIEW_SYLLABUS_QUIZ_CONFIG_KEY,
     ''
   );
-  const quizConfig: ReviewSyllabusQuizConfig | null = quizConfigJson
-    ? (JSON.parse(quizConfigJson) as ReviewSyllabusQuizConfig)
-    : null;
+  let quizConfig: ReviewSyllabusQuizConfig | null = null;
+  if (quizConfigJson) {
+    try {
+      quizConfig = JSON.parse(quizConfigJson) as ReviewSyllabusQuizConfig;
+    } catch {
+      trySetSessionStorage(REVIEW_SYLLABUS_QUIZ_CONFIG_KEY, '');
+      quizConfig = null;
+    }
+  }
 
   const tour = createShepherdTour({
     stepClass: 'custom-shepherd-onboarding-container',

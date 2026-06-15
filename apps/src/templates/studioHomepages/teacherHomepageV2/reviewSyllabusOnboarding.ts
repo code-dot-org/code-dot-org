@@ -75,6 +75,14 @@ const highlightAttachedElement = (selector: string) => ({
 
 // ── Quiz content ──────────────────────────────────────────────────────────────
 
+const escapeHtml = (s: string): string =>
+  s
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+
 const buildQuizHtml = (
   lesson: number,
   options: ReviewSyllabusQuizOption[]
@@ -89,7 +97,7 @@ const buildQuizHtml = (
       opt =>
         `<button class="quiz-option" data-answer="${
           opt.correct ? 'correct' : 'wrong'
-        }" type="button">${opt.label}</button>`
+        }" type="button">${escapeHtml(opt.label)}</button>`
     )
     .join('') +
   `</div>` +
