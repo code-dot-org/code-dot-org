@@ -7,7 +7,6 @@ import LessonStandards, {
   ExpandMode,
 } from '@cdo/apps/templates/lessonOverview/LessonStandards';
 import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import StyledCodeBlock from '../lessonOverview/StyledCodeBlock';
@@ -133,14 +132,14 @@ const styles = {
     flexDirection: 'column',
   },
   object: {
-    backgroundColor: color.lightest_gray,
-    color: color.charcoal,
-    border: 'solid 1px' + color.charcoal,
+    backgroundColor: 'var(--background-neutral-secondary)',
+    color: 'var(--text-neutral-tertiary)',
+    border: 'solid 1px var(--borders-neutral-strong)',
     padding: '0px 10px',
   },
   entries: {
-    color: color.charcoal,
-    border: 'solid 1px' + color.charcoal,
+    color: 'var(--text-neutral-tertiary)',
+    border: 'solid 1px var(--borders-neutral-strong)',
     padding: 10,
     height: '100%',
   },

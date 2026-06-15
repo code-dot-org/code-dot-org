@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import color from '@cdo/apps/util/color';
-
 import RollupLessonEntrySection from './RollupLessonEntrySection';
 import {lessonShape} from './rollupShapes';
 
@@ -42,15 +40,15 @@ const styles = {
     width: '100%',
   },
   header: {
-    backgroundColor: color.purple,
-    color: color.white,
-    border: 'solid 1px' + color.charcoal,
+    backgroundColor: 'var(--background-brand-purple-primary)',
+    color: 'var(--text-neutral-white-fixed)',
+    border: 'solid 1px var(--borders-neutral-strong)',
     padding: '0px 10px',
   },
   object: {
-    backgroundColor: color.lightest_gray,
-    color: color.charcoal,
-    border: 'solid 1px' + color.charcoal,
+    backgroundColor: 'var(--background-neutral-secondary)',
+    color: 'var(--text-neutral-tertiary)',
+    border: 'solid 1px var(--borders-neutral-strong)',
     padding: '0px 10px',
   },
   entries: {
@@ -60,6 +58,6 @@ const styles = {
     alignContent: 'stretch',
   },
   link: {
-    color: color.white,
+    color: 'var(--text-neutral-white-fixed)',
   },
 };
