@@ -53,9 +53,8 @@ export const headerMenuItemSx: SxProps = {
     '&:visited, &:active': {
       color: 'var(--text-neutral-primary)',
     },
-    // Legacy header hover gray (rgb(231,232,234)); no design token matches.
     '&:hover': {
-      backgroundColor: '#e7e8ea',
+      backgroundColor: 'var(--background-neutral-tertiary)',
     },
   },
 };

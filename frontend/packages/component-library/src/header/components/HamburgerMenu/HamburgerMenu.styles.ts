@@ -34,9 +34,9 @@ export const barsIconSx: SxProps = {
 
 /** Trigger: always visible (the hamburger shows at every width). */
 export const hamburgerTriggerSx: SxProps = {
-  color: 'var(--text-neutral-inverse)',
+  color: 'var(--text-neutral-white-fixed)',
   '&:focus-visible': {
-    outline: '2px solid var(--text-neutral-inverse)',
+    outline: '2px solid var(--text-neutral-white-fixed)',
     outlineOffset: '2px',
   },
   minWidth: 0,
@@ -84,45 +84,12 @@ export const mobileAuthOnlyItemSx: SxProps = {
   },
 };
 
-/** Hamburger signed-out auth (mobile). Sign in = DSCO secondary (neutral text). */
-export const hamburgerSignInSx = {
-  display: 'block',
-  boxSizing: 'border-box',
-  width: '100%',
-  padding: '8px',
-  textAlign: 'center',
-  color: 'var(--text-neutral-primary)',
-  fontSize: '16px',
-  fontWeight: 400,
-  textDecoration: 'none',
-  borderRadius: '4px',
-  '&:visited, &:active': {color: 'var(--text-neutral-primary)'},
-  '&:hover': {backgroundColor: '#e7e8ea'},
-};
-
-/** Create account = DSCO primary (brand-purple fill, white text). */
-export const hamburgerCreateAccountSx = {
-  display: 'block',
-  boxSizing: 'border-box',
-  width: '100%',
-  marginTop: '4px',
-  padding: '8px',
-  textAlign: 'center',
-  color: 'var(--text-neutral-inverse)',
-  backgroundColor: 'var(--background-brand-purple-primary)',
-  fontSize: '16px',
-  fontWeight: 400,
-  textDecoration: 'none',
-  borderRadius: '4px',
-  '&:visited, &:active, &:hover': {color: 'var(--text-neutral-inverse)'},
-};
-
 /** Separator after the signed-out auth block; mobile-only like the auth itself. */
 export const authDividerSx = {
   height: '1px',
   margin: '0.5rem 0',
   padding: 0,
-  background: '#d1d4d8',
+  background: 'var(--borders-neutral-primary)',
   [`@media (min-width: ${HEADER_BREAKPOINTS.mobileAuth}px)`]: {display: 'none'},
 };
 
@@ -130,8 +97,7 @@ export const dividerSx: SxProps = {
   height: '1px',
   margin: '0.5rem 0',
   padding: 0,
-  // Legacy header divider gray (rgb(209,212,216)); no design token matches.
-  background: '#d1d4d8',
+  background: 'var(--borders-neutral-primary)',
   [`@media (min-width: ${HEADER_BREAKPOINTS.desktopNav}px)`]: {
     display: 'none',
   },
@@ -150,10 +116,9 @@ export const linkSx = {
   '&:visited, &:active': {
     color: 'var(--text-neutral-primary)',
   },
-  // Legacy header hover gray (rgb(231,232,234)); prod rounds the hamburger
-  // highlight, unlike the square help/account hovers.
+  // Prod rounds the hamburger highlight, unlike the square help/account hovers.
   '&:hover': {
-    backgroundColor: '#e7e8ea',
+    backgroundColor: 'var(--background-neutral-tertiary)',
     borderRadius: '4px',
     color: 'var(--text-neutral-primary)',
   },
@@ -181,7 +146,7 @@ export const hamburgerSectionSx: SxProps = {
       display: 'none',
     },
     '&:hover': {
-      backgroundColor: '#e7e8ea',
+      backgroundColor: 'var(--background-neutral-tertiary)',
       borderRadius: '4px',
     },
   },

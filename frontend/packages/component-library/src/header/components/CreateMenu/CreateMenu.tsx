@@ -29,7 +29,7 @@ interface CreateMenuProps {
 const createTriggerSx: SxProps = {
   color: 'var(--neutral-base-white)',
   '&:focus-visible': {
-    outline: '2px solid var(--text-neutral-inverse)',
+    outline: '2px solid var(--text-neutral-white-fixed)',
     outlineOffset: '2px',
   },
   display: 'inline-flex',

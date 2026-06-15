@@ -1,4 +1,5 @@
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import Popover from '@mui/material/Popover';
 import {visuallyHidden} from '@mui/utils';
@@ -21,10 +22,8 @@ import {
   barsIconSx,
   dividerSx,
   expandTextSx,
-  hamburgerCreateAccountSx,
   hamburgerListSx,
   hamburgerSectionSx,
-  hamburgerSignInSx,
   hamburgerTriggerSx,
   linkSx,
   mobileAuthOnlyItemSx,
@@ -121,18 +120,25 @@ const HamburgerPanel: FunctionComponent<
       {userAuth?.status === 'signed-out' && (
         <>
           <Box component="li" sx={mobileAuthOnlyItemSx}>
-            <Box component="a" href={AUTH_LINKS.signIn} sx={hamburgerSignInSx}>
+            <Button
+              href={AUTH_LINKS.signIn}
+              variant="outlined"
+              color="secondary"
+              fullWidth
+            >
               Sign in
-            </Box>
+            </Button>
           </Box>
           <Box component="li" sx={mobileAuthOnlyItemSx}>
-            <Box
-              component="a"
+            <Button
               href={AUTH_LINKS.createAccount}
-              sx={hamburgerCreateAccountSx}
+              variant="contained"
+              color="primary"
+              fullWidth
+              sx={{mt: '4px'}}
             >
               Create account
-            </Box>
+            </Button>
           </Box>
           <Box component="li" sx={authDividerSx} />
         </>

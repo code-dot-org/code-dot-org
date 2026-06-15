@@ -34,11 +34,11 @@ const menuListItemLinkSx = {
   height: '100%',
   textDecoration: 'none',
   '&:hover, &:active': {
-    boxShadow: 'inset 0 -2px 0 #ffa400',
+    boxShadow: 'inset 0 -2px 0 var(--background-accent-orange-primary)',
   },
   // Match the header's other controls; without this the link falls back to the UA ring.
   '&:focus-visible': {
-    outline: '2px solid var(--text-neutral-inverse)',
+    outline: '2px solid var(--text-neutral-white-fixed)',
     outlineOffset: '2px',
   },
   fontWeight: 'normal',

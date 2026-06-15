@@ -313,7 +313,7 @@ export const SignedOut: Story = {
     const canvas = within(canvasElement);
 
     const probe = document.createElement('div');
-    probe.style.color = 'var(--text-neutral-inverse)';
+    probe.style.color = 'var(--text-neutral-white-fixed)';
     canvasElement.appendChild(probe);
     const inverse = getComputedStyle(probe).color;
     probe.remove();

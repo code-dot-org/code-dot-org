@@ -38,7 +38,7 @@ const logoIconButtonSx = {
   py: '2px',
   // Brand-inverse ring; the theme's default teal IconButton ring is invisible on the teal bar.
   '&:focus-visible, a&:focus-visible': {
-    outline: '2px solid var(--text-neutral-inverse)',
+    outline: '2px solid var(--text-neutral-white-fixed)',
     outlineOffset: '2px',
   },
 };
