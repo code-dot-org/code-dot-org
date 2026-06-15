@@ -8,6 +8,7 @@ import {
 import LoginInformation from '../sections/LoginInformation';
 import MyInformation from '../sections/MyInformation';
 import ParentGuardianEmail from '../sections/ParentGuardianEmail';
+import UsersActions from '../sections/UsersActions';
 import {useFormDispatch, useFormState} from '../state/FormContext';
 import {dirtyValues} from '../state/formReducer';
 
@@ -18,7 +19,7 @@ import {useToast} from './Toast';
 /**
  * The Account Details tab body: one form that persists all pending My
  * Information edits in a single PATCH. Email, password, account type, and
- * deletion are separate modal flows wired in by later phases.
+ * deletion are separate modal flows.
  */
 export default function UsersDetailsForm({settings}: {settings: UserSettings}) {
   const state = useFormState();
@@ -67,6 +68,7 @@ export default function UsersDetailsForm({settings}: {settings: UserSettings}) {
       {settings.userType === 'student' && (
         <ParentGuardianEmail settings={settings} />
       )}
+      <UsersActions settings={settings} />
       <SaveBar onSave={handleSave} />
     </div>
   );
