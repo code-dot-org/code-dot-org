@@ -5,6 +5,7 @@ import {
   type UpdateProfileParams,
 } from '@code-dot-org/core/api';
 
+import LoginInformation from '../sections/LoginInformation';
 import MyInformation from '../sections/MyInformation';
 import {useFormDispatch, useFormState} from '../state/FormContext';
 import {dirtyValues} from '../state/formReducer';
@@ -61,6 +62,7 @@ export default function UsersDetailsForm({settings}: {settings: UserSettings}) {
     // so a form here would catch them and fire a spurious save.
     <div>
       <MyInformation settings={settings} />
+      <LoginInformation settings={settings} />
       <SaveBar onSave={handleSave} />
     </div>
   );
