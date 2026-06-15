@@ -170,6 +170,34 @@ describe('JavabuilderConnection', () => {
     });
   });
 
+  describe('onError', () => {
+    it('suppresses websocket error and close events after the user stops', () => {
+      sinon.stub(window, 'WebSocket').returns({close: sinon.stub()});
+      connection.establishWebsocketConnection('url', 'token');
+      connection.closeConnection();
+      onOutputMessage.resetHistory();
+
+      // Closing a socket that is still connecting fails it: the browser
+      // fires an error event followed by an unclean close.
+      connection.onError(new Event('error'));
+      connection.onClose({code: 1006, wasClean: false});
+
+      expect(onOutputMessage).not.to.have.been.called;
+      window.WebSocket.restore();
+    });
+
+    it('reports websocket errors when the user did not stop', () => {
+      const consoleError = sinon.stub(console, 'error');
+
+      connection.onError(new Event('error'));
+
+      expect(onOutputMessage).to.have.been.calledWith(
+        `${STATUS_MESSAGE_PREFIX} We hit an error connecting to our server. Try again.`
+      );
+      consoleError.restore();
+    });
+  });
+
   describe('initiateConnection', () => {
     it('does not open a socket when interrupted while fetching the token', async () => {
       const establishStub = sinon.stub(

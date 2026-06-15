@@ -6,7 +6,10 @@ import {
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 
-import {LINE_RECONNECT_SNAP_RADIUS_PX} from '../constants';
+import {
+  LINE_RECONNECT_SNAP_RADIUS_PX,
+  REACT_FLOW_EDGE_UPDATER_CLASS,
+} from '../constants';
 import {snapEdgeEndpointToHandle} from '../utils/handleSnap';
 import {
   anchorHandleFlowPosition,
@@ -43,6 +46,7 @@ interface UseLineEdgeDragOptions {
   ) => void;
   screenToFlowPosition: (position: XYPosition) => XYPosition;
   flowToScreenPosition: (position: XYPosition) => XYPosition;
+  pushSnapshot: () => void;
 }
 
 // Dragging the body of a line edge moves the line as a whole. Free
@@ -56,6 +60,7 @@ export function useLineEdgeDrag({
   setEdges,
   screenToFlowPosition,
   flowToScreenPosition,
+  pushSnapshot,
 }: UseLineEdgeDragOptions) {
   const {getNode} = useReactFlow<
     SketchlabReactFlowNode,
@@ -69,6 +74,12 @@ export function useLineEdgeDrag({
       const dragState = draggingLineEdgeRef.current;
       if (!dragState) {
         return;
+      }
+
+      // Push the undo snapshot on the first move, before any mutation, so
+      // a bare click on the line doesn't create a history entry.
+      if (!dragState.hasMoved) {
+        pushSnapshot();
       }
 
       // On detach, create fresh anchors at any attached endpoint
@@ -129,7 +140,7 @@ export function useLineEdgeDrag({
         })
       );
     },
-    [screenToFlowPosition, setNodes, setEdges]
+    [screenToFlowPosition, setNodes, setEdges, pushSnapshot]
   );
 
   const stopLineEdgeDrag = useCallback(
@@ -182,6 +193,16 @@ export function useLineEdgeDrag({
     (event: React.MouseEvent, edge: SketchlabReactFlowEdge) => {
       if (readOnly || event.button !== 0) {
         return;
+      }
+
+      const target = event.target;
+      if (target instanceof Element) {
+        // Mousedown on an endpoint's reconnect anchor starts React Flow's
+        // reconnect drag (it's a child of the same edge wrapper); don't also
+        // start a whole-line drag from the bubbled event.
+        if (target.closest(`.${REACT_FLOW_EDGE_UPDATER_CLASS}`)) {
+          return;
+        }
       }
 
       const anchors: DraggingAnchor[] = [];

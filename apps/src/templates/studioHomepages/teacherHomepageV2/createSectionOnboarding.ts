@@ -1,7 +1,6 @@
 import {StepOptions, Tour} from 'shepherd.js';
 
 import {
-  createCompletionStep,
   nextButton,
   withSparkle,
 } from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
@@ -230,10 +229,20 @@ export const createSectionsNewSteps = (tour: Tour): StepOptions[] => {
       buttons: [nextButton(tour)],
       when: highlightAttachedElement('#uitest-expandable-coteacher'),
     },
-    createCompletionStep(
-      tour,
-      'Create a Class Section',
-      'Stay on Sections page'
-    ),
+    {
+      id: 'save-section',
+      attachTo: {
+        element: '#uitest-save-section-changes',
+        on: 'top',
+      },
+      text: withSparkle("You're all set! Save your class section to finish."),
+      beforeShowPromise: () =>
+        waitForElement('#uitest-save-section-changes', controller.signal),
+      advanceOn: {
+        selector: '#uitest-save-section-changes',
+        event: 'click',
+      },
+      when: highlightAttachedElement('#uitest-save-section-changes'),
+    },
   ];
 };

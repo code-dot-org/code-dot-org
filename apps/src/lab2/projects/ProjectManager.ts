@@ -212,7 +212,8 @@ export default class ProjectManager {
   async save(
     sources: ProjectSources,
     forceSave = false,
-    forceNewVersion = false
+    forceNewVersion = false,
+    skipSourcesChangedCheck = false
   ) {
     if (this.destroyed) {
       // If we have already been destroyed, don't attempt to save.
@@ -220,7 +221,11 @@ export default class ProjectManager {
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
     this.sourcesToSave = sources;
-    return await this.enqueueSaveOrSave(forceSave, forceNewVersion);
+    return await this.enqueueSaveOrSave(
+      forceSave,
+      forceNewVersion,
+      skipSourcesChangedCheck
+    );
   }
 
   /**
@@ -463,10 +468,14 @@ export default class ProjectManager {
    * channel is metadata about the project and we don't want to save it unless the source
    * save succeeded.
    * @param forceNewVersion boolean: If the save should create a new version.
+   * @param skipSourcesChangedCheck boolean: If true, we will save the source even if it has not changed.
    * @returns a Promise<void> that resolves when the save is complete or when the save fails.
    * Listeners are notified of save status throughout the process.
    */
-  private async saveHelper(forceNewVersion: boolean): Promise<void> {
+  private async saveHelper(
+    forceNewVersion: boolean,
+    skipSourcesChangedCheck: boolean
+  ): Promise<void> {
     // We can't save without a last channel or last source.
     // We also know we don't need to save if we don't have sources to save
     // or a channel to save.
@@ -485,16 +494,17 @@ export default class ProjectManager {
     this.executeSaveStartListeners();
     const sourceChanged = this.sourceChanged();
     const channelChanged = this.channelChanged();
-    // If neither source nor channel has actually changed, no need to save again.
-    if (!sourceChanged && !channelChanged) {
+    // If neither source nor channel has actually changed, no need to save again
+    // unless skipSourcesChangedCheck is true.
+    if (!sourceChanged && !channelChanged && !skipSourcesChangedCheck) {
       this.saveInProgress = false;
       // We can clear sourcesToSave since they have not changed.
       this.sourcesToSave = undefined;
       this.executeSaveNoopListeners(this.lastChannel);
       return;
     }
-    // Only save the source if it has changed.
-    if (this.sourcesToSave && sourceChanged) {
+    // Only save the source if it has changed or we are skipping the changed check.
+    if (this.sourcesToSave && (sourceChanged || skipSourcesChangedCheck)) {
       try {
         await this.sourcesStore.save(
           this.channelId,
@@ -633,11 +643,13 @@ export default class ProjectManager {
   // if forceSave is true or it has been at least 30 seconds since our last save,
   // initiate a save.
   // If forceNewVersion is true, we will create a new version on save.
+  // If skipSourcesChangedCheck is true, we will save the source even if it has not changed.
   // If we cannot save now, enqueue a save if one has not already been enqueued and
   // return a noop response.
   private async enqueueSaveOrSave(
     forceSave: boolean,
-    forceNewVersion: boolean
+    forceNewVersion: boolean,
+    skipSourcesChangedCheck: boolean = false
   ) {
     if (!this.canSave(forceSave)) {
       if (!this.saveQueued) {
@@ -645,7 +657,7 @@ export default class ProjectManager {
         this.saveQueued = true;
         this.currentTimeoutId = window.setTimeout(
           () => {
-            this.saveHelper(forceNewVersion);
+            this.saveHelper(forceNewVersion, skipSourcesChangedCheck);
           },
           this.nextSaveTime ? this.nextSaveTime - Date.now() : this.saveInterval
         );
@@ -654,7 +666,7 @@ export default class ProjectManager {
     } else {
       // if we can save immediately, initiate a save now. This is an async
       // request.
-      return await this.saveHelper(forceNewVersion);
+      return await this.saveHelper(forceNewVersion, skipSourcesChangedCheck);
     }
   }
 

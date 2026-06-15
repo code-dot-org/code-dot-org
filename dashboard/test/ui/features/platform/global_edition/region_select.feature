@@ -1,4 +1,4 @@
-@no_mobile
+@no_mobile @playwright
 Feature: Global Edition - Region Select
 
   Scenario: User can switch between the international and regional versions using the language selector on a Studio page

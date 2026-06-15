@@ -19,6 +19,7 @@ interface WidgetTemplateProps {
   scrollable?: boolean;
   loading?: boolean;
   settingsOptions?: DropdownOption[];
+  id?: string;
 }
 
 const WidgetTemplate: React.FC<WidgetTemplateProps> = ({
@@ -29,9 +30,11 @@ const WidgetTemplate: React.FC<WidgetTemplateProps> = ({
   scrollable = false,
   loading = false,
   settingsOptions = [],
+  id,
 }) => {
   return (
     <div
+      id={id}
       className={styles.widget}
       style={{gridColumn: `span ${gridWidth}`, gridRow: `span ${gridHeight}`}}
     >

@@ -1,10 +1,10 @@
-import {Typography} from '@mui/material';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton as MuiIconButton, Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useEffect, useState, useRef, useMemo} from 'react';
 
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
@@ -252,7 +252,9 @@ export default function LearningGoals({
     return (
       <div className={`${style.feedbackArea} uitest-learning-goal`}>
         <label className={style.evidenceLevelLabel}>
-          <span>{i18n.feedbackHeader()}</span>
+          <Typography variant="label2" component="span">
+            {i18n.feedbackHeader()}
+          </Typography>
           <textarea
             id="ui-teacherFeedback"
             className={style.inputTextbox}
@@ -264,18 +266,34 @@ export default function LearningGoals({
           />
         </label>
         {autosaveStatus === STATUS.IN_PROGRESS ? (
-          <span className={style.autosaveMessage}>{i18n.saving()}</span>
+          <Typography
+            variant="inherit"
+            component="span"
+            className={style.autosaveMessage}
+          >
+            {i18n.saving()}
+          </Typography>
         ) : (
           autosaveStatus === STATUS.FINISHED && (
-            <span id="ui-autosaveConfirm" className={style.autosaveMessage}>
-              <FontAwesome icon="circle-check" /> {i18n.savedToGallery()}
-            </span>
+            <Typography
+              variant="inherit"
+              component="span"
+              id="ui-autosaveConfirm"
+              className={style.autosaveMessage}
+            >
+              <FontAwesomeV6Icon iconName="circle-check" />{' '}
+              {i18n.savedToGallery()}
+            </Typography>
           )
         )}
         {autosaveStatus === STATUS.ERROR && (
-          <span className={style.autosaveMessage}>
+          <Typography
+            variant="inherit"
+            component="span"
+            className={style.autosaveMessage}
+          >
             {i18n.feedbackSaveError()}
-          </span>
+          </Typography>
         )}
       </div>
     );
@@ -285,7 +303,9 @@ export default function LearningGoals({
     return (
       <div className={style.feedbackArea}>
         <label className={style.evidenceLevelLabel}>
-          <span>{i18n.feedback()}</span>
+          <Typography variant="label2" component="span">
+            {i18n.feedback()}
+          </Typography>
           <textarea
             className={style.inputTextbox}
             name="teacherFeedback"
@@ -414,8 +434,10 @@ export default function LearningGoals({
     <div className={style.learningGoalsContainer}>
       <div className={style.learningGoalsHeader}>
         <div className={style.learningGoalsHeaderLeftSide}>
-          <button
+          <MuiIconButton
             type="button"
+            variant="text"
+            color="secondary"
             className={classnames(
               style.learningGoalButton,
               style.learningGoalButtonLeft
@@ -423,8 +445,8 @@ export default function LearningGoals({
             aria-label={i18n.rubricPreviousLearningGoal()}
             onClick={() => onCarouselPress(-1)}
           >
-            <FontAwesome icon="angle-left" />
-          </button>
+            <FontAwesomeV6Icon iconName="angle-left" />
+          </MuiIconButton>
           <ProgressRing
             className={style.learningGoalRing}
             learningGoals={learningGoals}
@@ -483,17 +505,19 @@ export default function LearningGoals({
                 </Typography>
               )}
               {submittedEvaluation.feedback && (
-                <FontAwesome
-                  icon="message"
-                  className="fa-regular"
+                <FontAwesomeV6Icon
+                  iconName="message"
+                  iconStyle="regular"
                   title={i18n.feedback()}
                 />
               )}
             </div>
           )}
-          <button
+          <MuiIconButton
             id="uitest-next-goal"
             type="button"
+            variant="text"
+            color="secondary"
             className={classnames(
               style.learningGoalButton,
               style.learningGoalButtonRight
@@ -501,8 +525,8 @@ export default function LearningGoals({
             aria-label={i18n.rubricNextLearningGoal()}
             onClick={() => onCarouselPress(1)}
           >
-            <FontAwesome icon="angle-right" />
-          </button>
+            <FontAwesomeV6Icon iconName="angle-right" />
+          </MuiIconButton>
         </div>
       </div>
       <div className={style.learningGoalOuterBlock}>
@@ -564,7 +588,9 @@ export default function LearningGoals({
                 {learningGoals[currentLearningGoal].tips && !isStudent && (
                   <details>
                     <summary className={style.tipsDetailsSummary}>
-                      <strong>{i18n.tipsForEvaluation()}</strong>
+                      <Typography variant="strong">
+                        {i18n.tipsForEvaluation()}
+                      </Typography>
                     </summary>
 
                     <div className={style.learningGoalsTips}>

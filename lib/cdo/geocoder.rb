@@ -113,7 +113,7 @@ module Geocoder
     return nil unless match
     # Strip non-address punctuation before geocoding. Commas, periods, and hyphens are
     # valid in addresses. Other characters like semi-colons can confuse geocoder APIs.
-    text_stripped = text[match.begin(0)..].gsub(/[^a-zA-Z0-9\s,.\-]/, ' ')
+    text_stripped = text[match.begin(0)..].gsub(/[^a-zA-Z0-9\s,.\-]/, ' ').strip
     candidate = text_stripped.split(/\s+/, MAX_ADDRESS_WORDS + 1).first(MAX_ADDRESS_WORDS).join(' ')
     return nil if candidate.length < MIN_ADDRESS_LENGTH
     return nil if candidate.count(' ') < 2

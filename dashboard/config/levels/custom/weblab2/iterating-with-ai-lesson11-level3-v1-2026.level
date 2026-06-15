@@ -1,0 +1,45 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-06-13T05:50:24.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "iterating-with-ai-lesson11-level3-template-2026",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "code",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "long_instructions": "# Finalize Your Dataset\r\n\r\n1.  **Import Your Dataset:** At the top of your files panel, click the `+` sign to import your `dataset.js` file from your backpack. \r\n2.  **Consult AI:** Upload a screenshot of your schema from the previous level and consult AI. You might ask:\r\n\t- *Is this the right schema to represent this data?*\r\n    - *What potential biases should I consider with these fields?*\r\n3.  **Generate the Revised Dataset:** use AI to eliminate any fields you don't want from your dataset and update the `dataset.js` file. ",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildJavaScript",
+        "documentation",
+        "example"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-13T05:50:24.729+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson11-milestone1-test_2025-pilot_2026\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson11-milestone1-test_2025-pilot_2026\"},{\"changed_at\":\"2026-06-13 21:42:57 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-14 15:36:41 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-15 04:55:46 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

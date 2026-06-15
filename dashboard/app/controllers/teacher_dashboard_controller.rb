@@ -19,6 +19,7 @@ class TeacherDashboardController < ApplicationController
   end
 
   def show
+    @show_section_creation_celebration_dialog = params[:showSectionCreationDialog].present?
     @sections = current_user.sections_instructed.
       includes(section_instructors: {instructor: :primary_contact_info}).
       map(&:concise_summarize)

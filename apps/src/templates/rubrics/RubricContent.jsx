@@ -1,9 +1,10 @@
+import CloseButton from '@code-dot-org/component-library/closeButton';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import i18n from '@cdo/locale';
 
 import LearningGoals from './LearningGoals';
@@ -96,7 +97,7 @@ export default function RubricContent({
                       variant="body3"
                       gutterBottom
                     >
-                      <FontAwesome icon="clock" />
+                      <FontAwesomeV6Icon iconName="clock" />
                       <span>{formatTimeSpent(studentLevelInfo.timeSpent)}</span>
                     </Typography>
                   )}
@@ -105,7 +106,7 @@ export default function RubricContent({
                     variant="body3"
                     gutterBottom
                   >
-                    <FontAwesome icon="rocket" />
+                    <FontAwesomeV6Icon iconName="rocket" />
                     {i18n.numAttempts({
                       numAttempts: studentLevelInfo.attempts || 0,
                     })}
@@ -116,7 +117,7 @@ export default function RubricContent({
                       variant="body3"
                       gutterBottom
                     >
-                      <FontAwesome icon="calendar" />
+                      <FontAwesomeV6Icon iconName="calendar" />
                       <span>
                         {formatLastAttempt(studentLevelInfo.lastAttempt)}
                       </span>
@@ -190,8 +191,8 @@ export const InfoAlert = ({text, dismissable}) => {
       data-testid="info-alert"
     >
       <div className={style.infoAlertLeft}>
-        <FontAwesome
-          icon="circle-info"
+        <FontAwesomeV6Icon
+          iconName="circle-info"
           className={style.infoAlertIcon}
           title="info circle icon"
         />
@@ -200,14 +201,11 @@ export const InfoAlert = ({text, dismissable}) => {
         </Typography>
       </div>
       {!!dismissable && (
-        <button
-          type="button"
+        <CloseButton
           onClick={closeButtonCallback}
-          className={classnames('close', style.infoAlertRight)}
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
+          className={style.infoAlertRight}
+          aria-label={i18n.closeDialog()}
+        />
       )}
     </div>
   );

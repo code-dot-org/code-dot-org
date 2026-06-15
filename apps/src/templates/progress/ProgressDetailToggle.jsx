@@ -33,7 +33,7 @@ class ProgressDetailToggle extends React.Component {
     return (
       <SegmentedButtons
         type="iconOnly"
-        size="m"
+        size="s"
         selectedButtonValue={isSummaryView ? SUMMARY : DETAIL}
         onChange={this.onChange}
         buttons={[
