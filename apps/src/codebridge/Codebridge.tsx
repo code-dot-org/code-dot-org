@@ -20,7 +20,6 @@ import React, {useEffect, useMemo} from 'react';
 import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import {ChatAsset} from '@cdo/apps/aichat/types/assets';
-import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
 import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
@@ -52,7 +51,6 @@ type CodebridgeProps = {
   hiddenContextCallback?: () => Promise<string>;
   aiTutorMultimodalEnabled?: boolean;
   aiTutorChatButtonData?: ChatButtonData[];
-  aiTutorContextHelper?: AiTutorContextHelper<object>;
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   tutorVideos?: JsonVideoFileMetadata[];
@@ -76,7 +74,6 @@ export const Codebridge = React.memo(
     hiddenContextCallback,
     aiTutorMultimodalEnabled,
     aiTutorChatButtonData,
-    aiTutorContextHelper,
     aiTutorSystemPrompt,
     aiTutorResponseSchemaSettings,
     tutorVideos,
@@ -233,7 +230,6 @@ export const Codebridge = React.memo(
           onImageFlagged,
           aiTutorMultimodalEnabled,
           aiTutorChatButtonData,
-          aiTutorContextHelper,
           aiTutorResponseSchemaSettings,
           aiTutorSystemPrompt,
           tutorVideos,
