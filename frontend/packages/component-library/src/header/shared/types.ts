@@ -7,6 +7,12 @@ export interface MenuItem {
   label: string;
   /** Destination href. */
   href: string;
+  /**
+   * When set, this entry shows on the top bar but is omitted from the hamburger
+   * drawer — it's already surfaced there via the global nav. Mirror of the
+   * global nav's `hamburgerOnly`.
+   */
+  hideInHamburger?: boolean;
 }
 
 /**

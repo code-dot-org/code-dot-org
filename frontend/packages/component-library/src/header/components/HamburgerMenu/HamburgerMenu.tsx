@@ -4,13 +4,7 @@ import IconButton from '@mui/material/IconButton';
 import Popover from '@mui/material/Popover';
 import {visuallyHidden} from '@mui/utils';
 import classnames from 'classnames';
-import {
-  Fragment,
-  useId,
-  useMemo,
-  useState,
-  type FunctionComponent,
-} from 'react';
+import {useId, useState, type FunctionComponent} from 'react';
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
@@ -69,45 +63,24 @@ const ExpandableSection: FunctionComponent<{entry: GlobalNavItem}> = ({
 );
 
 /**
- * Panel body. The app-nav, support links, Incubator, and their dividers are
- * gated to widths below the top-nav breakpoint (the dev analog of prod's
- * .show-mobile), where the top bar's nav collapses; the global nav is always
- * shown. Mounted by the Popover only while open, so the global nav never
- * duplicates the top-bar nav items.
+ * Panel body. The app-nav, support links, and their dividers are gated to
+ * widths below the top-nav breakpoint (the dev analog of prod's .show-mobile),
+ * where the top bar's nav collapses; the global nav is always shown. Mounted by
+ * the Popover only while open.
  */
 const HamburgerPanel: FunctionComponent<
   HamburgerMenuProps & {newTabId: string}
 > = ({menuItems, globalNavItems, supportLinks, userAuth, newTabId}) => {
-  // Prod lists Incubator once, in the global-nav region after Donate (not in
-  // the app-nav block). Pull it out of `menuItems` unless globalNavItems already
-  // supplies one (avoids a double listing), and filter it out of the app nav.
-  const {incubator, appNavItems, donateIndex} = useMemo(() => {
-    const incubatorInGlobal = globalNavItems.some(e => e.label === 'Incubator');
-    return {
-      incubator: incubatorInGlobal
-        ? undefined
-        : menuItems.find(item => item.label === 'Incubator'),
-      appNavItems: menuItems.filter(item => item.label !== 'Incubator'),
-      donateIndex: globalNavItems.findIndex(e => e.label === 'Donate'),
-    };
-  }, [menuItems, globalNavItems]);
+  // `hideInHamburger` items (e.g. Incubator) live on the top bar but are
+  // surfaced here through the global nav, so drop them from the app-nav section
+  // to avoid a double listing.
+  const appNavItems = menuItems.filter(item => !item.hideInHamburger);
 
   // Dividers only sit *between* non-empty sections (app nav | support | global).
-  const hasGlobal = globalNavItems.length > 0 || incubator !== undefined;
+  const hasGlobal = globalNavItems.length > 0;
   const showAppNavDivider =
     appNavItems.length > 0 && (supportLinks.length > 0 || hasGlobal);
   const showSupportDivider = supportLinks.length > 0 && hasGlobal;
-
-  const incubatorItem = incubator ? (
-    <Box
-      component="li"
-      className={classnames('mobileOnly', moduleStyles.mobileOnlyItem)}
-    >
-      <Box component="a" href={incubator.href} className={moduleStyles.link}>
-        {incubator.label}
-      </Box>
-    </Box>
-  ) : null;
 
   return (
     <Box component="ul" className={moduleStyles.hamburgerList}>
@@ -187,31 +160,18 @@ const HamburgerPanel: FunctionComponent<
         />
       )}
 
-      {/* Global site nav — always visible. Incubator (app-nav-gated) is placed
-          right after Donate to match prod's single listing. */}
-      {globalNavItems.map((entry, i) => {
-        const row = entry.subItems ? (
-          <ExpandableSection entry={entry} />
+      {/* Global site nav — always visible. */}
+      {globalNavItems.map(entry =>
+        entry.subItems ? (
+          <ExpandableSection key={entry.label} entry={entry} />
         ) : (
-          <li>
+          <li key={entry.label}>
             <Box component="a" href={entry.href} className={moduleStyles.link}>
               {entry.label}
             </Box>
           </li>
-        );
-        if (i === donateIndex && incubatorItem) {
-          return (
-            <Fragment key={entry.label}>
-              {row}
-              {incubatorItem}
-            </Fragment>
-          );
-        }
-        return <Fragment key={entry.label}>{row}</Fragment>;
-      })}
-
-      {/* No Donate entry to anchor it — append so Incubator never vanishes. */}
-      {donateIndex === -1 && incubatorItem}
+        ),
+      )}
     </Box>
   );
 };

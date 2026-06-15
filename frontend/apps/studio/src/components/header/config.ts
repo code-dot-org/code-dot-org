@@ -24,7 +24,8 @@ export const STUDENT_MENU_ITEMS: MenuItem[] = [
   {label: 'My Dashboard', href: '/home'},
   {label: 'Course Catalog', href: '//code.org/students'},
   {label: 'Projects', href: '/projects'},
-  {label: 'Incubator', href: '//code.org/incubator'},
+  // Also a global-nav entry; shown on the bar, drawn from the global nav in the hamburger.
+  {label: 'Incubator', href: '//code.org/incubator', hideInHamburger: true},
 ];
 
 export const TEACHER_MENU_ITEMS: MenuItem[] = [
@@ -32,7 +33,8 @@ export const TEACHER_MENU_ITEMS: MenuItem[] = [
   {label: 'Course Catalog', href: '/catalog'},
   {label: 'Projects', href: '/projects'},
   {label: 'Professional Learning', href: '/my-professional-learning'},
-  {label: 'Incubator', href: '//code.org/incubator'},
+  // Also a global-nav entry; shown on the bar, drawn from the global nav in the hamburger.
+  {label: 'Incubator', href: '//code.org/incubator', hideInHamburger: true},
 ];
 
 export const CREATE_MENU_ITEMS: CreateMenuItem[] = [

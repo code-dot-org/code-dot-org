@@ -4,19 +4,18 @@ import '@testing-library/jest-dom';
 
 import HamburgerMenu from '../HamburgerMenu';
 
-// Teacher menu items include Incubator in the app-nav list; the hamburger
-// re-injects it once into the global-nav region (regression: it used to
-// appear twice).
+// Incubator is flagged hideInHamburger in the app nav because it's also a
+// global-nav entry; the drawer must show only the global-nav copy, not a
+// second one in the app-nav section. Teach carries a sub-item to exercise the
+// expandable-section path.
 const TEACHER_MENU_ITEMS = [
   {label: 'My Dashboard', href: '/home'},
   {label: 'Course Catalog', href: '/catalog'},
   {label: 'Projects', href: '/projects'},
   {label: 'Professional Learning', href: '/my-professional-learning'},
-  {label: 'Incubator', href: '//code.org/incubator'},
+  {label: 'Incubator', href: '//code.org/incubator', hideInHamburger: true},
 ];
 
-// Donate must be present so the Incubator re-injection has its anchor; Teach
-// carries a sub-item to exercise the expandable-section path.
 const GLOBAL_NAV = [
   {label: 'Learn', href: '//code.org/students'},
   {
@@ -25,6 +24,7 @@ const GLOBAL_NAV = [
   },
   {label: 'Districts', href: '//code.org/administrators'},
   {label: 'Donate', href: '//code.org/donate'},
+  {label: 'Incubator', href: '//code.org/incubator'},
 ];
 
 const SUPPORT_LINKS = [
@@ -77,9 +77,34 @@ describe('HamburgerMenu', () => {
     expect(screen.getByText('Educator Overview')).toBeInTheDocument();
   });
 
-  it('lists Incubator exactly once', async () => {
+  it('shows a hideInHamburger item once — the global copy, not the app-nav one', async () => {
     await openPanel();
     expect(screen.getAllByText('Incubator')).toHaveLength(1);
+    // The surviving copy is the global-nav entry (never width-gated), not the
+    // flagged app-nav one.
+    expect(screen.getByText('Incubator').closest('li')).not.toHaveClass(
+      'mobileOnly',
+    );
+  });
+
+  it('omits hideInHamburger entries from the drawer app-nav section', async () => {
+    const user = userEvent.setup();
+    render(
+      <HamburgerMenu
+        menuItems={[
+          {label: 'My Dashboard', href: '/home'},
+          {label: 'Secret', href: '/secret', hideInHamburger: true},
+        ]}
+        globalNavItems={GLOBAL_NAV}
+        supportLinks={[]}
+      />,
+    );
+    await user.click(
+      screen.getByRole('button', {name: 'Open navigation menu'}),
+    );
+    await screen.findByText('Districts');
+    expect(screen.getByText('My Dashboard')).toBeInTheDocument();
+    expect(screen.queryByText('Secret')).not.toBeInTheDocument();
   });
 
   it('gates app-nav with the mobileOnly class but not global nav', async () => {
@@ -148,43 +173,6 @@ describe('HamburgerMenu', () => {
     await screen.findByText('Districts');
     // app-nav | global -> a single divider, not two.
     expect(document.querySelectorAll('li.divider')).toHaveLength(1);
-  });
-
-  it('still lists Incubator once when no global-nav entry is labeled Donate', async () => {
-    const user = userEvent.setup();
-    const noDonate = GLOBAL_NAV.filter(e => e.label !== 'Donate');
-    render(
-      <HamburgerMenu
-        menuItems={TEACHER_MENU_ITEMS}
-        globalNavItems={noDonate}
-        supportLinks={SUPPORT_LINKS}
-      />,
-    );
-    await user.click(
-      screen.getByRole('button', {name: 'Open navigation menu'}),
-    );
-    await screen.findByText('Districts');
-    expect(screen.getAllByText('Incubator')).toHaveLength(1);
-  });
-
-  it('does not duplicate Incubator when global nav already supplies it', async () => {
-    const user = userEvent.setup();
-    const withIncubator = [
-      ...GLOBAL_NAV,
-      {label: 'Incubator', href: '//code.org/incubator'},
-    ];
-    render(
-      <HamburgerMenu
-        menuItems={TEACHER_MENU_ITEMS}
-        globalNavItems={withIncubator}
-        supportLinks={SUPPORT_LINKS}
-      />,
-    );
-    await user.click(
-      screen.getByRole('button', {name: 'Open navigation menu'}),
-    );
-    await screen.findByText('Districts');
-    expect(screen.getAllByText('Incubator')).toHaveLength(1);
   });
 
   it('surfaces Sign in / Create account when signed out', async () => {
