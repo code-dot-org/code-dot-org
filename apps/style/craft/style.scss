@@ -1256,6 +1256,10 @@ $height-to-width: math.div(434, 477);
 
 // callout styling
 
+.qtip {
+  max-width: 340px;
+}
+
 .qtip-content {
   color: white;
 }
