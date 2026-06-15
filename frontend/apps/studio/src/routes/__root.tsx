@@ -4,7 +4,7 @@ import '@code-dot-org/component-library-styles/fontVariables.css';
 import '@code-dot-org/component-library-styles/primitiveColors.css';
 import '@code-dot-org/component-library-styles/colors.css';
 
-import {Box, ThemeProvider} from '@mui/material';
+import {Box, GlobalStyles, ThemeProvider} from '@mui/material';
 import {createRootRoute, Outlet, useRouter} from '@tanstack/react-router';
 import {TanStackRouterDevtools} from '@tanstack/react-router-devtools';
 import {useCallback} from 'react';
@@ -73,10 +73,18 @@ function RootContent() {
   );
 }
 
+// Floor the responsive layout at 360px (the modern-phone minimum; code.org's
+// official requirement is 1024px desktop/Chromebook). Below 360px the page
+// scrolls horizontally instead of squishing. Hoisted so it isn't re-created.
+const responsiveFloorStyles = (
+  <GlobalStyles styles={{body: {minWidth: '360px'}}} />
+);
+
 /** Root layout: applies the CDO MUI theme and Bootstrap providers to all routes. */
 function RootLayout() {
   return (
     <ThemeProvider theme={CdoTheme}>
+      {responsiveFloorStyles}
       <Bootstrap locale="en-US">
         <RootContent />
       </Bootstrap>
