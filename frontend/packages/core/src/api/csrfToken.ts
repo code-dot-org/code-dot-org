@@ -2,6 +2,7 @@
 // <meta name="csrf-token">; a hard load of an SPA subroute may be served a
 // static shell without it, so the host primes a token from GET /get_token.
 
+import {logger} from '../plugins/observability';
 // Type-only import avoids a cycle: the transports depend on this module.
 import type {Transport} from './transports/types';
 
@@ -39,7 +40,9 @@ export async function refreshCsrfToken(transport: Transport): Promise<void> {
     });
     const token = meta.headers['csrf-token'];
     if (token) setSpaCsrfToken(token);
-  } catch {
-    // leave the current token in place
+  } catch (error) {
+    // Debug breadcrumb, not an error event: the failure self-heals (see above),
+    // but a later stale-token 422 should be traceable to it.
+    logger.debug('csrf token refresh failed', {error});
   }
 }

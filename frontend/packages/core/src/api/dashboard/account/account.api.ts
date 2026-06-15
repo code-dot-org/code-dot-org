@@ -33,8 +33,8 @@ export function createAccountApi(transport: Transport) {
     },
 
     /** PATCH /dashboardapi/users */
-    updateProfile(params: UpdateProfileParams): Promise<unknown> {
-      return transport.request<unknown>({
+    async updateProfile(params: UpdateProfileParams): Promise<void> {
+      await transport.request<unknown>({
         method: 'PATCH',
         url: '/dashboardapi/users',
         headers: JSON_ACCEPT,
@@ -56,8 +56,8 @@ export function createAccountApi(transport: Transport) {
     },
 
     /** PATCH /dashboardapi/users */
-    updatePassword(params: UpdatePasswordParams): Promise<unknown> {
-      return transport.request<unknown>({
+    async updatePassword(params: UpdatePasswordParams): Promise<void> {
+      await transport.request<unknown>({
         method: 'PATCH',
         url: '/dashboardapi/users',
         headers: JSON_ACCEPT,
@@ -72,8 +72,8 @@ export function createAccountApi(transport: Transport) {
     },
 
     /** PATCH /dashboardapi/users — SSO-only accounts add a first password. */
-    createPassword(params: CreatePasswordParams): Promise<unknown> {
-      return transport.request<unknown>({
+    async createPassword(params: CreatePasswordParams): Promise<void> {
+      await transport.request<unknown>({
         method: 'PATCH',
         url: '/dashboardapi/users',
         headers: JSON_ACCEPT,
@@ -87,8 +87,8 @@ export function createAccountApi(transport: Transport) {
     },
 
     /** PATCH /users/email */
-    updateEmail(params: UpdateEmailParams): Promise<unknown> {
-      return transport.request<unknown>({
+    async updateEmail(params: UpdateEmailParams): Promise<void> {
+      await transport.request<unknown>({
         method: 'PATCH',
         url: '/users/email',
         headers: JSON_ACCEPT,
@@ -103,8 +103,8 @@ export function createAccountApi(transport: Transport) {
     },
 
     /** PATCH /users/user_type */
-    updateUserType(params: UpdateUserTypeParams): Promise<unknown> {
-      return transport.request<unknown>({
+    async updateUserType(params: UpdateUserTypeParams): Promise<void> {
+      await transport.request<unknown>({
         method: 'PATCH',
         url: '/users/user_type',
         headers: JSON_ACCEPT,
@@ -121,8 +121,8 @@ export function createAccountApi(transport: Transport) {
     },
 
     /** PATCH /users/parent_email — add/update a student's parent/guardian email. */
-    updateParentEmail(params: UpdateParentEmailParams): Promise<unknown> {
-      return transport.request<unknown>({
+    async updateParentEmail(params: UpdateParentEmailParams): Promise<void> {
+      await transport.request<unknown>({
         method: 'PATCH',
         url: '/users/parent_email',
         headers: JSON_ACCEPT,
@@ -139,8 +139,8 @@ export function createAccountApi(transport: Transport) {
     // PATCH /users — clears the parent_email column. The dedicated
     // /users/parent_email endpoint always fires the "email added" mailer, so
     // removal goes through the registration update instead.
-    removeParentEmail(): Promise<unknown> {
-      return transport.request<unknown>({
+    async removeParentEmail(): Promise<void> {
+      await transport.request<unknown>({
         method: 'PATCH',
         url: '/users',
         headers: JSON_ACCEPT,
@@ -164,8 +164,8 @@ export function createAccountApi(transport: Transport) {
     },
 
     /** DELETE /users */
-    deleteAccount(params: DeleteAccountParams): Promise<unknown> {
-      return transport.request<unknown>({
+    async deleteAccount(params: DeleteAccountParams): Promise<void> {
+      await transport.request<unknown>({
         method: 'DELETE',
         url: '/users',
         headers: JSON_ACCEPT,
