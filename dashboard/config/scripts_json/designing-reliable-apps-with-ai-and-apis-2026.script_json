@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-19 23:37:02 UTC",
+    "serialized_at": "2026-06-11 21:07:48 UTC",
     "hide_within_course": true,
     "published_state": "in_development",
     "instruction_type": null,
@@ -8164,7 +8164,244 @@
     }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Local vs Live Data",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-IM-27"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Local vs Live Data",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Local vs Live Data",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-NT-35"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Explore-Style App Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-PD-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Explore-Style App Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-PD-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Explore-Style App Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Explore-Style App Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-TR-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Explore-Style App Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-NT-35"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Where Data Comes From",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-PD-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Where Data Comes From",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Where Data Comes From",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-NT-35"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Why Apps Wait",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Why Apps Wait",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Why Apps Wait",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-NT-35"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Getting Data Online",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-PD-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Getting Data Online",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Getting Data Online",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-NT-35"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Making Steps Clear",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-PD-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Making Steps Clear",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Making Steps Clear",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Making Sense of Data",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DC-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Making Sense of Data",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Making Sense of Data",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-VD-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Showing Data on the Page",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Showing Data on the Page",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DI-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Showing Data on the Page",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-VD-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: When Things Break",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-TR-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: When Things Break",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-TR-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: When Things Break",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-CE-45"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Catching Problems",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Catching Problems",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-PD-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Catching Problems",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-TR-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Keeping Users Informed",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-TR-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Keeping Users Informed",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-TR-20"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

@@ -10,17 +10,16 @@
     "skip_sound": true,
     "encrypted": "false",
     "title": "Game Engineer",
-    "long_instructions": "## **Which loop?**\r\n\r\n> #### You're a Game Engineer reviewing two systems an AI wrote for your game:\r\n> 1. A boss fight that spawns enemies until the boss is defeated.\r\n> 2. A respawn timer that counts down for exactly ten seconds.\r\n>    \r\n> For each, would you use a for loop or a while loop? And what's one thing you'd check before accepting either as a Game Engineer?\r\n\r\n\r\n\r\n",
+    "long_instructions": "## **Will it stop?**\r\n\r\n#### You asked AI Tutor to write a while loop for your boss fight. This is what it gave you:\r\n\r\n\r\n```js\r\nlet bossDefeated = false;\r\nwhile (bossDefeated == false) {\r\n    spawnEnemy();\r\n}\r\n```\r\n\r\n> 1. Will this loop ever stop? Explain how you know by tracing what happens to the state variable each time the loop runs.\r\n> 2. Would you accept this code or reject it? What would you tell the AI to fix it?",
     "stay_on_level_after_submit": "false",
     "height": "100",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
     "optional": "false",
-    "allow_multiple_attempts": "false",
-    "teacher_markdown": "while — the loop runs based on a changing condition (the boss's health), not a fixed count.\r\n\r\nfor — the loop runs a fixed number of times (ten seconds)."
+    "allow_multiple_attempts": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-06-03T00:30:15.797+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson3-frq_2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson3-frq_2026\"},{\"changed_at\":\"2026-06-03 00:31:17 +0000\",\"changed\":[\"title\",\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-03 16:20:47 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-03 21:33:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-06-03T00:30:15.797+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson3-frq_2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson3-frq_2026\"},{\"changed_at\":\"2026-06-03 00:31:17 +0000\",\"changed\":[\"title\",\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-03 16:20:47 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-03 21:33:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-11 21:18:44 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

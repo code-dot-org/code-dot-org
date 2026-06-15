@@ -26,12 +26,12 @@ interface AiTutorChatWithInstructionDrawerProps {
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   instructionsContent?: React.ReactNode;
-  isCollapsedByDefault: boolean;
   tutorVideos?: JsonVideoFileMetadata[];
   isPredictLevel?: boolean;
   disabledState?: AiChatDisabledState;
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
   onAssetRemoved?: (asset: ChatAsset) => void;
+  initialWelcomeMessage?: string;
 }
 
 const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
@@ -45,12 +45,12 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
   instructionsContent,
-  isCollapsedByDefault,
   tutorVideos,
   isPredictLevel,
   disabledState,
   onAssetUploaded,
   onAssetRemoved,
+  initialWelcomeMessage,
 }) => {
   const {
     containerRef,
@@ -63,7 +63,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     separatorProps,
     isDragging,
     toggleInstructions,
-  } = useInstructionsDrawer({isCollapsedByDefault, isPredictLevel});
+  } = useInstructionsDrawer({isPredictLevel});
 
   return (
     <div ref={containerRef} className={styles.container}>
@@ -132,6 +132,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
             disabledState={disabledState}
             onAssetUploaded={onAssetUploaded}
             onAssetRemoved={onAssetRemoved}
+            initialWelcomeMessage={initialWelcomeMessage}
           />
         </div>
       </div>

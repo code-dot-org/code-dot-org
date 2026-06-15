@@ -1,5 +1,6 @@
 import Modal from '@code-dot-org/component-library/modal';
-import {Button as MuiButton} from '@mui/material';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
+import classNames from 'classnames';
 import $ from 'jquery';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
@@ -20,6 +21,8 @@ import i18n from '@cdo/locale';
 
 import {refetchSectionLockStatus} from '../../../lessonLockRedux';
 import SectionSelector from '../SectionSelector';
+
+import styles from './lesson-lock-dialog.module.scss';
 
 function LessonLockDialog({
   unitId,
@@ -134,7 +137,9 @@ function LessonLockDialog({
   // Rendering helpers that each render a section of the dialog
   //
   const hasSelectedSection = selectedSectionId !== NO_SECTION;
-  const hiddenUnlessSelectedSection = hasSelectedSection ? {} : styles.hidden;
+  // Many rows below are hidden until a section is selected; compose this once
+  // so each callsite stays a single classNames argument.
+  const hiddenUnlessSelectedSection = !hasSelectedSection && styles.hidden;
 
   // Step-action button (Allow editing / Lock lesson / Show answers /
   // Re-lock lesson). Use MUI Button in the primary-CTA visual so each
@@ -145,7 +150,7 @@ function LessonLockDialog({
       variant="contained"
       color="primary"
       size="small"
-      sx={styles.stepButton}
+      className={styles.stepButton}
       onClick={onClick}
     >
       {label}
@@ -153,12 +158,17 @@ function LessonLockDialog({
   );
 
   const renderHiddenWarning = () => (
-    <div style={styles.hiddenError}>{i18n.hiddenAssessmentWarning()}</div>
+    <div className={styles.hiddenError}>{i18n.hiddenAssessmentWarning()}</div>
   );
 
   const renderInstructionsAndButtons = () => (
     <>
-      <table style={hiddenUnlessSelectedSection}>
+      <table
+        className={classNames(
+          styles.instructionsTable,
+          hiddenUnlessSelectedSection
+        )}
+      >
         <tbody>
           <tr>
             <td>1. {i18n.allowEditingInstructions()}</td>
@@ -184,7 +194,7 @@ function LessonLockDialog({
                 variant="outlined"
                 color="secondary"
                 size="small"
-                sx={styles.stepButton}
+                className={styles.stepButton}
                 onClick={viewSection}
               >
                 {i18n.viewSection()}
@@ -193,7 +203,12 @@ function LessonLockDialog({
           </tr>
         </tbody>
       </table>
-      <div style={{...styles.descriptionText, ...hiddenUnlessSelectedSection}}>
+      <div
+        className={classNames(
+          styles.descriptionText,
+          hiddenUnlessSelectedSection
+        )}
+      >
         {i18n.autolock()}
       </div>
     </>
@@ -201,22 +216,30 @@ function LessonLockDialog({
 
   const renderStudentTable = () => (
     <>
-      <div style={{...styles.title, ...hiddenUnlessSelectedSection}}>
+      <MuiTypography
+        variant="h4"
+        className={classNames(hiddenUnlessSelectedSection)}
+      >
         {i18n.studentControl()}
-      </div>
-      <div style={{...styles.descriptionText, ...hiddenUnlessSelectedSection}}>
+      </MuiTypography>
+      <div
+        className={classNames(
+          styles.descriptionText,
+          hiddenUnlessSelectedSection
+        )}
+      >
         {i18n.studentLockStateInstructions()}
       </div>
       <table
         id="ui-test-student-table"
-        style={{...styles.studentTable, ...hiddenUnlessSelectedSection}}
+        className={classNames(styles.studentTable, hiddenUnlessSelectedSection)}
       >
         <thead>
           <tr>
-            <th style={styles.headerRow}>{i18n.student()}</th>
-            <th style={styles.headerRow}>{i18n.locked()}</th>
-            <th style={styles.headerRow}>{i18n.editable()}</th>
-            <th style={styles.headerRow}>{i18n.answersVisible()}</th>
+            <th className={styles.headerRow}>{i18n.student()}</th>
+            <th className={styles.headerRow}>{i18n.locked()}</th>
+            <th className={styles.headerRow}>{i18n.editable()}</th>
+            <th className={styles.headerRow}>{i18n.answersVisible()}</th>
           </tr>
         </thead>
         <tbody>
@@ -241,17 +264,21 @@ function LessonLockDialog({
 
   return (
     <Modal
+      className={styles.modal}
       onClose={handleClose}
-      title={i18n.assessmentSteps()}
+      title={i18n.assessmentLockSettings()}
       customContent={
-        <div id="dsco-dialog-description" style={styles.main}>
-          <div style={styles.sectionSelectorRow}>
+        <div id="dsco-dialog-description" className={styles.main}>
+          <div className={styles.sectionSelectorRow}>
+            <MuiTypography component="span" variant="h4">
+              {i18n.assessmentSteps()}
+            </MuiTypography>
             <SectionSelector requireSelection={hasSelectedSection} />
           </div>
           {lessonIsHidden && renderHiddenWarning()}
           {renderInstructionsAndButtons()}
           {renderStudentTable()}
-          {error && <span style={styles.saveError}>{error}</span>}
+          {error && <span className={styles.saveError}>{error}</span>}
         </div>
       }
       primaryButtonProps={{
@@ -276,58 +303,6 @@ LessonLockDialog.propTypes = {
   // Provided by redux
   selectedSectionId: PropTypes.number,
   refetchSectionLockStatus: PropTypes.func.isRequired,
-};
-
-const styles = {
-  main: {
-    color: 'var(--text-neutral-primary)',
-    whiteSpace: 'normal',
-    textAlign: 'left',
-  },
-  sectionSelectorRow: {
-    marginBottom: 15,
-  },
-  title: {
-    color: 'var(--text-brand-teal-primary)',
-    fontSize: 20,
-    fontWeight: 900,
-    marginTop: 15,
-    marginBottom: 15,
-  },
-  headerRow: {
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: 'var(--borders-brand-teal-primary)',
-    backgroundColor: 'var(--background-brand-teal-primary)',
-    color: 'var(--text-neutral-inverse)',
-    padding: 10,
-    fontSize: '100%',
-    fontWeight: 400,
-  },
-  descriptionText: {
-    marginTop: 10,
-    marginBottom: 10,
-  },
-  studentTable: {
-    width: '100%',
-  },
-  hidden: {
-    display: 'none',
-  },
-  saveError: {
-    color: 'var(--text-error-primary)',
-    fontStyle: 'italic',
-    display: 'block',
-    marginTop: 10,
-  },
-  hiddenError: {
-    color: 'var(--text-error-primary)',
-    fontStyle: 'italic',
-    marginBottom: 10,
-  },
-  stepButton: {
-    width: '100%',
-  },
 };
 
 export const UnconnectedLessonLockDialog = LessonLockDialog;

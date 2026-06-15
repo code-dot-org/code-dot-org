@@ -1,5 +1,3 @@
-@import 'color.scss';
-
 .tip {
   margin-bottom: 5px;
 }
@@ -10,6 +8,7 @@
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-width: 1px;
+  border-color: var(--tip-border);
   padding: 5px 10px;
   width: 222px;
   display: flex;
@@ -18,9 +17,35 @@
   cursor: pointer;
 }
 
+// The tab's foreground/background swap on expand and invert on hover.
+// --tip-primary is the per-tip-type strong color; it pairs against the neutral
+// surface (--background-neutral-primary) and inverse text (--text-neutral-inverse)
+// tokens, which both resolve to white in light mode and flip together in dark.
+.tab.expanded {
+  background-color: var(--tip-primary);
+  color: var(--text-neutral-inverse);
+
+  &:hover {
+    background-color: var(--background-neutral-primary);
+    color: var(--tip-primary);
+  }
+}
+
+.tab.collapsed {
+  background-color: var(--background-neutral-primary);
+  color: var(--tip-primary);
+
+  &:hover {
+    background-color: var(--tip-primary);
+    color: var(--text-neutral-inverse);
+  }
+}
+
 .box {
   border-style: solid;
   border-width: 1px;
+  border-color: var(--tip-border);
+  background-color: var(--tip-secondary);
   padding: 10px;
 }
 

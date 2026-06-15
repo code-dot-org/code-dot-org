@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Framing AI in Education
+# AI in Education
 
 When we talk about AI in education, we are generally referring to two approaches: *Teaching with AI* and *Teaching about AI*.
 
@@ -22,7 +22,7 @@ Image: TeachAI
 The chart below highlights examples of each approach. In this module, we'll focus on Teaching with AI, specifically how AI can support teaching practice and school operations.
 
 <body style="margin:0; padding:20px; background-color:#ffffff; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
-<div style="max-width:980px; margin:0 auto;">
+<div style="width:90%; max-width:1200px; margin:0 auto;">
 <div style="display:flex; flex-wrap:nowrap; gap:16px;">
 
 <div style="flex:1; min-width:0; background-color:#F7F8FA; border-radius:6px; box-sizing:border-box; overflow:hidden;">

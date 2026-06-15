@@ -84,19 +84,12 @@ const DataTable = ({
       return [];
     }
 
+    const columns = Object.keys(data[0]);
     if (reducedColumns) {
-      return Object.keys(data[0])
-        .filter(key => {
-          return (
-            (!noLabel && labelColumn === key) || selectedFeatures.includes(key)
-          );
-        })
-        .sort(key1 => {
-          return labelColumn === key1 ? 1 : -1;
-        });
+      const selected = columns.filter(key => selectedFeatures.includes(key));
+      return noLabel ? selected : [...selected, labelColumn];
     }
-
-    return Object.keys(data[0]);
+    return columns;
   };
 
   const getRows = () => {

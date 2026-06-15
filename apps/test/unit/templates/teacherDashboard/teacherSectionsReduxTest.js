@@ -2100,6 +2100,7 @@ describe('teacherSectionsRedux', () => {
             avatar_emoji: 5,
             login_type: 'email',
             participant_type: 'student',
+            grades: ['9', '10', '11', '12'],
             unit: {
               name: 'aif2-2025',
               display_name: 'Artificial Intelligence Foundations',
@@ -2117,10 +2118,12 @@ describe('teacherSectionsRedux', () => {
       assert.deepEqual(getState().teacherSections.demoPresets.high, {
         demoType: 'high',
         sectionName: 'High School Practice Section',
+        studentSnapshotDefaultTourLesson: null,
         avatarColor: 8,
         avatarEmoji: 5,
         loginType: 'email',
         participantType: 'student',
+        grades: ['9', '10', '11', '12'],
         unit: {
           name: 'aif2-2025',
           displayName: 'Artificial Intelligence Foundations',
@@ -2202,7 +2205,10 @@ describe('teacherSectionsRedux', () => {
       );
       await expect(
         store.dispatch(createDemoSection('high'))
-      ).to.be.rejectedWith(DemoSectionCreationError);
+      ).to.be.rejectedWith(
+        DemoSectionCreationError,
+        'You already have a High School practice section.'
+      );
       assert.deepEqual(getState().teacherSections.sectionIds, []);
       expect(fetchSpy).not.to.have.been.called;
       expect(getState().teacherSections.demoSectionCreationInProgress).to.be

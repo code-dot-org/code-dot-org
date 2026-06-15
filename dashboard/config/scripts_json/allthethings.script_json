@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-04 18:35:20 UTC",
+    "serialized_at": "2026-06-08 22:50:22 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -922,6 +922,21 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "lesson-60",
+      "name": "AI Lab Lab2",
+      "absolute_position": 60,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 57,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-60",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "lesson_activities": [
@@ -1678,6 +1693,18 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "76e3c318-ebaa-4a69-9c02-da752325271f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "76e3c318-ebaa-4a69-9c02-da752325271f",
+        "lesson.key": "lesson-60",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "activity_sections": [
@@ -2269,6 +2296,16 @@
       "seeding_key": {
         "activity_section.key": "2704c5ff-0e8e-4b8f-9e94-d8c63c0af7e1",
         "lesson_activity.key": "dc186ce3-606d-4832-97bb-1a2116381c20"
+      }
+    },
+    {
+      "key": "690b02ba-ac90-4d29-ae32-767d59f0b964",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "690b02ba-ac90-4d29-ae32-767d59f0b964",
+        "lesson_activity.key": "76e3c318-ebaa-4a69-9c02-da752325271f"
       }
     }
   ],
@@ -7945,6 +7982,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Java Lab2 console"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -7966,6 +8006,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Java Lab2 Validation"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -7987,6 +8030,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Java Lab2 Neighborhood"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -8008,6 +8054,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Java Lab2 Neighborhood 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -8029,6 +8078,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Java Lab2 Passing Validation"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -8042,6 +8094,27 @@
       },
       "level_keys": [
         "Allthethings Java Lab2 Passing Validation"
+      ]
+    },
+    {
+      "chapter": 239,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings AI Lab Lab2 1"
+        ],
+        "lesson.key": "lesson-60",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "690b02ba-ac90-4d29-ae32-767d59f0b964"
+      },
+      "level_keys": [
+        "Allthethings AI Lab Lab2 1"
       ]
     }
   ],
@@ -11027,6 +11100,18 @@
         "script.name": "allthethings",
         "activity_section.key": "2704c5ff-0e8e-4b8f-9e94-d8c63c0af7e1"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings AI Lab Lab2 1",
+        "script_level.level_keys": [
+          "Allthethings AI Lab Lab2 1"
+        ],
+        "lesson.key": "lesson-60",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "690b02ba-ac90-4d29-ae32-767d59f0b964"
+      }
     }
   ],
   "resources": [
@@ -11064,7 +11149,7 @@
   ],
   "rubrics": [
     {
-      "level_name": "Submittable Music Level 1",
+      "level_name": "Music Project Level 2",
       "s3_config_dir": null,
       "seeding_key": {
         "lesson.key": "lesson-49",
