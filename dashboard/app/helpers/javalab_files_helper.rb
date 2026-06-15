@@ -34,8 +34,12 @@ module JavalabFilesHelper
     source_data = SourceBucket.new.get(channel_id, "main.json")
     all_files["sources"]["main.json"] = strip_and_extract_assets(source_data[:body].string, all_files["assetUrls"])
 
-    # get level assets
+    # get level assets.
+    # TODO: determine if this is needed for lab2. We may be able to skip this as if it's not needed for
+    # backwards compatiblity.
     get_assets_for_channel(channel_id, all_files)
+
+    puts all_files.to_json
 
     all_files
   end
