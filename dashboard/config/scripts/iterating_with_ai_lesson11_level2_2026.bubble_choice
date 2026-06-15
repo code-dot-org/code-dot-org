@@ -1,0 +1,9 @@
+name 'iterating-with-ai-lesson11-level2-2026'
+display_name 'Define Your Schema and Card Fields'
+description 'Your goal: Decide which dataset fields your dashboard will use, how one item should appear as a card, and which fields may help users filter, sort, or understand the data. Complete the Data Schema, Card View, and Filter Clarity Notes sections in SketchLab. Use the chatbot before or after sketching to plan, review, or revise your choices.'
+
+sublevels
+level 'iterating-with-ai-lesson11-level2a-v1-2026'
+level 'iterating-with-ai-lesson11-level2b-v1-2026'
+
+uses_lab2
