@@ -18,9 +18,9 @@ interface ConnectionHandlesProps {
 // Triangle SVG points: '50,5 95,95 5,95' in a 100×100 viewBox.
 // Midpoints of the three sides as percentages of the node's bounding box.
 const TRIANGLE_SIDE_MIDPOINTS = [
-  {id: 'side-left', position: Position.Left, left: '27.5%', top: '50%'},
-  {id: 'side-right', position: Position.Right, left: '72.5%', top: '50%'},
-  {id: 'side-bottom', position: Position.Bottom, left: '50%', top: '95%'},
+  {id: 'left', position: Position.Left, left: '27.5%', top: '50%'},
+  {id: 'right', position: Position.Right, left: '72.5%', top: '50%'},
+  {id: 'bottom', position: Position.Bottom, left: '50%', top: '95%'},
 ] as const;
 
 /**
