@@ -7,6 +7,7 @@ import {
 
 import LoginInformation from '../sections/LoginInformation';
 import MyInformation from '../sections/MyInformation';
+import ParentGuardianEmail from '../sections/ParentGuardianEmail';
 import {useFormDispatch, useFormState} from '../state/FormContext';
 import {dirtyValues} from '../state/formReducer';
 
@@ -63,6 +64,9 @@ export default function UsersDetailsForm({settings}: {settings: UserSettings}) {
     <div>
       <MyInformation settings={settings} />
       <LoginInformation settings={settings} />
+      {settings.userType === 'student' && (
+        <ParentGuardianEmail settings={settings} />
+      )}
       <SaveBar onSave={handleSave} />
     </div>
   );
