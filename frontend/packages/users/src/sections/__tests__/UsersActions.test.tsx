@@ -49,6 +49,39 @@ function renderSection(overrides: Partial<UserSettings>) {
   );
 }
 
+const deleteButton = () =>
+  screen.queryByRole('button', {name: /delete my account/i});
+const cannotDeleteNote = () =>
+  screen.queryByText(/do not have permission to delete this account/i);
+const deleteHeading = () =>
+  screen.queryByRole('heading', {level: 3, name: 'Delete account'});
+
+describe('UsersActions delete affordance', () => {
+  it('labels the action and offers an enabled Delete with a consequences warning', () => {
+    renderSection({canDeleteOwnAccount: true, userType: 'student'});
+    expect(deleteHeading()).toBeInTheDocument();
+    expect(deleteButton()).toBeEnabled();
+    expect(
+      screen.getByText(/permanently erase all personal information/i),
+    ).toBeInTheDocument();
+    expect(cannotDeleteNote()).toBeNull();
+  });
+
+  it('warns teachers that deletion also removes their sections and students', () => {
+    renderSection({canDeleteOwnAccount: true, userType: 'teacher'});
+    expect(
+      screen.getByText(/delete your sections and your students/i),
+    ).toBeInTheDocument();
+  });
+
+  it('labels the action and explains why instead of a disabled button when deletion is not allowed', () => {
+    renderSection({canDeleteOwnAccount: false});
+    expect(deleteHeading()).toBeInTheDocument();
+    expect(deleteButton()).toBeNull();
+    expect(cannotDeleteNote()).toBeInTheDocument();
+  });
+});
+
 const sessionsButton = () =>
   screen.getByRole('button', {name: 'Sign Out All Other Sessions'});
 
