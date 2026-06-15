@@ -1,12 +1,13 @@
 import {Tour} from 'shepherd.js';
 
 import {
+  REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
+  UNIT_BREADCRUMB_STEP_ID,
   createReviewSyllabusHomepageSteps,
   createReviewSyllabusUnitOverviewSteps,
   ReviewSyllabusQuizConfig,
-  REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
-  UNIT_BREADCRUMB_STEP_ID,
 } from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/reviewSyllabusOnboarding';
+import {trySetSessionStorage} from '@cdo/apps/utils';
 
 const HIGH_QUIZ_CONFIG: ReviewSyllabusQuizConfig = {
   lesson: 1,
@@ -27,7 +28,6 @@ const MIDDLE_QUIZ_CONFIG: ReviewSyllabusQuizConfig = {
     {label: 'Level 11', correct: false},
   ],
 };
-import {trySetSessionStorage} from '@cdo/apps/utils';
 
 jest.mock('@cdo/apps/utils', () => ({
   ...jest.requireActual('@cdo/apps/utils'),
