@@ -148,6 +148,9 @@ module JavalabFilesHelper
   # of the main.json blob and fold them into asset_urls. Blobs that aren't
   # the expected {source: {filename => {...}}} shape pass through untouched.
   def self.strip_and_extract_assets(main_json, asset_urls)
+    # Url entries are the only thing to strip, so skip the parse + reserialize
+    # round-trip if there are no urls.
+    return main_json unless main_json.include?('"url"')
     parsed = JSON.parse(main_json)
     return main_json unless parsed.is_a?(Hash) && parsed["source"].is_a?(Hash)
     parsed["source"] = extract_asset_entries(parsed["source"], asset_urls)
