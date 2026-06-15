@@ -63,6 +63,8 @@ class Ability
       AidiffThread,
       AidiffMessage,
       AidiffArtifact,
+      PracticeProblem,
+      UserPracticeProblemAttempt,
     ]
     cannot :index, Level
 
@@ -322,6 +324,12 @@ class Ability
           can [:index, :update, :show], AidiffExitTicket, user_id: user.id
           can [:index, :update, :show], AidiffLessonHook, user_id: user.id
         end
+      end
+
+      if Experiment.enabled?(user: user, experiment_name: 'lesson-tutor')
+        can :create, UserPracticeProblemAttempt
+        can [:index, :update, :show], UserPracticeProblemAttempt, user_id: user.id
+        can [:index, :show], PracticeProblem
       end
 
       can :show, Rubric
