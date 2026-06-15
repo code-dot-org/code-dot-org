@@ -118,6 +118,13 @@ input[type="checkbox"] {
   width: auto;
 }
 
+/* bootstrap-sass-2.3.2.2/vendor/assets/stylesheets/bootstrap/_forms.scss:224 */
+.radio,
+.checkbox {
+  min-height: 20px;
+  padding-left: 20px;
+}
+
 img {
   max-width: 100%;
   height: auto;
