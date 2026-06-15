@@ -180,6 +180,35 @@ The standalone `index.html` shall include a development-safe
 `<meta name="app-config" content='{"observability":{"provider":"none"}}' />`
 stub so observability-enabled labs initialize cleanly outside Rails.
 
+## App-shaped feature packages
+
+A feature package lives under `packages/` (not `packages/labs/`) but adopts the
+lab _app shape_: a standalone dev server (`index.html` + `src/main.tsx`), MSW
+fixtures, a `./mocks` export subpath, and a default export the host lazy-loads.
+It is **not** a lab — it registers no lab entry (`modules/labs/config/labs.ts`,
+`getLabEntrypoint.ts`, `getLabFixtures.ts` stay untouched) and has no
+channel/level model. `@code-dot-org/users` is the first; it is the template
+for the next (promote to a `gen module` generator only when a second appears).
+
+How it differs from a lab:
+
+- **Hosting.** Studio declares an explicit route file (e.g.
+  `routes/users/edit.tsx`) that gates auth, then `React.lazy`-imports the
+  package default export inside `Suspense` with a route `errorComponent`. There
+  is no `$labType`/`$channelId` route. The host owns the route, the auth/sign-in
+  redirect, and the header/footer chrome.
+- **Mocks stay with the package.** A feature package's MSW fixtures serve its
+  own standalone host and tests; Studio does not aggregate them, so a feature
+  route rendered in Studio runs against the real backend. `?scenario=` selects
+  the persona in the standalone host. (A general mechanism for Studio to compose
+  module mocks for specific test scenarios is deferred.)
+- **Shared current-user cache.** The page reads the current user from core's
+  `useCurrentUser`; Studio primes that cache from its auth bootstrap, so the
+  page issues no duplicate `GET /api/v1/users/current`.
+
+Everything else (build/test/lint config, standalone dev server, `./mocks`
+subpath) follows the lab conventions above.
+
 ## Runtime config
 
 Runtime values (API endpoints, feature flags, DSNs) come from `@code-dot-org/core`'s
