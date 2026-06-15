@@ -94,7 +94,7 @@ export default function UsersSettingsPage({
             us_state: settings.data.usState ?? '',
           }}
         >
-          <UsersDetailsForm />
+          <UsersDetailsForm settings={settings.data} />
         </FormProvider>
       ) : null,
   }));
