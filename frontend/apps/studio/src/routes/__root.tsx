@@ -4,7 +4,12 @@ import '@code-dot-org/component-library-styles/fontVariables.css';
 import '@code-dot-org/component-library-styles/primitiveColors.css';
 import '@code-dot-org/component-library-styles/colors.css';
 
-import {Box, GlobalStyles, ThemeProvider} from '@mui/material';
+import {
+  Box,
+  GlobalStyles,
+  StyledEngineProvider,
+  ThemeProvider,
+} from '@mui/material';
 import {createRootRoute, Outlet, useRouter} from '@tanstack/react-router';
 import {TanStackRouterDevtools} from '@tanstack/react-router-devtools';
 import {useCallback} from 'react';
@@ -80,15 +85,25 @@ const responsiveFloorStyles = (
   <GlobalStyles styles={{body: {minWidth: '360px'}}} />
 );
 
+// Put MUI's emotion styles in an @layer so unlayered CSS (the header's
+// .module.scss) wins over them without specificity hacks. The declaration sets
+// the order; MUI's styles land in `mui`, below any unlayered rules.
+const cssLayerOrder = (
+  <GlobalStyles styles="@layer theme, base, mui, components, utilities;" />
+);
+
 /** Root layout: applies the CDO MUI theme and Bootstrap providers to all routes. */
 function RootLayout() {
   return (
-    <ThemeProvider theme={CdoTheme}>
-      {responsiveFloorStyles}
-      <Bootstrap locale="en-US">
-        <RootContent />
-      </Bootstrap>
-    </ThemeProvider>
+    <StyledEngineProvider enableCssLayer>
+      {cssLayerOrder}
+      <ThemeProvider theme={CdoTheme}>
+        {responsiveFloorStyles}
+        <Bootstrap locale="en-US">
+          <RootContent />
+        </Bootstrap>
+      </ThemeProvider>
+    </StyledEngineProvider>
   );
 }
 
