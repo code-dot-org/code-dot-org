@@ -12,7 +12,7 @@ import {useLineToolbar} from '@cdo/apps/sketchlab/reactFlow/hooks/useLineToolbar
 import GroupNodeToolbar from '../GroupNodeToolbar';
 import ImageNodeToolbar from '../ImageNodeToolbar';
 import LineEdgeToolbar from '../LineEdgeToolbar';
-import MultiNodeSelectionToolbar from '../MultiNodeSelectionToolbar';
+import MultiElementSelectionToolbar from '../MultiElementSelectionToolbar';
 import ShapeNodeToolbar from '../ShapeNodeToolbar';
 import TextNodeToolbar from '../TextNodeToolbar';
 
@@ -83,7 +83,7 @@ export default function CornerToolbarPanel({
   const body = useMemo(() => {
     // Multi-selection takes priority: show group button when 2+ logical elements.
     if (groupableCount >= 2) {
-      return <MultiNodeSelectionToolbar onGroup={onGroupNodes} />;
+      return <MultiElementSelectionToolbar onGroup={onGroupNodes} />;
     }
 
     if (openToolbarTarget?.type === 'node') {

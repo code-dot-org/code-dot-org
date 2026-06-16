@@ -2,21 +2,21 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Button, Paper} from '@mui/material';
 import React from 'react';
 
-import styles from './multi-node-selection-toolbar.module.scss';
+import styles from './multi-element-selection-toolbar.module.scss';
 
-interface MultiNodeSelectionToolbarProps {
+interface MultiElementSelectionToolbarProps {
   onGroup: () => void;
 }
 
-export default function MultiNodeSelectionToolbar({
+export default function MultiElementSelectionToolbar({
   onGroup,
-}: MultiNodeSelectionToolbarProps) {
+}: MultiElementSelectionToolbarProps) {
   return (
     <Paper
       className={styles.toolbar}
       elevation={0}
       role="toolbar"
-      aria-label="Multi-node selection"
+      aria-label="Multi-element selection"
     >
       <div className={styles.body}>
         <Button
