@@ -640,27 +640,64 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
     );
   }, []);
 
-  // Load a previously exported report ZIP back into the UI (results, images,
-  // benign marks) so it can be reviewed, re-run, and re-exported.
+  // Load one or more previously exported report ZIPs back into the UI and
+  // combine them into a single result set (results, images, benign marks), so
+  // they can be reviewed, re-run, and re-exported together.
   const handleLoadReport = useCallback(
     async (event: React.ChangeEvent<HTMLInputElement>) => {
-      const file = event.target.files?.[0];
-      if (!file) {
+      const files = Array.from(event.target.files ?? []);
+      if (!files.length) {
         return;
       }
-      setFileName(file.name);
+      setFileName(
+        files.length === 1 ? files[0].name : `${files.length} reports`
+      );
       setPrompts([]);
       setResults([]);
       setParseError(undefined);
       setParseWarnings([]);
       setProgress({completed: 0, total: 0});
-      const parsed = await parseReportZip(file);
-      if (parsed.error) {
-        setParseError(parsed.error);
+
+      const combined: EvalResult[] = [];
+      const warnings: string[] = [];
+      for (const file of files) {
+        const parsed = await parseReportZip(file);
+        if (parsed.error) {
+          warnings.push(`${file.name}: ${parsed.error}`);
+          continue;
+        }
+        combined.push(...parsed.results);
+        parsed.warnings.forEach(w => warnings.push(`${file.name}: ${w}`));
+      }
+
+      if (!combined.length) {
+        setParseError(
+          warnings.length
+            ? `No results loaded. ${warnings.join('; ')}`
+            : 'No results found in the selected file(s).'
+        );
         return;
       }
-      setResults(parsed.results);
-      setParseWarnings(parsed.warnings);
+
+      // Flag (but keep) prompts that appear in more than one report.
+      const seen = new Set<string>();
+      let duplicates = 0;
+      for (const r of combined) {
+        const key = `${r.label} ${r.prompt}`;
+        if (seen.has(key)) {
+          duplicates += 1;
+        } else {
+          seen.add(key);
+        }
+      }
+      if (duplicates > 0) {
+        warnings.push(
+          `${duplicates} duplicate prompt(s) across reports — kept all.`
+        );
+      }
+
+      setResults(combined);
+      setParseWarnings(warnings);
     },
     []
   );
@@ -743,10 +780,11 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
           <input type="file" accept=".csv,text/csv" onChange={handleFile} />
         </label>
         <label>
-          Report ZIP:{' '}
+          Report ZIP(s):{' '}
           <input
             type="file"
             accept=".zip,application/zip"
+            multiple
             onChange={handleLoadReport}
           />
         </label>
@@ -789,7 +827,7 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
       )}
       {fileName && prompts.length === 0 && results.length > 0 && (
         <p>
-          Loaded report <strong>{fileName}</strong>: {results.length} result
+          Loaded <strong>{fileName}</strong>: {results.length} result
           {results.length === 1 ? '' : 's'}
           {erroredCount > 0 && ` (${erroredCount} errored)`}.
         </p>
