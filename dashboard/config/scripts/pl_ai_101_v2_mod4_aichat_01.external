@@ -3,31 +3,33 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Direct and Indirect AI Use
+# AI Classroom Use Policy
 
-#### While students don’t have to interact directly with a large language model (LLM) or AI chatbot (such as ChatGPT, Gemini, or Claude), these tools can be a powerful way to support learning when used thoughtfully. Direct interaction is just one approach among many for teaching with AI.
+While students don’t have to interact directly with AI tools, they can be a powerful way to support learning when used thoughtfully.
 
-#### In some classrooms, students may use AI tools themselves to ask questions, get feedback, or explore ideas. In others, teachers may use AI behind the scenes—to generate examples, model thinking, or provide scaffolded supports—without students ever directly accessing the tool.
+However, schools and classrooms need clear expectations for how AI tools are used. An **AI Classroom Use Policy** helps ensure AI supports learning while maintaining academic integrity, protecting student data, and promoting responsible use.
 
----
+> **💬 Quick Reflection:** Does your school or district have an AI Classroom Use Policy? If so, are you familiar with it?
+
+Rather than creating entirely new policies, many schools can build on existing guidelines—such as technology policies, responsible use, academic integrity, and data privacy—to address AI use consistently.
+
 ## Key Considerations
 
-#### Before deciding whether or not to have student interact directly with an AI tool, you need to consider the following:
+When developing or adapting an AI use policy, consider the following:
 
-### **Data Privacy**
-#### When using AI tools, it’s important to think about what data is being shared and how it is stored or used. Many AI systems process user input externally, which may raise concerns depending on school or district policies.
-* #### Avoid entering personally identifiable student information
-* #### Review tool privacy policies and district guidelines
-* #### Consider whether student accounts are required and how data is managed
+* **Responsible Use and Critical Thinking**: Students and staff should treat AI as a tool, not an authority. AI-generated content should be reviewed, questioned, and verified, as it may contain inaccuracies or bias.
 
-#### We dive deeper into data privacy with AI tools in Module 5: Responsible AI Use.
+* **Transparency and Academic Integrity**: Expectations should clarify when and how AI can be used. Students should disclose and cite AI use, and unacknowledged AI-generated work should be treated as a violation of academic integrity.
 
-### **Restrictions and Access**
-#### Not all students will have equal access to AI tools. Some districts block tools entirely, while others allow limited use.
-* #### Check school/district policies before planning AI-integrated activities
-* #### Be aware of age restrictions (many tools require users to be 13+)
-* #### Ensure access does not depend on personal devices or accounts
+* **Data Privacy and Safety**: Students and staff should avoid entering personal or sensitive information into AI tools, and schools should use approved tools that meet privacy standards.
 
+* **Access and Equity**: Policies should ensure AI use does not depend on unequal access to devices, accounts, or tools.
 
->#### **💬 Quick Reflection:** Do you know what, if any, AI tools are allowed in your school or district? If not, do you know how to find out?
+* **Appropriate Use and Conduct**: AI should not be used to create harmful or misleading content and should align with existing conduct policies. 
+
+Effective policies are clear, practical, and developed with input from educators, students, families, and community members, while reflecting local context and available resources. 
+
+<br>
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;"> ➡️ For sample language and additional guidance check out TeachAI's <a href="https://www.teachai.org/toolkit-addendums" target="blank" rel="noopener noreferrer">Framework</a>.
+</p>
 MARKDOWN

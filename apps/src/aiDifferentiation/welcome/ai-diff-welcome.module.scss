@@ -1,7 +1,13 @@
-@import 'color';
-
 .getStartedPage {
-  background: linear-gradient(180deg, $light_gray_950 0%, $light_black 100%);
+  // No semantic token sits between neutral-gray-95 and neutral-base-black, so
+  // the gradient stops on primitives directly. Flattening to a single
+  // `--background-neutral-primary-inverse` would lose the depth this gradient
+  // adds.
+  background: linear-gradient(
+    180deg,
+    var(--neutral-gray-95) 0%,
+    var(--neutral-base-black) 100%
+  );
   width: 100%;
   max-width: 100%;
   height: 100%;
@@ -23,13 +29,13 @@
   text-align: center;
 
   & h1 {
-    color: $light_white;
+    color: var(--text-neutral-inverse);
     font-weight: 500;
     margin-bottom: 10px;
   }
 
   & p {
-    color: var(--brand-aqua-50, #3CFFF7)
+    color: var(--text-brand-aqua-primary);
   }
 }
 
@@ -82,7 +88,7 @@
   margin: 0;
   line-height: 0px;
   padding: 8px;
-  background-color: $light_white;
+  background-color: var(--background-neutral-primary);
 
   &:active {
     border: 0 !important;
@@ -92,7 +98,7 @@
 .progressBar {
   height: 12px;
   width: 100%;
-  background-color: #eaebeb;
+  background-color: var(--background-neutral-tertiary);
   border-radius: 100px;
   margin-inline-end: 56px;
   margin-inline-start: 24px;
@@ -101,11 +107,11 @@
 .progressBarFill {
   height: 100%;
   border-radius: 100px;
-  background-color: $light_affirmative_500;
+  background-color: var(--background-success-primary);
 }
 
 .selectOptionSubtitle {
-  color: $light_gray_800
+  color: var(--text-neutral-tertiary);
 }
 
 .skipLink {
@@ -130,16 +136,16 @@
   justify-content: space-between;
   padding: 0;
   border-radius: 4px;
-  border: 2px solid $light_gray_200;
+  border: 2px solid var(--borders-neutral-primary);
   margin: 16px 0 0 0;
   background-color: inherit;
 
   &:active {
-    border: 2px solid $light_gray_200 !important;
+    border: 2px solid var(--borders-neutral-primary) !important;
   }
 
   &:hover {
-    background-color: #E4E6E9 !important;
+    background-color: var(--background-neutral-tertiary) !important;
   }
 }
 
@@ -160,8 +166,8 @@
   display: flex;
   justify-content: center;
 
-  --fa-primary-color: var(--light-aqua-70, #19BBB5);
-  --fa-secondary-color: var(--light-aqua-700, #30CCC6);
+  --fa-primary-color: var(--text-brand-aqua-secondary);
+  --fa-secondary-color: var(--text-brand-aqua-primary);
 }
 
 .optionText {
@@ -197,11 +203,11 @@
 }
 
 .selectedOption {
-  border: 4px solid #3CFFF7;
+  border: 4px solid var(--borders-brand-aqua-primary);
   width: calc(100% + 6px);
 
   &:active {
-    border: 4px solid #3CFFF7 !important;
+    border: 4px solid var(--borders-brand-aqua-primary) !important;
   }
 }
 
@@ -216,7 +222,7 @@
 .practiceContent {
   height: calc(100% - 123px);
   max-height: calc(100% - 123px);
-  border-top: 2px solid $neutral_gray10;
+  border-top: 2px solid var(--borders-neutral-light);
 }
 
 .endPage {
@@ -240,7 +246,7 @@
   }
 
   & h6 {
-    color: $neutral_dark80;
+    color: var(--text-neutral-tertiary);
     margin-bottom: 0;
   }
 }

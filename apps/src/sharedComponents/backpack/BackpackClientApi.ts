@@ -24,7 +24,10 @@ const getCacheBustSuffix = () => `?t=${Date.now()}`;
 export enum BackpackEvent {
   FileAdded = 'fileAdded',
   FileDeleted = 'fileDeleted',
+  UploadStarted = 'uploadStarted',
+  UploadFailed = 'uploadFailed',
 }
+
 type BackpackEventListener = (event: BackpackEvent, filename: string) => void;
 
 export default class BackpackClientApi {
@@ -52,13 +55,12 @@ export default class BackpackClientApi {
     return !!this.channelId;
   }
 
-  fetchChannelId(callback: () => void) {
-    HttpClient.fetchJson<{channel: string}>(
+  async fetchChannelId(callback?: () => void) {
+    const response = await HttpClient.fetchJson<{channel: string}>(
       `/backpacks/channel/${this.appType}`
-    ).then(response => {
-      this.channelId = response.value.channel;
-      callback();
-    });
+    );
+    this.channelId = response.value.channel;
+    callback?.();
   }
 
   // Fetch a file from the backpack, and return the file contents via callback (or call onError on failure).
@@ -104,33 +106,31 @@ export default class BackpackClientApi {
   }
 
   async getFileList(
-    onError: ErrorCallback,
-    onSuccess: (filenames: string[]) => void
-  ) {
-    if (!this.channelId && this.appType === 'javalab') {
-      onError();
-      return;
-    }
-    const fetchFiles = async () => {
-      try {
-        const response = await HttpClient.fetchJson<FileMetadata[]>(
-          rootUrl(this.channelId!)
-        );
-        const filenames = response.value.map(fileData => fileData.filename);
-        onSuccess(filenames);
-      } catch (error) {
-        onError(error as Error);
+    onError?: ErrorCallback,
+    onSuccess?: (filenames: string[]) => void
+  ): Promise<string[]> {
+    try {
+      // Only fetch channel id if we don't yet have it. Javalab includes backpack channel_id
+      // in appOptions but lab2 labs (e.g., pythonlab) do not use appOptions.
+      if (!this.channelId) {
+        if (this.appType === 'javalab') {
+          throw new Error('Missing backpack channel id for javalab');
+        }
+        await this.fetchChannelId();
       }
-    };
-
-    // Only fetch channel id if we don't yet have it. Javalab includes backpack channel_id
-    // in appOptions but lab2 labs (e.g., pythonlab) do not use appOptions.
-    if (!this.channelId) {
-      this.fetchChannelId(() => {
-        fetchFiles();
-      });
-    } else {
-      fetchFiles();
+      const response = await HttpClient.fetchJson<FileMetadata[]>(
+        rootUrl(this.channelId!)
+      );
+      const filenames = response.value.map(fileData => fileData.filename);
+      onSuccess?.(filenames);
+      return filenames;
+    } catch (error) {
+      if (onError) {
+        onError(error as Error);
+        return [];
+      } else {
+        throw error;
+      }
     }
   }
 
@@ -188,14 +188,14 @@ export default class BackpackClientApi {
   async saveCodebridgeFileFromUrl(
     filename: string,
     fileUrl: string,
-    onError: ErrorCallback,
-    onSuccess: () => void
+    onError?: ErrorCallback,
+    onSuccess?: () => void
   ) {
-    if (!this.channelId) {
-      onError();
-      return;
-    }
     try {
+      if (!this.channelId) {
+        throw new Error('Missing channel id for backpack');
+      }
+      this.sendUploadStartedEvent(filename);
       const fileResponse = await HttpClient.get(fileUrl);
       if (fileResponse.ok) {
         const responseBlob = await fileResponse.blob();
@@ -206,15 +206,28 @@ export default class BackpackClientApi {
           `${rootUrl(this.channelId)}/${filename}`,
           fileToUpload
         );
+        Object.values(this.eventListeners).forEach(listener =>
+          listener(BackpackEvent.FileAdded, filename)
+        );
+        onSuccess?.();
+      } else {
+        this.sendUploadFailedEvent(filename);
+        const error = new Error('Failed to fetch file from url');
+        if (onError) {
+          onError(error);
+          return;
+        }
+        throw error;
       }
     } catch (error) {
-      onError(error as Error);
-      return;
+      this.sendUploadFailedEvent(filename);
+      if (onError) {
+        onError(error as Error);
+        return;
+      } else {
+        throw error;
+      }
     }
-    Object.values(this.eventListeners).forEach(listener =>
-      listener(BackpackEvent.FileAdded, filename)
-    );
-    onSuccess();
   }
 
   async saveBlobFile(
@@ -227,10 +240,12 @@ export default class BackpackClientApi {
       onError();
       return;
     }
+    this.sendUploadStartedEvent(filename);
     try {
       await HttpClient.put(`${rootUrl(this.channelId)}/${filename}`, contents);
     } catch (error) {
       onError(error as Error);
+      this.sendUploadFailedEvent(filename);
       return;
     }
     Object.values(this.eventListeners).forEach(listener =>
@@ -323,11 +338,15 @@ export default class BackpackClientApi {
     fileContents: string,
     onError: ErrorCallback,
     onSuccess: () => void,
-    retryCount: number
+    retryCount: number,
+    sendUploadStartedEvent: boolean = true
   ) {
     if (!this.channelId) {
       onError();
       return;
+    }
+    if (sendUploadStartedEvent) {
+      this.sendUploadStartedEvent(filename);
     }
     try {
       await HttpClient.put(
@@ -349,7 +368,8 @@ export default class BackpackClientApi {
           fileContents,
           onError,
           onSuccess,
-          retryCount - 1
+          retryCount - 1,
+          false /* don't resend upload started event on retry */
         );
       } else {
         // Record failure and check if all files are done attempting upload/uploading
@@ -445,6 +465,8 @@ export default class BackpackClientApi {
       Object.values(this.eventListeners).forEach(listener =>
         listener(requestType, filename)
       );
+    } else if (requestType === BackpackEvent.FileAdded) {
+      this.sendUploadFailedEvent(filename);
     }
     if (filesInRequest.length === 0 && failedFileList.length === 0) {
       onSuccess();
@@ -463,5 +485,17 @@ export default class BackpackClientApi {
     if (this.eventListeners[id]) {
       delete this.eventListeners[id];
     }
+  }
+
+  sendUploadStartedEvent(filename: string) {
+    Object.values(this.eventListeners).forEach(listener =>
+      listener(BackpackEvent.UploadStarted, filename)
+    );
+  }
+
+  sendUploadFailedEvent(filename: string) {
+    Object.values(this.eventListeners).forEach(listener =>
+      listener(BackpackEvent.UploadFailed, filename)
+    );
   }
 }

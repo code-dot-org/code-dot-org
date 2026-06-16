@@ -13,7 +13,7 @@
     "parent_level_id": 20752,
     "name_suffix": "_2025",
     "encrypted": "false",
-    "long_instructions": "#### This video is included in the CS Discoveries curriculum to introduce students to boolean expressions.\r\n\r\n### **As you watch the video, consider the following:**\r\n\r\n* #### What is a conditional statement?\r\n* #### How might my students use conditional statements to build games in Game Lab?\r\n"
+    "long_instructions": "This video is included in the CS Discoveries curriculum to introduce students to boolean expressions.\r\n\r\n### **As you watch the video, consider the following:**\r\n\r\n* What is a conditional statement?\r\n* How might my students use conditional statements to build games in Game Lab?\r\n"
   },
   "published": true,
   "notes": "",

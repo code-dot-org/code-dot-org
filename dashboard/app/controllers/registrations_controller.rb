@@ -1,4 +1,3 @@
-require 'cdo/firehose'
 require 'cdo/honeybadger'
 require 'cdo/mailjet'
 require_relative '../../../shared/middleware/helpers/experiments'
@@ -15,7 +14,7 @@ class RegistrationsController < Devise::RegistrationsController
   respond_to :json
   prepend_before_action :authenticate_scope!, only: [
     :edit, :update, :destroy, :upgrade, :set_email, :set_user_type,
-    :migrate_to_multi_auth, :demigrate_from_multi_auth
+    :migrate_to_multi_auth
   ]
   skip_before_action :verify_authenticity_token, only: [:set_student_information]
   skip_before_action :clear_sign_up_session_vars, only: [:new, :begin_sign_up, :begin_creating_user, :cancel, :create]
@@ -443,15 +442,6 @@ class RegistrationsController < Devise::RegistrationsController
       notice: I18n.t('auth.migration_success')
   end
 
-  #
-  # GET /users/demigrate_from_multi_auth
-  #
-  def demigrate_from_multi_auth
-    current_user.demigrate_from_multi_auth
-    redirect_to edit_registration_path(current_user),
-      notice: I18n.t('auth.demigration_success')
-  end
-
   def existing_account
     params.require([:email, :provider])
     render 'existing_account'
@@ -657,45 +647,20 @@ class RegistrationsController < Devise::RegistrationsController
       )
   end
 
-  private def log_account_deletion_to_firehose(current_user, dependent_users)
-    # Log event for user initiating account deletion.
-    FirehoseClient.instance.put_record(
-      :analysis,
-      {
-        study: 'user-soft-delete-audit-v2',
-        event: 'initiated-account-deletion',
-        user_id: current_user.id,
-        data_json: {
-          user_type: current_user.user_type,
-          dependent_user_ids: dependent_users.pluck(:id),
-        }.to_json
-      }
-    )
-
-    # Log separate events for dependent users destroyed in user-initiated account deletion.
-    # This should only happen for teachers.
-    dependent_users.each do |user|
-      FirehoseClient.instance.put_record(
-        :analysis,
-        {
-          study: 'user-soft-delete-audit-v2',
-          event: 'dependent-account-deletion',
-          user_id: user[:id],
-          data_json: {
-            user_type: user[:user_type],
-            deleted_by_id: current_user.id,
-          }.to_json
-        }
-      )
-    end
-  end
-
   private def destroy_users(current_user, dependent_users)
     users = [current_user] + dependent_users
     user_ids_to_destroy = users.pluck(:id)
     User.ignore_deleted_at_index.destroy(user_ids_to_destroy)
 
-    log_account_deletion_to_firehose(current_user, dependent_users)
+    Metrics::Events.log_event(
+      user: current_user,
+      event_name: 'user_self_deleted',
+      metadata: {
+        user_type: current_user.user_type,
+        dependent_user_count: dependent_users&.count,
+        dependent_user_ids: dependent_users&.pluck(:id),
+      },
+    )
   end
 
   private def us_ip?

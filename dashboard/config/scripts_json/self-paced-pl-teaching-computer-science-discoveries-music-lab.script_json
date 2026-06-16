@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-02-26 19:54:39 UTC",
+    "serialized_at": "2026-05-04 18:07:38 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -107,6 +107,7 @@
       "key": "1a195561-b4d8-486b-b6a7-269c2d3b83a7",
       "position": 1,
       "properties": {
+        "duration": 30
       },
       "seeding_key": {
         "lesson_activity.key": "1a195561-b4d8-486b-b6a7-269c2d3b83a7",
@@ -119,6 +120,7 @@
       "key": "fb8efbb4-dc44-4c26-9d7c-9202717f2855",
       "position": 1,
       "properties": {
+        "duration": 30
       },
       "seeding_key": {
         "lesson_activity.key": "fb8efbb4-dc44-4c26-9d7c-9202717f2855",
@@ -131,6 +133,7 @@
       "key": "07c999a0-9271-47dd-9227-0dcc38d88255",
       "position": 1,
       "properties": {
+        "duration": 30
       },
       "seeding_key": {
         "lesson_activity.key": "07c999a0-9271-47dd-9227-0dcc38d88255",
@@ -143,6 +146,7 @@
       "key": "7fab4206-16bf-42ee-bc6c-920bf0019f31",
       "position": 1,
       "properties": {
+        "duration": 30
       },
       "seeding_key": {
         "lesson_activity.key": "7fab4206-16bf-42ee-bc6c-920bf0019f31",
@@ -3539,6 +3543,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

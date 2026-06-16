@@ -7,15 +7,15 @@ markdown <<MARKDOWN
 
 ## **Sizes**
 
-* #### `####`: H4
-* #### `#####`: H5
+* `####`: H4
+* `#####`: H5
 
 ## **Styles**
 
-* #### `**TEXT**` or `<b>TEXT</b>`: **bold**
-* #### `_TEXT_` or `<i>TEXT</i>`: _italic_
-* #### `<ins>TEXT</ins>`: <ins>underline</ins>
-* #### `<span style="background-color: yellow">TEXT</span>`: <span style="background-color: #FFFF00">highlight</span>
+* `**TEXT**` or `<b>TEXT</b>`: **bold**
+* `_TEXT_` or `<i>TEXT</i>`: _italic_
+* `<ins>TEXT</ins>`: <ins>underline</ins>
+* `<span style="background-color: yellow">TEXT</span>`: <span style="background-color: #FFFF00">highlight</span>
 
 ## **Block Text**
 

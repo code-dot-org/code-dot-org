@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # AI Lab
 
-#### AI Lab is an environment that lets students interact with tabular data to train a machine learning model. 
+AI Lab is an environment that lets students interact with tabular data to train a machine learning model. 
 
 ![]()
 

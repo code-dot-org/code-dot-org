@@ -17,7 +17,7 @@ export interface Section {
   atRiskAgeGatedDate?: Date;
   atRiskAgeGatedUsState?: string;
   anyStudentHasProgress?: boolean;
-  code: string;
+  code: string | null;
   codeReviewExpiresAt?: number | null;
   course?: Course | null;
   courseDisplayName: string | null;
@@ -26,6 +26,7 @@ export interface Section {
   courseVersionId?: number | null;
   courseVersionName?: string;
   createdAt?: string;
+  demoType?: DemoType | null;
   grades: string[];
   hidden: boolean;
   id: number;
@@ -65,6 +66,11 @@ export interface DemoPresetCourse {
   displayName: string;
 }
 
+export interface ReviewSyllabusQuizOption {
+  label: string;
+  correct: boolean;
+}
+
 export interface DemoPresetView {
   demoType: DemoType;
   sectionName: string;
@@ -72,8 +78,12 @@ export interface DemoPresetView {
   avatarEmoji: number;
   loginType: NonNullable<Section['loginType']>;
   participantType: NonNullable<Section['participantType']>;
+  grades: string[];
   unit: DemoPresetUnit | null;
   unitGroup: DemoPresetCourse | null;
+  studentSnapshotDefaultTourLesson: number | null;
+  reviewSyllabusQuizLesson: number | null;
+  reviewSyllabusQuizOptions: ReviewSyllabusQuizOption[] | null;
 }
 
 type Course = {
@@ -107,13 +117,14 @@ export type ServerOAuthSectionTypeName = OAuthSectionTypeName | 'google_oauth2';
 export interface ServerSection {
   at_risk_age_gated_date?: string;
   at_risk_age_gated_us_state?: string;
-  code: string;
+  code: string | null;
   course_display_name?: string | null;
   course_id: number | null;
   course_offering_id?: number | null;
   course_version_id?: number | null;
   courseVersionName?: string | null;
   createdAt?: string;
+  demo_type?: DemoType | null;
   grades?: string[];
   hidden: boolean;
   id: number;
@@ -180,8 +191,12 @@ export interface ServerDemoPresetView {
   avatar_emoji: number;
   login_type: NonNullable<Section['loginType']>;
   participant_type: NonNullable<Section['participantType']>;
+  grades: string[];
   unit: ServerDemoPresetUnit | null;
   unit_group: ServerDemoPresetCourse | null;
+  student_snapshot_default_tour_lesson: number | null;
+  review_syllabus_quiz_lesson: number | null;
+  review_syllabus_quiz_options: ReviewSyllabusQuizOption[] | null;
 }
 
 //TODO: better types here

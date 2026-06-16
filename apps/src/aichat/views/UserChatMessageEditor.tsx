@@ -1,4 +1,3 @@
-import {extension as mimeToExtension} from 'mime-types';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {type SpeechToTextAnalytics} from '@cdo/apps/aiComponentLibrary/userMessageEditor/speechToTextButton/SpeechToTextButton';
@@ -8,8 +7,8 @@ import {isViewingAiTutorVersionFileUpdates} from '@cdo/apps/lab2/redux/lab2Redux
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
-import supportsClientApi from '../api/supportsClientApi';
 import {
   selectIsWaitingForChatResponse,
   sendAnalytics,
@@ -37,7 +36,8 @@ interface UserChatMessageEditorProps {
   multimodalAvailable?: boolean;
   responseCallback?: (response: string) => string;
   currentLevelId?: string | null;
-  logLevelActivity?: () => void;
+  sendDisabled?: boolean;
+  onMessageSent?: () => void;
 
   lessonId?: number;
 
@@ -46,6 +46,7 @@ interface UserChatMessageEditorProps {
   levelName?: UploadButtonProps['levelName'];
   buildAssetUrl?: UploadButtonProps['buildAssetUrl'];
   hasStarterAssets?: UploadButtonProps['hasStarterAssets'];
+  onAssetUploaded?: UploadButtonProps['onAssetUploaded'];
   chatDisabled?: boolean;
 }
 
@@ -63,13 +64,15 @@ const UserChatMessageEditor: React.FunctionComponent<
   multimodalAvailable,
   responseCallback,
   currentLevelId,
-  logLevelActivity,
   lessonId,
   levelName,
   hasStarterAssets,
   buildAssetUrl,
   uploadDisabled,
+  onAssetUploaded,
   chatDisabled,
+  sendDisabled = false,
+  onMessageSent,
 }) => {
   const [userMessage, setUserMessage] = useState<string>('');
   const isWaitingForChatResponse = useAppSelector(
@@ -79,10 +82,12 @@ const UserChatMessageEditor: React.FunctionComponent<
   const viewingAiTutorVersionFileUpdates = useAppSelector(
     isViewingAiTutorVersionFileUpdates
   );
-
-  const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);
   const chatAssets = useAppSelector(state =>
-    state.aichat.stagedFiles.map(file => file.asset)
+    state.aichat.stagedFiles.map(file =>
+      file.projectFilename
+        ? {...file.asset, filename: file.projectFilename}
+        : file.asset
+    )
   );
   const uploadsPending = useAppSelector(state =>
     state.aichat.stagedFiles.some(file => file.status === 'uploading')
@@ -97,7 +102,7 @@ const UserChatMessageEditor: React.FunctionComponent<
 
   const disabled =
     isWaitingForChatResponse ||
-    saveInProgress ||
+    sendDisabled ||
     uploadsPending ||
     viewingAiTutorVersionFileUpdates ||
     !!chatDisabled;
@@ -124,10 +129,10 @@ const UserChatMessageEditor: React.FunctionComponent<
                 ? Object.values(userAddedSelectionContext)
                 : undefined,
             responseCallback,
-            logLevelActivity,
             lessonId,
           })
         );
+        onMessageSent?.();
         clearUserMessage();
       }
     },
@@ -141,8 +146,8 @@ const UserChatMessageEditor: React.FunctionComponent<
       chatAssets,
       userAddedSelectionContext,
       responseCallback,
-      logLevelActivity,
       lessonId,
+      onMessageSent,
     ]
   );
 
@@ -158,11 +163,9 @@ const UserChatMessageEditor: React.FunctionComponent<
     }
   }, [disabled]);
 
-  // Speech to text is only enabled if the client API is supported for the current model
-  // since it makes use of the AI Gateway.
   const speechToTextEnabled =
-    supportsClientApi(modelParameters.selectedModelId) ||
-    experiments.isEnabledAllowingQueryString('enable-speech-to-text');
+    modelParameters.selectedModelId === AiChatModelIds.GEMINI_2_5_FLASH_IMAGE ||
+    experiments.isEnabledAllowingQueryString(experiments.ENABLE_SPEECH_TO_TEXT);
 
   const acceptedFileTypes = getAllowedFileTypes(
     modelParameters.selectedModelId
@@ -177,14 +180,18 @@ const UserChatMessageEditor: React.FunctionComponent<
         return;
       }
       const files = Array.from(e.clipboardData.items)
-        .filter(({type}) =>
-          acceptedFileTypes.includes(`.${mimeToExtension(type) || ''}`)
-        )
+        .filter(({type}) => acceptedFileTypes.includes(type))
         .map(item => item.getAsFile())
         .filter(item => item !== null);
-      dispatch(uploadFiles({files, buildAssetUrl}));
+      dispatch(uploadFiles({files, buildAssetUrl, onAssetUploaded}));
     },
-    [canUploadFiles, buildAssetUrl, dispatch, acceptedFileTypes]
+    [
+      canUploadFiles,
+      buildAssetUrl,
+      dispatch,
+      acceptedFileTypes,
+      onAssetUploaded,
+    ]
   );
 
   const onSpeechToTextFinished = useCallback(
@@ -224,6 +231,7 @@ const UserChatMessageEditor: React.FunctionComponent<
               hasStarterAssets={hasStarterAssets}
               buildAssetUrl={buildAssetUrl}
               acceptedFileTypes={acceptedFileTypes}
+              onAssetUploaded={onAssetUploaded}
             />
           </div>
         )}

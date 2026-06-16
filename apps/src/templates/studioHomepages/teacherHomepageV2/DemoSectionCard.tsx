@@ -2,28 +2,32 @@ import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton as MuiIconButton, Typography} from '@mui/material';
 import React from 'react';
-import {generatePath} from 'react-router-dom';
+import {generatePath, useNavigate} from 'react-router-dom';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
-import DemoStudentChip from '@cdo/apps/templates/DemoStudentChip';
+import DemoChip from '@cdo/apps/templates/DemoChip';
 import {
   createDemoSection,
   DemoSectionCreationError,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {DEMO_SECTION_CODE_PLACEHOLDER} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {
   DemoPresetView,
+  DemoType,
   Section,
 } from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import {
-  getBasePath,
+  TEACHER_NAVIGATION_BASE_URL,
   TEACHER_NAVIGATION_PATHS,
+  TEACHER_NAVIGATION_SECTIONS_URL,
 } from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import {DemoSectionCourseContentDropdown} from './DemoSectionCourseContentDropdown';
+import DemoSectionOptionsDropdown from './DemoSectionOptionsDropdown';
 import {EmptyHomepage} from './EmptyHomepage';
 import {pickDemoType} from './pickDemoType';
 import SectionAvatar from './sectionAvatars/SectionAvatar';
@@ -57,7 +61,7 @@ const buildPrimaryActions = (preset: DemoPresetView): DemoAction[] => {
       buttonText: i18n.viewProgressButton(),
       icon: 'chart-line',
       path: TEACHER_NAVIGATION_PATHS.progress,
-      eventName: EVENTS.SECTION_CARD_VIEW_PROGRESS_CLICKED,
+      eventName: EVENTS.DEMO_SECTION_CARD_VIEW_PROGRESS_CLICKED,
     });
   }
 
@@ -67,7 +71,7 @@ const buildPrimaryActions = (preset: DemoPresetView): DemoAction[] => {
       buttonText: i18n.viewLessonMaterialsButton(),
       icon: 'folder-open',
       path: TEACHER_NAVIGATION_PATHS.lessonMaterials,
-      eventName: EVENTS.SECTION_CARD_VIEW_LESSON_MATERIALS_CLICKED,
+      eventName: EVENTS.DEMO_SECTION_CARD_VIEW_LESSON_MATERIALS_CLICKED,
     });
   }
 
@@ -76,8 +80,10 @@ const buildPrimaryActions = (preset: DemoPresetView): DemoAction[] => {
 
 const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
   const [pendingPath, setPendingPath] = React.useState<string | null>(null);
   const [notice, setNotice] = React.useState<Notice | null>(null);
+  const pendingActionRef = React.useRef<string | null>(null);
   const gradesTeaching = useAppSelector(
     state => state.currentUser.gradesTeaching
   );
@@ -102,6 +108,32 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
     [sections, showHiddenOnly]
   );
   const isLoadingDemoCard = totalSections === 0 && !demoPresetsAreLoaded;
+
+  // Fire once per mount when the card is visible to the teacher.
+  const hasLoggedViewRef = React.useRef(false);
+  React.useEffect(() => {
+    if (
+      !hasLoggedViewRef.current &&
+      numSections === 0 &&
+      totalSections === 0 &&
+      !!preset &&
+      demoPresetsAreLoaded
+    ) {
+      hasLoggedViewRef.current = true;
+      analyticsReporter.sendEvent(EVENTS.DEMO_SECTION_CARD_VIEWED, {
+        demoType,
+        hasGrades: gradesTeaching.length > 0,
+      });
+    }
+  }, [
+    numSections,
+    totalSections,
+    preset,
+    demoPresetsAreLoaded,
+    demoType,
+    gradesTeaching,
+  ]);
+
   const primaryActions = React.useMemo(
     () => (preset ? buildPrimaryActions(preset) : []),
     [preset]
@@ -116,7 +148,7 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
     return {
       id: 0,
       name: preset.sectionName,
-      code: 'DEMO-123',
+      code: DEMO_SECTION_CODE_PLACEHOLDER,
       hidden: false,
       courseDisplayName,
       courseVersionName: preset.unitGroup?.name,
@@ -138,45 +170,102 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
     };
   }, [preset]);
 
-  const handleActionClick = async (
-    path: string,
-    eventName: string,
-    pendingKey?: string
-  ) => {
-    if (pendingPath) {
-      return;
-    }
-
-    setPendingPath(pendingKey || path);
-    setNotice(null);
-    analyticsReporter.sendEvent(eventName, {});
-
-    try {
-      const section = await dispatch(createDemoSection(demoType));
-      if (!section) {
+  const createSectionForAction = React.useCallback(
+    async (eventName: string, pendingKey: string) => {
+      if (pendingActionRef.current) {
         return;
       }
+
+      pendingActionRef.current = pendingKey;
+      setPendingPath(pendingKey);
+      setNotice(null);
+      analyticsReporter.sendEvent(eventName, {demoType});
+
+      try {
+        const section = await dispatch(createDemoSection(demoType as DemoType));
+        if (!section) {
+          return;
+        }
+
+        analyticsReporter.sendEvent(EVENTS.DEMO_SECTION_CREATION_SUCCEEDED, {
+          demoType,
+          sectionId: section.id,
+          triggeringAction: pendingKey,
+        });
+
+        return section;
+      } catch (error) {
+        if (error instanceof DemoSectionCreationError) {
+          if (error.errorType === 'conflict') {
+            analyticsReporter.sendEvent(EVENTS.DEMO_SECTION_CREATION_CONFLICT, {
+              demoType,
+              triggeringAction: pendingKey,
+            });
+          } else {
+            analyticsReporter.sendEvent(EVENTS.DEMO_SECTION_CREATION_FAILED, {
+              demoType,
+              triggeringAction: pendingKey,
+              errorType: 'generic',
+            });
+          }
+          setNotice({
+            text: error.message,
+            type: error.errorType === 'conflict' ? 'warning' : 'danger',
+          });
+        } else {
+          analyticsReporter.sendEvent(EVENTS.DEMO_SECTION_CREATION_FAILED, {
+            demoType,
+            triggeringAction: pendingKey,
+            errorType: 'generic',
+          });
+          setNotice({
+            text: "Couldn't create your practice section.",
+            type: 'danger',
+          });
+        }
+        throw error;
+      } finally {
+        pendingActionRef.current = null;
+        setPendingPath(null);
+      }
+    },
+    [demoType, dispatch]
+  );
+
+  const navigateToSectionPath = React.useCallback(
+    (sectionId: number, path: string) => {
       const nextPath = path.startsWith('/')
         ? path
-        : generatePath(getBasePath(path), {sectionId: section.id.toString()});
+            // Add the correct sectionId to the path.
+            .replace(':sectionId', sectionId.toString())
+            // Remove the TEACHER_NAVIGATION_BASE_URL prefix if present since
+            // navigate is relative to that base url.
+            .replace(new RegExp(`^${TEACHER_NAVIGATION_BASE_URL}`), '')
+        : generatePath(
+            `${TEACHER_NAVIGATION_SECTIONS_URL}/:sectionId/${path}`,
+            {
+              sectionId: sectionId.toString(),
+            }
+          );
+      navigate(nextPath);
+    },
+    [navigate]
+  );
 
-      window.location.assign(nextPath);
-    } catch (error) {
-      if (error instanceof DemoSectionCreationError) {
-        setNotice({
-          text: error.message,
-          type: error.errorType === 'conflict' ? 'warning' : 'danger',
-        });
-      } else {
-        setNotice({
-          text: "Couldn't create your practice section.",
-          type: 'danger',
-        });
+  const handleNavigationClick = React.useCallback(
+    async (path: string, eventName: string, pendingKey = path) => {
+      try {
+        const section = await createSectionForAction(eventName, pendingKey);
+        if (!section) {
+          return;
+        }
+        navigateToSectionPath(section.id, path);
+      } catch {
+        // Errors are handled by createSectionForAction via the notice banner.
       }
-    } finally {
-      setPendingPath(null);
-    }
-  };
+    },
+    [createSectionForAction, navigateToSectionPath]
+  );
 
   if (numSections !== 0) {
     return null;
@@ -186,7 +275,7 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
     return <Spinner size="large" />;
   }
 
-  if (totalSections !== 0 || !preset) {
+  if (totalSections !== 0 || !preset || !demoSection) {
     return <EmptyHomepage showHiddenOnly={showHiddenOnly} />;
   }
 
@@ -205,7 +294,7 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
       <ul className={styles.sectionList}>
         <li
           id="ui-test-demo-section-card"
-          className={styles.sectionCardWrapper}
+          className={`${styles.sectionCardWrapper} ${styles.demoSectionCardWrapper}`}
           aria-labelledby="demo-section-card-title"
         >
           <div className={styles.sectionCardHeader}>
@@ -235,7 +324,9 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
                   >
                     {preset.sectionName}
                   </Typography>
-                  <DemoStudentChip />
+                  <Typography component="span" variant="h5">
+                    <DemoChip />
+                  </Typography>
                 </div>
                 <div
                   className={joinLinkStyles.sectionCodeBox}
@@ -246,7 +337,7 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
                     <Typography variant="overline1" gutterBottom>
                       <span>{i18n.sectionCodeWithColon()}</span>{' '}
                       <span className={joinLinkStyles.sectionCodeTextHidden}>
-                        DEMO-123
+                        {DEMO_SECTION_CODE_PLACEHOLDER}
                       </span>
                     </Typography>
                   </span>
@@ -254,30 +345,21 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
               </div>
             </div>
             <div className={styles.sectionCardHeaderRight}>
-              <MuiIconButton
-                variant="text"
-                color="tertiary"
-                size="small"
-                className={styles.dropdownButton}
-                aria-label={i18n.sectionOptionsDropdown()}
-                disabled={true}
-              >
-                <FontAwesomeV6Icon
-                  iconName="ellipsis-vertical"
-                  iconStyle="solid"
-                />
-              </MuiIconButton>
+              <DemoSectionOptionsDropdown
+                disabled={!!pendingPath}
+                section={demoSection}
+                handleNavigationClick={handleNavigationClick}
+                createSectionForAction={createSectionForAction}
+              />
             </div>
           </div>
           <div className={styles.sectionCardBody}>
             <div className={styles.sectionCardBodyLeft}>
               <DemoSectionCourseContentDropdown
-                section={demoSection!}
-                demoType={demoType}
+                section={demoSection}
+                demoType={demoType as DemoType}
                 disabled={!!pendingPath}
-                beforeNavigate={(path: string, eventName: string) =>
-                  handleActionClick(path, eventName, path)
-                }
+                beforeNavigate={handleNavigationClick}
               />
             </div>
             <div className={styles.sectionCardBodyRight}>
@@ -291,7 +373,7 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
                     className={styles.demoActionButton}
                     disabled={!!pendingPath}
                     onClick={() =>
-                      handleActionClick(
+                      handleNavigationClick(
                         action.path,
                         action.eventName,
                         action.id

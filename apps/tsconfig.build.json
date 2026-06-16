@@ -33,9 +33,7 @@
       "@cdo/static/*": ["./static/*"],
       "@cdo/i18n/*": ["./i18n/*"],
       "@codebridge/*": ["./src/codebridge/*"],
-      "@cdo/generated-scripts/*": ["./generated-scripts/*"],
-      "@mui/material": ["./node_modules/@mui/material"],
-      "@mui/material/*": ["./node_modules/@mui/material/*"]
+      "@cdo/generated-scripts/*": ["./generated-scripts/*"]
     },
     "resolveJsonModule": true,
     "incremental": true,

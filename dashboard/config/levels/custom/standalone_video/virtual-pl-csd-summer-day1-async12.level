@@ -13,7 +13,7 @@
     "parent_level_id": 29118,
     "name_suffix": "_2022",
     "encrypted": "false",
-    "long_instructions": "## Consider the following when watching this video:\r\n#### In your role as the teacher, what can you do to support students through the process of pair programming? "
+    "long_instructions": "## Consider the following when watching this video:\r\nIn your role as the teacher, what can you do to support students through the process of pair programming? "
   },
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2023-05-17T02:30:13.171+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-21-mod4-PairProgramming-TipVid_2022\\\"\"],\"cloned_from\":\"SP-VPL-21-mod4-PairProgramming-TipVid_2022\"},{\"changed_at\":\"2023-05-17 02:30:21 +0000\",\"changed\":[],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",

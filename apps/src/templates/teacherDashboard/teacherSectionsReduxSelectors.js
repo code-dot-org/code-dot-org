@@ -3,6 +3,12 @@ import PropTypes from 'prop-types';
 
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
+import {
+  demoSecretPictureNameFor,
+  demoSecretPictureUrlFor,
+  demoSecretWordsFor,
+} from './demoStudentSecrets';
+
 /**
  * @const {string[]} The only properties that can be updated by the user
  * when creating or editing a section.
@@ -45,8 +51,19 @@ export function rosterProviderName(state) {
   return getRoot(state).rosterProviderName;
 }
 
+// Placeholder shown in the UI wherever section code would appear for demo
+// sections, which have no real join code.
+export const DEMO_SECTION_CODE_PLACEHOLDER = 'DEMO-123';
+
 export function sectionCode(state, sectionId) {
-  return (getRoot(state).sections[sectionId] || {}).code;
+  const section = getRoot(state).sections[sectionId] || {};
+  if (section.code !== null && section.code !== undefined) return section.code;
+  if (section.demoType) return DEMO_SECTION_CODE_PLACEHOLDER;
+  return null;
+}
+
+export function isDemoSection(state, sectionId) {
+  return !!(getRoot(state).sections[sectionId] || {}).demoType;
 }
 
 export function sectionName(state, sectionId) {
@@ -154,6 +171,7 @@ export const sectionFromServerSection = serverSection => ({
   unitPosition: serverSection.unitPosition,
   isAssignedSingleUnitCourse: serverSection.is_assigned_single_unit_course,
   createdAt: serverSection.createdAt,
+  demoType: serverSection.demo_type,
   loginType: serverSection.login_type,
   loginTypeName: serverSection.login_type_name,
   grades: serverSection.grades,
@@ -212,18 +230,31 @@ export const sectionFromServerSection = serverSection => ({
  * Maps from the data we get back from the server for a student, to the format
  * we want to have in our store.
  */
-export const studentFromServerStudent = (serverStudent, sectionId) => ({
-  sectionId: sectionId,
-  id: serverStudent.id,
-  name: serverStudent.name,
-  familyName: serverStudent.family_name,
-  isDemoStudent: !!serverStudent.is_demo_student,
-  sharingDisabled: serverStudent.sharing_disabled,
-  secretPictureUrl: serverStudent.secret_picture_url,
-  secretPictureName: serverStudent.secret_picture_name,
-  secretWords: serverStudent.secret_words,
-  userType: serverStudent.user_type,
-});
+export const studentFromServerStudent = (serverStudent, sectionId) => {
+  // Demo students have nil secrets on the backend (credentials are stripped
+  // when a user is flagged as a demo student). Substitute the same per-student
+  // placeholders the roster uses so login cards show an obviously-fake secret
+  // instead of "null". Keyed by id, so the login card matches the roster.
+  const isDemoStudent = !!serverStudent.is_demo_student;
+  return {
+    sectionId: sectionId,
+    id: serverStudent.id,
+    name: serverStudent.name,
+    familyName: serverStudent.family_name,
+    isDemoStudent: isDemoStudent,
+    sharingDisabled: serverStudent.sharing_disabled,
+    secretPictureUrl:
+      serverStudent.secret_picture_url ??
+      (isDemoStudent ? demoSecretPictureUrlFor(serverStudent.id) : null),
+    secretPictureName:
+      serverStudent.secret_picture_name ??
+      (isDemoStudent ? demoSecretPictureNameFor(serverStudent.id) : null),
+    secretWords:
+      serverStudent.secret_words ??
+      (isDemoStudent ? demoSecretWordsFor(serverStudent.id) : null),
+    userType: serverStudent.user_type,
+  };
+};
 
 /**
  * Map from client sectionShape to well-formatted params for updating the

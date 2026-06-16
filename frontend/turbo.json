@@ -47,10 +47,10 @@
       "dependsOn": ["^stylelint:fix"]
     },
     "typecheck": {
-      "dependsOn": ["^typecheck"]
+      "dependsOn": ["^build", "^typecheck"]
     },
     "test": {
-      "dependsOn": ["^test"]
+      "dependsOn": ["^build", "^test"]
     },
     "test:ui:ci": {
       "cache": false,

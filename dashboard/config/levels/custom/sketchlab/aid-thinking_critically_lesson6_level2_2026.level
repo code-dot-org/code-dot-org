@@ -7,7 +7,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Thinking Critically about AI Project\r\n\r\nYou will use this canvas to create your project as you move through the unit. Any work that you add will be saved and will be available in upcoming lessons.\r\n\r\n#### Task:\r\n\r\n* **Save** the most current version of your project into the Backpack. \r\n\r\n",
+    "long_instructions": "## Generate and Judge Project\r\n\r\n\r\n* **Save** the current version of your project into the <i class=\"fa-solid fa-backpack\"></i> **Backpack**.\r\n* You will use it in the next level. \r\n\r\n",
     "start_sources": {
       "source": {
         "type": "excalidraw",
@@ -37,6 +37,6 @@
     "project_template_level_name": "thinking_critically_project-template_2026",
     "name_suffix": "_2026"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-24T18:58:09.348+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson4_level3_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson4_level3_2026\"},{\"changed_at\":\"2026-04-30 19:58:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-24T18:58:09.348+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson4_level3_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson4_level3_2026\"},{\"changed_at\":\"2026-04-30 19:58:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 18:08:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-01 18:20:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-01 19:12:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Sketchlab>

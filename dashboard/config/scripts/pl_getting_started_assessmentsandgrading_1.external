@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Assessment and Grading with Code.org
 
-#### Code.org curriculum provides opportunities for formative and summative assessments. 
+Code.org curriculum provides opportunities for formative and summative assessments. 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 <summary style="font-size: 16px; font-weight: bold;">Course Specific Guide to Assessment</summary>

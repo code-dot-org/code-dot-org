@@ -70,7 +70,10 @@ describe('SectionCard', () => {
     jest.restoreAllMocks();
   });
 
-  function renderComponent(initialRoute = '/teacher_dashboard/home') {
+  function renderComponent(
+    initialRoute = '/teacher_dashboard/home',
+    sectionOverride = section
+  ) {
     return render(
       <Provider store={store}>
         <RouterProvider
@@ -81,8 +84,8 @@ describe('SectionCard', () => {
                 element={
                   <SectionCard
                     studioUrlPrefix="https://studio.code.org"
-                    id={section.id}
-                    section={section}
+                    id={sectionOverride.id}
+                    section={sectionOverride}
                     onDeleteClickCallback={() => {}}
                   />
                 }
@@ -98,6 +101,23 @@ describe('SectionCard', () => {
   it('renders section name in header', () => {
     renderComponent();
     screen.getByText('Period 1');
+  });
+
+  it('renders demo chip for demo sections', () => {
+    renderComponent('/teacher_dashboard/home', {...section, demoType: 'high'});
+    screen.getByText('Demo');
+  });
+
+  it('applies the dashed-border wrapper class for demo sections', () => {
+    renderComponent('/teacher_dashboard/home', {...section, demoType: 'high'});
+    const li = screen.getByText('Period 1').closest('li');
+    expect(li?.className).toMatch(/demoSectionCardWrapper/);
+  });
+
+  it('does not apply the dashed-border wrapper class for non-demo sections', () => {
+    renderComponent();
+    const li = screen.getByText('Period 1').closest('li');
+    expect(li?.className).not.toMatch(/demoSectionCardWrapper/);
   });
 
   it('renders section class code with login info link', () => {

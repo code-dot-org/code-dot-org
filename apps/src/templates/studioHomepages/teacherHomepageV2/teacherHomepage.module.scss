@@ -69,6 +69,21 @@
   gap: 16px;
 }
 
+// Browsers don't expose dash length / gap for `border-style: dashed`, so paint
+// the dashed outline with four edge gradients instead. Adjust the 12px / 8px
+// values below to tune dash length and gap.
+.demoSectionCardWrapper {
+  border: none;
+  background-image:
+    repeating-linear-gradient(to right, var(--borders-neutral-primary) 0 12px, transparent 12px 20px),
+    repeating-linear-gradient(to right, var(--borders-neutral-primary) 0 12px, transparent 12px 20px),
+    repeating-linear-gradient(to bottom, var(--borders-neutral-primary) 0 12px, transparent 12px 20px),
+    repeating-linear-gradient(to bottom, var(--borders-neutral-primary) 0 12px, transparent 12px 20px);
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+  background-size: 100% 2px, 100% 2px, 2px 100%, 2px 100%;
+  background-repeat: no-repeat;
+}
+
 .sectionCardHeader {
   padding: 16px;
   border-bottom: 1px solid var(--borders-neutral-primary);
@@ -117,6 +132,27 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  min-width: 0;
+
+  h5 {
+    min-width: 0;
+  }
+}
+
+.sectionCardTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sectionCardTitleText {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sectionCardDemoChip {
+  margin-left: 0;
 }
 
 .sectionCardHeaderRight {
@@ -455,6 +491,22 @@
   min-height: 50px;
   height: fit-content;
   margin-inline-start: 8px;
+}
+
+.gradientIcon {
+  background: linear-gradient(
+    to right,
+    #15c5f9,
+    #2b72ff,
+    #8f20ec,
+    #c710c2,
+    #e50976
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-flex;
+  padding-right: 4px;
 }
 
 .onboardingChecklistOuter {

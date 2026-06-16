@@ -1,0 +1,65 @@
+name 'pl-aif-2-U3-prompting_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Prompting Basics
+
+In this unit, students use arrays and objects to manage real-world data and build interactive web app features. Strong prompting skills are essential to help them generate useful code, understand program behavior, and improve their solutions.
+
+## Strong prompts include: 
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; width: 100%; margin: 20px 0px;">
+
+  <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+    <p style="font-size: 32pt; margin: 0px 0px 10px 0px;">🧠</p>
+    <p style="font-size: 16pt; font-weight: bold; margin: 0;">Context</p>
+    <p style="font-size: 14pt; line-height: 1.3; margin-top: 10px;">What the AI needs to know about your situation.</p>
+  </div>
+
+  <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+    <p style="font-size: 32pt; margin: 0px 0px 10px 0px;">🎯</p>
+    <p style="font-size: 16pt; font-weight: bold; margin: 0;">Goal</p>
+    <p style="font-size: 14pt; line-height: 1.3; margin-top: 10px;">What you want the AI to help you do.</p>
+  </div>
+
+  <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+    <p style="font-size: 32pt; margin: 0px 0px 10px 0px;">⚙️</p>
+    <p style="font-size: 16pt; font-weight: bold; margin: 0;">Constraints</p>
+    <p style="font-size: 14pt; line-height: 1.3; margin-top: 10px;">Rules, limits, or specific requirements to follow.</p>
+  </div>
+
+  <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+    <p style="font-size: 32pt; margin: 0px 0px 10px 0px;">📤</p>
+    <p style="font-size: 16pt; font-weight: bold; margin: 0;">Output Expectations</p>
+    <p style="font-size: 14pt; line-height: 1.3; margin-top: 10px;">What a good response should include.</p>
+  </div>
+
+</div>
+
+---
+## Example Prompts 
+
+**Example 1: Declaring an array of 5 objects**
+
+I’m building a JavaScript web app that tracks books. Create an array with 5 book objects. Each object should include title, author, and pages. Use realistic example data. Keep the code simple and beginner-friendly.
+
+**Example 2: Writing a push function (adding to a schedule)**
+
+I’m making a schedule app using JavaScript and arrays. Write a function called addEvent that takes an event object and adds it to the end of a schedule array using .push(). Each event should have name and time. Include an example of calling the function.
+
+**Example 3: Sorting data (smallest to largest)**
+
+I have an array of numbers in JavaScript. Write a function that sorts the array from smallest to largest. Use a built-in method if possible, and explain the code with short comments for a beginner.
+
+---
+
+<div style="background-color: #B7E0E5; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><b> 💡Teacher Tip: </b>Remind students that vague prompts lead to vague code. Encourage them to name their variables, describe their data (like what’s inside an array), and state exactly what they want the code to do before asking the AI.
+</div>
+
+## Reminder
+
+As you work through this module, remember: the clearer your prompt, the more useful and accurate the code the AI will generate.
+MARKDOWN

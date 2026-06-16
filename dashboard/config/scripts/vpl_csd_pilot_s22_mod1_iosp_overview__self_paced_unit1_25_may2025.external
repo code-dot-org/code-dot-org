@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Input, Output, Storage, Processing (IOSP)
 
-#### Throughout Chapter 2, students will explore sample apps to learn how computers input, output, store, and process (IOSP) information to help humans solve problems. This will lay the foundation for learning in later units in CS Discoveries where students will program their own apps, games, and websites. 
+Throughout Chapter 2, students will explore sample apps to learn how computers input, output, store, and process (IOSP) information to help humans solve problems. This will lay the foundation for learning in later units in CS Discoveries where students will program their own apps, games, and websites. 
 
 <br>
 
@@ -13,18 +13,18 @@ markdown <<MARKDOWN
 
 ## Key Terms 
 
-* #### **Computer** - a machine that works with information
-* #### **Input** - the information computers get from users, devices, or other computers
-* #### **Output** - the information computers give to users, devices, or other computers
-* #### **Processing** - the thinking work computers do to turn input into output
-* #### **Storage** - saving information to use in the future
+* **Computer** - a machine that works with information
+* **Input** - the information computers get from users, devices, or other computers
+* **Output** - the information computers give to users, devices, or other computers
+* **Processing** - the thinking work computers do to turn input into output
+* **Storage** - saving information to use in the future
 </p></div>
 
 <img src="https://images.code.org/727026eb6ff441c85b70ab805812ee74-image-1651167071153.30.48 PM.png" style="float:right; width:350px; border-radius:40px; margin-left:20px; margin-right: 40px;">
 
 ## How do computers solve problems?
 
-#### In order to solve problems, computers need to perform four different tasks:
+In order to solve problems, computers need to perform four different tasks:
 
 1) #### Take input
 2) #### Store information
@@ -33,18 +33,18 @@ markdown <<MARKDOWN
 
 ## How will students use IOSP?
 
-#### Students will consider how computers that they interact with complete these four tasks. Throughout lessons 5, 6, and 7, students will see multiple examples of computers that input, output, store, and process (IOSP). For example, a GPS app might do the following:
+Students will consider how computers that they interact with complete these four tasks. Throughout lessons 5, 6, and 7, students will see multiple examples of computers that input, output, store, and process (IOSP). For example, a GPS app might do the following:
 
 * ### **Input**: A user inputs a starting point and destination
 * ### **Storage**: The app stores the "Home" location for a user to use over and over
 * ### **Process**: The app uses the input to configure an optimal route
 * ### **Output**: The app displays the route on the screen, along with the ETA
 
-#### What other examples of IOSP can you think of?
+What other examples of IOSP can you think of?
 
 
 ___
 
 ## Up Next
-#### In the next two levels, you will engage with student activities from <a href="https://studio.code.org/s/csd1-2025/lessons/6" target="blank" rel="noopener noreferrer">Lesson 6 - Processing</a> and <a href="https://studio.code.org/s/csd1-2025/lessons/7" target="blank" rel="noopener noreferrer">Lesson 7 - Storage</a>.
+In the next two levels, you will engage with student activities from <a href="https://studio.code.org/s/csd1-2025/lessons/6" target="blank" rel="noopener noreferrer">Lesson 6 - Processing</a> and <a href="https://studio.code.org/s/csd1-2025/lessons/7" target="blank" rel="noopener noreferrer">Lesson 7 - Storage</a>.
 MARKDOWN

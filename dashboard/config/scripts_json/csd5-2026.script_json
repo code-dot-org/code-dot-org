@@ -14,12 +14,15 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "topic_tags": [
+        "data_science"
+      ],
       "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-24 12:50:51 UTC",
+    "serialized_at": "2026-05-19 11:15:36 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6119,10 +6122,11 @@
     },
     {
       "name": "Project Guide Exemplar",
-      "url": "https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1D-Wr_Q9st_DsT1MF92Ixm8RFnWwI9tYmQN2rUXpd8I8/edit?usp=sharing",
       "key": "project_guide_exemplar",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -7578,6 +7582,9 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

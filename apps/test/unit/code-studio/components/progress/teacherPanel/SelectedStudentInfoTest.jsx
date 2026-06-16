@@ -130,4 +130,47 @@ describe('SelectedStudentInfo', () => {
     const wrapper = setUp({levelsWithProgress: [levelWithProgress]});
     expect(wrapper.find('SelectedStudentPairing')).toHaveLength(1);
   });
+
+  it('disables arrow buttons when there are no students', () => {
+    const wrapper = setUp({students: [], selectedUserId: null});
+    const arrows = wrapper.find('FontAwesome');
+    expect(arrows).toHaveLength(2);
+    arrows.forEach(arrow => {
+      expect(arrow.prop('aria-disabled')).toBe(true);
+      expect(arrow.prop('onClick')).toBeUndefined();
+    });
+  });
+
+  it('disables arrow buttons when there is only one student', () => {
+    const wrapper = setUp({students: [{id: 1, name: 'Student 1'}]});
+    const arrows = wrapper.find('FontAwesome');
+    expect(arrows).toHaveLength(2);
+    arrows.forEach(arrow => {
+      expect(arrow.prop('aria-disabled')).toBe(true);
+      expect(arrow.prop('onClick')).toBeUndefined();
+    });
+  });
+
+  it('enables arrow buttons when there are multiple students', () => {
+    const wrapper = setUp();
+    const arrows = wrapper.find('FontAwesome');
+    expect(arrows).toHaveLength(2);
+    arrows.forEach(arrow => {
+      expect(arrow.prop('aria-disabled')).toBe(false);
+      expect(arrow.prop('onClick')).toBeDefined();
+    });
+  });
+
+  it('disables arrows while levelsWithProgress is loading with one student', () => {
+    const wrapper = setUp({
+      students: [{id: 1, name: 'Student 1'}],
+      levelsWithProgress: null,
+    });
+    const arrows = wrapper.find('FontAwesome');
+    expect(arrows).toHaveLength(2);
+    arrows.forEach(arrow => {
+      expect(arrow.prop('aria-disabled')).toBe(true);
+      expect(arrow.prop('onClick')).toBeUndefined();
+    });
+  });
 });

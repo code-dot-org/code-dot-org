@@ -15,13 +15,13 @@ const DEFAULT_PROPS = {
 describe('ShowSecret', () => {
   it('disables show picture/word button if secretLoginDisabled prop is true', () => {
     let wrapper = mount(<ShowSecret {...DEFAULT_PROPS} />);
-    let showSecretButton = wrapper.find('Button.uitest-show-picture-or-word');
-    expect(showSecretButton.prop('disabled')).toBeUndefined();
+    let showSecretButton = wrapper.find('button.uitest-show-picture-or-word');
+    expect(showSecretButton.prop('disabled')).toBeFalsy();
 
     wrapper = mount(
       <ShowSecret {...DEFAULT_PROPS} secretLoginDisabled={true} />
     );
-    showSecretButton = wrapper.find('Button.uitest-show-picture-or-word');
+    showSecretButton = wrapper.find('button.uitest-show-picture-or-word');
     expect(showSecretButton.prop('disabled')).toBe(true);
   });
 
@@ -29,7 +29,7 @@ describe('ShowSecret', () => {
     DEFAULT_PROPS.initialIsShowing = true;
 
     let wrapper = mount(<ShowSecret {...DEFAULT_PROPS} />);
-    let resetPasswordButton = wrapper.find('Button.uitest-reset-password');
-    expect(resetPasswordButton.prop('disabled')).toBeUndefined();
+    let resetPasswordButton = wrapper.find('button.uitest-reset-password');
+    expect(resetPasswordButton.prop('disabled')).toBeFalsy();
   });
 });

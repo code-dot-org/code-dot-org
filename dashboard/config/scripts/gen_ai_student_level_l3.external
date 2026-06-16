@@ -5,10 +5,10 @@ description 'description here'
 markdown <<MARKDOWN
 # ✅ Lesson Recap: Input & Training Data
 
-#### After this lesson, you can 
+After this lesson, you can 
 
-* #### Explain how a language model uses data to recognize words as input
-* #### Identify potential data sources relevant to a task being performed by a language model
+* Explain how a language model uses data to recognize words as input
+* Identify potential data sources relevant to a task being performed by a language model
 
 ## Resources
 

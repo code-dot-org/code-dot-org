@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# Else If Statement\n\nAn `else if` statement checks another condition when the first `if` condition is not true. Use `else if` when your app needs to choose from several possible options.",
+  "examples": "[{\"name\":\"Check the Size\",\"description\":\"Show a different message when the selected size is medium.\",\"code\":\"```\\nif (size === \\\"small\\\") {\\n  message.textContent = \\\"You picked a small size.\\\";\\n} else if (size === \\\"medium\\\") {\\n  message.textContent = \\\"You picked a medium size.\\\";\\n} else {\\n  message.textContent = \\\"You picked a large size.\\\";\\n}\\n```\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "else-if-statement",
+  "name": "Else If Statement",
+  "syntax": "`} else if (currentStep === 2) { ... }`",
+  "tips": "- Use `else if` after an `if` statement.\n- Put the condition inside parentheses `( )`.\n- The `else if` condition is only checked if the earlier `if` condition is false.\n- You can use more than one `else if` when checking several options.\n- In Web Lab, `else if` is often used for steps, sizes, scores, or other app choices.",
+  "methods": [
+
+  ]
+}

@@ -124,6 +124,12 @@ export interface SketchlabReactFlowEdge {
   source: string;
   target: string;
   style?: CSSProperties;
+  data?: {
+    locked?: boolean;
+    // rotation is in degrees, normalized 0-359.
+    rotation?: number;
+    showHandles?: boolean;
+  };
   sourceHandle?: string;
   targetHandle?: string;
   type?: string;

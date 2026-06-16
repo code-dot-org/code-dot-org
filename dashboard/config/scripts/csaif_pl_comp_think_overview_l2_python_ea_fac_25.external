@@ -6,7 +6,7 @@ markdown <<MARKDOWN
 # What is Computational Thinking
 
 
-#### Computational thinking is a problem-solving approach that involves breaking problems down into smaller parts, recognizing patterns, focusing on important details, and creating step-by-step solutions that a computer or person can follow.
+Computational thinking is a problem-solving approach that involves breaking problems down into smaller parts, recognizing patterns, focusing on important details, and creating step-by-step solutions that a computer or person can follow.
  
 
 <h2 style="text-align: center;">Pillars of Computational Thinking</h2>
@@ -16,7 +16,7 @@ markdown <<MARKDOWN
 
 ---
 
-#### In **Programming Fundamentals**, students explore computational thinking skills before diving into the programing lessons. 
+In **Programming Fundamentals**, students explore computational thinking skills before diving into the programing lessons. 
 
 
 <div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">

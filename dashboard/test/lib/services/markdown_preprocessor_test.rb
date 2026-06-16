@@ -2,6 +2,8 @@ require 'test_helper'
 
 class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
   setup do
+    ActiveRecord::Base.connection.disable_query_cache!
+
     course_offering = create(:course_offering, key: 'test-course')
     course_version = create(:course_version,
       course_offering: course_offering,
@@ -43,10 +45,7 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
   end
 
   test 'process is cached' do
-    # Make sure we start with a clean rails cache and that we don't attempt to
-    # use the ActiveRecord query cache, to ensure consistent results.
-    Rails.cache.clear
-    ActiveRecord::Base.connection.uncached do
+    Rails.cache.with_local_cache do
       input = "[r first-resource/test-course/1999]"
 
       # First invocation queries the database
@@ -73,7 +72,7 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
   end
 
   test 'process caching can be modified with options' do
-    ActiveRecord::Base.connection.uncached do
+    Rails.cache.with_local_cache do
       input = "[r first-resource/test-course/1999][v first_vocab/test-course/1999]"
 
       # populate the cache

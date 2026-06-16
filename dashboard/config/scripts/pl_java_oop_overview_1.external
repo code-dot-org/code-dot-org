@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Unit 2: Object-Oriented Programming 
 
-#### In the last unit, we focused on fundamental coding concepts in Java.
+In the last unit, we focused on fundamental coding concepts in Java.
 
-#### In this unit, we will focus on some **basic object-oriented programming concepts**.  
+In this unit, we will focus on some **basic object-oriented programming concepts**.  
 
 
 <div style="margin: 10px auto; width: 100%; line-height: 1.6; font-size: 14pt; color: #333;">
@@ -31,8 +31,8 @@ markdown <<MARKDOWN
 </div>
 
 
-#### **Suggested Total Time:** 2 hours
-#### **Lesson One Suggested Time:** 45 minutes
+**Suggested Total Time:** 2 hours
+**Lesson One Suggested Time:** 45 minutes
 
 
 

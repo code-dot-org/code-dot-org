@@ -1,0 +1,5 @@
+{
+  "key": "color-names",
+  "name": "Color Names",
+  "content": "**Description**: This dataset is a collection of unique, creative color names paired with their specific digital color codes.\r\n\r\n[Source](https://github.com/meodai/color-names)\r\n\r\n**License Type**: MIT License\r\n\r\n**_Columns_**:\r\n\r\n* **name**: This column provides the creative title or human-readable identifier assigned to a specific color.\r\n* **hex**: This column contains the six-character hexadecimal code used to precisely represent that exact color in digital design and web formatting."
+}

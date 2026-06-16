@@ -584,6 +584,7 @@ describe('teacherSectionsRedux', () => {
         isAssignedSingleUnitCourse: undefined,
         courseId: undefined,
         createdAt: createdAt,
+        demoType: undefined,
         studentCount: 1,
         hidden: false,
         restrictSection: false,
@@ -949,6 +950,7 @@ describe('teacherSectionsRedux', () => {
           isAssignedSingleUnitCourse: undefined,
           courseId: undefined,
           createdAt: createdAt,
+          demoType: undefined,
           hidden: false,
           restrictSection: false,
           postMilestoneDisabled: false,
@@ -1245,6 +1247,14 @@ describe('teacherSectionsRedux', () => {
     it('sets student count', () => {
       const section = sectionFromServerSection(serverSection);
       assert.equal(section.studentCount, 10);
+    });
+
+    it('maps demo_type', () => {
+      const section = sectionFromServerSection({
+        ...serverSection,
+        demo_type: 'high',
+      });
+      assert.equal(section.demoType, 'high');
     });
   });
 
@@ -1728,8 +1738,8 @@ describe('teacherSectionsRedux', () => {
   });
 
   describe('the sectionCode selector', () => {
-    it('undefined if the section is not found', () => {
-      expect(sectionCode(getState(), 42)).to.be.undefined;
+    it('null if the section is not found', () => {
+      expect(sectionCode(getState(), 42)).to.equal(null);
     });
 
     it('the section code if the section is found', () => {
@@ -2090,6 +2100,12 @@ describe('teacherSectionsRedux', () => {
             avatar_emoji: 5,
             login_type: 'email',
             participant_type: 'student',
+            grades: ['9', '10', '11', '12'],
+            review_syllabus_quiz_lesson: 2,
+            review_syllabus_quiz_options: [
+              {label: 'Option A', correct: true},
+              {label: 'Option B', correct: false},
+            ],
             unit: {
               name: 'aif2-2025',
               display_name: 'Artificial Intelligence Foundations',
@@ -2107,10 +2123,17 @@ describe('teacherSectionsRedux', () => {
       assert.deepEqual(getState().teacherSections.demoPresets.high, {
         demoType: 'high',
         sectionName: 'High School Practice Section',
+        studentSnapshotDefaultTourLesson: null,
         avatarColor: 8,
         avatarEmoji: 5,
         loginType: 'email',
         participantType: 'student',
+        reviewSyllabusQuizLesson: 2,
+        reviewSyllabusQuizOptions: [
+          {label: 'Option A', correct: true},
+          {label: 'Option B', correct: false},
+        ],
+        grades: ['9', '10', '11', '12'],
         unit: {
           name: 'aif2-2025',
           displayName: 'Artificial Intelligence Foundations',
@@ -2192,7 +2215,10 @@ describe('teacherSectionsRedux', () => {
       );
       await expect(
         store.dispatch(createDemoSection('high'))
-      ).to.be.rejectedWith(DemoSectionCreationError);
+      ).to.be.rejectedWith(
+        DemoSectionCreationError,
+        'You already have a High School practice section.'
+      );
       assert.deepEqual(getState().teacherSections.sectionIds, []);
       expect(fetchSpy).not.to.have.been.called;
       expect(getState().teacherSections.demoSectionCreationInProgress).to.be

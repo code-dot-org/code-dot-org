@@ -1,15 +1,15 @@
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Slider, {SliderProps} from '@code-dot-org/component-library/slider';
-import {Button as MuiButton} from '@mui/material';
+import {Button as MuiButton, Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useState, useMemo} from 'react';
 import {useSelector} from 'react-redux';
 
 import {modelDescriptions} from '@cdo/apps/aichat/constants';
-import {setAiCustomizationProperty} from '@cdo/apps/aichat/redux';
 import {ModelDescription} from '@cdo/apps/aichat/types';
 import {useLevelProperties} from '@cdo/apps/aichatLab/levelPropertiesContext';
+import {setAiCustomizationProperty} from '@cdo/apps/aichatLab/redux';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -38,9 +38,9 @@ const SetupCustomization: React.FunctionComponent = () => {
     temperature,
     systemPrompt,
     selectedModelId = DEFAULT_VISIBILITIES.selectedModelId,
-  } = useAppSelector(state => state.aichat.fieldVisibilities);
+  } = useAppSelector(state => state.aichatLab.fieldVisibilities);
   const aiCustomizations = useAppSelector(
-    state => state.aichat.currentAiCustomizations
+    state => state.aichatLab.currentAiCustomizations
   );
 
   const availableModelIds =
@@ -181,7 +181,13 @@ const SetupCustomization: React.FunctionComponent = () => {
                   'Temperature affects which words are generated as a response. Use the slider to change the temperature.'
                 }
               />
-              {aiCustomizations.temperature}
+              <Typography
+                className={styles.temperatureValue}
+                variant="body3"
+                component="span"
+              >
+                {aiCustomizations.temperature}
+              </Typography>
             </div>
             <Slider {...sliderProps} />
           </>

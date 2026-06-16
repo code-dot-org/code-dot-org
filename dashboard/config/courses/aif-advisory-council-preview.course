@@ -1,0 +1,23 @@
+{
+  "name": "aif-advisory-council-preview",
+  "script_names": [
+    "aif-advisory-council-preview"
+  ],
+  "original_script_names": [
+    "aif-advisory-council-preview"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "aif-advisory-council-preview",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

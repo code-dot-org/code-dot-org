@@ -5,20 +5,20 @@ description 'description here'
 markdown <<MARKDOWN
 # Understanding Data
 
-#### Data is all around us, shaping the world we live in. Whether it's the number of steps we take, the likes on a social media post, or the weather forecast. 
+Data is all around us, shaping the world we live in. Whether it's the number of steps we take, the likes on a social media post, or the weather forecast. 
 
-#### Everything can be quantified and analyzed to reveal patterns and insights that drive our decisions and innovations.
+Everything can be quantified and analyzed to reveal patterns and insights that drive our decisions and innovations.
 <br>
 
-#### 🔎 **Think About:** 
-#### Look at the picture of the street scene below and reflect on: 
-- #### *Can you identify where data might be hiding?*
-- #### *What types of data can be collected?*
-- #### *How do these everyday details turn into data that tells a story?*
+🔎 **Think About:** 
+Look at the picture of the street scene below and reflect on: 
+- *Can you identify where data might be hiding?*
+- *What types of data can be collected?*
+- *How do these everyday details turn into data that tells a story?*
 
 <img src="https://images.code.org/41e0217e538fdf1f5f0e8ea33a42d240-image-1742484446527.png" alt="design process graph of the cycle" width="5000px" style="display: block; margin-left: auto; margin-right: auto;">
 
-#### Computers process a wide range of data types to power the applications and technologies we use every day. These data types come from different sources and serve various purposes, from improving user experiences to enabling advanced decision-making.
+Computers process a wide range of data types to power the applications and technologies we use every day. These data types come from different sources and serve various purposes, from improving user experiences to enabling advanced decision-making.
 
 
 <div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
@@ -32,5 +32,5 @@ markdown <<MARKDOWN
 </ul>
 </div>
 
-#### By processing and analyzing these diverse data types, computer systems can enhance functionality and improve user experiences in countless ways.
+By processing and analyzing these diverse data types, computer systems can enhance functionality and improve user experiences in countless ways.
 MARKDOWN

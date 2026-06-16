@@ -10,6 +10,7 @@ import {
   PendingChatMessage,
 } from '@cdo/apps/aichat/types';
 import UserChatMessageEditor from '@cdo/apps/aichat/views/UserChatMessageEditor';
+import {AichatLabState} from '@cdo/apps/aichatLab/redux';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {
   AiChatClientTypes,
@@ -20,15 +21,18 @@ const mockDispatch = jest.fn();
 const mockSubmitChatContents = jest.fn();
 let mockState: {
   aichat: Partial<AichatState>;
+  aichatLab: Partial<AichatLabState>;
   pageConstants?: {
     locale: string;
   };
 } = {
   aichat: {
     chatEventsCurrent: [],
-    saveInProgress: false,
     stagedFiles: [],
     userAddedSelectionContext: {},
+  },
+  aichatLab: {
+    saveInProgress: false,
   },
   pageConstants: {
     locale: 'en_us',
@@ -65,9 +69,11 @@ describe('UserChatMessageEditor', () => {
     mockState = {
       aichat: {
         chatEventsCurrent: [],
-        saveInProgress: false,
         stagedFiles: [],
         userAddedSelectionContext: {},
+      },
+      aichatLab: {
+        saveInProgress: false,
       },
     };
   });

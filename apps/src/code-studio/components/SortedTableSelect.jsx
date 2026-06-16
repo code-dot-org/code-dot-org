@@ -1,3 +1,5 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import {Typography} from '@mui/material';
 import {orderBy} from 'lodash';
 import PropTypes from 'prop-types';
@@ -10,7 +12,6 @@ import {
   sortableOptions,
 } from '@cdo/apps/templates/tables/tableConstants';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 const PADDING = 20;
@@ -37,7 +38,6 @@ export default class SortedTableSelect extends React.Component {
     onChooseOption: PropTypes.func.isRequired,
     descriptionText: PropTypes.string,
     optionsDescriptionText: PropTypes.string,
-    titleText: PropTypes.string,
     children: PropTypes.node,
     onSelectAll: PropTypes.func,
     tableDescriptionText: PropTypes.string,
@@ -59,24 +59,30 @@ export default class SortedTableSelect extends React.Component {
 
   selectedRowHeaderFormatter = () => {
     return (
-      <input
-        style={styles.checkbox}
-        type="checkbox"
-        checked={this.areAllSelected()}
-        onChange={this.toggleSelectAll}
-      />
+      <div style={styles.checkboxWrapper}>
+        <Checkbox
+          name="select-all"
+          checked={this.areAllSelected()}
+          onChange={this.toggleSelectAll}
+          ariaLabel={i18n.selectAll()}
+          size="s"
+        />
+      </div>
     );
   };
 
   selectedRowFormatter = (_, {rowData}) => {
     const {onRowChecked} = this.props;
     return (
-      <input
-        style={styles.checkbox}
-        type="checkbox"
-        checked={rowData.isChecked}
-        onChange={() => onRowChecked(rowData.id)}
-      />
+      <div style={styles.checkboxWrapper}>
+        <Checkbox
+          name={`select-row-${rowData.id}`}
+          checked={!!rowData.isChecked}
+          onChange={() => onRowChecked(rowData.id)}
+          ariaLabel={rowData.name}
+          size="s"
+        />
+      </div>
     );
   };
 
@@ -126,17 +132,15 @@ export default class SortedTableSelect extends React.Component {
     ];
   };
 
-  renderOptions = () => {
+  getDropdownItems = () => {
     const {options} = this.props;
-    let selectOptions = options.map(option => {
-      return (
-        <option key={option.id} value={option.id}>
-          {option.name}
-        </option>
-      );
-    });
-    selectOptions.unshift(<option key="empty" value="" />);
-    return selectOptions;
+    return [
+      {value: '', text: ''},
+      ...options.map(option => ({
+        value: String(option.id),
+        text: option.name,
+      })),
+    ];
   };
 
   getSortingColumns = () => {
@@ -165,7 +169,6 @@ export default class SortedTableSelect extends React.Component {
       onChooseOption,
       descriptionText,
       optionsDescriptionText,
-      titleText,
       children,
       tableDescriptionText,
     } = this.props;
@@ -184,11 +187,6 @@ export default class SortedTableSelect extends React.Component {
     })(rowData);
     return (
       <div className="ui-test-sortable-table-select">
-        {titleText && (
-          <Typography variant="h1" gutterBottom>
-            {titleText}
-          </Typography>
-        )}
         <div style={styles.container}>
           <div style={styles.leftColumn}>
             <Table.Provider columns={columns} style={styles.table}>
@@ -201,16 +199,18 @@ export default class SortedTableSelect extends React.Component {
           </div>
           <div style={styles.rightColumn}>
             {descriptionText && (
-              <div style={styles.infoText}>{descriptionText}</div>
+              <Typography variant="body2" sx={styles.infoText}>
+                {descriptionText}
+              </Typography>
             )}
-            {optionsDescriptionText && (
-              <label htmlFor="selectOption" style={styles.label}>
-                {optionsDescriptionText}
-              </label>
-            )}
-            <select name="selectOption" onChange={onChooseOption}>
-              {this.renderOptions()}
-            </select>
+            <SimpleDropdown
+              name="selectOption"
+              labelText={optionsDescriptionText || ''}
+              isLabelVisible={!!optionsDescriptionText}
+              items={this.getDropdownItems()}
+              onChange={onChooseOption}
+              size="s"
+            />
             {children}
           </div>
         </div>
@@ -222,10 +222,11 @@ export default class SortedTableSelect extends React.Component {
 const styles = {
   checkboxCell: {
     width: CHECKBOX_CELL_WIDTH,
-    textAlign: 'center',
   },
-  checkbox: {
-    margin: 0,
+  checkboxWrapper: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   container: {
     display: 'flex',
@@ -245,10 +246,7 @@ const styles = {
     paddingTop: PADDING / 4,
     paddingBottom: PADDING / 2,
   },
-  label: {
-    paddingTop: PADDING / 2,
-  },
   italics: {
-    color: color.purple,
+    color: 'var(--text-brand-purple-primary)',
   },
 };

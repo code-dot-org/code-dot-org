@@ -1,0 +1,13 @@
+name 'code-connect-sketch-lab-multi3-survey-2026'
+title 'Check Your Understanding'
+
+question 'Which part of the design planning felt hardest?'
+
+right 'Choosing colors'
+right 'Finding the right image'
+right 'Choosing the font or description'
+right 'Sketching the layout'
+right 'Something else'
+right 'Nothing, it was easy'
+
+allow_multiple_attempts true

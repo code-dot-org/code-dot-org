@@ -1,10 +1,11 @@
 import {render, screen} from '@testing-library/react';
+import {vi} from 'vitest';
 
 import PlayButton from '../PlayButton';
 
 const defaultProps = {
   label: 'Play video',
-  onClick: jest.fn(),
+  onClick: vi.fn(),
 };
 
 describe('PlayButton Component', () => {

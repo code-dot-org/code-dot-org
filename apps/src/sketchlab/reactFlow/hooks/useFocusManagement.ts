@@ -3,6 +3,7 @@ import React, {useCallback, useEffect} from 'react';
 
 import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
+import {SKETCHLAB_TOOLBAR_PANEL_CLASS} from '../constants';
 import {
   entriesMatch,
   getElementForEntry,
@@ -43,7 +44,7 @@ export function useFocusManagement(
       if (
         target.closest('.react-flow__node') ||
         target.closest('.react-flow__edge') ||
-        target.closest('.react-flow__node-toolbar')
+        target.closest(`.${SKETCHLAB_TOOLBAR_PANEL_CLASS}`)
       ) {
         return;
       }
@@ -111,15 +112,19 @@ export function useFocusManagement(
             panToEntryIfNeeded(entry, element);
           }
         });
-      } else if (
-        !(event.target as HTMLElement).closest('.react-flow__node-toolbar')
-      ) {
-        // Focus moved to a non-node/edge element (e.g. Controls buttons).
-        // Clear visual selection but preserve lastFocusedEntry so the
-        // roving tabindex target stays correct for shift-tab.
-        // We skip this when focus moves into a NodeToolbar
-        // so the toolbar stays mounted while the user interacts with it.
-        setNodeOrEdgeFocused(false);
+      } else {
+        const focusTarget = event.target as HTMLElement;
+        const inToolbar = focusTarget.closest(
+          `.${SKETCHLAB_TOOLBAR_PANEL_CLASS}`
+        );
+        if (!inToolbar) {
+          // Focus moved to a non-node/edge element (e.g. Controls buttons).
+          // Clear visual selection but preserve lastFocusedEntry so the
+          // roving tabindex target stays correct for shift-tab.
+          // We skip this when focus moves into a node or edge toolbar
+          // so the toolbar stays mounted while the user interacts with it.
+          setNodeOrEdgeFocused(false);
+        }
       }
     },
     [tabOrder, setLastFocusedEntry, setNodeOrEdgeFocused, panToEntryIfNeeded]

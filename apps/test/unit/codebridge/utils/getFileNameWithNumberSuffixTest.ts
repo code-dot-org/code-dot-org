@@ -13,4 +13,11 @@ describe('getFileNameWithNumberSuffix', function () {
       'test_file_3.py'
     );
   });
+  it('honors a custom separator', function () {
+    expect(getFileNameWithNumberSuffix('main.py', '-')).toBe('main-1.py');
+    expect(getFileNameWithNumberSuffix('main-1.py', '-')).toBe('main-2.py');
+    expect(getFileNameWithNumberSuffix('May-6-0930am.png', '-')).toBe(
+      'May-6-0930am-1.png'
+    );
+  });
 });

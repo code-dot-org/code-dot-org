@@ -12,7 +12,7 @@ markdown <<MARKDOWN
 
 # Welcome!
 
-#### This professional learning module prepares you to teach **AI Foundations** (Semester 2) course— a curriculum where students code alongside AI to build real-world interactive projects.
+This professional learning module prepares you to teach **AI Foundations** (Semester 2) course— a curriculum where students code alongside AI to build real-world interactive projects.
 
 ___
 
@@ -25,21 +25,21 @@ ___
 ___
 
 
-#### **By the end of this professional learning module, you will be able to:**
+**By the end of this professional learning module, you will be able to:**
 
-* #### Prepare to teach the AI Foundations (Semester 2) course with confidence and clarity.
-* #### Understand the basics of web applications and how they support interactive, AI-powered projects.
-* #### Explain and apply core web technologies:
-	* #### HTML for structure,
-	* #### CSS for styling, and
-	* #### JavaScript for interactivity.
-* #### Integrate AI tools and concepts into coding lessons to model responsible and creative AI use.
-* #### Emphasize ethical considerations and human-centered design in classroom discussions.
-* #### Apply teaching strategies and best practices for engaging students in hands-on, project-based learning.
+* Prepare to teach the AI Foundations (Semester 2) course with confidence and clarity.
+* Understand the basics of web applications and how they support interactive, AI-powered projects.
+* Explain and apply core web technologies:
+	* HTML for structure,
+	* CSS for styling, and
+	* JavaScript for interactivity.
+* Integrate AI tools and concepts into coding lessons to model responsible and creative AI use.
+* Emphasize ethical considerations and human-centered design in classroom discussions.
+* Apply teaching strategies and best practices for engaging students in hands-on, project-based learning.
 
 ## Take Our Pre-Survey
 
-#### To better gauge your learning and improve this professional learning module, please take our pre-survey - it will take fewer than five minutes to complete.
+To better gauge your learning and improve this professional learning module, please take our pre-survey - it will take fewer than five minutes to complete.
 
 <div style="margin: 20px 0px">
 <a class="btn btn-large btn-primary" href="https://studio.code.org/form/selfpaced_pd_teaching_programming_in_musiclab_pre_survey" target="blank" rel="noopener noreferrer">Take the Pre-Survey</a>

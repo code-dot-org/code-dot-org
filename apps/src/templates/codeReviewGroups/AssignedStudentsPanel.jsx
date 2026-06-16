@@ -1,17 +1,13 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import JavalabButton from '@cdo/apps/javalab/JavalabButton';
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import i18n from '@cdo/locale';
 
 import CodeReviewGroup from './CodeReviewGroup';
-import {
-  HEADER_STYLE,
-  BUTTON_STYLE,
-  GROUPS_CONTAINER_STYLE,
-  HEADER_TITLE_STYLE,
-} from './UnassignedStudentsPanel';
+
+import moduleStyles from './studentGroupsPanel.module.scss';
 
 export default function AssignedStudentsPanel({
   groups,
@@ -22,19 +18,22 @@ export default function AssignedStudentsPanel({
   // TO DO: style and add small pop-up to get group name from teacher when creating a group.
   // https://codedotorg.atlassian.net/browse/CSA-1033
   return (
-    <div style={styles.groupsPanel}>
-      <div style={styles.header}>
-        <span style={styles.headerTitle}>{i18n.groups()}</span>
-        <JavalabButton
+    <div className={moduleStyles.groupsPanel}>
+      <div className={moduleStyles.header}>
+        <span className={moduleStyles.headerTitle}>{i18n.groups()}</span>
+        <MuiButton
           id="uitest-create-code-review-group"
+          variant="outlined"
+          color="tertiary"
+          size="small"
           onClick={onCreateGroupClick}
-          icon={<FontAwesome icon="plus" className="fa" />}
-          text={i18n.createGroup()}
-          inlineStyle={styles.button}
-          isHorizontal
-        />
+          type="button"
+          startIcon={<FontAwesomeV6Icon iconName="plus" />}
+        >
+          {i18n.createGroup()}
+        </MuiButton>
       </div>
-      <div style={styles.groupsContainer}>
+      <div className={moduleStyles.groupsContainer}>
         {groups.map(group => {
           return (
             <CodeReviewGroup
@@ -57,14 +56,4 @@ AssignedStudentsPanel.propTypes = {
   onCreateGroupClick: PropTypes.func.isRequired,
   onGroupNameUpdate: PropTypes.func.isRequired,
   onGroupDelete: PropTypes.func.isRequired,
-};
-
-const styles = {
-  groupsPanel: {
-    width: 500,
-  },
-  header: HEADER_STYLE,
-  headerTitle: HEADER_TITLE_STYLE,
-  button: BUTTON_STYLE,
-  groupsContainer: GROUPS_CONTAINER_STYLE,
 };

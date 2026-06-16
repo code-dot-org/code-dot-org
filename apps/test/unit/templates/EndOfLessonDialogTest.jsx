@@ -1,7 +1,7 @@
+import Modal from '@code-dot-org/component-library/modal';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import {UnconnectedEndOfLessonDialog as EndOfLessonDialog} from '@cdo/apps/templates/EndOfLessonDialog';
 
 const DEFAULT_PROPS = {
@@ -17,15 +17,16 @@ const setUp = (overrideProps = {}) => {
 describe('EndOfLessonDialog', () => {
   describe('with DEFAULT_PROPS', () => {
     const wrapper = setUp();
+    const modal = wrapper.find(Modal);
 
     it('displays expected header', () => {
-      expect(wrapper.contains('You finished Lesson 2!')).toBe(true);
+      expect(modal.prop('title')).toContain('You finished Lesson 2!');
     });
 
     it('displays expected message', () => {
-      expect(
-        wrapper.contains('Check in with your teacher for the next activity.')
-      ).toBe(true);
+      expect(modal.prop('description')).toContain(
+        'Check in with your teacher for the next activity.'
+      );
     });
   });
 
@@ -42,7 +43,9 @@ describe('EndOfLessonDialog', () => {
       });
 
     const wrapper = setUp({isSummaryView: true});
-    wrapper.find(Button).simulate('click');
+    // Modal renders the OK button itself via `primaryButtonProps`; invoke
+    // its onClick directly rather than finding a child Button.
+    wrapper.find(Modal).prop('primaryButtonProps').onClick();
     expect(scrollIntoViewSpy).toHaveBeenCalled();
 
     document.getElementById.mockRestore();
@@ -61,7 +64,7 @@ describe('EndOfLessonDialog', () => {
       });
 
     const wrapper = setUp({isSummaryView: false});
-    wrapper.find(Button).simulate('click');
+    wrapper.find(Modal).prop('primaryButtonProps').onClick();
     expect(scrollIntoViewSpy).toHaveBeenCalled();
 
     document.getElementById.mockRestore();

@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Scenario Check: Guiding the AIF Capstone
 
-#### **Directions:** The following scenarios represent common situations you may encounter while teaching the AIF Capstone Project. For each scenario, select the facilitation move that best aligns with the capstone’s focus on intentional decision-making, team collaboration, and a process-oriented workflow
+**Directions:** The following scenarios represent common situations you may encounter while teaching the AIF Capstone Project. For each scenario, select the facilitation move that best aligns with the capstone’s focus on intentional decision-making, team collaboration, and a process-oriented workflow
 .
 
 ## Question 1: Managing Team Dynamics and the Project Leader
@@ -15,12 +15,12 @@ markdown <<MARKDOWN
      alt="a controlling student is directing the roles for everyone in a group project"  
      style="width: 40%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
 
-#### **Scenario:**  
-#### During Day 4 of the project, you notice that David, the current Project Leader for his team, is directing his teammates on exactly what code to write and taking over the keyboard when they get stuck.  
+**Scenario:**  
+During Day 4 of the project, you notice that David, the current Project Leader for his team, is directing his teammates on exactly what code to write and taking over the keyboard when they get stuck.  
 
-#### When you check in, David explains he is acting as the manager to ensure they finish all their features on time.  
+When you check in, David explains he is acting as the manager to ensure they finish all their features on time.  
 
-#### Based on the capstone’s design, what is the best facilitation move?
+Based on the capstone’s design, what is the best facilitation move?
 
 <div style="clear:both;"></div>
 
@@ -86,12 +86,12 @@ D) Remove David from coding entirely
      alt="students rush into coding before fully planning their app design"  
      style="width: 40%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
 
-#### **Scenario:**  
-#### It is Day 2. A team has quickly written a one-sentence problem statement for Milestone 1 and immediately opened their coding environment.  
+**Scenario:**  
+It is Day 2. A team has quickly written a one-sentence problem statement for Milestone 1 and immediately opened their coding environment.  
 
-#### They tell you they want to skip the rest of the planning because they already have the whole app pictured in their heads" and want to get a head start on building.  
+They tell you they want to skip the rest of the planning because they already have the whole app pictured in their heads" and want to get a head start on building.  
 
-#### What should you do?
+What should you do?
 
 <div style="clear:both;"></div>
 
@@ -161,12 +161,12 @@ D) Encourage them to skip planning because backtracking is part of iteration
      alt="students reviewing peer feedback and making thoughtful decisions about what to revise in their app"  
      style="width: 40%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
 
-#### **Scenario:**  
-#### Following a TAG feedback session during Milestone 4, a team receives feedback suggesting they add a complex user profile system.  
+**Scenario:**  
+Following a TAG feedback session during Milestone 4, a team receives feedback suggesting they add a complex user profile system.  
 
-#### The team decides not to build it, noting in their Project Guide that adding profiles would distract from making their core interaction work reliably.  
+The team decides not to build it, noting in their Project Guide that adding profiles would distract from making their core interaction work reliably.  
 
-#### As a teacher, how should you handle this when assessing the team?
+As a teacher, how should you handle this when assessing the team?
 
 <div style="clear:both;"></div>
 

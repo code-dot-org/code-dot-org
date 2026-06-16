@@ -1,3 +1,4 @@
+import TextField from '@code-dot-org/component-library/textField';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -6,12 +7,11 @@ import ReactTooltip from 'react-tooltip';
 
 import i18n from '@cdo/locale';
 
-import {
-  tableLayoutStyles,
-  NAME_CELL_INPUT_WIDTH,
-} from '../tables/tableConstants';
+import {tableLayoutStyles} from '../tables/tableConstants';
 
 import {editStudent} from './manageStudentsRedux';
+
+import moduleStyles from './manageStudentsFamilyNameCell.module.scss';
 
 export default function ManageStudentFamilyNameCell({
   id,
@@ -37,16 +37,18 @@ export default function ManageStudentFamilyNameCell({
       {isEditing && (
         <div>
           <span data-for={tooltipId} data-tip>
-            <input
-              name="uitest-family-name"
-              style={styles.inputBox}
-              // Because familyName is optional, allow empty string
-              value={editedValue || ''}
-              onChange={onChangeName}
-              placeholder={i18n.familyName()}
-              aria-label={i18n.familyName()}
-              disabled={inputDisabled}
-            />
+            <div className={moduleStyles.inputWrapper}>
+              <TextField
+                name="uitest-family-name"
+                size="s"
+                // Because familyName is optional, allow empty string
+                value={editedValue || ''}
+                onChange={onChangeName}
+                placeholder={i18n.familyName()}
+                aria-label={i18n.familyName()}
+                disabled={inputDisabled}
+              />
+            </div>
             <ReactTooltip id={tooltipId} role="tooltip" effect="solid">
               <div>{i18n.disabledForTeacherAccountsTooltip()}</div>
             </ReactTooltip>
@@ -56,12 +58,6 @@ export default function ManageStudentFamilyNameCell({
     </div>
   );
 }
-
-const styles = {
-  inputBox: {
-    width: NAME_CELL_INPUT_WIDTH,
-  },
-};
 
 ManageStudentFamilyNameCell.propTypes = {
   id: PropTypes.number.isRequired,

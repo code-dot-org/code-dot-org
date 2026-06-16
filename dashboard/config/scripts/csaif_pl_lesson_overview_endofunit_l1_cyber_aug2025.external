@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Preparing for the Final Project
  
-#### This project focuses on analyzing a real-world app to identify **two security or usability issues** that affect different users. 
+This project focuses on analyzing a real-world app to identify **two security or usability issues** that affect different users. 
 
-#### The final product includes a **before-and-after artifact** that shows a redesigned solution, along with a personified security feature that explains how it helps.
+The final product includes a **before-and-after artifact** that shows a redesigned solution, along with a personified security feature that explains how it helps.
  
 
 
@@ -17,7 +17,7 @@ markdown <<MARKDOWN
 <div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
 
   <div>
-    <h4 style="margin-top: 0; font-weight: bold;">In this project, students will:</h4>
+    <p>In this project, students will:</p>
     <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
       <li>Identify security and usability issues in a digital system by analyzing user needs and risks
 </li> <br>
@@ -38,5 +38,5 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/fe1eba356fd109ee663bbff4e376cab7-image-1755268159411.png" alt="example comic of person struggling with ride share app. This is an example of the before artifact" width="850px" style="display: block; margin-left: auto; margin-right: auto;">
 
-#### In this example, the character is expressing their concerns with the ride share app. 
+In this example, the character is expressing their concerns with the ride share app. 
 MARKDOWN

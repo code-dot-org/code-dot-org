@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Final Project: 3-Day Process Overview  
 
-#### Over three days, they will plan, develop, review, and refine their work, with structured support through a <a href = "https://docs.google.com/document/d/1VgnmVktQ4_Kq4yWKW9v4xvuvNRTFfL1KIuRcFrSx2GQ/edit?usp=sharing" target="blank" rel="noopener noreferrer">Project Planning Guide</a>.
+Over three days, they will plan, develop, review, and refine their work, with structured support through a <a href = "https://docs.google.com/document/d/1VgnmVktQ4_Kq4yWKW9v4xvuvNRTFfL1KIuRcFrSx2GQ/edit?usp=sharing" target="blank" rel="noopener noreferrer">Project Planning Guide</a>.
 
 
 
@@ -84,7 +84,7 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/ce5cd6a3f7b578bbb6c71406c15c4f81-image-1755271444604.png" alt="comic showing one row with the character frustrated with privacy issues. The second row shows ways the issues will be addressed" width="850px" style="display: block; margin-left: auto; margin-right: auto;">
 
-#### This project example suggests privacy fixes for the ride share app. 
+This project example suggests privacy fixes for the ride share app. 
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
     ➡️ If you have time, check out the full <a href='https://studio.code.org/courses/ai-powered-threats-and-defenses-2025/units/1/lessons/13' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
@@ -93,5 +93,5 @@ markdown <<MARKDOWN
 ---
 
 
-#### For a deeper dive, explore the <a href="https://docs.google.com/document/d/1K8GMeaT_9uVeB5SqMdIcCeb7f-qbMJJ6-512PQ2Zh88/edit?usp=sharing" target="blank" rel="noopener noreferrer">Project Guide Exemplar</a>
+For a deeper dive, explore the <a href="https://docs.google.com/document/d/1K8GMeaT_9uVeB5SqMdIcCeb7f-qbMJJ6-512PQ2Zh88/edit?usp=sharing" target="blank" rel="noopener noreferrer">Project Guide Exemplar</a>
 MARKDOWN

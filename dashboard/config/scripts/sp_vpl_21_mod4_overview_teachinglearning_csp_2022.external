@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Teaching and learning CS Principles
 
-#### Welcome to Module 4! In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Principles course. These practices include debugging, building a mental model, and pair programming. You will also explore the role of the teacher within a CS Principles classroom and make a plan for how you will support student learning while teaching the course.
+Welcome to Module 4! In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Principles course. These practices include debugging, building a mental model, and pair programming. You will also explore the role of the teacher within a CS Principles classroom and make a plan for how you will support student learning while teaching the course.
 
 
 <img src="https://images.code.org/bc28ad0fe3531a5d9997591ac03631d2-image-1639532784908.jpg" alt="A teacher sits on a desk and faces their students." style="border-radius:10px; float: right; height: 175px; clear: both; margin: 0 20px 20px 0;">

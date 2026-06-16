@@ -1,14 +1,16 @@
 import Alert from '@code-dot-org/component-library/alert';
 import classNames from 'classnames';
+import moment from 'moment';
 import React, {forwardRef, memo} from 'react';
 
 import AiTutorVersionActionNotification from '@cdo/apps/aiComponentLibrary/aiTutorVersionActionNotification/AiTutorVersionActionNotification';
+import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatTeacherFeedback as TeacherFeedback} from '@cdo/generated-scripts/sharedConstants';
 
 import {modelDescriptions, MODEL_PARAMETER_LABELS} from '../constants';
 import {removeUpdateMessage} from '../redux';
-import {timestampToLocalTime} from '../redux/utils';
 import {
   AI_TUTOR_VERSION_ACTION_ACCEPT,
   AI_TUTOR_VERSION_ACTION_REJECT,
@@ -26,6 +28,9 @@ import {
 import ChatMessageView, {getChatMessageDisplayText} from './ChatMessageView';
 
 import styles from './chatWorkspace.module.scss';
+
+const timestampToLocalTime = (timestamp: number) =>
+  moment(timestamp).format('LT');
 
 const chatEventDescriptionsOwner = {
   CLEAR_CHAT: 'You cleared the chat workspace.',
@@ -133,6 +138,20 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
         timestamp,
         commitDescription,
       } = event;
+
+      if (notificationType === 'welcomeMessage') {
+        return (
+          <div
+            ref={ref}
+            tabIndex={tabIndex}
+            onKeyDown={onKeyDown}
+            aria-label={`Assistant: ${text}`}
+            className={styles.chatMessageOutline}
+          >
+            <ChatMessage role={Role.ASSISTANT} text={text} />
+          </div>
+        );
+      }
 
       // Use special notification component for AI tutor version actions.
       if (

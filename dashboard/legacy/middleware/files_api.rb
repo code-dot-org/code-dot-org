@@ -8,6 +8,11 @@ require 'cdo/image_moderation'
 require 'stringio'
 require 'nokogiri'
 
+# Rack's built-in mime type table doesn't include some extensions we serve.
+# Register them globally so Sinatra::Base.mime_type() resolves them correctly.
+Rack::Mime::MIME_TYPES['.webp'] = 'image/webp'
+Rack::Mime::MIME_TYPES['.md'] = 'text/markdown'
+
 class FilesApi < Sinatra::Base
   set :mustermann_opts, check_anchors: false
 
@@ -87,22 +92,20 @@ class FilesApi < Sinatra::Base
   end
 
   def record_metric(quota_event_type, quota_type, value = 1)
-    return unless CDO.newrelic_logging
-
-    NewRelic::Agent.record_metric("Custom/FilesApi/#{quota_event_type}_#{quota_type}", value)
+    OpenTelemetry::Trace.current_span.set_attribute(
+      "Custom/FilesApi/#{quota_event_type}_#{quota_type}", value
+    )
   end
 
   def record_event(quota_event_type, quota_type, encrypted_channel_id)
-    return unless CDO.newrelic_logging
-
     owner_storage_id, _ = get_storage_id_and_project_id(encrypted_channel_id)
     owner_user_id = user_id_for_storage_id(owner_storage_id)
-    event_details = {
-      quota_type: quota_type,
-      encrypted_channel_id: encrypted_channel_id,
-      owner_user_id: owner_user_id
-    }
-    NewRelic::Agent.record_custom_event("FilesApi#{quota_event_type}", event_details)
+    span = OpenTelemetry::Trace.current_span
+    event_name = "FilesApi#{quota_event_type}"
+    span.set_attribute(event_name, true)
+    span.set_attribute("#{event_name}.quota_type", quota_type)
+    span.set_attribute("#{event_name}.encrypted_channel_id", encrypted_channel_id)
+    span.set_attribute("#{event_name}.owner_user_id", owner_user_id)
   end
 
   helpers do
@@ -218,13 +221,6 @@ class FilesApi < Sinatra::Base
   # @return [IO] requested file body as an IO stream
   #
   def get_file(endpoint, encrypted_channel_id, filename, code_projects_domain_root_route = false, cache_duration: nil)
-    # We occasionally serve HTML files through theses APIs - we don't want NewRelic JS inserted...
-    begin
-      NewRelic::Agent.ignore_enduser
-    rescue
-      nil
-    end
-
     buckets = get_bucket_impl(endpoint).new
     cache_duration ||= buckets.cache_duration_seconds
     set_object_cache_duration cache_duration
@@ -237,15 +233,7 @@ class FilesApi < Sinatra::Base
     type = File.extname(filename)
     not_found if type.empty?
     unsupported_media_type unless buckets.allowed_file_type?(type)
-    type_params = {}
-    # Sinatra does not have content types for all file extensions we
-    # serve, so we add missing ones here.
-    if type == '.md'
-      type_params = {default: 'text/markdown'}
-    elsif type == '.webp'
-      type_params = {default: 'image/webp'}
-    end
-    content_type(type, type_params)
+    content_type(type)
 
     # Unless this is hosted by codeprojects.org or is a safely viewable file type,
     # serve all files with Content-Disposition set to attachment so browsers
@@ -461,10 +449,7 @@ class FilesApi < Sinatra::Base
         details = exception.message.empty? ? nil : exception.message
         return json_bad_request(details)
       end
-      # TODO(JillianK): we are temporarily ignoring address share failures because our address detection is very broken.
-      # Once we have a better geocoding solution in H1, we should start filtering for addresses again.
-      # Additional context: https://codedotorg.atlassian.net/browse/STAR-1361
-      if share_failure && share_failure[:type] != ShareFiltering::FailureType::ADDRESS
+      if share_failure
         details_key = share_failure.type == ShareFiltering::FailureType::PROFANITY ? "profaneWords" : "pIIWords"
         details = {details_key => [share_failure.content]}
         return json_bad_request(details)

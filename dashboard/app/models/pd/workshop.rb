@@ -488,7 +488,7 @@ class Pd::Workshop < ApplicationRecord
   # See https://github.com/code-dot-org/code-dot-org/blob/96b890d6e6f77de23bc5d4469df69b900e3fbeb7/lib/cdo/poste.rb#L217
   # for details.
   def self.process_ends
-    end_on_or_after(Time.now - 2.days).each do |workshop|
+    end_on_or_after(Time.now - 2.days).includes(:facilitators).each do |workshop|
       # only process if the workshop has not already been processed or if workshop was
       # processed before the workshop ended.
       next unless !workshop.processed_at || workshop.processed_at < workshop.ended_at

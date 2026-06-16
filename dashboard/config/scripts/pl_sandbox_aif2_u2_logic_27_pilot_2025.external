@@ -5,8 +5,8 @@ description 'description here'
 markdown <<MARKDOWN
 # Logic in Conditionals 
 
-#### Sometimes, one condition isn’t enough.
-#### We can combine conditions to make our programs smarter and add deeper logic to web apps.
+Sometimes, one condition isn’t enough.
+We can combine conditions to make our programs smarter and add deeper logic to web apps.
 
 <div style="background-color:#e3f2fd; padding:10px; border-left:5px solid #1976d2; margin-bottom:20px; font-size:16px; border-radius:8px;">
   <strong>🧢 Examples</strong><br><br>
@@ -88,7 +88,7 @@ markdown <<MARKDOWN
 
 ## Let's see what this looks like in code:
 
-#### Here’s a code snippet that uses a logical operator to connect two conditions: 
+Here’s a code snippet that uses a logical operator to connect two conditions: 
 
 <p style="text-align:center;">
   <img src="https://images.code.org/423f0d5bfcdbe8665866087560772e34-image-1762454506325.png" 
@@ -98,18 +98,18 @@ markdown <<MARKDOWN
 
 
 
-#### **In this example:**
+**In this example:**
 
-- #### The && symbol stands for AND, meaning both isStudent and hasValidID must be true.
+- The && symbol stands for AND, meaning both isStudent and hasValidID must be true.
 
-- #### The operator connects the two Boolean expressions (isStudent AND hasValidID).
+- The operator connects the two Boolean expressions (isStudent AND hasValidID).
 
-- #### The code inside the braces runs only when the combined condition is true.
+- The code inside the braces runs only when the combined condition is true.
 
 
 ## Let's practice! 
 
-#### We will start with creating a flowchart in Sketch Lab and then use that chart to create logic flows within our conditional statements. 
+We will start with creating a flowchart in Sketch Lab and then use that chart to create logic flows within our conditional statements. 
 
 
 MARKDOWN

@@ -21,6 +21,7 @@ import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxSelectors';
+import {Section} from '../teacherDashboard/types/teacherSectionTypes';
 
 import {asyncLoadSelectedSection} from './selectedSectionLoader';
 import {
@@ -30,6 +31,9 @@ import {
 } from './TeacherNavigationPaths';
 
 import styles from './teacher-navigation.module.scss';
+
+const sectionDropdownText = (section: Section) =>
+  section.demoType ? `${section.name} (demo)` : section.name;
 
 const TeacherNavigationBar: React.FC<{
   showAiChatSettings: boolean;
@@ -69,7 +73,7 @@ const TeacherNavigationBar: React.FC<{
       })
       .map(section => ({
         value: section.id.toString(),
-        text: section.name,
+        text: sectionDropdownText(section),
       }));
 
     setSectionArray(updatedSectionArray);

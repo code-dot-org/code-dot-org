@@ -4,6 +4,7 @@ import _ from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
 import {matchPath, useLocation} from 'react-router-dom';
 
+import DemoChip from '@cdo/apps/templates/DemoChip';
 import {
   convertStudentDataToArray,
   filterAgeGatedStudents,
@@ -73,14 +74,20 @@ const PageHeader: React.FC<{urlSectionId: string}> = ({urlSectionId}) => {
   const sectionNameText = selectedSection ? selectedSection.name : '';
 
   const sectionName = (
-    <Typography
-      className={styles.headerSectionName}
-      component="h2"
-      variant="overline2"
-      gutterBottom
-    >
-      {sectionNameText}
-    </Typography>
+    <div className={styles.headerSectionNameRow}>
+      <Typography
+        className={styles.headerSectionName}
+        component="h2"
+        variant="overline2"
+      >
+        {sectionNameText}
+      </Typography>
+      {selectedSection?.demoType && (
+        <Typography component="span" variant="overline2">
+          <DemoChip />
+        </Typography>
+      )}
+    </div>
   );
 
   return (

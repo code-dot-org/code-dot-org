@@ -23,7 +23,7 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
     retrievalContexts,
     modelCardInfo,
     selectedModelId,
-  } = useAppSelector(state => state.aichat.fieldVisibilities);
+  } = useAppSelector(state => state.aichatLab.fieldVisibilities);
 
   const isReadOnly = useSelector(isReadOnlyWorkspace);
 

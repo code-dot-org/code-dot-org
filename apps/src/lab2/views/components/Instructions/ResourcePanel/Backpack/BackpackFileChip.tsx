@@ -79,12 +79,12 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
   // If the parent tells us to, we are in read-only mode, or the file type is unsupported, disable the add button.
   const addButtonDisabled = inReadOnly || !isFileSupported || disableActions;
   const addButtonTooltipText = useMemo(() => {
-    if (disableActions) {
+    if (!isFileSupported) {
+      return 'File type not supported in this project';
+    } else if (disableActions) {
       return 'An operation is currently in progress';
     } else if (inReadOnly) {
       return 'Cannot add files in read-only mode';
-    } else if (!isFileSupported) {
-      return 'File type not supported in this project';
     } else {
       return addFileTooltipText;
     }

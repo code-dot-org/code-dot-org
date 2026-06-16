@@ -1,7 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {useState} from 'react';
-import '@testing-library/jest-dom';
+import {vi} from 'vitest';
 
 import IconDropdown, {IconDropdownProps, IconDropdownOption} from './../index';
 
@@ -63,7 +63,7 @@ describe('Design System - Icon Dropdown Component', () => {
 
   it('changes selected value when an option is selected', async () => {
     const user = userEvent.setup();
-    const spyOnChange = jest.fn();
+    const spyOnChange = vi.fn();
 
     render(
       <TestIconDropdown labelText="Dropdown2 label" onChange={spyOnChange} />,
@@ -90,7 +90,7 @@ describe('Design System - Icon Dropdown Component', () => {
 
   it("doesn't change value when dropdown is disabled", async () => {
     const user = userEvent.setup();
-    const spyOnChange = jest.fn();
+    const spyOnChange = vi.fn();
 
     render(
       <TestIconDropdown

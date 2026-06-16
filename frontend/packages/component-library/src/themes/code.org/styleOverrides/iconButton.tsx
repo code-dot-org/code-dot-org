@@ -1,4 +1,5 @@
 import type {IconButtonProps} from '@mui/material/IconButton';
+import type {Components, Theme} from '@mui/material/styles';
 
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
@@ -541,7 +542,7 @@ const iconButtonVariants = [
   style: unknown;
 }>;
 
-export const ICON_BUTTON_OVERRIDES = {
+export const ICON_BUTTON_OVERRIDES: Components<Theme>['MuiIconButton'] = {
   defaultProps: {
     disableRipple: true,
     loadingIndicator: (

@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, Typography} from '@mui/material';
 import classNames from 'classnames';
 import {concat, intersection} from 'lodash';
@@ -6,7 +7,6 @@ import React, {useEffect, useState} from 'react';
 import {createPortal} from 'react-dom';
 import {connect} from 'react-redux';
 
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import CardLabels from '@cdo/apps/templates/curriculumCatalog/CardLabels';
@@ -289,11 +289,11 @@ const CustomizableCurriculumCatalogCard = ({
           </Typography>
           <div className={style.wideCardAspects}>
             <div className={style.iconWithDescription}>
-              <FontAwesome icon="user" className="fa-solid" />
+              <FontAwesomeV6Icon iconName="user" iconStyle="solid" />
               <p>{gradeRange}</p>
             </div>
             <div className={style.iconWithDescription}>
-              <FontAwesome icon="clock" className="fa-solid" />
+              <FontAwesomeV6Icon iconName="clock" iconStyle="solid" />
               <p>{duration}</p>
             </div>
           </div>
@@ -305,20 +305,20 @@ const CustomizableCurriculumCatalogCard = ({
           <div className={style.labelsAndTranslatabilityContainer}>
             <CardLabels subjectsAndTopics={subjectsAndTopics} />
             {!isEnglish && isTranslated && (
-              <FontAwesome
-                icon="language"
-                className="fa-solid"
+              <FontAwesomeV6Icon
+                iconName="language"
+                iconStyle="solid"
                 title={translationIconTitle}
               />
             )}
           </div>
           <h4>{courseDisplayName}</h4>
           <div className={style.iconWithDescription}>
-            <FontAwesome icon="user" className="fa-solid" />
+            <FontAwesomeV6Icon iconName="user" iconStyle="solid" />
             <p>{gradeRange}</p>
           </div>
           <div className={style.iconWithDescription}>
-            <FontAwesome icon="clock" className="fa-solid" />
+            <FontAwesomeV6Icon iconName="clock" iconStyle="solid" />
             <p>{duration}</p>
           </div>
         </div>

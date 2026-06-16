@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# Parameters\n\nParameters are names listed inside a function’s parentheses. They act like placeholders for the values the function will use when it runs.",
+  "examples": "[{\"name\":\"Create a Function with Parameters\",\"description\":\"This function uses `description` and `pay` as inputs.\",\"code\":\"```\\nconst selectGig = (description, pay) =\\u003e {\\n  gigDescription.textContent = description;\\n  gigPay.textContent = pay;\\n};\\n```\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "parameters",
+  "name": "Parameters",
+  "syntax": "`const selectGig = (description, pay) => { ... };`",
+  "tips": "- Put parameters inside the parentheses of a function.\n- Use clear parameter names that describe the values the function needs.\n- Separate multiple parameters with commas.\n- Parameters only get values when the function is called.\n- In Web Lab, parameters often appear in functions that update the page based on different choices, values, or inputs.",
+  "methods": [
+
+  ]
+}

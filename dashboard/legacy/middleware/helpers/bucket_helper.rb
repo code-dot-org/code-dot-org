@@ -138,8 +138,7 @@ class BucketHelper
     result = s3.list_objects(bucket: @bucket, prefix: src_prefix).contents.map do |fileinfo|
       filename = %r{#{src_prefix}(.+)$}.match(fileinfo.key)[1]
       next unless (!options[:filenames] && (!options[:exclude_filenames] || !options[:exclude_filenames].include?(filename))) || options[:filenames].try(:include?, filename)
-      mime_type = Sinatra::Base.mime_type(File.extname(filename))
-      category = mime_type.split('/').first  # e.g. 'image' or 'audio'
+      category = category_from_file_type(File.extname(filename))
 
       src = "#{@bucket}/#{src_prefix}#{filename}"
       dest = s3_path dest_owner_id, dest_storage_app_id, filename
@@ -528,7 +527,8 @@ class BucketHelper
   end
 
   protected def track_list_operation(source_name)
-    return unless CDO.newrelic_logging
-    NewRelic::Agent.record_metric("Custom/ListRequests/#{self.class.name}/#{source_name}", 1)
+    OpenTelemetry::Trace.current_span.set_attribute(
+      "Custom/ListRequests/#{self.class.name}/#{source_name}", 1
+    )
   end
 end

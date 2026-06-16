@@ -1,16 +1,13 @@
-import {Typography, Button as MuiButton} from '@mui/material';
+import Modal from '@code-dot-org/component-library/modal';
 import React, {useEffect} from 'react';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import announcementImage from './images/ta-assessments-launch-graphic.jpg';
-
-import styles from './rubrics.module.scss';
 
 export default function AssessmentsAnnouncementDialog() {
   const [dialogOpen, setDialogOpen] = React.useState(true);
@@ -38,7 +35,6 @@ export default function AssessmentsAnnouncementDialog() {
     analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_ANNOUNCEMENT_DISMISSED);
     postAnnouncementSeen();
   };
-  const handleDismiss = handleClose;
 
   const handleButtonClick = () => {
     // wait for the post request to complete before navigating, otherwise the
@@ -50,44 +46,22 @@ export default function AssessmentsAnnouncementDialog() {
   };
 
   return (
-    <AccessibleDialog
+    <Modal
+      id="uitest-ai-assessments-announcement"
       onClose={handleClose}
-      onDismiss={handleDismiss}
-      initialFocus={false}
-      className={styles.announcementModal}
-    >
-      <div
-        role="region"
-        aria-label={i18n.aiAssessmentsAnnouncementHeading()}
-        className={styles.announcementDialog}
-        id="uitest-ai-assessments-announcement"
-      >
-        <img
-          src={announcementImage}
-          className={styles.announcementImage}
-          alt=""
-        />
-        <Typography variant="h2" gutterBottom>
-          {i18n.aiAssessmentsAnnouncementHeading()}
-        </Typography>
-        <Typography
-          className={styles.announcementBody}
-          variant="body2"
-          gutterBottom
-        >
-          {i18n.aiAssessmentsAnnouncementBody()}
-        </Typography>
-        <MuiButton
-          variant="contained"
-          color="primary"
-          size="large"
-          className="learn-more-button"
-          onClick={handleButtonClick}
-          type="button"
-        >
-          {i18n.learnMore()}
-        </MuiButton>
-      </div>
-    </AccessibleDialog>
+      imageUrl={announcementImage}
+      imageAlt=""
+      imagePlacement="top"
+      title={i18n.aiAssessmentsAnnouncementHeading()}
+      description={i18n.aiAssessmentsAnnouncementBody()}
+      primaryButtonProps={{
+        variant: 'contained',
+        color: 'primary',
+        className: 'learn-more-button',
+        onClick: handleButtonClick,
+        size: 'large',
+        children: i18n.learnMore(),
+      }}
+    />
   );
 }

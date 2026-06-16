@@ -85,7 +85,11 @@ export default function AiAssessmentBox({
      * observations instead of the evidence. This won't have line
      * numbers and is certainly worse but better than nothing. */
     if (evidence.firstLine === undefined) {
-      return <p key={i}>{text}</p>;
+      return (
+        <Typography variant="body4" component="p">
+          {text}
+        </Typography>
+      );
     } else if (evidence.firstLine === evidence.lastLine) {
       // Line [lineNumber]: [message]
       text = i18n.aiAssessmentEvidenceLine({
@@ -102,7 +106,7 @@ export default function AiAssessmentBox({
     }
 
     return (
-      <p key={i}>
+      <Typography variant="body4" component="p">
         {text.split('<>').map((subtext, k) => {
           if (subtext === '<first-line>') {
             return (
@@ -128,7 +132,7 @@ export default function AiAssessmentBox({
             return <span key={`${i}-${k}`}>{subtext}</span>;
           }
         })}
-      </p>
+      </Typography>
     );
   };
 

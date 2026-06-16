@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 ## Parsing JSON
 
-#### To use data from a file or API in your app, you first need to turn it into something JavaScript can work with.
+To use data from a file or API in your app, you first need to turn it into something JavaScript can work with.
 
-#### Parsing means carefully looking at the data, figuring out what type of data each piece is (text, number, list, etc.), and deciding what information is important for the user to see.
+Parsing means carefully looking at the data, figuring out what type of data each piece is (text, number, list, etc.), and deciding what information is important for the user to see.
 
 ---
 
@@ -21,14 +21,14 @@ When we parse JSON, we turn the raw data into JavaScript objects usable by our p
 
 ## Why parse first?
 
-#### It’s important to parse the JSON data before designing and coding the app because you need to understand what information is available (and how it’s organized) before deciding what to display.
+It’s important to parse the JSON data before designing and coding the app because you need to understand what information is available (and how it’s organized) before deciding what to display.
 
 ---
 ## Example: One Card, One JSON Object
 
-#### Here is an example of a single JSON object. A JSON object stores information in **key–value pairs**, where each piece of data has a label (called a key) and a value.
+Here is an example of a single JSON object. A JSON object stores information in **key–value pairs**, where each piece of data has a label (called a key) and a value.
 
-#### Notice it contains multiple keys with different types of values, including text (strings), numbers, and an array.
+Notice it contains multiple keys with different types of values, including text (strings), numbers, and an array.
 
 <div style="display: flex; gap: 30px; align-items: flex-start; justify-content: center; flex-wrap: wrap; margin: 30px 0;">
 
@@ -85,6 +85,6 @@ This example app shows the <strong>image</strong>, <strong>track</strong>, and <
 
 ---
 ## Next up
-#### You will design a card or table in sketch lab using an API with keys. 
+You will design a card or table in sketch lab using an API with keys. 
 
 MARKDOWN

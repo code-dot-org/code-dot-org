@@ -1,0 +1,11 @@
+name 'building-data-driven-systems-lesson4-level7-v1-2026'
+display_name 'Update and Evolve Objects'
+description 'Practice updating and extending objects by changing property values or adding new ones'
+
+sublevels
+level 'building-data-driven-systems-lesson4-level7a-v1-2026'
+level 'building-data-driven-systems-lesson4-level7b-v1-2026'
+level 'building-data-driven-systems-lesson4-level7c-v1-2026'
+
+
+uses_lab2

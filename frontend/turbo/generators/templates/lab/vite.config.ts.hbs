@@ -7,7 +7,7 @@ import {externalizeDeps} from 'vite-plugin-externalize-deps';
 export default defineConfig({
   plugins: [
     react(),
-    dts({tsconfigPath: './tsconfig.app.json'}),
+    dts({tsconfigPath: './tsconfig.app.json', entryRoot: 'src'}),
     externalizeDeps(),
   ],
   server: {
@@ -15,7 +15,13 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: ['src/index.ts'],
+      // Object-form entry so the fixtures chunk emits at dist/fixtures/index.*
+      // alongside the main dist/index.* — the `./mocks` export subpath
+      // resolves to the former.
+      entry: {
+        index: 'src/index.ts',
+        'fixtures/index': 'src/fixtures/index.ts',
+      },
       name: '{{name}}-lab',
       formats: ['es', 'cjs'],
     },

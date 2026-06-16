@@ -201,6 +201,27 @@ class SectionsControllerTest < ActionController::TestCase
   test_user_gets_response_for :new, params: {loginType: 'picture', participantType: 'student'}, user: :student, response: :forbidden
   test_user_gets_response_for :new, params: {loginType: 'picture', participantType: 'student'}, user: :admin, response: :success
 
+  test "new sets is_users_first_section true when teacher has only a demo section" do
+    teacher = create(:teacher)
+    create(:section, user: teacher, demo_type: 'high')
+    sign_in teacher
+
+    get :new, params: {loginType: 'word', participantType: 'student'}
+    assert_response :success
+    assert assigns(:is_users_first_section)
+  end
+
+  test "new sets is_users_first_section false when teacher has a real section alongside a demo section" do
+    teacher = create(:teacher)
+    create(:section, user: teacher, demo_type: 'high')
+    create(:section, user: teacher, login_type: 'word')
+    sign_in teacher
+
+    get :new, params: {loginType: 'word', participantType: 'student'}
+    assert_response :success
+    refute assigns(:is_users_first_section)
+  end
+
   test "new redirects to home if loginType and participantType are not present" do
     user = create(:admin)
     sign_in user
@@ -319,21 +340,13 @@ class SectionsControllerTest < ActionController::TestCase
 
   test 'retrieve_lessons_for_dropdown returns demo preset lesson links for a demo type' do
     sign_in @teacher
-    unit_group = create(
-      :unit_group,
-      name: 'artificial-intelligence-foundations-2025',
-      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    )
-    unit = create(:unit, :with_levels, name: 'aif2-2025')
-    create(:unit_group_unit, unit_group: unit_group, script: unit, position: 1)
-    unit.lessons.first.update!(has_lesson_plan: true)
 
     get :retrieve_lessons_for_dropdown, params: {id: 'high'}
 
     assert_response :success
     response_json = JSON.parse(@response.body)
-    assert_equal "/teacher_dashboard/sections/:sectionId/courses/artificial-intelligence-foundations-2025/units/1", response_json.first['value']
-    assert_equal "/courses/artificial-intelligence-foundations-2025/units/1/lessons/1/levels/1", response_json.second['value']
+    assert_equal "/teacher_dashboard/sections/:sectionId/courses/original-allthethings-course/units/1", response_json.first['value']
+    assert_match %r{\A/courses/original-allthethings-course/units/1/lessons/\d+/levels/1\z}, response_json.second['value']
   end
 
   describe 'POST /sections/:id/log_in' do

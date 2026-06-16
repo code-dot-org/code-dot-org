@@ -143,7 +143,7 @@ function main() {
     return requestedFile;
   }
 
-  // Code.org origin for this environment.
+  // CodeAI origin for this environment.
   function getCodeDotOrgOrigin() {
     const regex = /[^.]+\.preview\.([^.]+)\.codeprojects\.org/;
     const match = location.hostname.match(regex);

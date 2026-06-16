@@ -22,6 +22,7 @@ import {
 } from '../types';
 import {UserAddedSelectionContextItem} from '../types/userAddedSelectionContext';
 
+import AssetImageOverflowMenu from './assets/AssetImageOverflowMenu';
 import FilePreview from './assets/FilePreview';
 import FlagResponseButton from './FlagResponseButton';
 import CleanFeedbackFooter from './teacherFeedback/CleanFeedbackFooter';
@@ -196,7 +197,7 @@ const MessageHeader: React.FC<MessageHeaderProps> = ({
   teacherFlaggedHidden,
   isFlaggedInTeacherView,
 }) => {
-  const hasAssets = assets && buildAssetUrl;
+  const hasAssets = !!assets && !!buildAssetUrl;
   const hasUserAddedSelectionContext = !!userAddedSelectionContext?.length;
 
   if ((!hasAssets && !hasUserAddedSelectionContext) || teacherFlaggedHidden) {
@@ -211,27 +212,37 @@ const MessageHeader: React.FC<MessageHeaderProps> = ({
         assets.map(asset => {
           const filename = asset.filename;
           const url = buildAssetUrl(asset);
+          const isPdf = filename.endsWith('.pdf');
           return (
-            <button
-              key={filename}
-              type="button"
-              className={styles.assetButton}
-              onClick={() => window.open(url, '_blank')}
-            >
-              {filename.endsWith('.pdf') ? (
-                <FilePreview type="pdf" filename={filename} url={url} />
-              ) : (
-                <img
-                  alt=""
-                  className={classNames(
-                    styles.imagePreview,
-                    isAssistant && styles.assistant,
-                    isFlaggedInTeacherView && styles.teacherFlaggedImagePreview
-                  )}
-                  src={url}
+            <div key={filename} className={styles.assetImageWrapper}>
+              <button
+                type="button"
+                className={styles.assetButton}
+                onClick={() => window.open(url, '_blank')}
+              >
+                {isPdf ? (
+                  <FilePreview type="pdf" filename={filename} url={url} />
+                ) : (
+                  <img
+                    alt=""
+                    className={classNames(
+                      styles.imagePreview,
+                      isAssistant && styles.assistant,
+                      isFlaggedInTeacherView &&
+                        styles.teacherFlaggedImagePreview
+                    )}
+                    src={url}
+                  />
+                )}
+              </button>
+              {!isPdf && (
+                <AssetImageOverflowMenu
+                  url={url}
+                  filename={filename}
+                  id={`asset-image-options-${filename}`}
                 />
               )}
-            </button>
+            </div>
           );
         })}
       {hasUserAddedSelectionContext &&

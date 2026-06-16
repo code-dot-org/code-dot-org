@@ -32,6 +32,7 @@ class JitPlMisconception < ApplicationRecord
       name: name,
       text_content: text_content,
       resources: resources.map(&:summarize_for_lesson_edit),
+      json_videos: json_videos.map(&:summarize),
       exemplars: jit_pl_exemplars.map(&:serialize),
     }
   end

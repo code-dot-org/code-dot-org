@@ -1,4 +1,15 @@
 #!/usr/bin/env ruby
+
+# On macOS, runner.rb's Parallel.map (in_processes) workers segfault inside
+# libsystem_trace _os_log_preferences_refresh during their first AWS S3
+# upload's net/http connect. Disable os_activity and ObjC initialize-fork
+# safety in the env before any require touches those macOS subsystems.
+# Read lazily by the OS on first use; harmless on Linux (vars ignored).
+if RUBY_PLATFORM.include?('darwin')
+  ENV['OS_ACTIVITY_MODE'] ||= 'disable'
+  ENV['OBJC_DISABLE_INITIALIZE_FORK_SAFETY'] ||= 'YES'
+end
+
 require_relative '../../../deployment'
 
 UI_TEST_DIR = File.expand_path(__dir__)
@@ -63,7 +74,7 @@ def main(options)
   open_log_files
   configure_for_eyes if eyes?
   report_tests_starting
-  run_status_page_url = generate_status_page(start_time) if options.with_status_page
+  s3_status_page_url = generate_status_page(start_time) if options.with_status_page
 
   run_results = Parallel.map(browser_feature_generator, parallel_config(options.parallel_limit)) do |browser, feature|
     run_feature browser, feature, options
@@ -87,7 +98,7 @@ def main(options)
     return 1001
   end
 
-  report_tests_finished start_time, run_results, run_status_page_url
+  report_tests_finished start_time, run_results, s3_status_page_url
   run_results.count {|feature_succeeded, _, _| !feature_succeeded}
 ensure
   close_log_files
@@ -154,7 +165,8 @@ def parse_options
       opts.on("--device-farm", "Use AWS Device Farm instead of SauceLabs for remote browser testing. " \
                                "Requires CDO.device_farm_desktop_project_arn (desktop configs) " \
                                "and/or CDO.device_farm_mobile_project_arn (mobile configs) to be set. " \
-                               "Note: Device Farm browsers cannot reach localhost; use a public domain."
+                               "Note: Device Farm cannot reach localhost on development machines -- " \
+                               "use a public domain (e.g. via ngrok)."
               ) do
         options.device_farm = true
       end
@@ -389,6 +401,18 @@ def test_type
   eyes? ? 'Eyes' : 'UI'
 end
 
+# Human-readable suite label used in Slack/log report headers and as the status
+# page <title> and <h1>. Eyes runs are always "Eyes". UI runs derive the label
+# from their browser config names and append "UI":
+#   -c Chrome             => "Chrome UI"
+#   -c iPhone             => "iPhone UI"
+#   -c Chrome,Firefox     => "Chrome + Firefox UI"
+#   -c Safari,iPad,iPhone => "Safari + iPad + iPhone UI"
+def test_type_label
+  return test_type if eyes?
+  "#{$browsers.map {|b| b['name']}.join(' + ')} #{test_type}"
+end
+
 def eyes?
   $options.run_eyes_tests
 end
@@ -408,13 +432,13 @@ def applitools_batch_url
 end
 
 def report_tests_starting
-  ChatClient.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} tests in #{$options.parallel_limit} threads..."
+  ChatClient.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type_label} tests in #{$options.parallel_limit} threads..."
   if eyes?
     ChatClient.log "Batching eyes tests as <a href=\"#{applitools_batch_url}\">#{ENV.fetch('BATCH_NAME', nil)}</a>."
   end
 end
 
-def report_tests_finished(start_time, run_results, run_status_page_url = nil)
+def report_tests_finished(start_time, run_results, s3_status_page_url = nil)
   suite_duration = Time.now - start_time
 
   # How many flaky test reruns occurred across all tests (ignoring the initial attempt).
@@ -444,16 +468,14 @@ def report_tests_finished(start_time, run_results, run_status_page_url = nil)
 
   ChatClient.log "Skipped tests tagged with: #{skipped_tags.to_a.join(', ')}"
 
-  test_report =  "\n#{test_type.upcase} TEST REPORT: #{failures.any? ? '*❌ FAILED*' : '*✅ PASSED*'}\n"
-  test_report += "\n#{failures.count}x failed features:\n" + failures.map {|failure| "• #{failure}\n"}.join if failures.any?
-  test_report += "\n"
+  report_kind = $options.with_status_page ? 'TEST SUITE' : 'TEST MANUAL RUN'
+  test_report =  "\n#{test_type_label.upcase} #{report_kind}: #{failures.any? ? '*❌ FAILED*' : '*✅ PASSED*'}\n\n"
   test_report += "Applitools Eyes Results:\n#{applitools_batch_url}\n\n" if applitools_batch_url
-  test_report += "#{test_type} Test Status Page (permalink for this run):\n#{run_status_page_url}\n\n" if run_status_page_url
-  test_report += "#{test_type} Test Status Page (for this server, *if you're lost start here*):\n#{server_status_page_url}\n\n" unless CI::Utils.running_on_ci?
-  test_report += "\n"
-  test_report += "#{suite_success_count} passed. #{failures.count} failed. Test count: #{run_results.count}. Duration: #{RakeUtils.format_duration(suite_duration)}. Total successful reruns of flaky tests: #{total_flaky_successful_reruns}.\n"
-  test_report += "\n"
-  test_report += "\n*#{test_type.upcase}* TESTS #{failures.any? ? 'FAILED' : 'PASSED'}\n\n"
+  test_report += status_page_links(s3_status_page_url)
+  test_report += "#{pass_fail_summary(suite_success_count, failures.count, run_results.count, suite_duration, total_flaky_successful_reruns)}\n"
+  # Slack truncates long messages. Show failures list last, so that status page
+  # links are not truncated when there are many failures.
+  test_report += "\n#{failures.count}x failed features:\n" + failures.map {|failure| "• #{failure}\n"}.join if failures.any?
 
   ChatClient.log test_report, color: 'purple'
 end
@@ -463,37 +485,81 @@ def server_status_page_url
   CDO.studio_url('/ui_test/' + status_page_filename, scheme_for_environment, ge_region: nil)
 end
 
-def status_page_filename
-  # SauceLabs runs keep the unqualified name. Device Farm runs are
-  # split into desktop/mobile/combined buckets so a desktop and a
-  # mobile run (which use separate concurrency quotas and are
-  # typically invoked as separate runner.rb commands) don't overwrite
-  # each other's status page in the shared S3 prefix.
-  return "test_status_#{test_type}.html" unless $options.device_farm
-  any_mobile = $browsers.any? {|b| mobile_browser?(b)}
-  all_mobile = $browsers.all? {|b| mobile_browser?(b)}
-  device_farm_kind =
-    if all_mobile
-      'mobile'
-    elsif any_mobile
-      'combined'
-    else
-      'desktop'
-    end
-  "test_status_#{test_type}_device_farm_#{device_farm_kind}.html"
+# Returns text describing where to find the test status page:
+#   - non-CI: server URL first because it loads results faster, S3 URL second
+#     as a fallback in case the server is unreachable.
+#   - CI (drone): only the S3 URL, because the server is not typically
+#     available after the drone run ends.
+#
+# Both status pages show the most recent results for each
+# server name + branch name (+ CI run identifier) tuple. This means that CI
+# status page links remain tied to the specific CI run indefinitely,
+# while status page links on the test machine constantly update to show
+# the most recent results in that environment.
+def status_page_links(s3_status_page_url)
+  if server_status_page_url && !CI::Utils.running_on_ci?
+    out = "#{test_type_label} Test Status Page:\n#{server_status_page_url}\n\n"
+    out += "Fallback status page (if server is unavailable):\n#{s3_status_page_url}\n\n" if s3_status_page_url
+    out
+  elsif s3_status_page_url
+    "#{test_type_label} Test Status Page:\n#{s3_status_page_url}\n\n"
+  else
+    ''
+  end
 end
 
-# Returns a permalink URL for the Test Status Page, assuming we can upload it to S3
+def pass_fail_summary(success_count, failure_count, total_count, duration, total_flaky_successful_reruns)
+  summary = "#{success_count} passed. #{failure_count} failed. Test count: #{total_count}. Duration: #{RakeUtils.format_duration(duration)}."
+  did_retry_flaky_tests = $options.retry_count || $options.magic_retry || $options.auto_retry
+  summary += " Total successful reruns of flaky tests: #{total_flaky_successful_reruns}." if did_retry_flaky_tests
+  summary
+end
+
+# Ordered list of UI/Eyes test status pages used to render the
+# cross-page navigation row at the top of each status page. Each entry's
+# :filename must equal the value status_page_filename returns when that
+# page is being generated, so the active entry can be rendered unlinked.
+# The four entries are the four suites rake test:ui_all dispatches.
+STATUS_PAGES_NAVIGATION = [
+  {filename: 'test_status_Chrome_Firefox_UI.html',     display_name: 'Chrome + Firefox UI'},
+  {filename: 'test_status_Safari_iPad_iPhone_UI.html', display_name: 'Safari + iPad + iPhone UI'},
+  {filename: 'test_status_Eyes.html',                  display_name: 'Eyes'},
+].freeze
+
+def status_pages_navigation
+  # Include the navigation row on any status pages generated during the DTT,
+  # so that the oncall engineer can quickly find all the pages they need to
+  # check for UI test failures.
+  return nil unless GIT_BRANCH == 'test'
+  STATUS_PAGES_NAVIGATION.map do |page|
+    page.merge(
+      url: CDO.studio_url("/ui_test/#{page[:filename]}", scheme_for_environment, ge_region: nil)
+    )
+  end
+end
+
+# Status page filename per suite. Eyes keeps a stable name across providers.
+# Other suites name their page after the suite label so each ui_all suite
+# (Chrome + Firefox UI, Safari + iPad + iPhone UI, Eyes) gets unique pages
+# and don't overwrite each other in the shared S3 prefix or in
+# dashboard/public/ui_test/.
+def status_page_filename
+  return 'test_status_Eyes.html' if eyes?
+  "test_status_#{test_type_label.tr(' +', '_').squeeze('_')}.html"
+end
+
+# Returns a URL for the Test Status Page, assuming we can upload it to S3
 def upload_status_page_to_s3(status_page_path = File.join(UI_TEST_DIR, status_page_filename))
   LOG_UPLOADER.upload_file(File.join(UI_TEST_DIR, 'test_status.css'), {content_type: 'text/css'})
   LOG_UPLOADER.upload_file(File.join(UI_TEST_DIR, 'test_status.js'), {content_type: 'text/javascript'})
 
-  return LOG_UPLOADER.upload_file(status_page_path, {content_type: 'text/html'})
+  versioned_url = LOG_UPLOADER.upload_file(status_page_path, {content_type: 'text/html'})
+  versioned_url&.split('?', 2)&.first
 rescue Aws::Sigv4::Errors::MissingCredentialsError
-  ChatClient.log "No AWS credentials set, skipping upload of the '#{test_type} Test Status Page' to S3"
+  ChatClient.log "No AWS credentials set, skipping upload of the '#{test_type_label} Test Status Page' to S3"
   nil
 rescue Exception => exception
-  ChatClient.log "WARNING: exception raised while attempting to upload the '#{test_type} Test Status Page' to S3:\n#{exception.class}: #{exception}\n#{exception.backtrace&.first(5)&.join("\n")}"
+  ChatClient.log "WARNING: exception raised while attempting to upload the '#{test_type_label} Test Status Page' to S3:\n#{exception.class}: #{exception}\n#{exception.backtrace&.first(5)&.join("\n")}"
   nil
 end
 
@@ -514,17 +580,22 @@ def generate_status_page(suite_start_time)
         s3_bucket: S3_LOGS_BUCKET,
         s3_prefix: S3_LOGS_PREFIX,
         type: test_type,
+        type_label: test_type_label,
         git_branch: GIT_BRANCH,
         commit_hash: COMMIT_HASH,
         start_time: suite_start_time,
-        browser_features: browser_features
+        browser_features: browser_features,
+        device_farm: $options.device_farm,
+        force_db_access: $options.force_db_access,
+        status_pages: status_pages_navigation,
+        current_status_page_filename: status_page_filename
       }
     )
   )
-  run_status_page_url = upload_status_page_to_s3(status_page_path)
-  ChatClient.log "#{test_type} Test Status Page (permalink for this run):\n#{run_status_page_url}\n\n" if run_status_page_url
-  ChatClient.log "#{test_type} Test Status Page (for this server):\n#{server_status_page_url}\n\n" unless CI::Utils.running_on_ci?
-  return run_status_page_url
+  s3_status_page_url = upload_status_page_to_s3(status_page_path)
+  links = status_page_links(s3_status_page_url)
+  ChatClient.log links unless links.empty?
+  return s3_status_page_url
 end
 
 def test_run_identifier(browser, feature)

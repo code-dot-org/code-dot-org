@@ -1,0 +1,187 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-05-09T05:16:50.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Build a For You Feed\r\n\r\nDo This:\r\n\r\nOpen `prompt.md`.\r\n\r\nWrite 1–2 sentences explaining:\r\n\r\n* which movies your feed should keep\r\n* what your feed should sort to the top\r\n\r\nUse your plan with AI Tutor to complete `buildForYouFeed()` in `script.js`.\r\n\r\nYour function should:\r\n\r\n* filter movies into `displayMovies`\r\n* use `.map()`, `if`, and `.push()`\r\n* sort `displayMovies` with `.sort()`\r\n* call `renderMovies()` at the end\r\n\r\nRun your code and check:\r\n\r\n* Do the right movies appear?\r\n* Are they in the right order?\r\n* Did any movies get hidden or pushed lower?\r\n\r\nReminder:\r\n\r\nA For You feed is a pipeline:\r\n\r\nfilter → sort → render",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0"
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <title>Streamline: For You Feed</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n\n<body id=\"mainBody\">\n  <div id=\"appShell\" class=\"app-shell\">\n\n    <header id=\"siteHeader\" class=\"site-header\">\n      <h1 id=\"siteLogo\" class=\"logo\">STREAMLINE</h1>\n\n      <nav id=\"mainNav\" class=\"main-nav\">\n        <span id=\"navHome\">Home</span>\n        <span id=\"navMovies\">Movies</span>\n        <span id=\"navForYou\" class=\"active-nav\">For You</span>\n        <span id=\"navMyList\">My List</span>\n      </nav>\n    </header>\n\n    <section id=\"heroSection\" class=\"hero-section\">\n      <p id=\"heroEyebrow\" class=\"hero-eyebrow\">For You Feed</p>\n      <h2 id=\"heroTitle\" class=\"hero-title\">Design a movie feed that feels personalized.</h2>\n      <p id=\"heroText\" class=\"hero-text\">\n        Choose which movies belong in the feed, then sort them so the best matches appear first.\n      </p>\n    </section>\n\n    <section id=\"controlSection\" class=\"control-section\">\n      <div id=\"feedControls\" class=\"feed-controls\">\n        <button id=\"showAllBtn\" class=\"feed-chip secondary-chip\" type=\"button\">\n          All Movies\n        </button>\n\n        <button id=\"buildFeedBtn\" class=\"feed-chip primary-chip\" type=\"button\">\n          Run For You Feed\n        </button>\n      </div>\n\n      <p id=\"movieCount\" class=\"movie-count\">0 movies found</p>\n    </section>\n\n    <main id=\"movieGrid\" class=\"movie-grid\" aria-live=\"polite\"></main>\n\n  </div>\n\n  <script src=\"data.js\"></script>\n  <script src=\"helpers.js\"></script>\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// This array controls which movies are currently shown.\nlet displayMovies = [];\n\n// Build your For You feed algorithm here.\n// Use your plan from prompt.md before asking AI Tutor for help.\nconst buildForYouFeed = () => {\n  displayMovies = [];\n\n  // 1. FILTER\n  // Use movies.map() to go through each movie.\n  // Use an if statement to decide which movies belong in your feed.\n  // Use displayMovies.push(movie) to keep matching movies.\n\n\n\n\n\n\n\n  // 2. SORT\n  // Use displayMovies.sort() to choose what appears first.\n  // Example sort ideas:\n  // - highest rating first\n  // - newest year first\n  // - alphabetical by title\n\n\n\n\n\n\n\n  // 3. RENDER\n  // Keep this as the last line of your function.\n  renderMovies();\n};\n\n// Run the For You feed when the button is clicked.\ndocument.getElementById(\"buildFeedBtn\").addEventListener(\"click\", buildForYouFeed);\n\n// Show all movies when the app first loads.\nshowAllMovies();",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\n:root {\n  --bg-color: #050505;\n  --card-bg: #151515;\n  --card-hover: #202020;\n  --text-color: #ffffff;\n  --muted-text: #b8b8b8;\n  --accent-color: #e50914;\n  --accent-green: #46d369;\n  --border-color: #333333;\n}\n\nbody {\n  font-family: system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;\n  background-color: var(--bg-color);\n  color: var(--text-color);\n}\n\n.app-shell {\n  width: 100%;\n  max-width: 420px;\n  margin: 0 auto;\n  padding: 0 14px 32px;\n}\n\n/* Header */\n.site-header {\n  display: flex;\n  align-items: center;\n  gap: 14px;\n  padding: 18px 0 14px;\n}\n\n.logo {\n  color: var(--accent-color);\n  font-size: 22px;\n  font-weight: 900;\n  letter-spacing: 1px;\n  flex-shrink: 0;\n}\n\n.main-nav {\n  display: flex;\n  gap: 12px;\n  color: #d7d7d7;\n  font-size: 12px;\n  overflow-x: auto;\n  white-space: nowrap;\n}\n\n.main-nav span {\n  flex-shrink: 0;\n}\n\n.active-nav {\n  color: white;\n  font-weight: 800;\n}\n\n/* Hero */\n.hero-section {\n  min-height: 170px;\n  padding: 28px 18px 22px;\n  background:\n    linear-gradient(to right, rgba(5, 5, 5, 1), rgba(5, 5, 5, 0.72), rgba(5, 5, 5, 1)),\n    linear-gradient(135deg, #3a0f18, #111827, #050505);\n  border-radius: 16px;\n  margin-bottom: 18px;\n}\n\n.hero-eyebrow {\n  color: var(--accent-color);\n  font-weight: 800;\n  text-transform: uppercase;\n  letter-spacing: 0.08em;\n  font-size: 11px;\n  margin-bottom: 10px;\n}\n\n.hero-title {\n  font-size: 28px;\n  line-height: 1.05;\n  margin-bottom: 12px;\n}\n\n.hero-text {\n  color: #d4d4d4;\n  font-size: 13px;\n  line-height: 1.45;\n}\n\n/* Controls */\n.control-section {\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  gap: 11px;\n  margin-bottom: 16px;\n}\n\n.feed-controls {\n  width: 100%;\n  display: flex;\n  flex-wrap: nowrap;\n  gap: 8px;\n  overflow-x: auto;\n  padding-bottom: 4px;\n}\n\n.feed-chip {\n  flex-shrink: 0;\n  border-radius: 999px;\n  padding: 8px 13px;\n  font-size: 13px;\n  font-weight: 700;\n  cursor: pointer;\n}\n\n.primary-chip {\n  border: 1px solid var(--accent-color);\n  background-color: var(--accent-color);\n  color: white;\n}\n\n.secondary-chip {\n  border: 1px solid #444444;\n  background-color: #171717;\n  color: white;\n}\n\n.feed-chip:hover {\n  background-color: #2b2b2b;\n  border-color: #777777;\n}\n\n.primary-chip:hover {\n  background-color: #b80710;\n  border-color: #b80710;\n}\n\n.feed-chip:focus {\n  outline: 2px solid white;\n  outline-offset: 2px;\n}\n\n.movie-count {\n  color: var(--muted-text);\n  font-size: 12px;\n  white-space: nowrap;\n}\n\n/* Movie Grid */\n.movie-grid {\n  display: grid;\n  grid-template-columns: repeat(2, minmax(0, 1fr));\n  gap: 12px;\n}\n\n.movie-card {\n  background-color: var(--card-bg);\n  border-radius: 9px;\n  overflow: hidden;\n  transition: transform 0.2s, background-color 0.2s;\n}\n\n.movie-card:hover {\n  transform: scale(1.02);\n  background-color: var(--card-hover);\n}\n\n.poster-wrap {\n  position: relative;\n  aspect-ratio: 2 / 3;\n  background-color: #222222;\n  overflow: hidden;\n}\n\n.poster-image {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n}\n\n.movie-badge {\n  position: absolute;\n  top: 8px;\n  left: 8px;\n  background-color: var(--accent-color);\n  color: white;\n  font-size: 10px;\n  font-weight: 800;\n  padding: 3px 6px;\n  border-radius: 4px;\n}\n\n.movie-info {\n  padding: 9px;\n}\n\n.movie-title {\n  font-size: 14px;\n  line-height: 1.25;\n  margin-bottom: 6px;\n}\n\n.movie-meta {\n  color: var(--muted-text);\n  font-size: 12px;\n  margin-bottom: 5px;\n}\n\n.movie-rating {\n  color: var(--accent-green);\n  font-size: 12px;\n  font-weight: 700;\n}\n\n/* Extra-small windows */\n@media (max-width: 330px) {\n  .app-shell {\n    padding: 0 10px 28px;\n  }\n\n  .site-header {\n    flex-direction: column;\n    align-items: flex-start;\n    gap: 8px;\n  }\n\n  .hero-title {\n    font-size: 24px;\n  }\n\n  .movie-grid {\n    gap: 10px;\n  }\n\n  .movie-title {\n    font-size: 13px;\n  }\n}\n\n/* Tablet and desktop */\n@media (min-width: 520px) {\n  .app-shell {\n    max-width: 760px;\n    padding: 0 22px 44px;\n  }\n\n  .site-header {\n    justify-content: space-between;\n  }\n\n  .main-nav {\n    font-size: 14px;\n    gap: 18px;\n  }\n\n  .hero-title {\n    font-size: 36px;\n    max-width: 620px;\n  }\n\n  .hero-text {\n    font-size: 15px;\n    max-width: 580px;\n  }\n\n  .control-section {\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: center;\n  }\n\n  .feed-controls {\n    width: auto;\n  }\n\n  .movie-grid {\n    grid-template-columns: repeat(3, minmax(0, 1fr));\n    gap: 16px;\n  }\n}\n\n@media (min-width: 900px) {\n  .app-shell {\n    max-width: 1100px;\n  }\n\n  .movie-grid {\n    grid-template-columns: repeat(4, minmax(0, 1fr));\n    gap: 18px;\n  }\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "prompt.md",
+          "language": "md",
+          "contents": "# Clarify\n*\n*\n\n# Hone\n*\n*\n\n# Apply\n*\n*\n\n# Transfer\n\n\n",
+          "folderId": "0",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "data.js",
+          "contents": "const movies = [\n  {\n    id: 1,\n    title: \"Night Run\",\n    genre: \"Action\",\n    year: 2021,\n    rating: 8.1,\n    image: \"images/movie1.png\",\n    alt: \"Night Run movie poster\",\n    isNew: true\n  },\n  {\n    id: 2,\n    title: \"Space Camp\",\n    genre: \"Sci-Fi\",\n    year: 2023,\n    rating: 8.6,\n    image: \"images/movie2.png\",\n    alt: \"Space Camp movie poster\",\n    isNew: true\n  },\n  {\n    id: 3,\n    title: \"The Last Slice\",\n    genre: \"Comedy\",\n    year: 2019,\n    rating: 7.4,\n    image: \"images/movie3.png\",\n    alt: \"The Last Slice movie poster\",\n    isNew: false\n  },\n  {\n    id: 4,\n    title: \"Final Round\",\n    genre: \"Action\",\n    year: 2018,\n    rating: 7.9,\n    image: \"images/movie4.png\",\n    alt: \"Final Round movie poster\",\n    isNew: false\n  },\n  {\n    id: 5,\n    title: \"Quiet Signal\",\n    genre: \"Drama\",\n    year: 2020,\n    rating: 8.3,\n    image: \"images/movie5.png\",\n    alt: \"Quiet Signal movie poster\",\n    isNew: false\n  },\n  {\n    id: 6,\n    title: \"Weekend Weirdos\",\n    genre: \"Comedy\",\n    year: 2022,\n    rating: 7.8,\n    image: \"images/movie6.png\",\n    alt: \"Weekend Weirdos movie poster\",\n    isNew: true\n  },\n  {\n    id: 7,\n    title: \"Deep Orbit\",\n    genre: \"Sci-Fi\",\n    year: 2017,\n    rating: 7.1,\n    image: \"images/movie7.png\",\n    alt: \"Deep Orbit movie poster\",\n    isNew: false\n  },\n  {\n    id: 8,\n    title: \"Chase Mode\",\n    genre: \"Action\",\n    year: 2024,\n    rating: 8.4,\n    image: \"images/movie8.png\",\n    alt: \"Chase Mode movie poster\",\n    isNew: true\n  }\n];",
+          "folderId": "0",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "helpers.js",
+          "contents": "const movieGrid = document.getElementById(\"movieGrid\");\nconst movieCount = document.getElementById(\"movieCount\");\n\n// Creates one movie card.\n// Students do not need to edit this function.\nconst createMovieCard = (movie) => {\n  const card = document.createElement(\"article\");\n  card.className = \"movie-card\";\n  card.id = \"movieCard\" + movie.id;\n\n  const posterWrap = document.createElement(\"div\");\n  posterWrap.className = \"poster-wrap\";\n  posterWrap.id = \"posterWrap\" + movie.id;\n\n  const image = document.createElement(\"img\");\n  image.className = \"poster-image\";\n  image.id = \"movieImage\" + movie.id;\n  image.src = movie.image;\n  image.alt = movie.alt;\n\n  posterWrap.appendChild(image);\n\n  if (movie.isNew === true) {\n    const badge = document.createElement(\"span\");\n    badge.className = \"movie-badge\";\n    badge.id = \"movieBadge\" + movie.id;\n    badge.textContent = \"NEW\";\n\n    posterWrap.appendChild(badge);\n  }\n\n  const info = document.createElement(\"div\");\n  info.className = \"movie-info\";\n  info.id = \"movieInfo\" + movie.id;\n\n  const title = document.createElement(\"h2\");\n  title.className = \"movie-title\";\n  title.id = \"movieTitle\" + movie.id;\n  title.textContent = movie.title;\n\n  const meta = document.createElement(\"p\");\n  meta.className = \"movie-meta\";\n  meta.id = \"movieMeta\" + movie.id;\n  meta.textContent = movie.genre + \" / \" + movie.year;\n\n  const rating = document.createElement(\"p\");\n  rating.className = \"movie-rating\";\n  rating.id = \"movieRating\" + movie.id;\n  rating.textContent = movie.rating + \" match\";\n\n  info.appendChild(title);\n  info.appendChild(meta);\n  info.appendChild(rating);\n\n  card.appendChild(posterWrap);\n  card.appendChild(info);\n\n  movieGrid.appendChild(card);\n};\n\n// Redraws the movies currently stored in displayMovies.\n// Students should call this after filtering and sorting.\nconst renderMovies = () => {\n  movieGrid.innerHTML = \"\";\n  movieCount.textContent = displayMovies.length + \" movies found\";\n\n  displayMovies.map((movie) => {\n    createMovieCard(movie);\n  });\n};\n\n// Shows the full movie list again.\nconst showAllMovies = () => {\n  displayMovies = [];\n\n  movies.map((movie) => {\n    displayMovies.push(movie);\n  });\n\n  renderMovies();\n};\n\ndocument.getElementById(\"showAllBtn\").addEventListener(\"click\", showAllMovies);",
+          "folderId": "0",
+          "active": false
+        },
+        "15": {
+          "id": "15",
+          "name": "movie8.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson10-level3a-v1-2026/uuid/6cd529ce-cf6d-4cb7-99fe-bc4e0c05ca3b.png",
+          "type": "starter",
+          "active": false
+        },
+        "16": {
+          "id": "16",
+          "name": "movie1.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson10-level3a-v1-2026/uuid/0fb8670d-0ae6-4fa5-ae4a-14014d29ee85.png",
+          "type": "starter",
+          "active": false
+        },
+        "17": {
+          "id": "17",
+          "name": "movie2.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson10-level3a-v1-2026/uuid/f227babf-0055-44ba-8834-af1b3545ecbc.png",
+          "type": "starter",
+          "active": false
+        },
+        "18": {
+          "id": "18",
+          "name": "movie5.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson10-level3a-v1-2026/uuid/7ab206ca-abaa-41a1-ade7-57cc240963c8.png",
+          "type": "starter",
+          "active": false
+        },
+        "19": {
+          "id": "19",
+          "name": "movie7.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson10-level3a-v1-2026/uuid/3ef70430-7019-450d-a7ae-7f942edd9e91.png",
+          "type": "starter",
+          "active": false
+        },
+        "20": {
+          "id": "20",
+          "name": "movie3.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson10-level3a-v1-2026/uuid/5d4774a0-04bb-41dd-abf7-750831f7a763.png",
+          "type": "starter",
+          "active": false
+        },
+        "21": {
+          "id": "21",
+          "name": "movie4.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson10-level3a-v1-2026/uuid/1cf8f1c0-ebdb-4fad-84a2-9faff0e219bb.png",
+          "type": "starter",
+          "active": false
+        },
+        "22": {
+          "id": "22",
+          "name": "movie6.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson10-level3a-v1-2026/uuid/0250065a-3c09-4a6e-bc82-77a4c99e0b71.png",
+          "type": "starter",
+          "active": false
+        },
+        "23": {
+          "id": "23",
+          "name": "movie8.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson10-level3a-v1-2026/uuid/41e3c0eb-46f2-437e-a946-7bcd8ab12df7.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nChJTYuBG+tcSdiBdIAiF\n",
+    "display_name": "For You Movie Feed",
+    "bubble_choice_description": "Design a personalized movie feed. Choose which movies to keep, sort the best matches first, and use AI Tutor to help build your pipeline.",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildJavaScript",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-09T05:16:50.587+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson10-level2b-test_2025-pilot_2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson10-level2b-test_2025-pilot_2026\"},{\"changed_at\":\"2026-05-09 05:18:08 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-09 05:27:18 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-09 05:29:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-09 05:33:09 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-09 05:33:09 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-09 05:33:09 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-09 05:34:57 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-09 05:42:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-09 05:44:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-09 05:44:24 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-09 05:44:24 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-09 05:45:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-09 05:45:20 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-09 05:45:20 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

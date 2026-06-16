@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-04-01 21:26:16 UTC",
+    "serialized_at": "2026-06-03 22:19:25 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -7314,7 +7314,8 @@
       "url": "https://docs.google.com/document/d/1OxuvJnC9V7752RI-HQ72vcF5UFuk_iCb1n0H0p1qlgQ/edit?usp=drivesdk",
       "key": "_key_problem_solving_with_ai_unit_guide_exemplar",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Answer Key"
       },
       "seeding_key": {
@@ -7634,7 +7635,8 @@
       "url": "https://docs.google.com/document/d/1Eh2TASGZ7z0Wncry96Yg1ZZgiPQOOpUqizRQY8RnxO0/edit?usp=drivesdk",
       "key": "ownership_and_ai_stations_1",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -7721,6 +7723,7 @@
       "key": "talking_to_machines",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7805,7 +7808,8 @@
       "url": "https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher",
       "key": "viewing_student_ai_chat_history_as_a_teacher",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -8979,6 +8983,27 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 10: Remixing, Creativity, and Originality",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Remixing, Creativity, and Originality",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-PD-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Remixing, Creativity, and Originality",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-HU-43"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 11: Ownership, Ethics, and Creativity",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-IC-28"
@@ -8986,9 +9011,100 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 11: Ownership, Ethics, and Creativity",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-IM-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Ownership, Ethics, and Creativity",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-IM-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Ownership, Ethics, and Creativity",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-PD-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Ownership, Ethics, and Creativity",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-HU-43"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 12: AI's Role in Society",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 12: AI's Role in Society",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-IM-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 12: AI's Role in Society",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-IM-27"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 12: AI's Role in Society",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-ET-41"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 12: AI's Role in Society",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-HU-43"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 12: AI's Role in Society",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-IM-37"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: AI Time Capsule Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-IM-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: AI Time Capsule Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: AI Time Capsule Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: AI Time Capsule Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-HU-43"
       }
     },
     {
@@ -9003,6 +9119,13 @@
         "lesson.key": "Lesson 1: Talking to Machines",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Talking to Machines",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-04"
       }
     },
     {
@@ -9035,9 +9158,37 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 2: Beyond Words",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Beyond Words",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-IM-27"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 3: The AI's Brain",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: The AI's Brain",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-ML-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: The AI's Brain",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-04"
       }
     },
     {
@@ -9049,9 +9200,51 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 4: Smart or Just Predictable?",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-ML-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Smart or Just Predictable?",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Smart or Just Predictable?",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Smart or Just Predictable?",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-HU-44"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 5: Uncovering Contradictions",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Uncovering Contradictions",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Uncovering Contradictions",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-05"
       }
     },
     {
@@ -9063,9 +9256,58 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 6: Understanding Bias",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-IM-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Understanding Bias",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-ML-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Understanding Bias",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Understanding Bias",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-IM-27"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 7: AI's Wild Imagination",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: AI's Wild Imagination",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: AI's Wild Imagination",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: AI's Wild Imagination",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-HU-43"
       }
     },
     {
@@ -9077,13 +9319,44 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 8: Debugging and Refining Outputs",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Debugging and Refining Outputs",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-TR-20"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 9: AI as a Co-Creator",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-21"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: AI as a Co-Creator",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-IM-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: AI as a Co-Creator",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-PD-12"
+      }
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

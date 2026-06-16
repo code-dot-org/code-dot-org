@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Explore-Practice-Synthesize-Project
 
-#### Let’s take a look at each of the lesson types for Programming with Music Lab in-depth. We’ll focus just on the <b>sequences</b> chunk of the curriculum to start.</p>
+Let’s take a look at each of the lesson types for Programming with Music Lab in-depth. We’ll focus just on the <b>sequences</b> chunk of the curriculum to start.</p>
 
-#### Knowing how each lesson scaffolds instruction will help you, as the educator, support student learning. Notice how the objectives below build on each other and increase in complexity.
+Knowing how each lesson scaffolds instruction will help you, as the educator, support student learning. Notice how the objectives below build on each other and increase in complexity.
 
 ## 🔍 Explore Lesson
 
@@ -19,15 +19,15 @@ Briefly scan over the  <a href='https://studio.code.org/s/csd-programming-with-m
 <div style="flex: 1; background-color: #F5F7F8; padding: 15px; border-radius: 10px;">
 
 ### **Lesson Objectives**
-* #### Students will be able to follow an algorithm to complete a song using sequencing  
-* #### Students will be able to play tracks sequentially and simultaneously
+* Students will be able to follow an algorithm to complete a song using sequencing  
+* Students will be able to play tracks sequentially and simultaneously
 </div>
 
 <div style="flex: 1; background-color: #F5F7F8; padding: 15px; border-radius: 10px;">
 
 ### **Lesson Overview**
 
-#### Students are introduced to sequencing by following step-by-step instructions to build a song. They learn how to layer tracks and use blocks like **play together** to combine sounds. Teachers guide discussions, highlight patterns, and encourage students to make predictions before running code.
+Students are introduced to sequencing by following step-by-step instructions to build a song. They learn how to layer tracks and use blocks like **play together** to combine sounds. Teachers guide discussions, highlight patterns, and encourage students to make predictions before running code.
 </div>
 </div>
 
@@ -41,15 +41,15 @@ Briefly scan over the <a href='https://studio.code.org/s/csd-programming-with-mu
 <div style="flex: 1; background-color: #F5F7F8; padding: 15px; border-radius: 10px;">
 
 ### **Lesson Objectives**
-* #### Students will be able to combine tracks with different measure lengths  
-* #### Students will be able to create offset moments in songs with rests
+* Students will be able to combine tracks with different measure lengths  
+* Students will be able to create offset moments in songs with rests
 </div>
 
 <div style="flex: 1; background-color: #F5F7F8; padding: 15px; border-radius: 10px;">
 
 ### **Lesson Overview**
 
-#### Students practice sequencing by combining tracks of different lengths and adding rests to create offsets. Working in pairs, they apply concepts from the Explore lesson and build fluency through guided challenges. Teachers circulate to support and adjust instruction as needed.
+Students practice sequencing by combining tracks of different lengths and adding rests to create offsets. Working in pairs, they apply concepts from the Explore lesson and build fluency through guided challenges. Teachers circulate to support and adjust instruction as needed.
 </div>
 </div>
 
@@ -63,14 +63,14 @@ Briefly scan over the <a href='https://studio.code.org/s/csd-programming-with-mu
 <div style="flex: 1; background-color: #F5F7F8; padding: 15px; border-radius: 10px;">
 
 ### **Lesson Objectives**
-* #### Objectives TBD
+* Objectives TBD
 </div>
 
 <div style="flex: 1; background-color: #F5F7F8; padding: 15px; border-radius: 10px;">
 
 ### **Lesson Overview**
 
-#### Students review and apply sequencing skills in a more open-ended context, using new **Effect** blocks to enhance their songs. Inspired by a real-world producer, they explore how to layer tracks creatively—bridging structured learning with creative expression.
+Students review and apply sequencing skills in a more open-ended context, using new **Effect** blocks to enhance their songs. Inspired by a real-world producer, they explore how to layer tracks creatively—bridging structured learning with creative expression.
 </div>
 </div>
 
@@ -84,14 +84,14 @@ Briefly scan over the <a href='https://studio.code.org/s/csd-programming-with-mu
 <div style="flex: 1; background-color: #F5F7F8; padding: 15px; border-radius: 10px;">
 
 ### **Lesson Objectives**
-* #### Objectives TBD
+* Objectives TBD
 </div>
 
 <div style="flex: 1; background-color: #F5F7F8; padding: 15px; border-radius: 10px;">
 
 ### **Lesson Overview**
 
-#### Students create personalized walk-up songs for characters using everything they’ve learned about sequencing. They explore a new feature, **triggers**, to add flair and timing to their music. This creative project gives students space to express themselves while demonstrating mastery of key concepts.
+Students create personalized walk-up songs for characters using everything they’ve learned about sequencing. They explore a new feature, **triggers**, to add flair and timing to their music. This creative project gives students space to express themselves while demonstrating mastery of key concepts.
 </div>
 </div>
 

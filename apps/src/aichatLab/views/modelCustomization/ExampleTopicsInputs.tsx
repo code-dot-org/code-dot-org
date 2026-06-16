@@ -1,7 +1,7 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import React, {useCallback, useMemo} from 'react';
 
-import {setModelCardProperty} from '@cdo/apps/aichat/redux';
+import {setModelCardProperty} from '@cdo/apps/aichatLab/redux';
 import {Visibility} from '@cdo/apps/aichatLab/types';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 

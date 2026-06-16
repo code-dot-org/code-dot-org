@@ -1,4 +1,5 @@
 import Chips from '@code-dot-org/component-library/chips';
+import TextField from '@code-dot-org/component-library/textField';
 import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -11,6 +12,7 @@ import SectionAvatar from '@cdo/apps/templates/studioHomepages/teacherHomepageV2
 import {StudentGradeLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+import DemoChip from '../DemoChip';
 import SectionAvatarEditDialog from '../studioHomepages/teacherHomepageV2/sectionAvatars/SectionAvatarEditDialog';
 
 import moduleStyles from './sections-refresh.module.scss';
@@ -42,32 +44,38 @@ export default function SingleSectionSetUp({
   return (
     <div>
       <div className={moduleStyles.containerWithMarginTop}>
-        <Typography variant="h2" gutterBottom>
-          {i18n.classSection()}
-        </Typography>
-        <label className={moduleStyles.typographyLabelTwo}>
-          {i18n.className()}
-
-          {isLoading ? (
+        <div className={moduleStyles.sectionHeader}>
+          <Typography variant="h2">
+            {i18n.classSection()}
+            {section.demoType && <DemoChip />}
+          </Typography>
+        </div>
+        {isLoading ? (
+          <>
+            <div className={moduleStyles.typographyLabelTwo}>
+              {i18n.className()}
+            </div>
             <div
               className={classNames(
                 moduleStyles.skeletonTextField,
                 skeletonizeContent.skeletonizeContent
               )}
             />
-          ) : (
-            <input
-              required
-              type="text"
-              id="uitest-section-name-setup"
-              className={moduleStyles.classNameTextField}
-              value={section.name}
-              onChange={e => updateSection('name', e.target.value)}
-              onKeyDown={e => e.key === 'Enter' && e.preventDefault()}
-              disabled={isLoading}
-            />
-          )}
-        </label>
+          </>
+        ) : (
+          <TextField
+            required
+            id="uitest-section-name-setup"
+            name="name"
+            fullWidth
+            label={i18n.className()}
+            value={section.name}
+            onChange={e => updateSection('name', e.target.value)}
+            onKeyDown={e => e.key === 'Enter' && e.preventDefault()}
+            className={moduleStyles.sectionNameTextField}
+            disabled={isLoading}
+          />
+        )}
       </div>
       <label className={moduleStyles.typographyLabelTwo}>
         {i18n.avatar()}

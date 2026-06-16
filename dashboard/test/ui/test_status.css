@@ -2,6 +2,10 @@ body {
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
+h1 {
+  clear: both;
+}
+
 h2 {
   font-family: monospace;
   font-size: 1.1em;
@@ -41,6 +45,12 @@ td.rerun-command {
 
 #refresh-controls {
   float: right;
+}
+
+/* Keep the buttons together: when the row gets narrow, break between the
+ * timestamp and this group rather than splitting the buttons across lines. */
+#refresh-controls .button-group {
+  white-space: nowrap;
 }
 
 .progress-bar {

@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# Const\n\nThe `const` keyword creates a variable that should not be given a new value later. It is useful for values that stay the same, like a maximum number, a title, or an element selected from the page.",
+  "examples": "[{\"name\":\"Store a Number\",\"description\":\"This creates a variable named `maxLives` and stores the number `3`.\",\"code\":\"`const maxLives = 3;`\"},{\"name\":\"Store a Page Element\",\"description\":\"This selects an element from the page and stores it in a variable.\",\"code\":\"`const startButton = document.getElementById(\\\"startButton\\\");`\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "const",
+  "name": "Const",
+  "syntax": "`const maxLives = 3;`",
+  "tips": "- Use `const` when the value should not be reassigned later.\n- Give variables clear names that describe what they store.\n- Remember to use one `=` when assigning a value.\n- Strings need quotation marks, like `\"Space Quest\"`.\n- In Web Lab, `const` is often used to store page elements selected with `document.getElementById()` or `document.querySelector()`.",
+  "methods": [
+
+  ]
+}

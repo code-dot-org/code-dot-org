@@ -1,8 +1,5 @@
-@no_mobile
+@no_mobile @playwright
 Feature: Global Edition - Region Select
-
-  Background:
-    Given Global Edition is enabled
 
   Scenario: User can switch between the international and regional versions using the language selector on a Studio page
     Given I am on "http://studio.code.org/users/sign_in"

@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
@@ -279,7 +280,9 @@ describe('LearningGoal', () => {
     );
     expect(wrapper.find('textarea').props().value).toBe('test feedback');
     expect(wrapper.find('textarea').props().disabled).toBe(true);
-    expect(wrapper.find('FontAwesome').at(0).props().icon).toBe('message');
+    expect(wrapper.find(FontAwesomeV6Icon).at(0).props().iconName).toBe(
+      'message'
+    );
   });
 
   it('shows editable textbox for feedback when the teacher can provide feedback', () => {

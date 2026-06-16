@@ -9,7 +9,7 @@ export default defineConfig({
     // Enable React support
     react(),
     // Generate Typescript declaration files using the Vite default tsconfig
-    dts({tsconfigPath: './tsconfig.app.json'}),
+    dts({tsconfigPath: './tsconfig.app.json', entryRoot: 'src'}),
     // Ensure dependencies are externalized for library build
     // Libraries such as react, react-dom, lodash, etc. should not be bundled by the library.
     // Instead, they are expected to be provided by the host application.
@@ -20,7 +20,13 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: ['src/index.ts'],
+      // Object-form entry so the fixtures chunk emits at dist/fixtures/index.*
+      // alongside the main dist/index.* — the `./mocks` export subpath
+      // resolves to the former.
+      entry: {
+        index: 'src/index.ts',
+        'fixtures/index': 'src/fixtures/index.ts',
+      },
       name: 'music-lab',
       formats: ['es', 'cjs'],
     },

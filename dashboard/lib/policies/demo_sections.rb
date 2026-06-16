@@ -2,8 +2,8 @@
 
 class Policies::DemoSections
   DEMO_TYPES = %i[high middle elementary].freeze
-  DRONE_UNIT_NAME = 'allthethings'
-  DRONE_UNIT_GROUP_NAME = 'original-allthethings-course'
+  ALLTHETHINGS_UNIT_NAME = 'allthethings'
+  ALLTHETHINGS_UNIT_GROUP_NAME = 'original-allthethings-course'
 
   DEMO_SECTION_PRESETS = {
     elementary: {
@@ -17,6 +17,14 @@ class Policies::DemoSections
       avatar_color: 2,
       avatar_emoji: 10,
       ai_chat_access_level: 'essential_only',
+      student_snapshot_default_tour_lesson: 1,
+      review_syllabus_quiz_lesson: 1,
+      review_syllabus_quiz_options: [
+        {label: 'Level 1', correct: false},
+        {label: 'Level 3', correct: false},
+        {label: 'Level 4', correct: false},
+        {label: 'Level 6', correct: true},
+      ].freeze,
     }.freeze,
     middle: {
       section_name: 'Middle School Practice Section',
@@ -29,6 +37,14 @@ class Policies::DemoSections
       avatar_color: 1,
       avatar_emoji: 0,
       ai_chat_access_level: 'enabled',
+      student_snapshot_default_tour_lesson: 3,
+      review_syllabus_quiz_lesson: 3,
+      review_syllabus_quiz_options: [
+        {label: 'Level 4', correct: false},
+        {label: 'Level 5', correct: false},
+        {label: 'Level 8', correct: true},
+        {label: 'Level 11', correct: false},
+      ].freeze,
     }.freeze,
     high: {
       section_name: 'High School Practice Section',
@@ -41,19 +57,27 @@ class Policies::DemoSections
       avatar_color: 8,
       avatar_emoji: 5,
       ai_chat_access_level: 'enabled',
+      student_snapshot_default_tour_lesson: 1,
+      review_syllabus_quiz_lesson: 1,
+      review_syllabus_quiz_options: [
+        {label: 'Level 1', correct: false},
+        {label: 'Level 2', correct: false},
+        {label: 'Level 3', correct: false},
+        {label: 'Level 4', correct: true},
+      ].freeze,
     }.freeze,
   }.freeze
 
   def self.get_preset(demo_type)
-    preset = DEMO_SECTION_PRESETS[demo_type.to_sym]
+    demo_type = demo_type.to_sym
+    preset = DEMO_SECTION_PRESETS[demo_type]
     return nil unless preset
 
-    preset.merge(curriculum_names(preset))
+    preset.merge(curriculum_names(demo_type, preset))
   end
 
   def self.demo_student_ids(demo_type)
-    ids = CDO.demo_student_ids
-    (ids&.dig(demo_type.to_s) || []).map(&:to_i)
+    DemoStudent.where(demo_type: demo_type.to_s).order(:user_id).pluck(:user_id)
   end
 
   def self.preset_view(demo_type)
@@ -73,6 +97,10 @@ class Policies::DemoSections
       avatar_emoji: preset[:avatar_emoji],
       login_type: preset[:login_type],
       participant_type: preset[:participant_type],
+      student_snapshot_default_tour_lesson: preset[:student_snapshot_default_tour_lesson],
+      review_syllabus_quiz_lesson: preset[:review_syllabus_quiz_lesson],
+      review_syllabus_quiz_options: preset[:review_syllabus_quiz_options],
+      grades: preset[:grades],
       unit: {
         name: unit.name,
         display_name: unit.localized_title,
@@ -92,11 +120,23 @@ class Policies::DemoSections
   end
 
   def self.all_demo_student_ids
-    @all_demo_student_ids ||= DEMO_TYPES.flat_map {|type| demo_student_ids(type)}.to_set
+    @all_demo_student_ids ||= DemoStudent.distinct.pluck(:user_id).to_set
   end
 
+  # Per-process cache. Fast enough for hot paths (controller scoping,
+  # ability checks) but stale across workers until `reset_cache!` runs
+  # in each one. Don't use this in security guards that must not be
+  # bypassed by a stale cache — use `demo_student_durable?` instead.
   def self.demo_student?(user_id)
     all_demo_student_ids.include?(user_id.to_i)
+  end
+
+  # Uncached existence check, hits the database directly. Use this in
+  # destructive paths (purge, hard-delete) where a stale per-process
+  # cache on a remote worker would otherwise permit the operation.
+  # Cheap: the demo_students table is small and `user_id` is indexed.
+  def self.demo_student_durable?(user_id)
+    DemoStudent.exists?(user_id: user_id.to_i)
   end
 
   def self.reset_cache!
@@ -115,18 +155,24 @@ class Policies::DemoSections
     UnitGroup.get_from_cache(unit_group_name)
   end
 
-  def self.curriculum_names(preset)
+  def self.curriculum_names(demo_type, preset)
     if CDO.rack_env?(:adhoc)
+      unit_overrides = adhoc_curriculum_overrides(CDO.demo_section_units, :demo_section_units)
+      unit_group_overrides = adhoc_curriculum_overrides(
+        CDO.demo_section_unit_groups,
+        :demo_section_unit_groups
+      )
+
       return {
-        unit_name: CDO.demo_section_unit_name,
-        unit_group_name: CDO.demo_section_unit_group_name,
+        unit_name: unit_overrides.fetch(demo_type.to_s, preset[:unit_name]),
+        unit_group_name: unit_group_overrides.fetch(demo_type.to_s, preset[:unit_group_name]),
       }
     end
 
-    if CDO.ci_webserver?
+    if CDO.ci_webserver? || CDO.rack_env?(:test)
       return {
-        unit_name: DRONE_UNIT_NAME,
-        unit_group_name: DRONE_UNIT_GROUP_NAME,
+        unit_name: ALLTHETHINGS_UNIT_NAME,
+        unit_group_name: ALLTHETHINGS_UNIT_GROUP_NAME,
       }
     end
 
@@ -136,5 +182,21 @@ class Policies::DemoSections
     }
   end
 
-  private_class_method :resolve_unit, :resolve_unit_group, :curriculum_names
+  def self.adhoc_curriculum_overrides(overrides, config_name)
+    return {} if overrides.nil?
+    return overrides if overrides.is_a?(Hash)
+
+    Rails.logger.error(
+      "Ignoring malformed CDO.#{config_name} for demo section curriculum overrides: " \
+        "expected Hash, got #{overrides.class}"
+    )
+    {}
+  end
+
+  private_class_method(
+    :resolve_unit,
+    :resolve_unit_group,
+    :curriculum_names,
+    :adhoc_curriculum_overrides
+  )
 end

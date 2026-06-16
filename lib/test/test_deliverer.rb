@@ -31,6 +31,20 @@ class DelivererTest < Minitest::Test
     assert_nil text
   end
 
+  def test_deliverer_render_with_populated_header
+    template = @deliverer.load_template("dashboard")
+    header, html, text = template.render(
+      "from" => "Code.org Testing <test@code.org>",
+      "subject" => "Testing out our emails",
+      "body" => "<h1>Testing</h1>"
+    )
+    assert_equal "Code.org Testing <test@code.org>", header["from"]
+    assert_equal "Testing out our emails", header["subject"]
+    assert_includes html, "<html><body>"
+    assert_includes html, "<h1>Testing</h1>"
+    assert_nil text
+  end
+
   def test_deliverer_send
     email = "test@deliverer.send"
     contact = Poste2.create_recipient(email, {ip_address: '5.6.7.8.'})

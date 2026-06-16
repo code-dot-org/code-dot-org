@@ -2,9 +2,6 @@
 @no_mobile
 Feature: Global Edition - Farsi MVP - Professional Learning landing page
 
-  Background:
-    Given Global Edition is enabled
-
   @eyes
   Scenario: New teacher without PL history sees relevant content sections for Farsi MVP
     Given I create a teacher named "New Teacher"

@@ -1,7 +1,10 @@
 import {render, screen, fireEvent} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import {vi} from 'vitest';
 
 import '@testing-library/jest-dom';
+import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
+
 import Slider, {SliderProps} from '../index';
 
 describe('Slider Component', () => {
@@ -22,7 +25,7 @@ describe('Slider Component', () => {
   });
 
   it('calls onChange when the slider value is changed using fireEvent.change', () => {
-    const handleChange = jest.fn();
+    const handleChange = vi.fn();
 
     // Render the Slider component
     render(
@@ -56,18 +59,8 @@ describe('Slider Component', () => {
     expect(screen.getByText('50%')).toBeInTheDocument();
   });
 
-  // TODO: Uncomment when working on adding steps support OR working on adding center mark
-  // it('supports centered mode and displays the correct fill direction', () => {
-  //   renderComponent({isCentered: true, minValue: -100, maxValue: 100});
-  //
-  //   const slider = screen.getByRole('slider');
-  //   expect(slider).toHaveAttribute('value', '50');
-  //
-  //   // Check that the center mark is rendered correctly
-  //   const centerMark = screen.getByTestId('slider-center-mark');
-  //   expect(centerMark).toBeInTheDocument();
-  //   expect(centerMark).toHaveStyle('left: calc(50% - 1px)');
-  // });
+  // TODO: write when steps support / center-mark land — see TODO in Slider.tsx
+  it.todo('supports centered mode and displays the correct fill direction');
 
   it('supports RTL mode and mirrors the background gradient', () => {
     renderComponent({isRtl: true});
@@ -77,11 +70,27 @@ describe('Slider Component', () => {
   });
 
   it('buttons increment and decrement value correctly', async () => {
-    const handleChange = jest.fn();
+    const handleChange = vi.fn();
     renderComponent({
       onChange: handleChange,
-      leftButtonProps: {icon: {iconName: 'minus'}, 'aria-label': 'Decrease'},
-      rightButtonProps: {icon: {iconName: 'plus'}, 'aria-label': 'Increase'},
+      leftButtonProps: {
+        children: (
+          <FontAwesomeV6Icon
+            iconName="minus"
+            title="Decrease"
+            aria-label="Decrease"
+          />
+        ),
+      },
+      rightButtonProps: {
+        children: (
+          <FontAwesomeV6Icon
+            iconName="plus"
+            title="Increase"
+            aria-label="Increase"
+          />
+        ),
+      },
     });
 
     const leftButton = screen.getByLabelText('Decrease');
@@ -99,7 +108,7 @@ describe('Slider Component', () => {
   });
 
   it('disables interactions when disabled prop is set', async () => {
-    const handleChange = jest.fn();
+    const handleChange = vi.fn();
     renderComponent({disabled: true, onChange: handleChange});
 
     const slider = screen.getByRole('slider');
@@ -121,26 +130,7 @@ describe('Slider Component', () => {
     expect(slider).toHaveAttribute('max', '90');
   });
 
-  // TODO: Uncomment this test once we have a solution for snapping to steps
-  // it('handles snapping to steps correctly', async () => {
-  //   const handleChange = jest.fn();
-  //   renderComponent({
-  //     onChange: handleChange,
-  //     steps: [0, 25, 50, 75, 100],
-  //     value: 25,
-  //   });
-  //
-  //   const slider = screen.getByRole('slider');
-  //   await userEvent.type(slider, '35');
-  //
-  //   expect(handleChange).toHaveBeenCalled();
-  //   expect(slider).toHaveValue('25'); // Should snap back to nearest step
-  // });
-  //
-  // it('renders correctly with step marks when steps are provided', () => {
-  //   renderComponent({steps: [0, 25, 50, 75, 100], value: 50});
-  //
-  //   const stepMarks = screen.getAllByTestId('step-mark');
-  //   expect(stepMarks.length).toBe(5); // Should render 5 step marks
-  // });
+  // TODO: write when the `steps` prop lands — see TODO in Slider.tsx
+  it.todo('handles snapping to steps correctly');
+  it.todo('renders correctly with step marks when steps are provided');
 });

@@ -196,10 +196,10 @@ class HomeControllerTest < ActionController::TestCase
     assert_redirected_to '/users/sign_in'
   end
 
-  test "language is determined from cdo.locale" do
+  test "language is determined from I18n.locale" do
     skip 'TODO: get :home, and look for a div that still exists'
 
-    @request.env['cdo.locale'] = "es-ES"
+    I18n.locale = "es-ES"
 
     get :index
 

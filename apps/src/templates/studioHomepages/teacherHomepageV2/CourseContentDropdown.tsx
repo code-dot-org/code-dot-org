@@ -31,7 +31,7 @@ export interface UnitLessonOption {
   text: string;
 }
 
-export const getLessonEventName = (lessonValue: string) =>
+const getLessonEventName = (lessonValue: string) =>
   lessonValue.includes('/lessons/')
     ? EVENTS.SECTION_CARD_JUMP_TO_LESSON_CLICKED
     : EVENTS.SECTION_CARD_JUMP_TO_UNIT_OVERVIEW_CLICKED;
