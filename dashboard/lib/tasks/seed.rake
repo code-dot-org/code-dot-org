@@ -81,7 +81,6 @@ namespace :seed do
   SPECIAL_UI_TEST_SCRIPTS = Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/scripts_json/*.script_json").sort.freeze
   UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + %w(
     20-hour
-    algebra
     allthehiddenthings
     allthelessonplans
     alltheplcthings
@@ -148,7 +147,6 @@ namespace :seed do
     csa-postap-se-and-computer-vision-2024
   ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
   ADHOC_SCRIPTS = MOST_RECENT_ADHOC_SCRIPTS + %w(
-    algebra
     allthehiddenthings
     allthelessonplans
     alltheplcthings
@@ -265,7 +263,6 @@ namespace :seed do
     # seed those courses that are needed for UI tests
     %w(allthethingscourse
        20-hour
-       algebra
        allthelessonplans
        alltheselfpacedplthings
        allthettsthings
