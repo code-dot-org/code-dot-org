@@ -1,5 +1,6 @@
 import Tags from '@code-dot-org/component-library/tags';
 import Toggle from '@code-dot-org/component-library/toggle';
+import {Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useCallback, useEffect, useState, useMemo} from 'react';
 import {connect} from 'react-redux';
@@ -166,7 +167,9 @@ const SummaryResponses = ({
           {/* Section dropdown */}
           {hasSections && (
             <label className={styles.sectionSelector}>
-              {i18n.responsesForClassSection()}
+              <MuiTypography variant="body2" component="p">
+                {i18n.responsesForClassSection()}
+              </MuiTypography>
               <SectionSelector reloadOnChange={true} />
             </label>
           )}

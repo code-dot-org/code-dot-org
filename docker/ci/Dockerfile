@@ -178,6 +178,15 @@ RUN mkdir sauce_connect && \
     cd .. && \
     rm -rf sauce_connect
 
+# install Playwright browsers + their system deps for the e2e-tests suite
+# (frontend/packages/e2e-tests). Version tracks the @playwright/test catalog pin
+# in frontend/.yarnrc.yml. Browsers live at PLAYWRIGHT_BROWSERS_PATH and are made
+# world-readable so the non-root `ci` user finds them at runtime.
+ENV PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
+RUN npx -y playwright@1.59.1 install-deps chromium firefox webkit && \
+    npx -y playwright@1.59.1 install chromium firefox webkit && \
+    chmod -R a+rX /ms-playwright
+
 USER ${USER}
 
 WORKDIR /home/${USER}

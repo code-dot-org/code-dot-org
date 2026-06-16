@@ -1,5 +1,5 @@
 import Modal from '@code-dot-org/component-library/modal';
-import {Button as MuiButton} from '@mui/material';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import $ from 'jquery';
 import _ from 'lodash';
@@ -163,7 +163,12 @@ function LessonLockDialog({
 
   const renderInstructionsAndButtons = () => (
     <>
-      <table className={classNames(hiddenUnlessSelectedSection)}>
+      <table
+        className={classNames(
+          styles.instructionsTable,
+          hiddenUnlessSelectedSection
+        )}
+      >
         <tbody>
           <tr>
             <td>1. {i18n.allowEditingInstructions()}</td>
@@ -211,9 +216,12 @@ function LessonLockDialog({
 
   const renderStudentTable = () => (
     <>
-      <div className={classNames(styles.title, hiddenUnlessSelectedSection)}>
+      <MuiTypography
+        variant="h4"
+        className={classNames(hiddenUnlessSelectedSection)}
+      >
         {i18n.studentControl()}
-      </div>
+      </MuiTypography>
       <div
         className={classNames(
           styles.descriptionText,
@@ -256,11 +264,15 @@ function LessonLockDialog({
 
   return (
     <Modal
+      className={styles.modal}
       onClose={handleClose}
-      title={i18n.assessmentSteps()}
+      title={i18n.assessmentLockSettings()}
       customContent={
         <div id="dsco-dialog-description" className={styles.main}>
           <div className={styles.sectionSelectorRow}>
+            <MuiTypography component="span" variant="h4">
+              {i18n.assessmentSteps()}
+            </MuiTypography>
             <SectionSelector requireSelection={hasSelectedSection} />
           </div>
           {lessonIsHidden && renderHiddenWarning()}

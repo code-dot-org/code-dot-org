@@ -221,7 +221,7 @@ class TeacherPanel extends React.Component {
             <div style={styles.sectionInfo}>
               <div>{i18n.viewingSection()}</div>
               <SectionSelector
-                style={{margin: '0px 10px'}}
+                className={moduleStyles.sectionSelector}
                 reloadOnChange={true}
               />
               {selectedSection && (

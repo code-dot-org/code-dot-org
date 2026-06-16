@@ -4,7 +4,6 @@ import {Typography, Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 import styles from './selfPacedProgressTable.module.scss';
@@ -72,7 +71,7 @@ const CourseRow = ({
             variant="outlined"
             color="secondary"
             size="small"
-            href={studio(finish_url)}
+            href={finish_url}
             startIcon={<FontAwesomeV6Icon iconName="print" iconStyle="solid" />}
           >
             {i18n.selfPacedPlPrintCertificates()}
