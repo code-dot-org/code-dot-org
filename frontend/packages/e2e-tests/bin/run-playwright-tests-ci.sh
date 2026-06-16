@@ -36,4 +36,4 @@ yarn install --immutable
 if [ "${PLAYWRIGHT_PROVIDER:-}" = dtt ]; then
   yarn exec playwright install chromium firefox webkit
 fi
-yarn run test:ui:ci
+yarn run test:ui

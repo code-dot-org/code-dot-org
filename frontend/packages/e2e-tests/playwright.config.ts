@@ -22,9 +22,8 @@ export default defineConfig({
   forbidOnly: isAutomated,
   // retry in automated lanes so a flake can't pass one lane and fail another.
   retries: isAutomated ? 2 : 0,
-  // @no_ci tests need a live, connected environment. The Drone PR-level check runs
-  // against its own freshly-built instance (no live env), so skip them there; the
-  // DTT and GHA run against the deployed env. Mirrors the Cucumber --ci/Drone skip.
+  // @no_ci tests need a live, connected environment; skip them on Drone, which
+  // runs against its own freshly-built instance. Mirrors the Cucumber --ci skip.
   grepInvert: provider === 'drone' ? /@no_ci/ : undefined,
   // 100% only on GHA (dedicated runner, external server); Drone/DTT share CPU.
   workers: provider === 'gha' ? '100%' : undefined,
