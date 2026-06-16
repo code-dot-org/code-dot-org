@@ -813,38 +813,41 @@ export default function ReactFlowCanvas({
 
       // Shift+click: toggle this node in the multi-selection. Group nodes,
       // already-grouped children, and locked nodes are excluded.
-      if (
-        event.shiftKey &&
-        nodeType !== 'group' &&
-        !isGroupedChildNode(fullNode) &&
-        !fullNode?.data?.locked
-      ) {
-        setMultiSelectedNodeIds(prev => {
-          const next = new Set(prev);
-          // On the first Shift+click of a fresh selection, automatically include
-          // the anchor (last plain-clicked groupable target) so plain-click → Shift+click
-          // selects two nodes in one extra click, matching standard UX.
-          // Skip anchors that are already grouped or locked.
-          if (next.size === 0) {
-            multiSelectAnchorRef.current?.forEach(anchorId => {
-              const anchorNode = nodes.find(n => n.id === anchorId);
-              if (
-                anchorId !== node.id &&
-                !isGroupedChildNode(anchorNode) &&
-                !anchorNode?.data?.locked
-              ) {
-                next.add(anchorId);
-              }
-            });
-          }
-          if (next.has(node.id)) {
-            next.delete(node.id);
-          } else {
-            next.add(node.id);
-          }
-          return next;
-        });
-        closeToolbar();
+      if (event.shiftKey) {
+        if (
+          nodeType !== 'group' &&
+          !isGroupedChildNode(fullNode) &&
+          !fullNode?.data?.locked
+        ) {
+          setMultiSelectedNodeIds(prev => {
+            const next = new Set(prev);
+            // On the first Shift+click of a fresh selection, automatically include
+            // the anchor (last plain-clicked groupable target) so plain-click → Shift+click
+            // selects two nodes in one extra click, matching standard UX.
+            // Skip anchors that are already grouped or locked.
+            if (next.size === 0) {
+              multiSelectAnchorRef.current?.forEach(anchorId => {
+                const anchorNode = nodes.find(n => n.id === anchorId);
+                if (
+                  anchorId !== node.id &&
+                  !isGroupedChildNode(anchorNode) &&
+                  !anchorNode?.data?.locked
+                ) {
+                  next.add(anchorId);
+                }
+              });
+            }
+            if (next.has(node.id)) {
+              next.delete(node.id);
+            } else {
+              next.add(node.id);
+            }
+            return next;
+          });
+          closeToolbar();
+        }
+        // Excluded targets (group, grouped child, locked): silently ignore so
+        // an in-progress multi-selection is not cleared.
         return;
       }
 
