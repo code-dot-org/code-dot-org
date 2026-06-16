@@ -1,7 +1,7 @@
 import {defineConfig, devices} from '@playwright/test';
 
-// Set by each automated lane's entry point (GHA workflow, rake task); unset = local.
-const provider = process.env.PLAYWRIGHT_PROVIDER; // 'gha' | 'drone' | 'dtt' | undefined
+// Set by each automated lane's entry point (GitHub Actions workflow, rake task); unset = local.
+const provider = process.env.PLAYWRIGHT_PROVIDER; // 'github-actions' | 'drone' | 'dtt' | undefined
 const isAutomated = !!provider;
 const htmlReport = {outputFolder: 'playwright-report', open: 'never'} as const;
 
@@ -25,8 +25,8 @@ export default defineConfig({
   // @no_ci tests need a live, connected environment; skip them on Drone, which
   // runs against its own freshly-built instance. Mirrors the Cucumber --ci skip.
   grepInvert: provider === 'drone' ? /@no_ci/ : undefined,
-  // 100% only on GHA (dedicated runner, external server); Drone/DTT share CPU.
-  workers: provider === 'gha' ? '100%' : undefined,
+  // 100% only on GitHub Actions (dedicated runner, external server); Drone/DTT share CPU.
+  workers: provider === 'github-actions' ? '100%' : undefined,
   reporter: isAutomated
     ? [
         ['list'],

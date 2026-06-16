@@ -36,7 +36,7 @@ jobs:
         # Step-level env: job-level env isn't reliably forwarded through yarn/turbo.
         # The container pre-installs browsers at /ms-playwright.
         env:
-          PLAYWRIGHT_PROVIDER: gha
+          PLAYWRIGHT_PROVIDER: github-actions
           PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
           # Firefox/WebKit won't launch as root unless $HOME is owned by the user;
           # the image's /github/home is pwuser's, so point HOME at root's own dir.
