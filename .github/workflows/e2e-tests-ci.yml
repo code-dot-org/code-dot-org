@@ -33,11 +33,12 @@ jobs:
         uses: ./.github/actions/frontend/setup
 
       - name: E2E Tests
-        # Step-level env so the browser path reaches the playwright subprocess
-        # (job-level env is not reliably forwarded through yarn/turbo). The
-        # container pre-installs browsers at /ms-playwright. CI=true is set by
-        # GitHub Actions, which flips playwright.config to its CI reporter lane.
+        # Step-level env so these reach the playwright subprocess (job-level env is
+        # not reliably forwarded through yarn/turbo). The container pre-installs
+        # browsers at /ms-playwright. PLAYWRIGHT_PROVIDER=gha selects the GHA lane
+        # in playwright.config.ts (reports + 100% workers).
         env:
+          PLAYWRIGHT_PROVIDER: gha
           PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
           # Firefox/WebKit won't launch as root unless $HOME is owned by the user;
           # the image's /github/home is pwuser's, so point HOME at root's own dir.
