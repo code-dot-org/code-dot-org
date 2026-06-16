@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import color from '@cdo/apps/util/color';
-
 class LessonExtrasFlagIcon extends React.PureComponent {
   static propTypes = {
     isPerfect: PropTypes.bool,
@@ -50,16 +48,16 @@ export default LessonExtrasFlagIcon;
 
 const styles = {
   default: {
-    color: color.lighter_gray,
+    color: 'var(--text-neutral-tertiary)',
   },
   selected: {
-    color: color.charcoal,
+    color: 'var(--text-neutral-primary)',
   },
   perfect: {
-    color: color.level_perfect,
+    color: 'var(--text-success-primary)',
   },
   hover: {
-    color: color.orange,
+    color: 'var(--text-warning-primary)',
   },
   smallStack: {
     width: '1em',

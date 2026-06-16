@@ -48,7 +48,7 @@ Feature: Unit overview page
     # verify name format in summary view
     And element "td:contains(2. Maze)" is visible
 
-    And I click selector ".uitest-toggle-detail"
+    And I click selector "#uitest-toggle-detail"
     And I wait until element "td:contains(Maze)" is not visible
     And I wait until element "span:contains(Maze)" is visible
     # verify name format in detail view

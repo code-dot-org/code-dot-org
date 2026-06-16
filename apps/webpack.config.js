@@ -176,7 +176,7 @@ function devtool({minify} = {}) {
   } else if (process.env.DEBUG_MINIFIED) {
     return 'eval-source-map';
   } else if (process.env.DEV) {
-    return 'eval-source-map';
+    return process.env.APPS_DEVTOOL || 'eval-cheap-module-source-map';
   } else {
     return 'inline-source-map';
   }
@@ -243,12 +243,17 @@ const WEBPACK_ALIASES = {
 const WEBPACK_BASE_CONFIG = {
   plugins: [
     ...nodePolyfillConfig.plugins,
-    // Run TypeScript type checking in parallel with the build
-    new ForkTsCheckerWebpackPlugin({
-      // tsconfig.build.json only type-checks TypeScript files.
-      // We manually set a memoryLimit here to avoid a JavaScript heap out of memory error in yarn start.
-      typescript: {configFile: 'tsconfig.build.json', memoryLimit: 2560},
-    }),
+    // Run TypeScript type checking in parallel with the build, unless
+    // SKIP_TYPECHECK is set.
+    ...(envConstants.SKIP_TYPECHECK
+      ? []
+      : [
+          new ForkTsCheckerWebpackPlugin({
+            // tsconfig.build.json only type-checks TypeScript files.
+            // We manually set a memoryLimit here to avoid a JavaScript heap out of memory error in yarn start.
+            typescript: {configFile: 'tsconfig.build.json', memoryLimit: 2560},
+          }),
+        ]),
   ],
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],

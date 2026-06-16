@@ -11,52 +11,6 @@
       "source": {
         "nodes": [
           {
-            "id": "JgzX34mK4F_tPZqUVUzqX",
-            "type": "shape",
-            "position": {
-              "x": -793.0874772347363,
-              "y": 166.21871984428668
-            },
-            "style": {
-              "width": 736.4923735859911,
-              "height": 1132.9211136368172
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "var(--sketchlab-bg-blue)",
-              "strokeColor": "#1e1e1e"
-            },
-            "measured": {
-              "width": 774,
-              "height": 1254
-            },
-            "dragging": false,
-            "zIndex": -1,
-            "width": 774,
-            "height": 1254,
-            "resizing": false
-          },
-          {
-            "id": "Z7XqbIyy3wiM7mH-3yT4X",
-            "type": "text",
-            "position": {
-              "x": -313.5743045772573,
-              "y": -21.278042549245143
-            },
-            "data": {
-              "text": "Add wireframe components or pre-built sections\nto create your pages below",
-              "fontColor": "#1e1e1e",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 497,
-              "height": 75
-            },
-            "dragging": false
-          },
-          {
             "id": "_QHOX2XDKJzWWRKpascyU",
             "type": "shape",
             "position": {
@@ -70,154 +24,538 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "transparent",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
               "strokeColor": "#1e1e1e"
             },
             "measured": {
-              "width": 627,
-              "height": 972
-            }
+              "width": 651,
+              "height": 672
+            },
+            "width": 651,
+            "height": 672,
+            "resizing": false
           },
           {
             "id": "FpNEJgFlN1Xbo3L-h7aYO",
             "type": "text",
             "position": {
-              "x": 258.01470306213355,
-              "y": 10.148829187469303
+              "x": 232.86407560714696,
+              "y": 35.299456642455894
             },
             "data": {
-              "text": "Page 1",
+              "text": "1. Original State",
               "fontColor": "#1e1e1e",
-              "fontSize": "large",
+              "fontSize": "extra-large",
               "showHandles": false
             },
             "measured": {
-              "width": 81,
-              "height": 47
-            }
-          },
-          {
-            "id": "k6N3a3hmJZUnB-QaTJCVJ",
-            "type": "text",
-            "position": {
-              "x": 998.9634828296096,
-              "y": 8.442881909669723
-            },
-            "data": {
-              "text": "Page 2",
-              "fontColor": "#1e1e1e",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 84,
-              "height": 47
-            }
-          },
-          {
-            "id": "TIBRtnhBQpMbqvds0h3ur",
-            "type": "text",
-            "position": {
-              "x": -550.6242596391037,
-              "y": 422.71824988519353
-            },
-            "data": {
-              "text": "Images, Videos, & Icons",
-              "fontColor": "#000",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 251,
-              "height": 47
+              "width": 227,
+              "height": 57
             },
             "dragging": false
           },
           {
-            "id": "7rTlalsCE0rjvfT-fCasc",
-            "type": "text",
+            "id": "oLvTJJQ-SYYz57A_QnOqP",
+            "type": "shape",
             "position": {
-              "x": -545.9389438369483,
-              "y": 110.22204345533106
+              "x": 898.8330742552798,
+              "y": 96.3455084391046
+            },
+            "style": {
+              "width": 627.0448853689527,
+              "height": 971.5592311660703
             },
             "data": {
-              "text": "Wireframe Components",
-              "fontColor": "#1e1e1e",
-              "fontSize": "large",
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 633,
+              "height": 669
+            },
+            "dragging": false,
+            "width": 633,
+            "height": 669,
+            "resizing": false
+          },
+          {
+            "id": "avElB5ET8dk7M2rJE1jE_",
+            "type": "image",
+            "position": {
+              "x": 364.982466245272,
+              "y": 108.37979218339302
+            },
+            "style": {
+              "width": 163.17394229218516,
+              "height": 149.79902898954705
+            },
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/79c46a678c6ad7bec738f3e0dcd3d77a712711cc.png",
+              "altText": "",
               "showHandles": false
             },
             "measured": {
               "width": 255,
-              "height": 47
+              "height": 308
             },
-            "dragging": false
+            "dragging": false,
+            "width": 255,
+            "height": 308,
+            "resizing": false
           },
           {
-            "id": "FbgxPT6yV_KF6GFOkKfPk",
+            "id": "05954bb9-c602-48a7-834e-25761f531242",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/a552edcd-6a2b-4dbe-9227-897fd3cdefca.png",
+              "altText": "Size=Default",
+              "showHandles": false
+            },
+            "position": {
+              "x": 81.4107871548047,
+              "y": 120.93155583479322
+            },
+            "width": 210,
+            "height": 133,
+            "measured": {
+              "width": 210,
+              "height": 133
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "80c2969f-5bdb-4d82-8692-04d1c00326f0",
             "type": "text",
             "position": {
-              "x": -301.61559941787084,
-              "y": 1681.5973095432269
+              "x": 1065.5605966716266,
+              "y": 29.68398796580729
             },
             "data": {
-              "text": "Gallery Card",
-              "fontColor": "#000000",
-              "fontSize": "large",
+              "text": "2. Apply Price Filter",
+              "fontColor": "#1e1e1e",
+              "fontSize": "extra-large",
               "showHandles": false
             },
             "measured": {
-              "width": 139,
-              "height": 47
+              "width": 276,
+              "height": 57
             },
             "dragging": false
           },
           {
-            "id": "AGeQVlOHk3etO0ryuxnQB",
-            "type": "text",
+            "id": "2d75ed75-bebb-4e96-8620-b58d6973dc24",
+            "type": "image",
             "position": {
-              "x": -517.5200456666632,
-              "y": 829.2921782454221
+              "x": 1239.6304299172218,
+              "y": 96.84754039520055
+            },
+            "style": {
+              "width": 163.17394229218516,
+              "height": 149.79902898954705
             },
             "data": {
-              "text": "Buttons & Inputs",
-              "fontColor": "#000",
-              "fontSize": "large",
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/79c46a678c6ad7bec738f3e0dcd3d77a712711cc.png",
+              "altText": "",
               "showHandles": false
             },
             "measured": {
-              "width": 191,
-              "height": 60
+              "width": 255,
+              "height": 308
             },
-            "width": 191,
-            "height": 60,
-            "resizing": false,
-            "dragging": false
+            "dragging": false,
+            "width": 255,
+            "height": 308,
+            "resizing": false
           },
           {
-            "id": "7bBlsG55ju0q-Vkn5GKVw",
-            "type": "text",
-            "position": {
-              "x": -744.1088127735593,
-              "y": 1681.7525270992587
-            },
-            "data": {
-              "text": "Hero Section",
-              "fontColor": "#000000",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 148,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
-            "id": "Nbg0dpcgyiuhohNYZrLb2",
+            "id": "a9c97b31-af8b-44fe-832c-447555b5e8eb",
             "type": "shape",
             "position": {
-              "x": -546.2047976631457,
-              "y": 1269.8513149849953
+              "x": 1787.213716068709,
+              "y": 94.08345675645421
+            },
+            "style": {
+              "width": 627.0448853689527,
+              "height": 971.5592311660703
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "#1e1e1e"
+            },
+            "measured": {
+              "width": 630,
+              "height": 672
+            },
+            "dragging": false,
+            "width": 630,
+            "height": 672,
+            "resizing": false
+          },
+          {
+            "id": "d66912c3-1baa-48ec-905b-2c8c0f8abf62",
+            "type": "image",
+            "position": {
+              "x": 2122.808876522066,
+              "y": 99.84987762654012
+            },
+            "style": {
+              "width": 163.17394229218516,
+              "height": 149.79902898954705
+            },
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/79c46a678c6ad7bec738f3e0dcd3d77a712711cc.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 255,
+              "height": 308
+            },
+            "dragging": false,
+            "width": 255,
+            "height": 308,
+            "resizing": false
+          },
+          {
+            "id": "536a5df5-b0e4-4c20-bc56-c838307a1e0d",
+            "type": "text",
+            "position": {
+              "x": 1929.0586699759008,
+              "y": 29.683987965807283
+            },
+            "data": {
+              "text": "3. Apply Category Filter",
+              "fontColor": "#1e1e1e",
+              "fontSize": "extra-large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 334,
+              "height": 57
+            },
+            "dragging": false
+          },
+          {
+            "id": "49a62089-b785-404c-b85d-7a9e726d981b",
+            "type": "text",
+            "position": {
+              "x": 1596.639886585054,
+              "y": 1012.1930930959797
+            },
+            "data": {
+              "text": "4a. Reset Path",
+              "fontColor": "#1e1e1e",
+              "fontSize": "extra-large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 210,
+              "height": 57
+            },
+            "dragging": false
+          },
+          {
+            "id": "cea42ac8-6ae5-42f6-8beb-df8695f2ae99",
+            "type": "text",
+            "position": {
+              "x": 2354.921242393693,
+              "y": 1014.45514477863
+            },
+            "data": {
+              "text": "4b. Undo Path",
+              "fontColor": "#1e1e1e",
+              "fontSize": "extra-large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 208,
+              "height": 57
+            },
+            "dragging": false
+          },
+          {
+            "id": "d2501c3d-145b-4536-9287-82a1574c1735",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/a552edcd-6a2b-4dbe-9227-897fd3cdefca.png",
+              "altText": "Size=Default",
+              "showHandles": false
+            },
+            "position": {
+              "x": 958.716033536673,
+              "y": 118.66950415214293
+            },
+            "width": 210,
+            "height": 133,
+            "measured": {
+              "width": 210,
+              "height": 133
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "2b8cb77d-3fe8-4b75-b261-0f9b9e87b96c",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/a552edcd-6a2b-4dbe-9227-897fd3cdefca.png",
+              "altText": "Size=Default",
+              "showHandles": false
+            },
+            "position": {
+              "x": 1847.3315383317931,
+              "y": 107.35924573889079
+            },
+            "width": 210,
+            "height": 133,
+            "measured": {
+              "width": 210,
+              "height": 133
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "aca85b92-bd07-4e22-b99b-21a00314eb79",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/a552edcd-6a2b-4dbe-9227-897fd3cdefca.png",
+              "altText": "Size=Default",
+              "showHandles": false
+            },
+            "position": {
+              "x": 1441.075575884372,
+              "y": 1055.1884899282263
+            },
+            "width": 210,
+            "height": 133,
+            "measured": {
+              "width": 210,
+              "height": 133
+            },
+            "dragging": false,
+            "resizing": false,
+            "zIndex": 3
+          },
+          {
+            "id": "2bc41556-936d-4ea2-99eb-b05149fc9db6",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/a552edcd-6a2b-4dbe-9227-897fd3cdefca.png",
+              "altText": "Size=Default",
+              "showHandles": false
+            },
+            "position": {
+              "x": 2216.6438934005205,
+              "y": 1056.1922023894701
+            },
+            "width": 210,
+            "height": 133,
+            "measured": {
+              "width": 210,
+              "height": 133
+            },
+            "dragging": false,
+            "resizing": false,
+            "zIndex": 5
+          },
+          {
+            "id": "f73d5436-0864-40cb-88a1-33d33ffbf574",
+            "type": "image",
+            "position": {
+              "x": 1751.930815483436,
+              "y": 1054.6053577352914
+            },
+            "style": {
+              "width": 163.17394229218516,
+              "height": 149.79902898954705
+            },
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/79c46a678c6ad7bec738f3e0dcd3d77a712711cc.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 255,
+              "height": 308
+            },
+            "dragging": false,
+            "width": 255,
+            "height": 308,
+            "resizing": false,
+            "zIndex": 2
+          },
+          {
+            "id": "9c2b6af6-705b-40a6-a3aa-c94bc1fb086c",
+            "type": "image",
+            "position": {
+              "x": 2486.367746846987,
+              "y": 1068.6057168032398
+            },
+            "style": {
+              "width": 163.17394229218516,
+              "height": 149.79902898954705
+            },
+            "data": {
+              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/79c46a678c6ad7bec738f3e0dcd3d77a712711cc.png",
+              "altText": "",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 255,
+              "height": 308
+            },
+            "dragging": false,
+            "width": 255,
+            "height": 308,
+            "resizing": false,
+            "zIndex": 4
+          },
+          {
+            "id": "d29f3a25-1ae2-42a8-8fdd-bab927ec5b8d",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "PRICE",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 975.1622781371653,
+              "y": 210.35265525668797
+            },
+            "width": 189,
+            "height": 60,
+            "measured": {
+              "width": 189,
+              "height": 60
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "16690602-ae42-4a17-a07c-7c059e1280ba",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "PRICE",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 1860.8741963934888,
+              "y": 201.30444852608636
+            },
+            "width": 189,
+            "height": 60,
+            "measured": {
+              "width": 189,
+              "height": 60
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "cedc9030-d34f-43ed-a4f9-75ad08bed650",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "CATEGORY",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 1862.123906733506,
+              "y": 271.4280506882488
+            },
+            "width": 189,
+            "height": 60,
+            "measured": {
+              "width": 189,
+              "height": 60
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "af00c87e-5049-4df7-a690-d99c5e84d30f",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "ALL PRODUCTS",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 96.02021176667103,
+              "y": 446.4636334710583
+            },
+            "width": 554,
+            "height": 279,
+            "measured": {
+              "width": 554,
+              "height": 279
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "50340908-ae49-4277-ab8c-f7f13ee45fac",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "FILTERED",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "fontColor": "var(--sketchlab-stroke-red)",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 947.0316579260826,
+              "y": 472.34991444145624
+            },
+            "width": 554,
+            "height": 279,
+            "measured": {
+              "width": 554,
+              "height": 279
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "01179e8c-2826-435b-b508-d03657590a91",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "2 FILTERS",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "fontSize": "extra-large",
+              "fontColor": "var(--sketchlab-stroke-red)"
+            },
+            "position": {
+              "x": 1830.5015156178206,
+              "y": 466.24643512571424
+            },
+            "width": 554,
+            "height": 279,
+            "measured": {
+              "width": 554,
+              "height": 279
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "d24ca493-1741-4ad6-b63e-22191d91b8a8",
+            "type": "shape",
+            "position": {
+              "x": 395.5243870669869,
+              "y": 387.35071307013675
             },
             "style": {
               "width": 176.55484068627447,
@@ -236,363 +574,57 @@
             "dragging": false
           },
           {
-            "id": "MXpn2_CPMZ9-T2unTody_",
+            "id": "1ef90cbc-d444-4cfb-8637-cfcbfbb5b177",
             "type": "shape",
             "position": {
-              "x": -551.3151490612345,
-              "y": 1314.0738499077238
+              "x": 1281.8384256402935,
+              "y": 387.35071307013675
             },
             "style": {
-              "width": 310.6081495098033,
-              "height": 13.059129901960773
+              "width": 176.55484068627447,
+              "height": 25.742953431372598
             },
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#c8c8c8",
-              "strokeColor": "#495057"
-            },
-            "measured": {
-              "width": 311,
-              "height": 13
-            },
-            "dragging": false
-          },
-          {
-            "id": "A7PtDhLqFIS37X-J040fd",
-            "type": "shape",
-            "position": {
-              "x": -546.7610553224595,
-              "y": 1348.495213848379
-            },
-            "style": {
-              "width": 310.6081495098033,
-              "height": 13.059129901960773
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "#c8c8c8",
-              "strokeColor": "#495057"
-            },
-            "measured": {
-              "width": 311,
-              "height": 13
-            },
-            "dragging": false
-          },
-          {
-            "id": "7S1vcXjhex8jr8oEsHnNQ",
-            "type": "shape",
-            "position": {
-              "x": -544.6609162330639,
-              "y": 1381.3319552474977
-            },
-            "style": {
-              "width": 265.0773590686267,
-              "height": 11.550245098039113
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "#c8c8c8",
-              "strokeColor": "#495057"
-            },
-            "measured": {
-              "width": 265,
-              "height": 12
-            },
-            "dragging": false
-          },
-          {
-            "id": "GZ798EwTOo8h_zMxM6VT5",
-            "type": "text",
-            "position": {
-              "x": -690.5019336806422,
-              "y": 1269.6813265383275
-            },
-            "data": {
-              "text": "(Title)",
-              "fontColor": "#000000",
-              "fontSize": "medium",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 60,
-              "height": 39
-            },
-            "dragging": false
-          },
-          {
-            "id": "T8EdXQDQ9JT7H1Tpx1_1t",
-            "type": "text",
-            "position": {
-              "x": -699.88402783297,
-              "y": 1343.3999449402943
-            },
-            "data": {
-              "text": "(Body Text)",
-              "fontColor": "#000000",
-              "fontSize": "medium",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 100,
-              "height": 39
-            },
-            "dragging": false
-          },
-          {
-            "id": "Uf0tLSpxVEoNZGEg5iDxR",
-            "type": "text",
-            "position": {
-              "x": -674.5957036807681,
-              "y": 1174.023756896391
-            },
-            "data": {
-              "text": "Text Blocks",
-              "fontColor": "#000000",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 129,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
-            "id": "lbx9w9gvgrmjWwTT4G5ur",
-            "type": "text",
-            "position": {
-              "x": -539.2005019953557,
-              "y": 169.4187420301894
-            },
-            "data": {
-              "text": "Navigation / Header",
-              "fontColor": "#000000",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 217,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
-            "id": "oLvTJJQ-SYYz57A_QnOqP",
-            "type": "shape",
-            "position": {
-              "x": 778.9443350748086,
-              "y": 91.82140507380376
-            },
-            "style": {
-              "width": 627.0448853689527,
-              "height": 971.5592311660703
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
-            },
-            "measured": {
-              "width": 627,
-              "height": 972
-            }
-          },
-          {
-            "id": "avElB5ET8dk7M2rJE1jE_",
-            "type": "image",
-            "position": {
-              "x": -734.3746515228229,
-              "y": 470.3080614074572
-            },
-            "style": {
-              "width": 163.17394229218516,
-              "height": 149.79902898954705
-            },
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/79c46a678c6ad7bec738f3e0dcd3d77a712711cc.png",
-              "altText": "",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 163,
-              "height": 150
-            },
-            "dragging": false
-          },
-          {
-            "id": "xv8O1sgNbTfBCWcyeoLyX",
-            "type": "image",
-            "position": {
-              "x": -732.4334808612379,
-              "y": 640.0428635205378
-            },
-            "style": {
-              "width": 158.71463740195213,
-              "height": 150.64440160185288
-            },
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/b3a262541108a6bc6efada4843079a526e494f0f.png",
-              "altText": "",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 159,
-              "height": 151
-            },
-            "dragging": false
-          },
-          {
-            "id": "VaVWwkAQLKNEMQiZ-Eroy",
-            "type": "shape",
-            "position": {
-              "x": -734.4278568135607,
-              "y": 238.50882332982303
-            },
-            "style": {
-              "width": 164.87851581501013,
-              "height": 66.52994098516939
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "Logo",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
-            },
-            "measured": {
-              "width": 165,
-              "height": 67
-            },
-            "dragging": false
-          },
-          {
-            "id": "FehqbfiByo0chx10s6k7K",
-            "type": "text",
-            "position": {
-              "x": -466.76628566411773,
-              "y": 243.63334023133274
-            },
-            "data": {
-              "text": "Header",
-              "fontColor": "#1e1e1e",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 90,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
-            "id": "4o8MDMWlVABcOMhLv9tCE",
-            "type": "text",
-            "position": {
-              "x": -490.7543331385879,
-              "y": 325.4874094813052
-            },
-            "data": {
-              "text": "Navigation",
-              "fontColor": "#1e1e1e",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 125,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
-            "id": "a0THxKWmm_0ZRAedwCQo9",
-            "type": "text",
-            "position": {
-              "x": -224.28935789709527,
-              "y": 242.89031479308477
-            },
-            "data": {
-              "text": "Link",
-              "fontColor": "#1e1e1e",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 58,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
-            "id": "QYnfJWM-pWbWnSqCvq3Cl",
-            "type": "shape",
-            "position": {
-              "x": -318.41069389765755,
-              "y": 1179.362046020471
-            },
-            "style": {
-              "width": 102.36618498818295,
-              "height": 102.36618498818295
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "transparent",
+              "backgroundColor": "#868e96",
               "strokeColor": "#000000"
             },
             "measured": {
-              "width": 102,
-              "height": 102
+              "width": 177,
+              "height": 26
             },
             "dragging": false
           },
           {
-            "id": "JraPN4rzcaAhiz7t42S1_",
-            "type": "text",
-            "position": {
-              "x": -572.5925680971574,
-              "y": 1439.1693754779835
-            },
-            "data": {
-              "text": "Pre-Built Wireframe Sections",
-              "fontColor": "#1e1e1e",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 303,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
-            "id": "QAEFXLh6L0nqeDCViqW-m",
-            "type": "text",
-            "position": {
-              "x": -525.2708095881638,
-              "y": 1522.5882528874452
-            },
-            "data": {
-              "text": "Navigation Bar",
-              "fontColor": "#000000",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 163,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
-            "id": "8wL8poS6eu7jWRG8Ogk_G",
+            "id": "f06d3be7-befe-4c78-a890-1ed25b8969ad",
             "type": "shape",
             "position": {
-              "x": 109.12522922771834,
-              "y": 1184.7202617620967
+              "x": 2152.893765924245,
+              "y": 384.2989734122657
+            },
+            "style": {
+              "width": 176.55484068627447,
+              "height": 25.742953431372598
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#868e96",
+              "strokeColor": "#000000"
+            },
+            "measured": {
+              "width": 177,
+              "height": 26
+            },
+            "dragging": false
+          },
+          {
+            "id": "6ef6a42b-32b6-404f-beb1-ba6d7173330f",
+            "type": "shape",
+            "position": {
+              "x": 1388.77745136617,
+              "y": 1067.5884076173147
             },
             "style": {
               "width": 627.0448853689527,
@@ -601,21 +633,24 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "transparent",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
               "strokeColor": "#1e1e1e"
             },
             "measured": {
-              "width": 627,
-              "height": 972
+              "width": 630,
+              "height": 672
             },
-            "dragging": false
+            "dragging": false,
+            "width": 630,
+            "height": 672,
+            "resizing": false
           },
           {
-            "id": "w2Y8wG77b6jvGTfmveaDD",
+            "id": "4fa027d8-a5bb-4a6c-9ba2-70e0f32be5fb",
             "type": "shape",
             "position": {
-              "x": 789.4981840805675,
-              "y": 1179.7481520502772
+              "x": 2175.937199957587,
+              "y": 1071.280564948809
             },
             "style": {
               "width": 627.0448853689527,
@@ -624,1202 +659,338 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "transparent",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
               "strokeColor": "#1e1e1e"
             },
             "measured": {
-              "width": 627,
-              "height": 972
+              "width": 630,
+              "height": 672
             },
             "dragging": false,
-            "zIndex": -2
+            "width": 630,
+            "height": 672,
+            "resizing": false
           },
           {
-            "id": "P0Y9Dt7vHaGNI67yqVyNE",
+            "id": "67ccc546-13d7-4b92-8b09-cd11e927dbcf",
             "type": "text",
-            "position": {
-              "x": -460.75163751650143,
-              "y": 2017.0814315980151
-            },
             "data": {
-              "text": "Footer",
-              "fontColor": "#000000",
-              "fontSize": "large",
-              "showHandles": false
+              "text": ""
+            },
+            "position": {
+              "x": 1206.159647782822,
+              "y": 1257.715242657909
             },
             "measured": {
-              "width": 83,
-              "height": 47
-            },
-            "dragging": false
-          },
-          {
-            "id": "rBZH2TySf8ighzBGSIOJ1",
-            "type": "text",
-            "position": {
-              "x": 251.22939113979214,
-              "y": 1104.904697069577
-            },
-            "data": {
-              "text": "Page 3",
-              "fontColor": "#1e1e1e",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 84,
-              "height": 47
+              "width": 58,
+              "height": 38
             }
           },
           {
-            "id": "ujlY9MuwgObgfQn1hdVWi",
-            "type": "text",
-            "position": {
-              "x": 992.1781709072682,
-              "y": 1103.1987497917776
-            },
+            "id": "6af34d01-5554-4178-a5e7-6b99adc02248",
+            "type": "shape",
             "data": {
-              "text": "Page 4",
-              "fontColor": "#1e1e1e",
-              "fontSize": "large",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 86,
-              "height": 47
-            }
-          },
-          {
-            "id": "91d1ddd9-2a9e-4f9d-b14c-41d183eb642a",
-            "type": "lineAnchor",
-            "position": {
-              "x": -306.4977850117635,
-              "y": 1199.7433960687026
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "bca467f6-9f77-4d45-a8b1-e0c6831e0ca9",
-            "type": "lineAnchor",
-            "position": {
-              "x": -248.92105695639594,
-              "y": 1199.7433960687026
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "84ca9c50-1d27-45f0-84ac-65ae4180e779",
-            "type": "lineAnchor",
-            "position": {
-              "x": -306.4977850117634,
-              "y": 1223.280439282731
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "ba357a5a-334d-44d2-a6ec-ca4786f5337a",
-            "type": "lineAnchor",
-            "position": {
-              "x": -248.9210569563959,
-              "y": 1223.280439282731
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "d6d786af-8807-40fe-b5d2-3fcc0adbed57",
-            "type": "lineAnchor",
-            "position": {
-              "x": -306.4977850117634,
-              "y": 1248.9450721999494
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "6ddd9a93-a957-4fe6-a084-3925fce6024c",
-            "type": "lineAnchor",
-            "position": {
-              "x": -248.9210569563959,
-              "y": 1248.9450721999494
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "12e82a02-950f-4636-b103-1b13fdfe4ebd",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/1f89cc74-6da2-4338-ada4-ea27209e5b9f.png",
-              "altText": "user",
-              "showHandles": false
+              "shapeType": "rectangle",
+              "label": "user wants to go back",
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "fontSize": "large"
             },
             "position": {
-              "x": -421.2481654195376,
-              "y": 541.2032968248441
+              "x": 1713.477619407412,
+              "y": 774.4999076694083
             },
-            "width": 80,
+            "width": 308,
             "height": 60,
             "measured": {
-              "width": 80,
+              "width": 308,
               "height": 60
             },
             "dragging": false,
             "resizing": false
           },
           {
-            "id": "df7d4fce-8eff-4819-9cc1-3bab1c030a5c",
-            "type": "image",
+            "id": "ecb5c60d-62fc-48bb-9dc8-bef97315f805",
+            "type": "shape",
             "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/a4106495-ac4a-4218-b4ec-26d84b930c56.png",
-              "altText": "minus",
-              "showHandles": false
+              "shapeType": "rectangle",
+              "label": "Emotional Label Here:",
+              "backgroundColor": "var(--sketchlab-bg-purple)",
+              "fontSize": "large"
             },
             "position": {
-              "x": -321.2481654195376,
-              "y": 541.2032968248441
+              "x": 209.574221604441,
+              "y": 779.0240110347091
             },
-            "width": 80,
-            "height": 60,
+            "width": 312,
+            "height": 96,
             "measured": {
-              "width": 80,
-              "height": 60
+              "width": 312,
+              "height": 96
             },
             "dragging": false,
             "resizing": false
           },
           {
-            "id": "56b9e9d7-d993-4976-9f77-547d040428a3",
-            "type": "image",
+            "id": "d0e8e9c6-7f1a-40ad-94a1-1e89a71d8d75",
+            "type": "shape",
             "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/987343fb-2513-4dce-b0ef-74d168e0242e.png",
-              "altText": "plus",
-              "showHandles": false
+              "shapeType": "rectangle",
+              "label": "Emotional Label Here:",
+              "backgroundColor": "var(--sketchlab-bg-purple)",
+              "fontSize": "large"
             },
             "position": {
-              "x": -219.2481654195376,
-              "y": 541.2032968248441
+              "x": 2227.1611903228436,
+              "y": 772.237855986758
             },
-            "width": 80,
-            "height": 60,
+            "width": 312,
+            "height": 96,
             "measured": {
-              "width": 80,
-              "height": 60
-            },
-            "resizing": false,
-            "dragging": false
-          },
-          {
-            "id": "e2ca942a-eb81-4145-bee8-e5ee7099b327",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/6806c072-4eb3-4d9d-b732-9b4f8905a081.png",
-              "altText": "message",
-              "showHandles": false
-            },
-            "position": {
-              "x": -127.2481654195376,
-              "y": 537.2032968248441
-            },
-            "width": 80,
-            "height": 60,
-            "measured": {
-              "width": 80,
-              "height": 60
-            },
-            "resizing": false,
-            "dragging": false
-          },
-          {
-            "id": "cbdddfae-235a-4f0d-8f89-3d415df27f81",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/51b51fa9-66f4-4e84-bd7c-f0316c68d224.png",
-              "altText": "trash-alt",
-              "showHandles": false
-            },
-            "position": {
-              "x": -221.69439176765593,
-              "y": 601.7466118960572
-            },
-            "width": 80,
-            "height": 60,
-            "measured": {
-              "width": 80,
-              "height": 60
-            },
-            "resizing": false,
-            "dragging": false
-          },
-          {
-            "id": "c04baf4c-9cea-43d4-86cf-927f6bbdce45",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/be2180c7-6767-43f9-bc1b-69a09382034e.png",
-              "altText": "play",
-              "showHandles": false
-            },
-            "position": {
-              "x": -416.6102016393655,
-              "y": 603.76996907153
-            },
-            "width": 80,
-            "height": 60,
-            "measured": {
-              "width": 80,
-              "height": 60
+              "width": 312,
+              "height": 96
             },
             "dragging": false,
             "resizing": false
           },
           {
-            "id": "3da2b1d3-10d1-42fc-abfd-98934e04efee",
-            "type": "image",
+            "id": "9dfabeab-8626-42a0-8e94-112596893a92",
+            "type": "shape",
             "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/1e9fe1b3-a4e3-43e5-90e2-ef75051f6c97.png",
-              "altText": "pause",
-              "showHandles": false
+              "shapeType": "rectangle",
+              "label": "Emotional Label Here:",
+              "backgroundColor": "var(--sketchlab-bg-purple)",
+              "fontSize": "large"
             },
             "position": {
-              "x": -318.09390376482884,
-              "y": 601.1356653125615
+              "x": 1050.7311831388795,
+              "y": 779.0240110347091
             },
-            "width": 80,
-            "height": 60,
+            "width": 312,
+            "height": 96,
             "measured": {
-              "width": 80,
-              "height": 60
+              "width": 312,
+              "height": 96
             },
             "dragging": false,
             "resizing": false
           },
           {
-            "id": "a25171da-d619-4b2b-a121-6f4c8657769a",
-            "type": "image",
+            "id": "266f7eee-017d-4ec1-9cca-dfca475fe743",
+            "type": "shape",
             "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/0e09c3c5-136c-4bf5-a79f-2556599bc374.png",
-              "altText": "star",
-              "showHandles": false
+              "shapeType": "rectangle",
+              "label": "Emotional Label Here:",
+              "backgroundColor": "var(--sketchlab-bg-purple)",
+              "fontSize": "large"
             },
             "position": {
-              "x": -222.82285623275624,
-              "y": 676.4288500130391
+              "x": 1543.6953177509115,
+              "y": 1744.92007952643
             },
-            "width": 80,
-            "height": 60,
+            "width": 312,
+            "height": 96,
             "measured": {
-              "width": 80,
-              "height": 60
-            },
-            "resizing": false,
-            "dragging": false
-          },
-          {
-            "id": "c071a0e4-1bd7-42e9-a812-4e7ae8fc7cf8",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/58e2068a-2e1b-498f-a8a1-bc7cf7d14b51.png",
-              "altText": "thumbs-down",
-              "showHandles": false
-            },
-            "position": {
-              "x": -313.1277195209702,
-              "y": 685.2290940144526
-            },
-            "width": 80,
-            "height": 60,
-            "measured": {
-              "width": 80,
-              "height": 60
+              "width": 312,
+              "height": 96
             },
             "dragging": false,
             "resizing": false
           },
           {
-            "id": "f6acbbf7-ac45-471b-83e3-5ecaf05b8361",
-            "type": "image",
+            "id": "665ed0b6-6e5d-4ff7-9af4-d9a2c9068d88",
+            "type": "shape",
             "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/9b2b2391-eda7-4880-a7d1-2398c6a90204.png",
-              "altText": "heart-alt",
-              "showHandles": false
+              "shapeType": "rectangle",
+              "label": "Emotional Label Here:",
+              "backgroundColor": "var(--sketchlab-bg-purple)",
+              "fontSize": "large"
             },
             "position": {
-              "x": -131.81117764501985,
-              "y": 602.2653497847297
+              "x": 2353.346687934,
+              "y": 1751.7062345743814
             },
-            "width": 80,
-            "height": 60,
+            "width": 312,
+            "height": 96,
             "measured": {
-              "width": 80,
-              "height": 60
+              "width": 312,
+              "height": 96
             },
             "dragging": false,
             "resizing": false
           },
           {
-            "id": "3f50c24f-adec-44b7-83e5-c8d42436e10e",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/23549c6b-acd8-4510-a112-a74a110998b3.png",
-              "altText": "Like",
-              "showHandles": false
-            },
-            "position": {
-              "x": -411.14985668937504,
-              "y": 673.4651057833162
-            },
-            "width": 80,
-            "height": 60,
-            "measured": {
-              "width": 80,
-              "height": 60
-            },
-            "dragging": false,
-            "resizing": false
-          },
-          {
-            "id": "92486910-46f9-40cf-b21b-aa31cfa43d2f",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/6f5f42bd-6be7-427d-8cdb-562372aa5703.png",
-              "altText": "Menu",
-              "showHandles": false
-            },
-            "position": {
-              "x": -128.8929277591745,
-              "y": 678.594790255484
-            },
-            "width": 80,
-            "height": 60,
-            "measured": {
-              "width": 80,
-              "height": 60
-            },
-            "dragging": false,
-            "resizing": false
-          },
-          {
-            "id": "c4dd673f-839d-473e-b94a-e0382f5f34dc",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/1d7c78aa-2b48-425b-8253-57b9b0d0ccb7.png",
-              "altText": "menu-hamburger",
-              "showHandles": false
-            },
-            "position": {
-              "x": -515.638273235818,
-              "y": 541.8860369063939
-            },
-            "width": 80,
-            "height": 60,
-            "measured": {
-              "width": 80,
-              "height": 60
-            },
-            "dragging": false,
-            "resizing": false
-          },
-          {
-            "id": "20e176f5-cdab-4d31-881c-59ceff259312",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/0d9cb486-285a-4969-beca-57f7c1dd79b6.png",
-              "altText": "arrow-right",
-              "showHandles": false
-            },
-            "position": {
-              "x": -420.6494827032069,
-              "y": 469.1774058852281
-            },
-            "width": 80,
-            "height": 60,
-            "measured": {
-              "width": 80,
-              "height": 60
-            },
-            "dragging": false,
-            "resizing": false
-          },
-          {
-            "id": "dca9f19e-dac7-4984-a73e-bd388c581ec3",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/c578c0c8-ec95-4c22-a0e8-b8b7672859a1.png",
-              "altText": "chevron-right",
-              "showHandles": false
-            },
-            "position": {
-              "x": -325.8511235685075,
-              "y": 472.72641789195455
-            },
-            "width": 80,
-            "height": 60,
-            "measured": {
-              "width": 80,
-              "height": 60
-            },
-            "dragging": false,
-            "resizing": false
-          },
-          {
-            "id": "ff29feb8-8a81-4fe6-b93e-781800797949",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/0513b3a4-1a41-442d-90c2-290a40e2bf46.png",
-              "altText": "check",
-              "showHandles": false
-            },
-            "position": {
-              "x": -127.38469492995564,
-              "y": 464.4643627618115
-            },
-            "width": 80,
-            "height": 60,
-            "measured": {
-              "width": 80,
-              "height": 60
-            },
-            "dragging": false,
-            "resizing": false
-          },
-          {
-            "id": "b3cd5b28-7b0a-4a71-a897-24f28e02e402",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/bc163e5f-e8d7-45ac-88d6-219fef46b87c.png",
-              "altText": "times",
-              "showHandles": false
-            },
-            "position": {
-              "x": -224.11668910347143,
-              "y": 466.3328001400897
-            },
-            "width": 80,
-            "height": 60,
-            "measured": {
-              "width": 80,
-              "height": 60
-            },
-            "dragging": false,
-            "resizing": false
-          },
-          {
-            "id": "bd6cbd50-7593-4d6f-9295-142b2f75dfcf",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/89f29f55-6473-4e43-bd77-27c5b14aef05.png",
-              "altText": "WIfi",
-              "showHandles": false
-            },
-            "position": {
-              "x": -507.4169957364962,
-              "y": 617.4079729929773
-            },
-            "width": 80,
-            "height": 60,
-            "measured": {
-              "width": 80,
-              "height": 60
-            },
-            "dragging": false,
-            "resizing": false
-          },
-          {
-            "id": "89b3522e-b154-4370-bc20-97e6ec482b3c",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/0b997273-ba85-418b-a4a2-6d00b2526b30.png",
-              "altText": "Filter",
-              "showHandles": false
-            },
-            "position": {
-              "x": -515.7580877111059,
-              "y": 479.0036771424549
-            },
-            "width": 80,
-            "height": 60,
-            "measured": {
-              "width": 80,
-              "height": 60
-            },
-            "resizing": false,
-            "dragging": false
-          },
-          {
-            "id": "bab055ff-7c17-4e3f-84fa-f9003ce5ab5d",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/dd5d59ce-9c5f-41bb-9c62-6666e423d343.png",
-              "altText": "Text box",
-              "showHandles": false
-            },
-            "position": {
-              "x": -730.1233133976783,
-              "y": 941.4886140032306
-            },
-            "width": 202,
-            "height": 124,
-            "measured": {
-              "width": 202,
-              "height": 124
-            },
-            "dragging": false,
-            "resizing": false
-          },
-          {
-            "id": "2fa6a373-21f6-4cff-b0ba-6e73195da1a0",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/aea3210a-8404-4ded-99d8-d74814cbce47.png",
-              "altText": "Search field",
-              "showHandles": false
-            },
-            "position": {
-              "x": -506.92939375640964,
-              "y": 920.9339221905185
-            },
-            "width": 196,
-            "height": 130,
-            "measured": {
-              "width": 196,
-              "height": 130
-            },
-            "dragging": false,
-            "resizing": false
-          },
-          {
-            "id": "671c6a94-3b5d-4e18-b029-e17c701267ee",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/d9294afe-c68a-40ee-a5ab-1a2b282e2d9e.png",
-              "altText": "Size=Small",
-              "showHandles": false
-            },
-            "position": {
-              "x": -489.3022053792934,
-              "y": 879.0290468629898
-            },
-            "width": 80,
-            "height": 60,
-            "measured": {
-              "width": 80,
-              "height": 60
-            },
-            "dragging": false,
-            "resizing": false
-          },
-          {
-            "id": "c483f34d-acc3-4c41-8b3f-20199cf83a9a",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/547ec745-866d-44f4-8e6f-d4ee282d86a2.png",
-              "altText": "Text field",
-              "showHandles": false
-            },
-            "position": {
-              "x": -715.1534755549445,
-              "y": 844.6504331038209
-            },
-            "width": 209,
-            "height": 130,
-            "measured": {
-              "width": 209,
-              "height": 130
-            },
-            "dragging": false,
-            "resizing": false
-          },
-          {
-            "id": "05954bb9-c602-48a7-834e-25761f531242",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/a552edcd-6a2b-4dbe-9227-897fd3cdefca.png",
-              "altText": "Size=Default",
-              "showHandles": false
-            },
-            "position": {
-              "x": -386.83391115382835,
-              "y": 842.5260426002712
-            },
-            "width": 210,
-            "height": 133,
-            "measured": {
-              "width": 210,
-              "height": 133
-            },
-            "dragging": false,
-            "resizing": false
-          },
-          {
-            "id": "b3654abd-1f8b-4810-9ffa-292373a82c1d",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/e4d6ae1d-bb4d-40ca-aa88-c9733e0f265b.png",
-              "altText": "State=On",
-              "showHandles": false
-            },
-            "position": {
-              "x": -281.7863955905654,
-              "y": 953.3800893499263
-            },
-            "width": 80,
-            "height": 60,
-            "measured": {
-              "width": 80,
-              "height": 60
-            },
-            "dragging": false,
-            "resizing": false
-          },
-          {
-            "id": "f074be0d-e8b0-4ed4-ab43-6bb85fa67b14",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/a3e3476a-3bc7-4a52-95d4-e3778e3097e5.png",
-              "altText": "State=Off",
-              "showHandles": false
-            },
-            "position": {
-              "x": -188.88312999736937,
-              "y": 953.417855122721
-            },
-            "width": 80,
-            "height": 60,
-            "measured": {
-              "width": 80,
-              "height": 60
-            },
-            "dragging": false,
-            "resizing": false
-          },
-          {
-            "id": "d0bb7103-f015-4b26-8d5a-103d4b8dd954",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/e358639e-9ad4-421d-9e82-deda5110ddcd.png",
-              "altText": "State=Checked (1)",
-              "showHandles": false
-            },
-            "position": {
-              "x": -746.6085371547836,
-              "y": 1059.089230684603
-            },
-            "width": 80,
-            "height": 60,
-            "measured": {
-              "width": 80,
-              "height": 60
-            },
-            "dragging": false,
-            "resizing": false
-          },
-          {
-            "id": "c4c2a916-d3b6-4080-be92-203260d41001",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/9f5f347f-57c3-4867-91bd-c4a0e7aeab0b.png",
-              "altText": "State=Unchecked",
-              "showHandles": false
-            },
-            "position": {
-              "x": -677.4326029203958,
-              "y": 1061.110195199002
-            },
-            "width": 80,
-            "height": 60,
-            "measured": {
-              "width": 80,
-              "height": 60
-            },
-            "resizing": false,
-            "dragging": false
-          },
-          {
-            "id": "24d2139b-ded7-496d-b62a-01b132621621",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/137c2789-b97e-47eb-a6c7-3fdb730acfa8.png",
-              "altText": "Size=Large, Type=Solid",
-              "showHandles": false
-            },
-            "position": {
-              "x": -567.2181943359033,
-              "y": 1057.1888357627179
-            },
-            "width": 80,
-            "height": 60,
-            "measured": {
-              "width": 80,
-              "height": 60
-            },
-            "dragging": false,
-            "resizing": false
-          },
-          {
-            "id": "cc205b63-81d6-4ac7-bf44-adc572f70486",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/4e55470e-4adb-46ef-8568-c311c6498405.png",
-              "altText": "Size=Large, Type=Outline",
-              "showHandles": false
-            },
-            "position": {
-              "x": -456.1458066717688,
-              "y": 1057.0213941948932
-            },
-            "width": 80,
-            "height": 60,
-            "measured": {
-              "width": 80,
-              "height": 60
-            },
-            "resizing": false,
-            "dragging": false
-          },
-          {
-            "id": "e05f2ebb-7294-402d-b8f8-87e06314b042",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/5e0540d1-95b5-4573-b1ba-bcb4b63fe185.png",
-              "altText": "Type=Solid",
-              "showHandles": false
-            },
-            "position": {
-              "x": -345.07341900763447,
-              "y": 1058.548810136022
-            },
-            "width": 80,
-            "height": 60,
-            "measured": {
-              "width": 80,
-              "height": 60
-            },
-            "dragging": false,
-            "resizing": false
-          },
-          {
-            "id": "ad47604b-90b6-4017-8c3d-67f6f2a94d90",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/ddcf251e-f963-43ae-a619-4b7c71c566aa.png",
-              "altText": "Type=Outline",
-              "showHandles": false
-            },
-            "position": {
-              "x": -253.3242671829321,
-              "y": 1055.7207708159192
-            },
-            "width": 80,
-            "height": 60,
-            "measured": {
-              "width": 80,
-              "height": 60
-            },
-            "resizing": false,
-            "dragging": false
-          },
-          {
-            "id": "8f127089-96f0-4bc3-b65e-2d6cd8ec6abb",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/74b56e6c-fdac-45b1-8ab3-21d7e53b673b.png",
-              "altText": "filter-button",
-              "showHandles": false
-            },
-            "position": {
-              "x": -157.80305619197915,
-              "y": 1049.1007913768735
-            },
-            "width": 99,
-            "height": 72,
-            "measured": {
-              "width": 99,
-              "height": 72
-            },
-            "dragging": false,
-            "resizing": false
-          },
-          {
-            "id": "8278cf7b-a956-4b55-a94b-07d0f966ea89",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/c578c0c8-ec95-4c22-a0e8-b8b7672859a1.png",
-              "altText": "chevron-right",
-              "showHandles": false
-            },
-            "position": {
-              "x": -370.08880914184283,
-              "y": 317.79960981003825
-            },
-            "width": 80,
-            "height": 60,
-            "measured": {
-              "width": 80,
-              "height": 60
-            },
-            "dragging": false,
-            "resizing": false
-          },
-          {
-            "id": "d4f87ee0-f644-4056-816b-82550a2c8705",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/c578c0c8-ec95-4c22-a0e8-b8b7672859a1.png",
-              "altText": "chevron-right",
-              "showHandles": false,
-              "rotation": 180
-            },
-            "position": {
-              "x": -565.0739480154585,
-              "y": 317.7996098100382
-            },
-            "width": 80,
-            "height": 60,
-            "measured": {
-              "width": 80,
-              "height": 60
-            },
-            "dragging": false,
-            "resizing": false
-          },
-          {
-            "id": "4dfe0997-22a1-4de9-ac57-cd4931fc3b00",
-            "type": "lineAnchor",
-            "position": {
-              "x": -797.6996723411957,
-              "y": 402.1958720540513
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            },
-            "dragging": false
-          },
-          {
-            "id": "2f55d294-09a5-4b76-9583-b96548926e1e",
-            "type": "lineAnchor",
-            "position": {
-              "x": -25.034340788013658,
-              "y": 403.9135052554353
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            },
-            "dragging": false
-          },
-          {
-            "id": "cbcaa355-9557-4964-9792-f3da64246cdd",
-            "type": "lineAnchor",
-            "position": {
-              "x": -796.1999773661225,
-              "y": 828.6162522942262
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            },
-            "dragging": false
-          },
-          {
-            "id": "19d8b634-ac2b-427d-b7cb-03663764b4f7",
-            "type": "lineAnchor",
-            "position": {
-              "x": -23.53464581294054,
-              "y": 830.3338854956102
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            },
-            "dragging": false
-          },
-          {
-            "id": "67458d15-2040-465a-9bcb-94946c052a8d",
-            "type": "lineAnchor",
-            "position": {
-              "x": -792.8515127466297,
-              "y": 1141.4513723794698
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            },
-            "dragging": false
-          },
-          {
-            "id": "3a3b7997-3a48-47dc-aa2a-aed9a1dd5c3c",
-            "type": "lineAnchor",
-            "position": {
-              "x": -20.186181193447737,
-              "y": 1143.1690055808538
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            },
-            "dragging": false
-          },
-          {
-            "id": "ef1b309a-3f7f-4f68-b67b-59af26bfacc0",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/212ba4a7-d7ec-42f7-b308-ea1b9df33dfd.png",
-              "altText": "footer",
-              "showHandles": false
-            },
-            "position": {
-              "x": -741.3944918913262,
-              "y": 1908.7387386277355
-            },
-            "width": 665,
-            "height": 381,
-            "measured": {
-              "width": 665,
-              "height": 381
-            },
-            "dragging": false,
-            "resizing": false
-          },
-          {
-            "id": "e91d04e4-807f-4154-9218-636a1d83f6d9",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/b3df743b-8e5c-4fbc-9d30-cd729aaf90c0.png",
-              "altText": "Header",
-              "showHandles": false
-            },
-            "position": {
-              "x": -767.7082435602179,
-              "y": 1524.6486184675214
-            },
-            "width": 715,
-            "height": 168,
-            "measured": {
-              "width": 715,
-              "height": 168
-            },
-            "dragging": false,
-            "resizing": false,
-            "zIndex": 1
-          },
-          {
-            "id": "6881f8ba-a294-462f-b4c7-7fb46567c5f9",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/c43b0e4a-efcf-4a86-9831-d1931ec1d9de.png",
-              "altText": "Card",
-              "showHandles": false
-            },
-            "position": {
-              "x": -326.911180809884,
-              "y": 1726.1212486410861
-            },
-            "width": 265,
-            "height": 272,
-            "measured": {
-              "width": 265,
-              "height": 272
-            },
-            "dragging": false,
-            "resizing": false
-          },
-          {
-            "id": "dc37fb8a-3d1f-4f58-a025-ff26eeaa30de",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/ai-generated-design-lesson10-level1a_2026/uuid/89979b7b-ee40-4126-8b38-9f632e2a9f67.png",
-              "altText": "hero-section"
-            },
-            "position": {
-              "x": -780.5727295415263,
-              "y": 1705.5488187345416
-            },
-            "width": 450,
-            "height": 310,
-            "measured": {
-              "width": 450,
-              "height": 310
-            },
-            "dragging": false,
-            "resizing": false
-          },
-          {
-            "id": "21c12733-e92d-45ad-94f4-1c8807047b03",
+            "id": "913e2aa5-7499-4606-a68f-eb8c52962f7f",
             "type": "shape",
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "var(--sketchlab-bg-yellow)"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "fontSize": "extra-large"
             },
             "position": {
-              "x": -791.8183904227012,
-              "y": 1483.0221164648501
+              "x": 1428.1659905984088,
+              "y": 1439.5043221545843
             },
-            "width": 777,
-            "height": 670,
+            "width": 554,
+            "height": 279,
             "measured": {
-              "width": 777,
-              "height": 670
+              "width": 554,
+              "height": 279
             },
             "dragging": false,
-            "resizing": false,
-            "zIndex": -3
+            "resizing": false
+          },
+          {
+            "id": "5293e636-51bd-46de-b212-33c258930e83",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "fontSize": "extra-large"
+            },
+            "position": {
+              "x": 2221.9434689593513,
+              "y": 1446.2904772025354
+            },
+            "width": 554,
+            "height": 279,
+            "measured": {
+              "width": 554,
+              "height": 279
+            },
+            "dragging": false,
+            "resizing": false
+          },
+          {
+            "id": "5c8f592c-627b-4e3a-93ea-af16bbb30331",
+            "type": "shape",
+            "position": {
+              "x": 1792.8666574767562,
+              "y": 1335.1503681006548
+            },
+            "style": {
+              "width": 176.55484068627447,
+              "height": 25.742953431372598
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#868e96",
+              "strokeColor": "#000000"
+            },
+            "measured": {
+              "width": 177,
+              "height": 26
+            },
+            "dragging": false
+          },
+          {
+            "id": "dc31ed63-8599-4d97-ad7a-03acddc59c0e",
+            "type": "shape",
+            "position": {
+              "x": 2532.1473366777873,
+              "y": 1353.246781561858
+            },
+            "style": {
+              "width": 176.55484068627447,
+              "height": 25.742953431372598
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#868e96",
+              "strokeColor": "#000000"
+            },
+            "measured": {
+              "width": 177,
+              "height": 26
+            },
+            "dragging": false
           }
         ],
         "edges": [
           {
-            "id": "9873ab05-56b8-41d0-9d30-cb4131e953bc",
-            "source": "91d1ddd9-2a9e-4f9d-b14c-41d183eb642a",
-            "target": "bca467f6-9f77-4d45-a8b1-e0c6831e0ca9",
-            "type": "straight"
-          },
-          {
-            "id": "252c5383-b02a-4576-a3ce-ac8684963e86",
-            "source": "84ca9c50-1d27-45f0-84ac-65ae4180e779",
-            "target": "ba357a5a-334d-44d2-a6ec-ca4786f5337a",
-            "type": "straight"
-          },
-          {
-            "id": "42f3b23c-5003-4daa-a21e-503bed5b64f1",
-            "source": "d6d786af-8807-40fe-b5d2-3fcc0adbed57",
-            "target": "6ddd9a93-a957-4fe6-a084-3925fce6024c",
-            "type": "straight"
-          },
-          {
-            "id": "7810001e-6b8e-4fc3-ba86-b0e77196d518",
-            "source": "4dfe0997-22a1-4de9-ac57-cd4931fc3b00",
-            "target": "2f55d294-09a5-4b76-9583-b96548926e1e",
+            "id": "97c0d4cf-15b4-402e-a572-dbdcb02af2ad",
+            "source": "oLvTJJQ-SYYz57A_QnOqP",
+            "target": "a9c97b31-af8b-44fe-832c-447555b5e8eb",
             "type": "straight",
             "style": {
-              "stroke": "var(--sketchlab-stroke-default)",
-              "strokeWidth": 5
-            }
+              "stroke": "var(--sketchlab-stroke-green)",
+              "strokeWidth": 3
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-green)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "sourceHandle": "right-source",
+            "targetHandle": "left-target"
           },
           {
-            "id": "5a680297-c9a9-4bb3-a4ff-bd6f711529f5",
-            "source": "cbcaa355-9557-4964-9792-f3da64246cdd",
-            "target": "19d8b634-ac2b-427d-b7cb-03663764b4f7",
+            "id": "cab6ea55-951a-4821-917d-0323d328db56",
+            "source": "_QHOX2XDKJzWWRKpascyU",
+            "target": "oLvTJJQ-SYYz57A_QnOqP",
             "type": "straight",
             "style": {
-              "stroke": "var(--sketchlab-stroke-default)",
-              "strokeWidth": 5
-            }
+              "stroke": "var(--sketchlab-stroke-green)",
+              "strokeWidth": 3
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-green)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "sourceHandle": "right-source",
+            "targetHandle": "left-target"
           },
           {
-            "id": "f749738e-15c2-4a01-8c67-6f5e7b71219e",
-            "source": "67458d15-2040-465a-9bcb-94946c052a8d",
-            "target": "3a3b7997-3a48-47dc-aa2a-aed9a1dd5c3c",
+            "id": "08ff0a44-55d5-44cd-9a02-7763a9b86ab4",
+            "source": "a9c97b31-af8b-44fe-832c-447555b5e8eb",
+            "target": "49a62089-b785-404c-b85d-7a9e726d981b",
             "type": "straight",
             "style": {
-              "stroke": "var(--sketchlab-stroke-default)",
-              "strokeWidth": 5
-            }
+              "stroke": "var(--sketchlab-stroke-green)",
+              "strokeWidth": 3
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-green)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "sourceHandle": "bottom-source",
+            "targetHandle": "right-target"
+          },
+          {
+            "id": "38de68e1-749b-42da-b5ef-f183117c4b26",
+            "source": "a9c97b31-af8b-44fe-832c-447555b5e8eb",
+            "target": "cea42ac8-6ae5-42f6-8beb-df8695f2ae99",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-green)",
+              "strokeWidth": 3
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-green)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "sourceHandle": "bottom-source",
+            "targetHandle": "left-target"
           }
         ],
         "viewport": {
-          "x": 640.9327825925013,
-          "y": 40.62134230150093,
-          "zoom": 0.5964065917180912
+          "x": 220.79760191426794,
+          "y": 19.795057973781695,
+          "zoom": 0.44207654832550947
         }
       }
     },
@@ -9752,8 +8923,8 @@
       }
     },
     "name_suffix": "_2026",
-    "long_instructions": "### **User Journey: Reset/Undo**\r\n\r\n**Scenario:** You are designing a product filter page for an online store. Users can filter by categories, price ranges, and ratings.Your page needs two separate features:\r\n\r\n1. **Reset All:** Goes back to the original product list (no filters).\r\n2. **Undo:** Removes just the *last* change the user made.\r\n\r\n---\r\n\r\n**Do This:**\r\n\r\nCreate a user journey diagram that must include the following wireframes:\r\n\r\n1.  **The Original State** when the page first loads.\r\n2.  **At Least Two Filter Changes** (e.g., \"Apply Price Filter,\" then \"Apply Category Filter\").\r\n3.  **A \"Reset\" Path** showing what happens when the user clicks **Reset**.\r\n4.  **An \"Undo\" Path** showing what happens when the user clicks **Undo**.\r\n5.  **Emotional labels** for each step in the path. (e.g., \"Relieved,\" \"Frustrated,\" \"Confident\")."
+    "long_instructions": "### **User Journey: Reset/Undo**\r\n\r\n**Scenario:** You are designing a product filter page for an online store. Users can filter by categories, price ranges, and ratings. Your page needs two separate features:\r\n\r\n1. **Reset All:** Goes back to the original product list (no filters).\r\n2. **Undo:** Removes just the *last* change the user made.\r\n\r\n---\r\n\r\n**Do This:**\r\n\r\nComplete the diagram by:\r\n1. **Completing 4a (Reset Path):** Show what the page looks like after the user clicks Reset All.\r\n2. **Completing 4b (Undo Path):** Show what the page looks like after the user clicks Undo.\r\n3. **Adding an emotional label to every state:** Think about how might the user feel at each step (e.g., \"confident,\" \"frustrated,\" \"relieved\")"
   },
-  "audit_log": "[{\"changed_at\":\"2026-05-07T14:19:05.013+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson11-template-sketchlab_v2_2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson11-template-sketchlab_v2_2026\"},{\"changed_at\":\"2026-05-07 14:19:32 +0000\",\"changed\":[],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-07T14:19:05.013+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson11-template-sketchlab_v2_2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson11-template-sketchlab_v2_2026\"},{\"changed_at\":\"2026-05-07 14:19:32 +0000\",\"changed\":[],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-06-12 00:07:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-12 00:11:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

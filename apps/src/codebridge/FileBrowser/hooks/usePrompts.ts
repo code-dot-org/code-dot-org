@@ -14,7 +14,6 @@ import {useCallback, useMemo} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {usePartialApply, PAFunctionArgs} from '@cdo/apps/lab2/hooks';
-import {setOverrideValidations} from '@cdo/apps/lab2/lab2Redux';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {
   createNewFileThunk,
@@ -59,11 +58,6 @@ export const usePrompts = () => {
     []
   );
 
-  const cleanupValidationFile = useCallback(
-    () => dispatch(setOverrideValidations([])),
-    [dispatch]
-  );
-
   const deleteFile = (arg: {fileId: string}) =>
     dispatch(deleteFileThunk({fileId: arg.fileId}));
   const deleteFolder = (folderId: string) =>
@@ -99,7 +93,6 @@ export const usePrompts = () => {
     dialogControl,
     deleteFile,
     sendLab2AnalyticsEvent,
-    cleanupValidationFile,
   } satisfies PAFunctionArgs<typeof globalOpenConfirmDeleteFile>);
 
   const openConfirmDeleteFolder = usePartialApply(

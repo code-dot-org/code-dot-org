@@ -17,6 +17,14 @@ class Policies::DemoSections
       avatar_color: 2,
       avatar_emoji: 10,
       ai_chat_access_level: 'essential_only',
+      student_snapshot_default_tour_lesson: 1,
+      review_syllabus_quiz_lesson: 1,
+      review_syllabus_quiz_options: [
+        {label: 'Level 1', correct: false},
+        {label: 'Level 3', correct: false},
+        {label: 'Level 4', correct: false},
+        {label: 'Level 6', correct: true},
+      ].freeze,
     }.freeze,
     middle: {
       section_name: 'Middle School Practice Section',
@@ -29,6 +37,14 @@ class Policies::DemoSections
       avatar_color: 1,
       avatar_emoji: 0,
       ai_chat_access_level: 'enabled',
+      student_snapshot_default_tour_lesson: 3,
+      review_syllabus_quiz_lesson: 3,
+      review_syllabus_quiz_options: [
+        {label: 'Level 4', correct: false},
+        {label: 'Level 5', correct: false},
+        {label: 'Level 8', correct: true},
+        {label: 'Level 11', correct: false},
+      ].freeze,
     }.freeze,
     high: {
       section_name: 'High School Practice Section',
@@ -41,6 +57,14 @@ class Policies::DemoSections
       avatar_color: 8,
       avatar_emoji: 5,
       ai_chat_access_level: 'enabled',
+      student_snapshot_default_tour_lesson: 1,
+      review_syllabus_quiz_lesson: 1,
+      review_syllabus_quiz_options: [
+        {label: 'Level 1', correct: false},
+        {label: 'Level 2', correct: false},
+        {label: 'Level 3', correct: false},
+        {label: 'Level 4', correct: true},
+      ].freeze,
     }.freeze,
   }.freeze
 
@@ -73,6 +97,10 @@ class Policies::DemoSections
       avatar_emoji: preset[:avatar_emoji],
       login_type: preset[:login_type],
       participant_type: preset[:participant_type],
+      student_snapshot_default_tour_lesson: preset[:student_snapshot_default_tour_lesson],
+      review_syllabus_quiz_lesson: preset[:review_syllabus_quiz_lesson],
+      review_syllabus_quiz_options: preset[:review_syllabus_quiz_options],
+      grades: preset[:grades],
       unit: {
         name: unit.name,
         display_name: unit.localized_title,

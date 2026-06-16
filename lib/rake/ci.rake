@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../../deployment'
 require 'cdo/chat_client'
 require 'cdo/rake_utils'
@@ -19,16 +21,16 @@ include TimedTaskWithLogging
 # Supported Tags:
 
 # Run all unit/integration tests, not just a subset based on changed files.
-RUN_ALL_TESTS_TAG = 'test all'.freeze
+RUN_ALL_TESTS_TAG = 'test all'
 
 # Only run apps tests on container 0
-RUN_APPS_TESTS_TAG = 'test apps'.freeze
+RUN_APPS_TESTS_TAG = 'test apps'
 
 # Don't run any apps tests
-SKIP_APPS_TESTS_FLAG = 'skip apps'.freeze
+SKIP_APPS_TESTS_FLAG = 'skip apps'
 
 # Don't run any UI or Eyes tests.
-SKIP_UI_TESTS_TAG = 'skip ui'.freeze
+SKIP_UI_TESTS_TAG = 'skip ui'
 
 # Reset the dashboard database before seeding for UI tests. It is recommended to
 # use this tag when running drone against PRs that reduce what gets seeded in
@@ -39,39 +41,55 @@ SKIP_UI_TESTS_TAG = 'skip ui'.freeze
 # If you remove something from UI_TEST_SCRIPTS but do not specify this tag,
 # drone will still have that unit seeded in the database, possibly masking any
 # test failures that might show up in later drone builds after you merge.
-RESET_DB_TAG = 'reset db'.freeze
+RESET_DB_TAG = 'reset db'
 
 # Don't run any unit tests.
-SKIP_UNIT_TESTS_TAG = 'skip unit'.freeze
+SKIP_UNIT_TESTS_TAG = 'skip unit'
 
 # Don't run UI tests against Chrome
-SKIP_CHROME_TAG = 'skip chrome'.freeze
+SKIP_CHROME_TAG = 'skip chrome'
 
 # Run UI tests against Firefox
-TEST_FIREFOX_TAG = 'test firefox'.freeze
+TEST_FIREFOX_TAG = 'test firefox'
 
 # Run UI tests against Safari
-TEST_SAFARI_TAG = 'test safari'.freeze
+TEST_SAFARI_TAG = 'test safari'
 
 # Run UI tests against iPad, iPhone or both
-TEST_IPAD_TAG = 'test ipad'.freeze
-TEST_IPHONE_TAG = 'test iphone'.freeze
-TEST_IOS_TAG = 'test ios'.freeze
+TEST_IPAD_TAG = 'test ipad'
+TEST_IPHONE_TAG = 'test iphone'
+TEST_IOS_TAG = 'test ios'
 
 # Run UI tests against all browsers
-TEST_ALL_BROWSERS_TAG = 'test all browsers'.freeze
+TEST_ALL_BROWSERS_TAG = 'test all browsers'
+
+# Browser tags that force UI tests onto SauceLabs, because Device Farm requires
+# Chrome in CI.
+#
+# The CI codepath for Device Farm relies on Chrome's --host-resolver-rules to
+# reach puma at localhost-studio.code.org:3000, which is a chromedriver-specific
+# flag we don't have a clean equivalent for in Firefox/Safari.
+NON_CHROME_TAGS = [
+  TEST_FIREFOX_TAG,
+  TEST_SAFARI_TAG,
+  TEST_IPAD_TAG,
+  TEST_IPHONE_TAG,
+  TEST_IOS_TAG,
+  TEST_ALL_BROWSERS_TAG,
+].freeze
 
 # Overrides for whether to run Applitools eyes tests
-TEST_EYES = 'test eyes'.freeze
-SKIP_EYES = 'skip eyes'.freeze
+TEST_EYES = 'test eyes'
+SKIP_EYES = 'skip eyes'
 
 # By default, to conserve our SauceLabs credits we run our UI and Eyes tests
 # against a local webdriver first, and only use SauceLabs to rerun any tests
 # that fail. This flag ensures all tests will use SauceLabs for all runs.
-SKIP_LOCAL_WEBDRIVER = 'skip local webdriver'.freeze
+SKIP_LOCAL_WEBDRIVER = 'skip local webdriver'
 
-# Use AWS Device Farm instead of SauceLabs for remote browser testing.
-USE_DEVICE_FARM_TAG = 'use device farm'.freeze
+# By default, UI test reruns hit AWS Device Farm Chrome. This tag opts
+# out and falls back to SauceLabs.
+USE_SAUCELABS_TAG = 'use saucelabs'
 
 # Maximum parallel browsers to use for UI and eyes tests
 PARALLEL_COUNT = 24
@@ -123,8 +141,16 @@ namespace :ci do
     Dir.chdir('dashboard') do
       RakeUtils.exec_in_background 'RAILS_ENV=test bundle exec puma -e test'
     end
-    use_device_farm = CI::Utils.tagged?(USE_DEVICE_FARM_TAG)
+    non_chrome_tagged = NON_CHROME_TAGS.any? {|t| CI::Utils.tagged?(t)}
+    if non_chrome_tagged
+      ChatClient.log "Non-Chrome browser tag present; routing UI tests via SauceLabs (Device Farm path only supports Chrome)."
+    elsif CI::Utils.tagged?(USE_SAUCELABS_TAG)
+      ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{USE_SAUCELABS_TAG}], routing UI tests via SauceLabs."
+    end
+    use_device_farm = !(non_chrome_tagged || CI::Utils.tagged?(USE_SAUCELABS_TAG))
     ui_test_browsers = use_device_farm ? device_farm_browsers_to_run : saucelabs_browsers_to_run
+    # local webdriver only supports Chrome.
+    skip_local_webdriver = CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) || non_chrome_tagged
 
     # SauceLabs uses Sauce Connect to tunnel into the drone worker container.
     needs_sauce_connect = !use_device_farm
@@ -148,19 +174,12 @@ namespace :ci do
       container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
       eyes_features = `grep -lr '@eyes' features`.split("\n")
       container_eyes_features = container_features & eyes_features
-      # The concurrency limit for Device Farm desktop sessions in the
-      # codeorg-dev AWS account is 50. This concurrency limit is shared across
-      # all CI jobs. This limit is not shared by sessions running in local
-      # development or the chef-managed test environment, which run in the prod
-      # AWS account. This limit must be taken into consideration when choosing
-      # parallelism as well as when choosing to run on Device Farm vs SauceLabs
-      # or local chromedriver.
-      #
       # Use --local to configure the UI tests to run against localhost, and
       # --config to override the local webdriver with the remote provider
-      # (SauceLabs by default, Device Farm under USE_DEVICE_FARM_TAG).
-      # --first-run-local keeps the first attempt on the in-container
-      # chromedriver and only hands off to the remote provider on rerun.
+      # (Device Farm Chrome by default, SauceLabs under [use saucelabs] or any
+      # non-Chrome browser tag). --first-run-local keeps the first attempt on
+      # the in-container chromedriver and only hands off to the remote provider
+      # on rerun.
       RakeUtils.system_stream_output "bundle exec ./runner.rb " \
           "--feature #{container_features.join(',')} " \
           "--local " \
@@ -171,7 +190,7 @@ namespace :ci do
           "--parallel #{PARALLEL_COUNT} " \
           "--abort_when_failures_exceed 10 " \
           "--retry_count 2 " \
-          "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first-run-local '}" \
+          "#{skip_local_webdriver ? '' : '--first-run-local '}" \
           "--output-synopsis " \
           "--with-status-page " \
           "--html"
@@ -187,7 +206,7 @@ namespace :ci do
             "--parallel #{PARALLEL_COUNT} " \
             "--abort_when_failures_exceed 10 " \
             "--retry_count 2 " \
-            "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first-run-local '}" \
+            "#{skip_local_webdriver ? '' : '--first-run-local '}" \
             "--output-synopsis " \
             "--with-status-page " \
             "--html"

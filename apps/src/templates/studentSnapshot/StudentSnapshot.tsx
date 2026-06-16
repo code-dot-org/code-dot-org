@@ -7,7 +7,10 @@ import {useSelector} from 'react-redux';
 import DCDO from '@cdo/apps/dcdo';
 import {getSelectedUnitId} from '@cdo/apps/redux/unitSelectionRedux';
 import {loadUnitProgress} from '@cdo/apps/templates/sectionProgressV2/sectionProgressLoader';
-import {resumeLearnHowToEvaluateTour} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useLearnHowToEvaluateTour';
+import {
+  isLearnToEvaluateTourOnSnapshotPage,
+  resumeLearnHowToEvaluateTour,
+} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useLearnHowToEvaluateTour';
 import {LessonOption} from '@cdo/apps/templates/teacherDashboardShared/LessonSelector';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -68,6 +71,12 @@ const StudentSnapshot: React.FC = () => {
           .courseId
       : null
   );
+  const sectionDemoType = useAppSelector(state =>
+    state.teacherSections.selectedSectionId
+      ? state.teacherSections.sections[state.teacherSections.selectedSectionId]
+          ?.demoType ?? null
+      : null
+  );
   const selectedUnitId = useSelector(getSelectedUnitId);
   const selectedUnitPosition = useAppSelector(state =>
     state.teacherSections.selectedSectionId
@@ -75,7 +84,9 @@ const StudentSnapshot: React.FC = () => {
           .unitPosition
       : null
   );
-  const {selectedStudents} = useAppSelector(state => state.teacherSections);
+  const {selectedStudents, demoPresets} = useAppSelector(
+    state => state.teacherSections
+  );
 
   const aiTaEnabled = useAppSelector(
     state => state.currentUser.aiDifferentiationEnabled
@@ -99,6 +110,22 @@ const StudentSnapshot: React.FC = () => {
         .then(lessonsData => {
           setLessons(lessonsData.lessons);
           setHasUnnumberedLessons(lessonsData.hasUnnumberedLessons);
+          // When the Learn How to Evaluate tour has directed the user to this
+          // page, pre-select the lesson that the tour is focused on (which may not be the first lesson in the unit, depending on the section's demo type).
+          if (isLearnToEvaluateTourOnSnapshotPage()) {
+            const lessonList = lessonsData.lessons;
+            const defaultTourLesson = sectionDemoType
+              ? demoPresets[sectionDemoType]
+                  ?.studentSnapshotDefaultTourLesson ?? null
+              : null;
+            const targetLesson =
+              (defaultTourLesson !== null
+                ? lessonList.find(l => l.position === defaultTourLesson)
+                : null) ??
+              lessonList[lessonList.length - 1] ??
+              null;
+            if (targetLesson) setSelectedLessonId(targetLesson.id);
+          }
         })
         .finally(() => {
           setIsLessonsLoading(false);
@@ -110,7 +137,14 @@ const StudentSnapshot: React.FC = () => {
         selectedUnitPosition
       );
     }
-  }, [sectionId, selectedUnitId, sectionCourseId, selectedUnitPosition]);
+  }, [
+    sectionId,
+    selectedUnitId,
+    sectionCourseId,
+    selectedUnitPosition,
+    sectionDemoType,
+    demoPresets,
+  ]);
 
   return (
     <div className={styles.snapshotContainer}>

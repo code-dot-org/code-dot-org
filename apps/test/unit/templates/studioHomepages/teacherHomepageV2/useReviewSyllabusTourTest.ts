@@ -1,11 +1,20 @@
 import {renderHook} from '@testing-library/react-hooks';
+import React from 'react';
+import {Provider} from 'react-redux';
 import {Tour} from 'shepherd.js';
 
+import {
+  getStore,
+  registerReducers,
+  restoreRedux,
+  stubRedux,
+} from '@cdo/apps/redux';
 import {createShepherdTour} from '@cdo/apps/sharedComponents/productTour/shepherdTourFactory';
 import useReviewSyllabusTour, {
   resumeReviewSyllabusOnboardingTour,
   REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
 } from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useReviewSyllabusTour';
+import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 
 jest.mock('@cdo/apps/sharedComponents/productTour/shepherdTourFactory');
@@ -74,7 +83,7 @@ describe('resumeReviewSyllabusOnboardingTour', () => {
   it('clears the step key and does not show when no steps are built for the demoType', () => {
     mockTryGetSessionStorage
       .mockReturnValueOnce('unit-breadcrumb-step')
-      .mockReturnValueOnce('middle'); // unsupported demoType — returns []
+      .mockReturnValueOnce('unknown' as 'high'); // unrecognized demoType — hits default case, returns []
 
     resumeReviewSyllabusOnboardingTour();
 
@@ -163,15 +172,32 @@ describe('useReviewSyllabusTour', () => {
     jest.clearAllMocks();
     mockTour = makeMockTour();
     mockCreateShepherdTour.mockReturnValue(mockTour as unknown as Tour);
+    stubRedux();
+    registerReducers({teacherSections});
   });
 
+  afterEach(() => {
+    restoreRedux();
+  });
+
+  const makeWrapper =
+    () =>
+    ({children}: {children: React.ReactNode}) =>
+      React.createElement(
+        Provider as React.ComponentType<{store: ReturnType<typeof getStore>}>,
+        {store: getStore()},
+        children
+      );
+
   it('returns a tour object', () => {
-    const {result} = renderHook(() => useReviewSyllabusTour('high'));
+    const {result} = renderHook(() => useReviewSyllabusTour('high'), {
+      wrapper: makeWrapper(),
+    });
     expect(result.current).toBe(mockTour);
   });
 
   it('saves demoType to sessionStorage on mount', () => {
-    renderHook(() => useReviewSyllabusTour('high'));
+    renderHook(() => useReviewSyllabusTour('high'), {wrapper: makeWrapper()});
     expect(mockTrySetSessionStorage).toHaveBeenCalledWith(
       'reviewSyllabusOnboardingDemoType',
       'high'
@@ -179,7 +205,7 @@ describe('useReviewSyllabusTour', () => {
   });
 
   it('clears the demoType key from sessionStorage when demoType is null', () => {
-    renderHook(() => useReviewSyllabusTour(null));
+    renderHook(() => useReviewSyllabusTour(null), {wrapper: makeWrapper()});
     expect(mockTrySetSessionStorage).toHaveBeenCalledWith(
       'reviewSyllabusOnboardingDemoType',
       ''

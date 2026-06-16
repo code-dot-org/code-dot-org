@@ -5,3 +5,5 @@ description 'Make the same selection (Choice A or B) that you did in the previou
 sublevels
 level 'designing-reliable-apps-lesson1-level3a-test-2025-pilot_2025-pilo_2026'
 level 'designing-reliable-apps-lesson1-level3b-test-2025-pilot_2025-pilo_2026'
+
+uses_lab2

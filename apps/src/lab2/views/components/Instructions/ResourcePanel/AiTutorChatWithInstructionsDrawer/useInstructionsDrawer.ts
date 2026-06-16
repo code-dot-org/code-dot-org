@@ -13,7 +13,6 @@ const DEFAULT_INITIAL_INSTRUCTIONS_HEIGHT = 250; // Initial height needed before
 const INSTRUCTIONS_DRAWER_VERTICAL_PADDING_PX = 16;
 
 interface UseInstructionsDrawerOptions {
-  isCollapsedByDefault: boolean;
   isPredictLevel?: boolean;
   // True when the AI Tutor tab is selected. When false (Instructions tab), the
   // chat is hidden and the instructions fill the whole panel.
@@ -21,7 +20,6 @@ interface UseInstructionsDrawerOptions {
 }
 
 export const useInstructionsDrawer = ({
-  isCollapsedByDefault,
   isPredictLevel,
   aiTutorActive,
 }: UseInstructionsDrawerOptions) => {
@@ -45,7 +43,7 @@ export const useInstructionsDrawer = ({
   const [maxInstructionsHeight, setMaxInstructionsHeight] = useState<
     number | undefined
   >(undefined);
-  const [isCollapsed, setIsCollapsed] = useState(isCollapsedByDefault);
+  const [isCollapsed, setIsCollapsed] = useState(true);
   const [showScrollFade, setShowScrollFade] = useState(false);
 
   const {
@@ -174,10 +172,6 @@ export const useInstructionsDrawer = ({
       resizeObserver.disconnect();
     };
   }, [isCollapsed, isPredictLevel, setRawInstructionsHeight]);
-
-  useEffect(() => {
-    setIsCollapsed(isCollapsedByDefault);
-  }, [isCollapsedByDefault]);
 
   // Keep refs in sync with current values.
   useEffect(() => {

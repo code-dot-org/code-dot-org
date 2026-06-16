@@ -1,3 +1,5 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import Modal from '@code-dot-org/component-library/modal';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -7,6 +9,12 @@ import UnitCalendarDialog, {
 import UnitCalendarGrid from '@cdo/apps/code-studio/components/progress/UnitCalendarGrid';
 
 import {testLessons} from './unitCalendarTestData';
+
+// The dropdown + grid live in Modal's `customContent` prop (a JSX node),
+// not as direct children — shallow-render that prop through a wrapping
+// fragment so we can query its sub-tree.
+const renderContent = wrapper =>
+  shallow(<div>{wrapper.find(Modal).prop('customContent')}</div>);
 
 describe('UnitCalendarDialog', () => {
   it('passes the lessons and weekly instructional minutes on to the Unit Calendar', () => {
@@ -20,7 +28,7 @@ describe('UnitCalendarDialog', () => {
       />
     );
     expect(
-      wrapper.containsMatchingElement(
+      renderContent(wrapper).containsMatchingElement(
         <UnitCalendarGrid
           lessons={testLessons}
           weeklyInstructionalMinutes={90}
@@ -40,16 +48,17 @@ describe('UnitCalendarDialog', () => {
         scriptId={123}
       />
     );
-    expect(wrapper.find('option').length).toBe(10);
+    const dropdown = renderContent(wrapper).find(SimpleDropdown);
+    expect(dropdown.length).toBe(1);
+    // Native <select> only roundtrips strings; SimpleDropdown items use string values.
+    expect(dropdown.prop('selectedValue')).toBe('45');
+    expect(dropdown.prop('items')).toHaveLength(10);
+    expect(dropdown.prop('items')).toContainEqual({
+      value: '45',
+      text: '45 minutes',
+    });
     expect(
-      wrapper.containsMatchingElement(
-        <option value={45} key={`minutes-45`}>
-          45 minutes
-        </option>
-      )
-    ).toBe(true);
-    expect(
-      wrapper.containsMatchingElement(
+      renderContent(wrapper).containsMatchingElement(
         <UnitCalendarGrid
           lessons={testLessons}
           weeklyInstructionalMinutes={45}
@@ -69,16 +78,15 @@ describe('UnitCalendarDialog', () => {
         scriptId={123}
       />
     );
-    expect(wrapper.find('option').length).toBe(11);
+    const dropdown = renderContent(wrapper).find(SimpleDropdown);
+    expect(dropdown.prop('selectedValue')).toBe('20');
+    expect(dropdown.prop('items')).toHaveLength(11);
+    expect(dropdown.prop('items')).toContainEqual({
+      value: '20',
+      text: '20 minutes',
+    });
     expect(
-      wrapper.containsMatchingElement(
-        <option value={20} key={`minutes-20`}>
-          20 minutes
-        </option>
-      )
-    ).toBe(true);
-    expect(
-      wrapper.containsMatchingElement(
+      renderContent(wrapper).containsMatchingElement(
         <UnitCalendarGrid
           lessons={testLessons}
           weeklyInstructionalMinutes={20}
@@ -99,10 +107,14 @@ describe('UnitCalendarDialog', () => {
       />
     );
     expect(wrapper.state('instructionalMinutes')).toBe(45);
-    wrapper.find('select').simulate('change', {target: {value: 90}});
+    // Invoke SimpleDropdown's onChange directly — shallow render doesn't
+    // descend into the component to find the inner <select>.
+    renderContent(wrapper).find(SimpleDropdown).prop('onChange')({
+      target: {value: '90'},
+    });
     expect(wrapper.state('instructionalMinutes')).toBe(90);
     expect(
-      wrapper.containsMatchingElement(
+      renderContent(wrapper).containsMatchingElement(
         <UnitCalendarGrid
           lessons={testLessons}
           weeklyInstructionalMinutes={90}

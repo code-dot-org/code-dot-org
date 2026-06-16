@@ -1,3 +1,4 @@
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -6,7 +7,6 @@ import BulkLessonVisibilityToggle from '@cdo/apps/code-studio/components/progres
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -101,15 +101,16 @@ class UnitOverviewTopRow extends React.Component {
           {!deeperLearningCourse && viewAs === ViewType.Participant && (
             <div style={styles.buttonsInRow}>
               {isUnitWithLevels && (
-                <Button
-                  __useDeprecatedTag
+                <MuiButton
                   href={`${scriptPath}/next`}
-                  text={NEXT_BUTTON_TEXT[unitProgress]}
-                  color={Button.ButtonColor.purple}
-                  size={Button.ButtonSize.large}
+                  variant="contained"
+                  color="primary"
+                  size="small"
                   style={{marginRight: 10, boxShadow: 'none'}}
                   onClick={() => this.logTryNowButtonClick(unitProgress)}
-                />
+                >
+                  {NEXT_BUTTON_TEXT[unitProgress]}
+                </MuiButton>
               )}
 
               {studentResources.length > 0 && (
@@ -119,18 +120,19 @@ class UnitOverviewTopRow extends React.Component {
                   studentFacing
                 />
               )}
-              <Button
-                __useDeprecatedTag
+              <MuiButton
                 href="//support.code.org"
-                text={i18n.getHelp()}
-                color={Button.ButtonColor.white}
-                size={Button.ButtonSize.large}
+                variant="outlined"
+                color="secondary"
+                size="small"
                 style={
                   hasButtonMargin
                     ? {...buttonMarginStyle, boxShadow: 'none'}
                     : {boxShadow: 'none'}
                 }
-              />
+              >
+                {i18n.getHelp()}
+              </MuiButton>
               {assignedSectionId && <Assigned />}
             </div>
           )}
@@ -220,7 +222,6 @@ const styles = {
     justifyContent: 'space-between',
   },
   detailToggle: {
-    minWidth: 84,
     alignSelf: 'end',
     marginLeft: 10,
   },

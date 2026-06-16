@@ -155,7 +155,11 @@ class Javalab < Level
   #   # friendly_name => uuid_name
   #   "welcome.png" => "123-abc-456.png"
   # }
+  # Lab2 levels don't maintain this mapping: their start_sources carry a
+  # url entry per asset, which is the single source of truth.
+  # Existing mappings are frozen legacy data.
   def add_starter_asset!(friendly_name, uuid_name)
+    return true if uses_lab2?
     self.starter_assets ||= {}
     self.starter_assets[friendly_name] = uuid_name
     save!
@@ -176,6 +180,24 @@ class Javalab < Level
     properties['encrypted_validation'].present?
   end
 
+  # Return the validation condition for this level.
+  # If the level has at least one validation file, the condition
+  # is that all tests passed. If there are no validation files, there are no conditions.
+  # Follows the same logic as pythonlab.rb.
+  def get_validations
+    return nil unless validated?
+    [{
+      conditions: [
+        {
+          name: 'PASSED_ALL_TESTS',
+          value: 'true',
+        }
+      ],
+      message: '',
+      next: true,
+    }]
+  end
+
   def get_starter_code
     properties["start_sources"]
   end
@@ -193,6 +215,10 @@ class Javalab < Level
       is_levelbuilder = current_user&.permission?(UserPermission::LEVELBUILDER)
       level_properties['validation'] = is_levelbuilder ? validation : validation.transform_values {''}
     end
+    # Resolve starter assets through the project template, matching the
+    # precedence JavalabFilesHelper#get_level_files uses at run time.
+    resolved_starter_assets = project_template_level&.starter_assets || starter_assets
+    level_properties['starterAssets'] = resolved_starter_assets if resolved_starter_assets.present?
     level_properties
   end
 end

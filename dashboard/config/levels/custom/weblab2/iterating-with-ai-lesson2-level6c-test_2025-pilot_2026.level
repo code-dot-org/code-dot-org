@@ -1,5 +1,6 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-04-01T21:40:00.000Z",
   "level_num": "custom",
@@ -18,15 +19,15 @@
       "isPredictLevel": false,
       "solution": "",
       "questionType": "freeResponse",
-      "allowMultipleAttempts": false,
       "placeholderText": "",
       "multipleChoiceOptions": [
         ""
       ],
       "freeResponseHeight": 50,
-      "codeEditableAfterSubmit": false
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
     },
-    "long_instructions": "## Countdown Timer\r\n\r\n**Goal**: Use a **for loop** to make the number count down from **10 to 0**. Each number should appear once per second.\r\n\r\n---\r\n\r\n### Do This\r\n\r\n1. **Find where to write your loop** inside the `countdown()` function.\r\n\r\n2. Use a **for loop** that starts at **10** and ends at **0**, counting down by **1** each time.\r\n\r\n3. Inside your loop, use the loop variable to change the on-screen number.\r\n\r\n   **Syntax:**\r\n\r\n   ```js\r\n   count.textContent = num;\r\n   ```\r\n\r\n4. Use `setTimeout()` to delay each update so the numbers appear one after another.\r\n\r\n   * Hint: multiply your delay by how far the loop has counted down, for example:\r\n     `(start - num) * 1000`\r\n\r\n5. Make sure the countdown ends cleanly at **0**.\r\n\r\n---\r\n\r\n<details>\r\n  <summary>Need help? Ask the AI Tutor.</summary>\r\n  \t<ol>\r\n      \t<li>\"How can I make my countdown change once per second?\"</li>\r\n      \t<li>\"Why do we multiply by (start - num) for the delay?\"</li>\r\n      \t<li>\"What does the loop variable control in this loop?\"</li>\r\n    </ol>\r\n</details>\r\n",
+    "long_instructions": "## Countdown Timer\r\n**Goal:** Use a **for loop** to count down from **10 to 0**, with each number appearing once per second.\r\n\r\n### Do This\r\n1. Loop from 10 down to 0, counting by 1 each time.\r\n2. Use the loop variable to set the on-screen number each step.\r\n3. Use `setTimeout()` to delay each update so the numbers appear one per second.\r\n\r\n<details>\r\n  <summary>Need help? Ask the AI Tutor.</summary>\r\n  \t<ol>\r\n      \t<li>\"How can I make my countdown change once per second?\"</li>\r\n      \t<li>\"Why do we multiply by (start - num) for the delay?\"</li>\r\n      \t<li>\"What does the loop variable control in this loop?\"</li>\r\n    </ol>\r\n</details>\r\n\r\n",
     "start_sources": {
       "folders": {
       },
@@ -64,9 +65,20 @@
     },
     "encrypted_exemplar_sources": "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\nX2XiieLI+HsSt/XiwCWbiZI/nOi9pne1\n",
     "bubble_choice_description": "Use a for loop to make the number count down from 10 to 0.",
-    "name_suffix": "_2026"
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildJavaScript",
+        "hint",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "level_system_prompt": "You generate starter JavaScript for a beginner CS exercise. The student must fill the countdown() function so a number counts down from 10 to 0, one number per second.\r\n\r\nWrite the solution inside countdown(). Use a single explicit for loop that starts at 10, ends at 0, and counts down by 1. Inside the loop, use setTimeout() to delay each update, multiplying the delay by how far the loop has counted down — (start - num) * 1000 — so numbers appear one per second. Set the displayed number with count.textContent and the loop variable.\r\n\r\nRules: ES6 syntax (const/let, arrow functions). Use a for loop, never forEach or array methods. No helper functions or abstraction. Write directly to the existing count variable. Keep it short, with brief comments a 9th grader can follow."
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:40:00.119+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson2-level6c-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson2-level6c-test_2025-pilot\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:40:00.119+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson2-level6c-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson2-level6c-test_2025-pilot\"},{\"changed_at\":\"2026-06-09 21:00:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-09 21:06:22 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Weblab2>

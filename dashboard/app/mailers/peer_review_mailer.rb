@@ -1,5 +1,5 @@
 class PeerReviewMailer < ApplicationMailer
-  default from: 'Code.org <teacher@code.org>'
+  default from: 'CodeAI <teacher@code.org>'
   default bcc: MailerConstants::PLC_EMAIL_LOG
 
   def review_completed_receipt(peer_review)

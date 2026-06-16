@@ -44,6 +44,9 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/flappy/1?set_locale=ar-SA&lang=ar-SA'
     follow_redirect!
     assert_redirected_to '/flappy/1?lang=ar-SA'
+    follow_redirect!
+    assert_redirected_to '/ar/flappy/1?lang=ar-SA'
+    follow_redirect!
     assert_equal 'ar-SA', cookies[:language_]
 
     cookies.delete('language_')
@@ -53,6 +56,9 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/s/playlab/lessons/1/levels/1?set_locale=ar-SA&lang=ar-SA'
     follow_redirect!
     assert_redirected_to '/s/playlab/lessons/1/levels/1?lang=ar-SA'
+    follow_redirect!
+    assert_redirected_to '/ar/s/playlab/lessons/1/levels/1?lang=ar-SA'
+    follow_redirect!
     assert_equal 'ar-SA', cookies[:language_]
 
     cookies.delete('language_')
@@ -62,6 +68,9 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/s/artist/lessons/1/levels/1?set_locale=ar-SA&lang=ar-SA'
     follow_redirect!
     assert_redirected_to '/s/artist/lessons/1/levels/1?lang=ar-SA'
+    follow_redirect!
+    assert_redirected_to '/ar/s/artist/lessons/1/levels/1?lang=ar-SA'
+    follow_redirect!
     assert_equal 'ar-SA', cookies[:language_]
   end
 
@@ -70,6 +79,9 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/?set_locale=es&lang=es'
     follow_redirect!
     assert_redirected_to '/?lang=es'
+    follow_redirect!
+    assert_redirected_to '/es/?lang=es'
+    follow_redirect!
     assert_equal 'es-ES', cookies[:language_]
 
     cookies.delete('language_')
@@ -79,6 +91,9 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/s/frozen?set_locale=es&lang=es'
     follow_redirect!
     assert_redirected_to '/s/frozen?lang=es'
+    follow_redirect!
+    assert_redirected_to '/es/s/frozen?lang=es'
+    follow_redirect!
     assert_equal 'es-ES', cookies[:language_]
 
     cookies.delete('language_')
@@ -88,6 +103,9 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     assert_redirected_to "/s/#{@multi_lesson_unit.name}/lessons/1/levels/1?set_locale=es&lang=es"
     follow_redirect!
     assert_redirected_to "/s/#{@multi_lesson_unit.name}/lessons/1/levels/1?lang=es"
+    follow_redirect!
+    assert_redirected_to "/es/s/#{@multi_lesson_unit.name}/lessons/1/levels/1?lang=es"
+    follow_redirect!
     assert_equal 'es-ES', cookies[:language_]
   end
 

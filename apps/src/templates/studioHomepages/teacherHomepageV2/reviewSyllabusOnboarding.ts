@@ -8,7 +8,10 @@ import {
 } from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 import {trySetSessionStorage} from '@cdo/apps/utils';
 
-import {DemoType} from '../../teacherDashboard/types/teacherSectionTypes';
+import {
+  DemoType,
+  ReviewSyllabusQuizOption,
+} from '../../teacherDashboard/types/teacherSectionTypes';
 
 export const REVIEW_SYLLABUS_ONBOARDING_STEP_KEY =
   'reviewSyllabusOnboardingCurrentStep';
@@ -70,11 +73,163 @@ const highlightAttachedElement = (selector: string) => ({
   },
 });
 
-// ── High school steps ────────────────────────────────────────────────────────
+// ── Quiz content ──────────────────────────────────────────────────────────────
 
-const createHighSchoolHomepageSteps = (
+const escapeHtml = (s: string): string =>
+  s
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+
+const buildQuizHtml = (
+  lesson: number,
+  options: ReviewSyllabusQuizOption[]
+): string =>
+  `<div class="onboarding-step-content">` +
+  `<i class="fa-solid fa-sparkle onboarding-sparkle-icon"></i>` +
+  `<span class="onboarding-step-text">When you're prepping a lesson, you don't have time to review every single level — and you don't need to. CodeAI highlights the levels most worth your attention. For Lesson ${lesson}, which level would you prioritize reviewing?</span>` +
+  `</div>` +
+  `<div class="quiz-options-grid">` +
+  options
+    .map(
+      opt =>
+        `<button class="quiz-option" data-answer="${
+          opt.correct ? 'correct' : 'wrong'
+        }" type="button">${escapeHtml(opt.label)}</button>`
+    )
+    .join('') +
+  `</div>` +
+  `<div class="quiz-feedback" aria-live="polite"></div>`;
+
+// ── Step builders ─────────────────────────────────────────────────────────────
+
+const createTeacherResourcesStep = (
   tour: Tour,
-  sessionStorageKey: string
+  controller?: AbortController
+): StepOptions => ({
+  id: 'teacher-resources-dropdown',
+  attachTo: {
+    element: '#teacher-resources-dropdown',
+    on: 'bottom',
+  },
+  text: withSparkle(
+    "If admin asks what standards you're covering or you need a refresher before starting something new, the implementation guides, standards alignment, and how-tos are all here."
+  ),
+  buttons: [nextButton(tour)],
+  beforeShowPromise: controller
+    ? () => waitForElement('#teacher-resources-dropdown', controller.signal)
+    : undefined,
+  when: highlightAttachedElement('#teacher-resources-dropdown'),
+});
+
+const createLessonResourcesStep = (
+  tour: Tour,
+  controller: AbortController
+): StepOptions => ({
+  id: 'lesson-resources-intro',
+  attachTo: {
+    element: '#uitest-lesson-plan',
+    on: 'bottom',
+  },
+  text: withSparkle(
+    'Ready to dig into this lesson? The lesson plan, slide decks, and student activity guides are one click away. Plus you can save your own materials alongside them.'
+  ),
+  buttons: [nextButton(tour)],
+  beforeShowPromise: () =>
+    waitForElement('#uitest-lesson-plan', controller.signal),
+});
+
+const createQuizStep = (
+  tour: Tour,
+  controller: AbortController,
+  lesson: number,
+  options: ReviewSyllabusQuizOption[]
+): StepOptions => {
+  const lessonSelector = `#progress-lesson-${lesson}`;
+  return {
+    id: 'quiz-level-priority',
+    attachTo: {
+      element: lessonSelector,
+      on: 'left',
+    },
+    text: buildQuizHtml(lesson, options),
+    buttons: [],
+    beforeShowPromise: () => waitForElement(lessonSelector, controller.signal),
+    when: createQuizWhenHandlers(
+      tour,
+      'Take another look. The purple checkmark indicator on a level means CodeAI recommends teachers review it.'
+    ),
+  };
+};
+
+const createBreadcrumbStep = (
+  tour: Tour,
+  controller: AbortController
+): StepOptions => {
+  let breadcrumbClickHandler: ((e: Event) => void) | null = null;
+
+  return {
+    id: UNIT_BREADCRUMB_STEP_ID,
+    attachTo: {
+      element: UNIT_BREADCRUMB_SELECTOR,
+      on: 'bottom',
+    },
+    text: withSparkle(
+      'The Course page is where you can map out what students will learn, lesson by lesson. Need to zoom out and see the bigger picture for the full course? Click the course name above the unit header.'
+    ),
+    buttons: [nextButton(tour)],
+    beforeShowPromise: () =>
+      waitForElement(UNIT_BREADCRUMB_SELECTOR, controller.signal),
+    // No advanceOn: we prevent default on the anchor click so the celebration
+    // popup can appear before navigation, then let the tour buttons decide
+    // where to go.
+    when: {
+      show() {
+        document
+          .querySelector(UNIT_BREADCRUMB_SELECTOR)
+          ?.classList.add('tour-step-highlight');
+
+        breadcrumbClickHandler = (e: Event) => {
+          e.preventDefault();
+          document
+            .querySelector(UNIT_BREADCRUMB_SELECTOR)
+            ?.classList.remove('tour-step-highlight');
+          if (breadcrumbClickHandler !== null) {
+            document
+              .querySelector(UNIT_BREADCRUMB_LINK_SELECTOR)
+              ?.removeEventListener('click', breadcrumbClickHandler);
+          }
+          breadcrumbClickHandler = null;
+          tour.next();
+        };
+
+        document
+          .querySelector(UNIT_BREADCRUMB_LINK_SELECTOR)
+          ?.addEventListener('click', breadcrumbClickHandler);
+      },
+      hide() {
+        document
+          .querySelector(UNIT_BREADCRUMB_SELECTOR)
+          ?.classList.remove('tour-step-highlight');
+        if (breadcrumbClickHandler !== null) {
+          document
+            .querySelector(UNIT_BREADCRUMB_LINK_SELECTOR)
+            ?.removeEventListener('click', breadcrumbClickHandler);
+          breadcrumbClickHandler = null;
+        }
+      },
+    },
+  };
+};
+
+// ── Homepage steps ─────────────────────────────────────────────────────────────
+
+const createHomepageSteps = (
+  tour: Tour,
+  sessionStorageKey: string,
+  unitOverviewStartStepId: string
 ): StepOptions[] => {
   const controller = new AbortController();
   tour.on('cancel', () => controller.abort());
@@ -126,7 +281,7 @@ const createHighSchoolHomepageSteps = (
           );
 
           lessonClickHandler = () => {
-            trySetSessionStorage(sessionStorageKey, UNIT_BREADCRUMB_STEP_ID);
+            trySetSessionStorage(sessionStorageKey, unitOverviewStartStepId);
             dropdownItems.forEach(el =>
               el.removeEventListener('click', lessonClickHandler!)
             );
@@ -151,124 +306,6 @@ const createHighSchoolHomepageSteps = (
         },
       },
     },
-    {
-      id: 'teacher-resources-dropdown',
-      attachTo: {
-        element: '#teacher-resources-dropdown',
-        on: 'bottom',
-      },
-      text: withSparkle(
-        'If admin asks what standards you’re covering or you need a refresher before starting something new, the implementation guides, standards alignment, and how-tos are all here.'
-      ),
-      buttons: [nextButton(tour)],
-      when: highlightAttachedElement('#teacher-resources-dropdown'),
-    },
-  ];
-};
-
-const QUIZ_LEVEL_QUESTION = `
-  <div class="onboarding-step-content">
-    <i class="fa-solid fa-sparkle onboarding-sparkle-icon"></i>
-    <span class="onboarding-step-text">When you're prepping a lesson, you don&#8217;t have time to review every single level &#8212; and you don&#8217;t need to. CodeAI highlights the levels most worth your attention. For Lesson 1, which level would you prioritize reviewing?</span>
-  </div>
-  <div class="quiz-options-grid">
-    <button class="quiz-option" data-answer="wrong" type="button">Level 1</button>
-    <button class="quiz-option" data-answer="wrong" type="button">Level 2</button>
-    <button class="quiz-option" data-answer="wrong" type="button">Level 3</button>
-    <button class="quiz-option" data-answer="correct" type="button">Level 4</button>
-  </div>
-  <div class="quiz-feedback" aria-live="polite"></div>
-`;
-
-const createHighSchoolUnitOverviewSteps = (tour: Tour): StepOptions[] => {
-  const controller = new AbortController();
-  tour.on('cancel', () => controller.abort());
-  tour.on('complete', () => controller.abort());
-
-  let breadcrumbClickHandler: ((e: Event) => void) | null = null;
-
-  return [
-    {
-      id: UNIT_BREADCRUMB_STEP_ID,
-      attachTo: {
-        element: UNIT_BREADCRUMB_SELECTOR,
-        on: 'bottom',
-      },
-      text: withSparkle(
-        'The Course page is where you can map out what students will learn, lesson by lesson. Need to zoom out and see the bigger picture for the full course? Click the course name above the unit header.'
-      ),
-      buttons: [nextButton(tour)],
-      beforeShowPromise: () =>
-        waitForElement(UNIT_BREADCRUMB_SELECTOR, controller.signal),
-      // No advanceOn: we prevent default on the anchor click so the celebration
-      // popup can appear before navigation, then let the tour buttons decide
-      // where to go.
-      when: {
-        show() {
-          document
-            .querySelector(UNIT_BREADCRUMB_SELECTOR)
-            ?.classList.add('tour-step-highlight');
-
-          breadcrumbClickHandler = (e: Event) => {
-            e.preventDefault();
-            document
-              .querySelector(UNIT_BREADCRUMB_SELECTOR)
-              ?.classList.remove('tour-step-highlight');
-            if (breadcrumbClickHandler !== null) {
-              document
-                .querySelector(UNIT_BREADCRUMB_LINK_SELECTOR)
-                ?.removeEventListener('click', breadcrumbClickHandler);
-            }
-            breadcrumbClickHandler = null;
-            tour.next();
-          };
-
-          document
-            .querySelector(UNIT_BREADCRUMB_LINK_SELECTOR)
-            ?.addEventListener('click', breadcrumbClickHandler);
-        },
-        hide() {
-          document
-            .querySelector(UNIT_BREADCRUMB_SELECTOR)
-            ?.classList.remove('tour-step-highlight');
-          if (breadcrumbClickHandler !== null) {
-            document
-              .querySelector(UNIT_BREADCRUMB_LINK_SELECTOR)
-              ?.removeEventListener('click', breadcrumbClickHandler);
-            breadcrumbClickHandler = null;
-          }
-        },
-      },
-    },
-    {
-      id: 'quiz-level-priority',
-      attachTo: {
-        element: '#progress-lesson-1',
-        on: 'left',
-      },
-      text: QUIZ_LEVEL_QUESTION,
-      buttons: [],
-      beforeShowPromise: () =>
-        waitForElement('#progress-lesson-1', controller.signal),
-      when: createQuizWhenHandlers(
-        tour,
-        'Take another look. The purple checkmark indicator on a level means CodeAI recommends teachers review it.'
-      ),
-    },
-    {
-      id: 'lesson-resources-intro',
-      attachTo: {
-        element: '#uitest-lesson-plan',
-        on: 'bottom',
-      },
-      text: withSparkle(
-        'Ready to dig into this lesson? The lesson plan, slide decks, and student activity guides are one click away. Plus you can save your own materials alongside them.'
-      ),
-      buttons: [nextButton(tour)],
-      beforeShowPromise: () =>
-        waitForElement('#uitest-lesson-plan', controller.signal),
-    },
-    createCompletionStep(tour, 'Review the Syllabus', 'Stay on this page'),
   ];
 };
 
@@ -282,20 +319,66 @@ export const createReviewSyllabusHomepageSteps = (
 ): StepOptions[] => {
   switch (demoType) {
     case 'high':
-      return createHighSchoolHomepageSteps(tour, sessionStorageKey);
+    case 'middle':
+      return createHomepageSteps(
+        tour,
+        sessionStorageKey,
+        UNIT_BREADCRUMB_STEP_ID
+      );
+    case 'elementary':
+      return createHomepageSteps(
+        tour,
+        sessionStorageKey,
+        'teacher-resources-dropdown'
+      );
     default:
       return [];
   }
 };
 
+export interface ReviewSyllabusQuizConfig {
+  lesson: number;
+  options: ReviewSyllabusQuizOption[];
+}
+
 // Steps shown on the unit overview page after navigating from the homepage.
 export const createReviewSyllabusUnitOverviewSteps = (
   tour: Tour,
-  demoType: DemoType
+  demoType: DemoType,
+  quizConfig: ReviewSyllabusQuizConfig | null
 ): StepOptions[] => {
+  const controller = new AbortController();
+  tour.on('cancel', () => controller.abort());
+  tour.on('complete', () => controller.abort());
+
+  const lessonResourcesStep = createLessonResourcesStep(tour, controller);
+  const completionStep = createCompletionStep(
+    tour,
+    'Review the Syllabus',
+    'Stay on this page'
+  );
+
+  const quizStep = quizConfig
+    ? createQuizStep(tour, controller, quizConfig.lesson, quizConfig.options)
+    : null;
+
   switch (demoType) {
     case 'high':
-      return createHighSchoolUnitOverviewSteps(tour);
+    case 'middle':
+      return [
+        createBreadcrumbStep(tour, controller),
+        createTeacherResourcesStep(tour, controller),
+        ...(quizStep ? [quizStep] : []),
+        lessonResourcesStep,
+        completionStep,
+      ];
+    case 'elementary':
+      return [
+        createTeacherResourcesStep(tour, controller),
+        ...(quizStep ? [quizStep] : []),
+        lessonResourcesStep,
+        completionStep,
+      ];
     default:
       return [];
   }

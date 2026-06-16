@@ -8,7 +8,8 @@ import React from 'react';
 import ReactTooltip from 'react-tooltip';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import color from '@cdo/apps/util/color';
+
+const ARROW_FILL = 'var(--background-info-primary)';
 
 const styles = {
   main: {
@@ -29,12 +30,12 @@ const styles = {
     height: 0,
     borderStyle: 'solid',
     borderWidth: '17px 20px 17px',
-    borderColor: `transparent ${color.cyan} transparent transparent`,
+    borderColor: `transparent ${ARROW_FILL} transparent transparent`,
   },
   focusArea: {
     display: 'inline-block',
-    backgroundColor: color.cyan,
-    color: color.white,
+    backgroundColor: ARROW_FILL,
+    color: 'var(--text-neutral-inverse)',
     height: 34,
     lineHeight: '34px',
     position: 'relative',
@@ -45,14 +46,14 @@ const styles = {
   },
   focusAreaIcon: {
     display: 'inline-block',
-    color: color.white,
+    color: 'var(--text-neutral-inverse)',
     lineHeight: '13px',
     padding: 5,
     marginLeft: 5,
     marginRight: 5,
     borderRadius: 4,
     ':hover': {
-      backgroundColor: color.default_blue,
+      backgroundColor: 'var(--background-info-secondary)',
     },
   },
 };

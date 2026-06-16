@@ -1433,6 +1433,9 @@ Dashboard::Application.routes.draw do
 
     resources :aidiff_artifacts, only: [:index, :create]
 
+    resources :user_practice_problem_attempts, only: [:index, :update, :create, :show]
+    resources :practice_problems, only: [:index, :show]
+
     resources :aidiff_exit_tickets, only: [:index, :update, :create, :show]
     resources :aidiff_lesson_hooks, only: [:index, :update, :create, :show]
 

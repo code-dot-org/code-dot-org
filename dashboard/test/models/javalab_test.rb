@@ -80,6 +80,78 @@ class JavalabTest < ActiveSupport::TestCase
     refute summary.key?('encryptedValidation')
   end
 
+  test 'get_validations returns PASSED_ALL_TESTS condition when level has validation' do
+    level = Javalab.create(game_id: 68, level_num: "custom", name: "javalab_get_validations")
+    level.properties['encrypted_validation'] = 'ciphertext'
+    validations = level.get_validations
+    assert_equal 1, validations.length
+    assert_equal [{name: 'PASSED_ALL_TESTS', value: 'true'}], validations.first[:conditions]
+    assert validations.first[:next]
+  end
+
+  test 'get_validations returns nil when level has no validation' do
+    level = Javalab.create(game_id: 68, level_num: "custom", name: "javalab_no_get_validations")
+    assert_nil level.get_validations
+  end
+
+  test 'summarize_for_lab2_properties includes the level starter assets' do
+    level = Javalab.create(
+      game_id: 68,
+      level_num: "custom",
+      name: "javalab_starter_assets",
+      properties: {starter_assets: {"cat.png" => "uuid-1.png"}}
+    )
+    summary = level.summarize_for_lab2_properties(nil, nil, nil)
+    assert_equal({"cat.png" => "uuid-1.png"}, summary['starterAssets'])
+  end
+
+  test 'summarize_for_lab2_properties omits starterAssets when there are none' do
+    level = Javalab.create(game_id: 68, level_num: "custom", name: "javalab_no_starter_assets")
+    summary = level.summarize_for_lab2_properties(nil, nil, nil)
+    refute summary.key?('starterAssets')
+  end
+
+  test 'summarize_for_lab2_properties resolves starter assets through the project template' do
+    # Matches the run-time precedence in JavalabFilesHelper#get_level_files:
+    # a template-backed level serves the template's starter assets.
+    template_level = Javalab.create(
+      game_id: 68,
+      level_num: "custom",
+      name: "javalab_starter_assets_template",
+      properties: {starter_assets: {"template.png" => "uuid-t.png"}}
+    )
+    level = Javalab.create(
+      game_id: 68,
+      level_num: "custom",
+      name: "javalab_starter_assets_from_template",
+      properties: {
+        project_template_level_name: template_level.name,
+        starter_assets: {"own.png" => "uuid-o.png"},
+      }
+    )
+    summary = level.summarize_for_lab2_properties(nil, nil, nil)
+    assert_equal({"template.png" => "uuid-t.png"}, summary['starterAssets'])
+  end
+
+  test 'add_starter_asset! is a no-op for lab2 levels' do
+    # Lab2 levels track assets as url entries in start_sources; the mapping
+    # is frozen legacy data.
+    level = Javalab.create(
+      game_id: 68,
+      level_num: "custom",
+      name: "javalab_lab2_no_mapping_writes",
+      properties: {uses_lab2: true}
+    )
+    assert level.add_starter_asset!("cat.png", "uuid-1.png")
+    assert_nil level.reload.starter_assets
+  end
+
+  test 'add_starter_asset! updates the mapping for legacy levels' do
+    level = Javalab.create(game_id: 68, level_num: "custom", name: "javalab_legacy_mapping_writes")
+    assert level.add_starter_asset!("cat.png", "uuid-1.png")
+    assert_equal({"cat.png" => "uuid-1.png"}, level.reload.starter_assets)
+  end
+
   test 'get_serialized_maze returns template level maze if level doesnt have one' do
     template_data = {game_id: 68, level_num: "custom", name: "template_neighborhood"}
     serialized_maze = "[[{\"tileType\": 0, \"assetId\": 13, \"value\": 0}],[{\"tileType\":1,\"value\":0}]]"

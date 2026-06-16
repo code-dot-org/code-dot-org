@@ -1,5 +1,9 @@
 import {CodebridgeContextProvider} from '@codebridge/codebridgeContext';
-import {useFlaggedImage, useZoomTracker} from '@codebridge/hooks';
+import {
+  useFlaggedImage,
+  useSyncValidationOverride,
+  useZoomTracker,
+} from '@codebridge/hooks';
 import {setWidgetViewShowCode} from '@codebridge/redux/workspaceRedux';
 import {
   ConfigType,
@@ -55,6 +59,8 @@ type CodebridgeProps = {
   secondaryBackpackAppNames?: AppName[];
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
   onAssetRemoved?: (asset: ChatAsset) => void;
+  aiTutorInitialWelcomeMessage?: string;
+  allowMultipleValidationFiles?: boolean;
 };
 
 export const Codebridge = React.memo(
@@ -77,6 +83,8 @@ export const Codebridge = React.memo(
     secondaryBackpackAppNames,
     onAssetUploaded,
     onAssetRemoved,
+    aiTutorInitialWelcomeMessage,
+    allowMultipleValidationFiles,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
     const isWidgetView = !!levelProperties.widgetView;
@@ -193,6 +201,9 @@ export const Codebridge = React.memo(
     // Send analytics when user zooms in/out (will be compared to user updating font size via settings).
     useZoomTracker(appName);
 
+    // Keep the validation override in sync with the project's validation files.
+    useSyncValidationOverride();
+
     const dispatch = useAppDispatch();
 
     // Set view code to false if level is switched for any levels in widget view.
@@ -229,6 +240,8 @@ export const Codebridge = React.memo(
           aiTutorDisabled,
           onAssetUploaded,
           onAssetRemoved,
+          aiTutorInitialWelcomeMessage,
+          allowMultipleValidationFiles,
         }}
       >
         <BackpackAPIContext.Provider value={backpackContext}>

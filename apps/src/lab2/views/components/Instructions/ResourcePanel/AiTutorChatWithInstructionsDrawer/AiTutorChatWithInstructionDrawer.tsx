@@ -26,7 +26,6 @@ interface AiTutorChatWithInstructionDrawerProps {
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   instructionsContent?: React.ReactNode;
-  isCollapsedByDefault: boolean;
   tutorVideos?: JsonVideoFileMetadata[];
   isPredictLevel?: boolean;
   disabledState?: AiChatDisabledState;
@@ -36,6 +35,7 @@ interface AiTutorChatWithInstructionDrawerProps {
   // Instructions tab (where it renders instructions only); the chat and the
   // Hide/Show Instructions toggle fade in only when the AI Tutor tab is active.
   aiTutorActive: boolean;
+  initialWelcomeMessage?: string;
 }
 
 const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
@@ -49,13 +49,13 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
   instructionsContent,
-  isCollapsedByDefault,
   tutorVideos,
   isPredictLevel,
   disabledState,
   onAssetUploaded,
   onAssetRemoved,
   aiTutorActive,
+  initialWelcomeMessage,
 }) => {
   const {
     containerRef,
@@ -69,11 +69,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     separatorProps,
     isDragging,
     toggleInstructions,
-  } = useInstructionsDrawer({
-    isCollapsedByDefault,
-    isPredictLevel,
-    aiTutorActive,
-  });
+  } = useInstructionsDrawer({isPredictLevel, aiTutorActive});
 
   // Keep the chat mounted across tab switches (so its state persists) but inert
   // when the Instructions tab is showing, so its hidden controls aren't tabbable.
@@ -170,6 +166,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
             disabledState={disabledState}
             onAssetUploaded={onAssetUploaded}
             onAssetRemoved={onAssetRemoved}
+            initialWelcomeMessage={initialWelcomeMessage}
           />
         </div>
       </div>

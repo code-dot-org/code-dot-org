@@ -26,7 +26,7 @@ const shapes = {
       assignedTitle: PropTypes.string.isRequired,
       linkToAssigned: PropTypes.string.isRequired,
       login_type: PropTypes.string,
-      code: PropTypes.string.isRequired,
+      code: PropTypes.string,
     })
   ),
   teacherAnnouncement: PropTypes.shape({

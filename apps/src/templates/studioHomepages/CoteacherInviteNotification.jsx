@@ -1,14 +1,13 @@
-import {Typography} from '@mui/material';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import NotificationBanner from '@code-dot-org/component-library/notification-banner';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useMemo} from 'react';
 import {connect} from 'react-redux';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import Notification, {
-  NotificationType,
-} from '@cdo/apps/sharedComponents/Notification';
 import {
   asyncLoadCoteacherInvite,
   asyncLoadSectionData,
@@ -16,13 +15,16 @@ import {
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
+import styles from './coteacher-invite-notification.module.scss';
+
+const COLLABORATE_ICON = {iconName: 'users'};
+
 const CoteacherInviteNotification = ({
   isForPl,
   asyncLoadCoteacherInvite,
   asyncLoadSectionData,
   coteacherInvite,
   coteacherInviteForPl,
-  // This prop is used to allow asyncLoadSectionData to be run in a way that might remove data
   destructiveLoad = false,
 }) => {
   const invite = useMemo(() => {
@@ -60,39 +62,63 @@ const CoteacherInviteNotification = ({
   if (!invite) {
     return null;
   }
+
   return (
-    <Notification
-      dismissible={false}
-      type={NotificationType.collaborate}
-      iconStyles={styles.icon}
-      notice={i18n.coteacherInvite({
-        invitedByName: invite.invited_by_name,
-      })}
-      details={
-        <Typography style={{marginBottom: 0}} variant="body2" gutterBottom>
+    <NotificationBanner
+      variant="primary"
+      className={styles.notificationContainer}
+      icon={COLLABORATE_ICON}
+      title={
+        <>
+          {i18n.coteacherInvite({
+            invitedByName: invite.invited_by_name,
+          })}
+          <WithTooltip
+            tooltipProps={{
+              text: i18n.coteacherTooltip(),
+              size: 's',
+              tooltipId: 'coteacher-invite-tooltip',
+            }}
+          >
+            <button
+              type="button"
+              className={styles.tooltipTrigger}
+              aria-label={i18n.coteacherTooltip()}
+            >
+              <FontAwesomeV6Icon iconName="circle-info" />
+            </button>
+          </WithTooltip>
+        </>
+      }
+      description={
+        <>
           {i18n.coteacherInviteDescription({
             invitedByEmail: invite.invited_by_email,
           })}
           <br />
-          <Typography variant="strong">{invite.section_name}</Typography>
-        </Typography>
+          <strong>{invite.section_name}</strong>
+        </>
       }
-      tooltipText={i18n.coteacherTooltip()}
-      buttonsStyles={styles.buttons}
-      buttons={[
-        {
-          text: 'Decline',
-          onClick: () => declineCoteacherInvite(invite.id, invite.section_id),
-          color: Button.ButtonColor.neutralDark,
-          style: styles.declineButton,
-        },
-        {
-          text: 'Accept',
-          onClick: () => acceptCoteacherInvite(invite.id, invite.section_id),
-          color: Button.ButtonColor.brandSecondaryDefault,
-          style: styles.acceptButton,
-        },
-      ]}
+      actions={
+        <>
+          <MuiButton
+            onClick={() => declineCoteacherInvite(invite.id, invite.section_id)}
+            size="small"
+            variant="outlined"
+            color="secondary"
+          >
+            {'Decline'}
+          </MuiButton>
+          <MuiButton
+            onClick={() => acceptCoteacherInvite(invite.id, invite.section_id)}
+            size="small"
+            variant="contained"
+            color="primary"
+          >
+            {'Accept'}
+          </MuiButton>
+        </>
+      }
     />
   );
 };
@@ -118,30 +144,4 @@ CoteacherInviteNotification.propTypes = {
   coteacherInvite: PropTypes.object,
   coteacherInviteForPl: PropTypes.object,
   destructiveLoad: PropTypes.bool,
-};
-
-// The Notification object uses styles instead of className for legacy reasons.
-const styles = {
-  acceptButton: {
-    marginLeft: '20px',
-    marginRight: '0px',
-    lineHeight: '100%',
-    display: 'flex',
-    alignItems: 'center',
-  },
-  declineButton: {
-    marginRight: 0,
-    display: 'flex',
-    alignItems: 'center',
-  },
-  buttons: {
-    // center vertically
-    display: 'flex',
-    alignItems: 'center',
-  },
-  icon: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
 };
