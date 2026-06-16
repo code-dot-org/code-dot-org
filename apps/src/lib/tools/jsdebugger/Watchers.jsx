@@ -28,8 +28,8 @@ const OPTIONS_GAMELAB = [
 ];
 
 const buttonSize = '28px';
-const valueAndInputWidth = 'calc(100% - 41px)';
-const inputElementHeight = 23;
+const valueAndInputWidth = 'calc(100% - 33px)';
+const inputElementHeight = 29;
 
 /**
  * A "watchers" window for our debugger.

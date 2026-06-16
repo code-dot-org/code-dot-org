@@ -82,12 +82,12 @@ $debug-area-initial-height: 43px;
 }
 
 $debug-header-border-width: 1px;
-$debug-commands-column-width: 270px + $debug-header-border-width;
+$debug-commands-column-width: 270px;
 $debug-console-min-column-width: 130px;
 $debug-watch-max-column-width: 200px;
 
 #debug-commands-header {
-  width: $debug-commands-column-width;
+  width: $debug-commands-column-width + $debug-header-border-width;
   float: left;
   border-right: $debug-header-border-width solid gray;
 
@@ -119,7 +119,7 @@ $debug-watch-max-column-width: 200px;
 
 .debug-commands {
   left: 0;
-  width: $debug-commands-column-width;
+  width: $debug-commands-column-width + ($debug-header-border-width * 2);
   text-align: center;
 }
 
@@ -128,7 +128,7 @@ $debug-watch-max-column-width: 200px;
     max-width: calc(100% - #{$debug-console-min-column-width});
   }
   right: 0;
-  width: $debug-watch-max-column-width;
+  width: $debug-watch-max-column-width + ($debug-header-border-width * 2);
   overflow-y: scroll;
 }
 
