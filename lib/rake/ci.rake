@@ -81,7 +81,7 @@ SKIP_LOCAL_WEBDRIVER = 'skip local webdriver'.freeze
 USE_SAUCELABS_TAG = 'use saucelabs'.freeze
 
 # Maximum parallel browsers to use for UI and eyes tests
-PARALLEL_COUNT = 28
+PARALLEL_COUNT = 24
 
 namespace :ci do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
