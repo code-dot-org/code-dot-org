@@ -1,8 +1,0 @@
-CREATE MATERIALIZED VIEW learning_platform_<%=environment_type%>.pd_facilitator_teachercon_attendances
-  BACKUP NO
-  DISTSTYLE KEY DISTKEY ("id")
-  AUTO REFRESH NO
-AS SELECT
-  "id",
-  "user_id"
-FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.pd_facilitator_teachercon_attendances;

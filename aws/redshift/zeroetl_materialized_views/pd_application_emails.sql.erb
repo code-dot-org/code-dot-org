@@ -5,5 +5,8 @@ CREATE MATERIALIZED VIEW learning_platform_<%=environment_type%>.pd_application_
 AS SELECT
   "id",
   "pd_application_id",
-  "created_at"
+  "application_status",
+  "email_type",
+  "created_at",
+  "sent_at"
 FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.pd_application_emails;
