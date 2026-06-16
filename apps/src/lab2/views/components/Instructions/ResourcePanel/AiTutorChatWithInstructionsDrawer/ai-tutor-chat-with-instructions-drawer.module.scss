@@ -13,6 +13,9 @@
   background: var(--background-neutral-primary);
   border-radius: 4px;
   box-sizing: border-box;
+  // Smoothly resize when switching between the Instructions tab (full height)
+  // and the AI Tutor tab (drawer height). Suppressed while dragging the resize bar.
+  transition: height 0.2s ease;
 }
 
 .instructionsScrollArea {
@@ -42,12 +45,53 @@
 }
 
 .chatPanel {
+  position: relative;
   flex-shrink: 0;
   overflow: hidden;
+  // The chat (and the toggle below) fade + slide in when the AI Tutor tab is
+  // selected, and collapse away on the Instructions tab. The panel is a clip
+  // window: it animates its height while the chat content stays fixed (see
+  // .chatContent), so the chat is revealed in place rather than reflowing.
+  opacity: 1;
+  transition: height 0.2s ease, opacity 0.2s ease;
+}
+
+// Applied to the chat panel and toggle when the Instructions tab is showing:
+// fully transparent and non-interactive, so only the instructions remain.
+.fadeHidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+// While the user is dragging the resize bar, heights and the toggle position
+// must track the pointer with no lag, so suppress those transitions (the opacity
+// fades are unaffected by dragging and can stay).
+.dragging {
+  .instructionsDrawer {
+    transition: none;
+  }
+  .chatPanel,
+  .toggleButtonContainer {
+    transition: opacity 0.2s ease;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .instructionsDrawer,
+  .chatPanel,
+  .toggleButtonContainer {
+    transition: none;
+  }
 }
 
 .chatContent {
-  height: 100%;
+  // Anchored to the bottom of the clip window at a fixed (inline) height, so as
+  // the panel grows the chat is unveiled in place from the bottom up, with the
+  // message input staying put — rather than scrolling up under the toggle.
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
   box-sizing: border-box;
 }
 
@@ -72,6 +116,9 @@
   border-radius: 0 0 6px 6px;
   box-shadow: 0 2px 3px 0 rgb(0 0 0 / 0.05);
   transform: translateX(-50%);
+  // `top` follows the instructions height so the toggle rides the drawer's
+  // bottom edge as it resizes; opacity fades the toggle in on the AI Tutor tab.
+  transition: top 0.2s ease, opacity 0.2s ease;
 }
 
 .resizeBar {

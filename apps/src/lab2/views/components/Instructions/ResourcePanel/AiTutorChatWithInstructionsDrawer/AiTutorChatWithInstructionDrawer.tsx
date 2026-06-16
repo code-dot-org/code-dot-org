@@ -1,7 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 
 import {
   AiChatDisabledState,
@@ -32,6 +32,10 @@ interface AiTutorChatWithInstructionDrawerProps {
   disabledState?: AiChatDisabledState;
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
   onAssetRemoved?: (asset: ChatAsset) => void;
+  // True when the AI Tutor tab is selected. This component is shared with the
+  // Instructions tab (where it renders instructions only); the chat and the
+  // Hide/Show Instructions toggle fade in only when the AI Tutor tab is active.
+  aiTutorActive: boolean;
 }
 
 const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
@@ -51,6 +55,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   disabledState,
   onAssetUploaded,
   onAssetRemoved,
+  aiTutorActive,
 }) => {
   const {
     containerRef,
@@ -58,16 +63,37 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     instructionsContentRef,
     instructionsHeight,
     chatHeight,
+    chatContentHeight,
     isCollapsed,
     showScrollFade,
     separatorProps,
     isDragging,
     toggleInstructions,
-  } = useInstructionsDrawer({isCollapsedByDefault, isPredictLevel});
+  } = useInstructionsDrawer({
+    isCollapsedByDefault,
+    isPredictLevel,
+    aiTutorActive,
+  });
+
+  // Keep the chat mounted across tab switches (so its state persists) but inert
+  // when the Instructions tab is showing, so its hidden controls aren't tabbable.
+  const chatPanelRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (chatPanelRef.current) {
+      chatPanelRef.current.inert = !aiTutorActive;
+    }
+  }, [aiTutorActive]);
+
+  // Instructions are visible on the Instructions tab, and on the AI Tutor tab
+  // unless the user has collapsed the drawer.
+  const showInstructions = !aiTutorActive || !isCollapsed;
 
   return (
-    <div ref={containerRef} className={styles.container}>
-      {!isCollapsed && (
+    <div
+      ref={containerRef}
+      className={classNames(styles.container, isDragging && styles.dragging)}
+    >
+      {showInstructions && (
         <div
           id="instructions-drawer"
           className={styles.instructionsDrawer}
@@ -83,8 +109,12 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
         </div>
       )}
       <div
-        className={styles.toggleButtonContainer}
+        className={classNames(
+          styles.toggleButtonContainer,
+          !aiTutorActive && styles.fadeHidden
+        )}
         style={{top: instructionsHeight}}
+        aria-hidden={!aiTutorActive}
       >
         <MuiButton
           variant="text"
@@ -93,6 +123,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
           className={styles.toggleButton}
           onClick={toggleInstructions}
           type="button"
+          tabIndex={aiTutorActive ? undefined : -1}
           startIcon={
             <FontAwesomeV6Icon iconName="info-circle" iconStyle="solid" />
           }
@@ -106,7 +137,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
           {isCollapsed ? 'Show Instructions' : 'Hide Instructions'}
         </MuiButton>
       </div>
-      {!isCollapsed && (
+      {aiTutorActive && !isCollapsed && (
         <ResizeBar
           className={classNames(
             styles.resizeBar,
@@ -117,8 +148,15 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
           isDragging={isDragging}
         />
       )}
-      <div className={styles.chatPanel} style={{height: chatHeight}}>
-        <div className={styles.chatContent}>
+      <div
+        ref={chatPanelRef}
+        className={classNames(
+          styles.chatPanel,
+          !aiTutorActive && styles.fadeHidden
+        )}
+        style={{height: chatHeight}}
+      >
+        <div className={styles.chatContent} style={{height: chatContentHeight}}>
           <AiTutorChat
             hiddenContextCallback={hiddenContextCallback}
             aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}

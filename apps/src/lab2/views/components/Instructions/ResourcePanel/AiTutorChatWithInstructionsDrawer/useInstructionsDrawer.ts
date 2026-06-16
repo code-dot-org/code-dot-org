@@ -15,11 +15,15 @@ const INSTRUCTIONS_DRAWER_VERTICAL_PADDING_PX = 16;
 interface UseInstructionsDrawerOptions {
   isCollapsedByDefault: boolean;
   isPredictLevel?: boolean;
+  // True when the AI Tutor tab is selected. When false (Instructions tab), the
+  // chat is hidden and the instructions fill the whole panel.
+  aiTutorActive: boolean;
 }
 
 export const useInstructionsDrawer = ({
   isCollapsedByDefault,
   isPredictLevel,
+  aiTutorActive,
 }: UseInstructionsDrawerOptions) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const instructionsScrollAreaRef = useRef<HTMLDivElement>(null);
@@ -88,6 +92,12 @@ export const useInstructionsDrawer = ({
     }
     const availableHeight = containerElement.clientHeight - RESIZE_BAR_SIZE_PX;
     setContainerAvailableHeight(availableHeight);
+    // Instructions tab (chat hidden): instructions fill the whole panel,
+    // regardless of the collapsed-drawer state which only applies to the chat tab.
+    if (!aiTutorActive) {
+      setInstructionsHeight(containerElement.clientHeight);
+      return;
+    }
     if (isCollapsed) {
       setInstructionsHeight(0);
       return;
@@ -95,7 +105,7 @@ export const useInstructionsDrawer = ({
     setInstructionsHeight(
       Math.min(rawInstructionsHeight, availableHeight - MIN_CHAT_HEIGHT)
     );
-  }, [isCollapsed, rawInstructionsHeight]);
+  }, [aiTutorActive, isCollapsed, rawInstructionsHeight]);
 
   const throttledAdjustInstructionsHeight = useMemo(
     () => throttle(adjustInstructionsHeight, 30),
@@ -276,15 +286,34 @@ export const useInstructionsDrawer = ({
     setIsCollapsed(prev => !prev);
   }, [isCollapsed]);
 
-  const chatHeight =
+  // The instructions drawer height when the AI Tutor tab is active. Derived from
+  // rawInstructionsHeight (not the displayed instructionsHeight, which is the full
+  // panel height on the Instructions tab), so it stays stable across the tab switch.
+  const activeInstructionsHeight =
+    containerAvailableHeight === undefined
+      ? undefined
+      : isCollapsed
+      ? 0
+      : Math.min(
+          rawInstructionsHeight,
+          containerAvailableHeight - MIN_CHAT_HEIGHT
+        );
+
+  // The chat's natural height when unveiled. Independent of which tab is active,
+  // so the chat is laid out at its final size and revealed in place (the panel
+  // clips it) rather than reflowing/sliding as the panel grows.
+  const chatContentHeight =
     containerAvailableHeight === undefined
       ? undefined
       : isCollapsed
       ? containerAvailableHeight
       : Math.max(
-          containerAvailableHeight - (instructionsHeight ?? 0),
+          containerAvailableHeight - (activeInstructionsHeight ?? 0),
           MIN_CHAT_HEIGHT
         );
+
+  // The visible chat region (the clip window): collapses to 0 on the Instructions tab.
+  const chatHeight = !aiTutorActive ? 0 : chatContentHeight;
 
   return {
     containerRef,
@@ -292,6 +321,7 @@ export const useInstructionsDrawer = ({
     instructionsContentRef,
     instructionsHeight,
     chatHeight,
+    chatContentHeight,
     isCollapsed,
     showScrollFade,
     separatorProps,
