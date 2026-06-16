@@ -1,3 +1,9 @@
+-- GENERATED FILE -- do not edit by hand.
+-- Regenerated from the ActiveRecord model by `rake db:migrate` and by
+-- `rake analytics_export:generate_materialized_view_templates`; edits here are overwritten.
+-- Committing a change to this file does NOT update the materialized view in Redshift. That
+-- needs a coordinated DROP/CREATE -- see aws/redshift/zeroetl_materialized_views/README.md
+-- and coordinate with the data (RED) and Infrastructure Engineering teams.
 CREATE MATERIALIZED VIEW learning_platform_<%=environment_type%>_pii.lti_user_identities
   BACKUP NO
   DISTSTYLE KEY DISTKEY ("id")

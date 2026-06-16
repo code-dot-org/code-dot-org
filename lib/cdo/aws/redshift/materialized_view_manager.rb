@@ -131,6 +131,21 @@ module Cdo
         # Directory where generated DDL ERB template files are saved.
         SQL_VIEW_TEMPLATE_DIR = aws_dir('redshift', 'zeroetl_materialized_views').freeze
 
+        # Header prepended to each saved .sql.erb so an engineer who finds the file in a diff knows it
+        # is generated and that committing it does not change Redshift. This lives ONLY in the on-disk
+        # file (see #save_ddl_templates); it is deliberately NOT part of the DDL rendered by
+        # #rendered_ddls, which is what gets hashed and submitted to the cluster. Keeping it out of
+        # that path means editing this header never changes a view's DDL hash and so never forces a
+        # DROP/CREATE of the materialized views.
+        GENERATED_TEMPLATE_HEADER = <<~HEADER.freeze
+          -- GENERATED FILE -- do not edit by hand.
+          -- Regenerated from the ActiveRecord model by `rake db:migrate` and by
+          -- `rake analytics_export:generate_materialized_view_templates`; edits here are overwritten.
+          -- Committing a change to this file does NOT update the materialized view in Redshift. That
+          -- needs a coordinated DROP/CREATE -- see aws/redshift/zeroetl_materialized_views/README.md
+          -- and coordinate with the data (RED) and Infrastructure Engineering teams.
+        HEADER
+
         # Builds a Redshift client pinned to the database where the materialized views live
         # (`MATERIALIZED_VIEW_DATABASE`). Callers doing materialized-view work (the
         # `analytics_export:*` rake tasks) should use this rather than `Client.new` so the
@@ -180,14 +195,14 @@ module Cdo
           pii_ddl = generate_pii_ddl
           if pii_ddl
             path = File.join(SQL_VIEW_TEMPLATE_DIR, "#{model.table_name}_pii.sql.erb")
-            File.write(path, pii_ddl)
+            File.write(path, GENERATED_TEMPLATE_HEADER + pii_ddl)
             files << path
           end
 
           non_pii_ddl = generate_non_pii_ddl
           if non_pii_ddl
             path = File.join(SQL_VIEW_TEMPLATE_DIR, "#{model.table_name}.sql.erb")
-            File.write(path, non_pii_ddl)
+            File.write(path, GENERATED_TEMPLATE_HEADER + non_pii_ddl)
             files << path
           end
 

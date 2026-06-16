@@ -172,6 +172,23 @@ module Cdo
             files.each {|f| assert File.exist?(f)}
           end
 
+          it 'prepends the generated-file header to each written template' do
+            generator.save_ddl_templates
+            %w[users_pii.sql.erb users.sql.erb].each do |name|
+              contents = File.read(File.join(tmpdir, name))
+              assert contents.start_with?('-- GENERATED FILE'), "#{name} should start with the header"
+              assert_includes contents, 'does NOT update the materialized view in Redshift'
+            end
+          end
+
+          it 'keeps the header out of the hashed/submitted DDL, so it forces no rebuild' do
+            # The header is documentation in the on-disk file only. The DDL that is hashed and
+            # submitted to the cluster comes from #rendered_ddls, which must not carry it.
+            generator.rendered_ddls(environment_type: 'production').each_value do |entry|
+              refute_includes entry[:sql], '-- GENERATED FILE'
+            end
+          end
+
           it 'writes valid ERB templates that render correctly' do
             generator.save_ddl_templates
             pii_path = File.join(tmpdir, 'users_pii.sql.erb')
