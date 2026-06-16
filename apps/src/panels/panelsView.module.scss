@@ -88,18 +88,23 @@ $text-horizontal-padding: 2.6cqw;
       font-size: 1.6cqw;
       line-height: 1.4em;
 
-      &Dark {
-        background-color: $neutral_dark;
-        color: $light_white;
-      }
-
       h1, h2, h3, h4 {
+        color: $neutral_dark;
         margin: 0 0 1cqw 0;
         font-size: 3cqw;
         line-height: 1.2em;
 
         &, em, strong {
           font-family: var(--font-family-barlow-semi-condensed-semibold);
+        }
+      }
+
+      &Dark {
+        background-color: $neutral_dark;
+        color: $light_white;
+
+        h1, h2, h3, h4 {
+          color: $light_white;
         }
       }
 
@@ -202,22 +207,27 @@ $text-horizontal-padding: 2.6cqw;
         transform: translate(-50%, -50%) scale(1.02);
       }
 
-      &Dark {
-        background-color: $neutral_dark;
-        color: $light_white;
-
-        &:hover, &:focus-visible {
-          filter: brightness(1.15);
-        }
-      }
-
       h1, h2, h3, h4 {
+        color: $neutral_dark;
         margin: 0 0 1cqw 0;
         font-size: 2.4cqw;
         line-height: 1.2em;
 
         &, em, strong {
           font-family: var(--font-family-barlow-semi-condensed-semibold);
+        }
+      }
+
+      &Dark {
+        background-color: $neutral_dark;
+        color: $light_white;
+
+        h1, h2, h3, h4 {
+          color: $light_white;
+        }
+
+        &:hover, &:focus-visible {
+          filter: brightness(1.15);
         }
       }
 
