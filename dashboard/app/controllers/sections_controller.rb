@@ -10,7 +10,7 @@ class SectionsController < ApplicationController
   def new
     redirect_to home_path unless params[:loginType] && params[:participantType]
     @user_country = helpers.country_code(current_user, request)
-    @is_users_first_section = current_user.sections_instructed.empty?
+    @is_users_first_section = current_user.sections_instructed.where(demo_type: nil).empty?
   end
 
   def edit

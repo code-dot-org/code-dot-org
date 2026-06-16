@@ -8,6 +8,7 @@ import {
   ChatButtonData,
   ResponseSchemaSettings,
 } from '@cdo/apps/aichat/types';
+import {ChatAsset} from '@cdo/apps/aichat/types/assets';
 import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
@@ -25,10 +26,12 @@ interface AiTutorChatWithInstructionDrawerProps {
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   instructionsContent?: React.ReactNode;
-  isCollapsedByDefault: boolean;
   tutorVideos?: JsonVideoFileMetadata[];
   isPredictLevel?: boolean;
   disabledState?: AiChatDisabledState;
+  onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
+  onAssetRemoved?: (asset: ChatAsset) => void;
+  initialWelcomeMessage?: string;
 }
 
 const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
@@ -42,10 +45,12 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
   instructionsContent,
-  isCollapsedByDefault,
   tutorVideos,
   isPredictLevel,
   disabledState,
+  onAssetUploaded,
+  onAssetRemoved,
+  initialWelcomeMessage,
 }) => {
   const {
     containerRef,
@@ -58,7 +63,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     separatorProps,
     isDragging,
     toggleInstructions,
-  } = useInstructionsDrawer({isCollapsedByDefault, isPredictLevel});
+  } = useInstructionsDrawer({isPredictLevel});
 
   return (
     <div ref={containerRef} className={styles.container}>
@@ -125,6 +130,9 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
             hasInstructionsDrawer={true}
             tutorVideos={tutorVideos}
             disabledState={disabledState}
+            onAssetUploaded={onAssetUploaded}
+            onAssetRemoved={onAssetRemoved}
+            initialWelcomeMessage={initialWelcomeMessage}
           />
         </div>
       </div>

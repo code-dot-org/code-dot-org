@@ -1,0 +1,97 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-05-26T21:39:50.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0",
+          "open": false
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <title>NPC Dialogue Generator</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n    <script defer src=\"script.js\"></script>\n  </head>\n  <body>\n    <h1 class=\"title\">NPC Dialogue Generator</h1>\n    <main class=\"container\">\n      <section class=\"left\">\n        <img class=\"image\" src=\"images/header.png\" alt=\"NPC illustration\" />\n      </section>\n      <section class=\"right\">\n        <div class=\"buttons\">\n          <button id=\"wiseElderButton\" type=\"button\">The Wise Elder</button>\n          <button id=\"suspiciousMerchantButton\" type=\"button\">The Suspicious Merchant</button>\n          <button id=\"randomVillagerButton\" type=\"button\">The Random Villager</button>\n        </div>\n      </section>\n    </main>\n  </body>\n</html>",
+          "folderId": "0",
+          "active": true
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "* {\n  box-sizing: border-box;\n}\nhtml,\nbody {\n  height: 100%;\n}\nbody {\n  margin: 0;\n  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;\n  background: #1a1a2e;\n  color: #e0e0e0;\n  transition: background-color 400ms ease;\n}\n.title {\n  text-align: center;\n  margin: 16px 0 0;\n  font-size: 1.75rem;\n  color: #c8a4f8;\n}\n.container {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 24px;\n  padding: 24px;\n  max-width: 1000px;\n  margin: 0 auto;\n}\n.left {\n  background: #16213e;\n  border: 2px solid #333;\n  border-radius: 16px;\n  padding: 16px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  overflow: hidden;\n}\n.image {\n  display: block;\n  max-width: 100%;\n  height: auto;\n  border-radius: 12px;\n  object-fit: contain;\n}\n.right {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  gap: 12px;\n}\n.buttons {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  width: 260px;\n  margin-inline: auto;\n}\n.buttons button {\n  padding: 12px 16px;\n  font-size: 1rem;\n  border-radius: 10px;\n  border: 2px solid #c8a4f8;\n  background: #16213e;\n  color: #e0e0e0;\n  cursor: pointer;\n  transition: background-color 120ms ease, color 120ms ease;\n}\n.buttons button:hover {\n  background: #c8a4f8;\n  color: #1a1a2e;\n}\n.buttons button:active {\n  transform: translateY(1px);\n}\n@media (max-width: 800px) {\n  .container {\n    grid-template-columns: 1fr;\n  }\n  .buttons {\n    width: 100%;\n  }\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "header.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson2-level4b_2026/uuid/0cd6c0d2-195a-4b40-ba81-e9275dc5b3d6.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n06lciGXaf/s=\n",
+    "encrypted": "false",
+    "display_name": "NPC Dialogue Generator",
+    "bubble_choice_description": "Build an NPC Dialogue Generator where clicking each character button changes the page's background color to match that NPC's vibe.",
+    "thumbnail_url": "https://images.code.org/55d303f91cc5ba88a1536e0b5cf7ccab-image.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "tutor",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "long_instructions": "## Do This:\r\n\r\nYou're a junior Front-End Developer at Hollowforge, a game studio. Today's task:\r\n\r\n> \"Three NPC buttons. Click one, page background changes to match that character's vibe. Keep it simple.\"\r\n\r\n1. Decide what color fits the Wise Elder, then complete: \"When the user clicks [button name], the page should [exact response].\" Reference this when you prompt AI and check the result.\r\n\r\n2. Ask AI to generate the code so clicking the Wise Elder button changes the page background.\r\n\r\n3. Click the button to test. If something's off, update your prompt or edit the code.\r\n\r\n4. Read through the code. Can you find where it selects the button, listens for the click, and makes the change?\r\n\r\n5. Repeat for two more characters.",
+    "name_suffix": "_ac2026",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "buildJavaScript"
+      ],
+      "answerTypeCustomizations": {
+        "buildJavaScript": "Do not instruct students to look at or edit the index.html file. Do not ask students guiding questions — give direct, complete answers. When explaining the code you generated, you may reference event listeners and event handlers, but do not use the word \"function\" or explain code in terms of functions. Do not generate code that uses functions — write event handlers directly. If a student asks for the ID of any button or element, look at the code for the correct ID and tell them directly."
+      }
+    },
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-26T21:39:50.640+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson2-level4b_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson2-level4b_2026\"}]"
+}]]></config>
+</Weblab2>

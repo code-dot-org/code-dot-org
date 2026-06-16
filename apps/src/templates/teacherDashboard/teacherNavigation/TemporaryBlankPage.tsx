@@ -6,7 +6,7 @@ const TemporaryBlankPage: React.FC = () => {
   return (
     <img
       src={comingSoonGraphic}
-      alt="Cat loving Code.org"
+      alt="Cat loving CodeAI"
       style={{position: 'absolute', left: '45%'}}
     />
   );

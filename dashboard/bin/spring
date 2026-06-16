@@ -4,6 +4,8 @@
 # It gets overwritten when you run the `spring binstub` command.
 
 unless defined?(Spring)
+  require_relative '../config/bundle_gemfile'
+
   require 'rubygems'
   require 'bundler'
 

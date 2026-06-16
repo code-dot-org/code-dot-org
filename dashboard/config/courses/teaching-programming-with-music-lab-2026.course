@@ -7,9 +7,9 @@
     "self-paced-pl-teaching-programming-with-music-lab-2026"
   ],
   "published_state": "stable",
-  "instruction_type": "teacher_led",
-  "participant_audience": "student",
-  "instructor_audience": "teacher",
+  "instruction_type": "self_paced",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
   "properties": {
     "family_name": "teaching-programming-with-music-lab",
     "has_verified_resources": true,

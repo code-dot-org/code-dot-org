@@ -1,7 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import '@testing-library/jest-dom';
 import {useState} from 'react';
+import {vi} from 'vitest';
 
 import SegmentedButtons, {SegmentedButtonsProps} from './../index';
 
@@ -49,7 +49,7 @@ describe('Design System - Segmented Buttons', () => {
 
   it('changes selected button on click', async () => {
     const user = userEvent.setup();
-    const spyOnChange = jest.fn();
+    const spyOnChange = vi.fn();
 
     renderSegmentedButtons({
       buttons: [
@@ -83,7 +83,7 @@ describe('Design System - Segmented Buttons', () => {
 
   it("renders disabled button, doesn't change on click", async () => {
     const user = userEvent.setup();
-    const spyOnChange = jest.fn();
+    const spyOnChange = vi.fn();
 
     renderSegmentedButtons({
       buttons: [

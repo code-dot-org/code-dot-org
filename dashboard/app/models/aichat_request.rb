@@ -17,6 +17,7 @@
 #
 # Indexes
 #
+#  index_aichat_requests_on_created_at        (created_at)
 #  index_aichat_requests_on_execution_status  (execution_status)
 #
 class AichatRequest < ApplicationRecord

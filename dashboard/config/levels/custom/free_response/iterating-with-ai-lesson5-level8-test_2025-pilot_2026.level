@@ -1,12 +1,13 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2026-04-01T21:40:15.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "![](https://images.code.org/3cab0b7a495e04acec02231e184fe81e-image-1765317133395.51.36 PM.png)\r\n\r\n1. Look at the three sample cards.\r\n2. Pick one card and describe how its labels, tone, or layout might change what a user thinks about the movie.\r\n3. Write a one-line transparency label you could add to the page to make the filter clearer. Examples:\r\n    * `Sorted by rating`\r\n    * `Includes sponsored listings`\r\n    * `Some reviews are promoted`",
+    "long_instructions": "##Look at this card:\r\n\r\n<img src=\"https://images.code.org/d33db023723f6dcc12098ff471edc15d-movie_card.png\" style=\"width: 20%; float: left; margin-right: 30px;\">\r\n\r\n1. What two problems do you see with this card?\r\n2. Write the fallback check you would add to fix each one.\r\n3. Why does it matter to a user whether missing data is handled with a fallback rather than left blank or broken?\r\n4. In Levels 1 and 2, AI Tutor filled in missing values in both datasets. How is what you did in Levels 3 and 4 similar to what AI did — and how is it different?\r\n   \r\n",
     "stay_on_level_after_submit": "false",
     "allow_user_uploads": "false",
     "submittable": "false",
@@ -15,14 +16,12 @@
     "allow_multiple_attempts": "true",
     "skip_dialog": true,
     "skip_sound": true,
-    "title": "Reflection: Bias and Transparency Labels",
-    "teacher_markdown": "A successful reflection shows that the student:\r\n- Can articulate how UI design choices in cards can introduce bias or hide information and propose a concrete transparency label that could help users interpret the information more fairly.",
+    "title": "Reflection: Fallback Values",
     "height": "100",
     "placeholder": "enter response here...",
     "name_suffix": "_2026"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:40:15.738+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson5-level8-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson5-level8-test_2025-pilot\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:40:15.738+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson5-level8-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson5-level8-test_2025-pilot\"},{\"changed_at\":\"2026-06-10 17:24:01 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-10 17:25:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-10 17:25:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-10 17:29:24 +0000\",\"changed\":[\"long_instructions\",\"title\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

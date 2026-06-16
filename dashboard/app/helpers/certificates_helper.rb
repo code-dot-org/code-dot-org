@@ -5,7 +5,7 @@ module CertificatesHelper
     congrats_url_params[:i] = session_id if session_id.present?
     congrats_url_params[:s] = Base64.urlsafe_encode64(course_name) if course_name.present?
 
-    CDO.studio_url(Rails.application.routes.url_helpers.congrats_path(congrats_url_params), CDO.default_scheme)
+    Rails.application.routes.url_helpers.congrats_url(congrats_url_params)
   end
 
   def encode_params(name, course, donor)
@@ -18,7 +18,7 @@ module CertificatesHelper
   end
 
   def certificate_image_url_for(name)
-    CDO.studio_url("blockly/media/certificates/#{name}", CDO.default_scheme)
+    CDO.studio_url("blockly/media/certificates/#{name}")
   end
 
   def certificate_image_url(name, course, donor)

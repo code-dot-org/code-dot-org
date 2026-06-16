@@ -39,7 +39,7 @@ const ChooseYourProgram = props => {
       <LabelsContext.Provider value={PageLabels.chooseYourProgram}>
         <FormGroup>
           <p>
-            Thanks for your interest in the Code.org Professional Learning
+            Thanks for your interest in the CodeAI Professional Learning
             Program! This application should take 10 - 15 minutes to complete.
             Fields marked with a <span style={{color: 'red'}}>*</span> are
             required.

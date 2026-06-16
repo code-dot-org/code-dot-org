@@ -4,6 +4,8 @@ import moment from 'moment';
 import React, {forwardRef, memo} from 'react';
 
 import AiTutorVersionActionNotification from '@cdo/apps/aiComponentLibrary/aiTutorVersionActionNotification/AiTutorVersionActionNotification';
+import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatTeacherFeedback as TeacherFeedback} from '@cdo/generated-scripts/sharedConstants';
 
@@ -136,6 +138,20 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
         timestamp,
         commitDescription,
       } = event;
+
+      if (notificationType === 'welcomeMessage') {
+        return (
+          <div
+            ref={ref}
+            tabIndex={tabIndex}
+            onKeyDown={onKeyDown}
+            aria-label={`Assistant: ${text}`}
+            className={styles.chatMessageOutline}
+          >
+            <ChatMessage role={Role.ASSISTANT} text={text} />
+          </div>
+        );
+      }
 
       // Use special notification component for AI tutor version actions.
       if (
