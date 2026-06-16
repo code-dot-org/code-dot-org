@@ -34,6 +34,21 @@ function validateElementSelect(expected, assert) {
 const teal = 'rgb(0, 129, 143)';
 const white = 'rgb(255, 255, 255)';
 
+// The DSCO SegmentedButton animates background-color via a CSS transition, so a
+// synchronous read immediately after the selection changes catches the color
+// mid-transition (still the previous value). Disable the transition and force a
+// reflow to read the settled target color, mirroring the instant color the
+// legacy Radium ToggleButton produced.
+function settledBackgroundColor(selector) {
+  var element = $(selector)[0];
+  var previousTransition = element.style.transition;
+  element.style.transition = 'none';
+  void element.offsetWidth; // force reflow so the no-transition value applies
+  var color = $(element).css('background-color');
+  element.style.transition = previousTransition;
+  return color;
+}
+
 module.exports = {
   app: 'applab',
   skinId: 'applab',
@@ -71,12 +86,12 @@ module.exports = {
 
         assert.equal(
           teal,
-          $('#designModeButton').css('background-color'),
+          settledBackgroundColor('#designModeButton'),
           'expected Design button (active) to have teal background.'
         );
         assert.equal(
           white,
-          $('#codeModeButton').css('background-color'),
+          settledBackgroundColor('#codeModeButton'),
           'expected Code button (inactive) to have white background.'
         );
         var screenSelector = document.getElementById('screenSelector');
@@ -452,12 +467,12 @@ module.exports = {
         $('#designModeButton').click();
         assert.equal(
           teal,
-          $('#designModeButton').css('background-color'),
+          settledBackgroundColor('#designModeButton'),
           'expected Design button (active) to have teal background.'
         );
         assert.equal(
           white,
-          $('#codeModeButton').css('background-color'),
+          settledBackgroundColor('#codeModeButton'),
           'expected Code button (inactive) to have white background.'
         );
         // add a screen
@@ -483,12 +498,12 @@ module.exports = {
         $('#codeModeButton').click();
         assert.equal(
           white,
-          $('#designModeButton').css('background-color'),
+          settledBackgroundColor('#designModeButton'),
           'expected Design button (inactive) to have white background.'
         );
         assert.equal(
           teal,
-          $('#codeModeButton').css('background-color'),
+          settledBackgroundColor('#codeModeButton'),
           'expected Code button (active) to have teal background.'
         );
 
@@ -586,12 +601,12 @@ module.exports = {
         // design toggle row still shows design mode
         assert.equal(
           teal,
-          $('#designModeButton').css('background-color'),
+          settledBackgroundColor('#designModeButton'),
           'expected Design button (active) to have teal background.'
         );
         assert.equal(
           white,
-          $('#codeModeButton').css('background-color'),
+          settledBackgroundColor('#codeModeButton'),
           'expected Code button (inactive) to have white background.'
         );
 
