@@ -13,6 +13,7 @@ import {
 import {runEval} from './imageSafetyEval';
 import {parseEvalCsv} from './parseEvalCsv';
 import {ThrottleEvent} from './rateLimit';
+import {parseReportZip} from './reportZip';
 
 // Each prompt makes up to ~4 calls (2 text-safety + image generation +
 // moderation). Used to estimate load before a run.
@@ -576,6 +577,70 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
     );
   }, []);
 
+  // Load a previously exported report ZIP back into the UI (results, images,
+  // benign marks) so it can be reviewed, re-run, and re-exported.
+  const handleLoadReport = useCallback(
+    async (event: React.ChangeEvent<HTMLInputElement>) => {
+      const file = event.target.files?.[0];
+      if (!file) {
+        return;
+      }
+      setFileName(file.name);
+      setPrompts([]);
+      setResults([]);
+      setParseError(undefined);
+      setParseWarnings([]);
+      setProgress({completed: 0, total: 0});
+      const parsed = await parseReportZip(file);
+      if (parsed.error) {
+        setParseError(parsed.error);
+        return;
+      }
+      setResults(parsed.results);
+      setParseWarnings(parsed.warnings);
+    },
+    []
+  );
+
+  // Re-run only the prompts that errored, merging each fresh result back into
+  // its original row by index.
+  const handleRerunErrors = useCallback(async () => {
+    const targets = results
+      .map((r, originalIndex) => ({r, originalIndex}))
+      .filter(({r}) => r.outcome === EvalOutcome.ERROR);
+    if (!targets.length || running) {
+      return;
+    }
+    const erroredPrompts = targets.map(({r}) => ({
+      prompt: r.prompt,
+      label: r.label,
+    }));
+    const controller = new AbortController();
+    abortRef.current = controller;
+    setRunning(true);
+    setThrottle(null);
+    setProgress({completed: 0, total: erroredPrompts.length});
+    try {
+      await runEval(erroredPrompts, {
+        concurrency,
+        signal: controller.signal,
+        onThrottle: setThrottle,
+        onResume: () => setThrottle(null),
+        onResult: (result, completed, total, index) => {
+          const originalIndex = targets[index].originalIndex;
+          setResults(prev =>
+            prev.map((r, i) => (i === originalIndex ? result : r))
+          );
+          setProgress({completed, total});
+        },
+      });
+    } finally {
+      setRunning(false);
+      setThrottle(null);
+      abortRef.current = null;
+    }
+  }, [results, concurrency, running]);
+
   // The per-prompt list hides prompts blocked at the input-text gate (usually
   // the bulk of an adversarial run) so the reviewer focuses on what got past
   // it. Keep the original index for toggling/keys.
@@ -589,6 +654,9 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
         )
     );
   const hiddenCount = results.length - visibleResults.length;
+  const erroredCount = results.filter(
+    r => r.outcome === EvalOutcome.ERROR
+  ).length;
 
   return (
     <div style={styles.page}>
@@ -602,7 +670,18 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
       </p>
 
       <div style={styles.controls}>
-        <input type="file" accept=".csv,text/csv" onChange={handleFile} />
+        <label>
+          Prompts CSV:{' '}
+          <input type="file" accept=".csv,text/csv" onChange={handleFile} />
+        </label>
+        <label>
+          Report ZIP:{' '}
+          <input
+            type="file"
+            accept=".zip,application/zip"
+            onChange={handleLoadReport}
+          />
+        </label>
         <label>
           Concurrency:{' '}
           <input
@@ -632,18 +711,18 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
         </label>
       </div>
 
-      {fileName && (
+      {fileName && prompts.length > 0 && (
         <p>
           Loaded <strong>{fileName}</strong>: {prompts.length} prompt
-          {prompts.length === 1 ? '' : 's'}
-          {prompts.length > 0 && (
-            <>
-              {' '}
-              — up to ~{prompts.length * CALLS_PER_PROMPT} gateway/moderation
-              calls
-            </>
-          )}
-          .
+          {prompts.length === 1 ? '' : 's'} — up to ~
+          {prompts.length * CALLS_PER_PROMPT} gateway/moderation calls.
+        </p>
+      )}
+      {fileName && prompts.length === 0 && results.length > 0 && (
+        <p>
+          Loaded report <strong>{fileName}</strong>: {results.length} result
+          {results.length === 1 ? '' : 's'}
+          {erroredCount > 0 && ` (${erroredCount} errored)`}.
         </p>
       )}
       {parseError && <div style={styles.err}>{parseError}</div>}
@@ -679,6 +758,15 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
             onClick={handleCancel}
           >
             Cancel
+          </button>
+        )}
+        {!running && erroredCount > 0 && (
+          <button
+            type="button"
+            style={{...styles.button, background: '#7665a0', color: 'white'}}
+            onClick={handleRerunErrors}
+          >
+            Re-run {erroredCount} errored
           </button>
         )}
         {(running || results.length > 0) && (

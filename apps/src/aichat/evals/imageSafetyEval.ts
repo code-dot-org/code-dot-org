@@ -58,8 +58,14 @@ export interface RunEvalOptions extends EvaluateOptions {
   concurrency?: number;
   // Cancels launching further prompts. In-flight prompts still finish.
   signal?: AbortSignal;
-  // Called as each prompt finishes, for live progress.
-  onResult?: (result: EvalResult, completed: number, total: number) => void;
+  // Called as each prompt finishes, for live progress. `index` is the position
+  // in the prompts array (used to merge re-run results back by index).
+  onResult?: (
+    result: EvalResult,
+    completed: number,
+    total: number,
+    index: number
+  ) => void;
   // Max backoff retries per request on throttle/transient errors.
   maxRetries?: number;
   // Pacing knobs forwarded to the shared RateController.
@@ -292,7 +298,7 @@ export async function runEval(
       );
       results[index] = result;
       completed++;
-      options.onResult?.(result, completed, prompts.length);
+      options.onResult?.(result, completed, prompts.length, index);
     }
   };
 
