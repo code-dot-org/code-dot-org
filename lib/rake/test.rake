@@ -124,20 +124,15 @@ namespace :test do
     Lighthouse.report CDO.studio_url('')
   end
 
-  # Run the Playwright e2e suite, upload its HTML report, and post a start/finish
-  # summary to Slack like the Cucumber UI tests (#infra-test on the test server,
-  # stdout under CI). Runs in the Drone ui pipeline, on demand, and in ui_all on
-  # the DTT. Targets TARGET_URL (default: this env's studio URL). Non-blocking —
-  # a failure warns but never fails the deploy or PR build.
+  # Run the Playwright e2e suite, upload its report, and post a Cucumber-style
+  # start/finish summary to Slack. Non-blocking: a failure never fails the deploy
+  # or PR build. Targets TARGET_URL (default: this env's studio URL).
   timed_task_with_logging :playwright_ui do
     target_url = ENV['TARGET_URL'].presence || CDO.studio_url('')
     e2e_dir = frontend_dir('packages', 'e2e-tests')
     script = File.join(e2e_dir, 'bin', 'run-playwright-tests-ci.sh')
 
-    # The lane the suite runs in, from existing detectors (no new mechanism). GHA
-    # does not run this task — it sets PLAYWRIGHT_PROVIDER itself. test_system?
-    # (host + chef_managed) positively identifies the DTT; otherwise live
-    # ENV['CI'] marks Drone. nil locally → the config stays lean.
+    # Lane for the config's PLAYWRIGHT_PROVIDER; GHA sets its own and skips this task.
     provider =
       if CDO.test_system?            then 'dtt'
       elsif CI::Utils.running_on_ci? then 'drone'
@@ -167,7 +162,7 @@ namespace :test do
     report_url = Cdo::PlaywrightReport.upload(File.join(e2e_dir, 'playwright-report'))
     summary = playwright_results_summary(File.join(e2e_dir, 'test-results', 'results.json'))
 
-    # Cucumber-style finish report (see runner.rb): headline, counts, then link.
+    # Finish report, Cucumber-style (see runner.rb#pass_fail_summary).
     status = passed ? '<b>✅ PASSED</b>' : '<b>❌ FAILED</b> (non-blocking)'
     report = "Playwright e2e tests for <b>dashboard</b>: #{status}\n"
     report += playwright_pass_fail_summary(summary, duration)
@@ -603,9 +598,7 @@ GLOBS_AFFECTING_EVERYTHING = %w(
   docker/ci/**/*
 )
 
-# Counts from the Playwright JSON reporter's stats block, for the Slack report.
-# Returns nil if results.json is missing or unparseable (best-effort), so the
-# caller can fall back to a duration-only line.
+# Counts from the JSON reporter's stats; nil if results.json is missing/unparseable.
 def playwright_results_summary(results_json)
   return nil unless File.file?(results_json)
   stats = JSON.parse(File.read(results_json)).fetch('stats', {})
@@ -625,8 +618,7 @@ rescue StandardError => exception
   nil
 end
 
-# Cucumber-style one-liner (see runner.rb#pass_fail_summary). Always reports
-# duration; counts only when results.json parsed, flaky only when non-zero.
+# Pass/fail one-liner, Cucumber-style (see runner.rb#pass_fail_summary).
 def playwright_pass_fail_summary(summary, duration)
   formatted_duration = RakeUtils.format_duration(duration)
   return "Duration: #{formatted_duration}. (test counts unavailable)" unless summary

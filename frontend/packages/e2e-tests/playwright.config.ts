@@ -1,7 +1,6 @@
 import {defineConfig, devices} from '@playwright/test';
 
-// The lane this run is in. Set by each automated entry point: the GHA workflow
-// step (gha), and the rake task for Drone/DTT (drone/dtt). Unset = local → lean.
+// Set by each automated lane's entry point (GHA workflow, rake task); unset = local.
 const provider = process.env.PLAYWRIGHT_PROVIDER; // 'gha' | 'drone' | 'dtt' | undefined
 const isAutomated = !!provider;
 const htmlReport = {outputFolder: 'playwright-report', open: 'never'} as const;
@@ -20,24 +19,15 @@ const htmlReport = {outputFolder: 'playwright-report', open: 'never'} as const;
 export default defineConfig({
   testDir: './tests',
   fullyParallel: true,
-  // Fail any automated lane if a `.only` was committed.
   forbidOnly: isAutomated,
-  // 1 retry on every automated lane so flake doesn't pass one lane and fail
-  // another; the retried attempt is traced (`trace` below).
+  // retry in automated lanes so a flake can't pass one lane and fail another.
   retries: isAutomated ? 1 : 0,
-  // @no_ci is skipped only on Drone, whose in-container localhost build lacks
-  // services like Javabuilder; the DTT and GHA hit the deployed env and run them
-  // (matches the Cucumber suite, where only the --ci/Drone path skips @no_ci).
-  // grepInvert matches {tag} metadata as well as title text since Playwright 1.42;
-  // use {tag: '@no_ci'} in test definitions, not title embedding.
+  // @no_ci needs infra only the deployed env has — skip on Drone (localhost build),
+  // run on DTT/GHA. Mirrors the Cucumber suite, where only --ci/Drone skips it.
   grepInvert: provider === 'drone' ? /@no_ci/ : undefined,
-  // 100% only on GHA: its runner is dedicated to the test workers and the target
-  // server is external. Drone shares its container with the server-under-test and
-  // the DTT is a shared daemon — both keep Playwright's default.
+  // 100% only on GHA (dedicated runner, external server); Drone/DTT share CPU.
   workers: provider === 'gha' ? '100%' : undefined,
-  // 'list' always streams pass/fail to the live log. 'html' and 'json' are the
-  // automated-lane artifacts (the report and machine-readable results); local
-  // runs stay list-only.
+  // html + json artifacts only in automated lanes; local stays list-only.
   reporter: isAutomated
     ? [
         ['list'],
