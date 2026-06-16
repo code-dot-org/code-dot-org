@@ -273,7 +273,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
                 () => setSelectedOption('support'),
                 'rocket-launch',
                 'Get Started',
-                'Get help using the Code.org platform, learn about professional learning opportunities, suggest a curriculum, create a section'
+                'Get help using the CodeAI platform, learn about professional learning opportunities, suggest a curriculum, create a section'
               )}
             {optionButton(
               selectedOption === 'plan',
@@ -363,7 +363,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
                 gutterBottom
               >
                 <Typography variant="strong">
-                  Take Code.org’s self-paced AI 101 professional learning course
+                  Take CodeAI’s self-paced AI 101 professional learning course
                 </Typography>
               </Typography>
             </div>

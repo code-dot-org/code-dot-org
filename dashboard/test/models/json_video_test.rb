@@ -113,17 +113,15 @@ class JSONVideoTest < ActiveSupport::TestCase
     end
   end
 
-  test 'seed_all skips bad files and continues seeding remaining files' do
+  test 'seed_all raises with the file path when a config is invalid' do
     Dir.mktmpdir do |tmpdir|
       root = Pathname.new(tmpdir)
       File.write(root.join('bad.json'), 'not valid json {{')
-      File.write(root.join('good.json'), video_data.to_json)
 
-      assert_nothing_raised do
+      error = assert_raises(RuntimeError) do
         JSONVideo.seed_all(root_dir: root, glob: '*.json')
       end
-
-      assert JSONVideo.exists?(key: 'test-video'), 'valid file should still be seeded after bad file'
+      assert_match 'bad.json', error.message, 'error should identify the offending file'
     end
   end
 end

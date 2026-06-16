@@ -16,7 +16,7 @@ class LtiMailerTest < ActionMailer::TestCase
     end
 
     test 'lti_integration_confirmation - should have correct sender' do
-      assert_equal '"Code.org" <noreply@code.org>', @mail[:from].decoded
+      assert_equal 'CodeAI <noreply@code.org>', @mail[:from].decoded
       assert_equal ['noreply@code.org'], @mail.from
     end
 
@@ -30,7 +30,7 @@ class LtiMailerTest < ActionMailer::TestCase
 
     test 'lti_integration_confirmation - should contain "course offerings" link' do
       expected_link = <<~HTML.strip
-        <a href="//test-studio.code.org/catalog">course offerings</a>
+        <a href="https://test-studio.code.org/catalog">course offerings</a>
       HTML
 
       assert_includes @mail.body, expected_link

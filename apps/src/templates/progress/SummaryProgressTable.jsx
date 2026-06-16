@@ -1,8 +1,8 @@
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import {lessonIsVisible} from './progressHelpers';
@@ -33,10 +33,22 @@ class SummaryProgressTable extends React.Component {
           <thead>
             <tr style={styles.headerRow}>
               <td style={rowStyles.col1}>
-                <div style={rowStyles.colText}>{i18n.lessonName()}</div>
+                <Typography
+                  variant="body4"
+                  component="div"
+                  sx={{fontWeight: 600}}
+                >
+                  {i18n.lessonName()}
+                </Typography>
               </td>
               <td style={rowStyles.col2}>
-                <div style={rowStyles.colText}>{i18n.progress()}</div>
+                <Typography
+                  variant="body4"
+                  component="div"
+                  sx={{fontWeight: 600}}
+                >
+                  {i18n.progress()}
+                </Typography>
               </td>
             </tr>
           </thead>
@@ -68,13 +80,13 @@ const styles = {
   table: {
     borderWidth: 1,
     borderStyle: 'solid',
-    borderLeftColor: color.border_gray,
-    borderTopColor: color.border_gray,
-    borderBottomColor: color.border_light_gray,
-    borderRightColor: color.border_light_gray,
+    borderLeftColor: 'var(--borders-neutral-primary)',
+    borderTopColor: 'var(--borders-neutral-primary)',
+    borderBottomColor: 'var(--borders-neutral-secondary)',
+    borderRightColor: 'var(--borders-neutral-secondary)',
   },
   headerRow: {
-    backgroundColor: color.table_header,
+    backgroundColor: 'var(--background-neutral-secondary)',
   },
 };
 

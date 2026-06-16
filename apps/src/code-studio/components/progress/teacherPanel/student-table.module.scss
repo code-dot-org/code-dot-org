@@ -1,4 +1,3 @@
-@import 'color.scss';
 @import 'font.scss';
 
 .table {
@@ -8,13 +7,13 @@
 
 .row {
   height: 41px;
-  color: $cyan;
-  border: 1px solid $lighter_cyan;
-  background-color: $lightest_gray;
+  color: var(--text-info-primary);
+  border: 1px solid var(--borders-info-primary);
+  background-color: var(--background-neutral-secondary);
   cursor: pointer;
 
   &:hover {
-    background-color: $lighter_cyan;
+    background-color: var(--background-info-extra-light);
   }
 }
 
@@ -24,8 +23,8 @@
 
 .selected {
   @include main-font-bold;
-  color: $white;
-  background-color: $light_cyan;
+  color: var(--text-neutral-inverse);
+  background-color: var(--background-info-primary);
 }
 
 .studentTableRow {

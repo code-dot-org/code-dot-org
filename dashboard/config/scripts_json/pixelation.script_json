@@ -8,6 +8,7 @@
       "curriculum_umbrella": "Other",
       "is_migrated": true,
       "supported_locales": [
+        "es-LA",
         "es-MX",
         "es-ES"
       ]

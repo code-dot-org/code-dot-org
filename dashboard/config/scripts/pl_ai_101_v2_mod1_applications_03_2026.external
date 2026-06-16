@@ -5,53 +5,210 @@ description 'description here'
 markdown <<MARKDOWN
 # AI in Various Fields
 
-AI has profoundly impacted the world across various sectors, revolutionizing the way we live, work, and solve complex problems. Rather than replacing jobs entirely, AI is most often used to automate repetitive work, assist with first drafts, and provide feedback or corrections, enabling people to work more efficiently and focus on higher-level thinking across industries. By automating tasks, enhancing decision-making, and unlocking new possibilities, AI has the potential to drive significant advancements in efficiency, safety, and innovation. 
+AI is increasingly being integrated into many industries and is influencing the way people work, communicate, and solve problems. In many cases, AI is used to automate repetitive tasks, generate drafts, or assist with analysis and decision-making. As these tools become more common, they are changing workflows and expectations across a range of fields.
 
-However, with these benefits come important responsibilities. To prepare students for a future workforce that heavily incorporates AI, education systems must teach not only how to use AI tools, but also how they work, including their limitations, risks, and potential biases.
+While AI can create new opportunities and efficiencies, it also raises important questions about accuracy, bias, privacy, and the role of human judgment. The impact of AI is complex and continues to evolve.
 
-👉 Click to expand the drop-downs below to learn more about how AI is impacting various fields.
+👉 Click the drop-downs below to explore how AI is impacting different fields. **Choose one or two to learn more about.**
 
-**Short on Time?** Choose one to read.
+---
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">Healthcare</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
-    <p>
+<div style="max-width:900px; margin:20px auto; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#3A3A3A;">
 
-AI has dramatically altered diagnostics and treatments, offering a new level of precision and efficiency. Deep learning algorithms, for example, now analyze medical imagery with an accuracy that can exceed human experts, a breakthrough particularly significant in the early detection of diseases such as cancer. Google's DeepMind AI, for instance, has been shown to identify breast cancer from mammograms with higher accuracy than professional radiologists. Additionally, AI's predictive modeling capabilities enable the forecasting of disease risks for individual patients, facilitating early intervention strategies that not only have the potential to save lives but also significantly reduce the financial burden on healthcare systems.
+<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden; background:white;">
 
-While AI's advancements in healthcare are groundbreaking, there's a risk of bias in diagnostic algorithms that can arise from training data not being representative of diverse populations. This could lead to inaccurate diagnoses for underrepresented groups, exacerbating health disparities. Additionally, reliance on AI could potentially overlook the nuances of patient care that require human empathy and understanding.
+<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA; font-size:18px; font-weight:600;">
+Healthcare
+</summary>
 
+<div style="padding:18px 24px; background:white; border-top:1px solid #E5E7EB;">
 
-</p></div>
+<div style="font-size:15px; line-height:1.45; color:#555; margin-bottom:18px;">
+AI is transforming healthcare by helping medical professionals analyze large amounts of data, identify patterns, and support faster decision-making. AI systems are used in areas such as medical imaging, patient monitoring, and predictive analytics to improve efficiency and support patient care. These tools are becoming increasingly integrated into hospitals, clinics, and healthcare research.
+</div>
+
+<div style="display:flex; gap:18px; align-items:stretch;">
+
+<div style="flex:1; font-size:15px; line-height:1.5; color:#2E5E3A; background:#EEF8F1; border:1px solid #CFE8D6; border-radius:10px; padding:14px 16px;">
+<p style="margin-top:0;"><strong>✅ Benefits</strong></p>
+<ul style="margin-bottom:0;">
+<li>Earlier detection of diseases through medical imaging</li>
+<li>Faster analysis of patient data</li>
+<li>More personalized treatment recommendations</li>
+</ul>
+</div>
+
+<div style="flex:1; font-size:15px; line-height:1.5; color:#6B4A1F; background:#FFF6E8; border:1px solid #F1D6A8; border-radius:10px; padding:14px 16px;">
+<p style="margin-top:0;"><strong>⚠️ Risks</strong></p>
+<ul style="margin-bottom:0;">
+<li>Bias in training data can lead to less accurate outcomes for some populations</li>
+<li>Overreliance on AI may reduce human oversight</li>
+<li>Patient privacy and sensitive medical data concerns</li>
+</ul>
+</div>
+
+</div>
+</div>
 </details>
+</div>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">Agriculture and Manufacturing</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
-    <p>
+<!-- Transportation -->
+<div style="max-width:900px; margin:20px auto; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#3A3A3A;">
 
-In agriculture, drones and autonomous machines equipped with AI are used for precision farming, enabling farmers to monitor crop health, automate harvesting, and precisely manage resources like water and fertilizers based on real-time data. This approach not only improves yield but also reduces the environmental impact of farming. In manufacturing, robots integrated with AI work to perform tasks ranging from assembling products to sorting packages. These robots take on repetitive and physically demanding tasks, increasing production efficiency and enhancing workplace safety by handling dangerous jobs, marking a significant shift towards more productive and safer operational processes.
+<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden; background:white;">
 
-The use of AI and automation raises concerns about job displacement and the widening of economic gaps. While productivity increases, there's a risk that workers whose roles are automated will find it challenging to secure employment in new areas, particularly those lacking in digital skills. This technological shift may also lead to environmental concerns regarding the energy consumption of AI systems and electronic waste from obsolete machinery.
+<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA; font-size:18px; font-weight:600;">
+Transportation
+</summary>
 
-</p></div>
+<div style="padding:18px 24px; background:white; border-top:1px solid #E5E7EB;">
+
+<div style="font-size:15px; line-height:1.45; color:#555; margin-bottom:18px;">
+AI is increasingly used in transportation systems to improve navigation, automate vehicles, and optimize traffic flow. From GPS routing to self-driving technology, AI helps transportation systems process information and respond to changing conditions in real time. AI is also widely used in shipping, delivery, and logistics operations.
+</div>
+
+<div style="display:flex; gap:18px; align-items:stretch;">
+
+<div style="flex:1; font-size:15px; line-height:1.5; color:#2E5E3A; background:#EEF8F1; border:1px solid #CFE8D6; border-radius:10px; padding:14px 16px;">
+<p style="margin-top:0;"><strong>✅ Benefits</strong></p>
+<ul style="margin-bottom:0;">
+<li>More efficient routing and traffic management</li>
+<li>Improved safety features in vehicles</li>
+<li>Faster delivery and logistics systems</li>
+</ul>
+</div>
+
+<div style="flex:1; font-size:15px; line-height:1.5; color:#6B4A1F; background:#FFF6E8; border:1px solid #F1D6A8; border-radius:10px; padding:14px 16px;">
+<p style="margin-top:0;"><strong>⚠️ Risks</strong></p>
+<ul style="margin-bottom:0;">
+<li>Safety concerns if systems fail or make incorrect decisions</li>
+<li>Job displacement in transportation industries</li>
+<li>Questions about accountability in accidents involving AI systems</li>
+</ul>
+</div>
+
+</div>
+</div>
 </details>
+</div>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">Finance</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
-    <p>
+<!-- Finance -->
+<div style="max-width:900px; margin:20px auto; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#3A3A3A;">
+  
+<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden; background:white;">
 
-The finance sector has also seen substantial benefits from AI, especially in improving customer service and security. AI enables high-speed, high-volume trading based on financial data analysis, far beyond human capabilities. Customer service has been revolutionized with AI-driven chatbots that handle inquiries and transactions around the clock, offering personalized service. Perhaps most critically, AI's advanced data analysis capabilities are pivotal in detecting fraudulent transactions, significantly mitigating financial losses and bolstering the security of financial transactions.
+<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA; font-size:18px; font-weight:600;">
+Finance
+</summary>
 
+<div style="padding:18px 24px; background:white; border-top:1px solid #E5E7EB;">
 
-AI's application in finance, while enhancing efficiency and security, carries the risk of perpetuating existing biases. Algorithms trained on historical data may inherit past prejudices in loan approval, risk assessments, and customer service, unfairly disadvantaging certain groups. Moreover, the opacity of AI decision-making processes can make it difficult for consumers to understand or contest financial decisions that affect them, leading to potential issues of transparency and accountability.
+<div style="font-size:15px; line-height:1.45; color:#555; margin-bottom:18px;">
+AI plays a major role in modern banking and financial systems by analyzing data, detecting fraud, and automating customer support. Financial institutions use AI to process transactions, identify unusual activity, and support financial decision-making at large scales. AI tools are also commonly used in customer-facing services such as chatbots and recommendation systems.
+</div>
 
-</p></div>
+<div style="display:flex; gap:18px; align-items:stretch;">
+
+<div style="flex:1; font-size:15px; line-height:1.5; color:#2E5E3A; background:#EEF8F1; border:1px solid #CFE8D6; border-radius:10px; padding:14px 16px;">
+<p style="margin-top:0;"><strong>✅ Benefits</strong></p>
+<ul style="margin-bottom:0;">
+<li>Faster fraud detection and security monitoring</li>
+<li>Improved customer service through chatbots and automation</li>
+<li>More efficient financial analysis</li>
+</ul>
+</div>
+
+<div style="flex:1; font-size:15px; line-height:1.5; color:#6B4A1F; background:#FFF6E8; border:1px solid #F1D6A8; border-radius:10px; padding:14px 16px;">
+<p style="margin-top:0;"><strong>⚠️ Risks</strong></p>
+<ul style="margin-bottom:0;">
+<li>Algorithms may reinforce bias in lending or risk assessment</li>
+<li>Lack of transparency in automated decisions</li>
+<li>Privacy concerns related to financial data</li>
+</ul>
+</div>
+
+</div>
+</div>
 </details>
+</div>
 
-These examples from healthcare, agriculture, manufacturing, and finance highlight AI's role as a pivotal force for advancement, demonstrating its vast potential to drive forward a wide range of industries.
+<!-- Agriculture and Manufacturing -->
+<div style="max-width:900px; margin:20px auto; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#3A3A3A;">
+<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden; background:white;">
 
+<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA; font-size:18px; font-weight:600;">
+Agriculture and Manufacturing
+</summary>
 
+<div style="padding:18px 24px; background:white; border-top:1px solid #E5E7EB;">
+
+<div style="font-size:15px; line-height:1.45; color:#555; margin-bottom:18px;">
+AI-powered tools are helping automate tasks and improve efficiency in farming and manufacturing. In agriculture, AI supports crop monitoring, resource management, and precision farming, while manufacturing systems use AI-driven robots to handle repetitive tasks and manage production processes. These technologies are increasingly used to improve productivity and operational efficiency.
+</div>
+
+<div style="display:flex; gap:18px; align-items:stretch;">
+
+<div style="flex:1; font-size:15px; line-height:1.5; color:#2E5E3A; background:#EEF8F1; border:1px solid #CFE8D6; border-radius:10px; padding:14px 16px;">
+<p style="margin-top:0;"><strong>✅ Benefits</strong></p>
+<ul style="margin-bottom:0;">
+<li>Improved crop monitoring and resource management</li>
+<li>Increased efficiency in manufacturing and logistics</li>
+<li>Reduced exposure to dangerous or repetitive work</li>
+</ul>
+</div>
+
+<div style="flex:1; font-size:15px; line-height:1.5; color:#6B4A1F; background:#FFF6E8; border:1px solid #F1D6A8; border-radius:10px; padding:14px 16px;">
+<p style="margin-top:0;"><strong>⚠️ Risks</strong></p>
+<ul style="margin-bottom:0;">
+<li>Job displacement through automation</li>
+<li>Environmental impact from energy use and electronic waste</li>
+<li>Unequal access to advanced technologies</li>
+</ul>
+</div>
+
+</div>
+</div>
+</details>
+</div>
+
+<!-- Media and Communication -->
+<div style="max-width:900px; margin:20px auto; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#3A3A3A;">
+<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden; background:white;">
+
+<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA; font-size:18px; font-weight:600;">
+Media and Communication
+</summary>
+
+<div style="padding:18px 24px; background:white; border-top:1px solid #E5E7EB;">
+
+<div style="font-size:15px; line-height:1.45; color:#555; margin-bottom:18px;">
+AI is increasingly used to generate and edit text, images, audio, and video across media and communication industries. These tools support content creation, translation, recommendation systems, and digital communication platforms. AI-generated media is now commonly integrated into social media, marketing, entertainment, and news production.
+</div>
+
+<div style="display:flex; gap:18px; align-items:stretch;">
+
+<div style="flex:1; font-size:15px; line-height:1.5; color:#2E5E3A; background:#EEF8F1; border:1px solid #CFE8D6; border-radius:10px; padding:14px 16px;">
+<p style="margin-top:0;"><strong>✅ Benefits</strong></p>
+<ul style="margin-bottom:0;">
+<li>Faster content creation and editing</li>
+<li>Improved accessibility tools like translation and captioning</li>
+<li>Increased creativity and productivity</li>
+</ul>
+</div>
+
+<div style="flex:1; font-size:15px; line-height:1.5; color:#6B4A1F; background:#FFF6E8; border:1px solid #F1D6A8; border-radius:10px; padding:14px 16px;">
+<p style="margin-top:0;"><strong>⚠️ Risks</strong></p>
+<ul style="margin-bottom:0;">
+<li>Spread of misinformation and deepfakes</li>
+<li>Difficulty distinguishing real from AI-generated content</li>
+<li>Copyright and ownership concerns around generated media</li>
+</ul>
+</div>
+
+</div>
+</div>
+</details>
+</div>
+
+> **💬 Quick Reflection:** As AI becomes more integrated into workplaces, what skills may become even more valuable for students to develop?
 MARKDOWN

@@ -1,9 +1,7 @@
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-
-import Button from '@cdo/apps/legacySharedComponents/Button';
 
 import styles from './twoColumnActionBlock.module.scss';
 
@@ -62,18 +60,25 @@ export default function TwoColumnActionBlock({
           >
             {buttons.map((button, index) => (
               <div key={index}>
-                <Button
-                  __useDeprecatedTag
+                <MuiButton
+                  variant="contained"
+                  color="primary"
                   href={button.url}
-                  color={
-                    button.color || Button.ButtonColor.brandSecondaryDefault
-                  }
-                  text={button.text}
                   target={button.target}
+                  // Mirror the legacy Button's reverse-tabnabbing protection:
+                  // MUI Button does not auto-add `rel` when rendering as an
+                  // anchor with target="_blank", so we set it ourselves.
+                  rel={
+                    button.target === '_blank'
+                      ? 'noopener noreferrer'
+                      : undefined
+                  }
                   id={button.id}
                   onClick={button.onClick}
                   aria-label={button.ariaLabel}
-                />
+                >
+                  {button.text}
+                </MuiButton>
                 {button.extraText && (
                   <Typography variant="body4" gutterBottom>
                     {button.extraText}
@@ -101,7 +106,8 @@ TwoColumnActionBlock.propTypes = {
       extraText: PropTypes.string,
       target: PropTypes.string,
       id: PropTypes.string,
-      color: PropTypes.oneOf(Object.values(Button.ButtonColor)),
+      onClick: PropTypes.func,
+      ariaLabel: PropTypes.string,
     })
   ),
 

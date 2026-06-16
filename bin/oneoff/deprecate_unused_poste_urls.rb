@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 
 require 'sequel'
-require File.expand_path('../../../pegasus/src/env', __FILE__)
+require File.expand_path('../../../lib/cdo/pegasus/src/env', __FILE__)
 require 'cdo/sequel'
-require src_dir 'database'
+require 'cdo/pegasus/src/database'
 require_relative './poste_urls_constants'
 
 # mark all poste_urls that are not in urls_to_keep as deleted_at = now

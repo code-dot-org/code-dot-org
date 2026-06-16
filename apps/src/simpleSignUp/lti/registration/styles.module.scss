@@ -37,29 +37,33 @@ body {
   align-items: center;
 }
 
-.formLabel {
-  white-space: nowrap; /* Prevents the label from wrapping */
-}
-
 .inputContainer {
   display: flex;
-  align-items: center; /* Vertically aligns the items in the middle */
+  justify-content: center;
   margin-bottom: 10px; /* Adds some space below each input container */
 }
 
-.input {
-  margin-left: 10px;
-  padding: 8px 12px;
-  width: 300px; /* Responsive width */
-  font-size: 16px; /* Sufficiently large font size for readability */
-  border: 2px solid #ccc; /* Subtle border */
-  border-radius: 4px; /* Rounded corners */
-  box-sizing: border-box; /* Includes padding and border in the element's width */
+.inlineField {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  min-width: auto;
 
-  transition: border-color 0.3s; /* Smooth transition for border color */
+  :global(input) {
+    margin-bottom: 0;
+  }
+}
+
+.input {
+  width: 300px; /* Responsive width */
+  padding: 8px 12px;
+  font: inherit;
+  border: 1px solid var(--borders-neutral-solid);
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .input:focus {
-  border-color: #007BFF; /* Highlight color when the input is focused */
-  outline: none; /* Removes the default focus outline */
+  outline: none;
+  border-color: var(--borders-neutral-solid);
 }

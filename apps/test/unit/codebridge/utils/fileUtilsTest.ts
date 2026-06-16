@@ -115,6 +115,13 @@ describe('fileUtils', () => {
     expect(
       getFileIconNameAndStyle({
         ...defaultFile,
+        name: 'test.webp',
+        type: ProjectFileType.STARTER,
+      })
+    ).toEqual({iconName: 'image', iconStyle: 'solid', isBrand: false});
+    expect(
+      getFileIconNameAndStyle({
+        ...defaultFile,
         name: 'test.jpeg',
         type: ProjectFileType.STARTER,
       })

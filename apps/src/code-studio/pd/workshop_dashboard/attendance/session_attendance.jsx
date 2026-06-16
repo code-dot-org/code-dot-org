@@ -200,7 +200,7 @@ export class SessionAttendance extends React.Component {
                   <th>Email</th>
                   <th>Verified Teacher Account</th>
                   {this.props.scholarshipWorkshop && (
-                    <th>Code.org Scholarship?</th>
+                    <th>CodeAI Scholarship?</th>
                   )}
                   {this.props.scholarshipWorkshop && (
                     <th>Other Scholarship?</th>

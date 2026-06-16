@@ -8,13 +8,12 @@ import {LanguageSupport} from '@codemirror/language';
 import React, {useContext, useEffect, useMemo, useState} from 'react';
 
 import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
-import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
-import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
-import {TestResults} from '@cdo/apps/constants';
+import {sendStartedReportIfNotStarted} from '@cdo/apps/code-studio/progressRedux';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
+import TestResultValidator from '@cdo/apps/lab2/progress/TestResultValidator';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {changeProjectType} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {submitPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
@@ -30,7 +29,6 @@ import {
   useAppDispatch,
   useAppSelector,
 } from '@cdo/apps/util/reduxHooks';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import CodebridgeRegistry from '../codebridge/CodebridgeRegistry';
 
@@ -47,7 +45,6 @@ import HorizontalLayout from './layout/HorizontalLayout';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
 import PythonValidationTracker from './progress/PythonValidationTracker';
-import PythonValidator from './progress/PythonValidator';
 import {handleRunClick, stopPythonCode} from './pyodideRunner';
 import {pythonLabVideoFiles} from './pythonLabVideos';
 
@@ -96,9 +93,6 @@ const PythonlabView: React.FunctionComponent<
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const [showProjectPicker, setShowProjectPicker] = useState(false);
 
-  const currentLevelStatus = useAppSelector(
-    state => getCurrentLevel(state)?.status
-  );
   const lastSavedLabConfig = useAppSelector(
     state => state.lab2Project.lastSavedLabConfig
   );
@@ -180,7 +174,7 @@ const PythonlabView: React.FunctionComponent<
   useEffect(() => {
     if (progressManager && levelProperties.appName === 'pythonlab') {
       progressManager.setValidator(
-        new PythonValidator(PythonValidationTracker.getInstance())
+        new TestResultValidator(PythonValidationTracker.getInstance())
       );
     }
   }, [progressManager, levelProperties.appName]);
@@ -239,15 +233,8 @@ const PythonlabView: React.FunctionComponent<
       progressManager,
       isStartMode ? undefined : validationFile
     );
-    if (!isPredictLevel && currentLevelStatus === LevelStatus.not_tried) {
-      // If this is not a predict level and the current status is not tried,
-      // send a level started progress report.
-      dispatch(
-        sendProgressReport(
-          levelProperties.appName || '',
-          TestResults.LEVEL_STARTED
-        )
-      );
+    if (!isPredictLevel) {
+      dispatch(sendStartedReportIfNotStarted(levelProperties.appName || ''));
     }
     dispatch(submitPredictResponse({appType: 'pythonlab'}));
   };

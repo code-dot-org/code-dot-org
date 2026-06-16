@@ -1,6 +1,10 @@
 import $ from 'jquery';
 import _ from 'lodash';
 
+import {
+  demoSecretPictureUrlFor,
+  demoSecretWordsFor,
+} from '@cdo/apps/templates/teacherDashboard/demoStudentSecrets';
 import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   sectionCode,
@@ -892,6 +896,7 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
   let studentLookup = {};
   for (let i = 0; i < studentData.length; i++) {
     let student = studentData[i];
+    const isDemoStudent = !!student.is_demo_student;
     studentLookup[student.id] = {
       id: student.id,
       name: student.name,
@@ -901,11 +906,15 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       age: student.age || '',
       gender: student.gender || '',
       genderTeacherInput: student.gender_teacher_input || '',
-      secretWords: student.secret_words,
-      secretPictureUrl: student.secret_picture_url,
+      secretWords:
+        student.secret_words ??
+        (isDemoStudent ? demoSecretWordsFor(student.id) : null),
+      secretPictureUrl:
+        student.secret_picture_url ??
+        (isDemoStudent ? demoSecretPictureUrlFor(student.id) : null),
       loginType: loginType,
       sectionId: sectionId,
-      isDemoStudent: !!student.is_demo_student,
+      isDemoStudent: isDemoStudent,
       sharingDisabled: student.sharing_disabled,
       hasEverSignedIn: student.has_ever_signed_in,
       dependsOnThisSectionForLogin: student.depends_on_this_section_for_login,

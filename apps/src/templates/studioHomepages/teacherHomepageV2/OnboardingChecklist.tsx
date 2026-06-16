@@ -3,6 +3,8 @@ import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 import {Tour} from 'shepherd.js';
 
+import {DemoType} from '../../teacherDashboard/types/teacherSectionTypes';
+
 import styles from './teacherHomepage.module.scss';
 
 const CHECKLIST_ITEMS = [
@@ -13,16 +15,26 @@ const CHECKLIST_ITEMS = [
 
 interface OnboardingChecklistProps {
   createSectionTour: Tour | null;
+  reviewSyllabusTour: Tour | null;
+  learnHowToEvaluateTour: Tour | null;
+  demoType: DemoType;
 }
 
 const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
   createSectionTour,
+  reviewSyllabusTour,
+  learnHowToEvaluateTour,
+  demoType,
 }) => {
   const [isHidden, setIsHidden] = React.useState(false);
 
   const handleButtonClick = (id: string) => {
     if (id === 'create-section') {
       createSectionTour?.start();
+    } else if (id === 'review-syllabus') {
+      reviewSyllabusTour?.start();
+    } else if (id === 'learn-to-evaluate') {
+      learnHowToEvaluateTour?.start();
     }
   };
 
@@ -40,7 +52,7 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
           Where should we start?
         </Typography>
         <Typography variant="body2">
-          Teaching Assistant can help you get started with Code.org
+          Teaching Assistant can help you get started with CodeAI
         </Typography>
         <div className={styles.onboardingChecklistButtons}>
           {CHECKLIST_ITEMS.map(({id, label, completed}) => (

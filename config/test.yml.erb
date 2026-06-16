@@ -68,9 +68,6 @@ stub_school_data: true
 daemon: true
 use_pusher: <%= managed_test_server? %>
 
-# Install i18n dependencies for i18n tests
-build_i18n: true
-
 # Since channel ids are derived from user id and other sequential integer ids
 # use a new S3 sources directory for each Test Build to prevent a UI test
 # from inadvertently using a channel id from a previous Test Build.
@@ -145,6 +142,10 @@ no_https_store: true
 redis_url: 'redis://ci-tests-redis:6379/0'
 netsim_redis_groups:
 - master: redis://ci-tests-redis:6379
+
+# custom database config for CI
+db_writer: 'mysql://root:not-a-secret@ci-tests-mysql/'
+db_reader: 'mysql://root:not-a-secret@ci-tests-mysql/'
 
 # CI-specific S3 settings, to avoid collisions between concurrent CI jobs
 animations_s3_directory: <%= "animations_circle/#{ENV['CI_BUILD_NUMBER']}" %>

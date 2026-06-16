@@ -77,7 +77,7 @@ class ApiControllerTest < ActionController::TestCase
     get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: ""}
 
     assert_response :success
-    assert_equal "[\"//test-studio.code.org/s/#{script_level.script.name}/lessons/1/levels/1?solution=true\"]", @response.body
+    assert_equal "[\"https://test-studio.code.org/s/#{script_level.script.name}/lessons/1/levels/1?solution=true\"]", @response.body
   end
 
   test "example_solutions should return expected example solutions when section id is present" do
@@ -95,7 +95,7 @@ class ApiControllerTest < ActionController::TestCase
     get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: section.id}
 
     assert_response :success
-    assert_equal "[\"//test-studio.code.org/s/#{script_level.script.name}/lessons/1/levels/1?section_id=#{section.id}\\u0026solution=true\"]", @response.body
+    assert_equal "[\"https://test-studio.code.org/s/#{script_level.script.name}/lessons/1/levels/1?section_id=#{section.id}\\u0026solution=true\"]", @response.body
   end
 
   test "should get text_responses for section with default script" do
@@ -215,7 +215,7 @@ class ApiControllerTest < ActionController::TestCase
         'puzzle' => 1,
         'question' => 'Text Match 1',
         'response' => 'Here is the answer 1a',
-        'url' => "//test-studio.code.org/s/#{script.name}/lessons/1/levels/1?section_id=#{@section.id}&user_id=#{@student_1.id}"
+        'url' => "https://test-studio.code.org/s/#{script.name}/lessons/1/levels/1?section_id=#{@section.id}&user_id=#{@student_1.id}"
       },
       {
         'student' => {'id' => @student_1.id, 'name' => @student_1.name},
@@ -223,7 +223,7 @@ class ApiControllerTest < ActionController::TestCase
         'puzzle' => 1,
         'question' => 'Text Match 2',
         'response' => 'Here is the answer 1b',
-        'url' => "//test-studio.code.org/s/#{script.name}/lessons/2/levels/1?section_id=#{@section.id}&user_id=#{@student_1.id}"
+        'url' => "https://test-studio.code.org/s/#{script.name}/lessons/2/levels/1?section_id=#{@section.id}&user_id=#{@student_1.id}"
       },
       {
         'student' => {'id' => @student_2.id, 'name' => @student_2.name},
@@ -231,7 +231,7 @@ class ApiControllerTest < ActionController::TestCase
         'puzzle' => 1,
         'question' => 'Text Match 1',
         'response' => 'Here is the answer 2',
-        'url' => "//test-studio.code.org/s/#{script.name}/lessons/1/levels/1?section_id=#{@section.id}&user_id=#{@student_2.id}"
+        'url' => "https://test-studio.code.org/s/#{script.name}/lessons/1/levels/1?section_id=#{@section.id}&user_id=#{@student_2.id}"
       }
     ]
     assert_equal expected_response, JSON.parse(@response.body)
@@ -1477,7 +1477,7 @@ class ApiControllerTest < ActionController::TestCase
     get :user_menu
 
     assert_response :success
-    assert_select 'a[href="//test-studio.code.org/users/sign_in"]', 'Sign in'
+    assert_select 'a[href="https://test-studio.code.org/users/sign_in"]', 'Sign in'
   end
 
   test 'should show sign out link for signed in user' do
@@ -1487,7 +1487,7 @@ class ApiControllerTest < ActionController::TestCase
     get :user_menu
 
     assert_response :success
-    assert_select 'a[href="//test-studio.code.org/users/sign_out"]', 'Sign out'
+    assert_select 'a[href="https://test-studio.code.org/users/sign_out"]', 'Sign out'
   end
 
   test 'show link to pair programming when in a section' do

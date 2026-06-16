@@ -66,6 +66,30 @@ yarn build
 
 See also: [Full build with blockly changes](#full-build-with-blockly-changes)
 
+## Dev server source maps and memory usage
+
+`yarn start` defaults to `devtool: 'eval-cheap-module-source-map'`. The `module`
+part keeps breakpoints in your original TS/JSX; the `cheap` part drops
+column-level mappings (line-level only), which uses less memory than the
+full-fidelity `eval-source-map`.
+
+Override the default with `APPS_DEVTOOL` when you need a different tradeoff:
+
+- `APPS_DEVTOOL=eval yarn start` — least memory, no source maps (you step
+  through transpiled code).
+- `APPS_DEVTOOL=eval-source-map yarn start` — highest fidelity (column-level
+  mappings), most memory.
+
+Type checking runs in a separate process capped at ~2.5GB. Set
+`SKIP_TYPECHECK=1 yarn start` to skip it and reclaim that memory; your editor
+and CI still type-check.
+
+Two shortcuts combine these levers:
+
+- `yarn start:cheap` — `APPS_DEVTOOL=eval` with type checking left on.
+- `yarn start:cheapest` — `APPS_DEVTOOL=eval` plus `SKIP_TYPECHECK=1`, for the
+  lowest-memory dev server.
+
 ## Testing
 
 Apps unit tests are run using [jest](https://jestjs.io/) and integration tests are run in a browser using [Karma](https://karma-runner.github.io/). By default they run inside a [headless chrome browser](https://developer.chrome.com/blog/headless-karma-mocha-chai/) but they can also be run in the browser of your choice. See below for information on [writing new tests](#writing-tests).
@@ -185,10 +209,6 @@ Running a full localization build can take several minutes. Since localization r
 
 Note: Using the live-reload server with localization builds is prone to the `Error: EMFILE, too many open files` problem. See the `ulimit` fix [under the live-reload server heading](#running-with-live-reload-server).
 
-### Sending new i18n strings to CrowdIn
-
-To get new strings localized using CrowdIn, we currently run a script in a private repository. Contact a code.org engineer to trigger an update.
-
 ## Adding a new npm package
 
 To add a new package using npm, e.g., `lodash`, run: `yarn add --dev lodash`
@@ -198,7 +218,7 @@ To add a new package using npm, e.g., `lodash`, run: `yarn add --dev lodash`
 
 ## Typescript Migration
 We are trying out Typescript in our repository, and currently have a combination of Typescript and Javascript files. Typescript files can be added anywhere in `/src`, and will
-be linted and built. 
+be linted and built.
 
 ## Contributing
 

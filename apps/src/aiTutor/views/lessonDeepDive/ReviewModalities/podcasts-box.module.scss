@@ -34,6 +34,12 @@ $purple: #9657c7;
   flex-shrink: 0;
 }
 
+// Live (analyser-driven) bars update ~60fps, so the leisurely idle transition
+// would smear them; use a short linear one to stay responsive.
+.barLive {
+  transition: height 0.07s linear;
+}
+
 @keyframes pulse {
   0%, 100% { transform: scaleY(1); }
   50%       { transform: scaleY(0.5); }
@@ -112,6 +118,15 @@ $purple: #9657c7;
     outline: 2px solid #a374d6;
     outline-offset: 2px;
   }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.4;
+
+    &:hover {
+      color: #d4dae1;
+    }
+  }
 }
 
 .playButton {
@@ -136,6 +151,15 @@ $purple: #9657c7;
     outline: 2px solid #a374d6;
     outline-offset: 2px;
   }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.4;
+
+    &:hover {
+      background: #fff;
+    }
+  }
 }
 
 // ── Description ───────────────────────────────────────────────────────────────
@@ -146,4 +170,47 @@ $purple: #9657c7;
   color: #f0f2f5;
   margin: 24px auto 0;
   max-width: 600px;
+}
+
+// ── Transcript ─────────────────────────────────────────────────────────────────
+
+.transcript {
+  width: 100%;
+  max-width: 600px;
+  margin: 24px auto 0;
+  text-align: left;
+}
+
+.transcriptTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #f0f2f5;
+  cursor: pointer;
+}
+
+.transcriptLines {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 220px;
+  overflow-y: auto;
+  margin-top: 12px;
+}
+
+.transcriptLine {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #f0f2f5;
+  margin: 0;
+}
+
+.speaker {
+  font-weight: 600;
+  color: $purple;
+  margin-right: 6px;
+}
+
+.speakerSam {
+  color: #ffb42e;
 }
