@@ -294,14 +294,6 @@ module Cdo
             end
           end
 
-          it 'saves ERB template files to the template directory' do
-            client.stubs(:batch_execute_async).returns('id')
-            generator.create_or_replace_views(client: client, environment_type: :test)
-
-            assert File.exist?(File.join(tmpdir, 'users_pii.sql.erb'))
-            assert File.exist?(File.join(tmpdir, 'users.sql.erb'))
-          end
-
           it 'renders ERB placeholders in the CREATE SQL' do
             batches = []
             client.stubs(:batch_execute_async).with {|sqls| batches << sqls; 'id'}
@@ -992,6 +984,38 @@ module Cdo
           end
         end
 
+        describe '.generate_all_ddl_templates' do
+          let(:tmpdir) {Dir.mktmpdir}
+
+          before do
+            MaterializedViewManager.send(:remove_const, :SQL_VIEW_TEMPLATE_DIR)
+            MaterializedViewManager.const_set(:SQL_VIEW_TEMPLATE_DIR, tmpdir)
+          end
+
+          after do
+            FileUtils.remove_entry(tmpdir)
+          end
+
+          it 'writes the PII and non-PII templates for each model' do
+            result = MaterializedViewManager.generate_all_ddl_templates(models: [model])
+
+            assert File.exist?(File.join(tmpdir, 'users_pii.sql.erb'))
+            assert File.exist?(File.join(tmpdir, 'users.sql.erb'))
+            assert_equal 2, result[:written].length
+          end
+
+          it 'prunes orphaned templates that no current model produces' do
+            orphan = File.join(tmpdir, 'old_table.sql.erb')
+            File.write(orphan, 'stale')
+
+            result = MaterializedViewManager.generate_all_ddl_templates(models: [model])
+
+            refute File.exist?(orphan), 'orphaned template should be deleted'
+            assert_includes result[:deleted], orphan
+            assert File.exist?(File.join(tmpdir, 'users.sql.erb')), 'current template should remain'
+          end
+        end
+
         describe '.provision_all_views' do
           let(:client) {mock('redshift_client')}
           let(:tmpdir) {Dir.mktmpdir}
@@ -1010,6 +1034,18 @@ module Cdo
 
           after do
             FileUtils.remove_entry(tmpdir)
+          end
+
+          it 'regenerates the templates even on a dry run (flags the pending change without touching the cluster)' do
+            client.stubs(:execute).returns([])
+            client.expects(:batch_execute_async).never
+
+            MaterializedViewManager.provision_all_views(
+              client: client, environment_type: :production, models: [model], dry_run: true
+            )
+
+            assert File.exist?(File.join(tmpdir, 'users_pii.sql.erb'))
+            assert File.exist?(File.join(tmpdir, 'users.sql.erb'))
           end
 
           it 'classifies new views as to_add' do

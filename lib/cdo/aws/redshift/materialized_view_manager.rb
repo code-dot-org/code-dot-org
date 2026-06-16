@@ -40,9 +40,10 @@ module Cdo
       #     self.render_ddl / self.ddl_hash
       #
       #   PROVISION & REFRESH (class — across a set of models, via the Redshift Data API)
-      #     self.provision_all_views   # DROP+CREATE+COMMENT changed views; drop orphans (chunked)
-      #     self.refresh_all_views     # REFRESH stale views
-      #     self.redshift_client       # client pinned to MATERIALIZED_VIEW_DATABASE
+      #     self.generate_all_ddl_templates # Create/Update/Delete Materialized View SQL ERB files for all Models.
+      #     self.provision_all_views        # DROP+CREATE+COMMENT changed views; drop orphans (chunked)
+      #     self.refresh_all_views          # REFRESH stale views
+      #     self.redshift_client            # client pinned to MATERIALIZED_VIEW_DATABASE
       #   (poll submitted statements with Cdo::Aws::Redshift::Client#wait_for_statements.)
       #
       #   MONITOR (class — read-only health)
@@ -193,6 +194,30 @@ module Cdo
           files
         end
 
+        # Regenerate the committed SQL ERB templates for `models` and prune any template that no longer
+        # corresponds to a current view — a model that became fully PII (so its non-PII view
+        # disappears), lost `export_to_analytics`, was deleted, etc. PURE DISK: touches no Redshift.
+        #
+        # This is the canonical "make the committed `.sql.erb` templates reflect the models" operation.
+        # We DON'T rebuild views automatically (Redshift can't ALTER a materialized view — a schema or
+        # classification change needs a coordinated DROP/CREATE), but we DO regenerate the templates so
+        # the pending change is visible in code review and git history. Provisioning (below) and
+        # `db:migrate` both call this so the templates are never stale.
+        #
+        # Pass the COMPLETE exportable set (e.g. `AnalyticsExportable.valid_exported_models`): any
+        # `*.sql.erb` in the template dir not produced by `models` is treated as orphaned and deleted.
+        # @param models [Enumerable<Class>] exportable models to template
+        # @return [Hash] :written => [path, ...], :deleted => [path, ...]
+        def self.generate_all_ddl_templates(models:)
+          written = models.flat_map {|model| new(model).save_ddl_templates}
+          kept = written.to_set {|path| File.basename(path)}
+          deleted = Dir.glob(File.join(SQL_VIEW_TEMPLATE_DIR, '*.sql.erb')).reject do |path|
+            kept.include?(File.basename(path))
+          end
+          deleted.each {|path| File.delete(path)}
+          {written: written, deleted: deleted}
+        end
+
         # Returns the rendered (ERB-evaluated) DDL strings and first column
         # name for this model's PII and non-PII views in the given environment.
         # Does NOT touch disk or Redshift; used by `provision_all_views` to compare
@@ -250,7 +275,6 @@ module Cdo
         # @return [Hash{String => String}] fqn => Redshift Data API statement_id
         def create_or_replace_views(client:, environment_type:)
           env = environment_type.to_s
-          save_ddl_templates
           statements = {}
 
           rendered_ddls(environment_type: env).each do |fqn, info|
@@ -327,6 +351,12 @@ module Cdo
         #   :failed array of table names whose submit raised; and :statements
         #   `{fqn => statement_id}` map (empty when dry_run is true).
         def self.provision_all_views(client:, environment_type:, models:, dry_run: false)
+          # Keep the committed `.sql.erb` templates in lockstep with the models on every provision —
+          # including the dry-run/plan path and when the cluster needs no changes — so a classification
+          # or schema change always surfaces as a template diff. This only records the pending change;
+          # the DROP/CREATE below is what rebuilds the views on Redshift.
+          generate_all_ddl_templates(models: models)
+
           generators = models.map {|model| new(model)}
 
           # Pre-render every desired view's DDL so we can hash-compare against
