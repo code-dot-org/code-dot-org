@@ -6,7 +6,7 @@ import {
 } from '@cdo/apps/pythonlab/prompts/promptMaps';
 import {AiTutorAnswerType} from '@cdo/apps/pythonlab/types';
 
-const DEFAULT_ANSWER_TYPES: AiTutorAnswerType[] = [
+export const DEFAULT_ANSWER_TYPES: AiTutorAnswerType[] = [
   'buildPython',
   'buildCSV',
   'buildJSON',
