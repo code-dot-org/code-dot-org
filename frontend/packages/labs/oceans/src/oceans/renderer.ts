@@ -44,12 +44,16 @@ import {
 import {getState, setState} from './state';
 import type {State} from './state';
 import colors from './styles/colors';
+import {isFreezeActive} from './testHooks';
 
 /** Previous render state, used to detect mode changes. */
 let prevState: Partial<State> = {};
 
 /** Handle returned by the most recent requestAnimFrame call; used to cancel. */
 let rafId: number = 0;
+
+/** Visual-test freeze: true after one non-Loading paint; next render() bails. */
+let didPaintAfterFreezeTrigger = false;
 
 /** Timestamp of the most-recent mode transition. */
 let currentModeStartTime = $time();
@@ -114,6 +118,11 @@ export const stopRender = (): void => {
 };
 
 export const render = (): void => {
+  // Visual-test freeze: bail (no reschedule) so the RAF loop dies.
+  if (isFreezeActive() && didPaintAfterFreezeTrigger) {
+    return;
+  }
+
   rafId = window.requestAnimFrame(render);
 
   let state = getState();
@@ -210,6 +219,15 @@ export const render = (): void => {
   }
 
   prevState = {...state};
+
+  // Visual-test freeze: arm the early return after one non-Loading frame.
+  if (
+    isFreezeActive() &&
+    state.currentMode !== Modes.Loading &&
+    state.currentMode !== Modes.IntermediateLoading
+  ) {
+    didPaintAfterFreezeTrigger = true;
+  }
 };
 
 /**
