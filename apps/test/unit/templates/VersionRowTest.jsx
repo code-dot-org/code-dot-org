@@ -1,8 +1,4 @@
-import {
-  Button as MuiButton,
-  Stack as MuiStack,
-  Typography as MuiTypography,
-} from '@mui/material';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
@@ -45,7 +41,6 @@ describe('VersionRow', () => {
       .filterWhere(typography => typography.text() === VERSION_LABEL);
 
     expect(wrapper).to.not.have.className('highlight');
-    expect(wrapper.find(MuiStack).prop('role')).to.equal('presentation');
     expect(versionLabel.prop('id')).to.equal(VERSION_LABEL_ID);
     expect(viewButton).to.have.length(1);
     expect(viewButton.prop('id')).to.equal(VIEW_BUTTON_ID);

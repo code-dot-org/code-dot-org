@@ -144,7 +144,6 @@ export default class VersionRow extends React.Component {
         </td>
         <td width="275" height="52" className={styles.actionCell}>
           <MuiStack
-            role="presentation"
             direction="row"
             spacing={1}
             justifyContent="flex-end"
