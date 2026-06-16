@@ -134,6 +134,15 @@ namespace :test do
     e2e_dir = frontend_dir('packages', 'e2e-tests')
     script = File.join(e2e_dir, 'bin', 'run-playwright-tests-ci.sh')
 
+    # The lane the suite runs in, from existing detectors (no new mechanism). GHA
+    # does not run this task — it sets PLAYWRIGHT_PROVIDER itself. test_system?
+    # (host + chef_managed) positively identifies the DTT; otherwise live
+    # ENV['CI'] marks Drone. nil locally → the config stays lean.
+    provider =
+      if CDO.test_system?            then 'dtt'
+      elsif CI::Utils.running_on_ci? then 'drone'
+      end
+
     # Link the report up front — the key is stable, so it resolves once this run ends.
     pending_report = Cdo::PlaywrightReport.index_url
     start_message = "Starting <b>dashboard</b> Playwright e2e tests against #{target_url}."
@@ -146,7 +155,9 @@ namespace :test do
     start_time = Time.now
     passed =
       begin
-        RakeUtils.system_stream_output("TARGET_URL=#{target_url}", script)
+        env_prefix = ["TARGET_URL=#{target_url}"]
+        env_prefix << "PLAYWRIGHT_PROVIDER=#{provider}" if provider
+        RakeUtils.system_stream_output(*env_prefix, script)
         true
       rescue StandardError
         false
