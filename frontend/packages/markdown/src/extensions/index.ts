@@ -1,4 +1,3 @@
-export {blockly} from './blockly';
 export {callout} from './callout';
 export {clickableText} from './clickableText';
 export {details} from './details';

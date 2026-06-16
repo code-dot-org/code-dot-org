@@ -6,7 +6,6 @@ import {localization} from '@code-dot-org/core/plugins/localization';
 
 import type {MarkdownExtension} from '../extension';
 import {
-  blockly,
   callout,
   clickableText,
   details,
@@ -180,20 +179,6 @@ describe('Markdown', () => {
       const html = render(md, [embeds]);
       expect(html).toContain('<iframe');
       expect(html).toContain('src="https://e.org"');
-    });
-
-    it('blockly permits xml/block tags and preserves ids', () => {
-      const md = '<xml><block type="foo" id="bar"></block></xml>';
-      const without = render(md);
-      expect(without).not.toContain('<xml');
-      expect(without).not.toContain('<block');
-
-      const html = render(md, [blockly]);
-      expect(html).toContain('<xml');
-      expect(html).toContain('<block');
-      // clobberPrefix cleared: the id is not rewritten to user-content-bar
-      expect(html).toContain('id="bar"');
-      expect(html).not.toContain('user-content-');
     });
   });
 
@@ -453,23 +438,6 @@ describe('Markdown', () => {
       expect(html).toContain('HELLO WORLD');
       expect(html).toContain('data-notranslate="true"');
       expect(html).not.toContain('data-isolate');
-    });
-
-    it('hides Blockly XML from the translator and restores it verbatim', () => {
-      const seen = activateLocalization();
-      const html = render(
-        'Press <xml><block type="foo" id="bar"></block></xml> now',
-        [blockly],
-      );
-      // the translator never saw the raw Blockly tags...
-      expect(seen.join('')).not.toContain('<xml');
-      expect(seen.join('')).not.toContain('<block');
-      // ...just a <code> placeholder (which the translator leaves untouched)
-      expect(seen.join('')).toMatch(/<code[^>]*data-localize-token/);
-      // ...but the output preserves the originals, ids intact
-      expect(html).toContain('<xml');
-      expect(html).toContain('<block');
-      expect(html).toContain('id="bar"');
     });
 
     it('renames <code> for translation and restores it', () => {

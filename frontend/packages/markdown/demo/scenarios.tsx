@@ -156,11 +156,10 @@ const LocalizedScenario = () => {
   return (
     <Markdown
       content={
-        'Press <xml><block type="x" id="b1"></block></xml> then read the ' +
+        'Press `x` then read the ' +
         '`print` block. Text is uppercased by the simulated translator; the ' +
-        'Blockly XML and inline code are preserved.'
+        'inline code elements are preserved.'
       }
-      extensions={[extensions.blockly]}
     />
   );
 };
@@ -225,18 +224,6 @@ export const scenarios: Scenario[] = [
           '<iframe src="data:text/html,embed" title="Example" width="320" height="120"></iframe>'
         }
         extensions={[extensions.embeds]}
-      />
-    ),
-  },
-  {
-    id: 'blockly',
-    name: 'Blockly',
-    render: () => (
-      <Markdown
-        content={
-          'Drag this block: <xml><block type="text_print"><title name="TEXT">hello</title></block></xml>'
-        }
-        extensions={[extensions.blockly]}
       />
     ),
   },
