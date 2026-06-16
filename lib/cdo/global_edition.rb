@@ -31,6 +31,8 @@ module Cdo
       '/users/auth/',
       # Exclude LTI routes.
       '/lti/',
+      # Exclude music files.
+      '/restricted/',
       # Exclude health check routes.
       '/health_check',
       '/home/health_check'
