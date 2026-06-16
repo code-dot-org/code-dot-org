@@ -1,0 +1,25 @@
+.layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.nav {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.themeToggle {
+  margin-top: 16px;
+}
+
+.preview {
+  flex: 1 1 auto;
+  max-width: 640px;
+  padding: 16px;
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+}

@@ -1,11 +1,19 @@
+import {Typography} from '@mui/material';
 import {useState} from 'react';
+
+import {RadioButtonsGroup} from '@code-dot-org/component-library/radioButton';
+import Toggle from '@code-dot-org/component-library/toggle';
 
 import {scenarios} from './scenarios';
 
+import moduleStyles from './demo.module.css';
+
 /**
  * Dev playground for the markdown component. Pick a scenario on the left to see
- * it render on the right, and toggle the design-system theme. The scenarios are
- * shared with the visual tests.
+ * it render on the right, and toggle the design-system theme. Built from the
+ * design system: DSCO controls (RadioButtonsGroup, Toggle) and MUI Typography.
+ * The previewed scenario area bridges to the design-system CSS variables via
+ * `data-theme` so the markdown reflects the chosen theme.
  */
 export const Demo = () => {
   const [selected, setSelected] = useState(scenarios[0].id);
@@ -14,42 +22,35 @@ export const Demo = () => {
     scenarios.find(scenario => scenario.id === selected) ?? scenarios[0];
 
   return (
-    <div style={{display: 'flex', fontFamily: 'sans-serif', gap: 32}}>
-      <nav style={{flex: '0 0 auto'}}>
-        <h2 style={{fontSize: 16}}>Scenarios</h2>
-        {scenarios.map(scenario => (
-          <label key={scenario.id} style={{display: 'block', padding: '2px 0'}}>
-            <input
-              type="radio"
-              name="scenario"
-              value={scenario.id}
-              checked={scenario.id === selected}
-              onChange={() => setSelected(scenario.id)}
-            />{' '}
-            {scenario.name}
-          </label>
-        ))}
-        <label style={{display: 'block', marginTop: 16}}>
-          <input
-            type="checkbox"
+    <div className={moduleStyles.layout}>
+      <nav className={moduleStyles.nav}>
+        <Typography variant="h6" component="h2">
+          Scenarios
+        </Typography>
+        <RadioButtonsGroup
+          defaultValue={scenarios[0].id}
+          onChange={event => setSelected(event.target.value)}
+          radioButtons={scenarios.map(scenario => ({
+            name: 'scenario',
+            value: scenario.id,
+            label: scenario.name,
+          }))}
+        />
+        <div className={moduleStyles.themeToggle}>
+          <Toggle
+            name="theme"
+            label="Dark mode"
             checked={theme === 'Dark'}
             onChange={event =>
               setTheme(event.target.checked ? 'Dark' : 'Light')
             }
-          />{' '}
-          Dark mode
-        </label>
+          />
+        </div>
       </nav>
       <main
+        className={moduleStyles.preview}
         data-testid="scenario"
         data-theme={theme}
-        style={{
-          background: 'var(--background-neutral-primary)',
-          color: 'var(--text-neutral-primary)',
-          flex: '1 1 auto',
-          maxWidth: 640,
-          padding: 16,
-        }}
       >
         {current.render()}
       </main>
