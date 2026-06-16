@@ -81,7 +81,6 @@ const defaultThreadListResponse = [
 
 describe('AIDiffFloatingActionButton', () => {
   let fetchStub;
-  let fetchJsonStub;
 
   beforeEach(() => {
     stubRedux();
@@ -93,12 +92,10 @@ describe('AIDiffFloatingActionButton', () => {
       .mockResolvedValue(
         Promise.resolve(new Response(JSON.stringify(defaultCoursesResponse)))
       );
-    fetchJsonStub = jest
-      .spyOn(HttpClient, 'fetchJson')
-      .mockResolvedValue({
-        value: defaultThreadListResponse,
-        response: new Response(),
-      });
+    jest.spyOn(HttpClient, 'fetchJson').mockResolvedValue({
+      value: defaultThreadListResponse,
+      response: new Response(),
+    });
   });
 
   afterEach(() => {
