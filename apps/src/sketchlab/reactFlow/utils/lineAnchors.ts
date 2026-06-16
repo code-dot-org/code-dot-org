@@ -8,7 +8,11 @@ import {createUuid} from '@cdo/apps/utils';
 
 import {LINE_ANCHOR_SIZE_PX} from '../constants';
 
-import {endpointPatch, findNearestHandleAmong} from './handleSnap';
+import {
+  endpointPatch,
+  findNearestHandleAmong,
+  findNearestHandleInRadius,
+} from './handleSnap';
 
 // The Handle id rendered by LineAnchorNode for a given role.
 export function lineAnchorHandleId(role: 'source' | 'target'): string {
@@ -59,6 +63,49 @@ export function anchorHandleFlowPosition(
         x: position.x,
         y: position.y + LINE_ANCHOR_SIZE_PX / 2,
       };
+}
+
+// Live-drag visual snap: given the position a dragged anchor would otherwise
+// take, return the top-left position it should occupy so its handle lands
+// exactly on the nearest real-node handle within radiusPx, or null when none
+// is close. Lets a dragged endpoint visually snap to a handle before release,
+// using the same radius and handle-matching rules as the on-release snap.
+export function snapAnchorToHandlePosition({
+  anchorPosition,
+  role,
+  excludeNodeId,
+  radiusPx,
+  flowToScreenPosition,
+  screenToFlowPosition,
+}: {
+  anchorPosition: XYPosition;
+  role: 'source' | 'target';
+  excludeNodeId: string;
+  radiusPx: number;
+  flowToScreenPosition: (point: XYPosition) => XYPosition;
+  screenToFlowPosition: (point: XYPosition) => XYPosition;
+}): XYPosition | null {
+  const handleScreenPosition = flowToScreenPosition(
+    anchorHandleFlowPosition(anchorPosition, role)
+  );
+  const snap = findNearestHandleInRadius(
+    handleScreenPosition,
+    excludeNodeId,
+    role,
+    radiusPx
+  );
+  if (!snap) {
+    return null;
+  }
+  const targetHandleFlowPosition = getHandleFlowPosition(
+    snap.nodeId,
+    snap.handleId ?? undefined,
+    screenToFlowPosition
+  );
+  if (!targetHandleFlowPosition) {
+    return null;
+  }
+  return createLineAnchorAtHandle(targetHandleFlowPosition, role).position;
 }
 
 // Spawns a fresh lineAnchor at `flowPosition` and returns the partial

@@ -65,7 +65,9 @@ import {
 import {getEdgeLabel} from '../utils/elementLabel';
 import {snapAnchorIfNearby} from '../utils/handleSnap';
 import {
+  anchorHandleFlowPosition,
   createLineAnchorAtHandle,
+  snapAnchorToHandlePosition,
   snapEdgesIntoDraggedNode,
 } from '../utils/lineAnchors';
 import {defaultLineEdgeFields} from '../utils/lineEdges';
@@ -235,12 +237,37 @@ export default function ReactFlowCanvas({
 
   const handleNodeDrag = useCallback(
     (_event: React.MouseEvent, node: SketchlabReactFlowNode) => {
-      if (node.type === 'lineAnchor' && !anchorDragMovedRef.current) {
+      if (node.type !== 'lineAnchor') {
+        return;
+      }
+      if (!anchorDragMovedRef.current) {
         anchorDragMovedRef.current = true;
         setIsDirectAnchorDragging(true);
       }
+      // Override React Flow's pointer-following position so the anchor visually
+      // snaps onto a nearby handle mid-drag. Each move recomputes from the live
+      // pointer position, so the anchor releases from the handle once dragged
+      // back out of range.
+      const snappedPosition = snapAnchorToHandlePosition({
+        anchorPosition: node.position,
+        role: node.data.lineAnchorRole,
+        excludeNodeId: node.id,
+        radiusPx: LINE_RECONNECT_SNAP_RADIUS_PX,
+        flowToScreenPosition,
+        screenToFlowPosition,
+      });
+      if (!snappedPosition) {
+        return;
+      }
+      setNodes(currentNodes =>
+        currentNodes.map(currentNode =>
+          currentNode.id === node.id
+            ? {...currentNode, position: snappedPosition}
+            : currentNode
+        )
+      );
     },
-    []
+    [flowToScreenPosition, screenToFlowPosition, setNodes]
   );
 
   // After element is deleted from the DOM, focus falls to body.
@@ -305,9 +332,14 @@ export default function ReactFlowCanvas({
     (event: React.MouseEvent, node: SketchlabReactFlowNode) => {
       if (node.type === 'lineAnchor') {
         setIsDirectAnchorDragging(false);
+        // Match the live drag-snap by testing the anchor's handle position,
+        // not the raw pointer, so a visually-snapped endpoint reliably attaches
+        // on release.
         snapAnchorIfNearby({
           anchorId: node.id,
-          screenPoint: {x: event.clientX, y: event.clientY},
+          screenPoint: flowToScreenPosition(
+            anchorHandleFlowPosition(node.position, node.data.lineAnchorRole)
+          ),
           radiusPx: LINE_RECONNECT_SNAP_RADIUS_PX,
           edges: getEdges(),
           setEdges,

@@ -15,6 +15,7 @@ import {
   anchorHandleFlowPosition,
   attachEdgeToFreshAnchor,
   resolveEdgeEndpoint,
+  snapAnchorToHandlePosition,
 } from '../utils/lineAnchors';
 
 interface DraggingAnchor {
@@ -130,17 +131,31 @@ export function useLineEdgeDrag({
           if (!draggingAnchor) {
             return node;
           }
-          return {
-            ...node,
-            position: {
-              x: draggingAnchor.startPosition.x + deltaX,
-              y: draggingAnchor.startPosition.y + deltaY,
-            },
+          const rawPosition = {
+            x: draggingAnchor.startPosition.x + deltaX,
+            y: draggingAnchor.startPosition.y + deltaY,
           };
+          // Visually snap onto a nearby handle while dragging, falling back to
+          // the raw pointer-following position when nothing is close.
+          const snappedPosition = snapAnchorToHandlePosition({
+            anchorPosition: rawPosition,
+            role: draggingAnchor.side,
+            excludeNodeId: node.id,
+            radiusPx: LINE_RECONNECT_SNAP_RADIUS_PX,
+            flowToScreenPosition,
+            screenToFlowPosition,
+          });
+          return {...node, position: snappedPosition ?? rawPosition};
         })
       );
     },
-    [screenToFlowPosition, setNodes, setEdges, pushSnapshot]
+    [
+      screenToFlowPosition,
+      flowToScreenPosition,
+      setNodes,
+      setEdges,
+      pushSnapshot,
+    ]
   );
 
   const stopLineEdgeDrag = useCallback(
