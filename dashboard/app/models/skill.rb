@@ -15,6 +15,18 @@
 #  index_skills_on_key  (key) UNIQUE
 #
 class Skill < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    description: :public,
+    evaluation_criteria: :public,
+    concept: :public,
+    created_at: :public,
+    updated_at: :public,
+    key: :public,
+  )
+
   validates :description, presence: true
 
   has_and_belongs_to_many :levels, join_table: 'levels_skills', dependent: :delete_all

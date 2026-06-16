@@ -14,6 +14,15 @@
 
 module Pd::Application
   class Tag < ApplicationRecord
+    export_to_analytics
+
+    data_classification(
+      id: :restricted,
+      name: :restricted,
+      created_at: :restricted,
+      updated_at: :restricted,
+    )
+
     self.table_name = 'pd_application_tags'
 
     has_and_belongs_to_many :pd_applications, class_name: '::Pd::Application::ApplicationBase', foreign_key: 'pd_application_tag_id', association_foreign_key: 'pd_application_id'

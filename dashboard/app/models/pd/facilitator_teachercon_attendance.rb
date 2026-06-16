@@ -26,6 +26,28 @@
 #
 
 class Pd::FacilitatorTeacherconAttendance < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :restricted,
+    user_id: :restricted,
+    tc1_arrive: :restricted,
+    tc1_depart: :restricted,
+    fit1_arrive: :restricted,
+    fit1_depart: :restricted,
+    fit1_course: :restricted,
+    tc2_arrive: :restricted,
+    tc2_depart: :restricted,
+    fit2_arrive: :restricted,
+    fit2_depart: :restricted,
+    fit2_course: :restricted,
+    tc3_arrive: :restricted,
+    tc3_depart: :restricted,
+    fit3_arrive: :restricted,
+    fit3_depart: :restricted,
+    fit3_course: :restricted,
+  )
+
   DATE_FORMAT = "%B %e".freeze
 
   belongs_to :user, optional: true
