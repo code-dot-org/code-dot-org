@@ -1908,6 +1908,16 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal "max-age=3600, private", @response.headers["Cache-Control"]
   end
 
+  test 'sign_cookies uses unprefixed resource URL regardless of GE region' do
+    expected_resource = CDO.studio_url('/restricted/*', ge_region: nil)
+    AWS::CloudFront.expects(:signed_cookies).with(expected_resource, anything).returns({})
+    Cdo::GlobalEdition.stubs(:current_region).returns('es')
+
+    sign_out :user
+    get :sign_cookies
+    assert_response :success
+  end
+
   describe '#unit_summary' do
     let!(:user) {create(:teacher)}
     let(:course) {create(:unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)}
