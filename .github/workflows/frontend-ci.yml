@@ -90,6 +90,8 @@ jobs:
     if: ${{ needs.setup.outputs.oceans-changed == 'true' }}
     needs: setup
     uses: ./.github/workflows/oceans-ci.yml
+    with:
+      playwright-image-tag: ${{ needs.setup.outputs.playwright-image-tag }}
     secrets: inherit
 
   # Start the e2e-tests Playwright suite when test code or its CI config changes.

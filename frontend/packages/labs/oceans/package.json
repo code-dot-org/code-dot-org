@@ -32,7 +32,6 @@
     "test": "vitest --run",
     "test:ui": "playwright test",
     "test:ui:ci": "CI=true playwright test",
-    "test:visual": "playwright test --grep @visual",
     "test:visual:prove": "tsx scripts/prove-visual.ts",
     "typecheck": "tsc -b --noEmit"
   },
