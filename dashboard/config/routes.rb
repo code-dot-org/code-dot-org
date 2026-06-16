@@ -1107,6 +1107,11 @@ Dashboard::Application.routes.draw do
       namespace :v1 do
         concerns :api_v1_pd_routes
         concerns :section_api_routes
+
+        namespace :account do
+          resource :settings, only: :show
+        end
+
         post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
         post 'users/:user_id/display_theme', to: 'users#update_display_theme'
         post 'users/:user_id/mute_music', to: 'users#post_mute_music'
