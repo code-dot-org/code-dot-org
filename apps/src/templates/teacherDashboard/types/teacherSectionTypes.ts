@@ -66,6 +66,11 @@ export interface DemoPresetCourse {
   displayName: string;
 }
 
+export interface ReviewSyllabusQuizOption {
+  label: string;
+  correct: boolean;
+}
+
 export interface DemoPresetView {
   demoType: DemoType;
   sectionName: string;
@@ -77,6 +82,8 @@ export interface DemoPresetView {
   unit: DemoPresetUnit | null;
   unitGroup: DemoPresetCourse | null;
   studentSnapshotDefaultTourLesson: number | null;
+  reviewSyllabusQuizLesson: number | null;
+  reviewSyllabusQuizOptions: ReviewSyllabusQuizOption[] | null;
 }
 
 type Course = {
@@ -188,6 +195,8 @@ export interface ServerDemoPresetView {
   unit: ServerDemoPresetUnit | null;
   unit_group: ServerDemoPresetCourse | null;
   student_snapshot_default_tour_lesson: number | null;
+  review_syllabus_quiz_lesson: number | null;
+  review_syllabus_quiz_options: ReviewSyllabusQuizOption[] | null;
 }
 
 //TODO: better types here
