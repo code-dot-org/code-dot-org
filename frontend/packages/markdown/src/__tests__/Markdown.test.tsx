@@ -4,6 +4,7 @@ import {afterEach, describe, expect, it, vi} from 'vitest';
 
 import {localization} from '@code-dot-org/core/plugins/localization';
 
+import Markdown from '../components/Markdown';
 import type {MarkdownExtension} from '../extension';
 import {
   callout,
@@ -17,8 +18,6 @@ import {
   vocabularyDefinition,
 } from '../extensions';
 import {translateHtml} from '../localization';
-
-import Markdown from './Markdown';
 
 /*
  * Make the core localization plugin look loaded, with a translate that
