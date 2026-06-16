@@ -1,3 +1,4 @@
+@playwright
 Feature: Contextual Hints
 
 Scenario: Blocks render in contextual hints

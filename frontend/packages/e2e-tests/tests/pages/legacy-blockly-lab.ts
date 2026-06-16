@@ -16,11 +16,25 @@ export class LegacyBlocklyLab extends BasePage {
   /** Authored hints (lightbulb, count badge, "Yes" prompt) in the CSF instructions UI. */
   readonly hints: AuthoredHintsComponent;
 
+  /** Run button; id is the stable test handle rendered by the lab chrome. */
+  readonly runButton: Locator;
+
+  /** Reset button; appears after a run completes. */
+  readonly resetButton: Locator;
+
+  /** Inline feedback panel rendered below the instructions after an incorrect solution. */
+  readonly inlineFeedback: Locator;
+
   constructor(page: Page) {
     super(page);
     this.instructionsTab = page.locator('.uitest-instructionsTab');
     this.instructionsPanel = page.locator('.csf-top-instructions');
     this.hints = new AuthoredHintsComponent(page);
+    this.runButton = page.locator('#runButton');
+    this.resetButton = page.locator('#resetButton');
+    this.inlineFeedback = page.locator(
+      '.uitest-topInstructions-inline-feedback',
+    );
   }
 
   /**
@@ -35,7 +49,7 @@ export class LegacyBlocklyLab extends BasePage {
 
   /** Wait for the lab to be interactive: run button, header, overlay dismissed, header settled. */
   async waitForReady(): Promise<void> {
-    await expect(this.page.locator('#runButton')).toBeVisible();
+    await expect(this.runButton).toBeVisible();
     // .header_user duplicates per breakpoint; .first() avoids strict mode.
     await expect(this.page.locator('.header_user').first()).toBeVisible();
     // Dismiss the instructions overlay if shown (anonymous sessions).
