@@ -1,6 +1,7 @@
 # Rake tasks that drive the end-to-end "MySQL transactional data → Zero ETL → Redshift materialized view" pipeline:
 #  analytics_export:zero_etl_data_filter[environment_type]                    # Print a table filter expression specifying which MySQL tables should be exported to Redshift via Zero ETL.
 #  analytics_export:update_zero_etl_filter[integration_arn,environment_type]  # Update a Zero ETL Integration MySQL table filter based on which Models should be `exported_to_analytics`.
+#  analytics_export:generate_materialized_view_templates                      # Regenerate the Materialized View SQL ERB templates from the current Models (no Redshift connection).
 #  analytics_export:provision_materialized_views[environment_type]            # Provision Redshift Materialized Views for each Model which should be `exported_to_analytics`.
 #  analytics_export:refresh_materialized_views[environment_type]              # REFRESH each Model's Redshift Materialized Views if they are stale.
 #  analytics_export:materialized_view_status[environment_type]                # Output a CSV describing the status of each Model's Materialized View.
@@ -25,7 +26,19 @@
 Rake::Task['db:migrate'].enhance do
   next unless Rails.env.development?
 
+  require 'cdo/aws/redshift/materialized_view_manager'
   Rails.application.eager_load!
+
+  # Regenerate the Zero ETL materialized-view SQL ERB templates so a migration that reshapes an
+  # exported table surfaces the pending view change as a committable `.sql.erb` diff. We deliberately
+  # do NOT rebuild the views: Redshift can't ALTER a materialized view, so a schema or data
+  # classification change needs a coordinated DROP/CREATE (`analytics_export:provision_materialized_views`)
+  # scheduled with the Infrastructure and RED teams. Regenerating the template only flags the change
+  # (review `git status aws/redshift/zeroetl_materialized_views`); it touches no Redshift.
+  Cdo::Aws::Redshift::MaterializedViewManager.generate_all_ddl_templates(
+    models: AnalyticsExportable.valid_exported_models
+  )
+
   errors = AnalyticsExportable.exportability_errors
   next if errors.empty?
 
@@ -72,6 +85,22 @@ namespace :analytics_export do
     else
       puts "\nIntegration updated."
     end
+  end
+
+  # bundle exec rake analytics_export:generate_materialized_view_templates
+  desc "Regenerate the Materialized View SQL ERB templates from the current Models (no Redshift connection)."
+  task generate_materialized_view_templates: :environment do
+    require 'cdo/aws/redshift/materialized_view_manager'
+    Rails.application.eager_load!
+
+    result = Cdo::Aws::Redshift::MaterializedViewManager.generate_all_ddl_templates(
+      models: AnalyticsExportable.valid_exported_models
+    )
+    puts "Wrote #{result[:written].length} template(s) to #{Cdo::Aws::Redshift::MaterializedViewManager::SQL_VIEW_TEMPLATE_DIR}."
+    next if result[:deleted].empty?
+
+    puts "Pruned #{result[:deleted].length} orphaned template(s):"
+    result[:deleted].sort.each {|path| puts "  #{File.basename(path)}"}
   end
 
   # bundle exec rake 'analytics_export:provision_materialized_views[production]'
