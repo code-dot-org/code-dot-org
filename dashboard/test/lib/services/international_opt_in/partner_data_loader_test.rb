@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'cdo/brand'
 
 class Services::InternationalOptIn::PartnerDataLoaderTest < ActiveSupport::TestCase
   let(:described_class) {Services::InternationalOptIn::PartnerDataLoader}
@@ -17,11 +16,10 @@ class Services::InternationalOptIn::PartnerDataLoaderTest < ActiveSupport::TestC
     it 'returns all partner arrays with organizer_not_listed added' do
       entries = described_class.partner_entries
       extra_value = ::I18n.t('pd.international_opt_in.organizer_not_listed')
-      brand_name = Cdo::Brand.legal_name
 
       _(entries).must_be_kind_of Hash
       entries.values.each do |values|
-        _(values).must_include brand_name
+        _(values).must_include 'CodeAI'
         _(values).must_include extra_value
       end
     end
