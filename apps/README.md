@@ -209,10 +209,6 @@ Running a full localization build can take several minutes. Since localization r
 
 Note: Using the live-reload server with localization builds is prone to the `Error: EMFILE, too many open files` problem. See the `ulimit` fix [under the live-reload server heading](#running-with-live-reload-server).
 
-### Sending new i18n strings to CrowdIn
-
-To get new strings localized using CrowdIn, we currently run a script in a private repository. Contact a code.org engineer to trigger an update.
-
 ## Adding a new npm package
 
 To add a new package using npm, e.g., `lodash`, run: `yarn add --dev lodash`
