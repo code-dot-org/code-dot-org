@@ -92,15 +92,23 @@
   border: solid 1px var(--borders-neutral-strong);
   color: var(--text-neutral-tertiary);
 
+  // Vocab items are bare <li> children (no <ul>); nudge them right so the
+  // bullet sits inside the container rather than spilling past the left edge.
+  > li {
+    margin-left: 15px;
+  }
+
   .resourceHeading {
-    margin: 1.67em 0;
-    font-size: 0.83em;
-    font-weight: bold;
+    margin: 10px 0;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
     color: inherit;
   }
 
   .emptyMessage {
-    margin: 1em 0;
+    margin: 0 0 10px;
     color: inherit;
   }
 }
