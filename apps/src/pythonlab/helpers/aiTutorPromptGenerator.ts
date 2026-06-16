@@ -1,4 +1,5 @@
 import basePrompt from '@cdo/apps/pythonlab/prompts/basePrompt.md';
+import environmentPrompt from '@cdo/apps/pythonlab/prompts/environment.md';
 import {
   ANSWER_TYPE_CONTRACTS,
   ANSWER_TYPE_TRIGGERS,
@@ -103,6 +104,8 @@ export const generateAiTutorPrompt = (
     .join('\n\n');
 
   return [
+    environmentPrompt.trim(),
+    '',
     basePrompt.trim(),
     '',
     '---',
