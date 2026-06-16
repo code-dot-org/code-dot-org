@@ -122,7 +122,9 @@ const PythonlabView: React.FunctionComponent<
 
   const isAiTutorVisible = shouldShowAiTutor({
     appName: levelProperties.appName,
-    tutorLevel: levelProperties.aiTutorAvailable,
+    isTutorLevel:
+      levelProperties.aiTutorAvailable ||
+      (levelProperties.aiTutorPromptSettings?.answerTypes?.length ?? 0) > 0,
     aiChatAccessLevel: aiChatAccessLevel,
   });
 
