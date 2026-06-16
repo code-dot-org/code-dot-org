@@ -126,7 +126,7 @@ class User < ApplicationRecord
     purged_at: :confidential,
     secret_words: :highly_restricted,
     properties: :restricted,
-    invitation_token: :restricted,
+    invitation_token: :highly_restricted,
     invitation_created_at: :restricted,
     invitation_sent_at: :restricted,
     invitation_accepted_at: :restricted,
@@ -138,7 +138,7 @@ class User < ApplicationRecord
     urm: :confidential,
     races: :confidential,
     primary_contact_info_id: :confidential,
-    unlock_token: :restricted,
+    unlock_token: :highly_restricted,
     cap_status: :confidential,
     cap_status_date: :confidential,
   )

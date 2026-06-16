@@ -34,7 +34,7 @@ class LtiIntegration < ApplicationRecord
     auth_redirect_url: :confidential,
     jwks_url: :confidential,
     access_token_url: :confidential,
-    admin_email: :highly_restricted,
+    admin_email: :restricted,
     created_at: :confidential,
     updated_at: :confidential,
   )

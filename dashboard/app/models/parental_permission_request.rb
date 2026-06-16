@@ -22,7 +22,7 @@ class ParentalPermissionRequest < ApplicationRecord
   data_classification(
     id: :confidential,
     user_id: :confidential,
-    parent_email: :highly_restricted,
+    parent_email: :restricted,
     uuid: :confidential,
     reminders_sent: :confidential,
     created_at: :confidential,

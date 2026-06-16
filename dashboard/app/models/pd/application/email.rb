@@ -20,13 +20,13 @@ module Pd::Application
     export_to_analytics
 
     data_classification(
-      id: :restricted,
-      pd_application_id: :restricted,
-      application_status: :restricted,
-      email_type: :restricted,
+      id: :confidential,
+      pd_application_id: :confidential,
+      application_status: :confidential,
+      email_type: :confidential,
       to: :restricted,
-      created_at: :restricted,
-      sent_at: :restricted,
+      created_at: :confidential,
+      sent_at: :confidential,
     )
 
     self.table_name = 'pd_application_emails'

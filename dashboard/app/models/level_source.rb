@@ -25,7 +25,7 @@ class LevelSource < ApplicationRecord
     id: :confidential,
     level_id: :confidential,
     md5: :confidential,
-    data: :confidential,
+    data: :restricted,
     created_at: :confidential,
     updated_at: :confidential,
     hidden: :confidential,
