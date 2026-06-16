@@ -1910,12 +1910,17 @@ class ApiControllerTest < ActionController::TestCase
 
   test 'sign_cookies uses unprefixed resource URL regardless of GE region' do
     expected_resource = CDO.studio_url('/restricted/*', ge_region: nil)
-    AWS::CloudFront.expects(:signed_cookies).with(expected_resource, anything).returns({})
+    captured_resource = nil
+    AWS::CloudFront.stubs(:signed_cookies) do |resource, _|
+      captured_resource = resource
+      {}
+    end
     Cdo::GlobalEdition.stubs(:current_region).returns('es')
 
     sign_out :user
     get :sign_cookies
     assert_response :success
+    assert_equal expected_resource, captured_resource
   end
 
   describe '#unit_summary' do
