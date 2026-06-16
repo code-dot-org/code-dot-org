@@ -13,7 +13,16 @@ export function injectFont(locale: InternationalFontLocale) {
   });
 }
 
-export function injectFontAwesome() {
+/**
+ * Injects FontAwesome's stylesheets.
+ *
+ * Pass `{layer}` to import them into a named cascade layer instead of as plain
+ * `<link>`s. Consumers that put MUI's emotion styles in a layer (StyledEngine
+ * `enableCssLayer`) need this: otherwise FontAwesome's *unlayered* base rules
+ * (e.g. icon `line-height: 1`) beat every layered MUI styleOverride, shrinking
+ * icon line-boxes. Importing FA into a layer below `mui` restores that order.
+ */
+export function injectFontAwesome(options: {layer?: string} = {}) {
   const stylesheets = [
     'https://dsco.code.org/assets/font-awesome-pro/1779470619/css/fontawesome.min.css',
     'https://dsco.code.org/assets/font-awesome-pro/1779470619/css/brands.min.css',
@@ -24,6 +33,15 @@ export function injectFontAwesome() {
     'https://dsco.code.org/assets/font-awesome-pro/1779470619/css/duotone.min.css',
     'https://dsco.code.org/assets/font-awesome-pro/1779470619/css/custom-icons.min.css',
   ];
+
+  if (options.layer) {
+    const style = document.createElement('style');
+    style.textContent = stylesheets
+      .map(href => `@import url("${href}") layer(${options.layer});`)
+      .join('\n');
+    document.head.appendChild(style);
+    return;
+  }
 
   stylesheets.forEach(stylesheetHref => {
     const link = document.createElement('link');

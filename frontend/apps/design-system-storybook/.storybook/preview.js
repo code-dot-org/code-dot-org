@@ -9,7 +9,9 @@ import '@code-dot-org/component-library-styles/colors.css';
 import './preview.module.scss';
 import MuiDecorator from '../decorators/MuiDecorator';
 
-injectFontAwesome();
+// Import FontAwesome into the `base` layer (declared below `mui`) so MUI's
+// layered styleOverrides win over FA's base icon rules. See MuiDecorator.
+injectFontAwesome({layer: 'base'});
 
 /**
  * Ensure fonts are loaded prior to rendering the story
