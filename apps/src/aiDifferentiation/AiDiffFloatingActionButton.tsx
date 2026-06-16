@@ -36,7 +36,7 @@ const LazyAiDiffContainer = React.lazy(
 
 const LazyAiDiffDrawer = React.lazy(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  () => import('./AiDiffDrawer' as any)
+  () => import('../aiTeacherDrawer/AiDiffDrawer' as any)
 );
 
 /**
@@ -264,7 +264,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
                 unreadNotificationCount === 'loading' ||
                 unreadNotificationCount > 0
                   ? 'var(--background-error-primary)'
-                  : '#3CFFF8',
+                  : 'var(--background-brand-aqua-primary)',
               color:
                 unreadNotificationCount === 'loading' ||
                 unreadNotificationCount > 0

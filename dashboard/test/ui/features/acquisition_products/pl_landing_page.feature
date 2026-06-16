@@ -21,7 +21,7 @@ Feature: Professional Learning landing page
     And element "a:contains(Learn more about workshops)" is visible
     And the href of selector "a:contains(Learn more about workshops)" contains "/professional-learning/workshops"
     And element "a:contains(Start professional learning courses)" is visible
-    And the href of selector "a:contains(Start professional learning courses)" contains "/educate/professional-development-online"
+    And the href of selector "a:contains(Start professional learning courses)" contains "/professional-learning/courses"
     And I see no difference for "PL Recommended for you section"
     And I close my eyes
 
@@ -115,7 +115,7 @@ Feature: Professional Learning landing page
     And element "a:contains(Learn more about workshops)" is visible
     And the href of selector "a:contains(Learn more about workshops)" contains "/professional-learning/workshops"
     And element "a:contains(Start professional learning courses)" is visible
-    And the href of selector "a:contains(Start professional learning courses)" contains "/educate/professional-development-online"
+    And the href of selector "a:contains(Start professional learning courses)" contains "/professional-learning/courses"
 
     # Starts a self-paced PL course
     When I start a self-paced PL course

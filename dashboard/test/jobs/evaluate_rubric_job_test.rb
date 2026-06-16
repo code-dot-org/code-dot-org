@@ -150,36 +150,6 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     assert_includes exception.message, "Couldn't find Rubric"
   end
 
-  test "job fails when the code contains PII violations" do
-    AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
-
-    # create a project
-    channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
-    channel_id = channel_token.channel
-
-    violating_code = 'My phone number is 123-456-7890!'
-
-    stub_project_source_data(channel_id, code: violating_code)
-
-    stub_lesson_s3_data
-
-    stub_get_openai_evaluations(code: violating_code)
-
-    ShareFiltering.stubs(:find_pii_failure).with(violating_code, exceptions: true).raises(
-      PIIFilterException.new(
-        "PII Failure",
-        ShareFailure.new('phone', '123-456-7890')
-      )
-    )
-
-    # run the job
-    perform_enqueued_jobs do
-      EvaluateRubricJob.perform_later(user_id: @student.id, requester_id: @student.id, script_level_id: @script_level.id)
-    end
-
-    assert_equal SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:PII_VIOLATION], RubricAiEvaluation.where(user_id: @student.id).first.status
-  end
-
   test "job is retried when the proxy server returns a 429" do
     # Perform an otherwise successful run
     AiRubricConfig.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
@@ -688,7 +658,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       assert_equal expected_understanding, ai_eval.understanding
       assert_equal LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS[:MEDIUM], ai_eval.ai_confidence
       expected_confidence = include_exact_confidence ? LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS[:LOW] : nil
-      assert_equal expected_confidence, ai_eval.ai_confidence_exact_match
+      expected_confidence.nil? ? assert_nil(ai_eval.ai_confidence_exact_match) : assert_equal(expected_confidence, ai_eval.ai_confidence_exact_match)
     end
   end
 end

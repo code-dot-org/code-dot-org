@@ -10,6 +10,7 @@
       "is_migrated": true,
       "show_calendar": true,
       "supported_locales": [
+        "es-LA",
         "es-MX",
         "es-ES",
         "ar-SA",
@@ -43,7 +44,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-07 04:20:19 UTC",
+    "serialized_at": "2026-06-10 19:36:14 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1361,7 +1362,7 @@
       "chapter": 6,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "k5_ai_matching_sort_data"
@@ -1611,7 +1612,7 @@
       "chapter": 16,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "k5_ai_matching_background_emoji"
@@ -2787,6 +2788,9 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

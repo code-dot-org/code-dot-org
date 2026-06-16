@@ -6,8 +6,10 @@ import {javascript} from '@codemirror/lang-javascript';
 import {json} from '@codemirror/lang-json';
 import {markdown} from '@codemirror/lang-markdown';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
+import {ChatAsset} from '@cdo/apps/aichat/types/assets';
+import {sendStartedReportIfNotStarted} from '@cdo/apps/code-studio/progressRedux';
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {
@@ -26,12 +28,18 @@ import {
   TUTOR_MODE_TO_ANSWER_TYPE,
   WEBLAB2_EDITABLE_FILE_TYPES,
   WEBLAB2_SUPPORTED_FILE_TYPES,
+  WEBLAB2_WELCOME_CHAT_MESSAGE,
 } from './constants';
 import {AiTutorWebLab2ContextHelper} from './helpers/aiTutorContextHelper';
 import {generateAiTutorPrompt} from './helpers/aiTutorPromptGenerator';
 import {useAiTutorResponseSchemaSettings} from './hooks/useAiTutorResponseSchemaSettings';
+import useWeblab2IntroTour from './hooks/useWeblab2IntroTour';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
+import {
+  removeAiTutorAssetFromProject,
+  syncAiTutorAssetToProject,
+} from './redux/syncAiTutorAssetToProject';
 import {Weblab2LevelProperties, ViewMode, AiTutorAnswerType} from './types';
 import {setViewMode} from './weblab2Redux';
 import {weblab2VideoFiles} from './weblab2Videos';
@@ -86,6 +94,7 @@ const Weblab2View: React.FC<
   LabProps<Weblab2LevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
+  useWeblab2IntroTour(levelProperties);
 
   const logLevelActivity = useLevelActivityMetrics(levelProperties);
 
@@ -148,6 +157,20 @@ const Weblab2View: React.FC<
   // to enable the Submit button on edit on submittable levels.
   // Set back to false on unmount in case we switch to a different level type.
   const dispatch = useAppDispatch();
+
+  const onAssetUploaded = useCallback(
+    (asset: ChatAsset, assetUrl: string) => {
+      dispatch(syncAiTutorAssetToProject(asset, assetUrl));
+    },
+    [dispatch]
+  );
+
+  const onAssetRemoved = useCallback(
+    (asset: ChatAsset) => {
+      dispatch(removeAiTutorAssetFromProject(asset));
+    },
+    [dispatch]
+  );
   useEffect(() => {
     dispatch(setHasRun(true));
 
@@ -159,8 +182,9 @@ const Weblab2View: React.FC<
   useEffect(() => {
     if (hasEdited) {
       logLevelActivity();
+      dispatch(sendStartedReportIfNotStarted(levelProperties.appName));
     }
-  }, [hasEdited, logLevelActivity]);
+  }, [hasEdited, logLevelActivity, dispatch, levelProperties.appName]);
 
   useEffect(() => {
     dispatch(setViewMode(levelProperties?.initialViewMode || ViewMode.SPLIT));
@@ -184,11 +208,14 @@ const Weblab2View: React.FC<
           hiddenContextCallback={aiTutorHelper.getHiddenContextCallback()}
           aiTutorMultimodalEnabled={true}
           aiTutorChatButtonData={[]}
+          onAssetUploaded={onAssetUploaded}
+          onAssetRemoved={onAssetRemoved}
           aiTutorContextHelper={aiTutorHelper}
           aiTutorSystemPrompt={systemPrompt}
           aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
           secondaryBackpackAppNames={secondaryBackpackAppNames}
           tutorVideos={weblab2VideoFiles}
+          aiTutorInitialWelcomeMessage={WEBLAB2_WELCOME_CHAT_MESSAGE}
         />
       )}
     </div>

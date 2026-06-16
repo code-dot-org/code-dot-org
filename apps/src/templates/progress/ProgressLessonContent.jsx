@@ -1,8 +1,8 @@
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import {progressionsFromLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
-import fontConstants from '@cdo/apps/fontConstants';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
@@ -27,9 +27,9 @@ export default class ProgressLessonContent extends React.Component {
     let bubbles;
     if (progressions.length === 0) {
       bubbles = (
-        <span style={styles.noLevelsWarning}>
+        <Typography variant="body4" component="span">
           {i18n.lessonContainsNoLevels()}
-        </span>
+        </Typography>
       );
     } else if (progressions.length === 1 && !progressions[0].name) {
       bubbles = (
@@ -55,24 +55,16 @@ export default class ProgressLessonContent extends React.Component {
     return (
       <div>
         {description && (
-          <div style={styles.summary}>
+          <Typography
+            variant="body3"
+            component="div"
+            sx={{marginTop: '20px', marginBottom: '30px'}}
+          >
             <SafeMarkdown markdown={description} />
-          </div>
+          </Typography>
         )}
         <div> {bubbles} </div>
       </div>
     );
   }
 }
-
-const styles = {
-  summary: {
-    marginTop: 20,
-    marginBottom: 30,
-    fontSize: 14,
-    ...fontConstants['main-font-regular'],
-  },
-  noLevelsWarning: {
-    fontSize: 13,
-  },
-};

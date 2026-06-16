@@ -42,19 +42,33 @@ const MENU_ITEMS = [
 Default.args = {
   logoImageUrl: logoImage,
   menuItems: MENU_ITEMS,
-  userAuth: {isSignedIn: true, firstName: 'Coder'},
+  userAuth: {status: 'signed-in', display_name: 'Coder'},
 };
 
 export const SignedInLongName = Template.bind({});
 SignedInLongName.args = {
   logoImageUrl: logoImage,
   menuItems: MENU_ITEMS,
-  userAuth: {isSignedIn: true, firstName: 'Bartholomew-Maximilian'},
+  userAuth: {status: 'signed-in', display_name: 'Bartholomew-Maximilian'},
 };
 
 export const SignedOut = Template.bind({});
 SignedOut.args = {
   logoImageUrl: logoImage,
   menuItems: MENU_ITEMS,
-  userAuth: {isSignedIn: false},
+  userAuth: {status: 'signed-out'},
+};
+
+export const Loading = Template.bind({});
+Loading.args = {
+  logoImageUrl: logoImage,
+  menuItems: MENU_ITEMS,
+  userAuth: {status: 'loading'},
+};
+
+export const Error = Template.bind({});
+Error.args = {
+  logoImageUrl: logoImage,
+  menuItems: MENU_ITEMS,
+  userAuth: {status: 'error'},
 };

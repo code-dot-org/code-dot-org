@@ -6,7 +6,7 @@ describe AWS::EC2 do
 
   # Reset memoized variables to ensure fresh metadata lookups
   before do
-    [:@instance_id, :@region, :@account_id].each do |var|
+    [:@instance_id, :@region, :@account_id, :@local_ipv4].each do |var|
       described_class.remove_instance_variable(var) if described_class.instance_variable_defined?(var)
     end
   end
@@ -56,6 +56,23 @@ describe AWS::EC2 do
         returns(mock_region_resp)
 
       _(described_class.region).must_equal 'us-west-2'
+    end
+  end
+
+  describe '.local_ipv4' do
+    it 'returns the private IPv4 address of the current EC2 instance' do
+      mock_token_resp = mock {stubs(code: '200', body: 'test_token')}
+      mock_ip_resp = mock {stubs(code: '200', body: '10.0.1.23')}
+
+      described_class.stubs(:http_request).
+        with {|method, uri, _| method == Net::HTTP::Put && uri.path.include?('token')}.
+        returns(mock_token_resp)
+
+      described_class.stubs(:http_request).
+        with {|method, uri, _| method == Net::HTTP::Get && uri.path.include?('local-ipv4')}.
+        returns(mock_ip_resp)
+
+      _(described_class.local_ipv4).must_equal '10.0.1.23'
     end
   end
 

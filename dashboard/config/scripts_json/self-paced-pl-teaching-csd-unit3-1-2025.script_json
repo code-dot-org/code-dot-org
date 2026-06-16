@@ -13,7 +13,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-16 19:11:26 UTC",
+    "serialized_at": "2026-06-05 16:58:00 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -522,6 +523,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-25-mod1-Certificate_25_2025"
+        ],
         "progression": "Introduction to Professional Learning"
       },
       "bonus": false,
@@ -544,6 +548,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit1_gettingstarted"
+        ],
         "progression": "Introduction to Professional Learning"
       },
       "bonus": false,
@@ -3007,6 +3014,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

@@ -11,6 +11,7 @@ export {
   addStagedFile,
   stagedFileUploadFinished,
   removeStagedFile,
+  updateStagedFileFilename,
   stagedFilesLimitExceeded,
   clearStagedFilesAlert,
   clearStagedFiles,

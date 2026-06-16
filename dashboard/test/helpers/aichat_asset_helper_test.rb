@@ -48,7 +48,7 @@ class AichatAssetHelperTest < ActionView::TestCase
       end
 
       it 'returns a base64-encoded string' do
-        Base64.decode64(subject).must_equal "stubbed content"
+        _(Base64.decode64(subject)).must_equal "stubbed content"
       end
     end
   end
@@ -67,8 +67,8 @@ class AichatAssetHelperTest < ActionView::TestCase
       end
 
       it 'returns a base64-encoded data URI' do
-        subject.must_match(/^data:image\/png;base64,/)
-        Base64.decode64(subject.split(',').last).must_equal "stubbed content"
+        _(subject).must_match(/^data:image\/png;base64,/)
+        _(Base64.decode64(subject.split(',').last)).must_equal "stubbed content"
       end
     end
   end
@@ -81,7 +81,7 @@ class AichatAssetHelperTest < ActionView::TestCase
       let(:source)   {level_asset["source"]}
 
       it 'returns level content' do
-        subject.must_equal 'level content for uuid-123'
+        _(subject).must_equal 'level content for uuid-123'
       end
     end
 
@@ -96,10 +96,10 @@ class AichatAssetHelperTest < ActionView::TestCase
       end
 
       it 'raises an AichatLevelAssetFetchError' do
-        err = -> {subject}.must_raise(AichatAssetHelper::AichatLevelAssetFetchError)
-        err.message.must_include "missing.png"
-        err.message.must_include channel_id
-        err.message.must_include level_name
+        err = _ {subject}.must_raise(AichatAssetHelper::AichatLevelAssetFetchError)
+        _(err.message).must_include "missing.png"
+        _(err.message).must_include channel_id
+        _(err.message).must_include level_name
       end
     end
 
@@ -108,7 +108,7 @@ class AichatAssetHelperTest < ActionView::TestCase
       let(:source)   {project_asset["source"]}
 
       it 'returns project content' do
-        subject.must_equal 'project content'
+        _(subject).must_equal 'project content'
       end
     end
 
@@ -117,10 +117,10 @@ class AichatAssetHelperTest < ActionView::TestCase
       let(:source)   {'project'}
 
       it 'raises an AichatProjectAssetFetchError' do
-        err = -> {subject}.must_raise(AichatAssetHelper::AichatProjectAssetFetchError)
-        err.message.must_include "nonexistent.png"
-        err.message.must_include channel_id
-        err.message.must_include level_name
+        err = _ {subject}.must_raise(AichatAssetHelper::AichatProjectAssetFetchError)
+        _(err.message).must_include "nonexistent.png"
+        _(err.message).must_include channel_id
+        _(err.message).must_include level_name
       end
     end
   end
@@ -133,8 +133,8 @@ class AichatAssetHelperTest < ActionView::TestCase
       let(:source) {project_asset["source"]}
 
       it 'returns a base64-encoded data URI' do
-        subject.must_match(/^data:image\/png;base64,/)
-        Base64.decode64(subject.split(',').last).must_equal 'project content'
+        _(subject).must_match(/^data:image\/png;base64,/)
+        _(Base64.decode64(subject.split(',').last)).must_equal 'project content'
       end
     end
 
@@ -143,8 +143,8 @@ class AichatAssetHelperTest < ActionView::TestCase
       let(:source) {level_asset["source"]}
 
       it 'returns a base64-encoded data URI' do
-        subject.must_match(/^data:image\/png;base64,/)
-        Base64.decode64(subject.split(',').last).must_equal 'level content for uuid-123'
+        _(subject).must_match(/^data:image\/png;base64,/)
+        _(Base64.decode64(subject.split(',').last)).must_equal 'level content for uuid-123'
       end
     end
 
@@ -159,7 +159,7 @@ class AichatAssetHelperTest < ActionView::TestCase
       end
 
       it 'raises an AichatLevelAssetFetchError' do
-        -> {subject}.must_raise(AichatAssetHelper::AichatLevelAssetFetchError)
+        _ {subject}.must_raise(AichatAssetHelper::AichatLevelAssetFetchError)
       end
     end
   end

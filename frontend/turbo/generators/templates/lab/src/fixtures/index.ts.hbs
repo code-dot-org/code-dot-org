@@ -1,0 +1,10 @@
+import type {LabFixtures} from '@code-dot-org/core/api/mocks';
+
+import simple from './simple';
+
+// Per-tag scenarios for {{pascalCase name}} Lab. Studio's MSW boot registers
+// these under the lab key `{{name}}`; the route's channelId picks the active
+// tag (e.g. `/projects/{{name}}/simple/edit`).
+export const {{pascalCase name}}Fixtures: LabFixtures = {
+  simple,
+};

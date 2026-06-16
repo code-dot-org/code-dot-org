@@ -24,7 +24,6 @@ import {SongTitlesToArtistTwitterHandle} from '../dancePartySongArtistTags';
 
 import AbuseError from './AbuseError';
 import AdvancedShareOptions from './AdvancedShareOptions';
-import DownloadReplayVideoButton from './DownloadReplayVideoButton';
 import LibraryCreationDialog from './libraries/LibraryCreationDialog';
 import SendToPhone from './SendToPhone';
 import {hideShareDialog} from './shareDialogRedux';
@@ -94,7 +93,6 @@ class ShareAllowedDialog extends React.Component {
     exportError: null,
     isTwitterAvailable: false,
     isFacebookAvailable: false,
-    replayVideoUnavailable: false,
     hasBeenCopied: false,
     isLoadingAccountAndProjectAge: false,
     showSharingDisallowedDialog: false,
@@ -126,12 +124,6 @@ class ShareAllowedDialog extends React.Component {
     }
   }
 
-  replayVideoNotFound = () => {
-    this.setState({
-      replayVideoUnavailable: true,
-    });
-  };
-
   sharingDisabled = () =>
     this.props.userSharingDisabled &&
     OPEN_ENDED_LEGACY_PROJECT_TYPES.includes(this.props.appType);
@@ -145,7 +137,6 @@ class ShareAllowedDialog extends React.Component {
     recordShare('SHARING_CLOSE_ESCAPE', this.props.appType);
     this.props.onClose();
     this.setState({
-      replayVideoUnavailable: false,
       showSharingDisallowedDialog: false,
     });
   };
@@ -184,10 +175,6 @@ class ShareAllowedDialog extends React.Component {
   getWarningText = () => {
     if (this.props.inRestrictedShareMode) {
       return i18n.restrictedShareInfo();
-    }
-
-    if (this.state.replayVideoUnavailable) {
-      return i18n.downloadReplayVideoButtonError();
     }
 
     if (!this.props.thumbnailUrl) {
@@ -342,10 +329,6 @@ class ShareAllowedDialog extends React.Component {
                     >
                       {i18n.copyLinkToProject()}
                     </MuiButton>
-                    <DownloadReplayVideoButton
-                      style={{...styles.button, marginBottom: 8}}
-                      onError={this.replayVideoNotFound}
-                    />
                   </div>
                 </div>
                 <div className="social-buttons" style={{marginTop: 12}}>

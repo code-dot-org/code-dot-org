@@ -1,31 +1,23 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
+import React, {
+  FC,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
+
+import {
+  LessonDeepDiveData,
+  ReflectionData,
+} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
+
+import Waveform from './Waveform';
 
 import styles from './podcasts-box.module.scss';
-
-// Rainbow waveform bars: [heightPct, color]
-const BARS: [number, string][] = [
-  [35, '#9657c7'],
-  [55, '#8a60cb'],
-  [75, '#7d6acf'],
-  [90, '#7173d3'],
-  [100, '#5e7ed7'],
-  [85, '#4b89db'],
-  [70, '#3894df'],
-  [80, '#25a0e3'],
-  [95, '#00b4c8'],
-  [100, '#00b89b'],
-  [90, '#00bc6e'],
-  [80, '#4abf45'],
-  [95, '#8ac23c'],
-  [100, '#b4c336'],
-  [85, '#d4c030'],
-  [75, '#f0ba2a'],
-  [60, '#f5a52a'],
-  [70, '#fa902a'],
-  [50, '#fa752a'],
-  [40, '#fa5a2a'],
-];
 
 function formatTime(seconds: number): string {
   const m = Math.floor(seconds / 60);
@@ -33,11 +25,108 @@ function formatTime(seconds: number): string {
   return `${m}:${s.toString().padStart(2, '0')}`;
 }
 
-const PodcastsBox: FC = () => {
+interface PodcastsBoxProps {
+  lessonId: number;
+  reflectionData: ReflectionData | null;
+  objectives: LessonDeepDiveData['objectives'];
+}
+
+type PodcastStatus = 'loading' | 'ready' | 'unavailable';
+
+// One line of the podcast transcript: who is speaking and what they say.
+type ScriptLine = {voice_id: string; text: string};
+
+const PodcastsBox: FC<PodcastsBoxProps> = ({
+  lessonId,
+  reflectionData,
+  objectives,
+}) => {
   const audioRef = useRef<HTMLAudioElement>(null);
+  const audioCtxRef = useRef<AudioContext | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
+  const [status, setStatus] = useState<PodcastStatus>('loading');
+  const [scriptLines, setScriptLines] = useState<ScriptLine[] | null>(null);
+  // The analyser feeds the live Waveform. It's created lazily on first play
+  // (an AudioContext must start from a user gesture), and stays null if Web
+  // Audio is unavailable, in which case Waveform falls back to its CSS pulse.
+  const [analyser, setAnalyser] = useState<AnalyserNode | null>(null);
+
+  // Routes the audio element through an AnalyserNode once. createMediaElement-
+  // Source can only wrap an element a single time, so this is guarded by the
+  // analyser already existing. The audio src points at a same-origin route, so
+  // the analyser reads real samples (a cross-origin source would read silence).
+  const setupAnalyser = useCallback(() => {
+    if (analyser || !audioRef.current || !window.AudioContext) {
+      return;
+    }
+    try {
+      const ctx = new AudioContext();
+      const source = ctx.createMediaElementSource(audioRef.current);
+      const node = ctx.createAnalyser();
+      node.fftSize = 64;
+      node.smoothingTimeConstant = 0.7;
+      source.connect(node);
+      node.connect(ctx.destination);
+      audioCtxRef.current = ctx;
+      setAnalyser(node);
+    } catch {
+      // Web Audio unavailable; Waveform keeps its decorative animation.
+    }
+  }, [analyser]);
+
+  // Release the AudioContext when the component goes away.
+  useEffect(() => () => void audioCtxRef.current?.close(), []);
+
+  // The podcast is keyed by the objectives the student is still working on, so
+  // we retrieve the same struggling set ('lost'/'unsure') it was generated for.
+  // When the student bypassed reflection or submitted without rating anything
+  // we treat every lesson objective as struggling — matching the key the
+  // generation side uses for those same cases.
+  const objectiveIds = useMemo(() => {
+    if (
+      !reflectionData ||
+      Object.keys(reflectionData.objectiveReflections).length === 0
+    ) {
+      return objectives.map(o => o.id);
+    }
+    return Object.entries(reflectionData.objectiveReflections)
+      .filter(
+        ([, value]) =>
+          value === LessonObjectiveReflectionValues.LOST ||
+          value === LessonObjectiveReflectionValues.UNSURE
+      )
+      .map(([objectiveId]) => objectiveId);
+  }, [reflectionData, objectives]);
+
+  // Build the audio source URL and a query string we can reuse for the
+  // transcript fetch. The S3 key (and so the controller route) is keyed by the
+  // struggling-objective set. With a reflection, we request the student's
+  // struggling set (empty when they rated everything "Got it" — a valid
+  // lesson-level podcast). Without a reflection, objectiveIds above falls back
+  // to every lesson objective, so we request that podcast.
+  const {audioSrc, transcriptQuery} = useMemo(() => {
+    const params = new URLSearchParams();
+    params.set('lesson_id', String(lessonId));
+    objectiveIds.forEach(id => params.append('objective_ids[]', id));
+    const query = params.toString();
+    return {
+      audioSrc: `/ai_student_podcasts/retrieve_podcast_from_s3?${query}`,
+      transcriptQuery: query,
+    };
+  }, [lessonId, objectiveIds]);
+
+  // Reset playback + status whenever the source URL changes (e.g. the student
+  // jumps between reflections). The audio element fires canplay / error from
+  // its own events to drive status forward.
+  useEffect(() => {
+    setStatus('loading');
+    setScriptLines(null);
+    setIsPlaying(false);
+    setCurrentTime(0);
+    setDuration(0);
+  }, [audioSrc]);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -45,15 +134,37 @@ const PodcastsBox: FC = () => {
     const onTimeUpdate = () => setCurrentTime(audio.currentTime);
     const onDurationChange = () => setDuration(audio.duration || 0);
     const onEnded = () => setIsPlaying(false);
+    const onCanPlay = () => setStatus('ready');
+    const onError = () => setStatus('unavailable');
     audio.addEventListener('timeupdate', onTimeUpdate);
     audio.addEventListener('durationchange', onDurationChange);
     audio.addEventListener('ended', onEnded);
+    audio.addEventListener('canplay', onCanPlay);
+    audio.addEventListener('error', onError);
     return () => {
       audio.removeEventListener('timeupdate', onTimeUpdate);
       audio.removeEventListener('durationchange', onDurationChange);
       audio.removeEventListener('ended', onEnded);
+      audio.removeEventListener('canplay', onCanPlay);
+      audio.removeEventListener('error', onError);
     };
   }, []);
+
+  // The transcript lives on the podcast record — its podcast_script is a JSON
+  // string of {voice_id, text} lines — so fetch it from the show route.
+  useEffect(() => {
+    let cancelled = false;
+    HttpClient.get(`/ai_student_podcasts?${transcriptQuery}`)
+      .then(response => response.json())
+      .then((data: {podcast_script?: string | null}) => {
+        if (cancelled || !data.podcast_script) return;
+        setScriptLines(JSON.parse(data.podcast_script) as ScriptLine[]);
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [transcriptQuery]);
 
   const togglePlay = useCallback(() => {
     const audio = audioRef.current;
@@ -61,10 +172,14 @@ const PodcastsBox: FC = () => {
     if (isPlaying) {
       audio.pause();
     } else {
+      setupAnalyser();
+      // The context may start suspended under the autoplay policy; resuming
+      // within this click gesture lets the analyser receive samples.
+      void audioCtxRef.current?.resume();
       audio.play().catch(() => {});
     }
     setIsPlaying(p => !p);
-  }, [isPlaying]);
+  }, [isPlaying, setupAnalyser]);
 
   const skipBack = useCallback(() => {
     if (audioRef.current) {
@@ -99,8 +214,7 @@ const PodcastsBox: FC = () => {
 
   return (
     <div className={styles.container}>
-      {/* no src — placeholder UI until podcast content is wired up */}
-      <audio ref={audioRef}>
+      <audio ref={audioRef} src={audioSrc} preload="auto">
         <track
           kind="captions"
           label="English captions"
@@ -112,19 +226,7 @@ const PodcastsBox: FC = () => {
 
       <p className={styles.overline}>Podcast</p>
 
-      <div className={styles.waveform}>
-        {BARS.map(([height, color], i) => (
-          <div
-            key={i}
-            className={`${styles.bar} ${isPlaying ? styles.barAnimating : ''}`}
-            style={{
-              height: `${height}%`,
-              backgroundColor: color,
-              animationDelay: `${(i * 0.04).toFixed(2)}s`,
-            }}
-          />
-        ))}
-      </div>
+      <Waveform analyser={analyser} isPlaying={isPlaying} />
 
       <div className={styles.playerArea}>
         <div className={styles.volumeRow}>
@@ -157,6 +259,7 @@ const PodcastsBox: FC = () => {
             type="button"
             className={styles.controlButton}
             onClick={skipBack}
+            disabled={status !== 'ready'}
             aria-label="Skip back 10 seconds"
           >
             <FontAwesomeV6Icon iconName="backward-fast" />
@@ -165,6 +268,7 @@ const PodcastsBox: FC = () => {
             type="button"
             className={styles.playButton}
             onClick={togglePlay}
+            disabled={status !== 'ready'}
             aria-label={isPlaying ? 'Pause' : 'Play'}
           >
             <FontAwesomeV6Icon iconName={isPlaying ? 'pause' : 'play'} />
@@ -173,6 +277,7 @@ const PodcastsBox: FC = () => {
             type="button"
             className={styles.controlButton}
             onClick={skipForward}
+            disabled={status !== 'ready'}
             aria-label="Skip forward 10 seconds"
           >
             <FontAwesomeV6Icon iconName="forward-fast" />
@@ -180,10 +285,34 @@ const PodcastsBox: FC = () => {
         </div>
       </div>
 
-      <p className={styles.description}>
-        This lesson&apos;s concepts, explained as a short audio summary. Press
-        play to listen.
-      </p>
+      {status === 'ready' && scriptLines ? (
+        <details className={styles.transcript}>
+          <summary className={styles.transcriptTitle}>TRANSCRIPT</summary>
+          <div className={styles.transcriptLines}>
+            {scriptLines.map((line, i) => (
+              <p key={i} className={styles.transcriptLine}>
+                <span
+                  className={`${styles.speaker} ${
+                    line.voice_id === 'Sam' ? styles.speakerSam : ''
+                  }`}
+                >
+                  {line.voice_id}
+                </span>
+                {line.text}
+              </p>
+            ))}
+          </div>
+        </details>
+      ) : (
+        <p className={styles.description}>
+          {status === 'loading' &&
+            "Putting together this lesson's podcast. One moment…"}
+          {status === 'unavailable' &&
+            "This lesson's podcast isn't ready yet. Check back soon."}
+          {status === 'ready' &&
+            "This lesson's concepts, explained as a short audio summary. Press play to listen."}
+        </p>
+      )}
     </div>
   );
 };

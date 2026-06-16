@@ -11,7 +11,6 @@ import i18n from '@cdo/locale';
 import {selectReadyStudentCount} from './teacherRubricRedux';
 
 import style from './rubrics.module.scss';
-import dialogStyle from '@cdo/apps/sharedComponents/accessible-dialogue.module.scss';
 
 export default function StudentScoresAlert({closeAlert, viewScores}) {
   const studentCount = useAppSelector(selectReadyStudentCount);
@@ -32,7 +31,7 @@ export default function StudentScoresAlert({closeAlert, viewScores}) {
         </Typography>
       </span>
       <CloseButton
-        className={dialogStyle.xCloseButton}
+        className={style.alertCloseButton}
         onClick={closeAlert}
         aria-label={i18n.closeDialog()}
       />

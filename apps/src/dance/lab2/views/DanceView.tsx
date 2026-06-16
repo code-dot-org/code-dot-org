@@ -30,7 +30,6 @@ import {
   workspaceToToolboxDefinition,
 } from '@cdo/apps/blockly/utils/toolbox';
 import {useMusicProject} from '@cdo/apps/bubbleChoice/customModes/MusicDanceAi/MusicProjectContext';
-import {saveReplayLog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import defaultSources from '@cdo/apps/dance/blockly/defaultSources.json';
 import {
   installSharedBlocks,
@@ -544,11 +543,7 @@ const DanceView: React.FunctionComponent<{
     if (isToolboxMode) {
       return;
     }
-    const {isProjectLevel, freePlay, customHelperLibrary, validationCode} =
-      levelProperties;
-    // record a replay log (and generate a video) for both project levels and any
-    // course levels that have sharing enabled
-    const recordReplayLog = isProjectLevel || freePlay || false;
+    const {customHelperLibrary, validationCode} = levelProperties;
     programExecutor.current = new ProgramExecutor({
       container: DANCE_VISUALIZATION_ID,
       onPuzzleComplete,
@@ -570,21 +565,12 @@ const DanceView: React.FunctionComponent<{
       externalRendererFactory: () => new LottieDancerRenderer(),
     });
 
-    if (recordReplayLog) {
-      dispatch(saveReplayLog(programExecutor.current.getReplayLog()));
-    }
     resetProgram();
 
     return () => {
       programExecutor.current?.destroy();
     };
-  }, [
-    levelProperties,
-    dispatch,
-    resetProgram,
-    onPuzzleComplete,
-    readonlyWorkspace,
-  ]);
+  }, [levelProperties, resetProgram, onPuzzleComplete, readonlyWorkspace]);
 
   // Create dance validator.
   const danceValidator = useRef(new DanceValidator());

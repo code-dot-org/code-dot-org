@@ -1,11 +1,10 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
-
-import FontAwesome from '../../legacySharedComponents/FontAwesome';
 
 import BubbleBadge, {BadgeType} from './BubbleBadge';
 import {
@@ -301,7 +300,7 @@ export default class ProgressLegend extends Component {
   getLevelDetails(icon, text) {
     return (
       <div className="level-details">
-        <FontAwesome icon={icon} />
+        <FontAwesomeV6Icon iconName={icon} />
         {text}
       </div>
     );

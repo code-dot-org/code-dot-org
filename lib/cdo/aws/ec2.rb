@@ -23,6 +23,12 @@ module AWS
       @region = fetch_metadata('placement/region')
     end
 
+    # Private IPv4 address of the current EC2 instance.
+    def self.local_ipv4
+      return @local_ipv4 if defined?(@local_ipv4) && @local_ipv4
+      @local_ipv4 = fetch_metadata('local-ipv4')
+    end
+
     # AWS Account ID of the compute resource (EC2, Lambda, ECS Task) that we're currently executing in.
     def self.account_id
       return @account_id if defined?(@account_id) && @account_id

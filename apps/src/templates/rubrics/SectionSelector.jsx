@@ -1,4 +1,5 @@
 import {CustomDropdown} from '@code-dot-org/component-library/dropdown';
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -69,7 +70,9 @@ function SectionSelector({
         {!selectedSectionId && (
           <li className={style.unselectableDropdownOption} key="select-section">
             <div className={style.dropdownOption}>
-              <span>{i18n.selectSectionOption()}</span>
+              <Typography variant="body3" component="span">
+                {i18n.selectSectionOption()}
+              </Typography>
             </div>
           </li>
         )}
@@ -80,7 +83,9 @@ function SectionSelector({
               type="button"
               onClick={() => handleSelectChange({value: id})}
             >
-              <span>{name}</span>
+              <Typography variant="body3" component="span">
+                {name}
+              </Typography>
             </button>
           </li>
         ))}
