@@ -20,6 +20,9 @@ on:
 
 env:
   APPLITOOLS_BATCH_ID: ${{ github.event.pull_request.head.sha || github.sha }}
+  # Playwright container image tag. Version must match the catalog pin in
+  # frontend/.yarnrc.yml; variant (noble/jammy) must match the runner's Ubuntu release.
+  PLAYWRIGHT_IMAGE_TAG: 'v1.59.1-noble'
 
 jobs:
   # Initializes common variables and environment prior to executing other jobs
@@ -29,6 +32,8 @@ jobs:
       component-library-changed: ${{ steps.changes.outputs.component-library }}
       studio-changed: ${{ steps.changes.outputs.studio }}
       oceans-changed: ${{ steps.changes.outputs.oceans }}
+      e2e-tests-changed: ${{ steps.changes.outputs.e2e-tests }}
+      playwright-image-tag: ${{ env.PLAYWRIGHT_IMAGE_TAG }}
     steps:
       # Determine what changed to later skip workflows
       # Github Actions does not offer conditional runtime path filtering, thus use this action to calculate the
@@ -55,6 +60,14 @@ jobs:
               - 'frontend/packages/lint-config/**'
               - 'frontend/*'
               - '.github/**'
+            # Trigger on the suite's own test code and its CI config — NOT on the PR's
+            # product code, since this suite runs against the deployed test-studio, where
+            # the PR's changes are not yet visible. .yarnrc.yml catches Playwright version
+            # bumps (catalog pin), which the test code paths alone would miss.
+            e2e-tests:
+              - 'frontend/packages/e2e-tests/**'
+              - '.github/workflows/e2e-tests-ci.yml'
+              - 'frontend/.yarnrc.yml'
 
   # Start the studio app CI workflow
   studio:
@@ -68,6 +81,8 @@ jobs:
     if: ${{ needs.setup.outputs.component-library-changed == 'true' }}
     needs: setup
     uses: ./.github/workflows/component-library-ci.yml
+    with:
+      playwright-image-tag: ${{ needs.setup.outputs.playwright-image-tag }}
     secrets: inherit
 
   # Start the oceans lab CI workflow
@@ -75,6 +90,15 @@ jobs:
     if: ${{ needs.setup.outputs.oceans-changed == 'true' }}
     needs: setup
     uses: ./.github/workflows/oceans-ci.yml
+    secrets: inherit
+
+  # Start the e2e-tests Playwright suite when test code or its CI config changes.
+  e2e-tests:
+    if: ${{ needs.setup.outputs.e2e-tests-changed == 'true' }}
+    needs: setup
+    uses: ./.github/workflows/e2e-tests-ci.yml
+    with:
+      playwright-image-tag: ${{ needs.setup.outputs.playwright-image-tag }}
     secrets: inherit
 
   # Common teardown actions that must occur after _all_ workflows have completed.

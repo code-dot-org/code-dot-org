@@ -2,7 +2,7 @@
 # with type "UserLevelEvaluation"
 
 require_relative '../../dashboard/config/environment'
-require src_dir 'database'
+require 'cdo/pegasus/src/database'
 
 count_evaluations_moved = 0
 all_old_ules = UserLevelEvaluationOld.all

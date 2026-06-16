@@ -12,7 +12,8 @@ Feature: Announcement for AI Assessments
     Then I wait until element "#uitest-ai-assessments-announcement" is visible
 
     # announcement is not visible after closing
-    When I click selector "#ui-close-dialog"
+    # DSCO Modal's close button is unaddressable by id; select by aria-label.
+    When I click selector "#uitest-ai-assessments-announcement button[aria-label='Close modal']"
     Then I wait until element "#uitest-ai-assessments-announcement" is not visible
     And I wait until ai assessments announcement is marked as seen
 

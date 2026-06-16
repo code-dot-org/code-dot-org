@@ -1,7 +1,7 @@
 import storybook from 'eslint-plugin-storybook';
 
-import cdoJestConfig from '@code-dot-org/lint-config/eslint/jest.mjs';
 import cdoReactConfig from '@code-dot-org/lint-config/eslint/react.mjs';
+import cdoVitestConfig from '@code-dot-org/lint-config/eslint/vitest.mjs';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
@@ -10,7 +10,7 @@ export default [
   },
   ...storybook.configs['flat/recommended'],
   ...cdoReactConfig,
-  ...cdoJestConfig,
+  ...cdoVitestConfig,
   {
     rules: {
       'import-x/no-unresolved': [

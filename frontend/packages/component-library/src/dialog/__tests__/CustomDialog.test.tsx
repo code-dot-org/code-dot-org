@@ -1,12 +1,12 @@
 import {render, screen, fireEvent} from '@testing-library/react';
-import '@testing-library/jest-dom';
+import {vi} from 'vitest';
 
 import {CustomDialog, CustomDialogProps} from './../index';
 
 describe('CustomDialog Component', () => {
   const defaultProps: CustomDialogProps = {
     'aria-label': 'Test Custom Dialog',
-    onClose: jest.fn(),
+    onClose: vi.fn(),
     children: (
       <p id="dsco-dialog-description">This is a test dialog content.</p>
     ),
@@ -37,7 +37,9 @@ describe('CustomDialog Component', () => {
   });
 
   it('should warn if the description element with id="dsco-dialog-description" is not provided', () => {
-    const consoleWarnSpy = jest.spyOn(console, 'warn').mockImplementation();
+    const consoleWarnSpy = vi
+      .spyOn(console, 'warn')
+      .mockImplementation(() => {});
     render(
       <CustomDialog {...defaultProps}>
         <div />
@@ -73,17 +75,6 @@ describe('CustomDialog Component', () => {
   });
 
   // TODO: [Design2-182] Create a visual test to check these two cases
-  // it('should apply the correct class for the mode prop', () => {
-  //   render(<CustomDialog {...defaultProps} mode="dark" />);
-  //
-  //   const dialog = screen.getByRole('dialog');
-  //   expect(dialog).toHaveClass('dialog-dark');
-  // });
-  //
-  // it('should render custom classes passed via the className prop', () => {
-  //   render(<CustomDialog {...defaultProps} className="custom-class" />);
-  //
-  //   const dialog = screen.getByRole('dialog');
-  //   expect(dialog).toHaveClass('custom-class');
-  // });
+  it.todo('should apply the correct class for the mode prop');
+  it.todo('should render custom classes passed via the className prop');
 });

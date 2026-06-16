@@ -181,4 +181,4 @@ pages:
         hideMyPLStaticRecommendedPL: false
         hideMyPLStaticRecommendedPLMidHighBlock: true
         hideMyPLStaticRecommendedPLSelfPacedBlock: false
-        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /fa/teacher
+        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /fa/professional-learning/courses

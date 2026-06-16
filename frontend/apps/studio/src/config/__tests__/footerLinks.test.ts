@@ -8,24 +8,18 @@ import {CodeStudioConfig as siteConfig} from '@code-dot-org/core';
 
 import {getFooterLinks} from '../footerLinks';
 
-const EXPECTED_IDS = [
-  'privacy',
-  'manage_cookies',
-  'help_support',
-  'store',
-  'tos_short',
-];
+const EXPECTED_IDS = ['privacy', 'manage_cookies', 'help_support', 'tos_short'];
 
 describe('getFooterLinks', () => {
   it('contains all expected link ids in order', () => {
     expect(getFooterLinks().map(l => l.id)).toEqual(EXPECTED_IDS);
   });
 
-  it('marks help_support and store as external', () => {
+  it('marks help_support as external', () => {
     const externalIds = getFooterLinks()
       .filter(l => l.external)
       .map(l => l.id);
-    expect(externalIds).toEqual(['help_support', 'store']);
+    expect(externalIds).toEqual(['help_support']);
   });
 
   it('non-external links have no external flag', () => {

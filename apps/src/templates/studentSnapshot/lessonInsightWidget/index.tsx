@@ -93,6 +93,7 @@ const LessonInsightWidget: React.FC<LessonInsightWidgetProps> = ({
 
   return (
     <WidgetTemplate
+      id="ui-test-lesson-insight-widget"
       widgetName="Lesson Insight"
       gridWidth={1}
       gridHeight={2}

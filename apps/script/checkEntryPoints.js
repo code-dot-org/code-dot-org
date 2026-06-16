@@ -76,6 +76,7 @@ const SILENCED = [
   // shared code referenced from application.html.haml. These should go
   // away once we configure webpack to manage chunks dynamically.
   'essential',
+  'routing',
   'code-studio',
 
   // referenced by multiple sites
@@ -83,7 +84,6 @@ const SILENCED = [
   'userHeaderEventLogger',
   'regionalPartnerMiniContact',
   'statsigWebAnalytics',
-  'global_edition/region_switch_confirm',
 
   // other entry points
   'blockly',

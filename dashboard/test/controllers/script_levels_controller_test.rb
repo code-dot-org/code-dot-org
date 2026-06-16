@@ -919,8 +919,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "build_script_level_url" do
     assert_equal "/s/laurel/lessons/1/levels/1", build_script_level_path(@custom_s1_l1)
     assert_equal "/courses/laurel/units/1/lessons/1/levels/1", build_script_level_path(@custom_s1_l1, unit_group_unit: @custom_script.original_unit_group_unit)
-    assert_equal "//test-studio.code.org/s/laurel/lessons/1/levels/1", build_script_level_url(@custom_s1_l1)
-    assert_equal "//test-studio.code.org/courses/laurel/units/1/lessons/1/levels/1", build_script_level_url(@custom_s1_l1, unit_group_unit: @custom_script.original_unit_group_unit)
+    assert_equal "https://test-studio.code.org/s/laurel/lessons/1/levels/1", build_script_level_url(@custom_s1_l1)
+    assert_equal "https://test-studio.code.org/courses/laurel/units/1/lessons/1/levels/1", build_script_level_url(@custom_s1_l1, unit_group_unit: @custom_script.original_unit_group_unit)
   end
 
   test "next routing for custom scripts" do
@@ -1213,22 +1213,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'end of HoC for a user is HOC endpoint' do
     stubs(:current_user).returns(@student)
-    assert_equal('//test-studio.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
+    assert_equal('https://test-studio.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
   end
 
   test 'post script redirect is HOC endpoint' do
     stubs(:current_user).returns(nil)
-    assert_equal('//test-studio.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
+    assert_equal('https://test-studio.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
   end
 
   test 'post script redirect is frozen endpoint' do
     stubs(:current_user).returns(nil)
-    assert_equal('//test-studio.code.org/api/hour/finish/frozen', Unit.find_by_name(Unit::FROZEN_NAME).finish_url)
+    assert_equal('https://test-studio.code.org/api/hour/finish/frozen', Unit.find_by_name(Unit::FROZEN_NAME).finish_url)
   end
 
   test 'post script redirect is starwars endpoint' do
     stubs(:current_user).returns(nil)
-    assert_equal('//test-studio.code.org/api/hour/finish/starwars', Unit.find_by_name(Unit::STARWARS_NAME).finish_url)
+    assert_equal('https://test-studio.code.org/api/hour/finish/starwars', Unit.find_by_name(Unit::STARWARS_NAME).finish_url)
   end
 
   test "show redirects admins to root" do
@@ -1276,7 +1276,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: 1,
     }
 
-    assert_select 'img[src="//studio.code.org/api/hour/begin_hoc-script.png"]'
+    assert_select 'img[src="https://studio.code.org/api/hour/begin_hoc-script.png"]'
   end
 
   test 'should not show tracking pixel for second level of hoc course in prod' do

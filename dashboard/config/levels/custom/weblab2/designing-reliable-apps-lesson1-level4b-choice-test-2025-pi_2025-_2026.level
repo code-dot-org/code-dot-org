@@ -1,5 +1,6 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-04-01T21:44:02.000Z",
   "level_num": "custom",
@@ -16,7 +17,7 @@
           "id": "1",
           "name": "index.html",
           "language": "html",
-          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Disney Explorer Dashboard</title>\n    <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n<body>\n\n<div class=\"dashboard\">\n    <header>\n        <h1>Disney Explorer</h1>\n        <button id=\"generate-btn\">Generate Random Character</button>\n        <div id=\"debug-log\"></div>\n    </header>\n\n    <div class=\"card\">\n        <div class=\"image-container\">\n            <img id=\"char-img\" src=\"https://studio.code.org/lab_resources/html-placeholder-image.avif\" alt=\"Character\">\n        </div>\n        <div class=\"card-content\">\n            <h2 id=\"char-name\" class=\"placeholder\">Character Name</h2>\n            \n            <div class=\"info-section\">\n                <strong>Featured In Films</strong>\n                <p id=\"char-films\" class=\"placeholder\">Film list goes here...</p>\n            </div>\n\n            <div class=\"info-section\">\n                <strong>TV Appearances</strong>\n                <p id=\"char-tv\" class=\"placeholder\">TV show list goes here...</p>\n            </div>\n        </div>\n    </div>\n</div>\n\n<script src=\"script.js\"></script>\n</body>\n</html>",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Disney Explorer</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n    <div class=\"dashboard\">\n        <header>\n            <h1>Disney Explorer</h1>\n            <button id=\"generate-btn\">Generate Random Character</button>\n        </header>\n        <div class=\"card\">\n            <div class=\"image-container\">\n                <img id=\"char-img\" src=\"https://studio.code.org/lab_resources/html-placeholder-image.avif\" alt=\"Character\">\n            </div>\n            <div class=\"card-content\">\n                <h2 id=\"char-name\">Character Name</h2>\n                <div class=\"info-section\">\n                    <strong>Featured In Films</strong>\n                    <p id=\"char-films\">Film list goes here...</p>\n                </div>\n                <div class=\"info-section\">\n                    <strong>TV Appearances</strong>\n                    <p id=\"char-tv\">TV show list goes here...</p>\n                </div>\n            </div>\n        </div>\n    </div>\n    <script src=\"script.js\"></script>\n</body>\n</html>",
           "active": false,
           "folderId": "0"
         },
@@ -24,23 +25,21 @@
           "id": "2",
           "name": "script.js",
           "language": "js",
-          "contents": "const btn = document.getElementById('generate-btn');\nconst charImg = document.getElementById('char-img');\nconst charName = document.getElementById('char-name');\nconst charFilms = document.getElementById('char-films');\nconst charTv = document.getElementById('char-tv');\nconst debugLog = document.getElementById('debug-log');\n\nconst PLACEHOLDER_URL = \"https://studio.code.org/lab_resources/html-placeholder-image.avif\";\n\n// Refactored to Arrow Notation\nconst fetchRandomCharacter = async () => {\n    // 1. Set Loading UI\n    btn.disabled = true;\n    btn.innerText = \"Finding Magic...\";\n    debugLog.innerText = \"\";\n    \n    // Reset to placeholders\n    charName.classList.add('placeholder');\n    charFilms.classList.add('placeholder');\n    charTv.classList.add('placeholder');\n\n    try {\n        // 2. Pick a random page (1-149) to get diverse characters\n        const randomPage = Math.floor(Math.random() * 149) + 1;\n        const response = await fetch(`https://api.disneyapi.dev/character?page=${randomPage}&pageSize=50`);\n        \n        if (!response.ok) throw new Error(\"API Limit reached or server down.\");\n\n        const result = await response.json();\n        \n        // 3. Pick a random character from the list\n        const character = result.data[Math.floor(Math.random() * result.data.length)];\n\n        // 4. Populate UI\n        charName.innerText = character.name;\n        charFilms.innerText = character.films.length > 0 ? character.films.join(', ') : 'No movies found';\n        charTv.innerText = character.tvShows.length > 0 ? character.tvShows.join(', ') : 'No TV shows found';\n\n        // 5. Update Image\n        charImg.src = character.imageUrl || PLACEHOLDER_URL;\n\n        // 6. Remove placeholder styles\n        charName.classList.remove('placeholder');\n        charFilms.classList.remove('placeholder');\n        charTv.classList.remove('placeholder');\n\n    } catch (error) {\n        console.error(error);\n        debugLog.innerText = \"Error: Check your connection or run this in CodePen/Live Server.\";\n        // Reset to placeholder values on error\n        charName.innerText = \"Search Failed\";\n        charImg.src = PLACEHOLDER_URL;\n    } finally {\n        btn.disabled = false;\n        btn.innerText = \"Generate Random Character\";\n    }\n};\n\nbtn.addEventListener('click', fetchRandomCharacter);",
+          "contents": "const btn = document.getElementById('generate-btn');\nconst charName = document.getElementById('char-name');\nconst charImg = document.getElementById('char-img');\nconst charFilms = document.getElementById('char-films');\nconst charTv = document.getElementById('char-tv');\n\nconst PLACEHOLDER_URL = 'https://studio.code.org/lab_resources/html-placeholder-image.avif';\nconst API_URL = 'https://api.disneyapi.dev/character';\n\nconst updateUI = (character) => {\n    charName.innerText = character.name;\n    charImg.src = character.imageUrl || PLACEHOLDER_URL;\n  console.log(character.imageUrl)\n\n    if (character.films.length > 0) {\n        charFilms.innerText = character.films.join(', ');\n    } else {\n        charFilms.innerText = 'No movies found';\n    }\n\n    if (character.tvShows.length > 0) {\n        charTv.innerText = character.tvShows.join(', ');\n    } else {\n        charTv.innerText = 'No TV shows found';\n    }\n};\n\nconst handleGenerate = () => {\n    btn.disabled = true;\n    btn.innerText = 'Finding Magic...';\n\n    const randomPage = Math.floor(Math.random() * 149) + 1;\n\n    fetch(API_URL + '?page=' + randomPage + '&pageSize=50')\n        .then(response => response.json())\n        .then(result => {\n            const character = result.data[Math.floor(Math.random() * result.data.length)];\n            updateUI(character);\n        })\n        .catch(error => {\n            console.error(error);\n            charName.innerText = 'Search Failed';\n        })\n        .finally(() => {\n            btn.disabled = false;\n            btn.innerText = 'Generate Random Character';\n        });\n};\n\nbtn.addEventListener('click', handleGenerate);",
           "folderId": "0",
-          "active": false
+          "active": true
         },
         "3": {
           "id": "3",
-          "name": "styles.css",
+          "name": "style.css",
           "language": "css",
-          "contents": ":root {\n    --disney-blue: #0066cc;\n    --skeleton-color: #e0e0e0;\n    --text-main: #333;\n}\n\nbody {\n    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n    background-color: #f8f9fa;\n    display: flex;\n    justify-content: center;\n    padding: 40px 20px;\n    margin: 0;\n}\n\n.dashboard {\n    width: 100%;\n    max-width: 450px;\n    text-align: center;\n}\n\nheader h1 {\n    color: var(--disney-blue);\n    margin-bottom: 20px;\n}\n\n#generate-btn {\n    background-color: var(--disney-blue);\n    color: white;\n    border: none;\n    padding: 14px 28px;\n    font-size: 1rem;\n    font-weight: 600;\n    border-radius: 50px;\n    cursor: pointer;\n    transition: transform 0.2s, background-color 0.2s;\n    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);\n    margin-bottom: 30px;\n}\n\n#generate-btn:hover {\n    background-color: #0052a3;\n    transform: translateY(-2px);\n}\n\n#generate-btn:disabled {\n    background-color: #bdc3c7;\n    cursor: not-allowed;\n}\n\n.card {\n    background: white;\n    border-radius: 15px;\n    overflow: hidden;\n    box-shadow: 0 8px 20px rgba(0,0,0,0.1);\n    text-align: left;\n}\n\n.image-container {\n    width: 100%;\n    height: 300px;\n    background-color: var(--skeleton-color);\n}\n\n#char-img {\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n    display: block;\n}\n\n.card-content {\n    padding: 24px;\n}\n\n/* Skeleton/Placeholder Text Effects */\n.placeholder {\n    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);\n    background-size: 200% 100%;\n    animation: shimmer 1.5s infinite linear;\n    color: transparent !important;\n    border-radius: 4px;\n}\n\n@keyframes shimmer {\n    0% { background-position: 200% 0; }\n    100% { background-position: -200% 0; }\n}\n\n.info-section {\n    margin-top: 18px;\n}\n\n.info-section strong {\n    display: block;\n    color: var(--disney-blue);\n    font-size: 0.75rem;\n    text-transform: uppercase;\n    margin-bottom: 4px;\n}\n\n#debug-log {\n    margin-top: 10px;\n    color: #e74c3c;\n    font-size: 0.85rem;\n}",
+          "contents": "* {\n    box-sizing: border-box;\n}\n\nbody {\n    font-family: Georgia, 'Times New Roman', serif;\n    background-color: #0a0a2e;\n    display: flex;\n    justify-content: center;\n    padding: 40px 20px;\n    margin: 0;\n    min-height: 100vh;\n}\n\n.dashboard {\n    width: 100%;\n    max-width: 420px;\n}\n\nheader {\n    text-align: center;\n    margin-bottom: 28px;\n}\n\nheader h1 {\n    font-size: 2.2rem;\n    color: #f4c842;\n    font-style: italic;\n    font-weight: normal;\n    letter-spacing: 1px;\n}\n\n#generate-btn {\n    display: block;\n    width: 100%;\n    background-color: #f4c842;\n    color: #0a0a2e;\n    border: none;\n    padding: 14px 28px;\n    font-size: 1rem;\n    font-weight: 700;\n    border-radius: 50px;\n    cursor: pointer;\n    margin-bottom: 24px;\n    font-family: 'Segoe UI', sans-serif;\n    letter-spacing: 1px;\n}\n\n#generate-btn:hover {\n    background-color: #ffd966;\n}\n\n#generate-btn:disabled {\n    background-color: #444466;\n    color: #888899;\n    cursor: not-allowed;\n}\n\n.card {\n    background: #12123a;\n    border-radius: 16px;\n    overflow: hidden;\n    border: 1px solid #2a2a5a;\n}\n\n.image-container {\n    width: 100%;\n    height: 300px;\n    background-color: #1a1a40;\n}\n\n#char-img {\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n    display: block;\n}\n\n.card-content {\n    padding: 24px;\n}\n\n.card-content h2 {\n    font-size: 1.6rem;\n    color: #f4c842;\n    font-style: italic;\n    font-weight: normal;\n    margin-bottom: 16px;\n}\n\n.info-section {\n    margin-top: 16px;\n    padding-top: 16px;\n    border-top: 1px solid #2a2a5a;\n}\n\n.info-section strong {\n    display: block;\n    font-family: 'Segoe UI', sans-serif;\n    font-size: 0.7rem;\n    text-transform: uppercase;\n    letter-spacing: 2px;\n    color: #8888bb;\n    margin-bottom: 6px;\n    font-weight: normal;\n}\n\n.info-section p {\n    color: #ccccee;\n    font-family: 'Segoe UI', sans-serif;\n    font-size: 0.9rem;\n    line-height: 1.6;\n    margin: 0;\n}",
           "folderId": "0",
-          "active": true
+          "active": false
         }
       },
       "openFiles": [
-        "1",
-        "2",
-        "3"
+        "2"
       ]
     },
     "encrypted": "false",
@@ -62,9 +61,18 @@
       "freeResponseHeight": 50,
       "codeEditableAfterSubmit": false
     },
-    "name_suffix": "_2026"
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:02.783+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson1-level4b-choice-test-2025-pi_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson1-level4b-choice-test-2025-pi_2025-pilot\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:02.783+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson1-level4b-choice-test-2025-pi_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson1-level4b-choice-test-2025-pi_2025-pilot\"},{\"changed_at\":\"2026-06-11 14:35:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-11 14:35:58 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-11 14:36:22 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Weblab2>

@@ -21,6 +21,7 @@ import {
   type TabOrderEntry,
 } from '../utils/computeTabOrder';
 import {isLineAnchorNodeId} from '../utils/connectionRules';
+import {getNodeLabel} from '../utils/elementLabel';
 import {
   endpointPatch,
   findNearestHandleInRadius,
@@ -29,10 +30,8 @@ import {
 import {
   anchorHandleFlowPosition,
   attachEdgeToFreshAnchor,
-  inheritedAnchorBaseData,
   resolveEdgeEndpoint,
 } from '../utils/lineAnchors';
-import {getNodeLabel} from '../utils/nodeLabel';
 
 import {useAriaAnnouncer} from './useAriaAnnouncer';
 import {useConnectMode} from './useConnectMode';
@@ -479,8 +478,7 @@ export function useKeyboardNavigation({
         // Otherwise, spawn an anchor at the post-move position.
         const {anchor, edgePatch: patch} = attachEdgeToFreshAnchor(
           postMovePosition,
-          side,
-          inheritedAnchorBaseData(focusedEdge)
+          side
         );
         newAnchors.push(anchor);
         Object.assign(edgePatch, patch);

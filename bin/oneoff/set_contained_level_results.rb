@@ -6,7 +6,7 @@
 # for non-prod environments.
 
 require_relative '../../dashboard/config/environment'
-require src_dir 'database'
+require 'cdo/pegasus/src/database'
 
 CONTAINED_LEVEL_RESULT = 101 # see constants.js
 

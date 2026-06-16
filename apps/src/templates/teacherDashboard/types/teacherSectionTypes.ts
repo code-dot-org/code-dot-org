@@ -17,7 +17,7 @@ export interface Section {
   atRiskAgeGatedDate?: Date;
   atRiskAgeGatedUsState?: string;
   anyStudentHasProgress?: boolean;
-  code: string;
+  code: string | null;
   codeReviewExpiresAt?: number | null;
   course?: Course | null;
   courseDisplayName: string | null;
@@ -73,8 +73,10 @@ export interface DemoPresetView {
   avatarEmoji: number;
   loginType: NonNullable<Section['loginType']>;
   participantType: NonNullable<Section['participantType']>;
+  grades: string[];
   unit: DemoPresetUnit | null;
   unitGroup: DemoPresetCourse | null;
+  studentSnapshotDefaultTourLesson: number | null;
 }
 
 type Course = {
@@ -108,7 +110,7 @@ export type ServerOAuthSectionTypeName = OAuthSectionTypeName | 'google_oauth2';
 export interface ServerSection {
   at_risk_age_gated_date?: string;
   at_risk_age_gated_us_state?: string;
-  code: string;
+  code: string | null;
   course_display_name?: string | null;
   course_id: number | null;
   course_offering_id?: number | null;
@@ -182,8 +184,10 @@ export interface ServerDemoPresetView {
   avatar_emoji: number;
   login_type: NonNullable<Section['loginType']>;
   participant_type: NonNullable<Section['participantType']>;
+  grades: string[];
   unit: ServerDemoPresetUnit | null;
   unit_group: ServerDemoPresetCourse | null;
+  student_snapshot_default_tour_lesson: number | null;
 }
 
 //TODO: better types here

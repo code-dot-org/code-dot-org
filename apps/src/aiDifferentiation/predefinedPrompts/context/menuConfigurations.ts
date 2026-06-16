@@ -49,7 +49,7 @@ export const SUGGESTED_PROMPTS_FOR_SELECTION: {
     ],
   },
   support: {
-    initialMessage: `Let's get started teaching on Code.org together! What would you like to do on the Code.org platform? Below are some of the tasks I can help you with.`,
+    initialMessage: `Let's get started teaching on CodeAI together! What would you like to do on the CodeAI platform? Below are some of the tasks I can help you with.`,
     suggestedPrompts: [
       platform.SUGGEST_CURRICULUM_PROMPT,
       platform.GET_STARTED_PROMPT,

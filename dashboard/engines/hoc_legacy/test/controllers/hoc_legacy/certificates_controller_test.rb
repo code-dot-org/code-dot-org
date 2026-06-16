@@ -5,10 +5,6 @@ require 'test_helper'
 class HocLegacy::CertificatesControllerTest < ActionDispatch::IntegrationTest
   include Minitest::RSpecMocks
 
-  before do
-    allow(CDO).to receive(:default_scheme).and_return('https:')
-  end
-
   describe 'GET /api/hour/certificates/:session_id' do
     subject(:get_certificate_request) {get "/api/hour/certificates/#{param_session_id}"}
 

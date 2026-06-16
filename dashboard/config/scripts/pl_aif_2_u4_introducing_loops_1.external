@@ -89,7 +89,8 @@ In most programs, iteration falls into one of two common categories.
 
 </div>
 
-## Let's look at the flow charts
+## Flowchart Comparison
+
 Below are two flowcharts that show iteration in action.
 Before labeling them, take a moment to study how each one repeats.
 ---
@@ -97,64 +98,66 @@ Before labeling them, take a moment to study how each one repeats.
 
 ## Flowchart A
 
-<img src="https://images.code.org/d80a0b774a89fa285465c1a50a654d79-image-1768419690819.png" alt="flowchart for a for loop" width="350px" style="border-radius:10px; float:left; margin: 0px 30px 30px 40px;">
+<div style="display:flex; align-items:flex-start; gap:24px; margin:20px 0px;">
+
+  <img src="https://images.code.org/d80a0b774a89fa285465c1a50a654d79-image-1768419690819.png" alt="flowchart for a for loop" style="width:38%; max-width:350px; border-radius:10px;">
+
+  <div style="flex:1; min-width:0;">
 
 **Think about:**
 
 - What causes the steps to repeat?
-
 - Is the number of repetitions fixed?
-
 - What makes the loop stop?
 
- #### 👉 **Which type of loop do you think this represents?**
-
-
-
-<div style="clear:both;"></div>
-
-
+👉 **Which type of loop do you think this represents?**
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">💡 Check your thinking:</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
-    <p style = "font-size: 14pt;">
-  Flowchart A represents a <b>count-controlled loop (for loop) </b> because the number of repetitions is determined in advance.
-</p>
-</div>
+
+  <div style="margin-top:16px; margin-left:14px; margin-right:14px;">
+    <p style="font-size:12pt; line-height:1.4;">
+      Flowchart A represents a <b>count-controlled loop (for loop)</b> because the number of repetitions is determined in advance.
+    </p>
+  </div>
 </details>
 
+  </div>
+</div>
 
+<div style="clear:both;"></div>
 ---
-
 ## Flowchart B
 
-<img src="https://images.code.org/4afcb2bde4184c0c4735dcfb18d4a4a2-image-1768418982827.png" alt="flowchart for a while" width="350px" style="border-radius:10px; float:left; margin: 0px 30px 30px 40px;">
+<div style="display:flex; align-items:flex-start; gap:24px; margin:20px 0px;">
+
+  <img src="https://images.code.org/4afcb2bde4184c0c4735dcfb18d4a4a2-image-1768418982827.png" alt="flowchart for a while loop" style="width:38%; max-width:350px; border-radius:10px;">
+
+  <div style="flex:1; min-width:0;">
 
 **Think about:**
 
 - Does the loop repeat a known number of times?
-
 - Is the number of repetitions fixed?
-
 - Or does it continue until a condition changes?
 
- #### 👉 **Which type of loop do you think this represents?**
-
-
-
-<div style="clear:both;"></div>
-
-
+👉 **Which type of loop do you think this represents?**
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">💡 Check your thinking:</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
-    <p style = "font-size: 14pt;">
-    Flowchart B represents a <b>condition-controlled loop (while loop) </b> because the steps repeat as long as a condition remains true.
-</p>
-</div>
+
+  <div style="margin-top:16px; margin-left:14px; margin-right:14px;">
+    <p style="font-size:12pt; line-height:1.4;">
+      Flowchart B represents a <b>condition-controlled loop (while loop)</b> because the steps repeat as long as a condition remains true.
+    </p>
+  </div>
 </details>
+
+  </div>
+</div>
+
 
 
 ## Next up

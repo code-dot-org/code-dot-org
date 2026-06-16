@@ -130,7 +130,8 @@
   }
 }
 
-.onboarding-completion-step .shepherd-footer {
+.onboarding-completion-step .shepherd-footer,
+.onboarding-stacked-buttons .shepherd-footer {
   flex-direction: column;
   align-items: stretch;
 }
@@ -162,12 +163,63 @@
   flex: 1;
 }
 
+// Quiz step: column of answer option buttons.
+.quiz-options-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.quiz-option {
+  padding: 10px 16px;
+  border: 1px solid var(--neutral-white-alpha-30);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--neutral-base-white);
+  font-family: Figtree, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.15s;
+
+  &:not(:disabled):hover {
+    border-color: var(--neutral-white-alpha-70);
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+div .quiz-option-wrong {
+  border-color: #e53e3e;
+  background-color: rgb(229 62 62 / 15%);
+  color: var(--accent-strawberry-40);
+}
+
+div .quiz-option-correct {
+  border-color: #38a169;
+  background-color: rgb(56 161 105 / 15%);
+  color: #68d391;
+}
+
+.quiz-feedback {
+  margin-top: 12px;
+  min-height: 18px;
+  font-family: Figtree, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--neutral-gray-50);
+}
+
 // Onboarding tour step container styles.
 .custom-shepherd-onboarding-container {
   @extend %shepherd-step-container-base;
 
-  background-color: $light_black;
-  color: #fff;
+  background-color: var(--neutral-base-black);
+  color: var(--neutral-base-white);
 
   // Lay out the content as a flex row so the sparkle+text and the X button
   // all sit on the same line, with the footer wrapping beneath.
@@ -185,7 +237,7 @@
     flex: 1;
     min-width: 0;
     order: 1;
-    color: #fff;
+    color: var(--neutral-base-white);
     padding: 0;
     margin-bottom: 0;
   }
@@ -202,7 +254,7 @@
   // Take the cancel icon out of absolute positioning so it sits inline.
   .shepherd-cancel-icon {
     position: static;
-    color: #fff;
+    color: var(--neutral-base-white);
 
     &:hover {
       color: rgb(200 200 200);
@@ -219,6 +271,21 @@
   }
 
   &.shepherd-element > .shepherd-arrow:before {
-    background-color: rgb(41 47 54);
+    background-color: var(--neutral-base-black);
   }
+}
+
+.onboarding-progress-table-step {
+  width: 276px;
+}
+
+.onboarding-step-text-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.onboarding-step-supportive-text {
+  color: var(--neutral-white-alpha-60);
+  font-size: 12px;
+  margin-top: 8px;
 }

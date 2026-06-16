@@ -1,0 +1,22 @@
+name 'pl-ai-101-V2-mod1-opening-03_2026-embedding'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Opening Reflection
+
+Before you begin the AI 101 Professional Learning Series, take a moment to reflect on your goals.
+
+You may want to learn about new AI tools, feel more confident explaining AI to a 5th grade student, explore ways AI can support differentiation in your classroom, or develop strategies to help teachers monitor AI use.
+
+> In the **Padlet** below, answer the following question: If you were to describe your goal in a hashtag, what would it be?
+
+
+<div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"><p style="padding:0;margin:0"><iframe src="https://padlet.com/embed/o2pahes9jcox4amd" frameborder="0" allow="camera;microphone;geolocation;display-capture;clipboard-write" style="width:100%;height:608px;display:block;padding:0;margin:0"></iframe></p></div>
+
+---
+
+## Reflection
+
+> In the **reflection box** below, expand on your answer. Is there anything specific you're looking to learn or take away from this series?
+MARKDOWN

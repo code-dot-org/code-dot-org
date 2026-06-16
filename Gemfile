@@ -213,8 +213,6 @@ gem 'highline', '~> 3.1.0'
 
 gem 'honeybadger', '>= 4.5.6' # error monitoring
 
-gem 'newrelic_rpm', '~> 8.3', group: [:staging, :development, :production], require: false # perf/error/etc monitoring
-
 gem 'redcarpet', '~> 3.6.0'
 
 gem 'geocoder'
@@ -278,7 +276,7 @@ gem 'aws-sdk-dynamodb'
 gem 'aws-sdk-ec2', '~> 1.424.0' # required for Ruby 3.2 support
 gem 'aws-sdk-firehose'
 gem 'aws-sdk-glue'
-gem 'aws-sdk-rds'
+gem 'aws-sdk-rds', '>= 1.205.0'
 gem 'aws-sdk-redshiftdataapiservice'
 gem 'aws-sdk-route53'
 gem 'aws-sdk-s3', '~> 1.113'
@@ -360,10 +358,10 @@ gem 'recaptcha', require: 'recaptcha/rails'
 
 gem 'loofah', '~> 2.19.1'
 
-# Install pg gem only on specific production hosts and the i18n-dev server.
+# Install pg gem only on specific production hosts.
 require_pg = lambda do
   require 'socket'
-  %w[production-daemon production-console i18n-dev].include?(Socket.gethostname)
+  %w[production-daemon production-console].include?(Socket.gethostname)
 end
 
 install_if require_pg do
@@ -389,8 +387,6 @@ gem 'pry', '~> 0.14.0'
 # Google's Compact Language Detector
 gem 'cld'
 
-gem 'crowdin-api', '~> 1.10.0'
-
 gem "pycall", ">= 1.5.2"
 
 gem "delayed_job_active_record", "~> 4.1"
@@ -406,6 +402,9 @@ gem 'statsig', '~> 2.5.5'
 
 gem 'mailgun-ruby', '~>1.2.14'
 gem 'mailjet', '~> 1.7.3'
+
+# Used for generating js file that defines all Rails named routes as js helper functions.
+gem 'js-routes', '~> 2.3', require: false
 
 gem 'json-jwt', '~> 1.15'
 gem "json-schema", "~> 4.3"

@@ -20,6 +20,7 @@ const darkTheme = createTheme({
 });
 
 import experiments from '@cdo/apps/util/experiments';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
@@ -75,6 +76,32 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
   const goToPrev = useCallback(() => {
     setCurrentIndex(i => Math.max(i - 1, 0));
   }, []);
+
+  // Continue advances to the next box. When the student is on the reflection
+  // step and hasn't submitted, this is a bypass: kick off podcast generation
+  // with every objective treated as struggling so the podcast modality has
+  // something to play. Fire and forget — the server enqueues a background job
+  // and PodcastsBox retrieves it later.
+  const handleContinue = useCallback(() => {
+    if (BOX_IDS[currentIndex] === 'reflection' && !reflectionData) {
+      HttpClient.post(
+        '/ai_student_podcasts/generate_podcast',
+        JSON.stringify({
+          lesson_id: lessonDeepDiveData.lessonId,
+          objective_ids: lessonDeepDiveData.objectives.map(o => o.id),
+        }),
+        true, // useAuthenticityToken
+        {'Content-Type': 'application/json'}
+      ).catch(() => {});
+    }
+    goToNext();
+  }, [
+    currentIndex,
+    reflectionData,
+    lessonDeepDiveData.lessonId,
+    lessonDeepDiveData.objectives,
+    goToNext,
+  ]);
 
   const handleReflectionComplete = useCallback((data: ReflectionData) => {
     setReflectionData(data);
@@ -265,7 +292,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
           BOX_IDS[currentIndex] !== 'skills-check' && (
             <div className={styles.bottomNav}>
               <FizzyButton
-                onClick={goToNext}
+                onClick={handleContinue}
                 ariaLabel="Next"
                 className={styles.scrollCue}
               >

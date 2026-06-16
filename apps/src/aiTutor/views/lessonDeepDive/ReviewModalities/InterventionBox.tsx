@@ -164,7 +164,13 @@ const InterventionBox: FC<InterventionBoxProps> = ({
           />
         )}
         {selected === 'videos' && <VideosBox jsonVideos={jsonVideos} />}
-        {selected === 'podcasts' && <PodcastsBox />}
+        {selected === 'podcasts' && (
+          <PodcastsBox
+            lessonId={lessonId}
+            reflectionData={reflectionData}
+            objectives={objectives}
+          />
+        )}
       </div>
 
       <nav className={styles.bottomNav} aria-label="Practice options">

@@ -1,3 +1,4 @@
+import Typography from '@mui/material/Typography';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -109,10 +110,14 @@ export default class PhoneFrame extends React.Component {
               </div>
             )}
             {isPaused && (
-              <div className={classNames(style.centeredInFrame, style.paused)}>
+              <Typography
+                variant="body1"
+                component="div"
+                className={classNames(style.centeredInFrame, style.paused)}
+              >
                 <FontAwesome icon="pause" className={style.pauseIcon} />
                 PAUSED
-              </div>
+              </Typography>
             )}
             {/* Top run/reset button only renders when user is so zoomed in
             that the bottom run button is hidden*/}

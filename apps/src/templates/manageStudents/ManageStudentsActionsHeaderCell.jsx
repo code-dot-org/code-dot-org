@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+import DemoSectionTooltip from '@cdo/apps/templates/DemoSectionTooltip';
 import i18n from '@cdo/locale';
 
 import ControlProjectSharingDialog from './ControlProjectSharingDialog';
@@ -14,6 +15,7 @@ class ManageStudentsActionsHeaderCell extends Component {
     editAll: PropTypes.func,
     isShareColumnVisible: PropTypes.bool,
     hideSharingColumn: PropTypes.func,
+    isDemoSection: PropTypes.bool,
   };
 
   state = {
@@ -61,20 +63,27 @@ class ManageStudentsActionsHeaderCell extends Component {
   }
 
   render() {
+    const {isDemoSection} = this.props;
     return (
       <div>
-        <ActionDropdown
-          name="student-header-actions"
-          labelText={i18n.actions()}
-          size="s"
-          menuPlacement="right"
-          options={this.buildOptions()}
-          triggerButtonProps={{
-            color: 'tertiary',
-            variant: 'text',
-            children: <FontAwesomeV6Icon iconName="gear" />,
-          }}
-        />
+        <DemoSectionTooltip
+          isDemoSection={isDemoSection}
+          tooltipId="demo-actions-header-tooltip"
+        >
+          <ActionDropdown
+            name="student-header-actions"
+            labelText={i18n.actions()}
+            size="s"
+            menuPlacement="right"
+            disabled={isDemoSection}
+            options={this.buildOptions()}
+            triggerButtonProps={{
+              color: 'tertiary',
+              variant: 'text',
+              children: <FontAwesomeV6Icon iconName="gear" />,
+            }}
+          />
+        </DemoSectionTooltip>
         <ControlProjectSharingDialog
           isDialogOpen={this.state.isProjectSharingDialogOpen}
           closeDialog={this.closeProjectSharingDialog}
