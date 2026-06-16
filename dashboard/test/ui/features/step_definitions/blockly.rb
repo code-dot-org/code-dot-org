@@ -302,6 +302,12 @@ Then(/^I click toolbox block with selector "(.*?)"$/) do |selector|
   JS
 end
 
+BLOCKLY_TOOLBOX_CATEGORY_LABEL_SELECTOR = ".blocklyToolbox:visible > .blocklyToolboxCategoryGroup > .blocklyToolboxCategoryContainer:nth-child(%d) > .blocklyToolboxCategory .blocklyToolboxCategoryLabel"
+
+Then /^toolbox category (\d+) has "([^"]*)" text from key "((?:[^"\\]|\\.)*)"$/ do |index, language, loc_key|
+  element_has_i18n_text(BLOCKLY_TOOLBOX_CATEGORY_LABEL_SELECTOR % index.to_i, language, loc_key)
+end
+
 # Blockly 13 toolbox categories respond to `pointerdown` (not `click`), so we must
 # dispatch a real PointerEvent rather than using native .click() or jQuery simulate.
 When(/^I click toolbox category selector "(.*?)"$/) do |selector|
