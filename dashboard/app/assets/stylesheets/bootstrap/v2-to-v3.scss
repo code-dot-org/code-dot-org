@@ -190,3 +190,22 @@ label {
   display: block;
   margin-bottom: 5px;
 }
+
+/* bootstrap-sass-2.3.2.2/vendor/assets/stylesheets/bootstrap/_modals.scss:24 */
+.dash_modal {
+  top: 10%;
+  margin-top: -29px;
+
+  &.modal {
+    overflow: visible;
+  }
+
+  .modal-dialog {
+    width: 640px;
+  }
+
+  .modal-content {
+    box-shadow: none;
+    border: none;
+  }
+}

@@ -84,6 +84,10 @@ var LegacyDialog = (module.exports = function (options) {
   if (options.id) {
     this.div.attr('id', options.id);
   }
+
+  var modalDialog = $('<div/>').addClass('modal-dialog');
+  var modalContent = $('<div/>').addClass('modal-content');
+
   var modalBody = $('<div/>').addClass('modal-body');
   modalBody.addClass('dash_modal_body');
 
@@ -93,14 +97,16 @@ var LegacyDialog = (module.exports = function (options) {
       modalHeader.append(closeLink);
       createOpenInNewTabButton(modalHeader, options.link);
     }
-    this.div.append(modalHeader);
+    modalContent.append(modalHeader);
   } else if (close) {
     modalBody.append(closeLink);
     createOpenInNewTabButton(modalBody, options.link);
   }
 
   modalBody.append(body);
-  this.div.append(modalBody).appendTo($(document.body));
+  modalContent.append(modalBody);
+  modalDialog.append(modalContent);
+  this.div.append(modalDialog).appendTo($(document.body));
 
   var resizeCallback;
   if (options.autoResizeScrollableElement) {

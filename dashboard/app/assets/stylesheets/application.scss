@@ -1081,11 +1081,6 @@ $default-modal-width: 640px;
   max-height: none;
 }
 
-.dash_modal {
-  width: $default-modal-width;
-  margin-left: -($default-modal-width * 0.5 + 1);
-}
-
 .dash_modal_body {
   padding-right: 25px;
 }
@@ -3260,96 +3255,98 @@ $modal-image-width: 100px;
 $modal-image-margin-gap: 10px;
 $modal-no-icon-gap: 22px;
 
-.modal-content {
-  margin-left: $modal-image-width + $modal-image-margin-gap;
-  html[dir=rtl] & {
-    margin-left: 0;
-    margin-right: $modal-image-width + $modal-image-margin-gap;
-  }
-  &.no-modal-icon {
-    margin-left: $modal-no-icon-gap;
-  }
+.modal-body {
+  .modal-content {
+    margin-left: $modal-image-width + $modal-image-margin-gap;
+    html[dir=rtl] & {
+      margin-left: 0;
+      margin-right: $modal-image-width + $modal-image-margin-gap;
+    }
+    &.no-modal-icon {
+      margin-left: $modal-no-icon-gap;
+    }
 
-  p, pre {
-    line-height: 27px;
-    font-size: 24px;
-    color: $neutral_dark;
-  }
+    p, pre {
+      line-height: 27px;
+      font-size: 24px;
+      color: $neutral_dark;
+    }
 
-  pre {
-    color: $purple;
-  }
-
-  .congrats {
-    @include main-font-semi-bold;
-    font-size: 21px;
-    line-height: 27px;
-  }
-
-  .instructions2 {
-    font-size: 18px;
-    color: $charcoal;
-  }
-
-  .aniGif {
-    display: block;
-    margin: 0 auto 6px auto;
-    position: relative;
-    z-index: -1;
-  }
-
-  .feedback-image {
-    width: 180px;
-    height: auto;
-    margin: 0 15px 0 0;
-    float: left;
-    border: $light_gray;
-    border-style: solid;
-  }
-
-  .feedback-links {
-    margin-top: 15px;
-  }
-
-  .feedback-callout {
-    border: solid;
-    border-radius: 10px;
-    border-color: $red;
-
-    p {
-      margin: 15px;
-      color: $red;
-      padding-right: 20%;
+    pre {
+      color: $purple;
     }
 
     .congrats {
-      font-size: 24px;
+      @include main-font-semi-bold;
+      font-size: 21px;
       line-height: 27px;
     }
 
-    .hint-header {
-      @include main-font-bold;
+    .instructions2 {
+      font-size: 18px;
+      color: $charcoal;
     }
 
-    .hint-image {
-      float: right;
-      width: 20%;
+    .aniGif {
+      display: block;
+      margin: 0 auto 6px auto;
+      position: relative;
+      z-index: -1;
     }
-  }
 
-  .lines-of-code-message {
-    font-size: 20px;
-    line-height: normal;
-    margin: 0 0 8px 0;
-  }
+    .feedback-image {
+      width: 180px;
+      height: auto;
+      margin: 0 15px 0 0;
+      float: left;
+      border: $light_gray;
+      border-style: solid;
+    }
 
-  .instructions-container {
-    .authored-hints {
-      p, pre {
-        font-size: 18px;
-        line-height: normal;
-        color: $charcoal;
-        margin: 0;
+    .feedback-links {
+      margin-top: 15px;
+    }
+
+    .feedback-callout {
+      border: solid;
+      border-radius: 10px;
+      border-color: $red;
+
+      p {
+        margin: 15px;
+        color: $red;
+        padding-right: 20%;
+      }
+
+      .congrats {
+        font-size: 24px;
+        line-height: 27px;
+      }
+
+      .hint-header {
+        @include main-font-bold;
+      }
+
+      .hint-image {
+        float: right;
+        width: 20%;
+      }
+    }
+
+    .lines-of-code-message {
+      font-size: 20px;
+      line-height: normal;
+      margin: 0 0 8px 0;
+    }
+
+    .instructions-container {
+      .authored-hints {
+        p, pre {
+          font-size: 18px;
+          line-height: normal;
+          color: $charcoal;
+          margin: 0;
+        }
       }
     }
   }
