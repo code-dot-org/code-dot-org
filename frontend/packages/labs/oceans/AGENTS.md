@@ -15,9 +15,10 @@ Consumed by:
 
 Stack: React 18 + TypeScript, Vite library mode, vitest, Playwright,
 ESLint flat config, Prettier, Stylelint. Scene components are class
-components styled with MUI `Box`/`Typography`/`IconButton` (`sx` prop).
-Color tokens live in `scenes.css` as `:root` custom properties; all
-per-component layout rules live in `sx`.
+components.
+
+Styling follows the design-system skill
+(`.agents/skills/design-system/SKILL.md`), which is authoritative.
 
 ## Setup
 
