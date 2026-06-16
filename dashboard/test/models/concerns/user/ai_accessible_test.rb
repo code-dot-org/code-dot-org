@@ -187,38 +187,38 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
 
     it 'returns false if AI_CHAT_LAB is blocked via DCDO' do
       allow(DCDO).to receive(:get).with("block_aichat_lab_chat_completion", false).and_return(true)
-      user.can_access_aichat_chat_completion?(ai_chat_lab, nil).must_equal false
+      _(user.can_access_aichat_chat_completion?(ai_chat_lab, nil)).must_equal false
     end
 
     it 'returns false if AI_TUTOR is blocked via DCDO' do
       allow(DCDO).to receive(:get).with("block_ai_tutor_chat_completion", false).and_return(true)
-      user.can_access_aichat_chat_completion?(ai_tutor, nil).must_equal false
+      _(user.can_access_aichat_chat_completion?(ai_tutor, nil)).must_equal false
     end
 
     it 'does not block AI_CHAT_LAB when only AI_TUTOR DCDO flag is set' do
       allow(DCDO).to receive(:get).with("block_ai_tutor_chat_completion", false).and_return(true)
       allow(user).to receive(:has_aichat_access?).and_return(true)
-      user.can_access_aichat_chat_completion?(ai_chat_lab, nil).must_equal true
+      _(user.can_access_aichat_chat_completion?(ai_chat_lab, nil)).must_equal true
     end
 
     it 'does not block AI_TUTOR when only AI_CHAT_LAB DCDO flag is set' do
       allow(DCDO).to receive(:get).with("block_aichat_lab_chat_completion", false).and_return(true)
       allow(user).to receive(:trust_chat_client?).and_return(true)
-      user.can_access_aichat_chat_completion?(ai_tutor, nil).must_equal true
+      _(user.can_access_aichat_chat_completion?(ai_tutor, nil)).must_equal true
     end
 
     it 'returns true when user has_aichat_access?' do
       allow(user).to receive(:has_aichat_access?).and_return(true)
-      user.can_access_aichat_chat_completion?(ai_chat_lab, 123).must_equal true
+      _(user.can_access_aichat_chat_completion?(ai_chat_lab, 123)).must_equal true
     end
 
     it 'returns true when trust_chat_client? is true' do
       allow(user).to receive(:trust_chat_client?).and_return(true)
-      user.can_access_aichat_chat_completion?(ai_tutor, nil).must_equal true
+      _(user.can_access_aichat_chat_completion?(ai_tutor, nil)).must_equal true
     end
 
     it 'returns false when neither access check passes' do
-      user.can_access_aichat_chat_completion?(ai_chat_lab, nil).must_equal false
+      _(user.can_access_aichat_chat_completion?(ai_chat_lab, nil)).must_equal false
     end
   end
 

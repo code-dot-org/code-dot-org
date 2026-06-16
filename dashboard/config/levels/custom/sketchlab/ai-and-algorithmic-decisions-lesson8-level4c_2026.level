@@ -1344,142 +1344,6 @@
             "zIndex": -1
           },
           {
-            "id": "x8--Iqo4nDhbzHV0lZNu4",
-            "type": "shape",
-            "position": {
-              "x": -2336.8784251947036,
-              "y": -870.6634567347194
-            },
-            "style": {
-              "width": 1082.137446470148,
-              "height": 1692.5055231865208
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
-            },
-            "measured": {
-              "width": 1082,
-              "height": 1693
-            }
-          },
-          {
-            "id": "THhhaqw8VzvxuO2Hs_IHP",
-            "type": "shape",
-            "position": {
-              "x": -2055.4831852990187,
-              "y": 540.1800682085454
-            },
-            "style": {
-              "width": 513.8823310537864,
-              "height": 125.80517882441208
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "Input",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
-              "fontSize": 53.30726537637261
-            },
-            "measured": {
-              "width": 514,
-              "height": 126
-            }
-          },
-          {
-            "id": "tMVH_vgpF-KY1yHL5tlBh",
-            "type": "shape",
-            "position": {
-              "x": -2067.8546130116038,
-              "y": -308.04954089494345
-            },
-            "style": {
-              "width": 513.8823310537864,
-              "height": 187.641639197177
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "Process",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
-              "fontSize": 53.30726537637261
-            },
-            "measured": {
-              "width": 514,
-              "height": 188
-            }
-          },
-          {
-            "id": "EpA-j7qTGV8GU2mdJakfw",
-            "type": "shape",
-            "position": {
-              "x": -2206.453747011468,
-              "y": -25.427105502784343
-            },
-            "style": {
-              "width": 539.4695906812364,
-              "height": 469.1038539716472
-            },
-            "data": {
-              "shapeType": "diamond",
-              "label": "Decision",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
-              "fontSize": 53.30726537637261
-            },
-            "measured": {
-              "width": 539,
-              "height": 469
-            }
-          },
-          {
-            "id": "lgTblwW9oGnX3OjYu5Es-",
-            "type": "shape",
-            "position": {
-              "x": -2079.2149390195655,
-              "y": -590.0462299150479
-            },
-            "style": {
-              "width": 528.8079749250982,
-              "height": 226.02277265964713
-            },
-            "data": {
-              "shapeType": "circle",
-              "label": "Start / End",
-              "backgroundColor": "#ffc9c9",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
-              "fontSize": 53.30726537637261
-            },
-            "measured": {
-              "width": 529,
-              "height": 226
-            }
-          },
-          {
-            "id": "76--N0Fz5WkloZJ1KY5dN",
-            "type": "text",
-            "position": {
-              "x": -2192.948971359361,
-              "y": -806.6948501261666
-            },
-            "data": {
-              "text": "Flowchart Components ",
-              "fontColor": "#1e1e1e",
-              "fontSize": 74.63017152692166,
-              "showHandles": false
-            },
-            "measured": {
-              "width": 794,
-              "height": 212
-            }
-          },
-          {
             "id": "OeUSmpeQ4e7dMEJroTARW",
             "type": "text",
             "position": {
@@ -1511,7 +1375,7 @@
             "data": {
               "shapeType": "circle",
               "label": "Start / End",
-              "backgroundColor": "#ffc9c9",
+              "backgroundColor": "var(--sketchlab-bg-pink)",
               "strokeColor": "#1e1e1e",
               "fontColor": "#1e1e1e",
               "fontSize": 53.30726537637261
@@ -1535,7 +1399,7 @@
             "data": {
               "shapeType": "rectangle",
               "label": "User Login",
-              "backgroundColor": "#a5d8ff",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
               "strokeColor": "#1e1e1e",
               "fontColor": "#1e1e1e",
               "fontSize": 53.30726537637261
@@ -1559,7 +1423,7 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Account Activity",
-              "backgroundColor": "#a5d8ff",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
               "strokeColor": "#1e1e1e",
               "fontColor": "#1e1e1e",
               "fontSize": 53.30726537637261
@@ -1583,7 +1447,7 @@
             "data": {
               "shapeType": "diamond",
               "label": "Is user \nlogged in?",
-              "backgroundColor": "#ffec99",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
               "strokeColor": "#1e1e1e",
               "fontColor": "#1e1e1e",
               "fontSize": 53.30726537637261
@@ -1703,7 +1567,7 @@
             "data": {
               "shapeType": "diamond",
               "label": "Is \nAccount \nActive",
-              "backgroundColor": "#ffec99",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
               "strokeColor": "#1e1e1e",
               "fontColor": "#1e1e1e",
               "fontSize": 53.30726537637261
@@ -1727,7 +1591,7 @@
             "data": {
               "shapeType": "diamond",
               "label": "Is \naccount \nactive?",
-              "backgroundColor": "#ffec99",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
               "strokeColor": "#1e1e1e",
               "fontColor": "#1e1e1e",
               "fontSize": 53.30726537637261
@@ -1741,8 +1605,8 @@
             "id": "Ie2M3YWs5ePq8r0SkD4CK",
             "type": "shape",
             "position": {
-              "x": 2003.1459234347863,
-              "y": -711.2124351178305
+              "x": 2021.1602347049115,
+              "y": -858.9297875328575
             },
             "style": {
               "width": 3368.2420844752446,
@@ -1751,7 +1615,7 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#e9ecef",
+              "backgroundColor": "transparent",
               "strokeColor": "#1e1e1e"
             },
             "measured": {
@@ -1760,28 +1624,9 @@
             },
             "width": 4028,
             "height": 2595,
-            "resizing": false
-          },
-          {
-            "id": "qQhAdJfmwLmpMyVT-UwKp",
-            "type": "image",
-            "position": {
-              "x": 2063.7006721411904,
-              "y": -54.02988177386305
-            },
-            "style": {
-              "width": 3273.952551967417,
-              "height": 1127.6947678998881
-            },
-            "data": {
-              "src": "/level_starter_assets/ai-and-algorithmic-decisions-lesson8-level4c_2026/uuid/2f3bab72631eb49750a9b360fdc9f8c7cdaaf2e0.png",
-              "altText": "",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 3274,
-              "height": 1128
-            }
+            "resizing": false,
+            "zIndex": -4,
+            "dragging": false
           },
           {
             "id": "Fiz3t6QyL8Ctj6iJalqnA",
@@ -1838,78 +1683,6 @@
             }
           },
           {
-            "id": "5KH5uyQgcMYiOYuaut8YF",
-            "type": "text",
-            "position": {
-              "x": 2144.1913024087658,
-              "y": 202.40159243713242
-            },
-            "data": {
-              "text": "Path 1",
-              "fontColor": "#1e1e1e",
-              "fontSize": 79.28127034964814,
-              "showHandles": false
-            },
-            "measured": {
-              "width": 230,
-              "height": 121
-            }
-          },
-          {
-            "id": "b-03QPT4D9u7Y4atZ82kT",
-            "type": "text",
-            "position": {
-              "x": 2128.05542395981,
-              "y": 424.8802028954726
-            },
-            "data": {
-              "text": "Path 2",
-              "fontColor": "#1e1e1e",
-              "fontSize": 79.28127034964815,
-              "showHandles": false
-            },
-            "measured": {
-              "width": 242,
-              "height": 121
-            }
-          },
-          {
-            "id": "MqqvXsX6jl5dv2elf_CYb",
-            "type": "text",
-            "position": {
-              "x": 2130.223407967706,
-              "y": 648.3336501434127
-            },
-            "data": {
-              "text": "Path 3",
-              "fontColor": "#1e1e1e",
-              "fontSize": 79.28127034964814,
-              "showHandles": false
-            },
-            "measured": {
-              "width": 240,
-              "height": 121
-            }
-          },
-          {
-            "id": "h4-RjIj2SIqcytAwxWckm",
-            "type": "text",
-            "position": {
-              "x": 2127.902815989411,
-              "y": 881.0984179629116
-            },
-            "data": {
-              "text": "Path 4",
-              "fontColor": "#1e1e1e",
-              "fontSize": 79.28127034964814,
-              "showHandles": false
-            },
-            "measured": {
-              "width": 247,
-              "height": 121
-            }
-          },
-          {
             "id": "ycCSPBftpeS4Sp29QNHv8",
             "type": "text",
             "position": {
@@ -1949,8 +1722,8 @@
             "id": "-8wVp2tsbnEr7pJf_bIWH",
             "type": "text",
             "position": {
-              "x": 2666.9946524169522,
-              "y": 192.18619040657393
+              "x": 2677.8032391790275,
+              "y": 195.789052660599
             },
             "data": {
               "text": "True",
@@ -1961,14 +1734,15 @@
             "measured": {
               "width": 166,
               "height": 117
-            }
+            },
+            "dragging": false
           },
           {
             "id": "5ocFaG-qlV4ASd03q0eLO",
             "type": "text",
             "position": {
-              "x": 3336.6364435622295,
-              "y": 640.5228387365511
+              "x": 3369.062203848455,
+              "y": 694.5657725469268
             },
             "data": {
               "text": "True",
@@ -1979,14 +1753,15 @@
             "measured": {
               "width": 166,
               "height": 117
-            }
+            },
+            "dragging": false
           },
           {
             "id": "iBlwv4v3Bzs5_dyankndL",
             "type": "text",
             "position": {
-              "x": 2683.076845645886,
-              "y": 411.6705793222617
+              "x": 2690.282570153936,
+              "y": 462.1106508786123
             },
             "data": {
               "text": "True",
@@ -1997,14 +1772,15 @@
             "measured": {
               "width": 166,
               "height": 117
-            }
+            },
+            "dragging": false
           },
           {
             "id": "w3WoTllUPk5QufLs1EQD9",
             "type": "text",
             "position": {
-              "x": 3352.1104397503846,
-              "y": 178.40468432289606
+              "x": 3388.139062290635,
+              "y": 210.83044460912146
             },
             "data": {
               "text": "True",
@@ -2015,14 +1791,15 @@
             "measured": {
               "width": 166,
               "height": 117
-            }
+            },
+            "dragging": false
           },
           {
             "id": "1YcJkunX-BllgkUUU5onh",
             "type": "text",
             "position": {
-              "x": 3342.2060313243496,
-              "y": 414.2714717206105
+              "x": 3374.631791610575,
+              "y": 457.505818768911
             },
             "data": {
               "text": "False",
@@ -2033,14 +1810,15 @@
             "measured": {
               "width": 191,
               "height": 117
-            }
+            },
+            "dragging": false
           },
           {
             "id": "NjjPYZpy8fJr6lVwWK-Q4",
             "type": "text",
             "position": {
-              "x": 2692.4386449251647,
-              "y": 885.9262315948769
+              "x": 2681.6300581630894,
+              "y": 954.3806144213528
             },
             "data": {
               "text": "False",
@@ -2051,14 +1829,15 @@
             "measured": {
               "width": 191,
               "height": 117
-            }
+            },
+            "dragging": false
           },
           {
             "id": "Imv1xoKC27DwXA1oW7Iuj",
             "type": "text",
             "position": {
-              "x": 2699.4531729085907,
-              "y": 648.7984054585694
+              "x": 2681.4388616384654,
+              "y": 699.23847701492
             },
             "data": {
               "text": "False",
@@ -2069,14 +1848,15 @@
             "measured": {
               "width": 191,
               "height": 117
-            }
+            },
+            "dragging": false
           },
           {
             "id": "9S3fqACaxYi7eVo0Hq724",
             "type": "text",
             "position": {
-              "x": 3351.9356335690513,
-              "y": 886.0050465160388
+              "x": 3362.7442203311266,
+              "y": 936.4451180723894
             },
             "data": {
               "text": "False",
@@ -2087,14 +1867,15 @@
             "measured": {
               "width": 191,
               "height": 117
-            }
+            },
+            "dragging": false
           },
           {
             "id": "8qYk3a-2Wp2ioPGaesJu-",
             "type": "text",
             "position": {
-              "x": 4170.7783255618,
-              "y": 131.413728764921
+              "x": 4286.069917690602,
+              "y": 199.8681115913968
             },
             "data": {
               "text": "MEGA HYPE: VIP Sub in chat",
@@ -2103,8 +1884,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 794,
-              "height": 216
+              "width": 1004,
+              "height": 117
             },
             "dragging": false
           },
@@ -2112,8 +1893,8 @@
             "id": "DkCD37genHdAlQsE0hKC2",
             "type": "text",
             "position": {
-              "x": 3980.10236862039,
-              "y": 562.7415384105868
+              "x": 4202.862654845791,
+              "y": 670.7844722209625
             },
             "data": {
               "text": "SUB ALERT: Thanks for the sub \nand support!",
@@ -2122,20 +1903,20 @@
               "showHandles": false
             },
             "measured": {
-              "width": 1210,
-              "height": 249
+              "width": 1189,
+              "height": 195
             },
             "dragging": false,
-            "width": 1210,
-            "height": 249,
+            "width": 1189,
+            "height": 195,
             "resizing": false
           },
           {
             "id": "SnEluIuyCAEyUFdlstBBa",
             "type": "text",
             "position": {
-              "x": 3919.590742018423,
-              "y": 758.1210241276701
+              "x": 4199.9252679576,
+              "y": 913.0441010507469
             },
             "data": {
               "text": "Welcome to the stream!\nDon't forget to follow!",
@@ -2144,11 +1925,11 @@
               "showHandles": false
             },
             "measured": {
-              "width": 1277,
-              "height": 309
+              "width": 1166,
+              "height": 218
             },
-            "width": 1277,
-            "height": 309,
+            "width": 1166,
+            "height": 218,
             "resizing": false,
             "dragging": false
           },
@@ -2156,8 +1937,8 @@
             "id": "XSqyvpECHoN0KOSgOw39Q",
             "type": "text",
             "position": {
-              "x": 4160.240767293834,
-              "y": 340.01703044503915
+              "x": 4279.135221676661,
+              "y": 451.70576031981557
             },
             "data": {
               "text": "VIP ARRIVAL: VIP in the chat",
@@ -2166,8 +1947,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 794,
-              "height": 224
+              "width": 1040,
+              "height": 121
             },
             "dragging": false
           },
@@ -2293,7 +2074,7 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Account Activity",
-              "backgroundColor": "#a5d8ff",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
               "strokeColor": "#1e1e1e",
               "fontColor": "#1e1e1e",
               "fontSize": 53.30726537637261
@@ -2317,46 +2098,8 @@
               "showHandles": false
             },
             "measured": {
-              "width": 794,
-              "height": 313
-            }
-          },
-          {
-            "id": "9de5cb3a-9e0f-4be3-828b-3c8ecda7401a",
-            "type": "lineAnchor",
-            "position": {
-              "x": -1509.9545214665175,
-              "y": 441.02608956966924
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "73df806c-cf01-4321-9285-5ea07a31a65a",
-            "type": "lineAnchor",
-            "position": {
-              "x": -1409.3321296564682,
-              "y": -4.089596658149958
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
+              "width": 863,
+              "height": 166
             }
           },
           {
@@ -2700,18 +2443,30 @@
               "width": 10,
               "height": 10
             }
+          },
+          {
+            "id": "14a13164-c2ec-4a55-94af-742f3748f4f2",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-algorithmic-decisions-lesson8-level4c_2026/uuid/fd99ca67-bd19-4d37-abd6-a76c6e8ea622.png",
+              "altText": "Screenshot 2026-05-25 214512"
+            },
+            "position": {
+              "x": 2465.85254239722,
+              "y": -140.53712205879629
+            },
+            "width": 3092,
+            "height": 1417,
+            "measured": {
+              "width": 3092,
+              "height": 1417
+            },
+            "resizing": false,
+            "dragging": false,
+            "zIndex": -3
           }
         ],
         "edges": [
-          {
-            "id": "8e2dc566-42a1-4c68-9768-4269c49a35b1",
-            "source": "9de5cb3a-9e0f-4be3-828b-3c8ecda7401a",
-            "target": "73df806c-cf01-4321-9285-5ea07a31a65a",
-            "type": "straight",
-            "markerEnd": {
-              "type": "arrowclosed"
-            }
-          },
           {
             "id": "ecdf36cf-8ff0-4dd7-a3ed-9fd0b2862fc6",
             "source": "4f509c60-39bc-4021-913c-98a895c718b7",
@@ -2796,15 +2551,15 @@
           }
         ],
         "viewport": {
-          "x": 273.96187396885193,
-          "y": 259.36231558450976,
-          "zoom": 0.11098519560171646
+          "x": 248.99923034842107,
+          "y": 385.8425974494924,
+          "zoom": 0.1594146922649808
         }
       }
     },
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-20T23:44:50.362+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson8-level4c_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson8-level4c_2025\"},{\"changed_at\":\"2026-04-08 00:09:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 16:48:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 16:48:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:11:35 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:11:41 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:12:59 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:13:38 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:20:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:21:28 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:26:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:33:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:37:14 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:44:52 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 18:58:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 20:12:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 18:29:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 18:30:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 18:31:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 18:42:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 18:52:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 18:52:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 19:12:19 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-16 19:50:12 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-16 20:37:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-16 21:01:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-16 21:04:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-25 23:51:33 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-01 13:06:20 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 20:21:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 13:13:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-16 02:10:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-18 19:19:36 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:44:50.362+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson8-level4c_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson8-level4c_2025\"},{\"changed_at\":\"2026-04-08 00:09:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 16:48:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 16:48:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:11:35 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:11:41 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:12:59 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:13:38 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:20:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:21:28 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:26:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:33:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:37:14 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:44:52 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 18:58:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 20:12:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 18:29:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 18:30:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 18:31:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 18:42:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 18:52:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 18:52:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 19:12:19 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-16 19:50:12 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-16 20:37:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-16 21:01:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-16 21:04:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-25 23:51:33 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-01 13:06:20 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 20:21:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 13:13:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-16 02:10:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-18 19:19:36 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-26 05:16:45 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Sketchlab>

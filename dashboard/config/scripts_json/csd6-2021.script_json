@@ -34,6 +34,7 @@
       "show_calendar": true,
       "student_detail_progress_view": true,
       "supported_locales": [
+        "es-LA",
         "es-MX",
         "it-IT",
         "sk-SK",

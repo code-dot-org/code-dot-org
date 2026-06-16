@@ -1,11 +1,10 @@
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import {getStore} from '@cdo/apps/redux';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
-import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
 import {stringifyQueryParams} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
@@ -46,19 +45,17 @@ export default class MiniViewTopRow extends React.Component {
 
     return (
       <div style={styles.main}>
-        <Button
-          __useDeprecatedTag
-          text={i18n.viewUnitOverview()}
+        <MuiButton
           href={overviewPath}
-          color={Button.ButtonColor.gray}
+          variant="outlined"
+          color="secondary"
+          size="small"
           style={isRtl ? styles.buttonRtl : styles.button}
-        />
+        >
+          {i18n.viewUnitOverview()}
+        </MuiButton>
         <div style={isRtl ? styles.toggleRtl : styles.toggle}>
-          <ProgressDetailToggle
-            activeColor={color.teal}
-            whiteBorder={true}
-            toggleStudyGroup="mini-view"
-          />
+          <ProgressDetailToggle toggleStudyGroup="mini-view" />
         </div>
       </div>
     );
@@ -68,11 +65,11 @@ export default class MiniViewTopRow extends React.Component {
 const styles = {
   main: {
     fontSize: 16,
-    backgroundColor: color.teal,
-    color: color.white,
+    backgroundColor: 'var(--background-brand-teal-primary)',
+    color: 'var(--text-neutral-inverse)',
     padding: 15,
     marginBottom: 0,
-    // matches the lineHeight of Button,
+    // matches the lineHeight of the legacy Button height (34px).
     height: 34,
     lineHeight: '34px',
   },

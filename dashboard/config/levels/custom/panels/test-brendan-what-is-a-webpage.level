@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-06-01T18:40:23.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-brendan-what-is-a-webpage-449e1425-e816-4830-ba01-803b9b23a94d",
+        "text": "When you browse the internet, you see lots of web pages, like the one we'll build for your pet fish!",
+        "imageUrl": "https://images.code.org/e2a7c262332d509753dbf2dd49c30961-test-brendan-what-is-a-webpage-panel-1-91dafaa0-c98a-49ce-8edd-ca4e6f7849fb.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-brendan-what-is-a-webpage-b64726c0-0e13-4d26-8dca-9acf988a18bb",
+        "text": "But what you see is just the *result* of some special instructions, or code, working behind the scenes.",
+        "imageUrl": "https://images.code.org/c77f3dd4ba23fac2458b5b823689530d-test-brendan-what-is-a-webpage-panel-2-a6c81cba-cdca-47fb-b30e-156240967530.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-brendan-what-is-a-webpage-22605e06-87a5-4ba4-bcd4-d629b309d989",
+        "text": "This code is like a recipe for the web page, telling the browser what to display and where. One important ingredient is **HTML**.",
+        "imageUrl": "https://images.code.org/e6c4023fd36f83427c72271fef6c05e3-test-brendan-what-is-a-webpage-panel-3-4f5d888e-4e31-4212-9cd1-bef7ddbe226b.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-brendan-what-is-a-webpage-65b97116-fe1b-4c21-bd04-fb308e557dba",
+        "text": "HTML (HyperText Markup Language) gives structure to web content, like titles, headings, paragraphs, and pictures.",
+        "imageUrl": "https://images.code.org/0f5206a869879e01dd922742ae36bac1-test-brendan-what-is-a-webpage-panel-4-7fa16316-239c-486a-8770-f64fe840e70a.png",
+        "layout": "text-top-center"
+      }
+    ],
+    "generate_outline": "Introduce what a web page is, how it's viewed in a browser, and that it's made of code. Explain HTML as the language for structuring web content."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-01 18:41:09 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-01 18:41:09 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

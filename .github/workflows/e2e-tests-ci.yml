@@ -1,0 +1,58 @@
+# Playwright end-to-end suite for studio.code.org.
+#
+# Runs against test-studio.code.org by default. Set TARGET_URL to run against
+# a different deployment.
+name: E2E-Tests-CI
+
+on:
+  workflow_call:
+    inputs:
+      playwright-image-tag:
+        required: true
+        type: string
+        description: 'mcr.microsoft.com/playwright image tag, e.g. v1.59.1-noble. Version must match the catalog pin in frontend/.yarnrc.yml; variant must match the runner Ubuntu release.'
+
+jobs:
+  e2e:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    container:
+      image: mcr.microsoft.com/playwright:${{ inputs.playwright-image-tag }}
+    steps:
+      - name: Install LFS
+        run: apt-get update && apt-get install -y git-lfs
+
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            .github
+          lfs: true
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: E2E Tests
+        # Step-level env so the browser path reaches the playwright subprocess
+        # (job-level env is not reliably forwarded through yarn/turbo). The
+        # container pre-installs browsers at /ms-playwright. CI=true is set by
+        # GitHub Actions, which flips playwright.config to its CI reporter lane.
+        env:
+          PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+          # Firefox/WebKit won't launch as root unless $HOME is owned by the user;
+          # the image's /github/home is pwuser's, so point HOME at root's own dir.
+          HOME: /root
+          # Explicit target: the deployed test env. Repoint at a PR adhoc to gate PR code.
+          TARGET_URL: https://test-studio.code.org
+        run: yarn workspace @code-dot-org/e2e-tests test:ui:ci
+        working-directory: ./frontend
+
+      - name: Upload Playwright Report
+        if: failure() || cancelled()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-tests-report
+          path: |
+            frontend/packages/e2e-tests/playwright-report/
+            frontend/packages/e2e-tests/test-results/
+          retention-days: 7

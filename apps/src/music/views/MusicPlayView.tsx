@@ -91,7 +91,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
         <img
           className={moduleStyles.playViewImage}
           src={musicPlayViewLogo}
-          alt="Code.org play view logo"
+          alt="CodeAI play view logo"
         />
         <div className={moduleStyles.card}>
           <div className={moduleStyles.infoSection}>

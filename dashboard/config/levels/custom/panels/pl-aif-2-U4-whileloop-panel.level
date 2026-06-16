@@ -10,7 +10,7 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "#While Loop\nA **while loop** is a loop that repeats a set of steps as long as a condition is true. \n\n#### Let's break it down! ",
+        "text": "# While Loop\nA **while loop** is a loop that repeats a set of steps as long as a condition is true. \n\n#### Let's break it down! ",
         "imageUrl": "https://images.code.org/1a927c5b5bb4b416308c9ae15b77ff91-whileloop.png",
         "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
         "layout": "text-bottom-right"
@@ -46,8 +46,9 @@
         "layout": "text-bottom-right"
       }
     ],
-    "name_suffix": "_2025-pilot"
+    "name_suffix": "_2025-pilot",
+    "use_links": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-01-16T15:14:47.290+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U4-forloop-panel\\\"\"],\"cloned_from\":\"pl-aif-2-U4-forloop-panel\"},{\"changed_at\":\"2026-01-16 16:13:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-01-16 16:15:03 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-01-16T15:14:47.290+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U4-forloop-panel\\\"\"],\"cloned_from\":\"pl-aif-2-U4-forloop-panel\"},{\"changed_at\":\"2026-01-16 16:13:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-01-16 16:15:03 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-06-11 18:30:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Panels>

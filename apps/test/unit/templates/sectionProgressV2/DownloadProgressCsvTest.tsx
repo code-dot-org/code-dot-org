@@ -1,4 +1,5 @@
 import {
+  buildCSVString,
   getLessonProgressCSVData,
   getLevelProgressCSVData,
 } from '@cdo/apps/templates/sectionProgressV2/DownloadProgressCsv';
@@ -265,5 +266,40 @@ describe('getLevelProgressCSVData', () => {
         '2.1': 'Submitted',
       },
     ]);
+  });
+});
+
+describe('buildCSVString', () => {
+  it('joins plain headers and rows without adding quotes', () => {
+    const result = buildCSVString(
+      ['Student_Name', 'Lesson One'],
+      [{Student_Name: 'Alice Smith', 'Lesson One': '100%'}]
+    );
+
+    expect(result).toBe('Student_Name,Lesson One\nAlice Smith,100%');
+  });
+
+  it('wraps header fields containing commas in double quotes', () => {
+    const result = buildCSVString(
+      ['Student_Name', 'Loops, Part 1'],
+      [{Student_Name: 'Alice Smith', 'Loops, Part 1': '100%'}]
+    );
+
+    expect(result).toBe('Student_Name,"Loops, Part 1"\nAlice Smith,100%');
+  });
+
+  it('wraps value fields containing commas in double quotes', () => {
+    const result = buildCSVString(
+      ['Student_Name', 'Status'],
+      [{Student_Name: 'Smith, Alice', Status: 'Done'}]
+    );
+
+    expect(result).toBe('Student_Name,Status\n"Smith, Alice",Done');
+  });
+
+  it('escapes embedded double quotes by doubling them', () => {
+    const result = buildCSVString(['Title'], [{Title: 'She said "hi"'}]);
+
+    expect(result).toBe('Title\n"She said ""hi"""');
   });
 });

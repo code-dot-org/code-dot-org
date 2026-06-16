@@ -1,0 +1,41 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-05-28T18:16:21.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "require_edit_to_continue": true,
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "455c75cd-4c4a-490a-a45d-cfa7ce75505b": {
+          "id": "455c75cd-4c4a-490a-a45d-cfa7ce75505b",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Combining Shapes</title>\n  <style>\n    body {\n      font-family: sans-serif;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      margin-top: 20px;\n    }\n    canvas {\n      border: 2px solid black;\n      background-color: lightgray;\n    }\n  </style>\n</head>\n<body>\n  <h1>My Combined Shapes!</h1>\n  <canvas id=\"myCanvas\" width=\"400\" height=\"300\"></canvas>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        },
+        "47bc58be-5587-4d60-b757-3f036c0405d5": {
+          "id": "47bc58be-5587-4d60-b757-3f036c0405d5",
+          "name": "script.js",
+          "contents": "const canvas = document.getElementById(\"myCanvas\");\nconst ctx = canvas.getContext(\"2d\");\n\n// The canvas is 400 pixels wide and 300 pixels high.\n// (0,0) is the top-left corner.\n// X increases to the right, Y increases downwards.\n\n/**\n * Helper function to draw a filled circle.\n * @param {number} x The x-coordinate of the circle's center.\n * @param {number} y The y-coordinate of the circle's center.\n * @param {number} radius The radius of the circle.\n * @param {string} color The color to fill the circle with (e.g., \"red\", \"blue\").\n */\nfunction drawCircle(x, y, radius, color) {\n  ctx.beginPath(); // Start drawing a new path\n  // arc(centerX, centerY, radius, startAngle, endAngle)\n  // For a full circle, startAngle is 0 and endAngle is Math.PI * 2 (which is 360 degrees)\n  ctx.arc(x, y, radius, 0, Math.PI * 2);\n  ctx.fillStyle = color;\n  ctx.fill(); // Fill the circle with the set color\n}\n\n// Let's start with one rectangle and one circle!\n\n// Example Rectangle:\n// ctx.fillRect(x position, y position, width, height);\nctx.fillStyle = \"green\";\nctx.fillRect(50, 50, 100, 75);\n\n// Example Circle:\n// drawCircle(center X, center Y, radius, color);\ndrawCircle(250, 150, 50, \"blue\");\n\n// Your Challenge:\n// Add more rectangles and circles to create a simple composition!\n// Try to make a house, a face, or anything you can imagine.\n// Experiment with different positions, sizes, and colors!\n\n// Hint for ctx.fillRect:\n// ctx.fillStyle = \"yourColor\";\n// ctx.fillRect(x, y, width, height);\n\n// Hint for drawCircle:\n// drawCircle(centerX, centerY, radius, \"yourColor\");\n",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "455c75cd-4c4a-490a-a45d-cfa7ce75505b",
+        "47bc58be-5587-4d60-b757-3f036c0405d5"
+      ]
+    },
+    "long_instructions": "Welcome back to your digital canvas! So far, you've learned how to draw rectangles and circles separately, and how to use x and y coordinates to place them exactly where you want.\r\n\r\nNow, it's time to put all that knowledge together! Your challenge is to combine both rectangles and circles to create a simple drawing or composition on your canvas. Think of it like building with digital blocks!\r\n\r\nOpen `script.js`. You'll find the `drawCircle` helper function we used before, and an example of both a rectangle and a circle. Your task is to:\r\n1.  **Add more shapes!** Use `ctx.fillRect()` to draw more rectangles and `drawCircle()` to draw more circles.\r\n2.  **Experiment with coordinates, sizes, and colors.** Change the `x`, `y`, `width`, `height`, `radius`, and `color` values to make your shapes look different.\r\n\r\nCan you create a simple scene like a house, a face, or a robot? Be creative and have fun seeing what you can draw with just these two basic shapes!",
+    "generate_outline": "Students will combine their knowledge of coordinates and drawing functions to position and draw multiple rectangles and circles. The goal is to create a simple composition, such as a face or a basic house."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-28 18:16:31 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-28 18:16:31 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-28 18:17:05 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

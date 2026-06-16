@@ -1,10 +1,8 @@
+import Modal from '@code-dot-org/component-library/modal';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import i18n from '@cdo/locale';
 
 function EndOfLessonDialog({lessonNumber, isSummaryView}) {
@@ -23,43 +21,30 @@ function EndOfLessonDialog({lessonNumber, isSummaryView}) {
     document.getElementById(completedLessonElementId)?.scrollIntoView();
   };
 
+  if (!isDialogOpen) {
+    return null;
+  }
+
   return (
-    <BaseDialog
-      useUpdatedStyles
-      isOpen={isDialogOpen}
-      handleClose={handleClose}
-      style={styles.dialog}
-    >
-      <h2 className="uitest-end-of-lesson-header">
-        {i18n.endOfLessonDialogHeading({lessonNumber})}
-      </h2>
-      <div>{i18n.endOfLessonDialogDetails()}</div>
-      <DialogFooter rightAlign={true}>
-        <Button
-          __useDeprecatedTag
-          text={i18n.ok()}
-          color={Button.ButtonColor.brandSecondaryDefault}
-          onClick={handleClose}
-        />
-      </DialogFooter>
-    </BaseDialog>
+    <Modal
+      className="uitest-end-of-lesson-header"
+      onClose={handleClose}
+      title={i18n.endOfLessonDialogHeading({lessonNumber})}
+      description={i18n.endOfLessonDialogDetails()}
+      primaryButtonProps={{
+        onClick: handleClose,
+        children: i18n.ok(),
+        size: 'medium',
+        color: 'primary',
+        variant: 'contained',
+      }}
+    />
   );
 }
 
 EndOfLessonDialog.propTypes = {
   lessonNumber: PropTypes.string.isRequired,
   isSummaryView: PropTypes.bool.isRequired,
-};
-
-const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20,
-  },
-  instructions: {
-    marginTop: 20,
-  },
 };
 
 export const UnconnectedEndOfLessonDialog = EndOfLessonDialog;

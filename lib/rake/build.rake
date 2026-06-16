@@ -210,20 +210,11 @@ namespace :build do
     end
   end
 
-  desc 'Builds i18n'
-  timed_task_with_logging :i18n do
-    Dir.chdir(bin_dir('i18n')) do
-      ChatClient.log 'Installing <b>i18n</b> dependencies...'
-      RakeUtils.npm_install
-    end
-  end
-
   tasks = []
   tasks << :apps if CDO.build_apps
   tasks << :studio if CDO.build_studio && !rack_env?(:levelbuilder) && !rack_env?(:production)
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
-  tasks << :i18n if CDO.build_i18n
   timed_task_with_logging all: tasks
 end
 

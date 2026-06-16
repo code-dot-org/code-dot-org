@@ -2,6 +2,8 @@
 export interface ChatAsset {
   filename: string;
   source: AssetSource;
+  /** Unique storage key in the assets bucket. Defaults to filename if absent. */
+  bucketKey?: string;
 }
 
 export enum AssetSource {

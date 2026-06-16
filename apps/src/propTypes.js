@@ -1,5 +1,5 @@
 /**
- * Code.org custom react proptypes.
+ * CodeAI custom react proptypes.
  */
 import React from 'react';
 

@@ -1,0 +1,146 @@
+.listContainer {
+  height: 100%;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 16px 64px 16px;
+  height: fit-content;
+}
+
+.notification {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 1px solid var(--borders-neutral-primary, #292f36);
+  margin-top: 12px;
+  padding-bottom: 12px;
+}
+
+.icon {
+  font-size: 20px;
+  margin-inline-end: 8px;
+  line-height: var(--font-line-height-body-sm, 21.56px);
+}
+
+.iconGray {
+  color: var(--text-neutral-secondary);
+}
+
+.iconPurple {
+  color: var(--text-brand-purple-primary);
+}
+
+.iconBlue {
+  color: var(--text-info-primary);
+}
+
+.iconAqua {
+  color: var(--text-brand-aqua-primary);
+}
+
+.iconGreen {
+  color: var(--text-success-primary);
+}
+
+.iconRed {
+  color: var(--text-error-primary);
+}
+
+.iconOrange {
+  color: var(--text-warning-primary);
+}
+
+p.text {
+  margin-inline-end: 16px;
+  margin-bottom: 4px;
+  flex-grow: 1;
+  height: fit-content;
+}
+
+.links {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 4px;
+  column-gap: 8px;
+
+  & li {
+    list-style-type: none;
+  }
+}
+
+li.hrefLink {
+  & a {
+    border: 1px solid var(--borders-neutral-strong);
+    border-radius: 4px;
+    padding: 0 8px;
+    font-size: 12px;
+    color: var(--text-neutral-black-fixed);
+    display: flex;
+    align-items: center;
+    height: 24px;
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: none;
+      color: var(--text-neutral-black-fixed);
+      background-color: var(--background-neutral-tertiary);
+    }
+
+    & i {
+      margin-inline-start: 4px;
+    }
+  }
+}
+
+.aiButton {
+  margin: 0;
+  padding: 2px 16px;
+  font-size: 12px;
+  background-color: var(--background-neutral-primary);
+  border: 1px solid var(--borders-neutral-solid);
+  border-radius: 100px;
+  font-weight: 600;
+
+  &:hover {
+    background-color: var(--background-neutral-tertiary);
+  }
+}
+
+p.date {
+  font-size: 10px;
+  color: var(--text-neutral-quaternary);
+  min-width: 64px;
+  line-height: var(--font-line-height-body-xxs, 17.6px);
+}
+
+.readAt {
+  color: var(--background-error-primary);
+  font-size: 8px;
+  min-width: 8px;
+  margin-inline-start: 8px;
+  width: 8px;
+  line-height: var(--font-line-height-body-xxs, 17.6px);
+}
+
+.emptyNotificationListContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .emptyNotificationList {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 32px;
+  }
+}

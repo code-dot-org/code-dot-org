@@ -1,139 +1,64 @@
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
 import {setIsSummaryView} from '@cdo/apps/code-studio/progressRedux';
-import {hasGroups} from '@cdo/apps/code-studio/progressReduxSelectors';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import ToggleGroup from '../ToggleGroup';
-
-import groupDetailActive from './images/groupToggleDetailActive.png';
-import groupDetailInactive from './images/groupToggleDetailInactive.png';
-import groupSummaryActive from './images/groupToggleSummaryActive.png';
-import groupSummaryInactive from './images/groupToggleSummaryInactive.png';
-import detailActive from './images/toggleDetailActive.png';
-import detailInactive from './images/toggleDetailInactive.png';
-import summaryActive from './images/toggleSummaryActive.png';
-import summaryInactive from './images/toggleSummaryInactive.png';
-
-const imageSets = {
-  teal: {
-    summaryActive,
-    summaryInactive,
-    detailActive,
-    detailInactive,
-  },
-  purple: {
-    summaryActive: groupSummaryActive,
-    summaryInactive: groupSummaryInactive,
-    detailActive: groupDetailActive,
-    detailInactive: groupDetailInactive,
-  },
-};
+const SUMMARY = 'summary';
+const DETAIL = 'detail';
 
 /**
  * A toggle that provides a way to switch between detail and summary views of
- * our course progress.
+ * our course progress. DSCO SegmentedButtons in `iconOnly` mode renders the
+ * paired list-view / card-view icons and handles its own selected/unselected
+ * styling, focus management, and accessibility.
  */
 class ProgressDetailToggle extends React.Component {
   static propTypes = {
-    activeColor: PropTypes.string,
-    whiteBorder: PropTypes.bool,
     toggleStudyGroup: PropTypes.string,
 
     // redux backed
-    isPlc: PropTypes.bool.isRequired,
     isSummaryView: PropTypes.bool.isRequired,
-    hasGroups: PropTypes.bool.isRequired,
     setIsSummaryView: PropTypes.func.isRequired,
   };
 
-  onChange = () => {
-    const isSummaryView = !this.props.isSummaryView;
-    this.props.setIsSummaryView(isSummaryView);
+  onChange = value => {
+    this.props.setIsSummaryView(value === SUMMARY);
   };
 
   render() {
-    const {whiteBorder, isSummaryView, hasGroups, isPlc} = this.props;
-
-    let activeColor = this.props.activeColor;
-    if (!activeColor) {
-      activeColor = !isPlc && hasGroups ? color.purple : color.cyan;
-    }
-
-    const images =
-      activeColor === color.purple ? imageSets.purple : imageSets.teal;
+    const {isSummaryView} = this.props;
     return (
-      <ToggleGroup
-        selected={isSummaryView ? 'summary' : 'detail'}
-        activeColor={activeColor}
+      <SegmentedButtons
+        type="iconOnly"
+        size="s"
+        selectedButtonValue={isSummaryView ? SUMMARY : DETAIL}
         onChange={this.onChange}
-      >
-        <button
-          type="button"
-          value="summary"
-          style={
-            whiteBorder
-              ? {...styles.whiteBorder, ...styles.buttonStyles}
-              : styles.buttonStyles
-          }
-        >
-          <img
-            src={isSummaryView ? images.summaryActive : images.summaryInactive}
-            style={styles.icon}
-            alt={i18n.summaryView()}
-          />
-        </button>
-        <button
-          type="button"
-          value="detail"
-          style={
-            whiteBorder
-              ? {...styles.whiteBorder, ...styles.buttonStyles}
-              : styles.buttonStyles
-          }
-          className="uitest-toggle-detail"
-        >
-          <img
-            src={isSummaryView ? images.detailInactive : images.detailActive}
-            style={styles.icon}
-            alt={i18n.detailView()}
-          />
-        </button>
-      </ToggleGroup>
+        buttons={[
+          {
+            value: SUMMARY,
+            icon: {iconName: 'list'},
+            ariaLabel: i18n.summaryView(),
+          },
+          {
+            value: DETAIL,
+            icon: {iconName: 'window-maximize'},
+            ariaLabel: i18n.detailView(),
+            id: 'uitest-toggle-detail',
+          },
+        ]}
+      />
     );
   }
 }
-
-const styles = {
-  whiteBorder: {
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: color.white,
-  },
-  buttonStyles: {
-    marginBottom: 5,
-  },
-  icon: {
-    fontSize: 20,
-    paddingLeft: 3,
-    paddingRight: 3,
-    paddingTop: 6,
-    paddingBottom: 3,
-    // If not set explicitly, css sets "button > img" to 0.6
-    opacity: 1,
-  },
-};
 
 export const UnconnectedProgressDetailToggle = ProgressDetailToggle;
 
 export default connect(
   state => ({
-    isPlc: !!state.progress.deeperLearningCourse,
     isSummaryView: state.progress.isSummaryView,
-    hasGroups: hasGroups(state.progress),
   }),
   {setIsSummaryView}
 )(ProgressDetailToggle);

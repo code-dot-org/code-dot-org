@@ -46,9 +46,9 @@
       "availableModelIds": [
         "gemini-2.5-flash-image"
       ],
-      "multimodalEnabled": true
+      "multimodalEnabled": false
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-21T22:21:58.761+00:00\",\"changed\":[\"cloned from \\\"use_ai_test_choicec\\\"\"],\"cloned_from\":\"use_ai_test_choicec\"},{\"changed_at\":\"2026-04-21 22:38:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-21 22:43:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-21 23:01:05 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-21T22:21:58.761+00:00\",\"changed\":[\"cloned from \\\"use_ai_test_choicec\\\"\"],\"cloned_from\":\"use_ai_test_choicec\"},{\"changed_at\":\"2026-04-21 22:38:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-21 22:43:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-04-21 23:01:05 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-05-27 17:30:18 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":13506,\"changed_by_email\":\"sanchit+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

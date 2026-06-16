@@ -500,7 +500,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       unit2.reload
       # unit2's original unit group removed
       assert_equal 1, new_unit_group.original_units.length
-      assert_equal nil, unit2.original_unit_group
+      assert_nil unit2.original_unit_group
     end
 
     test "remove UnitGroupUnits that cannot change course version from secondary unit groups" do
@@ -1193,5 +1193,25 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     assert unit_group.has_ai_chat_tools?
     assert unit_group.requires_ai_chat_tools?
+  end
+
+  describe '#link' do
+    subject(:link) {unit_group.link(**link_args)}
+
+    let(:unit_group) {build_stubbed(:unit_group)}
+    let(:link_args) {{}}
+
+    it 'returns course relative URL' do
+      _link.must_equal "/courses/#{unit_group.name}"
+    end
+
+    context 'when :section_id arg is provided' do
+      let(:section_id) {rand(1000..9999)}
+      let(:link_args) {{section_id:}}
+
+      it 'returns course relative URL with section_id query param' do
+        _link.must_equal "/courses/#{unit_group.name}?section_id=#{section_id}"
+      end
+    end
   end
 end

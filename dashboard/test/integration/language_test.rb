@@ -14,8 +14,8 @@ class LanguageTest < ActionDispatch::IntegrationTest
         get new_user_session_path, env: request_env, params: request_params
 
         follow_redirect! while response.status == 302
-        must_respond_with :success
 
+        must_respond_with :success
         must_select "html[lang='#{expected_locale}']"
       end
     end
@@ -35,6 +35,9 @@ class LanguageTest < ActionDispatch::IntegrationTest
 
         get new_user_session_path
 
+        follow_redirect! if response.status == 302
+
+        must_respond_with :success
         must_select "html[lang='#{normalized_locale}']"
       end
     end

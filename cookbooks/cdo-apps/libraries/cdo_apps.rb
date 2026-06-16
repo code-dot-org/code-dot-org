@@ -34,21 +34,6 @@ module CdoApps
       group user
     end
 
-    # If we're using NewRelic, it's important that we configure it before
-    # creating the service for the web server. Otherwise, if NewRelic is
-    # enabled for an environment but not yet configured, any step that triggers
-    # a service restart will fail with a SystemStackError.
-    if node['cdo-newrelic']
-      template "#{app_root}/config/newrelic.yml" do
-        source 'newrelic.yml.erb'
-        user user
-        group user
-        variables app_name: app_name.capitalize,
-          log_dir: log_dir,
-          auto_instrument: false
-      end
-    end
-
     # Bootstrap `setup_db` on a new system.
     # Runs only once on initial install.
     file "#{app_name}_setup" do
