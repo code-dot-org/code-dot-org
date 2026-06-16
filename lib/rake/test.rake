@@ -124,9 +124,7 @@ namespace :test do
     Lighthouse.report CDO.studio_url('')
   end
 
-  # Run the Playwright e2e suite, upload its report, and post a Cucumber-style
-  # start/finish summary to Slack. Non-blocking: a failure never fails the deploy
-  # or PR build. Targets TARGET_URL (default: this env's studio URL).
+  # Non-blocking: a failure is reported to Slack but never fails the deploy or PR build.
   timed_task_with_logging :playwright_ui do
     target_url = ENV['TARGET_URL'].presence || CDO.studio_url('')
     e2e_dir = frontend_dir('packages', 'e2e-tests')
@@ -162,7 +160,6 @@ namespace :test do
     report_url = Cdo::PlaywrightReport.upload(File.join(e2e_dir, 'playwright-report'))
     summary = playwright_results_summary(File.join(e2e_dir, 'test-results', 'results.json'))
 
-    # Finish report, Cucumber-style (see runner.rb#pass_fail_summary).
     status = passed ? '<b>✅ PASSED</b>' : '<b>❌ FAILED</b> (non-blocking)'
     report = "Playwright e2e tests for <b>dashboard</b>: #{status}\n"
     report += playwright_pass_fail_summary(summary, duration)
@@ -172,8 +169,7 @@ namespace :test do
 
   # Run the deploy-time UI suites in parallel. If one suite
   # raises, allow the others to complete, then make sure this task raises.
-  # :playwright_ui is non-blocking (it rescues its own failure and reports to
-  # Slack), so it joins the fan-out but never makes ui_all raise.
+  # :playwright_ui rescues its own failure, so it never makes ui_all raise.
   timed_task_with_logging :ui_all do
     Parallel.each(
       [:eyes_ui, :saucelabs_ui, :devicefarm_desktop_ui, :playwright_ui],
@@ -598,7 +594,6 @@ GLOBS_AFFECTING_EVERYTHING = %w(
   docker/ci/**/*
 )
 
-# Counts from the JSON reporter's stats; nil if results.json is missing/unparseable.
 def playwright_results_summary(results_json)
   return nil unless File.file?(results_json)
   stats = JSON.parse(File.read(results_json)).fetch('stats', {})
@@ -618,7 +613,6 @@ rescue StandardError => exception
   nil
 end
 
-# Pass/fail one-liner, Cucumber-style (see runner.rb#pass_fail_summary).
 def playwright_pass_fail_summary(summary, duration)
   formatted_duration = RakeUtils.format_duration(duration)
   return "Duration: #{formatted_duration}. (test counts unavailable)" unless summary

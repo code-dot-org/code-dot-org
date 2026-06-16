@@ -45,8 +45,7 @@ module Cdo
       nil
     end
 
-    # Where #upload will publish index.html, without uploading — lets us link the
-    # report before the run starts. nil if it can't be built (best-effort).
+    # Computed without uploading, so the report can be linked before the run finishes.
     def self.index_url
       # ::AWS, not bare AWS (→ Cdo::AWS); see #upload.
       ::AWS::S3.public_url(BUCKET, "#{prefix}/playwright/index.html")

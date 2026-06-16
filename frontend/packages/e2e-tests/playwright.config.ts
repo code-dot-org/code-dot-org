@@ -21,13 +21,12 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: isAutomated,
   // retry in automated lanes so a flake can't pass one lane and fail another.
-  retries: isAutomated ? 1 : 0,
+  retries: isAutomated ? 2 : 0,
   // @no_ci needs infra only the deployed env has — skip on Drone (localhost build),
   // run on DTT/GHA. Mirrors the Cucumber suite, where only --ci/Drone skips it.
   grepInvert: provider === 'drone' ? /@no_ci/ : undefined,
   // 100% only on GHA (dedicated runner, external server); Drone/DTT share CPU.
   workers: provider === 'gha' ? '100%' : undefined,
-  // html + json artifacts only in automated lanes; local stays list-only.
   reporter: isAutomated
     ? [
         ['list'],

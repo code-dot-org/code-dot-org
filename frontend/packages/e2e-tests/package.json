@@ -19,7 +19,7 @@
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "test:report": "playwright show-report playwright-report",
-    "test:ui:e2e": "playwright test --pass-with-no-tests",
+    "test:ui:ci": "playwright test --pass-with-no-tests",
     "test:ui:local": "TARGET_URL=http://localhost-studio.code.org:3000 playwright test --project=chromium --pass-with-no-tests",
     "typecheck": "tsc --noEmit"
   },

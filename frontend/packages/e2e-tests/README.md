@@ -10,10 +10,10 @@ From `frontend/`:
     yarn workspace @code-dot-org/e2e-tests test:ui:local
 
     # Against an adhoc (or any deployment), all browsers:
-    TARGET_URL=https://my-adhoc.cdn-code.org yarn workspace @code-dot-org/e2e-tests test:ui:e2e
+    TARGET_URL=https://my-adhoc.cdn-code.org yarn workspace @code-dot-org/e2e-tests test:ui:ci
 
 `TARGET_URL` overrides the default target (`test-studio.code.org`). With no
-`TARGET_URL`, `test:ui:e2e` runs against test-studio.
+`TARGET_URL`, `test:ui:ci` runs against test-studio.
 
 ## Why GitHub Actions, and why not (just) Drone
 
