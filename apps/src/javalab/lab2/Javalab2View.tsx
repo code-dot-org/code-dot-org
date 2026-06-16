@@ -62,7 +62,6 @@ const defaultConfig: ConfigType = {
   hideNewFolderButton: true,
   layoutComponents: {
     horizontal: HorizontalLayout,
-    vertical: HorizontalLayout,
     share: HorizontalLayout,
     widget: HorizontalLayout,
   },
