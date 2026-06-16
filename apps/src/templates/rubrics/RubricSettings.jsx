@@ -1,6 +1,6 @@
 import Link from '@code-dot-org/component-library/link';
 import Toggle from '@code-dot-org/component-library/toggle';
-import {Typography} from '@mui/material';
+import {Button as MuiButton, Typography} from '@mui/material';
 import classnames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
@@ -8,7 +8,6 @@ import React, {useEffect, useState, useMemo, useCallback} from 'react';
 import {CSVLink} from 'react-csv';
 import {connect} from 'react-redux';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -293,18 +292,18 @@ function RubricSettings({
                   </Typography>
                 )}
               </div>
-              <Button
+              <MuiButton
                 className="uitest-run-ai-assessment-all"
-                text={i18n.runAiAssessmentClass()}
-                color={Button.ButtonColor.brandSecondaryDefault}
+                variant="contained"
+                color="primary"
+                size="small"
+                type="button"
                 onClick={handleRunAiAssessmentAll}
-                style={{margin: 0}}
                 disabled={statusAll !== STATUS_ALL.READY}
+                loading={statusAll === STATUS_ALL.EVALUATION_PENDING}
               >
-                {statusAll === STATUS_ALL.EVALUATION_PENDING && (
-                  <i className="fa-solid fa-spinner fa-spin" />
-                )}
-              </Button>
+                {i18n.runAiAssessmentClass()}
+              </MuiButton>
               <div className={style.detailsGroup}>
                 <Typography
                   className={
@@ -343,13 +342,16 @@ function RubricSettings({
               )}
             </div>
             {teacherEvalCount === 0 && (
-              <Button
+              <MuiButton
                 className="uitest-rubric-switch-content-tab"
-                text={i18n.rubricTabStudent()}
-                color={Button.ButtonColor.brandSecondaryDefault}
+                variant="contained"
+                color="primary"
+                size="small"
+                type="button"
                 onClick={onClickSwitchTab}
-                style={{margin: 0}}
-              />
+              >
+                {i18n.rubricTabStudent()}
+              </MuiButton>
             )}
             {!!teacherEval && teacherEvalCount > 0 && (
               <CSVLink
@@ -357,13 +359,16 @@ function RubricSettings({
                 data={teacherEval}
                 filename={`lesson_${rubric.lesson.position}_student_scores.csv`}
               >
-                <Button
+                <MuiButton
                   className="uitest-rubric-download-csv"
-                  text={i18n.downloadCSV()}
-                  color={Button.ButtonColor.brandSecondaryDefault}
+                  variant="contained"
+                  color="primary"
+                  size="small"
+                  type="button"
                   onClick={onClickDownloadCSV}
-                  style={{margin: 0}}
-                />
+                >
+                  {i18n.downloadCSV()}
+                </MuiButton>
               </CSVLink>
             )}
           </div>

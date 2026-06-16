@@ -190,7 +190,7 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
                 useIconButton={false}
                 triggerButtonProps={{
                   variant: 'outlined',
-                  color: 'secondary',
+                  color: 'tertiary',
                   size: 'small',
                   startIcon: <FontAwesomeV6Icon iconName="caret-down" />,
                   children: i18n.printingOptions(),

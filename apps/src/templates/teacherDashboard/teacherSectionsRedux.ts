@@ -98,6 +98,8 @@ const demoPresetFromServerDemoPreset = (
     : null,
   studentSnapshotDefaultTourLesson:
     demoPreset.student_snapshot_default_tour_lesson ?? null,
+  reviewSyllabusQuizLesson: demoPreset.review_syllabus_quiz_lesson ?? null,
+  reviewSyllabusQuizOptions: demoPreset.review_syllabus_quiz_options ?? null,
 });
 
 export class DemoSectionCreationError extends Error {

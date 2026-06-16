@@ -1,5 +1,8 @@
 import {expect, type Locator, type Page} from '@playwright/test';
 
+import {AuthoredHintsComponent} from '../components/authored-hints';
+import {labLevelUrl, type LabLevelUrlParams} from '../shared/routes';
+
 import {BasePage} from './base-page';
 
 /** Base for legacy Blockly labs (maze, artist, flappy, ...). */
@@ -7,9 +10,27 @@ export class LegacyBlocklyLab extends BasePage {
   /** Instructions tab; its text localizes with the lab locale. */
   readonly instructionsTab: Locator;
 
+  /** Outer instructions container; authored hint content is appended here. */
+  readonly instructionsPanel: Locator;
+
+  /** Authored hints (lightbulb, count badge, "Yes" prompt) in the CSF instructions UI. */
+  readonly hints: AuthoredHintsComponent;
+
   constructor(page: Page) {
     super(page);
     this.instructionsTab = page.locator('.uitest-instructionsTab');
+    this.instructionsPanel = page.locator('.csf-top-instructions');
+    this.hints = new AuthoredHintsComponent(page);
+  }
+
+  /**
+   * Navigate to a lab level and wait for the lab. domcontentloaded, not 'load':
+   * the lab is interactive long before all subresources, and 'load' can exceed
+   * the test timeout on webkit.
+   */
+  async gotoLevel(params: LabLevelUrlParams): Promise<void> {
+    await this.page.goto(labLevelUrl(params), {waitUntil: 'domcontentloaded'});
+    await this.waitForReady();
   }
 
   /** Wait for the lab to be interactive: run button, header, overlay dismissed, header settled. */

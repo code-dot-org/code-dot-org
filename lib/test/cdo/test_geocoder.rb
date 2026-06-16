@@ -4,6 +4,19 @@ require 'cdo/geocoder'
 class GeocoderTest < Minitest::Test
   include SetupTest
 
+  def test_extract_address_candidate
+    # Too short or too few words — not a candidate.
+    assert_nil(Geocoder.extract_address_candidate(nil))
+    assert_nil(Geocoder.extract_address_candidate(''))
+    assert_nil(Geocoder.extract_address_candidate('15 seconds'))
+    # Trailing whitespace must not inflate the word/space count into a false positive.
+    assert_nil(Geocoder.extract_address_candidate('15 seconds '))
+    assert_nil(Geocoder.extract_address_candidate("15 seconds\t"))
+    # A real address candidate passes.
+    assert_equal('15 Main St', Geocoder.extract_address_candidate('15 Main St'))
+    assert_equal('15 Main St', Geocoder.extract_address_candidate('15 Main St '))
+  end
+
   def test_finding_potential_addresses
     # Guards: nil and empty string never reach the geocoder.
     assert_nil(Geocoder.find_potential_street_address(nil))

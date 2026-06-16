@@ -356,6 +356,18 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
       delete :destroy, params: {level_name: create(:applab).name, filename: 'my-file', format: 'png'}
     end
   end
+
+  test 'upload_by_uuid: does not update starter_assets for lab2 javalab levels' do
+    LevelStarterAssetsHelper.expects(:get_object).returns(@file_obj)
+    @file_obj.stubs(:upload_file).returns(true)
+    level = create(:javalab, properties: {uses_lab2: true})
+
+    sign_in create(:levelbuilder)
+    post :upload_by_uuid, params: {level_name: level.name, uuid: @uuid, files: [@file]}
+
+    assert_response :success
+    assert_nil level.reload.starter_assets
+  end
 end
 
 # Mock Aws::S3::ObjectSummary class since we can't request the objects from S3 in tests:
