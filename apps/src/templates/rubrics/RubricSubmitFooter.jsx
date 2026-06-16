@@ -1,10 +1,9 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import {Typography} from '@mui/material';
+import {Button as MuiButton, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useEffect, useState} from 'react';
 import {connect} from 'react-redux';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {updateTeacherFeedback} from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackDataApi';
@@ -157,14 +156,18 @@ function RubricSubmitFooter({
         />
       </div>
       <div className={style.submitToStudentButtonAndError}>
-        <Button
+        <MuiButton
           id="ui-submitFeedbackButton"
-          text={i18n.submitToStudent()}
-          color={Button.ButtonColor.brandSecondaryDefault}
+          variant="contained"
+          color="primary"
+          size="small"
+          type="button"
           onClick={submitFeedbackToStudent}
           className={style.submitToStudentButton}
           disabled={isSubmittingToStudent || !feedbackLoaded}
-        />
+        >
+          {i18n.submitToStudent()}
+        </MuiButton>
         {errorSubmitting && (
           <div id="ui-feedback-submitted-error">
             <Typography

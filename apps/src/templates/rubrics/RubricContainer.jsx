@@ -1,11 +1,11 @@
-import {Typography} from '@mui/material';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton as MuiIconButton, Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useCallback, useEffect, useState, useRef} from 'react';
 import Draggable from 'react-draggable';
 import {connect} from 'react-redux';
 
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -33,7 +33,9 @@ import style from './rubrics.module.scss';
 // product Tour
 /* eslint-disable import/order */
 // Disabling import/order rule for grouped product tour imports.
-import './introjs.scss';
+// Base styles from the library, then our theme overrides (must load after).
+import 'intro.js/introjs.css';
+import './introjsOverrides.scss';
 import {Steps} from 'intro.js-react';
 import {INITIAL_STEP, STEPS, DUMMY_PROPS} from './productTourHelpers';
 /* eslint-enable import/order */
@@ -268,10 +270,10 @@ function RubricContainer({
             className={style.aiBotOutlineIcon}
             alt={i18n.rubricAiHeaderText()}
           />
-          <span>{i18n.rubricAiHeaderText()}</span>
+          <Typography variant="label2">{i18n.rubricAiHeaderText()}</Typography>
         </>
       ) : (
-        i18n.rubric()
+        <Typography variant="label2">{i18n.rubric()}</Typography>
       ),
     [teacherHasEnabledAi]
   );
@@ -318,23 +320,28 @@ function RubricContainer({
           <div className={style.rubricHeaderLeftSide}>{headerLeft}</div>
           <div className={style.rubricHeaderRightSide}>
             {canProvideFeedback && teacherHasEnabledAi && (
-              <button
+              <MuiIconButton
                 id="ui-restart-product-tour"
                 aria-label="restart product tour"
                 type="button"
+                variant="text"
+                color="white"
                 onClick={tourRestartHandler}
                 className={classnames(style.buttonStyle, style.closeButton)}
               >
-                <FontAwesome icon="circle-question" />
-              </button>
+                <FontAwesomeV6Icon iconName="circle-question" />
+              </MuiIconButton>
             )}
-            <button
+            <MuiIconButton
               type="button"
+              variant="text"
+              color="white"
+              aria-label={i18n.closeDialog()}
               onClick={closeRubric}
               className={classnames(style.buttonStyle, style.closeButton)}
             >
-              <FontAwesome icon="xmark" />
-            </button>
+              <FontAwesomeV6Icon iconName="xmark" />
+            </MuiIconButton>
           </div>
         </div>
 

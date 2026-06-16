@@ -15,6 +15,20 @@ class PracticeProblem < ApplicationRecord
   has_and_belongs_to_many :objectives, join_table: :objectives_practice_problems
   validates :problem_type, inclusion: {in: SharedConstants::PRACTICE_PROBLEM_TYPES.values}
 
+  def summarize
+    {
+      id: id,
+      key: key,
+      problem_type: problem_type,
+      active: active,
+      problem_text: problem_text,
+      solution: solution,
+      objectives: objectives&.map {|o| {id: o.id, description: o.description}},
+      created_at: created_at,
+      updated_at: updated_at,
+    }
+  end
+
   def self.seed_all(root_dir: Rails.root, glob: "config/practice_problems/*.json")
     Dir.glob(root_dir.join(glob)).each do |path|
       seed_record(path)

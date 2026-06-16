@@ -46,6 +46,18 @@ class TeacherDashboardControllerTest < ActionController::TestCase
     assert_redirected_to "http://test.host/courses/csd-2024"
   end
 
+  test 'show: sets show_section_creation_celebration_dialog when param present' do
+    sign_in @section_owner
+    get :show, params: {showSectionCreationDialog: 'true'}
+    assert assigns(:show_section_creation_celebration_dialog)
+  end
+
+  test 'show: does not set show_section_creation_celebration_dialog when param absent' do
+    sign_in @section_owner
+    get :show
+    refute assigns(:show_section_creation_celebration_dialog)
+  end
+
   test 'index: returns success if requested section is an instructed section for a coteacher' do
     cotaught_section = create(:section, user: @section_owner, login_type: 'word')
     other_teacher = create(:teacher)
