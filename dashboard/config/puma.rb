@@ -1,7 +1,7 @@
 path = File.expand_path('../../deployment.rb', __FILE__)
 path = File.expand_path('../../../deployment.rb', __FILE__) unless File.file?(path)
 require path
-require 'concurrent' # Need for `:auto`
+require 'cdo/puma_worker_count'
 CDO.execution_context = :web_application
 
 if CDO.dashboard_sock
@@ -10,8 +10,10 @@ else
   bind "tcp://#{CDO.dashboard_host}:#{CDO.dashboard_port}"
 end
 
-# `:auto` Uses `Concurrent.available_processor_count`, rounded down if the result is fractional.
-workers CDO.dashboard_workers.is_a?(Numeric) ? CDO.dashboard_workers : :auto
+# Bound the worker count by both CPU and memory; see Cdo::PumaWorkerCount.
+# An explicit numeric dashboard_workers overrides; otherwise this replaces
+# puma's CPU-only `:auto`.
+workers Cdo::PumaWorkerCount.resolve
 threads 1, 5
 
 directory deploy_dir('dashboard')

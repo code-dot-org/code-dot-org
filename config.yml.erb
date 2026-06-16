@@ -468,6 +468,15 @@ dashboard_secret_key_base: !Secret
 dashboard_host: 0.0.0.0
 dashboard_port: 3000
 dashboard_workers:
+# When dashboard_workers is unset (:auto), the puma worker count is the
+# smaller of the CPU budget (one per vCPU) and the memory budget below.
+# dashboard_worker_memory_mb is the assumed steady-state used-memory per
+# worker (sized relative to observed PSS, with slack); the headroom fraction
+# reserves RAM for the master, sidecars, OS, and per-worker variance. With
+# these defaults a 192 GB / 48 vCPU frontend resolves to 40 workers. See
+# lib/cdo/puma_worker_count.rb.
+dashboard_worker_memory_mb: 4096
+dashboard_worker_memory_headroom: 0.15
 dashboard_web_server_name: dashboard
 dashboard_sock:
 puma_control_server_relative_socket_path: tmp/pumactl.sock
