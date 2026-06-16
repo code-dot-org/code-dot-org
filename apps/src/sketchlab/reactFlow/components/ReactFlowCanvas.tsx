@@ -34,7 +34,6 @@ import {
   AnchorDraggingProvider,
   ClipboardProvider,
   PushSnapshotProvider,
-  ReconnectingEdgeProvider,
   SketchLabReadOnlyProvider,
   ToolbarVisibilityProvider,
   type ToolbarTarget,
@@ -45,7 +44,6 @@ import {useCopyPaste} from '../hooks/useCopyPaste';
 import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
 import {useLineEdgeDrag} from '../hooks/useLineEdgeDrag';
-import {useReconnect} from '../hooks/useReconnect';
 import {useTabOrder} from '../hooks/useTabOrder';
 import {useUndoHistory} from '../hooks/useUndoHistory';
 import ImageNode from '../nodes/ImageNode';
@@ -59,7 +57,6 @@ import {
 } from '../types';
 import {
   canCreateConnection,
-  getEdgeReconnectability,
   isLineAnchorNodeId,
 } from '../utils/connectionRules';
 import {getEdgeLabel} from '../utils/elementLabel';
@@ -107,7 +104,6 @@ function stripDisplayFields<T extends object>(item: T): T {
   delete result.draggable;
   delete result.connectable;
   delete result.deletable;
-  delete result.reconnectable;
   return result as T;
 }
 
@@ -546,14 +542,9 @@ export default function ReactFlowCanvas({
       displayEdges: edges.map(edge => {
         const locked = edge.data?.locked === true;
         const {selected, domAttributes} = applyDisplayProps(edge, 'edge');
-        const reconnectable = getEdgeReconnectability(edge, nodeMap, {
-          locked,
-          readOnly,
-        });
         return {
           ...edge,
           selected,
-          reconnectable,
           deletable: !locked && !readOnly,
           ariaLabel: getEdgeLabel(
             edge,
@@ -615,19 +606,6 @@ export default function ReactFlowCanvas({
     };
   }, [nodes, edges, viewport, updateSources]);
 
-  const {
-    isReconnecting,
-    reconnectingEdge,
-    handleReconnectStart,
-    handleReconnect,
-    handleReconnectEnd,
-  } = useReconnect({
-    setNodes,
-    setEdges,
-    screenToFlowPosition,
-    pushSnapshot,
-  });
-
   const onConnect: OnConnect = useCallback(
     connection => {
       const {source, target} = connection;
@@ -651,15 +629,9 @@ export default function ReactFlowCanvas({
       if (!source || !target) {
         return false;
       }
-      // During an in-flight reconnect we relax the anchor restriction so the
-      // user can drag a line endpoint onto a real node's handle. We still
-      // block self-loops and reconnecting to another line anchor.
-      if (isReconnecting()) {
-        return source !== target && !isLineAnchorNodeId(target, nodes);
-      }
       return canCreateConnection(source, target, nodes);
     },
-    [nodes, isReconnecting]
+    [nodes]
   );
 
   const handleMoveEnd = useCallback(
@@ -806,88 +778,83 @@ export default function ReactFlowCanvas({
         <ClipboardProvider value={clipboardContextValue}>
           <PushSnapshotProvider value={pushSnapshot}>
             <AnchorDraggingProvider value={isAnchorDragging}>
-              <ReconnectingEdgeProvider value={reconnectingEdge}>
-                <div
-                  ref={canvasContainerRef}
-                  className={classNames(
-                    styles.canvasContainer,
-                    {
-                      [styles.connectMode]: !!connectingFrom,
-                    },
-                    SKETCHLAB_CONTAINER_CLASS
-                  )}
-                  tabIndex={-1}
-                  onKeyDownCapture={handleKeyDown}
-                  onFocusCapture={handleFocusCapture}
-                  onBlur={handleContainerBlur}
-                  onMouseMove={handleMouseMove}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  {!readOnly && (
-                    <Toolbar onAddNode={handleAddNode} levelName={levelName} />
-                  )}
-                  <div aria-live="assertive" className={styles.srOnly}>
-                    {connectAnnouncement}
-                  </div>
-                  <ReactFlow
-                    nodes={displayNodes}
-                    edges={displayEdges}
-                    onNodesChange={handleNodesChange}
-                    onEdgesChange={handleEdgesChange}
-                    onNodeClick={handleNodeClick}
-                    onEdgeClick={handleEdgeClick}
-                    onPaneClick={handlePaneClick}
-                    onConnect={onConnect}
-                    onReconnectStart={handleReconnectStart}
-                    onReconnect={handleReconnect}
-                    onReconnectEnd={handleReconnectEnd}
-                    onNodesDelete={handleElementsDeleted}
-                    onEdgesDelete={handleElementsDeleted}
-                    onNodeDragStart={handleNodeDragStart}
-                    onNodeDrag={handleNodeDrag}
-                    onNodeDragStop={handleNodeDragStop}
-                    isValidConnection={isValidConnection}
-                    connectionLineComponent={ConnectionLine}
-                    minZoom={MIN_ZOOM}
-                    connectionRadius={LINE_RECONNECT_SNAP_RADIUS_PX}
-                    nodeTypes={NODE_TYPES}
-                    onMoveEnd={handleMoveEnd}
-                    defaultViewport={initialViewport}
-                    fitView={!initialViewport}
-                    colorMode={colorMode}
-                    deleteKeyCode={readOnly ? null : 'Delete'}
-                    proOptions={{hideAttribution: true}}
-                    nodesDraggable={!readOnly}
-                    nodesConnectable={!readOnly}
-                    elementsSelectable={!readOnly}
-                    nodesFocusable={true}
-                    edgesFocusable={true}
-                    // Even though we manage tab order, we keep React Flow's keyboard A11y on because
-                    // it manages things like moving nodes with arrow keys.
-                    disableKeyboardA11y={false}
-                    autoPanOnNodeFocus={false} // We manage viewport on focus manually in useFocusManagement.
-                    zIndexMode={'manual'}
-                    defaultEdgeOptions={DEFAULT_EDGE_OPTIONS}
-                    defaultMarkerColor={DEFAULT_STROKE_COLOR}
-                  >
-                    <CornerToolbarPanel
-                      nodes={nodes}
-                      edges={edges}
-                      setNodes={setNodes}
-                      setEdges={setEdges}
-                      pushSnapshot={pushSnapshot}
-                    />
-                    <Background />
-                    <CanvasControls
-                      onUndo={handleUndo}
-                      onRedo={handleRedo}
-                      canUndo={canUndo}
-                      canRedo={canRedo}
-                      isReadOnly={readOnly}
-                    />
-                  </ReactFlow>
+              <div
+                ref={canvasContainerRef}
+                className={classNames(
+                  styles.canvasContainer,
+                  {
+                    [styles.connectMode]: !!connectingFrom,
+                  },
+                  SKETCHLAB_CONTAINER_CLASS
+                )}
+                tabIndex={-1}
+                onKeyDownCapture={handleKeyDown}
+                onFocusCapture={handleFocusCapture}
+                onBlur={handleContainerBlur}
+                onMouseMove={handleMouseMove}
+                onMouseLeave={handleMouseLeave}
+              >
+                {!readOnly && (
+                  <Toolbar onAddNode={handleAddNode} levelName={levelName} />
+                )}
+                <div aria-live="assertive" className={styles.srOnly}>
+                  {connectAnnouncement}
                 </div>
-              </ReconnectingEdgeProvider>
+                <ReactFlow
+                  nodes={displayNodes}
+                  edges={displayEdges}
+                  onNodesChange={handleNodesChange}
+                  onEdgesChange={handleEdgesChange}
+                  onNodeClick={handleNodeClick}
+                  onEdgeClick={handleEdgeClick}
+                  onPaneClick={handlePaneClick}
+                  onConnect={onConnect}
+                  onNodesDelete={handleElementsDeleted}
+                  onEdgesDelete={handleElementsDeleted}
+                  onNodeDragStart={handleNodeDragStart}
+                  onNodeDrag={handleNodeDrag}
+                  onNodeDragStop={handleNodeDragStop}
+                  isValidConnection={isValidConnection}
+                  connectionLineComponent={ConnectionLine}
+                  minZoom={MIN_ZOOM}
+                  connectionRadius={LINE_RECONNECT_SNAP_RADIUS_PX}
+                  nodeTypes={NODE_TYPES}
+                  onMoveEnd={handleMoveEnd}
+                  defaultViewport={initialViewport}
+                  fitView={!initialViewport}
+                  colorMode={colorMode}
+                  deleteKeyCode={readOnly ? null : 'Delete'}
+                  proOptions={{hideAttribution: true}}
+                  nodesDraggable={!readOnly}
+                  nodesConnectable={!readOnly}
+                  elementsSelectable={!readOnly}
+                  nodesFocusable={true}
+                  edgesFocusable={true}
+                  // Even though we manage tab order, we keep React Flow's keyboard A11y on because
+                  // it manages things like moving nodes with arrow keys.
+                  disableKeyboardA11y={false}
+                  autoPanOnNodeFocus={false} // We manage viewport on focus manually in useFocusManagement.
+                  zIndexMode={'manual'}
+                  defaultEdgeOptions={DEFAULT_EDGE_OPTIONS}
+                  defaultMarkerColor={DEFAULT_STROKE_COLOR}
+                >
+                  <CornerToolbarPanel
+                    nodes={nodes}
+                    edges={edges}
+                    setNodes={setNodes}
+                    setEdges={setEdges}
+                    pushSnapshot={pushSnapshot}
+                  />
+                  <Background />
+                  <CanvasControls
+                    onUndo={handleUndo}
+                    onRedo={handleRedo}
+                    canUndo={canUndo}
+                    canRedo={canRedo}
+                    isReadOnly={readOnly}
+                  />
+                </ReactFlow>
+              </div>
             </AnchorDraggingProvider>
           </PushSnapshotProvider>
         </ClipboardProvider>
