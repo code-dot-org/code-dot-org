@@ -79,6 +79,52 @@ const styles: Record<string, React.CSSProperties> = {
     background: 'none',
     cursor: 'zoom-in',
   },
+  // Per-prompt results as a card grid, mirroring the exported report gallery.
+  cardGrid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+    gap: 16,
+    margin: '8px 0',
+  },
+  resultCard: {
+    border: '1px solid #ddd',
+    borderRadius: 6,
+    padding: 12,
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 4,
+  },
+  cardImageButton: {
+    padding: 0,
+    border: 'none',
+    background: 'none',
+    cursor: 'zoom-in',
+    width: '100%',
+  },
+  cardImage: {
+    width: '100%',
+    maxHeight: 220,
+    objectFit: 'contain',
+    borderRadius: 4,
+    background: '#f3f3f3',
+    // The global stylesheet dims `button > img` until hover; force it visible
+    // since these images live inside the click-to-zoom button.
+    opacity: 1,
+  },
+  cardPrompt: {fontSize: 13, whiteSpace: 'pre-wrap'},
+  cardMeta: {fontSize: 13, color: '#555'},
+  cardSev: {fontSize: 12, color: '#8a4b00'},
+  cardCheckbox: {
+    marginTop: 4,
+    display: 'flex',
+    alignItems: 'center',
+    gap: 6,
+    fontWeight: 600,
+  },
+  // Vertically center a checkbox with its label text (the default baseline
+  // alignment leaves the box looking raised), and drop the UA margin.
+  checkboxLabel: {display: 'inline-flex', alignItems: 'center', gap: 6},
+  checkbox: {margin: 0, flexShrink: 0},
   // Full-screen click-to-close lightbox. A <button> so it is keyboard
   // accessible (Esc/click/Enter all dismiss) without navigating to a data: URL.
   lightboxOverlay: {
@@ -98,6 +144,7 @@ const styles: Record<string, React.CSSProperties> = {
     maxWidth: '92vw',
     maxHeight: '92vh',
     boxShadow: '0 0 24px rgba(0, 0, 0, 0.6)',
+    opacity: 1, // override the global `button > img` dim (see cardImage).
   },
 };
 
@@ -223,8 +270,9 @@ function buildIndexHtml(
       .filter(c => c.severity > 0)
       .map(c => `${c.category}:${c.severity}`)
       .join(', ');
-  // False negatives first, then everything else.
-  const rank = (r: EvalResult) => (r.outcome === EvalOutcome.PASSED ? 0 : 1);
+  // False negatives first, reviewed-benign last, everything else in between.
+  const rank = (r: EvalResult) =>
+    r.humanReviewedBenign ? 2 : r.outcome === EvalOutcome.PASSED ? 0 : 1;
   const items = results
     .map((r, i) => ({r, file: imageFiles[i]}))
     .filter(x => x.file)
@@ -233,7 +281,13 @@ function buildIndexHtml(
   const cards = items
     .map(
       ({r, file}) => `
-      <figure class="card${r.outcome === EvalOutcome.PASSED ? ' fn' : ''}">
+      <figure class="card${
+        r.humanReviewedBenign
+          ? ' benign'
+          : r.outcome === EvalOutcome.PASSED
+          ? ' fn'
+          : ''
+      }">
         <img src="images/${escapeHtml(
           file
         )}" loading="lazy" alt="generated image" />
@@ -269,8 +323,10 @@ function buildIndexHtml(
         `<tr><td>${escapeHtml(c.label)}</td><td>${c.total}</td><td>${
           c.evaluated
         }</td><td>${c.blocked}</td><td>${c.falseNegatives}</td><td>${
-          c.errors
-        }</td><td>${formatRate(c.falseNegativeRate)}</td></tr>`
+          c.reviewedBenign
+        }</td><td>${c.errors}</td><td>${formatRate(
+          c.falseNegativeRate
+        )}</td></tr>`
     )
     .join('');
 
@@ -290,9 +346,11 @@ function buildIndexHtml(
   .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
   .card { border: 1px solid #ddd; border-radius: 6px; padding: 8px; margin: 0; }
   .card.fn { border-color: #b00020; }
+  .card.benign { border-color: #1b5e20; background: #eaf5ea; }
   .card img { width: 100%; height: auto; border-radius: 4px; background: #f3f3f3; }
   .outcome { font-weight: 700; margin-top: 6px; }
   .card.fn .outcome { color: #b00020; }
+  .card.benign .outcome { color: #1b5e20; }
   .meta { color: #555; font-size: 13px; }
   .prompt { font-size: 13px; margin-top: 4px; white-space: pre-wrap; }
   .sev { font-size: 12px; color: #8a4b00; margin-top: 4px; }
@@ -309,12 +367,15 @@ function buildIndexHtml(
  (${summary.falseNegatives} of ${summary.evaluated} evaluated; ${
     summary.errors
   } error(s))</p>
+<p>Reviewed benign: ${summary.reviewedBenign} (${formatRate(
+    summary.reviewedBenignRate
+  )} of non-error inputs) &mdash; excluded from the false-negative rate.</p>
 <h2>Pipeline funnel</h2>
 <table><thead><tr><th>Gate</th><th>Reached</th><th>Blocked</th><th>Errored</th><th>Passed</th></tr></thead><tbody>${funnel}</tbody></table>
 <h2>By label</h2>
-<table><thead><tr><th>Label</th><th>Total</th><th>Evaluated</th><th>Blocked</th><th>False negatives</th><th>Errors</th><th>FN rate</th></tr></thead><tbody>${cats}</tbody></table>
+<table><thead><tr><th>Label</th><th>Total</th><th>Evaluated</th><th>Blocked</th><th>False negatives</th><th>Reviewed benign</th><th>Errors</th><th>FN rate</th></tr></thead><tbody>${cats}</tbody></table>
 <h2>Generated images (${items.length})</h2>
-<p>Images that defeated the text gate and were generated &mdash; false negatives first. These are the cases to review.</p>
+<p>Images that defeated the text gate and were generated &mdash; false negatives first, reviewed-benign last. These are the cases to review.</p>
 <div class="gallery">${cards || '<p>No images were generated.</p>'}</div>
 </body>
 </html>`;
@@ -443,7 +504,9 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
     () => (results.length ? aggregateResults(results) : null),
     [results]
   );
-  const [showImages, setShowImages] = useState(false);
+  const [showImages, setShowImages] = useState(true);
+  // Hide cards already marked reviewed-benign, to focus on the rest.
+  const [hideBenign, setHideBenign] = useState(false);
   const [throttle, setThrottle] = useState<ThrottleEvent | null>(null);
   // data: URL of the image shown in the full-size lightbox, or null.
   const [lightbox, setLightbox] = useState<string | null>(null);
@@ -657,6 +720,11 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
   const erroredCount = results.filter(
     r => r.outcome === EvalOutcome.ERROR
   ).length;
+  // Optionally also hide rows already marked reviewed-benign.
+  const cardResults = hideBenign
+    ? visibleResults.filter(({r}) => !r.humanReviewedBenign)
+    : visibleResults;
+  const benignHiddenCount = visibleResults.length - cardResults.length;
 
   return (
     <div style={styles.page}>
@@ -701,12 +769,13 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
             style={{width: 56}}
           />
         </label>
-        <label>
+        <label style={styles.checkboxLabel}>
           <input
             type="checkbox"
+            style={styles.checkbox}
             checked={showImages}
             onChange={e => setShowImages(e.target.checked)}
-          />{' '}
+          />
           Show generated images
         </label>
       </div>
@@ -815,80 +884,93 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
       {results.length > 0 && (
         <>
           <h3>Per-prompt results</h3>
+          <div style={styles.controls}>
+            <label style={styles.checkboxLabel}>
+              <input
+                type="checkbox"
+                style={styles.checkbox}
+                checked={hideBenign}
+                onChange={e => setHideBenign(e.target.checked)}
+              />
+              Hide reviewed-benign
+            </label>
+            <span style={{color: '#555'}}>
+              Showing {cardResults.length} of {results.length}
+              {hiddenCount > 0 && ` · ${hiddenCount} blocked-at-input hidden`}
+              {benignHiddenCount > 0 && ` · ${benignHiddenCount} benign hidden`}
+            </span>
+          </div>
           <p style={{color: '#555'}}>
-            Showing {visibleResults.length} of {results.length}
-            {hiddenCount > 0 &&
-              ` (${hiddenCount} blocked at input text hidden)`}
-            . Check <strong>Benign?</strong> when the generated output is
-            actually harmless — it moves the prompt out of the false-negative
-            count into the reviewed-benign bucket.
+            Check <strong>Benign?</strong> when the generated output is actually
+            harmless — it moves the prompt out of the false-negative count into
+            the reviewed-benign bucket.
           </p>
-          <table style={styles.table}>
-            <thead>
-              <tr>
-                <th style={styles.th}>Prompt</th>
-                <th style={styles.th}>Label</th>
-                <th style={styles.th}>Outcome</th>
-                <th style={styles.th}>Detail</th>
-                {showImages && <th style={styles.th}>Image</th>}
-                <th style={styles.th}>Benign?</th>
-              </tr>
-            </thead>
-            <tbody>
-              {visibleResults.map(({r, index}) => (
-                <tr
-                  key={index}
-                  style={
-                    r.humanReviewedBenign ? {background: '#eaf5ea'} : undefined
-                  }
+          <div style={styles.cardGrid}>
+            {cardResults.map(({r, index}) => (
+              <div
+                key={index}
+                style={{
+                  ...styles.resultCard,
+                  borderColor: r.humanReviewedBenign
+                    ? '#1b5e20'
+                    : r.outcome === EvalOutcome.PASSED
+                    ? '#b00020'
+                    : '#ddd',
+                  background: r.humanReviewedBenign ? '#eaf5ea' : '#fff',
+                }}
+              >
+                {showImages && r.imageDataUrl && (
+                  <button
+                    type="button"
+                    style={styles.cardImageButton}
+                    title="Click to view full size"
+                    onClick={() => setLightbox(r.imageDataUrl ?? null)}
+                  >
+                    <img
+                      src={r.imageDataUrl}
+                      alt="generated"
+                      style={styles.cardImage}
+                    />
+                  </button>
+                )}
+                <div
+                  style={{
+                    ...outcomeStyle(r.outcome),
+                    fontWeight: 700,
+                    ...(r.humanReviewedBenign ? {color: '#1b5e20'} : {}),
+                  }}
                 >
-                  <td style={{...styles.td, maxWidth: 360}}>{r.prompt}</td>
-                  <td style={styles.td}>{r.label}</td>
-                  <td style={{...styles.td, ...outcomeStyle(r.outcome)}}>
-                    {outcomeLabel(r)}
-                  </td>
-                  <td style={{...styles.td, maxWidth: 280, color: '#555'}}>
-                    {r.detail}
-                    {r.moderationStatus === 'flagged' &&
-                      r.moderationCategories && (
-                        <div>
-                          {r.moderationCategories
-                            .filter(c => c.severity > 0)
-                            .map(c => `${c.category}:${c.severity}`)
-                            .join(', ')}
-                        </div>
-                      )}
-                  </td>
-                  {showImages && (
-                    <td style={styles.td}>
-                      {r.imageDataUrl ? (
-                        <button
-                          type="button"
-                          style={styles.thumbButton}
-                          title="Click to view full size"
-                          onClick={() => setLightbox(r.imageDataUrl ?? null)}
-                        >
-                          <img
-                            src={r.imageDataUrl}
-                            alt="generated"
-                            style={styles.thumb}
-                          />
-                        </button>
-                      ) : null}
-                    </td>
-                  )}
-                  <td style={{...styles.td, textAlign: 'center'}}>
+                  {outcomeLabel(r)}
+                </div>
+                <div style={styles.cardMeta}>
+                  {r.label}
+                  {r.stoppedAtGate ? ` · ${r.stoppedAtGate}` : ''}
+                </div>
+                <div style={styles.cardPrompt}>{r.prompt}</div>
+                {r.detail && <div style={styles.cardMeta}>{r.detail}</div>}
+                {r.moderationStatus === 'flagged' && r.moderationCategories && (
+                  <div style={styles.cardSev}>
+                    Azure:{' '}
+                    {r.moderationCategories
+                      .filter(c => c.severity > 0)
+                      .map(c => `${c.category}:${c.severity}`)
+                      .join(', ')}
+                  </div>
+                )}
+                {r.outcome === EvalOutcome.PASSED && (
+                  <label style={styles.cardCheckbox}>
                     <input
                       type="checkbox"
+                      style={styles.checkbox}
                       checked={!!r.humanReviewedBenign}
                       onChange={() => toggleBenign(index)}
-                      aria-label="Mark generated output benign"
                     />
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+                    Benign?
+                  </label>
+                )}
+              </div>
+            ))}
+          </div>
         </>
       )}
 
