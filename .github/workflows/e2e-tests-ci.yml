@@ -33,10 +33,9 @@ jobs:
         uses: ./.github/actions/frontend/setup
 
       - name: E2E Tests
-        # Step-level env so these reach the playwright subprocess (job-level env is
-        # not reliably forwarded through yarn/turbo). The container pre-installs
-        # browsers at /ms-playwright. PLAYWRIGHT_PROVIDER=gha selects the GHA lane
-        # in playwright.config.ts (reports + 100% workers).
+        # Step-level env: job-level env isn't reliably forwarded through yarn/turbo.
+        # The container pre-installs browsers at /ms-playwright; PLAYWRIGHT_PROVIDER
+        # selects the GHA lane.
         env:
           PLAYWRIGHT_PROVIDER: gha
           PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
@@ -45,7 +44,7 @@ jobs:
           HOME: /root
           # Explicit target: the deployed test env. Repoint at a PR adhoc to gate PR code.
           TARGET_URL: https://test-studio.code.org
-        run: yarn workspace @code-dot-org/e2e-tests test:ui:ci
+        run: yarn workspace @code-dot-org/e2e-tests test:ui:e2e
         working-directory: ./frontend
 
       - name: Upload Playwright Report

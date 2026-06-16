@@ -27,19 +27,13 @@ trap 'echo "WARNING: Playwright e2e tests failed (non-blocking)"' ERR
 
 echo "--- running Playwright e2e tests against $TARGET_URL (non-blocking) ---"
 
-# Clear the previous run's report and results first, so a failure before the
-# suite starts (e.g. a bad install) can't leave stale artifacts for the caller
-# to upload or summarize as this run's.
+# Clear last run's artifacts so an aborted run can't be reported as this one's.
 rm -rf playwright-report test-results
 
 yarn install --immutable
-# Skip in CI (browsers are baked into the Drone image). On the DTT daemon, make
-# sure the pinned build is present: `playwright install` is version-aware, so it's
-# a fast no-op when it's already there and only fetches after a version bump.
-# We don't run `install-deps` here — it hits apt every run (root, network, can
-# hang) for OS libs that rarely change; provision those once on the daemon with
-# `sudo yarn exec playwright install-deps`.
-if [ -z "${CI:-}" ]; then
+# Only the DTT installs browsers at runtime (GHA/Drone bake them). install-deps is
+# omitted — it hits apt every run; provision OS libs once on the daemon.
+if [ "${PLAYWRIGHT_PROVIDER:-}" = dtt ]; then
   yarn exec playwright install chromium firefox webkit
 fi
-yarn run test:ui:ci
+yarn run test:ui:e2e
