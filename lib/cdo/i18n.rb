@@ -2,6 +2,7 @@
 
 require 'csv'
 require 'i18n'
+require 'request_store'
 require 'uri'
 require 'yaml'
 
@@ -30,6 +31,14 @@ module Cdo
     LOCALIZE_TO_I18N_LOCALES = LANGUAGES.each_with_object({}) do |cdo_language, locales|
       locales[cdo_language[:localize_code_s]] = cdo_language[:locale_s] if cdo_language[:localize_code_s]
     end.freeze
+
+    # Request-scoped store key for the visitor's intended locale. See
+    # `intended_locale`.
+    INTENDED_LOCALE_KEY = :cdo_intended_locale
+
+    # Mapping of LocalizeJS project keys to the URL path prefixes they serve.
+    # Pages matching a prefix render in English and load the LocalizeJS widget.
+    LOCALIZE_PROJECTS = YAML.load_file(CDO.dir('config/i18n/localizejs.yml')).freeze
 
     TEXT_DIRECTIONS = Set[
       TEXT_DIRECTION_LTR = 'ltr', # the left-to-right text direction
@@ -79,6 +88,46 @@ module Cdo
 
       def locale_direction(locale)
         LOCALE_CONFIGS.dig(locale.to_s, :dir) || TEXT_DIRECTION_LTR
+      end
+
+      # Returns the LocalizeJS project key whose configured path prefix matches
+      # the given request path, or nil if the page is not a LocalizeJS page.
+      #
+      # A single optional leading path segment is permitted so that
+      # locale/region-prefixed URLs (e.g. `/fa/courses/csd-2024`) still match.
+      #
+      # @param path [String] the request path (e.g. `/courses/csd-2024`)
+      # @return [String, nil] the matching LocalizeJS project key, or nil
+      def localize_project_key(path)
+        LOCALIZE_PROJECTS.each do |project_key, prefixes|
+          return project_key if prefixes.any? do |prefix|
+            path.match?(%r{\A(?:/[^/]+)?#{Regexp.escape(prefix)}})
+          end
+        end
+        nil
+      end
+
+      # The locale the visitor actually intends -- their `language_` cookie /
+      # Global Edition region (e.g. 'es-LA' for the LatAm edition).
+      #
+      # This exists because `::I18n.locale` is no longer a reliable stand-in for
+      # the visitor's chosen locale: LocalizeJS pages are rendered in English
+      # (see Middleware::I18n::LocalizeJS), so during such a request `::I18n.locale`
+      # is 'en-US' even though the visitor intends, say, 'es-LA'. Code that needs
+      # the visitor's actual locale -- rather than the locale being rendered --
+      # should use this. When no override is in effect it is just `::I18n.locale`.
+      #
+      # @return [String] the visitor's intended locale
+      def intended_locale
+        RequestStore.store[INTENDED_LOCALE_KEY]&.to_s || ::I18n.locale.to_s
+      end
+
+      # Records the visitor's intended locale for the duration of the request,
+      # so it survives a render-time switch to English on LocalizeJS pages.
+      #
+      # @param locale [String, Symbol, nil] the intended locale, or nil to clear
+      def intended_locale=(locale)
+        RequestStore.store[INTENDED_LOCALE_KEY] = locale&.to_s
       end
 
       # @param cdo_language [CdoLanguage] CDO language record

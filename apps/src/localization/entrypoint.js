@@ -3,114 +3,41 @@
  *
  * This should be the first code run in our application <head> and will be
  * responsible for loading and initializing LocalizeJS.
+ *
+ * Which pages run LocalizeJS, and the project key for each, is decided on the
+ * backend: the i18n/_localizejs partial only emits this script -- with the
+ * project key in `data-localizejs` -- on LocalizeJS pages, and renders those
+ * pages in English so the widget can swap in the visitor's language.
  */
 
-import {get, set} from 'js-cookie';
+import {get} from 'js-cookie';
 
-/**
- * The current course listing and a mapping between them and Localize project
- * keys. This is a temporary measure for now.
- */
-const csd_prefixes = ['/courses/csd-2024', '/courses/self-paced-pl-csd-2024'];
+import getScriptData from '@cdo/apps/util/getScriptData';
+import {
+  DefaultLocale,
+  LocalizeToI18nLocales,
+} from '@cdo/generated-scripts/sharedConstants';
 
-const csf_prefixes = [
-  '/courses/k5-unplugged',
-  '/courses/express-2024',
-  '/courses/pre-express-2024',
-  '/courses/k5-onlinepd-2024',
-  '/courses/teaching-csf-2025',
-  '/courses/coursea-2024',
-  '/courses/courseb-2024',
-  '/courses/coursec-2024',
-  '/courses/coursed-2024',
-  '/courses/coursee-2024',
-  '/courses/coursef-2024',
-];
+// `projectKey` selects the LocalizeJS project. It is the only thing the backend
+// embeds, so LocalizeJS pages stay identical for every visitor and cacheable.
+const {projectKey} = getScriptData('localizejs');
 
-const donor_prefixes = [
-  '/courses/customizing-llms-2024',
-  '/courses/self-paced-pl-ai-101-2024',
-  '/courses/ai-ethics-2023',
-  '/courses/foundations-gen-ai-2024',
-  '/courses/foundations-gen-ai-2025',
-  '/courses/foundations-generative-ai-unplugged',
-  '/courses/k5-ai-data-2024',
-  '/courses/elementaryai-2024',
-  '/courses/3-5gamedesign-2024',
-  '/courses/elem-game-design-2024',
-  '/courses/mix-move-ai-2025',
-];
+// Map an I18n locale (the `language_` cookie, e.g. `es-LA` for the LatAm Global
+// Edition) to the code LocalizeJS expects (e.g. `zh-CN` -> `zh-Hans`). This is
+// the inverse of LocalizeToI18nLocales; the locale codes there are unique, so
+// the inverse is well-defined. We read the cookie here rather than have the
+// backend embed the code so the rendered page does not vary per visitor.
+const i18nToLocalizeCode = {};
+for (const [localizeCode, i18nLocale] of Object.entries(
+  LocalizeToI18nLocales
+)) {
+  i18nToLocalizeCode[i18nLocale] = localizeCode;
+}
 
-const aif_prefixes = [
-  '/courses/artificial-intelligence-foundations-2025',
-  '/courses/teaching-ai-foundations-2025',
-  '/courses/oceans',
-  '/courses/how-ai-works-2023',
-  '/courses/problem-solving-with-ai-2025',
-];
-
-const dashboard_prefixes = [
-  '/home',
-  '/users',
-  '/sections',
-  '/teacher_dashboard',
-];
-
-const prefixes = {
-  MlKri360o3v2T: csd_prefixes,
-  '3vPUSGZrdllW2': csf_prefixes,
-  I0P5RaUEW8s5h: donor_prefixes,
-  zM53S8yC4TNgU: aif_prefixes,
-  XJXXkBlsAbHVD: dashboard_prefixes,
-};
-
-const live = [
-  '/courses/csd-2024',
-  '/courses/self-paced-pl-csd-2024',
-  '/courses/k5-unplugged',
-  '/courses/ai-ethics-2023',
-  '/courses/express-2024',
-  '/courses/pre-express-2024',
-  '/courses/k5-onlinepd-2024',
-  '/courses/teaching-csf-2025',
-  '/courses/coursea-2024',
-  '/courses/courseb-2024',
-  '/courses/coursec-2024',
-  '/courses/coursed-2024',
-  '/courses/coursee-2024',
-  '/courses/coursef-2024',
-  '/courses/customizing-llms-2024',
-  '/courses/self-paced-pl-ai-101-2024',
-  '/courses/foundations-gen-ai-2024',
-  '/courses/foundations-gen-ai-2025',
-  '/courses/foundations-generative-ai-unplugged',
-  '/courses/k5-ai-data-2024',
-  '/courses/elementaryai-2024',
-  '/courses/3-5gamedesign-2024',
-  '/courses/elem-game-design-2024',
-  '/courses/artificial-intelligence-foundations-2025',
-  '/courses/mix-move-ai-2025',
-  '/courses/teaching-ai-foundations-2025',
-  '/courses/oceans',
-  '/courses/how-ai-works-2023',
-  '/courses/problem-solving-with-ai-2025',
-];
-
-const matches = prefix => {
-  return window.location.pathname.match(new RegExp(`^(?:[/][^/]+)?${prefix}`));
-};
-
-const experiments =
-  JSON.parse(window.localStorage.experimentsList || '[]') || [];
-const inExperiment =
-  experiments?.some(experiment =>
-    experiment ? experiment.key === 'localizejs' : false
-  ) || window.location.search.includes('localizejs=');
-const projectKeys = Object.entries(prefixes).filter(([projectId, prefixes]) =>
-  prefixes.some(matches)
-);
-
-const isLive = live.some(matches);
+function localizeLanguage() {
+  const locale = get('language_') || DefaultLocale;
+  return i18nToLocalizeCode[locale] || locale;
+}
 
 function loadLocalize() {
   !(function (a) {
@@ -149,7 +76,7 @@ function loadLocalize() {
   const Localize = window.Localize;
 
   Localize.initialize({
-    key: projectKeys[0][0],
+    key: projectKey,
     rememberLanguage: true,
     retranslateOnNewPhrases: true,
     disableWidget: true,
@@ -171,101 +98,47 @@ function loadLocalize() {
     document
       .querySelector('html')
       .setAttribute('dir', ['fa'].includes(lang) ? 'rtl' : 'ltr');
-
-    const cdoLanguage = language === 'source' ? 'en' : language;
-
-    const ensureSelector = cdoLanguage => {
-      const localeSelect =
-        document.querySelector('#locale') ||
-        document.querySelector("select[name='locale']");
-      if (localeSelect) {
-        const optionIndex =
-          localeSelect.querySelector("option[value='" + cdoLanguage + "']")
-            ?.index || 0;
-        localeSelect.selectedIndex = optionIndex;
-      }
-    };
-
-    // This function ensures that the dropdowns show the requested language
-    const handleChange = event => {
-      event.stopPropagation();
-      event.preventDefault();
-      Localize.cdoSetLanguage(event.target.selectedOptions[0].value);
-    };
-
-    // When the site loads, ensure the language selector has the correct value
-    const onDOMLoad = () => {
-      const localeSelect =
-        document.querySelector('#locale') ||
-        document.querySelector("select[name='locale']");
-      if (localeSelect) {
-        // Remove all options and replace them with the LocalizeJS options we have
-        Localize.getAvailableLanguages((err, data) => {
-          localeSelect.innerHTML = '';
-          data.forEach(info => {
-            const option = document.createElement('option');
-            option.value = info.code;
-            option.textContent = info.name;
-            localeSelect.append(option);
-          });
-        });
-        localeSelect.removeAttribute('onchange');
-        localeSelect.addEventListener('change', handleChange);
-      }
-      ensureSelector(cdoLanguage);
-    };
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', onDOMLoad);
-    } else {
-      // 'interactive' or 'complete' — DOMContentLoaded has already fired
-      onDOMLoad();
-    }
-
-    // Translate everything in the Blockly message pool
-    ensureSelector(cdoLanguage);
   };
 
-  // Just in case... any other calls to the Localize setLanguage will also hit
-  // our custom code which also ensures the site dropdowns match
+  // Just in case... any other calls to the Localize setLanguage also hit our
+  // custom code which keeps the <html> direction in sync.
   Localize.setLanguage = Localize.cdoSetLanguage;
 
-  // Ensure we are setting the correct direction on our <html> tag
-  Localize.cdoSetLanguage(Localize.getLanguage());
+  // Switch to the visitor's language from the `language_` cookie (e.g. a Global
+  // Edition locale like es-LA), falling back to whatever LocalizeJS remembers
+  // when the page is already in English. This also sets the correct direction
+  // on our <html> tag.
+  const language = localizeLanguage();
+  const initialLanguage = !language.startsWith('en')
+    ? language
+    : Localize.getLanguage();
+  Localize.cdoSetLanguage(initialLanguage);
 
   // Forcibly hide the widget for good measure
   Localize.hideWidget();
 }
 
-if (projectKeys.length > 0 && (inExperiment || isLive)) {
-  /**
-   * If the current locale is not English, we must reload in English.
-   */
-  const locale = get('language_') || 'en';
-  if (!locale.startsWith('en')) {
-    set('language_', 'en-US', {domain: '.code.org'});
-    window.location.reload();
-  } else {
-    // Load the Localize widget
-    const script = document.createElement('script');
-    const scriptUrl = 'https://global.localizecdn.com/localize.js';
-    script.src = scriptUrl;
-    script.type = 'text/javascript';
+if (projectKey) {
+  // The backend has already rendered this page in English; load the Localize
+  // widget so it can swap in the visitor's language.
+  const script = document.createElement('script');
+  const scriptUrl = 'https://global.localizecdn.com/localize.js';
+  script.src = scriptUrl;
+  script.type = 'text/javascript';
 
-    // Create the loader promise for upstream initialization in the
-    // Localization class.
-    window.LocalizeLoader = new Promise((resolve, reject) => {
-      script.onload = () => {
-        // Load the localize widget
-        loadLocalize();
-        resolve(window.Localize);
-      };
-      script.onerror = () => {
-        console.error(`Failed to load Localize script: ${scriptUrl}`);
-        reject();
-      };
-    });
+  // Create the loader promise for upstream initialization in the
+  // Localization class.
+  window.LocalizeLoader = new Promise((resolve, reject) => {
+    script.onload = () => {
+      // Load the localize widget
+      loadLocalize();
+      resolve(window.Localize);
+    };
+    script.onerror = () => {
+      console.error(`Failed to load Localize script: ${scriptUrl}`);
+      reject();
+    };
+  });
 
-    document.head.appendChild(script);
-  }
+  document.head.appendChild(script);
 }

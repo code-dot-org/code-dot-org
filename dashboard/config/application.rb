@@ -98,6 +98,9 @@ module Dashboard
 
     config.middleware.insert_after Rails::Rack::Logger, Middleware::I18n
     config.middleware.insert_after Middleware::I18n, Middleware::GlobalEdition
+    # Must run inside GlobalEdition: it renders LocalizeJS pages in English while
+    # GlobalEdition keeps coordinating the region/locale in the real locale.
+    config.middleware.insert_after Middleware::GlobalEdition, Middleware::I18n::LocalizeJS
     config.middleware.insert_after Middleware::I18n, FilesApi
 
     config.middleware.insert_after FilesApi, ChannelsApi

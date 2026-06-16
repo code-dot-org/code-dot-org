@@ -33,6 +33,21 @@ class ApplicationController < ActionController::Base
 
   around_action :with_global_current_user
 
+  before_action :load_localize_js_config
+
+  # LocalizeJS pages are detected -- and switched into English rendering -- by
+  # Middleware::I18n::LocalizeJS, which runs inside Middleware::GlobalEdition so
+  # that Global Edition region/locale and their cookies stay intact. The
+  # middleware stashes the project key in the Rack env; we expose it to the
+  # i18n/_localizejs partial. The widget reads the visitor's language from the
+  # `language_` cookie itself, so nothing per-visitor is embedded here.
+  def load_localize_js_config
+    config = request.env[Middleware::I18n::LocalizeJS::ENV_KEY]
+    return unless config
+
+    @localizejs_project_key = config[:project_key]
+  end
+
   def fix_crawlers_with_bad_accept_headers
     # append text/html as an acceptable response type for Edmodo and weebly-agent's malformed HTTP_ACCEPT header.
     if request.formats.include?("image/*") &&

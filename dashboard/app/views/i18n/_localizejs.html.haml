@@ -1,0 +1,8 @@
+-# Loads the LocalizeJS widget, but only on LocalizeJS pages. The backend
+-# renders these pages in English (see Middleware::I18n::LocalizeJS) and hands
+-# the widget its project key here; the widget reads the visitor's locale from
+-# the `language_` cookie and swaps the page into that language client-side.
+-# Only the project key is embedded, so the page stays identical (and cacheable)
+-# for every visitor. @localizejs_project_key is nil on all other pages.
+- if @localizejs_project_key
+  %script{src: webpack_asset_path("js/localization.js"), 'data-ot-ignore' => '', data: {localizejs: {projectKey: @localizejs_project_key}.to_json}}

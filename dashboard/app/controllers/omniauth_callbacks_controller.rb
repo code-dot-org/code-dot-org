@@ -377,8 +377,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   private def prepare_locale_cookie(user)
-    # Set user-account locale only if no cookie is already set.
-    if user.locale && user.locale != I18n.locale.to_s && cookies[:language_].nil?
+    # Set user-account locale only if no cookie is already set. Compare against
+    # the visitor's intended locale (the `language_` cookie / Global Edition
+    # region), not `I18n.locale`, which is forced to English while rendering a
+    # LocalizeJS page and would otherwise misfire here.
+    if user.locale && user.locale != Cdo::I18n.intended_locale && cookies[:language_].nil?
       set_locale_cookie(user.locale)
     end
   end

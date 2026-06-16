@@ -6,8 +6,8 @@
 - html_attrs['data-ge-region'] = request.ge_region if request.ge_region.present?
 %html{html_attrs}
   %head
-    %script{src: webpack_asset_path("js/localization.js"), 'data-ot-ignore' => ''}
-    = render partial: 'i18n/crowdin_in_context_tool'
+    -# LocalizeJS support (for select pages only, for now)
+    = render partial: 'i18n/localizejs'
     = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'onetrust_cookie_scripts.haml')), type: :haml, locals: {dashboard: true, domain: 'code.org'}
     - appname = Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]"
     - title = @page_title ? "#{@page_title} - #{appname}" : appname

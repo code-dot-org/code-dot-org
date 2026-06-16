@@ -8,6 +8,7 @@ https://github.com/code-dot-org/code-dot-org/blob/b2efc7ca8331f8261ebd55a326e23f
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton as MuiIconButton} from '@mui/material';
+import {get} from 'js-cookie';
 import _ from 'lodash';
 import debounce from 'lodash/debounce';
 import React, {
@@ -20,9 +21,6 @@ import React, {
   type MouseEvent,
 } from 'react';
 
-import localization, {
-  type LocalizationChangeEvent,
-} from '@cdo/apps/localization';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import CopyrightDialog from '@cdo/apps/sharedComponents/footer/CopyrightDialog/index';
 import I18nDropdown from '@cdo/apps/sharedComponents/footer/I18nDropdown/index';
@@ -77,21 +75,20 @@ const SmallFooter = (props: SmallFooterProps) => {
   const [menuState, setMenuState] = useState<MenuState>(MenuStates.MINIMIZED);
   const [baseWidth, setBaseWidth] = useState<number>(0);
   const [baseHeight, setBaseHeight] = useState<number>(0);
-  const [currentLocale, setCurrentLocale] = useState<string>(
-    localization.isLocalizeJS() ? 'en' : props.currentLocale || 'en-US'
-  );
-  const [localeOptions, setLocaleOptions] = useState<
-    SmallFooterProps['localeOptions']
-  >(localization.isLocalizeJS() ? [] : props.localeOptions || []);
+  // The language dropdown offers the server's CDO locale options and POSTs the
+  // chosen locale to /locale (see I18nDropdown), so Middleware::I18n /
+  // Middleware::GlobalEdition handle the locale cookie, the Global Edition
+  // region, and the URL. On LocalizeJS pages the page then loads in English and
+  // the widget swaps to the cookie's locale.
+  //
+  // The selected option comes from the `language_` cookie, not the rendered
+  // locale: LocalizeJS pages render in English, so props.currentLocale would
+  // always read as English. The cookie holds the CDO locale (e.g. es-LA) that
+  // matches the option values; we avoid localization.locale here because it can
+  // be a LocalizeJS code (e.g. zh-Hans) that would not match them.
+  const currentLocale = get('language_') || props.currentLocale || 'en-US';
+  const localeOptions = props.localeOptions || [];
   const ref = useRef<HTMLDivElement>(null);
-
-  const onLocaleUpdate = useCallback(
-    (info: LocalizationChangeEvent) => {
-      setLocaleOptions(localization.locales);
-      setCurrentLocale(info.locale);
-    },
-    [setLocaleOptions, setCurrentLocale]
-  );
 
   const captureBaseElementDimensions = useCallback(() => {
     const base = ref.current;
@@ -105,13 +102,11 @@ const SmallFooter = (props: SmallFooterProps) => {
     const captureEvent = () => debounce(captureBaseElementDimensions, 100);
 
     window.addEventListener('resize', captureEvent);
-    localization.on('change', onLocaleUpdate);
 
     return () => {
       window.removeEventListener('resize', captureEvent);
-      localization.off('change', onLocaleUpdate);
     };
-  }, [captureBaseElementDimensions, onLocaleUpdate]);
+  }, [captureBaseElementDimensions]);
 
   const clickBaseMenu = useCallback(
     (e: MouseEvent) => {
