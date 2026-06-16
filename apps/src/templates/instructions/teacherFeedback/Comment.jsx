@@ -38,7 +38,7 @@ const styles = {
     marginTop: 0,
     marginBottom: 8,
     display: 'block',
-    width: '90%',
+    width: 'calc(90% + 14px)',
     fontSize: 12,
   },
   readOnly: {
