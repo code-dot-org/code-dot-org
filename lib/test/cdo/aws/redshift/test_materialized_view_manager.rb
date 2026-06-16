@@ -55,6 +55,8 @@ module Cdo
         let(:all_columns) {[id_col, name_col, email_col, bio_col, age_col, is_admin_col, score_col, created_at_col, updated_at_col, deleted_at_col, last_login_col, birthday_col]}
 
         let(:model) {stub}
+        let(:described_class) {MaterializedViewManager}
+        let(:described_instance) {described_class.new(model)}
 
         before do
           model.extend(FakeClassification)
@@ -64,100 +66,88 @@ module Cdo
         end
 
         describe '#generate_pii_ddl' do
+          let(:generate_pii_ddl) {described_instance.generate_pii_ddl}
+
           it 'includes all columns in the SELECT clause' do
-            ddl = MaterializedViewManager.new(model).generate_pii_ddl
-            all_columns.each {|col| assert_includes ddl, col.name}
+            all_columns.each {|col| _(generate_pii_ddl).must_include col.name}
           end
 
           it 'uses ERB template variable in the pii schema name' do
-            ddl = MaterializedViewManager.new(model).generate_pii_ddl
-            assert_includes ddl, 'learning_platform_<%=environment_type%>_pii.users'
+            _(generate_pii_ddl).must_include 'learning_platform_<%=environment_type%>_pii.users'
           end
 
           it 'uses ERB template variables in the source table path' do
-            ddl = MaterializedViewManager.new(model).generate_pii_ddl
-            assert_includes ddl, '<%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.users'
+            _(generate_pii_ddl).must_include '<%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.users'
           end
 
           it 'uses the primary key as the distkey (double-quoted)' do
-            ddl = MaterializedViewManager.new(model).generate_pii_ddl
-            assert_includes ddl, 'DISTSTYLE KEY DISTKEY ("id")'
+            _(generate_pii_ddl).must_include 'DISTSTYLE KEY DISTKEY ("id")'
           end
 
           it 'disables backup and automated refresh' do
-            ddl = MaterializedViewManager.new(model).generate_pii_ddl
-            assert_includes ddl, 'BACKUP NO'
-            assert_includes ddl, 'AUTO REFRESH NO'
+            _(generate_pii_ddl).must_include 'BACKUP NO'
+            _(generate_pii_ddl).must_include 'AUTO REFRESH NO'
           end
 
           it 'returns nil when the model has no columns' do
             model.stubs(:columns).returns([])
-            assert_nil MaterializedViewManager.new(model).generate_pii_ddl
+            _(generate_pii_ddl).must_be_nil
           end
 
           it 'renders to the correct production schema when ERB is evaluated' do
-            ddl = MaterializedViewManager.new(model).generate_pii_ddl
             environment_type = 'production'
-            rendered = ERB.new(ddl).result(binding)
-            assert_includes rendered, 'learning_platform_production_pii.users'
-            assert_includes rendered, 'production_learningplatform_mysql_zeroetl.dashboard_production.users'
+            rendered = ERB.new(generate_pii_ddl).result(binding)
+            _(rendered).must_include 'learning_platform_production_pii.users'
+            _(rendered).must_include 'production_learningplatform_mysql_zeroetl.dashboard_production.users'
           end
         end
 
         describe '#generate_non_pii_ddl' do
-          let(:generator) {MaterializedViewManager.new(model)}
+          let(:generate_non_pii_ddl) {described_instance.generate_non_pii_ddl}
 
           it 'excludes string columns' do
-            ddl = generator.generate_non_pii_ddl
-            refute_includes ddl, 'name'
-            refute_includes ddl, 'email'
+            _(generate_non_pii_ddl).wont_include 'name'
+            _(generate_non_pii_ddl).wont_include 'email'
           end
 
           it 'excludes text columns' do
-            ddl = generator.generate_non_pii_ddl
-            refute_includes ddl, 'bio'
+            _(generate_non_pii_ddl).wont_include 'bio'
           end
 
           it 'excludes non-allowlisted datetime columns' do
-            ddl = generator.generate_non_pii_ddl
-            refute_includes ddl, 'last_login'
+            _(generate_non_pii_ddl).wont_include 'last_login'
           end
 
           it 'excludes non-allowlisted date columns' do
-            ddl = generator.generate_non_pii_ddl
-            refute_includes ddl, 'birthday'
+            _(generate_non_pii_ddl).wont_include 'birthday'
           end
 
           it 'includes allowlisted datetime columns (created_at, updated_at, deleted_at)' do
-            ddl = generator.generate_non_pii_ddl
-            assert_includes ddl, 'created_at'
-            assert_includes ddl, 'updated_at'
-            assert_includes ddl, 'deleted_at'
+            _(generate_non_pii_ddl).must_include 'created_at'
+            _(generate_non_pii_ddl).must_include 'updated_at'
+            _(generate_non_pii_ddl).must_include 'deleted_at'
           end
 
           it 'includes non-text, non-date columns (integer, boolean, float)' do
-            ddl = generator.generate_non_pii_ddl
-            assert_includes ddl, 'id'
-            assert_includes ddl, 'age'
-            assert_includes ddl, 'is_admin'
-            assert_includes ddl, 'score'
+            _(generate_non_pii_ddl).must_include 'id'
+            _(generate_non_pii_ddl).must_include 'age'
+            _(generate_non_pii_ddl).must_include 'is_admin'
+            _(generate_non_pii_ddl).must_include 'score'
           end
 
           it 'uses ERB template variable in the non-pii schema name' do
-            ddl = generator.generate_non_pii_ddl
-            assert_includes ddl, 'learning_platform_<%=environment_type%>.users'
-            refute_includes ddl, '_pii'
+            _(generate_non_pii_ddl).must_include 'learning_platform_<%=environment_type%>.users'
+            _(generate_non_pii_ddl).wont_include '_pii'
           end
 
           it 'disables backup and automated refresh' do
-            ddl = generator.generate_non_pii_ddl
-            assert_includes ddl, 'BACKUP NO'
-            assert_includes ddl, 'AUTO REFRESH NO'
+            _(generate_non_pii_ddl).must_include 'BACKUP NO'
+            _(generate_non_pii_ddl).must_include 'AUTO REFRESH NO'
           end
 
           it 'returns nil when there are no non-pii columns' do
             model.stubs(:columns).returns([name_col, bio_col])
-            assert_nil generator.generate_non_pii_ddl
+            _(generate_non_pii_ddl).must_be_nil
           end
         end
 
