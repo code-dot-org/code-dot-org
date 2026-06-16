@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-14 23:51:55 UTC",
+    "serialized_at": "2026-06-15 17:02:09 UTC",
     "hide_within_course": true,
     "published_state": "in_development",
     "instruction_type": null,
@@ -969,7 +969,7 @@
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Build students' understanding of iteration, for loops, and while loops by connecting vocabulary and definitions to annotated flowchart examples.\n\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Iterating with AI Unit Guide.\n\n",
         "duration": "10",
-        "name": "Making Sense of Loop9s"
+        "name": "Making Sense of Loops"
       },
       "seeding_key": {
         "activity_section.key": "15331d32-c255-464e-afaf-31cdea024266",
