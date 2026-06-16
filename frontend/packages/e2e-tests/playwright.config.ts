@@ -1,10 +1,9 @@
 import {defineConfig, devices} from '@playwright/test';
 
-const isCI = !!process.env.CI;
-// Drone sets CI; the DTT daemon doesn't — but both run `yarn test:ui:ci`, which
-// sets PLAYWRIGHT_CI. Gate the report artifacts on this, not isCI, to cover both
-// lanes. Local runs (`test:ui:local`) set neither and stay lean.
-const isAutomated = isCI || !!process.env.PLAYWRIGHT_CI;
+// The lane this run is in. Set by each automated entry point: the GHA workflow
+// step (gha), and the rake task for Drone/DTT (drone/dtt). Unset = local → lean.
+const provider = process.env.PLAYWRIGHT_PROVIDER; // 'gha' | 'drone' | 'dtt' | undefined
+const isAutomated = !!provider;
 const htmlReport = {outputFolder: 'playwright-report', open: 'never'} as const;
 
 /**
@@ -21,14 +20,21 @@ const htmlReport = {outputFolder: 'playwright-report', open: 'never'} as const;
 export default defineConfig({
   testDir: './tests',
   fullyParallel: true,
-  forbidOnly: isCI,
-  // 1 retry in CI to absorb flake; the retried attempt is traced (`trace` below).
-  retries: isCI ? 1 : 0,
-  // Tests tagged {tag: '@no_ci'} need infra the automated lane lacks (e.g.
-  // Javabuilder). grepInvert matches {tag} metadata as well as title text
-  // since Playwright 1.42; use {tag: '@no_ci'} in test definitions, not title embedding.
-  grepInvert: isCI ? /@no_ci/ : undefined,
-  workers: isCI ? '100%' : undefined,
+  // Fail any automated lane if a `.only` was committed.
+  forbidOnly: isAutomated,
+  // 1 retry on every automated lane so flake doesn't pass one lane and fail
+  // another; the retried attempt is traced (`trace` below).
+  retries: isAutomated ? 1 : 0,
+  // @no_ci is skipped only on Drone, whose in-container localhost build lacks
+  // services like Javabuilder; the DTT and GHA hit the deployed env and run them
+  // (matches the Cucumber suite, where only the --ci/Drone path skips @no_ci).
+  // grepInvert matches {tag} metadata as well as title text since Playwright 1.42;
+  // use {tag: '@no_ci'} in test definitions, not title embedding.
+  grepInvert: provider === 'drone' ? /@no_ci/ : undefined,
+  // 100% only on GHA: its runner is dedicated to the test workers and the target
+  // server is external. Drone shares its container with the server-under-test and
+  // the DTT is a shared daemon — both keep Playwright's default.
+  workers: provider === 'gha' ? '100%' : undefined,
   // 'list' always streams pass/fail to the live log. 'html' and 'json' are the
   // automated-lane artifacts (the report and machine-readable results); local
   // runs stay list-only.
