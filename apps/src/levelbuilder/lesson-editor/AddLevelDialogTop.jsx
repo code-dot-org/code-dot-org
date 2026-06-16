@@ -68,15 +68,17 @@ function AddLevelDialogTop(props) {
     <div>
       {!loadingLevels && (
         <div style={styles.topArea}>
-          <SegmentedButtons
-            selectedButtonValue={methodOfAddingLevel}
-            onChange={value => setMethodOfAddingLevel(value)}
-            size="xs"
-            buttons={[
-              {value: 'Find Level', label: 'Find Level'},
-              {value: 'Create New Level', label: 'Create New Level'},
-            ]}
-          />
+          <div style={styles.toggle}>
+            <SegmentedButtons
+              selectedButtonValue={methodOfAddingLevel}
+              onChange={value => setMethodOfAddingLevel(value)}
+              size="xs"
+              buttons={[
+                {value: 'Find Level', label: 'Find Level'},
+                {value: 'Create New Level', label: 'Create New Level'},
+              ]}
+            />
+          </div>
           {methodOfAddingLevel === 'Find Level' && (
             <div style={styles.filtersAndLevels}>
               <AddLevelFilters
@@ -142,6 +144,9 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     margin: 15,
+  },
+  toggle: {
+    marginBottom: 5,
   },
   bottomArea: {
     display: 'flex',
