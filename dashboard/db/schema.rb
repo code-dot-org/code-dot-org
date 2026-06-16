@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_06_01_152016) do
+ActiveRecord::Schema[7.0].define(version: 2026_06_16_120000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -2732,6 +2732,8 @@ ActiveRecord::Schema[7.0].define(version: 2026_06_01_152016) do
     t.integer "user_id", null: false
     t.string "tour_name", null: false
     t.datetime "completed_at", null: false
+    t.datetime "started_at"
+    t.json "properties"
     t.index ["user_id", "tour_name"], name: "index_user_product_tours_on_user_id_and_tour_name", unique: true
   end
 
