@@ -93,12 +93,12 @@ describe('AIDiffFloatingActionButton', () => {
       .mockResolvedValue(
         Promise.resolve(new Response(JSON.stringify(defaultCoursesResponse)))
       );
-    fetchJsonStub = jest.fn();
-    fetchJsonStub.mockResolvedValue({
-      value: defaultThreadListResponse,
-      response: new Response(),
-    });
-    HttpClient.fetchJson = fetchJsonStub;
+    fetchJsonStub = jest
+      .spyOn(HttpClient, 'fetchJson')
+      .mockResolvedValue({
+        value: defaultThreadListResponse,
+        response: new Response(),
+      });
   });
 
   afterEach(() => {
