@@ -248,13 +248,10 @@ DOM tree from rendered React and walking it back, which was fragile.
 - **`yarn dev`** runs a standalone demo app (`demo/`) with a radio selector to
   switch between scenarios and a dark-mode toggle (the design-system
   `[data-theme]`) — handy for iterating on the component and extensions.
-- **`yarn test`** runs the jsdom unit tests; **`yarn test:visual`** runs the
-  browser-based visual-regression tests, and **`yarn test:visual:update`**
-  regenerates their baselines.
+- **`yarn test`** runs the jsdom unit tests.
 
-The demo and the visual tests share one scenario list (`demo/scenarios.tsx`), so
-adding a scenario there surfaces it in both. The visual tests render each
-scenario in both themes (baselines are named `<id>-light` / `<id>-dark`).
+The demo is driven by a scenario list (`demo/scenarios.tsx`); adding a scenario
+there surfaces it in the demo app, rendered in both themes.
 
 ## Notes
 

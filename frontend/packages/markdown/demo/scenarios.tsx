@@ -5,11 +5,8 @@ import {localization} from '@code-dot-org/core/plugins/localization';
 import {Markdown, extensions} from '../src';
 
 /**
- * A markdown scenario, used by both the demo app (`demo/Demo.tsx`) and the
- * visual-regression tests (`src/components/Markdown.visual.test.tsx`). Defining
- * them here keeps the two in sync — one source of scenarios.
- *
- * `id` doubles as the screenshot baseline name, so keep it stable.
+ * A markdown scenario, used by the demo app (`demo/Demo.tsx`). Defining the
+ * scenarios here keeps them in one place.
  */
 export interface Scenario {
   id: string;
