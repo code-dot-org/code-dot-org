@@ -20,7 +20,7 @@ export const WithSubtitle = () => (
 export const WithoutSubtitle = () => (
   <LoginTypeCard
     title="Google Classroom"
-    description="Sync your Code.org section with an existing Google Classroom."
+    description="Sync your CodeAI section with an existing Google Classroom."
     onClick={action('onClick')}
   />
 );

@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# Else Statement\n\nAn `else` statement runs code when the condition in an `if` statement is not true. Use `else` when you want your app to do one thing if a condition is true and a different thing if it is false.",
+  "examples": "[{\"name\":\"Show a Message\",\"description\":\"Change the text depending on whether the user is signed in.\",\"code\":\"```\\nif (isSignedIn === true) {\\n  message.textContent = \\\"Welcome back!\\\";\\n} else {\\n  message.textContent = \\\"Please sign in.\\\";\\n}\\n```\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "else-statement",
+  "name": "Else Statement",
+  "syntax": "`} else { ... }`",
+  "tips": "- Use `else` after an `if` statement.\n- The code inside `else` only runs when the `if` condition is false.\n- Do not put a condition after `else`.\n- Use curly braces `{ }` to hold the code that should run.\n- In Web Lab, `else` is often used to choose between two screen updates.",
+  "methods": [
+
+  ]
+}

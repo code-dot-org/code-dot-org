@@ -32,7 +32,6 @@ $(document).ready(() => {
       legacyReactDomRender: true,
     }
   );
-  // TODO: This is hardcoded for now, but will need to incorporate logic around grade level and pass this in as a parameter in the future once we have the grade sign up flow
-  resumeCreateSectionOnboardingTour(false);
+  resumeCreateSectionOnboardingTour();
   displayDifferentiationChat();
 });

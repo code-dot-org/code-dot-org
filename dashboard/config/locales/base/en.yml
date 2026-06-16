@@ -1433,6 +1433,7 @@ en:
     this_sprite: "this sprite"
   unit_prefix: "Unit %{n}"
   code_org_logo_alt: "Code.org Home"
+  codeai_logo_alt: "CodeAI Home"
   teacher_feedback: "Teacher Feedback"
   lesson_lock:
     error:
@@ -1566,8 +1567,29 @@ en:
   not_applicable_abbreviation: "N/A"
   global_edition:
     regions:
+      ar: Arabic
+      br: Brazil
+      cn: China
+      cz: Czech Republic
+      de: Germany
+      es: Spain
       fa: Farsi
+      fr: France
+      id: Indonesia
+      it: Italy
       in: India
+      jp: Japan
+      kr: South Korea
+      la: LATAM
+      pl: Poland
+      pt: Portugal
+      ro: Romania
+      ru: Russia
+      sk: Slovakia
+      th: Thailand
+      tr: Türkiye
+      tw: Taiwan
+      ua: Ukraine
   roster:
     sync:
       has_started: Sync started. It will complete in a few minutes

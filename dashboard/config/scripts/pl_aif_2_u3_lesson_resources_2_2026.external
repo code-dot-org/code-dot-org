@@ -3,97 +3,101 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lesson Resources 
+# Teacher Resources 
 
-#### Although the professional learning module did not cover every lesson in the Unit, be aware that there are resources for each lesson available to guide you along the way. 
+This professional learning module highlights key lessons, concepts, and teaching strategies from the unit. As you move into the curriculum, each lesson includes additional resources to support implementation in the classroom.
 
-## Lessons
-#### The lessons are designed for **45-minute class periods**, but can be modified for longer or shorter class periods. Some lessons, such as project lessons, take multiple days to complete. Suggested times are included in each lesson plan.
-
-### **Lesson Components**
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🙋‍♀️ Warm Up</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
+## Lesson Components
+The lessons are designed for **45-minute class periods**, but can be modified for longer or shorter class periods. Some lessons, such as project lessons, take multiple days to complete. Suggested times are included in each lesson plan.
 
 
-#### Each lesson starts with a brief warm-up, offering a shared experience to highlight the need for the lesson's skills and concepts. 
-</p></div>
-</details>
+<div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:16px;margin:20px 0;">
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">💃 Activity</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
+  <div style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.08);">
+    <p style="font-size:18pt;font-weight:bold;margin:0;">🙋‍♀️ Warm Up</p>
+    <p style="font-size:14pt;line-height:1.4;">Each lesson starts with a brief warm-up that creates a shared experience and introduces the need for the lesson’s skills and concepts.</p>
+  </div>
 
+  <div style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.08);">
+    <p style="font-size:18pt;font-weight:bold;margin:0;">💃 Activity</p>
+    <p style="font-size:14pt;line-height:1.4;">Students spend most of their time exploring new computing concepts through scaffolded activities and just-in-time support.</p>
+  </div>
 
-#### Students spend most of their time on lesson activities, exploring new computing concepts. These activities are scaffolded to provide just-in-time support, helping students build the knowledge and skills needed for computing.
-</p></div>
-</details>
+  <div style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.08);">
+    <p style="font-size:18pt;font-weight:bold;margin:0;">🏁 Wrap Up</p>
+    <p style="font-size:14pt;line-height:1.4;">Each lesson ends with reflection so students can connect back to the key skills and concepts.</p>
+  </div>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🏁 Wrap Up</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
+</div>
+---
 
+## Lesson Resources
 
-#### Every lesson ends with a wrap-up, allowing students to reflect on key skills and concepts. 
-</p></div>
-</details>
+Everything you need to deliver engaging and effective classes is included with each lesson plan.
 
+<div style="display:grid;grid-template-columns:52% 40%;gap:20px;align-items:start;margin:24px 0;width:100%;box-sizing:border-box;">
 
-## Lesson Resources 
+  <div style="flex:1.2;">
 
-<img src="https://images.code.org/cfa7d5b4aff0752e9f4937c98fca6da5-image-1734018244275.png" alt="A lesson plan diagram uses arrows to show where objectives, teaching guides, slides, and student handouts are" width="40%" style="border-radius:5px; float:right; margin-left: 40px; border: 1px solid black;">
+  <p style="font-size:14pt;line-height:1.5;">Each lesson includes:</p>
 
-#### Everything you need to deliver engaging and effective classes is included with each **lesson plan** to help make your teaching experience as seamless as possible.
+  <details style="background-color:#F5F7F8;padding:12px;margin-bottom:10px;border-left:6px solid #0093A4;border-radius:8px;">
+      <summary style="font-size:16pt;font-weight:bold;cursor:pointer;">1. Clear Objectives</summary>
+      <p style="font-size:14pt;line-height:1.4;">Statements outline the specific knowledge and skills students will gain by the end of each lesson.</p>
+    </details>
 
-### Each lesson includes: 
+  <details style="background-color:#F5F7F8;padding:12px;margin-bottom:10px;border-left:6px solid #4A90E2;border-radius:8px;">
+      <summary style="font-size:16pt;font-weight:bold;cursor:pointer;">2. Detailed Teaching Guides</summary>
+      <p style="font-size:14pt;line-height:1.4;">Step-by-step guides walk you through each lesson, including teacher tips for smooth delivery. Guidance can also be found in the Speaker Notes section of the slides.</p>
+    </details>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 45%; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 16pt; font-weight: bold;"><b>1.</b> Clear Objectives</summary>
-<div style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding-bottom:0px;">
-       	<p style= "font-size: 14pt">
-         Statements outline the specific knowledge and skills students will gain by the end of each lesson.
-        </p>
-   </div>
-</details>
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 45%; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 16pt; font-weight: bold;"><b>2. </b>Detailed teaching guides</summary>
-<div style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding-bottom:0px;">
-       	<p style= "font-size: 14pt">
-         Step-by-step guides walks you through each lesson, including teacher tips to ensure smooth delivery and maximize student learning.
-        </p>
-   </div>
-</details>
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 45%; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 16pt; font-weight: bold;"> <b>3. </b>Engaging slides</summary>
-<div style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding-bottom:0px;">
-       	<p style= "font-size: 14pt">
-         Visually appealing presentations keep students focused and provide a clear structure for the lesson.
-        </p>
-   </div>
-</details>
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 45%; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 16pt; font-weight: bold;"><b>4. </b>Interactive student handouts</summary>
-<div style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding-bottom:0px;">
-       	<p style= "font-size: 14pt">
-         Handouts offer activities, practice problems, and note-taking guides to reinforce key concepts. In Programming with Music Lab, <b>only select lessons have associated handout</b>.
-        </p>
-   </div>
-</details>
+  <details style="background-color:#F5F7F8;padding:12px;margin-bottom:10px;border-left:6px solid #8148B2;border-radius:8px;">
+      <summary style="font-size:16pt;font-weight:bold;cursor:pointer;">3. Exemplars and Answer Keys</summary>
+      <p style="font-size:14pt;line-height:1.4;">Activity Guides, Unit Guides, and Projects include exemplars or answer keys.</p>
+    </details>
+
+  <details style="background-color:#F5F7F8;padding:12px;margin-bottom:10px;border-left:6px solid #F5A623;border-radius:8px;">
+      <summary style="font-size:16pt;font-weight:bold;cursor:pointer;">4. Engaging Slides</summary>
+      <p style="font-size:14pt;line-height:1.4;">Presentations help students stay focused and provide a clear structure for the lesson.</p>
+    </details>
+
+  <details style="background-color:#F5F7F8;padding:12px;margin-bottom:10px;border-left:6px solid #7ED321;border-radius:8px;">
+      <summary style="font-size:16pt;font-weight:bold;cursor:pointer;">5. Interactive Student Handouts</summary>
+      <p style="font-size:14pt;line-height:1.4;">Handouts provide activities, practice problems, and note-taking guides to reinforce key concepts.</p>
+    </details>
+
+  </div>
+
+<div style="text-align:center;overflow:hidden;">
+  <img 
+    src="https://images.code.org/7cd9f66961e3f7ce51e78ba95fc1d9c9-Screenshot 2025-12-02 at 3.07.43 PM.png" 
+    alt="lesson plan diagram showing where objectives, teaching guides, slides, and student handouts are" 
+    style="width:100%;max-width:100%;border-radius:10px;border:3px solid black;box-sizing:border-box;"
+  >
+</div>
+
+</div>
 
 
 <br>
 
----
+<div style="clear:both;"></div>
 
+</div>
+
+
+
+<br>
+<p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ <strong>Optional: </strong>Open the <a href='https://studio.code.org/courses/artificial-intelligence-foundations-semester2-2025/units/3' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Unit Overview</a> to review some of the lesson resources when you're done with this module.
+</p>
+
+--- 
 ## Example Solutions
 
 
 
-#### Example solutions are provided on web lab levels throughout the unit in the **teacher panel**. You can access these solutions when you are logged into your teacher account and have assigned the lesson to your class. This feature is not available in the professional learning, but is available once you are back in teacher mode. 
+Example solutions are provided on web lab levels throughout the unit in the **teacher panel**. You can access these solutions when you are logged into your teacher account and have assigned the lesson to your class. This feature is not available in the professional learning, but is available once you are back in teacher mode. 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">🧑‍🏫 Teacher Panel</summary>
@@ -111,13 +115,72 @@ markdown <<MARKDOWN
 </details>
 <br>
 
----
+<hr>
+
+## Teaching Tools
+
+When logged into a verified teacher account, you have access to the AI Teaching Assistant, which can support lesson planning, assessment, classroom facilitation, and just-in-time teaching support throughout the unit.
 
 
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+<p style="font-size:14pt; margin-top:12px;">
 
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 14px; "> <b>💡Teacher Tip:</b> Take time to explore the lesson and lesson resources before you teach. Practice in Web Lab and anticipate student challenges. Use the <b>AI Teaching Assistant</b> to help you with just-in-time professional learning.
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+   <summary style="font-size: 1.5em; font-weight: bold;"> 🤖 AI Teaching Assistant</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+
+</summary>
+
+  <div style="margin-top:18px; background:#F5F7F8; border-radius:14px; padding:20px;">
+
+  <div style="display:flex; gap:24px; align-items:flex-start; flex-wrap:wrap;">
+
+  <div style="flex:1; min-width:260px;">
+
+  <p style="font-size:14pt; line-height:1.5;">
+          <strong>AI Teaching Assistant</strong> is a support tool designed for computer science and AI educators. It helps teachers save time, assess student work, and get classroom support while teaching.
+        </p>
+
+  <ul style="font-size:14pt; line-height:1.6; padding-left:20px;">
+          <li>Instant rubric-aligned feedback</li>
+          <li>Suggestions for differentiation and teaching strategies</li>
+          <li>Lesson summaries and classroom support</li>
+          <li>Reduced grading and prep time</li>
+        </ul>
+
+  <p style="font-size:14pt; line-height:1.5;">
+          The AI Teaching Assistant is available for verified teachers in the bottom-left corner of the screen.
+        </p>
+
+  <p style="font-size:14pt; line-height:1.5; margin-top:18px;">
+  🔗 
+  <a href="https://code.org/en-US/artificial-intelligence/teaching-assistant" target="_blank" rel="noopener noreferrer" style="font-weight:bold;">
+    Learn more about AI Teaching Assistant
+  </a>
 </p>
+
+  </div>
+
+  <div style="flex:1; min-width:220px; text-align:center;">
+        <img 
+          src="https://images.code.org/764dd277482a748b793aa3d51266434f-image-1779981169735.png" 
+          alt="Examples of AI Teaching Assistant chat bot"
+          style="width:100%; max-width:320px; border-radius:12px;"
+        >
+      </div>
+
+  </div>
+
+  </div>
+
+</details>
+
+<div style="background-color:#B7E0E5;border-radius:40px;color:#000000;width:95%;padding:18px 24px;margin:24px 0;">
+
+<p style="font-size:18px;line-height:1.5;margin:0;">
+<strong>💡 Teacher Tip:</strong> Take time to explore the lesson resources before teaching. Practice in Web Lab, preview student activities, and anticipate where students may struggle so you can support them more confidently during class.
+</p>
+
 </div>
 
 MARKDOWN

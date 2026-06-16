@@ -10,13 +10,13 @@ markdown <<MARKDOWN
 
 ## What is PRIMM?
 
-#### PRIMM stands for <b> Predict, Run, Investigate, Modify and Make </b>. These five stages form a framework that has been shown to be effective at helping students to learn to program. These stages are designed to support learners of various levels, including beginners. Teachers report that using PRIMM makes it easy to differentiate coding projects for students of different ability levels. The framework was developed by computing educational researcher Sue Sentance using <a href="https://primmportal.com/research/" target="_blank">research</a>  and known effective teaching practices. Code.org’s version of PRIMM was informed by this work and is detailed below. 
+PRIMM stands for <b> Predict, Run, Investigate, Modify and Make </b>. These five stages form a framework that has been shown to be effective at helping students to learn to program. These stages are designed to support learners of various levels, including beginners. Teachers report that using PRIMM makes it easy to differentiate coding projects for students of different ability levels. The framework was developed by computing educational researcher Sue Sentance using <a href="https://primmportal.com/research/" target="_blank">research</a>  and known effective teaching practices. Code.org’s version of PRIMM was informed by this work and is detailed below. 
 
 
 ##How can PRIMM be used on Code.org?
-####We recommend PRIMM for teachers who want to teach computer science using open-ended projects or who need to design lessons to fit specific educational outcomes. When compared with our full computer science courses, teaching with PRIMM as a framework gives the teacher more ownership of the context and desired outcomes of the lesson. We’ve used PRIMM to structure some of our new CS Connections projects. We hope that you will adapt and remix them to meet your needs!
+We recommend PRIMM for teachers who want to teach computer science using open-ended projects or who need to design lessons to fit specific educational outcomes. When compared with our full computer science courses, teaching with PRIMM as a framework gives the teacher more ownership of the context and desired outcomes of the lesson. We’ve used PRIMM to structure some of our new CS Connections projects. We hope that you will adapt and remix them to meet your needs!
 
-#### As your class moves through a PRIMM progression, students should feel an increased sense of ownership for their code. As the teacher, you’ll drive the early stages with whole class prompts and discussions. The later stages are more student-driven. You’ll guide and support student learning rather than give explicit instruction.
+As your class moves through a PRIMM progression, students should feel an increased sense of ownership for their code. As the teacher, you’ll drive the early stages with whole class prompts and discussions. The later stages are more student-driven. You’ll guide and support student learning rather than give explicit instruction.
 
 ![](https://images.code.org/205927c25a5cd54d8180180d956cba5c-image-1732223220188.06.54 PM.png)
 

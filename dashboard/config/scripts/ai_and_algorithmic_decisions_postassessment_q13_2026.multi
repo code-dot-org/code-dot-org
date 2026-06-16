@@ -1,11 +1,11 @@
 name 'ai-and-algorithmic-decisions-postassessment-q13_2026'
 
-question 'A phone\'s "Do Not Disturb" mode blocks all notifications unless the message is marked as urgent. What kind of logic helps the phone decide when not to block a message?'
+question 'A smart-home app turns on the porch light when motion is detected but only if it is not already bright outside. Which combination of operators handles this?'
 
-wrong 'An AND operator that blocks everything at all times'
-right 'A NOT operator that allows messages through when they are not in the blocked category'
-wrong 'An OR operator that chooses messages randomly to let through'
-wrong 'A variable that stores how many texts you\'ve received today'
+wrong 'AND only — both conditions must be true.'
+right 'AND with NOT — motion is detected AND it is NOT already bright.'
+wrong 'OR only — either condition triggers the light.'
+wrong 'No operator — the light just runs on a timer.'
 
 allow_multiple_attempts true
 

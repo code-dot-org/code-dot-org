@@ -107,6 +107,7 @@ class User < ApplicationRecord
   include AssignedCoursesAndScripts
   include PartialRegistration
   include Purgeable
+  include CredentialStrippable
   include Facilitator
   include TermsOfService
   include Rails.application.routes.url_helpers
@@ -122,7 +123,6 @@ class User < ApplicationRecord
   TYPE_TO_STI_CLASS_MAP = {
     TYPE_TEACHER => ::Teacher,
     TYPE_STUDENT => ::Student,
-    'staff' => ::Teacher # Powerschool sends through 'staff' instead of 'teacher'
   }.freeze
 
   def self.find_sti_class(type_name)
@@ -247,6 +247,8 @@ class User < ApplicationRecord
   has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
   has_many :ai_lesson_summaries, dependent: :destroy
   has_many :lesson_insights, foreign_key: 'student_id', dependent: :destroy
+
+  has_many :user_practice_problem_attempts, dependent: :destroy
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 

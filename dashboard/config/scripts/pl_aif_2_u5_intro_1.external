@@ -12,9 +12,9 @@ markdown <<MARKDOWN
 
 # Welcome!
 
-#### This professional learning module prepares you to teach a unit where students expand their understanding of web apps by connecting them to external data sources through APIs. They learn that modern applications rarely operate in isolation; instead, they depend on information and services provided by larger systems.
+This professional learning module prepares you to teach a unit where students expand their understanding of web apps by connecting them to external data sources through APIs. They learn that modern applications rarely operate in isolation; instead, they depend on information and services provided by larger systems.
 
-#### An **API (Application Programming Interface)** is a set of rules that allow software applications to communicate and use data from another server. 
+An **API (Application Programming Interface)** is a set of rules that allow software applications to communicate and use data from another server. 
 
 
 ___
@@ -28,15 +28,15 @@ ___
 ___
 
 
-#### **By the end of this professional learning module, you will be able to:**
+**By the end of this professional learning module, you will be able to:**
 
-* #### Use JavaScript to get data from an external API and show it in a web app.
+* Use JavaScript to get data from an external API and show it in a web app.
 
-* #### Write asynchronous code with `async/await` to load data without freezing the page.
+* Write asynchronous code with `async/await` to load data without freezing the page.
 
-* #### Compare using local data versus API data and explain when each makes sense.
+* Compare using local data versus API data and explain when each makes sense.
 
-* #### Get a solid introduction of APIs to prepare you to teach Unit 5.
+* Get a solid introduction of APIs to prepare you to teach Unit 5.
 
 
 

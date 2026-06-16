@@ -1,17 +1,26 @@
 {
   "name": "teaching-ai-discoveries-2026",
   "script_names": [
-    "self-paced-pl-thinking-critically-about-ai-2026"
+    "self-paced-pl-thinking-critically-about-ai-2026",
+    "self-paced-pl-teaching-ai-and-ml-2026",
+    "self-paced-pl-teaching-web-dev-2026",
+    "self-paced-pl-teaching-programming-with-music-lab-2026",
+    "self-paced-pl-teaching-interactive-animations-and-games-2026",
+    "self-paced-pl-teaching-design-process-2026",
+    "self-paced-pl-teaching-data-and-society-2026",
+    "self-paced-pl-teaching-creating-apps-with-devices-circuit-2026",
+    "self-paced-pl-teaching-creating-apps-with-devices-microbit-2026"
   ],
   "original_script_names": [
     "self-paced-pl-thinking-critically-about-ai-2026"
   ],
-  "published_state": "in_development",
-  "instruction_type": "teacher_led",
-  "participant_audience": "student",
-  "instructor_audience": "teacher",
+  "published_state": "stable",
+  "instruction_type": "self_paced",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
   "properties": {
     "family_name": "teaching-ai-discoveries",
+    "has_verified_resources": true,
     "version_year": "2026"
   },
   "resources": [

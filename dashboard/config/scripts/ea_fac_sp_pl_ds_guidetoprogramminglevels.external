@@ -5,17 +5,17 @@ description 'description here'
 markdown <<MARKDOWN
 # Guide to Programming Levels
 
-#### The programming levels follow a consistent pattern progression like the one shown here inspired by the **PRIMM Method**.
+The programming levels follow a consistent pattern progression like the one shown here inspired by the **PRIMM Method**.
 
 ## Types of Levels 
 
 <img src="https://images.code.org/5102f5ba99e09c1c56062bd6cad36729-image-1731945857086.png" alt="lesson progression" width="350px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
-- #### **Predict and Run:** Students are presented with a completed program and asked to predict what the code will do. After either entering a response, students can run the code to see the result.
+- **Predict and Run:** Students are presented with a completed program and asked to predict what the code will do. After either entering a response, students can run the code to see the result.
 
-- #### **Investigate and Modify:** Students are given small tasks and guiding questions to explore the program and make small modifications to discover its functionality.
+- **Investigate and Modify:** Students are given small tasks and guiding questions to explore the program and make small modifications to discover its functionality.
 
-- #### **Practice:** Students are given programming tasks, typically through **choice levels**, to practice concepts from the lesson.
+- **Practice:** Students are given programming tasks, typically through **choice levels**, to practice concepts from the lesson.
 
 <div style="clear:both;"></div>
 
@@ -26,6 +26,6 @@ markdown <<MARKDOWN
 </p>
 </div>
 
-#### Refer to the <a href="url" target="blank" rel="noopener noreferrer"><b>Guide to Programming Levels</b></a> for more information. 
+Refer to the <a href="url" target="blank" rel="noopener noreferrer"><b>Guide to Programming Levels</b></a> for more information. 
 
 MARKDOWN

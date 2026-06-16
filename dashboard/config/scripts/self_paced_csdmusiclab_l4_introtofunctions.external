@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Lessons 10 - 13: Functions
 
-#### This third chunk of lessons introduces students to functions in Music Lab. Across the Explore-Practice-Synthesize-Project arc, students learn how to organize music into reusable parts, create structure through abstraction, and remix music creatively.
+This third chunk of lessons introduces students to functions in Music Lab. Across the Explore-Practice-Synthesize-Project arc, students learn how to organize music into reusable parts, create structure through abstraction, and remix music creatively.
 
-#### This level is designed to give you a *brief* overview of the lessons before we dive into coding practice.
+This level is designed to give you a *brief* overview of the lessons before we dive into coding practice.
 
 <div style="background-color: #DECEEA; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 95%; margin: 20px auto;">
   <p style="font-size: 16pt; font-weight: bold; margin: 0; text-align: center;">What are Functions?</p>
@@ -73,9 +73,9 @@ In this end-of-unit project, students select an existing song and remix it into 
 
 ## Up Next
 
-#### Ready? Let's dive in to functions. You'll learn the following:
+Ready? Let's dive in to functions. You'll learn the following:
 
-* #### **From Lesson 10:** How to define and call a function
-* #### **From Lesson 11:** How to reuse, combine, and compose functions
-* #### **From Lesson 12:** How to remix using function blocks and musical abstraction
+* **From Lesson 10:** How to define and call a function
+* **From Lesson 11:** How to reuse, combine, and compose functions
+* **From Lesson 12:** How to remix using function blocks and musical abstraction
 MARKDOWN

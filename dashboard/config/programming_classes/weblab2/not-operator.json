@@ -1,0 +1,14 @@
+{
+  "category_key": "javascript",
+  "content": "# NOT Operator\n\nThe NOT operator `!` changes a Boolean value to the opposite value. Use `!` when your app needs to flip a state, such as turning something on or off.",
+  "examples": "[{\"name\":\"Toggle a Like\",\"description\":\"Switch `liked` between `true` and `false` when a button is clicked.\",\"code\":\"```\\nlikeButton.addEventListener(\\\"click\\\", () =\\u003e {\\n  liked = !liked;\\n});\\n```\"}]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "not-operator",
+  "name": "NOT Operator",
+  "syntax": "`liked = !liked;`",
+  "tips": "- Use `!` before a Boolean value or variable.\n- `!true` becomes `false`, and `!false` becomes `true`.\n- You can use `!` to toggle a value, like `isOn = !isOn;`.\n- Be careful not to confuse `!` with comparison operators like `!==`.\n- In Web Lab, `!` is often used to switch app states after a button click.",
+  "methods": [
+
+  ]
+}

@@ -1,15 +1,15 @@
-require File.expand_path('../../../pegasus/src/env', __FILE__)
+require File.expand_path('../../../lib/cdo/pegasus/src/env', __FILE__)
 require 'retryable'
 require 'cdo/poste'
 require 'honeybadger/ruby'
 require 'base64'
 require 'nokogiri'
-require src_dir 'forms'
-require src_dir 'abort_email_error'
+require 'observability/opentelemetry'
 
-if CDO.newrelic_logging
-  require 'newrelic_rpm'
-end
+# Initialize the OpenTelemetry SDK so the tracer below has somewhere to send
+# spans; cron jobs aren't Rack-instrumented, so we open the root span ourselves.
+Observability::OpenTelemetry.setup
+TRACER = OpenTelemetry.tracer_provider.tracer('cdo.cron')
 
 BATCH_SIZE = 500_000
 MAX_THREAD_COUNT = 50
@@ -32,6 +32,10 @@ SMTP_OPTIONS = {
 
 class DeliverPosteMessagesProcess
   def self.main
+    TRACER.in_span('cron.deliver_poste_messages') {run}
+  end
+
+  def self.run
     started_at = Time.now
 
     queue = message_queue
@@ -65,7 +69,7 @@ class DeliverPosteMessagesProcess
           )
           deliverer.reset_connection
           sent_at = 0
-        rescue AbortEmailError, Psych::SyntaxError => exception
+        rescue Psych::SyntaxError => exception
           Honeybadger.notify(
             exception,
             error_message: "Abandoning delivery of #{delivery[:id]} because '#{exception.message.to_s.strip}'",
@@ -103,19 +107,19 @@ class DeliverPosteMessagesProcess
     end
     workers.each(&:join)
 
-    if CDO.newrelic_logging
-      # How many emails we sent on _this run_ of the cronjob
-      sent_count = POSTE_DB[:poste_deliveries].where(Sequel.lit('sent_at >= ?', started_at)).count
-      NewRelic::Agent.record_metric("Custom/Poste/Sent", sent_count)
+    span = OpenTelemetry::Trace.current_span
 
-      # How many total abandoned emails we have
-      abandon_count = POSTE_DB[:poste_deliveries].where(sent_at: 0).count
-      NewRelic::Agent.record_metric("Custom/Poste/Abandoned", abandon_count)
+    # How many emails we sent on _this run_ of the cronjob
+    sent_count = POSTE_DB[:poste_deliveries].where(Sequel.lit('sent_at >= ?', started_at)).count
+    span.set_attribute('Custom/Poste/Sent', sent_count)
 
-      # How many emails are still queued for send on subsequent runs
-      remaining_count = POSTE_DB[:poste_deliveries].where(sent_at: nil).count
-      NewRelic::Agent.record_metric("Custom/Poste/Queued", remaining_count)
-    end
+    # How many total abandoned emails we have
+    abandon_count = POSTE_DB[:poste_deliveries].where(sent_at: 0).count
+    span.set_attribute('Custom/Poste/Abandoned', abandon_count)
+
+    # How many emails are still queued for send on subsequent runs
+    remaining_count = POSTE_DB[:poste_deliveries].where(sent_at: nil).count
+    span.set_attribute('Custom/Poste/Queued', remaining_count)
   end
 
   def self.message_queue

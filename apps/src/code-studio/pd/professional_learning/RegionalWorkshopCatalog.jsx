@@ -328,7 +328,7 @@ export default function RegionalWorkshopCatalog({
       <section className={style.headerContainer}>
         <div className={style.headerText}>
           <Typography variant="h1" gutterBottom>
-            Find Code.org workshops near you
+            Find CodeAI workshops near you
           </Typography>
           <Typography variant="body2" gutterBottom>
             Enter your school ZIP code to explore local professional learning

@@ -5,3 +5,5 @@ description 'Choose from one of the following two levels. Then read through the 
 sublevels
 level 'designing-reliable-apps-lesson1-level4a-choice-test-2025-pi_2025-_2026'
 level 'designing-reliable-apps-lesson1-level4b-choice-test-2025-pi_2025-_2026'
+
+uses_lab2

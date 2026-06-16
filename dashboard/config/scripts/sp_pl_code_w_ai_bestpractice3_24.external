@@ -5,10 +5,10 @@ description 'description here'
 markdown <<MARKDOWN
 # Teaching Tips for Using LLMs in Class 
 
-#### Setting clear boundaries and limitations is essential when using AI to teach coding, ensuring that students engage with the technology honestly. By carefully structuring your lessons, like in this Coding with AI unit, you can maintain a dynamic and engaging learning environment while promoting integrity and ethical use of AI.
+Setting clear boundaries and limitations is essential when using AI to teach coding, ensuring that students engage with the technology honestly. By carefully structuring your lessons, like in this Coding with AI unit, you can maintain a dynamic and engaging learning environment while promoting integrity and ethical use of AI.
 
 ## Prevent Overreliance and Cheating 
-#### Keep your your students in charge of their learning.
+Keep your your students in charge of their learning.
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">🚦 Set Clear Expectations</summary>

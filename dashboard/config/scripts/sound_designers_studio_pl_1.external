@@ -5,16 +5,16 @@ description 'description here'
 markdown <<MARKDOWN
 # Sound Designer's Studio
 
-#### This lesson teaches how to make music interactive with event triggers.
+This lesson teaches how to make music interactive with event triggers.
 
 
 
 
 ## In this lesson, you will:
 
-* #### Learn about events and triggers.
-* #### Code with triggers.
-* #### Create events to control actions. 
+* Learn about events and triggers.
+* Code with triggers.
+* Create events to control actions. 
 
 
 ### **Suggested time:** 20 minutes

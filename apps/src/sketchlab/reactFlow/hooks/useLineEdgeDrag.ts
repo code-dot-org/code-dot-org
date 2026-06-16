@@ -1,12 +1,15 @@
 import {useReactFlow, type XYPosition} from '@xyflow/react';
-import React, {useCallback, useEffect, useRef} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {
   SketchlabReactFlowEdge,
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 
-import {LINE_RECONNECT_SNAP_RADIUS_PX} from '../constants';
+import {
+  LINE_RECONNECT_SNAP_RADIUS_PX,
+  REACT_FLOW_EDGE_UPDATER_CLASS,
+} from '../constants';
 import {snapEdgeEndpointToHandle} from '../utils/handleSnap';
 import {
   anchorHandleFlowPosition,
@@ -43,6 +46,7 @@ interface UseLineEdgeDragOptions {
   ) => void;
   screenToFlowPosition: (position: XYPosition) => XYPosition;
   flowToScreenPosition: (position: XYPosition) => XYPosition;
+  pushSnapshot: () => void;
 }
 
 // Dragging the body of a line edge moves the line as a whole. Free
@@ -56,18 +60,26 @@ export function useLineEdgeDrag({
   setEdges,
   screenToFlowPosition,
   flowToScreenPosition,
+  pushSnapshot,
 }: UseLineEdgeDragOptions) {
   const {getNode} = useReactFlow<
     SketchlabReactFlowNode,
     SketchlabReactFlowEdge
   >();
   const draggingLineEdgeRef = useRef<DragState | null>(null);
+  const [isLineDragging, setIsLineDragging] = useState(false);
 
   const handleLineEdgeMouseMove = useCallback(
     (event: MouseEvent) => {
       const dragState = draggingLineEdgeRef.current;
       if (!dragState) {
         return;
+      }
+
+      // Push the undo snapshot on the first move, before any mutation, so
+      // a bare click on the line doesn't create a history entry.
+      if (!dragState.hasMoved) {
+        pushSnapshot();
       }
 
       // On detach, create fresh anchors at any attached endpoint
@@ -98,6 +110,9 @@ export function useLineEdgeDrag({
         );
         dragState.pendingDetaches = [];
       }
+      if (!dragState.hasMoved) {
+        setIsLineDragging(true);
+      }
       dragState.hasMoved = true;
 
       const currentPointer = screenToFlowPosition({
@@ -125,13 +140,14 @@ export function useLineEdgeDrag({
         })
       );
     },
-    [screenToFlowPosition, setNodes, setEdges]
+    [screenToFlowPosition, setNodes, setEdges, pushSnapshot]
   );
 
   const stopLineEdgeDrag = useCallback(
     (event?: MouseEvent) => {
       const dragState = draggingLineEdgeRef.current;
       draggingLineEdgeRef.current = null;
+      setIsLineDragging(false);
       window.removeEventListener('mousemove', handleLineEdgeMouseMove);
       window.removeEventListener('mouseup', stopLineEdgeDrag);
 
@@ -177,6 +193,16 @@ export function useLineEdgeDrag({
     (event: React.MouseEvent, edge: SketchlabReactFlowEdge) => {
       if (readOnly || event.button !== 0) {
         return;
+      }
+
+      const target = event.target;
+      if (target instanceof Element) {
+        // Mousedown on an endpoint's reconnect anchor starts React Flow's
+        // reconnect drag (it's a child of the same edge wrapper); don't also
+        // start a whole-line drag from the bubbled event.
+        if (target.closest(`.${REACT_FLOW_EDGE_UPDATER_CLASS}`)) {
+          return;
+        }
       }
 
       const anchors: DraggingAnchor[] = [];
@@ -241,5 +267,5 @@ export function useLineEdgeDrag({
     };
   }, [handleLineEdgeMouseMove, stopLineEdgeDrag]);
 
-  return {handleEdgeMouseDown};
+  return {handleEdgeMouseDown, isLineDragging};
 }

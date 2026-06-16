@@ -113,6 +113,10 @@ div > div:nth-child(3n + 3) {
             align-self: stretch;
             flex-wrap: wrap;
 
+            i {
+              color: var(--text-neutral-secondary);
+            }
+
             > div {
               display: flex;
               align-items: center;
@@ -147,6 +151,10 @@ div > div:nth-child(3n + 3) {
       align-self: stretch;
 
       border-bottom: 1px solid var(--borders-neutral-primary);
+
+      i {
+        color: var(--text-neutral-secondary);
+      }
 
       > div {
         display: flex;

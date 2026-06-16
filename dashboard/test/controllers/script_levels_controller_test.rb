@@ -919,8 +919,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "build_script_level_url" do
     assert_equal "/s/laurel/lessons/1/levels/1", build_script_level_path(@custom_s1_l1)
     assert_equal "/courses/laurel/units/1/lessons/1/levels/1", build_script_level_path(@custom_s1_l1, unit_group_unit: @custom_script.original_unit_group_unit)
-    assert_equal "//test-studio.code.org/s/laurel/lessons/1/levels/1", build_script_level_url(@custom_s1_l1)
-    assert_equal "//test-studio.code.org/courses/laurel/units/1/lessons/1/levels/1", build_script_level_url(@custom_s1_l1, unit_group_unit: @custom_script.original_unit_group_unit)
+    assert_equal "https://test-studio.code.org/s/laurel/lessons/1/levels/1", build_script_level_url(@custom_s1_l1)
+    assert_equal "https://test-studio.code.org/courses/laurel/units/1/lessons/1/levels/1", build_script_level_url(@custom_s1_l1, unit_group_unit: @custom_script.original_unit_group_unit)
   end
 
   test "next routing for custom scripts" do
@@ -1213,22 +1213,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'end of HoC for a user is HOC endpoint' do
     stubs(:current_user).returns(@student)
-    assert_equal('//test-studio.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
+    assert_equal('https://test-studio.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
   end
 
   test 'post script redirect is HOC endpoint' do
     stubs(:current_user).returns(nil)
-    assert_equal('//test-studio.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
+    assert_equal('https://test-studio.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
   end
 
   test 'post script redirect is frozen endpoint' do
     stubs(:current_user).returns(nil)
-    assert_equal('//test-studio.code.org/api/hour/finish/frozen', Unit.find_by_name(Unit::FROZEN_NAME).finish_url)
+    assert_equal('https://test-studio.code.org/api/hour/finish/frozen', Unit.find_by_name(Unit::FROZEN_NAME).finish_url)
   end
 
   test 'post script redirect is starwars endpoint' do
     stubs(:current_user).returns(nil)
-    assert_equal('//test-studio.code.org/api/hour/finish/starwars', Unit.find_by_name(Unit::STARWARS_NAME).finish_url)
+    assert_equal('https://test-studio.code.org/api/hour/finish/starwars', Unit.find_by_name(Unit::STARWARS_NAME).finish_url)
   end
 
   test "show redirects admins to root" do
@@ -1276,7 +1276,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: 1,
     }
 
-    assert_select 'img[src="//studio.code.org/api/hour/begin_hoc-script.png"]'
+    assert_select 'img[src="https://studio.code.org/api/hour/begin_hoc-script.png"]'
   end
 
   test 'should not show tracking pixel for second level of hoc course in prod' do
@@ -2611,5 +2611,50 @@ class ScriptLevelsControllerTest < ActionController::TestCase
                                   params: -> {{course_course_name: modular_course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}},
                                   name: 'pilot teacher can view pilot modular course'
     end
+  end
+
+  # iframe embed gating: data-allow-embeds is set based on participant_audience
+  IFRAME_MARKDOWN = '<iframe src="https://padlet.com/embed/test123" title="Padlet"></iframe>'.freeze
+
+  test 'does not set allow_embeds for student-audience course' do
+    unit = create(:script, :in_single_unit_course, participant_audience: 'student', instructor_audience: 'teacher')
+    lesson_group = create(:lesson_group, script: unit)
+    lesson = create(:lesson, script: unit, lesson_group: lesson_group, absolute_position: 1, relative_position: '1')
+    level = create(:external)
+    level.properties['markdown'] = IFRAME_MARKDOWN
+    level.save!
+    script_level = create(:script_level, script: unit, lesson: lesson, levels: [level])
+
+    sign_in @teacher
+    get :show, params: {
+      course_course_name: unit.reload.original_unit_group.name,
+      unit_position: 1,
+      lesson_position: 1,
+      id: script_level.position
+    }
+
+    assert_response :success
+    refute_includes @response.body, "data-allow-embeds='true'"
+  end
+
+  test 'sets allow_embeds for teacher-audience (PL) course' do
+    unit = create(:script, :in_single_unit_course, participant_audience: 'teacher', instructor_audience: 'facilitator')
+    lesson_group = create(:lesson_group, script: unit)
+    lesson = create(:lesson, script: unit, lesson_group: lesson_group, absolute_position: 1, relative_position: '1')
+    level = create(:external)
+    level.properties['markdown'] = IFRAME_MARKDOWN
+    level.save!
+    script_level = create(:script_level, script: unit, lesson: lesson, levels: [level])
+
+    sign_in @teacher
+    get :show, params: {
+      course_course_name: unit.reload.original_unit_group.name,
+      unit_position: 1,
+      lesson_position: 1,
+      id: script_level.position
+    }
+
+    assert_response :success
+    assert_includes @response.body, "data-allow-embeds='true'"
   end
 end

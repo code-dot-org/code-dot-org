@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-07 11:09:43 UTC",
+    "serialized_at": "2026-06-11 20:35:33 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -6048,9 +6048,9 @@
   ],
   "resources": [
     {
-      "name": "[KEY] Accessibility in Design",
-      "url": "https://docs.google.com/document/d/1yvvdnTGJ5Zn9pWsFiN6tjU22Qyv-8e4yfHdjKk8LSHQ/edit?usp=drive_link",
-      "key": "_key_accessibility_in_design",
+      "name": "[EXEMPLAR] The User's Experience",
+      "url": "https://docs.google.com/document/d/18o-ICRzTRy6q54OoimY-15pKrXNSuNCcN0rFsMtZLvY/edit?usp=sharing",
+      "key": "_exemplar_the_user_s_experience",
       "properties": {
         "audience": "Verified Teacher",
         "curriculum_category": "curriculum",
@@ -6058,7 +6058,7 @@
         "type": "Answer Key"
       },
       "seeding_key": {
-        "resource.key": "_key_accessibility_in_design"
+        "resource.key": "_exemplar_the_user_s_experience"
       }
     },
     {
@@ -6076,9 +6076,9 @@
       }
     },
     {
-      "name": "[KEY] From Wireframes to Layouts",
-      "url": "https://docs.google.com/document/d/1pyn7xHmxVNhVr8jzp-HtLH47zfZEL0W6KCmIdnPFjjg/edit?usp=sharing",
-      "key": "_key_from_wireframes_to_layouts",
+      "name": "[KEY] AI-Generated Design Unit Guide",
+      "url": "https://docs.google.com/document/d/1wSc_2IjW_waULYQCyeD6XR-8azoO21FOf5BXgP4PnJc/edit?usp=sharing",
+      "key": "_key_ai-generated_design_unit_guide",
       "properties": {
         "audience": "Verified Teacher",
         "curriculum_category": "curriculum",
@@ -6086,7 +6086,21 @@
         "type": "Answer Key"
       },
       "seeding_key": {
-        "resource.key": "_key_from_wireframes_to_layouts"
+        "resource.key": "_key_ai-generated_design_unit_guide"
+      }
+    },
+    {
+      "name": "[KEY] AI-Generated Design Unit Guide",
+      "url": "https://docs.google.com/document/d/1wSc_2IjW_waULYQCyeD6XR-8azoO21FOf5BXgP4PnJc/edit?usp=sharing",
+      "key": "_key_ai-generated_design_unit_guide_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai-generated_design_unit_guide_1"
       }
     },
     {
@@ -6096,7 +6110,7 @@
       "properties": {
         "audience": "Student",
         "curriculum_category": "curriculum",
-        "embeddability_type": "resource_dropdown_only",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Video"
       },
       "seeding_key": {
@@ -6104,47 +6118,31 @@
       }
     },
     {
-      "name": "Accessibility in Design",
-      "url": "https://docs.google.com/presentation/d/17rI0I1ArAN6On_L_nDyEaxjjo2rvvEkiGB_byHUP9Gk/edit?slide=id.gca418c6afa_0_1070#slide=id.gca418c6afa_0_1070",
-      "key": "accessibility_in_design",
-      "properties": {
-        "audience": "Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "accessibility_in_design"
-      }
-    },
-    {
-      "name": "Accessibility in Design",
-      "url": "https://docs.google.com/document/d/1-gOT9aQKoFnJSypCHNDFXw_AmarNc_mdCKVRrtWR8e4/edit?tab=t.0#heading=h.xe9cnc3216z0",
-      "key": "accessibility_in_design_1",
-      "properties": {
-        "audience": "Student",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "accessibility_in_design_1"
-      }
-    },
-    {
       "name": "AI-Generated Design Unit Guide",
-      "url": "https://docs.google.com/document/d/1Znt4C-uU4F-fVcYYlwx6qD3XcGqky9nbDbV84Kzqu5g/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1Znt4C-uU4F-fVcYYlwx6qD3XcGqky9nbDbV84Kzqu5g/edit?usp=sharing",
       "key": "ai-generated_design_unit_guide",
       "properties": {
         "audience": "Student",
         "curriculum_category": "curriculum",
         "embeddability_type": "embed_and_resource_dropdown",
-        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "ai-generated_design_unit_guide"
+      }
+    },
+    {
+      "name": "AI-Generated Design Unit Guide",
+      "url": "https://docs.google.com/document/d/1Znt4C-uU4F-fVcYYlwx6qD3XcGqky9nbDbV84Kzqu5g/edit?usp=sharing",
+      "key": "ai-generated_design_unit_guide_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ai-generated_design_unit_guide_1"
       }
     },
     {
@@ -6163,31 +6161,25 @@
       }
     },
     {
-      "name": "Brand Identity",
-      "url": "https://docs.google.com/presentation/d/14L83a37wE_O0DqL69JvOU9x7RY4ieb6pB_tI2VW0C10/edit?usp=sharing",
-      "key": "brand_identity",
+      "name": "All Resources",
+      "url": "/courses/artificial-intelligence-foundations-semester2-2026/units/1/resources",
+      "key": "all_resources",
       "properties": {
-        "audience": "Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Slides"
+        "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "brand_identity"
+        "resource.key": "all_resources"
       }
     },
     {
-      "name": "Build Your First Web Page",
-      "url": "https://docs.google.com/presentation/d/1MFxOJDgJEmefZHVueUkY8FmuDaVg3KYUWal0nPAaa7E/edit?usp=sharing",
-      "key": "build_your_first_web_page",
+      "name": "All Vocabulary",
+      "url": "/courses/artificial-intelligence-foundations-semester2-2026/units/1/vocab",
+      "key": "all_vocabulary",
       "properties": {
-        "audience": "Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Slides"
+        "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "build_your_first_web_page"
+        "resource.key": "all_vocabulary"
       }
     },
     {
@@ -6206,7 +6198,7 @@
     },
     {
       "name": "Designing for Responsiveness",
-      "url": "https://docs.google.com/document/d/1kR4Xojmt6RLFeT1L06d4iW6ngah8WdMcDED19sEA1OI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1rXfLExQ2HU_V79YwoCT-ox3H2TUeG1DNeBTygPmVfDI/edit?usp=sharing",
       "key": "designing_for_responsiveness_1",
       "properties": {
         "audience": "Student",
@@ -6220,136 +6212,9 @@
       }
     },
     {
-      "name": "Digital Magazine Project",
-      "url": "https://docs.google.com/presentation/d/1x5PQQoM0pP07YzgeJQbQPmnW2sWp9O2eQSYcgcizav8/edit?usp=sharing",
-      "key": "digital_magazine_project",
-      "properties": {
-        "audience": "Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "digital_magazine_project"
-      }
-    },
-    {
-      "name": "Digital Magazine Project Guide",
-      "url": "https://docs.google.com/document/d/1NGsXN6Keob9gO5Pt6w1Io7G85pgxksayyyaBZEWGOsI/edit?usp=sharing",
-      "key": "digital_magazine_project_planning_guide",
-      "properties": {
-        "audience": "Student",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "digital_magazine_project_planning_guide"
-      }
-    },
-    {
-      "name": "Finding Your Style",
-      "url": "https://docs.google.com/presentation/d/1x4OKlHp446ePQ2Ansg-K2bkBdz4spxrkDPLeIIuiwC8/edit?usp=sharing",
-      "key": "finding_your_style",
-      "properties": {
-        "audience": "Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "finding_your_style"
-      }
-    },
-    {
-      "name": "From Wireframes to Layouts",
-      "url": "https://docs.google.com/presentation/d/1378y5Di7pQkZS5BIlPKRt-te4On61pEfPIt-4uxWnlw/edit?usp=sharing",
-      "key": "from_wireframes_to_layouts",
-      "properties": {
-        "audience": "Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "from_wireframes_to_layouts"
-      }
-    },
-    {
-      "name": "From Wireframes to Layouts",
-      "url": "https://docs.google.com/document/d/1qorl-u4mY-6cb0lTlFTqzFaGGmgEkt_cCLtq6lU169A/edit?usp=sharing",
-      "key": "from_wireframes_to_layouts_1",
-      "properties": {
-        "audience": "Student",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "from_wireframes_to_layouts_1"
-      }
-    },
-    {
-      "name": "Intro to CSS",
-      "url": "https://docs.google.com/presentation/d/1noJbbULjFLrC7S9mCJ9BJYRR-KoxWR2TWXajY0l8U-E/edit?usp=sharing",
-      "key": "intro_to_css_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "intro_to_css_1"
-      }
-    },
-    {
-      "name": "Meet Your User",
-      "url": "https://docs.google.com/presentation/d/1xnyCwcyYXbzWT3-UITZPLwDOcDIVB6zE-tv0Whjz0do/edit?usp=sharing",
-      "key": "meet_your_user",
-      "properties": {
-        "audience": "Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "meet_your_user"
-      }
-    },
-    {
-      "name": "Paper App Prototype Mystery Components",
-      "url": "https://docs.google.com/presentation/d/1xtYFEWOOm06tpjkvQXtLUT8BREPlFQBuigkgroeS3iU/edit?usp=sharing",
-      "key": "paper_app_prototype_mystery_components",
-      "properties": {
-        "audience": "Teacher",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "paper_app_prototype_mystery_components"
-      }
-    },
-    {
-      "name": "Site Maps",
-      "url": "https://docs.google.com/presentation/d/1WJM6x-UTRLasVzfMwAn3ThqB5IqR45FOFNHod-Fqcnw/edit?usp=sharing",
-      "key": "site_maps",
-      "properties": {
-        "audience": "Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "site_maps"
-      }
-    },
-    {
       "name": "The User's Experience",
       "url": "https://docs.google.com/presentation/d/1BkwdM0vfy8JYMLajMMxRXGV-K4FzpeVA1TTsc1uIUog/edit?usp=sharing",
-      "key": "the_user_s_experience_2",
+      "key": "the_user_s_experience",
       "properties": {
         "audience": "Verified Teacher",
         "curriculum_category": "curriculum",
@@ -6357,13 +6222,13 @@
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "the_user_s_experience_2"
+        "resource.key": "the_user_s_experience"
       }
     },
     {
       "name": "The User's Experience",
       "url": "https://docs.google.com/document/d/1ZJ1TXv9EEma3mcTE9wVZy1fbiKxrlV8qy9Xb9lSl7xE/edit?usp=sharing",
-      "key": "the_user_s_experience_3",
+      "key": "the_user_s_experience_1",
       "properties": {
         "audience": "Student",
         "curriculum_category": "curriculum",
@@ -6371,50 +6236,7 @@
         "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "the_user_s_experience_3"
-      }
-    },
-    {
-      "name": "Website Cards",
-      "url": "https://docs.google.com/document/d/12gIwAdZgRBKnUCTV5PwsC4ufTS2jruK8CsuxlAG02Ow/edit?usp=sharing",
-      "key": "website_cards",
-      "properties": {
-        "audience": "Student",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "website_cards"
-      }
-    },
-    {
-      "name": "Welcome to Web Apps",
-      "url": "https://docs.google.com/presentation/d/1nThSKLKPussNxR2UupIklnzL7dvOK73boUKlWKKM_uw/",
-      "key": "welcome_to_web_apps",
-      "properties": {
-        "audience": "Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "welcome_to_web_apps"
-      }
-    },
-    {
-      "name": "Wireframes",
-      "url": "https://docs.google.com/presentation/d/1tm8zE_n7KOn-tBoq66cr5pID-X0tT_C9zRJvV9gQ6o8/edit?usp=sharing",
-      "key": "wireframes",
-      "properties": {
-        "audience": "Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "wireframes"
+        "resource.key": "the_user_s_experience_1"
       }
     }
   ],
@@ -6433,12 +6255,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson 10: Wireframes",
-        "resource.key": "wireframes"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Lesson 11: From Wireframes to Layouts",
         "resource.key": "_key_ai-generated_design_unit_guide"
       }
@@ -6446,25 +6262,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 11: From Wireframes to Layouts",
-        "resource.key": "_key_from_wireframes_to_layouts"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 11: From Wireframes to Layouts",
         "resource.key": "ai-generated_design_unit_guide_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 11: From Wireframes to Layouts",
-        "resource.key": "from_wireframes_to_layouts"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 11: From Wireframes to Layouts",
-        "resource.key": "from_wireframes_to_layouts_1"
       }
     },
     {
@@ -6482,7 +6280,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 12: Designing for Responsiveness",
-        "resource.key": "ai-generated_design_unit_guide_1"
+        "resource.key": "ai-generated_design_unit_guide"
       }
     },
     {
@@ -6499,18 +6297,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson 13: Digital Magazine Project",
-        "resource.key": "digital_magazine_project"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 13: Digital Magazine Project",
-        "resource.key": "digital_magazine_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Lesson 1: Introduction to Web Apps",
         "resource.key": "_key_ai-generated_design_unit_guide"
       }
@@ -6523,20 +6309,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson 1: Introduction to Web Apps",
-        "resource.key": "paper_app_prototype_mystery_components"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 1: Introduction to Web Apps",
-        "resource.key": "welcome_to_web_apps"
+        "lesson.key": "Lesson 2: The User's Experience",
+        "resource.key": "_exemplar_the_user_s_experience"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 2: The User's Experience",
-        "resource.key": "_key_ai-generated_design_unit_guide"
+        "resource.key": "_key_ai-generated_design_unit_guide_1"
       }
     },
     {
@@ -6548,13 +6328,13 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 2: The User's Experience",
-        "resource.key": "the_user_s_experience_2"
+        "resource.key": "the_user_s_experience"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 2: The User's Experience",
-        "resource.key": "the_user_s_experience_3"
+        "resource.key": "the_user_s_experience_1"
       }
     },
     {
@@ -6571,12 +6351,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "resource.key": "build_your_first_web_page"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Lesson 4: Finding Your Style",
         "resource.key": "_key_ai-generated_design_unit_guide"
       }
@@ -6585,12 +6359,6 @@
       "seeding_key": {
         "lesson.key": "Lesson 4: Finding Your Style",
         "resource.key": "ai-generated_design_unit_guide_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 4: Finding Your Style",
-        "resource.key": "finding_your_style"
       }
     },
     {
@@ -6607,12 +6375,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson 5: Brand Identity",
-        "resource.key": "brand_identity"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Lesson 6: Intro to CSS",
         "resource.key": "_key_ai-generated_design_unit_guide"
       }
@@ -6621,12 +6383,6 @@
       "seeding_key": {
         "lesson.key": "Lesson 6: Intro to CSS",
         "resource.key": "ai-generated_design_unit_guide_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 6: Intro to CSS",
-        "resource.key": "intro_to_css_1"
       }
     },
     {
@@ -6643,12 +6399,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson 7: Meet Your User",
-        "resource.key": "meet_your_user"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Lesson 8: Site Maps",
         "resource.key": "_key_ai-generated_design_unit_guide"
       }
@@ -6661,38 +6411,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson 8: Site Maps",
-        "resource.key": "site_maps"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 8: Site Maps",
-        "resource.key": "website_cards"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 9: Accessibility in Design",
-        "resource.key": "_key_accessibility_in_design"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Lesson 9: Accessibility in Design",
         "resource.key": "_key_ai-generated_design_unit_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 9: Accessibility in Design",
-        "resource.key": "accessibility_in_design"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 9: Accessibility in Design",
-        "resource.key": "accessibility_in_design_1"
       }
     },
     {
@@ -6714,302 +6434,28 @@
         "resource.key": "ai-generated_design_unit_guide_1",
         "script.name": "ai-generated-design-2026"
       }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "ai-generated-design-2026"
+      }
     }
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-    {
-      "key": "abstraction",
-      "word": "abstraction",
-      "definition": "the practice of focusing only on the details that matter for what you're trying to do and leaving out everything else",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "abstraction"
-      }
-    },
-    {
-      "key": "accessibility",
-      "word": "accessibility",
-      "definition": "the practice of designing products, websites, and spaces so that people with a wide range of abilities, disabilities, and needs can use them fully and independently",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "accessibility"
-      }
-    },
-    {
-      "key": "brand_kit",
-      "word": "brand kit",
-      "definition": "a set of colors, fonts, and style choices that tell a consistent story and connect to the brand's audience",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "brand_kit"
-      }
-    },
-    {
-      "key": "decomposition",
-      "word": "decomposition",
-      "definition": "the process of breaking a complex problem into smaller, manageable parts",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "decomposition"
-      }
-    },
-    {
-      "key": "human_centered_design",
-      "word": "human-centered design",
-      "definition": "making decisions based on how real people actually experience a product",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "human_centered_design"
-      }
-    },
-    {
-      "key": "mood_board",
-      "word": "mood board",
-      "definition": "a collection of images, colors, and text used to explore the overall aesthetic of a brand",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "mood_board"
-      }
-    },
-    {
-      "key": "pattern_recognition",
-      "word": "pattern recognition",
-      "definition": "spotting recurring structures that reveal how a system works",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "pattern_recognition"
-      }
-    },
-    {
-      "key": "pour_principles",
-      "word": "POUR principles",
-      "definition": "four guidelines that define what it means for a web app to be fully accessible to all users",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "pour_principles"
-      }
-    },
-    {
-      "key": "problem_statement",
-      "word": "problem statement",
-      "definition": "a statement that clearly explains what a user needs and why it matters, without jumping to a solution",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "problem_statement"
-      }
-    },
-    {
-      "key": "prompt_engineering",
-      "word": "prompt engineering",
-      "definition": "writing clear, specific instructions that help AI understand exactly what you want it to make or do",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "prompt_engineering"
-      }
-    },
-    {
-      "key": "responsiveness",
-      "word": "responsiveness",
-      "definition": "the practice of designing and developing websites so that their layouts adapt smoothly to different screen sizes and devices",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "responsiveness"
-      }
-    },
-    {
-      "key": "site_map",
-      "word": "site map",
-      "definition": "shows how web pages are organized and connected",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "site_map"
-      }
-    },
-    {
-      "key": "stylesheet",
-      "word": "stylesheet",
-      "definition": "a file that controls a webpage's look using colors, fonts, spacing, and layout",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "stylesheet"
-      }
-    },
-    {
-      "key": "user_experience",
-      "word": "user experience",
-      "definition": "the overall experience a person has when interacting with a product, system, or service",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "user_experience"
-      }
-    },
-    {
-      "key": "user_flow",
-      "word": "user flow",
-      "definition": "the path a user takes through a site to complete a task",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "user_flow"
-      }
-    },
-    {
-      "key": "user_profile",
-      "word": "user profile",
-      "definition": "a description of a typical user of a product or service",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "user_profile"
-      }
-    },
-    {
-      "key": "web_app",
-      "word": "Web app",
-      "definition": "an interactive tool that connects to the internet and respond to user actions ",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "web_app"
-      }
-    },
-    {
-      "key": "wireframe",
-      "word": "wireframe",
-      "definition": "a low-fidelity, structural layout showing content and functionality, without colors, images, or visual styling",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "wireframe"
-      }
-    }
+
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 10: Wireframes",
-        "vocabulary.key": "abstraction"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 10: Wireframes",
-        "vocabulary.key": "wireframe"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 12: Designing for Responsiveness",
-        "vocabulary.key": "responsiveness"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 1: Introduction to Web Apps",
-        "vocabulary.key": "pattern_recognition"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 1: Introduction to Web Apps",
-        "vocabulary.key": "web_app"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 2: The User's Experience",
-        "vocabulary.key": "human_centered_design"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 2: The User's Experience",
-        "vocabulary.key": "user_experience"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 2: The User's Experience",
-        "vocabulary.key": "user_profile"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "vocabulary.key": "prompt_engineering"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 4: Finding Your Style",
-        "vocabulary.key": "mood_board"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 5: Brand Identity",
-        "vocabulary.key": "brand_kit"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 6: Intro to CSS",
-        "vocabulary.key": "stylesheet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 7: Meet Your User",
-        "vocabulary.key": "decomposition"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 7: Meet Your User",
-        "vocabulary.key": "problem_statement"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 8: Site Maps",
-        "vocabulary.key": "site_map"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 8: Site Maps",
-        "vocabulary.key": "user_flow"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 9: Accessibility in Design",
-        "vocabulary.key": "accessibility"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 9: Accessibility in Design",
-        "vocabulary.key": "pour_principles"
-      }
-    }
+
   ],
   "lessons_programming_expressions": [
 
@@ -7367,7 +6813,251 @@
     }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Wireframes",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-IM-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Wireframes",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Wireframes",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-PD-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-TR-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 12: Designing for Responsiveness",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-TR-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 12: Designing for Responsiveness",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-TR-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 12: Designing for Responsiveness",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-HW-30"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Digital Magazine Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-IM-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Digital Magazine Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-PD-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Digital Magazine Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-PD-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Digital Magazine Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-TR-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Introduction to Web Apps",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-IM-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Introduction to Web Apps",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-VD-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: The User's Experience",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-IM-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: The User's Experience",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-TR-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: The User's Experience",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-CE-45"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-PD-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-TR-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Finding Your Style",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-IM-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Finding Your Style",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-TR-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Brand Identity",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-IM-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Brand Identity",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-IM-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Brand Identity",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-CE-45"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Intro to CSS",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Intro to CSS",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-VD-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Meet Your User",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-IM-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Meet Your User",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-PD-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Site Maps",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-IM-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Site Maps",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-IM-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-TR-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-CE-45"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

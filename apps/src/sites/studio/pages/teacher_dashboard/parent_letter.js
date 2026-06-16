@@ -1,3 +1,4 @@
+import {ThemeProvider} from '@mui/material/styles';
 import React from 'react';
 import {Provider} from 'react-redux';
 
@@ -12,6 +13,7 @@ import teacherSections, {
   setSections,
   setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {getMuiThemeForBrand} from '@cdo/apps/util/brand';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 const script = document.querySelector('script[data-json]');
@@ -42,13 +44,15 @@ window.addEventListener('DOMContentLoaded', function () {
   const mountPoint = document.createElement('div');
   document.body.appendChild(mountPoint);
   createReactRoot(
-    <Provider store={store}>
-      <ParentLetter
-        autoPrint
-        logoUrl={scriptData.logoUrl}
-        loginTypeName={scriptData.section.login_type_name}
-      />
-    </Provider>,
+    <ThemeProvider theme={getMuiThemeForBrand()}>
+      <Provider store={store}>
+        <ParentLetter
+          autoPrint
+          logoUrl={scriptData.logoUrl}
+          loginTypeName={scriptData.section.login_type_name}
+        />
+      </Provider>
+    </ThemeProvider>,
     mountPoint,
     {
       legacyReactDomRender: true,

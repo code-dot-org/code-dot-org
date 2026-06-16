@@ -164,6 +164,14 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     section = Section.find(params[:id])
     authorize! :manage, section
 
+    # Demo sections are pinned to their preset login_type: codes are assigned
+    # only at creation (assign_code skips demo sections), so switching a demo
+    # section to a code-based login type would leave it permanently without a
+    # join code.
+    if section.demo_section? && Section.valid_login_type?(params[:login_type]) && params[:login_type] != section.login_type
+      return render json: {errors: 'Cannot change the login type of a demo section'}, status: :forbidden
+    end
+
     # Unhide unit for this section before assigning
     section.toggle_hidden_script @unit, false if @unit
 
@@ -221,6 +229,12 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       render_404
       return
     end
+    # Demo sections have a fixed pre-enrolled roster; joining is not permitted.
+    # This is defense-in-depth: load_resource finds sections by code and demo
+    # sections have no code, so they cannot normally be reached here.
+    if @section.demo_section?
+      return render json: {errors: 'Cannot join a demo section'}, status: :forbidden
+    end
     result = @section.add_student current_user
     # add_student returns 'failure' when id of current user is owner of @section
     if result == 'failure'
@@ -261,6 +275,11 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
 
   # POST /api/v1/sections/<id>/leave
   def leave
+    # Mirror of the join guard: the demo roster is fixed, so pre-enrolled
+    # demo students may not remove themselves.
+    if @section.demo_section?
+      return render json: {errors: 'Cannot leave a demo section'}, status: :forbidden
+    end
     authorize! :destroy, @follower
     @section.remove_student(current_user, @follower, {notify: true})
     render json: {
@@ -331,7 +350,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
   #   ...
   # ]}
   def code_review_groups
-    groups = @section.code_review_groups
+    groups = @section.code_review_groups.includes(:members)
     groups_details = []
     assigned_follower_ids = []
     groups.each do |group|
@@ -343,7 +362,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       groups_details << {id: group.id, name: group.name, members: members}
     end
 
-    unassigned_students = @section.followers.where.not(id: assigned_follower_ids)
+    unassigned_students = @section.followers.where.not(id: assigned_follower_ids).includes(:student_user)
     unassigned_students = unassigned_students.map {|student| {follower_id: student.id, name: student.student_user.name}}
     groups_details << {unassigned: true, members: unassigned_students}
     render json: {groups: groups_details}

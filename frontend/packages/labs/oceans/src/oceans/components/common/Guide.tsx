@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions, jsx-a11y/no-noninteractive-tabindex */
-import Radium from 'radium';
 import * as React from 'react';
 import Typist from 'react-typist';
 
@@ -13,9 +12,6 @@ import I18n from '@/oceans/i18n';
 import guide from '@/oceans/models/guide';
 import soundLibrary from '@/oceans/models/soundLibrary';
 import {getState, setState} from '@/oceans/state';
-import styles from '@/oceans/styles';
-import colors from '@/oceans/styles/colors';
-import {mergeStyles} from '@/oceans/styles/mergeStyles';
 import {
   startTextToSpeech,
   stopTextToSpeech,
@@ -30,9 +26,28 @@ export const stopTypingSounds = () => {
   }
 };
 
-const UnwrappedGuide = class Guide extends React.Component<
-  Record<string, never>
-> {
+/**
+ * Map a `GuideEntry.style` value to its modifier class name.  The
+ * registry's keys are typed as strings ("Info" / "Center" / etc.); we
+ * mirror them here to a small registry so the lookup is type-safe.
+ */
+const GUIDE_STYLE_CLASS: Record<string, string> = {
+  Info: 'ocean-guide--info',
+  Center: 'ocean-guide--center',
+};
+
+/** Map a `GuideEntry.arrow` value to its modifier class name. */
+const GUIDE_ARROW_CLASS: Record<string, string> = {
+  BotRight: 'ocean-guide__arrow--bot-right',
+  LowerLeft: 'ocean-guide__arrow--lower-left',
+  LowerRight: 'ocean-guide__arrow--lower-right',
+  LowishRight: 'ocean-guide__arrow--lowish-right',
+  LowerCenter: 'ocean-guide__arrow--lower-center',
+  UpperRight: 'ocean-guide__arrow--upper-right',
+  UpperFarRight: 'ocean-guide__arrow--upper-far-right',
+};
+
+class Guide extends React.Component<Record<string, never>> {
   guideDialogRef = React.createRef<HTMLDivElement>();
   lastFocusedGuideId: string | null = null;
 
@@ -142,18 +157,13 @@ const UnwrappedGuide = class Guide extends React.Component<
     const state = getState();
     const currentGuide = guide.getCurrentGuide();
 
-    let guideBgStyle: React.CSSProperties = styles.guideBackground;
+    // Background variant: hidden, info-darkened, or the default scrim.
+    let bgClassName = 'ocean-guide__bg';
     if (currentGuide) {
       if (currentGuide.noDimBackground) {
-        guideBgStyle = styles.guideBackgroundHidden;
-      }
-
-      // Info guides should have a darker background color.
-      if (currentGuide.style === 'Info') {
-        guideBgStyle = {
-          ...guideBgStyle,
-          backgroundColor: colors.transparentBlack,
-        };
+        bgClassName = 'ocean-guide__bg ocean-guide__bg--hidden';
+      } else if (currentGuide.style === 'Info') {
+        bgClassName = 'ocean-guide__bg ocean-guide__bg--info';
       }
     }
 
@@ -182,12 +192,31 @@ const UnwrappedGuide = class Guide extends React.Component<
       !currentGuide.noDimBackground &&
       currentGuide.style !== 'Info';
 
+    const guideClassName =
+      currentGuide &&
+      currentGuide.style &&
+      GUIDE_STYLE_CLASS[currentGuide.style]
+        ? `ocean-guide ${GUIDE_STYLE_CLASS[currentGuide.style]}`
+        : 'ocean-guide';
+
+    const arrowClassName =
+      currentGuide &&
+      currentGuide.arrow &&
+      GUIDE_ARROW_CLASS[currentGuide.arrow]
+        ? `ocean-guide__arrow ${GUIDE_ARROW_CLASS[currentGuide.arrow]}`
+        : 'ocean-guide__arrow';
+
+    // imageStyle on a GuideEntry is one of two opaque {top,left} object
+    // literals from guidesHoc / guidesK5; pass through verbatim.
+    const imageStyle = currentGuide?.imageStyle;
+
     return (
       <div>
         {currentGuide && currentGuide.image && (
           <img
             src={currentGuide.image}
-            style={mergeStyles(styles.guideImage, currentGuide.imageStyle)}
+            className="ocean-guide__image"
+            style={imageStyle}
             alt=""
           />
         )}
@@ -195,28 +224,24 @@ const UnwrappedGuide = class Guide extends React.Component<
           <div>
             <div
               key={currentGuide.id}
-              style={guideBgStyle}
+              className={bgClassName}
               onClick={this.onGuideClick}
               id="uitest-dismiss-guide"
             >
               <div
                 aria-labelledby="guide-heading"
                 tabIndex={-1}
-                className="guide-dialog"
-                style={{
-                  ...styles.guide,
-                  ...styles[`guide${currentGuide.style}`],
-                }}
+                className={`guide-dialog ${guideClassName}`}
               >
                 <div>
                   {currentGuide.style === 'Info' && (
-                    <div id="guide-heading" style={styles.guideHeading}>
+                    <div id="guide-heading" className="ocean-guide__heading">
                       {I18n.t('didYouKnow')}
                     </div>
                   )}
 
                   {/* Visible Typist animation for sighted users */}
-                  <div style={styles.guideTypingText} aria-hidden="true">
+                  <div className="ocean-guide__typing-text" aria-hidden="true">
                     <Typist
                       avgTypingDelay={35}
                       stdTypingDelay={15}
@@ -228,10 +253,10 @@ const UnwrappedGuide = class Guide extends React.Component<
                   </div>
 
                   <div
-                    style={
+                    className={
                       currentGuide.style === 'Info'
-                        ? styles.guideFinalTextInfoContainer
-                        : styles.guideFinalTextContainer
+                        ? 'ocean-guide__final-text-container--info'
+                        : undefined
                     }
                   >
                     <div
@@ -239,27 +264,30 @@ const UnwrappedGuide = class Guide extends React.Component<
                       aria-live="polite"
                       tabIndex={0}
                       onKeyDown={this.onGuideKeyDown}
-                      style={styles.guideFinalText}
+                      className="ocean-guide__final-text"
                     >
                       {currentGuide.textFn(getState())}
                     </div>
                   </div>
                   {renderClickToContinueReminder && (
-                    <div style={styles.guideClickToContinueReminderContainer}>
+                    <div className="ocean-guide__continue-reminder">
                       <img
                         src={fingerClickIcon1}
                         alt=""
-                        style={styles.guideClickToContinueReminder1}
+                        className="ocean-guide__continue-reminder-1"
                       />
                       <img
                         src={fingerClickIcon2}
                         alt=""
-                        style={styles.guideClickToContinueReminder2}
+                        className="ocean-guide__continue-reminder-2"
                       />
                     </div>
                   )}
                   {currentGuide.style === 'Info' && (
-                    <Button style={styles.infoGuideButton} onClick={() => {}}>
+                    <Button
+                      className="ocean-guide__info-button"
+                      onClick={() => {}}
+                    >
                       {I18n.t('continue')}
                     </Button>
                   )}
@@ -267,19 +295,12 @@ const UnwrappedGuide = class Guide extends React.Component<
               </div>
             </div>
             {currentGuide.arrow && (
-              <img
-                src={arrowDownImage}
-                style={{
-                  ...styles.guideArrow,
-                  ...styles[`arrow${currentGuide.arrow}`],
-                }}
-                alt=""
-              />
+              <img src={arrowDownImage} className={arrowClassName} alt="" />
             )}
           </div>
         )}
       </div>
     );
   }
-};
-export default Radium(UnwrappedGuide);
+}
+export default Guide;

@@ -1,0 +1,15 @@
+name 'ai-and-algorithmic-decisions-lesson4-cfu_2026'
+title 'Check for Understanding'
+
+question 'A developer is choosing between two function names: `markAsRead()` and `update1()`. Both work in code. Why is `markAsRead()` the better choice?'
+
+wrong 'It runs faster than `update1()`.'
+wrong 'Function names ending in `Read()` are required by JavaScript.'
+right 'It describes what the user experiences, which helps both human developers and AI tools understand and reuse the code correctly.'
+wrong '`update1()` would cause a syntax error.'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+
+MARKDOWN

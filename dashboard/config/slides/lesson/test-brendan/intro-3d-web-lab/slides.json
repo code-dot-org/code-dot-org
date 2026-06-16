@@ -1,0 +1,72 @@
+{
+  "ownerKind": "lesson",
+  "ownerId": 8897089,
+  "slides": [
+    {
+      "key": "7f90d9fd-224a-4a98-8e79-38a9bba94c23",
+      "description": "Introduce 3D graphics as the art and science of creating and manipulating three-dimensional images and models in a digital environment. Frame it as an evolution from 2D, adding depth and immersion. Emphasize its application in fields like gaming, simulation, and data visualization.",
+      "panel": {
+        "key": "7bf1b417-8605-4302-a9c4-3eb581958ee0",
+        "text": "3D graphics is both an art and a science, focused on creating and manipulating three-dimensional images and models within a digital space. Moving beyond the flat canvas of 2D, it introduces depth and immersion, opening doors to rich experiences in fields like game development, scientific simulations, and advanced data visualization.",
+        "imageUrl": "https://images.code.org/8f5a8edc195c40e316359c4c604d1cd8-Introduction to 3D Graphics in Web Lab 2-slide-panel-1-8618e8c9-2daf-467a-9ba1-b5140db85df0.png",
+        "layout": "text-top-left",
+        "teacherNote": "Before showing this slide, ask students what 3D experiences they already engage with (games, movies, VR). Discuss how this lesson builds on their understanding of 2D geometry by adding a Z-axis, and emphasize the interdisciplinary nature of 3D graphics."
+      }
+    },
+    {
+      "key": "3edcfb35-5c80-4444-8549-2b60b70e393d",
+      "description": "Explain the Cartesian coordinate system in three dimensions. Detail the X, Y, and Z axes, establishing a precise framework for defining positions in 3D space. Clarify the orientation of each axis (e.g., X for width, Y for height, Z for depth/distance).",
+      "panel": {
+        "key": "ebfe5996-13d4-46b4-bf8d-fc2b6ab20532",
+        "text": "To define precise positions in 3D space, we use the **Cartesian coordinate system**, extending from 2D to three dimensions. It uses three perpendicular axes: the **X-axis** typically represents width (left/right), the **Y-axis** represents height (up/down), and the **Z-axis** represents depth or distance (forward/backward).",
+        "imageUrl": "https://images.code.org/879d427486877c2d1ed3106bc3f0bc8c-Introduction to 3D Graphics in Web Lab 2-slide-panel-2-74900473-fbc1-4315-9f52-48d28b003bea.png",
+        "layout": "text-top-left",
+        "teacherNote": "Before showing this slide, you could draw a 2D coordinate system on the board and ask students how they might add a third dimension. Emphasize that the orientation (which axis is X, Y, or Z) can sometimes vary depending on the software or context, but the principle remains the same. A common misconception is confusing positive/negative Z with 'up' or 'down' instead of depth."
+      }
+    },
+    {
+      "key": "3395ce5a-2a24-48b4-b5ff-123edff71bff",
+      "description": "Define the fundamental components of 3D models: vertices, edges, and faces (or triangles). Illustrate how these basic geometric primitives are combined to construct complex objects and scenes, from simple shapes to intricate character models.",
+      "panel": {
+        "key": "21719031-b677-4d58-858a-357ae2708768",
+        "text": "3D models are constructed from fundamental geometric primitives. **Vertices** are the individual points in 3D space, each defined by its unique (X, Y, Z) coordinate. **Edges** are the lines that connect two vertices, forming the structural outline. **Faces**, often triangles or quadrilaterals, are the flat surfaces formed by connecting three or more edges. These primitives combine to build everything from simple cubes to intricate character models.",
+        "imageUrl": "https://images.code.org/d7611218af10e703b0eef3290f165590-Introduction to 3D Graphics in Web Lab 2-slide-panel-3-7927fdb7-767f-4d07-a439-e07053f75c01.png",
+        "layout": "text-top-left",
+        "teacherNote": "Before showing this slide, recap how the Cartesian system precisely locates points. Connect this to how vertices are just those points. Ask students if they've heard of 'polygons' in games and explain that faces are those polygons. Emphasize that all complex 3D objects, no matter how detailed, are fundamentally constructed from these basic geometric primitives, primarily triangles."
+      }
+    },
+    {
+      "key": "96734fb8-f058-4840-8569-dfd523b6d339",
+      "description": "Introduce WebGL as the JavaScript API for rendering interactive 3D and 2D graphics within any compatible web browser. Explain the `canvas` element's role as the dedicated drawing surface where these graphics will be displayed, distinguishing it from standard HTML elements.",
+      "panel": {
+        "key": "f6c7a04d-22b3-4166-aa3c-39d2266fad0c",
+        "text": "To bring 3D graphics to life in your browser, we'll use **WebGL**, a powerful JavaScript API. WebGL allows for rendering interactive 2D and 3D graphics directly within any compatible web browser, without needing plugins. The magic happens inside the HTML `<canvas>` element, which acts as a dedicated drawing surface—distinct from typical document elements—where your generated visuals will be displayed.",
+        "imageUrl": "https://images.code.org/da05f83b55d2f2f9abcaed4561bf7637-Introduction to 3D Graphics in Web Lab 2-slide-panel-4-2841da2b-0fbf-47bb-820d-526b4eed3dc6.png",
+        "layout": "text-top-center",
+        "teacherNote": "Before this slide, ask students what they think 'browser-based' graphics means, and how it might differ from graphics in a standalone game. Explain that WebGL is a client-side technology, meaning the rendering happens directly on the user's computer. Emphasize that the `<canvas>` element provides the viewport, but all the actual drawing and 3D manipulation is done through JavaScript and WebGL commands."
+      }
+    },
+    {
+      "key": "eba7be18-27aa-4b06-ab3e-87c590cfb0e3",
+      "description": "Explain the foundational concept of transformation matrices (Model, View, Projection) in 3D graphics pipelines. Describe how these mathematical operations are used to position, orient, scale 3D objects, and project them onto a 2D screen, forming the basis of all 3D scene manipulation.",
+      "panel": {
+        "key": "38de02da-5ade-4e3b-ad4d-5ebca1adae0f",
+        "text": "To manipulate 3D objects—position them, rotate them, scale them, and project them onto your 2D screen—we use **transformation matrices**. These powerful mathematical operations, commonly categorized as **Model, View, and Projection matrices**, form the bedrock of any 3D graphics pipeline, precisely translating objects from their local space to the final screen display.",
+        "imageUrl": "https://images.code.org/b650c8071088fe67b7ef99cf37813d49-Introduction to 3D Graphics in Web Lab 2-slide-panel-5-620ae3d3-3500-436e-96aa-58902bf78290.png",
+        "layout": "text-top-center",
+        "teacherNote": "Before this slide, ask students how they think a computer translates a 3D object's coordinates into pixels on a 2D screen. Introduce matrices as the mathematical 'recipe' for these transformations. Emphasize that while the math can be complex, the core concept is about moving and shaping objects, viewing them from a specific perspective, and then 'squashing' them onto the screen."
+      }
+    },
+    {
+      "key": "a17c3dbb-ee2c-4c86-bc00-1d3ea372c88d",
+      "description": "Set up the practical objective for the lesson. Students will learn to initialize a WebGL 3D canvas, render a basic geometric primitive (e.g., a cube), and then manipulate its position ('translation') and size ('scaling') programmatically within Web Lab 2.",
+      "panel": {
+        "key": "d08ab1fc-0a38-4c0b-aa53-75111c6a25c3",
+        "text": "Now, let's put these concepts into action in Web Lab 2! We'll start by initializing a **WebGL 3D canvas**, then render a basic **geometric primitive** like a cube. You'll then programmatically manipulate its position using **translation** and its size using **scaling**, directly applying the transformation matrix ideas we just discussed.",
+        "imageUrl": "https://images.code.org/6519c0a4c4d628070794c8fcae337882-Introduction to 3D Graphics in Web Lab 2-slide-panel-6-7c51d425-1288-477d-b6ef-5e0cf482b230.png",
+        "layout": "text-bottom-center",
+        "teacherNote": "Before this slide, ask students how they think we'll bring the theoretical concepts (coordinates, primitives, matrices) into a browser. Emphasize that Web Lab 2 provides a simplified environment to implement these ideas. Highlight that they will be directly manipulating the 'Model' matrix through functions that perform translation and scaling, making the abstract math tangible."
+      }
+    }
+  ]
+}

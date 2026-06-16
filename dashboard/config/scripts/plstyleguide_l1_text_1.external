@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Headings
 
-#### Headings provide structure and break long passages of text into manageable chunks. Visually, headings and their corresponding sections can increase white space on the page. Learners reading text may find information easier to locate and categorize with the use of effective headings.
+Headings provide structure and break long passages of text into manageable chunks. Visually, headings and their corresponding sections can increase white space on the page. Learners reading text may find information easier to locate and categorize with the use of effective headings.
 
-#### Additionally, screen readers scan a page using headings. Separating each chunk of the page into sections aids in accessibility.
+Additionally, screen readers scan a page using headings. Separating each chunk of the page into sections aids in accessibility.
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 100%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 	<p style="font-size: 14pt; font-weight: bold; margin: 0;">💡 Design Tip</p>
@@ -25,32 +25,32 @@ markdown <<MARKDOWN
 ## Heading Types in Level Builder
 
 # Heading 1
-#### `#` or `<h1>TEXT</h1>`
+`#` or `<h1>TEXT</h1>`
 
 ## Heading 2
-#### `##` or `<h2>TEXT</h2>`
+`##` or `<h2>TEXT</h2>`
 
 ### **Heading 3**
-#### `###` or `<h3>TEXT</h3>`
+`###` or `<h3>TEXT</h3>`
 
 ## Heading Guidelines
 
 ### **Usage**
-* #### An H1 heading should only be used once on a single page, at the top. If you find that you need another, consider breaking your content onto multiple pages.
+* An H1 heading should only be used once on a single page, at the top. If you find that you need another, consider breaking your content onto multiple pages.
 
-* #### An H2 heading may be used to separate a page into multiple sections. Each section should be topically related to the H1 heading, or otherwise separated onto a new page. 
+* An H2 heading may be used to separate a page into multiple sections. Each section should be topically related to the H1 heading, or otherwise separated onto a new page. 
 
-* #### An H3 heading may be used to further separate section into subsections. Again, each subsection should be topically related to the heading(s) above it. To distinguish an H3 heading from an H4 heading due to similar sizing, the above heading, "Usage", is bold.
+* An H3 heading may be used to further separate section into subsections. Again, each subsection should be topically related to the heading(s) above it. To distinguish an H3 heading from an H4 heading due to similar sizing, the above heading, "Usage", is bold.
 
 ### **Best Practices**
 
-* #### Use short headings of seven words or less since lengthy headings are harder to read and listen to.
+* Use short headings of seven words or less since lengthy headings are harder to read and listen to.
 
-* #### Provide contrast between headings and body text. 
-	* #### H1 and H2 headings in Level Builder provide contrast through color. 
-    * #### An H3 heading should be bolded (as noted above) to distinguish it from body text.
+* Provide contrast between headings and body text. 
+	* H1 and H2 headings in Level Builder provide contrast through color. 
+    * An H3 heading should be bolded (as noted above) to distinguish it from body text.
 
-* #### When capitalizing titles, use title case.
+* When capitalizing titles, use title case.
 
 
 

@@ -4,7 +4,7 @@ description 'description here'
 
 markdown <<MARKDOWN
 # ECHO Framework
-#### The ECHO framework helps you compare code, build with AI, notice strong coding choices, and create your own final version.
+The ECHO framework helps you compare code, build with AI, notice strong coding choices, and create your own final version.
 
 <br>
 
@@ -62,13 +62,13 @@ markdown <<MARKDOWN
 
 ## Applying the ECHO Framework
 
-#### Students will use the ECHO framework to study filter patterns by comparing examples, building with AI, identifying good coding practices, and then creating their own solution.
+Students will use the ECHO framework to study filter patterns by comparing examples, building with AI, identifying good coding practices, and then creating their own solution.
 
-#### This process helps students learn from examples without copying blindly. Instead, they test ideas, reflect on what works, and use that understanding to write code independently.
+This process helps students learn from examples without copying blindly. Instead, they test ideas, reflect on what works, and use that understanding to write code independently.
 
-#### As students work with larger data sets and more advanced programs, a process like ECHO can help them use AI as a learning partner while still taking ownership of their code.
+As students work with larger data sets and more advanced programs, a process like ECHO can help them use AI as a learning partner while still taking ownership of their code.
 
 ## Try it out
 
-#### Think of the ECHO framework as you work through the next level. 
+Think of the ECHO framework as you work through the next level. 
 MARKDOWN

@@ -1,5 +1,6 @@
 <Sketchlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 75,
   "created_at": "2026-04-01T21:39:55.000Z",
   "level_num": "custom",
@@ -626,7 +627,7 @@
         }
       }
     },
-    "long_instructions": "## Flowcharting a While Loop\r\n\r\nExplore the model **while loop** flowchart. Then create your own **while loop** flowchart to model something that is personally relevant to you. Label your start and stop conditions clearly, and make sure to update the value at some point to end the loop.\r\n\r\nChoose from the examples below or come up with your own:\r\n- Studying for a test\r\n- Responding to text messages\r\n- Playing Tic Tac Toe ",
+    "long_instructions": "## Flowcharting a While Loop\r\n\r\nExplore the model **while loop** flowchart. Then create your own **while loop** flowchart to model something that is personally relevant to you. \r\n\r\nLabel your start and stop conditions clearly, and make sure to update the value at some point to end the loop.\r\n\r\nSave your finished flowchart to your Backpack.\r\n\r\nChoose from the examples below or come up with your own:\r\n- Studying for a test\r\n- Responding to text messages\r\n- Playing Tic Tac Toe ",
     "exemplar_sources": {
       "source": {
         "type": "excalidraw",
@@ -2294,7 +2295,6 @@
     },
     "name_suffix": "_2026"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:39:55.967+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson1-level7-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson1-level7-test_2025-pilot\"},{\"changed_at\":\"2026-05-01 14:38:15 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 14:50:11 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 20:42:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:39:55.967+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson1-level7-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson1-level7-test_2025-pilot\"},{\"changed_at\":\"2026-05-01 14:38:15 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 14:50:11 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 20:42:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-06-05 18:44:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

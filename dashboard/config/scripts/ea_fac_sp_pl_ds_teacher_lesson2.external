@@ -5,8 +5,8 @@ description 'description here'
 markdown <<MARKDOWN
 # Making Sense of Data 
 
-#### After using the Three Reads strategy, students will analyze a larger dataset to answer the question: *How much pizza should we order for a school party?*
-#### This dataset includes survey responses from hundreds of students, and they'll learn **how data scientists use computers to handle large, complex data sets**.
+After using the Three Reads strategy, students will analyze a larger dataset to answer the question: *How much pizza should we order for a school party?*
+This dataset includes survey responses from hundreds of students, and they'll learn **how data scientists use computers to handle large, complex data sets**.
 
 
 
@@ -30,7 +30,7 @@ markdown <<MARKDOWN
 
 ---
 
-#### The first two lessons students gain a foundational understanding of what data is and how to read it on spreadsheets. Students will build on this knowledge as they continue the journey through data science.
+The first two lessons students gain a foundational understanding of what data is and how to read it on spreadsheets. Students will build on this knowledge as they continue the journey through data science.
 
 ## Let's continue to data ethics!
 MARKDOWN

@@ -1,10 +1,10 @@
 /** @file Root of the animation editor interface mode for GameLab */
+import {Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
 import ResizablePanes from '@cdo/apps/templates/ResizablePanes';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import AnimationPicker, {PICKER_TYPE} from '../AnimationPicker/AnimationPicker';
@@ -86,7 +86,14 @@ class AnimationTab extends React.Component {
           <div style={styles.editorColumn}>
             <PiskelEditor style={styles.piskelEl} />
             <div style={{...hidePiskelStyle, ...styles.emptyPiskelEl}}>
-              <div style={styles.helpText}> {i18n.addNewAnimation()} </div>
+              <MuiTypography
+                variant="body3"
+                component="div"
+                style={styles.helpText}
+              >
+                {' '}
+                {i18n.addNewAnimation()}{' '}
+              </MuiTypography>
             </div>
           </div>
         </ResizablePanes>
@@ -139,11 +146,10 @@ const styles = {
     position: 'absolute',
     width: '100%',
     height: '100%',
-    border: 'solid thin ' + color.light_gray,
+    border: 'solid thin var(--borders-neutral-primary)',
   },
   emptyPiskelEl: {
-    backgroundColor: color.light_gray,
-    color: color.white,
+    backgroundColor: 'var(--background-neutral-tertiary)',
     position: 'absolute',
     width: '100%',
     height: '100%',
@@ -153,6 +159,7 @@ const styles = {
     fontSize: 14,
   },
   helpText: {
+    color: 'var(--text-neutral-secondary)',
     position: 'relative',
     top: '50%',
     transform: 'translateY(-50%)',

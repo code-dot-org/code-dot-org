@@ -10,7 +10,7 @@ markdown <<MARKDOWN
 ---
 ## New session setup 
 
-#### Through the lesson plan (or the link below in this professional learning module), you will be connected to the 'New Session Setup' page on the MakeCode Classroom where you will see the starter code and the completed project code. 
+Through the lesson plan (or the link below in this professional learning module), you will be connected to the 'New Session Setup' page on the MakeCode Classroom where you will see the starter code and the completed project code. 
 
 <p style = "font-size: 14pt;">
 ➡️ Scroll to the bottom and select <code style="color:white; background-color:#000000">Start Session</code>
@@ -20,11 +20,11 @@ markdown <<MARKDOWN
 ---
 ## Assigning to your students 
 
-#### Your students will get to the MakeCode classroom using the link you generate by 
+Your students will get to the MakeCode classroom using the link you generate by 
 <a href="https://mbit.io/csf-c2-classroom" target="_blank" style="font-size: 14pt;"> 
 starting a new classroom session.</a>
 
-#### Once you are in the new session you can choose to **share a link** or **share a class code** with your students to get them to join. Students will enter their name in order to join.
+Once you are in the new session you can choose to **share a link** or **share a class code** with your students to get them to join. Students will enter their name in order to join.
 
 ![](https://images.code.org/e6703edc7923b36704fe2247a2e2b1a2-image-1718985826515.png)
 
@@ -54,6 +54,6 @@ starting a new classroom session.</a>
 
 <br>
 
-#### ***Return to this course when you finish the lesson.*** 
+***Return to this course when you finish the lesson.*** 
 
 MARKDOWN

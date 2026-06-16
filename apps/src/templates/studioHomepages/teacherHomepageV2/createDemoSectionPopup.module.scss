@@ -1,0 +1,116 @@
+// Stack the demo-type buttons and tighten the dialog padding once the viewport
+// is too narrow to lay the options out side by side.
+
+.dialog {
+  margin: 40px;
+  padding: 64px 40px;
+  border-radius: 16px;
+
+  // Cap the height to the viewport (less the 40px margins) and scroll within
+  // the dialog when the content would otherwise overflow the screen.
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+}
+
+.heading {
+  text-align: center;
+  font-size: 32px;
+  color: var(--text-neutral-primary);
+}
+
+.error {
+  margin-top: 16px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--text-error-primary);
+}
+
+.progress {
+  margin-top: 16px;
+
+  &:global(.MuiLinearProgress-root) {
+    background-color: var(--background-brand-purple-light);
+  }
+
+  &:global(.MuiLinearProgress-root) :global(.MuiLinearProgress-bar) {
+    background-color: var(--background-brand-purple-primary);
+  }
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-top: 36px;
+
+  @media (max-width: 680px) {
+    flex-direction: column;
+  }
+}
+
+.option {
+  display: flex;
+  flex: 1 1 0;
+  min-width: 170px;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 24px 16px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid var(--background-neutral-quinary);
+  border-radius: 8px;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover,
+  &:focus-visible {
+    border-color: var(--background-brand-purple-primary);
+    box-shadow: 0 0 0 1px var(--background-brand-purple-primary);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    border-color: var(--background-neutral-quinary);
+    box-shadow: none;
+  }
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  margin-bottom: 8px;
+}
+
+.icon {
+  font-size: 40px;
+  color: var(--text-brand-purple-primary);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.grades {
+  font-weight: 600;
+  color: var(--text-neutral-secondary);
+}
+
+.curriculum {
+  margin-top: auto;
+  padding-top: 10px;
+  font-style: italic;
+  font-size: 13px;
+  color: var(--text-neutral-secondary);
+}
+
+.loginType {
+  font-style: italic;
+  font-size: 13px;
+  color: var(--text-neutral-secondary);
+}

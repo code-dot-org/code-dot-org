@@ -30,6 +30,7 @@ interface UseCopyPasteOptions {
   setEdges: (
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
+  pushSnapshot: () => void;
 }
 
 // Returns the handle-to-handle horizontal span of a line clipboard's anchor
@@ -51,6 +52,7 @@ export function useCopyPaste({
   edges,
   setNodes,
   setEdges,
+  pushSnapshot,
 }: UseCopyPasteOptions) {
   const {deleteElements, screenToFlowPosition} = useReactFlow<
     SketchlabReactFlowNode,
@@ -162,9 +164,10 @@ export function useCopyPaste({
       lastDuplicateRef.current = {nodes: newNodes, edges: []};
       lastDuplicateIdRef.current = nodeId;
 
+      pushSnapshot();
       setNodes(currentNodes => [...currentNodes, ...newNodes]);
     },
-    [buildNodeClipboard, setNodes]
+    [buildNodeClipboard, pushSnapshot, setNodes]
   );
 
   // Toolbar action: duplicate a line.
@@ -207,10 +210,11 @@ export function useCopyPaste({
       lastDuplicateRef.current = {nodes: newNodes, edges: newEdges};
       lastDuplicateIdRef.current = edgeId;
 
+      pushSnapshot();
       setNodes(currentNodes => [...currentNodes, ...newNodes]);
       setEdges(currentEdges => [...currentEdges, ...newEdges]);
     },
-    [buildLineEdgeClipboard, setNodes, setEdges]
+    [buildLineEdgeClipboard, pushSnapshot, setNodes, setEdges]
   );
 
   // Keyboard copy/cut/paste.
@@ -314,11 +318,12 @@ export function useCopyPaste({
       target: idMap.get(edge.target) ?? edge.target,
     }));
 
+    pushSnapshot();
     setNodes(currentNodes => [...currentNodes, ...newNodes]);
     if (newEdges.length > 0) {
       setEdges(currentEdges => [...currentEdges, ...newEdges]);
     }
-  }, [setNodes, setEdges]);
+  }, [pushSnapshot, setNodes, setEdges]);
 
   const handleMouseMove = useCallback(
     (event: React.MouseEvent) => {

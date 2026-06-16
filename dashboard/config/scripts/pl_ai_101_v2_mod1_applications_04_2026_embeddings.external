@@ -1,0 +1,225 @@
+name 'pl-ai-101-V2-mod1-applications-04_2026-embeddings'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Practice
+
+Now it’s your turn to explore how AI is being used across different industries while practicing your own prompting skills.
+
+### Step 1: Choose a Large Language Model.
+👉 Click one of the tools below to open it in a new tab. If your school or district uses a specific AI tool, we recommend practicing with that platform.
+
+<div style="display:flex;justify-content:space-between;align-items:stretch;width:95%;margin:20pt auto;gap:14px;">
+
+  <!-- ChatGPT -->
+  <div style="width:23%;background:#fff;border:1px solid #D9DDE3;border-radius:12px;padding:18px;display:flex;align-items:center;justify-content:center;">
+    <a href="https://chatgpt.com/" target="_blank" style="text-decoration:none;color:inherit;width:100%;display:flex;align-items:center;justify-content:center;">
+      <img src="https://images.code.org/c22ec02e808ca32157566d9fb91efbe0-Screenshot%202026-01-29%20at%2011.40.54%20AM.png" alt="ChatGPT Logo" style="display:block;width:100%;height:auto !important;max-height:70px;object-fit:contain;">
+    </a>
+  </div>
+
+  <!-- Gemini -->
+  <div style="width:23%;background:#fff;border:1px solid #D9DDE3;border-radius:12px;padding:18px;display:flex;align-items:center;justify-content:center;">
+    <a href="https://gemini.google.com/" target="_blank" style="text-decoration:none;color:inherit;width:100%;display:flex;align-items:center;justify-content:center;">
+      <img src="https://images.code.org/c2897744ec844dadc387c770574cbefb-Screenshot%202026-01-29%20at%2011.39.33%20AM.png" alt="Gemini Logo" style="display:block;width:100%;height:auto !important;max-height:70px;object-fit:contain;">
+    </a>
+  </div>
+
+  <!-- Claude -->
+  <div style="width:23%;background:#fff;border:1px solid #D9DDE3;border-radius:12px;padding:18px;display:flex;align-items:center;justify-content:center;">
+    <a href="https://claude.ai/login" target="_blank" style="text-decoration:none;color:inherit;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+      <img src="https://images.code.org/4ac56eafff87360544c03cc012c9bd4a-Screenshot%202026-01-29%20at%2011.40.17%20AM.png" alt="Claude Logo" style="display:block;width:100%;height:auto !important;max-height:70px;object-fit:contain;">
+      <div style="font-size:12px;color:#777;margin-top:8px;">Account required</div>
+    </a>
+  </div>
+
+  <!-- Copilot -->
+  <div style="width:23%;background:#fff;border:1px solid #D9DDE3;border-radius:12px;padding:18px;display:flex;align-items:center;justify-content:center;">
+    <a href="https://copilot.microsoft.com/" target="_blank" style="text-decoration:none;color:inherit;width:100%;display:flex;align-items:center;justify-content:center;">
+      <img src="https://images.code.org/bbfada5f0e117d70f873c77c7271e7eb-images.jpg" alt="Copilot Logo" style="display:block;width:100%;height:auto !important;max-height:70px;object-fit:contain;">
+    </a>
+  </div>
+
+</div>
+
+### Step 2: Choose your role.
+
+👉 Click to reveal exploration ideas and example prompts.
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 0%; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">Content Area Teachers</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+
+**Prompt the AI to learn more about how AI is influencing career pathways connected to your subject.**
+
+For example, if you teach biology, you may choose to learn about the latest in AI technology in biomedical fields.
+
+<div style="width:90%; margin:0 auto 18px auto;">
+  <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:18px;">
+    <div style="font-size:16px;">
+      ✨ <strong>Example Prompt</strong><br><br>How is AI currently being used in careers related to [your subject area], and what skills will students need in the future?
+    </div>
+  </div>
+</div>
+
+</p></div>
+</details>
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 0%; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">Elementary Teachers</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+
+**Prompt the AI to learn more about how AI is impacting the development of young students.**
+
+For example, you could learn more about how access to voice assisted AI technology (like Siri) is impacting communication skills in pre-K.
+
+<div style="width:90%; margin:0 auto 18px auto;">
+  <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:18px;">
+    <div style="font-size:16px;">
+      ✨ <strong>Example Prompt</strong><br><br>How might AI tools like voice assistants or chatbots impact communication, learning, or social development in young students?
+    </div>
+  </div>
+</div>
+
+
+ 
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 0%; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">Administrators</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+
+**Prompt the AI to learn more about how AI is affecting administrative and leadership tasks.**
+
+For example, you could learn how AI can be used for developing goals and growth plans or in data-informed decision making (attendance, scheduling, intervention planning).
+
+<div style="width:90%; margin:0 auto 18px auto;">
+  <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:18px;">
+    <div style="font-size:16px;">
+      ✨ <strong>Example Prompt</strong><br><br>How is AI being used to support school leadership, scheduling, communication, or data-informed decision-making?
+    </div>
+  </div>
+</div>
+
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 0%; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">Wildcard (Anyone)</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+
+**Prompt the AI to learn more about how AI is affecting a field you’re interested in.**
+
+For example, if you’re curious about dinosaurs you could prompt about how AI has been affecting paleontology, and what tensions or tradeoffs does AI use create in that field.
+
+<div style="width:90%; margin:0 auto 18px auto;">
+  <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:18px;">
+    <div style="font-size:16px;">
+      ✨ <strong>Example Prompt</strong><br><br>How is AI changing the field of [topic/industry], and what are some potential benefits and risks?
+    </div>
+  </div>
+</div>
+
+
+</p></div>
+</details>
+
+### Step 3: Explore and Refine
+
+As you explore, use these strategies to improve and refine your prompting:
+
+<table style="width:80%; max-width:950px; margin:auto; border-collapse:separate; border-spacing:0 10px; font-family:'Trebuchet MS', Arial, sans-serif; color:#444; background:linear-gradient(180deg,#eef9fb,#ffffff); padding:18px 24px; border-radius:28px;">
+<!-- HEADER -->
+<tr>
+<td colspan="3" style="padding:6px 20px 10px 20px; text-align:center;">
+<div style="font-size:36px; line-height:1.05; font-weight:900; color:#1596aa; letter-spacing:-1px;">
+✨ Prompting Tips & Tricks ✨
+</div>
+</td>
+</tr>
+
+<!-- ROW 1 -->
+<tr style="background:white; box-shadow:0 4px 14px rgba(0,0,0,0.08); border-radius:20px;">
+<td style="width:86px; padding:10px 8px 10px 16px; text-align:center; border-radius:20px 0 0 20px;">
+<img src="https://images.code.org/1bcb4f15373ca17881e770ef693b7369-Screenshot 2026-05-28 at 1.02.41 PM.png" alt="Cute glowing light bulb with sparkles" style="width:58px; height:58px; object-fit:contain; display:block; margin:auto;">
+</td>
+<td style="width:62px; text-align:center;">
+<div style="width:42px; height:42px; line-height:42px; margin:auto; background:#16b4c7; color:white; border-radius:50%; font-size:21px; font-weight:bold; box-shadow:0 3px 8px rgba(22,180,199,0.35);">
+1
+</div>
+</td>
+<td style="padding:12px 20px 12px 6px; font-size:19px; line-height:1.1; border-radius:0 20px 20px 0;">
+<strong style="color:#222;">Ask follow-up questions</strong><br>
+<span style="font-size:16px; color:#666;">
+Dig deeper for more refined and helpful answers.
+</span>
+</td>
+</tr>
+
+<!-- ROW 2 -->
+<tr style="background:white; box-shadow:0 4px 14px rgba(0,0,0,0.08); border-radius:20px;">
+<td style="width:86px; padding:10px 8px 10px 16px; text-align:center; border-radius:20px 0 0 20px;">
+<img src="https://images.code.org/2e8846f6c855964dcb586f01c915d823-Screenshot 2026-05-28 at 1.02.44 PM.png" alt="Checklist clipboard with pencil and stars" style="width:58px; height:58px; object-fit:contain; display:block; margin:auto;">
+</td>
+<td style="width:62px; text-align:center;">
+<div style="width:42px; height:42px; line-height:42px; margin:auto; background:#16b4c7; color:white; border-radius:50%; font-size:21px; font-weight:bold; box-shadow:0 3px 8px rgba(22,180,199,0.35);">
+2
+</div>
+</td>
+<td style="padding:12px 20px 12px 6px; font-size:19px; line-height:1.1; border-radius:0 20px 20px 0;">
+<strong style="color:#222;">Be specific</strong><br>
+<span style="font-size:16px; color:#666;">
+Clear details lead to better, more accurate responses.
+</span>
+</td>
+</tr>
+
+<!-- ROW 3 -->
+<tr style="background:white; box-shadow:0 4px 14px rgba(0,0,0,0.08); border-radius:20px;">
+<td style="width:86px; padding:10px 8px 10px 16px; text-align:center; border-radius:20px 0 0 20px;">
+<img src="https://images.code.org/f32c54a1a1c1d3d253a91e17fd09e3fd-Screenshot 2026-05-28 at 1.02.48 PM.png" alt="Chat bubbles with checkmarks and stars" style="width:58px; height:58px; object-fit:contain; display:block; margin:auto;">
+</td>
+<td style="width:62px; text-align:center;">
+<div style="width:42px; height:42px; line-height:42px; margin:auto; background:#16b4c7; color:white; border-radius:50%; font-size:21px; font-weight:bold; box-shadow:0 3px 8px rgba(22,180,199,0.35);">
+3
+</div>
+</td>
+<td style="padding:12px 20px 12px 6px; font-size:19px; line-height:1.1; border-radius:0 20px 20px 0;">
+<strong style="color:#222;">Use feedback</strong><br>
+<span style="font-size:16px; color:#666;">
+Guide and refine the AI until it gets closer to what you want.
+</span>
+</td>
+</tr>
+
+<!-- ROW 4 -->
+<tr style="background:white; box-shadow:0 4px 14px rgba(0,0,0,0.08); border-radius:20px;">
+<td style="width:86px; padding:10px 8px 10px 16px; text-align:center; border-radius:20px 0 0 20px;">
+<img src="https://images.code.org/c08ea97017aa85eea3b67fa2b7e17ace-Screenshot 2026-05-28 at 1.02.52 PM.png" alt="Magnifying glass inspecting warning signs" style="width:58px; height:58px; object-fit:contain; display:block; margin:auto;">
+</td>
+<td style="width:62px; text-align:center;">
+<div style="width:42px; height:42px; line-height:42px; margin:auto; background:#16b4c7; color:white; border-radius:50%; font-size:21px; font-weight:bold; box-shadow:0 3px 8px rgba(22,180,199,0.35);">
+4
+</div>
+</td>
+<td style="padding:12px 20px 12px 6px; font-size:19px; line-height:1.1; border-radius:0 20px 20px 0;">
+<strong style="color:#222;">Keep a critical eye</strong><br>
+<span style="font-size:16px; color:#666;">
+Double-check facts and think carefully about responses.
+</span>
+</td>
+</tr>
+</table>
+
+<div style="width:95%;max-width:620px;margin:18px 0 18px 0;">
+<iframe src="https://micahkennedy.github.io/confidence_meter/?page=mod1level5" width="100%" height="150" style="border:none;overflow:hidden;display:block;"></iframe>
+</div>
+MARKDOWN

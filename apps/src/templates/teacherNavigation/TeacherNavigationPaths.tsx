@@ -1,3 +1,5 @@
+import {matchPath} from 'react-router-dom';
+
 import i18n from '@cdo/locale';
 
 export const TEACHER_NAVIGATION_BASE_URL = `/teacher_dashboard`;
@@ -44,6 +46,14 @@ export const getBasePath = (name: string): string =>
 export const TEACHER_NAVIGATION_PATH_NAMES = Object.fromEntries(
   Object.keys(TEACHER_NAVIGATION_PATHS).map(key => [key, key])
 );
+
+// Reverse-lookup the path key for a pathname. Returns 'unknown' if no route matches.
+export const getPageNameFromPathname = (pathname: string): string => {
+  const match = Object.entries(LABELED_TEACHER_NAVIGATION_PATHS).find(
+    ([, {absoluteUrl}]) => !!matchPath(absoluteUrl, pathname)
+  );
+  return match ? match[0] : 'unknown';
+};
 
 export const LABELED_TEACHER_NAVIGATION_PATHS = {
   home: {

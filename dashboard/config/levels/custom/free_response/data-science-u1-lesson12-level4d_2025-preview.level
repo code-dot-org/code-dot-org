@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Step 4: Trend, Pattern, or Outlier Analysis",
-    "long_instructions": "####What trends, patterns, or outliers did you identify in your data? What insights did they provide for your data question?",
+    "long_instructions": "What trends, patterns, or outliers did you identify in your data? What insights did they provide for your data question?",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

@@ -110,7 +110,6 @@ describe('convertExcalidrawToReactFlow', () => {
       text: 'hello',
       fontColor: '#222222',
       fontSize: 16,
-      showHandles: false,
     });
   });
 
@@ -159,7 +158,6 @@ describe('convertExcalidrawToReactFlow', () => {
     expect(nodes[0].data).toEqual({
       src: 'https://example.com/f1.png',
       altText: '',
-      showHandles: false,
     });
   });
 
@@ -188,7 +186,6 @@ describe('convertExcalidrawToReactFlow', () => {
     expect(nodes[0].data).toEqual({
       src: 'data:image/png;base64,AAAA',
       altText: '',
-      showHandles: false,
     });
   });
 

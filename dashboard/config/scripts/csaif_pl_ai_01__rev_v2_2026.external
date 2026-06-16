@@ -5,13 +5,13 @@ description 'description here'
 markdown <<MARKDOWN
 # AI Chat Lab
 
-#### The LLM you and your students will use throughout this Unit and the Foundations of AI course is called **AI Chat Lab**. Like with all chatbots, you interact with AI Chat Lab using prompts.
+The LLM you and your students will use throughout this Unit and the Foundations of AI course is called **AI Chat Lab**. Like with all chatbots, you interact with AI Chat Lab using prompts.
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Prompt</strong> is a question, instruction, scenario, or statement provided by the user to guide the AI's response.</p>
 </div>
 
-#### When you try out the AI Chat Lab, you’ll see how the AI uses your prompts to generate its replies. As you experiment, you'll how how the AI responds and how the wording of your prompt shapes what it says.
+When you try out the AI Chat Lab, you’ll see how the AI uses your prompts to generate its replies. As you experiment, you'll how how the AI responds and how the wording of your prompt shapes what it says.
 
 <br>
 
@@ -19,9 +19,9 @@ markdown <<MARKDOWN
 
 <br>
 
-#### While there is much more happening under the hood, a simple way to think about it is this: *The AI looks at your prompt and tries to choose the next word that best fits, much like how we can often predict the next word in a familiar sentence.*
+While there is much more happening under the hood, a simple way to think about it is this: *The AI looks at your prompt and tries to choose the next word that best fits, much like how we can often predict the next word in a familiar sentence.*
 
-#### It does this using probability: based on patterns it has learned from large amounts of text, the AI estimates which words are most likely to come next and selects from those possibilities.
+It does this using probability: based on patterns it has learned from large amounts of text, the AI estimates which words are most likely to come next and selects from those possibilities.
 
 ---
 

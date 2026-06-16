@@ -1,9 +1,9 @@
+import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
-import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import i18n from '@cdo/locale';
 
 export default class ResourcesDropdown extends React.Component {
@@ -12,47 +12,43 @@ export default class ResourcesDropdown extends React.Component {
     studentFacing: PropTypes.bool,
   };
 
-  handleItemClick = (e, resource) => {
-    // Needed so that we can keep the href on the link to allow for standard link interactions
-    e.preventDefault();
-    const resourceUrl = resource.url;
-
-    window.open(resourceUrl, 'noopener', 'noreferrer');
+  openResource = url => {
+    window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   render() {
-    const {resources} = this.props;
+    const {resources, studentFacing} = this.props;
+    const labelText = studentFacing
+      ? i18n.studentResources()
+      : i18n.teacherResources();
 
-    const dropdownResources = resources.map(resource => (
-      <a
-        key={resource.key}
-        href={resource.url}
-        onClick={e => this.handleItemClick(e, resource)}
-      >
-        {resource.name}
-      </a>
-    ));
+    const options = resources.map(resource => ({
+      value: resource.key,
+      label: resource.name,
+      onClick: () => this.openResource(resource.url),
+      icon: {iconName: 'arrow-up-right-from-square'},
+    }));
+
     return (
       <div style={styles.dropdown}>
-        <DropdownButton
-          text={
-            this.props.studentFacing
-              ? i18n.studentResources()
-              : i18n.teacherResources()
+        <ActionDropdown
+          name={
+            studentFacing
+              ? 'student-resources-dropdown'
+              : 'teacher-resources-dropdown'
           }
-          color={
-            this.props.studentFacing
-              ? Button.ButtonColor.gray
-              : Button.ButtonColor.blue
-          }
-          size={
-            this.props.studentFacing
-              ? Button.ButtonSize.large
-              : Button.ButtonSize.default
-          }
-        >
-          {dropdownResources}
-        </DropdownButton>
+          labelText={labelText}
+          options={options}
+          useIconButton={false}
+          size="s"
+          triggerButtonProps={{
+            variant: 'outlined',
+            color: 'tertiary',
+            size: 'small',
+            startIcon: <FontAwesomeV6Icon iconName="caret-down" />,
+            children: labelText,
+          }}
+        />
       </div>
     );
   }

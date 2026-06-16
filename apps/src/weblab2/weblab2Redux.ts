@@ -13,12 +13,14 @@ export type Weblab2State = {
   viewMode: ViewMode;
   aiFilePathToPreview: AiFilePathToPreview | undefined;
   debugPanelOpen: boolean;
+  inspectorEnabled: boolean;
 };
 
 const initialState: Weblab2State = {
   viewMode: ViewMode.SPLIT,
   aiFilePathToPreview: undefined,
   debugPanelOpen: false,
+  inspectorEnabled: false,
 };
 
 const weblab2Slice = createSlice({
@@ -37,10 +39,19 @@ const weblab2Slice = createSlice({
     setDebugPanelOpen: (state, action: PayloadAction<boolean>) => {
       state.debugPanelOpen = action.payload;
     },
+    setInspectorEnabled: (state, action: PayloadAction<boolean>) => {
+      state.inspectorEnabled = action.payload;
+    },
   },
 });
 
 registerReducers({weblab2: weblab2Slice.reducer});
 
-export const {setViewMode, setAiFilePathToPreview, setDebugPanelOpen} =
-  weblab2Slice.actions;
+export const {
+  setViewMode,
+  setAiFilePathToPreview,
+  setDebugPanelOpen,
+  setInspectorEnabled,
+} = weblab2Slice.actions;
+
+export default weblab2Slice.reducer;

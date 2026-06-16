@@ -19,15 +19,15 @@ markdown <<MARKDOWN
     <p>
 <img src="https://images.code.org/ffb88967c446f891ff869c2399d66624-d42f141647823ec967845edf94706034-Slide30.PNG" alt="definition of attention" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
 
-#### **Question of the Day:** How does a language model determine the meaning of words within a sentence?
+**Question of the Day:** How does a language model determine the meaning of words within a sentence?
 
-#### **Lesson Overview:**
+**Lesson Overview:**
 
-#### This lesson delves into the ambiguity of language and the necessity of context for meaning. Students first discuss examples of ambiguous language, followed by an activity where they brainstorm words with multiple meanings and craft sentences to clarify their intended meanings through context. After trading papers with a partner, students guess the intended meanings, identifying which words provided the most context. Reflecting on this, the lesson connects the activity to how language models use embeddings for word meanings and neural networks for relational meaning, introducing the concept of Attention as the process of updating word meanings based on context.
+This lesson delves into the ambiguity of language and the necessity of context for meaning. Students first discuss examples of ambiguous language, followed by an activity where they brainstorm words with multiple meanings and craft sentences to clarify their intended meanings through context. After trading papers with a partner, students guess the intended meanings, identifying which words provided the most context. Reflecting on this, the lesson connects the activity to how language models use embeddings for word meanings and neural networks for relational meaning, introducing the concept of Attention as the process of updating word meanings based on context.
 
-#### **Students will be able to:**
-* #### Construct examples of words and sentences that require context clues to understand fully
-* #### Explain how embeddings and neural networks are used in the attention process
+**Students will be able to:**
+* Construct examples of words and sentences that require context clues to understand fully
+* Explain how embeddings and neural networks are used in the attention process
 
 ### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/8" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
 </p></div>

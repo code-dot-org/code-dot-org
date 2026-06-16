@@ -13,7 +13,7 @@
     "parent_level_id": 20023,
     "name_suffix": "_2026",
     "display_name": "Video: Intro to CSS Part 2",
-    "long_instructions": "#### This video is included in the AI Discoveries curriculum. \r\n\r\n#### As you watch the video, consider the following:\r\n\r\n* #### How does the web page know what stylesheet it should be using?",
+    "long_instructions": "This video is included in the AI Discoveries curriculum. \r\n\r\nAs you watch the video, consider the following:\r\n\r\n* How does the web page know what stylesheet it should be using?",
     "encrypted": "false"
   },
   "notes": "",

@@ -6,12 +6,12 @@ markdown <<MARKDOWN
 # Meet the Painter 
 
 
-#### In the Neighborhood IDE, the object you will work with the **The Painter** object.
+In the Neighborhood IDE, the object you will work with the **The Painter** object.
 
-#### Remember, objects have attributes and methods. 
+Remember, objects have attributes and methods. 
 
-- #### An **attribute** is a characteristic the object has.
-- #### A **method** is an action that an object can perform.
+- An **attribute** is a characteristic the object has.
+- A **method** is an action that an object can perform.
 
 ## The Painter Object
 
@@ -58,11 +58,11 @@ markdown <<MARKDOWN
 
 ## Getting Started with Objects
 
-#### In simple terms, there are two steps to get starting with objects. 
-- #### 1. Create the object with a variable name. This is called **instantiating** an object.
-- #### 2. Tell the object what to do using methods.
+In simple terms, there are two steps to get starting with objects. 
+- 1. Create the object with a variable name. This is called **instantiating** an object.
+- 2. Tell the object what to do using methods.
 
-#### See what this looks like in code: 
+See what this looks like in code: 
 
 <table border="1" width="100%" cellpadding="10">
         <tr>

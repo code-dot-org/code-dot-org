@@ -16,3 +16,7 @@ Examine the following news articles, crafted by Code.org, but modeled after real
 [Article 4](https://drive.google.com/file/d/1hD4bl9TZSQqX_v_ycAo90D6kqtK8wLMs/view?usp=sharing)
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Note**: If Google Drive access is restricted, students can access these articles on the following level. Click "Add file" -> "From Library" -> then open each article individually.
+MARKDOWN

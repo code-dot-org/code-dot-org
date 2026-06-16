@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2026-03-24T03:47:17.000Z",
   "level_num": "custom",
@@ -8,7 +9,7 @@
     "encrypted": "false",
     "panels": [
       {
-        "text": "## Web Lab\n Welcome to **Web Lab,** an integrated development space that allows you to collaborate with AI while building web applications. ",
+        "text": "## Web Lab\n Welcome to **Web Lab,** an integrated development space that allows you to collaborate with AI while building web applications. \n\n💡 *Note: Web Lab is continuously updated and improved, so some features or menus in the tutorial may look slightly different from the current version.*",
         "imageUrl": "https://images.code.org/2b635f8b182c882baa56fbbe6a3559ed-_WebLab.png",
         "key": "sp-pl-DS-SpreadsheetVocab-23803e7b-4230-4c32-ac36-59aaf29309ce",
         "layout": "text-bottom-right"
@@ -57,9 +58,9 @@
       }
     ],
     "name_suffix": "_2026",
-    "offer_browser_tts": "false"
+    "offer_browser_tts": "false",
+    "use_links": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-24T03:47:17.830+00:00\",\"changed\":[\"cloned from \\\"pl-sandbox-aif2-U1-weblab-panels_10\\\"\"],\"cloned_from\":\"pl-sandbox-aif2-U1-weblab-panels_10\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-24T03:47:17.830+00:00\",\"changed\":[\"cloned from \\\"pl-sandbox-aif2-U1-weblab-panels_10\\\"\"],\"cloned_from\":\"pl-sandbox-aif2-U1-weblab-panels_10\"},{\"changed_at\":\"2026-05-21 16:22:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Panels>

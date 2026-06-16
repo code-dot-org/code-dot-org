@@ -7,6 +7,7 @@ require 'cdo/git_utils'
 require 'cdo/lighthouse'
 require 'parallel'
 require 'aws-sdk-s3'
+require 'cdo/playwright_report'
 require 'cdo/mysql_console_helper'
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
 include TimedTaskWithLogging
@@ -31,16 +32,19 @@ namespace :test do
     TestRunUtils.run_local_ui_test
   end
 
+  # Safari (Desktop) runs on SauceLabs because Device Farm does not support it.
+  # Mobile browsers run on SauceLabs because they are very expensive to run on
+  # Device Farm.
   timed_task_with_logging :saucelabs_ui do
-    ChatClient.log 'Running <b>dashboard</b> Safari UI tests...'
+    ChatClient.log 'Running <b>dashboard</b> Safari + iPad + iPhone UI tests...'
     failed_browser_count = RakeUtils.system_with_chat_logging(
       "cd #{dashboard_dir('test/ui')} &&",
       'bundle', 'exec', './runner.rb',
-      '-c', 'Safari',
+      '-c', 'Safari,iPad,iPhone',
       '-d', CDO.site_host('studio.code.org'),
       '-p', CDO.site_host('code.org'),
       '--db', # Ensure features that require database access are run even if the server name isn't "test"
-      '--parallel', '20', # The total saucelabs concurrency budget is 65
+      '--parallel', '65',
       '--magic_retry',
       '--with-status-page',
       '--fail_fast',
@@ -58,50 +62,31 @@ namespace :test do
     end
   end
 
-  # Runs a single group of UI tests against AWS Device Farm. Shared body
-  # between :devicefarm_desktop_ui and :devicefarm_mobile_ui. The label
-  # carries through to Slack messages and status page headings; "Device
-  # Farm" is no longer surfaced to oncall (provider is an implementation
-  # detail).
-  def run_devicefarm_ui(config:, parallel:, label:)
-    ChatClient.log "Running <b>dashboard</b> #{label} UI tests..."
+  timed_task_with_logging :devicefarm_desktop_ui do
+    ChatClient.log 'Running <b>dashboard</b> Chrome + Firefox UI tests...'
     failed_browser_count = RakeUtils.system_with_chat_logging(
       "cd #{dashboard_dir('test/ui')} &&",
       'bundle', 'exec', './runner.rb',
       '--device-farm',
-      '-c', config,
+      '-c', 'Chrome,Firefox',
       '-d', CDO.site_host('studio.code.org'),
       '-p', CDO.site_host('code.org'),
       '--db', # Ensure features that require database access are run even if the server name isn't "test"
-      '--parallel', parallel.to_s,
+      '--parallel', '50',
       '--retry_count', '2',
       '--with-status-page',
       '--fail_fast'
     )
     if failed_browser_count == 0
-      message = "┬──┬ ﻿ノ( ゜-゜ノ) #{label} UI tests for <b>dashboard</b> succeeded."
+      message = '┬──┬ ﻿ノ( ゜-゜ノ) Chrome + Firefox UI tests for <b>dashboard</b> succeeded.'
       ChatClient.log message
       ChatClient.message 'server operations', message, color: 'green'
     else
-      message = "(╯°□°）╯︵ ┻━┻ #{label} UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
+      message = "(╯°□°）╯︵ ┻━┻ Chrome + Firefox UI tests for <b>dashboard</b> failed on #{failed_browser_count} browser(s)."
       ChatClient.log message, color: 'red'
       ChatClient.message 'server operations', message, color: 'red', notify: 1
-      raise "#{label} UI tests failed"
+      raise 'Chrome + Firefox UI tests failed'
     end
-  end
-
-  timed_task_with_logging :devicefarm_desktop_ui do
-    # As of April 2026, our concurrency limit for desktop browser sessions in
-    # Device Farm within our prod AWS account is 150.
-    run_devicefarm_ui(config: 'Chrome,Firefox', parallel: 50, label: 'Chrome + Firefox')
-  end
-
-  timed_task_with_logging :devicefarm_mobile_ui do
-    # As of April 2026, our concurrency limit for remote access sessions on real
-    # mobile devices in Device Farm within our prod AWS account is 80. However,
-    # the devices take so long to spin up and shut down that we can saturate our
-    # Device Farm concurrency by setting parallelism equal to half of that limit.
-    run_devicefarm_ui(config: 'iPhone,iPad', parallel: 40, label: 'Mobile')
   end
 
   timed_task_with_logging :eyes_ui do
@@ -110,15 +95,16 @@ namespace :test do
     failed_browser_count = RakeUtils.system_with_chat_logging(
       "cd #{dashboard_dir('test/ui')} &&",
       'bundle', 'exec', './runner.rb',
-      '-c', 'Chrome,iPhone',
+      '--device-farm',
+      '-c', 'Chrome',
       '-d', CDO.site_host('studio.code.org'),
       '-p', CDO.site_host('code.org'),
       '--db', # Ensure features that require database access are run even if the server name isn't "test"
       '--eyes',
-      '--magic_retry',
+      '--retry_count', '2',
       '--with-status-page',
       '-f', eyes_features.join(","),
-      '--parallel', '20' # The total saucelabs concurrency budget is 65
+      '--parallel', '20'
     )
     if failed_browser_count == 0
       message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
@@ -132,47 +118,48 @@ namespace :test do
     end
   end
 
-  timed_task_with_logging :devicefarm_eyes_ui do
-    ChatClient.log 'Running <b>dashboard</b> UI visual tests on AWS Device Farm...'
-    eyes_features = `cd #{dashboard_dir('test/ui')} && find features/ -name "*.feature" | xargs grep -lr '@eyes'`.split("\n")
-    failed_browser_count = RakeUtils.system_with_chat_logging(
-      "cd #{dashboard_dir('test/ui')} &&",
-      'bundle', 'exec', './runner.rb',
-      '--device-farm',
-      '-c', 'Chrome',
-      '-d', CDO.site_host('studio.code.org'),
-      '-p', CDO.site_host('code.org'),
-      '--db', # Ensure features that require database access are run even if the server name isn't "test"
-      '--eyes',
-      '--magic_retry',
-      '--with-status-page',
-      '-f', eyes_features.join(","),
-      '--parallel', '25'
-    )
-    if failed_browser_count == 0
-      message = '⊙‿⊙ Device Farm Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
-      ChatClient.log message
-      ChatClient.message 'server operations', message, color: 'green'
+  desc 'Run Lighthouse audits against key pages (currently Code Studio homepage).'
+  timed_task_with_logging :lighthouse do
+    Lighthouse.report CDO.studio_url('')
+  end
+
+  # Run the Playwright e2e suite, upload its HTML report, and report start /
+  # success / failure to Slack the way the Cucumber UI tests do (ChatClient.log
+  # → the env's log room; #infra-test on the test server, stdout under CI).
+  # Run by the Drone ui pipeline (ui_tests.sh) and on demand (rake
+  # test:playwright_ui); not yet in ui_all (DTT) pending manual verification.
+  # Target comes from TARGET_URL, defaulting to this environment's studio URL.
+  # Non-blocking — a failure warns but never fails the deploy or the PR build.
+  timed_task_with_logging :playwright_ui do
+    target_url = ENV['TARGET_URL'] || CDO.studio_url('')
+    script = frontend_dir('packages', 'e2e-tests', 'bin', 'run-playwright-tests-ci.sh')
+    ChatClient.log "Starting <b>dashboard</b> Playwright e2e tests against #{target_url}..."
+    # Stream the suite's output (the list reporter, banner, warnings) straight to
+    # the log via system_stream_output (system_with_chat_logging would capture and
+    # discard it). Rescue its non-zero raise so the run stays non-blocking.
+    passed =
+      begin
+        RakeUtils.system_stream_output("TARGET_URL=#{target_url}", script)
+        true
+      rescue StandardError
+        false
+      end
+    report_url = Cdo::PlaywrightReport.upload(frontend_dir('packages', 'e2e-tests', 'playwright-report'))
+    report_link = report_url ? %( See <a href="#{report_url}">the HTML report</a>.) : ''
+    if passed
+      ChatClient.log "Playwright e2e tests for <b>dashboard</b> succeeded.#{report_link}"
     else
-      message = 'ಠ_ಠ Device Farm Eyes tests for <b>dashboard</b> failed. See <a href="https://eyes.applitools.com/app/sessions/">the console</a> for results or to modify baselines.'
-      ChatClient.log message, color: 'red'
-      ChatClient.message 'server operations', message, color: 'red', notify: 1
-      raise "Device Farm Eyes tests failed"
+      ChatClient.log "Playwright e2e tests for <b>dashboard</b> failed (non-blocking).#{report_link}", color: 'red'
     end
   end
 
-  desc 'Run Lighthouse audits against key pages (currently Code Studio homepage).'
-  timed_task_with_logging :lighthouse do
-    Lighthouse.report CDO.studio_url('', CDO.default_scheme)
-  end
-
-  # Run the four deploy-time UI suites in parallel: SauceLabs Safari and
-  # Eyes alongside the Device Farm desktop (Chrome+Firefox) and mobile
-  # (iPhone+iPad) suites. If one suite raises, allow the others to
-  # complete, then make sure this task raises.
+  # Run the deploy-time UI suites in parallel. If one suite
+  # raises, allow the others to complete, then make sure this task raises.
+  # NOTE: :playwright_ui is intentionally not listed yet — run it manually
+  # (rake test:playwright_ui) to verify before wiring it into DTT.
   timed_task_with_logging :ui_all do
     Parallel.each(
-      [:eyes_ui, :saucelabs_ui, :devicefarm_desktop_ui, :devicefarm_mobile_ui],
+      [:eyes_ui, :saucelabs_ui, :devicefarm_desktop_ui],
       in_threads: 4,
     ) do |target|
       Rake::Task["test:#{target}"].invoke
@@ -180,7 +167,7 @@ namespace :test do
   end
 
   timed_task_with_logging :wait_for_test_server do
-    RakeUtils.wait_for_url CDO.studio_url('', CDO.default_scheme)
+    RakeUtils.wait_for_url CDO.studio_url('')
   end
 
   timed_task_with_logging ui_live: [
@@ -589,6 +576,7 @@ timed_task_with_logging test: ['test:changed']
 # should cause us to run all tests.
 GLOBS_AFFECTING_EVERYTHING = %w(
   .drone.yml
+  .gitattributes
   lib/rake/test.rake
   docker/ci/**/*
 )

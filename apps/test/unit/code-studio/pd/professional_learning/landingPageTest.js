@@ -1429,7 +1429,7 @@ describe('LandingPage', () => {
         renderDefault(props);
         expect(findSelfPacedBlockLink()).toHaveAttribute(
           'href',
-          '/educate/professional-development-online'
+          'http://localhost-studio.code.org/professional-learning/courses'
         );
       });
 

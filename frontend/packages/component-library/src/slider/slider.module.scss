@@ -1,15 +1,15 @@
 //Slider colors for use in JSX/TSX
 $slider-black-track-fill-color: var(--background-neutral-primary-inverse);
-$slider-black-track-empty-color: var(--background-neutral-quinary);
+$slider-black-track-empty-color: var(--background-neutral-primary);
 $slider-black-track-disabled-color: var(--background-neutral-disabled);
 $slider-brand-track-fill-color: var(--background-brand-teal-primary);
-$slider-brand-track-empty-color: var(--background-neutral-quinary);
+$slider-brand-track-empty-color: var(--background-neutral-primary);
 $slider-brand-track-disabled-color: var(--background-neutral-disabled);
 $slider-white-track-fill-color: var(--background-neutral-primary);
 $slider-white-track-empty-color: var(--neutral-gray-60);
 $slider-white-track-disabled-color: var(--neutral-gray-80);
 $slider-aqua-track-fill-color: var(--background-brand-aqua-primary);
-$slider-aqua-track-empty-color: var(--background-neutral-quinary);
+$slider-aqua-track-empty-color: var(--background-neutral-primary);
 $slider-aqua-track-disabled-color: var(--background-neutral-disabled);
 
 :export {
@@ -124,32 +124,32 @@ $slider-aqua-track-disabled-color: var(--background-neutral-disabled);
     input[type='range']::-webkit-slider-thumb {
       -webkit-appearance: none;
       box-sizing: border-box;
-      height: 14px;
-      width: 14px;
+      height: 16px;
+      width: 16px;
       border-radius: 50%;
       border: 2px solid transparent;
       background-color: transparent;
-      margin-top: -3px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+      margin-top: -4px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
     }
 
     /* All the same stuff for Firefox */
     input[type='range']::-moz-range-thumb {
       -webkit-appearance: none;
       box-sizing: border-box;
-      height: 14px;
-      width: 14px;
+      height: 16px;
+      width: 16px;
       border-radius: 50%;
       border: 2px solid transparent;
       background-color: transparent;
-      margin-top: -3px;
+      margin-top: -4px;
     }
 
     /* All the same stuff for IE */
     input[type='range']::-ms-thumb {
       -webkit-appearance: none;
       box-sizing: border-box;
-      height: 14px;
-      width: 14px;
+      height: 16px;
+      width: 16px;
       border-radius: 50%;
       border: 2px solid transparent;
       background-color: transparent;
@@ -207,7 +207,28 @@ $slider-aqua-track-disabled-color: var(--background-neutral-disabled);
 
   .sliderMainContainer {
     .sliderWrapper {
+      input[type='range']::-webkit-slider-runnable-track {
+        box-sizing: border-box;
+        border: 1.5px solid transparent;
+        background-image: var(--slider-background),
+          var(--slider-border-gradient);
+        background-clip: padding-box, border-box;
+        background-origin: border-box, border-box;
+      }
+
+      input[type='range']::-moz-range-track {
+        box-sizing: border-box;
+        border: 1.5px solid transparent;
+        background-image: var(--slider-background),
+          var(--slider-border-gradient);
+        background-clip: padding-box, border-box;
+        background-origin: border-box, border-box;
+      }
+
       input[type='range']::-webkit-slider-thumb {
+        // Chrome/Safari measure margin-top from the track's content top (inner border edge),
+        // not the border-box top. With a 1.5px border: center(4) - border(1.5) - thumbHeight/2(8) = -5.5px
+        margin-top: -5.5px;
         background-color: var(--background-neutral-primary);
         border-color: var(--borders-neutral-solid);
       }
@@ -301,7 +322,28 @@ $slider-aqua-track-disabled-color: var(--background-neutral-disabled);
 
   .sliderMainContainer {
     .sliderWrapper {
+      input[type='range']::-webkit-slider-runnable-track {
+        box-sizing: border-box;
+        border: 1.5px solid transparent;
+        background-image: var(--slider-background),
+          var(--slider-border-gradient);
+        background-clip: padding-box, border-box;
+        background-origin: border-box, border-box;
+      }
+
+      input[type='range']::-moz-range-track {
+        box-sizing: border-box;
+        border: 1.5px solid transparent;
+        background-image: var(--slider-background),
+          var(--slider-border-gradient);
+        background-clip: padding-box, border-box;
+        background-origin: border-box, border-box;
+      }
+
       input[type='range']::-webkit-slider-thumb {
+        // Chrome/Safari measure margin-top from the track's content top (inner border edge),
+        // not the border-box top. With a 1.5px border: center(4) - border(1.5) - thumbHeight/2(8) = -5.5px
+        margin-top: -5.5px;
         background-color: var(--background-neutral-primary);
         border-color: var(--borders-neutral-solid);
       }
@@ -489,7 +531,28 @@ $slider-aqua-track-disabled-color: var(--background-neutral-disabled);
 
   .sliderMainContainer {
     .sliderWrapper {
+      input[type='range']::-webkit-slider-runnable-track {
+        box-sizing: border-box;
+        border: 1.5px solid transparent;
+        background-image: var(--slider-background),
+          var(--slider-border-gradient);
+        background-clip: padding-box, border-box;
+        background-origin: border-box, border-box;
+      }
+
+      input[type='range']::-moz-range-track {
+        box-sizing: border-box;
+        border: 1.5px solid transparent;
+        background-image: var(--slider-background),
+          var(--slider-border-gradient);
+        background-clip: padding-box, border-box;
+        background-origin: border-box, border-box;
+      }
+
       input[type='range']::-webkit-slider-thumb {
+        // Chrome/Safari measure margin-top from the track's content top (inner border edge),
+        // not the border-box top. With a 1.5px border: center(4) - border(1.5) - thumbHeight/2(8) = -5.5px
+        margin-top: -5.5px;
         background-color: var(--background-neutral-primary);
         border-color: var(--borders-neutral-solid);
       }

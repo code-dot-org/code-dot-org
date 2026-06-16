@@ -1,3 +1,4 @@
+import Link from '@code-dot-org/component-library/link';
 import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -108,14 +109,9 @@ class ProjectsList extends React.Component {
 
     const url = `${this.props.studioUrlPrefix}/projects/${type}/${channel}/view`;
     return (
-      <a
-        href={url}
-        style={tableLayoutStyles.link}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <Link href={url} style={tableLayoutStyles.link} openInNewTab>
         {name}
-      </a>
+      </Link>
     );
   };
 

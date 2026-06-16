@@ -5,11 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # Begin with the End in Mind: Final Project Overview
 
-#### Unit 5: Designing Reliable Apps with AI and APIs culminates with a final **Explore-Style Web App** project.
+Unit 5: Designing Reliable Apps with AI and APIs culminates with a final **Explore-Style Web App** project.
 
 ## Tap for More: Explore-Style App
 
-#### In the *Tap for More* project, students design an interactive explore-style app that fetches live data from an external API and presents it in a grid of cards with a detail view. Inspired by apps like Pinterest, Yelp, TikTok, and news feeds, students curate content and design how users explore and learn more about individual items.
+In the *Tap for More* project, students design an interactive explore-style app that fetches live data from an external API and presents it in a grid of cards with a detail view. Inspired by apps like Pinterest, Yelp, TikTok, and news feeds, students curate content and design how users explore and learn more about individual items.
 
 ---
 
@@ -23,9 +23,9 @@ markdown <<MARKDOWN
 
 ---
 
-#### **When Project Begins:** Final three lessons of the unit
+**When Project Begins:** Final three lessons of the unit
 
-#### The project extends over multiple class periods following introductory lessons on `async/await`, error handling, and working with JSON data from APIs.
+The project extends over multiple class periods following introductory lessons on `async/await`, error handling, and working with JSON data from APIs.
 
 ---
 
@@ -40,7 +40,7 @@ markdown <<MARKDOWN
 
 ---
 
-#### This project gives students an authentic opportunity to combine technical skills and design thinking while building apps that depend on real-world data and AI-powered systems.
+This project gives students an authentic opportunity to combine technical skills and design thinking while building apps that depend on real-world data and AI-powered systems.
 
 ## Now, let’s see how we get here!
 
