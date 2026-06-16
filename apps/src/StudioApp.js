@@ -1182,6 +1182,7 @@ StudioApp.prototype.toggleRunReset = function (button) {
   });
 
   document.querySelectorAll('#resetButton, #topResetButton').forEach(reset => {
+    reset.classList.toggle('hide', showRun);
     reset.style.display = !showRun ? 'inline-block' : 'none';
     reset.disabled = showRun;
   });
