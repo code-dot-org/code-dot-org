@@ -178,10 +178,11 @@ export default class VersionHistory extends React.Component {
       title = i18n.versionHistory_header();
 
       const rows = this.state.versions.map(
-        function (version) {
+        function (version, index) {
           return (
             <VersionRow
               key={version.versionId}
+              rowIndex={index}
               versionId={version.versionId}
               lastModified={new Date(version.lastModified)}
               isLatest={version.isLatest}

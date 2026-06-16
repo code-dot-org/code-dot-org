@@ -18,6 +18,7 @@ import styles from './versionHistory.module.scss';
  */
 export default class VersionRow extends React.Component {
   static propTypes = {
+    rowIndex: PropTypes.number.isRequired,
     versionId: PropTypes.string.isRequired,
     lastModified: PropTypes.instanceOf(Date).isRequired,
     isLatest: PropTypes.bool.isRequired,
@@ -56,6 +57,12 @@ export default class VersionRow extends React.Component {
 
   render() {
     let buttons = [];
+    const versionLabelId = `version-history-row-${this.props.rowIndex}-version-label`;
+    const restoreButtonId = `version-history-row-${this.props.rowIndex}-restore-button`;
+    const viewButtonId = `version-history-row-${this.props.rowIndex}-view-button`;
+    const versionLabel = msg.versionHistory_versionLabel({
+      timestamp: this.getLastModifiedTimestamp(),
+    });
     if (this.props.isLatest) {
       buttons.push(
         <MuiTypography
@@ -72,10 +79,12 @@ export default class VersionRow extends React.Component {
       buttons.push(
         <MuiButton
           key={'restore-version-button'}
+          id={restoreButtonId}
           type="button"
           color={color}
           size="small"
           variant={variant}
+          aria-describedby={versionLabelId}
           onClick={this.props.onChoose}
         >
           {msg.restore()}
@@ -87,6 +96,7 @@ export default class VersionRow extends React.Component {
       buttons.push(
         <MuiButton
           key={'not-selected-version-button'}
+          id={viewButtonId}
           component="a"
           href={
             location.origin + location.pathname + '?' + this.getQueryParams()
@@ -96,6 +106,7 @@ export default class VersionRow extends React.Component {
           color="primary"
           size="small"
           variant="contained"
+          aria-describedby={versionLabelId}
           className={styles.viewVersionButton}
         >
           {msg.view()}
@@ -105,11 +116,13 @@ export default class VersionRow extends React.Component {
       buttons.push(
         <MuiButton
           key={'disabled-view-button'}
+          id={viewButtonId}
           type="button"
           color="secondary"
           size="small"
           variant="contained"
           disabled
+          aria-describedby={versionLabelId}
           className={styles.disabledViewButton}
         >
           {msg.view()}
@@ -125,14 +138,13 @@ export default class VersionRow extends React.Component {
         })}
       >
         <td>
-          <MuiTypography variant="body1">
-            {msg.versionHistory_versionLabel({
-              timestamp: this.getLastModifiedTimestamp(),
-            })}
+          <MuiTypography id={versionLabelId} variant="body1">
+            {versionLabel}
           </MuiTypography>
         </td>
         <td width="275" height="52" className={styles.actionCell}>
           <MuiStack
+            role="presentation"
             direction="row"
             spacing={1}
             justifyContent="flex-end"

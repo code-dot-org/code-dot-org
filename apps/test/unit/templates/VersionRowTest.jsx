@@ -1,4 +1,8 @@
-import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
+import {
+  Button as MuiButton,
+  Stack as MuiStack,
+  Typography as MuiTypography,
+} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
@@ -10,9 +14,17 @@ import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-rest
 
 describe('VersionRow', () => {
   const MINIMUM_PROPS = {
+    rowIndex: 0,
     versionId: 'abcdef',
     lastModified: new Date(),
   };
+  const VERSION_LABEL = msg.versionHistory_versionLabel({
+    timestamp: MINIMUM_PROPS.lastModified.toLocaleString(),
+  });
+  const ROW_DOM_ID = `version-history-row-${MINIMUM_PROPS.rowIndex}`;
+  const VERSION_LABEL_ID = `${ROW_DOM_ID}-version-label`;
+  const RESTORE_BUTTON_ID = `${ROW_DOM_ID}-restore-button`;
+  const VIEW_BUTTON_ID = `${ROW_DOM_ID}-view-button`;
 
   const findButtonByText = (wrapper, text) =>
     wrapper.find(MuiButton).filterWhere(button => button.text() === text);
@@ -28,9 +40,15 @@ describe('VersionRow', () => {
     );
     const viewButton = findButtonByText(wrapper, msg.view());
     const restoreButton = findButtonByText(wrapper, msg.restore());
+    const versionLabel = wrapper
+      .find(MuiTypography)
+      .filterWhere(typography => typography.text() === VERSION_LABEL);
 
     expect(wrapper).to.not.have.className('highlight');
+    expect(wrapper.find(MuiStack).prop('role')).to.equal('presentation');
+    expect(versionLabel.prop('id')).to.equal(VERSION_LABEL_ID);
     expect(viewButton).to.have.length(1);
+    expect(viewButton.prop('id')).to.equal(VIEW_BUTTON_ID);
     expect(viewButton.prop('component')).to.equal('a');
     expect(viewButton.prop('target')).to.equal('_blank');
     expect(viewButton.prop('rel')).to.equal('noopener noreferrer');
@@ -38,12 +56,15 @@ describe('VersionRow', () => {
     expect(viewButton.prop('size')).to.equal('small');
     expect(viewButton.prop('variant')).to.equal('contained');
     expect(viewButton.prop('href')).to.contain('version=abcdef');
+    expect(viewButton.prop('aria-describedby')).to.equal(VERSION_LABEL_ID);
 
     expect(restoreButton).to.have.length(1);
+    expect(restoreButton.prop('id')).to.equal(RESTORE_BUTTON_ID);
     expect(restoreButton.prop('type')).to.equal('button');
     expect(restoreButton.prop('color')).to.equal('tertiary');
     expect(restoreButton.prop('size')).to.equal('small');
     expect(restoreButton.prop('variant')).to.equal('outlined');
+    expect(restoreButton.prop('aria-describedby')).to.equal(VERSION_LABEL_ID);
   });
 
   it('renders restore button and disabled view button for selected version', () => {
@@ -60,17 +81,21 @@ describe('VersionRow', () => {
 
     expect(wrapper).to.have.className('highlight');
     expect(viewButton).to.have.length(1);
+    expect(viewButton.prop('id')).to.equal(VIEW_BUTTON_ID);
     expect(viewButton.prop('type')).to.equal('button');
     expect(viewButton.prop('color')).to.equal('secondary');
     expect(viewButton.prop('size')).to.equal('small');
     expect(viewButton.prop('variant')).to.equal('contained');
     expect(viewButton.prop('disabled')).to.be.true;
+    expect(viewButton.prop('aria-describedby')).to.equal(VERSION_LABEL_ID);
 
     expect(restoreButton).to.have.length(1);
+    expect(restoreButton.prop('id')).to.equal(RESTORE_BUTTON_ID);
     expect(restoreButton.prop('type')).to.equal('button');
     expect(restoreButton.prop('color')).to.equal('primary');
     expect(restoreButton.prop('size')).to.equal('small');
     expect(restoreButton.prop('variant')).to.equal('contained');
+    expect(restoreButton.prop('aria-describedby')).to.equal(VERSION_LABEL_ID);
   });
 
   it('renders a disabled button for the latest version', () => {
@@ -91,6 +116,7 @@ describe('VersionRow', () => {
     expect(latestVersionMessage.prop('component')).to.equal('span');
     expect(latestVersionMessage.prop('variant')).to.equal('body2');
     expect(viewButton.prop('disabled')).to.be.true;
+    expect(viewButton.prop('aria-describedby')).to.equal(VERSION_LABEL_ID);
   });
 
   it('calls onChoose when restore button is clicked', () => {
