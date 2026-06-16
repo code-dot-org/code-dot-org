@@ -2,36 +2,35 @@
   padding-right: 16px;
 }
 
-// State overrides need !important here because this legacy modal still has
-// global App Lab/Bootstrap rules and MUI Emotion state styles in play.
-.cancelButton {
-  background-color: var(--background-neutral-primary) !important;
-  border-color: var(--borders-neutral-solid) !important;
-  color: var(--text-neutral-primary) !important;
+// Match the legacy #again-button rule without leaking styles to other modals.
+.cancelButton:global(#again-button) {
+  background-color: var(--background-neutral-primary);
+  border-color: var(--borders-neutral-solid);
+  color: var(--text-neutral-primary);
 
   &:hover,
   &:focus,
   &:active {
-    background-color: var(--background-neutral-tertiary) !important;
-    border-color: var(--borders-neutral-solid) !important;
-    color: var(--text-neutral-primary) !important;
+    background-color: var(--background-neutral-tertiary);
+    border-color: var(--borders-neutral-solid);
+    color: var(--text-neutral-primary);
   }
 }
 
-.viewVersionButton {
+.viewVersionButton.viewVersionButton {
   &:hover,
   &:focus,
   &:active {
-    background-color: var(--background-brand-purple-strong) !important;
-    color: var(--text-neutral-white-fixed) !important;
-    text-decoration: none !important;
+    background-color: var(--background-brand-purple-strong);
+    color: var(--text-neutral-white-fixed);
+    text-decoration: none;
   }
 }
 
 // Keep the selected-row View button legible while disabled.
-.disabledViewButton {
+.disabledViewButton.disabledViewButton {
   &:global(.Mui-disabled) {
-    background-color: var(--neutral-gray-90) !important;
-    color: var(--text-neutral-white-fixed) !important;
+    background-color: var(--neutral-gray-90);
+    color: var(--text-neutral-white-fixed);
   }
 }
