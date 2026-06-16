@@ -18,6 +18,14 @@
   transition: height 0.2s ease;
 }
 
+// Kept mounted (so switching tabs never remounts the instructions and replays
+// their slide-in animation) but fully collapsed: zero out padding so the height:0
+// box is truly empty, and clip any content.
+.instructionsDrawerHidden {
+  padding: 0;
+  overflow: hidden;
+}
+
 .instructionsScrollArea {
   height: 100%;
   overflow: auto;
@@ -73,6 +81,18 @@
   .chatPanel,
   .toggleButtonContainer {
     transition: opacity 0.2s ease;
+  }
+}
+
+// When the instructions drawer is closed, switching between the Instructions and
+// AI Tutor tabs is instant: both views are already mounted and laid out, so the
+// chat shouldn't grow in and the instructions shouldn't slide back. (Open-drawer
+// tab switches and the open/close toggle still animate.)
+.instant {
+  .instructionsDrawer,
+  .chatPanel,
+  .toggleButtonContainer {
+    transition: none;
   }
 }
 

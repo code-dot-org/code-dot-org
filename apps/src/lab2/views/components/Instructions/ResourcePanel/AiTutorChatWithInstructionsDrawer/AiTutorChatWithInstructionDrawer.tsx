@@ -1,7 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import {
   AiChatDisabledState,
@@ -84,32 +84,74 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   // unless the user has collapsed the drawer.
   const showInstructions = !aiTutorActive || !isCollapsed;
 
+  // The instructions drawer stays mounted even while hidden (height 0), so that
+  // switching back to the Instructions tab doesn't remount it and replay the
+  // instructions' slide-in animation. Make it inert while hidden so its links
+  // aren't tabbable.
+  const instructionsDrawerRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (instructionsDrawerRef.current) {
+      instructionsDrawerRef.current.inert = !showInstructions;
+    }
+  }, [showInstructions]);
+
+  // Animate the layout (drawer resize, chat reveal, toggle slide) only while the
+  // instructions drawer is open. Once it has settled closed, switching tabs is
+  // instant so the chat doesn't grow in and the instructions don't slide back.
+  // The settle delay spans the close animation so the open/close toggle itself
+  // still animates in both directions.
+  const [drawerSettledClosed, setDrawerSettledClosed] = useState(isCollapsed);
+  useEffect(() => {
+    if (!isCollapsed) {
+      setDrawerSettledClosed(false);
+      return;
+    }
+    const id = setTimeout(() => setDrawerSettledClosed(true), 220);
+    return () => clearTimeout(id);
+  }, [isCollapsed]);
+  const animateLayout = !isCollapsed || !drawerSettledClosed;
+
+  // When hidden, force the drawer (and the toggle that rides its bottom edge) to
+  // height 0 synchronously rather than reading the effect-driven instructionsHeight,
+  // which lags a frame and would otherwise flash the full-height drawer for one
+  // frame when switching to a closed AI Tutor tab.
+  const drawerHeight = showInstructions ? instructionsHeight : 0;
+
   return (
     <div
       ref={containerRef}
-      className={classNames(styles.container, isDragging && styles.dragging)}
-    >
-      {showInstructions && (
-        <div
-          id="instructions-drawer"
-          className={styles.instructionsDrawer}
-          style={{height: instructionsHeight}}
-        >
-          <div
-            ref={instructionsScrollAreaRef}
-            className={styles.instructionsScrollArea}
-          >
-            <div ref={instructionsContentRef}>{instructionsContent}</div>
-          </div>
-          {showScrollFade && <div className={styles.scrollFade} aria-hidden />}
-        </div>
+      className={classNames(
+        styles.container,
+        isDragging && styles.dragging,
+        !animateLayout && styles.instant
       )}
+    >
+      <div
+        ref={instructionsDrawerRef}
+        id="instructions-drawer"
+        className={classNames(
+          styles.instructionsDrawer,
+          !showInstructions && styles.instructionsDrawerHidden
+        )}
+        style={{height: drawerHeight}}
+        aria-hidden={!showInstructions}
+      >
+        <div
+          ref={instructionsScrollAreaRef}
+          className={styles.instructionsScrollArea}
+        >
+          <div ref={instructionsContentRef}>{instructionsContent}</div>
+        </div>
+        {showInstructions && showScrollFade && (
+          <div className={styles.scrollFade} aria-hidden />
+        )}
+      </div>
       <div
         className={classNames(
           styles.toggleButtonContainer,
           !aiTutorActive && styles.fadeHidden
         )}
-        style={{top: instructionsHeight}}
+        style={{top: drawerHeight}}
         aria-hidden={!aiTutorActive}
       >
         <MuiButton
