@@ -1,24 +1,20 @@
 import Box from '@mui/material/Box';
 import Skeleton from '@mui/material/Skeleton';
+import {visuallyHidden} from '@mui/utils';
 import type {FunctionComponent} from 'react';
 
-import SignedInUserButton, {UserAuthProp} from './SignedInUserButton';
-import SignedOutUserButtons from './SignedOutUserButtons';
+import SignedInUserButton, {
+  UserAuthProp,
+} from '../SignedInUserButton/SignedInUserButton';
+import SignedOutUserButtons from '../SignedOutUserButtons/SignedOutUserButtons';
+
+import moduleStyles from './UserAuthArea.module.scss';
 
 /** Props for {@link UserAuthArea}. */
 interface UserAuthAreaProps {
   /** Current auth status and associated data. */
   userAuth: UserAuthProp;
 }
-
-/** MUI sx styles for the right-aligned auth container in the toolbar. */
-const containerSx = {
-  marginLeft: 'auto',
-  display: 'flex',
-  alignItems: 'center',
-  paddingRight: 2,
-  backgroundColor: 'var(--background-brand-teal-primary)',
-};
 
 /**
  * Selects the appropriate auth UI for the current status.
@@ -31,14 +27,30 @@ const containerSx = {
 function renderUserAuth(userAuth: UserAuthProp) {
   switch (userAuth.status) {
     case 'loading':
-    case 'error':
       return (
         <Skeleton
           variant="rectangular"
           width={238}
           height={32}
           sx={{borderRadius: '4px'}}
+          role="status"
+          aria-label="Loading your account"
         />
+      );
+    case 'error':
+      return (
+        <>
+          <Skeleton
+            variant="rectangular"
+            width={238}
+            height={32}
+            sx={{borderRadius: '4px'}}
+            aria-hidden
+          />
+          <Box component="span" role="status" sx={visuallyHidden}>
+            Unable to load your account
+          </Box>
+        </>
       );
     case 'signed-in':
       return <SignedInUserButton userAuth={userAuth} />;
@@ -53,7 +65,7 @@ function renderUserAuth(userAuth: UserAuthProp) {
 
 /** Right-hand auth area of the header toolbar. Switches on auth status exhaustively. */
 const UserAuthArea: FunctionComponent<UserAuthAreaProps> = ({userAuth}) => (
-  <Box sx={containerSx}>{renderUserAuth(userAuth)}</Box>
+  <Box className={moduleStyles.container}>{renderUserAuth(userAuth)}</Box>
 );
 
 export default UserAuthArea;

@@ -16,6 +16,8 @@ module.exports = {
     {width: 1200, height: 800, name: 'chrome'},
     {width: 1200, height: 800, name: 'firefox'},
   ],
+  // Viewport the SDK renders and snapshots each story at (SDK default is 1024x768).
+  viewportSize: {width: 1280, height: 800},
   showStorybookOutput: true,
   storybookStaticDir: 'dist/component-library-storybook',
   runInDocker: isDocker,
