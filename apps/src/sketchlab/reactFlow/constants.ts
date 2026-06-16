@@ -17,7 +17,9 @@ export const LINE_DEFAULT_LENGTH_PX = 220;
 
 // Magnetic snap radius (in screen pixels) used when reconnecting an edge
 // endpoint to a node handle. Applies to mouse drags.
-export const LINE_RECONNECT_SNAP_RADIUS_PX = 20;
+export const LINE_RECONNECT_SNAP_RADIUS_PX = 40;
+
+export const LINE_ENDPOINT_GRAB_RADIUS_PX = 40;
 
 // Milliseconds to debounce project saves after canvas changes.
 export const SAVE_DEBOUNCE_MS = 300;
