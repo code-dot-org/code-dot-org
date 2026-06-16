@@ -8,7 +8,7 @@ import {
   getFileExtension,
   getNextFileId,
 } from '@cdo/apps/lab2/utils/multiFileSourceUtils';
-import {AI_TUTOR_ANSWER_TYPES} from '@cdo/apps/weblab2/types';
+import {AI_TUTOR_ANSWER_TYPES} from '@cdo/apps/pythonlab/types';
 
 const getAnswerJsonSchema = (): JsonObjectSchema => {
   return {
@@ -24,8 +24,7 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
       },
       assumptions: {
         type: 'string',
-        description:
-          'Explicit design choices you made from the wireframe. Format as bullets.',
+        description: 'Explicit design choices you made. Format as bullets.',
       },
       code: {
         type: 'array',
@@ -41,7 +40,7 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
           additionalProperties: false,
         },
         description:
-          '`text`, `html`, `css`, `js` or `json` fences. Limit to one language (text, html, css, js, or json) across the entire list. ' +
+          '`text`, `python`, `csv`, or `json` fences. Limit to one language (python, csv, or json) across the entire list. ' +
           'The list can be empty. Code should be formatted with appropriate newlines and indentation. ' +
           'When providing modifications to a file in the student code, provide the entire contents of the file. ' +
           'Code should be formatted with appropriate newlines and indentation.',
@@ -64,7 +63,7 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
       pseudocode: {
         type: 'string',
         description:
-          'Pseudocode in plain English only (no JS). Wrap the pseudocode in a markdown fenced code block with language tag `text` so newlines and indentation are preserved. Use markdown outside the block only if needed.',
+          'Pseudocode in plain English only (no Python). Wrap the pseudocode in a markdown fenced code block with language tag `text` so newlines and indentation are preserved. Use markdown outside the block only if needed.',
       },
       example: {
         type: 'string',
@@ -99,14 +98,9 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
 // This list is used to determine if the AI Tutor response should trigger the accept-reject flow
 // for which we format the model response with formatAcceptRejectResponse. Otherwise, we format
 // the model response with formatCopyPasteResponse.
-export const acceptRejectAnswerTypes = [
-  'buildHTML',
-  'buildCSS',
-  'buildJavaScript',
-  'buildJSON',
-];
+export const acceptRejectAnswerTypes = ['buildPython', 'buildCSV', 'buildJSON'];
 
-const acceptRejectCodeFileTypes = ['html', 'css', 'js', 'json'];
+const acceptRejectCodeFileTypes = ['py', 'csv', 'json'];
 
 /**
  * Validates that all files have file types that are supported in the accept-reject flow.
@@ -142,8 +136,8 @@ const formatSection = (title: string, content?: string): string => {
   return content ? `**${title}**\n\n${content}\n\n` : '';
 };
 
-// This is used when the AI Tutor response's answerType is not 'buildHTML', 'buildCSS', nor 'buildJavaScript'.
-// Parsed json comes in as 'any', but it follows the structure defined in getAnswerJsonSchemaAcceptReject().
+// This is used when the AI Tutor response's answerType is not 'buildPython', 'buildCSV', nor 'buildJSON'.
+// Parsed json comes in as 'any', but it follows the structure defined in getAnswerJsonSchema().
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const formatCopyPasteResponse = (response: any): string => {
   let formattedResponse = '';
@@ -181,8 +175,8 @@ type AcceptRejectFormattedResponse = {
   answerType: string;
 };
 
-// This is used when the AI Tutor response's answerType is 'buildHTML', 'buildCSS', 'buildJavaScript', or 'buildJSON'.
-// Parsed json comes in as 'any', but it follows the structure defined in acceptRejectJsonSchema.
+// This is used when the AI Tutor response's answerType is 'buildPython', 'buildCSV', or 'buildJSON'.
+// Parsed json comes in as 'any', but it follows the structure defined in acceptRejectAnswerTypes.
 export const formatAcceptRejectResponse = (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   response: any
@@ -288,10 +282,10 @@ export const getMergedAiTutorCodeWithSource = (
 
   // Update openFiles to prioritize AI files: active file first, then other AI files, then existing.
   if (aiTutorVersionFiles.length > 0) {
-    const firstHtmlFile = aiTutorVersionFiles.find(
-      f => getFileExtension(f.name) === 'html'
+    const firstPythonFile = aiTutorVersionFiles.find(
+      f => getFileExtension(f.name) === 'py'
     );
-    const fileToActivate = firstHtmlFile || aiTutorVersionFiles[0];
+    const fileToActivate = firstPythonFile || aiTutorVersionFiles[0];
 
     updatedSource.files[fileToActivate.id] = {
       ...updatedSource.files[fileToActivate.id],

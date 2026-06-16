@@ -48,3 +48,5 @@ export const AI_TUTOR_ANSWER_TYPES = [
   'refusalPythonSnippets',
   'testCase',
 ] as const;
+
+export type AiTutorAnswerType = (typeof AI_TUTOR_ANSWER_TYPES)[number];
