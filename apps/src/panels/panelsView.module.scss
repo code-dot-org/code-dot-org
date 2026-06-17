@@ -98,15 +98,6 @@ $text-horizontal-padding: 2.6cqw;
         }
       }
 
-      &Dark {
-        background-color: $neutral_dark;
-        color: $light_white;
-
-        h1, h2, h3, h4 {
-          color: $light_white;
-        }
-      }
-
       p {
         font-size: 1.6cqw;
         line-height: 1.4em;
@@ -213,19 +204,6 @@ $text-horizontal-padding: 2.6cqw;
 
         &, em, strong {
           font-family: var(--font-family-barlow-semi-condensed-semibold);
-        }
-      }
-
-      &Dark {
-        background-color: $neutral_dark;
-        color: $light_white;
-
-        h1, h2, h3, h4 {
-          color: $light_white;
-        }
-
-        &:hover, &:focus-visible {
-          filter: brightness(1.15);
         }
       }
 
