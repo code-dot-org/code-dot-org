@@ -159,6 +159,10 @@ still on the TODO list. Differences from legacy use:
   url entries yet.
 
 ## To Dos
+- **Starter assets can re-appear** In start mode only, if a level
+  was migrated from legacy to lab2, if a levelbuilder edits the start code
+  and deletes all the assets they will re-populate from the legacy starterAssets
+  field. We should clear out starterAssets post-migration.
 - **Theater mini-app** + photo prompter.
 - **Backpack**
 - **Captcha dialog** on `AuthorizerSignalType.CAPTCHA`.
