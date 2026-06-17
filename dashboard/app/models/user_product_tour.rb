@@ -6,6 +6,8 @@
 #  user_id      :integer          not null
 #  tour_name    :string(255)      not null
 #  completed_at :datetime         not null
+#  started_at   :datetime
+#  properties   :json
 #
 # Indexes
 #
