@@ -14,7 +14,7 @@ require 'cdo/aws/redshift/materialized_view_manager'
 # Delay between each check on task status.
 TASK_STATUS_DELAY = 10.minutes
 # As of early 2026, the Task that exports `user_levels` takes about 19.5 hours to complete and is the longest daily task.
-DAILY_TASK_MAX_EXECUTION_TIME = 20.hours
+DAILY_TASK_MAX_EXECUTION_TIME = 22.hours
 # As of early 2020, the Task that exports 'level_sources' takes about 30 hours to complete.
 WEEKLY_TASK_MAX_EXECUTION_TIME = 40.hours
 # Cap on how long to wait for the post-export materialized view REFRESH before giving up. An
