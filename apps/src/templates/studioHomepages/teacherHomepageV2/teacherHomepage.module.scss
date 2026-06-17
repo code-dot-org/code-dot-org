@@ -545,6 +545,10 @@
   );
   background-size: 300% 300%;
   animation: onboarding-gradient-shift 12s linear infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
 }
 
 .onboardingChecklistInnerContent {
