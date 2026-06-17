@@ -21,8 +21,7 @@ export interface JavalabFlatFile {
   url?: string;
   // Set on visible starter files the levelbuilder locked: editable by
   // students but not deletable or renamable. Round-trips
-  // ProjectFileType.LOCKED_STARTER, which the flat shape can't otherwise
-  // represent (it doesn't persist file types).
+  // ProjectFileType.LOCKED_STARTER.
   locked?: boolean;
 }
 
