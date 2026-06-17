@@ -33,6 +33,18 @@
   }
 }
 
+@supports not ((mask-composite: exclude) or (-webkit-mask-composite: destination-out)) {
+  .tour-step-highlight::before {
+    content: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tour-step-highlight::before {
+    animation: none;
+  }
+}
+
 @keyframes tour-highlight-gradient-shift {
   0% {
     background-position: 0% 50%;
