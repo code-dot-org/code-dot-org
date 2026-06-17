@@ -29,7 +29,7 @@ function projectFileType(flat: JavalabFlatFile): ProjectFileType | undefined {
   if (flat.url) {
     return isStarterAssetUrl(flat.url) ? ProjectFileType.STARTER : undefined;
   }
-  return ProjectFileType.STARTER;
+  return flat.locked ? ProjectFileType.LOCKED_STARTER : ProjectFileType.STARTER;
 }
 
 export function flatToMultiFile(
@@ -141,6 +141,9 @@ export function multiFileToFlat(
       isActive: file.active === true,
     };
     if (file.url) flat[file.name].url = file.url;
+    if (file.type === ProjectFileType.LOCKED_STARTER) {
+      flat[file.name].locked = true;
+    }
     if (openIndex.has(file.id)) {
       flat[file.name].tabOrder = openIndex.get(file.id);
     }

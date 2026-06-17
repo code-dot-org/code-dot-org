@@ -656,6 +656,56 @@ describe('javalab2 sourceConverter', () => {
     });
   });
 
+  describe('locked starter files', () => {
+    it('flatToMultiFile types locked visible files LOCKED_STARTER', () => {
+      const mf = flatToMultiFile({
+        'Locked.java': {...flatFile('class Locked {}', 0), locked: true},
+        'Main.java': flatFile('class Main {}', 1),
+      });
+      const locked = Object.values(mf.files).find(
+        f => f.name === 'Locked.java'
+      )!;
+      const main = Object.values(mf.files).find(f => f.name === 'Main.java')!;
+      expect(locked.type).toBe(ProjectFileType.LOCKED_STARTER);
+      expect(main.type).toBe(ProjectFileType.STARTER);
+    });
+
+    it('multiFileToFlat sets locked on LOCKED_STARTER files only', () => {
+      const source: MultiFileSource = {
+        folders: {},
+        files: {
+          '0': {
+            id: '0',
+            name: 'Locked.java',
+            contents: 'class Locked {}',
+            folderId: DEFAULT_FOLDER_ID,
+            type: ProjectFileType.LOCKED_STARTER,
+          },
+          '1': {
+            id: '1',
+            name: 'Main.java',
+            contents: 'class Main {}',
+            folderId: DEFAULT_FOLDER_ID,
+            type: ProjectFileType.STARTER,
+          },
+        },
+        openFiles: ['0', '1'],
+      };
+      const flat = multiFileToFlat(source);
+      expect(flat['Locked.java'].locked).toBe(true);
+      expect(flat['Locked.java'].isVisible).toBe(true);
+      expect('locked' in flat['Main.java']).toBe(false);
+    });
+
+    it('round-trips a locked file through flat -> multiFile -> flat', () => {
+      const original: JavalabFlatSource = {
+        'Locked.java': {...flatFile('class Locked {}', 0), locked: true},
+      };
+      const round = multiFileToFlat(flatToMultiFile(original));
+      expect(round['Locked.java'].locked).toBe(true);
+    });
+  });
+
   describe('start + validation round trip', () => {
     // What Javalab2View actually does in start mode: merge validation
     // into start, hand to codebridge as MultiFileSource, then on save

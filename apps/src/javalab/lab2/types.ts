@@ -19,6 +19,11 @@ export interface JavalabFlatFile {
   // Asset (image/audio) entries set this to where the bytes live
   // (/v3/assets/... or /level_starter_assets/...)
   url?: string;
+  // Set on visible starter files the levelbuilder locked: editable by
+  // students but not deletable or renamable. Round-trips
+  // ProjectFileType.LOCKED_STARTER, which the flat shape can't otherwise
+  // represent (it doesn't persist file types).
+  locked?: boolean;
 }
 
 export type JavalabFlatSource = Record<string, JavalabFlatFile>;
