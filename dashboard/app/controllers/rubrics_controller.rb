@@ -15,6 +15,14 @@ class RubricsController < ApplicationController
   # GET /rubrics/new?lessonId=<lessonId>
   def new
     @lesson = Lesson.find_by(id: params[:lessonId])
+
+    # A lesson may have only one rubric. If one already exists, send the author
+    # to edit it rather than rendering the create form. This backstops a stale
+    # "Add Rubric" link in LinkToRubricEditor, whose Add-vs-Edit choice is baked
+    # in when the level editor page is rendered.
+    existing_rubric = @lesson&.rubric
+    return redirect_to edit_rubric_path(existing_rubric) if existing_rubric
+
     @rubric = Rubric.new
   end
 
@@ -22,6 +30,16 @@ class RubricsController < ApplicationController
   def create
     @rubric = Rubric.new(rubric_params)
     @lesson = @rubric.lesson
+
+    # A lesson may have only one rubric. If one already exists, route the
+    # author to edit it rather than inserting a duplicate. This guards the
+    # POST /rubrics path against stale "Add Rubric" links and direct
+    # navigation to /rubrics/new for a lesson that already has a rubric.
+    existing_rubric = @lesson&.rubric
+    if existing_rubric
+      return render json: {redirectUrl: edit_rubric_path(existing_rubric.id), rubricId: existing_rubric.id}
+    end
+
     if @rubric.save
       @rubric.lesson.script.write_script_json
       render json: {redirectUrl: edit_rubric_path(@rubric.id), rubricId: @rubric.id}
