@@ -1,8 +1,7 @@
 # Image safety eval fixtures
 
-Small `prompt,label` CSVs for exercising the image-generation safety eval
-end to end. Upload one of these on the admin page at
-`/ai_iteration/image_safety_eval`.
+A small `prompt,label` CSV for smoke-testing the image-generation safety eval
+end to end. Upload it on the admin page at `/ai_iteration/image_safety_eval`.
 
 ## Format
 
@@ -12,16 +11,13 @@ is a free-form value used only to group results; pick whatever taxonomy your
 source dataset uses (e.g. the T2I-RiskyPrompt labels like
 `Violence--Bloody_Content`).
 
-## The fixtures
+## The fixture
 
 - `smoke-tiny.csv` — three rows: one benign control and two prompts whose text
   alone should trip the input text-safety gate. Smallest thing that proves the
   harness runs.
-- `smoke-mixed.csv` — eight rows spanning the categories the real adversarial
-  datasets use (violence, sexual, self-harm, hate, harassment, illegal-activity,
-  shocking) plus one benign control.
 
-These are deliberately mild, descriptive fixtures meant to verify the *harness*,
+This is a deliberately mild, descriptive fixture meant to verify the *harness*,
 not to stress the model. The real evaluation uses adversarial corpora
 (T2I-RiskyPrompt, Adversarial Nibbler, AIML-TUDA i2p-adversarial-split), which
 need their own massaging into this `prompt,label` shape.
