@@ -55,6 +55,41 @@ class PumaWorkerCountTest < Minitest::Test
     assert_equal 48, compute(total_memory_mb: nil)
   end
 
+  # concurrent-ruby's available_processor_count returns a Float; the result
+  # handed to puma must still be an Integer, on both the CPU- and memory-bound
+  # paths. (Production passes a Float here; the integer cpu_count in other
+  # cases would mask a type regression.)
+  def test_float_cpu_count_yields_integer_on_cpu_path
+    result = compute(cpu_count: 48.0, total_memory_mb: nil)
+    assert_equal 48, result
+    assert_kind_of Integer, result
+  end
+
+  def test_float_cpu_count_yields_integer_on_memory_path
+    result = compute(cpu_count: 32.0, total_memory_mb: 123 * 1024)
+    assert_equal 26, result
+    assert_kind_of Integer, result
+  end
+
+  def test_fractional_cpu_quota_floors
+    # A cgroup quota of 7.5 vCPUs cannot run 7.5 workers.
+    assert_equal 7, compute(cpu_count: 7.5, total_memory_mb: nil)
+  end
+
+  # A missing or unusable memory config key must degrade to CPU-only sizing,
+  # never crash the puma master at boot (TypeError / divide-by-zero).
+  def test_nil_per_worker_mb_falls_back_to_cpu
+    assert_equal 48, compute(per_worker_mb: nil)
+  end
+
+  def test_zero_per_worker_mb_falls_back_to_cpu
+    assert_equal 48, compute(per_worker_mb: 0)
+  end
+
+  def test_nil_headroom_falls_back_to_cpu
+    assert_equal 48, compute(headroom: nil)
+  end
+
   def test_cpu_bound_when_memory_is_abundant
     assert_equal 48, compute(total_memory_mb: 512 * 1024)
   end

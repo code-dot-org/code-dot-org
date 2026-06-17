@@ -470,11 +470,12 @@ dashboard_port: 3000
 dashboard_workers:
 # When dashboard_workers is unset (:auto), the puma worker count is the
 # smaller of the CPU budget (one per vCPU) and the memory budget below.
-# dashboard_worker_memory_mb is the assumed steady-state used-memory per
-# worker (sized relative to observed PSS, with slack); the headroom fraction
-# reserves RAM for the master, sidecars, OS, and per-worker variance. With
-# these defaults a 128 GB / 32 vCPU m7i.8xlarge resolves to ~26 workers and a
-# 192 GB / 48 vCPU m7i.12xlarge to 40 -- so the same budget tracks the
+# dashboard_worker_memory_mb is the measured mean per-worker memory (PSS);
+# dashboard_worker_memory_headroom is the reserve that holds back RAM for
+# everything else -- master, sidecars, OS, the spread above the mean worker,
+# and traffic spikes (all slack lives here, not in the per-worker figure).
+# With these defaults a 128 GB / 32 vCPU m7i.8xlarge resolves to ~26 workers
+# and a 192 GB / 48 vCPU m7i.12xlarge to 40 -- so the same values track the
 # seasonal instance resize without a config change. See
 # lib/cdo/puma_worker_count.rb.
 dashboard_worker_memory_mb: 4096

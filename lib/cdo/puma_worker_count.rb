@@ -14,29 +14,36 @@ module Cdo
   #
   # We therefore size by the smaller of two budgets:
   #   - CPU:    one worker per available vCPU (the old `:auto`).
-  #   - Memory: how many workers fit in RAM, leaving headroom for the master,
-  #             memcached/redis/collector sidecars, the OS, and per-worker
-  #             variance.
+  #   - Memory: how many workers fit in RAM after the headroom reserve.
+  #
+  # The two memory levers are deliberately orthogonal:
+  #   - dashboard_worker_memory_mb is a measurement: the typical (mean)
+  #     steady-state per-worker memory. Set it to what you observe.
+  #   - dashboard_worker_memory_headroom is the safety policy: the fraction of
+  #     RAM held back to cover everything that is not a typical worker -- the
+  #     master, sidecars, the OS, the spread between the mean worker and the
+  #     heaviest, and traffic-driven transients. All slack lives here, so
+  #     re-measuring the per-worker figure does not silently move the margin.
   #
   # Both budgets adapt to the instance automatically. An explicit numeric
   # `dashboard_workers` still overrides everything (dev = 0 single-mode,
   # test = 5, manually-pinned daemons), preserving prior behavior.
   #
-  # Tuning the memory budget (`dashboard_worker_memory_mb`): measure actual
-  # per-worker memory on a frontend and set the budget at or above what you
-  # observe, with slack. Use PSS, not RSS -- the host's "used" memory (what
-  # the memory alarm watches) counts each physical page once, so copy-on-write
-  # pages shared with the master must not be double-counted. Per-worker memory
-  # grows with worker age, so sample an instance late in its restart cycle to
-  # capture the near-peak value, not a freshly-forked one:
+  # Tuning dashboard_worker_memory_mb: measure per-worker PSS, not RSS -- the
+  # host's "used" memory (what the alarm watches) counts each physical page
+  # once, so copy-on-write pages shared with the master must not be
+  # double-counted. Per-worker PSS grows with worker age, so sample late in the
+  # restart cycle; this figure is therefore the steady state *at the current
+  # restart cadence* -- if that cadence changes, re-measure (see #73281 for the
+  # plateau experiment). Use the mean; headroom owns the spread:
   #
   #   for pid in $(pgrep -f 'puma: cluster worker'); do
-  #     awk '/^Pss:/{s=$2} END{printf "%d MB\n", s/1024}' "/proc/$pid/smaps_rollup"
-  #   done | sort -n | tail -1   # the heaviest worker's PSS
+  #     awk '/^Pss:/{printf "%d\n", $2/1024}' "/proc/$pid/smaps_rollup"
+  #   done | sort -n | awk '{a[NR]=$1; s+=$1}
+  #     END{printf "n=%d mean=%d min=%d max=%d (MB)\n", NR, s/NR, a[1], a[NR]}'
   #
-  # Revisit after any instance-type or per-worker-thread change. The headroom
-  # fraction (`dashboard_worker_memory_headroom`) covers non-worker users
-  # (master, sidecars, OS) and per-worker variance; raise it if those grow.
+  # Revisit after any instance-type, restart-cadence, or per-worker-thread
+  # change.
   module PumaWorkerCount
     MEMINFO = '/proc/meminfo'.freeze
 
@@ -55,10 +62,10 @@ module Cdo
     # Pure worker-count calculation; all inputs explicit for testability.
     #
     # @param explicit         [Integer, String, nil] configured dashboard_workers
-    # @param cpu_count        [Integer] available vCPUs
+    # @param cpu_count        [Numeric] available vCPUs (Float from concurrent-ruby)
     # @param total_memory_mb  [Integer, nil] system RAM in MB, nil if unknown
-    # @param per_worker_mb    [Numeric] assumed used-memory budget per worker
-    # @param headroom         [Numeric] fraction of RAM reserved for non-workers
+    # @param per_worker_mb    [Numeric, nil] mean used-memory per worker
+    # @param headroom         [Numeric, nil] fraction of RAM held back as reserve
     # @return [Integer] worker count (0 means puma single mode)
     def self.compute(explicit:, cpu_count:, total_memory_mb:, per_worker_mb:, headroom:)
       # An explicit count always wins, including 0 (single mode). Accept a
@@ -68,12 +75,24 @@ module Cdo
       return explicit if explicit.is_a?(Integer)
       return explicit.to_i if explicit.is_a?(String) && explicit.match?(/\A\d+\z/)
 
-      # Without a memory reading (e.g. dev/macOS, where /proc is absent),
-      # fall back to the CPU budget alone (the historical `:auto` behavior).
-      return cpu_count unless total_memory_mb
+      # available_processor_count is a Float (it reflects fractional cgroup
+      # quotas), so floor it; the result must be an Integer for puma.
+      cpu_workers = cpu_count.floor
+
+      # Fall back to the CPU budget alone when the memory inputs are unusable:
+      # /proc absent (dev/macOS), or a config key missing or non-numeric. This
+      # is the historical `:auto` behavior, and degrading to it is far safer
+      # than a TypeError or divide-by-zero crashing the puma master fleet-wide
+      # at boot.
+      memory_inputs_usable =
+        total_memory_mb &&
+        per_worker_mb.is_a?(Numeric) && per_worker_mb.positive? &&
+        headroom.is_a?(Numeric) && headroom < 1
+      return cpu_workers unless memory_inputs_usable
 
       memory_workers = (total_memory_mb * (1.0 - headroom) / per_worker_mb).floor
-      [cpu_count, memory_workers].min.clamp(1, cpu_count)
+      # Floor at 1 (endless-range clamp); .min already caps at cpu_workers.
+      [cpu_workers, memory_workers].min.clamp(1..)
     end
 
     # Total system RAM in MB, or nil if it cannot be determined (so callers
