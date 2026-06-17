@@ -1,0 +1,39 @@
+// NavLogo styles. The trigger class overrides MUI's IconButton theme styles; it
+// wins because MUI's emotion styles are in `@layer mui` (enableCssLayer) and
+// these module classes are unlayered.
+
+// Icon button wrapping the logo.
+.logoIconButton {
+  // Size to the wordmark, not the 50px bar: release the theme's 48px min-height and
+  // don't stretch. The 14px insets are non-clickable margin (prod's logo padding is
+  // inert), so the click target hugs the wordmark at prod's x=14; ~26px height keeps
+  // it >=24px (WCAG 2.5.8).
+  align-self: center;
+  min-height: 0;
+  margin-left: 14px;
+  margin-right: 14px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 2px;
+  padding-bottom: 2px;
+
+  // Brand-inverse ring; the theme's default teal IconButton ring is invisible on the teal bar.
+  &:focus-visible {
+    outline: 2px solid var(--text-neutral-white-fixed);
+    outline-offset: 2px;
+  }
+}
+
+// Logo is a wide wordmark (≈ 5.9:1 ratio); fix height and let width flow
+// from the image's natural aspect ratio instead of constraining to a square.
+.logoBox {
+  height: 22px;
+  display: flex;
+  align-items: center;
+
+  & img {
+    height: 100%;
+    width: auto;
+    display: block;
+  }
+}

@@ -40,7 +40,12 @@ import {
   multiFileToFlat,
   splitForLevelbuilderSave,
 } from './sourceConverter';
-import {flatSourceFromLevelProperties, JavalabLevelProperties} from './types';
+import {mergeStarterAssets} from './starterAssets';
+import {
+  flatSourceFromLevelProperties,
+  JavalabFlatSource,
+  JavalabLevelProperties,
+} from './types';
 
 const javalabLangMapping: {[key: string]: LanguageSupport} = {
   java: java(),
@@ -102,7 +107,8 @@ const Javalab2View: React.FunctionComponent<
   }, [dispatch]);
 
   // Codebridge expects MultiFileSource, but legacy Java lab/Javabuilder expects a flat source.
-  // Convert here before passing to codebridge.
+  // Convert here before passing to codebridge. Also merge in the level's starter assets
+  // when loading from the level rather than an active project.
   const codebridgeLevelProperties = useMemo<CodebridgeLevelProperties>(() => {
     const flatTemplate = flatSourceFromLevelProperties(
       levelProperties.templateSources
@@ -117,12 +123,21 @@ const Javalab2View: React.FunctionComponent<
       ? mergeValidationIntoStart(flatStartRaw, levelProperties.validation)
       : flatStartRaw;
 
+    const includeStarterAssets = (flat: JavalabFlatSource | undefined) =>
+      flat
+        ? mergeStarterAssets(
+            flatToMultiFile(flat),
+            levelProperties.starterAssets,
+            levelProperties.name
+          )
+        : undefined;
+
     return {
       ...levelProperties,
       miniApp: labConfig?.miniApp?.name,
-      startSources: flatStart ? flatToMultiFile(flatStart) : undefined,
-      templateSources: flatTemplate ? flatToMultiFile(flatTemplate) : undefined,
-      exemplarSources: flatExemplar ? flatToMultiFile(flatExemplar) : undefined,
+      startSources: includeStarterAssets(flatStart),
+      templateSources: includeStarterAssets(flatTemplate),
+      exemplarSources: includeStarterAssets(flatExemplar),
     };
   }, [levelProperties, labConfig]);
 

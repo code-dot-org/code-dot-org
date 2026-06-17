@@ -34,6 +34,8 @@ const ELEMENTARY_PRESET: DemoPresetView = {
   unit: {name: 'coursea-2024', displayName: 'Course A'},
   unitGroup: null,
   studentSnapshotDefaultTourLesson: null,
+  reviewSyllabusQuizLesson: null,
+  reviewSyllabusQuizOptions: null,
 };
 
 const HIGH_PRESET: DemoPresetView = {
@@ -50,6 +52,8 @@ const HIGH_PRESET: DemoPresetView = {
     displayName: 'Artificial Intelligence Foundations',
   },
   studentSnapshotDefaultTourLesson: null,
+  reviewSyllabusQuizLesson: null,
+  reviewSyllabusQuizOptions: null,
 };
 
 describe('CreateDemoSectionPopup', () => {

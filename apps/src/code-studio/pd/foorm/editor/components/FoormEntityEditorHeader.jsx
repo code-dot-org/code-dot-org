@@ -1,11 +1,11 @@
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
+import {Button as MuiButton} from '@mui/material';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 
 import Spinner from '../../../../../sharedComponents/Spinner';
 
@@ -84,27 +84,24 @@ class FoormEntityEditorHeader extends Component {
       <div>
         {this.props.headerTitle}
         <div style={styles.helperButtons}>
-          <div style={styles.livePreview}>
-            <ToggleGroup
-              onChange={this.props.livePreviewToggled}
-              selected={this.props.livePreviewStatus}
-            >
-              <button type="button" value={PREVIEW_ON}>
-                Live Preview On
-              </button>
-              <button type="button" value={PREVIEW_OFF}>
-                Live Preview Off
-              </button>
-            </ToggleGroup>
-          </div>
+          <SegmentedButtons
+            size="xs"
+            onChange={this.props.livePreviewToggled}
+            selectedButtonValue={this.props.livePreviewStatus}
+            buttons={[
+              {value: PREVIEW_ON, label: 'Live Preview On'},
+              {value: PREVIEW_OFF, label: 'Live Preview Off'},
+            ]}
+          />
           <div style={styles.validation}>
-            <Button
-              style={styles.validateButton}
+            <MuiButton
+              variant="contained"
+              size="small"
+              color="primary"
               onClick={this.validateQuestions}
-              className="btn"
             >
               Validate
-            </Button>
+            </MuiButton>
             <br />
             {this.state.validationStarted ? (
               <Spinner style={styles.spinner} />
@@ -112,7 +109,7 @@ class FoormEntityEditorHeader extends Component {
               this.state.lastValidated && (
                 <div style={styles.validationInfo}>
                   {this.state.validationError && (
-                    <FontAwesome icon="triangle-exclamation" />
+                    <FontAwesome icon="exclamation-triangle" />
                   )}
                   {`Last validated at ${
                     this.state.lastValidated
@@ -137,9 +134,6 @@ const styles = {
     marginTop: 10,
     marginLeft: 10,
   },
-  validateButton: {
-    marginLeft: 0,
-  },
   spinner: {
     marginTop: 5,
   },
@@ -147,11 +141,12 @@ const styles = {
     display: 'flex',
   },
   helperButtons: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    gap: 10,
     marginTop: 15,
     marginBottom: 15,
-  },
-  livePreview: {
-    marginTop: 8,
   },
 };
 

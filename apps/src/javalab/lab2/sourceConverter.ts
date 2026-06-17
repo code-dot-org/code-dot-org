@@ -17,11 +17,18 @@ import {
   ProjectFileType,
 } from '@cdo/apps/lab2/types';
 
+import {isStarterAssetUrl} from './starterAssets';
 import {JavalabFlatFile, JavalabFlatSource} from './types';
 
-function projectFileType(flat: JavalabFlatFile): ProjectFileType {
+function projectFileType(flat: JavalabFlatFile): ProjectFileType | undefined {
   if (flat.isValidation) return ProjectFileType.VALIDATION;
   if (!flat.isVisible) return ProjectFileType.SUPPORT;
+  // The flat shape doesn't persist types, so asset files are typed by where
+  // their url points: level starter assets are levelbuilder-owned (STARTER),
+  // while a student's own uploads stay untyped.
+  if (flat.url) {
+    return isStarterAssetUrl(flat.url) ? ProjectFileType.STARTER : undefined;
+  }
   return ProjectFileType.STARTER;
 }
 
@@ -50,6 +57,8 @@ export function flatToMultiFile(
       folderId: DEFAULT_FOLDER_ID,
       type: projectFileType(props),
     };
+    if (props.url) files[id].url = props.url;
+    if (props.flagged) files[id].flagged = props.flagged;
   });
 
   // Visible files (including validation files surfaced in start mode) are
@@ -132,6 +141,8 @@ export function multiFileToFlat(
       isOpen,
       isActive: file.active === true,
     };
+    if (file.url) flat[file.name].url = file.url;
+    if (file.flagged) flat[file.name].flagged = file.flagged;
     if (openIndex.has(file.id)) {
       flat[file.name].tabOrder = openIndex.get(file.id);
     }

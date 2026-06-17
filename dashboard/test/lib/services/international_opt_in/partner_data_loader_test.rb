@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'cdo/brand'
 
 class Services::InternationalOptIn::PartnerDataLoaderTest < ActiveSupport::TestCase
   let(:described_class) {Services::InternationalOptIn::PartnerDataLoader}
@@ -19,6 +20,7 @@ class Services::InternationalOptIn::PartnerDataLoaderTest < ActiveSupport::TestC
 
       _(entries).must_be_kind_of Hash
       entries.values.each do |values|
+        _(values).must_include Cdo::Brand.legal_name
         _(values).must_include extra_value
       end
     end

@@ -1,0 +1,52 @@
+// SignedInUserButton styles. These override MUI's Button theme styles; they win
+// because MUI's emotion styles are in `@layer mui` (enableCssLayer) and these
+// module classes are unlayered. The Menu items stay in the shared `headerMenu*`
+// sx (MUI-override).
+
+// Account-menu trigger (teal pill with the display name + chevron).
+.accountTrigger {
+  min-width: 0;
+  height: 35px;
+  padding: 6.5px 1rem;
+  column-gap: 8px;
+  color: var(--text-neutral-white-fixed);
+  border: 1px solid var(--neutral-base-white);
+  border-radius: 4px;
+  background-color: var(--background-brand-teal-primary);
+  box-shadow: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-transform: none;
+
+  &:hover,
+  &:active,
+  &:focus-visible {
+    background-color: var(--background-brand-teal-primary);
+    box-shadow: none;
+    color: var(--text-neutral-white-fixed);
+    // Re-pin the white outline; the theme's Button :active rule recolors it otherwise.
+    border: 1px solid var(--neutral-base-white);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--text-neutral-white-fixed);
+    outline-offset: 2px;
+  }
+
+  :global(.MuiButton-endIcon),
+  :global(.MuiButton-endIcon) i {
+    width: auto;
+    color: var(--text-neutral-white-fixed);
+    font-size: 14px;
+  }
+}
+
+// Display name: truncate to 120px so the button auto-sizes to prod's ~176px.
+.accountName {
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
