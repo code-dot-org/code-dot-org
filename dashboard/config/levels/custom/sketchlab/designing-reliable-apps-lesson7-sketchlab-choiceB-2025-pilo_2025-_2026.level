@@ -1,12 +1,13 @@
 <Sketchlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 75,
   "created_at": "2026-04-01T21:44:20.000Z",
   "level_num": "custom",
   "user_id": 18762,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# Missing Data: Designing for the \"Oops\"\r\n\r\nBased on the following user complaint about the Concert App bug (Level 1), design the UI for what should appear on screen instead:\r\n\r\n> **The Ghost Map:** “The page loaded, but the seat map is blank.”\r\n\r\nUse simple boxes and labels to show your layout. Your sketch must include three elements:\r\n\r\n1. **The Message:** Explain what happened in plain English. Avoid using \"Error 404\" or \"Null\".\r\n2. **The Action:** Give the user a clear next step, e.g., a \"Retry\" button, a \"Contact Support\" link, or a \"Return to Home\" option.\r\n3. **The Tone Check:** Ensure the tone is calm and helpful. Avoid scary icons or blaming the user.",
+    "long_instructions": "## Invalid Data Recovery\r\n\r\nA user submitted Ticket #1002 — the seat map loaded but all prices and seat info are showing as dashes.\r\n\r\nSketch what the user should see instead. Your design must include:\r\n\r\n1. **The Message:** Explain what happened in plain English. No error codes, no technical jargon.\r\n2. **The Action:** Give the user a clear next step — a Retry button, Contact Support link, or Return to Home option.\r\n3. **The Tone:** Keep it calm and helpful. No scary icons, no blame.",
     "start_sources": {
       "source": {
         "nodes": [
@@ -915,11 +916,10 @@
       }
     },
     "display_name": "Invalid Data",
-    "bubble_choice_description": "Design the UI for what should appear on screen when this error happens.",
-    "thumbnail_url": "https://images.code.org/9d70e2ace75ab9aa4f99dab280351332-Screenshot 2026-02-11 at 11.17.30 AM.png",
+    "bubble_choice_description": "Ticket #1002: The seat map loaded but prices and seat info are showing as dashes. Design what the user should see instead.",
+    "thumbnail_url": "https://images.code.org/71af9a4d8b7eb8aac38aadf9e8d7f7ca-Untitled presentation (5).jpg",
     "name_suffix": "_2026"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:20.760+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson7-sketchlab-choiceB-2025-pilo_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson7-sketchlab-choiceB-2025-pilo_2025-pilot\"},{\"changed_at\":\"2026-05-01 15:34:30 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-07 13:31:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:20.760+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson7-sketchlab-choiceB-2025-pilo_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson7-sketchlab-choiceB-2025-pilo_2025-pilot\"},{\"changed_at\":\"2026-05-01 15:34:30 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-07 13:31:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-06-16 15:45:39 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 15:54:00 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 16:11:47 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 18:36:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 18:36:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 18:38:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Sketchlab>
