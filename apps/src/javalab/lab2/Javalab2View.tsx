@@ -95,6 +95,7 @@ const Javalab2View: React.FunctionComponent<
   }, [progressManager, levelProperties.appName]);
 
   // Derive the labConfig (which sets the mini app in codebridge) from the
+  // channel or the level's csaViewMode. Every save echoes a freshly-parsed
   // channel, so channel.labConfig is a new object each time even when its value
   // is unchanged; a reference dep would re-derive labConfig on every save and
   // cascade into a project-source reset that drops live edits. Hold the derived
