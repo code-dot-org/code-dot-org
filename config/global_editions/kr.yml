@@ -8,7 +8,6 @@
 # component from the page.
 
 locales: [ko-KR]
-locale_lock: true
 countries: [KR]
 
 # The list of available project types

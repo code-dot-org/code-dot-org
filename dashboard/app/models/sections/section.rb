@@ -46,6 +46,37 @@ require 'cdo/safe_names'
 require 'policies/lti'
 
 class Section < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    user_id: :confidential,
+    name: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+    code: :confidential,
+    script_id: :confidential,
+    course_id: :confidential,
+    grade: :confidential,
+    login_type: :confidential,
+    deleted_at: :confidential,
+    stage_extras: :confidential,
+    section_type: :confidential,
+    first_activity_at: :confidential,
+    pairing_allowed: :confidential,
+    sharing_disabled: :confidential,
+    hidden: :confidential,
+    tts_autoplay_enabled: :confidential,
+    restrict_section: :confidential,
+    properties: :confidential,
+    participant_type: :confidential,
+    lti_integration_id: :confidential,
+    avatar_color: :confidential,
+    avatar_emoji: :confidential,
+    ai_chat_access_level: :confidential,
+    demo_type: :confidential,
+  )
+
   include SerializedProperties
   include SharedConstants
   include Curriculum::SharedCourseConstants
