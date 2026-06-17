@@ -57,10 +57,17 @@ class AiIterationControllerTest < ActionController::TestCase
   method: :get,
   response: :forbidden
 
-  # Levelbuilder can access the image safety eval page
+  # Levelbuilder cannot access the image safety eval page (admin-only)
   test_user_gets_response_for :image_safety_eval,
-  name: "levelbuilder_image_safety_eval_access_test",
+  name: "levelbuilder_no_image_safety_eval_access_test",
   user: :levelbuilder,
+  method: :get,
+  response: :forbidden
+
+  # Admin can access the image safety eval page
+  test_user_gets_response_for :image_safety_eval,
+  name: "admin_image_safety_eval_access_test",
+  user: :admin,
   method: :get,
   response: :success
 end
