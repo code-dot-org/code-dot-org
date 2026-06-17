@@ -19,7 +19,7 @@ Feature: Checking the footer appearance
   @eyes
   Scenario: Desktop Minecraft puzzle using dark small footer
     When I open my eyes to test "Desktop Minecraft puzzle using dark small footer"
-    Given I am on "http://studio.code.org/courses/mc/units/1/lessons/1/levels/14?noautoplay=true"
+    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/25/levels/1?noautoplay=true"
     And I wait for the lab page to fully load
 
     Then I see no difference for "small footer"
