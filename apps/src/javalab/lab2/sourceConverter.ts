@@ -23,6 +23,7 @@ import {JavalabFlatFile, JavalabFlatSource} from './types';
 function projectFileType(flat: JavalabFlatFile): ProjectFileType | undefined {
   if (flat.isValidation) return ProjectFileType.VALIDATION;
   if (!flat.isVisible) return ProjectFileType.SUPPORT;
+  if (flat.locked) return ProjectFileType.LOCKED_STARTER;
   // The flat shape doesn't persist types. A student's own uploads (url not
   // under level_starter_assets) stay untyped; everything else is a starter,
   // locked or not.
