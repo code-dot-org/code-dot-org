@@ -4,45 +4,85 @@ require 'cdo/global_edition'
 
 class CdoGlobalEditionTest < Minitest::Test
   def setup
+    @default_region = Cdo::GlobalEdition::DEFAULT_REGION
+    @default_locale = Cdo::GlobalEdition::DEFAULT_LOCALE
     @multi_locale_region = Cdo::GlobalEdition.regions_url_locales.keys.first
     @single_locale_region = (Cdo::GlobalEdition::REGIONS - Cdo::GlobalEdition.regions_url_locales.keys).first
+    @multi_locale = non_main_locale(@multi_locale_region)
     @unavailable_locale = 'unavailable-locale'
     @unsupported_url_locale = 'unsupported-locale'
     @unknown_region = 'unknown-region'
 
+    refute_nil @default_region
+    refute_nil @default_locale
     refute_nil @multi_locale_region
     refute_nil @single_locale_region
+    refute_nil @multi_locale
     refute_includes Cdo::GlobalEdition.region_locales(@multi_locale_region), @unavailable_locale
     refute_includes Cdo::GlobalEdition.regions_url_locales.fetch(@multi_locale_region), @unsupported_url_locale
     refute_includes Cdo::GlobalEdition::REGIONS, @unknown_region
   end
 
-  def test_path_for_single_locale_region_does_not_include_locale_segment
-    locale = Cdo::GlobalEdition.region_locales(@multi_locale_region).last
+  def test_default_region_locales_are_expected_and_start_with_default_locale
+    default_region_locales = Cdo::GlobalEdition::REGION_LOCALES.fetch(@default_region)
+    assert_equal Set[@default_locale, 'es-MX'], default_region_locales
+    assert_equal @default_locale, default_region_locales.first
+  end
 
+  def test_default_region_locales_map_back_to_default_region
+    Cdo::GlobalEdition::REGION_LOCALES.fetch(@default_region).each do |locale|
+      assert_equal @default_region, Cdo::GlobalEdition::REGION_BY_LOCALE.fetch(locale)
+    end
+  end
+
+  def test_path_prefix_for_default_region_and_default_locale_is_empty
+    assert_equal(
+      '',
+      Cdo::GlobalEdition.path_prefix(@default_region, @default_locale),
+    )
+  end
+
+  def test_path_for_default_region_and_default_locale_does_not_include_global_edition_prefix
+    assert_equal(
+      '/home',
+      Cdo::GlobalEdition.path(@default_region, '/home', locale: @default_locale),
+    )
+  end
+
+  def test_path_prefix_for_default_region_uses_locale_segment_for_non_default_locale
+    locale = (Cdo::GlobalEdition.region_locales(@default_region) - [@default_locale]).first
+
+    refute_nil locale
+    assert_equal(
+      global_edition_path(@default_region, Cdo::GlobalEdition.url_locale_segment(locale)),
+      Cdo::GlobalEdition.path_prefix(@default_region, locale),
+    )
+  end
+
+  def test_path_for_single_locale_region_does_not_include_locale_segment
     assert_equal(
       global_edition_path(@single_locale_region, 'home'),
-      Cdo::GlobalEdition.path(@single_locale_region, 'home', locale: locale),
+      Cdo::GlobalEdition.path(@single_locale_region, '/home', locale: @multi_locale),
     )
   end
 
   def test_path_for_single_locale_region_accepts_symbol_region
     assert_equal(
       global_edition_path(@single_locale_region, 'home'),
-      Cdo::GlobalEdition.path(@single_locale_region.to_sym, 'home'),
+      Cdo::GlobalEdition.path(@single_locale_region.to_sym, '/home'),
     )
   end
 
-  def test_path_for_single_locale_region_joins_multiple_path_segments
+  def test_path_for_single_locale_region_accepts_joined_path
     assert_equal(
       global_edition_path(@single_locale_region, 'courses', 'self-paced-pl'),
-      Cdo::GlobalEdition.path(@single_locale_region, 'courses', 'self-paced-pl'),
+      Cdo::GlobalEdition.path(@single_locale_region, '/courses/self-paced-pl'),
     )
   end
 
-  def test_path_for_single_locale_region_normalizes_leading_and_trailing_slashes
+  def test_path_for_single_locale_region_preserves_trailing_slash
     assert_equal(
-      global_edition_path(@single_locale_region, 'home'),
+      "#{global_edition_path(@single_locale_region, 'home')}/",
       Cdo::GlobalEdition.path(@single_locale_region, '/home/'),
     )
   end
@@ -55,11 +95,9 @@ class CdoGlobalEditionTest < Minitest::Test
   end
 
   def test_path_for_multi_locale_region_uses_available_locale
-    locale = Cdo::GlobalEdition.region_locales(@multi_locale_region).last
-
     assert_equal(
-      multi_locale_path(locale, 'home'),
-      Cdo::GlobalEdition.path(@multi_locale_region, 'home', locale: locale),
+      multi_locale_path(@multi_locale, 'home'),
+      Cdo::GlobalEdition.path(@multi_locale_region, '/home', locale: @multi_locale),
     )
   end
 
@@ -68,7 +106,7 @@ class CdoGlobalEditionTest < Minitest::Test
 
     assert_equal(
       multi_locale_path(main_locale, 'home'),
-      Cdo::GlobalEdition.path(@multi_locale_region, 'home', locale: @unavailable_locale),
+      Cdo::GlobalEdition.path(@multi_locale_region, '/home', locale: @unavailable_locale),
     )
   end
 
@@ -77,17 +115,15 @@ class CdoGlobalEditionTest < Minitest::Test
 
     assert_equal(
       multi_locale_path(main_locale, 'home'),
-      Cdo::GlobalEdition.path(@multi_locale_region, 'home', locale: nil),
+      Cdo::GlobalEdition.path(@multi_locale_region, '/home', locale: nil),
     )
   end
 
   def test_path_for_multi_locale_region_uses_i18n_locale_by_default
-    locale = Cdo::GlobalEdition.region_locales(@multi_locale_region).last
-
-    I18n.stubs(:locale).returns(locale)
+    I18n.stubs(:locale).returns(@multi_locale)
     assert_equal(
-      multi_locale_path(locale, 'home'),
-      Cdo::GlobalEdition.path(@multi_locale_region, 'home'),
+      multi_locale_path(@multi_locale, 'home'),
+      Cdo::GlobalEdition.path(@multi_locale_region, '/home'),
     )
   end
 
@@ -97,31 +133,26 @@ class CdoGlobalEditionTest < Minitest::Test
     I18n.stubs(:locale).returns(@unavailable_locale)
     assert_equal(
       multi_locale_path(main_locale, 'home'),
-      Cdo::GlobalEdition.path(@multi_locale_region, 'home'),
+      Cdo::GlobalEdition.path(@multi_locale_region, '/home'),
     )
   end
 
   def test_path_for_multi_locale_region_without_path_returns_locale_root
-    locale = Cdo::GlobalEdition.region_locales(@multi_locale_region).last
-
     assert_equal(
-      multi_locale_path(locale),
-      Cdo::GlobalEdition.path(@multi_locale_region, locale: locale),
+      multi_locale_path(@multi_locale),
+      Cdo::GlobalEdition.path(@multi_locale_region, locale: @multi_locale),
     )
   end
 
-  def test_path_for_multi_locale_region_joins_multiple_path_segments
-    locale = Cdo::GlobalEdition.region_locales(@multi_locale_region).last
-
+  def test_path_for_multi_locale_region_accepts_joined_path
     assert_equal(
-      multi_locale_path(locale, 'courses', 'self-paced-pl'),
-      Cdo::GlobalEdition.path(@multi_locale_region, 'courses', 'self-paced-pl', locale: locale),
+      multi_locale_path(@multi_locale, 'courses', 'self-paced-pl'),
+      Cdo::GlobalEdition.path(@multi_locale_region, '/courses/self-paced-pl', locale: @multi_locale),
     )
   end
 
   def test_path_replaces_existing_multi_locale_global_edition_prefix
-    locale = Cdo::GlobalEdition.region_locales(@multi_locale_region).last
-    existing_global_edition_path = multi_locale_path(locale, 'home')
+    existing_global_edition_path = multi_locale_path(@multi_locale, 'home')
 
     assert_equal(
       global_edition_path(@single_locale_region, 'home'),
@@ -130,8 +161,7 @@ class CdoGlobalEditionTest < Minitest::Test
   end
 
   def test_path_replaces_existing_multi_locale_global_edition_prefix_without_main_path
-    locale = Cdo::GlobalEdition.region_locales(@multi_locale_region).last
-    existing_global_edition_path = multi_locale_path(locale)
+    existing_global_edition_path = multi_locale_path(@multi_locale)
 
     assert_equal(
       global_edition_path(@single_locale_region),
@@ -140,36 +170,32 @@ class CdoGlobalEditionTest < Minitest::Test
   end
 
   def test_path_replaces_existing_single_locale_global_edition_prefix
-    locale = Cdo::GlobalEdition.region_locales(@multi_locale_region).last
     existing_global_edition_path = global_edition_path(@single_locale_region, 'home')
 
     assert_equal(
-      multi_locale_path(locale, 'home'),
-      Cdo::GlobalEdition.path(@multi_locale_region, existing_global_edition_path, locale: locale),
+      multi_locale_path(@multi_locale, 'home'),
+      Cdo::GlobalEdition.path(@multi_locale_region, existing_global_edition_path, locale: @multi_locale),
     )
   end
 
   def test_path_replaces_existing_single_locale_global_edition_prefix_without_main_path
-    locale = Cdo::GlobalEdition.region_locales(@multi_locale_region).last
     existing_global_edition_path = global_edition_path(@single_locale_region)
 
     assert_equal(
-      multi_locale_path(locale),
-      Cdo::GlobalEdition.path(@multi_locale_region, existing_global_edition_path, locale: locale),
+      multi_locale_path(@multi_locale),
+      Cdo::GlobalEdition.path(@multi_locale_region, existing_global_edition_path, locale: @multi_locale),
     )
   end
 
   def test_path_keeps_excluded_paths_outside_global_edition_scope
-    locale = Cdo::GlobalEdition.region_locales(@multi_locale_region).last
-
     Cdo::GlobalEdition::EXCLUDED_PATHS.each do |excluded_path|
       paths = [excluded_path]
       paths << File.join(excluded_path, 'file.js') if excluded_path.end_with?('/')
 
       paths.each do |path|
         assert_equal(
-          path.chomp('/'),
-          Cdo::GlobalEdition.path(@multi_locale_region, path, locale: locale),
+          path,
+          Cdo::GlobalEdition.path(@multi_locale_region, path, locale: @multi_locale),
           "Expected #{path} to remain outside Global Edition scope",
         )
       end
@@ -177,8 +203,7 @@ class CdoGlobalEditionTest < Minitest::Test
   end
 
   def test_path_checks_exclusions_after_removing_existing_global_edition_prefix
-    locale = Cdo::GlobalEdition.region_locales(@multi_locale_region).last
-    existing_global_edition_path = multi_locale_path(locale, 'assets', 'application.js')
+    existing_global_edition_path = multi_locale_path(@multi_locale, 'assets', 'application.js')
 
     assert_equal(
       '/assets/application.js',
@@ -203,12 +228,15 @@ class CdoGlobalEditionTest < Minitest::Test
   end
 
   def test_path_for_unknown_region_uses_region_only_path
-    locale = Cdo::GlobalEdition.region_locales(@multi_locale_region).last
-
     assert_equal(
       global_edition_path(@unknown_region, 'home'),
-      Cdo::GlobalEdition.path(@unknown_region, 'home', locale: locale),
+      Cdo::GlobalEdition.path(@unknown_region, '/home', locale: @multi_locale),
     )
+  end
+
+  private def non_main_locale(region)
+    main_locale = Cdo::GlobalEdition.main_region_locale(region)
+    Cdo::GlobalEdition.region_locales(region).find {|locale| locale != main_locale}
   end
 
   private def global_edition_path(region, *paths)

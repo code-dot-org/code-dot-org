@@ -14,6 +14,16 @@
 #
 
 class Pd::TeacherconSurvey < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :restricted,
+    pd_enrollment_id: :restricted,
+    form_data: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
+  )
+
   include Pd::FacilitatorSpecificForm
 
   DISAGREES = [
