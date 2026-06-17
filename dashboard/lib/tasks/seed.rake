@@ -87,7 +87,6 @@ namespace :seed do
     allthethings
     allthettsthings
     artist
-    customizing-llms-2024
     dance
     events
     flappy
@@ -264,7 +263,6 @@ namespace :seed do
        alltheselfpacedplthings
        allthettsthings
        artist
-       customizing-llms-2024
        dance
        events
        flappy
