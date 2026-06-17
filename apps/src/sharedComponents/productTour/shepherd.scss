@@ -3,7 +3,12 @@
 
 .tour-step-highlight {
   position: relative !important;
-  outline: none !important;
+  outline: none;
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: 2px;
+  }
 
   &::before {
     content: '';
@@ -152,8 +157,9 @@
     }
 
     &:disabled,
-    &[aria-disabled='true'] {
-      border-color: var(--borders-neutral-disabled) !important;
+    &[aria-disabled='true'],
+    &[aria-disabled='true']:hover {
+      border-color: var(--borders-neutral-disabled);
       color: var(--text-neutral-disabled);
       background-color: var(--background-neutral-primary);
     }
@@ -300,9 +306,12 @@ div .quiz-option-correct {
   .shepherd-header {
     order: 2;
     flex-shrink: 0;
-    background-color: transparent !important;
-    padding: 0 !important;
-    margin-bottom: 0 !important;
+  }
+
+  &.shepherd-has-title .shepherd-content .shepherd-header {
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 0;
   }
 
   // Take the cancel icon out of absolute positioning so it sits inline.
