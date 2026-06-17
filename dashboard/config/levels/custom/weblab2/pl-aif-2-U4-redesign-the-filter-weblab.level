@@ -55,7 +55,7 @@
       ]
     },
     "encrypted": "false",
-    "long_instructions": "## Redesign the Filter\r\n\r\n1. Use your pseudocode from the activity guide to revise the loop inside `filterTrendingArtists()` in `script.js` — replace the `artists[i].likes` condition with one based on your chosen property.\r\n2. Test it. The list should now show a diverse range of previously hidden artists.",
+    "long_instructions": "## Redesign the Filter\r\n\r\nThe current algorithm only prioritizes Likes, which means many emerging artists never appear on the homepage.\r\n\r\n### Do This\r\n\r\n**Your Task:** Rewrite the filter logic to surface artists who are currently being overlooked.\r\n\r\n1. Explore the `artists` data in `data.js`. Decide which property you want to use instead of **Likes** to determine which artists should be featured.\r\n\r\n2. Before you start coding, think through or jot down the logic for your new filter in pseudocode.\r\n\r\n3. Share your pseudocode with the AI Tutor and ask it to help you update the `filterTrendingArtists()` function based on your new criteria.\r\n\r\n4. Review the AI Tutor's suggested code. Make any changes you think are needed, then update the loop inside `filterTrendingArtists()` by replacing the condition that checks `artists[i].likes`.\r\n\r\n5. Run the program and test your changes.\r\n\r\n6. Verify that your updated filter displays a wider range of artists, including artists who were previously excluded from the homepage.\r\n\r\n",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "disable_edit_run_for_submission": "false",
@@ -89,6 +89,6 @@
       }
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-06-15T14:36:14.826+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson9-level6-test_2025-pilot_2026\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson9-level6-test_2025-pilot_2026\"},{\"changed_at\":\"2026-06-15 14:36:22 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-06-15T14:36:14.826+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson9-level6-test_2025-pilot_2026\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson9-level6-test_2025-pilot_2026\"},{\"changed_at\":\"2026-06-15 14:36:22 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-06-16 14:25:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Weblab2>
