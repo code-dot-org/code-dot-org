@@ -30,6 +30,7 @@ export interface Panel {
   teacherNote?: string;
 
   // The following fields are exploratory and not yet exposed in levelbuilder.
+  dark?: boolean;
   typing?: boolean;
   fadeInOverPrevious?: boolean;
 }

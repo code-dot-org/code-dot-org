@@ -282,7 +282,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
             <button
               type="button"
               key={`link-${index}`}
-              className={styles.link}
+              className={classNames(styles.link, panel.dark && styles.linkDark)}
               style={{
                 left: `${link.x}%`,
                 top: `${link.y}%`,
@@ -296,10 +296,15 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
         {panel.text && (
           <div
             ref={contentRef}
-            className={classNames(styles.text, textLayoutClass)}
+            className={classNames(
+              styles.text,
+              panel.dark && styles.textDark,
+              textLayoutClass
+            )}
           >
             {offerBrowserTts && (
-              <div className={styles.ttsContainer}>
+              // Override the theme since the text container is always white.
+              <div className={styles.ttsContainer} data-theme="Light">
                 <TextToSpeech contentRef={contentRef} />
               </div>
             )}

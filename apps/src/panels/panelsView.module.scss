@@ -77,8 +77,8 @@ $text-horizontal-padding: 2.6cqw;
     }
 
     .text {
-      background-color: var(--background-neutral-secondary);
-      color: var(--text-neutral-primary);
+      background-color: $neutral_light;
+      color: $neutral_dark;
       border-radius: 5px;
       width: 40%;
       position: absolute;
@@ -89,12 +89,22 @@ $text-horizontal-padding: 2.6cqw;
       line-height: 1.4em;
 
       h1, h2, h3, h4 {
+        color: $neutral_dark;
         margin: 0 0 1cqw 0;
         font-size: 3cqw;
         line-height: 1.2em;
 
         &, em, strong {
           font-family: var(--font-family-barlow-semi-condensed-semibold);
+        }
+      }
+
+      &Dark {
+        background-color: $neutral_dark;
+        color: $light_white;
+
+        h1, h2, h3, h4 {
+          color: $light_white;
         }
       }
 
@@ -175,8 +185,8 @@ $text-horizontal-padding: 2.6cqw;
 
     .link {
       all: unset;
-      background-color: var(--background-neutral-secondary);
-      color: var(--text-neutral-primary);
+      background-color: $neutral_light;
+      color: $neutral_dark;
       border-radius: 5px;
       box-sizing: border-box;
       position: absolute;
@@ -198,12 +208,26 @@ $text-horizontal-padding: 2.6cqw;
       }
 
       h1, h2, h3, h4 {
+        color: $neutral_dark;
         margin: 0 0 1cqw 0;
         font-size: 2.4cqw;
         line-height: 1.2em;
 
         &, em, strong {
           font-family: var(--font-family-barlow-semi-condensed-semibold);
+        }
+      }
+
+      &Dark {
+        background-color: $neutral_dark;
+        color: $light_white;
+
+        h1, h2, h3, h4 {
+          color: $light_white;
+        }
+
+        &:hover, &:focus-visible {
+          filter: brightness(1.15);
         }
       }
 
