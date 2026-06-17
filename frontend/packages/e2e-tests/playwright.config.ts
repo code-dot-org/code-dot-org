@@ -1,6 +1,8 @@
 import {defineConfig, devices} from '@playwright/test';
 
-const isCI = !!process.env.CI;
+// Set by each automated lane's entry point (GitHub Actions workflow, rake task); unset = local.
+const provider = process.env.PLAYWRIGHT_PROVIDER; // 'github-actions' | 'drone' | 'dtt' | undefined
+const isAutomated = !!provider;
 const htmlReport = {outputFolder: 'playwright-report', open: 'never'} as const;
 
 /**
@@ -17,22 +19,19 @@ const htmlReport = {outputFolder: 'playwright-report', open: 'never'} as const;
 export default defineConfig({
   testDir: './tests',
   fullyParallel: true,
-  forbidOnly: isCI,
-  // 1 retry in CI to absorb flake; the retried attempt is traced (`trace` below).
-  retries: isCI ? 1 : 0,
-  // Tests tagged {tag: '@no_ci'} need infra the automated lane lacks (e.g.
-  // Javabuilder). grepInvert matches {tag} metadata as well as title text
-  // since Playwright 1.42; use {tag: '@no_ci'} in test definitions, not title embedding.
-  grepInvert: isCI ? /@no_ci/ : undefined,
-  workers: isCI ? '100%' : undefined,
-  // 'list' streams per-test pass/fail to the console. Essential while the suite
-  // runs non-blocking in Drone/DTT: failures don't fail the job, so the live log
-  // is the only place they surface unless you open the uploaded HTML report.
-  reporter: isCI
+  forbidOnly: isAutomated,
+  // retry in automated lanes so a flake can't pass one lane and fail another.
+  retries: isAutomated ? 2 : 0,
+  // @no_ci tests need backends Drone's freshly-built instance lacks (e.g. Javabuilder,
+  // LLM APIs), so skip them there. Mirrors the Cucumber --ci skip.
+  grepInvert: provider === 'drone' ? /@no_ci/ : undefined,
+  // 100% only on GitHub Actions (dedicated runner, external server); Drone/DTT share CPU.
+  workers: provider === 'github-actions' ? '100%' : undefined,
+  reporter: isAutomated
     ? [
         ['list'],
         ['html', htmlReport],
-        ['junit', {outputFile: 'test-results/junit.xml'}],
+        ['json', {outputFile: 'test-results/results.json'}],
       ]
     : 'list',
   timeout: 90_000,

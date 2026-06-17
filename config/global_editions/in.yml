@@ -8,7 +8,6 @@
 # component from the page.
 
 locales: [en-IN, hi-IN, ta-IN, te-IN, mr-IN, kn-IN, or-IN, gu-IN]
-locale_lock: true
 countries: [IN]
 
 # The list of available project types

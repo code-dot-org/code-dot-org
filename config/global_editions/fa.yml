@@ -8,7 +8,6 @@
 # component from the page.
 
 locales: [fa-IR]
-locale_lock: true
 countries: [IR]
 
 # The list of available project types

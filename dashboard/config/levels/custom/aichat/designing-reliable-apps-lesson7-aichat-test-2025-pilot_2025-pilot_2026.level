@@ -1,15 +1,15 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-04-01T21:44:21.000Z",
   "level_num": "custom",
   "user_id": 18762,
   "properties": {
-    "display_name": "Chat About Your Idea",
-    "bubble_choice_description": "Use AI Chat to help you plan out your failure screen.",
-    "thumbnail_url": "https://images.code.org/a08b4cfcb01a0f41509bf41e742a0178-lightbulb.png",
+    "display_name": "Brainstorm With AI",
+    "thumbnail_url": "https://images.code.org/f30051faf959850ef21e98c77e8f3aee-how-ai-works-cover.jpg",
     "encrypted": "false",
-    "long_instructions": "## Designing for the \"Oops\"\r\n\r\nChoose one of the following user complaints about the Concert App (from Level 1). Design the UI for what should appear on screen instead. \r\n\r\n> The Infinite Spinner: \"I clicked 'Buy', but the loading icon just spun forever.\"\r\n\r\n> The Ghost Map: “The page loaded, but the seat map is blank.”\r\n\r\n> The Code Crash: \"I clicked my profile and the whole app just crashed.\"\r\n\r\n::: details [**What should appear on screen?**]\r\n- **The Message:** Explain what happened in plain English. Avoid using \"Error 404\" or \"Null\".\r\n- **The Action:** Give the user a clear next step, e.g., a \"Retry\" button, a \"Contact Support\" link, or a \"Return to Home\" option.\r\n- **The Tone Check:** Ensure the tone is calm and helpful. Avoid scary icons or blaming the user.\r\n:::",
+    "long_instructions": "## Brainstorm With AI\r\n\r\nReliability Engineers use AI to parse tickets, analyze failure \r\npatterns, and ideate on recovery solutions. Now it's your turn.\r\n\r\nChoose a ticket from Level 1 and use the AI chat to brainstorm \r\nyour recovery state design. Add your ticket as context using \r\nfiles in the Library.\r\n\r\n**Try asking things like:**\r\n- \"Help me write a friendly error message for this ticket.\"\r\n- \"Is this error message too technical? How can I simplify it?\"\r\n- \"What should a Retry button say for a concert ticketing app?\"\r\n- \"What tone should I use when telling a user their data didn't load?\"\r\n",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -40,16 +40,20 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "System Prompt:\n\nYou are a high-school-friendly app design tutor helping students design a music app using the following JSON data:\n\n{\n  \"track\": \"Electric Sparks\",  \n  \"artist\": \"Neon Echoes\",\n  \"popularity\": 63,\n  \"genres\": [\"Indie rock\", \"Dream pop\"],\n  \"id\": \"7FAKEechoes001\",\n  \"images\": [\n    {\n      \"url\": \"https://i.scdn.co/image/ab67616d00001e02echoes001\",\n      \"height\": 300,\n      \"width\": 300\n    }\n  ],\n  \"followers\": {\n    \"total\": 184230\n  }\n}\n\nContinue\n\n\nWhen answering questions, you must:\n\nUse clear, simple language appropriate for high school students.\n\nKeep the answer brief and focused on app design (not advanced programming concepts).\n\nUse only the provided JSON object as your data source.\n\nExplain how the data could be displayed in either:\n\nA card view (one item at a time), OR\n\nA playlist view (list of songs).\n\nYour response must always follow this structure:\n\nShort explanation paragraph describing the design idea\n\nA bullet list showing:\n\nWhich JSON property is used\n\nWhat UI element it connects to (image, label, button, etc.)\n\nA short closing sentence explaining how this improves the user experience\n\nDo NOT:\n\nAdd extra properties that are not in the JSON\n\nExplain advanced backend concepts\n\nExceed 170 words\n\nRewrite or expand the JSON\n\nIf your answer does not follow this structure exactly, rewrite it so that it does.",
+      "levelSystemPrompt": "",
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
       ],
-      "multimodalEnabled": false
+      "multimodalEnabled": true
     },
-    "name_suffix": "_2026"
+    "name_suffix": "_2026",
+    "starter_assets": {
+      "ticket_1001.pdf": "b102de84-e906-4953-b985-71d6b81311c0.pdf",
+      "ticket_1002.pdf": "b7822c77-a841-406a-bb25-8964e6ebb230.pdf",
+      "ticket_1003.pdf": "d5b42259-c751-40ad-872b-d9cf73ec635c.pdf"
+    }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:21.602+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson7-aichat-test-2025-pilot_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson7-aichat-test-2025-pilot_2025-pilot\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:21.602+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson7-aichat-test-2025-pilot_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson7-aichat-test-2025-pilot_2025-pilot\"},{\"changed_at\":\"2026-06-16 15:57:46 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 16:02:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 16:03:38 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 16:04:20 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 18:29:21 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Aichat>

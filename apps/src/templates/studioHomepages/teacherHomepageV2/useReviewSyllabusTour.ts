@@ -2,6 +2,7 @@ import {useEffect} from 'react';
 
 import {createShepherdTour} from '@cdo/apps/sharedComponents/productTour/shepherdTourFactory';
 import useOnboardingTour from '@cdo/apps/sharedComponents/productTour/useOnboardingTour';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 
 import {DemoType} from '../../teacherDashboard/types/teacherSectionTypes';
@@ -9,15 +10,20 @@ import {DemoType} from '../../teacherDashboard/types/teacherSectionTypes';
 import {
   createReviewSyllabusHomepageSteps,
   createReviewSyllabusUnitOverviewSteps,
+  ReviewSyllabusQuizConfig,
   REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
 } from './reviewSyllabusOnboarding';
 
 export {REVIEW_SYLLABUS_ONBOARDING_STEP_KEY};
 
 const REVIEW_SYLLABUS_DEMO_TYPE_KEY = 'reviewSyllabusOnboardingDemoType';
+const REVIEW_SYLLABUS_QUIZ_CONFIG_KEY = 'reviewSyllabusOnboardingQuizConfig';
 
 // Call this on the unit overview page to resume the tour after lesson navigation.
-// Runs outside React so it works regardless of render mode.
+// Both demoType and quizConfig are read from sessionStorage, persisted by
+// useReviewSyllabusTour on the homepage while the Redux presets were available.
+// fetchDemoPresets is not called on the unit overview page so Redux alone
+// cannot bridge this navigation boundary.
 export const resumeReviewSyllabusOnboardingTour = () => {
   const savedStepId = tryGetSessionStorage(
     REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
@@ -30,10 +36,26 @@ export const resumeReviewSyllabusOnboardingTour = () => {
     | '';
   if (!demoType) return;
 
+  const quizConfigJson = tryGetSessionStorage(
+    REVIEW_SYLLABUS_QUIZ_CONFIG_KEY,
+    ''
+  );
+  let quizConfig: ReviewSyllabusQuizConfig | null = null;
+  if (quizConfigJson) {
+    try {
+      quizConfig = JSON.parse(quizConfigJson) as ReviewSyllabusQuizConfig;
+    } catch {
+      trySetSessionStorage(REVIEW_SYLLABUS_QUIZ_CONFIG_KEY, '');
+      quizConfig = null;
+    }
+  }
+
   const tour = createShepherdTour({
     stepClass: 'custom-shepherd-onboarding-container',
   });
-  tour.addSteps(createReviewSyllabusUnitOverviewSteps(tour, demoType));
+  tour.addSteps(
+    createReviewSyllabusUnitOverviewSteps(tour, demoType, quizConfig)
+  );
 
   if (tour.steps.length === 0) {
     trySetSessionStorage(REVIEW_SYLLABUS_ONBOARDING_STEP_KEY, '');
@@ -50,6 +72,10 @@ export const resumeReviewSyllabusOnboardingTour = () => {
 };
 
 const useReviewSyllabusTour = (demoType: DemoType | null) => {
+  const demoPresets = useAppSelector(
+    state => state.teacherSections.demoPresets
+  );
+
   useEffect(() => {
     if (demoType) {
       trySetSessionStorage(REVIEW_SYLLABUS_DEMO_TYPE_KEY, demoType);
@@ -57,6 +83,25 @@ const useReviewSyllabusTour = (demoType: DemoType | null) => {
       trySetSessionStorage(REVIEW_SYLLABUS_DEMO_TYPE_KEY, '');
     }
   }, [demoType]);
+
+  useEffect(() => {
+    const preset = demoType ? demoPresets[demoType] : undefined;
+    if (
+      preset &&
+      preset.reviewSyllabusQuizLesson !== null &&
+      preset.reviewSyllabusQuizOptions !== null
+    ) {
+      trySetSessionStorage(
+        REVIEW_SYLLABUS_QUIZ_CONFIG_KEY,
+        JSON.stringify({
+          lesson: preset.reviewSyllabusQuizLesson,
+          options: preset.reviewSyllabusQuizOptions,
+        })
+      );
+    } else {
+      trySetSessionStorage(REVIEW_SYLLABUS_QUIZ_CONFIG_KEY, '');
+    }
+  }, [demoType, demoPresets]);
 
   const {tour} = useOnboardingTour({
     getSteps: tour =>

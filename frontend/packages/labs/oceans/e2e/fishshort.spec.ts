@@ -1,5 +1,4 @@
-import {expect, test} from 'playwright/test';
-
+import {expect, test} from './fixtures/visual';
 import {FishShortPage} from './poms/FishShortPage';
 import {AppMode, OceansPage} from './poms/OceansPage';
 
@@ -74,5 +73,23 @@ test.describe('FishShort — pond info panel', () => {
     await expect(oceans.infoButton).toHaveAttribute('aria-pressed', 'false');
     await oceans.infoButton.click();
     await expect(oceans.infoButton).toHaveAttribute('aria-pressed', 'true');
+  });
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Visual regression
+// ─────────────────────────────────────────────────────────────────────────────
+
+test.describe('@visual', () => {
+  test('words scene before any word click', async ({page, visualCheck}) => {
+    const oceans = new OceansPage(page);
+    await oceans.goto(AppMode.FishShort, {freeze: true});
+    await oceans.waitForWordsScene();
+    await visualCheck('fishshort-words');
+  });
+
+  test('training scene after selecting Blue', async ({page, visualCheck}) => {
+    await FishShortPage.load(page, 'Blue', {freeze: true});
+    await visualCheck('fishshort-training-blue');
   });
 });

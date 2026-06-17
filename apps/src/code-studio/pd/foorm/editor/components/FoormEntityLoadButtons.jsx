@@ -1,6 +1,6 @@
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 
 import loadable from '@cdo/apps/util/loadable';
@@ -105,13 +105,15 @@ class FoormEntityLoadButtons extends React.Component {
             }}
             placeholder={`Search for ${this.props.foormEntityName}`}
           />
-          <Button
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="small"
             onClick={() => this.initializeEmptyCodeMirror()}
-            className="load-buttons-new"
             disabled={this.props.isDisabled}
           >
             {`New ${this.props.foormEntityName}`}
-          </Button>
+          </MuiButton>
         </div>
         {this.props.showVersionFilterToggle && (
           <SingleCheckbox

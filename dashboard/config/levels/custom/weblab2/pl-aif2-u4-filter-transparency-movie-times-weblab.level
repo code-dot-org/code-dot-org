@@ -1,0 +1,106 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-06-16T15:22:14.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Movie Showtimes",
+    "thumbnail_url": "https://images.code.org/1209dbfcf1c0e878cb40ca663dec644f-showtime.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "bubble_choice_description": "Add a count message, a filter summary label, and a friendly empty state to a showtimes list.",
+    "long_instructions": "## Movie Showtime\r\n\r\n**Goal:**  \r\nAdd transparency cues so users know which showtimes are displayed, which filter is active, and what happens when no movies match.\r\n\r\n---\r\n\r\n1. **Open `script.js`.**  \r\n   Find the `render()` function. This is where the movie list is built.\r\n\r\n2. **Add three messages:**\r\n\r\n   * **Count message:**  \r\n     Update `#countMessage` to show how many movies are displayed.  \r\n     Example: `Showing 3 of 6 results`\r\n\r\n   * **Filter label:**  \r\n     Update `#filterLabel` to describe the rule.  \r\n     Example: `Filter: showtimes after 6 PM`\r\n\r\n   * **Empty-state message:**  \r\n     If no movies match, update `#emptyMessage` with a friendly message.  \r\n     Otherwise, clear the message.\r\n\r\n3. **Test your work.**\r\n\r\n4. **Use AI to check your reasoning.**",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <title>CineGo — Movie Showtimes</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n\n  <main class=\"app\">\n    <header class=\"top-bar\">\n      <div>\n        <p class=\"brand\">CineGo</p>\n        <h1>Movie Showtimes</h1>\n      </div>\n      <button class=\"profile-button\" type=\"button\">CG</button>\n    </header>\n\n    <section class=\"hero-card\">\n      <p class=\"eyebrow\">Tonight near you</p>\n      <h2>Find a showtime that fits your evening.</h2>\n      <div class=\"search-row\">\n        <span>📍 CodeTown Cinema</span>\n        <span>Today</span>\n      </div>\n    </section>\n\n    <section class=\"filter-panel\" aria-label=\"Current filter\">\n      <p id=\"filterLabel\"></p>\n      <p id=\"countMessage\"></p>\n    </section>\n\n    <section aria-label=\"Movie showtimes\">\n      <ul id=\"movieList\"></ul>\n      <p id=\"emptyMessage\"></p>\n    </section>\n  </main>\n\n  <script src=\"data.js\"></script>\n  <script src=\"helpers.js\"></script>\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0",
+          "type": "support"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "* {\n  box-sizing: border-box;\n}\n\nbody {\n  margin: 0;\n  font-family: Arial, sans-serif;\n  background: #101114;\n  color: #f8fafc;\n}\n\n.app {\n  max-width: 430px;\n  min-height: 100vh;\n  margin: 0 auto;\n  background: #17191f;\n  padding: 18px;\n}\n\n.top-bar {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 18px;\n}\n\n.brand {\n  color: #ffcc33;\n  font-weight: bold;\n  margin: 0 0 4px;\n  letter-spacing: 0.04em;\n}\n\nh1 {\n  font-size: 24px;\n  margin: 0;\n}\n\n.profile-button {\n  width: 42px;\n  height: 42px;\n  border-radius: 50%;\n  border: none;\n  background: #2a2d36;\n  color: #fff;\n  font-weight: bold;\n}\n\n.hero-card {\n  background:\n    linear-gradient(135deg, rgba(255, 204, 51, 0.22), rgba(255, 85, 85, 0.16)),\n    #242733;\n  border: 1px solid #343847;\n  border-radius: 22px;\n  padding: 20px;\n  margin-bottom: 14px;\n}\n\n.eyebrow {\n  color: #ffcc33;\n  font-size: 13px;\n  font-weight: bold;\n  margin: 0 0 8px;\n  text-transform: uppercase;\n}\n\n.hero-card h2 {\n  font-size: 22px;\n  line-height: 1.2;\n  margin: 0 0 18px;\n}\n\n.search-row {\n  display: flex;\n  justify-content: space-between;\n  gap: 8px;\n}\n\n.search-row span {\n  background: #111318;\n  border: 1px solid #383d4c;\n  border-radius: 999px;\n  padding: 8px 10px;\n  font-size: 13px;\n}\n\n.filter-panel {\n  display: flex;\n  justify-content: space-between;\n  gap: 10px;\n  background: #20232c;\n  border: 1px solid #343847;\n  border-radius: 16px;\n  padding: 12px 14px;\n  margin-bottom: 14px;\n}\n\n.filter-panel p {\n  margin: 0;\n  font-size: 13px;\n}\n\n#filterLabel {\n  color: #ffcc33;\n  font-weight: bold;\n}\n\n#countMessage {\n  color: #b8beca;\n  text-align: right;\n}\n\n#movieList {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n  display: grid;\n  gap: 12px;\n}\n\n.movie-card,\n#movieList li {\n  background: #f8fafc;\n  color: #111827;\n  border-radius: 18px;\n  padding: 16px;\n  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);\n}\n\n.movie-card h2 {\n  font-size: 18px;\n  margin: 0 0 8px;\n}\n\n.movie-time {\n  color: #4b5563;\n  margin: 0 0 14px;\n  font-size: 14px;\n}\n\n.movie-card button {\n  width: 100%;\n  background: #ffcc33;\n  color: #111827;\n  border: none;\n  border-radius: 999px;\n  padding: 12px 14px;\n  font-weight: bold;\n  cursor: pointer;\n}\n\n.movie-card button:hover {\n  background: #ffd95c;\n}\n\n.movie-card button:focus-visible {\n  outline: 3px solid #ffffff;\n  outline-offset: 3px;\n}\n\n#emptyMessage {\n  color: #b8beca;\n  background: #20232c;\n  border: 1px dashed #4b5563;\n  border-radius: 16px;\n  padding: 20px;\n  text-align: center;\n  font-style: italic;\n}",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const render = () => {\n  const list = document.getElementById(\"movieList\");\n  const countMessage = document.getElementById(\"countMessage\");\n  const filterLabel = document.getElementById(\"filterLabel\");\n  const emptyMessage = document.getElementById(\"emptyMessage\");\n\n  list.innerHTML = \"\";\n\n  const results = [];\n\n  for (let i = 0; i < movies.length; i++) {\n    const movie = movies[i];\n\n    if (movie.time >= \"6:00 PM\") {\n      results.push(movie);\n      list.appendChild(createCard(movie));\n    }\n  }\n\n  // Add transparency cues here\n\n\n\n};\n\nrender();",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "helpers.js",
+          "contents": "const createCard = (movie) => {\n  const li = document.createElement(\"li\");\n  li.className = \"movie-card\";\n\n  const title = document.createElement(\"h2\");\n  title.textContent = movie.title;\n\n  const time = document.createElement(\"p\");\n  time.className = \"movie-time\";\n  time.textContent = \"Showtime: \" + movie.time;\n\n  const button = document.createElement(\"button\");\n  button.type = \"button\";\n  button.textContent = \"Choose seats\";\n\n  li.appendChild(title);\n  li.appendChild(time);\n  li.appendChild(button);\n\n  return li;\n}",
+          "folderId": "0",
+          "active": false,
+          "type": "starter"
+        },
+        "5": {
+          "id": "5",
+          "name": "data.js",
+          "contents": "const movies = [\n  { title: \"Moon Harbor\", time: \"6:15 PM\" },\n  { title: \"Granite Peak\", time: \"7:00 PM\" },\n  { title: \"Neon River\", time: \"9:10 PM\" }\n];",
+          "folderId": "0",
+          "active": false,
+          "type": "starter"
+        }
+      },
+      "openFiles": [
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "hint",
+        "ask",
+        "buildCSS",
+        "buildHTML",
+        "buildJavaScript",
+        "debug",
+        "documentation",
+        "example",
+        "explainCode",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-16T15:22:14.167+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson4-level1a-2026\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson4-level1a-2026\"},{\"changed_at\":\"2026-06-16 15:24:39 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Weblab2>
