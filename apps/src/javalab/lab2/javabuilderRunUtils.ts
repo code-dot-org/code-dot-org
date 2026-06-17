@@ -189,10 +189,11 @@ export async function handleRunClick(
     // Mini-app runs don't: the connection delegates clean exit to
     // miniApp.onClose() (never calling finishRun), and run/stop state is
     // derived from lab2System.isRunning (the neighborhood clears it when its
-    // animation finishes, the theater on close). Nothing awaits true
-    // completion here, so resolve now rather than leaving the promise pending
-    // forever. Validation runs are the exception: their output goes to the
-    // console, not the mini-app, so we let finishRun fire on exit as usual.
+    // animation finishes; the theater stays running until the user stops it).
+    // Nothing awaits true completion here, so resolve now rather than leaving
+    // the promise pending forever. Validation runs are the exception: their
+    // output goes to the console, not the mini-app, so we let finishRun fire on
+    // exit as usual.
     if (miniApp && !runTests) {
       finishRun();
     }

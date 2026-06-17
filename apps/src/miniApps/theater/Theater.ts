@@ -22,18 +22,15 @@ interface TheaterSignal {
 export default class Theater {
   private readonly onOutputMessage: (message: string) => void;
   private readonly onNewlineMessage: () => void;
-  private readonly setIsRunning: (isRunning: boolean) => void;
   private loadEventsFinished: number;
   private hasAudio: boolean;
 
   constructor(
     onOutputMessage: (message: string) => void,
-    onNewlineMessage: () => void,
-    setIsRunning: (isRunning: boolean) => void
+    onNewlineMessage: () => void
   ) {
     this.onOutputMessage = onOutputMessage;
     this.onNewlineMessage = onNewlineMessage;
-    this.setIsRunning = setIsRunning;
     this.loadEventsFinished = 0;
     this.hasAudio = false;
   }
@@ -108,10 +105,10 @@ export default class Theater {
     this.onNewlineMessage();
     this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} Program completed.`);
     this.onNewlineMessage();
-    // Codebridge leaves run/stop state to the mini-app once a run starts, the
-    // same way neighborhood does; mark the run finished now that the program
-    // has exited.
-    this.setIsRunning(false);
+    // Intentionally leave the run active. The generated image/audio keeps
+    // playing client-side after the program exits and we don't know its
+    // length, so the run stays in the "running" state until the user presses
+    // stop (which calls onStop and clears run state).
   }
 
   resetAudioAndVideo() {

@@ -22,19 +22,17 @@ describe('Theater (lab2)', () => {
   };
   let onOutputMessage: sinon.SinonStub;
   let onNewlineMessage: sinon.SinonStub;
-  let setIsRunning: sinon.SinonStub;
 
   beforeEach(() => {
     onOutputMessage = sinon.stub();
     onNewlineMessage = sinon.stub();
-    setIsRunning = sinon.stub();
 
     playAudioSpy = sinon.spy();
     pauseAudioSpy = sinon.spy();
     imageElement = {style: {}};
     audioElement = {play: playAudioSpy, pause: pauseAudioSpy};
 
-    theater = new Theater(onOutputMessage, onNewlineMessage, setIsRunning);
+    theater = new Theater(onOutputMessage, onNewlineMessage);
     theater.getImgElement = () => imageElement as unknown as HTMLImageElement;
     theater.getAudioElement = () => audioElement as unknown as HTMLAudioElement;
   });
@@ -98,9 +96,10 @@ describe('Theater (lab2)', () => {
     expect(pauseAudioSpy).to.have.been.called;
   });
 
-  it('marks the run finished on close', () => {
+  it('prints a completion message on close', () => {
     theater.onClose();
-    sinon.assert.calledWith(setIsRunning, false);
+    expect(onOutputMessage).to.have.been.called;
+    expect(onOutputMessage.getCall(0).args[0]).to.contain('Program completed');
   });
 
   it('reports that photo prompts are unsupported on GET_IMAGE', () => {
