@@ -96,7 +96,8 @@ describe('FinishTeacherAccount', () => {
   function fillInFormFields(
     fillInNameFields: boolean = true,
     fillInRoleField: boolean = true,
-    fillInSourceField: boolean = true
+    fillInSourceField: boolean = true,
+    fillInGradeField: boolean = true
   ) {
     if (fillInNameFields) {
       fireEvent.change(screen.getByLabelText(locale.first_name()), {
@@ -118,6 +119,9 @@ describe('FinishTeacherAccount', () => {
     if (fillInSourceField) {
       fireEvent.click(screen.getByText(locale.select_all_that_apply()));
       fireEvent.click(screen.getByText(locale.found_on_search()));
+    }
+    if (fillInGradeField) {
+      fireEvent.click(screen.getByRole('checkbox', {name: 'K'}));
     }
     fireEvent.change(screen.getByLabelText(i18n.whatCountry()), {
       target: {
@@ -280,7 +284,6 @@ describe('FinishTeacherAccount', () => {
     expect(finishSignUpButton).toBeDisabled();
 
     fillInFormFields();
-    fireEvent.click(screen.getByRole('checkbox', {name: 'K'}));
 
     // Errors don't show and button is enabled when names are entered
     Object.values(NAME_TYPES).forEach(nameType =>
@@ -411,7 +414,6 @@ describe('FinishTeacherAccount', () => {
     expect(finishSignUpButton).toBeDisabled();
 
     fireEvent.change(roleDropdown, {target: {value: 'classroom_teacher'}});
-    fireEvent.click(screen.getByRole('checkbox', {name: 'K'}));
 
     expect(finishSignUpButton).toBeEnabled();
   });
@@ -433,7 +435,6 @@ describe('FinishTeacherAccount', () => {
     fireEvent.click(
       screen.getByText(locale.learned_via_state_district_curriculum())
     );
-    fireEvent.click(screen.getByRole('checkbox', {name: 'K'}));
 
     expect(finishSignUpButton).toBeEnabled();
   });
@@ -458,7 +459,6 @@ describe('FinishTeacherAccount', () => {
     await waitFor(renderDefault);
 
     fillInFormFields();
-    fireEvent.click(screen.getByRole('checkbox', {name: 'K'}));
 
     // Check 3 new options in non-alphabetical order
     fireEvent.click(screen.getByText(locale.select_all_that_apply()));
@@ -509,7 +509,6 @@ describe('FinishTeacherAccount', () => {
 
     // Check that button is disabled until GDPR is checked (and other required fields are filled)
     fillInFormFields();
-    fireEvent.click(screen.getByRole('checkbox', {name: 'K'}));
     const finishSignUpButton = screen.getByRole('button', {
       name: locale.go_to_my_account(),
     });
@@ -549,7 +548,6 @@ describe('FinishTeacherAccount', () => {
 
     // Fill in fields
     fillInFormFields();
-    fireEvent.click(screen.getByRole('checkbox', {name: 'K'}));
 
     // Click finish sign up button
     fireEvent.click(finishSignUpButton);
@@ -600,7 +598,6 @@ describe('FinishTeacherAccount', () => {
 
     // Fill in fields
     fillInFormFields();
-    fireEvent.click(screen.getByRole('checkbox', {name: 'K'}));
 
     // Click finish sign up button
     fireEvent.click(finishSignUpButton);
@@ -657,7 +654,6 @@ describe('FinishTeacherAccount', () => {
 
     // Fill in fields
     fillInFormFields();
-    fireEvent.click(screen.getByRole('checkbox', {name: 'K'}));
 
     // Click finish sign up button
     fireEvent.click(finishSignUpButton);
@@ -691,7 +687,7 @@ describe('FinishTeacherAccount', () => {
   it('button stays disabled until at least one grade is selected', async () => {
     await waitFor(renderDefault);
 
-    fillInFormFields();
+    fillInFormFields(true, true, true, false);
 
     const finishSignUpButton = screen.getByRole('button', {
       name: locale.go_to_my_account(),
@@ -723,7 +719,6 @@ describe('FinishTeacherAccount', () => {
     await waitFor(renderDefault);
 
     fillInFormFields();
-    fireEvent.click(screen.getByRole('checkbox', {name: 'K'}));
     fireEvent.click(screen.getByRole('checkbox', {name: '5'}));
 
     fireEvent.click(
@@ -773,7 +768,6 @@ describe('FinishTeacherAccount', () => {
 
     // Fill in fields
     fillInFormFields();
-    fireEvent.click(screen.getByRole('checkbox', {name: 'K'}));
 
     // Click finish sign up button
     fireEvent.click(finishSignUpButton);
