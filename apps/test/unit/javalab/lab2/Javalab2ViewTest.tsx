@@ -205,7 +205,7 @@ describe('Javalab2View', () => {
       return (useSource as jest.Mock).mock.calls.at(-1);
     }
 
-    it('merges mapping entries into startSources as url-backed STARTER files', () => {
+    it('merges mapping entries into startSources as url-backed LOCKED_STARTER files', () => {
       renderWithAssets(undefined);
       const codebridgeProps = (
         Codebridge as unknown as jest.Mock
@@ -218,7 +218,7 @@ describe('Javalab2View', () => {
       expect(image.url).toBe(
         '/level_starter_assets/Asset%20Level/uuid/uuid-1.png'
       );
-      expect(image.type).toBe('starter');
+      expect(image.type).toBe('locked_starter');
     });
 
     it('does not merge mapping entries into a project loaded from the server', () => {
