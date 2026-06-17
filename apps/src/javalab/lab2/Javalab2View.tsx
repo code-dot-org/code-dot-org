@@ -95,8 +95,8 @@ const Javalab2View: React.FunctionComponent<
   }, [progressManager, levelProperties.appName]);
 
   // Derive the labConfig (which sets the mini app in codebridge) from the
-  // channel or the level's csaViewMode. Memoize to avoid unnecessary changes
-  // to initialSourcesWithLabConfig below, which will cause unnecessarily calculations
+  // channel or the level's csaViewMode. Memoize to avoid reference changes
+  // to initialSourcesWithLabConfig below, which will cause unnecessary calculations
   // in useSource.
   const labConfigRef = useRef<LabConfig | undefined>(undefined);
   const labConfig = useMemo(() => {
