@@ -3,7 +3,7 @@ import {flatten} from 'flat';
 
 import {CodeStudioConfig, getDashboardApiUrl} from '../../../index';
 import type {Environment} from '../../../environment';
-import type {ObservabilityConfig} from '../types';
+import type {ObservabilityConfig, SpanOptions, TagValue} from '../types';
 
 import {BaseAdapter} from './BaseAdapter';
 
@@ -60,6 +60,27 @@ export class SentryAdapter extends BaseAdapter {
    */
   protected applyConsentToProvider(userId: string | null): void {
     Sentry.setUser(userId ? {id: userId} : null);
+  }
+
+  /**
+   * Apply a low-cardinality tag to the global Sentry scope.
+   * @param key Tag name.
+   * @param value Primitive tag value.
+   */
+  protected applyTagToProvider(key: string, value: TagValue): void {
+    Sentry.setTag(key, value);
+  }
+
+  /**
+   * Attach a structured context blob to subsequent events.
+   * @param name Context name.
+   * @param ctx Structured context object, or `null` to clear.
+   */
+  protected applyContextToProvider(
+    name: string,
+    ctx: Record<string, unknown> | null,
+  ): void {
+    Sentry.setContext(name, ctx);
   }
 
   /**
@@ -147,22 +168,48 @@ export class SentryAdapter extends BaseAdapter {
   }
 
   /**
-   * Capture an exception with optional structured context, if initialized.
-   * @param error The thrown value or exception-like object to record.
-   * @param context Optional structured metadata to attach to the error event.
+   * Run callback inside a Sentry span, if initialized.
+   * Degrades to a plain callback invocation if Sentry is not ready.
    */
-  recordError(error: unknown, context?: Record<string, unknown>): void {
+  startSpan<T>(options: SpanOptions, callback: () => T): T {
     if (!this.initialized) {
-      return;
+      return callback();
     }
 
     try {
-      Sentry.captureException(error, {extra: context});
+      return Sentry.startSpan(
+        {name: options.name, op: options.op, attributes: options.attributes},
+        callback,
+      );
+    } catch (error) {
+      console.warn('[observability] SentryAdapter.startSpan failed:', error);
+      return callback();
+    }
+  }
+
+  /**
+   * Capture an exception with optional structured context and per-event tags.
+   * @param error The thrown value or exception-like object to record.
+   * @param context Optional structured metadata to attach to the error event.
+   * @param tags Optional low-cardinality tags indexed by Sentry for filtering.
+   */
+  recordError(
+    error: unknown,
+    context?: Record<string, unknown>,
+    tags?: Record<string, TagValue>,
+  ): string | undefined {
+    if (!this.initialized) {
+      return undefined;
+    }
+
+    try {
+      return Sentry.captureException(error, {extra: context, tags});
     } catch (sdkError) {
       console.warn(
         '[observability] SentryAdapter.recordError failed:',
         sdkError,
       );
+      return undefined;
     }
   }
 

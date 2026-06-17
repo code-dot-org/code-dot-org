@@ -29,12 +29,6 @@ export function getFooterLinks(): FooterSiteLink[] {
       external: true,
     },
     {
-      id: 'store',
-      label: 'Store',
-      href: 'https://store.code.org',
-      external: true,
-    },
-    {
       id: 'tos_short',
       label: 'Terms',
       href: siteConfig.marketingUrl('/tos'),

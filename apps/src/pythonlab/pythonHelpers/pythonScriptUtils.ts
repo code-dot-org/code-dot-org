@@ -1,8 +1,7 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import _ from 'lodash';
-import {PyodideInterface} from 'pyodide';
+import type {PyodideInterface} from 'pyodide';
 
-import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {
   getNextFileId,
@@ -17,25 +16,24 @@ import {TEARDOWN_CODE} from './patches';
 // Returns the cleanup code to be run after the user's code.
 export function getCleanupCode(source: MultiFileSource) {
   const cleanupCode = TEARDOWN_CODE;
-  return cleanupCode + deleteCachedUserModules(source, MAIN_PYTHON_FILE);
+  return cleanupCode + deleteCachedUserModules(source);
 }
 
 // Pyodide uses the same interpreter for the lifetime of the browser tab.
 // In order to ensure we get updated user code for each run, we delete the
-// modules created by the user code from the sys.modules cache.
-export function deleteCachedUserModules(
-  source: MultiFileSource,
-  excludedFileName: string
-) {
+// modules created by the user code from the sys.modules cache. We must purge
+// main.py too: the Run path executes it as the entry script (so it never
+// enters sys.modules and the guard below makes its delete a no-op), but test
+// and validation code imports it as the `main` module, and a cached copy would
+// run a stale version of the student's solution.
+export function deleteCachedUserModules(source: MultiFileSource) {
   const result = ['import sys'];
   for (const file of Object.values(source.files)) {
-    if (file.name !== excludedFileName) {
-      const filePath = getModuleName(file.id, source);
-      result.push(`
+    const filePath = getModuleName(file.id, source);
+    result.push(`
 if "${filePath}" in sys.modules:
   del sys.modules['${filePath}']
 `);
-    }
   }
   return '\n' + result.join('\n') + '\n';
 }
@@ -78,13 +76,11 @@ export function getUpdatedSourceAndDeleteFiles(
   skippedFilenames: string[] = []
 ) {
   const workingDir = pyodide.FS.cwd();
-  // We are setting pyodide.FS to any here because the provided type for directoryData.contents
-  // is number[], which is not correct. It is an array of objects.
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const directoryData = (pyodide.FS.lookupPath(workingDir, {}) as any).node;
-  const directoryContents = Object.values(
-    directoryData.contents
-  ) as PyodidePathContent[];
+  // Pyodide types a node's `contents` as Uint8Array (correct for files), but a
+  // directory node's `contents` is a record of its child nodes keyed by name.
+  const directoryNode = pyodide.FS.lookupPath(workingDir, {})
+    .node as unknown as {contents: Record<string, PyodidePathContent>};
+  const directoryContents = Object.values(directoryNode.contents);
   const newSource = _.cloneDeep(source);
   updateAndDeleteSourceWithContents(
     directoryContents,

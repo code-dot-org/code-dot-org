@@ -12,7 +12,7 @@
   - else
     = @workshop.course
     = @workshop.subject
-  = link_to 'workshop', CDO.studio_url("/pd/workshop_dashboard/workshops/#{@workshop.id}", CDO.default_scheme)
+  = link_to 'workshop', CDO.studio_url("/pd/workshop_dashboard/workshops/#{@workshop.id}")
   on
   = @workshop.sessions.first.formatted_date
   at

@@ -866,7 +866,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'workshop_dashboard_url' do
-    expected_url = "http://#{CDO.dashboard_hostname}/pd/workshop_dashboard/workshops/#{@workshop.id}"
+    expected_url = CDO.studio_url("/pd/workshop_dashboard/workshops/#{@workshop.id}")
     assert_equal expected_url, @workshop.workshop_dashboard_url
   end
 
@@ -1332,7 +1332,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'bad time_zone value results in nil' do
     workshop = create(:workshop, time_zone: 'Bad/Zone')
-    assert_equal nil, workshop.time_zone
+    assert_nil workshop.time_zone
   end
 
   test 'subject_must_be_valid_for_course validation passes if workshop has valid subject in course' do

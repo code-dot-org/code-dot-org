@@ -75,7 +75,7 @@ class Pd::RegionalPartnerMiniContactTest < ActiveSupport::TestCase
     create(:pd_regional_partner_mini_contact, form_data: build(:pd_regional_partner_mini_contact_hash).merge("zip" => @matched_zip).to_json)
     mail = ActionMailer::Base.deliveries.first
 
-    assert_equal 'Question about Code.org program', mail.subject
+    assert_equal 'Question about CodeAI program', mail.subject
     assert_equal ['partner@code.org'], mail.from
     assert_equal 2, ActionMailer::Base.deliveries.count
     assert_sendable mail
@@ -89,7 +89,7 @@ class Pd::RegionalPartnerMiniContactTest < ActiveSupport::TestCase
     create(:pd_regional_partner_mini_contact, form_data: build(:pd_regional_partner_mini_contact_hash).merge("zip" => @matched_zip).to_json)
     mail = ActionMailer::Base.deliveries.first
 
-    assert_equal 'Question about Code.org program', mail.subject
+    assert_equal 'Question about CodeAI program', mail.subject
     assert_equal ['partner@code.org'], mail.from
     assert_equal 3, ActionMailer::Base.deliveries.count
     assert_sendable mail
@@ -102,7 +102,7 @@ class Pd::RegionalPartnerMiniContactTest < ActiveSupport::TestCase
 
     # Only sent the regional partner email
     assert_equal ['foo@bar.com'], mail.to
-    assert_equal 'Thank you for contacting your Code.org Regional Partner', mail.subject
+    assert_equal 'Thank you for contacting your CodeAI Regional Partner', mail.subject
     assert_equal ['noreply@code.org'], mail.from
     assert_equal 1, ActionMailer::Base.deliveries.count
     assert_sendable mail
@@ -123,7 +123,7 @@ class Pd::RegionalPartnerMiniContactTest < ActiveSupport::TestCase
     mail = ActionMailer::Base.deliveries.last
 
     assert_equal ['foo@bar.com'], mail.to
-    assert_equal 'Thank you for contacting your Code.org Regional Partner', mail.subject
+    assert_equal 'Thank you for contacting your CodeAI Regional Partner', mail.subject
     assert_equal ['noreply@code.org'], mail.from
     assert_sendable mail
   end

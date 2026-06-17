@@ -8,7 +8,6 @@
 # component from the page.
 
 locales: [cs-CZ]
-locale_lock: true
 countries: [CZ]
 
 # The list of available project types
@@ -165,4 +164,4 @@ pages:
         hideMyPLStaticRecommendedPL: false
         hideMyPLStaticRecommendedPLMidHighBlock: true
         hideMyPLStaticRecommendedPLSelfPacedBlock: false
-        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /cs/global
+        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /cz/professional-learning/courses

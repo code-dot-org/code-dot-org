@@ -20,6 +20,10 @@ export class FishShortPage extends TrainingPage {
     super(page);
   }
 
+  protected override get appMode() {
+    return AppMode.FishShort;
+  }
+
   /** Yes button — exact match so it doesn't also resolve "Not <word>". */
   get yesButton(): Locator {
     return this.page.getByRole('button', {name: this.word, exact: true});
@@ -29,19 +33,24 @@ export class FishShortPage extends TrainingPage {
     return this.getButton(`Not ${this.word}`);
   }
 
+  protected override async waitForReady(): Promise<void> {
+    await this.waitForWordsScene();
+    await this.getButton(this.word).click();
+    await this.waitForTrainingScene();
+  }
+
   /**
-   * Navigate to FishShort, wait for the Words scene, click the given word,
-   * then wait for the Training scene.
+   * Convenience: `new FishShortPage(page, word).load(opts)`.
    *
    * @param page - Playwright Page fixture.
    * @param word - Word label to select (e.g. "Blue").
+   * @param opts - Forwarded to {@link load}.
    */
-  static async load(page: Page, word: string): Promise<FishShortPage> {
-    const p = new FishShortPage(page, word);
-    await p.goto(AppMode.FishShort);
-    await p.waitForWordsScene();
-    await p.getButton(word).click();
-    await p.waitForTrainingScene();
-    return p;
+  static load(
+    page: Page,
+    word: string,
+    opts: {freeze?: boolean} = {},
+  ): Promise<FishShortPage> {
+    return new FishShortPage(page, word).load(opts);
   }
 }

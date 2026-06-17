@@ -8,7 +8,6 @@
 # component from the page.
 
 locales: [fa-IR]
-locale_lock: true
 countries: [IR]
 
 # The list of available project types
@@ -181,4 +180,4 @@ pages:
         hideMyPLStaticRecommendedPL: false
         hideMyPLStaticRecommendedPLMidHighBlock: true
         hideMyPLStaticRecommendedPLSelfPacedBlock: false
-        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /fa/teacher
+        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /fa/professional-learning/courses

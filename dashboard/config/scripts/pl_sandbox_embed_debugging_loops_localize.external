@@ -1,0 +1,38 @@
+name 'pl_sandbox_embed-debugging_loops_localize'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+## Localize test
+The previous version had all the text buried inside a JavaScript object (const LANG = {...}). Localize works by scanning what's actually visible in the HTML page. If text only exists inside a JS variable, Localize either misses it entirely or needs extra configuration to find it. So the goal was to get every single word out of JavaScript and into the HTML.
+
+The 4 specific things that were changed:
+1. All user-facing text moved into HTML elements
+Every button label, heading, instruction, feedback message, and character dialogue now lives in an actual HTML tag — a p, h2, span, div. Localize scans these automatically. Nothing your team needs to translate is hiding in JS.
+2. Every translatable element got a data-i18n attribute
+For example: <button data-i18n="btn-start">Comenzar a Depurar con Alex →</button>. The data-i18n value is a unique key like btn-start or check1-title. This isn't strictly required by Localize, but it gives the dashboard a clean reference name for each string, makes it easy to search the source file, and is good practice if the team ever wants to export translations as a JSON file.
+3. Code syntax is protected with data-translate="no"
+The actual for loop, console.log(i), variable names, and the filename are wrapped in data-translate="no". This is a standard attribute Localize respects — it tells the platform to skip those elements completely so the code never gets accidentally translated.
+4. Dynamic text uses hidden HTML templates instead of JS strings
+Some text gets generated at runtime — like "Verificación 3 de 6" — where the number changes. Instead of building that string in JavaScript ("Verificación " + n + " de 6"), there's now a hidden <span> in the HTML that holds the template text (Verificación {n} de 6). Localize can see and translate that template. Then JavaScript just reads the already-translated template text and swaps in the number. The JS never owns the words.
+
+
+<div style="width:100%; max-width:900px; margin:0 auto; border-radius:16px; overflow:hidden; box-shadow:0 8px 32px rgba(124,58,237,0.2); border:1px solid #2d3350;">
+  <iframe 
+    src="https://amandadennard-dotcom.github.io/Unit4_testing/como_probar_codigo_loops_ia_localize.html"
+    width="100%" 
+    height="780" 
+    frameborder="0">
+  </iframe>
+</div>
+
+
+
+
+
+
+
+
+
+
+MARKDOWN

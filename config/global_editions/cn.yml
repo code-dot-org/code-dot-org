@@ -8,7 +8,6 @@
 # component from the page.
 
 locales: [zh-CN]
-locale_lock: true
 countries:
   - CN # China
   - SG # Singapore
@@ -167,4 +166,4 @@ pages:
         hideMyPLStaticRecommendedPL: false
         hideMyPLStaticRecommendedPLMidHighBlock: true
         hideMyPLStaticRecommendedPLSelfPacedBlock: false
-        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /zh-Hans/global
+        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /cn/professional-learning/courses

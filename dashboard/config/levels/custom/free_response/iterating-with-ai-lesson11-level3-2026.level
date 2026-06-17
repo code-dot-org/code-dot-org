@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-06-14T15:27:16.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted": "false",
+    "title": "Data Choices and Visibility",
+    "long_instructions": "Reflect on the field choices you made for your dataset and dashboard. \r\n\r\n> What fields did you keep, remove, or leave out? Why did you make those choices?\r\n>\r\n>  How might those choices affect what users can see, filter, sort, compare, or understand in your dashboard?",
+    "stay_on_level_after_submit": "false",
+    "height": "100",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-14T15:27:16.502+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson11-milestone1-frq-test_2025-pilot_2026\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson11-milestone1-frq-test_2025-pilot_2026\"},{\"changed_at\":\"2026-06-14 15:27:58 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-14 15:28:51 +0000\",\"changed\":[\"long_instructions\",\"thumbnail_url\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

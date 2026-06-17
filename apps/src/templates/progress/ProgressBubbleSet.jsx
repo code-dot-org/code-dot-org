@@ -5,8 +5,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import color from '@cdo/apps/util/color';
-
 import ProgressBubble from './ProgressBubble';
 import {DOT_SIZE, DIAMOND_DOT_SIZE} from './progressStyles';
 import {levelWithProgressType} from './progressTypes';
@@ -111,7 +109,7 @@ class ProgressBubbleSet extends React.Component {
 const inlineStyles = {
   background: {
     height: 10,
-    backgroundColor: color.lighter_gray,
+    backgroundColor: 'var(--background-neutral-quinary)',
     position: 'absolute',
     left: 0,
     right: 0,

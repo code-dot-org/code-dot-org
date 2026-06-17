@@ -4,9 +4,9 @@
 // MultiFileSource. Conversion happens at exactly two boundaries:
 // JavalabSourcesStore (S3 round-trip) and Javalab2View (start_sources at
 // mount). These functions are pure.
-// Known issue: we don't persist which files are 'open' when converting,
-// because legacy Java Lab did not have a concept of closing files.
-// This will be handled in a future phase.
+//
+// Open/active tab state lives on the flat shape as optional `isOpen` and
+// `isActive` fields. Both are unknown extras to Javabuilder, which will safely ignore them.
 
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 
@@ -17,11 +17,18 @@ import {
   ProjectFileType,
 } from '@cdo/apps/lab2/types';
 
+import {isStarterAssetUrl} from './starterAssets';
 import {JavalabFlatFile, JavalabFlatSource} from './types';
 
-function projectFileType(flat: JavalabFlatFile): ProjectFileType {
+function projectFileType(flat: JavalabFlatFile): ProjectFileType | undefined {
   if (flat.isValidation) return ProjectFileType.VALIDATION;
   if (!flat.isVisible) return ProjectFileType.SUPPORT;
+  // The flat shape doesn't persist types, so asset files are typed by where
+  // their url points: level starter assets are levelbuilder-owned (STARTER),
+  // while a student's own uploads stay untyped.
+  if (flat.url) {
+    return isStarterAssetUrl(flat.url) ? ProjectFileType.STARTER : undefined;
+  }
   return ProjectFileType.STARTER;
 }
 
@@ -50,20 +57,37 @@ export function flatToMultiFile(
       folderId: DEFAULT_FOLDER_ID,
       type: projectFileType(props),
     };
+    if (props.url) files[id].url = props.url;
+    if (props.flagged) files[id].flagged = props.flagged;
   });
 
-  // Visible, non-validation files become tabs, ordered by legacy tabOrder.
-  // Ties and missing tabOrders fall back to original key order.
+  // Visible files (including validation files surfaced in start mode) are
+  // potential open tabs, ordered by legacy tabOrder. Ties and missing
+  // tabOrders fall back to original key order. Within that set, only files
+  // with isOpen !== false make it into openFiles (missing isOpen defaults
+  // to true).
   const visible = entries
     .map(([name, props], i) => ({name, props, i}))
-    .filter(e => e.props.isVisible && !e.props.isValidation);
+    .filter(e => e.props.isVisible || e.props.isValidation);
   visible.sort((a, b) => {
     const tabA = resolveTabOrder(a.props.tabOrder, a.i);
     const tabB = resolveTabOrder(b.props.tabOrder, b.i);
     if (tabA !== tabB) return tabA - tabB;
     return a.i - b.i;
   });
+  // Honor isActive on the first claiming file in tab order.
+  const activeEntry = visible.find(e => e.props.isActive === true);
+  if (activeEntry) {
+    const activeId = idByName.get(activeEntry.name);
+    if (activeId) files[activeId].active = true;
+  }
+
+  // openFiles = visible files where isOpen !== false. isActive=true
+  // implies open: codebridge's editing helpers assume active ⇒ open
+  // (see activateFileHelper / closeFileHelper), so we'd hand codebridge
+  // an inconsistent state otherwise.
   const openFiles = visible
+    .filter(e => e.props.isOpen !== false || e.props.isActive === true)
     .map(e => idByName.get(e.name))
     .filter((id): id is FileId => !!id);
 
@@ -103,22 +127,79 @@ export function multiFileToFlat(
   const openIndex = new Map<FileId, number>();
   openFiles.forEach((id, idx) => openIndex.set(id, idx));
 
-  // Open files take tabOrder 0..N-1; closed files get monotonically
-  // increasing tabOrders starting at openFiles.length.
-  let nextClosedTab = openFiles.length;
+  // tabOrder is set on open files (0..N-1) and omitted on everything
+  // else — closed tabs and support. Validation files are tabs in start
+  // mode, so they participate in openFiles like regular sources.
   for (const file of Object.values(source.files)) {
     const isVisible = isVisibleForFlatShape(file);
     const isValidation = file.type === ProjectFileType.VALIDATION;
-    const tabOrder = openIndex.has(file.id)
-      ? (openIndex.get(file.id) as number)
-      : nextClosedTab++;
+    const isOpen = (isVisible || isValidation) && openIndex.has(file.id);
     flat[file.name] = {
       text: file.contents ?? '',
-      tabOrder,
       isVisible,
       isValidation,
+      isOpen,
+      isActive: file.active === true,
     };
+    if (file.url) flat[file.name].url = file.url;
+    if (file.flagged) flat[file.name].flagged = file.flagged;
+    if (openIndex.has(file.id)) {
+      flat[file.name].tabOrder = openIndex.get(file.id);
+    }
   }
 
   return flat;
+}
+
+// Levelbuilder save: split a MultiFileSource into `start_sources`
+// (everything except validation, in the flat shape) and `validation`
+// (validation files only, in the legacy `{text, tabOrder?}` shape plus
+// the lab2 isOpen/isActive flags so the editor restores tab state on
+// reload). The validation map is fed through `@level.validation=`, which
+// encrypts it into `encrypted_validation`. isValidation is implied by
+// the field name, so we drop it.
+export function splitForLevelbuilderSave(
+  source: MultiFileSource | null | undefined
+): {startSources: JavalabFlatSource; validation: JavalabFlatSource} {
+  const flat = multiFileToFlat(source);
+  const startSources: JavalabFlatSource = {};
+  const validation: JavalabFlatSource = {};
+  for (const [name, entry] of Object.entries(flat)) {
+    if (entry.isValidation) {
+      const v: JavalabFlatFile = {
+        text: entry.text,
+        isVisible: false,
+        isOpen: entry.isOpen,
+        isActive: entry.isActive,
+      };
+      if (entry.tabOrder !== undefined) v.tabOrder = entry.tabOrder;
+      validation[name] = v;
+    } else {
+      startSources[name] = entry;
+    }
+  }
+  return {startSources, validation};
+}
+
+// Start-mode load: merge the decrypted validation hash into the flat
+// start sources so the levelbuilder sees validation files as editable
+// tabs. Validation entries are tagged isValidation: true so they round
+// trip back into the validation hash on save.
+export function mergeValidationIntoStart(
+  flatStart: JavalabFlatSource | undefined,
+  validation: JavalabFlatSource | undefined
+): JavalabFlatSource | undefined {
+  if (!validation || Object.keys(validation).length === 0) {
+    return flatStart;
+  }
+  const merged: JavalabFlatSource = {...(flatStart ?? {})};
+  for (const [name, entry] of Object.entries(validation)) {
+    if (name in merged) {
+      console.warn(
+        `[javalab2] validation file "${name}" shadows a start source with the same name`
+      );
+    }
+    merged[name] = {...entry, isValidation: true};
+  }
+  return merged;
 }

@@ -8,7 +8,6 @@
 # component from the page.
 
 locales: [de-DE]
-locale_lock: true
 countries: [DE]
 
 # The list of available project types
@@ -165,4 +164,4 @@ pages:
         hideMyPLStaticRecommendedPL: false
         hideMyPLStaticRecommendedPLMidHighBlock: true
         hideMyPLStaticRecommendedPLSelfPacedBlock: false
-        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /de/global
+        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /de/professional-learning/courses

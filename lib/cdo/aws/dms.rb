@@ -101,7 +101,7 @@ module Cdo
       # @param schedule [String] Frequency that task should be executed ('daily', 'weekly', etc.)
       # Returns array of Cdo::DMS::ReplicationTask
       def self.tasks_by_frequency(schedule)
-        dms_client = Aws::DatabaseMigrationService::Client.new
+        dms_client = ::Aws::DatabaseMigrationService::Client.new
         replication_tasks = dms_client.describe_replication_tasks({without_settings: true}).replication_tasks
         aws_tasks = replication_tasks.select do |task|
           dms_client.
@@ -116,7 +116,7 @@ module Cdo
 
       # @param arn [String] Replication Task ARN
       # @param client [Aws::DatabaseMigrationService:Client] optionally pass in a DMS client.
-      def initialize(arn, client = Aws::DatabaseMigrationService::Client.new)
+      def initialize(arn, client = ::Aws::DatabaseMigrationService::Client.new)
         @arn = arn
         @dms_client = client
       end

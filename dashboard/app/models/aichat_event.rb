@@ -20,8 +20,24 @@
 #  index_ace_user_level_script_id     (user_id,level_id,script_id,id)
 #  index_ace_user_project             (user_id,project_id)
 #  index_ace_user_project_id          (user_id,project_id,id)
+#  index_aichat_events_on_created_at  (created_at)
 #  index_aichat_events_on_request_id  (request_id)
 #
 class AichatEvent < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :restricted,
+    user_id: :restricted,
+    level_id: :restricted,
+    script_id: :restricted,
+    project_id: :restricted,
+    aichat_event: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
+    request_id: :restricted,
+    lesson_id: :restricted,
+  )
+
   belongs_to :user
 end

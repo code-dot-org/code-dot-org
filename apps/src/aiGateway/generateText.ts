@@ -1,22 +1,22 @@
+import * as Observability from '@code-dot-org/core/plugins/observability';
 import {generateText, type GenerateTextResult} from 'ai';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-import {getErrorLogData} from './logHelper';
+import AichatContextManager from '../aichat/aichatContextManager';
+
+import {
+  CURRENT_SCHEMA_VERSION,
+  GatewayGenerateTextResponseV1Schema,
+  type GatewayGenerateTextResponseV1,
+} from './contract/gatewaySchemas';
+import {reportGatewayError} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
 
 type SDKOptions = Parameters<typeof generateText>[0];
 type SDKTools = NonNullable<SDKOptions['tools']>;
 type SDKOutput = NonNullable<SDKOptions['output']>;
-
-type SerializableAIResponse<
-  TOOLS extends SDKTools = SDKTools,
-  OUTPUT extends SDKOutput = SDKOutput
-> = Omit<GenerateTextResult<TOOLS, OUTPUT>, 'text' | 'files'> & {
-  text?: string;
-  files?: {mediaType: string; base64: string}[];
-};
 
 const base64ToUint8Array = (base64: string): Uint8Array => {
   const binaryString = atob(base64);
@@ -50,19 +50,22 @@ const serializeOutputSchema = async (output?: SDKOptions['output']) => {
 };
 
 const rehydrateAIResponse = <TOOLS extends SDKTools, OUTPUT extends SDKOutput>(
-  serialized: SerializableAIResponse<TOOLS, OUTPUT>
+  wire: GatewayGenerateTextResponseV1
 ): GenerateTextResult<TOOLS, OUTPUT> => {
   return {
-    ...serialized,
-    toolCalls: serialized.toolCalls ?? [],
-    toolResults: serialized.toolResults ?? [],
-    warnings: serialized.warnings ?? [],
-    files: serialized.files?.map(file => ({
+    ...wire,
+    text: wire.text ?? '',
+    files: wire.files?.map(file => ({
       mediaType: file.mediaType,
       base64: file.base64,
       uint8Array: base64ToUint8Array(file.base64),
     })),
-  } as GenerateTextResult<TOOLS, OUTPUT>;
+    warnings: wire.warnings ?? [],
+    output: wire.output as OUTPUT,
+    response: wire.response
+      ? {...wire.response, timestamp: new Date(wire.response.timestamp)}
+      : (undefined as unknown as GenerateTextResult<TOOLS, OUTPUT>['response']),
+  } as unknown as GenerateTextResult<TOOLS, OUTPUT>;
 };
 
 /**
@@ -76,44 +79,88 @@ const generateTextThroughGateway = async <
 >(
   options: SDKOptions
 ): Promise<GenerateTextResult<TOOLS, OUTPUT>> => {
-  try {
-    const {model, ...restOptions} = options;
+  const {model, ...restOptions} = options;
+  const modelString = getModelString(model);
+  const promptLength =
+    typeof options.prompt === 'string' ? options.prompt.length : 0;
+  const clientType = AichatContextManager.getContext().clientType;
 
-    const serializedOutput = await serializeOutputSchema(options.output);
+  let schemaErrorReported = false;
+  const execute = async (): Promise<GenerateTextResult<TOOLS, OUTPUT>> => {
+    try {
+      const serializedOutput = await serializeOutputSchema(options.output);
 
-    const payload = {
-      ...restOptions,
-      model: getModelString(model),
-      output: serializedOutput,
-    };
+      const payload = {
+        ...restOptions,
+        model: modelString,
+        output: serializedOutput,
+      };
 
-    const [token, turnstileToken] = await Promise.all([
-      fetchAccessToken(),
-      fetchTurnstileTokenIfEnabled(),
-    ]);
+      const [token, turnstileToken] = await Promise.all([
+        fetchAccessToken(),
+        fetchTurnstileTokenIfEnabled(),
+      ]);
 
-    const headers = {
-      'Content-Type': 'application/json',
-      ...turnstileHeaders(turnstileToken),
-    };
+      const headers = {
+        'Content-Type': 'application/json',
+        'X-AI-Gateway-Schema-Version': CURRENT_SCHEMA_VERSION,
+        ...turnstileHeaders(turnstileToken),
+      };
 
-    const response = await HttpClient.post(
-      AI_GATEWAY_URL,
-      JSON.stringify({...payload, token}),
-      false,
-      headers
-    );
+      const response = await HttpClient.post(
+        AI_GATEWAY_URL,
+        JSON.stringify({...payload, token}),
+        false,
+        headers
+      );
 
-    const data = await (response.json() as Promise<
-      SerializableAIResponse<TOOLS, OUTPUT>
-    >);
+      const rawResponse = await response.json();
+      const parseResult =
+        GatewayGenerateTextResponseV1Schema.safeParse(rawResponse);
+      if (!parseResult.success) {
+        await reportGatewayError(
+          parseResult.error,
+          'generateTextThroughGateway',
+          modelString,
+          {'error.category': 'schema-mismatch'}
+        );
+        schemaErrorReported = true;
 
-    return rehydrateAIResponse<TOOLS, OUTPUT>(data);
-  } catch (error) {
-    const logData = await getErrorLogData(error);
-    console.error('Fetch error in generateTextThroughGateway:', logData);
-    throw error;
-  }
+        if (process.env.NODE_ENV === 'development') {
+          throw parseResult.error;
+        }
+      }
+      const wire = parseResult.success
+        ? parseResult.data
+        : (rawResponse as GatewayGenerateTextResponseV1);
+
+      return rehydrateAIResponse<TOOLS, OUTPUT>(wire);
+    } catch (error) {
+      if (!schemaErrorReported) {
+        await reportGatewayError(
+          error,
+          'generateTextThroughGateway',
+          modelString
+        );
+      }
+      throw error;
+    }
+  };
+
+  // Start a Sentry span around the entire gateway call for better observability.
+  return Observability.startSpan(
+    {
+      name: 'ai-gateway.generateText',
+      op: 'ai.generateText',
+      attributes: {
+        'ai.model': modelString,
+        'ai.prompt_length': promptLength,
+        'ai.client_type': clientType,
+        feature: 'ai-gateway',
+      },
+    },
+    execute
+  );
 };
 
 export default generateTextThroughGateway;

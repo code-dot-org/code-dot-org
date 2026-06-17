@@ -225,6 +225,20 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
         path: '{{turbo.paths.workspace}}/packages/labs/{{name}}/src/__tests__/App.test.tsx',
         templateFile: 'templates/lab/src/__tests__/App.test.tsx.hbs',
       },
+      // MSW fixtures — author the seed `simple` scenario plus the barrel
+      // that names the `<Lab>Fixtures` export. Labs without an MSW story
+      // can delete this directory after generation; the loader entry in
+      // `getLabFixtures.ts` is the gate that actually activates fixtures.
+      {
+        type: 'add',
+        path: '{{turbo.paths.workspace}}/packages/labs/{{name}}/src/fixtures/simple.ts',
+        templateFile: 'templates/lab/src/fixtures/simple.ts.hbs',
+      },
+      {
+        type: 'add',
+        path: '{{turbo.paths.workspace}}/packages/labs/{{name}}/src/fixtures/index.ts',
+        templateFile: 'templates/lab/src/fixtures/index.ts.hbs',
+      },
       // Studio integration — labs.ts: append name to AVAILABLE_LABS array
       {
         type: 'modify',
@@ -239,6 +253,16 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
         pattern: /(const LabEntrypoints: LabEntrypointMap = \{[\s\S]*?)(\};)/,
         template:
           "$1  ['{{name}}']: lazy(() => import('@code-dot-org/{{name}}-lab')),\n$2",
+      },
+      // Studio integration — getLabFixtures.ts: append MSW loader entry.
+      // Bracket-string form handles hyphenated lab names safely.
+      {
+        type: 'modify',
+        path: '{{turbo.paths.workspace}}/apps/studio/src/modules/labs/router/getLabFixtures.ts',
+        pattern:
+          /(const LabFixturesLoaders: Partial<Record<Lab, LabFixturesLoader>> = \{[\s\S]*?)(\};)/,
+        template:
+          "$1  ['{{name}}']: () => import('@code-dot-org/{{name}}-lab/mocks'),\n$2",
       },
       // Studio integration — studio/package.json: add workspace dep after the
       // last @code-dot-org workspace:* entry (before non-@code-dot-org deps)

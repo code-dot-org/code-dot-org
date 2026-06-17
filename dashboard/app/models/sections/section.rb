@@ -46,6 +46,37 @@ require 'cdo/safe_names'
 require 'policies/lti'
 
 class Section < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    user_id: :confidential,
+    name: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+    code: :confidential,
+    script_id: :confidential,
+    course_id: :confidential,
+    grade: :confidential,
+    login_type: :confidential,
+    deleted_at: :confidential,
+    stage_extras: :confidential,
+    section_type: :confidential,
+    first_activity_at: :confidential,
+    pairing_allowed: :confidential,
+    sharing_disabled: :confidential,
+    hidden: :confidential,
+    tts_autoplay_enabled: :confidential,
+    restrict_section: :confidential,
+    properties: :confidential,
+    participant_type: :confidential,
+    lti_integration_id: :confidential,
+    avatar_color: :confidential,
+    avatar_emoji: :confidential,
+    ai_chat_access_level: :confidential,
+    demo_type: :confidential,
+  )
+
   include SerializedProperties
   include SharedConstants
   include Curriculum::SharedCourseConstants
@@ -317,8 +348,26 @@ class Section < ApplicationRecord
   end
   validate :user_must_be_teacher, unless: -> {deleted?}
 
+  # Demo sections have a fixed roster of pre-enrolled demo students and no
+  # join code; rosters and join codes are managed only at creation.
+  def demo_section?
+    demo_type.present?
+  end
+
   def assign_code
+    # Demo sections have no join code — students are pre-enrolled at creation
+    # and no one else is permitted to join.
+    return if demo_section?
     self.code = unused_random_code unless code
+  end
+
+  before_save :clear_demo_section_code
+  # Demo sections never have a join code — students are pre-enrolled at
+  # creation and no one else is permitted to join. Normalize the invariant on
+  # every save rather than erroring, so the code is always nil regardless of
+  # caller; defense-in-depth against any path that might try to set one.
+  def clear_demo_section_code
+    self.code = nil if demo_section?
   end
 
   after_save :ensure_owner_is_active_instructor
@@ -397,6 +446,14 @@ class Section < ApplicationRecord
   #   already in the section or has now been added.
   def add_student(student, added_by = nil)
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
+
+    # Demo sections only ever enroll demo students (done at creation by
+    # create_demo). Guard here, at the shared chokepoint, so every present
+    # and future enrollment path is covered. Uses the durable (uncached)
+    # demo-student check: this is a guard, and the table is small.
+    if demo_section? && !Policies::DemoSections.demo_student_durable?(student.id)
+      return ADD_STUDENT_FORBIDDEN
+    end
 
     return ADD_STUDENT_FAILURE if user_id == student.id
     return ADD_STUDENT_FAILURE if section_instructors.exists?(instructor: student)
