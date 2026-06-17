@@ -886,7 +886,12 @@ export default function ReactFlowCanvas({
             if (next.size === 0) {
               multiSelectSeedRef.current?.forEach(seedId => {
                 const seedNode = getNode(seedId);
-                if (!isGroupedChildNode(seedNode)) next.add(seedId);
+                if (
+                  !anchorIds.includes(seedId) &&
+                  !isGroupedChildNode(seedNode) &&
+                  !seedNode?.data?.locked
+                )
+                  next.add(seedId);
               });
             }
             const allSelected = anchorIds.every(id => next.has(id));
