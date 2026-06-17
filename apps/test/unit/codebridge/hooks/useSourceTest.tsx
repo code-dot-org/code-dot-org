@@ -122,7 +122,7 @@ describe('useSource', () => {
     );
   });
 
-  it('does not reset when initial sources change by reference but not value', () => {
+  it('resets when a new project loads even if its content matches the previous one', () => {
     const wrapper = ({children}: {children?: React.ReactNode}) => (
       <Provider store={store}>{children}</Provider>
     );
@@ -136,16 +136,17 @@ describe('useSource', () => {
         ),
       {wrapper}
     );
-    // The mount performs the one legitimate reset to the loaded server source.
+    // The mount performs the initial reset to the loaded server source.
     expect(mockedProjectManager.save).toHaveBeenCalledTimes(1);
     expect(mockedProjectManager.setLastSource).toHaveBeenCalledTimes(1);
 
-    // A deep-equal but referentially-new object — as Java Lab produces whenever
-    // a save echoes a fresh channel/labConfig — must not trigger another reset,
-    // which would clobber the user's live edits with the stale server source.
+    // A project load (e.g. a teacher switching to a student whose code happens
+    // to match) always hands us a fresh object. Even though the content is
+    // identical, the reset must fire so the newly-loaded project's source
+    // replaces whatever the editor currently shows.
     currentInitialSources = {source: {...smallProject}};
     rerender();
-    expect(mockedProjectManager.save).toHaveBeenCalledTimes(1);
-    expect(mockedProjectManager.setLastSource).toHaveBeenCalledTimes(1);
+    expect(mockedProjectManager.save).toHaveBeenCalledTimes(2);
+    expect(mockedProjectManager.setLastSource).toHaveBeenCalledTimes(2);
   });
 });
