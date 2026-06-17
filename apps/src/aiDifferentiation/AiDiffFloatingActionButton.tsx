@@ -1,6 +1,6 @@
 import {Badge} from '@mui/material';
 import classNames from 'classnames';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import {
   setChatIsOpen,
@@ -186,6 +186,102 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
 
   const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
 
+  const [fabPosition, setFabPosition] = useState<{top: number} | null>(null);
+  const [dragging, setDragging] = useState(false);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const dragStateRef = useRef<{
+    mouseY: number;
+    elemTop: number;
+    isDragging: boolean;
+    currentTop: number;
+  } | null>(null);
+  const wasDraggingRef = useRef(false);
+
+  useEffect(() => {
+    const onResize = () => setFabPosition(null);
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+
+  const FAB_SIZE = 48;
+  const HEADER_HEIGHT = 50;
+
+  const onDragMove = (clientY: number) => {
+    const drag = dragStateRef.current;
+    if (!drag) return;
+    const dy = clientY - drag.mouseY;
+    if (!drag.isDragging && Math.abs(dy) < 4) return;
+    if (!drag.isDragging) {
+      drag.isDragging = true;
+      wasDraggingRef.current = true;
+      setDragging(true);
+    }
+    drag.currentTop = Math.max(
+      HEADER_HEIGHT,
+      Math.min(window.innerHeight - FAB_SIZE, drag.elemTop + dy)
+    );
+    // Direct DOM write bypasses React scheduling so the position tracks
+    // the pointer on every mousemove frame without waiting for a render.
+    if (buttonRef.current) {
+      buttonRef.current.style.top = `${drag.currentTop}px`;
+      buttonRef.current.style.bottom = 'auto';
+    }
+  };
+
+  const onDragEnd = () => {
+    const drag = dragStateRef.current;
+    dragStateRef.current = null;
+    setDragging(false);
+    if (drag?.isDragging) {
+      setFabPosition({top: drag.currentTop});
+    }
+    // Some browsers don't fire 'click' after a large drag, leaving
+    // wasDraggingRef stuck true and eating the next tap. Self-clear after
+    // the click event window (a few ms) has passed.
+    setTimeout(() => {
+      wasDraggingRef.current = false;
+    }, 300);
+  };
+
+  const handleMouseDown = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    dragStateRef.current = {
+      mouseY: e.clientY,
+      elemTop: rect.top,
+      isDragging: false,
+      currentTop: rect.top,
+    };
+    const onMove = (ev: MouseEvent) => onDragMove(ev.clientY);
+    const onUp = () => {
+      onDragEnd();
+      document.removeEventListener('mousemove', onMove);
+      document.removeEventListener('mouseup', onUp);
+    };
+    document.addEventListener('mousemove', onMove);
+    document.addEventListener('mouseup', onUp);
+  };
+
+  const handleTouchStart = (e: React.TouchEvent<HTMLButtonElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    dragStateRef.current = {
+      mouseY: e.touches[0].clientY,
+      elemTop: rect.top,
+      isDragging: false,
+      currentTop: rect.top,
+    };
+    const onMove = (ev: TouchEvent) => {
+      ev.preventDefault();
+      onDragMove(ev.touches[0].clientY);
+    };
+    const onEnd = () => {
+      onDragEnd();
+      document.removeEventListener('touchmove', onMove);
+      document.removeEventListener('touchend', onEnd);
+    };
+    document.addEventListener('touchmove', onMove, {passive: false});
+    document.addEventListener('touchend', onEnd);
+  };
+
   const showPulse = canShowPulse && !hasOpened && isFabImageLoaded;
   const classes = showPulse
     ? classNames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
@@ -194,6 +290,10 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     : style.floatingActionButton;
 
   const handleClick = () => {
+    if (wasDraggingRef.current) {
+      wasDraggingRef.current = false;
+      return;
+    }
     const eventData = {
       aiDiffChatContext: context,
       scriptName,
@@ -221,14 +321,18 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
 
   return (
     <div id="fab-contained">
+      {(!chatIsOpen || !drawerIsEnabled) && (
       <button
+        ref={buttonRef}
         id="ui-floatingActionButton"
         aria-label={i18n.openOrCloseTeachingAssistant()}
         className={classes}
         onClick={handleClick}
+        onMouseDown={handleMouseDown}
+        onTouchStart={handleTouchStart}
         type="button"
-        style={
-          drawerIsEnabled
+        style={{
+          ...(drawerIsEnabled
             ? {
                 right: chatIsOpen
                   ? `${DRAWER_WIDTH + DRAWER_FAB_MARGIN}px`
@@ -237,8 +341,15 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
                   ? 'right 225ms cubic-bezier(0, 0, 0.2, 1) 0ms'
                   : 'right 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms',
               }
-            : {}
-        }
+            : {}),
+          ...(fabPosition
+            ? {
+                top: `${fabPosition.top}px`,
+                bottom: 'auto',
+                cursor: dragging ? 'grabbing' : 'grab',
+              }
+            : {cursor: 'grab'}),
+        }}
       >
         <Badge
           badgeContent={
@@ -284,6 +395,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
           />
         </Badge>
       </button>
+      )}
       <React.Suspense fallback={<div />}>
         {drawerIsEnabled ? (
           <LazyAiDiffDrawer
