@@ -154,6 +154,11 @@ still on the TODO list. Differences from legacy use:
   `get_validations` on `Javalab`, `TestResultValidator`, `ValidationTracker`,
   and an `onValidationResult` hook on the legacy `JavabuilderConnection`.
 - Support for neighborhood
+- Support for theater (image + audio playback): a `theater` `csaViewMode`
+  level renders the generated image and plays its audio in the Lab2 preview
+  panel, with run / reset wired up. Shares the new `apps/src/miniApps/theater/`
+  mini-app with a Lab2 `TheaterPreview` wrapper, mirroring neighborhood. The
+  `GET_IMAGE` photo prompter is deferred (see To Dos).
 - Image and audio assets (`png jpg jpeg gif wav mp3`): uploadable via the
   codebridge file browser in both student and start mode, displayed
   inline for images, stripped into `assetUrls` server-side for
@@ -169,7 +174,9 @@ still on the TODO list. Differences from legacy use:
 ## To Dos
 - **Support locked starter files** you can lock starter files in start mode,
 but we don't persist that information yet.
-- **Theater mini-app** + photo prompter.
+- **Theater photo prompter** — the `GET_IMAGE` signal (crosshair overlay +
+  photo upload) is stubbed with a console notice; the core theater mini-app
+  (image + audio playback) is supported.
 - **Backpack**
 - **Captcha dialog** on `AuthorizerSignalType.CAPTCHA`.
 - **Code review**.
