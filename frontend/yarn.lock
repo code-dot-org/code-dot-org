@@ -2106,6 +2106,28 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@code-dot-org/playwright-support@workspace:packages/playwright-support":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/playwright-support@workspace:packages/playwright-support"
+  dependencies:
+    "@applitools/eyes-playwright": "npm:^1.34.0"
+    "@code-dot-org/lint-config": "workspace:*"
+    "@types/node": "catalog:"
+    eslint: "catalog:"
+    playwright: "catalog:"
+    prettier: "catalog:"
+    typescript: "catalog:"
+    vite: "catalog:"
+    vite-plugin-dts: "catalog:"
+    vite-plugin-externalize-deps: "catalog:"
+    vitest: "catalog:"
+  peerDependencies:
+    playwright: 1.59.1
+  bin:
+    prove-visual: ./bin/prove-visual.mjs
+  languageName: unknown
+  linkType: soft
+
 "@code-dot-org/redactable-markdown@npm:^0.4.0":
   version: 0.4.0
   resolution: "@code-dot-org/redactable-markdown@npm:0.4.0"
