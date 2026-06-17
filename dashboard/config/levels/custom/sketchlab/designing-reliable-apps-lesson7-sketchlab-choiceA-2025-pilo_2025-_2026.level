@@ -1,12 +1,13 @@
 <Sketchlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 75,
   "created_at": "2026-04-01T21:44:20.000Z",
   "level_num": "custom",
   "user_id": 18762,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# Network Failure: Designing for the \"Oops\"\r\n\r\nBased on the following user complaint about the Concert App bug (Level 1), design the UI for what should appear on screen instead:\r\n\r\n> **The Infinite Spinner:** \"I clicked 'Buy', but the loading icon just spun forever.\" \r\n\r\nUse simple boxes and labels to show your layout. Your sketch must include three elements:\r\n\r\n1. **The Message:** Explain what happened in plain English. Avoid using \"Error 404\" or \"Null\".\r\n2. **The Action:** Give the user a clear next step, e.g., a \"Retry\" button, a \"Contact Support\" link, or a \"Return to Home\" option.\r\n3. **The Tone Check:** Ensure the tone is calm and helpful. Avoid scary icons or blaming the user.",
+    "long_instructions": "## Network Failure Recovery\r\n\r\nA user submitted Ticket #1001 — the app kept spinning and never completed their purchase.\r\n\r\nSketch what the user should see instead. Your design must include:\r\n\r\n1. **The Message:** Explain what happened in plain English. No error codes, no technical jargon.\r\n2. **The Action:** Give the user a clear next step — a Retry button, Contact Support link, or Return to Home option.\r\n3. **The Tone:** Keep it calm and helpful. No scary icons, no blame.",
     "start_sources": {
       "source": {
         "nodes": [
@@ -227,11 +228,10 @@
       }
     },
     "display_name": "Network Failure",
-    "bubble_choice_description": "Design the UI for what should appear on screen when this error happens.",
-    "thumbnail_url": "https://images.code.org/b7a6c3243d2c24f361bc1aa13e1c98c0-Screenshot 2026-02-11 at 11.06.14 AM.png",
+    "bubble_choice_description": "Ticket #1001: The user clicked Buy but the request never reached the server. Design what they should see instead of an infinite spinner.",
+    "thumbnail_url": "https://images.code.org/bb0269e83aa6bd6e7a144b1fcd2f722f-Untitled presentation (4).jpg",
     "name_suffix": "_2026"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:20.534+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson7-sketchlab-choiceA-2025-pilo_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson7-sketchlab-choiceA-2025-pilo_2025-pilot\"},{\"changed_at\":\"2026-05-01 15:32:38 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-07 13:30:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:20.534+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson7-sketchlab-choiceA-2025-pilo_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson7-sketchlab-choiceA-2025-pilo_2025-pilot\"},{\"changed_at\":\"2026-05-01 15:32:38 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-07 13:30:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-06-16 15:45:10 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 15:50:47 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 16:11:20 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 18:33:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 18:34:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Sketchlab>

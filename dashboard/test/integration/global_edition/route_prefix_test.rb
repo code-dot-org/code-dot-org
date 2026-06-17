@@ -28,6 +28,34 @@ class GlobalEditionRoutePrefixTest < ActionDispatch::IntegrationTest
       _home_path.must_equal "/#{ge_region}/#{ge_locale}/home"
     end
 
+    context 'when GE region has a single locale' do
+      let(:ge_region) {'fa'}
+      let(:locale) {'fa-IR'}
+
+      it 'generates path with GE region prefix' do
+        _home_path.must_equal "/#{ge_region}/home"
+      end
+    end
+
+    context 'when GE region is the default region' do
+      let(:ge_region) {Cdo::GlobalEdition::DEFAULT_REGION}
+      let(:locale) {Cdo::GlobalEdition::DEFAULT_LOCALE}
+
+      it 'generates normal prefixless path for default locale' do
+        _home_path.must_equal '/home'
+      end
+
+      context 'and locale is not the default locale' do
+        let(:locale) {(Cdo::GlobalEdition.region_locales(ge_region) - [Cdo::GlobalEdition::DEFAULT_LOCALE]).first}
+        let(:ge_locale) {Cdo::GlobalEdition.url_locale_segment(locale)}
+
+        it 'generates path with default region locale prefix' do
+          _(locale).wont_be_nil
+          _home_path.must_equal "/#{ge_region}/#{ge_locale}/home"
+        end
+      end
+    end
+
     context 'when no GE region' do
       let(:ge_region) {nil}
 

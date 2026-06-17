@@ -1,6 +1,4 @@
-# This is the configuration for the main code.org/ root
-
-locales: [en-US]
+# This is the configuration for the main United States region
 
 header:
   # The topbar (which is collapsed into the hamburger in certain contexts)
@@ -367,7 +365,7 @@ footer:
 # `false` is provided instead of a set of properties, the component is not
 # rendered at all.
 #
-# Ex: (config/global_editions/foo.yml)
+# Ex: (config/global_editions/us.yml)
 #
 # pages:
 #   - path: /
