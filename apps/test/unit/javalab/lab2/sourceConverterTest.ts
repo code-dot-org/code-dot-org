@@ -592,19 +592,16 @@ describe('javalab2 sourceConverter', () => {
       expect(image.type).toBe(ProjectFileType.STARTER);
     });
 
-    it('flatToMultiFile passes flagged through and omits absent url/flagged', () => {
+    it('flatToMultiFile omits absent url', () => {
       const mf = flatToMultiFile({
         'Main.java': flatFile('class Main {}', 0),
-        'cat.png': {...assetEntry, flagged: true},
+        'cat.png': {...assetEntry},
       });
-      const image = Object.values(mf.files).find(f => f.name === 'cat.png')!;
-      expect(image.flagged).toBe(true);
       const main = Object.values(mf.files).find(f => f.name === 'Main.java')!;
       expect('url' in main).toBe(false);
-      expect('flagged' in main).toBe(false);
     });
 
-    it('multiFileToFlat emits url and flagged when present', () => {
+    it('multiFileToFlat emits url when present', () => {
       const source: MultiFileSource = {
         folders: {},
         files: {
@@ -614,7 +611,6 @@ describe('javalab2 sourceConverter', () => {
             contents: '',
             folderId: 'root',
             url: assetEntry.url,
-            flagged: true,
           },
           '1': {
             id: '1',
@@ -628,10 +624,8 @@ describe('javalab2 sourceConverter', () => {
       };
       const flat = multiFileToFlat(source);
       expect(flat['cat.png'].url).toBe(assetEntry.url);
-      expect(flat['cat.png'].flagged).toBe(true);
       expect(flat['cat.png'].isVisible).toBe(true);
       expect('url' in flat['Main.java']).toBe(false);
-      expect('flagged' in flat['Main.java']).toBe(false);
     });
 
     it('round-trips an open image tab through flat -> multiFile -> flat', () => {

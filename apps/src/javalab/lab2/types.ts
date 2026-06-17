@@ -19,8 +19,6 @@ export interface JavalabFlatFile {
   // Asset (image/audio) entries set this to where the bytes live
   // (/v3/assets/... or /level_starter_assets/...)
   url?: string;
-  // Set when image moderation flagged an uploaded asset.
-  flagged?: boolean;
 }
 
 export type JavalabFlatSource = Record<string, JavalabFlatFile>;

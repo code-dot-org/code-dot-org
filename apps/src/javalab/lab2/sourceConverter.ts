@@ -58,7 +58,6 @@ export function flatToMultiFile(
       type: projectFileType(props),
     };
     if (props.url) files[id].url = props.url;
-    if (props.flagged) files[id].flagged = props.flagged;
   });
 
   // Visible files (including validation files surfaced in start mode) are
@@ -142,7 +141,6 @@ export function multiFileToFlat(
       isActive: file.active === true,
     };
     if (file.url) flat[file.name].url = file.url;
-    if (file.flagged) flat[file.name].flagged = file.flagged;
     if (openIndex.has(file.id)) {
       flat[file.name].tabOrder = openIndex.get(file.id);
     }
