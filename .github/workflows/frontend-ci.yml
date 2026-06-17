@@ -32,6 +32,7 @@ jobs:
       component-library-changed: ${{ steps.changes.outputs.component-library }}
       studio-changed: ${{ steps.changes.outputs.studio }}
       oceans-changed: ${{ steps.changes.outputs.oceans }}
+      markdown-changed: ${{ steps.changes.outputs.markdown }}
       e2e-tests-changed: ${{ steps.changes.outputs.e2e-tests }}
       playwright-image-tag: ${{ env.PLAYWRIGHT_IMAGE_TAG }}
     steps:
@@ -60,6 +61,16 @@ jobs:
             oceans:
               - 'frontend/packages/labs/oceans/**'
               - 'frontend/packages/core/**'
+              - 'frontend/packages/lint-config/**'
+              - 'frontend/packages/playwright-support/**'
+              - 'frontend/*'
+              - '.github/**'
+            markdown:
+              - 'frontend/packages/markdown/**'
+              - 'frontend/packages/component-library/**'
+              - 'frontend/packages/component-library-styles/**'
+              - 'frontend/packages/core/**'
+              - 'frontend/packages/fonts/**'
               - 'frontend/packages/lint-config/**'
               - 'frontend/packages/playwright-support/**'
               - 'frontend/*'
@@ -98,6 +109,15 @@ jobs:
       playwright-image-tag: ${{ needs.setup.outputs.playwright-image-tag }}
     secrets: inherit
 
+  # Start the markdown package CI workflow
+  markdown:
+    if: ${{ needs.setup.outputs.markdown-changed == 'true' }}
+    needs: setup
+    uses: ./.github/workflows/markdown-ci.yml
+    with:
+      playwright-image-tag: ${{ needs.setup.outputs.playwright-image-tag }}
+    secrets: inherit
+
   # Start the e2e-tests Playwright suite when test code or its CI config changes.
   e2e-tests:
     if: ${{ needs.setup.outputs.e2e-tests-changed == 'true' }}
@@ -110,7 +130,7 @@ jobs:
   # Common teardown actions that must occur after _all_ workflows have completed.
   # For example, closing the Applitools batch after its completion.
   teardown:
-    needs: [setup, component-library, oceans]
+    needs: [setup, component-library, oceans, markdown]
     if: always()
     runs-on: ubuntu-24.04
     steps:
