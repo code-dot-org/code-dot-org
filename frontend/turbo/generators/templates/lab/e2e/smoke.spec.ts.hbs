@@ -7,4 +7,12 @@ test.describe('{{pascalCase name}} Lab smoke', () => {
     const lab = await LabPage.load(page);
     await expect(lab.heading).toBeVisible();
   });
+
+  // Folded in from the former console-health spec: a load with no thrown errors.
+  test('no unhandled JS errors on page load', async ({page}) => {
+    const pageErrors: Error[] = [];
+    page.on('pageerror', err => pageErrors.push(err));
+    await LabPage.load(page);
+    expect(pageErrors).toHaveLength(0);
+  });
 });
