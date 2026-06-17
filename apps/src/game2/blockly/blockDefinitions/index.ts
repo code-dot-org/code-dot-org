@@ -1,0 +1,110 @@
+import {ExtendedBlock, GeneratorFunction} from '@cdo/apps/blockly/types';
+
+import bigJump from './bigJump';
+import {
+  BLOCK_TYPE as CREATE_ITEM,
+  generator as createItemGenerator,
+  register as registerCreateItem,
+} from './createItem';
+import decreaseScore from './decreaseScore';
+import {
+  BLOCK_TYPE as IF_CONDITION,
+  generator as ifConditionGenerator,
+  register as registerIfCondition,
+} from './ifCondition';
+import increaseScore from './increaseScore';
+import jump from './jump';
+import {
+  BLOCK_TYPE as REMOVE_ITEM,
+  generator as removeItemGenerator,
+  register as registerRemoveItem,
+} from './removeItem';
+import {
+  BLOCK_TYPE as SET_BACKGROUND,
+  generator as setBackgroundGenerator,
+  register as registerSetBackground,
+} from './setBackground';
+import {
+  BLOCK_TYPE as SET_ITEM_BEHAVIOR,
+  generator as setItemBehaviorGenerator,
+  register as registerSetItemBehavior,
+} from './setItemBehavior';
+import {
+  BLOCK_TYPE as SET_WORLD,
+  generator as setWorldGenerator,
+  register as registerSetWorld,
+} from './setWorld';
+import showText from './showText';
+import startScoring from './startScoring';
+import {
+  BLOCK_TYPE as WHEN_COLLIDE,
+  extendedOptions as whenCollideExtended,
+  generator as whenCollideGenerator,
+  register as registerWhenCollide,
+} from './whenCollide';
+import whenJumpPressed from './whenJumpPressed';
+import whenStart from './whenStart';
+
+interface DynamicBlockEntry {
+  type: string;
+  register: () => void;
+  generator: GeneratorFunction;
+  extendedOptions?: Partial<ExtendedBlock>;
+}
+
+interface JsonBlockEntry {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  definition: Record<string, any>;
+  generator: GeneratorFunction;
+  extendedOptions?: Partial<ExtendedBlock>;
+}
+
+export const dynamicBlocks: DynamicBlockEntry[] = [
+  {
+    type: CREATE_ITEM,
+    register: registerCreateItem,
+    generator: createItemGenerator,
+  },
+  {
+    type: SET_ITEM_BEHAVIOR,
+    register: registerSetItemBehavior,
+    generator: setItemBehaviorGenerator,
+  },
+  {
+    type: SET_BACKGROUND,
+    register: registerSetBackground,
+    generator: setBackgroundGenerator,
+  },
+  {
+    type: SET_WORLD,
+    register: registerSetWorld,
+    generator: setWorldGenerator,
+  },
+  {
+    type: REMOVE_ITEM,
+    register: registerRemoveItem,
+    generator: removeItemGenerator,
+  },
+  {
+    type: WHEN_COLLIDE,
+    register: registerWhenCollide,
+    generator: whenCollideGenerator,
+    extendedOptions: whenCollideExtended,
+  },
+  {
+    type: IF_CONDITION,
+    register: registerIfCondition,
+    generator: ifConditionGenerator,
+  },
+];
+
+export const jsonBlocks: JsonBlockEntry[] = [
+  whenStart,
+  whenJumpPressed,
+  startScoring,
+  increaseScore,
+  decreaseScore,
+  showText,
+  jump,
+  bigJump,
+];

@@ -52,6 +52,7 @@
         = render partial: 'levels/editors/panels', locals: {f: f} if @level.is_a? Panels
         = render partial: 'levels/editors/weblab2', locals: {f: f} if @level.is_a? Weblab2
         = render partial: 'levels/editors/sketchlab', locals: {f: f} if @level.is_a? Sketchlab
+        = render partial: 'levels/editors/game2', locals: {f: f} if @level.is_a? Game2
         -# Widgets
         = render partial: 'levels/editors/frequency_analysis', locals: {f: f} if @level.is_a? FrequencyAnalysis
         = render partial: 'levels/editors/netsim', locals: {f: f} if @level.is_a? NetSim

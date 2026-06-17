@@ -64,6 +64,7 @@ class Game < ApplicationRecord
   PANELS = 'panels'.freeze
   WEBLAB2 = 'weblab2'.freeze
   SKETCHLAB = 'sketchlab'.freeze
+  GAME2 = 'game2'.freeze
 
   def self.bounce
     @@game_bounce ||= find_by_name("Bounce")
@@ -209,6 +210,10 @@ class Game < ApplicationRecord
     @@game_sketchlab ||= find_by_name("Sketchlab")
   end
 
+  def self.game2
+    @@game_game2 ||= find_by_name("Game2")
+  end
+
   def self.bubble_choice
     @@game_bubble_choice ||= find_by_name("BubbleChoice")
   end
@@ -281,7 +286,7 @@ class Game < ApplicationRecord
   end
 
   def channel_backed?
-    [APPLAB, GAMELAB, WEBLAB, PIXELATION, SPRITELAB, JAVALAB, POETRY, MUSIC, PYTHONLAB, WEBLAB2, AICHAT, SKETCHLAB].include? app
+    [APPLAB, GAMELAB, WEBLAB, PIXELATION, SPRITELAB, JAVALAB, POETRY, MUSIC, PYTHONLAB, WEBLAB2, AICHAT, SKETCHLAB, GAME2].include? app
   end
 
   def use_restricted_songs?
@@ -371,6 +376,7 @@ class Game < ApplicationRecord
     Panels:panels
     Weblab2:weblab2
     Sketchlab:sketchlab
+    Game2:game2
   )
 
   def self.setup

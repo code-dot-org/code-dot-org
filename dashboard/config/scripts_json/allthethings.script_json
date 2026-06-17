@@ -7786,6 +7786,27 @@
     },
     {
       "chapter": 226,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Game2 test level 0"
+        ],
+        "lesson.key": "lesson-55",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "94cf3670-cb1d-45cc-9491-c754494a2399"
+      },
+      "level_keys": [
+        "Game2 test level 0"
+      ]
+    },
+    {
+      "chapter": 227,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7809,7 +7830,7 @@
       ]
     },
     {
-      "chapter": 227,
+      "chapter": 228,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -7833,7 +7854,7 @@
       ]
     },
     {
-      "chapter": 228,
+      "chapter": 229,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7857,7 +7878,7 @@
       ]
     },
     {
-      "chapter": 229,
+      "chapter": 230,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7881,7 +7902,7 @@
       ]
     },
     {
-      "chapter": 230,
+      "chapter": 231,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7905,7 +7926,7 @@
       ]
     },
     {
-      "chapter": 231,
+      "chapter": 232,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -10938,6 +10959,18 @@
         "level.key": "Lab2 BubbleChoice Showcase",
         "script_level.level_keys": [
           "Lab2 BubbleChoice Showcase"
+        ],
+        "lesson.key": "lesson-55",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "94cf3670-cb1d-45cc-9491-c754494a2399"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Game2 test level 0",
+        "script_level.level_keys": [
+          "Game2 test level 0"
         ],
         "lesson.key": "lesson-55",
         "lesson_group.key": "",
