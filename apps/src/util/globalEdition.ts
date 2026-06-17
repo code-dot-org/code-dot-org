@@ -1,4 +1,5 @@
 import {Regions} from '@cdo/generated-scripts/globalRegionConstants';
+import {GlobalEditionDefaultRegion} from '@cdo/generated-scripts/sharedConstants';
 
 interface RegionConfigurationObject {
   [key: string]: object | boolean;
@@ -11,7 +12,6 @@ export interface RegionConfigurationPageObject {
 
 export interface RegionConfiguration {
   locales?: readonly string[];
-  locale_lock?: boolean;
   countries?: readonly string[];
   header?: RegionConfigurationObject;
   footer?: RegionConfigurationObject;
@@ -28,4 +28,5 @@ export const getGlobalEditionRegion = () =>
  * This returns the current region's configuration data.
  */
 export const currentGlobalConfiguration: () => RegionConfiguration = () =>
-  Regions[getGlobalEditionRegion() as keyof typeof Regions] || Regions.root;
+  Regions[getGlobalEditionRegion() as keyof typeof Regions] ||
+  Regions[GlobalEditionDefaultRegion];

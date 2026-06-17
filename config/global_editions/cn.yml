@@ -8,7 +8,6 @@
 # component from the page.
 
 locales: [zh-CN]
-locale_lock: true
 countries:
   - CN # China
   - SG # Singapore

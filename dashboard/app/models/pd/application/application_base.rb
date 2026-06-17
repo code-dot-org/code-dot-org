@@ -41,6 +41,31 @@ require 'state_abbr'
 # This on its own will fail validation.
 module Pd::Application
   class ApplicationBase < ApplicationRecord
+    export_to_analytics
+
+    data_classification(
+      id: :restricted,
+      user_id: :restricted,
+      type: :restricted,
+      application_year: :restricted,
+      application_type: :restricted,
+      regional_partner_id: :restricted,
+      status: :restricted,
+      locked_at: :restricted,
+      notes: :restricted,
+      form_data: :restricted,
+      created_at: :restricted,
+      updated_at: :restricted,
+      course: :restricted,
+      response_scores: :restricted,
+      application_guid: :restricted,
+      accepted_at: :restricted,
+      properties: :restricted,
+      deleted_at: :restricted,
+      status_timestamp_change_log: :restricted,
+      applied_at: :restricted,
+    )
+
     include ApplicationConstants
     include Pd::SharedApplicationConstants
     include Pd::Form

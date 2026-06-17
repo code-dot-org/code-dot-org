@@ -22,6 +22,21 @@
 #  index_on_course_id_and_lti_integration_id        (course_id,lti_integration_id)
 #
 class LtiCourse < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    lti_integration_id: :confidential,
+    lti_deployment_id: :confidential,
+    context_id: :confidential,
+    course_id: :confidential,
+    nrps_url: :confidential,
+    resource_link_id: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+    deleted_at: :confidential,
+  )
+
   acts_as_paranoid
   belongs_to :lti_integration
   belongs_to :lti_deployment

@@ -33,6 +33,33 @@
 #
 
 class CourseOffering < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    key: :public,
+    display_name: :public,
+    created_at: :public,
+    updated_at: :public,
+    is_featured: :public,
+    assignable: :public,
+    curriculum_type: :public,
+    marketing_initiative: :public,
+    grade_levels: :public,
+    header: :public,
+    image: :public,
+    cs_topic: :public,
+    school_subject: :public,
+    device_compatibility: :public,
+    description: :public,
+    professional_learning_program: :public,
+    video: :public,
+    published_date: :public,
+    self_paced_pl_course_offering_id: :public,
+    ai_teaching_assistant_available: :public,
+    facilitator_course_permissions: :public,
+  )
+
   include Curriculum::SharedCourseConstants
   include Localizable
 
