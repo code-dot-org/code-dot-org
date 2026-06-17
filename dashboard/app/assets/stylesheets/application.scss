@@ -1066,9 +1066,6 @@ $default-modal-width: 640px;
     position: absolute;
     top: 50px; // top of the dialog
 
-    width: $default-modal-width;
-    margin-left: -($default-modal-width * 0.5 + 1);
-
     // margin-bottom is reused in JavaScript to determine
     // how close to get to the bottom of the viewport.
     margin-bottom: 25px;
@@ -3282,6 +3279,12 @@ $modal-no-icon-gap: 22px;
       line-height: 27px;
     }
 
+    .instructions-markdown p {
+      line-height: 25px;
+      font-size: 16px;
+      color: $neutral_dark;
+    }
+
     .instructions2 {
       font-size: 18px;
       color: $charcoal;
@@ -3407,9 +3410,6 @@ h5.dialog-title {
 .modal-content.markdown-instructions-container {
   margin-left: $modal-no-icon-gap;
   margin-right: $modal-no-icon-gap;
-  /*margin-top: 10px;*/
-  margin-bottom: 15px;
-  float: left;
   padding: 0 0 15px 0;
   background-color: $white;
   $outside-margin-side: 15px;

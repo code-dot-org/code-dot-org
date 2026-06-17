@@ -19,8 +19,10 @@ function createOpenInNewTabButton(parentElement, link) {
  */
 function sizeDialogToViewport(scrollableElementSelector) {
   var viewportHeight = $(window).height();
-  var modalDialog = $('.auto-resize-scrollable').filter(':visible');
-  var scrollableElement = modalDialog.find(scrollableElementSelector);
+  var modalContent = $('.auto-resize-scrollable')
+    .filter(':visible')
+    .find('.modal-content');
+  var scrollableElement = modalContent.find(scrollableElementSelector);
 
   if (scrollableElement.is('iframe')) {
     scrollableElement.css('height', '');
@@ -28,12 +30,12 @@ function sizeDialogToViewport(scrollableElementSelector) {
     scrollableElement.css('max-height', '');
   }
 
-  var dialogSize = modalDialog.offset().top + modalDialog.height();
+  var dialogSize = modalContent.offset().top + modalContent.height();
 
   var desiredSize =
     viewportHeight -
-    parseInt(modalDialog.css('padding-bottom'), 10) -
-    parseInt(modalDialog.css('margin-bottom'), 10);
+    parseInt(modalContent.css('padding-bottom'), 10) -
+    parseInt(modalContent.css('margin-bottom'), 10);
 
   var overflow = dialogSize - desiredSize;
   var scrollableElementHeight = scrollableElement.height() - overflow;
