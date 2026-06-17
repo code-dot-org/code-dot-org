@@ -8,7 +8,6 @@
 # component from the page.
 
 locales: [ru-RU]
-locale_lock: true
 countries: [RU]
 
 # The list of available project types

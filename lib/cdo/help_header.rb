@@ -6,8 +6,7 @@ class HelpHeader
   def self.get_help_contents(options)
     loc_prefix = options[:loc_prefix]
 
-    ge_region = Cdo::GlobalEdition.region_available?(options[:ge_region]) ? options[:ge_region] : :root
-    ge_config = Cdo::GlobalEdition.configuration_for(ge_region)[:header] || {}
+    ge_config = Cdo::GlobalEdition.region_config(options[:ge_region], :header) || {}
     ge_help_config = ge_config[:help] || {}
 
     # Determine, if possible, the report_bug link for the current page, and

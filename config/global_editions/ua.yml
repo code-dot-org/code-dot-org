@@ -8,7 +8,6 @@
 # component from the page.
 
 locales: [uk-UA]
-locale_lock: true
 countries: [UA]
 
 # The list of available project types
