@@ -1,9 +1,9 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import onClickOutside from 'react-onclickoutside';
-
-import Button from '@cdo/apps/legacySharedComponents/Button';
 
 import style from './dropdown-button.module.scss';
 
@@ -15,7 +15,7 @@ export const DropdownButton = class DropdownButtonComponent extends Component {
   static propTypes = {
     text: PropTypes.string,
     customText: PropTypes.node,
-    color: PropTypes.oneOf(Object.values(Button.ButtonColor)).isRequired,
+    color: PropTypes.string.isRequired,
     size: PropTypes.string,
     onClick: PropTypes.func,
     className: PropTypes.string,
@@ -82,20 +82,29 @@ export const DropdownButton = class DropdownButtonComponent extends Component {
 
     return (
       <div className={style.main}>
-        <Button
-          useDefaultLineHeight
-          text={text}
-          size={size}
+        <MuiButton
+          variant="text"
+          type="button"
+          disableRipple
           onClick={this.toggleDropdown}
-          icon={dropdownOpen ? 'caret-up' : 'caret-down'}
-          iconClassName={style.icon}
-          color={color}
-          className={classNames(style.dropdownButton, this.props.className)}
+          endIcon={
+            <FontAwesomeV6Icon
+              iconName={dropdownOpen ? 'caret-up' : 'caret-down'}
+              className={style.icon}
+            />
+          }
+          className={classNames(
+            style.dropdownButton,
+            style[color],
+            style[size],
+            this.props.className
+          )}
         >
+          {text}
           {this.props.customText && (
             <div className={style.main}>{this.props.customText}</div>
           )}
-        </Button>
+        </MuiButton>
 
         {dropdownOpen && (
           <div
