@@ -83,6 +83,8 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
           `    if: \${{ needs.setup.outputs.${name}-changed == 'true' }}\n` +
           `    needs: setup\n` +
           `    uses: ./.github/workflows/${name}-ci.yml\n` +
+          `    with:\n` +
+          `      playwright-image-tag: \${{ needs.setup.outputs.playwright-image-tag }}\n` +
           `    secrets: inherit`,
       );
 
@@ -322,6 +324,11 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
         },
         {
           type: 'add',
+          path: '{{turbo.paths.workspace}}/packages/labs/{{name}}/e2e/fixtures/visual.ts',
+          templateFile: 'templates/lab/e2e/fixtures/visual.ts.hbs',
+        },
+        {
+          type: 'add',
           path: '{{turbo.paths.workspace}}/packages/labs/{{name}}/e2e/poms/LabPage.ts',
           templateFile: 'templates/lab/e2e/poms/LabPage.ts.hbs',
         },
@@ -332,8 +339,8 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
         },
         {
           type: 'add',
-          path: '{{turbo.paths.workspace}}/packages/labs/{{name}}/e2e/console-health.spec.ts',
-          templateFile: 'templates/lab/e2e/console-health.spec.ts.hbs',
+          path: '{{turbo.paths.workspace}}/packages/labs/{{name}}/e2e/visual.spec.ts',
+          templateFile: 'templates/lab/e2e/visual.spec.ts.hbs',
         },
         // GitHub Actions CI workflow for the new lab
         {
