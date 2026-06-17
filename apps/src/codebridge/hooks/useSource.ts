@@ -1,5 +1,6 @@
 import {CodebridgeLevelProperties} from '@codebridge/types';
 import {prepareSourceForLevelbuilderSave} from '@codebridge/utils';
+import {isEqual} from 'lodash';
 import {useEffect, useMemo, useRef} from 'react';
 
 import header from '@cdo/apps/code-studio/header';
@@ -126,9 +127,12 @@ export const useSource = (
     // We reset the project when the levelId changes, as this means we are on a new level.
     // We also reset if the initialSources changed; this could occur if we are a teacher
     // viewing a student's project.
+    // Compare initial sources by value, not reference, in case a parent hands us a
+    // freshly-built but deep-equal object. A reference check would treat
+    // that as a project switch and clobber the user's live edits.
     if (
       (levelId && previousLevelIdRef.current !== levelId) ||
-      initialSources !== previousInitialSources.current
+      !isEqual(initialSources, previousInitialSources.current)
     ) {
       if (initialSources) {
         // Set the last source in project manager to initial sources.

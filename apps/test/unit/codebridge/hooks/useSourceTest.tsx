@@ -11,7 +11,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import lab2Project from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import lab2System from '@cdo/apps/lab2/redux/systemRedux';
-import {Channel} from '@cdo/apps/lab2/types';
+import {Channel, ProjectSources} from '@cdo/apps/lab2/types';
 import {
   getStore,
   registerReducers,
@@ -120,5 +120,32 @@ describe('useSource', () => {
       false,
       false
     );
+  });
+
+  it('does not reset when initial sources change by reference but not value', () => {
+    const wrapper = ({children}: {children?: React.ReactNode}) => (
+      <Provider store={store}>{children}</Provider>
+    );
+    let currentInitialSources: ProjectSources = {source: smallProject};
+    const {rerender} = renderHook(
+      () =>
+        useSource(
+          defaultSources,
+          nonValidatedLevelProperties,
+          currentInitialSources
+        ),
+      {wrapper}
+    );
+    // The mount performs the one legitimate reset to the loaded server source.
+    expect(mockedProjectManager.save).toHaveBeenCalledTimes(1);
+    expect(mockedProjectManager.setLastSource).toHaveBeenCalledTimes(1);
+
+    // A deep-equal but referentially-new object — as Java Lab produces whenever
+    // a save echoes a fresh channel/labConfig — must not trigger another reset,
+    // which would clobber the user's live edits with the stale server source.
+    currentInitialSources = {source: {...smallProject}};
+    rerender();
+    expect(mockedProjectManager.save).toHaveBeenCalledTimes(1);
+    expect(mockedProjectManager.setLastSource).toHaveBeenCalledTimes(1);
   });
 });
