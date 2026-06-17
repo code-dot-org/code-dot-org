@@ -10,9 +10,7 @@ else
   bind "tcp://#{CDO.dashboard_host}:#{CDO.dashboard_port}"
 end
 
-# Bound the worker count by both CPU and memory; see Cdo::PumaWorkerCount.
-# An explicit numeric dashboard_workers overrides; otherwise this replaces
-# puma's CPU-only `:auto`.
+# Worker process count, bounded by CPU and memory.
 workers Cdo::PumaWorkerCount.resolve
 threads 1, 5
 

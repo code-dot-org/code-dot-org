@@ -21,6 +21,22 @@ module Cdo
   # Both budgets adapt to the instance automatically. An explicit numeric
   # `dashboard_workers` still overrides everything (dev = 0 single-mode,
   # test = 5, manually-pinned daemons), preserving prior behavior.
+  #
+  # Tuning the memory budget (`dashboard_worker_memory_mb`): measure actual
+  # per-worker memory on a frontend and set the budget at or above what you
+  # observe, with slack. Use PSS, not RSS -- the host's "used" memory (what
+  # the memory alarm watches) counts each physical page once, so copy-on-write
+  # pages shared with the master must not be double-counted. Per-worker memory
+  # grows with worker age, so sample an instance late in its restart cycle to
+  # capture the near-peak value, not a freshly-forked one:
+  #
+  #   for pid in $(pgrep -f 'puma: cluster worker'); do
+  #     awk '/^Pss:/{s=$2} END{printf "%d MB\n", s/1024}' "/proc/$pid/smaps_rollup"
+  #   done | sort -n | tail -1   # the heaviest worker's PSS
+  #
+  # Revisit after any instance-type or per-worker-thread change. The headroom
+  # fraction (`dashboard_worker_memory_headroom`) covers non-worker users
+  # (master, sidecars, OS) and per-worker variance; raise it if those grow.
   module PumaWorkerCount
     MEMINFO = '/proc/meminfo'.freeze
 
