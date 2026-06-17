@@ -6,7 +6,7 @@ Background:
 
 Scenario:
   When I open my eyes to test "bounce game"
-  And I am on "http://studio.code.org/courses/events/units/1/lessons/1/levels/1?noautoplay=true"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/8/levels/1?noautoplay=true"
   And I wait for the lab page to fully load
   And I see no difference for "initial load"
   And I've initialized the workspace with level 1 bounce blocks
