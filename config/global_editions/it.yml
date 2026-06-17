@@ -153,15 +153,15 @@ pages:
   - path: /my-professional-learning
     components:
       LandingPage:
-        hideMyFacilitatorCenterTab: false
+        hideMyFacilitatorCenterTab: true
         hideInstructorCenterTab: false
-        hideRPCenterTab: false
-        hideWorkshopOrganizerCenterTab: false
+        hideRPCenterTab: true
+        hideWorkshopOrganizerCenterTab: true
         hideMyPLWorkshopEnrollmentCelebrationDialog: true
         hideMyPLBanner: true
         hideMyPLSelfPacedPL: false
-        hideMyPLJoinSectionArea: false
-        hideMyPLLandingPageWorkshopsTable: false
+        hideMyPLJoinSectionArea: true
+        hideMyPLLandingPageWorkshopsTable: true
         hideMyPLStaticRecommendedPL: false
         hideMyPLStaticRecommendedPLMidHighBlock: true
         hideMyPLStaticRecommendedPLSelfPacedBlock: false
