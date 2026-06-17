@@ -173,6 +173,17 @@ summary {
   display: revert !important;
 }
 
+/* Undo bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/_tables.scss:62 */
+/* And preserve bootstrap-sass-2.3.2.2/vendor/assets/stylesheets/bootstrap/_tables.scss:23 */
+.table > thead > tr > th {
+  border-bottom: revert;
+  line-height: 20px;
+}
+
+.table > tbody > tr > td {
+  line-height: 20px;
+}
+
 $code-border-color: #e1e1e8;
 code {
   font-size: 12px;
