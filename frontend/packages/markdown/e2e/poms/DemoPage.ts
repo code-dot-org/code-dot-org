@@ -26,14 +26,20 @@ export class DemoPage {
     await this.page.goto('/');
   }
 
+  // DSCO radios/toggles render the real <input> as opacity:0/absolute behind a
+  // visible sibling (.radioIcon/.switch), so the hit-test at the input lands on
+  // the overlay; `force` skips that check and the click routes through the
+  // wrapping <label> to toggle the input. `setChecked`/`check` still assert the
+  // resulting state, so this stays a real interaction, not a blind click.
+
   /** Select a scenario by name. */
   async selectScenario(name: string): Promise<void> {
-    await this.scenarioRadio(name).check();
+    await this.scenarioRadio(name).check({force: true});
   }
 
   /** Turn dark mode on or off. */
   async setDarkMode(on: boolean): Promise<void> {
-    await this.darkModeToggle.setChecked(on);
+    await this.darkModeToggle.setChecked(on, {force: true});
   }
 
   /**

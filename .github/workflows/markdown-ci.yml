@@ -16,6 +16,10 @@ jobs:
     runs-on: ubuntu-24.04
 
     steps:
+      - name: Install LFS
+        # Required for matching turbo hashes with e2e (LFS-tracked assets).
+        run: sudo apt-get update && sudo apt-get install -y git-lfs
+
       - uses: actions/checkout@v4
         with:
           sparse-checkout: |

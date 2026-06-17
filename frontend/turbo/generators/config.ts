@@ -70,6 +70,7 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
           `              - 'frontend/packages/labs/${name}/**'\n` +
           `              - 'frontend/packages/core/**'\n` +
           `              - 'frontend/packages/lint-config/**'\n` +
+          `              - 'frontend/packages/playwright-support/**'\n` +
           `              - 'frontend/*'\n` +
           `              - '.github/**'\n`,
       );
