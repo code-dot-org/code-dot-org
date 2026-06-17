@@ -238,9 +238,9 @@ $level-cell-width: 53;
   &HeaderCell {
     border: 1px solid var(--borders-neutral-strong);
     margin: 0;
-    height: 46px;
+    height: 44px;
     line-height: 42px;
-    min-width: 56px;
+    min-width: 54px;
     margin-bottom: 32px;
     text-align: center;
     background-color: var(--background-neutral-secondary);
@@ -299,7 +299,7 @@ $level-cell-width: 53;
       border-left: 1px solid var(--borders-neutral-strong);
       height: 42px;
       line-height: 42px;
-      min-width: 84px;
+      min-width: 82px;
       border: 0;
       background-color: var(--background-brand-teal-primary);
       color: var(--text-neutral-white-fixed);
@@ -392,7 +392,7 @@ $level-cell-width: 53;
 
       &Inner {
         border-left: 1px solid transparent;
-        width: 52px;
+        width: 53px;
       }
 
       & .assessmentLevelIcon {
