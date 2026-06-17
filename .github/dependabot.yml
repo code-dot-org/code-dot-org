@@ -166,7 +166,6 @@ updates:
     open-pull-requests-limit: 0
     directories: 
     - "/apps/eslint"
-    - "/bin/i18n"
     schedule:
       interval: "weekly"
       day: "sunday"

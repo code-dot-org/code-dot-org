@@ -174,41 +174,6 @@ gdrive_export_secret:     !Secret
 mapbox_upload_token:
 mapbox_access_token:      !Secret
 
-# Crowdin
-crowdin_codeorg_api_key:
-
-crowdin_projects:
-  codeorg:
-    id: 26074
-    source_language: 'enus'
-  hour-of-code:
-    id: 55536
-    source_language: 'en'
-  codeorg-markdown:
-    id: 314545
-    source_language: 'en'
-  codeorg-restricted:
-    id: 464582
-    source_language: 'en'
-  codeorg-testing:
-    id: 346087
-    source_language: 'en'
-  codeorg-markdown-testing:
-    id: 547997
-    source_language: 'en'
-  hour-of-code-test:
-    id: 634038
-    source_language: 'en'
-  codeorg-restricted-test:
-    id: 634320
-    source_language: 'en'
-
-crowdin_project_test_mapping:
-  codeorg: codeorg-testing
-  codeorg-markdown: codeorg-markdown-testing
-  codeorg-restricted: codeorg-restricted-test
-  hour-of-code: hour-of-code-test
-
 # Azure AI Content Safety
 azure_ai_content_safety_endpoint: https://cdo-ai-content-safety.cognitiveservices.azure.com
 azure_ai_content_safety_key: !Secret
@@ -396,9 +361,6 @@ cloudfront_private_key: !Secret
 discourse_sso_secret:
 
 ### Application configuration defaults
-
-# Installs bin/i18n dependencies
-build_i18n: false
 
 i18n_backend:
 cache:

@@ -482,7 +482,6 @@ class ProjectsController < ApplicationController
 
     if params[:key] == 'dance'
       @project_image = CDO.studio_url "v3/files/#{@view_options['channel']}/.metadata/thumbnail.png", 'https:'
-      replay_video_view_options unless sharing || readonly
     end
 
     begin
