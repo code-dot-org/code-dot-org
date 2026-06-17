@@ -1,4 +1,6 @@
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
+import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
+import {getFolderPath} from '@codebridge/utils';
 
 import {tryFetchDocsForClass} from '@cdo/apps/aiTutor/docContextApi';
 import {
@@ -10,6 +12,32 @@ import {stripAnsiSequences} from '@cdo/apps/codebridge/Console/MessageHelpers';
 import {ProjectFile} from '@cdo/apps/codebridge/types';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
+
+const getFilePath = (
+  file: ProjectFile,
+  folders: MultiFileSource['folders']
+): string => {
+  if (file.folderId === DEFAULT_FOLDER_ID) {
+    return file.name;
+  }
+  const folderPath = getFolderPath(file.folderId, folders);
+  return `${folderPath}/${file.name}`;
+};
+
+const MAX_DATA_FILE_LINES = 50;
+const DATA_FILE_EXTENSIONS = ['csv', 'json', 'txt'];
+const LANGUAGES_TO_EXCLUDE_FROM_CONTEXT = ['md'];
+
+const truncateDataFileContents = (name: string, contents: string): string => {
+  const ext = name.split('.').pop()?.toLowerCase();
+  if (!ext || !DATA_FILE_EXTENSIONS.includes(ext)) return contents;
+  const lines = contents.split('\n');
+  if (lines.length <= MAX_DATA_FILE_LINES) return contents;
+  return (
+    lines.slice(0, MAX_DATA_FILE_LINES).join('\n') +
+    `\n[truncated — ${lines.length - MAX_DATA_FILE_LINES} more rows not shown]`
+  );
+};
 
 import PythonValidationTracker from '../progress/PythonValidationTracker';
 
@@ -46,21 +74,29 @@ export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorP
       this.params;
     const sourceCode = source
       ? Object.values(source.files)
-          .filter(
-            file =>
+          .filter(file => {
+            const ext = file.name.split('.').pop()?.toLowerCase() ?? '';
+            if (LANGUAGES_TO_EXCLUDE_FROM_CONTEXT.includes(ext)) return false;
+            return (
               (file.type !== ProjectFileType.VALIDATION &&
                 file.type !== ProjectFileType.SYSTEM_SUPPORT &&
                 file.type !== ProjectFileType.SUPPORT) ||
               (file.type === ProjectFileType.SUPPORT && file.contents)
-          )
+            );
+          })
           .map(file => {
+            const filePath = getFilePath(file, source.folders);
             let prefix = '';
             if (file.type === ProjectFileType.SUPPORT) {
-              prefix = `${file.name} is not visible to the student: \n`;
+              prefix = `${filePath} is not visible to the student: \n`;
             }
 
-            return `${prefix}filename: ${file.name}\n${this.codeBlock(
-              file.contents
+            const contents = truncateDataFileContents(
+              file.name,
+              file.contents ?? ''
+            );
+            return `${prefix}filename: ${filePath}\n${this.codeBlock(
+              contents
             )}`;
           })
           .join('\n\n')
