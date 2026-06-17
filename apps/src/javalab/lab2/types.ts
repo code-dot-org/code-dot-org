@@ -16,6 +16,11 @@ export interface JavalabFlatFile {
   // Whether this file's tab is the currently focused one.
   // At most one file in a source should set this true.
   isActive?: boolean;
+  // Asset (image/audio) entries set this to where the bytes live
+  // (/v3/assets/... or /level_starter_assets/...)
+  url?: string;
+  // Set when image moderation flagged an uploaded asset.
+  flagged?: boolean;
 }
 
 export type JavalabFlatSource = Record<string, JavalabFlatFile>;

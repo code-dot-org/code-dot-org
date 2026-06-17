@@ -37,8 +37,7 @@ test.describe('Accessibility', () => {
 
   test('yes button is activatable by keyboard Enter', async ({page}) => {
     const oceans = await FishVTrashPage.load(page);
-    await oceans.yesButton.focus();
-    await page.keyboard.press('Enter');
+    await oceans.classifyOne(true, 'key');
     await expect(oceans.trainCount).toHaveText('1');
   });
 

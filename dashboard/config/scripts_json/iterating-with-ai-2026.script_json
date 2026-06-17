@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-15 17:02:09 UTC",
+    "serialized_at": "2026-06-16 15:55:19 UTC",
     "hide_within_course": true,
     "published_state": "in_development",
     "instruction_type": null,
@@ -191,9 +191,9 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "overview": "**How can a filter prevent or reinforce biases?**\n\nIn this lesson, students examine how hidden filter defaults in apps can unintentionally exclude users and then apply that insight by coding a transparent, Boolean-based filter in a Volunteer Finder tool. They use AND logic to combine multiple conditions and update the interface so users can clearly see why certain results appear. By the end, students understand how filtering choices shape user experience and how transparency helps prevent misleading or exclusionary outcomes.",
+        "overview": "**How can a filter prevent or reinforce biases?**\n\nIn this lesson, students explore the role of a Responsible AI Specialist by auditing and improving a job/opportunity matching app called OpportunityMatch. Students test the app using different user profiles, identify how filters can help some users while leaving others out, and then use AI assistance to improve the app’s filtering options. By the end of the lesson, students understand how filters, defaults, and missing controls can shape what users see, and how transparency labels can make digital systems more understandable and responsible.",
         "preparation": "- Print copies of the Filtering and Transparency activity guide (one for each student)",
-        "student_overview": "**How can a filter prevent or reinforce biases?**\n\nToday you explore how apps sometimes hide important filter rules and how that can limit what people see. You then build your own filter for a Volunteer Finder tool using AND logic to control which roles appear and add clear messages so users know why they’re seeing those results. By the end, you understand how your filtering decisions affect who gets included and how to make those decisions more fair and transparent."
+        "student_overview": "**How can a filter prevent or reinforce biases?**\n\nToday you will act as a Responsible AI Specialist. You will test a job/opportunity matching app called OpportunityMatch, use user profiles to notice who the filters help or leave out, and then improve the app so users have more control. You will also add a transparency label so users better understand why certain results appear. By the end, you will see how small design and coding choices can make a system more fair, useful, and clear."
       },
       "seeding_key": {
         "lesson.key": "Lesson 6: Filtering and Transparency",
@@ -531,21 +531,8 @@
       }
     },
     {
-      "key": "da1cd5d1-39a7-4821-986d-8b36ca74dc7e",
-      "position": 1,
-      "properties": {
-        "name": "New Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "da1cd5d1-39a7-4821-986d-8b36ca74dc7e",
-        "lesson.key": "Lesson 6: Filtering and Transparency",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "iterating-with-ai-2026"
-      }
-    },
-    {
       "key": "5ba4d633-bb8a-41f9-8f81-cc08db49ed2a",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 10,
         "name": "Warm Up"
@@ -558,14 +545,14 @@
       }
     },
     {
-      "key": "6001a882-0cf2-4aa9-823c-551d76c3a9bb",
-      "position": 3,
+      "key": "da1cd5d1-39a7-4821-986d-8b36ca74dc7e",
+      "position": 2,
       "properties": {
         "duration": 30,
         "name": "Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "6001a882-0cf2-4aa9-823c-551d76c3a9bb",
+        "lesson_activity.key": "da1cd5d1-39a7-4821-986d-8b36ca74dc7e",
         "lesson.key": "Lesson 6: Filtering and Transparency",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "iterating-with-ai-2026"
@@ -573,7 +560,7 @@
     },
     {
       "key": "6e1d15b6-4fa3-4214-8a52-a8c6b4770240",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1904,10 +1891,80 @@
       }
     },
     {
-      "key": "166342ae-1a15-4618-a9d7-f26375a294e3",
+      "key": "3613b200-7592-48cd-afca-e6c6a8493a68",
       "position": 1,
       "properties": {
-        "progression_name": "Responsible AI Specialist"
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students recognize that filters are decision rules. Even when a filter seems neutral, it can shape who sees opportunities and who is left out.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Who would see opportunities with these rules? Who might be left out? What assumptions does this filter make?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should notice that the filter favors people who live nearby, have little experience, and are available on weekends. It may leave out people who live farther away, have more experience, or are only available during the week.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "3613b200-7592-48cd-afca-e6c6a8493a68",
+        "lesson_activity.key": "5ba4d633-bb8a-41f9-8f81-cc08db49ed2a"
+      }
+    },
+    {
+      "key": "29f72533-d8e5-4724-a075-444ba54608a7",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students learn what a Responsible AI Specialist does, then simulate the role by testing OpportunityMatch with user profiles and identifying who is helped, confused, or left out by the app’s current filters.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Introduce the Responsible AI Specialist career.\n",
+        "duration": "15",
+        "name": "Responsible AI Audit"
+      },
+      "seeding_key": {
+        "activity_section.key": "29f72533-d8e5-4724-a075-444ba54608a7",
+        "lesson_activity.key": "da1cd5d1-39a7-4821-986d-8b36ca74dc7e"
+      }
+    },
+    {
+      "key": "9e530b4e-2afd-4eb8-8d16-5ccfb2381dd8",
+      "position": 2,
+      "properties": {
+        "description": "oday, you will act as Responsible AI Specialists for an app called OpportunityMatch. OpportunityMatch is a job-finder app that matches young job seekers with local work opportunities based on filters like distance, schedule, and experience level. First, you will test the app using different user profiles. Then you will improve the app so its filters are more inclusive and easier to understand.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students are working with coded filter rules here, not AI. However, Responsible AI Specialists often start by auditing exactly this kind of logic — understanding how rules shape who sees what. In real AI systems, these same questions apply: who gets shown what, and why?"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9e530b4e-2afd-4eb8-8d16-5ccfb2381dd8",
+        "lesson_activity.key": "da1cd5d1-39a7-4821-986d-8b36ca74dc7e"
+      }
+    },
+    {
+      "key": "e6d2d4a6-ee87-417e-bf03-857c0fa29a32",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e6d2d4a6-ee87-417e-bf03-857c0fa29a32",
+        "lesson_activity.key": "da1cd5d1-39a7-4821-986d-8b36ca74dc7e"
+      }
+    },
+    {
+      "key": "68bdf776-7cf4-4feb-bafe-ea15153cdc4a",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Give each student a copy of the Filtering and Transparency activity guide.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "68bdf776-7cf4-4feb-bafe-ea15153cdc4a",
+        "lesson_activity.key": "da1cd5d1-39a7-4821-986d-8b36ca74dc7e"
+      }
+    },
+    {
+      "key": "166342ae-1a15-4618-a9d7-f26375a294e3",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 1. Students should complete Levels 1 and 2.\n* **Level 1:** Students learn more about the Responsible AI Specialist role.\n* **Level 2:** Students audit OpportunityMatch using the user profiles and audit checklist.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students testing the app from different user perspectives, not just their own. Ask probing questions like: Which user profile does this filter help? Which user might be confused or left out? What does the app let users control, and what is still missing?\n",
+        "progression_name": "Responsible AI Specialist",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use students’ audit checklist responses to gauge whether they can connect specific filters to who is helped, confused, or left out by the app.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "166342ae-1a15-4618-a9d7-f26375a294e3",
@@ -1915,10 +1972,82 @@
       }
     },
     {
-      "key": "517eddab-34b0-424a-90da-2d0f814a6095",
-      "position": 2,
+      "key": "67890f0a-c920-4fd6-9b51-92e239571c68",
+      "position": 6,
       "properties": {
-        "progression_name": "Role Simulation"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What did testing the app like a Responsible AI Specialist help you notice that you might have missed as a regular user?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students compare using the app normally with auditing the app critically. They should recognize that a regular user might focus only on whether the app “works” for their own use case, while a Responsible AI Specialist looks for who is helped, who is left out, what filters control the results, and whether the system is transparent.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "67890f0a-c920-4fd6-9b51-92e239571c68",
+        "lesson_activity.key": "da1cd5d1-39a7-4821-986d-8b36ca74dc7e"
+      }
+    },
+    {
+      "key": "911cf5c2-674d-44ce-b3ad-9bcc22cb6ae5",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students improve OpportunityMatch by making the filters more inclusive and adding transparency labels so users understand what is being filtered.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define active filter.\n",
+        "duration": "15",
+        "name": "Improve the Filters"
+      },
+      "seeding_key": {
+        "activity_section.key": "911cf5c2-674d-44ce-b3ad-9bcc22cb6ae5",
+        "lesson_activity.key": "da1cd5d1-39a7-4821-986d-8b36ca74dc7e"
+      }
+    },
+    {
+      "key": "65525741-b429-4dcb-90e1-097a9fceba59",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Review compound conditionals as a way to combine more than one filter rule in code. Explain that && means **AND**, so all conditions must be true, while || means **OR**, so at least one condition must be true.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "65525741-b429-4dcb-90e1-097a9fceba59",
+        "lesson_activity.key": "da1cd5d1-39a7-4821-986d-8b36ca74dc7e"
+      }
+    },
+    {
+      "key": "ea66f542-1eb9-4767-9f45-82a94d29e4fc",
+      "position": 9,
+      "properties": {
+        "description": "Active filters often use compound conditionals in the background. For example, an app might only show opportunities that are within 5 miles **and** require 1 year or less experience. That uses && because both conditions must be true. An app might also show opportunities that happen on weekends **or** evenings. That uses || because either condition can be true.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Connect this review directly to transparency. When users can see the active filters, they can better understand which rules are limiting their results. Point out that && usually narrows the results, while || usually expands them.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ea66f542-1eb9-4767-9f45-82a94d29e4fc",
+        "lesson_activity.key": "da1cd5d1-39a7-4821-986d-8b36ca74dc7e"
+      }
+    },
+    {
+      "key": "3fd9938f-4294-42e5-8141-667e9ae35881",
+      "position": 10,
+      "properties": {
+        "description": "Now that you have audited OpportunityMatch, you will improve it. Your goal is to make the filters more inclusive and help users understand what is being filtered.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3fd9938f-4294-42e5-8141-667e9ae35881",
+        "lesson_activity.key": "da1cd5d1-39a7-4821-986d-8b36ca74dc7e"
+      }
+    },
+    {
+      "key": "517eddab-34b0-424a-90da-2d0f814a6095",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 3 to complete Levels 3 through 5.\n* **Level 3:** Students improve the app’s filter options.\n* **Level 4:** Students add or revise transparency labels so users understand what is being filtered.\n* **Level 5:** Students reflect on how their changes made OpportunityMatch in Level 4.\n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Check that students’ filter conditions correctly compare the fields in data.js, such as distance, experience, schedule, pay, or category. Make sure students generated code is using && when they mean both conditions must be true, or using || when they want either condition to be true. Ask: When would this filter return true? Which opportunities disappear because of this rule? Which user profile might be excluded if this condition is too strict?\n",
+        "progression_name": "Role Simulation",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use students’ updated filter code in Level 3 to gauge whether they can use fields from data.js to create filters that give users more control. Use students’ transparency labels in Level 4 to gauge whether they can clearly explain what a filter is showing and what may be hidden. Use students’ final responses to gauge whether they can connect the Responsible AI Specialist role to concrete actions: auditing filters, improving user control, and increasing transparency.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "517eddab-34b0-424a-90da-2d0f814a6095",
@@ -1926,187 +2055,27 @@
       }
     },
     {
-      "key": "7936418c-5e71-43ba-ace2-8c051b691d36",
-      "position": 3,
+      "key": "3987b266-9918-46fb-9c16-57cbc1b01b82",
+      "position": 12,
       "properties": {
-        "progression_name": "Check For Understanding"
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students connect active filters in OpportunityMatch to the broader idea that unclear or hidden filters can limit what users see and create a filter bubble.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define filter bubble.\n",
+        "duration": "5",
+        "name": "Filter Bubble Connection"
       },
       "seeding_key": {
-        "activity_section.key": "7936418c-5e71-43ba-ace2-8c051b691d36",
+        "activity_section.key": "3987b266-9918-46fb-9c16-57cbc1b01b82",
         "lesson_activity.key": "da1cd5d1-39a7-4821-986d-8b36ca74dc7e"
       }
     },
     {
-      "key": "3a69270a-1160-4731-949d-b1418a101461",
-      "position": 1,
+      "key": "50df60a6-acb1-4e24-9822-b99a53d62ce9",
+      "position": 13,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Activate prior knowledge about how apps filter content in students' everyday lives.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video “Social media algorithms explained\" video.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If students do not use social media, have them consider an app or website that recommends content (music, videos, shopping, or news)."
-          }
-        ]
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** How could the active filters you coded in the OpportunityMatch create a filter bubble if users do not know they are there?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students connect their filter code to the broader idea that systems can quietly limit what users see. They should recognize that filters for distance, schedule, experience, pay, or category can make the app feel helpful while also hiding useful opportunities from some users.\n"
       },
       "seeding_key": {
-        "activity_section.key": "3a69270a-1160-4731-949d-b1418a101461",
-        "lesson_activity.key": "5ba4d633-bb8a-41f9-8f81-cc08db49ed2a"
-      }
-    },
-    {
-      "key": "9a626f35-6cb8-4a8f-824b-35f09399206c",
-      "position": 2,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "9a626f35-6cb8-4a8f-824b-35f09399206c",
-        "lesson_activity.key": "5ba4d633-bb8a-41f9-8f81-cc08db49ed2a"
-      }
-    },
-    {
-      "key": "bc150e31-b2a0-408e-bdc6-7bd663a26266",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What effect do these filters have on what you see (or don't see)? Who decides what gets filtered out?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that filters are everywhere in their digital lives, that filters both include and exclude information, and that people (designers and companies) make decisions about what gets filtered."
-      },
-      "seeding_key": {
-        "activity_section.key": "bc150e31-b2a0-408e-bdc6-7bd663a26266",
-        "lesson_activity.key": "5ba4d633-bb8a-41f9-8f81-cc08db49ed2a"
-      }
-    },
-    {
-      "key": "62097f9b-c3f3-4a32-9114-2dac49e54431",
-      "position": 4,
-      "properties": {
-        "description": "Today we are going to look at how a simple decision by a designer can hide opportunities from users, and then we will code a filter that is transparent about what it is doing.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "62097f9b-c3f3-4a32-9114-2dac49e54431",
-        "lesson_activity.key": "5ba4d633-bb8a-41f9-8f81-cc08db49ed2a"
-      }
-    },
-    {
-      "key": "ea19c524-9938-4ff6-95c3-d3561de4dd8b",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
-      },
-      "seeding_key": {
-        "activity_section.key": "ea19c524-9938-4ff6-95c3-d3561de4dd8b",
-        "lesson_activity.key": "5ba4d633-bb8a-41f9-8f81-cc08db49ed2a"
-      }
-    },
-    {
-      "key": "6f256be7-6b06-43a4-acde-8a9b859e9ada",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Help students see how hidden or default filters can exclude people even when the code is technically working.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Filtering and Transparency activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 6, Level 1. In their activity guides, students compare the Project Manager's \"fast and professional\" defaults to the Designer's concern that these filters exclude new grads, caregivers, and career-changers.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students identifying specific groups that are excluded by the default filters and suggesting more inclusive alternatives (for example, show all job types at first, make filters very visible). Ask probing questions like: Who else might be hidden by these filters? What would a more transparent design look like?",
-        "progression_name": "Inclusive and Transparent Filters",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Use students' written responses on Level 1 to gauge whether they can connect filter settings to who is included or excluded and whether they can propose concrete changes for transparency."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "6f256be7-6b06-43a4-acde-8a9b859e9ada",
-        "lesson_activity.key": "6001a882-0cf2-4aa9-823c-551d76c3a9bb"
-      }
-    },
-    {
-      "key": "1271642f-4280-473a-a0c3-87a7955a0e8d",
-      "position": 2,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "1271642f-4280-473a-a0c3-87a7955a0e8d",
-        "lesson_activity.key": "6001a882-0cf2-4aa9-823c-551d76c3a9bb"
-      }
-    },
-    {
-      "key": "6640abe0-5b2f-4903-bc03-54953c3fed06",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Is the Job Finder app actually \"broken\"? How can code work correctly but the design still be unfair?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students distinguish between \"no bugs\" and \"good design\" and articulate that working code can still create unfair outcomes when filters hide opportunities from some groups.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *active filter*."
-      },
-      "seeding_key": {
-        "activity_section.key": "6640abe0-5b2f-4903-bc03-54953c3fed06",
-        "lesson_activity.key": "6001a882-0cf2-4aa9-823c-551d76c3a9bb"
-      }
-    },
-    {
-      "key": "326b15f5-3f71-452b-ba94-5dba88f86605",
-      "position": 4,
-      "properties": {
-        "description": "This time, instead of hiding filters, we want our code and our design to be very clear about what is being filtered and why.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "326b15f5-3f71-452b-ba94-5dba88f86605",
-        "lesson_activity.key": "6001a882-0cf2-4aa9-823c-551d76c3a9bb"
-      }
-    },
-    {
-      "key": "dcfcda50-e29e-4b1c-9a0f-0ca56b6401e7",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 2 to complete Levels 2 through 3.\n- Level 2: Students read the definition and visual explanation of \"active filter\".\n- Level 3: Students write an explanation of \"active filter\" in your own words and provide a real-world example.\n- Level 4:  Students write code to filter volunteer roles by category AND age suitability and update the on-screen text to describe the filter.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that matchesCategory correctly compares the dropdown value to each role's category and that matchesAge correctly checks whether the role is suitable for teens. Watch for students misusing && (for example, using || instead). Ask: When would this function return true? Who might be excluded if your age check is wrong?",
-        "progression_name": "Vocab: Active Filter"
-      },
-      "seeding_key": {
-        "activity_section.key": "dcfcda50-e29e-4b1c-9a0f-0ca56b6401e7",
-        "lesson_activity.key": "6001a882-0cf2-4aa9-823c-551d76c3a9bb"
-      }
-    },
-    {
-      "key": "521bd67b-23e4-4a6b-b18b-c70b8f34bd2b",
-      "position": 6,
-      "properties": {
-        "progression_name": "Build Filtered Volunteer Work Search ",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Quickly review the idea of AND (&&) using a simple English example on the board, such as: \"I will show this role if it is in the chosen category AND it is suitable for teens.\" Both conditions must be true."
-          },
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Use students' code on Level 4 to see whether they can correctly implement a two-part predicate with && and whether their label text accurately and clearly describes the active filters."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "521bd67b-23e4-4a6b-b18b-c70b8f34bd2b",
-        "lesson_activity.key": "6001a882-0cf2-4aa9-823c-551d76c3a9bb"
-      }
-    },
-    {
-      "key": "acb24c69-035b-4e4d-b710-83e961987f42",
-      "position": 7,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "acb24c69-035b-4e4d-b710-83e961987f42",
-        "lesson_activity.key": "6001a882-0cf2-4aa9-823c-551d76c3a9bb"
-      }
-    },
-    {
-      "key": "35ddd354-b7b9-4ea3-b9a4-78228a377a04",
-      "position": 8,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *filter bubble*.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How could the active filters you coded in the Volunteer Finder create a filter bubble if users do not know they are there?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students connect their specific code (active filters and && logic) to the broader idea that hidden filters can limit what users see, reducing diverse options or perspectives.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 5 to complete Levels 5 through 6.\n- Level 5: Read the definition and visual for \"Filter Bubble\".\n- Level 6: Explain filter bubbles in your own words and give an example, ideally linked to the Volunteer Finder or another app.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who understand that personalized or hidden filters can narrow what users see over time. Ask: If someone always chooses the same category, what opportunities might they miss? How could more transparent filters help avoid a filter bubble?",
-        "progression_name": "Vocab: Filter Bubble",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Invite a few volunteers to share their examples aloud to surface different ways filter bubbles can appear in social media, shopping, or recommendation apps."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "35ddd354-b7b9-4ea3-b9a4-78228a377a04",
-        "lesson_activity.key": "6001a882-0cf2-4aa9-823c-551d76c3a9bb"
+        "activity_section.key": "50df60a6-acb1-4e24-9822-b99a53d62ce9",
+        "lesson_activity.key": "da1cd5d1-39a7-4821-986d-8b36ca74dc7e"
       }
     },
     {
@@ -3931,10 +3900,10 @@
     {
       "chapter": 22,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Role Simulation"
+        "progression": "Responsible AI Specialist"
       },
       "bonus": false,
       "seeding_key": {
@@ -3944,7 +3913,7 @@
         "lesson.key": "Lesson 6: Filtering and Transparency",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "517eddab-34b0-424a-90da-2d0f814a6095"
+        "activity_section.key": "166342ae-1a15-4618-a9d7-f26375a294e3"
       },
       "level_keys": [
         "iterating-with-ai-lesson6-weblab-1-2026-2027"
@@ -3953,7 +3922,7 @@
     {
       "chapter": 23,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "progression": "Role Simulation"
@@ -3975,7 +3944,7 @@
     {
       "chapter": 24,
       "position": 4,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "progression": "Role Simulation"
@@ -3997,10 +3966,10 @@
     {
       "chapter": 25,
       "position": 5,
-      "activity_section_position": 1,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Role Simulation"
       },
       "bonus": false,
       "seeding_key": {
@@ -4010,7 +3979,7 @@
         "lesson.key": "Lesson 6: Filtering and Transparency",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "7936418c-5e71-43ba-ace2-8c051b691d36"
+        "activity_section.key": "517eddab-34b0-424a-90da-2d0f814a6095"
       },
       "level_keys": [
         "iterating-with-ai-lesson6-frq-2026-2027"
@@ -4971,7 +4940,7 @@
         "lesson.key": "Lesson 6: Filtering and Transparency",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "517eddab-34b0-424a-90da-2d0f814a6095"
+        "activity_section.key": "166342ae-1a15-4618-a9d7-f26375a294e3"
       }
     },
     {
@@ -5007,7 +4976,7 @@
         "lesson.key": "Lesson 6: Filtering and Transparency",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "7936418c-5e71-43ba-ace2-8c051b691d36"
+        "activity_section.key": "517eddab-34b0-424a-90da-2d0f814a6095"
       }
     },
     {
@@ -5427,7 +5396,7 @@
     },
     {
       "name": "[KEY] Filtering and Transparency",
-      "url": "https://docs.google.com/document/d/18JiyTbEOFJKqbmqpUMOx4ZMBy8Lm9rSMbwI7ctdzbDY/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1II5aYZk49akEzW0vgMByghoUB9qIf4u9asDqScxfEAY/edit?usp=drive_link",
       "key": "_key_filtering_and_transparency",
       "properties": {
         "audience": "Verified Teacher",
@@ -5539,7 +5508,7 @@
     },
     {
       "name": "Filtering and Transparency",
-      "url": "https://docs.google.com/presentation/d/1U56f-0XQt4tOKVo8aFQdsOqkpMbGPTeJITp8q08VRP4/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1CnvjJD2W1A1CJZ4b3kePafkt7BfGs6VWnec_xs9dNPU/edit?slide=id.gca418c6afa_0_1070#slide=id.gca418c6afa_0_1070",
       "key": "filtering_and_transparency",
       "properties": {
         "audience": "Teacher",
@@ -5553,7 +5522,7 @@
     },
     {
       "name": "Filtering and Transparency",
-      "url": "https://docs.google.com/document/d/1F5XQHRlx9fyX1313oIsFUcxFjNRmcDI8gPhNWJdg1MQ/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1XNV1OqCuT_EB3hw1dY0h6kYIgDbaZKUPL-C--bLJLkA/edit?usp=sharing",
       "key": "filtering_and_transparency_1",
       "properties": {
         "audience": "Student",
@@ -5708,20 +5677,6 @@
       "seeding_key": {
         "resource.key": "schema_design_for_simple_features"
       }
-    },
-    {
-      "name": "Social Media Algorithms Explained",
-      "url": "https://www.youtube.com/watch?v=F5tz887wXCY",
-      "key": "social_media_algorithms_explained",
-      "properties": {
-        "audience": "Student",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "social_media_algorithms_explained"
-      }
     }
   ],
   "lessons_resources": [
@@ -5848,6 +5803,12 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 6: Filtering and Transparency",
+        "resource.key": "_exemplar_iterating_with_ai_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Filtering and Transparency",
         "resource.key": "_key_filtering_and_transparency"
       }
     },
@@ -5866,7 +5827,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 6: Filtering and Transparency",
-        "resource.key": "social_media_algorithms_explained"
+        "resource.key": "iterating_with_ai_unit_guide"
       }
     },
     {
