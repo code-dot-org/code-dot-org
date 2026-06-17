@@ -739,6 +739,32 @@ describe('javalab2 sourceConverter', () => {
       const round = multiFileToFlat(flatToMultiFile(original));
       expect(round['Locked.java'].locked).toBe(true);
     });
+
+    it('persists locked across both a regular file and an image file in one round trip', () => {
+      const original: JavalabFlatSource = {
+        'Locked.java': {...flatFile('class Locked {}', 0), locked: true},
+        'cat.png': {
+          text: '',
+          isVisible: true,
+          url: '/level_starter_assets/My%20Level/uuid/uuid-1.png',
+          locked: true,
+        },
+      };
+      const mf = flatToMultiFile(original);
+      const javaFile = Object.values(mf.files).find(
+        f => f.name === 'Locked.java'
+      )!;
+      const imageFile = Object.values(mf.files).find(f => f.name === 'cat.png')!;
+      expect(javaFile.type).toBe(ProjectFileType.LOCKED_STARTER);
+      expect(imageFile.type).toBe(ProjectFileType.LOCKED_STARTER);
+
+      const round = multiFileToFlat(mf);
+      expect(round['Locked.java'].locked).toBe(true);
+      expect(round['cat.png'].locked).toBe(true);
+      expect(round['cat.png'].url).toBe(
+        '/level_starter_assets/My%20Level/uuid/uuid-1.png'
+      );
+    });
   });
 
   describe('start + validation round trip', () => {
