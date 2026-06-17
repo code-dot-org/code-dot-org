@@ -141,7 +141,7 @@
     top: 0;
     width: 1px;
     height: 100%;
-    border-left: 3px var(--borders-neutral-strong) solid;
+    border-left: 3px solid var(--borders-neutral-strong);
 
     &Playing {
       border-left: 3px yellow solid;
