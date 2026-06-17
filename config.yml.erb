@@ -473,7 +473,9 @@ dashboard_workers:
 # dashboard_worker_memory_mb is the assumed steady-state used-memory per
 # worker (sized relative to observed PSS, with slack); the headroom fraction
 # reserves RAM for the master, sidecars, OS, and per-worker variance. With
-# these defaults a 192 GB / 48 vCPU frontend resolves to 40 workers. See
+# these defaults a 128 GB / 32 vCPU m7i.8xlarge resolves to ~26 workers and a
+# 192 GB / 48 vCPU m7i.12xlarge to 40 -- so the same budget tracks the
+# seasonal instance resize without a config change. See
 # lib/cdo/puma_worker_count.rb.
 dashboard_worker_memory_mb: 4096
 dashboard_worker_memory_headroom: 0.15

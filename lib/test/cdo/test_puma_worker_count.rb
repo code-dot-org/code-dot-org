@@ -4,22 +4,34 @@ require_relative '../../cdo/puma_worker_count'
 # Standalone unit test for the pure worker-count calculation. Deliberately
 # avoids the Rails/DB test harness so it runs without a database.
 class PumaWorkerCountTest < Minitest::Test
-  # 192 GB / 48 vCPU frontend (m7i.12xlarge), default budget.
-  PROD_MEMORY_MB = 192 * 1024
-
   def compute(**overrides)
+    # Defaults model a fall-size m7i.12xlarge (48 vCPU / 192 GB).
     defaults = {
       explicit: nil,
       cpu_count: 48,
-      total_memory_mb: PROD_MEMORY_MB,
+      total_memory_mb: 192 * 1024,
       per_worker_mb: 4096,
       headroom: 0.15
     }
     Cdo::PumaWorkerCount.compute(**defaults.merge(overrides))
   end
 
-  def test_production_defaults_resolve_to_40
-    assert_equal 40, compute
+  # The same default budget must track the seasonal instance resize without
+  # a config change: ~26 workers on the summer m7i.8xlarge, 40 in the fall.
+  def test_fall_m7i_12xlarge_resolves_to_40
+    assert_equal 40, compute(cpu_count: 48, total_memory_mb: 192 * 1024)
+  end
+
+  def test_summer_m7i_8xlarge_resolves_to_26
+    # 32 vCPU / ~123 GB MemTotal: memory budget (26) wins under the CPU cap (32).
+    assert_equal 26, compute(cpu_count: 32, total_memory_mb: 123 * 1024)
+  end
+
+  def test_explicit_count_does_not_adapt_to_a_smaller_box
+    # Why memory-aware beats a hardcoded count: an explicit 40 is returned
+    # verbatim, oversubscribing the summer box's 32 vCPUs (and worsening
+    # memory), where the memory-aware calc sizes down to 26.
+    assert_equal 40, compute(explicit: 40, cpu_count: 32, total_memory_mb: 123 * 1024)
   end
 
   def test_explicit_integer_overrides_everything
