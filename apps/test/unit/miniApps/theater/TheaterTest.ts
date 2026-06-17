@@ -1,14 +1,10 @@
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
-
 import {TheaterSignalType} from '@cdo/apps/miniApps/theater/constants';
 import Theater from '@cdo/apps/miniApps/theater/Theater';
 
-import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
-
 describe('Theater (lab2)', () => {
   let theater: Theater;
-  let playAudioSpy: sinon.SinonSpy;
-  let pauseAudioSpy: sinon.SinonSpy;
+  let playSpy: jest.Mock;
+  let pauseSpy: jest.Mock;
   let imageElement: {
     src?: string;
     style: {visibility?: string};
@@ -16,21 +12,21 @@ describe('Theater (lab2)', () => {
   };
   let audioElement: {
     src?: string;
-    play: sinon.SinonSpy;
-    pause: sinon.SinonSpy;
+    play: jest.Mock;
+    pause: jest.Mock;
     oncanplaythrough?: () => void;
   };
-  let onOutputMessage: sinon.SinonStub;
-  let onNewlineMessage: sinon.SinonStub;
+  let onOutputMessage: jest.Mock;
+  let onNewlineMessage: jest.Mock;
 
   beforeEach(() => {
-    onOutputMessage = sinon.stub();
-    onNewlineMessage = sinon.stub();
+    onOutputMessage = jest.fn();
+    onNewlineMessage = jest.fn();
 
-    playAudioSpy = sinon.spy();
-    pauseAudioSpy = sinon.spy();
+    playSpy = jest.fn();
+    pauseSpy = jest.fn();
     imageElement = {style: {}};
-    audioElement = {play: playAudioSpy, pause: pauseAudioSpy};
+    audioElement = {play: playSpy, pause: pauseSpy};
 
     theater = new Theater(onOutputMessage, onNewlineMessage);
     theater.getImgElement = () => imageElement as unknown as HTMLImageElement;
@@ -38,25 +34,27 @@ describe('Theater (lab2)', () => {
   });
 
   it('sets audio src and waits to play when AUDIO_URL arrives', () => {
-    theater.startPlayback = sinon.spy();
+    const startPlayback = jest.fn();
+    theater.startPlayback = startPlayback;
     theater.handleSignal({
       value: TheaterSignalType.AUDIO_URL,
       detail: {url: 'url'},
     });
-    expect(audioElement.src).to.contain('url');
-    expect(typeof audioElement.oncanplaythrough).to.equal('function');
-    expect(theater.startPlayback).to.have.not.been.called;
+    expect(audioElement.src).toContain('url');
+    expect(typeof audioElement.oncanplaythrough).toBe('function');
+    expect(startPlayback).not.toHaveBeenCalled();
   });
 
   it('sets image src and waits to show when VISUAL_URL arrives', () => {
-    theater.startPlayback = sinon.spy();
+    const startPlayback = jest.fn();
+    theater.startPlayback = startPlayback;
     theater.handleSignal({
       value: TheaterSignalType.VISUAL_URL,
       detail: {url: 'url'},
     });
-    expect(imageElement.src).to.contain('url');
-    expect(typeof imageElement.onload).to.equal('function');
-    expect(theater.startPlayback).to.have.not.been.called;
+    expect(imageElement.src).toContain('url');
+    expect(typeof imageElement.onload).toBe('function');
+    expect(startPlayback).not.toHaveBeenCalled();
   });
 
   it('shows the image and plays audio once both have loaded', () => {
@@ -69,10 +67,10 @@ describe('Theater (lab2)', () => {
       detail: {url: 'url'},
     });
     imageElement.onload!();
-    expect(imageElement.style.visibility).to.not.equal('visible');
+    expect(imageElement.style.visibility).not.toBe('visible');
     audioElement.oncanplaythrough!();
-    expect(imageElement.style.visibility).to.equal('visible');
-    expect(playAudioSpy).to.have.been.calledOnce;
+    expect(imageElement.style.visibility).toBe('visible');
+    expect(playSpy).toHaveBeenCalledTimes(1);
   });
 
   it('shows the image without waiting for audio after NO_AUDIO', () => {
@@ -82,24 +80,24 @@ describe('Theater (lab2)', () => {
     });
     imageElement.onload!();
     theater.handleSignal({value: TheaterSignalType.NO_AUDIO});
-    expect(imageElement.style.visibility).to.equal('visible');
-    expect(playAudioSpy).to.have.not.been.called;
+    expect(imageElement.style.visibility).toBe('visible');
+    expect(playSpy).not.toHaveBeenCalled();
   });
 
   it('hides and clears the image on reset', () => {
     imageElement.src = 'url';
     audioElement.src = 'url';
     theater.reset();
-    expect(imageElement.style.visibility).to.equal('hidden');
-    expect(imageElement.src).to.equal('');
-    expect(audioElement.src).to.equal('');
-    expect(pauseAudioSpy).to.have.been.called;
+    expect(imageElement.style.visibility).toBe('hidden');
+    expect(imageElement.src).toBe('');
+    expect(audioElement.src).toBe('');
+    expect(pauseSpy).toHaveBeenCalled();
   });
 
   it('prints a completion message on close', () => {
     theater.onClose();
-    expect(onOutputMessage).to.have.been.called;
-    expect(onOutputMessage.getCall(0).args[0]).to.contain('Program completed');
+    expect(onOutputMessage).toHaveBeenCalled();
+    expect(onOutputMessage.mock.calls[0][0]).toContain('Program completed');
   });
 
   it('reports that photo prompts are unsupported on GET_IMAGE', () => {
@@ -107,7 +105,7 @@ describe('Theater (lab2)', () => {
       value: TheaterSignalType.GET_IMAGE,
       detail: {prompt: 'prompt', uploadUrl: 'upload.url'},
     });
-    expect(onOutputMessage).to.have.been.called;
-    expect(onOutputMessage.getCall(0).args[0]).to.contain('not yet supported');
+    expect(onOutputMessage).toHaveBeenCalled();
+    expect(onOutputMessage.mock.calls[0][0]).toContain('not yet supported');
   });
 });
