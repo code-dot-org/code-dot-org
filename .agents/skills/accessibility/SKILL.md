@@ -36,11 +36,17 @@ disagrees with this skill, the checklist wins.
 
 ### Step 1: Identify the Component Role
 
-Determine the functional purpose (e.g., Is this a button, a link, or a tab?), then reach for the
-design system's component for it — **load the `design-system` skill, which owns the choice.** The
-component renders the most semantic native element and ships its keyboard and focus behavior; build
-a `div`/`span` widget only where no component fits. Find the current primitive in the component
-library rather than relying on a remembered import path.
+Determine the functional purpose (e.g., Is this a button, a link, or a tab?), then resolve it in
+priority order. First, the design-system component for that role (load the `design-system` skill,
+which owns the choice; e.g. MUI `Button` for a button); it renders the right semantic element and
+ships its keyboard, focus, and state behavior. Second, a raw native element (`<button>`, `<a href>`)
+only where no design-system component fits, and state why. Never a hand-built `div`/`span` widget.
+Find the current primitive in the component library rather than relying on a remembered import
+path.
+
+When auditing existing code, first sweep for interactive behavior on non-interactive elements —
+`onClick`/`onKeyDown`, or a `role`, on a `div`/`span`/`p` — these div-buttons are the most commonly
+missed barrier, and each one resolves through the priority order above.
 
 ### Step 2: Define Perceivable Attributes
 
