@@ -218,12 +218,12 @@ export default function ReactFlowCanvas({
   const canvasContainerRef = useRef<HTMLDivElement>(null);
   // Tracks the last plain-clicked groupable target so the first Shift+click of
   // a fresh multi-selection can include it automatically. Standalone lines
-  // contribute both anchor-node ids here.
-  const multiSelectAnchorRef = useRef<string[] | null>(null);
+  // contribute both of their lineAnchor node ids here.
+  const multiSelectSeedRef = useRef<string[] | null>(null);
   const handlePaneClick = useCallback(() => {
     canvasContainerRef.current?.focus();
     setMultiSelectedNodeIds(new Set());
-    multiSelectAnchorRef.current = null;
+    multiSelectSeedRef.current = null;
   }, []);
   const {
     tabOrder,
@@ -822,18 +822,18 @@ export default function ReactFlowCanvas({
           setMultiSelectedNodeIds(prev => {
             const next = new Set(prev);
             // On the first Shift+click of a fresh selection, automatically include
-            // the anchor (last plain-clicked groupable target) so plain-click → Shift+click
-            // selects two nodes in one extra click, matching standard UX.
-            // Skip anchors that are already grouped or locked.
+            // the seed (last plain-clicked groupable target) so plain-click → Shift+click
+            // selects two elements in one extra click, matching standard UX.
+            // Skip seed entries that are already grouped or locked.
             if (next.size === 0) {
-              multiSelectAnchorRef.current?.forEach(anchorId => {
-                const anchorNode = nodes.find(n => n.id === anchorId);
+              multiSelectSeedRef.current?.forEach(seedId => {
+                const seedNode = nodes.find(n => n.id === seedId);
                 if (
-                  anchorId !== node.id &&
-                  !isGroupedChildNode(anchorNode) &&
-                  !anchorNode?.data?.locked
+                  seedId !== node.id &&
+                  !isGroupedChildNode(seedNode) &&
+                  !seedNode?.data?.locked
                 ) {
-                  next.add(anchorId);
+                  next.add(seedId);
                 }
               });
             }
@@ -851,9 +851,9 @@ export default function ReactFlowCanvas({
         return;
       }
 
-      // Plain click: record anchor, clear any multi-selection, open toolbar.
-      // Group nodes, grouped children, and locked nodes get null anchor.
-      multiSelectAnchorRef.current =
+      // Plain click: record selection seed, clear any multi-selection, open toolbar.
+      // Group nodes, grouped children, and locked nodes get null seed.
+      multiSelectSeedRef.current =
         nodeType === 'group' ||
         isGroupedChildNode(fullNode) ||
         fullNode?.data?.locked
@@ -879,14 +879,14 @@ export default function ReactFlowCanvas({
 
       if (event.shiftKey) {
         if (anchorIds && !lineIsGrouped && !lineIsLocked) {
-          // Shift+click on a standalone line: toggle both anchor nodes in the
-          // multi-selection, applying the same anchor-inclusion logic as nodes.
+          // Shift+click on a standalone line: toggle both lineAnchor nodes in
+          // the multi-selection, applying the same seed-inclusion logic as nodes.
           setMultiSelectedNodeIds(prev => {
             const next = new Set(prev);
             if (next.size === 0) {
-              multiSelectAnchorRef.current?.forEach(id => {
-                const anchorNode = getNode(id);
-                if (!isGroupedChildNode(anchorNode)) next.add(id);
+              multiSelectSeedRef.current?.forEach(seedId => {
+                const seedNode = getNode(seedId);
+                if (!isGroupedChildNode(seedNode)) next.add(seedId);
               });
             }
             const allSelected = anchorIds.every(id => next.has(id));
@@ -905,8 +905,8 @@ export default function ReactFlowCanvas({
         return;
       }
 
-      // Plain click: record standalone, ungrouped, unlocked line as anchor.
-      multiSelectAnchorRef.current =
+      // Plain click: record standalone, ungrouped, unlocked line as selection seed.
+      multiSelectSeedRef.current =
         lineIsGrouped || lineIsLocked ? null : anchorIds;
       setMultiSelectedNodeIds(new Set());
       openToolbar({type: 'edge', id: edge.id}, {trapFocus: false});
