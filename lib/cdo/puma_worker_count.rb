@@ -95,8 +95,13 @@ module Cdo
       [cpu_workers, memory_workers].min.clamp(1..)
     end
 
-    # Total system RAM in MB, or nil if it cannot be determined (so callers
-    # fall back to CPU-based sizing rather than guessing).
+    # Total system RAM in MB from /proc/meminfo. This is Linux-specific, which
+    # is fine: every managed environment where clustered puma runs is Linux.
+    # On other hosts -- notably macOS dev -- /proc is absent, this returns nil,
+    # and compute() falls back to CPU-only sizing. We deliberately don't add a
+    # sysctl/other reader: dev runs single mode (dashboard_workers: 0), which
+    # short-circuits before the memory budget, and clustered puma on a
+    # non-Linux host is served fine by CPU-based sizing.
     def self.total_memory_mb
       return nil unless File.readable?(MEMINFO)
 
