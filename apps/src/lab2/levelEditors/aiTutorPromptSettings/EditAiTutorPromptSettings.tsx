@@ -19,7 +19,11 @@ interface EditAiTutorPromptSettingsProps {
   defaultAnswerTypes: string[];
   legacyMode?: string;
   legacyModeToAnswerType?: Record<string, string[]>;
+  instructions?: string;
 }
+
+const DEFAULT_INSTRUCTIONS =
+  'Choose which answer types you would like the AI tutor to be able to respond with. You must specify at least one.';
 
 const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
   promptSettings,
@@ -29,6 +33,7 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
   defaultAnswerTypes,
   legacyMode,
   legacyModeToAnswerType,
+  instructions = DEFAULT_INSTRUCTIONS,
 }) => {
   const [enabledAnswerTypes, setEnabledAnswerTypes] = useState<Set<string>>(
     () => {
@@ -78,8 +83,7 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
   return (
     <div>
       <Typography variant="body2" className={moduleStyles.instructions}>
-        Choose which answer types you would like the AI tutor to be able to
-        respond with. You must specify at least one.
+        {instructions}
       </Typography>
       <input
         id="level_ai_tutor_prompt_settings"

@@ -35,6 +35,9 @@ const ANSWER_TYPE_TO_LABEL = {
   testCase: 'Test Case',
 };
 
+const INSTRUCTIONS =
+  'Choose which answer types you would like the AI tutor to be able to respond with. If none of the answer types are enabled in Python Lab, then the AI Tutor tab will NOT be shown in the Sidebar/Resource Panel.';
+
 $(document).ready(function () {
   const promptSettings = getScriptData('promptsettings');
 
@@ -45,6 +48,7 @@ $(document).ready(function () {
       answerTypeToLabel={ANSWER_TYPE_TO_LABEL}
       answerTypeContracts={ANSWER_TYPE_CONTRACTS}
       defaultAnswerTypes={DEFAULT_ANSWER_TYPES}
+      instructions={INSTRUCTIONS}
     />,
     document.getElementById('pythonlab-ai-tutor-prompt-settings-editor'),
     {
