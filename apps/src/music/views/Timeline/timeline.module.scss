@@ -58,7 +58,7 @@
       position: absolute;
       top: 27px;
       bottom: 0;
-      border-left: 1px var(--borders-neutral-strong) solid;
+      border-left: 1px solid var(--borders-neutral-strong);
 
       &Current {
         border-left-color: var(--borders-neutral-solid);
