@@ -23,11 +23,11 @@ import {JavalabFlatFile, JavalabFlatSource} from './types';
 function projectFileType(flat: JavalabFlatFile): ProjectFileType | undefined {
   if (flat.isValidation) return ProjectFileType.VALIDATION;
   if (!flat.isVisible) return ProjectFileType.SUPPORT;
-  // The flat shape doesn't persist types, so asset files are typed by where
-  // their url points: level starter assets are levelbuilder-owned (STARTER),
-  // while a student's own uploads stay untyped.
-  if (flat.url) {
-    return isStarterAssetUrl(flat.url) ? ProjectFileType.STARTER : undefined;
+  // The flat shape doesn't persist types. A student's own uploads (url not
+  // under level_starter_assets) stay untyped; everything else is a starter,
+  // locked or not.
+  if (flat.url && !isStarterAssetUrl(flat.url)) {
+    return undefined;
   }
   return flat.locked ? ProjectFileType.LOCKED_STARTER : ProjectFileType.STARTER;
 }

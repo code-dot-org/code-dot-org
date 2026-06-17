@@ -592,6 +592,41 @@ describe('javalab2 sourceConverter', () => {
       expect(image.type).toBe(ProjectFileType.STARTER);
     });
 
+    it('flatToMultiFile types locked starter-asset files LOCKED_STARTER', () => {
+      const mf = flatToMultiFile({
+        'cat.png': {
+          text: '',
+          isVisible: true,
+          url: '/level_starter_assets/My%20Level/uuid/uuid-1.png',
+          locked: true,
+        },
+      });
+      const image = Object.values(mf.files).find(f => f.name === 'cat.png')!;
+      expect(image.type).toBe(ProjectFileType.LOCKED_STARTER);
+    });
+
+    it('round-trips a locked starter asset through multiFile -> flat -> multiFile', () => {
+      const source: MultiFileSource = {
+        folders: {},
+        files: {
+          '0': {
+            id: '0',
+            name: 'cat.png',
+            contents: '',
+            folderId: DEFAULT_FOLDER_ID,
+            type: ProjectFileType.LOCKED_STARTER,
+            url: '/level_starter_assets/My%20Level/uuid/uuid-1.png',
+          },
+        },
+        openFiles: [],
+      };
+      const flat = multiFileToFlat(source);
+      expect(flat['cat.png'].locked).toBe(true);
+      const round = flatToMultiFile(flat);
+      const image = Object.values(round.files).find(f => f.name === 'cat.png')!;
+      expect(image.type).toBe(ProjectFileType.LOCKED_STARTER);
+    });
+
     it('flatToMultiFile omits absent url', () => {
       const mf = flatToMultiFile({
         'Main.java': flatFile('class Main {}', 0),
