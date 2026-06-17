@@ -5,7 +5,6 @@ class PracticeProblemsControllerTest < ActionController::TestCase
 
   setup do
     @user = create(:student)
-    create(:single_user_experiment, min_user_id: @user.id, name: 'lesson-tutor')
 
     @objective1 = create(:objective)
     @objective2 = create(:objective)
@@ -28,20 +27,6 @@ class PracticeProblemsControllerTest < ActionController::TestCase
   test 'show redirects to sign in when not signed in' do
     get :show, params: {id: @problem_with_obj1.id}
     assert_redirected_to_sign_in
-  end
-
-  # --- no experiment ---
-
-  test 'index returns forbidden when user lacks lesson-tutor experiment' do
-    sign_in create(:student)
-    get :index
-    assert_response :forbidden
-  end
-
-  test 'show returns forbidden when user lacks lesson-tutor experiment' do
-    sign_in create(:student)
-    get :show, params: {id: @problem_with_obj1.id}
-    assert_response :forbidden
   end
 
   # --- index ---
