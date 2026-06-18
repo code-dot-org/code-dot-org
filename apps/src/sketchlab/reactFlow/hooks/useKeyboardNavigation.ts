@@ -18,7 +18,7 @@ import {
   entriesMatch,
   getElementForEntry,
   getEntryFromDOM,
-  type TabOrderEntry,
+  TabOrderEntry,
 } from '../utils/computeTabOrder';
 import {isLineAnchorNodeId} from '../utils/connectionRules';
 import {getNodeLabel} from '../utils/elementLabel';
@@ -129,6 +129,12 @@ interface UseKeyboardNavigationOptions {
   // (which renders outside .react-flow__node), so getEntryFromDOM returns
   // null. lastFocusedEntry gives us the last known node/edge target.
   lastFocusedEntry: TabOrderEntry | null;
+  isGroupMode: boolean;
+  canGroup: boolean;
+  onEnterGroupMode: () => void;
+  onExitGroupMode: () => void;
+  onToggleEntryInGroupMode: (entry: TabOrderEntry) => void;
+  onGroupSelected: () => void;
 }
 
 /**
@@ -174,6 +180,12 @@ export function useKeyboardNavigation({
   redo,
   pushSnapshot,
   lastFocusedEntry,
+  isGroupMode,
+  canGroup,
+  onEnterGroupMode,
+  onExitGroupMode,
+  onToggleEntryInGroupMode,
+  onGroupSelected,
 }: UseKeyboardNavigationOptions) {
   const {
     getEdge,
@@ -597,6 +609,49 @@ export function useKeyboardNavigation({
     [nodes, getNode, pushSnapshot, setNodes, announce]
   );
 
+  // G key: enter group mode, or confirm group creation if already in it.
+  const handleGroupModeKey = useCallback(
+    (keyContext: KeyContext): boolean => {
+      const {event} = keyContext;
+      if (event.key !== 'g') return false;
+      event.preventDefault();
+      event.stopPropagation();
+      if (isGroupMode) {
+        if (canGroup) onGroupSelected();
+        // If canGroup is false, consume the key but stay in group mode.
+      } else {
+        onEnterGroupMode();
+      }
+      return true;
+    },
+    [isGroupMode, canGroup, onEnterGroupMode, onGroupSelected]
+  );
+
+  // Escape in group mode: exit without creating a group.
+  const handleGroupModeEscape = useCallback(
+    (keyContext: KeyContext): boolean => {
+      const {event} = keyContext;
+      if (!isGroupMode || event.key !== 'Escape') return false;
+      event.preventDefault();
+      onExitGroupMode();
+      return true;
+    },
+    [isGroupMode, onExitGroupMode]
+  );
+
+  // Enter in group mode: toggle the focused element in/out of the selection.
+  const handleGroupModeEnter = useCallback(
+    (keyContext: KeyContext): boolean => {
+      const {event, focusedEntry} = keyContext;
+      if (!isGroupMode || event.key !== 'Enter' || !focusedEntry) return false;
+      event.preventDefault();
+      event.stopPropagation();
+      onToggleEntryInGroupMode(focusedEntry);
+      return true;
+    },
+    [isGroupMode, onToggleEntryInGroupMode]
+  );
+
   /**
    * Enter on a focused node (outside connect mode) enters edit mode.
    * Do NOT stopPropagation here: React Flow's handler needs to fire
@@ -668,11 +723,14 @@ export function useKeyboardNavigation({
       // Tab navigation works in both read-only and edit mode.
       if (handleTabNavigation(keyContext)) return;
 
-      // Escape cancels connect mode.
+      // Escape cancels connect mode first, then exits group mode if active.
       if (handleEscapeCancelConnect(keyContext)) return;
 
       // Everything below mutates the canvas and requires edit access.
       if (readOnly) return;
+
+      if (handleGroupModeEscape(keyContext)) return;
+      if (handleGroupModeKey(keyContext)) return;
 
       if (handleCopy(keyContext)) return;
       if (handleCut(keyContext)) return;
@@ -681,6 +739,7 @@ export function useKeyboardNavigation({
       if (handleRedo(keyContext)) return;
 
       if (handleOpenToolbar(keyContext)) return;
+      if (handleGroupModeEnter(keyContext)) return;
       if (handleConnectToggle(keyContext)) return;
       if (handleConnectComplete(keyContext)) return;
 
@@ -708,12 +767,15 @@ export function useKeyboardNavigation({
       getNode,
       handleTabNavigation,
       handleEscapeCancelConnect,
+      handleGroupModeEscape,
+      handleGroupModeKey,
       handleCopy,
       handleCut,
       handlePaste,
       handleUndo,
       handleRedo,
       handleOpenToolbar,
+      handleGroupModeEnter,
       handleConnectToggle,
       handleConnectComplete,
       handleArrowMove,

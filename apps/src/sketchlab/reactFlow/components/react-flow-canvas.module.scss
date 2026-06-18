@@ -103,6 +103,19 @@
   border-radius: 4px;
 }
 
+// Keyboard group-mode instruction banner shown at the bottom of the canvas.
+.groupModeIndicator {
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  border: 1px solid var(--borders-brand-teal-primary);
+  border-left: 4px solid var(--borders-brand-teal-primary);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  pointer-events: none;
+  user-select: none;
+}
+
 // Visually hidden but announced by screen readers.
 .srOnly {
   position: absolute;

@@ -4,6 +4,7 @@ import {
   type IsValidConnection,
   type OnEdgesChange,
   type OnNodesChange,
+  Panel,
   ReactFlow,
   useEdgesState,
   useNodesState,
@@ -210,6 +211,10 @@ export default function ReactFlowCanvas({
   const {
     multiSelectedNodeIds,
     clearSelection,
+    isGroupMode,
+    enterGroupMode,
+    exitGroupMode,
+    toggleEntryInGroupMode,
     handleNodeClick,
     handleEdgeClick,
   } = useElementClickHandlers({
@@ -219,6 +224,20 @@ export default function ReactFlowCanvas({
     openToolbar,
     closeToolbar,
   });
+
+  // Count logical groupable elements: regular nodes as 1, standalone-line
+  // anchor pairs as 1. Already-grouped and locked nodes are excluded.
+  const groupableCount = useMemo(() => {
+    let anchors = 0;
+    let nonAnchors = 0;
+    for (const id of multiSelectedNodeIds) {
+      const node = nodes.find(n => n.id === id);
+      if (!node || node.parentId || node.data?.locked) continue;
+      if (node.type === 'lineAnchor') anchors++;
+      else nonAnchors++;
+    }
+    return nonAnchors + anchors / 2;
+  }, [multiSelectedNodeIds, nodes]);
   const handlePaneClick = useCallback(() => {
     canvasContainerRef.current?.focus();
     clearSelection();
@@ -386,6 +405,12 @@ export default function ReactFlowCanvas({
       redo: handleRedo,
       pushSnapshot,
       lastFocusedEntry,
+      isGroupMode,
+      canGroup: groupableCount >= 2,
+      onEnterGroupMode: enterGroupMode,
+      onExitGroupMode: exitGroupMode,
+      onToggleEntryInGroupMode: toggleEntryInGroupMode,
+      onGroupSelected: handleGroupNodes,
     });
 
   const {handleEdgeMouseDown, isLineDragging} = useLineEdgeDrag({
@@ -741,10 +766,19 @@ export default function ReactFlowCanvas({
                       setNodes={setNodes}
                       setEdges={setEdges}
                       pushSnapshot={pushSnapshot}
-                      multiSelectedNodeIds={[...multiSelectedNodeIds]}
+                      groupableCount={groupableCount}
                       onGroupNodes={handleGroupNodes}
                       onUngroupNode={handleUngroupNode}
                     />
+                    {isGroupMode && (
+                      <Panel
+                        position="bottom-center"
+                        className={styles.groupModeIndicator}
+                      >
+                        Tab to move — Enter to select/deselect — G to group —
+                        Esc to cancel
+                      </Panel>
+                    )}
                     <Background />
                     <CanvasControls
                       onUndo={handleUndo}
