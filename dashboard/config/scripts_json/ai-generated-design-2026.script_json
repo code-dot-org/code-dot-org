@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-11 20:35:33 UTC",
+    "serialized_at": "2026-06-17 21:11:46 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -7085,8 +7085,8 @@
       }
     },
     {
-      "level_name": "ai-generated-design-lesson3-level1-explore_2026",
-      "s3_config_dir": null,
+      "level_name": "ai-generated-design-lesson3-level2-challenges_2026",
+      "s3_config_dir": "",
       "seeding_key": {
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
         "lesson_group.key": "lessonGroup-3",

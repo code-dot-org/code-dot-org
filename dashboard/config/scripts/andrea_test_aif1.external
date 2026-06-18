@@ -1,6 +1,6 @@
-name 'pl_sandbox_aif-2-U4-class-context-3'
-title 'title'
-description 'description here'
+name 'andrea_test-aif1'
+title 'TESTING'
+description 'testing cloning'
 
 markdown <<MARKDOWN
 # Classroom Context

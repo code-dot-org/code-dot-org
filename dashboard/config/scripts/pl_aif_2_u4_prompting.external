@@ -53,7 +53,7 @@ In Unit 4, students are no longer only describing what an app should display. Th
 
 ---
 
-<div style="background-color:#B7E0E5;border-radius:30px;color:#000000;width:95%;padding:18px 24px;margin:24px 0;">
+<div style="background-color:#e4e2f8;border-radius:30px;color:#000000;width:95%;padding:18px 24px;margin:24px 0;">
 
 <p style="font-size:18px;line-height:1.5;margin:0;">
 <strong>💡 Teacher Tip:</strong> Students often describe what they want the app to display, but forget to explain how the program should process the data. Encourage students to describe the loop behavior, the condition being checked, and what should happen for each item in the collection.
@@ -79,16 +79,16 @@ Before expanding the sections below, think about how you would coach a student t
   <summary style="font-size:16px;font-weight:bold;">🔁 What loop behavior should the student describe?</summary>
   <div style="margin-top:16px;margin-left:16px;margin-right:16px;">
     <p style="font-size:16px;line-height:1.5;">
-      The student should explain that the program needs to loop through each song in the collection and check one song at a time.
+      The program needs to loop through each song in the collection and check one song at a time.
     </p>
   </div>
 </details>
 
 <details style="background-color:#ececec;padding:12px;margin-bottom:10px;border:1px solid transparent;border-radius:8px;">
-  <summary style="font-size:16px;font-weight:bold;">🗂 What data context should the student include?</summary>
+  <summary style="font-size:16px;font-weight:bold;">🧠 What data context should the student include?</summary>
   <div style="margin-top:16px;margin-left:16px;margin-right:16px;">
     <p style="font-size:16px;line-height:1.5;">
-      The student should name the data structure, such as an array of song objects, and describe which property stores the artist name.
+      They should include the data structure, such as an array of song objects, and describe which property stores the artist name.
     </p>
   </div>
 </details>
@@ -97,7 +97,7 @@ Before expanding the sections below, think about how you would coach a student t
   <summary style="font-size:16px;font-weight:bold;">⚙️ What condition should the student clarify?</summary>
   <div style="margin-top:16px;margin-left:16px;margin-right:16px;">
     <p style="font-size:16px;line-height:1.5;">
-      The student should explain that the program should compare each song’s artist to the artist selected by the user.
+      The program should compare each song’s artist to the artist selected by the user.
     </p>
   </div>
 </details>
