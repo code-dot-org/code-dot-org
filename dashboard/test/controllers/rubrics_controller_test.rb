@@ -203,6 +203,12 @@ class RubricsControllerTest < ActionController::TestCase
     assert_equal 2, LearningGoalTeacherEvaluation.where(user: @student, teacher: @teacher).where.not(submitted_at: nil).count
   end
 
+  test 'cannot submit evaluations for a student who is not the teacher\'s' do
+    sign_in @teacher
+    post :submit_evaluations, params: {id: @rubric.id, student_id: @unauth_student.id}
+    assert_response :forbidden
+  end
+
   test 'can only submit evaluations with same teacher_id as current_user' do
     another_teacher = create(:teacher)
     create(:learning_goal, :with_teacher_evaluations, rubric: @rubric, teacher: @teacher, student: @student)

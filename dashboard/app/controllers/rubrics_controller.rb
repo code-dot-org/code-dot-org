@@ -81,6 +81,8 @@ class RubricsController < ApplicationController
   def submit_evaluations
     return head :forbidden unless current_user&.teacher?
     permitted_params = params.permit(:id, :student_id)
+    student = User.find_by(id: permitted_params[:student_id])
+    return head :forbidden unless student&.student_of?(current_user)
     rubric = Rubric.find(permitted_params[:id])
     learning_goal_ids = LearningGoal.where(rubric_id: permitted_params[:id]).pluck(:id)
     evaluations = LearningGoalTeacherEvaluation.where(user_id: permitted_params[:student_id], learning_goal_id: learning_goal_ids, teacher_id: current_user.id)
