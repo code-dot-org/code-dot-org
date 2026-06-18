@@ -55,7 +55,24 @@ class RubricsControllerTest < ActionController::TestCase
   test_user_gets_response_for :new, params: -> {{lessonId: @lesson.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
   test_user_gets_response_for :new, params: -> {{lessonId: @lesson.id}}, user: :student, response: :forbidden
   test_user_gets_response_for :new, params: -> {{lessonId: @lesson.id}}, user: :teacher, response: :forbidden
-  test_user_gets_response_for :new, params: -> {{lessonId: @lesson.id}}, user: :levelbuilder, response: :success
+  test "levelbuilder gets the new rubric form for a lesson without a rubric" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    rubricless_lesson = create(:lesson, :with_lesson_group)
+
+    get :new, params: {lessonId: rubricless_lesson.id}
+    assert_response :success
+  end
+
+  test "new redirects to edit when the lesson already has a rubric" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    # @lesson already has @rubric from setup.
+    get :new, params: {lessonId: @lesson.id}
+    assert_redirected_to edit_rubric_path(@rubric.id)
+  end
 
   test "create Rubric and Learning Goals with valid params" do
     sign_in @levelbuilder
@@ -89,6 +106,38 @@ class RubricsControllerTest < ActionController::TestCase
     assert_equal @level.id, rubric.level_id
     assert_equal @lesson.id, rubric.lesson_id
     assert_equal 2, learning_goals.length
+  end
+
+  test "does not create a second rubric for a lesson that already has one" do
+    sign_in @levelbuilder
+
+    # @rubric already exists for @lesson from setup. A POST targeting the same
+    # lesson must not insert a duplicate; instead it routes to the existing
+    # rubric's edit page.
+    File.stubs(:write).never
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    AiRubricConfig.stubs(:get_lesson_s3_name).returns('fake-lesson-s3-name')
+    stub_lesson_s3_data
+
+    other_level = create(:level)
+    create(:script_level, script: @lesson.script, lesson: @lesson, levels: [other_level])
+
+    refute_creates(Rubric) do
+      post :create, params: {
+        level_id: other_level.id,
+        lesson_id: @lesson.id,
+        s3_config_dir: 'fake-lesson-s3-name',
+        learning_goals_attributes: [
+          {learning_goal: 'non-ai learning goal', ai_enabled: false, position: 1},
+        ]
+      }
+    end
+
+    assert_response :success
+    response_json = JSON.parse(response.body)
+    assert_equal @rubric.id, response_json['rubricId']
+    assert_equal edit_rubric_path(@rubric.id), response_json['redirectUrl']
   end
 
   test "cannot create ai-enabled learning goal without ai config" do
