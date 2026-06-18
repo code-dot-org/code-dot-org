@@ -1,5 +1,6 @@
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
+import {Tour} from 'shepherd.js';
 
 import OnboardingChecklist from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/OnboardingChecklist';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -38,7 +39,7 @@ describe('OnboardingChecklist', () => {
 
     render(
       <OnboardingChecklist
-        createSectionTour={createSectionTour as never}
+        createSectionTour={createSectionTour as unknown as Tour}
         reviewSyllabusTour={null}
         learnHowToEvaluateTour={null}
         demoType="elementary"
@@ -65,7 +66,7 @@ describe('OnboardingChecklist', () => {
     render(
       <OnboardingChecklist
         createSectionTour={null}
-        reviewSyllabusTour={reviewSyllabusTour as never}
+        reviewSyllabusTour={reviewSyllabusTour as unknown as Tour}
         learnHowToEvaluateTour={null}
         demoType="high"
       />
@@ -93,7 +94,7 @@ describe('OnboardingChecklist', () => {
       <OnboardingChecklist
         createSectionTour={null}
         reviewSyllabusTour={null}
-        learnHowToEvaluateTour={learnHowToEvaluateTour as never}
+        learnHowToEvaluateTour={learnHowToEvaluateTour as unknown as Tour}
         demoType="middle"
       />
     );
