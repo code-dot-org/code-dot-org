@@ -81,7 +81,7 @@ describe('Theater', () => {
       new Event('canplaythrough')
     );
     expect(imageElement.style.visibility).toBe('visible');
-    expect(playAudioSpy).toHaveBeenCalled();
+    expect(playAudioSpy).toHaveBeenCalledTimes(1);
   });
 
   it('opens photo prompter after receiving a GET_IMAGE signal', () => {
