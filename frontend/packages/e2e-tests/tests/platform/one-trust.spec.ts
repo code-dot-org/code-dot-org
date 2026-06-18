@@ -10,16 +10,20 @@ const OT_BANNER_TIMEOUT_MS = 30_000;
 
 test.describe('OneTrust integration', () => {
   /**
-   * Migration status: COMPLETED
+   * Migration status: PENDING
    * Source: dashboard/test/ui/features/platform/one_trust.feature
-   * "User sees OneTrust cookie pop-up when self-hosting OneTrust libraries on code.org"
+   * "User sees OneTrust cookie pop-up when self-hosting OneTrust libraries on code.org" (@eyes)
    *
-   * Skipped: the only behavior unique to this @eyes scenario is its Applitools
-   * visual diff, which has no equivalent in this suite. The functional flow
-   * (European geo + otreset + banner appears) is covered by the scenario below;
-   * only the visual-diff coverage is dropped.
+   * Not migrated: this scenario exists for its Applitools visual diff, which
+   * has no equivalent in this suite yet. It stays tagged @eyes (not @playwright)
+   * in the feature so the Cucumber eyes run keeps covering it; port it here once
+   * Playwright visual comparison is available. The functional flow (geo +
+   * otreset + banner appears) is already covered by the next scenario.
    */
-  test.skip('User sees OneTrust cookie pop-up when self-hosting OneTrust libraries on code.org (@eyes)', () => {});
+  test.fixme(
+    'User sees OneTrust cookie pop-up when self-hosting OneTrust libraries on code.org (@eyes)',
+    () => {},
+  );
 
   /**
    * Migration status: COMPLETED
