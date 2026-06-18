@@ -124,17 +124,17 @@ export default class Theater {
     this.hasAudio = false;
   }
 
-  getImgElement(): HTMLImageElement | null {
+  getImgElement() {
     return document.getElementById(THEATER_IMAGE_ID) as HTMLImageElement | null;
   }
 
-  getAudioElement(): HTMLAudioElement | null {
+  getAudioElement() {
     return document.getElementById(THEATER_AUDIO_ID) as HTMLAudioElement | null;
   }
 
   // Java Lab reuses asset urls across runs, so bust the cache to force a fresh
   // fetch each time the program produces a new image or audio track.
-  getCacheBustSuffix(): string {
+  getCacheBustSuffix() {
     return '?=' + new Date().getTime();
   }
 }
