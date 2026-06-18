@@ -7966,7 +7966,23 @@ columns:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: completed_at
     sql_type_metadata: *8
-    'null': false
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: started_at
+    sql_type_metadata: *8
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: properties
+    sql_type_metadata: *17
+    'null': true
     default: 
     default_function: 
     collation: 
@@ -16037,7 +16053,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20260601152016
+version: 20260617120000
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

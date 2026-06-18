@@ -125,7 +125,7 @@ export const Header: React.FC<HeaderProps> = ({
             options={[
               {
                 label: i18n.archiveAllSections(),
-                icon: {iconName: 'gear', iconStyle: 'solid'},
+                icon: {iconName: 'box-archive', iconStyle: 'solid'},
                 value: 'archive',
                 onClick: () => {
                   setArchiveAllModalOpen(true);
@@ -146,7 +146,7 @@ export const Header: React.FC<HeaderProps> = ({
               ...(experiments.isEnabled('demo-section')
                 ? [
                     {
-                      label: 'Create Practice Class',
+                      label: 'Create practice class',
                       icon: {
                         iconName: 'square-dashed-circle-plus',
                         iconStyle: 'solid' as const,

@@ -13,7 +13,7 @@ Before we look at how iteration appears in code, let’s ground the idea in a fa
 
 ---
 
-<img src="https://images.code.org/481a5b8b1e9576dd3a25de4e063dc319-image-1768428984811.png" alt="basketball going through hoop" width="250px" style="border-radius:10px; float:right; margin: 0 30px 10px 40px; transform: scaleX(-1);">
+<img src="https://images.code.org/94f55e513cce8e0dc448aff4c12c4f33-image-1781706617134.png" alt="basketball going through hoop" width="180px" style="border-radius:10px; float:right; margin: 0 60px 0 30px;">
 
 
 ## Hoop, there it is! 
@@ -33,7 +33,7 @@ You keep tossing the basketball until you make one shot, no matter how many trie
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px; width:60%;">
     <summary style="font-size: 1.5em; font-weight: bold;">💡 Check your thinking:</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
+<div style="margin: 20px;">
     <p style = "font-size: 12pt;">
     <ul>
     <li style = "font-size: 12pt;">In one case, you already know how many times you’ll repeat the action.</li>
@@ -53,12 +53,14 @@ You keep tossing the basketball until you make one shot, no matter how many trie
 
 Instead of writing the same instructions over and over, programmers use loops to tell the computer how and when to repeat steps.
 
-<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 80%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<div style="background-color: #e4e2f8; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 80%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 <p style="font-size: 12pt; margin-top: 12px; line-height: 120%;">📖 <strong>Iteration</strong> is the process of repeating a set of steps in a program.
 </p>
 </div>
 
-<img src="https://images.code.org/585b2b4ff38f158bed045f89829c9864-image-1768429776424.png" alt="icon of looping arrows" width="210px" style="border-radius:10px; float:left; margin: 0px 30px 30px 40px;">
+<div style="clear:both;"></div>
+
+<img src="https://images.code.org/c4bb7cf4e168492738989f3ac3a13c5e-image-1781707167171.png" alt="icon of looping arrows" width="210px" style="border-radius:10px; float:left; margin: -25px 0px 0px -20px;">
 
 **In web apps and other programs, iteration is used to:**
 
@@ -79,4 +81,6 @@ Instead of writing the same instructions over and over, programmers use loops to
 ## Next up
 
 Let's dive deeper into the two types of loops.
+
+
 MARKDOWN

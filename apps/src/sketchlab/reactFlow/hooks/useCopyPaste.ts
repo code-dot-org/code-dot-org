@@ -80,7 +80,7 @@ export function useCopyPaste({
   const buildNodeClipboard = useCallback(
     (nodeId: string): ClipboardContents | null => {
       const node = nodes.find(n => n.id === nodeId);
-      if (!node || node.data.locked) return null;
+      if (!node || node.data.locked || node.type === 'group') return null;
       return {nodes: [node], edges: []};
     },
     [nodes]
