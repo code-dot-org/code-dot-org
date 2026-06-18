@@ -77,7 +77,11 @@ class Lesson < ApplicationRecord
   has_many :lessons_opportunity_standards,  dependent: :destroy
   has_many :opportunity_standards, through: :lessons_opportunity_standards, source: :standard
 
-  has_one :rubric, dependent: :destroy
+  # A lesson has at most one rubric. Order by id so that, should duplicates
+  # exist transiently (e.g. before the one-rubric-per-lesson cleanup runs),
+  # this consistently returns the canonical (oldest) rubric — the one the
+  # cleanup keeps and the one the levelbuilder gating links to.
+  has_one :rubric, -> {order(:id)}, dependent: :destroy
 
   self.table_name = 'stages'
 

@@ -23,13 +23,23 @@ export class BasePage {
 
   /**
    * Switch Global Edition region via the ?ge_region=<code> override, which the
-   * Rails Global Edition middleware honors on any path. Waits for the /<code>/
-   * URL prefix.
+   * Rails Global Edition middleware honors on any path, then confirm the region
+   * took effect on the resulting page.
    */
   async switchToGlobalEditionRegion(regionCode: string): Promise<void> {
     const url = new URL(this.page.url());
     url.searchParams.set('ge_region', regionCode);
     await this.page.goto(url.toString());
-    await expect(this.page).toHaveURL(new RegExp(`/${regionCode}/`));
+    await expect(this.globalEditionRegionHtml(regionCode)).toBeVisible();
+  }
+
+  /**
+   * The root <html> element when the given Global Edition region is active.
+   * Rails sets data-ge-region on <html> on every page, so this is page-agnostic
+   * and is the authoritative signal that the region applied (stronger than the
+   * URL prefix — it also catches the firefox/webkit ge_region cookie race).
+   */
+  globalEditionRegionHtml(regionCode: string): Locator {
+    return this.page.locator(`html[data-ge-region='${regionCode}']`);
   }
 }
