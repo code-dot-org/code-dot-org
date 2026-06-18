@@ -31,22 +31,14 @@ function validateElementSelect(expected, assert) {
   assert.deepEqual(actual, expected);
 }
 
-const teal = 'rgb(0, 129, 143)';
-const white = 'rgb(255, 255, 255)';
-
-// The DSCO SegmentedButton animates background-color via a CSS transition, so a
-// synchronous read immediately after the selection changes catches the color
-// mid-transition (still the previous value). Disable the transition and force a
-// reflow to read the settled target color, mirroring the instant color the
-// legacy Radium ToggleButton produced.
-function settledBackgroundColor(selector) {
-  var element = $(selector)[0];
-  var previousTransition = element.style.transition;
-  element.style.transition = 'none';
-  void element.offsetWidth; // force reflow so the no-transition value applies
-  var color = $(element).css('background-color');
-  element.style.transition = previousTransition;
-  return color;
+// The DSCO SegmentedButton marks the active toggle with aria-pressed="true",
+// so assert selection state rather than the (transition-animated) color.
+function assertPressed(selector, expected, assert) {
+  assert.equal(
+    $(selector).attr('aria-pressed'),
+    String(expected),
+    'expected ' + selector + ' aria-pressed to be ' + expected
+  );
 }
 
 module.exports = {
@@ -84,16 +76,8 @@ module.exports = {
           'designModeViz is visible'
         );
 
-        assert.equal(
-          teal,
-          settledBackgroundColor('#designModeButton'),
-          'expected Design button (active) to have teal background.'
-        );
-        assert.equal(
-          white,
-          settledBackgroundColor('#codeModeButton'),
-          'expected Code button (inactive) to have white background.'
-        );
+        assertPressed('#designModeButton', true, assert);
+        assertPressed('#codeModeButton', false, assert);
         var screenSelector = document.getElementById('screenSelector');
         assert.notEqual(screenSelector, null);
         assert.equal(screenSelector.options.length, 3, 'expected 3 options');
@@ -465,16 +449,8 @@ module.exports = {
       runBeforeClick: function (assert) {
         // enter design mode
         $('#designModeButton').click();
-        assert.equal(
-          teal,
-          settledBackgroundColor('#designModeButton'),
-          'expected Design button (active) to have teal background.'
-        );
-        assert.equal(
-          white,
-          settledBackgroundColor('#codeModeButton'),
-          'expected Code button (inactive) to have white background.'
-        );
+        assertPressed('#designModeButton', true, assert);
+        assertPressed('#codeModeButton', false, assert);
         // add a screen
         testUtils.dragToVisualization('SCREEN', 10, 10);
         validatePropertyRow(0, 'id', 'screen2', assert);
@@ -496,16 +472,8 @@ module.exports = {
 
         // return to code mode
         $('#codeModeButton').click();
-        assert.equal(
-          white,
-          settledBackgroundColor('#designModeButton'),
-          'expected Design button (inactive) to have white background.'
-        );
-        assert.equal(
-          teal,
-          settledBackgroundColor('#codeModeButton'),
-          'expected Code button (active) to have teal background.'
-        );
+        assertPressed('#designModeButton', false, assert);
+        assertPressed('#codeModeButton', true, assert);
 
         // should be on screen 2
         assert.equal(
@@ -599,16 +567,8 @@ module.exports = {
         );
 
         // design toggle row still shows design mode
-        assert.equal(
-          teal,
-          settledBackgroundColor('#designModeButton'),
-          'expected Design button (active) to have teal background.'
-        );
-        assert.equal(
-          white,
-          settledBackgroundColor('#codeModeButton'),
-          'expected Code button (inactive) to have white background.'
-        );
+        assertPressed('#designModeButton', true, assert);
+        assertPressed('#codeModeButton', false, assert);
 
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {
