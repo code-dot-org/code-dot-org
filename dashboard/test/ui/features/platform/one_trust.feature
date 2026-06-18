@@ -1,4 +1,4 @@
-@single_session
+@single_session @playwright
 Feature: OneTrust integration
   @eyes
   Scenario: User sees OneTrust cookie pop-up when self-hosting OneTrust libraries on code.org
