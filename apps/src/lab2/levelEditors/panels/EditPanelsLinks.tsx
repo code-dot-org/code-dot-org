@@ -21,10 +21,8 @@ interface EditPanelsLinksProps {
   updatePanel: (panel: Panel) => void;
 }
 
-// Editor for a single panel's `links` array. Renders one row per link
-// (text, x/y/width sliders, target-panel dropdown, delete) and an Add Link
-// button. Targets exclude the current panel; Add Link is disabled when no
-// other panels exist to link to.
+// Editor for a single panel's positioned text elements. Stored in `links`
+// for compatibility with existing panel data.
 const EditPanelsLinks: React.FunctionComponent<EditPanelsLinksProps> = ({
   panel,
   allPanels,
@@ -40,13 +38,10 @@ const EditPanelsLinks: React.FunctionComponent<EditPanelsLinksProps> = ({
   };
 
   const addLink = () => {
-    const firstOtherKey = otherPanels[0]?.key;
-    if (!firstOtherKey) return;
     const newLink: PanelLink = {
       text: '',
       x: DEFAULT_PANEL_LINK_X,
       y: DEFAULT_PANEL_LINK_Y,
-      targetKey: firstOtherKey,
     };
     updatePanel({...panel, links: [...links, newLink]});
   };
@@ -59,12 +54,14 @@ const EditPanelsLinks: React.FunctionComponent<EditPanelsLinksProps> = ({
   return (
     <div className={moduleStyles.linksSection}>
       <Typography variant="h6" gutterBottom>
-        Links
+        Text
       </Typography>
       {links.map((link, linkIndex) => (
         <div
           key={linkIndex}
           className={classNames(moduleStyles.fieldRow, moduleStyles.linkRow)}
+          role="group"
+          aria-label={`Text ${linkIndex + 1} settings`}
         >
           <label>
             Text
@@ -75,31 +72,7 @@ const EditPanelsLinks: React.FunctionComponent<EditPanelsLinksProps> = ({
               }
             />
           </label>
-          <label className={moduleStyles.linkSliderHorizontal}>
-            X: {link.x}%
-            <input
-              type="range"
-              min={0}
-              max={100}
-              value={link.x}
-              onChange={e =>
-                updateLink(linkIndex, {...link, x: Number(e.target.value)})
-              }
-            />
-          </label>
-          <label className={moduleStyles.linkSliderVertical}>
-            Y: {link.y}%
-            <input
-              type="range"
-              min={0}
-              max={100}
-              value={link.y}
-              onChange={e =>
-                updateLink(linkIndex, {...link, y: Number(e.target.value)})
-              }
-            />
-          </label>
-          <label className={moduleStyles.linkSliderHorizontal}>
+          <label className={moduleStyles.linkWidthControl}>
             Width: {link.width ?? DEFAULT_PANEL_LINK_WIDTH}%
             <input
               type="range"
@@ -116,22 +89,32 @@ const EditPanelsLinks: React.FunctionComponent<EditPanelsLinksProps> = ({
           </label>
           <SimpleDropdown
             labelText="Target panel"
-            name={`link-target-${linkIndex}`}
+            name={`text-target-${linkIndex}`}
             size="s"
-            selectedValue={link.targetKey}
-            onChange={e =>
-              updateLink(linkIndex, {...link, targetKey: e.target.value})
-            }
-            items={otherPanels.map(p => ({
-              value: p.key,
-              text: `Panel ${allPanels.indexOf(p) + 1}`,
-            }))}
+            selectedValue={link.targetKey || ''}
+            disabled={otherPanels.length === 0}
+            onChange={e => {
+              const newLink = {...link};
+              if (e.target.value) {
+                newLink.targetKey = e.target.value;
+              } else {
+                delete newLink.targetKey;
+              }
+              updateLink(linkIndex, newLink);
+            }}
+            items={[
+              {value: '', text: 'No target'},
+              ...otherPanels.map(p => ({
+                value: p.key,
+                text: `Panel ${allPanels.indexOf(p) + 1}`,
+              })),
+            ]}
           />
           <button
             type="button"
             className={moduleStyles.deleteButton}
             onClick={() => deleteLink(linkIndex)}
-            aria-label="Delete link"
+            aria-label="Delete text"
           >
             <FontAwesomeV6Icon iconName="trash" />
           </button>
@@ -140,10 +123,9 @@ const EditPanelsLinks: React.FunctionComponent<EditPanelsLinksProps> = ({
       <Button
         type="button"
         onClick={addLink}
-        text="Add Link"
+        text="Add Text"
         color="gray"
         icon="plus"
-        disabled={otherPanels.length === 0}
       />
     </div>
   );

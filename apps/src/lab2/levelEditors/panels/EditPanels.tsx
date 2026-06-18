@@ -12,14 +12,14 @@ import PanelsView from '@cdo/apps/panels/PanelsView';
 import {Panel, PanelLayout} from '@cdo/apps/panels/types';
 import {createUuid} from '@cdo/apps/utils';
 
+import {PANEL_HEIGHT, PANEL_WIDTH} from './constants';
+import EditPanelsImages from './EditPanelsImages';
+import EditPanelsLayoutEditor from './EditPanelsLayoutEditor';
 import EditPanelsLinks from './EditPanelsLinks';
 
 import moduleStyles from './edit-panels.module.scss';
 
 const createKey = (levelName: string) => levelName + '-' + createUuid();
-
-const PANEL_WIDTH = 1920;
-const PANEL_HEIGHT = 1080;
 
 // Fraction of viewport width occupied by the pinned preview. Paired with
 // `width: Nvw` in edit-panels.module.scss via `:export`.
@@ -209,7 +209,7 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
           <Checkbox
             checked={useLinks}
             name="use_links"
-            label="Use links for navigation"
+            label="Advanced Panels"
             size="s"
             onChange={event => setUseLinks(event.target.checked)}
           />
@@ -420,6 +420,16 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
             }
           />
         </div>
+      )}
+      {useLinks && (
+        <EditPanelsLayoutEditor panel={panel} updatePanel={updatePanel} />
+      )}
+      {useLinks && (
+        <EditPanelsImages
+          panel={panel}
+          allPanels={allPanels}
+          updatePanel={updatePanel}
+        />
       )}
       {useLinks && (
         <EditPanelsLinks
