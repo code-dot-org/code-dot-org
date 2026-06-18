@@ -53,7 +53,11 @@ const AiDiffLessonHook: React.FC<AiDiffLessonHookProps> = ({
             )}
           >
             <Typography component="div" variant="body2">
-              <SafeMarkdown unwrapped markdown={content.introduction} />
+              <SafeMarkdown
+                unwrapped
+                localized={false}
+                markdown={content.introduction}
+              />
             </Typography>
           </div>
         </div>
