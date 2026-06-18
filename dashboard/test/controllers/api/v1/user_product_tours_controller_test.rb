@@ -104,6 +104,24 @@ class Api::V1::UserProductToursControllerTest < ActionDispatch::IntegrationTest
     refute_nil record.completed_at
   end
 
+  test 'second completion does not overwrite the original completed_at timestamp' do
+    teacher = create(:teacher)
+    sign_in teacher
+    original_time = 1.hour.ago.utc.change(usec: 0)
+    UserProductTour.create!(
+      user: teacher,
+      tour_name: UserProductTour::CREATE_CLASS_SECTION,
+      completed_at: original_time
+    )
+
+    post '/dashboardapi/v1/user_product_tours',
+      params: {tour_name: UserProductTour::CREATE_CLASS_SECTION}, as: :json
+
+    assert_response :ok
+    record = UserProductTour.find_by!(user: teacher, tour_name: UserProductTour::CREATE_CLASS_SECTION)
+    assert_equal original_time, record.completed_at.change(usec: 0)
+  end
+
   test 'all valid tour names are accepted' do
     teacher = create(:teacher)
     sign_in teacher
