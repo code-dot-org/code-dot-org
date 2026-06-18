@@ -1,4 +1,12 @@
 class Api::V1::UserProductToursController < Api::V1::JSONApiController
+  def index
+    return head :unauthorized unless current_user
+
+    completed_names = UserProductTour.where(user: current_user).where.not(completed_at: nil).pluck(:tour_name)
+
+    render json: completed_names
+  end
+
   def create
     return head :unauthorized unless current_user
 

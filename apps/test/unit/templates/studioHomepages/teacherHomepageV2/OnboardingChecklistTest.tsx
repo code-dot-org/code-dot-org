@@ -1,20 +1,35 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 
 import OnboardingChecklist from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/OnboardingChecklist';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
+  get: jest.fn(),
   post: jest.fn(),
 }));
 
+const mockGet = HttpClient.get as jest.MockedFunction<typeof HttpClient.get>;
 const mockPost = HttpClient.post as jest.MockedFunction<typeof HttpClient.post>;
 
+const makeJsonResponse = (body: unknown) =>
+  new Response(JSON.stringify(body), {
+    headers: {'Content-Type': 'application/json'},
+  });
+
 const makeTour = () => ({start: jest.fn()});
+
+const defaultProps = {
+  createSectionTour: null,
+  reviewSyllabusTour: null,
+  learnHowToEvaluateTour: null,
+  demoType: 'elementary' as const,
+};
 
 describe('OnboardingChecklist', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    mockGet.mockResolvedValue(makeJsonResponse([]));
     mockPost.mockResolvedValue(new Response());
   });
 
@@ -97,22 +112,71 @@ describe('OnboardingChecklist', () => {
     );
   });
 
-  it('does not throw when the backend call fails', async () => {
+  it('does not throw when the tour start POST fails', async () => {
     mockPost.mockRejectedValue(new Error('network error'));
     jest.spyOn(console, 'error').mockImplementation(() => {});
 
-    render(
-      <OnboardingChecklist
-        createSectionTour={null}
-        reviewSyllabusTour={null}
-        learnHowToEvaluateTour={null}
-        demoType="elementary"
-      />
-    );
+    render(<OnboardingChecklist {...defaultProps} />);
 
     fireEvent.click(screen.getByText('Create a class section'));
 
     await Promise.resolve();
     expect(console.error).toHaveBeenCalled();
+  });
+
+  it('shows no check icons when no tours are completed', async () => {
+    mockGet.mockResolvedValue(makeJsonResponse([]));
+
+    render(<OnboardingChecklist {...defaultProps} />);
+
+    await waitFor(() => {
+      expect(mockGet).toHaveBeenCalledWith(
+        '/dashboardapi/v1/user_product_tours',
+        true
+      );
+    });
+
+    expect(
+      screen.queryByRole('img', {name: /circle-check/i})
+    ).not.toBeInTheDocument();
+  });
+
+  it('shows a check icon only for tours that are completed', async () => {
+    mockGet.mockResolvedValue(makeJsonResponse(['create_class_section']));
+
+    render(<OnboardingChecklist {...defaultProps} />);
+
+    await waitFor(() => {
+      expect(
+        screen.getByText('Create a class section').closest('button')
+      ).toContainElement(
+        // The circle-check icon is rendered as an <i> or <svg> inside the button
+        document.querySelector('[data-icon-name="circle-check"]') ||
+          document.querySelector('.fa-circle-check') ||
+          (screen.queryAllByRole('img')[0] as HTMLElement)
+      );
+    });
+  });
+
+  it('does not show a check icon for tours that are not completed', async () => {
+    mockGet.mockResolvedValue(makeJsonResponse(['create_class_section']));
+
+    render(<OnboardingChecklist {...defaultProps} />);
+
+    await waitFor(() => expect(mockGet).toHaveBeenCalled());
+
+    const reviewButton = screen
+      .getByText('Review the syllabus')
+      .closest('button');
+    expect(reviewButton).not.toContainHTML('circle-check');
+  });
+
+  it('does not throw when the completion fetch fails', async () => {
+    mockGet.mockRejectedValue(new Error('network error'));
+    jest.spyOn(console, 'error').mockImplementation(() => {});
+
+    render(<OnboardingChecklist {...defaultProps} />);
+
+    await waitFor(() => expect(console.error).toHaveBeenCalled());
   });
 });

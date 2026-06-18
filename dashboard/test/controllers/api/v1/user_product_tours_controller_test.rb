@@ -1,6 +1,49 @@
 require 'test_helper'
 
 class Api::V1::UserProductToursControllerTest < ActionDispatch::IntegrationTest
+  # GET /index
+
+  test 'unauthenticated GET returns 401' do
+    get '/dashboardapi/v1/user_product_tours', as: :json
+    assert_response :unauthorized
+  end
+
+  test 'returns only tour names with completed_at set' do
+    teacher = create(:teacher)
+    sign_in teacher
+    UserProductTour.create!(user: teacher, tour_name: UserProductTour::CREATE_CLASS_SECTION, completed_at: Time.now.utc)
+    UserProductTour.create!(user: teacher, tour_name: UserProductTour::VIEW_SYLLABUS, started_at: Time.now.utc)
+
+    get '/dashboardapi/v1/user_product_tours', as: :json
+
+    assert_response :ok
+    assert_equal [UserProductTour::CREATE_CLASS_SECTION], response.parsed_body
+  end
+
+  test 'returns empty array when no tours are completed' do
+    teacher = create(:teacher)
+    sign_in teacher
+
+    get '/dashboardapi/v1/user_product_tours', as: :json
+
+    assert_response :ok
+    assert_equal [], response.parsed_body
+  end
+
+  test 'only returns tours belonging to the current user' do
+    teacher = create(:teacher)
+    other_teacher = create(:teacher)
+    sign_in teacher
+    UserProductTour.create!(user: other_teacher, tour_name: UserProductTour::CREATE_CLASS_SECTION, completed_at: Time.now.utc)
+
+    get '/dashboardapi/v1/user_product_tours', as: :json
+
+    assert_response :ok
+    assert_equal [], response.parsed_body
+  end
+
+  # POST /create
+
   test 'unauthenticated request returns 401' do
     post '/dashboardapi/v1/user_product_tours',
       params: {tour_name: UserProductTour::CREATE_CLASS_SECTION}, as: :json

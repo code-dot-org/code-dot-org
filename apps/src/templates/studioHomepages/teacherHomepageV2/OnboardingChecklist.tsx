@@ -10,9 +10,9 @@ import {DemoType} from '../../teacherDashboard/types/teacherSectionTypes';
 import styles from './teacherHomepage.module.scss';
 
 const CHECKLIST_ITEMS = [
-  {id: 'review-syllabus', label: 'Review the syllabus', completed: false},
-  {id: 'learn-to-evaluate', label: 'Learn how to evaluate', completed: false},
-  {id: 'create-section', label: 'Create a class section', completed: true},
+  {id: 'review-syllabus', label: 'Review the syllabus'},
+  {id: 'learn-to-evaluate', label: 'Learn how to evaluate'},
+  {id: 'create-section', label: 'Create a class section'},
 ];
 
 const TOUR_NAMES: Record<string, string> = {
@@ -50,6 +50,18 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
   demoType,
 }) => {
   const [isHidden, setIsHidden] = React.useState(false);
+  const [completedTourNames, setCompletedTourNames] = React.useState<
+    Set<string>
+  >(new Set());
+
+  React.useEffect(() => {
+    HttpClient.get('/dashboardapi/v1/user_product_tours', true)
+      .then(response => response.json() as Promise<string[]>)
+      .then(names => setCompletedTourNames(new Set(names)))
+      .catch(err =>
+        console.error('Failed to fetch tour completion status:', err)
+      );
+  }, []);
 
   const handleButtonClick = (id: string) => {
     recordTourStart(id, demoType);
@@ -80,7 +92,7 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
             Teaching Assistant can help you get started with CodeAI
           </Typography>
           <div className={styles.onboardingChecklistButtons}>
-            {CHECKLIST_ITEMS.map(({id, label, completed}) => (
+            {CHECKLIST_ITEMS.map(({id, label}) => (
               <MuiButton
                 key={id}
                 variant="outlined"
@@ -89,7 +101,7 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
                 onClick={() => handleButtonClick(id)}
                 type="button"
               >
-                {completed && (
+                {completedTourNames.has(TOUR_NAMES[id]) && (
                   <span className={styles.onboardingChecklistCheckIcon}>
                     <FontAwesomeV6Icon
                       iconName="circle-check"
