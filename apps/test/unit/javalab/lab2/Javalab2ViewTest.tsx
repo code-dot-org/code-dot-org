@@ -178,6 +178,37 @@ describe('Javalab2View', () => {
     expect(needsInitialSourcesSave).toBe(true);
   });
 
+  it('keeps the sources passed to useSource stable when a save echoes a new channel', () => {
+    const {useSource} = jest.requireMock('@codebridge/hooks/useSource');
+    // A miniApp project carries a labConfig on its channel.
+    const miniAppChannel: Channel = {
+      ...channel,
+      labConfig: {miniApp: {name: 'theater'}},
+    };
+    const initialSources: ProjectSources = {source};
+
+    store.dispatch(setChannel(miniAppChannel));
+    store.dispatch(setProjectSource(projectSources));
+    store.dispatch(setProjectSourceLevelId(LEVEL_ID));
+    const {rerender} = render(viewElement(initialSources, miniAppChannel));
+    const firstArgs = (useSource as jest.Mock).mock.calls.at(-1);
+
+    // A save echoes a freshly-parsed channel: a new object whose labConfig is a
+    // new reference but an equal value.
+    const savedChannel: Channel = {
+      ...miniAppChannel,
+      labConfig: {miniApp: {name: 'theater'}},
+    };
+    rerender(viewElement(initialSources, savedChannel));
+    const secondArgs = (useSource as jest.Mock).mock.calls.at(-1);
+
+    // levelProperties (arg 1) and initialSources (arg 2) must keep their
+    // references across the save, or useSource's reset would fire and revert
+    // the editor to the loaded server source.
+    expect(secondArgs[1]).toBe(firstArgs[1]);
+    expect(secondArgs[2]).toBe(firstArgs[2]);
+  });
+
   describe('starter assets', () => {
     // Legacy levels store starter assets only as the level's
     // {friendlyName => uuidName} mapping; the view merges them into the

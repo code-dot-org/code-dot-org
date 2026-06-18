@@ -326,11 +326,9 @@ class Ability
         end
       end
 
-      if Experiment.enabled?(user: user, experiment_name: 'lesson-tutor')
-        can :create, UserPracticeProblemAttempt
-        can [:index, :update, :show], UserPracticeProblemAttempt, user_id: user.id
-        can [:index, :show], PracticeProblem
-      end
+      can :create, UserPracticeProblemAttempt
+      can [:index, :update, :show], UserPracticeProblemAttempt, user_id: user.id
+      can [:index, :show], PracticeProblem
 
       can :show, Rubric
     end

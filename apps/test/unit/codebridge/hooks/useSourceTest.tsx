@@ -11,7 +11,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import lab2Project from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import lab2System from '@cdo/apps/lab2/redux/systemRedux';
-import {Channel} from '@cdo/apps/lab2/types';
+import {Channel, ProjectSources} from '@cdo/apps/lab2/types';
 import {
   getStore,
   registerReducers,
@@ -120,5 +120,33 @@ describe('useSource', () => {
       false,
       false
     );
+  });
+
+  it('resets when a new project loads even if its content matches the previous one', () => {
+    const wrapper = ({children}: {children?: React.ReactNode}) => (
+      <Provider store={store}>{children}</Provider>
+    );
+    let currentInitialSources: ProjectSources = {source: smallProject};
+    const {rerender} = renderHook(
+      () =>
+        useSource(
+          defaultSources,
+          nonValidatedLevelProperties,
+          currentInitialSources
+        ),
+      {wrapper}
+    );
+    // The mount performs the initial reset to the loaded server source.
+    expect(mockedProjectManager.save).toHaveBeenCalledTimes(1);
+    expect(mockedProjectManager.setLastSource).toHaveBeenCalledTimes(1);
+
+    // A project load (e.g. a teacher switching to a student whose code happens
+    // to match) always hands us a fresh object. Even though the content is
+    // identical, the reset must fire so the newly-loaded project's source
+    // replaces whatever the editor currently shows.
+    currentInitialSources = {source: {...smallProject}};
+    rerender();
+    expect(mockedProjectManager.save).toHaveBeenCalledTimes(2);
+    expect(mockedProjectManager.setLastSource).toHaveBeenCalledTimes(2);
   });
 });

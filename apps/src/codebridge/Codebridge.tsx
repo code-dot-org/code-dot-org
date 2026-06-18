@@ -163,12 +163,12 @@ export const Codebridge = React.memo(
       if (!currentLayout) {
         currentLayout = appName === 'pythonlab' ? 'horizontal' : 'vertical';
       }
-      // Since 'horizontal' is an optional layout (not all labs have it),
-      // we need to add a fallback to 'vertical' to avoid type errors.
-      return (
-        config.layoutComponents[currentLayout] ||
-        config.layoutComponents.vertical
-      );
+      // A lab supplies at least one of horizontal/vertical but not necessarily
+      // both, so fall back to whichever it does provide. The config type
+      // guarantees one is present, but the dynamic key access can't prove it.
+      return (config.layoutComponents[currentLayout] ||
+        config.layoutComponents.vertical ||
+        config.layoutComponents.horizontal)!;
     }, [
       appName,
       config.activeLayout,
