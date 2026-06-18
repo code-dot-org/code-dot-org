@@ -31,6 +31,7 @@ import {
 import {
   anchorHandleFlowPosition,
   attachEdgeToFreshAnchor,
+  getStandaloneLineAnchorIds,
   resolveEdgeEndpoint,
 } from '../utils/lineAnchors';
 
@@ -227,6 +228,45 @@ export function useKeyboardNavigation({
         return true;
       }
 
+      if (isGroupMode) {
+        // Group mode: cycle through groupable elements only, wrap around.
+        // Skips lineAnchor nodes, group nodes, locked elements, grouped
+        // children, and edges attached to real nodes (non-standalone lines).
+        const groupableEntries = tabOrder.filter(entry => {
+          if (entry.type === 'node') {
+            const node = getNode(entry.id);
+            return (
+              node &&
+              node.type !== 'lineAnchor' &&
+              node.type !== 'group' &&
+              !isGroupedChildNode(node) &&
+              !node.data?.locked
+            );
+          }
+          // edge: must be a standalone ungrouped unlocked line.
+          const edge = getEdge(entry.id);
+          if (!edge || edge.data?.locked) return false;
+          const anchorIds = getStandaloneLineAnchorIds(edge, getNode);
+          return (
+            anchorIds !== null &&
+            anchorIds.every(id => !isGroupedChildNode(getNode(id)))
+          );
+        });
+        if (groupableEntries.length === 0) return true;
+        const curIdx = focusedEntry
+          ? groupableEntries.findIndex(entry =>
+              entriesMatch(entry, focusedEntry)
+            )
+          : -1;
+        const nextIdx =
+          (curIdx + tabDirection + groupableEntries.length) %
+          groupableEntries.length;
+        event.preventDefault();
+        event.stopPropagation();
+        focusEntry(groupableEntries[nextIdx]);
+        return true;
+      }
+
       // Normal mode: move through full order; escape at boundaries.
       if (!focusedEntry) return false;
 
@@ -245,7 +285,7 @@ export function useKeyboardNavigation({
       // Boundary: no preventDefault lets the browser move focus out.
       return true;
     },
-    [tabOrder, connectingFrom, focusEntry]
+    [tabOrder, connectingFrom, isGroupMode, getNode, getEdge, focusEntry]
   );
 
   const handleEscapeCancelConnect = useCallback(
