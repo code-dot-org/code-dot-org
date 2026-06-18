@@ -1,6 +1,8 @@
 import {expect} from '@playwright/test';
 import type {Locator, Page} from '@playwright/test';
 
+import {waitUntilStable} from '../shared/stability';
+
 /**
  * Authored hints: the lightbulb, count badge, and "Yes" confirmation prompt
  * rendered in the CSF instructions panel.
@@ -36,13 +38,19 @@ export class AuthoredHintsComponent {
 
   /** Click the lightbulb, confirm "Yes", and reveal the next hint. */
   async viewNext(): Promise<void> {
+    // Webkit drops a click to focus-only if the target moves (panel reflow/scroll); settle each first.
+    await expect(this.lightbulbTrigger).toBeVisible();
+    await waitUntilStable(this.lightbulbTrigger);
     await this.lightbulbTrigger.click();
     await expect(this.yesButton).toBeVisible();
+    await waitUntilStable(this.yesButton);
     await this.yesButton.click();
   }
 
   /** Click the lightbulb without confirming (for the exhausted-hints check). */
   async clickLightbulb(): Promise<void> {
+    await expect(this.lightbulbTrigger).toBeVisible();
+    await waitUntilStable(this.lightbulbTrigger);
     await this.lightbulbTrigger.click();
   }
 

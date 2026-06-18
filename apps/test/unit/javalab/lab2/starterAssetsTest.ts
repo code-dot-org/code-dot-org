@@ -55,7 +55,7 @@ describe('javalab2 starterAssets', () => {
       expect(mergeStarterAssets(source, {}, LEVEL_NAME)).toBe(source);
     });
 
-    it('appends mapping entries as STARTER files', () => {
+    it('appends mapping entries as LOCKED_STARTER files', () => {
       const source = sourceWith(javaFile('0', 'Main.java'));
       const merged = mergeStarterAssets(
         source,
@@ -75,7 +75,7 @@ describe('javalab2 starterAssets', () => {
       );
       expect(byName['cat.png'].contents).toBe('');
       expect(byName['cat.png'].folderId).toBe(DEFAULT_FOLDER_ID);
-      expect(byName['cat.png'].type).toBe(ProjectFileType.STARTER);
+      expect(byName['cat.png'].type).toBe(ProjectFileType.LOCKED_STARTER);
       // Synthesized assets are not opened as tabs.
       expect(merged.openFiles).toEqual([]);
     });
