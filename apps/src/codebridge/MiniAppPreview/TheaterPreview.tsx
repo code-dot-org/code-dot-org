@@ -24,10 +24,7 @@ const TheaterPreview: React.FunctionComponent = () => {
       onOutputMessage,
       onNewlineMessage,
       // TODO: actually handle prompter
-      () =>
-        onOutputMessage(
-          `[JAVALAB] Photo prompts are not yet supported in Java Lab 2.`
-        ),
+      () => onOutputMessage(`[JAVALAB] Photo prompts are not yet supported.`),
       () => {},
       () => {}
     );

@@ -15,9 +15,5 @@
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  // As a flex child of the panel (below its header), default min-height:auto
-  // refuses to shrink below intrinsic content height, so a tall preview (e.g.
-  // the theater image) overflows past the panel's bottom edge. Allow it to
-  // shrink to the available space instead.
   min-height: 0;
 }

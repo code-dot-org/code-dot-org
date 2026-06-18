@@ -1,14 +1,18 @@
 import {
-  TheaterSignalType,
   STATUS_MESSAGE_PREFIX,
   InputMessageType,
-  InputMessage,
 } from '@cdo/apps/javalab/constants';
 import javalabMsg from '@cdo/apps/javalab/locale';
 
+import {
+  InputMessage,
+  THEATER_AUDIO_ID,
+  THEATER_IMAGE_ID,
+  TheaterSignalType,
+} from './constants';
+
 type InputMessageTypeValue =
   (typeof InputMessageType)[keyof typeof InputMessageType];
-type InputMessageValue = (typeof InputMessage)[keyof typeof InputMessage];
 
 interface TheaterSignal {
   value: string;
@@ -28,7 +32,7 @@ export default class Theater {
   private readonly closePhotoPrompter: () => void;
   private readonly onJavabuilderMessage: (
     messageType: InputMessageTypeValue,
-    message: InputMessageValue
+    message: InputMessage
   ) => void;
   private loadEventsFinished: number;
   private prompterUploadUrl: string | null;
@@ -41,7 +45,7 @@ export default class Theater {
     closePhotoPrompter: () => void,
     onJavabuilderMessage: (
       messageType: InputMessageTypeValue,
-      message: InputMessageValue
+      message: InputMessage
     ) => void
   ) {
     this.onOutputMessage = onOutputMessage;
@@ -120,11 +124,11 @@ export default class Theater {
   }
 
   getImgElement() {
-    return document.getElementById('theater') as HTMLImageElement;
+    return document.getElementById(THEATER_IMAGE_ID) as HTMLImageElement;
   }
 
   getAudioElement() {
-    return document.getElementById('theater-audio') as HTMLAudioElement;
+    return document.getElementById(THEATER_AUDIO_ID) as HTMLAudioElement;
   }
 
   onClose() {

@@ -1,8 +1,5 @@
-import {
-  TheaterSignalType,
-  InputMessageType,
-  InputMessage,
-} from '@cdo/apps/javalab/constants';
+import {InputMessageType, InputMessage} from '@cdo/apps/javalab/constants';
+import {TheaterSignalType} from '@cdo/apps/miniApps/theater/constants';
 import Theater from '@cdo/apps/miniApps/theater/Theater';
 
 describe('Theater', () => {

@@ -9,6 +9,12 @@ export enum TheaterSignalType {
   NO_AUDIO = 'NO_AUDIO',
 }
 
+export enum InputMessage {
+  // Theater-specific messages
+  UPLOAD_SUCCESS = 'UPLOAD_SUCCESS',
+  UPLOAD_ERROR = 'UPLOAD_ERROR',
+}
+
 // DOM ids of the image and audio elements rendered by TheaterVisualization.
 export const THEATER_IMAGE_ID = 'theater';
 export const THEATER_AUDIO_ID = 'theater-audio';
