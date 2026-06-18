@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
-require_relative '../pegasus/src/env'
+require_relative '../lib/cdo/pegasus/src/env'
 require 'cdo/solr'
-require src_dir 'database'
+require 'cdo/pegasus/src/database'
 
 SOLR = Solr::Server.new(host: CDO.solr_server)
 

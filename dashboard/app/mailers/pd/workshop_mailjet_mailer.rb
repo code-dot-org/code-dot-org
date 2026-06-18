@@ -45,7 +45,7 @@ class Pd::WorkshopMailjetMailer
       email_to: email,
       name: user.given_name || user.name,
       exit_survey_url: enrollment.exit_survey_url,
-      download_certificate_url: CDO.studio_url("/pd/generate_workshop_certificate/#{enrollment.code}", CDO.default_scheme),
+      download_certificate_url: CDO.studio_url("/pd/generate_workshop_certificate/#{enrollment.code}"),
       rp_email: contact_email_with_fallback(regional_partner&.contact_email_with_backup),
       rp_name: contact_name_with_fallback(regional_partner&.name),
       organizer_email: contact_email_with_fallback(organizer&.email),
@@ -63,7 +63,7 @@ class Pd::WorkshopMailjetMailer
       workshop_name: workshop_name_with_fallback(workshop),
       rp_name: contact_name_with_fallback(regional_partner&.name),
       survey_deadline: (Time.zone.today + 10.days).strftime('%B %-d'),
-      exit_survey_url: CDO.studio_url("form/professional_learning_facilitator_post_workshop_survey", CDO.default_scheme)
+      exit_survey_url: CDO.studio_url("form/professional_learning_facilitator_post_workshop_survey")
     }
 
     retryable_send_email('facilitator_post_workshop_survey', facilitator.email, facilitator.friendly_name, email_vars)
@@ -97,7 +97,7 @@ class Pd::WorkshopMailjetMailer
   end
 
   private_class_method def self.contact_name_with_fallback(name)
-    name.presence || 'Code.org'
+    name.presence || 'CodeAI'
   end
 
   private_class_method def self.build_workshop_reminder_email_vars(workshop, name, email, days, enrollment = nil)
@@ -107,7 +107,7 @@ class Pd::WorkshopMailjetMailer
     {
       email_to: email,
       name: name,
-      cancel_registration_link: enrollment&.code ? CDO.studio_url("pd/workshop_enrollment/#{enrollment.code}/cancel", CDO.default_scheme) : '',
+      cancel_registration_link: enrollment&.code ? CDO.studio_url("pd/workshop_enrollment/#{enrollment.code}/cancel") : '',
       pre_survey_link: enrollment&.pre_workshop_survey_url.presence || '',
       facilitator_name: workshop_facilitator_names(workshop),
       rp_email: contact_email_with_fallback(regional_partner&.contact_email_with_backup),
@@ -130,7 +130,7 @@ class Pd::WorkshopMailjetMailer
       email_to: email,
       name: name,
       workshop_name: workshop_name_with_fallback(workshop),
-      cancel_registration_link: enrollment&.code ? CDO.studio_url("pd/workshop_enrollment/#{enrollment.code}/cancel", CDO.default_scheme) : '',
+      cancel_registration_link: enrollment&.code ? CDO.studio_url("pd/workshop_enrollment/#{enrollment.code}/cancel") : '',
       facilitator_name: workshop_facilitator_names(workshop),
       rp_email: contact_email_with_fallback(regional_partner&.contact_email_with_backup),
       rp_name: contact_name_with_fallback(regional_partner&.name),

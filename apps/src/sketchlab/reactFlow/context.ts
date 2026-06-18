@@ -23,6 +23,8 @@ interface ToolbarVisibilityContextValue {
   trapFocus: boolean;
   openToolbar: (target: ToolbarTarget, options?: {trapFocus?: boolean}) => void;
   closeToolbar: () => void;
+  isAnyPopoverOpen: boolean;
+  setPopoverOpen: (open: boolean) => void;
 }
 
 const ToolbarVisibilityContext = createContext<ToolbarVisibilityContextValue>({
@@ -30,6 +32,8 @@ const ToolbarVisibilityContext = createContext<ToolbarVisibilityContextValue>({
   trapFocus: false,
   openToolbar: () => {},
   closeToolbar: () => {},
+  isAnyPopoverOpen: false,
+  setPopoverOpen: () => {},
 });
 
 export const ToolbarVisibilityProvider = ToolbarVisibilityContext.Provider;
@@ -65,4 +69,24 @@ export const PushSnapshotProvider = PushSnapshotContext.Provider;
 
 export function usePushSnapshot(): () => void {
   return useContext(PushSnapshotContext);
+}
+
+const AnchorDraggingContext = createContext(false);
+
+export const AnchorDraggingProvider = AnchorDraggingContext.Provider;
+
+export function useIsAnchorDragging(): boolean {
+  return useContext(AnchorDraggingContext);
+}
+
+// The edge whose endpoint is currently being dragged in a reconnect, so the
+// connection ghost can match its styling. Null when no reconnect is active.
+const ReconnectingEdgeContext = createContext<SketchlabReactFlowEdge | null>(
+  null
+);
+
+export const ReconnectingEdgeProvider = ReconnectingEdgeContext.Provider;
+
+export function useReconnectingEdge(): SketchlabReactFlowEdge | null {
+  return useContext(ReconnectingEdgeContext);
 }

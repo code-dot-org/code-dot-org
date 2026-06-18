@@ -9,42 +9,45 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
   # demo_student_ids
 
   test 'demo_student_ids returns ids for known type' do
-    CDO.stubs(:demo_student_ids).returns({'high' => ['2', '3'], 'middle' => ['4', '5']})
+    high1 = create(:student, :in_email_section)
+    high2 = create(:student, :in_email_section)
+    create(:student) # middle, not returned
+    DemoStudent.create!(user: high1, demo_type: 'high')
+    DemoStudent.create!(user: high2, demo_type: 'high')
 
-    assert_equal [2, 3], Policies::DemoSections.demo_student_ids(:high)
+    assert_equal [high1.id, high2.id].sort, Policies::DemoSections.demo_student_ids(:high)
   end
 
   test 'demo_student_ids returns empty array for unknown demo type' do
-    CDO.stubs(:demo_student_ids).returns({'high' => ['2', '3']})
+    DemoStudent.create!(user: create(:student, :in_email_section), demo_type: 'high')
 
     assert_equal [], Policies::DemoSections.demo_student_ids(:unknown_type)
   end
 
-  test 'demo_student_ids returns empty array when config is nil' do
-    CDO.stubs(:demo_student_ids).returns(nil)
-
+  test 'demo_student_ids returns empty array when no rows exist' do
     assert_equal [], Policies::DemoSections.demo_student_ids(:high)
   end
 
-  test 'demo_student_ids converts string ids to integers' do
-    CDO.stubs(:demo_student_ids).returns({'high' => ['10', '11']})
+  test 'demo_student_ids accepts string argument' do
+    student = create(:student, :in_email_section)
+    DemoStudent.create!(user: student, demo_type: 'high')
 
-    assert_equal [10, 11], Policies::DemoSections.demo_student_ids(:high)
+    assert_equal [student.id], Policies::DemoSections.demo_student_ids('high')
   end
 
   # all_demo_student_ids
 
   test 'all_demo_student_ids returns combined ids from all types' do
-    CDO.stubs(:demo_student_ids).returns(
-      {'high' => ['2', '3'], 'middle' => ['4', '5'], 'elementary' => []}
-    )
+    high = create(:student, :in_email_section)
+    middle = create(:student_in_word_section)
+    DemoStudent.create!(user: high, demo_type: 'high')
+    DemoStudent.create!(user: middle, demo_type: 'middle')
+    Policies::DemoSections.reset_cache!
 
-    assert_equal [2, 3, 4, 5], Policies::DemoSections.all_demo_student_ids.sort
+    assert_equal Set[high.id, middle.id], Policies::DemoSections.all_demo_student_ids
   end
 
-  test 'all_demo_student_ids returns empty array when config is nil' do
-    CDO.stubs(:demo_student_ids).returns(nil)
-
+  test 'all_demo_student_ids returns empty set when no rows exist' do
     assert_equal Set[], Policies::DemoSections.all_demo_student_ids
   end
 
@@ -149,6 +152,7 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
     assert_equal 5, view[:avatar_emoji]
     assert_equal 'email', view[:login_type]
     assert_equal 'student', view[:participant_type]
+    assert_equal %w[9 10 11 12], view[:grades]
     assert_equal({name: 'allthethings', display_name: 'All the Things!'}, view[:unit])
     assert_equal(
       {name: 'original-allthethings-course', display_name: 'original-allthethings-course'},
@@ -184,14 +188,57 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
   # demo_student?
 
   test 'demo_student? returns true for a demo student id' do
-    CDO.stubs(:demo_student_ids).returns({'high' => ['2', '3']})
+    student = create(:student, :in_email_section)
+    DemoStudent.create!(user: student, demo_type: 'high')
+    Policies::DemoSections.reset_cache!
 
-    assert Policies::DemoSections.demo_student?(2)
+    assert Policies::DemoSections.demo_student?(student.id)
   end
 
   test 'demo_student? returns false for a non-demo student id' do
-    CDO.stubs(:demo_student_ids).returns({'high' => ['2', '3']})
+    DemoStudent.create!(user: create(:student, :in_email_section), demo_type: 'high')
+    Policies::DemoSections.reset_cache!
 
-    refute Policies::DemoSections.demo_student?(999)
+    refute Policies::DemoSections.demo_student?(-1)
+  end
+
+  test 'demo_student? matches across all demo types' do
+    high = create(:student, :in_email_section)
+    middle = create(:student_in_word_section)
+    elementary = create(:student_in_picture_section)
+    DemoStudent.create!(user: high, demo_type: 'high')
+    DemoStudent.create!(user: middle, demo_type: 'middle')
+    DemoStudent.create!(user: elementary, demo_type: 'elementary')
+    Policies::DemoSections.reset_cache!
+
+    assert Policies::DemoSections.demo_student?(high.id)
+    assert Policies::DemoSections.demo_student?(middle.id)
+    assert Policies::DemoSections.demo_student?(elementary.id)
+    refute Policies::DemoSections.demo_student?(-1)
+  end
+
+  # demo_student_durable?
+
+  test 'demo_student_durable? returns true for a demo student id without caching' do
+    student = create(:student, :in_email_section)
+    DemoStudent.create!(user: student, demo_type: 'high')
+
+    # Force the in-process cache to a wrong answer; the durable check must
+    # ignore it and ask the database directly.
+    Policies::DemoSections.instance_variable_set(:@all_demo_student_ids, Set.new)
+
+    refute Policies::DemoSections.demo_student?(student.id)
+    assert Policies::DemoSections.demo_student_durable?(student.id)
+  end
+
+  test 'demo_student_durable? returns false for a non-demo student id' do
+    refute Policies::DemoSections.demo_student_durable?(-1)
+  end
+
+  test 'demo_student_durable? accepts string argument' do
+    student = create(:student, :in_email_section)
+    DemoStudent.create!(user: student, demo_type: 'high')
+
+    assert Policies::DemoSections.demo_student_durable?(student.id.to_s)
   end
 end

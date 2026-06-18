@@ -40,7 +40,7 @@ module Pd::Summary
       assert_equal @enrollment.last_name, line_item[:teacher_last_name]
       assert_equal @enrollment.user&.id, line_item[:teacher_id]
       assert_equal @enrollment.email, line_item[:teacher_email]
-      assert_equal @workshop.regional_partner.try(:name), line_item[:plp_name]
+      assert_nil line_item[:plp_name]
       assert_equal @enrollment.school_info&.state, line_item[:state]
       assert_equal @enrollment.school_info&.school_district&.name, line_item[:district_name]
       assert_equal @enrollment.school_info&.school_district&.id, line_item[:district_id]

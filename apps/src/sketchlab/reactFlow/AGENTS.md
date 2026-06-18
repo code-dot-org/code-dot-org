@@ -20,7 +20,57 @@ tool for making interactive diagrams, used by students in grades 6-12.
 - Ensure eslint passes. Run `./tools/hooks/pre-commit` from the repo root after making changes to verify.
 - CSS module class names should be camelCase so they can be accessed
   via `styles.someClass` rather than `styles['some-class']`.
-- Write comments in plain English, avoiding dense jargon.
 - Memoize derived values that are non-trivial to compute. The view re-renders
   frequently, so bias towards wrapping any non-trivial (more than O(1)) computation in `useMemo`.
   Wrap callbacks passed to children in `useCallback` for the same reason.
+
+## Comment style
+
+- Write comments in plain English, avoiding dense jargon.
+- Default to no comment. Only add one when the WHY is non-obvious — a
+  subtle constraint, a load-bearing ordering, a workaround for a specific
+  library behavior. Well-named identifiers and code structure should
+  carry the WHAT on their own.
+- Aim for 1–2 lines. If you need more, the code probably needs a name
+  change or a small helper instead.
+- No history. Don't write "previously this had to ...", "used to ...", or
+  "MUI's old behavior was ..." — those rot the moment the underlying code
+  changes. Document the *current* WHY in the present tense.
+- No restating JSX. Comments like "If transparent, show the icon, else
+  show the color" duplicate code that's already self-explanatory.
+- Don't comment self-explanatory props. A prop named `title: string`
+  with usage like `title="Shape"` doesn't need a docstring.
+- For load-bearing timing / ordering rules (e.g. `useLayoutEffect` vs
+  `useEffect`, commit-phase vs effect-phase), one short sentence naming
+  the constraint is enough. Skip the multi-paragraph effect-ordering
+  recap.
+
+Examples:
+
+Good:
+```
+// If focus is inside the toolbar, keep it open regardless of what the
+// focus-tracking state says.
+```
+
+Bad (history):
+```
+// MUI Popover auto-focuses its Paper but doesn't dive into the content,
+// so the user previously had to Tab once to land on a swatch before
+// arrow keys would work.
+```
+
+Bad (verbose mechanics):
+```
+// Inline Custom-px input rendered as the last item in the Size popover.
+// Using <MenuItem> as the root means MUI's MenuList includes the row in
+// its arrow-key navigation — arrowing down past the last preset lands
+// here. Stays blank while a preset (Small/Medium/...) is the active
+// size, so the user can click in and type a fresh value...
+```
+
+Better (same component):
+```
+// Custom font-size input. Blank when a preset is selected; commits on
+// blur or Enter.
+```

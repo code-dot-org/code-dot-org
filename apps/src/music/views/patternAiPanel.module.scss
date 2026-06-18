@@ -1,7 +1,5 @@
 @import "color.scss";
 
-$ai-rubric-cyan-hover: #37e1db;
-
 // Move the arrow left and right.
 @keyframes left-right {
   0%, 100% {
@@ -148,7 +146,7 @@ $ai-rubric-cyan-hover: #37e1db;
     }
 
     &Scanning {
-      background-color: $ai_rubric_cyan;
+      background-color: var(--background-brand-aqua-primary);
     }
 
     &SlowFade {
@@ -186,10 +184,10 @@ $ai-rubric-cyan-hover: #37e1db;
 }
 
 .button {
-  background-color: $ai_rubric_cyan !important;
+  background-color: var(--background-brand-aqua-primary) !important;
 
   &:hover, &:disabled {
-    background-color: $ai-rubric-cyan-hover !important;
+    background-color: var(--background-brand-aqua-strong) !important;
   }
 
   &:disabled {
@@ -283,7 +281,7 @@ $ai-rubric-cyan-hover: #37e1db;
     }
 
     &Active {
-      background-color: $ai_rubric_cyan;
+      background-color: var(--background-brand-aqua-primary);
     }
   }
 }

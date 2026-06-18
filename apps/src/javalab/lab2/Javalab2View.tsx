@@ -1,12 +1,18 @@
 import {Codebridge} from '@codebridge/Codebridge';
-import {useSource} from '@codebridge/hooks/useSource';
+import {
+  LevelbuilderSaveOverrides,
+  useSource,
+} from '@codebridge/hooks/useSource';
 import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {java} from '@codemirror/lang-java';
 import {json} from '@codemirror/lang-json';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useContext, useEffect, useMemo, useRef, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
+import TestResultValidator from '@cdo/apps/lab2/progress/TestResultValidator';
+import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {setLoadedCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {
@@ -25,9 +31,21 @@ import {
   sendJavaConsoleInput,
   stopJavaCode,
 } from './javabuilderRunUtils';
+import {deriveLabConfig} from './labConfig';
 import HorizontalLayout from './layout/HorizontalLayout';
-import {flatToMultiFile} from './sourceConverter';
-import {JavalabFlatSource, JavalabLevelProperties} from './types';
+import JavaValidationTracker from './progress/JavaValidationTracker';
+import {
+  flatToMultiFile,
+  mergeValidationIntoStart,
+  multiFileToFlat,
+  splitForLevelbuilderSave,
+} from './sourceConverter';
+import {mergeStarterAssets} from './starterAssets';
+import {
+  flatSourceFromLevelProperties,
+  JavalabFlatSource,
+  JavalabLevelProperties,
+} from './types';
 
 const javalabLangMapping: {[key: string]: LanguageSupport} = {
   java: java(),
@@ -50,15 +68,32 @@ const defaultConfig: ConfigType = {
   },
 };
 
-// Java Lab 2 — minimal Phase 1 lab2 shell. Loads a level, edits code in
-// codebridge, runs against Javabuilder, prints stdout/stderr to the
-// codebridge console. Validation, neighborhood, theater, captcha, backpack,
-// and start_sources edit mode are TODOs.
+// Java Lab 2 — lab2 shell. Loads a level, edits code in codebridge,
+// runs against Javabuilder, prints stdout/stderr to the codebridge
+// console. Open TODOs in the README.
 const Javalab2View: React.FunctionComponent<
   LabProps<JavalabLevelProperties, ProjectSources>
-> = ({levelProperties, initialSources}) => {
+> = ({levelProperties, initialSources, channel}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
   const dispatch = useAppDispatch();
+  const progressManager = useContext(ProgressManagerContext);
+
+  // Register the lab-specific validator so the Lab2 progress system can
+  // evaluate validation results (driven by Javabuilder test runs).
+  useEffect(() => {
+    if (progressManager && levelProperties.appName === 'javalab') {
+      progressManager.setValidator(
+        new TestResultValidator(JavaValidationTracker.getInstance())
+      );
+    }
+  }, [progressManager, levelProperties.appName]);
+
+  // Derive the labConfig (which sets the mini app in codebridge) from
+  // the channel or the level's csaViewMode.
+  const labConfig = useMemo(
+    () => deriveLabConfig(levelProperties.csaViewMode, channel?.labConfig),
+    [levelProperties.csaViewMode, channel?.labConfig]
+  );
 
   // Java Lab has no client-side runtime to warm up.
   // Mark the code environment loaded immediately so the Run button
@@ -72,30 +107,73 @@ const Javalab2View: React.FunctionComponent<
   }, [dispatch]);
 
   // Codebridge expects MultiFileSource, but legacy Java lab/Javabuilder expects a flat source.
-  // Convert here before passing to codebridge.
+  // Convert here before passing to codebridge. Also merge in the level's starter assets
+  // when loading from the level rather than an active project.
   const codebridgeLevelProperties = useMemo<CodebridgeLevelProperties>(() => {
-    const flatStart = levelProperties.startSources as
-      | JavalabFlatSource
-      | undefined;
-    const flatTemplate = levelProperties.templateSources as
-      | JavalabFlatSource
-      | undefined;
-    const flatExemplar = levelProperties.exemplarSources as
-      | JavalabFlatSource
-      | undefined;
+    const flatTemplate = flatSourceFromLevelProperties(
+      levelProperties.templateSources
+    );
+    const flatExemplar = flatSourceFromLevelProperties(
+      levelProperties.exemplarSources
+    );
+    const flatStartRaw = flatSourceFromLevelProperties(
+      levelProperties.startSources
+    );
+    const flatStart = getIsStartMode()
+      ? mergeValidationIntoStart(flatStartRaw, levelProperties.validation)
+      : flatStartRaw;
+
+    const includeStarterAssets = (flat: JavalabFlatSource | undefined) =>
+      flat
+        ? mergeStarterAssets(
+            flatToMultiFile(flat),
+            levelProperties.starterAssets,
+            levelProperties.name
+          )
+        : undefined;
 
     return {
       ...levelProperties,
-      startSources: flatStart ? flatToMultiFile(flatStart) : undefined,
-      templateSources: flatTemplate ? flatToMultiFile(flatTemplate) : undefined,
-      exemplarSources: flatExemplar ? flatToMultiFile(flatExemplar) : undefined,
+      miniApp: labConfig?.miniApp?.name,
+      startSources: includeStarterAssets(flatStart),
+      templateSources: includeStarterAssets(flatTemplate),
+      exemplarSources: includeStarterAssets(flatExemplar),
     };
-  }, [levelProperties]);
+  }, [levelProperties, labConfig]);
+
+  // A loaded project's sources come from the flat S3 shape, which carries no
+  // labConfig. Merge it back in so codebridge shows the mini-app for existing
+  // miniApp-based projects.
+  const initialSourcesWithLabConfig = useMemo(
+    () =>
+      initialSources && labConfig
+        ? {...initialSources, labConfig}
+        : initialSources,
+    [initialSources, labConfig]
+  );
+
+  // Levelbuilder save needs Javalab's flat shape, not codebridge's
+  // MultiFileSource. For start mode, split validation files off into a
+  // separate `validation` field, for consistency with legacy.
+  const levelbuilderSaveOverrides = useMemo<LevelbuilderSaveOverrides>(
+    () => ({
+      buildStartSavePayload: source => {
+        const {startSources: startFlat, validation} =
+          splitForLevelbuilderSave(source);
+        return {start_sources: startFlat, validation};
+      },
+      buildExemplarSavePayload: source => ({
+        exemplar_sources: multiFileToFlat(source),
+      }),
+    }),
+    []
+  );
 
   const {startSources} = useSource(
     DEFAULT_PROJECT,
     codebridgeLevelProperties,
-    initialSources
+    initialSourcesWithLabConfig,
+    levelbuilderSaveOverrides
   );
 
   const sourceLevelId = useAppSelector(
@@ -107,15 +185,44 @@ const Javalab2View: React.FunctionComponent<
   );
   const hasSource = !!source;
 
+  // We track first save so we know whether handleRunClick needs to force a save
+  // before running. We need to ensure the user has saved at least once before
+  // running so their code is in S3 for Javabuilder to read.
+  // Each level has its own channel and ProjectManager, so re-register (and
+  // reset) per channel; the stale guard keeps a save from the previous
+  // level's manager from marking the new level saved.
+  const initialSourcesSaved = useRef(false);
+  useEffect(() => {
+    initialSourcesSaved.current = false;
+    let stale = false;
+    const projectManager = Lab2Registry.getInstance().getProjectManager();
+    if (projectManager) {
+      projectManager.addSaveSuccessListener(() => {
+        // Ensure a new version was actually saved by checking for a version id.
+        if (!stale && projectManager.getCurrentVersionId()) {
+          initialSourcesSaved.current = true;
+        }
+      });
+    }
+    return () => {
+      stale = true;
+    };
+  }, [channel?.id]);
+
   const onRun = async (
-    _runTests: boolean,
+    runTests: boolean,
     dispatch: AppDispatch,
     _source: MultiFileSource | undefined
   ) => {
-    // Javabuilder reads source from S3. Flush the in-memory editor first so
-    // S3 reflects what the user sees before the WS connection opens.
-    await Lab2Registry.getInstance().getProjectManager()?.flushSave();
-    await handleRunClick(dispatch, levelProperties);
+    await handleRunClick(
+      runTests,
+      dispatch,
+      levelProperties.id,
+      labConfig?.miniApp?.name || 'console',
+      progressManager,
+      /* needsInitialSourcesSave */ !initialSources &&
+        !initialSourcesSaved.current
+    );
   };
 
   return (
@@ -129,6 +236,7 @@ const Javalab2View: React.FunctionComponent<
           onStop={stopJavaCode}
           sendConsoleInput={sendJavaConsoleInput}
           levelProperties={codebridgeLevelProperties}
+          allowMultipleValidationFiles={true}
         />
       )}
     </div>

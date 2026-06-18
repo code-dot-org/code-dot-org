@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-27 22:20:55 UTC",
+    "serialized_at": "2026-06-17 19:45:50 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1355,6 +1355,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGuide_L1_Closing-Cert"
+        ],
         "progression": "Congratulations [NEW - Certificate Emphasis]"
       },
       "bonus": false,
@@ -1991,6 +1994,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

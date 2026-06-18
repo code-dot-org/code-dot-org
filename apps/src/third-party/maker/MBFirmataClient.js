@@ -1,7 +1,7 @@
 /*
   This file is a copy of MBFirmataClient.js from: https://github.com/microbit-foundation/microbit-firmata
   It is a client class written in Javascript that runs in Node.js and communicates with the micro:bit - it includes
-  merged updates for Code.org integration.
+  merged updates for CodeAI integration.
  */
 
 /*

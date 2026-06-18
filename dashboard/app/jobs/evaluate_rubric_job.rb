@@ -128,23 +128,6 @@ class EvaluateRubricJob < ApplicationJob
     # We gracefully just fail, here, and we do not file this exception
   end
 
-  rescue_from(PIIFilterException) do |exception|
-    if rack_env?(:development)
-      puts "EvaluateRubricJob Filter Error: #{exception.full_message} Type: #{exception.share_failure.type}"
-    end
-
-    # Record the failure, if we can
-    begin
-      rubric_ai_evaluation = pass_in_or_create_rubric_ai_evaluation(self)
-      rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:PII_VIOLATION]
-      rubric_ai_evaluation.save!
-    rescue StandardError
-      # Ignore cascading errors when the rubric record does not exist
-    end
-
-    # We gracefully just fail, here, and we do not file this exception
-  end
-
   rescue_from(RequestTooLargeError) do |exception|
     if rack_env?(:development)
       puts "EvaluateRubricJob RequestTooLargeError: #{exception.message}"
@@ -236,8 +219,6 @@ class EvaluateRubricJob < ApplicationJob
 
     channel_id = get_channel_id(user, script_level)
     code, project_version = read_user_code(channel_id)
-
-    ShareFiltering.find_pii_failure(code, exceptions: true)
 
     openai_params = AiRubricConfig.get_openai_params(lesson_s3_name, code)
     response = get_openai_evaluations(openai_params)
@@ -362,7 +343,7 @@ class EvaluateRubricJob < ApplicationJob
     unless CDO.ai_proxy_origin || [:development, :test].include?(rack_env)
       raise "CDO.ai_proxy_origin is required outside of development and test environments"
     end
-    CDO.ai_proxy_origin || CDO.studio_url(STUB_AI_PROXY_PATH, CDO.default_scheme)
+    CDO.ai_proxy_origin || CDO.studio_url(STUB_AI_PROXY_PATH)
   end
 
   private def validate_evaluations(evaluations, rubric)

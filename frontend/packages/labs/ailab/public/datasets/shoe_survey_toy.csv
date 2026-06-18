@@ -1,0 +1,453 @@
+spend time,weather,socks,day,notice shoes,shoe
+indoors,snowy,no,casual,yes,cowboy boots
+city,sunny,no,professional,yes,tennis shoes
+indoors,sunny,yes,work,yes,tennis shoes
+nature,sunny,no,work,yes,sandals
+nature,sunny,yes,casual,no,sandals
+indoors,rainy,yes,casual,yes,dress shoes
+nature,windy,yes,work,yes,work boots
+indoors,windy,yes,casual,no,tennis shoes
+indoors,sunny,no,professional,yes,cowboy boots
+city,windy,no,professional,yes,cowboy boots
+nature,sunny,no,casual,yes,cowboy boots
+nature,sunny,no,lazy,no,sandals
+nature,rainy,yes,work,yes,work boots
+indoors,sunny,yes,casual,yes,dress shoes
+nature,windy,no,professional,yes,dress shoes
+nature,sunny,no,casual,no,sandals
+indoors,rainy,yes,professional,yes,dress shoes
+city,rainy,yes,work,no,work boots
+city,rainy,yes,work,no,work boots
+indoors,rainy,yes,professional,no,dress shoes
+bed,windy,no,work,yes,cowboy boots
+city,windy,yes,professional,no,work boots
+indoors,sunny,no,casual,yes,tennis shoes
+city,sunny,yes,professional,yes,dress shoes
+nature,sunny,yes,professional,yes,cowboy boots
+indoors,rainy,no,professional,yes,dress shoes
+indoors,sunny,yes,professional,yes,tennis shoes
+city,snowy,yes,work,no,work boots
+indoors,windy,no,professional,no,dress shoes
+indoors,sunny,no,casual,yes,tennis shoes
+indoors,sunny,no,professional,no,dress shoes
+indoors,sunny,yes,casual,yes,tennis shoes
+city,sunny,yes,casual,no,tennis shoes
+city,sunny,yes,casual,no,sandals
+indoors,sunny,no,casual,no,tennis shoes
+indoors,snowy,yes,work,yes,work boots
+city,windy,no,lazy,yes,cowboy boots
+indoors,windy,yes,casual,no,tennis shoes
+nature,snowy,yes,work,no,work boots
+city,sunny,yes,lazy,yes,tennis shoes
+city,windy,yes,casual,yes,tennis shoes
+nature,rainy,no,lazy,no,sandals
+nature,windy,yes,casual,yes,tennis shoes
+indoors,rainy,no,casual,yes,sandals
+nature,sunny,yes,casual,yes,work boots
+nature,snowy,yes,work,no,work boots
+indoors,sunny,yes,casual,yes,tennis shoes
+city,rainy,no,lazy,yes,sandals
+nature,sunny,yes,work,yes,work boots
+indoors,sunny,yes,professional,no,tennis shoes
+city,windy,yes,casual,yes,cowboy boots
+nature,rainy,no,casual,yes,cowboy boots
+city,sunny,no,casual,yes,tennis shoes
+city,sunny,yes,professional,yes,tennis shoes
+city,sunny,yes,casual,yes,tennis shoes
+indoors,sunny,no,lazy,yes,sandals
+indoors,windy,yes,casual,no,sandals
+bed,sunny,no,casual,yes,sandals
+nature,sunny,yes,professional,yes,tennis shoes
+city,windy,no,casual,no,tennis shoes
+city,windy,no,professional,yes,cowboy boots
+nature,snowy,yes,casual,yes,work boots
+city,windy,yes,professional,yes,dress shoes
+nature,rainy,yes,work,no,work boots
+indoors,sunny,yes,casual,no,tennis shoes
+indoors,sunny,yes,casual,no,tennis shoes
+nature,windy,no,professional,yes,cowboy boots
+indoors,windy,no,casual,yes,tennis shoes
+city,rainy,yes,professional,no,dress shoes
+city,rainy,yes,casual,yes,tennis shoes
+nature,sunny,yes,casual,yes,cowboy boots
+indoors,windy,yes,casual,yes,tennis shoes
+city,sunny,yes,casual,yes,tennis shoes
+indoors,windy,yes,casual,yes,tennis shoes
+indoors,windy,no,professional,no,dress shoes
+city,windy,yes,casual,no,tennis shoes
+nature,sunny,yes,lazy,yes,sandals
+indoors,sunny,yes,professional,yes,cowboy boots
+city,snowy,yes,work,yes,work boots
+indoors,windy,yes,casual,yes,tennis shoes
+indoors,sunny,yes,casual,yes,cowboy boots
+city,snowy,yes,work,yes,work boots
+nature,windy,no,work,yes,tennis shoes
+nature,snowy,yes,work,yes,work boots
+city,sunny,no,casual,yes,sandals
+nature,windy,yes,professional,no,dress shoes
+nature,sunny,no,casual,yes,sandals
+city,windy,yes,professional,yes,cowboy boots
+indoors,sunny,no,professional,no,dress shoes
+city,sunny,yes,casual,yes,cowboy boots
+nature,rainy,no,work,yes,cowboy boots
+nature,sunny,yes,professional,no,dress shoes
+indoors,windy,yes,casual,yes,tennis shoes
+indoors,sunny,no,lazy,no,sandals
+nature,windy,no,lazy,no,sandals
+indoors,sunny,yes,professional,yes,tennis shoes
+city,windy,yes,casual,no,tennis shoes
+city,snowy,yes,professional,yes,dress shoes
+indoors,windy,yes,work,yes,tennis shoes
+indoors,sunny,yes,work,yes,tennis shoes
+bed,windy,no,lazy,yes,sandals
+indoors,windy,no,professional,yes,dress shoes
+nature,windy,yes,casual,yes,tennis shoes
+city,windy,no,professional,yes,cowboy boots
+nature,rainy,yes,work,no,work boots
+indoors,snowy,no,professional,yes,dress shoes
+indoors,sunny,no,casual,no,sandals
+city,sunny,no,casual,yes,tennis shoes
+nature,sunny,no,work,no,sandals
+indoors,windy,yes,casual,no,tennis shoes
+city,snowy,yes,work,yes,work boots
+indoors,windy,no,lazy,yes,tennis shoes
+indoors,rainy,yes,lazy,no,tennis shoes
+city,snowy,yes,work,no,work boots
+indoors,windy,no,professional,no,dress shoes
+nature,rainy,no,casual,yes,sandals
+nature,snowy,yes,work,yes,work boots
+city,windy,yes,casual,no,tennis shoes
+indoors,windy,yes,casual,yes,tennis shoes
+nature,rainy,yes,work,yes,work boots
+nature,windy,yes,work,yes,work boots
+nature,windy,no,professional,yes,dress shoes
+city,windy,no,lazy,yes,sandals
+indoors,windy,yes,lazy,yes,tennis shoes
+city,snowy,yes,work,no,work boots
+city,windy,yes,professional,yes,work boots
+indoors,sunny,yes,lazy,yes,tennis shoes
+indoors,sunny,yes,casual,yes,tennis shoes
+indoors,rainy,yes,professional,yes,dress shoes
+indoors,sunny,no,work,yes,cowboy boots
+nature,snowy,yes,work,no,work boots
+nature,snowy,yes,work,no,work boots
+indoors,windy,yes,professional,yes,dress shoes
+city,snowy,yes,work,no,work boots
+city,sunny,yes,casual,yes,cowboy boots
+indoors,sunny,no,professional,yes,cowboy boots
+city,snowy,yes,work,no,work boots
+nature,windy,no,casual,yes,cowboy boots
+indoors,snowy,yes,professional,yes,dress shoes
+bed,sunny,yes,work,yes,sandals
+city,windy,yes,casual,yes,tennis shoes
+city,snowy,yes,work,no,work boots
+city,snowy,yes,work,yes,work boots
+indoors,windy,yes,work,yes,tennis shoes
+city,sunny,yes,casual,yes,tennis shoes
+indoors,windy,yes,casual,yes,tennis shoes
+nature,rainy,no,casual,yes,sandals
+nature,rainy,yes,work,no,work boots
+bed,sunny,no,casual,yes,sandals
+indoors,snowy,no,professional,yes,dress shoes
+city,rainy,no,lazy,no,sandals
+indoors,windy,yes,professional,no,tennis shoes
+nature,snowy,yes,work,yes,work boots
+indoors,windy,yes,professional,no,dress shoes
+bed,sunny,no,lazy,no,sandals
+indoors,rainy,yes,professional,yes,dress shoes
+indoors,snowy,yes,professional,yes,dress shoes
+indoors,windy,yes,lazy,no,tennis shoes
+city,windy,yes,professional,yes,cowboy boots
+city,windy,no,casual,yes,tennis shoes
+nature,rainy,yes,lazy,yes,tennis shoes
+indoors,windy,no,lazy,yes,sandals
+city,windy,yes,professional,no,dress shoes
+city,snowy,yes,work,no,work boots
+indoors,sunny,yes,casual,no,tennis shoes
+city,snowy,no,professional,yes,dress shoes
+indoors,windy,yes,lazy,yes,cowboy boots
+indoors,sunny,yes,casual,yes,tennis shoes
+nature,rainy,yes,casual,yes,work boots
+city,sunny,no,lazy,yes,sandals
+indoors,rainy,yes,professional,yes,dress shoes
+city,windy,no,professional,yes,cowboy boots
+indoors,sunny,yes,casual,yes,tennis shoes
+indoors,sunny,yes,casual,yes,tennis shoes
+nature,rainy,yes,work,no,work boots
+bed,sunny,no,casual,yes,sandals
+city,rainy,yes,casual,yes,tennis shoes
+indoors,rainy,yes,work,yes,tennis shoes
+city,sunny,yes,professional,yes,work boots
+city,sunny,yes,casual,yes,tennis shoes
+nature,sunny,no,work,yes,sandals
+indoors,sunny,no,professional,yes,tennis shoes
+city,rainy,yes,work,no,work boots
+indoors,snowy,yes,work,yes,work boots
+indoors,sunny,yes,professional,no,dress shoes
+nature,rainy,yes,work,no,work boots
+indoors,windy,yes,lazy,yes,tennis shoes
+city,sunny,yes,casual,yes,tennis shoes
+indoors,windy,yes,casual,yes,tennis shoes
+indoors,sunny,no,lazy,yes,cowboy boots
+nature,rainy,no,professional,yes,cowboy boots
+city,snowy,yes,professional,yes,dress shoes
+indoors,sunny,no,casual,yes,tennis shoes
+indoors,rainy,yes,casual,no,tennis shoes
+indoors,sunny,no,casual,no,sandals
+indoors,sunny,yes,professional,yes,dress shoes
+nature,sunny,yes,lazy,yes,tennis shoes
+indoors,sunny,no,lazy,yes,sandals
+city,sunny,yes,casual,yes,tennis shoes
+city,rainy,yes,work,no,work boots
+indoors,sunny,no,lazy,yes,tennis shoes
+city,sunny,yes,professional,yes,tennis shoes
+city,windy,yes,work,no,work boots
+nature,rainy,yes,work,yes,work boots
+nature,windy,no,lazy,no,sandals
+indoors,windy,yes,casual,yes,tennis shoes
+nature,snowy,yes,work,no,work boots
+nature,snowy,yes,work,yes,work boots
+nature,windy,yes,casual,no,tennis shoes
+indoors,sunny,no,work,no,sandals
+nature,snowy,yes,casual,no,work boots
+nature,sunny,no,lazy,yes,tennis shoes
+nature,sunny,yes,work,yes,work boots
+indoors,windy,yes,professional,no,dress shoes
+nature,sunny,yes,work,yes,work boots
+indoors,windy,yes,casual,yes,tennis shoes
+indoors,sunny,yes,professional,yes,tennis shoes
+nature,windy,yes,work,no,work boots
+nature,rainy,yes,professional,no,dress shoes
+city,rainy,yes,professional,yes,dress shoes
+city,rainy,yes,lazy,yes,tennis shoes
+city,sunny,no,casual,yes,cowboy boots
+indoors,sunny,yes,lazy,yes,tennis shoes
+nature,snowy,yes,work,yes,work boots
+indoors,snowy,yes,work,yes,work boots
+city,windy,no,professional,yes,cowboy boots
+indoors,sunny,no,lazy,yes,sandals
+indoors,windy,no,casual,yes,tennis shoes
+bed,windy,no,lazy,no,sandals
+city,windy,yes,lazy,no,tennis shoes
+bed,sunny,no,casual,yes,sandals
+indoors,snowy,yes,professional,no,dress shoes
+nature,sunny,yes,casual,yes,tennis shoes
+city,snowy,yes,work,yes,work boots
+indoors,snowy,no,professional,no,dress shoes
+indoors,windy,yes,professional,yes,tennis shoes
+indoors,sunny,yes,professional,no,dress shoes
+city,rainy,yes,professional,no,dress shoes
+city,sunny,yes,casual,yes,tennis shoes
+city,sunny,yes,professional,yes,tennis shoes
+city,sunny,no,professional,yes,tennis shoes
+city,sunny,yes,professional,yes,tennis shoes
+nature,rainy,no,professional,yes,dress shoes
+city,rainy,yes,work,yes,work boots
+nature,rainy,yes,professional,no,work boots
+city,windy,yes,lazy,yes,tennis shoes
+indoors,sunny,yes,professional,yes,dress shoes
+indoors,sunny,yes,casual,yes,tennis shoes
+city,sunny,no,lazy,yes,tennis shoes
+nature,snowy,yes,casual,no,work boots
+indoors,snowy,no,professional,yes,dress shoes
+indoors,sunny,no,professional,yes,cowboy boots
+city,sunny,yes,work,yes,work boots
+indoors,snowy,yes,professional,no,dress shoes
+nature,sunny,yes,casual,yes,tennis shoes
+indoors,windy,yes,work,yes,tennis shoes
+indoors,windy,yes,professional,yes,tennis shoes
+indoors,windy,yes,casual,yes,tennis shoes
+city,snowy,no,professional,yes,dress shoes
+indoors,windy,yes,casual,yes,tennis shoes
+city,rainy,no,professional,yes,cowboy boots
+nature,sunny,no,lazy,yes,cowboy boots
+nature,snowy,yes,work,yes,work boots
+indoors,windy,yes,casual,yes,cowboy boots
+indoors,sunny,yes,professional,yes,dress shoes
+nature,snowy,yes,professional,no,work boots
+nature,windy,yes,casual,yes,sandals
+nature,windy,no,work,no,sandals
+indoors,windy,yes,casual,yes,tennis shoes
+indoors,sunny,no,work,no,sandals
+bed,sunny,no,lazy,yes,sandals
+indoors,rainy,yes,professional,no,dress shoes
+indoors,sunny,yes,casual,yes,tennis shoes
+indoors,rainy,no,professional,no,tennis shoes
+nature,rainy,no,casual,yes,cowboy boots
+nature,sunny,no,work,yes,sandals
+city,windy,yes,professional,no,dress shoes
+nature,windy,yes,professional,yes,cowboy boots
+indoors,sunny,yes,casual,yes,tennis shoes
+indoors,windy,yes,professional,no,dress shoes
+city,snowy,no,professional,yes,cowboy boots
+city,sunny,no,professional,yes,cowboy boots
+city,windy,no,lazy,no,sandals
+city,sunny,yes,professional,yes,tennis shoes
+indoors,windy,yes,professional,yes,tennis shoes
+city,windy,yes,casual,yes,tennis shoes
+indoors,snowy,yes,casual,no,work boots
+city,rainy,yes,casual,yes,cowboy boots
+indoors,snowy,yes,professional,yes,dress shoes
+indoors,snowy,yes,professional,no,dress shoes
+indoors,windy,yes,professional,yes,tennis shoes
+indoors,windy,yes,casual,yes,tennis shoes
+indoors,windy,no,casual,yes,tennis shoes
+bed,sunny,no,lazy,yes,sandals
+city,windy,no,casual,no,sandals
+indoors,sunny,yes,professional,yes,tennis shoes
+bed,rainy,yes,lazy,yes,cowboy boots
+indoors,rainy,yes,professional,no,dress shoes
+nature,windy,yes,work,no,work boots
+nature,windy,yes,casual,yes,tennis shoes
+indoors,snowy,yes,casual,no,work boots
+nature,windy,yes,professional,no,dress shoes
+indoors,windy,no,lazy,yes,tennis shoes
+indoors,windy,yes,professional,yes,tennis shoes
+nature,snowy,yes,professional,no,work boots
+city,rainy,yes,work,no,work boots
+indoors,snowy,yes,professional,no,dress shoes
+nature,windy,yes,casual,yes,dress shoes
+city,sunny,yes,professional,yes,tennis shoes
+nature,windy,no,lazy,no,sandals
+nature,rainy,no,professional,yes,cowboy boots
+nature,sunny,yes,work,yes,sandals
+city,rainy,no,professional,yes,cowboy boots
+city,snowy,yes,work,no,work boots
+nature,sunny,no,casual,no,sandals
+indoors,rainy,yes,casual,yes,cowboy boots
+nature,snowy,yes,professional,yes,dress shoes
+nature,rainy,yes,casual,yes,work boots
+indoors,windy,yes,professional,yes,tennis shoes
+city,sunny,no,casual,no,sandals
+bed,windy,yes,casual,yes,sandals
+city,sunny,no,professional,no,dress shoes
+nature,windy,yes,work,yes,work boots
+nature,windy,yes,work,no,work boots
+nature,snowy,yes,work,yes,work boots
+indoors,windy,yes,professional,yes,tennis shoes
+city,rainy,no,casual,yes,cowboy boots
+indoors,sunny,yes,professional,yes,dress shoes
+city,windy,yes,casual,yes,tennis shoes
+indoors,rainy,yes,lazy,yes,tennis shoes
+nature,rainy,yes,work,no,work boots
+nature,windy,no,casual,no,sandals
+city,rainy,no,work,yes,cowboy boots
+city,snowy,yes,work,no,work boots
+city,snowy,yes,work,yes,work boots
+city,windy,yes,professional,yes,tennis shoes
+nature,rainy,no,casual,yes,cowboy boots
+nature,rainy,yes,lazy,yes,tennis shoes
+nature,sunny,no,casual,no,sandals
+city,windy,yes,professional,yes,tennis shoes
+nature,snowy,yes,work,yes,work boots
+bed,sunny,yes,work,no,sandals
+city,rainy,no,casual,yes,cowboy boots
+city,rainy,no,professional,yes,cowboy boots
+bed,windy,no,casual,yes,sandals
+nature,snowy,yes,professional,no,work boots
+city,sunny,yes,casual,yes,tennis shoes
+indoors,sunny,yes,work,yes,tennis shoes
+nature,windy,yes,casual,no,tennis shoes
+indoors,windy,yes,work,no,tennis shoes
+nature,sunny,yes,casual,no,tennis shoes
+city,windy,yes,work,yes,work boots
+city,rainy,yes,professional,yes,tennis shoes
+indoors,snowy,yes,work,no,work boots
+indoors,sunny,yes,professional,yes,tennis shoes
+indoors,snowy,no,professional,no,dress shoes
+indoors,sunny,no,casual,no,sandals
+city,windy,yes,work,no,work boots
+nature,sunny,no,lazy,no,sandals
+indoors,windy,no,lazy,yes,sandals
+indoors,windy,yes,casual,yes,tennis shoes
+city,windy,yes,professional,no,dress shoes
+indoors,sunny,yes,professional,no,dress shoes
+bed,sunny,no,lazy,no,sandals
+indoors,rainy,yes,lazy,yes,cowboy boots
+indoors,snowy,yes,professional,no,work boots
+indoors,sunny,yes,lazy,yes,tennis shoes
+city,rainy,yes,work,no,work boots
+indoors,sunny,yes,lazy,no,tennis shoes
+city,snowy,yes,professional,no,work boots
+nature,snowy,no,professional,yes,cowboy boots
+city,snowy,yes,work,no,work boots
+city,rainy,yes,professional,yes,work boots
+indoors,windy,yes,professional,yes,tennis shoes
+nature,rainy,yes,work,yes,work boots
+indoors,rainy,yes,professional,no,dress shoes
+city,rainy,no,casual,yes,cowboy boots
+city,sunny,no,lazy,no,tennis shoes
+city,sunny,yes,casual,no,dress shoes
+city,snowy,yes,professional,yes,work boots
+indoors,rainy,yes,casual,yes,cowboy boots
+city,sunny,yes,casual,yes,tennis shoes
+city,snowy,yes,work,no,work boots
+indoors,sunny,yes,casual,yes,tennis shoes
+nature,snowy,yes,work,no,work boots
+indoors,snowy,yes,professional,no,dress shoes
+indoors,windy,no,professional,no,dress shoes
+nature,windy,no,lazy,yes,sandals
+indoors,windy,no,lazy,no,sandals
+city,windy,yes,casual,yes,tennis shoes
+indoors,sunny,yes,professional,yes,dress shoes
+city,rainy,yes,work,no,work boots
+indoors,snowy,no,casual,yes,cowboy boots
+nature,windy,no,casual,no,sandals
+nature,sunny,no,lazy,yes,sandals
+indoors,windy,yes,casual,yes,tennis shoes
+nature,windy,yes,professional,no,dress shoes
+nature,snowy,yes,professional,no,dress shoes
+indoors,rainy,yes,professional,no,dress shoes
+nature,snowy,no,lazy,yes,cowboy boots
+indoors,windy,no,casual,yes,tennis shoes
+nature,windy,yes,professional,yes,tennis shoes
+city,windy,yes,lazy,yes,tennis shoes
+indoors,windy,yes,casual,yes,tennis shoes
+city,rainy,yes,work,yes,work boots
+nature,sunny,no,lazy,yes,sandals
+city,snowy,yes,professional,no,work boots
+nature,snowy,no,professional,no,dress shoes
+indoors,windy,no,work,no,sandals
+indoors,sunny,yes,lazy,yes,tennis shoes
+nature,sunny,yes,lazy,no,tennis shoes
+nature,windy,yes,lazy,no,sandals
+city,windy,yes,work,yes,tennis shoes
+indoors,snowy,yes,professional,yes,dress shoes
+city,snowy,yes,work,no,work boots
+city,sunny,yes,casual,yes,tennis shoes
+indoors,rainy,yes,work,yes,work boots
+indoors,windy,yes,professional,yes,dress shoes
+indoors,rainy,no,lazy,yes,sandals
+indoors,windy,yes,professional,yes,tennis shoes
+city,windy,yes,professional,no,dress shoes
+indoors,windy,yes,lazy,yes,tennis shoes
+city,sunny,no,lazy,no,sandals
+bed,windy,no,casual,no,sandals
+indoors,sunny,yes,casual,no,tennis shoes
+nature,snowy,yes,work,yes,work boots
+indoors,sunny,no,professional,yes,tennis shoes
+city,snowy,yes,work,no,work boots
+indoors,sunny,yes,casual,yes,tennis shoes
+indoors,sunny,no,professional,no,tennis shoes
+indoors,sunny,yes,work,yes,tennis shoes
+indoors,sunny,no,work,yes,sandals
+nature,rainy,yes,work,no,work boots
+indoors,rainy,yes,professional,no,dress shoes
+indoors,snowy,yes,work,no,work boots
+indoors,windy,yes,professional,no,dress shoes
+city,sunny,yes,casual,yes,tennis shoes
+indoors,sunny,yes,casual,yes,tennis shoes
+bed,rainy,no,lazy,yes,sandals
+nature,snowy,yes,work,yes,work boots
+indoors,windy,yes,professional,no,dress shoes
+city,sunny,yes,lazy,yes,tennis shoes
+nature,snowy,yes,casual,yes,work boots
+city,windy,yes,lazy,no,tennis shoes
+indoors,windy,yes,professional,yes,dress shoes
+indoors,sunny,yes,professional,yes,tennis shoes
+nature,sunny,no,lazy,yes,sandals
+indoors,snowy,yes,work,no,work boots
+indoors,windy,yes,lazy,yes,sandals
+nature,sunny,yes,lazy,yes,tennis shoes
+city,sunny,yes,casual,yes,cowboy boots
+city,snowy,yes,work,yes,work boots

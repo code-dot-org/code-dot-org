@@ -7,7 +7,7 @@ Feature: Regional Workshop Catalog page
     Then I am on "http://studio.code.org/professional-learning/workshops"
 
     # Sees default view
-    And I wait until element "h1:contains(Find Code.org workshops near you)" is visible
+    And I wait until element "h1:contains(Find CodeAI workshops near you)" is visible
     And I wait until element "h2:contains(Enter zip code to see workshops)" is visible
 
     # Enter zip with no match and no workshops
@@ -25,7 +25,7 @@ Feature: Regional Workshop Catalog page
     Then I am on "http://studio.code.org/professional-learning/workshops"
 
     # Sees default view
-    And I wait until element "h1:contains(Find Code.org workshops near you)" is visible
+    And I wait until element "h1:contains(Find CodeAI workshops near you)" is visible
     And I wait until element "h2:contains(Enter zip code to see workshops)" is visible
 
     # Enter zip with regional partner match
@@ -52,7 +52,7 @@ Feature: Regional Workshop Catalog page
     Then I am on "http://studio.code.org/professional-learning/workshops"
 
     # Sees default view
-    And I wait until element "h1:contains(Find Code.org workshops near you)" is visible
+    And I wait until element "h1:contains(Find CodeAI workshops near you)" is visible
     And I wait until element "h2:contains(Enter zip code to see workshops)" is visible
 
     # Enter zip with regional partner match

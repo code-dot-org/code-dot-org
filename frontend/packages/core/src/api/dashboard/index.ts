@@ -7,3 +7,8 @@ export * from './preferences';
 export * from './projects';
 export * from './sections';
 export * from './sources';
+export type {
+  CurrentUserResponse,
+  CurrentUserResponseSignedIn,
+  CurrentUserResponseSignedOut,
+} from './users/currentUserTypes';

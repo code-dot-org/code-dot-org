@@ -24,6 +24,7 @@ interface JoinLinkCopyButtonProps {
   studioUrlPrefix: string;
   sourceName?: string;
   hidden?: boolean;
+  isDemoSection?: boolean;
 }
 
 const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
@@ -33,6 +34,7 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
   studioUrlPrefix,
   sourceName = 'teacherHomepage',
   hidden = false,
+  isDemoSection = false,
 }) => {
   const [shouldShowDialog, setShouldShowDialog] = React.useState(false);
   const [showCopiedMsg, setShowCopiedMsg] = React.useState(false);
@@ -57,6 +59,23 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
       setShowCopiedMsg(false);
     }, 5000);
   };
+
+  // Demo sections have no real join code; show the placeholder the caller
+  // passes as sectionCode (matching the demo card preview). Not copyable —
+  // there is nothing to join.
+  if (isDemoSection) {
+    return (
+      <div
+        className={classNames(styles.sectionCodeBox, styles.sectionCodeText)}
+        id="uitest-demo-section-code"
+      >
+        <Typography variant="overline1" gutterBottom>
+          <span>{i18n.sectionCodeWithColon()}</span>{' '}
+          <span className={styles.sectionCodeTextHidden}>{sectionCode}</span>
+        </Typography>
+      </div>
+    );
+  }
 
   return loginType &&
     (LOGIN_TYPES_WITH_PASSWORD_COLUMN as string[]).includes(loginType) ? (

@@ -7,7 +7,6 @@ import {
 import {createUuid} from '@cdo/apps/utils';
 
 import {LINE_ANCHOR_SIZE_PX} from '../constants';
-import {NodeDataBase} from '../types';
 
 import {endpointPatch, findNearestHandleAmong} from './handleSnap';
 
@@ -16,14 +15,25 @@ export function lineAnchorHandleId(role: 'source' | 'target'): string {
   return `line-anchor-${role}`;
 }
 
+export function getStandaloneLineAnchorIds(
+  edge: SketchlabReactFlowEdge,
+  getNode: (id: string) => SketchlabReactFlowNode | undefined
+): [string, string] | null {
+  const sourceNode = getNode(edge.source);
+  const targetNode = getNode(edge.target);
+  if (sourceNode?.type !== 'lineAnchor' || targetNode?.type !== 'lineAnchor') {
+    return null;
+  }
+  return [sourceNode.id, targetNode.id];
+}
+
 // Builds a lineAnchor node positioned so that its visible Handle ends up at
 // `handleFlowPosition`. Source anchors render their Handle on the right
 // side of the 10×10 box; target anchors render on the left. Both sit
 // vertically centered, so we offset the node's top-left corner accordingly.
 export function createLineAnchorAtHandle(
   handleFlowPosition: XYPosition,
-  role: 'source' | 'target',
-  baseData?: Partial<NodeDataBase>
+  role: 'source' | 'target'
 ): SketchlabReactFlowNode {
   const position: XYPosition =
     role === 'source'
@@ -39,7 +49,7 @@ export function createLineAnchorAtHandle(
     id: createUuid(),
     type: 'lineAnchor',
     position,
-    data: {...baseData, lineAnchorRole: role},
+    data: {lineAnchorRole: role},
     style: {width: LINE_ANCHOR_SIZE_PX, height: LINE_ANCHOR_SIZE_PX},
   };
 }
@@ -64,30 +74,17 @@ export function anchorHandleFlowPosition(
 }
 
 // Spawns a fresh lineAnchor at `flowPosition` and returns the partial
-// edge fields that point one side of an edge at it. `baseData` lets
-// callers carry across state (e.g. showHandles) from an existing
-// anchor on the edge so detach paths don't reset toolbar choices.
+// edge fields that point one side of an edge at it.
 export function attachEdgeToFreshAnchor(
   flowPosition: XYPosition,
-  side: 'source' | 'target',
-  baseData?: Partial<NodeDataBase>
+  side: 'source' | 'target'
 ): {
   anchor: SketchlabReactFlowNode;
   edgePatch: Partial<SketchlabReactFlowEdge>;
 } {
-  const anchor = createLineAnchorAtHandle(flowPosition, side, baseData);
+  const anchor = createLineAnchorAtHandle(flowPosition, side);
   const edgePatch = endpointPatch(side, anchor.id, lineAnchorHandleId(side));
   return {anchor, edgePatch};
-}
-
-// When one side of an edge is being detached, decide what data the new
-// anchor should carry. The edge-level `data.showHandles` is the
-// source of truth because it persists through attach-to-node cycles when
-// no anchor exists to carry the state.
-export function inheritedAnchorBaseData(edge: {
-  data?: {showHandles?: boolean} | undefined;
-}): Partial<NodeDataBase> {
-  return edge.data?.showHandles === false ? {showHandles: false} : {};
 }
 
 // Returns an object containing the current flow position of the

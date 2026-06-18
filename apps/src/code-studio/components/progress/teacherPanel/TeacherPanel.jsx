@@ -1,3 +1,5 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -25,10 +27,8 @@ import {
 import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
 import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import fontConstants from '@cdo/apps/fontConstants';
 import {getExampleSolutionLink} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
 import {
   pageTypes,
@@ -184,7 +184,9 @@ class TeacherPanel extends React.Component {
 
     return (
       <TeacherPanelContainer className={moduleStyles.teacherPanelContainer}>
-        <h3>{i18n.teacherPanel()}</h3>
+        <Typography variant="h6" component="h3" gutterBottom>
+          {i18n.teacherPanel()}
+        </Typography>
         <div style={styles.scrollable}>
           <div style={styles.viewAsToggleContainer}>
             <ViewAsToggle isAsync={this.props.isCurrentLevelLab2} />
@@ -221,7 +223,7 @@ class TeacherPanel extends React.Component {
             <div style={styles.sectionInfo}>
               <div>{i18n.viewingSection()}</div>
               <SectionSelector
-                style={{margin: '0px 10px'}}
+                className={moduleStyles.sectionSelector}
                 reloadOnChange={true}
               />
               {selectedSection && (
@@ -242,11 +244,17 @@ class TeacherPanel extends React.Component {
               {unlockedLessonNames.length > 0 && (
                 <div>
                   <div style={styles.text}>
-                    <FontAwesome
-                      icon="exclamation-triangle"
+                    <FontAwesomeV6Icon
+                      iconName="triangle-exclamation"
                       style={styles.exclamation}
                     />
-                    <div style={styles.dontForget}>{i18n.dontForget()}</div>
+                    <Typography
+                      variant="h6"
+                      component="span"
+                      sx={{marginInlineStart: '10px'}}
+                    >
+                      {i18n.dontForget()}
+                    </Typography>
                   </div>
                   <div style={styles.text}>
                     {i18n.lockFollowing()}
@@ -294,13 +302,7 @@ const styles = {
     margin: 10,
   },
   exclamation: {
-    color: 'red',
-  },
-  dontForget: {
-    display: 'inline',
-    marginLeft: 10,
-    fontSize: 16,
-    ...fontConstants['main-font-bold'],
+    color: 'var(--text-error-primary)',
   },
   sectionHeader: {
     margin: 10,

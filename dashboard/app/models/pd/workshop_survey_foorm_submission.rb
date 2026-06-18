@@ -22,6 +22,21 @@
 #
 
 class Pd::WorkshopSurveyFoormSubmission < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :restricted,
+    foorm_submission_id: :restricted,
+    user_id: :restricted,
+    pd_session_id: :restricted,
+    pd_workshop_id: :restricted,
+    day: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
+    facilitator_id: :restricted,
+    workshop_agenda: :restricted,
+  )
+
   belongs_to :foorm_submission, class_name: 'Foorm::Submission', optional: true
   belongs_to :user
   belongs_to :pd_session, class_name: 'Pd::Session', optional: true

@@ -65,6 +65,8 @@ const prefixes = {
 };
 
 const live = [
+  '/courses/csd-2024',
+  '/courses/self-paced-pl-csd-2024',
   '/courses/k5-unplugged',
   '/courses/ai-ethics-2023',
   '/courses/express-2024',
@@ -94,6 +96,10 @@ const live = [
   '/courses/problem-solving-with-ai-2025',
 ];
 
+const matches = prefix => {
+  return window.location.pathname.match(new RegExp(`^(?:[/][^/]+)?${prefix}`));
+};
+
 const experiments =
   JSON.parse(window.localStorage.experimentsList || '[]') || [];
 const inExperiment =
@@ -101,10 +107,10 @@ const inExperiment =
     experiment ? experiment.key === 'localizejs' : false
   ) || window.location.search.includes('localizejs=');
 const projectKeys = Object.entries(prefixes).filter(([projectId, prefixes]) =>
-  prefixes.some(prefix => window.location.pathname.startsWith(prefix))
+  prefixes.some(matches)
 );
 
-const isLive = live.some(prefix => window.location.pathname.startsWith(prefix));
+const isLive = live.some(matches);
 
 function loadLocalize() {
   !(function (a) {

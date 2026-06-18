@@ -177,7 +177,7 @@ describe('AddCoteacher', () => {
 
     const setAddErrorSpy = makeSpyWithAssertions(error => {
       expect(error).to.equal(
-        'invalid-email@code.org is not associated with a Code.org teacher account.'
+        'invalid-email@code.org is not associated with a CodeAI teacher account.'
       );
       expect(setCoteachersToAddSpy).not.to.have.been.called;
 
@@ -269,7 +269,7 @@ describe('AddCoteacher', () => {
 
     const setAddErrorSpy = makeSpyWithAssertions(error => {
       expect(error).to.equal(
-        'invalid-email@code.org is not associated with a Code.org teacher account.'
+        'invalid-email@code.org is not associated with a CodeAI teacher account.'
       );
       expect(setCoteachersToAddSpy).not.to.have.been.called;
       expect(fetchSpy).to.have.been.calledOnce;

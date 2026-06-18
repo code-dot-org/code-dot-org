@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-28T17:00:57.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-brendan-2-intro-interaction-e99e464e-4657-4520-824a-d47759626cfb",
+        "text": "So far, our 3D scenes have been static, but imagine bringing them to life! We can make them *interactive* by letting users control objects.",
+        "imageUrl": "https://images.code.org/0a2c5b4ba78fc4cf5302a8b6f822219e-test-brendan-2-intro-interaction-panel-1-9fdf0b20-ecbe-405c-a7b2-9c434c3211c3.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-brendan-2-intro-interaction-1081e8ae-2ed9-4178-8e3a-7fb37ee895ed",
+        "text": "One common way to interact is with the **keyboard**. Pressing a key can make an object move, rotate, or trigger an action in the 3D world.",
+        "imageUrl": "https://images.code.org/8e3ce61fef17a94ca35becf6d418204b-test-brendan-2-intro-interaction-panel-2-732a4112-3fcf-4249-bbe7-a77f2bbb3e42.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "test-brendan-2-intro-interaction-87d4ec6f-673f-4858-92e4-c4f507ef3e80",
+        "text": "The **mouse** also offers powerful controls. Moving the mouse can rotate the camera, while clicking can select objects or interact with elements in the scene.",
+        "imageUrl": "https://images.code.org/20e36c6c835e6f88503342622432391d-test-brendan-2-intro-interaction-panel-3-34d1eaa8-4c3a-4386-a9e3-b2f80865a0f8.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "test-brendan-2-intro-interaction-9cffe5b7-4af2-4b7e-a54c-90be7856bc3b",
+        "text": "Behind the scenes, we use **event listeners** in our code. These listeners 'listen' for specific user actions, like a key press or a mouse movement, and then execute functions to update the 3D scene.",
+        "imageUrl": "https://images.code.org/0a16df6131dd93234146ce2a04e40f37-test-brendan-2-intro-interaction-panel-4-8464b9b7-c4e1-46f1-8a5d-75455f31d14d.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-brendan-2-intro-interaction-0e1b2d22-a33a-4d60-9ab2-bfbb83aac716",
+        "text": "By adding user interaction, your 3D creations transform from static displays into immersive experiences that users can explore and manipulate, making them much more engaging!",
+        "imageUrl": "https://images.code.org/ad04c3e664a17f3de14213167238aacf-test-brendan-2-intro-interaction-panel-5-ef8061a8-f2db-43dd-a942-e46f508218fe.png",
+        "layout": "text-top-left"
+      }
+    ],
+    "generate_outline": "Introduce the concept of user interaction in 3D web scenes. Explain how to detect keyboard presses or mouse movements to control objects within the scene, such as rotating or moving them."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-28 17:01:44 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-28 17:01:45 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

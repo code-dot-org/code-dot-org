@@ -36,7 +36,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-21 16:31:23 UTC",
+    "serialized_at": "2026-06-03 15:44:34 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -68,8 +68,8 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "####**By the end of this professional learning module, you will be able to:**\n- Prepare to teach what a web app is and explain how it serves as the foundation for AI-assisted projects.\n- Guide students through human-centered design practices, including developing user personas, defining user problems, and establishing a brand identity.\n- Practice foundational web development skills using AI to build HTML files for structure and CSS files for styling.\n- Support students in visual planning, preparing to introduce sitemaps and wireframes that emphasize accessibility and responsive design.\n\n**Suggested Time:** 60 minutes",
-        "student_overview": "####**By the end of this professional learning module, you will be able to:**\n- Prepare to teach what a web app is and explain how it serves as the foundation for AI-assisted projects.\n- Guide students through human-centered design practices, including developing user personas, defining user problems, and establishing a brand identity.\n- Practice foundational web development skills using AI to build HTML files for structure and CSS files for styling.\n- Support students in visual planning, preparing to introduce sitemaps and wireframes that emphasize accessibility and responsive design.\n\n**Suggested Time:** 60 minutes"
+        "overview": "**By the end of this professional learning module, you will be able to:**\n- Prepare to teach what a web app is and explain how it serves as the foundation for AI-assisted projects.\n- Guide students through human-centered design practices, including developing user personas, defining user problems, and establishing a brand identity.\n- Practice foundational web development skills using AI to build HTML files for structure and CSS files for styling.\n- Support students in visual planning, preparing to introduce sitemaps and wireframes that emphasize accessibility and responsive design.\n\n**Suggested time:** 60 minutes",
+        "student_overview": "**By the end of this professional learning module, you will be able to:**\n- Prepare to teach what a web app is and explain how it serves as the foundation for AI-assisted projects.\n- Guide students through human-centered design practices, including developing user personas, defining user problems, and establishing a brand identity.\n- Practice foundational web development skills using AI to build HTML files for structure and CSS files for styling.\n- Support students in visual planning, preparing to introduce sitemaps and wireframes that emphasize accessibility and responsive design.\n\n**Suggested time:** 60 minutes"
       },
       "seeding_key": {
         "lesson.key": "Introduction to WebApps",

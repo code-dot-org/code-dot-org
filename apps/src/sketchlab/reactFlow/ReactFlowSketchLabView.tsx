@@ -17,8 +17,7 @@ import {
   ProjectSources,
   SketchlabReactFlowSource,
 } from '@cdo/apps/lab2/types';
-import PreviousVersionAlert from '@cdo/apps/lab2/views/alerts/previousVersion';
-import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
+import WorkspaceAlerts from '@cdo/apps/lab2/views/alerts/workspaceAlerts';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -36,7 +35,9 @@ import {
   convertExcalidrawToReactFlow,
   uploadConvertedDataUrlImages,
 } from './utils/convertExcalidrawSources';
+import {handleDownloadSketch} from './utils/handleDownloadSketch';
 import {handleSaveToBackpack} from './utils/handleSaveToBackpack';
+import {migrateTriangleHandleIds} from './utils/migrateReactFlowSources';
 
 import styles from './react-flow-sketch-lab-view.module.scss';
 
@@ -113,10 +114,9 @@ function ReactFlowSketchLabViewInner({
   const onClickStartOver = useCallback(() => {
     showStartOverDialog('custom', commonI18n.startOverGeneric());
   }, [showStartOverDialog]);
-
-  const teacherViewingStudent = Boolean(
-    useAppSelector(state => state.progress.viewAsUserId)
-  );
+  const onClickDownload = useCallback(() => {
+    void handleDownloadSketch(reactFlow, dialogControl);
+  }, [reactFlow, dialogControl]);
 
   const WorkspaceAlert = useLevelEditMode<LevelProperties>(
     levelProperties.id,
@@ -180,8 +180,8 @@ function ReactFlowSketchLabViewInner({
   );
 
   // Read sources, converting from Excalidraw if this project was last
-  // saved by the old lab. Deep-clone so React Flow can mutate node
-  // style objects during resize.
+  // saved by the old lab. Migrates stale triangle handle IDs from prior
+  // renames. Deep-clone so React Flow can mutate node style objects during resize.
   const {initialNodes, initialEdges, initialViewport, convertedFromExcalidraw} =
     useMemo(() => {
       const source = currentSources.source as
@@ -197,6 +197,12 @@ function ReactFlowSketchLabViewInner({
         didConvert = true;
       } else if (Array.isArray((source as SketchlabReactFlowSource)?.nodes)) {
         normalized = source as SketchlabReactFlowSource;
+      }
+      // TODO: once all start sources and student projects have been audited and
+      // confirmed free of stale triangle handle IDs, remove this migration call
+      // and delete migrateReactFlowSources.ts.
+      if (normalized) {
+        normalized = migrateTriangleHandleIds(normalized);
       }
       const cloned = normalized ? structuredClone(normalized) : null;
       return {
@@ -253,6 +259,21 @@ function ReactFlowSketchLabViewInner({
             id="workspace"
             className={panelClassName}
             headerContent={<WorkspaceHeader.Content />}
+            leftHeaderContent={
+              <MuiButton
+                variant="outlined"
+                color="tertiary"
+                size="extraSmall"
+                onClick={onClickDownload}
+                aria-label="Download"
+                type="button"
+                startIcon={
+                  <FontAwesomeV6Icon iconStyle="solid" iconName="download" />
+                }
+              >
+                Download
+              </MuiButton>
+            }
             rightHeaderContent={
               <>
                 <WorkspaceHeader.TemplateIcon />
@@ -277,10 +298,7 @@ function ReactFlowSketchLabViewInner({
               </>
             }
           >
-            {teacherViewingStudent && (
-              <TeacherViewingStudentProjectAlert inWorkspaceContainer />
-            )}
-            <PreviousVersionAlert />
+            <WorkspaceAlerts inWorkspaceContainer />
             <ReactFlowCanvas
               key={mountKey}
               updateSources={updateSources}

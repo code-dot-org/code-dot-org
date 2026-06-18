@@ -1,20 +1,24 @@
 import {render, screen, fireEvent} from '@testing-library/react';
-import '@testing-library/jest-dom';
+import {vi} from 'vitest';
 
 import * as helpers from '@/common/helpers';
 
 import {WithPopover, PopoverProps} from './../index';
 
-jest.mock('./../../common/helpers', () => ({
-  ...jest.requireActual('./../../common/helpers'),
-  updatePositionedElementStyles: jest.fn(),
-}));
+vi.mock('./../../common/helpers', async importOriginal => {
+  const actual =
+    await importOriginal<typeof import('./../../common/helpers')>();
+  return {
+    ...actual,
+    updatePositionedElementStyles: vi.fn(),
+  };
+});
 
 describe('Design System - WithPopover Component', () => {
   const popoverProps: PopoverProps = {
     title: 'Test Popover',
     content: 'This is the content of the popover.',
-    onClose: jest.fn(),
+    onClose: vi.fn(),
   };
 
   it('renders children correctly', () => {
@@ -42,7 +46,7 @@ describe('Design System - WithPopover Component', () => {
   });
 
   it('updates popover position on window resize', () => {
-    const updatePositionSpy = jest.spyOn(
+    const updatePositionSpy = vi.spyOn(
       helpers,
       'updatePositionedElementStyles',
     );

@@ -10,7 +10,6 @@ import {
   BubbleShape,
 } from '@cdo/apps/templates/progress/BubbleFactory';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
-import color from '@cdo/apps/util/color';
 import * as utils from '@cdo/apps/utils';
 import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
 
@@ -102,7 +101,7 @@ describe('ProgressBubble', () => {
 
   it('has a green background when we have perfect status and not assessment', () => {
     const style = styleForStatus(LevelStatus.perfect);
-    expect(style.backgroundColor).to.equal(color.level_perfect);
+    expect(style.backgroundColor).to.equal('var(--background-success-primary)');
   });
 
   it('has a purple background when level status is LevelStatus.completed_assessment, is an assessment level ', () => {
@@ -111,19 +110,23 @@ describe('ProgressBubble', () => {
       {},
       {kind: LevelKind.assessment}
     );
-    expect(style.backgroundColor).to.equal(color.level_submitted);
+    expect(style.backgroundColor).to.equal(
+      'var(--background-brand-purple-primary)'
+    );
   });
 
   it('has green border and white background for in progress level', () => {
     const style = styleForStatus(LevelStatus.attempted);
-    expect(style.backgroundColor).to.equal(color.level_not_tried);
-    expect(style.borderColor).to.equal(color.level_perfect);
+    expect(style.backgroundColor).to.equal('var(--background-neutral-primary)');
+    expect(style.borderColor).to.equal('var(--borders-success-primary)');
   });
 
   it('has a green border and light green background for too many blocks level', () => {
     const style = styleForStatus(LevelStatus.passed);
-    expect(style.backgroundColor).to.equal(color.level_passed);
-    expect(style.borderColor).to.equal(color.level_perfect);
+    expect(style.backgroundColor).to.equal(
+      'var(--background-success-extra-light)'
+    );
+    expect(style.borderColor).to.equal('var(--borders-success-primary)');
   });
 
   it('has a purple background for submitted level', () => {
@@ -132,9 +135,11 @@ describe('ProgressBubble', () => {
       {},
       {kind: LevelKind.assessment}
     );
-    expect(style.backgroundColor).to.equal(color.level_submitted);
-    expect(style.borderColor).to.equal(color.level_submitted);
-    expect(style.color).to.equal(color.white);
+    expect(style.backgroundColor).to.equal(
+      'var(--background-brand-purple-primary)'
+    );
+    expect(style.borderColor).to.equal('var(--borders-brand-purple-primary)');
+    expect(style.color).to.equal('var(--text-neutral-inverse)');
   });
 
   it('has a red background for review_rejected', () => {
@@ -143,9 +148,9 @@ describe('ProgressBubble', () => {
       {},
       {kind: LevelKind.peer_review}
     );
-    expect(style.backgroundColor).to.equal(color.level_review_rejected);
-    expect(style.borderColor).to.equal(color.level_review_rejected);
-    expect(style.color).to.equal(color.white);
+    expect(style.backgroundColor).to.equal('var(--background-error-primary)');
+    expect(style.borderColor).to.equal('var(--borders-error-primary)');
+    expect(style.color).to.equal('var(--text-neutral-inverse)');
   });
 
   it('has a green background for review_accepted', () => {
@@ -154,9 +159,9 @@ describe('ProgressBubble', () => {
       {},
       {kind: LevelKind.peer_review}
     );
-    expect(style.backgroundColor).to.equal(color.level_perfect);
-    expect(style.borderColor).to.equal(color.level_perfect);
-    expect(style.color).to.equal(color.white);
+    expect(style.backgroundColor).to.equal('var(--background-success-primary)');
+    expect(style.borderColor).to.equal('var(--borders-success-primary)');
+    expect(style.color).to.equal('var(--text-neutral-inverse)');
   });
 
   it('renders a diamond for concept levels', () => {

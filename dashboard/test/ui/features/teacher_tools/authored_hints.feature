@@ -1,3 +1,4 @@
+@playwright
 Feature: Authored Hints
 
 Scenario: View Authored Hints

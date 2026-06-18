@@ -201,6 +201,27 @@ class SectionsControllerTest < ActionController::TestCase
   test_user_gets_response_for :new, params: {loginType: 'picture', participantType: 'student'}, user: :student, response: :forbidden
   test_user_gets_response_for :new, params: {loginType: 'picture', participantType: 'student'}, user: :admin, response: :success
 
+  test "new sets is_users_first_section true when teacher has only a demo section" do
+    teacher = create(:teacher)
+    create(:section, user: teacher, demo_type: 'high')
+    sign_in teacher
+
+    get :new, params: {loginType: 'word', participantType: 'student'}
+    assert_response :success
+    assert assigns(:is_users_first_section)
+  end
+
+  test "new sets is_users_first_section false when teacher has a real section alongside a demo section" do
+    teacher = create(:teacher)
+    create(:section, user: teacher, demo_type: 'high')
+    create(:section, user: teacher, login_type: 'word')
+    sign_in teacher
+
+    get :new, params: {loginType: 'word', participantType: 'student'}
+    assert_response :success
+    refute assigns(:is_users_first_section)
+  end
+
   test "new redirects to home if loginType and participantType are not present" do
     user = create(:admin)
     sign_in user
