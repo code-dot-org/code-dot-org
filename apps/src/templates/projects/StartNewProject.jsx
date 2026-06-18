@@ -6,8 +6,6 @@ import fontConstants from '@cdo/apps/fontConstants';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import i18n from '@cdo/locale';
 
-import color from '../../util/color';
-
 import NewProjectButtons from './NewProjectButtons';
 
 const BLOCKS_PROJECT_TYPES = ['spritelab', 'artist', 'music'];
@@ -231,7 +229,7 @@ const styles = {
   },
   dividerLine: {
     flex: 1,
-    borderTop: '1px solid ' + color.neutral_dark20,
+    borderTop: '1px solid var(--borders-neutral-primary)',
   },
   dividerButton: {
     margin: '0 16px',
@@ -242,7 +240,7 @@ const styles = {
     paddingBottom: 10,
     fontSize: 16,
     ...fontConstants['main-font-regular'],
-    color: color.neutral_dark,
+    color: 'var(--text-neutral-primary)',
     marginBottom: -10,
   },
   spacer: {
