@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_06_01_152016) do
+ActiveRecord::Schema[7.0].define(version: 2026_06_17_130000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -2102,6 +2102,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_06_01_152016) do
     t.datetime "updated_at", null: false
     t.string "s3_config_dir"
     t.index ["lesson_id", "level_id"], name: "index_rubrics_on_lesson_id_and_level_id", unique: true
+    t.index ["lesson_id"], name: "index_rubrics_on_lesson_id", unique: true
   end
 
   create_table "school_districts", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2731,7 +2732,9 @@ ActiveRecord::Schema[7.0].define(version: 2026_06_01_152016) do
   create_table "user_product_tours", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "tour_name", null: false
-    t.datetime "completed_at", null: false
+    t.datetime "completed_at"
+    t.datetime "started_at"
+    t.json "properties"
     t.index ["user_id", "tour_name"], name: "index_user_product_tours_on_user_id_and_tour_name", unique: true
   end
 

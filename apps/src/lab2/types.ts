@@ -24,6 +24,7 @@ import {AiTutorPromptSettings} from '@cdo/apps/weblab2/types';
 
 import {lab2EntryPoints} from '../../lab2EntryPoints';
 import type {
+  GroupNodeData,
   ImageNodeData,
   LineAnchorNodeData,
   ShapeNodeData,
@@ -108,6 +109,11 @@ interface SketchlabReactFlowNodeBase {
   width?: number;
   height?: number;
   style?: CSSProperties;
+  // Group support: child nodes reference their parent by ID; positions are
+  // then relative to the parent. zIndex controls manual stacking order.
+  parentId?: string;
+  expandParent?: boolean;
+  zIndex?: number;
 }
 
 export type SketchlabReactFlowNode =
@@ -117,7 +123,8 @@ export type SketchlabReactFlowNode =
   | (SketchlabReactFlowNodeBase & {
       type: 'lineAnchor';
       data: LineAnchorNodeData;
-    });
+    })
+  | (SketchlabReactFlowNodeBase & {type: 'group'; data: GroupNodeData});
 
 export interface SketchlabReactFlowEdge {
   id: string;

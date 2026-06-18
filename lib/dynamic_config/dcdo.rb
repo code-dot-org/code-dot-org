@@ -73,7 +73,6 @@ class DCDOBase < DynamicConfigBase
       'onboarding-enabled': DCDO.get('onboarding-enabled', false),
       'ai-diff-drawer': DCDO.get('ai-diff-drawer', false),
       'latam-ge-region-notice-enabled-until': DCDO.get('latam-ge-region-notice-enabled-until', nil),
-      'launch-grades-in-sign-up': DCDO.get('launch-grades-in-sign-up', false),
       'codeai-rebrand-banner': DCDO.get('codeai-rebrand-banner', false)
     }
   end

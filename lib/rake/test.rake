@@ -591,6 +591,7 @@ GLOBS_AFFECTING_EVERYTHING = %w(
   .drone.yml
   .gitattributes
   lib/rake/test.rake
+  config/**/*
   docker/ci/**/*
 )
 

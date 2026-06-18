@@ -46,6 +46,9 @@ export type LineAnchorNodeData = NodeDataBase & {
   lineAnchorRole: 'source' | 'target';
 };
 
+// Group node holds no extra data; it is a transparent visual container.
+export type GroupNodeData = NodeDataBase;
+
 export type AddNodeRequest =
   | {type: 'shape'; data: ShapeNodeData}
   | {type: 'text'; data: TextNodeData}
@@ -56,10 +59,12 @@ export type ShapeNodeType = Node<ShapeNodeData, 'shape'>;
 export type TextNodeType = Node<TextNodeData, 'text'>;
 export type ImageNodeType = Node<ImageNodeData, 'image'>;
 export type LineAnchorNodeType = Node<LineAnchorNodeData, 'lineAnchor'>;
+export type GroupNodeType = Node<GroupNodeData, 'group'>;
 export type SketchLabNode =
   | ShapeNodeType
   | TextNodeType
   | ImageNodeType
-  | LineAnchorNodeType;
+  | LineAnchorNodeType
+  | GroupNodeType;
 
 export type ArrowHeadValue = 'none' | 'start' | 'end' | 'both';

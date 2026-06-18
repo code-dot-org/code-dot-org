@@ -140,7 +140,7 @@ Both allow users to filter results, but they do it differently.
 
 
 
-<div style="background-color:#dccbea; border-radius:10px; padding:14px; margin:18px auto; max-width:85%;"> <p style="font-size:14pt; margin:0; line-height:135%;"><strong>Design tradeoff:</strong> More filters can help some users search precisely, but can make others feel lost or overloaded.</p> </div>
+<div style="background-color:#e4e2f8; border-radius:10px; padding:14px; margin:18px auto; max-width:85%;"> <p style="font-size:12pt; margin:0; line-height:135%;"><strong>📖 Design tradeoff:</strong> More filters can help some users search precisely, but can make others feel lost or overloaded.</p> </div>
 
 
 
