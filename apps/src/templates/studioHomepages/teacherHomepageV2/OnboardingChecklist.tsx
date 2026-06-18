@@ -3,6 +3,8 @@ import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 import {Tour} from 'shepherd.js';
 
+import HttpClient from '@cdo/apps/util/HttpClient';
+
 import {DemoType} from '../../teacherDashboard/types/teacherSectionTypes';
 
 import styles from './teacherHomepage.module.scss';
@@ -12,6 +14,27 @@ const CHECKLIST_ITEMS = [
   {id: 'learn-to-evaluate', label: 'Learn how to evaluate', completed: false},
   {id: 'create-section', label: 'Create a class section', completed: true},
 ];
+
+const TOUR_NAMES: Record<string, string> = {
+  'create-section': 'create_class_section',
+  'review-syllabus': 'view_syllabus',
+  'learn-to-evaluate': 'learn_to_evaluate',
+};
+
+const recordTourStart = (id: string, demoType: DemoType) => {
+  const tourName = TOUR_NAMES[id];
+  if (!tourName) return;
+  HttpClient.post(
+    '/dashboardapi/v1/user_product_tours',
+    JSON.stringify({
+      tour_name: tourName,
+      started_at: true,
+      properties: {demo_type: demoType},
+    }),
+    true,
+    {'Content-Type': 'application/json'}
+  ).catch(err => console.error('Failed to record tour start:', err));
+};
 
 interface OnboardingChecklistProps {
   createSectionTour: Tour | null;
@@ -29,6 +52,7 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
   const [isHidden, setIsHidden] = React.useState(false);
 
   const handleButtonClick = (id: string) => {
+    recordTourStart(id, demoType);
     if (id === 'create-section') {
       createSectionTour?.start();
     } else if (id === 'review-syllabus') {
