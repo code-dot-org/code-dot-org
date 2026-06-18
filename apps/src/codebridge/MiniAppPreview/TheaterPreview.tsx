@@ -20,7 +20,17 @@ const TheaterPreview: React.FunctionComponent = () => {
         .getConsoleManager()
         ?.writeConsoleMessage('');
 
-    const theater = new Theater(onOutputMessage, onNewlineMessage);
+    const theater = new Theater(
+      onOutputMessage,
+      onNewlineMessage,
+      // TODO: actually handle prompter
+      () =>
+        onOutputMessage(
+          `[JAVALAB] Photo prompts are not yet supported in Java Lab 2.`
+        ),
+      () => {},
+      () => {}
+    );
     CodebridgeRegistry.getInstance().setTheater(theater);
     return theater;
   }, []);
