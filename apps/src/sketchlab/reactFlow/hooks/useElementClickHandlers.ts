@@ -36,6 +36,7 @@ export function useElementClickHandlers({
     () => new Set()
   );
   const [isGroupMode, setIsGroupMode] = useState(false);
+  const [ariaAnnouncement, setAriaAnnouncement] = useState('');
   // Tracks the last plain-clicked groupable target so the first Shift+click of
   // a fresh multi-selection can include it automatically. Standalone lines
   // contribute both of their lineAnchor node ids here.
@@ -58,12 +59,16 @@ export function useElementClickHandlers({
     setIsGroupMode(true);
     clearMultiSelect();
     closeToolbar();
+    setAriaAnnouncement(
+      'Group mode. Tab to navigate, Enter to select or deselect, G to create group, Escape to cancel.'
+    );
   }, [clearMultiSelect, closeToolbar]);
 
   // Exits group mode without creating a group.
   const exitGroupMode = useCallback(() => {
     setIsGroupMode(false);
     clearMultiSelect();
+    setAriaAnnouncement('Exited group mode.');
   }, [clearMultiSelect]);
 
   // Toggles the focused element in/out of the group selection.
@@ -240,6 +245,8 @@ export function useElementClickHandlers({
     setMultiSelectedNodeIds,
     clearSelection,
     isGroupMode,
+    ariaAnnouncement,
+    announceGroupMode: setAriaAnnouncement,
     enterGroupMode,
     exitGroupMode,
     toggleEntryInGroupMode,

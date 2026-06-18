@@ -212,6 +212,8 @@ export default function ReactFlowCanvas({
     multiSelectedNodeIds,
     clearSelection,
     isGroupMode,
+    ariaAnnouncement,
+    announceGroupMode,
     enterGroupMode,
     exitGroupMode,
     toggleEntryInGroupMode,
@@ -343,6 +345,7 @@ export default function ReactFlowCanvas({
     setNodes(current => groupSelectedNodes(selectedIds, current, groupId));
     clearSelection();
     closeToolbar();
+    announceGroupMode('Group created.');
     setTimeout(() => focusEntry({type: 'node', id: groupId}), 0);
   }, [
     multiSelectedNodeIds,
@@ -350,6 +353,7 @@ export default function ReactFlowCanvas({
     setNodes,
     clearSelection,
     closeToolbar,
+    announceGroupMode,
     focusEntry,
   ]);
 
@@ -715,6 +719,9 @@ export default function ReactFlowCanvas({
                   )}
                   <div aria-live="assertive" className={styles.srOnly}>
                     {connectAnnouncement}
+                  </div>
+                  <div aria-live="polite" className={styles.srOnly}>
+                    {ariaAnnouncement}
                   </div>
                   <ReactFlow
                     nodes={displayNodes}
