@@ -1,6 +1,3 @@
-@import 'color.scss';
-@import 'font.scss';
-
 .toolboxCategoryContainer {
   margin-top: 3px;
   margin-bottom: 3px;
@@ -15,14 +12,32 @@
   margin-right: 3px;
   border-radius: 0;
   &:hover {
-    background-color: $light_gray;
+    background-color: var(--background-neutral-tertiary);
   }
 }
 
 .toolboxLabel {
-  @include main-font-regular;
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-regular);
   font-size: 14px;
   padding: 0 5px;
   vertical-align: middle;
   user-select: none;
+  color: var(--text-neutral-primary);
+}
+
+// Music Lab Blockly surface backgrounds, rebranded to design-system tokens.
+// Blockly sets these via inline styles (workspace + flyout) so var() in CSS can
+// resolve, but !important is required to beat the inline values. Scoped under the
+// Dark-themed #blockly-div so the tokens render dark and repaint under the audit.
+:global(#blockly-div .blocklySvg) {
+  background-color: var(--background-neutral-primary) !important;
+}
+
+:global(#blockly-div .blocklyFlyoutBackground) {
+  fill: var(--background-neutral-secondary) !important;
+}
+
+:global(#blockly-div .blocklyToolbox) {
+  background-color: var(--background-neutral-secondary) !important;
 }

@@ -1,69 +1,83 @@
-import {STATUS_MESSAGE_PREFIX} from '@cdo/apps/javalab/constants';
-
 import {
   TheaterSignalType,
-  THEATER_IMAGE_ID,
-  THEATER_AUDIO_ID,
-} from './constants';
+  STATUS_MESSAGE_PREFIX,
+  InputMessageType,
+  InputMessage,
+} from '@cdo/apps/javalab/constants';
+import javalabMsg from '@cdo/apps/javalab/locale';
+
+type InputMessageTypeValue =
+  (typeof InputMessageType)[keyof typeof InputMessageType];
+type InputMessageValue = (typeof InputMessage)[keyof typeof InputMessage];
 
 interface TheaterSignal {
-  value: TheaterSignalType;
-  detail?: {
+  value: string;
+  detail: {
     url?: string;
-    prompt?: string;
     uploadUrl?: string;
+    prompt?: string;
   };
 }
 
-// Theater plays a single generated image alongside generated audio. Javabuilder
-// delivers the two separately, so we wait for both the image and the audio (or
-// a NO_AUDIO signal) to load before revealing the image and starting playback,
-// keeping the two in sync.
+type UploadCallback = (this: XMLHttpRequest, event: ProgressEvent) => void;
+
 export default class Theater {
   private readonly onOutputMessage: (message: string) => void;
   private readonly onNewlineMessage: () => void;
+  private readonly openPhotoPrompter: (prompt?: string) => void;
+  private readonly closePhotoPrompter: () => void;
+  private readonly onJavabuilderMessage: (
+    messageType: InputMessageTypeValue,
+    message: InputMessageValue
+  ) => void;
   private loadEventsFinished: number;
+  private prompterUploadUrl: string | null;
   private hasAudio: boolean;
 
   constructor(
     onOutputMessage: (message: string) => void,
-    onNewlineMessage: () => void
+    onNewlineMessage: () => void,
+    openPhotoPrompter: (prompt?: string) => void,
+    closePhotoPrompter: () => void,
+    onJavabuilderMessage: (
+      messageType: InputMessageTypeValue,
+      message: InputMessageValue
+    ) => void
   ) {
     this.onOutputMessage = onOutputMessage;
     this.onNewlineMessage = onNewlineMessage;
+    this.openPhotoPrompter = openPhotoPrompter;
+    this.closePhotoPrompter = closePhotoPrompter;
+    this.onJavabuilderMessage = onJavabuilderMessage;
     this.loadEventsFinished = 0;
+    this.prompterUploadUrl = null;
     this.hasAudio = false;
   }
 
   handleSignal(data: TheaterSignal) {
     switch (data.value) {
       case TheaterSignalType.AUDIO_URL: {
+        // Wait for the audio to load before starting playback
         this.hasAudio = true;
-        const audio = this.getAudioElement();
-        if (audio && data.detail?.url) {
-          audio.src = data.detail.url + this.getCacheBustSuffix();
-          audio.oncanplaythrough = () => this.startPlayback();
-        }
+        this.getAudioElement().src =
+          data.detail.url + this.getCacheBustSuffix();
+        this.getAudioElement().oncanplaythrough = () => this.startPlayback();
         break;
       }
       case TheaterSignalType.VISUAL_URL: {
-        const img = this.getImgElement();
-        if (img && data.detail?.url) {
-          img.src = data.detail.url + this.getCacheBustSuffix();
-          img.onload = () => this.startPlayback();
-        }
+        // Preload the image. Once it's ready, start the playback
+        this.getImgElement().src = data.detail.url + this.getCacheBustSuffix();
+        this.getImgElement().onload = () => this.startPlayback();
         break;
       }
       case TheaterSignalType.GET_IMAGE: {
-        // The photo prompter isn't ported to Java Lab 2 yet; degrade
-        // gracefully instead of leaving the program hung waiting on an upload.
-        this.onOutputMessage(
-          `${STATUS_MESSAGE_PREFIX} Photo prompts are not yet supported in Java Lab 2.`
-        );
-        this.onNewlineMessage();
+        // Open the photo prompter
+        this.prompterUploadUrl = data.detail.uploadUrl || null;
+        this.openPhotoPrompter(data.detail.prompt);
         break;
       }
       case TheaterSignalType.NO_AUDIO: {
+        // there is no audio associated with the video, trigger startPlayback so we don't wait for the audio file
         this.hasAudio = false;
         this.startPlayback();
         break;
@@ -75,66 +89,99 @@ export default class Theater {
 
   startPlayback() {
     this.loadEventsFinished++;
-    // Two load events are expected: the image, plus either the audio or a
-    // NO_AUDIO signal. Wait for both before revealing the image and playing.
+    // We expect exactly 2 responses from Javabuilder. One for audio (or the NO_AUDIO signal) and one for video.
+    // Wait for both to respond and load before starting playback.
     if (this.loadEventsFinished > 1) {
-      const img = this.getImgElement();
-      if (img) {
-        img.style.visibility = 'visible';
-      }
+      this.getImgElement().style.visibility = 'visible';
       if (this.hasAudio) {
-        this.getAudioElement()?.play();
+        this.getAudioElement().play();
       }
     }
   }
 
   reset() {
     this.loadEventsFinished = 0;
-    const img = this.getImgElement();
-    if (img) {
-      img.style.visibility = 'hidden';
-    }
+    this.getImgElement().style.visibility = 'hidden';
     this.resetAudioAndVideo();
   }
 
   onStop() {
     this.resetAudioAndVideo();
-  }
-
-  onClose() {
-    this.onNewlineMessage();
-    this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} Program completed.`);
-    this.onNewlineMessage();
-    // Intentionally leave the run active. The generated image/audio keeps
-    // playing client-side after the program exits and we don't know its
-    // length, so the run stays in the "running" state until the user presses
-    // stop (which calls onStop and clears run state).
+    // Close the photo prompter if it is still open
+    this.closePhotoPrompter();
   }
 
   resetAudioAndVideo() {
-    const audio = this.getAudioElement();
-    if (audio) {
-      audio.pause();
-      audio.src = '';
-    }
-    const img = this.getImgElement();
-    if (img) {
-      img.src = '';
-    }
+    const audioElement = this.getAudioElement();
+    audioElement.pause();
+    audioElement.src = '';
+    this.getImgElement().src = '';
     this.hasAudio = false;
   }
 
   getImgElement() {
-    return document.getElementById(THEATER_IMAGE_ID) as HTMLImageElement | null;
+    return document.getElementById('theater') as HTMLImageElement;
   }
 
   getAudioElement() {
-    return document.getElementById(THEATER_AUDIO_ID) as HTMLAudioElement | null;
+    return document.getElementById('theater-audio') as HTMLAudioElement;
   }
 
-  // Java Lab reuses asset urls across runs, so bust the cache to force a fresh
-  // fetch each time the program produces a new image or audio track.
+  onClose() {
+    this.onNewlineMessage();
+    this.onOutputMessage(
+      `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programCompleted()}`
+    );
+    this.onNewlineMessage();
+    // Close the photo prompter if it is still open
+    this.closePhotoPrompter();
+  }
+
   getCacheBustSuffix() {
     return '?=' + new Date().getTime();
   }
+
+  onPhotoPrompterFileSelected(photo: Blob) {
+    if (!this.prompterUploadUrl) {
+      // The upload URL should be provided when opening the prompter, so if
+      // it is somehow not set, we are in an invalid scenario.
+      this.onJavabuilderMessage(
+        InputMessageType.THEATER,
+        InputMessage.UPLOAD_ERROR
+      );
+      return;
+    }
+
+    this.uploadFile(
+      this.prompterUploadUrl,
+      photo,
+      () => {
+        this.onJavabuilderMessage(
+          InputMessageType.THEATER,
+          InputMessage.UPLOAD_SUCCESS
+        );
+      },
+      () => {
+        this.onJavabuilderMessage(
+          InputMessageType.THEATER,
+          InputMessage.UPLOAD_ERROR
+        );
+      }
+    );
+  }
+
+  uploadFile = (
+    uploadUrl: string,
+    fileData: Blob,
+    onSuccess: UploadCallback,
+    onError: UploadCallback
+  ) => {
+    // Use XHR directly (rather than ajax) so we can upload binary file data directly
+    const xhr = new XMLHttpRequest();
+    xhr.open('PUT', uploadUrl, true);
+    xhr.onload = onSuccess;
+    xhr.onerror = onError;
+
+    xhr.send(fileData);
+  };
 }
