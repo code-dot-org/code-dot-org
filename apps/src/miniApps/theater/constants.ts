@@ -14,11 +14,6 @@ export enum InputMessage {
   UPLOAD_ERROR = 'UPLOAD_ERROR',
 }
 
-export enum InputMessageType {
-  SYSTEM_IN = 'SYSTEM_IN',
-  THEATER = 'THEATER',
-}
-
 // DOM ids of the image and audio elements rendered by TheaterVisualization.
 export const THEATER_IMAGE_ID = 'theater';
 export const THEATER_AUDIO_ID = 'theater-audio';

@@ -1,6 +1,6 @@
+import {InputMessageType} from '@cdo/apps/javalab/constants';
 import {
   InputMessage,
-  InputMessageType,
   TheaterSignalType,
 } from '@cdo/apps/miniApps/theater/constants';
 import Theater from '@cdo/apps/miniApps/theater/Theater';

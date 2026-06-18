@@ -1,9 +1,11 @@
-import {STATUS_MESSAGE_PREFIX} from '@cdo/apps/javalab/constants';
+import {
+  STATUS_MESSAGE_PREFIX,
+  InputMessageType,
+} from '@cdo/apps/javalab/constants';
 import javalabMsg from '@cdo/apps/javalab/locale';
 
 import {
   InputMessage,
-  InputMessageType,
   THEATER_AUDIO_ID,
   THEATER_IMAGE_ID,
   TheaterSignalType,
@@ -26,7 +28,7 @@ export default class Theater {
   private readonly openPhotoPrompter: (prompt?: string) => void;
   private readonly closePhotoPrompter: () => void;
   private readonly onJavabuilderMessage: (
-    messageType: InputMessageType,
+    messageType: string,
     message: InputMessage
   ) => void;
   private loadEventsFinished: number;
@@ -38,10 +40,7 @@ export default class Theater {
     onNewlineMessage: () => void,
     openPhotoPrompter: (prompt?: string) => void,
     closePhotoPrompter: () => void,
-    onJavabuilderMessage: (
-      messageType: InputMessageType,
-      message: InputMessage
-    ) => void
+    onJavabuilderMessage: (messageType: string, message: InputMessage) => void
   ) {
     this.onOutputMessage = onOutputMessage;
     this.onNewlineMessage = onNewlineMessage;
