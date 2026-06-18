@@ -1,13 +1,12 @@
 <Weblab2>
   <config><![CDATA[{
-  "published": true,
   "game_id": 74,
-  "created_at": "2026-04-01T21:44:35.000Z",
+  "created_at": "2026-06-17T18:07:28.000Z",
   "level_num": "custom",
   "user_id": 22366,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Implement Hybrid Logic\r\n\r\n\r\n**Task 3 Goal:** Protect the user from errors by trying to fetch live data first, then falling back to your safety net if it fails.\r\n\r\n**Do This:**\r\n\r\n1. **Clean Up:**\r\n\t* **Delete** the line `renderBackup();` from the bottom of your code.\r\n\t* **Keep** the line `renderAppShell();`. We still want the header to load instantly!\r\n\r\n\r\n2. Create an `async` arrow function named `fetchCountries`. Inside, add a `try { } catch (error) { }` block.\r\n\r\n3. Inside `try`:\r\n    * Update the `statusElement` text to read \"Online. Showing Live Data.\"\r\n    * Use `fetch` to get data from the `apiEndpoint` and display the `name.common` and `population` of each country in the `outputElement`. \r\n\r\n4. Inside `catch`:\r\n    * Update the `statusElement` text to read \"Offline Mode. Showing Local Data\".\r\n    * Call your `renderBackup()` function.\r\n\r\n5. Add an event listener so that clicking the \"Get Live Census\" button runs your `fetchCountries` function.\r\n",
+    "display_name": "Static Constants",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "false",
@@ -42,7 +41,7 @@
           "id": "2",
           "name": "style.css",
           "language": "css",
-          "contents": "body {\n  font-family: sans-serif;\n  background: #f0f2f5;\n  display: flex;\n  justify-content: center;\n  padding-top: 40px;\n}\n\n.container {\n  background: white;\n  width: 400px;\n  padding: 30px;\n  border-radius: 12px;\n  box-shadow: 0 4px 15px rgba(0,0,0,0.1);\n}\n\n#header-section h1 { color: #1a73e8; margin-bottom: 5px; }\n#header-section p { color: #666; margin-top: 0; }\n\n#status {\n  background: #eee;\n  padding: 10px;\n  border-radius: 6px;\n  margin-bottom: 10px;\n  font-weight: bold;\n  font-size: 0.9rem;\n}\n\nbutton {\n  background: #1a73e8;\n  color: white;\n  border: none;\n  padding: 12px;\n  width: 100%;\n  border-radius: 6px;\n  font-size: 1rem;\n  cursor: pointer;\n}\nbutton:hover { background: #1557b0; }\n\n/* Visual Cues for Data Source */\n.result-card {\n  padding: 10px;\n  margin-top: 10px;\n  border-left: 5px solid #ccc;\n  background: #f9f9f9;\n}\n.live-data { border-left-color: #34a853; } /* Green */\n.backup-data { border-left-color: #fbbc05; } /* Orange */",
+          "contents": "@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap');\n\nbody {\n  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;\n  /* Fun, bright lavender-pink gradient background */\n  background-color: #f3e8ff;\n  background-image: \n    radial-gradient(at 0% 0%, #fee2e2 0px, transparent 50%),\n    radial-gradient(at 100% 100%, #e0e7ff 0px, transparent 50%);\n  background-attachment: fixed;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  min-height: 100vh;\n  margin: 0;\n  padding: 20px;\n  box-sizing: border-box;\n}\n\n.container {\n  background: #ffffff;\n  width: 100%;\n  max-width: 420px;\n  padding: 32px;\n  border-radius: 24px;\n  /* Bold, crisp shadows and borders for that modern pop look */\n  border: 3px solid #1e1b4b;\n  box-shadow: 8px 8px 0px 0px #1e1b4b;\n}\n\n/* Header Section */\n#header-section {\n  margin-bottom: 24px;\n}\n\n#title-section {\n  font-size: 2.25rem;\n  font-weight: 800;\n  letter-spacing: -1px;\n  color: #1e1b4b; /* Ultra-deep indigo for crisp contrast */\n  margin: 0 0 4px 0;\n}\n\n#date-section {\n  color: #4f46e5; /* Electric Indigo */\n  font-size: 0.95rem;\n  font-weight: 700;\n  margin: 0;\n  text-transform: uppercase;\n  letter-spacing: 0.5px;\n}\n\n/* Controls & Status */\n.controls {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  margin-bottom: 24px;\n}\n\n#status {\n  background: #f1f5f9;\n  border: 2px solid #1e1b4b;\n  color: #0f172a;\n  padding: 12px 16px;\n  border-radius: 12px;\n  font-weight: 700;\n  font-size: 0.9rem;\n}\n\n/* Cyber-Lime High Contrast Button */\nbutton {\n  background: #ccff00; /* Ultra-bright neon lime */\n  color: #1e1b4b;\n  border: 2px solid #1e1b4b;\n  padding: 16px;\n  width: 100%;\n  border-radius: 14px;\n  font-size: 1rem;\n  font-weight: 800;\n  cursor: pointer;\n  letter-spacing: 0.5px;\n  transition: all 0.15s ease;\n  box-shadow: 4px 4px 0px 0px #1e1b4b;\n}\n\nbutton:hover {\n  transform: translate(-2px, -2px);\n  box-shadow: 6px 6px 0px 0px #1e1b4b;\n  background: #d8ff33;\n}\n\nbutton:active {\n  transform: translate(2px, 2px);\n  box-shadow: 2px 2px 0px 0px #1e1b4b;\n}\n\n/* Results Section */\n#results {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  max-height: 300px;\n  overflow-y: auto;\n  padding-right: 4px;\n}\n\n/* Custom Scrollbar */\n#results::-webkit-scrollbar {\n  width: 8px;\n}\n#results::-webkit-scrollbar-thumb {\n  background: #cbd5e1;\n  border-radius: 10px;\n  border: 2px solid #ffffff;\n}\n\n/* Visual Cues for Data Cards */\n.result-card {\n  padding: 16px;\n  border-radius: 14px;\n  background: #ffffff;\n  border: 2px solid #1e1b4b;\n  color: #1e1b4b;\n  font-weight: 700;\n  transition: transform 0.15s ease;\n}\n\n.result-card:hover {\n  transform: scale(1.02);\n}\n\n/* Bright, clear indicators that pass contrast checks easily */\n.live-data { \n  background: #ecfdf5; /* Soft emerald tint */\n  border-left: 8px solid #059669; /* Bold emerald border */\n} \n\n.backup-data { \n  background: #fffbeb; /* Soft amber tint */\n  border-left: 8px solid #d97706; /* Bold amber border */\n}",
           "folderId": "0",
           "active": false
         },
@@ -50,19 +49,16 @@
           "id": "3",
           "name": "script.js",
           "language": "js",
-          "contents": "const apiEndpoint = \"https://restcountries.com/v3.1/all?fields=name,population\";\nconst outputElement = document.getElementById(\"results\");\nconst statusElement = document.getElementById(\"status\");\nconst headerElement = document.getElementById(\"header-section\");\nconst title = document.getElementById(\"title-section\");\nconst date = document.getElementById(\"date-section\");\n\n\nconst appConfig = {\n  title: \"Global Population Tracker\",\n  date: \"2026 Census\"\n};\n\nconst renderAppShell = () => {\n  title.innerHTML = appConfig.title;\n  date.innerHTML = appConfig.date;\n};\n\nrenderAppShell();\n\n\nconst localCountries = [\n  { name: \"Dominican Republic\", population: 10771504 },\n  { name: \"Puerto Rico\", population: 3203295 },\n  { name: \"India\", population: 1417492000 }\n];\n\nconst renderBackup = () => {\n\n  localCountries.forEach(country => {\n       outputElement.innerHTML += `\n         <div class=\"result-card live-data\">\n           <strong>${country.name}</strong><br>\n           Pop: ${country.population.toLocaleString()}\n         </div>`;\n  });\n}\n\nrenderBackup();",
+          "contents": "const apiEndpoint = \"https://restcountries.com/v3.1/all?fields=name,population\";\nconst outputElement = document.getElementById(\"results\");\nconst statusElement = document.getElementById(\"status\");\nconst headerElement = document.getElementById(\"header-section\");\nconst title = document.getElementById(\"title-section\");\nconst date = document.getElementById(\"date-section\");\n\n// --- TASK 1: STATIC CONSTANTS ---\n// A Data Engineer always sets up the app shell first.\n// This data loads instantly — no internet needed.\n// Code below defines the app's structure and renders it instantly.\n\n\n\n// --- TASK 2: BACKUP DATA ---\n// A Data Engineer always has a safety net.\n// This local data keeps the app running if the live source fails.\n// Code below stores local data that matches the API structure.\n\n\n\n// --- TASK 3: CONNECT TO LIVE DATA ---\n// A Data Engineer always plans for failure.\n// Try to fetch live data first — fall back to local data if it fails.\n// Code below fetches live country data and handles failure gracefully.",
           "folderId": "0",
           "active": true
         }
       },
       "openFiles": [
-        "1",
-        "2",
         "3"
       ]
     },
     "name_suffix": "_2026",
-    "project_template_level_name": "designing-reliable-apps-lesson10-level-2-4-template-2026",
     "offer_browser_tts": "false",
     "require_edit_to_continue": "false",
     "ai_tutor_prompt_settings": {
@@ -82,6 +78,7 @@
       }
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:35.862+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson10-level7-test_2025-pilot_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson10-level7-test_2025-pilot_2025-pilot\"},{\"changed_at\":\"2026-06-17 18:31:40 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-17 18:39:49 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-17 18:40:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-17 18:40:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-17T18:07:28.449+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson10-level5-test_2025-pilot_2025-pilo_2026\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson10-level5-test_2025-pilot_2025-pilo_2026\"},{\"changed_at\":\"2026-06-17 18:08:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-17 18:23:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-17 18:28:29 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>
