@@ -294,6 +294,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
             </button>
           ))}
         {panel.text && (
+          // Always use light theme for text bubbles regardless of user preference.
           <div
             ref={contentRef}
             className={classNames(styles.text, textLayoutClass)}
