@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_06_17_120000) do
+ActiveRecord::Schema[7.0].define(version: 2026_06_17_130000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -2102,6 +2102,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_06_17_120000) do
     t.datetime "updated_at", null: false
     t.string "s3_config_dir"
     t.index ["lesson_id", "level_id"], name: "index_rubrics_on_lesson_id_and_level_id", unique: true
+    t.index ["lesson_id"], name: "index_rubrics_on_lesson_id", unique: true
   end
 
   create_table "school_districts", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
