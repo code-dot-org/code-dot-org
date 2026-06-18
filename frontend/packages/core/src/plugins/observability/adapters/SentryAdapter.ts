@@ -43,9 +43,9 @@ export class SentryAdapter extends BaseAdapter {
       sendDefaultPii: false,
       integrations,
       propagateTraceparent: true, // Enables trace propagation via the W3C Trace Context standard
-      tracePropagationTargets: config.tracePropagationTargets ?? [
-        this.getAllowedTracingTarget(CodeStudioConfig.environment),
-      ],
+      tracePropagationTargets:
+        config.tracePropagationTargets ??
+        this.getAllowedTracingTargets(CodeStudioConfig.environment),
       sampleRate: config.sampling?.errorSampleRate ?? 1.0,
       tracesSampleRate: config.sampling?.tracesSampleRate ?? 0,
       enableLogs,
@@ -222,16 +222,22 @@ export class SentryAdapter extends BaseAdapter {
   }
 
   /**
-   * Keep trace propagation limited to dashboard-origin requests, except in
-   * adhoc environments where assets may be served from CDN hosts.
+   * Hosts and patterns allowed to receive Sentry tracing headers. Includes the
+   * dashboard origin (or CDN in adhoc) plus the AI Gateway, covering both the
+   * production hostname and any Cloudflare Worker preview URL we deploy to.
    * @param environment Current Code.org environment.
-   * @returns Host or pattern allowed to receive Sentry tracing headers.
    */
-  private getAllowedTracingTarget(environment: Environment): string | RegExp {
-    if (environment === 'adhoc') {
-      return /^https:\/\/.*\.cdn-code\.org/;
-    }
+  private getAllowedTracingTargets(
+    environment: Environment,
+  ): Array<string | RegExp> {
+    const dashboardTarget =
+      environment === 'adhoc'
+        ? /^https:\/\/.*\.cdn-code\.org/
+        : getDashboardApiUrl(environment);
 
-    return getDashboardApiUrl(environment);
+    const aiGatewayTarget =
+      /^https:\/\/(ai-gateway\.code\.org|.*\.code-org\.workers\.dev)/;
+
+    return [dashboardTarget, aiGatewayTarget];
   }
 }
