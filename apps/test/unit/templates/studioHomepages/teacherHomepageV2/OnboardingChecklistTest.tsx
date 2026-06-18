@@ -136,9 +136,7 @@ describe('OnboardingChecklist', () => {
       );
     });
 
-    expect(
-      screen.queryByRole('img', {name: /circle-check/i})
-    ).not.toBeInTheDocument();
+    expect(document.querySelector('.fa-circle-check')).toBeNull();
   });
 
   it('shows a check icon only for tours that are completed', async () => {
@@ -173,10 +171,13 @@ describe('OnboardingChecklist', () => {
 
   it('does not throw when the completion fetch fails', async () => {
     mockGet.mockRejectedValue(new Error('network error'));
-    jest.spyOn(console, 'error').mockImplementation(() => {});
+    const consoleErrorSpy = jest
+      .spyOn(console, 'error')
+      .mockImplementation(() => {});
 
     render(<OnboardingChecklist {...defaultProps} />);
 
-    await waitFor(() => expect(console.error).toHaveBeenCalled());
+    await waitFor(() => expect(consoleErrorSpy).toHaveBeenCalled());
+    consoleErrorSpy.mockRestore();
   });
 });

@@ -85,10 +85,13 @@ describe('recordViewSyllabusCompletion', () => {
 
   it('does not throw when the backend call fails', async () => {
     mockHttpClientPost.mockRejectedValue(new Error('network error'));
-    jest.spyOn(console, 'error').mockImplementation(() => {});
+    const consoleErrorSpy = jest
+      .spyOn(console, 'error')
+      .mockImplementation(() => {});
     recordViewSyllabusCompletion();
     await Promise.resolve();
-    expect(console.error).toHaveBeenCalled();
+    expect(consoleErrorSpy).toHaveBeenCalled();
+    consoleErrorSpy.mockRestore();
   });
 });
 
