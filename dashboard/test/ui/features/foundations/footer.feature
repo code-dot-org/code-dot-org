@@ -33,7 +33,7 @@ Feature: Checking the footer appearance
   @eyes
   Scenario: Desktop Star Wars share small footer
     When I open my eyes to test "Desktop Star Wars share small footer"
-    Given I am on "http://studio.code.org/courses/starwars/units/1/lessons/1/levels/15?noautoplay=true"
+    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/24/levels/9?noautoplay=true"
     And I wait for the lab page to fully load
     And I press "runButton"
     And I wait until element "#finishButton" is visible
