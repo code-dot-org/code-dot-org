@@ -24,6 +24,28 @@
 require 'state_abbr'
 
 class RegionalPartner < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :restricted,
+    name: :restricted,
+    group: :restricted,
+    urban: :restricted,
+    attention: :restricted,
+    street: :restricted,
+    apartment_or_suite: :restricted,
+    city: :restricted,
+    state: :restricted,
+    zip_code: :restricted,
+    phone_number: :restricted,
+    notes: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
+    deleted_at: :restricted,
+    properties: :restricted,
+    is_active: :restricted,
+  )
+
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   has_many :regional_partner_program_managers

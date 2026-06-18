@@ -21,6 +21,24 @@
 #  index_aidiff_messages_on_aidiff_thread_id  (aidiff_thread_id)
 #
 class AidiffMessage < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :restricted,
+    aidiff_thread_id: :restricted,
+    external_id: :restricted,
+    role: :restricted,
+    content: :restricted,
+    is_preset: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
+    preset_chip_text: :restricted,
+    raw_content: :restricted,
+    source_links: :restricted,
+    is_artifact_candidate: :restricted,
+    artifact_candidate_type: :restricted,
+  )
+
   belongs_to :aidiff_thread
   has_one :aidiff_message_feedback, dependent: :destroy
 

@@ -23,6 +23,22 @@
 #
 
 class AuthenticationOption < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :restricted,
+    email: :restricted,
+    hashed_email: :restricted,
+    credential_type: :restricted,
+    authentication_id: :restricted,
+    data: :highly_restricted,
+    deleted_at: :restricted,
+    user_id: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
+    version: :restricted,
+  )
+
   acts_as_paranoid
   belongs_to :user, optional: true
 

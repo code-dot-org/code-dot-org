@@ -229,6 +229,7 @@ end
 def apps_build_trigger_paths
   [
     apps_dir,
+    config_dir('global_editions'),
     shared_constants_file,
     shared_constants_dir,
     frontend_dir
