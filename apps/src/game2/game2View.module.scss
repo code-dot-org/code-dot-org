@@ -641,3 +641,51 @@
     cursor: not-allowed;
   }
 }
+
+// Portrait / narrow layouts: when the viewport is taller than it is wide
+// (phone, tablet held vertically, narrow browser), stack the side panels
+// below the main content instead of next to it. `orientation: portrait`
+// triggers whenever height >= width, which matches the request directly.
+@media (orientation: portrait) {
+  .itemsPanelLayout,
+  .worldContainer,
+  .codePanelWrapper {
+    flex-direction: column;
+  }
+
+  // Side panes that previously sat to the right become full-width strips
+  // below the main content. Swap border-left for border-top so the visual
+  // separator stays correct.
+  .itemSidePane,
+  .codeGenPane {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    border-left: none;
+    border-top: 1px solid $neutral_dark70;
+  }
+
+  .itemSidePane {
+    max-height: 35vh;
+  }
+
+  .codeGenPane {
+    max-height: 32vh;
+  }
+
+  // World tab: palette becomes a top strip, grid takes the middle,
+  // generate pane drops to the bottom.
+  .worldPalette {
+    width: 100%;
+    min-width: 0;
+    max-height: 28vh;
+    border-right: none;
+    border-bottom: 1px solid $neutral_dark70;
+  }
+
+  // Avoid the classic flex-overflow trap so the grid can actually shrink.
+  .worldGrid,
+  .codePanel {
+    min-height: 0;
+  }
+}
