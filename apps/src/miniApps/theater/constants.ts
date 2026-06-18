@@ -10,9 +10,13 @@ export enum TheaterSignalType {
 }
 
 export enum InputMessage {
-  // Theater-specific messages
   UPLOAD_SUCCESS = 'UPLOAD_SUCCESS',
   UPLOAD_ERROR = 'UPLOAD_ERROR',
+}
+
+export enum InputMessageType {
+  SYSTEM_IN = 'SYSTEM_IN',
+  THEATER = 'THEATER',
 }
 
 // DOM ids of the image and audio elements rendered by TheaterVisualization.
