@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0f59acff59a3718a7e63888c8fac2ea34a0385a37c49fd63e4c296dcdf6d4bb5
-size 399
+{
+  "id": 1,
+  "type": "multiple_choice_single_select",
+  "active": true,
+  "problem_text": "Which of the following is a mammal?",
+  "solution": [
+    {
+      "option": "koala",
+      "correct": true
+    },
+    {
+      "option": "lobster",
+      "correct": false
+    },
+    {
+      "option": "goldfish",
+      "correct": false
+    },
+    {
+      "option": "frog",
+      "correct": false
+    }
+  ]
+}

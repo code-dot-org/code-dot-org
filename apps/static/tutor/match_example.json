@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2aa8b91df1e2a325db056d93ed968f03b5ce584ebc7020174d22eff3fe4dbf15
-size 395
+{
+  "id": 4,
+  "type": "match",
+  "active": true,
+  "problem_text": "Match the animal with its food",
+  "solution": [
+    {
+      "option": "puppy",
+      "correct": "kibbles"
+    },
+    {
+      "option": "corn snake",
+      "correct": "rat"
+    },
+    {
+      "option": "leopard gecko",
+      "correct": "cricket"
+    },
+    {
+      "option": "koala",
+      "correct": "eucalyptus"
+    }
+  ]
+}
