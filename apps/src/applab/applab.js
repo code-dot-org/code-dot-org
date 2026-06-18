@@ -770,13 +770,9 @@ Applab.init = function (config) {
     localized: true,
     paletteParams: block.localized
       ? block.paletteParams
-      : block.paletteParams?.map(param => {
-          // If a param is surrounded by quotes, keep those and swap them back in
-          if (param.startsWith('"') && param.endsWith('"')) {
-            return `"${localization.translate(param.replaceAll('"', ''))}"`;
-          }
-          return localization.translate(param.replaceAll('"', ''));
-        }),
+      : block.paletteParams?.map(
+          param => `"${localization.translate(param.replaceAll('"', ''))}"`
+        ),
   }));
 
   // Set the custom set of blocks (may have had maker blocks merged in) so
