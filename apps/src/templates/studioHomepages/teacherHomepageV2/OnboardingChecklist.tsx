@@ -10,24 +10,16 @@ import {DemoType} from '../../teacherDashboard/types/teacherSectionTypes';
 import styles from './teacherHomepage.module.scss';
 
 const CHECKLIST_ITEMS = [
-  {id: 'review-syllabus', label: 'Review the syllabus'},
-  {id: 'learn-to-evaluate', label: 'Learn how to evaluate'},
-  {id: 'create-section', label: 'Create a class section'},
+  {id: 'view_syllabus', label: 'Review the syllabus'},
+  {id: 'learn_to_evaluate', label: 'Learn how to evaluate'},
+  {id: 'create_class_section', label: 'Create a class section'},
 ];
 
-const TOUR_NAMES: Record<string, string> = {
-  'create-section': 'create_class_section',
-  'review-syllabus': 'view_syllabus',
-  'learn-to-evaluate': 'learn_to_evaluate',
-};
-
 const recordTourStart = (id: string, demoType: DemoType) => {
-  const tourName = TOUR_NAMES[id];
-  if (!tourName) return;
   HttpClient.post(
     '/dashboardapi/v1/user_product_tours',
     JSON.stringify({
-      tour_name: tourName,
+      tour_name: id,
       started_at: true,
       properties: {demo_type: demoType},
     }),
@@ -65,11 +57,11 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
 
   const handleButtonClick = (id: string) => {
     recordTourStart(id, demoType);
-    if (id === 'create-section') {
+    if (id === 'create_class_section') {
       createSectionTour?.start();
-    } else if (id === 'review-syllabus') {
+    } else if (id === 'view_syllabus') {
       reviewSyllabusTour?.start();
-    } else if (id === 'learn-to-evaluate') {
+    } else if (id === 'learn_to_evaluate') {
       learnHowToEvaluateTour?.start();
     }
   };
@@ -101,7 +93,7 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
                 onClick={() => handleButtonClick(id)}
                 type="button"
               >
-                {completedTourNames.has(TOUR_NAMES[id]) && (
+                {completedTourNames.has(id) && (
                   <span className={styles.onboardingChecklistCheckIcon}>
                     <FontAwesomeV6Icon
                       iconName="circle-check"
