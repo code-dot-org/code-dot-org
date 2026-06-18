@@ -1,8 +1,12 @@
-import {test} from '../fixtures';
+import {OneTrustComponent} from '../components/one-trust';
+import {expect, test} from '../fixtures';
 import {mockDcdoKey} from '../shared/dcdo';
 import {setEuropeanIpCookie} from '../shared/geolocation';
 
-import {OneTrustPage} from './one-trust-page';
+// OT rewrites /home?otreset=true to otreset=false once it processes the reset.
+const OT_RESET_TIMEOUT_MS = 15_000;
+// OT injects the banner only after its SDK initializes, which can lag past load.
+const OT_BANNER_TIMEOUT_MS = 30_000;
 
 test.describe('OneTrust integration', () => {
   /**
@@ -10,12 +14,12 @@ test.describe('OneTrust integration', () => {
    * Source: dashboard/test/ui/features/platform/one_trust.feature
    * "User sees OneTrust cookie pop-up when self-hosting OneTrust libraries on code.org"
    *
-   * @eyes scenario — Applitools visual comparison not available in Playwright
-   * port. Skipped; the functional duplicate (scenario 2) covers the same flow.
+   * Skipped: the only behavior unique to this @eyes scenario is its Applitools
+   * visual diff, which has no equivalent in this suite. The functional flow
+   * (European geo + otreset + banner appears) is covered by the scenario below;
+   * only the visual-diff coverage is dropped.
    */
-  test.skip('User sees OneTrust cookie pop-up when self-hosting OneTrust libraries on code.org (@eyes)', async () => {
-    // @eyes: Applitools visual diff not ported; covered by the scenario below.
-  });
+  test.skip('User sees OneTrust cookie pop-up when self-hosting OneTrust libraries on code.org (@eyes)', () => {});
 
   /**
    * Migration status: COMPLETED
@@ -26,18 +30,17 @@ test.describe('OneTrust integration', () => {
     page,
     signInAsNewUser,
   }) => {
-    const ot = new OneTrustPage(page);
+    const oneTrust = new OneTrustComponent(page);
 
     await signInAsNewUser({type: 'student', name: 'Alice'});
-
-    // Set the European geo-override cookie (Spain IP).
     await setEuropeanIpCookie(page);
 
-    // Navigate to /home with OT reset params and wait for otreset=false.
-    await ot.gotoHomeWithOtReset();
+    await page.goto('/home?otreset=true&otgeo=es');
+    await expect(page).toHaveURL(/otreset=false/, {
+      timeout: OT_RESET_TIMEOUT_MS,
+    });
 
-    // OT injects the banner after its SDK initialises — wait for the element.
-    await ot.waitForOtBannerVisible();
+    await expect(oneTrust.banner).toBeVisible({timeout: OT_BANNER_TIMEOUT_MS});
   });
 
   /**
@@ -48,15 +51,13 @@ test.describe('OneTrust integration', () => {
   test('The dashboard pages load the self hosted OneTrust libraries.', async ({
     page,
   }) => {
-    const ot = new OneTrustPage(page);
+    const oneTrust = new OneTrustComponent(page);
 
-    await ot.goto('/users/sign_in');
+    await page.goto('/users/sign_in');
 
-    await ot.expectScriptExists(
-      "script[src$='onetrust/cdo/scripttemplates/otSDKStub.js']",
-    );
-    await ot.expectScriptExists("script[src$='977d/OtAutoBlock.js']");
-    await ot.expectScriptAbsent("script[src$='977d-test/OtAutoBlock.js']");
+    await expect(oneTrust.selfHostedSdkStub.first()).toBeAttached();
+    await expect(oneTrust.prodAutoBlock.first()).toBeAttached();
+    await expect(oneTrust.testAutoBlock).toHaveCount(0);
   });
 
   /**
@@ -64,27 +65,28 @@ test.describe('OneTrust integration', () => {
    * Source: dashboard/test/ui/features/platform/one_trust.feature
    * "The dashboard pages load the Onetrust prod libraries."
    *
-   * NOTE: The DCDO cookie domain must be the top-level domain (.code.org) so
-   * the Rack::CookieDCDO middleware reads it. An initial navigation primes the
-   * cookie domain before the DCDO cookie is set.
+   * mockDcdoKey scopes the DCDO override to the top-level domain it reads from
+   * the current URL, so an initial navigation must prime the host before the
+   * cookie is set.
    */
   test('The dashboard pages load the Onetrust prod libraries.', async ({
     page,
   }) => {
-    const ot = new OneTrustPage(page);
+    const oneTrust = new OneTrustComponent(page);
 
-    // Prime the domain so context.addCookies has a valid host to target.
-    await ot.goto('/users/sign_in');
+    await page.goto('/users/sign_in');
     await mockDcdoKey(page, 'onetrust_cookie_scripts', 'prod');
+    await page.goto('/users/sign_in');
 
-    await ot.goto('/users/sign_in');
+    await expect(oneTrust.sdkStub.first()).toBeAttached();
+    await expect(oneTrust.prodAutoBlock.first()).toBeAttached();
+    await expect(oneTrust.testAutoBlock).toHaveCount(0);
 
-    await ot.expectScriptExists("script[src$='otSDKStub.js']");
-    await ot.expectScriptExists("script[src$='977d/OtAutoBlock.js']");
-    await ot.expectScriptAbsent("script[src$='977d-test/OtAutoBlock.js']");
-    await ot.expectScriptAbsent(
-      "script[src$='onetrust/scripttemplates/otSDKStub.js']",
-    );
+    // prod serves the stub from cdn.cookielaw.org; confirm it is not served
+    // from a self-hosted /onetrust/ path.
+    await expect(
+      page.locator("script[src$='onetrust/scripttemplates/otSDKStub.js']"),
+    ).toHaveCount(0);
   });
 
   /**
@@ -95,13 +97,13 @@ test.describe('OneTrust integration', () => {
   test('The dashboard pages load the test OneTrust libraries.', async ({
     page,
   }) => {
-    const ot = new OneTrustPage(page);
+    const oneTrust = new OneTrustComponent(page);
 
-    await ot.goto('/users/sign_in?onetrust_cookie_scripts=test');
+    await page.goto('/users/sign_in?onetrust_cookie_scripts=test');
 
-    await ot.expectScriptExists("script[src$='otSDKStub.js']");
-    await ot.expectScriptAbsent("script[src$='977d/OtAutoBlock.js']");
-    await ot.expectScriptExists("script[src$='977d-test/OtAutoBlock.js']");
+    await expect(oneTrust.sdkStub.first()).toBeAttached();
+    await expect(oneTrust.prodAutoBlock).toHaveCount(0);
+    await expect(oneTrust.testAutoBlock.first()).toBeAttached();
   });
 
   /**
@@ -112,13 +114,13 @@ test.describe('OneTrust integration', () => {
   test('The dashboard pages do not load the OneTrust libraries.', async ({
     page,
   }) => {
-    const ot = new OneTrustPage(page);
+    const oneTrust = new OneTrustComponent(page);
 
-    await ot.goto('/users/sign_in?onetrust_cookie_scripts=off');
+    await page.goto('/users/sign_in?onetrust_cookie_scripts=off');
 
-    await ot.expectScriptAbsent("script[src$='otSDKStub.js']");
-    await ot.expectScriptAbsent("script[src$='977d/OtAutoBlock.js']");
-    await ot.expectScriptAbsent("script[src$='977d-test/OtAutoBlock.js']");
+    await expect(oneTrust.sdkStub).toHaveCount(0);
+    await expect(oneTrust.prodAutoBlock).toHaveCount(0);
+    await expect(oneTrust.testAutoBlock).toHaveCount(0);
   });
 
   /**
@@ -129,23 +131,22 @@ test.describe('OneTrust integration', () => {
   test('Critical Javascript files are appropriately categorized by OneTrust on dashboard', async ({
     page,
   }) => {
-    const ot = new OneTrustPage(page);
+    const oneTrust = new OneTrustComponent(page);
 
-    await ot.goto('/users/sign_in');
+    await page.goto('/users/sign_in');
+    await oneTrust.waitForSdkSettled();
 
-    await ot.expectNotCategorizedByOneTrust(
+    for (const selector of [
       "script[src*='/assets/application']",
-    );
-    await ot.expectNotCategorizedByOneTrust(
       "script[src*='js/webpack-runtime']",
-    );
-    await ot.expectNotCategorizedByOneTrust("script[src*='js/essential']");
-    await ot.expectNotCategorizedByOneTrust("script[src*='js/vendors']");
-    await ot.expectNotCategorizedByOneTrust("script[src*='/common_locale']");
-    await ot.expectNotCategorizedByOneTrust(
+      "script[src*='js/essential']",
+      "script[src*='js/vendors']",
+      "script[src*='/common_locale']",
       "script[src*='js/code-studio-common']",
-    );
-    await ot.expectNotCategorizedByOneTrust("script[src*='js/code-studio']");
+      "script[src*='js/code-studio']",
+    ]) {
+      await expect(oneTrust.categorizedScript(selector)).toHaveCount(0);
+    }
   });
 
   /**
@@ -168,23 +169,21 @@ test.describe('OneTrust integration', () => {
       page,
       signInAsNewUser,
     }) => {
-      const ot = new OneTrustPage(page);
+      const oneTrust = new OneTrustComponent(page);
 
-      // @as_student hook: sign in as a student before the scenario.
       await signInAsNewUser({type: 'student', name: 'Student'});
-
-      // Set European geo-override cookie.
       await setEuropeanIpCookie(page);
 
-      // Navigate to /projects/{type}/new — auto-redirects to /edit URL.
-      await ot.goto(`/projects/${projectType}/new`);
+      // /projects/{type}/new redirects to the owner's /edit URL; the embed view
+      // is that URL with /edit→/embed (mirrors steps.rb "switch to the embedded
+      // view of current project").
+      await page.goto(`/projects/${projectType}/new`);
+      const embedUrl =
+        page.url().replace('/edit', '/embed') + '?otreset=true&otgeo=es';
+      await page.goto(embedUrl);
 
-      // Switch to the embedded view with OT reset params.
-      await ot.switchToEmbeddedView('otreset=true&otgeo=es');
-
-      // Embed pages must not load any OT scripts.
-      await ot.expectScriptAbsent("script[src$='otSDKStub.js']");
-      await ot.expectScriptAbsent("script[src$='OtAutoBlock.js']");
+      await expect(oneTrust.sdkStub).toHaveCount(0);
+      await expect(oneTrust.autoBlock).toHaveCount(0);
     });
   }
 });
