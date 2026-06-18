@@ -4,3 +4,11 @@
 /.nyc_output
 /.idea
 .DS_Store
+
+# Playwright run artifacts.
+/test-results
+/playwright-report
+
+# Ephemeral visual-test baselines written by scripts/prove-visual.ts.
+# Always regenerated; never committed.
+/e2e/tmp

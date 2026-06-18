@@ -14,6 +14,17 @@
 #  index_frameworks_on_shortcode  (shortcode) UNIQUE
 #
 class Framework < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    shortcode: :public,
+    name: :public,
+    properties: :public,
+    created_at: :public,
+    updated_at: :public,
+  )
+
   def summarize_for_lesson_edit
     {
       name: name,
