@@ -8,7 +8,7 @@ markdown <<MARKDOWN
 Before users ever see data on the screen, an app has to make a series of decisions about what data to use, how to process it, and how to display it.
 
 
- <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;"> <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 A <strong>pipeline</strong> is a series of steps that you run in order, where the output from one step becomes the input to the next. </p> </div>
+ <div style="background-color: #e4e2f8; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;"> <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 A <strong>pipeline</strong> is a series of steps that you run in order, where the output from one step becomes the input to the next. </p> </div>
 
 
 A pipeline starts with raw data, reshapes it for a purpose, and then displays the result to the user.

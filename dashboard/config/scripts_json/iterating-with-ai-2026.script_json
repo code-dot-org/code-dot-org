@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-16 15:55:19 UTC",
+    "serialized_at": "2026-06-17 17:04:05 UTC",
     "hide_within_course": true,
     "published_state": "in_development",
     "instruction_type": null,
@@ -281,7 +281,7 @@
       "relative_position": 11,
       "properties": {
         "overview": "**How can we design an interactive dashboard that helps people find what they need while keeping algorithmic choices fair, transparent, and under user control?**\n\nThis project guides students through building a data dashboard that renders items dynamically and supports interactive filtering, sorting, and Reset/Undo behavior. Along the way, students analyze the ethical implications of their filtering logic, refine the UI for clarity and usability, and document their iterative debugging process. AI functions as a partner in reasoning and refinement, with students explaining how AI suggestions shaped their final designs.",
-        "preparation": "- Print copies of the Interactive Data Dashboard Project Planning Guide to students (one for each student)",
+        "preparation": "- Print copies of the Interactive Data Dashboard Project Rubric to students (one for each student)",
         "student_overview": "**How can we design an interactive dashboard that helps people find what they need while keeping algorithmic choices fair, transparent, and under user control?**\n\nIn this project, you build an interactive data dashboard that displays information clearly and lets users explore it with filters, sorting tools, and a Reset/Undo feature. You also examine how your design choices affect fairness and visibility, and use AI to help plan, debug, and refine your work."
       },
       "seeding_key": {
@@ -744,7 +744,8 @@
       "key": "cf5c3323-60c6-4fa4-ad3d-dbf36d68a6cc",
       "position": 1,
       "properties": {
-        "name": "Revised Level Progression"
+        "duration": 45,
+        "name": "Day 1"
       },
       "seeding_key": {
         "lesson_activity.key": "cf5c3323-60c6-4fa4-ad3d-dbf36d68a6cc",
@@ -754,70 +755,56 @@
       }
     },
     {
-      "key": "13e7e467-3ab9-4baa-a4a2-7fb89d9abc16",
+      "key": "8daeb373-4028-4b81-a591-56b81b7ded31",
       "position": 2,
-      "properties": {
-        "duration": 45,
-        "name": "Day 1"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "13e7e467-3ab9-4baa-a4a2-7fb89d9abc16",
-        "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "iterating-with-ai-2026"
-      }
-    },
-    {
-      "key": "88429e03-1498-4410-9930-3a67dc09f2b9",
-      "position": 3,
       "properties": {
         "duration": 45,
         "name": "Day 2"
       },
       "seeding_key": {
-        "lesson_activity.key": "88429e03-1498-4410-9930-3a67dc09f2b9",
+        "lesson_activity.key": "8daeb373-4028-4b81-a591-56b81b7ded31",
         "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "iterating-with-ai-2026"
       }
     },
     {
-      "key": "a913a0b3-89ad-4ca7-b7a1-37fbdbf8d9a9",
-      "position": 4,
+      "key": "c30e88df-a4f2-422d-b865-d370bd43bd8e",
+      "position": 3,
       "properties": {
         "duration": 45,
         "name": "Day 3"
       },
       "seeding_key": {
-        "lesson_activity.key": "a913a0b3-89ad-4ca7-b7a1-37fbdbf8d9a9",
+        "lesson_activity.key": "c30e88df-a4f2-422d-b865-d370bd43bd8e",
         "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "iterating-with-ai-2026"
       }
     },
     {
-      "key": "9a187282-6712-48e3-9ecf-7c7ae655d9dd",
-      "position": 5,
+      "key": "477988df-8aaf-4d6c-9eb3-7166b07cb06d",
+      "position": 4,
       "properties": {
         "duration": 45,
         "name": "Day 4"
       },
       "seeding_key": {
-        "lesson_activity.key": "9a187282-6712-48e3-9ecf-7c7ae655d9dd",
+        "lesson_activity.key": "477988df-8aaf-4d6c-9eb3-7166b07cb06d",
         "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "iterating-with-ai-2026"
       }
     },
     {
-      "key": "56dbdfab-b1bb-4d13-a980-e77b55c8383e",
-      "position": 6,
+      "key": "082613f8-13c5-4c65-a9f1-0f1d4d63e4a5",
+      "position": 5,
       "properties": {
         "duration": 45,
         "name": "Day 5"
       },
       "seeding_key": {
-        "lesson_activity.key": "56dbdfab-b1bb-4d13-a980-e77b55c8383e",
+        "lesson_activity.key": "082613f8-13c5-4c65-a9f1-0f1d4d63e4a5",
         "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "iterating-with-ai-2026"
@@ -2906,11 +2893,67 @@
       }
     },
     {
-      "key": "0c4d09b4-1ba2-44a3-8e6a-02d4b00c6ff8",
+      "key": "78ae215a-3b79-4c9e-ad59-2a9baa9dca90",
       "position": 1,
       "properties": {
-        "description": "Milestone 1\nLevel 1 - Plan and Choose a Dataset\nLevel 2 - Schema (template-backed) and Schema AI Chatbot\nLevel 3 - Finalize Your Dataset (template-backed)\nLevel 4 - Reflection",
-        "name": "Milestone 1"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  Click the animated slide to display the discussion prompts.\nWhen you're trying to find information in an app or website, what makes it easy or hard to explore the data?\nWhat is one thing you wish more apps did to help you find what you're looking for?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on real experiences with findability, data clarity, and user control, setting up the project's focus on schema design, transparency, and meaningful filtering.\n\n\n\n\n",
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "78ae215a-3b79-4c9e-ad59-2a9baa9dca90",
+        "lesson_activity.key": "cf5c3323-60c6-4fa4-ad3d-dbf36d68a6cc"
+      }
+    },
+    {
+      "key": "dee752cb-6a4e-486e-8a9f-33d1647be676",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk students through these simplified project goals. These summarize what their dashboard must do: display data clearly, support user control through filters and sorting, and communicate choices transparently. Emphasize that fairness and visibility—like which items get surfaced or hidden—will be part of their design thinking throughout the project.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Interactive Data Dashboard Project Rubric\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What do you notice about the project requirements and rubric? What does success look like for this project?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program. Listen for students noticing themes like transparency, fairness, active filter displays, loop-driven rendering, and Reset/Undo—these are central to the project and will guide their design decisions.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the milestone structure of the project. Explain that the Interactive Data Dashboard Project is divided into four milestones, each with its own goals and deliverables. Use the visual roadmap to preview the journey students will take — from choosing and refining their dataset to building and showcasing their interactive dashboard.\n\n\n",
+        "duration": "35",
+        "name": "Activity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students that milestones help them manage time and track progress, just like in real design and development projects. Encourage them to think of each milestone as a \"checkpoint\" to reflect on what's working, what needs improvement, and how their design aligns with their user and purpose.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "dee752cb-6a4e-486e-8a9f-33d1647be676",
+        "lesson_activity.key": "cf5c3323-60c6-4fa4-ad3d-dbf36d68a6cc"
+      }
+    },
+    {
+      "key": "fa9b3a32-baa2-40dd-9f99-45b24e1cff9a",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that today's focus is Milestone 1: Choose a Dataset & Define Your Schema, where students select a dataset, narrow it to meaningful fields, and examine it for bias, clarity, and findability. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain Deliverables for Milestone 1 so students understand what needs to be completed by the end of this milestone.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to mention parts of the deliverables that feel most exciting or challenging. This helps you gauge engagement and plan support for different groups. Remind students that Milestone 1 focuses on data decisions — not code. Their goal is to choose a dataset, define a schema, and think about visibility, fairness, and which fields users will filter by.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fa9b3a32-baa2-40dd-9f99-45b24e1cff9a",
+        "lesson_activity.key": "cf5c3323-60c6-4fa4-ad3d-dbf36d68a6cc"
+      }
+    },
+    {
+      "key": "0c4d09b4-1ba2-44a3-8e6a-02d4b00c6ff8",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**Direct students to Level 1 to complete Levels 1–3.\n* **Level 1:** Students choose a dataset, complete `planning.md`, rename it `dataset.js`, and add both files to their Backpack.\n* **Level 2:** Students define their schema, card view, and filter clarity notes in SketchLab. They may use the chatbot to plan or review their choices.\n* **Level 3:** Students consult AI, revise their dataset fields, and update `dataset.js`.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through the Milestone 1 level progression, ask guiding questions such as:\n* Which dataset does your project focus on?\n* What fields will be included in your filters and why?\n* Are there any missing groups or unclear categories in your filters or labels?\n* Who might not be visible due to your filter choices right now?\n\nUse these check-ins to confirm students are moving from idea to planning, rather than jumping straight into code.\n",
+        "name": "Milestone 1",
+        "progression_name": "Milestone 1",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Set expectations for pacing — Milestone 1 can typically be finished by the end of today's class or early next class. Encourage students to focus first on clarity of idea rather than polish.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0c4d09b4-1ba2-44a3-8e6a-02d4b00c6ff8",
@@ -2918,341 +2961,224 @@
       }
     },
     {
-      "key": "53576f6e-eacc-4928-b119-ad277db86437",
-      "position": 2,
-      "properties": {
-        "description": "Milestone 2\n- Level 5 - App Wireframe (template-backed)\n- Level 6 - Build a Static Web Page (template-backed)\n- Level 7 - Reflect on AI Code Generation\n",
-        "name": "Milestone 2"
-      },
-      "seeding_key": {
-        "activity_section.key": "53576f6e-eacc-4928-b119-ad277db86437",
-        "lesson_activity.key": "cf5c3323-60c6-4fa4-ad3d-dbf36d68a6cc"
-      }
-    },
-    {
-      "key": "d70d4f92-94c0-4a6f-852a-50828c660c5a",
-      "position": 3,
-      "properties": {
-        "description": "Milestone 3\n- Level 8 - Filter Logic Flowchart (template-backed)\n- Level 9 - Interactive Data App (template-backed)\n- Level 10 - Reflection\n",
-        "name": "Milestone 3"
-      },
-      "seeding_key": {
-        "activity_section.key": "d70d4f92-94c0-4a6f-852a-50828c660c5a",
-        "lesson_activity.key": "cf5c3323-60c6-4fa4-ad3d-dbf36d68a6cc"
-      }
-    },
-    {
-      "key": "3461d023-fb66-47fe-863e-fac802dd15a7",
-      "position": 4,
-      "properties": {
-        "description": "Milestone 4\n- Level 11\n- Level 12",
-        "name": "Milestone 4"
-      },
-      "seeding_key": {
-        "activity_section.key": "3461d023-fb66-47fe-863e-fac802dd15a7",
-        "lesson_activity.key": "cf5c3323-60c6-4fa4-ad3d-dbf36d68a6cc"
-      }
-    },
-    {
-      "key": "9a85de18-1f44-436c-bb0b-32647e808e63",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts.\n- *When you're trying to find information in an app or website, what makes it easy or hard to explore the data?*\n- *What is one thing you wish more apps did to help you find what you're looking for?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on real experiences with findability, data clarity, and user control, setting up the project's focus on schema design, transparency, and meaningful filtering.",
-        "duration": "5",
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "activity_section.key": "9a85de18-1f44-436c-bb0b-32647e808e63",
-        "lesson_activity.key": "13e7e467-3ab9-4baa-a4a2-7fb89d9abc16"
-      }
-    },
-    {
-      "key": "a4491b99-049d-4f83-a4d2-a5a6126e4c84",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Interactive Data Dashboard Project Planning Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk students through these simplified project goals. These summarize what their dashboard must do: display data clearly, support user control through filters and sorting, and communicate choices transparently. Emphasize that fairness and visibility—like which items get surfaced or hidden—will be part of their design thinking throughout the project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on the last two pages of the project planning guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program. Listen for students noticing themes like transparency, fairness, active filter displays, loop-driven rendering, and Reset/Undo—these are central to the project and will guide their design decisions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the milestone structure of the project. Explain that the Interactive Data Dashboard Project is divided into four milestones, each with its own goals and deliverables. Use the visual roadmap to preview the journey students will take — from choosing and refining their dataset to building and showcasing their interactive dashboard.",
-        "duration": "35",
-        "name": "Activity",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Remind students that milestones help them manage time and track progress, just like in real design and development projects. Encourage them to think of each milestone as a \"checkpoint\" to reflect on what's working, what needs improvement, and how their design aligns with their user and purpose."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "a4491b99-049d-4f83-a4d2-a5a6126e4c84",
-        "lesson_activity.key": "13e7e467-3ab9-4baa-a4a2-7fb89d9abc16"
-      }
-    },
-    {
-      "key": "927704a2-6086-4528-9019-f4aa95e18f1e",
-      "position": 3,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "927704a2-6086-4528-9019-f4aa95e18f1e",
-        "lesson_activity.key": "13e7e467-3ab9-4baa-a4a2-7fb89d9abc16"
-      }
-    },
-    {
-      "key": "8038599f-e7b6-44a8-9ca2-b8ebd0ce2202",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that today's focus is Milestone 1: Choose a Dataset & Define Your Schema, where students select a dataset, narrow it to meaningful fields, and examine it for bias, clarity, and findability. Direct students to open their Interactive Data Dashboard Project Guide and locate the Milestone 1 section. Have them read through the Goals and Deliverables so they understand what needs to be completed by the end of this milestone.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Encourage students to highlight or note parts of the deliverables that feel most exciting or challenging. This helps you gauge engagement and plan support for different groups. Remind students that Milestone 1 focuses on data decisions — not code. Their goal is to choose a dataset, define a schema, and think about visibility, fairness, and which fields users will filter by."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "8038599f-e7b6-44a8-9ca2-b8ebd0ce2202",
-        "lesson_activity.key": "13e7e467-3ab9-4baa-a4a2-7fb89d9abc16"
-      }
-    },
-    {
-      "key": "02b0762f-4339-4f3e-92f9-67e597c162c2",
+      "key": "0e1746ca-cf46-4ea8-a05f-109a564d6170",
       "position": 5,
       "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "02b0762f-4339-4f3e-92f9-67e597c162c2",
-        "lesson_activity.key": "13e7e467-3ab9-4baa-a4a2-7fb89d9abc16"
-      }
-    },
-    {
-      "key": "9dba6e21-bf4d-4b26-9ec1-51ad448bcb54",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to begin Milestone 1: Choose a Dataset & Define Your Schema. Students can choose the tool that best supports their current task: exploring datasets, organizing their plan, identifying filter-relevant fields, sketching their schema, or reviewing their data choices for visibility and fairness.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students explore the hub, ask guiding questions such as:\n- “Which dataset does your project focus on?”\n- “What fields will be included in your filters and why?”\n- “Are there any missing groups or unclear categories in your filters or labels?”\n- “Who might not be visible due to your filter choices right now?”\n\nUse these check-ins to confirm students are moving from idea to planning, rather than jumping straight into code.",
-        "progression_name": "Milestone One",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Encourage students to experiment with multiple tools as they develop their plan — for example, brainstorming with the Filter and Threshold Planning Bot before designing their schema. Remind them that testing and refining their ideas here will save time later once they start coding."
-          },
-          {
-            "type": "teachingTip",
-            "markdown": "Set expectations for pacing — Milestone 1 can typically be finished by the end of today's class or early next class. Encourage students to focus first on clarity of idea rather than polish."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "9dba6e21-bf4d-4b26-9ec1-51ad448bcb54",
-        "lesson_activity.key": "13e7e467-3ab9-4baa-a4a2-7fb89d9abc16"
-      }
-    },
-    {
-      "key": "bafacdce-3948-4c90-b30d-bccd5c02a054",
-      "position": 7,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "bafacdce-3948-4c90-b30d-bccd5c02a054",
-        "lesson_activity.key": "13e7e467-3ab9-4baa-a4a2-7fb89d9abc16"
-      }
-    },
-    {
-      "key": "e554a8b6-e0fb-4507-819f-526d82e8ab73",
-      "position": 8,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 1 Reflection section in their project planning guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 11, Level 4 to complete the Milestone 1 Reflection. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner. \n",
         "duration": "5",
         "name": "Wrap Up",
+        "progression_name": "Milestone 1 Reflection",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If time permits, invite a few volunteers to share aloud or conduct a quick pair-and-share to close."
+            "markdown": "Teaching Tip\nIf time permits, invite a few volunteers to share aloud or conduct a quick pair-and-share to close.\n"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "e554a8b6-e0fb-4507-819f-526d82e8ab73",
-        "lesson_activity.key": "13e7e467-3ab9-4baa-a4a2-7fb89d9abc16"
+        "activity_section.key": "0e1746ca-cf46-4ea8-a05f-109a564d6170",
+        "lesson_activity.key": "cf5c3323-60c6-4fa4-ad3d-dbf36d68a6cc"
       }
     },
     {
-      "key": "f88e477c-7b63-4265-8958-f2d51551c5b9",
+      "key": "e8151652-4a81-42c4-92ea-7b4e79e9e56c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts:\n- *When you look at a page full of information (menus, playlists, search results, etc.), what helps you understand it quickly?*\n- *What kinds of layouts or labels make information easier—or harder—to scan?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students surface real-world examples of clear labeling, visual grouping, and layout logic, preparing them for dashboard wireframing and schema → UI decisions.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts:\nWhen you look at a page full of information (menus, playlists, search results, etc.), what helps you understand it quickly?\nWhat kinds of layouts or labels make information easier—or harder—to scan?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students surface real-world examples of clear labeling, visual grouping, and layout logic, preparing them for dashboard wireframing and schema → UI decisions.\n\n",
         "duration": "5",
         "name": "Warm Up"
       },
       "seeding_key": {
-        "activity_section.key": "f88e477c-7b63-4265-8958-f2d51551c5b9",
-        "lesson_activity.key": "88429e03-1498-4410-9930-3a67dc09f2b9"
+        "activity_section.key": "e8151652-4a81-42c4-92ea-7b4e79e9e56c",
+        "lesson_activity.key": "8daeb373-4028-4b81-a591-56b81b7ded31"
       }
     },
     {
-      "key": "e1ebf528-70a5-4384-9ce7-cd9c5fa22674",
+      "key": "47f6bdc7-b6bb-4d06-9880-64251fa938e7",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 2 of the project. Explain that today students will focus on completing Milestone 1 and starting work on Milestone 2. Direct students to open their Interactive Data Dashboard Project Guide and locate the Milestone 1 and 2 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to use Level 1 if they still need to complete any Milestone 1 work or would benefit from one of the support tools, and move to Level 2 to begin Milestone 2, where they will shift from exploring and refining a dataset and outlining their schema, to planning and building their dashboard. Explain that today’s focus is creating clear wireframes and building their static UI that displays all items using loop-driven rendering. Emphasize that students should aim for clarity rather than polish—simple layouts that show where cards will go and how each schema field will be labeled. Encourage students to begin with one clean card layout and build from there, mirroring how developers prototype simple, testable pieces before adding complexity.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task and progressing toward a complete first draft. Ask check-in questions like:\n- Which schema fields will appear on your card and where will they go?\n- Where will users look first when they open your dashboard?\n- Does your wireframe show clear labels for each field and for any future filters?\n- How will your layout make the data easy to scan and compare (e.g., grouping, order, or emphasis)?\n- Where will transparency cues like “Showing X results” or active filter labels appear?\n\nRemind students that their wireframes should clearly map schema fields to card UI elements and show where labels and transparency cues (like “Showing X results”) will go. Provide quick support if students get stuck — redirect them to the Filter & Threshold Planner Bot or Project Support Bot for troubleshooting help before intervening directly.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that today students will focus on completing Milestone 1 and starting work on Milestone 2. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain Deliverables for Milestone 2 so students understand what needs to be completed by the end of this milestone.\n",
         "duration": "35",
-        "name": "Activity",
-        "progression_name": "Milestone Two"
+        "name": "Activity"
       },
       "seeding_key": {
-        "activity_section.key": "e1ebf528-70a5-4384-9ce7-cd9c5fa22674",
-        "lesson_activity.key": "88429e03-1498-4410-9930-3a67dc09f2b9"
+        "activity_section.key": "47f6bdc7-b6bb-4d06-9880-64251fa938e7",
+        "lesson_activity.key": "8daeb373-4028-4b81-a591-56b81b7ded31"
       }
     },
     {
-      "key": "72826e78-fbc0-4b1e-9552-10e9c0ba998b",
+      "key": "d0768ab9-b6b5-4936-8996-ec50798c590d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 2 Reflection section in their project planning guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students write and discuss, listen for reflections that describe how their page layout and card design help (or fail to help) users scan, compare, and find items quickly and clearly. Encourage students to notice whether their labels, headings, and visual structure make the dataset easy to scan, and to capture specific ideas about what they might refine next time.",
-        "duration": "5",
-        "name": "Wrap Up",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time permits, invite a few students to share one design choice that makes their data easier to understand. Highlight that noticing how layout supports clarity is an important design skill — it shows they’re thinking about how real users will read and interpret the information in their app."
-          }
-        ]
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**Remind students to return to earlier levels if they still need to complete any Milestone 1 work. Then, direct students to Lesson 11, Level 5 to complete Levels 5 and 6 where they will shift from exploring and refining a dataset and outlining their schema, to planning and building their dashboard. Explain that today’s focus is creating clear wireframes and building their static UI that displays all items using loop-driven rendering. Emphasize that students should aim for clarity rather than polish—simple layouts that show where cards will go and how each schema field will be labeled. Encourage students to begin with one clean card layout and build from there, mirroring how developers prototype simple, testable pieces before adding complexity.\n* **Level 5:** Students create the main dashboard wireframe in App View, including filters, sort controls, cards, field annotations, and transparent labels.\n* **Level 6:** Students build the static HTML/CSS page, connect script.js and dataset.js, and use a loop to render all data cards.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task and progressing toward a complete first draft. Ask check-in questions like:\n* Which schema fields will appear on your card and where will they go?\n* Where will users look first when they open your dashboard?\n* Does your wireframe show clear labels for each field and for any future filters?\n* How will your layout make the data easy to scan and compare (e.g., grouping, order, or emphasis)?\n* Where will transparency cues like “Showing X results” or active filter labels appear?\n\nRemind students that their wireframes should clearly map schema fields to card UI elements and show where labels and transparency cues (like “Showing X results”) will go. Provide quick support if students get stuck — redirect them to the Filter & Threshold Planner Bot or Project Support Bot for troubleshooting help before intervening directly. \n\n\n",
+        "progression_name": "Milestone 2"
       },
       "seeding_key": {
-        "activity_section.key": "72826e78-fbc0-4b1e-9552-10e9c0ba998b",
-        "lesson_activity.key": "88429e03-1498-4410-9930-3a67dc09f2b9"
+        "activity_section.key": "d0768ab9-b6b5-4936-8996-ec50798c590d",
+        "lesson_activity.key": "8daeb373-4028-4b81-a591-56b81b7ded31"
       }
     },
     {
-      "key": "d5e6fcb4-860d-49f3-89f6-d9434f062162",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Looking at your dashboard so far, what's one thing you want users to be able to find easily — and what’s one thing that might still be hard to find?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on how their current dashboard layout supports or challenges visibility and findability. This prepares them to design filters, sorting, and transparency features in ways that help users explore the dataset meaningfully.",
-        "duration": "5",
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "activity_section.key": "d5e6fcb4-860d-49f3-89f6-d9434f062162",
-        "lesson_activity.key": "a913a0b3-89ad-4ca7-b7a1-37fbdbf8d9a9"
-      }
-    },
-    {
-      "key": "2e202eff-2e61-4f5f-aadc-f924a61b1a39",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 3 of the project. Explain that today students will focus on Milestones 2 and 3. Direct students to open their Interactive Data Dashboard Project Guide and locate the Milestone 2 and 3 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Point out that these milestones move from shaping how data is displayed to making that data interactive. Encourage students not to aim for perfection at first — focus on getting one feature or transformation working clearly, and then improve it through testing, debugging, and fairness checks."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "2e202eff-2e61-4f5f-aadc-f924a61b1a39",
-        "lesson_activity.key": "a913a0b3-89ad-4ca7-b7a1-37fbdbf8d9a9"
-      }
-    },
-    {
-      "key": "cfdf5058-e709-4415-91a1-a8c659c75ead",
-      "position": 3,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "cfdf5058-e709-4415-91a1-a8c659c75ead",
-        "lesson_activity.key": "a913a0b3-89ad-4ca7-b7a1-37fbdbf8d9a9"
-      }
-    },
-    {
-      "key": "6d3e0708-c822-4e6a-9219-f99bed35e86e",
+      "key": "3b195e13-f770-4220-9ae0-d22dd4cd6c88",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students pair up or form small groups and TAG one to two peers' projects. They can leave feedback on sticky notes (digital or paper) directly at their peer's workspace or comment within the project guide if using shared docs. Emphasize that this is not a final critique — it's a chance to gather early insights as part of Milestone 3. Encourage students to TAG areas like filter accuracy, sort behavior, active label updates, and Reset/Undo function. This helps them gather early insights before debugging more deeply.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 11, Level 7 to complete the Milestone 2 Reflection. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students write and discuss, listen for reflections that describe how their page layout and card design help (or fail to help) users scan, compare, and find items quickly and clearly. Encourage students to notice whether their labels, headings, and visual structure make the dataset easy to scan, and to capture specific ideas about what they might refine next time.\n",
+        "duration": "5",
+        "name": "Wrap Up",
+        "progression_name": "Milestone 2 Reflection",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students may be at different points when it's time for peer review. Reassure them that work doesn't need to be complete to be reviewed — feedback during the process helps improve the final product.\nReinforce the mindset that design and development are iterative, and peer feedback offers new perspectives and guidance.\n\nIf time allows, invite a few students to share one piece of feedback they received that will guide their next steps."
+            "markdown": "If time permits, invite a few volunteers to share aloud or conduct a quick pair-and-share to close.\n"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "6d3e0708-c822-4e6a-9219-f99bed35e86e",
-        "lesson_activity.key": "a913a0b3-89ad-4ca7-b7a1-37fbdbf8d9a9"
+        "activity_section.key": "3b195e13-f770-4220-9ae0-d22dd4cd6c88",
+        "lesson_activity.key": "8daeb373-4028-4b81-a591-56b81b7ded31"
       }
     },
     {
-      "key": "540bb0ca-1550-41f5-a767-065d0acd2eb9",
+      "key": "2744b3d0-678d-4d1b-914d-5ab89735036e",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Looking at your dashboard so far, what's one thing you want users to be able to find easily — and what’s one thing that might still be hard to find?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on how their current dashboard layout supports or challenges visibility and findability. This prepares them to design filters, sorting, and transparency features in ways that help users explore the dataset meaningfully.\n",
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "2744b3d0-678d-4d1b-914d-5ab89735036e",
+        "lesson_activity.key": "c30e88df-a4f2-422d-b865-d370bd43bd8e"
+      }
+    },
+    {
+      "key": "3765ae3f-497d-4b19-aa0f-76fe521e6dbd",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that today students will focus on Milestones 2 and 3 and read the goal for Milestone 3. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the deliverable to complete for Milestone 3. \n",
+        "duration": "35",
+        "name": "Activity ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Point out that these milestones move from shaping how data is displayed to making that data interactive. Encourage students not to aim for perfection at first — focus on getting one feature or transformation working clearly, and then improve it through testing, debugging, and fairness checks.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3765ae3f-497d-4b19-aa0f-76fe521e6dbd",
+        "lesson_activity.key": "c30e88df-a4f2-422d-b865-d370bd43bd8e"
+      }
+    },
+    {
+      "key": "97c31b02-fcf1-4e39-beb1-bcc1f1e413da",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students pair up or form small groups and TAG one to two peers' projects. They can leave feedback on sticky notes (digital or paper) directly at their peer's workspace. Emphasize that this is not a final critique — it's a chance to gather early insights as part of Milestone 3. Encourage students to TAG areas like filter accuracy, sort behavior, active label updates, and Reset/Undo function. This helps them gather early insights before debugging more deeply.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may be at different points when it's time for peer review. Reassure them that work doesn't need to be complete to be reviewed — feedback during the process helps improve the final product.\n\nReinforce the mindset that design and development are iterative, and peer feedback offers new perspectives and guidance. \n\nIf time allows, invite a few students to share one piece of feedback they received that will guide their next steps.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "97c31b02-fcf1-4e39-beb1-bcc1f1e413da",
+        "lesson_activity.key": "c30e88df-a4f2-422d-b865-d370bd43bd8e"
+      }
+    },
+    {
+      "key": "df9b79ee-5bd1-4d83-8e2f-d5b050fb87d0",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**Direct students to Lesson 11, Level 8 to complete Levels 8 and 9.\n* **Level 8:** Students plan the filter logic with a flowchart showing data flow, combined filters, and Reset/Undo behavior.\n* **Level 9:** Students build filters, sorting, Reset, Undo, active filter display, and result count, then test and debug with AI support.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are moving from planning their logic to building and testing interactive features. Ask check-in questions like:\n* What should happen to the original dataset when a filter is applied?\n* Does your flowchart show how filtered copies move from the dataset to the display?\n* How do your filters combine: does the user need to match all filters or just one?\n* What should Reset restore? What should Undo remove or restore? \n* Where will users see which filters are active and how many results are showing?\n* What test case could break your filter or sort logic?\n\nRemind students to use copy-not-mutate strategies so the original dataset stays unchanged. As students code, look for working filters first, then support them in adding sorting, Reset, Undo, active filter labels, and result counts. Encourage students to test combinations, missing values, and zero-result cases before revising their logic.\n\n",
+        "name": "Milestone 3",
+        "progression_name": "Milestone 3"
+      },
+      "seeding_key": {
+        "activity_section.key": "df9b79ee-5bd1-4d83-8e2f-d5b050fb87d0",
+        "lesson_activity.key": "c30e88df-a4f2-422d-b865-d370bd43bd8e"
+      }
+    },
+    {
+      "key": "47876617-fac6-4288-b106-7faedf5aa14a",
       "position": 5,
       "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "540bb0ca-1550-41f5-a767-065d0acd2eb9",
-        "lesson_activity.key": "a913a0b3-89ad-4ca7-b7a1-37fbdbf8d9a9"
-      }
-    },
-    {
-      "key": "0fca38ed-636d-4a69-b459-8c5437969644",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 3 Reflection section in their project planning guide. Let students know they can continue to add on to this reflection as they continue to make progress on Milestone 3 and conduct more testing.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 11, Level 10 to complete the Milestone 3 Reflection. Let students know they can continue to add on to this reflection as they continue to make progress on Milestone 3 and conduct more testing.\n",
         "duration": "5",
         "name": "Wrap Up",
+        "progression_name": "Milestone 3 Reflection",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If time allows, invite a few students to share how their filter or sort choices influence which items appear first — this helps reinforce fairness and visibility thinking from the rubric. Highlight that catching fairness issues or algorithmic quirks early is a sign of strong computational thinking — developers constantly refine how data is displayed to ensure experiences are both accurate and equitable."
+            "markdown": "If time allows, invite a few students to share how their filter or sort choices influence which items appear first — this helps reinforce fairness and visibility thinking from the rubric. Highlight that catching fairness issues or algorithmic quirks early is a sign of strong computational thinking — developers constantly refine how data is displayed to ensure experiences are both accurate and equitable.\n\n"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "0fca38ed-636d-4a69-b459-8c5437969644",
-        "lesson_activity.key": "a913a0b3-89ad-4ca7-b7a1-37fbdbf8d9a9"
+        "activity_section.key": "47876617-fac6-4288-b106-7faedf5aa14a",
+        "lesson_activity.key": "c30e88df-a4f2-422d-b865-d370bd43bd8e"
       }
     },
     {
-      "key": "989319ca-bd7b-4b25-8a3e-b3cc88a507bb",
+      "key": "065ee914-b671-4d78-a311-df98045eea52",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "065ee914-b671-4d78-a311-df98045eea52",
+        "lesson_activity.key": "c30e88df-a4f2-422d-b865-d370bd43bd8e"
+      }
+    },
+    {
+      "key": "9c0f4138-e302-48a2-8e2c-24c779666f83",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What's one part of your dashboard that you think might break or behave unexpectedly if someone tried an unusual filter or sorting choice? Why that part?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students anticipate potential weaknesses or edge cases in their current filtering and sorting logic, preparing them for systematic debugging and refinement in Milestone 4.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What's one part of your dashboard that you think might break or behave unexpectedly if someone tried an unusual filter or sorting choice? Why that part?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students anticipate potential weaknesses or edge cases in their current filtering and sorting logic, preparing them for systematic debugging and refinement in Milestone 4.\n",
         "duration": "5",
         "name": "Warm Up"
       },
       "seeding_key": {
-        "activity_section.key": "989319ca-bd7b-4b25-8a3e-b3cc88a507bb",
-        "lesson_activity.key": "9a187282-6712-48e3-9ecf-7c7ae655d9dd"
+        "activity_section.key": "9c0f4138-e302-48a2-8e2c-24c779666f83",
+        "lesson_activity.key": "477988df-8aaf-4d6c-9eb3-7166b07cb06d"
       }
     },
     {
-      "key": "9c0bcfe0-6c7f-43d7-a8ff-a07080edbfc9",
+      "key": "2e8ff1d4-7130-4bbb-b77f-c6ea9f3d0032",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 4 of the project. Explain that today students will focus on Milestones 3 and 4. Direct students to open their Interactive Data Dashboard Project Guide and locate the Milestone 3 and 4 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students pair up or form small groups and TAG one to two peers' projects. They can leave feedback on sticky notes (digital or paper) directly at their peer's workspace or comment within the project guide if using shared docs. Emphasize that this is not a final critique — it's a chance to gather early insights as part of Milestone 3. Encourage students to TAG areas like: filter accuracy, sort behavior, active filter labels, Rest/Undo, or fairness issues.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Goals for Day 4 of the project. Explain that today students will focus on Milestones 3 and 4. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the deliverables to complete for Milestone 4. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students pair up or form small groups and TAG one to two peers' projects. They can leave feedback on sticky notes (digital or paper) directly at their peer's workspace or comment within the project guide if using shared docs. Emphasize that this is not a final critique — it's a chance to gather early insights as part of Milestone 3. Encourage students to TAG areas like: filter accuracy, sort behavior, active filter labels, Rest/Undo, or fairness issues. \n",
         "duration": "35",
-        "name": "Activity",
-        "progression_name": "Milestone Three",
+        "name": "Activity ",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students may be at different points when it's time for peer review. Reassure them that work doesn't need to be complete to be reviewed — feedback during the process helps improve the final product.\nReinforce the mindset that design and development are iterative, and peer feedback offers new perspectives and guidance.\n\nIf time allows, invite a few students to share one piece of feedback they received that will guide their next steps."
+            "markdown": "Students may be at different points when it's time for peer review. Reassure them that work doesn't need to be complete to be reviewed — feedback during the process helps improve the final product.\n\nReinforce the mindset that design and development are iterative, and peer feedback offers new perspectives and guidance.\n\nIf time allows, invite a few students to share one piece of feedback they received that will guide their next steps.\n"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "9c0bcfe0-6c7f-43d7-a8ff-a07080edbfc9",
-        "lesson_activity.key": "9a187282-6712-48e3-9ecf-7c7ae655d9dd"
+        "activity_section.key": "2e8ff1d4-7130-4bbb-b77f-c6ea9f3d0032",
+        "lesson_activity.key": "477988df-8aaf-4d6c-9eb3-7166b07cb06d"
       }
     },
     {
-      "key": "595ad2c9-7e77-4234-8cc1-82b02a715218",
+      "key": "060bff29-f5d0-490a-9d15-f4a26bbfbf6d",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**Direct students to complete Lesson 11, Level 11 in order to identify edge cases, fix at least two issues, and polish their dashboard for clarity, fairness, and transparency.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are testing their app as a whole, not just fixing isolated pieces. Ask check-in questions like:\n* What edge case did AI help you find?\n* What happens if a value is missing?\n* What message appears when no results match?\n* Do any filter combinations feel confusing or misleading?\n* Are your labels, thresholds, and result counts clear to users?\n* Do Reset, Undo, filters, sorting, labels, and result count all work together?\n* Where did you add comments to explain your code?\n\nRemind students to fix at least two issues using conditional logic, then make final improvements to layout, labels, comments, fairness, and transparency. Encourage them to test the full user flow one last time before moving on.\n",
+        "progression_name": "Milestone 4"
       },
       "seeding_key": {
-        "activity_section.key": "595ad2c9-7e77-4234-8cc1-82b02a715218",
-        "lesson_activity.key": "9a187282-6712-48e3-9ecf-7c7ae655d9dd"
+        "activity_section.key": "060bff29-f5d0-490a-9d15-f4a26bbfbf6d",
+        "lesson_activity.key": "477988df-8aaf-4d6c-9eb3-7166b07cb06d"
       }
     },
     {
-      "key": "989c5b1e-1cc3-4cc1-9e64-745c3f610bf1",
+      "key": "fec2358c-b174-4bb6-be9d-bf0ca90be9f6",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to revisit the Milestone 3 Reflection section in their project planning guide and add on to what they wrote the previous class period. They should update their Fixes + Features List, record any new debugging insights, and reflect on how their filter and sort choices influence which items users see first.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students back to Lesson 11, Level 10 to revisit the Milestone 3 Reflection and add on to what they wrote the previous class period. \n",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
@@ -3263,163 +3189,122 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "989c5b1e-1cc3-4cc1-9e64-745c3f610bf1",
-        "lesson_activity.key": "9a187282-6712-48e3-9ecf-7c7ae655d9dd"
+        "activity_section.key": "fec2358c-b174-4bb6-be9d-bf0ca90be9f6",
+        "lesson_activity.key": "477988df-8aaf-4d6c-9eb3-7166b07cb06d"
       }
     },
     {
-      "key": "063ecf9e-3edc-47d6-a364-669ca5942a41",
+      "key": "d228b7b0-9c65-456c-83c3-35f62e414050",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What's one edge case, label, or detail you want to check today to make sure your dashboard is clear, fair, and ready to share?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify final improvement opportunities tied to clarity, transparency, fairness, or reliability, setting a concrete intention for their last work session.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What's one edge case, label, or detail you want to check today to make sure your dashboard is clear, fair, and ready to share?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify final improvement opportunities tied to clarity, transparency, fairness, or reliability, setting a concrete intention for their last work session.\n",
         "duration": "5",
         "name": "Warm Up"
       },
       "seeding_key": {
-        "activity_section.key": "063ecf9e-3edc-47d6-a364-669ca5942a41",
-        "lesson_activity.key": "56dbdfab-b1bb-4d13-a980-e77b55c8383e"
+        "activity_section.key": "d228b7b0-9c65-456c-83c3-35f62e414050",
+        "lesson_activity.key": "082613f8-13c5-4c65-a9f1-0f1d4d63e4a5"
       }
     },
     {
-      "key": "319f7ed9-6b6c-46a7-bd3b-39c1666470e1",
+      "key": "7ee07a9c-8ea3-4c05-bd26-e79912066e92",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 5 of the project. Explain that today is focused on Milestone 4: Handle Edge Cases & Finalize Your Dashboard, where students test their dashboard with tricky cases, polish their UI and logic, refine for clarity and inclusivity, and make it ready for showcasing. Remind students to check their Interactive Data Dashboard Project Guide for the Milestone 4 deliverables.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 5 of the project. Explain that today is focused on Milestone 4: Handle Edge Cases & Finalize Your Dashboard, where students test their dashboard with tricky cases, polish their UI and logic, refine for clarity and inclusivity, and make it ready for showcasing. \n",
         "duration": "30",
-        "name": "Activity",
+        "name": "Activity ",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Clarify that students should test unusual filter combinations, missing values, empty result states, and sorting after filtering. These edge cases help ensure the dashboard behaves predictably, transparently, and fairly. Encourage students to check that transparency elements — such as “Showing X results” and active filter labels — always match the state of the data. Remind students that even small adjustments to labels, spacing, or ordering can make a big difference for user clarity."
+            "markdown": "Clarify that students should test unusual filter combinations, missing values, empty result states, and sorting after filtering. These edge cases help ensure the dashboard behaves predictably, transparently, and fairly. Encourage students to check that transparency elements — such as “Showing X results” and active filter labels — always match the state of the data. Remind students that even small adjustments to labels, spacing, or ordering can make a big difference for user clarity.\n"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "319f7ed9-6b6c-46a7-bd3b-39c1666470e1",
-        "lesson_activity.key": "56dbdfab-b1bb-4d13-a980-e77b55c8383e"
+        "activity_section.key": "7ee07a9c-8ea3-4c05-bd26-e79912066e92",
+        "lesson_activity.key": "082613f8-13c5-4c65-a9f1-0f1d4d63e4a5"
       }
     },
     {
-      "key": "743232ef-a6cd-4f0f-8542-bc6d1fbf823d",
+      "key": "5f5cfadb-6688-465e-985d-52e79ba54256",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the final deliverables for Milestone 4. \n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to the last two pages of their Interactive Data Dashboard Project Guide, where the project rubric is located. Have students review each category carefully and mark where they believe their project currently falls. Encourage honesty — the goal is to identify strengths and areas for continued growth as intentional designers.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are engaging thoughtfully with each rubric criterion, not rushing to completion. Encourage students to examine the Ethical Reasoning: Transparency & Fairness row carefully — this project’s dashboard focuses heavily on ensuring filters do not unintentionally hide important items or groups. Under Algorithmic Features, remind students to check whether their Reset/Undo is reliable and whether active filter counts update correctly.\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students that self-assessment isn't just about scoring their project — it's a professional habit that helps them take ownership of their design choices. Say something like: \"Designers constantly evaluate their own work to make sure it aligns with their goals, audience, and purpose. This rubric helps you see where you've grown and what you can still refine.\"\n\nIf time allows, have students highlight one category they feel especially proud of and one they'd like to improve next time.\n"
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "743232ef-a6cd-4f0f-8542-bc6d1fbf823d",
-        "lesson_activity.key": "56dbdfab-b1bb-4d13-a980-e77b55c8383e"
+        "activity_section.key": "5f5cfadb-6688-465e-985d-52e79ba54256",
+        "lesson_activity.key": "082613f8-13c5-4c65-a9f1-0f1d4d63e4a5"
       }
     },
     {
-      "key": "b0bfc610-50ed-4a97-86f5-0e231ec414c1",
+      "key": "a44b5f7c-43ea-47b1-9a18-a1fb794ec53a",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to the last two pages of their Interactive Data Dashboard Project Guide, where the project rubric is located. Have students review each category carefully and mark where they believe their project currently falls. Encourage honesty — the goal is to identify strengths and areas for continued growth as intentional designers.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are engaging thoughtfully with each rubric criterion, not rushing to completion. Encourage students to examine the Ethical Reasoning: Transparency & Fairness row carefully — this project’s dashboard focuses heavily on ensuring filters do not unintentionally hide important items or groups. Under Algorithmic Features, remind students to check whether their Reset/Undo is reliable and whether active filter counts update correctly.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students back to Level 11 to finish developing their Interactive Data Dashboard Projects. Explain that this is their final dedicated work session for Milestone 4: Handle Edge Cases & Finalize Your Dashboard. Reinforce that today's goal is to prioritize improvements based on their self-assessment and TAG peer feedback, rather than trying to fix everything at once. Instruct students to use the feedback they received from their TAG review and self-assessment to finalize their Interactive Data Dashboard Project. Have students submit their projects at the end of the allotted time.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task. Remind students to comment their code with meaningful descriptions. Have students review their rubric and prioritize work on any rows where they do not yet show extensive evidence. \n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Remind students that self-assessment isn't just about scoring their project — it's a professional habit that helps them take ownership of their design choices. Say something like: \"Designers constantly evaluate their own work to make sure it aligns with their goals, audience, and purpose. This rubric helps you see where you've grown and what you can still refine.\"\n\nIf time allows, have students highlight one category they feel especially proud of and one they'd like to improve next time."
+            "markdown": "Remind students that professional designers always prioritize fixes before a release. Say something like: \"You don't need to fix everything today — focus on what will have the biggest impact for your user. Iteration is about making smart choices with the time you have.\" If time allows at the end, invite students to do a brief pair preview, where they open a peer's site and give one final piece of positive or constructive feedback.\n"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "b0bfc610-50ed-4a97-86f5-0e231ec414c1",
-        "lesson_activity.key": "56dbdfab-b1bb-4d13-a980-e77b55c8383e"
+        "activity_section.key": "a44b5f7c-43ea-47b1-9a18-a1fb794ec53a",
+        "lesson_activity.key": "082613f8-13c5-4c65-a9f1-0f1d4d63e4a5"
       }
     },
     {
-      "key": "e885ba70-454c-45d2-942f-2457d243ee59",
+      "key": "43ffe138-aefe-4ea2-bf7b-3c4d2524a4f5",
       "position": 5,
       "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Distribute several sticky notes to each student for the gallery walk.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students begin the Gallery Walk by displaying their Interactive Data Dashboard Apps on their computers, then moving around the room to explore classmates' projects. As they visit each one, students should use their sticky notes to leave feedback, kudos, or questions following the TAG approach (Tell, Ask, Give). Encourage them to engage with a range of projects—not just those of close friends.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Move around the room to observe how students are engaging with the displayed projects. Encourage feedback on clarity, fairness, and transparency. For example:\n* Is it clear what filters are active?\n* Are any items consistently hidden or hard to surface?\n* Does Reset/Undo behave predictably?\n* Is the dataset easy to scan visually?\n* Do labels accurately reflect the data shown?\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Frame the Gallery Walk as a celebration of learning and creativity, not a critique. Say something like: \"This is your chance to see how everyone's ideas came to life in different ways. You might even get inspired by someone else's approach!\" \n"
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "e885ba70-454c-45d2-942f-2457d243ee59",
-        "lesson_activity.key": "56dbdfab-b1bb-4d13-a980-e77b55c8383e"
+        "activity_section.key": "43ffe138-aefe-4ea2-bf7b-3c4d2524a4f5",
+        "lesson_activity.key": "082613f8-13c5-4c65-a9f1-0f1d4d63e4a5"
       }
     },
     {
-      "key": "b7321b04-1dff-4852-bf32-3f8d7528c947",
+      "key": "7922fea9-fe56-495a-89ca-c36a5d43a99a",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4 to finish developing their Interactive Data Dashboard Projects. Explain that this is their final dedicated work session for Milestone 4: Handle Edge Cases & Finalize Your Dashboard. Reinforce that today's goal is to prioritize improvements based on their self-assessment and TAG peer feedback, rather than trying to fix everything at once. Instruct students to use the feedback they received from their TAG review and self-assessment to finalize their Interactive Data Dashboard Project. Have students submit their projects at the end of the allotted time.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task. Remind students to comment their code with meaningful descriptions. Have students review their rubric and prioritize work on any rows where they do not yet show extensive evidence. Check that students are recording changes in their Milestone 4 Evidence + Iteration Log. Their documentation should show how they tested edge cases, revised filters/labels/thresholds, refined UI clarity, and used AI in their debugging.",
-        "progression_name": "Milestone Four",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Remind students that professional designers always prioritize fixes before a release. Say something like: \"You don't need to fix everything today — focus on what will have the biggest impact for your user. Iteration is about making smart choices with the time you have.\"\n\nIf time allows at the end, invite students to do a brief pair preview, where they open a peer's site and give one final piece of positive or constructive feedback."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "b7321b04-1dff-4852-bf32-3f8d7528c947",
-        "lesson_activity.key": "56dbdfab-b1bb-4d13-a980-e77b55c8383e"
-      }
-    },
-    {
-      "key": "bb255f45-5a18-4d25-b0ae-beecbe860c7c",
-      "position": 7,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "bb255f45-5a18-4d25-b0ae-beecbe860c7c",
-        "lesson_activity.key": "56dbdfab-b1bb-4d13-a980-e77b55c8383e"
-      }
-    },
-    {
-      "key": "95e08a65-f379-416e-a554-2baaa72e37b7",
-      "position": 8,
-      "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Distribute several sticky notes to each student for the gallery walk.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students begin the Gallery Walk by displaying their Interactive Data Dashboard Apps on their computers, then moving around the room to explore classmates' projects. As they visit each one, students should use their sticky notes to leave feedback, kudos, or questions following the TAG approach (Tell, Ask, Give). Encourage them to engage with a range of projects—not just those of close friends.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Move around the room to observe how students are engaging with the displayed projects. Encourage feedback on clarity, fairness, and transparency. For example:\n- Is it clear what filters are active?\n- Are any items consistently hidden or hard to surface?\n- Does Reset/Undo behave predictably?\n- Is the dataset easy to scan visually?\n- Do labels accurately reflect the data shown?",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Frame the Gallery Walk as a celebration of learning and creativity, not a critique. Say something like: \"This is your chance to see how everyone's ideas came to life in different ways. You might even get inspired by someone else's approach!\""
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "95e08a65-f379-416e-a554-2baaa72e37b7",
-        "lesson_activity.key": "56dbdfab-b1bb-4d13-a980-e77b55c8383e"
-      }
-    },
-    {
-      "key": "753a7c7a-55cd-4b32-8efa-810c6e045d5b",
-      "position": 9,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "753a7c7a-55cd-4b32-8efa-810c6e045d5b",
-        "lesson_activity.key": "56dbdfab-b1bb-4d13-a980-e77b55c8383e"
-      }
-    },
-    {
-      "key": "2378c9b1-b21b-448c-af67-4fe097d66a87",
-      "position": 10,
-      "properties": {
-        "description": "You've gone from choosing a dataset and defining a schema to building, testing, and refining your Interactive Data Dashboard. This final reflection is a chance to capture how your dashboard evolved — how your filtering and sorting logic improved, how you handled edge cases, and how your design supports fairness, clarity, and user control. It also gives you space to reflect on how you used AI throughout the project, including when it helped you think through logic, debug issues, or refine your code.",
+        "description": "You've gone from choosing a dataset and defining a schema to building, testing, and refining your Interactive Data Dashboard. This final reflection is a chance to capture how your dashboard evolved, how your filters, labels, and Reset/Undo choices support fairness and user control, and how AI supported your planning, coding, or debugging.",
         "duration": "10",
         "name": "Wrap Up",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "2378c9b1-b21b-448c-af67-4fe097d66a87",
-        "lesson_activity.key": "56dbdfab-b1bb-4d13-a980-e77b55c8383e"
+        "activity_section.key": "7922fea9-fe56-495a-89ca-c36a5d43a99a",
+        "lesson_activity.key": "082613f8-13c5-4c65-a9f1-0f1d4d63e4a5"
       }
     },
     {
-      "key": "1063dba9-7014-445c-b4bb-f4e10ba89dce",
-      "position": 11,
+      "key": "96341c57-6e3a-4f05-96c2-e668bef6e7f4",
+      "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Final Reflection and Final Self-Check sections in their Interactive Data Dashboard Project Guide. Explain that this final step helps them consolidate what they learned about: designing clear, user-friendly dashboards, making filtering and sorting transparent and fair, handling edge cases and improving reliability, and using AI intentionally and evaluating its impact. Emphasize that their answers should include specific examples from their own dashboards.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students write, encourage them to reference concrete moments from their project:\n- an edge case that revealed a bug\n- a filter or sorting choice they revised for fairness or clarity\n- how transparency cues (“Showing X results,” active filter labels) improved user control\n- how they evaluated, modified, or rejected AI suggestions\n\nProbe with questions like:\n- “What changed in your dashboard between Milestone 1 and Milestone 4?”\n- “How did your Reset/Undo or active filter labels improve over time?”\n- “How did AI help you understand or debug your logic?”\n\nIf students finish early, prompt them to help a peer reflect or revisit the rubric one more time.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 11, Level 12 to complete the Final Reflection in their Interactive Data Dashboard Project. Explain that this final step helps them consolidate what they learned about designing clear dashboards, making filtering choices fair and transparent, supporting user control, and using AI intentionally. Emphasize that their answers should include specific examples from their own dashboards.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students write, encourage them to reference concrete moments from their project:\n* a design or code decision that changed from the original plan\n* a filter, label, or Reset/Undo choice that improved fairness, visibility, or user control\n* how they evaluated, modified, or rejected AI suggestions\n\nProbe with questions like:\n* What changed in your dashboard between your first plan and your final version?\n* How do your filters, labels, or Reset/Undo choices help users understand and control what they see?\n* How did AI help with planning, coding, or debugging?\n\nIf students finish early, prompt them to revisit the rubric or add more specific examples from their dashboard.\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "- You can use the Interactive Data Dashboard Planning Guide, Milestone evidence, and Final Reflection as assessment for the Process, Iteration, and Code/UI Quality rubric row.\n- The Final Reflection also provides evidence for Ethical Reasoning: Transparency & Fairness, since students explain how their filtering and sorting choices affected visibility and user control.\n- Code excerpts and screenshots from Milestones 2–4 can serve as evidence for Schema & Dataset Design, Dynamic Rendering with Loops, and Algorithmic Features, depending on what students choose to showcase and annotate."
+            "markdown": "You can use the Final Reflection as assessment evidence for Process, Iteration, and Code/UI Quality.\n\nThe Final Reflection also provides evidence for Ethical Reasoning: Transparency & Fairness, since students explain how their filters, labels, and Reset/Undo choices affect visibility and user control.\nCode excerpts and screenshots from Milestones 2–4 can serve as evidence for Schema & Dataset Design, Dynamic Rendering with Loops, and Algorithmic Features, depending on what students choose to showcase and annotate.\n"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "1063dba9-7014-445c-b4bb-f4e10ba89dce",
-        "lesson_activity.key": "56dbdfab-b1bb-4d13-a980-e77b55c8383e"
+        "activity_section.key": "96341c57-6e3a-4f05-96c2-e668bef6e7f4",
+        "lesson_activity.key": "082613f8-13c5-4c65-a9f1-0f1d4d63e4a5"
       }
     },
     {
@@ -4321,6 +4206,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Milestone 1"
       },
       "bonus": false,
       "seeding_key": {
@@ -4342,6 +4228,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Milestone 1"
       },
       "bonus": false,
       "seeding_key": {
@@ -4363,6 +4250,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Milestone 1"
       },
       "bonus": false,
       "seeding_key": {
@@ -4381,9 +4269,10 @@
     {
       "chapter": 44,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Milestone 1 Reflection"
       },
       "bonus": false,
       "seeding_key": {
@@ -4393,7 +4282,7 @@
         "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "0c4d09b4-1ba2-44a3-8e6a-02d4b00c6ff8"
+        "activity_section.key": "0e1746ca-cf46-4ea8-a05f-109a564d6170"
       },
       "level_keys": [
         "iterating-with-ai-lesson11-level4-2026"
@@ -4405,6 +4294,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Milestone 2"
       },
       "bonus": false,
       "seeding_key": {
@@ -4414,7 +4304,7 @@
         "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "53576f6e-eacc-4928-b119-ad277db86437"
+        "activity_section.key": "d0768ab9-b6b5-4936-8996-ec50798c590d"
       },
       "level_keys": [
         "iterating-with-ai-lesson11-level5-2026"
@@ -4426,6 +4316,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Milestone 2"
       },
       "bonus": false,
       "seeding_key": {
@@ -4435,7 +4326,7 @@
         "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "53576f6e-eacc-4928-b119-ad277db86437"
+        "activity_section.key": "d0768ab9-b6b5-4936-8996-ec50798c590d"
       },
       "level_keys": [
         "iterating-with-ai-lesson11-level6-2026"
@@ -4444,9 +4335,10 @@
     {
       "chapter": 47,
       "position": 7,
-      "activity_section_position": 3,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Milestone 2 Reflection"
       },
       "bonus": false,
       "seeding_key": {
@@ -4456,7 +4348,7 @@
         "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "53576f6e-eacc-4928-b119-ad277db86437"
+        "activity_section.key": "3b195e13-f770-4220-9ae0-d22dd4cd6c88"
       },
       "level_keys": [
         "iterating-with-ai-lesson11-level7-2026"
@@ -4468,6 +4360,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Milestone 3"
       },
       "bonus": false,
       "seeding_key": {
@@ -4477,7 +4370,7 @@
         "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "d70d4f92-94c0-4a6f-852a-50828c660c5a"
+        "activity_section.key": "df9b79ee-5bd1-4d83-8e2f-d5b050fb87d0"
       },
       "level_keys": [
         "iterating-with-ai-lesson11-level8-2026"
@@ -4489,6 +4382,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Milestone 3"
       },
       "bonus": false,
       "seeding_key": {
@@ -4498,7 +4392,7 @@
         "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "d70d4f92-94c0-4a6f-852a-50828c660c5a"
+        "activity_section.key": "df9b79ee-5bd1-4d83-8e2f-d5b050fb87d0"
       },
       "level_keys": [
         "iterating-with-ai-lesson11-level9-2026"
@@ -4507,9 +4401,10 @@
     {
       "chapter": 50,
       "position": 10,
-      "activity_section_position": 3,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Milestone 3 Reflection"
       },
       "bonus": false,
       "seeding_key": {
@@ -4519,7 +4414,7 @@
         "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "d70d4f92-94c0-4a6f-852a-50828c660c5a"
+        "activity_section.key": "47876617-fac6-4288-b106-7faedf5aa14a"
       },
       "level_keys": [
         "iterating-with-ai-lesson11-level10-2026"
@@ -4531,6 +4426,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Milestone 4"
       },
       "bonus": false,
       "seeding_key": {
@@ -4540,7 +4436,7 @@
         "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "3461d023-fb66-47fe-863e-fac802dd15a7"
+        "activity_section.key": "060bff29-f5d0-490a-9d15-f4a26bbfbf6d"
       },
       "level_keys": [
         "iterating-with-ai-lesson11-level11-2026"
@@ -4552,6 +4448,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Milestone 4"
       },
       "bonus": false,
       "seeding_key": {
@@ -4561,7 +4458,7 @@
         "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "3461d023-fb66-47fe-863e-fac802dd15a7"
+        "activity_section.key": "060bff29-f5d0-490a-9d15-f4a26bbfbf6d"
       },
       "level_keys": [
         "iterating-with-ai-lesson11-level12-2026"
@@ -4569,94 +4466,6 @@
     },
     {
       "chapter": 53,
-      "position": 13,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Milestone One"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "iterating-with-ai-lesson11-level1-hub-test_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "9dba6e21-bf4d-4b26-9ec1-51ad448bcb54"
-      },
-      "level_keys": [
-        "iterating-with-ai-lesson11-level1-hub-test_2025-pilot_2026"
-      ]
-    },
-    {
-      "chapter": 54,
-      "position": 14,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Milestone Two"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "iterating-with-ai-lesson11-level2-hub-test_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "e1ebf528-70a5-4384-9ce7-cd9c5fa22674"
-      },
-      "level_keys": [
-        "iterating-with-ai-lesson11-level2-hub-test_2025-pilot_2026"
-      ]
-    },
-    {
-      "chapter": 55,
-      "position": 15,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Milestone Three"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "iterating-with-ai-lesson11-level3-hub-test_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "9c0bcfe0-6c7f-43d7-a8ff-a07080edbfc9"
-      },
-      "level_keys": [
-        "iterating-with-ai-lesson11-level3-hub-test_2025-pilot_2026"
-      ]
-    },
-    {
-      "chapter": 56,
-      "position": 16,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Milestone Four"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "iterating-with-ai-lesson11-level4-hub-test_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "b7321b04-1dff-4852-bf32-3f8d7528c947"
-      },
-      "level_keys": [
-        "iterating-with-ai-lesson11-level4-hub-test_2025-pilot_2026"
-      ]
-    },
-    {
-      "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5204,7 +5013,7 @@
         "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "0c4d09b4-1ba2-44a3-8e6a-02d4b00c6ff8"
+        "activity_section.key": "0e1746ca-cf46-4ea8-a05f-109a564d6170"
       }
     },
     {
@@ -5216,7 +5025,7 @@
         "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "53576f6e-eacc-4928-b119-ad277db86437"
+        "activity_section.key": "d0768ab9-b6b5-4936-8996-ec50798c590d"
       }
     },
     {
@@ -5228,7 +5037,7 @@
         "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "53576f6e-eacc-4928-b119-ad277db86437"
+        "activity_section.key": "d0768ab9-b6b5-4936-8996-ec50798c590d"
       }
     },
     {
@@ -5240,7 +5049,7 @@
         "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "53576f6e-eacc-4928-b119-ad277db86437"
+        "activity_section.key": "3b195e13-f770-4220-9ae0-d22dd4cd6c88"
       }
     },
     {
@@ -5252,7 +5061,7 @@
         "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "d70d4f92-94c0-4a6f-852a-50828c660c5a"
+        "activity_section.key": "df9b79ee-5bd1-4d83-8e2f-d5b050fb87d0"
       }
     },
     {
@@ -5264,7 +5073,7 @@
         "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "d70d4f92-94c0-4a6f-852a-50828c660c5a"
+        "activity_section.key": "df9b79ee-5bd1-4d83-8e2f-d5b050fb87d0"
       }
     },
     {
@@ -5276,7 +5085,7 @@
         "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "d70d4f92-94c0-4a6f-852a-50828c660c5a"
+        "activity_section.key": "47876617-fac6-4288-b106-7faedf5aa14a"
       }
     },
     {
@@ -5288,7 +5097,7 @@
         "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "3461d023-fb66-47fe-863e-fac802dd15a7"
+        "activity_section.key": "060bff29-f5d0-490a-9d15-f4a26bbfbf6d"
       }
     },
     {
@@ -5300,55 +5109,7 @@
         "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "3461d023-fb66-47fe-863e-fac802dd15a7"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "iterating-with-ai-lesson11-level1-hub-test_2025-pilot_2026",
-        "script_level.level_keys": [
-          "iterating-with-ai-lesson11-level1-hub-test_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "9dba6e21-bf4d-4b26-9ec1-51ad448bcb54"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "iterating-with-ai-lesson11-level2-hub-test_2025-pilot_2026",
-        "script_level.level_keys": [
-          "iterating-with-ai-lesson11-level2-hub-test_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "e1ebf528-70a5-4384-9ce7-cd9c5fa22674"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "iterating-with-ai-lesson11-level3-hub-test_2025-pilot_2026",
-        "script_level.level_keys": [
-          "iterating-with-ai-lesson11-level3-hub-test_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "9c0bcfe0-6c7f-43d7-a8ff-a07080edbfc9"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "iterating-with-ai-lesson11-level4-hub-test_2025-pilot_2026",
-        "script_level.level_keys": [
-          "iterating-with-ai-lesson11-level4-hub-test_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "iterating-with-ai-2026",
-        "activity_section.key": "b7321b04-1dff-4852-bf32-3f8d7528c947"
+        "activity_section.key": "060bff29-f5d0-490a-9d15-f4a26bbfbf6d"
       }
     },
     {
@@ -5566,7 +5327,7 @@
     },
     {
       "name": "Interactive Data Dashboard Project",
-      "url": "https://docs.google.com/presentation/d/1V6gB_eAS4CQbqX0dXCVPoHYAnRKMKPTXbkra2ScdSQg/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/18EqKfatyyAeOr-PgBUQUU4NBYLiS1pchElEI4zoyjS4/edit?slide=id.gca418c6afa_0_1070#slide=id.gca418c6afa_0_1070",
       "key": "interactive_data_dashboard_project",
       "properties": {
         "audience": "Teacher",
@@ -5578,18 +5339,18 @@
       }
     },
     {
-      "name": "Interactive Data Dashboard Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1IOGBYoJtzXUKfTlI40ykVgdjkxzDR_WIVHosEpUZIyc/edit?usp=sharing",
-      "key": "interactive_data_dashboard_project_planning_guide",
+      "name": "Interactive Data Dashboard Project Rubric",
+      "url": "https://docs.google.com/document/d/1SVASoUtYlRSDTCO93q9hKC6pmn5I6Rz0UDmAi7e6DHk/edit?usp=drive_link",
+      "key": "interactive_data_dashboard_project_rubric",
       "properties": {
         "audience": "Student",
         "curriculum_category": "curriculum",
         "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
-        "type": "Activity Guide"
+        "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "interactive_data_dashboard_project_planning_guide"
+        "resource.key": "interactive_data_dashboard_project_rubric"
       }
     },
     {
@@ -5707,7 +5468,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 11: Interactive Data Dashboard Project",
-        "resource.key": "interactive_data_dashboard_project_planning_guide"
+        "resource.key": "interactive_data_dashboard_project_rubric"
       }
     },
     {

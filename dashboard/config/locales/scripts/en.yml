@@ -15374,15 +15374,15 @@ en:
           description: |-
             ## Welcome!
 
-            #### This **internal guide** is written and maintained by the Code.org Professional Learning team. It was created to unify the look and feel of our professional learning offerings and ensure we publish accessible content.
+            This **internal guide** is written and maintained by the Code.org Professional Learning team. It was created to unify the look and feel of our professional learning offerings and ensure we publish accessible content.
 
-            #### This guide houses norms, best practices, and examples for creating self-paced, asynchronous learning experiences. Please do not revise this script without permission from the team, but feel free to look at the code for individual levels for inspiration and guidance.
+            This guide houses norms, best practices, and examples for creating self-paced, asynchronous learning experiences. Please do not revise this script without permission from the team, but feel free to look at the code for individual levels for inspiration and guidance.
           student_description: |-
             ## Welcome!
 
-            #### This **internal** guide is written and maintained by the Code.org Professional Learning team. It was created to unify the look and feel of our professional learning offerings and ensure we publish accessible content.
+            This **internal guide** is written and maintained by the Code.org Professional Learning team. It was created to unify the look and feel of our professional learning offerings and ensure we publish accessible content.
 
-            #### This guide houses norms, best practices, and examples for creating a self-paced, asynchronous learning experience. **Please do not revise this script without permission from the team**, but please feel free to look at the code for individual levels for inspiration and guidance.
+            This guide houses norms, best practices, and examples for creating self-paced, asynchronous learning experiences. Please do not revise this script without permission from the team, but feel free to look at the code for individual levels for inspiration and guidance.
         self-paced-pl-microbit-2024-1:
           lessons:
             lesson-1:
