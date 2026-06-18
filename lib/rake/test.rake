@@ -192,6 +192,8 @@ namespace :test do
     ) do |target|
       Rake::Task["test:#{target}"].invoke
     end
+  ensure
+    # dispatch even if a suite raised; the GHA run isn't gated on the daemon suites.
     Rake::Task['test:dispatch_gha_dtt'].invoke if CDO.test_system?
   end
 
