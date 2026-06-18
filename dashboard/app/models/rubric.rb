@@ -11,8 +11,8 @@
 #
 # Indexes
 #
-#  index_rubrics_on_lesson_id                (lesson_id) UNIQUE
-#  index_rubrics_on_lesson_id_and_level_id   (lesson_id,level_id) UNIQUE
+#  index_rubrics_on_lesson_id               (lesson_id) UNIQUE
+#  index_rubrics_on_lesson_id_and_level_id  (lesson_id,level_id) UNIQUE
 #
 class Rubric < ApplicationRecord
   export_to_analytics
