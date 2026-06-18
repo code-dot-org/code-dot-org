@@ -1,5 +1,12 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import React, {FC, useCallback, useEffect, useMemo, useState} from 'react';
+import React, {
+  FC,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 
 import {postAichatCompletionMessage} from '@cdo/apps/aichat/aichatApi';
 import {
@@ -10,10 +17,14 @@ import {
 import WaitingAnimation from '@cdo/apps/aichat/views/WaitingAnimation';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 import {
   AiChatClientTypes,
   AiInteractionStatus as Status,
+  LessonObjectiveReflectionValues,
+  PracticeProblemDeliveryContext,
+  PracticeProblemTypes,
 } from '@cdo/generated-scripts/sharedConstants';
 import matchJSON from '@cdo/static/tutor/match_example.json';
 import multiSingleJson from '@cdo/static/tutor/multiple_choice_example.json';
@@ -27,8 +38,10 @@ import {
   MatchSolution,
   MultiSolution,
   PracticeProblem,
+  practiceProblemValidator,
   ReflectionData,
   ScrambleSolution,
+  userPracticeProblemAttemptValidator,
 } from '../types';
 
 import Match from './QuestionTypes/Match';
@@ -73,9 +86,18 @@ const SkillsCheck: FC<SkillsCheckProps> = ({
   >(null);
   const [feedback, setFeedback] = useState<string | null>(null);
   const [feedbackLoading, setFeedbackLoading] = useState(false);
+  const [practiceProblems, setPracticeProblems] = useState(PROBLEMS);
+  const [problemAttemptId, setProblemAttemptId] = useState(0);
+  const [problemFetchLoading, setProblemFetchLoading] = useState(true);
 
-  const currentProblem = PROBLEMS[currentIndex];
-  const isLast = currentIndex === PROBLEMS.length - 1;
+  const currentProblem = useMemo(
+    () => practiceProblems[currentIndex],
+    [practiceProblems, currentIndex]
+  );
+  const isLast = useMemo(
+    () => currentIndex === practiceProblems.length - 1,
+    [practiceProblems, currentIndex]
+  );
 
   const goToNext = useCallback(() => {
     setCurrentIndex(i => i + 1);
@@ -84,6 +106,7 @@ const SkillsCheck: FC<SkillsCheckProps> = ({
     setIsCorrect(false);
     setFeedback(null);
     setFeedbackLoading(false);
+    setProblemAttemptId(0);
   }, []);
 
   const getSystemPrompt = useCallback(() => {
@@ -143,6 +166,44 @@ const SkillsCheck: FC<SkillsCheckProps> = ({
     [isCorrect, currentProblem, studentAnswer]
   );
 
+  const createPracticeProblemAttempt = useCallback(() => {
+    if (currentProblem.id < 1) {
+      return;
+    }
+    const body = JSON.stringify({
+      practice_problem_id: currentProblem.id,
+      correct: isCorrect,
+      delivery_context_type:
+        PracticeProblemDeliveryContext.AI_TUTOR_LESSON_DEEP_DIVE,
+      attempt: {solution: studentAnswer},
+      delivery_context_metadata: {lesson_id: lessonId},
+    });
+    HttpClient.post(`/user_practice_problem_attempts/`, body, true, {
+      'Content-Type': 'application/json',
+    })
+      .then(response => response.json())
+      .then(json => {
+        setProblemAttemptId(json.id);
+      })
+      .catch(error => console.log(error));
+  }, [currentProblem, isCorrect, lessonId, studentAnswer]);
+
+  const updateAttemptFeedback = useCallback(() => {
+    if (feedback && problemAttemptId < 1) {
+      const body = JSON.stringify({
+        ai_feedback: feedback,
+      });
+      HttpClient.put(
+        `/user_practice_problem_attempts/${problemAttemptId}`,
+        body,
+        true,
+        {
+          'Content-Type': 'application/json',
+        }
+      ).catch(error => console.log(error));
+    }
+  }, [feedback, problemAttemptId]);
+
   const getAIFeedback = useCallback(async () => {
     if (!modelParameters || loading) return;
     const msg: PendingChatMessage & {updateId: string} = {
@@ -166,16 +227,83 @@ const SkillsCheck: FC<SkillsCheckProps> = ({
       console.log(error);
     }
     setFeedbackLoading(false);
-  }, [modelParameters, loading, aichatContext, createUserMessage]);
+  }, [modelParameters, loading, createUserMessage, aichatContext]);
+
+  const createPracticeProblemAttemptRef = useRef(createPracticeProblemAttempt);
+  createPracticeProblemAttemptRef.current = createPracticeProblemAttempt;
+  const getAIFeedbackRef = useRef(getAIFeedback);
+  getAIFeedbackRef.current = getAIFeedback;
 
   useEffect(() => {
     if (studentAnswer !== null) {
-      getAIFeedback();
+      createPracticeProblemAttemptRef.current();
+      getAIFeedbackRef.current();
     }
-  }, [studentAnswer, getAIFeedback]);
+  }, [studentAnswer]);
+
+  const objectiveIds = useMemo(() => {
+    if (
+      !reflectionData ||
+      Object.keys(reflectionData.objectiveReflections).length === 0
+    ) {
+      return objectives.map(o => o.id);
+    }
+    return Object.entries(reflectionData.objectiveReflections)
+      .filter(
+        ([, value]) =>
+          value === LessonObjectiveReflectionValues.LOST ||
+          value === LessonObjectiveReflectionValues.UNSURE
+      )
+      .map(([objectiveId]) => objectiveId);
+  }, [reflectionData, objectives]);
+
+  const fetchPracticeProblems = useCallback(() => {
+    const params = new URLSearchParams();
+    objectiveIds.forEach(id => params.append('objective_ids[]', id));
+    const query = params.toString();
+    HttpClient.fetchJson<PracticeProblem[]>(
+      `/practice_problems?${query}`,
+      {},
+      practiceProblemValidator
+    )
+      .then(response => {
+        const problems = response.value;
+        if (!problems || problems.length === 0) return;
+        const attemptParams = new URLSearchParams();
+        problems.forEach(p =>
+          attemptParams.append('problem_ids[]', String(p.id))
+        );
+        return HttpClient.fetchJson(
+          `/user_practice_problem_attempts?${attemptParams.toString()}`,
+          {},
+          userPracticeProblemAttemptValidator
+        ).then(attemptsResponse => {
+          const attemptedIds = new Set(
+            attemptsResponse.value?.map(a => a.practice_problem_id) ?? []
+          );
+          const filteredProbs = problems.filter(p => !attemptedIds.has(p.id));
+          if (filteredProbs && filteredProbs.length > 0) {
+            setPracticeProblems(filteredProbs);
+          }
+        });
+      })
+      .finally(() => {
+        setProblemFetchLoading(false);
+      });
+  }, [objectiveIds]);
+
+  useEffect(() => {
+    fetchPracticeProblems();
+  }, [fetchPracticeProblems]);
+
+  useEffect(() => {
+    if (feedback && problemAttemptId !== 0) {
+      updateAttemptFeedback();
+    }
+  }, [feedback, problemAttemptId, updateAttemptFeedback]);
 
   const renderProblem = (index: number) => {
-    const problem = PROBLEMS[index];
+    const problem = practiceProblems[index];
     const sharedProps = {
       problem,
       key: problem.id,
@@ -185,14 +313,14 @@ const SkillsCheck: FC<SkillsCheckProps> = ({
       studentAnswerCallback: setStudentAnswer,
     };
     switch (problem.type) {
-      case 'multiple_choice_single_select':
-      case 'multiple_choice_multi_select':
+      case PracticeProblemTypes.MULTIPLE_CHOICE_SINGLE:
+      case PracticeProblemTypes.MULTIPLE_CHOICE_MULTI:
         return <MultipleChoice {...sharedProps} />;
-      case 'scramble':
+      case PracticeProblemTypes.SCRAMBLE:
         return <Scramble {...sharedProps} />;
-      case 'match':
+      case PracticeProblemTypes.MATCH:
         return <Match {...sharedProps} />;
-      case 'sort':
+      case PracticeProblemTypes.SORT:
         return <Sort {...sharedProps} />;
     }
   };
@@ -201,7 +329,9 @@ const SkillsCheck: FC<SkillsCheckProps> = ({
     <div className={styles.quiz}>
       <div className={styles.quizContent}>
         <p className={styles.overline}>Skills Check</p>
-        <div style={{width: '80%'}}>{renderProblem(currentIndex)}</div>
+        {!problemFetchLoading && (
+          <div style={{width: '80%'}}>{renderProblem(currentIndex)}</div>
+        )}
         {isSubmitted && (
           <div className={styles.feedback}>
             <WaitingAnimation shouldDisplay={feedbackLoading} />
