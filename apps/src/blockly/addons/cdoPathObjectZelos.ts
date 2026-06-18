@@ -7,9 +7,12 @@ export default class CdoPathObjectZelos extends BlocklyCore.zelos.PathObject {
     this.setClass_('blocklyDisabled', disabled);
   }
 
-  // The built-in function adds a light filter over the whole block. We want to match our old
-  // behavior where highlighting the block adds the same yellow outline as selecting.
+  // Uses --text-neutral-primary (design system semantic token) so the stroke is black in light
+  // mode and white in dark mode without any explicit theme check.
   updateHighlighted(highlighted: boolean) {
-    this.setClass_('blocklySelected', highlighted);
+    this.svgPath.style.stroke = highlighted
+      ? 'var(--text-neutral-primary)'
+      : '';
+    this.svgPath.style.strokeWidth = highlighted ? '3px' : '';
   }
 }

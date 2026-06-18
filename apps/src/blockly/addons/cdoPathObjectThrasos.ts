@@ -1,6 +1,7 @@
 import * as BlocklyCore from 'blockly/core';
 
 import experiments from '@cdo/apps/util/experiments';
+
 export default class CdoPathObject extends BlocklyCore.blockRendering
   .PathObject {
   // The built-in function also adds a cross-hatch fill pattern to disabled blocks, which we don't want.
@@ -9,9 +10,9 @@ export default class CdoPathObject extends BlocklyCore.blockRendering
     this.setClass_('blocklyDisabled', disabled);
   }
 
-  // The built-in function adds a light filter over the whole block. We want to match our old
-  // behavior where highlighting the block adds the same yellow outline as selecting.
-  // The built-in function can be used with the 'blockly-glow-highlight' url parameter or experiment.
+  // Uses --text-neutral-primary (design system semantic token) so the stroke is black in light
+  // mode and white in dark mode without any explicit theme check.
+  // The built-in glow effect can still be used via the 'blockly-glow-highlight' experiment.
   updateHighlighted(highlighted: boolean) {
     if (
       experiments.isEnabledAllowingQueryString(
@@ -20,7 +21,10 @@ export default class CdoPathObject extends BlocklyCore.blockRendering
     ) {
       super.updateHighlighted(highlighted);
     } else {
-      this.setClass_('blocklySelected', highlighted);
+      this.svgPath.style.stroke = highlighted
+        ? 'var(--text-neutral-primary)'
+        : '';
+      this.svgPath.style.strokeWidth = highlighted ? '3px' : '';
     }
   }
 }
