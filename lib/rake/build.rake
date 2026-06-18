@@ -223,19 +223,6 @@ timed_task_with_logging :build do
   ChatClient.wrap('build') {Rake::Task['build:all'].invoke}
 end
 
-# List of paths that, if changed, should trigger an apps build.
-# This contains the apps source itself and any other dependency that affects the apps build,
-# e.g. shared constants (which generate js apps code during apps/script/generateSharedConstants)
-def apps_build_trigger_paths
-  [
-    apps_dir,
-    config_dir('global_editions'),
-    shared_constants_file,
-    shared_constants_dir,
-    frontend_dir
-  ]
-end
-
 def calculate_apps_commit_hash
   RakeUtils.git_folder_hash(*apps_build_trigger_paths)
 end
