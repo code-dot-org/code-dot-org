@@ -150,21 +150,6 @@ $ai-modal-border-width: 8px;
       justify-content: space-around;
       animation: appear 0.3s;
       margin-top: 3px;
-
-      button {
-        padding: 8px 17px !important;
-        font-weight: 600;
-
-        span {
-          font-size: 0.875rem !important;
-          line-height: 1.2 !important;
-          margin-bottom: 0 !important;
-        }
-
-        &:focus-visible {
-          outline: 2px solid $light_primary_500;
-        }
-      }
     }
 
     .textArea {

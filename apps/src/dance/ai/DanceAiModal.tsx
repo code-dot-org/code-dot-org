@@ -641,7 +641,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
           >
             <SegmentedButtons
               selectedButtonValue={currentToggle}
-              size="xs"
+              size="s"
               onChange={(value: string) => {
                 setCurrentToggle(value as DanceAiPreviewButtonToggleState);
               }}
