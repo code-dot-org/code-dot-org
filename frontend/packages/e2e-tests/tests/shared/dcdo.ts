@@ -3,6 +3,15 @@ import type {Page} from '@playwright/test';
 /** Cookie name used by Rack::CookieDCDO middleware. */
 const DCDO_COOKIE_NAME = 'DCDO';
 
+/** Any JSON-serialisable value — what a DCDO key may hold. */
+export type DcdoJsonValue =
+  | string
+  | number
+  | boolean
+  | null
+  | DcdoJsonValue[]
+  | {[key: string]: DcdoJsonValue};
+
 /**
  * Derive the registrable domain (last two labels) from a hostname so the DCDO
  * cookie is shared across subdomains — e.g. "test-studio.code.org" and
@@ -25,7 +34,7 @@ function cookieDomain(hostname: string): string {
 export async function mockDcdo(
   page: Page,
   key: string,
-  value: unknown,
+  value: DcdoJsonValue,
 ): Promise<void> {
   const context = page.context();
   const hostname = new URL(page.url()).hostname;
@@ -34,10 +43,21 @@ export async function mockDcdo(
   // Read existing DCDO cookie value (may be absent on first call).
   const existing = await context.cookies();
   const dcdoCookie = existing.find(c => c.name === DCDO_COOKIE_NAME);
-  let dcdoValue: Record<string, unknown> = {};
+  let dcdoValue: Record<string, DcdoJsonValue> = {};
   if (dcdoCookie?.value) {
     try {
-      dcdoValue = JSON.parse(dcdoCookie.value) as Record<string, unknown>;
+      const parsed: unknown = JSON.parse(dcdoCookie.value);
+      if (
+        parsed !== null &&
+        typeof parsed === 'object' &&
+        !Array.isArray(parsed)
+      ) {
+        dcdoValue = parsed as Record<string, DcdoJsonValue>;
+      } else {
+        console.warn(
+          `Ignoring non-object DCDO cookie ${JSON.stringify(dcdoCookie.value)}, starting fresh`,
+        );
+      }
     } catch (error) {
       console.warn(
         `Ignoring unparseable DCDO cookie ${JSON.stringify(dcdoCookie.value)}, starting fresh: ${String(error)}`,

@@ -6,7 +6,7 @@ import {
   type CreateUserOptions,
   type UserCredentials,
 } from './shared/auth';
-import {clearDcdoCookie, mockDcdo} from './shared/dcdo';
+import {clearDcdoCookie, mockDcdo, type DcdoJsonValue} from './shared/dcdo';
 
 type SignInAsNewUser = (options: CreateUserOptions) => Promise<UserCredentials>;
 
@@ -16,7 +16,7 @@ type SignInAsNewUser = (options: CreateUserOptions) => Promise<UserCredentials>;
  * target host so the cookie domain can be derived.
  */
 interface Dcdo {
-  mock(key: string, value: unknown): Promise<void>;
+  mock(key: string, value: DcdoJsonValue): Promise<void>;
   clear(): Promise<void>;
 }
 
