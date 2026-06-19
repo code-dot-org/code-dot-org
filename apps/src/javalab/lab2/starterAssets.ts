@@ -22,11 +22,10 @@ export function isStarterAssetUrl(url: string): boolean {
   return url.startsWith(STARTER_ASSETS_PATH);
 }
 
-// Append one STARTER file per mapping entry not already present by name —
-// but only when the source has no url-backed files at all (a source never
-// touched by lab2 asset editing).
-// Locking starter assets against student edits will arrive with the broader
-// locked-starter-files support.
+// Append one LOCKED_STARTER file per mapping entry not already present by
+// name — but only when the source has no url-backed files at all (a source
+// never touched by lab2 asset editing). Locked matches legacy, where
+// level-owned starter assets are not student-editable.
 export function mergeStarterAssets(
   source: MultiFileSource,
   starterAssets: Record<string, string> | undefined,
@@ -52,7 +51,7 @@ export function mergeStarterAssets(
       name: friendlyName,
       contents: '',
       folderId: DEFAULT_FOLDER_ID,
-      type: ProjectFileType.STARTER,
+      type: ProjectFileType.LOCKED_STARTER,
       url: starterAssetUrl(levelName, uuidName),
     };
   }

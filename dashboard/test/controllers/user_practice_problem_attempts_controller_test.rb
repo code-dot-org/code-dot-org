@@ -7,8 +7,6 @@ class UserPracticeProblemAttemptsControllerTest < ActionController::TestCase
     @practice_problem = create(:practice_problem)
     @user = create(:student)
     @other_user = create(:student)
-    create(:single_user_experiment, min_user_id: @user.id, name: 'lesson-tutor')
-    create(:single_user_experiment, min_user_id: @other_user.id, name: 'lesson-tutor')
     @attempt = create(:user_practice_problem_attempt, user: @user, practice_problem: @practice_problem)
     @other_attempt = create(:user_practice_problem_attempt, user: @other_user)
   end
@@ -40,15 +38,6 @@ class UserPracticeProblemAttemptsControllerTest < ActionController::TestCase
     assert_redirected_to_sign_in
   end
 
-  # --- no experiment ---
-
-  test 'index returns forbidden when user lacks lesson-tutor experiment' do
-    user_without_experiment = create(:student)
-    sign_in user_without_experiment
-    get :index
-    assert_response :forbidden
-  end
-
   # --- index ---
 
   test 'index returns only the signed-in user\'s attempts' do
@@ -58,6 +47,17 @@ class UserPracticeProblemAttemptsControllerTest < ActionController::TestCase
     ids = JSON.parse(response.body).map {|a| a['id']}
     assert_includes ids, @attempt.id
     refute_includes ids, @other_attempt.id
+  end
+
+  test 'index filters by problem_ids when provided' do
+    other_problem = create(:practice_problem)
+    other_attempt = create(:user_practice_problem_attempt, user: @user, practice_problem: other_problem)
+    sign_in @user
+    get :index, params: {problem_ids: [@practice_problem.id]}
+    assert_response :success
+    ids = JSON.parse(response.body).map {|a| a['id']}
+    assert_includes ids, @attempt.id
+    refute_includes ids, other_attempt.id
   end
 
   # --- show ---

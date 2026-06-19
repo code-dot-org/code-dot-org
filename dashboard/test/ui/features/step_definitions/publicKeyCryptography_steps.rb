@@ -33,7 +33,7 @@ When /^I run the modulo clock$/ do
 end
 
 When /^I open view "(Alice|Eve|Bob|All)"$/ do |view|
-  @browser.find_element(:xpath, "//button[text()[contains(.,'#{view}')]]").click
+  @browser.find_element(:xpath, "//button[contains(.,'#{view}')]").click
 end
 
 When /^I click the start over button$/ do
