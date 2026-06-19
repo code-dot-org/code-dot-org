@@ -38,8 +38,10 @@ export async function mockDcdo(
   if (dcdoCookie?.value) {
     try {
       dcdoValue = JSON.parse(dcdoCookie.value) as Record<string, unknown>;
-    } catch {
-      // Corrupt cookie — start fresh.
+    } catch (error) {
+      console.warn(
+        `Ignoring unparseable DCDO cookie ${JSON.stringify(dcdoCookie.value)}, starting fresh: ${String(error)}`,
+      );
     }
   }
 
