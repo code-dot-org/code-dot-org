@@ -160,8 +160,26 @@ const BlocklyWrapper = function (
 
 // Monkey patch: prevents toolbox from consuming keydown events so they reach
 // the workspace keyboard navigation handler. Still needed per blockly issue #713.
+// Also defers onClick_ past any pending focus/blur callbacks — Blockly 13's
+// FocusManager locks itself during those callbacks, which causes onClick_ to
+// throw when clicking the toolbox immediately after workspace disposal.
 class NavigationDeferringToolbox extends BlocklyCore.Toolbox {
   protected override onKeyDown_(e: KeyboardEvent) {}
+
+  protected override onClick_(e: PointerEvent) {
+    try {
+      super.onClick_(e);
+    } catch (error) {
+      if (
+        error instanceof Error &&
+        error.message.includes('FocusManager state changes cannot happen')
+      ) {
+        setTimeout(() => super.onClick_(e), 0);
+      } else {
+        throw error;
+      }
+    }
+  }
 }
 
 function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
