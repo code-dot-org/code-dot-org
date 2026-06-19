@@ -20,15 +20,10 @@ function cookieDomain(hostname: string): string {
 }
 
 /**
- * Mock a single DCDO key by writing (or updating) the DCDO cookie.
- *
- * Must be called AFTER at least one page.goto so the browser context has a
- * URL from which to derive the cookie domain, matching the Ruby helper's note:
- * "Navigating to the tested page before mocking DCDO is necessary."
- *
- * @param page - Playwright page
- * @param key  - DCDO feature-flag key
- * @param value - Any JSON-serialisable value; strings are stored as-is
+ * Mock a single DCDO key by writing (or updating) the DCDO cookie. Must be
+ * called AFTER at least one page.goto so the cookie domain can be derived from
+ * the current URL (mirrors the Ruby helper: "Navigating to the tested page
+ * before mocking DCDO is necessary"). Values are stored verbatim as JSON.
  */
 export async function mockDcdo(
   page: Page,
