@@ -25,6 +25,7 @@ async function loadLevelProperties(path: string) {
     undefined,
     LevelPropertiesMapValidator
   );
+  console.log('response.value', response.value);
   return response.value;
 }
 
@@ -55,9 +56,11 @@ export default function useLoadLevelProperties() {
 
   useEffect(() => {
     if (path) {
+      console.log('path', path);
       loadLevelProperties(path)
         .then(setPropertiesMap)
         .catch(error => {
+          console.log('error', error);
           dispatch(
             setPageError({
               errorMessage: 'Error loading level properties',
