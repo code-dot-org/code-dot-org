@@ -37,10 +37,7 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
 }) => {
   const [enabledAnswerTypes, setEnabledAnswerTypes] = useState<Set<string>>(
     () => {
-      if (
-        promptSettings?.answerTypes &&
-        promptSettings.answerTypes.length > 0
-      ) {
+      if (promptSettings?.answerTypes !== undefined) {
         return new Set(promptSettings.answerTypes);
       } else if (legacyMode && legacyModeToAnswerType?.[legacyMode]) {
         return new Set(legacyModeToAnswerType[legacyMode]);
