@@ -22,9 +22,16 @@ class PumaWorkerCountTest < Minitest::Test
     assert_equal 40, compute(cpu_count: 48, total_memory_mb: 192 * 1024)
   end
 
-  def test_summer_m7i_8xlarge_resolves_to_26
+  def test_ram_constrained_m7i_8xlarge_is_memory_bound
     # 32 vCPU / ~123 GB MemTotal: memory budget (26) wins under the CPU cap (32).
     assert_equal 26, compute(cpu_count: 32, total_memory_mb: 123 * 1024)
+  end
+
+  def test_memory_rich_r8i_8xlarge_is_cpu_bound
+    # The current fleet: 32 vCPU / 256 GB. The memory budget (~53) exceeds the
+    # CPU budget, so the count is CPU-bound at 32 -- the cap reduces workers
+    # only on RAM-constrained instances, not memory-optimized ones.
+    assert_equal 32, compute(cpu_count: 32, total_memory_mb: 250 * 1024)
   end
 
   def test_explicit_count_does_not_adapt_to_a_smaller_box
