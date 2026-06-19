@@ -4,13 +4,10 @@ import type {Page} from '@playwright/test';
 const DCDO_COOKIE_NAME = 'DCDO';
 
 /**
- * Derive the top-level registrable domain from a URL hostname so the DCDO
- * cookie is scoped to ".code.org" (accessible on both studio.code.org and
- * code.org), matching the Ruby mock_dcdo helper in dashboard_helpers.rb.
- *
- * Handles simple two-part domains (e.g. "code.org") and three-part hostnames
- * (e.g. "test-studio.code.org", "studio.code.org") but not ccTLDs — sufficient
- * for Code.org's domain set.
+ * Derive the registrable domain (last two labels) from a hostname so the DCDO
+ * cookie is shared across subdomains — e.g. "test-studio.code.org" and
+ * "studio.code.org" both scope to ".code.org". Does not handle multi-label
+ * public suffixes (ccTLDs like ".co.uk"), which the target hosts don't use.
  */
 function cookieDomain(hostname: string): string {
   const parts = hostname.split('.');
@@ -21,9 +18,9 @@ function cookieDomain(hostname: string): string {
 
 /**
  * Mock a single DCDO key by writing (or updating) the DCDO cookie. Must be
- * called AFTER at least one page.goto so the cookie domain can be derived from
- * the current URL (mirrors the Ruby helper: "Navigating to the tested page
- * before mocking DCDO is necessary"). Values are stored verbatim as JSON.
+ * called AFTER at least one page.goto: the cookie domain is derived from the
+ * current URL, so the page must already be on the target host. Values are
+ * stored verbatim as JSON.
  */
 export async function mockDcdo(
   page: Page,
@@ -58,10 +55,7 @@ export async function mockDcdo(
   ]);
 }
 
-/**
- * Remove the DCDO cookie from the browser context.
- * No-op if the cookie is absent (mirrors Cucumber's conditional delete).
- */
+/** Remove the DCDO cookie from the browser context. No-op if absent. */
 export async function clearDcdoCookie(page: Page): Promise<void> {
   await page.context().clearCookies({name: DCDO_COOKIE_NAME});
 }

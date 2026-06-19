@@ -6,8 +6,7 @@ const DCDO_PATH = '/api/test/get_dcdo';
 
 /**
  * Assert the JSON body at DCDO_PATH contains `"key":value`. Firefox's JSON
- * viewer hides the raw <pre> behind a "Raw Data" tab — click it if present,
- * mirroring the Cucumber step's #rawdata-tab click.
+ * viewer hides the raw <pre> behind a "Raw Data" tab — click it if present.
  */
 async function assertJsonKeyValue(
   page: Page,
