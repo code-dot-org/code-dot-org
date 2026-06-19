@@ -224,9 +224,12 @@ const PythonlabView: React.FunctionComponent<
   ]);
 
   const systemPrompt = useMemo(() => {
-    const answerTypes: AiTutorAnswerType[] =
-      (levelProperties.aiTutorPromptSettings
-        ?.answerTypes as AiTutorAnswerType[]) || DEFAULT_ANSWER_TYPES;
+    const rawAnswerTypes = levelProperties.aiTutorPromptSettings?.answerTypes;
+    const answerTypes: AiTutorAnswerType[] = Array.isArray(rawAnswerTypes)
+      ? (rawAnswerTypes as AiTutorAnswerType[]).filter(type =>
+          DEFAULT_ANSWER_TYPES.includes(type)
+        )
+      : DEFAULT_ANSWER_TYPES;
     return generateAiTutorPrompt(
       answerTypes,
       levelProperties.aiTutorPromptSettings?.answerTypeCustomizations as

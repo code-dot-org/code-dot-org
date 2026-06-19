@@ -130,9 +130,14 @@ class Pythonlab < Level
 
   private def validate_ai_tutor_prompt_settings
     return if ai_tutor_prompt_settings.nil?
+
     answer_types = ai_tutor_prompt_settings['answerTypes']
     unless answer_types.is_a?(Array) && answer_types.all?(String)
       errors.add(:ai_tutor_prompt_settings, 'answerTypes must be an array of strings.')
+    end
+    customizations = ai_tutor_prompt_settings['answerTypeCustomizations']
+    if customizations.present? && !(customizations.is_a?(Hash) && customizations.values.all?(String))
+      errors.add(:ai_tutor_prompt_settings, 'answerTypeCustomizations must be an object mapping answerType to string.')
     end
   end
 end

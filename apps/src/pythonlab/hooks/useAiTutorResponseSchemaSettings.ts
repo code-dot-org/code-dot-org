@@ -16,11 +16,15 @@ export const useAiTutorResponseSchemaSettings = (): ResponseSchemaSettings => {
     return {
       jsonSchema: aiTutorResponseJsonSchema,
       responseCallback: (response: string) => {
-        const jsonResponse = JSON.parse(response);
-        console.log('🤖: AI Tutor response (in jsonSchema callback):', {
-          jsonResponse,
-        });
-        return formatCopyPasteResponse(jsonResponse.answer);
+        try {
+          const jsonResponse = JSON.parse(response);
+          console.log('🤖: AI Tutor response (in jsonSchema callback):', {
+            jsonResponse,
+          });
+          return formatCopyPasteResponse(jsonResponse.answer);
+        } catch {
+          return response;
+        }
       },
     };
   }, []);
