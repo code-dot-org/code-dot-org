@@ -97,7 +97,6 @@ export const LevelPropertiesMapValidator: ResponseValidator<
 
   for (const levelId of Object.keys(response)) {
     const properties = response[levelId] as Record<string, unknown>;
-    console.log('properties', properties);
     if (typeof properties !== 'object' || properties === null) {
       throw new Error(
         `Level properties should be an object (received ${typeof properties}).`
