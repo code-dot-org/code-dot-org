@@ -4,6 +4,7 @@ require 'cdo/chat_client'
 require 'cdo/test_run_utils'
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
+require 'cdo/github'
 require 'cdo/lighthouse'
 require 'parallel'
 require 'aws-sdk-s3'
@@ -167,9 +168,23 @@ namespace :test do
     ChatClient.log report, color: (passed ? 'green' : 'red')
   end
 
+  # Dispatch the dtt.yml Playwright run on GitHub Actions (ref: test), moving e2e
+  # browser execution off the daemon and onto horizontally scalable runners. The
+  # GHA run hits the same test-studio; only the execution substrate differs.
+  # Fire-and-forget: GitHub schedules and runs it, the daemon's job ends here.
+  # Non-blocking — a dispatch error warns but never raises (matches :playwright_ui).
+  timed_task_with_logging :dispatch_gha_dtt do
+    GitHub.dispatch_workflow(workflow_id: 'dtt.yml', ref: 'test')
+    ChatClient.log 'Dispatched <b>dtt.yml</b> Playwright e2e run on GitHub Actions (ref: test).'
+  rescue StandardError => exception
+    ChatClient.log "Could not dispatch dtt.yml Playwright run (non-blocking): #{exception.message}", color: 'red'
+  end
+
   # Run the deploy-time UI suites in parallel. If one suite
   # raises, allow the others to complete, then make sure this task raises.
   # :playwright_ui rescues its own failure, so it never makes ui_all raise.
+  # After the daemon suites finish, dispatch the experimental off-daemon GHA run
+  # (test daemon only). It runs alongside the daemon :playwright_ui for comparison.
   timed_task_with_logging :ui_all do
     Parallel.each(
       [:eyes_ui, :saucelabs_ui, :devicefarm_desktop_ui, :playwright_ui],
@@ -177,6 +192,9 @@ namespace :test do
     ) do |target|
       Rake::Task["test:#{target}"].invoke
     end
+  ensure
+    # dispatch even if a suite raised; the GHA run isn't gated on the daemon suites.
+    Rake::Task['test:dispatch_gha_dtt'].invoke if CDO.test_system?
   end
 
   timed_task_with_logging :wait_for_test_server do

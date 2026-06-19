@@ -7,13 +7,13 @@ Feature: Teacher viewing student chat history in AI Chat Lab
 Background:
   Given I create a teacher named "Simone"
   And I give user "Simone" authorized teacher permission
-  And I create a new student section assigned to course "customizing-llms-2024" unit 1 with AI chat enabled and save the section
+  And I create a new student section assigned to course "allthethingscourse" unit 1 with AI chat enabled and save the section
 
   Given I create a student named "Hermione"
   And I join the section
 
   # Student interacts with model to create chat history for teacher to view.
-  Given I am on "http://studio.code.org/courses/customizing-llms-2024/units/1/lessons/2/levels/9"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/47/levels/1"
   And I click selector "button[aria-label='Close']" once I see it
   And I wait until element "button[aria-label='Close']" is not visible
   When I press keys "Hello" for element "#uitest-chat-textarea"
@@ -30,12 +30,12 @@ Background:
   When I click selector "[aria-label='Decrease']"
   And I wait until element "#uitest-update-customizations" is enabled
   And I click selector "#uitest-update-customizations"
-  Then I wait until element ".uitest-aichat-chat-alert" contains text "Temperature has been updated to 0.7"
+  Then I wait until element ".uitest-aichat-chat-alert" contains text "Temperature has been updated to 0.4"
 
 Scenario: Teacher views student chat history and interacts with student model
   # Teacher can view chat history and provide feedback on messages flagged as inappropriate.
   Given I sign in as "Simone"
-  And I am on "http://studio.code.org/courses/customizing-llms-2024/units/1/lessons/2/levels/9"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/47/levels/1"
   When I click selector "button[aria-label='Close']" once I see it
   And I wait until element "button[aria-label='Close']" is not visible
   And I wait to see ".show-handle"
@@ -54,7 +54,7 @@ Scenario: Teacher views student chat history and interacts with student model
   Then I wait until element ".uitest-profane-feedback-footer" contains text "This content was flagged correctly."
 
   # Teacher can interact with student model.
-  Given element ".uitest-temperature-container" contains text "0.7"
+  Given element ".uitest-temperature-container" contains text "0.4"
   When I press the last button with text "Test student model"
   And I press keys "Hello" for element "#uitest-chat-textarea"
   And I wait until element "#uitest-chat-submit" is enabled
