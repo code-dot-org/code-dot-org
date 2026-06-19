@@ -5,7 +5,7 @@
 #  id           :bigint           not null, primary key
 #  user_id      :integer          not null
 #  tour_name    :string(255)      not null
-#  completed_at :datetime         not null
+#  completed_at :datetime
 #  started_at   :datetime
 #  properties   :json
 #

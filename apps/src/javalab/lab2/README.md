@@ -60,19 +60,13 @@ legacy data: `Javalab#add_starter_asset!` is a no-op for `uses_lab2`
 levels (the weblab2 pattern), so lab2 uploads/deletes/renames never
 touch it — the url entries in the sources are the single source of
 truth. `starterAssets.ts` merges the mapping into the level's
-start/template/exemplar sources as `STARTER` files, but only when the
+start/template/exemplar sources as `LOCKED_STARTER` files, but only when the
 source has no url-backed entries of its own; once a lab2 save persists
-url entries, the mapping is never consulted for tree contents again
-(so deletes and renames stick — known edge: deleting the last asset
-from a legacy level brings the merge back). Projects loaded from S3
-are never merged: like any other start-source change, assets reach a
-student's project only when it is seeded from the level (fresh load or
-start over). Locking starter assets against student edits will arrive
-with the broader locked-starter-files support.
+url entries, the mapping is never consulted for tree contents again.
 
 The flat shape doesn't persist file types, so the converter re-derives
 asset types from where the url points: `/level_starter_assets/...` is a
-levelbuilder-owned shared level asset (`STARTER`), while
+levelbuilder-owned shared level asset (`STARTER` or `LOCKED_STARTER`), while
 `/v3/assets/<channelId>/...` is the student's own upload and stays
 untyped — lab2 treats typed url files as levelbuilder-owned and would
 otherwise skip the S3 delete + abuse unflag when a student removes one.
@@ -163,12 +157,12 @@ still on the TODO list. Differences from legacy use:
   (`add_starter_asset!` no-ops for `uses_lab2` levels); it survives as
   frozen legacy data consulted only when seeding a source that has no
   url entries yet.
-  Known limitation: starter assets aren't locked yet (students can
-  rename/delete them; locking comes with locked-starter-files support).
 
 ## To Dos
-- **Support locked starter files** you can lock starter files in start mode,
-but we don't persist that information yet.
+- **Starter assets can re-appear** In start mode only, if a level
+  was migrated from legacy to lab2, if a levelbuilder edits the start code
+  and deletes all the assets they will re-populate from the legacy starterAssets
+  field. We should clear out starterAssets post-migration.
 - **Theater mini-app** + photo prompter.
 - **Backpack**
 - **Captcha dialog** on `AuthorizerSignalType.CAPTCHA`.
