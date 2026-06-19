@@ -290,6 +290,10 @@ class Section < ApplicationRecord
     SharedConstants::PL_GRADE_VALUE
   ].flatten.freeze
 
+  # Native section codes are six letters. Google and Clever-based section codes
+  # are prefixed with "G-" and "C-" respectively.
+  SECTION_CODE_REGEX = /\A(?:[A-Z]{6}|[CG]-[A-Z0-9_-]+)\z/i
+
   ADD_STUDENT_EXISTS = 'exists'.freeze
   ADD_STUDENT_SUCCESS = 'success'.freeze
   ADD_STUDENT_FAILURE = 'failure'.freeze
@@ -315,6 +319,10 @@ class Section < ApplicationRecord
   def self.valid_grades?(grades)
     return false if grades.empty?
     (grades - VALID_GRADES).empty?
+  end
+
+  def self.valid_code?(code)
+    code.to_s.match?(SECTION_CODE_REGEX)
   end
 
   # Override default script accessor to use our cache
