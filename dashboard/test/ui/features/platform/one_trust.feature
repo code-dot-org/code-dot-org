@@ -1,5 +1,8 @@
 @single_session
 Feature: OneTrust integration
+  # @eyes scenario is NOT yet ported to Playwright (no visual-diff equivalent);
+  # left untagged so the Cucumber eyes run keeps covering it. The remaining
+  # scenarios are tagged @playwright per-scenario as they were migrated.
   @eyes
   Scenario: User sees OneTrust cookie pop-up when self-hosting OneTrust libraries on code.org
     Given I create a student named "Alice"
@@ -12,6 +15,7 @@ Feature: OneTrust integration
     And I see no difference for "Onetrust pop up: code.org" in the current viewport
     And I close my eyes
 
+  @playwright
   Scenario: OneTrust cookie pop-up shows when self-hosting OneTrust libraries on code.org
     Given I create a student named "Alice"
     Given I am in Europe
@@ -20,12 +24,14 @@ Feature: OneTrust integration
     And I wait for jquery to load
     And I wait until element "#onetrust-banner-sdk" is visible
 
+  @playwright
   Scenario: The dashboard pages load the self hosted OneTrust libraries.
     Given I am on "http://studio.code.org/users/sign_in"
     Then element "script[src$='onetrust/cdo/scripttemplates/otSDKStub.js']" does exist
     Then element "script[src$='977d/OtAutoBlock.js']" does exist
     Then element "script[src$='977d-test/OtAutoBlock.js']" does not exist
 
+  @playwright
   Scenario: The dashboard pages load the Onetrust prod libraries.
     Given I am on "http://studio.code.org/users/sign_in"
     When I use a cookie to mock the DCDO key "onetrust_cookie_scripts" as "prod"
@@ -35,18 +41,21 @@ Feature: OneTrust integration
     Then element "script[src$='977d-test/OtAutoBlock.js']" does not exist
     Then element "script[src$='onetrust/scripttemplates/otSDKStub.js']" does not exist
 
+  @playwright
   Scenario: The dashboard pages load the test OneTrust libraries.
     Given I am on "http://studio.code.org/users/sign_in?onetrust_cookie_scripts=test"
     Then element "script[src$='otSDKStub.js']" does exist
     Then element "script[src$='977d/OtAutoBlock.js']" does not exist
     Then element "script[src$='977d-test/OtAutoBlock.js']" does exist
 
+  @playwright
   Scenario: The dashboard pages do not load the OneTrust libraries.
     Given I am on "http://studio.code.org/users/sign_in?onetrust_cookie_scripts=off"
     Then element "script[src$='otSDKStub.js']" does not exist
     Then element "script[src$='977d/OtAutoBlock.js']" does not exist
     Then element "script[src$='977d-test/OtAutoBlock.js']" does not exist
 
+  @playwright
   Scenario Outline: Critical Javascript files are appropriately categorized by OneTrust on dashboard
     Given I am on "<url>"
     Then element "script[src*='/assets/application']" is not categorized by OneTrust
@@ -60,7 +69,7 @@ Feature: OneTrust integration
       | url                                                                     |
       | http://studio.code.org/users/sign_in                                    |
 
-  @as_student
+  @as_student @playwright
   Scenario Outline: Embedded projects do not display the OneTrust banner
     Given I am in Europe
     Given I am on "<url>"
