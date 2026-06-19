@@ -25,6 +25,24 @@ function cookieDomain(hostname: string): string {
   return `.${registrable}`;
 }
 
+/** Parse the DCDO cookie into a key→value map; {} if absent, empty, or invalid. */
+function parseDcdoCookie(
+  raw: string | undefined,
+): Record<string, DcdoJsonValue> {
+  try {
+    const parsed: unknown = raw ? JSON.parse(raw) : {};
+    if (parsed && typeof parsed === 'object' && !Array.isArray(parsed)) {
+      return parsed as Record<string, DcdoJsonValue>;
+    }
+  } catch {
+    // unparseable — fall through to warn and reset
+  }
+  console.warn(
+    `Ignoring invalid DCDO cookie ${JSON.stringify(raw)}, starting fresh`,
+  );
+  return {};
+}
+
 /**
  * Mock a single DCDO key by writing (or updating) the DCDO cookie. Must be
  * called AFTER at least one page.goto: the cookie domain is derived from the
@@ -37,34 +55,10 @@ export async function mockDcdo(
   value: DcdoJsonValue,
 ): Promise<void> {
   const context = page.context();
-  const hostname = new URL(page.url()).hostname;
-  const domain = cookieDomain(hostname);
-
-  // Read existing DCDO cookie value (may be absent on first call).
-  const existing = await context.cookies();
-  const dcdoCookie = existing.find(c => c.name === DCDO_COOKIE_NAME);
-  let dcdoValue: Record<string, DcdoJsonValue> = {};
-  if (dcdoCookie?.value) {
-    try {
-      const parsed: unknown = JSON.parse(dcdoCookie.value);
-      if (
-        parsed !== null &&
-        typeof parsed === 'object' &&
-        !Array.isArray(parsed)
-      ) {
-        dcdoValue = parsed as Record<string, DcdoJsonValue>;
-      } else {
-        console.warn(
-          `Ignoring non-object DCDO cookie ${JSON.stringify(dcdoCookie.value)}, starting fresh`,
-        );
-      }
-    } catch (error) {
-      console.warn(
-        `Ignoring unparseable DCDO cookie ${JSON.stringify(dcdoCookie.value)}, starting fresh: ${String(error)}`,
-      );
-    }
-  }
-
+  const cookie = (await context.cookies()).find(
+    c => c.name === DCDO_COOKIE_NAME,
+  );
+  const dcdoValue = parseDcdoCookie(cookie?.value);
   dcdoValue[key] = value;
 
   await context.addCookies([
@@ -72,7 +66,7 @@ export async function mockDcdo(
       name: DCDO_COOKIE_NAME,
       value: JSON.stringify(dcdoValue),
       path: '/',
-      domain,
+      domain: cookieDomain(new URL(page.url()).hostname),
     },
   ]);
 }
