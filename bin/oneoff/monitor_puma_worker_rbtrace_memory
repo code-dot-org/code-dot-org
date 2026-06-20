@@ -1,0 +1,582 @@
+#!/usr/bin/env ruby
+
+# Temporary production diagnostic for one canary host.
+#
+# Pick one booted Puma child worker at startup, then sample that same PID with
+# pumactl_admin, /proc, and rbtrace --memory. This script never runs rbtrace
+# heapdump and never enables ObjectSpace allocation tracing.
+#
+# Usage:
+#   bundle exec ruby bin/oneoff/monitor_puma_worker_rbtrace_memory
+#   bundle exec ruby bin/oneoff/monitor_puma_worker_rbtrace_memory 5
+#
+# The optional argument is the sample interval in minutes. Default: 30.
+
+APP_ROOT = File.expand_path('../..', __dir__)
+Dir.chdir(APP_ROOT)
+
+require_relative '../../lib/cdo/only_one'
+require_relative '../../deployment'
+
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+require 'csv'
+require 'fileutils'
+require 'json'
+require 'open3'
+require 'rbconfig'
+require 'shellwords'
+require 'socket'
+require 'time'
+
+LOG_PREFIX = '[puma-rbtrace-memory]'.freeze
+
+DEFAULT_INTERVAL_MINUTES = 30.0
+
+OUT_DIR = ENV.fetch('RBTRACE_MONITOR_DIR', '/var/tmp/rbtrace')
+RAW_DIR = File.join(OUT_DIR, 'raw')
+CSV_PATH = ENV.fetch(
+  'RBTRACE_MONITOR_CSV',
+  File.join(OUT_DIR, 'puma_worker_rbtrace_memory.csv')
+)
+
+PUMACTL_ADMIN = ENV.fetch(
+  'RBTRACE_PUMACTL_ADMIN',
+  File.join(APP_ROOT, 'bin/pumactl_admin')
+)
+
+PUMACTL_TIMEOUT_SECONDS = Integer(ENV.fetch('RBTRACE_PUMACTL_TIMEOUT_SECONDS', '20'))
+RBTRACE_TIMEOUT_SECONDS = Integer(ENV.fetch('RBTRACE_TIMEOUT_SECONDS', '45'))
+
+PUMACTL_STATS_QUERY = [
+  '{',
+  'phase: phase, ',
+  'booted_workers: booted_workers, ',
+  'old_workers: old_workers, ',
+  'worker_status: worker_status[].{',
+  'pid: pid, ',
+  'index: index, ',
+  'phase: phase, ',
+  'booted: booted, ',
+  'started_at: started_at, ',
+  'last_checkin: last_checkin, ',
+  'requests_count: last_status.requests_count, ',
+  'running: last_status.running, ',
+  'backlog: last_status.backlog, ',
+  'pool_capacity: last_status.pool_capacity, ',
+  'max_threads: last_status.max_threads',
+  '}',
+  '}'
+].join.freeze
+
+PROC_STATUS_FIELDS = {
+  'PPid' => 'proc_ppid',
+  'VmRSS' => 'proc_vm_rss_kb',
+  'VmHWM' => 'proc_vm_hwm_kb',
+  'VmSize' => 'proc_vm_size_kb',
+  'VmData' => 'proc_vm_data_kb',
+  'VmSwap' => 'proc_vm_swap_kb',
+  'RssAnon' => 'proc_rss_anon_kb',
+  'RssFile' => 'proc_rss_file_kb',
+  'RssShmem' => 'proc_rss_shmem_kb',
+  'Threads' => 'proc_threads'
+}.freeze
+
+SMAPS_ROLLUP_FIELDS = {
+  'Rss' => 'smaps_rss_kb',
+  'Pss' => 'smaps_pss_kb',
+  'Anonymous' => 'smaps_anonymous_kb',
+  'AnonHugePages' => 'smaps_anon_huge_pages_kb',
+  'Private_Clean' => 'smaps_private_clean_kb',
+  'Private_Dirty' => 'smaps_private_dirty_kb',
+  'Shared_Clean' => 'smaps_shared_clean_kb',
+  'Shared_Dirty' => 'smaps_shared_dirty_kb',
+  'Swap' => 'smaps_swap_kb',
+  'SwapPss' => 'smaps_swap_pss_kb'
+}.freeze
+
+GC_STAT_KEYS = %w[
+  count
+  time
+  heap_allocated_pages
+  heap_sorted_length
+  heap_allocatable_pages
+  heap_available_slots
+  heap_live_slots
+  heap_free_slots
+  heap_final_slots
+  heap_marked_slots
+  heap_eden_pages
+  heap_tomb_pages
+  total_allocated_pages
+  total_freed_pages
+  total_allocated_objects
+  total_freed_objects
+  malloc_increase_bytes
+  malloc_increase_bytes_limit
+  minor_gc_count
+  major_gc_count
+  compact_count
+  read_barrier_faults
+  total_moved_objects
+  remembered_wb_unprotected_objects
+  remembered_wb_unprotected_objects_limit
+  old_objects
+  old_objects_limit
+  oldmalloc_increase_bytes
+  oldmalloc_increase_bytes_limit
+].freeze
+
+OBJECT_STAT_KEYS = %w[
+  TOTAL
+  FREE
+  T_HASH
+  T_STRING
+  T_OBJECT
+  T_ARRAY
+  T_DATA
+  T_IMEMO
+  T_SYMBOL
+  T_CLASS
+  T_ICLASS
+  T_REGEXP
+  T_STRUCT
+  T_MODULE
+  T_MATCH
+  T_RATIONAL
+  T_FILE
+  T_BIGNUM
+  T_FLOAT
+  T_COMPLEX
+].freeze
+
+CSV_FIELDS = %w[
+  timestamp_utc
+  hostname
+  rack_env
+  sample_number
+  interval_minutes
+  sample_elapsed_seconds
+  selected_pid
+  puma_worker_index
+  puma_worker_started_at
+  puma_worker_last_checkin
+  puma_requests_count
+  puma_running
+  puma_backlog
+  puma_pool_capacity
+  puma_max_threads
+  proc_ppid
+  proc_minor_faults
+  proc_major_faults
+  proc_minor_faults_delta
+  proc_major_faults_delta
+  proc_minor_faults_per_second
+  proc_vm_rss_kb
+  proc_vm_hwm_kb
+  proc_vm_size_kb
+  proc_vm_data_kb
+  proc_vm_swap_kb
+  proc_rss_anon_kb
+  proc_rss_file_kb
+  proc_rss_shmem_kb
+  proc_threads
+  smaps_rss_kb
+  smaps_pss_kb
+  smaps_pss_delta_kb
+  smaps_anonymous_kb
+  smaps_anonymous_delta_kb
+  smaps_anon_huge_pages_kb
+  smaps_private_clean_kb
+  smaps_private_dirty_kb
+  smaps_private_dirty_delta_kb
+  smaps_private_dirty_kb_per_second
+  smaps_shared_clean_kb
+  smaps_shared_dirty_kb
+  smaps_swap_kb
+  smaps_swap_pss_kb
+  gc_count
+  gc_time
+  gc_heap_allocated_pages
+  gc_heap_sorted_length
+  gc_heap_allocatable_pages
+  gc_heap_available_slots
+  gc_heap_live_slots
+  gc_heap_free_slots
+  gc_heap_final_slots
+  gc_heap_marked_slots
+  gc_heap_eden_pages
+  gc_heap_tomb_pages
+  gc_total_allocated_pages
+  gc_total_freed_pages
+  gc_total_allocated_objects
+  gc_total_freed_objects
+  gc_malloc_increase_bytes
+  gc_malloc_increase_bytes_limit
+  gc_minor_gc_count
+  gc_major_gc_count
+  gc_compact_count
+  gc_read_barrier_faults
+  gc_total_moved_objects
+  gc_remembered_wb_unprotected_objects
+  gc_remembered_wb_unprotected_objects_limit
+  gc_old_objects
+  gc_old_objects_limit
+  gc_oldmalloc_increase_bytes
+  gc_oldmalloc_increase_bytes_limit
+  object_total
+  object_free
+  object_t_hash
+  object_t_string
+  object_t_object
+  object_t_array
+  object_t_data
+  object_t_imemo
+  object_t_symbol
+  object_t_class
+  object_t_iclass
+  object_t_regexp
+  object_t_struct
+  object_t_module
+  object_t_match
+  object_t_rational
+  object_t_file
+  object_t_bignum
+  object_t_float
+  object_t_complex
+  rbtrace_success
+  rbtrace_exitstatus
+  rbtrace_duration_seconds
+  raw_rbtrace_output_path
+  error
+].freeze
+
+def capture_command(command, timeout_seconds:)
+  stdout = +''
+  stderr = +''
+  status = nil
+
+  Open3.popen3(*command) do |stdin, out, err, wait_thread|
+    stdin.close
+
+    stdout_reader = Thread.new {out.read}
+    stderr_reader = Thread.new {err.read}
+
+    unless wait_thread.join(timeout_seconds)
+      begin
+        Process.kill('TERM', wait_thread.pid)
+      rescue Errno::ESRCH, Errno::EPERM
+        nil
+      end
+
+      unless wait_thread.join(5)
+        begin
+          Process.kill('KILL', wait_thread.pid)
+        rescue Errno::ESRCH, Errno::EPERM
+          nil
+        end
+        wait_thread.join
+      end
+
+      raise "command timed out after #{timeout_seconds}s: #{command.shelljoin}"
+    end
+
+    status = wait_thread.value
+    stdout = stdout_reader.value
+    stderr = stderr_reader.value
+  end
+
+  [stdout, stderr, status]
+end
+
+def process_alive?(pid)
+  Process.kill(0, pid.to_i)
+  true
+rescue Errno::ESRCH
+  false
+rescue Errno::EPERM
+  true
+end
+
+def puma_stats
+  command = [
+    RbConfig.ruby,
+    PUMACTL_ADMIN,
+    'stats',
+    "--query=#{PUMACTL_STATS_QUERY}"
+  ]
+
+  stdout, stderr, status = capture_command(command, timeout_seconds: PUMACTL_TIMEOUT_SECONDS)
+
+  unless status.success?
+    raise(
+      "pumactl_admin stats failed status=#{status.exitstatus} " \
+        "stderr=#{stderr.strip.inspect} stdout=#{stdout.strip.inspect}"
+    )
+  end
+
+  json_start = stdout.index('{')
+  json_end = stdout.rindex('}')
+
+  unless json_start && json_end && json_end >= json_start
+    raise(
+      'pumactl_admin stats did not print a JSON object; ' \
+        "stdout=#{stdout[0, 500].inspect} stderr=#{stderr[0, 500].inspect}"
+    )
+  end
+
+  JSON.parse(stdout[json_start..json_end])
+rescue JSON::ParserError => exception
+  raise(
+    "pumactl_admin stats printed invalid JSON: #{exception.message}; " \
+      "stdout=#{stdout[0, 500].inspect} stderr=#{stderr[0, 500].inspect}"
+  )
+end
+
+def booted_workers(stats)
+  Array(stats['worker_status']).select do |worker|
+    pid = worker['pid'].to_i
+    pid.positive? && worker['booted'] != false && process_alive?(pid)
+  end
+end
+
+def read_proc_values(path, field_map)
+  values = {}
+
+  File.foreach(path) do |line|
+    key, rest = line.split(':', 2)
+    csv_field = field_map[key]
+    next unless csv_field
+
+    values[csv_field] = rest.to_s.split.first.to_i
+  end
+
+  values
+rescue Errno::ENOENT, Errno::EACCES => exception
+  CDO.log.warn("#{LOG_PREFIX} could not read #{path}: #{exception.class}: #{exception.message}")
+  {}
+end
+
+begin
+  raise 'usage: monitor_puma_worker_rbtrace_memory [interval_minutes]' if ARGV.length > 1
+
+  raw_interval = ARGV[0] || ENV['RBTRACE_INTERVAL_MINUTES'] || DEFAULT_INTERVAL_MINUTES.to_s
+  begin
+    interval_minutes = Float(raw_interval)
+  rescue ArgumentError
+    CDO.log.error("#{LOG_PREFIX} interval minutes must be numeric, got #{raw_interval.inspect}")
+    exit 1
+  end
+
+  raise "interval must be greater than zero, got #{raw_interval.inspect}" unless interval_minutes.positive?
+
+  interval_seconds = (interval_minutes * 60).round
+  initial_stats = puma_stats
+  workers = booted_workers(initial_stats)
+  raise 'pumactl_admin stats returned no booted Puma child workers' if workers.empty?
+
+  selected_worker = workers.sample
+  selected_pid = selected_worker['pid'].to_i
+
+  CDO.log.info(
+    "#{LOG_PREFIX} selected pid=#{selected_pid} worker_index=#{selected_worker['index']} " \
+      "interval_minutes=#{interval_minutes} csv=#{CSV_PATH} " \
+      "booted_workers=#{initial_stats['booted_workers']}"
+  )
+
+  sample_number = 0
+  previous_sample_time = nil
+  previous_minor_faults = nil
+  previous_major_faults = nil
+  previous_pss_kb = nil
+  previous_anonymous_kb = nil
+  previous_private_dirty_kb = nil
+
+  loop do
+    sample_number += 1
+
+    unless process_alive?(selected_pid)
+      CDO.log.warn("#{LOG_PREFIX} selected Puma worker pid=#{selected_pid} is gone; exiting")
+      break
+    end
+
+    stats = puma_stats
+    worker = booted_workers(stats).find {|candidate| candidate['pid'].to_i == selected_pid}
+
+    unless worker
+      CDO.log.warn("#{LOG_PREFIX} selected Puma worker pid=#{selected_pid} is no longer in stats; exiting")
+      break
+    end
+
+    sample_time = Time.now.utc
+    row = {
+      'timestamp_utc' => sample_time.iso8601,
+      'hostname' => Socket.gethostname,
+      'rack_env' => CDO.rack_env.to_s,
+      'sample_number' => sample_number,
+      'interval_minutes' => interval_minutes,
+      'selected_pid' => selected_pid,
+      'puma_worker_index' => worker['index'],
+      'puma_worker_started_at' => worker['started_at'],
+      'puma_worker_last_checkin' => worker['last_checkin'],
+      'puma_requests_count' => worker['requests_count'],
+      'puma_running' => worker['running'],
+      'puma_backlog' => worker['backlog'],
+      'puma_pool_capacity' => worker['pool_capacity'],
+      'puma_max_threads' => worker['max_threads']
+    }
+
+    begin
+      stat = File.read("/proc/#{selected_pid}/stat").chomp
+      stat_rest = stat.match(/\A\d+ \(.*\) [A-Za-z] (.*)\z/)&.[](1)
+      stat_fields = stat_rest&.split
+
+      if stat_fields
+        row['proc_minor_faults'] = stat_fields[6].to_i
+        row['proc_major_faults'] = stat_fields[8].to_i
+      else
+        CDO.log.warn("#{LOG_PREFIX} could not parse /proc/#{selected_pid}/stat: #{stat[0, 200].inspect}")
+      end
+    rescue Errno::ENOENT, Errno::EACCES => exception
+      CDO.log.warn("#{LOG_PREFIX} could not read /proc/#{selected_pid}/stat: #{exception.class}: #{exception.message}")
+    end
+
+    row.merge!(read_proc_values("/proc/#{selected_pid}/status", PROC_STATUS_FIELDS))
+    row.merge!(read_proc_values("/proc/#{selected_pid}/smaps_rollup", SMAPS_ROLLUP_FIELDS))
+
+    if previous_sample_time
+      sample_elapsed_seconds = sample_time - previous_sample_time
+      row['sample_elapsed_seconds'] = sample_elapsed_seconds.round(3)
+
+      if row['proc_minor_faults'] && previous_minor_faults
+        minor_faults_delta = row['proc_minor_faults'] - previous_minor_faults
+        row['proc_minor_faults_delta'] = minor_faults_delta
+        row['proc_minor_faults_per_second'] = (minor_faults_delta / sample_elapsed_seconds).round(3)
+      end
+
+      if row['proc_major_faults'] && previous_major_faults
+        row['proc_major_faults_delta'] = row['proc_major_faults'] - previous_major_faults
+      end
+
+      if row['smaps_pss_kb'] && previous_pss_kb
+        row['smaps_pss_delta_kb'] = row['smaps_pss_kb'] - previous_pss_kb
+      end
+
+      if row['smaps_anonymous_kb'] && previous_anonymous_kb
+        row['smaps_anonymous_delta_kb'] = row['smaps_anonymous_kb'] - previous_anonymous_kb
+      end
+
+      if row['smaps_private_dirty_kb'] && previous_private_dirty_kb
+        private_dirty_delta_kb = row['smaps_private_dirty_kb'] - previous_private_dirty_kb
+        row['smaps_private_dirty_delta_kb'] = private_dirty_delta_kb
+        row['smaps_private_dirty_kb_per_second'] = (private_dirty_delta_kb / sample_elapsed_seconds).round(3)
+      end
+    end
+
+    begin
+      rbtrace_bin = Gem.bin_path('rbtrace', 'rbtrace')
+      rbtrace_command = [RbConfig.ruby, rbtrace_bin, '-p', selected_pid.to_s, '--memory']
+      rbtrace_started = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+      stdout, stderr, status = capture_command(
+        rbtrace_command,
+        timeout_seconds: RBTRACE_TIMEOUT_SECONDS
+      )
+      rbtrace_duration = Process.clock_gettime(Process::CLOCK_MONOTONIC) - rbtrace_started
+
+      FileUtils.mkdir_p(RAW_DIR)
+      File.chmod(0o700, RAW_DIR)
+
+      raw_path = File.join(
+        RAW_DIR,
+        "rbtrace-memory-#{selected_pid}-sample-#{sample_number}-#{sample_time.strftime('%Y%m%dT%H%M%SZ')}.txt"
+      )
+
+      File.write(
+        raw_path,
+        [
+          "timestamp_utc=#{sample_time.iso8601}",
+          "pid=#{selected_pid}",
+          "sample_number=#{sample_number}",
+          "exitstatus=#{status.exitstatus}",
+          "duration_seconds=#{rbtrace_duration.round(3)}",
+          '',
+          '=== stdout ===',
+          stdout,
+          '',
+          '=== stderr ===',
+          stderr
+        ].join("\n")
+      )
+      File.chmod(0o600, raw_path)
+
+      stdout.each_line do |line|
+        next unless line.strip =~ /\A([A-Za-z][A-Za-z0-9_]*):\s+(-?\d+(?:\.\d+)?)/
+
+        rbtrace_key = Regexp.last_match(1)
+        rbtrace_value = Regexp.last_match(2).include?('.') ? Regexp.last_match(2).to_f : Regexp.last_match(2).to_i
+        gc_key = rbtrace_key.downcase
+        object_key = rbtrace_key.upcase
+
+        if GC_STAT_KEYS.include?(gc_key)
+          row["gc_#{gc_key}"] = rbtrace_value
+        elsif OBJECT_STAT_KEYS.include?(object_key)
+          row["object_#{object_key.downcase}"] = rbtrace_value
+        end
+      end
+
+      row['rbtrace_success'] = status.success? ? 'true' : 'false'
+      row['rbtrace_exitstatus'] = status.exitstatus
+      row['rbtrace_duration_seconds'] = rbtrace_duration.round(3)
+      row['raw_rbtrace_output_path'] = raw_path
+
+      unless status.success?
+        row['error'] = "rbtrace failed: #{stderr.strip}"
+        CDO.log.error(
+          "#{LOG_PREFIX} rbtrace failed pid=#{selected_pid} status=#{status.exitstatus} " \
+            "stderr=#{stderr.strip}"
+        )
+      end
+    rescue => exception
+      row['rbtrace_success'] = 'false'
+      row['error'] = "#{exception.class}: #{exception.message}"
+      CDO.log.error("#{LOG_PREFIX} rbtrace sample failed pid=#{selected_pid}: #{row['error']}")
+    end
+
+    FileUtils.mkdir_p(File.dirname(CSV_PATH))
+
+    File.open(CSV_PATH, File::RDWR | File::CREAT, 0o600) do |file|
+      file.flock(File::LOCK_EX)
+      write_headers = file.stat.zero?
+      file.seek(0, IO::SEEK_END)
+      csv = CSV.new(file, headers: CSV_FIELDS, write_headers: write_headers)
+      csv << CSV_FIELDS.map {|field| row[field]}
+    end
+
+    CDO.log.info(
+      "#{LOG_PREFIX} sample=#{sample_number} pid=#{selected_pid} " \
+        "worker_index=#{row['puma_worker_index']} " \
+        "rss_kb=#{row['proc_vm_rss_kb']} pss_kb=#{row['smaps_pss_kb']} " \
+        "private_dirty_kb=#{row['smaps_private_dirty_kb']} " \
+        "minor_faults_delta=#{row['proc_minor_faults_delta']} " \
+        "heap_live_slots=#{row['gc_heap_live_slots']} " \
+        "old_objects=#{row['gc_old_objects']} " \
+        "object_total=#{row['object_total']} " \
+        "requests_count=#{row['puma_requests_count']} csv=#{CSV_PATH}"
+    )
+
+    previous_sample_time = sample_time
+    previous_minor_faults = row['proc_minor_faults']
+    previous_major_faults = row['proc_major_faults']
+    previous_pss_kb = row['smaps_pss_kb']
+    previous_anonymous_kb = row['smaps_anonymous_kb']
+    previous_private_dirty_kb = row['smaps_private_dirty_kb']
+
+    CDO.log.info("#{LOG_PREFIX} sleeping #{interval_seconds}s before next sample")
+    sleep(interval_seconds)
+  end
+rescue Interrupt
+  CDO.log.warn("#{LOG_PREFIX} interrupted; exiting")
+rescue => exception
+  CDO.log.error("#{LOG_PREFIX} failed: #{exception.class}: #{exception.message}")
+  exit 1
+end
