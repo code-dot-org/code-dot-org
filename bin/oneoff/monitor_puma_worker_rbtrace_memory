@@ -6,11 +6,84 @@
 # pumactl_admin, /proc, and rbtrace --memory. This script never runs rbtrace
 # heapdump and never enables ObjectSpace allocation tracing.
 #
-# Usage:
-#   bundle exec ruby bin/oneoff/monitor_puma_worker_rbtrace_memory
-#   bundle exec ruby bin/oneoff/monitor_puma_worker_rbtrace_memory 5
+# Operator notes:
+# 1. In the EC2 Auto Scaling Group, move one production instance to Standby and
+#    allow the ASG to replace it with a new instance. This gives us a canary
+#    host without reducing fleet capacity.
+# 2. On the standby instance, temporarily add rbtrace to the app bundle and load
+#    it inside Puma child workers. Do not commit this as permanent monitoring.
 #
-# The optional argument is the sample interval in minutes. Default: 30.
+#      git apply <<'PATCH'
+#      diff --git a/dashboard/config/puma.rb b/dashboard/config/puma.rb
+#      index 3039d45c0a3..2136b9bdbcb 100644
+#      --- a/dashboard/config/puma.rb
+#      +++ b/dashboard/config/puma.rb
+#      @@ -35,6 +35,7 @@ before_fork do
+#       end
+#
+#       before_worker_boot do |_index|
+#      +  require 'rbtrace'
+#         Cdo::AppServerHooks.before_worker_boot(host: CDO.dashboard_hostname)
+#         ActiveRecord::Base.establish_connection
+#       end
+#      diff --git a/Gemfile b/Gemfile
+#      index ae0f9b527a5..edb4c958e0f 100644
+#      --- a/Gemfile
+#      +++ b/Gemfile
+#      @@ -4,6 +4,8 @@ ruby '>= 3.0', '< 3.5'
+#       # after pushing this fuzzy match thru chef, commit to make this be:
+#       # ruby '3.3.4'
+#
+#      +gem "rbtrace", require: false
+#      +
+#       # Ruby 2.7 no longer includes some libraries by default; install
+#       # the ones we need here
+#       # see https://www.ruby-lang.org/en/news/2019/12/25/ruby-2-7-0-released/
+#      PATCH
+#
+# 3. Install the temporary gem and restart dashboard:
+#
+#      BUNDLE_FROZEN=false bundle install
+#      sudo systemctl restart dashboard
+#
+# 4. Wait for Puma to boot, then check the service locally:
+#
+#      curl localhost/health_check
+#
+#    It should print "healthy!".
+# 5. Verify that rbtrace can attach to a Puma child worker. Use a child worker
+#    PID, not the Puma master PID. You can find child worker PIDs with
+#    `ps -ef | grep dashboard`, or in `top` by pressing `c` to show full
+#    commands and `V` for tree view:
+#
+#      bundle exec rbtrace -p [puma-child-pid] --memory
+#
+# 6. Enable scale-in protection on the canary instance so the ASG does not
+#    terminate it as its local traffic pattern changes.
+# 7. Move the instance back to InService.
+# 8. Start this monitor in tmux or screen, so it survives an SSH disconnect.
+#    By default, output is written under dashboard/log/rbtrace. The script adds
+#    its UTC start timestamp to the CSV filename, so each run gets a fresh file.
+#    A 10 minute interval is a good default for a 3-5 hour run:
+#
+#      tmux new -s rbtrace-monitor
+#      # or: screen -S rbtrace-monitor
+#
+#      bundle exec bin/oneoff/monitor_puma_worker_rbtrace_memory 10
+#
+#    To choose a different base CSV path, set RBTRACE_MONITOR_CSV. The script
+#    still adds the start timestamp before the file extension:
+#
+#      RBTRACE_MONITOR_CSV=dashboard/log/rbtrace/puma_worker_rbtrace_memory_load.csv \
+#        bundle exec bin/oneoff/monitor_puma_worker_rbtrace_memory 10
+#
+# Output:
+#   dashboard/log/rbtrace/puma_worker_rbtrace_memory_<timestamp>.csv by default
+#   RBTRACE_MONITOR_CSV with _<timestamp> inserted before the file extension
+#   dashboard/log/rbtrace/raw/rbtrace-memory-<pid>-sample-<n>-<timestamp>.txt
+#
+# The optional positional argument is the sample interval in minutes.
+# Default: 30.
 
 APP_ROOT = File.expand_path('../..', __dir__)
 Dir.chdir(APP_ROOT)
@@ -32,12 +105,26 @@ require 'time'
 LOG_PREFIX = '[puma-rbtrace-memory]'.freeze
 
 DEFAULT_INTERVAL_MINUTES = 30.0
+MONITOR_STARTED_AT = Time.now.utc
+MONITOR_STARTED_AT_UTC = MONITOR_STARTED_AT.iso8601
+MONITOR_STARTED_AT_FOR_FILENAME = MONITOR_STARTED_AT.strftime('%Y%m%dT%H%M%SZ').freeze
 
-OUT_DIR = ENV.fetch('RBTRACE_MONITOR_DIR', '/var/tmp/rbtrace')
+OUT_DIR = ENV.fetch('RBTRACE_MONITOR_DIR', dashboard_dir('log', 'rbtrace'))
 RAW_DIR = File.join(OUT_DIR, 'raw')
-CSV_PATH = ENV.fetch(
+csv_base_path = ENV.fetch(
   'RBTRACE_MONITOR_CSV',
   File.join(OUT_DIR, 'puma_worker_rbtrace_memory.csv')
+)
+csv_extension = File.extname(csv_base_path)
+csv_basename =
+  if csv_extension.empty?
+    File.basename(csv_base_path)
+  else
+    File.basename(csv_base_path, csv_extension)
+  end
+CSV_PATH = File.join(
+  File.dirname(csv_base_path),
+  "#{csv_basename}_#{MONITOR_STARTED_AT_FOR_FILENAME}#{csv_extension}"
 )
 
 PUMACTL_ADMIN = ENV.fetch(
@@ -48,6 +135,8 @@ PUMACTL_ADMIN = ENV.fetch(
 PUMACTL_TIMEOUT_SECONDS = Integer(ENV.fetch('RBTRACE_PUMACTL_TIMEOUT_SECONDS', '20'))
 RBTRACE_TIMEOUT_SECONDS = Integer(ENV.fetch('RBTRACE_TIMEOUT_SECONDS', '45'))
 
+# Field definitions:
+#   https://puma.io/puma/file.stats.html
 PUMACTL_STATS_QUERY = [
   '{',
   'phase: phase, ',
@@ -69,6 +158,8 @@ PUMACTL_STATS_QUERY = [
   '}'
 ].join.freeze
 
+# Field definitions:
+#   https://man7.org/linux/man-pages/man5/proc_pid_status.5.html
 PROC_STATUS_FIELDS = {
   'PPid' => 'proc_ppid',
   'VmRSS' => 'proc_vm_rss_kb',
@@ -82,6 +173,8 @@ PROC_STATUS_FIELDS = {
   'Threads' => 'proc_threads'
 }.freeze
 
+# Field definitions:
+#   https://man7.org/linux/man-pages/man5/proc_pid_smaps.5.html
 SMAPS_ROLLUP_FIELDS = {
   'Rss' => 'smaps_rss_kb',
   'Pss' => 'smaps_pss_kb',
@@ -95,6 +188,9 @@ SMAPS_ROLLUP_FIELDS = {
   'SwapPss' => 'smaps_swap_pss_kb'
 }.freeze
 
+# rbtrace --memory prints GC.stat values here.
+# Field definitions:
+#   https://docs.ruby-lang.org/en/3.2/GC.html#method-c-stat
 GC_STAT_KEYS = %w[
   count
   time
@@ -127,6 +223,9 @@ GC_STAT_KEYS = %w[
   oldmalloc_increase_bytes_limit
 ].freeze
 
+# rbtrace --memory prints ObjectSpace.count_objects values here.
+# Field definitions:
+#   https://docs.ruby-lang.org/en/3.2/ObjectSpace.html#method-c-count_objects
 OBJECT_STAT_KEYS = %w[
   TOTAL
   FREE
@@ -152,6 +251,7 @@ OBJECT_STAT_KEYS = %w[
 
 CSV_FIELDS = %w[
   timestamp_utc
+  monitor_started_at_utc
   hostname
   rack_env
   sample_number
@@ -162,6 +262,8 @@ CSV_FIELDS = %w[
   puma_worker_started_at
   puma_worker_last_checkin
   puma_requests_count
+  puma_requests_count_delta
+  puma_requests_per_second
   puma_running
   puma_backlog
   puma_pool_capacity
@@ -172,36 +274,47 @@ CSV_FIELDS = %w[
   proc_minor_faults_delta
   proc_major_faults_delta
   proc_minor_faults_per_second
+  proc_minor_faults_per_request
   proc_vm_rss_kb
+  proc_vm_rss_delta_kb
+  proc_vm_rss_kb_per_request
   proc_vm_hwm_kb
   proc_vm_size_kb
   proc_vm_data_kb
   proc_vm_swap_kb
   proc_rss_anon_kb
+  proc_rss_anon_delta_kb
   proc_rss_file_kb
   proc_rss_shmem_kb
   proc_threads
   smaps_rss_kb
   smaps_pss_kb
   smaps_pss_delta_kb
+  smaps_pss_kb_per_request
   smaps_anonymous_kb
   smaps_anonymous_delta_kb
+  smaps_anonymous_kb_per_request
   smaps_anon_huge_pages_kb
   smaps_private_clean_kb
   smaps_private_dirty_kb
   smaps_private_dirty_delta_kb
   smaps_private_dirty_kb_per_second
+  smaps_private_dirty_kb_per_request
   smaps_shared_clean_kb
   smaps_shared_dirty_kb
+  smaps_shared_dirty_delta_kb
+  smaps_shared_dirty_kb_per_request
   smaps_swap_kb
   smaps_swap_pss_kb
   gc_count
+  gc_count_delta
   gc_time
   gc_heap_allocated_pages
   gc_heap_sorted_length
   gc_heap_allocatable_pages
   gc_heap_available_slots
   gc_heap_live_slots
+  gc_heap_live_slots_delta
   gc_heap_free_slots
   gc_heap_final_slots
   gc_heap_marked_slots
@@ -210,17 +323,22 @@ CSV_FIELDS = %w[
   gc_total_allocated_pages
   gc_total_freed_pages
   gc_total_allocated_objects
+  gc_total_allocated_objects_delta
   gc_total_freed_objects
+  gc_total_freed_objects_delta
   gc_malloc_increase_bytes
   gc_malloc_increase_bytes_limit
   gc_minor_gc_count
+  gc_minor_gc_count_delta
   gc_major_gc_count
+  gc_major_gc_count_delta
   gc_compact_count
   gc_read_barrier_faults
   gc_total_moved_objects
   gc_remembered_wb_unprotected_objects
   gc_remembered_wb_unprotected_objects_limit
   gc_old_objects
+  gc_old_objects_delta
   gc_old_objects_limit
   gc_oldmalloc_increase_bytes
   gc_oldmalloc_increase_bytes_limit
@@ -386,11 +504,22 @@ begin
 
   sample_number = 0
   previous_sample_time = nil
+  previous_requests_count = nil
   previous_minor_faults = nil
   previous_major_faults = nil
+  previous_rss_kb = nil
+  previous_rss_anon_kb = nil
   previous_pss_kb = nil
   previous_anonymous_kb = nil
   previous_private_dirty_kb = nil
+  previous_shared_dirty_kb = nil
+  previous_gc_count = nil
+  previous_heap_live_slots = nil
+  previous_total_allocated_objects = nil
+  previous_total_freed_objects = nil
+  previous_minor_gc_count = nil
+  previous_major_gc_count = nil
+  previous_old_objects = nil
 
   loop do
     sample_number += 1
@@ -411,6 +540,7 @@ begin
     sample_time = Time.now.utc
     row = {
       'timestamp_utc' => sample_time.iso8601,
+      'monitor_started_at_utc' => MONITOR_STARTED_AT_UTC,
       'hostname' => Socket.gethostname,
       'rack_env' => CDO.rack_env.to_s,
       'sample_number' => sample_number,
@@ -448,28 +578,57 @@ begin
       sample_elapsed_seconds = sample_time - previous_sample_time
       row['sample_elapsed_seconds'] = sample_elapsed_seconds.round(3)
 
+      requests_delta = nil
+      if row['puma_requests_count'] && previous_requests_count
+        requests_delta = row['puma_requests_count'].to_i - previous_requests_count
+        row['puma_requests_count_delta'] = requests_delta
+        row['puma_requests_per_second'] = (requests_delta / sample_elapsed_seconds).round(3)
+      end
+
       if row['proc_minor_faults'] && previous_minor_faults
         minor_faults_delta = row['proc_minor_faults'] - previous_minor_faults
         row['proc_minor_faults_delta'] = minor_faults_delta
         row['proc_minor_faults_per_second'] = (minor_faults_delta / sample_elapsed_seconds).round(3)
+        row['proc_minor_faults_per_request'] = (minor_faults_delta.to_f / requests_delta).round(3) if requests_delta&.positive?
       end
 
       if row['proc_major_faults'] && previous_major_faults
         row['proc_major_faults_delta'] = row['proc_major_faults'] - previous_major_faults
       end
 
+      if row['proc_vm_rss_kb'] && previous_rss_kb
+        rss_delta_kb = row['proc_vm_rss_kb'] - previous_rss_kb
+        row['proc_vm_rss_delta_kb'] = rss_delta_kb
+        row['proc_vm_rss_kb_per_request'] = (rss_delta_kb.to_f / requests_delta).round(3) if requests_delta&.positive?
+      end
+
+      if row['proc_rss_anon_kb'] && previous_rss_anon_kb
+        row['proc_rss_anon_delta_kb'] = row['proc_rss_anon_kb'] - previous_rss_anon_kb
+      end
+
       if row['smaps_pss_kb'] && previous_pss_kb
-        row['smaps_pss_delta_kb'] = row['smaps_pss_kb'] - previous_pss_kb
+        pss_delta_kb = row['smaps_pss_kb'] - previous_pss_kb
+        row['smaps_pss_delta_kb'] = pss_delta_kb
+        row['smaps_pss_kb_per_request'] = (pss_delta_kb.to_f / requests_delta).round(3) if requests_delta&.positive?
       end
 
       if row['smaps_anonymous_kb'] && previous_anonymous_kb
-        row['smaps_anonymous_delta_kb'] = row['smaps_anonymous_kb'] - previous_anonymous_kb
+        anonymous_delta_kb = row['smaps_anonymous_kb'] - previous_anonymous_kb
+        row['smaps_anonymous_delta_kb'] = anonymous_delta_kb
+        row['smaps_anonymous_kb_per_request'] = (anonymous_delta_kb.to_f / requests_delta).round(3) if requests_delta&.positive?
       end
 
       if row['smaps_private_dirty_kb'] && previous_private_dirty_kb
         private_dirty_delta_kb = row['smaps_private_dirty_kb'] - previous_private_dirty_kb
         row['smaps_private_dirty_delta_kb'] = private_dirty_delta_kb
         row['smaps_private_dirty_kb_per_second'] = (private_dirty_delta_kb / sample_elapsed_seconds).round(3)
+        row['smaps_private_dirty_kb_per_request'] = (private_dirty_delta_kb.to_f / requests_delta).round(3) if requests_delta&.positive?
+      end
+
+      if row['smaps_shared_dirty_kb'] && previous_shared_dirty_kb
+        shared_dirty_delta_kb = row['smaps_shared_dirty_kb'] - previous_shared_dirty_kb
+        row['smaps_shared_dirty_delta_kb'] = shared_dirty_delta_kb
+        row['smaps_shared_dirty_kb_per_request'] = (shared_dirty_delta_kb.to_f / requests_delta).round(3) if requests_delta&.positive?
       end
     end
 
@@ -529,6 +688,32 @@ begin
       row['rbtrace_duration_seconds'] = rbtrace_duration.round(3)
       row['raw_rbtrace_output_path'] = raw_path
 
+      if previous_sample_time
+        row['gc_count_delta'] = row['gc_count'] - previous_gc_count if row['gc_count'] && previous_gc_count
+
+        if row['gc_heap_live_slots'] && previous_heap_live_slots
+          row['gc_heap_live_slots_delta'] = row['gc_heap_live_slots'] - previous_heap_live_slots
+        end
+
+        if row['gc_total_allocated_objects'] && previous_total_allocated_objects
+          row['gc_total_allocated_objects_delta'] = row['gc_total_allocated_objects'] - previous_total_allocated_objects
+        end
+
+        if row['gc_total_freed_objects'] && previous_total_freed_objects
+          row['gc_total_freed_objects_delta'] = row['gc_total_freed_objects'] - previous_total_freed_objects
+        end
+
+        if row['gc_minor_gc_count'] && previous_minor_gc_count
+          row['gc_minor_gc_count_delta'] = row['gc_minor_gc_count'] - previous_minor_gc_count
+        end
+
+        if row['gc_major_gc_count'] && previous_major_gc_count
+          row['gc_major_gc_count_delta'] = row['gc_major_gc_count'] - previous_major_gc_count
+        end
+
+        row['gc_old_objects_delta'] = row['gc_old_objects'] - previous_old_objects if row['gc_old_objects'] && previous_old_objects
+      end
+
       unless status.success?
         row['error'] = "rbtrace failed: #{stderr.strip}"
         CDO.log.error(
@@ -565,11 +750,22 @@ begin
     )
 
     previous_sample_time = sample_time
+    previous_requests_count = row['puma_requests_count'].to_i if row['puma_requests_count']
     previous_minor_faults = row['proc_minor_faults']
     previous_major_faults = row['proc_major_faults']
+    previous_rss_kb = row['proc_vm_rss_kb']
+    previous_rss_anon_kb = row['proc_rss_anon_kb']
     previous_pss_kb = row['smaps_pss_kb']
     previous_anonymous_kb = row['smaps_anonymous_kb']
     previous_private_dirty_kb = row['smaps_private_dirty_kb']
+    previous_shared_dirty_kb = row['smaps_shared_dirty_kb']
+    previous_gc_count = row['gc_count']
+    previous_heap_live_slots = row['gc_heap_live_slots']
+    previous_total_allocated_objects = row['gc_total_allocated_objects']
+    previous_total_freed_objects = row['gc_total_freed_objects']
+    previous_minor_gc_count = row['gc_minor_gc_count']
+    previous_major_gc_count = row['gc_major_gc_count']
+    previous_old_objects = row['gc_old_objects']
 
     CDO.log.info("#{LOG_PREFIX} sleeping #{interval_seconds}s before next sample")
     sleep(interval_seconds)
