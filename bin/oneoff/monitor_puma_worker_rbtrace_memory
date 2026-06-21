@@ -3,8 +3,13 @@
 # Temporary production diagnostic for one canary host.
 #
 # Pick one booted Puma child worker at startup, then sample that same PID with
-# pumactl_admin, /proc, and rbtrace --memory. This script never runs rbtrace
-# heapdump and never enables ObjectSpace allocation tracing.
+# pumactl_admin, /proc, and rbtrace eval. This script does not run rbtrace
+# --memory, heapdump, or ObjectSpace allocation tracing.
+#
+# Do not change this back to rbtrace --memory for a long-running monitor.
+# rbtrace --memory evaluates memory_report.rb inside the target process, and
+# that file forks:
+#   https://github.com/tmm1/rbtrace/blob/master/lib/rbtrace/memory_report.rb
 #
 # Operator notes:
 # 1. In the EC2 Auto Scaling Group, move one production instance to Standby and
@@ -52,11 +57,12 @@
 #
 #    It should print "healthy!".
 # 5. Verify that rbtrace can attach to a Puma child worker. Use a child worker
-#    PID, not the Puma master PID. You can find child worker PIDs with
+#    PID, not the Puma master PID. Do not use rbtrace --memory for this check.
+#    You can find child worker PIDs with
 #    `ps -ef | grep dashboard`, or in `top` by pressing `c` to show full
 #    commands and `V` for tree view:
 #
-#      bundle exec rbtrace -p [puma-child-pid] --memory
+#      bundle exec rbtrace -p [puma-child-pid] --eval 'GC.stat[:count]'
 #
 # 6. Enable scale-in protection on the canary instance so the ASG does not
 #    terminate it as its local traffic pattern changes.
@@ -188,7 +194,7 @@ SMAPS_ROLLUP_FIELDS = {
   'SwapPss' => 'smaps_swap_pss_kb'
 }.freeze
 
-# rbtrace --memory prints GC.stat values here.
+# rbtrace eval captures GC.stat values here.
 # Field definitions:
 #   https://docs.ruby-lang.org/en/3.2/GC.html#method-c-stat
 GC_STAT_KEYS = %w[
@@ -223,7 +229,7 @@ GC_STAT_KEYS = %w[
   oldmalloc_increase_bytes_limit
 ].freeze
 
-# rbtrace --memory prints ObjectSpace.count_objects values here.
+# rbtrace eval captures ObjectSpace.count_objects values here.
 # Field definitions:
 #   https://docs.ruby-lang.org/en/3.2/ObjectSpace.html#method-c-count_objects
 OBJECT_STAT_KEYS = %w[
@@ -268,6 +274,8 @@ CSV_FIELDS = %w[
   puma_backlog
   puma_pool_capacity
   puma_max_threads
+  proc_child_count
+  proc_child_pids
   proc_ppid
   proc_minor_faults
   proc_major_faults
@@ -416,6 +424,13 @@ rescue Errno::EPERM
   true
 end
 
+def child_pids(pid)
+  File.read("/proc/#{pid}/task/#{pid}/children").split.map(&:to_i)
+rescue Errno::ENOENT, Errno::EACCES => exception
+  CDO.log.warn("#{LOG_PREFIX} could not read child pids for #{pid}: #{exception.class}: #{exception.message}")
+  []
+end
+
 def puma_stats
   command = [
     RbConfig.ruby,
@@ -493,6 +508,14 @@ begin
   workers = booted_workers(initial_stats)
   raise 'pumactl_admin stats returned no booted Puma child workers' if workers.empty?
 
+  workers = workers.reject do |worker|
+    pid = worker['pid'].to_i
+    worker_child_pids = child_pids(pid)
+    CDO.log.warn("#{LOG_PREFIX} skipping pid=#{pid}; already has child pids=#{worker_child_pids.join(',')}") if worker_child_pids.any?
+    worker_child_pids.any?
+  end
+  raise 'no booted Puma child workers without existing child processes' if workers.empty?
+
   selected_worker = workers.sample
   selected_pid = selected_worker['pid'].to_i
 
@@ -538,6 +561,8 @@ begin
     end
 
     sample_time = Time.now.utc
+    worker_child_pids_before = child_pids(selected_pid)
+    stop_after_sample = false
     row = {
       'timestamp_utc' => sample_time.iso8601,
       'monitor_started_at_utc' => MONITOR_STARTED_AT_UTC,
@@ -553,8 +578,17 @@ begin
       'puma_running' => worker['running'],
       'puma_backlog' => worker['backlog'],
       'puma_pool_capacity' => worker['pool_capacity'],
-      'puma_max_threads' => worker['max_threads']
+      'puma_max_threads' => worker['max_threads'],
+      'proc_child_count' => worker_child_pids_before.length,
+      'proc_child_pids' => worker_child_pids_before.join(' ')
     }
+
+    if worker_child_pids_before.any?
+      row['rbtrace_success'] = 'false'
+      row['error'] = "selected worker already has child pids=#{worker_child_pids_before.join(',')}"
+      CDO.log.error("#{LOG_PREFIX} #{row['error']}; exiting after writing sample")
+      stop_after_sample = true
+    end
 
     begin
       stat = File.read("/proc/#{selected_pid}/stat").chomp
@@ -632,99 +666,127 @@ begin
       end
     end
 
-    begin
-      rbtrace_bin = Gem.bin_path('rbtrace', 'rbtrace')
-      rbtrace_command = [RbConfig.ruby, rbtrace_bin, '-p', selected_pid.to_s, '--memory']
-      rbtrace_started = Process.clock_gettime(Process::CLOCK_MONOTONIC)
-      stdout, stderr, status = capture_command(
-        rbtrace_command,
-        timeout_seconds: RBTRACE_TIMEOUT_SECONDS
-      )
-      rbtrace_duration = Process.clock_gettime(Process::CLOCK_MONOTONIC) - rbtrace_started
+    unless stop_after_sample
+      begin
+        FileUtils.mkdir_p(RAW_DIR)
+        File.chmod(0o700, RAW_DIR)
 
-      FileUtils.mkdir_p(RAW_DIR)
-      File.chmod(0o700, RAW_DIR)
-
-      raw_path = File.join(
-        RAW_DIR,
-        "rbtrace-memory-#{selected_pid}-sample-#{sample_number}-#{sample_time.strftime('%Y%m%dT%H%M%SZ')}.txt"
-      )
-
-      File.write(
-        raw_path,
-        [
-          "timestamp_utc=#{sample_time.iso8601}",
-          "pid=#{selected_pid}",
-          "sample_number=#{sample_number}",
-          "exitstatus=#{status.exitstatus}",
-          "duration_seconds=#{rbtrace_duration.round(3)}",
-          '',
-          '=== stdout ===',
-          stdout,
-          '',
-          '=== stderr ===',
-          stderr
-        ].join("\n")
-      )
-      File.chmod(0o600, raw_path)
-
-      stdout.each_line do |line|
-        next unless line.strip =~ /\A([A-Za-z][A-Za-z0-9_]*):\s+(-?\d+(?:\.\d+)?)/
-
-        rbtrace_key = Regexp.last_match(1)
-        rbtrace_value = Regexp.last_match(2).include?('.') ? Regexp.last_match(2).to_f : Regexp.last_match(2).to_i
-        gc_key = rbtrace_key.downcase
-        object_key = rbtrace_key.upcase
-
-        if GC_STAT_KEYS.include?(gc_key)
-          row["gc_#{gc_key}"] = rbtrace_value
-        elsif OBJECT_STAT_KEYS.include?(object_key)
-          row["object_#{object_key.downcase}"] = rbtrace_value
-        end
-      end
-
-      row['rbtrace_success'] = status.success? ? 'true' : 'false'
-      row['rbtrace_exitstatus'] = status.exitstatus
-      row['rbtrace_duration_seconds'] = rbtrace_duration.round(3)
-      row['raw_rbtrace_output_path'] = raw_path
-
-      if previous_sample_time
-        row['gc_count_delta'] = row['gc_count'] - previous_gc_count if row['gc_count'] && previous_gc_count
-
-        if row['gc_heap_live_slots'] && previous_heap_live_slots
-          row['gc_heap_live_slots_delta'] = row['gc_heap_live_slots'] - previous_heap_live_slots
-        end
-
-        if row['gc_total_allocated_objects'] && previous_total_allocated_objects
-          row['gc_total_allocated_objects_delta'] = row['gc_total_allocated_objects'] - previous_total_allocated_objects
-        end
-
-        if row['gc_total_freed_objects'] && previous_total_freed_objects
-          row['gc_total_freed_objects_delta'] = row['gc_total_freed_objects'] - previous_total_freed_objects
-        end
-
-        if row['gc_minor_gc_count'] && previous_minor_gc_count
-          row['gc_minor_gc_count_delta'] = row['gc_minor_gc_count'] - previous_minor_gc_count
-        end
-
-        if row['gc_major_gc_count'] && previous_major_gc_count
-          row['gc_major_gc_count_delta'] = row['gc_major_gc_count'] - previous_major_gc_count
-        end
-
-        row['gc_old_objects_delta'] = row['gc_old_objects'] - previous_old_objects if row['gc_old_objects'] && previous_old_objects
-      end
-
-      unless status.success?
-        row['error'] = "rbtrace failed: #{stderr.strip}"
-        CDO.log.error(
-          "#{LOG_PREFIX} rbtrace failed pid=#{selected_pid} status=#{status.exitstatus} " \
-            "stderr=#{stderr.strip}"
+        raw_path = File.join(
+          RAW_DIR,
+          "rbtrace-memory-#{selected_pid}-sample-#{sample_number}-#{sample_time.strftime('%Y%m%dT%H%M%SZ')}.txt"
         )
+        target_json_path = "#{raw_path}.json"
+
+        rbtrace_eval_code = [
+          "require 'json'",
+          "require 'objspace'",
+          "File.write(#{target_json_path.dump}, JSON.generate({gc: GC.stat, objects: ObjectSpace.count_objects}))"
+        ].join('; ')
+
+        rbtrace_bin = Gem.bin_path('rbtrace', 'rbtrace')
+        rbtrace_command = [RbConfig.ruby, rbtrace_bin, '-p', selected_pid.to_s, '--eval', rbtrace_eval_code]
+        rbtrace_started = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+        stdout, stderr, status = capture_command(
+          rbtrace_command,
+          timeout_seconds: RBTRACE_TIMEOUT_SECONDS
+        )
+        rbtrace_duration = Process.clock_gettime(Process::CLOCK_MONOTONIC) - rbtrace_started
+        target_json = File.exist?(target_json_path) ? File.read(target_json_path) : ''
+
+        File.write(
+          raw_path,
+          [
+            "timestamp_utc=#{sample_time.iso8601}",
+            "pid=#{selected_pid}",
+            "sample_number=#{sample_number}",
+            "exitstatus=#{status.exitstatus}",
+            "duration_seconds=#{rbtrace_duration.round(3)}",
+            '',
+            '=== stdout ===',
+            stdout,
+            '',
+            '=== stderr ===',
+            stderr,
+            '',
+            '=== target json ===',
+            target_json
+          ].join("\n")
+        )
+        File.chmod(0o600, raw_path)
+
+        if status.success?
+          raise "rbtrace eval did not write #{target_json_path}" if target_json.empty?
+
+          rbtrace_memory = JSON.parse(target_json)
+          gc_stats = rbtrace_memory.fetch('gc')
+          object_stats = rbtrace_memory.fetch('objects')
+
+          GC_STAT_KEYS.each do |gc_key|
+            row["gc_#{gc_key}"] = gc_stats[gc_key]
+          end
+
+          OBJECT_STAT_KEYS.each do |object_key|
+            row["object_#{object_key.downcase}"] = object_stats[object_key]
+          end
+        end
+
+        row['rbtrace_success'] = status.success? ? 'true' : 'false'
+        row['rbtrace_exitstatus'] = status.exitstatus
+        row['rbtrace_duration_seconds'] = rbtrace_duration.round(3)
+        row['raw_rbtrace_output_path'] = raw_path
+        FileUtils.rm_f(target_json_path)
+
+        if previous_sample_time
+          row['gc_count_delta'] = row['gc_count'] - previous_gc_count if row['gc_count'] && previous_gc_count
+
+          if row['gc_heap_live_slots'] && previous_heap_live_slots
+            row['gc_heap_live_slots_delta'] = row['gc_heap_live_slots'] - previous_heap_live_slots
+          end
+
+          if row['gc_total_allocated_objects'] && previous_total_allocated_objects
+            row['gc_total_allocated_objects_delta'] = row['gc_total_allocated_objects'] - previous_total_allocated_objects
+          end
+
+          if row['gc_total_freed_objects'] && previous_total_freed_objects
+            row['gc_total_freed_objects_delta'] = row['gc_total_freed_objects'] - previous_total_freed_objects
+          end
+
+          if row['gc_minor_gc_count'] && previous_minor_gc_count
+            row['gc_minor_gc_count_delta'] = row['gc_minor_gc_count'] - previous_minor_gc_count
+          end
+
+          if row['gc_major_gc_count'] && previous_major_gc_count
+            row['gc_major_gc_count_delta'] = row['gc_major_gc_count'] - previous_major_gc_count
+          end
+
+          row['gc_old_objects_delta'] = row['gc_old_objects'] - previous_old_objects if row['gc_old_objects'] && previous_old_objects
+        end
+
+        unless status.success?
+          row['error'] = "rbtrace failed: #{stderr.strip}"
+          CDO.log.error(
+            "#{LOG_PREFIX} rbtrace failed pid=#{selected_pid} status=#{status.exitstatus} " \
+              "stderr=#{stderr.strip}"
+          )
+        end
+      rescue => exception
+        FileUtils.rm_f(target_json_path) if defined?(target_json_path) && target_json_path
+        row['rbtrace_success'] = 'false'
+        row['error'] = "#{exception.class}: #{exception.message}"
+        CDO.log.error("#{LOG_PREFIX} rbtrace sample failed pid=#{selected_pid}: #{row['error']}")
       end
-    rescue => exception
-      row['rbtrace_success'] = 'false'
-      row['error'] = "#{exception.class}: #{exception.message}"
-      CDO.log.error("#{LOG_PREFIX} rbtrace sample failed pid=#{selected_pid}: #{row['error']}")
+    end
+
+    worker_child_pids_after = child_pids(selected_pid)
+    new_child_pids = worker_child_pids_after - worker_child_pids_before
+
+    if new_child_pids.any?
+      row['proc_child_count'] = worker_child_pids_after.length
+      row['proc_child_pids'] = worker_child_pids_after.join(' ')
+      child_error = "new child pids appeared under selected worker: #{new_child_pids.join(',')}"
+      row['error'] = [row['error'], child_error].compact.join('; ')
+      CDO.log.error("#{LOG_PREFIX} #{child_error}; exiting after writing sample")
+      stop_after_sample = true
     end
 
     FileUtils.mkdir_p(File.dirname(CSV_PATH))
@@ -748,6 +810,8 @@ begin
         "object_total=#{row['object_total']} " \
         "requests_count=#{row['puma_requests_count']} csv=#{CSV_PATH}"
     )
+
+    break if stop_after_sample
 
     previous_sample_time = sample_time
     previous_requests_count = row['puma_requests_count'].to_i if row['puma_requests_count']
