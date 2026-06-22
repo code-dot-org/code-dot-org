@@ -474,12 +474,13 @@ export default function ReactFlowCanvas({
   useEffect(() => {
     if (!keyboardMovingAnchorId) return;
     const stillFocused =
+      nodeOrEdgeFocused &&
       lastFocusedEntry?.type === 'node' &&
       lastFocusedEntry.id === keyboardMovingAnchorId;
     if (!stillFocused) {
       setKeyboardMovingAnchorId(null);
     }
-  }, [lastFocusedEntry, keyboardMovingAnchorId]);
+  }, [lastFocusedEntry, keyboardMovingAnchorId, nodeOrEdgeFocused]);
 
   // Close the toolbar when focus moves off the owning node/edge: to a
   // different node/edge, or out of the canvas entirely. Skips clearing
