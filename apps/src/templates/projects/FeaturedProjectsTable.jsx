@@ -1,4 +1,5 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import Link from '@code-dot-org/component-library/link';
 import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -83,32 +84,22 @@ const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
   const projectUrl = `/projects/${rowData.type}/${rowData.channel}/`;
   thumbnailUrl = getThumbnailUrl(thumbnailUrl, rowData.type);
   return (
-    <a
-      style={tableLayoutStyles.link}
-      href={projectUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <Link href={projectUrl} openInNewTab>
       <ImageWithStatus
         src={thumbnailUrl}
         width={THUMBNAIL_SIZE}
         wrapperStyle={styles.thumbnailWrapper}
       />
-    </a>
+    </Link>
   );
 };
 
 const nameFormatter = (projectName, {rowData}) => {
   const url = `/projects/${rowData.type}/${rowData.channel}/`;
   return (
-    <a
-      style={tableLayoutStyles.link}
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <Link href={url} openInNewTab size="s">
       {projectName}
-    </a>
+    </Link>
   );
 };
 
