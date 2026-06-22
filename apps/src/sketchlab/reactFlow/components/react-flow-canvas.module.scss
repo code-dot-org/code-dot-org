@@ -35,7 +35,13 @@ $handle-grab-buffer: 10px;
 
   // Focus outline for keyboard navigation, matching the component library pattern.
   // Group nodes are excluded — React Flow provides their focus indicator.
-  :global(.react-flow__node:not(.react-flow__node-group):focus-visible),
+  // Line anchors are excluded too — they get a focus ring on the handle dot
+  // itself below, not a square around the node.
+  :global(
+      .react-flow__node:not(.react-flow__node-group):not(
+          .react-flow__node-lineAnchor
+        ):focus-visible
+    ),
   :global(.react-flow__edge:focus-visible) {
     outline: 2px solid var(--borders-brand-teal-primary);
     outline-offset: 2px;
