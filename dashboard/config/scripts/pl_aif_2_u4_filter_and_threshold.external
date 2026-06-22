@@ -7,9 +7,9 @@ markdown <<MARKDOWN
 
 When you browse a website or app, filters help narrow down large lists of items.
 
-### But filters don’t just organize information. They also shape what feels easy to find and what gets overlooked.
+But filters don’t just organize information. They also shape what feels easy to find and what gets overlooked.
 
-## Two Websites, Same Goal
+## Two websites, same goal
 Below are two websites that sell similar products.
 Both allow users to filter results, but they do it differently.
 
@@ -26,11 +26,76 @@ Both allow users to filter results, but they do it differently.
 
 </div>
 
- 
 
-<img src="https://images.code.org/8450f6ede3493d945da1a84d3313bea4-image-1770049168398.png" alt="Two shopping websites with different filter options" width="650px" style="display:block; margin-left:auto; margin-right:auto; border-radius:10px;">
 
-<details style="background-color:#ececec; padding:12px; margin:18px auto; border:1px solid transparent; border-radius:8px; max-width:85%;">
+ <div style="display:flex; gap:40px; align-items:flex-start; justify-content:center;">
+
+  <!-- Website 1 -->
+  <div>
+    <h2 style="text-align:center; margin-top:0;">Website 1</h2>
+
+  <div style="border:1px solid #999; width:250px; background:white;">
+      <div style="padding:10px; border-bottom:1px solid #ddd;">
+        <strong>All Filters</strong>
+      </div>
+
+  <ul style="list-style:none; margin:0; padding:0;">
+        <li style="padding:8px; border-bottom:1px solid #eee;">Deals</li>
+        <li style="padding:8px; border-bottom:1px solid #eee;">New &amp; Top Rated</li>
+        <li style="padding:8px; border-bottom:1px solid #eee;">Category</li>
+        <li style="padding:8px; border-bottom:1px solid #eee;">Item Type</li>
+        <li style="padding:8px; border-bottom:1px solid #eee;">Size</li>
+        <li style="padding:8px; border-bottom:1px solid #eee;">Brand</li>
+        <li style="padding:8px; border-bottom:1px solid #eee;">Size Grouping</li>
+        <li style="padding:8px; border-bottom:1px solid #eee;">Color</li>
+        <li style="padding:8px; border-bottom:1px solid #eee;">Price</li>
+        <li style="padding:8px; border-bottom:1px solid #eee;">Guest Rating</li>
+        <li style="padding:8px; border-bottom:1px solid #eee;">Material</li>
+        <li style="padding:8px; border-bottom:1px solid #eee;">Pattern</li>
+        <li style="padding:8px;">Occasion</li>
+      </ul>
+
+  <div style="padding:10px; font-size:12px; border-top:1px solid #ddd;">
+        14,277 results for women's clothing
+      </div>
+
+  <div style="display:flex; justify-content:space-around; padding:10px; border-top:1px solid #ddd;">
+        <button>Clear</button>
+        <button>See Results</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Website 2 -->
+  <div>
+    <h2 style="text-align:center; margin-top:0;">Website 2</h2>
+
+  <div style="border:1px solid #999; width:300px; background:white;">
+      <div style="padding:10px; border-bottom:1px solid #ddd;">
+        <strong>All Filters</strong>
+      </div>
+
+  <ul style="list-style:none; margin:0; padding:0;">
+        <li style="padding:12px; border-bottom:1px solid #eee;">Size</li>
+        <li style="padding:12px; border-bottom:1px solid #eee;">Color</li>
+        <li style="padding:12px; border-bottom:1px solid #eee;">Brand</li>
+        <li style="padding:12px; border-bottom:1px solid #eee;">Price</li>
+        <li style="padding:12px; border-bottom:1px solid #eee;">Free Pickup</li>
+        <li style="padding:12px;">Availability</li>
+      </ul>
+
+  <div style="display:flex; justify-content:space-between; padding:10px; border-top:1px solid #ddd;">
+        <button>Clear All</button>
+        <button>View Results (7572)</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<br>
+
+<details style="background-color:#FFFFFF;padding:12px;margin-bottom:10px;border:1px solid #D9E3E5;border-radius:8px;box-shadow:2px 2px 8px rgba(0,0,0,0.06);">
   <summary style="font-size:1.4em; font-weight:bold;">🔍 Check your thinking</summary>
 
 <div style="margin-top:12px; line-height:140%;">
@@ -61,46 +126,24 @@ Both allow users to filter results, but they do it differently.
   </div>
 </details>
 
-
-<div style="background-color:#B7E0E5; border-radius:10px; padding:14px; margin:18px auto; max-width:85%;"> <p style="font-size:14pt; margin:0; line-height:135%;"><strong>Design tradeoff:</strong> More filters can help some users search precisely, but can make others feel lost or overloaded.</p> </div>
-
----
-
-
-## Example
-
-<div style="background:#f7f8fa; border-radius:12px; padding:16px; margin:18px auto; max-width:85%; display:flex; gap:18px; align-items:flex-start;">
-
-
-
-  <!-- Text content -->
- <div>
- <p style="font-size:14pt; margin-top:0;">
+ <p style="font-size:12pt; margin-top:0;">
       A user searching for <strong>Deals</strong> or <strong>Occasion</strong> may succeed on Website 1.
     </p>
 
-<p style="font-size:14pt;">
+<p style="font-size:12pt;">
       That same user may struggle on Website 2, not because the items don’t exist, but because the filters don’t.
     </p>
 
- <p style="font-size:14pt; margin-bottom:0;">
+ <p style="font-size:12pt; margin-bottom:0;">
       <strong>👉</strong> Filters don’t just show things, they also exclude things.
     </p>
-  </div>
-
-</div>
 
 
 
-## Key Terms
-
-<div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:center; margin-top:16px;"> <div style="background:#e4d7f0; border-radius:12px; padding:14px; width:360px; box-shadow:0 2px 8px rgba(0,0,0,0.1);"> <strong style="font-size:14pt;">Threshold</strong> <p style="font-size:14pt;"> A <strong>threshold</strong> is a cutoff value used to decide which items pass a filter. </p> <p style="font-size:14pt;"> <strong>Example:</strong> An art site only features artists with at least <strong>500 followers</strong>. The threshold is 500. </p> </div>
-
-<div style="background:#f7bfbf; border-radius:12px; padding:14px; width:360px; box-shadow:0 2px 8px rgba(0,0,0,0.1);"> <strong style="font-size:14pt;">Fallback value</strong> <p style="font-size:14pt;"> A <strong>fallback value</strong> is a default label or value used when data is missing or doesn’t match a category. </p> <p style="font-size:14pt;"> <strong>Example:</strong> If a user doesn’t enter an email, the app shows <em>Email: Not provided</em> instead of leaving it blank. </p> </div> </div>
+<div style="background-color:#e4e2f8; border-radius:10px; padding:14px; margin:18px auto; max-width:85%;"> <p style="font-size:12pt; margin:0; line-height:135%;"><strong>📖 Design tradeoff:</strong> More filters can help some users search precisely, but can make others feel lost or overloaded.</p> </div>
 
 
 
-## Next up
-You’ll explore how filters and thresholds work in code — and how small design choices can have big impacts on who gets seen.
+
 
 MARKDOWN

@@ -41,7 +41,7 @@ Feature: BubbleChoice
     # Teacher has not completed level, so make sure it is not shown as complete
     And I wait for jquery to load
     Then I verify progress for the sublevel with selector ".uitest-bubble-choice:eq(0) .progress-bubble:first" is "not_tried"
-    Then I select the "New Section" option in dropdown with class "uitest-sectionselect"
+    Then I select the "New Section" option in dropdown named "sections"
     And I wait for 5 seconds
     Then I wait until element "a:contains(View Teacher Dashboard)" is visible
     And element ".teacher-panel td:eq(1)" contains text "Alice"
@@ -61,8 +61,8 @@ Feature: BubbleChoice
     Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/52/levels/8/sublevel/1"
 
     # Dismiss the dialog
-    And I click selector "#ui-close-dialog" once I see it
-    And I wait until element "#ui-close-dialog" is not visible
+    And I click selector "button[aria-label='Close']" once I see it
+    And I wait until element "button[aria-label='Close']" is not visible
 
     # Complete the level
     And I click selector "#instructions-continue-button"
@@ -92,7 +92,7 @@ Feature: BubbleChoice
     Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/52/levels/8"
     And I wait until element ".teacher-panel" is visible
     And I wait for jquery to load
-    And I select the "New Section" option in dropdown with class "uitest-sectionselect"
+    And I select the "New Section" option in dropdown named "sections"
     # Teacher has not completed level, so make sure it is not shown as complete
     Then I verify progress for the sublevel with selector ".uitest-bubble-choice:eq(0) .progress-bubble:first" is "not_tried"
     When I click selector ".teacher-panel table td:contains(Alice)" once I see it
@@ -102,12 +102,12 @@ Feature: BubbleChoice
     Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/52/levels/8/sublevel/1"
 
     # Dismiss the dialog
-    And I click selector "#ui-close-dialog" once I see it
-    And I wait until element "#ui-close-dialog" is not visible
+    And I click selector "button[aria-label='Close']" once I see it
+    And I wait until element "button[aria-label='Close']" is not visible
 
     # Teacher has not completed level, so make sure it is not shown as complete
     And I wait until element ".teacher-panel" is visible
-    Then I select the "New Section" option in dropdown with class "uitest-sectionselect"
+    Then I select the "New Section" option in dropdown named "sections"
     Then I verify progress for the sublevel with selector ".teacher-panel .progress-bubble:first" is "not_tried"
     When I click selector ".teacher-panel table td:contains(Alice)" once I see it
     And I wait until element "#lab2-aichat" is visible
@@ -120,8 +120,8 @@ Feature: BubbleChoice
     Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/52/levels/8/sublevel/1"
 
     # Dismiss the dialog
-    And I click selector "#ui-close-dialog" once I see it
-    And I wait until element "#ui-close-dialog" is not visible
+    And I click selector "button[aria-label='Close']" once I see it
+    And I wait until element "button[aria-label='Close']" is not visible
 
     # Go to another Lab2 level (panels)
     And I click selector ".progress-bubble:eq(5)"

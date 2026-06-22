@@ -27,7 +27,7 @@ describe('SetUpCourses', () => {
         <BorderedCallToAction
           type="courses"
           headingText="Start learning"
-          descriptionText="Browse Code.org's courses to find your next challenge."
+          descriptionText="Browse CodeAI's courses to find your next challenge."
           buttonText="Find a course"
           buttonUrl="/courses"
         />

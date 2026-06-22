@@ -57,6 +57,7 @@ class MoveStudents extends Component {
     updateStudentTransfer: PropTypes.func.isRequired,
     transferStudents: PropTypes.func.isRequired,
     cancelStudentTransfer: PropTypes.func.isRequired,
+    disabled: PropTypes.bool,
   };
 
   state = {
@@ -94,8 +95,11 @@ class MoveStudents extends Component {
     const isExternallyRostered = !NON_LMS_LOGIN_TYPES.includes(
       section.loginType
     );
+    // Demo sections have a fixed roster and no join code; the server rejects
+    // transfers into them.
+    const isDemoSection = !!section.demoType;
 
-    return !isSameAsSource && !isExternallyRostered;
+    return !isSameAsSource && !isExternallyRostered && !isDemoSection;
   };
 
   getOptions = () => {
@@ -252,6 +256,7 @@ class MoveStudents extends Component {
           color="tertiary"
           size="small"
           onClick={this.openDialog}
+          disabled={this.props.disabled}
           type="button"
           startIcon={<FontAwesomeV6Icon iconName="right-from-bracket" />}
         >

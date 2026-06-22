@@ -19,6 +19,18 @@ require 'digest/md5'
 
 # A specific solution attempt for a specific level
 class LevelSource < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    level_id: :confidential,
+    md5: :confidential,
+    data: :restricted,
+    created_at: :confidential,
+    updated_at: :confidential,
+    hidden: :confidential,
+  )
+
   # TODO(asher): At some point, the following string appeared in program XML.
   #   XMLNS_STRING = ' xmlns="http://www.w3.org/1999/xhtml"'
   # It remains in some old LevelSource.data. Migrate any existing LevelSource

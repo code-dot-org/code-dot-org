@@ -14,4 +14,4 @@
 
 - Foorm::SimpleSurveyForm.all.pluck(:path).sort.uniq.each do |path|
   %p
-    = link_to path, CDO.studio_url("form/#{path}", CDO.default_scheme)
+    = link_to path, CDO.studio_url("form/#{path}")

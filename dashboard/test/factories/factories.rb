@@ -1448,6 +1448,14 @@ FactoryBot.define do
     solution {{}}
   end
 
+  factory :user_practice_problem_attempt do
+    association :user
+    association :practice_problem
+    attempt {{answer: 'a'}}
+    correct {false}
+    delivery_context_type {SharedConstants::PRACTICE_PROBLEM_DELIVERY_CONTEXT[:AI_TUTOR_LESSON_DEEP_DIVE]}
+  end
+
   factory :user_lesson_objective_reflection do
     association(:student, factory: :student)
     objective

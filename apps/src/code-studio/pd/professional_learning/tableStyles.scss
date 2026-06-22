@@ -6,10 +6,9 @@
 // TODO - figure out a more sustainable solution for this
 // once this page is updated.
 
-@import 'color';
 @import '@code-dot-org/component-library-styles/font';
 
-$border-style: 1px solid $light_gray_100;
+$border-style: 1px solid var(--borders-neutral-light);
 
 .tableWrapper {
   overflow-x: auto;
@@ -26,7 +25,7 @@ $border-style: 1px solid $light_gray_100;
 }
 
 table {
-  background-color: $light_white;
+  background-color: var(--background-neutral-primary);
   border: $border-style;
   border-collapse: collapse;
   width: 100%;
@@ -38,8 +37,8 @@ table {
   }
 
   th {
-    background-color: $light_gray_50;
-    color: $light_black;
+    background-color: var(--background-neutral-secondary);
+    color: var(--text-neutral-primary);
     font-size: 0.875rem;
     font-weight: var(--font-weight-semi-bold);
     padding-block: 1rem !important;
@@ -49,6 +48,7 @@ table {
   td {
     padding-block: 0.875rem !important;
     vertical-align: middle !important;
+    color: var(--text-neutral-primary);
 
     p {
       margin-bottom: 0 !important;

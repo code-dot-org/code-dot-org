@@ -28,7 +28,7 @@ export default class LessonTipIconWithTooltip extends Component {
         <span data-tip data-for={tooltipId} aria-describedby={tooltipId}>
           <FontAwesome
             icon={tipTypes[tip.type].icon}
-            style={{color: tipTypes[tip.type].color, padding: '2px'}}
+            style={{color: tipTypes[tip.type].primaryColor, padding: '2px'}}
             onClick={this.handleClick}
           />
         </span>

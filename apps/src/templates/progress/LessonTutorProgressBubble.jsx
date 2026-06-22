@@ -6,7 +6,6 @@ import ReactTooltip from 'react-tooltip';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import color from '@cdo/apps/util/color';
 
 const ICON_SIZE = 16;
 
@@ -49,7 +48,9 @@ export default function LessonTutorProgressBubble({
         iconFamily="kit"
         style={{
           fontSize: ICON_SIZE,
-          color: isHovering ? color.orange : color.black,
+          color: isHovering
+            ? 'var(--text-warning-primary)'
+            : 'var(--text-neutral-primary)',
         }}
       />
       <ReactTooltip id={tooltipId} role="tooltip" wrapper="span" effect="solid">

@@ -1,0 +1,65 @@
+// Page-specific styles for the slides generator. Everything generic
+// (page chrome, outline block, card shell, footer, dialog scaffolding)
+// lives in curriculum-generator.module.scss; this file holds only the
+// classes the slides page uniquely needs.
+
+// "ready" pill that sits next to the slide number once a panel has been
+// generated for that slide. Distinct from the unit page's tag pills
+// because slides only ever has a single state (ready / not-ready).
+.tagPanel {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 1px 5px;
+  border-radius: 3px;
+  margin-left: 4px;
+  background: #e6f9ec;
+  color: #265;
+  vertical-align: middle;
+}
+
+// The slides page sets `line-height: 24px` on the Generate checkbox row
+// because the checkbox is a 24px-tall design-system icon while
+// "Generate" is a 13px-line-height label; align-items: center alone
+// leaves the text sitting slightly low. Matching line-height to the
+// checkbox makes the centers truly coincide. (The lesson generator's
+// row sits next to wider inputs and doesn't need this fix.)
+.skipLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  user-select: none;
+  cursor: pointer;
+  line-height: 24px;
+
+  input[type='checkbox'] {
+    margin: 0;
+    flex-shrink: 0;
+  }
+}
+
+// Per-card thumbnail of the generated panel image, shown in the sidebar
+// once a panel has been produced.
+.thumb {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #d6d6d6;
+}
+
+// Compact failure list inside the success dialog. Tighter than the
+// shared .dialog ul; only used when summary.failed has entries.
+.summaryList {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.summaryList li + li {
+  margin-top: 2px;
+}
+

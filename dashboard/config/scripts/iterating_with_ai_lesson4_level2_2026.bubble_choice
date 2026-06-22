@@ -1,0 +1,8 @@
+name 'iterating-with-ai-lesson4-level2-2026'
+display_name 'Build a Display Pipeline'
+
+sublevels
+level 'iterating-with-ai-lesson4-level2a-2026'
+level 'iterating-with-ai-lesson4-level2b-2026'
+
+uses_lab2

@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-05-28T16:58:26.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-brendan-2-intro-materials-8e25f5cf-006b-4ebb-afa0-3ba8e21e5aa4",
+        "text": "In the real world, objects aren't just shapes; they have surfaces made of different materials like wood, metal, or glass.",
+        "imageUrl": "https://images.code.org/8474b6b8bf9fae7e0158ed026353aec3-test-brendan-2-intro-materials-panel-1-956ab8da-a695-42e8-bef0-bcb921700fda.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "test-brendan-2-intro-materials-ab0b3e61-5a2d-4997-a0b7-5d5eaec907e4",
+        "text": "In 3D graphics, a `material` defines how an object's surface looks and reacts to light. It's like applying a finish to a sculpture.",
+        "imageUrl": "https://images.code.org/faec43efa6ba2e913f0050374a8eaa7d-test-brendan-2-intro-materials-panel-2-8df46092-6369-443f-91d6-9d04ba80e0d9.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "test-brendan-2-intro-materials-3a7efca2-6c71-4a97-a1f0-354a67d6ddd7",
+        "text": "A material's most obvious property is `color`, which determines the base color we perceive. But materials also dictate `shininess` or `roughness`.",
+        "imageUrl": "https://images.code.org/f3373c1f28ca0dd6af4d496739739b68-test-brendan-2-intro-materials-panel-3-1c41dae2-67a9-4d87-99e0-6071db86965b.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "test-brendan-2-intro-materials-837ca09c-3346-40cc-9846-fbd24a62d5bf",
+        "text": "Shiny materials reflect light sharply, creating bright highlights. Rough materials scatter light, resulting in a softer, duller appearance.",
+        "imageUrl": "https://images.code.org/1b6165811974e97a578491738e55d758-test-brendan-2-intro-materials-panel-4-74fcc65a-2e4d-4c95-85a2-c8f960db3740.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-brendan-2-intro-materials-4e39f81a-16a3-4c15-9152-bff3501c3fa8",
+        "text": "By combining diverse lights with carefully chosen materials, we can create incredibly realistic and visually rich 3D scenes that truly come alive!",
+        "imageUrl": "https://images.code.org/ca6e2f7a4c7ce3c3ad6d383c6dd72634-test-brendan-2-intro-materials-panel-5-3685eec9-f1c5-4a39-9883-ddd6a92ead9d.png",
+        "layout": "text-top-left"
+      }
+    ],
+    "generate_outline": "Explain what materials are in 3D graphics and how they interact with light. Introduce basic material properties like color, shininess, and how they contribute to an object's visual characteristics."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-28 16:59:17 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-28 16:59:17 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

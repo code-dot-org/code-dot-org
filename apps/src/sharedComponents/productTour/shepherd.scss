@@ -2,7 +2,66 @@
 @import 'color.scss';
 
 .tour-step-highlight {
-  outline: 2px solid orange !important;
+  position: relative !important;
+  outline: none;
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: 2px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    padding: 3px;
+    border-radius: inherit;
+    background: linear-gradient(
+      90deg,
+      #15c5f9,
+      #2b72ff,
+      #8f20ec,
+      #c710c2,
+      #e50976,
+      #15c5f9
+    );
+    background-size: 300% 300%;
+    animation: tour-highlight-gradient-shift 12s linear infinite;
+    pointer-events: none;
+    // Mask punches a hole in the interior so only the 3px border ring is painted,
+    // regardless of whether the highlighted element has a background.
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    -webkit-mask: linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: destination-out;
+  }
+}
+
+@supports not ((mask-composite: exclude) or (-webkit-mask-composite: destination-out)) {
+  .tour-step-highlight::before {
+    content: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tour-step-highlight::before {
+    animation: none;
+  }
+}
+
+@keyframes tour-highlight-gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 // Shared styles for all shepherd step containers.
@@ -98,8 +157,9 @@
     }
 
     &:disabled,
-    &[aria-disabled='true'] {
-      border-color: var(--borders-neutral-disabled) !important;
+    &[aria-disabled='true'],
+    &[aria-disabled='true']:hover {
+      border-color: var(--borders-neutral-disabled);
       color: var(--text-neutral-disabled);
       background-color: var(--background-neutral-primary);
     }
@@ -130,7 +190,8 @@
   }
 }
 
-.onboarding-completion-step .shepherd-footer {
+.onboarding-completion-step .shepherd-footer,
+.onboarding-stacked-buttons .shepherd-footer {
   flex-direction: column;
   align-items: stretch;
 }
@@ -162,12 +223,63 @@
   flex: 1;
 }
 
+// Quiz step: column of answer option buttons.
+.quiz-options-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.quiz-option {
+  padding: 10px 16px;
+  border: 1px solid var(--neutral-white-alpha-30);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--neutral-base-white);
+  font-family: Figtree, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.15s;
+
+  &:not(:disabled):hover {
+    border-color: var(--neutral-white-alpha-70);
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+div .quiz-option-wrong {
+  border-color: #e53e3e;
+  background-color: rgb(229 62 62 / 15%);
+  color: var(--accent-strawberry-40);
+}
+
+div .quiz-option-correct {
+  border-color: #38a169;
+  background-color: rgb(56 161 105 / 15%);
+  color: #68d391;
+}
+
+.quiz-feedback {
+  margin-top: 12px;
+  min-height: 18px;
+  font-family: Figtree, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--neutral-gray-50);
+}
+
 // Onboarding tour step container styles.
 .custom-shepherd-onboarding-container {
   @extend %shepherd-step-container-base;
 
-  background-color: $light_black;
-  color: #fff;
+  background-color: var(--neutral-base-black);
+  color: var(--neutral-base-white);
 
   // Lay out the content as a flex row so the sparkle+text and the X button
   // all sit on the same line, with the footer wrapping beneath.
@@ -185,7 +297,7 @@
     flex: 1;
     min-width: 0;
     order: 1;
-    color: #fff;
+    color: var(--neutral-base-white);
     padding: 0;
     margin-bottom: 0;
   }
@@ -194,15 +306,18 @@
   .shepherd-header {
     order: 2;
     flex-shrink: 0;
-    background-color: transparent !important;
-    padding: 0 !important;
-    margin-bottom: 0 !important;
+  }
+
+  &.shepherd-has-title .shepherd-content .shepherd-header {
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 0;
   }
 
   // Take the cancel icon out of absolute positioning so it sits inline.
   .shepherd-cancel-icon {
     position: static;
-    color: #fff;
+    color: var(--neutral-base-white);
 
     &:hover {
       color: rgb(200 200 200);
@@ -219,6 +334,21 @@
   }
 
   &.shepherd-element > .shepherd-arrow:before {
-    background-color: rgb(41 47 54);
+    background-color: var(--neutral-base-black);
   }
+}
+
+.onboarding-progress-table-step {
+  width: 276px;
+}
+
+.onboarding-step-text-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.onboarding-step-supportive-text {
+  color: var(--neutral-white-alpha-60);
+  font-size: 12px;
+  margin-top: 8px;
 }

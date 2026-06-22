@@ -71,6 +71,58 @@ Want to learn more? Try out the following optional activities.
 
 </details>
 
+## Explore AI Curriculum
+
+<div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; max-width:900px; margin:20px auto; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+
+<!-- Elementary -->
+<a href="https://studio.code.org/courses/oceans/units/1" target="_blank" style="text-decoration:none; color:inherit;">
+<div style="background:#fff; border:1px solid #D9DDE3; border-radius:10px; padding:16px; text-align:center; height:100%;">
+<div style="font-size:20px; font-weight:700; color:#7A6FA6; margin-bottom:4px;">AI for Oceans</div>
+<div style="font-size:14px; color:#666; margin-bottom:12px;">Grades 3-12</div>
+<img src="https://images.code.org/f1b619d83a21966245575cafe6fdb5df-AIOceans-16x9-min_copy.avif" alt="AI for Oceans" style="
+       width:100%;
+       height:160px;
+       object-fit:cover;
+       border-radius:6px;
+       display:block;
+     ">
+</div>
+</a>
+
+<!-- Middle School -->
+<a href="https://code.org/en-US/curriculum/artificial-intelligence-discoveries" target="_blank" style="text-decoration:none; color:inherit;">
+<div style="background:#fff; border:1px solid #D9DDE3; border-radius:10px; padding:16px; text-align:center; height:100%;">
+<div style="font-size:20px; font-weight:700; color:#0284B7; margin-bottom:4px;">AI Discoveries</div>
+<div style="font-size:14px; color:#666; margin-bottom:12px;">Grades 6-8</div>
+<img src="https://images.code.org/2b41312b481a73318a1189794bdd2f22-AID_Cover.avif" alt="AI Discoveries" style="
+       width:100%;
+       height:160px;
+       object-fit:cover;
+       border-radius:6px;
+       display:block;
+     ">
+</div>
+</a>
+
+<!-- High School -->
+<a href="https://code.org/en-US/curriculum/artificial-intelligence-foundations" target="_blank" style="text-decoration:none; color:inherit;">
+<div style="background:#fff; border:1px solid #D9DDE3; border-radius:10px; padding:16px; text-align:center; height:100%;">
+<div style="font-size:20px; font-weight:700; color:#555; margin-bottom:4px;">AI Foundations</div>
+<div style="font-size:14px; color:#666; margin-bottom:12px;">Grades 9–12</div>
+<img src="https://images.code.org/3745d0c89e8b487fed5ba2e09771962b-Screenshot 2026-06-01 at 2.39.15 PM.png" alt="AI Foundations" style="
+       width:100%;
+       height:160px;
+       object-fit:cover;
+       border-radius:6px;
+       display:block;
+     ">
+</div>
+</a>
+</div>
+
+<br>
+
 ## What's Next in AI 101 for Educators?
 
 <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="width:100%; max-width:1200px; border-collapse:separate; border-spacing:10px; font-family:Arial, Helvetica, sans-serif; color:#1f2937;">

@@ -210,38 +210,17 @@ namespace :build do
     end
   end
 
-  desc 'Builds i18n'
-  timed_task_with_logging :i18n do
-    Dir.chdir(bin_dir('i18n')) do
-      ChatClient.log 'Installing <b>i18n</b> dependencies...'
-      RakeUtils.npm_install
-    end
-  end
-
   tasks = []
   tasks << :apps if CDO.build_apps
   tasks << :studio if CDO.build_studio && !rack_env?(:levelbuilder) && !rack_env?(:production)
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
-  tasks << :i18n if CDO.build_i18n
   timed_task_with_logging all: tasks
 end
 
 desc 'Builds everything.'
 timed_task_with_logging :build do
   ChatClient.wrap('build') {Rake::Task['build:all'].invoke}
-end
-
-# List of paths that, if changed, should trigger an apps build.
-# This contains the apps source itself and any other dependency that affects the apps build,
-# e.g. shared constants (which generate js apps code during apps/script/generateSharedConstants)
-def apps_build_trigger_paths
-  [
-    apps_dir,
-    shared_constants_file,
-    shared_constants_dir,
-    frontend_dir
-  ]
 end
 
 def calculate_apps_commit_hash

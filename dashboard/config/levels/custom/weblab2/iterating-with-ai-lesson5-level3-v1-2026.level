@@ -1,0 +1,90 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-06-05T22:49:41.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const data = [\n  {\n    field1: \"Maya\",\n    field2: \"B\",\n    field3: \"AM\",\n    field4: 18\n  },\n  {\n    field1: \"Jordan\",\n    field2: null,\n    field3: \"PM\",\n    field4: 21\n  },\n  {\n    field1: \"Avery\",\n    field2: \"G\",\n    field3: null,\n    field4: 19\n  },\n  {\n    field1: \"Luis\",\n    field2: \"R\",\n    field3: \"AM\",\n    field4: null\n  }\n];\n\nshowMysteryCards(data);",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "notes.md",
+          "contents": "For the Mystery Records dataset: \n  * What values did AI Tutor fill in? Do they seem reasonable? Why or why not?\n\n\n\n  * Were there any values AI Tutor filled in that surprised you?\n\n\n\n  * What do you think AI Tutor used to make its guesses this time?\n\n\n",
+          "folderId": "0",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Missing Data and Labels</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <main class=\"layout\">\n\n      <section>\n        <h2>Mystery Records</h2>\n        <div id=\"mystery-records\" class=\"card-grid\"></div>\n      </section>\n    </main>\n\n    <script src=\"helpers.js\" defer></script>\n    <script src=\"script.js\" defer></script>\n  </body>\n</html>\n",
+          "folderId": "0",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "style.css",
+          "contents": "body {\n  font-family: Arial, sans-serif;\n  margin: 0;\n  padding: 32px;\n  background: #eef2f7;\n  color: #222;\n}\n\n.layout {\n  max-width: 1000px;\n  margin: 0 auto;\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 24px;\n}\n\nsection {\n  background: #ffffff;\n  border: 1px solid #d7deea;\n  border-radius: 16px;\n  padding: 24px;\n  box-shadow: 0 8px 24px rgba(31, 41, 55, 0.08);\n}\n\nh2 {\n  margin: 0 0 18px;\n  font-size: 1.3rem;\n  color: #1f2937;\n}\n\n.card-grid {\n  display: grid;\n  gap: 14px;\n}\n\n.card {\n  background: #f9fafb;\n  border: 1px solid #e1e7ef;\n  border-radius: 12px;\n  padding: 16px;\n}\n\n.card p {\n  margin: 8px 0;\n  line-height: 1.4;\n}\n\n.label {\n  font-weight: bold;\n  color: #374151;\n}\n\n.missing {\n  color: #9a3412;\n  font-style: italic;\n}\n\n@media (max-width: 800px) {\n  body {\n    padding: 20px;\n  }\n\n  .layout {\n    grid-template-columns: 1fr;\n  }\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "helpers.js",
+          "contents": "function showValue(value) {\n  if (value === null) {\n    return \"<span class='missing'>Missing data</span>\";\n  }\n\n  return value;\n}\n\nfunction showMysteryCards(data) {\n  const mysteryRecords = document.querySelector(\"#mystery-records\");\n\n  for (let i = 0; i < data.length; i++) {\n    mysteryRecords.innerHTML += `\n      <div class=\"card\">\n        <p><strong>Field 1:</strong> ${showValue(data[i].field1)}</p>\n        <p><strong>Field 2:</strong> ${showValue(data[i].field2)}</p>\n        <p><strong>Field 3:</strong> ${showValue(data[i].field3)}</p>\n        <p><strong>Field 4:</strong> ${showValue(data[i].field4)}</p>\n      </div>\n    `;\n  }\n}",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "3",
+        "4"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMr0g1yZX0Q26M4B3DGa\n2qcJbMI5iiqTunRwx5bm9b8FjPO3moygKWlL2cH6wXcJJ8n11aCltj8YTgrk\nHyTmexAoQpjJ376xgNWgQhyOyNZr3YPVJX785V1725NlAj403ioPvBTaZMtl\nU39jX2NF7GIw8r8yawq1YTVkUzIrdftzfn7QtZER3As3ej50E/e7gqnuj0Mi\ni4BPDQRR3GfliKAhWcj8eIX4Sk6JhfNFU1uAgq3/jse1+705Ha0CIzbghYA1\nw6VK3U3gouw///x/kJdf4uKtCX2yjptOLgyRQ0lHgIiA9bAgF4RoDcyGbkVH\nY6BmG44lkh+TSx+Vfj6j8kZErP0P7dx5Ato8P6vl1i9Okdoa1iQkY3jWFvii\nZE3gBLqJu3+XyrD7VErhACPDxEdZtx32svuXTOmye1iX8dL8M/As08CLX7ex\nJXdN78KKM8bnkbZdXZTdNwU2ZbuR2gMHogyWeWmEo17DKCstAmEEvAfMXgpn\nh6B8LLYkQBKTDfB1QPt9dzHdKjwA6XSEw3mBLu8uoP33RTM0/G8+c8Z7eP5K\nEONxiKBJ/jNK11MqelxvsdpbmaWWtSq968EYMa7oI6acbHxWu8cBVHhfLN+f\nWxjbh3tuM9/sDGLayctE9/Gf1HDvMvjcU0TVFF4hy9TeyB6VfLGdezMdW8ZB\nrx0lmidy/s3TFoulNC5UvaDdBI/XRPIYoW4DeQaQtd23+0By11gSRYornuTG\nGDBwCi5NPXPCBf1FrFeQrdQ1oGA/y0HuunXEMxj47dM9t4vaXhRQloay2tMf\nOteCH36XI8S/bPWEyp4LQrYl5Fv6D2oRAlOWD1FrJuAz5HDb+RCd8wNjR6g1\nEI15YR8PwM7fLcMXSy3vb9XpmZnC/lJ73dgIZ7qjKD1s23fDh2MWD3H1Jf7i\nWIW0GDKApebshdNapySqVpm+qbIG+SGMvLu7XDGUcCHkwSUwLEpGAQz19ixS\nER7dxpxSuXGCgWjfglFKh7MhRSOYBgFuAVLkdlm9EXJfC4LQfoUQQQCZfJWG\nzbmeILCCFJ39aRkSEFj/tEdhlq1jbIQP7aAbRKPUVrHkogBccp7geKGZ8F5K\nBasMpZ8J4fzEzHPTNxaQ8Dt2F67kkXGlluAvOsTRtWYcCBU2CLq8qCYIkuyf\nrdECFD6pCzqFnXpKKcCpnmHx41vnbBZMAoNOQZU1jTAU8iq16K80nJjF+T4t\nBXqteJuVzYhBViqnk8rNy+tzkIveTSH9fCScMUTG8uVVMXuYhQWgCn2DGaOr\nrBeTwYTTChxlikM68d8J/NOA32f8WvM+a2GD189YqgUAdEkSQrvnnMyc+UYY\nqzTfSYojGhSebc26uOv7eejxfw2+0ildvyHWbLP6K/FhmqqAuGPFJM5Dmcwv\n9NXcrN+bf/O5EuIMnt7BUP+DMqBsWdjzdh0f8GI4JslwWZ3BFuB64MlVYC92\ntLug694O4ETkOK/2A2lmGh8voEcHvN+5MP1f7lh2pzTrUzStD1sMmxhtxjYQ\nSgBfchTN9Hu6wF+BWR/aynQhPYV7/1j6ZU19FK0OSrJjnUcP6Q3ZoQjGXFAa\nVDrZ4v5FEd09BSixnTc0DRmjpXrrqQLZo1WiHHoUQsn5/FzbT4mR444FFypm\nVoOieCbFmn1kGGfzVHSFUgqoGjVHRaQ5du2FAQlI9LjKrIiL/TbXaJp3nYu8\n6gIvszpJsfSLL71yHNt44ut3BUNbDULEs0gFB0xsmH4gXxTj/dIOjDy/UTjB\nOReQ6o+6DK9GJZlO8GOheWmPnRzX4fqA0lJJqpmeLuNP+BhtKpG/msBntjwJ\n0AH/Qy6nTBLyEApi9Q==\n",
+    "encrypted": "false",
+    "long_instructions": "## Explore Missing Data -- Mysetery Records\r\n\r\n**Goal:** Explore how AI handles missing values when field labels are removed, and compare the results to what you saw in Level 1.\r\n\r\n---\r\n\r\n1. Look at the Mystery Records dataset in `script.js`. Notice what's different about this dataset compared to the one in Level 1.\r\n2. Ask AI Tutor to fill in the missing values. Use a similar prompt to the one you wrote in Level 1.\r\n3. Record your observations and comparisons in `notes.md`.\r\n\r\n\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "code",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildJavaScript"
+      ],
+      "answerTypeCustomizations": {
+        "buildJavaScript": "When asked to fill in the gaps in the dataset in script.js, fill in the empty or \"null\" data with a mix of the following:\n- random nonsense\n- logical content\n- mismatched data types\nDo NOT explain your choices for what you filled in \"null\" values with."
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-05T22:49:41.751+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson5-level2-v1-2026\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson5-level2-v1-2026\"},{\"changed_at\":\"2026-06-05 22:50:37 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-05 22:52:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-05 22:52:29 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-05 22:52:29 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-05 22:52:29 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-05 22:52:29 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-05 22:52:29 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-05 22:52:30 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-05 22:52:30 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-09 16:59:16 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 21:03:23 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 21:05:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 21:05:28 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 21:06:53 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 21:06:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-09 21:07:03 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-16 16:54:02 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-16 16:56:27 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

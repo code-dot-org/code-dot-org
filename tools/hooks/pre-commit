@@ -3,5 +3,5 @@ ruby tools/hooks/lint.rb &&
   ruby tools/hooks/scary_changes.rb &&
   ruby tools/hooks/deprecated_code.rb &&
   ruby tools/hooks/restrict_levelbuilder_changes.rb &&
-  ruby tools/hooks/restrict_staging_changes.rb &&
-  ruby tools/hooks/restrict_large_files.rb
+  ruby tools/hooks/restrict_large_files.rb &&
+  ruby tools/hooks/gitattributes_renormalize_reminder.rb

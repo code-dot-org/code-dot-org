@@ -2,15 +2,20 @@ import {createAsyncThunk} from '@reduxjs/toolkit';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {RootState} from '@cdo/apps/types/redux';
+import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {getUserChatHistory} from '../../aichatApi';
 import {setOwnChatHistory, setStudentChatHistory} from '../slice';
+import {getNewRemoveId} from '../utils';
+
+import {addChatEvent} from './addChatEvent';
 
 interface FetchUserChatHistoryParams {
   userId: number;
   isOwnHistory: boolean;
   channelId?: string;
   lessonId?: number;
+  initialWelcomeMessage?: string;
 }
 
 // This thunk's callback function submits a user id (either a teacher or student)
@@ -19,7 +24,13 @@ interface FetchUserChatHistoryParams {
 export const fetchUserChatHistory = createAsyncThunk(
   'aichat/fetchUserChatHistory',
   async (
-    {userId, isOwnHistory, channelId, lessonId}: FetchUserChatHistoryParams,
+    {
+      userId,
+      isOwnHistory,
+      channelId,
+      lessonId,
+      initialWelcomeMessage,
+    }: FetchUserChatHistoryParams,
     thunkAPI
   ) => {
     const state = thunkAPI.getState() as RootState;
@@ -35,6 +46,20 @@ export const fetchUserChatHistory = createAsyncThunk(
 
       if (isOwnHistory) {
         thunkAPI.dispatch(setOwnChatHistory(chatHistoryApiResponse));
+        if (initialWelcomeMessage) {
+          const stateAfter = thunkAPI.getState() as RootState;
+          if (stateAfter.aichat.chatEventsCurrent.length === 0) {
+            (thunkAPI.dispatch as AppDispatch)(
+              addChatEvent({
+                timestamp: Date.now(),
+                removeId: getNewRemoveId(),
+                text: initialWelcomeMessage,
+                notificationType: 'welcomeMessage',
+                includeInChatHistory: true,
+              })
+            );
+          }
+        }
       } else {
         thunkAPI.dispatch(setStudentChatHistory(chatHistoryApiResponse));
       }

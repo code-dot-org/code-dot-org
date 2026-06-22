@@ -1,0 +1,17 @@
+// Alt-text TextField stretched to fill its toolbar row. Overrides the
+// DSCO TextField wrapper's hard-coded min-width on the <label> so the
+// field actually flexes inside the toolbar's ~240px column.
+.altTextField {
+  flex: 1 1 auto;
+  min-width: 0;
+
+  & > label {
+    min-width: 0;
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+    min-width: 0;
+  }
+}

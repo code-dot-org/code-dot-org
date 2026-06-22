@@ -1,0 +1,23 @@
+{
+  "name": "international-pedagogy",
+  "script_names": [
+    "international-pedagogy-u1"
+  ],
+  "original_script_names": [
+    "international-pedagogy-u1"
+  ],
+  "published_state": "stable",
+  "instruction_type": "self_paced",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
+  "properties": {
+    "family_name": "international-pedagogy",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

@@ -10,6 +10,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {rosterProvider as rosterProviderSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
@@ -19,6 +20,7 @@ import RosterDialog from '../../teacherDashboard/RosterDialog';
 import {beginEditingSection} from '../../teacherDashboard/teacherSectionsRedux';
 
 import {ArchiveAllModal} from './ArchiveAllModal';
+import {CreateDemoSectionPopup} from './CreateDemoSectionPopup';
 import {ArchivedToggleOption} from './TeacherHomepage';
 
 import styles from './teacherHomepage.module.scss';
@@ -36,6 +38,8 @@ export const Header: React.FC<HeaderProps> = ({
 
   const [archiveAllModalOpen, setArchiveAllModalOpen] =
     React.useState<boolean>(false);
+
+  const [createDemoOpen, setCreateDemoOpen] = React.useState<boolean>(false);
 
   const rosterProvider = useSelector(rosterProviderSelector);
 
@@ -121,7 +125,7 @@ export const Header: React.FC<HeaderProps> = ({
             options={[
               {
                 label: i18n.archiveAllSections(),
-                icon: {iconName: 'gear', iconStyle: 'solid'},
+                icon: {iconName: 'box-archive', iconStyle: 'solid'},
                 value: 'archive',
                 onClick: () => {
                   setArchiveAllModalOpen(true);
@@ -136,6 +140,21 @@ export const Header: React.FC<HeaderProps> = ({
                       icon: {iconName: 'sync', iconStyle: 'solid' as const},
                       value: 'syncCleverSections',
                       onClick: syncCleverSections,
+                    },
+                  ]
+                : []),
+              ...(experiments.isEnabled('demo-section')
+                ? [
+                    {
+                      label: 'Create practice class',
+                      icon: {
+                        iconName: 'square-dashed-circle-plus',
+                        iconStyle: 'solid' as const,
+                      },
+                      value: 'create-demo-section',
+                      onClick: () => {
+                        setCreateDemoOpen(true);
+                      },
                     },
                   ]
                 : []),
@@ -154,6 +173,9 @@ export const Header: React.FC<HeaderProps> = ({
           />
           {archiveAllModalOpen && (
             <ArchiveAllModal onClose={() => setArchiveAllModalOpen(false)} />
+          )}
+          {createDemoOpen && experiments.isEnabled('demo-section') && (
+            <CreateDemoSectionPopup onClose={() => setCreateDemoOpen(false)} />
           )}
         </div>
       </div>
