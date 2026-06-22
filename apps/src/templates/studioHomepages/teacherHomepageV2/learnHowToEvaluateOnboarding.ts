@@ -254,24 +254,11 @@ export const createLearnHowToEvaluateProgressSteps = (
 
     const aiInsightsStep: StepOptions = {
       id: STUDENT_SNAPSHOT_AI_INSIGHTS_STEP_ID,
-      classes:
-        'custom-shepherd-onboarding-container onboarding-stacked-buttons',
       attachTo: {element: LESSON_INSIGHT_WIDGET_SELECTOR, on: 'bottom'},
       text: withSparkle(
-        'This is the "why" behind the data. The Lesson Insight synthesizes the student\'s work and flags where they might be hitting a wall, so you can decide what kind of support they actually need. From here you can:'
+        'This is the "why" behind the data. The Lesson Insight synthesizes the student\'s work and flags where they might be hitting a wall, so you can decide what kind of support they actually need.'
       ),
-      buttons: [
-        {
-          text: 'Verify the student insight',
-          action: () => tour.show(CFU_STEP_ID),
-          classes: 'custom-shepherd-button-secondary',
-        },
-        {
-          text: 'Give the student feedback',
-          action: () => tour.show(AI_FEEDBACK_STEP_ID),
-          classes: 'custom-shepherd-button-secondary',
-        },
-      ],
+      buttons: [nextButton(tour)],
       beforeShowPromise: () =>
         waitForElement(LESSON_INSIGHT_WIDGET_SELECTOR, controller.signal),
       when: {
@@ -334,7 +321,7 @@ export const createLearnHowToEvaluateProgressSteps = (
       },
     };
 
-    steps.push(aiInsightsStep, aiFeedbackStep, cfuStep);
+    steps.push(aiInsightsStep, cfuStep, aiFeedbackStep);
   }
 
   steps.push(
