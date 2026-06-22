@@ -19,8 +19,6 @@ class UserProductTour < ApplicationRecord
 
   VALID_TOUR_NAMES = [
     CREATE_CLASS_SECTION = 'create_class_section'.freeze,
-    VIEW_SYLLABUS = 'view_syllabus'.freeze,
-    LEARN_TO_EVALUATE = 'learn_to_evaluate'.freeze,
   ].freeze
 
   validates :tour_name, inclusion: {in: VALID_TOUR_NAMES}
