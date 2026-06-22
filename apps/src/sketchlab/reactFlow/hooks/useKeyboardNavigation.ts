@@ -129,7 +129,7 @@ interface UseKeyboardNavigationOptions {
   // (which renders outside .react-flow__node), so getEntryFromDOM returns
   // null. lastFocusedEntry gives us the last known node/edge target.
   lastFocusedEntry: TabOrderEntry | null;
-  // Called with the anchor id the first time it is translated by an arrow key,
+  // Called with the anchor id when it is translated by an arrow key,
   // so the canvas can keep connection handles visible during a keyboard move.
   onLineAnchorKeyboardMove: (anchorId: string) => void;
 }
