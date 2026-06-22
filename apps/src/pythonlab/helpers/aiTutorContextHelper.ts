@@ -1,6 +1,5 @@
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
-import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {getFolderPath} from '@codebridge/utils';
+import {getFilePath} from '@codebridge/utils/getFilePath';
 
 import {tryFetchDocsForClass} from '@cdo/apps/aiTutor/docContextApi';
 import {
@@ -12,17 +11,6 @@ import {stripAnsiSequences} from '@cdo/apps/codebridge/Console/MessageHelpers';
 import {ProjectFile} from '@cdo/apps/codebridge/types';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
-
-const getFilePath = (
-  file: ProjectFile,
-  folders: MultiFileSource['folders']
-): string => {
-  if (file.folderId === DEFAULT_FOLDER_ID) {
-    return file.name;
-  }
-  const folderPath = getFolderPath(file.folderId, folders);
-  return `${folderPath}/${file.name}`;
-};
 
 const LANGUAGES_TO_EXCLUDE_FROM_CONTEXT = ['md'];
 

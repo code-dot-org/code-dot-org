@@ -1,13 +1,8 @@
-import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {getFolderPath} from '@codebridge/utils';
+import {getFilePath} from '@codebridge/utils/getFilePath';
 
 import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
 import {AiTutorContext} from '@cdo/apps/aiTutor/types';
-import {
-  MultiFileSource,
-  ProjectFile,
-  ProjectFileType,
-} from '@cdo/apps/lab2/types';
+import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 
 interface AiTutorWebLab2Params {
@@ -18,19 +13,6 @@ interface AiTutorWebLab2Params {
 }
 
 const LANGUAGES_TO_EXCLUDE_FROM_CONTEXT = ['txt', 'csv', 'md'];
-
-// Returns the file path used in HTML src/href attributes.
-const getFilePath = (
-  file: ProjectFile,
-  folders: MultiFileSource['folders']
-): string => {
-  if (file.folderId === DEFAULT_FOLDER_ID) {
-    return file.name;
-  }
-  const folderPath = getFolderPath(file.folderId, folders);
-  return `${folderPath}/${file.name}`;
-};
-
 export class AiTutorWebLab2ContextHelper extends AiTutorContextHelper<AiTutorWebLab2Params> {
   private params?: AiTutorWebLab2Params;
 
