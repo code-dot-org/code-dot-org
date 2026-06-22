@@ -35,7 +35,7 @@ class AiGatewayAuthController < ApplicationController
         token_id: token_id,
         hostname: hostname,
         user_id: user_id,
-        client_type: aichat_context[:clientType],
+        aichat_client_type: aichat_context[:clientType],
         level_id: aichat_context[:currentLevelId],
         script_id: aichat_context[:scriptId],
         channel_id: aichat_context[:channelId],
