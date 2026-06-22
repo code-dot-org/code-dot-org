@@ -33,18 +33,17 @@ jobs:
         uses: ./.github/actions/frontend/setup
 
       - name: E2E Tests
-        # Step-level env so the browser path reaches the playwright subprocess
-        # (job-level env is not reliably forwarded through yarn/turbo). The
-        # container pre-installs browsers at /ms-playwright. CI=true is set by
-        # GitHub Actions, which flips playwright.config to its CI reporter lane.
+        # Step-level env: job-level env isn't reliably forwarded through yarn/turbo.
+        # The container pre-installs browsers at /ms-playwright.
         env:
+          PLAYWRIGHT_PROVIDER: github-actions
           PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
           # Firefox/WebKit won't launch as root unless $HOME is owned by the user;
           # the image's /github/home is pwuser's, so point HOME at root's own dir.
           HOME: /root
           # Explicit target: the deployed test env. Repoint at a PR adhoc to gate PR code.
           TARGET_URL: https://test-studio.code.org
-        run: yarn workspace @code-dot-org/e2e-tests test:ui:ci
+        run: yarn workspace @code-dot-org/e2e-tests test:ui
         working-directory: ./frontend
 
       - name: Upload Playwright Report

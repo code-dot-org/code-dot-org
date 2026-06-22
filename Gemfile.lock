@@ -367,9 +367,6 @@ GEM
     crack (0.4.5)
       rexml
     crass (1.0.6)
-    crowdin-api (1.10.0)
-      open-uri (>= 0.1.0, < 0.2.0)
-      rest-client (>= 2.0.0, < 2.2.0)
     csv (3.3.0)
     cucumber (3.1.1)
       builder (>= 2.1.2)
@@ -715,10 +712,6 @@ GEM
     omniauth-rails_csrf_protection (1.0.2)
       actionpack (>= 4.2)
       omniauth (~> 2.0)
-    open-uri (0.1.0)
-      stringio
-      time
-      uri
     open_uri_redirections (0.2.1)
     openssl (3.3.1)
     opentelemetry-api (1.8.0)
@@ -1145,7 +1138,6 @@ GEM
       user_agent_parser (~> 2.18.0)
       zlib (~> 3.1.0)
     stringex (2.5.2)
-    stringio (3.1.5)
     sysexits (1.2.0)
     syslog (0.1.2)
     temple (0.8.2)
@@ -1157,8 +1149,6 @@ GEM
     thwait (0.2.0)
       e2mmap
     tilt (2.0.11)
-    time (0.4.1)
-      date
     timecop (0.9.10)
     timeout (0.3.2)
     timers (4.3.5)
@@ -1182,7 +1172,6 @@ GEM
     unf_ext (0.0.7.4)
     unicode-display_width (2.5.0)
     unicode_utils (1.4.0)
-    uri (1.0.3)
     user_agent_parser (2.18.0)
     validate_url (1.0.15)
       activemodel (>= 3.0.0)
@@ -1277,7 +1266,6 @@ DEPENDENCIES
   cld
   colorize
   composite_primary_keys (= 14.0.5)
-  crowdin-api (~> 1.10.0)
   csv
   cucumber
   daemons (= 1.1.9)

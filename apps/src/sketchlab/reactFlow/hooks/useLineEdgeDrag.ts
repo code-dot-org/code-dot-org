@@ -206,6 +206,10 @@ export function useLineEdgeDrag({
       if (readOnly || event.button !== 0) {
         return;
       }
+      // Grouped lines are not movable individually.
+      if (getNode(edge.source)?.parentId || getNode(edge.target)?.parentId) {
+        return;
+      }
 
       const anchors: DraggingAnchor[] = [];
       const pendingDetaches: PendingDetach[] = [];

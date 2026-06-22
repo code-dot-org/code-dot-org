@@ -11,7 +11,6 @@ class CleverSectionTest < ActiveSupport::TestCase
   end
 
   test 'from clever service' do
-    DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
     DCDO.stubs(:get).with('migration_service_enabled', false).returns(false)
 
     owner = create(:teacher)

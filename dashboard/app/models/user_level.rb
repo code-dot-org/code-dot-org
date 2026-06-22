@@ -29,6 +29,27 @@ require 'cdo/activity_constants'
 # Summary information about a User's Activity on a Level in a Unit.
 # Includes number of attempts (attempts), best score and whether it was submitted
 class UserLevel < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    user_id: :confidential,
+    level_id: :confidential,
+    attempts: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+    best_result: :confidential,
+    script_id: :confidential,
+    level_source_id: :confidential,
+    submitted: :confidential,
+    readonly_answers: :confidential,
+    unlocked_at: :confidential,
+    time_spent: :confidential,
+    deleted_at: :confidential,
+    properties: :confidential,
+    unit_group_id: :confidential,
+  )
+
   AUTOLOCK_PERIOD = 1.day
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.

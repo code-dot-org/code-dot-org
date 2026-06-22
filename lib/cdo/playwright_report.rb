@@ -45,6 +45,15 @@ module Cdo
       nil
     end
 
+    # Computed without uploading, so the report can be linked before the run finishes.
+    def self.index_url
+      # ::AWS, not bare AWS (→ Cdo::AWS); see #upload.
+      ::AWS::S3.public_url(BUCKET, "#{prefix}/playwright/index.html")
+    rescue StandardError => exception
+      CDO.log.error "Failed to compute Playwright report URL: #{exception.message}"
+      nil
+    end
+
     def self.prefix
       if ENV['CI']
         "circle/#{ENV.fetch('CI_BUILD_NUMBER', nil)}"

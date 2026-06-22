@@ -1,0 +1,44 @@
+// Static layout for the header composition. These classes also override MUI's
+// AppBar / Toolbar theme styles; they win because MUI's emotion styles are in
+// `@layer mui` (enableCssLayer) and these module classes are unlayered.
+
+.appBar {
+  background-color: var(--background-brand-teal-primary);
+}
+
+.toolbar {
+  min-height: 50px;
+  align-items: stretch;
+}
+
+.spacer {
+  flex: 1;
+}
+
+// 6px gap keeps each icon target clear of its neighbor (WCAG 2.5.8 spacing);
+// prod packs these flush, so the space beside the name opens Help.
+.rightCluster {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-right: 13px;
+}
+
+// Create + auth share an 8px gap, matching prod.
+.createAuth {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hamburgerWrap {
+  flex-shrink: 0;
+}
+
+// Auth control stays on the bar at every width, matching prod (the legacy
+// #sign_in_or_user account pill / sign-in buttons are visible down to mobile).
+.authArea {
+  display: flex;
+  align-self: stretch;
+  align-items: stretch;
+}

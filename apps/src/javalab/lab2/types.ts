@@ -16,6 +16,13 @@ export interface JavalabFlatFile {
   // Whether this file's tab is the currently focused one.
   // At most one file in a source should set this true.
   isActive?: boolean;
+  // Asset (image/audio) entries set this to where the bytes live
+  // (/v3/assets/... or /level_starter_assets/...)
+  url?: string;
+  // Set on visible starter files the levelbuilder locked: editable by
+  // students but not deletable or renamable. Round-trips
+  // ProjectFileType.LOCKED_STARTER.
+  locked?: boolean;
 }
 
 export type JavalabFlatSource = Record<string, JavalabFlatFile>;

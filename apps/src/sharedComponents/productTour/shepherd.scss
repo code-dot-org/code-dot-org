@@ -2,7 +2,66 @@
 @import 'color.scss';
 
 .tour-step-highlight {
-  outline: 2px solid orange !important;
+  position: relative !important;
+  outline: none;
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: 2px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    padding: 3px;
+    border-radius: inherit;
+    background: linear-gradient(
+      90deg,
+      #15c5f9,
+      #2b72ff,
+      #8f20ec,
+      #c710c2,
+      #e50976,
+      #15c5f9
+    );
+    background-size: 300% 300%;
+    animation: tour-highlight-gradient-shift 12s linear infinite;
+    pointer-events: none;
+    // Mask punches a hole in the interior so only the 3px border ring is painted,
+    // regardless of whether the highlighted element has a background.
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    -webkit-mask: linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: destination-out;
+  }
+}
+
+@supports not ((mask-composite: exclude) or (-webkit-mask-composite: destination-out)) {
+  .tour-step-highlight::before {
+    content: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tour-step-highlight::before {
+    animation: none;
+  }
+}
+
+@keyframes tour-highlight-gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 // Shared styles for all shepherd step containers.
@@ -98,8 +157,9 @@
     }
 
     &:disabled,
-    &[aria-disabled='true'] {
-      border-color: var(--borders-neutral-disabled) !important;
+    &[aria-disabled='true'],
+    &[aria-disabled='true']:hover {
+      border-color: var(--borders-neutral-disabled);
       color: var(--text-neutral-disabled);
       background-color: var(--background-neutral-primary);
     }
@@ -246,9 +306,12 @@ div .quiz-option-correct {
   .shepherd-header {
     order: 2;
     flex-shrink: 0;
-    background-color: transparent !important;
-    padding: 0 !important;
-    margin-bottom: 0 !important;
+  }
+
+  &.shepherd-has-title .shepherd-content .shepherd-header {
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 0;
   }
 
   // Take the cancel icon out of absolute positioning so it sits inline.

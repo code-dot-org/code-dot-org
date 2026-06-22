@@ -47,18 +47,4 @@ describe('Share dialog redux module', () => {
       ).libraryDialogIsOpen
     ).toBe(true);
   });
-
-  it('saveReplayLog sets the changes only the replay log', () => {
-    let state = {
-      isOpen: true,
-      isUnpublishPending: true,
-      didUnpublish: true,
-      libraryDialogIsOpen: true,
-    };
-    let testLog = 'test';
-    expect(reducer(state, shareDialog.saveReplayLog(testLog))).toEqual({
-      ...state,
-      ...{replayLog: testLog},
-    });
-  });
 });

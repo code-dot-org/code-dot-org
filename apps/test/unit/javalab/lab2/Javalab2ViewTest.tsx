@@ -36,9 +36,10 @@ jest.mock('@cdo/apps/javalab/lab2/javabuilderRunUtils', () => ({
 }));
 
 // useSource normally writes the start code into redux and triggers a throttled
-// (no-op) save of its own. Stub it and seed redux directly below.
+// (no-op) save of its own. Stub it (capturing its args for the starter-asset
+// tests) and seed redux directly below.
 jest.mock('@codebridge/hooks/useSource', () => ({
-  useSource: () => ({startSources: undefined}),
+  useSource: jest.fn(() => ({startSources: undefined})),
 }));
 
 const LEVEL_ID = 5;
@@ -89,13 +90,14 @@ describe('Javalab2View', () => {
 
   function viewElement(
     initialSources: ProjectSources | undefined,
-    viewChannel: Channel
+    viewChannel: Channel,
+    viewLevelProperties: JavalabLevelProperties = levelProperties
   ) {
     return (
       <Provider store={store}>
         <ThemeProvider>
           <Javalab2View
-            levelProperties={levelProperties}
+            levelProperties={viewLevelProperties}
             initialSources={initialSources}
             channel={viewChannel}
           />
@@ -174,6 +176,107 @@ describe('Javalab2View', () => {
 
     const {needsInitialSourcesSave} = await runFromView();
     expect(needsInitialSourcesSave).toBe(true);
+  });
+
+  it('keeps the sources passed to useSource stable when a save echoes a new channel', () => {
+    const {useSource} = jest.requireMock('@codebridge/hooks/useSource');
+    // A miniApp project carries a labConfig on its channel.
+    const miniAppChannel: Channel = {
+      ...channel,
+      labConfig: {miniApp: {name: 'theater'}},
+    };
+    const initialSources: ProjectSources = {source};
+
+    store.dispatch(setChannel(miniAppChannel));
+    store.dispatch(setProjectSource(projectSources));
+    store.dispatch(setProjectSourceLevelId(LEVEL_ID));
+    const {rerender} = render(viewElement(initialSources, miniAppChannel));
+    const firstArgs = (useSource as jest.Mock).mock.calls.at(-1);
+
+    // A save echoes a freshly-parsed channel: a new object whose labConfig is a
+    // new reference but an equal value.
+    const savedChannel: Channel = {
+      ...miniAppChannel,
+      labConfig: {miniApp: {name: 'theater'}},
+    };
+    rerender(viewElement(initialSources, savedChannel));
+    const secondArgs = (useSource as jest.Mock).mock.calls.at(-1);
+
+    // levelProperties (arg 1) and initialSources (arg 2) must keep their
+    // references across the save, or useSource's reset would fire and revert
+    // the editor to the loaded server source.
+    expect(secondArgs[1]).toBe(firstArgs[1]);
+    expect(secondArgs[2]).toBe(firstArgs[2]);
+  });
+
+  describe('starter assets', () => {
+    // Legacy levels store starter assets only as the level's
+    // {friendlyName => uuidName} mapping; the view merges them into the
+    // sources it hands to codebridge/useSource.
+    const assetLevelProperties: JavalabLevelProperties = {
+      ...levelProperties,
+      name: 'Asset Level',
+      startSources: {
+        'Main.java': {text: 'class Main {}', isVisible: true},
+        // The shared LevelProperties contract types startSources as
+        // MultiFileSource | ProjectSources; javalab sends the flat shape.
+      } as unknown as JavalabLevelProperties['startSources'],
+      starterAssets: {'cat.png': 'uuid-1.png'},
+    };
+
+    function renderWithAssets(initialSources: ProjectSources | undefined) {
+      store.dispatch(setChannel(channel));
+      store.dispatch(setProjectSource(projectSources));
+      store.dispatch(setProjectSourceLevelId(LEVEL_ID));
+      return render(viewElement(initialSources, channel, assetLevelProperties));
+    }
+
+    function lastUseSourceArgs() {
+      const {useSource} = jest.requireMock('@codebridge/hooks/useSource');
+      return (useSource as jest.Mock).mock.calls.at(-1);
+    }
+
+    it('merges mapping entries into startSources as url-backed LOCKED_STARTER files', () => {
+      renderWithAssets(undefined);
+      const codebridgeProps = (
+        Codebridge as unknown as jest.Mock
+      ).mock.calls.at(-1)[0];
+      const startSources = codebridgeProps.levelProperties
+        .startSources as MultiFileSource;
+      const image = Object.values(startSources.files).find(
+        f => f.name === 'cat.png'
+      )!;
+      expect(image.url).toBe(
+        '/level_starter_assets/Asset%20Level/uuid/uuid-1.png'
+      );
+      expect(image.type).toBe('locked_starter');
+    });
+
+    it('does not merge mapping entries into a project loaded from the server', () => {
+      // Like any other start-source change, assets reach a student's
+      // project only when it is seeded from the level (fresh load or
+      // start over), never retrofitted into saved sources.
+      const loaded: ProjectSources = {
+        source: {
+          folders: {},
+          files: {
+            '0': {
+              id: '0',
+              name: 'Main.java',
+              contents: 'class Main {}',
+              folderId: '0',
+            },
+          },
+          openFiles: ['0'],
+        },
+      };
+      renderWithAssets(loaded);
+      const initialSources = lastUseSourceArgs()[2] as ProjectSources;
+      const names = Object.values(
+        (initialSources.source as MultiFileSource).files
+      ).map(f => f.name);
+      expect(names).toEqual(['Main.java']);
+    });
   });
 
   it('ignores a save success from the previous level after a level change', async () => {

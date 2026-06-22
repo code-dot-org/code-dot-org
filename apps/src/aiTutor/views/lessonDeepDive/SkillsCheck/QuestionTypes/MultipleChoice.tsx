@@ -2,11 +2,12 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Typography} from '@mui/material';
 import React, {FC, useState} from 'react';
 
+import {PracticeProblemTypes} from '@cdo/generated-scripts/sharedConstants';
+
 import {
   MatchSolution,
   MultiSolution,
   PracticeProblem,
-  PracticeProblemTypes,
   ScrambleSolution,
 } from '../../types';
 
@@ -46,9 +47,9 @@ const PracticeMultipleChoice: FC<PracticeMultipleChoiceProps> = ({
   };
 
   const handleOptionClick = (option: string) => {
-    if (problem.type === PracticeProblemTypes.MULTI_SINGLE) {
+    if (problem.type === PracticeProblemTypes.MULTIPLE_CHOICE_SINGLE) {
       setSelected([option]);
-    } else if (problem.type === PracticeProblemTypes.MULTI_MULTI) {
+    } else if (problem.type === PracticeProblemTypes.MULTIPLE_CHOICE_MULTI) {
       setSelected(prev =>
         prev.includes(option)
           ? prev.filter(o => o !== option)

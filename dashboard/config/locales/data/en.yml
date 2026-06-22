@@ -934,6 +934,9 @@ en:
         pl-aif2-teaching-moves-coding-with-ai: Teaching Coding + AI
         pl-aif2-debug-for-loop: Debugging For Loops
         pl-aif2-filter-for-transparency: Filtering for Transparency
+        aif2-pl-redesign-filter-logic: Redesigning Filter Logic
+        pl-aif2-transparency-cues-U4: Transparency Cues
+        pl-aif2-making-decions-in-code: Making Decisions in Code
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

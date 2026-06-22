@@ -26,6 +26,23 @@ require 'cdo/shared_constants'
 # Ordered partitioning of script levels within a unit
 # (Intended to replace most of the functionality in Game, due to the need for multiple app types within a single Lesson)
 class Lesson < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    name: :public,
+    absolute_position: :public,
+    script_id: :public,
+    created_at: :public,
+    updated_at: :public,
+    lockable: :public,
+    relative_position: :public,
+    properties: :public,
+    lesson_group_id: :public,
+    key: :public,
+    has_lesson_plan: :public,
+  )
+
   include LevelsHelper
   include SharedConstants
   include Rails.application.routes.url_helpers
@@ -60,7 +77,11 @@ class Lesson < ApplicationRecord
   has_many :lessons_opportunity_standards,  dependent: :destroy
   has_many :opportunity_standards, through: :lessons_opportunity_standards, source: :standard
 
-  has_one :rubric, dependent: :destroy
+  # A lesson has at most one rubric. Order by id so that, should duplicates
+  # exist transiently (e.g. before the one-rubric-per-lesson cleanup runs),
+  # this consistently returns the canonical (oldest) rubric — the one the
+  # cleanup keeps and the one the levelbuilder gating links to.
+  has_one :rubric, -> {order(:id)}, dependent: :destroy
 
   self.table_name = 'stages'
 

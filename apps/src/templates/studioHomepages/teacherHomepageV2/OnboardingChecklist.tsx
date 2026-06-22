@@ -45,36 +45,38 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
   return (
     <div className={styles.onboardingChecklistOuter}>
       <div className={styles.onboardingChecklistInner}>
-        <Typography variant="h4" gutterBottom>
-          <span className={styles.gradientIcon}>
-            <FontAwesomeV6Icon iconName="sparkle" iconStyle="solid" />
-          </span>
-          Where should we start?
-        </Typography>
-        <Typography variant="body2">
-          Teaching Assistant can help you get started with CodeAI
-        </Typography>
-        <div className={styles.onboardingChecklistButtons}>
-          {CHECKLIST_ITEMS.map(({id, label, completed}) => (
-            <MuiButton
-              key={id}
-              variant="outlined"
-              color="secondary"
-              className={styles.onboardingChecklistButton}
-              onClick={() => handleButtonClick(id)}
-              type="button"
-            >
-              {completed && (
-                <span className={styles.onboardingChecklistCheckIcon}>
-                  <FontAwesomeV6Icon
-                    iconName="circle-check"
-                    iconStyle="solid"
-                  />
-                </span>
-              )}
-              {label}
-            </MuiButton>
-          ))}
+        <div className={styles.onboardingChecklistInnerContent}>
+          <Typography variant="h4" gutterBottom>
+            <span className={styles.gradientIcon}>
+              <FontAwesomeV6Icon iconName="sparkle" iconStyle="solid" />
+            </span>
+            Where should we start?
+          </Typography>
+          <Typography variant="body2">
+            Teaching Assistant can help you get started with CodeAI
+          </Typography>
+          <div className={styles.onboardingChecklistButtons}>
+            {CHECKLIST_ITEMS.map(({id, label, completed}) => (
+              <MuiButton
+                key={id}
+                variant="outlined"
+                color="secondary"
+                className={styles.onboardingChecklistButton}
+                onClick={() => handleButtonClick(id)}
+                type="button"
+              >
+                {completed && (
+                  <span className={styles.onboardingChecklistCheckIcon}>
+                    <FontAwesomeV6Icon
+                      iconName="circle-check"
+                      iconStyle="solid"
+                    />
+                  </span>
+                )}
+                {label}
+              </MuiButton>
+            ))}
+          </div>
         </div>
       </div>
       <MuiButton

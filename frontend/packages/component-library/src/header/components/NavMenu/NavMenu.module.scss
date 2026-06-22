@@ -1,0 +1,46 @@
+// NavMenu styles. These override MUI's List / Link theme styles; they win
+// because MUI's emotion styles are in `@layer mui` (enableCssLayer) and these
+// module classes are unlayered. @media values are static px (originals derive
+// from HEADER_BREAKPOINTS).
+
+// Horizontal nav link list. Hidden below the desktopNav breakpoint; the
+// hamburger drawer covers that range.
+.navList {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  margin-left: 16px;
+  gap: 36px;
+
+  @media (min-width: 1061px) {
+    display: flex;
+  } // HEADER_BREAKPOINTS.desktopNav
+}
+
+// Each list item — shrinks to content width (MUI ListItem defaults to full width).
+.navItem {
+  width: auto;
+  padding: 0;
+}
+
+// Each nav link — text-width anchor, full toolbar height for the underline.
+.navLink {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-weight: normal;
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    box-shadow: inset 0 -2px 0 var(--background-accent-orange-primary);
+  }
+
+  // Match the header's other controls; without this the link falls back to the UA ring.
+  &:focus-visible {
+    outline: 2px solid var(--text-neutral-white-fixed);
+    outline-offset: 2px;
+  }
+}

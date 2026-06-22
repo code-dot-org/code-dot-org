@@ -3,8 +3,6 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import color from '@cdo/apps/util/color';
-
 import AnimationPreview from '../AnimationPicker/AnimationPreview';
 import {PlayBehavior} from '../constants';
 import * as shapes from '../shapes';
@@ -31,14 +29,14 @@ const staticStyles = {
     overflow: 'hidden',
     borderRadius: 12,
     textAlign: 'center',
-    border: 'solid ' + color.light_purple + ' 2px',
-    backgroundColor: color.white,
+    border: 'solid var(--borders-brand-purple-primary) 2px',
+    backgroundColor: 'var(--background-neutral-white-fixed)',
   },
   indexBubbleText: {
     margin: 2,
     fontWeight: 'bold',
     fontSize: 16,
-    color: color.light_purple,
+    color: 'var(--text-brand-purple-primary)',
   },
 };
 
@@ -86,7 +84,9 @@ export default class ListItemThumbnail extends React.Component {
       root: {
         border:
           'solid 2px ' +
-          (this.props.isSelected ? color.purple : color.light_gray),
+          (this.props.isSelected
+            ? 'var(--borders-brand-purple-primary)'
+            : 'var(--borders-neutral-primary)'),
       },
     });
 

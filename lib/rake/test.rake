@@ -4,11 +4,13 @@ require 'cdo/chat_client'
 require 'cdo/test_run_utils'
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
+require 'cdo/github'
 require 'cdo/lighthouse'
 require 'parallel'
 require 'aws-sdk-s3'
 require 'cdo/playwright_report'
 require 'cdo/mysql_console_helper'
+require 'json'
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
 include TimedTaskWithLogging
 
@@ -123,47 +125,76 @@ namespace :test do
     Lighthouse.report CDO.studio_url('')
   end
 
-  # Run the Playwright e2e suite, upload its HTML report, and report start /
-  # success / failure to Slack the way the Cucumber UI tests do (ChatClient.log
-  # → the env's log room; #infra-test on the test server, stdout under CI).
-  # Run by the Drone ui pipeline (ui_tests.sh) and on demand (rake
-  # test:playwright_ui); not yet in ui_all (DTT) pending manual verification.
-  # Target comes from TARGET_URL, defaulting to this environment's studio URL.
-  # Non-blocking — a failure warns but never fails the deploy or the PR build.
+  # Non-blocking: a failure is reported to Slack but never fails the deploy or PR build.
   timed_task_with_logging :playwright_ui do
-    target_url = ENV['TARGET_URL'] || CDO.studio_url('')
-    script = frontend_dir('packages', 'e2e-tests', 'bin', 'run-playwright-tests-ci.sh')
-    ChatClient.log "Starting <b>dashboard</b> Playwright e2e tests against #{target_url}..."
+    target_url = ENV['TARGET_URL'].presence || CDO.studio_url('')
+    e2e_dir = frontend_dir('packages', 'e2e-tests')
+    script = File.join(e2e_dir, 'bin', 'run-playwright-tests-ci.sh')
+
+    # Lane for the config's PLAYWRIGHT_PROVIDER; GHA sets its own and skips this task.
+    provider =
+      if CDO.test_system?            then 'dtt'
+      elsif CI::Utils.running_on_ci? then 'drone'
+      end
+
+    # Link the report up front — the key is stable, so it resolves once this run ends.
+    pending_report = Cdo::PlaywrightReport.index_url
+    start_message = "Starting <b>dashboard</b> Playwright e2e tests against #{target_url}."
+    start_message += %( The <a href="#{pending_report}">HTML report</a> publishes here when the run finishes.) if pending_report
+    ChatClient.log start_message
+
     # Stream the suite's output (the list reporter, banner, warnings) straight to
     # the log via system_stream_output (system_with_chat_logging would capture and
     # discard it). Rescue its non-zero raise so the run stays non-blocking.
+    start_time = Time.now
     passed =
       begin
-        RakeUtils.system_stream_output("TARGET_URL=#{target_url}", script)
+        env_prefix = ["TARGET_URL=#{target_url}"]
+        env_prefix << "PLAYWRIGHT_PROVIDER=#{provider}" if provider
+        RakeUtils.system_stream_output(*env_prefix, script)
         true
       rescue StandardError
         false
       end
-    report_url = Cdo::PlaywrightReport.upload(frontend_dir('packages', 'e2e-tests', 'playwright-report'))
-    report_link = report_url ? %( See <a href="#{report_url}">the HTML report</a>.) : ''
-    if passed
-      ChatClient.log "Playwright e2e tests for <b>dashboard</b> succeeded.#{report_link}"
-    else
-      ChatClient.log "Playwright e2e tests for <b>dashboard</b> failed (non-blocking).#{report_link}", color: 'red'
-    end
+    duration = Time.now - start_time
+
+    report_url = Cdo::PlaywrightReport.upload(File.join(e2e_dir, 'playwright-report'))
+    summary = playwright_results_summary(File.join(e2e_dir, 'test-results', 'results.json'))
+
+    status = passed ? '<b>✅ PASSED</b>' : '<b>❌ FAILED</b> (non-blocking)'
+    report = "Playwright e2e tests for <b>dashboard</b>: #{status}\n"
+    report += playwright_pass_fail_summary(summary, duration)
+    report += %(\nSee <a href="#{report_url}">the HTML report</a>.) if report_url
+    ChatClient.log report, color: (passed ? 'green' : 'red')
+  end
+
+  # Dispatch the dtt.yml Playwright run on GitHub Actions (ref: test), moving e2e
+  # browser execution off the daemon and onto horizontally scalable runners. The
+  # GHA run hits the same test-studio; only the execution substrate differs.
+  # Fire-and-forget: GitHub schedules and runs it, the daemon's job ends here.
+  # Non-blocking — a dispatch error warns but never raises (matches :playwright_ui).
+  timed_task_with_logging :dispatch_gha_dtt do
+    GitHub.dispatch_workflow(workflow_id: 'dtt.yml', ref: 'test')
+    ChatClient.log 'Dispatched <b>dtt.yml</b> Playwright e2e run on GitHub Actions (ref: test).'
+  rescue StandardError => exception
+    ChatClient.log "Could not dispatch dtt.yml Playwright run (non-blocking): #{exception.message}", color: 'red'
   end
 
   # Run the deploy-time UI suites in parallel. If one suite
   # raises, allow the others to complete, then make sure this task raises.
-  # NOTE: :playwright_ui is intentionally not listed yet — run it manually
-  # (rake test:playwright_ui) to verify before wiring it into DTT.
+  # :playwright_ui rescues its own failure, so it never makes ui_all raise.
+  # After the daemon suites finish, dispatch the experimental off-daemon GHA run
+  # (test daemon only). It runs alongside the daemon :playwright_ui for comparison.
   timed_task_with_logging :ui_all do
     Parallel.each(
-      [:eyes_ui, :saucelabs_ui, :devicefarm_desktop_ui],
+      [:eyes_ui, :saucelabs_ui, :devicefarm_desktop_ui, :playwright_ui],
       in_threads: 4,
     ) do |target|
       Rake::Task["test:#{target}"].invoke
     end
+  ensure
+    # dispatch even if a suite raised; the GHA run isn't gated on the daemon suites.
+    Rake::Task['test:dispatch_gha_dtt'].invoke if CDO.test_system?
   end
 
   timed_task_with_logging :wait_for_test_server do
@@ -578,8 +609,38 @@ GLOBS_AFFECTING_EVERYTHING = %w(
   .drone.yml
   .gitattributes
   lib/rake/test.rake
+  config/**/*
   docker/ci/**/*
 )
+
+def playwright_results_summary(results_json)
+  return nil unless File.file?(results_json)
+  stats = JSON.parse(File.read(results_json)).fetch('stats', {})
+  expected = stats['expected'].to_i
+  unexpected = stats['unexpected'].to_i
+  flaky = stats['flaky'].to_i
+  skipped = stats['skipped'].to_i
+  {
+    passed: expected,
+    failed: unexpected,
+    flaky: flaky,
+    skipped: skipped,
+    total: expected + unexpected + flaky + skipped,
+  }
+rescue StandardError => exception
+  ChatClient.log "Could not parse Playwright results: #{exception.message}"
+  nil
+end
+
+def playwright_pass_fail_summary(summary, duration)
+  formatted_duration = RakeUtils.format_duration(duration)
+  return "Duration: #{formatted_duration}. (test counts unavailable)" unless summary
+  line = "#{summary[:passed]} passed. #{summary[:failed]} failed. " \
+    "#{summary[:skipped]} skipped. Test count: #{summary[:total]}. " \
+    "Duration: #{formatted_duration}."
+  line += " Flaky (passed on retry): #{summary[:flaky]}." if summary[:flaky].positive?
+  line
+end
 
 def run_tests_if_changed(test_name, changed_globs, ignore: [])
   base_branch = GitUtils.current_branch_base

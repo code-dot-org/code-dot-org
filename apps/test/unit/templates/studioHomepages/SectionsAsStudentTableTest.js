@@ -1,3 +1,4 @@
+import {Button as MuiButton} from '@mui/material';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -37,14 +38,14 @@ describe('SectionsAsStudentTable', () => {
     const wrapper = wrapped(
       <SectionsAsStudentTable sections={joinedSections} canLeave={false} />
     );
-    expect(wrapper.find('Button').exists()).toBe(false);
+    expect(wrapper.find(MuiButton).exists()).toBe(false);
   });
 
   it('shows a leave section button for students who do not have teacher-managed accounts', () => {
     const wrapper = wrapped(
       <SectionsAsStudentTable sections={joinedSections} canLeave={true} />
     );
-    expect(wrapper.find('Button').exists()).toBe(true);
+    expect(wrapper.find(MuiButton).exists()).toBe(true);
   });
 
   it('renders a row for each joined section', () => {

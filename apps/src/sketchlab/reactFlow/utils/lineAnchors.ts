@@ -19,6 +19,18 @@ export function lineAnchorHandleId(role: 'source' | 'target'): string {
   return `line-anchor-${role}`;
 }
 
+export function getStandaloneLineAnchorIds(
+  edge: SketchlabReactFlowEdge,
+  getNode: (id: string) => SketchlabReactFlowNode | undefined
+): [string, string] | null {
+  const sourceNode = getNode(edge.source);
+  const targetNode = getNode(edge.target);
+  if (sourceNode?.type !== 'lineAnchor' || targetNode?.type !== 'lineAnchor') {
+    return null;
+  }
+  return [sourceNode.id, targetNode.id];
+}
+
 // Builds a lineAnchor node positioned so that its visible Handle ends up at
 // `handleFlowPosition`. Source anchors render their Handle on the right
 // side of the 10×10 box; target anchors render on the left. Both sit

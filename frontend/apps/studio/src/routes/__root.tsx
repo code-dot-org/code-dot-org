@@ -4,30 +4,23 @@ import '@code-dot-org/component-library-styles/fontVariables.css';
 import '@code-dot-org/component-library-styles/primitiveColors.css';
 import '@code-dot-org/component-library-styles/colors.css';
 
-import {ThemeProvider} from '@mui/material';
+import {
+  Box,
+  GlobalStyles,
+  StyledEngineProvider,
+  ThemeProvider,
+} from '@mui/material';
 import {createRootRoute, Outlet, useRouter} from '@tanstack/react-router';
 import {TanStackRouterDevtools} from '@tanstack/react-router-devtools';
 import {useCallback} from 'react';
 
-import Header from '@code-dot-org/component-library/header';
 import {CdoTheme} from '@code-dot-org/component-library/themes';
 
 import StudioFooter from '@/components/footer';
-import CdoLogo from '@/config/brand/assets/cdo-logo-inverse.webp';
+import SiteHeader from '@/components/header';
 import {fetchAuthOutcome, useAuth} from '@/modules/auth';
 import Bootstrap from '@/modules/bootstrap';
 import {AuthErrorPage} from '@/modules/errors';
-
-/** Top-level navigation items shared across all routes. */
-const MENU_ITEMS = [
-  {label: 'Learn', href: '/students'},
-  {label: 'Teach', href: '/teach'},
-  {label: 'Districts', href: '/administrators'},
-  {label: 'Stats', href: '/promote'},
-  {label: 'Donate', href: '/donate'},
-  {label: 'Incubator', href: '/incubator'},
-  {label: 'About', href: '/about'},
-];
 
 /**
  * Maps auth status to the route content area.
@@ -71,27 +64,46 @@ function RootContent() {
 
   return (
     <>
-      <Header
-        logoImageUrl={CdoLogo}
-        brandName="Code.org"
-        menuItems={MENU_ITEMS}
-        userAuth={auth}
-      />
-      {renderRouteArea(auth, onRetry)}
+      <SiteHeader />
+      {/* Reserve ~a viewport for the route content so the footer starts at/below
+          the fold while a route's chunk or data loads, and doesn't jump down when
+          the content arrives. Layout-level concern shared by every async route;
+          the offset approximates the header height. */}
+      <Box sx={{minHeight: 'calc(100vh - 50px)'}}>
+        {renderRouteArea(auth, onRetry)}
+      </Box>
       <StudioFooter />
       <TanStackRouterDevtools />
     </>
   );
 }
 
+// Floor the responsive layout at 360px (the modern-phone minimum; code.org's
+// official requirement is 1024px desktop/Chromebook). Below 360px the page
+// scrolls horizontally instead of squishing. Hoisted so it isn't re-created.
+const responsiveFloorStyles = (
+  <GlobalStyles styles={{body: {minWidth: '360px'}}} />
+);
+
+// Put MUI's emotion styles in an @layer so unlayered CSS (the header's
+// .module.scss) wins over them without specificity hacks. The declaration sets
+// the order; MUI's styles land in `mui`, below any unlayered rules.
+const cssLayerOrder = (
+  <GlobalStyles styles="@layer theme, base, mui, components, utilities;" />
+);
+
 /** Root layout: applies the CDO MUI theme and Bootstrap providers to all routes. */
 function RootLayout() {
   return (
-    <ThemeProvider theme={CdoTheme}>
-      <Bootstrap locale="en-US">
-        <RootContent />
-      </Bootstrap>
-    </ThemeProvider>
+    <StyledEngineProvider enableCssLayer>
+      {cssLayerOrder}
+      <ThemeProvider theme={CdoTheme}>
+        {responsiveFloorStyles}
+        <Bootstrap locale="en-US">
+          <RootContent />
+        </Bootstrap>
+      </ThemeProvider>
+    </StyledEngineProvider>
   );
 }
 
