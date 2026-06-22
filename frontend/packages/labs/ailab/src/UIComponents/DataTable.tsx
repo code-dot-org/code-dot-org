@@ -2,7 +2,7 @@
 import {styles} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
-import {useAppDispatch, useAppSelector} from '../hooks';
+import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
 import {getTableData, setCurrentColumn, setHighlightColumn} from '../redux';
 
 interface DataTableProps {
@@ -23,7 +23,10 @@ const DataTable = ({
   useResultsData,
 }: DataTableProps) => {
   const dispatch = useAppDispatch();
-  const data = useAppSelector(state => getTableData(state, !!useResultsData));
+  const data = useAppSelector(
+    state => getTableData(state, !!useResultsData),
+    deepEqual,
+  );
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const labelColumn = useAppSelector(state => state.labelColumn || 'unknown');
   const selectedFeatures = useAppSelector(state => state.selectedFeatures);

@@ -3,7 +3,7 @@ import {useState, useEffect, useRef, useCallback} from 'react';
 
 import {imageUrl} from '../assetPath';
 import {styles, getFadeOpacity} from '../constants';
-import {useAppSelector} from '../hooks';
+import {deepEqual, useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {getTableData} from '../redux';
 
@@ -14,7 +14,7 @@ const framesPerCycle = 80;
 const maxNumItems = 7;
 
 const GenerateResults = () => {
-  const data = useAppSelector(state => getTableData(state, true));
+  const data = useAppSelector(state => getTableData(state, true), deepEqual);
   const instructionsOverlayActive = useAppSelector(
     state => state.instructionsOverlayActive,
   );

@@ -5,7 +5,7 @@ import {getPercentCorrect} from '../helpers/accuracy';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {getDatasetDetails} from '../helpers/datasetDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
-import {shallowEqual, useAppSelector} from '../hooks';
+import {deepEqual, shallowEqual, useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {getLabelToSave, getFeaturesToSave} from '../redux';
 
@@ -17,8 +17,8 @@ const ModelCard = () => {
   );
   const selectedFeatures = useAppSelector(state => state.selectedFeatures);
   const percentCorrect = useAppSelector(getPercentCorrect);
-  const label = useAppSelector(getLabelToSave);
-  const features = useAppSelector(getFeaturesToSave);
+  const label = useAppSelector(getLabelToSave, deepEqual);
+  const features = useAppSelector(getFeaturesToSave, deepEqual);
   const datasetDetails = useAppSelector(getDatasetDetails, shallowEqual);
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const localizedLabel = getLocalizedColumnName(datasetDetails.name, label.id);
