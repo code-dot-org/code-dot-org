@@ -1,12 +1,7 @@
-import {Typography, Button as MuiButton} from '@mui/material';
+import Modal from '@code-dot-org/component-library/modal';
 import React from 'react';
 
 import i18n from '@cdo/locale';
-
-import BaseDialog from '../BaseDialog';
-import DialogFooter from '../teacherDashboard/DialogFooter';
-
-import styles from './project-name-failure-dialog.module.scss';
 
 interface ProjectNameFailureDialogProps {
   flaggedText: string;
@@ -17,30 +12,22 @@ interface ProjectNameFailureDialogProps {
 const ProjectNameFailureDialog: React.FunctionComponent<
   ProjectNameFailureDialogProps
 > = ({flaggedText, isOpen, handleClose}) => {
+  if (!isOpen) {
+    return null;
+  }
+
   return (
-    <BaseDialog
+    <Modal
+      onClose={handleClose}
       title={i18n.nameFailureDialogTitle()}
-      isOpen={isOpen}
-      handleClose={handleClose}
-    >
-      <Typography variant="h3" gutterBottom>
-        {i18n.nameFailureDialogTitle()}
-      </Typography>
-      <div className={styles.contents}>
-        <p>{i18n.nameFailureDialogBody({text: flaggedText})}</p>
-      </div>
-      <DialogFooter rightAlign>
-        <MuiButton
-          variant="contained"
-          color="primary"
-          size="medium"
-          onClick={handleClose}
-          type="button"
-        >
-          {i18n.ok()}
-        </MuiButton>
-      </DialogFooter>
-    </BaseDialog>
+      description={i18n.nameFailureDialogBody({text: flaggedText})}
+      primaryButtonProps={{
+        onClick: handleClose,
+        children: i18n.ok(),
+        size: 'medium',
+        type: 'button',
+      }}
+    />
   );
 };
 
