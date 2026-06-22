@@ -1,0 +1,37 @@
+.actionCell {
+  padding-right: 16px;
+}
+
+// This modal still mixes legacy global button CSS with MUI Button state CSS.
+// Keep these overrides local, forceful, and boring until the modal shell moves.
+.cancelButton {
+  background-color: var(--background-neutral-primary) !important;
+  border-color: var(--borders-neutral-solid) !important;
+  color: var(--text-neutral-primary) !important;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--background-neutral-tertiary) !important;
+    border-color: var(--borders-neutral-solid) !important;
+    color: var(--text-neutral-primary) !important;
+  }
+}
+
+.viewVersionButton {
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--background-brand-purple-strong) !important;
+    color: var(--text-neutral-white-fixed) !important;
+    text-decoration: none !important;
+  }
+}
+
+// Keep the selected-row View button legible while disabled.
+.disabledViewButton {
+  &:global(.Mui-disabled) {
+    background-color: var(--neutral-gray-90) !important;
+    color: var(--text-neutral-white-fixed) !important;
+  }
+}

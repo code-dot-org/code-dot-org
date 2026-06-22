@@ -336,7 +336,7 @@ const SkillsCheck: FC<SkillsCheckProps> = ({
           <div className={styles.feedback}>
             <WaitingAnimation shouldDisplay={feedbackLoading} />
             {feedback && !feedbackLoading && (
-              <SafeMarkdown unwrapped markdown={feedback} />
+              <SafeMarkdown unwrapped localized={false} markdown={feedback} />
             )}
           </div>
         )}
