@@ -60,11 +60,10 @@ import {
 } from '../types';
 import {canCreateConnection} from '../utils/connectionRules';
 import {groupSelectedNodes, ungroupNode} from '../utils/grouping';
-import {snapAnchorIfNearby} from '../utils/handleSnap';
+import {attachEdgeEndpoint} from '../utils/handleSnap';
 import {
-  anchorHandleFlowPosition,
   createLineAnchorAtHandle,
-  snapAnchorToHandlePosition,
+  findAnchorHandleSnap,
   snapEdgesIntoDraggedNode,
 } from '../utils/lineAnchors';
 import {defaultLineEdgeFields} from '../utils/lineEdges';
@@ -239,6 +238,22 @@ export default function ReactFlowCanvas({
   // isDirectAnchorDragging on the first onNodeDrag (not on bare clicks).
   const anchorDragMovedRef = useRef(false);
 
+  // The edge endpoint being pointer-dragged, captured at drag start so each
+  // move can exclude the opposite endpoint and drag-stop can commit without
+  // searching again.
+  const draggedAnchorRef = useRef<{
+    edgeId: string;
+    side: 'source' | 'target';
+    oppositeNodeId: string;
+  } | null>(null);
+  // The handle the dragged anchor most recently snapped onto, or null when it
+  // sits free. Committed verbatim on drag-stop so the attachment matches the
+  // preview the user saw.
+  const anchorSnapTargetRef = useRef<{
+    nodeId: string;
+    handleId: string | null;
+  } | null>(null);
+
   // Push snapshot when a drag begins — at this point nodesRef still holds the
   // pre-drag positions, so undo correctly restores the node to where it was
   // before the move.
@@ -247,9 +262,22 @@ export default function ReactFlowCanvas({
       pushSnapshot();
       if (node.type === 'lineAnchor') {
         anchorDragMovedRef.current = false;
+        anchorSnapTargetRef.current = null;
+        const edge = getEdges().find(
+          candidate =>
+            candidate.source === node.id || candidate.target === node.id
+        );
+        const side = edge?.source === node.id ? 'source' : 'target';
+        draggedAnchorRef.current = edge
+          ? {
+              edgeId: edge.id,
+              side,
+              oppositeNodeId: side === 'source' ? edge.target : edge.source,
+            }
+          : null;
       }
     },
-    [pushSnapshot]
+    [pushSnapshot, getEdges]
   );
 
   const handleNodeDrag = useCallback(
@@ -262,24 +290,29 @@ export default function ReactFlowCanvas({
         setIsDirectAnchorDragging(true);
       }
       // Override React Flow's pointer-following position so the anchor visually
-      // snaps onto a nearby handle mid-drag. Each move recomputes from the live
-      // pointer position, so the anchor releases from the handle once dragged
-      // back out of range.
-      const snappedPosition = snapAnchorToHandlePosition({
+      // snaps onto a nearby handle mid-drag, and remember which handle so the
+      // drag-stop attaches to exactly what the user saw. Recomputing from the
+      // live position each move means the anchor releases once dragged back out
+      // of range.
+      const context = draggedAnchorRef.current;
+      const snap = findAnchorHandleSnap({
         anchorPosition: node.position,
         role: node.data.lineAnchorRole,
-        excludeNodeId: node.id,
+        excludeNodeIds: context ? [node.id, context.oppositeNodeId] : [node.id],
         radiusPx: LINE_RECONNECT_SNAP_RADIUS_PX,
         flowToScreenPosition,
         screenToFlowPosition,
       });
-      if (!snappedPosition) {
+      anchorSnapTargetRef.current = snap
+        ? {nodeId: snap.nodeId, handleId: snap.handleId}
+        : null;
+      if (!snap) {
         return;
       }
       setNodes(currentNodes =>
         currentNodes.map(currentNode =>
           currentNode.id === node.id
-            ? {...currentNode, position: snappedPosition}
+            ? {...currentNode, position: snap.position}
             : currentNode
         )
       );
@@ -375,18 +408,22 @@ export default function ReactFlowCanvas({
     (event: React.MouseEvent, node: SketchlabReactFlowNode) => {
       if (node.type === 'lineAnchor') {
         setIsDirectAnchorDragging(false);
-        // Match the live drag-snap by testing the anchor's handle position,
-        // not the raw pointer, so a visually-snapped endpoint reliably attaches
-        // on release.
-        snapAnchorIfNearby({
-          anchorId: node.id,
-          screenPoint: flowToScreenPosition(
-            anchorHandleFlowPosition(node.position, node.data.lineAnchorRole)
-          ),
-          radiusPx: LINE_RECONNECT_SNAP_RADIUS_PX,
-          edges: getEdges(),
-          setEdges,
-        });
+        // Commit the handle the live drag last snapped onto, so the endpoint
+        // attaches to exactly what the user saw rather than a freshly-searched
+        // target derived from the raw pointer.
+        const context = draggedAnchorRef.current;
+        const target = anchorSnapTargetRef.current;
+        draggedAnchorRef.current = null;
+        anchorSnapTargetRef.current = null;
+        if (context && target) {
+          attachEdgeEndpoint({
+            edgeId: context.edgeId,
+            side: context.side,
+            nodeId: target.nodeId,
+            handleId: target.handleId,
+            setEdges,
+          });
+        }
         return;
       }
       // A real node was dropped: attach any free line endpoint whose

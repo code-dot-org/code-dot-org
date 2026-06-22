@@ -77,31 +77,41 @@ export function anchorHandleFlowPosition(
       };
 }
 
-// Live-drag visual snap: given the position a dragged anchor would otherwise
-// take, return the top-left position it should occupy so its handle lands
-// exactly on the nearest real-node handle within radiusPx, or null when none
-// is close. Lets a dragged endpoint visually snap to a handle before release.
-export function snapAnchorToHandlePosition({
+export interface AnchorHandleSnap {
+  // Top-left position the dragged anchor should occupy so its handle lands on
+  // the snapped real-node handle.
+  position: XYPosition;
+  // The real-node handle the endpoint attaches to when the drag is released.
+  nodeId: string;
+  handleId: string | null;
+}
+
+// Live-drag snap: given the position a dragged anchor would otherwise take,
+// find the nearest real-node handle within radiusPx and return both the
+// position that lands the anchor's handle on it and the handle to attach to on
+// release, or null when none is close. Returning both from one computation is
+// what keeps the drag preview and the eventual attachment from disagreeing.
+export function findAnchorHandleSnap({
   anchorPosition,
   role,
-  excludeNodeId,
+  excludeNodeIds,
   radiusPx,
   flowToScreenPosition,
   screenToFlowPosition,
 }: {
   anchorPosition: XYPosition;
   role: 'source' | 'target';
-  excludeNodeId: string;
+  excludeNodeIds: string[];
   radiusPx: number;
   flowToScreenPosition: (point: XYPosition) => XYPosition;
   screenToFlowPosition: (point: XYPosition) => XYPosition;
-}): XYPosition | null {
+}): AnchorHandleSnap | null {
   const handleScreenPosition = flowToScreenPosition(
     anchorHandleFlowPosition(anchorPosition, role)
   );
   const snap = findNearestHandleInRadius(
     handleScreenPosition,
-    [excludeNodeId],
+    excludeNodeIds,
     role,
     radiusPx
   );
@@ -116,7 +126,11 @@ export function snapAnchorToHandlePosition({
   if (!targetHandleFlowPosition) {
     return null;
   }
-  return createLineAnchorAtHandle(targetHandleFlowPosition, role).position;
+  return {
+    position: createLineAnchorAtHandle(targetHandleFlowPosition, role).position,
+    nodeId: snap.nodeId,
+    handleId: snap.handleId,
+  };
 }
 
 // Spawns a fresh lineAnchor at `flowPosition` and returns the partial
