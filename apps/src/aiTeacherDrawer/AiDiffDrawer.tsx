@@ -36,7 +36,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
 }) => {
   // Welcome experience shut off in preparation for spring 2026 redesign.
   const [showWelcomeExperience, setShowWelcomeExperience] = useState(false);
-  const [activeNav, setActiveNav] = useState('Home');
+  const [activeNav, setActiveNav] = useState('Chats');
   const [showChatList, setShowChatList] = useState(false);
   const {personalizationData} = useTeachingProfileData();
 
