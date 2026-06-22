@@ -1,3 +1,4 @@
+import {buildAnswerTypeRouterSection} from '@cdo/apps/aiTutor/helpers/aiTutorPromptHelpers';
 import basePrompt from '@cdo/apps/pythonlab/prompts/basePrompt.md';
 import environmentPrompt from '@cdo/apps/pythonlab/prompts/environment.md';
 import {
@@ -49,24 +50,6 @@ const ANSWER_TYPE_GROUPS: AnswerTypeGroup[] = [
   },
 ];
 
-const buildAnswerTypeRouterSection = (
-  answerTypes: AiTutorAnswerType[]
-): string => {
-  return ANSWER_TYPE_GROUPS.flatMap(group => {
-    const groupAnswerTypes = group.answerTypes.filter(answerType =>
-      answerTypes.includes(answerType)
-    );
-    if (groupAnswerTypes.length === 0) return [];
-    return [
-      group.heading,
-      ...groupAnswerTypes.map(
-        answerType => `- ${ANSWER_TYPE_TRIGGERS[answerType].trim()}`
-      ),
-      '',
-    ];
-  }).join('\n');
-};
-
 const generateFinalAnswerTypeList = (
   answerTypes: AiTutorAnswerType[]
 ): AiTutorAnswerType[] => {
@@ -113,7 +96,11 @@ export const generateAiTutorPrompt = (
     '## Mode Router (deterministic)',
     'Choose exactly one mode per reply using these rules:',
     '',
-    buildAnswerTypeRouterSection(parsedAnswerTypes),
+    buildAnswerTypeRouterSection(
+      ANSWER_TYPE_GROUPS,
+      ANSWER_TYPE_TRIGGERS,
+      parsedAnswerTypes
+    ),
     '',
     '--------',
     '## Mode Answer Contracts',
