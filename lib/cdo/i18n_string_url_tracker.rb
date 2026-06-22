@@ -86,7 +86,10 @@ class I18nStringUrlTracker
     logged_url = CGI.unescape(url)
 
     # Stringify all items in the scope array so we can JSON stringify and parse it.
-    stringified_scope = scope&.map(&:to_s).to_s
+    # Scope may arrive as a Symbol (e.g. `:"datetime.dotiw"` from dotiw's
+    # `distance_of_time_in_words`), an Array, or nil. Normalize to an Array
+    # first so `.map` is always defined.
+    stringified_scope = Array(scope).map(&:to_s).to_s
     add_to_buffer(normalized_key, logged_url, source, string_key.to_s, stringified_scope, separator)
   end
 
