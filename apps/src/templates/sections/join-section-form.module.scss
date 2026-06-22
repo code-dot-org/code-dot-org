@@ -1,0 +1,19 @@
+.container {
+  max-width: 600px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.field {
+  width: 100%;
+  max-width: 320px;
+}
+
+.alert {
+  width: 100%;
+}
