@@ -42,7 +42,7 @@ import {
 } from './constants';
 import {AiTutorPythonLabContextHelper} from './helpers/aiTutorContextHelper';
 import {
-  DEFAULT_ANSWER_TYPES,
+  ALL_PYTHONLAB_ANSWER_TYPES,
   generateAiTutorPrompt,
 } from './helpers/aiTutorPromptGenerator';
 import {useAiTutorResponseSchemaSettings} from './hooks/useAiTutorResponseSchemaSettings';
@@ -227,9 +227,9 @@ const PythonlabView: React.FunctionComponent<
     const rawAnswerTypes = levelProperties.aiTutorPromptSettings?.answerTypes;
     const answerTypes: AiTutorAnswerType[] = Array.isArray(rawAnswerTypes)
       ? (rawAnswerTypes as AiTutorAnswerType[]).filter(type =>
-          DEFAULT_ANSWER_TYPES.includes(type)
+          ALL_PYTHONLAB_ANSWER_TYPES.includes(type)
         )
-      : DEFAULT_ANSWER_TYPES;
+      : ALL_PYTHONLAB_ANSWER_TYPES;
     return generateAiTutorPrompt(
       answerTypes,
       levelProperties.aiTutorPromptSettings?.answerTypeCustomizations as

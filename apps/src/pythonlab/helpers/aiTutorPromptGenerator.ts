@@ -7,7 +7,7 @@ import {
 } from '@cdo/apps/pythonlab/prompts/promptMaps';
 import {AiTutorAnswerType} from '@cdo/apps/pythonlab/types';
 
-export const DEFAULT_ANSWER_TYPES: AiTutorAnswerType[] = [
+export const ALL_PYTHONLAB_ANSWER_TYPES: AiTutorAnswerType[] = [
   'buildPython',
   'buildCSV',
   'buildJSON',
@@ -55,7 +55,7 @@ const generateFinalAnswerTypeList = (
 ): AiTutorAnswerType[] => {
   let finalAnswerTypes = [...answerTypes];
   if (answerTypes.length === 0) {
-    finalAnswerTypes = DEFAULT_ANSWER_TYPES;
+    finalAnswerTypes = ALL_PYTHONLAB_ANSWER_TYPES;
   }
   // Remove any hard-coded refusal modes since we derive the refusal mode
   // based on whether buildPython is included.

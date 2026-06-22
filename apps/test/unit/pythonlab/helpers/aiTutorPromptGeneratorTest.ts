@@ -1,5 +1,5 @@
 import {
-  DEFAULT_ANSWER_TYPES,
+  ALL_PYTHONLAB_ANSWER_TYPES,
   generateAiTutorPrompt,
 } from '@cdo/apps/pythonlab/helpers/aiTutorPromptGenerator';
 import askContract from '@cdo/apps/pythonlab/prompts/answerTypeContracts/ask.md';
@@ -11,29 +11,27 @@ import buildPythonTrigger from '@cdo/apps/pythonlab/prompts/answerTypeTriggers/b
 import basePrompt from '@cdo/apps/pythonlab/prompts/basePrompt.md';
 import environmentPrompt from '@cdo/apps/pythonlab/prompts/environment.md';
 
-const ALL_ANSWER_TYPES = DEFAULT_ANSWER_TYPES;
-
 describe('generateAiTutorPrompt', () => {
   describe('fixed sections', () => {
     it('starts with environmentPrompt content', () => {
-      const result = generateAiTutorPrompt(ALL_ANSWER_TYPES);
+      const result = generateAiTutorPrompt(ALL_PYTHONLAB_ANSWER_TYPES);
       expect(result.startsWith(environmentPrompt.trim())).toBe(true);
     });
 
     it('includes basePrompt content', () => {
-      const result = generateAiTutorPrompt(ALL_ANSWER_TYPES);
+      const result = generateAiTutorPrompt(ALL_PYTHONLAB_ANSWER_TYPES);
       expect(result).toContain(basePrompt.trim());
     });
 
     it('places environmentPrompt before basePrompt', () => {
-      const result = generateAiTutorPrompt(ALL_ANSWER_TYPES);
+      const result = generateAiTutorPrompt(ALL_PYTHONLAB_ANSWER_TYPES);
       expect(result.indexOf(environmentPrompt.trim())).toBeLessThan(
         result.indexOf(basePrompt.trim())
       );
     });
 
     it('includes the Mode Router header', () => {
-      const result = generateAiTutorPrompt(ALL_ANSWER_TYPES);
+      const result = generateAiTutorPrompt(ALL_PYTHONLAB_ANSWER_TYPES);
       expect(result).toContain('## Mode Router (deterministic)');
       expect(result).toContain(
         'Choose exactly one mode per reply using these rules:'
@@ -41,12 +39,12 @@ describe('generateAiTutorPrompt', () => {
     });
 
     it('includes the Mode Answer Contracts header', () => {
-      const result = generateAiTutorPrompt(ALL_ANSWER_TYPES);
+      const result = generateAiTutorPrompt(ALL_PYTHONLAB_ANSWER_TYPES);
       expect(result).toContain('## Mode Answer Contracts');
     });
 
     it('places the Mode Router section before Mode Answer Contracts', () => {
-      const result = generateAiTutorPrompt(ALL_ANSWER_TYPES);
+      const result = generateAiTutorPrompt(ALL_PYTHONLAB_ANSWER_TYPES);
       expect(result.indexOf('## Mode Router')).toBeLessThan(
         result.indexOf('## Mode Answer Contracts')
       );
@@ -55,7 +53,7 @@ describe('generateAiTutorPrompt', () => {
 
   describe('mode router group headings', () => {
     it('includes all three group headings when all answer types are present', () => {
-      const result = generateAiTutorPrompt(ALL_ANSWER_TYPES);
+      const result = generateAiTutorPrompt(ALL_PYTHONLAB_ANSWER_TYPES);
       expect(result).toContain('### Build Modes (produce code now)');
       expect(result).toContain('### Tutoring Modes (no runnable Python)');
       expect(result).toContain('### Refusal Modes');
@@ -176,7 +174,7 @@ describe('generateAiTutorPrompt', () => {
   describe('empty answer types list', () => {
     it('falls back to DEFAULT_ANSWER_TYPES when the list is empty', () => {
       const fromEmpty = generateAiTutorPrompt([]);
-      const fromDefaults = generateAiTutorPrompt(DEFAULT_ANSWER_TYPES);
+      const fromDefaults = generateAiTutorPrompt(ALL_PYTHONLAB_ANSWER_TYPES);
       expect(fromEmpty).toBe(fromDefaults);
     });
   });
