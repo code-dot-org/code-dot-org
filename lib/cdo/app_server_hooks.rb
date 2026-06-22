@@ -25,6 +25,38 @@ module Cdo
         restart_period = DCDO.get('web_service_process_restart_period', 12 * 3600) # default to 12 hours
         PumaWorkerKiller.enable_rolling_restart(restart_period)
       end
+
+      # Compact heap before forking child puma processes to reduce the number of heap pages occupied by long-lived
+      # objects, which reduces the surface area for Copy-on-Write erosion.
+      unless @compacted_heap_before_worker_fork
+        @compacted_heap_before_worker_fork = true
+
+        begin
+          before_gc = GC.stat
+          started_at = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+          CDO.log.info(
+            'Compacting Ruby heap before Puma worker fork: ' \
+              "heap_allocated_pages=#{before_gc[:heap_allocated_pages]}, " \
+              "heap_live_slots=#{before_gc[:heap_live_slots]}, " \
+              "old_objects=#{before_gc[:old_objects]}"
+          )
+
+          GC.start(full_mark: true, immediate_sweep: true)
+          GC.compact
+
+          after_gc = GC.stat
+          duration = Process.clock_gettime(Process::CLOCK_MONOTONIC) - started_at
+          CDO.log.info(
+            'Compacted Ruby heap before Puma worker fork: ' \
+              "duration_seconds=#{duration.round(3)}, " \
+              "heap_allocated_pages=#{after_gc[:heap_allocated_pages]}, " \
+              "heap_live_slots=#{after_gc[:heap_live_slots]}, " \
+              "old_objects=#{after_gc[:old_objects]}"
+          )
+        rescue StandardError => exception
+          CDO.log.warn("Failed to compact Ruby heap before Puma worker fork: #{exception.class}: #{exception.message}")
+        end
+      end
     end
 
     def self.before_worker_boot(host:)
