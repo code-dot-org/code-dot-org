@@ -15,11 +15,11 @@ const CHECKLIST_ITEMS = [
   {id: 'create_class_section', label: 'Create a class section'},
 ];
 
-const recordTourStart = (id: string, demoType: DemoType) => {
+const recordTourStart = (tourName: string, demoType: DemoType) => {
   HttpClient.post(
     '/dashboardapi/v1/user_product_tours',
     JSON.stringify({
-      tour_name: id,
+      tour_name: tourName,
       started_at: true,
       properties: {demo_type: demoType},
     }),
@@ -55,13 +55,13 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
       );
   }, []);
 
-  const handleButtonClick = (id: string) => {
-    recordTourStart(id, demoType);
-    if (id === 'create_class_section') {
+  const handleButtonClick = (tourName: string) => {
+    recordTourStart(tourName, demoType);
+    if (tourName === 'create_class_section') {
       createSectionTour?.start();
-    } else if (id === 'view_syllabus') {
+    } else if (tourName === 'view_syllabus') {
       reviewSyllabusTour?.start();
-    } else if (id === 'learn_to_evaluate') {
+    } else if (tourName === 'learn_to_evaluate') {
       learnHowToEvaluateTour?.start();
     }
   };
