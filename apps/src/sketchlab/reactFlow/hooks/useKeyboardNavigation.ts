@@ -136,6 +136,7 @@ interface UseKeyboardNavigationOptions {
   onExitGroupMode: () => void;
   onToggleEntryInGroupMode: (entry: TabOrderEntry) => void;
   onGroupSelected: () => void;
+  onCannotGroup: () => void;
 }
 
 /**
@@ -187,6 +188,7 @@ export function useKeyboardNavigation({
   onExitGroupMode,
   onToggleEntryInGroupMode,
   onGroupSelected,
+  onCannotGroup,
 }: UseKeyboardNavigationOptions) {
   const {
     getEdge,
@@ -658,13 +660,13 @@ export function useKeyboardNavigation({
       event.stopPropagation();
       if (isGroupMode) {
         if (canGroup) onGroupSelected();
-        // If canGroup is false, consume the key but stay in group mode.
+        else onCannotGroup();
       } else {
         onEnterGroupMode();
       }
       return true;
     },
-    [isGroupMode, canGroup, onEnterGroupMode, onGroupSelected]
+    [isGroupMode, canGroup, onEnterGroupMode, onGroupSelected, onCannotGroup]
   );
 
   // Escape in group mode: exit without creating a group.

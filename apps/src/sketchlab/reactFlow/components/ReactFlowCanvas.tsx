@@ -240,6 +240,22 @@ export default function ReactFlowCanvas({
     }
     return nonAnchors + anchors / 2;
   }, [multiSelectedNodeIds, nodes]);
+  const [groupModeError, setGroupModeError] = useState<string | null>(null);
+  const groupModeErrorTimerRef = useRef<ReturnType<typeof setTimeout> | null>(
+    null
+  );
+  const handleCannotGroup = useCallback(() => {
+    const msg = '2 or more elements must be selected to create a group.';
+    announceGroupMode(msg);
+    setGroupModeError(msg);
+    if (groupModeErrorTimerRef.current)
+      clearTimeout(groupModeErrorTimerRef.current);
+    groupModeErrorTimerRef.current = setTimeout(
+      () => setGroupModeError(null),
+      2000
+    );
+  }, [announceGroupMode]);
+
   const handlePaneClick = useCallback(() => {
     canvasContainerRef.current?.focus();
     clearSelection();
@@ -415,6 +431,7 @@ export default function ReactFlowCanvas({
       onExitGroupMode: exitGroupMode,
       onToggleEntryInGroupMode: toggleEntryInGroupMode,
       onGroupSelected: handleGroupNodes,
+      onCannotGroup: handleCannotGroup,
     });
 
   const {handleEdgeMouseDown, isLineDragging} = useLineEdgeDrag({
@@ -782,8 +799,8 @@ export default function ReactFlowCanvas({
                         position="bottom-center"
                         className={styles.groupModeIndicator}
                       >
-                        Tab to move — Enter to select/deselect — G to group —
-                        Esc to cancel
+                        {groupModeError ??
+                          'Tab to move — Enter to select/deselect — G to group — Esc to cancel'}
                       </Panel>
                     )}
                     <Background />
