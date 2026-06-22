@@ -88,11 +88,6 @@ $text-horizontal-padding: 2.6cqw;
       font-size: 1.6cqw;
       line-height: 1.4em;
 
-      &Dark {
-        background-color: $neutral_dark;
-        color: $light_white;
-      }
-
       h1, h2, h3, h4 {
         margin: 0 0 1cqw 0;
         font-size: 3cqw;
@@ -200,15 +195,6 @@ $text-horizontal-padding: 2.6cqw;
       &:hover, &:focus-visible {
         filter: brightness(0.95);
         transform: translate(-50%, -50%) scale(1.02);
-      }
-
-      &Dark {
-        background-color: $neutral_dark;
-        color: $light_white;
-
-        &:hover, &:focus-visible {
-          filter: brightness(1.15);
-        }
       }
 
       h1, h2, h3, h4 {

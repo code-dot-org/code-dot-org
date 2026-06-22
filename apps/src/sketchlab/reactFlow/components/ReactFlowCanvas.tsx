@@ -42,6 +42,8 @@ import {
 import CornerToolbarPanel from '../elementToolbars/components/CornerToolbarPanel';
 import {DEFAULT_STROKE_COLOR} from '../elementToolbars/toolbarPalettes';
 import {useCopyPaste} from '../hooks/useCopyPaste';
+import {useDisplayElements} from '../hooks/useDisplayElements';
+import {useElementClickHandlers} from '../hooks/useElementClickHandlers';
 import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
 import {useLineEdgeDrag} from '../hooks/useLineEdgeDrag';
@@ -60,19 +62,12 @@ import {
 } from '../types';
 import {
   canCreateConnection,
-  getEdgeReconnectability,
   isLineAnchorNodeId,
 } from '../utils/connectionRules';
-import {getEdgeLabel} from '../utils/elementLabel';
-import {
-  groupSelectedNodes,
-  isGroupedChildNode,
-  ungroupNode,
-} from '../utils/grouping';
+import {groupSelectedNodes, ungroupNode} from '../utils/grouping';
 import {snapAnchorIfNearby} from '../utils/handleSnap';
 import {
   createLineAnchorAtHandle,
-  getStandaloneLineAnchorIds,
   snapEdgesIntoDraggedNode,
 } from '../utils/lineAnchors';
 import {defaultLineEdgeFields} from '../utils/lineEdges';
@@ -175,10 +170,6 @@ export default function ReactFlowCanvas({
   const [isAnyPopoverOpen, setPopoverOpen] = useState(false);
   const [isDirectAnchorDragging, setIsDirectAnchorDragging] = useState(false);
 
-  const [multiSelectedNodeIds, setMultiSelectedNodeIds] = useState<Set<string>>(
-    () => new Set()
-  );
-
   const openToolbar = useCallback(
     (target: ToolbarTarget, options?: {trapFocus?: boolean}) => {
       setOpenToolbarInfo({
@@ -216,15 +207,22 @@ export default function ReactFlowCanvas({
     useReactFlow<SketchlabReactFlowNode, SketchlabReactFlowEdge>();
   const addedNodeCountRef = useRef(0);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
-  // Tracks the last plain-clicked groupable target so the first Shift+click of
-  // a fresh multi-selection can include it automatically. Standalone lines
-  // contribute both of their lineAnchor node ids here.
-  const multiSelectSeedRef = useRef<string[] | null>(null);
+  const {
+    multiSelectedNodeIds,
+    clearSelection,
+    handleNodeClick,
+    handleEdgeClick,
+  } = useElementClickHandlers({
+    readOnly,
+    nodes,
+    edges,
+    openToolbar,
+    closeToolbar,
+  });
   const handlePaneClick = useCallback(() => {
     canvasContainerRef.current?.focus();
-    setMultiSelectedNodeIds(new Set());
-    multiSelectSeedRef.current = null;
-  }, []);
+    clearSelection();
+  }, [clearSelection]);
   const {
     tabOrder,
     activeEntry,
@@ -324,10 +322,17 @@ export default function ReactFlowCanvas({
     const groupId = createUuid();
     pushSnapshot();
     setNodes(current => groupSelectedNodes(selectedIds, current, groupId));
-    setMultiSelectedNodeIds(new Set());
+    clearSelection();
     closeToolbar();
     setTimeout(() => focusEntry({type: 'node', id: groupId}), 0);
-  }, [multiSelectedNodeIds, pushSnapshot, setNodes, closeToolbar, focusEntry]);
+  }, [
+    multiSelectedNodeIds,
+    pushSnapshot,
+    setNodes,
+    clearSelection,
+    closeToolbar,
+    focusEntry,
+  ]);
 
   const handleUngroupNode = useCallback(
     (groupId: string) => {
@@ -452,165 +457,18 @@ export default function ReactFlowCanvas({
     [setLastFocusedEntry, setNodeOrEdgeFocused]
   );
 
-  // Apply roving tabindex through React Flow's domAttributes so it
-  // survives React Flow re-renders (direct DOM manipulation gets
-  // overwritten when RF reconciles tabIndex={0} on focusable nodes).
-  // Also applies connect-source styling and aria-selected via React
-  // rather than direct DOM classList manipulation.
-  const {displayNodes, displayEdges} = useMemo(() => {
-    // Anchor endpoints of a locked edge inherit the lock so the user can't
-    // drag them around. Real-node endpoints have their own lock state.
-    const lockedLineAnchorIds = new Set<string>();
-    edges.forEach(edge => {
-      if (edge.data?.locked !== true) return;
-      const sourceNode = nodes.find(node => node.id === edge.source);
-      const targetNode = nodes.find(node => node.id === edge.target);
-      if (sourceNode?.type === 'lineAnchor') {
-        lockedLineAnchorIds.add(edge.source);
-      }
-      if (targetNode?.type === 'lineAnchor') {
-        lockedLineAnchorIds.add(edge.target);
-      }
-    });
-
-    const applyDisplayProps = (item: {id: string}, type: 'node' | 'edge') => {
-      const isTabTarget =
-        activeEntry?.type === type && activeEntry.id === item.id;
-      const isSelected =
-        nodeOrEdgeFocused &&
-        lastFocusedEntry?.type === type &&
-        lastFocusedEntry.id === item.id;
-      return {
-        selected: isSelected && !readOnly,
-        domAttributes: {tabIndex: isTabTarget ? 0 : -1},
-      };
-    };
-
-    const nodeMap = new Map(nodes.map(node => [node.id, node]));
-
-    // Assign a 1-based index to each free-floating line (both endpoints are
-    // anchors) so the screenreader can distinguish them: "Line 1", "Line 2".
-    let floatingLineCount = 0;
-    const floatingLineIndex = new Map<string, number>();
-    edges.forEach(edge => {
-      const src = nodeMap.get(edge.source);
-      const tgt = nodeMap.get(edge.target);
-      if (
-        (!src || src.type === 'lineAnchor') &&
-        (!tgt || tgt.type === 'lineAnchor')
-      ) {
-        floatingLineIndex.set(edge.id, ++floatingLineCount);
-      }
-    });
-
-    // Endpoint handles on line anchor nodes are shown via a CSS class when
-    // the associated edge is focused.
-    const focusedEdgeId =
-      nodeOrEdgeFocused && lastFocusedEntry?.type === 'edge'
-        ? lastFocusedEntry.id
-        : null;
-    const focusedEdgeEndpointIds = new Set<string>();
-    if (focusedEdgeId) {
-      const focusedEdge = edges.find(e => e.id === focusedEdgeId);
-      if (focusedEdge) {
-        focusedEdgeEndpointIds.add(focusedEdge.source);
-        focusedEdgeEndpointIds.add(focusedEdge.target);
-      }
-    }
-
-    return {
-      displayNodes: nodes.map(node => {
-        const isConnectSource = connectingFrom === node.id;
-        const {selected: singleSelected, domAttributes} = applyDisplayProps(
-          node,
-          'node'
-        );
-        const selected = singleSelected || multiSelectedNodeIds.has(node.id);
-        const locked =
-          node.data?.locked === true || lockedLineAnchorIds.has(node.id);
-        const groupedChild = isGroupedChildNode(node);
-        const isAnchorForFocusedEdge =
-          node.type === 'lineAnchor' && focusedEdgeEndpointIds.has(node.id);
-        return {
-          ...node,
-          selected,
-          // Derive draggable/connectable/deletable from locked/read-only/grouped state
-          draggable: !locked && !readOnly && !groupedChild,
-          deletable: !locked && !readOnly && !groupedChild,
-          // Nodes are still connectable when locked, but not in read-only
-          connectable: !readOnly,
-          // Override React Flow's default "{type} node" aria-label on the
-          // wrapper div for line anchors so it reads as "Line endpoint" instead
-          // of "Line endpoint node".
-          ...(node.type === 'lineAnchor' && {ariaLabel: 'Line endpoint'}),
-          className: classNames(
-            isConnectSource && styles.connectSource,
-            isAnchorForFocusedEdge && styles.lineAnchorOnFocusedEdge
-          ),
-          domAttributes: {
-            ...domAttributes,
-            ...(isConnectSource && {'aria-selected': true}),
-          },
-        };
-      }),
-      displayEdges: edges.map(edge => {
-        const locked = edge.data?.locked === true;
-        const {selected: singleSelected, domAttributes} = applyDisplayProps(
-          edge,
-          'edge'
-        );
-        // A standalone line (both endpoints are line anchors) is shown as
-        // selected when both its anchors are in the multi-selection.
-        const bothAnchorsSelected =
-          nodeMap.get(edge.source)?.type === 'lineAnchor' &&
-          nodeMap.get(edge.target)?.type === 'lineAnchor' &&
-          multiSelectedNodeIds.has(edge.source) &&
-          multiSelectedNodeIds.has(edge.target);
-        const selected = singleSelected || bothAnchorsSelected;
-        const reconnectable = getEdgeReconnectability(edge, nodeMap, {
-          locked,
-          readOnly,
-        });
-
-        return {
-          ...edge,
-          selected,
-          reconnectable,
-          deletable: !locked && !readOnly,
-          ariaLabel: getEdgeLabel(
-            edge,
-            nodeMap,
-            floatingLineIndex.get(edge.id)
-          ),
-          className: styles.lineEdge,
-          domAttributes: {
-            ...domAttributes,
-            ...(!readOnly && !locked
-              ? {
-                  onMouseDown: (event: React.MouseEvent) => {
-                    focusEntry({type: 'edge', id: edge.id});
-                    handleEdgeMouseDown(event, edge);
-                  },
-                }
-              : {}),
-          },
-        };
-      }),
-    };
-  }, [
+  const {displayNodes, displayEdges} = useDisplayElements({
     nodes,
     edges,
-    activeEntry?.type,
-    activeEntry?.id,
+    activeEntry,
     nodeOrEdgeFocused,
-    lastFocusedEntry?.type,
-    lastFocusedEntry?.id,
+    lastFocusedEntry,
     connectingFrom,
     readOnly,
     focusEntry,
     handleEdgeMouseDown,
     multiSelectedNodeIds,
-  ]);
+  });
 
   // Debounced save: sync ReactFlow state back to project sources.
   const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -802,121 +660,6 @@ export default function ReactFlowCanvas({
       setNodes,
       setEdges,
     ]
-  );
-
-  const handleNodeClick = useCallback(
-    (event: React.MouseEvent, node: {id: string}) => {
-      if (readOnly) return;
-      const fullNode = nodes.find(n => n.id === node.id);
-      const nodeType = fullNode?.type;
-      if (isLineAnchorNodeId(node.id, nodes)) return;
-
-      // Shift+click: toggle this node in the multi-selection. Group nodes,
-      // already-grouped children, and locked nodes are excluded.
-      if (event.shiftKey) {
-        if (
-          nodeType !== 'group' &&
-          !isGroupedChildNode(fullNode) &&
-          !fullNode?.data?.locked
-        ) {
-          setMultiSelectedNodeIds(prev => {
-            const next = new Set(prev);
-            // On the first Shift+click of a fresh selection, automatically include
-            // the seed (last plain-clicked groupable target) so plain-click → Shift+click
-            // selects two elements in one extra click, matching standard UX.
-            // Skip seed entries that are already grouped or locked.
-            if (next.size === 0) {
-              multiSelectSeedRef.current?.forEach(seedId => {
-                const seedNode = nodes.find(n => n.id === seedId);
-                if (
-                  seedId !== node.id &&
-                  !isGroupedChildNode(seedNode) &&
-                  !seedNode?.data?.locked
-                ) {
-                  next.add(seedId);
-                }
-              });
-            }
-            if (next.has(node.id)) {
-              next.delete(node.id);
-            } else {
-              next.add(node.id);
-            }
-            return next;
-          });
-          closeToolbar();
-        }
-        // Excluded targets (group, grouped child, locked): silently ignore so
-        // an in-progress multi-selection is not cleared.
-        return;
-      }
-
-      // Plain click: record selection seed, clear any multi-selection, open toolbar.
-      // Group nodes, grouped children, and locked nodes get null seed.
-      multiSelectSeedRef.current =
-        nodeType === 'group' ||
-        isGroupedChildNode(fullNode) ||
-        fullNode?.data?.locked
-          ? null
-          : [node.id];
-      setMultiSelectedNodeIds(new Set());
-      openToolbar({type: 'node', id: node.id}, {trapFocus: false});
-    },
-    [readOnly, openToolbar, closeToolbar, nodes]
-  );
-
-  const handleEdgeClick = useCallback(
-    (event: React.MouseEvent, edge: {id: string}) => {
-      if (readOnly) return;
-      const clickedEdge = edges.find(e => e.id === edge.id);
-      const anchorIds = clickedEdge
-        ? getStandaloneLineAnchorIds(clickedEdge, getNode)
-        : null;
-      // A standalone line that is grouped or locked cannot be re-grouped.
-      const lineIsGrouped =
-        anchorIds?.some(id => isGroupedChildNode(getNode(id))) ?? false;
-      const lineIsLocked = clickedEdge?.data?.locked ?? false;
-
-      if (event.shiftKey) {
-        if (anchorIds && !lineIsGrouped && !lineIsLocked) {
-          // Shift+click on a standalone line: toggle both lineAnchor nodes in
-          // the multi-selection, applying the same seed-inclusion logic as nodes.
-          setMultiSelectedNodeIds(prev => {
-            const next = new Set(prev);
-            if (next.size === 0) {
-              multiSelectSeedRef.current?.forEach(seedId => {
-                const seedNode = getNode(seedId);
-                if (
-                  !anchorIds.includes(seedId) &&
-                  !isGroupedChildNode(seedNode) &&
-                  !seedNode?.data?.locked
-                )
-                  next.add(seedId);
-              });
-            }
-            const allSelected = anchorIds.every(id => next.has(id));
-            anchorIds.forEach(id => {
-              if (allSelected) {
-                next.delete(id);
-              } else {
-                next.add(id);
-              }
-            });
-            return next;
-          });
-          closeToolbar();
-        }
-        // Shift+click on an attached, grouped, or locked line: ignore.
-        return;
-      }
-
-      // Plain click: record standalone, ungrouped, unlocked line as selection seed.
-      multiSelectSeedRef.current =
-        lineIsGrouped || lineIsLocked ? null : anchorIds;
-      setMultiSelectedNodeIds(new Set());
-      openToolbar({type: 'edge', id: edge.id}, {trapFocus: false});
-    },
-    [readOnly, edges, getNode, openToolbar, closeToolbar]
   );
 
   return (

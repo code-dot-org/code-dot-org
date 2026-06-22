@@ -1,22 +1,49 @@
-import javalabMsg from '@cdo/javalab/locale';
-
 import {
   TheaterSignalType,
   STATUS_MESSAGE_PREFIX,
   InputMessageType,
   InputMessage,
-} from '../constants';
+} from '@cdo/apps/javalab/constants';
+import javalabMsg from '@cdo/apps/javalab/locale';
+
+type InputMessageTypeValue =
+  (typeof InputMessageType)[keyof typeof InputMessageType];
+type InputMessageValue = (typeof InputMessage)[keyof typeof InputMessage];
+
+interface TheaterSignal {
+  value: string;
+  detail: {
+    url?: string;
+    uploadUrl?: string;
+    prompt?: string;
+  };
+}
+
+type UploadCallback = (this: XMLHttpRequest, event: ProgressEvent) => void;
 
 export default class Theater {
+  private readonly onOutputMessage: (message: string) => void;
+  private readonly onNewlineMessage: () => void;
+  private readonly openPhotoPrompter: (prompt?: string) => void;
+  private readonly closePhotoPrompter: () => void;
+  private readonly onJavabuilderMessage: (
+    messageType: InputMessageTypeValue,
+    message: InputMessageValue
+  ) => void;
+  private loadEventsFinished: number;
+  private prompterUploadUrl: string | null;
+  private hasAudio: boolean;
+
   constructor(
-    onOutputMessage,
-    onNewlineMessage,
-    openPhotoPrompter,
-    closePhotoPrompter,
-    onJavabuilderMessage
+    onOutputMessage: (message: string) => void,
+    onNewlineMessage: () => void,
+    openPhotoPrompter: (prompt?: string) => void,
+    closePhotoPrompter: () => void,
+    onJavabuilderMessage: (
+      messageType: InputMessageTypeValue,
+      message: InputMessageValue
+    ) => void
   ) {
-    this.canvas = null;
-    this.context = null;
     this.onOutputMessage = onOutputMessage;
     this.onNewlineMessage = onNewlineMessage;
     this.openPhotoPrompter = openPhotoPrompter;
@@ -27,7 +54,7 @@ export default class Theater {
     this.hasAudio = false;
   }
 
-  handleSignal(data) {
+  handleSignal(data: TheaterSignal) {
     switch (data.value) {
       case TheaterSignalType.AUDIO_URL: {
         // Wait for the audio to load before starting playback
@@ -45,7 +72,7 @@ export default class Theater {
       }
       case TheaterSignalType.GET_IMAGE: {
         // Open the photo prompter
-        this.prompterUploadUrl = data.detail.uploadUrl;
+        this.prompterUploadUrl = data.detail.uploadUrl || null;
         this.openPhotoPrompter(data.detail.prompt);
         break;
       }
@@ -93,11 +120,11 @@ export default class Theater {
   }
 
   getImgElement() {
-    return document.getElementById('theater');
+    return document.getElementById('theater') as HTMLImageElement;
   }
 
   getAudioElement() {
-    return document.getElementById('theater-audio');
+    return document.getElementById('theater-audio') as HTMLAudioElement;
   }
 
   onClose() {
@@ -114,7 +141,7 @@ export default class Theater {
     return '?=' + new Date().getTime();
   }
 
-  onPhotoPrompterFileSelected(photo) {
+  onPhotoPrompterFileSelected(photo: Blob) {
     if (!this.prompterUploadUrl) {
       // The upload URL should be provided when opening the prompter, so if
       // it is somehow not set, we are in an invalid scenario.
@@ -128,13 +155,13 @@ export default class Theater {
     this.uploadFile(
       this.prompterUploadUrl,
       photo,
-      xhr => {
+      () => {
         this.onJavabuilderMessage(
           InputMessageType.THEATER,
           InputMessage.UPLOAD_SUCCESS
         );
       },
-      xhr => {
+      () => {
         this.onJavabuilderMessage(
           InputMessageType.THEATER,
           InputMessage.UPLOAD_ERROR
@@ -143,7 +170,12 @@ export default class Theater {
     );
   }
 
-  uploadFile = (uploadUrl, fileData, onSuccess, onError) => {
+  uploadFile = (
+    uploadUrl: string,
+    fileData: Blob,
+    onSuccess: UploadCallback,
+    onError: UploadCallback
+  ) => {
     // Use XHR directly (rather than ajax) so we can upload binary file data directly
     const xhr = new XMLHttpRequest();
     xhr.open('PUT', uploadUrl, true);

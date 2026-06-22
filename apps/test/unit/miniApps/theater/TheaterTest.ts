@@ -1,39 +1,35 @@
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
-
 import {
   TheaterSignalType,
   InputMessageType,
   InputMessage,
 } from '@cdo/apps/javalab/constants';
-import Theater from '@cdo/apps/javalab/theater/Theater';
-
-import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import Theater from '@cdo/apps/miniApps/theater/Theater';
 
 describe('Theater', () => {
-  let theater,
-    playAudioSpy,
-    pauseAudioSpy,
-    imageElement,
-    audioElement,
-    onOutputMessage,
-    onNewlineMessage,
-    openPhotoPrompter,
-    closePhotoPrompter,
-    onJavabuilderMessage,
-    uploadFile;
+  let theater: Theater;
+  let playAudioSpy: jest.Mock;
+  let pauseAudioSpy: jest.Mock;
+  let imageElement: Partial<HTMLImageElement>;
+  let audioElement: Partial<HTMLAudioElement>;
+  let onOutputMessage: jest.Mock;
+  let onNewlineMessage: jest.Mock;
+  let openPhotoPrompter: jest.Mock;
+  let closePhotoPrompter: jest.Mock;
+  let onJavabuilderMessage: jest.Mock;
+  let uploadFile: jest.Mock;
 
   beforeEach(() => {
-    onOutputMessage = sinon.stub();
-    onNewlineMessage = sinon.stub();
-    openPhotoPrompter = sinon.stub();
-    closePhotoPrompter = sinon.stub();
-    onJavabuilderMessage = sinon.stub();
+    onOutputMessage = jest.fn();
+    onNewlineMessage = jest.fn();
+    openPhotoPrompter = jest.fn();
+    closePhotoPrompter = jest.fn();
+    onJavabuilderMessage = jest.fn();
 
-    playAudioSpy = sinon.spy();
-    pauseAudioSpy = sinon.spy();
+    playAudioSpy = jest.fn();
+    pauseAudioSpy = jest.fn();
     imageElement = {};
     audioElement = {play: playAudioSpy, pause: pauseAudioSpy};
-    uploadFile = sinon.stub();
+    uploadFile = jest.fn();
 
     theater = new Theater(
       onOutputMessage,
@@ -42,33 +38,29 @@ describe('Theater', () => {
       closePhotoPrompter,
       onJavabuilderMessage
     );
-    theater.getImgElement = () => {
-      return imageElement;
-    };
-    theater.getAudioElement = () => {
-      return audioElement;
-    };
+    theater.getImgElement = () => imageElement as HTMLImageElement;
+    theater.getAudioElement = () => audioElement as HTMLAudioElement;
     theater.uploadFile = uploadFile;
   });
 
   it('sets audio detail when handleSignal with audio is called', () => {
     const url = 'url';
     const data = {value: TheaterSignalType.AUDIO_URL, detail: {url: url}};
-    theater.startPlayback = sinon.spy();
+    theater.startPlayback = jest.fn();
     theater.handleSignal(data);
-    expect(audioElement.src).to.contain(url);
-    expect(typeof audioElement.oncanplaythrough).to.equal('function');
-    expect(theater.startPlayback).to.have.not.been.called;
+    expect(audioElement.src).toContain(url);
+    expect(typeof audioElement.oncanplaythrough).toBe('function');
+    expect(theater.startPlayback).not.toHaveBeenCalled();
   });
 
   it('sets visual detail when handleSignal with image is called', () => {
     const url = 'url';
     const data = {value: TheaterSignalType.VISUAL_URL, detail: {url: url}};
-    theater.startPlayback = sinon.spy();
+    theater.startPlayback = jest.fn();
     theater.handleSignal(data);
-    expect(imageElement.src).to.contain(url);
-    expect(typeof imageElement.onload).to.equal('function');
-    expect(theater.startPlayback).to.have.not.been.called;
+    expect(imageElement.src).toContain(url);
+    expect(typeof imageElement.onload).toBe('function');
+    expect(theater.startPlayback).not.toHaveBeenCalled();
   });
 
   it('shows a/v once elements have loaded', () => {
@@ -81,13 +73,15 @@ describe('Theater', () => {
       value: TheaterSignalType.VISUAL_URL,
       detail: {url: url},
     };
-    imageElement.style = {};
+    imageElement.style = {} as CSSStyleDeclaration;
     theater.handleSignal(audioData);
     theater.handleSignal(visualData);
-    imageElement.onload();
-    audioElement.oncanplaythrough();
-    expect(imageElement.style.visibility).to.equal('visible');
-    expect(playAudioSpy).to.have.been.called.once;
+    (imageElement as HTMLImageElement).onload?.(new Event('load'));
+    (audioElement as HTMLAudioElement).oncanplaythrough?.(
+      new Event('canplaythrough')
+    );
+    expect(imageElement.style.visibility).toBe('visible');
+    expect(playAudioSpy).toHaveBeenCalledTimes(1);
   });
 
   it('opens photo prompter after receiving a GET_IMAGE signal', () => {
@@ -101,17 +95,17 @@ describe('Theater', () => {
 
     theater.handleSignal(getImageSignal);
 
-    sinon.assert.calledWith(openPhotoPrompter, prompt);
+    expect(openPhotoPrompter).toHaveBeenCalledWith(prompt);
   });
 
   it('closes photo prompter on stop', () => {
     theater.onStop();
-    sinon.assert.calledOnce(closePhotoPrompter);
+    expect(closePhotoPrompter).toHaveBeenCalledTimes(1);
   });
 
   it('closes photo prompter on close', () => {
     theater.onClose();
-    sinon.assert.calledOnce(closePhotoPrompter);
+    expect(closePhotoPrompter).toHaveBeenCalledTimes(1);
   });
 
   it('uploads photo file when file selected if URL is available', () => {
@@ -128,15 +122,19 @@ describe('Theater', () => {
 
     theater.onPhotoPrompterFileSelected(photoFile);
 
-    sinon.assert.calledWith(uploadFile, uploadUrl, photoFile);
+    expect(uploadFile).toHaveBeenCalledWith(
+      uploadUrl,
+      photoFile,
+      expect.any(Function),
+      expect.any(Function)
+    );
   });
 
   it('does not upload and sends error message if no upload URL is present', () => {
     theater.onPhotoPrompterFileSelected(new File([], 'file'));
 
-    sinon.assert.notCalled(uploadFile);
-    sinon.assert.calledWith(
-      onJavabuilderMessage,
+    expect(uploadFile).not.toHaveBeenCalled();
+    expect(onJavabuilderMessage).toHaveBeenCalledWith(
       InputMessageType.THEATER,
       InputMessage.UPLOAD_ERROR
     );
@@ -151,24 +149,22 @@ describe('Theater', () => {
       },
     });
     theater.onPhotoPrompterFileSelected(new File([], 'file'));
-    sinon.assert.calledOnce(uploadFile);
+    expect(uploadFile).toHaveBeenCalledTimes(1);
 
     // Get callbacks
-    const onSuccess = uploadFile.getCall(0).args[2];
-    const onError = uploadFile.getCall(0).args[3];
+    const onSuccess = uploadFile.mock.calls[0][2];
+    const onError = uploadFile.mock.calls[0][3];
 
-    onJavabuilderMessage.reset();
+    onJavabuilderMessage.mockClear();
     onSuccess();
-    sinon.assert.calledWith(
-      onJavabuilderMessage,
+    expect(onJavabuilderMessage).toHaveBeenCalledWith(
       InputMessageType.THEATER,
       InputMessage.UPLOAD_SUCCESS
     );
 
-    onJavabuilderMessage.reset();
+    onJavabuilderMessage.mockClear();
     onError();
-    sinon.assert.calledWith(
-      onJavabuilderMessage,
+    expect(onJavabuilderMessage).toHaveBeenCalledWith(
       InputMessageType.THEATER,
       InputMessage.UPLOAD_ERROR
     );
