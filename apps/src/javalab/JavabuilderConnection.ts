@@ -1,6 +1,7 @@
 import $ from 'jquery';
 
 import {ValidationResult} from '@cdo/apps/lab2/progress/ProgressManager';
+import MiniApp from '@cdo/apps/miniApps/MiniApp';
 import {ConsoleSignalType} from '@cdo/apps/miniApps/neighborhood/constants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {CurrentUserState} from '@cdo/apps/templates/CurrentUserState';
@@ -27,15 +28,6 @@ const logToCloud = require('@cdo/apps/logToCloud');
 
 const WEBSOCKET_CLOSED_NORMAL_CODE = 1000;
 const SERVER_WAIT_TIME_MS = 10000;
-
-interface MiniApp {
-  // Only the neighborhood tracks a running state (to decide whether console
-  // output is routed through the animation); other mini-apps may omit it.
-  isRunning?(): boolean;
-  handleSignal(signal: {value: string; detail?: unknown} | null): void;
-  onCompile?(): void;
-  onClose?(): void;
-}
 
 // Shape of the JSON messages Javabuilder sends over the websocket. Not all
 // fields are used in every message.

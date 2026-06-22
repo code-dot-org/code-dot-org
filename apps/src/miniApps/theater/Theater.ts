@@ -3,6 +3,7 @@ import {
   InputMessageType,
 } from '@cdo/apps/javalab/constants';
 import javalabMsg from '@cdo/apps/javalab/locale';
+import MiniApp from '@cdo/apps/miniApps/MiniApp';
 
 import {
   InputMessage,
@@ -22,7 +23,7 @@ interface TheaterSignal {
 
 type UploadCallback = (this: XMLHttpRequest, event: ProgressEvent) => void;
 
-export default class Theater {
+export default class Theater extends MiniApp {
   private readonly onOutputMessage: (message: string) => void;
   private readonly onNewlineMessage: () => void;
   private readonly openPhotoPrompter: (prompt?: string) => void;
@@ -42,6 +43,7 @@ export default class Theater {
     closePhotoPrompter: () => void,
     onJavabuilderMessage: (messageType: string, message: InputMessage) => void
   ) {
+    super();
     this.onOutputMessage = onOutputMessage;
     this.onNewlineMessage = onNewlineMessage;
     this.openPhotoPrompter = openPhotoPrompter;
