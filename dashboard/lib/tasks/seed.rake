@@ -86,13 +86,11 @@ namespace :seed do
     alltheselfpacedplthings
     allthethings
     allthettsthings
-    dance
     flappy
     frozen
     hero
     hourofcode
     mc
-    starwars
     oceans
     mix-move-ai-2025
   ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
@@ -258,7 +256,6 @@ namespace :seed do
        allthelessonplans
        alltheselfpacedplthings
        allthettsthings
-       dance
        flappy
        frozen
        hero
@@ -267,7 +264,6 @@ namespace :seed do
        original-allthelessonplans-course
        original-allthethings-course
        original-alltheselfpacedplthings-course
-       starwars
        oceans
        mix-move-ai-2025).each do |course_name|
       UnitGroup.load_from_path("#{CURRICULUM_CONTENT_DIR}/config/courses/#{course_name}.course")
