@@ -84,7 +84,7 @@ export function findNearestHandleAmong(
 // none found.
 export function findNearestHandleInRadius(
   screenPoint: XYPosition,
-  excludeNodeId: string,
+  excludeNodeIds: string[],
   requiredType: 'source' | 'target',
   radiusPx: number
 ): SnapTarget | null {
@@ -96,7 +96,7 @@ export function findNearestHandleInRadius(
     radiusPx,
     handle => {
       const nodeId = handle.dataset.nodeid;
-      if (!nodeId || nodeId === excludeNodeId) {
+      if (!nodeId || excludeNodeIds.includes(nodeId)) {
         return null;
       }
       // Lines only attach to real nodes (shape/text/image), not other line's hidden anchors.
@@ -118,6 +118,7 @@ export function findNearestHandleInRadius(
 export function snapEdgeEndpointToHandle({
   edgeId,
   excludeNodeId,
+  oppositeNodeId,
   side,
   screenPoint,
   radiusPx,
@@ -125,6 +126,9 @@ export function snapEdgeEndpointToHandle({
 }: {
   edgeId: string;
   excludeNodeId: string;
+  // The node holding the edge's other end. Excluded from snap candidates so a
+  // dragged endpoint can't land on it and collapse the edge into a self-loop.
+  oppositeNodeId?: string;
   side: 'source' | 'target';
   screenPoint: XYPosition;
   radiusPx: number;
@@ -134,16 +138,20 @@ export function snapEdgeEndpointToHandle({
 }): boolean {
   const snap = findNearestHandleInRadius(
     screenPoint,
-    excludeNodeId,
+    oppositeNodeId ? [excludeNodeId, oppositeNodeId] : [excludeNodeId],
     side,
     radiusPx
   );
   if (!snap) return false;
   const patch = endpointPatch(side, snap.nodeId, snap.handleId);
   setEdges(currentEdges =>
-    currentEdges.map(currentEdge =>
-      currentEdge.id === edgeId ? {...currentEdge, ...patch} : currentEdge
-    )
+    currentEdges.map(currentEdge => {
+      if (currentEdge.id !== edgeId) return currentEdge;
+      const patched = {...currentEdge, ...patch};
+      // If both ends of the edge snap to the same node at once, the edge would
+      // point at itself. The search above can't catch this, so reject it here.
+      return patched.source === patched.target ? currentEdge : patched;
+    })
   );
   return true;
 }
@@ -173,9 +181,12 @@ export function snapAnchorIfNearby({
   if (!associatedEdge) return null;
   const side: 'source' | 'target' =
     associatedEdge.source === anchorId ? 'source' : 'target';
+  const oppositeNodeId =
+    side === 'source' ? associatedEdge.target : associatedEdge.source;
   const snapped = snapEdgeEndpointToHandle({
     edgeId: associatedEdge.id,
     excludeNodeId: anchorId,
+    oppositeNodeId,
     side,
     screenPoint,
     radiusPx,

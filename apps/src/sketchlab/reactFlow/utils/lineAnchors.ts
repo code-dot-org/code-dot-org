@@ -101,7 +101,7 @@ export function snapAnchorToHandlePosition({
   );
   const snap = findNearestHandleInRadius(
     handleScreenPosition,
-    excludeNodeId,
+    [excludeNodeId],
     role,
     radiusPx
   );
