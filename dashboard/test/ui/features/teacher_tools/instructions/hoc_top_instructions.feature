@@ -13,7 +13,7 @@ Feature: Eyes Tests for HOC Top Instructions
     And I wait for the lab page to fully load
     And I see no difference for "starwars top instructions"
 
-    Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/3/levels/1?noautoplay=true"
+    Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/3/levels/10?noautoplay=true"
     And I wait for the lab page to fully load
     And I see no difference for "frozen top instructions"
 
