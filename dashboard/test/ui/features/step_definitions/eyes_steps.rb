@@ -48,11 +48,11 @@ end
 And(/^I see no difference for "([^"]*)"?( in the current viewport)?( without waiting for Font Awesome to load)?$/) do |identifier, skip_full_page, skip_fa_wait|
   next if CDO.disable_all_eyes_running
 
-  # Wait until the fonts are fully loaded and rendering the page
-  # Hopefully fixes many of the issues with font wiggle due to lazily loading
-  # alternative fonts for symbols and localized glyphs.
+  # Capture only after the webfonts have loaded and the header has re-laid-out against
+  # them. Otherwise text and icons shift as the fallback font swaps out, producing
+  # spurious diffs ("font wiggle").
   wait_until do
-    fonts_loaded? && (skip_fa_wait || font_awesome_loaded?)
+    fonts_loaded? && header_relaid_out? && (skip_fa_wait || font_awesome_loaded?)
   end
 
   is_full_page_screenshot = !skip_full_page
@@ -65,7 +65,7 @@ And(/^I see no difference for "([^"]*)" within "([^"]*)"$/) do |identifier, sele
   element = nil
   wait_until do
     element = @browser.find_element(:css, selector)
-    element.displayed? && fonts_loaded?
+    element.displayed? && fonts_loaded? && header_relaid_out?
   end
 
   @eyes.check_region(element, tag: identifier, match_timeout: MATCH_TIMEOUT, stitch_content: true)
@@ -93,5 +93,22 @@ def font_awesome_loaded?
 end
 
 def fonts_loaded?
-  @browser.execute_script('return document.fonts.status === "loaded"') == true
+  # document.fonts.status reads "loaded" whenever nothing is currently loading, which
+  # holds before the page's webfonts are even requested. Await the readiness promise
+  # instead: it settles only after the in-use fonts have loaded and laid out.
+  @browser.execute_async_script(<<~JS) == true
+    const done = arguments[arguments.length - 1];
+    document.fonts.ready.then(() => done(document.fonts.status === 'loaded'));
+  JS
+end
+
+# The code-studio header sets data-header-fonts-relaid-out after re-measuring on the font
+# swap (HeaderMiddle.jsx); waiting for it captures the final layout, not the fallback-font
+# one. .header_middle is server-rendered, so it is present from first paint and the wait
+# holds until the flag appears. Pages without that header (no .header_middle) pass through.
+def header_relaid_out?
+  @browser.execute_script(<<~JS) == true
+    return !document.querySelector('.header_middle') ||
+      document.documentElement.dataset.headerFontsRelaidOut === 'true';
+  JS
 end

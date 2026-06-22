@@ -9,6 +9,7 @@ import LessonProgress from '../progress/LessonProgress';
 import HeaderFinish from './HeaderFinish';
 import HeaderPopup from './HeaderPopup';
 import ProjectInfo from './ProjectInfo';
+import remeasureOnFontsReady from './remeasureOnFontsReady';
 import ScriptName from './ScriptName';
 
 // These components will be given additional width beyond what they desire.
@@ -51,6 +52,23 @@ class HeaderMiddle extends React.Component {
     this.updateLayoutListener = _.throttle(this.updateLayout, 200);
     window.addEventListener('resize', this.updateLayoutListener);
     window.addEventListener('scroll', this.updateLayoutListener);
+
+    // .header_middle is the flex remainder after the content-sized side columns, so
+    // its width changes when they reflow on the font swap. Re-measure when fonts load
+    // (children re-measure their own widths in parallel), then mark the header settled
+    // so eyes UI tests can wait for the final layout.
+    this.cancelFontRemeasure = remeasureOnFontsReady(() => {
+      this.updateLayout();
+      window.requestAnimationFrame(() => {
+        document.documentElement.dataset.headerFontsRelaidOut = 'true';
+      });
+    });
+  }
+
+  componentWillUnmount() {
+    this.cancelFontRemeasure?.();
+    window.removeEventListener('resize', this.updateLayoutListener);
+    window.removeEventListener('scroll', this.updateLayoutListener);
   }
 
   getWidth() {

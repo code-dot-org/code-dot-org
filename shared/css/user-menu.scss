@@ -120,6 +120,12 @@
     font-size: 22px;
     color: $white;
     cursor: pointer;
+    // Reserve the glyph box. Otherwise the width comes from the Font Awesome
+    // webfont: zero until it loads, then 22px, shifting the adjacent user menu.
+    // 22px matches the glyph advance, so the layout holds across the font swap.
+    display: inline-block;
+    width: 22px;
+    text-align: center;
     height: 20px;
     vertical-align: middle;
     text-decoration: none;
