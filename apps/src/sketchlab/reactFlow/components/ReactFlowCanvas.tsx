@@ -720,6 +720,9 @@ export default function ReactFlowCanvas({
                   defaultViewport={initialViewport}
                   fitView={!initialViewport}
                   colorMode={colorMode}
+                  // We implement our own shift+click multi-selection; disable
+                  // React Flow's built-in so it doesn't fight our selection state.
+                  multiSelectionKeyCode={null}
                   deleteKeyCode={readOnly ? null : 'Delete'}
                   proOptions={{hideAttribution: true}}
                   nodesDraggable={!readOnly}

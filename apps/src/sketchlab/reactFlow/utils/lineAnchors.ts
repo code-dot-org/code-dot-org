@@ -80,8 +80,7 @@ export function anchorHandleFlowPosition(
 // Live-drag visual snap: given the position a dragged anchor would otherwise
 // take, return the top-left position it should occupy so its handle lands
 // exactly on the nearest real-node handle within radiusPx, or null when none
-// is close. Lets a dragged endpoint visually snap to a handle before release,
-// using the same radius and handle-matching rules as the on-release snap.
+// is close. Lets a dragged endpoint visually snap to a handle before release.
 export function snapAnchorToHandlePosition({
   anchorPosition,
   role,
