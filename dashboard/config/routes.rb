@@ -1097,9 +1097,11 @@ Dashboard::Application.routes.draw do
       end
     end
     if rack_env?(:staging, :test)
-      scope path: '/api/dev', controller: :dev do
-        post 'check-dts', action: 'check_dts'
-        post 'start-build', action: 'start_build'
+      scope '/api' do
+        namespace :dev do
+          post 'check-dts', action: :check_dts
+          post 'start-build', action: :start_build
+        end
       end
     end
 
@@ -1107,6 +1109,11 @@ Dashboard::Application.routes.draw do
       namespace :v1 do
         concerns :api_v1_pd_routes
         concerns :section_api_routes
+
+        namespace :users do
+          resource :settings, only: :show, path: 'me/settings'
+        end
+
         post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
         post 'users/:user_id/display_theme', to: 'users#update_display_theme'
         post 'users/:user_id/mute_music', to: 'users#post_mute_music'

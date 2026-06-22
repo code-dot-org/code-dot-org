@@ -5,8 +5,8 @@ Feature: Curriculum Catalog Assign and Unassign
 
     # Assign a single-unit course
     And I am on "http://studio.code.org/catalog"
-    Then I wait until element "h4:contains(AI for Oceans)" is visible
-    And I click selector "[aria-label='Assign AI for Oceans to your classroom']"
+    Then I wait until element "h4:contains(UI Test CSF)" is visible
+    And I click selector "[aria-label='Assign UI Test CSF to your classroom']"
     And element "span:contains(Section 1)" is visible
     And element "span:contains(Section 2)" is visible
     And the "Section 1" checkbox is not selected
@@ -33,13 +33,13 @@ Feature: Curriculum Catalog Assign and Unassign
 
     # Confirm assignment
     Then I am on "http://studio.code.org"
-    And I see that "Section 1" is assigned to "AI for Oceans" in the section table
+    And I see that "Section 1" is assigned to "ui-test-csf" in the section table
     And I see that "Section 2" is assigned to "UI Test CSP" in the section table
 
     # Unassign a single-unit course
     Then I am on "http://studio.code.org/catalog"
-    And I wait until element "h4:contains(AI for Oceans)" is visible
-    And I click selector "[aria-label='Assign AI for Oceans to your classroom']"
+    And I wait until element "h4:contains(UI Test CSF)" is visible
+    And I click selector "[aria-label='Assign UI Test CSF to your classroom']"
     And element "span:contains(Section 1)" is visible
     And element "span:contains(Section 2)" is visible
     And the "Section 1" checkbox is selected
@@ -65,7 +65,7 @@ Feature: Curriculum Catalog Assign and Unassign
 
     # Confirm unassign
     Then I am on "http://studio.code.org"
-    And I see that "Section 1" is not assigned to "AI for Oceans" in the section table
+    And I see that "Section 1" is not assigned to "ui-test-csf" in the section table
     And I see that "Section 2" is not assigned to "UI Test CSP" in the section table
 
   @no_mobile
@@ -74,8 +74,8 @@ Feature: Curriculum Catalog Assign and Unassign
 
     # Assign a single-unit course
     And I am on "http://studio.code.org/catalog"
-    Then I wait until element "h4:contains(AI for Oceans)" is visible
-    And I click selector "[aria-label='View details about AI for Oceans']"
+    Then I wait until element "h4:contains(UI Test CSF)" is visible
+    And I click selector "[aria-label='View details about UI Test CSF']"
 
     And I click selector "button:contains(Assign to class sections)"
     And element "span:contains(Section 1)" is visible
@@ -105,13 +105,13 @@ Feature: Curriculum Catalog Assign and Unassign
 
     # Confirm assignment
     Then I am on "http://studio.code.org"
-    And I see that "Section 1" is assigned to "AI for Oceans" in the section table
+    And I see that "Section 1" is assigned to "ui-test-csf" in the section table
     And I see that "Section 2" is assigned to "UI Test CSP" in the section table
 
     # Unassign a single-unit course
     Then I am on "http://studio.code.org/catalog"
-    And I wait until element "h4:contains(AI for Oceans)" is visible
-    And I click selector "[aria-label='View details about AI for Oceans']"
+    And I wait until element "h4:contains(UI Test CSF)" is visible
+    And I click selector "[aria-label='View details about UI Test CSF']"
 
     And I click selector "button:contains(Assign to class sections)"
     And element "span:contains(Section 1)" is visible
@@ -147,5 +147,5 @@ Feature: Curriculum Catalog Assign and Unassign
 
     # Confirm unassign
     Then I am on "http://studio.code.org"
-    And I see that "Section 1" is not assigned to "AI for Oceans" in the section table
+    And I see that "Section 1" is not assigned to "ui-test-csf" in the section table
     And I see that "Section 2" is not assigned to "UI Test CSP" in the section table

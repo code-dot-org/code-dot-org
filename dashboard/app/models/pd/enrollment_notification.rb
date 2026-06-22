@@ -14,5 +14,15 @@
 #
 
 class Pd::EnrollmentNotification < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
+    pd_enrollment_id: :restricted,
+    name: :restricted,
+  )
+
   belongs_to :enrollment, class_name: 'Pd::Enrollment', foreign_key: :pd_enrollment_id, optional: true
 end

@@ -23,7 +23,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-11-19 01:13:54 UTC",
+    "serialized_at": "2026-06-17 15:38:49 UTC",
+    "hide_within_course": false,
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "plc_reviewer",
@@ -287,6 +288,50 @@
     {
       "chapter": 3,
       "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "President Question"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "andrea_test2"
+        ],
+        "lesson.key": "Part 1",
+        "lesson_group.key": "content",
+        "script.name": "andrea-test",
+        "activity_section.key": "132039f6-bf39-4dde-926c-483444688628"
+      },
+      "level_keys": [
+        "andrea_test2"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "President Question"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dlp_csp_test"
+        ],
+        "lesson.key": "Part 1",
+        "lesson_group.key": "content",
+        "script.name": "andrea-test",
+        "activity_section.key": "132039f6-bf39-4dde-926c-483444688628"
+      },
+      "level_keys": [
+        "dlp_csp_test"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -310,7 +355,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -337,7 +382,28 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "andrea_test-aif1"
+        ],
+        "lesson.key": "Part 2",
+        "lesson_group.key": "content",
+        "script.name": "andrea-test",
+        "activity_section.key": "e0b130d9-f5e3-4b72-bfe7-a2329309caf3"
+      },
+      "level_keys": [
+        "andrea_test-aif1"
+      ]
+    },
+    {
+      "chapter": 8,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -389,6 +455,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "andrea_test2",
+        "script_level.level_keys": [
+          "andrea_test2"
+        ],
+        "lesson.key": "Part 1",
+        "lesson_group.key": "content",
+        "script.name": "andrea-test",
+        "activity_section.key": "132039f6-bf39-4dde-926c-483444688628"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dlp_csp_test",
+        "script_level.level_keys": [
+          "dlp_csp_test"
+        ],
+        "lesson.key": "Part 1",
+        "lesson_group.key": "content",
+        "script.name": "andrea-test",
+        "activity_section.key": "132039f6-bf39-4dde-926c-483444688628"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "andrea-test3",
         "script_level.level_keys": [
           "andrea-test3"
@@ -418,6 +508,18 @@
         "script_level.level_keys": [
           "andrea-test2",
           "andrea_test1"
+        ],
+        "lesson.key": "Part 2",
+        "lesson_group.key": "content",
+        "script.name": "andrea-test",
+        "activity_section.key": "e0b130d9-f5e3-4b72-bfe7-a2329309caf3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "andrea_test-aif1",
+        "script_level.level_keys": [
+          "andrea_test-aif1"
         ],
         "lesson.key": "Part 2",
         "lesson_group.key": "content",
@@ -466,6 +568,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

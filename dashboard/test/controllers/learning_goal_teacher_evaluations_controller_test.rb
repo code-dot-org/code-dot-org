@@ -5,6 +5,7 @@ class LearningGoalTeacherEvaluationsControllerTest < ActionController::TestCase
     @teacher = create(:teacher)
     sign_in @teacher
     @student = create(:student)
+    @follower = create(:follower, student_user: @student, user: @teacher)
     @learning_goal = create(:learning_goal)
     @learning_goal_teacher_evaluation = create(:learning_goal_teacher_evaluation, teacher_id: @teacher.id, user_id: @student.id, learning_goal_id: @learning_goal.id)
   end
@@ -83,6 +84,7 @@ class LearningGoalTeacherEvaluationsControllerTest < ActionController::TestCase
 
   test 'get_or_create_evaluation method creates evaluation if one does not exist' do
     new_student = create(:student)
+    create(:follower, student_user: new_student, section: @follower.section, user: @teacher)
     user_id = new_student.id
     learning_goal_id = @learning_goal.id
 
@@ -101,7 +103,9 @@ class LearningGoalTeacherEvaluationsControllerTest < ActionController::TestCase
   # Test create responses
   test_user_gets_response_for :create, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
   test_user_gets_response_for :create, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: :student, response: :forbidden
-  test_user_gets_response_for :create, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: :teacher, response: :success
+  test_user_gets_response_for :create, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: -> {@teacher}, response: :success
+  # A teacher cannot create an evaluation for a student who is not theirs
+  test_user_gets_response_for :create, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: :teacher, response: :forbidden
 
   # Test update responses
   test_user_gets_response_for :update, params: -> {{id: @learning_goal_teacher_evaluation.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
@@ -114,11 +118,13 @@ class LearningGoalTeacherEvaluationsControllerTest < ActionController::TestCase
   test_user_gets_response_for :get_evaluation, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
   test_user_gets_response_for :get_evaluation, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: :student, response: :forbidden
   test_user_gets_response_for :get_evaluation, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: -> {@teacher}, response: :success
-  # Test returns not found for a different teacher
-  test_user_gets_response_for :get_evaluation, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: :teacher, response: :not_found
+  # A teacher cannot read an evaluation for a student who is not theirs
+  test_user_gets_response_for :get_evaluation, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: :teacher, response: :forbidden
 
   # Test get_or_create responses
   test_user_gets_response_for :get_or_create_evaluation, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
   test_user_gets_response_for :get_or_create_evaluation, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: :student, response: :forbidden
-  test_user_gets_response_for :get_or_create_evaluation, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: :teacher, response: :success
+  test_user_gets_response_for :get_or_create_evaluation, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: -> {@teacher}, response: :success
+  # A teacher cannot get-or-create an evaluation for a student who is not theirs
+  test_user_gets_response_for :get_or_create_evaluation, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: :teacher, response: :forbidden
 end

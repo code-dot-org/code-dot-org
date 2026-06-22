@@ -15,7 +15,9 @@ const mount = document.getElementById('vite-root');
 
 if (typeof window !== 'undefined') {
   initializeCore({plugins: [localizationPlugin, observabilityPlugin]});
-  injectFontAwesome();
+  // Import FontAwesome into the `base` layer (declared below `mui` in
+  // __root.tsx) so MUI's layered styleOverrides win over FA's base icon rules.
+  injectFontAwesome({layer: 'base'});
 }
 
 // MSW (if enabled via VITE_API_MODE=msw) must be running before any fetch

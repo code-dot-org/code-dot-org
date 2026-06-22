@@ -8,19 +8,25 @@ Feature: Global Edition - Farsi MVP - Professional Learning landing page
     And I sign in as "New Teacher" and go home
 
     When I visit Farsi version of Professional Learning Lending page
+    And I wait until element "a[href*='/fa/educate/professional-learning']" is not visible
+    And I wait until element "button.ui-test-join-section" is visible
+    And I wait until element "a[href*='/fa/professional-learning/workshops']" is not visible
+    And the href of selector "a:contains(دوره‌های آموزش حرفه‌ای را شروع کنید)" contains "/fa/professional-learning/courses"
+
     Then I open my eyes to test "[Farsi MVP] New teacher Professional Learning page"
     And I see no difference for "Full page"
     And I close my eyes
 
   @dashboard_db_access
-  Scenario: Facilitator does not see Facilitator Center in Farsi MVP
+  Scenario: Facilitator sees Facilitator Center in Farsi MVP
     Given I am a facilitator with started and completed courses
+    And I wait for 2 seconds
 
     When I am on "http://studio.code.org/my-professional-learning"
     Then I wait until element "button#myPLTabs-tab-myFacilitatorCenter" is visible
 
     When I visit Farsi version of Professional Learning Lending page
-    Then element "button#myPLTabs-tab-myFacilitatorCenter" is not visible
+    Then I wait until element "button#myPLTabs-tab-myFacilitatorCenter" is visible
 
     And I delete the workshop
 
@@ -34,10 +40,10 @@ Feature: Global Edition - Farsi MVP - Professional Learning landing page
     Then I wait until element "button#myPLTabs-tab-instructorCenter" is visible
 
     When I visit Farsi version of Professional Learning Lending page
-    Then element "button#myPLTabs-tab-instructorCenter" is visible
+    Then I wait until element "button#myPLTabs-tab-instructorCenter" is visible
 
   @dashboard_db_access
-  Scenario: Regional Partner does not see Regional Partner Center in Farsi MVP
+  Scenario: Regional Partner sees Regional Partner Center in Farsi MVP
     Given I am a program manager with a started course
     And I wait for 2 seconds
 
@@ -45,20 +51,20 @@ Feature: Global Edition - Farsi MVP - Professional Learning landing page
     Then I wait until element "button#myPLTabs-tab-RPCenter" is visible
 
     When I visit Farsi version of Professional Learning Lending page
-    Then element "button#myPLTabs-tab-RPCenter" is not visible
+    Then I wait until element "button#myPLTabs-tab-RPCenter" is visible
 
     And I delete the workshop
 
   @dashboard_db_access
-  Scenario: Workshop Organizer does not see Workshop Organizer Tab in Farsi MVP
+  Scenario: Workshop Organizer sees Workshop Organizer Tab in Farsi MVP
     Given I am an organizer with started and completed courses
     And I wait for 2 seconds
 
     When I am on "http://studio.code.org/my-professional-learning"
-    And I wait until element "button#myPLTabs-tab-workshopOrganizerCenter" is visible
+    Then I wait until element "button#myPLTabs-tab-workshopOrganizerCenter" is visible
 
     When I visit Farsi version of Professional Learning Lending page
-    Then element "button#myPLTabs-tab-workshopOrganizerCenter" is not visible
+    Then I wait until element "button#myPLTabs-tab-workshopOrganizerCenter" is visible
 
     And I delete the workshop
 
@@ -68,7 +74,7 @@ Feature: Global Edition - Farsi MVP - Professional Learning landing page
     And I start a self-paced PL course
 
     When I am on "http://studio.code.org/my-professional-learning"
-    And I wait until element "a:contains(Continue course)" is visible
+    Then I wait until element "a:contains(Continue course)" is visible
 
     When I visit Farsi version of Professional Learning Lending page
-    Then element "a:contains(ادامه دوره)" is visible
+    Then I wait until element "a:contains(ادامه دوره)" is visible

@@ -26,6 +26,27 @@
 #
 
 class TeacherFeedback < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :restricted,
+    comment: :restricted,
+    student_id: :restricted,
+    level_id: :restricted,
+    teacher_id: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
+    deleted_at: :restricted,
+    performance: :restricted,
+    student_visit_count: :restricted,
+    student_first_visited_at: :restricted,
+    student_last_visited_at: :restricted,
+    seen_on_feedback_page_at: :restricted,
+    script_id: :restricted,
+    analytics_section_id: :restricted,
+    review_state: :restricted,
+  )
+
   acts_as_paranoid # use deleted_at column instead of deleting rows
   validates_presence_of :student_id, :script_id, :level_id, :teacher_id, unless: :deleted?
   belongs_to :student, class_name: 'User', optional: true

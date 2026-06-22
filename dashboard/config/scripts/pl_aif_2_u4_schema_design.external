@@ -129,7 +129,7 @@ Imagine an app uses the fields **Title**, **Experience**, and **Payment** to rec
   </div>
 </details>
 
-<div style="background-color:#B7E0E5; border-radius:10px; padding:14px; margin:18px auto; max-width:85%;"> <p style="font-size:14pt; margin:0; line-height:135%;"> <strong>Big idea:</strong> A well-designed schema makes an app more trustworthy, scalable, and easier to maintain. </p> </div>
+<div style="background-color:#e4e2f8; border-radius:10px; padding:14px; margin:18px auto; max-width:85%;"> <p style="font-size:12pt; margin:0; line-height:135%;"> <strong>Big idea:</strong> A well-designed schema makes an app more trustworthy, scalable, and easier to maintain. </p> </div>
 
 ## Why This Matters
 

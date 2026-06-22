@@ -26,6 +26,14 @@ module GitHub
     end
   end
 
+  # Triggers a workflow_dispatch event for `workflow_id` (e.g. 'dtt.yml') on `ref`.
+  # The workflow must declare any keys passed in `inputs`. Needs a token with
+  # actions:write (a classic repo PAT suffices; a fine-grained token does not by default).
+  def self.dispatch_workflow(workflow_id:, ref:, inputs: {})
+    configure_octokit
+    Octokit.workflow_dispatch(REPO, workflow_id, ref, inputs: inputs)
+  end
+
   # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/PullRequests.html#pull_request_files-instance_method
   # @param pr_number [Integer] The PR number to query.
   # @return [Array[String]] The filenames part of the pull request living in the dashboard or
