@@ -4,17 +4,11 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {setIsSummaryView} from '@cdo/apps/code-studio/progressRedux';
-<<<<<<< HEAD
-import {hasGroups} from '@cdo/apps/code-studio/progressReduxSelectors';
-import i18n from '@cdo/locale';
-
-=======
 import i18n from '@cdo/locale';
 
 const SUMMARY = 'summary';
 const DETAIL = 'detail';
 
->>>>>>> staging
 /**
  * A toggle that provides a way to switch between detail and summary views of
  * our course progress. DSCO SegmentedButtons in `iconOnly` mode renders the
@@ -23,40 +17,19 @@ const DETAIL = 'detail';
  */
 class ProgressDetailToggle extends React.Component {
   static propTypes = {
-<<<<<<< HEAD
-=======
     toggleStudyGroup: PropTypes.string,
 
->>>>>>> staging
     // redux backed
     isSummaryView: PropTypes.bool.isRequired,
     setIsSummaryView: PropTypes.func.isRequired,
   };
 
   onChange = value => {
-<<<<<<< HEAD
-    this.props.setIsSummaryView(value === 'summary');
-=======
     this.props.setIsSummaryView(value === SUMMARY);
->>>>>>> staging
   };
 
   render() {
     const {isSummaryView} = this.props;
-<<<<<<< HEAD
-
-    return (
-      <SegmentedButtons
-        selectedButtonValue={isSummaryView ? 'summary' : 'detail'}
-        onChange={this.onChange}
-        size="xs"
-        buttons={[
-          {value: 'summary', label: i18n.summaryView()},
-          {
-            value: 'detail',
-            label: i18n.detailView(),
-            className: 'uitest-toggle-detail',
-=======
     return (
       <SegmentedButtons
         type="iconOnly"
@@ -74,7 +47,6 @@ class ProgressDetailToggle extends React.Component {
             icon: {iconName: 'window-maximize'},
             ariaLabel: i18n.detailView(),
             id: 'uitest-toggle-detail',
->>>>>>> staging
           },
         ]}
       />
