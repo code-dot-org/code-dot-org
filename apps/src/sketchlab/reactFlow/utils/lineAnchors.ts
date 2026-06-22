@@ -89,8 +89,7 @@ export interface AnchorHandleSnap {
 // Live-drag snap: given the position a dragged anchor would otherwise take,
 // find the nearest real-node handle within radiusPx and return both the
 // position that lands the anchor's handle on it and the handle to attach to on
-// release, or null when none is close. Returning both from one computation is
-// what keeps the drag preview and the eventual attachment from disagreeing.
+// release, or null when none is close.
 export function findAnchorHandleSnap({
   anchorPosition,
   role,

@@ -25,7 +25,7 @@ interface UseNodeDragOptions {
   pushSnapshot: () => void;
 }
 
-// React Flow's node drag callbacks. For ordinary nodes this just snapshots for
+// React Flow's node drag callbacks. For ordinary nodes this just snapshots
 // undo and, on drop, snaps any free line endpoint within range onto the node's handles. For
 // lineAnchor nodes it overrides the pointer-following position so the anchor
 // snaps onto a nearby handle mid-drag and commits that attachment on release.
@@ -56,18 +56,17 @@ export function useNodeDrag({
     oppositeNodeId: string;
   } | null>(null);
   // The handle the dragged anchor most recently snapped onto, or null when it
-  // sits free. Committed verbatim on drag-stop so the attachment matches the
-  // preview the user saw.
+  // sits free.
   const anchorSnapTargetRef = useRef<{
     nodeId: string;
     handleId: string | null;
   } | null>(null);
 
-  // Push snapshot when a drag begins — at this point nodesRef still holds the
-  // pre-drag positions, so undo correctly restores the node to where it was
-  // before the move.
   const handleNodeDragStart = useCallback(
     (_event: React.MouseEvent, node: SketchlabReactFlowNode) => {
+      // Push snapshot when a drag begins — at this point nodesRef still holds the
+      // pre-drag positions, so undo correctly restores the node to where it was
+      // before the move.
       pushSnapshot();
       if (node.type === 'lineAnchor') {
         anchorDragMovedRef.current = false;

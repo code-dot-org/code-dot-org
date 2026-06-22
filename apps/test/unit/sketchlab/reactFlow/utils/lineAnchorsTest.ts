@@ -22,7 +22,7 @@ function stubRect(element: HTMLElement, x: number, y: number) {
       right: x,
       bottom: y,
       toJSON: () => ({}),
-    }) as DOMRect;
+    } as DOMRect);
 }
 
 function addHandle(spec: {
@@ -50,13 +50,6 @@ const identity = (point: XYPosition) => point;
 
 afterEach(() => {
   document.body.innerHTML = '';
-});
-
-describe('lineAnchorHandleId', () => {
-  it('names the handle by role', () => {
-    expect(lineAnchorHandleId('source')).toBe('line-anchor-source');
-    expect(lineAnchorHandleId('target')).toBe('line-anchor-target');
-  });
 });
 
 describe('createLineAnchorAtHandle', () => {

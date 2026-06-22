@@ -160,9 +160,7 @@ export default function ReactFlowCanvas({
 
   const [isAnyPopoverOpen, setPopoverOpen] = useState(false);
   // Id of a line anchor the user is moving with the keyboard. Set on the first
-  // arrow-key move and cleared once focus leaves that anchor, so handles stay
-  // visible for the duration of a keyboard reposition just as they do for a
-  // pointer drag.
+  // arrow-key move and cleared once focus leaves that anchor.
   const [keyboardMovingAnchorId, setKeyboardMovingAnchorId] = useState<
     string | null
   >(null);

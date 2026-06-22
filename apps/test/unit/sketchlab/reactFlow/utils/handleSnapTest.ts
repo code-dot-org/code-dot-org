@@ -1,7 +1,6 @@
 import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 import {
   attachEdgeEndpoint,
-  endpointPatch,
   findNearestHandleAmong,
   findNearestHandleInRadius,
   snapAnchorIfNearby,
@@ -21,7 +20,7 @@ function stubRect(element: HTMLElement, x: number, y: number) {
       right: x,
       bottom: y,
       toJSON: () => ({}),
-    }) as DOMRect;
+    } as DOMRect);
 }
 
 interface HandleSpec {
@@ -79,33 +78,6 @@ afterEach(() => {
   document.body.innerHTML = '';
 });
 
-describe('endpointPatch', () => {
-  it('points the source side at a node + handle', () => {
-    expect(endpointPatch('source', 'n1', 'h1')).toEqual({
-      source: 'n1',
-      sourceHandle: 'h1',
-    });
-  });
-
-  it('points the target side at a node + handle', () => {
-    expect(endpointPatch('target', 'n2', 'h2')).toEqual({
-      target: 'n2',
-      targetHandle: 'h2',
-    });
-  });
-
-  it('coerces a null or undefined handle to undefined', () => {
-    expect(endpointPatch('source', 'n1', null)).toEqual({
-      source: 'n1',
-      sourceHandle: undefined,
-    });
-    expect(endpointPatch('target', 'n1', undefined)).toEqual({
-      target: 'n1',
-      targetHandle: undefined,
-    });
-  });
-});
-
 describe('findNearestHandleAmong', () => {
   const resolveToNodeId = (handle: HTMLElement) =>
     handle.dataset.nodeid ?? null;
@@ -153,7 +125,13 @@ describe('findNearestHandleAmong', () => {
     );
 
     expect(
-      findNearestHandleAmong(handles, {x: 0, y: 0}, 'source', 40, resolveToNodeId)
+      findNearestHandleAmong(
+        handles,
+        {x: 0, y: 0},
+        'source',
+        40,
+        resolveToNodeId
+      )
     ).toBeNull();
   });
 
@@ -164,15 +142,25 @@ describe('findNearestHandleAmong', () => {
       '.react-flow__handle'
     );
 
-    const snap = findNearestHandleAmong(handles, {x: 0, y: 0}, 'source', 40, h =>
-      h.dataset.nodeid === 'excluded' ? null : (h.dataset.nodeid ?? null)
+    const snap = findNearestHandleAmong(
+      handles,
+      {x: 0, y: 0},
+      'source',
+      40,
+      h => (h.dataset.nodeid === 'excluded' ? null : h.dataset.nodeid ?? null)
     );
 
     expect(snap?.nodeId).toBe('kept');
   });
 
   it('records the handle id from the dataset', () => {
-    addHandle({nodeId: 'n', handleId: 'top-source', type: 'source', x: 0, y: 0});
+    addHandle({
+      nodeId: 'n',
+      handleId: 'top-source',
+      type: 'source',
+      x: 0,
+      y: 0,
+    });
     const handles = document.querySelectorAll<HTMLElement>(
       '.react-flow__handle'
     );

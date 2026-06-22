@@ -8,9 +8,7 @@ $anchor-grab-buffer: 10px;
   position: relative;
 }
 
-// Extend the draggable hit area past the anchor box. React Flow's node drag
-// listens on the wrapper, so a mousedown on this overflowing pseudo still
-// starts the endpoint drag.
+// Extend the draggable hit area past the anchor box.
 .anchorNode::before {
   content: '';
   position: absolute;

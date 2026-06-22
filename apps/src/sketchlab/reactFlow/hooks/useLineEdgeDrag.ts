@@ -18,11 +18,8 @@ interface DraggingAnchor {
   id: string;
   side: 'source' | 'target';
   startPosition: XYPosition;
-  // Position the anchor renders at this frame: the snapped handle position, or
-  // the raw pointer-following position when nothing is in range.
   currentPosition: XYPosition;
-  // Handle this anchor most recently snapped onto, committed on release so the
-  // attachment matches the preview rather than a fresh search.
+  // Handle this anchor most recently snapped onto, if it is currently snapped.
   snapTarget: {nodeId: string; handleId: string | null} | null;
 }
 
@@ -178,8 +175,7 @@ export function useLineEdgeDrag({
       window.removeEventListener('mouseup', stopLineEdgeDrag);
 
       // Attach any anchor that ended the drag snapped onto a real-node handle,
-      // committing the handle the move already found rather than searching
-      // again from the final pointer position.
+      // committing the handle the move already found.
       if (!dragState || !dragState.hasMoved) {
         return;
       }
