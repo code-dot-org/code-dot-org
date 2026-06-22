@@ -18,9 +18,7 @@ $handle-grab-buffer: 10px;
 
   // Extend the clickable area past the small visible dot so a connection can
   // be started by clicking within $handle-grab-buffer of the handle, not
-  // exactly on it. The pseudo is transparent and inherits the handle's
-  // pointer-events, so hidden handles (opacity 0, pointer-events: none) and
-  // line-anchor handles (also pointer-events: none) stay non-interactive.
+  // exactly on it.
   :global(.react-flow__handle)::before {
     content: '';
     position: absolute;
