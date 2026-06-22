@@ -72,6 +72,7 @@ const AiDiffExitTicket: React.FC<AiDiffExitTicketProps> = ({
           <Typography component="div" variant="body2" gutterBottom>
             <SafeMarkdown
               unwrapped
+              localized={false}
               markdown={`**Question ${id + 1}:** ${question}`}
             />
           </Typography>

@@ -1,5 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -9,7 +9,6 @@ import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
 
 import styleConstants from '../../styleConstants';
-import color from '../../util/color';
 
 import ProjectCardRow from './ProjectCardRow';
 import {
@@ -196,7 +195,9 @@ class ProjectAppTypeArea extends React.Component {
         style={styles.grid}
         className={`ui-project-app-type-area ui-${this.props.labKey}`}
       >
-        <h2 style={styles.labHeading}> {this.props.labName} </h2>
+        <MuiTypography variant="h4" component="h2" style={styles.labHeading}>
+          {this.props.labName}
+        </MuiTypography>
         {!this.props.hideViewMoreLink && (
           <span
             className="viewMoreLink"
@@ -204,15 +205,17 @@ class ProjectAppTypeArea extends React.Component {
             onClick={this.viewMore}
           >
             {this.props.isDetailView && (
-              <i
-                className="fa-solid fa-angle-left"
+              <FontAwesomeV6Icon
+                iconStyle="solid"
+                iconName="angle-left"
                 style={styles.iconPaddingRight}
               />
             )}
             {this.props.labViewMoreString}
             {!this.props.isDetailView && (
-              <i
-                className="fa-solid fa-angle-right"
+              <FontAwesomeV6Icon
+                iconStyle="solid"
+                iconName="angle-right"
                 style={styles.iconPaddingLeft}
               />
             )}
@@ -235,15 +238,13 @@ const styles = {
   },
   labHeading: {
     textAlign: 'left',
-    fontSize: 24,
-    color: color.neutral_dark,
     marginBottom: 0,
     paddingBottom: 0,
     paddingTop: 0,
     float: 'left',
   },
   viewMore: {
-    color: color.neutral_dark,
+    color: 'var(--text-neutral-primary)',
     float: 'right',
     marginTop: 35,
     marginBottom: 16,

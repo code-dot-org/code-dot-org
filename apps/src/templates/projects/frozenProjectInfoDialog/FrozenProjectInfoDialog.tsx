@@ -1,11 +1,9 @@
+import Modal from '@code-dot-org/component-library/modal';
 import {Typography} from '@mui/material';
 import React, {useCallback} from 'react';
 import {useSelector} from 'react-redux';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
@@ -27,39 +25,37 @@ const FrozenProjectInfoDialog: React.FunctionComponent = () => {
     [dispatch]
   );
 
+  if (!isOpen) {
+    return null;
+  }
+
   return (
-    <BaseDialog
-      isOpen={isOpen}
-      handleClose={onClose}
-      useUpdatedStyles
-      style={styles.dialog}
-    >
-      <Typography component="h2" variant="h3" gutterBottom>
-        {i18n.projectInfo()}
-      </Typography>
-      <p>{i18n.congratsProjectSelected()}</p>
-      <p>{i18n.projectFrozenNotice()}</p>
-      <SafeMarkdown
-        markdown={i18n.requestProjectUnfeatured({
-          url: '/projects/public',
-        })}
-      />
-      <DialogFooter>
-        <Button
-          text={i18n.closeDialog()}
-          onClick={onClose}
-          color={Button.ButtonColor.gray}
-          style={{margin: 0}}
-        />
-      </DialogFooter>
-    </BaseDialog>
+    <Modal
+      onClose={onClose}
+      title={i18n.projectInfo()}
+      customContent={
+        <div id="dsco-dialog-description">
+          <Typography variant="body2" gutterBottom>
+            {i18n.congratsProjectSelected()}
+          </Typography>
+          <Typography variant="body2" gutterBottom>
+            {i18n.projectFrozenNotice()}
+          </Typography>
+          <SafeMarkdown
+            markdown={i18n.requestProjectUnfeatured({
+              url: '/projects/public',
+            })}
+          />
+        </div>
+      }
+      primaryButtonProps={{
+        onClick: onClose,
+        children: i18n.closeDialog(),
+        size: 'small',
+        type: 'button',
+      }}
+    />
   );
 };
 
 export default FrozenProjectInfoDialog;
-
-const styles = {
-  dialog: {
-    padding: 25,
-  },
-};

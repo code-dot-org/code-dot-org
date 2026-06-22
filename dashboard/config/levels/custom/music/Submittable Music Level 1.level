@@ -2,12 +2,12 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 70,
-  "created_at": "2025-05-16T20:18:35.000Z",
+  "created_at": "2025-07-01T09:34:17.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "### Assessment\r\n\r\nCreate a song using multiple sounds! Each part of your song should include a different type of sound.\r\n\r\nExperiment and have fun!\r\n\r\n_Tips_:\r\n- Try using blocks from different packs.\r\n- Try using the Play Together and repeat blocks.\r\n- Try factoring your song using functions.",
+    "long_instructions": "### Assessment\r\n\r\nCreate a song using multiple sounds! Each part of your song should include a different type of sound.\r\n\r\nExperiment and have fun! \r\n\r\n_Tips_:\r\n- Try using blocks from different packs.\r\n- Try using the Play Together and repeat blocks.\r\n- Try factoring your song using functions.",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
     "submittable": "true",
@@ -23,9 +23,11 @@
       "playerEnabled": false,
       "validationEnabled": false
     },
+    "disable_edit_run_for_submission": "false",
+    "hide_version_history": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-16 13:21:23 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-05-16 13:32:02 -0700\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-05-16 13:33:36 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-06-06 15:55:09 -0400\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-16 13:21:23 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-05-16 13:32:02 -0700\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-05-16 13:33:36 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-06-06 15:55:09 -0400\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2026-06-18 14:09:25 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

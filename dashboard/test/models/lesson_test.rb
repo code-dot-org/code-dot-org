@@ -946,6 +946,23 @@ class LessonTest < ActiveSupport::TestCase
     end
   end
 
+  test 'summarize_for_lab2_properties skips levels with no game app' do
+    script = create(:script, :in_single_unit_course)
+    lesson = create(:lesson, script: script)
+    python_level = create(:pythonlab)
+    nil_app_game = create(:game, app: nil)
+    non_lab2_level = create(:text_match, game: nil_app_game)
+    create(:script_level, lesson: lesson, levels: [python_level], script: script)
+    create(:script_level, lesson: lesson, levels: [non_lab2_level], script: script)
+
+    properties = lesson.summarize_for_lab2_properties
+    assert_includes properties.keys, python_level.id
+    refute_includes properties.keys, non_lab2_level.id
+    properties.each_value do |props|
+      assert props[:appName], "expected appName to be present for all returned levels"
+    end
+  end
+
   class LessonCopyTests < ActiveSupport::TestCase
     setup do
       Unit.any_instance.stubs(:write_script_json)

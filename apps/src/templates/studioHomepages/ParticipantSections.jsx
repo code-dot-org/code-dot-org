@@ -1,9 +1,8 @@
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import styleConstants from '@cdo/apps/styleConstants';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import ContentContainer from '../ContentContainer';
@@ -54,13 +53,13 @@ export default class ParticipantSections extends Component {
       hiddenSectionLabel: {
         fontSize: 18,
         paddingBottom: 10,
-        color: color.charcoal,
+        color: 'var(--text-neutral-tertiary)',
       },
       hiddenSectionDesc: {
         fontSize: 14,
         lineHeight: '22px',
         paddingBottom: 10,
-        color: color.charcoal,
+        color: 'var(--text-neutral-tertiary)',
       },
     };
 
@@ -93,18 +92,23 @@ export default class ParticipantSections extends Component {
           {archivedSections.length > 0 && (
             <div>
               <div style={styles.buttonContainer}>
-                <Button
+                <MuiButton
                   className="ui-test-show-hide"
                   onClick={this.toggleViewHidden}
-                  icon={viewHidden ? 'caret-up' : 'caret-down'}
-                  text={
-                    viewHidden
-                      ? i18n.hideArchivedSections()
-                      : i18n.viewArchivedSections()
+                  variant="outlined"
+                  color="tertiary"
+                  size="small"
+                  startIcon={
+                    <i
+                      className={`fa fa-caret-${viewHidden ? 'up' : 'down'}`}
+                    />
                   }
-                  color={Button.ButtonColor.gray}
                   style={{margin: 0}}
-                />
+                >
+                  {viewHidden
+                    ? i18n.hideArchivedSections()
+                    : i18n.viewArchivedSections()}
+                </MuiButton>
               </div>
               {viewHidden && (
                 <div>

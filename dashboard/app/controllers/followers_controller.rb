@@ -113,6 +113,8 @@ class FollowersController < ApplicationController
   private def load_section
     return if params[:section_code].blank?
 
+    section_code = params[:section_code].strip
+
     # Though downstream validations would raise an exception, we redirect to the admin directory to
     # improve user experience.
     if current_user&.admin?
@@ -120,7 +122,13 @@ class FollowersController < ApplicationController
       return
     end
 
-    @section = Section.find_by_code(params[:section_code].strip)
+    unless Section.valid_code?(section_code)
+      current_user&.increment_section_attempts
+      redirect_to redirect_url, alert: I18n.t('follower.error.section_not_found', section_code: params[:section_code])
+      return
+    end
+
+    @section = Section.find_by_code(section_code)
     # Note that we treat the section as not being found if the section user
     # (i.e., the teacher) does not exist (possibly soft-deleted) or is not a teacher
     unless @section&.user&.teacher?

@@ -133,6 +133,9 @@ module.exports = function (config) {
     // increase timeout to wait for webpack to do its thing.
     captureTimeout: 90000,
     browserNoActivityTimeout: 90000, // 60 seconds
+    pingTimeout: 60000,
+    browserDisconnectTimeout: 60000,
+    browserDisconnectTolerance: 3,
 
     sourceMapLoader: {
       remapPrefixes: {

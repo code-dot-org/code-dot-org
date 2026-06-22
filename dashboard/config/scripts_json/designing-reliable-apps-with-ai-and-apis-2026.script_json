@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-16 21:18:04 UTC",
+    "serialized_at": "2026-06-19 20:23:52 UTC",
     "hide_within_course": true,
     "published_state": "in_development",
     "instruction_type": null,
@@ -323,8 +323,21 @@
       }
     },
     {
-      "key": "3049ef3d-91c3-4b1f-8c5f-ea5fc44fd8be",
+      "key": "94ec5b48-eb1c-43ab-ba3b-e80558232c19",
       "position": 1,
+      "properties": {
+        "name": "New / Revised Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "94ec5b48-eb1c-43ab-ba3b-e80558232c19",
+        "lesson.key": "Lesson 1: Where Data Comes From",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-2026"
+      }
+    },
+    {
+      "key": "3049ef3d-91c3-4b1f-8c5f-ea5fc44fd8be",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -338,7 +351,7 @@
     },
     {
       "key": "e0dbce95-01af-47b5-9299-cc87319aa787",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -352,7 +365,7 @@
     },
     {
       "key": "aec0366f-f55f-409b-9cbf-37cec021f881",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -365,8 +378,21 @@
       }
     },
     {
-      "key": "8cf0d83b-7e14-4b3d-ac1d-4c5bcbd58438",
+      "key": "a6da11f9-cac0-4017-98e5-ef893cbac208",
       "position": 1,
+      "properties": {
+        "name": "New Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a6da11f9-cac0-4017-98e5-ef893cbac208",
+        "lesson.key": "Lesson 2: Why Apps Wait",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-2026"
+      }
+    },
+    {
+      "key": "8cf0d83b-7e14-4b3d-ac1d-4c5bcbd58438",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -380,7 +406,7 @@
     },
     {
       "key": "6b4db25f-625c-4a4c-ae91-d7eefc50c942",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -394,7 +420,7 @@
     },
     {
       "key": "6be212df-5fa7-4638-b747-3b1fbe4e17f4",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -407,8 +433,21 @@
       }
     },
     {
-      "key": "eaaae204-6f74-4a52-8836-c6b0cdb6b4e3",
+      "key": "7579eb98-a101-4343-b15f-b8abb0dbd6ac",
       "position": 1,
+      "properties": {
+        "name": "New Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7579eb98-a101-4343-b15f-b8abb0dbd6ac",
+        "lesson.key": "Lesson 3: Getting Data Online",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-2026"
+      }
+    },
+    {
+      "key": "eaaae204-6f74-4a52-8836-c6b0cdb6b4e3",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -422,7 +461,7 @@
     },
     {
       "key": "369c103d-02de-41ce-aa19-a04f5d1015a8",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -436,7 +475,7 @@
     },
     {
       "key": "7e5cf9e1-b349-4b3c-a611-8c7f7aa11a01",
-      "position": 3,
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -448,7 +487,7 @@
     },
     {
       "key": "7a7539b8-0f2a-422d-b715-f8060f169df7",
-      "position": 4,
+      "position": 5,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -503,8 +542,21 @@
       }
     },
     {
-      "key": "5f39c74c-347b-438d-98ce-87e06e0d7c90",
+      "key": "0ca70945-71b9-43d2-90c0-be668db4e97a",
       "position": 1,
+      "properties": {
+        "name": "New Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0ca70945-71b9-43d2-90c0-be668db4e97a",
+        "lesson.key": "Lesson 5: Making Sense of Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-2026"
+      }
+    },
+    {
+      "key": "5f39c74c-347b-438d-98ce-87e06e0d7c90",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -518,7 +570,7 @@
     },
     {
       "key": "592b4703-cf99-4e80-9361-d07c0d28f8e9",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -532,7 +584,7 @@
     },
     {
       "key": "0b8b4beb-d1cf-4da3-b454-fb2145551f91",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -850,6 +902,17 @@
       }
     },
     {
+      "key": "d39b730b-f6cc-4383-b9f3-e38271c407a0",
+      "position": 1,
+      "properties": {
+        "description": "Level 1: New Exploration Level\nLevel 4: Revised level with AI Literacy moment\nLevel 7: New CFU level"
+      },
+      "seeding_key": {
+        "activity_section.key": "d39b730b-f6cc-4383-b9f3-e38271c407a0",
+        "lesson_activity.key": "94ec5b48-eb1c-43ab-ba3b-e80558232c19"
+      }
+    },
+    {
       "key": "82a97c00-886e-4a75-9e58-909273ed20cb",
       "position": 1,
       "properties": {
@@ -969,37 +1032,8 @@
       }
     },
     {
-      "key": "0d979185-6dcd-4543-82f6-5fda450d97c9",
-      "position": 9,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1 to complete Levels 1 through 4.\n- Level 1: Students read the formal definition of API.\n- Level 2: Students write a personal definition for API and provide one example.\n- Level 3: Students read the formal definition of JSON.\n- Level 4: Students write a personal definition for JSON and provide one example.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who struggle to articulate the concept. Ask: 'If you were building a music app, what other service might you need to talk to?'\n",
-        "progression_name": "Vocab: API"
-      },
-      "seeding_key": {
-        "activity_section.key": "0d979185-6dcd-4543-82f6-5fda450d97c9",
-        "lesson_activity.key": "e0dbce95-01af-47b5-9299-cc87319aa787"
-      }
-    },
-    {
-      "key": "6fc1aa09-7f3d-4379-a69a-b8fca7ea2ac1",
-      "position": 10,
-      "properties": {
-        "progression_name": "Vocab: JSON",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Check Level 2 and 4 responses. Correct understanding includes the idea of software communication and data sharing."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "6fc1aa09-7f3d-4379-a69a-b8fca7ea2ac1",
-        "lesson_activity.key": "e0dbce95-01af-47b5-9299-cc87319aa787"
-      }
-    },
-    {
       "key": "865d25b1-ee9a-4faf-99bf-c1c7e4480e9a",
-      "position": 11,
+      "position": 9,
       "properties": {
       },
       "seeding_key": {
@@ -1009,7 +1043,7 @@
     },
     {
       "key": "a2f40958-0125-42e0-9208-366968399331",
-      "position": 12,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Demonstrate opening the Network tab and viewing live API requests."
       },
@@ -1020,7 +1054,7 @@
     },
     {
       "key": "da44c19d-ebe8-47a0-a4c3-a31fe9bdb902",
-      "position": 13,
+      "position": 11,
       "properties": {
         "description": "We're going to peek behind the curtain of a real website to see exactly what it's asking for and what it gets back.",
         "remarks": true
@@ -1032,7 +1066,7 @@
     },
     {
       "key": "49c19b31-c206-4438-8185-99e0ac2aff25",
-      "position": 14,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Hand out the API Scavenger Hunt activity guide and the curated PDF documentation for the OpenWeather API.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 5 to complete Levels 5 through 7.\n- Level 5: Students view panel levels to learn about using the Networks Tab.\n- Level 6: Students use the Network Tab in Web Lab to find JSON data.\n- Level 7: Students upload API documentation to AI and ask questions about parameters and data types.\n",
         "progression_name": "Exploring the Network Panel"
@@ -1044,7 +1078,7 @@
     },
     {
       "key": "9f1f09d4-00db-4dfc-9fbf-3ea0cee760ae",
-      "position": 15,
+      "position": 13,
       "properties": {
         "progression_name": "Navigate a Weather App"
       },
@@ -1055,7 +1089,7 @@
     },
     {
       "key": "08f24a62-41d4-4452-90d5-bb36b7786d24",
-      "position": 16,
+      "position": 14,
       "properties": {
         "progression_name": "Explore API Documentation",
         "tips": [
@@ -1072,7 +1106,7 @@
     },
     {
       "key": "9ed6002c-c96b-4f1f-92cf-9a5a52569ce8",
-      "position": 17,
+      "position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -1082,7 +1116,7 @@
     },
     {
       "key": "d18a4eb5-17c7-4748-aefe-1ea10804a2b3",
-      "position": 18,
+      "position": 16,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What happens if an API stops working? How does this affect the user experience?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize system dependencies. If an API fails, the app might lose its primary function (e.g., a weather app with no weather).\n"
       },
@@ -1093,7 +1127,7 @@
     },
     {
       "key": "38d37dcf-f19a-4a75-878b-f5be149d4729",
-      "position": 19,
+      "position": 17,
       "properties": {
         "description": "Using APIs makes our apps powerful, but it also means we depend on other services to keep working.",
         "remarks": true
@@ -1105,7 +1139,7 @@
     },
     {
       "key": "2a64ed58-6a1c-4aba-b396-16c74fd7b008",
-      "position": 20,
+      "position": 18,
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Use the PRIM (Predict, Run, Investigate, Modify) framework to interact with live code and understand how modifying request attributes changes the data displayed on screen.",
         "duration": "15",
@@ -1118,7 +1152,7 @@
     },
     {
       "key": "3c9cfdfb-3974-440d-a9e6-374a82d9569b",
-      "position": 21,
+      "position": 19,
       "properties": {
         "description": "Now that we've seen how APIs work behind the scenes, it's time for you to make your first API call! We'll use a framework called PRIM to help us understand the code step-by-step.",
         "remarks": true
@@ -1130,7 +1164,7 @@
     },
     {
       "key": "ccfcba75-d565-4ff6-8e29-0a372c843c03",
-      "position": 22,
+      "position": 20,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the PRIM framework to the students."
       },
@@ -1141,7 +1175,7 @@
     },
     {
       "key": "315bcd11-cb53-47cc-a165-df569695a847",
-      "position": 23,
+      "position": 21,
       "properties": {
         "description": "In JavaScript, we use a special command called fetch to talk to APIs. Think of it like sending a digital messenger to a server with a specific address, called an endpoint. The server then sends a response back with the data we requested.",
         "remarks": true
@@ -1153,7 +1187,7 @@
     },
     {
       "key": "3b049d44-69a9-407f-ac87-c30372bacc2e",
-      "position": 24,
+      "position": 22,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 7 to complete Levels 8 through 9.\n- Level 8: Students choose an API and predict its output based on the code snippet.\n- Level 9: Students run the code, investigate with AI, and modify attributes to see new data.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who are unsure which API to pick. Suggest PokeAPI for a structured experience or NASA for visual data. Watch for students who forget to click 'Run' after modifying code. Ask: 'What did you change in the request, and how did the response look different?'\n",
         "progression_name": "Make a Prediction",
@@ -1171,7 +1205,7 @@
     },
     {
       "key": "d865612b-41f3-441f-8091-8576481040b2",
-      "position": 25,
+      "position": 23,
       "properties": {
         "progression_name": "Modify an API Call",
         "tips": [
@@ -1188,7 +1222,7 @@
     },
     {
       "key": "01b7b570-ed27-49f2-adca-fc2a8c73704b",
-      "position": 26,
+      "position": 24,
       "properties": {
       },
       "seeding_key": {
@@ -1198,7 +1232,7 @@
     },
     {
       "key": "8ec63d27-bbb3-45a3-89ed-a25649bc3e15",
-      "position": 27,
+      "position": 25,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What happened when you modified the code? How did the API response change?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that changing the parameters in the request (the URL or attributes) directly changes what the server sends back. Listen for: 'I changed the ID and got a different character' or 'I changed the date and the image updated.'\n"
       },
@@ -1229,6 +1263,17 @@
       "seeding_key": {
         "activity_section.key": "fa9c4bd0-c5c9-4c7b-8db9-f34a058f42f5",
         "lesson_activity.key": "aec0366f-f55f-409b-9cbf-37cec021f881"
+      }
+    },
+    {
+      "key": "a38987dc-6133-450f-b6b9-91a3e0c32c67",
+      "position": 1,
+      "properties": {
+        "progression_name": "New CFU Level 3"
+      },
+      "seeding_key": {
+        "activity_section.key": "a38987dc-6133-450f-b6b9-91a3e0c32c67",
+        "lesson_activity.key": "a6da11f9-cac0-4017-98e5-ef893cbac208"
       }
     },
     {
@@ -1366,19 +1411,8 @@
       }
     },
     {
-      "key": "de3130c7-135a-43bc-a475-83226717e32e",
-      "position": 7,
-      "properties": {
-        "progression_name": "Vocab: Asynchronous Programming"
-      },
-      "seeding_key": {
-        "activity_section.key": "de3130c7-135a-43bc-a475-83226717e32e",
-        "lesson_activity.key": "6b4db25f-625c-4a4c-ae91-d7eefc50c942"
-      }
-    },
-    {
       "key": "ffe792fd-7b5d-4b92-a020-a0607edb01c4",
-      "position": 8,
+      "position": 7,
       "properties": {
         "progression_name": "Demo: Run the Frozen App"
       },
@@ -1389,7 +1423,7 @@
     },
     {
       "key": "58baaa9e-ab31-4a80-a278-9dcb58b67176",
-      "position": 9,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which specific action was a synchronous operation? Which specific action was an asynchronous operation? How did you know the difference just by looking at the screen?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students connecting the technical behavior to the user impact. For the like button (asynchronous), students should note that they could keep interact with other parts of the app immediately. For the compress video button (synchronous), students should explicitly mention the 5-second freeze. Listen for phrases like \"The app stopped responding,\" or \"I thought the app crashed because I couldn't even hit the 'Like' button.\"\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If an app freezes every time you click a button, how does that change your trust in the app? Would you assume it’s working, or would you think it crashed?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students to articulate that a synchronous (blocking) task doesn't just slow down the app; it makes the user feel like the app is broken or unresponsive. Asynchronous programming is a fundamental user experience tool used to keep the user feeling in control and informed.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Why Apps Wait activity guide.\n"
       },
@@ -1400,7 +1434,7 @@
     },
     {
       "key": "b2a3a269-4773-44a7-934d-3e2eb361a5f9",
-      "position": 10,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students learn how asynchronous code works by predicting and investigating execution order in Web Lab.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 6 to complete Levels 6 through 8.\n- Level 6: Students predict how blocking code freezes the interface while tasks complete one at a time.\n- Level 7: Students predict the execution order of multiple kitchen tasks running on different timers.\n- Level 8: Students predict the outcome when the chef tries to serve food before the cooking timer finishes.\n",
         "duration": "10",
@@ -1424,7 +1458,7 @@
     },
     {
       "key": "0a7e30ed-2f79-46dc-bda1-48f73ca4e101",
-      "position": 11,
+      "position": 10,
       "properties": {
       },
       "seeding_key": {
@@ -1434,7 +1468,7 @@
     },
     {
       "key": "75cdb5d5-b316-4e7a-ae21-663eb90203ab",
-      "position": 12,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Why did the \"Serving customer\" line print \"undefined\" even though the burger was cooking?*\n- *How can we make sure our app doesn't try to use data before it arrives?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students synthesize their learning from the coding exploration. They should identify that since the kitchen (setTimeout) was working in the background, the main program moved on to the next line immediately. Because the data wasn't \"ready\" yet, the variable was still empty (undefined).\n"
       },
@@ -1445,7 +1479,7 @@
     },
     {
       "key": "3087e702-366d-466a-85dd-8f5da26619bf",
-      "position": 13,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Visually map the flow of time in asynchronous operations using the code students just investigated.",
         "duration": "5",
@@ -1458,7 +1492,7 @@
     },
     {
       "key": "47a85e36-df75-428a-a0b4-0d7b107b86a6",
-      "position": 14,
+      "position": 13,
       "properties": {
         "description": "Let's map out exactly what happened in each kitchen using a timeline graph.",
         "remarks": true
@@ -1470,7 +1504,7 @@
     },
     {
       "key": "d97655d8-0bbd-4daf-9038-29870f7fb773",
-      "position": 15,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students draw a timeline graph mapping the code from Level 6. They should label the tasks and wait times in their illustration.",
         "tips": [
@@ -1497,16 +1531,14 @@
       }
     },
     {
-      "key": "f87ac2ce-7b5f-4a96-b191-5500565cc631",
-      "position": 2,
+      "key": "6210ab74-2394-4ea9-a7fb-12e6847a8f05",
+      "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 7 to complete the End of Lesson Survey.",
-        "name": "End of Lesson Survey",
-        "progression_name": "End of Lesson Survey"
+        "progression_name": "New CFU level"
       },
       "seeding_key": {
-        "activity_section.key": "f87ac2ce-7b5f-4a96-b191-5500565cc631",
-        "lesson_activity.key": "6be212df-5fa7-4638-b747-3b1fbe4e17f4"
+        "activity_section.key": "6210ab74-2394-4ea9-a7fb-12e6847a8f05",
+        "lesson_activity.key": "7579eb98-a101-4343-b15f-b8abb0dbd6ac"
       }
     },
     {
@@ -1731,19 +1763,6 @@
       },
       "seeding_key": {
         "activity_section.key": "300ec432-be52-46b1-a85b-d1205df310ac",
-        "lesson_activity.key": "7a7539b8-0f2a-422d-b715-f8060f169df7"
-      }
-    },
-    {
-      "key": "24b0e55c-34ca-4464-8d56-d821dc88a9e1",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 9 to complete the End of Lesson Survey.",
-        "name": "End of Lesson Survey",
-        "progression_name": "End of Lesson Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "24b0e55c-34ca-4464-8d56-d821dc88a9e1",
         "lesson_activity.key": "7a7539b8-0f2a-422d-b715-f8060f169df7"
       }
     },
@@ -2077,6 +2096,17 @@
       }
     },
     {
+      "key": "ef187174-252b-4b58-a0c7-5e62e0a10afe",
+      "position": 1,
+      "properties": {
+        "progression_name": "New CFU Level "
+      },
+      "seeding_key": {
+        "activity_section.key": "ef187174-252b-4b58-a0c7-5e62e0a10afe",
+        "lesson_activity.key": "0ca70945-71b9-43d2-90c0-be668db4e97a"
+      }
+    },
+    {
       "key": "10dc01f9-1d25-4124-8175-cc4afe63271f",
       "position": 1,
       "properties": {
@@ -2221,19 +2251,6 @@
       },
       "seeding_key": {
         "activity_section.key": "2c17d7d7-7203-4c86-af17-044af9caee93",
-        "lesson_activity.key": "0b8b4beb-d1cf-4da3-b454-fb2145551f91"
-      }
-    },
-    {
-      "key": "f602894e-a965-4e5b-aecd-6ef973f3f814",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 8 to complete the End of Lesson Survey.",
-        "name": "End of Lesson Survey",
-        "progression_name": "End of Lesson Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "f602894e-a965-4e5b-aecd-6ef973f3f814",
         "lesson_activity.key": "0b8b4beb-d1cf-4da3-b454-fb2145551f91"
       }
     },
@@ -4027,20 +4044,19 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Vocab: API"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "designing-reliable-apps-lesson1-vocab1-2025-pilot_2025-pilot_2026"
+          "designing-reliable-apps-lesson1-level1-2026"
         ],
         "lesson.key": "Lesson 1: Where Data Comes From",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "0d979185-6dcd-4543-82f6-5fda450d97c9"
+        "activity_section.key": "d39b730b-f6cc-4383-b9f3-e38271c407a0"
       },
       "level_keys": [
-        "designing-reliable-apps-lesson1-vocab1-2025-pilot_2025-pilot_2026"
+        "designing-reliable-apps-lesson1-level1-2026"
       ]
     },
     {
@@ -4049,69 +4065,45 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Vocab: API"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "designing-reliable-apps-lesson1-vocabsummary1-2025-pilot_2025-pil_2026"
+          "designing-reliable-apps-lesson1-level4-2026"
         ],
         "lesson.key": "Lesson 1: Where Data Comes From",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "0d979185-6dcd-4543-82f6-5fda450d97c9"
+        "activity_section.key": "d39b730b-f6cc-4383-b9f3-e38271c407a0"
       },
       "level_keys": [
-        "designing-reliable-apps-lesson1-vocabsummary1-2025-pilot_2025-pil_2026"
+        "designing-reliable-apps-lesson1-level4-2026"
       ]
     },
     {
       "chapter": 4,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Vocab: JSON"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "designing-reliable-apps-lesson1-vocab2-2025-pilot_2025-pilot_2026"
+          "designing-reliable-apps-lesson1-level7-2026"
         ],
         "lesson.key": "Lesson 1: Where Data Comes From",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "6fc1aa09-7f3d-4379-a69a-b8fca7ea2ac1"
+        "activity_section.key": "d39b730b-f6cc-4383-b9f3-e38271c407a0"
       },
       "level_keys": [
-        "designing-reliable-apps-lesson1-vocab2-2025-pilot_2025-pilot_2026"
+        "designing-reliable-apps-lesson1-level7-2026"
       ]
     },
     {
       "chapter": 5,
       "position": 4,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: JSON"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson1-vocabsummary2-2025-pilot_2025-pil_2026"
-        ],
-        "lesson.key": "Lesson 1: Where Data Comes From",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "6fc1aa09-7f3d-4379-a69a-b8fca7ea2ac1"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson1-vocabsummary2-2025-pilot_2025-pil_2026"
-      ]
-    },
-    {
-      "chapter": 6,
-      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4132,8 +4124,8 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 6,
+      "chapter": 6,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4154,8 +4146,8 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 7,
+      "chapter": 7,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4176,8 +4168,8 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 8,
+      "chapter": 8,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4198,8 +4190,8 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 9,
+      "chapter": 9,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4220,8 +4212,8 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 10,
+      "chapter": 10,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4242,96 +4234,30 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Vocab: Synchronous Programming"
+        "progression": "New CFU Level 3"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "designing-reliable-apps-lesson2-level1-test_2025-pilot_2025-pilot_2026"
+          "designing-reliable-apps-lesson2-level3-2026"
         ],
         "lesson.key": "Lesson 2: Why Apps Wait",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "481986ea-58a8-4a22-bd32-694d68b1fea9"
+        "activity_section.key": "a38987dc-6133-450f-b6b9-91a3e0c32c67"
       },
       "level_keys": [
-        "designing-reliable-apps-lesson2-level1-test_2025-pilot_2025-pilot_2026"
+        "designing-reliable-apps-lesson2-level3-2026"
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 12,
       "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Synchronous Programming"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson2-level2-test_2025-pilot_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 2: Why Apps Wait",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "481986ea-58a8-4a22-bd32-694d68b1fea9"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson2-level2-test_2025-pilot_2025-pilot_2026"
-      ]
-    },
-    {
-      "chapter": 14,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Asynchronous Programming"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson2-level3-test_2025-pilot_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 2: Why Apps Wait",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "de3130c7-135a-43bc-a475-83226717e32e"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson2-level3-test_2025-pilot_2025-pilot_2026"
-      ]
-    },
-    {
-      "chapter": 15,
-      "position": 4,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Asynchronous Programming"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson2-level4-test_2025-pilot_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 2: Why Apps Wait",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "de3130c7-135a-43bc-a475-83226717e32e"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson2-level4-test_2025-pilot_2025-pilot_2026"
-      ]
-    },
-    {
-      "chapter": 16,
-      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4352,8 +4278,8 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 6,
+      "chapter": 13,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4374,140 +4300,30 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 7,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "End of Lesson Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson2-pilot-survey_2026"
-        ],
-        "lesson.key": "Lesson 2: Why Apps Wait",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "f87ac2ce-7b5f-4a96-b191-5500565cc631"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson2-pilot-survey_2026"
-      ]
-    },
-    {
-      "chapter": 19,
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Vocab: Promise"
+        "progression": "New CFU level"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "designing-reliable-apps-lesson3-level1-test_2025-pilot_2025-pilot_2026"
+          "designing-reliable-apps-lesson3-level2-2026"
         ],
         "lesson.key": "Lesson 3: Getting Data Online",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "961f74f3-ad03-4a24-8249-fa5c23f96310"
+        "activity_section.key": "6210ab74-2394-4ea9-a7fb-12e6847a8f05"
       },
       "level_keys": [
-        "designing-reliable-apps-lesson3-level1-test_2025-pilot_2025-pilot_2026"
+        "designing-reliable-apps-lesson3-level2-2026"
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 15,
       "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Promise"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson3-level2-test_2025-pilot_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 3: Getting Data Online",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "961f74f3-ad03-4a24-8249-fa5c23f96310"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson3-level2-test_2025-pilot_2025-pilot_2026"
-      ]
-    },
-    {
-      "chapter": 21,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: .then() and .catch()"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson3-level3-test_2025-pilot_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 3: Getting Data Online",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "4c76c1d5-1487-4ab1-a787-3bf0bd0b96cc"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson3-level3-test_2025-pilot_2025-pilot_2026"
-      ]
-    },
-    {
-      "chapter": 22,
-      "position": 4,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: .then() and .catch()"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson3-level4-test_2025-pilot_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 3: Getting Data Online",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "4c76c1d5-1487-4ab1-a787-3bf0bd0b96cc"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson3-level4-test_2025-pilot_2025-pilot_2026"
-      ]
-    },
-    {
-      "chapter": 23,
-      "position": 5,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: .then() and .catch()"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson3-level9-test_2025-pilot_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 3: Getting Data Online",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "4c76c1d5-1487-4ab1-a787-3bf0bd0b96cc"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson3-level9-test_2025-pilot_2025-pilot_2026"
-      ]
-    },
-    {
-      "chapter": 24,
-      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4528,8 +4344,8 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 7,
+      "chapter": 16,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4550,8 +4366,8 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 8,
+      "chapter": 17,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4572,29 +4388,7 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 9,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "End of Lesson Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson3-pilot-survey_2026"
-        ],
-        "lesson.key": "Lesson 3: Getting Data Online",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "24b0e55c-34ca-4464-8d56-d821dc88a9e1"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson3-pilot-survey_2026"
-      ]
-    },
-    {
-      "chapter": 28,
+      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4616,7 +4410,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 19,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4638,7 +4432,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 20,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4660,7 +4454,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 21,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4682,7 +4476,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 22,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4704,8 +4498,30 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 23,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "New CFU Level "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson5-level4-2026"
+        ],
+        "lesson.key": "Lesson 5: Making Sense of Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "ef187174-252b-4b58-a0c7-5e62e0a10afe"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson5-level4-2026"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4726,52 +4542,8 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Dot Notation"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson5-vocab-dotnotation-2025-pilo_2025-_2026"
-        ],
-        "lesson.key": "Lesson 5: Making Sense of Data",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "17918a40-7c3b-40ff-af14-42e6fb97c8d6"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson5-vocab-dotnotation-2025-pilo_2025-_2026"
-      ]
-    },
-    {
-      "chapter": 35,
+      "chapter": 25,
       "position": 3,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Dot Notation"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson5-vocab-dotnotation-frq-2025-_2025-_2026"
-        ],
-        "lesson.key": "Lesson 5: Making Sense of Data",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "17918a40-7c3b-40ff-af14-42e6fb97c8d6"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson5-vocab-dotnotation-frq-2025-_2025-_2026"
-      ]
-    },
-    {
-      "chapter": 36,
-      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4792,52 +4564,8 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: .map()"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson5-vocab-map-2025-pilot_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 5: Making Sense of Data",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "06afd8ff-08cd-4723-8e55-98bf71440bab"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson5-vocab-map-2025-pilot_2025-pilot_2026"
-      ]
-    },
-    {
-      "chapter": 38,
-      "position": 6,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: .map()"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson5-vocab-map-frq-2025-pilot_2025-pil_2026"
-        ],
-        "lesson.key": "Lesson 5: Making Sense of Data",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "06afd8ff-08cd-4723-8e55-98bf71440bab"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson5-vocab-map-frq-2025-pilot_2025-pil_2026"
-      ]
-    },
-    {
-      "chapter": 39,
-      "position": 7,
+      "chapter": 26,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4858,29 +4586,7 @@
       ]
     },
     {
-      "chapter": 40,
-      "position": 8,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "End of Lesson Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson5-pilot-survey_2026"
-        ],
-        "lesson.key": "Lesson 5: Making Sense of Data",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "f602894e-a965-4e5b-aecd-6ef973f3f814"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson5-pilot-survey_2026"
-      ]
-    },
-    {
-      "chapter": 41,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4902,7 +4608,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4924,7 +4630,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4946,7 +4652,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 30,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4968,7 +4674,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 31,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4990,7 +4696,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 32,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5012,7 +4718,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 33,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5034,7 +4740,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 34,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5056,7 +4762,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5078,7 +4784,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 36,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5100,7 +4806,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 37,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5122,7 +4828,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 38,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5144,7 +4850,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5166,7 +4872,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5188,7 +4894,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5210,7 +4916,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 42,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5232,7 +4938,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 43,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5254,7 +4960,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 44,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5276,7 +4982,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 45,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5298,7 +5004,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 46,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5320,7 +5026,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 47,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -5342,7 +5048,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5364,7 +5070,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 49,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5386,7 +5092,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 50,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5408,7 +5114,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 51,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5430,7 +5136,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 52,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5452,7 +5158,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 53,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5474,7 +5180,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5496,7 +5202,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 55,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5518,7 +5224,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 56,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5540,7 +5246,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 57,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5562,7 +5268,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 58,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -5584,7 +5290,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5606,7 +5312,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5628,7 +5334,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 61,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5650,7 +5356,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 62,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5672,7 +5378,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 63,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5694,7 +5400,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5731,50 +5437,38 @@
     },
     {
       "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson1-vocab1-2025-pilot_2025-pilot_2026",
+        "level.key": "designing-reliable-apps-lesson1-level1-2026",
         "script_level.level_keys": [
-          "designing-reliable-apps-lesson1-vocab1-2025-pilot_2025-pilot_2026"
+          "designing-reliable-apps-lesson1-level1-2026"
         ],
         "lesson.key": "Lesson 1: Where Data Comes From",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "0d979185-6dcd-4543-82f6-5fda450d97c9"
+        "activity_section.key": "d39b730b-f6cc-4383-b9f3-e38271c407a0"
       }
     },
     {
       "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson1-vocabsummary1-2025-pilot_2025-pil_2026",
+        "level.key": "designing-reliable-apps-lesson1-level4-2026",
         "script_level.level_keys": [
-          "designing-reliable-apps-lesson1-vocabsummary1-2025-pilot_2025-pil_2026"
+          "designing-reliable-apps-lesson1-level4-2026"
         ],
         "lesson.key": "Lesson 1: Where Data Comes From",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "0d979185-6dcd-4543-82f6-5fda450d97c9"
+        "activity_section.key": "d39b730b-f6cc-4383-b9f3-e38271c407a0"
       }
     },
     {
       "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson1-vocab2-2025-pilot_2025-pilot_2026",
+        "level.key": "designing-reliable-apps-lesson1-level7-2026",
         "script_level.level_keys": [
-          "designing-reliable-apps-lesson1-vocab2-2025-pilot_2025-pilot_2026"
+          "designing-reliable-apps-lesson1-level7-2026"
         ],
         "lesson.key": "Lesson 1: Where Data Comes From",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "6fc1aa09-7f3d-4379-a69a-b8fca7ea2ac1"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson1-vocabsummary2-2025-pilot_2025-pil_2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson1-vocabsummary2-2025-pilot_2025-pil_2026"
-        ],
-        "lesson.key": "Lesson 1: Where Data Comes From",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "6fc1aa09-7f3d-4379-a69a-b8fca7ea2ac1"
+        "activity_section.key": "d39b730b-f6cc-4383-b9f3-e38271c407a0"
       }
     },
     {
@@ -5851,50 +5545,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson2-level1-test_2025-pilot_2025-pilot_2026",
+        "level.key": "designing-reliable-apps-lesson2-level3-2026",
         "script_level.level_keys": [
-          "designing-reliable-apps-lesson2-level1-test_2025-pilot_2025-pilot_2026"
+          "designing-reliable-apps-lesson2-level3-2026"
         ],
         "lesson.key": "Lesson 2: Why Apps Wait",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "481986ea-58a8-4a22-bd32-694d68b1fea9"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson2-level2-test_2025-pilot_2025-pilot_2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson2-level2-test_2025-pilot_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 2: Why Apps Wait",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "481986ea-58a8-4a22-bd32-694d68b1fea9"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson2-level3-test_2025-pilot_2025-pilot_2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson2-level3-test_2025-pilot_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 2: Why Apps Wait",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "de3130c7-135a-43bc-a475-83226717e32e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson2-level4-test_2025-pilot_2025-pilot_2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson2-level4-test_2025-pilot_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 2: Why Apps Wait",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "de3130c7-135a-43bc-a475-83226717e32e"
+        "activity_section.key": "a38987dc-6133-450f-b6b9-91a3e0c32c67"
       }
     },
     {
@@ -5923,74 +5581,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson2-pilot-survey_2026",
+        "level.key": "designing-reliable-apps-lesson3-level2-2026",
         "script_level.level_keys": [
-          "designing-reliable-apps-lesson2-pilot-survey_2026"
-        ],
-        "lesson.key": "Lesson 2: Why Apps Wait",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "f87ac2ce-7b5f-4a96-b191-5500565cc631"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson3-level1-test_2025-pilot_2025-pilot_2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson3-level1-test_2025-pilot_2025-pilot_2026"
+          "designing-reliable-apps-lesson3-level2-2026"
         ],
         "lesson.key": "Lesson 3: Getting Data Online",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "961f74f3-ad03-4a24-8249-fa5c23f96310"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson3-level2-test_2025-pilot_2025-pilot_2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson3-level2-test_2025-pilot_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 3: Getting Data Online",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "961f74f3-ad03-4a24-8249-fa5c23f96310"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson3-level3-test_2025-pilot_2025-pilot_2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson3-level3-test_2025-pilot_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 3: Getting Data Online",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "4c76c1d5-1487-4ab1-a787-3bf0bd0b96cc"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson3-level4-test_2025-pilot_2025-pilot_2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson3-level4-test_2025-pilot_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 3: Getting Data Online",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "4c76c1d5-1487-4ab1-a787-3bf0bd0b96cc"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson3-level9-test_2025-pilot_2025-pilot_2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson3-level9-test_2025-pilot_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 3: Getting Data Online",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "4c76c1d5-1487-4ab1-a787-3bf0bd0b96cc"
+        "activity_section.key": "6210ab74-2394-4ea9-a7fb-12e6847a8f05"
       }
     },
     {
@@ -6027,18 +5625,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
         "activity_section.key": "dc5c0842-fcd6-42a1-9a82-99babab21c87"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson3-pilot-survey_2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson3-pilot-survey_2026"
-        ],
-        "lesson.key": "Lesson 3: Getting Data Online",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "24b0e55c-34ca-4464-8d56-d821dc88a9e1"
       }
     },
     {
@@ -6103,6 +5689,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson5-level4-2026",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson5-level4-2026"
+        ],
+        "lesson.key": "Lesson 5: Making Sense of Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "ef187174-252b-4b58-a0c7-5e62e0a10afe"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "designing-reliable-apps-lesson5-level1-2025-pilot_2025-pilot_2026",
         "script_level.level_keys": [
           "designing-reliable-apps-lesson5-level1-2025-pilot_2025-pilot_2026"
@@ -6111,30 +5709,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
         "activity_section.key": "c08214b8-181f-46ff-a0ae-066f4e085bab"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson5-vocab-dotnotation-2025-pilo_2025-_2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson5-vocab-dotnotation-2025-pilo_2025-_2026"
-        ],
-        "lesson.key": "Lesson 5: Making Sense of Data",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "17918a40-7c3b-40ff-af14-42e6fb97c8d6"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson5-vocab-dotnotation-frq-2025-_2025-_2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson5-vocab-dotnotation-frq-2025-_2025-_2026"
-        ],
-        "lesson.key": "Lesson 5: Making Sense of Data",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "17918a40-7c3b-40ff-af14-42e6fb97c8d6"
       }
     },
     {
@@ -6151,30 +5725,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson5-vocab-map-2025-pilot_2025-pilot_2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson5-vocab-map-2025-pilot_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 5: Making Sense of Data",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "06afd8ff-08cd-4723-8e55-98bf71440bab"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson5-vocab-map-frq-2025-pilot_2025-pil_2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson5-vocab-map-frq-2025-pilot_2025-pil_2026"
-        ],
-        "lesson.key": "Lesson 5: Making Sense of Data",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "06afd8ff-08cd-4723-8e55-98bf71440bab"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "designing-reliable-apps-lesson5-level7-2025-pilot_2025-pilot_2026",
         "script_level.level_keys": [
           "designing-reliable-apps-lesson5-level7-2025-pilot_2025-pilot_2026"
@@ -6183,18 +5733,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
         "activity_section.key": "0894b8ec-8349-450e-b137-e567f97a516b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson5-pilot-survey_2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson5-pilot-survey_2026"
-        ],
-        "lesson.key": "Lesson 5: Making Sense of Data",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "f602894e-a965-4e5b-aecd-6ef973f3f814"
       }
     },
     {

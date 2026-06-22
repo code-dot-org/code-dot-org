@@ -10,4 +10,8 @@ require 'js-routes'
 
 require_relative '../../dashboard/config/environment'
 
-JsRoutes.generate!(apps_dir('generated-scripts/studioRoutes.js'), url_links: true)
+JsRoutes.generate!(
+  apps_dir('generated-scripts/studioRoutes.js'),
+  exclude: [/^dev_/, /^test_/],
+  url_links: true,
+)

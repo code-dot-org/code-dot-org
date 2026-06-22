@@ -31,8 +31,8 @@ class Policies::DemoSections
       login_type: 'word',
       participant_type: 'student',
       grades: %w[6 7 8],
-      unit_name: 'csd3-2024',
-      unit_group_name: 'csd-2024',
+      unit_name: 'csd2-2026',
+      unit_group_name: 'csd-2026',
       # Pink fire: COLORS[1] = Pink, EMOJIS[0] = 🔥
       avatar_color: 1,
       avatar_emoji: 0,
@@ -51,8 +51,8 @@ class Policies::DemoSections
       login_type: 'email',
       participant_type: 'student',
       grades: %w[9 10 11 12],
-      unit_name: 'aif2-2025',
-      unit_group_name: 'artificial-intelligence-foundations-2025',
+      unit_name: 'aif2-v2-2025',
+      unit_group_name: 'artificial-intelligence-foundations-2026',
       # Green robot: COLORS[8] = Green, EMOJIS[5] = 🤖
       avatar_color: 8,
       avatar_emoji: 5,

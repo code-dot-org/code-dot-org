@@ -7966,7 +7966,7 @@ columns:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: completed_at
     sql_type_metadata: *8
-    'null': false
+    'null': true
     default: 
     default_function: 
     collation: 
@@ -14196,6 +14196,19 @@ indexes:
     type: 
     using: :btree
     comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: rubrics
+    name: index_rubrics_on_lesson_id
+    unique: true
+    columns:
+    - lesson_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
   schema_migrations: []
   school_districts:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
@@ -16053,7 +16066,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20260616120000
+version: 20260617130000
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
