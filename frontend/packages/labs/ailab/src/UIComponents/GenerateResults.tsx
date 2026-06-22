@@ -1,13 +1,11 @@
 /* React component to handle training. */
 import {useState, useEffect, useRef, useCallback} from 'react';
-import {connect} from 'react-redux';
 
 import {imageUrl} from '../assetPath';
 import {styles, getFadeOpacity} from '../constants';
+import {useAppSelector} from '../hooks';
 import I18n from '../i18n';
-import type {RootState} from '../redux';
 import {getTableData} from '../redux';
-import type {DataRow} from '../types';
 
 import {TestingAnimationDescription} from './AnimationDescriptions';
 import DataTable from './DataTable';
@@ -15,15 +13,11 @@ import DataTable from './DataTable';
 const framesPerCycle = 80;
 const maxNumItems = 7;
 
-interface GenerateResultsProps {
-  data: DataRow[];
-  instructionsOverlayActive: boolean;
-}
-
-const GenerateResults = ({
-  data,
-  instructionsOverlayActive,
-}: GenerateResultsProps) => {
+const GenerateResults = () => {
+  const data = useAppSelector(state => getTableData(state, true));
+  const instructionsOverlayActive = useAppSelector(
+    state => state.instructionsOverlayActive,
+  );
   const [frame, setFrame] = useState(0);
   const [, setFinished] = useState(false);
   const frameRef = useRef(0);
@@ -206,7 +200,4 @@ const GenerateResults = ({
   );
 };
 
-export default connect((state: RootState) => ({
-  data: getTableData(state, true),
-  instructionsOverlayActive: state.instructionsOverlayActive,
-}))(GenerateResults);
+export default GenerateResults;
