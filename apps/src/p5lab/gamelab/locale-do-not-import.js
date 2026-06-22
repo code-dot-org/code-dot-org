@@ -8,10 +8,6 @@
  */
 // locale for gamelab
 
-import localeWithI18nStringTracker from '@cdo/apps/util/i18nStringTracker';
 import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';
 
-export default localeWithI18nStringTracker(
-  safeLoadLocale('gamelab_locale'),
-  'gamelab'
-);
+export default safeLoadLocale('gamelab_locale');

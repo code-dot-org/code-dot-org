@@ -21,8 +21,6 @@ class ApplicationController < ActionController::Base
   # this is needed to avoid devise breaking on email param
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  before_action :setup_i18n_tracking
-
   before_action :fix_crawlers_with_bad_accept_headers
 
   before_action :clear_sign_up_session_vars
@@ -228,11 +226,6 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update) {|u| u.permit PERMITTED_USER_FIELDS}
     devise_parameter_sanitizer.permit(:sign_up) {|u| u.permit PERMITTED_USER_FIELDS}
     devise_parameter_sanitizer.permit(:sign_in) {|u| u.permit PERMITTED_USER_FIELDS}
-  end
-
-  # Capture the current request URL for i18n string tracking
-  protected def setup_i18n_tracking
-    Thread.current[:current_request_url] = request.url
   end
 
   protected def milestone_response(options)
