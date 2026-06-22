@@ -1,11 +1,10 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Link from '@code-dot-org/component-library/link';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import {showFrozenProjectInfoDialog} from '@cdo/apps/templates/projects/frozenProjectInfoDialog/frozenProjectInfoDialogRedux';
-
-import {tableLayoutStyles} from '../tables/tableConstants';
 
 import {updateProjectName} from './projectsRedux';
 
@@ -46,15 +45,14 @@ class PersonalProjectsNameCell extends Component {
       <div>
         {!isEditing && (
           <div>
-            <a
-              style={tableLayoutStyles.link}
+            <Link
               href={url}
-              target="_blank"
-              rel="noopener noreferrer"
+              openInNewTab
+              size="s"
               className="ui-projects-table-project-name"
             >
               {projectName}
-            </a>
+            </Link>
             {isFrozen && (
               <button
                 type="button"
