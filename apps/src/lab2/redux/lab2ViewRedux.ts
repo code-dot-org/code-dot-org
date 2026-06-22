@@ -8,6 +8,8 @@ export interface Lab2ViewState {
   consoleFontSizeKey: keyof typeof FontSize;
   editorFontSizeKey: keyof typeof FontSize;
   editorFontSizeLoaded: boolean;
+  codeSuggestionsEnabled: boolean;
+  editorSettingsLoaded: boolean;
   isStandaloneCollapsed?: boolean;
 }
 
@@ -15,6 +17,8 @@ const initialState: Lab2ViewState = {
   consoleFontSizeKey: 'Small',
   editorFontSizeKey: 'Small',
   editorFontSizeLoaded: false,
+  codeSuggestionsEnabled: true,
+  editorSettingsLoaded: false,
   isStandaloneCollapsed: false,
 };
 
@@ -51,6 +55,20 @@ export const fetchAndSaveEditorFontSize = createAsyncThunk<
   dispatch(setEditorFontSizeLoaded(true));
 });
 
+// This thunk fetches editor behavior settings from the backend, then saves
+// them in redux.
+export const fetchAndSaveEditorSettings = createAsyncThunk<
+  void,
+  {appName: AppName},
+  {dispatch: AppDispatch}
+>('lab2View/fetchAndSaveEditorSettings', async ({appName}, {dispatch}) => {
+  const editorSettings = await new UserPreferences().getEditorSettings(appName);
+  if (typeof editorSettings?.codeSuggestions === 'boolean') {
+    dispatch(setCodeSuggestionsEnabled(editorSettings.codeSuggestions));
+  }
+  dispatch(setEditorSettingsLoaded(true));
+});
+
 // SLICE
 const lab2ViewSlice = createSlice({
   name: 'lab2View',
@@ -65,6 +83,12 @@ const lab2ViewSlice = createSlice({
     setEditorFontSizeLoaded(state, action: PayloadAction<boolean>) {
       state.editorFontSizeLoaded = action.payload;
     },
+    setCodeSuggestionsEnabled(state, action: PayloadAction<boolean>) {
+      state.codeSuggestionsEnabled = action.payload;
+    },
+    setEditorSettingsLoaded(state, action: PayloadAction<boolean>) {
+      state.editorSettingsLoaded = action.payload;
+    },
     setIsStandaloneCollapsed(state, action: PayloadAction<boolean>) {
       state.isStandaloneCollapsed = action.payload;
     },
@@ -75,6 +99,8 @@ export const {
   setConsoleFontSize,
   setEditorFontSize,
   setEditorFontSizeLoaded,
+  setCodeSuggestionsEnabled,
+  setEditorSettingsLoaded,
   setIsStandaloneCollapsed,
 } = lab2ViewSlice.actions;
 

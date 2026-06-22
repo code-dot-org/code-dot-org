@@ -10,7 +10,10 @@ import {editorConfig} from '@cdo/apps/codemirror/editorConfig';
 import {FontSize} from '@cdo/apps/lab2/constants';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {
+  fetchAndSaveEditorSettings,
   fetchAndSaveEditorFontSize,
+  setCodeSuggestionsEnabled,
+  setEditorSettingsLoaded,
   setEditorFontSizeLoaded,
 } from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {AppName} from '@cdo/apps/lab2/types';
@@ -52,6 +55,9 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   const {editorFontSizeKey, editorFontSizeLoaded} = useAppSelector(
     state => state.lab2View
   );
+  const {codeSuggestionsEnabled, editorSettingsLoaded} = useAppSelector(
+    state => state.lab2View
+  );
   const {signInState} = useAppSelector(state => state.currentUser);
   const {theme} = useTheme();
 
@@ -86,9 +92,13 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   useEffect(() => {
     if (signInState !== SignInState.SignedIn) {
       dispatch(setEditorFontSizeLoaded(true));
+      dispatch(setEditorSettingsLoaded(true));
       return;
     }
+    dispatch(setEditorSettingsLoaded(false));
+    dispatch(setCodeSuggestionsEnabled(true));
     dispatch(fetchAndSaveEditorFontSize({appName}));
+    dispatch(fetchAndSaveEditorSettings({appName}));
   }, [dispatch, signInState, appName]);
 
   // These two compartments control read-only settings.
@@ -102,6 +112,9 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
 
   //This compartment controls the theme for the editor
   const themeCompartment = useMemo(() => new Compartment(), []);
+
+  // This compartment controls the autocomplete suggestions popup.
+  const autocompleteCompartment = useMemo(() => new Compartment(), []);
 
   const getFontSizeTheme = (fontSize: number) => {
     return EditorView.theme({
@@ -186,7 +199,12 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   }, []);
 
   useEffect(() => {
-    if (!editorFontSizeLoaded || editorRef.current === null || didInit) {
+    if (
+      !editorFontSizeLoaded ||
+      !editorSettingsLoaded ||
+      editorRef.current === null ||
+      didInit
+    ) {
       return;
     }
 
@@ -211,7 +229,9 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
         ...editorConfig,
 
         onEditorUpdate,
-        autocompletion(),
+        autocompleteCompartment.of(
+          codeSuggestionsEnabled ? autocompletion() : []
+        ),
         ...editorConfigExtensions,
       ];
 
@@ -284,6 +304,9 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     fontSizeCompartment,
     editorFontSizeKey,
     editorFontSizeLoaded,
+    editorSettingsLoaded,
+    codeSuggestionsEnabled,
+    autocompleteCompartment,
     themeCompartment,
     hasSplitDiffView,
     codeBeforeAiTutorVersion,
@@ -314,6 +337,20 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       });
     }
   }, [theme, editorView, themeCompartment]);
+
+  // When code suggestions are toggled, enable or disable the autocomplete
+  // extension without rebuilding the editor.
+  useEffect(() => {
+    if (editorView && editorView instanceof EditorView) {
+      editorView.dispatch({
+        effects: [
+          autocompleteCompartment.reconfigure(
+            codeSuggestionsEnabled ? autocompletion() : []
+          ),
+        ],
+      });
+    }
+  }, [editorView, autocompleteCompartment, codeSuggestionsEnabled]);
 
   // When we have a new channelId and/or start code, reset the editor with the start code.
   // A new channelId means we are loading a new project, and we need to reset the editor.
@@ -362,7 +399,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     };
   }, [editorView]);
 
-  if (!editorFontSizeLoaded) {
+  if (!editorFontSizeLoaded || !editorSettingsLoaded) {
     return null;
   }
 
