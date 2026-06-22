@@ -35,19 +35,6 @@ function getHandleType(handle: HTMLElement): 'source' | 'target' | null {
   return null;
 }
 
-// Pulls an (x,y) position out of either a MouseEvent (direct
-// fields) or a TouchEvent (first changedTouches/touches entry). Returns
-// null when no touch is present.
-export function getEventClientPosition(
-  event: MouseEvent | TouchEvent
-): XYPosition | null {
-  if (event instanceof MouseEvent) {
-    return {x: event.clientX, y: event.clientY};
-  }
-  const touch = event.changedTouches[0] ?? event.touches[0] ?? null;
-  return touch ? {x: touch.clientX, y: touch.clientY} : null;
-}
-
 // Picks the nearest handle to screenPoint among the given candidates,
 // keeping only those of the requested type and within radiusPx. resolveNodeId
 // returns the node id to record for a candidate, or null to skip it — this
