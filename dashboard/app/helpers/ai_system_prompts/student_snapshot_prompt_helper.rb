@@ -319,7 +319,12 @@ Levels: [{
 
   def self.get_code_level_info(level, student_id, unit_id)
     exemplar = level.respond_to?(:exemplar_sources) && level.exemplar_sources ? level.exemplar_sources : nil
-    student_code = ApplicationController.helpers.get_student_code(student_id, level, unit_id).to_json
+    student_code =
+      begin
+        ApplicationController.helpers.get_student_code(student_id, level, unit_id).to_json
+      rescue
+        nil
+      end
 
     code_data = {
       "Level Long Instructions" => "{#{ActionController::Base.helpers.strip_tags(level.long_instructions)&.gsub(/\s+/, ' ')&.strip || 'No long instructions'}}",
