@@ -165,6 +165,13 @@ export default function ReactFlowCanvas({
 
   const [isAnyPopoverOpen, setPopoverOpen] = useState(false);
   const [isDirectAnchorDragging, setIsDirectAnchorDragging] = useState(false);
+  // Id of a line anchor the user is moving with the keyboard. Set on the first
+  // arrow-key move and cleared once focus leaves that anchor, so handles stay
+  // visible for the duration of a keyboard reposition just as they do for a
+  // pointer drag.
+  const [keyboardMovingAnchorId, setKeyboardMovingAnchorId] = useState<
+    string | null
+  >(null);
 
   const openToolbar = useCallback(
     (target: ToolbarTarget, options?: {trapFocus?: boolean}) => {
@@ -412,6 +419,7 @@ export default function ReactFlowCanvas({
       redo: handleRedo,
       pushSnapshot,
       lastFocusedEntry,
+      onLineAnchorKeyboardMove: setKeyboardMovingAnchorId,
     });
 
   const {handleEdgeMouseDown, isLineDragging} = useLineEdgeDrag({
@@ -422,7 +430,19 @@ export default function ReactFlowCanvas({
     flowToScreenPosition,
     pushSnapshot,
   });
-  const isAnchorDragging = isDirectAnchorDragging || isLineDragging;
+  const isAnchorDragging =
+    isDirectAnchorDragging || isLineDragging || keyboardMovingAnchorId !== null;
+
+  // Clear the keyboard-move flag once focus leaves the anchor being moved.
+  useEffect(() => {
+    if (!keyboardMovingAnchorId) return;
+    const stillFocused =
+      lastFocusedEntry?.type === 'node' &&
+      lastFocusedEntry.id === keyboardMovingAnchorId;
+    if (!stillFocused) {
+      setKeyboardMovingAnchorId(null);
+    }
+  }, [lastFocusedEntry, keyboardMovingAnchorId]);
 
   // Close the toolbar when focus moves off the owning node/edge: to a
   // different node/edge, or out of the canvas entirely. Skips clearing

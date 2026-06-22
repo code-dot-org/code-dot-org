@@ -129,6 +129,9 @@ interface UseKeyboardNavigationOptions {
   // (which renders outside .react-flow__node), so getEntryFromDOM returns
   // null. lastFocusedEntry gives us the last known node/edge target.
   lastFocusedEntry: TabOrderEntry | null;
+  // Called with the anchor id the first time it is translated by an arrow key,
+  // so the canvas can keep connection handles visible during a keyboard move.
+  onLineAnchorKeyboardMove: (anchorId: string) => void;
 }
 
 /**
@@ -174,6 +177,7 @@ export function useKeyboardNavigation({
   redo,
   pushSnapshot,
   lastFocusedEntry,
+  onLineAnchorKeyboardMove,
 }: UseKeyboardNavigationOptions) {
   const {
     getEdge,
@@ -432,12 +436,21 @@ export function useKeyboardNavigation({
       if (snapAnchorIfNearHandle(focusedNodeId, deltaX, deltaY)) {
         return true;
       }
+      if (focusedNode?.type === 'lineAnchor') {
+        onLineAnchorKeyboardMove(focusedNodeId);
+      }
       setNodes(currentNodes =>
         moveNodesByDelta(currentNodes, [focusedNodeId], deltaX, deltaY)
       );
       return true;
     },
-    [getNode, pushSnapshot, setNodes, snapAnchorIfNearHandle]
+    [
+      getNode,
+      pushSnapshot,
+      setNodes,
+      snapAnchorIfNearHandle,
+      onLineAnchorKeyboardMove,
+    ]
   );
 
   // On each end ('side') of the edge, figure out the post-move handle position
