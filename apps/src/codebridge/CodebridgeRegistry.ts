@@ -1,5 +1,6 @@
 import ConsoleManager from '@codebridge/Console/ConsoleManager';
 
+import KMeans from '@cdo/apps/miniApps/kmeans/KMeans';
 import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 
 // Registry for Codebridge singletons that need to be accessed by
@@ -8,12 +9,14 @@ export default class CodebridgeRegistry {
   private consoleManager: ConsoleManager | null;
   private neighborhood: Neighborhood | null;
   private neighborhoodThumbnailScale: number | undefined;
+  private kmeans: KMeans | null;
 
   private static _instance: CodebridgeRegistry;
   constructor() {
     this.consoleManager = null;
     this.neighborhood = null;
     this.neighborhoodThumbnailScale = undefined;
+    this.kmeans = null;
   }
 
   public static getInstance(): CodebridgeRegistry {
@@ -49,5 +52,13 @@ export default class CodebridgeRegistry {
 
   public getNeighborhoodThumbnailScale() {
     return this.neighborhoodThumbnailScale;
+  }
+
+  public setKMeans(kmeans: KMeans | null) {
+    this.kmeans = kmeans;
+  }
+
+  public getKMeans() {
+    return this.kmeans;
   }
 }

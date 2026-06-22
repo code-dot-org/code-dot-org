@@ -66,6 +66,9 @@ export async function handleRunClick(
     if (isNeighborhoodLevel()) {
       setProjectThumbnail();
     }
+    if (isKMeansLevel()) {
+      CodebridgeRegistry.getInstance().getKMeans()?.onClose();
+    }
   }
 }
 
@@ -79,6 +82,10 @@ export async function runPythonCode(
     if (isNeighborhoodRun) {
       CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
       CodebridgeRegistry.getInstance().getNeighborhood()?.onRun();
+    }
+    if (isKMeansLevel()) {
+      CodebridgeRegistry.getInstance().getKMeans()?.reset();
+      CodebridgeRegistry.getInstance().getKMeans()?.onRun();
     }
     // We only send all output to the neighborhood if this is a neighborhood level and
     // we are not running validation, as validation does not render to the neighborhood.
@@ -100,6 +107,9 @@ export async function runPythonCode(
 export function stopPythonCode() {
   if (isNeighborhoodLevel()) {
     CodebridgeRegistry.getInstance().getNeighborhood()?.onStop();
+  }
+  if (isKMeansLevel()) {
+    CodebridgeRegistry.getInstance().getKMeans()?.onStop();
   }
   // This will terminate the worker and create a new one if there is a running program.
   restartPyodideIfProgramIsRunning();
@@ -162,6 +172,13 @@ function isNeighborhoodLevel() {
   );
 }
 
+function isKMeansLevel() {
+  return (
+    getStore().getState().lab2Project.projectSources?.labConfig?.miniApp
+      ?.name === MiniApps.KMeans
+  );
+}
+
 function handleRunEndedUnexpectedly(
   consoleManager: ConsoleManager | null,
   message: string
@@ -174,6 +191,10 @@ function handleRunEndedUnexpectedly(
     CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
     CodebridgeRegistry.getInstance().getNeighborhood()?.onRun();
     CodebridgeRegistry.getInstance().getNeighborhood()?.onClose();
+  } else if (isKMeansLevel()) {
+    CodebridgeRegistry.getInstance().getKMeans()?.reset();
+    CodebridgeRegistry.getInstance().getKMeans()?.onRun();
+    CodebridgeRegistry.getInstance().getKMeans()?.onClose();
   } else {
     consoleManager?.writeConsoleMessage('');
   }

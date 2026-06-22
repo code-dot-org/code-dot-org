@@ -22,6 +22,7 @@ import {createUuid} from '@cdo/apps/utils';
 
 import {AWAITING_INPUT, SENDING_INPUT} from './pythonHelpers/constants';
 import {
+  parseMessageToKMeansSignal,
   parseMessageToNeighborhoodSignal,
   parseErrorMessage,
 } from './pythonHelpers/messageHelpers';
@@ -129,6 +130,14 @@ const setUpPyodideWorker = () => {
             // Parse message string to NeighborhoodSignal.
             const data = parseMessageToNeighborhoodSignal(message);
             neighborhood.handleSignal(data);
+          }
+          break;
+        }
+        if (message.startsWith(MessageTag.KMEANS_SIGNAL)) {
+          const kmeans = CodebridgeRegistry.getInstance().getKMeans();
+          if (kmeans) {
+            const data = parseMessageToKMeansSignal(message);
+            kmeans.handleSignal(data);
           }
           break;
         }

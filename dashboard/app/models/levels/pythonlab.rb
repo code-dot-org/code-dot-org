@@ -56,7 +56,7 @@ class Pythonlab < Level
   end
 
   def self.mini_apps
-    [['None', nil], ['Neighborhood', 'neighborhood']]
+    [['None', nil], ['Neighborhood', 'neighborhood'], ['K-Means', 'kmeans']]
   end
 
   def uses_lab2?
