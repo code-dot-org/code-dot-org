@@ -1,6 +1,7 @@
 @chrome
 @no_mobile
 @single_session
+@playwright
 Feature: Global Edition - Farsi MVP - Personal Project Gallery
 
   Background:

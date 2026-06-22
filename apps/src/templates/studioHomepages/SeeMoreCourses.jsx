@@ -1,10 +1,9 @@
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
 
-import color from '../../util/color';
 import ContentContainer from '../ContentContainer';
 
 import CourseCard from './CourseCard';
@@ -52,14 +51,17 @@ export default class SeeMoreCourses extends Component {
         )}
         {!this.state.open && (
           <div style={styles.viewMoreContainer}>
-            <Button
+            <MuiButton
               onClick={this.showMoreCourses.bind(this)}
-              color={Button.ButtonColor.neutralDark}
-              icon="caret-down"
-              text={i18n.viewMore()}
+              variant="outlined"
+              color="tertiary"
+              size="small"
+              startIcon={<i className="fa fa-caret-down" />}
               style={styles.button}
               className="ui-test-view-more-courses"
-            />
+            >
+              {i18n.viewMore()}
+            </MuiButton>
           </div>
         )}
       </div>
@@ -75,7 +77,7 @@ const styles = {
   spacer: {
     width: 20,
     float: 'left',
-    color: color.white,
+    color: 'transparent',
   },
   button: {
     float: 'right',

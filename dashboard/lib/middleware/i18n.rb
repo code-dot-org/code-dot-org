@@ -18,42 +18,33 @@ module Middleware
     end
 
     class RequestLocalizer
-      attr_reader :app, :env, :request, :response
+      attr_reader :app, :env, :request
 
       def initialize(app, env)
         @app = app
         @env = env
 
-        @request  = Rack::Request.new(@env)
-        @response = Rack::Response.new
+        @request = Rack::Request.new(@env)
       end
 
       def call
         if param_locale
+          response = Rack::Response.new
+          response.set_cdo_cookie(LOCALE_COOKIE_KEY, param_locale)
+
           redirect_uri = URI(request.path)
           redirect_uri.query = request.GET.except(LOCALE_PARAM_KEY).to_query.presence
-
           response.redirect redirect_uri.to_s
           response.do_not_cache!
-
-          set_cookies(param_locale)
 
           response.finish
         else
           ::I18n.with_locale(locale = cookie_locale || http_locale) do
-            response.status, headers, response.body = app.call(env)
-            response.headers.merge!(headers)
-
-            set_cookies(locale) unless cookie_locale == locale
-
+            response = Rack::Response[*app.call(env)]
+            response.set_cdo_cookie(LOCALE_COOKIE_KEY, locale) unless cookie_locale == locale
             response.finish
           end
         end
-      end
-
-      private def set_cookies(locale)
-        request.cookies[LOCALE_COOKIE_KEY] = locale
-        response.set_cdo_cookie(LOCALE_COOKIE_KEY, locale)
       end
 
       private def resolve_locale(locale)

@@ -27,6 +27,25 @@
 #  storage_apps_storage_id_state_index  (storage_id,state)
 #
 class Project < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :restricted,
+    storage_id: :restricted,
+    value: :restricted,
+    updated_at: :restricted,
+    updated_ip: :restricted,
+    state: :restricted,
+    created_at: :restricted,
+    abuse_score: :restricted,
+    project_type: :restricted,
+    published_at: :restricted,
+    standalone: :restricted,
+    remix_parent_id: :restricted,
+    skip_content_moderation: :restricted,
+    uuid: :restricted,
+  )
+
   # NOTE: skip_content_moderation is currently not used in the codebase.
   belongs_to :project_storage, foreign_key: 'storage_id', optional: true
   # Note: owner is nil for projects that are owned by users without an account

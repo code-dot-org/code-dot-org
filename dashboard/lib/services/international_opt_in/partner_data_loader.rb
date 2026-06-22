@@ -12,7 +12,7 @@ module Services
 
       def self.partner_entries
         partners.transform_values do |list|
-          list + [::I18n.t('pd.international_opt_in.organizer_not_listed')]
+          list + [Cdo::Brand.legal_name] + [::I18n.t('pd.international_opt_in.organizer_not_listed')]
         end
       end
 

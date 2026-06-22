@@ -1,12 +1,33 @@
 import {Tour} from 'shepherd.js';
 
 import {
-  createReviewSyllabusHomepageSteps,
-  createReviewSyllabusUnitOverviewSteps,
   REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
   UNIT_BREADCRUMB_STEP_ID,
+  createReviewSyllabusHomepageSteps,
+  createReviewSyllabusUnitOverviewSteps,
+  ReviewSyllabusQuizConfig,
 } from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/reviewSyllabusOnboarding';
 import {trySetSessionStorage} from '@cdo/apps/utils';
+
+const HIGH_QUIZ_CONFIG: ReviewSyllabusQuizConfig = {
+  lesson: 1,
+  options: [
+    {label: 'Level 1', correct: false},
+    {label: 'Level 2', correct: false},
+    {label: 'Level 3', correct: false},
+    {label: 'Level 4', correct: true},
+  ],
+};
+
+const MIDDLE_QUIZ_CONFIG: ReviewSyllabusQuizConfig = {
+  lesson: 3,
+  options: [
+    {label: 'Level 4', correct: true},
+    {label: 'Level 5', correct: false},
+    {label: 'Level 8', correct: false},
+    {label: 'Level 11', correct: false},
+  ],
+};
 
 jest.mock('@cdo/apps/utils', () => ({
   ...jest.requireActual('@cdo/apps/utils'),
@@ -96,25 +117,41 @@ describe('createReviewSyllabusHomepageSteps', () => {
 describe('createReviewSyllabusUnitOverviewSteps', () => {
   it('returns steps for demoType "high"', () => {
     const tour = makeMockTour();
-    const steps = createReviewSyllabusUnitOverviewSteps(tour, 'high');
+    const steps = createReviewSyllabusUnitOverviewSteps(
+      tour,
+      'high',
+      HIGH_QUIZ_CONFIG
+    );
     expect(steps.length).toBeGreaterThan(0);
   });
 
   it('returns steps for demoType "middle"', () => {
     const tour = makeMockTour();
-    const steps = createReviewSyllabusUnitOverviewSteps(tour, 'middle');
+    const steps = createReviewSyllabusUnitOverviewSteps(
+      tour,
+      'middle',
+      MIDDLE_QUIZ_CONFIG
+    );
     expect(steps.length).toBeGreaterThan(0);
   });
 
   it('returns steps for demoType "elementary"', () => {
     const tour = makeMockTour();
-    const steps = createReviewSyllabusUnitOverviewSteps(tour, 'elementary');
+    const steps = createReviewSyllabusUnitOverviewSteps(
+      tour,
+      'elementary',
+      null
+    );
     expect(steps.length).toBeGreaterThan(0);
   });
 
   it('high school unit overview includes breadcrumb, quiz, lesson-resources, and completion', () => {
     const tour = makeMockTour();
-    const steps = createReviewSyllabusUnitOverviewSteps(tour, 'high');
+    const steps = createReviewSyllabusUnitOverviewSteps(
+      tour,
+      'high',
+      HIGH_QUIZ_CONFIG
+    );
     const ids = steps.map(s => s.id);
     expect(ids).toContain(UNIT_BREADCRUMB_STEP_ID);
     expect(ids).toContain('quiz-level-priority');
@@ -123,16 +160,24 @@ describe('createReviewSyllabusUnitOverviewSteps', () => {
 
   it('middle school unit overview includes breadcrumb, quiz, lesson-resources, and completion', () => {
     const tour = makeMockTour();
-    const steps = createReviewSyllabusUnitOverviewSteps(tour, 'middle');
+    const steps = createReviewSyllabusUnitOverviewSteps(
+      tour,
+      'middle',
+      MIDDLE_QUIZ_CONFIG
+    );
     const ids = steps.map(s => s.id);
     expect(ids).toContain(UNIT_BREADCRUMB_STEP_ID);
     expect(ids).toContain('quiz-level-priority');
     expect(ids).toContain('lesson-resources-intro');
   });
 
-  it('elementary unit overview skips breadcrumb and quiz', () => {
+  it('elementary unit overview skips breadcrumb; omits quiz when no config is provided', () => {
     const tour = makeMockTour();
-    const steps = createReviewSyllabusUnitOverviewSteps(tour, 'elementary');
+    const steps = createReviewSyllabusUnitOverviewSteps(
+      tour,
+      'elementary',
+      null
+    );
     const ids = steps.map(s => s.id);
     expect(ids).not.toContain(UNIT_BREADCRUMB_STEP_ID);
     expect(ids).not.toContain('quiz-level-priority');
@@ -141,29 +186,43 @@ describe('createReviewSyllabusUnitOverviewSteps', () => {
 
   it('elementary unit overview always includes teacher-resources-dropdown', () => {
     const tour = makeMockTour();
-    const ids = createReviewSyllabusUnitOverviewSteps(tour, 'elementary').map(
-      s => s.id
-    );
+    const ids = createReviewSyllabusUnitOverviewSteps(
+      tour,
+      'elementary',
+      null
+    ).map(s => s.id);
     expect(ids).toContain('teacher-resources-dropdown');
   });
 
   it('high school quiz attaches to #progress-lesson-1', () => {
     const tour = makeMockTour();
-    const steps = createReviewSyllabusUnitOverviewSteps(tour, 'high');
+    const steps = createReviewSyllabusUnitOverviewSteps(
+      tour,
+      'high',
+      HIGH_QUIZ_CONFIG
+    );
     const quizStep = steps.find(s => s.id === 'quiz-level-priority')!;
     expect(quizStep.attachTo).toMatchObject({element: '#progress-lesson-1'});
   });
 
   it('middle school quiz attaches to #progress-lesson-3', () => {
     const tour = makeMockTour();
-    const steps = createReviewSyllabusUnitOverviewSteps(tour, 'middle');
+    const steps = createReviewSyllabusUnitOverviewSteps(
+      tour,
+      'middle',
+      MIDDLE_QUIZ_CONFIG
+    );
     const quizStep = steps.find(s => s.id === 'quiz-level-priority')!;
     expect(quizStep.attachTo).toMatchObject({element: '#progress-lesson-3'});
   });
 
   it('middle school quiz content includes correct answer Level 4 and options 5, 8, 11', () => {
     const tour = makeMockTour();
-    const steps = createReviewSyllabusUnitOverviewSteps(tour, 'middle');
+    const steps = createReviewSyllabusUnitOverviewSteps(
+      tour,
+      'middle',
+      MIDDLE_QUIZ_CONFIG
+    );
     const quizStep = steps.find(s => s.id === 'quiz-level-priority')!;
     const text = quizStep.text as string;
     expect(text).toContain('data-answer="correct"');
@@ -175,7 +234,11 @@ describe('createReviewSyllabusUnitOverviewSteps', () => {
 
   it('high school quiz content does not include Level 5, 8, or 11', () => {
     const tour = makeMockTour();
-    const steps = createReviewSyllabusUnitOverviewSteps(tour, 'high');
+    const steps = createReviewSyllabusUnitOverviewSteps(
+      tour,
+      'high',
+      HIGH_QUIZ_CONFIG
+    );
     const quizStep = steps.find(s => s.id === 'quiz-level-priority')!;
     const text = quizStep.text as string;
     expect(text).not.toContain('Level 5');
@@ -313,7 +376,11 @@ describe('quiz-level-priority when handler', () => {
 
   const getQuizStep = () => {
     const tour = makeMockTour();
-    const steps = createReviewSyllabusUnitOverviewSteps(tour, 'high');
+    const steps = createReviewSyllabusUnitOverviewSteps(
+      tour,
+      'high',
+      HIGH_QUIZ_CONFIG
+    );
     const step = steps.find(s => s.id === 'quiz-level-priority')!;
     (step.when as {show: () => void}).show();
     return {tour, step};
@@ -406,7 +473,11 @@ describe('middle school quiz-level-priority when handler', () => {
 
   const getMiddleQuizStep = () => {
     const tour = makeMockTour();
-    const steps = createReviewSyllabusUnitOverviewSteps(tour, 'middle');
+    const steps = createReviewSyllabusUnitOverviewSteps(
+      tour,
+      'middle',
+      MIDDLE_QUIZ_CONFIG
+    );
     const step = steps.find(s => s.id === 'quiz-level-priority')!;
     (step.when as {show: () => void}).show();
     return {tour, step};

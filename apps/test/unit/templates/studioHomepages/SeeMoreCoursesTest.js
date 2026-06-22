@@ -1,29 +1,26 @@
+import {Button as MuiButton} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import ContentContainer from '@cdo/apps/templates/ContentContainer';
 import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
 import SeeMoreCourses from '@cdo/apps/templates/studioHomepages/SeeMoreCourses';
-import color from '@cdo/apps/util/color';
 
 import {courses} from './homepagesTestData';
 
 describe('SeeMoreCourses', () => {
   it('shows a button when closed', () => {
     const wrapper = shallow(<SeeMoreCourses courses={courses} />);
-    expect(
-      wrapper.containsMatchingElement(
-        <Button icon="caret-down" text="View more" />
-      )
-    ).toBeTruthy();
+    const button = wrapper.find(MuiButton);
+    expect(button.exists()).toBe(true);
+    expect(button.prop('children')).toBe('View more');
   });
 
   it('shows CourseCards when clicked', () => {
     const wrapper = shallow(<SeeMoreCourses courses={courses} />);
-    expect(wrapper.find('Button').exists());
-    wrapper.find('Button').simulate('click');
-    expect(wrapper.find('Button').exists()).toBe(false);
+    expect(wrapper.find(MuiButton).exists()).toBe(true);
+    wrapper.find(MuiButton).simulate('click');
+    expect(wrapper.find(MuiButton).exists()).toBe(false);
     expect(
       wrapper.containsMatchingElement(
         <div>
@@ -38,7 +35,7 @@ describe('SeeMoreCourses', () => {
                 style={{
                   width: 20,
                   float: 'left',
-                  color: color.white,
+                  color: 'transparent',
                 }}
               >
                 .
@@ -61,9 +58,9 @@ describe('SeeMoreCourses', () => {
     const wrapper = shallow(
       <SeeMoreCourses courses={courses} isProfessionalLearningCourse={true} />
     );
-    expect(wrapper.find('Button').exists());
-    wrapper.find('Button').simulate('click');
-    expect(wrapper.find('Button').exists()).toBe(false);
+    expect(wrapper.find(MuiButton).exists()).toBe(true);
+    wrapper.find(MuiButton).simulate('click');
+    expect(wrapper.find(MuiButton).exists()).toBe(false);
     expect(
       wrapper.containsMatchingElement(
         <div>
@@ -79,7 +76,7 @@ describe('SeeMoreCourses', () => {
                 style={{
                   width: 20,
                   float: 'left',
-                  color: color.white,
+                  color: 'transparent',
                 }}
               >
                 .

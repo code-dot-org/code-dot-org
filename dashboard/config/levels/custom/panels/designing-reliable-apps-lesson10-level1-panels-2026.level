@@ -1,0 +1,50 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-06-16T18:11:46.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "Data Engineers build the pipelines that move data from where it lives to where it's needed. When you open an app and data appears instantly — that's a Data Engineer's work.",
+        "imageUrl": "https://images.code.org/40691ef65cceda83746cd1c6993255d0-Screenshot 2026-06-16 112415.png",
+        "key": "iterating-with-ai-lesson6-panel-2026-2027-822774fd-a519-4d5b-a55e-fbab9abe770d",
+        "layout": "text-top-left",
+        "fadeInOverPrevious": true,
+        "typing": true
+      },
+      {
+        "text": "Every Data Engineer asks four questions about data: How fast does it need to load? What happens if the source fails? How current does it need to be? Who owns and controls it?",
+        "imageUrl": "https://images.code.org/be42575e9f3b1127e26a0e189c5268c6-Screenshot 2026-06-16 113056.png",
+        "key": "iterating-with-ai-lesson6-panel-2026-2027-45888006-1014-4819-babd-f5ba85858084",
+        "layout": "text-bottom-left",
+        "fadeInOverPrevious": true,
+        "typing": true
+      },
+      {
+        "text": "If a Data Engineer only relies on live data and the server goes down, users see a blank screen. Part of the job is designing systems that keep working — even when something fails.",
+        "imageUrl": "https://images.code.org/01ab683220e219ce6f31ec18f8ae8a3f-Screenshot 2026-06-16 115400.png",
+        "key": "iterating-with-ai-lesson6-panel-2026-2027-5e067202-953c-4731-b6f5-50a97057a2c7",
+        "layout": "text-bottom-right",
+        "typing": true,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "Data Engineers use AI tools to help build pipelines, check data structure, and write fallback logic faster. AI doesn't replace the engineer — it helps them move faster and catch problems earlier.",
+        "imageUrl": "https://images.code.org/c79768678c3eb09985ec1c8cad6f4b20-Screenshot 2026-06-16 113624.png",
+        "key": "iterating-with-ai-lesson6-panel-2026-2027-773b72b9-04f2-4a6b-8519-1abf5576df97",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-right"
+      }
+    ],
+    "use_links": "false",
+    "display_name": "coursedocs@code.org"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-16T18:11:46.255+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson6-panel-2026-2027\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson6-panel-2026-2027\"},{\"changed_at\":\"2026-06-16 18:13:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-16 18:24:53 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-16 18:31:35 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-16 18:36:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-16 18:54:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

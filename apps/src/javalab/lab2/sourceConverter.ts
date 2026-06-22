@@ -17,12 +17,19 @@ import {
   ProjectFileType,
 } from '@cdo/apps/lab2/types';
 
+import {isStarterAssetUrl} from './starterAssets';
 import {JavalabFlatFile, JavalabFlatSource} from './types';
 
-function projectFileType(flat: JavalabFlatFile): ProjectFileType {
+function projectFileType(flat: JavalabFlatFile): ProjectFileType | undefined {
   if (flat.isValidation) return ProjectFileType.VALIDATION;
   if (!flat.isVisible) return ProjectFileType.SUPPORT;
-  return ProjectFileType.STARTER;
+  // The flat shape doesn't persist types. A student's own uploads (url not
+  // under level_starter_assets) stay untyped; everything else is a starter,
+  // locked or not.
+  if (flat.url && !isStarterAssetUrl(flat.url)) {
+    return undefined;
+  }
+  return flat.locked ? ProjectFileType.LOCKED_STARTER : ProjectFileType.STARTER;
 }
 
 export function flatToMultiFile(
@@ -50,6 +57,7 @@ export function flatToMultiFile(
       folderId: DEFAULT_FOLDER_ID,
       type: projectFileType(props),
     };
+    if (props.url) files[id].url = props.url;
   });
 
   // Visible files (including validation files surfaced in start mode) are
@@ -132,6 +140,10 @@ export function multiFileToFlat(
       isOpen,
       isActive: file.active === true,
     };
+    if (file.url) flat[file.name].url = file.url;
+    if (file.type === ProjectFileType.LOCKED_STARTER) {
+      flat[file.name].locked = true;
+    }
     if (openIndex.has(file.id)) {
       flat[file.name].tabOrder = openIndex.get(file.id);
     }
