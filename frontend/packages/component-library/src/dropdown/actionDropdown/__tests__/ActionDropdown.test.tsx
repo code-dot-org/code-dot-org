@@ -87,6 +87,30 @@ describe('Design System - Action Dropdown Component', () => {
     expect(allOptions[1].onClick).toHaveBeenCalledTimes(1);
   });
 
+  it('closes the menu after an option is selected', async () => {
+    const user = userEvent.setup();
+    render(
+      <ActionDropdown
+        name="test-close-dropdown"
+        options={allOptions}
+        labelText="Closing dropdown"
+        triggerButtonProps={triggerButtonProps}
+      />,
+    );
+
+    const container = document.getElementById('test-close-dropdown-dropdown');
+    expect(container).not.toBeNull();
+
+    const triggerButton = screen.getByRole('button', {
+      name: 'Closing dropdown',
+    });
+    await user.click(triggerButton);
+    expect(container).toHaveClass('open');
+
+    await user.click(screen.getByText('option1'));
+    expect(container).not.toHaveClass('open');
+  });
+
   it("doesn't call onClick when dropdown is disabled", async () => {
     // MUI disabled IconButton sets pointer-events: none, so we need to
     // bypass the pointer-events check to test click behavior.
