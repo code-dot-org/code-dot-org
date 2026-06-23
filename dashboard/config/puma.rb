@@ -34,8 +34,8 @@ before_fork do
   Cdo::AppServerHooks.before_fork
 end
 
-before_worker_boot do |_index|
-  Cdo::AppServerHooks.before_worker_boot(host: CDO.dashboard_hostname)
+before_worker_boot do |index|
+  Cdo::AppServerHooks.before_worker_boot(host: CDO.dashboard_hostname, worker_index: index)
   ActiveRecord::Base.establish_connection
 end
 
