@@ -13396,7 +13396,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"create-react-class@npm:^15.5.1, create-react-class@npm:^15.5.x, create-react-class@npm:^15.6.0":
+"create-react-class@npm:^15.5.1, create-react-class@npm:^15.5.x":
   version: 15.6.3
   resolution: "create-react-class@npm:15.6.3"
   dependencies:
