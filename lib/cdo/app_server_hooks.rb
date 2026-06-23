@@ -36,6 +36,7 @@ module Cdo
       require 'cdo/statsig'
       Cdo::StatsigInitializer.init
 
+      # Publish per-worker memory metrics in production, the managed test server, and adhoc environments.
       if (CDO.rack_env?(:production) || CDO.test_system? || CDO.rack_env?(:adhoc)) &&
           DCDO.get('publish_worker_memory_metrics', false) &&
           worker_index
@@ -54,6 +55,7 @@ module Cdo
     end
 
     def self.after_booted
+      # Publish puma metrics in production, the managed test server, and adhoc environments.
       return unless CDO.rack_env?(:production) || CDO.test_system? || CDO.rack_env?(:adhoc)
 
       require 'cdo/puma_stats_collector'
