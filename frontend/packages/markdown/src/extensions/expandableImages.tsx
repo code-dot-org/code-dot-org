@@ -48,13 +48,25 @@ interface SpanProps {
   dataUrl?: string;
 }
 
+// A raster image data URI: `data:image/<type>` immediately closed by `;` or `,`
+// (so `data:image/svg+xml` does not match — SVG is excluded on purpose). The
+// declared MIME governs how the browser decodes a data: URI, so gating on it is
+// what makes this safe regardless of the payload bytes.
+const RASTER_IMAGE_DATA_URL =
+  /^data:image\/(?:png|jpe?g|gif|webp|avif|bmp|x-icon)[;,]/i;
+
 /*
  * `data-url` is a custom attribute, so rehype-sanitize's protocol allowlist —
  * which only inspects known URL attributes like href/src — never vets it. Guard
  * here before the value reaches the <img src> and, more importantly, the
  * onExpand callback (which a consumer may hand to window.open / location): an
- * unsafe scheme there is an XSS / open-redirect sink. Permit only http(s) and
- * scheme-relative references (paths, queries, fragments, `//host` URLs).
+ * unsafe scheme there is an XSS / open-redirect sink.
+ *
+ * Permit http(s), scheme-relative references (paths, queries, fragments,
+ * `//host` URLs), and raster `data:image/*` URIs. SVG and non-image data URIs
+ * are rejected: an `<img>`-rendered SVG is inert, but the same URL passed to
+ * onExpand and *navigated to* could run an embedded script, and `data:text/html`
+ * is script-capable outright.
  */
 const isSafeImageUrl = (url: string): boolean => {
   // Strip ASCII control characters and whitespace first, the way a browser
@@ -62,7 +74,10 @@ const isSafeImageUrl = (url: string): boolean => {
   // eslint-disable-next-line no-control-regex
   const stripped = url.replace(/[\u0000-\u0020]+/g, '');
   const scheme = /^([a-z][a-z0-9+.-]*):/i.exec(stripped);
-  return !scheme || /^https?$/i.test(scheme[1]);
+  if (!scheme) {
+    return true; // a relative reference, no scheme to vet
+  }
+  return /^https?$/i.test(scheme[1]) || RASTER_IMAGE_DATA_URL.test(stripped);
 };
 
 // Expandable spans carry their alt text as their (text) children.

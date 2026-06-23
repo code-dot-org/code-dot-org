@@ -15,12 +15,15 @@ export interface Scenario {
 }
 
 // Inline data-URI image so the expandable-image scenario is network-free and
-// deterministic for screenshots. Spaces are percent-encoded — a raw space in a
-// markdown image destination ends the URL, so the image would fail to parse.
+// deterministic. A base64 PNG (a solid #4a90d9 96x64 box) rather than an SVG
+// data URI: expandableImages permits only raster data: images, since an
+// `<img>`-rendered SVG is safe but the same URL handed to a consumer's onExpand
+// (which may navigate to it) could run an embedded script.
 const IMAGE =
-  "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20" +
-  "width='96'%20height='64'%3E%3Crect%20width='96'%20height='64'%20" +
-  "fill='%234a90d9'/%3E%3C/svg%3E";
+  'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABACAIAAABqVuVZAAAA' +
+  'aUlEQVR42u3QMQ0AAAgDsOlDHfZwgwNujiZV0FQPhygQJEiQIEGCBAlCkCBBggQJEiQIQY' +
+  'IECRIkSJAgBAkSJEiQIEGCBCFIkCBBggQJEoQgQYIECRIkSBCCBAkSJEiQIEGCECRIkKB/' +
+  'FjbeylkuOHQHAAAAAElFTkSuQmCC';
 
 const VOCAB: Record<string, {definition: string}> = {
   'lossy compression': {definition: 'Reducing file size by discarding data.'},

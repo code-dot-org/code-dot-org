@@ -347,13 +347,16 @@ describe('Markdown', () => {
      * `data-url` is a custom attribute the sanitizer's protocol allowlist never
      * vetted, so a dangerous-scheme url could otherwise reach the <img src> and,
      * worse, the onExpand callback a consumer may navigate to. The component
-     * must reject anything but http(s) / relative references.
+     * permits only http(s), relative references, and raster data:image URIs —
+     * scriptable SVG data URIs and everything else are rejected.
      */
     describe('rejects unsafe data-url schemes', () => {
       it.each([
         '<span data-url="javascript:alert(1)">x</span>',
         '<span data-url="data:text/html,<script>alert(1)</script>">x</span>',
         '<span data-url="vbscript:msgbox(1)">x</span>',
+        // an SVG data URI is inert in <img> but scriptable if navigated to
+        '<span data-url="data:image/svg+xml,<svg onload=alert(1)></svg>">x</span>',
         // an obscured scheme: control characters a browser would strip
         '<span data-url="java\tscript:alert(1)">x</span>',
       ])('drops %s to plain text with no image or handler', markdown => {
@@ -388,6 +391,9 @@ describe('Markdown', () => {
       '<span data-url="cat.png">cat</span>',
       '<span data-url="//cdn.example/cat.png">cat</span>',
       '<span data-url="HTTPS://img/cat.png">cat</span>',
+      // raster data: image URIs are allowed (the demo uses one)
+      '<span data-url="data:image/png;base64,iVBORw0KGgo=">cat</span>',
+      '<span data-url="data:image/gif;base64,R0lGODdh">cat</span>',
     ])('keeps the safe url %s', markdown => {
       renderDom(
         <Markdown content={markdown} extensions={[expandableImages()]} />,
