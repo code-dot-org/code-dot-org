@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
@@ -7,12 +8,13 @@ import LessonStandards, {
   ExpandMode,
 } from '@cdo/apps/templates/lessonOverview/LessonStandards';
 import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import StyledCodeBlock from '../lessonOverview/StyledCodeBlock';
 
 import {lessonShape} from './rollupShapes';
+
+import style from './courseRollup.module.scss';
 
 export default class RollupLessonEntrySection extends Component {
   static propTypes = {
@@ -27,18 +29,22 @@ export default class RollupLessonEntrySection extends Component {
       this.props.lesson.resources['All'];
 
     return (
-      <div style={styles.main}>
+      <div className={style.section}>
         {(this.props.objectToRollUp === 'Resources' ||
           this.props.objectToRollUp === 'Prep') && (
-          <div style={styles.object}>
-            <h4>
+          <div className={style.sectionObject}>
+            <Typography
+              variant="inherit"
+              component="h4"
+              className={style.sectionHeading}
+            >
               {this.props.objectToRollUp === 'Resources'
                 ? i18n.resources()
                 : i18n.preparation()}
-            </h4>
+            </Typography>
           </div>
         )}
-        <div style={styles.entries}>
+        <div className={style.sectionEntries}>
           {this.props.objectToRollUp === 'Vocabulary' &&
             this.props.lesson.vocabularies.length > 0 &&
             this.props.lesson.vocabularies.map(vocab => (
@@ -50,7 +56,13 @@ export default class RollupLessonEntrySection extends Component {
             ))}
           {this.props.objectToRollUp === 'Vocabulary' &&
             this.props.lesson.vocabularies.length <= 0 && (
-              <p>{i18n.rollupNoVocab()}</p>
+              <Typography
+                variant="inherit"
+                component="p"
+                className={style.emptyMessage}
+              >
+                {i18n.rollupNoVocab()}
+              </Typography>
             )}
           {this.props.objectToRollUp === 'Code' &&
             this.props.lesson.programmingExpressions.length > 0 && (
@@ -64,13 +76,25 @@ export default class RollupLessonEntrySection extends Component {
             )}
           {this.props.objectToRollUp === 'Code' &&
             this.props.lesson.programmingExpressions.length <= 0 && (
-              <p>{i18n.rollupNoCode()}</p>
+              <Typography
+                variant="inherit"
+                component="p"
+                className={style.emptyMessage}
+              >
+                {i18n.rollupNoCode()}
+              </Typography>
             )}
           {this.props.objectToRollUp === 'Resources' && lessonHasResources && (
             <div>
               {this.props.lesson.resources['Teacher'] && (
                 <div>
-                  <h5>{i18n.forTheTeachers()}</h5>
+                  <Typography
+                    variant="inherit"
+                    component="h5"
+                    className={style.resourceHeading}
+                  >
+                    {i18n.forTheTeachers()}
+                  </Typography>
                   <ResourceList
                     resources={this.props.lesson.resources['Teacher']}
                     pageType="resources-rollup"
@@ -79,7 +103,13 @@ export default class RollupLessonEntrySection extends Component {
               )}
               {this.props.lesson.resources['Student'] && (
                 <div>
-                  <h5>{i18n.forTheStudents()}</h5>
+                  <Typography
+                    variant="inherit"
+                    component="h5"
+                    className={style.resourceHeading}
+                  >
+                    {i18n.forTheStudents()}
+                  </Typography>
                   <ResourceList
                     resources={this.props.lesson.resources['Student']}
                     pageType="resources-rollup"
@@ -88,7 +118,13 @@ export default class RollupLessonEntrySection extends Component {
               )}
               {this.props.lesson.resources['All'] && (
                 <div>
-                  <h5>{i18n.forAll()}</h5>
+                  <Typography
+                    variant="inherit"
+                    component="h5"
+                    className={style.resourceHeading}
+                  >
+                    {i18n.forAll()}
+                  </Typography>
                   <ResourceList
                     resources={this.props.lesson.resources['All']}
                     pageType="resources-rollup"
@@ -98,7 +134,13 @@ export default class RollupLessonEntrySection extends Component {
             </div>
           )}
           {this.props.objectToRollUp === 'Resources' && !lessonHasResources && (
-            <p>{i18n.rollupNoResources()}</p>
+            <Typography
+              variant="inherit"
+              component="p"
+              className={style.emptyMessage}
+            >
+              {i18n.rollupNoResources()}
+            </Typography>
           )}
           {this.props.objectToRollUp === 'Prep' &&
             this.props.lesson.preparation && (
@@ -108,7 +150,15 @@ export default class RollupLessonEntrySection extends Component {
               />
             )}
           {this.props.objectToRollUp === 'Prep' &&
-            !this.props.lesson.preparation && <p>{i18n.rollupNoPrep()}</p>}
+            !this.props.lesson.preparation && (
+              <Typography
+                variant="inherit"
+                component="p"
+                className={style.emptyMessage}
+              >
+                {i18n.rollupNoPrep()}
+              </Typography>
+            )}
           {this.props.objectToRollUp === 'Standards' &&
             this.props.lesson.standards.length > 0 && (
               <LessonStandards
@@ -118,30 +168,16 @@ export default class RollupLessonEntrySection extends Component {
             )}
           {this.props.objectToRollUp === 'Standards' &&
             this.props.lesson.standards.length <= 0 && (
-              <p>{i18n.rollupNoStandards()}</p>
+              <Typography
+                variant="inherit"
+                component="p"
+                className={style.emptyMessage}
+              >
+                {i18n.rollupNoStandards()}
+              </Typography>
             )}
         </div>
       </div>
     );
   }
 }
-
-const styles = {
-  main: {
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  object: {
-    backgroundColor: color.lightest_gray,
-    color: color.charcoal,
-    border: 'solid 1px' + color.charcoal,
-    padding: '0px 10px',
-  },
-  entries: {
-    color: color.charcoal,
-    border: 'solid 1px' + color.charcoal,
-    padding: 10,
-    height: '100%',
-  },
-};

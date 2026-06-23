@@ -22,10 +22,6 @@ var options = locals.options;
       <i class="fa fa-clipboard fa-lg"></i>
         <%= msg.copyLinkToProject() %>
     </button>
-    <% if (options.downloadReplayVideo) { %>
-      <!-- Mount point for DownloadReplayVideoButton component. -->
-      <span id="download-replay-video-container"></span>
-    <% } %>
   </div>
   <div class='social-buttons'>
     <% if (options.facebookUrl) { -%>
@@ -61,9 +57,6 @@ var options = locals.options;
       &nbsp;
       <%= msg.sendToPhone() %>
     </button>
-    <div id="download-replay-video-error" style="font-size: 12px; display: none;">
-      <%= msg.downloadReplayVideoButtonError() %>
-    </div>
   </div>
 
 <% } %>

@@ -15,6 +15,16 @@
 #
 
 class PairedUserLevel < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    driver_user_level_id: :confidential,
+    navigator_user_level_id: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+  )
+
   belongs_to :navigator_user_level, class_name: 'UserLevel', optional: true
   belongs_to :driver_user_level, class_name: 'UserLevel', optional: true
 

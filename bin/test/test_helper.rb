@@ -10,7 +10,6 @@ SimpleCov.start do
     is_not_bin_file || is_bin_test_file
   end
 
-  add_group 'I18n', 'i18n/'
   add_group 'Animations', 'animation_assets/'
 end
 

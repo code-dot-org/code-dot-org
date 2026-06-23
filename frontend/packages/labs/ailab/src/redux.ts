@@ -820,6 +820,9 @@ export function getPredictAvailable(state: RootState): boolean {
   );
 }
 
+// Builds {prev, next} and reads the I18n global for button text, so it is not
+// memoized on Redux state. App selects it with a prev/next-aware equality fn so
+// the new object reference doesn't trigger unnecessary rerenders.
 export function getPanelButtons(state: RootState): PrevNextButtons {
   return prevNextButtons(state);
 }

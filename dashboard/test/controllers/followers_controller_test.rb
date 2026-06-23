@@ -46,6 +46,23 @@ class FollowersControllerTest < ActionController::TestCase
     assert_redirected_to controller: 'sections', action: 'show', id: @picture_section.code
   end
 
+  test "utf8mb4 section code does not raise and is treated as not found" do
+    sign_in @student
+
+    assert_nothing_raised do
+      get :student_user_new, params: {section_code: "ABC\u{1F680}"}
+    end
+
+    assert_redirected_to '/join'
+    assert_equal(
+      I18n.t(
+        'follower.error.section_not_found',
+        section_code: "ABC\u{1F680}"
+      ),
+      flash[:alert]
+    )
+  end
+
   test "student_user_new when signed out with section code shows link account view" do
     get :student_user_new, params: {section_code: @chris_section.code}
 

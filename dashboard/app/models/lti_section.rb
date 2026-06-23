@@ -17,6 +17,18 @@
 #  index_lti_sections_on_section_id     (section_id)
 #
 class LtiSection < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    lti_course_id: :confidential,
+    section_id: :confidential,
+    lms_section_id: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+    deleted_at: :confidential,
+  )
+
   acts_as_paranoid
   belongs_to :lti_course
   belongs_to :section

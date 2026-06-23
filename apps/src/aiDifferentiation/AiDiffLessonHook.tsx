@@ -53,7 +53,11 @@ const AiDiffLessonHook: React.FC<AiDiffLessonHookProps> = ({
             )}
           >
             <Typography component="div" variant="body2">
-              <SafeMarkdown unwrapped markdown={content.introduction} />
+              <SafeMarkdown
+                unwrapped
+                localized={false}
+                markdown={content.introduction}
+              />
             </Typography>
           </div>
         </div>
@@ -78,7 +82,11 @@ const AiDiffLessonHook: React.FC<AiDiffLessonHookProps> = ({
             )}
           >
             <Typography component="div" variant="body2" gutterBottom>
-              <SafeMarkdown unwrapped markdown={content.activity} />
+              <SafeMarkdown
+                unwrapped
+                localized={false}
+                markdown={content.activity}
+              />
             </Typography>
           </div>
         </div>
@@ -103,7 +111,11 @@ const AiDiffLessonHook: React.FC<AiDiffLessonHookProps> = ({
             )}
           >
             <Typography component="div" variant="body2" gutterBottom>
-              <SafeMarkdown unwrapped markdown={content.wrap_up} />
+              <SafeMarkdown
+                unwrapped
+                localized={false}
+                markdown={content.wrap_up}
+              />
             </Typography>
           </div>
         </div>

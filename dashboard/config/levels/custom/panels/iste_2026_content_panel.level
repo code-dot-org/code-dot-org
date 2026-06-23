@@ -1,0 +1,26 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-06-22T21:19:52.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "Being a web designer means being someone with a vision. It's about knowing what you want to build - and then figuring out how to turn that idea into something real.",
+        "imageUrl": "https://images.code.org/6255503c0b74f1d478cab455d218499a-iste_content_panel.png",
+        "key": "hoai-web-design-v2-1-11300f40-e480-4236-9f18-43bbbb1f36af",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-top-left"
+      }
+    ],
+    "name_suffix": "_iste-2026",
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-22T21:19:52.940+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-1_pilot2_launch_iste-2026\\\"\"],\"cloned_from\":\"hoai-web-design-v2-1_pilot2_launch_iste-2026\"},{\"changed_at\":\"2026-06-22 21:20:23 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"}]"
+}]]></config>
+</Panels>

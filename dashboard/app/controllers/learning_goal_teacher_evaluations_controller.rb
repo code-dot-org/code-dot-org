@@ -1,5 +1,6 @@
 class LearningGoalTeacherEvaluationsController < ApplicationController
   load_and_authorize_resource
+  before_action :authorize_student!
 
   def create
     @learning_goal_teacher_evaluation.update!(eval_params.merge(teacher_id: current_user.id))
@@ -32,6 +33,20 @@ class LearningGoalTeacherEvaluationsController < ApplicationController
       learning_goal_id: eval_params[:learning_goal_id],
     )
     render json: learning_goal_teacher_evaluation
+  end
+
+  # load_and_authorize_resource only confirms the evaluation's teacher_id is the
+  # current user; it does not confirm the targeted student is actually one of
+  # the teacher's students. Without this check a teacher can create, read, and
+  # modify rubric feedback for any student id, regardless of section membership.
+  private def authorize_student!
+    student_id =
+      if @learning_goal_teacher_evaluation&.persisted?
+        @learning_goal_teacher_evaluation.user_id
+      else
+        eval_params[:user_id]
+      end
+    head :forbidden unless current_user&.students&.exists?(id: student_id)
   end
 
   private def eval_params

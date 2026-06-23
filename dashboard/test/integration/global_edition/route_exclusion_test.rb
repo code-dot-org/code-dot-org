@@ -3,9 +3,10 @@
 require 'test_helper'
 
 class GlobalEditionRouteExclusionTest < ActionDispatch::IntegrationTest
-  let(:ge_region) {'fa'}
+  let(:ge_region) {'la'}
+  let(:ge_region_locale) {'es-LA'}
   let(:document) {Nokogiri::HTML(response.body)}
-  let(:ge_region_html_data) {document.at('html[data-ge-region]').try(:[], 'data-ge-region')}
+  let(:page_ge_region) {document.at('html[data-ge-region]').try(:[], 'data-ge-region')}
 
   before do
     cookies[:ge_region] = ge_region
@@ -18,6 +19,12 @@ class GlobalEditionRouteExclusionTest < ActionDispatch::IntegrationTest
       shared: '/shared/images/sad-bee-avatar.png',
     }.each do |name, path|
       it "#{name} path is not affected by regional redirection" do
+        get path
+        must_respond_with 200
+      end
+
+      it "#{name} path is not redirected for selected regional locale" do
+        cookies[:language_] = ge_region_locale
         get path
         must_respond_with 200
       end
@@ -58,7 +65,7 @@ class GlobalEditionRouteExclusionTest < ActionDispatch::IntegrationTest
         # GET /users/auth/:provider/callback
         get oauth_callback_url
         must_redirect_to '/users/sign_in'
-        _(ge_region_html_data).must_be_nil
+        _(page_ge_region).must_be_nil
       end
 
       it "regional #{provider.inspect} authentication process is not globalized" do
@@ -73,7 +80,7 @@ class GlobalEditionRouteExclusionTest < ActionDispatch::IntegrationTest
         # GET /users/auth/:provider/callback
         get oauth_callback_url
         must_redirect_to '/users/sign_in'
-        _(ge_region_html_data).must_be_nil
+        _(page_ge_region).must_be_nil
       end
     end
   end
@@ -90,13 +97,13 @@ class GlobalEditionRouteExclusionTest < ActionDispatch::IntegrationTest
       it "#{path.inspect} path is not globalized" do
         get path
         must_respond_with 200
-        _(ge_region_html_data).must_be_nil
+        _(page_ge_region).must_be_nil
       end
 
       it "regional #{path.inspect} path is not globalized" do
         get ::File.join('/', ge_region, path)
         must_respond_with 200
-        _(ge_region_html_data).must_be_nil
+        _(page_ge_region).must_be_nil
       end
     end
   end
@@ -108,6 +115,12 @@ class GlobalEditionRouteExclusionTest < ActionDispatch::IntegrationTest
       Dashboard::Application.routes.url_helpers.dashboardapi_user_progress_path,
     ].each do |path|
       it "#{path.inspect} path is not affected by regional redirection" do
+        get path
+        must_respond_with 200
+      end
+
+      it "#{path.inspect} path is not redirected for selected regional locale" do
+        cookies[:language_] = ge_region_locale
         get path
         must_respond_with 200
       end
@@ -124,11 +137,13 @@ class GlobalEditionRouteExclusionTest < ActionDispatch::IntegrationTest
       it "#{path.inspect} path is not affected by regional redirection" do
         get path
         must_respond_with 200
+        _(page_ge_region).must_be_nil
       end
 
       it "regional #{path.inspect} path is accessible" do
         get ::File.join('/', ge_region, path)
         must_respond_with 200
+        _(page_ge_region).must_be_nil
       end
     end
   end

@@ -1,4 +1,4 @@
-import {Button as MuiButton} from '@mui/material';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -27,10 +27,16 @@ class TopCourse extends Component {
     return (
       <div className={styles.card}>
         <div className={styles.header} />
-        <div className={styles.name}>{assignableName}</div>
+        <MuiTypography className={styles.title} variant="h4" component="h5">
+          {assignableName}
+        </MuiTypography>
         <div className={styles.description}>
-          <div>{i18n.topCourseLessonIntro({lessonName})}</div>
-          <div className={styles.details}>{i18n.topCourseExplanation()}</div>
+          <MuiTypography variant="body3">
+            {i18n.topCourseLessonIntro({lessonName})}
+          </MuiTypography>
+          <MuiTypography variant="body3" className={styles.details}>
+            {i18n.topCourseExplanation()}
+          </MuiTypography>
         </div>
         <div className={`${styles.buttonBox} ${localeStyle}`}>
           <MuiButton

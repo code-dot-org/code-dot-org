@@ -6,7 +6,6 @@ import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 import styleConstants from '../../styleConstants';
-import color from '../../util/color';
 
 import ProjectAppTypeArea from './ProjectAppTypeArea.jsx';
 import {publishedFeaturedProjectPropType, Galleries} from './projectConstants';
@@ -102,9 +101,6 @@ class ProjectCardGrid extends Component {
 const styles = {
   grid: {
     width: styleConstants['content-width'],
-  },
-  link: {
-    color: color.light_teal,
   },
 };
 

@@ -7,6 +7,7 @@ import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {java} from '@codemirror/lang-java';
 import {json} from '@codemirror/lang-json';
 import {LanguageSupport} from '@codemirror/language';
+import {isEqual} from 'lodash';
 import React, {useContext, useEffect, useMemo, useRef, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -14,7 +15,12 @@ import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer'
 import TestResultValidator from '@cdo/apps/lab2/progress/TestResultValidator';
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {setLoadedCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
-import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import {
+  LabConfig,
+  LabProps,
+  MultiFileSource,
+  ProjectSources,
+} from '@cdo/apps/lab2/types';
 import {
   AppDispatch,
   useAppDispatch,
@@ -40,7 +46,12 @@ import {
   multiFileToFlat,
   splitForLevelbuilderSave,
 } from './sourceConverter';
-import {flatSourceFromLevelProperties, JavalabLevelProperties} from './types';
+import {mergeStarterAssets} from './starterAssets';
+import {
+  flatSourceFromLevelProperties,
+  JavalabFlatSource,
+  JavalabLevelProperties,
+} from './types';
 
 const javalabLangMapping: {[key: string]: LanguageSupport} = {
   java: java(),
@@ -57,7 +68,6 @@ const defaultConfig: ConfigType = {
   hideNewFolderButton: true,
   layoutComponents: {
     horizontal: HorizontalLayout,
-    vertical: HorizontalLayout,
     share: HorizontalLayout,
     widget: HorizontalLayout,
   },
@@ -83,12 +93,20 @@ const Javalab2View: React.FunctionComponent<
     }
   }, [progressManager, levelProperties.appName]);
 
-  // Derive the labConfig (which sets the mini app in codebridge) from
-  // the channel or the level's csaViewMode.
-  const labConfig = useMemo(
-    () => deriveLabConfig(levelProperties.csaViewMode, channel?.labConfig),
-    [levelProperties.csaViewMode, channel?.labConfig]
-  );
+  // Derive the labConfig (which sets the mini app in codebridge) from the
+  // channel or the level's csaViewMode. Memoize to avoid reference changes
+  // to initialSourcesWithLabConfig below, which would cause useSource to reset the project.
+  const labConfigRef = useRef<LabConfig | undefined>(undefined);
+  const labConfig = useMemo(() => {
+    const derived = deriveLabConfig(
+      levelProperties.csaViewMode,
+      channel?.labConfig
+    );
+    if (!isEqual(derived, labConfigRef.current)) {
+      labConfigRef.current = derived;
+    }
+    return labConfigRef.current;
+  }, [levelProperties.csaViewMode, channel?.labConfig]);
 
   // Java Lab has no client-side runtime to warm up.
   // Mark the code environment loaded immediately so the Run button
@@ -102,7 +120,8 @@ const Javalab2View: React.FunctionComponent<
   }, [dispatch]);
 
   // Codebridge expects MultiFileSource, but legacy Java lab/Javabuilder expects a flat source.
-  // Convert here before passing to codebridge.
+  // Convert here before passing to codebridge. Also merge in the level's starter assets
+  // when loading from the level rather than an active project.
   const codebridgeLevelProperties = useMemo<CodebridgeLevelProperties>(() => {
     const flatTemplate = flatSourceFromLevelProperties(
       levelProperties.templateSources
@@ -117,12 +136,21 @@ const Javalab2View: React.FunctionComponent<
       ? mergeValidationIntoStart(flatStartRaw, levelProperties.validation)
       : flatStartRaw;
 
+    const includeStarterAssets = (flat: JavalabFlatSource | undefined) =>
+      flat
+        ? mergeStarterAssets(
+            flatToMultiFile(flat),
+            levelProperties.starterAssets,
+            levelProperties.name
+          )
+        : undefined;
+
     return {
       ...levelProperties,
       miniApp: labConfig?.miniApp?.name,
-      startSources: flatStart ? flatToMultiFile(flatStart) : undefined,
-      templateSources: flatTemplate ? flatToMultiFile(flatTemplate) : undefined,
-      exemplarSources: flatExemplar ? flatToMultiFile(flatExemplar) : undefined,
+      startSources: includeStarterAssets(flatStart),
+      templateSources: includeStarterAssets(flatTemplate),
+      exemplarSources: includeStarterAssets(flatExemplar),
     };
   }, [levelProperties, labConfig]);
 

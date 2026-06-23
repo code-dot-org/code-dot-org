@@ -2101,6 +2101,11 @@ describe('teacherSectionsRedux', () => {
             login_type: 'email',
             participant_type: 'student',
             grades: ['9', '10', '11', '12'],
+            review_syllabus_quiz_lesson: 2,
+            review_syllabus_quiz_options: [
+              {label: 'Option A', correct: true},
+              {label: 'Option B', correct: false},
+            ],
             unit: {
               name: 'aif2-2025',
               display_name: 'Artificial Intelligence Foundations',
@@ -2123,6 +2128,11 @@ describe('teacherSectionsRedux', () => {
         avatarEmoji: 5,
         loginType: 'email',
         participantType: 'student',
+        reviewSyllabusQuizLesson: 2,
+        reviewSyllabusQuizOptions: [
+          {label: 'Option A', correct: true},
+          {label: 'Option B', correct: false},
+        ],
         grades: ['9', '10', '11', '12'],
         unit: {
           name: 'aif2-2025',

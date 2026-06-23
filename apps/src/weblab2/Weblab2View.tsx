@@ -210,7 +210,6 @@ const Weblab2View: React.FC<
           aiTutorChatButtonData={[]}
           onAssetUploaded={onAssetUploaded}
           onAssetRemoved={onAssetRemoved}
-          aiTutorContextHelper={aiTutorHelper}
           aiTutorSystemPrompt={systemPrompt}
           aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
           secondaryBackpackAppNames={secondaryBackpackAppNames}
