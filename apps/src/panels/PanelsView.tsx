@@ -282,7 +282,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
             <button
               type="button"
               key={`link-${index}`}
-              className={classNames(styles.link, panel.dark && styles.linkDark)}
+              className={styles.link}
               style={{
                 left: `${link.x}%`,
                 top: `${link.y}%`,
@@ -294,17 +294,14 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
             </button>
           ))}
         {panel.text && (
+          // Always use light theme for text bubbles regardless of user preference.
           <div
             ref={contentRef}
-            className={classNames(
-              styles.text,
-              panel.dark && styles.textDark,
-              textLayoutClass
-            )}
+            className={classNames(styles.text, textLayoutClass)}
+            data-theme="Light"
           >
             {offerBrowserTts && (
-              // Override the theme since the text container is always white.
-              <div className={styles.ttsContainer} data-theme="Light">
+              <div className={styles.ttsContainer}>
                 <TextToSpeech contentRef={contentRef} />
               </div>
             )}

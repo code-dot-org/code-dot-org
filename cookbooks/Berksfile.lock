@@ -15,10 +15,6 @@ DEPENDENCIES
     path: cdo-github-access
   cdo-home-ubuntu
     path: cdo-home-ubuntu
-  cdo-i18n
-    path: cdo-i18n
-  cdo-java-7
-    path: cdo-java-7
   cdo-jemalloc
     path: cdo-jemalloc
   cdo-mysql
@@ -64,12 +60,10 @@ GRAPH
   cdo-analytics (0.1.16)
     apt (>= 0.0.0)
     ark (>= 0.0.0)
-  cdo-apps (0.2.708)
+  cdo-apps (0.2.711)
     apt (>= 0.0.0)
     cdo-analytics (>= 0.0.0)
     cdo-cloudwatch-agent (>= 0.0.0)
-    cdo-i18n (>= 0.0.0)
-    cdo-java-7 (>= 0.0.0)
     cdo-jemalloc (>= 0.0.0)
     cdo-mysql (>= 0.0.0)
     cdo-nginx (>= 0.0.0)
@@ -93,10 +87,6 @@ GRAPH
     apt (>= 0.0.0)
     packagecloud (>= 0.0.0)
   cdo-home-ubuntu (0.1.8)
-  cdo-i18n (0.1.18)
-    apt (>= 0.0.0)
-    cdo-java-7 (>= 0.0.0)
-  cdo-java-7 (0.1.2)
   cdo-jemalloc (0.1.16)
     ark (>= 0.0.0)
   cdo-mysql (0.1.78)

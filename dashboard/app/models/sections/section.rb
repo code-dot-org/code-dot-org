@@ -46,6 +46,37 @@ require 'cdo/safe_names'
 require 'policies/lti'
 
 class Section < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    user_id: :confidential,
+    name: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+    code: :confidential,
+    script_id: :confidential,
+    course_id: :confidential,
+    grade: :confidential,
+    login_type: :confidential,
+    deleted_at: :confidential,
+    stage_extras: :confidential,
+    section_type: :confidential,
+    first_activity_at: :confidential,
+    pairing_allowed: :confidential,
+    sharing_disabled: :confidential,
+    hidden: :confidential,
+    tts_autoplay_enabled: :confidential,
+    restrict_section: :confidential,
+    properties: :confidential,
+    participant_type: :confidential,
+    lti_integration_id: :confidential,
+    avatar_color: :confidential,
+    avatar_emoji: :confidential,
+    ai_chat_access_level: :confidential,
+    demo_type: :confidential,
+  )
+
   include SerializedProperties
   include SharedConstants
   include Curriculum::SharedCourseConstants
@@ -259,6 +290,10 @@ class Section < ApplicationRecord
     SharedConstants::PL_GRADE_VALUE
   ].flatten.freeze
 
+  # Native section codes are six letters. Google and Clever-based section codes
+  # are prefixed with "G-" and "C-" respectively.
+  SECTION_CODE_REGEX = /\A(?:[A-Z]{6}|[CG]-[A-Z0-9_-]+)\z/i
+
   ADD_STUDENT_EXISTS = 'exists'.freeze
   ADD_STUDENT_SUCCESS = 'success'.freeze
   ADD_STUDENT_FAILURE = 'failure'.freeze
@@ -284,6 +319,10 @@ class Section < ApplicationRecord
   def self.valid_grades?(grades)
     return false if grades.empty?
     (grades - VALID_GRADES).empty?
+  end
+
+  def self.valid_code?(code)
+    code.to_s.match?(SECTION_CODE_REGEX)
   end
 
   # Override default script accessor to use our cache

@@ -7,6 +7,7 @@ import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {java} from '@codemirror/lang-java';
 import {json} from '@codemirror/lang-json';
 import {LanguageSupport} from '@codemirror/language';
+import {isEqual} from 'lodash';
 import React, {useContext, useEffect, useMemo, useRef, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -14,7 +15,12 @@ import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer'
 import TestResultValidator from '@cdo/apps/lab2/progress/TestResultValidator';
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {setLoadedCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
-import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import {
+  LabConfig,
+  LabProps,
+  MultiFileSource,
+  ProjectSources,
+} from '@cdo/apps/lab2/types';
 import {
   AppDispatch,
   useAppDispatch,
@@ -62,7 +68,6 @@ const defaultConfig: ConfigType = {
   hideNewFolderButton: true,
   layoutComponents: {
     horizontal: HorizontalLayout,
-    vertical: HorizontalLayout,
     share: HorizontalLayout,
     widget: HorizontalLayout,
   },
@@ -88,12 +93,20 @@ const Javalab2View: React.FunctionComponent<
     }
   }, [progressManager, levelProperties.appName]);
 
-  // Derive the labConfig (which sets the mini app in codebridge) from
-  // the channel or the level's csaViewMode.
-  const labConfig = useMemo(
-    () => deriveLabConfig(levelProperties.csaViewMode, channel?.labConfig),
-    [levelProperties.csaViewMode, channel?.labConfig]
-  );
+  // Derive the labConfig (which sets the mini app in codebridge) from the
+  // channel or the level's csaViewMode. Memoize to avoid reference changes
+  // to initialSourcesWithLabConfig below, which would cause useSource to reset the project.
+  const labConfigRef = useRef<LabConfig | undefined>(undefined);
+  const labConfig = useMemo(() => {
+    const derived = deriveLabConfig(
+      levelProperties.csaViewMode,
+      channel?.labConfig
+    );
+    if (!isEqual(derived, labConfigRef.current)) {
+      labConfigRef.current = derived;
+    }
+    return labConfigRef.current;
+  }, [levelProperties.csaViewMode, channel?.labConfig]);
 
   // Java Lab has no client-side runtime to warm up.
   // Mark the code environment loaded immediately so the Run button

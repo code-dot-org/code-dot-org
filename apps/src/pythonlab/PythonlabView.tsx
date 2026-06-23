@@ -41,12 +41,18 @@ import {
   PYTHONLAB_SUPPORTED_FILE_TYPES,
 } from './constants';
 import {AiTutorPythonLabContextHelper} from './helpers/aiTutorContextHelper';
+import {
+  ALL_PYTHONLAB_ANSWER_TYPES,
+  generateAiTutorPrompt,
+} from './helpers/aiTutorPromptGenerator';
+import {useAiTutorResponseSchemaSettings} from './hooks/useAiTutorResponseSchemaSettings';
 import HorizontalLayout from './layout/HorizontalLayout';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import {handleRunClick, stopPythonCode} from './pyodideRunner';
 import {pythonLabVideoFiles} from './pythonLabVideos';
+import {AiTutorAnswerType} from './types';
 
 import moduleStyles from './pythonlab-view.module.scss';
 
@@ -114,9 +120,11 @@ const PythonlabView: React.FunctionComponent<
 
   const hasSource = !!source;
 
+  const hasAiTutorPromptSettings =
+    (levelProperties.aiTutorPromptSettings?.answerTypes?.length ?? 0) > 0;
   const isAiTutorVisible = shouldShowAiTutor({
     appName: levelProperties.appName,
-    tutorLevel: levelProperties.aiTutorAvailable,
+    isTutorLevel: levelProperties.aiTutorAvailable || hasAiTutorPromptSettings,
     aiChatAccessLevel: aiChatAccessLevel,
   });
 
@@ -215,6 +223,23 @@ const PythonlabView: React.FunctionComponent<
     hasEdited,
   ]);
 
+  const systemPrompt = useMemo(() => {
+    const rawAnswerTypes = levelProperties.aiTutorPromptSettings?.answerTypes;
+    const answerTypes: AiTutorAnswerType[] = Array.isArray(rawAnswerTypes)
+      ? (rawAnswerTypes as AiTutorAnswerType[]).filter(type =>
+          ALL_PYTHONLAB_ANSWER_TYPES.includes(type)
+        )
+      : ALL_PYTHONLAB_ANSWER_TYPES;
+    return generateAiTutorPrompt(
+      answerTypes,
+      levelProperties.aiTutorPromptSettings?.answerTypeCustomizations as
+        | Partial<Record<AiTutorAnswerType, string>>
+        | undefined
+    );
+  }, [levelProperties.aiTutorPromptSettings]);
+
+  const aiTutorResponseSchemaSettings = useAiTutorResponseSchemaSettings();
+
   const onRun = async (
     runTests: boolean,
     dispatch: AppDispatch,
@@ -252,7 +277,11 @@ const PythonlabView: React.FunctionComponent<
           levelProperties={levelProperties}
           projectPickerSettings={projectPickerSettings}
           hiddenContextCallback={aiTutorHelper.getHiddenContextCallback()}
+          aiTutorChatButtonData={[]}
+          aiTutorSystemPrompt={systemPrompt}
+          aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
           tutorVideos={pythonLabVideoFiles}
+          enableUserAddedSelectionContext={true}
         />
       )}
       {showProjectPickerModal && (

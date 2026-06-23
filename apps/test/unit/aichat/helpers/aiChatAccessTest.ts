@@ -9,7 +9,7 @@ describe('shouldShowAiTutor', () => {
     it('returns true for weblab2 regardless of level flags', () => {
       const result = shouldShowAiTutor({
         appName: 'weblab2',
-        tutorLevel: false,
+        isTutorLevel: false,
         aiChatAccessLevel: 'essential_only',
       });
       expect(result).toBe(true);
@@ -20,7 +20,7 @@ describe('shouldShowAiTutor', () => {
     it('returns true when tutorLevel is true', () => {
       const result = shouldShowAiTutor({
         appName: 'applab',
-        tutorLevel: true,
+        isTutorLevel: true,
         aiChatAccessLevel: 'enabled',
       });
       expect(result).toBe(true);
@@ -29,7 +29,7 @@ describe('shouldShowAiTutor', () => {
     it('returns false when tutorLevel is false', () => {
       const result = shouldShowAiTutor({
         appName: 'applab',
-        tutorLevel: false,
+        isTutorLevel: false,
         aiChatAccessLevel: 'enabled',
       });
       expect(result).toBe(false);
@@ -40,7 +40,7 @@ describe('shouldShowAiTutor', () => {
     it('returns false even when tutorLevel is true', () => {
       const result = shouldShowAiTutor({
         appName: 'applab',
-        tutorLevel: true,
+        isTutorLevel: true,
         aiChatAccessLevel: 'disabled',
       });
       expect(result).toBe(false);

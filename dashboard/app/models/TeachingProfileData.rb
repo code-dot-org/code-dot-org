@@ -13,5 +13,15 @@
 #  index_teaching_profile_data_on_user_id  (user_id)
 #
 class TeachingProfileData < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :restricted,
+    user_id: :restricted,
+    individual_data: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
+  )
+
   belongs_to :user
 end

@@ -17,6 +17,20 @@
 #  index_learning_goals_on_rubric_id_and_key  (rubric_id,key) UNIQUE
 #
 class LearningGoal < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    key: :public,
+    position: :public,
+    rubric_id: :public,
+    learning_goal: :public,
+    ai_enabled: :public,
+    tips: :public,
+    created_at: :public,
+    updated_at: :public,
+  )
+
   belongs_to :rubric, inverse_of: :learning_goals
   has_many :learning_goal_evidence_levels, dependent: :destroy
 

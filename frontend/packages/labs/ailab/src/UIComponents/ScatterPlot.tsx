@@ -1,9 +1,8 @@
 import {Scatter} from 'react-chartjs-2';
-import {connect} from 'react-redux';
 
 import {styles, colors} from '../constants';
+import {useAppSelector} from '../hooks';
 import I18n from '../i18n';
-import type {RootState} from '../redux';
 import {getScatterPlotData} from '../selectors/visualizationSelectors';
 
 const scatterDataBase = {
@@ -55,15 +54,9 @@ const chartOptionsBase = {
   maintainAspectRatio: false,
 };
 
-interface ScatterPlotProps {
-  scatterPlotData: {
-    coordinates: {x: number; y: number}[];
-    feature: string;
-    label: string;
-  } | null;
-}
+const ScatterPlot = () => {
+  const scatterPlotData = useAppSelector(getScatterPlotData);
 
-const ScatterPlot = ({scatterPlotData}: ScatterPlotProps) => {
   const scatterDataCombined = {
     ...scatterDataBase,
   };
@@ -93,9 +86,4 @@ const ScatterPlot = ({scatterPlotData}: ScatterPlotProps) => {
   );
 };
 
-export default connect(
-  (state: RootState) => ({
-    scatterPlotData: getScatterPlotData(state),
-  }),
-  {},
-)(ScatterPlot);
+export default ScatterPlot;

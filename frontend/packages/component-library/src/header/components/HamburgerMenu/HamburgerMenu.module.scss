@@ -1,0 +1,193 @@
+// Static styles for the hamburger menu panel. The trigger override wins because
+// MUI's emotion styles are in `@layer mui` (enableCssLayer) and this module class
+// is unlayered. The Popover surface reuses the shared `.menuPaper` from
+// headerMenu.module.scss (applied to the paper slot in HamburgerMenu.tsx).
+// @media values are static px; the originals derive from HEADER_BREAKPOINTS.
+
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+
+// Hamburger (☰) trigger: always visible (the hamburger shows at every width).
+.trigger {
+  min-width: 0;
+  min-height: 0;
+  // Symmetric horizontal padding centers the bars so the focus ring frames them evenly.
+  padding: 18px 6px 20px 6px;
+  color: var(--text-neutral-white-fixed);
+
+  &:hover,
+  &:active {
+    background-color: transparent;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--text-neutral-white-fixed);
+    outline-offset: 2px;
+  }
+}
+
+// 3-bar hamburger icon: 25x3px bars with 1px border-radius, 8px gaps. Paired
+// with the literal `barsIcon` class (a stable hook for layout tests/stories).
+.barsIcon {
+  position: relative;
+  display: block;
+  width: 25px;
+  height: 3px;
+  border-radius: 1px;
+  background-color: currentColor;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    border-radius: 1px;
+    background-color: currentColor;
+  }
+
+  &::before {
+    top: -8px;
+  }
+
+  &::after {
+    top: 8px;
+  }
+}
+
+// 6px inset + 228px content + 1px border = 242px, matching #hamburger-contents.
+.hamburgerList {
+  min-width: 240px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+}
+
+// App-nav, support links, and their dividers: shown only below the top-nav
+// breakpoint (1061px), where the top bar's nav collapses (prod's .show-mobile).
+// Authored default-visible so jsdom (which ignores @media) keeps them testable.
+// Paired with the literal `mobileOnly` class (a stable hook for width-gate tests).
+.mobileOnlyItem {
+  @media (min-width: 1061px) {
+    display: none;
+  } // HEADER_BREAKPOINTS.desktopNav
+}
+
+// Signed-out auth rows: shown only below mobileAuth, where the bar hides them.
+.mobileAuthOnlyItem {
+  @media (min-width: 768px) {
+    display: none;
+  } // HEADER_BREAKPOINTS.mobileAuth
+}
+
+// Separator after the signed-out auth block; mobile-only like the auth itself.
+.authDivider {
+  height: 1px;
+  margin: 0.5rem 0;
+  padding: 0;
+  background: var(--borders-neutral-primary);
+
+  @media (min-width: 768px) {
+    display: none;
+  } // HEADER_BREAKPOINTS.mobileAuth
+}
+
+.divider {
+  height: 1px;
+  margin: 0.5rem 0;
+  padding: 0;
+  background: var(--borders-neutral-primary);
+
+  @media (min-width: 1061px) {
+    display: none;
+  } // HEADER_BREAKPOINTS.desktopNav
+}
+
+.link {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  color: var(--text-neutral-primary);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-decoration: none;
+
+  &:visited,
+  &:active {
+    color: var(--text-neutral-primary);
+  }
+
+  // Prod rounds the hamburger highlight, unlike the square help/account hovers.
+  &:hover {
+    background-color: var(--background-neutral-tertiary);
+    border-radius: 4px;
+    color: var(--text-neutral-primary);
+  }
+
+  &:focus-visible {
+    @include mixins.focus-styles;
+  }
+}
+
+// Native `<details>` section. The summary hides its UA marker; the chevron is
+// the only open/closed cue, rotated via `[open]`. Toggling is instant (no JS,
+// no animation — reduced-motion safe). The chevron carries the string class
+// `.chevron`, so target it via :global (a bare .chevron would be scoped).
+.hamburgerSection {
+  & summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    list-style: none;
+    cursor: pointer;
+    // Match the link rows' metrics — the UA summary default shifts the baseline.
+    font-size: 14px;
+    line-height: 21px;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &:hover {
+      background-color: var(--background-neutral-tertiary);
+      border-radius: 4px;
+    }
+
+    &:focus-visible {
+      @include mixins.focus-styles;
+    }
+  }
+
+  & :global(.chevron) {
+    color: var(--text-neutral-primary);
+    font-size: 14px;
+  }
+
+  &[open] :global(.chevron) {
+    transform: rotate(180deg);
+  }
+}
+
+.expandText {
+  max-width: 210px;
+  overflow: hidden;
+  color: var(--text-neutral-primary);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Sub-list: 20px indent, no fill — indent is the only visual cue.
+.subList {
+  width: auto;
+  margin: 0 0 0 20px;
+  padding: 0;
+  list-style: none;
+}

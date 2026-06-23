@@ -1,3 +1,4 @@
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
@@ -20,12 +21,12 @@ const setUp = (overrideProps = {}) => {
 };
 
 describe('ViewAsToggle', () => {
-  it('calls changeViewType when ToggleGroup changes', () => {
+  it('calls changeViewType when SegmentedButtons changes', () => {
     const spy = sinon.spy();
     const wrapper = setUp({changeViewType: spy});
     expect(spy).not.to.have.been.called;
 
-    wrapper.find('Connect(ToggleGroup)').prop('onChange')(ViewType.Instructor);
+    wrapper.find(SegmentedButtons).prop('onChange')(ViewType.Instructor);
     expect(spy).to.have.been.calledOnce.and.calledWith(ViewType.Instructor);
   });
 

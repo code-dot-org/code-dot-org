@@ -18,5 +18,17 @@
 #  index_user_data_retention_statuses_on_warning_email_sent_at  (deletion_warning_email_sent_at)
 #
 class User::DataRetentionStatus < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    user_id: :confidential,
+    pii_scrubbed_at: :confidential,
+    anonymized_at: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+    deletion_warning_email_sent_at: :confidential,
+  )
+
   belongs_to :user, -> {with_deleted}
 end

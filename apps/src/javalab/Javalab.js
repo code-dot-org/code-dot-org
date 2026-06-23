@@ -8,6 +8,7 @@ import {TestResults} from '@cdo/apps/constants';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
+import Theater from '@cdo/apps/miniApps/theater/Theater';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
@@ -56,7 +57,6 @@ import javalab, {
   setIsCaptchaDialogOpen,
 } from './redux/javalabRedux';
 import javalabView, {setDisplayTheme} from './redux/viewRedux';
-import Theater from './theater/Theater';
 import TheaterVisualizationColumn from './theater/TheaterVisualizationColumn';
 
 /**

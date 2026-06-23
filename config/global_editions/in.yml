@@ -8,7 +8,6 @@
 # component from the page.
 
 locales: [en-IN, hi-IN, ta-IN, te-IN, mr-IN, kn-IN, or-IN, gu-IN]
-locale_lock: true
 countries: [IN]
 
 # The list of available project types
@@ -162,15 +161,15 @@ pages:
   - path: /my-professional-learning
     components:
       LandingPage:
-        hideMyFacilitatorCenterTab: true
+        hideMyFacilitatorCenterTab: false
         hideInstructorCenterTab: false
-        hideRPCenterTab: true
-        hideWorkshopOrganizerCenterTab: true
+        hideRPCenterTab: false
+        hideWorkshopOrganizerCenterTab: false
         hideMyPLWorkshopEnrollmentCelebrationDialog: true
         hideMyPLBanner: true
         hideMyPLSelfPacedPL: false
-        hideMyPLJoinSectionArea: true
-        hideMyPLLandingPageWorkshopsTable: true
+        hideMyPLJoinSectionArea: false
+        hideMyPLLandingPageWorkshopsTable: false
         hideMyPLStaticRecommendedPL: false
         hideMyPLStaticRecommendedPLMidHighBlock: true
         hideMyPLStaticRecommendedPLSelfPacedBlock: false
