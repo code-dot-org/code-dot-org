@@ -764,12 +764,13 @@ export function useKeyboardNavigation({
       if (isTargetEditable(target)) return;
       if (!nativeEvent.repeat) pushSnapshot();
       if (moveEdgeByDelta(edgeId, deltaX, deltaY)) {
+        onLineKeyboardMove(edgeId);
         nativeEvent.preventDefault();
       }
     };
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
-  }, [moveEdgeByDelta, pushSnapshot]);
+  }, [moveEdgeByDelta, pushSnapshot, onLineKeyboardMove]);
 
   return {connectingFrom, connectAnnouncement, handleKeyDown};
 }
