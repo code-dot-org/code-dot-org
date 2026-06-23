@@ -32,8 +32,8 @@ update the skill.
 - **Every interactive thing works with the keyboard.** Buttons: Enter + Space. Links:
   Enter. Menus/tabs/radios: arrow keys, Space to select. Modals: Esc closes and returns
   focus to the trigger.
-- **No keyboard traps.** You must be able to Tab out of every component, including
-  custom widgets and embeds.
+- **No *unintentional* keyboard traps.** You must be able to Tab out of every component, including
+  custom widgets and embeds — the exception is a modal you deliberately trap focus in (see below).
 - **Manage focus on transitions.** On route change, move focus to the new `<h1>` (or
   main heading). On modal open, focus the dialog; on close, return to the trigger.
 - **Avoid if possible:** tooltips, overlapping dialogs/modals, actions on hover.
