@@ -18,6 +18,8 @@ interface OnboardingChecklistProps {
   reviewSyllabusTour: Tour | null;
   learnHowToEvaluateTour: Tour | null;
   demoType: DemoType;
+  isHidden: boolean;
+  onHide: () => void;
 }
 
 const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
@@ -25,9 +27,9 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
   reviewSyllabusTour,
   learnHowToEvaluateTour,
   demoType,
+  isHidden,
+  onHide,
 }) => {
-  const [isHidden, setIsHidden] = React.useState(false);
-
   const handleButtonClick = (id: string) => {
     if (id === 'create-section') {
       createSectionTour?.start();
@@ -79,11 +81,7 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
           </div>
         </div>
       </div>
-      <MuiButton
-        type="button"
-        onClick={() => setIsHidden(true)}
-        color="tertiary"
-      >
+      <MuiButton type="button" onClick={onHide} color="tertiary">
         Hide onboarding
       </MuiButton>
     </div>
