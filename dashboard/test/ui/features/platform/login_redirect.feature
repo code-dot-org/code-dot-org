@@ -1,3 +1,4 @@
+@playwright
 Feature: Navigating to a level page with login required
 
 # The 'mc' level is specifically chosen because it is a level that is

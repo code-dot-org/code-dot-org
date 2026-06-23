@@ -12,6 +12,8 @@ export interface UserCredentials {
 export interface CreateUserOptions {
   type: UserType;
   name: string;
+  /** Defaults to 2. Pass 0 for a "never signed in" account (new_account=true in Cucumber). */
+  signInCount?: number;
 }
 
 /** Clear the session (cookies) so the next createUser/signIn starts clean. */
@@ -26,7 +28,7 @@ export async function resetSession(page: Page): Promise<void> {
  */
 export async function createUser(
   page: Page,
-  {type, name}: CreateUserOptions,
+  {type, name, signInCount = 2}: CreateUserOptions,
 ): Promise<UserCredentials> {
   const timestamp = Date.now();
   const rand = Math.floor(Math.random() * 1_000_000);
@@ -34,7 +36,7 @@ export async function createUser(
   const password = `${name}password`;
 
   await page.evaluate(
-    async ({type, email, password, name}) => {
+    async ({type, email, password, name, signInCount}) => {
       const csrfToken =
         document
           .querySelector('meta[name="csrf-token"]')
@@ -55,7 +57,7 @@ export async function createUser(
             name,
             age: '21+',
             terms_of_service_version: '1',
-            sign_in_count: 2,
+            sign_in_count: signInCount,
             email_preference_opt_in: 'yes',
             email_preference_form_kind: email,
             email_preference_request_ip: '127.0.0.1',
@@ -67,7 +69,7 @@ export async function createUser(
         throw new Error(`create_user failed: ${resp.status}`);
       }
     },
-    {type, email, password, name},
+    {type, email, password, name, signInCount},
   );
 
   await signIn(page, {email, password});
