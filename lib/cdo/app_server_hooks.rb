@@ -1,3 +1,5 @@
+require 'cdo/process_memory'
+
 module Cdo
   # NOTE: these hooks are only executed when running in puma clustered mode, which spawns worker processes.
   # These hooks will NOT be run in local development unless you set `dashboard_workers: 1` (or greater)
@@ -34,11 +36,13 @@ module Cdo
         begin
           before_gc = GC.stat
           started_at = Process.clock_gettime(Process::CLOCK_MONOTONIC)
-          CDO.log.info(
-            'Compacting Ruby heap before Puma worker fork: ' \
-              "heap_allocated_pages=#{before_gc[:heap_allocated_pages]}, " \
-              "heap_live_slots=#{before_gc[:heap_live_slots]}, " \
-              "old_objects=#{before_gc[:old_objects]}"
+          Cdo::ProcessMemory.log_snapshot(
+            'Compacting Ruby heap before Puma worker fork',
+            fields: {
+              heap_allocated_pages: before_gc[:heap_allocated_pages],
+              heap_live_slots: before_gc[:heap_live_slots],
+              old_objects: before_gc[:old_objects]
+            }
           )
 
           GC.start(full_mark: true, immediate_sweep: true)
@@ -46,12 +50,14 @@ module Cdo
 
           after_gc = GC.stat
           duration = Process.clock_gettime(Process::CLOCK_MONOTONIC) - started_at
-          CDO.log.info(
-            'Compacted Ruby heap before Puma worker fork: ' \
-              "duration_seconds=#{duration.round(3)}, " \
-              "heap_allocated_pages=#{after_gc[:heap_allocated_pages]}, " \
-              "heap_live_slots=#{after_gc[:heap_live_slots]}, " \
-              "old_objects=#{after_gc[:old_objects]}"
+          Cdo::ProcessMemory.log_snapshot(
+            'Compacted Ruby heap before Puma worker fork',
+            fields: {
+              duration_seconds: duration.round(3),
+              heap_allocated_pages: after_gc[:heap_allocated_pages],
+              heap_live_slots: after_gc[:heap_live_slots],
+              old_objects: after_gc[:old_objects]
+            }
           )
         rescue StandardError => exception
           CDO.log.warn("Failed to compact Ruby heap before Puma worker fork: #{exception.class}: #{exception.message}")
