@@ -189,7 +189,7 @@ const BLACK_HEXES = new Set(['#1e1e1e', '#000000', '#000']);
 const WHITE_HEXES = new Set(['#ffffff', '#fff']);
 const DARK_CANVAS_HEXES = new Set([...BLACK_HEXES, '#121212']);
 
-// Lowercase, trim, and expand #rgb to #rrggbb so palette lookups are exact.
+// Lowercase and trim all inputs, and expand #rgb to #rrggbb so palette lookups are exact.
 // Leaves 'transparent' and any non-hex value untouched.
 function normalizeColor(color: string): string {
   const value = color.trim().toLowerCase();
