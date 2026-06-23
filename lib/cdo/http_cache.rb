@@ -208,13 +208,6 @@ class HttpCache
             cookies: allowlisted_cookies,
             include_marketing_router_lambda: true,
           },
-          {
-            path: '/i18n/track_string_usage',
-            proxy: 'dashboard',
-            headers: ALLOWLISTED_HEADERS,
-            cookies: allowlisted_cookies,
-            include_marketing_router_lambda: true,
-          },
           # Cached paths that specifically filter query-parameters.
           {
             path: %w(

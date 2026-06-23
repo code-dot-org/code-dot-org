@@ -76,6 +76,7 @@ describe('javabuilderRunUtils', () => {
 
     (CodebridgeRegistry.getInstance as jest.Mock).mockReturnValue({
       getNeighborhood: () => ({onStop: neighborhoodOnStop}),
+      getTheater: () => null,
       getConsoleManager: () => null,
     });
 
