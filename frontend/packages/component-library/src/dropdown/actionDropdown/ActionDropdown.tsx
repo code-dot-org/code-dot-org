@@ -62,64 +62,6 @@ export interface ActionDropdownProps extends AriaAttributes {
  * Design System: Action Dropdown Component.
  * Used to render dropdowns with a menu/list of different actions.
  */
-const ActionDropdownMenu: React.FunctionComponent<{
-  options: ActionDropdownOption[];
-  disabled: boolean;
-}> = ({options, disabled}) => {
-  const {setActiveDropdownName} = useDropdownContext();
-  const onOptionClick = useCallback(
-    (optionOnClick: () => void) => {
-      if (!disabled) {
-        optionOnClick();
-        setActiveDropdownName('');
-      }
-    },
-    [disabled, setActiveDropdownName],
-  );
-
-  return (
-    <ul>
-      {options.map(option => {
-        const {
-          value,
-          label,
-          onClick,
-          isOptionDisabled,
-          isOptionDestructive,
-          icon: {
-            iconName,
-            iconStyle,
-            title: iconTitle,
-            className: iconClassName,
-          },
-        } = option;
-        return (
-          <li key={value}>
-            <button
-              className={classNames(
-                moduleStyles.dropdownMenuItem,
-                isOptionDisabled && moduleStyles.disabledDropdownMenuItem,
-                isOptionDestructive && moduleStyles.destructiveDropdownMenuItem,
-              )}
-              disabled={isOptionDisabled || disabled}
-              type="button"
-              onClick={() => onOptionClick(onClick)}
-            >
-              <FontAwesomeV6Icon
-                iconName={iconName}
-                iconStyle={iconStyle}
-                title={iconTitle}
-                className={iconClassName}
-              />
-              <span>{label}</span>
-            </button>
-          </li>
-        );
-      })}
-    </ul>
-  );
-};
-
 const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
   name,
   className,
@@ -133,6 +75,17 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
   useIconButton = true,
   ...rest
 }) => {
+  const {setActiveDropdownName} = useDropdownContext();
+  const onOptionClick = useCallback(
+    (optionOnClick: () => void) => {
+      if (!disabled) {
+        optionOnClick();
+        setActiveDropdownName('');
+      }
+    },
+    [disabled, setActiveDropdownName],
+  );
+
   return (
     <CustomDropdown
       useMuiButtonAsTrigger={!useIconButton}
@@ -147,7 +100,46 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
       {...rest}
       triggerButtonProps={triggerButtonProps}
     >
-      <ActionDropdownMenu options={options} disabled={disabled} />
+      <ul>
+        {options.map(option => {
+          const {
+            value,
+            label,
+            onClick,
+            isOptionDisabled,
+            isOptionDestructive,
+            icon: {
+              iconName,
+              iconStyle,
+              title: iconTitle,
+              className: iconClassName,
+            },
+          } = option;
+          return (
+            <li key={value}>
+              <button
+                className={classNames(
+                  moduleStyles.dropdownMenuItem,
+                  isOptionDisabled && moduleStyles.disabledDropdownMenuItem,
+                  isOptionDestructive &&
+                    moduleStyles.destructiveDropdownMenuItem,
+                )}
+                disabled={isOptionDisabled || disabled}
+                type="button"
+                onClick={() => onOptionClick(onClick)}
+              >
+                <FontAwesomeV6Icon
+                  iconName={iconName}
+                  iconStyle={iconStyle}
+                  title={iconTitle}
+                  className={iconClassName}
+                />
+                <span>{label}</span>
+              </button>
+            </li>
+          );
+        })}
+      </ul>
     </CustomDropdown>
   );
 };
