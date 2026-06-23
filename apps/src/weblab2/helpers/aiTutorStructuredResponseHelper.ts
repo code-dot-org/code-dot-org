@@ -113,7 +113,7 @@ type AcceptRejectFormattedResponse = {
   answerType: string;
 };
 
-type AcceptRejectResponse = {
+type AiTutorAcceptRejectResponse = {
   explanation?: string;
   videoUrl?: string;
   code: AiTutorModelCodeFile[];
@@ -127,7 +127,7 @@ const formatSection = (title: string, content?: string): string => {
 // This is used when the AI Tutor response's answerType is 'buildHTML', 'buildCSS',
 // 'buildJavaScript', or 'buildJSON'.
 export const formatAcceptRejectResponse = (
-  response: AcceptRejectResponse
+  response: AiTutorAcceptRejectResponse
 ): AcceptRejectFormattedResponse => {
   const explanation =
     formatSection('Explanation', response.explanation) +
