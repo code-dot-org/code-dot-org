@@ -133,7 +133,8 @@ const ChatList: React.FC<ChatListProps> = ({
         curriculumCourses: curriculumCourses,
       })
     );
-  }, [curriculumCourses, context, dispatch]);
+    onChatSelect?.();
+  }, [curriculumCourses, context, dispatch, onChatSelect]);
 
   return (
     <aside
