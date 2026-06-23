@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-03 22:35:43 UTC",
+    "serialized_at": "2026-06-22 18:58:00 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -7557,6 +7557,16 @@
       }
     },
     {
+      "key": "optimization",
+      "word": "optimization",
+      "definition": "The process of making something run better even if it’s working",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "optimization"
+      }
+    },
+    {
       "key": "output_devices",
       "word": "output devices",
       "definition": "display information from the computer",
@@ -7701,6 +7711,18 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 3: Troubleshooting and Optimizing Hardware",
+        "vocabulary.key": "troubleshooting"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
+        "vocabulary.key": "optimization"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
         "vocabulary.key": "troubleshooting"
       }
     },

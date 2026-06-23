@@ -1,50 +1,40 @@
 /* React component to handle importing CSVs and pushing data to Redux store. */
 import {useState} from 'react';
-import {connect} from 'react-redux';
-import type {Dispatch} from 'redux';
 
 import {styles} from '../constants';
 import {parseCSV, MIN_CSV_ROWS, MIN_CSV_COLUMNS} from '../csvReaderWrapper';
 import {getDatasets, getAvailableDatasets} from '../datasetManifest';
+import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {parseJSON} from '../jsonReaderWrapper';
-import type {RootState} from '../redux';
 import {
-  setSelectedName,
-  setSelectedCSV,
-  setSelectedJSON,
-  resetState,
+  setSelectedName as setSelectedNameAction,
+  setSelectedCSV as setSelectedCSVAction,
+  setSelectedJSON as setSelectedJSONAction,
+  resetState as resetStateAction,
   getSpecifiedDatasets,
-  setHighlightDataset,
+  setHighlightDataset as setHighlightDatasetAction,
 } from '../redux';
 
 import ScrollableContent from './ScrollableContent';
 
-interface SelectDatasetProps {
-  setSelectedName: (name: string) => void;
-  setSelectedCSV: (csvfilePath: string | File) => void;
-  setSelectedJSON: (jsonfilePath: string) => void;
-  setHighlightDataset: (id: string | undefined) => void;
-  csvfile: string | object | undefined;
-  jsonfile: string | object | undefined;
-  resetState: () => void;
-  specifiedDatasets: string[] | undefined;
-  name: string | undefined;
-  highlightDataset: string | undefined;
-  invalidData: string | undefined;
-}
+const SelectDataset = () => {
+  const dispatch = useAppDispatch();
+  const specifiedDatasets = useAppSelector(getSpecifiedDatasets);
+  const name = useAppSelector(state => state.name);
+  const highlightDataset = useAppSelector(state => state.highlightDataset);
+  const invalidData = useAppSelector(state => state.invalidData);
 
-const SelectDataset = ({
-  setSelectedName,
-  setSelectedCSV,
-  setSelectedJSON,
-  setHighlightDataset,
-  resetState,
-  specifiedDatasets,
-  name,
-  highlightDataset,
-  invalidData,
-}: SelectDatasetProps) => {
+  const resetState = () => dispatch(resetStateAction());
+  const setSelectedName = (datasetName: string) =>
+    dispatch(setSelectedNameAction(datasetName));
+  const setSelectedCSV = (csvfilePath: string | File) =>
+    dispatch(setSelectedCSVAction(csvfilePath as string));
+  const setSelectedJSON = (jsonfilePath: string) =>
+    dispatch(setSelectedJSONAction(jsonfilePath));
+  const setHighlightDataset = (id: string | undefined) =>
+    dispatch(setHighlightDatasetAction(id as string));
+
   const [, setDownload] = useState(false);
 
   const handleDatasetClick = (id: string) => {
@@ -161,30 +151,4 @@ const SelectDataset = ({
   );
 };
 
-export default connect(
-  (state: RootState) => ({
-    csvfile: state.csvfile,
-    jsonfile: state.jsonfile,
-    specifiedDatasets: getSpecifiedDatasets(state),
-    name: state.name,
-    highlightDataset: state.highlightDataset,
-    invalidData: state.invalidData,
-  }),
-  (dispatch: Dispatch) => ({
-    resetState() {
-      dispatch(resetState());
-    },
-    setSelectedName(name: string) {
-      dispatch(setSelectedName(name));
-    },
-    setSelectedCSV(csvfilePath: string | File) {
-      dispatch(setSelectedCSV(csvfilePath as string));
-    },
-    setSelectedJSON(jsonfilePath: string) {
-      dispatch(setSelectedJSON(jsonfilePath));
-    },
-    setHighlightDataset(id: string | undefined) {
-      dispatch(setHighlightDataset(id as string));
-    },
-  }),
-)(SelectDataset);
+export default SelectDataset;

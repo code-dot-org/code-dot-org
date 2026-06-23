@@ -1,19 +1,14 @@
 /* React component to handle displaying imported data. */
-import {connect} from 'react-redux';
-
 import {styles} from '../constants';
+import {useAppSelector} from '../hooks';
 import I18n from '../i18n';
-import type {RootState} from '../redux';
-import type {DataRow} from '../types';
 
 import DataTable from './DataTable';
 import Statement from './Statement';
 
-interface DataDisplayProps {
-  data: DataRow[];
-}
+const DataDisplay = () => {
+  const data = useAppSelector(state => state.data);
 
-const DataDisplay = ({data}: DataDisplayProps) => {
   if (data.length === 0) {
     return null;
   }
@@ -38,6 +33,4 @@ const DataDisplay = ({data}: DataDisplayProps) => {
   );
 };
 
-export default connect((state: RootState) => ({
-  data: state.data,
-}))(DataDisplay);
+export default DataDisplay;

@@ -3,15 +3,30 @@ import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 import {Tour} from 'shepherd.js';
 
+import HttpClient from '@cdo/apps/util/HttpClient';
+
 import {DemoType} from '../../teacherDashboard/types/teacherSectionTypes';
 
 import styles from './teacherHomepage.module.scss';
 
 const CHECKLIST_ITEMS = [
-  {id: 'review-syllabus', label: 'Review the syllabus', completed: false},
-  {id: 'learn-to-evaluate', label: 'Learn how to evaluate', completed: false},
-  {id: 'create-section', label: 'Create a class section', completed: true},
+  {id: 'view_syllabus', label: 'Review the syllabus'},
+  {id: 'learn_to_evaluate', label: 'Learn how to evaluate'},
+  {id: 'create_class_section', label: 'Create a class section'},
 ];
+
+const recordTourStart = (tourName: string, demoType: DemoType) => {
+  HttpClient.post(
+    '/dashboardapi/v1/user_product_tours',
+    JSON.stringify({
+      tour_name: tourName,
+      started_at: true,
+      properties: {demo_type: demoType},
+    }),
+    true,
+    {'Content-Type': 'application/json'}
+  ).catch(err => console.error('Failed to record tour start:', err));
+};
 
 interface OnboardingChecklistProps {
   createSectionTour: Tour | null;
@@ -30,12 +45,26 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
   isHidden,
   onHide,
 }) => {
-  const handleButtonClick = (id: string) => {
-    if (id === 'create-section') {
+  const [completedTourNames, setCompletedTourNames] = React.useState<
+    Set<string>
+  >(new Set());
+
+  React.useEffect(() => {
+    HttpClient.get('/dashboardapi/v1/user_product_tours', true)
+      .then(response => response.json() as Promise<string[]>)
+      .then(names => setCompletedTourNames(new Set(names)))
+      .catch(err =>
+        console.error('Failed to fetch tour completion status:', err)
+      );
+  }, []);
+
+  const handleButtonClick = (tourName: string) => {
+    recordTourStart(tourName, demoType);
+    if (tourName === 'create_class_section') {
       createSectionTour?.start();
-    } else if (id === 'review-syllabus') {
+    } else if (tourName === 'view_syllabus') {
       reviewSyllabusTour?.start();
-    } else if (id === 'learn-to-evaluate') {
+    } else if (tourName === 'learn_to_evaluate') {
       learnHowToEvaluateTour?.start();
     }
   };
@@ -58,7 +87,7 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
             Teaching Assistant can help you get started with CodeAI
           </Typography>
           <div className={styles.onboardingChecklistButtons}>
-            {CHECKLIST_ITEMS.map(({id, label, completed}) => (
+            {CHECKLIST_ITEMS.map(({id, label}) => (
               <MuiButton
                 key={id}
                 variant="outlined"
@@ -67,7 +96,7 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
                 onClick={() => handleButtonClick(id)}
                 type="button"
               >
-                {completed && (
+                {completedTourNames.has(id) && (
                   <span className={styles.onboardingChecklistCheckIcon}>
                     <FontAwesomeV6Icon
                       iconName="circle-check"

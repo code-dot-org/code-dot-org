@@ -1,19 +1,12 @@
 /* React component to handle showing details of numerical columns. */
-import {connect} from 'react-redux';
-
 import {styles} from '../constants';
+import {useAppSelector} from '../hooks';
 import I18n from '../i18n';
-import type {RootState} from '../redux';
 import {getNumericalColumnDetails} from '../selectors/currentColumnSelectors';
-import type {NumericalColumnDetails} from '../types';
 
-interface ColumnDetailsNumericalProps {
-  columnDetails: NumericalColumnDetails;
-}
+const ColumnDetailsNumerical = () => {
+  const columnDetails = useAppSelector(getNumericalColumnDetails);
 
-const ColumnDetailsNumerical = ({
-  columnDetails,
-}: ColumnDetailsNumericalProps) => {
   const {extrema, containsOnlyNumbers} = columnDetails;
 
   return (
@@ -35,9 +28,4 @@ const ColumnDetailsNumerical = ({
   );
 };
 
-export default connect(
-  (state: RootState) => ({
-    columnDetails: getNumericalColumnDetails(state),
-  }),
-  {},
-)(ColumnDetailsNumerical);
+export default ColumnDetailsNumerical;
