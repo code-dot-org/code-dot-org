@@ -48,6 +48,7 @@ export interface RootState {
   currentUser: CurrentUserState;
   dance: DanceState;
   header: HeaderReduxState;
+  isRtl: boolean;
   javalab: JavalabState;
   javalabConsole: JavalabConsoleState;
   javalabEditor: JavalabEditorState;
