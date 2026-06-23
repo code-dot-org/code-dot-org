@@ -280,41 +280,27 @@ export const useInstructionsDrawer = ({
     setIsCollapsed(prev => !prev);
   }, [isCollapsed]);
 
-  // The instructions drawer height when the AI Tutor tab is active. Derived from
-  // rawInstructionsHeight (not the displayed instructionsHeight, which is the full
-  // panel height on the Instructions tab), so it stays stable across the tab switch.
-  const activeInstructionsHeight =
+  // The full panel height (whole container). Derived from containerAvailableHeight,
+  // which is stable across tab switches, so it's correct synchronously — unlike the
+  // effect-driven instructionsHeight, which lags a frame.
+  const fullHeight =
     containerAvailableHeight === undefined
       ? undefined
-      : isCollapsed
-      ? 0
-      : Math.min(
-          rawInstructionsHeight,
-          containerAvailableHeight - MIN_CHAT_HEIGHT
-        );
+      : containerAvailableHeight + RESIZE_BAR_SIZE_PX;
 
-  // The chat's natural height when unveiled. Independent of which tab is active,
-  // so the chat is laid out at its final size and revealed in place (the panel
-  // clips it) rather than reflowing/sliding as the panel grows.
-  const chatContentHeight =
-    containerAvailableHeight === undefined
-      ? undefined
-      : isCollapsed
-      ? containerAvailableHeight
-      : Math.max(
-          containerAvailableHeight - (activeInstructionsHeight ?? 0),
-          MIN_CHAT_HEIGHT
-        );
-
-  // The visible chat region (the clip window): collapses to 0 on the Instructions tab.
-  const chatHeight = !aiTutorActive ? 0 : chatContentHeight;
+  // The chat is laid out at the full panel height and bottom-anchored; the chat
+  // panel (a flex item that fills the space left below the instructions drawer)
+  // clips it. Keeping this height constant means the chat never reflows as the
+  // drawer opens, closes, or the tab changes — only the clip moves — so the
+  // message input stays put.
+  const chatContentHeight = fullHeight;
 
   return {
     containerRef,
     instructionsScrollAreaRef,
     instructionsContentRef,
     instructionsHeight,
-    chatHeight,
+    fullHeight,
     chatContentHeight,
     isCollapsed,
     showScrollFade,

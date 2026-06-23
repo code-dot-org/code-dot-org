@@ -54,14 +54,17 @@
 
 .chatPanel {
   position: relative;
-  flex-shrink: 0;
+  // Fill the space left below the instructions drawer. Sizing the chat by flex
+  // (rather than an explicit height) keeps its bottom pinned to the container
+  // bottom on every frame, regardless of the drawer's animation timing, so the
+  // message input never drifts. The drawer's own height transition drives the
+  // reveal; this panel just clips the (fixed-height) chat content.
+  flex: 1;
+  min-height: 0;
   overflow: hidden;
-  // The chat (and the toggle below) fade + slide in when the AI Tutor tab is
-  // selected, and collapse away on the Instructions tab. The panel is a clip
-  // window: it animates its height while the chat content stays fixed (see
-  // .chatContent), so the chat is revealed in place rather than reflowing.
+  // Fade out on the Instructions tab.
   opacity: 1;
-  transition: height 0.2s ease, opacity 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 // Applied to the chat panel and toggle when the Instructions tab is showing:
