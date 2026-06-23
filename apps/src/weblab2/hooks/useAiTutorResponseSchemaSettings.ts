@@ -2,6 +2,7 @@ import {getFolderPath} from '@codebridge/utils';
 import {useMemo} from 'react';
 
 import {ResponseSchemaSettings} from '@cdo/apps/aichat/types';
+import {formatCopyPasteResponse} from '@cdo/apps/aiTutor/helpers/aiTutorResponseHelpers';
 import {
   setProjectSourceBeforeAiTutorVersion,
   setSource,
@@ -17,7 +18,6 @@ import {
   acceptRejectAnswerTypes,
   aiTutorResponseJsonSchema,
   formatAcceptRejectResponse,
-  formatCopyPasteResponse,
   getMergedAiTutorCodeWithSource,
   isAcceptRejectCodeFileTypes,
 } from '../helpers/aiTutorStructuredResponseHelper';
