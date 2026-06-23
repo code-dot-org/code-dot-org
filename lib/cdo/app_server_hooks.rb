@@ -31,11 +31,6 @@ module Cdo
       require 'cdo/aws/metrics'
       Cdo::Metrics.put('App Server', 'WorkerBoot', 1, {Host: host})
 
-      # Statsig is initialized here for managed environments. For development, it is
-      # initialized in config/initializers/statsig.rb
-      require 'cdo/statsig'
-      Cdo::StatsigInitializer.init
-
       # Publish per-worker memory metrics in production, the managed test server, and adhoc environments.
       if (CDO.rack_env?(:production) || CDO.test_system? || CDO.rack_env?(:adhoc)) &&
           DCDO.get('publish_worker_memory_metrics', false) &&
@@ -52,6 +47,11 @@ module Cdo
           }
         ).start
       end
+
+      # Statsig is initialized here for managed environments. For development, it is
+      # initialized in config/initializers/statsig.rb
+      require 'cdo/statsig'
+      Cdo::StatsigInitializer.init
     end
 
     def self.after_booted
