@@ -172,6 +172,62 @@ describe('Markdown', () => {
       expect(render(md, [inlineStyles])).toContain('color:red');
     });
 
+    describe('inlineStyles restricts which properties survive', () => {
+      it('keeps presentational properties but drops positioning/stacking', () => {
+        const md =
+          '<span style="color:red;position:fixed;top:0;z-index:99999">x</span>';
+        const html = render(md, [inlineStyles]);
+        expect(html).toContain('color:red');
+        expect(html).not.toContain('position');
+        expect(html).not.toContain('z-index');
+        expect(html).not.toContain('top:');
+      });
+
+      it('keeps background-color but drops resource-loading background-image', () => {
+        const md =
+          '<span style="background-color:#eee;background-image:url(https://evil.example/t.gif)">x</span>';
+        const html = render(md, [inlineStyles]);
+        expect(html).toContain('background-color');
+        expect(html).not.toContain('background-image');
+        expect(html).not.toContain('evil.example');
+        expect(html).not.toContain('url(');
+      });
+
+      it.each([
+        '<span style="transform:scale(40)">x</span>',
+        '<span style="opacity:0">x</span>',
+        '<span style="cursor:pointer">x</span>',
+        // a url() smuggled into an allowed property is still rejected by value
+        '<span style="border-color:red;background-color:url(https://evil.example/t.gif)">x</span>',
+        // hex-escape obfuscation of url(
+        '<span style="background-color:\\75rl(https://evil.example/t.gif)">x</span>',
+      ])('drops the unsafe declaration in %s', markdown => {
+        const html = render(markdown, [inlineStyles]);
+        expect(html).not.toContain('evil.example');
+        expect(html).not.toContain('url(');
+        expect(html).not.toContain('transform');
+        expect(html).not.toContain('opacity');
+        expect(html).not.toContain('cursor');
+      });
+
+      it('removes the style attribute entirely when nothing safe remains', () => {
+        const md = '<span style="position:fixed;z-index:9">danger</span>';
+        const html = render(md, [inlineStyles]);
+        expect(html).not.toContain('style');
+        expect(html).not.toContain('position');
+        // the element and its text still render
+        expect(html).toContain('danger');
+      });
+
+      it('does not end a declaration on a `;` inside a value', () => {
+        const md =
+          '<span style="font-family:&quot;a;b&quot;, sans-serif;color:red">x</span>';
+        const html = render(md, [inlineStyles]);
+        expect(html).toContain('color:red');
+        expect(html).toContain('font-family');
+      });
+    });
+
     it('embeds permits iframes', () => {
       const md = '<iframe src="https://e.org" title="t"></iframe>';
       expect(render(md)).not.toContain('<iframe');
