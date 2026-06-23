@@ -1,5 +1,5 @@
+import askContract from '@cdo/apps/aiTutor/prompts/answerTypeContracts/ask.md';
 import {generateAiTutorPrompt} from '@cdo/apps/weblab2/helpers/aiTutorPromptGenerator';
-import askContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/ask.md';
 import buildCSSContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildCSS.md';
 import buildHTMLContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildHTML.md';
 import askTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/ask.md';
