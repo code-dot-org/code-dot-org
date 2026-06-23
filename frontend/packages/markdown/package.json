@@ -34,7 +34,7 @@
     "stylelint": "stylelint src/**/*.css",
     "stylelint:fix": "yarn run stylelint --fix",
     "test": "vitest --run",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc -b --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "stylelint": {
