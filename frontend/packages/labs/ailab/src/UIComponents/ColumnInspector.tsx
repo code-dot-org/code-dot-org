@@ -2,14 +2,11 @@
   React component to handle displaying details, including data visualizations,
   for selected columns.
 */
-import {connect} from 'react-redux';
-
 import {styles, ColumnTypes} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
+import {useAppSelector} from '../hooks';
 import I18n from '../i18n';
-import type {RootState} from '../redux';
 import {getCurrentColumnDetails} from '../selectors/currentColumnSelectors';
-import type {CurrentColumnInspector} from '../types';
 
 import AddFeatureButton from './AddFeatureButton';
 import ColumnDataTypeDropdown from './ColumnDataTypeDropdown';
@@ -21,17 +18,12 @@ import ScrollableContent from './ScrollableContent';
 import SelectLabelButton from './SelectLabelButton';
 import UniqueOptionsWarning from './UniqueOptionsWarning';
 
-interface ColumnInspectorProps {
-  currentColumnDetails: CurrentColumnInspector | undefined;
-  currentPanel: string;
-  datasetId: string | undefined;
-}
-
-const ColumnInspector = ({
-  currentColumnDetails,
-  currentPanel,
-  datasetId,
-}: ColumnInspectorProps) => {
+const ColumnInspector = () => {
+  const currentColumnDetails = useAppSelector(getCurrentColumnDetails);
+  const currentPanel = useAppSelector(state => state.currentPanel);
+  const datasetId = useAppSelector(
+    state => state.metadata && state.metadata.name,
+  );
   const selectingFeatures = currentPanel === 'dataDisplayFeatures';
   const selectingLabel = currentPanel === 'dataDisplayLabel';
 
@@ -106,11 +98,4 @@ const ColumnInspector = ({
   );
 };
 
-export default connect(
-  (state: RootState) => ({
-    currentColumnDetails: getCurrentColumnDetails(state),
-    currentPanel: state.currentPanel,
-    datasetId: state.metadata && state.metadata.name,
-  }),
-  {},
-)(ColumnInspector);
+export default ColumnInspector;

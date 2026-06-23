@@ -1,5 +1,6 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2026-06-18T07:29:26.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Check Your Understanding",
-    "long_instructions": "####In the kitchen level, the burger started cooking in the background, but the server tried to serve the plate before the burger was ready.\r\n\r\n> 1. In your own words, explain why the server served an empty plate even though the burger was still cooking.\r\n>\r\n> 2. What would the code need to do differently to make sure the data is ready before using it?",
+    "long_instructions": "####Here is a function written with .then() chains. Your job is to label what async and await would replace if this were refactored:\r\n\r\n```\r\nfetch(url)\r\n  .then(r => r.json())\r\n  .then(data => display.innerHTML = data.name)\r\n```\r\n\r\n> 1. Where would the async keyword go? \r\n>\r\n> 2. Where would the await keywords go?\r\n>\r\n> 3. Explain what await is doing at each step",
     "stay_on_level_after_submit": "false",
     "height": "100",
     "placeholder": "enter response here...",
@@ -20,7 +21,8 @@
     "skip_sound": true,
     "name_suffix": "_2026"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-06-18T07:29:26.843+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson2-level3-2026\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson2-level3-2026\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-06-18T07:29:26.843+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson2-level3-2026\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson2-level3-2026\"},{\"changed_at\":\"2026-06-18 07:32:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

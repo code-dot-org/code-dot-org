@@ -5,8 +5,6 @@ import {connect} from 'react-redux';
 import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
 
-import color from '../../util/color';
-
 import ProjectCard from './ProjectCard.jsx';
 import {personalProjectDataPropType} from './projectConstants';
 
@@ -67,7 +65,7 @@ const styles = {
     fontSize: 16,
     ...fontConstants['main-font-regular'],
     zIndex: 2,
-    color: color.neutral_dark,
+    color: 'var(--text-neutral-primary)',
     width: 940,
     marginBottom: 0,
   },

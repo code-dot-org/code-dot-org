@@ -1,0 +1,26 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-06-22T22:15:40.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "Being a web designer means being someone with a vision. It's about knowing what you want to build - and then figuring out how to turn that idea into something real.",
+        "imageUrl": "https://images.code.org/0d4add0b21cd8dd5adab409d7ec339a7-iste_wireframe_panel.png",
+        "key": "hoai-web-design-v2-1-11300f40-e480-4236-9f18-43bbbb1f36af",
+        "typing": false,
+        "fadeInOverPrevious": true,
+        "layout": "text-top-right"
+      }
+    ],
+    "name_suffix": "_iste-2026",
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-22T22:15:40.253+00:00\",\"changed\":[\"cloned from \\\"iste_2026_content_panel\\\"\"],\"cloned_from\":\"iste_2026_content_panel\"},{\"changed_at\":\"2026-06-22 22:17:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"}]"
+}]]></config>
+</Panels>

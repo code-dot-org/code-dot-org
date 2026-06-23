@@ -63,21 +63,8 @@ module ShareFiltering
     failure = find_email_or_phone_failure(program_text, exceptions: exceptions)
     return failure if failure
 
-    # Address: check each text block independently to prevent cross-block bleeding.
-    candidate = nil
-    texts.each do |text|
-      candidate = Geocoder.extract_address_candidate(text)
-      break if candidate
-    end
-    if candidate
-      address = Geocoder.find_potential_street_address(candidate)
-      if address
-        failure = ShareFailure.new(FailureType::ADDRESS, address)
-        raise PIIFilterException.new("Address PII Filter Violation", failure) if exceptions
-        return failure
-      end
-    end
-
+    # Temporarily disable address filtering to prevent false positives.
+    # TODO: re-enable this when we improve the user experience of the address filter. https://github.com/code-dot-org/code-dot-org/pull/73395
     find_profanity_failure(program_text, locale, {}, exceptions: exceptions)
   end
 

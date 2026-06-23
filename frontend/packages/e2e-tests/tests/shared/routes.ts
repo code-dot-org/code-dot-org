@@ -5,6 +5,8 @@ export interface LabLevelUrlParams {
   level: number;
   /** Suppress level video autoplay. On by default — nearly every scenario wants it. */
   noautoplay?: boolean;
+  /** Force a UI locale. Emitted as a /lang/<code> path segment, which Rails rewrites to ?lang=<code>. */
+  lang?: string;
 }
 
 /**
@@ -19,12 +21,14 @@ export function labLevelUrl({
   lesson,
   level,
   noautoplay = true,
+  lang,
 }: LabLevelUrlParams): string {
   const query = new URLSearchParams();
   if (noautoplay) {
     query.set('noautoplay', 'true');
   }
   const queryString = query.toString();
-  const path = `/courses/${course}/units/${unit}/lessons/${lesson}/levels/${level}`;
+  const langSegment = lang ? `/lang/${lang}` : '';
+  const path = `/courses/${course}/units/${unit}/lessons/${lesson}/levels/${level}${langSegment}`;
   return queryString ? `${path}?${queryString}` : path;
 }

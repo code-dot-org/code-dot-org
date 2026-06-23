@@ -15,9 +15,13 @@ import rehypeSanitize from 'rehype-sanitize';
 import remarkRehype from 'remark-rehype';
 import unified from 'unified';
 
+import localization from '@cdo/apps/localization';
+
 import {WeakMapPlus} from '../util/dataStructures/WeakMapPlus';
 
 import externalLinks from './plugins/externalLinks';
+import localizeMarkdownParagraphs from './plugins/localizeMarkdownParagraphs';
+import notranslateMarkdownParagraphs from './plugins/notranslateMarkdownParagraphs';
 
 /**
  * Basic component for rendering a markdown string as HTML, with sanitization.
@@ -27,6 +31,7 @@ import externalLinks from './plugins/externalLinks';
 class SafeMarkdown extends React.Component {
   static propTypes = {
     markdown: PropTypes.string.isRequired,
+    localized: PropTypes.bool,
     openExternalLinksInNewTab: PropTypes.bool,
     unwrapped: PropTypes.bool,
     className: PropTypes.string,
@@ -53,6 +58,19 @@ class SafeMarkdown extends React.Component {
     allowEmbeds: PropTypes.bool,
   };
 
+  // Translation happens synchronously inside render() (see the
+  // localizeParagraphs rehype plugin below), so we must re-render whenever the
+  // active locale changes to pick up the new strings.
+  componentDidMount() {
+    localization.on('change', this.onLocaleChange);
+  }
+
+  componentWillUnmount() {
+    localization.off('change', this.onLocaleChange);
+  }
+
+  onLocaleChange = () => this.forceUpdate();
+
   render() {
     // We only open external links in a new tab if it's explicitly specified
     // that we do so; this is absolutely not something we want to do as a
@@ -68,7 +86,10 @@ class SafeMarkdown extends React.Component {
     } else {
       getProcessor = markdownToReact;
     }
-    const processor = getProcessor(this.props.rehypeMap);
+    const processor = getProcessor(
+      this.props.rehypeMap,
+      this.props.localized ?? true
+    );
 
     const rendered = Object(processor.processSync(this.props.markdown).result);
 
@@ -134,19 +155,23 @@ const blocklyTags = [
   'xml',
 ];
 schema.tagNames = schema.tagNames.concat(blocklyTags);
+const makeBlocklyWrapper = tag => {
+  // Wrap the raw blockly tag (xml, block, ...) in a React function component
+  // so it can sit in a React tree — <xml> etc. are not valid React tags. The
+  // "is" attribute suppresses React's unknown-tag warning:
+  // https://github.com/facebook/react/issues/11184#issuecomment-335942439
+  const wrapper = function (props) {
+    const BlocklyElement = tag;
+    return <BlocklyElement is={tag} {...props} />;
+  };
+  wrapper.displayName = `Blockly_${tag}`;
+  return wrapper;
+};
+
 let blocklyComponentWrappers = {};
 blocklyTags.forEach(tag => {
   schema.attributes[tag] = ['block_text', 'id', 'inline', 'name', 'type'];
-
-  // Create a React component to wrap each Blockly tag. Since these elements ultimately
-  // render as React components, creating a wrapper makes them valid (whereas <xml>
-  // is not a valid React tag).
-  blocklyComponentWrappers[tag] = function (props) {
-    const BlocklyElement = tag;
-    // The "is" attribute prevents React from warning about unrecognized tags:
-    // https://github.com/facebook/react/issues/11184#issuecomment-335942439
-    return <BlocklyElement is={tag} {...props} />;
-  };
+  blocklyComponentWrappers[tag] = makeBlocklyWrapper(tag);
 });
 
 // These wrappers add context for Localize to better understand the markdown
@@ -155,9 +180,6 @@ const localizationComponentWrappers = {
   a: function (props) {
     // eslint-disable-next-line jsx-a11y/anchor-has-content
     return <a {...props} data-lz-url="true" data-localize="markdown-url" />;
-  },
-  p: function (props) {
-    return <p {...props} data-isolate="true" />;
   },
 };
 
@@ -186,9 +208,10 @@ const schemaWithEmbeds = {
  * WeakMap does not support `undefined` as a key.
  **/
 const markdownProcessorCache = new WeakMapPlus();
+const localizedMarkdownProcessorCache = new WeakMapPlus();
 
-const buildMarkdownProcessor = (rehypeMap, processorSchema) =>
-  unified()
+const buildMarkdownProcessor = (rehypeMap, processorSchema, localized) => {
+  const preface = unified()
     .use(Processor.getParser())
     .use([
       clickableText,
@@ -199,15 +222,21 @@ const buildMarkdownProcessor = (rehypeMap, processorSchema) =>
     ])
     .use(remarkRehype, {allowDangerousHtml: true})
     .use(rehypeRaw)
-    .use(rehypeSanitize, processorSchema)
-    .use(rehypeReact, {
-      createElement: React.createElement,
-      components: {
-        ...blocklyComponentWrappers,
-        ...localizationComponentWrappers,
-        ...rehypeMap,
-      },
-    });
+    .use(rehypeSanitize, processorSchema);
+
+  const possiblyLocalized = localized
+    ? preface.use(localizeMarkdownParagraphs)
+    : preface.use(notranslateMarkdownParagraphs);
+
+  return possiblyLocalized.use(rehypeReact, {
+    createElement: React.createElement,
+    components: {
+      ...blocklyComponentWrappers,
+      ...localizationComponentWrappers,
+      ...rehypeMap,
+    },
+  });
+};
 
 /*
  * Create a markdown to react processor cached based on the value of rehypeMap. This ensures
@@ -219,63 +248,87 @@ const buildMarkdownProcessor = (rehypeMap, processorSchema) =>
  * components) or to define the mapping in an ES module and import it if used in multiple
  * components.
  */
-const markdownToReact = rehypeMap => {
-  if (!markdownProcessorCache.has(rehypeMap)) {
-    markdownProcessorCache.set(
-      rehypeMap,
-      buildMarkdownProcessor(rehypeMap, schema)
-    );
+const markdownToReact = (rehypeMap, localized) => {
+  const cache = localized
+    ? localizedMarkdownProcessorCache
+    : markdownProcessorCache;
+
+  if (!cache.has(rehypeMap)) {
+    cache.set(rehypeMap, buildMarkdownProcessor(rehypeMap, schema, localized));
   }
-  return markdownProcessorCache.get(rehypeMap);
+
+  return cache.get(rehypeMap);
 };
 
 /* Cache for processors that allow iframe embeds (non-student PL content). */
 const markdownProcessorWithEmbedsCache = new WeakMapPlus();
+const localizedMarkdownProcessorWithEmbedsCache = new WeakMapPlus();
 
-const markdownToReactWithEmbeds = rehypeMap => {
-  if (!markdownProcessorWithEmbedsCache.has(rehypeMap)) {
-    markdownProcessorWithEmbedsCache.set(
+const markdownToReactWithEmbeds = (rehypeMap, localized) => {
+  const cache = localized
+    ? localizedMarkdownProcessorWithEmbedsCache
+    : markdownProcessorWithEmbedsCache;
+
+  if (!cache.has(rehypeMap)) {
+    cache.set(
       rehypeMap,
-      buildMarkdownProcessor(rehypeMap, schemaWithEmbeds)
+      buildMarkdownProcessor(rehypeMap, schemaWithEmbeds, localized)
     );
   }
-  return markdownProcessorWithEmbedsCache.get(rehypeMap);
+
+  return cache.get(rehypeMap);
 };
 
 /* Map to cache markdown to react processors w/ externalLinks plugin. */
 const markdownProcessorExternalLinksCache = new WeakMapPlus();
+const localizedMarkdownProcessorExternalLinksCache = new WeakMapPlus();
 
 /*
  * Create a markdown to react processor that adds the externalLinks plugin
  * and that is cached based on the value of rehypeMap.
  */
-const markdownToReactExternalLinks = rehypeMap => {
-  if (!markdownProcessorExternalLinksCache.has(rehypeMap)) {
+const markdownToReactExternalLinks = (rehypeMap, localized) => {
+  const cache = localized
+    ? localizedMarkdownProcessorExternalLinksCache
+    : markdownProcessorExternalLinksCache;
+
+  if (!cache.has(rehypeMap)) {
     // We use `()` to get a new unfrozen "copy" of the processor created
     // (or returned from cache) by `markdownToReact(rehypeMap)`.
     // See: https://github.com/unifiedjs/unified?tab=readme-ov-file#processor
-    const processor = markdownToReact(rehypeMap)().use(externalLinks, {
-      links: 'all',
-    });
-    markdownProcessorExternalLinksCache.set(rehypeMap, processor);
-  }
-  return markdownProcessorExternalLinksCache.get(rehypeMap);
-};
-
-/* Map to cache processors with both iframe embeds and external-links-in-new-tab. */
-const markdownProcessorWithEmbedsAndExternalLinksCache = new WeakMapPlus();
-
-const markdownToReactWithEmbedsAndExternalLinks = rehypeMap => {
-  if (!markdownProcessorWithEmbedsAndExternalLinksCache.has(rehypeMap)) {
-    const processor = markdownToReactWithEmbeds(rehypeMap)().use(
+    const processor = markdownToReact(rehypeMap, localized)().use(
       externalLinks,
       {
         links: 'all',
       }
     );
-    markdownProcessorWithEmbedsAndExternalLinksCache.set(rehypeMap, processor);
+    cache.set(rehypeMap, processor);
   }
-  return markdownProcessorWithEmbedsAndExternalLinksCache.get(rehypeMap);
+
+  return cache.get(rehypeMap);
+};
+
+/* Map to cache processors with both iframe embeds and external-links-in-new-tab. */
+const markdownProcessorWithEmbedsAndExternalLinksCache = new WeakMapPlus();
+const localizedMarkdownProcessorWithEmbedsAndExternalLinksCache =
+  new WeakMapPlus();
+
+const markdownToReactWithEmbedsAndExternalLinks = (rehypeMap, localized) => {
+  const cache = localized
+    ? localizedMarkdownProcessorWithEmbedsAndExternalLinksCache
+    : markdownProcessorWithEmbedsAndExternalLinksCache;
+
+  if (!cache.has(rehypeMap)) {
+    const processor = markdownToReactWithEmbeds(rehypeMap, localized)().use(
+      externalLinks,
+      {
+        links: 'all',
+      }
+    );
+    cache.set(rehypeMap, processor);
+  }
+
+  return cache.get(rehypeMap);
 };
 
 export default SafeMarkdown;

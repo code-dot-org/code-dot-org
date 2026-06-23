@@ -1097,9 +1097,11 @@ Dashboard::Application.routes.draw do
       end
     end
     if rack_env?(:staging, :test)
-      scope path: '/api/dev', controller: :dev do
-        post 'check-dts', action: 'check_dts'
-        post 'start-build', action: 'start_build'
+      scope '/api' do
+        namespace :dev do
+          post 'check-dts', action: :check_dts
+          post 'start-build', action: :start_build
+        end
       end
     end
 
@@ -1305,8 +1307,6 @@ Dashboard::Application.routes.draw do
     post '/profanity/find', to: 'profanity#find'
 
     get '/help', to: redirect("https://support.code.org")
-
-    post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
 
     get '/javabuilder/access_token', to: 'javabuilder_sessions#get_access_token'
     post '/javabuilder/access_token_with_override_sources', to: 'javabuilder_sessions#access_token_with_override_sources'
