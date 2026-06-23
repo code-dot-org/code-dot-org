@@ -1,2 +1,2 @@
 export const enableUserAddedSelectionContext = (appName: string) =>
-  appName === 'weblab2';
+  appName === 'weblab2' || appName === 'pythonlab';
