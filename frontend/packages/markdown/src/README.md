@@ -86,11 +86,13 @@ need just one or two.
 
 ### Authoring an extension
 
-1. Create a module under `extensions/`, one file per extension.
+1. Create a directory `extensions/<name>/` with `<name>.tsx` (or `.ts`); keep
+   the extension's own files (e.g. `<name>.module.css`) alongside it. Shared
+   helpers live at the `extensions/` top level (e.g. `mdast.ts`).
 2. Export a single `MarkdownExtension` value.
 3. Widen `sanitizeSchema` to cover exactly the tags/attributes you introduce —
    no more.
-4. Re-export it from `extensions/index.ts`.
+4. Re-export it from `extensions/index.ts` (`./<name>/<name>`).
 5. Add a test asserting your feature is **absent when not enabled** and present
    when it is (the isolation guarantee).
 

@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import type {Components} from 'hast-util-to-jsx-runtime';
 import type {ReactNode} from 'react';
 
-import type {MarkdownExtension} from '../extension';
+import type {MarkdownExtension} from '../../extension';
 
 import moduleStyles from './callout.module.css';
 

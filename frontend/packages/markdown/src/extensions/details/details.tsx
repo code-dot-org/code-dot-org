@@ -1,6 +1,6 @@
 import type {Element, Nodes, Root} from 'hast';
 
-import type {MarkdownExtension} from '../extension';
+import type {MarkdownExtension} from '../../extension';
 
 // Opening line: 3+ colons, optional space, "details", optional space, a
 // [summary] in brackets, optional trailing colons. Matches the legacy syntax in

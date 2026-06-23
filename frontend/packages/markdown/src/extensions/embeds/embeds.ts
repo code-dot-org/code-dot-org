@@ -1,4 +1,4 @@
-import type {MarkdownExtension} from '../extension';
+import type {MarkdownExtension} from '../../extension';
 
 /**
  * Permits `<iframe>` embeds.

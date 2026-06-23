@@ -2,9 +2,9 @@ import classNames from 'classnames';
 import type {Components} from 'hast-util-to-jsx-runtime';
 import {type CSSProperties, type ReactNode} from 'react';
 
-import type {MarkdownExtension} from '../extension';
+import type {MarkdownExtension} from '../../extension';
 
-import {type MdastNode, visit} from './mdast';
+import {type MdastNode, visit} from '../mdast';
 import moduleStyles from './expandableImages.module.css';
 
 const EXPANDABLE_SUFFIX = 'expandable';

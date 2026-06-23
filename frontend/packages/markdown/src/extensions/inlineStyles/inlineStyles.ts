@@ -1,6 +1,6 @@
 import type {Nodes, Root} from 'hast';
 
-import type {MarkdownExtension} from '../extension';
+import type {MarkdownExtension} from '../../extension';
 
 /*
  * Presentational CSS properties an author may set inline. Deliberately omits

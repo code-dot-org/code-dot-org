@@ -2,9 +2,9 @@ import classNames from 'classnames';
 import type {Components} from 'hast-util-to-jsx-runtime';
 import type {ReactNode} from 'react';
 
-import type {MarkdownExtension} from '../extension';
+import type {MarkdownExtension} from '../../extension';
 
-import {type MdastNode} from './mdast';
+import {type MdastNode} from '../mdast';
 import moduleStyles from './visualCodeBlock.module.css';
 
 // hast property name (camelCase) carrying the validated hex color.

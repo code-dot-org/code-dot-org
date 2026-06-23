@@ -1,6 +1,6 @@
 import type {Element, Nodes, Root} from 'hast';
 
-import type {MarkdownExtension} from '../extension';
+import type {MarkdownExtension} from '../../extension';
 
 export interface ExternalLinksOptions {
   /**
