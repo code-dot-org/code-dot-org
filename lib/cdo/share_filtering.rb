@@ -64,7 +64,7 @@ module ShareFiltering
     return failure if failure
 
     # Temporarily disable address filtering to prevent false positives.
-    # TODO: re-enable this when we improve the user experience of the address filter.
+    # TODO: re-enable this when we improve the user experience of the address filter. https://github.com/code-dot-org/code-dot-org/pull/73395
     find_profanity_failure(program_text, locale, {}, exceptions: exceptions)
   end
 
