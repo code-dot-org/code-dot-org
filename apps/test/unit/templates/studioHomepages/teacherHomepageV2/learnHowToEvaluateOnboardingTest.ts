@@ -260,7 +260,7 @@ describe('student-snapshot-step when handler', () => {
     expect(mockTour.next).not.toHaveBeenCalled();
   });
 
-  it('ai-insights step has two buttons that branch to cfu and feedback steps', () => {
+  it('ai-insights step has a single next button that advances the tour', () => {
     document.body.innerHTML += `<div id="ui-test-lesson-insight-widget"></div>`;
     const steps = createLearnHowToEvaluateProgressSteps(
       mockTour as unknown as Tour
@@ -270,15 +270,10 @@ describe('student-snapshot-step when handler', () => {
     )!;
     const buttons = step.buttons as {text: string; action: () => void}[];
 
-    expect(buttons).toHaveLength(2);
+    expect(buttons).toHaveLength(1);
 
     buttons[0].action();
-    expect(mockTour.show).toHaveBeenCalledWith('student-snapshot-cfu-step');
-
-    buttons[1].action();
-    expect(mockTour.show).toHaveBeenCalledWith(
-      'student-snapshot-ai-feedback-step'
-    );
+    expect(mockTour.next).toHaveBeenCalledTimes(1);
   });
 
   it('ai-insights step highlights the lesson insight widget on show and removes it on hide', () => {

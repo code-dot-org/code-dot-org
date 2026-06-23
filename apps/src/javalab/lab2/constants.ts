@@ -21,4 +21,20 @@ export const DEFAULT_PROJECT: ProjectSources = {
 
 export const JAVALAB_EDITABLE_FILE_TYPES = ['java', 'txt', 'csv', 'json'];
 
-export const JAVALAB_SUPPORTED_FILE_TYPES = JAVALAB_EDITABLE_FILE_TYPES;
+// Media types must be accepted by both upload endpoints:
+// LevelStarterAssetsController::VALID_FILE_EXTENSIONS (start mode) and
+// AssetBucket#allowed_file_types (student projects).
+export const JAVALAB_IMAGE_FILE_TYPES = ['png', 'jpg', 'jpeg', 'gif'];
+export const JAVALAB_AUDIO_FILE_TYPES = ['wav', 'mp3'];
+export const JAVALAB_MEDIA_FILE_TYPES = [
+  ...JAVALAB_IMAGE_FILE_TYPES,
+  ...JAVALAB_AUDIO_FILE_TYPES,
+];
+
+// Media types are uploadable but stay out of JAVALAB_EDITABLE_FILE_TYPES,
+// which feeds the new-file dialog's extension dropdown — users shouldn't
+// create empty .png files.
+export const JAVALAB_SUPPORTED_FILE_TYPES = [
+  ...JAVALAB_EDITABLE_FILE_TYPES,
+  ...JAVALAB_MEDIA_FILE_TYPES,
+];

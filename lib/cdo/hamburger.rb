@@ -95,8 +95,7 @@ class Hamburger
     is_teacher_or_student = options[:user_type] == "teacher" || options[:user_type] == "student"
     is_level = options[:level]
 
-    ge_region = Cdo::GlobalEdition.region_available?(options[:ge_region]) ? options[:ge_region] : :root
-    ge_config = Cdo::GlobalEdition.configuration_for(ge_region)[:header] || {}
+    ge_config = Cdo::GlobalEdition.region_config(options[:ge_region], :header) || {}
     ge_hamburger_config = ge_config[:hamburger] || {}
 
     # Get visibility CSS.
@@ -226,8 +225,7 @@ class Hamburger
   def self.get_header_contents(options)
     loc_prefix = options[:loc_prefix]
 
-    ge_region = Cdo::GlobalEdition.region_available?(options[:ge_region]) ? options[:ge_region] : :root
-    ge_config = Cdo::GlobalEdition.configuration_for(ge_region)[:header] || {}
+    ge_config = Cdo::GlobalEdition.region_config(options[:ge_region], :header) || {}
     ge_top_config = ge_config[:top] || {}
 
     links = ge_top_config[:signed_out] || []

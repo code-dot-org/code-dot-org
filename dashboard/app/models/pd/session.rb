@@ -25,6 +25,24 @@
 require 'cdo/code_generation'
 
 class Pd::Session < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :restricted,
+    pd_workshop_id: :restricted,
+    start: :restricted,
+    end: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
+    deleted_at: :restricted,
+    code: :restricted,
+    session_format: :restricted,
+    time_zone: :restricted,
+    meeting_link: :restricted,
+    location_name: :restricted,
+    location_address: :restricted,
+  )
+
   include Pd::UrlValidator
 
   # creates a hash like {in_person: 0, virtual: 1}

@@ -9,6 +9,10 @@ import {TrainingPage} from './TrainingPage';
  * Yes button label: "Fish". No button label: "Not Fish".
  */
 export class FishVTrashPage extends TrainingPage {
+  protected override get appMode() {
+    return AppMode.FishVTrash;
+  }
+
   /** "Fish" button — exact match so it doesn't also resolve "Not Fish". */
   get yesButton(): Locator {
     return this.page.getByRole('button', {name: 'Fish', exact: true});
@@ -18,15 +22,20 @@ export class FishVTrashPage extends TrainingPage {
     return this.getButton('Not Fish');
   }
 
+  protected override async waitForReady(): Promise<void> {
+    await this.waitForTrainingScene();
+  }
+
   /**
-   * Navigate to FishVTrash and wait for the training scene.
+   * Convenience: `new FishVTrashPage(page).load(opts)`.
    *
    * @param page - Playwright Page fixture.
+   * @param opts - Forwarded to {@link load}.
    */
-  static async load(page: Page): Promise<FishVTrashPage> {
-    const p = new FishVTrashPage(page);
-    await p.goto(AppMode.FishVTrash);
-    await p.waitForTrainingScene();
-    return p;
+  static load(
+    page: Page,
+    opts: {freeze?: boolean} = {},
+  ): Promise<FishVTrashPage> {
+    return new FishVTrashPage(page).load(opts);
   }
 }

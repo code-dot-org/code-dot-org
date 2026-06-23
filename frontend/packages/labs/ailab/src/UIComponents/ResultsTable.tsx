@@ -1,35 +1,31 @@
 /* React component to handle displaying test data and A.I. Bot's guesses. */
 import {useCallback} from 'react';
-import {connect} from 'react-redux';
-import type {Dispatch} from 'redux';
 
 import {styles, colors, REGRESSION_ERROR_TOLERANCE} from '../constants';
 import {getLocalizedColumnName, isRegression} from '../helpers/columnDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
+import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
-import type {RootState} from '../redux';
 import {setResultsHighlightRow} from '../redux';
 import type {ResultsData} from '../types';
 
 interface ResultsTableProps {
-  selectedFeatures: string[];
-  labelColumn: string;
   results: ResultsData;
-  isRegression: boolean;
-  setResultsHighlightRow: (row: number | undefined) => void;
-  resultsHighlightRow: number | undefined;
-  datasetId: string;
 }
 
-const ResultsTable = ({
-  selectedFeatures,
-  labelColumn,
-  results,
-  isRegression: isRegressionMode,
-  setResultsHighlightRow,
-  resultsHighlightRow,
-  datasetId,
-}: ResultsTableProps) => {
+const ResultsTable = ({results}: ResultsTableProps) => {
+  const dispatch = useAppDispatch();
+  const selectedFeatures = useAppSelector(state => state.selectedFeatures);
+  const labelColumn = useAppSelector(state => state.labelColumn || 'unknown');
+  const isRegressionMode = useAppSelector(isRegression);
+  const resultsHighlightRow = useAppSelector(
+    state => state.resultsHighlightRow,
+  );
+  const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
+
+  const highlightRow = (row: number | undefined) =>
+    dispatch(setResultsHighlightRow(row as number));
+
   const getRowCellStyle = useCallback(
     (index: number) => {
       return {
@@ -122,8 +118,8 @@ const ResultsTable = ({
               return (
                 <tr
                   key={index}
-                  onMouseEnter={() => setResultsHighlightRow(index)}
-                  onMouseLeave={() => setResultsHighlightRow(undefined)}
+                  onMouseEnter={() => highlightRow(index)}
+                  onMouseLeave={() => highlightRow(undefined)}
                 >
                   {examples.map((example, i) => {
                     return (
@@ -151,17 +147,4 @@ const ResultsTable = ({
   );
 };
 
-export default connect(
-  (state: RootState) => ({
-    selectedFeatures: state.selectedFeatures,
-    labelColumn: state.labelColumn || 'unknown',
-    isRegression: isRegression(state),
-    resultsHighlightRow: state.resultsHighlightRow,
-    datasetId: state.metadata?.name || 'unknown',
-  }),
-  (dispatch: Dispatch) => ({
-    setResultsHighlightRow(column: number | undefined) {
-      dispatch(setResultsHighlightRow(column as number));
-    },
-  }),
-)(ResultsTable);
+export default ResultsTable;

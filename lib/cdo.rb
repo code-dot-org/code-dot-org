@@ -148,13 +148,16 @@ module Cdo
       MARKETING_SITES_HOSTS
     end
 
+    def normalize_path(path)
+      path.empty? || path[0] == '/' ? path : "/#{path}"
+    end
+
     def site_url(domain, path = '', scheme = '')
-      path = '/' + path unless path.empty? || path[0] == '/'
-      "#{scheme}//#{site_host(domain)}#{path}"
+      "#{scheme}//#{site_host(domain)}#{normalize_path(path)}"
     end
 
     def studio_url(path = '', scheme = default_scheme, ge_region: Cdo::GlobalEdition.current_region)
-      path = Cdo::GlobalEdition.path(ge_region, path) if ge_region
+      path = Cdo::GlobalEdition.path(ge_region, normalize_path(path)) if ge_region
       site_url('studio.code.org', path, scheme)
     end
 

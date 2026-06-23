@@ -1,19 +1,16 @@
 /* React component to handle toggling between correct/incorrect test results */
 import {faTimes, faCheck} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {connect} from 'react-redux';
 
 import {ResultsGrades, styles} from '../constants';
+import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
-import type {RootState} from '../redux';
 import {setResultsTab} from '../redux';
 
-interface ResultsToggleProps {
-  resultsTab?: string;
-  setResultsTab?: (key: string) => void;
-}
+const ResultsToggle = () => {
+  const resultsTab = useAppSelector(state => state.resultsTab);
+  const dispatch = useAppDispatch();
 
-const ResultsToggle = ({resultsTab, setResultsTab}: ResultsToggleProps) => {
   const getTogglePillStyle = (key: string) => {
     let style;
     if (key === resultsTab) {
@@ -46,8 +43,8 @@ const ResultsToggle = ({resultsTab, setResultsTab}: ResultsToggleProps) => {
           <div
             key={tab.key}
             style={getTogglePillStyle(tab.key)}
-            onClick={() => setResultsTab!(tab.key)}
-            onKeyDown={() => setResultsTab!(tab.key)}
+            onClick={() => dispatch(setResultsTab(tab.key))}
+            onKeyDown={() => dispatch(setResultsTab(tab.key))}
             role="button"
             tabIndex={0}
           >
@@ -60,13 +57,4 @@ const ResultsToggle = ({resultsTab, setResultsTab}: ResultsToggleProps) => {
   );
 };
 
-export default connect(
-  (state: RootState) => ({
-    resultsTab: state.resultsTab,
-  }),
-  dispatch => ({
-    setResultsTab(key: string) {
-      dispatch(setResultsTab(key));
-    },
-  }),
-)(ResultsToggle);
+export default ResultsToggle;

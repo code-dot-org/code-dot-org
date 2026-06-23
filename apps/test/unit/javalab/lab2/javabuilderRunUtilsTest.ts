@@ -5,6 +5,7 @@ import {
   handleRunClick,
   stopJavaCode,
 } from '@cdo/apps/javalab/lab2/javabuilderRunUtils';
+import {splitForLevelbuilderSave} from '@cdo/apps/javalab/lab2/sourceConverter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
@@ -75,6 +76,7 @@ describe('javabuilderRunUtils', () => {
 
     (CodebridgeRegistry.getInstance as jest.Mock).mockReturnValue({
       getNeighborhood: () => ({onStop: neighborhoodOnStop}),
+      getTheater: () => null,
       getConsoleManager: () => null,
     });
 
@@ -217,5 +219,49 @@ describe('javabuilderRunUtils', () => {
 
     expect(projectManagerSave).not.toHaveBeenCalled();
     expect(projectManagerFlushSave).not.toHaveBeenCalled();
+  });
+
+  it('sends the flat startSources, including url-backed asset entries, as override sources', async () => {
+    // Pins the wire contract: asset entries ride along in overrideSources
+    // exactly as splitForLevelbuilderSave emits them; the dashboard strips
+    // them into assetUrls before Javabuilder sees the blob.
+    const startSources = {
+      'Main.java': {text: 'class Main {}', isVisible: true},
+      'cat.png': {
+        text: '',
+        isVisible: true,
+        url: '/v3/assets/channel-1/uuid-1.png',
+      },
+    };
+    (splitForLevelbuilderSave as jest.Mock).mockReturnValue({
+      startSources,
+      validation: {},
+    });
+    (isReadOnlyWorkspace as unknown as jest.Mock).mockReturnValueOnce(true);
+    mockGetAuthenticityToken.mockResolvedValue('token');
+
+    const connectJavabuilderWithOverrides = jest.fn();
+    mockJavabuilderConnection.mockImplementation((...args: unknown[]) => {
+      (args[SET_IS_RUNNING_ARG] as () => void)();
+      return {
+        connectJavabuilder: jest.fn(),
+        connectJavabuilderWithOverrides,
+        closeConnection: jest.fn(),
+      } as unknown as JavabuilderConnection;
+    });
+
+    await handleRunClick(
+      /* runTests */ false,
+      /* dispatch */ jest.fn(),
+      /* levelId */ 1,
+      /* csaViewMode */ 'console',
+      /* progressManager */ null,
+      /* needsInitialSourcesSave */ false
+    );
+
+    expect(connectJavabuilderWithOverrides).toHaveBeenCalledWith(
+      startSources,
+      /* overrideValidation */ undefined
+    );
   });
 });

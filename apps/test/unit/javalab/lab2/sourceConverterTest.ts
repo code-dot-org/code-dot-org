@@ -557,6 +557,190 @@ describe('javalab2 sourceConverter', () => {
     });
   });
 
+  describe('asset (url-backed) files', () => {
+    const assetEntry = {
+      text: '',
+      isVisible: true,
+      url: '/v3/assets/abc123/uuid-1.png',
+    };
+
+    it('flatToMultiFile leaves channel-asset files untyped and copies url', () => {
+      // Untyped is load-bearing for student uploads: lab2 treats typed url
+      // files as levelbuilder-owned and skips the S3 delete + abuse unflag
+      // when a student removes them (getStudentFileAssetInfo).
+      const mf = flatToMultiFile({
+        'Main.java': flatFile('class Main {}', 0),
+        'cat.png': {...assetEntry, tabOrder: 1},
+      });
+      const image = Object.values(mf.files).find(f => f.name === 'cat.png')!;
+      expect(image.type).toBeUndefined();
+      expect(image.url).toBe(assetEntry.url);
+      expect(image.contents).toBe('');
+    });
+
+    it('flatToMultiFile types starter-asset files STARTER', () => {
+      // Assets under /level_starter_assets/ are levelbuilder-owned shared
+      // level assets; typing them keeps lab2 from attempting S3 cleanup.
+      const mf = flatToMultiFile({
+        'cat.png': {
+          text: '',
+          isVisible: true,
+          url: '/level_starter_assets/My%20Level/uuid/uuid-1.png',
+        },
+      });
+      const image = Object.values(mf.files).find(f => f.name === 'cat.png')!;
+      expect(image.type).toBe(ProjectFileType.STARTER);
+    });
+
+    it('flatToMultiFile types locked starter-asset files LOCKED_STARTER', () => {
+      const mf = flatToMultiFile({
+        'cat.png': {
+          text: '',
+          isVisible: true,
+          url: '/level_starter_assets/My%20Level/uuid/uuid-1.png',
+          locked: true,
+        },
+      });
+      const image = Object.values(mf.files).find(f => f.name === 'cat.png')!;
+      expect(image.type).toBe(ProjectFileType.LOCKED_STARTER);
+    });
+
+    it('round-trips a locked starter asset through multiFile -> flat -> multiFile', () => {
+      const source: MultiFileSource = {
+        folders: {},
+        files: {
+          '0': {
+            id: '0',
+            name: 'cat.png',
+            contents: '',
+            folderId: DEFAULT_FOLDER_ID,
+            type: ProjectFileType.LOCKED_STARTER,
+            url: '/level_starter_assets/My%20Level/uuid/uuid-1.png',
+          },
+        },
+        openFiles: [],
+      };
+      const flat = multiFileToFlat(source);
+      expect(flat['cat.png'].locked).toBe(true);
+      const round = flatToMultiFile(flat);
+      const image = Object.values(round.files).find(f => f.name === 'cat.png')!;
+      expect(image.type).toBe(ProjectFileType.LOCKED_STARTER);
+    });
+
+    it('flatToMultiFile omits absent url', () => {
+      const mf = flatToMultiFile({
+        'Main.java': flatFile('class Main {}', 0),
+        'cat.png': {...assetEntry},
+      });
+      const main = Object.values(mf.files).find(f => f.name === 'Main.java')!;
+      expect('url' in main).toBe(false);
+    });
+
+    it('multiFileToFlat emits url when present', () => {
+      const source: MultiFileSource = {
+        folders: {},
+        files: {
+          '0': {
+            id: '0',
+            name: 'cat.png',
+            contents: '',
+            folderId: 'root',
+            url: assetEntry.url,
+          },
+          '1': {
+            id: '1',
+            name: 'Main.java',
+            contents: 'class Main {}',
+            folderId: 'root',
+            type: ProjectFileType.STARTER,
+          },
+        },
+        openFiles: ['1'],
+      };
+      const flat = multiFileToFlat(source);
+      expect(flat['cat.png'].url).toBe(assetEntry.url);
+      expect(flat['cat.png'].isVisible).toBe(true);
+      expect('url' in flat['Main.java']).toBe(false);
+    });
+
+    it('round-trips an open image tab through flat -> multiFile -> flat', () => {
+      const original: JavalabFlatSource = {
+        'Main.java': flatFile('class Main {}', 0),
+        'cat.png': {...assetEntry, tabOrder: 1, isOpen: true},
+      };
+      const round = multiFileToFlat(flatToMultiFile(original));
+      expect(round['cat.png'].url).toBe(assetEntry.url);
+      expect(round['cat.png'].isOpen).toBe(true);
+      expect(round['cat.png'].tabOrder).toBe(1);
+      expect(round['cat.png'].isVisible).toBe(true);
+    });
+
+    it('splitForLevelbuilderSave puts url entries in startSources, never validation', () => {
+      const mf = flatToMultiFile({
+        'Main.java': flatFile('class Main {}', 0),
+        'cat.png': assetEntry,
+        'Test.java': flatFile('class Test {}', 1, false, true),
+      });
+      const {startSources, validation} = splitForLevelbuilderSave(mf);
+      expect(Object.keys(startSources).sort()).toEqual([
+        'Main.java',
+        'cat.png',
+      ]);
+      expect(startSources['cat.png'].url).toBe(assetEntry.url);
+      expect(Object.keys(validation)).toEqual(['Test.java']);
+    });
+  });
+
+  describe('locked starter files', () => {
+    it('flatToMultiFile types locked visible files LOCKED_STARTER', () => {
+      const mf = flatToMultiFile({
+        'Locked.java': {...flatFile('class Locked {}', 0), locked: true},
+        'Main.java': flatFile('class Main {}', 1),
+      });
+      const locked = Object.values(mf.files).find(
+        f => f.name === 'Locked.java'
+      )!;
+      const main = Object.values(mf.files).find(f => f.name === 'Main.java')!;
+      expect(locked.type).toBe(ProjectFileType.LOCKED_STARTER);
+      expect(main.type).toBe(ProjectFileType.STARTER);
+    });
+
+    it('multiFileToFlat sets locked on LOCKED_STARTER files only', () => {
+      const source: MultiFileSource = {
+        folders: {},
+        files: {
+          '0': {
+            id: '0',
+            name: 'Locked.java',
+            contents: 'class Locked {}',
+            folderId: DEFAULT_FOLDER_ID,
+            type: ProjectFileType.LOCKED_STARTER,
+          },
+          '1': {
+            id: '1',
+            name: 'Main.java',
+            contents: 'class Main {}',
+            folderId: DEFAULT_FOLDER_ID,
+            type: ProjectFileType.STARTER,
+          },
+        },
+        openFiles: ['0', '1'],
+      };
+      const flat = multiFileToFlat(source);
+      expect(flat['Locked.java'].locked).toBe(true);
+      expect(flat['Locked.java'].isVisible).toBe(true);
+      expect('locked' in flat['Main.java']).toBe(false);
+    });
+
+    it('round-trips a locked file through flat -> multiFile -> flat', () => {
+      const original: JavalabFlatSource = {
+        'Locked.java': {...flatFile('class Locked {}', 0), locked: true},
+      };
+      const round = multiFileToFlat(flatToMultiFile(original));
+      expect(round['Locked.java'].locked).toBe(true);
+    });
+  });
+
   describe('start + validation round trip', () => {
     // What Javalab2View actually does in start mode: merge validation
     // into start, hand to codebridge as MultiFileSource, then on save

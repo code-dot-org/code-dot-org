@@ -1,3 +1,4 @@
+import {buildAnswerTypeRouterSection} from '@cdo/apps/aiTutor/helpers/aiTutorPromptHelpers';
 import {DEFAULT_ANSWER_TYPES} from '@cdo/apps/weblab2/constants';
 import basePrompt from '@cdo/apps/weblab2/prompts/basePrompt.md';
 import environmentPrompt from '@cdo/apps/weblab2/prompts/environment.md';
@@ -43,24 +44,6 @@ const ANSWER_TYPE_GROUPS: AnswerTypeGroup[] = [
     answerTypes: ['refusal', 'refusalJavaScriptSnippets'],
   },
 ];
-
-const buildAnswerTypeRouterSection = (
-  answerTypes: AiTutorAnswerType[]
-): string => {
-  return ANSWER_TYPE_GROUPS.flatMap(group => {
-    const groupAnswerTypes = group.answerTypes.filter(answerType =>
-      answerTypes.includes(answerType)
-    );
-    if (groupAnswerTypes.length === 0) return [];
-    return [
-      group.heading,
-      ...groupAnswerTypes.map(
-        answerType => `- ${ANSWER_TYPE_TRIGGERS[answerType].trim()}`
-      ),
-      '',
-    ];
-  }).join('\n');
-};
 
 const generateFinalAnswerTypeList = (
   answerTypes: AiTutorAnswerType[]
@@ -125,7 +108,11 @@ export const generateAiTutorPrompt = (
     '## Mode Router (deterministic)',
     'Choose exactly one mode per reply using these rules:',
     '',
-    buildAnswerTypeRouterSection(parsedAnswerTypes),
+    buildAnswerTypeRouterSection(
+      ANSWER_TYPE_GROUPS,
+      ANSWER_TYPE_TRIGGERS,
+      parsedAnswerTypes
+    ),
     '',
     '--------',
     '## Mode Answer Contracts',
