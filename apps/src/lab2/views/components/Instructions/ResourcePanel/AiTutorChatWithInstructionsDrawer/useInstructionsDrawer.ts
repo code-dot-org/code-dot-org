@@ -9,8 +9,10 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 const MIN_CHAT_HEIGHT = 133; // Minimum so that user message editor is always visible + some chat.
 const MIN_INSTRUCTIONS_HEIGHT = 150;
 const DEFAULT_INITIAL_INSTRUCTIONS_HEIGHT = 250; // Initial height needed before instructions content is measured.
-// Matches .instructionsDrawer padding (8px top + 8px bottom).
-const INSTRUCTIONS_DRAWER_VERTICAL_PADDING_PX = 16;
+// Matches .instructionsDrawer padding (10px top + 10px bottom). Must stay in sync
+// so the drawer can grow tall enough to show the full instructions without a
+// leftover scrollbar when there's room.
+const INSTRUCTIONS_DRAWER_VERTICAL_PADDING_PX = 20;
 
 interface UseInstructionsDrawerOptions {
   isPredictLevel?: boolean;
