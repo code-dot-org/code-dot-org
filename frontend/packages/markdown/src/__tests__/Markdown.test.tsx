@@ -286,6 +286,58 @@ describe('Markdown', () => {
       expect(screen.queryByRole('button')).toBeNull();
       expect(screen.getByRole('img', {name: 'just a cat'})).toBeTruthy();
     });
+
+    /*
+     * `data-url` is a custom attribute the sanitizer's protocol allowlist never
+     * vetted, so a dangerous-scheme url could otherwise reach the <img src> and,
+     * worse, the onExpand callback a consumer may navigate to. The component
+     * must reject anything but http(s) / relative references.
+     */
+    describe('rejects unsafe data-url schemes', () => {
+      it.each([
+        '<span data-url="javascript:alert(1)">x</span>',
+        '<span data-url="data:text/html,<script>alert(1)</script>">x</span>',
+        '<span data-url="vbscript:msgbox(1)">x</span>',
+        // an obscured scheme: control characters a browser would strip
+        '<span data-url="java\tscript:alert(1)">x</span>',
+      ])('drops %s to plain text with no image or handler', markdown => {
+        const onExpand = vi.fn();
+        renderDom(
+          <Markdown
+            content={markdown}
+            extensions={[expandableImages({onExpand})]}
+          />,
+        );
+        expect(screen.queryByRole('img')).toBeNull();
+        expect(screen.queryByRole('button')).toBeNull();
+        expect(onExpand).not.toHaveBeenCalled();
+        expect(screen.getByText('x')).toBeTruthy();
+      });
+
+      it('also drops an unsafe url from the ![alt expandable](url) syntax', () => {
+        const onExpand = vi.fn();
+        renderDom(
+          <Markdown
+            content="![cat expandable](javascript:alert(1))"
+            extensions={[expandableImages({onExpand})]}
+          />,
+        );
+        expect(screen.queryByRole('img')).toBeNull();
+        expect(screen.queryByRole('button')).toBeNull();
+      });
+    });
+
+    it.each([
+      '<span data-url="/img/cat.png">cat</span>',
+      '<span data-url="cat.png">cat</span>',
+      '<span data-url="//cdn.example/cat.png">cat</span>',
+      '<span data-url="HTTPS://img/cat.png">cat</span>',
+    ])('keeps the safe url %s', markdown => {
+      renderDom(
+        <Markdown content={markdown} extensions={[expandableImages()]} />,
+      );
+      expect(screen.getByRole('img')).toBeTruthy();
+    });
   });
 
   describe('details', () => {

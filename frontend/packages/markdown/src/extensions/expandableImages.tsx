@@ -48,6 +48,23 @@ interface SpanProps {
   dataUrl?: string;
 }
 
+/*
+ * `data-url` is a custom attribute, so rehype-sanitize's protocol allowlist —
+ * which only inspects known URL attributes like href/src — never vets it. Guard
+ * here before the value reaches the <img src> and, more importantly, the
+ * onExpand callback (which a consumer may hand to window.open / location): an
+ * unsafe scheme there is an XSS / open-redirect sink. Permit only http(s) and
+ * scheme-relative references (paths, queries, fragments, `//host` URLs).
+ */
+const isSafeImageUrl = (url: string): boolean => {
+  // Strip ASCII control characters and whitespace first, the way a browser
+  // would, so an obscured scheme (e.g. `java\tscript:`) can't slip past.
+  // eslint-disable-next-line no-control-regex
+  const stripped = url.replace(/[\u0000-\u0020]+/g, '');
+  const scheme = /^([a-z][a-z0-9+.-]*):/i.exec(stripped);
+  return !scheme || /^https?$/i.test(scheme[1]);
+};
+
 // Expandable spans carry their alt text as their (text) children.
 const textOf = (children: ReactNode): string => {
   if (typeof children === 'string') {
@@ -63,9 +80,11 @@ const makeExpandableImage =
   ({onExpand}: ExpandableImagesOptions) =>
   (props: SpanProps) => {
     const {children, className, style} = props;
-    const url = props['data-url'] ?? props.dataUrl;
+    const rawUrl = props['data-url'] ?? props.dataUrl;
+    // Drop a missing or unsafe url; the element degrades to its plain text.
+    const url = rawUrl && isSafeImageUrl(rawUrl) ? rawUrl : undefined;
 
-    // A <span> without a data-url is just a span.
+    // A <span> without a usable data-url is just a span.
     if (!url) {
       return (
         <span className={className} style={style}>
