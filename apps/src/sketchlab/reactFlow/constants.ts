@@ -17,7 +17,7 @@ export const LINE_DEFAULT_LENGTH_PX = 220;
 
 // Magnetic snap radius (in screen pixels) used when reconnecting an edge
 // endpoint to a node handle. Applies to mouse drags.
-export const LINE_RECONNECT_SNAP_RADIUS_PX = 20;
+export const LINE_RECONNECT_SNAP_RADIUS_PX = 40;
 
 // Milliseconds to debounce project saves after canvas changes.
 export const SAVE_DEBOUNCE_MS = 300;
@@ -38,8 +38,3 @@ export const SKETCHLAB_TOOLBAR_PANEL_CLASS = 'sketchlab-toolbar-panel';
 // Padding (px) added around child nodes when computing initial group bounds.
 // This is consistent with the padding used by React Flow's built-in group node.
 export const GROUP_PADDING_PX = 10;
-
-// React Flow's class for the invisible reconnect-drag circles on an edge.
-// Not part of the library's public API; verify it still matches when
-// upgrading @xyflow/react.
-export const REACT_FLOW_EDGE_UPDATER_CLASS = 'react-flow__edgeupdater';

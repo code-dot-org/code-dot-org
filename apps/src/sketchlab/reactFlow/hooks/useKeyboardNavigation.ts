@@ -469,10 +469,14 @@ export function useKeyboardNavigation({
           y: endpoint.flowPosition.y + deltaY,
         };
 
-        // If there is a snap target in the radius of the new position, snap to it.
+        // If there is a snap target in the radius of the new position, snap to
+        // it — but never onto the node holding the other end, which would
+        // collapse the edge into a self-loop.
+        const oppositeNodeId =
+          side === 'source' ? focusedEdge.target : focusedEdge.source;
         const snapTarget = findNearestHandleInRadius(
           flowToScreenPosition(postMovePosition),
-          endpoint.node.id,
+          [endpoint.node.id, oppositeNodeId],
           side,
           KEYBOARD_MOVE_STEP * getZoom()
         );
@@ -513,11 +517,12 @@ export function useKeyboardNavigation({
       }
       if (Object.keys(edgePatch).length > 0) {
         setEdges(currentEdges =>
-          currentEdges.map(currentEdge =>
-            currentEdge.id === edgeId
-              ? {...currentEdge, ...edgePatch}
-              : currentEdge
-          )
+          currentEdges.map(currentEdge => {
+            if (currentEdge.id !== edgeId) return currentEdge;
+            const patched = {...currentEdge, ...edgePatch};
+            // Both ends snapping to the same node would collapse the edge.
+            return patched.source === patched.target ? currentEdge : patched;
+          })
         );
       }
       if (anchorIdsToMove.length > 0) {
