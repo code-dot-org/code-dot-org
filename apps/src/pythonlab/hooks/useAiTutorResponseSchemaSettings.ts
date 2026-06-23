@@ -1,11 +1,9 @@
 import {useMemo} from 'react';
 
 import {ResponseSchemaSettings} from '@cdo/apps/aichat/types';
+import {formatCopyPasteResponse} from '@cdo/apps/aiTutor/helpers/aiTutorResponseHelpers';
 
-import {
-  aiTutorResponseJsonSchema,
-  formatCopyPasteResponse,
-} from '../helpers/aiTutorStructuredResponseHelper';
+import {aiTutorResponseJsonSchema} from '../helpers/aiTutorStructuredResponseHelper';
 
 /**
  * Custom hook that provides AI tutor response schema settings for Python Lab.
