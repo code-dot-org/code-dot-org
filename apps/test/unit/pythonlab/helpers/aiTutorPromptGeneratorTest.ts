@@ -1,10 +1,10 @@
+import askContract from '@cdo/apps/aiTutor/prompts/answerTypeContracts/ask.md';
+import refusalContract from '@cdo/apps/aiTutor/prompts/answerTypeContracts/refusal.md';
 import {
   ALL_PYTHONLAB_ANSWER_TYPES,
   generateAiTutorPrompt,
 } from '@cdo/apps/pythonlab/helpers/aiTutorPromptGenerator';
-import askContract from '@cdo/apps/pythonlab/prompts/answerTypeContracts/ask.md';
 import buildPythonContract from '@cdo/apps/pythonlab/prompts/answerTypeContracts/buildPython.md';
-import refusalContract from '@cdo/apps/pythonlab/prompts/answerTypeContracts/refusal.md';
 import refusalPythonSnippetsContract from '@cdo/apps/pythonlab/prompts/answerTypeContracts/refusalPythonSnippets.md';
 import askTrigger from '@cdo/apps/pythonlab/prompts/answerTypeTriggers/ask.md';
 import buildPythonTrigger from '@cdo/apps/pythonlab/prompts/answerTypeTriggers/buildPython.md';
