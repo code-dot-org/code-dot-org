@@ -354,7 +354,7 @@ export default function ReactFlowCanvas({
   const isAnchorDragging =
     isDirectAnchorDragging || isLineDragging || keyboardMovingLineId !== null;
 
-  // Clear the keyboard-move flag once focus leaves the anchor being moved.
+  // Clear the keyboard-move flag once focus leaves the anchor or edge being moved.
   useEffect(() => {
     if (!keyboardMovingLineId) return;
     const stillFocused =
