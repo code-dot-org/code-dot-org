@@ -12,9 +12,7 @@ interface NotificationListProps {
   aiPromptClick: (label: string, prompt: string) => void;
 }
 
-const NotificationList: React.FC<NotificationListProps> = ({
-  aiPromptClick,
-}) => {
+const NotificationList: React.FC<NotificationListProps> = ({aiPromptClick}) => {
   const [loading, setLoading] = React.useState<boolean>(true);
   const [notifications, setNotifications] = React.useState<
     AiDiffNotification[]
