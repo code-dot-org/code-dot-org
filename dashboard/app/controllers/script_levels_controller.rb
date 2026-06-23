@@ -603,8 +603,7 @@ class ScriptLevelsController < ApplicationController
 
     readonly_view_options if @level.channel_backed? && params[:version].present?
 
-    @@fallback_responses ||= {}
-    @fallback_response = @@fallback_responses[@script_level.id] ||= {
+    @fallback_response = {
       success: milestone_response(script_level: @script_level, level: @level, solved?: true, unit_group: @unit_group),
       failure: milestone_response(script_level: @script_level, level: @level, solved?: false)
     }
