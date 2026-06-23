@@ -801,7 +801,6 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@no_device_farm') if options.device_farm
   arguments += skip_tag('@webpurify') unless CDO.webpurify_key
   arguments += skip_tag('@dashboard_db_access') unless options.dashboard_db_access
-  arguments += skip_tag('@properties_encryption_key') if CDO.properties_encryption_key.blank?
   arguments += skip_tag('@cloudfront_key') if CDO.cloudfront_key_pair_id.blank?
   arguments
 end
