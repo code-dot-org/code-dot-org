@@ -8,7 +8,9 @@ Automated UI tests for the dashboard.
 
 The UI tests run as part of our continuous integration tooling, via Drone whenever you create a pull request into the "staging" branch. In this scenario, tests are only run against Chrome, per [saucelabs_browsers_to_run in "ci.rake"](https://github.com/code-dot-org/code-dot-org/blob/staging/lib/rake/ci.rake#L182).
 
-To run tests against other browsers in CI, you can apply tags to commit messages.
+Today, all UI tests and Eyes tests that run in Drone use a combination of (a) local chromedriver and (b) desktop chrome via AWS Device Farm.
+
+To run tests against other browsers in CI, you can apply tags to commit messages. Be aware that running any other browsers will force tests off of Device Farm and onto Sauce Labs:
 
 * `git commit -m "just a normal change"`
 * `git commit -m "fixing bug with firefox [skip chrome][test firefox]"`
