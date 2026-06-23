@@ -221,9 +221,12 @@ function isInkNeutral(normalized: string, theme: ExcalidrawTheme): boolean {
     : BLACK_HEXES.has(normalized);
 }
 
-// The neutral that reads as the canvas in the source theme: white in light,
-// black in dark. A fill in this color matched the background, i.e. no fill.
-function isCanvasNeutral(normalized: string, theme: ExcalidrawTheme): boolean {
+// True when an element's fill equals the source theme's canvas color (white in
+// light, black in dark).
+function fillMatchesCanvas(
+  normalized: string,
+  theme: ExcalidrawTheme
+): boolean {
   return theme === 'dark'
     ? BLACK_HEXES.has(normalized)
     : WHITE_HEXES.has(normalized);
@@ -246,7 +249,7 @@ export function mapBackgroundColor(
 ): string {
   const normalized = normalizeColor(color);
   if (normalized === 'transparent') return 'transparent';
-  if (isCanvasNeutral(normalized, theme)) return DEFAULT_BACKGROUND_COLOR;
+  if (fillMatchesCanvas(normalized, theme)) return DEFAULT_BACKGROUND_COLOR;
   const family = HEX_TO_FAMILY.get(normalized);
   if (family) {
     return `var(--sketchlab-bg-${family})`;
