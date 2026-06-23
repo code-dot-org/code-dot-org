@@ -102,8 +102,6 @@ export const aiTutorResponseJsonSchema: JsonObjectSchema = {
   additionalProperties: false,
 };
 
-export {formatCopyPasteResponse} from '@cdo/apps/aiTutor/helpers/aiTutorResponseHelpers';
-
 type AiTutorCodeFile = {
   name: string;
   contents: string;

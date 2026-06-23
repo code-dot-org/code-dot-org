@@ -61,5 +61,3 @@ export const aiTutorResponseJsonSchema: JsonObjectSchema = {
   required: ['answer'],
   additionalProperties: false,
 };
-
-export {formatCopyPasteResponse} from '@cdo/apps/aiTutor/helpers/aiTutorResponseHelpers';

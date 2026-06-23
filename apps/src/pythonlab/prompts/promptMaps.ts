@@ -1,14 +1,14 @@
-// CONTRACTS (shared)
+// Shared contracts and triggers
 import askContract from '@cdo/apps/aiTutor/prompts/answerTypeContracts/ask.md';
 import refusalContract from '@cdo/apps/aiTutor/prompts/answerTypeContracts/refusal.md';
 import testCaseContract from '@cdo/apps/aiTutor/prompts/answerTypeContracts/testCase.md';
-// CONTRACTS (pythonlab-specific)
 import buildJSONTrigger from '@cdo/apps/aiTutor/prompts/answerTypeTriggers/buildJSON.md';
 import debugTrigger from '@cdo/apps/aiTutor/prompts/answerTypeTriggers/debug.md';
 import exampleTrigger from '@cdo/apps/aiTutor/prompts/answerTypeTriggers/example.md';
 import pseudocodeTrigger from '@cdo/apps/aiTutor/prompts/answerTypeTriggers/pseudocode.md';
 import refusalTrigger from '@cdo/apps/aiTutor/prompts/answerTypeTriggers/refusal.md';
 import testCaseTrigger from '@cdo/apps/aiTutor/prompts/answerTypeTriggers/testCase.md';
+// Pythonlab-specific contracts and triggers
 import buildCSVContract from '@cdo/apps/pythonlab/prompts/answerTypeContracts/buildCSV.md';
 import buildJSONContract from '@cdo/apps/pythonlab/prompts/answerTypeContracts/buildJSON.md';
 import buildPythonContract from '@cdo/apps/pythonlab/prompts/answerTypeContracts/buildPython.md';
@@ -19,8 +19,6 @@ import explainCodeContract from '@cdo/apps/pythonlab/prompts/answerTypeContracts
 import hintContract from '@cdo/apps/pythonlab/prompts/answerTypeContracts/hint.md';
 import pseudocodeContract from '@cdo/apps/pythonlab/prompts/answerTypeContracts/pseudocode.md';
 import refusalPythonSnippetsContract from '@cdo/apps/pythonlab/prompts/answerTypeContracts/refusalPythonSnippets.md';
-// TRIGGERS (shared)
-// TRIGGERS (pythonlab-specific)
 import askTrigger from '@cdo/apps/pythonlab/prompts/answerTypeTriggers/ask.md';
 import buildCSVTrigger from '@cdo/apps/pythonlab/prompts/answerTypeTriggers/buildCSV.md';
 import buildPythonTrigger from '@cdo/apps/pythonlab/prompts/answerTypeTriggers/buildPython.md';
@@ -28,7 +26,6 @@ import documentationTrigger from '@cdo/apps/pythonlab/prompts/answerTypeTriggers
 import explainCodeTrigger from '@cdo/apps/pythonlab/prompts/answerTypeTriggers/explainCode.md';
 import hintTrigger from '@cdo/apps/pythonlab/prompts/answerTypeTriggers/hint.md';
 import refusalPythonSnippetsTrigger from '@cdo/apps/pythonlab/prompts/answerTypeTriggers/refusalPythonSnippets.md';
-// TYPES
 import {AiTutorAnswerType} from '@cdo/apps/pythonlab/types';
 
 export const ANSWER_TYPE_TRIGGERS: Record<AiTutorAnswerType, string> = {

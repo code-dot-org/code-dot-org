@@ -1,14 +1,14 @@
-// CONTRACTS (shared)
+// Share contracts and triggers
 import askContract from '@cdo/apps/aiTutor/prompts/answerTypeContracts/ask.md';
 import refusalContract from '@cdo/apps/aiTutor/prompts/answerTypeContracts/refusal.md';
 import testCaseContract from '@cdo/apps/aiTutor/prompts/answerTypeContracts/testCase.md';
-// CONTRACTS (weblab2-specific)
 import buildJSONTrigger from '@cdo/apps/aiTutor/prompts/answerTypeTriggers/buildJSON.md';
 import debugTrigger from '@cdo/apps/aiTutor/prompts/answerTypeTriggers/debug.md';
 import exampleTrigger from '@cdo/apps/aiTutor/prompts/answerTypeTriggers/example.md';
 import pseudocodeTrigger from '@cdo/apps/aiTutor/prompts/answerTypeTriggers/pseudocode.md';
 import refusalTrigger from '@cdo/apps/aiTutor/prompts/answerTypeTriggers/refusal.md';
 import testCaseTrigger from '@cdo/apps/aiTutor/prompts/answerTypeTriggers/testCase.md';
+// Weblab2-specific contracts and triggers
 import buildCSSContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildCSS.md';
 import buildHTMLContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildHTML.md';
 import buildJavaScriptContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildJavaScript.md';
@@ -20,8 +20,6 @@ import explainCodeContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/e
 import hintContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/hint.md';
 import pseudocodeContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/pseudocode.md';
 import refusalJavaScriptSnippetsContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/refusalJavaScriptSnippets.md';
-// TRIGGERS (shared)
-// TRIGGERS (weblab2-specific)
 import askTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/ask.md';
 import buildCSSTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/buildCSS.md';
 import buildHTMLTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/buildHTML.md';
@@ -30,7 +28,6 @@ import documentationTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/d
 import explainCodeTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/explainCode.md';
 import hintTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/hint.md';
 import refusalJavaScriptSnippetsTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/refusalJavaScriptSnippets.md';
-// TYPES
 import {AiTutorAnswerType} from '@cdo/apps/weblab2/types';
 
 export const ANSWER_TYPE_TRIGGERS: Record<AiTutorAnswerType, string> = {
