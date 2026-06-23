@@ -1,12 +1,13 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-06-18T22:31:47.000Z",
   "level_num": "custom",
   "user_id": 14639,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## <i class=\"fa-solid fa-sparkles\"></i> Start Here <i class=\"fa-solid fa-sparkles\"></i>\r\n\r\nWelcome to **Web Lab**! You'll be using this editor and an AI assistant to build websites.\r\n\r\nWe're starting with a practice page about Otters. You'll get to create your own custom webpage in the next level, but for now, follow the steps below (be sure to scroll down!) to learn how to interact with AI tutor.\r\n\r\n**Do This:**\r\n1. **Highlight** an example prompt from the center panel and select **\"Add to AI Tutor Chat\"**\r\n\r\n![](https://images.code.org/c487d1200b442fb27ba266228689eddf-image-1776372888974.png)\r\n\r\n2. In the chat box below, tell AI Tutor to make that change to the webpage (ex: \"Make this update to the otter website\")\r\n3. **Review and Accept:** Check the preview on the right. If it looks good, click **\"Accept\"** and write a short summary of the change.\r\n\r\n> **Tip:** Click **\"Hide Instructions\"** to give more room to AI Tutor.\r\n\r\nOnce AI tutor has made a change to the webpage, click **Continue**.",
+    "long_instructions": "## <i class=\"fa-solid fa-sparkles\"></i> Start Here <i class=\"fa-solid fa-sparkles\"></i>\r\n\r\nWelcome to **Web Lab**! You'll be using this editor and an AI Tutor to build websites.\r\n\r\nIn this activity, your project already includes planning files and folders. You will use those files to guide AI Tutor step by step. First, you’ll ask AI Tutor to understand your content. Then you’ll choose a wireframe and ask AI Tutor to build the page structure. Finally, you’ll use your style plan to restyle the page\r\n\r\n**Do This:**\r\n1. Look at the Files panel just to the right of this panel.\r\n2. Find these files and folders:\r\n   * `content_ideas/` \r\n   * `wireframes/`  \r\n   * `images/`  \r\n   * `style.md`\r\n3. Open the folders to browse the files inside\r\n4. Open style.md and skim the design directions inside.\r\n5. Do not ask AI Tutor to build the webpage, yet. Next, you will use the AI Tutor to explore the plan.\r\n\r\n> **Tip:** Click **“Code**,**” “Preview**,**”** or **“Split View”** to change how much of the page you can see. On Chromebooks, press F11 to make your workspace larger!\r\n>\r\n> ![](https://images.code.org/886be386cc8082c8d6ab23938bd8cd26-image-1776373130068.png)\r\n\r\nOnce you have familiarized yourself with Weblab click **Continue**.",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "true",
@@ -25,8 +26,8 @@
     },
     "ai_tutor_prompt_settings": {
       "answerTypes": [
-        "buildCSS",
-        "buildHTML"
+        "ask",
+        "documentation"
       ],
       "answerTypeCustomizations": {
         "explainCode": "- Limit responses to just HTML. Do not mention CSS or Javascript.",
@@ -75,10 +76,10 @@
     },
     "name_suffix": "_iste-2026",
     "offer_browser_tts": "true",
-    "teacher_markdown": "**Intent:** This level is about getting used to the Web Lab editor, and using a common \"Add to AI tutor\" workflow that continues throughout this progression. Students should leave knowing how to highlight code, send it to AI Tutor, and make a decision about the output.\r\n\r\n**Circulation questions:**\r\n\r\n- \"What did you highlight and send to AI Tutor? What did it do?\"  \r\n- \"Did you accept the change? Why or why not?\"\r\n\r\n**Expected mistakes and misconceptions:**\r\n\r\n- Students may click Accept without looking at the preview \\- redirect them: \"before you accept, check the preview. Does it look the way you expected?\"  \r\n- Students may not know what to write in the chat after highlighting \\- suggest they describe what they want to happen: \"just tell AI Tutor to make the change you highlighted\"  \r\n- Students may try to make many changes at once or continue to iterate on this page \\- encourage them to just make one change and continue",
-    "require_edit_to_continue": "true"
+    "teacher_markdown": "**Intent:** This level is about getting used to the Web Lab editor, and exploring the activity resources.",
+    "require_edit_to_continue": "false",
+    "project_template_level_name": "iste_2026_web_design_template"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-06-18T22:31:47.916+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-2_pilot2_launch\\\"\"],\"cloned_from\":\"hoai-web-design-v2-2_pilot2_launch\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-06-18T22:31:47.916+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-2_pilot2_launch\\\"\"],\"cloned_from\":\"hoai-web-design-v2-2_pilot2_launch\"},{\"changed_at\":\"2026-06-22 12:41:36 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\",\"teacher_markdown\",\"require_edit_to_continue\"],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"},{\"changed_at\":\"2026-06-22 13:07:35 +0000\",\"changed\":[],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"},{\"changed_at\":\"2026-06-22 13:10:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"},{\"changed_at\":\"2026-06-22 13:16:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"}]"
 }]]></config>
 </Weblab2>
