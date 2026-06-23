@@ -1,42 +1,31 @@
 /* React component to handle displaying accuracy results. */
 import {useEffect, useCallback} from 'react';
-import {connect} from 'react-redux';
-import type {Dispatch} from 'redux';
 
 import {styles} from '../constants';
+import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
-import type {RootState} from '../redux';
 import {setShowResultsDetails, setResultsPhase} from '../redux';
-import type {HistoricResult} from '../types';
 
 import ResultsDetails from './ResultsDetails';
 import ScrollableContent from './ScrollableContent';
 import {UnconnectedStatement} from './Statement';
 
-interface ResultsProps {
-  historicResults: HistoricResult[];
-  showResultsDetails: boolean;
-  setShowResultsDetails: (show: boolean) => void;
-  setResultsPhase: (phase: number) => void;
-}
+const Results = () => {
+  const historicResults = useAppSelector(state => state.historicResults);
+  const showResultsDetails = useAppSelector(state => state.showResultsDetails);
+  const dispatch = useAppDispatch();
 
-const Results = ({
-  historicResults,
-  showResultsDetails,
-  setShowResultsDetails,
-  setResultsPhase,
-}: ResultsProps) => {
   useEffect(() => {
-    setResultsPhase(0);
+    dispatch(setResultsPhase(0));
     const timer = setTimeout(() => {
-      setResultsPhase(1);
+      dispatch(setResultsPhase(1));
     }, 1000);
     return () => clearTimeout(timer);
-  }, [setResultsPhase]);
+  }, [dispatch]);
 
   const showDetails = useCallback(() => {
-    setShowResultsDetails(true);
-  }, [setShowResultsDetails]);
+    dispatch(setShowResultsDetails(true));
+  }, [dispatch]);
 
   return (
     <div style={styles.resultsPanelContainer}>
@@ -101,17 +90,4 @@ const Results = ({
   );
 };
 
-export default connect(
-  (state: RootState) => ({
-    historicResults: state.historicResults,
-    showResultsDetails: state.showResultsDetails,
-  }),
-  (dispatch: Dispatch) => ({
-    setResultsPhase(phase: number) {
-      dispatch(setResultsPhase(phase));
-    },
-    setShowResultsDetails(show: boolean) {
-      dispatch(setShowResultsDetails(show));
-    },
-  }),
-)(Results);
+export default Results;
