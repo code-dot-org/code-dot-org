@@ -86,7 +86,6 @@ namespace :seed do
     alltheselfpacedplthings
     allthethings
     allthettsthings
-    flappy
     frozen
     hero
     hourofcode
@@ -256,7 +255,6 @@ namespace :seed do
        allthelessonplans
        alltheselfpacedplthings
        allthettsthings
-       flappy
        frozen
        hero
        hourofcode
