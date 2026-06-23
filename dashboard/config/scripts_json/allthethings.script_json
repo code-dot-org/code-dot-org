@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-22 18:47:23 UTC",
+    "serialized_at": "2026-06-22 22:19:57 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -2533,6 +2533,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:MazeStep:2_1_step"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2554,6 +2557,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:MazeStep:2_2_step"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2791,6 +2797,27 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "frozen square loop 3x"
+        ],
+        "lesson.key": "Artist",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "e65be58a-fc08-43c1-a879-52e2ba7dfbbc"
+      },
+      "level_keys": [
+        "frozen square loop 3x"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "Standalone_Artist_9"
         ]
@@ -2807,27 +2834,6 @@
       },
       "level_keys": [
         "Standalone_Artist_9"
-      ]
-    },
-    {
-      "chapter": 22,
-      "position": 11,
-      "activity_section_position": 11,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "frozen square loop 3x"
-        ],
-        "lesson.key": "Artist",
-        "lesson_group.key": "",
-        "script.name": "allthethings",
-        "activity_section.key": "e65be58a-fc08-43c1-a879-52e2ba7dfbbc"
-      },
-      "level_keys": [
-        "frozen square loop 3x"
       ]
     },
     {
@@ -3124,6 +3130,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:playlab_10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3265,6 +3274,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3334,6 +3346,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "bounce_3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3355,6 +3370,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "bounce_5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4792,6 +4810,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_right"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4813,6 +4834,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_right_down"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4834,6 +4858,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_backtrack"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4855,6 +4882,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_diagonal"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4876,6 +4906,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_around"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4897,6 +4930,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_finale"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4918,6 +4954,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_event_free"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5924,6 +5963,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_Party_01"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5945,6 +5987,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_Party_09"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5966,6 +6011,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_Party_11_5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5987,6 +6035,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_Party_12"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6440,6 +6491,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_FishVTrash"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6461,6 +6515,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrashDemo"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6482,6 +6539,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrash"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6503,6 +6563,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Short"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6524,6 +6587,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Long"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -8581,6 +8647,27 @@
     },
     {
       "chapter": 262,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Java Lab2 Theater"
+        ],
+        "lesson.key": "lesson-59",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "2704c5ff-0e8e-4b8f-9e94-d8c63c0af7e1"
+      },
+      "level_keys": [
+        "Allthethings Java Lab2 Theater"
+      ]
+    },
+    {
+      "chapter": 263,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8847,9 +8934,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Standalone_Artist_9",
+        "level.key": "frozen square loop 3x",
         "script_level.level_keys": [
-          "Standalone_Artist_9"
+          "frozen square loop 3x"
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
@@ -8859,9 +8946,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "frozen square loop 3x",
+        "level.key": "Standalone_Artist_9",
         "script_level.level_keys": [
-          "frozen square loop 3x"
+          "Standalone_Artist_9"
         ],
         "lesson.key": "Artist",
         "lesson_group.key": "",
@@ -10161,19 +10248,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist 1 new",
-        "script_level.level_keys": [
-          "2-3 Artist 1 new",
-          "ramp_video_artistIntro"
-        ],
-        "lesson.key": "Swapped Levels",
-        "lesson_group.key": "",
-        "script.name": "allthethings",
-        "activity_section.key": "40e74dbd-d44a-468e-9e17-a710d06bc3d3"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "ramp_video_artistIntro",
         "script_level.level_keys": [
           "2-3 Artist 1 new",
@@ -10187,7 +10261,20 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist Loops 2",
+        "level.key": "2-3 Artist 1 new",
+        "script_level.level_keys": [
+          "2-3 Artist 1 new",
+          "ramp_video_artistIntro"
+        ],
+        "lesson.key": "Swapped Levels",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "40e74dbd-d44a-468e-9e17-a710d06bc3d3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_video_loopsArtist",
         "script_level.level_keys": [
           "2-3 Artist Loops 2",
           "ramp_video_loopsArtist"
@@ -10200,7 +10287,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "ramp_video_loopsArtist",
+        "level.key": "2-3 Artist Loops 2",
         "script_level.level_keys": [
           "2-3 Artist Loops 2",
           "ramp_video_loopsArtist"
@@ -11856,6 +11943,18 @@
         "level.key": "Allthethings Java Lab2 Passing Validation",
         "script_level.level_keys": [
           "Allthethings Java Lab2 Passing Validation"
+        ],
+        "lesson.key": "lesson-59",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "2704c5ff-0e8e-4b8f-9e94-d8c63c0af7e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings Java Lab2 Theater",
+        "script_level.level_keys": [
+          "Allthethings Java Lab2 Theater"
         ],
         "lesson.key": "lesson-59",
         "lesson_group.key": "",

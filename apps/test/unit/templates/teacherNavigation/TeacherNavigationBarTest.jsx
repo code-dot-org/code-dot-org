@@ -10,6 +10,7 @@ import {
   useLocation,
 } from 'react-router-dom';
 
+import {aiDiffChatReducer} from '@cdo/apps/aiDifferentiation/redux/slice';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
@@ -52,6 +53,34 @@ jest.mock('@react-pdf/renderer', () => ({
     create: () => null,
   },
 }));
+
+jest.mock('@cdo/apps/aiDifferentiation/AiDiffContainer', () => {
+  const React = require('react');
+  const {useSelector} = require('react-redux');
+  const MockContainer = () => {
+    const chatIsOpen = useSelector(state => state.aiDiffChat.chatIsOpen);
+    return (
+      <div style={chatIsOpen ? undefined : {display: 'none'}}>
+        <span>AI Teaching Assistant</span>
+      </div>
+    );
+  };
+  return {__esModule: true, default: MockContainer};
+});
+
+jest.mock('@cdo/apps/aiTeacherDrawer/AiDiffDrawer', () => {
+  const React = require('react');
+  const {useSelector} = require('react-redux');
+  const MockDrawer = () => {
+    const chatIsOpen = useSelector(state => state.aiDiffChat.chatIsOpen);
+    return (
+      <div style={chatIsOpen ? undefined : {display: 'none'}}>
+        <span>AI Teaching Assistant</span>
+      </div>
+    );
+  };
+  return {__esModule: true, default: MockDrawer};
+});
 
 describe('TeacherNavigationBar', () => {
   const sections = [
@@ -124,6 +153,7 @@ describe('TeacherNavigationBar', () => {
     registerReducers({
       teacherSections,
       currentUser,
+      aiDiffChat: aiDiffChatReducer,
     });
     store.dispatch(setSections(serverSections, true, [12, 13, 14, 11]));
     store.dispatch(
