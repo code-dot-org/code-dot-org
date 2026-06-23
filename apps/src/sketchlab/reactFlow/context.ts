@@ -78,15 +78,3 @@ export const AnchorDraggingProvider = AnchorDraggingContext.Provider;
 export function useIsAnchorDragging(): boolean {
   return useContext(AnchorDraggingContext);
 }
-
-// The edge whose endpoint is currently being dragged in a reconnect, so the
-// connection ghost can match its styling. Null when no reconnect is active.
-const ReconnectingEdgeContext = createContext<SketchlabReactFlowEdge | null>(
-  null
-);
-
-export const ReconnectingEdgeProvider = ReconnectingEdgeContext.Provider;
-
-export function useReconnectingEdge(): SketchlabReactFlowEdge | null {
-  return useContext(ReconnectingEdgeContext);
-}
