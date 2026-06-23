@@ -13,6 +13,48 @@ import * as shapes from '../shapes';
  */
 const PISKEL_PATH =
   '/blockly/js/piskel/index.html' + (PISKEL_DEVELOPMENT_MODE ? '?debug' : '');
+const PISKEL_THEME_STYLE_ID = 'code-dot-org-piskel-theme';
+const PISKEL_THEME_TOKENS = [
+  '--background-brand-purple-primary',
+  '--background-neutral-primary',
+  '--background-neutral-quinary',
+  '--background-neutral-secondary',
+  '--background-neutral-tertiary',
+  '--borders-brand-purple-primary',
+  '--borders-neutral-strong',
+  '--text-neutral-primary',
+  '--text-neutral-white-fixed',
+];
+const PISKEL_THEME_CSS = `
+  body {
+    background-color: var(--background-neutral-secondary) !important;
+    color: var(--text-neutral-primary) !important;
+  }
+
+  #tool-section,
+  .sticky-section {
+    background-color: var(--background-neutral-tertiary) !important;
+  }
+
+  .tool-icon,
+  .size-picker-option {
+    background-color: var(--background-neutral-quinary) !important;
+    border-color: var(--borders-neutral-strong) !important;
+  }
+
+  .tool-icon.selected,
+  .size-picker-option.selected {
+    background-color: var(--background-brand-purple-primary) !important;
+    border-color: var(--borders-brand-purple-primary) !important;
+    color: var(--text-neutral-white-fixed) !important;
+  }
+
+  .toolbox-container,
+  .column,
+  .column-wrapper {
+    color: var(--text-neutral-primary) !important;
+  }
+`;
 
 /**
  * The PiskelEditor component is a wrapper for the iframe that contains the
@@ -184,6 +226,7 @@ class PiskelEditor extends React.Component {
 
   onPiskelReady = () => {
     this.isPiskelReady_ = true;
+    this.applyPiskelTheme_();
     if (this.props.isBlockly) {
       this.piskel.restrictTools();
     }
@@ -192,6 +235,35 @@ class PiskelEditor extends React.Component {
     }
     this.loadSelectedAnimation_(this.props);
   };
+
+  applyPiskelTheme_() {
+    const iframeDocument = this.iframe && this.iframe.contentDocument;
+    if (!iframeDocument) {
+      return;
+    }
+
+    const parentRoot = document.documentElement;
+    const parentStyles = getComputedStyle(parentRoot);
+    PISKEL_THEME_TOKENS.forEach(token => {
+      iframeDocument.documentElement.style.setProperty(
+        token,
+        parentStyles.getPropertyValue(token)
+      );
+    });
+
+    iframeDocument.documentElement.dataset.brand =
+      parentRoot.dataset.brand || '';
+    iframeDocument.documentElement.dataset.theme =
+      parentRoot.dataset.theme || 'Light';
+
+    let styleElement = iframeDocument.getElementById(PISKEL_THEME_STYLE_ID);
+    if (!styleElement) {
+      styleElement = iframeDocument.createElement('style');
+      styleElement.id = PISKEL_THEME_STYLE_ID;
+      iframeDocument.head.appendChild(styleElement);
+    }
+    styleElement.textContent = PISKEL_THEME_CSS;
+  }
 
   onAnimationSaved = message => {
     if (this.isLoadingAnimation_) {
