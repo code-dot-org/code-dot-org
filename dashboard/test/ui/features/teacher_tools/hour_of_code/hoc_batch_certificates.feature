@@ -12,9 +12,10 @@ Scenario: Printing a batch of certificates
   Then evaluate JavaScript expression "$('#print-certificate-batch img').length === 3"
 
 @eyes
-Scenario: Eyes test for oceans certificate on bulk print page
+Scenario: Eyes test for HOC certificate on bulk print page
   When I open my eyes to test "batch print certificates"
-  And I am on "http://studio.code.org/certificates/batch?course=b2NlYW5z"
+  # course param points to 'ui-test-artist'
+  And I am on "http://studio.code.org/certificates/batch?course=dWktdGVzdC1hcnRpc3Q%3D"
   And I wait until element ".batch-certificate-form" is visible
   And I press keys "Student One" for element ".batch-certificate-form textarea"
   And I see no difference for "bulk certificate page"
