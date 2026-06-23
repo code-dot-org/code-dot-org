@@ -1,3 +1,4 @@
+@playwright
 Feature: Playing multi levels
 
 Scenario: Loading the level
