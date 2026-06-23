@@ -7,8 +7,12 @@ import {toHtml} from 'hast-util-to-html';
  *
  * Our translation engine refuses to translate a block that contains Blockly XML
  * (`<xml>`, `<block>`, ...) or other non-phrasing elements, even when the block
- * is marked for isolation. This plugin works around that on the hast tree,
- * before sanitization:
+ * is marked for isolation. This plugin works around that on the hast tree.
+ *
+ * The caller must run it between two sanitization passes — sanitized before
+ * (step 2 below serializes the block and reparses it through a live DOM inside
+ * the translator, so that content has to be safe going in) and sanitized again
+ * after (the translator's reparsed output is otherwise untrusted). Then:
  *
  *   1. Within each block (default `<p>`), every element the translator cannot
  *      handle is replaced by a `<code>` placeholder carrying its stash index,
@@ -22,9 +26,10 @@ import {toHtml} from 'hast-util-to-html';
  *   3. The translated HTML is reparsed and the placeholders / renamed tags are
  *      restored, leaving the stashed elements byte-for-byte unchanged.
  *
- * The stashed and reparsed nodes still pass through sanitization afterward, so
- * the trust boundary is unchanged. This replaces the legacy approach of
- * building a detached DOM tree from rendered React and walking it back.
+ * Sanitized on both sides, the trust boundary holds: the block HTML is safe
+ * when it reaches the live DOM, and the translator's output is constrained
+ * before it renders. This replaces the legacy approach of building a detached
+ * DOM tree from rendered React and walking it back.
  */
 export interface RehypeLocalizeOptions {
   /** Translate a fragment of inline HTML, preserving element structure. */

@@ -32,6 +32,7 @@ import {
   composeSanitizeSchema,
   preprocessMarkdown,
   type MarkdownExtension,
+  type SanitizeSchema,
 } from '../extension';
 import {
   getLocalizationVersion,
@@ -139,20 +140,32 @@ const baseComponents = (localized: boolean): Partial<Components> => ({
 const NO_EXTENSIONS: MarkdownExtension[] = [];
 
 /*
+ * A sanitize pass with a fresh attacher identity. unified de-duplicates plugins
+ * by reference, so calling `.use(rehypeSanitize, schema)` twice reconfigures the
+ * single registration instead of adding a second pass. Wrapping mints a distinct
+ * attacher each call, so the before- and after-localization passes both run.
+ */
+const sanitizePass = (schema: SanitizeSchema) => () => rehypeSanitize(schema);
+
+/*
  * Compose the pipeline from the base behavior plus the enabled extensions.
  * Extension remark plugins run before the markdown-to-HTML transform; extension
  * rehype plugins run after raw-HTML reparsing but before sanitization, so their
  * output is still constrained by the (extension-widened) allowlist; extension
  * components are merged over the base mappings.
  *
- * When localization is active, rehypeLocalize runs last among the rehype tree
- * transforms (still before sanitization) so it sees the final structure,
- * including any elements the extensions introduced.
+ * Sanitization runs before localization. rehypeLocalize round-trips block
+ * content through a live DOM (innerHTML) inside the translator, so the tree must
+ * already be safe at that point — sanitizing only afterward would be too late to
+ * stop markup that auto-executes on parse. When localization is active, a second
+ * sanitize pass then constrains the translator's reparsed output.
  */
 const buildProcessor = (
   extensions: MarkdownExtension[],
   localized: boolean,
 ) => {
+  const sanitizeSchema = composeSanitizeSchema(defaultSchema, extensions);
+
   const processor = unified()
     .use(remarkParse)
     .use(remarkGfm)
@@ -162,7 +175,11 @@ const buildProcessor = (
     // raw HTML is constrained to safe tags/attributes.
     .use(remarkRehype, {allowDangerousHtml: true})
     .use(rehypeRaw)
-    .use(collectRehypePlugins(extensions));
+    .use(collectRehypePlugins(extensions))
+    // Sanitize before localization, not after: rehypeLocalize serializes each
+    // block and reparses it through a live DOM, so the content it handles has
+    // to be safe going in.
+    .use(sanitizePass(sanitizeSchema));
 
   if (localized) {
     // `summary` is included so details summaries (inline content after
@@ -171,16 +188,19 @@ const buildProcessor = (
       translate: translateHtml,
       blockTags: ['p', 'summary'],
     });
+    // Re-sanitize the localized tree: the stashed originals are already safe,
+    // but the translator's output was reparsed and spliced back in, so hold it
+    // to the same allowlist. A distinct attacher (sanitizePass) so this is a
+    // genuine second pass, not a reconfiguration of the first.
+    processor.use(sanitizePass(sanitizeSchema));
   }
 
-  return processor
-    .use(rehypeSanitize, composeSanitizeSchema(defaultSchema, extensions))
-    .use(rehypeReact, {
-      Fragment,
-      jsx,
-      jsxs,
-      components: composeComponents(baseComponents(localized), extensions),
-    });
+  return processor.use(rehypeReact, {
+    Fragment,
+    jsx,
+    jsxs,
+    components: composeComponents(baseComponents(localized), extensions),
+  });
 };
 
 /**

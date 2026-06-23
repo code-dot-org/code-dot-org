@@ -561,5 +561,45 @@ describe('Markdown', () => {
       expect(html).toContain('<strong');
       expect(html).toContain('href="https://code.org"');
     });
+
+    /*
+     * rehypeLocalize round-trips each block through a live DOM (innerHTML) inside
+     * the translator. Sanitization runs first, so the HTML the translator ever
+     * sees is already stripped of dangerous attributes — nothing unsafe is
+     * materialized in the DOM ahead of the sanitizer.
+     */
+    it('hands the translator only sanitized markup', () => {
+      const seen = activateLocalization();
+      render('<a href="javascript:alert(1)" onclick="steal()">x</a> and text');
+      const handed = seen.join('');
+      // the block did reach the translator (guards against a vacuous pass)...
+      expect(handed).toContain('and text');
+      // ...but stripped of the dangerous href/handler
+      expect(handed).not.toContain('javascript:');
+      expect(handed).not.toContain('onclick');
+      expect(handed).not.toContain('steal');
+    });
+
+    /*
+     * The translator's output is reparsed and spliced back into the tree, so a
+     * hostile translation string must not smuggle in live markup. The second
+     * sanitize pass (after localization) catches it.
+     */
+    it('sanitizes markup injected by the translator', () => {
+      vi.spyOn(localization, 'isLocalizeJS').mockReturnValue(true);
+      vi.spyOn(localization, 'translate').mockImplementation(input => {
+        if (input && typeof input === 'object' && 'innerHTML' in input) {
+          const element = input as unknown as HTMLElement;
+          // An <iframe> is a sink rehype-react would render but the allowlist
+          // (without the embeds extension) forbids — so it proves the post-
+          // localization sanitize pass ran, independent of React's own scrubbing.
+          element.innerHTML += '<iframe src="https://evil.example"></iframe>';
+        }
+        return input;
+      });
+      const html = render('hello');
+      expect(html).not.toContain('<iframe');
+      expect(html).not.toContain('evil.example');
+    });
   });
 });
