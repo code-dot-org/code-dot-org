@@ -197,14 +197,19 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   } | null>(null);
   const wasDraggingRef = useRef(false);
 
+  const FAB_SIZE = 48;
+  const HEADER_HEIGHT = 50;
+
   useEffect(() => {
-    const onResize = () => setFabPosition(null);
+    const onResize = () => {
+      setFabPosition(prev => {
+        if (!prev) return null;
+        return prev.top > window.innerHeight - FAB_SIZE ? null : prev;
+      });
+    };
     window.addEventListener('resize', onResize);
     return () => window.removeEventListener('resize', onResize);
   }, []);
-
-  const FAB_SIZE = 48;
-  const HEADER_HEIGHT = 50;
 
   const onDragMove = (clientY: number) => {
     const drag = dragStateRef.current;
