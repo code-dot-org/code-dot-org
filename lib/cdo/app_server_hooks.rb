@@ -37,7 +37,7 @@ module Cdo
           before_gc = GC.stat
           started_at = Process.clock_gettime(Process::CLOCK_MONOTONIC)
           Cdo::ProcessMemory.log_snapshot(
-            'Compacting Ruby heap before Puma worker fork',
+            'puma_before_fork_gc_compact_started',
             fields: {
               heap_allocated_pages: before_gc[:heap_allocated_pages],
               heap_live_slots: before_gc[:heap_live_slots],
@@ -51,7 +51,7 @@ module Cdo
           after_gc = GC.stat
           duration = Process.clock_gettime(Process::CLOCK_MONOTONIC) - started_at
           Cdo::ProcessMemory.log_snapshot(
-            'Compacted Ruby heap before Puma worker fork',
+            'puma_before_fork_gc_compact_finished',
             fields: {
               duration_seconds: duration.round(3),
               heap_allocated_pages: after_gc[:heap_allocated_pages],
@@ -60,7 +60,11 @@ module Cdo
             }
           )
         rescue StandardError => exception
-          CDO.log.warn("Failed to compact Ruby heap before Puma worker fork: #{exception.class}: #{exception.message}")
+          CDO.log.warn(
+            'event=puma_before_fork_gc_compact_failed ' \
+              "error_class=#{exception.class} " \
+              "error_message=#{exception.message.inspect}"
+          )
         end
       end
     end

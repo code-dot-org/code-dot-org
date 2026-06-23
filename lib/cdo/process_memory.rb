@@ -33,10 +33,14 @@ module Cdo
       snapshot
     end
 
-    def self.log_snapshot(message, fields: {}, pid: Process.pid)
+    def self.log_snapshot(event, fields: {}, pid: Process.pid)
       metrics = fields.merge(snapshot_kb(pid: pid))
-      CDO.log.info("#{message}: #{metrics.map {|key, value| "#{key}=#{value}"}.join(', ')}")
+      CDO.log.info(format_log(event, metrics))
       metrics
+    end
+
+    def self.format_log(event, fields)
+      ["event=#{event}", *fields.map {|key, value| "#{key}=#{value}"}].join(' ')
     end
 
     def self.read_kb_fields(path, field_names, snapshot)
@@ -52,6 +56,7 @@ module Cdo
     rescue Errno::ENOENT, Errno::EACCES
       snapshot
     end
+    private_class_method :format_log
     private_class_method :read_kb_fields
   end
 end
