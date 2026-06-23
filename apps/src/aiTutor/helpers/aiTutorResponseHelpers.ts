@@ -1,6 +1,6 @@
 import {JsonObjectSchema} from '@cdo/apps/aichat/types';
 
-// Shared JSON schema property definitions for lab AI tutor answer schemas.
+// Shared JSON schema property definitions for lab AI Tutor answer schemas.
 // Lab-specific properties (answerType enum, assumptions description, code
 // description, pseudocode description) remain in each lab's helper.
 
@@ -70,19 +70,35 @@ export const ANSWER_JSON_SCHEMA_PROPERTY_ORDERING: string[] = [
   'videoUrl',
 ];
 
+export type AiTutorModelCodeFile = {
+  filename: string;
+  sourceCode: string;
+};
+
+export type AiTutorCopyPasteResponse = {
+  assumptions?: string;
+  code?: AiTutorModelCodeFile[];
+  explanation?: string;
+  pseudocode?: string;
+  example?: string;
+  nextSteps?: string;
+  questions?: string;
+  videoUrl?: string;
+};
+
 const formatSection = (title: string, content?: string): string => {
   return content ? `**${title}**\n\n${content}\n\n` : '';
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const formatCopyPasteResponse = (response: any): string => {
+export const formatCopyPasteResponse = (
+  response: AiTutorCopyPasteResponse
+): string => {
   let formattedResponse = '';
   formattedResponse += formatSection('Assumptions', response.assumptions);
 
-  if (response.code && response.code.length > 0) {
+  if (response.code?.length) {
     formattedResponse += `**Code**\n\n`;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    response.code.forEach((code: any) => {
+    response.code.forEach(code => {
       formattedResponse += `\`${code.filename}\`\n\`\`\`\n${code.sourceCode}\n\`\`\`\n\n`;
     });
   }

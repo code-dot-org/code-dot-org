@@ -4,6 +4,7 @@ import {JsonObjectSchema} from '@cdo/apps/aichat/types';
 import {
   ANSWER_JSON_SCHEMA_PROPERTY_ORDERING,
   ANSWER_JSON_SCHEMA_REQUIRED,
+  AiTutorModelCodeFile,
   CODE_ITEM_SCHEMA,
   EXAMPLE_PROPERTY,
   EXPLANATION_PROPERTY,
@@ -103,10 +104,6 @@ export const aiTutorResponseJsonSchema: JsonObjectSchema = {
 
 export {formatCopyPasteResponse} from '@cdo/apps/aiTutor/helpers/aiTutorResponseHelpers';
 
-const formatSection = (title: string, content?: string): string => {
-  return content ? `**${title}**\n\n${content}\n\n` : '';
-};
-
 type AiTutorCodeFile = {
   name: string;
   contents: string;
@@ -118,19 +115,28 @@ type AcceptRejectFormattedResponse = {
   answerType: string;
 };
 
-// This is used when the AI Tutor response's answerType is 'buildHTML', 'buildCSS', 'buildJavaScript', or 'buildJSON'.
-// Parsed json comes in as 'any', but it follows the structure defined in acceptRejectJsonSchema.
+type AcceptRejectResponse = {
+  explanation?: string;
+  videoUrl?: string;
+  code: AiTutorModelCodeFile[];
+  answerType: string;
+};
+
+const formatSection = (title: string, content?: string): string => {
+  return content ? `**${title}**\n\n${content}\n\n` : '';
+};
+
+// This is used when the AI Tutor response's answerType is 'buildHTML', 'buildCSS',
+// 'buildJavaScript', or 'buildJSON'.
 export const formatAcceptRejectResponse = (
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  response: any
+  response: AcceptRejectResponse
 ): AcceptRejectFormattedResponse => {
   const explanation =
     formatSection('Explanation', response.explanation) +
     (response.videoUrl ? `\n[Watch this video](${response.videoUrl})\n` : '');
   return {
     explanation,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    code: response.code.map((codeFile: any) => ({
+    code: response.code.map(codeFile => ({
       name: codeFile.filename,
       contents: codeFile.sourceCode,
     })),
