@@ -13,7 +13,7 @@ import AiDiffWorkSpace from './AiDiffWorkspace';
 import BottomNav from './BottomNav';
 import {DRAWER_WIDTH, DRAWER_WIDTH_WELCOME} from './constants';
 import HomeScreen from './HomeScreen';
-import AiDiffNotificationList from './notifications/AiDiffNotificationList';
+import NotificationList from './notifications/NotificationList';
 import {Context} from './types';
 import AiDiffWelcome from './welcome/AiDiffWelcome';
 
@@ -112,7 +112,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
         />
       );
     } else if (activeNav === 'Alerts') {
-      content = <AiDiffNotificationList aiPromptClick={onAlertPromptClick} />;
+      content = <NotificationList aiPromptClick={onAlertPromptClick} />;
     } else {
       content = (
         <AiDiffWorkSpace
@@ -120,7 +120,6 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
           personalizationData={personalizationData}
           scriptName={scriptName}
           curriculumCourses={curriculumCourses}
-          unreadNotificationCount={unreadNotificationCount}
           showSidebar={showChatList}
           onSidebarChatSelect={() => setShowChatList(false)}
         />
