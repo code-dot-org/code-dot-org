@@ -11710,7 +11710,6 @@ __metadata:
     react-typist: "npm:^2.0.5"
     react-virtualized: "npm:^9.18.5"
     react-virtualized-select: "npm:^3.0.1"
-    react-with-context: "npm:^2.0.0"
     reactabular-sticky: "npm:^8.14.0"
     reactabular-table: "npm:^8.14.0"
     reactabular-virtualized: "npm:^8.18.0"
@@ -26359,29 +26358,6 @@ canvg@gabelerner/canvg:
     react: ^15.3.0 || ^16.0.0-alpha
     react-dom: ^15.3.0 || ^16.0.0-alpha
   checksum: 10/4adab310f13951f2f466314fc39d5d72de45f8c095e728d271882d9d10209b216940ecaa7b2dc8e64cac402236776bd348ec9f96e8d0a30ccb5de299f8b459b4
-  languageName: node
-  linkType: hard
-
-"react-with-context@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "react-with-context@npm:2.0.0"
-  dependencies:
-    "@types/react": "npm:^16.0.7"
-    react: "npm:^15.6.2"
-  checksum: 10/b51c3995737837640960c34b559e0cc5389d3de6bb5be072371efd72fcd48bd580dcfc1458719212079256d7ba0c9fed37fc5fce3d26c8b1c6e761969c00cd7d
-  languageName: node
-  linkType: hard
-
-"react@npm:^15.6.2":
-  version: 15.6.2
-  resolution: "react@npm:15.6.2"
-  dependencies:
-    create-react-class: "npm:^15.6.0"
-    fbjs: "npm:^0.8.9"
-    loose-envify: "npm:^1.1.0"
-    object-assign: "npm:^4.1.0"
-    prop-types: "npm:^15.5.10"
-  checksum: 10/8c55337715dc20a12393f1381bafd9a2d2452d7245ccfb5ea2bc1181c2dde4cc6b6319e1ae56fdffe58f3f9e7da95f0e6b45c79e7982789378b8eafa41a6016f
   languageName: node
   linkType: hard
 

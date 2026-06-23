@@ -104,7 +104,6 @@ export const reviewersMap = {
     'react-transition-group': 'student-labs',
     'react-virtualized-select': 'teacher-tools',
     'react-virtualized': 'teacher-tools',
-    'react-with-context': 'code-tools',
     'reactabular-sticky': 'teacher-tools',
     'reactabular-table': 'student-labs',
     'reactabular-virtualized': 'teacher-tools',
