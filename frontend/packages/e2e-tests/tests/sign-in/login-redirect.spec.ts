@@ -40,7 +40,9 @@ test.describe('Navigating to a level page with login required', () => {
 
     // The post-sign-in redirect lands on the original level path (no login_required param).
     await expect(page).toHaveURL(
-      new RegExp(LEVEL_PATH + '(?!.*login_required)'),
+      url =>
+        url.pathname.endsWith(LEVEL_PATH) &&
+        !url.searchParams.has('login_required'),
     );
   });
 
@@ -67,7 +69,9 @@ test.describe('Navigating to a level page with login required', () => {
     // The locale prefix (/pl/, /cn/, etc.) varies per session — match on path only.
     await page.goto(LEVEL_WITH_LOGIN_REQUIRED, {waitUntil: 'domcontentloaded'});
     await expect(page).toHaveURL(
-      new RegExp(LEVEL_PATH + '(?!.*login_required)'),
+      url =>
+        url.pathname.endsWith(LEVEL_PATH) &&
+        !url.searchParams.has('login_required'),
     );
   });
 });
