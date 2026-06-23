@@ -11,6 +11,7 @@ ARG CODE_DOT_ORG_PEGASUS
 ARG CODE_DOT_ORG_STATIC
 ARG CODE_DOT_ORG_DB_SEED
 ARG CODE_DOT_ORG_CORE
+ARG SKIP_FRONTEND_BUILD=0
 
 FROM $CODE_DOT_ORG_PEGASUS AS code-dot-org-pegasus
 FROM $CODE_DOT_ORG_STATIC AS code-dot-org-static
@@ -76,6 +77,8 @@ EOF
 FROM code-dot-org-core AS code-dot-org-node_modules
 ################################################################################
 
+ARG SKIP_FRONTEND_BUILD=0
+
 COPY --chown=${UID} \
   ./apps/package.json \
   ./apps/yarn.lock \
@@ -104,13 +107,19 @@ RUN \
   --mount=type=cache,sharing=locked,uid=${UID},gid=${GID},target=${SRC}/apps/.yarn/cache \
   <<EOF
   # yarn install
-  cd apps
-  CI=true yarn install --immutable --silent
+  if [ "${SKIP_FRONTEND_BUILD}" = "1" ]; then
+    mkdir -p apps/build/package/js apps/build/package/css
+  else
+    cd apps
+    CI=true yarn install --immutable --silent
+  fi
 EOF
 
 ################################################################################
 FROM code-dot-org-node_modules AS code-dot-org-yarn-build
 ################################################################################
+
+ARG SKIP_FRONTEND_BUILD=0
 
 # Its sad, but we have to have our `yarn build` depend on installing ruby
 # just for bundle exec. Maybe we could decouple? NOTE, this link of rbenv
@@ -174,7 +183,11 @@ RUN \
   --mount=type=cache,sharing=locked,uid=${UID},gid=${GID},target=${SRC}/apps/.yarn/cache \
   <<EOF
   cd apps
-  CI=true yarn build
+  if [ "${SKIP_FRONTEND_BUILD}" = "1" ]; then
+    mkdir -p build/package/js build/package/css
+  else
+    CI=true yarn build
+  fi
 EOF
 
 # ################################################################################

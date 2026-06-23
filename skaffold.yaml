@@ -139,6 +139,20 @@ profiles:
             mountDotAWS: true
             mountDotConfigGcloud: true
 
+# Skip the full apps webpack build. This is useful when you only need Rails,
+# e.g. ActiveJob or backend-only debugging on a memory-constrained machine.
+- name: backend-only
+  patches:
+    - op: replace
+      path: /build/artifacts/0/custom/buildCommand
+      value: |
+        k8s/bin/docker-buildx -f k8s/docker/code-dot-org.dockerfile \
+          --build-arg CODE_DOT_ORG_CORE="$CODE_DOT_ORG_CORE" \
+          --build-arg CODE_DOT_ORG_DB_SEED="$CODE_DOT_ORG_DB_SEED" \
+          --build-arg CODE_DOT_ORG_PEGASUS="$CODE_DOT_ORG_PEGASUS" \
+          --build-arg CODE_DOT_ORG_STATIC="$CODE_DOT_ORG_STATIC" \
+          --build-arg SKIP_FRONTEND_BUILD=1
+
 # Populates Dashboard DB (rake dashboard:setup_db)
 # Run: skaffold dev --trigger=manual -p setup-db -p setup-s3
 - name: setup-db
