@@ -183,7 +183,6 @@ const exts = [
 | `vocabularyDefinition` | factory | `[v term]` → term with its definition in a native title tooltip                 | Resolves via an injected synchronous `lookup` (point it at fetched data); unknown terms fall back to plain text. Replaces Dashboard's server-side resolution. |
 | `externalLinks`        | factory | opens links in a new tab (`target="_blank"` + `rel="noopener noreferrer"`)      | Defaults to all links (legacy `openExternalLinksInNewTab`); pass `isExternal` to scope.                                                                       |
 | `embeds`               | object  | permits `<iframe>` and its attributes                                           | Enable **only** for non-student audiences; the caller owns that gating.                                                                                       |
-| `blockly`              | object  | permits Blockly XML tags (`<xml>`, `<block>`, ...)                              | Clears `clobberPrefix` document-wide so `id`/`name` are not rewritten — enable only for trusted Blockly content. Renders each tag as its custom element.      |
 
 These mirror the allowlist that the legacy `apps/src/templates/SafeMarkdown.jsx`
 applied unconditionally; here each is opt-in and isolated. `clickableText` and
