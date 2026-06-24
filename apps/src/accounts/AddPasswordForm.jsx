@@ -1,13 +1,14 @@
+import TextField from '@code-dot-org/component-library/textField';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import {Field} from '../sharedComponents/SystemDialog/SystemDialog';
 import * as utils from '../utils';
 
-import BootstrapButton from './BootstrapButton';
+import styles from './add-password-form.module.scss';
 
 const MIN_PASSWORD_LENGTH = 6;
 export const SAVING_STATE = i18n.saving();
@@ -114,107 +115,64 @@ export default class AddPasswordForm extends React.Component {
   render() {
     const {password, passwordConfirmation, submissionState} = this.state;
     const {disabled, userAge, userUsState} = this.props;
-    let statusTextStyles = styles.statusText;
-    statusTextStyles = submissionState.isError
-      ? {...statusTextStyles, ...styles.errorText}
-      : statusTextStyles;
     const disabledHint =
       userAge && userUsState
         ? i18n.manageLinkedAccounts_parentalPermissionRequired()
         : i18n.manageLinkedAccounts_ageAndStateRequired();
 
     return (
-      <div style={styles.container}>
+      <div className={styles.container}>
         <hr />
-        <h2 style={styles.header}>{i18n.addPassword()}</h2>
-        <div style={styles.hint}>
+        <MuiTypography variant="h5" component="h2" gutterBottom>
+          {i18n.addPassword()}
+        </MuiTypography>
+        <MuiTypography variant="body2" className={styles.hint}>
           {disabled ? disabledHint : i18n.addPasswordHint()}
-        </div>
-        <PasswordField
+        </MuiTypography>
+        <TextField
+          name="password"
+          inputType="password"
           label={i18n.password()}
-          error={this.minimumLengthError(password)}
+          errorMessage={this.minimumLengthError(password)}
           value={password}
           onChange={this.onPasswordChange}
+          maxLength={255}
           disabled={disabled}
         />
-        <PasswordField
+        <TextField
+          name="passwordConfirmation"
+          inputType="password"
           label={i18n.passwordConfirmation()}
-          error={
+          errorMessage={
             this.minimumLengthError(passwordConfirmation) ||
             this.mismatchedPasswordsError()
           }
           value={passwordConfirmation}
           onChange={this.onPasswordConfirmationChange}
+          maxLength={255}
           disabled={disabled}
         />
-        <div style={styles.buttonContainer}>
-          <div id="uitest-add-password-status" style={statusTextStyles}>
+        <div className={styles.buttonContainer}>
+          <div
+            id="uitest-add-password-status"
+            className={classNames(styles.statusText, {
+              [styles.errorText]: submissionState.isError,
+            })}
+          >
             {submissionState.message}
           </div>
-          {/* This button intentionally uses BootstrapButton to match other account page buttons */}
-          <BootstrapButton
-            text={i18n.createPassword()}
+          <MuiButton
+            type="button"
+            variant="contained"
+            color="primary"
+            size="small"
             onClick={this.handleSubmit}
             disabled={!this.isFormValid()}
-          />
+          >
+            {i18n.createPassword()}
+          </MuiButton>
         </div>
       </div>
     );
   }
 }
-
-class PasswordField extends React.Component {
-  static propTypes = {
-    label: PropTypes.string.isRequired,
-    error: PropTypes.string,
-    value: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired,
-    disabled: PropTypes.bool,
-  };
-
-  render() {
-    const {label, value, onChange, error, disabled} = this.props;
-    return (
-      <Field label={label} error={error}>
-        <input
-          type="password"
-          value={value}
-          onChange={onChange}
-          maxLength="255"
-          size="255"
-          style={styles.input}
-          disabled={disabled}
-        />
-      </Field>
-    );
-  }
-}
-
-const styles = {
-  container: {
-    paddingTop: 20,
-  },
-  header: {
-    fontSize: 22,
-  },
-  hint: {
-    marginTop: 10,
-    marginBottom: 10,
-  },
-  input: {
-    marginBottom: 4,
-  },
-  buttonContainer: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-  },
-  statusText: {
-    paddingLeft: 10,
-    paddingRight: 10,
-    fontStyle: 'italic',
-  },
-  errorText: {
-    color: color.red,
-  },
-};
