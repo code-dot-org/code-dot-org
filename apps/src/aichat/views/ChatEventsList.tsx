@@ -64,6 +64,11 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   const previousEventsLength = useRef<number | null>(null);
   const parentRef = useRef<HTMLDivElement>(null);
   const finalEventRef = useRef<HTMLDivElement>(null);
+  // Whether the user is currently pinned to the bottom of the conversation.
+  // Updated from scroll events (the only way the user un-pins is by scrolling up)
+  // and read when the container is resized — a resize doesn't move scrollTop, so
+  // it fires no scroll event and we can't recompute this after the fact.
+  const pinnedToBottomRef = useRef(true);
 
   const scrollToLastMessage = useCallback((keepTopOfMessageVisible = false) => {
     if (conversationContainerRef.current) {
@@ -128,6 +133,20 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
     }
 
     const handleUserScroll = () => {
+      pinnedToBottomRef.current = isAtBottom();
+      setShowScrollToBottom(!isAtBottom());
+    };
+
+    // When the container is resized (e.g. the instructions drawer opening above
+    // shrinks the chat), keep the latest content pinned to the bottom — but only
+    // if the user was already there. If they'd scrolled up to read, leave their
+    // position alone. Jump instantly (not smoothly) so the chat stays glued to
+    // the bottom across every frame of the drawer's resize animation.
+    const handleResize = () => {
+      const container = conversationContainerRef.current;
+      if (pinnedToBottomRef.current && container) {
+        container.scrollTop = container.scrollHeight;
+      }
       setShowScrollToBottom(!isAtBottom());
     };
 
@@ -145,6 +164,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
           ) {
             window.clearInterval(scrollEndIntervalId);
             setInProgrammaticScroll(false);
+            pinnedToBottomRef.current = isAtBottom();
             setShowScrollToBottom(!isAtBottom());
             previousScrollTop = null;
           } else {
@@ -156,7 +176,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
     // Otherwise, set up the user scroll handler to display the scroll button when not at scroll end.
     else {
       container.addEventListener('scroll', handleUserScroll);
-      resizeObserver = new ResizeObserver(handleUserScroll);
+      resizeObserver = new ResizeObserver(handleResize);
       resizeObserver.observe(container);
     }
 
