@@ -257,6 +257,58 @@ class LessonsControllerTest < ActionController::TestCase
 
   test_user_gets_response_for :level_properties_by_id, user: nil, response: :success, params: -> {{id: @lesson2.id}}, name: 'anyone can fetch lesson level properties by ID on a lesson without a lesson plan'
 
+  test 'level_properties in teacher view uses user_id when user is student of teacher' do
+    teacher = create(:teacher)
+    student = create(:student)
+    driver = create(:student)
+    section = create(:section, user: teacher, script: @script)
+    create(:follower, section: section, student_user: student)
+    level = create(:music)
+    create(:script_level, script: @script, lesson: @lesson, levels: [level])
+
+    driver_user_level = create(:user_level, user: driver, level: level, script: @script)
+    navigator_user_level = create(:user_level, user: student, level: level, script: @script)
+    create(
+      :paired_user_level,
+      driver_user_level: driver_user_level,
+      navigator_user_level: navigator_user_level
+    )
+
+    sign_in teacher
+    get :level_properties, params: {
+      course_course_name: @course.name,
+      unit_position: 1,
+      lesson_position: @lesson.relative_position,
+      user_id: student.id
+    }
+    assert_response :success
+
+    level_properties = JSON.parse(response.body)[level.id.to_s]
+    assert_equal true, level_properties['isNavigator']
+    assert_equal driver.name, level_properties['pairingDriver']
+    refute_nil level_properties['pairingAttempt']
+  end
+
+  test 'level_properties in teacher view ignores user_id when user is not teacher student' do
+    teacher = create(:teacher)
+    other_user = create(:student)
+    level = create(:music)
+    create(:script_level, script: @script, lesson: @lesson, levels: [level])
+
+    sign_in teacher
+    get :level_properties, params: {
+      course_course_name: @course.name,
+      unit_position: 1,
+      lesson_position: @lesson.relative_position,
+      user_id: other_user.id
+    }
+    assert_response :success
+
+    level_properties = JSON.parse(response.body)[level.id.to_s]
+    assert_nil level_properties['isNavigator']
+    assert_nil level_properties['pairingDriver']
+  end
+
   test 'show includes correct SEO data' do
     get :show, params: {
       course_course_name: @course.name,
