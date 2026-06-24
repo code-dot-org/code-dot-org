@@ -27,6 +27,7 @@ export default function SectionSignIn({
   wordInstruction,
   pairProgramming,
   loginLabel,
+  signingInLabel,
   students,
   secretPictures,
   loginType,
@@ -38,6 +39,9 @@ export default function SectionSignIn({
   const [pictureId, setPictureId] = useState(null);
   const [secretWords, setSecretWords] = useState('');
   const [pairing, setPairing] = useState(false);
+  // Mirrors the legacy submit button's `disable_with`: disable on submit and
+  // swap the label so the form can't be double-submitted.
+  const [submitting, setSubmitting] = useState(false);
 
   const isPicture = loginType === loginTypePicture;
   const isWord = loginType === loginTypeWord;
@@ -74,7 +78,10 @@ export default function SectionSignIn({
         action={submitPath}
         method="post"
         className={styles.form}
-        onSubmit={() => clientState.reset()}
+        onSubmit={() => {
+          setSubmitting(true);
+          clientState.reset();
+        }}
       >
         <input
           type="hidden"
@@ -107,6 +114,7 @@ export default function SectionSignIn({
                 <li key={picture.id}>
                   <button
                     type="button"
+                    aria-pressed={pictureId === picture.id}
                     className={classNames(styles.tile, {
                       [styles.tileSelected]: pictureId === picture.id,
                     })}
@@ -150,9 +158,9 @@ export default function SectionSignIn({
             type="submit"
             variant="contained"
             color="primary"
-            disabled={!secretChosen}
+            disabled={!secretChosen || submitting}
           >
-            {loginLabel}
+            {submitting ? signingInLabel : loginLabel}
           </MuiButton>
         )}
       </form>
@@ -169,6 +177,7 @@ SectionSignIn.propTypes = {
   wordInstruction: PropTypes.string,
   pairProgramming: PropTypes.string.isRequired,
   loginLabel: PropTypes.string.isRequired,
+  signingInLabel: PropTypes.string.isRequired,
   students: PropTypes.arrayOf(
     PropTypes.shape({id: PropTypes.number, name: PropTypes.string})
   ).isRequired,
