@@ -16,13 +16,19 @@ describe('AddParentEmailModal', () => {
     return render(<AddParentEmailModal {...DEFAULT_PROPS} {...props} />);
   };
 
+  // The DSCO TextField renders its error/helper text inside the field's <label>,
+  // so the accessible name is "<label> <error>" when an error is shown. Anchor
+  // to the start of the label; also note the parent-email label is a prefix of
+  // the confirmed-email label, so a plain substring match would be ambiguous.
   const getParentEmailInput = () =>
     screen.getByRole('textbox', {
-      name: i18n.addParentEmailModal_parentEmail_label(),
+      name: new RegExp('^' + i18n.addParentEmailModal_parentEmail_label()),
     });
   const getConfirmedParentEmailInput = () =>
     screen.getByRole('textbox', {
-      name: i18n.addParentEmailModal_confirmedParentEmail_label(),
+      name: new RegExp(
+        '^' + i18n.addParentEmailModal_confirmedParentEmail_label()
+      ),
     });
   const getEmailOptInYes = () => screen.getByLabelText(i18n.yes());
   const getEmailOptInNo = () => screen.getByLabelText(i18n.no());
