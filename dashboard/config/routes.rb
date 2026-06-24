@@ -1168,6 +1168,10 @@ Dashboard::Application.routes.draw do
         post 'users/has_dismissed_personalization_alert', to: 'users#post_has_dismissed_personalization_alert'
         get 'users/has_dismissed_personalization_alert', to: 'users#get_has_dismissed_personalization_alert'
 
+        # Routes used by the teacher onboarding checklist hide/resume control
+        post 'users/teacher_onboarding_hidden', to: 'users#post_teacher_onboarding_hidden'
+        get 'users/teacher_onboarding_hidden', to: 'users#get_teacher_onboarding_hidden'
+
         # Routes used by UI test status pages
         get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: {format: 'json'}
         get 'test_logs/*prefix/:name', to: 'test_logs#get_log_details', defaults: {format: 'json'}
