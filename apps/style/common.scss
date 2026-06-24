@@ -1383,8 +1383,8 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   $image-height: $image-width;
 
   .feedback-image {
-    width: $image-width;
-    height: $image-height;
+    width: $image-width + 6px;
+    height: $image-height + 6px;
     margin: 0;
     float: left;
     border: $lighter_gray;
@@ -1662,7 +1662,7 @@ $see-examples-thick-underline-color: $yellow;
 }
 
 .WireframeButtons_containerLeft {
-  flex: 1 1 372px;
+  flex: 1 1 392px;
   overflow: hidden;
   padding-top: 20px;
   padding-right: 20px;
@@ -1674,7 +1674,7 @@ $see-examples-thick-underline-color: $yellow;
 }
 
 .WireframeButtons_containerRight {
-  flex: 1 0 372px;
+  flex: 1 0 392px;
   overflow: hidden;
   padding-top: 20px;
   padding-right: 20px;
@@ -1683,7 +1683,7 @@ $see-examples-thick-underline-color: $yellow;
 
 @media (max-width: 845px) {
   .WireframeButtons_containerRight {
-    flex: 1 1 372px;
+    flex: 1 1 392px;
   }
 
   .WireframeButtons_containerLeft {
