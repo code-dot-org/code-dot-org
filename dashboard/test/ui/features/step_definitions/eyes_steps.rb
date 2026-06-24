@@ -102,13 +102,16 @@ def fonts_loaded?
   JS
 end
 
-# The code-studio header sets data-header-fonts-relaid-out after re-measuring on the font
-# swap (HeaderMiddle.jsx); waiting for it captures the final layout, not the fallback-font
-# one. .header_middle is server-rendered, so it is present from first paint and the wait
-# holds until the flag appears. Pages without that header (no .header_middle) pass through.
+# HeaderMiddle.jsx sets data-header-present when the React header mounts and
+# data-header-fonts-relaid-out after it re-measures on the font swap. Waiting for the latter
+# captures the final layout rather than the fallback-font one. Key on data-header-present
+# (set by the component), not the .header_middle element: that element is also server-rendered
+# on non-lab dashboard pages that never mount this header, and those must pass straight
+# through instead of blocking on a flag that will never appear.
 def header_relaid_out?
   @browser.execute_script(<<~JS) == true
-    return !document.querySelector('.header_middle') ||
-      document.documentElement.dataset.headerFontsRelaidOut === 'true';
+    const de = document.documentElement;
+    return de.dataset.headerPresent !== 'true' ||
+      de.dataset.headerFontsRelaidOut === 'true';
   JS
 end

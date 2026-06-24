@@ -47,6 +47,11 @@ class HeaderMiddle extends React.Component {
   }
 
   componentDidMount() {
+    // Mark that the React header mounted. Eyes UI tests key on this to tell pages
+    // that run this header — and so must wait for its post-font re-layout — from
+    // non-lab dashboard pages that merely contain a server-rendered .header_middle.
+    document.documentElement.dataset.headerPresent = 'true';
+
     this.updateLayout();
 
     this.updateLayoutListener = _.throttle(this.updateLayout, 200);
