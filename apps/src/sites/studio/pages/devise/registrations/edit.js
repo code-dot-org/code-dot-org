@@ -8,6 +8,7 @@ import AddParentEmailController from '@cdo/apps/accounts/AddParentEmailControlle
 import AddPasswordController from '@cdo/apps/accounts/AddPasswordController';
 import ChangeUserTypeController from '@cdo/apps/accounts/ChangeUserTypeController';
 import DeleteAccount from '@cdo/apps/accounts/DeleteAccount';
+import ExpireOtherSessions from '@cdo/apps/accounts/ExpireOtherSessions';
 import LtiRosterSyncSettings from '@cdo/apps/accounts/LtiRosterSyncSettings';
 import ManageLinkedAccountsController from '@cdo/apps/accounts/ManageLinkedAccountsController';
 import MigrateToMultiAuth from '@cdo/apps/accounts/MigrateToMultiAuth';
@@ -232,6 +233,24 @@ $(document).ready(() => {
         isAdmin={isAdmin}
       />,
       deleteAccountMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
+    );
+  }
+
+  const expireOtherSessionsMountPoint = document.getElementById(
+    'expire-other-sessions'
+  );
+  if (expireOtherSessionsMountPoint) {
+    createReactRoot(
+      <ExpireOtherSessions
+        expirePath={expireOtherSessionsMountPoint.dataset.expirePath}
+        heading={expireOtherSessionsMountPoint.dataset.heading}
+        description={expireOtherSessionsMountPoint.dataset.description}
+        buttonLabel={expireOtherSessionsMountPoint.dataset.buttonLabel}
+      />,
+      expireOtherSessionsMountPoint,
       {
         legacyReactDomRender: true,
       }
