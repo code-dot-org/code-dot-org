@@ -182,3 +182,11 @@ use_my_studio: true
 #contentful_cs_for_all_space: 27jkibac934d
 #contentful_cs_for_all_api_url: preview.contentful.com
 #contentful_cs_for_all_namespace: master
+
+# Serve a local stub for the HoC tutorial lookup (HocLegacy::Tutorials) instead
+# of querying the Contentful CSforAll space, so the Hour of Code begin/finish ->
+# congrats/certificate flow (and its UI tests) work without a Contentful access
+# token. Off by default in development; uncomment to enable. Alternatively set
+# contentful_cs_for_all_access_token above for prod-like behavior -- the stub
+# takes priority over the access token when both are set.
+#stub_tutorial_targets: true

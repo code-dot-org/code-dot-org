@@ -17,6 +17,14 @@ class HocLegacy::ApiFlowTest < ActionDispatch::IntegrationTest
     HocLegacy::Tutorials.clear
   end
 
+  # This flow exercises the real Contentful client (via VCR), so opt out of the
+  # tutorial stub and give it a stub access token (the request is replayed, not
+  # made, so the value is irrelevant).
+  before do
+    allow(CDO).to receive(:stub_tutorial_targets).and_return(false)
+    allow(CDO).to receive(:contentful_cs_for_all_access_token).and_return('fake-cs-for-all-token')
+  end
+
   it 'has expected basic flow from begin to finish' do
     VCR.use_cassette('hoc_legacy/api_flow/basic_flow') do
       get "/api/hour/begin/#{tutorial_code}"
