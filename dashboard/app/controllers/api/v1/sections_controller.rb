@@ -95,7 +95,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     render json: section.summarize
   end
 
-  # POST /api/v1/sections/demo/:demo_type
+  # POST /api/v1/sections/demo/create/:demo_type
   # Creates a demo section with preset properties and adds demo students.
   def create_demo
     authorize! :create, Section
