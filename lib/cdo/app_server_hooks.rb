@@ -1,3 +1,5 @@
+require 'cdo/process_memory'
+
 module Cdo
   # NOTE: these hooks are only executed when running in puma clustered mode, which spawns worker processes.
   # These hooks will NOT be run in local development unless you set `dashboard_workers: 1` (or greater)
@@ -24,6 +26,46 @@ module Cdo
 
         restart_period = DCDO.get('web_service_process_restart_period', 12 * 3600) # default to 12 hours
         PumaWorkerKiller.enable_rolling_restart(restart_period)
+      end
+
+      # Compact heap before forking child puma processes to reduce the number of heap pages occupied by long-lived
+      # objects, which reduces the surface area for Copy-on-Write erosion.
+      unless @compacted_heap_before_worker_fork
+        @compacted_heap_before_worker_fork = true
+
+        begin
+          before_gc = GC.stat
+          started_at = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+          Cdo::ProcessMemory.log_snapshot(
+            'puma_before_fork_gc_compact_started',
+            fields: {
+              heap_allocated_pages: before_gc[:heap_allocated_pages],
+              heap_live_slots: before_gc[:heap_live_slots],
+              old_objects: before_gc[:old_objects]
+            }
+          )
+
+          GC.start(full_mark: true, immediate_sweep: true)
+          GC.compact
+
+          after_gc = GC.stat
+          duration = Process.clock_gettime(Process::CLOCK_MONOTONIC) - started_at
+          Cdo::ProcessMemory.log_snapshot(
+            'puma_before_fork_gc_compact_finished',
+            fields: {
+              duration_seconds: duration.round(3),
+              heap_allocated_pages: after_gc[:heap_allocated_pages],
+              heap_live_slots: after_gc[:heap_live_slots],
+              old_objects: after_gc[:old_objects]
+            }
+          )
+        rescue StandardError => exception
+          CDO.log.warn(
+            'event=puma_before_fork_gc_compact_failed ' \
+              "error_class=#{exception.class} " \
+              "error_message=#{exception.message.inspect}"
+          )
+        end
       end
     end
 
