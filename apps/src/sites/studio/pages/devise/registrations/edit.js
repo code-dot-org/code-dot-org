@@ -7,6 +7,7 @@ import {AccountInformation} from '@cdo/apps/accounts/AccountInformation';
 import AddParentEmailController from '@cdo/apps/accounts/AddParentEmailController';
 import AddPasswordController from '@cdo/apps/accounts/AddPasswordController';
 import ChangeUserTypeController from '@cdo/apps/accounts/ChangeUserTypeController';
+import ChangeUserTypeSection from '@cdo/apps/accounts/ChangeUserTypeSection';
 import DeleteAccount from '@cdo/apps/accounts/DeleteAccount';
 import ExpireOtherSessions from '@cdo/apps/accounts/ExpireOtherSessions';
 import ForParentsAndGuardians from '@cdo/apps/accounts/ForParentsAndGuardians';
@@ -41,6 +42,7 @@ const {
   dependentStudentsCount,
   personalAccountLinkingEnabled,
   lmsName,
+  userTypeOptions,
 } = scriptData;
 
 $(document).ready(() => {
@@ -146,7 +148,30 @@ $(document).ready(() => {
     link: $('#remove-parent-email-link'),
   });
 
-  new ChangeUserTypeController($('#change-user-type-modal-form'), userType);
+  const changeUserTypeController = new ChangeUserTypeController(
+    $('#change-user-type-modal-form'),
+    userType
+  );
+  const changeUserTypeMountPoint = document.getElementById('change-user-type');
+  if (changeUserTypeMountPoint) {
+    createReactRoot(
+      <ChangeUserTypeSection
+        initialUserType={userType}
+        userTypeOptions={(userTypeOptions || []).map(([text, value]) => ({
+          text,
+          value,
+        }))}
+        heading={changeUserTypeMountPoint.dataset.heading}
+        dropdownLabel={changeUserTypeMountPoint.dataset.dropdownLabel}
+        buttonLabel={changeUserTypeMountPoint.dataset.buttonLabel}
+        onConfirm={changeUserTypeController.handleConfirm}
+      />,
+      changeUserTypeMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
+    );
+  }
 
   const addPasswordMountPoint = document.getElementById('add-password-fields');
   if (addPasswordMountPoint) {

@@ -145,14 +145,10 @@
     ) do |f|
     = f.hidden_field :email
     = f.hidden_field :email_preference_opt_in
-    %hr.account-page-section-break
-    %h2= t('signup_form.user_type_label')
-    .field
-      = f.label t('signup_form.user_type'), class: "label-bold"
-      = f.select :user_type, user_type_options
-    .farSide
-      %span#change-user-type-status
-      %button.btn#change-user-type-button{disabled: true}= t('signup_form.user_type_button')
+    = f.hidden_field :user_type
+  -# Mount point for the React ChangeUserTypeSection (heading + account-type
+  -# dropdown + confirm button). It submits via the hidden form above.
+  #change-user-type{data: {heading: t('signup_form.user_type_label'), dropdown_label: t('signup_form.user_type'), button_label: t('signup_form.user_type_button')}}
 
 -# Mount point for the React ExpireOtherSessions component.
 #expire-other-sessions{data: {expire_path: expire_other_path, heading: t('user.expire_other_sessions'), description: t('user.expire_other_sessions_description'), button_label: t('user.expire_other_sessions_button')}}
