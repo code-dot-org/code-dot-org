@@ -9,6 +9,7 @@ import AddPasswordController from '@cdo/apps/accounts/AddPasswordController';
 import ChangeUserTypeController from '@cdo/apps/accounts/ChangeUserTypeController';
 import DeleteAccount from '@cdo/apps/accounts/DeleteAccount';
 import ExpireOtherSessions from '@cdo/apps/accounts/ExpireOtherSessions';
+import ForParentsAndGuardians from '@cdo/apps/accounts/ForParentsAndGuardians';
 import LtiRosterSyncSettings from '@cdo/apps/accounts/LtiRosterSyncSettings';
 import ManageLinkedAccountsController from '@cdo/apps/accounts/ManageLinkedAccountsController';
 import MigrateToMultiAuth from '@cdo/apps/accounts/MigrateToMultiAuth';
@@ -93,6 +94,30 @@ $(document).ready(() => {
     createReactRoot(
       <SchoolInformation {...scriptData} />,
       schoolInformationMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
+    );
+  }
+
+  // Render the React "For Parents and Guardians" section before constructing the
+  // parent-email controllers below, which attach to the Update/Remove links it
+  // renders (by id).
+  const forParentsMountPoint = document.getElementById('add-parent-email');
+  if (forParentsMountPoint) {
+    createReactRoot(
+      <ForParentsAndGuardians
+        heading={forParentsMountPoint.dataset.heading}
+        intro={forParentsMountPoint.dataset.intro}
+        emailLabel={forParentsMountPoint.dataset.emailLabel}
+        currentEmail={forParentsMountPoint.dataset.currentEmail}
+        updateLabel={forParentsMountPoint.dataset.updateLabel}
+        hasParentEmail={forParentsMountPoint.dataset.hasParentEmail === 'true'}
+        orLabel={forParentsMountPoint.dataset.orLabel}
+        removeLabel={forParentsMountPoint.dataset.removeLabel}
+        note={forParentsMountPoint.dataset.note}
+      />,
+      forParentsMountPoint,
       {
         legacyReactDomRender: true,
       }
