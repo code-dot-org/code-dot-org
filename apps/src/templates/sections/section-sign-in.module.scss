@@ -40,7 +40,11 @@
 
 .tileSelected,
 .tileSelected:hover {
-  background-color: var(--background-brand-teal-light);
+  background-color: var(--background-brand-teal-primary);
+
+  img {
+    opacity: 1;
+  }
 }
 
 .secret {
