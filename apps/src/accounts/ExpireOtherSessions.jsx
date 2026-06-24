@@ -4,6 +4,7 @@ import React from 'react';
 
 import RailsAuthenticityToken from '../lib/util/RailsAuthenticityToken';
 
+import commonStyles from './common/common.styles.module.scss';
 import styles from './expire-other-sessions.module.scss';
 
 /**
@@ -20,7 +21,7 @@ export default function ExpireOtherSessions({
 }) {
   return (
     <div>
-      <hr />
+      <hr className={commonStyles.sectionDivider} />
       <MuiTypography variant="h5" component="h2" gutterBottom>
         {heading}
       </MuiTypography>

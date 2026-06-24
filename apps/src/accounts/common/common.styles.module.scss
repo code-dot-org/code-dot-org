@@ -34,3 +34,9 @@ h2.sectionHeader {
   color: var(--text-neutral-primary);
   margin-bottom: 1rem;
 }
+
+// Section divider. Overrides the global `hr { border-color: $teal }` so the
+// account page dividers use a neutral border instead of the brand teal.
+hr.sectionDivider {
+  border-color: var(--borders-neutral-strong);
+}

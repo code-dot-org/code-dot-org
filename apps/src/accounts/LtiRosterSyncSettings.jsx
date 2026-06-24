@@ -9,6 +9,8 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {LmsLinks} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+import commonStyles from './common/common.styles.module.scss';
+
 export function LtiRosterSyncSettings(props) {
   const enabledLabel = i18n.ltiSectionSyncEnabled();
   const disabledLabel = i18n.ltiSectionSyncDisabled();
@@ -35,7 +37,7 @@ export function LtiRosterSyncSettings(props) {
 
   return (
     <div>
-      <hr />
+      <hr className={commonStyles.sectionDivider} />
       <MuiTypography variant="h5" component="h2" gutterBottom>
         {i18n.ltiSectionSyncSettingsTitle()}
       </MuiTypography>

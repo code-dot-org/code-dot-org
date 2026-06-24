@@ -67,7 +67,7 @@ export default class ChangeUserTypeSection extends React.Component {
 
     return (
       <div>
-        <hr />
+        <hr className={commonStyles.sectionDivider} />
         <MuiTypography
           className={commonStyles.sectionHeader}
           component="h2"

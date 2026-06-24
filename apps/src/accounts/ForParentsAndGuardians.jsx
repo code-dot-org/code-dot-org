@@ -28,7 +28,7 @@ export default function ForParentsAndGuardians({
 }) {
   return (
     <div>
-      <hr />
+      <hr className={commonStyles.sectionDivider} />
       <MuiTypography
         className={commonStyles.sectionHeader}
         component="h2"

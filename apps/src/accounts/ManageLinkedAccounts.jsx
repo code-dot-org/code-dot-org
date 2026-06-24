@@ -19,6 +19,8 @@ import RailsAuthenticityToken from '../lib/util/RailsAuthenticityToken';
 import AccountUnlinkWarningModal from './AccountUnlinkWarningModal';
 import lockImage from './images/lock.svg';
 
+import commonStyles from './common/common.styles.module.scss';
+
 export const ENCRYPTED = `*** ${i18n.encrypted()} ***`;
 const authOptionPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -219,7 +221,7 @@ class ManageLinkedAccounts extends React.Component {
     );
     return (
       <div style={styles.container}>
-        <hr />
+        <hr className={commonStyles.sectionDivider} />
         <MuiTypography variant="h5" component="h2" gutterBottom>
           {i18n.manageLinkedAccounts()}
         </MuiTypography>

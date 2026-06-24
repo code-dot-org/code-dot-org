@@ -9,6 +9,7 @@ import i18n from '@cdo/locale';
 import * as utils from '../utils';
 
 import styles from './add-password-form.module.scss';
+import commonStyles from './common/common.styles.module.scss';
 
 const MIN_PASSWORD_LENGTH = 6;
 export const SAVING_STATE = i18n.saving();
@@ -122,7 +123,7 @@ export default class AddPasswordForm extends React.Component {
 
     return (
       <div className={styles.container}>
-        <hr />
+        <hr className={commonStyles.sectionDivider} />
         <MuiTypography variant="h5" component="h2" gutterBottom>
           {i18n.addPassword()}
         </MuiTypography>
