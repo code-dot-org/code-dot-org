@@ -11,6 +11,8 @@ ARG CODE_DOT_ORG_PEGASUS
 ARG CODE_DOT_ORG_STATIC
 ARG CODE_DOT_ORG_DB_SEED
 ARG CODE_DOT_ORG_CORE
+ARG BUNDLE_JOBS=8
+ARG BUNDLE_WITHOUT
 ARG SKIP_FRONTEND_BUILD=0
 
 FROM $CODE_DOT_ORG_PEGASUS AS code-dot-org-pegasus
@@ -21,6 +23,9 @@ FROM $CODE_DOT_ORG_CORE AS code-dot-org-core
 ################################################################################
 FROM code-dot-org-core AS code-dot-org-bundle-install
 ################################################################################
+
+ARG BUNDLE_JOBS
+ARG BUNDLE_WITHOUT
 
 COPY --chown=${UID} \
   .ruby-version \
@@ -44,7 +49,10 @@ COPY --chown=${UID} \
 # gems/<major.minor.0>. Update both when bumping Ruby or the mount silently
 # stops caching (it mounts at a dead path, bundle install still works, just slow).
 RUN --mount=type=cache,sharing=locked,uid=${UID},gid=${GID},target=${HOME}/.rbenv/versions/3.2.11/lib/ruby/gems/3.2.0/cache <<EOF
-  bundle install --jobs 8 --quiet
+  if [ -n "${BUNDLE_WITHOUT}" ]; then
+    bundle config set without "${BUNDLE_WITHOUT}"
+  fi
+  bundle install --jobs "${BUNDLE_JOBS}" --quiet
 EOF
 
 ################################################################################
