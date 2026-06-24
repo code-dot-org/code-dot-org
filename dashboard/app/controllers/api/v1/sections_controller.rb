@@ -3,7 +3,7 @@ require 'metrics/events'
 class Api::V1::SectionsController < Api::V1::JSONApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
-  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :create_demo, :presets, :update, :check_demo_section_staleness, :require_captcha, :assigned_essential_ai_dependency]
+  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :create_demo, :presets, :update, :check_demo_section_staleness, :reset_demo_section_staleness, :require_captcha, :assigned_essential_ai_dependency]
   before_action :get_course_and_unit, only: [:create, :update]
 
   skip_before_action :verify_authenticity_token, only: [:update]
@@ -171,6 +171,40 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
 
     unless Policies::DemoSections.section_matches_preset?(section)
       return render json: {message: 'Demo section curriculum is out of date.'}, status: :ok
+    end
+
+    head :no_content
+  end
+
+  # POST /api/v1/sections/demo/reset  (body: {id: <id>})
+  # Restores a demo section's curriculum to the defaults prescribed by its
+  # demo type, undoing any drift that check_demo_section_staleness reports.
+  # Resets only the fields that check inspects (script_id and course_id);
+  # everything else the teacher has changed is left alone. Idempotent: a
+  # section already matching its preset is not written. Only the section's
+  # owner (primary teacher) may reset it; co-instructors may not. Raises
+  # (=> forbidden) if the section does not exist or is not a demo section.
+  def reset_demo_section_staleness
+    section = Section.find(params[:id])
+    return head :forbidden unless section.user_id == current_user&.id
+    raise ActiveRecord::RecordNotFound unless section.demo_section?
+
+    config = Policies::DemoSections.get_preset(section.demo_type)
+    raise ActiveRecord::RecordNotFound unless config
+
+    unit = Unit.get_from_cache(config[:unit_name], raise_exceptions: false) if config[:unit_name].present?
+    unit_group = UnitGroup.get_from_cache(config[:unit_group_name]) if config[:unit_group_name].present?
+
+    if unit.nil? || unit_group.nil?
+      Honeybadger.notify(
+        "Demo section staleness reset failed due to misconfigured unit or course",
+        context: {section_id: section.id, demo_type: section.demo_type, unit_name: config[:unit_name], unit_group_name: config[:unit_group_name]}
+      )
+      return head :unprocessable_entity
+    end
+
+    unless section.script_id == unit.id && section.course_id == unit_group.id
+      section.update!(script_id: unit.id, course_id: unit_group.id)
     end
 
     head :no_content

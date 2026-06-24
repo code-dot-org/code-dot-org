@@ -5,7 +5,10 @@ import useOnboardingTour from '@cdo/apps/sharedComponents/productTour/useOnboard
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 
-import {DemoType} from '../../teacherDashboard/types/teacherSectionTypes';
+import {
+  DemoType,
+  Section,
+} from '../../teacherDashboard/types/teacherSectionTypes';
 
 import {
   createReviewSyllabusHomepageSteps,
@@ -71,7 +74,9 @@ export const resumeReviewSyllabusOnboardingTour = () => {
   tour.show(startStep.id);
 };
 
-const useReviewSyllabusTour = (demoType: DemoType | null) => {
+const useReviewSyllabusTour = (demoSection: Section | null) => {
+  const demoType = demoSection?.demoType ?? null;
+
   const demoPresets = useAppSelector(
     state => state.teacherSections.demoPresets
   );

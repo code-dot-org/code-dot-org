@@ -1942,6 +1942,66 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :ok
   end
 
+  # reset_demo_section_staleness
+
+  test 'reset_demo_section_staleness: returns forbidden when not signed in' do
+    section = create_stale_demo_section
+    post :reset_demo_section_staleness, params: {id: section.id}
+    assert_response :forbidden
+  end
+
+  test 'reset_demo_section_staleness: returns forbidden for a co-instructor who is not the owner' do
+    coteacher = create(:teacher)
+    section = create_stale_demo_section
+    create(:section_instructor, instructor: coteacher, section: section, status: :active)
+    sign_in coteacher
+
+    post :reset_demo_section_staleness, params: {id: section.id}
+    assert_response :forbidden
+  end
+
+  test 'reset_demo_section_staleness: returns forbidden when section is not a demo section' do
+    section = create(:section, user: @teacher, login_type: 'word')
+    sign_in @teacher
+
+    post :reset_demo_section_staleness, params: {id: section.id}
+    assert_response :forbidden
+  end
+
+  test 'reset_demo_section_staleness: restores script_id and course_id to preset defaults' do
+    stub_demo_preset
+    section = create_stale_demo_section
+    sign_in @teacher
+
+    post :reset_demo_section_staleness, params: {id: section.id}
+    assert_response :no_content
+
+    section.reload
+    assert_equal @csp_script.id, section.script_id
+    assert_equal @csp_unit_group.id, section.course_id
+  end
+
+  test 'reset_demo_section_staleness: is idempotent and does not write a section already matching its preset' do
+    stub_demo_preset
+    section = create(
+      :section,
+      user: @teacher,
+      login_type: 'email',
+      demo_type: 'high',
+      script_id: @csp_script.id,
+      course_id: @csp_unit_group.id,
+    )
+    sign_in @teacher
+
+    Section.any_instance.expects(:update!).never
+    post :reset_demo_section_staleness, params: {id: section.id}
+    assert_response :no_content
+
+    section.reload
+    assert_equal @csp_script.id, section.script_id
+    assert_equal @csp_unit_group.id, section.course_id
+  end
+
   private def create_stale_demo_section
     create(
       :section,

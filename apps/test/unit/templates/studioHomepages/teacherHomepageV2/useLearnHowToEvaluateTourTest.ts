@@ -6,7 +6,11 @@ import useLearnHowToEvaluateTour, {
   resumeLearnHowToEvaluateTour,
   LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY,
 } from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useLearnHowToEvaluateTour';
+import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
+
+const demoSectionWithType = (demoType: Section['demoType']) =>
+  ({demoType} as unknown as Section);
 
 jest.mock('@cdo/apps/sharedComponents/productTour/shepherdTourFactory');
 jest.mock('@cdo/apps/sharedComponents/productTour/useOnboardingTour', () =>
@@ -147,7 +151,9 @@ describe('useLearnHowToEvaluateTour', () => {
   });
 
   it('returns a tour object when demoType is provided', () => {
-    const {result} = renderHook(() => useLearnHowToEvaluateTour('high'));
+    const {result} = renderHook(() =>
+      useLearnHowToEvaluateTour(demoSectionWithType('high'))
+    );
     expect(result.current).toBe(mockTour);
   });
 

@@ -230,6 +230,7 @@ Dashboard::Application.routes.draw do
         collection do
           get 'demo/presets', action: 'presets', as: 'presets'
           get 'demo/check_staleness', action: 'check_demo_section_staleness', as: 'check_demo_section_staleness'
+          post 'demo/reset', action: 'reset_demo_section_staleness', as: 'reset_demo_section_staleness'
           post 'demo/create/:demo_type', action: 'create_demo', as: 'create_demo'
         end
       end
