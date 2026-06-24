@@ -9,7 +9,6 @@ import {
   signOut,
 } from '../shared/auth';
 import {setEuropeanIp} from '../shared/geolocation';
-import {pollScriptDataField} from '../shared/script-data';
 
 test.describe('GDPR Dialog - data transfer agreement', () => {
   /**
@@ -58,9 +57,15 @@ test.describe('GDPR Dialog - data transfer agreement', () => {
     await gdpr.goto();
     await expect(gdpr.dialog).toBeVisible();
 
+    // No UI readiness signal after accept — the dialog hides optimistically
+    // via setState before the POST lands. Set up the response listener before
+    // the click so the response can't race past us.
+    const accepted = page.waitForResponse(
+      r => r.url().includes('accept_data_transfer_agreement') && r.ok(),
+    );
     await gdpr.acceptDialog();
     await expect(gdpr.dialog).not.toBeVisible();
-    await pollScriptDataField(page, 'gdpr', 'show_gdpr_dialog', 'false');
+    await accepted;
 
     // Reload — dialog must not reappear.
     await gdpr.goto();
@@ -144,9 +149,12 @@ test.describe('GDPR Dialog - data transfer agreement', () => {
     await gdpr.goto();
     await expect(gdpr.dialog).toBeVisible();
 
+    const accepted = page.waitForResponse(
+      r => r.url().includes('accept_data_transfer_agreement') && r.ok(),
+    );
     await gdpr.acceptDialog();
     await expect(gdpr.dialog).not.toBeVisible();
-    await pollScriptDataField(page, 'gdpr', 'show_gdpr_dialog', 'false');
+    await accepted;
 
     await signOut(page);
 
