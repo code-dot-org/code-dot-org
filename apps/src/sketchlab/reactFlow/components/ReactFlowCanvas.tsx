@@ -276,17 +276,19 @@ export default function ReactFlowCanvas({
   const groupModeErrorTimerRef = useRef<ReturnType<typeof setTimeout> | null>(
     null
   );
-  const handleCannotGroup = useCallback(() => {
-    const msg = '2 or more elements must be selected to create a group.';
-    announceGroupMode(msg);
-    setGroupModeError(msg);
-    if (groupModeErrorTimerRef.current)
-      clearTimeout(groupModeErrorTimerRef.current);
-    groupModeErrorTimerRef.current = setTimeout(
-      () => setGroupModeError(null),
-      2000
-    );
-  }, [announceGroupMode]);
+  const handleCannotGroup = useCallback(
+    (msg: string) => {
+      announceGroupMode(msg);
+      setGroupModeError(msg);
+      if (groupModeErrorTimerRef.current)
+        clearTimeout(groupModeErrorTimerRef.current);
+      groupModeErrorTimerRef.current = setTimeout(
+        () => setGroupModeError(null),
+        2000
+      );
+    },
+    [announceGroupMode]
+  );
 
   const handlePaneClick = useCallback(() => {
     canvasContainerRef.current?.focus();

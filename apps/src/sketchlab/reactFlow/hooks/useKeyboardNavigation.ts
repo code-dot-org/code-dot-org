@@ -137,7 +137,7 @@ interface UseKeyboardNavigationOptions {
   onExitGroupMode: () => void;
   onToggleEntryInGroupMode: (entry: TabOrderEntry) => void;
   onGroupSelected: () => void;
-  onCannotGroup: () => void;
+  onCannotGroup: (msg: string) => void;
 }
 
 /**
@@ -662,10 +662,14 @@ export function useKeyboardNavigation({
       event.stopPropagation();
       if (isGroupMode) {
         if (canGroup) onGroupSelected();
-        else onCannotGroup();
+        else
+          onCannotGroup('Select 2 or more elements before creating a group.');
       } else {
         if (canEnterGroupMode) onEnterGroupMode();
-        else onCannotGroup();
+        else
+          onCannotGroup(
+            'Entering group mode requires 2 or more ungrouped elements on the canvas.'
+          );
       }
       return true;
     },
