@@ -1,5 +1,7 @@
 import type {Page} from '@playwright/test';
 
+import {cookieDomain} from './dcdo';
+
 /** Cookie name used by Rack::GeolocationOverride middleware. */
 const GEO_COOKIE_NAME = 'GeolocationOverride';
 
@@ -12,8 +14,7 @@ const EU_IP = '150.214.39.255';
  * Mirrors "I am in Europe" in geolocation_steps.rb.
  */
 export async function setEuropeanIp(page: Page): Promise<void> {
-  const url = new URL(page.url());
-  const domain = url.hostname;
+  const domain = cookieDomain(new URL(page.url()).hostname);
   await page
     .context()
     .addCookies([{name: GEO_COOKIE_NAME, value: EU_IP, path: '/', domain}]);

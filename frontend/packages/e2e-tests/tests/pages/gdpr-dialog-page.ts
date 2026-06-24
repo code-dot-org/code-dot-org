@@ -1,4 +1,4 @@
-import {expect, type Locator, type Page} from '@playwright/test';
+import {type Locator, type Page} from '@playwright/test';
 
 import {BasePage} from './base-page';
 
@@ -20,9 +20,6 @@ export class GdprDialogPage extends BasePage {
   /** The #gdpr-dialog container; used for scoping child locators. */
   readonly gdprContainer: Locator;
 
-  /** Header user-menu element — present once the page has fully loaded. */
-  private readonly headerUser: Locator;
-
   constructor(page: Page) {
     super(page);
     this.dialog = page.locator('.ui-test-gdpr-dialog');
@@ -31,18 +28,11 @@ export class GdprDialogPage extends BasePage {
     this.privacyLink = this.gdprContainer.getByRole('link', {
       name: /Visit CodeAI/,
     });
-    // .header_user duplicates per breakpoint; .first() avoids strict-mode failure.
-    this.headerUser = page.locator('.header_user').first();
   }
 
   /** Navigate to /home. */
   async goto(): Promise<void> {
     await this.page.goto('/home');
-  }
-
-  /** Wait until the page header is visible — confirms the page has fully loaded. */
-  async waitForSignedIn(): Promise<void> {
-    await expect(this.headerUser).toBeVisible();
   }
 
   /** Click the accept button. */
