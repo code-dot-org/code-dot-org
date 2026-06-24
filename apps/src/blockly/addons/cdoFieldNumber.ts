@@ -67,24 +67,9 @@ export default class CdoFieldNumber extends BlocklyCore.FieldNumber {
   }
 
   protected showEditor_(e?: Event, quietInput?: boolean): void {
-    const openEditor = () => {
-      super.showEditor_(e, quietInput);
-      if (this.shouldShowAngleHelper()) {
-        this.initializeAngleHelper();
-      }
-    };
-
-    try {
-      openEditor();
-    } catch (error) {
-      if (
-        error instanceof Error &&
-        error.message.includes('FocusManager state changes cannot happen')
-      ) {
-        setTimeout(openEditor, 0);
-      } else {
-        throw error;
-      }
+    super.showEditor_(e, quietInput);
+    if (this.shouldShowAngleHelper()) {
+      this.initializeAngleHelper();
     }
   }
 
