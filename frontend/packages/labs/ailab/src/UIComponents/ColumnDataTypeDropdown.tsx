@@ -1,27 +1,26 @@
 /* React component to handle setting datatype for selected columns. */
-import {connect} from 'react-redux';
-
 import {ColumnTypes} from '../constants';
+import {useAppDispatch} from '../hooks';
 import I18n from '../i18n';
 import {setColumnsByDataType} from '../redux';
 
 interface ColumnDataTypeDropdownProps {
   columnId?: string;
   currentDataType?: string;
-  setColumnsByDataType: (column: string, dataType: string) => void;
 }
 
 const ColumnDataTypeDropdown = ({
   columnId,
   currentDataType,
-  setColumnsByDataType,
 }: ColumnDataTypeDropdownProps) => {
+  const dispatch = useAppDispatch();
+
   const handleChangeDataType = (
     event: React.ChangeEvent<HTMLSelectElement>,
     feature: string,
   ) => {
     event.preventDefault();
-    setColumnsByDataType(feature, event.target.value);
+    dispatch(setColumnsByDataType(feature, event.target.value));
   };
 
   return (
@@ -42,8 +41,4 @@ const ColumnDataTypeDropdown = ({
   );
 };
 
-export default connect(null, dispatch => ({
-  setColumnsByDataType(column: string, dataType: string) {
-    dispatch(setColumnsByDataType(column, dataType));
-  },
-}))(ColumnDataTypeDropdown);
+export default ColumnDataTypeDropdown;

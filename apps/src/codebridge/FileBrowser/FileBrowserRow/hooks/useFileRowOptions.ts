@@ -2,7 +2,6 @@ import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {usePrompts} from '@codebridge/FileBrowser/hooks';
 import {ProjectFile} from '@codebridge/types';
 import {
-  enableUserAddedSelectionContext,
   getFolderPath,
   getPossibleDestinationFoldersForFile,
 } from '@codebridge/utils';
@@ -79,9 +78,9 @@ export const useFileRowOptions = (
 ) => {
   const {
     config: {supportedFileTypes},
-    levelProperties,
     aiTutorDisabled,
     allowMultipleValidationFiles,
+    enableUserAddedSelectionContext,
   } = useCodebridgeContext();
   const {files: projectFiles, folders: projectFolders} = useAppSelector(
     state => state.lab2Project.projectSources?.source as MultiFileSource
@@ -97,7 +96,6 @@ export const useFileRowOptions = (
     openSaveToBackpackPrompt,
   } = usePrompts();
 
-  const appName = levelProperties.appName;
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   const isLocked = !isStartMode && file.type === ProjectFileType.LOCKED_STARTER;
@@ -131,7 +129,7 @@ export const useFileRowOptions = (
           }),
       },
       {
-        condition: enableUserAddedSelectionContext(appName) && !aiTutorDisabled,
+        condition: !!enableUserAddedSelectionContext && !aiTutorDisabled,
         iconName: 'message-code',
         labelText: codebridgeI18n.addToAiTutorContext(),
         clickHandler: () => {
@@ -203,7 +201,6 @@ export const useFileRowOptions = (
       },
     ],
     [
-      appName,
       backpackApi,
       dispatch,
       supportedFileTypes,
@@ -217,6 +214,7 @@ export const useFileRowOptions = (
       projectFiles,
       projectFolders,
       aiTutorDisabled,
+      enableUserAddedSelectionContext,
     ]
   );
 

@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-03 23:12:18 UTC",
+    "serialized_at": "2026-06-23 17:26:25 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6614,38 +6614,35 @@
     },
     {
       "name": "All Resources",
-      "url": "/courses/artificial-intelligence-foundations-2026/units/5/resources",
-      "key": "all_resources_3",
+      "url": "/courses/ai-foundations-exploring-ai-and-cs-2026/units/4/resources",
+      "key": "all_resources_9",
       "properties": {
-        "embeddability_type": "embed_and_resource_dropdown",
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_3"
+        "resource.key": "all_resources_9"
       }
     },
     {
       "name": "All Standards",
-      "url": "/courses/artificial-intelligence-foundations-2026/units/5/standards",
-      "key": "all_standards_3",
+      "url": "/courses/ai-foundations-exploring-ai-and-cs-2026/units/4/standards",
+      "key": "all_standards_9",
       "properties": {
-        "embeddability_type": "embed_and_resource_dropdown",
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards_3"
+        "resource.key": "all_standards_9"
       }
     },
     {
       "name": "All Vocabulary",
-      "url": "/courses/artificial-intelligence-foundations-2026/units/5/vocab",
-      "key": "all_vocabulary_3",
+      "url": "/courses/ai-foundations-exploring-ai-and-cs-2026/units/4/vocab",
+      "key": "all_vocabulary_9",
       "properties": {
-        "embeddability_type": "embed_and_resource_dropdown",
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_vocabulary_3"
+        "resource.key": "all_vocabulary_9"
       }
     },
     {
@@ -7447,19 +7444,19 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources_3",
+        "resource.key": "all_resources_9",
         "script.name": "ai-powered-threats-and-defenses-2026"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards_3",
+        "resource.key": "all_standards_9",
         "script.name": "ai-powered-threats-and-defenses-2026"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_vocabulary_3",
+        "resource.key": "all_vocabulary_9",
         "script.name": "ai-powered-threats-and-defenses-2026"
       }
     }

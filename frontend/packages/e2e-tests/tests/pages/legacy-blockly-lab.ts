@@ -59,8 +59,7 @@ export class LegacyBlocklyLab extends BasePage {
       timeout: LAB_LOAD_TIMEOUT_MS,
     });
     await expect(this.runButton).toBeVisible({timeout: LAB_LOAD_TIMEOUT_MS});
-    // .header_user duplicates per breakpoint; .first() avoids strict mode.
-    await expect(this.page.locator('.header_user').first()).toBeVisible();
+    await this.waitForSignedIn();
     // Dismiss the instructions overlay if shown (anonymous sessions).
     const overlay = this.page.locator('#overlay');
     if (await overlay.isVisible()) {
