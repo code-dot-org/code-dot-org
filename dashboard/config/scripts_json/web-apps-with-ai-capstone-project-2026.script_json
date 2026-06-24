@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-11 21:09:29 UTC",
+    "serialized_at": "2026-06-23 17:39:47 UTC",
     "hide_within_course": true,
     "published_state": "in_development",
     "instruction_type": null,
@@ -1350,13 +1350,24 @@
   "resources": [
     {
       "name": "All Resources",
-      "url": "/courses/artificial-intelligence-foundations-semester2-2025/units/6/resources",
-      "key": "all_resources_1",
+      "url": "/courses/ai-foundations-designing-and-building-with-ai-2026/units/6/resources",
+      "key": "all_resources_7",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_1"
+        "resource.key": "all_resources_7"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/ai-foundations-designing-and-building-with-ai-2026/units/6/standards",
+      "key": "all_standards_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_5"
       }
     },
     {
@@ -1459,7 +1470,13 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources_1",
+        "resource.key": "all_resources_7",
+        "script.name": "web-apps-with-ai-capstone-project-2026"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_5",
         "script.name": "web-apps-with-ai-capstone-project-2026"
       }
     },

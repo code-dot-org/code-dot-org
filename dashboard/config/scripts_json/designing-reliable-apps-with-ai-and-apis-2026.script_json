@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-23 05:36:48 UTC",
+    "serialized_at": "2026-06-24 05:23:26 UTC",
     "hide_within_course": true,
     "published_state": "in_development",
     "instruction_type": null,
@@ -365,21 +365,8 @@
       }
     },
     {
-      "key": "a6da11f9-cac0-4017-98e5-ef893cbac208",
-      "position": 1,
-      "properties": {
-        "name": "New Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a6da11f9-cac0-4017-98e5-ef893cbac208",
-        "lesson.key": "Lesson 2: Why Apps Wait",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026"
-      }
-    },
-    {
       "key": "8cf0d83b-7e14-4b3d-ac1d-4c5bcbd58438",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -393,7 +380,7 @@
     },
     {
       "key": "6b4db25f-625c-4a4c-ae91-d7eefc50c942",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -407,7 +394,7 @@
     },
     {
       "key": "6be212df-5fa7-4638-b747-3b1fbe4e17f4",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1038,7 +1025,7 @@
       "key": "9f1f09d4-00db-4dfc-9fbf-3ea0cee760ae",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What happens if an API stops working? How does this affect the user experience?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that apps built on APIs are dependent on external services they don't control. If an API fails, the app can lose its core functionality — not just a feature, but its whole purpose (e.g., a weather app with no weather data). Listen for students connecting this to their own experience (\"apps that won't load\" or \"features that just disappear\"). Guide the conversation toward the idea that using an API is a design tradeoff: it makes apps powerful and dynamic, but introduces a dependency that can break.\n\n",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Why do you think the designers of this weather app chose not to display all of the information in the Response Data file?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that apps receive far more data from an API than what gets displayed to users — and that designers make intentional choices about what to show based on what's useful or meaningful to the user. Listen for responses like \"some of it isn't useful to regular people\" or \"it would be too much information on the screen.\" Guide students toward the idea that this is a design decision: developers have to think about what data to request, what to display, and what to leave out. This connects directly to their checklist — they now have evidence of exactly which fields were used and which weren't.\n\n\n",
         "progression_name": "Navigate a Weather App"
       },
       "seeding_key": {
@@ -1129,21 +1116,10 @@
       }
     },
     {
-      "key": "a38987dc-6133-450f-b6b9-91a3e0c32c67",
-      "position": 1,
-      "properties": {
-        "progression_name": "New CFU Level 3"
-      },
-      "seeding_key": {
-        "activity_section.key": "a38987dc-6133-450f-b6b9-91a3e0c32c67",
-        "lesson_activity.key": "a6da11f9-cac0-4017-98e5-ef893cbac208"
-      }
-    },
-    {
       "key": "c7f7a336-8235-4ffe-88c6-2ea457d32953",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Build \"system awareness\" by identifying visual cues of loading and differentiating between static (code) and dynamic (data) content."
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Activate prior knowledge of how apps behave offline to build system awareness — identifying what's built into an app versus what gets loaded from the internet.\n"
       },
       "seeding_key": {
         "activity_section.key": "c7f7a336-8235-4ffe-88c6-2ea457d32953",
@@ -1154,7 +1130,7 @@
       "key": "a052adfb-ec6a-45b6-acd3-ccf3c5ab4990",
       "position": 2,
       "properties": {
-        "description": "Have you ever opened an app like Spotify or Instagram while in Airplane Mode? You might see the buttons and the logo, but the content is missing. Today we are exploring why that happens and how code handles the \"wait\" for that data.",
+        "description": "Think about the last time you opened an app and it felt broken — maybe images didn't load or your feed was empty. Keep that in mind as we discuss.",
         "remarks": true
       },
       "seeding_key": {
@@ -1166,11 +1142,11 @@
       "key": "d4092984-8305-46ff-b8ac-468f8e506c3c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Imagine opening an app offline. What changes? What stays the same?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify that the app layout (buttons, icons) is there, but live data (songs, weather) is missing or replaced by loading icons.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the difference between content built into the app's code (static) and content fetched from a server (dynamic).\n",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Imagine opening an app offline. What changes? What stays the same?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify that the app layout (buttons, icons, navigation) is still visible, but live data (songs, playlists, weather, news) is missing or replaced by loading indicators. Listen for students distinguishing between what's built into the app versus what gets fetched from somewhere else.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use student responses from the discussion to bridge into the formal terms. Point out that what students noticed as \"still there\" offline = Static Content, and what was missing = Dynamic Content. Define each category using the examples on the slide.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Use a physical analogy: The \"Static Content\" is like the menu at a restaurant (it's printed and ready), while \"Dynamic Content\" is the food (it has to be made and brought to you after you order)."
+            "markdown": "Reinforce the definitions with a physical analogy: Static Content is like the menu at a restaurant — it's printed and always ready. Dynamic Content is like the food — it has to be made and brought to you after you order. This analogy will carry forward into the Activity section, so introduce it here and invite students to hold onto it.\n"
           }
         ]
       },
@@ -1193,7 +1169,7 @@
       "key": "62cada79-a3e3-4a1f-ba07-ad132bf75830",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How does an app tell you it is \"thinking\" or \"waiting\"?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify visual cues like spinners, progress bars, skeleton screens, or gray boxes. This reinforces that the app is aware it is waiting for data.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How does an app tell you it is \"thinking\" or \"waiting\"?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify visual cues like spinners, progress bars, skeleton screens, or gray placeholder boxes. Listen for students connecting these cues to the idea that the app knows it's waiting — it hasn't crashed, it's just loading something.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "62cada79-a3e3-4a1f-ba07-ad132bf75830",
@@ -1204,8 +1180,8 @@
       "key": "95a20241-5ccb-4fc6-895c-ba4abe16274a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Model the difference between synchronous and asynchronous execution using a real-world parallel.",
-        "duration": "10",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students build an intuition for the inefficiency of doing tasks one at a time (sequentially) and the benefit of multitasking — setting up the concepts of synchronous and asynchronous execution before those terms are formally introduced.",
+        "duration": "5",
         "name": "The Restaurant Analogy"
       },
       "seeding_key": {
@@ -1217,7 +1193,7 @@
       "key": "3f3ff2c3-0852-487a-b095-9033f583aeee",
       "position": 2,
       "properties": {
-        "description": "Imagine you are at a restaurant where the chef only does one thing at a time. They put water on to boil, then they stand there and watch it until it's done. Only then do they start chopping vegetables.",
+        "description": "Picture a chef who only does one thing at a time — puts water on to boil, then stands there and watches it until it's done, then starts chopping vegetables.",
         "remarks": true
       },
       "seeding_key": {
@@ -1229,7 +1205,13 @@
       "key": "feb1200e-c667-430a-a3ef-c4f741341349",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How efficient is a kitchen where the chef boils water, waits, then chops veggies?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students realize that waiting for every single task to finish before starting the next is inefficient and creates a bad experience for the customer.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What can a chef do while they are waiting for the water to boil to prepare the meal more efficiently?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify that multitasking—prepping sauce or chopping while water heats—allows the meal to be finished much faster.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *synchronous code*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *asynchronous code*.\n"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How efficient is a kitchen where the chef boils water, waits, then chops veggies?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that waiting for each task to fully finish before starting the next is inefficient and frustrating for the customer. Listen for words like \"slow,\" \"wasteful,\" or \"it would take forever.\" These observations set up the contrast on the next slide.\n\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What can a chef do while they are waiting for the water to boil to prepare the meal more efficiently?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify that the chef can multitask — chopping, prepping sauce, toasting bread — while the water heats. Listen for the key insight that starting something and coming back to it later makes the whole process faster. This mirrors how code can start a task and keep running while waiting for a response.\n\n\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Avoid introducing the terms \"synchronous\" and \"asynchronous\" here — students will encounter those formally after the Frozen App demo. For now, keep the language in the analogy space: \"waiting vs. doing other things while waiting.\" This preserves the explore-before-vocab sequence.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "feb1200e-c667-430a-a3ef-c4f741341349",
@@ -1237,12 +1219,22 @@
       }
     },
     {
-      "key": "499754b7-fa50-4917-9d50-07bf2e02896b",
+      "key": "8dadf657-4b77-4fe6-917c-fd6d942fbbb1",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Demonstrate the pain point of synchronous (blocking) programming in a user interface.",
-        "duration": "10",
-        "name": "The Frozen App"
+      },
+      "seeding_key": {
+        "activity_section.key": "8dadf657-4b77-4fe6-917c-fd6d942fbbb1",
+        "lesson_activity.key": "6b4db25f-625c-4a4c-ae91-d7eefc50c942"
+      }
+    },
+    {
+      "key": "499754b7-fa50-4917-9d50-07bf2e02896b",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students experience the problem of synchronous blocking firsthand in a simulated app, discuss what they observed, and then connect that experience to the formal definitions and code representations of synchronous and asynchronous programming.",
+        "duration": "15",
+        "name": "Frozen Apps to Async Code"
       },
       "seeding_key": {
         "activity_section.key": "499754b7-fa50-4917-9d50-07bf2e02896b",
@@ -1251,9 +1243,9 @@
     },
     {
       "key": "d16d08e0-1207-47cf-b4d8-da7f51365fcb",
-      "position": 5,
+      "position": 6,
       "properties": {
-        "description": "Now that we’ve defined these terms, it’s time to see them in action. You’re going to head into 'The Frozen App' to run an experiment: watch what happens to to the display as a user when you trigger a heavy synchronous task. Does the app stay 'alive,' or does it completely ignore you?",
+        "description": "You are about to run an experiment in an app. Try interacting with it and pay attention to what happens when you trigger a heavy task. Does the app stay responsive, or does it ignore you?",
         "remarks": true
       },
       "seeding_key": {
@@ -1263,10 +1255,10 @@
     },
     {
       "key": "481986ea-58a8-4a22-bd32-694d68b1fea9",
-      "position": 6,
+      "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 1 to complete Levels 1 through 5.\n- Level 1: Students read the definition and example of synchronous programming.\n- Level 2: Students write their own definition of synchronous programming and include a real-world example.\n- Level 3: Students read the definition and example of asynchronous programming.\n- Level 4: Students write their own definition of asynchronous programming and include a real-world example.\n- Level 5: Students run a demo of an application that has a long synchronous operation and observe how it impact the user experience.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** For Level 1 and 2, look for students who are confusing \"synchronous\" with \"simultaneous.\" Remind them that \"sync\" in programming means things happen one after another, waiting for the previous step to finish. For Level 3 and 4, listen for students explaining that the program \"keeps going\" while something loads. Ask: \"In an app, what is an example of something that might take time to load?\"\n",
-        "progression_name": "Vocab: Synchronous Programming"
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 1 to interact with the Frozen App demo and observe how a heavy task affects the user experience.\n\n\n",
+        "progression_name": "Demo: The Frozen App"
       },
       "seeding_key": {
         "activity_section.key": "481986ea-58a8-4a22-bd32-694d68b1fea9",
@@ -1275,7 +1267,7 @@
     },
     {
       "key": "ffe792fd-7b5d-4b92-a020-a0607edb01c4",
-      "position": 7,
+      "position": 8,
       "properties": {
         "progression_name": "Demo: Run the Frozen App"
       },
@@ -1286,9 +1278,15 @@
     },
     {
       "key": "58baaa9e-ab31-4a80-a278-9dcb58b67176",
-      "position": 8,
+      "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which specific action was a synchronous operation? Which specific action was an asynchronous operation? How did you know the difference just by looking at the screen?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students connecting the technical behavior to the user impact. For the like button (asynchronous), students should note that they could keep interact with other parts of the app immediately. For the compress video button (synchronous), students should explicitly mention the 5-second freeze. Listen for phrases like \"The app stopped responding,\" or \"I thought the app crashed because I couldn't even hit the 'Like' button.\"\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If an app freezes every time you click a button, how does that change your trust in the app? Would you assume it’s working, or would you think it crashed?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students to articulate that a synchronous (blocking) task doesn't just slow down the app; it makes the user feel like the app is broken or unresponsive. Asynchronous programming is a fundamental user experience tool used to keep the user feeling in control and informed.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Why Apps Wait activity guide.\n"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts.\n* *Which specific action was a synchronous operation?*  \n* *Which specific action was an asynchronous operation?* \n* *How did you know the difference just by looking at the screen?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students connecting what they observed on screen to the user experience. For the Like button, students should notice that the app responded right away and they could keep interacting. For the Compress Video button, students should mention that the app froze for several seconds and ignored other clicks. Listen for phrases like “The app stopped responding,” “I thought it crashed,” or “I couldn’t click the Like button while it was processing.” These observations are exactly what the upcoming vocabulary will explain.\n\n\n\n\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students didn't notice a clear difference during Level 1, have them run the demo again before discussing. Prompt them to click the Like button first, then the Compress Video button, and pay attention to whether the app responds while the task is running.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "58baaa9e-ab31-4a80-a278-9dcb58b67176",
@@ -1296,17 +1294,68 @@
       }
     },
     {
-      "key": "b2a3a269-4773-44a7-934d-3e2eb361a5f9",
-      "position": 9,
+      "key": "71d64eb1-7006-4f12-98f7-da133e1bc727",
+      "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students learn how asynchronous code works by predicting and investigating execution order in Web Lab.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 6 to complete Levels 6 through 8.\n- Level 6: Students predict how blocking code freezes the interface while tasks complete one at a time.\n- Level 7: Students predict the execution order of multiple kitchen tasks running on different timers.\n- Level 8: Students predict the outcome when the chef tries to serve food before the cooking timer finishes.\n",
-        "duration": "10",
-        "name": "Analogy: Synchronous vs. Asynchronous",
-        "progression_name": "Analogy: Synchronous vs. Asynchronous ",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have students get out their Designing Reliable Apps with AI and APIs Unit Guide and turn to Lesson 2.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define synchronous code and connect it directly to the Frozen App demo. Point out that the Compress Video button is an example of synchronous behavior — the app waited for that task to fully finish before doing anything else. Direct students to fill in the synchronous code definition in their Unit Guide.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Have students use AI Chat to explain setTimeout() role in the code. In JavaScript, we use a function called setTimeout to simulate that \"cooking time\" or a network delay. Explain that setTimeout takes a function and a delay in milliseconds. Crucially, emphasize that it is asynchronous—the rest of the program keeps running while the timer counts down."
+            "markdown": "The timeline diagram is key here. Walk students through it left to right — Task 1 must fully finish before Task 2 starts, and Task 2 must fully finish before Task 3 starts. Ask students: \"How does this match what you saw in the app?\"\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "71d64eb1-7006-4f12-98f7-da133e1bc727",
+        "lesson_activity.key": "6b4db25f-625c-4a4c-ae91-d7eefc50c942"
+      }
+    },
+    {
+      "key": "3306926c-7752-4883-8dc9-dbeaba787147",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define asynchronous code and connect it to both the Restaurant Analogy and the Frozen App demo. Point out that the Like button is an example of asynchronous behavior — the app started the task and kept running without waiting. Remind students of the chef: starting the water boiling and chopping vegetables at the same time is exactly what asynchronous code does. Direct students to fill in the asynchronous code definition in their Unit Guide.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Walk through the diagram and contrast it directly with the synchronous timeline from the previous slide. Ask students: \"What's different about how these tasks run?\" Listen for students noticing that tasks overlap rather than wait. This is also a good moment to address a common misconception — asynchronous doesn't mean tasks happen simultaneously in the same instant; it means one task doesn't have to fully finish before another can start.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3306926c-7752-4883-8dc9-dbeaba787147",
+        "lesson_activity.key": "6b4db25f-625c-4a4c-ae91-d7eefc50c942"
+      }
+    },
+    {
+      "key": "b382f99a-cbf2-4735-b4fc-1745f5c13706",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animation in order to explain that synchronous code waits for each line to finish before moving on, while asynchronous code can start a task for later and keep running the next lines.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animation to demonstrate how setTimeout() works. Point out that lines 1–3 hand cookEggs() off to run after three seconds, while lines 5–6 run immediately. Connect this back to the chef analogy — setTimeout() is like putting water on to boil and walking away to chop vegetables. Direct students to complete the setTimeout() annotation in their Unit Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may wonder why makeToast() and pourJuice() run before cookEggs() even though they appear lower in the code. Clarify that setTimeout() schedules cookEggs() to run later — JavaScript doesn't wait for the timer, it keeps reading and running the next lines immediately. This is the core mechanic behind asynchronous code and worth pausing on before moving to the platform levels.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b382f99a-cbf2-4735-b4fc-1745f5c13706",
+        "lesson_activity.key": "6b4db25f-625c-4a4c-ae91-d7eefc50c942"
+      }
+    },
+    {
+      "key": "b2a3a269-4773-44a7-934d-3e2eb361a5f9",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students apply their understanding of synchronous and asynchronous execution by predicting and investigating code behavior across three choice levels, then demonstrate understanding in a written CFU response.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Why Apps Wait activity guide.\n\n\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 2 to complete all of the choice levels in Level 2 and the Check for Understanding in Level 3.\n- **Level 2a:** Students predict how blocking code freezes the interface while tasks complete one at a time.\n- **Level 2b:** Students predict the execution order of multiple kitchen tasks running on different timers.\n- **Level 2c:** Students predict the outcome when the chef tries to serve food before the cooking timer finishes.\n- **Level 3:** Students demonstrate their understanding of asynchronous code by explaining why the server used the value before the burger finished cooking.\n",
+        "duration": "10",
+        "name": "Sync vs Async Kitchen",
+        "progression_name": "Synchronous vs. Asynchronous ",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Level 2c and Level 3 assess students' ability to define asynchronous programming and identify where things can go wrong in an async timeline (Objectives 1 and 3). For Level 2c, look for students recognizing that data used before it's ready produces an error. For Level 3, look for responses that explain the timing mismatch in their own words rather than restating the definition.\n"
           },
           {
             "type": "assessmentOpportunity",
@@ -1321,7 +1370,7 @@
     },
     {
       "key": "0a7e30ed-2f79-46dc-bda1-48f73ca4e101",
-      "position": 10,
+      "position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -1330,21 +1379,10 @@
       }
     },
     {
-      "key": "75cdb5d5-b316-4e7a-ae21-663eb90203ab",
-      "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Why did the \"Serving customer\" line print \"undefined\" even though the burger was cooking?*\n- *How can we make sure our app doesn't try to use data before it arrives?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students synthesize their learning from the coding exploration. They should identify that since the kitchen (setTimeout) was working in the background, the main program moved on to the next line immediately. Because the data wasn't \"ready\" yet, the variable was still empty (undefined).\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "75cdb5d5-b316-4e7a-ae21-663eb90203ab",
-        "lesson_activity.key": "6b4db25f-625c-4a4c-ae91-d7eefc50c942"
-      }
-    },
-    {
       "key": "3087e702-366d-466a-85dd-8f5da26619bf",
-      "position": 12,
+      "position": 15,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Visually map the flow of time in asynchronous operations using the code students just investigated.",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:**  Students consolidate their understanding of synchronous and asynchronous execution by visually mapping task timing from code they just investigated and comparing results with a partner.",
         "duration": "5",
         "name": "Tracing the Timeline"
       },
@@ -1355,7 +1393,7 @@
     },
     {
       "key": "47a85e36-df75-428a-a0b4-0d7b107b86a6",
-      "position": 13,
+      "position": 16,
       "properties": {
         "description": "Let's map out exactly what happened in each kitchen using a timeline graph.",
         "remarks": true
@@ -1367,13 +1405,13 @@
     },
     {
       "key": "d97655d8-0bbd-4daf-9038-29870f7fb773",
-      "position": 14,
+      "position": 17,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students draw a timeline graph mapping the code from Level 6. They should label the tasks and wait times in their illustration.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs with their neighbor. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct Partner A to look back at Level 2a and draw a timeline graph of the code. Partner B looks back at Level 2b or 2c and draws a timeline graph of their code. Remind students the diagrams on the slide show what sync and async timelines look like as a reference. When both partners finish, they compare their timelines and discuss what looks different.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are labeling both tasks and wait times in their timelines, not just drawing the shapes. Listen for partners noticing that the sync timeline runs tasks one after another while the async timeline shows tasks overlapping. When time is up, bring the class together and transition to the Wrap Up.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Provide students with use different colors pencils or pens to make the parallel execution clear."
+            "markdown": "Providing different colored pencils or pens helps make parallel execution visible — suggest students use one color per task so overlapping timelines are easy to read. If Partner B chose Level 2b, encourage them to also look at Level 2c and note how the timeline changes when the chef tries to serve food before the cooking timer finishes.\n"
           }
         ]
       },
@@ -1386,10 +1424,27 @@
       "key": "69363d90-2344-4b67-a474-b4282b5f5a6d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day. Have students turn and talk with a partner to answer the question using something specific from the lesson — the Frozen App demo, the chef analogy, or the setTimeout() code. After partner discussion, invite a few students to share out with the class. Listen for students connecting the idea that JavaScript keeps running the next lines while a delayed task waits in the background — that's why the code runs before the data arrives.\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time is short, skip the partner talk and go straight to whole-class share-out. Prioritize getting at least one strong response to the primary question before moving to the secondary — the technical understanding should land before the UX reflection.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "69363d90-2344-4b67-a474-b4282b5f5a6d",
+        "lesson_activity.key": "6be212df-5fa7-4638-b747-3b1fbe4e17f4"
+      }
+    },
+    {
+      "key": "16799d3e-9913-4de1-932f-aa744a4d7f31",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "16799d3e-9913-4de1-932f-aa744a4d7f31",
         "lesson_activity.key": "6be212df-5fa7-4638-b747-3b1fbe4e17f4"
       }
     },
@@ -3089,8 +3144,19 @@
       }
     },
     {
-      "key": "0cfb2c03-5076-42a7-87a9-8d183f7a554c",
+      "key": "c03d22aa-370c-4eab-a953-00376129cfb8",
       "position": 9,
+      "properties": {
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "c03d22aa-370c-4eab-a953-00376129cfb8",
+        "lesson_activity.key": "37053ffc-7e23-46d6-ae37-d198dcef63fa"
+      }
+    },
+    {
+      "key": "0cfb2c03-5076-42a7-87a9-8d183f7a554c",
+      "position": 10,
       "properties": {
       },
       "seeding_key": {
@@ -3100,7 +3166,7 @@
     },
     {
       "key": "9497948e-7350-4e2a-814c-0f28e6b2453e",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How does seeing a loading message impact your trust in an app?*\n- *What happens if an app shows nothing when a search has no results?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that clear communication prevents users from assuming the app is broken. Loading states tell the user that the data is loading and not to navigate away from the page. Empty states communicate that no data matches the search criteria, rather than leaving users confused by seeing a blank screen.\n"
       },
@@ -4041,29 +4107,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "New CFU Level 3"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson2-level3-2026"
-        ],
-        "lesson.key": "Lesson 2: Why Apps Wait",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "a38987dc-6133-450f-b6b9-91a3e0c32c67"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson2-level3-2026"
-      ]
-    },
-    {
-      "chapter": 10,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Demo: Run the Frozen App"
+        "progression": "Demo: The Frozen App"
       },
       "bonus": false,
       "seeding_key": {
@@ -4073,19 +4117,19 @@
         "lesson.key": "Lesson 2: Why Apps Wait",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "ffe792fd-7b5d-4b92-a020-a0607edb01c4"
+        "activity_section.key": "481986ea-58a8-4a22-bd32-694d68b1fea9"
       },
       "level_keys": [
         "designing-reliable-apps-lesson2-level5-test_2025-pilot_2025-pilot_2026"
       ]
     },
     {
-      "chapter": 11,
-      "position": 3,
+      "chapter": 10,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Analogy: Synchronous vs. Asynchronous "
+        "progression": "Synchronous vs. Asynchronous "
       },
       "bonus": false,
       "seeding_key": {
@@ -4099,6 +4143,28 @@
       },
       "level_keys": [
         "designing-reliable-apps-lesson2-level6-test_2025-pilot_2025-pilot_2026"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Synchronous vs. Asynchronous "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson2-level3-2026"
+        ],
+        "lesson.key": "Lesson 2: Why Apps Wait",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "b2a3a269-4773-44a7-934d-3e2eb361a5f9"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson2-level3-2026"
       ]
     },
     {
@@ -4851,50 +4917,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Vocab: Human-Centered Reliability"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson9-vocab1-2025-pilot_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 9: Keeping Users Informed",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "5126359b-9381-46d9-9ab3-f12ac80ab96f"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson9-vocab1-2025-pilot_2025-pilot_2026"
-      ]
-    },
-    {
-      "chapter": 47,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Human-Centered Reliability"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson9-vocabsummary1-2025-pilot_2025-pil_2026"
-        ],
-        "lesson.key": "Lesson 9: Keeping Users Informed",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "5126359b-9381-46d9-9ab3-f12ac80ab96f"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson9-vocabsummary1-2025-pilot_2025-pil_2026"
-      ]
-    },
-    {
-      "chapter": 48,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
         "progression": "Drafting the Web App State"
       },
       "bonus": false,
@@ -4912,8 +4934,8 @@
       ]
     },
     {
-      "chapter": 49,
-      "position": 4,
+      "chapter": 47,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4934,8 +4956,8 @@
       ]
     },
     {
-      "chapter": 50,
-      "position": 5,
+      "chapter": 48,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4956,8 +4978,30 @@
       ]
     },
     {
-      "chapter": 51,
-      "position": 6,
+      "chapter": 49,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson9-level4-2026"
+        ],
+        "lesson.key": "Lesson 9: Keeping Users Informed",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "c03d22aa-370c-4eab-a953-00376129cfb8"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson9-level4-2026"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4978,7 +5022,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5000,7 +5044,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5022,7 +5066,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 53,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5044,7 +5088,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 54,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5066,7 +5110,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 55,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -5088,7 +5132,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5110,7 +5154,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 57,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5132,7 +5176,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 58,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5154,7 +5198,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 59,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5176,7 +5220,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 60,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5198,7 +5242,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5319,18 +5363,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson2-level3-2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson2-level3-2026"
-        ],
-        "lesson.key": "Lesson 2: Why Apps Wait",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "a38987dc-6133-450f-b6b9-91a3e0c32c67"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "designing-reliable-apps-lesson2-level5-test_2025-pilot_2025-pilot_2026",
         "script_level.level_keys": [
           "designing-reliable-apps-lesson2-level5-test_2025-pilot_2025-pilot_2026"
@@ -5338,7 +5370,7 @@
         "lesson.key": "Lesson 2: Why Apps Wait",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "ffe792fd-7b5d-4b92-a020-a0607edb01c4"
+        "activity_section.key": "481986ea-58a8-4a22-bd32-694d68b1fea9"
       }
     },
     {
@@ -5346,6 +5378,18 @@
         "level.key": "designing-reliable-apps-lesson2-level6-test_2025-pilot_2025-pilot_2026",
         "script_level.level_keys": [
           "designing-reliable-apps-lesson2-level6-test_2025-pilot_2025-pilot_2026"
+        ],
+        "lesson.key": "Lesson 2: Why Apps Wait",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "b2a3a269-4773-44a7-934d-3e2eb361a5f9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson2-level3-2026",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson2-level3-2026"
         ],
         "lesson.key": "Lesson 2: Why Apps Wait",
         "lesson_group.key": "lessonGroup-3",
@@ -5763,30 +5807,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson9-vocab1-2025-pilot_2025-pilot_2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson9-vocab1-2025-pilot_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 9: Keeping Users Informed",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "5126359b-9381-46d9-9ab3-f12ac80ab96f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson9-vocabsummary1-2025-pilot_2025-pil_2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson9-vocabsummary1-2025-pilot_2025-pil_2026"
-        ],
-        "lesson.key": "Lesson 9: Keeping Users Informed",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "5126359b-9381-46d9-9ab3-f12ac80ab96f"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "designing-reliable-apps-lesson9-sketchlab-test-2025-pilot_2025-pi_2026",
         "script_level.level_keys": [
           "designing-reliable-apps-lesson9-sketchlab-test-2025-pilot_2025-pi_2026"
@@ -5819,6 +5839,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
         "activity_section.key": "24f93856-1409-43c3-a4e9-d1831832fa04"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson9-level4-2026",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson9-level4-2026"
+        ],
+        "lesson.key": "Lesson 9: Keeping Users Informed",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "c03d22aa-370c-4eab-a953-00376129cfb8"
       }
     },
     {
@@ -6080,7 +6112,7 @@
     },
     {
       "name": "[KEY] Why Apps Wait",
-      "url": "https://docs.google.com/document/d/1Le0zr69m97QQWiS-aZAPQ8ahqH4nwcGlEztKTr17Ct8/edit?tab=t.0#heading=h.he8kcnk26cq4",
+      "url": "https://docs.google.com/document/d/1TSy_cbrG3r_5tAa4ybE5sraSS6_9RCVqzTf7fMxg8fw/edit?usp=sharing",
       "key": "_key_why_apps_wait",
       "properties": {
         "audience": "Verified Teacher",
@@ -6139,24 +6171,35 @@
     },
     {
       "name": "All Resources",
-      "url": "/courses/artificial-intelligence-foundations-semester2-2025/units/5/resources",
-      "key": "all_resources",
+      "url": "/courses/ai-foundations-designing-and-building-with-ai-2026/units/5/resources",
+      "key": "all_resources_6",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources"
+        "resource.key": "all_resources_6"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/ai-foundations-designing-and-building-with-ai-2026/units/5/standards",
+      "key": "all_standards_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_4"
       }
     },
     {
       "name": "All Vocabulary",
-      "url": "/courses/artificial-intelligence-foundations-semester2-2025/units/5/vocab",
-      "key": "all_vocabulary",
+      "url": "/courses/ai-foundations-designing-and-building-with-ai-2026/units/5/vocab",
+      "key": "all_vocabulary_3",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_vocabulary"
+        "resource.key": "all_vocabulary_3"
       }
     },
     {
@@ -6308,7 +6351,6 @@
         "audience": "Student",
         "curriculum_category": "curriculum",
         "embeddability_type": "embed_and_resource_dropdown",
-        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -6404,7 +6446,7 @@
     },
     {
       "name": "Why Apps Wait",
-      "url": "https://docs.google.com/presentation/d/12eQukwrZYdENHqjiaCxTeoo5rQMyoSbmE24osIpOWiU/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1W5g1SOt03z5bLk7Q7CfNLvEPu0JALvEF6hhCWqp9NGE/edit?usp=sharing",
       "key": "why_apps_wait",
       "properties": {
         "audience": "Teacher",
@@ -6418,7 +6460,7 @@
     },
     {
       "name": "Why Apps Wait",
-      "url": "https://docs.google.com/document/d/1xAv4N_Jl-EST_mHWztCvkGTHFnSE73otXznFYR1CRs0/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1zxueBDnn-7h0iy7XVhMGSozxwmmouBfC70zovMcGvgg/edit?usp=sharing",
       "key": "why_apps_wait_1",
       "properties": {
         "audience": "Student",
@@ -6490,7 +6532,19 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 2: Why Apps Wait",
+        "resource.key": "_exemplar_designing_reliable_apps_with_ai_and_apis_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Why Apps Wait",
         "resource.key": "_key_why_apps_wait"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Why Apps Wait",
+        "resource.key": "designing_reliable_apps_with_ai_and_apis_unit_guide"
       }
     },
     {
@@ -6623,13 +6677,19 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources",
+        "resource.key": "all_resources_6",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_vocabulary",
+        "resource.key": "all_standards_4",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-2026"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026"
       }
     }
