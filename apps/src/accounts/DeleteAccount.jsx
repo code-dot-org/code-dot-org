@@ -1,13 +1,12 @@
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import color from '@cdo/apps/util/color';
 import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import AdminAccountDialog from './AdminAccountDialog';
-import BootstrapButton from './BootstrapButton';
 import DeleteAccountDialog from './DeleteAccountDialog';
 import {
   TeacherWarning,
@@ -15,6 +14,8 @@ import {
   getCheckboxes,
 } from './DeleteAccountHelpers';
 import PersonalLoginDialog from './PersonalLoginDialog';
+
+import styles from './delete-account.module.scss';
 
 export const DELETE_VERIFICATION_STRING =
   i18n.deleteAccountDialog_verificationString();
@@ -187,17 +188,24 @@ export default class DeleteAccount extends React.Component {
     const isDependedUponForLogin = dependedUponForLogin(this.props);
 
     return (
-      <div style={styles.container}>
-        <hr style={styles.hr} />
-        <h2 style={styles.header}>{i18n.deleteAccount()}</h2>
-        <div style={styles.warning}>
+      <div className={styles.container}>
+        <hr className={styles.hr} />
+        <MuiTypography
+          variant="h5"
+          component="h2"
+          className={styles.header}
+          gutterBottom
+        >
+          {i18n.deleteAccount()}
+        </MuiTypography>
+        <div className={styles.warning}>
           {isTeacher ? <TeacherWarning /> : <StudentWarning />}
         </div>
-        <div style={styles.buttonContainer}>
-          {/* This button intentionally uses BootstrapButton to match other account page buttons */}
-          <BootstrapButton
-            type="danger"
-            text={i18n.deleteAccount()}
+        <div className={styles.buttonContainer}>
+          <MuiButton
+            variant="contained"
+            color="error"
+            size="small"
             onClick={
               isDependedUponForLogin
                 ? this.togglePersonalLoginDialog
@@ -205,7 +213,9 @@ export default class DeleteAccount extends React.Component {
                 ? this.toggleAdminAccountDialog
                 : this.toggleDeleteAccountDialog
             }
-          />
+          >
+            {i18n.deleteAccount()}
+          </MuiButton>
         </div>
         <PersonalLoginDialog
           isOpen={isPersonalLoginDialogOpen}
@@ -239,24 +249,3 @@ export default class DeleteAccount extends React.Component {
     );
   }
 }
-
-const styles = {
-  container: {
-    paddingTop: 20,
-  },
-  hr: {
-    borderColor: color.red,
-  },
-  header: {
-    fontSize: 22,
-    color: color.red,
-  },
-  warning: {
-    marginTop: 10,
-    marginBottom: 10,
-  },
-  buttonContainer: {
-    display: 'flex',
-    justifyContent: 'flex-end',
-  },
-};

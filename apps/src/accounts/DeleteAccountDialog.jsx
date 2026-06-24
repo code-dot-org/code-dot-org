@@ -1,19 +1,14 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Modal from '@code-dot-org/component-library/modal';
+import TextField from '@code-dot-org/component-library/textField';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import {
-  Header,
-  Field,
-  ConfirmCancelFooter,
-} from '../sharedComponents/SystemDialog/SystemDialog';
-
-const GUTTER = 20;
+import styles from './delete-account-dialog.module.scss';
 
 export default class DeleteAccountDialog extends React.Component {
   static propTypes = {
@@ -57,6 +52,11 @@ export default class DeleteAccountDialog extends React.Component {
       deleteUser,
       deleteError,
     } = this.props;
+
+    if (!isOpen) {
+      return null;
+    }
+
     const checkboxesLength = Object.keys(checkboxes).length;
 
     const renderedMarkdown = isTeacher => {
@@ -71,134 +71,91 @@ export default class DeleteAccountDialog extends React.Component {
     };
 
     return (
-      <BaseDialog
-        useUpdatedStyles
-        fixedWidth={550}
-        isOpen={isOpen}
-        handleClose={onCancel}
-      >
-        <div style={styles.container}>
-          <Header text={i18n.deleteAccountDialog_header()} />
-          <div style={styles.bodyContainer}>
-            <FontAwesome icon="triangle-exclamation" style={styles.icon} />
-            <div style={styles.text}>
-              <SafeMarkdown markdown={renderedMarkdown(isTeacher)} />
-              {warnAboutDeletingStudents && (
-                <span>
-                  <SafeMarkdown markdown={i18n.deleteAccountDialog_body3()} />
-                </span>
-              )}
+      <Modal
+        title={i18n.deleteAccountDialog_header()}
+        onClose={onCancel}
+        closeLabel={i18n.closeDialog()}
+        customContent={
+          <div className={styles.container}>
+            <div className={styles.bodyContainer}>
+              <FontAwesomeV6Icon
+                iconName="triangle-exclamation"
+                iconStyle="solid"
+                className={styles.icon}
+              />
+              <div className={styles.text}>
+                <SafeMarkdown markdown={renderedMarkdown(isTeacher)} />
+                {warnAboutDeletingStudents && (
+                  <span>
+                    <SafeMarkdown markdown={i18n.deleteAccountDialog_body3()} />
+                  </span>
+                )}
+              </div>
             </div>
-          </div>
-          {checkboxesLength > 0 && (
-            <div style={styles.section}>
-              <strong>
-                {i18n.deleteAccountDialog_checkboxTitle({
-                  numCheckboxes: checkboxesLength,
-                })}
-              </strong>
-              {Object.keys(checkboxes).map(id => {
-                return (
-                  <div key={id} style={styles.checkboxContainer}>
-                    <input
-                      type="checkbox"
-                      id={id}
+            {checkboxesLength > 0 && (
+              <div className={styles.section}>
+                <strong>
+                  {i18n.deleteAccountDialog_checkboxTitle({
+                    numCheckboxes: checkboxesLength,
+                  })}
+                </strong>
+                {Object.keys(checkboxes).map(id => (
+                  <div key={id} className={styles.checkboxContainer}>
+                    <Checkbox
+                      name={id}
                       checked={checkboxes[id].checked}
                       onChange={() => onCheckboxChange(id)}
+                      label={checkboxes[id].label}
                     />
-                    <label htmlFor={id} style={styles.label}>
-                      {checkboxes[id].label}
-                    </label>
                   </div>
-                );
-              })}
-            </div>
-          )}
-          {isPasswordRequired && (
-            <Field
-              label={i18n.deleteAccountDialog_currentPassword()}
-              error={passwordError}
-            >
-              <input
-                type="password"
-                style={styles.input}
+                ))}
+              </div>
+            )}
+            {isPasswordRequired && (
+              <TextField
+                name="currentPassword"
+                inputType="password"
+                label={i18n.deleteAccountDialog_currentPassword()}
+                errorMessage={passwordError}
                 value={password}
                 onChange={onPasswordChange}
               />
-            </Field>
-          )}
-          <Field
-            label={i18n.deleteAccountDialog_verification({
-              verificationString: i18n.deleteAccountDialog_verificationString(),
-            })}
-          >
-            <input
-              type="text"
-              style={styles.input}
+            )}
+            <TextField
+              name="deleteVerification"
+              inputType="text"
+              label={i18n.deleteAccountDialog_verification({
+                verificationString:
+                  i18n.deleteAccountDialog_verificationString(),
+              })}
               value={deleteVerification}
               onChange={onDeleteVerificationChange}
             />
-          </Field>
-          <div style={styles.section}>{i18n.deleteAccountDialog_emailUs()}</div>
-          <ConfirmCancelFooter
-            confirmText={
-              warnAboutDeletingStudents
-                ? i18n.deleteAccountDialog_button_studentWarning()
-                : i18n.deleteAccountDialog_button()
-            }
-            confirmColor="error"
-            onConfirm={deleteUser}
-            onCancel={onCancel}
-            disableConfirm={disableConfirm}
-          >
-            <span
-              id="uitest-delete-error"
-              style={{...styles.dangerText, ...styles.italicText}}
-            >
+            <div className={styles.section}>
+              {i18n.deleteAccountDialog_emailUs()}
+            </div>
+          </div>
+        }
+        primaryButtonProps={{
+          children: warnAboutDeletingStudents
+            ? i18n.deleteAccountDialog_button_studentWarning()
+            : i18n.deleteAccountDialog_button(),
+          color: 'error',
+          onClick: deleteUser,
+          disabled: disableConfirm,
+        }}
+        secondaryButtonProps={{
+          children: i18n.cancel(),
+          onClick: onCancel,
+        }}
+        customBottomContent={
+          deleteError ? (
+            <span id="uitest-delete-error" className={styles.dangerText}>
               {deleteError}
             </span>
-          </ConfirmCancelFooter>
-        </div>
-      </BaseDialog>
+          ) : undefined
+        }
+      />
     );
   }
 }
-
-const styles = {
-  container: {
-    margin: GUTTER,
-    color: color.charcoal,
-  },
-  bodyContainer: {
-    display: 'flex',
-    alignItems: 'center',
-    paddingTop: GUTTER / 2,
-    paddingBottom: GUTTER,
-  },
-  icon: {
-    color: color.red,
-    fontSize: 100,
-  },
-  text: {
-    paddingLeft: GUTTER,
-  },
-  dangerText: {
-    color: color.red,
-  },
-  italicText: {
-    fontStyle: 'italic',
-  },
-  section: {
-    paddingBottom: GUTTER,
-  },
-  checkboxContainer: {
-    display: 'flex',
-    paddingTop: GUTTER / 2,
-  },
-  label: {
-    paddingLeft: GUTTER / 2,
-  },
-  input: {
-    width: 490,
-  },
-};
