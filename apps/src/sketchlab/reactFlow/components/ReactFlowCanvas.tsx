@@ -241,6 +241,37 @@ export default function ReactFlowCanvas({
     }
     return nonAnchors + anchors / 2;
   }, [multiSelectedNodeIds, nodes]);
+  // Count ALL groupable elements on the canvas (not just selected) to decide
+  // whether entering group mode is possible.
+  const totalGroupableCount = useMemo(() => {
+    const nodeMap = new Map(nodes.map(n => [n.id, n]));
+    let count = 0;
+    for (const node of nodes) {
+      if (
+        node.type !== 'lineAnchor' &&
+        node.type !== 'group' &&
+        !node.parentId &&
+        !node.data?.locked
+      ) {
+        count++;
+      }
+    }
+    for (const edge of edges) {
+      if (edge.data?.locked) continue;
+      const src = nodeMap.get(edge.source);
+      const tgt = nodeMap.get(edge.target);
+      if (
+        src?.type === 'lineAnchor' &&
+        tgt?.type === 'lineAnchor' &&
+        !src.parentId &&
+        !tgt.parentId
+      ) {
+        count++;
+      }
+    }
+    return count;
+  }, [nodes, edges]);
+
   const [groupModeError, setGroupModeError] = useState<string | null>(null);
   const groupModeErrorTimerRef = useRef<ReturnType<typeof setTimeout> | null>(
     null
@@ -428,6 +459,7 @@ export default function ReactFlowCanvas({
       lastFocusedEntry,
       isGroupMode,
       canGroup: groupableCount >= 2,
+      canEnterGroupMode: totalGroupableCount >= 2,
       onEnterGroupMode: enterGroupMode,
       onExitGroupMode: exitGroupMode,
       onToggleEntryInGroupMode: toggleEntryInGroupMode,
@@ -724,104 +756,107 @@ export default function ReactFlowCanvas({
                     allowOutsideClick: true,
                   }}
                 >
-                <div
-                  ref={canvasContainerRef}
-                  className={classNames(
-                    styles.canvasContainer,
-                    {
-                      [styles.connectMode]: !!connectingFrom,
-                    },
-                    SKETCHLAB_CONTAINER_CLASS
-                  )}
-                  tabIndex={-1}
-                  onKeyDownCapture={handleKeyDown}
-                  onFocusCapture={handleFocusCapture}
-                  onBlur={handleContainerBlur}
-                  onMouseMove={handleMouseMove}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  {!readOnly && (
-                    <Toolbar onAddNode={handleAddNode} levelName={levelName} />
-                  )}
-                  <div aria-live="assertive" className={styles.srOnly}>
-                    {connectAnnouncement}
-                  </div>
-                  <div aria-live="polite" className={styles.srOnly}>
-                    {ariaAnnouncement}
-                  </div>
-                  <ReactFlow
-                    nodes={displayNodes}
-                    edges={displayEdges}
-                    onNodesChange={handleNodesChange}
-                    onEdgesChange={handleEdgesChange}
-                    onNodeClick={handleNodeClick}
-                    onEdgeClick={handleEdgeClick}
-                    onPaneClick={handlePaneClick}
-                    onConnect={onConnect}
-                    onReconnectStart={handleReconnectStart}
-                    onReconnect={handleReconnect}
-                    onReconnectEnd={handleReconnectEnd}
-                    onNodesDelete={handleElementsDeleted}
-                    onEdgesDelete={handleElementsDeleted}
-                    onNodeDragStart={handleNodeDragStart}
-                    onNodeDrag={handleNodeDrag}
-                    onNodeDragStop={handleNodeDragStop}
-                    isValidConnection={isValidConnection}
-                    connectionLineComponent={ConnectionLine}
-                    minZoom={MIN_ZOOM}
-                    connectionRadius={LINE_RECONNECT_SNAP_RADIUS_PX}
-                    nodeTypes={NODE_TYPES}
-                    onMoveEnd={handleMoveEnd}
-                    defaultViewport={initialViewport}
-                    fitView={!initialViewport}
-                    colorMode={colorMode}
-                    // We implement our own shift+click multi-selection; disable
-                    // React Flow's built-in so it doesn't fight our selection state.
-                    multiSelectionKeyCode={null}
-                    deleteKeyCode={readOnly ? null : 'Delete'}
-                    proOptions={{hideAttribution: true}}
-                    nodesDraggable={!readOnly}
-                    nodesConnectable={!readOnly}
-                    elementsSelectable={!readOnly}
-                    nodesFocusable={true}
-                    edgesFocusable={true}
-                    // Even though we manage tab order, we keep React Flow's keyboard A11y on because
-                    // it manages things like moving nodes with arrow keys.
-                    disableKeyboardA11y={false}
-                    autoPanOnNodeFocus={false} // We manage viewport on focus manually in useFocusManagement.
-                    zIndexMode={'manual'}
-                    defaultEdgeOptions={DEFAULT_EDGE_OPTIONS}
-                    defaultMarkerColor={DEFAULT_STROKE_COLOR}
-                  >
-                    <CornerToolbarPanel
-                      nodes={nodes}
-                      edges={edges}
-                      setNodes={setNodes}
-                      setEdges={setEdges}
-                      pushSnapshot={pushSnapshot}
-                      groupableCount={groupableCount}
-                      onGroupNodes={handleGroupNodes}
-                      onUngroupNode={handleUngroupNode}
-                    />
-                    {isGroupMode && (
-                      <Panel
-                        position="bottom-center"
-                        className={styles.groupModeIndicator}
-                      >
-                        {groupModeError ??
-                          'Tab to move — Enter to select/deselect — G to group — Esc to cancel'}
-                      </Panel>
+                  <div
+                    ref={canvasContainerRef}
+                    className={classNames(
+                      styles.canvasContainer,
+                      {
+                        [styles.connectMode]: !!connectingFrom,
+                      },
+                      SKETCHLAB_CONTAINER_CLASS
                     )}
-                    <Background />
-                    <CanvasControls
-                      onUndo={handleUndo}
-                      onRedo={handleRedo}
-                      canUndo={canUndo}
-                      canRedo={canRedo}
-                      isReadOnly={readOnly}
-                    />
-                  </ReactFlow>
-                </div>
+                    tabIndex={-1}
+                    onKeyDownCapture={handleKeyDown}
+                    onFocusCapture={handleFocusCapture}
+                    onBlur={handleContainerBlur}
+                    onMouseMove={handleMouseMove}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    {!readOnly && (
+                      <Toolbar
+                        onAddNode={handleAddNode}
+                        levelName={levelName}
+                      />
+                    )}
+                    <div aria-live="assertive" className={styles.srOnly}>
+                      {connectAnnouncement}
+                    </div>
+                    <div aria-live="polite" className={styles.srOnly}>
+                      {ariaAnnouncement}
+                    </div>
+                    <ReactFlow
+                      nodes={displayNodes}
+                      edges={displayEdges}
+                      onNodesChange={handleNodesChange}
+                      onEdgesChange={handleEdgesChange}
+                      onNodeClick={handleNodeClick}
+                      onEdgeClick={handleEdgeClick}
+                      onPaneClick={handlePaneClick}
+                      onConnect={onConnect}
+                      onReconnectStart={handleReconnectStart}
+                      onReconnect={handleReconnect}
+                      onReconnectEnd={handleReconnectEnd}
+                      onNodesDelete={handleElementsDeleted}
+                      onEdgesDelete={handleElementsDeleted}
+                      onNodeDragStart={handleNodeDragStart}
+                      onNodeDrag={handleNodeDrag}
+                      onNodeDragStop={handleNodeDragStop}
+                      isValidConnection={isValidConnection}
+                      connectionLineComponent={ConnectionLine}
+                      minZoom={MIN_ZOOM}
+                      connectionRadius={LINE_RECONNECT_SNAP_RADIUS_PX}
+                      nodeTypes={NODE_TYPES}
+                      onMoveEnd={handleMoveEnd}
+                      defaultViewport={initialViewport}
+                      fitView={!initialViewport}
+                      colorMode={colorMode}
+                      // We implement our own shift+click multi-selection; disable
+                      // React Flow's built-in so it doesn't fight our selection state.
+                      multiSelectionKeyCode={null}
+                      deleteKeyCode={readOnly ? null : 'Delete'}
+                      proOptions={{hideAttribution: true}}
+                      nodesDraggable={!readOnly}
+                      nodesConnectable={!readOnly}
+                      elementsSelectable={!readOnly}
+                      nodesFocusable={true}
+                      edgesFocusable={true}
+                      // Even though we manage tab order, we keep React Flow's keyboard A11y on because
+                      // it manages things like moving nodes with arrow keys.
+                      disableKeyboardA11y={false}
+                      autoPanOnNodeFocus={false} // We manage viewport on focus manually in useFocusManagement.
+                      zIndexMode={'manual'}
+                      defaultEdgeOptions={DEFAULT_EDGE_OPTIONS}
+                      defaultMarkerColor={DEFAULT_STROKE_COLOR}
+                    >
+                      <CornerToolbarPanel
+                        nodes={nodes}
+                        edges={edges}
+                        setNodes={setNodes}
+                        setEdges={setEdges}
+                        pushSnapshot={pushSnapshot}
+                        groupableCount={groupableCount}
+                        onGroupNodes={handleGroupNodes}
+                        onUngroupNode={handleUngroupNode}
+                      />
+                      {isGroupMode && (
+                        <Panel
+                          position="bottom-center"
+                          className={styles.groupModeIndicator}
+                        >
+                          {groupModeError ??
+                            'Tab to move — Enter to select/deselect — G to group — Esc to cancel'}
+                        </Panel>
+                      )}
+                      <Background />
+                      <CanvasControls
+                        onUndo={handleUndo}
+                        onRedo={handleRedo}
+                        canUndo={canUndo}
+                        canRedo={canRedo}
+                        isReadOnly={readOnly}
+                      />
+                    </ReactFlow>
+                  </div>
                 </FocusTrap>
               </ReconnectingEdgeProvider>
             </AnchorDraggingProvider>

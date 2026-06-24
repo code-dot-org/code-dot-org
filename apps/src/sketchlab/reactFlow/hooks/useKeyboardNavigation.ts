@@ -132,6 +132,7 @@ interface UseKeyboardNavigationOptions {
   lastFocusedEntry: TabOrderEntry | null;
   isGroupMode: boolean;
   canGroup: boolean;
+  canEnterGroupMode: boolean;
   onEnterGroupMode: () => void;
   onExitGroupMode: () => void;
   onToggleEntryInGroupMode: (entry: TabOrderEntry) => void;
@@ -184,6 +185,7 @@ export function useKeyboardNavigation({
   lastFocusedEntry,
   isGroupMode,
   canGroup,
+  canEnterGroupMode,
   onEnterGroupMode,
   onExitGroupMode,
   onToggleEntryInGroupMode,
@@ -662,11 +664,19 @@ export function useKeyboardNavigation({
         if (canGroup) onGroupSelected();
         else onCannotGroup();
       } else {
-        onEnterGroupMode();
+        if (canEnterGroupMode) onEnterGroupMode();
+        else onCannotGroup();
       }
       return true;
     },
-    [isGroupMode, canGroup, onEnterGroupMode, onGroupSelected, onCannotGroup]
+    [
+      isGroupMode,
+      canGroup,
+      canEnterGroupMode,
+      onEnterGroupMode,
+      onGroupSelected,
+      onCannotGroup,
+    ]
   );
 
   // Escape in group mode: exit without creating a group.
