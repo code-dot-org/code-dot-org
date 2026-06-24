@@ -3,17 +3,17 @@ Feature: After completing the Hour of Code, the player is directed to a congratu
   Background:
     Given I am on "http://studio.code.org/reset_session"
 
-  Scenario: Completing Minecraft HoC should go to certificate page and generate a certificate
-    Given I am on "http://studio.code.org/courses/mc/units/1/reset"
-    Given I load the last Minecraft HoC level
-    Then I wait until the Minecraft game is loaded
-    And I press "runButton"
-    Then I wait until element "#rightButton" is visible
-    And I press "rightButton"
-    Then I wait to see a congrats dialog with title containing "Keep Playing"
-    And I press "#continue-button" using jQuery
+  Scenario: Completing Artist HoC should go to certificate page and generate a certificate
+    Given I am on "http://studio.code.org/courses/ui-test-artist/units/1/lessons/1/levels/10?noautoplay=true"
+    And I wait for the lab page to fully load
+    And I click selector "#runButton"
+    And I click selector "button:contains(Finish)" once I see it
+    And I click selector "#continue-button" once I see it
+    # The /api/hour/finish/ui-test-artist endpoint resolves ui-test-artist via
+    # the HocLegacy::Tutorials stub, enabled in the test environment by the
+    # stub_tutorial_targets config flag.
     And I wait until current URL contains "/congrats"
-    And my query params match "\?i\=.*\&s\=bWM%3D$"
+    And my query params match "\?i\=.*\&s\=dWktdGVzdC1hcnRpc3Q%3D$"
     And I wait to see element with ID "congrats-container"
     And I wait to see element with ID "uitest-certificate"
     And I type "Robo Códer" into "#name"
