@@ -1,6 +1,7 @@
 require_relative '../test_helper'
 require 'cdo/app_server_hooks'
 require 'cdo/worker_memory_collector'
+require 'cdo/statsig'
 
 class AppServerHooksTest < Minitest::Test
   def setup
@@ -13,15 +14,15 @@ class AppServerHooksTest < Minitest::Test
     Cdo::StatsigInitializer.stubs(:init)
   end
 
-  def test_worker_memory_collector_started_when_dcdo_enabled
-    DCDO.stubs(:get).with('publish_worker_memory_metrics', false).returns(true)
+  def test_worker_memory_collector_started_with_dcdo_interval
+    DCDO.stubs(:get).with('worker_memory_metrics_interval_seconds', 0).returns(120)
 
     collector = mock('collector')
     collector.expects(:start)
     Cdo::WorkerMemoryCollector.expects(:new).with(
       namespace: 'App Server',
-      interval: 60,
-      resolution: 60,
+      interval: 120,
+      resolution: 120,
       dimensions: {
         Environment: :production,
         Host: 'test.example.net',
@@ -32,8 +33,8 @@ class AppServerHooksTest < Minitest::Test
     Cdo::AppServerHooks.before_worker_boot(host: 'test.example.net', worker_index: 3)
   end
 
-  def test_worker_memory_collector_not_started_when_dcdo_disabled
-    DCDO.stubs(:get).with('publish_worker_memory_metrics', false).returns(false)
+  def test_worker_memory_collector_not_started_when_dcdo_zero
+    DCDO.stubs(:get).with('worker_memory_metrics_interval_seconds', 0).returns(0)
 
     Cdo::WorkerMemoryCollector.expects(:new).never
 
@@ -41,7 +42,7 @@ class AppServerHooksTest < Minitest::Test
   end
 
   def test_worker_memory_collector_not_started_when_dcdo_unset
-    DCDO.stubs(:get).with('publish_worker_memory_metrics', false).returns(false)
+    DCDO.stubs(:get).with('worker_memory_metrics_interval_seconds', 0).returns(0)
 
     Cdo::WorkerMemoryCollector.expects(:new).never
 
@@ -51,7 +52,7 @@ class AppServerHooksTest < Minitest::Test
   def test_worker_memory_collector_not_started_in_development
     CDO.stubs(:rack_env?).returns(false)
     CDO.stubs(:test_system?).returns(false)
-    DCDO.stubs(:get).with('publish_worker_memory_metrics', false).returns(true)
+    DCDO.stubs(:get).with('worker_memory_metrics_interval_seconds', 0).returns(60)
 
     Cdo::WorkerMemoryCollector.expects(:new).never
 

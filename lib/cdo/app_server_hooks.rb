@@ -32,14 +32,16 @@ module Cdo
       Cdo::Metrics.put('App Server', 'WorkerBoot', 1, {Host: host})
 
       # Publish per-worker memory metrics in production, the managed test server, and adhoc environments.
+      # DCDO value is the collection interval in seconds (0 = off).
+      interval = DCDO.get('worker_memory_metrics_interval_seconds', 0).to_i
       if (CDO.rack_env?(:production) || CDO.test_system? || CDO.rack_env?(:adhoc)) &&
-          DCDO.get('publish_worker_memory_metrics', false) &&
+          interval > 0 &&
           worker_index
         require 'cdo/worker_memory_collector'
         Cdo::WorkerMemoryCollector.new(
           namespace: 'App Server',
-          interval: 60,
-          resolution: 60,
+          interval: interval,
+          resolution: interval,
           dimensions: {
             Environment: CDO.rack_env,
             Host: CDO.dashboard_hostname,
