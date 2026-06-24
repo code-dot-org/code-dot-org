@@ -76,6 +76,7 @@ function TextNode({
           onKeyDown={handleKeyDown}
           tabIndex={-1}
           role="textbox"
+          aria-multiline={true}
           aria-label={`Text content${isEditing ? ' (editing)' : ''}`}
         >
           {text}

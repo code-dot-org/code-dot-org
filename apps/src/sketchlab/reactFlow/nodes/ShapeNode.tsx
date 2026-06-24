@@ -199,6 +199,7 @@ function ShapeNode({
           onKeyDown={handleLabelKeyDown}
           tabIndex={-1}
           role="textbox"
+          aria-multiline={true}
           aria-label={`${shapeType} label${isEditing ? ' (editing)' : ''}`}
         >
           {label}
