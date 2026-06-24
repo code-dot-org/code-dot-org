@@ -1,0 +1,53 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-06-23T14:37:57.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "display_name": "Make an image that connects with your audience",
+    "bubble_choice_description": "Like a **Digital Marketer** who creates content that stops people mid-scroll.",
+    "encrypted": "false",
+    "long_instructions": "### Recreate an Image\r\n\r\n1. Type a brief prompt to recreate one of the images below.\r\n2. After your initial prompt, try adding more details to get closer to the image.\r\n3. How many details do you need to include to generate an image exactly like the example? \r\n\r\n![](https://images.code.org/edd69601f47fea2deb78723758a39437-image-1776991549040.png)",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash-image",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash-image"
+      ],
+      "multimodalEnabled": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-23T14:37:57.341+00:00\",\"changed\":[\"cloned from \\\"thinking_critically_lesson5_level1chat_2026\\\"\"],\"cloned_from\":\"thinking_critically_lesson5_level1chat_2026\"},{\"changed_at\":\"2026-06-23 14:38:02 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"},{\"changed_at\":\"2026-06-23 15:36:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"},{\"changed_at\":\"2026-06-23 16:07:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"}]"
+}]]></config>
+</Aichat>
