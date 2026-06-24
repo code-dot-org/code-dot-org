@@ -6,6 +6,11 @@ import {TestDataLocations} from './constants';
 import {parseCSV} from './csvReaderWrapper';
 import type {Dataset} from './datasetManifest';
 import {getDatasets} from './datasetManifest';
+import {
+  type InstructionsKey,
+  setInstructionsKeyCallback,
+} from './helpers/instructions';
+import {setMetricsLogger} from './helpers/metrics';
 import I18n from './i18n';
 import {parseJSON} from './jsonReaderWrapper';
 import {
@@ -13,11 +18,9 @@ import {
   setCurrentPanel,
   setSelectedCSV,
   setSelectedJSON,
-  setInstructionsKeyCallback,
   setSaveStatus,
   setReserveLocation,
   setInstructionsDismissed,
-  setFirehoseMetricsLogger,
   getTrainedModelDataToSave,
 } from './redux';
 import {store} from './store';
@@ -47,7 +50,7 @@ export interface InitAllOptions {
   ) => void;
   logMetric?: (eventName: string, details: Record<string, unknown>) => void;
   setInstructionsKey?: (
-    key: string,
+    key: InstructionsKey,
     options: {showOverlay?: boolean} | null,
   ) => void;
 }
@@ -62,11 +65,11 @@ export const initAll = function (options: InitAllOptions): void {
   const mode = options && options.mode;
   onContinue = options && options.onContinue;
   saveTrainedModel = options && options.saveTrainedModel;
-  if (options && options.logMetric) {
-    store.dispatch(setFirehoseMetricsLogger(options.logMetric));
+  if (options.logMetric) {
+    setMetricsLogger(options.logMetric);
   }
   if (options && options.setInstructionsKey) {
-    store.dispatch(setInstructionsKeyCallback(options.setInstructionsKey));
+    setInstructionsKeyCallback(options.setInstructionsKey);
   }
   store.dispatch(setMode(mode as Mode));
   processMode(mode);
@@ -143,3 +146,4 @@ const startSaveTrainedModel = (): void => {
 
 // Export a few types.
 export {type SaveResponse, type ModelDataToSave} from './types';
+export {type InstructionsKey} from './helpers/instructions';
