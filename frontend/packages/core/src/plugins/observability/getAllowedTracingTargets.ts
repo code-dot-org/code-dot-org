@@ -15,7 +15,7 @@ import type {Environment} from '../../environment';
  *     `.*` so a path component like `/foo.workers.dev` cannot be mistaken
  *     for a hostname.
  *
- * Returning regexes (rather than stringsi) is also important. Sentry's
+ * Returning regexes (rather than strings) is also important. Sentry's
  * matching for string targets uses `String.prototype.ncludes`, so a string
  * like `https://studio.code.org` would match anywhere in a URL — including
  * paths and query strings of attacker-controlled hosts (e.g.
