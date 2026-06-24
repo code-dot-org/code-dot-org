@@ -18,7 +18,7 @@ export type DcdoJsonValue =
  * "studio.code.org" both scope to ".code.org". Does not handle multi-label
  * public suffixes (ccTLDs like ".co.uk"), which the target hosts don't use.
  */
-function cookieDomain(hostname: string): string {
+export function cookieDomain(hostname: string): string {
   const parts = hostname.split('.');
   // Take the last two labels as the registrable domain.
   const registrable = parts.slice(-2).join('.');
