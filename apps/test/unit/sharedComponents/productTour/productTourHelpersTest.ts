@@ -19,8 +19,22 @@ const makeElement = (rect: Partial<DOMRect>): HTMLElement => {
 };
 
 describe('scrollIntoViewIfNeeded', () => {
+  const originalInnerHeight = window.innerHeight;
+
+  const setInnerHeight = (height: number) => {
+    Object.defineProperty(window, 'innerHeight', {
+      value: height,
+      writable: true,
+      configurable: true,
+    });
+  };
+
   beforeEach(() => {
-    Object.defineProperty(window, 'innerHeight', {value: 768, writable: true});
+    setInnerHeight(768);
+  });
+
+  afterEach(() => {
+    setInnerHeight(originalInnerHeight);
   });
 
   it('does not scroll when element is fully visible', () => {
