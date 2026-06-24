@@ -82,12 +82,15 @@ const UserChatMessageEditor: React.FunctionComponent<
   const viewingAiTutorVersionFileUpdates = useAppSelector(
     isViewingAiTutorVersionFileUpdates
   );
-  const chatAssets = useAppSelector(state =>
-    state.aichat.stagedFiles.map(file =>
-      file.projectFilename
+  const submissionAssets = useAppSelector(state =>
+    state.aichat.stagedFiles.map(file => {
+      const asset = file.projectFilename
         ? {...file.asset, filename: file.projectFilename}
-        : file.asset
-    )
+        : file.asset;
+      // Use bucketKey as filename so the backend retrieves the correct S3 object.
+      // bucketKey is a UUID-based key set at upload time to avoid collisions.
+      return asset.bucketKey ? {...asset, filename: asset.bucketKey} : asset;
+    })
   );
   const uploadsPending = useAppSelector(state =>
     state.aichat.stagedFiles.some(file => file.status === 'uploading')
@@ -121,8 +124,8 @@ const UserChatMessageEditor: React.FunctionComponent<
             hiddenContext,
             analyticsProperties,
             assets:
-              multimodalAvailable && chatAssets.length > 0
-                ? chatAssets
+              multimodalAvailable && submissionAssets.length > 0
+                ? submissionAssets
                 : undefined,
             userAddedSelectionContext:
               Object.values(userAddedSelectionContext).length > 0
@@ -143,7 +146,7 @@ const UserChatMessageEditor: React.FunctionComponent<
       modelParameters,
       clientType,
       multimodalAvailable,
-      chatAssets,
+      submissionAssets,
       userAddedSelectionContext,
       responseCallback,
       lessonId,
