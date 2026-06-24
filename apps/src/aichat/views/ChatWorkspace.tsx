@@ -70,6 +70,8 @@ interface ChatWorkspaceProps {
   chatButtons?: ChatButtonAndKey[];
   hiddenContextCallback?: () => Promise<string>;
   hideModelChangeMessage?: boolean;
+  sendDisabled?: boolean;
+  onMessageSent?: () => void;
 
   // Multimodal support
   multimodalEnabled?: boolean;
@@ -83,9 +85,6 @@ interface ChatWorkspaceProps {
   // history (useful for structured outputs).
   responseCallback?: (response: string) => string;
 
-  // Optional callback to log level activity
-  logLevelActivity?: () => void;
-
   hasInstructionsDrawer?: boolean;
   lessonId?: number;
   disabledState?: AiChatDisabledState;
@@ -97,6 +96,10 @@ interface ChatWorkspaceProps {
   renderLastMessagePostText?: (
     onRequestScrollToBottom: () => void
   ) => React.ReactNode;
+
+  // If provided, displayed as an assistant chat bubble when the user has no prior chat history.
+  // Not sent to the model.
+  initialWelcomeMessage?: string;
 }
 
 /**
@@ -117,12 +120,14 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
       onAssetRemoved,
       hideModelChangeMessage = false,
       responseCallback,
-      logLevelActivity,
       hasInstructionsDrawer,
       lessonId,
       disabledState,
       disableSendingMessages,
       renderLastMessagePostText,
+      initialWelcomeMessage,
+      sendDisabled = false,
+      onMessageSent,
     },
     ref
   ) => {
@@ -222,6 +227,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
             isOwnHistory: true,
             channelId,
             lessonId,
+            initialWelcomeMessage: disabled ? undefined : initialWelcomeMessage,
           })
         );
       }
@@ -232,6 +238,8 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
       selectedStudent,
       channelId,
       lessonId,
+      initialWelcomeMessage,
+      disabled,
     ]);
 
     useEffect(() => {
@@ -427,11 +435,12 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
               hasStarterAssets={hasStarterAssets}
               buildAssetUrl={buildAssetUrlValue}
               onAssetUploaded={onAssetUploaded}
-              logLevelActivity={logLevelActivity}
               uploadDisabled={uploadDisabled}
               currentLevelId={currentLevelId}
               lessonId={lessonId}
               chatDisabled={disabled || disableSendingMessages}
+              sendDisabled={sendDisabled}
+              onMessageSent={onMessageSent}
             />
           )}
         </div>

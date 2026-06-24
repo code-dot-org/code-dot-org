@@ -7,10 +7,10 @@ import {
 } from '@cdo/apps/lab2/types';
 
 import {LINE_RECONNECT_SNAP_RADIUS_PX} from '../constants';
-import {snapEdgeEndpointToHandle} from '../utils/handleSnap';
+import {attachEdgeEndpoint} from '../utils/handleSnap';
 import {
-  anchorHandleFlowPosition,
   attachEdgeToFreshAnchor,
+  findAnchorHandleSnap,
   resolveEdgeEndpoint,
 } from '../utils/lineAnchors';
 
@@ -18,6 +18,9 @@ interface DraggingAnchor {
   id: string;
   side: 'source' | 'target';
   startPosition: XYPosition;
+  currentPosition: XYPosition;
+  // Handle this anchor most recently snapped onto, if it is currently snapped.
+  snapTarget: {nodeId: string; handleId: string | null} | null;
 }
 
 interface PendingDetach {
@@ -43,6 +46,7 @@ interface UseLineEdgeDragOptions {
   ) => void;
   screenToFlowPosition: (position: XYPosition) => XYPosition;
   flowToScreenPosition: (position: XYPosition) => XYPosition;
+  pushSnapshot: () => void;
 }
 
 // Dragging the body of a line edge moves the line as a whole. Free
@@ -56,6 +60,7 @@ export function useLineEdgeDrag({
   setEdges,
   screenToFlowPosition,
   flowToScreenPosition,
+  pushSnapshot,
 }: UseLineEdgeDragOptions) {
   const {getNode} = useReactFlow<
     SketchlabReactFlowNode,
@@ -69,6 +74,12 @@ export function useLineEdgeDrag({
       const dragState = draggingLineEdgeRef.current;
       if (!dragState) {
         return;
+      }
+
+      // Push the undo snapshot on the first move, before any mutation, so
+      // a bare click on the line doesn't create a history entry.
+      if (!dragState.hasMoved) {
+        pushSnapshot();
       }
 
       // On detach, create fresh anchors at any attached endpoint
@@ -87,6 +98,8 @@ export function useLineEdgeDrag({
             id: anchor.id,
             side: pending.side,
             startPosition: {...anchor.position},
+            currentPosition: {...anchor.position},
+            snapTarget: null,
           });
         });
         setNodes(currentNodes => [...currentNodes, ...newAnchors]);
@@ -111,25 +124,46 @@ export function useLineEdgeDrag({
       const deltaX = currentPointer.x - dragState.startPointer.x;
       const deltaY = currentPointer.y - dragState.startPointer.y;
 
+      // Snap each dragging anchor onto a nearby handle, falling back to the raw
+      // pointer-following position when nothing is close, and remember the
+      // handle so stop can attach to exactly what was previewed.
+      dragState.anchors.forEach(anchor => {
+        const rawPosition = {
+          x: anchor.startPosition.x + deltaX,
+          y: anchor.startPosition.y + deltaY,
+        };
+        const snap = findAnchorHandleSnap({
+          anchorPosition: rawPosition,
+          role: anchor.side,
+          excludeNodeIds: [anchor.id],
+          radiusPx: LINE_RECONNECT_SNAP_RADIUS_PX,
+          flowToScreenPosition,
+          screenToFlowPosition,
+        });
+        anchor.snapTarget = snap
+          ? {nodeId: snap.nodeId, handleId: snap.handleId}
+          : null;
+        anchor.currentPosition = snap ? snap.position : rawPosition;
+      });
+
       setNodes(currentNodes =>
         currentNodes.map(node => {
           const draggingAnchor = dragState.anchors.find(
             anchor => anchor.id === node.id
           );
-          if (!draggingAnchor) {
-            return node;
-          }
-          return {
-            ...node,
-            position: {
-              x: draggingAnchor.startPosition.x + deltaX,
-              y: draggingAnchor.startPosition.y + deltaY,
-            },
-          };
+          return draggingAnchor
+            ? {...node, position: draggingAnchor.currentPosition}
+            : node;
         })
       );
     },
-    [screenToFlowPosition, setNodes, setEdges]
+    [
+      screenToFlowPosition,
+      flowToScreenPosition,
+      setNodes,
+      setEdges,
+      pushSnapshot,
+    ]
   );
 
   const stopLineEdgeDrag = useCallback(
@@ -140,47 +174,34 @@ export function useLineEdgeDrag({
       window.removeEventListener('mousemove', handleLineEdgeMouseMove);
       window.removeEventListener('mouseup', stopLineEdgeDrag);
 
-      // For each anchor that moved during the drag, check
-      // whether its handle ended up close enough to a real-node handle to
-      // attach, and if so, attach it.
-      if (!dragState || !dragState.hasMoved || !event) {
+      // Attach any anchor that ended the drag snapped onto a real-node handle,
+      // committing the handle the move already found.
+      if (!dragState || !dragState.hasMoved) {
         return;
       }
-      const finalPointer = screenToFlowPosition({
-        x: event.clientX,
-        y: event.clientY,
-      });
-      const deltaX = finalPointer.x - dragState.startPointer.x;
-      const deltaY = finalPointer.y - dragState.startPointer.y;
-
       dragState.anchors.forEach(anchor => {
-        const finalPosition: XYPosition = {
-          x: anchor.startPosition.x + deltaX,
-          y: anchor.startPosition.y + deltaY,
-        };
-        snapEdgeEndpointToHandle({
+        if (!anchor.snapTarget) {
+          return;
+        }
+        attachEdgeEndpoint({
           edgeId: dragState.edgeId,
-          excludeNodeId: anchor.id,
           side: anchor.side,
-          screenPoint: flowToScreenPosition(
-            anchorHandleFlowPosition(finalPosition, anchor.side)
-          ),
-          radiusPx: LINE_RECONNECT_SNAP_RADIUS_PX,
+          nodeId: anchor.snapTarget.nodeId,
+          handleId: anchor.snapTarget.handleId,
           setEdges,
         });
       });
     },
-    [
-      handleLineEdgeMouseMove,
-      screenToFlowPosition,
-      flowToScreenPosition,
-      setEdges,
-    ]
+    [handleLineEdgeMouseMove, setEdges]
   );
 
   const handleEdgeMouseDown = useCallback(
     (event: React.MouseEvent, edge: SketchlabReactFlowEdge) => {
       if (readOnly || event.button !== 0) {
+        return;
+      }
+      // Grouped lines are not movable individually.
+      if (getNode(edge.source)?.parentId || getNode(edge.target)?.parentId) {
         return;
       }
 
@@ -202,6 +223,8 @@ export function useLineEdgeDrag({
             id: endpoint.node.id,
             side,
             startPosition: {...endpoint.node.position},
+            currentPosition: {...endpoint.node.position},
+            snapTarget: null,
           });
         } else {
           pendingDetaches.push({side, flowPosition: endpoint.flowPosition});

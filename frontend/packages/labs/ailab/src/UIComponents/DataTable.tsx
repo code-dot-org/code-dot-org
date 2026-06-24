@@ -1,24 +1,11 @@
 /* React component to handle displaying imported data. */
-import {connect} from 'react-redux';
-import type {Dispatch} from 'redux';
-
 import {styles} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
-import type {RootState} from '../redux';
+import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
 import {getTableData, setCurrentColumn, setHighlightColumn} from '../redux';
-import type {DataRow} from '../types';
 
 interface DataTableProps {
-  currentPanel: string;
-  data: DataRow[];
-  datasetId: string;
-  labelColumn: string;
-  selectedFeatures: string[];
-  setCurrentColumn: (column?: string) => void;
-  setHighlightColumn: (column?: string) => void;
-  currentColumn?: string;
-  highlightColumn?: string;
   reducedColumns?: boolean;
   singleRow?: number;
   startingRow?: number;
@@ -28,21 +15,29 @@ interface DataTableProps {
 }
 
 const DataTable = ({
-  currentPanel,
-  data,
-  datasetId,
-  labelColumn,
-  selectedFeatures,
-  setCurrentColumn: setCurrentColumnProp,
-  setHighlightColumn: setHighlightColumnProp,
-  currentColumn,
-  highlightColumn,
   reducedColumns,
   singleRow,
   startingRow,
   noLabel,
   hideLabel,
+  useResultsData,
 }: DataTableProps) => {
+  const dispatch = useAppDispatch();
+  const data = useAppSelector(
+    state => getTableData(state, !!useResultsData),
+    deepEqual,
+  );
+  const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
+  const labelColumn = useAppSelector(state => state.labelColumn || 'unknown');
+  const selectedFeatures = useAppSelector(state => state.selectedFeatures);
+  const currentColumn = useAppSelector(state => state.currentColumn);
+  const highlightColumn = useAppSelector(state => state.highlightColumn);
+  const currentPanel = useAppSelector(state => state.currentPanel);
+
+  const setCurrentColumnProp = (column: string | undefined) =>
+    dispatch(setCurrentColumn(column as string));
+  const setHighlightColumnProp = (column: string | undefined) =>
+    dispatch(setHighlightColumn(column as string));
   const getColumnHeaderStyle = (key: string) => {
     let style;
 
@@ -84,19 +79,12 @@ const DataTable = ({
       return [];
     }
 
+    const columns = Object.keys(data[0]);
     if (reducedColumns) {
-      return Object.keys(data[0])
-        .filter(key => {
-          return (
-            (!noLabel && labelColumn === key) || selectedFeatures.includes(key)
-          );
-        })
-        .sort(key1 => {
-          return labelColumn === key1 ? 1 : -1;
-        });
+      const selected = columns.filter(key => selectedFeatures.includes(key));
+      return noLabel ? selected : [...selected, labelColumn];
     }
-
-    return Object.keys(data[0]);
+    return columns;
   };
 
   const getRows = () => {
@@ -179,22 +167,4 @@ const DataTable = ({
   );
 };
 
-export default connect(
-  (state: RootState, props: {useResultsData?: boolean}) => ({
-    data: getTableData(state, !!props.useResultsData),
-    datasetId: state.metadata?.name || 'unknown',
-    labelColumn: state.labelColumn || 'unknown',
-    selectedFeatures: state.selectedFeatures,
-    currentColumn: state.currentColumn,
-    highlightColumn: state.highlightColumn,
-    currentPanel: state.currentPanel,
-  }),
-  (dispatch: Dispatch) => ({
-    setCurrentColumn(column: string | undefined) {
-      dispatch(setCurrentColumn(column as string));
-    },
-    setHighlightColumn(column: string | undefined) {
-      dispatch(setHighlightColumn(column as string));
-    },
-  }),
-)(DataTable);
+export default DataTable;

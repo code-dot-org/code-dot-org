@@ -20,7 +20,6 @@ import React, {useEffect, useMemo} from 'react';
 import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import {ChatAsset} from '@cdo/apps/aichat/types/assets';
-import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
 import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
@@ -52,14 +51,15 @@ type CodebridgeProps = {
   hiddenContextCallback?: () => Promise<string>;
   aiTutorMultimodalEnabled?: boolean;
   aiTutorChatButtonData?: ChatButtonData[];
-  aiTutorContextHelper?: AiTutorContextHelper<object>;
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   tutorVideos?: JsonVideoFileMetadata[];
   secondaryBackpackAppNames?: AppName[];
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
   onAssetRemoved?: (asset: ChatAsset) => void;
+  aiTutorInitialWelcomeMessage?: string;
   allowMultipleValidationFiles?: boolean;
+  enableUserAddedSelectionContext?: boolean;
 };
 
 export const Codebridge = React.memo(
@@ -75,14 +75,15 @@ export const Codebridge = React.memo(
     hiddenContextCallback,
     aiTutorMultimodalEnabled,
     aiTutorChatButtonData,
-    aiTutorContextHelper,
     aiTutorSystemPrompt,
     aiTutorResponseSchemaSettings,
     tutorVideos,
     secondaryBackpackAppNames,
     onAssetUploaded,
     onAssetRemoved,
+    aiTutorInitialWelcomeMessage,
     allowMultipleValidationFiles,
+    enableUserAddedSelectionContext = false,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
     const isWidgetView = !!levelProperties.widgetView;
@@ -161,12 +162,12 @@ export const Codebridge = React.memo(
       if (!currentLayout) {
         currentLayout = appName === 'pythonlab' ? 'horizontal' : 'vertical';
       }
-      // Since 'horizontal' is an optional layout (not all labs have it),
-      // we need to add a fallback to 'vertical' to avoid type errors.
-      return (
-        config.layoutComponents[currentLayout] ||
-        config.layoutComponents.vertical
-      );
+      // A lab supplies at least one of horizontal/vertical but not necessarily
+      // both, so fall back to whichever it does provide. The config type
+      // guarantees one is present, but the dynamic key access can't prove it.
+      return (config.layoutComponents[currentLayout] ||
+        config.layoutComponents.vertical ||
+        config.layoutComponents.horizontal)!;
     }, [
       appName,
       config.activeLayout,
@@ -231,14 +232,15 @@ export const Codebridge = React.memo(
           onImageFlagged,
           aiTutorMultimodalEnabled,
           aiTutorChatButtonData,
-          aiTutorContextHelper,
           aiTutorResponseSchemaSettings,
           aiTutorSystemPrompt,
           tutorVideos,
           aiTutorDisabled,
           onAssetUploaded,
           onAssetRemoved,
+          aiTutorInitialWelcomeMessage,
           allowMultipleValidationFiles,
+          enableUserAddedSelectionContext,
         }}
       >
         <BackpackAPIContext.Provider value={backpackContext}>

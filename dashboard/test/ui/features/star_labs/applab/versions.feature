@@ -24,9 +24,9 @@ Scenario: Script Level Versions
 
   When I press "versions-header"
   And I wait until element "button:contains(Restore):eq(0)" is visible
-  And element "button.btn-info" is visible
+  And element "a:contains(View)" is visible
   And I make all links open in the current tab
-  And I click selector "button.btn-info:eq(0)" to load a new page
+  And I click selector "a:contains(View):eq(0)" to load a new page
   And I wait for the lab page to fully load
   Then ace editor code is equal to "// comment 1"
   And element "#workspace-header-span" contains text "View only"
@@ -67,7 +67,7 @@ Scenario: Project Load and Reload
   And I wait until element "div:contains(Latest Version)" is visible
 
   Then ".versionRow:nth-child(2) p" contains the saved text
-  And element ".versionRow:nth-child(2) .img-upload" contains text "Restore"
+  And element ".versionRow:nth-child(2) button:contains(Restore)" is visible
 
   And element "#showVersionsModal tr:contains(a minute ago):contains(Restore):eq(1)" is not visible
 
@@ -100,7 +100,7 @@ Scenario: Project Version Checkpoints
   # The version containing "comment A" is saved as a checkpoint, because the
   # project version interval time period had passed.
   Then ".versionRow:nth-child(2) p" contains the saved text
-  And element ".versionRow:nth-child(2) .img-upload" contains text "Restore"
+  And element ".versionRow:nth-child(2) button:contains(Restore)" is visible
 
 @no_mobile
 Scenario: Project page refreshes when other client adds a newer version

@@ -63,8 +63,8 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
     assert_equal 'email', preset[:login_type]
     assert_equal 'student', preset[:participant_type]
     assert_equal %w[9 10 11 12], preset[:grades]
-    assert_equal 'aif2-2025', preset[:unit_name]
-    assert_equal 'artificial-intelligence-foundations-2025', preset[:unit_group_name]
+    assert_equal 'aif2-v2-2025', preset[:unit_name]
+    assert_equal 'artificial-intelligence-foundations-2026', preset[:unit_group_name]
   end
 
   test 'get_preset uses allthethings curriculum names in test' do
@@ -105,8 +105,8 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
 
     assert_equal 'adhoc-high-unit', high_preset[:unit_name]
     assert_equal 'adhoc-high-course', high_preset[:unit_group_name]
-    assert_equal 'csd3-2024', middle_preset[:unit_name]
-    assert_equal 'csd-2024', middle_preset[:unit_group_name]
+    assert_equal 'csd2-2026', middle_preset[:unit_name]
+    assert_equal 'csd-2026', middle_preset[:unit_group_name]
   end
 
   test 'get_preset ignores malformed adhoc curriculum config' do
@@ -118,8 +118,8 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
 
     preset = Policies::DemoSections.get_preset(:high)
 
-    assert_equal 'aif2-2025', preset[:unit_name]
-    assert_equal 'artificial-intelligence-foundations-2025', preset[:unit_group_name]
+    assert_equal 'aif2-v2-2025', preset[:unit_name]
+    assert_equal 'artificial-intelligence-foundations-2026', preset[:unit_group_name]
   end
 
   test 'get_preset returns preset for each demo type' do
@@ -152,6 +152,7 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
     assert_equal 5, view[:avatar_emoji]
     assert_equal 'email', view[:login_type]
     assert_equal 'student', view[:participant_type]
+    assert_equal %w[9 10 11 12], view[:grades]
     assert_equal({name: 'allthethings', display_name: 'All the Things!'}, view[:unit])
     assert_equal(
       {name: 'original-allthethings-course', display_name: 'original-allthethings-course'},

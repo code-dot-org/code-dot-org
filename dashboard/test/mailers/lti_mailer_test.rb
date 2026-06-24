@@ -16,7 +16,7 @@ class LtiMailerTest < ActionMailer::TestCase
     end
 
     test 'lti_integration_confirmation - should have correct sender' do
-      assert_equal '"Code.org" <noreply@code.org>', @mail[:from].decoded
+      assert_equal 'CodeAI <noreply@code.org>', @mail[:from].decoded
       assert_equal ['noreply@code.org'], @mail.from
     end
 

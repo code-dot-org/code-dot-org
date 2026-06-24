@@ -1,0 +1,17 @@
+.trigger {
+  background: none;
+  border: 0;
+  cursor: zoom-in;
+  display: inline-block;
+  padding: 0;
+}
+
+.trigger:focus-visible {
+  outline: 2px solid currentcolor;
+  outline-offset: 2px;
+}
+
+.image {
+  height: auto;
+  max-width: 100%;
+}

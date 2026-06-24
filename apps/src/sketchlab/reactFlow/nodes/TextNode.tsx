@@ -1,29 +1,26 @@
-import {
-  NodeResizer,
-  useConnection,
-  useReactFlow,
-  type NodeProps,
-} from '@xyflow/react';
+import {NodeResizer, useReactFlow, type NodeProps} from '@xyflow/react';
 import classNames from 'classnames';
 import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 
 import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
-import {
-  useIsAnchorDragging,
-  usePushSnapshot,
-  useSketchLabReadOnly,
-} from '../context';
+import {usePushSnapshot, useSketchLabReadOnly} from '../context';
 import {
   fontSizePx,
   DEFAULT_TEXT_ALIGN,
 } from '../elementToolbars/toolbarPalettes';
+import {useConnectionHandleVisibility} from '../hooks/useConnectionHandleVisibility';
 import {TextNodeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
 
 import styles from './text-node.module.scss';
 
-function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
+function TextNode({
+  id,
+  data,
+  selected,
+  isConnectable,
+}: NodeProps<TextNodeType>) {
   const readOnly = useSketchLabReadOnly();
   const {updateNodeData} = useReactFlow();
   const pushSnapshot = usePushSnapshot();
@@ -31,10 +28,11 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
   const textRef = useRef<HTMLDivElement>(null);
   const textAtEditStart = useRef<string>('');
 
-  const connection = useConnection();
-  const isAnchorDragging = useIsAnchorDragging();
+  const {showHandles, hoverHandlers} = useConnectionHandleVisibility(
+    selected,
+    isConnectable
+  );
   const {text} = data;
-  const showHandles = selected || isAnchorDragging || connection.inProgress;
 
   const textStyle: React.CSSProperties = useMemo(() => {
     const style: React.CSSProperties = {};
@@ -107,6 +105,7 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
       className={styles.textNode}
       aria-label={`Text: ${text}`}
       onDoubleClick={startEditing}
+      {...hoverHandlers}
     >
       <NodeResizer
         isVisible={selected && !data.locked}
@@ -132,7 +131,7 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
         </div>
       </div>
 
-      <ConnectionHandles visible={showHandles} />
+      <ConnectionHandles visible={showHandles} isConnectable={isConnectable} />
     </div>
   );
 }

@@ -1,42 +1,26 @@
 /* React component to handle displaying the model card. */
-import {connect} from 'react-redux';
-
 import {imageUrl} from '../assetPath';
 import {styles} from '../constants';
 import {getPercentCorrect} from '../helpers/accuracy';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {getDatasetDetails} from '../helpers/datasetDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
+import {deepEqual, shallowEqual, useAppSelector} from '../hooks';
 import I18n from '../i18n';
-import type {RootState} from '../redux';
 import {getLabelToSave, getFeaturesToSave} from '../redux';
-import type {
-  ModelCardColumn,
-  TrainedModelDetailsSave,
-  DatasetDetails,
-} from '../types';
 
 import Statement from './Statement';
 
-interface ModelCardProps {
-  trainedModelDetails: TrainedModelDetailsSave;
-  selectedFeatures: string[];
-  percentCorrect: string;
-  label: ModelCardColumn;
-  features: ModelCardColumn[];
-  datasetDetails: DatasetDetails;
-  datasetId: string;
-}
-
-const ModelCard = ({
-  trainedModelDetails,
-  selectedFeatures,
-  percentCorrect,
-  label,
-  features,
-  datasetDetails,
-  datasetId,
-}: ModelCardProps) => {
+const ModelCard = () => {
+  const trainedModelDetails = useAppSelector(
+    state => state.trainedModelDetails,
+  );
+  const selectedFeatures = useAppSelector(state => state.selectedFeatures);
+  const percentCorrect = useAppSelector(getPercentCorrect);
+  const label = useAppSelector(getLabelToSave, deepEqual);
+  const features = useAppSelector(getFeaturesToSave, deepEqual);
+  const datasetDetails = useAppSelector(getDatasetDetails, shallowEqual);
+  const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const localizedLabel = getLocalizedColumnName(datasetDetails.name, label.id);
   const localizedFeatures = selectedFeatures.map(feature =>
     getLocalizedColumnName(datasetDetails.name, feature),
@@ -181,12 +165,4 @@ const ModelCard = ({
   );
 };
 
-export default connect((state: RootState) => ({
-  trainedModelDetails: state.trainedModelDetails,
-  selectedFeatures: state.selectedFeatures,
-  percentCorrect: getPercentCorrect(state),
-  label: getLabelToSave(state),
-  features: getFeaturesToSave(state),
-  datasetDetails: getDatasetDetails(state),
-  datasetId: state.metadata?.name || 'unknown',
-}))(ModelCard);
+export default ModelCard;

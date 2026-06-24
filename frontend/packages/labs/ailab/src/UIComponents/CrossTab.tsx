@@ -4,23 +4,18 @@
   label values, with a heatmap style applied.
 */
 import {useCallback} from 'react';
-import {connect} from 'react-redux';
 
 import {styles} from '../constants';
 import {getLocalizedValue} from '../helpers/valueDetails';
+import {useAppSelector} from '../hooks';
 import I18n from '../i18n';
-import type {RootState} from '../redux';
 import {getCrossTabData} from '../selectors/visualizationSelectors';
-import type {CrossTabData} from '../types';
 
 import ScrollableContent from './ScrollableContent';
 
-interface CrossTabProps {
-  crossTabData: CrossTabData | null;
-  datasetId: string;
-}
-
-const CrossTab = ({crossTabData, datasetId}: CrossTabProps) => {
+const CrossTab = () => {
+  const crossTabData = useAppSelector(getCrossTabData);
+  const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const getCellStyle = useCallback((percent: number) => {
     return {
       ...(styles as Record<string, React.CSSProperties>)[
@@ -139,7 +134,4 @@ const CrossTab = ({crossTabData, datasetId}: CrossTabProps) => {
   );
 };
 
-export default connect((state: RootState) => ({
-  crossTabData: getCrossTabData(state),
-  datasetId: state.metadata?.name || 'unknown',
-}))(CrossTab);
+export default CrossTab;

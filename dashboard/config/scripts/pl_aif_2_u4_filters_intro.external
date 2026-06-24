@@ -9,7 +9,7 @@ When you scroll through a feed (videos, posts, news, shopping), you’re not see
 
 Sometimes those filters are helpful. Sometimes they can hide information in ways you don’t notice.
 
----
+
 ## Scenario: The Feed You See
 
 Imagine two teachers, Ms. Rivera and Mr. Chen, open the same app during lunch to look for classroom ideas about AI.
@@ -56,7 +56,7 @@ They type the same search: “AI projects for beginners” …but their feeds lo
 
 ## Discuss: What do filters change?
 
-#### Take a moment to compare the two feeds.
+**Take a moment to compare the two feeds.**
 
 <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:12px;margin:20px 0;">
 
@@ -87,27 +87,8 @@ They type the same search: “AI projects for beginners” …but their feeds lo
   </div>
 </details>
 
-<div style="background-color:#B7E0E5; border-radius:10px; padding:14px; margin:18px auto; max-width:85%; box-sizing:border-box;"> <p style="font-size:14pt; margin:0; line-height:130%;">💡 <strong>Key idea:</strong> Filters can shape what you learn, what you believe is “normal,” and what options you think exist.</p> </div>
+<div style="background-color:#e4e2f8; border-radius:10px; padding:14px; margin:18px auto; max-width:85%; box-sizing:border-box;"> <p style="font-size:14pt; margin:0; line-height:130%;">💡 <strong>Key idea:</strong> Filters can shape what you learn, what you believe is “normal,” and what options you think exist.</p> </div>
 
 
----
 
-## Terms to Know
-
-<div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:center; margin-top:10px;"> <div style="background:#e4d7f0; border-radius:12px; padding:14px; width:360px; box-sizing:border-box;"> <div style="font-size:14pt; font-weight:bold; margin-bottom:6px;">🔧 Active filter</div> <div style="font-size:12.5pt; line-height:140%;"> An <strong>active filter</strong> is the current set of rules being applied to a set of data and <strong>clearly shown to the user</strong>.<br><br> It explains how the data is being limited <em>right now</em>. </div> <div style="margin-top:10px; background:#ffffff; border-radius:10px; padding:10px; font-size:12pt;"> <strong>Example:</strong> “Showing posts from: <em>People you follow</em>” + “Topic: <em>Education</em>” + “Time: <em>Last 7 days</em>” </div> </div> <div style="background:#f9cfcf; border-radius:12px; padding:14px; width:360px; box-sizing:border-box;"> <div style="font-size:14pt; font-weight:bold; margin-bottom:6px;">🫧 Filter bubble</div> <div style="font-size:12.5pt; line-height:140%;"> A <strong>filter bubble</strong> is when algorithms mostly show you content that matches what you already like or agree with, and hide other viewpoints or topics—often <strong>without you noticing</strong>. </div> <div style="margin-top:10px; background:#ffffff; border-radius:10px; padding:10px; font-size:12pt;"> <strong>Example:</strong> You keep seeing “AI is amazing!” posts and rarely see “AI has risks!” posts (or vice versa). </div> </div> </div>
-
----
-
-## Transparency Check: What would you want to see?
-
-Many platforms apply filters quietly. But designers can make filters more transparent.
-Below are two interface styles. One makes filtering visible. One does not.
-
-<div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center; margin-top:10px;"> <div style="background:#ffffff; border:1px solid #ddd; border-radius:12px; padding:14px; width:340px;"> <div style="font-size:12pt; font-weight:bold; margin-bottom:8px;">Version 1: Transparent</div> <div style="background:#f2fbf4; border:1px solid #cdebd6; border-radius:10px; padding:10px; font-size:12pt; margin-bottom:10px;"> <strong>Active filters:</strong> Following • Education • Last 7 days<br> <span style="font-size:11pt;">(You can edit these)</span> </div> <div style="font-size:12pt; color:#444;">Users can tell what’s shaping the feed and adjust it.</div> </div> <div style="background:#ffffff; border:1px solid #ddd; border-radius:12px; padding:14px; width:340px;"> <div style="font-size:12pt; font-weight:bold; margin-bottom:8px;">Version 2: Hidden</div> <div style="background:#fff3f3; border:1px solid #f1c1c1; border-radius:10px; padding:10px; font-size:12pt; margin-bottom:10px;"> <strong>For you</strong><br> <span style="font-size:11pt;">(No explanation)</span> </div> <div style="font-size:12pt; color:#444;">Users may assume this is “what’s out there,” not what was selected.</div> </div> </div>
-
-👉 Which design feels more trustworthy? Why?
-
-## Next
-
-Let's see how filters work in JavaScript.
 MARKDOWN

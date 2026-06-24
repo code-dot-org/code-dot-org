@@ -2,11 +2,15 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {useReactFlow} from '@xyflow/react';
 import React, {useMemo} from 'react';
 
-import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
+import {
+  SketchlabReactFlowEdge,
+  SketchlabReactFlowNode,
+} from '@cdo/apps/lab2/types';
 
 import {DEFAULT_ROTATION} from '../constants';
 import {useClipboard} from '../context';
 import {ArrowHeadValue} from '../types';
+import {getStandaloneLineAnchorIds} from '../utils/lineAnchors';
 import {newBackZIndex, newFrontZIndex} from '../utils/stacking';
 
 import LockedNotice from './components/LockedNotice';
@@ -90,10 +94,10 @@ export default function LineEdgeToolbar({
     else value = 'none';
     return ARROW_HEAD_OPTIONS.find(option => option.value === value)!;
   }, [edge.markerStart, edge.markerEnd]);
-  const sourceNode = getNode(edge.source);
-  const targetNode = getNode(edge.target);
-  const isFullyDetachedLine =
-    sourceNode?.type === 'lineAnchor' && targetNode?.type === 'lineAnchor';
+  const isFullyDetachedLine = !!getStandaloneLineAnchorIds(
+    edge,
+    id => getNode(id) as SketchlabReactFlowNode | undefined
+  );
 
   const {duplicateLine} = useClipboard();
 

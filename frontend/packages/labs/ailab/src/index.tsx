@@ -6,6 +6,11 @@ import {TestDataLocations} from './constants';
 import {parseCSV} from './csvReaderWrapper';
 import type {Dataset} from './datasetManifest';
 import {getDatasets} from './datasetManifest';
+import {
+  type InstructionsKey,
+  setInstructionsKeyCallback,
+} from './helpers/instructions';
+import {setMetricsLogger} from './helpers/metrics';
 import I18n from './i18n';
 import {parseJSON} from './jsonReaderWrapper';
 import {
@@ -13,11 +18,10 @@ import {
   setCurrentPanel,
   setSelectedCSV,
   setSelectedJSON,
-  setInstructionsKeyCallback,
   setSaveStatus,
   setReserveLocation,
   setInstructionsDismissed,
-  setFirehoseMetricsLogger,
+  getTrainedModelDataToSave,
 } from './redux';
 import {store} from './store';
 import type {Mode, ModelDataToSave, SaveResponse} from './types';
@@ -36,7 +40,7 @@ let saveTrainedModel:
   | undefined = null;
 let onContinue: (() => void) | null | undefined = null;
 
-interface InitAllOptions {
+export interface InitAllOptions {
   i18n?: Record<string, string>;
   mode?: Mode;
   onContinue?: () => void;
@@ -46,7 +50,7 @@ interface InitAllOptions {
   ) => void;
   logMetric?: (eventName: string, details: Record<string, unknown>) => void;
   setInstructionsKey?: (
-    key: string,
+    key: InstructionsKey,
     options: {showOverlay?: boolean} | null,
   ) => void;
 }
@@ -61,11 +65,11 @@ export const initAll = function (options: InitAllOptions): void {
   const mode = options && options.mode;
   onContinue = options && options.onContinue;
   saveTrainedModel = options && options.saveTrainedModel;
-  if (options && options.logMetric) {
-    store.dispatch(setFirehoseMetricsLogger(options.logMetric));
+  if (options.logMetric) {
+    setMetricsLogger(options.logMetric);
   }
   if (options && options.setInstructionsKey) {
-    store.dispatch(setInstructionsKeyCallback(options.setInstructionsKey));
+    setInstructionsKeyCallback(options.setInstructionsKey);
   }
   store.dispatch(setMode(mode as Mode));
   processMode(mode);
@@ -123,7 +127,11 @@ const processMode = (mode: Mode | undefined): void => {
 };
 
 // Do the asynchronous save of a model.
-const startSaveTrainedModel = (dataToSave: ModelDataToSave): void => {
+// TODO: In the RTK migration, fold this into a thunk action so the payload is
+// composed from getState() in the thunk body and App can simply dispatch it,
+// rather than the store being reached into here.
+const startSaveTrainedModel = (): void => {
+  const dataToSave = getTrainedModelDataToSave(store.getState());
   store.dispatch(setSaveStatus('started'));
   saveTrainedModel!(dataToSave, (response: SaveResponse) => {
     store.dispatch(setSaveStatus(response.status, response.data));
@@ -135,3 +143,7 @@ const startSaveTrainedModel = (dataToSave: ModelDataToSave): void => {
     }
   });
 };
+
+// Export a few types.
+export {type SaveResponse, type ModelDataToSave} from './types';
+export {type InstructionsKey} from './helpers/instructions';

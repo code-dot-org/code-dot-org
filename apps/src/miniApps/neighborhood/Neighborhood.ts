@@ -3,6 +3,7 @@ import {tiles, MazeController} from '@code-dot-org/maze';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import * as timeoutList from '@cdo/apps/lib/util/timeoutList';
 import {LOOK_ID, SVG_ID} from '@cdo/apps/maze/constants';
+import MiniApp from '@cdo/apps/miniApps/MiniApp';
 
 import {ConsoleSignalType, NeighborhoodSignalType} from './constants';
 import NeighborhoodSpeedTracker from './NeighborhoodSpeedTracker';
@@ -20,7 +21,7 @@ const SIGNAL_CHECK_TIME = 200;
 // We are relying on old maze skins here, which are not typed.
 type SkinType = Record<string, unknown>;
 
-export default class Neighborhood {
+export default class Neighborhood extends MiniApp {
   private controller: typeof MazeController | null;
   private onOutputMessage: (message: string) => void;
   private onNewlineMessage: () => void;
@@ -39,6 +40,7 @@ export default class Neighborhood {
     setIsRunning: (isRunning: boolean) => void,
     onPartialOutputMessage: (message: string) => void
   ) {
+    super();
     this.controller = null;
     this.onOutputMessage = onOutputMessage;
     this.onNewlineMessage = onNewlineMessage;

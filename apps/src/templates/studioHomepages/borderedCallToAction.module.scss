@@ -1,8 +1,6 @@
-@import 'color';
-
 .outerBox {
-  background-color: $light_white;
-  border-color: $light_gray_200;
+  background-color: var(--background-neutral-primary);
+  border-color: var(--borders-neutral-primary);
   box-sizing: border-box;
   margin-bottom: 20px;
   padding: 1.25rem 1.5rem;

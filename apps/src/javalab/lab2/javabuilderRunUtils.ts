@@ -24,6 +24,10 @@ import {splitForLevelbuilderSave} from './sourceConverter';
 // Module-local cache so onStop can close the active connection.
 let activeConnection: JavabuilderConnection | null = null;
 
+// Monotonic run id. stopJavaCode and each new run bump it; a run
+// suspended in an await aborts when it wakes to find its id stale.
+let mostRecentRunId = 0;
+
 // Javabuilder explicitly sends newline messages,
 // so any other console output is written as a partial line
 // to avoid extra newlines.
@@ -42,8 +46,40 @@ export async function handleRunClick(
   dispatch: Dispatch<AnyAction>,
   levelId: number,
   csaViewMode: string,
-  progressManager: ProgressManager | null
+  progressManager: ProgressManager | null,
+  needsInitialSourcesSave: boolean
 ): Promise<void> {
+  const thisRunId = ++mostRecentRunId;
+
+  const state = getStore().getState();
+
+  // Levelbuilder edit modes (start / exemplar) and read-only viewers don't
+  // run from saved sources; they send the in-memory source as overrides
+  // (below), so there is nothing to save before connecting.
+  const inStartMode = getIsStartMode();
+  const useOverrideSources =
+    inStartMode ||
+    getAppOptionsEditingExemplar() ||
+    getAppOptionsViewingExemplar() ||
+    isReadOnlyWorkspace(state);
+
+  if (!useOverrideSources) {
+    // Flush the in-memory editor first so S3 reflects what the user sees before the
+    // WS connection opens. A brand-new project's start code has never been saved at all
+    // (saves normally begin with the first edit), so force a full save instead.
+    const projectManager = Lab2Registry.getInstance().getProjectManager();
+    if (needsInitialSourcesSave && state.lab2Project.projectSources) {
+      await projectManager?.save(
+        state.lab2Project.projectSources,
+        /* forceSave */ true,
+        /* forceNewVersion */ false,
+        /* skipSourcesChangedCheck */ true
+      );
+    } else {
+      await projectManager?.flushSave();
+    }
+  }
+
   let csrfToken: string | null = null;
   try {
     csrfToken = await getAuthenticityToken();
@@ -51,19 +87,17 @@ export async function handleRunClick(
     csrfToken = null;
   }
 
-  const state = getStore().getState();
-
-  if (csaViewMode === 'theater') {
-    // Theater is not yet supported.
-    writeToConsole(
-      `[JAVALAB] csaViewMode='${csaViewMode}' is not yet supported in Java Lab 2; running as console.`
-    );
-    writeNewline();
+  // The user may have stopped, or started a newer run, while this one was
+  // suspended on the save or token fetch.
+  if (thisRunId !== mostRecentRunId) {
+    return;
   }
 
   const miniApp =
     csaViewMode === 'neighborhood'
       ? CodebridgeRegistry.getInstance().getNeighborhood()
+      : csaViewMode === 'theater'
+      ? CodebridgeRegistry.getInstance().getTheater()
       : null;
 
   // Only claim a mini-app mode when the instance is actually present;
@@ -81,15 +115,8 @@ export async function handleRunClick(
     .getProjectManager()
     ?.getChannelId();
 
-  // Levelbuilder edit modes (start / exemplar) and any read-only viewer
-  // don't have a channel id. Send the in-memory source as override sources instead.
+  // Send the in-memory source as override sources for the no-channel modes.
   // Strip validation files: they aren't part of the program being executed.
-  const inStartMode = getIsStartMode();
-  const useOverrideSources =
-    inStartMode ||
-    getAppOptionsEditingExemplar() ||
-    getAppOptionsViewingExemplar() ||
-    isReadOnlyWorkspace(state);
   const split = useOverrideSources
     ? splitForLevelbuilderSave(
         state.lab2Project.projectSources?.source as MultiFileSource | undefined
@@ -127,7 +154,7 @@ export async function handleRunClick(
       resolve();
     };
 
-    // TODO: Theater, Captcha handling.
+    // TODO: Captcha handling.
     activeConnection = new JavabuilderConnection(
       writeToConsole,
       miniApp,
@@ -158,13 +185,8 @@ export async function handleRunClick(
       activeConnection.connectJavabuilder();
     }
 
-    // Console runs resolve this promise via finishRun when the program exits.
-    // Neighborhood runs don't: the connection delegates clean exit to
-    // miniApp.onClose() (never calling finishRun), run/stop state is
-    // derived from lab2System.isRunning. Nothing awaits true completion here,
-    // so resolve now rather than leaving the promise pending forever.
-    // Validation runs are the exception: their output goes to the console,
-    // not the mini-app, so we let finishRun fire on exit as usual.
+    // Non-test run mini apps don't call finishRun() when the program completes,
+    // so we resolve now rather than leaving the promise pending.
     if (miniApp && !runTests) {
       finishRun();
     }
@@ -172,9 +194,13 @@ export async function handleRunClick(
 }
 
 export function stopJavaCode(): void {
-  // If the neighborhood exists, stop it. This prevents extra animation
-  // from occurring after stop.
+  // Invalidate any run that has no connection yet (still saving or fetching
+  // the token); handleRunClick rechecks its captured id before connecting.
+  mostRecentRunId++;
+  // Stop the active mini-app so its output doesn't keep playing after stop:
+  // the neighborhood's animation, the theater's image/audio.
   CodebridgeRegistry.getInstance().getNeighborhood()?.onStop();
+  CodebridgeRegistry.getInstance().getTheater()?.onStop();
   if (activeConnection) {
     activeConnection.closeConnection();
     activeConnection = null;

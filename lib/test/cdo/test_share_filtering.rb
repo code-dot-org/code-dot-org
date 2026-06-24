@@ -94,13 +94,16 @@ class ShareFilteringTest < Minitest::Test
     assert_equal '123 Post Road Westport CT', Geocoder.extract_address_candidate('Hi I live at 123 Post Road Westport CT')
     assert_equal '123, Post Road, Westport, CT', Geocoder.extract_address_candidate('Hi I live at 123, Post Road, Westport, CT')
 
+    # Semicolon and other non-address characters, which can be geocoder delimiters, are stripped.
+    assert_equal '00,100 player.setAnimation fly bot player.scale 0.8', Geocoder.extract_address_candidate('00,100; player.setAnimation(fly_bot); player.scale = 0.8')
+
     # Caps at MAX_ADDRESS_WORDS words.
     long_text = "Hi 12 #{(['word'] * 20).join(' ')}"
     candidate = Geocoder.extract_address_candidate(long_text)
     assert_equal Geocoder::MAX_ADDRESS_WORDS, candidate.split.length
   end
 
-  def test_find_share_failure_with_street_address
+  def test_find_share_failure_temporarily_ignores_street_address
     Geocoder.
       stubs(:find_potential_street_address).
       returns('1600 Pennsylvania Ave NW, Washington, DC 20500')
@@ -109,23 +112,8 @@ class ShareFilteringTest < Minitest::Test
       'My Street Address',
       '1600 Pennsylvania Ave NW, Washington, DC 20500'
     )
-    assert_equal(
-      ShareFailure.new(
-        ShareFiltering::FailureType::ADDRESS,
-        '1600 Pennsylvania Ave NW, Washington, DC 20500'
-      ),
-      ShareFiltering.find_share_failure(program, 'en', 'playlab')
-    )
-
-    assert_equal(
-      ShareFailure.new(
-        ShareFiltering::FailureType::ADDRESS,
-        '1600 Pennsylvania Ave NW, Washington, DC 20500'
-      ),
-      assert_raises(PIIFilterException) do
-        ShareFiltering.find_share_failure(program, 'en', 'playlab', exceptions: true)
-      end.share_failure
-    )
+    assert_nil ShareFiltering.find_share_failure(program, 'en', 'playlab')
+    assert_nil ShareFiltering.find_share_failure(program, 'en', 'playlab', exceptions: true)
   end
 
   def test_find_share_failure_with_phone_number

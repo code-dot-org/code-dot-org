@@ -28,6 +28,25 @@
 require 'cdo/shared_constants'
 
 class Level < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    game_id: :public,
+    name: :public,
+    created_at: :public,
+    updated_at: :public,
+    level_num: :public,
+    ideal_level_source_id: :public,
+    user_id: :confidential,
+    properties: :public,
+    type: :public,
+    md5: :public,
+    published: :public,
+    notes: :public,
+    audit_log: :public,
+  )
+
   include SharedConstants
   include Levels::LevelsWithinLevels
 

@@ -1,0 +1,84 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-06-17T18:07:28.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Static Constants",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "encrypted_exemplar_sources": "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\nefZooFokuohmauoX2FH/XbHfg3GcGl9oRtCMSnkjQMoHQdHo4DogUbhMBGfZ\nj2LBapLUGMa+wOd/8UOTL32NFS/MgnoKiriNxRbIxWGEfahAbCwgD3yvNfIf\n2at20jG5Iz7sC1n+sOKmv6/so3CjBFPvrfDvt4ZlVQbKSppjF5fV5Qt0CGqO\nTPP7ZuzfC/skqIVk5abO01VvBe1bk+CCz6L7kovqv5r//WjJbZpBF9XWZD7f\nKgeJqoNt7eEOb98dFTR8i4VawX0DISgGzFBSfAc56GOP4w5DIpWC+6Aih7Gh\ndE8uZiFkWqlM1XEtLWPG2m0Zv5dRlHZzJqHB0951RSd1l2UukjDXK1Cm8OqI\nbg8j/H2ZSJU1ggU3kUUd8HsVfJpIJ49CDfSpl7nidgphN3FO2lJ8I3gXRYu0\nJnBwiWYpr1BM057EYBD4LXDQ+QVZa5p8abTfgkPAfOGIQzXqCGyA2UPmA9Qk\noiRR9n4MV6KmrsKAQiISAElq2K/SVV3R/CKFtxRJKXKAjSiLw7eVfB3KUC4v\nr/QQU6tlWQ1RThdrMuDlFVJ1FRbJwa2cjHDQavQoofsxn3yMVjdhTS7jHXC7\nn5ZCpj5OO9SRk+3vIP6Dn1dRKgyv6RFMojLx+c0muvNdp4lJEZfBVgiYzW9M\nw5fXAbj9ce5MtCm1urpGjbznPECSZQZpn5jAMV3nrC+9KF8dnrQ04Py1t+4w\nBIkuutCA+Ri+g2TMB55PvUOF+Tg/n+R0E0sgQ3hg7tidvkmPl8ZiGFJSEsLH\nLsPznJxzUqaPbLLZ5XIAPnIqqZVTmgpaA/Ojj9Qw3vPEcSqA9JykC5UNROL9\nXbS5UEeedRSMMYYZp7YanJB3kkXtKRnl49yd+lr3Ly1ipPNx61p9bQ4yn8xH\nRZFUA8oo7y0xBoQBSvhabUFWEVeqBq/MZf6fjHmNyzgKVyzU7egZt4oijD93\nAhlRAjZz5IP5zalslNRn/JhMLJaO5s4MH6VaXfsA1RH+EpaXS7NPdznksnJW\nlspmeJC7IXVfJywkorV/FfhKrDMTDplPzalVPP7TW7h969J5X6HboLvK+YK+\nX7nnqS+uLv8FhK3/08dAErsL5iLZW+FNNtZXP+mJEFdwJA8tPs7B+nQOgSMF\nuZnwz83dRZhxpjVko4vO1ZoI0x2z+CtcZMXtzIgHSap/2hEm4eIs7d9xTNdc\n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\nwLZPgVVTAHjyreqa18OttcIwY7o=\n",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\">\n    <title>Population Tracker</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <div class=\"container\">\n      \n      <div id=\"header-section\">\n        <h1 id=\"title-section\">Title</h1>\n        <p id=\"date-section\">Date</p>\n      </div>\n      \n      <div class=\"controls\">\n        <div id=\"status\">Status: </div>\n        <button id=\"fetch-btn\">Get Live Census</button>\n      </div>\n\n      <div id=\"results\"></div>\n      \n    </div>\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap');\n\nbody {\n  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;\n  /* Fun, bright lavender-pink gradient background */\n  background-color: #f3e8ff;\n  background-image: \n    radial-gradient(at 0% 0%, #fee2e2 0px, transparent 50%),\n    radial-gradient(at 100% 100%, #e0e7ff 0px, transparent 50%);\n  background-attachment: fixed;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  min-height: 100vh;\n  margin: 0;\n  padding: 20px;\n  box-sizing: border-box;\n}\n\n.container {\n  background: #ffffff;\n  width: 100%;\n  max-width: 420px;\n  padding: 32px;\n  border-radius: 24px;\n  /* Bold, crisp shadows and borders for that modern pop look */\n  border: 3px solid #1e1b4b;\n  box-shadow: 8px 8px 0px 0px #1e1b4b;\n}\n\n/* Header Section */\n#header-section {\n  margin-bottom: 24px;\n}\n\n#title-section {\n  font-size: 2.25rem;\n  font-weight: 800;\n  letter-spacing: -1px;\n  color: #1e1b4b; /* Ultra-deep indigo for crisp contrast */\n  margin: 0 0 4px 0;\n}\n\n#date-section {\n  color: #4f46e5; /* Electric Indigo */\n  font-size: 0.95rem;\n  font-weight: 700;\n  margin: 0;\n  text-transform: uppercase;\n  letter-spacing: 0.5px;\n}\n\n/* Controls & Status */\n.controls {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  margin-bottom: 24px;\n}\n\n#status {\n  background: #f1f5f9;\n  border: 2px solid #1e1b4b;\n  color: #0f172a;\n  padding: 12px 16px;\n  border-radius: 12px;\n  font-weight: 700;\n  font-size: 0.9rem;\n}\n\n/* Cyber-Lime High Contrast Button */\nbutton {\n  background: #ccff00; /* Ultra-bright neon lime */\n  color: #1e1b4b;\n  border: 2px solid #1e1b4b;\n  padding: 16px;\n  width: 100%;\n  border-radius: 14px;\n  font-size: 1rem;\n  font-weight: 800;\n  cursor: pointer;\n  letter-spacing: 0.5px;\n  transition: all 0.15s ease;\n  box-shadow: 4px 4px 0px 0px #1e1b4b;\n}\n\nbutton:hover {\n  transform: translate(-2px, -2px);\n  box-shadow: 6px 6px 0px 0px #1e1b4b;\n  background: #d8ff33;\n}\n\nbutton:active {\n  transform: translate(2px, 2px);\n  box-shadow: 2px 2px 0px 0px #1e1b4b;\n}\n\n/* Results Section */\n#results {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  max-height: 300px;\n  overflow-y: auto;\n  padding-right: 4px;\n}\n\n/* Custom Scrollbar */\n#results::-webkit-scrollbar {\n  width: 8px;\n}\n#results::-webkit-scrollbar-thumb {\n  background: #cbd5e1;\n  border-radius: 10px;\n  border: 2px solid #ffffff;\n}\n\n/* Visual Cues for Data Cards */\n.result-card {\n  padding: 16px;\n  border-radius: 14px;\n  background: #ffffff;\n  border: 2px solid #1e1b4b;\n  color: #1e1b4b;\n  font-weight: 700;\n  transition: transform 0.15s ease;\n}\n\n.result-card:hover {\n  transform: scale(1.02);\n}\n\n/* Bright, clear indicators that pass contrast checks easily */\n.live-data { \n  background: #ecfdf5; /* Soft emerald tint */\n  border-left: 8px solid #059669; /* Bold emerald border */\n} \n\n.backup-data { \n  background: #fffbeb; /* Soft amber tint */\n  border-left: 8px solid #d97706; /* Bold amber border */\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const apiEndpoint = \"https://restcountries.com/v3.1/all?fields=name,population\";\nconst outputElement = document.getElementById(\"results\");\nconst statusElement = document.getElementById(\"status\");\nconst headerElement = document.getElementById(\"header-section\");\nconst title = document.getElementById(\"title-section\");\nconst date = document.getElementById(\"date-section\");\n\n// --- TASK 1: STATIC CONSTANTS ---\n// A Data Engineer always sets up the app shell first.\n// This data loads instantly — no internet needed.\n// Code below defines the app's structure and renders it instantly.\n\n\n\n// --- TASK 2: BACKUP DATA ---\n// A Data Engineer always has a safety net.\n// This local data keeps the app running if the live source fails.\n// Code below stores local data that matches the API structure.\n\n\n\n// --- TASK 3: CONNECT TO LIVE DATA ---\n// A Data Engineer always plans for failure.\n// Try to fetch live data first — fall back to local data if it fails.\n// Code below fetches live country data and handles failure gracefully.",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "3"
+      ]
+    },
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "buildJavaScript",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-17T18:07:28.449+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson10-level5-test_2025-pilot_2025-pilo_2026\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson10-level5-test_2025-pilot_2025-pilo_2026\"},{\"changed_at\":\"2026-06-17 18:08:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-17 18:23:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-17 18:28:29 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

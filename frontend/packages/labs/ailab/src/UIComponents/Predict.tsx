@@ -1,15 +1,13 @@
 /* React component to handle predicting and displaying predictions. */
 import type React from 'react';
-import {connect} from 'react-redux';
-import type {Dispatch} from 'redux';
 
 import {imageUrl} from '../assetPath';
 import {styles} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {getConvertedPredictedLabel} from '../helpers/valueConversion';
 import {getLocalizedValue} from '../helpers/valueDetails';
+import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
-import type {RootState} from '../redux';
 import {setTestData, getPredictAvailable} from '../redux';
 import {
   getSelectedCategoricalFeatures,
@@ -22,36 +20,27 @@ import train from '../train';
 
 import ScrollableContent from './ScrollableContent';
 
-interface PredictProps {
-  labelColumn: string;
-  selectedCategoricalFeatures: string[];
-  selectedNumericalFeatures: string[];
-  uniqueOptionsByColumn: Record<string, string[]>;
-  testData: Record<string, string | number>;
-  setTestData: (feature: string, value: string | number) => void;
-  predictedLabel: string | number;
-  getPredictAvailable: boolean;
-  extremaByColumn: Record<string, {min: number; max: number}>;
-  datasetId: string;
-}
+const Predict = () => {
+  const dispatch = useAppDispatch();
+  const testData = useAppSelector(state => state.testData);
+  const predictedLabel = useAppSelector(getConvertedPredictedLabel);
+  const labelColumn = useAppSelector(state => state.labelColumn || 'unknown');
+  const selectedNumericalFeatures = useAppSelector(
+    getSelectedNumericalFeatures,
+  );
+  const selectedCategoricalFeatures = useAppSelector(
+    getSelectedCategoricalFeatures,
+  );
+  const uniqueOptionsByColumn = useAppSelector(getUniqueOptionsByColumn);
+  const predictAvailable = useAppSelector(getPredictAvailable);
+  const extremaByColumn = useAppSelector(getExtremaByColumn);
+  const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
 
-const Predict = ({
-  labelColumn,
-  selectedCategoricalFeatures,
-  selectedNumericalFeatures,
-  uniqueOptionsByColumn,
-  testData,
-  setTestData,
-  predictedLabel,
-  getPredictAvailable: predictAvailable,
-  extremaByColumn,
-  datasetId,
-}: PredictProps) => {
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
     feature: string,
   ) => {
-    setTestData(feature, event.target.value);
+    dispatch(setTestData(feature, event.target.value));
   };
 
   const onClickPredict = () => {
@@ -145,21 +134,4 @@ const Predict = ({
   );
 };
 
-export default connect(
-  (state: RootState) => ({
-    testData: state.testData,
-    predictedLabel: getConvertedPredictedLabel(state),
-    labelColumn: state.labelColumn || 'unknown',
-    selectedNumericalFeatures: getSelectedNumericalFeatures(state),
-    selectedCategoricalFeatures: getSelectedCategoricalFeatures(state),
-    uniqueOptionsByColumn: getUniqueOptionsByColumn(state),
-    getPredictAvailable: getPredictAvailable(state),
-    extremaByColumn: getExtremaByColumn(state),
-    datasetId: state.metadata?.name || 'unknown',
-  }),
-  (dispatch: Dispatch) => ({
-    setTestData(feature: string, value: string | number) {
-      dispatch(setTestData(feature, value));
-    },
-  }),
-)(Predict);
+export default Predict;

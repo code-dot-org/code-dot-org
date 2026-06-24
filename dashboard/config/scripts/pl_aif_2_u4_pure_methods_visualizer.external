@@ -32,6 +32,7 @@ When you run a function to filter that list, one of two things happens:
 > 2. Try to predict: will the original array change, or stay the same?
 > 3. Press **Run this code** and compare the original array to the result.
 
+
 <div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
   <iframe 
     src="https://amandadennard-dotcom.github.io/Unit4-pure-methods-vizualizer/array-state-visualizer.html"
@@ -50,19 +51,19 @@ When you run a function to filter that list, one of two things happens:
 ### **✅ What is a pure function?**
 </p>
 
-<div style="background:#f7f8fa; border-radius:12px; padding:16px; margin-top:18px; font-size:14pt; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<div style="background:#f7f8fa; border-radius:12px; padding:16px; margin-top:18px; font-size:12pt; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
 
 
-<p style= "font-size: 14pt";><b>A pure function:</b>
+<p style= "font-size: 12pt";><b>A pure function:</b>
 </p>
 
 <ul>
-<li style="font-size:14pt";>Always returns the same output for the same input</li>
-<li style="font-size:14pt";>Does not change anything outside itself</li>
-<li style="font-size:14pt";>Does not modify the original data it uses</li>
+<li style="font-size:12pt";>Always returns the same output for the same input</li>
+<li style="font-size:12pt";>Does not change anything outside itself</li>
+<li style="font-size:12pt";>Does not modify the original data it uses</li>
 </ul>
 
-<p style= "font-size:14pt":>
+<p style= "font-size:12pt":>
 In other words, when a pure function runs, the original array stays exactly the same.
 The function only computes and returns a <b>new value</b>.
 
@@ -72,18 +73,18 @@ The function only computes and returns a <b>new value</b>.
 
 ### **⚠️ What is a side effect?**
 
-<div style="background:#f7f8fa; border-radius:12px; padding:16px; margin-top:18px; font-size:14pt; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<div style="background:#f7f8fa; border-radius:12px; padding:16px; margin-top:18px; font-size:12pt; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
 
-<p style="font-size:14pt;"><b>A side effect:</b></p>
+<p style="font-size:12pt;"><b>A side effect:</b></p>
 
 <ul>
-  <li style="font-size:14pt;">Modifies an array that was passed in</li>
-  <li style="font-size:14pt;">Changes a global variable</li>
-  <li style="font-size:14pt;">Updates the screen</li>
-  <li style="font-size:14pt;">Logs to the console</li>
+  <li style="font-size:12pt;">Modifies an array that was passed in</li>
+  <li style="font-size:12pt;">Changes a global variable</li>
+  <li style="font-size:12pt;">Updates the screen</li>
+  <li style="font-size:12pt;">Logs to the console</li>
 </ul>
 
-<p style="font-size:14pt;">
+<p style="font-size:12pt;">
 Side effects can make code harder to predict because something changes somewhere else.
 </p>
 

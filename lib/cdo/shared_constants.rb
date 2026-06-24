@@ -18,6 +18,7 @@ module SharedConstants
   DEFAULT_LOCALE = Cdo::I18n::DEFAULT_LOCALE
   LOCALE_FALLBACKS = Cdo::I18n::LOCALE_FALLBACKS
   LOCALIZE_TO_I18N_LOCALES = Cdo::I18n::LOCALIZE_TO_I18N_LOCALES
+  GLOBAL_EDITION_DEFAULT_REGION = Cdo::GlobalEdition::DEFAULT_REGION
   GLOBAL_EDITION_EXCLUDED_PATHS = Cdo::GlobalEdition::EXCLUDED_PATHS.to_a
 
   # Used to communicate different types of levels.
@@ -778,6 +779,10 @@ module SharedConstants
     MATCH: 'match',
     SORT: 'sort',
     SCRAMBLE: 'scramble',
+  }.freeze
+
+  PRACTICE_PROBLEM_DELIVERY_CONTEXT = {
+    AI_TUTOR_LESSON_DEEP_DIVE: 'ai_tutor_lesson_deep_dive'
   }.freeze
 
   AI_TUTOR_TYPES = {

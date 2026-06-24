@@ -9,6 +9,7 @@ import {LanguageSupport} from '@codemirror/language';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import {ChatAsset} from '@cdo/apps/aichat/types/assets';
+import {sendStartedReportIfNotStarted} from '@cdo/apps/code-studio/progressRedux';
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {
@@ -27,6 +28,7 @@ import {
   TUTOR_MODE_TO_ANSWER_TYPE,
   WEBLAB2_EDITABLE_FILE_TYPES,
   WEBLAB2_SUPPORTED_FILE_TYPES,
+  WEBLAB2_WELCOME_CHAT_MESSAGE,
 } from './constants';
 import {AiTutorWebLab2ContextHelper} from './helpers/aiTutorContextHelper';
 import {generateAiTutorPrompt} from './helpers/aiTutorPromptGenerator';
@@ -180,8 +182,9 @@ const Weblab2View: React.FC<
   useEffect(() => {
     if (hasEdited) {
       logLevelActivity();
+      dispatch(sendStartedReportIfNotStarted(levelProperties.appName));
     }
-  }, [hasEdited, logLevelActivity]);
+  }, [hasEdited, logLevelActivity, dispatch, levelProperties.appName]);
 
   useEffect(() => {
     dispatch(setViewMode(levelProperties?.initialViewMode || ViewMode.SPLIT));
@@ -207,11 +210,12 @@ const Weblab2View: React.FC<
           aiTutorChatButtonData={[]}
           onAssetUploaded={onAssetUploaded}
           onAssetRemoved={onAssetRemoved}
-          aiTutorContextHelper={aiTutorHelper}
           aiTutorSystemPrompt={systemPrompt}
           aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
           secondaryBackpackAppNames={secondaryBackpackAppNames}
           tutorVideos={weblab2VideoFiles}
+          aiTutorInitialWelcomeMessage={WEBLAB2_WELCOME_CHAT_MESSAGE}
+          enableUserAddedSelectionContext={true}
         />
       )}
     </div>

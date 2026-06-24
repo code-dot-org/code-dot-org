@@ -131,6 +131,13 @@ module.exports = function (grunt) {
           dest: 'build/package/media/skins/ailab',
         },
         {
+          // @code-dot-org/ailab emits both images and datasets under dist/assets
+          expand: true,
+          cwd: 'node_modules/@code-dot-org/ailab/dist/assets',
+          src: ['**'],
+          dest: 'build/package/media/skins/ailab',
+        },
+        {
           // ml-playground images are emitted to dist/images, not dist/assets.
           expand: true,
           cwd: 'node_modules/@code-dot-org/ml-playground/dist',

@@ -33,6 +33,33 @@
 #
 
 class CourseOffering < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    key: :public,
+    display_name: :public,
+    created_at: :public,
+    updated_at: :public,
+    is_featured: :public,
+    assignable: :public,
+    curriculum_type: :public,
+    marketing_initiative: :public,
+    grade_levels: :public,
+    header: :public,
+    image: :public,
+    cs_topic: :public,
+    school_subject: :public,
+    device_compatibility: :public,
+    description: :public,
+    professional_learning_program: :public,
+    video: :public,
+    published_date: :public,
+    self_paced_pl_course_offering_id: :public,
+    ai_teaching_assistant_available: :public,
+    facilitator_course_permissions: :public,
+  )
+
   include Curriculum::SharedCourseConstants
   include Localizable
 
@@ -183,23 +210,30 @@ class CourseOffering < ApplicationRecord
     course_versions.any? {|cv| published_states.include?(cv.published_state)}
   end
 
+  # Associations walked while summarizing course offerings (see
+  # #summarize_for_assignment_dropdown and CourseVersion#summarize_for_assignment_dropdown).
+  # Eager-loading them here keeps that summarization from issuing a query per
+  # course version and per unit:
+  #   - content_root.course_version (+ its course_offering) feeds course_assignable?
+  #   - content_root.plc_course feeds stable?
+  #   - default_unit_group_units.script feeds supported_locale_codes
+  #   - default_units (+ their unit_group_units) feed the per-unit summary
+  COURSE_OFFERING_SUMMARY_INCLUDES = {
+    course_versions: {
+      content_root: [
+        :plc_course,
+        {course_version: :course_offering},
+        {default_unit_group_units: :script},
+        {default_units: :unit_group_units},
+      ]
+    }
+  }.freeze
+
   def self.all_course_offerings
     if should_cache?
-      @@course_offerings ||= CourseOffering.all.includes(
-        course_versions: {
-          content_root: {
-            default_unit_group_units: {}
-          }
-        }
-      )
+      @@course_offerings ||= CourseOffering.all.includes(COURSE_OFFERING_SUMMARY_INCLUDES)
     else
-      CourseOffering.all.includes(
-        course_versions: {
-          content_root: {
-            default_unit_group_units: {}
-          }
-        }
-      )
+      CourseOffering.all.includes(COURSE_OFFERING_SUMMARY_INCLUDES)
     end
   end
 

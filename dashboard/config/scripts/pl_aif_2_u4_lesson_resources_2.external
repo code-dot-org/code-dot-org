@@ -14,21 +14,22 @@ The lessons are designed for **45-minute class periods**, but can be modified fo
 <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:16px;margin:20px 0;">
 
   <div style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.08);">
-    <p style="font-size:18pt;font-weight:bold;margin:0;">🙋‍♀️ Warm Up</p>
-    <p style="font-size:14pt;line-height:1.4;">Each lesson starts with a brief warm-up that creates a shared experience and introduces the need for the lesson’s skills and concepts.</p>
+    <p style="font-size:14pt;font-weight:bold;margin:0;">🙋‍♀️ Warm Up</p>
+    <p style="font-size:12pt;line-height:1.4;">Each lesson starts with a brief warm-up that creates a shared experience and introduces the need for the lesson’s skills and concepts.</p>
   </div>
 
   <div style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.08);">
-    <p style="font-size:18pt;font-weight:bold;margin:0;">💃 Activity</p>
-    <p style="font-size:14pt;line-height:1.4;">Students spend most of their time exploring new computing concepts through scaffolded activities and just-in-time support.</p>
+    <p style="font-size:14pt;font-weight:bold;margin:0;">💃 Activity</p>
+    <p style="font-size:12pt;line-height:1.4;">Students spend most of their time exploring new computing concepts through scaffolded activities and just-in-time support.</p>
   </div>
 
   <div style="background:#F5F7F8;border-radius:14px;padding:18px;box-shadow:2px 2px 8px rgba(0,0,0,0.08);">
-    <p style="font-size:18pt;font-weight:bold;margin:0;">🏁 Wrap Up</p>
-    <p style="font-size:14pt;line-height:1.4;">Each lesson ends with reflection so students can connect back to the key skills and concepts.</p>
+    <p style="font-size:14pt;font-weight:bold;margin:0;">🏁 Wrap Up</p>
+    <p style="font-size:12pt;line-height:1.4;">Each lesson ends with reflection so students can connect back to the key skills and concepts.</p>
   </div>
 
 </div>
+
 ---
 
 ## Lesson Resources
@@ -41,27 +42,27 @@ Everything you need to deliver engaging and effective classes is included with e
 
   <p style="font-size:14pt;line-height:1.5;">Each lesson includes:</p>
 
-  <details style="background-color:#F5F7F8;padding:12px;margin-bottom:10px;border-left:6px solid #0093A4;border-radius:8px;">
+  <details style="background-color:#F5F7F8;padding:12px;margin-bottom:10px;border-left:6px solid #4c42cf;border-radius:8px;">
       <summary style="font-size:16pt;font-weight:bold;cursor:pointer;">1. Clear Objectives</summary>
       <p style="font-size:14pt;line-height:1.4;">Statements outline the specific knowledge and skills students will gain by the end of each lesson.</p>
     </details>
 
-  <details style="background-color:#F5F7F8;padding:12px;margin-bottom:10px;border-left:6px solid #4A90E2;border-radius:8px;">
+  <details style="background-color:#F5F7F8;padding:12px;margin-bottom:10px;border-left:6px solid #0099f3;border-radius:8px;">
       <summary style="font-size:16pt;font-weight:bold;cursor:pointer;">2. Detailed Teaching Guides</summary>
       <p style="font-size:14pt;line-height:1.4;">Step-by-step guides walk you through each lesson, including teacher tips for smooth delivery. Guidance can also be found in the Speaker Notes section of the slides.</p>
     </details>
 
-  <details style="background-color:#F5F7F8;padding:12px;margin-bottom:10px;border-left:6px solid #8148B2;border-radius:8px;">
+  <details style="background-color:#F5F7F8;padding:12px;margin-bottom:10px;border-left:6px solid #34bd43;border-radius:8px;">
       <summary style="font-size:16pt;font-weight:bold;cursor:pointer;">3. Exemplars and Answer Keys</summary>
       <p style="font-size:14pt;line-height:1.4;">Activity Guides, Unit Guides, and Projects include exemplars or answer keys.</p>
     </details>
 
-  <details style="background-color:#F5F7F8;padding:12px;margin-bottom:10px;border-left:6px solid #F5A623;border-radius:8px;">
+  <details style="background-color:#F5F7F8;padding:12px;margin-bottom:10px;border-left:6px solid #f46800;border-radius:8px;">
       <summary style="font-size:16pt;font-weight:bold;cursor:pointer;">4. Engaging Slides</summary>
       <p style="font-size:14pt;line-height:1.4;">Presentations help students stay focused and provide a clear structure for the lesson.</p>
     </details>
 
-  <details style="background-color:#F5F7F8;padding:12px;margin-bottom:10px;border-left:6px solid #7ED321;border-radius:8px;">
+  <details style="background-color:#F5F7F8;padding:12px;margin-bottom:10px;border-left:6px solid #e62378;border-radius:8px;">
       <summary style="font-size:16pt;font-weight:bold;cursor:pointer;">5. Interactive Student Handouts</summary>
       <p style="font-size:14pt;line-height:1.4;">Handouts provide activities, practice problems, and note-taking guides to reinforce key concepts.</p>
     </details>
@@ -175,7 +176,7 @@ When logged into a verified teacher account, you have access to the AI Teaching 
 
 </details>
 
-<div style="background-color:#B7E0E5;border-radius:40px;color:#000000;width:95%;padding:18px 24px;margin:24px 0;">
+<div style="background-color:#e4e2f8;border-radius:40px;color:#000000;width:95%;padding:18px 24px;margin:24px 0;">
 
 <p style="font-size:18px;line-height:1.5;margin:0;">
 <strong>💡 Teacher Tip:</strong> Take time to explore the lesson resources before teaching. Practice in Web Lab, preview student activities, and anticipate where students may struggle so you can support them more confidently during class.

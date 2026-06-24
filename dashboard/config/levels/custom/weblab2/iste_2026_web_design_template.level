@@ -1,0 +1,180 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-06-22T12:57:21.000Z",
+  "level_num": "custom",
+  "user_id": 22603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "template",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "require_edit_to_continue": "true",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "content_ideas",
+          "parentId": "0",
+          "open": false
+        },
+        "2": {
+          "id": "2",
+          "name": "wireframes",
+          "parentId": "0",
+          "open": false
+        },
+        "3": {
+          "id": "3",
+          "name": "images",
+          "parentId": "0",
+          "open": false
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    Content goes here!\n  </body>\n</html>\n  ",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "app_students_content.md",
+          "contents": "# Webpage Structure Plan\n\n## Project Title\nCalmStart: A Quick Stress-Reset Guide for Ninth Graders\n\n## Audience\nNinth graders who are adjusting to high school and may feel overwhelmed during the school day.\n\n## Purpose\nHelp students recognize early signs of stress and choose one small, realistic reset strategy they can use in under five minutes.\n\n## Artifact Type\nInformative student resource page with a simple step-by-step guide.\n\n## Page Structure\n\n### 1. Hero Section\n**Heading:** CalmStart  \n**Subheading:** A quick guide to reset when the school day feels overwhelming.  \n\n### 2. Why Stress Builds Up\n**Section purpose:** Explain the problem in student-friendly language.  \n**Content to include:**\n- Stress can come from classes, social pressure, schedules, activities, or feeling behind.\n- Stress is easier to manage when you notice it early.\n- Small reset strategies can help you regain focus.\n\n### 3. Pick a Reset Strategy\n**Section purpose:** Give students clear options.  \n**Use three cards or boxes:**\n\n#### Breathe\nTake four slow breaths. Count in for four, hold for two, and breathe out for six.\n\n#### Move\nStand up, stretch your shoulders, or take a short walk if you are allowed.\n\n#### Name It\nWrite one sentence that starts with: \"Right now, I feel...\" Then write one next step.\n\n### 4. When to Ask for Help\n**Section purpose:** Remind students that some stress needs support from other people.  \n**Content to include:**\n- If stress feels too big to handle alone, talk to a trusted adult.\n- Good options include a teacher, counselor, coach, family member, or school staff member.\n- Asking for help is a responsible choice, not a failure.\n\n### 5. Call to Action\n**Heading:** Try one reset today  \n**Text:** Choose one strategy and try it the next time you feel stress building. Notice whether it helps, then adjust if needed.\n\n## Layout Notes\n- Use a single-page layout.\n- Put the three reset strategies in equal-sized cards.\n- Keep paragraphs short.\n- Use clear headings so students can scan quickly.\n- Make the call to action stand out near the bottom.\n",
+          "folderId": "1",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "historical_movie_content.md",
+          "contents": "# Webpage Structure Plan\n\n## Project Title\nCrossing the Delaware: A Historical Movie Site\n\n## Audience\nMiddle school or high school students studying the American Revolution, along with families and community members who want to learn about a movie connected to an important moment in U.S. history.\n\n## Purpose\nPromote a historical movie while helping visitors understand the real event, people, and historical context behind the story.\n\n## Artifact Type\nInformational and promotional movie website for a historical film.\n\n## Page Structure\n\n### 1. Hero Section\n**Heading:** Crossing the Delaware  \n**Subheading:** A historical movie about courage, risk, and a turning point in the American Revolution.\n\n### 2. About the Movie\n**Section purpose:** Introduce the movie and make visitors interested in the story.  \n**Content to include:**\n- *Crossing the Delaware* tells the story of George Washington and the Continental Army during one of the most difficult moments of the American Revolution.\n- The movie takes place in December 1776, after a series of defeats had left American morale low.\n- Facing freezing weather, exhausted soldiers, and an uncertain future, Washington decides to lead a risky nighttime crossing of the Delaware River.\n- The crossing leads to a surprise attack on Hessian forces in Trenton, New Jersey.\n- The movie presents the event as a story of leadership, strategy, sacrifice, and perseverance.\n\n### 3. The History Behind the Story\n**Section purpose:** Give visitors historical context before they watch.  \n**Use three cards or boxes:**\n\n#### The Crisis\nBy late 1776, the Continental Army had suffered major losses. Many soldiers were cold, hungry, discouraged, and close to the end of their enlistments. Washington needed a victory to keep the revolutionary cause alive.\n\n#### The Plan\nWashington planned to cross the Delaware River at night and attack Hessian troops stationed in Trenton. The plan was dangerous because of icy water, winter weather, poor visibility, and the risk of being discovered.\n\n#### The Impact\nThe victory at Trenton did not end the war, but it helped change the mood of the Revolution. It gave the Continental Army new confidence and reminded supporters that independence was still possible.\n\n### 4. Featured Characters\n**Section purpose:** Introduce key historical figures and groups represented in the movie.  \n**Content to include:**\n- **George Washington:** Commander of the Continental Army. The movie shows him as a leader carrying the pressure of a risky decision.\n- **Continental Soldiers:** Ordinary soldiers facing cold, fear, hunger, and uncertainty while continuing to fight for independence.\n- **Hessian Forces:** German soldiers hired by the British, stationed at Trenton and surprised by Washington’s attack.\n- **Local Civilians:** People living near the conflict whose homes, farms, and communities were affected by the war.\n- **Officers and Messengers:** Supporting figures who help show how planning, communication, and trust mattered during the campaign.\n\n### 5. Why This Movie Matters\n**Section purpose:** Connect the movie to bigger historical themes.  \n**Content to include:**\n- The movie shows how leadership matters most when the outcome is uncertain.\n- It highlights the role of strategy, timing, and risk in military history.\n- It helps viewers understand that the American Revolution was not guaranteed to succeed.\n- It shows how morale can affect a movement, an army, or a cause.\n- It reminds viewers that historical movies can make the past feel vivid, but they may also simplify events or add drama.\n\n### 6. Watch with a Historian’s Eye\n**Heading:** What should viewers look for?  \n**Text:** As you watch, notice how the movie portrays courage, fear, leadership, and decision-making. Pay attention to which details seem historically accurate and which details may have been changed to make the story more dramatic. A good viewer enjoys the movie but also asks questions about how the past is being represented.\n\n## Layout Notes\n- Use a single-page layout.\n- Make the hero section feel like a movie landing page.\n- Use three cards for “The History Behind the Story.”\n- Include a section that promotes the movie and a section that teaches historical context.\n- Make the final “Watch with a Historian’s Eye” section stand out near the bottom.\n",
+          "folderId": "1",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "book_review_content.md",
+          "contents": "# Webpage Structure Plan\n\n## Project Title\nInside the Book: The Curious Incident of the Dog in the Night-Time\n\n## Audience\nStudents who are deciding whether to read the book or who want help understanding its major ideas.\n\n## Purpose\nCreate an informational book site that introduces the novel, explains its central ideas, and helps readers think about whether the book is a good fit for them.\n\n## Artifact Type\nInformational book profile and review site, similar to a student-friendly Goodreads page.\n\n## Page Structure\n\n### 1. Hero Section\n**Heading:** The Curious Incident of the Dog in the Night-Time  \n**Subheading:** A student guide to the story, characters, themes, and reading experience.\n\n### 2. Book at a Glance\n**Section purpose:** Give visitors quick background information about the book.  \n**Content to include:**\n- Title: The Curious Incident of the Dog in the Night-Time\n- Author: Mark Haddon\n- Genre: Mystery, realistic fiction, coming-of-age\n- Narrator: Christopher Boone\n- Central setup: Christopher investigates the death of a neighbor’s dog and uncovers larger truths about his family and himself.\n\n### 3. What the Book Is About\n**Section purpose:** Summarize the story without giving away too much.  \n**Content to include:**\n- Christopher is a mathematically gifted teenager who sees the world in a highly logical and detailed way.\n- The story begins as a mystery about a dog named Wellington.\n- As Christopher investigates, the mystery becomes connected to family secrets, trust, independence, and growing up.\n- The book uses Christopher’s voice and perspective to shape how readers experience the story.\n\n### 4. Key Themes\n**Section purpose:** Help readers understand the major ideas in the novel.  \n**Use three cards or boxes:**\n\n#### Perspective\nThe novel shows how one person’s way of seeing the world can shape a story.\n\n#### Truth and Trust\nChristopher’s search for answers raises questions about honesty, family, and trust.\n\n#### Independence\nThe story explores what it means to become more independent while still needing support.\n\n### 5. Reading Experience\n**Section purpose:** Help visitors know what to expect as readers.  \n**Content to include:**\n- The narration is direct, detailed, and often logical.\n- The book includes diagrams, lists, and patterns that reflect Christopher’s thinking.\n- Some parts of the story are emotional or tense.\n- Readers who enjoy mysteries, unusual narrators, or character-focused stories may connect with this book.\n\n### 6. Student Recommendation\n**Heading:** Should you read it?  \n**Text:** This book is a strong choice if you like mysteries that also explore character, family, and perspective. It asks readers to think carefully about how people understand the world differently.\n\n## Layout Notes\n- Use a single-page layout.\n- Make the site feel like an informational book profile, not an app or product page.\n- Keep the summary spoiler-light.\n- Use three cards for the key themes.\n- Make the recommendation section stand out near the bottom.\n",
+          "folderId": "1",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "build_your_own_content.md",
+          "contents": "# Webpage Structure Plan\n\n## Project Title\n[FILL IN: Give your webpage a clear title]\n\n## Audience\n[FILL IN: Who is this webpage for? Be specific about the group, class, age, interest, or situation.]\n\n## Purpose\n[FILL IN: What should this webpage help your audience understand, feel, do, or decide?]\n\n## Artifact Type\n[FILL IN: What kind of web experience are you creating? Examples: informative page, persuasive page, interactive guide, showcase/gallery, review site, resource hub.]\n\n## Page Structure\n\n### 1. Hero Section\n**Heading:** [FILL IN: Main title for the page]  \n**Subheading:** [FILL IN: One short sentence that explains what this page is about.]\n\n### 2. Introduction / Context\n**Section purpose:** Help the audience understand the topic and why it matters.  \n**Content to include:**\n- [FILL IN: Key background idea]\n- [FILL IN: Important context or problem]\n- [FILL IN: Why the audience should care]\n\n### 3. Main Ideas or Features\n**Section purpose:** Present the most important parts of the project.  \n**Use three cards or boxes:**\n\n#### [FILL IN: Card 1 heading]\n[FILL IN: Short explanation, detail, example, or evidence.]\n\n#### [FILL IN: Card 2 heading]\n[FILL IN: Short explanation, detail, example, or evidence.]\n\n#### [FILL IN: Card 3 heading]\n[FILL IN: Short explanation, detail, example, or evidence.]\n\n### 4. Deeper Explanation / Evidence\n**Section purpose:** Add support, examples, or details that help the audience understand your topic more deeply.  \n**Content to include:**\n- [FILL IN: Evidence, example, quotation, data point, or detail]\n- [FILL IN: Explanation of why this matters]\n- [FILL IN: Connection to your purpose or audience]\n\n### 5. Call to Action / Final Takeaway\n**Heading:** [FILL IN: Closing heading]  \n**Text:** [FILL IN: What should the audience remember, do, think about, or decide after visiting this page?]\n\n## Layout Notes\n- Use a single-page layout.\n- Keep paragraphs short.\n- Use clear headings so the audience can scan quickly.\n- Use three equal-sized cards or boxes for the main ideas.\n- Make the final takeaway or call to action stand out near the bottom.\n",
+          "folderId": "1",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "book_cover.jpg",
+          "contents": "",
+          "folderId": "3",
+          "url": "/level_starter_assets/iste_2026_web_design_template/uuid/4cdd6747-34b6-4c01-8304-0825b43d11fd.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "edu.jpg",
+          "contents": "",
+          "folderId": "2",
+          "url": "/level_starter_assets/iste_2026_web_design_template/uuid/96cf6b79-f9f0-47d6-96f9-f7ba577cefb9.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "headline.jpg",
+          "contents": "",
+          "folderId": "2",
+          "url": "/level_starter_assets/iste_2026_web_design_template/uuid/f18a20f6-e531-42dc-830d-eea02d6e4db7.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "blog.jpg",
+          "contents": "",
+          "folderId": "2",
+          "url": "/level_starter_assets/iste_2026_web_design_template/uuid/fa1ae7c2-2baf-4cf9-a7a3-6be3abab0189.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "general.jpg",
+          "contents": "",
+          "folderId": "2",
+          "url": "/level_starter_assets/iste_2026_web_design_template/uuid/b6549622-4448-4f53-9a20-2341422b579f.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "george_washington.png",
+          "contents": "",
+          "folderId": "3",
+          "url": "/level_starter_assets/iste_2026_web_design_template/uuid/eb54d85b-2102-4448-8222-5e0183aacadd.png",
+          "type": "starter",
+          "active": false
+        },
+        "12": {
+          "id": "12",
+          "name": "app_logo.png",
+          "contents": "",
+          "folderId": "3",
+          "url": "/level_starter_assets/iste_2026_web_design_template/uuid/cd0c0071-8a2b-44c8-afff-190faf3f61c8.png",
+          "type": "starter",
+          "active": false
+        },
+        "13": {
+          "id": "13",
+          "name": "style.md",
+          "contents": "# Webpage Style Plan\n\n## Overall Mood\nCalm, supportive, clear, and student-friendly. The page should feel reassuring without feeling childish or clinical.\n\n## Visual Style\nUse a clean modern layout with soft rounded cards, tight spacing, and simple icons or visual placeholders. The design should make the page feel easy to scan during a stressful moment.\n\n\n### Required colors\n- Page background: warm off-white or very light cream\n- Main headings: deep teal\n- Accent color: soft aqua or light blue\n- Body text: dark gray\n- Card backgrounds: white or very pale blue\n\n### Avoid\n- Bright red\n- Neon colors\n- Harsh high-saturation colors\n- Colors that make the page feel like an emergency warning or medical diagnosis tool\n\n## Typography\n\nUse simple, readable typography\n\n### Font style\n- Use a clean sans-serif font.\n- Do not use decorative, handwritten, or novelty fonts.\n\n### Headings\n- Headings should be bold and easy to scan.\n- Use clear size differences between the page title, section headings, and card headings.\n\n### Body text\n- Body text should be easy to read.\n- Use comfortable line spacing.\n- Keep paragraphs short.\n- Use lists when they make information easier to scan.\n\n## Iconography \n\nUse simple inline SVG icons. Do not use external icon libraries, scripts, or imports such as Lucide, Font Awesome, Material Icons, or any other third-party icon set.\n\n### Icon requirements\n- Icons should be created directly in the HTML as inline SVG elements.\n- Use simple line icons or filled shapes.\n- Match the calm, supportive style of the page.\n- Use the accent color or deep teal for icons.\n- Include accessible labels or hidden text when needed.\n\n### Suggested icons\n- Breath strategy: simple air swirl, lungs, or soft wave SVG\n- Move strategy: simple stretching figure, arrow, or motion line SVG\n- Name It strategy: simple pencil, note card, or speech bubble SVG\n\n### Avoid\n- External image links for icons\n- External scripts\n- Icon fonts\n- Overly detailed illustrations\n- Medical or emergency-style symbols\n",
+          "folderId": "0",
+          "active": true
+        },
+        "14": {
+          "id": "14",
+          "name": "style_byo.md",
+          "contents": "# Webpage Style Plan\n\n## Overall Mood\n[[Add 3 or 4 adjectives or short phrases that describe the mood of the page. Examples: calm, energetic, mysterious, trustworthy, playful, dramatic, academic, futuristic, welcoming.]]\n\nThe page should feel [[describe the emotional impression you want the audience to have]]. It should not feel [[describe what the page should avoid feeling like]].\n\n## Visual Style\nUse a [[describe the overall visual style: clean modern layout, magazine-style layout, movie poster style, academic profile, playful card-based layout, etc.]].\n\nThe design should help the audience [[describe what the visual design should help users do: scan quickly, feel excited, understand key ideas, compare information, explore a topic, etc.]].\n\n### Required colors\n- Page background: [[background color or color family]]\n- Main headings: [[heading color]]\n- Accent color: [[accent color]]\n- Body text: [[body text color]]\n- Card or section backgrounds: [[card/section background color]]\n- Optional highlight color: [[optional color for buttons, callouts, or important details]]\n\n### Avoid\n- [[Color, style, or design choice to avoid]]\n- [[Color, style, or design choice to avoid]]\n- [[Color, style, or design choice to avoid]]\n- [[Anything that would make the page feel wrong for the topic or audience]]\n\n## Typography\n\nUse simple, readable typography.\n\n### Font style\n- Use a clean sans-serif font unless the style plan specifically calls for a different readable font.\n- Do not use decorative, handwritten, or novelty fonts unless they clearly match the purpose and remain readable.\n\n### Headings\n- Headings should be bold and easy to scan.\n- Use clear size differences between the page title, section headings, and card headings.\n\n### Body text\n- Body text should be easy to read.\n- Use comfortable line spacing.\n- Keep paragraphs short.\n- Use lists when they make information easier to scan.\n\n## Iconography\n\nUse simple inline SVG icons. Do not use external icon libraries, scripts, or imports such as Lucide, Font Awesome, Material Icons, or any other third-party icon set.\n\n### Suggested Icons\n- [[Shape 1]]\n- [[Shape 2]]\n- [[Shape 3]]",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "13",
+        "14"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-22 13:05:50 +0000\",\"changed\":[],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"},{\"changed_at\":\"2026-06-22 13:18:12 +0000\",\"changed\":[],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"},{\"changed_at\":\"2026-06-22 13:18:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"},{\"changed_at\":\"2026-06-23 23:35:47 +0000\",\"changed\":[],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"},{\"changed_at\":\"2026-06-23 23:35:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"},{\"changed_at\":\"2026-06-23 23:36:15 +0000\",\"changed\":[],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"},{\"changed_at\":\"2026-06-23 23:37:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"}]"
+}]]></config>
+</Weblab2>

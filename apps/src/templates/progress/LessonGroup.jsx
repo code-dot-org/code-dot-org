@@ -1,17 +1,15 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import fontConstants from '@cdo/apps/fontConstants';
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
 import LessonGroupInfo from '@cdo/apps/templates/progress/LessonGroupInfo';
 import LessonGroupInfoDialog from '@cdo/apps/templates/progress/LessonGroupInfoDialog';
 import {groupedLessonsType} from '@cdo/apps/templates/progress/progressTypes';
 import SummaryProgressTable from '@cdo/apps/templates/progress/SummaryProgressTable';
-import color from '@cdo/apps/util/color';
 
 import {lessonIsVisible} from './progressHelpers';
 
@@ -87,14 +85,14 @@ class LessonGroup extends React.Component {
           ]}
           onClick={this.toggleCollapsed}
         >
-          <FontAwesome
-            icon={this.state.collapsed ? 'caret-right' : 'caret-down'}
+          <FontAwesomeV6Icon
+            iconName={this.state.collapsed ? 'caret-right' : 'caret-down'}
           />
           <span style={headingTextStyle}>{displayName}</span>
           {hasLessonGroupInfo && (
             <span>
-              <FontAwesome
-                icon="circle-info"
+              <FontAwesomeV6Icon
+                iconName="circle-info"
                 style={styles.lessonGroupInfo}
                 onClick={this.openLessonGroupInfoDialog}
               />
@@ -139,16 +137,16 @@ const styles = {
   },
   header: {
     padding: 20,
-    backgroundColor: color.dark_charcoal,
+    backgroundColor: 'var(--background-neutral-primary-inverse)',
     fontSize: 18,
-    ...fontConstants['main-font-semi-bold'],
-    color: 'white',
+    fontWeight: 600,
+    color: 'var(--text-neutral-inverse)',
     borderTopLeftRadius: 4,
     borderTopRightRadius: 4,
     cursor: 'pointer',
   },
   headerBlue: {
-    backgroundColor: color.cyan,
+    backgroundColor: 'var(--background-info-primary)',
   },
   headingText: {
     marginLeft: 10,
@@ -157,11 +155,11 @@ const styles = {
     marginRight: 10,
   },
   contents: {
-    backgroundColor: color.lighter_gray,
+    backgroundColor: 'var(--background-neutral-secondary)',
     padding: 20,
   },
   contentsBlue: {
-    backgroundColor: color.lightest_cyan,
+    backgroundColor: 'var(--background-info-extra-light)',
   },
   bottom: {
     borderBottomLeftRadius: 4,

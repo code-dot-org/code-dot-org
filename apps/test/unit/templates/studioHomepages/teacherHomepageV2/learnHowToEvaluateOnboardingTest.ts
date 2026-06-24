@@ -5,6 +5,7 @@ import {
   createLearnHowToEvaluateProgressSteps,
   LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY,
   PROGRESS_TABLE_STEP_ID,
+  STUDENT_SNAPSHOT_AI_INSIGHTS_STEP_ID,
 } from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/learnHowToEvaluateOnboarding';
 import {trySetSessionStorage} from '@cdo/apps/utils';
 
@@ -28,6 +29,7 @@ const makeMockTour = () => {
     }),
     addSteps: jest.fn(),
     next: jest.fn(),
+    show: jest.fn(),
     getCurrentStep: jest.fn(() => ({hide: jest.fn()})),
     steps,
     _trigger: (event: string) => handlers[event]?.forEach(cb => cb()),
@@ -110,21 +112,36 @@ describe('createLearnHowToEvaluateProgressSteps step structure', () => {
     document.body.innerHTML = '';
   });
 
-  it('includes quiz step, no snapshot step, and completion step when snapshot link is absent', () => {
+  it('includes quiz step, no snapshot steps, and completion step when snapshot link is absent', () => {
     const steps = createLearnHowToEvaluateProgressSteps(
       mockTour as unknown as Tour
     );
     expect(steps.some(s => s.id === PROGRESS_TABLE_STEP_ID)).toBe(true);
     expect(steps.some(s => s.id === 'student-snapshot-step')).toBe(false);
+    expect(steps.some(s => s.id === STUDENT_SNAPSHOT_AI_INSIGHTS_STEP_ID)).toBe(
+      false
+    );
+    expect(steps.some(s => s.id === 'student-snapshot-ai-feedback-step')).toBe(
+      false
+    );
+    expect(steps.some(s => s.id === 'student-snapshot-cfu-step')).toBe(false);
     expect(steps.some(s => s.id === 'onboarding-complete')).toBe(true);
   });
 
-  it('includes snapshot step when Student Snapshot link is present', () => {
+  it('includes snapshot link step and all snapshot page steps when Student Snapshot link is present', () => {
     document.body.innerHTML += `<a href="/teacher_dashboard/sections/1/student_snapshot">Student Snapshot</a>`;
     const steps = createLearnHowToEvaluateProgressSteps(
       mockTour as unknown as Tour
     );
     expect(steps.some(s => s.id === 'student-snapshot-step')).toBe(true);
+    expect(steps.some(s => s.id === STUDENT_SNAPSHOT_AI_INSIGHTS_STEP_ID)).toBe(
+      true
+    );
+    expect(steps.some(s => s.id === 'student-snapshot-ai-feedback-step')).toBe(
+      true
+    );
+    expect(steps.some(s => s.id === 'student-snapshot-cfu-step')).toBe(true);
+    expect(steps.some(s => s.id === 'onboarding-complete')).toBe(true);
   });
 
   it('quiz step text contains all three student names', () => {
@@ -219,7 +236,7 @@ describe('student-snapshot-step when handler', () => {
     document.body.innerHTML = '';
   });
 
-  it('saves onboarding-complete to sessionStorage and allows navigation on click', () => {
+  it('saves the ai-insights step id to sessionStorage and allows navigation on click', () => {
     const steps = createLearnHowToEvaluateProgressSteps(
       mockTour as unknown as Tour
     );
@@ -238,8 +255,95 @@ describe('student-snapshot-step when handler', () => {
     expect(clickEvent.defaultPrevented).toBe(false);
     expect(mockTrySetSessionStorage).toHaveBeenCalledWith(
       LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY,
-      'onboarding-complete'
+      STUDENT_SNAPSHOT_AI_INSIGHTS_STEP_ID
     );
     expect(mockTour.next).not.toHaveBeenCalled();
+  });
+
+  it('ai-insights step has a single next button that advances the tour', () => {
+    document.body.innerHTML += `<div id="ui-test-lesson-insight-widget"></div>`;
+    const steps = createLearnHowToEvaluateProgressSteps(
+      mockTour as unknown as Tour
+    );
+    const step = steps.find(
+      s => s.id === STUDENT_SNAPSHOT_AI_INSIGHTS_STEP_ID
+    )!;
+    const buttons = step.buttons as {text: string; action: () => void}[];
+
+    expect(buttons).toHaveLength(1);
+
+    buttons[0].action();
+    expect(mockTour.next).toHaveBeenCalledTimes(1);
+  });
+
+  it('ai-insights step highlights the lesson insight widget on show and removes it on hide', () => {
+    document.body.innerHTML += `<div id="ui-test-lesson-insight-widget"></div>`;
+    const steps = createLearnHowToEvaluateProgressSteps(
+      mockTour as unknown as Tour
+    );
+    const step = steps.find(
+      s => s.id === STUDENT_SNAPSHOT_AI_INSIGHTS_STEP_ID
+    )!;
+    const when = step.when as {show: () => void; hide: () => void};
+
+    when.show();
+    expect(
+      document
+        .getElementById('ui-test-lesson-insight-widget')!
+        .classList.contains('tour-step-highlight')
+    ).toBe(true);
+
+    when.hide();
+    expect(
+      document
+        .getElementById('ui-test-lesson-insight-widget')!
+        .classList.contains('tour-step-highlight')
+    ).toBe(false);
+  });
+
+  it('ai-feedback step highlights the lesson feedback widget on show and removes it on hide', () => {
+    document.body.innerHTML += `<div id="ui-test-lesson-feedback-widget"></div>`;
+    const steps = createLearnHowToEvaluateProgressSteps(
+      mockTour as unknown as Tour
+    );
+    const step = steps.find(s => s.id === 'student-snapshot-ai-feedback-step')!;
+    const when = step.when as {show: () => void; hide: () => void};
+
+    when.show();
+    expect(
+      document
+        .getElementById('ui-test-lesson-feedback-widget')!
+        .classList.contains('tour-step-highlight')
+    ).toBe(true);
+
+    when.hide();
+    expect(
+      document
+        .getElementById('ui-test-lesson-feedback-widget')!
+        .classList.contains('tour-step-highlight')
+    ).toBe(false);
+  });
+
+  it('cfu step highlights the cfu widget on show and removes it on hide', () => {
+    document.body.innerHTML += `<div id="ui-test-cfu-widget"></div>`;
+    const steps = createLearnHowToEvaluateProgressSteps(
+      mockTour as unknown as Tour
+    );
+    const step = steps.find(s => s.id === 'student-snapshot-cfu-step')!;
+    const when = step.when as {show: () => void; hide: () => void};
+
+    when.show();
+    expect(
+      document
+        .getElementById('ui-test-cfu-widget')!
+        .classList.contains('tour-step-highlight')
+    ).toBe(true);
+
+    when.hide();
+    expect(
+      document
+        .getElementById('ui-test-cfu-widget')!
+        .classList.contains('tour-step-highlight')
+    ).toBe(false);
   });
 });

@@ -2,7 +2,6 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import {learningGoalShape} from './rubricShapes';
@@ -37,8 +36,7 @@ export default function ProgressRing({
       width={radius * 2}
     >
       <circle
-        className={style.progressRing}
-        stroke={color.light_gray_200}
+        className={classnames(style.progressRing, style.progressRingTrack)}
         fill="transparent"
         strokeWidth={stroke}
         r={normalizedRadius}
@@ -46,8 +44,7 @@ export default function ProgressRing({
         cy={radius}
       />
       <circle
-        className={style.progressRing}
-        stroke={color.neutral_dark40}
+        className={classnames(style.progressRing, style.progressRingCurrent)}
         fill="transparent"
         strokeWidth={stroke}
         strokeDasharray={circumference + ' '}
@@ -57,8 +54,7 @@ export default function ProgressRing({
         cy={radius}
       />
       <circle
-        className={style.progressRing}
-        stroke={color.light_primary_500}
+        className={classnames(style.progressRing, style.progressRingAssessed)}
         fill="transparent"
         strokeWidth={stroke}
         strokeDasharray={circumference + ' '}

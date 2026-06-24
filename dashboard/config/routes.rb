@@ -1103,9 +1103,11 @@ Dashboard::Application.routes.draw do
       end
     end
     if rack_env?(:staging, :test)
-      scope path: '/api/dev', controller: :dev do
-        post 'check-dts', action: 'check_dts'
-        post 'start-build', action: 'start_build'
+      scope '/api' do
+        namespace :dev do
+          post 'check-dts', action: :check_dts
+          post 'start-build', action: :start_build
+        end
       end
     end
 
@@ -1116,6 +1118,11 @@ Dashboard::Application.routes.draw do
         end
         concerns :api_v1_pd_routes
         concerns :section_api_routes
+
+        namespace :users do
+          resource :settings, only: :show, path: 'me/settings'
+        end
+
         post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
         post 'users/:user_id/display_theme', to: 'users#update_display_theme'
         post 'users/:user_id/mute_music', to: 'users#post_mute_music'
@@ -1274,6 +1281,7 @@ Dashboard::Application.routes.draw do
     get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
     get '/dashboardapi/v1/schools/:id', to: 'api/v1/schools#show', defaults: {format: 'json'}
 
+    get '/dashboardapi/v1/user_product_tours', to: 'api/v1/user_product_tours#index'
     post '/dashboardapi/v1/user_product_tours', to: 'api/v1/user_product_tours#create'
     post '/dashboardapi/v1/users/:user_id/verify_captcha', to: 'api/v1/users#verify_captcha'
 
@@ -1309,8 +1317,6 @@ Dashboard::Application.routes.draw do
     post '/profanity/find', to: 'profanity#find'
 
     get '/help', to: redirect("https://support.code.org")
-
-    post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
 
     get '/javabuilder/access_token', to: 'javabuilder_sessions#get_access_token'
     post '/javabuilder/access_token_with_override_sources', to: 'javabuilder_sessions#access_token_with_override_sources'
@@ -1441,6 +1447,9 @@ Dashboard::Application.routes.draw do
     end
 
     resources :aidiff_artifacts, only: [:index, :create]
+
+    resources :user_practice_problem_attempts, only: [:index, :update, :create, :show]
+    resources :practice_problems, only: [:index, :show]
 
     resources :aidiff_exit_tickets, only: [:index, :update, :create, :show]
     resources :aidiff_lesson_hooks, only: [:index, :update, :create, :show]

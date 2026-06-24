@@ -196,7 +196,7 @@ $sidebar-tooltip-z-index: 2010;
   justify-content: center;
   align-items: center;
   border-radius: 58px;
-  background: $ai_rubric_cyan;
+  background: var(--background-brand-aqua-primary);
 
   span {
     @include main-font-medium;

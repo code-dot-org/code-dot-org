@@ -3,79 +3,99 @@
 require_relative 'only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
 
-require_relative '../../deployment'
+require_relative '../../dashboard/config/environment' # Load Rails (and the `CDO.` configuration settings object).
 require 'cdo/aws/redshift/client'
+require 'cdo/aws/redshift/materialized_view_manager'
+require 'cdo/aws/metrics'
 require 'cdo/chat_client'
 
+# This job runs HOURLY to emit CloudWatch Metrics and Logs.
+# To keep the RED (data) team's signal daily — they consume the pipeline on a daily cadence — the #data-alerts Slack
+# summary is posted only once a day, in the window when the legacy DMS export is expected to have completed.
 NOTIFY_CHANNEL = 'data-alerts'
 ENVIRONMENT_TYPE = CDO.rack_env.to_s
 TARGET_DB = "#{ENVIRONMENT_TYPE}_learningplatform_mysql_zeroetl"
-REDSHIFT_SQL_USER = 'etl_client'
+DETAIL_LENGTH_IN_SUMMARY = 3
 
-# @param message [String] the (base) error message to log.
-def alert(message)
-  CDO.log.warn message
-  ChatClient.message(NOTIFY_CHANNEL, message, color: 'red') if ENVIRONMENT_TYPE == 'production'
+# UTC hour in which to post the once-a-day data-team summary (the cron fires at :30, so the 19:30 UTC
+# run posts). This is roughly when the legacy DMS export completes.
+DATA_TEAM_ALERT_HOUR_UTC = 19
+
+# True only in the single hourly run per day designated for the data-team Slack summary, in production.
+def data_team_alert_window?
+  ENVIRONMENT_TYPE == 'production' && Time.now.utc.hour == DATA_TEAM_ALERT_HOUR_UTC
 end
 
-def main
-  redshift = Cdo::Aws::Redshift::Client.new(db_user: REDSHIFT_SQL_USER)
+def slack(message)
+  ChatClient.message(NOTIFY_CHANNEL, message, color: 'red')
+end
 
-  # Check Integration-level status.
-  # Expected healthy states are `PendingDbConnectState`, `SchemaDiscoveryState`, and `CdcRefreshState`
-  # Unhealthy state: `ErrorState`
-  integration_query = <<~SQL
-    SELECT *
-    FROM SVV_INTEGRATION
-    WHERE target_database = '#{TARGET_DB}';
-  SQL
+def post_data_team_summary(error_integrations, error_tables, mv_summary)
+  mv_errors = mv_summary[:error_views]
+  return if error_integrations.empty? && error_tables.empty? && mv_errors.empty?
 
-  integrations = redshift.execute(integration_query)
-  integrations.each do |integration|
-    alert("Zero-ETL Integration Alert (#{ENVIRONMENT_TYPE})*\nIntegration `#{integration['integration_id']}` is in state `#{integration['state']}`. #{integration.to_json}") if integration['state'] == 'ErrorState'
+  lines = ["*Zero-ETL → Redshift daily status (#{ENVIRONMENT_TYPE})*"]
+
+  if error_integrations.any?
+    lines << "\n*#{error_integrations.size} integration(s) in error state:*"
+    error_integrations.each {|i| lines << "• `#{i['integration_id']}` — `#{i['state']}`"}
   end
 
-  # Check Table-level sync status.
+  if error_tables.any?
+    lines << "\n*#{error_tables.size} table(s) failing to replicate:*"
+    error_tables.first(DETAIL_LENGTH_IN_SUMMARY).each {|t| lines << "• `#{t['schema_name']}.#{t['table_name']}` (#{t['table_state']})"}
+    lines << "_…and #{error_tables.size - DETAIL_LENGTH_IN_SUMMARY} more (see CloudWatch logs)_" if error_tables.size > DETAIL_LENGTH_IN_SUMMARY
+  end
+
+  if mv_errors.any?
+    lines << "\n*#{mv_errors.size} materialized view(s) in error state:*"
+    mv_errors.first(DETAIL_LENGTH_IN_SUMMARY).each {|e| lines << "• `#{e[:row].table_name}` (#{e[:row].view_type}) — #{e[:condition]}"}
+    lines << "_…and #{mv_errors.size - DETAIL_LENGTH_IN_SUMMARY} more (see CloudWatch logs)_" if mv_errors.size > DETAIL_LENGTH_IN_SUMMARY
+  end
+
+  slack(lines.join("\n"))
+end
+
+begin
+  redshift = Cdo::Aws::Redshift::Client.new
+
+  # Integration-level health. Healthy states: PendingDbConnectState, SchemaDiscoveryState, CdcRefreshState.
+  failed_zeroetl_integrations = redshift.execute(<<~SQL).select {|integration| integration['state'] == 'ErrorState'}
+    SELECT * FROM SVV_INTEGRATION WHERE target_database = '#{TARGET_DB}';
+  SQL
+  failed_zeroetl_integrations.each do |integration|
+    CDO.log.error("[zeroetl-monitor] integration #{integration['integration_id']} in state #{integration['state']}")
+  end
+
+  # Table-level sync health. Healthy: Synced (ResyncInitiated is transient/expected).
   # https://docs.aws.amazon.com/redshift/latest/dg/r_SVV_INTEGRATION_TABLE_STATE.html
-  # Possible values: `Synced`, `Failed`, `Deleted`, `ResyncRequired`, `ResyncInitiated`, and `DroppedSource`.
-  table_sync_status_query = <<~SQL
-    SELECT *
-    FROM SVV_INTEGRATION_TABLE_STATE
+  failed_zeroetl_tables = redshift.execute(<<~SQL)
+    SELECT * FROM SVV_INTEGRATION_TABLE_STATE
     WHERE target_database = '#{TARGET_DB}'
       AND table_state != 'Synced'
       AND table_state != 'ResyncInitiated';
   SQL
-
-  error_tables = redshift.execute(table_sync_status_query)
-  if error_tables.any?
-    summary_lines = error_tables.map {|table| "• `#{table['schema_name']}.#{table['table_name']}` (#{table['table_state']})\n"}
-
-    header = "Zero-ETL Sync Failure Summary (#{ENVIRONMENT_TYPE})*\n"
-    header += "#{error_tables.size} tables are failing to synchronize:\n"
-    header += summary_lines.join("\n")
-    header += "Details for up to 3 randomly selected error tables:\n"
-
-    alert(header)
-
-    # Output details about up to 3 randomly selected tables that are failing to sync via Zero ETL.
-    error_tables.sample(3).each do |table|
-      message = <<~MSG
-        *Zero-ETL Table Sync Alert (#{ENVIRONMENT_TYPE})*
-        *Table:* `#{table['schema_name']}.#{table['table_name']}`
-        *State:* `#{table['table_state']}`
-
-        *Error Reason:*
-        > #{table['reason']}
-
-        _Last Updated: #{table['last_updated_timestamp']}_
-        _Integration ID: #{table['integration_id']}_
-      MSG
-      alert(message)
-    end
+  failed_zeroetl_tables.each do |table|
+    CDO.log.error(
+      "[zeroetl-monitor] table not synced: #{table['schema_name']}.#{table['table_name']} " \
+        "state=#{table['table_state']} reason=#{table['reason']}"
+    )
   end
-rescue => exception
-  alert("Zero-ETL Monitor Script Failed (#{ENVIRONMENT_TYPE})*\nException: #{exception.message}")
-  raise exception
-end
 
-main
+  Rails.application.eager_load!
+  redshift_materialized_view_status = Cdo::Aws::Redshift::MaterializedViewManager.emit_view_status_metrics(
+    client: redshift,
+    environment_type: ENVIRONMENT_TYPE,
+    models: AnalyticsExportable.valid_exported_models
+  )
+
+  # Once-a-day data-team Slack summary (production only).
+  post_data_team_summary(failed_zeroetl_integrations, failed_zeroetl_tables, redshift_materialized_view_status) if data_team_alert_window?
+rescue => exception
+  CDO.log.error("[zeroetl-monitor] script failed (#{ENVIRONMENT_TYPE}): #{exception.message}")
+  slack("*Zero-ETL Monitor Script Failed (#{ENVIRONMENT_TYPE})*\nException: #{exception.message}") if data_team_alert_window?
+  raise exception
+ensure
+  # Short-lived process: flush buffered metrics before exit rather than relying on the async buffer.
+  Cdo::Metrics.flush!
+end
