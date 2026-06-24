@@ -2,6 +2,7 @@ import {useEffect} from 'react';
 
 import {createShepherdTour} from '@cdo/apps/sharedComponents/productTour/shepherdTourFactory';
 import useOnboardingTour from '@cdo/apps/sharedComponents/productTour/useOnboardingTour';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 
@@ -15,6 +16,15 @@ import {
 } from './reviewSyllabusOnboarding';
 
 export {REVIEW_SYLLABUS_ONBOARDING_STEP_KEY};
+
+export const recordViewSyllabusCompletion = () => {
+  HttpClient.post(
+    '/dashboardapi/v1/user_product_tours',
+    JSON.stringify({tour_name: 'view_syllabus'}),
+    true,
+    {'Content-Type': 'application/json'}
+  ).catch(err => console.error('Failed to record tour completion:', err));
+};
 
 const REVIEW_SYLLABUS_DEMO_TYPE_KEY = 'reviewSyllabusOnboardingDemoType';
 const REVIEW_SYLLABUS_QUIZ_CONFIG_KEY = 'reviewSyllabusOnboardingQuizConfig';
@@ -64,7 +74,10 @@ export const resumeReviewSyllabusOnboardingTour = () => {
 
   const clearStep = () =>
     trySetSessionStorage(REVIEW_SYLLABUS_ONBOARDING_STEP_KEY, '');
-  tour.on('complete', clearStep);
+  tour.on('complete', () => {
+    clearStep();
+    recordViewSyllabusCompletion();
+  });
   tour.on('cancel', clearStep);
 
   const startStep = tour.steps.find(s => s.id === savedStepId) ?? tour.steps[0];

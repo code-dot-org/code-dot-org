@@ -150,6 +150,8 @@ const createQuizStep = (
   const lessonSelector = `#progress-lesson-${lesson}`;
   return {
     id: 'quiz-level-priority',
+    classes:
+      'custom-shepherd-onboarding-container onboarding-syllabus-review-level-step',
     attachTo: {
       element: lessonSelector,
       on: 'left',
