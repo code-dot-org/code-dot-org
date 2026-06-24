@@ -231,6 +231,8 @@ $(document).ready(() => {
         dependentStudentsCount={dependentStudentsCount}
         hasStudents={dependentStudentsCount > 0}
         isAdmin={isAdmin}
+        canDelete={deleteAccountMountPoint.dataset.canDelete === 'true'}
+        managedNote={deleteAccountMountPoint.dataset.managedNote}
       />,
       deleteAccountMountPoint,
       {

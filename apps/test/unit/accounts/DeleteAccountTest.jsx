@@ -66,6 +66,20 @@ describe('DeleteAccount', () => {
     }
   };
 
+  describe('when the account cannot be deleted', () => {
+    it('renders the managed-account notice instead of the delete button', () => {
+      renderComponent({
+        canDelete: false,
+        managedNote: 'Your teacher manages this account.',
+      });
+
+      screen.getByText('Your teacher manages this account.');
+      expect(
+        screen.queryByRole('button', {name: RegExp(i18n.deleteAccount(), 'i')})
+      ).not.toBeInTheDocument();
+    });
+  });
+
   describe('openDialog', () => {
     describe('when user is a student', () => {
       it('disables confirm button if password is required and not provided', async () => {

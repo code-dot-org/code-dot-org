@@ -45,6 +45,14 @@ export default class DeleteAccount extends React.Component {
     dependentStudentsCount: PropTypes.number.isRequired,
     hasStudents: PropTypes.bool.isRequired,
     isAdmin: PropTypes.bool.isRequired,
+    // When false, the account can't be deleted by the user (e.g. it's
+    // teacher-managed) and we render `managedNote` instead of the delete UI.
+    canDelete: PropTypes.bool,
+    managedNote: PropTypes.string,
+  };
+
+  static defaultProps = {
+    canDelete: true,
   };
 
   constructor(props) {
@@ -173,8 +181,34 @@ export default class DeleteAccount extends React.Component {
   };
 
   render() {
-    const {isTeacher, dependentStudentsCount, isPasswordRequired, isAdmin} =
-      this.props;
+    const {
+      isTeacher,
+      dependentStudentsCount,
+      isPasswordRequired,
+      isAdmin,
+      canDelete,
+      managedNote,
+    } = this.props;
+
+    // Teacher-managed (or otherwise non-deletable) accounts can't be deleted by
+    // the user; show the explanatory notice instead of the delete controls.
+    if (!canDelete) {
+      return (
+        <div className={styles.container}>
+          <hr className={styles.hr} />
+          <MuiTypography
+            variant="h5"
+            component="h2"
+            className={styles.header}
+            gutterBottom
+          >
+            {i18n.deleteAccount()}
+          </MuiTypography>
+          <MuiTypography variant="body2">{managedNote}</MuiTypography>
+        </div>
+      );
+    }
+
     const {
       isPersonalLoginDialogOpen,
       isAdminAccountDialogOpen,

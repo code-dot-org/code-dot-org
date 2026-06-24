@@ -168,13 +168,9 @@
 -# Mount point for the React ExpireOtherSessions component.
 #expire-other-sessions{data: {expire_path: expire_other_path, heading: t('user.expire_other_sessions'), description: t('user.expire_other_sessions_description'), button_label: t('user.expire_other_sessions_button')}}
 
-- if current_user.can_delete_own_account?
-  -# Mount point for React DeleteAccount component.
-  %div#delete-account
-- else
-  %hr.danger.account-page-section-break
-  %h2.danger= t('user.delete')
-  %p= t('user.delete_text_teacher_managed_note')
+-# Mount point for React DeleteAccount component. Renders either the delete UI
+-# or, for teacher-managed accounts, a notice that deletion isn't permitted.
+#delete-account{data: {can_delete: current_user.can_delete_own_account?, managed_note: t('user.delete_text_teacher_managed_note')}}
 
 -# Hidden form used to asynchronously submit an email change to Rails with the
 -# appropriate authenticity tokens.  See ChangeEmailModal.jsx for more details.
