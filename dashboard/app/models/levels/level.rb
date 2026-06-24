@@ -62,11 +62,11 @@ class Level < ApplicationRecord
   has_many :hint_view_requests
   has_many :rubrics, dependent: :destroy
 
-  scope :with_ai_tutor_available, lambda do
+  scope :with_ai_tutor_available, (lambda do
     where("levels.properties->>'$.ai_tutor_available' = 'true'").or(
       where("JSON_LENGTH(JSON_EXTRACT(levels.properties, '$.ai_tutor_prompt_settings.answerTypes')) > 0")
     )
-  end
+  end)
 
   # scope for levels that require ai chat tools to reasonably function.
   scope :with_essential_ai_chat_tools, -> {where(type: %w[Aichat Weblab2])}
