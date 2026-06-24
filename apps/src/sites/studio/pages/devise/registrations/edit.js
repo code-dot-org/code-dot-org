@@ -2,6 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import {Provider} from 'react-redux';
 
+import AccountEditHeader from '@cdo/apps/accounts/AccountEditHeader';
 import {AccountInformation} from '@cdo/apps/accounts/AccountInformation';
 import AddParentEmailController from '@cdo/apps/accounts/AddParentEmailController';
 import AddPasswordController from '@cdo/apps/accounts/AddPasswordController';
@@ -41,6 +42,22 @@ const {
 } = scriptData;
 
 $(document).ready(() => {
+  const accountEditHeaderMountPoint = document.getElementById(
+    'account-edit-header'
+  );
+  if (accountEditHeaderMountPoint) {
+    createReactRoot(
+      <AccountEditHeader
+        title={accountEditHeaderMountPoint.dataset.title}
+        backLabel={accountEditHeaderMountPoint.dataset.backLabel}
+      />,
+      accountEditHeaderMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
+    );
+  }
+
   const migrateMultiAuthMountPoint =
     document.getElementById('migrate-multi-auth');
   if (migrateMultiAuthMountPoint) {

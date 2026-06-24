@@ -8,11 +8,8 @@
 
 = render_parental_permission_banner(current_user, request)
 
-= link_to :back do
-  %i.fa-solid.fa-chevron-left
-  %span= t('crud.back')
-
-%h1.text-black= @page_title
+-# Mount point for the React AccountEditHeader (back link + page title).
+#account-edit-header{data: {title: @page_title, back_label: t('crud.back')}}
 
 - unless current_user.migrated?
   -# Mount point for React MigrateToMultiAuth component.

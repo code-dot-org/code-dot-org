@@ -1,19 +1,22 @@
+import Alert from '@code-dot-org/component-library/alert';
 import React from 'react';
 
-import Notification, {
-  NotificationType,
-} from '@cdo/apps/sharedComponents/Notification';
 import i18n from '@cdo/locale';
 
 export default function MigrateToMultiAuth() {
   return (
-    <Notification
-      type={NotificationType.information}
-      notice={i18n.migrateToMultiAuth_notice_v2()}
-      details={i18n.migrateToMultiAuth_details_v2()}
-      buttonText={i18n.migrateToMutiAuth_buttonText_v2()}
-      buttonLink="/users/migrate_to_multi_auth"
-      dismissible={false}
+    <Alert
+      type="info"
+      text={
+        <>
+          <strong>{i18n.migrateToMultiAuth_notice_v2()}</strong>{' '}
+          {i18n.migrateToMultiAuth_details_v2()}
+        </>
+      }
+      link={{
+        text: i18n.migrateToMutiAuth_buttonText_v2(),
+        href: '/users/migrate_to_multi_auth',
+      }}
     />
   );
 }
