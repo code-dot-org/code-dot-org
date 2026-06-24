@@ -21,6 +21,7 @@ import {
   setSaveStatus,
   setReserveLocation,
   setInstructionsDismissed,
+  setInstructionsEnabled,
   getTrainedModelDataToSave,
 } from './redux';
 import {store} from './store';
@@ -70,6 +71,7 @@ export const initAll = function (options: InitAllOptions): void {
   }
   if (options && options.setInstructionsKey) {
     setInstructionsKeyCallback(options.setInstructionsKey);
+    store.dispatch(setInstructionsEnabled(true));
   }
   store.dispatch(setMode(mode as Mode));
   processMode(mode);
