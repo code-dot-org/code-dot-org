@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-19 20:54:33 UTC",
+    "serialized_at": "2026-06-23 17:37:19 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -5473,24 +5473,24 @@
     },
     {
       "name": "All Resources",
-      "url": "/courses/artificial-intelligence-foundations-semester2-2026/units/2/resources",
-      "key": "all_resources_1",
+      "url": "/courses/ai-foundations-designing-and-building-with-ai-2026/units/2/resources",
+      "key": "all_resources_2",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_1"
+        "resource.key": "all_resources_2"
       }
     },
     {
-      "name": "All Vocabulary",
-      "url": "/courses/artificial-intelligence-foundations-semester2-2026/units/2/vocab",
-      "key": "all_vocabulary_1",
+      "name": "All Standards",
+      "url": "/courses/ai-foundations-designing-and-building-with-ai-2026/units/2/standards",
+      "key": "all_standards",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_vocabulary_1"
+        "resource.key": "all_standards"
       }
     },
     {
@@ -5956,13 +5956,13 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources_1",
+        "resource.key": "all_resources_2",
         "script.name": "ai-and-algorithmic-decisions-2026"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_vocabulary_1",
+        "resource.key": "all_standards",
         "script.name": "ai-and-algorithmic-decisions-2026"
       }
     }

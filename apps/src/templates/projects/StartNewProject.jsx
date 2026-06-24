@@ -164,8 +164,8 @@ export class StartNewProject extends React.Component {
             <MuiTypography
               className="new-project-heading"
               style={styles.headingStartNew}
-              variant="h4"
-              component="h4"
+              variant="h5"
+              component="h5"
             >
               {'Create a new project'}
             </MuiTypography>
