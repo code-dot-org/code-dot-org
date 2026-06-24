@@ -84,10 +84,6 @@ function TextNode({
   const handleKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLDivElement>) => {
       if (isEditing) {
-        if (event.key === 'Enter' && !event.shiftKey) {
-          event.preventDefault();
-          textRef.current?.closest<HTMLElement>('.react-flow__node')?.focus();
-        }
         if (event.key === 'Escape') {
           if (textRef.current) {
             textRef.current.textContent = text;

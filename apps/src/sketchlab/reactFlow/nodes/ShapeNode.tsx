@@ -144,10 +144,6 @@ function ShapeNode({
   const handleLabelKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLDivElement>) => {
       if (isEditing) {
-        if (event.key === 'Enter' && !event.shiftKey) {
-          event.preventDefault();
-          labelRef.current?.closest<HTMLElement>('.react-flow__node')?.focus();
-        }
         if (event.key === 'Escape') {
           if (labelRef.current) {
             labelRef.current.textContent = label;
