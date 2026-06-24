@@ -1,12 +1,9 @@
 import {refreshCsrfToken} from '../../csrfToken';
 import type {Transport} from '../../transports/types';
 import {
-  CurrentUserResponseSchema,
-  type CurrentUserResponse,
-} from './currentUserTypes';
-import {
   ContactDetailsSchema,
   CurrentPermissionsSchema,
+  CurrentUserResponseSchema,
   CurrentUserSchema,
   DonorTeacherBannerDetailsSchema,
   HasDismissedPersonalizationAlertSchema,
@@ -18,6 +15,7 @@ import {
 } from './users.schemata';
 import type {
   CreatePasswordParams,
+  CurrentUserResponse,
   DeleteUserParams,
   UpdateEmailParams,
   UpdateParentEmailParams,

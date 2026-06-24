@@ -1,10 +1,66 @@
 import camelcaseKeys from 'camelcase-keys';
 import {z} from 'zod';
 
-import {CurrentUserResponseSchema} from './currentUserTypes';
+/** Zod schema for a signed-out `/api/v1/users/current` response. */
+export const CurrentUserResponseSignedOutSchema = z.object({
+  is_signed_in: z.literal(false),
+});
 
-// Derived from the canonical currentUserTypes schema, not re-declared: a
-// hand-copied duplicate previously diverged from the endpoint.
+/** Zod schema for a signed-in `/api/v1/users/current` response. */
+export const CurrentUserResponseSignedInSchema = z.object({
+  is_signed_in: z.literal(true),
+
+  // Identity
+  id: z.number(),
+  username: z.string(),
+  display_name: z.string(),
+  short_name: z.string(),
+  user_type: z.enum(['student', 'teacher', 'admin']),
+
+  // Personalization / role signals
+  is_verified_instructor: z.boolean(),
+  is_levelbuilder: z.boolean(),
+  educator_role: z.string().nullable(),
+  grades_teaching: z.array(z.string()),
+
+  // Privacy / compliance signals
+  under_13: z.boolean(),
+  over_21: z.boolean(),
+  age: z.union([z.string(), z.number()]).nullable(),
+  country_code: z.string().nullable(),
+  us_state_code: z.string().nullable(),
+  child_account_compliance_state: z.string().nullable(),
+  sharing_disabled: z.boolean().nullable(),
+
+  // Preferences
+  mute_music: z.boolean(),
+  sort_by_family_name: z.boolean(),
+  has_seen_homepage_welcome: z.boolean(),
+  has_dismissed_personalization_alert: z.boolean(),
+
+  // AI gating
+  ai_chat_access_level: z.union([z.string(), z.number()]),
+  ai_rubrics_disabled: z.boolean().nullable(),
+  ai_differentiation_enabled: z.boolean(),
+  has_seen_ai_assessments_announcement: z.boolean(),
+  has_completed_ai_differentiation_welcome: z.boolean(),
+
+  // Session context
+  is_lti: z.boolean(),
+  // boolean for students (whether they're in a section); null for non-students.
+  in_section: z.boolean().nullable(),
+  created_at: z.string(),
+});
+
+/** Discriminated union schema for all `/api/v1/users/current` response shapes. */
+export const CurrentUserResponseSchema = z.discriminatedUnion('is_signed_in', [
+  CurrentUserResponseSignedOutSchema,
+  CurrentUserResponseSignedInSchema,
+]);
+
+// camelCase projection of the current-user response. Discriminate on
+// is_signed_in before camelCasing so a bad field surfaces a targeted error,
+// not an opaque union failure.
 export const CurrentUserSchema = CurrentUserResponseSchema.transform(data =>
   camelcaseKeys(data, {deep: true}),
 );
@@ -37,34 +93,34 @@ export const ContactDetailsSchema = z
   })
   .transform(data => camelcaseKeys(data, {deep: true}));
 
-export const DonorTeacherBannerDetailsTeacherSchema = z
-  .object({
-    user_type: z.literal('teacher'),
-    teacher_first_name: z.string().nullable(),
-    teacher_second_name: z.string().nullable(),
-    teacher_email: z.string().nullable(),
-    nces_school_id: z.string().nullable(),
-    school_name: z.string().nullable(),
-    school_address_1: z.string().nullable(),
-    school_address_2: z.string().nullable(),
-    school_address_3: z.string().nullable(),
-    school_city: z.string().nullable(),
-    school_state: z.string().nullable(),
-    school_zip: z.string().nullable(),
-    afe_high_needs: z.boolean().nullable(),
-  })
-  .transform(data => camelcaseKeys(data, {deep: true}));
+export const DonorTeacherBannerDetailsTeacherSchema = z.object({
+  user_type: z.literal('teacher'),
+  teacher_first_name: z.string().nullable(),
+  teacher_second_name: z.string().nullable(),
+  teacher_email: z.string().nullable(),
+  nces_school_id: z.string().nullable(),
+  school_name: z.string().nullable(),
+  school_address_1: z.string().nullable(),
+  school_address_2: z.string().nullable(),
+  school_address_3: z.string().nullable(),
+  school_city: z.string().nullable(),
+  school_state: z.string().nullable(),
+  school_zip: z.string().nullable(),
+  afe_high_needs: z.boolean().nullable(),
+});
 
-export const DonorTeacherBannerDetailsStudentSchema = z
-  .object({
-    user_type: z.literal('student'),
-  })
-  .transform(data => camelcaseKeys(data, {deep: true}));
+export const DonorTeacherBannerDetailsStudentSchema = z.object({
+  user_type: z.literal('student'),
+});
 
-export const DonorTeacherBannerDetailsSchema = z.union([
-  DonorTeacherBannerDetailsTeacherSchema,
-  DonorTeacherBannerDetailsStudentSchema,
-]);
+// Discriminate on user_type before camelCasing so a malformed payload fails on
+// the discriminant, not as an opaque union mismatch.
+export const DonorTeacherBannerDetailsSchema = z
+  .discriminatedUnion('user_type', [
+    DonorTeacherBannerDetailsTeacherSchema,
+    DonorTeacherBannerDetailsStudentSchema,
+  ])
+  .transform(data => camelcaseKeys(data, {deep: true}));
 
 export const CurrentPermissionsSchema = z.object({
   permissions: z.array(z.string()),

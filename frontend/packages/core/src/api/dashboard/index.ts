@@ -7,12 +7,6 @@ export * from './preferences';
 export * from './projects';
 export * from './sections';
 export * from './sources';
-export type {
-  CurrentUserResponse,
-  CurrentUserResponseSignedIn,
-  CurrentUserResponseSignedOut,
-} from './users/currentUserTypes';
-
 export {usersKeys} from './users/users.keys';
 export {
   useCurrentUser,
@@ -33,6 +27,9 @@ export {
 } from './users/users.schemata';
 export type {
   CurrentUser,
+  CurrentUserResponse,
+  CurrentUserResponseSignedIn,
+  CurrentUserResponseSignedOut,
   UserSettings,
   AuthenticationOptionSummary,
   UserType,

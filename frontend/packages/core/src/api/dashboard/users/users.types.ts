@@ -3,6 +3,9 @@ import {z} from 'zod';
 import {
   ContactDetailsSchema,
   CurrentPermissionsSchema,
+  CurrentUserResponseSchema,
+  CurrentUserResponseSignedInSchema,
+  CurrentUserResponseSignedOutSchema,
   CurrentUserSchema,
   DonorTeacherBannerDetailsSchema,
   HasDismissedPersonalizationAlertSchema,
@@ -13,6 +16,13 @@ import {
 } from './users.schemata';
 
 export type CurrentUser = z.infer<typeof CurrentUserSchema>;
+export type CurrentUserResponse = z.infer<typeof CurrentUserResponseSchema>;
+export type CurrentUserResponseSignedIn = z.infer<
+  typeof CurrentUserResponseSignedInSchema
+>;
+export type CurrentUserResponseSignedOut = z.infer<
+  typeof CurrentUserResponseSignedOutSchema
+>;
 export type NetsimSignedIn = z.infer<typeof NetsimSignedInSchema>;
 export type SchoolName = z.infer<typeof SchoolNameSchema>;
 export type ContactDetails = z.infer<typeof ContactDetailsSchema>;
