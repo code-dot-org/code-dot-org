@@ -31,7 +31,7 @@ const WorkspaceAlerts: React.FC<WorkspaceAlertsProps> = ({
       {teacherViewingStudent ? (
         <PairingNavigatorAlert
           inWorkspaceContainer={inWorkspaceContainer}
-          requirePairingDriver
+          isTeacherViewingStudent={true}
         />
       ) : (
         <PairingNavigatorAlert inWorkspaceContainer={inWorkspaceContainer} />

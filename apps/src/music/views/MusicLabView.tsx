@@ -437,7 +437,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               {teacherViewingStudent ? (
                 <PairingNavigatorAlert
                   inWorkspaceContainer
-                  requirePairingDriver
+                  isTeacherViewingStudent={true}
                 />
               ) : (
                 <PairingNavigatorAlert inWorkspaceContainer />

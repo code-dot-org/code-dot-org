@@ -387,7 +387,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
           )}
           {teacherViewingStudent && <TeacherViewingStudentProjectAlert />}
           {teacherViewingStudent ? (
-            <PairingNavigatorAlert requirePairingDriver />
+            <PairingNavigatorAlert isTeacherViewingStudent={true} />
           ) : (
             <PairingNavigatorAlert />
           )}

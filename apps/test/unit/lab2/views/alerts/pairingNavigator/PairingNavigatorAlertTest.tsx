@@ -39,23 +39,42 @@ describe('PairingNavigatorAlert', () => {
     render(<PairingNavigatorAlert />);
 
     const link = screen.getByRole('link', {
-      name: 'Click here to view the solution that was created as a team.',
+      name: 'Click here to view the solution you created as a team.',
     });
     expect(link).toHaveAttribute('href', '/level_solutions/123/edit');
     expect(
-      screen.getByText('This level was completed while pair programming with')
+      screen.getByText('This level was completed while pairing with')
     ).toBeInTheDocument();
     expect(screen.getByText('A Student')).toBeInTheDocument();
   });
 
-  it('renders nothing with requirePairingDriver when driver info is missing', () => {
+  it('renders teacher-view link copy when teacher is viewing student work', () => {
+    setLevelProperties({
+      isNavigator: true,
+      appName: 'music',
+      pairingDriver: 'A Student',
+      pairingAttempt: '/level_solutions/123/edit',
+    });
+
+    render(<PairingNavigatorAlert isTeacherViewingStudent={true} />);
+
+    expect(
+      screen.getByRole('link', {
+        name: 'Click here to view the solution this student created as a team.',
+      })
+    ).toBeInTheDocument();
+  });
+
+  it('renders nothing in teacher view when driver info is missing', () => {
     setLevelProperties({
       isNavigator: true,
       appName: 'music',
       pairingChannelId: 'abc123',
     });
 
-    const {container} = render(<PairingNavigatorAlert requirePairingDriver />);
+    const {container} = render(
+      <PairingNavigatorAlert isTeacherViewingStudent={true} />
+    );
     expect(container).toBeEmptyDOMElement();
   });
 });
