@@ -244,8 +244,6 @@ steps:
         from_secret: CLOUDFRONT_KEY_PAIR_ID
       CLOUDFRONT_PRIVATE_KEY:
         from_secret: CLOUDFRONT_PRIVATE_KEY
-      CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
-        from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
       PROPERTIES_ENCRYPTION_KEY:
         from_secret: PROPERTIES_ENCRYPTION_KEY
       SAUCE_USERNAME:
@@ -376,6 +374,6 @@ trigger:
 
 ---
 kind: signature
-hmac: e75b83c2d058f6f4465e93bf9ebaf9ce75b9120378e5a9198e27eae5599ce56e
+hmac: f5387d563161484158803e6b3218a9ce188d72ac9ffd0a5dfc632260dd42f6c9
 
 ...
