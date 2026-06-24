@@ -1,11 +1,10 @@
-import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
+import color from '@cdo/apps/util/color';
+
 import RollupLessonEntrySection from './RollupLessonEntrySection';
 import {lessonShape} from './rollupShapes';
-
-import style from './courseRollup.module.scss';
 
 export default class RollupLessonEntry extends Component {
   static propTypes = {
@@ -15,19 +14,13 @@ export default class RollupLessonEntry extends Component {
 
   render() {
     return (
-      <div className={style.lessonEntry}>
-        <div className={style.lessonHeader}>
-          <a href={this.props.lesson.link} className={style.lessonLink}>
-            <Typography
-              variant="inherit"
-              component="h3"
-              className={style.lessonTitle}
-            >
-              {this.props.lesson.title}
-            </Typography>
+      <div style={styles.main}>
+        <div style={styles.header}>
+          <a href={this.props.lesson.link} style={styles.link}>
+            <h3>{this.props.lesson.title}</h3>
           </a>
         </div>
-        <div className={style.lessonEntries}>
+        <div style={styles.entries}>
           <RollupLessonEntrySection
             objectToRollUp={this.props.objectToRollUp}
             lesson={this.props.lesson}
@@ -43,3 +36,30 @@ export default class RollupLessonEntry extends Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    width: '100%',
+  },
+  header: {
+    backgroundColor: color.purple,
+    color: color.white,
+    border: 'solid 1px' + color.charcoal,
+    padding: '0px 10px',
+  },
+  object: {
+    backgroundColor: color.lightest_gray,
+    color: color.charcoal,
+    border: 'solid 1px' + color.charcoal,
+    padding: '0px 10px',
+  },
+  entries: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'stretch',
+    alignContent: 'stretch',
+  },
+  link: {
+    color: color.white,
+  },
+};

@@ -36,7 +36,9 @@ describe('RollupLessonEntrySection', () => {
       />
     );
 
-    expect(wrapper.text()).toContain(i18n.rollupNoResources());
+    expect(
+      wrapper.containsMatchingElement(<p>{i18n.rollupNoResources()}</p>)
+    ).toBe(true);
   });
 
   it('renders list of prep when there is prep', () => {
@@ -65,7 +67,9 @@ describe('RollupLessonEntrySection', () => {
       />
     );
 
-    expect(wrapper.text()).toContain(i18n.rollupNoPrep());
+    expect(wrapper.containsMatchingElement(<p>{i18n.rollupNoPrep()}</p>)).toBe(
+      true
+    );
   });
 
   it('renders list of vocab when there is vocab', () => {
@@ -89,7 +93,9 @@ describe('RollupLessonEntrySection', () => {
       />
     );
 
-    expect(wrapper.text()).toContain(i18n.rollupNoVocab());
+    expect(wrapper.containsMatchingElement(<p>{i18n.rollupNoVocab()}</p>)).toBe(
+      true
+    );
   });
 
   it('renders list of code when there is code', () => {
@@ -109,7 +115,9 @@ describe('RollupLessonEntrySection', () => {
       />
     );
 
-    expect(wrapper.text()).toContain(i18n.rollupNoCode());
+    expect(wrapper.containsMatchingElement(<p>{i18n.rollupNoCode()}</p>)).toBe(
+      true
+    );
   });
 
   it('renders list of standards when there are standards', () => {
@@ -136,6 +144,8 @@ describe('RollupLessonEntrySection', () => {
       />
     );
 
-    expect(wrapper.text()).toContain(i18n.rollupNoStandards());
+    expect(
+      wrapper.containsMatchingElement(<p>{i18n.rollupNoStandards()}</p>)
+    ).toBe(true);
   });
 });
