@@ -290,12 +290,33 @@ export const useInstructionsDrawer = ({
       ? undefined
       : containerAvailableHeight + RESIZE_BAR_SIZE_PX;
 
-  // The chat is laid out at the full panel height and bottom-anchored; the chat
-  // panel (a flex item that fills the space left below the instructions drawer)
-  // clips it. Keeping this height constant means the chat never reflows as the
-  // drawer opens, closes, or the tab changes — only the clip moves — so the
-  // message input stays put.
-  const chatContentHeight = fullHeight;
+  // The instructions drawer height when the AI Tutor tab is active — computed
+  // independent of the current tab, so the chat's size below is stable across a
+  // tab switch.
+  const activeInstructionsHeight =
+    containerAvailableHeight === undefined
+      ? undefined
+      : isCollapsed
+      ? 0
+      : Math.min(
+          rawInstructionsHeight,
+          containerAvailableHeight - MIN_CHAT_HEIGHT
+        );
+
+  // The chat's height when shown on the AI Tutor tab: the visible area below the
+  // drawer, so its messages sit just below the instructions (not behind them).
+  // Computed independent of the current tab so it stays constant across a tab
+  // switch — the flex chat panel then clips/reveals it in place rather than the
+  // chat reflowing.
+  const chatContentHeight =
+    containerAvailableHeight === undefined
+      ? undefined
+      : isCollapsed
+      ? fullHeight
+      : Math.max(
+          containerAvailableHeight - (activeInstructionsHeight ?? 0),
+          MIN_CHAT_HEIGHT
+        );
 
   return {
     containerRef,

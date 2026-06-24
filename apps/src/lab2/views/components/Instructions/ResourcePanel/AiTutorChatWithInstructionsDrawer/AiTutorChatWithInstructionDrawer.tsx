@@ -135,15 +135,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
       <div
         ref={instructionsDrawerRef}
         id="instructions-drawer"
-        className={classNames(
-          styles.instructionsDrawer,
-          // Only zero the padding once the drawer has fully collapsed; keeping it
-          // during the collapse animation preserves the grey instructions box's
-          // inset from the panel edges instead of snapping it flush.
-          !showInstructions &&
-            drawerSettledClosed &&
-            styles.instructionsDrawerHidden
-        )}
+        className={styles.instructionsDrawer}
         style={{height: drawerHeight}}
         aria-hidden={!showInstructions}
       >
