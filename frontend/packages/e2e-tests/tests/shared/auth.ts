@@ -15,7 +15,7 @@ export interface CreateUserOptions {
   /** Defaults to 2. Pass 0 for a "never signed in" account (new_account=true in Cucumber). */
   signInCount?: number;
   /** Extra fields merged into the `user` body sent to /api/test/create_user. */
-  extraFields?: Record<string, unknown>;
+  extraFields?: Record<string, string | number | boolean>;
 }
 
 /** Clear the session (cookies) so the next createUser/signIn starts clean. */
