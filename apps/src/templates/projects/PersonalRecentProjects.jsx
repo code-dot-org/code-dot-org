@@ -23,7 +23,7 @@ class PersonalRecentProjects extends Component {
         <MuiTypography
           style={styles.description}
           variant="h5"
-          component="h5"
+          component="h4"
           gutterBottom
         >
           {i18n.projectsContinueWorking()}
