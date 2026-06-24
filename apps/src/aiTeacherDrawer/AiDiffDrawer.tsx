@@ -102,6 +102,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
           unreadNotificationCount={unreadNotificationCount}
           showSidebar={showChatList}
           onSidebarChatSelect={() => setShowChatList(false)}
+          onViewThreads={() => setShowChatList(true)}
         />
       );
     }

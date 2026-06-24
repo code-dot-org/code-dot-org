@@ -50,6 +50,8 @@ interface AiDiffChatProps {
   chatResponseCallback?: () => void;
   hideChatHeader?: boolean;
   threadFetchCallback?: () => void;
+  onNewChat?: () => void;
+  onViewThreads?: () => void;
   personalizationData?: PersonalizationData;
 }
 
@@ -91,6 +93,8 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   chatResponseCallback = () => {},
   hideChatHeader = false,
   threadFetchCallback = () => {},
+  onNewChat,
+  onViewThreads,
   personalizationData,
 }) => {
   const [userMessage, setUserMessage] = useState<string>('');
@@ -340,6 +344,8 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
       {!hideChatHeader && (
         <AiDiffChatHeader
           onSuggestPrompts={onSuggestPrompts}
+          onNewChat={onNewChat}
+          onViewThreads={onViewThreads}
           messages={threadMessages}
           threadTitle={threadTitle}
           personalizationData={personalizationData}

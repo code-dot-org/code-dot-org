@@ -25,6 +25,7 @@ interface AiDiffWorkSpaceProps {
   setArtifactMessageId?: (id: number) => void;
   showSidebar?: boolean;
   onSidebarChatSelect?: () => void;
+  onViewThreads?: () => void;
 }
 
 const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
@@ -35,6 +36,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   personalizationData,
   showSidebar = false,
   onSidebarChatSelect,
+  onViewThreads,
 }) => {
   const [threads, setThreads] = useState<ChatThread[]>();
   const [showNotifications, setShowNotifications] = useState<boolean>(false);
@@ -64,6 +66,16 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
     fetchThreads();
     dispatch(asyncLoadSectionData());
   }, [fetchThreads, dispatch]);
+
+  const handleNewChat = useCallback(() => {
+    dispatch(
+      fetchThreadMessages({
+        contextType: context.type,
+        thread: 0,
+        curriculumCourses: curriculumCourses,
+      })
+    );
+  }, [dispatch, context, curriculumCourses]);
 
   const aiPromptOutsideChatClicked = useCallback(
     (label: string, prompt: string) => {
@@ -117,6 +129,8 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
           context={context}
           scriptName={scriptName}
           threadFetchCallback={fetchThreads}
+          onNewChat={handleNewChat}
+          onViewThreads={onViewThreads}
           personalizationData={personalizationData}
         />
       )}
