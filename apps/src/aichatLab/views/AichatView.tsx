@@ -385,8 +385,12 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
               <SegmentedButtons {...viewModeButtonsProps} />
             </div>
           )}
-          <PairingNavigatorAlert />
           {teacherViewingStudent && <TeacherViewingStudentProjectAlert />}
+          {teacherViewingStudent ? (
+            <PairingNavigatorAlert requirePairingDriver />
+          ) : (
+            <PairingNavigatorAlert />
+          )}
           <div className={moduleStyles.labCoreContainer}>
             {viewMode === ViewMode.EDIT && (
               <>

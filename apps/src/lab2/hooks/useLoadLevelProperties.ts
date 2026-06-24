@@ -35,21 +35,29 @@ async function loadLevelProperties(path: string) {
 export default function useLoadLevelProperties() {
   const dispatch = useAppDispatch();
   const [propertiesMap, setPropertiesMap] = useState<LevelPropertiesMap>();
+  const viewAsUserId = useAppSelector(({progress}) => progress.viewAsUserId);
 
   const path = useAppSelector(({progress}) => {
     const {scriptName, currentLevelId, lessons, currentLessonId} = progress;
     const lessonPosition = lessons?.find(
       lesson => lesson.id === currentLessonId
     )?.position;
+    const searchParams = new URLSearchParams();
+    if (viewAsUserId) {
+      searchParams.set('user_id', viewAsUserId.toString());
+    }
+    if (widget2Id) {
+      searchParams.set('widget2', widget2Id.toString());
+    }
+    const queryString = searchParams.toString();
+    const querySuffix = queryString ? `?${queryString}` : '';
     if (scriptName && lessonPosition) {
       return useLessonIdPath
-        ? `/lessons/${currentLessonId}/level_properties`
-        : `/s/${scriptName}/lessons/${lessonPosition}/level_properties`;
+        ? `/lessons/${currentLessonId}/level_properties${querySuffix}`
+        : `/s/${scriptName}/lessons/${lessonPosition}/level_properties${querySuffix}`;
     }
     if (currentLevelId) {
-      return `/levels/${currentLevelId}/level_properties${
-        widget2Id ? `?widget2=${widget2Id}` : ''
-      }`;
+      return `/levels/${currentLevelId}/level_properties${querySuffix}`;
     }
   });
 

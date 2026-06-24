@@ -276,7 +276,10 @@ class LessonsController < ApplicationController
     end
     raise ActiveRecord::RecordNotFound unless @lesson
 
-    render json: @lesson.summarize_for_lab2_properties(@current_user, unit_group_unit: unit_group_unit)
+    render json: @lesson.summarize_for_lab2_properties(
+      user_for_lab2_level_properties,
+      unit_group_unit: unit_group_unit
+    )
   end
 
   # GET /lessons/:id/level_properties
@@ -285,7 +288,21 @@ class LessonsController < ApplicationController
     # TODO: unit_group_unit is only used here for a couple user-specific properties in level.rb,
     # which should be moved to a different user-specific API, after which we can remove this parameter.
     unit_group_unit = unit_context[:unit_group_unit]
-    render json: @lesson.summarize_for_lab2_properties(@current_user, unit_group_unit: unit_group_unit)
+    render json: @lesson.summarize_for_lab2_properties(
+      user_for_lab2_level_properties,
+      unit_group_unit: unit_group_unit
+    )
+  end
+
+  private def user_for_lab2_level_properties
+    return @current_user unless params[:user_id].present? && current_user
+
+    requested_user = User.find_by(id: params[:user_id])
+    return @current_user unless requested_user
+    return requested_user if requested_user.id == current_user.id
+    return requested_user if requested_user.student_of?(current_user)
+
+    @current_user
   end
 
   # We have two urls you can use to edit a lesson with a lesson plan. This does the

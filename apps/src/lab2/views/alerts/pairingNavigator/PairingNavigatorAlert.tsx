@@ -11,11 +11,14 @@ type PairingNavigatorAlertProps = {
   inWorkspaceContainer?: boolean;
   /** Optional custom className */
   className?: string;
+  /** Only render when pairing driver info exists */
+  requirePairingDriver?: boolean;
 };
 
 const PairingNavigatorAlert: React.FC<PairingNavigatorAlertProps> = ({
   inWorkspaceContainer,
   className,
+  requirePairingDriver,
 }) => {
   const levelProperties = useAppSelector(state => state.lab.levelProperties);
 
@@ -27,14 +30,20 @@ const PairingNavigatorAlert: React.FC<PairingNavigatorAlertProps> = ({
     ? `/projects/${levelProperties.appName}/${levelProperties.pairingChannelId}/view`
     : undefined;
   const pairingLink = levelProperties.pairingAttempt || projectViewPath;
+  if (
+    requirePairingDriver &&
+    (!levelProperties.pairingDriver || !pairingLink)
+  ) {
+    return null;
+  }
 
   const alertText = levelProperties.pairingDriver ? (
     <>
-      You completed this level while pair programming with{' '}
+      This level was completed while pair programming with{' '}
       <strong>{levelProperties.pairingDriver}</strong>.{' '}
       {pairingLink && (
         <a className={moduleStyles.projectLink} href={pairingLink}>
-          Click here to view the solution you created as a team.
+          Click here to view the solution that was created as a team.
         </a>
       )}
     </>

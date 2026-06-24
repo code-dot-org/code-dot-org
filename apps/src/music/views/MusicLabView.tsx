@@ -431,9 +431,16 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               }
               headerClassName={moduleStyles.headerWithBorder}
             >
-              <PairingNavigatorAlert inWorkspaceContainer />
               {teacherViewingStudent && (
                 <TeacherViewingStudentProjectAlert inWorkspaceContainer />
+              )}
+              {teacherViewingStudent ? (
+                <PairingNavigatorAlert
+                  inWorkspaceContainer
+                  requirePairingDriver
+                />
+              ) : (
+                <PairingNavigatorAlert inWorkspaceContainer />
               )}
               {viewingOldVersion && (
                 <div
