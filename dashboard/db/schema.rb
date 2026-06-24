@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_05_29_211033) do
+ActiveRecord::Schema[7.0].define(version: 2026_06_17_130000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -2102,6 +2102,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_29_211033) do
     t.datetime "updated_at", null: false
     t.string "s3_config_dir"
     t.index ["lesson_id", "level_id"], name: "index_rubrics_on_lesson_id_and_level_id", unique: true
+    t.index ["lesson_id"], name: "index_rubrics_on_lesson_id", unique: true
   end
 
   create_table "school_districts", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2200,21 +2201,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_29_211033) do
     t.index ["name", "city"], name: "index_schools_on_name_and_city", type: :fulltext
     t.index ["school_district_id"], name: "index_schools_on_school_district_id"
     t.index ["zip"], name: "index_schools_on_zip"
-  end
-
-  create_table "scrapbook_entries", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "script_id"
-    t.integer "level_id"
-    t.string "channel_id"
-    t.string "before_asset_url"
-    t.string "after_asset_url"
-    t.text "entry_text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id", "channel_id"], name: "index_scrapbook_entries_on_user_id_and_channel_id", unique: true
-    t.index ["user_id", "script_id", "level_id"], name: "index_scrapbook_entries_on_user_id_and_script_id_and_level_id", unique: true
-    t.index ["user_id"], name: "index_scrapbook_entries_on_user_id"
   end
 
   create_table "script_levels", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2718,6 +2704,20 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_29_211033) do
     t.index ["user_id", "permission"], name: "index_user_permissions_on_user_id_and_permission", unique: true
   end
 
+  create_table "user_practice_problem_attempts", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "practice_problem_id", null: false
+    t.json "attempt", null: false
+    t.boolean "correct", null: false
+    t.text "ai_feedback"
+    t.string "delivery_context_type", null: false
+    t.json "delivery_context_metadata"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["practice_problem_id"], name: "index_user_practice_problem_attempts_on_practice_problem_id"
+    t.index ["user_id"], name: "index_user_practice_problem_attempts_on_user_id"
+  end
+
   create_table "user_preferences", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.json "section_order"
@@ -2732,7 +2732,9 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_29_211033) do
   create_table "user_product_tours", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "tour_name", null: false
-    t.datetime "completed_at", null: false
+    t.datetime "completed_at"
+    t.datetime "started_at"
+    t.json "properties"
     t.index ["user_id", "tour_name"], name: "index_user_product_tours_on_user_id_and_tour_name", unique: true
   end
 
@@ -2967,7 +2969,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_29_211033) do
   add_foreign_key "school_infos", "schools"
   add_foreign_key "school_stats_by_years", "schools"
   add_foreign_key "schools", "school_districts"
-  add_foreign_key "scrapbook_entries", "users"
   add_foreign_key "scripts", "unit_groups", column: "original_unit_group_id"
   add_foreign_key "section_instructors", "users", column: "instructor_id"
   add_foreign_key "section_instructors", "users", column: "invited_by_id"

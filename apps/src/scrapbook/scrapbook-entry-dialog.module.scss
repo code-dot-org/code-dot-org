@@ -27,10 +27,8 @@
 }
 
 .screenshotLabel {
-  font-size: 11px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  // Type scale comes from the MUI Typography overline3 variant; this only
+  // tints it to secondary.
   color: var(--text-neutral-secondary);
 }
 
@@ -56,11 +54,12 @@
 }
 
 .stemLabel {
+  // Type scale comes from the MUI Typography body3 variant; this handles
+  // layout (label column) and the italic secondary treatment.
   min-width: 80px;
   padding-top: 10px;
   font-style: italic;
   color: var(--text-neutral-secondary);
-  font-size: 14px;
 }
 
 .stemField {
@@ -88,8 +87,9 @@
 }
 
 .error {
+  // Type scale comes from the MUI Typography body4 variant; this only tints
+  // it to the error color.
   color: var(--text-error);
-  font-size: 13px;
 }
 
 .experimentChipRow {

@@ -7,10 +7,8 @@
 }
 
 .title {
+  // Type scale comes from the MUI Typography h3 variant; this only spaces it.
   margin: 0 0 24px;
-  font-size: 28px;
-  font-weight: bold;
-  color: var(--text-neutral-primary);
 }
 
 .empty {
@@ -93,34 +91,6 @@
   }
 }
 
-.iconButton {
-  padding: 6px;
-  border: none;
-  background: transparent;
-  color: var(--text-neutral-secondary);
-  cursor: pointer;
-  border-radius: 4px;
-
-  &:hover {
-    background: var(--background-neutral-secondary);
-    color: var(--text-neutral-primary);
-  }
-}
-
-.deleteButton {
-  padding: 6px;
-  border: none;
-  background: transparent;
-  color: var(--text-neutral-secondary);
-  cursor: pointer;
-  border-radius: 4px;
-
-  &:hover {
-    color: var(--text-error);
-    background: var(--background-neutral-secondary);
-  }
-}
-
 .cardActions {
   display: flex;
   align-items: center;
@@ -146,10 +116,8 @@
 }
 
 .screenshotLabel {
-  font-size: 11px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  // Type scale comes from the MUI Typography overline3 variant; this only
+  // tints it to secondary.
   color: var(--text-neutral-secondary);
 }
 
@@ -168,12 +136,6 @@
   gap: 12px;
 }
 
-.meta {
-  font-size: 20px;
-  font-weight: bold;
-  color: var(--text-neutral-primary);
-}
-
 .stemBlock {
   display: flex;
   flex-direction: column;
@@ -181,22 +143,21 @@
 }
 
 .stemHeading {
-  font-size: 13px;
+  // Type scale comes from the MUI Typography body4 variant.
   font-style: italic;
   color: var(--text-neutral-secondary);
 }
 
 .stemText {
-  font-size: 15px;
-  color: var(--text-neutral-primary);
+  // Type scale comes from the MUI Typography body3 variant.
   white-space: pre-wrap;
   word-break: break-word;
 }
 
 .stemEmpty {
-  font-size: 14px;
-  color: var(--text-neutral-secondary);
+  // Type scale comes from the MUI Typography body3 variant.
   font-style: italic;
+  color: var(--text-neutral-secondary);
 }
 
 .levelLink {

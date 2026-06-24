@@ -17,7 +17,11 @@ import {
   useSortable,
 } from '@dnd-kit/sortable';
 import {CSS} from '@dnd-kit/utilities';
-import {Link as MuiLink} from '@mui/material';
+import {
+  IconButton as MuiIconButton,
+  Link as MuiLink,
+  Typography as MuiTypography,
+} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -106,17 +110,25 @@ export default function ScrapbookGallery({userName}: Props) {
 
   return (
     <div className={moduleStyles.page}>
-      <h1 className={moduleStyles.title}>{userName}&rsquo;s Scrapbook</h1>
-      {error && <div className={moduleStyles.error}>{error}</div>}
+      <MuiTypography variant="h3" className={moduleStyles.title}>
+        {userName}&rsquo;s Scrapbook
+      </MuiTypography>
+      {error && (
+        <MuiTypography variant="body2" className={moduleStyles.error}>
+          {error}
+        </MuiTypography>
+      )}
       {!error && entries === null && (
-        <div className={moduleStyles.loading}>Loading...</div>
+        <MuiTypography variant="body2" className={moduleStyles.loading}>
+          Loading...
+        </MuiTypography>
       )}
       {!error && entries !== null && entries.length === 0 && (
-        <div className={moduleStyles.empty}>
+        <MuiTypography variant="body2" className={moduleStyles.empty}>
           No key learning moments saved yet. Click the{' '}
           <FontAwesomeV6Icon iconName="thumbtack" /> button on any level or
           project to add one.
-        </div>
+        </MuiTypography>
       )}
       {!error && entries !== null && entries.length > 0 && (
         <DndContext
@@ -212,42 +224,45 @@ function SortableEntryCard({
           <FontAwesomeV6Icon iconName="grip-vertical" />
         </div>
         <div className={moduleStyles.cardActions}>
-          <button
-            type="button"
-            className={moduleStyles.iconButton}
+          <MuiIconButton
+            variant="text"
+            color="secondary"
+            size="small"
             onClick={() => setIsWide(w => !w)}
             aria-label={isWide ? 'Shrink to row' : 'Expand to full row'}
             title={isWide ? 'Shrink to row' : 'Expand to full row'}
           >
             <FontAwesomeV6Icon iconName={isWide ? 'compress' : 'expand'} />
-          </button>
-          <button
-            type="button"
-            className={moduleStyles.iconButton}
+          </MuiIconButton>
+          <MuiIconButton
+            variant="text"
+            color="secondary"
+            size="small"
             onClick={onEditRequested}
             aria-label="Edit entry"
             title="Edit entry"
           >
             <FontAwesomeV6Icon iconName="pen-to-square" />
-          </button>
-          <button
-            type="button"
-            className={moduleStyles.deleteButton}
+          </MuiIconButton>
+          <MuiIconButton
+            variant="text"
+            color="error"
+            size="small"
             onClick={onDeleteRequested}
             aria-label="Delete entry"
             title="Delete entry"
           >
             <FontAwesomeV6Icon iconName="trash" />
-          </button>
+          </MuiIconButton>
         </div>
       </div>
       <div className={moduleStyles.cardBody}>
-        <div className={moduleStyles.meta}>
+        <MuiTypography variant="h5">
           {entry.script_title ||
             (entry.channel_id
               ? 'Standalone project'
               : `Script ${entry.script_id}`)}
-        </div>
+        </MuiTypography>
         {SCRAPBOOK_STEMS.map(({key, label}) => (
           <Stem
             key={key}
@@ -269,7 +284,12 @@ function SortableEntryCard({
         <div className={moduleStyles.cardScreenshots}>
           {entry.before_asset_url && (
             <div className={moduleStyles.screenshotSlot}>
-              <div className={moduleStyles.screenshotLabel}>Before</div>
+              <MuiTypography
+                variant="overline3"
+                className={moduleStyles.screenshotLabel}
+              >
+                Before
+              </MuiTypography>
               <img
                 src={entry.before_asset_url}
                 alt="before"
@@ -279,7 +299,12 @@ function SortableEntryCard({
           )}
           {entry.after_asset_url && (
             <div className={moduleStyles.screenshotSlot}>
-              <div className={moduleStyles.screenshotLabel}>After</div>
+              <MuiTypography
+                variant="overline3"
+                className={moduleStyles.screenshotLabel}
+              >
+                After
+              </MuiTypography>
               <img
                 src={entry.after_asset_url}
                 alt="after"
@@ -296,11 +321,17 @@ function SortableEntryCard({
 function Stem({heading, text}: {heading: string; text: string | null}) {
   return (
     <div className={moduleStyles.stemBlock}>
-      <div className={moduleStyles.stemHeading}>{heading}</div>
+      <MuiTypography variant="body4" className={moduleStyles.stemHeading}>
+        {heading}
+      </MuiTypography>
       {text ? (
-        <div className={moduleStyles.stemText}>{text}</div>
+        <MuiTypography variant="body3" className={moduleStyles.stemText}>
+          {text}
+        </MuiTypography>
       ) : (
-        <div className={moduleStyles.stemEmpty}>(no reflection)</div>
+        <MuiTypography variant="body3" className={moduleStyles.stemEmpty}>
+          (no reflection)
+        </MuiTypography>
       )}
     </div>
   );

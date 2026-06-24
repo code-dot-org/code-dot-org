@@ -1,5 +1,9 @@
 import {Dialog} from '@code-dot-org/component-library/dialog';
-import {Button as MuiButton, Chip as MuiChip} from '@mui/material';
+import {
+  Button as MuiButton,
+  Chip as MuiChip,
+  Typography as MuiTypography,
+} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 import {createPortal} from 'react-dom';
 
@@ -211,7 +215,12 @@ export default function ScrapbookEntryDialog({
           <div className={moduleStyles.stems}>
             {SCRAPBOOK_STEMS.map(({key, label}) => (
               <div key={key} className={moduleStyles.stemRow}>
-                <span className={moduleStyles.stemLabel}>{label}</span>
+                <MuiTypography
+                  variant="body3"
+                  className={moduleStyles.stemLabel}
+                >
+                  {label}
+                </MuiTypography>
                 <textarea
                   className={moduleStyles.stemField}
                   rows={2}
@@ -223,7 +232,11 @@ export default function ScrapbookEntryDialog({
               </div>
             ))}
           </div>
-          {error && <div className={moduleStyles.error}>{error}</div>}
+          {error && (
+            <MuiTypography variant="body4" className={moduleStyles.error}>
+              {error}
+            </MuiTypography>
+          )}
         </div>
       }
     />,
@@ -246,7 +259,12 @@ function ScreenshotSlot({
 
   return (
     <div className={moduleStyles.screenshotSlot}>
-      <span className={moduleStyles.screenshotLabel}>{label}</span>
+      <MuiTypography
+        variant="overline3"
+        className={moduleStyles.screenshotLabel}
+      >
+        {label}
+      </MuiTypography>
       <img
         src={
           url ||
