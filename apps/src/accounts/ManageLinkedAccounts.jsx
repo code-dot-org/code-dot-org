@@ -392,8 +392,8 @@ class OauthConnection extends React.Component {
                   protocols). */}
               <MuiButton
                 type="submit"
-                variant={isConnected ? 'outlined' : 'contained'}
-                color={isConnected ? 'secondary' : 'primary'}
+                variant="outlined"
+                color="secondary"
                 size="small"
                 style={styles.button}
                 disabled={!!disabledMessage}

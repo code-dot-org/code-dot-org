@@ -30,8 +30,8 @@ export default function ExpireOtherSessions({
         <RailsAuthenticityToken />
         <MuiButton
           type="submit"
-          variant="contained"
-          color="primary"
+          variant="outlined"
+          color="secondary"
           size="small"
         >
           {buttonLabel}
