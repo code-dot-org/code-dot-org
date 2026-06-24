@@ -1,40 +1,29 @@
 /* React component to show information about the currently-selected data set. */
-import {connect} from 'react-redux';
-
 import {styles} from '../constants';
 import {getDatasetDetails} from '../helpers/datasetDetails';
+import {shallowEqual, useAppSelector} from '../hooks';
 import I18n from '../i18n';
-import type {RootState} from '../redux';
-import type {Metadata, DatasetDetails} from '../types';
 
 import ScrollableContent from './ScrollableContent';
 
-interface DataCardProps {
-  name?: string;
-  metadata: Metadata;
-  datasetDetails: DatasetDetails;
-  dataLength?: number;
-  removedRowsCount?: number;
-}
+const DataCard = () => {
+  const name = useAppSelector(state => state.name);
+  const metadata = useAppSelector(state => state.metadata);
+  const datasetDetails = useAppSelector(getDatasetDetails, shallowEqual);
+  const dataLength = useAppSelector(state => state.data.length);
+  const removedRowsCount = useAppSelector(state => state.removedRowsCount);
 
-const DataCard = ({
-  name,
-  metadata,
-  datasetDetails,
-  dataLength,
-  removedRowsCount,
-}: DataCardProps) => {
   const card = metadata?.card;
 
   const dataLengthLimit = 20000;
-  if (dataLength! > dataLengthLimit) {
+  if (dataLength > dataLengthLimit) {
     window.alert(
       I18n.t('dataCardWarningLargeDataset', {rowCount: dataLengthLimit}),
     );
   }
 
   const removedRowsMsg =
-    removedRowsCount! > 0
+    removedRowsCount > 0
       ? I18n.t('dataCardRemovedRows', {rowCount: removedRowsCount})
       : null;
 
@@ -94,7 +83,7 @@ const DataCard = ({
               )}
             </div>
           )}
-          {!card && dataLength! > 0 && (
+          {!card && dataLength > 0 && (
             <div>
               <br />
               <div style={styles.cardRow}>
@@ -117,10 +106,4 @@ const DataCard = ({
   );
 };
 
-export default connect((state: RootState) => ({
-  name: state.name,
-  metadata: state.metadata,
-  datasetDetails: getDatasetDetails(state),
-  dataLength: state.data.length,
-  removedRowsCount: state.removedRowsCount,
-}))(DataCard);
+export default DataCard;

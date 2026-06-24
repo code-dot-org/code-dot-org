@@ -24,12 +24,14 @@ let mockState: {
 };
 
 let mockAiTutorDisabled = false;
+let mockEnableUserAddedSelectionContext = true;
 
 jest.mock('@codebridge/codebridgeContext', () => ({
   useCodebridgeContext: jest.fn(() => ({
     config: {supportedFileTypes: ['html']},
     levelProperties: {appName: 'weblab2'},
     aiTutorDisabled: mockAiTutorDisabled,
+    enableUserAddedSelectionContext: mockEnableUserAddedSelectionContext,
   })),
 }));
 
@@ -100,6 +102,7 @@ describe('useFileRowOptions', () => {
       },
     };
     mockAiTutorDisabled = false;
+    mockEnableUserAddedSelectionContext = true;
     mockGetAppOptionsEditBlocks.mockReturnValue(undefined);
     mockUseBackpackAPIContext.mockReturnValue(null);
   });
@@ -116,6 +119,18 @@ describe('useFileRowOptions', () => {
 
   it('hides add to AI tutor chat when AI tutor is disabled', () => {
     mockAiTutorDisabled = true;
+
+    const {result} = renderHook(() => useFileRowOptions(file, false));
+
+    const visibleLabels = result.current
+      .filter(option => option.condition)
+      .map(option => option.labelText);
+
+    expect(visibleLabels).not.toContain(codebridgeI18n.addToAiTutorContext());
+  });
+
+  it('hides add to AI tutor chat when context feature is disabled', () => {
+    mockEnableUserAddedSelectionContext = false;
 
     const {result} = renderHook(() => useFileRowOptions(file, false));
 

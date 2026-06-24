@@ -1,15 +1,13 @@
 /* React component to handle training. */
 import {useState, useEffect, useRef} from 'react';
-import {connect} from 'react-redux';
 
 import {imageUrl} from '../assetPath';
 import {styles, getFadeOpacity} from '../constants';
+import {useAppSelector} from '../hooks';
 import I18n from '../i18n';
-import type {RootState} from '../redux';
 import {getTableData} from '../redux';
 import {store} from '../store';
 import train from '../train';
-import type {DataRow} from '../types';
 
 import {TrainingAnimationDescription} from './AnimationDescriptions';
 import DataTable from './DataTable';
@@ -17,12 +15,11 @@ import DataTable from './DataTable';
 const framesPerCycle = 80;
 const maxNumItems = 7;
 
-interface TrainModelProps {
-  data: DataRow[];
-  instructionsOverlayActive: boolean;
-}
-
-const TrainModel = ({data, instructionsOverlayActive}: TrainModelProps) => {
+const TrainModel = () => {
+  const data = useAppSelector(state => getTableData(state, false));
+  const instructionsOverlayActive = useAppSelector(
+    state => state.instructionsOverlayActive,
+  );
   const [frame, setFrame] = useState(0);
   const [headOpen, setHeadOpen] = useState(false);
   const [, setFinished] = useState(false);
@@ -183,7 +180,4 @@ const TrainModel = ({data, instructionsOverlayActive}: TrainModelProps) => {
   );
 };
 
-export default connect((state: RootState) => ({
-  data: getTableData(state, false),
-  instructionsOverlayActive: state.instructionsOverlayActive,
-}))(TrainModel);
+export default TrainModel;

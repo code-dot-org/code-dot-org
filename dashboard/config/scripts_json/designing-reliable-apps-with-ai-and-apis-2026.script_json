@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-19 20:23:52 UTC",
+    "serialized_at": "2026-06-24 05:23:26 UTC",
     "hide_within_course": true,
     "published_state": "in_development",
     "instruction_type": null,
@@ -323,21 +323,8 @@
       }
     },
     {
-      "key": "94ec5b48-eb1c-43ab-ba3b-e80558232c19",
-      "position": 1,
-      "properties": {
-        "name": "New / Revised Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "94ec5b48-eb1c-43ab-ba3b-e80558232c19",
-        "lesson.key": "Lesson 1: Where Data Comes From",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026"
-      }
-    },
-    {
       "key": "3049ef3d-91c3-4b1f-8c5f-ea5fc44fd8be",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -351,7 +338,7 @@
     },
     {
       "key": "e0dbce95-01af-47b5-9299-cc87319aa787",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -365,7 +352,7 @@
     },
     {
       "key": "aec0366f-f55f-409b-9cbf-37cec021f881",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -378,21 +365,8 @@
       }
     },
     {
-      "key": "a6da11f9-cac0-4017-98e5-ef893cbac208",
-      "position": 1,
-      "properties": {
-        "name": "New Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a6da11f9-cac0-4017-98e5-ef893cbac208",
-        "lesson.key": "Lesson 2: Why Apps Wait",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026"
-      }
-    },
-    {
       "key": "8cf0d83b-7e14-4b3d-ac1d-4c5bcbd58438",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -406,7 +380,7 @@
     },
     {
       "key": "6b4db25f-625c-4a4c-ae91-d7eefc50c942",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -420,7 +394,7 @@
     },
     {
       "key": "6be212df-5fa7-4638-b747-3b1fbe4e17f4",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -681,8 +655,21 @@
       }
     },
     {
-      "key": "f8093cb6-68c4-447a-bacb-efdd6121e8ab",
+      "key": "d0f2618b-4253-41d7-85f8-419e7e8d70d5",
       "position": 1,
+      "properties": {
+        "name": "Revised Progression"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d0f2618b-4253-41d7-85f8-419e7e8d70d5",
+        "lesson.key": "Lesson 8: Catching Problems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-2026"
+      }
+    },
+    {
+      "key": "f8093cb6-68c4-447a-bacb-efdd6121e8ab",
+      "position": 2,
       "properties": {
         "duration": 10,
         "name": "Warm Up"
@@ -696,7 +683,7 @@
     },
     {
       "key": "610c721b-681b-46fc-838f-c6dcbc1743b5",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -710,7 +697,7 @@
     },
     {
       "key": "1a2cd29b-d4e9-49e7-9b8c-e3d04ce2b979",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -902,21 +889,10 @@
       }
     },
     {
-      "key": "d39b730b-f6cc-4383-b9f3-e38271c407a0",
-      "position": 1,
-      "properties": {
-        "description": "Level 1: New Exploration Level\nLevel 4: Revised level with AI Literacy moment\nLevel 7: New CFU level"
-      },
-      "seeding_key": {
-        "activity_section.key": "d39b730b-f6cc-4383-b9f3-e38271c407a0",
-        "lesson_activity.key": "94ec5b48-eb1c-43ab-ba3b-e80558232c19"
-      }
-    },
-    {
       "key": "82a97c00-886e-4a75-9e58-909273ed20cb",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students reason about the dynamic nature of apps and identify the need for external data sources to keep information current.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Look at this weather app. What information would likely change if you looked at this page tomorrow?*\n- *How does this page get that updated information?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that apps don't store future data internally; they must fetch it from a live source to stay accurate.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students reason about the dynamic nature of apps and identify the need for external data sources to keep information current.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Look at this weather app. What information would likely change if you looked at this page tomorrow?*\n- *How does this page get that updated information?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that the weather data shown in the app changes over time and that the app itself isn't storing all of that future data. Guide students toward the idea that the app must be reaching out to some external source to get current information. Listen for responses like \"it connects to the internet\" or \"it updates automatically\" — these are the right instincts to validate and build on as the lesson moves forward.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "82a97c00-886e-4a75-9e58-909273ed20cb",
@@ -927,9 +903,10 @@
       "key": "3ac5ccc6-f381-4644-98d5-c4a8974bb11c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Understand that websites communicate with servers via API calls that return structured JSON data, and learn to navigate documentation with AI support.",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students explore how apps communicate with external servers by first observing a live API call in action, then building vocabulary around APIs and JSON, and finally investigating real API documentation to see how data is structured and requested.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide. Use the diagram to connect back to the warm up — students just discussed that apps must reach out for data; this slide shows how that works. Point out that the phone holds only local data, and the server fills in the rest.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1 to explore the live weather app. Let students know they can click around and explore freely — if they haven't found the Network Tab on their own after a minute or two, give a light nudge by asking \"Is there anything in your browser tools that shows what the app is doing?\"\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** While students explore the Network Tab, listen for observations like 'it looks like a list,' 'there are labels and values,' or 'it sent a request to a URL.' Do not define any terms yet. Validate curiosity and move to the class discussion.\n\n",
         "duration": "20",
-        "name": "Decoding the Web"
+        "name": "Where Does Data Live?",
+        "progression_name": "Live API Exploration"
       },
       "seeding_key": {
         "activity_section.key": "3ac5ccc6-f381-4644-98d5-c4a8974bb11c",
@@ -937,26 +914,77 @@
       }
     },
     {
-      "key": "e6c6e508-996a-4e51-ae8d-f68969d5919b",
+      "key": "9f48cb39-5658-486f-8b90-a643978ee18c",
       "position": 2,
       "properties": {
-        "description": "Modern apps are dynamic. Your weather app doesn't store forecasts for every city in the world on your phone. Instead, it fetches that data from a server. Today, we're going to see how that happens.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  Click through the animated slide to display the prompts.\n* *What did you notice in the app or Network tab when the forecast refreshed?*\n* *What do you wonder about how the app got that weather data?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Surface that the weather app displayed updated information and that something happened behind the scenes when students clicked Refresh Forecast. The goal is to get observations on the table before vocabulary is introduced — students don't need to define API, JSON, request, or response yet. Listen for students noticing that a new item appeared in the Network tab, that the app contacted a web address, or that the response data included weather information similar to what the app displayed. These observations become the foundation for the vocabulary and concepts introduced on the next slides.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students only noticed surface-level changes in the weather card, prompt them further by asking “What changed in the Network tab after you clicked Refresh Forecast?” or “Did you see anything that looked like the same weather information the app displayed?” This redirects attention to the behind-the-scenes data behavior without formally defining the terms yet.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9f48cb39-5658-486f-8b90-a643978ee18c",
+        "lesson_activity.key": "e0dbce95-01af-47b5-9299-cc87319aa787"
+      }
+    },
+    {
+      "key": "9b2a757d-31b1-4374-9f3e-4bfd6d873bad",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Hand out Designing Reliable Apps with AI and APIs Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define API.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the restaurant analogy: The API is the waiter who takes your request to the kitchen (server) and brings the food (data) back to you (client).\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9b2a757d-31b1-4374-9f3e-4bfd6d873bad",
+        "lesson_activity.key": "e0dbce95-01af-47b5-9299-cc87319aa787"
+      }
+    },
+    {
+      "key": "3c847452-6d17-4c7f-969e-33ffc313a806",
+      "position": 4,
+      "properties": {
+        "description": "This interaction is called the Request/Response model. The client asks, and the server provides.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "e6c6e508-996a-4e51-ae8d-f68969d5919b",
+        "activity_section.key": "3c847452-6d17-4c7f-969e-33ffc313a806",
+        "lesson_activity.key": "e0dbce95-01af-47b5-9299-cc87319aa787"
+      }
+    },
+    {
+      "key": "f30fb3db-ae3d-4739-aca6-990267f2ae75",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain the relationship between the client and the server in the context of an API call. Connect the diagram back to what students observed in the exploration level — the app (client) sent a request out, and something came back. This slide names that pattern: the client asks, the server responds with data.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define JSON.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Emphasize that JSON is the 'language' APIs use to send data because it is structured and efficient for computers to process. It may help to frame it as a format or structure for organizing data, similar to how a spreadsheet organizes information in rows and columns.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f30fb3db-ae3d-4739-aca6-990267f2ae75",
         "lesson_activity.key": "e0dbce95-01af-47b5-9299-cc87319aa787"
       }
     },
     {
       "key": "23e5c97c-a485-4148-af71-cc3afce21465",
-      "position": 3,
+      "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide and explain the concept of external data and how apps fetch information from servers to stay up-to-date.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *API*.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the annotated JSON diagram, pointing out each key:value pair, the curly braces, and how the structure maps to the bullet points on the left. Have students follow along in their Unit Guide.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give students a copy of the API Scavenger Hunt activity guide and the curated PDF documentation for the OpenWeather API.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Use the restaurant analogy: The API is the waiter who takes your request to the kitchen (server) and brings the food (data) back to you (client)."
+            "markdown": "If students are struggling to connect the structure to the concept, use this analogy: a key is like a label on a folder, and the value is the document inside it.\n"
           }
         ]
       },
@@ -967,7 +995,7 @@
     },
     {
       "key": "b0906da5-0970-4625-9d8c-85b1c4bcb83c",
-      "position": 4,
+      "position": 7,
       "properties": {
       },
       "seeding_key": {
@@ -976,100 +1004,17 @@
       }
     },
     {
-      "key": "93d60293-a0dc-4bdf-ba14-f6a42a915136",
-      "position": 5,
-      "properties": {
-        "description": "This interaction is called the Request/Response model. The client asks, and the server provides.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "93d60293-a0dc-4bdf-ba14-f6a42a915136",
-        "lesson_activity.key": "e0dbce95-01af-47b5-9299-cc87319aa787"
-      }
-    },
-    {
-      "key": "d10a02ad-3a05-4aba-a22f-5f2fe5a68cb5",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the relationship between the client and the server in the context of an API call.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *JSON*.\n",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Emphasize that JSON is the 'language' APIs use to send data because it is structured and efficient for computers to process."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "d10a02ad-3a05-4aba-a22f-5f2fe5a68cb5",
-        "lesson_activity.key": "e0dbce95-01af-47b5-9299-cc87319aa787"
-      }
-    },
-    {
-      "key": "9dddfd5a-82b9-4532-8162-72b05a5e4fcf",
-      "position": 7,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "9dddfd5a-82b9-4532-8162-72b05a5e4fcf",
-        "lesson_activity.key": "e0dbce95-01af-47b5-9299-cc87319aa787"
-      }
-    },
-    {
-      "key": "56643e66-b741-46da-aadf-cbe4ccf6ded4",
+      "key": "49c19b31-c206-4438-8185-99e0ac2aff25",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain how JSON organizes data using keys and values. Show a simple example on the board if necessary.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 2 to complete Levels 2 through 4.\n- **Level 2:** Students view panel levels to learn about using the Networks Tab.\n- **Level 3:** Students use the Network Tab in Web Lab to find JSON data.\n- **Level 4:** Students compare AI’s explanation of the OpenWeather API against the actual documentation to verify claims about parameters and response data.\n\n",
+        "progression_name": "Exploring the Network Panel",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Think of a key like a folder label and the value as the document inside that folder."
+            "markdown": "If students get stuck in the Network Tab, remind them to look for the 'Response' or 'Preview' sub-tabs to see the JSON clearly.\n"
           }
         ]
-      },
-      "seeding_key": {
-        "activity_section.key": "56643e66-b741-46da-aadf-cbe4ccf6ded4",
-        "lesson_activity.key": "e0dbce95-01af-47b5-9299-cc87319aa787"
-      }
-    },
-    {
-      "key": "865d25b1-ee9a-4faf-99bf-c1c7e4480e9a",
-      "position": 9,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "865d25b1-ee9a-4faf-99bf-c1c7e4480e9a",
-        "lesson_activity.key": "e0dbce95-01af-47b5-9299-cc87319aa787"
-      }
-    },
-    {
-      "key": "a2f40958-0125-42e0-9208-366968399331",
-      "position": 10,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Demonstrate opening the Network tab and viewing live API requests."
-      },
-      "seeding_key": {
-        "activity_section.key": "a2f40958-0125-42e0-9208-366968399331",
-        "lesson_activity.key": "e0dbce95-01af-47b5-9299-cc87319aa787"
-      }
-    },
-    {
-      "key": "da44c19d-ebe8-47a0-a4c3-a31fe9bdb902",
-      "position": 11,
-      "properties": {
-        "description": "We're going to peek behind the curtain of a real website to see exactly what it's asking for and what it gets back.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "da44c19d-ebe8-47a0-a4c3-a31fe9bdb902",
-        "lesson_activity.key": "e0dbce95-01af-47b5-9299-cc87319aa787"
-      }
-    },
-    {
-      "key": "49c19b31-c206-4438-8185-99e0ac2aff25",
-      "position": 12,
-      "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Hand out the API Scavenger Hunt activity guide and the curated PDF documentation for the OpenWeather API.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 5 to complete Levels 5 through 7.\n- Level 5: Students view panel levels to learn about using the Networks Tab.\n- Level 6: Students use the Network Tab in Web Lab to find JSON data.\n- Level 7: Students upload API documentation to AI and ask questions about parameters and data types.\n",
-        "progression_name": "Exploring the Network Panel"
       },
       "seeding_key": {
         "activity_section.key": "49c19b31-c206-4438-8185-99e0ac2aff25",
@@ -1078,8 +1023,9 @@
     },
     {
       "key": "9f1f09d4-00db-4dfc-9fbf-3ea0cee760ae",
-      "position": 13,
+      "position": 9,
       "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Why do you think the designers of this weather app chose not to display all of the information in the Response Data file?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that apps receive far more data from an API than what gets displayed to users — and that designers make intentional choices about what to show based on what's useful or meaningful to the user. Listen for responses like \"some of it isn't useful to regular people\" or \"it would be too much information on the screen.\" Guide students toward the idea that this is a design decision: developers have to think about what data to request, what to display, and what to leave out. This connects directly to their checklist — they now have evidence of exactly which fields were used and which weren't.\n\n\n",
         "progression_name": "Navigate a Weather App"
       },
       "seeding_key": {
@@ -1088,26 +1034,18 @@
       }
     },
     {
-      "key": "08f24a62-41d4-4452-90d5-bb36b7786d24",
-      "position": 14,
+      "key": "9ed6002c-c96b-4f1f-92cf-9a5a52569ce8",
+      "position": 10,
       "properties": {
-        "progression_name": "Explore API Documentation",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students make their first live API call, using a structured framework to predict, test, investigate, and modify code — building a concrete understanding of how request parameters affect what data an app receives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the PRIM framework. Give students a moment to read through the four steps before moving to the level.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide. Introduce fetch() as the JavaScript command used to send a request to an API. Connect it back to the request/response model students just saw — fetch() is what kicks off that process from the app's side. Point out the Unit Guide annotation section and have students annotate the three steps as you walk through them.\n",
+        "duration": "15",
+        "name": "My First API Call",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If students get stuck in the Network Tab, remind them to look for the 'Response' or 'Preview' sub-tabs to see the JSON clearly."
+            "markdown": "Compare a fetch call to ordering food. The menu is the documentation, the order is the request, and the meal is the response data."
           }
         ]
-      },
-      "seeding_key": {
-        "activity_section.key": "08f24a62-41d4-4452-90d5-bb36b7786d24",
-        "lesson_activity.key": "e0dbce95-01af-47b5-9299-cc87319aa787"
-      }
-    },
-    {
-      "key": "9ed6002c-c96b-4f1f-92cf-9a5a52569ce8",
-      "position": 15,
-      "properties": {
       },
       "seeding_key": {
         "activity_section.key": "9ed6002c-c96b-4f1f-92cf-9a5a52569ce8",
@@ -1116,9 +1054,15 @@
     },
     {
       "key": "d18a4eb5-17c7-4748-aefe-1ea10804a2b3",
-      "position": 16,
+      "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What happens if an API stops working? How does this affect the user experience?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize system dependencies. If an API fails, the app might lose its primary function (e.g., a weather app with no weather).\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animation. Explain the three-part pattern: `fetch(API_URL)` sends a request to the API, `.json()` reads the response as JSON, and `updateUI(data)` displays the returned data. Have students annotate the same code in their Unit Guide.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students are not expected to write or memorize this code — the goal is recognition and understanding of the pattern. If students seem anxious about the syntax, remind them that in upcoming lessons they'll have starter code to work from as well AI Tutor to help. \n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d18a4eb5-17c7-4748-aefe-1ea10804a2b3",
@@ -1126,75 +1070,15 @@
       }
     },
     {
-      "key": "38d37dcf-f19a-4a75-878b-f5be149d4729",
-      "position": 17,
-      "properties": {
-        "description": "Using APIs makes our apps powerful, but it also means we depend on other services to keep working.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "38d37dcf-f19a-4a75-878b-f5be149d4729",
-        "lesson_activity.key": "e0dbce95-01af-47b5-9299-cc87319aa787"
-      }
-    },
-    {
-      "key": "2a64ed58-6a1c-4aba-b396-16c74fd7b008",
-      "position": 18,
-      "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Use the PRIM (Predict, Run, Investigate, Modify) framework to interact with live code and understand how modifying request attributes changes the data displayed on screen.",
-        "duration": "15",
-        "name": "My First API Call"
-      },
-      "seeding_key": {
-        "activity_section.key": "2a64ed58-6a1c-4aba-b396-16c74fd7b008",
-        "lesson_activity.key": "e0dbce95-01af-47b5-9299-cc87319aa787"
-      }
-    },
-    {
-      "key": "3c9cfdfb-3974-440d-a9e6-374a82d9569b",
-      "position": 19,
-      "properties": {
-        "description": "Now that we've seen how APIs work behind the scenes, it's time for you to make your first API call! We'll use a framework called PRIM to help us understand the code step-by-step.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "3c9cfdfb-3974-440d-a9e6-374a82d9569b",
-        "lesson_activity.key": "e0dbce95-01af-47b5-9299-cc87319aa787"
-      }
-    },
-    {
-      "key": "ccfcba75-d565-4ff6-8e29-0a372c843c03",
-      "position": 20,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the PRIM framework to the students."
-      },
-      "seeding_key": {
-        "activity_section.key": "ccfcba75-d565-4ff6-8e29-0a372c843c03",
-        "lesson_activity.key": "e0dbce95-01af-47b5-9299-cc87319aa787"
-      }
-    },
-    {
-      "key": "315bcd11-cb53-47cc-a165-df569695a847",
-      "position": 21,
-      "properties": {
-        "description": "In JavaScript, we use a special command called fetch to talk to APIs. Think of it like sending a digital messenger to a server with a specific address, called an endpoint. The server then sends a response back with the data we requested.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "315bcd11-cb53-47cc-a165-df569695a847",
-        "lesson_activity.key": "e0dbce95-01af-47b5-9299-cc87319aa787"
-      }
-    },
-    {
       "key": "3b049d44-69a9-407f-ac87-c30372bacc2e",
-      "position": 22,
+      "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 7 to complete Levels 8 through 9.\n- Level 8: Students choose an API and predict its output based on the code snippet.\n- Level 9: Students run the code, investigate with AI, and modify attributes to see new data.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who are unsure which API to pick. Suggest PokeAPI for a structured experience or NASA for visual data. Watch for students who forget to click 'Run' after modifying code. Ask: 'What did you change in the request, and how did the response look different?'\n",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 5 to complete Levels 5 through 7.\n* **Level 5:** Students choose an API and predict its output based on the code snippet.\n* **Level 6:** Students run the code, investigate with AI, and modify attributes to see new data.\n* **Level 7:** Students complete a check for understanding.\n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who are unsure which API to pick. Suggest PokeAPI for a structured experience or NASA for visual data. Watch for students who forget to click 'Run' after modifying code. Ask: 'What did you change in the request, and how did the response look different?'\n",
         "progression_name": "Make a Prediction",
         "tips": [
           {
-            "type": "teachingTip",
-            "markdown": "Compare a fetch call to ordering food. The menu is the documentation, the order is the request, and the meal is the response data."
+            "type": "assessmentOpportunity",
+            "markdown": "Levels 5–7 can be used as a formative assessment of the lesson objectives. Look for students who can identify what the API URL is requesting (Objective 1), describe what changed in the response when they modified the request (Objective 2), and explain in their own words why changing the request changed what the server sent back — connecting that to the idea that apps depend on external services to function (Objective 3). \n"
           }
         ]
       },
@@ -1204,48 +1088,16 @@
       }
     },
     {
-      "key": "d865612b-41f3-441f-8091-8576481040b2",
-      "position": 23,
-      "properties": {
-        "progression_name": "Modify an API Call",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Check that students are using the AI Tutor on Level 8 to explain parts of the fetch call. Correct understanding involves identifying the URL and the data being requested."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "d865612b-41f3-441f-8091-8576481040b2",
-        "lesson_activity.key": "e0dbce95-01af-47b5-9299-cc87319aa787"
-      }
-    },
-    {
-      "key": "01b7b570-ed27-49f2-adca-fc2a8c73704b",
-      "position": 24,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "01b7b570-ed27-49f2-adca-fc2a8c73704b",
-        "lesson_activity.key": "e0dbce95-01af-47b5-9299-cc87319aa787"
-      }
-    },
-    {
-      "key": "8ec63d27-bbb3-45a3-89ed-a25649bc3e15",
-      "position": 25,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What happened when you modified the code? How did the API response change?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that changing the parameters in the request (the URL or attributes) directly changes what the server sends back. Listen for: 'I changed the ID and got a different character' or 'I changed the date and the image updated.'\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "8ec63d27-bbb3-45a3-89ed-a25649bc3e15",
-        "lesson_activity.key": "e0dbce95-01af-47b5-9299-cc87319aa787"
-      }
-    },
-    {
       "key": "e8c04fa7-5c0c-4b7f-8f61-8cdeba8440f3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day. Have students turn and talk with a partner to share their answer using a specific example from the lesson — the API they explored, the JSON data they found in the Network tab, or what happened when the API called a server. After partner discussion, invite a few students to share out with the class. Listen for students connecting the idea that apps use APIs to send requests to external servers, which respond with data the app couldn't store on its own.\n\n\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time is short, skip the partner talk and do a quick whole-class share-out instead — collect two or three responses that capture different parts of the answer: one focused on what an API is, and one focused on what the data (JSON) looks like when it comes back. This ensures both key concepts from the lesson get named before students leave.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e8c04fa7-5c0c-4b7f-8f61-8cdeba8440f3",
@@ -1253,34 +1105,21 @@
       }
     },
     {
-      "key": "fa9c4bd0-c5c9-4c7b-8db9-f34a058f42f5",
+      "key": "f7c9b6be-3e82-4293-a434-2c00f701be6e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 10 to complete the End of Lesson Survey.",
-        "name": "End of Lesson Survey",
-        "progression_name": "End of Lesson Survey"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary."
       },
       "seeding_key": {
-        "activity_section.key": "fa9c4bd0-c5c9-4c7b-8db9-f34a058f42f5",
+        "activity_section.key": "f7c9b6be-3e82-4293-a434-2c00f701be6e",
         "lesson_activity.key": "aec0366f-f55f-409b-9cbf-37cec021f881"
-      }
-    },
-    {
-      "key": "a38987dc-6133-450f-b6b9-91a3e0c32c67",
-      "position": 1,
-      "properties": {
-        "progression_name": "New CFU Level 3"
-      },
-      "seeding_key": {
-        "activity_section.key": "a38987dc-6133-450f-b6b9-91a3e0c32c67",
-        "lesson_activity.key": "a6da11f9-cac0-4017-98e5-ef893cbac208"
       }
     },
     {
       "key": "c7f7a336-8235-4ffe-88c6-2ea457d32953",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Build \"system awareness\" by identifying visual cues of loading and differentiating between static (code) and dynamic (data) content."
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Activate prior knowledge of how apps behave offline to build system awareness — identifying what's built into an app versus what gets loaded from the internet.\n"
       },
       "seeding_key": {
         "activity_section.key": "c7f7a336-8235-4ffe-88c6-2ea457d32953",
@@ -1291,7 +1130,7 @@
       "key": "a052adfb-ec6a-45b6-acd3-ccf3c5ab4990",
       "position": 2,
       "properties": {
-        "description": "Have you ever opened an app like Spotify or Instagram while in Airplane Mode? You might see the buttons and the logo, but the content is missing. Today we are exploring why that happens and how code handles the \"wait\" for that data.",
+        "description": "Think about the last time you opened an app and it felt broken — maybe images didn't load or your feed was empty. Keep that in mind as we discuss.",
         "remarks": true
       },
       "seeding_key": {
@@ -1303,11 +1142,11 @@
       "key": "d4092984-8305-46ff-b8ac-468f8e506c3c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Imagine opening an app offline. What changes? What stays the same?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify that the app layout (buttons, icons) is there, but live data (songs, weather) is missing or replaced by loading icons.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the difference between content built into the app's code (static) and content fetched from a server (dynamic).\n",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Imagine opening an app offline. What changes? What stays the same?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify that the app layout (buttons, icons, navigation) is still visible, but live data (songs, playlists, weather, news) is missing or replaced by loading indicators. Listen for students distinguishing between what's built into the app versus what gets fetched from somewhere else.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use student responses from the discussion to bridge into the formal terms. Point out that what students noticed as \"still there\" offline = Static Content, and what was missing = Dynamic Content. Define each category using the examples on the slide.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Use a physical analogy: The \"Static Content\" is like the menu at a restaurant (it's printed and ready), while \"Dynamic Content\" is the food (it has to be made and brought to you after you order)."
+            "markdown": "Reinforce the definitions with a physical analogy: Static Content is like the menu at a restaurant — it's printed and always ready. Dynamic Content is like the food — it has to be made and brought to you after you order. This analogy will carry forward into the Activity section, so introduce it here and invite students to hold onto it.\n"
           }
         ]
       },
@@ -1330,7 +1169,7 @@
       "key": "62cada79-a3e3-4a1f-ba07-ad132bf75830",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How does an app tell you it is \"thinking\" or \"waiting\"?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify visual cues like spinners, progress bars, skeleton screens, or gray boxes. This reinforces that the app is aware it is waiting for data.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How does an app tell you it is \"thinking\" or \"waiting\"?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify visual cues like spinners, progress bars, skeleton screens, or gray placeholder boxes. Listen for students connecting these cues to the idea that the app knows it's waiting — it hasn't crashed, it's just loading something.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "62cada79-a3e3-4a1f-ba07-ad132bf75830",
@@ -1341,8 +1180,8 @@
       "key": "95a20241-5ccb-4fc6-895c-ba4abe16274a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Model the difference between synchronous and asynchronous execution using a real-world parallel.",
-        "duration": "10",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students build an intuition for the inefficiency of doing tasks one at a time (sequentially) and the benefit of multitasking — setting up the concepts of synchronous and asynchronous execution before those terms are formally introduced.",
+        "duration": "5",
         "name": "The Restaurant Analogy"
       },
       "seeding_key": {
@@ -1354,7 +1193,7 @@
       "key": "3f3ff2c3-0852-487a-b095-9033f583aeee",
       "position": 2,
       "properties": {
-        "description": "Imagine you are at a restaurant where the chef only does one thing at a time. They put water on to boil, then they stand there and watch it until it's done. Only then do they start chopping vegetables.",
+        "description": "Picture a chef who only does one thing at a time — puts water on to boil, then stands there and watches it until it's done, then starts chopping vegetables.",
         "remarks": true
       },
       "seeding_key": {
@@ -1366,7 +1205,13 @@
       "key": "feb1200e-c667-430a-a3ef-c4f741341349",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How efficient is a kitchen where the chef boils water, waits, then chops veggies?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students realize that waiting for every single task to finish before starting the next is inefficient and creates a bad experience for the customer.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What can a chef do while they are waiting for the water to boil to prepare the meal more efficiently?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify that multitasking—prepping sauce or chopping while water heats—allows the meal to be finished much faster.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *synchronous code*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *asynchronous code*.\n"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How efficient is a kitchen where the chef boils water, waits, then chops veggies?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that waiting for each task to fully finish before starting the next is inefficient and frustrating for the customer. Listen for words like \"slow,\" \"wasteful,\" or \"it would take forever.\" These observations set up the contrast on the next slide.\n\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What can a chef do while they are waiting for the water to boil to prepare the meal more efficiently?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify that the chef can multitask — chopping, prepping sauce, toasting bread — while the water heats. Listen for the key insight that starting something and coming back to it later makes the whole process faster. This mirrors how code can start a task and keep running while waiting for a response.\n\n\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Avoid introducing the terms \"synchronous\" and \"asynchronous\" here — students will encounter those formally after the Frozen App demo. For now, keep the language in the analogy space: \"waiting vs. doing other things while waiting.\" This preserves the explore-before-vocab sequence.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "feb1200e-c667-430a-a3ef-c4f741341349",
@@ -1374,12 +1219,22 @@
       }
     },
     {
-      "key": "499754b7-fa50-4917-9d50-07bf2e02896b",
+      "key": "8dadf657-4b77-4fe6-917c-fd6d942fbbb1",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Demonstrate the pain point of synchronous (blocking) programming in a user interface.",
-        "duration": "10",
-        "name": "The Frozen App"
+      },
+      "seeding_key": {
+        "activity_section.key": "8dadf657-4b77-4fe6-917c-fd6d942fbbb1",
+        "lesson_activity.key": "6b4db25f-625c-4a4c-ae91-d7eefc50c942"
+      }
+    },
+    {
+      "key": "499754b7-fa50-4917-9d50-07bf2e02896b",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students experience the problem of synchronous blocking firsthand in a simulated app, discuss what they observed, and then connect that experience to the formal definitions and code representations of synchronous and asynchronous programming.",
+        "duration": "15",
+        "name": "Frozen Apps to Async Code"
       },
       "seeding_key": {
         "activity_section.key": "499754b7-fa50-4917-9d50-07bf2e02896b",
@@ -1388,9 +1243,9 @@
     },
     {
       "key": "d16d08e0-1207-47cf-b4d8-da7f51365fcb",
-      "position": 5,
+      "position": 6,
       "properties": {
-        "description": "Now that we’ve defined these terms, it’s time to see them in action. You’re going to head into 'The Frozen App' to run an experiment: watch what happens to to the display as a user when you trigger a heavy synchronous task. Does the app stay 'alive,' or does it completely ignore you?",
+        "description": "You are about to run an experiment in an app. Try interacting with it and pay attention to what happens when you trigger a heavy task. Does the app stay responsive, or does it ignore you?",
         "remarks": true
       },
       "seeding_key": {
@@ -1400,10 +1255,10 @@
     },
     {
       "key": "481986ea-58a8-4a22-bd32-694d68b1fea9",
-      "position": 6,
+      "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 1 to complete Levels 1 through 5.\n- Level 1: Students read the definition and example of synchronous programming.\n- Level 2: Students write their own definition of synchronous programming and include a real-world example.\n- Level 3: Students read the definition and example of asynchronous programming.\n- Level 4: Students write their own definition of asynchronous programming and include a real-world example.\n- Level 5: Students run a demo of an application that has a long synchronous operation and observe how it impact the user experience.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** For Level 1 and 2, look for students who are confusing \"synchronous\" with \"simultaneous.\" Remind them that \"sync\" in programming means things happen one after another, waiting for the previous step to finish. For Level 3 and 4, listen for students explaining that the program \"keeps going\" while something loads. Ask: \"In an app, what is an example of something that might take time to load?\"\n",
-        "progression_name": "Vocab: Synchronous Programming"
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 1 to interact with the Frozen App demo and observe how a heavy task affects the user experience.\n\n\n",
+        "progression_name": "Demo: The Frozen App"
       },
       "seeding_key": {
         "activity_section.key": "481986ea-58a8-4a22-bd32-694d68b1fea9",
@@ -1412,7 +1267,7 @@
     },
     {
       "key": "ffe792fd-7b5d-4b92-a020-a0607edb01c4",
-      "position": 7,
+      "position": 8,
       "properties": {
         "progression_name": "Demo: Run the Frozen App"
       },
@@ -1423,9 +1278,15 @@
     },
     {
       "key": "58baaa9e-ab31-4a80-a278-9dcb58b67176",
-      "position": 8,
+      "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which specific action was a synchronous operation? Which specific action was an asynchronous operation? How did you know the difference just by looking at the screen?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students connecting the technical behavior to the user impact. For the like button (asynchronous), students should note that they could keep interact with other parts of the app immediately. For the compress video button (synchronous), students should explicitly mention the 5-second freeze. Listen for phrases like \"The app stopped responding,\" or \"I thought the app crashed because I couldn't even hit the 'Like' button.\"\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If an app freezes every time you click a button, how does that change your trust in the app? Would you assume it’s working, or would you think it crashed?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students to articulate that a synchronous (blocking) task doesn't just slow down the app; it makes the user feel like the app is broken or unresponsive. Asynchronous programming is a fundamental user experience tool used to keep the user feeling in control and informed.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Why Apps Wait activity guide.\n"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts.\n* *Which specific action was a synchronous operation?*  \n* *Which specific action was an asynchronous operation?* \n* *How did you know the difference just by looking at the screen?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students connecting what they observed on screen to the user experience. For the Like button, students should notice that the app responded right away and they could keep interacting. For the Compress Video button, students should mention that the app froze for several seconds and ignored other clicks. Listen for phrases like “The app stopped responding,” “I thought it crashed,” or “I couldn’t click the Like button while it was processing.” These observations are exactly what the upcoming vocabulary will explain.\n\n\n\n\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students didn't notice a clear difference during Level 1, have them run the demo again before discussing. Prompt them to click the Like button first, then the Compress Video button, and pay attention to whether the app responds while the task is running.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "58baaa9e-ab31-4a80-a278-9dcb58b67176",
@@ -1433,17 +1294,68 @@
       }
     },
     {
-      "key": "b2a3a269-4773-44a7-934d-3e2eb361a5f9",
-      "position": 9,
+      "key": "71d64eb1-7006-4f12-98f7-da133e1bc727",
+      "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students learn how asynchronous code works by predicting and investigating execution order in Web Lab.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 6 to complete Levels 6 through 8.\n- Level 6: Students predict how blocking code freezes the interface while tasks complete one at a time.\n- Level 7: Students predict the execution order of multiple kitchen tasks running on different timers.\n- Level 8: Students predict the outcome when the chef tries to serve food before the cooking timer finishes.\n",
-        "duration": "10",
-        "name": "Analogy: Synchronous vs. Asynchronous",
-        "progression_name": "Analogy: Synchronous vs. Asynchronous ",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have students get out their Designing Reliable Apps with AI and APIs Unit Guide and turn to Lesson 2.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define synchronous code and connect it directly to the Frozen App demo. Point out that the Compress Video button is an example of synchronous behavior — the app waited for that task to fully finish before doing anything else. Direct students to fill in the synchronous code definition in their Unit Guide.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Have students use AI Chat to explain setTimeout() role in the code. In JavaScript, we use a function called setTimeout to simulate that \"cooking time\" or a network delay. Explain that setTimeout takes a function and a delay in milliseconds. Crucially, emphasize that it is asynchronous—the rest of the program keeps running while the timer counts down."
+            "markdown": "The timeline diagram is key here. Walk students through it left to right — Task 1 must fully finish before Task 2 starts, and Task 2 must fully finish before Task 3 starts. Ask students: \"How does this match what you saw in the app?\"\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "71d64eb1-7006-4f12-98f7-da133e1bc727",
+        "lesson_activity.key": "6b4db25f-625c-4a4c-ae91-d7eefc50c942"
+      }
+    },
+    {
+      "key": "3306926c-7752-4883-8dc9-dbeaba787147",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define asynchronous code and connect it to both the Restaurant Analogy and the Frozen App demo. Point out that the Like button is an example of asynchronous behavior — the app started the task and kept running without waiting. Remind students of the chef: starting the water boiling and chopping vegetables at the same time is exactly what asynchronous code does. Direct students to fill in the asynchronous code definition in their Unit Guide.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Walk through the diagram and contrast it directly with the synchronous timeline from the previous slide. Ask students: \"What's different about how these tasks run?\" Listen for students noticing that tasks overlap rather than wait. This is also a good moment to address a common misconception — asynchronous doesn't mean tasks happen simultaneously in the same instant; it means one task doesn't have to fully finish before another can start.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3306926c-7752-4883-8dc9-dbeaba787147",
+        "lesson_activity.key": "6b4db25f-625c-4a4c-ae91-d7eefc50c942"
+      }
+    },
+    {
+      "key": "b382f99a-cbf2-4735-b4fc-1745f5c13706",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animation in order to explain that synchronous code waits for each line to finish before moving on, while asynchronous code can start a task for later and keep running the next lines.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animation to demonstrate how setTimeout() works. Point out that lines 1–3 hand cookEggs() off to run after three seconds, while lines 5–6 run immediately. Connect this back to the chef analogy — setTimeout() is like putting water on to boil and walking away to chop vegetables. Direct students to complete the setTimeout() annotation in their Unit Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may wonder why makeToast() and pourJuice() run before cookEggs() even though they appear lower in the code. Clarify that setTimeout() schedules cookEggs() to run later — JavaScript doesn't wait for the timer, it keeps reading and running the next lines immediately. This is the core mechanic behind asynchronous code and worth pausing on before moving to the platform levels.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b382f99a-cbf2-4735-b4fc-1745f5c13706",
+        "lesson_activity.key": "6b4db25f-625c-4a4c-ae91-d7eefc50c942"
+      }
+    },
+    {
+      "key": "b2a3a269-4773-44a7-934d-3e2eb361a5f9",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students apply their understanding of synchronous and asynchronous execution by predicting and investigating code behavior across three choice levels, then demonstrate understanding in a written CFU response.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Why Apps Wait activity guide.\n\n\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 2 to complete all of the choice levels in Level 2 and the Check for Understanding in Level 3.\n- **Level 2a:** Students predict how blocking code freezes the interface while tasks complete one at a time.\n- **Level 2b:** Students predict the execution order of multiple kitchen tasks running on different timers.\n- **Level 2c:** Students predict the outcome when the chef tries to serve food before the cooking timer finishes.\n- **Level 3:** Students demonstrate their understanding of asynchronous code by explaining why the server used the value before the burger finished cooking.\n",
+        "duration": "10",
+        "name": "Sync vs Async Kitchen",
+        "progression_name": "Synchronous vs. Asynchronous ",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Level 2c and Level 3 assess students' ability to define asynchronous programming and identify where things can go wrong in an async timeline (Objectives 1 and 3). For Level 2c, look for students recognizing that data used before it's ready produces an error. For Level 3, look for responses that explain the timing mismatch in their own words rather than restating the definition.\n"
           },
           {
             "type": "assessmentOpportunity",
@@ -1458,7 +1370,7 @@
     },
     {
       "key": "0a7e30ed-2f79-46dc-bda1-48f73ca4e101",
-      "position": 10,
+      "position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -1467,21 +1379,10 @@
       }
     },
     {
-      "key": "75cdb5d5-b316-4e7a-ae21-663eb90203ab",
-      "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Why did the \"Serving customer\" line print \"undefined\" even though the burger was cooking?*\n- *How can we make sure our app doesn't try to use data before it arrives?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students synthesize their learning from the coding exploration. They should identify that since the kitchen (setTimeout) was working in the background, the main program moved on to the next line immediately. Because the data wasn't \"ready\" yet, the variable was still empty (undefined).\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "75cdb5d5-b316-4e7a-ae21-663eb90203ab",
-        "lesson_activity.key": "6b4db25f-625c-4a4c-ae91-d7eefc50c942"
-      }
-    },
-    {
       "key": "3087e702-366d-466a-85dd-8f5da26619bf",
-      "position": 12,
+      "position": 15,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Visually map the flow of time in asynchronous operations using the code students just investigated.",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:**  Students consolidate their understanding of synchronous and asynchronous execution by visually mapping task timing from code they just investigated and comparing results with a partner.",
         "duration": "5",
         "name": "Tracing the Timeline"
       },
@@ -1492,7 +1393,7 @@
     },
     {
       "key": "47a85e36-df75-428a-a0b4-0d7b107b86a6",
-      "position": 13,
+      "position": 16,
       "properties": {
         "description": "Let's map out exactly what happened in each kitchen using a timeline graph.",
         "remarks": true
@@ -1504,13 +1405,13 @@
     },
     {
       "key": "d97655d8-0bbd-4daf-9038-29870f7fb773",
-      "position": 14,
+      "position": 17,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students draw a timeline graph mapping the code from Level 6. They should label the tasks and wait times in their illustration.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs with their neighbor. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct Partner A to look back at Level 2a and draw a timeline graph of the code. Partner B looks back at Level 2b or 2c and draws a timeline graph of their code. Remind students the diagrams on the slide show what sync and async timelines look like as a reference. When both partners finish, they compare their timelines and discuss what looks different.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are labeling both tasks and wait times in their timelines, not just drawing the shapes. Listen for partners noticing that the sync timeline runs tasks one after another while the async timeline shows tasks overlapping. When time is up, bring the class together and transition to the Wrap Up.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Provide students with use different colors pencils or pens to make the parallel execution clear."
+            "markdown": "Providing different colored pencils or pens helps make parallel execution visible — suggest students use one color per task so overlapping timelines are easy to read. If Partner B chose Level 2b, encourage them to also look at Level 2c and note how the timeline changes when the chef tries to serve food before the cooking timer finishes.\n"
           }
         ]
       },
@@ -1523,10 +1424,27 @@
       "key": "69363d90-2344-4b67-a474-b4282b5f5a6d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day. Have students turn and talk with a partner to answer the question using something specific from the lesson — the Frozen App demo, the chef analogy, or the setTimeout() code. After partner discussion, invite a few students to share out with the class. Listen for students connecting the idea that JavaScript keeps running the next lines while a delayed task waits in the background — that's why the code runs before the data arrives.\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time is short, skip the partner talk and go straight to whole-class share-out. Prioritize getting at least one strong response to the primary question before moving to the secondary — the technical understanding should land before the UX reflection.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "69363d90-2344-4b67-a474-b4282b5f5a6d",
+        "lesson_activity.key": "6be212df-5fa7-4638-b747-3b1fbe4e17f4"
+      }
+    },
+    {
+      "key": "16799d3e-9913-4de1-932f-aa744a4d7f31",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "16799d3e-9913-4de1-932f-aa744a4d7f31",
         "lesson_activity.key": "6be212df-5fa7-4638-b747-3b1fbe4e17f4"
       }
     },
@@ -2739,6 +2657,28 @@
       }
     },
     {
+      "key": "fd31b9ae-73a0-4e17-8400-6159087dbb84",
+      "position": 1,
+      "properties": {
+        "progression_name": "Predict"
+      },
+      "seeding_key": {
+        "activity_section.key": "fd31b9ae-73a0-4e17-8400-6159087dbb84",
+        "lesson_activity.key": "d0f2618b-4253-41d7-85f8-419e7e8d70d5"
+      }
+    },
+    {
+      "key": "ad432219-272a-460d-996e-76cf39cc70ef",
+      "position": 2,
+      "properties": {
+        "description": "\nLevel 2 Modify: \nLevel 3 Panel:\nLevel 4 Choice: \nLevel 5 CFU"
+      },
+      "seeding_key": {
+        "activity_section.key": "ad432219-272a-460d-996e-76cf39cc70ef",
+        "lesson_activity.key": "d0f2618b-4253-41d7-85f8-419e7e8d70d5"
+      }
+    },
+    {
       "key": "4e85e262-7573-4afa-85fa-a2cc3236b67b",
       "position": 1,
       "properties": {
@@ -2889,37 +2829,8 @@
       }
     },
     {
-      "key": "e881877f-098a-4262-9a11-f328a63351b1",
-      "position": 12,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *fallback*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 1 to complete Levels 1 through 4.\n- Level 1: Students read the formal definition of try/catch.\n- Level 2: Students write a personal definition for try/catch and provide one example.\n- Level 3: Students read the formal definition of fallback.\n- Level 4: Students write a personal definition for fallback and provide one example.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** On Level 2, check that students can point to which code belongs in the try block and what goes in catch (error). Ask probing questions like: What “dangerous stunt” is your try block protecting? and What will the user see if catch runs? On Level 4, look for examples that clearly show something helpful to the user (apology, image, retry) instead of doing nothing or exposing raw error text Ensure students describe fallbacks as planned backup experiences, not random glitches.\n",
-        "progression_name": "Vocab: try...catch"
-      },
-      "seeding_key": {
-        "activity_section.key": "e881877f-098a-4262-9a11-f328a63351b1",
-        "lesson_activity.key": "610c721b-681b-46fc-838f-c6dcbc1743b5"
-      }
-    },
-    {
-      "key": "9c7aba6b-82ab-4703-9b57-e43e0251f382",
-      "position": 13,
-      "properties": {
-        "progression_name": "Vocab: Fallback",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Look for explanations that mention both “trying” risky code and “catching” errors to prevent crashes. Flag students who only talk about “fixing bugs” without mentioning what shows on screen."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "9c7aba6b-82ab-4703-9b57-e43e0251f382",
-        "lesson_activity.key": "610c721b-681b-46fc-838f-c6dcbc1743b5"
-      }
-    },
-    {
       "key": "d8a1ecaa-7e0e-4689-991c-e94e757b56d1",
-      "position": 14,
+      "position": 12,
       "properties": {
       },
       "seeding_key": {
@@ -2929,7 +2840,7 @@
     },
     {
       "key": "3b54ebc9-5969-456c-b166-ec496240b83c",
-      "position": 15,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Imagine a login attempt fails. What should the system show the user, and why?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students will evaluate how different error-handling strategies influence user experience, trust, and system design tradeoffs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 5 to complete Levels 5 through 6.\n- Level 5: Students predict and then run code with a broken URL to see it crash.\n- Level 6: Students modify the code by wrapping the fetch in a try block and adding a catch block that prints to the console.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who forget the curly braces for the catch block. Remind them that catch needs its own block of code to run. Ask: \"Now that you've added the catch, does the red error still stop the whole program?\"\n",
         "progression_name": "Predict and Run: Broken Fetch"
@@ -2941,7 +2852,7 @@
     },
     {
       "key": "a6f946ce-8920-45fe-a850-d3195017b023",
-      "position": 16,
+      "position": 14,
       "properties": {
         "progression_name": "Modify: Broken Fetch",
         "tips": [
@@ -2958,7 +2869,7 @@
     },
     {
       "key": "094e96a9-95ce-4fcb-80a3-cf420bb8806d",
-      "position": 17,
+      "position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -2968,7 +2879,7 @@
     },
     {
       "key": "83d1e07e-9cb3-46dc-a595-c78d9890cdc0",
-      "position": 18,
+      "position": 16,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How does using try and catch make your app more trustworthy for users?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that even if a feature fails, a controlled error message maintains user trust better than a crash or technical jargon. Even if the data doesn't load, a polite message or fallback image keeps the user feeling safe and in control.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Chaos Challenge scenarios.\n"
       },
@@ -2979,7 +2890,7 @@
     },
     {
       "key": "5809c5dc-6214-4e24-9057-d403ec2124a0",
-      "position": 19,
+      "position": 17,
       "properties": {
         "description": "It's Launch Day, and everything is going wrong! The API is down, and users are starting to complain. You are the Crisis Manager. You need to choose one of three problems and fix it so our users don't abandon the app.",
         "remarks": true,
@@ -2997,7 +2908,7 @@
     },
     {
       "key": "90d6d4f3-22ed-4bc1-afee-05d7f93d5e34",
-      "position": 20,
+      "position": 18,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 7 to complete Levels 7 through 8.\n- Level 7: Students read the three \"Chaos\" scenarios.\n- Level 8A: Students write code to display a polite, non-technical apology message.\n- Level 8B: Students write code to display a local fallback image when the fetch fails.\n- Level 8C: Student write code to wire up a \"Try Again\" button to the fetch function.\n",
         "progression_name": "Chaos Challenge Introduction"
@@ -3009,7 +2920,7 @@
     },
     {
       "key": "ee66e050-d755-43ab-9bfa-feeeac0aa0c5",
-      "position": 21,
+      "position": 19,
       "properties": {
         "progression_name": "Chaos Challenge",
         "tips": [
@@ -3032,19 +2943,6 @@
       },
       "seeding_key": {
         "activity_section.key": "f086392a-e841-491e-9389-521abca0cf93",
-        "lesson_activity.key": "1a2cd29b-d4e9-49e7-9b8c-e3d04ce2b979"
-      }
-    },
-    {
-      "key": "996f10ba-0efd-4e77-8284-9c13f4a46b49",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 9 to complete the End of Lesson Survey.",
-        "name": "End of Lesson Survey",
-        "progression_name": "End of Lesson Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "996f10ba-0efd-4e77-8284-9c13f4a46b49",
         "lesson_activity.key": "1a2cd29b-d4e9-49e7-9b8c-e3d04ce2b979"
       }
     },
@@ -3246,8 +3144,19 @@
       }
     },
     {
-      "key": "0cfb2c03-5076-42a7-87a9-8d183f7a554c",
+      "key": "c03d22aa-370c-4eab-a953-00376129cfb8",
       "position": 9,
+      "properties": {
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "c03d22aa-370c-4eab-a953-00376129cfb8",
+        "lesson_activity.key": "37053ffc-7e23-46d6-ae37-d198dcef63fa"
+      }
+    },
+    {
+      "key": "0cfb2c03-5076-42a7-87a9-8d183f7a554c",
+      "position": 10,
       "properties": {
       },
       "seeding_key": {
@@ -3257,7 +3166,7 @@
     },
     {
       "key": "9497948e-7350-4e2a-814c-0f28e6b2453e",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How does seeing a loading message impact your trust in an app?*\n- *What happens if an app shows nothing when a search has no results?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that clear communication prevents users from assuming the app is broken. Loading states tell the user that the data is loading and not to navigate away from the page. Empty states communicate that no data matches the search criteria, rather than leaving users confused by seeing a blank screen.\n"
       },
@@ -4044,6 +3953,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Live API Exploration"
       },
       "bonus": false,
       "seeding_key": {
@@ -4053,7 +3963,7 @@
         "lesson.key": "Lesson 1: Where Data Comes From",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "d39b730b-f6cc-4383-b9f3-e38271c407a0"
+        "activity_section.key": "3ac5ccc6-f381-4644-98d5-c4a8974bb11c"
       },
       "level_keys": [
         "designing-reliable-apps-lesson1-level1-2026"
@@ -4062,48 +3972,6 @@
     {
       "chapter": 3,
       "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson1-level4-2026"
-        ],
-        "lesson.key": "Lesson 1: Where Data Comes From",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "d39b730b-f6cc-4383-b9f3-e38271c407a0"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson1-level4-2026"
-      ]
-    },
-    {
-      "chapter": 4,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson1-level7-2026"
-        ],
-        "lesson.key": "Lesson 1: Where Data Comes From",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "d39b730b-f6cc-4383-b9f3-e38271c407a0"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson1-level7-2026"
-      ]
-    },
-    {
-      "chapter": 5,
-      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4124,12 +3992,12 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 5,
-      "activity_section_position": 1,
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Navigate a Weather App"
+        "progression": "Exploring the Network Panel"
       },
       "bonus": false,
       "seeding_key": {
@@ -4139,37 +4007,37 @@
         "lesson.key": "Lesson 1: Where Data Comes From",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "9f1f09d4-00db-4dfc-9fbf-3ea0cee760ae"
+        "activity_section.key": "49c19b31-c206-4438-8185-99e0ac2aff25"
       },
       "level_keys": [
         "designing-reliable-apps-lesson1-level1-networks-tab-test-20_2025-_2026"
       ]
     },
     {
-      "chapter": 7,
-      "position": 6,
-      "activity_section_position": 1,
+      "chapter": 5,
+      "position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Explore API Documentation"
+        "progression": "Exploring the Network Panel"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "designing-reliable-apps-lesson1-level2-test-2025-pilot_2025-pilot_2026"
+          "designing-reliable-apps-lesson1-level4-2026"
         ],
         "lesson.key": "Lesson 1: Where Data Comes From",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "08f24a62-41d4-4452-90d5-bb36b7786d24"
+        "activity_section.key": "49c19b31-c206-4438-8185-99e0ac2aff25"
       },
       "level_keys": [
-        "designing-reliable-apps-lesson1-level2-test-2025-pilot_2025-pilot_2026"
+        "designing-reliable-apps-lesson1-level4-2026"
       ]
     },
     {
-      "chapter": 8,
-      "position": 7,
+      "chapter": 6,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4190,12 +4058,12 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 8,
-      "activity_section_position": 1,
+      "chapter": 7,
+      "position": 6,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Modify an API Call"
+        "progression": "Make a Prediction"
       },
       "bonus": false,
       "seeding_key": {
@@ -4205,63 +4073,41 @@
         "lesson.key": "Lesson 1: Where Data Comes From",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "d865612b-41f3-441f-8091-8576481040b2"
+        "activity_section.key": "3b049d44-69a9-407f-ac87-c30372bacc2e"
       },
       "level_keys": [
         "designing-reliable-apps-lesson1-level3-test-2025-pilot_2025-pilot_2026"
       ]
     },
     {
-      "chapter": 10,
-      "position": 9,
-      "activity_section_position": 1,
+      "chapter": 8,
+      "position": 7,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "End of Lesson Survey"
+        "progression": "Make a Prediction"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "designing-reliable-apps-lesson1-pilot-survey_2026"
+          "designing-reliable-apps-lesson1-level7-2026"
         ],
         "lesson.key": "Lesson 1: Where Data Comes From",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "fa9c4bd0-c5c9-4c7b-8db9-f34a058f42f5"
+        "activity_section.key": "3b049d44-69a9-407f-ac87-c30372bacc2e"
       },
       "level_keys": [
-        "designing-reliable-apps-lesson1-pilot-survey_2026"
+        "designing-reliable-apps-lesson1-level7-2026"
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "New CFU Level 3"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson2-level3-2026"
-        ],
-        "lesson.key": "Lesson 2: Why Apps Wait",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "a38987dc-6133-450f-b6b9-91a3e0c32c67"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson2-level3-2026"
-      ]
-    },
-    {
-      "chapter": 12,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Demo: Run the Frozen App"
+        "progression": "Demo: The Frozen App"
       },
       "bonus": false,
       "seeding_key": {
@@ -4271,19 +4117,19 @@
         "lesson.key": "Lesson 2: Why Apps Wait",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "ffe792fd-7b5d-4b92-a020-a0607edb01c4"
+        "activity_section.key": "481986ea-58a8-4a22-bd32-694d68b1fea9"
       },
       "level_keys": [
         "designing-reliable-apps-lesson2-level5-test_2025-pilot_2025-pilot_2026"
       ]
     },
     {
-      "chapter": 13,
-      "position": 3,
+      "chapter": 10,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Analogy: Synchronous vs. Asynchronous "
+        "progression": "Synchronous vs. Asynchronous "
       },
       "bonus": false,
       "seeding_key": {
@@ -4300,7 +4146,29 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 11,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Synchronous vs. Asynchronous "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson2-level3-2026"
+        ],
+        "lesson.key": "Lesson 2: Why Apps Wait",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "b2a3a269-4773-44a7-934d-3e2eb361a5f9"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson2-level3-2026"
+      ]
+    },
+    {
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4322,7 +4190,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4344,7 +4212,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 14,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4366,7 +4234,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 15,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4388,7 +4256,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4410,7 +4278,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4432,7 +4300,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 18,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4454,7 +4322,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 19,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4476,7 +4344,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 20,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4498,7 +4366,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4520,7 +4388,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4542,7 +4410,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4564,7 +4432,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 24,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4586,7 +4454,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4608,7 +4476,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 26,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4630,7 +4498,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 27,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4652,7 +4520,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 28,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4674,7 +4542,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 29,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4696,7 +4564,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 30,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4718,7 +4586,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 31,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4740,7 +4608,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 32,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4762,7 +4630,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4784,7 +4652,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4806,7 +4674,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4828,7 +4696,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 36,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4850,96 +4718,114 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Vocab: try...catch"
+        "progression": "Predict"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "designing-reliable-apps-lesson8-vocab1-2025-pilot_2025-pilot_2026"
+          "designing-reliable-apps-lesson8-level1-2026"
         ],
         "lesson.key": "Lesson 8: Catching Problems",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "e881877f-098a-4262-9a11-f328a63351b1"
+        "activity_section.key": "fd31b9ae-73a0-4e17-8400-6159087dbb84"
       },
       "level_keys": [
-        "designing-reliable-apps-lesson8-vocab1-2025-pilot_2025-pilot_2026"
+        "designing-reliable-apps-lesson8-level1-2026"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson8-level2-2026"
+        ],
+        "lesson.key": "Lesson 8: Catching Problems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "ad432219-272a-460d-996e-76cf39cc70ef"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson8-level2-2026"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson8-level3-2026"
+        ],
+        "lesson.key": "Lesson 8: Catching Problems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "ad432219-272a-460d-996e-76cf39cc70ef"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson8-level3-2026"
       ]
     },
     {
       "chapter": 40,
-      "position": 2,
-      "activity_section_position": 2,
+      "position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Vocab: try...catch"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "designing-reliable-apps-lesson8-vocabsummary1-2025-pilot_2025-pil_2026"
+          "designing-reliable-apps-lesson8-level4-2026"
         ],
         "lesson.key": "Lesson 8: Catching Problems",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "e881877f-098a-4262-9a11-f328a63351b1"
+        "activity_section.key": "ad432219-272a-460d-996e-76cf39cc70ef"
       },
       "level_keys": [
-        "designing-reliable-apps-lesson8-vocabsummary1-2025-pilot_2025-pil_2026"
+        "designing-reliable-apps-lesson8-level4-2026"
       ]
     },
     {
       "chapter": 41,
-      "position": 3,
-      "activity_section_position": 1,
+      "position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Vocab: Fallback"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "designing-reliable-apps-lesson8-vocab2-2025-pilot_2025-pilot_2026"
+          "designing-reliable-apps-lesson8-level5-2026"
         ],
         "lesson.key": "Lesson 8: Catching Problems",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "9c7aba6b-82ab-4703-9b57-e43e0251f382"
+        "activity_section.key": "ad432219-272a-460d-996e-76cf39cc70ef"
       },
       "level_keys": [
-        "designing-reliable-apps-lesson8-vocab2-2025-pilot_2025-pilot_2026"
+        "designing-reliable-apps-lesson8-level5-2026"
       ]
     },
     {
       "chapter": 42,
-      "position": 4,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Fallback"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson8-vocabsummary2-2025-pilot_2025-pil_2026"
-        ],
-        "lesson.key": "Lesson 8: Catching Problems",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "9c7aba6b-82ab-4703-9b57-e43e0251f382"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson8-vocabsummary2-2025-pilot_2025-pil_2026"
-      ]
-    },
-    {
-      "chapter": 43,
-      "position": 5,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4960,8 +4846,8 @@
       ]
     },
     {
-      "chapter": 44,
-      "position": 6,
+      "chapter": 43,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4982,8 +4868,8 @@
       ]
     },
     {
-      "chapter": 45,
-      "position": 7,
+      "chapter": 44,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5004,8 +4890,8 @@
       ]
     },
     {
-      "chapter": 46,
-      "position": 8,
+      "chapter": 45,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5026,74 +4912,8 @@
       ]
     },
     {
-      "chapter": 47,
-      "position": 9,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "End of Lesson Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson8-pilot-survey_2026"
-        ],
-        "lesson.key": "Lesson 8: Catching Problems",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "996f10ba-0efd-4e77-8284-9c13f4a46b49"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson8-pilot-survey_2026"
-      ]
-    },
-    {
-      "chapter": 48,
+      "chapter": 46,
       "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Human-Centered Reliability"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson9-vocab1-2025-pilot_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 9: Keeping Users Informed",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "5126359b-9381-46d9-9ab3-f12ac80ab96f"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson9-vocab1-2025-pilot_2025-pilot_2026"
-      ]
-    },
-    {
-      "chapter": 49,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Human-Centered Reliability"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson9-vocabsummary1-2025-pilot_2025-pil_2026"
-        ],
-        "lesson.key": "Lesson 9: Keeping Users Informed",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "5126359b-9381-46d9-9ab3-f12ac80ab96f"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson9-vocabsummary1-2025-pilot_2025-pil_2026"
-      ]
-    },
-    {
-      "chapter": 50,
-      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5114,8 +4934,8 @@
       ]
     },
     {
-      "chapter": 51,
-      "position": 4,
+      "chapter": 47,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5136,8 +4956,8 @@
       ]
     },
     {
-      "chapter": 52,
-      "position": 5,
+      "chapter": 48,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5158,8 +4978,30 @@
       ]
     },
     {
-      "chapter": 53,
-      "position": 6,
+      "chapter": 49,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson9-level4-2026"
+        ],
+        "lesson.key": "Lesson 9: Keeping Users Informed",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "c03d22aa-370c-4eab-a953-00376129cfb8"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson9-level4-2026"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5180,7 +5022,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5202,7 +5044,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5224,7 +5066,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 53,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5246,7 +5088,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 54,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5268,7 +5110,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 55,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -5290,7 +5132,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5312,7 +5154,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 57,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5334,7 +5176,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 58,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5356,7 +5198,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 59,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5378,7 +5220,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 60,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5400,7 +5242,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5444,31 +5286,7 @@
         "lesson.key": "Lesson 1: Where Data Comes From",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "d39b730b-f6cc-4383-b9f3-e38271c407a0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson1-level4-2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson1-level4-2026"
-        ],
-        "lesson.key": "Lesson 1: Where Data Comes From",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "d39b730b-f6cc-4383-b9f3-e38271c407a0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson1-level7-2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson1-level7-2026"
-        ],
-        "lesson.key": "Lesson 1: Where Data Comes From",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "d39b730b-f6cc-4383-b9f3-e38271c407a0"
+        "activity_section.key": "3ac5ccc6-f381-4644-98d5-c4a8974bb11c"
       }
     },
     {
@@ -5492,19 +5310,19 @@
         "lesson.key": "Lesson 1: Where Data Comes From",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "9f1f09d4-00db-4dfc-9fbf-3ea0cee760ae"
+        "activity_section.key": "49c19b31-c206-4438-8185-99e0ac2aff25"
       }
     },
     {
       "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson1-level2-test-2025-pilot_2025-pilot_2026",
+        "level.key": "designing-reliable-apps-lesson1-level4-2026",
         "script_level.level_keys": [
-          "designing-reliable-apps-lesson1-level2-test-2025-pilot_2025-pilot_2026"
+          "designing-reliable-apps-lesson1-level4-2026"
         ],
         "lesson.key": "Lesson 1: Where Data Comes From",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "08f24a62-41d4-4452-90d5-bb36b7786d24"
+        "activity_section.key": "49c19b31-c206-4438-8185-99e0ac2aff25"
       }
     },
     {
@@ -5528,31 +5346,19 @@
         "lesson.key": "Lesson 1: Where Data Comes From",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "d865612b-41f3-441f-8091-8576481040b2"
+        "activity_section.key": "3b049d44-69a9-407f-ac87-c30372bacc2e"
       }
     },
     {
       "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson1-pilot-survey_2026",
+        "level.key": "designing-reliable-apps-lesson1-level7-2026",
         "script_level.level_keys": [
-          "designing-reliable-apps-lesson1-pilot-survey_2026"
+          "designing-reliable-apps-lesson1-level7-2026"
         ],
         "lesson.key": "Lesson 1: Where Data Comes From",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "fa9c4bd0-c5c9-4c7b-8db9-f34a058f42f5"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson2-level3-2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson2-level3-2026"
-        ],
-        "lesson.key": "Lesson 2: Why Apps Wait",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "a38987dc-6133-450f-b6b9-91a3e0c32c67"
+        "activity_section.key": "3b049d44-69a9-407f-ac87-c30372bacc2e"
       }
     },
     {
@@ -5564,7 +5370,7 @@
         "lesson.key": "Lesson 2: Why Apps Wait",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "ffe792fd-7b5d-4b92-a020-a0607edb01c4"
+        "activity_section.key": "481986ea-58a8-4a22-bd32-694d68b1fea9"
       }
     },
     {
@@ -5572,6 +5378,18 @@
         "level.key": "designing-reliable-apps-lesson2-level6-test_2025-pilot_2025-pilot_2026",
         "script_level.level_keys": [
           "designing-reliable-apps-lesson2-level6-test_2025-pilot_2025-pilot_2026"
+        ],
+        "lesson.key": "Lesson 2: Why Apps Wait",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "b2a3a269-4773-44a7-934d-3e2eb361a5f9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson2-level3-2026",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson2-level3-2026"
         ],
         "lesson.key": "Lesson 2: Why Apps Wait",
         "lesson_group.key": "lessonGroup-3",
@@ -5881,50 +5699,62 @@
     },
     {
       "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson8-vocab1-2025-pilot_2025-pilot_2026",
+        "level.key": "designing-reliable-apps-lesson8-level1-2026",
         "script_level.level_keys": [
-          "designing-reliable-apps-lesson8-vocab1-2025-pilot_2025-pilot_2026"
+          "designing-reliable-apps-lesson8-level1-2026"
         ],
         "lesson.key": "Lesson 8: Catching Problems",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "e881877f-098a-4262-9a11-f328a63351b1"
+        "activity_section.key": "fd31b9ae-73a0-4e17-8400-6159087dbb84"
       }
     },
     {
       "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson8-vocabsummary1-2025-pilot_2025-pil_2026",
+        "level.key": "designing-reliable-apps-lesson8-level2-2026",
         "script_level.level_keys": [
-          "designing-reliable-apps-lesson8-vocabsummary1-2025-pilot_2025-pil_2026"
+          "designing-reliable-apps-lesson8-level2-2026"
         ],
         "lesson.key": "Lesson 8: Catching Problems",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "e881877f-098a-4262-9a11-f328a63351b1"
+        "activity_section.key": "ad432219-272a-460d-996e-76cf39cc70ef"
       }
     },
     {
       "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson8-vocab2-2025-pilot_2025-pilot_2026",
+        "level.key": "designing-reliable-apps-lesson8-level3-2026",
         "script_level.level_keys": [
-          "designing-reliable-apps-lesson8-vocab2-2025-pilot_2025-pilot_2026"
+          "designing-reliable-apps-lesson8-level3-2026"
         ],
         "lesson.key": "Lesson 8: Catching Problems",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "9c7aba6b-82ab-4703-9b57-e43e0251f382"
+        "activity_section.key": "ad432219-272a-460d-996e-76cf39cc70ef"
       }
     },
     {
       "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson8-vocabsummary2-2025-pilot_2025-pil_2026",
+        "level.key": "designing-reliable-apps-lesson8-level4-2026",
         "script_level.level_keys": [
-          "designing-reliable-apps-lesson8-vocabsummary2-2025-pilot_2025-pil_2026"
+          "designing-reliable-apps-lesson8-level4-2026"
         ],
         "lesson.key": "Lesson 8: Catching Problems",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "9c7aba6b-82ab-4703-9b57-e43e0251f382"
+        "activity_section.key": "ad432219-272a-460d-996e-76cf39cc70ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson8-level5-2026",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson8-level5-2026"
+        ],
+        "lesson.key": "Lesson 8: Catching Problems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "ad432219-272a-460d-996e-76cf39cc70ef"
       }
     },
     {
@@ -5977,42 +5807,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson8-pilot-survey_2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson8-pilot-survey_2026"
-        ],
-        "lesson.key": "Lesson 8: Catching Problems",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "996f10ba-0efd-4e77-8284-9c13f4a46b49"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson9-vocab1-2025-pilot_2025-pilot_2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson9-vocab1-2025-pilot_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 9: Keeping Users Informed",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "5126359b-9381-46d9-9ab3-f12ac80ab96f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson9-vocabsummary1-2025-pilot_2025-pil_2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson9-vocabsummary1-2025-pilot_2025-pil_2026"
-        ],
-        "lesson.key": "Lesson 9: Keeping Users Informed",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "5126359b-9381-46d9-9ab3-f12ac80ab96f"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "designing-reliable-apps-lesson9-sketchlab-test-2025-pilot_2025-pi_2026",
         "script_level.level_keys": [
           "designing-reliable-apps-lesson9-sketchlab-test-2025-pilot_2025-pi_2026"
@@ -6045,6 +5839,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
         "activity_section.key": "24f93856-1409-43c3-a4e9-d1831832fa04"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson9-level4-2026",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson9-level4-2026"
+        ],
+        "lesson.key": "Lesson 9: Keeping Users Informed",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "c03d22aa-370c-4eab-a953-00376129cfb8"
       }
     },
     {
@@ -6194,6 +6000,19 @@
   ],
   "resources": [
     {
+      "name": "[EXEMPLAR] Designing Reliable Apps with AI and APIs Unit Guide",
+      "url": "https://docs.google.com/document/d/15XLS9tFMIjXCOlqHyrCjlWedTG0CvB3CGp49DqxeL80/edit?usp=sharing",
+      "key": "_exemplar_designing_reliable_apps_with_ai_and_apis_unit_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_designing_reliable_apps_with_ai_and_apis_unit_guide"
+      }
+    },
+    {
       "name": "[KEY] Keeping Users Informed",
       "url": "https://docs.google.com/document/d/1HWnm8as7X2jKu2xPNtoYY18DRzOVdVdozOFHWwsklvs/edit?usp=sharing",
       "key": "_key_keeping_users_informed",
@@ -6279,7 +6098,7 @@
     },
     {
       "name": "[KEY] Where Data Comes From",
-      "url": "https://docs.google.com/document/d/12V84r0O2pkLh4ujfzOpOFayMr4pv0y6jmUqvEyMZKgE/edit?tab=t.0#heading=h.he8kcnk26cq4",
+      "url": "https://docs.google.com/document/d/1nywu5FBdGShv7M2ds78iPTzmbXEl2pGeifcltdO38gg/edit?usp=sharing",
       "key": "_key_where_data_comes_from",
       "properties": {
         "audience": "Verified Teacher",
@@ -6293,7 +6112,7 @@
     },
     {
       "name": "[KEY] Why Apps Wait",
-      "url": "https://docs.google.com/document/d/1Le0zr69m97QQWiS-aZAPQ8ahqH4nwcGlEztKTr17Ct8/edit?tab=t.0#heading=h.he8kcnk26cq4",
+      "url": "https://docs.google.com/document/d/1TSy_cbrG3r_5tAa4ybE5sraSS6_9RCVqzTf7fMxg8fw/edit?usp=sharing",
       "key": "_key_why_apps_wait",
       "properties": {
         "audience": "Verified Teacher",
@@ -6352,24 +6171,35 @@
     },
     {
       "name": "All Resources",
-      "url": "/courses/artificial-intelligence-foundations-semester2-2025/units/5/resources",
-      "key": "all_resources",
+      "url": "/courses/ai-foundations-designing-and-building-with-ai-2026/units/5/resources",
+      "key": "all_resources_6",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources"
+        "resource.key": "all_resources_6"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/ai-foundations-designing-and-building-with-ai-2026/units/5/standards",
+      "key": "all_standards_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_4"
       }
     },
     {
       "name": "All Vocabulary",
-      "url": "/courses/artificial-intelligence-foundations-semester2-2025/units/5/vocab",
-      "key": "all_vocabulary",
+      "url": "/courses/ai-foundations-designing-and-building-with-ai-2026/units/5/vocab",
+      "key": "all_vocabulary_3",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_vocabulary"
+        "resource.key": "all_vocabulary_3"
       }
     },
     {
@@ -6383,6 +6213,20 @@
       },
       "seeding_key": {
         "resource.key": "catching_problems"
+      }
+    },
+    {
+      "name": "Designing Reliable Apps with AI and APIs Unit Guide",
+      "url": "https://docs.google.com/document/d/1lRg2d_7CS--rh1pyhinaG1OXYM5CT7WLMo7WqK43axE/edit?tab=t.0",
+      "key": "designing_reliable_apps_with_ai_and_apis_unit_guide",
+      "properties": {
+        "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "designing_reliable_apps_with_ai_and_apis_unit_guide"
       }
     },
     {
@@ -6507,7 +6351,6 @@
         "audience": "Student",
         "curriculum_category": "curriculum",
         "embeddability_type": "embed_and_resource_dropdown",
-        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -6574,7 +6417,7 @@
     },
     {
       "name": "Where Data Comes From",
-      "url": "https://docs.google.com/presentation/d/1C5QNGL9f8oQzgqjPtUKR5s61gxvDmdjjL0dn1rN4OsE/edit?slide=id.ge0cc47de8e_1_1053#slide=id.ge0cc47de8e_1_1053",
+      "url": "https://docs.google.com/presentation/d/1rQ1L2KliiJ7HMHzodOBYn5pPPQI0qi9_7VM8iODdPFI/edit?slide=id.gca418c6afa_0_1070#slide=id.gca418c6afa_0_1070",
       "key": "where_data_comes_from",
       "properties": {
         "audience": "Teacher",
@@ -6588,7 +6431,7 @@
     },
     {
       "name": "Where Data Comes From",
-      "url": "https://docs.google.com/document/d/1jKcPmh7HMrOU1KSWqWUI-IK82Z52XduhMVnmQ38p53o/edit?tab=t.0#heading=h.he8kcnk26cq4",
+      "url": "https://docs.google.com/document/d/1Q8YfsUprFAQj4gKquHkm6J3mZ5OWCoSc0hKZPi5D0Ag/edit?tab=t.0#heading=h.4narj5josoiw",
       "key": "where_data_comes_from_1",
       "properties": {
         "audience": "Student",
@@ -6603,7 +6446,7 @@
     },
     {
       "name": "Why Apps Wait",
-      "url": "https://docs.google.com/presentation/d/12eQukwrZYdENHqjiaCxTeoo5rQMyoSbmE24osIpOWiU/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1W5g1SOt03z5bLk7Q7CfNLvEPu0JALvEF6hhCWqp9NGE/edit?usp=sharing",
       "key": "why_apps_wait",
       "properties": {
         "audience": "Teacher",
@@ -6617,7 +6460,7 @@
     },
     {
       "name": "Why Apps Wait",
-      "url": "https://docs.google.com/document/d/1xAv4N_Jl-EST_mHWztCvkGTHFnSE73otXznFYR1CRs0/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1zxueBDnn-7h0iy7XVhMGSozxwmmouBfC70zovMcGvgg/edit?usp=sharing",
       "key": "why_apps_wait_1",
       "properties": {
         "audience": "Student",
@@ -6653,7 +6496,19 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 1: Where Data Comes From",
+        "resource.key": "_exemplar_designing_reliable_apps_with_ai_and_apis_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Where Data Comes From",
         "resource.key": "_key_where_data_comes_from"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Where Data Comes From",
+        "resource.key": "designing_reliable_apps_with_ai_and_apis_unit_guide"
       }
     },
     {
@@ -6677,7 +6532,19 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 2: Why Apps Wait",
+        "resource.key": "_exemplar_designing_reliable_apps_with_ai_and_apis_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Why Apps Wait",
         "resource.key": "_key_why_apps_wait"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Why Apps Wait",
+        "resource.key": "designing_reliable_apps_with_ai_and_apis_unit_guide"
       }
     },
     {
@@ -6810,13 +6677,19 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources",
+        "resource.key": "all_resources_6",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_vocabulary",
+        "resource.key": "all_standards_4",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-2026"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026"
       }
     }
@@ -6828,7 +6701,7 @@
     {
       "key": "application_programming_interface_api_",
       "word": "Application Programming Interface (API)",
-      "definition": "a set of rules that allow software applications to communicate",
+      "definition": "a set of rules that allow one app to communicate",
       "properties": {
       },
       "seeding_key": {
@@ -6898,7 +6771,7 @@
     {
       "key": "javascript_object_notation_json_",
       "word": "JavaScript Object Notation (JSON)",
-      "definition": "a lightweight format for storing and transporting data, often returned by APIs",
+      "definition": "a lightweight, structured data format that is easy for humans to read and machines to process",
       "properties": {
       },
       "seeding_key": {

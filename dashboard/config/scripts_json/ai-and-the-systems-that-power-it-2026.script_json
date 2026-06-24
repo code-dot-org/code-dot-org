@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-03 22:35:43 UTC",
+    "serialized_at": "2026-06-23 17:20:35 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6271,35 +6271,35 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/aif3-2025/resources",
-      "key": "all_resources_1",
+      "url": "/courses/ai-foundations-exploring-ai-and-cs-2026/units/2/resources",
+      "key": "all_resources_7",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_1"
+        "resource.key": "all_resources_7"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/aif3-2025/standards",
-      "key": "all_standards_1",
+      "url": "/courses/ai-foundations-exploring-ai-and-cs-2026/units/2/standards",
+      "key": "all_standards_7",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards_1"
+        "resource.key": "all_standards_7"
       }
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/aif3-2025/vocab",
-      "key": "all_vocabulary_1",
+      "url": "/courses/ai-foundations-exploring-ai-and-cs-2026/units/2/vocab",
+      "key": "all_vocabulary_7",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_vocabulary_1"
+        "resource.key": "all_vocabulary_7"
       }
     },
     {
@@ -7393,19 +7393,19 @@
     },
     {
       "seeding_key": {
-        "resource.key": "all_resources_1",
+        "resource.key": "all_resources_7",
         "script.name": "ai-and-the-systems-that-power-it-2026"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards_1",
+        "resource.key": "all_standards_7",
         "script.name": "ai-and-the-systems-that-power-it-2026"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_vocabulary_1",
+        "resource.key": "all_vocabulary_7",
         "script.name": "ai-and-the-systems-that-power-it-2026"
       }
     },
@@ -7557,6 +7557,16 @@
       }
     },
     {
+      "key": "optimization",
+      "word": "optimization",
+      "definition": "The process of making something run better even if it’s working",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "optimization"
+      }
+    },
+    {
       "key": "output_devices",
       "word": "output devices",
       "definition": "display information from the computer",
@@ -7701,6 +7711,18 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 3: Troubleshooting and Optimizing Hardware",
+        "vocabulary.key": "troubleshooting"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
+        "vocabulary.key": "optimization"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Troubleshooting and Optimizing Software",
         "vocabulary.key": "troubleshooting"
       }
     },

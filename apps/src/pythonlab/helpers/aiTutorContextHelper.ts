@@ -1,4 +1,5 @@
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
+import {getFilePath} from '@codebridge/utils/getFilePath';
 
 import {tryFetchDocsForClass} from '@cdo/apps/aiTutor/docContextApi';
 import {
@@ -10,6 +11,8 @@ import {stripAnsiSequences} from '@cdo/apps/codebridge/Console/MessageHelpers';
 import {ProjectFile} from '@cdo/apps/codebridge/types';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
+
+const LANGUAGES_TO_EXCLUDE_FROM_CONTEXT = ['md'];
 
 import PythonValidationTracker from '../progress/PythonValidationTracker';
 
@@ -46,21 +49,25 @@ export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorP
       this.params;
     const sourceCode = source
       ? Object.values(source.files)
-          .filter(
-            file =>
+          .filter(file => {
+            const ext = file.name.split('.').pop()?.toLowerCase() ?? '';
+            if (LANGUAGES_TO_EXCLUDE_FROM_CONTEXT.includes(ext)) return false;
+            return (
               (file.type !== ProjectFileType.VALIDATION &&
                 file.type !== ProjectFileType.SYSTEM_SUPPORT &&
                 file.type !== ProjectFileType.SUPPORT) ||
               (file.type === ProjectFileType.SUPPORT && file.contents)
-          )
+            );
+          })
           .map(file => {
+            const filePath = getFilePath(file, source.folders);
             let prefix = '';
             if (file.type === ProjectFileType.SUPPORT) {
-              prefix = `${file.name} is not visible to the student: \n`;
+              prefix = `${filePath} is not visible to the student: \n`;
             }
 
-            return `${prefix}filename: ${file.name}\n${this.codeBlock(
-              file.contents
+            return `${prefix}filename: ${filePath}\n${this.codeBlock(
+              file.contents ?? ''
             )}`;
           })
           .join('\n\n')

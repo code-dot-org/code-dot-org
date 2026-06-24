@@ -18,6 +18,7 @@ import {
   setReserveLocation,
   setInstructionsDismissed,
   setFirehoseMetricsLogger,
+  getTrainedModelDataToSave,
 } from './redux';
 import {store} from './store';
 import type {Mode, ModelDataToSave, SaveResponse} from './types';
@@ -36,7 +37,7 @@ let saveTrainedModel:
   | undefined = null;
 let onContinue: (() => void) | null | undefined = null;
 
-interface InitAllOptions {
+export interface InitAllOptions {
   i18n?: Record<string, string>;
   mode?: Mode;
   onContinue?: () => void;
@@ -123,7 +124,11 @@ const processMode = (mode: Mode | undefined): void => {
 };
 
 // Do the asynchronous save of a model.
-const startSaveTrainedModel = (dataToSave: ModelDataToSave): void => {
+// TODO: In the RTK migration, fold this into a thunk action so the payload is
+// composed from getState() in the thunk body and App can simply dispatch it,
+// rather than the store being reached into here.
+const startSaveTrainedModel = (): void => {
+  const dataToSave = getTrainedModelDataToSave(store.getState());
   store.dispatch(setSaveStatus('started'));
   saveTrainedModel!(dataToSave, (response: SaveResponse) => {
     store.dispatch(setSaveStatus(response.status, response.data));
@@ -135,3 +140,6 @@ const startSaveTrainedModel = (dataToSave: ModelDataToSave): void => {
     }
   });
 };
+
+// Export a few types.
+export {type SaveResponse, type ModelDataToSave} from './types';

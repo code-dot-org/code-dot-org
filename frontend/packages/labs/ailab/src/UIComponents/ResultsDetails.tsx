@@ -2,8 +2,6 @@
 import {faTimes} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {useCallback} from 'react';
-import {connect} from 'react-redux';
-import type {Dispatch} from 'redux';
 
 import {ResultsGrades, styles} from '../constants';
 import {
@@ -11,31 +9,22 @@ import {
   getCorrectResults,
   getIncorrectResults,
 } from '../helpers/accuracy';
-import type {RootState} from '../redux';
+import {useAppDispatch, useAppSelector} from '../hooks';
 import {setShowResultsDetails} from '../redux';
-import type {ResultsData} from '../types';
 
 import ResultsTable from './ResultsTable';
 import ResultsToggle from './ResultsToggle';
 
-interface ResultsDetailsProps {
-  resultsTab: string;
-  percentCorrect: string;
-  setShowResultsDetails: (show: boolean) => void;
-  correctResults: ResultsData;
-  incorrectResults: ResultsData;
-}
+const ResultsDetails = () => {
+  const dispatch = useAppDispatch();
+  const resultsTab = useAppSelector(state => state.resultsTab);
+  const percentCorrect = useAppSelector(getPercentCorrect);
+  const correctResults = useAppSelector(getCorrectResults);
+  const incorrectResults = useAppSelector(getIncorrectResults);
 
-const ResultsDetails = ({
-  resultsTab,
-  percentCorrect,
-  setShowResultsDetails,
-  correctResults,
-  incorrectResults,
-}: ResultsDetailsProps) => {
   const onClose = useCallback(() => {
-    setShowResultsDetails(false);
-  }, [setShowResultsDetails]);
+    dispatch(setShowResultsDetails(false));
+  }, [dispatch]);
 
   const results =
     resultsTab === ResultsGrades.CORRECT ? correctResults : incorrectResults;
@@ -59,16 +48,4 @@ const ResultsDetails = ({
   );
 };
 
-export default connect(
-  (state: RootState) => ({
-    resultsTab: state.resultsTab,
-    percentCorrect: getPercentCorrect(state),
-    correctResults: getCorrectResults(state),
-    incorrectResults: getIncorrectResults(state),
-  }),
-  (dispatch: Dispatch) => ({
-    setShowResultsDetails(show: boolean) {
-      dispatch(setShowResultsDetails(show));
-    },
-  }),
-)(ResultsDetails);
+export default ResultsDetails;
