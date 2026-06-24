@@ -12,6 +12,7 @@ import {
   type OnConnect,
 } from '@xyflow/react';
 import classNames from 'classnames';
+import FocusTrap from 'focus-trap-react';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {
@@ -715,6 +716,14 @@ export default function ReactFlowCanvas({
           <PushSnapshotProvider value={pushSnapshot}>
             <AnchorDraggingProvider value={isAnchorDragging}>
               <ReconnectingEdgeProvider value={reconnectingEdge}>
+                <FocusTrap
+                  active={isGroupMode}
+                  focusTrapOptions={{
+                    initialFocus: false,
+                    escapeDeactivates: false,
+                    allowOutsideClick: true,
+                  }}
+                >
                 <div
                   ref={canvasContainerRef}
                   className={classNames(
@@ -813,6 +822,7 @@ export default function ReactFlowCanvas({
                     />
                   </ReactFlow>
                 </div>
+                </FocusTrap>
               </ReconnectingEdgeProvider>
             </AnchorDraggingProvider>
           </PushSnapshotProvider>
