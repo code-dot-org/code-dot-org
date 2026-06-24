@@ -1,3 +1,9 @@
+- if height == 'auto' || height.blank?
+  - button_height = 'auto'
+- else
+  -# accommodate padding and borders in height
+  - button_height = "#{height.to_i + 22}px"
+
 / Show the correct answer to authorized teachers
 - if Policies::InlineAnswer.visible_for_script_level?(current_user, @script_level)
   - correct_answers = data['answers'].each_with_index.map do |answer, index|
@@ -13,7 +19,7 @@
         - correct_answers.each do |correct_answer|
           .multi
             .mainblock
-              %span.answerbutton.btn.btn-default{style: "height: #{height}"}
+              %span.answerbutton.btn.btn-default{style: "height: #{button_height}"}
                 .item-mark
                   .fa{class: checked_class}
                 .item-label

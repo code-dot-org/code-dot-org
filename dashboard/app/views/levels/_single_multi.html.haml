@@ -17,8 +17,7 @@
 - if data['height'] == 'auto' || data['height'].blank?
   - height = 'auto'
 - else
-  -# accommodate padding and borders in height
-  - height = "#{data['height'].to_i + 22}px"
+  - height = "#{data['height']}px"
 
   -# multi2 gets checkboxes; regular multi gets radio buttons.
 - if data['type'] == 'multi2'
