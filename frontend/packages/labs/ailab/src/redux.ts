@@ -67,10 +67,6 @@ export interface RootState {
   kValue: number | null;
   viewedPanels: string[];
   instructionsOverlayActive: boolean;
-  // Whether the consumer wired up an instructions callback (mirrors the
-  // presence of the non-serializable callback held in helpers/instructions).
-  // Kept in state so the reducer's overlay derivation stays pure rather than
-  // reaching into that module singleton.
   instructionsEnabled: boolean;
   resultsTab: string;
   mode?: Mode;
