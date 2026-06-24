@@ -25,6 +25,8 @@ module AichatAiHelper
 
     message['assets']&.each do |asset|
       filename = asset["filename"]
+      # Newer assets are stored in S3 with a bucketKey (ie, a UUID), but older assets may only have the human-readable filename.
+      # In that case, we use the filename as the lookup key.
       lookup_key = asset["bucketKey"] || filename
       source = asset["source"]
 
