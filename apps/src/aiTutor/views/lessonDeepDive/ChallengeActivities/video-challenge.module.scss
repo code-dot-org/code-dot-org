@@ -1,0 +1,33 @@
+.questionText {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--text-neutral-primary);
+}
+
+.submitButton {
+  display: block;
+  margin: 16px auto 0;
+  padding: 10px 24px;
+  background-color: #9657c7;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:hover:not(:disabled) {
+    opacity: 0.85;
+  }
+}
+
+.optionsRowsWrap {
+  flex-wrap: wrap;
+}
