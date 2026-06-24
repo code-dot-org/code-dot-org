@@ -25,9 +25,10 @@ module AichatAiHelper
 
     message['assets']&.each do |asset|
       filename = asset["filename"]
+      lookup_key = asset["bucketKey"] || filename
       source = asset["source"]
 
-      base64_string = AichatAssetHelper.get_asset_base64_string(filename, source, encrypted_channel_id, level_name)
+      base64_string = AichatAssetHelper.get_asset_base64_string(lookup_key, source, encrypted_channel_id, level_name)
 
       parts << AichatAiClientTypes::FileMessagePart.new(
         type: 'file',
