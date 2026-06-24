@@ -934,32 +934,7 @@ class Level < ApplicationRecord
     # Enable browser TTS if the script has TTS enabled, or if the level itself has it enabled.
     properties_camelized[:offerBrowserTts] = offer_browser_tts || script&.tts
 
-    # Pairing info from user_level
-    if current_user && script
-      user_level = current_user.last_attempt(self, script)
-      if user_level
-        is_navigator = user_level.navigator?
-        properties_camelized[:isNavigator] = is_navigator
-
-        if is_navigator
-          driver = user_level.driver
-          if driver
-            properties_camelized[:pairingDriver] = driver.name
-            driver_level_source_id = user_level.driver_level_source_id
-            if driver_level_source_id
-              properties_camelized[:pairingAttempt] = Rails.application.routes.url_helpers.edit_level_source_path(driver_level_source_id)
-            elsif channel_backed?
-              # For channel-backed levels, get the driver's channel
-              driver_storage_id = driver.user_storage_id
-              if driver_storage_id
-                channel_token = ChannelToken.find_channel_token(self, driver_storage_id, script.id)
-                properties_camelized[:pairingChannelId] = channel_token&.channel
-              end
-            end
-          end
-        end
-      end
-    end
+    properties_camelized.merge!(pairing_properties_for(current_user, script, camelize_keys: true))
 
     if try(:project_template_level).try(:start_sources)
       properties_camelized['templateSources'] = try(:project_template_level).try(:start_sources)
@@ -1014,6 +989,34 @@ class Level < ApplicationRecord
 
   def project_type
     return game&.app
+  end
+
+  # Returns pair-programming properties for this level and script.
+  # Includes :is_navigator if a user_level exists.
+  # Includes one of :pairing_attempt or :pairing_channel_id for navigators.
+  def pairing_properties_for(user, script, camelize_keys: false)
+    return {} unless user && script
+
+    user_level = user.last_attempt(self, script)
+    return {} unless user_level
+
+    pairing_properties = {is_navigator: user_level.navigator?}
+    return format_pairing_properties_keys(pairing_properties, camelize_keys) unless pairing_properties[:is_navigator]
+
+    driver = user_level.driver
+    return format_pairing_properties_keys(pairing_properties, camelize_keys) unless driver
+
+    pairing_properties[:pairing_driver] = driver.name
+
+    driver_level_source_id = user_level.driver_level_source_id
+    if driver_level_source_id
+      pairing_properties[:pairing_attempt] = Rails.application.routes.url_helpers.edit_level_source_path(driver_level_source_id)
+      return format_pairing_properties_keys(pairing_properties, camelize_keys)
+    end
+
+    pairing_channel_id = driver_pairing_channel_id(driver, script.id)
+    pairing_properties[:pairing_channel_id] = pairing_channel_id if pairing_channel_id
+    format_pairing_properties_keys(pairing_properties, camelize_keys)
   end
 
   # Whether this level has validation for the completion of student work.
@@ -1129,6 +1132,21 @@ class Level < ApplicationRecord
     lessons_from_script_levels = script_levels.map(&:lesson).compact.uniq.map(&:summarize_for_special_level_types)
     lessons_from_parent_script_levels = parent_levels.flat_map(&:script_levels).map(&:lesson).compact.uniq.map(&:summarize_for_special_level_types)
     (lessons_from_script_levels + lessons_from_parent_script_levels).uniq
+  end
+
+  private def driver_pairing_channel_id(driver, script_id)
+    return unless channel_backed?
+
+    driver_storage_id = driver.user_storage_id
+    return unless driver_storage_id
+
+    ChannelToken.find_channel_token(self, driver_storage_id, script_id)&.channel
+  end
+
+  private def format_pairing_properties_keys(pairing_properties, camelize_keys)
+    return pairing_properties unless camelize_keys
+
+    pairing_properties.transform_keys {|key| key.to_s.camelize(:lower).to_sym}
   end
 
   # Returns the level name, removing the name_suffix first (if present), and

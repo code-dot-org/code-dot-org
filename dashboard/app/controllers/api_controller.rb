@@ -704,27 +704,7 @@ class ApiController < ApplicationController
         source: level_source
       }
 
-      # Pairing info
-      is_navigator = user_level.navigator?
-      puts "is_navigator: #{is_navigator}"
-      if is_navigator
-        puts "is_navigator is true"
-        driver = user_level.driver
-        puts "driver: #{driver.name}"
-        driver_level_source_id = user_level.driver_level_source_id
-        puts "driver_level_source_id: #{driver_level_source_id}"
-      end
-
-      response[:isNavigator] = is_navigator
-      if driver
-        puts "driver is true"
-        response[:pairingDriver] = driver.name
-        if driver_level_source_id
-          response[:pairingAttempt] = edit_level_source_path(driver_level_source_id)
-        elsif level.channel_backed?
-          response[:pairingChannelId] = get_channel_for(level, script.id, driver)
-        end
-      end
+      response.merge!(level.pairing_properties_for(user, script, camelize_keys: true))
     end
 
     response
