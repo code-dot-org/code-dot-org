@@ -91,7 +91,9 @@ export function useElementClickHandlers({
           const removing = prev.has(entry.id);
           const label = getNodeLabel(node);
           setAriaAnnouncement(
-            removing ? `${label} removed.` : `${label} added.`
+            removing
+              ? `${label} removed from group.`
+              : `${label} added to group.`
           );
           const next = new Set(prev);
           if (removing) {
