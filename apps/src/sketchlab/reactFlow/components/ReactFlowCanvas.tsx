@@ -159,6 +159,9 @@ export default function ReactFlowCanvas({
   const {target: openToolbarTarget, trapFocus} = openToolbarInfo;
 
   const [isAnyPopoverOpen, setPopoverOpen] = useState(false);
+  const [keyboardMovingLineId, setKeyboardMovingLineId] = useState<
+    string | null
+  >(null);
 
   const openToolbar = useCallback(
     (target: ToolbarTarget, options?: {trapFocus?: boolean}) => {
@@ -337,6 +340,7 @@ export default function ReactFlowCanvas({
       redo: handleRedo,
       pushSnapshot,
       lastFocusedEntry,
+      onLineKeyboardMove: setKeyboardMovingLineId,
     });
 
   const {handleEdgeMouseDown, isLineDragging} = useLineEdgeDrag({
@@ -347,7 +351,18 @@ export default function ReactFlowCanvas({
     flowToScreenPosition,
     pushSnapshot,
   });
-  const isAnchorDragging = isDirectAnchorDragging || isLineDragging;
+  const isAnchorDragging =
+    isDirectAnchorDragging || isLineDragging || keyboardMovingLineId !== null;
+
+  // Clear the keyboard-move flag once focus leaves the anchor or edge being moved.
+  useEffect(() => {
+    if (!keyboardMovingLineId) return;
+    const stillFocused =
+      nodeOrEdgeFocused && lastFocusedEntry?.id === keyboardMovingLineId;
+    if (!stillFocused) {
+      setKeyboardMovingLineId(null);
+    }
+  }, [lastFocusedEntry, keyboardMovingLineId, nodeOrEdgeFocused]);
 
   // Close the toolbar when focus moves off the owning node/edge: to a
   // different node/edge, or out of the canvas entirely. Skips clearing
