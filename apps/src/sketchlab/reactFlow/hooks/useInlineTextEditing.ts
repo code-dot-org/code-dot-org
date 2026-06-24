@@ -54,6 +54,9 @@ export function useInlineTextEditing({
   }, [isEditing, readOnly, locked, value]);
 
   const commitEdit = useCallback(() => {
+    if (!isEditing) {
+      return;
+    }
     setIsEditing(false);
     // innerText preserves visible newlines from Shift+Enter; textContent
     // would flatten them.
@@ -62,7 +65,7 @@ export function useInlineTextEditing({
       pushSnapshot();
     }
     updateNodeData(id, {[field]: newValue});
-  }, [id, field, pushSnapshot, updateNodeData]);
+  }, [isEditing, updateNodeData, id, field, pushSnapshot]);
 
   const handleKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLDivElement>) => {
