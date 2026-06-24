@@ -26,7 +26,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-gray)",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 774,
@@ -227,7 +227,7 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#868e96",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
               "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
