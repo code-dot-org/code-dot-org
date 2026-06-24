@@ -616,11 +616,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     return null;
   }
 
-  // SegmentedButtons orders its buttons via logical CSS, so under RTL it flips
-  // the visual order. The dance modal's preview geometry is hand-tuned for a
-  // fixed Effect|Code order (the ToggleGroup this replaced reversed its
-  // children in RTL to the same end), so reverse the source order under RTL to
-  // cancel the flip.
   const toggleButtons = [
     {
       value: DanceAiPreviewButtonToggleState.EFFECT,
