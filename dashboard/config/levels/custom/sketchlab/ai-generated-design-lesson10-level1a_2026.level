@@ -1,7 +1,7 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2026-02-24T18:12:12.000Z",
+  "created_at": "2026-03-09T16:16:09.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
@@ -24,7 +24,7 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffffff",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
               "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
@@ -1834,9 +1834,9 @@
           }
         ],
         "viewport": {
-          "x": 361.27758821589197,
-          "y": -5.14407754620288,
-          "zoom": 0.2925074171380195
+          "x": 465.9075662096251,
+          "y": 21.590400710858148,
+          "zoom": 0.35713591088452074
         }
       }
     },
@@ -1860,8 +1860,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 627,
@@ -1877,7 +1877,7 @@
             },
             "data": {
               "text": "Page 1",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 46.879420961767174,
               "showHandles": false
             },
@@ -1895,7 +1895,7 @@
             },
             "data": {
               "text": "Page 2",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 47.92589592692555,
               "showHandles": false
             },
@@ -1918,8 +1918,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 627,
@@ -1941,8 +1941,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 627,
@@ -1959,7 +1959,7 @@
             },
             "data": {
               "text": "Page 3",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 51.73058429406532,
               "showHandles": false
             },
@@ -1977,7 +1977,7 @@
             },
             "data": {
               "text": "Page 4",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 51.73058429406532,
               "showHandles": false
             },
@@ -2000,8 +2000,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 627,
@@ -2023,7 +2023,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 587,
@@ -2127,7 +2127,7 @@
             },
             "data": {
               "text": "Get started",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 9.518901102079717,
               "showHandles": false
             },
@@ -2146,7 +2146,7 @@
             },
             "data": {
               "text": "Pete's Pizza",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 42.57496808036217,
               "showHandles": false
             },
@@ -2170,7 +2170,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 561,
@@ -2187,7 +2187,7 @@
             },
             "data": {
               "text": "Monthly Special",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 31.907006277054133,
               "showHandles": false
             },
@@ -2205,7 +2205,7 @@
             },
             "data": {
               "text": "Subtitle text can be a bit longer",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 11.334809065160183,
               "showHandles": false
             },
@@ -2245,7 +2245,7 @@
             },
             "data": {
               "text": "View Menu",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 9.060340539699911,
               "showHandles": false
             },
@@ -2269,8 +2269,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#868e96",
-              "strokeColor": "#000000"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 207,
@@ -2352,7 +2352,7 @@
             },
             "data": {
               "text": "About Us",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 49.536282556366956,
               "showHandles": false
             },
@@ -2375,8 +2375,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#868e96",
-              "strokeColor": "#000000"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 177,
@@ -2392,7 +2392,7 @@
             },
             "data": {
               "text": "Testimonials",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 49.536282556366956,
               "showHandles": false
             },
@@ -2416,7 +2416,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 587,
@@ -2520,7 +2520,7 @@
             },
             "data": {
               "text": "Get started",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 9.518901102079717,
               "showHandles": false
             },
@@ -2545,7 +2545,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 587,
@@ -2649,7 +2649,7 @@
             },
             "data": {
               "text": "Get started",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 9.518901102079717,
               "showHandles": false
             },
@@ -2674,7 +2674,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 587,
@@ -2778,7 +2778,7 @@
             },
             "data": {
               "text": "Get started",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 9.518901102079717,
               "showHandles": false
             },
@@ -2802,8 +2802,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#868e96",
-              "strokeColor": "#000000"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 75,
@@ -2869,7 +2869,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 155,
@@ -2912,8 +2912,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#868e96",
-              "strokeColor": "#000000"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 75,
@@ -2979,7 +2979,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 155,
@@ -3022,8 +3022,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#868e96",
-              "strokeColor": "#000000"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 75,
@@ -3089,7 +3089,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 155,
@@ -3132,8 +3132,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#868e96",
-              "strokeColor": "#000000"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 75,
@@ -3199,7 +3199,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 155,
@@ -3242,8 +3242,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#868e96",
-              "strokeColor": "#000000"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 75,
@@ -3309,7 +3309,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 155,
@@ -3352,8 +3352,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#868e96",
-              "strokeColor": "#000000"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 75,
@@ -3419,7 +3419,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 155,
@@ -3462,8 +3462,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#868e96",
-              "strokeColor": "#000000"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 75,
@@ -3529,7 +3529,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 155,
@@ -3591,7 +3591,7 @@
             },
             "data": {
               "text": "\n",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 7.234526781009471,
               "showHandles": false
             },
@@ -3615,8 +3615,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#868e96",
-              "strokeColor": "#000000"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 75,
@@ -3682,7 +3682,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 155,
@@ -3725,8 +3725,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#868e96",
-              "strokeColor": "#000000"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 75,
@@ -3792,7 +3792,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 155,
@@ -3830,7 +3830,7 @@
             },
             "data": {
               "text": "Menu",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 49.536282556366956,
               "showHandles": false
             },
@@ -3848,7 +3848,7 @@
             },
             "data": {
               "text": "All About Pete",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 49.536282556366956,
               "showHandles": false
             },
@@ -3872,7 +3872,7 @@
               "shapeType": "circle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 186,
@@ -3893,8 +3893,8 @@
             "data": {
               "shapeType": "circle",
               "label": "",
-              "backgroundColor": "#ced4da",
-              "strokeColor": "#000000"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 61,
@@ -3915,8 +3915,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#868e96",
-              "strokeColor": "#000000"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 316,
@@ -4064,7 +4064,7 @@
             },
             "data": {
               "text": "Visit Us!",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 49.536282556366956,
               "showHandles": false
             },
@@ -4082,7 +4082,7 @@
             },
             "data": {
               "text": "Location 1\nAddress",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 24.491122235608465,
               "showHandles": false
             },
@@ -4106,7 +4106,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 107,
@@ -4123,7 +4123,7 @@
             },
             "data": {
               "text": "Default",
-              "fontColor": "#000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 14.245553986996645,
               "showHandles": false
             },
@@ -4148,7 +4148,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 107,
@@ -4165,7 +4165,7 @@
             },
             "data": {
               "text": "Default",
-              "fontColor": "#000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 14.245553986996645,
               "showHandles": false
             },
@@ -4190,7 +4190,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 107,
@@ -4207,7 +4207,7 @@
             },
             "data": {
               "text": "Default",
-              "fontColor": "#000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 14.245553986996645,
               "showHandles": false
             },
@@ -4226,7 +4226,7 @@
             },
             "data": {
               "text": "Location 2\nAddress",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 24.491122235608465,
               "showHandles": false
             },
@@ -4244,7 +4244,7 @@
             },
             "data": {
               "text": "Location 3\nAddress",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 24.491122235608465,
               "showHandles": false
             },
@@ -4262,7 +4262,7 @@
             },
             "data": {
               "text": "Reach Out!",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 49.536282556366956,
               "showHandles": false
             },
@@ -4320,7 +4320,7 @@
             },
             "data": {
               "text": "Label",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 17.700591513221813,
               "showHandles": false
             },
@@ -4378,7 +4378,7 @@
             },
             "data": {
               "text": "Label",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 17.700591513221813,
               "showHandles": false
             },
@@ -4436,7 +4436,7 @@
             },
             "data": {
               "text": "Label",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 17.700591513221813,
               "showHandles": false
             },
@@ -4494,7 +4494,7 @@
             },
             "data": {
               "text": "Label",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 17.700591513221813,
               "showHandles": false
             },
@@ -4518,7 +4518,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 185,
@@ -4540,7 +4540,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 185,
@@ -4562,7 +4562,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 21,
@@ -4585,7 +4585,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 21,
@@ -4607,7 +4607,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 21,
@@ -4629,7 +4629,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 21,
@@ -4651,7 +4651,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 76,
@@ -4673,7 +4673,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 76,
@@ -4695,7 +4695,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 76,
@@ -4717,7 +4717,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 76,
@@ -4739,7 +4739,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 76,
@@ -4761,7 +4761,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 76,
@@ -4783,7 +4783,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 76,
@@ -4805,7 +4805,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 76,
@@ -4827,7 +4827,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#000000"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 76,
@@ -4865,7 +4865,7 @@
             },
             "data": {
               "text": "More",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 9.060340539699911,
               "showHandles": false
             },
@@ -4890,7 +4890,7 @@
               "shapeType": "circle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#e03131"
+              "strokeColor": "var(--sketchlab-stroke-red)"
             },
             "measured": {
               "width": 145,
@@ -4930,7 +4930,7 @@
             },
             "data": {
               "text": "Send a message",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 9.63335238445959,
               "showHandles": false
             },
@@ -4954,7 +4954,7 @@
               "shapeType": "circle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#e03131"
+              "strokeColor": "var(--sketchlab-stroke-red)"
             },
             "measured": {
               "width": 145,
@@ -6716,6 +6716,6 @@
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:12:12.495+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson10-level1a_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson10-level1a_2025\"},{\"changed_at\":\"2026-03-17 16:55:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 23:51:38 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"thumbnail_url\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:54:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:55:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:56:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:57:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:58:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 00:02:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 00:36:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 00:38:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:14:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:15:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:24:17 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:26:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:26:44 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:59:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 13:05:49 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 13:05:59 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 19:28:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-20 19:33:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-24 15:29:54 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-01 07:10:11 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 07:12:15 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 19:22:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-06 19:53:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-07 20:41:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 13:23:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-18 18:04:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 18:13:09 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 18:17:51 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 18:19:13 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 18:25:34 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 18:26:03 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 18:26:27 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-19 00:17:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:12:12.495+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson10-level1a_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson10-level1a_2025\"},{\"changed_at\":\"2026-03-17 16:55:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 23:51:38 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"thumbnail_url\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:54:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:55:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:56:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:57:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 23:58:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 00:02:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 00:36:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 00:38:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:14:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:15:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:24:17 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:26:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:26:44 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 12:59:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 13:05:49 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 13:05:59 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-20 19:28:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-20 19:33:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-04-24 15:29:54 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-01 07:10:11 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 07:12:15 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 19:22:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-06 19:53:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-07 20:41:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 13:23:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-18 18:04:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 18:13:09 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 18:17:51 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 18:19:13 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 18:25:34 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 18:26:03 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 18:26:27 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-19 00:17:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-24 12:47:29 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>
