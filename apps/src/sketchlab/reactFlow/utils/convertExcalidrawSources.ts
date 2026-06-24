@@ -19,6 +19,12 @@ import {uploadBase64ToUrl} from '../../excalidraw/utils/uploadBase64ToUrl';
 import {ASSET_PATH_PREFIX, LINE_ANCHOR_SIZE_PX} from '../constants';
 import {ShapeNodeData, ShapeType} from '../types';
 
+import {
+  detectExcalidrawTheme,
+  mapBackgroundColor,
+  mapStrokeColor,
+} from './excalidrawColorTheme';
+
 function shapeTypeFor(el: ExcalidrawElement): ShapeType | null {
   if (el.type === 'rectangle') return 'rectangle';
   if (el.type === 'diamond') return 'diamond';
@@ -51,6 +57,7 @@ export function convertExcalidrawToReactFlow(
 ): SketchlabReactFlowSource {
   const elements = (source.elements ?? []).filter(el => !el.isDeleted);
   const externalFiles = source.externalFiles;
+  const theme = detectExcalidrawTheme(source);
 
   // First pass: index text elements by their containerId so shape
   // nodes can absorb them as labels rather than emit them as
@@ -88,11 +95,11 @@ export function convertExcalidrawToReactFlow(
       const data: ShapeNodeData = {
         shapeType,
         label: label?.text ?? '',
-        backgroundColor: el.backgroundColor,
-        strokeColor: el.strokeColor,
+        backgroundColor: mapBackgroundColor(el.backgroundColor, theme),
+        strokeColor: mapStrokeColor(el.strokeColor, theme),
       };
       if (label) {
-        data.fontColor = label.strokeColor;
+        data.fontColor = mapStrokeColor(label.strokeColor, theme);
         data.fontSize = label.fontSize;
       }
       const node: SketchlabReactFlowNode = {
@@ -116,7 +123,7 @@ export function convertExcalidrawToReactFlow(
         position: {x: el.x, y: el.y},
         data: {
           text: el.text,
-          fontColor: el.strokeColor,
+          fontColor: mapStrokeColor(el.strokeColor, theme),
           fontSize: el.fontSize,
         },
       };
@@ -173,15 +180,17 @@ export function convertExcalidrawToReactFlow(
         height: Number(endNode.style?.height ?? 0),
       };
       const {sourceHandle, targetHandle} = pickHandles(sourceBox, targetBox);
+      const strokeColor = mapStrokeColor(el.strokeColor, theme);
       const edge: SketchlabReactFlowEdge = {
         id: createUuid(),
         source: startNode.id,
         target: endNode.id,
         sourceHandle,
         targetHandle,
+        style: {stroke: strokeColor},
       };
       if (el.type === 'arrow') {
-        edge.markerEnd = {type: MarkerType.ArrowClosed};
+        edge.markerEnd = {type: MarkerType.ArrowClosed, color: strokeColor};
       }
       edges.push(edge);
       continue;
@@ -218,14 +227,16 @@ export function convertExcalidrawToReactFlow(
       style: {width: LINE_ANCHOR_SIZE_PX, height: LINE_ANCHOR_SIZE_PX},
       data: {lineAnchorRole: 'target'},
     });
+    const strokeColor = mapStrokeColor(el.strokeColor, theme);
     const lineEdge: SketchlabReactFlowEdge = {
       id: createUuid(),
       source: sourceAnchorId,
       target: targetAnchorId,
       type: 'straight',
+      style: {stroke: strokeColor},
     };
     if (el.type === 'arrow') {
-      lineEdge.markerEnd = {type: MarkerType.ArrowClosed};
+      lineEdge.markerEnd = {type: MarkerType.ArrowClosed, color: strokeColor};
     }
     edges.push(lineEdge);
   }

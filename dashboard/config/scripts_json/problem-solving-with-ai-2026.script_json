@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-03 22:19:25 UTC",
+    "serialized_at": "2026-06-23 17:29:02 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -7460,35 +7460,35 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/aif1-2025/resources",
-      "key": "all_resources",
+      "url": "/courses/ai-foundations-exploring-ai-and-cs-2026/units/1/resources",
+      "key": "all_resources_10",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources"
+        "resource.key": "all_resources_10"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/aif1-2025/standards",
-      "key": "all_standards",
+      "url": "/courses/ai-foundations-exploring-ai-and-cs-2026/units/1/standards",
+      "key": "all_standards_10",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards"
+        "resource.key": "all_standards_10"
       }
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/aif1-2025/vocab",
-      "key": "all_vocabulary",
+      "url": "/courses/ai-foundations-exploring-ai-and-cs-2026/units/1/vocab",
+      "key": "all_vocabulary_10",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_vocabulary"
+        "resource.key": "all_vocabulary_10"
       }
     },
     {
@@ -8212,19 +8212,19 @@
     },
     {
       "seeding_key": {
-        "resource.key": "all_resources",
+        "resource.key": "all_resources_10",
         "script.name": "problem-solving-with-ai-2026"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards",
+        "resource.key": "all_standards_10",
         "script.name": "problem-solving-with-ai-2026"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_vocabulary",
+        "resource.key": "all_vocabulary_10",
         "script.name": "problem-solving-with-ai-2026"
       }
     },

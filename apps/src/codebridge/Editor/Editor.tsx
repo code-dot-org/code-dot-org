@@ -25,11 +25,7 @@ import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {
-  editableFileType,
-  enableUserAddedSelectionContext,
-  viewableImageFileType,
-} from '../utils';
+import {editableFileType, viewableImageFileType} from '../utils';
 
 import {getAddToAiTutorField} from './addToAiTutorField';
 
@@ -41,7 +37,8 @@ interface EditorProps {
 }
 
 export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
-  const {levelProperties, aiTutorDisabled} = useCodebridgeContext();
+  const {levelProperties, aiTutorDisabled, enableUserAddedSelectionContext} =
+    useCodebridgeContext();
   const activeFile = useAppSelector(state => {
     const source = state.lab2Project.projectSources?.source as MultiFileSource;
     return getActiveFileForSource(source);
@@ -130,7 +127,7 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     const extensions: Extension[] = [];
     if (
       activeFile?.name &&
-      enableUserAddedSelectionContext(levelProperties.appName) &&
+      enableUserAddedSelectionContext &&
       !aiTutorDisabled
     ) {
       const addToAiTutorField = getAddToAiTutorField(activeFile.name, dispatch);
@@ -194,10 +191,10 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     dispatch,
     activeFile?.name,
     langMapping,
-    levelProperties.appName,
     hasUnifiedDiffView,
     codeBeforeAiTutorVersion,
     aiTutorDisabled,
+    enableUserAddedSelectionContext,
   ]);
 
   const activeFileExt = activeFile?.name

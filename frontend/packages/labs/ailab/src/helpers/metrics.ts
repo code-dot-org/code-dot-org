@@ -1,5 +1,5 @@
 /*
-  Functions for logging analytics metrics via Google Analytics and Firehose.
+  Functions for logging analytics metrics.
 */
 import type {RootState} from '../redux';
 
@@ -16,9 +16,17 @@ function getModelMetrics(state: RootState): Record<string, unknown> {
   return modelMetrics;
 }
 
-export function logFirehoseMetric(action: string, state: RootState): void {
-  if (state.firehoseMetricsLogger) {
-    state.firehoseMetricsLogger(action, getModelMetrics(state));
+type MetricsLogger = (action: string, details: Record<string, unknown>) => void;
+
+let metricsLogger: MetricsLogger;
+
+export function setMetricsLogger(logger: MetricsLogger) {
+  metricsLogger = logger;
+}
+
+export function logMetric(action: string, state: RootState): void {
+  if (metricsLogger) {
+    metricsLogger(action, getModelMetrics(state));
   }
 }
 

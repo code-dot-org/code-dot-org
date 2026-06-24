@@ -10,7 +10,7 @@
     "offer_browser_tts": "true",
     "panels": [
       {
-        "text": "Being a web designer means being someone with a vision. It's about knowing what you want to build - and then figuring out how to turn that idea into something real.",
+        "text": "**Style** is the look and feel of a website. Designers use colors, fonts, images, icons, and spacing to help the page match its audience and purpose. A website about a serious historical topic should probably feel different from a website about a fun summer camp. Good style choices help the audience understand the tone before they even start reading.",
         "imageUrl": "https://images.code.org/35126ff803087deb24381ff09dc72afb-iste_style_panel.png",
         "key": "hoai-web-design-v2-1-11300f40-e480-4236-9f18-43bbbb1f36af",
         "typing": false,
@@ -21,6 +21,6 @@
     "name_suffix": "_iste-2026",
     "use_links": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-06-22T22:42:19.744+00:00\",\"changed\":[\"cloned from \\\"iste_2026_wireframe_panel\\\"\"],\"cloned_from\":\"iste_2026_wireframe_panel\"},{\"changed_at\":\"2026-06-22 22:44:17 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-06-22T22:42:19.744+00:00\",\"changed\":[\"cloned from \\\"iste_2026_wireframe_panel\\\"\"],\"cloned_from\":\"iste_2026_wireframe_panel\"},{\"changed_at\":\"2026-06-22 22:44:17 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"},{\"changed_at\":\"2026-06-23 11:58:01 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"}]"
 }]]></config>
 </Panels>

@@ -129,6 +129,9 @@ interface UseKeyboardNavigationOptions {
   // (which renders outside .react-flow__node), so getEntryFromDOM returns
   // null. lastFocusedEntry gives us the last known node/edge target.
   lastFocusedEntry: TabOrderEntry | null;
+  // Called with the anchor id or edge id when a line/line anchor is
+  // translated by an arrow key.
+  onLineKeyboardMove: (elementId: string) => void;
 }
 
 /**
@@ -174,6 +177,7 @@ export function useKeyboardNavigation({
   redo,
   pushSnapshot,
   lastFocusedEntry,
+  onLineKeyboardMove,
 }: UseKeyboardNavigationOptions) {
   const {
     getEdge,
@@ -432,12 +436,21 @@ export function useKeyboardNavigation({
       if (snapAnchorIfNearHandle(focusedNodeId, deltaX, deltaY)) {
         return true;
       }
+      if (focusedNode?.type === 'lineAnchor') {
+        onLineKeyboardMove(focusedNodeId);
+      }
       setNodes(currentNodes =>
         moveNodesByDelta(currentNodes, [focusedNodeId], deltaX, deltaY)
       );
       return true;
     },
-    [getNode, pushSnapshot, setNodes, snapAnchorIfNearHandle]
+    [
+      getNode,
+      pushSnapshot,
+      setNodes,
+      snapAnchorIfNearHandle,
+      onLineKeyboardMove,
+    ]
   );
 
   // On each end ('side') of the edge, figure out the post-move handle position
@@ -469,10 +482,14 @@ export function useKeyboardNavigation({
           y: endpoint.flowPosition.y + deltaY,
         };
 
-        // If there is a snap target in the radius of the new position, snap to it.
+        // If there is a snap target in the radius of the new position, snap to
+        // it — but never onto the node holding the other end, which would
+        // collapse the edge into a self-loop.
+        const oppositeNodeId =
+          side === 'source' ? focusedEdge.target : focusedEdge.source;
         const snapTarget = findNearestHandleInRadius(
           flowToScreenPosition(postMovePosition),
-          endpoint.node.id,
+          [endpoint.node.id, oppositeNodeId],
           side,
           KEYBOARD_MOVE_STEP * getZoom()
         );
@@ -513,11 +530,12 @@ export function useKeyboardNavigation({
       }
       if (Object.keys(edgePatch).length > 0) {
         setEdges(currentEdges =>
-          currentEdges.map(currentEdge =>
-            currentEdge.id === edgeId
-              ? {...currentEdge, ...edgePatch}
-              : currentEdge
-          )
+          currentEdges.map(currentEdge => {
+            if (currentEdge.id !== edgeId) return currentEdge;
+            const patched = {...currentEdge, ...edgePatch};
+            // Both ends snapping to the same node would collapse the edge.
+            return patched.source === patched.target ? currentEdge : patched;
+          })
         );
       }
       if (anchorIdsToMove.length > 0) {
@@ -550,11 +568,12 @@ export function useKeyboardNavigation({
       if (!deltaX && !deltaY) return false;
       if (!moveEdgeByDelta(focusedEdgeId, deltaX, deltaY)) return false;
       if (!event.repeat) pushSnapshot();
+      onLineKeyboardMove(focusedEdgeId);
       event.preventDefault();
       event.stopPropagation();
       return true;
     },
-    [pushSnapshot, moveEdgeByDelta]
+    [pushSnapshot, moveEdgeByDelta, onLineKeyboardMove]
   );
 
   /**
@@ -745,12 +764,13 @@ export function useKeyboardNavigation({
       if (isTargetEditable(target)) return;
       if (!nativeEvent.repeat) pushSnapshot();
       if (moveEdgeByDelta(edgeId, deltaX, deltaY)) {
+        onLineKeyboardMove(edgeId);
         nativeEvent.preventDefault();
       }
     };
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
-  }, [moveEdgeByDelta, pushSnapshot]);
+  }, [moveEdgeByDelta, pushSnapshot, onLineKeyboardMove]);
 
   return {connectingFrom, connectAnnouncement, handleKeyDown};
 }

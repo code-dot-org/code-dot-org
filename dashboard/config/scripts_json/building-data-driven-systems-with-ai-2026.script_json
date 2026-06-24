@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-11 20:51:07 UTC",
+    "serialized_at": "2026-06-23 17:38:24 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -5865,6 +5865,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/courses/ai-foundations-designing-and-building-with-ai-2026/units/3/resources",
+      "key": "all_resources_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_4"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/ai-foundations-designing-and-building-with-ai-2026/units/3/standards",
+      "key": "all_standards_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_2"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/ai-foundations-designing-and-building-with-ai-2026/units/3/vocab",
+      "key": "all_vocabulary_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_1"
+      }
+    },
+    {
       "name": "Basic Array Methods",
       "url": "https://docs.google.com/presentation/d/1BRIQcPe4zyRpCq7CwvhBTmKu4Noutm9G0FiPKkiOVHU/edit?usp=drive_link",
       "key": "basic_array_methods",
@@ -6275,7 +6308,24 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_4",
+        "script.name": "building-data-driven-systems-with-ai-2026"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_2",
+        "script.name": "building-data-driven-systems-with-ai-2026"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_1",
+        "script.name": "building-data-driven-systems-with-ai-2026"
+      }
+    }
   ],
   "scripts_student_resources": [
 
