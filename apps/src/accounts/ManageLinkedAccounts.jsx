@@ -1,3 +1,4 @@
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -8,17 +9,14 @@ import {
   SingleSignOnProviders,
   LmsLoginTypeNames,
 } from '@cdo/apps/accounts/constants';
-import fontConstants from '@cdo/apps/fontConstants';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import RailsAuthenticityToken from '../lib/util/RailsAuthenticityToken';
 
 import AccountUnlinkWarningModal from './AccountUnlinkWarningModal';
-import BootstrapButton from './BootstrapButton';
 import lockImage from './images/lock.svg';
 
 export const ENCRYPTED = `*** ${i18n.encrypted()} ***`;
@@ -222,7 +220,9 @@ class ManageLinkedAccounts extends React.Component {
     return (
       <div style={styles.container}>
         <hr />
-        <h2 style={styles.header}>{i18n.manageLinkedAccounts()}</h2>
+        <MuiTypography variant="h5" component="h2" gutterBottom>
+          {i18n.manageLinkedAccounts()}
+        </MuiTypography>
         <table style={styles.table}>
           <thead>
             <tr>
@@ -386,20 +386,21 @@ class OauthConnection extends React.Component {
               method="POST"
               action={oauthToggleConnectionPath}
             >
-              {/* This button intentionally uses BootstrapButton to match other
-                  account page buttons.
-                  This button is disabled according to disconnectDisabledStatus or
-                  when the user is attempting this action from the Maker App for
-                  their Google Account. This action is blocked due to Google authentication
-                  security protocols.
-                  */}
-              <BootstrapButton
+              {/* Disabled according to disconnectDisabledStatus, or when the
+                  user is attempting this action from the Maker App for their
+                  Google Account (blocked by Google authentication security
+                  protocols). */}
+              <MuiButton
                 type="submit"
+                variant={isConnected ? 'outlined' : 'contained'}
+                color={isConnected ? 'secondary' : 'primary'}
+                size="small"
                 style={styles.button}
-                text={buttonText}
                 disabled={!!disabledMessage}
                 onClick={onClick}
-              />
+              >
+                {buttonText}
+              </MuiButton>
               <RailsAuthenticityToken />
             </form>
             {!!disabledMessage && (
@@ -431,9 +432,6 @@ const BUTTON_WIDTH = 105;
 const BUTTON_PADDING = 8;
 const CELL_WIDTH = tableLayoutStyles.table.width / 3;
 const styles = {
-  header: {
-    fontSize: 22,
-  },
   table: {
     ...tableLayoutStyles.table,
     marginTop: GUTTER,
@@ -449,7 +447,7 @@ const styles = {
     width: CELL_WIDTH,
   },
   headerCellLocked: {
-    color: color.light_gray,
+    color: 'var(--text-neutral-secondary)',
   },
   cell: {
     ...tableLayoutStyles.cell,
@@ -457,17 +455,14 @@ const styles = {
     paddingRight: GUTTER,
   },
   cellLocked: {
-    color: color.light_gray,
+    color: 'var(--text-neutral-secondary)',
   },
   emptyEmailCell: {
-    color: color.light_gray,
+    color: 'var(--text-neutral-secondary)',
     fontStyle: 'italic',
   },
   button: {
-    width: BUTTON_WIDTH,
-    ...fontConstants['main-font-semi-bold'],
-    color: color.charcoal,
-    padding: BUTTON_PADDING,
+    minWidth: BUTTON_WIDTH,
   },
   tooltipOffset: {
     left:
@@ -479,7 +474,7 @@ const styles = {
   },
   error: {
     paddingLeft: GUTTER / 2,
-    color: color.red,
+    color: 'var(--text-error-primary)',
     fontStyle: 'italic',
   },
   message: {
