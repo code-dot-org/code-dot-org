@@ -756,6 +756,7 @@ export default function ReactFlowCanvas({
                     initialFocus: false,
                     escapeDeactivates: false,
                     allowOutsideClick: true,
+                    returnFocusOnDeactivate: false,
                   }}
                 >
                   <div
