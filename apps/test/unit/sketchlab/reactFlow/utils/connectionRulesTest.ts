@@ -1,10 +1,6 @@
-import {
-  SketchlabReactFlowEdge,
-  SketchlabReactFlowNode,
-} from '@cdo/apps/lab2/types';
+import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
 import {
   canCreateConnection,
-  getEdgeReconnectability,
   isAnchorEndpoint,
   isLineAnchorNodeId,
 } from '@cdo/apps/sketchlab/reactFlow/utils/connectionRules';
@@ -28,22 +24,6 @@ function anchorNode(id: string): SketchlabReactFlowNode {
   } as SketchlabReactFlowNode;
 }
 
-function edge(
-  id: string,
-  source: string,
-  target: string
-): SketchlabReactFlowEdge {
-  return {id, source, target};
-}
-
-function nodeMap(
-  ...nodes: SketchlabReactFlowNode[]
-): Map<string, SketchlabReactFlowNode> {
-  return new Map(nodes.map(node => [node.id, node]));
-}
-
-const UNLOCKED = {locked: false, readOnly: false};
-
 describe('isAnchorEndpoint', () => {
   it('is true for a line anchor node', () => {
     expect(isAnchorEndpoint(anchorNode('a'))).toBe(true);
@@ -58,63 +38,6 @@ describe('isAnchorEndpoint', () => {
   });
 });
 
-describe('getEdgeReconnectability', () => {
-  it('offers both handles when both endpoints are real nodes', () => {
-    const map = nodeMap(shapeNode('a'), shapeNode('b'));
-    expect(getEdgeReconnectability(edge('e', 'a', 'b'), map, UNLOCKED)).toBe(
-      true
-    );
-  });
-
-  it('offers no handles when both endpoints are free anchors', () => {
-    const map = nodeMap(anchorNode('a'), anchorNode('b'));
-    expect(getEdgeReconnectability(edge('e', 'a', 'b'), map, UNLOCKED)).toBe(
-      false
-    );
-  });
-
-  it('offers only the attached endpoint when the source is an anchor', () => {
-    const map = nodeMap(anchorNode('a'), shapeNode('b'));
-    expect(getEdgeReconnectability(edge('e', 'a', 'b'), map, UNLOCKED)).toBe(
-      'target'
-    );
-  });
-
-  it('offers only the attached endpoint when the target is an anchor', () => {
-    const map = nodeMap(shapeNode('a'), anchorNode('b'));
-    expect(getEdgeReconnectability(edge('e', 'a', 'b'), map, UNLOCKED)).toBe(
-      'source'
-    );
-  });
-
-  it('treats a missing endpoint node like an anchor', () => {
-    const map = nodeMap(shapeNode('a'));
-    expect(getEdgeReconnectability(edge('e', 'a', 'gone'), map, UNLOCKED)).toBe(
-      'source'
-    );
-  });
-
-  it('offers no handles when the edge is locked', () => {
-    const map = nodeMap(shapeNode('a'), shapeNode('b'));
-    expect(
-      getEdgeReconnectability(edge('e', 'a', 'b'), map, {
-        locked: true,
-        readOnly: false,
-      })
-    ).toBe(false);
-  });
-
-  it('offers no handles when the canvas is read-only', () => {
-    const map = nodeMap(shapeNode('a'), shapeNode('b'));
-    expect(
-      getEdgeReconnectability(edge('e', 'a', 'b'), map, {
-        locked: false,
-        readOnly: true,
-      })
-    ).toBe(false);
-  });
-});
-
 describe('canCreateConnection', () => {
   it('allows connections between two real nodes', () => {
     const nodes = [shapeNode('a'), shapeNode('b')];
@@ -125,6 +48,11 @@ describe('canCreateConnection', () => {
     const nodes = [shapeNode('a'), anchorNode('b')];
     expect(canCreateConnection('a', 'b', nodes)).toBe(false);
     expect(canCreateConnection('b', 'a', nodes)).toBe(false);
+  });
+
+  it('blocks self-connections on the same node', () => {
+    const nodes = [shapeNode('a')];
+    expect(canCreateConnection('a', 'a', nodes)).toBe(false);
   });
 });
 

@@ -10,15 +10,24 @@ export class BasePage {
   /** The dropdown's selected option; assert its text for the active locale. */
   readonly selectedLocale: Locator;
 
+  /** Header user-menu element; duplicates per breakpoint, .first() avoids strict-mode failure. */
+  protected readonly headerUser: Locator;
+
   constructor(page: Page) {
     this.page = page;
     this.localeDropdown = page.getByRole('combobox', {name: 'Select language'});
     this.selectedLocale = this.localeDropdown.locator('option:checked');
+    this.headerUser = page.locator('.header_user').first();
   }
 
   /** Wait for the locale dropdown to render. */
   async waitForLocaleDropdownVisible(): Promise<void> {
     await expect(this.localeDropdown).toBeVisible();
+  }
+
+  /** Wait until the signed-in header chrome is visible. */
+  async waitForSignedIn(): Promise<void> {
+    await expect(this.headerUser).toBeVisible();
   }
 
   /**

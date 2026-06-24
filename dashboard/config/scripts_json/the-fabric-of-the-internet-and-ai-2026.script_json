@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-03 22:43:47 UTC",
+    "serialized_at": "2026-06-23 17:22:32 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -5515,35 +5515,35 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/aif4-2025/resources",
-      "key": "all_resources_2",
+      "url": "/courses/ai-foundations-exploring-ai-and-cs-2026/units/3/resources",
+      "key": "all_resources_8",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_2"
+        "resource.key": "all_resources_8"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/aif4-2025/standards",
-      "key": "all_standards_2",
+      "url": "/courses/ai-foundations-exploring-ai-and-cs-2026/units/3/standards",
+      "key": "all_standards_8",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards_2"
+        "resource.key": "all_standards_8"
       }
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/aif4-2025/vocab",
-      "key": "all_vocabulary_2",
+      "url": "/courses/ai-foundations-exploring-ai-and-cs-2026/units/3/vocab",
+      "key": "all_vocabulary_8",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_vocabulary_2"
+        "resource.key": "all_vocabulary_8"
       }
     },
     {
@@ -6399,19 +6399,19 @@
     },
     {
       "seeding_key": {
-        "resource.key": "all_resources_2",
+        "resource.key": "all_resources_8",
         "script.name": "the-fabric-of-the-internet-and-ai-2026"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards_2",
+        "resource.key": "all_standards_8",
         "script.name": "the-fabric-of-the-internet-and-ai-2026"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_vocabulary_2",
+        "resource.key": "all_vocabulary_8",
         "script.name": "the-fabric-of-the-internet-and-ai-2026"
       }
     },

@@ -13,6 +13,7 @@ import {
 } from './helpers/accuracy';
 import {isRegression, getColumnDataToSave} from './helpers/columnDetails';
 import {getDatasetDetails} from './helpers/datasetDetails';
+import {showInstructions} from './helpers/instructions';
 import {reportPanelView} from './helpers/metrics';
 import {
   uniqLabelFeaturesSelected,
@@ -62,14 +63,12 @@ const SET_HIGHLIGHT_COLUMN = 'SET_HIGHLIGHT_COLUMN';
 const SET_HIGHLIGHT_DATASET = 'SET_HIGHLIGHT_DATASET';
 const SET_RESULTS_PHASE = 'SET_RESULTS_PHASE';
 const SET_RESULTS_HIGHLIGHT_ROW = 'SET_RESULTS_HIGHLIGHT_ROW';
-const SET_INSTRUCTIONS_KEY_CALLBACK = 'SET_INSTRUCTIONS_KEY_CALLBACK';
 const SET_SAVE_STATUS = 'SET_SAVE_STATUS';
 const SET_HISTORIC_RESULT = 'SET_HISTORIC_RESULT';
 const SET_SHOW_RESULTS_DETAILS = 'SET_SHOW_RESULTS_DETAILS';
 const SET_K_VALUE = 'SET_K_VALUE';
 const SET_INSTRUCTIONS_DISMISSED = 'SET_INSTRUCTIONS_DISMISSED';
 const SET_RESULTS_TAB = 'SET_RESULTS_TAB';
-const SET_FIREHOSE_METRICS_LOGGER = 'SET_FIREHOSE_METRICS_LOGGER';
 
 export interface RootState {
   name: string | undefined;
@@ -95,9 +94,6 @@ export interface RootState {
   prediction: number | string | undefined;
   trainedModel: KNN | undefined;
   trainedModelDetails: TrainedModelDetailsSave;
-  instructionsKeyCallback:
-    | ((key: string, options: {showOverlay?: boolean} | null) => void)
-    | undefined;
   currentPanel: string;
   currentColumn: string | undefined;
   resultsPhase: number | undefined;
@@ -111,9 +107,6 @@ export interface RootState {
   viewedPanels: string[];
   instructionsOverlayActive: boolean;
   resultsTab: string;
-  firehoseMetricsLogger:
-    | ((eventName: string, details: Record<string, unknown>) => void)
-    | undefined;
   mode?: Mode;
 }
 
@@ -266,15 +259,6 @@ export function setTrainedModelDetail(
   return {type: SET_TRAINED_MODEL_DETAIL, field, value, isColumn};
 }
 
-export function setInstructionsKeyCallback(
-  instructionsKeyCallback: (
-    key: string,
-    options: {showOverlay?: boolean} | null,
-  ) => void,
-): ReduxAction {
-  return {type: SET_INSTRUCTIONS_KEY_CALLBACK, instructionsKeyCallback};
-}
-
 export function setCurrentPanel(currentPanel: string): ReduxAction {
   return {type: SET_CURRENT_PANEL, currentPanel};
 }
@@ -330,15 +314,6 @@ export function setResultsTab(key: string): ReduxAction {
   return {type: SET_RESULTS_TAB, key};
 }
 
-export function setFirehoseMetricsLogger(
-  firehoseMetricsLogger: (
-    eventName: string,
-    details: Record<string, unknown>,
-  ) => void,
-): ReduxAction {
-  return {type: SET_FIREHOSE_METRICS_LOGGER, firehoseMetricsLogger};
-}
-
 const initialState: RootState = {
   name: undefined,
   csvfile: undefined,
@@ -366,7 +341,6 @@ const initialState: RootState = {
   prediction: undefined,
   trainedModel: undefined,
   trainedModelDetails: {},
-  instructionsKeyCallback: undefined,
   currentPanel: 'selectDataset',
   currentColumn: undefined,
   resultsPhase: undefined,
@@ -384,7 +358,6 @@ const initialState: RootState = {
   viewedPanels: [],
   instructionsOverlayActive: false,
   resultsTab: ResultsGrades.CORRECT,
-  firehoseMetricsLogger: undefined,
 };
 
 // Reducer
@@ -429,15 +402,12 @@ export default function rootReducer(
       // (and a getState cascade) into this dispatch and trip the
       // "getState() while reducer is executing" guard. Defer to a
       // microtask so the dispatch fully unwinds before the callback fires.
-      if (state.instructionsKeyCallback) {
-        const callback = state.instructionsKeyCallback;
-        queueMicrotask(() =>
-          callback(
-            action.userUploadedData ? 'uploadedDataset' : 'selectedDataset',
-            null,
-          ),
-        );
-      }
+      queueMicrotask(() =>
+        showInstructions(
+          action.userUploadedData ? 'uploadedDataset' : 'selectedDataset',
+          null,
+        ),
+      );
     }
 
     return {
@@ -557,10 +527,8 @@ export default function rootReducer(
   if (action.type === RESET_STATE) {
     return {
       ...initialState,
-      instructionsKeyCallback: state.instructionsKeyCallback,
       mode: state.mode,
       reserveLocation: state.reserveLocation,
-      firehoseMetricsLogger: state.firehoseMetricsLogger,
     };
   }
   if (action.type === SET_TRAINED_MODEL) {
@@ -600,33 +568,24 @@ export default function rootReducer(
       trainedModelDetails,
     };
   }
-  if (action.type === SET_INSTRUCTIONS_KEY_CALLBACK) {
-    return {
-      ...state,
-      instructionsKeyCallback: action.instructionsKeyCallback,
-    };
-  }
   if (action.type === SET_CURRENT_PANEL) {
     reportPanelView(action.currentPanel);
     let showedOverlay = false;
-    if (state.instructionsKeyCallback) {
-      const options: {showOverlay?: boolean} = {};
-      if (
-        !(state.mode && state.mode.hideInstructionsOverlay) &&
-        !state.viewedPanels.includes(action.currentPanel)
-      ) {
-        options.showOverlay = true;
-        state.viewedPanels.push(action.currentPanel);
-        showedOverlay = true;
-      }
-      // Deferred to a microtask — see the comment on the SET_IMPORTED_DATA
-      // branch above for why the reducer must not synchronously fire a
-      // consumer callback that dispatches into another store.
-      const callback = state.instructionsKeyCallback;
-      const callbackAction = action.currentPanel;
-      const callbackOptions = options;
-      queueMicrotask(() => callback(callbackAction, callbackOptions));
+    const options: {showOverlay?: boolean} = {};
+    if (
+      !(state.mode && state.mode.hideInstructionsOverlay) &&
+      !state.viewedPanels.includes(action.currentPanel)
+    ) {
+      options.showOverlay = true;
+      state.viewedPanels.push(action.currentPanel);
+      showedOverlay = true;
     }
+    // Deferred to a microtask — see the comment on the SET_IMPORTED_DATA
+    // branch above for why the reducer must not synchronously fire a
+    // consumer callback that dispatches into another store.
+    const callbackAction = action.currentPanel;
+    const callbackOptions = options;
+    queueMicrotask(() => showInstructions(callbackAction, callbackOptions));
 
     if (action.currentPanel === 'dataDisplayLabel') {
       return {
@@ -695,10 +654,7 @@ export default function rootReducer(
       // If column is selected, then deselect.
       if (state.currentPanel === 'dataDisplayFeatures') {
         // Deferred — see SET_IMPORTED_DATA comment.
-        if (state.instructionsKeyCallback) {
-          const callback = state.instructionsKeyCallback;
-          queueMicrotask(() => callback('dataDisplayFeatures', null));
-        }
+        queueMicrotask(() => showInstructions('dataDisplayFeatures', null));
       }
       return {
         ...state,
@@ -707,19 +663,20 @@ export default function rootReducer(
     } else {
       if (state.currentPanel === 'dataDisplayFeatures') {
         // Deferred — see SET_IMPORTED_DATA comment.
-        if (state.instructionsKeyCallback) {
-          const callback = state.instructionsKeyCallback;
-          if (
-            state.columnsByDataType[action.currentColumn] ===
-            ColumnTypes.NUMERICAL
-          ) {
-            queueMicrotask(() => callback('selectedFeatureNumerical', null));
-          } else if (
-            state.columnsByDataType[action.currentColumn] ===
-            ColumnTypes.CATEGORICAL
-          ) {
-            queueMicrotask(() => callback('selectedFeatureCategorical', null));
-          }
+        if (
+          state.columnsByDataType[action.currentColumn] ===
+          ColumnTypes.NUMERICAL
+        ) {
+          queueMicrotask(() =>
+            showInstructions('selectedFeatureNumerical', null),
+          );
+        } else if (
+          state.columnsByDataType[action.currentColumn] ===
+          ColumnTypes.CATEGORICAL
+        ) {
+          queueMicrotask(() =>
+            showInstructions('selectedFeatureCategorical', null),
+          );
         }
       }
 
@@ -764,12 +721,9 @@ export default function rootReducer(
   }
   if (action.type === SET_SHOW_RESULTS_DETAILS) {
     // Deferred — see SET_IMPORTED_DATA comment.
-    if (state.instructionsKeyCallback) {
-      const callback = state.instructionsKeyCallback;
-      queueMicrotask(() =>
-        callback(action.show ? 'resultsDetails' : 'results', null),
-      );
-    }
+    queueMicrotask(() =>
+      showInstructions(action.show ? 'resultsDetails' : 'results', null),
+    );
     return {
       ...state,
       showResultsDetails: action.show,
@@ -791,12 +745,6 @@ export default function rootReducer(
     return {
       ...state,
       resultsTab: action.key,
-    };
-  }
-  if (action.type === SET_FIREHOSE_METRICS_LOGGER) {
-    return {
-      ...state,
-      firehoseMetricsLogger: action.firehoseMetricsLogger,
     };
   }
   return state;
