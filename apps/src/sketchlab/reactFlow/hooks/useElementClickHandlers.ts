@@ -9,6 +9,7 @@ import type {
 import type {ToolbarTarget} from '../context';
 import type {TabOrderEntry} from '../utils/computeTabOrder';
 import {isLineAnchorNodeId} from '../utils/connectionRules';
+import {getEdgeLabel, getNodeLabel} from '../utils/elementLabel';
 import {isGroupedChildNode} from '../utils/grouping';
 import {getStandaloneLineAnchorIds} from '../utils/lineAnchors';
 
@@ -87,8 +88,13 @@ export function useElementClickHandlers({
           return;
         }
         setMultiSelectedNodeIds(prev => {
+          const removing = prev.has(entry.id);
+          const label = getNodeLabel(node);
+          setAriaAnnouncement(
+            removing ? `${label} removed.` : `${label} added.`
+          );
           const next = new Set(prev);
-          if (next.has(entry.id)) {
+          if (removing) {
             next.delete(entry.id);
           } else {
             next.add(entry.id);
@@ -104,9 +110,14 @@ export function useElementClickHandlers({
           isGroupedChildNode(getNode(id))
         );
         if (lineIsGrouped) return;
+        const nodeMap = new Map(nodes.map(n => [n.id, n]));
         setMultiSelectedNodeIds(prev => {
+          const allSelected = anchorIds.every(id => prev.has(id));
+          const label = getEdgeLabel(edge, nodeMap, undefined);
+          setAriaAnnouncement(
+            allSelected ? `${label} removed.` : `${label} added.`
+          );
           const next = new Set(prev);
-          const allSelected = anchorIds.every(id => next.has(id));
           anchorIds.forEach(id => {
             if (allSelected) {
               next.delete(id);
