@@ -3,98 +3,74 @@ import {Button as MuiButton, Typography} from '@mui/material';
 import React, {useState} from 'react';
 
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
-import {
-  DEFAULT_ANSWER_TYPES,
-  TUTOR_MODE_TO_ANSWER_TYPE,
-} from '@cdo/apps/weblab2/constants';
-import {ANSWER_TYPE_CONTRACTS} from '@cdo/apps/weblab2/prompts/promptMaps';
-import {
-  AiTutorAnswerType,
-  AiTutorMode,
-  AiTutorPromptSettings,
-} from '@cdo/apps/weblab2/types';
 
 import moduleStyles from './edit-ai-tutor-prompt-settings.module.scss';
 
-const TOGGLEABLE_TUTOR_ANSWER_TYPES = [
-  'ask',
-  'buildCSS',
-  'buildHTML',
-  'buildJavaScript',
-  'buildJSON',
-  'debug',
-  'documentation',
-  'example',
-  'explainCode',
-  'hint',
-  'pseudocode',
-  'testCase',
-] as const;
-
-const ANSWER_TYPE_TO_LABEL = {
-  ask: 'Ask',
-  buildCSS: 'Build CSS',
-  buildHTML: 'Build HTML',
-  buildJavaScript: 'Build JavaScript',
-  buildJSON: 'Build JSON',
-  debug: 'Debug',
-  documentation: 'Documentation',
-  example: 'Example',
-  explainCode: 'Explain Code',
-  hint: 'Hint',
-  pseudocode: 'Pseudocode',
-  testCase: 'Test Case',
-};
+interface PromptSettings {
+  answerTypes?: string[];
+  answerTypeCustomizations?: Record<string, string>;
+}
 
 interface EditAiTutorPromptSettingsProps {
-  promptSettings?: AiTutorPromptSettings;
-  legacyMode?: AiTutorMode;
+  promptSettings?: PromptSettings;
+  toggleableAnswerTypes: string[];
+  answerTypeToLabel: Record<string, string>;
+  answerTypeContracts: Record<string, string>;
+  defaultAnswerTypes: string[];
+  legacyMode?: string;
+  legacyModeToAnswerType?: Record<string, string[]>;
+  instructions?: string;
 }
+
+const DEFAULT_INSTRUCTIONS =
+  'Choose which answer types you would like the AI tutor to be able to respond with. You must specify at least one.';
 
 const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
   promptSettings,
+  toggleableAnswerTypes,
+  answerTypeToLabel,
+  answerTypeContracts,
+  defaultAnswerTypes,
   legacyMode,
+  legacyModeToAnswerType,
+  instructions = DEFAULT_INSTRUCTIONS,
 }) => {
-  const [enabledAnswerTypes, setEnabledAnswerTypes] = useState<
-    Set<AiTutorAnswerType>
-  >(() => {
-    if (promptSettings?.answerTypes && promptSettings.answerTypes.length > 0) {
-      return new Set(promptSettings.answerTypes);
-    } else if (legacyMode) {
-      return new Set(TUTOR_MODE_TO_ANSWER_TYPE[legacyMode]);
-    } else {
-      return new Set(DEFAULT_ANSWER_TYPES);
+  const [enabledAnswerTypes, setEnabledAnswerTypes] = useState<Set<string>>(
+    () => {
+      if (promptSettings?.answerTypes !== undefined) {
+        return new Set(promptSettings.answerTypes);
+      } else if (legacyMode && legacyModeToAnswerType?.[legacyMode]) {
+        return new Set(legacyModeToAnswerType[legacyMode]);
+      }
+      return new Set(defaultAnswerTypes);
     }
-  });
+  );
 
   const [answerTypeCustomizations, setAnswerTypeCustomizations] = useState<
-    Partial<Record<AiTutorAnswerType, string>>
+    Record<string, string>
   >(promptSettings?.answerTypeCustomizations ?? {});
 
-  const handleToggle = (answerType: AiTutorAnswerType, checked: boolean) => {
+  const handleToggle = (answerType: string, checked: boolean) => {
     setEnabledAnswerTypes(prev => {
-      const updatedAnswerTypes = new Set(prev);
+      const updated = new Set(prev);
       if (checked) {
-        updatedAnswerTypes.add(answerType);
+        updated.add(answerType);
       } else {
-        updatedAnswerTypes.delete(answerType);
+        updated.delete(answerType);
       }
-      return updatedAnswerTypes;
+      return updated;
     });
   };
 
   const handleEnableAll = () => {
-    setEnabledAnswerTypes(new Set(TOGGLEABLE_TUTOR_ANSWER_TYPES));
+    setEnabledAnswerTypes(new Set(toggleableAnswerTypes));
   };
 
   const handleDisableAll = () => {
     setEnabledAnswerTypes(new Set());
   };
 
-  const handleCustomizationChange = (
-    answerType: AiTutorAnswerType,
-    value: string
-  ) => {
+  const handleCustomizationChange = (answerType: string, value: string) => {
     setAnswerTypeCustomizations(prev => ({
       ...prev,
       [answerType]: value,
@@ -104,8 +80,7 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
   return (
     <div>
       <Typography variant="body2" className={moduleStyles.instructions}>
-        Choose which answer types you would like the AI tutor to be able to
-        respond with. You must specify at least one.
+        {instructions}
       </Typography>
       <input
         id="level_ai_tutor_prompt_settings"
@@ -130,11 +105,11 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
         </MuiButton>
       </div>
       <div className={moduleStyles.togglesContainer}>
-        {TOGGLEABLE_TUTOR_ANSWER_TYPES.map(answerType => (
+        {toggleableAnswerTypes.map(answerType => (
           <div key={answerType}>
             <Toggle
               name={answerType}
-              label={ANSWER_TYPE_TO_LABEL[answerType]}
+              label={answerTypeToLabel[answerType]}
               checked={enabledAnswerTypes.has(answerType)}
               onChange={e => handleToggle(answerType, e.target.checked)}
             />
@@ -144,7 +119,7 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
               </summary>
               <div className={moduleStyles.contractContent}>
                 <EnhancedSafeMarkdown
-                  markdown={ANSWER_TYPE_CONTRACTS[answerType]}
+                  markdown={answerTypeContracts[answerType]}
                 />
               </div>
               <textarea
