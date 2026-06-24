@@ -33,7 +33,6 @@ function TextNode({
       field: 'text',
       value: text,
       locked: data.locked,
-      preserveNewlines: true,
     });
 
   const textStyle: React.CSSProperties = useMemo(() => {
