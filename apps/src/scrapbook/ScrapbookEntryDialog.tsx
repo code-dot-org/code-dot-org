@@ -1,13 +1,14 @@
 import {Dialog} from '@code-dot-org/component-library/dialog';
+import Tags from '@code-dot-org/component-library/tags';
 import {
   Button as MuiButton,
-  Chip as MuiChip,
   Typography as MuiTypography,
 } from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 import {createPortal} from 'react-dom';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
+import i18n from '@cdo/locale';
 
 import {EntryText, SCRAPBOOK_STEMS} from './stems';
 
@@ -192,11 +193,7 @@ export default function ScrapbookEntryDialog({
       customContent={
         <div className={moduleStyles.content}>
           <div className={moduleStyles.experimentChipRow}>
-            <MuiChip
-              label="experiment"
-              size="small"
-              className={moduleStyles.experimentChip}
-            />
+            <Tags tagsList={[{label: i18n.experiment()}]} size="s" />
           </div>
           <div className={moduleStyles.screenshots}>
             <ScreenshotSlot
