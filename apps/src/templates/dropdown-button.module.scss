@@ -1,52 +1,12 @@
+@import 'color';
 @import '@code-dot-org/component-library-styles/font';
 
 .main {
   display: inline-block;
+}
 
-  // Nested under .main so the font-size (matching the legacy 12px button text)
-  // beats MUI's default size styling.
-  .dropdownButton {
-    margin: 0;
-    font-size: 12px;
-  }
-
-  // Color/size variants for the MUI Button (styling shell). Nested under .main
-  // so their specificity (0,2,0) beats MUI's emotion styles (0,1,0). Colors are
-  // the closest semantic equivalents of the old legacy-Button gray/purple looks.
-  .gray {
-    background-color: var(--background-neutral-secondary);
-    box-shadow: inset 0 2px 0 0 var(--neutral-white-alpha-70);
-    color: var(--text-neutral-tertiary);
-
-    &:hover {
-      background-color: var(--background-neutral-tertiary);
-      color: var(--text-neutral-tertiary);
-    }
-  }
-
-  .purple {
-    background-color: var(--background-brand-purple-primary);
-    box-shadow: inset 0 2px 0 0 var(--neutral-white-alpha-40);
-    color: var(--text-neutral-white-fixed);
-    font-weight: bold;
-
-    &:hover {
-      box-shadow: none;
-      background-color: var(--background-brand-purple-light);
-      color: var(--text-brand-purple-primary);
-    }
-  }
-
-  .small {
-    min-height: 20px;
-    padding: 0 5px;
-    line-height: 20px;
-
-    .icon {
-      font-size: 12px;
-      top: 0;
-    }
-  }
+.dropdownButton {
+  margin: 0;
 }
 
 .icon {
@@ -58,7 +18,7 @@
 }
 
 .dropdown {
-  border: 1px solid var(--borders-neutral-strong);
+  border: 1px solid $charcoal;
   position: absolute;
   // without this, this will be below some content, such as ProgressBubble.
   z-index: 1000;
@@ -70,15 +30,15 @@ a:link.anchor,
 a:visited.anchor {
   @include main-font-semi-bold;
   padding: 10px;
-  color: var(--text-neutral-tertiary);
-  background-color: var(--background-neutral-primary);
+  color: $charcoal;
+  background-color: $white;
   display: block;
   text-decoration: none;
   line-height: 20px;
   transition: background-color 0.2s ease-out;
 
   &:hover {
-    background-color: var(--background-neutral-secondary);
+    background-color: $lightest_gray;
     cursor: pointer;
     // Overwrite site-wide application.css a:hover.
     text-decoration: none;
@@ -86,5 +46,5 @@ a:visited.anchor {
 }
 
 .nonFirstAnchor {
-  border-top: 1px solid var(--borders-neutral-strong);
+  border-top: 1px solid $charcoal;
 }
