@@ -2,6 +2,7 @@ import React from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import PairingNavigatorAlert from '../pairingNavigator';
 import PreviousVersionAlert from '../previousVersion';
 import TeacherViewingStudentProjectAlert from '../teacherViewingStudentProject';
 
@@ -22,6 +23,7 @@ const WorkspaceAlerts: React.FC<WorkspaceAlertsProps> = ({
 
   return (
     <>
+      <PairingNavigatorAlert inWorkspaceContainer={inWorkspaceContainer} />
       {teacherViewingStudent && (
         <TeacherViewingStudentProjectAlert
           inWorkspaceContainer={inWorkspaceContainer}

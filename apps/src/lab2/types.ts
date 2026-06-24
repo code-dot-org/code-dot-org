@@ -328,6 +328,11 @@ export interface LevelProperties {
   hideVersionHistory?: boolean;
   parentLevelName?: string;
   requireEditToContinue?: boolean;
+  // Pair programming properties for navigators.
+  isNavigator?: boolean;
+  pairingDriver?: string;
+  pairingAttempt?: string;
+  pairingChannelId?: string;
 }
 
 export type LevelPropertiesMap = {[levelId: string]: LevelProperties};
