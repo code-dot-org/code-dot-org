@@ -23,7 +23,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-03 23:21:29 UTC",
+    "serialized_at": "2026-06-23 17:35:42 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6472,35 +6472,35 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/aif6-2025/resources",
-      "key": "all_resources_4",
+      "url": "/courses/ai-foundations-exploring-ai-and-cs-2026/units/5/resources",
+      "key": "all_resources_11",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_4"
+        "resource.key": "all_resources_11"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/aif6-2025/standards",
-      "key": "all_standards_4",
+      "url": "/courses/ai-foundations-exploring-ai-and-cs-2026/units/5/standards",
+      "key": "all_standards_11",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards_4"
+        "resource.key": "all_standards_11"
       }
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/aif6-2025/vocab",
-      "key": "all_vocabulary_4",
+      "url": "/courses/ai-foundations-exploring-ai-and-cs-2026/units/5/vocab",
+      "key": "all_vocabulary_11",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_vocabulary_4"
+        "resource.key": "all_vocabulary_11"
       }
     },
     {
@@ -7266,19 +7266,19 @@
     },
     {
       "seeding_key": {
-        "resource.key": "all_resources_4",
+        "resource.key": "all_resources_11",
         "script.name": "insights-from-data-and-ai-2026"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards_4",
+        "resource.key": "all_standards_11",
         "script.name": "insights-from-data-and-ai-2026"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_vocabulary_4",
+        "resource.key": "all_vocabulary_11",
         "script.name": "insights-from-data-and-ai-2026"
       }
     },
