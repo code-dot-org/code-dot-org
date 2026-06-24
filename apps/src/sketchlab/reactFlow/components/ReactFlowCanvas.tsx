@@ -581,10 +581,8 @@ export default function ReactFlowCanvas({
         type,
         data: request.data,
         position,
-        ...(type !== 'text' && {
-          width: DEFAULT_NODE_WIDTH,
-          height: DEFAULT_NODE_HEIGHT,
-        }),
+        width: DEFAULT_NODE_WIDTH,
+        height: DEFAULT_NODE_HEIGHT,
       } as SketchLabNode;
 
       setNodes(currentNodes => [...currentNodes, newNode]);
