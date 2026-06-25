@@ -321,7 +321,7 @@ module LevelsHelper
 
     if @user
       pairing_check_user = @user
-    elsif current_user && @script
+    elsif @level.channel_backed?
       pairing_check_user = current_user
     end
 
