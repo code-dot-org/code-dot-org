@@ -1,9 +1,6 @@
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
-import {getStore} from '@cdo/apps/redux';
-import Sounds from '@cdo/apps/Sounds';
 
-import {clearConsole} from '../../redux/textConsole';
 import SpriteLab from '../SpriteLab';
 
 const NOOP = () => {};
@@ -163,29 +160,12 @@ export default class SpriteLab2Engine extends SpriteLab {
   reactToExecutionError() {}
   clearExecutionErrorWorkspaceAlert() {}
 
-  // Mirrors SpriteLab.preview() minus the studioApp().share share-view branch
-  // (we are never in the legacy share view).
-  preview() {
-    if (getStore().getState().runState.isRunning) {
-      return;
-    }
-    if (this.p5Wrapper.p5decrementPreload) {
-      return;
-    }
-    getStore().dispatch(clearConsole());
-    Sounds.getSingleton().muteURLs();
-    if (this.p5Wrapper.p5 && this.JSInterpreter) {
-      if (!this.areAnimationsReady_()) {
-        return;
-      }
-      this.p5Wrapper.p5.allSprites.removeSprites();
-      this.JSInterpreter.deinitialize();
-      this.initInterpreter(false /* attachDebugger */);
-      this.onP5Setup();
-      this.p5Wrapper.p5.redraw();
-    } else {
-      this.p5Wrapper.startExecution();
-      this.p5Wrapper.setLoop(false);
-    }
-  }
+  // The classic SpriteLab.reset() ends by calling preview() to render a static
+  // first frame. In the tabbed Lab2 UI we don't want a reset to re-launch the
+  // engine: doing so re-creates p5 and re-runs the interpreter right after
+  // teardown, and a stale async preload callback from the program that was just
+  // stopped then fires executeInterpreter on the discarded interpreter
+  // ("Uncaught (in promise) ... getScope"). Reset should simply stop; Run is
+  // the only thing that launches execution. So preview() is a no-op here.
+  preview() {}
 }
