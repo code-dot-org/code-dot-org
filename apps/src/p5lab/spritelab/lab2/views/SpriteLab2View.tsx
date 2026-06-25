@@ -49,6 +49,9 @@ registerReducers({
   animationList: p5labReducers.animationList,
   textConsole: p5labReducers.textConsole,
   spritelabInputList: p5labReducers.spritelabInputList,
+  // The location-picker block (pin -> click in the playspace to set coords)
+  // reads/writes this slice.
+  locationPicker: p5labReducers.locationPicker,
   runState,
   pageConstants,
   spriteLab2: spriteLab2Reducer,

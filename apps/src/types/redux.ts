@@ -46,8 +46,16 @@ export interface AnimationListState {
   propsByKey: {[key: string]: any};
 }
 
+// The classic p5lab locationPicker slice (drives the location-picker block).
+export interface LocationPickerState {
+  mode: string;
+  lastSelection?: {x: number; y: number};
+  requestTime?: number;
+}
+
 export interface RootState {
   animationList: AnimationListState;
+  locationPicker: LocationPickerState;
   manageStudents: ManageStudentsState;
   aichat: AichatState;
   aichatLab: AichatLabState;

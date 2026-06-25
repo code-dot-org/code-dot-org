@@ -1,4 +1,13 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
+import {AnyAction} from 'redux';
+
+import {
+  isPickingLocation,
+  selectLocation,
+  updateLocation,
+} from '@cdo/apps/p5lab/redux/locationPicker';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {calculateOffsetCoordinates} from '@cdo/apps/utils';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
@@ -24,7 +33,58 @@ interface PlayspaceProps {
  */
 const Playspace: React.FunctionComponent<PlayspaceProps> = ({mode}) => {
   const overlayRef = useRef<HTMLDivElement>(null);
+  const canvasRef = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState({w: 0, h: 0});
+
+  const dispatch = useAppDispatch();
+  // The location-picker block puts us in "selecting" mode; while active, the
+  // playspace captures clicks and reports game coordinates back to the block.
+  const picking = useAppSelector(state =>
+    isPickingLocation(state.locationPicker)
+  );
+
+  // calculateOffsetCoordinates maps a screen point to the canvas's intrinsic
+  // 400x400 space via getBoundingClientRect vs offsetWidth, so it's correct
+  // despite our CSS transform scaling.
+  const coordsFromEvent = useCallback((e: React.PointerEvent) => {
+    if (!canvasRef.current) {
+      return null;
+    }
+    return calculateOffsetCoordinates(
+      canvasRef.current,
+      Math.floor(e.clientX),
+      Math.floor(e.clientY)
+    );
+  }, []);
+
+  const handlePointerMove = useCallback(
+    (e: React.PointerEvent) => {
+      if (!picking) {
+        return;
+      }
+      const coords = coordsFromEvent(e);
+      if (coords) {
+        dispatch(updateLocation(coords) as unknown as AnyAction);
+      }
+    },
+    [picking, coordsFromEvent, dispatch]
+  );
+
+  const handlePointerUp = useCallback(
+    (e: React.PointerEvent) => {
+      if (!picking) {
+        return;
+      }
+      const coords = coordsFromEvent(e);
+      if (coords) {
+        // Update first so the block's live value matches the click point, then
+        // finalize the selection.
+        dispatch(updateLocation(coords) as unknown as AnyAction);
+        dispatch(selectLocation(coords) as unknown as AnyAction);
+      }
+    },
+    [picking, coordsFromEvent, dispatch]
+  );
 
   // Only animate the move/scale when going directly between the two visible
   // placements (Code preview <-> Play). Appearing from or disappearing to a tab
@@ -75,11 +135,20 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({mode}) => {
         style={{
           transform,
           transition: animate ? undefined : 'none',
-          pointerEvents: mode === 'play' ? 'auto' : 'none',
+          // Interactive in Play, and while picking a location (so the preview
+          // can be clicked even on the Code tab).
+          pointerEvents: mode === 'play' || picking ? 'auto' : 'none',
+          cursor: picking ? 'crosshair' : undefined,
         }}
+        onPointerMove={handlePointerMove}
+        onPointerUp={handlePointerUp}
       >
         {/* The id is hardcoded in P5Wrapper.startExecution. */}
-        <div id="divGameLab" className={moduleStyles.playspaceCanvas} />
+        <div
+          ref={canvasRef}
+          id="divGameLab"
+          className={moduleStyles.playspaceCanvas}
+        />
       </div>
     </div>
   );
