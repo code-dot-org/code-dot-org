@@ -1,4 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
@@ -38,8 +39,7 @@ export default function ScrapbookButton() {
 
   return (
     <>
-      <button
-        type="button"
+      <MuiIconButton
         className={classNames(
           'header_button',
           'header_button_light',
@@ -47,9 +47,12 @@ export default function ScrapbookButton() {
           moduleStyles.button
         )}
         onClick={() => setDialogOpen(true)}
+        size="small"
+        aria-label="Save to scrapbook"
+        title="Save to scrapbook"
       >
         <FontAwesomeV6Icon iconName="thumbtack" />
-      </button>
+      </MuiIconButton>
       <ScrapbookEntryDialog
         isOpen={dialogOpen}
         onClose={() => setDialogOpen(false)}
