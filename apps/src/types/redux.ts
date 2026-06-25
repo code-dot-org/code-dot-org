@@ -29,6 +29,7 @@ import {Weblab2NetworkState} from '@cdo/apps/weblab2/redux/networkRedux';
 import {Weblab2State} from '@cdo/apps/weblab2/weblab2Redux';
 
 import {DanceState} from '../dance/danceRedux';
+import {SpriteLab2State} from '../p5lab/spritelab/lab2/redux/spriteLab2Redux';
 import {BlocklyState} from '../redux/blockly';
 import {LegacyLabsState} from '../redux/legacyLabs';
 
@@ -64,13 +65,23 @@ export interface RootState {
   pageConstants: LegacyLabsState;
   predictLevel: PredictLevelState;
   progress: ProgressState;
+  runState: RunState;
   sectionProgress: SectionProgressState;
+  spriteLab2: SpriteLab2State;
   teacherPanel: TeacherPanelState;
   teacherRubric: TeacherRubricState;
   teacherSections: TeacherSectionState;
   weblab2: Weblab2State;
   weblab2Console: Weblab2ConsoleState;
   weblab2Network: Weblab2NetworkState;
+}
+
+// Shape of the legacy redux/runState slice (plain JS reducer).
+export interface RunState {
+  isRunning: boolean;
+  isDebuggerPaused: boolean;
+  stepSpeed: number;
+  isDebuggingSprites: boolean;
 }
 
 // Temporary type definition for the result of
