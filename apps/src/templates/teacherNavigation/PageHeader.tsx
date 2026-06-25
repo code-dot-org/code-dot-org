@@ -90,7 +90,19 @@ const PageHeader: React.FC<{urlSectionId: string}> = ({urlSectionId}) => {
     </div>
   );
 
-  const isUnitOverviewPage = pathName === 'Course';
+  const isUnitOverviewPage =
+    matchPath(
+      LABELED_TEACHER_NAVIGATION_PATHS.courseOverview.absoluteUrl,
+      location.pathname
+    ) !== null ||
+    matchPath(
+      LABELED_TEACHER_NAVIGATION_PATHS.nestedUnitOverview.absoluteUrl,
+      location.pathname
+    ) !== null ||
+    matchPath(
+      LABELED_TEACHER_NAVIGATION_PATHS.unitOverview.absoluteUrl,
+      location.pathname
+    ) !== null;
 
   return (
     <div className={styles.header}>
