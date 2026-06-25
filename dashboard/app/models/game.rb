@@ -169,10 +169,6 @@ class Game < ApplicationRecord
     @@game_spritelab ||= find_by_name('Spritelab')
   end
 
-  def self.spritelab2
-    @@game_spritelab2 ||= find_by_name('Spritelab2')
-  end
-
   def self.fish
     @@game_fish ||= find_by_name('Fish')
   end
@@ -375,7 +371,6 @@ class Game < ApplicationRecord
     Panels:panels
     Weblab2:weblab2
     Sketchlab:sketchlab
-    Spritelab2:spritelab2
   )
 
   def self.setup

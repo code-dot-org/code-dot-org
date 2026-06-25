@@ -114,10 +114,6 @@ class ProjectsController < ApplicationController
       name: 'New Sprite Lab Project',
       i18n: true
     },
-    spritelab2: {
-      name: 'New Sprite Lab 2 Project',
-      i18n: true
-    },
     dance: {
       name: 'New Dance Lab Project',
       # NOTE: if changing this URL, update project thumbnail URL validation as well

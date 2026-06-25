@@ -33,5 +33,8 @@ export const lab2EntryPoints = {
   standalone_video: StandaloneVideoEntryPoint,
   weblab2: Weblab2EntryPoint,
   sketchlab: SketchlabEntryPoint,
-  spritelab2: SpriteLab2EntryPoint,
+  // Sprite Lab opts into Lab2 per-level via uses_lab2 on the classic
+  // GamelabJr/spritelab level type; appName is the spritelab game's app, so we
+  // register the new client view under that key (not a new "spritelab2" game).
+  spritelab: SpriteLab2EntryPoint,
 } as const satisfies Record<string, Lab2EntryPoint>;
