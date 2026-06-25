@@ -4,6 +4,7 @@ import React from 'react';
 import Pointable from 'react-pointable';
 import {connect} from 'react-redux';
 
+import {takeEphemeralBlocklyFocus} from '@cdo/apps/blockly/utils';
 import ArrowButtons from '@cdo/apps/templates/ArrowButtons';
 import BelowVisualization from '@cdo/apps/templates/BelowVisualization';
 import CompletionButton from '@cdo/apps/templates/CompletionButton';
@@ -77,7 +78,8 @@ class P5LabVisualizationColumn extends React.Component {
   };
 
   componentWillUnmount() {
-    // Leaking ephemeral focus locks Blockly's FocusManager page-wide.
+    // If we don't release this, Blockly won't let anything else borrow focus
+    // for the rest of the session.
     if (this.releaseEphemeralFocus) {
       this.releaseEphemeralFocus();
       this.releaseEphemeralFocus = null;
@@ -111,21 +113,25 @@ class P5LabVisualizationColumn extends React.Component {
     }
   };
 
+  // The current crosshair position, rounded to whole pixels. The raw values
+  // pick up floating-point noise from the screen-to-app-space conversion;
+  // rounding here means everything downstream gets clean integers.
+  currentCursor = () => ({
+    x: Math.round(this.state.mouseX),
+    y: Math.round(this.state.mouseY),
+  });
+
   moveKeyboardCursorTo = (x, y) => {
-    // Round so the field stores whole pixels and the next arrow press isn't
-    // computed against a round-tripped float from VisualizationOverlay's
-    // screen→app-space transform.
-    const clampedX = Math.round(Math.max(0, Math.min(APP_WIDTH, x)));
-    const clampedY = Math.round(Math.max(0, Math.min(APP_HEIGHT, y)));
+    const clampedX = Math.max(0, Math.min(APP_WIDTH, x));
+    const clampedY = Math.max(0, Math.min(APP_HEIGHT, y));
     this.props.updatePicker({x: clampedX, y: clampedY});
-    // syncCrosshairTo also feeds VisualizationOverlay's mousemove handler,
-    // which updates this.state.mouseX/mouseY — that's where the next arrow
-    // press reads its starting position from.
+    // The synthetic mousemove inside syncCrosshairTo also updates
+    // state.mouseX/mouseY, which is where the next arrow press reads from.
     this.syncCrosshairTo(clampedX, clampedY);
   };
 
-  // Synthetic mousemove drives the existing CrosshairOverlay so it tracks the
-  // keyboard cursor without needing its own overlay.
+  // Fakes a mousemove so the existing crosshair follows the keyboard cursor.
+  // Saves us from building a second overlay just for keyboard mode.
   syncCrosshairTo = (x, y) => {
     if (!this.divGameLab) {
       return;
@@ -144,12 +150,9 @@ class P5LabVisualizationColumn extends React.Component {
   };
 
   confirmKeyboardPick = () => {
-    // The field subscribes to UPDATE_LOCATION, not SELECT_LOCATION, so we
-    // must update before selecting.
-    const loc = {
-      x: Math.round(this.state.mouseX),
-      y: Math.round(this.state.mouseY),
-    };
+    // The field reads its value from UPDATE_LOCATION (not SELECT_LOCATION),
+    // so we have to update first or the field won't change.
+    const loc = this.currentCursor();
     this.props.updatePicker(loc);
     this.props.selectPicker(loc);
   };
@@ -159,11 +162,9 @@ class P5LabVisualizationColumn extends React.Component {
       return;
     }
     const step = e.shiftKey ? KEYBOARD_PICKER_BIG_STEP : KEYBOARD_PICKER_STEP;
-    // Start from the current crosshair position so keyboard and mouse share
-    // one source of truth. Round to discard sub-pixel drift from the
-    // screen→app-space transform.
-    const x = Math.round(this.state.mouseX);
-    const y = Math.round(this.state.mouseY);
+    // Start from the current crosshair so the keyboard and the mouse always
+    // agree on where the cursor is.
+    const {x, y} = this.currentCursor();
     let action = null;
     switch (e.key) {
       case 'ArrowUp':
@@ -179,7 +180,7 @@ class P5LabVisualizationColumn extends React.Component {
         action = () => this.moveKeyboardCursorTo(x + step, y);
         break;
       case 'Tab':
-        // Trap Tab — the picker is modal, so Escape is the way out.
+        // The picker is a modal, so block Tab. Escape is the way out.
         action = () => {};
         break;
       case 'Escape':
@@ -187,7 +188,8 @@ class P5LabVisualizationColumn extends React.Component {
         break;
       case 'Enter':
       case ' ':
-        // Swallow Enter key-repeat from the keystroke that opened the picker.
+        // Ignore Enter for a moment after opening so the same keypress that
+        // opened the picker doesn't immediately confirm it.
         if (
           Date.now() - this.props.requestTime <
           LOCATION_PICKER_CANCEL_THRESHOLD_MS
@@ -221,27 +223,8 @@ class P5LabVisualizationColumn extends React.Component {
 
   componentDidUpdate(prevProps) {
     if (this.props.pickingLocation && !prevProps.pickingLocation) {
-      this.releaseEphemeralFocus = this.acquireEphemeralFocus(this.divGameLab);
-      // Pick a starting point in priority order:
-      //   1. The block's current coordinates (passed in via redux).
-      //   2. The crosshair's current position if it's already valid.
-      //   3. Center, as a last-resort fallback for keyboard-only sessions.
-      const {pickerLocation} = this.props;
-      const {mouseX, mouseY} = this.state;
-      if (
-        pickerLocation &&
-        Number.isFinite(pickerLocation.x) &&
-        Number.isFinite(pickerLocation.y)
-      ) {
-        this.syncCrosshairTo(pickerLocation.x, pickerLocation.y);
-      } else if (
-        mouseX < 0 ||
-        mouseY < 0 ||
-        mouseX > APP_WIDTH ||
-        mouseY > APP_HEIGHT
-      ) {
-        this.syncCrosshairTo(APP_WIDTH / 2, APP_HEIGHT / 2);
-      }
+      this.releaseEphemeralFocus = takeEphemeralBlocklyFocus(this.divGameLab);
+      this.seedCrosshairForPickerOpen();
     } else if (!this.props.pickingLocation && prevProps.pickingLocation) {
       if (this.releaseEphemeralFocus) {
         this.releaseEphemeralFocus();
@@ -250,8 +233,30 @@ class P5LabVisualizationColumn extends React.Component {
     }
   }
 
-  // ProtectedStatefulDiv blocks prop updates on the Pointable, so picker-mode
-  // attributes/styles are applied imperatively.
+  // Where to place the crosshair when the picker opens, in priority order:
+  //   1. The block's existing coordinates.
+  //   2. Wherever the crosshair already is, if it's on the playspace.
+  //   3. The center of the playspace.
+  seedCrosshairForPickerOpen = () => {
+    const {pickerLocation} = this.props;
+    if (
+      pickerLocation &&
+      Number.isFinite(pickerLocation.x) &&
+      Number.isFinite(pickerLocation.y)
+    ) {
+      this.syncCrosshairTo(pickerLocation.x, pickerLocation.y);
+      return;
+    }
+    const {mouseX, mouseY} = this.state;
+    const crosshairInBounds =
+      mouseX >= 0 && mouseY >= 0 && mouseX <= APP_WIDTH && mouseY <= APP_HEIGHT;
+    if (!crosshairInBounds) {
+      this.syncCrosshairTo(APP_WIDTH / 2, APP_HEIGHT / 2);
+    }
+  };
+
+  // Pointable lives inside a ProtectedStatefulDiv that never re-renders, so
+  // we change its attributes and styles directly on the DOM node.
   applyPickerAttributes = picking => {
     const visualizationOverlay = document.getElementById(
       'visualizationOverlay'
@@ -266,7 +271,8 @@ class P5LabVisualizationColumn extends React.Component {
           'aria-label',
           KEYBOARD_PICKER_INSTRUCTIONS
         );
-        // WCAG 2.4.7: divs have no native focus indicator.
+        // A focused div has no visible outline by default — add one so
+        // keyboard users can see where focus is.
         this.divGameLab.style.outline = PICKER_FOCUS_OUTLINE;
         this.divGameLab.style.outlineOffset = '-3px';
       } else {
@@ -280,26 +286,6 @@ class P5LabVisualizationColumn extends React.Component {
     if (visualizationOverlay) {
       visualizationOverlay.style.zIndex = zIndex;
     }
-  };
-
-  // takeEphemeralFocus stops Blockly's FocusManager from pulling focus back
-  // to its workspace tree; the returned lambda restores focus on release.
-  acquireEphemeralFocus = element => {
-    const focusManager =
-      typeof Blockly !== 'undefined' &&
-      Blockly.FocusManager &&
-      Blockly.FocusManager.getFocusManager &&
-      Blockly.FocusManager.getFocusManager();
-    if (focusManager && !focusManager.ephemeralFocusTaken()) {
-      return focusManager.takeEphemeralFocus(element);
-    }
-    const previousFocus = document.activeElement;
-    element.focus();
-    return () => {
-      if (previousFocus && typeof previousFocus.focus === 'function') {
-        previousFocus.focus();
-      }
-    };
   };
 
   onMouseMove = (mouseX, mouseY) => this.setState({mouseX, mouseY});
@@ -344,7 +330,7 @@ class P5LabVisualizationColumn extends React.Component {
   }
   render() {
     const {isResponsive, isShareView, isRtl} = this.props;
-    // Picker-mode attributes are set by applyPickerAttributes — see there.
+    // Picker-mode attributes are set imperatively in applyPickerAttributes.
     const divGameLabStyle = {
       touchAction: 'none',
       width: APP_WIDTH,
