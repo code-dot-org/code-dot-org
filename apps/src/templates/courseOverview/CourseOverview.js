@@ -66,7 +66,7 @@ class CourseOverview extends Component {
     // Redux
     announcements: PropTypes.arrayOf(announcementShape),
     isSignedIn: PropTypes.bool.isRequired,
-    demoType: PropTypes.string,
+    demoType: PropTypes.string.isRequired,
   };
 
   constructor(props) {
@@ -277,6 +277,6 @@ export default connect((state, ownProps) => ({
   viewAs: state.viewAs,
   isVerifiedInstructor: state.verifiedInstructor.isVerified,
   hasVerifiedResources: state.verifiedInstructor.hasVerifiedResources,
-  demoType: selectedSectionSelector(state)?.demoType ?? null,
+  demoType: selectedSectionSelector(state)?.demoType,
   announcements: state.announcements || [],
 }))(CourseOverview);

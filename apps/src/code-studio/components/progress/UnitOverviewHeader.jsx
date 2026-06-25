@@ -63,7 +63,7 @@ class UnitOverviewHeader extends Component {
     isSignedIn: PropTypes.bool.isRequired,
     isVerifiedInstructor: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
-    demoType: PropTypes.string,
+    demoType: PropTypes.string.isRequired,
     localeCode: PropTypes.string,
     children: PropTypes.node,
   };
@@ -266,6 +266,6 @@ export default connect(state => ({
   viewAs: state.viewAs,
   isVerifiedInstructor: state.verifiedInstructor.isVerified,
   hasVerifiedResources: state.verifiedInstructor.hasVerifiedResources,
-  demoType: selectedSectionSelector(state)?.demoType ?? null,
+  demoType: selectedSectionSelector(state)?.demoType,
   localeCode: state.locales.localeCode,
 }))(UnitOverviewHeader);
