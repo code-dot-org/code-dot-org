@@ -1,7 +1,10 @@
 import {generateText} from '@cdo/apps/aiGateway';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
-import {AiRequestExecutionStatus} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiChatClientTypes,
+  AiRequestExecutionStatus,
+} from '@cdo/generated-scripts/sharedConstants';
 
 import {getImageModel} from './modelHelpers';
 import {removeBackground} from './removeBackground';
@@ -28,7 +31,9 @@ async function createAichatRequest(
       temperature: 1,
     },
     aichatContext: {
-      clientType: 'aichat',
+      // FLOW_LAB is a trusted chat client (see User#trust_chat_client?), so
+      // students can generate without section-level aichat access.
+      clientType: AiChatClientTypes.FLOW_LAB,
       currentLevelId: null,
       scriptId: null,
       channelId,
