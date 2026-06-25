@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-23 20:58:44 UTC",
+    "serialized_at": "2026-06-24 20:03:36 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -202,7 +202,7 @@
       "key": "446930f5-d4a3-4d47-9e59-efda461aa399",
       "position": 1,
       "properties": {
-        "description": "Students build vocabulary and conceptual understanding to close the gap they felt in Act 1. The Essential Question has now been introduced. \n\nExpect students to spend between 10-20 minutes in this part of the lesson. This section takes less time than Part 1 because the levels are more goal-oriented and focused.\n\n| Level | Title | Description |\n| :---- | :---- | :---- |\n| 10 | HTML Choice Levels | Students choose one HTML feature to investigate (headings, lists, images, paragraphs & line breaks, or sections). They ask AI Tutor how it works, then prompt AI to add new content to an example page using specific vocabulary. |\n| 11 | CSS Choice Levels | Students choose one CSS feature to investigate (color, font-family, border, text styles, or spacing). Same pattern as Level 7: ask AI Tutor how it works, then prompt AI to apply it to an example page. |\n| 12 | Prompting Puzzles | Students receive someone else's raw text content and a non-technical vision description with a screenshot. They prompt AI Tutor to add HTML structure and CSS style, iterating until their result is close to the target. |\n| 13 | Debug the Gap | Students see someone else's `vision.md` alongside the AI-generated output that didn't match it. They diagnose the mismatch and choose how to fix it \\- by updating the vision, prompting AI Tutor directly, or both. |\n| 14 | Reflection: What Changed? | Students respond to: *\"After fixing someone else's site, what do you notice about how you think about prompting now? What would you do differently on your own page?\"* |"
+        "description": "Students build vocabulary and conceptual understanding to close the gap they felt in Act 1. The Essential Question has now been introduced. \n\nExpect students to spend between 10-20 minutes in this part of the lesson. This section takes less time than Part 1 because the levels are more goal-oriented and focused.\n\n| Level | Title | Description |\n| :---- | :---- | :---- |\n| 14 | HTML Choice Levels | Students choose one HTML feature to investigate (headings, lists, images, paragraphs & line breaks, or sections). They ask AI Tutor how it works, then prompt AI to add new content to an example page using specific vocabulary. |\n| 15 | CSS Choice Levels | Students choose one CSS feature to investigate (color, font-family, border, text styles, or spacing). Same pattern as Level 7: ask AI Tutor how it works, then prompt AI to apply it to an example page. |\n| 16 | Prompting Puzzles | Students receive someone else's raw text content and a non-technical vision description with a screenshot. They prompt AI Tutor to add HTML structure and CSS style, iterating until their result is close to the target. |\n| 17 | Debug the Gap | Students see someone else's `vision.md` alongside the AI-generated output that didn't match it. They diagnose the mismatch and choose how to fix it \\- by updating the vision, prompting AI Tutor directly, or both. |\n| 18 | Reflection: What Changed? | Students respond to: *\"After fixing someone else's site, what do you notice about how you think about prompting now? What would you do differently on your own page?\"* |"
       },
       "seeding_key": {
         "activity_section.key": "446930f5-d4a3-4d47-9e59-efda461aa399",
@@ -224,7 +224,7 @@
       "key": "96c02132-f664-443d-ab35-7f5d7e4d315f",
       "position": 3,
       "properties": {
-        "progression_name": "Check for Understanding",
+        "progression_name": "Reflection: Working with AI",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -241,7 +241,7 @@
       "key": "906c63a9-fc57-4a19-a78c-943b9a4c2b0c",
       "position": 1,
       "properties": {
-        "description": "[**Artificial Intelligence Foundations**](https://studio.code.org/courses/artificial-intelligence-foundations) AI Foundations introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. In addition, students design and build interactive web apps using HTML, CSS, and JavaScript while learning to collaborate thoughtfully with AI through design, coding, and project work.",
+        "description": "[**Artificial Intelligence Foundations**](https://studio.code.org/courses/artificial-intelligence-foundations) introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. In addition, students design and build interactive web apps using HTML, CSS, and JavaScript while learning to collaborate thoughtfully with AI through design, coding, and project work.",
         "name": "What Comes Next?: Explore More AI Curricula"
       },
       "seeding_key": {
@@ -253,7 +253,7 @@
       "key": "e092cff9-a1f1-4eb9-8f16-5d2696b14421",
       "position": 2,
       "properties": {
-        "description": "[**Artificial Intelligence Discoveries**](https://studio.code.org/courses/ai-discoveries-2026) AI Discoveries is an introductory, classroom-based course appropriate for 6–8th grade students. The course aims to empower students to create authentic artifacts and engage with computer science and AI as media for creativity, communication, problem solving, and exploration. AI Discoveries (AID) takes a wide lens on computer science by covering topics such as programming, web development, design, and data, while placing AI literacy and computational thinking at the center of the experience. "
+        "description": "[**Artificial Intelligence Discoveries**](https://studio.code.org/courses/ai-discoveries-2026) is an introductory, classroom-based course appropriate for 6–8th grade students. The course aims to empower students to create authentic artifacts and engage with computer science and AI as media for creativity, communication, problem solving, and exploration. AI Discoveries (AID) takes a wide lens on computer science by covering topics such as programming, web development, design, and data, while placing AI literacy and computational thinking at the center of the experience. "
       },
       "seeding_key": {
         "activity_section.key": "e092cff9-a1f1-4eb9-8f16-5d2696b14421",
@@ -662,9 +662,53 @@
       "chapter": 19,
       "position": 19,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Reflection: Working with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iste_pilot_panels"
+        ],
+        "lesson.key": "Intro to Web Lab",
+        "lesson_group.key": "",
+        "script.name": "iste-2026",
+        "activity_section.key": "96c02132-f664-443d-ab35-7f5d7e4d315f"
+      },
+      "level_keys": [
+        "iste_pilot_panels"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 20,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Reflection: Working with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iste_autopilot_panel"
+        ],
+        "lesson.key": "Intro to Web Lab",
+        "lesson_group.key": "",
+        "script.name": "iste-2026",
+        "activity_section.key": "96c02132-f664-443d-ab35-7f5d7e4d315f"
+      },
+      "level_keys": [
+        "iste_autopilot_panel"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 21,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "Check for Understanding"
+        "progression": "Reflection: Working with AI"
       },
       "bonus": false,
       "seeding_key": {
@@ -896,6 +940,30 @@
         "lesson_group.key": "",
         "script.name": "iste-2026",
         "activity_section.key": "a709fc14-854c-4ed4-b84e-4feb7cb338d9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iste_pilot_panels",
+        "script_level.level_keys": [
+          "iste_pilot_panels"
+        ],
+        "lesson.key": "Intro to Web Lab",
+        "lesson_group.key": "",
+        "script.name": "iste-2026",
+        "activity_section.key": "96c02132-f664-443d-ab35-7f5d7e4d315f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iste_autopilot_panel",
+        "script_level.level_keys": [
+          "iste_autopilot_panel"
+        ],
+        "lesson.key": "Intro to Web Lab",
+        "lesson_group.key": "",
+        "script.name": "iste-2026",
+        "activity_section.key": "96c02132-f664-443d-ab35-7f5d7e4d315f"
       }
     },
     {
