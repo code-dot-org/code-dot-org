@@ -42,9 +42,9 @@ describe('PairingNavigatorAlert', () => {
       name: 'Click here to view the solution you created as a team.',
     });
     expect(link).toHaveAttribute('href', '/level_solutions/123/edit');
-    expect(
-      screen.getByText('This level was completed while pairing with')
-    ).toBeInTheDocument();
+    expect(screen.getByRole('alert')).toHaveTextContent(
+      'This level was completed while pairing with'
+    );
     expect(screen.getByText('A Student')).toBeInTheDocument();
   });
 
@@ -60,7 +60,7 @@ describe('PairingNavigatorAlert', () => {
 
     expect(
       screen.getByRole('link', {
-        name: 'Click here to view the solution this student created as a team.',
+        name: 'Click here to view the solution created as a team.',
       })
     ).toBeInTheDocument();
   });

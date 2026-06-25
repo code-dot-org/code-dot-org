@@ -141,7 +141,6 @@ export const setUpWithLevel = createAsyncThunk<
     thunkAPI.dispatch(setScriptId(payload.scriptId));
 
     const levelProperties = payload.levelProperties;
-    console.log('levelProperties', levelProperties);
     Lab2Registry.getInstance().setAppName(levelProperties.appName);
 
     if (!levelProperties.usesProjects) {
