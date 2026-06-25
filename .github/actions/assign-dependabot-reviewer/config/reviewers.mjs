@@ -32,7 +32,6 @@ export const reviewersMap = {
     'classnames': 'platform',
     'dapjs': 'student-labs',
     'dedent': 'platform',
-    'details-element-polyfill': 'platform',
     'ejs': 'student-labs',
     'events': 'student-labs',
     'fast-memoize': 'student-labs',
