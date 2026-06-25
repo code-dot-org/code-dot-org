@@ -15,12 +15,12 @@ modules and semantic color variables.
 
 ## 1. labs/base package scaffold
 
-- [ ] 1.1 Scaffold via `yarn turbo gen package` as the base, then modify to fit: move under `packages/labs/base`, name `@code-dot-org/lab`, library-mode vite config per `docs/conventions/packages.md` (generator output is the starting point, not hand-rolled files)
-- [ ] 1.2 Write failing unit tests from spec `lab-base` scenarios: Lab provides level context, level change without shell remount, error containment + metrics report, LifecycleNotifier subscribe/unsubscribe
-- [ ] 1.3 Port the host slice from `origin/ngfp/music-lab:frontend/packages/labs/base` to green: `LifecycleNotifier`, `LabRegistry` (drop ProjectManager), `LabMetricsReporter` (adapt to observability plugin), `ErrorBoundary` with a simple error-state fallback (the prototype's errorFallbackPage is not ported), `Loading`, `useLifecycleNotifier`; record source hashes for attribution
-- [ ] 1.4 Adapt `Lab.tsx` + `LevelPropertiesContext.tsx` to prop-driven `levelId` + map (no redux, no theme provider — studio root provides theme) per design "URL drives level state"; tests green
-- [ ] 1.5 a11y-architect review: Loading and the simple error state; apply findings
-- [ ] 1.6 Failing lint test (ESLint flags a fixture importing `@code-dot-org/lab` from oceans src), then the import restriction in `packages/labs/oceans/eslint.config.mjs`
+- [x] 1.1 Scaffold via `yarn turbo gen package` as the base, then modify to fit: move under `packages/labs/base`, name `@code-dot-org/lab`, library-mode vite config per `docs/conventions/packages.md` (generator output is the starting point, not hand-rolled files)
+- [x] 1.2 Write failing unit tests from spec `lab-base` scenarios: Lab provides level context, level change without shell remount, error containment + metrics report, LifecycleNotifier subscribe/unsubscribe
+- [x] 1.3 Port the host slice from `origin/ngfp/music-lab:frontend/packages/labs/base` to green: `LabMetricsReporter` (adapt to observability plugin), `ErrorBoundary` with a simple error-state fallback (the prototype's errorFallbackPage is not ported), `Loading`; LifecycleNotifier/LabRegistry/useLifecycleNotifier dropped (TanStack Router covers lifecycle events natively)
+- [x] 1.4 Adapt `Lab.tsx` + `LevelPropertiesContext.tsx` to prop-driven `levelId` + map (no redux, no theme provider — studio root provides theme) per design "URL drives level state"; tests green
+- [x] 1.5 a11y-architect review: Loading and the simple error state; apply findings
+- [x] 1.6 Failing lint test (ESLint flags a fixture importing `@code-dot-org/lab` from oceans src), then the import restriction in `packages/labs/oceans/eslint.config.mjs`
 
 ## 2. labs/base integration proof
 
