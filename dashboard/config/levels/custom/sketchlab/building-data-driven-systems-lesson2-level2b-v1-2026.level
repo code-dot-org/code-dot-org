@@ -1,7 +1,7 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2026-04-29T06:26:42.000Z",
+  "created_at": "2026-04-29T20:25:20.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
@@ -21,7 +21,7 @@
             },
             "data": {
               "text": "Map Data to a List",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 139.7748902707639,
               "showHandles": false
             },
@@ -43,7 +43,7 @@
             },
             "data": {
               "text": "Label each part of the list item \nwith the kind of information it should show.",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 61.61662781962848,
               "showHandles": false
             },
@@ -71,7 +71,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1518,
@@ -87,7 +87,7 @@
             },
             "data": {
               "text": "My list represents: ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 67.81137649894099,
               "showHandles": false
             },
@@ -110,8 +110,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 542,
@@ -127,7 +127,7 @@
             },
             "data": {
               "text": "avatar",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -150,8 +150,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#d0bfff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-purple)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 542,
@@ -167,7 +167,7 @@
             },
             "data": {
               "text": "text 1",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -190,8 +190,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#b2f2bb",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 542,
@@ -207,7 +207,7 @@
             },
             "data": {
               "text": "text 2",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -231,7 +231,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1832,
@@ -248,7 +248,7 @@
             },
             "data": {
               "text": "Example mapping:",
-              "fontColor": "#6741d9",
+              "fontColor": "var(--sketchlab-stroke-purple)",
               "fontSize": 96.6945281759697,
               "showHandles": false
             },
@@ -271,8 +271,8 @@
             "data": {
               "shapeType": "circle",
               "label": "",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "#ffffff",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 483,
@@ -316,8 +316,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#d0bfff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-purple)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1108,
@@ -334,7 +334,7 @@
             },
             "data": {
               "text": "text 1",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -358,8 +358,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#b2f2bb",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1112,
@@ -376,7 +376,7 @@
             },
             "data": {
               "text": "text 2",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -575,7 +575,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 2098,
@@ -635,7 +635,7 @@
             },
             "data": {
               "text": "Map Data to a List",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 139.7748902707639,
               "showHandles": false
             },
@@ -657,7 +657,7 @@
             },
             "data": {
               "text": "Label each part of the list item \nwith the kind of information it should show.",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 61.61662781962848,
               "showHandles": false
             },
@@ -685,7 +685,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1518,
@@ -701,7 +701,7 @@
             },
             "data": {
               "text": "My list represents: ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 67.81137649894099,
               "showHandles": false
             },
@@ -719,7 +719,7 @@
             },
             "data": {
               "text": "comments on a blog post",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 107.62275299788189,
               "showHandles": false
             },
@@ -742,8 +742,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 542,
@@ -759,7 +759,7 @@
             },
             "data": {
               "text": "avatar",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -782,8 +782,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#d0bfff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-purple)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 542,
@@ -799,7 +799,7 @@
             },
             "data": {
               "text": "text 1",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -822,8 +822,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#b2f2bb",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 542,
@@ -839,7 +839,7 @@
             },
             "data": {
               "text": "text 2",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -857,7 +857,7 @@
             },
             "data": {
               "text": "profile picture of the person\nwho wrote the comment",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 79.19819608315365,
               "showHandles": false
             },
@@ -881,7 +881,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1832,
@@ -898,7 +898,7 @@
             },
             "data": {
               "text": "Example mapping:",
-              "fontColor": "#6741d9",
+              "fontColor": "var(--sketchlab-stroke-purple)",
               "fontSize": 96.6945281759697,
               "showHandles": false
             },
@@ -921,8 +921,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#d0bfff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-purple)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1108,
@@ -939,7 +939,7 @@
             },
             "data": {
               "text": "Ava Chen",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -963,8 +963,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#b2f2bb",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1112,
@@ -981,7 +981,7 @@
             },
             "data": {
               "text": "Great post! I learned a lot",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -1000,7 +1000,7 @@
             },
             "data": {
               "text": "the comment they wrote",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 79.19819608315365,
               "showHandles": false
             },
@@ -1018,7 +1018,7 @@
             },
             "data": {
               "text": "name of the person\nwho wrote the comment",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 79.19819608315365,
               "showHandles": false
             },
@@ -1041,8 +1041,8 @@
             "data": {
               "shapeType": "circle",
               "label": "",
-              "backgroundColor": "#f8f9fa",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 514,
@@ -1204,7 +1204,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1991,
@@ -1256,6 +1256,6 @@
     "thumbnail_url": "https://images.code.org/748051a572b10bae645cf30c6f663cc7-list_view (2).png"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-29T06:26:42.437+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson2-level3b-v1-2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson2-level3b-v1-2026\"},{\"changed_at\":\"2026-04-29 06:26:45 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-18 23:48:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 23:49:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 23:51:00 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-29T06:26:42.437+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson2-level3b-v1-2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson2-level3b-v1-2026\"},{\"changed_at\":\"2026-04-29 06:26:45 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-18 23:48:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 23:49:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 23:51:00 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-24 11:38:38 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>
