@@ -704,7 +704,14 @@ class ApiController < ApplicationController
         source: level_source
       }
 
-      response.merge!(level.pairing_properties_for(user, script, camelize_keys: true))
+      response.merge!(
+        level.pairing_properties_for(
+          user,
+          script,
+          camelize_keys: true,
+          user_level: user_level
+        )
+      )
     end
 
     response

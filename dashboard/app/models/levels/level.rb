@@ -994,10 +994,10 @@ class Level < ApplicationRecord
   # Returns pair-programming properties for this level and script.
   # Includes :is_navigator if a user_level exists.
   # Includes one of :pairing_attempt or :pairing_channel_id for navigators.
-  def pairing_properties_for(user, script, camelize_keys: false)
+  def pairing_properties_for(user, script, camelize_keys: false, user_level: nil)
     return {} unless user && script
 
-    user_level = user.last_attempt(self, script)
+    user_level ||= user.last_attempt(self, script)
     return {} unless user_level
 
     pairing_properties = {is_navigator: user_level.navigator?}
