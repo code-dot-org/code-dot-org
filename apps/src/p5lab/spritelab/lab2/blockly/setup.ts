@@ -46,6 +46,50 @@ export function installSharedBlocks(sharedBlocks: BlockDefinition[]): {
   });
 }
 
+// Sprite Lab's predefined behaviors. Each has a runtime implementation in the
+// NativeSpriteLab helper library and a registered "get behavior" block. A
+// level's toolbox typically only lists a subset (often just draggable), so we
+// surface the full set in the Behaviors category.
+const PREDEFINED_BEHAVIOR_BLOCKS = [
+  'gamelab_draggable',
+  'gamelab_avoidingTargets',
+  'gamelab_followingTargets',
+  'gamelab_tumbling',
+  'gamelab_patrollingUpDown',
+];
+
+/**
+ * Ensure the toolbox's "Behaviors" category lists all predefined behavior
+ * blocks (that are registered), not just whatever the level's toolbox included.
+ * Call after blocks are installed. No-op if there's no Behaviors category.
+ */
+export function ensurePredefinedBehaviors(toolboxXml: string): string {
+  try {
+    const doc = new DOMParser().parseFromString(toolboxXml, 'text/xml');
+    const behaviors = Array.from(
+      doc.getElementsByTagNameNS('*', 'category')
+    ).find(c => c.getAttribute('name') === 'Behaviors');
+    if (!behaviors) {
+      return toolboxXml;
+    }
+    const present = new Set(
+      Array.from(behaviors.getElementsByTagNameNS('*', 'block')).map(b =>
+        b.getAttribute('type')
+      )
+    );
+    PREDEFINED_BEHAVIOR_BLOCKS.forEach(type => {
+      if (!present.has(type) && Blockly.Blocks[type]) {
+        const block = doc.createElementNS(behaviors.namespaceURI, 'block');
+        block.setAttribute('type', type);
+        behaviors.appendChild(block);
+      }
+    });
+    return new XMLSerializer().serializeToString(doc);
+  } catch {
+    return toolboxXml;
+  }
+}
+
 /**
  * Remove <block>/<shadow> elements from a toolbox XML string whose type isn't
  * registered in Blockly. A level's toolbox can reference blocks that aren't in

@@ -7,6 +7,7 @@ import {BlockDefinition, WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {loadBlocksToWorkspace} from '@cdo/apps/blockly/utils/workspace/loadBlocks';
 
 import {
+  ensurePredefinedBehaviors,
   filterToolboxToRegisteredBlocks,
   installSharedBlocks,
   setupSpriteLab2BlocklyEnvironment,
@@ -109,9 +110,12 @@ const CodeTab = forwardRef<CodeTabHandle, CodeTabProps>(
           ? toolboxDefinition
           : undefined;
       if (!toolbox && toolboxXml) {
-        // Drop any blocks the level's toolbox references that aren't installed
-        // in this block pool, so opening a category never throws.
-        toolbox = filterToolboxToRegisteredBlocks(toolboxXml);
+        // Add the full predefined behavior set, then drop any blocks the
+        // level's toolbox references that aren't installed in this block pool
+        // (so opening a category never throws).
+        toolbox = filterToolboxToRegisteredBlocks(
+          ensurePredefinedBehaviors(toolboxXml)
+        );
       }
 
       workspace.current = Blockly.inject(blocklyDiv, {
