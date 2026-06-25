@@ -2,6 +2,7 @@ import {useReactFlow} from '@xyflow/react';
 import React, {useCallback, useRef, useState} from 'react';
 
 import {usePushSnapshot, useSketchLabReadOnly} from '../context';
+import {REACT_FLOW_SELECTOR} from '../reactFlowSelectors';
 
 interface UseInlineTextEditingOptions {
   /** Node id whose data field this editor writes back to. */
@@ -77,7 +78,9 @@ export function useInlineTextEditing({
       if (event.key === 'Escape' || isCommitEnter) {
         event.preventDefault();
         // Moving focus to the node blurs the editable, which commits via onBlur.
-        editableRef.current?.closest<HTMLElement>('.react-flow__node')?.focus();
+        editableRef.current
+          ?.closest<HTMLElement>(REACT_FLOW_SELECTOR.node)
+          ?.focus();
       }
     },
     [isEditing]

@@ -9,10 +9,7 @@ import {
 } from '../elementToolbars/toolbarPalettes';
 import {useConnectionHandleVisibility} from '../hooks/useConnectionHandleVisibility';
 import {useInlineTextEditing} from '../hooks/useInlineTextEditing';
-import {
-  REACT_FLOW_INTERACTION_CLASS,
-  REACT_FLOW_SELECTOR,
-} from '../reactFlowSelectors';
+import {REACT_FLOW_INTERACTION_CLASS} from '../reactFlowSelectors';
 import {ShapeNodeType, ShapeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
