@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React, {useCallback, useState} from 'react';
 import {AnyAction} from 'redux';
 
@@ -127,19 +128,11 @@ const GenerateImagePane: React.FunctionComponent = () => {
   return (
     <div className={moduleStyles.imagesManager}>
       <div className={moduleStyles.generatePane}>
-        <strong>Generate an image with AI</strong>
-        <label>
-          Name
-          <input
-            type="text"
-            value={name}
-            placeholder="e.g. hero"
-            onChange={e => setName(e.target.value)}
-            disabled={generating}
-          />
-        </label>
-        <label>
-          Description
+        <strong className={moduleStyles.generateHeading}>
+          Generate an image with AI
+        </strong>
+        <label className={moduleStyles.field}>
+          <span>Description</span>
           <input
             type="text"
             value={prompt}
@@ -148,20 +141,39 @@ const GenerateImagePane: React.FunctionComponent = () => {
             disabled={generating}
           />
         </label>
-        <label>
-          Type
-          <select
-            value={itemType}
-            onChange={e => setItemType(e.target.value as SpriteLab2ItemType)}
+        <div className={moduleStyles.fieldRow}>
+          <label
+            className={classNames(moduleStyles.field, moduleStyles.fieldGrow)}
+          >
+            <span>Name</span>
+            <input
+              type="text"
+              value={name}
+              placeholder="e.g. hero"
+              onChange={e => setName(e.target.value)}
+              disabled={generating}
+            />
+          </label>
+          <label className={moduleStyles.field}>
+            <span>Type</span>
+            <select
+              value={itemType}
+              onChange={e => setItemType(e.target.value as SpriteLab2ItemType)}
+              disabled={generating}
+            >
+              <option value="sprite">Sprite (costume)</option>
+              <option value="background">Background</option>
+            </select>
+          </label>
+          <button
+            type="button"
+            className={moduleStyles.generateButton}
+            onClick={handleGenerate}
             disabled={generating}
           >
-            <option value="sprite">Sprite (costume)</option>
-            <option value="background">Background</option>
-          </select>
-        </label>
-        <button type="button" onClick={handleGenerate} disabled={generating}>
-          {generating ? 'Generating…' : 'Generate'}
-        </button>
+            {generating ? 'Generating…' : 'Generate'}
+          </button>
+        </div>
         {error && <div className={moduleStyles.generateError}>{error}</div>}
       </div>
 

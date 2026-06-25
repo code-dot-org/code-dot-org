@@ -66,31 +66,55 @@
 
 .generatePane {
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  gap: 8px;
-  padding: 8px;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 560px;
+  padding: 16px;
   border-bottom: 1px solid var(--borders-neutral-primary);
+}
 
-  label {
-    display: flex;
-    flex-direction: column;
-    font-size: 12px;
+.generateHeading {
+  font-size: 15px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+
+  span {
+    color: var(--text-neutral-secondary);
   }
 
   input,
   select {
-    padding: 4px 6px;
-  }
-
-  button {
-    padding: 6px 16px;
-    cursor: pointer;
+    width: 100%;
+    height: 32px;
+    padding: 4px 8px;
+    box-sizing: border-box;
   }
 }
 
+.fieldGrow {
+  flex: 1 1 auto;
+}
+
+.fieldRow {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.generateButton {
+  height: 32px;
+  padding: 0 18px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
 .generateError {
-  flex-basis: 100%;
   color: #c00;
   font-size: 12px;
 }
