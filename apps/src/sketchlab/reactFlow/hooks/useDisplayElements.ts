@@ -7,7 +7,6 @@ import type {
 } from '@cdo/apps/lab2/types';
 
 import type {TabOrderEntry} from '../utils/computeTabOrder';
-import {getEdgeReconnectability} from '../utils/connectionRules';
 import {getEdgeLabel} from '../utils/elementLabel';
 import {isGroupedChildNode} from '../utils/grouping';
 
@@ -151,15 +150,10 @@ export function useDisplayElements({
           multiSelectedNodeIds.has(edge.source) &&
           multiSelectedNodeIds.has(edge.target);
         const selected = singleSelected || bothAnchorsSelected;
-        const reconnectable = getEdgeReconnectability(edge, nodeMap, {
-          locked,
-          readOnly,
-        });
 
         return {
           ...edge,
           selected,
-          reconnectable,
           deletable: !locked && !readOnly,
           ariaLabel: getEdgeLabel(
             edge,

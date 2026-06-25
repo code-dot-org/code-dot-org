@@ -1,8 +1,6 @@
 /* React component to handle saving a trained model. */
 import type React from 'react';
 import {useState} from 'react';
-import {connect} from 'react-redux';
-import type {Dispatch} from 'redux';
 
 import {styles, ModelNameMaxLength} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
@@ -10,35 +8,24 @@ import {
   getDatasetDescription,
   isUserUploadedDataset,
 } from '../helpers/datasetDetails';
+import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
-import type {RootState} from '../redux';
 import {setTrainedModelDetail} from '../redux';
 import {getSelectedColumnsDescriptions} from '../selectors';
 
 import ScrollableContent from './ScrollableContent';
 import Statement from './Statement';
 
-interface SaveModelProps {
-  setTrainedModelDetail: (
-    field: string,
-    value: string,
-    isColumn: boolean,
-  ) => void;
-  labelColumn: string | undefined;
-  columnDescriptions: {id: string; description: string | null}[];
-  dataDescription: string | undefined;
-  isUserUploadedDataset: boolean;
-  datasetId: string | undefined;
-}
+const SaveModel = () => {
+  const dispatch = useAppDispatch();
+  const labelColumn = useAppSelector(state => state.labelColumn);
+  const columnDescriptions = useAppSelector(getSelectedColumnsDescriptions);
+  const dataDescription = useAppSelector(getDatasetDescription);
+  const isUserUploaded = useAppSelector(isUserUploadedDataset);
+  const datasetId = useAppSelector(
+    state => state.metadata && state.metadata.name,
+  );
 
-const SaveModel = ({
-  setTrainedModelDetail,
-  labelColumn,
-  columnDescriptions,
-  dataDescription,
-  isUserUploadedDataset: isUserUploaded,
-  datasetId,
-}: SaveModelProps) => {
   const [showColumnDescriptions, setShowColumnDescriptions] =
     useState(isUserUploaded);
 
@@ -51,7 +38,7 @@ const SaveModel = ({
     field: string,
     isColumn: boolean,
   ) => {
-    setTrainedModelDetail(field, event.target.value, isColumn);
+    dispatch(setTrainedModelDetail(field, event.target.value, isColumn));
   };
 
   const getColumnFields = () => {
@@ -250,17 +237,4 @@ const SaveModel = ({
   );
 };
 
-export default connect(
-  (state: RootState) => ({
-    labelColumn: state.labelColumn,
-    columnDescriptions: getSelectedColumnsDescriptions(state),
-    dataDescription: getDatasetDescription(state),
-    isUserUploadedDataset: isUserUploadedDataset(state),
-    datasetId: state.metadata && state.metadata.name,
-  }),
-  (dispatch: Dispatch) => ({
-    setTrainedModelDetail(field: string, value: string, isColumn: boolean) {
-      dispatch(setTrainedModelDetail(field, value, isColumn));
-    },
-  }),
-)(SaveModel);
+export default SaveModel;

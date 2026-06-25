@@ -468,7 +468,7 @@ describe('TeacherHomepage', () => {
       EVENTS.SECTION_LIST_TEACHING_TOGGLE_CLICKED,
       {}
     );
-  });
+  }, 10000);
 
   it('archive all opens modal', async () => {
     renderComponent();

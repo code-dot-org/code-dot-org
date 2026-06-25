@@ -1,4 +1,5 @@
 @no_mobile
+@playwright
 Feature: GDPR Dialog - data transfer agreement
 
   Scenario: EU user sees the GDPR Dialog on dashboard, opt out
