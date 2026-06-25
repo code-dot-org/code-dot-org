@@ -7,6 +7,8 @@ import {P5LabInterfaceMode, P5LabType} from '@cdo/apps/p5lab/constants';
 import ErrorDialogStack from '@cdo/apps/p5lab/ErrorDialogStack';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import GenerateImagePane from './GenerateImagePane';
+
 import moduleStyles from './sprite-lab2-view.module.scss';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -31,6 +33,7 @@ const ItemsTab: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.itemsTab}>
+      <GenerateImagePane />
       <AnimationTabAny
         channelId={channelId}
         defaultQuery={{categoryQuery: '', searchQuery: ''}}

@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef} from 'react';
 import {AnyAction, Reducer} from 'redux';
 
+import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {LabProps} from '@cdo/apps/lab2/types';
 import SourcesContainer, {
@@ -19,6 +20,7 @@ import {registerReducers} from '@cdo/apps/redux';
 import pageConstants, {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import runState, {setIsRunning} from '@cdo/apps/redux/runState';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import defaultSources from '../defaultSources.json';
 import spriteLab2Reducer, {
@@ -75,10 +77,19 @@ const SpriteLab2View: React.FunctionComponent<{
   const isRunning = useAppSelector(state => state.runState.isRunning);
   const activeTab = useAppSelector(state => state.spriteLab2.activeTab);
   const channelId = useAppSelector(state => state.lab.channel?.id);
+  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+  const scriptId = useAppSelector(state => state.progress.scriptId);
   // The classic AnimationTab + animationList logic key off these page
   // constants (Sprite Lab is a Blockly lab); seed them since we bypass the
-  // legacy StudioApp.init that normally would.
+  // legacy StudioApp.init that normally would. Also populate the process-wide
+  // AichatContextManager that the aiGateway image-generation calls read from.
   useEffect(() => {
+    AichatContextManager.setContext({
+      clientType: AiChatClientTypes.FLOW_LAB,
+      currentLevelId: currentLevelId ? parseInt(currentLevelId, 10) : null,
+      scriptId: scriptId ?? null,
+      channelId,
+    });
     dispatch(
       setPageConstants({
         isBlockly: true,
@@ -93,7 +104,7 @@ const SpriteLab2View: React.FunctionComponent<{
     dispatch(
       changeInterfaceMode(P5LabInterfaceMode.ANIMATION) as unknown as AnyAction
     );
-  }, [dispatch, channelId]);
+  }, [dispatch, channelId, currentLevelId, scriptId]);
 
   const sourcesRef = useRef(currentSources);
   useEffect(() => {
