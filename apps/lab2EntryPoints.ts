@@ -14,6 +14,7 @@ import {DanceEntryPoint} from '@cdo/apps/dance/lab2/entrypoint';
 import {JavalabEntryPoint} from '@cdo/apps/javalab/lab2/entrypoint';
 import type {Lab2EntryPoint} from '@cdo/apps/lab2/types';
 import {MusicEntryPoint} from '@cdo/apps/music/entrypoint';
+import {SpriteLab2EntryPoint} from '@cdo/apps/p5lab/spritelab/lab2/entrypoint';
 import {PanelsEntryPoint} from '@cdo/apps/panels/entrypoint';
 import {PythonlabEntryPoint} from '@cdo/apps/pythonlab/entrypoint';
 import {SketchlabEntryPoint} from '@cdo/apps/sketchlab/entrypoint';
@@ -32,4 +33,5 @@ export const lab2EntryPoints = {
   standalone_video: StandaloneVideoEntryPoint,
   weblab2: Weblab2EntryPoint,
   sketchlab: SketchlabEntryPoint,
+  spritelab2: SpriteLab2EntryPoint,
 } as const satisfies Record<string, Lab2EntryPoint>;
