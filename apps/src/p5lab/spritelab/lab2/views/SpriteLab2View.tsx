@@ -31,11 +31,13 @@ import spriteLab2Reducer, {
 } from '../redux/spriteLab2Redux';
 import SpriteLab2Engine from '../SpriteLab2Engine';
 import {SpriteLab2LevelProperties, SpriteLab2Source} from '../types';
+import {createEmptyGrid} from '../world/gridConstants';
 
 import CodeTab, {CodeTabHandle} from './CodeTab';
 import TabShell from './components/TabShell';
 import ItemsTab from './ItemsTab';
 import PlayTab from './PlayTab';
+import WorldTab from './WorldTab';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
@@ -62,7 +64,14 @@ registerReducers({
   spriteLab2: spriteLab2Reducer,
 });
 
-const ENABLED_TABS: readonly SpriteLab2Tab[] = ['Images', 'Code', 'Play'];
+const ENABLED_TABS: readonly SpriteLab2Tab[] = [
+  'Images',
+  'World',
+  'Code',
+  'Play',
+];
+
+const DEFAULT_WORLD_ID = 'world1';
 
 // Sprites come from the Items tab, so a new project starts with no animations.
 const EMPTY_ANIMATION_LIST = {orderedKeys: [], propsByKey: {}};
@@ -205,6 +214,23 @@ const SpriteLab2View: React.FunctionComponent<{
     dispatch(setHasEdited(true));
   }, [dispatch]);
 
+  // World grid (rudimentary, single world for now). Persisted to sources but
+  // not yet wired into the runtime.
+  const worldGrid =
+    currentSources.worlds?.find(w => w.id === currentSources.activeWorldId)
+      ?.grid ||
+    currentSources.worlds?.[0]?.grid ||
+    createEmptyGrid();
+  const handleWorldGridChange = useCallback(
+    (grid: string[][]) => {
+      mergeSources({
+        worlds: [{id: DEFAULT_WORLD_ID, grid}],
+        activeWorldId: DEFAULT_WORLD_ID,
+      });
+    },
+    [mergeSources]
+  );
+
   const handleTabChange = useCallback(
     (tab: SpriteLab2Tab) => {
       // Leaving Play stops the engine's tick loop so it isn't burning CPU
@@ -248,6 +274,12 @@ const SpriteLab2View: React.FunctionComponent<{
       {activeTab === 'Images' && (
         <div className={classNames(moduleStyles.codeTabWrapper)}>
           <ItemsTab />
+        </div>
+      )}
+
+      {activeTab === 'World' && (
+        <div className={classNames(moduleStyles.codeTabWrapper)}>
+          <WorldTab grid={worldGrid} onGridChange={handleWorldGridChange} />
         </div>
       )}
 

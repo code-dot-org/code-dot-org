@@ -89,6 +89,61 @@
   font-size: 12px;
 }
 
+.worldTab {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: 8px;
+  gap: 8px;
+  overflow: auto;
+}
+
+.worldPalette {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+
+  button {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+  }
+}
+
+.brushActive {
+  outline: 2px solid #1565c0;
+}
+
+.brushSwatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid rgb(0 0 0 / 30%);
+}
+
+.worldGrid {
+  display: grid;
+  width: min(100%, 480px);
+  aspect-ratio: 1;
+  border: 1px solid rgb(0 0 0 / 30%);
+  user-select: none;
+}
+
+.worldCell {
+  border: 1px solid rgb(0 0 0 / 8%);
+  cursor: pointer;
+
+  &:hover {
+    outline: 1px solid rgb(0 0 0 / 40%);
+    outline-offset: -1px;
+  }
+}
+
 .playTab {
   display: flex;
   flex-direction: column;
