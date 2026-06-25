@@ -209,12 +209,18 @@ class Ability
         can :manage, User do |u|
           user.students.include?(u) && !Policies::DemoSections.demo_student?(u.id)
         end
+        can :read, User do |u|
+          user.students.include?(u) && Policies::DemoSections.demo_student?(u.id)
+        end
         can [:create, :get_feedback_from_teacher], TeacherFeedback do |feedback|
           user.students.exists?(id: feedback.student_id)
         end
         can :manage, Follower
         can :manage, UserLevel do |user_level|
           !user.students.where(id: user_level.user_id).empty? && !Policies::DemoSections.demo_student?(user_level.user_id)
+        end
+        can :read, UserLevel do |user_level|
+          !user.students.where(id: user_level.user_id).empty? && Policies::DemoSections.demo_student?(user_level.user_id)
         end
         can :read, Plc::UserCourseEnrollment, user_id: user.id
         can :view_level_solutions, Unit do |script|
