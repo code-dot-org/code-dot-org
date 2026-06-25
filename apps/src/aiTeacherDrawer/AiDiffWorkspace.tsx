@@ -72,24 +72,6 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
     );
   }, [dispatch, context, curriculumCourses]);
 
-  const aiPromptOutsideChatClicked = useCallback(
-    (label: string, prompt: string) => {
-      setShowNotifications(false);
-      dispatch(
-        fetchThreadMessages({
-          contextType: context.type,
-          thread: 0,
-          initialThreadPrompt: {
-            label: label,
-            prompt: prompt,
-          },
-          curriculumCourses: curriculumCourses,
-        })
-      );
-    },
-    [dispatch, context, curriculumCourses]
-  );
-
   const drawerIsEnabled =
     experiments.isEnabled('ai-diff-drawer') ||
     DCDO.get('ai-diff-drawer', false);
