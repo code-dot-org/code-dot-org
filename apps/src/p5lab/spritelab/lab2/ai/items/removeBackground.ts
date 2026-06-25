@@ -1,17 +1,139 @@
 /**
- * Remove the background from an image by flood-filling from the top-left
- * corner. Any pixel connected to (0,0) whose color is within `threshold`
- * of the top-left pixel's color is made transparent.
+ * Background removal (green-screen chroma key) for AI-generated sprites.
  *
- * Adapted verbatim from Game2 (origin/game2-initial).
+ * The image is generated on a flat #00FF00 background; we flood-fill from the
+ * top-left corner and key out every pixel connected to it that matches the
+ * corner color. Two matte styles are supported, chosen by the caller:
  *
- * @param blob  The source image as a Blob.
- * @param threshold  Max per-channel distance to still count as "same color" (0–255). Default 30.
- * @returns A new PNG Blob with the background removed.
+ *   - Sharp (default): a binary 1-bit alpha cut. Background pixels become fully
+ *     transparent, everything else stays fully opaque. This is what pixel art
+ *     wants — hard, aliased edges with no feathering.
+ *   - Soft: edge pixels in the ramp between background and subject get partial
+ *     alpha proportional to their chroma distance, plus green-spill suppression
+ *     to kill the green fringe. This is what smooth/illustrated art wants.
+ *
+ * The per-pixel decision is factored into keyOutBackground() so it can be unit
+ * tested without a canvas; removeBackground() is the thin DOM/canvas wrapper.
+ *
+ * Adapted from Game2 (origin/game2-initial); the soft matte is new.
+ */
+
+export interface MatteOptions {
+  // Soft matte feathers the edge (partial alpha + spill suppression). When
+  // false (default) the cut is binary, which is correct for pixel art.
+  soft?: boolean;
+  // Chroma distance (max per-channel, 0-255) at/below which a pixel counts as
+  // pure background and is made fully transparent.
+  lowThreshold?: number;
+  // Soft matte only: distance up to which a background-connected pixel is still
+  // part of the edge ramp and gets partial alpha. Ignored when sharp.
+  highThreshold?: number;
+}
+
+// Max per-channel difference from the reference color. Cheap and good enough
+// for a flat key color.
+function chromaDistance(
+  data: Uint8ClampedArray,
+  px: number,
+  refR: number,
+  refG: number,
+  refB: number
+): number {
+  return Math.max(
+    Math.abs(data[px] - refR),
+    Math.abs(data[px + 1] - refG),
+    Math.abs(data[px + 2] - refB)
+  );
+}
+
+// Pull a green-dominant edge pixel back toward its nearest non-green channel,
+// removing the green halo left when the subject's anti-aliased edge blended
+// into the key color. Only meaningful for a green key, which is what we use.
+function suppressGreenSpill(data: Uint8ClampedArray, px: number): void {
+  const r = data[px];
+  const g = data[px + 1];
+  const b = data[px + 2];
+  const maxRB = Math.max(r, b);
+  if (g > maxRB) {
+    data[px + 1] = maxRB;
+  }
+}
+
+/**
+ * Key out the background in-place. The reference color is read from pixel
+ * (0, 0); every pixel connected to it (4-neighbour) within the threshold band
+ * is made transparent (sharp) or feathered (soft). Pixels beyond highThreshold
+ * are treated as subject and the fill does not cross them, so green *inside*
+ * the subject is preserved.
+ */
+export function keyOutBackground(
+  data: Uint8ClampedArray,
+  width: number,
+  height: number,
+  {soft = false, lowThreshold = 30, highThreshold = 90}: MatteOptions = {}
+): void {
+  const refR = data[0];
+  const refG = data[1];
+  const refB = data[2];
+
+  // Sharp matte collapses the band to a single threshold (binary cut).
+  const hi = soft ? Math.max(highThreshold, lowThreshold) : lowThreshold;
+
+  const visited = new Uint8Array(width * height);
+  const stack: number[] = [0];
+  visited[0] = 1;
+
+  while (stack.length > 0) {
+    const idx = stack.pop()!;
+    const px = idx * 4;
+    const dist = chromaDistance(data, px, refR, refG, refB);
+
+    // Subject pixel: keep it opaque and don't let the fill cross it.
+    if (dist > hi) {
+      continue;
+    }
+
+    if (!soft || dist <= lowThreshold) {
+      // Pure background.
+      data[px + 3] = 0;
+    } else {
+      // Edge ramp: partial alpha, de-greened.
+      data[px + 3] = Math.round(
+        (255 * (dist - lowThreshold)) / (hi - lowThreshold)
+      );
+      suppressGreenSpill(data, px);
+    }
+
+    const x = idx % width;
+    const y = (idx - x) / width;
+    if (x > 0 && !visited[idx - 1]) {
+      visited[idx - 1] = 1;
+      stack.push(idx - 1);
+    }
+    if (x < width - 1 && !visited[idx + 1]) {
+      visited[idx + 1] = 1;
+      stack.push(idx + 1);
+    }
+    if (y > 0 && !visited[idx - width]) {
+      visited[idx - width] = 1;
+      stack.push(idx - width);
+    }
+    if (y < height - 1 && !visited[idx + width]) {
+      visited[idx + width] = 1;
+      stack.push(idx + width);
+    }
+  }
+}
+
+/**
+ * Remove the background from an image Blob and return a new PNG Blob.
+ *
+ * @param blob  The source image.
+ * @param options  Matte style (see MatteOptions). Defaults to a sharp cut.
  */
 export async function removeBackground(
   blob: Blob,
-  threshold = 30
+  options: MatteOptions = {}
 ): Promise<Blob> {
   const img = await loadImage(blob);
   const canvas = document.createElement('canvas');
@@ -21,58 +143,7 @@ export async function removeBackground(
   ctx.drawImage(img, 0, 0);
 
   const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-  const {data, width, height} = imageData;
-
-  // Reference color from (0, 0).
-  const refR = data[0];
-  const refG = data[1];
-  const refB = data[2];
-
-  // Visited bitmap.
-  const visited = new Uint8Array(width * height);
-
-  // BFS flood fill from (0, 0).
-  const queue: number[] = [0]; // pixel indices
-  visited[0] = 1;
-
-  while (queue.length > 0) {
-    const idx = queue.pop()!;
-    const px = idx * 4;
-    const r = data[px];
-    const g = data[px + 1];
-    const b = data[px + 2];
-
-    if (
-      Math.abs(r - refR) <= threshold &&
-      Math.abs(g - refG) <= threshold &&
-      Math.abs(b - refB) <= threshold
-    ) {
-      // Make transparent.
-      data[px + 3] = 0;
-
-      // Enqueue neighbors.
-      const x = idx % width;
-      const y = (idx - x) / width;
-
-      if (x > 0 && !visited[idx - 1]) {
-        visited[idx - 1] = 1;
-        queue.push(idx - 1);
-      }
-      if (x < width - 1 && !visited[idx + 1]) {
-        visited[idx + 1] = 1;
-        queue.push(idx + 1);
-      }
-      if (y > 0 && !visited[idx - width]) {
-        visited[idx - width] = 1;
-        queue.push(idx - width);
-      }
-      if (y < height - 1 && !visited[idx + width]) {
-        visited[idx + width] = 1;
-        queue.push(idx + width);
-      }
-    }
-  }
-
+  keyOutBackground(imageData.data, imageData.width, imageData.height, options);
   ctx.putImageData(imageData, 0, 0);
 
   return new Promise<Blob>((resolve, reject) => {

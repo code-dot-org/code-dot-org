@@ -13,6 +13,20 @@ import {removeBackground} from './removeBackground';
 // (costumes) and backgrounds; the Game2 'block' platformer type is dropped.
 export type SpriteLab2ItemType = 'sprite' | 'background';
 
+// Visual style. 'pixel' yields crisp pixel art with hard edges (and a sharp,
+// 1-bit background cut); 'smooth' yields a shaded illustration (and a feathered,
+// anti-aliased cut). See removeBackground's MatteOptions.
+export type SpriteLab2ItemStyle = 'smooth' | 'pixel';
+
+// Tacked onto the prompt so the generated image matches the chosen style. Kept
+// here (not inline) so the sprite and background prompts stay in sync.
+const STYLE_PROMPT: Record<SpriteLab2ItemStyle, string> = {
+  pixel:
+    'Render as crisp pixel art with a small, limited color palette and ' +
+    'hard-edged pixels — no anti-aliasing, gradients, or soft shading.',
+  smooth: 'Render as a smooth, cleanly-shaded illustration.',
+};
+
 const AICHAT_REQUESTS_URL = '/aichat_requests';
 
 /**
@@ -75,11 +89,13 @@ async function updateAichatRequest(
 export async function generateImage(
   prompt: string,
   channelId?: string,
-  itemType: SpriteLab2ItemType = 'sprite'
+  itemType: SpriteLab2ItemType = 'sprite',
+  style: SpriteLab2ItemStyle = 'smooth'
 ): Promise<{filename: string; uint8Array: Uint8Array; mediaType: string}> {
-  let fullPrompt = prompt;
+  const styleClause = STYLE_PROMPT[style];
+  let fullPrompt = `${prompt}. ${styleClause}`;
   if (itemType === 'sprite') {
-    fullPrompt = `${prompt}. Use a plain solid bright green (#00FF00) background that extends to all edges. Do not include any scenery, ground, sky, or other background elements — only the subject on a flat green background.`;
+    fullPrompt = `${fullPrompt} Use a plain solid bright green (#00FF00) background that extends to all edges. Do not include any scenery, ground, sky, or other background elements — only the subject on a flat green background.`;
   }
 
   const requestId = await createAichatRequest(fullPrompt, channelId);
@@ -108,11 +124,14 @@ export async function generateImage(
 
     if (itemType === 'sprite') {
       // Remove the green background (flood-fill from top-left) and output PNG.
+      // Pixel art gets a sharp 1-bit cut; smooth art gets a feathered matte.
       const rawBlob = new Blob(
         [new Uint8Array(imageFile.uint8Array).buffer as ArrayBuffer],
         {type: imageFile.mediaType}
       );
-      const transparentBlob = await removeBackground(rawBlob);
+      const transparentBlob = await removeBackground(rawBlob, {
+        soft: style === 'smooth',
+      });
       const transparentBuffer = await transparentBlob.arrayBuffer();
       return {
         filename: `generated-${createUuid()}.png`,

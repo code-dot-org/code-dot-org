@@ -12,6 +12,7 @@ import {createUuid} from '@cdo/apps/utils';
 
 import {
   generateImage,
+  SpriteLab2ItemStyle,
   SpriteLab2ItemType,
   uploadAssetToProject,
 } from '../ai/items/itemGeneration';
@@ -52,6 +53,7 @@ const GenerateImagePane: React.FunctionComponent = () => {
   const [name, setName] = useState('');
   const [prompt, setPrompt] = useState('');
   const [itemType, setItemType] = useState<SpriteLab2ItemType>('sprite');
+  const [style, setStyle] = useState<SpriteLab2ItemStyle>('smooth');
   const [status, setStatus] = useState<'idle' | 'generating'>('idle');
   const [error, setError] = useState<string | null>(null);
 
@@ -72,7 +74,8 @@ const GenerateImagePane: React.FunctionComponent = () => {
       const {filename, uint8Array, mediaType} = await generateImage(
         prompt,
         channelId,
-        itemType
+        itemType,
+        style
       );
       const url = await uploadAssetToProject(
         channelId,
@@ -103,7 +106,7 @@ const GenerateImagePane: React.FunctionComponent = () => {
     } finally {
       setStatus('idle');
     }
-  }, [prompt, name, itemType, channelId, dispatch]);
+  }, [prompt, name, itemType, style, channelId, dispatch]);
 
   // The project's images live in the animation list (AI-generated images are
   // bridged in there); this view is also how you manage them.
@@ -164,6 +167,17 @@ const GenerateImagePane: React.FunctionComponent = () => {
             >
               <option value="sprite">Sprite (costume)</option>
               <option value="background">Background</option>
+            </select>
+          </label>
+          <label className={moduleStyles.field}>
+            <span>Style</span>
+            <select
+              value={style}
+              onChange={e => setStyle(e.target.value as SpriteLab2ItemStyle)}
+              disabled={generating}
+            >
+              <option value="smooth">Smooth</option>
+              <option value="pixel">Pixel art</option>
             </select>
           </label>
           <MuiButton
