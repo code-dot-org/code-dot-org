@@ -106,7 +106,7 @@ module Cdo
 
       # @return [Aws::CloudFormation::Client]
       private def cfn
-        @cfn ||= Aws::CloudFormation::Client.new
+        @cfn ||= ::Aws::CloudFormation::Client.new
       end
 
       private def change_stack
@@ -155,7 +155,7 @@ module Cdo
         ensure
           begin
             cfn.delete_change_set(change_set_name: change_set_id)
-          rescue Aws::CloudFormation::Errors::InvalidChangeSetStatus
+          rescue ::Aws::CloudFormation::Errors::InvalidChangeSetStatus
             # Change set can't be deleted if it's already been executed.
           end
         end
@@ -191,7 +191,7 @@ module Cdo
           log.debug 'Uploading template to S3...'
           bucket = options[:temp_bucket]
           key = "#{stack_name}-#{Digest::MD5.hexdigest(template)}-cfn.json"
-          Aws::S3::Client.new.put_object(
+          ::Aws::S3::Client.new.put_object(
             bucket: bucket,
             key: key,
             body: template
@@ -238,7 +238,7 @@ module Cdo
         # All stacks use the same shared Service Role for CloudFormation resource-management permissions.
         # Pass `ADMIN=1` to update admin resources with a privileged Service Role.
         role_name = "CloudFormation#{ENV['ADMIN'] ? 'Admin' : 'Service'}"
-        account = Aws::STS::Client.new.get_caller_identity.account
+        account = ::Aws::STS::Client.new.get_caller_identity.account
         {
           stack_name: stack_name,
           role_arn: "arn:aws:iam::#{account}:role/admin/#{role_name}"
@@ -283,7 +283,7 @@ module Cdo
         begin
           result = cfn.method("#{method}_stack").call(stack_options)
           @stack_id ||= result.stack_id if result.respond_to?(:stack_id)
-        rescue Aws::CloudFormation::Errors::ValidationError => exception
+        rescue ::Aws::CloudFormation::Errors::ValidationError => exception
           if exception.message == 'No updates are to be performed.'
             log.info exception.message
             return
@@ -303,7 +303,7 @@ module Cdo
             cfn.describe_stacks(stack_name: stack_name).stacks.first.tap do |stack|
               @stack_id = stack.stack_id
             end
-          rescue Aws::CloudFormation::Errors::ValidationError => exception
+          rescue ::Aws::CloudFormation::Errors::ValidationError => exception
             raise exception unless exception.message == "Stack with id #{stack_name} does not exist"
             false
           end
@@ -349,7 +349,7 @@ module Cdo
               print '.' unless options[:quiet]
             end
           end
-        rescue Aws::Waiters::Errors::FailureStateError
+        rescue ::Aws::Waiters::Errors::FailureStateError
           begin
             yield
           rescue

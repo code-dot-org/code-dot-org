@@ -32,7 +32,7 @@ module Cdo
           end
         end
         handler(Handler)
-        Aws::S3::Client.add_plugin(self)
+        ::Aws::S3::Client.add_plugin(self)
       end
 
       # An exception class used to wrap the underlying Amazon NoSuchKey exception.
@@ -47,7 +47,7 @@ module Cdo
       # @return [Aws::S3::Client]
       def self.connect_v2!
         self.s3 ||= if CDO.aws_s3_emulated
-                      Aws::S3::Client.new(
+                      ::Aws::S3::Client.new(
                         endpoint: CDO.aws_s3_endpoint,
                         access_key_id: CDO.aws_s3_access_key_id,
                         secret_access_key: CDO.aws_s3_secret_access_key,
@@ -55,7 +55,7 @@ module Cdo
                         force_path_style: true,
                       )
                     else
-                      Aws::S3::Client.new
+                      ::Aws::S3::Client.new
                     end
 
         # Adjust s3_timeout using a dynamic variable,
@@ -97,7 +97,7 @@ module Cdo
         Cdo::LocalDevelopment.populate_local_s3_bucket(bucket, key) if CDO.aws_s3_emulated
 
         create_client.get_object(bucket: bucket, key: key).body.read.force_encoding(Encoding::BINARY)
-      rescue Aws::S3::Errors::NoSuchKey
+      rescue ::Aws::S3::Errors::NoSuchKey
         raise NoSuchKey.new("No such key `#{key}'")
       end
 
@@ -108,7 +108,7 @@ module Cdo
       def self.exists_in_bucket(bucket, key)
         create_client.head_object(bucket: bucket, key: key)
         return true
-      rescue Aws::S3::Errors::NotFound, Aws::S3::Errors::Forbidden
+      rescue ::Aws::S3::Errors::NotFound, ::Aws::S3::Errors::Forbidden
         return false
       end
 
@@ -186,7 +186,7 @@ module Cdo
         end
 
         response.delete_marker
-      rescue Aws::S3::Errors::NoSuchKey
+      rescue ::Aws::S3::Errors::NoSuchKey
         false
       end
 
@@ -196,7 +196,7 @@ module Cdo
       end
 
       def self.public_url(bucket, filename)
-        Aws::S3::Object.new(
+        ::Aws::S3::Object.new(
           bucket,
           filename,
           client: create_client,
@@ -311,7 +311,7 @@ module Cdo
           bucket: bucket,
           key: key
         )
-        Aws::S3::Presigner.new(client: create_client).presigned_url(method, params)
+        ::Aws::S3::Presigner.new(client: create_client).presigned_url(method, params)
       end
 
       # Returns a link to the S3 web console for a given presigned S3 URL.
@@ -376,7 +376,7 @@ module Cdo
             # Expire link in 72 hours
             options = {bucket: @bucket, key: key, expires_in: 259200}
             options[:version_id] = result[:version_id] unless result[:version_id].nil?
-            Aws::S3::Presigner.new.presigned_url(:get_object, options)
+            ::Aws::S3::Presigner.new.presigned_url(:get_object, options)
           end
         end
 

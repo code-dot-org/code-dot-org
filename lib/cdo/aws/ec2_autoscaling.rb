@@ -14,7 +14,7 @@ module Cdo
       # @param [String] group_name The name of the autoscaling group to refresh.
       # @param [Boolean] wait Whether to wait for the instance refresh to complete.
       def self.refresh_instances_in_group(group_name, wait: false)
-        asg = Aws::AutoScaling::Client.new
+        asg = ::Aws::AutoScaling::Client.new
 
         groups_matching_name = asg.describe_auto_scaling_groups(auto_scaling_group_names: [group_name]).auto_scaling_groups
         raise "No AutoScaling group found with name #{group_name}" if groups_matching_name.empty?
@@ -44,7 +44,7 @@ module Cdo
         stack_name = CDO.stack_name
         logical_id = 'Frontends'
 
-        asg_client = Aws::AutoScaling::Client.new
+        asg_client = ::Aws::AutoScaling::Client.new
 
         group = asg_client.describe_auto_scaling_groups.auto_scaling_groups.find do |g|
           has_stack_name = g.tags&.any? {|tag| tag.key == 'aws:cloudformation:stack-name' && tag.value == stack_name}

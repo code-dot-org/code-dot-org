@@ -86,7 +86,7 @@ module Cdo
       def self.invalidate_caches(wait: false)
         require 'aws-sdk-cloudfront'
         puts 'Creating CloudFront cache invalidations...'
-        cloudfront = Aws::CloudFront::Client.new(
+        cloudfront = ::Aws::CloudFront::Client.new(
           logger: Logger.new(dashboard_dir('log/cloudfront.log')),
           log_level: :debug,
           http_wire_trace: true,
@@ -344,7 +344,7 @@ module Cdo
           }
         end
 
-        signer = Aws::CloudFront::CookieSigner.new(
+        signer = ::Aws::CloudFront::CookieSigner.new(
           key_pair_id: CDO.cloudfront_key_pair_id,
           private_key: CDO.cloudfront_private_key
         )

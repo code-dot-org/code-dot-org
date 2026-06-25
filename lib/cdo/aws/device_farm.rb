@@ -263,10 +263,10 @@ module Cdo
       end
 
       def self.client
-        # Scope-resolve to be explicit that we mean the AWS SDK's top-level
-        # Aws module (unrelated to our AWS namespace). Our module's
-        # case-different name already protects against collision, but the
-        # `::` prefix makes intent unambiguous at the call site.
+        # Scope-resolve to the AWS SDK's top-level Aws module. The `::` is
+        # load-bearing: this file is nested under `module Cdo`, where an
+        # unqualified `Aws` resolves to the sibling `Cdo::Aws` (the Redshift
+        # namespace) and never reaches the SDK's top-level `::Aws`.
         #
         # retry_mode: 'adaptive' + retry_limit: 20 absorbs DF's per-account
         # API TPS throttling (separate from the session-concurrency quota)
