@@ -2,6 +2,7 @@ import {type ReactFlowInstance} from '@xyflow/react';
 import {toBlob} from 'html-to-image';
 
 import {SKETCHLAB_CONTAINER_CLASS} from '../components/ReactFlowCanvas';
+import {REACT_FLOW_SELECTOR} from '../reactFlowSelectors';
 
 import {computeExportDimensions} from './computeExportDimensions';
 import {getCanvasBounds} from './getCanvasBounds';
@@ -19,7 +20,7 @@ export const createSketchSnapshotBlob = async (
   }
 
   const viewport = document.querySelector<HTMLElement>(
-    `.${SKETCHLAB_CONTAINER_CLASS} .react-flow__viewport`
+    `.${SKETCHLAB_CONTAINER_CLASS} ${REACT_FLOW_SELECTOR.viewport}`
   );
   if (!viewport) {
     return {error: 'Could not capture your sketch. Please try again.'};
@@ -27,14 +28,14 @@ export const createSketchSnapshotBlob = async (
 
   // Read the themed canvas background so the PNG matches light/dark mode.
   const canvas = document.querySelector<HTMLElement>(
-    `.${SKETCHLAB_CONTAINER_CLASS} .react-flow`
+    `.${SKETCHLAB_CONTAINER_CLASS} ${REACT_FLOW_SELECTOR.container}`
   );
 
   // Find the bounding box of all nodes and edges on the canvas.
   const rootRect = (canvas ?? viewport).getBoundingClientRect();
   const contentElements = document.querySelectorAll<Element>(
-    `.${SKETCHLAB_CONTAINER_CLASS} .react-flow__node,` +
-      `.${SKETCHLAB_CONTAINER_CLASS} .react-flow__edge`
+    `.${SKETCHLAB_CONTAINER_CLASS} ${REACT_FLOW_SELECTOR.node},` +
+      `.${SKETCHLAB_CONTAINER_CLASS} ${REACT_FLOW_SELECTOR.edge}`
   );
   const contentRects = Array.from(contentElements, element =>
     element.getBoundingClientRect()

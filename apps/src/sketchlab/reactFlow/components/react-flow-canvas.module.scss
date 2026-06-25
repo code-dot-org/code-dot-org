@@ -1,3 +1,8 @@
+// The :global(.react-flow__*) selectors below target class names that
+// @xyflow/react owns; they can't import the reactFlowSelectors.ts constants.
+// reactFlowSelectorsTest.tsx renders a live flow to catch a rename, which
+// would also break these overrides.
+
 // Pixels of clickable padding added around connection handles so users don't
 // have to land precisely on the small visible dot.
 $handle-grab-buffer: 10px;

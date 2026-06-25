@@ -9,6 +9,7 @@ import {
 } from '../elementToolbars/toolbarPalettes';
 import {useConnectionHandleVisibility} from '../hooks/useConnectionHandleVisibility';
 import {useInlineTextEditing} from '../hooks/useInlineTextEditing';
+import {REACT_FLOW_INTERACTION_CLASS} from '../reactFlowSelectors';
 import {TextNodeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
@@ -67,7 +68,11 @@ function TextNode({
       <div className={styles.rotatable} style={rotatableStyle}>
         <div
           ref={editableRef}
-          className={classNames(styles.text, isEditing && 'nodrag nopan')}
+          className={classNames(
+            styles.text,
+            isEditing && REACT_FLOW_INTERACTION_CLASS.noDrag,
+            isEditing && REACT_FLOW_INTERACTION_CLASS.noPan
+          )}
           style={textStyle}
           contentEditable={isEditing}
           suppressContentEditableWarning
