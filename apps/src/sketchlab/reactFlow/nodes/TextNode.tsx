@@ -9,6 +9,10 @@ import {
   DEFAULT_TEXT_ALIGN,
 } from '../elementToolbars/toolbarPalettes';
 import {useConnectionHandleVisibility} from '../hooks/useConnectionHandleVisibility';
+import {
+  REACT_FLOW_INTERACTION_CLASS,
+  REACT_FLOW_SELECTOR,
+} from '../reactFlowSelectors';
 import {TextNodeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
@@ -86,14 +90,18 @@ function TextNode({
       if (isEditing) {
         if (event.key === 'Enter' && !event.shiftKey) {
           event.preventDefault();
-          textRef.current?.closest<HTMLElement>('.react-flow__node')?.focus();
+          textRef.current
+            ?.closest<HTMLElement>(REACT_FLOW_SELECTOR.node)
+            ?.focus();
         }
         if (event.key === 'Escape') {
           if (textRef.current) {
             textRef.current.textContent = text;
           }
           setIsEditing(false);
-          textRef.current?.closest<HTMLElement>('.react-flow__node')?.focus();
+          textRef.current
+            ?.closest<HTMLElement>(REACT_FLOW_SELECTOR.node)
+            ?.focus();
         }
       }
     },
@@ -116,7 +124,11 @@ function TextNode({
       <div className={styles.rotatable} style={rotatableStyle}>
         <div
           ref={textRef}
-          className={classNames(styles.text, isEditing && 'nodrag nopan')}
+          className={classNames(
+            styles.text,
+            isEditing && REACT_FLOW_INTERACTION_CLASS.noDrag,
+            isEditing && REACT_FLOW_INTERACTION_CLASS.noPan
+          )}
           style={textStyle}
           contentEditable={isEditing}
           suppressContentEditableWarning

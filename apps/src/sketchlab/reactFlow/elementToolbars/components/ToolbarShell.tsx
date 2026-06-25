@@ -7,6 +7,11 @@ import {
   useSketchLabReadOnly,
   useToolbarVisibility,
 } from '@cdo/apps/sketchlab/reactFlow/context';
+import {
+  REACT_FLOW_SELECTOR,
+  reactFlowEdgeSelector,
+  reactFlowNodeSelector,
+} from '@cdo/apps/sketchlab/reactFlow/reactFlowSelectors';
 
 import styles from './toolbar-shell.module.scss';
 
@@ -45,11 +50,11 @@ export default function ToolbarShell({
     if (!isVisible) return;
     const container = containerRef.current;
     if (!container) return;
-    const wrapper = container.closest('.react-flow');
+    const wrapper = container.closest(REACT_FLOW_SELECTOR.container);
 
     const recomputeHeight = () => {
       const top = container.getBoundingClientRect().top;
-      const controls = wrapper?.querySelector('.react-flow__controls');
+      const controls = wrapper?.querySelector(REACT_FLOW_SELECTOR.controls);
       const controlsTop =
         controls?.getBoundingClientRect().top ?? window.innerHeight;
       const bottomAnchor = Math.min(controlsTop, window.innerHeight);
@@ -70,8 +75,8 @@ export default function ToolbarShell({
   const returnFocusToTarget = useCallback(() => {
     const selector =
       target.type === 'node'
-        ? `.react-flow__node[data-id="${target.id}"]`
-        : `.react-flow__edge[data-id="${target.id}"]`;
+        ? reactFlowNodeSelector(target.id)
+        : reactFlowEdgeSelector(target.id);
     const element = document.querySelector<HTMLElement>(selector);
     element?.focus();
   }, [target.id, target.type]);

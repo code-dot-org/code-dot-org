@@ -9,6 +9,10 @@ import {
   DEFAULT_TEXT_ALIGN,
 } from '../elementToolbars/toolbarPalettes';
 import {useConnectionHandleVisibility} from '../hooks/useConnectionHandleVisibility';
+import {
+  REACT_FLOW_INTERACTION_CLASS,
+  REACT_FLOW_SELECTOR,
+} from '../reactFlowSelectors';
 import {ShapeNodeType, ShapeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
@@ -146,14 +150,18 @@ function ShapeNode({
       if (isEditing) {
         if (event.key === 'Enter' && !event.shiftKey) {
           event.preventDefault();
-          labelRef.current?.closest<HTMLElement>('.react-flow__node')?.focus();
+          labelRef.current
+            ?.closest<HTMLElement>(REACT_FLOW_SELECTOR.node)
+            ?.focus();
         }
         if (event.key === 'Escape') {
           if (labelRef.current) {
             labelRef.current.textContent = label;
           }
           setIsEditing(false);
-          labelRef.current?.closest<HTMLElement>('.react-flow__node')?.focus();
+          labelRef.current
+            ?.closest<HTMLElement>(REACT_FLOW_SELECTOR.node)
+            ?.focus();
         }
       }
     },
@@ -226,7 +234,8 @@ function ShapeNode({
           ref={labelRef}
           className={classNames(
             styles.label,
-            isEditing && 'nodrag nopan',
+            isEditing && REACT_FLOW_INTERACTION_CLASS.noDrag,
+            isEditing && REACT_FLOW_INTERACTION_CLASS.noPan,
             isCircle && styles.circleLabel,
             isTriangle && styles.triangleLabel,
             isDiamond && styles.diamondLabel,
