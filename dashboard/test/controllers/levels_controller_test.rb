@@ -857,6 +857,26 @@ class LevelsControllerTest < ActionController::TestCase
     assert level.properties['start_sources']
   end
 
+  test "update_start_code clears starter_assets for lab2 javalab" do
+    level = create(:javalab, uses_lab2: true, starter_assets: {"welcome.png" => "123-abc.png"})
+    post :update_start_code, params: {
+      id: level.id
+    }, body: {start_sources: {"MyClass.java" => "{}"}}.to_json
+
+    assert_response :success
+    assert_nil assigns(:level).starter_assets
+  end
+
+  test "update_start_code keeps starter_assets for legacy javalab" do
+    level = create(:javalab, starter_assets: {"welcome.png" => "123-abc.png"})
+    post :update_start_code, params: {
+      id: level.id
+    }, body: {start_sources: {"MyClass.java" => "{}"}}.to_json
+
+    assert_response :success
+    assert_equal({"welcome.png" => "123-abc.png"}, assigns(:level).starter_assets)
+  end
+
   test "update_start_code works if level does not support validation" do
     post :update_start_code, params: {
       id: create(:applab).id,

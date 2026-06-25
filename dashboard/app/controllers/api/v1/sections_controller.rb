@@ -95,7 +95,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     render json: section.summarize
   end
 
-  # POST /api/v1/sections/demo/:demo_type
+  # POST /api/v1/sections/demo/create/:demo_type
   # Creates a demo section with preset properties and adds demo students.
   def create_demo
     authorize! :create, Section
@@ -159,11 +159,10 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
   end
 
   # GET /api/v1/sections/demo/check_staleness?id=<id>
-  # Confirms that a demo section still has the unit and course that its demo
-  # type prescribes. Any instructor of the section may check. Raises
-  # (=> forbidden) if the section does not exist or is not a demo section.
-  # Returns 200 with a message when the section has drifted from its preset
-  # curriculum, otherwise 204 No Content.
+  # Confirms that a demo section tracks fields necessary for onboarding
+  # 403: forbidden = section does not exist or is not a demo section.
+  # 200: ok = with a message when the section has drifted from its preset
+  # 204: No Content = section is up to date with its preset
   def check_demo_section_staleness
     section = Section.find(params[:id])
     authorize! :manage, section

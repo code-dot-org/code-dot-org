@@ -3,9 +3,13 @@ import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 import {Tour} from 'shepherd.js';
 
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {Section} from '../../teacherDashboard/types/teacherSectionTypes';
+import {
+  DemoType,
+  Section,
+} from '../../teacherDashboard/types/teacherSectionTypes';
 
 import confirmDemoSectionSettings from './confirmDemoSectionSettings';
 import DemoSectionStalenessDialog from './DemoSectionStalenessDialog';
@@ -16,17 +20,36 @@ import useReviewSyllabusTour from './useReviewSyllabusTour';
 import styles from './teacherHomepage.module.scss';
 
 const CHECKLIST_ITEMS = [
-  {id: 'review-syllabus', label: 'Review the syllabus', completed: false},
-  {id: 'learn-to-evaluate', label: 'Learn how to evaluate', completed: false},
-  {id: 'create-section', label: 'Create a class section', completed: true},
+  {id: 'view_syllabus', label: 'Review the syllabus'},
+  {id: 'learn_to_evaluate', label: 'Learn how to evaluate'},
+  {id: 'create_class_section', label: 'Create a class section'},
 ];
+
+const recordTourStart = (tourName: string, demoType: DemoType) => {
+  HttpClient.post(
+    '/dashboardapi/v1/user_product_tours',
+    JSON.stringify({
+      tour_name: tourName,
+      started_at: true,
+      properties: {demo_type: demoType},
+    }),
+    true,
+    {'Content-Type': 'application/json'}
+  ).catch(err => console.error('Failed to record tour start:', err));
+};
 
 interface OnboardingChecklistProps {
   demoSection: Section | null;
+  demoType: DemoType;
+  isHidden: boolean;
+  onHide: () => void;
 }
 
 const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
   demoSection,
+  demoType,
+  isHidden,
+  onHide,
 }) => {
   const gradesTeaching = useAppSelector(
     state => state.currentUser.gradesTeaching
@@ -35,9 +58,20 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
   const reviewSyllabusTour = useReviewSyllabusTour(demoSection);
   const learnHowToEvaluateTour = useLearnHowToEvaluateTour(demoSection);
 
-  const [isHidden, setIsHidden] = React.useState(false);
+  const [completedTourNames, setCompletedTourNames] = React.useState<
+    Set<string>
+  >(new Set());
   const [pendingTour, setPendingTour] = React.useState<Tour | null>(null);
   const [isDemoSectionStale, setIsDemoSectionStale] = React.useState(false);
+
+  React.useEffect(() => {
+    HttpClient.get('/dashboardapi/v1/user_product_tours', true)
+      .then(response => response.json() as Promise<string[]>)
+      .then(names => setCompletedTourNames(new Set(names)))
+      .catch(err =>
+        console.error('Failed to fetch tour completion status:', err)
+      );
+  }, []);
 
   React.useEffect(() => {
     let active = true;
@@ -59,12 +93,13 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
     }
   };
 
-  const handleButtonClick = (id: string) => {
-    if (id === 'create-section') {
+  const handleButtonClick = (tourName: string) => {
+    recordTourStart(tourName, demoType);
+    if (tourName === 'create_class_section') {
       createSectionTour?.start();
-    } else if (id === 'review-syllabus') {
+    } else if (tourName === 'view_syllabus') {
       startTourOrBlock(reviewSyllabusTour);
-    } else if (id === 'learn-to-evaluate') {
+    } else if (tourName === 'learn_to_evaluate') {
       startTourOrBlock(learnHowToEvaluateTour);
     }
   };
@@ -107,7 +142,7 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
               Teaching Assistant can help you get started with CodeAI
             </Typography>
             <div className={styles.onboardingChecklistButtons}>
-              {CHECKLIST_ITEMS.map(({id, label, completed}) => (
+              {CHECKLIST_ITEMS.map(({id, label}) => (
                 <MuiButton
                   key={id}
                   variant="outlined"
@@ -116,7 +151,7 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
                   onClick={() => handleButtonClick(id)}
                   type="button"
                 >
-                  {completed && (
+                  {completedTourNames.has(id) && (
                     <span className={styles.onboardingChecklistCheckIcon}>
                       <FontAwesomeV6Icon
                         iconName="circle-check"
@@ -130,11 +165,7 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
             </div>
           </div>
         </div>
-        <MuiButton
-          type="button"
-          onClick={() => setIsHidden(true)}
-          color="tertiary"
-        >
+        <MuiButton type="button" onClick={onHide} color="tertiary">
           Hide onboarding
         </MuiButton>
       </div>

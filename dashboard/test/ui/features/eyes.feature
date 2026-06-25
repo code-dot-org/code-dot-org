@@ -65,7 +65,7 @@ Scenario:
 
 Scenario:
   When I open my eyes to test "star wars RTL"
-  Given I am on "http://studio.code.org/courses/starwars/units/1/lessons/1/levels/15/lang/ar-sa?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/24/levels/9/lang/ar-sa?noautoplay=true"
   And The header is finished animating
   And I wait to see ".header_user"
   And I wait to see "#runButton"

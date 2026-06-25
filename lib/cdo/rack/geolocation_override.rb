@@ -1,9 +1,7 @@
 module Rack
-  # This middleware will look for the GeolocationOverride cookie which specifies
-  # an ip address to force as the remote IP. It will then override all relevant
-  # sources for the remote IP used in the project to reflect the one provided.
-  #
-  # This effectively allows a cookie to force the geographic region.
+  # Overrides the viewer's country via the GeolocationOverride cookie.
+  # Accepts a 2-letter uppercase country code (e.g. "ES") — sets the
+  # CloudFront header directly — or an IP address that Geocoder resolves.
   #
   # This middleware is likely to only be available in the development and test
   # environments by default and is controlled by the use_geolocation_override
@@ -16,8 +14,12 @@ module Rack
     end
 
     def call(env)
-      # Forcibly update the REMOTE_ADDR to the value given by the cookie
       override = Rack::Request.new(env).cookies[KEY]
+      if override&.match?(/\A[A-Z]{2}\z/)
+        env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = override
+        return @app.call(env)
+      end
+
       env['REMOTE_ADDR'] = override if override
 
       # Coerce Geocoder to turn an internal ip to localhost so it will consider

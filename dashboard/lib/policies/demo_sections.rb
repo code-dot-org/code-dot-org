@@ -112,8 +112,7 @@ class Policies::DemoSections
     }
   end
 
-  # Checks whether a given section matches the preset for
-  # it's important fields.
+  # Only checks fields important for onboarding.
   def self.section_matches_preset?(section)
     preset = get_preset(section.demo_type)
     return false unless preset

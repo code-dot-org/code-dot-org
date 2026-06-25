@@ -161,16 +161,15 @@ still on the TODO list. Differences from legacy use:
   The level's `starter_assets` mapping is never updated by lab2
   (`add_starter_asset!` no-ops for `uses_lab2` levels); it survives as
   frozen legacy data consulted only when seeding a source that has no
-  url entries yet.
+  url entries yet. Saving start code in start mode drops the mapping
+  (`Javalab#clear_lab2_starter_assets`, called from
+  `levels_controller#update_start_code`) so assets a levelbuilder
+  deleted cannot re-seed from it.
 
 ## To Dos
 - **Theater photo prompter** — the `GET_IMAGE` signal (crosshair overlay +
   photo upload) is stubbed with a console notice; the core theater mini-app
   (image + audio playback) is supported.
-- **Starter assets can re-appear** In start mode only, if a level
-  was migrated from legacy to lab2, if a levelbuilder edits the start code
-  and deletes all the assets they will re-populate from the legacy starterAssets
-  field. We should clear out starterAssets post-migration.
 - **Backpack**
 - **Captcha dialog** on `AuthorizerSignalType.CAPTCHA`.
 - **Code review**.

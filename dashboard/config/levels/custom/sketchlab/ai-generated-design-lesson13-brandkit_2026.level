@@ -363,7 +363,7 @@
             },
             "data": {
               "text": " https://fonts.google.com/ ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -423,7 +423,7 @@
             },
             "data": {
               "text": "My Brand Kit",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },

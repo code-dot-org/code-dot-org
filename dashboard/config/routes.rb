@@ -1172,6 +1172,10 @@ Dashboard::Application.routes.draw do
         post 'users/has_dismissed_personalization_alert', to: 'users#post_has_dismissed_personalization_alert'
         get 'users/has_dismissed_personalization_alert', to: 'users#get_has_dismissed_personalization_alert'
 
+        # Routes used by the teacher onboarding checklist hide/resume control
+        post 'users/teacher_onboarding_hidden', to: 'users#post_teacher_onboarding_hidden'
+        get 'users/teacher_onboarding_hidden', to: 'users#get_teacher_onboarding_hidden'
+
         # Routes used by UI test status pages
         get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: {format: 'json'}
         get 'test_logs/*prefix/:name', to: 'test_logs#get_log_details', defaults: {format: 'json'}
@@ -1276,6 +1280,7 @@ Dashboard::Application.routes.draw do
     get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
     get '/dashboardapi/v1/schools/:id', to: 'api/v1/schools#show', defaults: {format: 'json'}
 
+    get '/dashboardapi/v1/user_product_tours', to: 'api/v1/user_product_tours#index'
     post '/dashboardapi/v1/user_product_tours', to: 'api/v1/user_product_tours#create'
     post '/dashboardapi/v1/users/:user_id/verify_captcha', to: 'api/v1/users#verify_captcha'
 

@@ -3,10 +3,10 @@ import {expect, type Locator, type Page} from '@playwright/test';
 import {AuthoredHintsComponent} from '../components/authored-hints';
 import {labLevelUrl, type LabLevelUrlParams} from '../shared/routes';
 
-import {BasePage} from './base-page';
+import {LessonLevelPage} from './lesson-level-page';
 
 /** Base for legacy Blockly labs (maze, artist, flappy, ...). */
-export class LegacyBlocklyLab extends BasePage {
+export class LegacyBlocklyLab extends LessonLevelPage {
   /** Instructions tab; its text localizes with the lab locale. */
   readonly instructionsTab: Locator;
 
@@ -59,8 +59,7 @@ export class LegacyBlocklyLab extends BasePage {
       timeout: LAB_LOAD_TIMEOUT_MS,
     });
     await expect(this.runButton).toBeVisible({timeout: LAB_LOAD_TIMEOUT_MS});
-    // .header_user duplicates per breakpoint; .first() avoids strict mode.
-    await expect(this.page.locator('.header_user').first()).toBeVisible();
+    await this.waitForSignedIn();
     // Dismiss the instructions overlay if shown (anonymous sessions).
     const overlay = this.page.locator('#overlay');
     if (await overlay.isVisible()) {

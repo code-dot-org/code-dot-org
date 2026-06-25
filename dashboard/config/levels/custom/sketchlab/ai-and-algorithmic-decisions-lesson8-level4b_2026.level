@@ -27,8 +27,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1419,
@@ -672,7 +672,7 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -690,7 +690,7 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -708,7 +708,7 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -727,7 +727,7 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -746,7 +746,7 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -765,7 +765,7 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -784,7 +784,7 @@
             },
             "data": {
               "text": "Test Cases Table",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -883,8 +883,8 @@
               "shapeType": "rectangle",
               "label": "Your answer here",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#e03131",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "large"
             },
             "measured": {
@@ -901,7 +901,7 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#1e1e1e",
+              "fontColor": "#000000",
               "fontSize": "large",
               "showHandles": false
             },
@@ -919,7 +919,7 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#1e1e1e",
+              "fontColor": "#000000",
               "fontSize": "large",
               "showHandles": false
             },
@@ -937,7 +937,7 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#1e1e1e",
+              "fontColor": "#000000",
               "fontSize": "large",
               "showHandles": false
             },
@@ -955,7 +955,7 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#1e1e1e",
+              "fontColor": "#000000",
               "fontSize": "large",
               "showHandles": false
             },
@@ -973,7 +973,7 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#1e1e1e",
+              "fontColor": "#000000",
               "fontSize": "large",
               "showHandles": false
             },
@@ -991,7 +991,7 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#1e1e1e",
+              "fontColor": "#000000",
               "fontSize": "large",
               "showHandles": false
             },
@@ -1009,7 +1009,7 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#1e1e1e",
+              "fontColor": "#000000",
               "fontSize": "large",
               "showHandles": false
             },
@@ -1027,7 +1027,7 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#1e1e1e",
+              "fontColor": "#000000",
               "fontSize": "large",
               "showHandles": false
             },
@@ -1051,8 +1051,8 @@
               "shapeType": "rectangle",
               "label": "Your answer here",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#e03131",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "large"
             },
             "measured": {
@@ -1075,8 +1075,8 @@
               "shapeType": "rectangle",
               "label": "Your answer here",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#e03131",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "large"
             },
             "measured": {
@@ -1099,8 +1099,8 @@
               "shapeType": "rectangle",
               "label": "Your answer here",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#e03131",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "large"
             },
             "measured": {
@@ -1336,7 +1336,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 2964,
@@ -1354,7 +1354,7 @@
             },
             "data": {
               "text": "Your Workspace",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 64.86098403296546,
               "showHandles": false
             },
@@ -1378,8 +1378,8 @@
               "shapeType": "circle",
               "label": "Start / End",
               "backgroundColor": "var(--sketchlab-bg-pink)",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 53.30726537637261
             },
             "measured": {
@@ -1402,8 +1402,8 @@
               "shapeType": "rectangle",
               "label": "Age",
               "backgroundColor": "var(--sketchlab-bg-blue)",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 53.30726537637261
             },
             "measured": {
@@ -1426,8 +1426,8 @@
               "shapeType": "rectangle",
               "label": "Enters Permissions",
               "backgroundColor": "var(--sketchlab-bg-blue)",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 53.30726537637261
             },
             "measured": {
@@ -1450,8 +1450,8 @@
               "shapeType": "rectangle",
               "label": "Enters Permissons",
               "backgroundColor": "var(--sketchlab-bg-blue)",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 53.30726537637261
             },
             "measured": {
@@ -1474,8 +1474,8 @@
               "shapeType": "diamond",
               "label": "userAge ≥\n18?",
               "backgroundColor": "var(--sketchlab-bg-yellow)",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 53.30726537637261
             },
             "measured": {
@@ -1497,9 +1497,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Show adult version",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 53.30726537637261
             },
             "measured": {
@@ -1521,9 +1521,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Show “Need \npermission”",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 53.30726537637261
             },
             "measured": {
@@ -1545,9 +1545,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Show teen version",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 53.30726537637261
             },
             "measured": {
@@ -1569,9 +1569,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Hide content",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 53.30726537637261
             },
             "measured": {
@@ -1594,8 +1594,8 @@
               "shapeType": "diamond",
               "label": "hasConsent",
               "backgroundColor": "var(--sketchlab-bg-yellow)",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 36
             },
             "measured": {
@@ -1618,8 +1618,8 @@
               "shapeType": "diamond",
               "label": "hasConsent",
               "backgroundColor": "var(--sketchlab-bg-yellow)",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 36
             },
             "measured": {
@@ -1642,7 +1642,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 3368,
@@ -1732,7 +1732,7 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 76.06270082580795,
               "showHandles": false
             },
@@ -1751,7 +1751,7 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 76.06270082580795,
               "showHandles": false
             },
@@ -1770,7 +1770,7 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 76.06270082580795,
               "showHandles": false
             },
@@ -1789,7 +1789,7 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 76.06270082580795,
               "showHandles": false
             },
@@ -1807,7 +1807,7 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 76.06270082580795,
               "showHandles": false
             },
@@ -1825,7 +1825,7 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 76.06270082580795,
               "showHandles": false
             },
@@ -1844,7 +1844,7 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 76.06270082580795,
               "showHandles": false
             },
@@ -1863,7 +1863,7 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 76.06270082580795,
               "showHandles": false
             },
@@ -1882,7 +1882,7 @@
             },
             "data": {
               "text": "Show adult version",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 76.06270082580795,
               "showHandles": false
             },
@@ -1900,7 +1900,7 @@
             },
             "data": {
               "text": "Show teen version",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 76.06270082580795,
               "showHandles": false
             },
@@ -1918,7 +1918,7 @@
             },
             "data": {
               "text": "Hide content",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 76.06270082580795,
               "showHandles": false
             },
@@ -1937,7 +1937,7 @@
             },
             "data": {
               "text": "Show “Need permission”",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 76.06270082580795,
               "showHandles": false
             },
@@ -1959,7 +1959,7 @@
             },
             "data": {
               "text": "Test Cases Table",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 58,
               "showHandles": false
             },
@@ -1978,7 +1978,7 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 57.92254719603971,
               "showHandles": false
             },
@@ -1996,7 +1996,7 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 57.92254719603971,
               "showHandles": false
             },
@@ -2014,7 +2014,7 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 57.92254719603971,
               "showHandles": false
             },
@@ -2032,7 +2032,7 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 57.92254719603971,
               "showHandles": false
             },
@@ -2050,7 +2050,7 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 57.92254719603971,
               "showHandles": false
             },
@@ -2068,7 +2068,7 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 57.92254719603971,
               "showHandles": false
             },

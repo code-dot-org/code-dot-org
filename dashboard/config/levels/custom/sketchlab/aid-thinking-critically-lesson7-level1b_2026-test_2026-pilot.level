@@ -24,8 +24,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffc9c9",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-red)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1286,
@@ -41,7 +41,7 @@
             },
             "data": {
               "text": "Data Points",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -60,7 +60,7 @@
             },
             "data": {
               "text": "Public Profile Safety",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -84,8 +84,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#b2f2bb",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 387,
@@ -106,8 +106,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 387,
@@ -128,8 +128,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffc9c9",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-red)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 387,
@@ -145,7 +145,7 @@
             },
             "data": {
               "text": "Public Data",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -163,7 +163,7 @@
             },
             "data": {
               "text": "Private Data",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -181,7 +181,7 @@
             },
             "data": {
               "text": "Sensitive Data",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -228,7 +228,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1286,
@@ -267,7 +267,7 @@
             },
             "data": {
               "text": "Anonymized Data",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -353,9 +353,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "insert data here",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {
@@ -377,9 +377,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "revise data here",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {
@@ -396,7 +396,7 @@
             },
             "data": {
               "text": "Original Data",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -414,7 +414,7 @@
             },
             "data": {
               "text": "Revised Data",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -437,9 +437,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "insert data here",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {
@@ -461,9 +461,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "revise data here",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {
@@ -485,9 +485,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "insert data here",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {
@@ -509,9 +509,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "revise data here",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {
@@ -533,9 +533,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "insert data here",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {
@@ -557,9 +557,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "revise data here",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {
@@ -581,9 +581,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "insert data here",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {
@@ -605,9 +605,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "revise data here",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {
@@ -654,9 +654,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Gaming Handle: \n@ShadowCatcher_99",
-              "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {
@@ -678,9 +678,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "School Mascot: The Blue \nHawks",
-              "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {
@@ -702,9 +702,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Favorite Pizza Place: \nTony’s on 5th Street",
-              "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {
@@ -726,9 +726,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Bus Route Number: Route \n42",
-              "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {
@@ -750,9 +750,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "GPS Location: A photo \ntagged at \"Oakwood \nCommunity Park\"",
-              "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {
@@ -774,9 +774,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Social Media \"Likes\": \nHigh-end mountain bikes",
-              "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {
@@ -798,9 +798,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Full Legal Name: Javier \nS. Guerrero",
-              "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {
@@ -822,9 +822,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Wi-Fi Network Name: \nRichardson_St_Home",
-              "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {
@@ -846,9 +846,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Schedule Post: \"Just \nfinished soccer practice \nat the fields!\"",
-              "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {
@@ -870,9 +870,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Backpack: North Ridge \nExplorer (Limited \nEdition)",
-              "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {
@@ -894,9 +894,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Allergies: Peanuts",
-              "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {
@@ -918,9 +918,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Pet's Name: Barnaby",
-              "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {
@@ -942,9 +942,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Birth Year: 2012\n",
-              "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {
@@ -966,9 +966,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Old Usernames: \nJavierG_Oakwood_Middle",
-              "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {
@@ -990,9 +990,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Visible Background: A \nhouse number \"124\" \nvisible in a selfie with \nthe dog",
-              "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium"
             },
             "measured": {

@@ -1,5 +1,6 @@
 import {createShepherdTour} from '@cdo/apps/sharedComponents/productTour/shepherdTourFactory';
 import useOnboardingTour from '@cdo/apps/sharedComponents/productTour/useOnboardingTour';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 
 import {Section} from '../../teacherDashboard/types/teacherSectionTypes';
@@ -14,6 +15,15 @@ import {
 export {
   LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY,
   STUDENT_SNAPSHOT_AI_INSIGHTS_STEP_ID,
+};
+
+export const recordLearnToEvaluateCompletion = () => {
+  HttpClient.post(
+    '/dashboardapi/v1/user_product_tours',
+    JSON.stringify({tour_name: 'learn_to_evaluate'}),
+    true,
+    {'Content-Type': 'application/json'}
+  ).catch(err => console.error('Failed to record tour completion:', err));
 };
 
 // Returns true when the tour has navigated to the Student Snapshot page and
@@ -48,7 +58,10 @@ export const resumeLearnHowToEvaluateTour = () => {
 
   const clearStep = () =>
     trySetSessionStorage(LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY, '');
-  tour.on('complete', clearStep);
+  tour.on('complete', () => {
+    clearStep();
+    recordLearnToEvaluateCompletion();
+  });
   tour.on('cancel', clearStep);
 
   const startStep = tour.steps.find(s => s.id === savedStepId) ?? tour.steps[0];
