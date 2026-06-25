@@ -124,7 +124,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.userCode = code || '';
   }
 
-  /** Run the given compiled JS program. */
+  /** Run the given compiled JS program from scratch (creates/recreates p5). */
   run(code) {
     if (code !== undefined) {
       this.setCode(code);
@@ -132,7 +132,49 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.execute();
   }
 
-  /** Stop execution and redraw a static first frame. */
+  /**
+   * Set the program and (re)run it as a live preview. The first time this
+   * creates the p5 instance via execute(); afterwards it re-runs inside the
+   * existing p5 (rerun) so we don't tear down and recreate p5 on every code
+   * edit — which both avoids flicker and the stale-preload-callback race that
+   * destroying p5 mid-cycle causes.
+   */
+  runProgram(code) {
+    if (code !== undefined) {
+      this.setCode(code);
+    }
+    if (this.p5Wrapper.p5 && !this.p5Wrapper.p5decrementPreload) {
+      this.rerun();
+    } else {
+      this.execute();
+    }
+  }
+
+  /**
+   * Re-run the current program inside the already-created p5 instance: clear
+   * sprites, rebuild the interpreter with the latest code, re-run setup, and
+   * keep the draw loop going. Synchronous (no async preload), so it can't race
+   * with a teardown.
+   */
+  rerun() {
+    const p5 = this.p5Wrapper.p5;
+    if (!p5) {
+      this.execute();
+      return;
+    }
+    p5.allSprites.removeSprites();
+    if (this.JSInterpreter) {
+      this.JSInterpreter.deinitialize();
+    }
+    this.initInterpreter(false /* attachDebugger */);
+    this.onP5Setup();
+    this.p5Wrapper.setLoop(true);
+    if (!this.isTickTimerRunning()) {
+      this.startTickTimer();
+    }
+  }
+
+  /** Stop execution. */
   resetRuntime() {
     this.reset();
   }

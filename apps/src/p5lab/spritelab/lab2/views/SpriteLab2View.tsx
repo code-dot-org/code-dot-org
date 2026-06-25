@@ -1,6 +1,6 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useRef} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {Reducer} from 'redux';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
@@ -24,7 +24,6 @@ import defaultSources from '../defaultSources.json';
 import spriteLab2Reducer, {
   setActiveTab,
   setHasEdited,
-  setHasRun,
   SpriteLab2Tab,
 } from '../redux/spriteLab2Redux';
 import SpriteLab2Engine from '../SpriteLab2Engine';
@@ -35,7 +34,7 @@ import CodeTab, {CodeTabHandle} from './CodeTab';
 import TabShell from './components/TabShell';
 import GenerateSpriteLab from './GenerateSpriteLab';
 import ItemsTab from './ItemsTab';
-import PlayTab from './PlayTab';
+import Playspace, {PlayspaceMode} from './Playspace';
 import WorldTab from './WorldTab';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
@@ -74,7 +73,6 @@ const SpriteLab2View: React.FunctionComponent<{
   const dispatch = useAppDispatch();
   const {currentSources, updateSources} = useSources<SpriteLab2Source>();
 
-  const isRunning = useAppSelector(state => state.runState.isRunning);
   const activeTab = useAppSelector(state => state.spriteLab2.activeTab);
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
@@ -114,6 +112,7 @@ const SpriteLab2View: React.FunctionComponent<{
 
   const engineRef = useRef<SpriteLab2Engine | null>(null);
   const codeTabRef = useRef<CodeTabHandle>(null);
+  const [engineReady, setEngineReady] = useState(false);
 
   // Instantiate the p5.play engine once, seeding the animation list from saved
   // sources. Unlike classic Sprite Lab we don't auto-load the legacy default
@@ -142,12 +141,14 @@ const SpriteLab2View: React.FunctionComponent<{
           true /* isSpriteLab */
         )
       );
+      setEngineReady(true);
     };
 
     setup();
 
     return () => {
       cancelled = true;
+      setEngineReady(false);
       engineRef.current?.destroy();
       engineRef.current = null;
     };
@@ -168,21 +169,32 @@ const SpriteLab2View: React.FunctionComponent<{
     mergeSources({animations: getSerializedAnimationList(animationListState)});
   }, [animationListState, mergeSources]);
 
-  const handleRun = useCallback(() => {
+  // Run the current program as the live preview. The engine reuses its p5
+  // instance across re-runs, so this is cheap and safe to call on every edit.
+  const runProgram = useCallback(() => {
     const engine = engineRef.current;
     if (!engine) {
       return;
     }
-    const code = codeTabRef.current?.getCode() || '';
     dispatch(setIsRunning(true));
-    dispatch(setHasRun(true));
-    engine.run(code);
+    engine.runProgram(codeTabRef.current?.getCode() || '');
   }, [dispatch]);
 
-  const handleReset = useCallback(() => {
-    dispatch(setIsRunning(false));
-    engineRef.current?.resetRuntime();
-  }, [dispatch]);
+  // Debounce re-runs so we don't restart the program on every keystroke/drag.
+  const runTimer = useRef<number>();
+  const scheduleRun = useCallback(() => {
+    if (runTimer.current) {
+      window.clearTimeout(runTimer.current);
+    }
+    runTimer.current = window.setTimeout(runProgram, 400);
+  }, [runProgram]);
+
+  // Start the live preview once the engine is ready.
+  useEffect(() => {
+    if (engineReady) {
+      runProgram();
+    }
+  }, [engineReady, runProgram]);
 
   const handleSourceChange = useCallback(
     (
@@ -190,8 +202,10 @@ const SpriteLab2View: React.FunctionComponent<{
       toolbox?: SpriteLab2Source['toolboxDefinition']
     ) => {
       mergeSources({source, toolboxDefinition: toolbox});
+      // Keep the live preview in sync with the edited code.
+      scheduleRun();
     },
-    [mergeSources]
+    [mergeSources, scheduleRun]
   );
 
   const handleEdit = useCallback(() => {
@@ -225,18 +239,17 @@ const SpriteLab2View: React.FunctionComponent<{
     [dispatch]
   );
 
+  // The playspace persists across tabs (the engine keeps running), so switching
+  // tabs only repositions/resizes it.
   const handleTabChange = useCallback(
     (tab: SpriteLab2Tab) => {
-      // Leaving Play stops the engine's tick loop so it isn't burning CPU
-      // behind another tab.
-      if (activeTab === 'Play' && tab !== 'Play') {
-        dispatch(setIsRunning(false));
-        engineRef.current?.resetRuntime();
-      }
       dispatch(setActiveTab(tab));
     },
-    [activeTab, dispatch]
+    [dispatch]
   );
+
+  const playspaceMode: PlayspaceMode =
+    activeTab === 'Play' ? 'play' : activeTab === 'Code' ? 'preview' : 'hidden';
 
   return (
     <TabShell
@@ -278,18 +291,14 @@ const SpriteLab2View: React.FunctionComponent<{
         </div>
       )}
 
-      {activeTab === 'Play' && (
-        <div className={classNames(moduleStyles.codeTabWrapper)}>
-          <PlayTab
-            isRunning={isRunning}
-            onRun={handleRun}
-            onReset={handleReset}
-          />
-        </div>
-      )}
+      {/* The single, persistent playspace: a live preview pinned to the
+          top-right on the Code tab, animating to a large centered view on the
+          Play tab. Always mounted so the engine keeps running. */}
+      <Playspace mode={playspaceMode} />
 
-      {/* Lab2 Guide overlay (Music-style), driven by the level's guideMode. */}
-      {levelProperties.guideMode && (
+      {/* Lab2 Guide overlay (Music-style), driven by the level's guideMode.
+          Only shown on the Code tab. */}
+      {levelProperties.guideMode && activeTab === 'Code' && (
         <GenerateSpriteLab
           guideMode={levelProperties.guideMode}
           instructions={levelProperties.longInstructions}

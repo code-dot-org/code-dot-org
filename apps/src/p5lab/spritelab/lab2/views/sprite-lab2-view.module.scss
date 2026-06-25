@@ -233,34 +233,33 @@
   }
 }
 
-.playTab {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  min-height: 0;
-  background: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
+// The persistent playspace overlay: spans the tab content area; lets clicks
+// through to the content beneath (e.g. the Blockly workspace) except over the
+// box itself.
+.playspaceOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  overflow: hidden;
+  pointer-events: none;
 }
 
-.playControls {
-  display: flex;
-  flex-shrink: 0;
-  gap: 8px;
-  padding: 8px;
-
-  button {
-    padding: 6px 20px;
-    cursor: pointer;
-  }
+// Fixed 400x400 (the engine canvas size); positioned via a transform so it can
+// animate between the corner preview and the centered play view.
+.playspaceBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  transform-origin: 0 0;
+  background: var(--background-neutral-secondary);
+  box-shadow: 0 0 0 1px var(--borders-neutral-strong);
+  transition: transform 0.45s ease;
 }
 
-.playspace {
-  display: flex;
-  flex: 1 1 auto;
-  align-items: flex-start;
-  justify-content: center;
-  min-height: 0;
-  overflow: auto;
-  padding: 8px;
+.playspaceCanvas {
+  width: 400px;
+  height: 400px;
 }
+
