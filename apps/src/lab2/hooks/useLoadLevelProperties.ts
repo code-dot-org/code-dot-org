@@ -41,19 +41,15 @@ export default function useLoadLevelProperties() {
     const lessonPosition = lessons?.find(
       lesson => lesson.id === currentLessonId
     )?.position;
-    const searchParams = new URLSearchParams();
-    if (widget2Id) {
-      searchParams.set('widget2', widget2Id.toString());
-    }
-    const queryString = searchParams.toString();
-    const querySuffix = queryString ? `?${queryString}` : '';
     if (scriptName && lessonPosition) {
       return useLessonIdPath
-        ? `/lessons/${currentLessonId}/level_properties${querySuffix}`
-        : `/s/${scriptName}/lessons/${lessonPosition}/level_properties${querySuffix}`;
+        ? `/lessons/${currentLessonId}/level_properties`
+        : `/s/${scriptName}/lessons/${lessonPosition}/level_properties`;
     }
     if (currentLevelId) {
-      return `/levels/${currentLevelId}/level_properties${querySuffix}`;
+      return `/levels/${currentLevelId}/level_properties${
+        widget2Id ? `?widget2=${widget2Id}` : ''
+      }`;
     }
   });
 
