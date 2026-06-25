@@ -1,5 +1,6 @@
 import {createShepherdTour} from '@cdo/apps/sharedComponents/productTour/shepherdTourFactory';
 import useOnboardingTour from '@cdo/apps/sharedComponents/productTour/useOnboardingTour';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 
 import {
@@ -10,12 +11,18 @@ import {
 export const CREATE_SECTION_ONBOARDING_STEP_KEY =
   'createSectionOnboardingCurrentStep';
 
+export const recordTourCompletion = () => {
+  HttpClient.post(
+    '/dashboardapi/v1/user_product_tours',
+    JSON.stringify({tour_name: 'create_class_section'}),
+    true,
+    {'Content-Type': 'application/json'}
+  ).catch(err => console.error('Failed to record tour completion:', err));
+};
+
 // Call this on pages that the tour navigates to (e.g. sections/new).
 // It runs outside React so it works regardless of render mode.
-export const resumeCreateSectionOnboardingTour = (
-  // TODO: Note that this might change once we get the grade sign up started.
-  isElementaryTeacher: boolean
-) => {
+export const resumeCreateSectionOnboardingTour = () => {
   const savedStepId = tryGetSessionStorage(
     CREATE_SECTION_ONBOARDING_STEP_KEY,
     ''
@@ -25,11 +32,14 @@ export const resumeCreateSectionOnboardingTour = (
   const tour = createShepherdTour({
     stepClass: 'custom-shepherd-onboarding-container',
   });
-  tour.addSteps(createSectionsNewSteps(tour, isElementaryTeacher));
+  tour.addSteps(createSectionsNewSteps(tour));
 
   const clearStep = () =>
     trySetSessionStorage(CREATE_SECTION_ONBOARDING_STEP_KEY, '');
-  tour.on('complete', clearStep);
+  tour.on('complete', () => {
+    clearStep();
+    recordTourCompletion();
+  });
   tour.on('cancel', clearStep);
 
   // Resume at the saved step if it belongs to this page, otherwise start
@@ -38,12 +48,12 @@ export const resumeCreateSectionOnboardingTour = (
   tour.show(startStep.id);
 };
 
-const useCreateSectionTour = (isElementaryTeacher: boolean) => {
+const useCreateSectionTour = (gradesTeaching: string[] | null | undefined) => {
   const {tour} = useOnboardingTour({
     getSteps: tour =>
       createHomepageSteps(
         tour,
-        isElementaryTeacher,
+        gradesTeaching,
         CREATE_SECTION_ONBOARDING_STEP_KEY
       ),
     sessionStorageKey: CREATE_SECTION_ONBOARDING_STEP_KEY,

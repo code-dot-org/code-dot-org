@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Check for Understanding",
-    "long_instructions": "####What is the most interesting thing you've learned how to do so far in CODAP, and what insights were you able to gain from the resulting visualization? How did this help you better understand the data?",
+    "long_instructions": "What is the most interesting thing you've learned how to do so far in CODAP, and what insights were you able to gain from the resulting visualization? How did this help you better understand the data?",
     "teacher_markdown": "The goal of this question is to assess students’ practical skills in using CODAP, their ability to derive insights from visual data, and their understanding of how these insights relate to the underlying data. It also prompts them to articulate the significance of their findings, helping teachers assess the depth of their data comprehension.",
     "allow_user_uploads": "false",
     "submittable": "false",

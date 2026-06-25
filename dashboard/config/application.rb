@@ -3,7 +3,6 @@ require 'cdo/poste'
 require 'rails/all'
 
 require 'cdo/geocoder'
-require 'varnish_environment'
 require_relative '../legacy/middleware/files_api'
 require_relative '../legacy/middleware/channels_api'
 require 'shared_resources'
@@ -80,8 +79,6 @@ module Dashboard
     end
 
     if Rails.env.development?
-      Rails.application.routes.default_url_options[:port] = CDO.dashboard_port
-
       # Autoload mailer previews in development mode so changes are picked up without restarting the server.
       # autoload_paths is frozen by time it gets to development.rb, so it must be done here.
       config.autoload_paths << Rails.root.join('test/mailers/previews')
@@ -99,9 +96,9 @@ module Dashboard
       config.middleware.insert_before ActionDispatch::Static, ::Rack::Optimize
     end
 
-    config.middleware.insert_after Rails::Rack::Logger, VarnishEnvironment
-    config.middleware.insert_after VarnishEnvironment, Middleware::GlobalEdition
-    config.middleware.insert_after VarnishEnvironment, FilesApi
+    config.middleware.insert_after Rails::Rack::Logger, Middleware::I18n
+    config.middleware.insert_after Middleware::I18n, Middleware::GlobalEdition
+    config.middleware.insert_after Middleware::I18n, FilesApi
 
     config.middleware.insert_after FilesApi, ChannelsApi
     config.middleware.insert_after ChannelsApi, SharedResources
@@ -119,8 +116,6 @@ module Dashboard
     end
 
     config.encoding = 'utf-8'
-
-    Rails.application.routes.default_url_options[:host] = CDO.canonical_hostname('studio.code.org')
 
     config.generators do |g|
       g.template_engine :haml
@@ -158,7 +153,6 @@ module Dashboard
     config.assets.gzip = false # cloudfront gzips everything for us on the fly.
     config.assets.paths << Rails.root.join('./public/blockly')
     config.assets.paths << Rails.root.join('../shared/css')
-    config.assets.paths << Rails.root.join('../shared/js')
 
     # Whether to fallback to assets pipeline if a precompiled asset is missed.
     config.assets.compile = !CDO.optimize_rails_assets
@@ -238,10 +232,6 @@ module Dashboard
     # See http://edgeguides.rubyonrails.org/upgrading_ruby_on_rails.html#autoloading-is-disabled-after-booting-in-the-production-environment
     config.enable_dependency_loading = true
 
-    if CDO.newrelic_logging
-      require 'newrelic_rpm'
-    end
-
     # Webpack handles js compression for us, so don't compress by default.
     # config.assets.js_compressor = :uglifier
     # config.assets.css_compressor = :sass
@@ -275,5 +265,12 @@ module Dashboard
       # Register the TeacherNotificationSource for database-backed notifications
       ::Notifications.register(TeacherNotificationSource.new)
     end
+
+    # `CDO.dashboard_site_host` already includes both the host and the port.
+    # Using it as the route host and clearing the port avoids duplication and
+    # matches the behavior of the global `CDO.studio_url` route generation helper.
+    routes.default_url_options[:protocol] = CDO.default_scheme.chomp(':')
+    routes.default_url_options[:host] = CDO.dashboard_site_host
+    routes.default_url_options.delete(:port)
   end
 end

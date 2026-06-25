@@ -13,8 +13,10 @@ const entryPoints = glob.sync('./src/**/index.ts', {
 });
 
 /**
- * Changes .module.css/.scss files to index.css under each component folder
- * This is to indicate that upstream bundlers should not re-modularize the CSS.
+ * Changes .module.css/.scss files to {base}.css under each component folder,
+ * stripping the ".module" suffix to avoid host bundlers re-modularizing the CSS.
+ * Using the source base name (rather than a hardcoded "index") ensures deterministic
+ * output when a component directory contains multiple .module.scss files.
  * @param assetInfo Vite config asset info
  * @returns Asset file name
  */
@@ -22,8 +24,9 @@ function getAssetFileNames(assetInfo: PreRenderedAsset) {
   const name = assetInfo.names[0];
 
   if (/\.module\.(scss|css)$/.test(name)) {
-    const componentName = path.dirname(name); // e.g., "button"
-    return `${componentName}/index.css`;
+    const componentName = path.dirname(name); // e.g., "dialog"
+    const base = path.basename(name).replace(/\.module\.(scss|css)$/, ''); // e.g., "dialog", "customDialog"
+    return `${componentName}/${base}.css`; // e.g., "dialog/dialog.css", "dialog/customDialog.css"
   }
 
   return '[name]/[name].[ext]';

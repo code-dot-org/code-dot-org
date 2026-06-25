@@ -7,8 +7,7 @@
 # with the ones given here, or, if the value is 'false', it removes the
 # component from the page.
 
-locales: [en-IN, hi-IN, ta-IN, te-IN, mr-IN, kn-IN]
-locale_lock: true
+locales: [en-IN, hi-IN, ta-IN, te-IN, mr-IN, kn-IN, or-IN, gu-IN]
 countries: [IN]
 
 # The list of available project types
@@ -41,7 +40,7 @@ header:
       - title: my_dashboard
         url: /in/en/home
         domain: studio.code.org
-        id: header-student-home
+        id: header-teacher-home
       - title: course_catalog
         url: /in/en/catalog
         domain: studio.code.org
@@ -63,11 +62,14 @@ header:
         id: legal_entries
         subentries:
           - title: legal_privacy
-            url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=en-IN&_x_tr_hl=en&_x_tr_pto=wapp
+            domain: code.org
+            url: /privacy
           - title: legal_cookie_notice
-            url: https://code-org.translate.goog/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=en-IN&_x_tr_hl=en&_x_tr_pto=wapp
+            domain: code.org
+            url: /privacy/cookies
           - title: legal_tos
-            url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=en-IN&_x_tr_hl=en&_x_tr_pto=wapp
+            domain: code.org
+            url: /terms-of-service
 
     teacher:
       - title: learn
@@ -79,11 +81,14 @@ header:
         id: legal_entries
         subentries:
           - title: legal_privacy
-            url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=en-IN&_x_tr_hl=en&_x_tr_pto=wapp
+            domain: code.org
+            url: /privacy
           - title: legal_cookie_notice
-            url: https://code-org.translate.goog/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=en-IN&_x_tr_hl=en&_x_tr_pto=wapp
+            domain: code.org
+            url: /privacy/cookies
           - title: legal_tos
-            url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=en-IN&_x_tr_hl=en&_x_tr_pto=wapp
+            domain: code.org
+            url: /terms-of-service
 
   # Help button (?)
   help:
@@ -97,27 +102,15 @@ footer:
   links:
     studio:
       - title: privacy
-        url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=en-IN&_x_tr_hl=en&_x_tr_pto=wapp
+        domain: code.org
+        url: /privacy
         style: "color: #ffa400;"
       - title: cookie_notice
-        url: https://code-org.translate.goog/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=en-IN&_x_tr_hl=en&_x_tr_pto=wapp
+        domain: code.org
+        url: /privacy/cookies
       - title: tos_short
-        url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=en-IN&_x_tr_hl=en&_x_tr_pto=wapp
-    code_org:
-      - title: privacy_policy
-        url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=en-IN&_x_tr_hl=en&_x_tr_pto=wapp
-      - title: terms
-        url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=en-IN&_x_tr_hl=en&_x_tr_pto=wapp
-    hour_of_code:
-      - title: terms
-        url: https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=en-IN&_x_tr_hl=en&_x_tr_pto=wapp
-        target: _blank
-      - title: privacy
-        url: https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=en-IN&_x_tr_hl=en&_x_tr_pto=wapp
-        target: _blank
-      - title: cookie
-        url: https://code-org.translate.goog/privacy/cookies?_x_tr_sl=auto&_x_tr_tl=en-IN&_x_tr_hl=en&_x_tr_pto=wapp
-        target: _blank
+        domain: code.org
+        url: /terms-of-service
 
 # Route matching to influence properties of components
 pages:
@@ -168,16 +161,16 @@ pages:
   - path: /my-professional-learning
     components:
       LandingPage:
-        hideMyFacilitatorCenterTab: true
+        hideMyFacilitatorCenterTab: false
         hideInstructorCenterTab: false
-        hideRPCenterTab: true
-        hideWorkshopOrganizerCenterTab: true
+        hideRPCenterTab: false
+        hideWorkshopOrganizerCenterTab: false
         hideMyPLWorkshopEnrollmentCelebrationDialog: true
         hideMyPLBanner: true
         hideMyPLSelfPacedPL: false
-        hideMyPLJoinSectionArea: true
-        hideMyPLLandingPageWorkshopsTable: true
+        hideMyPLJoinSectionArea: false
+        hideMyPLLandingPageWorkshopsTable: false
         hideMyPLStaticRecommendedPL: false
         hideMyPLStaticRecommendedPLMidHighBlock: true
         hideMyPLStaticRecommendedPLSelfPacedBlock: false
-        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /global
+        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /in/en/professional-learning/courses

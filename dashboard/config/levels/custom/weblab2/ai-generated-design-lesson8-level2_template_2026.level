@@ -1,0 +1,178 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-05-07T15:30:29.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "require_edit_to_continue": "true",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0",
+          "open": false
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <title>Streamline</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n\n<body id=\"mainBody\">\n  <div id=\"appShell\" class=\"app-shell\">\n\n    <header id=\"siteHeader\" class=\"site-header\">\n      <h1 id=\"siteLogo\" class=\"logo\">STREAMLINE</h1>\n\n      <nav id=\"mainNav\" class=\"main-nav\">\n        <span id=\"navHome\">Home</span>\n        <span id=\"navMovies\">Movies</span>\n        <span id=\"navTrending\">Trending</span>\n        <span id=\"navMyList\">My List</span>\n      </nav>\n    </header>\n\n    <section id=\"heroSection\" class=\"hero-section\">\n      <p id=\"heroEyebrow\" class=\"hero-eyebrow\">Tonight’s picks</p>\n      <h2 id=\"heroTitle\" class=\"hero-title\">Find a movie that fits your mood.</h2>\n      <p id=\"heroText\" class=\"hero-text\">\n        Use filters to narrow the list. A filter keeps movies that match a condition.\n      </p>\n    </section>\n\n    <section id=\"filterSection\" class=\"filter-section\">\n      <div id=\"filterControls\" class=\"filter-controls\">\n        <button id=\"showAllBtn\" class=\"filter-chip\" type=\"button\">All Movies</button>\n        <button id=\"filterActionBtn\" class=\"filter-chip\" type=\"button\">Action</button>\n        <button id=\"filterComedyBtn\" class=\"filter-chip\" type=\"button\">Comedy</button>\n        <button id=\"filterRecentBtn\" class=\"filter-chip\" type=\"button\">Recent Movies</button>\n        <button id=\"filterHighRatedBtn\" class=\"filter-chip\" type=\"button\">High Rated</button>\n      </div>\n\n      <p id=\"movieCount\" class=\"movie-count\">0 movies found</p>\n    </section>\n\n    <main id=\"movieGrid\" class=\"movie-grid\" aria-live=\"polite\"></main>\n\n  </div>\n\n  <script src=\"data.js\"></script>\n  <script src=\"helpers.js\"></script>\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  font-family: system-ui, -apple-system, sans-serif;\n  background-color: #050505;\n  color: white;\n}\n\n.app-shell {\n  width: 100%;\n  max-width: 400px;\n  margin: 0 auto;\n  padding: 0 14px 32px;\n}\n\n/* Header */\n.site-header {\n  display: flex;\n  align-items: center;\n  gap: 14px;\n  padding: 18px 0 14px;\n}\n\n.logo {\n  color: #e50914;\n  font-size: 22px;\n  font-weight: 900;\n  letter-spacing: 1px;\n  flex-shrink: 0;\n}\n\n.main-nav {\n  display: flex;\n  gap: 12px;\n  color: #d7d7d7;\n  font-size: 12px;\n  overflow-x: auto;\n  white-space: nowrap;\n}\n\n.main-nav span {\n  cursor: default;\n  flex-shrink: 0;\n}\n\n/* Hero */\n.hero-section {\n  min-height: 170px;\n  padding: 28px 18px 22px;\n  background:\n    linear-gradient(to right, rgba(5, 5, 5, 1), rgba(5, 5, 5, 0.72), rgba(5, 5, 5, 1)),\n    linear-gradient(135deg, #2c0f16, #111827, #050505);\n  border-radius: 16px;\n  margin-bottom: 18px;\n}\n\n.hero-eyebrow {\n  color: #e50914;\n  font-weight: 800;\n  text-transform: uppercase;\n  letter-spacing: 0.08em;\n  font-size: 11px;\n  margin-bottom: 10px;\n}\n\n.hero-title {\n  font-size: 28px;\n  line-height: 1.05;\n  margin-bottom: 12px;\n}\n\n.hero-text {\n  color: #d4d4d4;\n  font-size: 13px;\n  line-height: 1.45;\n}\n\n/* Filters */\n.filter-section {\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  gap: 11px;\n  margin-bottom: 16px;\n}\n\n.filter-controls {\n  width: 100%;\n  display: flex;\n  flex-wrap: nowrap;\n  gap: 8px;\n  overflow-x: auto;\n  padding-bottom: 4px;\n}\n\n.filter-chip {\n  flex-shrink: 0;\n  border: 1px solid #444;\n  background-color: #171717;\n  color: white;\n  border-radius: 999px;\n  padding: 8px 13px;\n  font-size: 13px;\n  cursor: pointer;\n}\n\n.filter-chip:hover {\n  background-color: #2b2b2b;\n  border-color: #777;\n}\n\n.filter-chip:focus {\n  background-color: #e50914;\n  border-color: #e50914;\n  outline: none;\n}\n\n.movie-count {\n  color: #b8b8b8;\n  font-size: 12px;\n  white-space: nowrap;\n}\n\n/* Movie Grid */\n.movie-grid {\n  display: grid;\n  grid-template-columns: repeat(2, minmax(0, 1fr));\n  gap: 12px;\n}\n\n.movie-card {\n  background-color: #151515;\n  border-radius: 9px;\n  overflow: hidden;\n  transition: transform 0.2s, background-color 0.2s;\n}\n\n.movie-card:hover {\n  transform: scale(1.02);\n  background-color: #202020;\n}\n\n.poster-wrap {\n  position: relative;\n  aspect-ratio: 2 / 3;\n  background-color: #222;\n  overflow: hidden;\n}\n\n.poster-image {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n}\n\n.movie-badge {\n  position: absolute;\n  top: 8px;\n  left: 8px;\n  background-color: #e50914;\n  color: white;\n  font-size: 10px;\n  font-weight: 800;\n  padding: 3px 6px;\n  border-radius: 4px;\n}\n\n.movie-info {\n  padding: 9px;\n}\n\n.movie-title {\n  font-size: 14px;\n  line-height: 1.25;\n  margin-bottom: 6px;\n}\n\n.movie-meta {\n  color: #b8b8b8;\n  font-size: 12px;\n  margin-bottom: 5px;\n}\n\n.movie-rating {\n  color: #46d369;\n  font-size: 12px;\n  font-weight: 700;\n}\n\n/* Extra-small windows */\n@media (max-width: 330px) {\n  .app-shell {\n    padding: 0 10px 28px;\n  }\n\n  .site-header {\n    flex-direction: column;\n    align-items: flex-start;\n    gap: 8px;\n  }\n\n  .hero-title {\n    font-size: 24px;\n  }\n\n  .movie-grid {\n    gap: 10px;\n  }\n\n  .movie-title {\n    font-size: 13px;\n  }\n}\n\n/* Wider preview windows */\n@media (min-width: 520px) {\n  .app-shell {\n    max-width: 760px;\n    padding: 0 22px 44px;\n  }\n\n  .movie-grid {\n    grid-template-columns: repeat(3, minmax(0, 1fr));\n    gap: 16px;\n  }\n\n  .hero-title {\n    font-size: 36px;\n  }\n}\n\n@media (min-width: 900px) {\n  .app-shell {\n    max-width: 1100px;\n  }\n\n  .movie-grid {\n    grid-template-columns: repeat(4, minmax(0, 1fr));\n    gap: 18px;\n  }\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "data.js",
+          "contents": "const movies = [\n  {\n    id: 1,\n    title: \"Night Run\",\n    genre: \"Action\",\n    year: 2021,\n    rating: 8.1,\n    image: \"images/movie1.png\",\n    alt: \"Night Run movie poster\",\n    isNew: true\n  },\n  {\n    id: 2,\n    title: \"Space Camp\",\n    genre: \"Sci-Fi\",\n    year: 2023,\n    rating: 8.6,\n    image: \"images/movie2.png\",\n    alt: \"Space Camp movie poster\",\n    isNew: true\n  },\n  {\n    id: 3,\n    title: \"The Last Slice\",\n    genre: \"Comedy\",\n    year: 2019,\n    rating: 7.4,\n    image: \"images/movie3.png\",\n    alt: \"The Last Slice movie poster\",\n    isNew: false\n  },\n  {\n    id: 4,\n    title: \"Final Round\",\n    genre: \"Action\",\n    year: 2018,\n    rating: 7.9,\n    image: \"images/movie4.png\",\n    alt: \"Final Round movie poster\",\n    isNew: false\n  },\n  {\n    id: 5,\n    title: \"Quiet Signal\",\n    genre: \"Drama\",\n    year: 2020,\n    rating: 8.3,\n    image: \"images/movie5.png\",\n    alt: \"Quiet Signal movie poster\",\n    isNew: false\n  },\n  {\n    id: 6,\n    title: \"Weekend Weirdos\",\n    genre: \"Comedy\",\n    year: 2022,\n    rating: 7.8,\n    image: \"images/movie6.png\",\n    alt: \"Weekend Weirdos movie poster\",\n    isNew: true\n  },\n  {\n    id: 7,\n    title: \"Deep Orbit\",\n    genre: \"Sci-Fi\",\n    year: 2017,\n    rating: 7.1,\n    image: \"images/movie7.png\",\n    alt: \"Deep Orbit movie poster\",\n    isNew: false\n  },\n  {\n    id: 8,\n    title: \"Chase Mode\",\n    genre: \"Action\",\n    year: 2024,\n    rating: 8.4,\n    image: \"images/movie8.png\",\n    alt: \"Chase Mode movie poster\",\n    isNew: true\n  }\n];",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "script.js",
+          "contents": "const movieGrid = document.getElementById(\"movieGrid\");\nconst movieCount = document.getElementById(\"movieCount\");\n\n// This array controls which movies are currently shown.\nlet displayMovies = movies;\n\n// Displays the current movies on the page.\nconst renderMovies = () => {\n  movieGrid.innerHTML = \"\";\n  movieCount.textContent = displayMovies.length + \" movies found\";\n\n  displayMovies.map((movie) => {\n    createMovieCard(movie);\n  });\n};\n\nrenderMovies();\n\n// Shows only action movies.\nconst filterActionMovies = () => {\n\n\n\n\n\n\n};",
+          "folderId": "0",
+          "active": true
+        },
+        "5": {
+          "id": "5",
+          "name": "helpers.js",
+          "contents": "const createMovieCard = (movie) => {\n  const movieGrid = document.getElementById(\"movieGrid\");\n\n  const card = document.createElement(\"article\");\n  card.className = \"movie-card\";\n  card.id = \"movieCard\" + movie.id;\n\n  const posterWrap = document.createElement(\"div\");\n  posterWrap.className = \"poster-wrap\";\n  posterWrap.id = \"posterWrap\" + movie.id;\n\n  const image = document.createElement(\"img\");\n  image.className = \"poster-image\";\n  image.id = \"movieImage\" + movie.id;\n  image.src = movie.image;\n  image.alt = movie.alt;\n\n  posterWrap.appendChild(image);\n\n  if (movie.isNew === true) {\n    const badge = document.createElement(\"span\");\n    badge.className = \"movie-badge\";\n    badge.id = \"movieBadge\" + movie.id;\n    badge.textContent = \"NEW\";\n\n    posterWrap.appendChild(badge);\n  }\n\n  const info = document.createElement(\"div\");\n  info.className = \"movie-info\";\n  info.id = \"movieInfo\" + movie.id;\n\n  const title = document.createElement(\"h2\");\n  title.className = \"movie-title\";\n  title.id = \"movieTitle\" + movie.id;\n  title.textContent = movie.title;\n\n  const meta = document.createElement(\"p\");\n  meta.className = \"movie-meta\";\n  meta.id = \"movieMeta\" + movie.id;\n  meta.textContent = movie.genre + \" / \" + movie.year;\n\n  const rating = document.createElement(\"p\");\n  rating.className = \"movie-rating\";\n  rating.id = \"movieRating\" + movie.id;\n  rating.textContent = movie.rating + \" match\";\n\n  info.appendChild(title);\n  info.appendChild(meta);\n  info.appendChild(rating);\n\n  card.appendChild(posterWrap);\n  card.appendChild(info);\n\n  movieGrid.appendChild(card);\n};\n\n// Shows all movies.\nconst showAllMovies = () => {\n  displayMovies = [];\n\n  movies.map((movie) => {\n    displayMovies.push(movie);\n  });\n\n  renderMovies();\n};\n\ndocument.getElementById(\"showAllBtn\").addEventListener(\"click\", showAllMovies);",
+          "folderId": "0",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "movie1.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson8-level2_template_2026/uuid/1354e59f-bfcd-4d43-a297-0261d5394599.png",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "prompt.md",
+          "contents": "",
+          "folderId": "0",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "movie2.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson8-level2_template_2026/uuid/0d95790a-40e9-48c4-9806-002f9d048109.png",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "movie3.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson8-level2_template_2026/uuid/bbddbb3e-d9d4-4059-8373-6cc5cfb38cc5.png",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "movie4.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson8-level2_template_2026/uuid/d9f35f31-900c-4cc9-99a1-8a81c6f76a46.png",
+          "type": "starter",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "movie5.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson8-level2_template_2026/uuid/7d7dd5ad-3378-4306-9d3c-4b02a3df266a.png",
+          "type": "starter",
+          "active": false
+        },
+        "12": {
+          "id": "12",
+          "name": "movie6.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson8-level2_template_2026/uuid/ad2ca29c-c6b2-4bad-b104-7b981382f6d8.png",
+          "type": "starter",
+          "active": false
+        },
+        "13": {
+          "id": "13",
+          "name": "movie7.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson8-level2_template_2026/uuid/075bf8cd-084f-4060-98d3-2dff675344a5.png",
+          "type": "starter",
+          "active": false
+        },
+        "14": {
+          "id": "14",
+          "name": "movie8.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson8-level2_template_2026/uuid/ff0f7205-c352-41e8-b31e-e022f8a823bf.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "7",
+        "4",
+        "3"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-07 15:30:31 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 15:35:43 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 15:40:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 15:40:19 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 15:56:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 15:57:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 15:57:53 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 16:51:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 16:51:14 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 19:18:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 19:18:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 19:34:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 19:34:04 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 19:34:18 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 19:37:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 19:37:40 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 22:03:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 22:03:15 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 22:03:15 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-07 22:03:16 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

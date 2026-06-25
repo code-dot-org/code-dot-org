@@ -17,30 +17,54 @@ class Policies::DemoSections
       avatar_color: 2,
       avatar_emoji: 10,
       ai_chat_access_level: 'essential_only',
+      student_snapshot_default_tour_lesson: 1,
+      review_syllabus_quiz_lesson: 1,
+      review_syllabus_quiz_options: [
+        {label: 'Level 1', correct: false},
+        {label: 'Level 3', correct: false},
+        {label: 'Level 4', correct: false},
+        {label: 'Level 6', correct: true},
+      ].freeze,
     }.freeze,
     middle: {
       section_name: 'Middle School Practice Section',
       login_type: 'word',
       participant_type: 'student',
       grades: %w[6 7 8],
-      unit_name: 'csd3-2024',
-      unit_group_name: 'csd-2024',
+      unit_name: 'csd2-2026',
+      unit_group_name: 'csd-2026',
       # Pink fire: COLORS[1] = Pink, EMOJIS[0] = 🔥
       avatar_color: 1,
       avatar_emoji: 0,
       ai_chat_access_level: 'enabled',
+      student_snapshot_default_tour_lesson: 3,
+      review_syllabus_quiz_lesson: 3,
+      review_syllabus_quiz_options: [
+        {label: 'Level 4', correct: false},
+        {label: 'Level 5', correct: false},
+        {label: 'Level 8', correct: true},
+        {label: 'Level 11', correct: false},
+      ].freeze,
     }.freeze,
     high: {
       section_name: 'High School Practice Section',
       login_type: 'email',
       participant_type: 'student',
       grades: %w[9 10 11 12],
-      unit_name: 'aif2-2025',
-      unit_group_name: 'artificial-intelligence-foundations-2025',
+      unit_name: 'aif2-v2-2025',
+      unit_group_name: 'artificial-intelligence-foundations-2026',
       # Green robot: COLORS[8] = Green, EMOJIS[5] = 🤖
       avatar_color: 8,
       avatar_emoji: 5,
       ai_chat_access_level: 'enabled',
+      student_snapshot_default_tour_lesson: 1,
+      review_syllabus_quiz_lesson: 1,
+      review_syllabus_quiz_options: [
+        {label: 'Level 1', correct: false},
+        {label: 'Level 2', correct: false},
+        {label: 'Level 3', correct: false},
+        {label: 'Level 4', correct: true},
+      ].freeze,
     }.freeze,
   }.freeze
 
@@ -53,8 +77,7 @@ class Policies::DemoSections
   end
 
   def self.demo_student_ids(demo_type)
-    ids = CDO.demo_student_ids
-    (ids&.dig(demo_type.to_s) || []).map(&:to_i)
+    DemoStudent.where(demo_type: demo_type.to_s).order(:user_id).pluck(:user_id)
   end
 
   def self.preset_view(demo_type)
@@ -74,6 +97,10 @@ class Policies::DemoSections
       avatar_emoji: preset[:avatar_emoji],
       login_type: preset[:login_type],
       participant_type: preset[:participant_type],
+      student_snapshot_default_tour_lesson: preset[:student_snapshot_default_tour_lesson],
+      review_syllabus_quiz_lesson: preset[:review_syllabus_quiz_lesson],
+      review_syllabus_quiz_options: preset[:review_syllabus_quiz_options],
+      grades: preset[:grades],
       unit: {
         name: unit.name,
         display_name: unit.localized_title,
@@ -93,11 +120,23 @@ class Policies::DemoSections
   end
 
   def self.all_demo_student_ids
-    @all_demo_student_ids ||= DEMO_TYPES.flat_map {|type| demo_student_ids(type)}.to_set
+    @all_demo_student_ids ||= DemoStudent.distinct.pluck(:user_id).to_set
   end
 
+  # Per-process cache. Fast enough for hot paths (controller scoping,
+  # ability checks) but stale across workers until `reset_cache!` runs
+  # in each one. Don't use this in security guards that must not be
+  # bypassed by a stale cache — use `demo_student_durable?` instead.
   def self.demo_student?(user_id)
     all_demo_student_ids.include?(user_id.to_i)
+  end
+
+  # Uncached existence check, hits the database directly. Use this in
+  # destructive paths (purge, hard-delete) where a stale per-process
+  # cache on a remote worker would otherwise permit the operation.
+  # Cheap: the demo_students table is small and `user_id` is indexed.
+  def self.demo_student_durable?(user_id)
+    DemoStudent.exists?(user_id: user_id.to_i)
   end
 
   def self.reset_cache!

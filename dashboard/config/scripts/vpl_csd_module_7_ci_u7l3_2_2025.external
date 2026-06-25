@@ -9,12 +9,12 @@ markdown <<MARKDOWN
 ## Key Vocabulary:
 <br>
 
-* #### **Model** - a computer program designed to make a decision
-* #### **Unsupervised Learning** - finding patterns in data that doesn’t have any labels
-* #### **Features** - the inputs that the model uses to make decisions
-* #### **Supervised Learning** - when a human trains a model to learn with examples
-* #### **Training** - the process of giving examples to a model so it can learn
-* #### **Label** - the output you are trying to decide or predict with a model
+* **Model** - a computer program designed to make a decision
+* **Unsupervised Learning** - finding patterns in data that doesn’t have any labels
+* **Features** - the inputs that the model uses to make decisions
+* **Supervised Learning** - when a human trains a model to learn with examples
+* **Training** - the process of giving examples to a model so it can learn
+* **Label** - the output you are trying to decide or predict with a model
 
 
 

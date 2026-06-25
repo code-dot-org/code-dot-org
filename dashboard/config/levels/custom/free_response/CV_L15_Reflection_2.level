@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "# Feedback Implementation\r\n\r\n#### Describe a specific instance where implementing feedback was challenging. What was the feedback, why was it difficult to implement, and how did you address the challenge?\r\n\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
+    "long_instructions": "# Feedback Implementation\r\n\r\nDescribe a specific instance where implementing feedback was challenging. What was the feedback, why was it difficult to implement, and how did you address the challenge?\r\n\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

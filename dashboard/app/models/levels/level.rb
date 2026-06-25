@@ -28,6 +28,25 @@
 require 'cdo/shared_constants'
 
 class Level < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    game_id: :public,
+    name: :public,
+    created_at: :public,
+    updated_at: :public,
+    level_num: :public,
+    ideal_level_source_id: :public,
+    user_id: :confidential,
+    properties: :public,
+    type: :public,
+    md5: :public,
+    published: :public,
+    notes: :public,
+    audit_log: :public,
+  )
+
   include SharedConstants
   include Levels::LevelsWithinLevels
 
@@ -43,7 +62,11 @@ class Level < ApplicationRecord
   has_many :hint_view_requests
   has_many :rubrics, dependent: :destroy
 
-  scope :with_ai_tutor_available, -> {where("levels.properties->>'$.ai_tutor_available' = 'true'")}
+  scope :with_ai_tutor_available, (lambda do
+    where("levels.properties->>'$.ai_tutor_available' = 'true'").or(
+      where("JSON_LENGTH(JSON_EXTRACT(levels.properties, '$.ai_tutor_prompt_settings.answerTypes')) > 0")
+    )
+  end)
 
   # scope for levels that require ai chat tools to reasonably function.
   scope :with_essential_ai_chat_tools, -> {where(type: %w[Aichat Weblab2])}
@@ -111,6 +134,7 @@ class Level < ApplicationRecord
     skill_keys
     additional_ai_evaluation_instructions
     product_tours
+    generate_outline
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495

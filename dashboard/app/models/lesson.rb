@@ -26,6 +26,23 @@ require 'cdo/shared_constants'
 # Ordered partitioning of script levels within a unit
 # (Intended to replace most of the functionality in Game, due to the need for multiple app types within a single Lesson)
 class Lesson < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    name: :public,
+    absolute_position: :public,
+    script_id: :public,
+    created_at: :public,
+    updated_at: :public,
+    lockable: :public,
+    relative_position: :public,
+    properties: :public,
+    lesson_group_id: :public,
+    key: :public,
+    has_lesson_plan: :public,
+  )
+
   include LevelsHelper
   include SharedConstants
   include Rails.application.routes.url_helpers
@@ -60,7 +77,11 @@ class Lesson < ApplicationRecord
   has_many :lessons_opportunity_standards,  dependent: :destroy
   has_many :opportunity_standards, through: :lessons_opportunity_standards, source: :standard
 
-  has_one :rubric, dependent: :destroy
+  # A lesson has at most one rubric. Order by id so that, should duplicates
+  # exist transiently (e.g. before the one-rubric-per-lesson cleanup runs),
+  # this consistently returns the canonical (oldest) rubric — the one the
+  # cleanup keeps and the one the levelbuilder gating links to.
+  has_one :rubric, -> {order(:id)}, dependent: :destroy
 
   self.table_name = 'stages'
 
@@ -75,6 +96,9 @@ class Lesson < ApplicationRecord
     preparation
     announcements
     assessment_opportunities
+    generate_outline
+    generate_slides_outline
+    generate_project_channel_id
   )
 
   # A lesson has an absolute position and a relative position. The difference
@@ -435,6 +459,25 @@ class Lesson < ApplicationRecord
     }
   end
 
+  # Compact payload for the unit /generate page. Each lesson card needs
+  # its identity, current outline prompt (so the user can edit or skip
+  # regeneration), and direct links to the per-lesson /edit and /generate
+  # pages so the generated set can be opened straight after creation.
+  def summarize_for_unit_generate
+    {
+      id: id,
+      name: name,
+      key: key,
+      generateOutline: generate_outline,
+      lessonEditPath: get_uncached_edit_path,
+      lessonGeneratePath: lesson_generate_path,
+    }
+  end
+
+  def lesson_generate_path
+    get_uncached_edit_path&.sub(%r{/edit\z}, '/generate')
+  end
+
   # Provides all the editable data related to this lesson and its activities for
   # display on the lesson edit page, excluding any lesson attributes which can
   # be edited on the unit edit page (e.g. name and key).
@@ -474,6 +517,44 @@ class Lesson < ApplicationRecord
       allJitPlConcepts: JitPlConcept.order(:name).map {|c| {id: c.id, name: c.name, display_name: c.display_name}},
       lessonPath: get_uncached_show_path,
       rubric: rubric,
+      generateOutline: generate_outline,
+      generateProjectChannelId: generate_project_channel_id,
+      unitName: script&.localized_title,
+      unitOutline: script&.generate_outline,
+    }
+  end
+
+  # A lesson can own a deck of intro slides (panels-app panels played
+  # to students before the lesson begins). The actual on-disk JSON
+  # file and its read/write operations live in the Slides class so the
+  # slides feature isn't bound to Lesson — units, courses, or levels
+  # could grow their own decks the same way.
+  def slides
+    Slides.new(
+      owner_kind: :lesson,
+      owner_id: id,
+      path_segments: [
+        script&.name.presence || "unit-#{script_id || 'orphan'}",
+        key.presence || "lesson-#{id}",
+      ]
+    )
+  end
+
+  # Compact payload for the /slides/generate page. Includes the saved
+  # outline prompt (generate_slides_outline) and the persisted slides JSON
+  # so the page can restore both on reload. Keeps the AI's lesson-context
+  # gathering as a separate client-side fetch (loadLessonLevelProperties),
+  # since that data is already exposed for the per-level /generate page.
+  def summarize_for_slides_generate
+    {
+      id: id,
+      name: name,
+      generateSlidesOutline: generate_slides_outline,
+      slides: slides.read['slides'] || [],
+      slidesFilePath: slides.relative_path,
+      generateOutline: generate_outline,
+      unitName: script&.localized_title,
+      unitOutline: script&.generate_outline,
     }
   end
 
@@ -659,9 +740,12 @@ class Lesson < ApplicationRecord
     properties = {}
     script_levels.each do |script_level|
       level = script_level.level
+      # Skip non-lab2 level types whose game has no app.
+      next unless level.game&.app
       properties[level.id] = level.summarize_for_lab2_properties(script, script_level, current_user, unit_group_unit: unit_group_unit)
       next unless level.is_a?(BubbleChoice)
       level.sublevels.each do |sublevel|
+        next unless sublevel.game&.app
         properties[sublevel.id] = sublevel.summarize_for_lab2_properties(script, script_level, current_user, unit_group_unit: unit_group_unit)
       end
     end

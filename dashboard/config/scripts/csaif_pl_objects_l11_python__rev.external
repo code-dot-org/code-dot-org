@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Understanding Objects in Programming 
 
-#### In programming, an **object** is a collection of data (attributes) and behaviors (functions/methods). 
+In programming, an **object** is a collection of data (attributes) and behaviors (functions/methods). 
 
-#### **Objects** are used to model real-world things in a way that computers can understand and manipulate.
+**Objects** are used to model real-world things in a way that computers can understand and manipulate.
 
 ## What is an Object? 
 
@@ -32,12 +32,12 @@ markdown <<MARKDOWN
     </div>
 </div>
 
-#### In Python, **objects** are instances of classes, which define these attributes and functions.
+In Python, **objects** are instances of classes, which define these attributes and functions.
 
 
 ## Example: A Camera as an Object
 
-#### A camera is a great example of an object because it has both attributes (characteristics) and functions (actions it can perform).
+A camera is a great example of an object because it has both attributes (characteristics) and functions (actions it can perform).
 
 <div style="display: flex; justify-content: center; align-items: center; gap: 20px; padding: 20px; width: 95%; margin: 20px auto;">
    

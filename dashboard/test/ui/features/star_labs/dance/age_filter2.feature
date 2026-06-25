@@ -13,7 +13,7 @@ Feature: Dance Lab Age Filter 2
     And I see option "Synthesize" or "Steve Lacy - Bad Habit" in the dropdown "#song_selector"
 
     # session cookie should persist and no dialog should show up
-    Then I am on "http://studio.code.org/courses/dance/units/1/lessons/1/levels/9"
+    Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/37/levels/5"
     And I wait for the lab page to fully load
     And I wait for 3 seconds
     And I wait until I don't see selector "#p5_loading"

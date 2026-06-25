@@ -12,7 +12,7 @@
     "parent_level_id": 21258,
     "name_suffix": "_2024",
     "encrypted": "false",
-    "long_instructions": "# Defining and Calling Functions \r\n\r\n## What is a Function?\r\n#### A function is a piece of code that you can call over and over again.\r\n\r\n## Why Use Functions? \r\n#### Like a chorus in a song, functions save time by not having to write all the code over and over in the program. Additonally, if you make a mistake, you only have to change it one place. The program is less complicated with the repeating pieces declared just once.\r\n\r\n\r\n\r\n"
+    "long_instructions": "# Defining and Calling Functions \r\n\r\n## What is a Function?\r\nA function is a piece of code that you can call over and over again.\r\n\r\n## Why Use Functions? \r\nLike a chorus in a song, functions save time by not having to write all the code over and over in the program. Additonally, if you make a mistake, you only have to change it one place. The program is less complicated with the repeating pieces declared just once.\r\n\r\n\r\n\r\n"
   },
   "published": true,
   "notes": "",

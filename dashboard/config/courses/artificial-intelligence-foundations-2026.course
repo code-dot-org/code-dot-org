@@ -143,7 +143,9 @@
       "url": "\thttps://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher",
       "key": "viewing_student_ai_chat_history_as_a_teacher",
       "properties": {
-        "embeddability_type": "embed_and_resource_dropdown"
+        "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "viewing_student_ai_chat_history_as_a_teacher"

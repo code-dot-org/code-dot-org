@@ -1,0 +1,74 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-06-24T13:52:32.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "How is working with AI similar to the relationship and roles of a pilot and co-pilot?",
+        "imageUrl": "https://images.code.org/1891cda1df6972c4bd1e4eae3ab93470-iste_cockpit.png",
+        "key": "hoai-web-design-v2-1-11300f40-e480-4236-9f18-43bbbb1f36af",
+        "typing": false,
+        "fadeInOverPrevious": true,
+        "layout": "text-top-center",
+        "links": [
+          {
+            "text": "The Pilot",
+            "x": 10,
+            "y": 74,
+            "targetKey": "iste_pilot_panels-e9dc9af8-b5cc-4cea-90b1-f9576e9167b1",
+            "width": 13
+          },
+          {
+            "text": "The Co-pilot",
+            "x": 88,
+            "y": 74,
+            "targetKey": "iste_pilot_panels-a9ceb3c2-e197-4ebb-9c88-a8ada4b5f79d",
+            "width": 17
+          }
+        ],
+        "showContinueButton": true
+      },
+      {
+        "text": "You are the pilot when you make the important decisions and use AI to support your work. You decide the audience, purpose, message, and style of what you are creating. In designing and building a website, this might mean writing the content plan, thinking about who the page is for, and creating a style guide that explains what the design should feel like and why. AI can help you test ideas or turn your choices into a webpage, but you stay responsible for the direction, accuracy, and final result.",
+        "imageUrl": "https://images.code.org/4614a70e1728670c7242deb799144964-iste_pilot.png",
+        "key": "iste_pilot_panels-e9dc9af8-b5cc-4cea-90b1-f9576e9167b1",
+        "links": [
+          {
+            "text": "<< Back",
+            "x": 92,
+            "y": 92,
+            "targetKey": "hoai-web-design-v2-1-11300f40-e480-4236-9f18-43bbbb1f36af",
+            "width": 12
+          }
+        ],
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "You are working with AI as a co-pilot when you stay in charge, but let AI help you think through choices, improve ideas, or carry out parts of the work. You still decide what matters, check whether the suggestions fit your audience, and revise anything that does not match your goal. In designing and building a website, this might mean asking AI to give feedback on your style guide, suggest ways to make the page clearer for your audience, or help apply your design choices to the webpage. AI can support your process, but it should not replace your judgment.",
+        "imageUrl": "https://images.code.org/400fd981acbdfa0c5b6853cb31eea347-iste_copilot.png",
+        "key": "iste_pilot_panels-a9ceb3c2-e197-4ebb-9c88-a8ada4b5f79d",
+        "links": [
+          {
+            "text": "<< Back",
+            "x": 8,
+            "y": 92,
+            "targetKey": "hoai-web-design-v2-1-11300f40-e480-4236-9f18-43bbbb1f36af",
+            "width": 12
+          }
+        ],
+        "layout": "text-top-left",
+        "fadeInOverPrevious": true
+      }
+    ],
+    "name_suffix": "_iste-2026",
+    "use_links": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-24T13:52:32.843+00:00\",\"changed\":[\"cloned from \\\"iste_2026_content_panel\\\"\"],\"cloned_from\":\"iste_2026_content_panel\"},{\"changed_at\":\"2026-06-24 16:31:11 +0000\",\"changed\":[\"panels\",\"use_links\"],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"},{\"changed_at\":\"2026-06-24 16:34:07 +0000\",\"changed\":[],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"}]"
+}]]></config>
+</Panels>

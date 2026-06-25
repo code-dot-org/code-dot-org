@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Unit Project: AI Time Capsule
 
-#### In this project, students work with AI to develop a future prediction and create a presentation that explains their process. They collaborate with AI to generate and refine ideas, evaluate outputs for accuracy and bias, and reflect on how they shaped the final prediction. The project centers on ethical reasoning, student voice, and thoughtful use of multimodal inputs to support transparency and agency in AI collaboration.
+In this project, students work with AI to develop a future prediction and create a presentation that explains their process. They collaborate with AI to generate and refine ideas, evaluate outputs for accuracy and bias, and reflect on how they shaped the final prediction. The project centers on ethical reasoning, student voice, and thoughtful use of multimodal inputs to support transparency and agency in AI collaboration.
 
 ## Project Calendar
 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 15px;">

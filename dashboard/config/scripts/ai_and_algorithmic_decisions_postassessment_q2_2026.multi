@@ -1,14 +1,14 @@
 name 'ai-and-algorithmic-decisions-postassessment-q2_2026'
 
-question 'An online bookstore adds a "quick view" feature that shows a book\'s details when you hover over the cover. Some users love that it saves time, while others say it pops up too easily and covers other items. What should the design team do to make this feature more user-centered?'
+question 'On a restaurant ordering page, clicking "Place Order" makes a confirmation message appear without reloading the page. Which sequence describes what happened inside the app?'
 
-wrong 'Keep it exactly as is, since any extra feedback makes a site more interactive.'
-wrong 'Remove the feature completely so users can\'t be distracted.'
-right 'Adjust the timing or trigger so the preview only appears when users clearly choose to see it.'
-wrong 'Make the previews open automatically for every book on the page.'
+wrong 'JavaScript loaded the entire page from the server, then showed the confirmation.'
+wrong 'The confirmation was always on the page — clicking just scrolled to it.'
+right 'The event listener detected the click, the event handler ran, and JavaScript updated the DOM to display the confirmation.'
+wrong 'The server pushed the confirmation message to the page before the user clicked.'
 
 allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
-Lesson 1
+Lesson 2
 MARKDOWN

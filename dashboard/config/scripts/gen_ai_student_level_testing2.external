@@ -5,17 +5,17 @@ description 'description here'
 markdown <<MARKDOWN
 # ✅ Lesson Recap: Introduction to Generative AI
 
-#### After this lesson, you can 
+After this lesson, you can 
 
-* #### Identify and explain the four key components that make up a computer system.
-* #### Evaluate the potential impact of generative AI on society and discuss its capabilities and limitations.
-* #### Distinguish between different types of AI, including machine learning, deep learning, and generative AI.
+* Identify and explain the four key components that make up a computer system.
+* Evaluate the potential impact of generative AI on society and discuss its capabilities and limitations.
+* Distinguish between different types of AI, including machine learning, deep learning, and generative AI.
 
 ## **Key Terms**
 
-* #### **Artificial Intelligence** - A technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions
-* #### **Large Language Model** - A computer program that analyzes large amounts of raw human-created data to the point where it can represent and recreate new data to perform a variety of tasks
-* #### **Model** - A computer program designed to make a decision
+* **Artificial Intelligence** - A technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions
+* **Large Language Model** - A computer program that analyzes large amounts of raw human-created data to the point where it can represent and recreate new data to perform a variety of tasks
+* **Model** - A computer program designed to make a decision
 
 ## Resources
 
@@ -68,11 +68,11 @@ markdown <<MARKDOWN
 
 # ✅ Lesson Recap: 1.2 How Smart Is It, Really?
 
-#### After this lesson, you can 
+After this lesson, you can 
 
-* #### Interact with a chatbot to evaluate how it responds to different types of prompts.
-* #### Reflect on how AI can impact a real-world industry.
-* #### Identify strengths and limitations in how the chatbot generates responses.
+* Interact with a chatbot to evaluate how it responds to different types of prompts.
+* Reflect on how AI can impact a real-world industry.
+* Identify strengths and limitations in how the chatbot generates responses.
 
 ## Resources
 
@@ -93,10 +93,10 @@ markdown <<MARKDOWN
 
 # ✅ Lesson Recap: Input & Training Data
 
-#### After this lesson, you can 
+After this lesson, you can 
 
-* #### Explain how a language model uses data to recognize words as input
-* #### Identify potential data sources relevant to a task being performed by a language model
+* Explain how a language model uses data to recognize words as input
+* Identify potential data sources relevant to a task being performed by a language model
 
 ## Resources
 
@@ -131,13 +131,13 @@ markdown <<MARKDOWN
 
 # ✅ Lesson Recap: Bias in the Machine
 
-#### After this lesson, you can 
+After this lesson, you can 
 
-* #### Describe patterns in collections of data sources that contribute to bias
+* Describe patterns in collections of data sources that contribute to bias
 
 ## **Key Terms**
 
-* #### **Bias** - When a model favors certain information over others
+* **Bias** - When a model favors certain information over others
 
 ## Resources
 
@@ -172,12 +172,12 @@ markdown <<MARKDOWN
 
 # ✅ Lesson Recap: 3.2 Is It Biased?
 
-#### After this lesson, you can 
+After this lesson, you can 
 
-* #### Examine how identity-based prompts influence chatbot responses.
-* #### Reflect on the potential impact of biased AI outputs in the real world.
-* #### Explain how training data shapes the patterns and representations in generative AI.
-* #### Analyze AI-generated responses for signs of bias, stereotypes, or assumptions.
+* Examine how identity-based prompts influence chatbot responses.
+* Reflect on the potential impact of biased AI outputs in the real world.
+* Explain how training data shapes the patterns and representations in generative AI.
+* Analyze AI-generated responses for signs of bias, stereotypes, or assumptions.
 
 ## Resources
 
@@ -198,14 +198,14 @@ markdown <<MARKDOWN
 
 # ✅ Lesson Recap: Understanding Embeddings
 
-#### After this lesson, you can 
+After this lesson, you can 
 
-* #### Explain how language models use embeddings to store the meaning of words
-* #### Describe how embeddings show the similarity or difference between two items
+* Explain how language models use embeddings to store the meaning of words
+* Describe how embeddings show the similarity or difference between two items
 
 ## **Key Terms**
 
-* #### **Embedding** - A set of numbers used to represent a word in a language model. They are used to represent the discrete meaning of words.
+* **Embedding** - A set of numbers used to represent a word in a language model. They are used to represent the discrete meaning of words.
 
 ## Resources
 
@@ -240,13 +240,13 @@ markdown <<MARKDOWN
 
 # ✅ Lesson Recap: Understanding Neural Networks
 
-#### After this lesson, you can 
+After this lesson, you can 
 
-* #### Construct a neural network to represent a situation and make decisions based on inputs
+* Construct a neural network to represent a situation and make decisions based on inputs
 
 ## **Key Terms**
 
-* #### **Neural Network** - An interconnected network that makes decisions using weights and hidden layers. They are used to represent the relationship between words
+* **Neural Network** - An interconnected network that makes decisions using weights and hidden layers. They are used to represent the relationship between words
 
 ## Resources
 
@@ -281,14 +281,14 @@ markdown <<MARKDOWN
 
 # ✅ Lesson Recap: Attention Is All You Need
 
-#### After this lesson, you can 
+After this lesson, you can 
 
-* #### Explain how embeddings and neural networks are used in the attention process
-* #### Construct examples of words and sentences that require context clues to understand fully
+* Explain how embeddings and neural networks are used in the attention process
+* Construct examples of words and sentences that require context clues to understand fully
 
 ## **Key Terms**
 
-* #### **Attention** - A process that updates the meaning of each word by using the context from the other words in the input
+* **Attention** - A process that updates the meaning of each word by using the context from the other words in the input
 
 ## Resources
 
@@ -342,9 +342,9 @@ markdown <<MARKDOWN
 
 # ✅ Lesson Recap: Outputs & Probabilities
 
-#### After this lesson, you can 
+After this lesson, you can 
 
-* #### Explain how a language model uses probabilities to generate words as ouput
+* Explain how a language model uses probabilities to generate words as ouput
 
 ## Resources
 
@@ -366,13 +366,13 @@ markdown <<MARKDOWN
 
 # ✅ Lesson Recap: Hallucinations and Fabrications
 
-#### After this lesson, you can 
+After this lesson, you can 
 
-* #### Make recommendations regarding the input and output of a language model to avoid bias and harm
+* Make recommendations regarding the input and output of a language model to avoid bias and harm
 
 ## **Key Terms**
 
-* #### **Hallucinations** - Inaccuracies in a language model's response. These occur when the most probable response isn't accurate or factual
+* **Hallucinations** - Inaccuracies in a language model's response. These occur when the most probable response isn't accurate or factual
 
 ## Resources
 
@@ -414,10 +414,10 @@ markdown <<MARKDOWN
 
 # ✅ Lesson Recap: Project: Demystifying Generative AI
 
-#### After this lesson, you can 
+After this lesson, you can 
 
-* #### Identify and address misconceptions about generative AI
-* #### Create artifacts that explain generative AI concepts in a clear and engaging manner
+* Identify and address misconceptions about generative AI
+* Create artifacts that explain generative AI concepts in a clear and engaging manner
 
 ## Resources
 
@@ -473,10 +473,10 @@ markdown <<MARKDOWN
 
 # ✅ Lesson Recap: Embeddings: How They're Created
 
-#### After this lesson, you can 
+After this lesson, you can 
 
-* #### Explain how different passages can create different embeddings
-* #### Construct an embedding for a text passage
+* Explain how different passages can create different embeddings
+* Construct an embedding for a text passage
 
 ## Resources
 
@@ -511,13 +511,13 @@ markdown <<MARKDOWN
 
 # ✅ Lesson Recap: Neural Networks: How They're Trained
 
-#### After this lesson, you can 
+After this lesson, you can 
 
-* #### Use trial-and-error and past data to increase their accuracy in a supervised learning process
+* Use trial-and-error and past data to increase their accuracy in a supervised learning process
 
 ## **Key Terms**
 
-* #### **Supervised Learning** - A process that uses examples that are already labeled to find patterns and make decisions
+* **Supervised Learning** - A process that uses examples that are already labeled to find patterns and make decisions
 
 ## Resources
 

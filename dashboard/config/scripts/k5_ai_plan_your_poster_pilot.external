@@ -9,9 +9,9 @@ markdown <<MARKDOWN
 <img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/dfa6afa75c3ed875d9f83a42e6452bbc-image-1709763830890.png" />
 
 <div style="float: left; width: 70%; padding-left:20px">
-<h4>
+<p>
 <strong>It's time to explore the data!</strong>
-</h4>
+</p>
 
 **Step 1. Check out the student dataset:**  <a href="https://docs.google.com/spreadsheets/d/1t44C0ScGvgajfOEE6VE8sl7OQEJbgT1kvGDCnDgOPys/preview
 " target="_blank"> Student Dataset</a>.

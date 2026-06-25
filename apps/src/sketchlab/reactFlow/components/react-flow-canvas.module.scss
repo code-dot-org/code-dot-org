@@ -1,3 +1,7 @@
+// Pixels of clickable padding added around connection handles so users don't
+// have to land precisely on the small visible dot.
+$handle-grab-buffer: 10px;
+
 .canvasContainer {
   position: relative;
   width: 100%;
@@ -12,24 +16,57 @@
     border-color: var(--borders-neutral-solid);
   }
 
+  // Extend the clickable area past the small visible dot so a connection can
+  // be started by clicking within $handle-grab-buffer of the handle, not
+  // exactly on it.
+  :global(.react-flow__handle)::before {
+    content: '';
+    position: absolute;
+    inset: -$handle-grab-buffer;
+    border-radius: 50%;
+  }
+
   // Keyboard connect-mode: pulse the source node so the user knows it's selected.
   &.connectMode :global(.react-flow__node) {
     cursor: crosshair;
   }
 
   // Focus outline for keyboard navigation, matching the component library pattern.
-  :global(.react-flow__node:focus-visible),
+  // Group nodes are excluded — React Flow provides their focus indicator.
+  // Line anchors are excluded too — they get a focus ring on the handle dot
+  // itself below, not a square around the node.
+  :global(
+      .react-flow__node:not(
+          .react-flow__node-group,
+          .react-flow__node-lineAnchor
+        ):focus-visible
+    ),
   :global(.react-flow__edge:focus-visible) {
     outline: 2px solid var(--borders-brand-teal-primary);
     outline-offset: 2px;
     border-radius: 4px;
   }
 
-  // Additional focus outline support on standalone line edges for click/programmatic focus.
-  :global(.react-flow__edge).lineEdge:focus {
+  // Focus or selection outline for standalone line edges.
+  // :focus covers click/programmatic focus; :global(.selected) covers
+  // multi-selection where the edge has selected=true but no DOM focus.
+  :global(.react-flow__edge).lineEdge:focus,
+  :global(.react-flow__edge.selected).lineEdge {
     outline: 2px solid var(--borders-brand-teal-primary);
     outline-offset: 2px;
     border-radius: 4px;
+  }
+
+  // Show anchor dots when a lineAnchor node is part of a multi-selection.
+  :global(.react-flow__node-lineAnchor.selected .react-flow__handle) {
+    opacity: 1;
+  }
+
+  // Group nodes: transparent background; React Flow provides the focus indicator.
+  // Override the wrapper background that React Flow injects via CSS variables.
+  :global(.react-flow__node-group) {
+    background: transparent;
+    border: none;
   }
 
   // Line anchors are tiny nodes; apply focus ring to the handle itself so it
@@ -39,7 +76,22 @@
   }
 
   :global(.react-flow__node-lineAnchor:focus .react-flow__handle) {
+    // Override the hidden-handle opacity so keyboard focus stays visible.
+    // pointer-events stays off (as in .lineAnchorOnFocusedEdge below) so
+    // drags on the dot fall through to the anchor node and move the
+    // endpoint, rather than hitting the handle.
+    opacity: 1;
     box-shadow: 0 0 0 2px var(--borders-brand-teal-primary);
+  }
+
+  // Show endpoint handles when the associated line edge is focused.
+  // ReactFlowCanvas adds this class to anchor nodes of the focused edge.
+  // pointer-events is intentionally not overridden: the handle is a visual
+  // indicator only; the user drags the anchor node itself, not the handle.
+  .lineAnchorOnFocusedEdge {
+    :global(.react-flow__handle) {
+      opacity: 1;
+    }
   }
 
   // Controls panel: themed background and text.

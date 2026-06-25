@@ -17,7 +17,7 @@
 # 2) Update the MAP_TILESET_ID constant to censustiles-[ACCESS_REPORT_YEAR] in AdoptionMap.tsx
 
 require_relative '../dashboard/config/environment'
-require_relative '../pegasus/helpers/properties'
+require 'cdo/pegasus/properties'
 require_relative './cron/upload_to_mapbox'
 
 raise "CDO.mapbox_upload_token is not defined" unless CDO.mapbox_upload_token

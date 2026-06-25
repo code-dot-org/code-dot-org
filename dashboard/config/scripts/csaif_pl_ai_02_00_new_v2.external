@@ -12,7 +12,7 @@ markdown <<MARKDOWN
 
 # Welcome!
 
-#### This professional learning module prepares you to teach **Foundations of AI Programming**—a unit that introduces students to programming fundamentals using Python (sequence, selection, iteration, functions), algorithms, and ethical computing, emphasizing human-centered design for inclusive, real-world problem-solving.
+This professional learning module prepares you to teach **Foundations of AI Programming**—a unit that introduces students to programming fundamentals using Python (sequence, selection, iteration, functions), algorithms, and ethical computing, emphasizing human-centered design for inclusive, real-world problem-solving.
 .
 
 ___
@@ -26,24 +26,24 @@ ___
 ___
 
 
-#### **By the end of this professional learning module, you will be able to:**
+**By the end of this professional learning module, you will be able to:**
 
-* #### Prepare to teach foundational AI programming concepts by modeling computational thinking and core programming constructs, including variables, functions, loops, and conditionals.
+* Prepare to teach foundational AI programming concepts by modeling computational thinking and core programming constructs, including variables, functions, loops, and conditionals.
 
-* #### Guide students in reasoning about program behavior and decision making, including nested conditionals and ethical considerations in algorithmic systems.
+* Guide students in reasoning about program behavior and decision making, including nested conditionals and ethical considerations in algorithmic systems.
 
-* #### Prepare students for a culminating project by guiding them through a structured, multi-day design and development process that includes brainstorming and decomposition, iterative coding with peer feedback, and reflection on both their creative choices and responsible AI use.
+* Prepare students for a culminating project by guiding them through a structured, multi-day design and development process that includes brainstorming and decomposition, iterative coding with peer feedback, and reflection on both their creative choices and responsible AI use.
 
 ## Take Our Pre-Survey
 
-#### To better gauge your learning and improve this professional learning module, please take our pre-survey - it will take fewer than five minutes to complete.
+To better gauge your learning and improve this professional learning module, please take our pre-survey - it will take fewer than five minutes to complete.
 
 <div style="margin: 20px 0px">
 <a class="btn btn-large btn-primary" href="https://studio.code.org/form/selfpaced_pd_teaching_aif_programming_pre_survey" target="blank" rel="noopener noreferrer">Take the Pre-Survey</a>
 </div>
 
 ### **Suggested total time for this module:** 120 minutes
-#### *Teaching Foundations of AI Programming is broken up into two 60 minute lessons. When you're done with Part 1, continue onto Part 2.*
+*Teaching Foundations of AI Programming is broken up into two 60 minute lessons. When you're done with Part 1, continue onto Part 2.*
 
 
 

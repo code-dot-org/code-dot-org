@@ -1,6 +1,7 @@
 import type {Brand} from '../brand/brand';
 import {getBrandFromHostname} from '../brand/getBrandFromHostname';
 import {getDashboardApiUrl} from '../dashboard/getDashboardApiUrl';
+import {getMarketingOrigin} from './getMarketingOrigin';
 import {getEnvironmentFromHostname, type Environment} from '../environment';
 import {parse} from 'tldts';
 
@@ -63,6 +64,8 @@ export class SiteConfig {
   public readonly brand: Brand;
   public readonly environment: Environment;
   public readonly dashboardApiUrl: string;
+  /** Brand- and environment-aware marketing-site origin (scheme + host). */
+  public readonly marketingOrigin: string;
 
   /**
    * Observability runtime config parsed from the meta tag.
@@ -78,12 +81,28 @@ export class SiteConfig {
     this.brand = getBrandFromHostname(this.host);
     this.environment = getEnvironmentFromHostname();
     this.dashboardApiUrl = getDashboardApiUrl(this.environment);
+    this.marketingOrigin = getMarketingOrigin(this.brand, this.environment);
 
     const runtime = parseRuntimeConfig();
     this.observability = {
       provider: runtime.observability?.provider ?? 'none',
       ...runtime.observability,
     };
+  }
+
+  /**
+   * Build a brand- and environment-aware marketing-site URL.
+   * Mirrors Rails's `CDO.code_org_url(path)`.
+   * Pass-through when `path` is already absolute.
+   * Empty `path` returns the origin itself.
+   *
+   * @param path - Relative path (e.g. '/privacy') or absolute URL.
+   * @returns Fully-qualified URL string.
+   */
+  marketingUrl(path: string = ''): string {
+    return path
+      ? new URL(path, this.marketingOrigin).toString()
+      : this.marketingOrigin;
   }
 }
 

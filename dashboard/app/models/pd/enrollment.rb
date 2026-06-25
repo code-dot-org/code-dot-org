@@ -32,6 +32,28 @@ require 'cdo/code_generation'
 require 'cdo/safe_names'
 
 class Pd::Enrollment < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :restricted,
+    pd_workshop_id: :restricted,
+    name: :restricted,
+    first_name: :restricted,
+    last_name: :restricted,
+    email: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
+    school: :restricted,
+    code: :restricted,
+    user_id: :restricted,
+    survey_sent_at: :restricted,
+    completed_survey_id: :restricted,
+    school_info_id: :restricted,
+    deleted_at: :restricted,
+    properties: :restricted,
+    application_id: :restricted,
+  )
+
   include SchoolInfoDeduplicator
   include Rails.application.routes.url_helpers
   include Pd::WorkshopConstants
@@ -167,11 +189,11 @@ class Pd::Enrollment < ApplicationRecord
 
   def exit_survey_url
     if workshop.course == Pd::Workshop::COURSE_CSF && (workshop.subject == Pd::Workshop::SUBJECT_CSF_101 || workshop.subject == Pd::Workshop::SUBJECT_CSF_DISTRICT)
-      CDO.studio_url "pd/workshop_survey/csf/post101/#{code}", CDO.default_scheme
+      CDO.studio_url("pd/workshop_survey/csf/post101/#{code}")
     elsif workshop.csf? && workshop.subject == Pd::Workshop::SUBJECT_CSF_201
-      CDO.studio_url "/pd/workshop_survey/csf/post201/#{code}", CDO.default_scheme
+      CDO.studio_url("/pd/workshop_survey/csf/post201/#{code}")
     else
-      CDO.studio_url "/pd/workshop_survey/post/#{code}", CDO.default_scheme
+      CDO.studio_url("/pd/workshop_survey/post/#{code}")
     end
   end
 

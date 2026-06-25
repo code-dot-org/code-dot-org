@@ -238,7 +238,7 @@ module Pd::Application
     end
 
     def application_url
-      CDO.studio_url("/pd/application_dashboard/#{course}_teachers/#{id}", CDO.default_scheme)
+      CDO.studio_url("/pd/application_dashboard/#{course}_teachers/#{id}")
     end
 
     def principal_email

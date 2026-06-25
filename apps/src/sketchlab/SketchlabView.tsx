@@ -1,6 +1,12 @@
+import {isEqual, omit} from 'lodash';
 import React from 'react';
 
-import {LabProps, LevelProperties} from '@cdo/apps/lab2/types';
+import {
+  LabProps,
+  LevelProperties,
+  ProjectSources,
+  SketchlabReactFlowSource,
+} from '@cdo/apps/lab2/types';
 import SourcesContainer from '@cdo/apps/lab2/views/SourcesContainer';
 import experiments from '@cdo/apps/util/experiments';
 
@@ -11,20 +17,55 @@ import ReactFlowSketchLabView, {
   REACT_FLOW_DEFAULT_SOURCES,
 } from './reactFlow/ReactFlowSketchLabView';
 
+function isReactFlowSource(
+  source: ProjectSources['source']
+): source is SketchlabReactFlowSource {
+  return (
+    typeof source === 'object' &&
+    source !== null &&
+    Array.isArray((source as SketchlabReactFlowSource).nodes) &&
+    Array.isArray((source as SketchlabReactFlowSource).edges)
+  );
+}
+
 export default function SketchlabView(props: LabProps<LevelProperties>) {
-  const useReactFlow = experiments.isEnabledAllowingQueryString('sketch2');
-  const defaultSources = useReactFlow
-    ? REACT_FLOW_DEFAULT_SOURCES
-    : DEFAULT_SOURCES;
-  const InnerView = useReactFlow
-    ? ReactFlowSketchLabView
-    : ExcalidrawSketchLabView;
+  // Legacy version of Sketch Lab is behind a flag for now, so we can check on old behavior.
+  const useExcalidraw = experiments.isEnabledAllowingQueryString(
+    experiments.EXCALIDRAW
+  );
+  const defaultSources = useExcalidraw
+    ? DEFAULT_SOURCES
+    : REACT_FLOW_DEFAULT_SOURCES;
+  const InnerView = useExcalidraw
+    ? ExcalidrawSketchLabView
+    : ReactFlowSketchLabView;
+
+  // Function to tell SourcesContainer whether the sources have changed in a way
+  // that should trigger a progress report update. Skipped for legacy Excalidraw.
+  // For React Flow, we ignore viewport changes and per-item selection state, as
+  // those are not meaningful edits.
+  const sourcesChanged = useExcalidraw
+    ? undefined
+    : (prevSources: ProjectSources, newSources: ProjectSources) => {
+        const prev = prevSources.source;
+        const next = newSources.source;
+        if (!isReactFlowSource(prev) || !isReactFlowSource(next)) {
+          return false;
+        }
+        const normalize = (s: SketchlabReactFlowSource) => ({
+          ...omit(s, 'viewport'),
+          nodes: s.nodes.map(n => omit(n, 'selected')),
+          edges: s.edges.map(e => omit(e, 'selected')),
+        });
+        return !isEqual(normalize(prev), normalize(next));
+      };
 
   return (
     <SourcesContainer
       {...props}
       defaultSources={defaultSources}
       key={props.levelProperties.id}
+      checkSourcesChangedForProgressReport={sourcesChanged}
     >
       <InnerView levelProperties={props.levelProperties} />
     </SourcesContainer>

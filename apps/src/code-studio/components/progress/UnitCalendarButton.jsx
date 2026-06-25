@@ -1,7 +1,8 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 import i18n from '@cdo/locale';
 
@@ -32,24 +33,24 @@ export default class UnitCalendarButton extends React.Component {
   render() {
     return (
       <div>
-        <Button
+        <MuiButton
           onClick={this.openDialog}
-          text={i18n.viewCalendarButton()}
-          icon="calendar"
-          color={Button.ButtonColor.blue}
+          variant="contained"
+          color="primary"
+          startIcon={<FontAwesomeV6Icon iconName="calendar" />}
           style={styles.button}
+        >
+          {i18n.viewCalendarButton()}
+        </MuiButton>
+        <UnitCalendarDialog
+          isOpen={this.state.isDialogOpen}
+          handleClose={this.closeDialog}
+          lessons={this.props.lessons}
+          weeklyInstructionalMinutes={
+            this.props.weeklyInstructionalMinutes || 225
+          }
+          scriptId={this.props.scriptId}
         />
-        {this.state.isDialogOpen && (
-          <UnitCalendarDialog
-            isOpen={true}
-            handleClose={this.closeDialog}
-            lessons={this.props.lessons}
-            weeklyInstructionalMinutes={
-              this.props.weeklyInstructionalMinutes || 225
-            }
-            scriptId={this.props.scriptId}
-          />
-        )}
       </div>
     );
   }

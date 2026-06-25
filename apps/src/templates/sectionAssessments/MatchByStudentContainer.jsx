@@ -1,3 +1,5 @@
+import Link from '@code-dot-org/component-library/link';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -17,6 +19,8 @@ import {
   currentStudentHasResponses,
   setQuestionIndex,
 } from './sectionAssessmentsRedux';
+
+import moduleStyles from './match-by-student-container.module.scss';
 
 class MatchByStudentContainer extends Component {
   static propTypes = {
@@ -44,26 +48,30 @@ class MatchByStudentContainer extends Component {
       <div>
         {studentId !== ALL_STUDENT_FILTER && currentStudentHasResponses && (
           <div>
-            <h2>
+            <Typography variant="h2">
               {i18n.matchStudentOverview({
                 studentName: studentAnswerData.name,
               })}
-            </h2>
+            </Typography>
             {matchStructure.map((question, index) => (
               <div key={index}>
-                <div style={styles.text}>
+                <div className={moduleStyles.questionLabel}>
                   {`${question.questionNumber}. ${question.question.slice(
                     0,
                     QUESTION_CHARACTER_LIMIT
                   )}`}
                   {question.question.length >= QUESTION_CHARACTER_LIMIT && (
-                    <a
-                      onClick={() => {
+                    <Link
+                      size="s"
+                      onClick={e => {
+                        // Link defaults href to "#"; suppress the page-top jump
+                        // since this opens a modal rather than navigating.
+                        e.preventDefault();
                         this.selectQuestion(question.questionNumber - 1);
                       }}
                     >
-                      <span>{i18n.seeFullQuestion()}</span>
-                    </a>
+                      {i18n.seeFullQuestion()}
+                    </Link>
                   )}
                 </div>
                 <MatchByStudentTable
@@ -78,14 +86,6 @@ class MatchByStudentContainer extends Component {
     );
   }
 }
-
-const styles = {
-  text: {
-    font: 10,
-    paddingTop: 20,
-    paddingBottom: 20,
-  },
-};
 
 export const UnconnectedMatchByStudentContainer = MatchByStudentContainer;
 

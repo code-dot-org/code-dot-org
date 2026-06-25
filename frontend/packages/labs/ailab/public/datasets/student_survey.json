@@ -1,0 +1,766 @@
+{
+  "name": "student_survey",
+  "card": {
+    "description": "A dataset of survey responses gathered by Slovak students at FSEV UK. Questions were asked about music, culture, their own phobias, and their demographic information. Most responses are rankings on a scale from 1 to 5. For example, the question 'Do you enjoy listening to music?' offered a scale from 1 (Strongly disagree) to 5 (Strongly agree). This dataset has a huge amount of questions to explore.",
+    "source": "Kaggle (https://www.kaggle.com/miroslavsabo/young-people-survey)",
+    "lastUpdated": "2017",
+    "context": {
+      "createdBy": "Miroslav Szabo",
+      "potentialUses": "For example, determine if someone might like a certain type of music based on their other tastes.",
+      "potentialMisuses": "Using demographic information from a limited dataset to make assumptions about subgroups of people: for example, asking predictions about which genders are more likely to have which fears."
+    }
+  },
+  "defaultLabelColumn": "",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "Music",
+      "description": "I enjoy listening to music"
+    },
+    {
+      "type": "categorical",
+      "id": "Slow songs or fast songs",
+      "description": "I prefer fast-paced music"
+    },
+    {
+      "type": "categorical",
+      "id": "Dance",
+      "description": "I enjoy dance music"
+    },
+    {
+      "type": "categorical",
+      "id": "Folk",
+      "description": "I enjoy folk music"
+    },
+    {
+      "type": "categorical",
+      "id": "Country",
+      "description": "I enjoy country music"
+    },
+    {
+      "type": "categorical",
+      "id": "Classical music",
+      "description": "I enjoy Classical music"
+    },
+    {
+      "type": "categorical",
+      "id": "Musical",
+      "description": "I enjoy Musicals music"
+    },
+    {
+      "type": "categorical",
+      "id": "Pop",
+      "description": "I enjoy Pop music"
+    },
+    {
+      "type": "categorical",
+      "id": "Rock",
+      "description": "I enjoy Rock music"
+    },
+    {
+      "type": "categorical",
+      "id": "Metal or Hardrock",
+      "description": "I enjoy Metal or Hardrock music"
+    },
+    {
+      "type": "categorical",
+      "id": "Punk",
+      "description": "I enjoy Punk music"
+    },
+    {
+      "type": "categorical",
+      "id": "Hiphop, Rap",
+      "description": "I enjoy Hiphop or Rap music"
+    },
+    {
+      "type": "categorical",
+      "id": "Reggae, Ska",
+      "description": "I enjoy Reggae or Ska music"
+    },
+    {
+      "type": "categorical",
+      "id": "Swing, Jazz",
+      "description": "I enjoy Swing or Jazz music"
+    },
+    {
+      "type": "categorical",
+      "id": "Rock n roll",
+      "description": "I enjoy Rock n roll music"
+    },
+    {
+      "type": "categorical",
+      "id": "Alternative",
+      "description": "I enjoy Alternative music"
+    },
+    {
+      "type": "categorical",
+      "id": "Latino",
+      "description": "I enjoy Latino music"
+    },
+    {
+      "type": "categorical",
+      "id": "Techno, Trance",
+      "description": "I enjoy Techno or Trance music"
+    },
+    {
+      "type": "categorical",
+      "id": "Opera",
+      "description": "I enjoy Opera music"
+    },
+    {
+      "type": "categorical",
+      "id": "Movies",
+      "description": "I enjoy watching movies"
+    },
+    {
+      "type": "categorical",
+      "id": "Horror",
+      "description": "I enjoy horror movies"
+    },
+    {
+      "type": "categorical",
+      "id": "Thriller",
+      "description": "I enjoy Thriller movies"
+    },
+    {
+      "type": "categorical",
+      "id": "Comedy",
+      "description": "I enjoy Comedy movies"
+    },
+    {
+      "type": "categorical",
+      "id": "Romantic",
+      "description": "I enjoy Romantic movies"
+    },
+    {
+      "type": "categorical",
+      "id": "Sci-fi",
+      "description": "I enjoy Sci-fi movies"
+    },
+    {
+      "type": "categorical",
+      "id": "War",
+      "description": "I enjoy War movies"
+    },
+    {
+      "type": "categorical",
+      "id": "Fantasy/Fairy tales",
+      "description": "I enjoy Fantasy/Fairy tale movies"
+    },
+    {
+      "type": "categorical",
+      "id": "Animated",
+      "description": "I enjoy Animated movies"
+    },
+    {
+      "type": "categorical",
+      "id": "Documentary",
+      "description": "I enjoy Documentary movies"
+    },
+    {
+      "type": "categorical",
+      "id": "Western",
+      "description": "I enjoy Western movies"
+    },
+    {
+      "type": "categorical",
+      "id": "Action",
+      "description": "I enjoy Action movies"
+    },
+    {
+      "type": "categorical",
+      "id": "History",
+      "description": "I like history"
+    },
+    {
+      "type": "categorical",
+      "id": "Psychology",
+      "description": "I like Psychology"
+    },
+    {
+      "type": "categorical",
+      "id": "Politics",
+      "description": "I like Politics"
+    },
+    {
+      "type": "categorical",
+      "id": "Mathematics",
+      "description": "I like Mathematics"
+    },
+    {
+      "type": "categorical",
+      "id": "Physics",
+      "description": "I like Physics"
+    },
+    {
+      "type": "categorical",
+      "id": "Internet",
+      "description": "I like to use the Internet"
+    },
+    {
+      "type": "categorical",
+      "id": "PC",
+      "description": "I like to use PCs"
+    },
+    {
+      "type": "categorical",
+      "id": "Economy Management",
+      "description": "I like Economy Management"
+    },
+    {
+      "type": "categorical",
+      "id": "Biology",
+      "description": "I like Biology"
+    },
+    {
+      "type": "categorical",
+      "id": "Chemistry",
+      "description": "I like Chemistry"
+    },
+    {
+      "type": "categorical",
+      "id": "Reading",
+      "description": "I like to Reading"
+    },
+    {
+      "type": "categorical",
+      "id": "Geography",
+      "description": "I like Geography"
+    },
+    {
+      "type": "categorical",
+      "id": "Foreign languages",
+      "description": "I like Foreign languages"
+    },
+    {
+      "type": "categorical",
+      "id": "Medicine",
+      "description": "I like Medicine"
+    },
+    {
+      "type": "categorical",
+      "id": "Law",
+      "description": "I like Law"
+    },
+    {
+      "type": "categorical",
+      "id": "Cars",
+      "description": "I like Cars"
+    },
+    {
+      "type": "categorical",
+      "id": "Art exhibitions",
+      "description": "I like Art exhibitions"
+    },
+    {
+      "type": "categorical",
+      "id": "Religion",
+      "description": "I like Religion"
+    },
+    {
+      "type": "categorical",
+      "id": "Countryside, outdoors",
+      "description": "I like the Countryside, outdoors"
+    },
+    {
+      "type": "categorical",
+      "id": "Dancing",
+      "description": "I like Dancing"
+    },
+    {
+      "type": "categorical",
+      "id": "Musical instruments",
+      "description": "I like Musical instruments"
+    },
+    {
+      "type": "categorical",
+      "id": "Writing",
+      "description": "I like Writing"
+    },
+    {
+      "type": "categorical",
+      "id": "Passive sport",
+      "description": "I like Passive sports"
+    },
+    {
+      "type": "categorical",
+      "id": "Active sport",
+      "description": "I like Active sport"
+    },
+    {
+      "type": "categorical",
+      "id": "Gardening",
+      "description": "I like Gardening"
+    },
+    {
+      "type": "categorical",
+      "id": "Celebrities",
+      "description": "I like Celebrities"
+    },
+    {
+      "type": "categorical",
+      "id": "Shopping",
+      "description": "I like Shopping"
+    },
+    {
+      "type": "categorical",
+      "id": "Science and technology",
+      "description": "I like Science and technology"
+    },
+    {
+      "type": "categorical",
+      "id": "Theatre",
+      "description": "I like Theatre"
+    },
+    {
+      "type": "categorical",
+      "id": "Fun with friends",
+      "description": "I like having Fun with friends"
+    },
+    {
+      "type": "categorical",
+      "id": "Adrenaline sports",
+      "description": "I like Adrenaline sports"
+    },
+    {
+      "type": "categorical",
+      "id": "Pets",
+      "description": "I like Pets"
+    },
+    {
+      "type": "categorical",
+      "id": "Flying",
+      "description": "I am afraid of flying"
+    },
+    {
+      "type": "categorical",
+      "id": "Storm",
+      "description": "I am afraid of Storms"
+    },
+    {
+      "type": "categorical",
+      "id": "Darkness",
+      "description": "I am afraid of Darkness"
+    },
+    {
+      "type": "categorical",
+      "id": "Heights",
+      "description": "I am afraid of Heights"
+    },
+    {
+      "type": "categorical",
+      "id": "Spiders",
+      "description": "I am afraid of Spiders"
+    },
+    {
+      "type": "categorical",
+      "id": "Snakes",
+      "description": "I am afraid of Snakes"
+    },
+    {
+      "type": "categorical",
+      "id": "Rats",
+      "description": "I am afraid of Rats"
+    },
+    {
+      "type": "categorical",
+      "id": "Ageing",
+      "description": "I am afraid of Ageing"
+    },
+    {
+      "type": "categorical",
+      "id": "Dangerous dogs",
+      "description": "I am afraid of Dangerous dogs"
+    },
+    {
+      "type": "categorical",
+      "id": "Fear of public speaking",
+      "description": "I am afraid of  public speaking"
+    },
+    {
+      "type": "categorical",
+      "id": "Smoking",
+      "description": "Smoking habits"
+    },
+    {
+      "type": "categorical",
+      "id": "Alcohol",
+      "description": "Drinking habits"
+    },
+    {
+      "type": "categorical",
+      "id": "Healthy eating",
+      "description": "I live a very healthy lifestyle"
+    },
+    {
+      "type": "categorical",
+      "id": "Daily events",
+      "description": "I take notice of what goes on around me."
+    },
+    {
+      "type": "categorical",
+      "id": "Prioritising workload",
+      "description": "I try to do tasks as soon as possible and not leave them until last minute."
+    },
+    {
+      "type": "categorical",
+      "id": "Writing notes",
+      "description": "I always make a list so I don't forget anything."
+    },
+    {
+      "type": "categorical",
+      "id": "Workaholism",
+      "description": "I often study or work even in my spare time."
+    },
+    {
+      "type": "categorical",
+      "id": "Thinking ahead",
+      "description": "I look at things from all different angles before I go ahead."
+    },
+    {
+      "type": "categorical",
+      "id": "Final judgement",
+      "description": "I believe that bad people will suffer one day and good people will be rewarded."
+    },
+    {
+      "type": "categorical",
+      "id": "Reliability",
+      "description": "I am reliable at work and always complete all tasks given to me."
+    },
+    {
+      "type": "categorical",
+      "id": "Keeping promises",
+      "description": "I always keep my promises."
+    },
+    {
+      "type": "categorical",
+      "id": "Loss of interest",
+      "description": "I can fall for someone very quickly and then completely lose interest."
+    },
+    {
+      "type": "categorical",
+      "id": "Friends versus money",
+      "description": "I would rather have lots of friends than lots of money."
+    },
+    {
+      "type": "categorical",
+      "id": "Funniness",
+      "description": "I always try to be the funniest one."
+    },
+    {
+      "type": "categorical",
+      "id": "Fake",
+      "description": "I can be two faced sometimes."
+    },
+    {
+      "type": "categorical",
+      "id": "Criminal damage",
+      "description": "I damaged things in the past when angry."
+    },
+    {
+      "type": "categorical",
+      "id": "Decision making",
+      "description": "I take my time to make decisions."
+    },
+    {
+      "type": "categorical",
+      "id": "Elections",
+      "description": "I always try to vote in elections."
+    },
+    {
+      "type": "categorical",
+      "id": "Self-criticism",
+      "description": "I often think about and regret the decisions I make."
+    },
+    {
+      "type": "categorical",
+      "id": "Judgment calls",
+      "description": "I can tell if people listen to me or not when I talk to them."
+    },
+    {
+      "type": "categorical",
+      "id": "Hypochondria",
+      "description": "I am a hypochondriac."
+    },
+    {
+      "type": "categorical",
+      "id": "Empathy",
+      "description": "I am emphatetic person."
+    },
+    {
+      "type": "categorical",
+      "id": "Eating to survive",
+      "description": "I eat because I have to. I don't enjoy food and eat as fast as I can."
+    },
+    {
+      "type": "categorical",
+      "id": "Giving",
+      "description": "I try to give as much as I can to other people at Christmas."
+    },
+    {
+      "type": "categorical",
+      "id": "Compassion to animals",
+      "description": "I don't like seeing animals suffering."
+    },
+    {
+      "type": "categorical",
+      "id": "Borrowed stuff",
+      "description": "I look after things I have borrowed from others."
+    },
+    {
+      "type": "categorical",
+      "id": "Loneliness",
+      "description": "I feel lonely in life."
+    },
+    {
+      "type": "categorical",
+      "id": "Cheating in school",
+      "description": "I used to cheat at school."
+    },
+    {
+      "type": "categorical",
+      "id": "Health",
+      "description": "I worry about my health."
+    },
+    {
+      "type": "categorical",
+      "id": "Changing the past",
+      "description": "I wish I could change the past because of the things I have done."
+    },
+    {
+      "type": "categorical",
+      "id": "God",
+      "description": "I believe in God."
+    },
+    {
+      "type": "categorical",
+      "id": "Dreams",
+      "description": "I always have good dreams."
+    },
+    {
+      "type": "categorical",
+      "id": "Charity",
+      "description": "I always give to charity."
+    },
+    {
+      "type": "categorical",
+      "id": "Number of friends",
+      "description": "I have lots of friends."
+    },
+    {
+      "type": "categorical",
+      "id": "Punctuality",
+      "description": "Timekeeping."
+    },
+    {
+      "type": "categorical",
+      "id": "Lying",
+      "description": "Do you lie to others?"
+    },
+    {
+      "type": "categorical",
+      "id": "Waiting",
+      "description": "I am very patient."
+    },
+    {
+      "type": "categorical",
+      "id": "New environment",
+      "description": "I can quickly adapt to a new environment."
+    },
+    {
+      "type": "categorical",
+      "id": "Mood swings",
+      "description": "My moods change quickly."
+    },
+    {
+      "type": "categorical",
+      "id": "Appearence and gestures",
+      "description": "I am well mannered and I look after my appearance."
+    },
+    {
+      "type": "categorical",
+      "id": "Socializing",
+      "description": "I enjoy meeting new people."
+    },
+    {
+      "type": "categorical",
+      "id": "Achievements",
+      "description": "I always let other people know about my achievements."
+    },
+    {
+      "type": "categorical",
+      "id": "Responding to a serious letter",
+      "description": "I think carefully before answering any important letters."
+    },
+    {
+      "type": "categorical",
+      "id": "Children",
+      "description": "I enjoy childrens' company."
+    },
+    {
+      "type": "categorical",
+      "id": "Assertiveness",
+      "description": "I am not afraid to give my opinion if I feel strongly about something."
+    },
+    {
+      "type": "categorical",
+      "id": "Getting angry",
+      "description": "I can get angry very easily."
+    },
+    {
+      "type": "categorical",
+      "id": "Knowing the right people",
+      "description": "I always make sure I connect with the right people."
+    },
+    {
+      "type": "categorical",
+      "id": "Public speaking",
+      "description": "I have to be well prepared before public speaking."
+    },
+    {
+      "type": "categorical",
+      "id": "Unpopularity",
+      "description": "I will find a fault in myself if people don't like me."
+    },
+    {
+      "type": "categorical",
+      "id": "Life struggles",
+      "description": "I cry when I feel down or things don't go the right way."
+    },
+    {
+      "type": "categorical",
+      "id": "Happiness in life",
+      "description": "I am 100% happy with my life."
+    },
+    {
+      "type": "categorical",
+      "id": "Energy levels",
+      "description": "I am always full of life and energy."
+    },
+    {
+      "type": "categorical",
+      "id": "Small - big dogs",
+      "description": "I prefer big dangerous dogs to smaller, calmer dogs."
+    },
+    {
+      "type": "categorical",
+      "id": "Personality",
+      "description": "I believe all my personality traits are positive."
+    },
+    {
+      "type": "categorical",
+      "id": "Finding lost valuables",
+      "description": "If I find something the doesn't belong to me I will hand it in."
+    },
+    {
+      "type": "categorical",
+      "id": "Getting up",
+      "description": "I find it very difficult to get up in the morning."
+    },
+    {
+      "type": "categorical",
+      "id": "Interests or hobbies",
+      "description": "I have many different hobbies and interests."
+    },
+    {
+      "type": "categorical",
+      "id": "Parents' advice",
+      "description": "I always listen to my parents' advice."
+    },
+    {
+      "type": "categorical",
+      "id": "Questionnaires or polls",
+      "description": "I enjoy taking part in surveys."
+    },
+    {
+      "type": "categorical",
+      "id": "Internet usage",
+      "description": "How much time do you spend online?"
+    },
+    {
+      "type": "categorical",
+      "id": "Finances",
+      "description": "I save all the money I can."
+    },
+    {
+      "type": "categorical",
+      "id": "Shopping centres",
+      "description": "I enjoy going to large shopping centres."
+    },
+    {
+      "type": "categorical",
+      "id": "Branded clothing",
+      "description": "I prefer branded clothing to non branded."
+    },
+    {
+      "type": "categorical",
+      "id": "Entertainment spending",
+      "description": "I spend a lot of money on  partying and socializing."
+    },
+    {
+      "type": "categorical",
+      "id": "Spending on looks",
+      "description": "I spend a lot of money on my appearance."
+    },
+    {
+      "type": "categorical",
+      "id": "Spending on gadgets",
+      "description": "I spend a lot of money on gadgets."
+    },
+    {
+      "type": "categorical",
+      "id": "Spending on healthy eating",
+      "description": "I will hapilly pay more money for good, quality or healthy food."
+    },
+    {
+      "type": "numerical",
+      "id": "Age",
+      "description": "Age"
+    },
+    {
+      "type": "numerical",
+      "id": "Height",
+      "description": "Height"
+    },
+    {
+      "type": "numerical",
+      "id": "Weight",
+      "description": "Weight"
+    },
+    {
+      "type": "numerical",
+      "id": "Number of siblings",
+      "description": "Number of siblings"
+    },
+    {
+      "type": "categorical",
+      "id": "Gender",
+      "description": "Gender"
+    },
+    {
+      "type": "categorical",
+      "id": "Left - right handed",
+      "description": "Left - right handed"
+    },
+    {
+      "type": "categorical",
+      "id": "Education",
+      "description": "Highest education achieved:"
+    },
+    {
+      "type": "categorical",
+      "id": "Only child",
+      "description": "I am the only child"
+    },
+    {
+      "type": "categorical",
+      "id": "Village - town",
+      "description": "I spent most of my childhood in a: village or city."
+    },
+    {
+      "type": "categorical",
+      "id": "House - block of flats",
+      "description": "I lived most of my childhood in a: house or block of flats (apartments)."
+    }
+  ]
+}

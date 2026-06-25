@@ -1,4 +1,3 @@
-export * from './aiTutorUtils';
 export * from './editableFileType';
 export * from './getUrlForFile';
 export * from './isDuplicateFileName';
@@ -21,6 +20,7 @@ export * from './getPossibleDestinationFoldersForFolder';
 export * from './hasPreview';
 export * from './repairOpenFiles';
 export * from './sortFilesByName';
+export * from './uniqueFileName';
 export * from './validateBackpackFileName';
 export * from './validateFileName';
 export * from './validateFolderMove';

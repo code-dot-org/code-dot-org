@@ -1,5 +1,6 @@
 import {ButtonProps as MuiButtonProps} from '@mui/material';
 import {render, screen} from '@testing-library/react';
+import {vi} from 'vitest';
 
 import {ImageProps} from '@/image';
 import Video, {VideoProps} from '@/video';
@@ -7,7 +8,7 @@ import Video, {VideoProps} from '@/video';
 import HeroBanner from './../HeroBanner';
 
 // Mock Video to avoid issues with react-player
-jest.mock('@/video', () => ({
+vi.mock('@/video', () => ({
   __esModule: true,
   default: ({videoTitle}: {videoTitle: string}) => (
     <div>

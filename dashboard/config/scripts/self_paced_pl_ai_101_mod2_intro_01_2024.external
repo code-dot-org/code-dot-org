@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Practice
 
-#### Below are examples of various technologies. Mentally classify each ones as something that does use or do not use AI. Click on the box to get the answer and explanation. It’s okay if you don’t get them all on the first try!
+Below are examples of various technologies. Mentally classify each ones as something that does use or do not use AI. Click on the box to get the answer and explanation. It’s okay if you don’t get them all on the first try!
 
 <br>
 
@@ -14,7 +14,7 @@ markdown <<MARKDOWN
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
 
-#### **AI** Self-driving cars utilize artificial intelligence to interpret sensor data, make decisions in real-time, and navigate autonomously. AI algorithms help these vehicles understand their surroundings, predict the actions of other road users, and decide on the safest routes.
+**AI** Self-driving cars utilize artificial intelligence to interpret sensor data, make decisions in real-time, and navigate autonomously. AI algorithms help these vehicles understand their surroundings, predict the actions of other road users, and decide on the safest routes.
 
 </p></div>
 </details>
@@ -24,7 +24,7 @@ markdown <<MARKDOWN
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
 
-#### **AI** Facial recognition systems use artificial intelligence, specifically machine learning algorithms, to identify or verify individuals from images or video feeds. These systems learn from vast amounts of data to recognize facial features and patterns.
+**AI** Facial recognition systems use artificial intelligence, specifically machine learning algorithms, to identify or verify individuals from images or video feeds. These systems learn from vast amounts of data to recognize facial features and patterns.
 
 </p></div>
 </details>
@@ -34,7 +34,7 @@ markdown <<MARKDOWN
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
 
-#### **Not AI** Digital cameras capture images electronically. While modern cameras might incorporate AI features for enhancing image quality or adding functionalities like facial recognition, the fundamental technology of capturing images is not based on AI.
+**Not AI** Digital cameras capture images electronically. While modern cameras might incorporate AI features for enhancing image quality or adding functionalities like facial recognition, the fundamental technology of capturing images is not based on AI.
 
 </p></div>
 </details>
@@ -44,7 +44,7 @@ markdown <<MARKDOWN
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
 
-#### **AI** Music recommendation systems use artificial intelligence, particularly machine learning and deep learning algorithms, to analyze user behavior, preferences, and listening history to suggest songs, albums, or artists. These systems can identify patterns and preferences among vast datasets, enabling them to recommend music that a user is likely to enjoy, thereby personalizing the listening experience. They continuously learn from user interactions, improving their recommendations over time.
+**AI** Music recommendation systems use artificial intelligence, particularly machine learning and deep learning algorithms, to analyze user behavior, preferences, and listening history to suggest songs, albums, or artists. These systems can identify patterns and preferences among vast datasets, enabling them to recommend music that a user is likely to enjoy, thereby personalizing the listening experience. They continuously learn from user interactions, improving their recommendations over time.
 
 </p></div>
 </details>
@@ -54,7 +54,7 @@ markdown <<MARKDOWN
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
 
-#### **Not AI** Quantum computing is a type of computation that makes direct use of quantum-mechanical phenomena, such as superposition and entanglement, to perform operations on data. While quantum computers might accelerate AI applications, the technology itself does not inherently involve AI.
+**Not AI** Quantum computing is a type of computation that makes direct use of quantum-mechanical phenomena, such as superposition and entanglement, to perform operations on data. While quantum computers might accelerate AI applications, the technology itself does not inherently involve AI.
 
 </p></div>
 </details>
@@ -64,7 +64,7 @@ markdown <<MARKDOWN
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
 
-#### **Maybe AI** Many smart home devices, like thermostats that learn your schedule and lighting systems that adapt to your habits, incorporate AI to improve user experience through automation and personalization.
+**Maybe AI** Many smart home devices, like thermostats that learn your schedule and lighting systems that adapt to your habits, incorporate AI to improve user experience through automation and personalization.
 
 </p></div>
 </details>
@@ -74,7 +74,7 @@ markdown <<MARKDOWN
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
 
-#### **Not AI** 3D printing is a process of creating three-dimensional objects from a digital file, using additive processes where material is laid down in layers. This technology is revolutionary but does not inherently use AI, as it operates based on predefined models and settings.
+**Not AI** 3D printing is a process of creating three-dimensional objects from a digital file, using additive processes where material is laid down in layers. This technology is revolutionary but does not inherently use AI, as it operates based on predefined models and settings.
 
 </p></div>
 </details>
@@ -84,7 +84,7 @@ markdown <<MARKDOWN
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
 
-#### **AI** Chatbots, especially those capable of conducting conversations in a way that feels natural to users, use AI. They apply natural language processing and machine learning to understand and respond to user inquiries, learning over time to improve their responses.
+**AI** Chatbots, especially those capable of conducting conversations in a way that feels natural to users, use AI. They apply natural language processing and machine learning to understand and respond to user inquiries, learning over time to improve their responses.
 
 </p></div>
 </details>
@@ -94,10 +94,10 @@ markdown <<MARKDOWN
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
 
-#### **Not AI** Solar panels convert sunlight into electricity using photovoltaic cells. This technology is based on physical and chemical principles, without involving AI for its basic function. Some smart grid systems might use AI for optimization, but the panels themselves do not.
+**Not AI** Solar panels convert sunlight into electricity using photovoltaic cells. This technology is based on physical and chemical principles, without involving AI for its basic function. Some smart grid systems might use AI for optimization, but the panels themselves do not.
 
 </p></div>
 </details>
 
-#### Take a look at the correct answers and explanations. Which ones did you get? Which ones were you surprised by?
+Take a look at the correct answers and explanations. Which ones did you get? Which ones were you surprised by?
 MARKDOWN

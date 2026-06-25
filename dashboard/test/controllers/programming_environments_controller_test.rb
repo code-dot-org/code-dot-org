@@ -9,7 +9,6 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     File.stubs(:write)
     @levelbuilder = create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    Unit.stubs(:should_cache?).returns false
   end
 
   test 'data is passed down to edit page' do

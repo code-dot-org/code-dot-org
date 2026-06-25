@@ -17,6 +17,19 @@
 #  index_standard_categories_on_parent_category_id          (parent_category_id)
 #
 class StandardCategory < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    shortcode: :public,
+    framework_id: :public,
+    parent_category_id: :public,
+    category_type: :public,
+    properties: :public,
+    created_at: :public,
+    updated_at: :public,
+  )
+
   include SerializedProperties
 
   belongs_to :framework, optional: true

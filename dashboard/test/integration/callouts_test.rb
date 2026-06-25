@@ -2,7 +2,7 @@ require 'test_helper'
 
 class CalloutsTest < ActionDispatch::IntegrationTest
   setup do
-    Unit.stubs(:should_cache?).returns true
+    setup_script_cache
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     @script = create(:single_unit_course).first_unit
     @lesson_group = create(:lesson_group, script: @script)

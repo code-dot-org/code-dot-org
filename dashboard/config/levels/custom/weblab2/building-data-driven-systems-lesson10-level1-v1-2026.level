@@ -1,0 +1,186 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-05-09T05:54:54.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Explore a Sort\r\n\r\n## Do This:\r\n\r\n1. Click **Highest Rated** and watch how the movie grid changes.\r\n\r\n2. In `script.js`, find `sortHighestRatedMovies()`. Ask AI to help you explain how the movie list, `.sort()`, `return`, and `renderMovies()` work together.\r\n\r\n3. Check that you can explain:\r\n   - which movie property is being compared\r\n   - whether the movies are sorted high → low or low → high\r\n   - how sorting changes the order of movies\r\n   - how sorting is different from filtering\r\n   - how the sorted list gets passed to `renderMovies()`\r\n\r\n4. Above `sortHighestRatedMovies()`, add a `//` comment explaining what the sort does.\r\n\r\nRemember: this level focuses on the **sort → render** part of a pipeline.\r\n\r\nsort → render",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0"
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <title>Streamline: For You Feed</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n\n<body id=\"mainBody\">\n  <div id=\"appShell\" class=\"app-shell\">\n\n    <header id=\"siteHeader\" class=\"site-header\">\n      <h1 id=\"siteLogo\" class=\"logo\">STREAMLINE</h1>\n\n      <nav id=\"mainNav\" class=\"main-nav\">\n        <span id=\"navHome\">Home</span>\n        <span id=\"navMovies\">Movies</span>\n        <span id=\"navForYou\" class=\"active-nav\">For You</span>\n        <span id=\"navMyList\">My List</span>\n      </nav>\n    </header>\n\n    <section id=\"heroSection\" class=\"hero-section\">\n      <p id=\"heroEyebrow\" class=\"hero-eyebrow\">For You Feed</p>\n      <h2 id=\"heroTitle\" class=\"hero-title\">Design a movie feed that feels personalized.</h2>\n      <p id=\"heroText\" class=\"hero-text\">\n        Choose which movies belong in the feed, then sort them so the best matches appear first.\n      </p>\n    </section>\n\n    <section id=\"controlSection\" class=\"control-section\">\n      <div id=\"feedControls\" class=\"feed-controls\">\n        <button id=\"showAllBtn\" class=\"feed-chip secondary-chip\" type=\"button\">\n          All Movies\n        </button>\n\n        <button id=\"buildFeedBtn\" class=\"feed-chip primary-chip\" type=\"button\">\n          Run For You Feed\n        </button>\n      </div>\n\n      <p id=\"movieCount\" class=\"movie-count\">0 movies found</p>\n    </section>\n\n    <main id=\"movieGrid\" class=\"movie-grid\" aria-live=\"polite\"></main>\n\n  </div>\n\n  <script src=\"data.js\"></script>\n  <script src=\"helpers.js\"></script>\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// This array controls which movies are currently shown.\nlet displayMovies = [];\n\n// Build your For You feed algorithm here.\n// Use your plan from prompt.md before asking AI Tutor for help.\nconst buildForYouFeed = () => {\n  displayMovies = [];\n\n  // 1. FILTER\n  // Use movies.map() to go through each movie.\n  // Use an if statement to decide which movies belong in your feed.\n  // Use displayMovies.push(movie) to keep matching movies.\n\n\n\n\n\n\n\n  // 2. SORT\n  // Use displayMovies.sort() to choose what appears first.\n  // Example sort ideas:\n  // - highest rating first\n  // - newest year first\n  // - alphabetical by title\n\n\n\n\n\n\n\n  // 3. RENDER\n  // Keep this as the last line of your function.\n  renderMovies();\n};\n\n// Run the For You feed when the button is clicked.\ndocument.getElementById(\"buildFeedBtn\").addEventListener(\"click\", buildForYouFeed);\n\n// Show all movies when the app first loads.\nshowAllMovies();",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\n:root {\n  --bg-color: #050505;\n  --card-bg: #151515;\n  --card-hover: #202020;\n  --text-color: #ffffff;\n  --muted-text: #b8b8b8;\n  --accent-color: #e50914;\n  --accent-green: #46d369;\n  --border-color: #333333;\n}\n\nbody {\n  font-family: system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;\n  background-color: var(--bg-color);\n  color: var(--text-color);\n}\n\n.app-shell {\n  width: 100%;\n  max-width: 420px;\n  margin: 0 auto;\n  padding: 0 14px 32px;\n}\n\n/* Header */\n.site-header {\n  display: flex;\n  align-items: center;\n  gap: 14px;\n  padding: 18px 0 14px;\n}\n\n.logo {\n  color: var(--accent-color);\n  font-size: 22px;\n  font-weight: 900;\n  letter-spacing: 1px;\n  flex-shrink: 0;\n}\n\n.main-nav {\n  display: flex;\n  gap: 12px;\n  color: #d7d7d7;\n  font-size: 12px;\n  overflow-x: auto;\n  white-space: nowrap;\n}\n\n.main-nav span {\n  flex-shrink: 0;\n}\n\n.active-nav {\n  color: white;\n  font-weight: 800;\n}\n\n/* Hero */\n.hero-section {\n  min-height: 170px;\n  padding: 28px 18px 22px;\n  background:\n    linear-gradient(to right, rgba(5, 5, 5, 1), rgba(5, 5, 5, 0.72), rgba(5, 5, 5, 1)),\n    linear-gradient(135deg, #3a0f18, #111827, #050505);\n  border-radius: 16px;\n  margin-bottom: 18px;\n}\n\n.hero-eyebrow {\n  color: var(--accent-color);\n  font-weight: 800;\n  text-transform: uppercase;\n  letter-spacing: 0.08em;\n  font-size: 11px;\n  margin-bottom: 10px;\n}\n\n.hero-title {\n  font-size: 28px;\n  line-height: 1.05;\n  margin-bottom: 12px;\n}\n\n.hero-text {\n  color: #d4d4d4;\n  font-size: 13px;\n  line-height: 1.45;\n}\n\n/* Controls */\n.control-section {\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  gap: 11px;\n  margin-bottom: 16px;\n}\n\n.feed-controls {\n  width: 100%;\n  display: flex;\n  flex-wrap: nowrap;\n  gap: 8px;\n  overflow-x: auto;\n  padding-bottom: 4px;\n}\n\n.feed-chip {\n  flex-shrink: 0;\n  border-radius: 999px;\n  padding: 8px 13px;\n  font-size: 13px;\n  font-weight: 700;\n  cursor: pointer;\n}\n\n.primary-chip {\n  border: 1px solid var(--accent-color);\n  background-color: var(--accent-color);\n  color: white;\n}\n\n.secondary-chip {\n  border: 1px solid #444444;\n  background-color: #171717;\n  color: white;\n}\n\n.feed-chip:hover {\n  background-color: #2b2b2b;\n  border-color: #777777;\n}\n\n.primary-chip:hover {\n  background-color: #b80710;\n  border-color: #b80710;\n}\n\n.feed-chip:focus {\n  outline: 2px solid white;\n  outline-offset: 2px;\n}\n\n.movie-count {\n  color: var(--muted-text);\n  font-size: 12px;\n  white-space: nowrap;\n}\n\n/* Movie Grid */\n.movie-grid {\n  display: grid;\n  grid-template-columns: repeat(2, minmax(0, 1fr));\n  gap: 12px;\n}\n\n.movie-card {\n  background-color: var(--card-bg);\n  border-radius: 9px;\n  overflow: hidden;\n  transition: transform 0.2s, background-color 0.2s;\n}\n\n.movie-card:hover {\n  transform: scale(1.02);\n  background-color: var(--card-hover);\n}\n\n.poster-wrap {\n  position: relative;\n  aspect-ratio: 2 / 3;\n  background-color: #222222;\n  overflow: hidden;\n}\n\n.poster-image {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n}\n\n.movie-badge {\n  position: absolute;\n  top: 8px;\n  left: 8px;\n  background-color: var(--accent-color);\n  color: white;\n  font-size: 10px;\n  font-weight: 800;\n  padding: 3px 6px;\n  border-radius: 4px;\n}\n\n.movie-info {\n  padding: 9px;\n}\n\n.movie-title {\n  font-size: 14px;\n  line-height: 1.25;\n  margin-bottom: 6px;\n}\n\n.movie-meta {\n  color: var(--muted-text);\n  font-size: 12px;\n  margin-bottom: 5px;\n}\n\n.movie-rating {\n  color: var(--accent-green);\n  font-size: 12px;\n  font-weight: 700;\n}\n\n/* Extra-small windows */\n@media (max-width: 330px) {\n  .app-shell {\n    padding: 0 10px 28px;\n  }\n\n  .site-header {\n    flex-direction: column;\n    align-items: flex-start;\n    gap: 8px;\n  }\n\n  .hero-title {\n    font-size: 24px;\n  }\n\n  .movie-grid {\n    gap: 10px;\n  }\n\n  .movie-title {\n    font-size: 13px;\n  }\n}\n\n/* Tablet and desktop */\n@media (min-width: 520px) {\n  .app-shell {\n    max-width: 760px;\n    padding: 0 22px 44px;\n  }\n\n  .site-header {\n    justify-content: space-between;\n  }\n\n  .main-nav {\n    font-size: 14px;\n    gap: 18px;\n  }\n\n  .hero-title {\n    font-size: 36px;\n    max-width: 620px;\n  }\n\n  .hero-text {\n    font-size: 15px;\n    max-width: 580px;\n  }\n\n  .control-section {\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: center;\n  }\n\n  .feed-controls {\n    width: auto;\n  }\n\n  .movie-grid {\n    grid-template-columns: repeat(3, minmax(0, 1fr));\n    gap: 16px;\n  }\n}\n\n@media (min-width: 900px) {\n  .app-shell {\n    max-width: 1100px;\n  }\n\n  .movie-grid {\n    grid-template-columns: repeat(4, minmax(0, 1fr));\n    gap: 18px;\n  }\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "prompt.md",
+          "language": "md",
+          "contents": "# Clarify\n*\n*\n\n# Hone\n*\n*\n\n# Apply\n*\n*\n\n# Transfer\n\n\n",
+          "folderId": "0",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "data.js",
+          "contents": "const movies = [\n  {\n    id: 1,\n    title: \"Night Run\",\n    genre: \"Action\",\n    year: 2021,\n    rating: 8.1,\n    image: \"images/movie1.png\",\n    alt: \"Night Run movie poster\",\n    isNew: true\n  },\n  {\n    id: 2,\n    title: \"Space Camp\",\n    genre: \"Sci-Fi\",\n    year: 2023,\n    rating: 8.6,\n    image: \"images/movie2.png\",\n    alt: \"Space Camp movie poster\",\n    isNew: true\n  },\n  {\n    id: 3,\n    title: \"The Last Slice\",\n    genre: \"Comedy\",\n    year: 2019,\n    rating: 7.4,\n    image: \"images/movie3.png\",\n    alt: \"The Last Slice movie poster\",\n    isNew: false\n  },\n  {\n    id: 4,\n    title: \"Final Round\",\n    genre: \"Action\",\n    year: 2018,\n    rating: 7.9,\n    image: \"images/movie4.png\",\n    alt: \"Final Round movie poster\",\n    isNew: false\n  },\n  {\n    id: 5,\n    title: \"Quiet Signal\",\n    genre: \"Drama\",\n    year: 2020,\n    rating: 8.3,\n    image: \"images/movie5.png\",\n    alt: \"Quiet Signal movie poster\",\n    isNew: false\n  },\n  {\n    id: 6,\n    title: \"Weekend Weirdos\",\n    genre: \"Comedy\",\n    year: 2022,\n    rating: 7.8,\n    image: \"images/movie6.png\",\n    alt: \"Weekend Weirdos movie poster\",\n    isNew: true\n  },\n  {\n    id: 7,\n    title: \"Deep Orbit\",\n    genre: \"Sci-Fi\",\n    year: 2017,\n    rating: 7.1,\n    image: \"images/movie7.png\",\n    alt: \"Deep Orbit movie poster\",\n    isNew: false\n  },\n  {\n    id: 8,\n    title: \"Chase Mode\",\n    genre: \"Action\",\n    year: 2024,\n    rating: 8.4,\n    image: \"images/movie8.png\",\n    alt: \"Chase Mode movie poster\",\n    isNew: true\n  }\n];",
+          "folderId": "0",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "helpers.js",
+          "contents": "const movieGrid = document.getElementById(\"movieGrid\");\nconst movieCount = document.getElementById(\"movieCount\");\n\n// Creates one movie card.\n// Students do not need to edit this function.\nconst createMovieCard = (movie) => {\n  const card = document.createElement(\"article\");\n  card.className = \"movie-card\";\n  card.id = \"movieCard\" + movie.id;\n\n  const posterWrap = document.createElement(\"div\");\n  posterWrap.className = \"poster-wrap\";\n  posterWrap.id = \"posterWrap\" + movie.id;\n\n  const image = document.createElement(\"img\");\n  image.className = \"poster-image\";\n  image.id = \"movieImage\" + movie.id;\n  image.src = movie.image;\n  image.alt = movie.alt;\n\n  posterWrap.appendChild(image);\n\n  if (movie.isNew === true) {\n    const badge = document.createElement(\"span\");\n    badge.className = \"movie-badge\";\n    badge.id = \"movieBadge\" + movie.id;\n    badge.textContent = \"NEW\";\n\n    posterWrap.appendChild(badge);\n  }\n\n  const info = document.createElement(\"div\");\n  info.className = \"movie-info\";\n  info.id = \"movieInfo\" + movie.id;\n\n  const title = document.createElement(\"h2\");\n  title.className = \"movie-title\";\n  title.id = \"movieTitle\" + movie.id;\n  title.textContent = movie.title;\n\n  const meta = document.createElement(\"p\");\n  meta.className = \"movie-meta\";\n  meta.id = \"movieMeta\" + movie.id;\n  meta.textContent = movie.genre + \" / \" + movie.year;\n\n  const rating = document.createElement(\"p\");\n  rating.className = \"movie-rating\";\n  rating.id = \"movieRating\" + movie.id;\n  rating.textContent = movie.rating + \" match\";\n\n  info.appendChild(title);\n  info.appendChild(meta);\n  info.appendChild(rating);\n\n  card.appendChild(posterWrap);\n  card.appendChild(info);\n\n  movieGrid.appendChild(card);\n};\n\n// Redraws the movies currently stored in displayMovies.\n// Students should call this after filtering and sorting.\nconst renderMovies = () => {\n  movieGrid.innerHTML = \"\";\n  movieCount.textContent = displayMovies.length + \" movies found\";\n\n  displayMovies.map((movie) => {\n    createMovieCard(movie);\n  });\n};\n\n// Shows the full movie list again.\nconst showAllMovies = () => {\n  displayMovies = [];\n\n  movies.map((movie) => {\n    displayMovies.push(movie);\n  });\n\n  renderMovies();\n};\n\ndocument.getElementById(\"showAllBtn\").addEventListener(\"click\", showAllMovies);",
+          "folderId": "0",
+          "active": false
+        },
+        "15": {
+          "id": "15",
+          "name": "movie8.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson10-level3a-v1-2026/uuid/6cd529ce-cf6d-4cb7-99fe-bc4e0c05ca3b.png",
+          "type": "starter",
+          "active": false
+        },
+        "16": {
+          "id": "16",
+          "name": "movie1.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson10-level3a-v1-2026/uuid/0fb8670d-0ae6-4fa5-ae4a-14014d29ee85.png",
+          "type": "starter",
+          "active": false
+        },
+        "17": {
+          "id": "17",
+          "name": "movie2.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson10-level3a-v1-2026/uuid/f227babf-0055-44ba-8834-af1b3545ecbc.png",
+          "type": "starter",
+          "active": false
+        },
+        "18": {
+          "id": "18",
+          "name": "movie5.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson10-level3a-v1-2026/uuid/7ab206ca-abaa-41a1-ade7-57cc240963c8.png",
+          "type": "starter",
+          "active": false
+        },
+        "19": {
+          "id": "19",
+          "name": "movie7.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson10-level3a-v1-2026/uuid/3ef70430-7019-450d-a7ae-7f942edd9e91.png",
+          "type": "starter",
+          "active": false
+        },
+        "20": {
+          "id": "20",
+          "name": "movie3.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson10-level3a-v1-2026/uuid/5d4774a0-04bb-41dd-abf7-750831f7a763.png",
+          "type": "starter",
+          "active": false
+        },
+        "21": {
+          "id": "21",
+          "name": "movie4.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson10-level3a-v1-2026/uuid/1cf8f1c0-ebdb-4fad-84a2-9faff0e219bb.png",
+          "type": "starter",
+          "active": false
+        },
+        "22": {
+          "id": "22",
+          "name": "movie6.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson10-level3a-v1-2026/uuid/0250065a-3c09-4a6e-bc82-77a4c99e0b71.png",
+          "type": "starter",
+          "active": false
+        },
+        "23": {
+          "id": "23",
+          "name": "movie8.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/building-data-driven-systems-lesson10-level3a-v1-2026/uuid/41e3c0eb-46f2-437e-a946-7bcd8ab12df7.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildJavaScript",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "project_template_level_name": "building-data-driven-systems-lesson10-level1-template-v1-2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-05-09T05:54:54.681+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson10-level3a-v1-2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson10-level3a-v1-2026\"},{\"changed_at\":\"2026-05-09 06:16:21 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-10 05:22:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-12 04:14:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-12 05:01:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-12 05:10:59 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-12 05:12:54 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

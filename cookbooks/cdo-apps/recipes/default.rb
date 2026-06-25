@@ -123,9 +123,6 @@ include_recipe 'cdo-apps::crontab'
 # Only include a local redis server if no external redis_url was provided.
 include_recipe 'cdo-redis' unless node['cdo-secrets']['redis_url']
 
-# only the i18n server needs the i18n recipe
-include_recipe 'cdo-i18n' if node.name == 'i18n'
-
 # Daemon-specific configuration for SSH access to frontend instances.
 include_recipe 'cdo-apps::daemon_ssh' if node['cdo-apps']['daemon'] && node['cdo-apps']['frontends']
 

@@ -34,6 +34,25 @@ require 'cdo/shared_constants'
 # are only associated with one Level. There are some special cases where they can have multiple Levels, such as
 # with the now-deprecated variants feature.
 class ScriptLevel < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    script_id: :public,
+    chapter: :public,
+    created_at: :public,
+    updated_at: :public,
+    stage_id: :public,
+    position: :public,
+    assessment: :public,
+    properties: :public,
+    named_level: :public,
+    bonus: :public,
+    activity_section_id: :public,
+    seed_key: :public,
+    activity_section_position: :public,
+  )
+
   include SerializedProperties
   include LevelsHelper
   include SharedConstants
@@ -460,7 +479,11 @@ class ScriptLevel < ApplicationRecord
       {
         id: level.id.to_s,
         name: level.name,
-        url: edit_level_path(id: level.id)
+        url: edit_level_path(id: level.id),
+        type: level.type,
+        # Recorded by the AI lesson generator; surfaced here so the
+        # /generate page can re-populate the prompt for an existing level.
+        generateOutline: level.try(:generate_outline),
       }
     end
 
@@ -807,6 +830,6 @@ class ScriptLevel < ApplicationRecord
   end
 
   private def build_exemplar_url(path)
-    CDO.studio_url(path, CDO.default_scheme) + '?exemplar=true'
+    CDO.studio_url(path) + '?exemplar=true'
   end
 end

@@ -12,12 +12,14 @@ import {
   createDemoSection,
   DemoSectionCreationError,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {DEMO_SECTION_CODE_PLACEHOLDER} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {
   DemoPresetView,
   DemoType,
   Section,
 } from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import {
+  TEACHER_NAVIGATION_BASE_URL,
   TEACHER_NAVIGATION_PATHS,
   TEACHER_NAVIGATION_SECTIONS_URL,
 } from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
@@ -59,7 +61,7 @@ const buildPrimaryActions = (preset: DemoPresetView): DemoAction[] => {
       buttonText: i18n.viewProgressButton(),
       icon: 'chart-line',
       path: TEACHER_NAVIGATION_PATHS.progress,
-      eventName: EVENTS.SECTION_CARD_VIEW_PROGRESS_CLICKED,
+      eventName: EVENTS.DEMO_SECTION_CARD_VIEW_PROGRESS_CLICKED,
     });
   }
 
@@ -69,7 +71,7 @@ const buildPrimaryActions = (preset: DemoPresetView): DemoAction[] => {
       buttonText: i18n.viewLessonMaterialsButton(),
       icon: 'folder-open',
       path: TEACHER_NAVIGATION_PATHS.lessonMaterials,
-      eventName: EVENTS.SECTION_CARD_VIEW_LESSON_MATERIALS_CLICKED,
+      eventName: EVENTS.DEMO_SECTION_CARD_VIEW_LESSON_MATERIALS_CLICKED,
     });
   }
 
@@ -106,6 +108,32 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
     [sections, showHiddenOnly]
   );
   const isLoadingDemoCard = totalSections === 0 && !demoPresetsAreLoaded;
+
+  // Fire once per mount when the card is visible to the teacher.
+  const hasLoggedViewRef = React.useRef(false);
+  React.useEffect(() => {
+    if (
+      !hasLoggedViewRef.current &&
+      numSections === 0 &&
+      totalSections === 0 &&
+      !!preset &&
+      demoPresetsAreLoaded
+    ) {
+      hasLoggedViewRef.current = true;
+      analyticsReporter.sendEvent(EVENTS.DEMO_SECTION_CARD_VIEWED, {
+        demoType,
+        hasGrades: gradesTeaching.length > 0,
+      });
+    }
+  }, [
+    numSections,
+    totalSections,
+    preset,
+    demoPresetsAreLoaded,
+    demoType,
+    gradesTeaching,
+  ]);
+
   const primaryActions = React.useMemo(
     () => (preset ? buildPrimaryActions(preset) : []),
     [preset]
@@ -120,7 +148,7 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
     return {
       id: 0,
       name: preset.sectionName,
-      code: 'DEMO-123',
+      code: DEMO_SECTION_CODE_PLACEHOLDER,
       hidden: false,
       courseDisplayName,
       courseVersionName: preset.unitGroup?.name,
@@ -151,7 +179,7 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
       pendingActionRef.current = pendingKey;
       setPendingPath(pendingKey);
       setNotice(null);
-      analyticsReporter.sendEvent(eventName, {});
+      analyticsReporter.sendEvent(eventName, {demoType});
 
       try {
         const section = await dispatch(createDemoSection(demoType as DemoType));
@@ -159,14 +187,37 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
           return;
         }
 
+        analyticsReporter.sendEvent(EVENTS.DEMO_SECTION_CREATION_SUCCEEDED, {
+          demoType,
+          sectionId: section.id,
+          triggeringAction: pendingKey,
+        });
+
         return section;
       } catch (error) {
         if (error instanceof DemoSectionCreationError) {
+          if (error.errorType === 'conflict') {
+            analyticsReporter.sendEvent(EVENTS.DEMO_SECTION_CREATION_CONFLICT, {
+              demoType,
+              triggeringAction: pendingKey,
+            });
+          } else {
+            analyticsReporter.sendEvent(EVENTS.DEMO_SECTION_CREATION_FAILED, {
+              demoType,
+              triggeringAction: pendingKey,
+              errorType: 'generic',
+            });
+          }
           setNotice({
             text: error.message,
             type: error.errorType === 'conflict' ? 'warning' : 'danger',
           });
         } else {
+          analyticsReporter.sendEvent(EVENTS.DEMO_SECTION_CREATION_FAILED, {
+            demoType,
+            triggeringAction: pendingKey,
+            errorType: 'generic',
+          });
           setNotice({
             text: "Couldn't create your practice section.",
             type: 'danger',
@@ -185,6 +236,11 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
     (sectionId: number, path: string) => {
       const nextPath = path.startsWith('/')
         ? path
+            // Add the correct sectionId to the path.
+            .replace(':sectionId', sectionId.toString())
+            // Remove the TEACHER_NAVIGATION_BASE_URL prefix if present since
+            // navigate is relative to that base url.
+            .replace(new RegExp(`^${TEACHER_NAVIGATION_BASE_URL}`), '')
         : generatePath(
             `${TEACHER_NAVIGATION_SECTIONS_URL}/:sectionId/${path}`,
             {
@@ -238,7 +294,7 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
       <ul className={styles.sectionList}>
         <li
           id="ui-test-demo-section-card"
-          className={styles.sectionCardWrapper}
+          className={`${styles.sectionCardWrapper} ${styles.demoSectionCardWrapper}`}
           aria-labelledby="demo-section-card-title"
         >
           <div className={styles.sectionCardHeader}>
@@ -281,7 +337,7 @@ const DemoSectionCard: React.FC<DemoSectionCardProps> = ({showHiddenOnly}) => {
                     <Typography variant="overline1" gutterBottom>
                       <span>{i18n.sectionCodeWithColon()}</span>{' '}
                       <span className={joinLinkStyles.sectionCodeTextHidden}>
-                        DEMO-123
+                        {DEMO_SECTION_CODE_PLACEHOLDER}
                       </span>
                     </Typography>
                   </span>

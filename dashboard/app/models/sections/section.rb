@@ -46,6 +46,37 @@ require 'cdo/safe_names'
 require 'policies/lti'
 
 class Section < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    user_id: :confidential,
+    name: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+    code: :confidential,
+    script_id: :confidential,
+    course_id: :confidential,
+    grade: :confidential,
+    login_type: :confidential,
+    deleted_at: :confidential,
+    stage_extras: :confidential,
+    section_type: :confidential,
+    first_activity_at: :confidential,
+    pairing_allowed: :confidential,
+    sharing_disabled: :confidential,
+    hidden: :confidential,
+    tts_autoplay_enabled: :confidential,
+    restrict_section: :confidential,
+    properties: :confidential,
+    participant_type: :confidential,
+    lti_integration_id: :confidential,
+    avatar_color: :confidential,
+    avatar_emoji: :confidential,
+    ai_chat_access_level: :confidential,
+    demo_type: :confidential,
+  )
+
   include SerializedProperties
   include SharedConstants
   include Curriculum::SharedCourseConstants
@@ -166,7 +197,73 @@ class Section < ApplicationRecord
     participant_type != Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
   end
 
-  serialized_attrs %w(code_review_expires_at)
+  serialized_attrs %w(code_review_expires_at suggested_lesson)
+
+  SUGGESTED_LESSON_TTL = 1.hour
+  SUGGESTED_LESSON_PASSING_THRESHOLD = ActivityConstants::MINIMUM_PASS_RESULT
+
+  def suggested_lesson_stale?
+    data = suggested_lesson
+    return true if data.nil?
+    timestamp = data['timestamp']
+    return true if timestamp.blank?
+    Time.parse(timestamp.to_s) < SUGGESTED_LESSON_TTL.ago
+  rescue ArgumentError
+    true
+  end
+
+  def compute_suggested_lesson
+    unit = script
+    section_students = students.to_a
+    return if section_students.empty? || unit.nil?
+
+    passing_level_ids_by_student = UserLevel.
+      where(user: section_students, script: unit).
+      where('best_result >= ? OR submitted = ?', SUGGESTED_LESSON_PASSING_THRESHOLD, true).
+      group_by(&:user_id).
+      transform_values {|uls| uls.to_set(&:level_id)}
+
+    last_completed_lesson = nil
+    finished_unit = true
+    unit.lessons.each do |lesson|
+      required_sls = lesson.script_levels.reject(&:bonus)
+      next if required_sls.empty?
+
+      completed_count = section_students.count do |student|
+        passing_ids = passing_level_ids_by_student[student.id] || Set.new
+        required_sls.all? do |sl|
+          level = sl.oldest_active_level
+          if level.is_a?(BubbleChoice)
+            level.sublevels.any? {|sub| passing_ids.include?(sub.id)}
+          else
+            passing_ids.include?(level.id)
+          end
+        end
+      end
+
+      if completed_count >= section_students.size / 2.0
+        last_completed_lesson = lesson
+        finished_unit = true
+      else
+        finished_unit = false
+      end
+    end
+
+    lessons = unit.lessons.to_a
+    next_lesson = if last_completed_lesson
+                    lessons[lessons.index(last_completed_lesson) + 1]
+                  else
+                    lessons.first
+                  end
+
+    update!(
+      suggested_lesson: if finished_unit
+                          {'completed_unit' => true, 'timestamp' => Time.now.utc.iso8601}
+                        else
+                          {'lesson_id' => next_lesson.id, 'timestamp' => Time.now.utc.iso8601}
+                        end
+    )
+  end
 
   # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.
   LOGIN_TYPES = [
@@ -193,6 +290,10 @@ class Section < ApplicationRecord
     SharedConstants::PL_GRADE_VALUE
   ].flatten.freeze
 
+  # Native section codes are six letters. Google and Clever-based section codes
+  # are prefixed with "G-" and "C-" respectively.
+  SECTION_CODE_REGEX = /\A(?:[A-Z]{6}|[CG]-[A-Z0-9_-]+)\z/i
+
   ADD_STUDENT_EXISTS = 'exists'.freeze
   ADD_STUDENT_SUCCESS = 'success'.freeze
   ADD_STUDENT_FAILURE = 'failure'.freeze
@@ -218,6 +319,10 @@ class Section < ApplicationRecord
   def self.valid_grades?(grades)
     return false if grades.empty?
     (grades - VALID_GRADES).empty?
+  end
+
+  def self.valid_code?(code)
+    code.to_s.match?(SECTION_CODE_REGEX)
   end
 
   # Override default script accessor to use our cache
@@ -251,8 +356,26 @@ class Section < ApplicationRecord
   end
   validate :user_must_be_teacher, unless: -> {deleted?}
 
+  # Demo sections have a fixed roster of pre-enrolled demo students and no
+  # join code; rosters and join codes are managed only at creation.
+  def demo_section?
+    demo_type.present?
+  end
+
   def assign_code
+    # Demo sections have no join code — students are pre-enrolled at creation
+    # and no one else is permitted to join.
+    return if demo_section?
     self.code = unused_random_code unless code
+  end
+
+  before_save :clear_demo_section_code
+  # Demo sections never have a join code — students are pre-enrolled at
+  # creation and no one else is permitted to join. Normalize the invariant on
+  # every save rather than erroring, so the code is always nil regardless of
+  # caller; defense-in-depth against any path that might try to set one.
+  def clear_demo_section_code
+    self.code = nil if demo_section?
   end
 
   after_save :ensure_owner_is_active_instructor
@@ -331,6 +454,14 @@ class Section < ApplicationRecord
   #   already in the section or has now been added.
   def add_student(student, added_by = nil)
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
+
+    # Demo sections only ever enroll demo students (done at creation by
+    # create_demo). Guard here, at the shared chokepoint, so every present
+    # and future enrollment path is covered. Uses the durable (uncached)
+    # demo-student check: this is a guard, and the table is small.
+    if demo_section? && !Policies::DemoSections.demo_student_durable?(student.id)
+      return ADD_STUDENT_FORBIDDEN
+    end
 
     return ADD_STUDENT_FAILURE if user_id == student.id
     return ADD_STUDENT_FAILURE if section_instructors.exists?(instructor: student)
@@ -470,7 +601,7 @@ class Section < ApplicationRecord
       {
         id: id,
         name: name,
-        students: students.distinct(&:id).map(&:summarize),
+        students: students.includes(:primary_contact_info, :latest_parental_permission_request).distinct(&:id).map(&:summarize),
         login_type_name: login_type_name,
         script: {
           id: selected_unit&.id,

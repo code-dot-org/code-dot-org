@@ -7,11 +7,13 @@ import {AppName, LevelProperties} from '../types';
 
 import {createOnboardingTourSteps} from './onboardingTourSteps';
 import {createValidationTourSteps} from './validationTourSteps';
+import {createWebLab2IntroTourSteps} from './weblab2IntroTourSteps';
 
 export enum ProductTour {
   ResourcePanelOnboarding = 'resource_panel_onboarding',
   ResourcePanelValidation = 'resource_panel_validation',
   SketchlabIntro = 'sketchlab_intro',
+  Weblab2Intro = 'weblab2_intro',
 }
 
 export interface ProductTourConfig {
@@ -61,6 +63,13 @@ export const ProductTourConfigurations: Record<ProductTour, ProductTourConfig> =
       triggeredByLevel: false,
       getSteps: createSketchlabTourSteps,
     },
+    [ProductTour.Weblab2Intro]: {
+      name: ProductTour.Weblab2Intro,
+      displayName: 'Welcome to Web Lab',
+      metricName: 'Welcome to Web Lab',
+      triggeredByLevel: false,
+      getSteps: createWebLab2IntroTourSteps,
+    },
   };
 
 // Returns true if the given tour should be shown for the given level and lab.
@@ -96,11 +105,12 @@ export function isTourAvailableOnLevel(
   if (!isAvailableForLab) {
     return false;
   }
-  // While we are developing the new sketch lab, skip any product tours when the
-  // experiment is on.
+  // The Sketch Lab tour(s) are only currently available for excalidraw-based
+  // Sketch lab.
+  // TODO: remove excalidraw tour https://codedotorg.atlassian.net/browse/AFL-641
   if (
     levelProperties.appName === 'sketchlab' &&
-    experiments.isEnabledAllowingQueryString('sketch2')
+    !experiments.isEnabledAllowingQueryString(experiments.EXCALIDRAW)
   ) {
     return false;
   }
@@ -121,5 +131,5 @@ export const ToursPerLab: Partial<Record<AppName, ProductTourConfig[]>> = {
     ProductTourConfigurations[ProductTour.ResourcePanelValidation],
   ],
   sketchlab: [ProductTourConfigurations[ProductTour.SketchlabIntro]],
-  weblab2: [ProductTourConfigurations[ProductTour.ResourcePanelOnboarding]],
+  weblab2: [ProductTourConfigurations[ProductTour.Weblab2Intro]],
 };

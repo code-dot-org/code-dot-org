@@ -12,9 +12,11 @@ $(document).ready(() => {
       return;
     }
 
-    ReactDom.render(
-      React.createElement(SafeMarkdown, container.dataset, null),
-      container
-    );
+    const props = {
+      ...container.dataset,
+      allowEmbeds: container.dataset.allowEmbeds === 'true',
+    };
+
+    ReactDom.render(React.createElement(SafeMarkdown, props, null), container);
   });
 });

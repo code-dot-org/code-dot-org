@@ -13,7 +13,7 @@ describe('SafeMarkdown', () => {
     expect(wrapper.html()).toBe(
       shallow(
         <div>
-          <p data-isolate="true">
+          <p data-isolate="true" data-notranslate="true">
             <strong>some</strong> <em>basic</em>{' '}
             <a href="markdown" data-lz-url="true" data-localize="markdown-url">
               inline
@@ -33,7 +33,7 @@ describe('SafeMarkdown', () => {
     expect(basicWrapper.html()).toBe(
       shallow(
         <div>
-          <p data-isolate="true">
+          <p data-isolate="true" data-notranslate="true">
             <strong>some</strong> <em>basic</em>{' '}
             <a href="markdown" data-lz-url="true" data-localize="markdown-url">
               inline
@@ -93,7 +93,7 @@ describe('SafeMarkdown', () => {
     expect(regularImage.html()).toBe(
       shallow(
         <div>
-          <p data-isolate="true">
+          <p data-isolate="true" data-notranslate="true">
             <img src="http://example.com/img.jpg" alt="regular" />
           </p>
         </div>
@@ -110,7 +110,7 @@ describe('SafeMarkdown', () => {
     expect(expandableImage.html()).toBe(
       shallow(
         <div>
-          <p data-isolate="true">
+          <p data-isolate="true" data-notranslate="true">
             <span
               data-url="http://example.com/img.jpg"
               className="expandable-image"
@@ -130,7 +130,7 @@ describe('SafeMarkdown', () => {
     expect(regularCodeBlock.html()).toBe(
       shallow(
         <div>
-          <p data-isolate="true">
+          <p data-isolate="true" data-notranslate="true">
             some markdown with a <code>regular</code> code block
           </p>
         </div>
@@ -149,7 +149,7 @@ describe('SafeMarkdown', () => {
     expect(visualCodeBlock.html()).toBe(
       shallow(
         <div>
-          <p data-isolate="true">
+          <p data-isolate="true" data-notranslate="true">
             some markdown with a{' '}
             <code className="visual-block" style={{backgroundColor: '#c0ffee'}}>
               visual
@@ -185,7 +185,7 @@ describe('SafeMarkdown', () => {
     expect(wrappedCodeBlock.html()).toBe(
       shallow(
         <div>
-          <p data-isolate="true">
+          <p data-isolate="true" data-notranslate="true">
             some markdown with a{' '}
             <div className="code-wrapper">
               <code>code</code>
@@ -204,7 +204,7 @@ describe('SafeMarkdown', () => {
 
     // inline xml blocks render within their containing paragraph
     expect(inlineXml.html()).toBe(
-      '<div><p data-isolate="true">Text with <xml is="xml"><block is="block" type="xml"></block></xml> inline</p></div>'
+      '<div><p data-isolate="true" data-notranslate="true">Text with <xml is="xml"><block is="block" type="xml"></block></xml> inline</p></div>'
     );
 
     // Need to use markdown={} rather than markdown="" here so React doesn't
@@ -221,7 +221,7 @@ describe('SafeMarkdown', () => {
     // still have to rely on rendered HTML comparison here
     // block xml blocks render as top-level elements (siblings to paragraphs)
     expect(blockXml.html()).toBe(
-      '<div><p data-isolate="true">Text with</p>\n<xml is="xml"><block is="block" type="xml"></block></xml>\n<p data-isolate="true">in its own block</p></div>'
+      '<div><p data-isolate="true" data-notranslate="true">Text with</p>\n<xml is="xml"><block is="block" type="xml"></block></xml>\n<p data-isolate="true" data-notranslate="true">in its own block</p></div>'
     );
   });
 
@@ -232,7 +232,7 @@ describe('SafeMarkdown', () => {
     expect(externalLink.html()).toBe(
       shallow(
         <div>
-          <p data-isolate="true">
+          <p data-isolate="true" data-notranslate="true">
             <a
               href="example.com"
               data-lz-url="true"
@@ -251,7 +251,7 @@ describe('SafeMarkdown', () => {
     expect(internalLink.html()).toBe(
       shallow(
         <div>
-          <p data-isolate="true">
+          <p data-isolate="true" data-notranslate="true">
             <a href="code.org" data-lz-url="true" data-localize="markdown-url">
               internal link
             </a>
@@ -271,7 +271,7 @@ describe('SafeMarkdown', () => {
     expect(externalLink.html()).toBe(
       shallow(
         <div>
-          <p data-isolate="true">
+          <p data-isolate="true" data-notranslate="true">
             <a
               href="example.com"
               target="_blank"
@@ -295,7 +295,7 @@ describe('SafeMarkdown', () => {
     expect(internalLink.html()).toBe(
       shallow(
         <div>
-          <p data-isolate="true">
+          <p data-isolate="true" data-notranslate="true">
             <a
               href="code.org"
               target="_blank"
@@ -333,7 +333,7 @@ describe('SafeMarkdown', () => {
     expect(linkToReplace.html()).toBe(
       shallow(
         <div>
-          <p data-isolate="true">
+          <p data-isolate="true" data-notranslate="true">
             <button type="button" className="replacement">
               link to replace
             </button>
@@ -348,7 +348,7 @@ describe('SafeMarkdown', () => {
     expect(internalLink.html()).toBe(
       shallow(
         <div>
-          <p data-isolate="true">
+          <p data-isolate="true" data-notranslate="true">
             <a href="code.org" data-lz-url="true" data-localize="markdown-url">
               internal link
             </a>
@@ -395,6 +395,35 @@ describe('SafeMarkdown', () => {
     expect(xmlJSInjection.html()).toBe(
       '<div><xml is="xml"><block is="block"></block></xml></div>'
     );
+  });
+
+  it('strips iframes by default (student-safe)', () => {
+    const wrapper = shallow(
+      <SafeMarkdown markdown='<iframe src="https://padlet.com/embed/123" title="Padlet"></iframe>' />
+    );
+    // iframes are stripped when allowEmbeds is not set — students never see embeds
+    expect(wrapper.equals(<div />)).toBe(true);
+  });
+
+  it('renders iframes when allowEmbeds is true (PL/teacher content)', () => {
+    const wrapper = shallow(
+      <SafeMarkdown
+        allowEmbeds
+        markdown='<iframe src="https://padlet.com/embed/123" title="Padlet"></iframe>'
+      />
+    );
+    expect(wrapper.html()).toContain('<iframe');
+    expect(wrapper.html()).toContain('src="https://padlet.com/embed/123"');
+  });
+
+  it('strips iframes when explicitly set to allowEmbeds false', () => {
+    const wrapper = shallow(
+      <SafeMarkdown
+        allowEmbeds={false}
+        markdown='<iframe src="https://padlet.com/embed/123" title="Padlet"></iframe>'
+      />
+    );
+    expect(wrapper.equals(<div />)).toBe(true);
   });
 
   it('handles whitespace', () => {

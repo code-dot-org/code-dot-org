@@ -8,11 +8,27 @@ import {createUuid} from '@cdo/apps/utils';
 
 import {LINE_ANCHOR_SIZE_PX} from '../constants';
 
-import {endpointPatch} from './handleSnap';
+import {
+  endpointPatch,
+  findNearestHandleAmong,
+  findNearestHandleInRadius,
+} from './handleSnap';
 
 // The Handle id rendered by LineAnchorNode for a given role.
 export function lineAnchorHandleId(role: 'source' | 'target'): string {
   return `line-anchor-${role}`;
+}
+
+export function getStandaloneLineAnchorIds(
+  edge: SketchlabReactFlowEdge,
+  getNode: (id: string) => SketchlabReactFlowNode | undefined
+): [string, string] | null {
+  const sourceNode = getNode(edge.source);
+  const targetNode = getNode(edge.target);
+  if (sourceNode?.type !== 'lineAnchor' || targetNode?.type !== 'lineAnchor') {
+    return null;
+  }
+  return [sourceNode.id, targetNode.id];
 }
 
 // Builds a lineAnchor node positioned so that its visible Handle ends up at
@@ -61,6 +77,61 @@ export function anchorHandleFlowPosition(
       };
 }
 
+export interface AnchorHandleSnap {
+  // Top-left position the dragged anchor should occupy so its handle lands on
+  // the snapped real-node handle.
+  position: XYPosition;
+  // The real-node handle the endpoint attaches to when the drag is released.
+  nodeId: string;
+  handleId: string | null;
+}
+
+// Live-drag snap: given the position a dragged anchor would otherwise take,
+// find the nearest real-node handle within radiusPx and return both the
+// position that lands the anchor's handle on it and the handle to attach to on
+// release, or null when none is close.
+export function findAnchorHandleSnap({
+  anchorPosition,
+  role,
+  excludeNodeIds,
+  radiusPx,
+  flowToScreenPosition,
+  screenToFlowPosition,
+}: {
+  anchorPosition: XYPosition;
+  role: 'source' | 'target';
+  excludeNodeIds: string[];
+  radiusPx: number;
+  flowToScreenPosition: (point: XYPosition) => XYPosition;
+  screenToFlowPosition: (point: XYPosition) => XYPosition;
+}): AnchorHandleSnap | null {
+  const handleScreenPosition = flowToScreenPosition(
+    anchorHandleFlowPosition(anchorPosition, role)
+  );
+  const snap = findNearestHandleInRadius(
+    handleScreenPosition,
+    excludeNodeIds,
+    role,
+    radiusPx
+  );
+  if (!snap) {
+    return null;
+  }
+  const targetHandleFlowPosition = getHandleFlowPosition(
+    snap.nodeId,
+    snap.handleId ?? undefined,
+    screenToFlowPosition
+  );
+  if (!targetHandleFlowPosition) {
+    return null;
+  }
+  return {
+    position: createLineAnchorAtHandle(targetHandleFlowPosition, role).position,
+    nodeId: snap.nodeId,
+    handleId: snap.handleId,
+  };
+}
+
 // Spawns a fresh lineAnchor at `flowPosition` and returns the partial
 // edge fields that point one side of an edge at it.
 export function attachEdgeToFreshAnchor(
@@ -96,6 +167,66 @@ export function resolveEdgeEndpoint(
     screenToFlowPosition
   );
   return flowPosition ? {flowPosition, node} : null;
+}
+
+// Inverse of snapAnchorIfNearby: when a real node is dropped, any free
+// (lineAnchor) edge endpoint whose visible handle lies within radiusPx of
+// one of the dropped node's matching handles is connected to that node.
+export function snapEdgesIntoDraggedNode({
+  draggedNodeId,
+  edges,
+  getNode,
+  flowToScreenPosition,
+  setEdges,
+  radiusPx,
+}: {
+  draggedNodeId: string;
+  edges: SketchlabReactFlowEdge[];
+  getNode: (id: string) => SketchlabReactFlowNode | undefined;
+  flowToScreenPosition: (point: XYPosition) => XYPosition;
+  setEdges: (
+    updater: (
+      currentEdges: SketchlabReactFlowEdge[]
+    ) => SketchlabReactFlowEdge[]
+  ) => void;
+  radiusPx: number;
+}): void {
+  const draggedNodeHandles = document.querySelectorAll<HTMLElement>(
+    `.react-flow__handle[data-nodeid="${CSS.escape(draggedNodeId)}"]`
+  );
+  if (draggedNodeHandles.length === 0) return;
+
+  const patchByEdgeId = new Map<string, Partial<SketchlabReactFlowEdge>>();
+  edges.forEach(edge => {
+    (['source', 'target'] as const).forEach(side => {
+      const endpointId = side === 'source' ? edge.source : edge.target;
+      const anchor = getNode(endpointId);
+      if (!anchor || anchor.type !== 'lineAnchor') return;
+      const handleScreenPosition = flowToScreenPosition(
+        anchorHandleFlowPosition(anchor.position, side)
+      );
+      const snap = findNearestHandleAmong(
+        draggedNodeHandles,
+        handleScreenPosition,
+        side,
+        radiusPx,
+        () => draggedNodeId
+      );
+      if (!snap) return;
+      patchByEdgeId.set(edge.id, {
+        ...(patchByEdgeId.get(edge.id) ?? {}),
+        ...endpointPatch(side, snap.nodeId, snap.handleId),
+      });
+    });
+  });
+
+  if (patchByEdgeId.size === 0) return;
+  setEdges(currentEdges =>
+    currentEdges.map(currentEdge => {
+      const patch = patchByEdgeId.get(currentEdge.id);
+      return patch ? {...currentEdge, ...patch} : currentEdge;
+    })
+  );
 }
 
 // Resolves the on-screen position of a node's handle to canvas coordinates.

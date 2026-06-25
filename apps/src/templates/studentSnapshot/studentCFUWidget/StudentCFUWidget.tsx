@@ -262,6 +262,7 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
 
   return (
     <WidgetTemplate
+      id="ui-test-cfu-widget"
       widgetName="Check For Understanding Questions"
       gridWidth={gridWidth}
       gridHeight={gridHeight}

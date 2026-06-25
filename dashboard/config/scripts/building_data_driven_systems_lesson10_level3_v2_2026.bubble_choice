@@ -1,0 +1,10 @@
+name 'building-data-driven-systems-lesson10-level3-v2-2026'
+display_name 'Design a Filter → Sort → Render Pipeline'
+description 'Pick one scenario and design, debug, and validate a pipeline'
+
+uses_lab2
+
+sublevels
+level 'building-data-driven-systems-lesson10-level3a-v2-2026'
+level 'building-data-driven-systems-lesson10-level3b-v2-2026'
+level 'building-data-driven-systems-lesson10-level3c-v2-2026'

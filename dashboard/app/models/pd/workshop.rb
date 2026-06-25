@@ -42,6 +42,38 @@
 #
 
 class Pd::Workshop < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :restricted,
+    organizer_id: :restricted,
+    location_name: :restricted,
+    location_address: :restricted,
+    processed_location: :restricted,
+    course: :restricted,
+    subject: :restricted,
+    capacity: :restricted,
+    notes: :restricted,
+    section_id: :restricted,
+    started_at: :restricted,
+    ended_at: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
+    processed_at: :restricted,
+    deleted_at: :restricted,
+    regional_partner_id: :restricted,
+    on_map: :restricted,
+    funded: :restricted,
+    funding_type: :restricted,
+    properties: :restricted,
+    module: :restricted,
+    name: :restricted,
+    participant_group_type: :restricted,
+    description: :restricted,
+    registration_link: :restricted,
+    hidden: :restricted,
+  )
+
   include Pd::WorkshopConstants
   include SerializedProperties
   include Pd::WorkshopSurveyConstants
@@ -488,7 +520,7 @@ class Pd::Workshop < ApplicationRecord
   # See https://github.com/code-dot-org/code-dot-org/blob/96b890d6e6f77de23bc5d4469df69b900e3fbeb7/lib/cdo/poste.rb#L217
   # for details.
   def self.process_ends
-    end_on_or_after(Time.now - 2.days).each do |workshop|
+    end_on_or_after(Time.now - 2.days).includes(:facilitators).each do |workshop|
       # only process if the workshop has not already been processed or if workshop was
       # processed before the workshop ended.
       next unless !workshop.processed_at || workshop.processed_at < workshop.ended_at

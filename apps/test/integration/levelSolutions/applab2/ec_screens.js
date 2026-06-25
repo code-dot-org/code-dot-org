@@ -31,8 +31,15 @@ function validateElementSelect(expected, assert) {
   assert.deepEqual(actual, expected);
 }
 
-const orange = 'rgb(255, 164, 0)';
-const white = 'rgb(255, 255, 255)';
+// The DSCO SegmentedButton marks the active toggle with aria-pressed="true",
+// so assert selection state rather than the (transition-animated) color.
+function assertPressed(selector, expected, assert) {
+  assert.equal(
+    $(selector).attr('aria-pressed'),
+    String(expected),
+    'expected ' + selector + ' aria-pressed to be ' + expected
+  );
+}
 
 module.exports = {
   app: 'applab',
@@ -69,16 +76,8 @@ module.exports = {
           'designModeViz is visible'
         );
 
-        assert.equal(
-          orange,
-          $('#designModeButton').css('background-color'),
-          'expected Design button (active) to have orange background.'
-        );
-        assert.equal(
-          white,
-          $('#codeModeButton').css('background-color'),
-          'expected Code button (inactive) to have white background.'
-        );
+        assertPressed('#designModeButton', true, assert);
+        assertPressed('#codeModeButton', false, assert);
         var screenSelector = document.getElementById('screenSelector');
         assert.notEqual(screenSelector, null);
         assert.equal(screenSelector.options.length, 3, 'expected 3 options');
@@ -450,16 +449,8 @@ module.exports = {
       runBeforeClick: function (assert) {
         // enter design mode
         $('#designModeButton').click();
-        assert.equal(
-          orange,
-          $('#designModeButton').css('background-color'),
-          'expected Design button (active) to have orange background.'
-        );
-        assert.equal(
-          white,
-          $('#codeModeButton').css('background-color'),
-          'expected Code button (inactive) to have white background.'
-        );
+        assertPressed('#designModeButton', true, assert);
+        assertPressed('#codeModeButton', false, assert);
         // add a screen
         testUtils.dragToVisualization('SCREEN', 10, 10);
         validatePropertyRow(0, 'id', 'screen2', assert);
@@ -481,16 +472,8 @@ module.exports = {
 
         // return to code mode
         $('#codeModeButton').click();
-        assert.equal(
-          white,
-          $('#designModeButton').css('background-color'),
-          'expected Design button (inactive) to have white background.'
-        );
-        assert.equal(
-          orange,
-          $('#codeModeButton').css('background-color'),
-          'expected Code button (active) to have orange background.'
-        );
+        assertPressed('#designModeButton', false, assert);
+        assertPressed('#codeModeButton', true, assert);
 
         // should be on screen 2
         assert.equal(
@@ -584,16 +567,8 @@ module.exports = {
         );
 
         // design toggle row still shows design mode
-        assert.equal(
-          orange,
-          $('#designModeButton').css('background-color'),
-          'expected Design button (active) to have orange background.'
-        );
-        assert.equal(
-          white,
-          $('#codeModeButton').css('background-color'),
-          'expected Code button (inactive) to have white background.'
-        );
+        assertPressed('#designModeButton', true, assert);
+        assertPressed('#codeModeButton', false, assert);
 
         // add a completion on timeout since this is a freeplay level
         tickWrapper.runOnAppTick(Applab, 2, function () {

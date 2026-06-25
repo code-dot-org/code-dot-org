@@ -3,14 +3,10 @@ import '@testing-library/jest-dom';
 import React from 'react';
 
 import EditAiTutorPromptSettings from '@cdo/apps/lab2/levelEditors/aiTutorPromptSettings/EditAiTutorPromptSettings';
-import {AiTutorAnswerType} from '@cdo/apps/weblab2/types';
 
 jest.mock('@cdo/apps/templates/EnhancedSafeMarkdown', () => () => null);
-jest.mock('@cdo/apps/weblab2/prompts/promptMaps', () => ({
-  ANSWER_TYPE_CONTRACTS: {},
-}));
 
-const ALL_TOGGLEABLE_TYPES: AiTutorAnswerType[] = [
+const ALL_TOGGLEABLE_TYPES = [
   'ask',
   'buildCSS',
   'buildHTML',
@@ -25,11 +21,34 @@ const ALL_TOGGLEABLE_TYPES: AiTutorAnswerType[] = [
   'testCase',
 ];
 
+const ANSWER_TYPE_TO_LABEL: Record<string, string> = {
+  ask: 'Ask',
+  buildCSS: 'Build CSS',
+  buildHTML: 'Build HTML',
+  buildJavaScript: 'Build JavaScript',
+  buildJSON: 'Build JSON',
+  debug: 'Debug',
+  documentation: 'Documentation',
+  example: 'Example',
+  explainCode: 'Explain Code',
+  hint: 'Hint',
+  pseudocode: 'Pseudocode',
+  testCase: 'Test Case',
+};
+
+const WEBLAB2_PROPS = {
+  toggleableAnswerTypes: ALL_TOGGLEABLE_TYPES,
+  answerTypeToLabel: ANSWER_TYPE_TO_LABEL,
+  answerTypeContracts: {} as Record<string, string>,
+  defaultAnswerTypes: ALL_TOGGLEABLE_TYPES,
+};
+
 describe('EditAiTutorPromptSettings', () => {
   describe('Enable All button', () => {
     it('enables all 12 types from empty state', () => {
       render(
         <EditAiTutorPromptSettings
+          {...WEBLAB2_PROPS}
           promptSettings={{answerTypes: ALL_TOGGLEABLE_TYPES}}
         />
       );
@@ -44,6 +63,7 @@ describe('EditAiTutorPromptSettings', () => {
     it('enables all 12 types from partial state', () => {
       render(
         <EditAiTutorPromptSettings
+          {...WEBLAB2_PROPS}
           promptSettings={{answerTypes: ['ask', 'hint']}}
         />
       );
@@ -56,6 +76,7 @@ describe('EditAiTutorPromptSettings', () => {
     it('clears all types from fully-enabled state', () => {
       render(
         <EditAiTutorPromptSettings
+          {...WEBLAB2_PROPS}
           promptSettings={{answerTypes: ALL_TOGGLEABLE_TYPES}}
         />
       );
@@ -68,6 +89,7 @@ describe('EditAiTutorPromptSettings', () => {
     it('clears all types from partial state', () => {
       render(
         <EditAiTutorPromptSettings
+          {...WEBLAB2_PROPS}
           promptSettings={{answerTypes: ['ask', 'debug', 'hint']}}
         />
       );
@@ -80,6 +102,7 @@ describe('EditAiTutorPromptSettings', () => {
     it('is disabled when no types are enabled', () => {
       render(
         <EditAiTutorPromptSettings
+          {...WEBLAB2_PROPS}
           promptSettings={{answerTypes: ALL_TOGGLEABLE_TYPES}}
         />
       );

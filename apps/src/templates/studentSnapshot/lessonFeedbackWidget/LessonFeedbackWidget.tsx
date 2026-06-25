@@ -398,6 +398,7 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
 
   return (
     <WidgetTemplate
+      id="ui-test-lesson-feedback-widget"
       widgetName="Lesson Feedback"
       gridWidth={2}
       gridHeight={2}

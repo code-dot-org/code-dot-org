@@ -5,11 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # How Do We Get There?
 
-#### Before students can showcase their final web applications, they first need to build a **strong foundation**.
+Before students can showcase their final web applications, they first need to build a **strong foundation**.
 
-#### Step by step, they **practice coding skills**, layering new concepts on top of what they’ve already learned. 
+Step by step, they **practice coding skills**, layering new concepts on top of what they’ve already learned. 
 
-#### With each stage, they gain the confidence and tools needed to **create something bigger**.
+With each stage, they gain the confidence and tools needed to **create something bigger**.
 ---
 
 ## We build skills step by step, always coding alongside AI as a partner:
@@ -18,7 +18,7 @@ markdown <<MARKDOWN
 
 ---
 
-#### Together, these pieces lead students from simple webpages to dynamic, AI-powered applications they can showcase with pride.
+Together, these pieces lead students from simple webpages to dynamic, AI-powered applications they can showcase with pride.
 
 
 MARKDOWN

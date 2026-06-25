@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_05_06_120000) do
+ActiveRecord::Schema[7.0].define(version: 2026_06_17_130000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -59,6 +59,8 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_06_120000) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "script"
+    t.index ["lesson_id"], name: "index_ai_lesson_summaries_on_lesson_id"
+    t.index ["user_id", "lesson_id"], name: "index_ai_lesson_summaries_on_user_id_and_lesson_id"
   end
 
   create_table "ai_student_podcast_objectives", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
@@ -75,6 +77,8 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_06_120000) do
     t.text "podcast_script"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["lesson_id"], name: "index_ai_student_podcasts_on_lesson_id"
+    t.index ["user_id", "lesson_id"], name: "index_ai_student_podcasts_on_user_id_and_lesson_id", unique: true
   end
 
   create_table "aichat_events", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
@@ -87,6 +91,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_06_120000) do
     t.datetime "updated_at", null: false
     t.bigint "request_id"
     t.integer "lesson_id"
+    t.index ["created_at"], name: "index_aichat_events_on_created_at"
     t.index ["lesson_id", "user_id"], name: "index_ace_lesson_user"
     t.index ["request_id"], name: "index_aichat_events_on_request_id"
     t.index ["user_id", "level_id", "script_id", "id"], name: "index_ace_user_level_script_id"
@@ -107,6 +112,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_06_120000) do
     t.text "response"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["created_at"], name: "index_aichat_requests_on_created_at"
     t.index ["execution_status"], name: "index_aichat_requests_on_execution_status"
   end
 
@@ -637,6 +643,15 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_06_120000) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["priority", "run_at"], name: "delayed_jobs_priority"
+  end
+
+  create_table "demo_students", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "demo_type", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["demo_type", "user_id"], name: "index_demo_students_on_demo_type_and_user_id"
+    t.index ["user_id", "demo_type"], name: "index_demo_students_on_user_id_and_demo_type", unique: true
   end
 
   create_table "donor_schools", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -1284,6 +1299,13 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_06_120000) do
     t.index ["lesson_id"], name: "index_objectives_on_lesson_id"
   end
 
+  create_table "objectives_practice_problems", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "practice_problem_id", null: false
+    t.bigint "objective_id", null: false
+    t.index ["objective_id", "practice_problem_id"], name: "index_practice_prob_objectives_on_objective_and_prob_ids", unique: true
+    t.index ["practice_problem_id", "objective_id"], name: "index_practice_prob_objectives_on_prob_and_objective_ids", unique: true
+  end
+
   create_table "paired_user_levels", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.bigint "driver_user_level_id", unsigned: true
     t.bigint "navigator_user_level_id", unsigned: true
@@ -1867,6 +1889,16 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_06_120000) do
     t.index ["script_id"], name: "index_potential_teachers_on_script_id"
   end
 
+  create_table "practice_problems", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "problem_type", null: false
+    t.boolean "active", default: false, null: false
+    t.text "problem_text", null: false
+    t.json "solution"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "programming_classes", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "programming_environment_id"
     t.integer "programming_environment_category_id"
@@ -2070,6 +2102,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_06_120000) do
     t.datetime "updated_at", null: false
     t.string "s3_config_dir"
     t.index ["lesson_id", "level_id"], name: "index_rubrics_on_lesson_id_and_level_id", unique: true
+    t.index ["lesson_id"], name: "index_rubrics_on_lesson_id", unique: true
   end
 
   create_table "school_districts", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2671,6 +2704,20 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_06_120000) do
     t.index ["user_id", "permission"], name: "index_user_permissions_on_user_id_and_permission", unique: true
   end
 
+  create_table "user_practice_problem_attempts", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "practice_problem_id", null: false
+    t.json "attempt", null: false
+    t.boolean "correct", null: false
+    t.text "ai_feedback"
+    t.string "delivery_context_type", null: false
+    t.json "delivery_context_metadata"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["practice_problem_id"], name: "index_user_practice_problem_attempts_on_practice_problem_id"
+    t.index ["user_id"], name: "index_user_practice_problem_attempts_on_user_id"
+  end
+
   create_table "user_preferences", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.json "section_order"
@@ -2685,7 +2732,9 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_06_120000) do
   create_table "user_product_tours", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "tour_name", null: false
-    t.datetime "completed_at", null: false
+    t.datetime "completed_at"
+    t.datetime "started_at"
+    t.json "properties"
     t.index ["user_id", "tour_name"], name: "index_user_product_tours_on_user_id_and_tour_name", unique: true
   end
 
@@ -2877,6 +2926,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_05_06_120000) do
   add_foreign_key "cap_user_events", "users"
   add_foreign_key "census_submission_form_maps", "census_submissions"
   add_foreign_key "census_summaries", "schools"
+  add_foreign_key "demo_students", "users"
   add_foreign_key "external_notifications", "users"
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "jit_pl_exemplars", "jit_pl_concepts"

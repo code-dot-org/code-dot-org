@@ -2,6 +2,7 @@ import {MarkerType} from '@xyflow/react';
 
 import {ARROW_MARKER_HEIGHT_PX, ARROW_MARKER_WIDTH_PX} from '../constants';
 import {
+  DEFAULT_EDGE_TYPE,
   DEFAULT_LINE_WIDTH,
   DEFAULT_STROKE_COLOR,
 } from '../elementToolbars/toolbarPalettes';
@@ -10,7 +11,7 @@ import {
 // Defaults to a solid line with an arrow at the end.
 export function defaultLineEdgeFields() {
   return {
-    type: 'straight',
+    type: DEFAULT_EDGE_TYPE,
     style: {
       stroke: DEFAULT_STROKE_COLOR,
       strokeWidth: DEFAULT_LINE_WIDTH,

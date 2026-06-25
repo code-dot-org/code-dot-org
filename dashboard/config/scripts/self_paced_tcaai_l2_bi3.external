@@ -1,0 +1,85 @@
+name 'self-paced-TCaAI-L2-BI3'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Big Idea 3: Context and Risk Matter
+
+As students continue through Thinking Critically About AI, they begin recognizing that responsible AI use depends heavily on context. An AI tool that may be helpful in one situation could be harmful, risky, or inappropriate in another.
+
+Rather than treating AI as simply “good” or “bad,” students learn to ask questions about:
+- what is at stake
+- who could be affected
+- what information is being shared
+- when human oversight matters most
+
+## What Students Learn
+
+<div style="display:flex; justify-content:space-between; gap:14px; margin:25px 0px;">
+
+  <div style="background-color:#F5F7F8; padding:18px; border-radius:10px; width:32%; text-align:center;">
+    <p style="font-size:16px; font-weight:bold; margin-top:0;">
+      Context Changes Decisions
+    </p>
+    <p style="font-size:16px; margin-bottom:0;">
+      Students explore how the appropriateness of AI use depends on the situation, audience, and stakes involved.
+    </p>
+  </div>
+
+  <div style="background-color:#F5F7F8; padding:18px; border-radius:10px; width:32%; text-align:center;">
+    <p style="font-size:16px; font-weight:bold; margin-top:0;">
+      Data Carries Risk
+    </p>
+    <p style="font-size:16px; margin-bottom:0;">
+      Students investigate how public, private, and sensitive information can create privacy and safety concerns.
+    </p>
+  </div>
+
+  <div style="background-color:#F5F7F8; padding:18px; border-radius:10px; width:32%; text-align:center;">
+    <p style="font-size:16px; font-weight:bold; margin-top:0;">
+      Human Judgment Depends on the Situation
+    </p>
+    <p style="font-size:16px; margin-bottom:0;">
+      Students practice making conditional judgments about when AI should — and should not — be trusted.
+    </p>
+  </div>
+
+</div>
+
+A major instructional goal of this section of the unit is helping students move beyond absolute thinking and toward more nuanced reasoning about risk, safety, and responsibility.
+
+## Across the Unit
+
+As students move through the later lessons of the unit, they repeatedly examine situations where AI use depends on context and human decision-making.
+
+* **Lesson 6** asks students to sort AI uses into “Use AI,” “Don’t Use AI,” and “It Depends”
+* **Lesson 8** explores how small pieces of public information can combine to create privacy and safety risks
+* **Lesson 10** challenges students to defend different positions about how involved humans should be when using AI systems
+
+Across these lessons, students begin recognizing that responsible AI use is often conditional rather than absolute.
+
+<div style="background-color:#B7E0E5; padding:20px; border-radius:10px; margin:25px 0px; overflow:auto;">
+
+<img 
+src="https://images.code.org/5d5f9457ba92cd9d9e2616fe1675d88a-image-1779237769033.jpg" 
+alt="" 
+style="width:30%; border-radius:10px; margin:0px 0px 10px 15px; float:right;">
+
+<p style="font-size:16px; font-weight:bold; margin-top:0;">
+REAL-WORLD CONNECTION: AI Voice Cloning Scams
+</p>
+
+<p style="font-size:16px;">
+In recent years, scammers have used AI tools to clone people’s voices using only short audio clips from social media videos or online recordings.
+</p>
+
+<p style="font-size:16px;">
+Some families received phone calls that sounded exactly like a friend or family member asking for money or help during an emergency.
+</p>
+
+<p style="font-size:16px; margin-bottom:0;">
+Stories like these highlight why context, privacy, and human judgment matter when deciding whether AI-generated information should be trusted.
+</p>
+
+</div>
+MARKDOWN

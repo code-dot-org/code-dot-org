@@ -1,9 +1,11 @@
 name 'ai-and-algorithmic-decisions-postassessment-q1_2026'
 
-right 'Option A, because it responds immediately to the user\'s input and reduces extra steps.'
-wrong 'Option B, because it gives the app more time to load data before showing results.'
-wrong 'Option A, because it makes the website\'s design more colorful and animated.'
-wrong 'Option B, because fewer buttons usually mean better design.'
+question 'A bookstore site shows a small "Quick View" panel when you hover over a book cover. Some users say the panel pops up when they didn''t mean to look at it. What change would best improve user-centered design?'
+
+wrong 'Make the Quick View panel appear faster.'
+right 'Change the trigger so the panel only appears when the user clearly chooses to see it, such as on click instead of hover.'
+wrong 'Add more books to each row so the panel is harder to trigger.'
+wrong 'Hide the panel entirely and let users open each book in a new tab.'
 
 allow_multiple_attempts true
 
@@ -12,10 +14,5 @@ Lesson 1
 MARKDOWN
 
 markdown <<MARKDOWN
-A travel website wants users to easily compare flight prices. The designer is deciding between these two options:
 
-- **Option A:** Prices update automatically when the user changes travel dates.
-- **Option B:** Users must press "Check Prices" every time they change a date.
-
-Which option better supports user-centered interactivity, and why?
 MARKDOWN

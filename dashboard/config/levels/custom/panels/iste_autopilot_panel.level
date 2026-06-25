@@ -1,0 +1,26 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-06-24T19:57:21.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "**Autopilot** is when AI is doing a larger part of the work for you, like turning a wireframe, content plan, or style guide into a webpage. That can be useful, but it does not mean you stop paying attention. A flight plan helps the plane know where to go, but the pilot still watches the route, checks for problems, and takes control when needed. In designing and building a website, responsible autopilot means reviewing what AI creates, checking that it matches your audience and purpose, and making adjustments before you call the work finished.",
+        "imageUrl": "https://images.code.org/0a3a3eca5be16736edae6e9ea154bc35-iste_autopilot.png",
+        "key": "hoai-web-design-v2-1-11300f40-e480-4236-9f18-43bbbb1f36af",
+        "typing": false,
+        "fadeInOverPrevious": true,
+        "layout": "text-top-left"
+      }
+    ],
+    "name_suffix": "_iste-2026",
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-24T19:57:21.373+00:00\",\"changed\":[\"cloned from \\\"iste_2026_content_panel\\\"\"],\"cloned_from\":\"iste_2026_content_panel\"},{\"changed_at\":\"2026-06-24 20:02:27 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"}]"
+}]]></config>
+</Panels>

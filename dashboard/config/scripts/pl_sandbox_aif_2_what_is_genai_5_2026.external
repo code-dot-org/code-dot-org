@@ -6,15 +6,15 @@ markdown <<MARKDOWN
 # What is Generative AI
 
 
-#### Generative AI is one of the most talked-about technologies today, reshaping how we create, work, and learn.
+Generative AI is one of the most talked-about technologies today, reshaping how we create, work, and learn.
 
 <div style="background-color: #DECEEA; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 95%; margin: 20px auto;">
-    <p style="font-size: 16pt; font-weight: bold; margin: 0; text-align: center;">What is Generative AI?</p>
-    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Generative AI refers to artificial intelligence systems that can create new content—such as text, images, code, music, or even video—based on patterns they’ve learned from large datasets. </p>
-    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Instead of simply retrieving information, generative AI models can produce original outputs that resemble human-created work. Tools like ChatGPT, DALL·E, and GitHub Copilot are popular examples.</p>
+    <p style="font-size: 14pt; font-weight: bold; margin: 0; text-align: center;">What is Generative AI?</p>
+    <p style="font-size: 12pt; line-height: 1.2; margin-top: 10px;">Generative AI refers to artificial intelligence systems that can create new content—such as text, images, code, music, or even video—based on patterns they’ve learned from large datasets. </p>
+    <p style="font-size: 12pt; line-height: 1.2; margin-top: 10px;">Instead of simply retrieving information, generative AI models can produce original outputs that resemble human-created work. Tools like ChatGPT, DALL·E, and GitHub Copilot are popular examples.</p>
 </div>
 
-## **How It’s Growing and Shaping Workflows**
+## **How it’s growing and shaping workflows**
 
 <div style="display: flex; justify-content: center; gap: 20px; max-width: 1100px; margin: auto;">
 
@@ -47,10 +47,10 @@ markdown <<MARKDOWN
      alt="" 
      style="width: 25%; border-radius: 5px; margin: 0px 0px 20px 20px; float: right;">
      
-#### Generative AI is already transforming how professionals design, write, problem-solve, and build. By learning to use it responsibly and intentionally, students build **future-ready skills:**
-- #### They save time on routine tasks.
-- #### They expand creativity and explore new ideas.
-- #### They develop the judgment to critique and improve AI outputs, ensuring they stay in control of the process.
+Generative AI is already transforming how professionals design, write, problem-solve, and build. By learning to use it responsibly and intentionally, students build **future-ready skills:**
+- They save time on routine tasks.
+- They expand creativity and explore new ideas.
+- They develop the judgment to critique and improve AI outputs, ensuring they stay in control of the process.
 
 
 <div style="clear:both;"></div>

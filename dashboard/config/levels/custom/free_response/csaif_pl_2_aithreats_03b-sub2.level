@@ -7,7 +7,7 @@
   "user_id": 21093,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "#### **Says**\r\n#### What might Jordan say out loud?\r\n",
+    "long_instructions": "**Says**\r\nWhat might Jordan say out loud?\r\n",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

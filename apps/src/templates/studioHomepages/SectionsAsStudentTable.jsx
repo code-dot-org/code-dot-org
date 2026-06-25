@@ -1,11 +1,10 @@
+import Link from '@code-dot-org/component-library/link';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import Button from '@cdo/apps/legacySharedComponents/Button';
-import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import color from '@cdo/apps/util/color';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -29,17 +28,11 @@ class SectionsAsStudentTable extends React.Component {
       return i18n.loginTypeClever();
     } else if (section.login_type === SectionLoginType.google_classroom) {
       return i18n.loginTypeGoogleClassroom();
+    } else if (!section.code) {
+      // Demo sections have no join code; students are pre-enrolled.
+      return i18n.notApplicable();
     } else {
-      return this.props.isPlSections ? (
-        <a
-          style={plTableLayoutStyles.sectionCodeLink}
-          href={teacherDashboardUrl(`${section.id}/login_info`)}
-        >
-          {section.code}
-        </a>
-      ) : (
-        section.code
-      );
+      return section.code;
     }
   }
 
@@ -124,25 +117,19 @@ class SectionsAsStudentTable extends React.Component {
               className="test-row"
             >
               <td style={{...styles.col, ...styles.sectionNameCol}}>
-                {this.props.isPlSections ? (
-                  <a style={styles.link} href={teacherDashboardUrl(section.id)}>
-                    {section.name}
-                  </a>
-                ) : (
-                  <div>{section.name}</div>
-                )}
+                <div>{section.name}</div>
               </td>
               <td style={{...styles.col, ...styles.courseCol}}>
-                <a href={section.linkToAssigned} style={styles.link}>
+                <Link href={section.linkToAssigned} size="s">
                   {section.assignedTitle}
-                </a>
+                </Link>
                 {!section.is_assigned_single_unit_course &&
                   section.currentUnitTitle && (
                     <div style={styles.currentUnit}>
                       <div>{i18n.currentUnit()}</div>
-                      <a href={section.linkToCurrentUnit} style={styles.link}>
+                      <Link href={section.linkToCurrentUnit} size="s">
                         {section.currentUnitTitle}
-                      </a>
+                      </Link>
                     </div>
                   )}
               </td>
@@ -159,20 +146,21 @@ class SectionsAsStudentTable extends React.Component {
               </td>
               {canLeave && (
                 <td style={{...styles.col, ...styles.leaveCol}}>
-                  <Button
-                    style={styles.leaveButton}
-                    text={i18n.leaveSection()}
-                    onClick={this.onLeave.bind(
-                      this,
-                      section.code,
-                      section.name
-                    )}
-                    color={
-                      this.props.isPlSections
-                        ? Button.ButtonColor.neutralDark
-                        : Button.ButtonColor.gray
-                    }
-                  />
+                  {section.code && (
+                    <MuiButton
+                      style={styles.leaveButton}
+                      variant="outlined"
+                      color="tertiary"
+                      size="small"
+                      onClick={this.onLeave.bind(
+                        this,
+                        section.code,
+                        section.name
+                      )}
+                    >
+                      {i18n.leaveSection()}
+                    </MuiButton>
+                  )}
                 </td>
               )}
             </tr>
@@ -189,12 +177,12 @@ const studentSectionsStyles = {
   table: {
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: color.border_gray,
+    borderColor: 'var(--borders-neutral-primary)',
     width: styleConstants['content-width'],
   },
   headerRow: {
     fontWeight: 'bold',
-    borderColor: color.border_light_gray,
+    borderColor: 'var(--borders-neutral-primary)',
     borderStyle: 'solid',
     borderBottomWidth: 1,
     borderTopWidth: 0,
@@ -206,13 +194,13 @@ const studentSectionsStyles = {
     paddingBottom: 20,
   },
   lightRow: {
-    backgroundColor: color.table_light_row,
+    backgroundColor: 'var(--background-neutral-primary)',
   },
   darkRow: {
-    backgroundColor: color.table_dark_row,
+    backgroundColor: 'var(--background-neutral-secondary)',
   },
   row: {
-    borderBottomColor: color.border_light_gray,
+    borderBottomColor: 'var(--borders-neutral-primary)',
     borderBottomWidth: 1,
     borderBottomStyle: 'solid',
     paddingTop: 20,
@@ -220,17 +208,17 @@ const studentSectionsStyles = {
   },
   col: {
     borderRightWidth: 1,
-    borderRightColor: color.border_light_gray,
+    borderRightColor: 'var(--borders-neutral-primary)',
     borderRightStyle: 'solid',
     borderTopWidth: 0,
     borderLeftWidth: 0,
     borderBottomWidth: 0,
-    color: color.charcoal,
+    color: 'var(--text-neutral-tertiary)',
     paddingLeft: 20,
     paddingRight: 20,
   },
   colHeader: {
-    backgroundColor: color.table_header,
+    backgroundColor: 'var(--background-neutral-tertiary)',
   },
   sectionNameCol: {
     width: 310,
@@ -259,23 +247,17 @@ const studentSectionsStyles = {
   leaveCol: {
     width: 110,
     borderLeftWidth: 1,
-    borderLeftColor: color.border_light_gray,
+    borderLeftColor: 'var(--borders-neutral-primary)',
     borderLeftStyle: 'solid',
   },
   leaveButton: {
     marginLeft: 5,
   },
   colText: {
-    color: color.charcoal,
+    color: 'var(--text-neutral-tertiary)',
     ...fontConstants['main-font-semi-bold'],
     fontSize: 14,
     lineHeight: '22px',
-  },
-  link: {
-    color: color.teal,
-    ...fontConstants['main-font-semi-bold'],
-    fontSize: 14,
-    textDecoration: 'none',
   },
   currentUnit: {
     marginTop: 10,

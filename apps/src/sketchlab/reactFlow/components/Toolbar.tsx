@@ -86,7 +86,7 @@ export default function Toolbar({onAddNode, levelName}: ToolbarProps) {
       className={styles.toolbar}
       elevation={3}
       role="toolbar"
-      aria-label="Add shapes, lines, and images"
+      aria-label="Canvas tools"
       aria-orientation="vertical"
     >
       <Tooltip title="Add rectangle" placement="right">
@@ -179,7 +179,6 @@ export default function Toolbar({onAddNode, levelName}: ToolbarProps) {
           <FontAwesomeV6Icon iconName="image" />
         </IconButton>
       </Tooltip>
-
       <FileInput />
     </Paper>
   );

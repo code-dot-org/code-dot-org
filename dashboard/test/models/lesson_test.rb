@@ -763,7 +763,7 @@ class LessonTest < ActiveSupport::TestCase
 
     assert_equal(
       new_lesson.start_url(unit_group_unit: new_script.original_unit_group_unit),
-      CDO.studio_url("/courses/#{new_script.original_unit_group.name}/units/1/lockable/1/levels/1", CDO.default_scheme)
+      CDO.studio_url("/courses/#{new_script.original_unit_group.name}/units/1/lockable/1/levels/1")
     )
   end
 
@@ -775,7 +775,7 @@ class LessonTest < ActiveSupport::TestCase
 
     assert_equal(
       new_lesson.start_url(unit_group_unit: new_script.original_unit_group_unit),
-      CDO.studio_url("/courses/#{new_script.original_unit_group.name}/units/1/lessons/1/levels/1", CDO.default_scheme)
+      CDO.studio_url("/courses/#{new_script.original_unit_group.name}/units/1/lessons/1/levels/1")
     )
   end
 
@@ -943,6 +943,23 @@ class LessonTest < ActiveSupport::TestCase
     end
     bubble_choice_level.sublevels.each do |sublevel|
       assert_equal sublevel.name, properties[sublevel.id][:name]
+    end
+  end
+
+  test 'summarize_for_lab2_properties skips levels with no game app' do
+    script = create(:script, :in_single_unit_course)
+    lesson = create(:lesson, script: script)
+    python_level = create(:pythonlab)
+    nil_app_game = create(:game, app: nil)
+    non_lab2_level = create(:text_match, game: nil_app_game)
+    create(:script_level, lesson: lesson, levels: [python_level], script: script)
+    create(:script_level, lesson: lesson, levels: [non_lab2_level], script: script)
+
+    properties = lesson.summarize_for_lab2_properties
+    assert_includes properties.keys, python_level.id
+    refute_includes properties.keys, non_lab2_level.id
+    properties.each_value do |props|
+      assert props[:appName], "expected appName to be present for all returned levels"
     end
   end
 
@@ -1465,5 +1482,20 @@ class LessonTest < ActiveSupport::TestCase
 
     bubble_choice_summary = summary[:levels].first
     assert_equal false, bubble_choice_summary[:isSubmittable]
+  end
+
+  test 'summarize_for_unit_generate exposes id, name, key, generateOutline, and paths' do
+    unit = create(:script)
+    group = create(:lesson_group, script: unit, user_facing: true)
+    lesson = create(:lesson, script: unit, lesson_group: group, name: 'L', key: 'l-key', has_lesson_plan: true)
+    lesson.update!(properties: lesson.properties.merge('generate_outline' => 'do thing'))
+
+    summary = lesson.summarize_for_unit_generate
+    assert_equal lesson.id, summary[:id]
+    assert_equal 'L', summary[:name]
+    assert_equal 'l-key', summary[:key]
+    assert_equal 'do thing', summary[:generateOutline]
+    refute_nil summary[:lessonEditPath]
+    assert_equal summary[:lessonEditPath].sub(%r{/edit\z}, '/generate'), summary[:lessonGeneratePath]
   end
 end

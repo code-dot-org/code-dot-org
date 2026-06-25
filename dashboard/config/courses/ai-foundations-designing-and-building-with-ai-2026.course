@@ -17,17 +17,32 @@
     "2"
   ],
   "original_script_names": [
+    "ai-generated-design-2026",
+    "ai-and-algorithmic-decisions-2026",
     "building-data-driven-systems-with-ai-2026",
     "iterating-with-ai-2026",
     "designing-reliable-apps-with-ai-and-apis-2026",
     "web-apps-with-ai-capstone-project-2026"
   ],
-  "published_state": "in_development",
+  "published_state": "preview",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
+    "announcements": [
+      {
+        "key": "057784e1-ec31-446c-a920-14bbe655e6c9",
+        "notice": "Units 4-6 Coming Soon!",
+        "details": "Units 4-6 are currently getting some polish and will be available after July 10! ",
+        "link": "",
+        "type": "bullhorn",
+        "visibility": "Teacher-only",
+        "dismissible": true,
+        "buttonText": ""
+      }
+    ],
     "family_name": "ai-foundations-designing-and-building-with-ai",
+    "has_verified_resources": true,
     "numbered_units": "auto",
     "version_year": "2026"
   },

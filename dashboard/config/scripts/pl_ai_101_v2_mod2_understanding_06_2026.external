@@ -1,0 +1,120 @@
+name 'pl-ai-101-V2-mod2-understanding-06_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Understanding AI
+
+Understanding how AI works can help you avoid common pitfalls when using AI.
+
+<div style="text-align: center; width: 80%; margin: 0 auto;">
+  <p style="
+    font-size: 16px; 
+    background-color: #F5F7F8; 
+    padding: 10px; 
+    border-left: 5px solid #8148B2; 
+    border-right: 5px solid #8148B2;
+    display: inline-block;
+  ">
+    <strong>Key Takeaway:</strong><br>AI generates text by predicting patterns in language. It does not understand the world or verify facts. Humans must provide context, evaluate outputs, and make final decisions.
+  </p>
+</div>
+
+<br>
+
+Let's take a closer look at how AI works. 👉 Click each step in the diagram below to learn more.
+
+
+## How Large Language Models Generate Text
+
+<div style="max-width:1100px; margin:20px auto; padding:24px; background:#FFFFFF; border:0px solid #D9DDE3; border-radius:12px; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#3A3A3A; position:relative;">
+
+<div style="position:absolute; left:50%; top:36px; bottom:24px; width:3px; background:#D9DDE3; transform:translateX(-50%); border-radius:2px;"></div>
+
+<!-- ITEM 1 -->
+<div style="width:50%; padding-right:50px; box-sizing:border-box; position:relative; margin-bottom:40px;">
+<div style="position:absolute; right:-10px; top:20px; width:14px; height:14px; background:#7a6fa6; border-radius:50%; border:3px solid white; box-shadow:0 0 0 2px #D9DDE3; z-index:2;"></div>
+
+<details style="border:1px solid #D9DDE3; border-radius:10px; overflow:hidden; background:white;">
+<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA; font-size:18px; font-weight:600;">
+1. Training: Learning Patterns in Language
+</summary>
+
+<div style="padding:18px 24px; background:white; border-top:1px solid #E5E7EB; font-size:15px; line-height:1.45; color:#555;">
+<p style="margin:0 0 12px 0;">AI models are trained on massive collections of text such as books, articles, and websites. During training, the model repeatedly predicts missing or next words in sentences. When its predictions are incorrect, its internal parameters adjust slightly to improve future predictions.</p>
+<p style="margin:0 0 12px 0;">Over time, the system becomes very good at recognizing and reproducing patterns in language.</p>
+<p style="margin:0;">Training does not involve memorizing rules or developing awareness. Instead, it is a process of refining statistical pattern recognition at scale.</p>
+</div>
+</details>
+</div>
+
+<!-- ITEM 2 -->
+<div style="width:50%; margin-left:50%; padding-left:50px; box-sizing:border-box; position:relative; margin-bottom:40px;">
+<div style="position:absolute; left:-10px; top:20px; width:14px; height:14px; background:#5aaebc; border-radius:50%; border:3px solid white; box-shadow:0 0 0 2px #D9DDE3; z-index:2;"></div>
+
+<details style="border:1px solid #D9DDE3; border-radius:10px; overflow:hidden; background:white;">
+<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA; font-size:18px; font-weight:600;">
+2. Embeddings: Capturing Relationships in Language
+</summary>
+
+<div style="padding:18px 24px; background:white; border-top:1px solid #E5E7EB; font-size:15px; line-height:1.45; color:#555;">
+<p style="margin:0 0 12px 0;">As the model trains, it converts words and phrases into numerical representations called <strong>embeddings</strong>.</p>
+<p style="margin:0 0 8px 0;">In this system:</p>
+<ul style="margin:8px 0 12px 20px; padding-left:18px; font-size:15px; line-height:1.45; color:#555;">
+  <li style="margin-bottom:4px;">Words that frequently appear together are positioned close to one another.</li>
+  <li style="margin-bottom:4px;">Related ideas cluster in a high-dimensional mathematical space.</li>
+  <li>Unrelated concepts are farther apart.</li>
+</ul>
+<p style="margin:0 0 12px 0;">Embeddings allow the model to work with relationships between ideas.</p>
+<p style="margin:0;">For example, words like “teacher,” “student,” and “classroom” tend to cluster together because they often appear in similar contexts.</p>
+</div>
+</details>
+</div>
+
+<!-- ITEM 3 -->
+<div style="width:50%; padding-right:50px; box-sizing:border-box; position:relative; margin-bottom:40px;">
+<div style="position:absolute; right:-10px; top:20px; width:14px; height:14px; background:#7a6fa6; border-radius:50%; border:3px solid white; box-shadow:0 0 0 2px #D9DDE3; z-index:2;"></div>
+
+<details style="border:1px solid #D9DDE3; border-radius:10px; overflow:hidden; background:white;">
+<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA; font-size:18px; font-weight:600;">
+3. Next-Token Prediction: Generating Text Step by Step
+</summary>
+
+<div style="padding:18px 24px; background:white; border-top:1px solid #E5E7EB; font-size:15px; line-height:1.45; color:#555;">
+<p style="margin:0 0 12px 0;">When you enter a prompt, the model generates text one <strong>token</strong> at a time. A token is typically a word or part of a word.</p>
+<p style="margin:0 0 8px 0;">At each step, it:</p>
+<ol style="margin:8px 0 12px 20px; padding-left:18px; font-size:15px; line-height:1.45; color:#555;">
+  <li style="margin-bottom:4px;">Looks at the prompt and previously generated words.</li>
+  <li style="margin-bottom:4px;">Calculates probabilities for possible next tokens.</li>
+  <li style="margin-bottom:4px;">Selects one based on those probabilities.</li>
+  <li>Repeats the process.</li>
+</ol>
+<p style="margin:0 0 12px 0;">An internal mechanism called <strong>attention</strong> helps the model weigh which parts of the input are most relevant as it continues generating text. This helps it stay coherent across longer responses and follow instructions.</p>
+<p style="margin:0;">The result is language that mirrors patterns commonly found in similar texts.</p>
+</div>
+</details>
+</div>
+
+<!-- ITEM 4 -->
+<div style="width:50%; margin-left:50%; padding-left:50px; box-sizing:border-box; position:relative;">
+<div style="position:absolute; left:-10px; top:20px; width:14px; height:14px; background:#5aaebc; border-radius:50%; border:3px solid white; box-shadow:0 0 0 2px #D9DDE3; z-index:2;"></div>
+
+<details style="border:1px solid #D9DDE3; border-radius:10px; overflow:hidden; background:white;">
+<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA; font-size:18px; font-weight:600;">
+4. Steering Output: Temperature and Prompts
+</summary>
+
+<div style="padding:18px 24px; background:white; border-top:1px solid #E5E7EB; font-size:15px; line-height:1.45; color:#555;">
+<p style="margin:0 0 12px 0;">Users influence AI output primarily through the prompts they write. The level of detail, constraints, and framing in a prompt strongly affect the response.</p>
+<p style="margin:0 0 8px 0;">AI tools may also have internal settings that influence how predictable or varied responses are. One of these settings is called <strong>temperature</strong>:</p>
+<ul style="margin:8px 0 12px 20px; padding-left:18px; font-size:15px; line-height:1.45; color:#555;">
+  <li style="margin-bottom:4px;">Lower temperature → more predictable and consistent responses</li>
+  <li>Higher temperature → more varied or creative responses</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+
+> **💬 Quick Reflection:** What questions do you still have about how AI works? On the next level you'll have a chance to ask AI Chat Lab questions, get clarification, or dive deeper into any specific concepts.
+MARKDOWN

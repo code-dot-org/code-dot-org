@@ -5,13 +5,13 @@ description 'description here'
 markdown <<MARKDOWN
 # Ethical Considerations When Using AI
 
-#### As AI tools become more widely used, it’s important to recognize that their use raises important ethical questions. While AI can support decision-making, creativity, and efficiency, it also introduces risks that users should consider when deciding how and when to use these tools.
+As AI tools become more widely used, it’s important to recognize that their use raises important ethical questions. While AI can support decision-making, creativity, and efficiency, it also introduces risks that users should consider when deciding how and when to use these tools.
 
-#### Understanding these considerations helps ensure that AI is used thoughtfully, responsibly, and in ways that support, rather than undermine, human judgment.
+Understanding these considerations helps ensure that AI is used thoughtfully, responsibly, and in ways that support, rather than undermine, human judgment.
 
 ## Key Ethical Considerations
 
-#### 👉 Click on the cards below to learn more about each key ethical consideration for using AI.
+👉 Click on the cards below to learn more about each key ethical consideration for using AI.
 
 <div style="max-width:1200px; margin:0 auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:#2f2f2f;">
 
@@ -89,8 +89,8 @@ AI also raises broader considerations, including environmental impact, questions
 </div>
 
 ## Focus Areas in This Module
-#### While all of these considerations are important, this module focuses on the areas most directly connected to **teaching and learning** in the classroom:
-* #### **Misinformation and AI Fiction**: How AI can generate incorrect, misleading, or incomplete information, and how educators and students can identify and respond to it.
-* #### **Algorithmic Bias**: How bias can appear in AI-generated content and what it means for representation, fairness, and student experience.
-* #### **Data Privacy**: How to protect student information and make responsible choices when using AI tools in educational settings.
+While all of these considerations are important, this module focuses on the areas most directly connected to **teaching and learning** in the classroom:
+* **Misinformation and AI Fiction**: How AI can generate incorrect, misleading, or incomplete information, and how educators and students can identify and respond to it.
+* **Algorithmic Bias**: How bias can appear in AI-generated content and what it means for representation, fairness, and student experience.
+* **Data Privacy**: How to protect student information and make responsible choices when using AI tools in educational settings.
 MARKDOWN

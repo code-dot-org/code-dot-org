@@ -1,6 +1,7 @@
 @chrome
 @no_mobile
 @single_session
+@playwright
 Feature: Global Edition - Farsi MVP - Personal Project Gallery
 
   Background:
@@ -14,7 +15,7 @@ Feature: Global Edition - Farsi MVP - Personal Project Gallery
     When I reload the page
     Then element "html[lang='fa-IR'][data-ge-region='fa']" is visible
 
-    When I wait until element "h4.new-project-heading" is visible
+    When I wait until element "h5.new-project-heading" is visible
     # The "Create a new project" section contains exactly: Sprite Lab, Artist, App Lab, and Game Lab
     Then element "div a[href='/projects/spritelab/new']" is visible
     And element "div a[href='/projects/artist/new']" is visible

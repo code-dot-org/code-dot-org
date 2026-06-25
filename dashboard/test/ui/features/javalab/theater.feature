@@ -11,6 +11,8 @@ Feature: Theater
     Then I press "#levelbuilder-menu-toggle" using jQuery
     And I see no difference for "initial page load"
     Then I press "runButton"
-    And I wait for 15 seconds
+    And I wait until element ".javalab-console" contains text "Program completed"
+    # Wait for gif to play, it takes about 7 seconds.
+    And I wait for 10 seconds
     And I see no difference for "GIF end state"
     Then I close my eyes

@@ -10,6 +10,8 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import ChallengeBox from '../ChallengeActivities/ChallengeBox';
+
 import Chat from './Chat';
 import PodcastsBox from './PodcastsBox';
 import VideosBox from './VideosBox';
@@ -17,7 +19,7 @@ import VocabularyFlashcards from './VocabularyFlashcards';
 
 import styles from './intervention-box.module.scss';
 
-type CardId = 'flashcards' | 'chat' | 'videos' | 'podcasts';
+type CardId = 'flashcards' | 'chat' | 'videos' | 'podcasts' | 'challenge';
 
 interface Card {
   id: CardId;
@@ -55,6 +57,13 @@ const CARDS: Card[] = [
     navLabel: 'Chat',
     icon: 'messages',
     iconColor: '#f5c042',
+  },
+  {
+    id: 'challenge',
+    menuLabel: 'Take on a challenge',
+    navLabel: 'Challenge',
+    icon: 'trophy',
+    iconColor: '#f262ff',
   },
 ];
 
@@ -163,8 +172,15 @@ const InterventionBox: FC<InterventionBoxProps> = ({
             reflectionData={reflectionData}
           />
         )}
+        {selected === 'challenge' && <ChallengeBox />}
         {selected === 'videos' && <VideosBox jsonVideos={jsonVideos} />}
-        {selected === 'podcasts' && <PodcastsBox />}
+        {selected === 'podcasts' && (
+          <PodcastsBox
+            lessonId={lessonId}
+            reflectionData={reflectionData}
+            objectives={objectives}
+          />
+        )}
       </div>
 
       <nav className={styles.bottomNav} aria-label="Practice options">

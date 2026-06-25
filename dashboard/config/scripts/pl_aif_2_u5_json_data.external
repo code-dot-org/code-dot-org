@@ -5,22 +5,22 @@ description 'description here'
 markdown <<MARKDOWN
 # Reading JSON: Finding What the UI Needs
 
-#### When an app shows information on the screen, it usually **doesn’t use every piece of data** it receives.
+When an app shows information on the screen, it usually **doesn’t use every piece of data** it receives.
 
-#### Often, the app gets a *big* response (like JSON from an API) and then **picks only the fields it needs** to display.
+Often, the app gets a *big* response (like JSON from an API) and then **picks only the fields it needs** to display.
 
 ---
 
 ## Scenario: The App Gets “Too Much” Data
 
-#### Imagine you’re building a simple classroom weather app for teachers.
+Imagine you’re building a simple classroom weather app for teachers.
 
-#### The app should display a small card with:
-- #### a **title**
-- #### a **subtitle**
-- #### **one key stat**
+The app should display a small card with:
+- a **title**
+- a **subtitle**
+- **one key stat**
 
-#### But the API returns *way more* than that.
+But the API returns *way more* than that.
 
 > #### Your job: scan the UI card and the raw JSON below and notice how much data from the API that the app actually used.
 
@@ -94,9 +94,9 @@ markdown <<MARKDOWN
 
 ## Reflect: What would you pull from the JSON?
 
-#### Take a moment to compare the UI card and the JSON.
-#### 👉 If you were building this app, which **three pieces of information** would you want from this JSON?
-#### 👉 What looks **useful** vs **extra** for *this specific* UI card?
+Take a moment to compare the UI card and the JSON.
+👉 If you were building this app, which **three pieces of information** would you want from this JSON?
+👉 What looks **useful** vs **extra** for *this specific* UI card?
 
 <details style="background-color:#ececec; padding:10px; margin-bottom:10px; border:1px solid transparent; border-radius:8px;">
 <summary style="font-size:1.4em; font-weight:bold;">💡 Check your thinking (click to reveal)</summary>
@@ -142,5 +142,5 @@ Your answers might include ideas like these:
 
 ## Next
 
-#### Next, we’ll practice reading the “shape” of JSON so we can grab exactly what our app needs.
+Next, we’ll practice reading the “shape” of JSON so we can grab exactly what our app needs.
 MARKDOWN

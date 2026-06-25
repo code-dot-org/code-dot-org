@@ -28,6 +28,40 @@ describe('SiteConfig', () => {
   it('should determine the dashboard API URL', () => {
     expect(siteConfig.dashboardApiUrl).toBeDefined();
   });
+
+  it('exposes a non-empty marketingOrigin', () => {
+    expect(siteConfig.marketingOrigin).toBeTruthy();
+  });
+});
+
+describe('SiteConfig.marketingUrl', () => {
+  let siteConfig: SiteConfig;
+
+  beforeEach(() => {
+    siteConfig = new SiteConfig();
+  });
+
+  it('returns the origin when called with no argument', () => {
+    expect(siteConfig.marketingUrl()).toBe(siteConfig.marketingOrigin);
+  });
+
+  it('appends a relative path to the origin', () => {
+    const url = siteConfig.marketingUrl('/privacy');
+    expect(url).toBe(
+      new URL('/privacy', siteConfig.marketingOrigin).toString(),
+    );
+  });
+
+  it('normalises a path without a leading slash', () => {
+    const url = siteConfig.marketingUrl('tos');
+    expect(url).toBeTruthy();
+    expect(url).toContain('tos');
+  });
+
+  it('passes through an absolute URL unchanged', () => {
+    const absolute = 'https://support.code.org/help';
+    expect(siteConfig.marketingUrl(absolute)).toBe(absolute);
+  });
 });
 
 describe('SiteConfig observability (parseRuntimeConfig)', () => {

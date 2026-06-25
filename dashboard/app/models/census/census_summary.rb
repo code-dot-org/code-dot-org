@@ -16,6 +16,18 @@
 #
 
 class Census::CensusSummary < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    school_id: :confidential,
+    school_year: :confidential,
+    teaches_cs: :confidential,
+    audit_data: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+  )
+
   belongs_to :school
   validates :school_year, presence: true, numericality: {greater_than_or_equal_to: 2015, less_than_or_equal_to: 2030}
 

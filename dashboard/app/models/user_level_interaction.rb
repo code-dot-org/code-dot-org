@@ -24,6 +24,22 @@
 # This contains additional information than just completion status or attempts.
 # These interactions are used to improve insights into student learning.
 class UserLevelInteraction < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    user_id: :confidential,
+    level_id: :confidential,
+    script_id: :confidential,
+    school_year: :confidential,
+    interaction: :confidential,
+    code_version: :confidential,
+    metadata: :confidential,
+    deleted_at: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+  )
+
   belongs_to :user
   belongs_to :level
 end

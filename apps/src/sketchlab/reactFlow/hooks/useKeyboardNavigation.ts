@@ -21,6 +21,8 @@ import {
   type TabOrderEntry,
 } from '../utils/computeTabOrder';
 import {isLineAnchorNodeId} from '../utils/connectionRules';
+import {getNodeLabel} from '../utils/elementLabel';
+import {isGroupedChildNode} from '../utils/grouping';
 import {
   endpointPatch,
   findNearestHandleInRadius,
@@ -31,7 +33,6 @@ import {
   attachEdgeToFreshAnchor,
   resolveEdgeEndpoint,
 } from '../utils/lineAnchors';
-import {getNodeLabel} from '../utils/nodeLabel';
 
 import {useAriaAnnouncer} from './useAriaAnnouncer';
 import {useConnectMode} from './useConnectMode';
@@ -121,10 +122,16 @@ interface UseKeyboardNavigationOptions {
   copyEntry: (entry: TabOrderEntry) => void;
   cutEntry: (entry: TabOrderEntry) => void;
   paste: () => void;
+  undo: () => void;
+  redo: () => void;
+  pushSnapshot: () => void;
   // Fallback for Ctrl/Cmd shortcuts: DOM focus may be inside a NodeToolbar
   // (which renders outside .react-flow__node), so getEntryFromDOM returns
   // null. lastFocusedEntry gives us the last known node/edge target.
   lastFocusedEntry: TabOrderEntry | null;
+  // Called with the anchor id or edge id when a line/line anchor is
+  // translated by an arrow key.
+  onLineKeyboardMove: (elementId: string) => void;
 }
 
 /**
@@ -166,7 +173,11 @@ export function useKeyboardNavigation({
   copyEntry,
   cutEntry,
   paste,
+  undo,
+  redo,
+  pushSnapshot,
   lastFocusedEntry,
+  onLineKeyboardMove,
 }: UseKeyboardNavigationOptions) {
   const {
     getEdge,
@@ -178,7 +189,7 @@ export function useKeyboardNavigation({
   } = useReactFlow<SketchlabReactFlowNode, SketchlabReactFlowEdge>();
   const {announcement: connectAnnouncement, announce} = useAriaAnnouncer();
   const {connectingFrom, startConnect, cancelConnect, completeConnect} =
-    useConnectMode({nodes, setEdges, announce});
+    useConnectMode({nodes, setEdges, announce, pushSnapshot});
 
   // Remembers the edge most recently translated by an arrow keypress so
   // that subsequent presses can keep moving the same edge even if the
@@ -260,12 +271,20 @@ export function useKeyboardNavigation({
       if (event.key !== 'x' || !(event.ctrlKey || event.metaKey)) return false;
       const entry = focusedEntry ?? lastFocusedEntry;
       if (!entry) return false;
+      if (entry.type === 'node') {
+        const node = getNode(entry.id);
+        if (node && isGroupedChildNode(node)) {
+          event.preventDefault();
+          event.stopPropagation();
+          return true;
+        }
+      }
       cutEntry(entry);
       event.preventDefault();
       event.stopPropagation();
       return true;
     },
-    [cutEntry, lastFocusedEntry]
+    [cutEntry, getNode, lastFocusedEntry]
   );
 
   const handlePaste = useCallback(
@@ -278,6 +297,40 @@ export function useKeyboardNavigation({
       return true;
     },
     [paste]
+  );
+
+  // Undo: Ctrl/Cmd+Z.
+  const handleUndo = useCallback(
+    (keyContext: KeyContext): boolean => {
+      const {event} = keyContext;
+      // Exclude Shift so Cmd+Shift+Z routes to redo, not undo.
+      if (event.shiftKey || !(event.ctrlKey || event.metaKey)) return false;
+      if (event.key !== 'z' && event.key !== 'Z') return false;
+      undo();
+      event.preventDefault();
+      event.stopPropagation();
+      return true;
+    },
+    [undo]
+  );
+
+  // Redo: Ctrl/Cmd+Y, or Ctrl/Cmd+Shift+Z.
+  // Accept both 'z' and 'Z' with Shift to handle platforms where event.key
+  // doesn't capitalize on Shift, and to survive Shift-before-Z release order.
+  const handleRedo = useCallback(
+    (keyContext: KeyContext): boolean => {
+      const {event} = keyContext;
+      if (!(event.ctrlKey || event.metaKey)) return false;
+      const isRedoZ =
+        event.shiftKey && (event.key === 'z' || event.key === 'Z');
+      const isRedoY = event.key === 'y' || event.key === 'Y';
+      if (!isRedoZ && !isRedoY) return false;
+      redo();
+      event.preventDefault();
+      event.stopPropagation();
+      return true;
+    },
+    [redo]
   );
 
   const handleOpenToolbar = useCallback(
@@ -371,17 +424,33 @@ export function useKeyboardNavigation({
       if (!focusedNodeId) return false;
       const {deltaX, deltaY} = getArrowDelta(event.key);
       if (!deltaX && !deltaY) return false;
+      const focusedNode = getNode(focusedNodeId);
+      if (focusedNode && isGroupedChildNode(focusedNode)) {
+        event.preventDefault();
+        event.stopPropagation();
+        return true;
+      }
       event.preventDefault();
       event.stopPropagation();
+      if (!event.repeat) pushSnapshot();
       if (snapAnchorIfNearHandle(focusedNodeId, deltaX, deltaY)) {
         return true;
+      }
+      if (focusedNode?.type === 'lineAnchor') {
+        onLineKeyboardMove(focusedNodeId);
       }
       setNodes(currentNodes =>
         moveNodesByDelta(currentNodes, [focusedNodeId], deltaX, deltaY)
       );
       return true;
     },
-    [setNodes, snapAnchorIfNearHandle]
+    [
+      getNode,
+      pushSnapshot,
+      setNodes,
+      snapAnchorIfNearHandle,
+      onLineKeyboardMove,
+    ]
   );
 
   // On each end ('side') of the edge, figure out the post-move handle position
@@ -413,10 +482,14 @@ export function useKeyboardNavigation({
           y: endpoint.flowPosition.y + deltaY,
         };
 
-        // If there is a snap target in the radius of the new position, snap to it.
+        // If there is a snap target in the radius of the new position, snap to
+        // it — but never onto the node holding the other end, which would
+        // collapse the edge into a self-loop.
+        const oppositeNodeId =
+          side === 'source' ? focusedEdge.target : focusedEdge.source;
         const snapTarget = findNearestHandleInRadius(
           flowToScreenPosition(postMovePosition),
-          endpoint.node.id,
+          [endpoint.node.id, oppositeNodeId],
           side,
           KEYBOARD_MOVE_STEP * getZoom()
         );
@@ -457,11 +530,12 @@ export function useKeyboardNavigation({
       }
       if (Object.keys(edgePatch).length > 0) {
         setEdges(currentEdges =>
-          currentEdges.map(currentEdge =>
-            currentEdge.id === edgeId
-              ? {...currentEdge, ...edgePatch}
-              : currentEdge
-          )
+          currentEdges.map(currentEdge => {
+            if (currentEdge.id !== edgeId) return currentEdge;
+            const patched = {...currentEdge, ...edgePatch};
+            // Both ends snapping to the same node would collapse the edge.
+            return patched.source === patched.target ? currentEdge : patched;
+          })
         );
       }
       if (anchorIdsToMove.length > 0) {
@@ -493,11 +567,13 @@ export function useKeyboardNavigation({
       const {deltaX, deltaY} = getArrowDelta(event.key);
       if (!deltaX && !deltaY) return false;
       if (!moveEdgeByDelta(focusedEdgeId, deltaX, deltaY)) return false;
+      if (!event.repeat) pushSnapshot();
+      onLineKeyboardMove(focusedEdgeId);
       event.preventDefault();
       event.stopPropagation();
       return true;
     },
-    [moveEdgeByDelta]
+    [pushSnapshot, moveEdgeByDelta, onLineKeyboardMove]
   );
 
   /**
@@ -526,6 +602,7 @@ export function useKeyboardNavigation({
 
       event.preventDefault();
       event.stopPropagation();
+      if (!event.repeat) pushSnapshot();
       setNodes(currentNodes =>
         resizeNodeByDelta(currentNodes, focusedNodeId, deltaWidth, deltaHeight)
       );
@@ -536,7 +613,7 @@ export function useKeyboardNavigation({
       );
       return true;
     },
-    [nodes, getNode, setNodes, announce]
+    [nodes, getNode, pushSnapshot, setNodes, announce]
   );
 
   /**
@@ -619,6 +696,8 @@ export function useKeyboardNavigation({
       if (handleCopy(keyContext)) return;
       if (handleCut(keyContext)) return;
       if (handlePaste(keyContext)) return;
+      if (handleUndo(keyContext)) return;
+      if (handleRedo(keyContext)) return;
 
       if (handleOpenToolbar(keyContext)) return;
       if (handleConnectToggle(keyContext)) return;
@@ -651,6 +730,8 @@ export function useKeyboardNavigation({
       handleCopy,
       handleCut,
       handlePaste,
+      handleUndo,
+      handleRedo,
       handleOpenToolbar,
       handleConnectToggle,
       handleConnectComplete,
@@ -681,13 +762,15 @@ export function useKeyboardNavigation({
       }
       const target = nativeEvent.target as HTMLElement;
       if (isTargetEditable(target)) return;
+      if (!nativeEvent.repeat) pushSnapshot();
       if (moveEdgeByDelta(edgeId, deltaX, deltaY)) {
+        onLineKeyboardMove(edgeId);
         nativeEvent.preventDefault();
       }
     };
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
-  }, [moveEdgeByDelta]);
+  }, [moveEdgeByDelta, pushSnapshot, onLineKeyboardMove]);
 
   return {connectingFrom, connectAnnouncement, handleKeyDown};
 }

@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -35,11 +36,11 @@ class MultipleChoiceByStudentContainer extends Component {
       <div>
         {studentId !== ALL_STUDENT_FILTER && currentStudentHasResponses && (
           <div>
-            <h2>
+            <Typography variant="h2">
               {i18n.multipleChoiceStudentOverview({
                 studentName: studentAnswerData.name,
               })}
-            </h2>
+            </Typography>
             <MultipleChoiceByStudentTable
               questionAnswerData={multipleChoiceStructure}
               studentAnswerData={studentAnswerData}

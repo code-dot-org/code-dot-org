@@ -27,7 +27,6 @@
  *= require user-menu
  *= require buttons
  *= require course-blocks
- *= require details-polyfill
  *= require warning-banner
  */
 
@@ -91,10 +90,10 @@ body:has(#lab2-container) {
 h1 {
   @include main-font-bold;
   font-size: 32px;
-  color: $purple;
+  color: var(--text-brand-purple-primary);
 
   &.text-black {
-    color: $light_black;
+    color: var(--text-neutral-primary);
   }
 }
 
@@ -103,7 +102,7 @@ h2 {
   @include main-font-semi-bold;
   font-size: 22px;
   line-height: 30px;
-  color: $teal;
+  color: var(--text-brand-teal-primary);
 }
 
 h3 {
@@ -205,10 +204,14 @@ img.video_thumbnail {
     background-color: $contrastTealHeader;
     color: $header_text;
     a:link {
-      color: $header_text;
+      &:where(:not(.MuiButton-root, .MuiIconButton-root)) {
+        color: $header_text;
+      }
     }
     a:visited {
-      color: $header_text;
+      &:where(:not(.MuiButton-root, .MuiIconButton-root)) {
+        color: $header_text;
+      }
     }
 
     .small_font_on_tablet {
@@ -547,14 +550,14 @@ img.video_thumbnail {
   a:link, a:visited, a:hover, a:active {
     &:where(:not(.MuiButton-root, .MuiIconButton-root)) {
       @include main-font-bold;
-      color: $brand_secondary_default;
+      color: var(--text-brand-purple-primary);
       background-color: transparent;
       text-decoration: underline;
     }
   }
   a:hover {
     &:where(:not(.MuiButton-root, .MuiIconButton-root)) {
-      color: $brand_secondary_dark;
+      color: var(--text-brand-purple-secondary);
       text-decoration: underline;
     }
   }
@@ -1054,7 +1057,7 @@ $default-modal-width: 640px;
     top: 50px; // top of the dialog
 
     width: $default-modal-width;
-    margin-left: -($default-modal-width * 0.5);
+    margin-left: -($default-modal-width * 0.5 + 1);
 
     // margin-bottom is reused in JavaScript to determine
     // how close to get to the bottom of the viewport.
@@ -1070,7 +1073,7 @@ $default-modal-width: 640px;
 
 .dash_modal {
   width: $default-modal-width;
-  margin-left: -($default-modal-width * 0.5);
+  margin-left: -($default-modal-width * 0.5 + 1);
 }
 
 .dash_modal_body {
@@ -1179,6 +1182,39 @@ $default-modal-width: 640px;
 
   a:hover {
     background-color: transparent;
+  }
+}
+
+// CodeAI logo is rectangular (~5.9:1), so the square-logo offsets above
+// don't apply. Center it vertically inside the 50px header instead.
+html[data-brand="codeai"], html[data-brand="codeai-next"] {
+  .header-wrapper .header .header_logo,
+  .header_logo {
+    width: auto;
+    max-width: none;
+    height: 50px;
+    margin-top: 0;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 22px;
+      width: auto;
+      // aspect ratio of logo-codeai-inverse.svg (viewBox="0 0 591.15 100");
+      // reserves ~130px wide before fetch, preventing horizontal CLS.
+      aspect-ratio: 591.15 / 100;
+      display: block;
+    }
+  }
+
+  // Wider logo recovers space in the nav gap instead of bumping the collapse
+  // threshold. Tighten .headerlinks gap at small-desktop so the wider logo
+  // doesn't force links into the hamburger any earlier than the code brand.
+  .header-wrapper .header .headerlinks {
+    @media (min-width: 1024px) and (max-width: 1268px) {
+      gap: 1.5rem;
+    }
   }
 }
 
@@ -1826,46 +1862,6 @@ a.download-video {
 
 .course_progress {
   margin: 10px 0;
-}
-
-#signinsection {
-  ul.students, ul.pictures {
-    margin-left: 0;
-  }
-
-  ul.students li,
-  ul.pictures li {
-    list-style-type: none;
-    border: 1px solid $lighter_gray;
-    border-radius: 5px;
-    background-color: $lightest_gray;
-    float: left;
-    margin: 5px;
-    padding: 5px;
-    cursor: pointer;
-  }
-
-  ul.students li:hover,
-  ul.pictures li:hover {
-    background-color: $light_yellow;
-  }
-
-  ul.students li.selected,
-  ul.pictures li.selected {
-    background-color: $yellow;
-  }
-
-  #pairing_checkbox {
-    margin: 5px 0;
-    label {
-      font-size: 17.5px;
-    }
-    label, input {
-      margin: 5px;
-      display: inline-block;
-      vertical-align: middle;
-    }
-  }
 }
 
 .flex-container {
@@ -2715,8 +2711,32 @@ a.download-video {
   }
 }
 
+.free-response {
+  li {
+    font-size: 16px;
+  }
+}
+
+#level_markdown_textarea_preview.external.content-level,
+#level_long_instructions_preview.external.content-level,
 .external .content-level {
   overflow: hidden;
+
+  p, label, li {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 37px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  h3, h4 {
+    font-size: 21px;
+  }
 }
 
 .external-video-container {
@@ -2884,6 +2904,22 @@ a.download-video {
 
   &-full-width {
     width: unset;
+  }
+
+  p, label, li {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 37px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  h3, h4 {
+    font-size: 21px;
   }
 }
 
@@ -3592,8 +3628,6 @@ $width: 400px;
   display: inline-block;
   top: 10px;
   left: 10px;
-  text-align: center;
-  font-size: 1.275em;
   position: fixed;
   z-index: 1000;
 
@@ -3604,12 +3638,18 @@ $width: 400px;
     }
   }
 
-  #logo-container {
-    padding: 4px;
-    background-color: $light_gray;
-    width: 60px;
-    border-radius: 0;
-    margin-bottom: 4px;
+  #logo-img {
+    height: 22px;
+    width: auto;
+    display: block;
+  }
+}
+
+html[data-brand="codeai"], html[data-brand="codeai-next"] {
+  #main-logo #logo-img {
+    // aspect ratio of logo-codeai-inverse.svg (viewBox="0 0 591.15 100");
+    // reserves ~130px wide before fetch, preventing horizontal CLS.
+    aspect-ratio: 591.15 / 100;
   }
 }
 
@@ -4370,4 +4410,23 @@ a {
 
 .cm-editor {
   height: 100%;
+}
+
+// @see https://github.com/code-dot-org/code-dot-org/commit/3a5ecdffd3ea400182896aa031d9d70b77eba2b1#diff-12c03faea22f2ff4ab3508193ed80cd058cce54ef3e6708ce46703c29b92511cR3-R28
+details {
+  summary {
+    cursor: pointer;
+
+    // Supports `<summary><h1>Title</h1><p>See more</p></summary>` idiom often used by level builders
+    h1 {
+      display: inline;
+      margin-right: 10px;
+    }
+
+    &:hover {
+      // Include hover effect on mouseover
+      background: $lightest_gray;
+      cursor: pointer;
+    }
+  }
 }

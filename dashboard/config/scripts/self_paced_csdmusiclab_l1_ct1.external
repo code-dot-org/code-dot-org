@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Computational Thinking in the Curriculum
 
-#### The Programming with Music Lab curriculum prompts students to utilize computational thinking practices while they code. While you teach the curriculum, it will be valuable to recognize them and model them in your thinking. This will help engender independence and a problem-solving mindset in students.
+The Programming with Music Lab curriculum prompts students to utilize computational thinking practices while they code. While you teach the curriculum, it will be valuable to recognize them and model them in your thinking. This will help engender independence and a problem-solving mindset in students.
 
-#### Here's what this might sound like during your instruction:
+Here's what this might sound like during your instruction:
 
 <!-- Quote 1 (image left, bubble right) -->
 <div style="margin-top: 20px; display: flex; align-items: center; gap: 15px; margin-bottom: 30px;">

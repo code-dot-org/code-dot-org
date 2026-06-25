@@ -1,5 +1,7 @@
-export {default, type HeaderProps} from './Header';
+export {default, type HeaderProps, type CreateMenuItem} from './Header';
+export type {GlobalNavItem, MenuItem, UserType} from './shared/types';
 export {
   default as SignedInUserButton,
   type UserAuthProp,
-} from './SignedInUserButton';
+} from './components/SignedInUserButton/SignedInUserButton';
+export {default as SignedOutUserButtons} from './components/SignedOutUserButtons/SignedOutUserButtons';

@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-04 16:59:14 UTC",
+    "serialized_at": "2026-05-21 19:21:26 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -11448,10 +11448,11 @@
     },
     {
       "name": "Classification Models",
-      "url": "https://docs.google.com/presentation/d/1u3GFiaH_eumRcMqJoMPrel1ca7Li-ZaWpnYE95GjTpc/template/preview",
+      "url": "https://docs.google.com/presentation/d/1uz9p6uUKAeCHCcEv7_ZkB9y09gG3OaXmnGbT06c7pHs/edit?usp=drive_link",
       "key": "classification_models_1",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11534,10 +11535,11 @@
     },
     {
       "name": "Creating an App",
-      "url": "https://docs.google.com/presentation/d/1bZAHiLhuPVqn6I3GYjD0vgLs115zr5QUuD82OVrrwqw/template/preview",
+      "url": "https://docs.google.com/presentation/d/1UzX8Rrio_MiHb9oAZn3nGvuWwnNqqyEYkxviMZ1dCyM/edit?usp=drive_link",
       "key": "creating_an_app",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11612,10 +11614,11 @@
     },
     {
       "name": "Customizing Apps",
-      "url": "https://docs.google.com/presentation/d/1qt10UDJrYyCaqNZHDI74efNZDFVww7BNKKR5Xs2x-1E/template/preview",
+      "url": "https://docs.google.com/presentation/d/1URJt9myQId8gzhq5wXAhkbEq0N97_GNnt3SduvezMe8/edit?usp=drive_link",
       "key": "customizing_apps",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11624,10 +11627,11 @@
     },
     {
       "name": "Design an AI App",
-      "url": "https://docs.google.com/presentation/d/1XZDJCHYs8t-Ut88NnDBxaRPfuhxhUGyLMa-Z3an-djA/template/preview",
+      "url": "https://docs.google.com/presentation/d/1_PGSpeMph1ZsoF3ZFiV-RgWxQcWuQPeV8ZPAmQJRp2w/edit?usp=drive_link",
       "key": "design_an_ai_app",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11766,10 +11770,11 @@
     },
     {
       "name": "Importing Models in App Lab",
-      "url": "https://docs.google.com/presentation/d/1s5lAQYrXmmBO6NSxql8HVXvL7lckSkcu_b8v69EdCN0/template/preview",
+      "url": "https://docs.google.com/presentation/d/1cefKj3o5xUFA58kVg2ODa1TOhuR9mneh19QJqZVW6RA/edit?usp=drive_link",
       "key": "importing_models_in_app_lab",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11778,10 +11783,11 @@
     },
     {
       "name": "Innovations in AI",
-      "url": "https://docs.google.com/presentation/d/1e9UpkcfckFEm4OxKNAvuSiLaHODieGhhQYC5QxVwM_c/template/preview",
+      "url": "https://docs.google.com/presentation/d/1z8i_EzbDWn0nwuQ_fye3GsxTL2Ne2ZPb8Tn_dNA7C5w/edit?usp=drive_link",
       "key": "innovations_in_ai",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11829,10 +11835,11 @@
     },
     {
       "name": "Introduction to AI Lab",
-      "url": "https://docs.google.com/presentation/d/1h3omzzY2Ov-XOGc9vS4T7AElz-i6eGUVoCJmXVVRLm4/template/preview",
+      "url": "https://docs.google.com/presentation/d/1GLKuZKbxleRjEJNw3p5k8P88EfmhjyzR4h-xYpVmG7M/edit?usp=drive_link",
       "key": "introduction_to_ai_lab",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11853,10 +11860,11 @@
     },
     {
       "name": "Introduction to Machine Learning",
-      "url": "https://docs.google.com/presentation/d/1NIfCsefss-p6bOG13nYRIJWC0i99PguRxcH9uD89MT8/template/preview",
+      "url": "https://docs.google.com/presentation/d/1sF0iIfzuohzN7nFwCEY01ghicVWtUL-7HKa-lVsIXQo/edit?usp=drive_link",
       "key": "introduction_to_machine_learning",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11876,10 +11884,11 @@
     },
     {
       "name": "Issue Statements",
-      "url": "https://docs.google.com/presentation/d/1zi-y_foZdSnLmrbC6eFr7HZfPAuHP5xf9lqQLINm10Y/template/preview",
+      "url": "https://docs.google.com/presentation/d/1DyTe9opJhyg7oI7tr4912Lk358qEoxYJV0fnyhV2X-0/edit?usp=drive_link",
       "key": "issue_statements",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11899,10 +11908,11 @@
     },
     {
       "name": "Make a Machine Learning App",
-      "url": "https://docs.google.com/presentation/d/1oP4kynUDd7LDbU7gSpogV_HpOBVLa8IIPYbnKGdsbfk/template/preview",
+      "url": "https://docs.google.com/presentation/d/1V_gJ9eNwaSAIWnpwBh-yIyhvTGBZGLdj8Dr9SheYSFE/edit?usp=drive_link",
       "key": "make_a_machine_learning_app",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11935,10 +11945,11 @@
     },
     {
       "name": "Model Cards",
-      "url": "https://docs.google.com/presentation/d/1tJgkXsYx1Ru47NEXj5t2jCnAC0rzgPoUNSe5QnLaxxM/template/preview",
+      "url": "https://docs.google.com/presentation/d/1gOoeOOiLpgi5hfDB28mMw_KkG4VLFimoYoJ-e1zPYJE/edit?usp=drive_link",
       "key": "model_cards",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11972,10 +11983,11 @@
     },
     {
       "name": "Model Cards in App Lab",
-      "url": "https://docs.google.com/presentation/d/1oTfowHcn4VxkgkAil8Gwa9wt8CQ6zzASbQeIk7zZP_w/template/preview",
+      "url": "https://docs.google.com/presentation/d/17E-rld7BKIJHlpe2iMkfh0yGH-NvBqryuGct4cSNSD4/edit?usp=drive_link",
       "key": "model_cards_in_app_lab",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11997,10 +12009,11 @@
     },
     {
       "name": "Numerical Data in AI Lab",
-      "url": "https://docs.google.com/presentation/d/1hBppP-h3h2Bv4lBcz0QosGLXeY2e-IPHfoI4LcRxsxc/template/preview",
+      "url": "https://docs.google.com/presentation/d/1WVT3biS6qLDIIoDsCuhbsPfajftX2rG2LH5eez2-tyE/edit?usp=drive_link",
       "key": "numerical_data_in_ai_lab",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -12034,10 +12047,11 @@
     },
     {
       "name": "Numerical Models",
-      "url": "https://docs.google.com/presentation/d/1eUL1kPcAHxjIAZMucBVScS_dL6T7K1SqInIm-CBdT9Q/template/preview",
+      "url": "https://docs.google.com/presentation/d/1TNTWktno3zLZQY6tntP9yTepQXCfqRVEbKq8hwzmfoQ/edit?usp=drive_link",
       "key": "numerical_models",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -12046,10 +12060,11 @@
     },
     {
       "name": "Our AI Code of Ethics [Template]",
-      "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1SOk_yJnv9qBGLWBbMlkJfbVra39-iDu8Hv4doOl1RtQ/edit?usp=drive_link",
       "key": "our_ai_code_of_ethics_template_",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -12058,10 +12073,11 @@
     },
     {
       "name": "Patterns in Data",
-      "url": "https://docs.google.com/presentation/d/1tXw345jGdjcLnq56BhDOKV70CppdpgFWmGE8gKFiO6Y/template/preview",
+      "url": "https://docs.google.com/presentation/d/1DNa3zoS17IDFlGm1fKKDrKBKNvjsnHqa1UoiK5_ztXI/edit?usp=drive_link",
       "key": "patterns_in_data",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -12095,10 +12111,11 @@
     },
     {
       "name": "Saving Models in AI Lab",
-      "url": "https://docs.google.com/presentation/d/1OWC2HDOJr48y8Y7oWVOFRv3aZf8ehECTvvnc-mzcF60/template/preview",
+      "url": "https://docs.google.com/presentation/d/17xcPnyWEUVuh00livAznRq_s1pESTbD5Taf9YYp0lfw/edit?usp=drive_link",
       "key": "saving_models_in_ai_lab",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -12155,10 +12172,11 @@
     },
     {
       "name": "Survey Data in AI Lab",
-      "url": "https://docs.google.com/presentation/d/1rdSOE0I3UxdNVw4L723F1upmz_RDVwZFCm2E0VxJJHA/template/preview",
+      "url": "https://docs.google.com/presentation/d/1VIsLA-5AzMSkjrJpHGv_6iXe-ebpwFB9iwlgXBYBXes/edit?usp=drive_link",
       "key": "survey_data_in_ai_lab",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -12167,10 +12185,11 @@
     },
     {
       "name": "Survey Planning",
-      "url": "https://docs.google.com/presentation/d/1stF16dldACQXr8Vh60LAN_xZ8BZLIL9SOTcjo6FaeZc/template/preview",
+      "url": "https://docs.google.com/presentation/d/12MNjd1NblgpbxQ2vJwWHa-PbvpU4ZJFfY-2eShcpsVo/edit?usp=drive_link",
       "key": "survey_planning",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -12271,10 +12290,11 @@
     },
     {
       "name": "Troubleshooting Models - Activity Guide",
-      "url": "https://docs.google.com/document/d/1CWOJ7PHNlO7Z-4C51KvZnu55EDKn1t33i-2oUw5Zc_g/view",
+      "url": "https://docs.google.com/presentation/d/17zc0lS1UdDav7Vk6MzyNDofphs_vUgy8cKQbIY4T_cQ/edit?usp=drive_link",
       "key": "troubleshooting_models_-_activity_guide",
       "properties": {
         "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true
       },
       "seeding_key": {
@@ -12283,10 +12303,11 @@
     },
     {
       "name": "Types of Machine Learning",
-      "url": "https://docs.google.com/presentation/d/1gnQJW8Rh1Q_rE7xDF3DM_LtVncEQLSzGgvMoe-kVRlM/template/preview",
+      "url": "https://docs.google.com/presentation/d/101Ek6l2Vw_2ncLm_mTOec0NCAh2WeXuXnVWyXrpoNUk/edit?usp=drive_link",
       "key": "types_of_machine_learning",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -12992,16 +13013,6 @@
   ],
   "vocabularies": [
     {
-      "key": "bias",
-      "word": "bias",
-      "definition": "when a person, source, or piece of information favors one side of a topic in a way that is unfair or leaves out important details",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "bias"
-      }
-    },
-    {
       "key": "categorical_data",
       "word": "Categorical Data",
       "definition": "data that can be separated into groups",
@@ -13177,12 +13188,6 @@
       "seeding_key": {
         "lesson.key": "Lesson 5: Classification Models",
         "vocabulary.key": "classification"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 8: Model Cards",
-        "vocabulary.key": "bias"
       }
     }
   ],

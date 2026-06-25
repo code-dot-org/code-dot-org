@@ -1,12 +1,13 @@
 <Sketchlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 75,
-  "created_at": "2026-04-14T11:09:54.000Z",
+  "created_at": "2026-04-01T21:44:21.000Z",
   "level_num": "custom",
   "user_id": 18762,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# Invalid Data: Designing for the \"Oops\"\r\n\r\nBased on the following user complaint about the Concert App bug (Level 1), design the UI for what should appear on screen instead:\r\n\r\n> **The Code Crash:** \"I clicked my profile and the whole app just crashed.\"\r\n\r\nUse simple boxes and labels to show your layout. Your sketch must include three elements:\r\n\r\n1. **The Message:** Explain what happened in plain English. Avoid using \"Error 404\" or \"Null\".\r\n2. **The Action:** Give the user a clear next step, e.g., a \"Retry\" button, a \"Contact Support\" link, or a \"Return to Home\" option.\r\n3. **The Tone Check:** Ensure the tone is calm and helpful. Avoid scary icons or blaming the user.",
+    "long_instructions": "## Server Failure Recovery\r\n\r\nA user submitted Ticket #1003 — the app crashed while loading their profile.\r\n\r\nSketch what the user should see instead. Your design must include:\r\n\r\n1. **The Message:** Explain what happened in plain English. No error codes, no technical jargon.\r\n2. **The Action:** Give the user a clear next step — a Retry button, Contact Support link, or Return to Home option.\r\n3. **The Tone:** Keep it calm and helpful. No scary icons, no blame.",
     "start_sources": {
       "source": {
         "nodes": [
@@ -14,8 +15,8 @@
             "id": "V29L9wujj4e7u_7C34J3A",
             "type": "shape",
             "position": {
-              "x": -1910.3305547250043,
-              "y": -1175.1535254333592
+              "x": -1939.944378421029,
+              "y": -1163.6396752911385
             },
             "style": {
               "width": 1152.421771383269,
@@ -25,7 +26,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1152,
@@ -48,7 +49,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 724,
@@ -67,19 +68,15 @@
             },
             "data": {
               "text": "Message: What will the user see?",
-              "fontColor": "#000",
-              "fontSize": "large",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "medium",
               "showHandles": false
             },
             "measured": {
-              "width": 343,
-              "height": 47
+              "width": 254,
+              "height": 39
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "tJAZKd_1uGRvY3P0KQP8T",
@@ -90,13 +87,13 @@
             },
             "data": {
               "text": "Action: What should the user do next?",
-              "fontColor": "#000000",
-              "fontSize": "large",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "medium",
               "showHandles": false
             },
             "measured": {
-              "width": 394,
-              "height": 47
+              "width": 291,
+              "height": 39
             }
           },
           {
@@ -108,7 +105,7 @@
             },
             "data": {
               "text": "Plan Your Design",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -116,11 +113,7 @@
               "width": 182,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "fBy4xyYgrrqcZ-APMfeKb",
@@ -131,7 +124,7 @@
             },
             "data": {
               "text": "User's View",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -139,11 +132,7 @@
               "width": 133,
               "height": 47
             },
-            "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            }
+            "dragging": false
           },
           {
             "id": "-kslNR-1WviAOdfBvO4IM",
@@ -159,16 +148,12 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "var(--sketchlab-bg-gray)",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 615,
               "height": 281
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
             }
           },
           {
@@ -185,16 +170,12 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "var(--sketchlab-bg-gray)",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 615,
               "height": 281
-            },
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
             }
           }
         ],
@@ -202,9 +183,9 @@
 
         ],
         "viewport": {
-          "x": 1697.0831734156272,
-          "y": 692.7993923780884,
-          "zoom": 0.5388489208633094
+          "x": 2232.2789491363983,
+          "y": 929.8168072757571,
+          "zoom": 0.7800863309352518
         }
       }
     },
@@ -246,11 +227,10 @@
       }
     },
     "display_name": "Server Error",
-    "bubble_choice_description": "Design the UI for what should appear on screen when this error happens.",
-    "thumbnail_url": "https://images.code.org/f3cb40f5572ee4066e18d5f16aaf5d87-Screenshot 2026-02-11 at 11.16.17 AM.png",
+    "bubble_choice_description": "Ticket #1003: The server crashed while loading the user's profile. Design what they should see instead of an application crash dialog.",
+    "thumbnail_url": "https://images.code.org/099da8de5d037669b155f63c0cad45a3-Untitled presentation (1).jpg",
     "name_suffix": "_2026"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:21.317+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson7-sketchlab-choiceC-2025-pilo_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson7-sketchlab-choiceC-2025-pilo_2025-pilot\"},{\"changed_at\":\"2026-05-01 15:35:49 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 15:35:52 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:21.317+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson7-sketchlab-choiceC-2025-pilo_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson7-sketchlab-choiceC-2025-pilo_2025-pilot\"},{\"changed_at\":\"2026-05-01 15:35:49 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 15:35:52 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-07 13:36:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-06-16 15:46:20 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 15:49:49 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 15:49:50 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 16:12:42 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 18:37:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Sketchlab>

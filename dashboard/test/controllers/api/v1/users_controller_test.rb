@@ -234,7 +234,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_equal teacher.username, response["username"]
     assert_equal "teacher", response["user_type"]
     assert_equal teacher.short_name, response["short_name"]
-    assert_equal teacher.educator_role, response["educator_role"]
+    assert_nil response["educator_role"]
     assert_equal %w[9 10 11 12], response["grades_teaching"]
     assert_equal false, response["is_verified_instructor"]
   end
@@ -304,6 +304,45 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
 
     post :set_seen_ta_scores, params: {lesson_id: 'not_a_number'}
     assert_response :bad_request
+  end
+
+  test 'a get request to teacher_onboarding_hidden defaults to false' do
+    sign_in(@user)
+    get :get_teacher_onboarding_hidden
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert_equal false, response["teacher_onboarding_hidden"]
+  end
+
+  test 'a get request to teacher_onboarding_hidden returns true when set' do
+    @user.update!(teacher_onboarding_hidden: true)
+    sign_in(@user)
+    get :get_teacher_onboarding_hidden
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert_equal true, response["teacher_onboarding_hidden"]
+  end
+
+  test 'a post request to teacher_onboarding_hidden updates the flag' do
+    sign_in(@user)
+    refute @user.teacher_onboarding_hidden
+    post :post_teacher_onboarding_hidden, params: {teacher_onboarding_hidden: 'true'}
+    assert_response :no_content
+    @user.reload
+    assert @user.teacher_onboarding_hidden
+
+    post :post_teacher_onboarding_hidden, params: {teacher_onboarding_hidden: 'false'}
+    assert_response :no_content
+    @user.reload
+    assert_equal false, !!@user.teacher_onboarding_hidden
+  end
+
+  test 'teacher_onboarding_hidden endpoints require a signed-in user' do
+    post :post_teacher_onboarding_hidden, params: {teacher_onboarding_hidden: 'true'}
+    assert_response :unauthorized
+
+    get :get_teacher_onboarding_hidden
+    assert_response :unauthorized
   end
 
   describe 'GET signed_in' do

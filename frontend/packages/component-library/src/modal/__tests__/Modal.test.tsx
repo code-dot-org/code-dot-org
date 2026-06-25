@@ -1,6 +1,5 @@
 import {render, screen, fireEvent} from '@testing-library/react';
-
-import '@testing-library/jest-dom';
+import {vi} from 'vitest';
 
 import Modal, {ModalProps} from './../index';
 
@@ -10,9 +9,9 @@ describe('Modal Component', () => {
     description: 'This is a test description.',
     primaryButtonProps: {
       children: 'Primary Action',
-      onClick: jest.fn(),
+      onClick: vi.fn(),
     },
-    onClose: jest.fn(),
+    onClose: vi.fn(),
   };
 
   it('should render the modal with title and description', () => {
@@ -29,7 +28,7 @@ describe('Modal Component', () => {
         {...defaultProps}
         secondaryButtonProps={{
           children: 'Secondary Action',
-          onClick: jest.fn(),
+          onClick: vi.fn(),
         }}
       />,
     );

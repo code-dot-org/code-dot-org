@@ -125,7 +125,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
       AI_TUTOR_LEGACY_LABS.includes(labType) &&
       shouldShowAiTutor({
         appName: labType,
-        tutorLevel: aiTutorAvailableForLevel,
+        isTutorLevel: aiTutorAvailableForLevel,
         aiChatAccessLevel,
       });
 

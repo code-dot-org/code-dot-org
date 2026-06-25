@@ -5,11 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # Array Methods
 
-#### Think of an array as a row of objects. Need to add one? Remove one? Move something around? That’s what array methods help you do. It is just like updating a playlist or organizing items on a table.
+Think of an array as a row of objects. Need to add one? Remove one? Move something around? That’s what array methods help you do. It is just like updating a playlist or organizing items on a table.
 
 <img src="https://images.code.org/940076172862794f79ba0ed57f648917-image-1765813032852.png" alt="design process graph of the cycle" width="450px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; "> <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;"> <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 An <strong>array method</strong> is a built-in command that lets you modify or use the items in an array. </p> </div>
 
-#### These methods help you add, remove, or rearrange elements in a list.
+These methods help you add, remove, or rearrange elements in a list.
 
 ## Array Methods
 
@@ -63,16 +63,5 @@ Think: Shift everything up by removing this first item.
         </div>
     </div>
 
----
 
-## Teaching Array Methods 
-
-#### In lesson 3, these array methods are not explicitly taught to the students. Instead, they explore sample code and work with AI tutor to understand these four methods. 
-
-<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ If your class needs a more hands-on way to understand these methods, try the <b>PushPush-Pop Line Game</b> from the <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>[teacher resources]</a>.
-</p>
-
-## Next up
-#### Explore the code in the next level to see how these array methods work in JavaScript. 
 MARKDOWN
