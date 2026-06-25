@@ -12,11 +12,15 @@ import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {updateSectionAiChatAccessLevel} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiChatAccessLevels,
+  AiChatDisabledReasons,
+} from '@cdo/generated-scripts/sharedConstants';
 
 import {handleUpdateSectionAiChatAccessLevel} from '../../accessControlsApi';
 import {
   AI_SETTINGS_SUPPORT_LINK,
+  AI_CHAT_NOT_AVAILABLE_INTERNATIONAL_TEACHER_SETTINGS,
   VERIFIED_TEACHER_SUPPORT_LINK,
 } from '../../constants';
 import {shouldShowAiChatEssentialAlert} from '../../helpers/aiChatAccess';
@@ -57,8 +61,13 @@ const AiChatAccessControls: React.FC = () => {
   const teacherAiChatAccessLevel = useAppSelector(
     state => state.currentUser.aiChatAccessLevel
   );
+  const teacherAiChatDisabledReason = useAppSelector(
+    state => state.currentUser.aiChatDisabledReason
+  );
   const isCurrentUserAccessDisabled =
     teacherAiChatAccessLevel === AiChatAccessLevels.DISABLED;
+  const isCurrentUserInternational =
+    teacherAiChatDisabledReason === AiChatDisabledReasons.INTERNATIONAL;
   if (!section) {
     throw new Error('Section does not exist');
   }
@@ -132,18 +141,25 @@ const AiChatAccessControls: React.FC = () => {
 
   return (
     <div className={style.container}>
-      {isCurrentUserAccessDisabled && (
-        <Alert
-          text="You cannot enable AI Chat Tools. These settings will not take
+      {isCurrentUserAccessDisabled &&
+        (isCurrentUserInternational ? (
+          <Alert
+            text={AI_CHAT_NOT_AVAILABLE_INTERNATIONAL_TEACHER_SETTINGS}
+            type={alertTypes.warning}
+            icon={{iconName: 'triangle-exclamation', iconStyle: 'solid'}}
+          />
+        ) : (
+          <Alert
+            text="You cannot enable AI Chat Tools. These settings will not take
               effect until you become a verified teacher."
-          type={alertTypes.warning}
-          link={{
-            href: VERIFIED_TEACHER_SUPPORT_LINK,
-            text: 'Learn how to become a verified teacher',
-          }}
-          icon={{iconName: 'triangle-exclamation', iconStyle: 'solid'}}
-        />
-      )}
+            type={alertTypes.warning}
+            link={{
+              href: VERIFIED_TEACHER_SUPPORT_LINK,
+              text: 'Learn how to become a verified teacher',
+            }}
+            icon={{iconName: 'triangle-exclamation', iconStyle: 'solid'}}
+          />
+        ))}
       <div className={style.interactionsElement}>
         <Typography variant="h4">Class Section Settings</Typography>
         <Typography className={style.subHeader} variant="body3" gutterBottom>
