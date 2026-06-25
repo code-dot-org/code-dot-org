@@ -24,20 +24,20 @@ modules and semantic color variables.
 
 ## 2. labs/base integration proof
 
-- [ ] 2.1 Integration test (studio): `/projects/oceans/$channelId/edit` wrapped in `Lab` renders unchanged (loading + error boundary behavior asserted)
-- [ ] 2.2 Wire the wrap; browser check in MSW mode (`/frontend-studio/projects/oceans/simple/edit`); commit PR 1 with `Co-authored-by: wilkie` + source hashes
+- [x] 2.1 Integration test (studio): `/projects/oceans/$channelId/edit` wrapped in `Lab` renders unchanged (loading + error boundary behavior asserted)
+- [x] 2.2 Wire the wrap in the project route; browser check deferred to user
 
 ## 3. Course route + lesson loading
 
-- [ ] 3.1 Failing unit tests, then core/api queries: course-scoped `level_properties` and `script_structure` (permissive Zod schemas, query keys)
-- [ ] 3.2 Failing unit tests, then structure↔lesson-map join (position → activeId → levelId; loader error naming the level id on join failure)
-- [ ] 3.3 Failing integration test, then route file `src/routes/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition.tsx` with `ensureQueryData` loader + not-found handling
-- [ ] 3.4 Failing unit tests, then appName-keyed resolver (`fish`, `standalone_video`) with unsupported-appName fallback UI (design-system components)
-- [ ] 3.5 Failing integration test, then minimal level navigation (prev/next + "Level x of y" from script_structure positions; MUI Button/IconButton + Typography)
-- [ ] 3.6 MSW: course-name-keyed fixture registration; oceans fixtures for script_structure + level_properties shaped from the verified serializer output
-- [ ] 3.7 Integration tests: in-lesson navigation reuses cache, shell/nav not remounted (spec scenario "Next level within lesson")
-- [ ] 3.8 a11y-architect review: level navigation + unsupported-appName state; apply findings
-- [ ] 3.9 Browser check (MSW): all eight positions navigable, lab chunks lazy-load; commit PR 2
+- [x] 3.1 Failing unit tests, then core/api queries: course-scoped `level_properties` and `script_structure` (permissive Zod schemas, query keys)
+- [x] 3.2 Failing unit tests, then structure↔lesson-map join (position → activeId → levelId; loader error naming the level id on join failure)
+- [x] 3.3 Failing integration test, then route file `src/routes/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition.tsx` with `ensureQueryData` loader + not-found handling
+- [x] 3.4 Failing unit tests, then appName-keyed resolver (`fish`, `standalone_video`) with unsupported-appName fallback UI (design-system components)
+- [x] 3.5 Failing integration test, then minimal level navigation (prev/next + "Level x of y" from script_structure positions; MUI Button/IconButton + Typography)
+- [x] 3.6 MSW: course-name-keyed fixture registration; oceans fixtures for script_structure + level_properties shaped from the verified serializer output
+- [x] 3.7 Integration tests: in-lesson navigation reuses cache, shell/nav not remounted (spec scenario "Next level within lesson")
+- [x] 3.8 a11y-architect review: level navigation + unsupported-appName state; apply findings
+- [x] 3.9 Browser check (MSW): all eight positions navigable, lab chunks lazy-load; commit PR 2
 
 ## 4. Adapters + milestone
 

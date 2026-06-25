@@ -1,6 +1,7 @@
 import {z} from 'zod';
 
 import {
+  CourseLevelPropertiesMapSchema,
   InstructionTypes,
   InstructorAudiences,
   LessonGroupSummarySchema,
@@ -10,6 +11,7 @@ import {
   LevelSchema,
   ParticipantAudiences,
   PublishedStates,
+  ScriptStructureSchema,
   SublevelSchema,
   UnitLevelSchema,
   UnitSummarySchema,
@@ -33,3 +35,7 @@ export type InstructionType =
   (typeof InstructionTypes)[keyof typeof InstructionTypes];
 export type InstructorAudience =
   (typeof InstructorAudiences)[keyof typeof InstructorAudiences];
+export type ScriptStructure = z.infer<typeof ScriptStructureSchema>;
+export type CourseLevelPropertiesMap = z.infer<
+  typeof CourseLevelPropertiesMapSchema
+>;

@@ -1,5 +1,10 @@
 import type {Transport} from '../../transports/types';
-import {LessonSchema, UnitShortSummarySchema} from './courses.schemata';
+import {
+  CourseLevelPropertiesMapSchema,
+  LessonSchema,
+  ScriptStructureSchema,
+  UnitShortSummarySchema,
+} from './courses.schemata';
 
 export function createCoursesApi(transport: Transport) {
   return {
@@ -33,6 +38,32 @@ export function createCoursesApi(transport: Transport) {
       });
 
       return LessonSchema.parse(raw);
+    },
+
+    async getScriptStructure(params: {course: string; unitPosition: number}) {
+      const {course, unitPosition} = params;
+
+      const raw = await transport.request<unknown>({
+        method: 'GET',
+        url: `/api/script_structure/courses/${course}/units/${unitPosition}`,
+      });
+
+      return ScriptStructureSchema.parse(raw);
+    },
+
+    async getCourseLevelProperties(params: {
+      course: string;
+      unitPosition: number;
+      lessonPosition: number;
+    }) {
+      const {course, unitPosition, lessonPosition} = params;
+
+      const raw = await transport.request<unknown>({
+        method: 'GET',
+        url: `/courses/${course}/units/${unitPosition}/lessons/${lessonPosition}/level_properties`,
+      });
+
+      return CourseLevelPropertiesMapSchema.parse(raw);
     },
   };
 }

@@ -224,3 +224,50 @@ export const LevelKinds = {
   Level: 'level',
   StageExtras: 'stage_extras',
 } as const;
+
+/**
+ * Permissive schemas for /api/script_structure/courses/:course/units/:pos.
+ * Only the fields the route loader uses are required; everything else passes
+ * through so unknown serializer fields never break validation.
+ */
+const ScriptStructureLevelSchema = z
+  .object({
+    id: z.string(),
+    activeId: z.string(),
+    position: z.number(),
+    path: z.string(),
+    app: z.string(),
+  })
+  .passthrough();
+
+const ScriptStructureLessonSchema = z
+  .object({
+    script_name: z.string(),
+    levels: z.array(ScriptStructureLevelSchema),
+  })
+  .passthrough();
+
+export const ScriptStructureSchema = z
+  .object({
+    name: z.string(),
+    lessons: z.array(ScriptStructureLessonSchema),
+  })
+  .passthrough();
+
+/**
+ * Permissive schema for /courses/:course/units/:pos/lessons/:pos/level_properties.
+ * Keys are level-id strings; values carry at least appName and name. The schema
+ * uses a plain z.string() for appName (not z.enum(ProjectTypes)) because course
+ * levels include app names like "fish" that aren't in ProjectTypes.
+ */
+const CourseLevelPropertiesSchema = z
+  .object({
+    appName: z.string(),
+    name: z.string(),
+  })
+  .passthrough();
+
+export const CourseLevelPropertiesMapSchema = z.record(
+  z.string(),
+  CourseLevelPropertiesSchema,
+);
