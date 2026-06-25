@@ -99,8 +99,22 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
     hasAssignedEssentialAiDependency,
     setHasAssignedEssentialAiDependency,
   ] = React.useState<boolean>(false);
+  const [onboardingHidden, setOnboardingHidden] =
+    React.useState<boolean>(false);
+  const [isLoadingOnboardingHiddenStatus, setIsLoadingOnboardingHiddenStatus] =
+    React.useState<boolean>(true);
 
   const dispatch = useAppDispatch();
+
+  const handleHideOnboarding = React.useCallback(() => {
+    setOnboardingHidden(true);
+    new UserPreferences().setTeacherOnboardingHidden(true);
+  }, []);
+
+  const handleResumeOnboarding = React.useCallback(() => {
+    setOnboardingHidden(false);
+    new UserPreferences().setTeacherOnboardingHidden(false);
+  }, []);
 
   React.useEffect(() => {
     dispatch(asyncLoadTeacherHomepageSectionData());
@@ -109,22 +123,23 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
     }
     dispatch(asyncLoadCoteacherInvite());
 
-    // Fetch personalization alert dismissal status
-    const fetchPersonalizationStatus = async () => {
+    // Fetch user preference statuses
+    const fetchUserPreferenceStatuses = async () => {
+      const userPreferences = new UserPreferences();
       try {
-        const userPreferences = new UserPreferences();
-        const hasDismissed =
-          await userPreferences.getHasDismissedPersonalizationAlert();
+        const [hasDismissed, hidden] = await Promise.all([
+          userPreferences.getHasDismissedPersonalizationAlert(),
+          userPreferences.getTeacherOnboardingHidden(),
+        ]);
         setHasDismissedPersonalizationAlert(hasDismissed);
-      } catch (error) {
-        console.error('Error fetching personalization alert status:', error);
-        setHasDismissedPersonalizationAlert(false);
+        setOnboardingHidden(hidden);
       } finally {
         setIsLoadingPersonalizationAlertStatus(false);
+        setIsLoadingOnboardingHiddenStatus(false);
       }
     };
 
-    fetchPersonalizationStatus();
+    fetchUserPreferenceStatuses();
 
     // Fetch teaching profile data
     const fetchTeachingProfileData = async () => {
@@ -304,20 +319,26 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
             <Header
               selectedArchiveToggle={selectedArchiveToggle}
               setSelectedArchiveToggle={onArchiveToggleChange}
+              onResumeOnboarding={handleResumeOnboarding}
+              onboardingHidden={onboardingHidden}
             />
 
             <CoteacherInviteNotification
               isForPl={false}
               destructiveLoad={true}
             />
-            {!!isMiniTutorialEnabled && demoSectionDemoType !== null && (
-              <OnboardingChecklist
-                createSectionTour={tour}
-                reviewSyllabusTour={reviewSyllabusTour}
-                learnHowToEvaluateTour={learnHowToEvaluateTour}
-                demoType={demoSectionDemoType}
-              />
-            )}
+            {!!isMiniTutorialEnabled &&
+              demoSectionDemoType !== null &&
+              !isLoadingOnboardingHiddenStatus && (
+                <OnboardingChecklist
+                  createSectionTour={tour}
+                  reviewSyllabusTour={reviewSyllabusTour}
+                  learnHowToEvaluateTour={learnHowToEvaluateTour}
+                  demoType={demoSectionDemoType}
+                  isHidden={onboardingHidden}
+                  onHide={handleHideOnboarding}
+                />
+              )}
             {!isDemoSectionEnabled ? (
               numSections === 0 ? (
                 <EmptyHomepage showHiddenOnly={showHiddenOnly} />

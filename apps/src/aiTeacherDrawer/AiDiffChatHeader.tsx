@@ -88,25 +88,37 @@ const AiDiffChatHeader: React.FC<AiDiffChatHeaderProps> = ({
         value: 'support',
         label: 'Get Started',
         icon: {iconName: 'rocket-launch'},
-        onClick: () => { onSuggestPrompts('support'); closeDropdown(); },
+        onClick: () => {
+          onSuggestPrompts('support');
+          closeDropdown();
+        },
       },
       {
         value: 'plan',
         label: 'Ideate',
         icon: {iconName: 'spinner-scale'},
-        onClick: () => { onSuggestPrompts('plan'); closeDropdown(); },
+        onClick: () => {
+          onSuggestPrompts('plan');
+          closeDropdown();
+        },
       },
       {
         value: 'create',
         label: 'Create',
         icon: {iconName: 'file-pen'},
-        onClick: () => { onSuggestPrompts('create'); closeDropdown(); },
+        onClick: () => {
+          onSuggestPrompts('create');
+          closeDropdown();
+        },
       },
       {
         value: 'apcsp',
         label: 'AP Prep',
         icon: {iconName: 'laptop-code'},
-        onClick: () => { onSuggestPrompts('apcsp'); closeDropdown(); },
+        onClick: () => {
+          onSuggestPrompts('apcsp');
+          closeDropdown();
+        },
       },
     ];
 
