@@ -1,19 +1,22 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef} from 'react';
+import {AnyAction, Reducer} from 'redux';
 
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {LabProps} from '@cdo/apps/lab2/types';
 import SourcesContainer, {
   useSources,
 } from '@cdo/apps/lab2/views/SourcesContainer';
-import animationList, {
-  setInitialAnimationList,
-} from '@cdo/apps/p5lab/redux/animationList';
-import spritelabInputList from '@cdo/apps/p5lab/redux/spritelabInput';
-import textConsole from '@cdo/apps/p5lab/redux/textConsole';
+import {changeInterfaceMode} from '@cdo/apps/p5lab/actions';
+import {P5LabInterfaceMode} from '@cdo/apps/p5lab/constants';
+import * as p5labReducersModule from '@cdo/apps/p5lab/reducers';
+import {setInitialAnimationList} from '@cdo/apps/p5lab/redux/animationList';
+// p5lab/reducers is a CommonJS bundle of all the classic Sprite Lab slices;
+// pull the ones the engine and AnimationTab read from it by key.
+import {getSerializedAnimationList} from '@cdo/apps/p5lab/shapes';
 import {registerReducers} from '@cdo/apps/redux';
-import pageConstants from '@cdo/apps/redux/pageConstants';
+import pageConstants, {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import runState, {setIsRunning} from '@cdo/apps/redux/runState';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -29,25 +32,35 @@ import {SpriteLab2LevelProperties, SpriteLab2Source} from '../types';
 
 import CodeTab, {CodeTabHandle} from './CodeTab';
 import TabShell from './components/TabShell';
+import ItemsTab from './ItemsTab';
 import PlayTab from './PlayTab';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
-// Register the legacy Sprite Lab slices (animation list, console, run state,
-// page constants, ...) plus our own. Lab2 shares the global getStore() store, so
-// this gives the reused p5.play engine and (later) the AnimationTab the exact
-// store shape they read from. Mirrors appMain.js's registerReducers calls.
+const p5labReducers = p5labReducersModule as unknown as Record<string, Reducer>;
+
+// Register the legacy Sprite Lab slices (animation list + the animation-editor
+// slices AnimationTab reads, console, run state, page constants, ...) plus our
+// own. Lab2 shares the global getStore() store, so this gives the reused
+// p5.play engine and the classic AnimationTab the exact store shape they read
+// from. Mirrors appMain.js's registerReducers calls.
 registerReducers({
-  animationList,
-  textConsole,
-  spritelabInputList,
+  animationList: p5labReducers.animationList,
+  animationTab: p5labReducers.animationTab,
+  animationPicker: p5labReducers.animationPicker,
+  locationPicker: p5labReducers.locationPicker,
+  errorDialogStack: p5labReducers.errorDialogStack,
+  interfaceMode: p5labReducers.interfaceMode,
+  textConsole: p5labReducers.textConsole,
+  spritelabInputList: p5labReducers.spritelabInputList,
+  // PiskelEditor's connect reads state.locales.localeCode.
+  locales: p5labReducers.locales,
   runState,
   pageConstants,
   spriteLab2: spriteLab2Reducer,
 });
 
-// Tabs wired so far. Items/World arrive in later phases.
-const ENABLED_TABS: readonly SpriteLab2Tab[] = ['Code', 'Play'];
+const ENABLED_TABS: readonly SpriteLab2Tab[] = ['Images', 'Code', 'Play'];
 
 // Sprites come from the Items tab, so a new project starts with no animations.
 const EMPTY_ANIMATION_LIST = {orderedKeys: [], propsByKey: {}};
@@ -61,6 +74,26 @@ const SpriteLab2View: React.FunctionComponent<{
 
   const isRunning = useAppSelector(state => state.runState.isRunning);
   const activeTab = useAppSelector(state => state.spriteLab2.activeTab);
+  const channelId = useAppSelector(state => state.lab.channel?.id);
+  // The classic AnimationTab + animationList logic key off these page
+  // constants (Sprite Lab is a Blockly lab); seed them since we bypass the
+  // legacy StudioApp.init that normally would.
+  useEffect(() => {
+    dispatch(
+      setPageConstants({
+        isBlockly: true,
+        isShareView: false,
+        channelId,
+      })
+    );
+    // AnimationTab shows currentAnimations[interfaceMode]; the Items tab is the
+    // animation editor, so keep it in ANIMATION mode.
+    // changeInterfaceMode is an untyped JS action creator (inferred as
+    // Function), so cast its returned action for dispatch.
+    dispatch(
+      changeInterfaceMode(P5LabInterfaceMode.ANIMATION) as unknown as AnyAction
+    );
+  }, [dispatch, channelId]);
 
   const sourcesRef = useRef(currentSources);
   useEffect(() => {
@@ -117,6 +150,19 @@ const SpriteLab2View: React.FunctionComponent<{
     // Re-create the engine only when the level changes.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [levelProperties.id]);
+
+  // Persist animation-editor changes (costumes/backgrounds added or edited in
+  // the Items tab) back to project sources in the classic serialized shape.
+  const animationListState = useAppSelector(state => state.animationList);
+  const skipFirstAnimationSave = useRef(true);
+  useEffect(() => {
+    if (skipFirstAnimationSave.current) {
+      // Don't immediately re-save the list we just seeded.
+      skipFirstAnimationSave.current = false;
+      return;
+    }
+    mergeSources({animations: getSerializedAnimationList(animationListState)});
+  }, [animationListState, mergeSources]);
 
   const handleRun = useCallback(() => {
     const engine = engineRef.current;
@@ -187,6 +233,12 @@ const SpriteLab2View: React.FunctionComponent<{
           onEdit={handleEdit}
         />
       </div>
+
+      {activeTab === 'Images' && (
+        <div className={classNames(moduleStyles.codeTabWrapper)}>
+          <ItemsTab />
+        </div>
+      )}
 
       {activeTab === 'Play' && (
         <div className={classNames(moduleStyles.codeTabWrapper)}>

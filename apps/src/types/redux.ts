@@ -38,7 +38,16 @@ import {LegacyLabsState} from '../redux/legacyLabs';
 // in order to make using the slice easier in components.
 // We cannot infer the type of our store because we programmatically add to the store
 // with registerReducers.
+// The classic p5lab animationList slice (orderedKeys + propsByKey). Typed
+// loosely here since the runtime animation props carry many fields.
+export interface AnimationListState {
+  orderedKeys: string[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  propsByKey: {[key: string]: any};
+}
+
 export interface RootState {
+  animationList: AnimationListState;
   manageStudents: ManageStudentsState;
   aichat: AichatState;
   aichatLab: AichatLabState;
