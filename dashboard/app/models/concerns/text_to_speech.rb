@@ -91,7 +91,7 @@ module TextToSpeech
   def self.tts_upload_to_s3(text, key, name, filename, context = nil, locale: I18n.locale)
     return if text.blank?
     return if CDO.acapela_login.blank? || CDO.acapela_storage_app.blank? || CDO.acapela_storage_password.blank?
-    return if AWS::S3.cached_exists_in_bucket?(TTS_BUCKET, filename)
+    return if Cdo::AwsWrapper::S3.cached_exists_in_bucket?(TTS_BUCKET, filename)
 
     loc_voice = TextToSpeech.localized_voice(locale: locale)
     url = Acapela.text_to_audio_url(text, loc_voice[:VOICE], loc_voice[:SPEED], loc_voice[:SHAPE], context)
@@ -99,21 +99,21 @@ module TextToSpeech
     uri = URI.parse(url)
     Net::HTTP.start(uri.host) do |http|
       resp = http.get(uri.path)
-      AWS::S3.upload_to_bucket(TTS_BUCKET, filename, resp.body, no_random: true)
+      Cdo::AwsWrapper::S3.upload_to_bucket(TTS_BUCKET, filename, resp.body, no_random: true)
 
       # Also upload metadata so we know what the text is supposed to be
       metadata_path = "#{filename.rpartition('.').first}.json"
       metadata = {}
-      if AWS::S3.exists_in_bucket(TTS_BUCKET, metadata_path)
+      if Cdo::AwsWrapper::S3.exists_in_bucket(TTS_BUCKET, metadata_path)
         # Pull down the existing metadata
-        metadata = JSON.parse(AWS::S3.download_from_bucket(TTS_BUCKET, metadata_path))
+        metadata = JSON.parse(Cdo::AwsWrapper::S3.download_from_bucket(TTS_BUCKET, metadata_path))
       end
       metadata[name] = {
         key: key,
         locale: locale,
         text: text
       }
-      AWS::S3.upload_to_bucket(TTS_BUCKET, metadata_path, metadata.to_json, no_random: true)
+      Cdo::AwsWrapper::S3.upload_to_bucket(TTS_BUCKET, metadata_path, metadata.to_json, no_random: true)
     end
   end
 

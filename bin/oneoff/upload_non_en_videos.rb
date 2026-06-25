@@ -67,7 +67,7 @@ def upload_to_s3(filename, upload_files)
   if upload_files
     File.open(filename, 'rb') do |file|
       s3_filename = File.basename(filename).parameterize + '.mp4'
-      AWS::S3.upload_to_bucket(
+      Cdo::AwsWrapper::S3.upload_to_bucket(
         'videos.code.org',
         "levelbuilder/#{s3_filename}",
         file,

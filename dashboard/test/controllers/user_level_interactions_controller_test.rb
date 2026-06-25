@@ -27,7 +27,7 @@ class UserLevelInteractionsControllerTest < ActionController::TestCase
     @channel_id = channel_token.channel
 
     # Don't actually talk to S3 when running SourceBucket.new
-    AWS::S3.stubs :create_client
+    Cdo::AwsWrapper::S3.stubs :create_client
     stub_project_source_data(@channel_id)
     _, @project_id = get_storage_id_and_project_id(@channel_id)
     fake_version_id = "fake-version-id"

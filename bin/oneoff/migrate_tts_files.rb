@@ -87,12 +87,12 @@ Level.all.each do |level|
       path = "#{voice}/#{speed}/#{shape}/#{md5_hash}/#{level.name}.mp3"
       new_path = "#{locale}/#{md5_hash}/#{sha_hash}/#{voice}-#{speed}-#{shape}.mp3"
 
-      if AWS::S3.exists_in_bucket(TextToSpeech::TTS_BUCKET, path)
-        if AWS::S3.exists_in_bucket(TextToSpeech::TTS_BUCKET, new_path)
+      if Cdo::AwsWrapper::S3.exists_in_bucket(TextToSpeech::TTS_BUCKET, path)
+        if Cdo::AwsWrapper::S3.exists_in_bucket(TextToSpeech::TTS_BUCKET, new_path)
           puts "[EXST] #{path} -> #{new_path}"
         else
           puts "[COPY] #{path} -> #{new_path}"
-          AWS::S3.create_client.copy_object(
+          Cdo::AwsWrapper::S3.create_client.copy_object(
             {
               bucket: TextToSpeech::TTS_BUCKET,
               copy_source: "/#{TextToSpeech::TTS_BUCKET}/#{path}",
@@ -104,9 +104,9 @@ Level.all.each do |level|
         # Create metadata for the copied file based on the info we have
         metadata_path = "#{new_path.rpartition('.').first}.json"
         metadata = {}
-        if AWS::S3.exists_in_bucket(TextToSpeech::TTS_BUCKET, metadata_path)
+        if Cdo::AwsWrapper::S3.exists_in_bucket(TextToSpeech::TTS_BUCKET, metadata_path)
           # Pull down the existing metadata
-          metadata = JSON.parse(AWS::S3.download_from_bucket(TextToSpeech::TTS_BUCKET, metadata_path))
+          metadata = JSON.parse(Cdo::AwsWrapper::S3.download_from_bucket(TextToSpeech::TTS_BUCKET, metadata_path))
           puts "[UPDT] #{metadata_path}"
         else
           puts "[WRTE] #{metadata_path}"
@@ -116,7 +116,7 @@ Level.all.each do |level|
           locale: locale,
           text: text
         }
-        AWS::S3.upload_to_bucket(TextToSpeech::TTS_BUCKET, metadata_path, metadata.to_json, no_random: true)
+        Cdo::AwsWrapper::S3.upload_to_bucket(TextToSpeech::TTS_BUCKET, metadata_path, metadata.to_json, no_random: true)
       else
         puts "[WARN] TTS file not found for level #{level.name} #{key} and locale #{locale}"
       end

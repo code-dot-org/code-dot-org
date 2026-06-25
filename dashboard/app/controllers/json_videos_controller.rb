@@ -26,7 +26,7 @@ class JSONVideosController < ApplicationController
   def content
     video = JSONVideo.find_by!(key: params[:id])
     bucket, key = parse_s3_uri(video.s3_uri)
-    body = AWS::S3.download_from_bucket(bucket, key)
+    body = Cdo::AwsWrapper::S3.download_from_bucket(bucket, key)
     render plain: body, content_type: 'application/json'
   rescue ActiveRecord::RecordNotFound
     head :not_found

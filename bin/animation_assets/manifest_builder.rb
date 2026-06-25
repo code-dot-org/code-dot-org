@@ -83,7 +83,7 @@ class ManifestBuilder
     if upload_spritelab_to_s3?
       manifest_filename = generate_spritelab_manifest_filename
       info "Uploading #{manifest_filename} to S3"
-      AWS::S3.upload_to_bucket(
+      Cdo::AwsWrapper::S3.upload_to_bucket(
         DEFAULT_S3_BUCKET,
         SPRITELAB_MANIFEST_PATH + 'spritelabCostumeLibrary.json',
         generate_json(animation_metadata, alias_map, category_map),
@@ -219,7 +219,7 @@ class ManifestBuilder
 
     manifest_filename = generate_spritelab_manifest_filename(locale)
     info "Uploading #{manifest_filename} to S3"
-    AWS::S3.upload_to_bucket(
+    Cdo::AwsWrapper::S3.upload_to_bucket(
       DEFAULT_S3_BUCKET,
       manifest_filename,
       generate_json(animation_metadata, alias_map, normalized_category_map),

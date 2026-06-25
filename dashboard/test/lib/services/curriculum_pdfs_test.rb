@@ -11,12 +11,12 @@ module Services
 
     test 'get_pdfless_lessons will only include lessons not present in S3' do
       unit_with_lesson_pdfs = create(:script, :in_single_unit_course, :with_lessons, seeded_from: Time.now)
-      AWS::S3.stubs(:exists_in_bucket).with do |_bucket, key|
+      Cdo::AwsWrapper::S3.stubs(:exists_in_bucket).with do |_bucket, key|
         key.include?(unit_with_lesson_pdfs.name)
       end.returns(true)
 
       unit_without_lesson_pdfs = create(:script, :in_single_unit_course, :with_lessons, seeded_from: Time.now)
-      AWS::S3.stubs(:exists_in_bucket).with do |_bucket, key|
+      Cdo::AwsWrapper::S3.stubs(:exists_in_bucket).with do |_bucket, key|
         key.include?(unit_without_lesson_pdfs.name)
       end.returns(false)
 
@@ -25,7 +25,7 @@ module Services
     end
 
     test 'get_pdfless_lessons excludes lessons without lesson plans' do
-      AWS::S3.stubs(:exists_in_bucket).returns(false)
+      Cdo::AwsWrapper::S3.stubs(:exists_in_bucket).returns(false)
       unit_with_lesson_plans = create(:script, :in_single_unit_course, :with_lessons)
       unit_without_lesson_plans = create(:script, :in_single_unit_course,  :with_lessons)
       unit_without_lesson_plans.lessons.each do |lesson|
@@ -100,13 +100,13 @@ module Services
         FileUtils.touch(File.join(tmpdir, 'deeply', 'nested', 'file.txt'))
         FileUtils.touch(File.join(tmpdir, 'deeply', 'nested', 'file.pdf'))
 
-        AWS::S3.expects(:upload_to_bucket).with(
+        Cdo::AwsWrapper::S3.expects(:upload_to_bucket).with(
           Services::CurriculumPdfs::S3_BUCKET,
           "file.pdf",
           "",
           no_random: true
         )
-        AWS::S3.expects(:upload_to_bucket).with(
+        Cdo::AwsWrapper::S3.expects(:upload_to_bucket).with(
           Services::CurriculumPdfs::S3_BUCKET,
           "deeply/nested/file.pdf",
           "",

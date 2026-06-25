@@ -14,7 +14,7 @@ class SoundLibraryTest < FilesApiTestBase
   def test_get_sound
     content = 'MP3_CONTENT'
     # Ensure the shared S3 client is used by stubbing the client with the expected response.
-    AWS::S3.s3 = Aws::S3::Client.new(
+    Cdo::AwsWrapper::S3.s3 = Aws::S3::Client.new(
       stub_responses: {
         list_object_versions: {
           versions: [{key: 'key', version_id: 'version'}]
@@ -27,14 +27,14 @@ class SoundLibraryTest < FilesApiTestBase
     assert last_response.ok?
     assert_equal content, last_response.body
   ensure
-    AWS::S3.s3 = nil
+    Cdo::AwsWrapper::S3.s3 = nil
   end
 
   def test_get_deleted_sound
     assert_empty SOUND_LIBRARY_BUCKET, SOUND_LIBRARY_TEST_KEY
     content = 'MP3_CONTENT'
 
-    s3 = AWS::S3.create_client
+    s3 = Cdo::AwsWrapper::S3.create_client
     s3.put_object(
       bucket: SOUND_LIBRARY_BUCKET,
       key: SOUND_LIBRARY_TEST_KEY,
@@ -57,7 +57,7 @@ class SoundLibraryTest < FilesApiTestBase
     s3_key = "restricted/#{RESTRICTED_SOUND_TEST_FILENAME}"
     content = 'RESTRICTED_CONTENT'
 
-    s3 = AWS::S3.create_client
+    s3 = Cdo::AwsWrapper::S3.create_client
     s3.put_object(
       bucket: RESTRICTED_BUCKET,
       key: s3_key,
@@ -104,7 +104,7 @@ class SoundLibraryTest < FilesApiTestBase
 
   # Ensure no versions of the specified object currently exist.
   def assert_empty(bucket, key)
-    response = AWS::S3.create_client.
+    response = Cdo::AwsWrapper::S3.create_client.
       list_object_versions(bucket: bucket, prefix: key)
     versions = response.versions.concat(response.delete_markers)
     assert versions.empty?, "s3://#{bucket}/#{key} is not empty."

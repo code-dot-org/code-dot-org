@@ -56,10 +56,10 @@ module Populator
 
   def put(bucket, path, data)
     return unless CDO.aws_s3_emulated
-    return if AWS::S3.exists_in_bucket(bucket, path)
+    return if Cdo::AwsWrapper::S3.exists_in_bucket(bucket, path)
 
     data = data.call if data.is_a? Proc
-    AWS::S3.upload_to_bucket(bucket, path, data, no_random: true)
+    Cdo::AwsWrapper::S3.upload_to_bucket(bucket, path, data, no_random: true)
   rescue Aws::S3::Errors::NoSuchBucket => exception
     puts
     puts "ERROR: The #{bucket} bucket does not exist!"

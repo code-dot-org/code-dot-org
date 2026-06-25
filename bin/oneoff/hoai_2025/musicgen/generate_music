@@ -558,7 +558,7 @@ unless options[:just_save_prompt]
       else
         # Upload code
         unless options[:dry_run]
-          AWS::S3.upload_to_bucket(
+          Cdo::AwsWrapper::S3.upload_to_bucket(
             bucket_name,
             File.join(BUCKET_PATH, path),
             File.read(file_path),

@@ -39,7 +39,7 @@ class AnimationLibraryApi < Sinatra::Base
 
     begin
       result = Aws::S3::Bucket.
-        new(ANIMATION_LIBRARY_BUCKET, client: AWS::S3.create_client).
+        new(ANIMATION_LIBRARY_BUCKET, client: Cdo::AwsWrapper::S3.create_client).
         object("level_animations/#{animation_name}").
         get(version_id: version_id)
       content_type result.content_type
@@ -59,7 +59,7 @@ class AnimationLibraryApi < Sinatra::Base
 
     begin
       result = Aws::S3::Bucket.
-        new(ANIMATION_LIBRARY_BUCKET, client: AWS::S3.create_client).
+        new(ANIMATION_LIBRARY_BUCKET, client: Cdo::AwsWrapper::S3.create_client).
         object("level_animations/#{animation_name}").
         get
       content_type result.content_type
@@ -116,7 +116,7 @@ class AnimationLibraryApi < Sinatra::Base
 
     begin
       result = Aws::S3::Bucket.
-        new(ANIMATION_LIBRARY_BUCKET, client: AWS::S3.create_client).
+        new(ANIMATION_LIBRARY_BUCKET, client: Cdo::AwsWrapper::S3.create_client).
         object("#{app_type}/#{animation_name}").
         get(version_id: version_id)
       content_type result.content_type
@@ -135,7 +135,7 @@ class AnimationLibraryApi < Sinatra::Base
     manifest_filename = (app_type == 'spritelab') ? 'spritelabCostumeLibrary' : 'gamelabAnimationLibrary'
     manifest_extension = (app_type == 'spritelab' && locale != 'en_us') ? "#{locale}.json" : 'json'
     result = Aws::S3::Bucket.
-      new(ANIMATION_LIBRARY_BUCKET, client: AWS::S3.create_client).
+      new(ANIMATION_LIBRARY_BUCKET, client: Cdo::AwsWrapper::S3.create_client).
       object("animation-manifests/manifests/#{manifest_filename}.#{manifest_extension}").
       get
     content_type result.content_type
@@ -189,7 +189,7 @@ class AnimationLibraryApi < Sinatra::Base
     end
 
     result = Aws::S3::Bucket.
-      new(ANIMATION_LIBRARY_BUCKET, client: AWS::S3.create_client).
+      new(ANIMATION_LIBRARY_BUCKET, client: Cdo::AwsWrapper::S3.create_client).
       object(env_path).
       get
     content_type 'application/json'
@@ -236,7 +236,7 @@ class AnimationLibraryApi < Sinatra::Base
 
     begin
       result = Aws::S3::Bucket.
-        new(ANIMATION_LIBRARY_BUCKET, client: AWS::S3.create_client).
+        new(ANIMATION_LIBRARY_BUCKET, client: Cdo::AwsWrapper::S3.create_client).
         object(animation_name).
         get(version_id: version_id)
       content_type result.content_type

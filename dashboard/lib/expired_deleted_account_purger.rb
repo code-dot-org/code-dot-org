@@ -213,7 +213,7 @@ class ExpiredDeletedAccountPurger
 
   # @return [String] HTML link to view uploaded log
   private def upload_activity_log
-    log_url = AWS::S3::LogUploader.
+    log_url = Cdo::AwsWrapper::S3::LogUploader.
       new('cdo-audit-logs', "expired-deleted-account-purger-activity/#{CDO.rack_env}").
       upload_log(@start_time.strftime('%Y%m%dT%H%M%S%z'), @log.string)
     " <a href='#{log_url}'>☁ Log on S3</a>"

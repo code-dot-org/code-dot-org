@@ -33,7 +33,7 @@ class AppServerHooksTest < Minitest::Test
     DCDO.stubs(:get).with('worker_memory_metrics', {}).returns(
       {'interval_seconds' => 60, 'per_instance' => true}
     )
-    AWS::EC2.stubs(:instance_id).returns('i-abc123')
+    Cdo::AwsWrapper::EC2.stubs(:instance_id).returns('i-abc123')
 
     collector = mock('collector')
     collector.expects(:start)
@@ -55,7 +55,7 @@ class AppServerHooksTest < Minitest::Test
     DCDO.stubs(:get).with('worker_memory_metrics', {}).returns(
       {'interval_seconds' => 60, 'per_instance' => true}
     )
-    AWS::EC2.stubs(:instance_id).returns(nil)
+    Cdo::AwsWrapper::EC2.stubs(:instance_id).returns(nil)
 
     collector = mock('collector')
     collector.expects(:start)

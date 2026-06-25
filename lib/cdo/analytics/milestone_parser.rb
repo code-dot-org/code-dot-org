@@ -44,7 +44,7 @@ class MilestoneParser
     cache_file = MILESTONE_CACHE_V2
     FileUtils.cp(MILESTONE_CACHE, cache_file) unless File.file?(cache_file)
     cache = File.file?(cache_file) ? JSON.parse(File.read(cache_file)) : {}
-    parser = new(cache, AWS::S3.create_client)
+    parser = new(cache, Cdo::AwsWrapper::S3.create_client)
     parser.count.tap {|_| File.write MILESTONE_CACHE_V2, JSON.pretty_generate(parser.cache)}
   end
 

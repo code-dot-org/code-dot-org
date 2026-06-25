@@ -14,7 +14,7 @@ class ReportAbuseControllerTest < ActionController::TestCase
     @controller.stubs(:get_storage_id).returns(@storage_id)
 
     # files
-    AWS::S3.stubs :create_client # Don't actually talk to S3
+    Cdo::AwsWrapper::S3.stubs :create_client # Don't actually talk to S3
     FileBucket.any_instance.stubs(:list).returns([{filename: 'test.file'}])
     AssetBucket.any_instance.stubs(:list).returns([{filename: 'test.asset'}])
     SourceBucket.any_instance.stubs(:list).returns([{filename: 'main.json'}])

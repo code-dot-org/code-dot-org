@@ -3,10 +3,10 @@ class AiLessonSummaryPodcastsController < ApplicationController
   PODCAST_FOLDER = 'podcasts/'
 
   def show
-    bucket = AWS::S3.user_content_bucket
+    bucket = Cdo::AwsWrapper::S3.user_content_bucket
     podcast_filename = PODCAST_FOLDER + 'lesson_' + params[:lesson_id].to_s + '_podcast.mp3'
-    return head :not_found unless AWS::S3.exists_in_bucket(bucket, podcast_filename)
-    podcast = AWS::S3.download_from_bucket(bucket, podcast_filename)
+    return head :not_found unless Cdo::AwsWrapper::S3.exists_in_bucket(bucket, podcast_filename)
+    podcast = Cdo::AwsWrapper::S3.download_from_bucket(bucket, podcast_filename)
     send_data podcast, type: 'audio/mpeg', disposition: 'inline'
   end
 

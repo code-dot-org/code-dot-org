@@ -103,7 +103,7 @@ module Services
         # only because we're uploading to S3.
         data = File.read(filepath)
         filename = filepath.delete_prefix(directory).delete_prefix('/')
-        AWS::S3.upload_to_bucket(S3_BUCKET, filename, data, no_random: true)
+        Cdo::AwsWrapper::S3.upload_to_bucket(S3_BUCKET, filename, data, no_random: true)
       end
     end
 
@@ -199,13 +199,13 @@ module Services
         metadataAttributes: metadata
       }.to_json
       flat_filename = s3_file_name(metadata) + ".metadata.json"
-      AWS::S3.upload_to_bucket(S3_BUCKET_AI, flat_filename, full_metadata_json, no_random: true)
+      Cdo::AwsWrapper::S3.upload_to_bucket(S3_BUCKET_AI, flat_filename, full_metadata_json, no_random: true)
     end
 
     def self.add_pdf_to_ai_s3(filepath, metadata)
       data = File.read(filepath)
       flat_filename = s3_file_name(metadata)
-      AWS::S3.upload_to_bucket(S3_BUCKET_AI, flat_filename, data, no_random: true)
+      Cdo::AwsWrapper::S3.upload_to_bucket(S3_BUCKET_AI, flat_filename, data, no_random: true)
     end
 
     def self.s3_file_name(metadata)

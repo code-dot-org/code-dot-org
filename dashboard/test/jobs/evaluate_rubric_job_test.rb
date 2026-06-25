@@ -18,7 +18,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     assert_equal 3, @rubric.learning_goals.count
 
     # Don't actually talk to S3 when running SourceBucket.new
-    AWS::S3.stubs :create_client
+    Cdo::AwsWrapper::S3.stubs :create_client
 
     CDO.stubs(:openai_evaluate_rubric_api_key).returns('fake-api-key')
   end

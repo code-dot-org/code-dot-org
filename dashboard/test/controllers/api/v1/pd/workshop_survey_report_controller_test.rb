@@ -13,7 +13,7 @@ module Api::V1::Pd
 
     setup do
       @controller.stubs(:get_score_for_workshops)
-      AWS::S3.stubs(:download_from_bucket).returns({@workshop.course.to_sym => {}}.to_json)
+      Cdo::AwsWrapper::S3.stubs(:download_from_bucket).returns({@workshop.course.to_sym => {}}.to_json)
     end
 
     test 'facilitators cannot see results for other types of workshops' do

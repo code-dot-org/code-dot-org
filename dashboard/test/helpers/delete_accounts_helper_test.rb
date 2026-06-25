@@ -41,7 +41,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     ChatClient.stubs(:message)
 
     # Skip real S3 operations in this test
-    AWS::S3.stubs(:create_client)
+    Cdo::AwsWrapper::S3.stubs(:create_client)
     [SourceBucket, AssetBucket, AnimationBucket, FileBucket].each do |bucket|
       bucket.any_instance.stubs(:hard_delete_channel_content)
     end

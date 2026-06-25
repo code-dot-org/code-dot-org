@@ -36,7 +36,7 @@ class SoundLibraryApi < Sinatra::Base
 
     begin
       result = Aws::S3::Bucket.
-        new(SOUND_LIBRARY_BUCKET, client: AWS::S3.create_client).
+        new(SOUND_LIBRARY_BUCKET, client: Cdo::AwsWrapper::S3.create_client).
         object_versions(prefix: sound_name).
         find {|version| !version.head.delete_marker}.
         get
@@ -64,7 +64,7 @@ class SoundLibraryApi < Sinatra::Base
     forbidden unless has_signed_cookie?
 
     begin
-      s3 = AWS::S3.create_client
+      s3 = Cdo::AwsWrapper::S3.create_client
       result = s3.get_object(
         bucket: RESTRICTED_BUCKET,
         key: "restricted/#{sound_name}"

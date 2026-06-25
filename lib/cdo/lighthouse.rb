@@ -49,7 +49,7 @@ module Lighthouse
     url = URI.parse(url) unless url.is_a?(URI)
     html, json = test(url)
 
-    upload = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX)
+    upload = Cdo::AwsWrapper::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX)
     key = "lighthouse/#{url.host}#{url.path}"
     html_url = upload.upload_log("#{key}.html", html)
     upload.upload_log("#{key}.json", json)

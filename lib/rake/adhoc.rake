@@ -8,7 +8,7 @@ namespace :adhoc do
     Dir.chdir aws_dir('cloudformation')
     require 'cdo/aws/cloud_formation'
     require 'cdo/cloud_formation/cdo_app'
-    @cfn = AWS::CloudFormation.new(
+    @cfn = Cdo::AwsWrapper::CloudFormation.new(
       stack: (@template = Cdo::CloudFormation::CdoApp.new(
         filename: ENV.fetch('TEMPLATE', nil),
         stack_name: ENV['STACK_NAME'].dup,

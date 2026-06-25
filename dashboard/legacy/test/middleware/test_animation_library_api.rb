@@ -17,7 +17,7 @@ class AnimationLibraryTest < Minitest::Test
   def test_get_spritelab_animation
     contents = 'TEST_ANIMATION'
     # Ensure the shared S3 client is used by stubbing the client with the expected response.
-    AWS::S3.s3 = Aws::S3::Client.new(
+    Cdo::AwsWrapper::S3.s3 = Aws::S3::Client.new(
       stub_responses: {
         get_object: {body: contents, content_type: 'image/png'}
       }
@@ -26,7 +26,7 @@ class AnimationLibraryTest < Minitest::Test
     assert last_response.ok?
     assert_equal contents, last_response.body
   ensure
-    AWS::S3.s3 = nil
+    Cdo::AwsWrapper::S3.s3 = nil
   end
 
   # POST endpoints require elevated privileges.
@@ -74,7 +74,7 @@ class AnimationLibraryTest < Minitest::Test
   def test_get_gamelab_animation
     contents = 'TEST_ANIMATION'
     # Ensure the shared S3 client is used by stubbing the client with the expected response.
-    AWS::S3.s3 = Aws::S3::Client.new(
+    Cdo::AwsWrapper::S3.s3 = Aws::S3::Client.new(
       stub_responses: {
         get_object: {body: contents, content_type: 'image/png'}
       }
@@ -83,13 +83,13 @@ class AnimationLibraryTest < Minitest::Test
     assert last_response.ok?
     assert_equal contents, last_response.body
   ensure
-    AWS::S3.s3 = nil
+    Cdo::AwsWrapper::S3.s3 = nil
   end
 
   def test_get_spritelab_manifest
     contents = 'TEST_MANIFEST'
     # Ensure the shared S3 client is used by stubbing the client with the expected response.
-    AWS::S3.s3 = Aws::S3::Client.new(
+    Cdo::AwsWrapper::S3.s3 = Aws::S3::Client.new(
       stub_responses: {
         get_object: {body: contents, content_type: 'json'}
       }
@@ -98,7 +98,7 @@ class AnimationLibraryTest < Minitest::Test
     assert last_response.ok?
     assert_equal contents, last_response.body
   ensure
-    AWS::S3.s3 = nil
+    Cdo::AwsWrapper::S3.s3 = nil
   end
 
   def test_not_found
@@ -111,7 +111,7 @@ class AnimationLibraryTest < Minitest::Test
   def test_get_animation
     contents = 'TEST_ANIMATION'
     # Ensure the shared S3 client is used by stubbing the client with the expected response.
-    AWS::S3.s3 = Aws::S3::Client.new(
+    Cdo::AwsWrapper::S3.s3 = Aws::S3::Client.new(
       stub_responses: {
         get_object: {body: contents, content_type: 'image/png'}
       }
@@ -120,6 +120,6 @@ class AnimationLibraryTest < Minitest::Test
     assert last_response.ok?
     assert_equal contents, last_response.body
   ensure
-    AWS::S3.s3 = nil
+    Cdo::AwsWrapper::S3.s3 = nil
   end
 end

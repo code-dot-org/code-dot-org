@@ -30,7 +30,7 @@ class TestEC2Autoscaling < Minitest::Test
     empty_response = Aws::AutoScaling::Types::AutoScalingGroupsType.new(auto_scaling_groups: [])
     Aws::AutoScaling::Client.any_instance.stubs(:describe_auto_scaling_groups).with(auto_scaling_group_names: ['nonexistent-group']).returns(empty_response)
 
-    assert_raises(RuntimeError) {AWS::EC2Autoscaling.refresh_instances_in_group('nonexistent-group')}
+    assert_raises(RuntimeError) {Cdo::AwsWrapper::EC2Autoscaling.refresh_instances_in_group('nonexistent-group')}
   end
 
   def test_refresh_instances_in_group_raises_when_too_many_groups_found
@@ -38,7 +38,7 @@ class TestEC2Autoscaling < Minitest::Test
     multiple_response = Aws::AutoScaling::Types::AutoScalingGroupsType.new(auto_scaling_groups: mock_autoscaling_groups(2))
     Aws::AutoScaling::Client.any_instance.expects(:describe_auto_scaling_groups).with(auto_scaling_group_names: ['overloaded-group']).returns(multiple_response)
 
-    assert_raises(RuntimeError) {AWS::EC2Autoscaling.refresh_instances_in_group('overloaded-group')}
+    assert_raises(RuntimeError) {Cdo::AwsWrapper::EC2Autoscaling.refresh_instances_in_group('overloaded-group')}
   end
 
   def test_refresh_instances_in_group_triggers_instance_refresh_with_parameters
@@ -59,7 +59,7 @@ class TestEC2Autoscaling < Minitest::Test
         params[:preferences].keys.length == 4 # No other preferences
     end
 
-    AWS::EC2Autoscaling.refresh_instances_in_group('test-group')
+    Cdo::AwsWrapper::EC2Autoscaling.refresh_instances_in_group('test-group')
   end
 
   def test_refresh_instances_in_group_does_not_wait_for_instance_refresh_to_complete_by_default
@@ -68,7 +68,7 @@ class TestEC2Autoscaling < Minitest::Test
     Aws::AutoScaling::Client.any_instance.expects(:start_instance_refresh)
 
     Aws::AutoScaling::Client.any_instance.expects(:wait_until).never
-    AWS::EC2Autoscaling.refresh_instances_in_group('test-group')
+    Cdo::AwsWrapper::EC2Autoscaling.refresh_instances_in_group('test-group')
   end
 
   def test_refresh_instances_in_group_waits_until_instance_refresh_is_complete_if_flag_passed
@@ -77,7 +77,7 @@ class TestEC2Autoscaling < Minitest::Test
     Aws::AutoScaling::Client.any_instance.expects(:start_instance_refresh)
 
     Aws::AutoScaling::Client.any_instance.expects(:wait_until).with(:instances_healthy, auto_scaling_group_names: ['test-group'])
-    AWS::EC2Autoscaling.refresh_instances_in_group('test-group', wait: true)
+    Cdo::AwsWrapper::EC2Autoscaling.refresh_instances_in_group('test-group', wait: true)
   end
 
   # get_autoscaling_group_for_current_environment
@@ -85,7 +85,7 @@ class TestEC2Autoscaling < Minitest::Test
     empty_response = Aws::AutoScaling::Types::AutoScalingGroupsType.new(auto_scaling_groups: [])
     Aws::AutoScaling::Client.any_instance.stubs(:describe_auto_scaling_groups).returns(empty_response)
 
-    assert_raises(RuntimeError) {AWS::EC2Autoscaling.get_autoscaling_group_for_current_environment}
+    assert_raises(RuntimeError) {Cdo::AwsWrapper::EC2Autoscaling.get_autoscaling_group_for_current_environment}
   end
 
   def test_get_autoscaling_group_for_current_environment_returns_group_matching_stack_name_and_logical_id
@@ -111,6 +111,6 @@ class TestEC2Autoscaling < Minitest::Test
     describe_response = Aws::AutoScaling::Types::AutoScalingGroupsType.new(auto_scaling_groups: groups)
     Aws::AutoScaling::Client.any_instance.stubs(:describe_auto_scaling_groups).returns(describe_response)
 
-    assert_equal(groups[2].auto_scaling_group_name, AWS::EC2Autoscaling.get_autoscaling_group_for_current_environment)
+    assert_equal(groups[2].auto_scaling_group_name, Cdo::AwsWrapper::EC2Autoscaling.get_autoscaling_group_for_current_environment)
   end
 end

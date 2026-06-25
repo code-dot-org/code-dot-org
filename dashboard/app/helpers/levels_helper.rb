@@ -1025,7 +1025,7 @@ module LevelsHelper
 
   # Returns student code for a given level
   def get_student_code(user_id, level, unit_id, code_version = nil)
-    s3 = AWS::S3.create_client
+    s3 = Cdo::AwsWrapper::S3.create_client
     bucket = CDO.sources_s3_bucket
     base_dir = CDO.sources_s3_directory
 

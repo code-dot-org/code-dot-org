@@ -1,8 +1,8 @@
 require_relative '../../test_helper'
 require 'cdo/aws/ec2'
 
-describe AWS::EC2 do
-  let(:described_class) {AWS::EC2}
+describe Cdo::AwsWrapper::EC2 do
+  let(:described_class) {Cdo::AwsWrapper::EC2}
 
   # Reset memoized variables to ensure fresh metadata lookups
   before do

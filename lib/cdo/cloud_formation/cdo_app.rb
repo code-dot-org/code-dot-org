@@ -19,9 +19,9 @@ module Cdo::CloudFormation
 
     if rack_env?(:adhoc)
       require_relative './adhoc'
-      AWS::CloudFormation.include Adhoc
+      Cdo::AwsWrapper::CloudFormation.include Adhoc
       require_relative './tail_logs'
-      AWS::CloudFormation.prepend TailLogs
+      Cdo::AwsWrapper::CloudFormation.prepend TailLogs
     end
 
     # Hard-coded constants and default values.
@@ -216,7 +216,7 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`."
     end
 
     def cloudfront_config(app)
-      AWS::CloudFront.distribution_config(
+      Cdo::AwsWrapper::CloudFront.distribution_config(
         app.downcase.to_sym,
         subdomain('origin'),
         app == 'Dashboard' ?

@@ -27,7 +27,7 @@ module Cdo
     # `cdo_sound_library/hoc_song_meta/populate.rb`
     def self.populate_local_s3_bucket(bucket, key)
       return unless CDO.aws_s3_emulated
-      return if AWS::S3.exists_in_bucket(bucket, key)
+      return if Cdo::AwsWrapper::S3.exists_in_bucket(bucket, key)
 
       # Determine the Populator class that can generate files for this bucket, if it
       # exists. We allow subdirectories to have their own populators, so this will find

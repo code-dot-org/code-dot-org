@@ -90,8 +90,8 @@ class ActiveSupport::TestCase
   class_attribute :vcr_cassette_library_dir, instance_writer: false, default: Rails.root.join('test/vcr_cassettes').to_s
 
   setup do
-    AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
-    AWS::S3.stubs(:download_from_bucket).raises("Don't actually download anything to S3 in tests... mock it if you want to test it")
+    Cdo::AwsWrapper::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
+    Cdo::AwsWrapper::S3.stubs(:download_from_bucket).raises("Don't actually download anything to S3 in tests... mock it if you want to test it")
 
     Cdo::Metrics.client ||= Aws::CloudWatch::Client.new(stub_responses: true)
 
@@ -117,8 +117,8 @@ class ActiveSupport::TestCase
     CDO.stubs(:use_my_apps).returns(true)
 
     # Don't attempt to make actual AWS API calls, either, for the same reason
-    AWS::S3.stubs(:cached_exists_in_bucket?).returns(true)
-    AWS::S3.stubs(:exists_in_bucket).returns(true)
+    Cdo::AwsWrapper::S3.stubs(:cached_exists_in_bucket?).returns(true)
+    Cdo::AwsWrapper::S3.stubs(:exists_in_bucket).returns(true)
 
     # Test class specific VCR configs
     VCR.configuration.cassette_library_dir = vcr_cassette_library_dir
@@ -150,17 +150,17 @@ class ActiveSupport::TestCase
   # some s3 helpers/mocks
   def expect_s3_upload
     CDO.stubs(disable_s3_image_uploads: false)
-    AWS::S3.expects(:upload_to_bucket).returns(true)
+    Cdo::AwsWrapper::S3.expects(:upload_to_bucket).returns(true)
   end
 
   def expect_s3_upload_failure
     CDO.stubs(disable_s3_image_uploads: false)
-    AWS::S3.expects(:upload_to_bucket).returns(nil)
+    Cdo::AwsWrapper::S3.expects(:upload_to_bucket).returns(nil)
   end
 
   def expect_no_s3_upload
     CDO.stubs(disable_s3_image_uploads: false)
-    AWS::S3.expects(:upload_to_bucket).never
+    Cdo::AwsWrapper::S3.expects(:upload_to_bucket).never
   end
 
   # helper method to stub out the source data for a project when we don't want to look in s3

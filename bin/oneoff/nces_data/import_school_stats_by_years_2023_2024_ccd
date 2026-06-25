@@ -76,7 +76,7 @@ end
 
 # –, † .to_i will return 0
 
-AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/schools_public.csv") do |filename|
+Cdo::AwsWrapper::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/schools_public.csv") do |filename|
   SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'bom|utf-8'}, dry_run: DRY_RUN) do |row|
     # remove quote and eq sign from ="12345" (the ="" is required to preserve leading 0's in zip codes)
     row = row.to_h.transform_values {|v| sanitize_string_for_db(v)}
@@ -124,7 +124,7 @@ AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/schools_public.csv") do |fi
   end
 end
 
-AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/locale_public.csv") do |filename|
+Cdo::AwsWrapper::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/locale_public.csv") do |filename|
   SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'bom|utf-8'}, dry_run: DRY_RUN) do |row|
     {
       school_id:      row['NCESSCH'].to_i.to_s,
@@ -134,7 +134,7 @@ AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/locale_public.csv") do |fil
   end
 end
 
-AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/title_i_statuses.csv") do |filename|
+Cdo::AwsWrapper::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/title_i_statuses.csv") do |filename|
   SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'bom|utf-8'}, dry_run: DRY_RUN) do |row|
     {
       school_id:      row['NCES SCH ID'].to_i.to_s,

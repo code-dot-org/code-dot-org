@@ -88,7 +88,7 @@ module Cdo
         dimensions = {Host: CDO.dashboard_hostname}
         if config['per_instance']
           require 'cdo/aws/ec2'
-          instance_id = AWS::EC2.instance_id
+          instance_id = Cdo::AwsWrapper::EC2.instance_id
           if instance_id
             dimensions[:InstanceId] = instance_id
             dimensions[:WorkerIndex] = worker_index.to_s

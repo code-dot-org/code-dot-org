@@ -6,7 +6,7 @@ class PublicThumbnailsTest < FilesApiTestBase
   def setup
     @thumbnail_filename = '.metadata/thumbnail.png'
     @thumbnail_body = 'stub-thumbnail-body'
-    AWS::S3.create_client
+    Cdo::AwsWrapper::S3.create_client
     Aws::S3::Client.expects(:new).never
   end
 

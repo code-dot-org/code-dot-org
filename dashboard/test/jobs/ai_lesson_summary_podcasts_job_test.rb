@@ -26,9 +26,9 @@ class AiLessonSummaryPodcastsJobTest < ActiveJob::TestCase
     AiLessonSummaryPodcastsHelper.stubs(:create_and_save_to_s3)
 
     # Mock AWS S3 operations
-    AWS::S3.stubs(:exists_in_bucket).returns(false)
-    AWS::S3.stubs(:upload_to_bucket)
-    AWS::S3.stubs(:download_from_bucket)
+    Cdo::AwsWrapper::S3.stubs(:exists_in_bucket).returns(false)
+    Cdo::AwsWrapper::S3.stubs(:upload_to_bucket)
+    Cdo::AwsWrapper::S3.stubs(:download_from_bucket)
   end
 
   teardown do

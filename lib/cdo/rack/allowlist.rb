@@ -18,7 +18,7 @@ module Rack
       end
 
       def call(env)
-        return [403, {}, ['Unsupported method.']] unless AWS::CloudFront::ALLOWED_METHODS.include?(env['REQUEST_METHOD'].upcase)
+        return [403, {}, ['Unsupported method.']] unless Cdo::AwsWrapper::CloudFront::ALLOWED_METHODS.include?(env['REQUEST_METHOD'].upcase)
         request = Rack::Request.new(env)
         path = request.path
         behavior = LegacyVarnishHelpers.behavior_for_path((config[:behaviors] + [config[:default]]), path)

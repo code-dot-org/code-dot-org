@@ -228,8 +228,8 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
   # *****
 
   test "create_and_save_to_s3 short-circuits without generating script when file already exists in S3" do
-    AWS::S3.stubs(:exists_in_bucket).returns(true)
-    AWS::S3.expects(:upload_to_bucket).never
+    Cdo::AwsWrapper::S3.stubs(:exists_in_bucket).returns(true)
+    Cdo::AwsWrapper::S3.expects(:upload_to_bucket).never
     AiStudentPodcastsHelper::ElevenlabsClient.any_instance.expects(:available_credits).never
     AiStudentPodcastsHelper.expects(:generate_podcast_script).never
     AiStudentPodcastsHelper.expects(:get_podcast_from_script).never
@@ -246,8 +246,8 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
     )
     peer.ai_student_podcast_objectives.create!(objective_id: @objective.id)
 
-    AWS::S3.stubs(:exists_in_bucket).returns(true)
-    AWS::S3.expects(:upload_to_bucket).never
+    Cdo::AwsWrapper::S3.stubs(:exists_in_bucket).returns(true)
+    Cdo::AwsWrapper::S3.expects(:upload_to_bucket).never
     AiStudentPodcastsHelper.expects(:generate_podcast_script).never
 
     AiStudentPodcastsHelper.create_and_save_to_s3(@podcast)
@@ -257,8 +257,8 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
 
   test "create_and_save_to_s3 leaves podcast_script alone when S3 has the audio and the record already has a script" do
     @podcast.update!(podcast_script: 'already-saved')
-    AWS::S3.stubs(:exists_in_bucket).returns(true)
-    AWS::S3.expects(:upload_to_bucket).never
+    Cdo::AwsWrapper::S3.stubs(:exists_in_bucket).returns(true)
+    Cdo::AwsWrapper::S3.expects(:upload_to_bucket).never
     AiStudentPodcastsHelper.expects(:find_matching_script_record).never
 
     AiStudentPodcastsHelper.create_and_save_to_s3(@podcast)
@@ -267,9 +267,9 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
   end
 
   test "create_and_save_to_s3 short-circuits without generating script when ElevenLabs credits unavailable" do
-    AWS::S3.stubs(:exists_in_bucket).returns(false)
+    Cdo::AwsWrapper::S3.stubs(:exists_in_bucket).returns(false)
     AiStudentPodcastsHelper::ElevenlabsClient.any_instance.stubs(:available_credits).returns(false)
-    AWS::S3.expects(:upload_to_bucket).never
+    Cdo::AwsWrapper::S3.expects(:upload_to_bucket).never
     AiStudentPodcastsHelper.expects(:generate_podcast_script).never
     AiStudentPodcastsHelper.expects(:get_podcast_from_script).never
 
@@ -277,7 +277,7 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
   end
 
   test "create_and_save_to_s3 generates script, fetches mp3, and uploads when S3 file missing and credits available" do
-    AWS::S3.stubs(:exists_in_bucket).returns(false)
+    Cdo::AwsWrapper::S3.stubs(:exists_in_bucket).returns(false)
     AiStudentPodcastsHelper::ElevenlabsClient.any_instance.stubs(:available_credits).returns(true)
     generated_script = [{voice_id: 'Dan', text: 'hello'}].to_json
 
@@ -285,8 +285,8 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
       with(@podcast).returns(generated_script)
     AiStudentPodcastsHelper.expects(:get_podcast_from_script).
       with(generated_script).returns('mp3-bytes')
-    AWS::S3.expects(:upload_to_bucket).with(
-      AWS::S3.user_content_bucket,
+    Cdo::AwsWrapper::S3.expects(:upload_to_bucket).with(
+      Cdo::AwsWrapper::S3.user_content_bucket,
       AiStudentPodcastsHelper.s3_filename(@podcast.lesson_id, @podcast.objective_ids),
       'mp3-bytes',
       no_random: true
@@ -298,14 +298,14 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
   test "create_and_save_to_s3 reuses an existing podcast_script and skips OpenAI when one is already saved" do
     existing_script = [{voice_id: 'Dan', text: 'reused'}].to_json
     @podcast.update!(podcast_script: existing_script)
-    AWS::S3.stubs(:exists_in_bucket).returns(false)
+    Cdo::AwsWrapper::S3.stubs(:exists_in_bucket).returns(false)
     AiStudentPodcastsHelper::ElevenlabsClient.any_instance.stubs(:available_credits).returns(true)
 
     AiStudentPodcastsHelper.expects(:generate_podcast_script).never
     AiStudentPodcastsHelper.expects(:get_podcast_from_script).
       with(existing_script).returns('mp3-bytes')
-    AWS::S3.expects(:upload_to_bucket).with(
-      AWS::S3.user_content_bucket,
+    Cdo::AwsWrapper::S3.expects(:upload_to_bucket).with(
+      Cdo::AwsWrapper::S3.user_content_bucket,
       AiStudentPodcastsHelper.s3_filename(@podcast.lesson_id, @podcast.objective_ids),
       'mp3-bytes',
       no_random: true
@@ -318,9 +318,9 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
   # retrieve_podcast_from_s3 tests
   # *****
 
-  test "retrieve_podcast_from_s3 delegates to AWS::S3.download_from_bucket" do
-    AWS::S3.expects(:download_from_bucket).with(
-      AWS::S3.user_content_bucket,
+  test "retrieve_podcast_from_s3 delegates to Cdo::AwsWrapper::S3.download_from_bucket" do
+    Cdo::AwsWrapper::S3.expects(:download_from_bucket).with(
+      Cdo::AwsWrapper::S3.user_content_bucket,
       AiStudentPodcastsHelper.s3_filename(@lesson.id, [@objective.id])
     ).returns('mp3-bytes')
 
@@ -329,8 +329,8 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
   end
 
   test "exists_in_s3? checks the bucket for the lesson + objective key" do
-    AWS::S3.expects(:exists_in_bucket).with(
-      AWS::S3.user_content_bucket,
+    Cdo::AwsWrapper::S3.expects(:exists_in_bucket).with(
+      Cdo::AwsWrapper::S3.user_content_bucket,
       AiStudentPodcastsHelper.s3_filename(@lesson.id, [@objective.id])
     ).returns(true)
 

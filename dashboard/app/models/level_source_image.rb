@@ -44,7 +44,7 @@ class LevelSourceImage < ApplicationRecord
   end
 
   def upload_image(filename, image)
-    AWS::S3.upload_to_bucket(S3_BUCKET, filename, image, no_random: true)
+    Cdo::AwsWrapper::S3.upload_to_bucket(S3_BUCKET, filename, image, no_random: true)
   end
 
   def upload_original_image(image)

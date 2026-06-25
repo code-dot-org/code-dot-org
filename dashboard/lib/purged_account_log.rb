@@ -49,7 +49,7 @@ class PurgedAccountLog
 
   def upload
     raise 'A purged_at date is required before upload' if @purged_at.nil?
-    AWS::S3::LogUploader.
+    Cdo::AwsWrapper::S3::LogUploader.
       new('cdo-audit-logs', "purged-users/#{CDO.rack_env}/#{@purged_at.strftime('%Y-%m-%d')}").
       upload_log(@user_id.to_s, to_json)
   end

@@ -31,7 +31,7 @@ class Services::CurriculumPdfs::UtilsTest < ActiveSupport::TestCase
     CDO.shared_cache.expects(:exist?).never
     CDO.shared_cache.expects(:read).never
     CDO.shared_cache.expects(:write).never
-    AWS::S3.expects(:exists_in_bucket).once.returns(true)
+    Cdo::AwsWrapper::S3.expects(:exists_in_bucket).once.returns(true)
     assert Services::CurriculumPdfs.pdf_exists_at?(test_pathname)
 
     # But if we're using MemCache (as we do in production), we will attempt to
@@ -44,14 +44,14 @@ class Services::CurriculumPdfs::UtilsTest < ActiveSupport::TestCase
     CDO.shared_cache.expects(:exist?).with(expected_cache_key).returns(false)
     CDO.shared_cache.expects(:read).never
     CDO.shared_cache.expects(:write).with(expected_cache_key, true)
-    AWS::S3.expects(:exists_in_bucket).once.returns(true)
+    Cdo::AwsWrapper::S3.expects(:exists_in_bucket).once.returns(true)
     assert Services::CurriculumPdfs.pdf_exists_at?(test_pathname)
 
     # Read from the cache if it is.
     CDO.shared_cache.expects(:exist?).with(expected_cache_key).returns(true)
     CDO.shared_cache.expects(:read).with(expected_cache_key).returns(true)
     CDO.shared_cache.expects(:write).never
-    AWS::S3.expects(:exists_in_bucket).never
+    Cdo::AwsWrapper::S3.expects(:exists_in_bucket).never
     assert Services::CurriculumPdfs.pdf_exists_at?(test_pathname)
 
     CDO.unstub(:shared_cache)

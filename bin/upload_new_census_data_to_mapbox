@@ -38,7 +38,7 @@ def main
   census_tileset = "censustiles-#{access_report_year}"
 
   CDO.log.info "Loading census summary data."
-  AWS::S3.seed_from_file('cdo-census', aws_access_report_data_file) do |filename|
+  Cdo::AwsWrapper::S3.seed_from_file('cdo-census', aws_access_report_data_file) do |filename|
     geojson = JSON.parse('{ "type": "FeatureCollection", "features": [] }')
     entries_skipped = 0
 

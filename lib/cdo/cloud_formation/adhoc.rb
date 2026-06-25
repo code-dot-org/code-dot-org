@@ -2,7 +2,7 @@ require 'aws-sdk-ec2'
 
 module Cdo::CloudFormation
   # Helper functions related to adhoc instances of CdoApp,
-  # included AWS::CloudFormation in adhoc environment.
+  # included Cdo::AwsWrapper::CloudFormation in adhoc environment.
   module Adhoc
     def start_inactive_instance
       if instance.state.name == 'stopped'

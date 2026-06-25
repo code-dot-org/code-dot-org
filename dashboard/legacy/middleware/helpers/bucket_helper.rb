@@ -11,7 +11,7 @@ class BucketHelper
   cattr_accessor :s3_client
 
   def s3
-    self.s3_client ||= AWS::S3.create_client
+    self.s3_client ||= Cdo::AwsWrapper::S3.create_client
   end
 
   def initialize(bucket, base_dir)

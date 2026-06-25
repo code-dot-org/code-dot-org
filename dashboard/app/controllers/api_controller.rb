@@ -596,7 +596,7 @@ class ApiController < ApplicationController
     expiration_date = Time.now + 4.hours
     resource = CDO.studio_url('/restricted/*', ge_region: nil)
 
-    cloudfront_cookies = AWS::CloudFront.signed_cookies(resource, expiration_date)
+    cloudfront_cookies = Cdo::AwsWrapper::CloudFront.signed_cookies(resource, expiration_date)
 
     cloudfront_cookies.each do |k, v|
       cookies[k] = v

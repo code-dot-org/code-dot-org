@@ -100,7 +100,7 @@ class PurgedAccountLogTest < ActiveSupport::TestCase
     end
 
     stub_uploader = StubUploader.new
-    AWS::S3::LogUploader.
+    Cdo::AwsWrapper::S3::LogUploader.
       expects(:new).
       with('cdo-audit-logs', "purged-users/test/2018-08-08").
       returns(stub_uploader)
@@ -117,7 +117,7 @@ class PurgedAccountLogTest < ActiveSupport::TestCase
 
     log_obj = PurgedAccountLog.new teacher,
       reason: PurgedAccountLog::SOFT_DELETE_28_DAYS_AGO
-    AWS::S3::LogUploader.expects(:new).never
+    Cdo::AwsWrapper::S3::LogUploader.expects(:new).never
 
     assert_raises RuntimeError do
       log_obj.upload

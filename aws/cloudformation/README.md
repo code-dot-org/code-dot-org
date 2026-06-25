@@ -10,7 +10,7 @@ This directory contains CloudFormation stack templates, associated Custom Resour
 ## See also
 
 - [`stack.rake`](../../lib/rake/stack.rake), [`adhoc.rake`](../../lib/rake/adhoc.rake) - Rakefiles implementing `stack:*` / `adhoc:*` commands for managing various CloudFormation stacks.
-- [`AWS::CloudFormation`](../../lib/cdo/aws/cloud_formation.rb) - Class managing configuration and deployment of AWS CloudFormation stacks.
+- [`Cdo::AwsWrapper::CloudFormation`](../../lib/cdo/aws/cloud_formation.rb) - Class managing configuration and deployment of AWS CloudFormation stacks.
 - [`Cdo::CloudFormation::StackTemplate`](../../lib/cdo/cloud_formation/stack_template.rb) - Controller class providing the ERB binding context for CloudFormation stack templates.
 - [`Cdo::CloudFormation::CdoApp`](../../lib/cdo/cloud_formation/cdo_app.rb) - Stack-template controller specific to the monolithic Code.org application stack.
 

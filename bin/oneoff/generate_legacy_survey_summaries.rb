@@ -83,7 +83,7 @@ def snapshot_csf_intro_post_workshop_from_pegasus_for_all_workshops
   course = Pd::Workshop::COURSE_CSF
   subject = Pd::Workshop::SUBJECT_CSF_101
 
-  aggregate_for_all_workshops = JSON.parse(AWS::S3.download_from_bucket('pd-workshop-surveys', "aggregate-workshop-scores-#{CDO.rack_env}"))
+  aggregate_for_all_workshops = JSON.parse(Cdo::AwsWrapper::S3.download_from_bucket('pd-workshop-surveys', "aggregate-workshop-scores-#{CDO.rack_env}"))
   survey_report_all_workshops = aggregate_for_all_workshops[course].try(&:symbolize_keys) || {}
 
   # delete all existing

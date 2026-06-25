@@ -22,7 +22,7 @@ module Cdo
     def self.upload(report_dir)
       return nil unless File.directory?(report_dir)
 
-      uploader = AWS::S3::LogUploader.new(BUCKET, "#{prefix}/playwright", make_public: true)
+      uploader = Cdo::AwsWrapper::S3::LogUploader.new(BUCKET, "#{prefix}/playwright", make_public: true)
       index_url = nil
       Dir.glob(File.join(report_dir, '**', '*')).each do |path|
         next unless File.file?(path)
@@ -45,7 +45,7 @@ module Cdo
 
     # Computed without uploading, so the report can be linked before the run finishes.
     def self.index_url
-      AWS::S3.public_url(BUCKET, "#{prefix}/playwright/index.html")
+      Cdo::AwsWrapper::S3.public_url(BUCKET, "#{prefix}/playwright/index.html")
     rescue StandardError => exception
       CDO.log.error "Failed to compute Playwright report URL: #{exception.message}"
       nil

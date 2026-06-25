@@ -66,7 +66,7 @@ end
 # Downloaded data this year using their table generator here:
 # https://nces.ed.gov/ccd/elsi/tableGenerator.aspx
 # Required a bit of manual cleaning before importing (deleted top couple of rows that contained metadata about the file)
-AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/school_stats_201718.csv") do |filename|
+Cdo::AwsWrapper::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/school_stats_201718.csv") do |filename|
   SchoolStatsByYear.transaction do
     SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00"}) do |row|
       row = row.to_h.transform_values {|v| sanitize_string_for_db(v)}

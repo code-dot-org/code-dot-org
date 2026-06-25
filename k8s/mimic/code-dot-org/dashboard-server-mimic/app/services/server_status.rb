@@ -40,7 +40,7 @@ class ServerStatus
   end
 
   def s3_status
-    client = AWS::S3.create_client
+    client = Cdo::AwsWrapper::S3.create_client
     status = {
       connected: false,
       read: false,

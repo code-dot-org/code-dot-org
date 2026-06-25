@@ -11,8 +11,8 @@ class Api::V1::MlModelsControllerTest < ActionController::TestCase
 
   setup do
     stub_firehose
-    AWS::S3.stubs(:delete_from_bucket).returns(true)
-    AWS::S3.stubs(:upload_to_bucket).returns(true)
+    Cdo::AwsWrapper::S3.stubs(:delete_from_bucket).returns(true)
+    Cdo::AwsWrapper::S3.stubs(:upload_to_bucket).returns(true)
     ShareFiltering.stubs(:find_failure).returns(nil)
     @owner = create(:student)
     @model = create(:user_ml_model, user: @owner)
@@ -68,7 +68,7 @@ class Api::V1::MlModelsControllerTest < ActionController::TestCase
 
   test 'returns failure when model saves to database but not S3' do
     sign_in @owner
-    AWS::S3.stubs(:upload_to_bucket).returns(false)
+    Cdo::AwsWrapper::S3.stubs(:upload_to_bucket).returns(false)
     assert_difference('UserMlModel.count', 1) do
       post :save, params: {"ml_model" => {"name" => "Model Name"}}
     end
@@ -114,7 +114,7 @@ class Api::V1::MlModelsControllerTest < ActionController::TestCase
 
   test 'retrieves a trained model from S3' do
     sign_in @owner
-    AWS::S3.stubs(:download_from_bucket).returns(true)
+    Cdo::AwsWrapper::S3.stubs(:download_from_bucket).returns(true)
     get :show, params: {id: @model.model_id}
     assert_response :success
   end

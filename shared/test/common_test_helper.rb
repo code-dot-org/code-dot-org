@@ -63,7 +63,7 @@ module SetupTest
     # VCR (record/replay HTTP interactions)
     # Stub AWS credentials
     # Transaction rollback (leave behind no database side-effects)
-    # Stub AWS::S3#random
+    # Stub Cdo::AwsWrapper::S3#random
     cassette_name = "#{self.class.to_s.chomp('Test').downcase}/#{@NAME.gsub('test_', '')}"
     # Fail on empty/missing cassette in CI or during DTT.
     record_mode = ENV['CI'] || CDO.chef_managed ? :none : :once
@@ -106,7 +106,7 @@ module SetupTest
           # overcomplicating tests, but in this case we specifically do need a
           # dynamic return value, which Mocha does not support.
           # rubocop:disable CustomCops/PreferMochaStubsToMinitestStub
-          AWS::S3.stub(:random, proc {random.bytes(16).unpack1('H*')}, &block)
+          Cdo::AwsWrapper::S3.stub(:random, proc {random.bytes(16).unpack1('H*')}, &block)
           # rubocop:enable CustomCops/PreferMochaStubsToMinitestStub
         end
       end
@@ -121,7 +121,7 @@ module SetupTest
     # Cached S3-client objects contain AWS credentials,
     # so reset them to ensure that they are not reused across tests.
     BucketHelper.s3_client = nil if defined?(BucketHelper)
-    AWS::S3.s3 = nil
+    Cdo::AwsWrapper::S3.s3 = nil
 
     # Reset AUTO_INCREMENT, since it is unaffected by transaction rollback.
     DASHBOARD_TEST_TABLES.each do |table|

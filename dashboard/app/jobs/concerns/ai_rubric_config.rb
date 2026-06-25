@@ -31,7 +31,7 @@ class AiRubricConfig
   end
 
   def self.s3_client
-    @@s3_client ||= AWS::S3.create_client
+    @@s3_client ||= Cdo::AwsWrapper::S3.create_client
   end
 
   def self.read_file_from_s3(lesson_s3_name, key_suffix, allow_missing: false)

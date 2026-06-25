@@ -121,14 +121,14 @@ class Api::V1::MlModelsController < Api::V1::JSONApiController
   end
 
   private def upload_to_s3(model_id, trained_model)
-    AWS::S3.upload_to_bucket(S3_BUCKET, model_id, trained_model, no_random: true)
+    Cdo::AwsWrapper::S3.upload_to_bucket(S3_BUCKET, model_id, trained_model, no_random: true)
   end
 
   private def download_from_s3(model_id)
-    AWS::S3.download_from_bucket(S3_BUCKET, model_id)
+    Cdo::AwsWrapper::S3.download_from_bucket(S3_BUCKET, model_id)
   end
 
   private def delete_from_s3(model_id)
-    AWS::S3.delete_from_bucket(S3_BUCKET, model_id)
+    Cdo::AwsWrapper::S3.delete_from_bucket(S3_BUCKET, model_id)
   end
 end

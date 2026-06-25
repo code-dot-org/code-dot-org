@@ -23,7 +23,7 @@ class JSONVideosControllerTest < ActionController::TestCase
 
   test 'content returns json body for known key' do
     sign_in @student
-    AWS::S3.stubs(:download_from_bucket).with('my-bucket', 'path/to/video.json').returns('{"frames":[]}')
+    Cdo::AwsWrapper::S3.stubs(:download_from_bucket).with('my-bucket', 'path/to/video.json').returns('{"frames":[]}')
 
     get :content, params: {id: @video.key}
 
@@ -34,7 +34,7 @@ class JSONVideosControllerTest < ActionController::TestCase
 
   test 'content returns 502 when S3 raises' do
     sign_in @student
-    AWS::S3.stubs(:download_from_bucket).raises(RuntimeError, 'connection error')
+    Cdo::AwsWrapper::S3.stubs(:download_from_bucket).raises(RuntimeError, 'connection error')
 
     get :content, params: {id: @video.key}
 

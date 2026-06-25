@@ -180,7 +180,7 @@ class School < ApplicationRecord
     School.transaction do
       CDO.log.info "Seeding 2014-2015 PRELIMINARY public and charter school data."
       # Originally from https://nces.ed.gov/ccd/Data/zip/Sch14pre_txt.zip
-      AWS::S3.seed_from_file('cdo-nces', "2014-2015/ccd/Sch14pre.txt") do |filename|
+      Cdo::AwsWrapper::S3.seed_from_file('cdo-nces', "2014-2015/ccd/Sch14pre.txt") do |filename|
         merge_from_csv(filename, {col_sep: "\t", headers: true, quote_char: "\x00", encoding: 'ISO-8859-1:UTF-8'}, true) do |row|
           {
             id:                 row['NCESSCH'].to_i.to_s,
@@ -201,7 +201,7 @@ class School < ApplicationRecord
 
       CDO.log.info "Seeding 2013-2014 public and charter school data."
       # Originally from https://nces.ed.gov/ccd/Data/zip/sc132a_txt.zip
-      AWS::S3.seed_from_file('cdo-nces', "2013-2014/ccd/sc132a.txt") do |filename|
+      Cdo::AwsWrapper::S3.seed_from_file('cdo-nces', "2013-2014/ccd/sc132a.txt") do |filename|
         merge_from_csv(filename) do |row|
           {
             id:                 row['NCESSCH'].to_i.to_s,
@@ -222,7 +222,7 @@ class School < ApplicationRecord
 
       CDO.log.info "Seeding 2013-2014 private school data."
       # Originally from https://nces.ed.gov/surveys/pss/zip/pss1314_pu_csv.zip
-      AWS::S3.seed_from_file('cdo-nces', "2013-2014/pss/pss1314_pu.csv") do |filename|
+      Cdo::AwsWrapper::S3.seed_from_file('cdo-nces', "2013-2014/pss/pss1314_pu.csv") do |filename|
         merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}, true) do |row|
           {
             id:                 row['PPIN'],
@@ -243,7 +243,7 @@ class School < ApplicationRecord
 
       CDO.log.info "Seeding 2014-2015 public and charter school data."
       # Originally from https://nces.ed.gov/ccd/Data/zip/ccd_sch_029_1415_w_0216601a_txt.zip
-      AWS::S3.seed_from_file('cdo-nces', "2014-2015/ccd/ccd_sch_029_1415_w_0216601a.txt") do |filename|
+      Cdo::AwsWrapper::S3.seed_from_file('cdo-nces', "2014-2015/ccd/ccd_sch_029_1415_w_0216601a.txt") do |filename|
         merge_from_csv(filename) do |row|
           {
             id:                 row['NCESSCH'].to_i.to_s,
@@ -264,7 +264,7 @@ class School < ApplicationRecord
 
       CDO.log.info "Seeding 2014-2015 public school geographic data."
       # Originally from https://nces.ed.gov/ccd/Data/zip/EDGE_GEOIDS_201415_PUBLIC_SCHOOL_csv.zip
-      AWS::S3.seed_from_file('cdo-nces', "2014-2015/ccd/EDGE_GEOIDS_201415_PUBLIC_SCHOOL.csv") do |filename|
+      Cdo::AwsWrapper::S3.seed_from_file('cdo-nces', "2014-2015/ccd/EDGE_GEOIDS_201415_PUBLIC_SCHOOL.csv") do |filename|
         merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}, true) do |row|
           {
             id:                 row['NCESSCH'].to_i.to_s,
@@ -276,7 +276,7 @@ class School < ApplicationRecord
 
       CDO.log.info "Seeding 2015-2016 private school data."
       # Originally from https://nces.ed.gov/surveys/pss/zip/pss1516_pu_csv.zip
-      AWS::S3.seed_from_file('cdo-nces', "2015-2016/pss/pss1516_pu.csv") do |filename|
+      Cdo::AwsWrapper::S3.seed_from_file('cdo-nces', "2015-2016/pss/pss1516_pu.csv") do |filename|
         merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}, true) do |row|
           {
             id:                 row['ppin'],
@@ -297,7 +297,7 @@ class School < ApplicationRecord
 
       CDO.log.info "Seeding 2017-2018 PRELIMINARY public and charter school data."
       # Originally from https://nces.ed.gov/ccd/Data/zip/ccd_sch_029_1718_w_0a_03302018_csv.zip
-      AWS::S3.seed_from_file('cdo-nces', "2017-2018/ccd/ccd_sch_029_1718_w_0a_03302018.csv") do |filename|
+      Cdo::AwsWrapper::S3.seed_from_file('cdo-nces', "2017-2018/ccd/ccd_sch_029_1718_w_0a_03302018.csv") do |filename|
         # Set update_existing argument to false as a data import precaution.  We are only inserting new schools from this NCES dataset.
         # Note as of November 2020, we never did the updates from this NCES update iteration.
         merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8', quote_char: "\x00"}, false) do |row|
@@ -321,7 +321,7 @@ class School < ApplicationRecord
       CDO.log.info "Seeding 2018-2019 public and charter school data."
       # Download link found here: https://nces.ed.gov/ccd/files.asp#Fiscal:2,LevelId:7,SchoolYearId:33,Page:1
       # Actual download link: https://nces.ed.gov/ccd/data/zip/ccd_sch_029_1819_w_1a_091019.zip
-      AWS::S3.seed_from_file('cdo-nces', "2018-2019/ccd/ccd_sch_029_1819_w_1a_091019.csv") do |filename|
+      Cdo::AwsWrapper::S3.seed_from_file('cdo-nces', "2018-2019/ccd/ccd_sch_029_1819_w_1a_091019.csv") do |filename|
         merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8', quote_char: "\x00"}, true, is_dry_run: false, ignore_attributes: ['last_known_school_year_open', 'school_category']) do |row|
           {
             id:                           row['NCESSCH'].to_i.to_s,
@@ -347,7 +347,7 @@ class School < ApplicationRecord
       CDO.log.info "Seeding 2018-2019 public and charter school geographic data."
       # Download link found here: https://nces.ed.gov/programs/edge/Geographic/SchoolLocations
       # Actual download link: https://nces.ed.gov/programs/edge/data/EDGE_GEOCODE_PUBLICSCH_1819.zip
-      AWS::S3.seed_from_file('cdo-nces', "2018-2019/ccd/EDGE_GEOCODE_PUBLICSCH_1819.csv") do |filename|
+      Cdo::AwsWrapper::S3.seed_from_file('cdo-nces', "2018-2019/ccd/EDGE_GEOCODE_PUBLICSCH_1819.csv") do |filename|
         merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}, true, is_dry_run: false, insert_new: false) do |row|
           {
             id:                 row['NCESSCH'].to_i.to_s,
@@ -359,7 +359,7 @@ class School < ApplicationRecord
 
       # Some of this data has #- appended to the front, so we strip that off with .to_s.slice(2) (it's always a single digit)
       CDO.log.info "Seeding 2019-2020 public school data."
-      AWS::S3.seed_from_file('cdo-nces', "2019-2020/ccd/schools.csv") do |filename|
+      Cdo::AwsWrapper::S3.seed_from_file('cdo-nces', "2019-2020/ccd/schools.csv") do |filename|
         merge_from_csv(filename, {headers: true, quote_char: "\x00"}, true, is_dry_run: false, ignore_attributes: ['last_known_school_year_open']) do |row|
           row = row.to_h.transform_values {|v| sanitize_string_for_db(v)}
           {
@@ -383,7 +383,7 @@ class School < ApplicationRecord
 
       # Some of this data has #- appended to the front, so we strip that off with .to_s.slice(2) (it's always a single digit)
       CDO.log.info "Seeding 2020-2021 public school data."
-      AWS::S3.seed_from_file('cdo-nces', "2020-2021/ccd/schools_public.csv") do |filename|
+      Cdo::AwsWrapper::S3.seed_from_file('cdo-nces', "2020-2021/ccd/schools_public.csv") do |filename|
         merge_from_csv(filename, {headers: true, quote_char: "\x00"}, true, is_dry_run: false, ignore_attributes: ['last_known_school_year_open']) do |row|
           row = row.to_h.transform_values {|v| sanitize_string_for_db(v)}
           {
@@ -406,7 +406,7 @@ class School < ApplicationRecord
       end
 
       CDO.log.info "Seeding 2019-2020 private school data."
-      AWS::S3.seed_from_file('cdo-nces', "2019-2020/pss/final_schools_private.csv") do |filename|
+      Cdo::AwsWrapper::S3.seed_from_file('cdo-nces', "2019-2020/pss/final_schools_private.csv") do |filename|
         merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}, true, is_dry_run: false) do |row|
           {
             id:                           row['School ID - NCES Assigned [Private School] Latest available year'],
@@ -426,7 +426,7 @@ class School < ApplicationRecord
       end
 
       CDO.log.info "Seeding 2019-2020 private school geographic data."
-      AWS::S3.seed_from_file('cdo-nces', "2019-2020/pss/final_locale_private.csv") do |filename|
+      Cdo::AwsWrapper::S3.seed_from_file('cdo-nces', "2019-2020/pss/final_locale_private.csv") do |filename|
         merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}, true, is_dry_run: false, insert_new: false) do |row|
           {
             id:                 row['PPIN'],
@@ -438,7 +438,7 @@ class School < ApplicationRecord
 
       # Some of this data has #- appended to the front, so we strip that off with .to_s.slice(2) (it's always a single digit)
       CDO.log.info "Seeding 2021-2022 public school data."
-      AWS::S3.seed_from_file('cdo-nces', "2021-2022/ccd/schools_public.csv") do |filename|
+      Cdo::AwsWrapper::S3.seed_from_file('cdo-nces', "2021-2022/ccd/schools_public.csv") do |filename|
         merge_from_csv(filename, {headers: true, quote_char: "\x00", encoding: 'bom|utf-8'}, true, is_dry_run: false, ignore_attributes: ['last_known_school_year_open']) do |row|
           row = row.to_h.transform_values {|v| sanitize_string_for_db(v)}
           {
@@ -461,7 +461,7 @@ class School < ApplicationRecord
       end
 
       CDO.log.info "Seeding 2021-2022 private school data."
-      AWS::S3.seed_from_file('cdo-nces', "2021-2022/pss/schools_private.csv") do |filename|
+      Cdo::AwsWrapper::S3.seed_from_file('cdo-nces', "2021-2022/pss/schools_private.csv") do |filename|
         merge_from_csv(filename, {headers: true, encoding: 'bom|utf-8'}, true, is_dry_run: false) do |row|
           {
             id:                           row['PPIN'],
@@ -482,7 +482,7 @@ class School < ApplicationRecord
 
       # Some of this data has #- appended to the front, so we strip that off with .to_s.slice(2) (it's always a single digit)
       CDO.log.info "Seeding 2022-2023 public school data."
-      AWS::S3.seed_from_file('cdo-nces', "2022-2023/ccd/schools_public.csv") do |filename|
+      Cdo::AwsWrapper::S3.seed_from_file('cdo-nces', "2022-2023/ccd/schools_public.csv") do |filename|
         merge_from_csv(filename, {headers: true, quote_char: "\x00", encoding: 'bom|utf-8'}, true, is_dry_run: false, ignore_attributes: ['last_known_school_year_open']) do |row|
           row = row.to_h.transform_values {|v| sanitize_string_for_db(v)}
           {
@@ -506,7 +506,7 @@ class School < ApplicationRecord
 
       # Some of this data has #- appended to the front, so we strip that off with .to_s.slice(2) (it's always a single digit)
       CDO.log.info "Seeding 2023-2024 public school data."
-      AWS::S3.seed_from_file('cdo-nces', "2023-2024/ccd/schools_public.csv") do |filename|
+      Cdo::AwsWrapper::S3.seed_from_file('cdo-nces', "2023-2024/ccd/schools_public.csv") do |filename|
         merge_from_csv(filename, {headers: true, quote_char: "\x00", encoding: 'bom|utf-8'}, true, is_dry_run: false, ignore_attributes: ['last_known_school_year_open']) do |row|
           row = row.to_h.transform_values {|v| sanitize_string_for_db(v)}
           {
@@ -530,7 +530,7 @@ class School < ApplicationRecord
 
       # Some of this data has #- appended to the front, so we strip that off with .to_s.slice(2) (it's always a single digit)
       CDO.log.info "Seeding 2024-2025 public school data."
-      AWS::S3.seed_from_file('cdo-nces', "2024-2025/ccd/schools_public.csv") do |filename|
+      Cdo::AwsWrapper::S3.seed_from_file('cdo-nces', "2024-2025/ccd/schools_public.csv") do |filename|
         merge_from_csv(filename, {headers: true, quote_char: "\x00", encoding: 'bom|utf-8'}, true, is_dry_run: false, ignore_attributes: ['last_known_school_year_open']) do |row|
           row = row.to_h.transform_values {|v| sanitize_string_for_db(v)}
           {
@@ -553,7 +553,7 @@ class School < ApplicationRecord
       end
     end
     School.transaction do
-      AWS::S3.seed_from_file('cdo-nces', "2023-2024/ccd/locale_public.csv") do |filename|
+      Cdo::AwsWrapper::S3.seed_from_file('cdo-nces', "2023-2024/ccd/locale_public.csv") do |filename|
         CSV.read(filename, **{headers: true, quote_char: "\x00", encoding: 'bom|utf-8'}).each do |row|
           row = row.to_h.transform_values {|v| sanitize_string_for_db(v)}
           begin
@@ -678,7 +678,7 @@ class School < ApplicationRecord
   end
 
   def self.seed_s3_object(bucket, filepath, import_options, is_dry_run: false, ignore_attributes: [], &parse_row)
-    AWS::S3.seed_from_file(bucket, filepath) do |filename|
+    Cdo::AwsWrapper::S3.seed_from_file(bucket, filepath) do |filename|
       merge_from_csv(
         filename,
         import_options,

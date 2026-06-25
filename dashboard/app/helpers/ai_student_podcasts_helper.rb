@@ -12,10 +12,10 @@ module AiStudentPodcastsHelper
   MAX_TOXICITY_RETRIES = 5
 
   def self.create_and_save_to_s3(student_podcast_data)
-    bucket = AWS::S3.user_content_bucket
+    bucket = Cdo::AwsWrapper::S3.user_content_bucket
     filename = s3_filename(student_podcast_data.lesson_id, student_podcast_data.objective_ids)
 
-    if AWS::S3.exists_in_bucket(bucket, filename)
+    if Cdo::AwsWrapper::S3.exists_in_bucket(bucket, filename)
       # S3 already has the audio for this (lesson, objectives) key, generated
       # for some other user. Mirror that user's script onto this record so its
       # podcast_script field doesn't lag the playable audio.
@@ -27,7 +27,7 @@ module AiStudentPodcastsHelper
 
     podcast_script = student_podcast_data.podcast_script || generate_podcast_script(student_podcast_data)
     podcast = get_podcast_from_script(podcast_script)
-    AWS::S3.upload_to_bucket(bucket, filename, podcast, no_random: true)
+    Cdo::AwsWrapper::S3.upload_to_bucket(bucket, filename, podcast, no_random: true)
   end
 
   def self.copy_matching_script_from_peer(student_podcast_data)
@@ -67,11 +67,11 @@ module AiStudentPodcastsHelper
   end
 
   def self.retrieve_podcast_from_s3(lesson_id, objective_ids)
-    AWS::S3.download_from_bucket(AWS::S3.user_content_bucket, s3_filename(lesson_id, objective_ids))
+    Cdo::AwsWrapper::S3.download_from_bucket(Cdo::AwsWrapper::S3.user_content_bucket, s3_filename(lesson_id, objective_ids))
   end
 
   def self.exists_in_s3?(lesson_id, objective_ids)
-    AWS::S3.exists_in_bucket(AWS::S3.user_content_bucket, s3_filename(lesson_id, objective_ids))
+    Cdo::AwsWrapper::S3.exists_in_bucket(Cdo::AwsWrapper::S3.user_content_bucket, s3_filename(lesson_id, objective_ids))
   end
 
   VOICE_ID_MAP = {

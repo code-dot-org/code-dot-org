@@ -43,7 +43,7 @@ class PumaStatsCollectorTest < Minitest::Test
   end
 
   def test_publish_dual_dimensions
-    AWS::EC2.stubs(:instance_id).returns('i-12345678')
+    Cdo::AwsWrapper::EC2.stubs(:instance_id).returns('i-12345678')
 
     Puma.stubs(:stats_hash).returns(
       worker_status: [
@@ -107,7 +107,7 @@ class PumaStatsCollectorTest < Minitest::Test
     )
 
     Puma.stubs(:stats_hash).returns(worker_status: [], booted_workers: 0)
-    AWS::EC2.stubs(:instance_id).returns('i-adhoc')
+    Cdo::AwsWrapper::EC2.stubs(:instance_id).returns('i-adhoc')
 
     Cdo::Metrics.expects(:put).with(
       anything, anything, anything, anything,

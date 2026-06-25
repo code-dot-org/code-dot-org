@@ -53,7 +53,7 @@ def get_low_high_offered_grades(offered_grades)
   }
 end
 
-AWS::S3.process_file('cdo-nces', "2021-2022/pss/schools_private.csv") do |filename|
+Cdo::AwsWrapper::S3.process_file('cdo-nces', "2021-2022/pss/schools_private.csv") do |filename|
   SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'bom|utf-8'}, dry_run: DRY_RUN) do |row|
     offered_grades = get_offered_grades(row)
     low_high_offered_grades = get_low_high_offered_grades(offered_grades)

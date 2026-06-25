@@ -8,10 +8,10 @@ class TestCloudFront < Minitest::Test
   def test_cloudfront_limits
     %i(pegasus dashboard).each do |app|
       # +1 to include the default cache behavior in the count.
-      distribution_config = AWS::CloudFront.distribution_config(
+      distribution_config = Cdo::AwsWrapper::CloudFront.distribution_config(
         app,
-        AWS::CloudFront::CONFIG[app][:origin],
-        AWS::CloudFront::CONFIG[app][:aliases]
+        Cdo::AwsWrapper::CloudFront::CONFIG[app][:origin],
+        Cdo::AwsWrapper::CloudFront::CONFIG[app][:aliases]
       )
       behavior_count = JSON.parse(distribution_config)['CacheBehaviors'].length + 1
       assert behavior_count <= 60, "#{app} has #{behavior_count} cache behaviors (max is 60)"

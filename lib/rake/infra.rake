@@ -86,7 +86,7 @@ namespace :infra do
   desc 'flush Content Distribution Network (CDN) caches'
   timed_task_with_logging :flush_cloudfront_cache do
     ChatClient.wrap('Flush cache') do
-      AWS::CloudFront.invalidate_caches
+      Cdo::AwsWrapper::CloudFront.invalidate_caches
     end
   end
 

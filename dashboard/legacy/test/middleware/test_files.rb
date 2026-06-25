@@ -8,7 +8,7 @@ class FilesTest < FilesApiTestBase
     @channel_id = create_channel
     @api = FilesApiTestHelper.new(current_session, 'files', @channel_id)
     @api.ensure_aws_credentials
-    AWS::S3.create_client
+    Cdo::AwsWrapper::S3.create_client
     Aws::S3::Client.expects(:new).never
   end
 

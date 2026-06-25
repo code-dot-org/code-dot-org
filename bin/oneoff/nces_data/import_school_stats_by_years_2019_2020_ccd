@@ -74,7 +74,7 @@ end
 
 # –, † .to_i will return 0
 
-AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/schools.csv") do |filename|
+Cdo::AwsWrapper::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/schools.csv") do |filename|
   SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'UTF-8'}, dry_run: DRY_RUN) do |row|
     # remove quote and eq sign from ="12345"
     row = row.to_h.transform_values {|v| sanitize_string_for_db(v)}
@@ -115,7 +115,7 @@ AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/schools.csv") do |filename|
   end
 end
 
-AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/locale.csv") do |filename|
+Cdo::AwsWrapper::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/locale.csv") do |filename|
   SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'UTF-8'}, dry_run: DRY_RUN) do |row|
     {
       school_id:      row['NCESSCH'].to_i.to_s,

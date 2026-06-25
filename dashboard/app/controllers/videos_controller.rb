@@ -71,7 +71,7 @@ class VideosController < ApplicationController
     raise 'Expected a video/mp4 (.mp4) file' unless video_params[:download].content_type == 'video/mp4'
 
     filename = File.basename(video_params[:download].original_filename).parameterize + '.mp4'
-    AWS::S3.upload_to_bucket(
+    Cdo::AwsWrapper::S3.upload_to_bucket(
       'videos.code.org',
       "levelbuilder/#{filename}",
       video_params[:download],

@@ -436,7 +436,7 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
 
     AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).with(42, 1, true, false).
       returns({script: @test_script})
-    AWS::S3.expects(:upload_to_bucket).never
+    Cdo::AwsWrapper::S3.expects(:upload_to_bucket).never
 
     AiLessonSummaryPodcastsHelper.create_and_save_to_s3(42, 1)
   end
@@ -448,12 +448,12 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
 
     AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).with(42, 1, true, true).
       returns({script: @test_script})
-    AWS::S3.stubs(:exists_in_bucket).returns(false)
+    Cdo::AwsWrapper::S3.stubs(:exists_in_bucket).returns(false)
     AiLessonSummaryPodcastsHelper.stubs(:get_podcast_from_script).returns(@test_audio_data)
 
     expected_filename = 'podcasts/lesson_42_podcast.mp3'
-    AWS::S3.expects(:upload_to_bucket).with(
-      AWS::S3.user_content_bucket,
+    Cdo::AwsWrapper::S3.expects(:upload_to_bucket).with(
+      Cdo::AwsWrapper::S3.user_content_bucket,
       expected_filename,
       @test_audio_data,
       no_random: true
@@ -469,7 +469,7 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
 
     AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).with(42, 1, true, true).
       returns({script: nil})
-    AWS::S3.expects(:upload_to_bucket).never
+    Cdo::AwsWrapper::S3.expects(:upload_to_bucket).never
 
     AiLessonSummaryPodcastsHelper.create_and_save_to_s3(42, 1)
   end
@@ -480,9 +480,9 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
     AiLessonSummaryPodcastsHelper.stubs(:client).returns(mock_client)
 
     AiLessonSummariesHelper.stubs(:retrieve_and_save_ai_lesson_summary).returns({script: @test_script})
-    AWS::S3.stubs(:exists_in_bucket).returns(true)
+    Cdo::AwsWrapper::S3.stubs(:exists_in_bucket).returns(true)
 
-    AWS::S3.expects(:upload_to_bucket).never
+    Cdo::AwsWrapper::S3.expects(:upload_to_bucket).never
 
     AiLessonSummaryPodcastsHelper.create_and_save_to_s3(42, 1)
   end
@@ -494,8 +494,8 @@ class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
   test "retrieve_podcast_from_s3 downloads from correct bucket and path" do
     expected_filename = 'podcasts/lesson_42_podcast.mp3'
 
-    AWS::S3.expects(:download_from_bucket).with(
-      AWS::S3.user_content_bucket,
+    Cdo::AwsWrapper::S3.expects(:download_from_bucket).with(
+      Cdo::AwsWrapper::S3.user_content_bucket,
       expected_filename
     ).returns(@test_audio_data)
 

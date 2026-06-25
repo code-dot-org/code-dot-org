@@ -102,7 +102,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
 
   def expect_s3_upload
     CDO.stubs(disable_s3_image_uploads: false)
-    AWS::S3.expects(:upload_to_bucket).returns(true).twice
+    Cdo::AwsWrapper::S3.expects(:upload_to_bucket).returns(true).twice
   end
 
   test "generate image for artist in s3" do

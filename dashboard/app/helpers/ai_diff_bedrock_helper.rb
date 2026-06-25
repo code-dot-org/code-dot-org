@@ -4,7 +4,7 @@ module AiDiffBedrockHelper
   include UsersHelper
 
   def self.account_id
-    AWS::EC2.account_id || begin
+    Cdo::AwsWrapper::EC2.account_id || begin
       Aws::STS::Client.new.get_caller_identity.account
     rescue StandardError
       nil
@@ -12,7 +12,7 @@ module AiDiffBedrockHelper
   end
 
   def self.region
-    AWS::EC2.region || CDO.aws_region
+    Cdo::AwsWrapper::EC2.region || CDO.aws_region
   end
 
   MAX_TOKENS = 1500

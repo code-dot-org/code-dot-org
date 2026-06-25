@@ -6,7 +6,7 @@ CDO.log = Logger.new($stdout)
 
 SURVEY_YEAR = '2014-2015'.freeze
 
-AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/ccd_sch_029_1415_w_0216601a.txt") do |filename|
+Cdo::AwsWrapper::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/ccd_sch_029_1415_w_0216601a.txt") do |filename|
   SchoolStatsByYear.transaction do
     SchoolStatsByYear.merge_from_csv(filename) do |row|
       {
@@ -35,7 +35,7 @@ AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/ccd_sch_029_1415_w_0216601a
   end
 end
 
-AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/ccd_sch_052_1415_w_0216161a.txt") do |filename|
+Cdo::AwsWrapper::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/ccd_sch_052_1415_w_0216161a.txt") do |filename|
   SchoolStatsByYear.transaction do
     SchoolStatsByYear.merge_from_csv(filename) do |row|
       {
@@ -54,7 +54,7 @@ AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/ccd_sch_052_1415_w_0216161a
   end
 end
 
-AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/ccd_sch_129_1415_w_0216161a.txt") do |filename|
+Cdo::AwsWrapper::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/ccd_sch_129_1415_w_0216161a.txt") do |filename|
   SchoolStatsByYear.transaction do
     SchoolStatsByYear.merge_from_csv(filename) do |row|
       {
@@ -66,7 +66,7 @@ AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/ccd_sch_129_1415_w_0216161a
   end
 end
 
-AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/ccd_sch_033_1415_w_0216161a.txt") do |filename|
+Cdo::AwsWrapper::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/ccd_sch_033_1415_w_0216161a.txt") do |filename|
   SchoolStatsByYear.transaction do
     SchoolStatsByYear.merge_from_csv(filename) do |row|
       {
@@ -78,7 +78,7 @@ AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/ccd_sch_033_1415_w_0216161a
   end
 end
 
-AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/EDGE_GEOIDS_201415_PUBLIC_SCHOOL.csv") do |filename|
+Cdo::AwsWrapper::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/EDGE_GEOIDS_201415_PUBLIC_SCHOOL.csv") do |filename|
   SchoolStatsByYear.transaction do
     SchoolStatsByYear.merge_from_csv(filename, {headers: true, encoding: 'ISO-8859-1:UTF-8'}) do |row|
       {

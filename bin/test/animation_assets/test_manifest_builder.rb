@@ -77,7 +77,7 @@ describe ManifestBuilder do
           }
         JSON
 
-        AWS::S3.expects(:upload_to_bucket).with(
+        Cdo::AwsWrapper::S3.expects(:upload_to_bucket).with(
           'cdo-animation-library',
           'animation-manifests/manifests/spritelabCostumeLibrary.en_us.json',
           expected_manifest_data,

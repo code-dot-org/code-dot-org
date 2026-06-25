@@ -10,17 +10,17 @@ module AiLessonSummaryPodcastsHelper
       script = lesson_summary_data[:script]
     end
     filename = PODCAST_FOLDER + 'lesson_' + lesson_id.to_s + '_podcast.mp3'
-    bucket = AWS::S3.user_content_bucket
+    bucket = Cdo::AwsWrapper::S3.user_content_bucket
 
-    if script && credits_available && !AWS::S3.exists_in_bucket(bucket, filename)
+    if script && credits_available && !Cdo::AwsWrapper::S3.exists_in_bucket(bucket, filename)
       podcast = get_podcast_from_script(script)
-      AWS::S3.upload_to_bucket(bucket, filename, podcast, no_random: true)
+      Cdo::AwsWrapper::S3.upload_to_bucket(bucket, filename, podcast, no_random: true)
     end
   end
 
   def self.retrieve_podcast_from_s3(lesson_id)
     filename = PODCAST_FOLDER + 'lesson_' + lesson_id.to_s + '_podcast.mp3'
-    AWS::S3.download_from_bucket(AWS::S3.user_content_bucket, filename)
+    Cdo::AwsWrapper::S3.download_from_bucket(Cdo::AwsWrapper::S3.user_content_bucket, filename)
   end
 
   def self.get_podcast_from_script(script)

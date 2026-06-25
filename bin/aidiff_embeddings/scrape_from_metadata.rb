@@ -32,7 +32,7 @@ paths.each do |path|
   file = File.open(path)
   data = file.read
   puts "Uploading #{path}"
-  AWS::S3.upload_to_bucket(
+  Cdo::AwsWrapper::S3.upload_to_bucket(
     EMBEDDINGS_BUCKET,
     "live/#{File.basename(path)}",
     data,

@@ -8,7 +8,7 @@ namespace :stack do
     Dir.chdir aws_dir('cloudformation')
     require 'cdo/aws/cloud_formation'
     require 'cdo/cloud_formation/cdo_app'
-    @cfn = AWS::CloudFormation.new(
+    @cfn = Cdo::AwsWrapper::CloudFormation.new(
       stack: (@stack = Cdo::CloudFormation::CdoApp.new(
         filename: ENV.fetch('TEMPLATE', nil),
         stack_name: ENV['STACK_NAME'].dup,
@@ -67,7 +67,7 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
         Dir.chdir aws_dir('cloudformation')
         require 'cdo/aws/cloud_formation'
         require 'cdo/cloud_formation/stack_template'
-        @cfn = AWS::CloudFormation.new(
+        @cfn = Cdo::AwsWrapper::CloudFormation.new(
           stack: Cdo::CloudFormation::StackTemplate.new(
             filename: ENV['TEMPLATE'] || "#{stack}.yml.erb",
             stack_name: stack_name

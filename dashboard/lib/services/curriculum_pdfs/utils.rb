@@ -44,7 +44,7 @@ module Services
             return CDO.shared_cache.read(cache_key) if CDO.shared_cache.exist?(cache_key)
           end
 
-          result = AWS::S3.exists_in_bucket(S3_BUCKET, pathname)
+          result = Cdo::AwsWrapper::S3.exists_in_bucket(S3_BUCKET, pathname)
 
           # Note that we don't set an explicit `expires_in` value here. We
           # expect that PDFs will only ever go from not generated to generated

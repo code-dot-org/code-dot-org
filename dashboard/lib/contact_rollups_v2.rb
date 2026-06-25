@@ -242,7 +242,7 @@ class ContactRollupsV2
   # @return [String] url of the uploaded S3 object
   def upload_to_s3
     log_name = "crv2-#{Time.now.utc.strftime('%Y%m%dT%H%M%SZ')}.log"
-    AWS::S3::LogUploader.
+    Cdo::AwsWrapper::S3::LogUploader.
       new('cdo-audit-logs', "contact-rollups-v2/#{CDO.rack_env}").
       upload_log(log_name, @log_collector.to_s)
   end

@@ -10,7 +10,7 @@ class RemixTest < ActionDispatch::IntegrationTest
   PROJECT_EDIT_REGEX = /#{'/projects/'}(?<project_type>\w+)\/(?<channel_id>[^\\]*)#{'/edit'}$/
 
   def setup
-    AWS::S3.stubs :create_client # Don't actually talk to S3
+    Cdo::AwsWrapper::S3.stubs :create_client # Don't actually talk to S3
     sign_in create :student
   end
 

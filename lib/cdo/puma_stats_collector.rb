@@ -33,7 +33,7 @@ module Cdo
 
     private def instance_id
       return @instance_id unless @instance_id.nil? || @instance_id == 'UNKNOWN'
-      @instance_id = AWS::EC2.instance_id || 'UNKNOWN'
+      @instance_id = Cdo::AwsWrapper::EC2.instance_id || 'UNKNOWN'
     end
   end
 end

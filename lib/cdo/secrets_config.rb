@@ -106,10 +106,10 @@ module Cdo
       # Get the CloudFormation Stack Name that the EC2 Instance this code is executing on belongs to.
       # @return [String]
       def self.current_stack_name
-        ec2_instance_id = AWS::EC2.instance_id
+        ec2_instance_id = Cdo::AwsWrapper::EC2.instance_id
         return unless ec2_instance_id
 
-        region = AWS::EC2.region
+        region = Cdo::AwsWrapper::EC2.region
         return unless region
 
         ec2_client = Aws::EC2::Client.new(region: region)
