@@ -1880,6 +1880,79 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal({}, JSON.parse(@response.body))
   end
 
+  # check_demo_section_staleness
+
+  test 'check_demo_section_staleness: returns forbidden when not signed in' do
+    section = create_stale_demo_section
+    get :check_demo_section_staleness, params: {id: section.id}
+    assert_response :forbidden
+  end
+
+  test 'check_demo_section_staleness: returns forbidden for a non-instructor' do
+    other_teacher = create(:teacher)
+    section = create_stale_demo_section
+    sign_in other_teacher
+
+    get :check_demo_section_staleness, params: {id: section.id}
+    assert_response :forbidden
+  end
+
+  test 'check_demo_section_staleness: returns forbidden when section is not a demo section' do
+    section = create(:section, user: @teacher, login_type: 'word')
+    sign_in @teacher
+
+    get :check_demo_section_staleness, params: {id: section.id}
+    assert_response :forbidden
+  end
+
+  test 'check_demo_section_staleness: reports a stale section with a message' do
+    stub_demo_preset
+    section = create_stale_demo_section
+    sign_in @teacher
+
+    get :check_demo_section_staleness, params: {id: section.id}
+    assert_response :ok
+    assert JSON.parse(@response.body)['message'].present?
+  end
+
+  test 'check_demo_section_staleness: returns no_content for an up-to-date section' do
+    stub_demo_preset
+    section = create(
+      :section,
+      user: @teacher,
+      login_type: 'email',
+      demo_type: 'high',
+      script_id: @csp_script.id,
+      course_id: @csp_unit_group.id,
+    )
+    sign_in @teacher
+
+    get :check_demo_section_staleness, params: {id: section.id}
+    assert_response :no_content
+  end
+
+  test 'check_demo_section_staleness: a co-instructor may check' do
+    coteacher = create(:teacher)
+    stub_demo_preset
+    section = create_stale_demo_section
+    create(:section_instructor, instructor: coteacher, section: section, status: :active)
+    sign_in coteacher
+
+    get :check_demo_section_staleness, params: {id: section.id}
+    assert_response :ok
+  end
+
+  private def create_stale_demo_section
+    create(
+      :section,
+      user: @teacher,
+      login_type: 'email',
+      demo_type: 'high',
+      script_id: @csp_script2.id,
+      course_id: nil,
+    )
+  end
+
   private def stub_demo_preset
     Policies::DemoSections.stubs(:get_preset).with('high').returns(
       {

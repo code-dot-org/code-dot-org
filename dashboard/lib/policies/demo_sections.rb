@@ -112,6 +112,18 @@ class Policies::DemoSections
     }
   end
 
+  # Only checks fields important for onboarding.
+  def self.section_matches_preset?(section)
+    preset = get_preset(section.demo_type)
+    return false unless preset
+
+    unit = resolve_unit(preset[:unit_name])
+    unit_group = resolve_unit_group(preset[:unit_group_name])
+    return false unless unit && unit_group
+
+    section.script_id == unit.id && section.course_id == unit_group.id
+  end
+
   def self.preset_views_for_all_types
     DEMO_TYPES.each_with_object({}) do |demo_type, views|
       view = preset_view(demo_type)
