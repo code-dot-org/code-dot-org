@@ -519,6 +519,22 @@ class LevelsHelperTest < ActionView::TestCase
     assert_nil app_options[:level]['pairingChannelId']
   end
 
+  test 'non-channel-backed levels should include pairing_driver and pairing_attempt when viewed by navigator' do
+    @level = create(:maze)
+    @script = create(:script, :in_single_unit_course)
+    create(:script_level, levels: [@level], script: @script)
+    @driver = create(:student)
+    @navigator = create(:student)
+    create_level_progress_for_pair @level, @driver, @navigator, @script
+
+    # "Load the level" as the navigator
+    sign_in @navigator
+    assert_equal true, app_options[:level]['isNavigator']
+    refute_nil app_options[:level]['pairingDriver']
+    refute_nil app_options[:level]['pairingAttempt']
+    assert_nil app_options[:level]['pairingChannelId']
+  end
+
   def create_applab_progress_for_pair(level, driver, navigator)
     driver_user_level = create(:user_level, user: driver, level: level)
     navigator_user_level = create(:user_level, user: navigator, level: level)
@@ -526,6 +542,16 @@ class LevelsHelperTest < ActionView::TestCase
       driver_user_level: driver_user_level, navigator_user_level: navigator_user_level
 )
     create(:channel_token, level: level, storage_id: fake_storage_id_for_user_id(driver.id))
+  end
+
+  def create_level_progress_for_pair(level, driver, navigator, script)
+    driver_user_level = create(:user_level, user: driver, level: level, script: script)
+    navigator_user_level = create(:user_level, user: navigator, level: level, script: script)
+    create(
+      :paired_user_level,
+      driver_user_level: driver_user_level,
+      navigator_user_level: navigator_user_level
+    )
   end
 
   def stub_country(code)
