@@ -117,6 +117,11 @@ Resources:
           - Effect: Allow
             Action: 'cloudwatch:PutMetricData'
             Resource: '*'
+          # Read on-demand list prices to publish modeled compute-cost metrics.
+          # The Price List Query API does not support resource-level permissions.
+          - Effect: Allow
+            Action: 'pricing:GetProducts'
+            Resource: '*'
           # Read EC2 tags to determine Auto Scaling Group in CloudWatch Monitoring Scripts.
           - Effect: Allow
             Action: 'ec2:DescribeTags'
