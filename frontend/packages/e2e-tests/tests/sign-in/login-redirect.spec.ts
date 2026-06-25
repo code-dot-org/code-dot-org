@@ -35,7 +35,7 @@ test.describe('Navigating to a level page with login required', () => {
     await signIn.waitForForm();
 
     // Fill credentials and submit; server redirects back to the level (no login_required).
-    await signIn.fillCredentials(email, password);
+    await signIn.fillCredentials({email, password});
     await signIn.submit();
 
     // The post-sign-in redirect lands on the original level path (no login_required param).
