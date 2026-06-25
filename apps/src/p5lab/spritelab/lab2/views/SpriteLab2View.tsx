@@ -17,6 +17,7 @@ import {setInitialAnimationList} from '@cdo/apps/p5lab/redux/animationList';
 // pull the ones the engine and AnimationTab read from it by key.
 import {getSerializedAnimationList} from '@cdo/apps/p5lab/shapes';
 import {registerReducers} from '@cdo/apps/redux';
+import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import pageConstants, {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import runState, {setIsRunning} from '@cdo/apps/redux/runState';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -105,8 +106,17 @@ const SpriteLab2View: React.FunctionComponent<{
         isBlockly: true,
         isShareView: false,
         channelId,
+        // Seed the keys the embedded AnimationTab/P5LabVisualizationHeader read
+        // so they're defined booleans (avoids PropType warnings). The tab shell
+        // handles navigation, so the legacy mode-toggle header stays hidden.
+        isReadOnlyWorkspace: false,
+        isEmbedView: false,
+        showAnimationMode: false,
       })
     );
+    // PiskelEditor passes localeCode through to the Piskel iframe, which calls
+    // .toLowerCase() on it; seed a default so it isn't undefined.
+    dispatch(setLocaleCode('en_us'));
     // AnimationTab shows currentAnimations[interfaceMode]; the Items tab is the
     // animation editor, so keep it in ANIMATION mode.
     // changeInterfaceMode is an untyped JS action creator (inferred as
