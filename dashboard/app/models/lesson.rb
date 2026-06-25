@@ -738,26 +738,15 @@ class Lesson < ApplicationRecord
 
   def summarize_for_lab2_properties(current_user = nil, unit_group_unit: nil)
     properties = {}
-
     script_levels.each do |script_level|
       level = script_level.level
       # Skip non-lab2 level types whose game has no app.
       next unless level.game&.app
-      properties[level.id] = level.summarize_for_lab2_properties(
-        script,
-        script_level,
-        current_user,
-        unit_group_unit: unit_group_unit
-      )
+      properties[level.id] = level.summarize_for_lab2_properties(script, script_level, current_user, unit_group_unit: unit_group_unit)
       next unless level.is_a?(BubbleChoice)
       level.sublevels.each do |sublevel|
         next unless sublevel.game&.app
-        properties[sublevel.id] = sublevel.summarize_for_lab2_properties(
-          script,
-          script_level,
-          current_user,
-          unit_group_unit: unit_group_unit
-        )
+        properties[sublevel.id] = sublevel.summarize_for_lab2_properties(script, script_level, current_user, unit_group_unit: unit_group_unit)
       end
     end
     properties

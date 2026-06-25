@@ -80,12 +80,7 @@ class Weblab2 < Level
   end
 
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil, widget2_start_sources: nil)
-    properties_camelized = super(
-      script,
-      script_level,
-      current_user,
-      unit_group_unit: unit_group_unit
-    )
+    properties_camelized = super(script, script_level, current_user, unit_group_unit: unit_group_unit)
 
     # If this is a widget2 level or we are editing widget2 starter sources,
     # then startSources will come from the files in the repo, rather than
