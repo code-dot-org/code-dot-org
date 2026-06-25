@@ -1,3 +1,4 @@
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useState} from 'react';
 import {AnyAction} from 'redux';
@@ -165,14 +166,18 @@ const GenerateImagePane: React.FunctionComponent = () => {
               <option value="background">Background</option>
             </select>
           </label>
-          <button
+          <MuiButton
             type="button"
+            variant="contained"
+            color="secondary"
+            size="small"
             className={moduleStyles.generateButton}
             onClick={handleGenerate}
+            loading={generating}
             disabled={generating}
           >
             {generating ? 'Generating…' : 'Generate'}
-          </button>
+          </MuiButton>
         </div>
         {error && <div className={moduleStyles.generateError}>{error}</div>}
       </div>

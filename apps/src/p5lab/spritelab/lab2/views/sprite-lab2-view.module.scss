@@ -92,6 +92,10 @@
   select {
     width: 100%;
     height: 32px;
+    // Drop the global form-control bottom margin so the label box ends at the
+    // input; otherwise the flex-end row aligns the Generate button to that
+    // phantom space instead of to the inputs.
+    margin: 0;
     padding: 4px 8px;
     box-sizing: border-box;
   }
@@ -107,10 +111,11 @@
   gap: 10px;
 }
 
+// MUI Button owns its own typography/padding/color; we only pin the height so
+// it matches the 32px Name/Type inputs beside it (the flex-end row then aligns
+// their bottoms).
 .generateButton {
   height: 32px;
-  padding: 0 18px;
-  cursor: pointer;
   white-space: nowrap;
 }
 
@@ -278,7 +283,6 @@
   height: 400px;
   transform-origin: 0 0;
   background: var(--background-neutral-secondary);
-  box-shadow: 0 0 0 1px var(--borders-neutral-strong);
   transition: transform 0.45s ease;
 }
 
