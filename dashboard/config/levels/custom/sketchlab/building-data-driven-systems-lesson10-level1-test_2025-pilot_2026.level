@@ -274,7 +274,7 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffffff",
+              "backgroundColor": "transparent",
               "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
@@ -297,7 +297,7 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffffff",
+              "backgroundColor": "transparent",
               "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
@@ -315,7 +315,7 @@
             },
             "data": {
               "text": "#1",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -334,7 +334,7 @@
             },
             "data": {
               "text": "#2",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },

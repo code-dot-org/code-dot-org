@@ -19,7 +19,7 @@
             },
             "data": {
               "text": "While loop",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -43,9 +43,9 @@
             "data": {
               "shapeType": "circle",
               "label": "Start game",
-              "backgroundColor": "#ffc9c9",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-red)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -67,9 +67,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "startNextLevel()\nAsk if user won",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -91,9 +91,9 @@
             "data": {
               "shapeType": "diamond",
               "label": "Is\n\n",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -111,7 +111,7 @@
             },
             "data": {
               "text": "lives > 0?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -135,9 +135,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Set lives = 3",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -162,9 +162,9 @@
             "data": {
               "shapeType": "circle",
               "label": "Game over!",
-              "backgroundColor": "#ffc9c9",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-red)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -186,9 +186,9 @@
             "data": {
               "shapeType": "circle",
               "label": "lives",
-              "backgroundColor": "#b2f2bb",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -206,7 +206,7 @@
             },
             "data": {
               "text": "State variable",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -225,7 +225,7 @@
             },
             "data": {
               "text": "Stop\ncondition",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -249,7 +249,7 @@
               "shapeType": "rectangle",
               "label": "let lives = 3;\n\nwhile (lives > 0) {\n  startNextLevel()\n\n  let result = prompt(\"Did you win? (yes/no)\");\n}\n\nalert(\"Game over!\");",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
               "textAlign": "left",
               "fontSize": "large"
             },
@@ -272,7 +272,7 @@
             },
             "data": {
               "text": "Start \nvalue",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
