@@ -1,44 +1,75 @@
-import {render, screen} from '@testing-library/react';
+import {render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
+import {getUserAppOptionsPath} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import PairingNavigatorAlert from '@cdo/apps/lab2/views/alerts/pairingNavigator/PairingNavigatorAlert';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+jest.mock('@cdo/apps/code-studio/progressReduxSelectors', () => ({
+  getUserAppOptionsPath: jest.fn(() => '/api/user_app_options/test/1/1/1'),
+}));
+jest.mock('@cdo/apps/util/HttpClient');
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
   useAppSelector: jest.fn(),
 }));
 
 const mockedUseAppSelector = useAppSelector as jest.Mock;
+const mockedGetUserAppOptionsPath = getUserAppOptionsPath as jest.Mock;
+const mockedFetchJson = HttpClient.fetchJson as jest.Mock;
 
-function setLevelProperties(levelProperties?: Partial<LevelProperties>) {
-  mockedUseAppSelector.mockImplementation(() => levelProperties);
+function setState({
+  levelProperties,
+  viewAsUserId = null,
+  userAppOptionsPath = '/api/user_app_options/test/1/1/1',
+}: {
+  levelProperties?: Partial<LevelProperties>;
+  viewAsUserId?: number | null;
+  userAppOptionsPath?: string;
+}) {
+  mockedGetUserAppOptionsPath.mockReturnValue(userAppOptionsPath);
+  const state = {
+    lab: {levelProperties},
+    progress: {viewAsUserId},
+  };
+  mockedUseAppSelector.mockImplementation(selector => selector(state));
 }
 
 describe('PairingNavigatorAlert', () => {
+  beforeEach(() => {
+    mockedFetchJson.mockResolvedValue({value: {isNavigator: false}});
+  });
+
   afterEach(() => {
     jest.clearAllMocks();
   });
 
-  it('renders nothing when level is not navigator', () => {
-    setLevelProperties({isNavigator: false, appName: 'music'});
+  it('renders nothing when user is not navigator', async () => {
+    setState({levelProperties: {appName: 'music'}});
 
     const {container} = render(<PairingNavigatorAlert />);
-    expect(container).toBeEmptyDOMElement();
+    await waitFor(() => expect(container).toBeEmptyDOMElement());
   });
 
-  it('renders partner link when pairingChannelId is present', () => {
-    setLevelProperties({
-      isNavigator: true,
-      appName: 'music',
-      pairingDriver: 'A Student',
-      pairingChannelId: 'abc123',
+  it('renders partner link when pairingChannelId is present', async () => {
+    setState({
+      levelProperties: {
+        appName: 'music',
+      },
+    });
+    mockedFetchJson.mockResolvedValue({
+      value: {
+        isNavigator: true,
+        pairingDriver: 'A Student',
+        pairingChannelId: 'abc123',
+      },
     });
 
     render(<PairingNavigatorAlert />);
 
-    const link = screen.getByRole('link', {
+    const link = await screen.findByRole('link', {
       name: 'Click here to view the solution you created as a team.',
     });
     expect(link).toHaveAttribute('href', '/projects/music/abc123/view');
@@ -48,68 +79,105 @@ describe('PairingNavigatorAlert', () => {
     expect(screen.getByText('A Student')).toBeInTheDocument();
   });
 
-  it('renders teacher-view link copy when teacher is viewing student work', () => {
-    setLevelProperties({
-      isNavigator: true,
-      appName: 'music',
-      pairingDriver: 'A Student',
-      pairingChannelId: 'abc123',
+  it('renders teacher-view link copy when teacher is viewing student work', async () => {
+    setState({
+      levelProperties: {
+        appName: 'music',
+      },
+      viewAsUserId: 7,
+    });
+    mockedFetchJson.mockResolvedValue({
+      value: {
+        isNavigator: true,
+        pairingDriver: 'A Student',
+        pairingChannelId: 'abc123',
+      },
     });
 
     render(<PairingNavigatorAlert isTeacherViewingStudent={true} />);
 
-    expect(
-      screen.getByRole('link', {
-        name: 'Click here to view the solution created as a team.',
-      })
-    ).toBeInTheDocument();
+    await waitFor(() =>
+      expect(
+        screen.getByRole('link', {
+          name: 'Click here to view the solution created as a team.',
+        })
+      ).toBeInTheDocument()
+    );
+    expect(mockedFetchJson).toHaveBeenCalledWith(
+      '/api/user_app_options/test/1/1/1?user_id=7',
+      undefined,
+      expect.any(Function)
+    );
   });
 
-  it('renders fallback copy and no link when driver project link is unavailable', () => {
-    setLevelProperties({
-      isNavigator: true,
-      appName: 'sketchlab',
-      pairingDriver: 'A Student',
-      pairingChannelId: 'abc123',
+  it('renders fallback copy and no link when driver project link is unavailable', async () => {
+    setState({
+      levelProperties: {
+        appName: 'sketchlab',
+      },
+    });
+    mockedFetchJson.mockResolvedValue({
+      value: {
+        isNavigator: true,
+        pairingDriver: 'A Student',
+        pairingChannelId: 'abc123',
+      },
     });
 
     render(
       <PairingNavigatorAlert doesAppTypeHaveStandaloneProjectLevel={false} />
     );
 
-    expect(screen.queryByRole('link')).not.toBeInTheDocument();
-    expect(screen.getByRole('alert')).toHaveTextContent(
-      "The solution is not available for viewing. Refer to A Student's work for the solution."
-    );
+    await waitFor(() => {
+      expect(screen.queryByRole('link')).not.toBeInTheDocument();
+      expect(screen.getByRole('alert')).toHaveTextContent(
+        "The solution is not available for viewing. Refer to A Student's work for the solution."
+      );
+    });
   });
 
-  it('renders fallback copy when standalone project level is unavailable', () => {
-    setLevelProperties({
-      isNavigator: true,
-      appName: 'sketchlab',
-      pairingDriver: 'A Student',
+  it('renders fallback copy when standalone project level is unavailable', async () => {
+    setState({
+      levelProperties: {
+        appName: 'sketchlab',
+      },
+    });
+    mockedFetchJson.mockResolvedValue({
+      value: {
+        isNavigator: true,
+        pairingDriver: 'A Student',
+      },
     });
 
     render(
       <PairingNavigatorAlert doesAppTypeHaveStandaloneProjectLevel={false} />
     );
 
-    expect(screen.queryByRole('link')).not.toBeInTheDocument();
-    expect(screen.getByRole('alert')).toHaveTextContent(
-      "The solution is not available for viewing. Refer to A Student's work for the solution."
-    );
+    await waitFor(() => {
+      expect(screen.queryByRole('link')).not.toBeInTheDocument();
+      expect(screen.getByRole('alert')).toHaveTextContent(
+        "The solution is not available for viewing. Refer to A Student's work for the solution."
+      );
+    });
   });
 
-  it('renders nothing in teacher view when driver info is missing', () => {
-    setLevelProperties({
-      isNavigator: true,
-      appName: 'music',
-      pairingChannelId: 'abc123',
+  it('renders nothing in teacher view when driver info is missing', async () => {
+    setState({
+      levelProperties: {
+        appName: 'music',
+      },
+      viewAsUserId: 7,
+    });
+    mockedFetchJson.mockResolvedValue({
+      value: {
+        isNavigator: true,
+        pairingChannelId: 'abc123',
+      },
     });
 
     const {container} = render(
       <PairingNavigatorAlert isTeacherViewingStudent={true} />
     );
-    expect(container).toBeEmptyDOMElement();
+    await waitFor(() => expect(container).toBeEmptyDOMElement());
   });
 });

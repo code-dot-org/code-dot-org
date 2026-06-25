@@ -1,7 +1,9 @@
 import Alert from '@code-dot-org/component-library/alert';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
+import {getUserAppOptionsPath} from '@cdo/apps/code-studio/progressReduxSelectors';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './pairingNavigatorAlert.module.scss';
@@ -17,6 +19,12 @@ type PairingNavigatorAlertProps = {
   isTeacherViewingStudent?: boolean;
 };
 
+type PairingProperties = {
+  isNavigator?: boolean;
+  pairingDriver?: string;
+  pairingChannelId?: string;
+};
+
 const PairingNavigatorAlert: React.FC<PairingNavigatorAlertProps> = ({
   inWorkspaceContainer,
   className,
@@ -24,19 +32,70 @@ const PairingNavigatorAlert: React.FC<PairingNavigatorAlertProps> = ({
   doesAppTypeHaveStandaloneProjectLevel = true,
 }) => {
   const levelProperties = useAppSelector(state => state.lab.levelProperties);
+  const userAppOptionsPath = useAppSelector(getUserAppOptionsPath);
+  const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
+  const [userPairingProperties, setUserPairingProperties] =
+    useState<PairingProperties>();
 
-  if (!levelProperties?.isNavigator) {
+  useEffect(() => {
+    if (!userAppOptionsPath) {
+      setUserPairingProperties(undefined);
+      return;
+    }
+    if (isTeacherViewingStudent && !viewAsUserId) {
+      setUserPairingProperties({});
+      return;
+    }
+
+    const userIdQuery = isTeacherViewingStudent
+      ? `?user_id=${viewAsUserId}`
+      : '';
+    const userAppOptionsUrl = `${userAppOptionsPath}${userIdQuery}`;
+    let isCancelled = false;
+
+    HttpClient.fetchJson<PairingProperties>(
+      userAppOptionsUrl,
+      undefined,
+      response => response as PairingProperties
+    )
+      .then(({value}) => {
+        if (isCancelled) {
+          return;
+        }
+        setUserPairingProperties({
+          isNavigator: value.isNavigator,
+          pairingDriver: value.pairingDriver,
+          pairingChannelId: value.pairingChannelId,
+        });
+      })
+      .catch(() => {
+        if (isCancelled) {
+          return;
+        }
+        setUserPairingProperties({});
+      });
+
+    return () => {
+      isCancelled = true;
+    };
+  }, [isTeacherViewingStudent, userAppOptionsPath, viewAsUserId]);
+
+  if (!levelProperties) {
+    return null;
+  }
+
+  if (!userPairingProperties?.isNavigator) {
     return null;
   }
 
   const projectViewPath =
     doesAppTypeHaveStandaloneProjectLevel &&
-    Boolean(levelProperties.pairingChannelId)
-      ? `/projects/${levelProperties.appName}/${levelProperties.pairingChannelId}/view`
+    Boolean(userPairingProperties.pairingChannelId)
+      ? `/projects/${levelProperties.appName}/${userPairingProperties.pairingChannelId}/view`
       : undefined;
   if (
     isTeacherViewingStudent &&
-    (!levelProperties.pairingDriver || !projectViewPath)
+    (!userPairingProperties.pairingDriver || !projectViewPath)
   ) {
     return null;
   }
@@ -51,13 +110,13 @@ const PairingNavigatorAlert: React.FC<PairingNavigatorAlertProps> = ({
   ) : (
     <>
       The solution is not available for viewing. Refer to{' '}
-      {levelProperties.pairingDriver}'s work for the solution.
+      {userPairingProperties.pairingDriver}'s work for the solution.
     </>
   );
-  const alertText = levelProperties.pairingDriver ? (
+  const alertText = userPairingProperties.pairingDriver ? (
     <>
       This level was completed while pairing with{' '}
-      <strong>{levelProperties.pairingDriver}</strong>. {additionalInfo}
+      <strong>{userPairingProperties.pairingDriver}</strong>. {additionalInfo}
     </>
   ) : (
     <>

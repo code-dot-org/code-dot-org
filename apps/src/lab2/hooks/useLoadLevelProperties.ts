@@ -35,7 +35,6 @@ async function loadLevelProperties(path: string) {
 export default function useLoadLevelProperties() {
   const dispatch = useAppDispatch();
   const [propertiesMap, setPropertiesMap] = useState<LevelPropertiesMap>();
-  const viewAsUserId = useAppSelector(({progress}) => progress.viewAsUserId);
 
   const path = useAppSelector(({progress}) => {
     const {scriptName, currentLevelId, lessons, currentLessonId} = progress;
@@ -43,9 +42,6 @@ export default function useLoadLevelProperties() {
       lesson => lesson.id === currentLessonId
     )?.position;
     const searchParams = new URLSearchParams();
-    if (viewAsUserId) {
-      searchParams.set('user_id', viewAsUserId.toString());
-    }
     if (widget2Id) {
       searchParams.set('widget2', widget2Id.toString());
     }

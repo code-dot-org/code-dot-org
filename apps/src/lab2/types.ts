@@ -328,10 +328,6 @@ export interface LevelProperties {
   hideVersionHistory?: boolean;
   parentLevelName?: string;
   requireEditToContinue?: boolean;
-  // Pair programming properties for Lab2 project-based levels.
-  isNavigator?: boolean;
-  pairingDriver?: string;
-  pairingChannelId?: string;
 }
 
 export type LevelPropertiesMap = {[levelId: string]: LevelProperties};

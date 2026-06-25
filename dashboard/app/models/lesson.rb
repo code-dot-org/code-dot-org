@@ -738,26 +738,6 @@ class Lesson < ApplicationRecord
 
   def summarize_for_lab2_properties(current_user = nil, unit_group_unit: nil)
     properties = {}
-    level_ids = []
-    script_levels.each do |script_level|
-      level = script_level.level
-      next unless level.game&.app
-      level_ids << level.id
-      if level.is_a?(BubbleChoice)
-        level_ids.concat(level.sublevels.select {|sublevel| sublevel.game&.app}.map(&:id))
-      end
-    end
-
-    latest_user_levels_by_level_id = {}
-    if current_user && level_ids.any?
-      UserLevel.where(
-        user_id: current_user.id,
-        script_id: script.id,
-        level_id: level_ids
-      ).order(updated_at: :desc).each do |user_level|
-        latest_user_levels_by_level_id[user_level.level_id] ||= user_level
-      end
-    end
 
     script_levels.each do |script_level|
       level = script_level.level
@@ -767,8 +747,7 @@ class Lesson < ApplicationRecord
         script,
         script_level,
         current_user,
-        unit_group_unit: unit_group_unit,
-        user_level: latest_user_levels_by_level_id[level.id]
+        unit_group_unit: unit_group_unit
       )
       next unless level.is_a?(BubbleChoice)
       level.sublevels.each do |sublevel|
@@ -777,8 +756,7 @@ class Lesson < ApplicationRecord
           script,
           script_level,
           current_user,
-          unit_group_unit: unit_group_unit,
-          user_level: latest_user_levels_by_level_id[sublevel.id]
+          unit_group_unit: unit_group_unit
         )
       end
     end

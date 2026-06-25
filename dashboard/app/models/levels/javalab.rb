@@ -218,7 +218,7 @@ class Javalab < Level
   # levels_controller#edit_blocks (levelbuilder-only). For everyone
   # else, emit a names-only stub `{filename => ""}` so the frontend can
   # still detect filename collisions without seeing solution code.
-  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil, user_level: nil)
+  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
     level_properties = super
     level_properties.delete('encryptedValidation')
     if validation
