@@ -1,12 +1,11 @@
 /* React component to display a statement about our model. */
 import {faTimesCircle} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {connect} from 'react-redux';
 
 import {styles} from '../constants';
 import {getLocalizedColumnName} from '../helpers/columnDetails';
+import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
-import type {RootState} from '../redux';
 import {setLabelColumn, removeSelectedFeature} from '../redux';
 
 interface StatementProps {
@@ -153,22 +152,32 @@ const Statement = ({
   );
 };
 
+// The presentational component, for callers that supply props directly (e.g.
+// the historic-results list in Results).
 export const UnconnectedStatement = Statement;
 
-export default connect(
-  (state: RootState) => ({
-    shouldShow: state.data.length !== 0,
-    currentPanel: state.currentPanel,
-    labelColumn: state.labelColumn,
-    selectedFeatures: state.selectedFeatures,
-    datasetId: state.metadata && state.metadata.name,
-  }),
-  dispatch => ({
-    setLabelColumn(labelColumn: string | null) {
-      dispatch(setLabelColumn(labelColumn as string));
-    },
-    removeSelectedFeature(labelColumn: string) {
-      dispatch(removeSelectedFeature(labelColumn));
-    },
-  }),
-)(Statement);
+// Store-connected container: the default export used in the live panels.
+const ConnectedStatement = () => {
+  const dispatch = useAppDispatch();
+  const shouldShow = useAppSelector(state => state.data.length !== 0);
+  const currentPanel = useAppSelector(state => state.currentPanel);
+  const labelColumn = useAppSelector(state => state.labelColumn);
+  const selectedFeatures = useAppSelector(state => state.selectedFeatures);
+  const datasetId = useAppSelector(
+    state => state.metadata && state.metadata.name,
+  );
+
+  return (
+    <Statement
+      shouldShow={shouldShow}
+      currentPanel={currentPanel}
+      labelColumn={labelColumn}
+      selectedFeatures={selectedFeatures}
+      datasetId={datasetId}
+      setLabelColumn={column => dispatch(setLabelColumn(column as string))}
+      removeSelectedFeature={id => dispatch(removeSelectedFeature(id))}
+    />
+  );
+};
+
+export default ConnectedStatement;

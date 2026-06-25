@@ -6,7 +6,7 @@ import type {Store} from 'redux';
 
 import {getPercentCorrect} from '../helpers/accuracy';
 import {isRegression} from '../helpers/columnDetails';
-import {logFirehoseMetric} from '../helpers/metrics';
+import {logMetric} from '../helpers/metrics';
 import type {RootState} from '../redux';
 import {
   setKValue,
@@ -35,7 +35,7 @@ export default class KNNTrainer {
 
     const state2 = store.getState();
 
-    logFirehoseMetric('train-model', state2);
+    logMetric('train-model', state2);
 
     this.storeHistoricResult(store, state2);
   }

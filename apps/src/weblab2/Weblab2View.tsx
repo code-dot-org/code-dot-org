@@ -215,6 +215,7 @@ const Weblab2View: React.FC<
           secondaryBackpackAppNames={secondaryBackpackAppNames}
           tutorVideos={weblab2VideoFiles}
           aiTutorInitialWelcomeMessage={WEBLAB2_WELCOME_CHAT_MESSAGE}
+          enableUserAddedSelectionContext={true}
         />
       )}
     </div>

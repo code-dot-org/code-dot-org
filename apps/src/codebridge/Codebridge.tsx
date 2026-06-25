@@ -59,6 +59,7 @@ type CodebridgeProps = {
   onAssetRemoved?: (asset: ChatAsset) => void;
   aiTutorInitialWelcomeMessage?: string;
   allowMultipleValidationFiles?: boolean;
+  enableUserAddedSelectionContext?: boolean;
 };
 
 export const Codebridge = React.memo(
@@ -82,6 +83,7 @@ export const Codebridge = React.memo(
     onAssetRemoved,
     aiTutorInitialWelcomeMessage,
     allowMultipleValidationFiles,
+    enableUserAddedSelectionContext = false,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
     const isWidgetView = !!levelProperties.widgetView;
@@ -238,6 +240,7 @@ export const Codebridge = React.memo(
           onAssetRemoved,
           aiTutorInitialWelcomeMessage,
           allowMultipleValidationFiles,
+          enableUserAddedSelectionContext,
         }}
       >
         <BackpackAPIContext.Provider value={backpackContext}>

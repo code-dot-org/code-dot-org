@@ -1,18 +1,11 @@
 /* React component to handle showing details of categorical columns. */
 import {Bar} from 'react-chartjs-2';
-import {connect} from 'react-redux';
 
 import {colors, styles} from '../constants';
 import {getLocalizedValue} from '../helpers/valueDetails';
+import {useAppSelector} from '../hooks';
 import I18n from '../i18n';
-import type {RootState} from '../redux';
 import {getCategoricalColumnDetails} from '../selectors/currentColumnSelectors';
-import type {CategoricalColumnDetails} from '../types';
-
-interface ColumnDetailsCategoricalProps {
-  columnDetails: CategoricalColumnDetails;
-  datasetId: string;
-}
 
 const chartOptions = {
   scales: {
@@ -28,10 +21,10 @@ const chartOptions = {
   maintainAspectRatio: false,
 };
 
-const ColumnDetailsCategorical = ({
-  columnDetails,
-  datasetId,
-}: ColumnDetailsCategoricalProps) => {
+const ColumnDetailsCategorical = () => {
+  const columnDetails = useAppSelector(getCategoricalColumnDetails);
+  const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
+
   const {id, uniqueOptions, frequencies} = columnDetails;
   const labels = uniqueOptions && Object.values(uniqueOptions);
   const localizedLabels = labels.map(option =>
@@ -74,10 +67,4 @@ const ColumnDetailsCategorical = ({
   );
 };
 
-export default connect(
-  (state: RootState) => ({
-    columnDetails: getCategoricalColumnDetails(state),
-    datasetId: state.metadata?.name || 'unknown',
-  }),
-  {},
-)(ColumnDetailsCategorical);
+export default ColumnDetailsCategorical;

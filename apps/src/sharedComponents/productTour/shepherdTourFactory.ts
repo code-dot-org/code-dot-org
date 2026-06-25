@@ -1,3 +1,4 @@
+import {offset} from '@floating-ui/dom';
 import Shepherd, {StepOptions, Tour} from 'shepherd.js';
 
 import '@cdo/apps/sharedComponents/productTour/shepherd.scss';
@@ -21,6 +22,9 @@ export const createShepherdTour = ({
       cancelIcon: {enabled: true},
       scrollTo: true,
       classes: stepClass,
+      floatingUIOptions: {
+        middleware: [offset(16)],
+      },
       modalOverlayOpeningPadding: 4,
       ...(additionalStepOptions ?? {}),
     },
