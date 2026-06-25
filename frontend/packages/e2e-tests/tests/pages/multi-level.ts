@@ -65,6 +65,11 @@ export class MultiLevel extends LessonLevelPage {
     return this.page.locator(`#cross_${index}`);
   }
 
+  /** Locator for the checked-mark element at a given answer index (visible when answer is selected). */
+  checkedMark(index: number): Locator {
+    return this.page.locator(`#checked_${index}`);
+  }
+
   /** Locator for an answer button by its index attribute. */
   answerButton(index: number): Locator {
     return this.page.locator(`.answerbutton[index="${index}"]`);
