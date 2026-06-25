@@ -1,26 +1,18 @@
 import {createFileRoute, notFound} from '@tanstack/react-router';
-import {Suspense} from 'react';
+
+import {Lab} from '@code-dot-org/lab';
 
 import {getLabEntrypoint} from '@/modules/labs/router/getLabEntrypoint';
 import {getLabFixtures} from '@/modules/labs/router/getLabFixtures';
 
-// `createFileRoute` automatically sets the route's id and path based on the file path
-// There is no need to manually edit this, it is done via the Tanstack Router Vite plugin
-// See: https://tanstack.com/router/latest/docs/framework/react/routing/routing-concepts#anatomy-of-a-route
 export const Route = createFileRoute('/projects/$labType/$channelId/edit')({
   loader: async ({params: {labType, channelId}}) => {
-    // Lazy load each lab's entrypoint to ensure each lab's code is only loaded when needed.
-    // This causes each lab to be code-split into its own chunk.
     const LabEntrypoint = getLabEntrypoint(labType);
 
     if (!LabEntrypoint) {
       throw notFound();
     }
 
-    // In MSW mode, register the lab's fixtures and select the scenario from
-    // the channelId slot (which doubles as the fixture tag) before the lab
-    // mounts. The worker, already running from `enableMocks`, will then
-    // intercept the lab's initial fetches.
     if (import.meta.env.VITE_API_MODE === 'msw') {
       const [{registerLabFixtures, setActiveScenario}, fixtures] =
         await Promise.all([
@@ -41,8 +33,8 @@ function RouteComponent() {
   const {LabEntrypoint} = Route.useLoaderData();
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Lab>
       <LabEntrypoint />
-    </Suspense>
+    </Lab>
   );
 }
