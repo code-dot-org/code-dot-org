@@ -147,7 +147,7 @@ describe('useAiChatDisabledState', () => {
     });
   });
 
-  it('returns the international message for blocked students', () => {
+  it('returns the standard student message for blocked students, even when international', () => {
     mockAreAiChatToolsEnabled.mockReturnValue(false);
     mockState.currentUser.aiChatAccessLevel = 'disabled';
     mockState.currentUser.aiChatDisabledReason =
@@ -159,7 +159,7 @@ describe('useAiChatDisabledState', () => {
 
     expect(result.current).toEqual({
       disabled: true,
-      disabledMessage: AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
+      disabledMessage: AI_CHAT_NOT_AUTHORIZED_STUDENT,
     });
   });
 
@@ -180,7 +180,8 @@ describe('useAiChatDisabledState', () => {
     });
   });
 
-  it('international block takes precedence over predict gating', () => {
+  it('international block takes precedence over predict gating for teachers', () => {
+    mockState.currentUser.isTeacher = true;
     mockState.currentUser.aiChatDisabledReason =
       AiChatDisabledReasons.INTERNATIONAL;
 

@@ -60,11 +60,12 @@ export function useAiChatDisabledState({
       return {disabled: false};
     }
 
-    // International users are blocked entirely. Surface this before the
+    // International teachers are blocked entirely. Surface this before the
     // verified-teacher/predict messaging below, since the cause isn't something
-    // the user can resolve by becoming verified or submitting a prediction.
-    // The server tells us the reason; we can't fully derive it on the client.
-    if (disabledReason === AiChatDisabledReasons.INTERNATIONAL) {
+    // they can resolve by becoming verified or submitting a prediction. Per
+    // product, students keep the standard not-authorized message regardless of
+    // reason, so they fall through to the student branch below.
+    if (isTeacher && disabledReason === AiChatDisabledReasons.INTERNATIONAL) {
       return {
         disabled: true,
         disabledMessage: AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
