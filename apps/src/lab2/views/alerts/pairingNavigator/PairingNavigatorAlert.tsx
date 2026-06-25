@@ -44,7 +44,7 @@ const PairingNavigatorAlert: React.FC<PairingNavigatorAlertProps> = ({
     ? 'Click here to view the solution created as a team.'
     : 'Click here to view the solution you created as a team.';
 
-  const additionalInfo = doesAppTypeHaveStandaloneProjectLevel ? (
+  const additionalInfo = projectViewPath ? (
     <a className={moduleStyles.projectLink} href={projectViewPath}>
       {linkText}
     </a>

@@ -328,7 +328,7 @@ export interface LevelProperties {
   hideVersionHistory?: boolean;
   parentLevelName?: string;
   requireEditToContinue?: boolean;
-  // Pair programming properties for navigators.
+  // Pair programming properties (present when a UserLevel exists for this level)
   isNavigator?: boolean;
   pairingDriver?: string;
   pairingAttempt?: string;
