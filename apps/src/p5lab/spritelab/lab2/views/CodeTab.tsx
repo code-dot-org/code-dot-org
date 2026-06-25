@@ -7,6 +7,7 @@ import {BlockDefinition, WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {loadBlocksToWorkspace} from '@cdo/apps/blockly/utils/workspace/loadBlocks';
 
 import {
+  filterToolboxToRegisteredBlocks,
   installSharedBlocks,
   setupSpriteLab2BlocklyEnvironment,
 } from '../blockly/setup';
@@ -26,6 +27,8 @@ export interface CodeTabHandle {
 interface CodeTabProps {
   initialSource?: WorkspaceSerialization;
   toolboxDefinition?: BlocklyCore.utils.toolbox.ToolboxInfo;
+  // Sprite Lab toolbox as an XML string (the classic Sprite Lab toolbox format).
+  toolboxXml?: string;
   sharedBlocks?: BlockDefinition[];
   theme: 'Light' | 'Dark';
   // Persist serialized workspace changes back to project sources.
@@ -47,6 +50,7 @@ const CodeTab = forwardRef<CodeTabHandle, CodeTabProps>(
     {
       initialSource,
       toolboxDefinition,
+      toolboxXml,
       sharedBlocks,
       theme,
       onSourceChange,
@@ -84,9 +88,8 @@ const CodeTab = forwardRef<CodeTabHandle, CodeTabProps>(
     // Inject the workspace once on mount.
     useEffect(() => {
       setupSpriteLab2BlocklyEnvironment();
-      // Install the level's DB-backed Sprite Lab block pool. The toolbox itself
-      // comes from levelProperties.toolboxDefinition, so we don't need the
-      // returned category map yet.
+      // Install the level's DB-backed Sprite Lab block pool so the toolbox's
+      // block types exist.
       installSharedBlocks(sharedBlocks || []);
 
       const blocklyDiv = document.getElementById(BLOCKLY_DIV_ID);
@@ -94,9 +97,21 @@ const CodeTab = forwardRef<CodeTabHandle, CodeTabProps>(
         return;
       }
 
-      let toolbox = toolboxDefinition;
-      if (toolbox?.contents?.length === 0) {
-        toolbox = undefined;
+      // Prefer a JSON toolboxDefinition if present; otherwise use the Sprite Lab
+      // XML toolbox string (Blockly.inject parses XML toolboxes). This gives the
+      // Code tab the full categorized block set, like a standalone Sprite Lab
+      // project.
+      let toolbox:
+        | BlocklyCore.utils.toolbox.ToolboxDefinition
+        | string
+        | undefined =
+        toolboxDefinition && toolboxDefinition.contents?.length !== 0
+          ? toolboxDefinition
+          : undefined;
+      if (!toolbox && toolboxXml) {
+        // Drop any blocks the level's toolbox references that aren't installed
+        // in this block pool, so opening a category never throws.
+        toolbox = filterToolboxToRegisteredBlocks(toolboxXml);
       }
 
       workspace.current = Blockly.inject(blocklyDiv, {
@@ -140,7 +155,7 @@ const CodeTab = forwardRef<CodeTabHandle, CodeTabProps>(
       // Re-inject only when the level/blocks/theme change, not on every callback
       // identity change.
       // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [sharedBlocks, toolboxDefinition, theme]);
+    }, [sharedBlocks, toolboxDefinition, toolboxXml, theme]);
 
     return <div id={BLOCKLY_DIV_ID} className={moduleStyles.blocklyDiv} />;
   }

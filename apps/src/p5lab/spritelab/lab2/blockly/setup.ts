@@ -45,3 +45,29 @@ export function installSharedBlocks(sharedBlocks: BlockDefinition[]): {
       spritelabBlocks.customInputTypes as unknown as CustomInputTypes,
   });
 }
+
+/**
+ * Remove <block>/<shadow> elements from a toolbox XML string whose type isn't
+ * registered in Blockly. A level's toolbox can reference blocks that aren't in
+ * the installed block pool; without filtering, opening that category throws
+ * "Invalid block definition for type ...". Call after blocks are installed.
+ */
+export function filterToolboxToRegisteredBlocks(toolboxXml: string): string {
+  try {
+    const doc = new DOMParser().parseFromString(toolboxXml, 'text/xml');
+    ['block', 'shadow'].forEach(tag => {
+      // Snapshot to an array since we mutate the tree while iterating.
+      Array.from(doc.getElementsByTagNameNS('*', tag)).forEach(el => {
+        const type = el.getAttribute('type');
+        // el.parentNode may already be null if an unregistered ancestor was
+        // removed first.
+        if (type && !Blockly.Blocks[type] && el.parentNode) {
+          el.parentNode.removeChild(el);
+        }
+      });
+    });
+    return new XMLSerializer().serializeToString(doc);
+  } catch {
+    return toolboxXml;
+  }
+}

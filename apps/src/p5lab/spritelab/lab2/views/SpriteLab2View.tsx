@@ -285,6 +285,7 @@ const SpriteLab2View: React.FunctionComponent<{
             currentSources.source as WorkspaceSerialization | undefined
           }
           toolboxDefinition={levelProperties.toolboxDefinition}
+          toolboxXml={levelProperties.toolbox}
           sharedBlocks={levelProperties.sharedBlocks}
           theme={theme === 'Dark' ? 'Dark' : 'Light'}
           onSourceChange={handleSourceChange}
