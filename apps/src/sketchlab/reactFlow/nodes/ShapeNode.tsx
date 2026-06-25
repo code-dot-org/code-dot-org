@@ -1,14 +1,14 @@
-import {NodeResizer, useReactFlow, type NodeProps} from '@xyflow/react';
+import {NodeResizer, type NodeProps} from '@xyflow/react';
 import classNames from 'classnames';
-import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
+import React, {memo, useMemo} from 'react';
 
 import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
-import {usePushSnapshot, useSketchLabReadOnly} from '../context';
 import {
   fontSizePx,
   DEFAULT_TEXT_ALIGN,
 } from '../elementToolbars/toolbarPalettes';
 import {useConnectionHandleVisibility} from '../hooks/useConnectionHandleVisibility';
+import {useInlineTextEditing} from '../hooks/useInlineTextEditing';
 import {ShapeNodeType, ShapeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
@@ -100,65 +100,24 @@ function ShapeNode({
   selected,
   isConnectable,
 }: NodeProps<ShapeNodeType>) {
-  const readOnly = useSketchLabReadOnly();
-  const {updateNodeData} = useReactFlow();
-  const pushSnapshot = usePushSnapshot();
-  const [isEditing, setIsEditing] = useState(false);
-  const labelRef = useRef<HTMLDivElement>(null);
-  const labelAtEditStart = useRef<string>('');
-
   const {showHandles, hoverHandlers} = useConnectionHandleVisibility(
     selected,
     isConnectable
   );
   const {shapeType, label, backgroundColor, strokeColor} = data;
 
-  const startEditing = useCallback(() => {
-    if (isEditing || readOnly || data.locked) {
-      return;
-    }
-    labelAtEditStart.current = label;
-    setIsEditing(true);
-    setTimeout(() => {
-      if (labelRef.current) {
-        labelRef.current.focus();
-        const range = document.createRange();
-        const selection = window.getSelection();
-        range.selectNodeContents(labelRef.current);
-        range.collapse(false);
-        selection?.removeAllRanges();
-        selection?.addRange(range);
-      }
-    }, 0);
-  }, [isEditing, readOnly, data.locked, label]);
-
-  const commitEdit = useCallback(() => {
-    setIsEditing(false);
-    const newLabel = labelRef.current?.textContent ?? '';
-    if (newLabel !== labelAtEditStart.current) {
-      pushSnapshot();
-    }
-    updateNodeData(id, {label: newLabel});
-  }, [id, pushSnapshot, updateNodeData]);
-
-  const handleLabelKeyDown = useCallback(
-    (event: React.KeyboardEvent<HTMLDivElement>) => {
-      if (isEditing) {
-        if (event.key === 'Enter' && !event.shiftKey) {
-          event.preventDefault();
-          labelRef.current?.closest<HTMLElement>('.react-flow__node')?.focus();
-        }
-        if (event.key === 'Escape') {
-          if (labelRef.current) {
-            labelRef.current.textContent = label;
-          }
-          setIsEditing(false);
-          labelRef.current?.closest<HTMLElement>('.react-flow__node')?.focus();
-        }
-      }
-    },
-    [label, isEditing]
-  );
+  const {
+    isEditing,
+    editableRef: labelRef,
+    startEditing,
+    commitEdit,
+    handleKeyDown: handleLabelKeyDown,
+  } = useInlineTextEditing({
+    id,
+    field: 'label',
+    value: label,
+    locked: data.locked,
+  });
 
   const isRectangle = shapeType === 'rectangle';
   const isCircle = shapeType === 'circle';
@@ -240,6 +199,7 @@ function ShapeNode({
           onKeyDown={handleLabelKeyDown}
           tabIndex={-1}
           role="textbox"
+          aria-multiline={true}
           aria-label={`${shapeType} label${isEditing ? ' (editing)' : ''}`}
         >
           {label}
