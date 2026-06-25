@@ -26,6 +26,15 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({mode}) => {
   const overlayRef = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState({w: 0, h: 0});
 
+  // Only animate the move/scale when going directly between the two visible
+  // placements (Code preview <-> Play). Appearing from or disappearing to a tab
+  // without the playspace (Images/World) should be instant, not a slide.
+  const prevMode = useRef<PlayspaceMode>(mode);
+  const animate = prevMode.current !== 'hidden' && mode !== 'hidden';
+  useEffect(() => {
+    prevMode.current = mode;
+  }, [mode]);
+
   // Track the overlay's size so we can center/scale the canvas to fit.
   useEffect(() => {
     const el = overlayRef.current;
@@ -63,7 +72,11 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({mode}) => {
     >
       <div
         className={moduleStyles.playspaceBox}
-        style={{transform, pointerEvents: mode === 'play' ? 'auto' : 'none'}}
+        style={{
+          transform,
+          transition: animate ? undefined : 'none',
+          pointerEvents: mode === 'play' ? 'auto' : 'none',
+        }}
       >
         {/* The id is hardcoded in P5Wrapper.startExecution. */}
         <div id="divGameLab" className={moduleStyles.playspaceCanvas} />
