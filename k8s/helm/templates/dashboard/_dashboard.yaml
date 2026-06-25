@@ -52,6 +52,7 @@ spec:
       containers:
       - name: {{ .shortName | default "dashboard" }}
         image: "{{ .Values.image }}"
+        imagePullPolicy: {{ .Values.imagePullPolicy }}
 
         command: {{ (.command | default .Values.command) | toJson }}
         args: {{ (.args | default .Values.args) | toJson }}
@@ -105,14 +106,14 @@ spec:
         {{- if $isDeployment }}
         resources:
           requests:
-            cpu: {{ $cpu }}
-            memory: {{ $memory }}
+            cpu: {{ .Values.resources.cpu | default $cpu }}
+            memory: {{ .Values.resources.memory | default $memory }}
             {{- if .Values.resources.ephemeralStorage }}
             ephemeral-storage: {{ .Values.resources.ephemeralStorage }}
             {{- end }}
           limits:
-            cpu: {{ $cpu }}
-            memory: {{ $memory }}
+            cpu: {{ .Values.resources.cpu | default $cpu }}
+            memory: {{ .Values.resources.memory | default $memory }}
             {{- if .Values.resources.ephemeralStorage }}
             ephemeral-storage: {{ .Values.resources.ephemeralStorage }}
             {{- end }}

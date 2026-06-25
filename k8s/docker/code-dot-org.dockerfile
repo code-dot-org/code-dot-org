@@ -198,6 +198,31 @@ RUN \
   fi
 EOF
 
+################################################################################
+FROM code-dot-org-core AS code-dot-org-activejob-only
+################################################################################
+
+COPY --chown=${UID} --link \
+  --from=code-dot-org-bundle-install ${HOME}/.rbenv \
+  ${HOME}/.rbenv
+
+COPY --chown=${UID} --link \
+  --from=code-dot-org-uv-sync ${SRC}/.venv \
+  ${SRC}/.venv
+
+COPY --chown=${UID} --link \
+  --from=code-dot-org-uv-sync ${HOME}/.local/share/uv \
+  ${HOME}/.local/share/uv
+
+COPY --chown=${UID} --link ./ ./
+
+RUN <<EOF
+  mkdir -p ${SRC}/apps/build/package/js ${SRC}/apps/build/package/css
+  mkdir -p ${SRC}/dashboard/public
+  ln -sfn ${SRC}/apps/build/package ${SRC}/dashboard/public/blockly
+  ln -sfn ${SRC}/dashboard/test/ui ${SRC}/dashboard/public/ui_test
+EOF
+
 # ################################################################################
 FROM code-dot-org-core
 # ################################################################################

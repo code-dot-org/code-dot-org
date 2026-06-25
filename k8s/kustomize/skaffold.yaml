@@ -159,6 +159,42 @@ profiles:
         fi
         "$K8S_DIR/bin/docker-buildx" -f "$K8S_DIR/docker/code-dot-org-db-seed.dockerfile" --no-cache
 
+# Build only enough image to boot Rails for ActiveJob experiments. This skips
+# frontend dependencies, pegasus, static assets, DB seed image layers, and Puma.
+- name: activejob-only
+  patches:
+    - op: replace
+      path: /build/artifacts/0/custom/buildCommand
+      value: |
+        K8S_DIR="$BUILD_CONTEXT/k8s"
+        if [ ! -x "$K8S_DIR/bin/docker-buildx" ]; then
+          K8S_DIR="$(cd "$BUILD_CONTEXT/../.." && pwd)"
+        fi
+        LOCAL_REGISTRY=localhost:5000 "$K8S_DIR/bin/docker-buildx" -f "$K8S_DIR/docker/code-dot-org.dockerfile" \
+          --target code-dot-org-activejob-only \
+          --build-arg CODE_DOT_ORG_CORE="$CODE_DOT_ORG_CORE" \
+          --build-arg CODE_DOT_ORG_DB_SEED="$CODE_DOT_ORG_CORE" \
+          --build-arg CODE_DOT_ORG_PEGASUS="$CODE_DOT_ORG_CORE" \
+          --build-arg CODE_DOT_ORG_STATIC="$CODE_DOT_ORG_CORE" \
+          --build-arg BUNDLE_JOBS=1 \
+          --build-arg BUNDLE_WITHOUT=development:test:production:adhoc:staging:levelbuilder:integration \
+          --build-arg SKIP_FRONTEND_BUILD=1
+    - op: remove
+      path: /build/artifacts/0/requires/3
+    - op: remove
+      path: /build/artifacts/0/requires/2
+    - op: remove
+      path: /build/artifacts/0/requires/1
+    - op: remove
+      path: /build/artifacts/4
+    - op: remove
+      path: /build/artifacts/3
+    - op: remove
+      path: /build/artifacts/2
+    - op: add
+      path: /manifests/kustomize/paths/-
+      value: overlays/activejob-only
+
 # Populates Dashboard DB (rake dashboard:setup_db)
 # Run: skaffold dev --trigger=manual -p setup-db -p setup-s3
 - name: setup-db
@@ -166,6 +202,14 @@ profiles:
       - op: add
         path: /manifests/kustomize/paths/-
         value: overlays/setup-db
+
+# Creates or migrates the Dashboard DB without seeding curriculum data.
+# Run: skaffold dev --trigger=manual -p activejob-only -p setup-db-minimal
+- name: setup-db-minimal
+  patches:
+      - op: add
+        path: /manifests/kustomize/paths/-
+        value: overlays/setup-db-minimal
 
 # Create standard cdo-v3-* S3 buckets in minio.
 # Run: skaffold dev --trigger=manual -p setup-db -p setup-s3
