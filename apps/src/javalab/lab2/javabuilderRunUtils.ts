@@ -214,9 +214,12 @@ export function sendJavaConsoleInput(input: string): void {
   );
 }
 
-// Relay a theater input message (e.g. photo upload success/error) back to
-// Javabuilder so a program waiting on the photo prompter can resume.
-export function sendTheaterInput(messageType: string, message: string): void {
+// Relay an input message of a given type back to Javabuilder
+// so a program waiting on that input can resume.
+export function sendTypedInputMessage(
+  messageType: string,
+  message: string
+): void {
   if (!activeConnection) return;
   activeConnection.sendMessage(JSON.stringify({messageType, message}));
 }

@@ -5,9 +5,7 @@ import React, {useEffect, useRef} from 'react';
 import moduleStyles from './photo-prompter-button.module.scss';
 
 interface PhotoPrompterButtonProps {
-  /** Prompt describing the photo to capture, e.g. "Take a photo of a tree". */
   promptText: string;
-  /** Called with the file the user selected. */
   onPhotoSelected: (file: File) => void;
 }
 
