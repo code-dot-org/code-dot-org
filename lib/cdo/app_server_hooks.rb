@@ -80,7 +80,6 @@ module Cdo
         interval: interval,
         resolution: resolution,
         dimensions: {
-          Environment: CDO.rack_env,
           Host: CDO.dashboard_hostname
         }
       )
