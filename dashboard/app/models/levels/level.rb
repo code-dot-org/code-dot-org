@@ -916,7 +916,7 @@ class Level < ApplicationRecord
   # These properties are usually just the serialized properties for
   # the level, which usually include levelData.  If this level is a
   # StandaloneVideo then we put its properties into levelData.
-  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
+  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil, user_level: nil)
     video = specified_autoplay_video&.summarize(false)&.camelize_keys
     properties_camelized = properties.camelize_keys
     properties_camelized[:name] = name
@@ -934,7 +934,14 @@ class Level < ApplicationRecord
     # Enable browser TTS if the script has TTS enabled, or if the level itself has it enabled.
     properties_camelized[:offerBrowserTts] = offer_browser_tts || script&.tts
 
-    properties_camelized.merge!(pairing_properties_for(current_user, script, camelize_keys: true))
+    properties_camelized.merge!(
+      pairing_properties_for(
+        current_user,
+        script,
+        camelize_keys: true,
+        user_level: user_level
+      )
+    )
 
     if try(:project_template_level).try(:start_sources)
       properties_camelized['templateSources'] = try(:project_template_level).try(:start_sources)
