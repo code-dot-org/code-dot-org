@@ -43,7 +43,10 @@ export async function generateChatResponse(
   levelSystemPrompt?: string
 ) {
   // Check input for safety.
-  const userInputSafe = await isTextSafe(newMessage.chatMessageText);
+  const userInputSafe = await isTextSafe(
+    newMessage.chatMessageText,
+    'input_filter'
+  );
   if (!userInputSafe) {
     return {status: AiRequestExecutionStatus.USER_PROFANITY};
   }
@@ -64,6 +67,7 @@ export async function generateChatResponse(
     model: getModel(modelParameters.selectedModelId),
     messages,
     temperature: modelParameters.temperature,
+    phase: 'generation',
   });
 
   if (['content-filter', 'other'].includes(finishReason)) {
@@ -128,7 +132,7 @@ export async function generateChatResponse(
   }
 
   // Check model text output for safety.
-  const modelOutputSafe = await isTextSafe(text);
+  const modelOutputSafe = await isTextSafe(text, 'output_filter');
   if (!modelOutputSafe) {
     return {response: text, status: AiRequestExecutionStatus.MODEL_PROFANITY};
   }

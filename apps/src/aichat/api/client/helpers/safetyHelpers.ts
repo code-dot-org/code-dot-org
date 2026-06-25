@@ -37,6 +37,7 @@ const DEFAULT_SAFETY_CONFIG: SafetyConfig = {
  */
 export async function isTextSafe(
   text: string,
+  phase: 'input_filter' | 'output_filter',
   customSafetyConfig?: Partial<SafetyConfig>
 ): Promise<boolean> {
   const safetyConfig = {
@@ -48,6 +49,7 @@ export async function isTextSafe(
     prompt: `${safetyConfig.safetySystemPrompt}. Here is the text to classify: ${text}`,
     output: outputSchema,
     model: getModel(safetyConfig.modelId),
+    phase,
   });
 
   const classification = response.output?.classification;
