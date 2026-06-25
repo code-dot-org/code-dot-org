@@ -14,6 +14,7 @@ import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/Partic
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {
   dismissedRedirectWarning,
   onDismissRedirectWarning,
@@ -62,6 +63,7 @@ class UnitOverviewHeader extends Component {
     isSignedIn: PropTypes.bool.isRequired,
     isVerifiedInstructor: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
+    demoType: PropTypes.string,
     localeCode: PropTypes.string,
     children: PropTypes.node,
   };
@@ -125,14 +127,16 @@ class UnitOverviewHeader extends Component {
       userId,
       isVerifiedInstructor,
       hasVerifiedResources,
+      demoType,
       children,
       isOnTeacherDashboard,
     } = this.props;
 
-    const displayVerifiedResources =
+    const displayVerifiedResourcesWarning =
       viewAs === ViewType.Instructor &&
       !isVerifiedInstructor &&
-      hasVerifiedResources;
+      hasVerifiedResources &&
+      !demoType;
 
     const displayVersionWarning =
       showRedirectWarning &&
@@ -165,7 +169,7 @@ class UnitOverviewHeader extends Component {
           />
         )}
         {userId && <ParticipantFeedbackNotification studentId={userId} />}
-        {displayVerifiedResources && <VerifiedResourcesNotification />}
+        {displayVerifiedResourcesWarning && <VerifiedResourcesNotification />}
         {displayVersionWarning && (
           <NotificationBanner
             className="announcement-notification"
@@ -262,5 +266,6 @@ export default connect(state => ({
   viewAs: state.viewAs,
   isVerifiedInstructor: state.verifiedInstructor.isVerified,
   hasVerifiedResources: state.verifiedInstructor.hasVerifiedResources,
+  demoType: selectedSectionSelector(state)?.demoType ?? null,
   localeCode: state.locales.localeCode,
 }))(UnitOverviewHeader);
