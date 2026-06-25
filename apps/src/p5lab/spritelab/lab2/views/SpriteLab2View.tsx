@@ -1,7 +1,7 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef} from 'react';
-import {AnyAction, Reducer} from 'redux';
+import {Reducer} from 'redux';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
@@ -9,15 +9,12 @@ import {LabProps} from '@cdo/apps/lab2/types';
 import SourcesContainer, {
   useSources,
 } from '@cdo/apps/lab2/views/SourcesContainer';
-import {changeInterfaceMode} from '@cdo/apps/p5lab/actions';
-import {P5LabInterfaceMode} from '@cdo/apps/p5lab/constants';
+// p5lab/reducers is a CommonJS bundle of all the classic Sprite Lab slices;
+// pull the ones the engine and image list need by key.
 import * as p5labReducersModule from '@cdo/apps/p5lab/reducers';
 import {setInitialAnimationList} from '@cdo/apps/p5lab/redux/animationList';
-// p5lab/reducers is a CommonJS bundle of all the classic Sprite Lab slices;
-// pull the ones the engine and AnimationTab read from it by key.
 import {getSerializedAnimationList} from '@cdo/apps/p5lab/shapes';
 import {registerReducers} from '@cdo/apps/redux';
-import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import pageConstants, {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import runState, {setIsRunning} from '@cdo/apps/redux/runState';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -45,22 +42,14 @@ import moduleStyles from './sprite-lab2-view.module.scss';
 
 const p5labReducers = p5labReducersModule as unknown as Record<string, Reducer>;
 
-// Register the legacy Sprite Lab slices (animation list + the animation-editor
-// slices AnimationTab reads, console, run state, page constants, ...) plus our
-// own. Lab2 shares the global getStore() store, so this gives the reused
-// p5.play engine and the classic AnimationTab the exact store shape they read
-// from. Mirrors appMain.js's registerReducers calls.
+// Register the legacy Sprite Lab slices the reused p5.play engine and the image
+// list need. Lab2 shares the global getStore() store, so this gives them the
+// exact store shape they read from. (The classic AnimationTab/Piskel editor and
+// its slices are not used — images come from the AI generator.)
 registerReducers({
   animationList: p5labReducers.animationList,
-  animationTab: p5labReducers.animationTab,
-  animationPicker: p5labReducers.animationPicker,
-  locationPicker: p5labReducers.locationPicker,
-  errorDialogStack: p5labReducers.errorDialogStack,
-  interfaceMode: p5labReducers.interfaceMode,
   textConsole: p5labReducers.textConsole,
   spritelabInputList: p5labReducers.spritelabInputList,
-  // PiskelEditor's connect reads state.locales.localeCode.
-  locales: p5labReducers.locales,
   runState,
   pageConstants,
   spriteLab2: spriteLab2Reducer,
@@ -90,10 +79,10 @@ const SpriteLab2View: React.FunctionComponent<{
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const scriptId = useAppSelector(state => state.progress.scriptId);
-  // The classic AnimationTab + animationList logic key off these page
-  // constants (Sprite Lab is a Blockly lab); seed them since we bypass the
-  // legacy StudioApp.init that normally would. Also populate the process-wide
-  // AichatContextManager that the aiGateway image-generation calls read from.
+  // Sprite Lab is a Blockly lab, and the animationList logic + engine read
+  // these page constants; seed them since we bypass the legacy StudioApp.init.
+  // Also populate the process-wide AichatContextManager that the aiGateway
+  // image-generation calls read from.
   useEffect(() => {
     AichatContextManager.setContext({
       clientType: AiChatClientTypes.FLOW_LAB,
@@ -106,23 +95,7 @@ const SpriteLab2View: React.FunctionComponent<{
         isBlockly: true,
         isShareView: false,
         channelId,
-        // Seed the keys the embedded AnimationTab/P5LabVisualizationHeader read
-        // so they're defined booleans (avoids PropType warnings). The tab shell
-        // handles navigation, so the legacy mode-toggle header stays hidden.
-        isReadOnlyWorkspace: false,
-        isEmbedView: false,
-        showAnimationMode: false,
       })
-    );
-    // PiskelEditor passes localeCode through to the Piskel iframe, which calls
-    // .toLowerCase() on it; seed a default so it isn't undefined.
-    dispatch(setLocaleCode('en_us'));
-    // AnimationTab shows currentAnimations[interfaceMode]; the Items tab is the
-    // animation editor, so keep it in ANIMATION mode.
-    // changeInterfaceMode is an untyped JS action creator (inferred as
-    // Function), so cast its returned action for dispatch.
-    dispatch(
-      changeInterfaceMode(P5LabInterfaceMode.ANIMATION) as unknown as AnyAction
     );
   }, [dispatch, channelId, currentLevelId, scriptId]);
 

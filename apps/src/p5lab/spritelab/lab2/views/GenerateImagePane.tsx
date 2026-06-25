@@ -1,7 +1,10 @@
 import React, {useCallback, useState} from 'react';
 import {AnyAction} from 'redux';
 
-import {addAnimation} from '@cdo/apps/p5lab/redux/animationList';
+import {
+  addAnimation,
+  deleteAnimation,
+} from '@cdo/apps/p5lab/redux/animationList';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
@@ -100,46 +103,93 @@ const GenerateImagePane: React.FunctionComponent = () => {
     }
   }, [prompt, name, itemType, channelId, dispatch]);
 
+  // The project's images live in the animation list (AI-generated images are
+  // bridged in there); this view is also how you manage them.
+  const images = useAppSelector(state =>
+    state.animationList.orderedKeys.map(key => ({
+      key,
+      props: state.animationList.propsByKey[key],
+    }))
+  );
+
+  const handleDelete = useCallback(
+    (key: string) => {
+      dispatch(
+        // deleteAnimation is an untyped JS thunk; cast for dispatch.
+        deleteAnimation(key, true /* isSpriteLab */) as unknown as AnyAction
+      );
+    },
+    [dispatch]
+  );
+
   const generating = status === 'generating';
 
   return (
-    <div className={moduleStyles.generatePane}>
-      <strong>Generate an image with AI</strong>
-      <label>
-        Name
-        <input
-          type="text"
-          value={name}
-          placeholder="e.g. hero"
-          onChange={e => setName(e.target.value)}
-          disabled={generating}
-        />
-      </label>
-      <label>
-        Description
-        <input
-          type="text"
-          value={prompt}
-          placeholder="e.g. a friendly green dragon"
-          onChange={e => setPrompt(e.target.value)}
-          disabled={generating}
-        />
-      </label>
-      <label>
-        Type
-        <select
-          value={itemType}
-          onChange={e => setItemType(e.target.value as SpriteLab2ItemType)}
-          disabled={generating}
-        >
-          <option value="sprite">Sprite (costume)</option>
-          <option value="background">Background</option>
-        </select>
-      </label>
-      <button type="button" onClick={handleGenerate} disabled={generating}>
-        {generating ? 'Generating…' : 'Generate'}
-      </button>
-      {error && <div className={moduleStyles.generateError}>{error}</div>}
+    <div className={moduleStyles.imagesManager}>
+      <div className={moduleStyles.generatePane}>
+        <strong>Generate an image with AI</strong>
+        <label>
+          Name
+          <input
+            type="text"
+            value={name}
+            placeholder="e.g. hero"
+            onChange={e => setName(e.target.value)}
+            disabled={generating}
+          />
+        </label>
+        <label>
+          Description
+          <input
+            type="text"
+            value={prompt}
+            placeholder="e.g. a friendly green dragon"
+            onChange={e => setPrompt(e.target.value)}
+            disabled={generating}
+          />
+        </label>
+        <label>
+          Type
+          <select
+            value={itemType}
+            onChange={e => setItemType(e.target.value as SpriteLab2ItemType)}
+            disabled={generating}
+          >
+            <option value="sprite">Sprite (costume)</option>
+            <option value="background">Background</option>
+          </select>
+        </label>
+        <button type="button" onClick={handleGenerate} disabled={generating}>
+          {generating ? 'Generating…' : 'Generate'}
+        </button>
+        {error && <div className={moduleStyles.generateError}>{error}</div>}
+      </div>
+
+      <div className={moduleStyles.imageGallery}>
+        {images.length === 0 && (
+          <div className={moduleStyles.galleryEmpty}>
+            No images yet. Generate one above to use it in your code.
+          </div>
+        )}
+        {images.map(({key, props}) => (
+          <div key={key} className={moduleStyles.imageCard}>
+            <div className={moduleStyles.imageThumb}>
+              {(props?.dataURI || props?.sourceUrl) && (
+                <img
+                  src={props.dataURI || props.sourceUrl}
+                  alt={props?.name || 'image'}
+                />
+              )}
+            </div>
+            <div className={moduleStyles.imageName} title={props?.name}>
+              {props?.name}
+            </div>
+            <button type="button" onClick={() => handleDelete(key)}>
+              Delete
+            </button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
