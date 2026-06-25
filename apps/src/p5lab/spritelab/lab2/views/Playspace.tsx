@@ -18,7 +18,7 @@ export type PlayspaceMode = 'preview' | 'play' | 'hidden';
 // play area.
 const CANVAS = 400;
 const MARGIN = 12;
-const PREVIEW_SCALE = 0.32;
+const PREVIEW_SCALE = 0.64;
 
 interface PlayspaceProps {
   mode: PlayspaceMode;
@@ -128,7 +128,10 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({mode}) => {
     <div
       ref={overlayRef}
       className={moduleStyles.playspaceOverlay}
-      style={{display: mode === 'hidden' ? 'none' : 'block'}}
+      // Use visibility (not display:none) so the overlay keeps its layout size
+      // while hidden. Otherwise it measures 0 and, on reappearing, the box is
+      // first placed with a stale size and then animates into the right spot.
+      style={{visibility: mode === 'hidden' ? 'hidden' : 'visible'}}
     >
       <div
         className={moduleStyles.playspaceBox}
