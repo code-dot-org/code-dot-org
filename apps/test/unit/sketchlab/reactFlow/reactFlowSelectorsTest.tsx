@@ -32,7 +32,9 @@ import {
  * jsdom can't run React Flow's measurement pipeline (no real layout), so an
  * individual `react-flow__edge` wrapper never mounts. We assert the edge layer
  * (`react-flow__edges`) instead, which carries the same prefix and `edge`
- * token; the singular wrapper class is verified by the e2e suite, not here.
+ * token. The singular wrapper class is not directly covered by any test today;
+ * a rename of just that token (with `react-flow__edges` left intact) would slip
+ * through here.
  *
  * The `nodrag` / `nopan` / `nowheel` interaction classes are inputs React Flow
  * reads off our elements rather than DOM it renders, so there is nothing to
