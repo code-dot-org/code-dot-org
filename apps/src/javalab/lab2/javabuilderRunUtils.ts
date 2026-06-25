@@ -214,8 +214,7 @@ export function sendJavaConsoleInput(input: string): void {
   );
 }
 
-// Relay an input message of a given type back to Javabuilder
-// so a program waiting on that input can resume.
+// Relay an input message of a given type back to Javabuilder.
 export function sendTypedInputMessage(
   messageType: string,
   message: string
