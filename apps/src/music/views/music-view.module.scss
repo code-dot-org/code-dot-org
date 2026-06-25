@@ -39,7 +39,6 @@ $default-spacing: 2px;
   flex-direction: row;
   min-height: $work-area-min-height;
   overflow: hidden;
-  margin-top: $default-spacing;
 
   &.toolboxMode {
     max-height: 100%; // Allow the work area to take full height
