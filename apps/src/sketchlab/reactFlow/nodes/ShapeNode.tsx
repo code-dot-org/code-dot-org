@@ -1,22 +1,14 @@
-import {
-  NodeResizer,
-  useConnection,
-  useReactFlow,
-  type NodeProps,
-} from '@xyflow/react';
+import {NodeResizer, useReactFlow, type NodeProps} from '@xyflow/react';
 import classNames from 'classnames';
 import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 
 import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
-import {
-  useIsAnchorDragging,
-  usePushSnapshot,
-  useSketchLabReadOnly,
-} from '../context';
+import {usePushSnapshot, useSketchLabReadOnly} from '../context';
 import {
   fontSizePx,
   DEFAULT_TEXT_ALIGN,
 } from '../elementToolbars/toolbarPalettes';
+import {useConnectionHandleVisibility} from '../hooks/useConnectionHandleVisibility';
 import {ShapeNodeType, ShapeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
@@ -115,10 +107,11 @@ function ShapeNode({
   const labelRef = useRef<HTMLDivElement>(null);
   const labelAtEditStart = useRef<string>('');
 
-  const connection = useConnection();
-  const isAnchorDragging = useIsAnchorDragging();
+  const {showHandles, hoverHandlers} = useConnectionHandleVisibility(
+    selected,
+    isConnectable
+  );
   const {shapeType, label, backgroundColor, strokeColor} = data;
-  const showHandles = selected || isAnchorDragging || connection.inProgress;
 
   const startEditing = useCallback(() => {
     if (isEditing || readOnly || data.locked) {
@@ -204,6 +197,7 @@ function ShapeNode({
       className={styles.shapeNode}
       aria-label={`${shapeType} shape: ${label}`}
       onDoubleClick={startEditing}
+      {...hoverHandlers}
     >
       <NodeResizer
         isVisible={selected && !data.locked}

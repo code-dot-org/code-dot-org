@@ -1,7 +1,6 @@
 Feature: Teacher Student Toggle
 
 @eyes
-@no_device_farm
 Scenario: Toggle on Multi Level
   When I open my eyes to test "toggle on multi level"
   Given I create an authorized teacher-associated student named "Daenerys"

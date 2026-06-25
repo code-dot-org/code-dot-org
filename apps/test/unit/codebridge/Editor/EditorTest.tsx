@@ -5,6 +5,7 @@ import React from 'react';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 
 let mockAiTutorDisabled = false;
+let mockEnableUserAddedSelectionContext = true;
 
 let mockState: {
   lab2Project: {
@@ -32,6 +33,7 @@ jest.mock('@codebridge/codebridgeContext', () => ({
   useCodebridgeContext: jest.fn(() => ({
     levelProperties: {appName: 'weblab2'},
     aiTutorDisabled: mockAiTutorDisabled,
+    enableUserAddedSelectionContext: mockEnableUserAddedSelectionContext,
   })),
 }));
 
@@ -96,6 +98,7 @@ describe('Editor AI tutor affordance', () => {
       },
     };
     mockAiTutorDisabled = false;
+    mockEnableUserAddedSelectionContext = true;
     (CodeEditor as jest.Mock).mockClear();
   });
 
@@ -108,6 +111,15 @@ describe('Editor AI tutor affordance', () => {
 
   it('does not add the AI tutor selection field when AI tutor is disabled', () => {
     mockAiTutorDisabled = true;
+
+    render(<Editor langMapping={{}} editableFileTypes={['html']} />);
+
+    const props = (CodeEditor as jest.Mock).mock.calls[0][0];
+    expect(props.editorConfigExtensions).toHaveLength(0);
+  });
+
+  it('does not add the AI tutor selection field when feature is disabled', () => {
+    mockEnableUserAddedSelectionContext = false;
 
     render(<Editor langMapping={{}} editableFileTypes={['html']} />);
 
