@@ -82,6 +82,9 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  // Drop the global <label> bottom margin: flex counts it in the line's cross
+  // size, so it would push the (margin-less) Generate button below the inputs.
+  margin: 0;
   font-size: 12px;
 
   span {
