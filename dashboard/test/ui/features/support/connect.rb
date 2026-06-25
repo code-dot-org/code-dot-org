@@ -89,10 +89,10 @@ end
 
 def device_farm_desktop_browser(http_client: nil)
   # One-shot TestGrid URL, ready immediately.
-  url = Cdo::AWS::DeviceFarm.create_test_grid_url
+  url = AWS::DeviceFarm.create_test_grid_url
 
   capabilities = Selenium::WebDriver::Remote::Capabilities.new(
-    $device_farm_browser_config.except(*Cdo::AWS::DeviceFarm::INTERNAL_KEYS)
+    $device_farm_browser_config.except(*AWS::DeviceFarm::INTERNAL_KEYS)
   )
 
   # In CI, use Chrome's --host-resolver-rules to map localhost-studio.code.org
@@ -127,20 +127,20 @@ end
 # Inspector disabled, etc.), tear it down and pick a fresh device from
 # the pool.
 def device_farm_mobile_browser(http_client: nil)
-  Retryable.retryable(tries: Cdo::AWS::DeviceFarm::MOBILE_DEVICE_TRIES) do |try, exception|
+  Retryable.retryable(tries: AWS::DeviceFarm::MOBILE_DEVICE_TRIES) do |try, exception|
     if exception
       puts "Device Farm: previous mobile session attempt failed " \
            "(#{exception.class}: #{exception.message.lines.first&.strip}); " \
            "provisioning a fresh device (attempt #{try})..."
     end
-    session = Cdo::AWS::DeviceFarm.create_mobile_session(
+    session = AWS::DeviceFarm.create_mobile_session(
       device_arns: $device_farm_browser_config['device_arns']
     )
     $device_farm_mobile_session_arn = session[:session_arn]
     $device_farm_mobile_device = session[:device]
 
     capabilities = Selenium::WebDriver::Remote::Capabilities.new(
-      $device_farm_browser_config.except(*Cdo::AWS::DeviceFarm::INTERNAL_KEYS)
+      $device_farm_browser_config.except(*AWS::DeviceFarm::INTERNAL_KEYS)
     )
 
     # Anything after a successful create_mobile_session leaks a running
@@ -149,8 +149,8 @@ def device_farm_mobile_browser(http_client: nil)
     # the next attempt, and lets the outer Retryable pick a different one.
     begin
       browser = Retryable.retryable(
-        tries: Cdo::AWS::DeviceFarm::MOBILE_CONNECT_TRIES,
-        sleep: Cdo::AWS::DeviceFarm::MOBILE_CONNECT_RETRY_SLEEP,
+        tries: AWS::DeviceFarm::MOBILE_CONNECT_TRIES,
+        sleep: AWS::DeviceFarm::MOBILE_CONNECT_RETRY_SLEEP,
       ) do
         SeleniumBrowser.remote(
           session[:url],
@@ -172,7 +172,7 @@ def device_farm_mobile_browser(http_client: nil)
 
       browser
     rescue
-      Cdo::AWS::DeviceFarm.stop_mobile_session($device_farm_mobile_session_arn)
+      AWS::DeviceFarm.stop_mobile_session($device_farm_mobile_session_arn)
       $device_farm_mobile_session_arn = nil
       raise
     end
@@ -214,9 +214,9 @@ def get_device_farm_browser
     end
   console_url =
     if is_mobile
-      Cdo::AWS::DeviceFarm.mobile_session_url($device_farm_mobile_session_arn)
+      AWS::DeviceFarm.mobile_session_url($device_farm_mobile_session_arn)
     else
-      Cdo::AWS::DeviceFarm.desktop_session_url(browser.session_id)
+      AWS::DeviceFarm.desktop_session_url(browser.session_id)
     end
   if console_url
     account_suffix = CI::Utils.running_on_ci? ? ' (codeorg-dev AWS account)' : ''
@@ -315,7 +315,7 @@ def quit_browser
   # Release the Device Farm device so subsequent sessions don't block
   # on PENDING_CONCURRENCY.
   if $device_farm_mobile_session_arn
-    Cdo::AWS::DeviceFarm.stop_mobile_session($device_farm_mobile_session_arn)
+    AWS::DeviceFarm.stop_mobile_session($device_farm_mobile_session_arn)
     $device_farm_mobile_session_arn = nil
   end
   $browser = @browser = nil

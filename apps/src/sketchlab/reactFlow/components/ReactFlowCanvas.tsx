@@ -571,7 +571,6 @@ export default function ReactFlowCanvas({
       });
 
       const newNodeId = createUuid();
-      // Text nodes auto-size to fit content; shapes and images use fixed defaults.
       // width/height are the React Flow fields NodeResizer also writes on drag,
       // keeping creation and resize consistent. style is reserved for appearance.
       // Cast is needed because TS can't preserve the (type, data) correlation
@@ -581,10 +580,8 @@ export default function ReactFlowCanvas({
         type,
         data: request.data,
         position,
-        ...(type !== 'text' && {
-          width: DEFAULT_NODE_WIDTH,
-          height: DEFAULT_NODE_HEIGHT,
-        }),
+        width: DEFAULT_NODE_WIDTH,
+        height: DEFAULT_NODE_HEIGHT,
       } as SketchLabNode;
 
       setNodes(currentNodes => [...currentNodes, newNode]);
