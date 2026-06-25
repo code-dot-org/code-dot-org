@@ -11,6 +11,8 @@ type PairingNavigatorAlertProps = {
   inWorkspaceContainer?: boolean;
   /** Optional custom className */
   className?: string;
+  /** Is driver's project viewable, i.e., does the app type displaying the alert have a standalone project level? */
+  doesAppTypeHaveStandaloneProjectLevel?: boolean;
   /** Alert copy variant for teacher view */
   isTeacherViewingStudent?: boolean;
 };
@@ -19,6 +21,7 @@ const PairingNavigatorAlert: React.FC<PairingNavigatorAlertProps> = ({
   inWorkspaceContainer,
   className,
   isTeacherViewingStudent,
+  doesAppTypeHaveStandaloneProjectLevel = true,
 }) => {
   const levelProperties = useAppSelector(state => state.lab.levelProperties);
 
@@ -26,13 +29,14 @@ const PairingNavigatorAlert: React.FC<PairingNavigatorAlertProps> = ({
     return null;
   }
 
-  const projectViewPath = levelProperties.pairingChannelId
-    ? `/projects/${levelProperties.appName}/${levelProperties.pairingChannelId}/view`
-    : undefined;
-  const pairingLink = levelProperties.pairingAttempt || projectViewPath;
+  const projectViewPath =
+    doesAppTypeHaveStandaloneProjectLevel &&
+    Boolean(levelProperties.pairingChannelId)
+      ? `/projects/${levelProperties.appName}/${levelProperties.pairingChannelId}/view`
+      : undefined;
   if (
     isTeacherViewingStudent &&
-    (!levelProperties.pairingDriver || !pairingLink)
+    (!levelProperties.pairingDriver || !projectViewPath)
   ) {
     return null;
   }
@@ -40,15 +44,20 @@ const PairingNavigatorAlert: React.FC<PairingNavigatorAlertProps> = ({
     ? 'Click here to view the solution created as a team.'
     : 'Click here to view the solution you created as a team.';
 
+  const additionalInfo = doesAppTypeHaveStandaloneProjectLevel ? (
+    <a className={moduleStyles.projectLink} href={projectViewPath}>
+      {linkText}
+    </a>
+  ) : (
+    <>
+      The solution is not available for viewing. Refer to{' '}
+      {levelProperties.pairingDriver}'s work for the solution.
+    </>
+  );
   const alertText = levelProperties.pairingDriver ? (
     <>
       This level was completed while pairing with{' '}
-      <strong>{levelProperties.pairingDriver}</strong>.{' '}
-      {pairingLink && (
-        <a className={moduleStyles.projectLink} href={pairingLink}>
-          {linkText}
-        </a>
-      )}
+      <strong>{levelProperties.pairingDriver}</strong>. {additionalInfo}
     </>
   ) : (
     <>
