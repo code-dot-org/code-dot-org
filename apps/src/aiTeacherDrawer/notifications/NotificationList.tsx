@@ -8,13 +8,11 @@ import {AiDiffNotification} from './types';
 
 import styles from './notifications.module.scss';
 
-interface AiDiffNotificationListProps {
+interface NotificationListProps {
   aiPromptClick: (label: string, prompt: string) => void;
 }
 
-const AiDiffNotificationList: React.FC<AiDiffNotificationListProps> = ({
-  aiPromptClick,
-}) => {
+const NotificationList: React.FC<NotificationListProps> = ({aiPromptClick}) => {
   const [loading, setLoading] = React.useState<boolean>(true);
   const [notifications, setNotifications] = React.useState<
     AiDiffNotification[]
@@ -100,4 +98,4 @@ const AiDiffNotificationList: React.FC<AiDiffNotificationListProps> = ({
   );
 };
 
-export default AiDiffNotificationList;
+export default NotificationList;
