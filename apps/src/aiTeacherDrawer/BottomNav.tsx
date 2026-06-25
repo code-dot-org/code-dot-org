@@ -10,9 +10,9 @@ interface NavItem {
 }
 
 const NAV_ITEMS: NavItem[] = [
-  {label: 'Home', iconName: 'house'},
+  // {label: 'Home', iconName: 'house'},
   {label: 'Chats', iconName: 'comment'},
-  {label: 'Learn', iconName: 'file-lines'},
+  // {label: 'Learn', iconName: 'file-lines'},
   {label: 'Alerts', iconName: 'bell'},
 ];
 

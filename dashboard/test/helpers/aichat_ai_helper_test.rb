@@ -49,6 +49,22 @@ class AichatAiHelperTest < ActionView::TestCase
       _(parts.third.content.data).must_equal 'pdf-base64'
     end
 
+    it 'uses bucketKey for S3 retrieval when present, filename for display name' do
+      payload = {
+        'chatMessageText' => 'Look at this',
+        'assets' => [{'filename' => 'photo.jpg', 'source' => 'project', 'bucketKey' => 'uuid-abc123.jpg'}]
+      }
+      AichatAssetHelper.expects(:get_asset_base64_string).
+        with('uuid-abc123.jpg', 'project', encrypted_channel_id, level_name).
+        returns('jpg-base64')
+
+      parts = AichatAiHelper.format_message_parts(payload, encrypted_channel_id, level_name)
+
+      _(parts.second.content.name).must_equal 'photo.jpg'
+      _(parts.second.content.mimeType).must_equal 'image/jpeg'
+      _(parts.second.content.data).must_equal 'jpg-base64'
+    end
+
     it 'uses image/webp for webp filenames' do
       webp_payload = {
         'chatMessageText' => 'Describe this',

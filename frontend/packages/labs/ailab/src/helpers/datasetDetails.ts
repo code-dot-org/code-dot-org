@@ -4,6 +4,10 @@ import type {DatasetDetails} from '../types';
 
 /* Helper functions for getting information about the selected dataset. */
 
+// Reads the I18n global, so it is intentionally NOT memoized on Redux state
+// (a state-keyed cache would go stale across a locale change). Callers that
+// select it should pass `shallowEqual` to useSelector — the result is a flat
+// object, so that dedupes the reference and avoids unnecessary rerenders.
 export function getDatasetDetails(state: RootState): DatasetDetails {
   const datasetDetails: DatasetDetails = {
     name: state.metadata?.name || '',

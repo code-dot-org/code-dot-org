@@ -210,12 +210,12 @@ const Weblab2View: React.FC<
           aiTutorChatButtonData={[]}
           onAssetUploaded={onAssetUploaded}
           onAssetRemoved={onAssetRemoved}
-          aiTutorContextHelper={aiTutorHelper}
           aiTutorSystemPrompt={systemPrompt}
           aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
           secondaryBackpackAppNames={secondaryBackpackAppNames}
           tutorVideos={weblab2VideoFiles}
           aiTutorInitialWelcomeMessage={WEBLAB2_WELCOME_CHAT_MESSAGE}
+          enableUserAddedSelectionContext={true}
         />
       )}
     </div>
