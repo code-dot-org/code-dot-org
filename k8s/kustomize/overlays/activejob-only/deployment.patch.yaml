@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cdo-dashboard
+spec:
+  template:
+    spec:
+      containers:
+        - name: dashboard
+          imagePullPolicy: IfNotPresent
+          command:
+            - zsh
+            - -c
+          args:
+            - sleep infinity
+          env:
+            - name: RAILS_ENV
+              value: adhoc
+            - name: RACK_ENV
+              value: adhoc
+          resources:
+            requests:
+              cpu: 1
+              memory: 2Gi
+              ephemeral-storage: 30Gi
+            limits:
+              cpu: 1
+              memory: 2Gi
+              ephemeral-storage: 30Gi
+          startupProbe: null
+          readinessProbe: null
+          livenessProbe: null

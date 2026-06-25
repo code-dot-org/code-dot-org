@@ -1,0 +1,21 @@
+# Minimal runtime for local ActiveJob experiments.
+RAILS_ENV: adhoc
+imagePullPolicy: IfNotPresent
+
+command:
+  - zsh
+  - -c
+args:
+  - sleep infinity
+
+healthChecks:
+  enabled: false
+
+resources:
+  cpu: "1"
+  memory: 2Gi
+
+locals.yml:
+  active_job_queue_adapter: :delayed_job
+  active_job_backend_n_workers_to_start: 1
+  active_job_backend_rolling_restart_in_n_batches: 1

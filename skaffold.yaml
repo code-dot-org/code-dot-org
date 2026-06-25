@@ -161,6 +161,41 @@ profiles:
       path: /build/artifacts/4/custom/buildCommand
       value: k8s/bin/docker-buildx -f k8s/docker/code-dot-org-db-seed.dockerfile --no-cache
 
+# Build only enough image to boot Rails for ActiveJob experiments. This skips
+# frontend dependencies, pegasus, static assets, DB seed image layers, and Puma.
+- name: activejob-only
+  patches:
+    - op: replace
+      path: /build/artifacts/0/custom/buildCommand
+      value: |
+        LOCAL_REGISTRY=localhost:5000 k8s/bin/docker-buildx -f k8s/docker/code-dot-org.dockerfile \
+          --target code-dot-org-activejob-only \
+          --build-arg CODE_DOT_ORG_CORE="$CODE_DOT_ORG_CORE" \
+          --build-arg CODE_DOT_ORG_DB_SEED="$CODE_DOT_ORG_CORE" \
+          --build-arg CODE_DOT_ORG_PEGASUS="$CODE_DOT_ORG_CORE" \
+          --build-arg CODE_DOT_ORG_STATIC="$CODE_DOT_ORG_CORE" \
+          --build-arg BUNDLE_JOBS=1 \
+          --build-arg BUNDLE_WITHOUT=development:test:production:adhoc:staging:levelbuilder:integration \
+          --build-arg SKIP_FRONTEND_BUILD=1
+    - op: remove
+      path: /build/artifacts/0/requires/3
+    - op: remove
+      path: /build/artifacts/0/requires/2
+    - op: remove
+      path: /build/artifacts/0/requires/1
+    - op: remove
+      path: /build/artifacts/4
+    - op: remove
+      path: /build/artifacts/3
+    - op: remove
+      path: /build/artifacts/2
+    - op: add
+      path: /deploy/helm/releases/0/valuesFiles/-
+      value: k8s/helm/activejob-only.values.yaml
+    - op: replace
+      path: /deploy/helm/releases/0/setValueTemplates/image
+      value: "kubernetes.docker.internal:5000/code-dot-org:{{.IMAGE_TAG_code_dot_org}}"
+
 # Populates Dashboard DB (rake dashboard:setup_db)
 # Run: skaffold dev --trigger=manual -p setup-db -p setup-s3
 - name: setup-db
@@ -171,6 +206,17 @@ profiles:
           enabled: true
           name: setup-db
           args: ["cd dashboard && rake dashboard:setup_db && echo 'setup-db COMPLETE'"]
+
+# Creates or migrates the Dashboard DB without seeding curriculum data.
+# Run: skaffold dev --trigger=manual -p activejob-only -p setup-db-minimal
+- name: setup-db-minimal
+  patches:
+      - op: add
+        path: /deploy/helm/releases/0/setValueTemplates/dashboardJob
+        value:
+          enabled: true
+          name: setup-db-minimal
+          args: ["cd dashboard && bundle exec rake db:setup_or_migrate && echo 'setup-db-minimal COMPLETE'"]
 
 # Create standard cdo-v3-* S3 buckets in minio.
 # Run: skaffold dev --trigger=manual -p setup-db -p setup-s3
