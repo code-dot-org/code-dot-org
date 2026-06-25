@@ -286,7 +286,7 @@ class LessonsControllerTest < ActionController::TestCase
     level_properties = JSON.parse(response.body)[level.id.to_s]
     assert_equal true, level_properties['isNavigator']
     assert_equal driver.name, level_properties['pairingDriver']
-    refute_nil level_properties['pairingAttempt']
+    assert_nil level_properties['pairingAttempt']
   end
 
   test 'level_properties in teacher view ignores user_id when user is not teacher student' do

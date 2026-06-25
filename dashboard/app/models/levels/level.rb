@@ -1000,7 +1000,8 @@ class Level < ApplicationRecord
 
   # Returns pair-programming properties for this level and script.
   # Includes :is_navigator if a user_level exists.
-  # Includes one of :pairing_attempt or :pairing_channel_id for navigators.
+  # Lab2 levels only include :pairing_channel_id; non-Lab2 levels may include
+  # :pairing_attempt from the driver's latest level source.
   def pairing_properties_for(user, script, camelize_keys: false, user_level: nil)
     return {} unless user && script
 
@@ -1015,10 +1016,12 @@ class Level < ApplicationRecord
 
     pairing_properties[:pairing_driver] = driver.name
 
-    driver_level_source_id = user_level.driver_level_source_id
-    if driver_level_source_id
-      pairing_properties[:pairing_attempt] = Rails.application.routes.url_helpers.edit_level_source_path(driver_level_source_id)
-      return format_pairing_properties_keys(pairing_properties, camelize_keys)
+    unless uses_lab2?
+      driver_level_source_id = user_level.driver_level_source_id
+      if driver_level_source_id
+        pairing_properties[:pairing_attempt] = Rails.application.routes.url_helpers.edit_level_source_path(driver_level_source_id)
+        return format_pairing_properties_keys(pairing_properties, camelize_keys)
+      end
     end
 
     pairing_channel_id = driver_pairing_channel_id(driver, script.id)
