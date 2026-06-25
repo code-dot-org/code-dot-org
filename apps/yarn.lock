@@ -11568,7 +11568,6 @@ __metadata:
     css-loader: "npm:^6.2.0"
     dapjs: "npm:^2.3.0"
     dedent: "npm:^1.5.1"
-    details-element-polyfill: "https://github.com/javan/details-element-polyfill"
     ejs: "npm:^3.1.10"
     enzyme: "npm:^3.9.0"
     eslint: "npm:^8.56.0"
@@ -14405,13 +14404,6 @@ canvg@gabelerner/canvg:
   version: 1.2.0
   resolution: "destroy@npm:1.2.0"
   checksum: 10/0acb300b7478a08b92d810ab229d5afe0d2f4399272045ab22affa0d99dbaf12637659411530a6fcd597a9bdac718fc94373a61a95b4651bbc7b83684a565e38
-  languageName: node
-  linkType: hard
-
-"details-element-polyfill@https://github.com/javan/details-element-polyfill":
-  version: 1.1.0
-  resolution: "details-element-polyfill@https://github.com/javan/details-element-polyfill.git#commit=25f3fa9b42c2dbe59e45cd0778ee7c425263d9c1"
-  checksum: 10/2892c90f924ef304a4d89a008894875e6249310f0b442cefd3326c04b88cbc421864cae20a649b9748c1d65cbfaa9b46c5bbb32ba9a2ef80b6cf68c6e5334797
   languageName: node
   linkType: hard
 

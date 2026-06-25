@@ -285,7 +285,6 @@
     "classnames": "^2.3.2",
     "concurrently": "^9.2.1",
     "dapjs": "^2.3.0",
-    "details-element-polyfill": "https://github.com/javan/details-element-polyfill",
     "ejs": "^3.1.10",
     "eslint-linter-browserify": "^9.31.0",
     "fast-memoize": "2.0.2",
