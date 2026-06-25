@@ -110,18 +110,29 @@ const customInputTypes = {
       icon.style.fontFamily = 'FontAwesome';
       icon.textContent = ' \uf276'; // map-pin
       const onChange = () => {
+        const originalValue = fieldButton.getValue();
         let initialValue;
         try {
-          const current = fieldButton.getValue();
-          initialValue = current ? JSON.parse(current) : undefined;
+          initialValue = originalValue ? JSON.parse(originalValue) : undefined;
         } catch (e) {
           initialValue = undefined;
         }
-        getLocation(initialValue, loc => {
-          if (loc) {
-            fieldButton.setValue(JSON.stringify(loc));
+        getLocation(
+          initialValue,
+          // Live update as the user moves the cursor.
+          location => {
+            if (location) {
+              fieldButton.setValue(JSON.stringify(location));
+            }
+          },
+          // Picker closed. If it was canceled (no location), undo the live
+          // updates by restoring the original field value.
+          location => {
+            if (!location) {
+              fieldButton.setValue(originalValue);
+            }
           }
-        });
+        );
       };
       const fieldButton = locationField(
         icon,
