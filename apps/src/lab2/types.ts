@@ -328,10 +328,9 @@ export interface LevelProperties {
   hideVersionHistory?: boolean;
   parentLevelName?: string;
   requireEditToContinue?: boolean;
-  // Pair programming properties (present when a UserLevel exists for this level)
+  // Pair programming properties for Lab2 project-based levels.
   isNavigator?: boolean;
   pairingDriver?: string;
-  pairingAttempt?: string;
   pairingChannelId?: string;
 }
 
