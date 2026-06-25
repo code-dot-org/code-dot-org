@@ -21,11 +21,10 @@ class HocLegacy::TutorialsTest < ActiveSupport::TestCase
   end
 
   # These specs exercise the real Contentful client (via VCR), so opt out of the
-  # tutorial stub and give it a stub access token (the request is replayed, not
-  # made, so the value is irrelevant). The stub is covered by TutorialsStubTest.
+  # tutorial stub. The test environment supplies a stub access token, so the lookup
+  # runs and VCR replays the request. The stub path is covered by TutorialsStubTest.
   before do
     allow(CDO).to receive(:stub_tutorial_targets).and_return(false)
-    allow(CDO).to receive(:contentful_cs_for_all_access_token).and_return('fake-cs-for-all-token')
   end
 
   describe '.get' do

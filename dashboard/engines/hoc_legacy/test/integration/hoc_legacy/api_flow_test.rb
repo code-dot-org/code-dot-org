@@ -18,11 +18,10 @@ class HocLegacy::ApiFlowTest < ActionDispatch::IntegrationTest
   end
 
   # This flow exercises the real Contentful client (via VCR), so opt out of the
-  # tutorial stub and give it a stub access token (the request is replayed, not
-  # made, so the value is irrelevant).
+  # tutorial stub. The test environment supplies a stub access token, so the lookup
+  # runs and VCR replays the request.
   before do
     allow(CDO).to receive(:stub_tutorial_targets).and_return(false)
-    allow(CDO).to receive(:contentful_cs_for_all_access_token).and_return('fake-cs-for-all-token')
   end
 
   it 'has expected basic flow from begin to finish' do
