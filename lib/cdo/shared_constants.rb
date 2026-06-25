@@ -893,6 +893,20 @@ module SharedConstants
     ESSENTIAL_ONLY: 'essential_only',
   }.freeze
 
+  # Why a user's AI chat access is disabled at the user level. Sent to the
+  # client alongside ai_chat_access_level so it can pick the right message
+  # without re-deriving the cause (which it cannot fully see). nil when access
+  # is not disabled.
+  AI_CHAT_DISABLED_REASONS = {
+    # User is outside the US (teacher not in a US school, or student whose
+    # teachers are all non-US).
+    INTERNATIONAL: 'international',
+    # Teacher is not verified and not otherwise authorized (SSO/LTI/pilot).
+    TEACHER_NOT_VERIFIED: 'teacher_not_verified',
+    # Student's sections/teachers do not grant access.
+    NO_SECTION_ACCESS: 'no_section_access',
+  }.freeze
+
   # The degree to which a curriculum depends on AI chat features.
   # 'essential' means the curriculum cannot be completed without AI chat tools.
   # 'available' means the curriculum can be completed without AI chat tools but the tools are available for use.

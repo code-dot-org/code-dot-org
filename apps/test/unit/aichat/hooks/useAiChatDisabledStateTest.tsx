@@ -4,17 +4,20 @@ import {
   AI_SETTINGS_SUPPORT_LINK,
   AI_CHAT_NOT_AUTHORIZED_STUDENT,
   AI_CHAT_NOT_AUTHORIZED_TEACHER,
+  AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
   VERIFIED_TEACHER_SUPPORT_LINK,
 } from '@cdo/apps/aichat/constants';
 import {areAiChatToolsEnabled} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {AiChatDisabledReasons} from '@cdo/generated-scripts/sharedConstants';
 
 let mockState = {
   currentUser: {
     isTeacher: false,
     aiChatAccessLevel: 'enabled',
+    aiChatDisabledReason: null as string | null,
     isLevelbuilder: false,
   },
 };
@@ -58,6 +61,7 @@ describe('useAiChatDisabledState', () => {
       currentUser: {
         isTeacher: false,
         aiChatAccessLevel: 'enabled',
+        aiChatDisabledReason: null,
         isLevelbuilder: false,
       },
     };
@@ -140,6 +144,57 @@ describe('useAiChatDisabledState', () => {
         openInNewTab: true,
         text: 'Learn more',
       },
+    });
+  });
+
+  it('returns the international message for blocked students', () => {
+    mockAreAiChatToolsEnabled.mockReturnValue(false);
+    mockState.currentUser.aiChatAccessLevel = 'disabled';
+    mockState.currentUser.aiChatDisabledReason =
+      AiChatDisabledReasons.INTERNATIONAL;
+
+    const {result} = renderHook(() =>
+      useAiChatDisabledState({appName: 'pythonlab'})
+    );
+
+    expect(result.current).toEqual({
+      disabled: true,
+      disabledMessage: AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
+    });
+  });
+
+  it('returns the international message for blocked teachers instead of the verified-teacher message', () => {
+    mockState.currentUser.isTeacher = true;
+    mockAreAiChatToolsEnabled.mockReturnValue(false);
+    mockState.currentUser.aiChatAccessLevel = 'disabled';
+    mockState.currentUser.aiChatDisabledReason =
+      AiChatDisabledReasons.INTERNATIONAL;
+
+    const {result} = renderHook(() =>
+      useAiChatDisabledState({appName: 'pythonlab'})
+    );
+
+    expect(result.current).toEqual({
+      disabled: true,
+      disabledMessage: AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
+    });
+  });
+
+  it('international block takes precedence over predict gating', () => {
+    mockState.currentUser.aiChatDisabledReason =
+      AiChatDisabledReasons.INTERNATIONAL;
+
+    const {result} = renderHook(() =>
+      useAiChatDisabledState({
+        appName: 'pythonlab',
+        isPredictLevel: true,
+        hasSubmittedPredictResponse: false,
+      })
+    );
+
+    expect(result.current).toEqual({
+      disabled: true,
+      disabledMessage: AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
     });
   });
 

@@ -23,8 +23,25 @@ module User::AiAccessible
   end
 
   def ai_chat_access_level
-    return AI_CHAT_ACCESS_LEVELS[:ENABLED] if teacher_can_access_aichat? || levelbuilder?
-    return section_enabled_access_level
+    # Levelbuilders are internal staff and stay enabled regardless of location
+    # so they don't need extra account setup when building levels.
+    return AI_CHAT_ACCESS_LEVELS[:ENABLED] if levelbuilder?
+    # Block users we can confirm are outside the US, even otherwise-authorized
+    # (e.g. verified) teachers.
+    return AI_CHAT_ACCESS_LEVELS[:DISABLED] if international_ai_chat_user?
+    return AI_CHAT_ACCESS_LEVELS[:ENABLED] if teacher_can_access_aichat?
+    section_enabled_access_level
+  end
+
+  # Why ai_chat_access_level is DISABLED at the user level, or nil when access
+  # is not disabled. The client uses this to pick the right message instead of
+  # inferring the cause from access level + user type (which breaks once a
+  # teacher can be disabled for more than one reason).
+  def ai_chat_disabled_reason
+    return nil unless ai_chat_access_level == AI_CHAT_ACCESS_LEVELS[:DISABLED]
+    return AI_CHAT_DISABLED_REASONS[:INTERNATIONAL] if international_ai_chat_user?
+    return AI_CHAT_DISABLED_REASONS[:TEACHER_NOT_VERIFIED] if teacher?
+    AI_CHAT_DISABLED_REASONS[:NO_SECTION_ACCESS]
   end
 
   # has essential or higher access to AI chat tools
@@ -64,5 +81,31 @@ module User::AiAccessible
 
   private def in_section_with_ai_chat_access_essential_only?
     sections_as_student.any? {|s| !s.hidden && s.ai_chat_access_level == AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY]}
+  end
+
+  # A teacher is international when they (the teacher) are non-US. A student is
+  # international when they have teachers and all of them are non-US. International
+  # users are blocked by default; the allow_international_aichat_usage DCDO flag
+  # is an escape hatch to re-enable access without a deploy.
+  private def international_ai_chat_user?
+    return @international_ai_chat_user if defined?(@international_ai_chat_user)
+    @international_ai_chat_user =
+      if DCDO.get("allow_international_aichat_usage", false)
+        false
+      elsif teacher?
+        non_us_ai_chat_user?(self)
+      else
+        student_teachers = teachers
+        student_teachers.any? && student_teachers.all? {|teacher| non_us_ai_chat_user?(teacher)}
+      end
+  end
+
+  # True only when we can positively determine the user is outside the US, so we
+  # never block users whose location we can't establish. Prefer school_info;
+  # fall back to the most recent geolocation when no school_info exists.
+  private def non_us_ai_chat_user?(user)
+    return !user.school_info.usa? if user.school_info
+    geo_country = user.user_geos.first&.country
+    geo_country.present? && geo_country != 'United States'
   end
 end

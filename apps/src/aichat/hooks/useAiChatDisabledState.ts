@@ -4,6 +4,7 @@ import {
   AI_SETTINGS_SUPPORT_LINK,
   AI_CHAT_NOT_AUTHORIZED_STUDENT,
   AI_CHAT_NOT_AUTHORIZED_TEACHER,
+  AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
   VERIFIED_TEACHER_SUPPORT_LINK,
 } from '@cdo/apps/aichat/constants';
 import {areAiChatToolsEnabled} from '@cdo/apps/aichat/helpers/aiChatAccess';
@@ -11,6 +12,7 @@ import type {AiChatDisabledState} from '@cdo/apps/aichat/types';
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AiChatDisabledReasons} from '@cdo/generated-scripts/sharedConstants';
 
 interface UseAiChatDisabledStateParams {
   appName?: string;
@@ -37,6 +39,9 @@ export function useAiChatDisabledState({
   const userAccessLevel = useAppSelector(
     state => state.currentUser.aiChatAccessLevel
   );
+  const disabledReason = useAppSelector(
+    state => state.currentUser.aiChatDisabledReason
+  );
   const isLevelbuilder = useAppSelector(
     state => state.currentUser.isLevelbuilder
   );
@@ -53,6 +58,17 @@ export function useAiChatDisabledState({
     // Levelbuilders should always be enabled so they don't need to do extra account setup when building levels.
     if (isLevelbuilder) {
       return {disabled: false};
+    }
+
+    // International users are blocked entirely. Surface this before the
+    // verified-teacher/predict messaging below, since the cause isn't something
+    // the user can resolve by becoming verified or submitting a prediction.
+    // The server tells us the reason; we can't fully derive it on the client.
+    if (disabledReason === AiChatDisabledReasons.INTERNATIONAL) {
+      return {
+        disabled: true,
+        disabledMessage: AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
+      };
     }
 
     // Disabled on predict levels until the student has submitted a response to avoid spoiling the experience.
@@ -113,6 +129,7 @@ export function useAiChatDisabledState({
     enabledForUser,
     sectionAccessLevel,
     isLevelbuilder,
+    disabledReason,
   ]);
 
   return disabledState;

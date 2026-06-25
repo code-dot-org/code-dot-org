@@ -39,6 +39,9 @@ export const AI_CHAT_NOT_AUTHORIZED_TEACHER =
   'You must be a verified teacher or sign in via Google, Microsoft, Facebook, or an LMS to use and assign this tool.';
 export const AI_CHAT_NOT_AUTHORIZED_STUDENT =
   'Your teacher has not enabled this tool. Check with your teacher if you think this is an error.';
+// TODO: confirm final copy (and any support link) with product before launch.
+export const AI_CHAT_NOT_AVAILABLE_INTERNATIONAL =
+  'AI Chat tools are not currently available in your region.';
 
 export const MODEL_PARAMETER_LABELS: {
   [key in keyof ModelParameters]: string;
