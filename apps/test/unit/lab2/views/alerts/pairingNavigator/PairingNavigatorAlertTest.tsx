@@ -28,12 +28,12 @@ describe('PairingNavigatorAlert', () => {
     expect(container).toBeEmptyDOMElement();
   });
 
-  it('renders partner link when pairingAttempt is present', () => {
+  it('renders partner link when pairingChannelId is present', () => {
     setLevelProperties({
       isNavigator: true,
       appName: 'music',
       pairingDriver: 'A Student',
-      pairingAttempt: '/level_solutions/123/edit',
+      pairingChannelId: 'abc123',
     });
 
     render(<PairingNavigatorAlert />);
@@ -41,7 +41,7 @@ describe('PairingNavigatorAlert', () => {
     const link = screen.getByRole('link', {
       name: 'Click here to view the solution you created as a team.',
     });
-    expect(link).toHaveAttribute('href', '/level_solutions/123/edit');
+    expect(link).toHaveAttribute('href', '/projects/music/abc123/view');
     expect(screen.getByRole('alert')).toHaveTextContent(
       'This level was completed while pairing with'
     );
@@ -53,7 +53,7 @@ describe('PairingNavigatorAlert', () => {
       isNavigator: true,
       appName: 'music',
       pairingDriver: 'A Student',
-      pairingAttempt: '/level_solutions/123/edit',
+      pairingChannelId: 'abc123',
     });
 
     render(<PairingNavigatorAlert isTeacherViewingStudent={true} />);
@@ -63,6 +63,41 @@ describe('PairingNavigatorAlert', () => {
         name: 'Click here to view the solution created as a team.',
       })
     ).toBeInTheDocument();
+  });
+
+  it('renders fallback copy and no link when driver project link is unavailable', () => {
+    setLevelProperties({
+      isNavigator: true,
+      appName: 'sketchlab',
+      pairingDriver: 'A Student',
+      pairingChannelId: 'abc123',
+    });
+
+    render(
+      <PairingNavigatorAlert doesAppTypeHaveStandaloneProjectLevel={false} />
+    );
+
+    expect(screen.queryByRole('link')).not.toBeInTheDocument();
+    expect(screen.getByRole('alert')).toHaveTextContent(
+      "The solution is not available for viewing. Refer to A Student's work for the solution."
+    );
+  });
+
+  it('renders fallback copy when standalone project level is unavailable', () => {
+    setLevelProperties({
+      isNavigator: true,
+      appName: 'sketchlab',
+      pairingDriver: 'A Student',
+    });
+
+    render(
+      <PairingNavigatorAlert doesAppTypeHaveStandaloneProjectLevel={false} />
+    );
+
+    expect(screen.queryByRole('link')).not.toBeInTheDocument();
+    expect(screen.getByRole('alert')).toHaveTextContent(
+      "The solution is not available for viewing. Refer to A Student's work for the solution."
+    );
   });
 
   it('renders nothing in teacher view when driver info is missing', () => {
