@@ -1,7 +1,7 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2026-04-29T06:27:21.000Z",
+  "created_at": "2026-04-29T20:25:20.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
@@ -21,7 +21,7 @@
             },
             "data": {
               "text": "Map Data to a Profile",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 139.7748902707639,
               "showHandles": false
             },
@@ -43,12 +43,12 @@
             },
             "data": {
               "text": "Label each part of the profile with the \nkind of information it should show.",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 61.61662781962848,
               "showHandles": false
             },
             "measured": {
-              "width": 1063,
+              "width": 1070,
               "height": 178
             },
             "dragging": false
@@ -68,7 +68,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1518,
@@ -85,7 +85,7 @@
             },
             "data": {
               "text": "My profile represents: ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 67.81137649894099,
               "showHandles": false
             },
@@ -109,8 +109,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 542,
@@ -126,7 +126,7 @@
             },
             "data": {
               "text": "image",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -149,8 +149,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#d0bfff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-purple)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 542,
@@ -166,7 +166,7 @@
             },
             "data": {
               "text": "name",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -189,8 +189,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#b2f2bb",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 542,
@@ -206,7 +206,7 @@
             },
             "data": {
               "text": "description",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -230,7 +230,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 2183,
@@ -246,7 +246,7 @@
             },
             "data": {
               "text": "Example mapping:",
-              "fontColor": "#6741d9",
+              "fontColor": "var(--sketchlab-stroke-purple)",
               "fontSize": 96.6945281759697,
               "showHandles": false
             },
@@ -269,8 +269,8 @@
             "data": {
               "shapeType": "circle",
               "label": "",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "#ffffff",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 576,
@@ -312,8 +312,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#d0bfff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-purple)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1321,
@@ -329,7 +329,7 @@
             },
             "data": {
               "text": "name",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 81.2982415450027,
               "showHandles": false
             },
@@ -352,8 +352,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#b2f2bb",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1325,
@@ -369,7 +369,7 @@
             },
             "data": {
               "text": "description",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 81.2982415450027,
               "showHandles": false
             },
@@ -392,8 +392,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 542,
@@ -409,7 +409,7 @@
             },
             "data": {
               "text": "detail 1",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -432,8 +432,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 542,
@@ -449,7 +449,7 @@
             },
             "data": {
               "text": "detail 2",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -472,8 +472,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 542,
@@ -489,7 +489,7 @@
             },
             "data": {
               "text": "detail 3",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -512,8 +512,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1325,
@@ -529,7 +529,7 @@
             },
             "data": {
               "text": "detail 1",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 81.2982415450027,
               "showHandles": false
             },
@@ -552,8 +552,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1325,
@@ -569,7 +569,7 @@
             },
             "data": {
               "text": "detail 2",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 81.2982415450027,
               "showHandles": false
             },
@@ -592,8 +592,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1325,
@@ -609,7 +609,7 @@
             },
             "data": {
               "text": "detail 3",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 81.2982415450027,
               "showHandles": false
             },
@@ -861,7 +861,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1962,
@@ -1068,7 +1068,7 @@
             },
             "data": {
               "text": "Map Data to a Profile",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 139.7748902707639,
               "showHandles": false
             },
@@ -1090,7 +1090,7 @@
             },
             "data": {
               "text": "Label each part of the profile with the \nkind of information it should show.",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 61.61662781962848,
               "showHandles": false
             },
@@ -1114,7 +1114,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1518,
@@ -1130,7 +1130,7 @@
             },
             "data": {
               "text": "My profile represents: ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 67.81137649894099,
               "showHandles": false
             },
@@ -1148,7 +1148,7 @@
             },
             "data": {
               "text": "a soccer player",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 107.62275299788189,
               "showHandles": false
             },
@@ -1171,8 +1171,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 542,
@@ -1188,7 +1188,7 @@
             },
             "data": {
               "text": "image",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -1211,8 +1211,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#d0bfff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-purple)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 542,
@@ -1228,7 +1228,7 @@
             },
             "data": {
               "text": "name",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -1251,8 +1251,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#b2f2bb",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 542,
@@ -1268,7 +1268,7 @@
             },
             "data": {
               "text": "description",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -1286,7 +1286,7 @@
             },
             "data": {
               "text": "photo of the player",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 107.62275299788189,
               "showHandles": false
             },
@@ -1304,7 +1304,7 @@
             },
             "data": {
               "text": "player's full name",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 107.62275299788189,
               "showHandles": false
             },
@@ -1322,7 +1322,7 @@
             },
             "data": {
               "text": "a short bio about the player",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 89.77912155600212,
               "showHandles": false
             },
@@ -1346,7 +1346,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 2183,
@@ -1362,7 +1362,7 @@
             },
             "data": {
               "text": "Example mapping:",
-              "fontColor": "#6741d9",
+              "fontColor": "var(--sketchlab-stroke-purple)",
               "fontSize": 96.6945281759697,
               "showHandles": false
             },
@@ -1385,8 +1385,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#d0bfff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-purple)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1321,
@@ -1402,7 +1402,7 @@
             },
             "data": {
               "text": "Maya Lopez",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 81.2982415450027,
               "showHandles": false
             },
@@ -1425,8 +1425,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#b2f2bb",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1325,
@@ -1442,7 +1442,7 @@
             },
             "data": {
               "text": "Passionate midfielder who \nloves the game and her team.",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 63.96362560882421,
               "showHandles": false
             },
@@ -1465,8 +1465,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 542,
@@ -1482,7 +1482,7 @@
             },
             "data": {
               "text": "detail 1",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -1505,8 +1505,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 542,
@@ -1522,7 +1522,7 @@
             },
             "data": {
               "text": "detail 2",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -1545,8 +1545,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 542,
@@ -1562,7 +1562,7 @@
             },
             "data": {
               "text": "detail 3",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -1580,7 +1580,7 @@
             },
             "data": {
               "text": "jersey number",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 107.62275299788189,
               "showHandles": false
             },
@@ -1598,7 +1598,7 @@
             },
             "data": {
               "text": "position they play",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 107.62275299788189,
               "showHandles": false
             },
@@ -1616,7 +1616,7 @@
             },
             "data": {
               "text": "team they play for",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 107.62275299788189,
               "showHandles": false
             },
@@ -1639,8 +1639,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1325,
@@ -1656,7 +1656,7 @@
             },
             "data": {
               "text": "#7",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 81.2982415450027,
               "showHandles": false
             },
@@ -1679,8 +1679,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1325,
@@ -1696,7 +1696,7 @@
             },
             "data": {
               "text": "Midfielder",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 81.2982415450027,
               "showHandles": false
             },
@@ -1719,8 +1719,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1325,
@@ -1736,7 +1736,7 @@
             },
             "data": {
               "text": "Riverside FC",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 81.2982415450027,
               "showHandles": false
             },
@@ -1760,7 +1760,7 @@
               "shapeType": "circle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 576,
@@ -2031,7 +2031,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1973,
@@ -2110,6 +2110,6 @@
     "thumbnail_url": "https://images.code.org/2311050c83ebdaa1d73f61e267e6fb0a-profile_view (1).png"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-29T06:27:21.814+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson2-level3c-v1-2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson2-level3c-v1-2026\"},{\"changed_at\":\"2026-04-29 06:27:25 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-18 23:52:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 23:53:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 23:53:46 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 23:53:55 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-29T06:27:21.814+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson2-level3c-v1-2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson2-level3c-v1-2026\"},{\"changed_at\":\"2026-04-29 06:27:25 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-18 23:52:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 23:53:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 23:53:46 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 23:53:55 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-24 11:39:29 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

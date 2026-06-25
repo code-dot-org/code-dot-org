@@ -25,7 +25,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-yellow)",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 651,
@@ -44,7 +44,7 @@
             },
             "data": {
               "text": "1. Original State",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "extra-large",
               "showHandles": false
             },
@@ -69,7 +69,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-yellow)",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 633,
@@ -135,7 +135,7 @@
             },
             "data": {
               "text": "2. Apply Price Filter",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "extra-large",
               "showHandles": false
             },
@@ -185,7 +185,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-yellow)",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 630,
@@ -230,7 +230,7 @@
             },
             "data": {
               "text": "3. Apply Category Filter",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "extra-large",
               "showHandles": false
             },
@@ -249,7 +249,7 @@
             },
             "data": {
               "text": "4a. Reset Path",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "extra-large",
               "showHandles": false
             },
@@ -268,7 +268,7 @@
             },
             "data": {
               "text": "4b. Undo Path",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "extra-large",
               "showHandles": false
             },
@@ -564,8 +564,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#868e96",
-              "strokeColor": "#000000"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 177,
@@ -587,8 +587,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#868e96",
-              "strokeColor": "#000000"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 177,
@@ -610,8 +610,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#868e96",
-              "strokeColor": "#000000"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 177,
@@ -634,7 +634,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-yellow)",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 630,
@@ -660,7 +660,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-yellow)",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 630,
@@ -876,8 +876,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#868e96",
-              "strokeColor": "#000000"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 177,
@@ -899,8 +899,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#868e96",
-              "strokeColor": "#000000"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 177,

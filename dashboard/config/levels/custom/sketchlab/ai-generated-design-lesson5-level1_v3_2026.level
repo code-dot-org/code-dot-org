@@ -25,7 +25,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-gray)",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 990,
@@ -172,7 +172,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-gray)",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 971,
@@ -464,7 +464,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-gray)",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1003,
@@ -676,7 +676,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-gray)",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1012,
@@ -1935,8 +1935,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 990,
@@ -2037,7 +2037,7 @@
             },
             "data": {
               "text": "Nike",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 36,
               "showHandles": false
             },
@@ -2055,7 +2055,7 @@
             },
             "data": {
               "text": "Adidas",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 36,
               "showHandles": false
             },
@@ -2073,7 +2073,7 @@
             },
             "data": {
               "text": "Who is Nike's target audience?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 20,
               "showHandles": false
             },
@@ -2092,7 +2092,7 @@
             },
             "data": {
               "text": "Who is Adidas's target audience?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 20,
               "showHandles": false
             },
@@ -2111,7 +2111,7 @@
             },
             "data": {
               "text": "What do you notice about the Nike brand?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 20,
               "showHandles": false
             },
@@ -2130,7 +2130,7 @@
             },
             "data": {
               "text": "What do you notice about the Adidas brand?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 20,
               "showHandles": false
             },
@@ -2154,8 +2154,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 971,
@@ -2172,7 +2172,7 @@
             },
             "data": {
               "text": "The Nike brand ...\n- Uses powerful, confident fonts and close-up images of athletes.\n- Bold black and white theme with strong contrast.\n- Clean layout with rounded buttons and simple icons.",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 14.399998256138392,
               "showHandles": false
             },
@@ -2190,7 +2190,7 @@
             },
             "data": {
               "text": "The Adidas brand ...\n- Bright, energetic colors (yellow and red).\n- Urban, sporty look with focus on pop culture events like FIFA.\n- Bold text and sharp graphic design. ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 16,
               "showHandles": false
             },
@@ -2209,7 +2209,7 @@
             },
             "data": {
               "text": "It seems like Nike's target audience is \nTeens and young adults who are into sports and \ncompetition. The dark colors and intense athlete\n images make it feel serious and powerful.",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 16,
               "showHandles": false
             },
@@ -2227,7 +2227,7 @@
             },
             "data": {
               "text": "It seems like Adidas's target audience is \nTeens and young adults who like sports and big events \nlike soccer. The bright colors and bold graphics feel \nenergetic and trendy.",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 16,
               "showHandles": false
             },
@@ -2245,7 +2245,7 @@
             },
             "data": {
               "text": "Who is Spotify's target audience?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 20,
               "showHandles": false
             },
@@ -2263,7 +2263,7 @@
             },
             "data": {
               "text": "Who is SoundCloud's target audience?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 20,
               "showHandles": false
             },
@@ -2281,7 +2281,7 @@
             },
             "data": {
               "text": "What do you notice about the Spotify brand?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 20,
               "showHandles": false
             },
@@ -2299,7 +2299,7 @@
             },
             "data": {
               "text": "What do you notice about the SoundCloud brand?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 20,
               "showHandles": false
             },
@@ -2317,7 +2317,7 @@
             },
             "data": {
               "text": "The Spotify brand ...\n- Dark mode look with neon-like album covers that pop.\n- Modern, clean, and easy to navigate.\n- Feels chill and music-focused. ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 16,
               "showHandles": false
             },
@@ -2335,7 +2335,7 @@
             },
             "data": {
               "text": "The SoundCloud brand ... \n- Uses gray and black tones with big, bold text.\n- Focuses on creators — “upload” and “create account” stand out.\n- Feels more indie and raw than Spotify.",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 16,
               "showHandles": false
             },
@@ -2353,7 +2353,7 @@
             },
             "data": {
               "text": "It seems like Spotify's target audience is \nTeens and young adults who listen to music a lot. \nThe dark theme makes the album covers stand out \nand feel modern.",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 16,
               "showHandles": false
             },
@@ -2371,7 +2371,7 @@
             },
             "data": {
               "text": "It seems like SoundCloud's target audience is \nIndependent artists and people who like discovering new music. \nThe focus on uploading and creators makes it feel more \nfor musicians.",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 16,
               "showHandles": false
             },
@@ -2389,7 +2389,7 @@
             },
             "data": {
               "text": "Spotify",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 36,
               "showHandles": false
             },
@@ -2407,7 +2407,7 @@
             },
             "data": {
               "text": "SoundCloud",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 36,
               "showHandles": false
             },
@@ -2425,7 +2425,7 @@
             },
             "data": {
               "text": "Netflix",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 36,
               "showHandles": false
             },
@@ -2443,7 +2443,7 @@
             },
             "data": {
               "text": "Disney",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 36,
               "showHandles": false
             },
@@ -2466,8 +2466,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1003,
@@ -2484,7 +2484,7 @@
             },
             "data": {
               "text": "Who is Netflix's target audience?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 20,
               "showHandles": false
             },
@@ -2502,7 +2502,7 @@
             },
             "data": {
               "text": "Who is Disney's target audience?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 20,
               "showHandles": false
             },
@@ -2520,7 +2520,7 @@
             },
             "data": {
               "text": "What do you notice about the Netflix brand?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 20,
               "showHandles": false
             },
@@ -2538,7 +2538,7 @@
             },
             "data": {
               "text": "What do you notice about the Disney brand?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 20,
               "showHandles": false
             },
@@ -2556,7 +2556,7 @@
             },
             "data": {
               "text": "The Netflix brand ... \n- Dark background with red buttons and bright movie posters.\n- Bold, clear fonts that feel cinematic.\n- Highlights price and trending shows right away.",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 16,
               "showHandles": false
             },
@@ -2574,7 +2574,7 @@
             },
             "data": {
               "text": "The Disney brand ... \n- Uses cool blues and organized sections.\n- Clean layout, lots of brand logos (Disney, Hulu, ESPN).\n- Feels family-friendly and professional.",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 16,
               "showHandles": false
             },
@@ -2592,7 +2592,7 @@
             },
             "data": {
               "text": "It seems like Netflix's target audience is \nTeens and adults who watch a lot of shows and movies.\n The dark layout and big show images make it feel \ndramatic and immersive.",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 16,
               "showHandles": false
             },
@@ -2610,7 +2610,7 @@
             },
             "data": {
               "text": "It seems like Disney's target audience is \nFamilies and kids. The clean layout and familiar titles \nmake it feel safe and family-friendly.",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 16,
               "showHandles": false
             },
@@ -2628,7 +2628,7 @@
             },
             "data": {
               "text": "Walmart",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 36,
               "showHandles": false
             },
@@ -2646,7 +2646,7 @@
             },
             "data": {
               "text": "Target",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 36,
               "showHandles": false
             },
@@ -2669,8 +2669,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1012,
@@ -2687,7 +2687,7 @@
             },
             "data": {
               "text": "Who is Target's target audience?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 20,
               "showHandles": false
             },
@@ -2705,7 +2705,7 @@
             },
             "data": {
               "text": "Who is Walmart's target audience?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 20,
               "showHandles": false
             },
@@ -2723,7 +2723,7 @@
             },
             "data": {
               "text": "What do you notice about the Target brand?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 20,
               "showHandles": false
             },
@@ -2741,7 +2741,7 @@
             },
             "data": {
               "text": "What do you notice about the Walmart brand?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 20,
               "showHandles": false
             },
@@ -2759,7 +2759,7 @@
             },
             "data": {
               "text": "The Target brand ...\n- Red and white color scheme — bright and cheerful.\n- Uses friendly fonts and playful seasonal themes (like Halloween).\n- Photos look warm and welcoming. ",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 16,
               "showHandles": false
             },
@@ -2777,7 +2777,7 @@
             },
             "data": {
               "text": "The Walmart brand ... \n- Uses lots of white space and light blue/yellow colors.\n- Organized layout — easy to browse deals.\n- More practical and clean than flashy.",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 16,
               "showHandles": false
             },
@@ -2795,7 +2795,7 @@
             },
             "data": {
               "text": "It seems like Target's target audience is \nFamilies and everyday shoppers who want trendy but \naffordable products. The bright colors and seasonal \nads make it feel fun and welcoming.",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 16,
               "showHandles": false
             },
@@ -2813,7 +2813,7 @@
             },
             "data": {
               "text": "It seems like Walmart's target audience is \nFamilies and budget shoppers looking for deals. \nThe simple layout and focus on prices make it feel practical.",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 16,
               "showHandles": false
             },

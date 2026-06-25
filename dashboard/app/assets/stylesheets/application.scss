@@ -1864,46 +1864,6 @@ a.download-video {
   margin: 10px 0;
 }
 
-#signinsection {
-  ul.students, ul.pictures {
-    margin-left: 0;
-  }
-
-  ul.students li,
-  ul.pictures li {
-    list-style-type: none;
-    border: 1px solid $lighter_gray;
-    border-radius: 5px;
-    background-color: $lightest_gray;
-    float: left;
-    margin: 5px;
-    padding: 5px;
-    cursor: pointer;
-  }
-
-  ul.students li:hover,
-  ul.pictures li:hover {
-    background-color: $light_yellow;
-  }
-
-  ul.students li.selected,
-  ul.pictures li.selected {
-    background-color: $yellow;
-  }
-
-  #pairing_checkbox {
-    margin: 5px 0;
-    label {
-      font-size: 17.5px;
-    }
-    label, input {
-      margin: 5px;
-      display: inline-block;
-      vertical-align: middle;
-    }
-  }
-}
-
 .flex-container {
   display: flex;
   justify-content: space-between;

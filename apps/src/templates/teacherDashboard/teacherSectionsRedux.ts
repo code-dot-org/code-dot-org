@@ -981,7 +981,7 @@ export const createDemoSection =
 
     try {
       const response = await HttpClient.post(
-        `/api/v1/sections/demo/${demoType}`,
+        `/api/v1/sections/demo/create/${demoType}`,
         undefined,
         true
       );

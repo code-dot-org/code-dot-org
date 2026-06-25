@@ -389,7 +389,6 @@ namespace :test do
         [
           'apps/**/*',
           'dashboard/config/libraries/*.interpreted.js',
-          'shared/js/**/*',
           'shared/css/**/*',
           'frontend/**/*',
           'lib/cdo/shared_constants/**/*',
