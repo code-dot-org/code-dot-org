@@ -140,10 +140,14 @@ class P5LabVisualizationColumn extends React.Component {
     if (!rect.width || !rect.height) {
       return;
     }
+    // Clamp here so a saved-but-out-of-range field value can't park the
+    // crosshair off the playspace.
+    const inBoundsX = Math.max(0, Math.min(APP_WIDTH, x));
+    const inBoundsY = Math.max(0, Math.min(APP_HEIGHT, y));
     this.divGameLab.dispatchEvent(
       new MouseEvent('mousemove', {
-        clientX: rect.left + (x / APP_WIDTH) * rect.width,
-        clientY: rect.top + (y / APP_HEIGHT) * rect.height,
+        clientX: rect.left + (inBoundsX / APP_WIDTH) * rect.width,
+        clientY: rect.top + (inBoundsY / APP_HEIGHT) * rect.height,
         bubbles: true,
       })
     );

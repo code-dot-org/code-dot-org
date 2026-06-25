@@ -113,7 +113,14 @@ const customInputTypes = {
         const originalValue = fieldButton.getValue();
         let initialValue;
         try {
-          initialValue = originalValue ? JSON.parse(originalValue) : undefined;
+          const parsed = originalValue ? JSON.parse(originalValue) : undefined;
+          initialValue =
+            parsed &&
+            typeof parsed === 'object' &&
+            Number.isFinite(parsed.x) &&
+            Number.isFinite(parsed.y)
+              ? parsed
+              : undefined;
         } catch (e) {
           initialValue = undefined;
         }
