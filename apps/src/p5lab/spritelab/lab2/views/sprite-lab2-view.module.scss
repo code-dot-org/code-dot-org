@@ -89,6 +89,28 @@
   font-size: 12px;
 }
 
+.guideBody {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.guideRow {
+  display: flex;
+  gap: 6px;
+
+  input {
+    flex: 1 1 auto;
+    padding: 4px 6px;
+  }
+
+  button {
+    padding: 4px 12px;
+    cursor: pointer;
+  }
+}
+
 .worldTab {
   display: flex;
   flex-direction: column;

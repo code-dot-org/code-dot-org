@@ -39,6 +39,7 @@ class GamelabJr < Gamelab
     standalone_app_name
     enable_big_playspace
     uses_lab2
+    guide_mode
   )
 
   def shared_blocks

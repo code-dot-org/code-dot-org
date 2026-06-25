@@ -35,6 +35,7 @@ import {createEmptyGrid} from '../world/gridConstants';
 
 import CodeTab, {CodeTabHandle} from './CodeTab';
 import TabShell from './components/TabShell';
+import GenerateSpriteLab from './GenerateSpriteLab';
 import ItemsTab from './ItemsTab';
 import PlayTab from './PlayTab';
 import WorldTab from './WorldTab';
@@ -231,6 +232,16 @@ const SpriteLab2View: React.FunctionComponent<{
     [mergeSources]
   );
 
+  // AI-generated blocks load into the Code tab; switch there so the user sees
+  // them.
+  const handleCodeGenerated = useCallback(
+    (source: WorkspaceSerialization) => {
+      codeTabRef.current?.loadCode(source);
+      dispatch(setActiveTab('Code'));
+    },
+    [dispatch]
+  );
+
   const handleTabChange = useCallback(
     (tab: SpriteLab2Tab) => {
       // Leaving Play stops the engine's tick loop so it isn't burning CPU
@@ -291,6 +302,15 @@ const SpriteLab2View: React.FunctionComponent<{
             onReset={handleReset}
           />
         </div>
+      )}
+
+      {/* Lab2 Guide overlay (Music-style), driven by the level's guideMode. */}
+      {levelProperties.guideMode && (
+        <GenerateSpriteLab
+          guideMode={levelProperties.guideMode}
+          instructions={levelProperties.longInstructions}
+          onCodeGenerated={handleCodeGenerated}
+        />
       )}
     </TabShell>
   );

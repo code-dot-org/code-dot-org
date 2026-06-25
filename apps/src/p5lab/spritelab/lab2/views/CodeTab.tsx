@@ -18,6 +18,9 @@ export const BLOCKLY_DIV_ID = 'spritelab2-blockly-div';
 export interface CodeTabHandle {
   // Compile the current workspace to JavaScript for the runtime.
   getCode: () => string;
+  // Replace the workspace contents with the given serialization (e.g. from the
+  // AI code generator).
+  loadCode: (source: WorkspaceSerialization) => void;
 }
 
 interface CodeTabProps {
@@ -63,6 +66,19 @@ const CodeTab = forwardRef<CodeTabHandle, CodeTabProps>(
         workspace.current
           ? Blockly.JavaScript.workspaceToCode(workspace.current)
           : '',
+      loadCode: (source: WorkspaceSerialization) => {
+        if (workspace.current) {
+          loadBlocksToWorkspace(
+            workspace.current as BlocklyCore.WorkspaceSvg,
+            JSON.stringify(source)
+          );
+          const serialized = Blockly.serialization.workspaces.save(
+            workspace.current
+          ) as WorkspaceSerialization;
+          onSourceChangeRef.current(serialized, toolboxDefinition);
+          onEditRef.current();
+        }
+      },
     }));
 
     // Inject the workspace once on mount.
