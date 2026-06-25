@@ -12,7 +12,6 @@ module Cdo
       DASHBOARD_DB.disconnect
       # rubocop:enable CustomCops/PegasusDbUsage
       # rubocop:enable CustomCops/DashboardDbUsage
-      Cdo::AppServerMetrics.instance&.spawn_reporting_task if defined?(Cdo::AppServerMetrics)
 
       # Control automated restarts of web application server processes via Gatekeeper and DCDO.
       # NOTE: before_fork runs on the parent puma process, so complete restart of the web application services on all
