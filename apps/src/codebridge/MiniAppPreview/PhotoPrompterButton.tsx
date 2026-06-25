@@ -36,7 +36,8 @@ const PhotoPrompterButton: React.FunctionComponent<
       <MuiButton
         ref={buttonRef}
         variant="contained"
-        color="primary"
+        color="secondary"
+        size="medium"
         type="button"
         aria-label={promptText}
         onClick={() => inputRef.current?.click()}
