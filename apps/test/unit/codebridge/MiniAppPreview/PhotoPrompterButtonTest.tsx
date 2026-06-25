@@ -39,9 +39,10 @@ describe('PhotoPrompterButton', () => {
       />
     );
 
+    const user = userEvent.setup();
     const file = new File(['photo'], 'photo.png', {type: 'image/png'});
     const input = screen.getByLabelText('Take a photo', {selector: 'input'});
-    await userEvent.upload(input, file);
+    await user.upload(input, file);
 
     expect(onPhotoSelected).toHaveBeenCalledTimes(1);
     expect(onPhotoSelected).toHaveBeenCalledWith(file);

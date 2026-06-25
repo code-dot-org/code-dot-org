@@ -29,6 +29,8 @@ const PhotoPrompterButton: React.FunctionComponent<
     }
   };
 
+  const promptLabel = promptText || 'Select a photo';
+
   return (
     <div className={moduleStyles.container}>
       <MuiButton
@@ -37,17 +39,17 @@ const PhotoPrompterButton: React.FunctionComponent<
         color="secondary"
         size="medium"
         type="button"
-        aria-label={promptText}
+        aria-label={promptLabel}
         onClick={() => inputRef.current?.click()}
         startIcon={
           <FontAwesomeV6Icon iconStyle="solid" iconName="camera" aria-hidden />
         }
       >
-        {promptText}
+        {promptLabel}
       </MuiButton>
       <input
         ref={inputRef}
-        aria-label={promptText}
+        aria-label={promptLabel}
         className={moduleStyles.hiddenInput}
         type="file"
         accept="image/*"
