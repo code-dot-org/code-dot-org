@@ -145,6 +145,16 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.stopTickTimer();
   }
 
+  // SpriteLab2 doesn't use the classic fixed background set (backgrounds.json);
+  // backgrounds come from the Items tab. Skip the base class's
+  // preloadBackgrounds() and only preload the project's own sprite images. This
+  // also avoids a p5 preload-count leak: a failed loadImage() during preload
+  // (e.g. a background asset 404) never decrements p5._preloadCount, leaving the
+  // engine stuck in the preload phase forever.
+  preloadLabAssets() {
+    return this.preloadSpriteImages_();
+  }
+
   // --- Overrides that sever the global studioApp() singleton ---
 
   // Sprite Lab has no user-facing console, so the base class surfaces execution

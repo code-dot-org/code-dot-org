@@ -2,7 +2,6 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef} from 'react';
 
-import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {LabProps} from '@cdo/apps/lab2/types';
 import SourcesContainer, {
@@ -13,7 +12,6 @@ import animationList, {
 } from '@cdo/apps/p5lab/redux/animationList';
 import spritelabInputList from '@cdo/apps/p5lab/redux/spritelabInput';
 import textConsole from '@cdo/apps/p5lab/redux/textConsole';
-import defaultSprites from '@cdo/apps/p5lab/spritelab/defaultSprites.json';
 import {registerReducers} from '@cdo/apps/redux';
 import pageConstants from '@cdo/apps/redux/pageConstants';
 import runState, {setIsRunning} from '@cdo/apps/redux/runState';
@@ -51,6 +49,9 @@ registerReducers({
 // Tabs wired so far. Items/World arrive in later phases.
 const ENABLED_TABS: readonly SpriteLab2Tab[] = ['Code', 'Play'];
 
+// Sprites come from the Items tab, so a new project starts with no animations.
+const EMPTY_ANIMATION_LIST = {orderedKeys: [], propsByKey: {}};
+
 const SpriteLab2View: React.FunctionComponent<{
   levelProperties: SpriteLab2LevelProperties;
 }> = ({levelProperties}) => {
@@ -78,22 +79,18 @@ const SpriteLab2View: React.FunctionComponent<{
   const codeTabRef = useRef<CodeTabHandle>(null);
 
   // Instantiate the p5.play engine once, seeding the animation list from saved
-  // sources (falling back to the default sprite set).
+  // sources. Unlike classic Sprite Lab we don't auto-load the legacy default
+  // sprite library; SpriteLab2 sprites come from the Items tab (AI generation,
+  // the image editor, or the animation picker), so a new project starts with an
+  // empty list. p5 preload then completes immediately instead of blocking on
+  // remote default-sprite assets.
   useEffect(() => {
     let cancelled = false;
-    const savedAnimations = sourcesRef.current.animations;
+    const savedAnimations =
+      sourcesRef.current.animations || EMPTY_ANIMATION_LIST;
 
     const setup = async () => {
-      let defaultAnimations;
-      try {
-        defaultAnimations = await getDefaultListMetadata();
-      } catch {
-        defaultAnimations = defaultSprites;
-      }
-      if (cancelled) {
-        return;
-      }
-      const engine = new SpriteLab2Engine(defaultAnimations);
+      const engine = new SpriteLab2Engine(savedAnimations);
       await engine.initForLevel(levelProperties);
       if (cancelled) {
         engine.destroy();
@@ -102,7 +99,7 @@ const SpriteLab2View: React.FunctionComponent<{
       engineRef.current = engine;
       dispatch(
         setInitialAnimationList(
-          savedAnimations || defaultAnimations,
+          savedAnimations,
           // No v3 migration; the engine never runs the legacy share path.
           undefined as unknown as object,
           true /* isSpriteLab */
