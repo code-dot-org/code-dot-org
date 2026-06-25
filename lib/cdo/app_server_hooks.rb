@@ -32,21 +32,31 @@ module Cdo
       Cdo::Metrics.put('App Server', 'WorkerBoot', 1, {Host: host})
 
       # Publish per-worker memory metrics in production, the managed test server, and adhoc environments.
-      # DCDO value is the collection interval in seconds (0 = off).
-      interval = DCDO.get('worker_memory_metrics_interval_seconds', 0).to_i
+      # DCDO hash: { "interval_seconds" => N, "per_instance" => bool }
+      # interval_seconds: 0 = off, >0 = collection interval in seconds.
+      # per_instance: when true, adds InstanceId + WorkerIndex for per-EC2-worker tracking (higher cardinality/cost).
+      #   Without per_instance, WorkerIndex is omitted because multiple EC2 instances share the same Host,
+      #   making WorkerIndex ambiguous. The fleet-aggregate view (Host-only) is still useful for trends.
+      config = DCDO.get('worker_memory_metrics', {})
+      interval = (config['interval_seconds'] || 0).to_i
       if (CDO.rack_env?(:production) || CDO.test_system? || CDO.rack_env?(:adhoc)) &&
           interval > 0 &&
           worker_index
         require 'cdo/worker_memory_collector'
+        dimensions = {Host: CDO.dashboard_hostname}
+        if config['per_instance']
+          require 'cdo/aws/ec2'
+          instance_id = AWS::EC2.instance_id
+          if instance_id
+            dimensions[:InstanceId] = instance_id
+            dimensions[:WorkerIndex] = worker_index.to_s
+          end
+        end
         Cdo::WorkerMemoryCollector.new(
           namespace: 'App Server',
           interval: interval,
           resolution: interval,
-          dimensions: {
-            Environment: CDO.rack_env,
-            Host: CDO.dashboard_hostname,
-            WorkerIndex: worker_index.to_s
-          }
+          dimensions: dimensions
         ).start
       end
 
