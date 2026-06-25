@@ -7,6 +7,8 @@ import {P5LabInterfaceMode, P5LabType} from '@cdo/apps/p5lab/constants';
 import ErrorDialogStack from '@cdo/apps/p5lab/ErrorDialogStack';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {loadFileUploadPlugin} from '../loadFileUploadPlugin';
+
 import GenerateImagePane from './GenerateImagePane';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
@@ -24,29 +26,40 @@ const ItemsTab: React.FunctionComponent = () => {
   const channelId = useAppSelector(state => state.lab.channel?.id);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [libraryManifest, setLibraryManifest] = useState<any>({});
+  // The AnimationPicker's HiddenUploader needs the jQuery File Upload plugin,
+  // which isn't on the Lab2 page. Load it before mounting AnimationTab so the
+  // uploader doesn't throw in componentDidMount.
+  const [uploaderReady, setUploaderReady] = useState(false);
 
   useEffect(() => {
     const locale =
       (window.appOptions as {locale?: string} | undefined)?.locale || 'en_us';
     getManifest('spritelab', locale).then(setLibraryManifest);
+    loadFileUploadPlugin().then(
+      () => setUploaderReady(true),
+      () => setUploaderReady(false)
+    );
   }, []);
 
   return (
     <div className={moduleStyles.itemsTab}>
       <GenerateImagePane />
-      <AnimationTabAny
-        channelId={channelId}
-        defaultQuery={{categoryQuery: '', searchQuery: ''}}
-        libraryManifest={libraryManifest}
-        shouldWarnOnAnimationUpload={true}
-        hideAnimationNames={false}
-        hideBackgrounds={false}
-        hideCostumes={false}
-        labType={P5LabType.SPRITELAB}
-        pickerType={PICKER_TYPE.spritelab}
-        interfaceMode={P5LabInterfaceMode.ANIMATION}
-        uploadsEnabled={true}
-      />
+      {!uploaderReady && <div>Loading image editor…</div>}
+      {uploaderReady && (
+        <AnimationTabAny
+          channelId={channelId}
+          defaultQuery={{categoryQuery: '', searchQuery: ''}}
+          libraryManifest={libraryManifest}
+          shouldWarnOnAnimationUpload={true}
+          hideAnimationNames={false}
+          hideBackgrounds={false}
+          hideCostumes={false}
+          labType={P5LabType.SPRITELAB}
+          pickerType={PICKER_TYPE.spritelab}
+          interfaceMode={P5LabInterfaceMode.ANIMATION}
+          uploadsEnabled={true}
+        />
+      )}
       <ErrorDialogStack />
     </div>
   );
