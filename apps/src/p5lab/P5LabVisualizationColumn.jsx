@@ -35,6 +35,11 @@ import TextConsole from './spritelab/TextConsole';
 
 const MODAL_Z_INDEX = 1050;
 const LOCATION_PICKER_CANCEL_THRESHOLD_MS = 250;
+const KEYBOARD_PICKER_STEP = 10;
+const KEYBOARD_PICKER_BIG_STEP = 50;
+const KEYBOARD_PICKER_INSTRUCTIONS =
+  'Location picker. Arrow keys to move (hold Shift for larger steps), Enter or Space to select, Escape to cancel.';
+const PICKER_FOCUS_OUTLINE = '3px solid #0094ca';
 
 class P5LabVisualizationColumn extends React.Component {
   static propTypes = {
@@ -51,6 +56,10 @@ class P5LabVisualizationColumn extends React.Component {
     awaitingContainedResponse: PropTypes.bool.isRequired,
     pickingLocation: PropTypes.bool.isRequired,
     requestTime: PropTypes.number,
+    pickerLocation: PropTypes.shape({
+      x: PropTypes.number,
+      y: PropTypes.number,
+    }),
     showGrid: PropTypes.bool.isRequired,
     toggleShowGrid: PropTypes.func.isRequired,
     cancelPicker: PropTypes.func.isRequired,
@@ -66,6 +75,14 @@ class P5LabVisualizationColumn extends React.Component {
     mouseX: -1,
     mouseY: -1,
   };
+
+  componentWillUnmount() {
+    // Leaking ephemeral focus locks Blockly's FocusManager page-wide.
+    if (this.releaseEphemeralFocus) {
+      this.releaseEphemeralFocus();
+      this.releaseEphemeralFocus = null;
+    }
+  }
 
   pickerPointerMove = e => {
     if (this.props.pickingLocation) {
@@ -94,6 +111,100 @@ class P5LabVisualizationColumn extends React.Component {
     }
   };
 
+  moveKeyboardCursorTo = (x, y) => {
+    // Round so the field stores whole pixels and the next arrow press isn't
+    // computed against a round-tripped float from VisualizationOverlay's
+    // screen→app-space transform.
+    const clampedX = Math.round(Math.max(0, Math.min(APP_WIDTH, x)));
+    const clampedY = Math.round(Math.max(0, Math.min(APP_HEIGHT, y)));
+    this.props.updatePicker({x: clampedX, y: clampedY});
+    // syncCrosshairTo also feeds VisualizationOverlay's mousemove handler,
+    // which updates this.state.mouseX/mouseY — that's where the next arrow
+    // press reads its starting position from.
+    this.syncCrosshairTo(clampedX, clampedY);
+  };
+
+  // Synthetic mousemove drives the existing CrosshairOverlay so it tracks the
+  // keyboard cursor without needing its own overlay.
+  syncCrosshairTo = (x, y) => {
+    if (!this.divGameLab) {
+      return;
+    }
+    const rect = this.divGameLab.getBoundingClientRect();
+    if (!rect.width || !rect.height) {
+      return;
+    }
+    this.divGameLab.dispatchEvent(
+      new MouseEvent('mousemove', {
+        clientX: rect.left + (x / APP_WIDTH) * rect.width,
+        clientY: rect.top + (y / APP_HEIGHT) * rect.height,
+        bubbles: true,
+      })
+    );
+  };
+
+  confirmKeyboardPick = () => {
+    // The field subscribes to UPDATE_LOCATION, not SELECT_LOCATION, so we
+    // must update before selecting.
+    const loc = {
+      x: Math.round(this.state.mouseX),
+      y: Math.round(this.state.mouseY),
+    };
+    this.props.updatePicker(loc);
+    this.props.selectPicker(loc);
+  };
+
+  pickerKeyDown = e => {
+    if (!this.props.pickingLocation) {
+      return;
+    }
+    const step = e.shiftKey ? KEYBOARD_PICKER_BIG_STEP : KEYBOARD_PICKER_STEP;
+    // Start from the current crosshair position so keyboard and mouse share
+    // one source of truth. Round to discard sub-pixel drift from the
+    // screen→app-space transform.
+    const x = Math.round(this.state.mouseX);
+    const y = Math.round(this.state.mouseY);
+    let action = null;
+    switch (e.key) {
+      case 'ArrowUp':
+        action = () => this.moveKeyboardCursorTo(x, y - step);
+        break;
+      case 'ArrowDown':
+        action = () => this.moveKeyboardCursorTo(x, y + step);
+        break;
+      case 'ArrowLeft':
+        action = () => this.moveKeyboardCursorTo(x - step, y);
+        break;
+      case 'ArrowRight':
+        action = () => this.moveKeyboardCursorTo(x + step, y);
+        break;
+      case 'Tab':
+        // Trap Tab — the picker is modal, so Escape is the way out.
+        action = () => {};
+        break;
+      case 'Escape':
+        action = this.props.cancelPicker;
+        break;
+      case 'Enter':
+      case ' ':
+        // Swallow Enter key-repeat from the keystroke that opened the picker.
+        if (
+          Date.now() - this.props.requestTime <
+          LOCATION_PICKER_CANCEL_THRESHOLD_MS
+        ) {
+          action = () => {};
+        } else {
+          action = this.confirmKeyboardPick;
+        }
+        break;
+      default:
+        return;
+    }
+    e.preventDefault();
+    e.stopPropagation();
+    action();
+  };
+
   UNSAFE_componentWillReceiveProps(nextProps) {
     // Use jQuery to turn on and off the grid since it lives in a protected div
     if (nextProps.showGrid !== this.props.showGrid) {
@@ -103,15 +214,93 @@ class P5LabVisualizationColumn extends React.Component {
         $('#grid-overlay')[0].style.display = 'none';
       }
     }
-    // Also manually raise/lower the zIndex of the playspace when selecting a
-    // location because of the protected div
-    const zIndex = nextProps.pickingLocation ? MODAL_Z_INDEX : 0;
+    if (nextProps.pickingLocation !== this.props.pickingLocation) {
+      this.applyPickerAttributes(nextProps.pickingLocation);
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.pickingLocation && !prevProps.pickingLocation) {
+      this.releaseEphemeralFocus = this.acquireEphemeralFocus(this.divGameLab);
+      // Pick a starting point in priority order:
+      //   1. The block's current coordinates (passed in via redux).
+      //   2. The crosshair's current position if it's already valid.
+      //   3. Center, as a last-resort fallback for keyboard-only sessions.
+      const {pickerLocation} = this.props;
+      const {mouseX, mouseY} = this.state;
+      if (
+        pickerLocation &&
+        Number.isFinite(pickerLocation.x) &&
+        Number.isFinite(pickerLocation.y)
+      ) {
+        this.syncCrosshairTo(pickerLocation.x, pickerLocation.y);
+      } else if (
+        mouseX < 0 ||
+        mouseY < 0 ||
+        mouseX > APP_WIDTH ||
+        mouseY > APP_HEIGHT
+      ) {
+        this.syncCrosshairTo(APP_WIDTH / 2, APP_HEIGHT / 2);
+      }
+    } else if (!this.props.pickingLocation && prevProps.pickingLocation) {
+      if (this.releaseEphemeralFocus) {
+        this.releaseEphemeralFocus();
+        this.releaseEphemeralFocus = null;
+      }
+    }
+  }
+
+  // ProtectedStatefulDiv blocks prop updates on the Pointable, so picker-mode
+  // attributes/styles are applied imperatively.
+  applyPickerAttributes = picking => {
     const visualizationOverlay = document.getElementById(
       'visualizationOverlay'
     );
-    this.divGameLab.style.zIndex = zIndex;
-    visualizationOverlay.style.zIndex = zIndex;
-  }
+    const zIndex = picking ? MODAL_Z_INDEX : 0;
+    if (this.divGameLab) {
+      this.divGameLab.style.zIndex = zIndex;
+      if (picking) {
+        this.divGameLab.setAttribute('tabindex', '0');
+        this.divGameLab.setAttribute('role', 'application');
+        this.divGameLab.setAttribute(
+          'aria-label',
+          KEYBOARD_PICKER_INSTRUCTIONS
+        );
+        // WCAG 2.4.7: divs have no native focus indicator.
+        this.divGameLab.style.outline = PICKER_FOCUS_OUTLINE;
+        this.divGameLab.style.outlineOffset = '-3px';
+      } else {
+        this.divGameLab.removeAttribute('tabindex');
+        this.divGameLab.removeAttribute('role');
+        this.divGameLab.removeAttribute('aria-label');
+        this.divGameLab.style.outline = '';
+        this.divGameLab.style.outlineOffset = '';
+      }
+    }
+    if (visualizationOverlay) {
+      visualizationOverlay.style.zIndex = zIndex;
+    }
+  };
+
+  // takeEphemeralFocus stops Blockly's FocusManager from pulling focus back
+  // to its workspace tree; the returned lambda restores focus on release.
+  acquireEphemeralFocus = element => {
+    const focusManager =
+      typeof Blockly !== 'undefined' &&
+      Blockly.FocusManager &&
+      Blockly.FocusManager.getFocusManager &&
+      Blockly.FocusManager.getFocusManager();
+    if (focusManager && !focusManager.ephemeralFocusTaken()) {
+      return focusManager.takeEphemeralFocus(element);
+    }
+    const previousFocus = document.activeElement;
+    element.focus();
+    return () => {
+      if (previousFocus && typeof previousFocus.focus === 'function') {
+        previousFocus.focus();
+      }
+    };
+  };
 
   onMouseMove = (mouseX, mouseY) => this.setState({mouseX, mouseY});
 
@@ -155,14 +344,12 @@ class P5LabVisualizationColumn extends React.Component {
   }
   render() {
     const {isResponsive, isShareView, isRtl} = this.props;
+    // Picker-mode attributes are set by applyPickerAttributes — see there.
     const divGameLabStyle = {
       touchAction: 'none',
       width: APP_WIDTH,
       height: APP_HEIGHT,
     };
-    if (this.props.pickingLocation) {
-      divGameLabStyle.zIndex = MODAL_Z_INDEX;
-    }
     const isSpritelab = this.props.spriteLab;
     const showPauseButton = isSpritelab && !this.props.hidePauseButton;
 
@@ -177,6 +364,7 @@ class P5LabVisualizationColumn extends React.Component {
               onPointerUp={this.pickerPointerUp}
               elementRef={el => (this.divGameLab = el)}
               onMouseUp={this.pickerPointerUp}
+              onKeyDown={this.pickerKeyDown}
             />
             <VisualizationOverlay
               width={APP_WIDTH}
@@ -220,6 +408,13 @@ class P5LabVisualizationColumn extends React.Component {
           </div>
         )}
         <BelowVisualization />
+        {this.props.pickingLocation && this.props.pickerLocation && (
+          <div aria-live="polite" aria-atomic="true" style={styles.srOnly}>
+            {`x ${this.props.pickerLocation.x}, y ${
+              APP_HEIGHT - this.props.pickerLocation.y
+            }`}
+          </div>
+        )}
         {this.props.pickingLocation && (
           <div
             className={'modal-backdrop'}
@@ -259,6 +454,18 @@ const styles = {
     alignItems: 'center',
     fontSize: 13,
   },
+  // Visually hidden but still announced by screen readers.
+  srOnly: {
+    position: 'absolute',
+    width: 1,
+    height: 1,
+    padding: 0,
+    margin: -1,
+    overflow: 'hidden',
+    clip: 'rect(0, 0, 0, 0)',
+    whiteSpace: 'nowrap',
+    border: 0,
+  },
 };
 
 export default connect(
@@ -271,6 +478,7 @@ export default connect(
     showGrid: state.gridOverlay,
     pickingLocation: isPickingLocation(state.locationPicker),
     requestTime: state.locationPicker.requestTime,
+    pickerLocation: state.locationPicker.lastSelection,
     consoleMessages: state.textConsole,
     isRtl: state.isRtl,
   }),

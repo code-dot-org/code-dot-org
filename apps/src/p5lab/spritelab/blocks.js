@@ -110,7 +110,14 @@ const customInputTypes = {
       icon.style.fontFamily = 'FontAwesome';
       icon.textContent = ' \uf276'; // map-pin
       const onChange = () => {
-        getLocation(loc => {
+        let initialValue;
+        try {
+          const current = fieldButton.getValue();
+          initialValue = current ? JSON.parse(current) : undefined;
+        } catch (e) {
+          initialValue = undefined;
+        }
+        getLocation(initialValue, loc => {
           if (loc) {
             fieldButton.setValue(JSON.stringify(loc));
           }
