@@ -58,6 +58,7 @@ import ShapeNode from '../nodes/ShapeNode';
 import TextNode from '../nodes/TextNode';
 import {
   AddNodeRequest,
+  CanvasTool,
   ReactFlowSketchLabSources,
   SketchLabNode,
 } from '../types';
@@ -159,6 +160,8 @@ export default function ReactFlowCanvas({
     trapFocus: boolean;
   }>({target: null, trapFocus: false});
   const {target: openToolbarTarget, trapFocus} = openToolbarInfo;
+
+  const [canvasTool, setCanvasTool] = useState<CanvasTool>('cursor');
 
   const [isAnyPopoverOpen, setPopoverOpen] = useState(false);
   const [keyboardMovingLineId, setKeyboardMovingLineId] = useState<
@@ -722,7 +725,12 @@ export default function ReactFlowCanvas({
                   onMouseLeave={handleMouseLeave}
                 >
                   {!readOnly && (
-                    <Toolbar onAddNode={handleAddNode} levelName={levelName} />
+                    <Toolbar
+                      onAddNode={handleAddNode}
+                      levelName={levelName}
+                      canvasTool={canvasTool}
+                      onSetCanvasTool={setCanvasTool}
+                    />
                   )}
                   <div aria-live="assertive" className={styles.srOnly}>
                     {connectAnnouncement}
@@ -758,9 +766,10 @@ export default function ReactFlowCanvas({
                     multiSelectionKeyCode={null}
                     deleteKeyCode={readOnly ? null : 'Delete'}
                     proOptions={{hideAttribution: true}}
-                    nodesDraggable={!readOnly}
+                    panOnDrag={canvasTool === 'grab'}
+                    nodesDraggable={!readOnly && canvasTool === 'cursor'}
                     nodesConnectable={!readOnly}
-                    elementsSelectable={!readOnly}
+                    elementsSelectable={!readOnly && canvasTool === 'cursor'}
                     nodesFocusable={true}
                     edgesFocusable={true}
                     // Even though we manage tab order, we keep React Flow's keyboard A11y on because
