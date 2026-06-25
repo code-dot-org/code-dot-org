@@ -117,6 +117,10 @@ in Studio:
   fixtures loader
 - `apps/studio/package.json` — adds the workspace dependency
 
+The generator also prompts for an optional CODEOWNERS entry (blank to skip);
+when given, it appends an owner line for `frontend/packages/labs/<name>/` to
+`.github/CODEOWNERS`.
+
 The lab is then reachable at `/app/projects/<name>/:channelId/edit`.
 
 ### Mock fixtures (MSW mode)
