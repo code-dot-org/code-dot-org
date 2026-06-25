@@ -1003,7 +1003,7 @@ class Level < ApplicationRecord
   # Lab2 levels only include :pairing_channel_id; non-Lab2 levels may include
   # :pairing_attempt from the driver's latest level source.
   def pairing_properties_for(user, script, camelize_keys: false, user_level: nil)
-    return {} unless user && script
+    return {} unless user
 
     user_level ||= user.last_attempt(self, script)
     return {} unless user_level
@@ -1024,7 +1024,7 @@ class Level < ApplicationRecord
       end
     end
 
-    pairing_channel_id = driver_pairing_channel_id(driver, script.id)
+    pairing_channel_id = driver_pairing_channel_id(driver, script&.id)
     pairing_properties[:pairing_channel_id] = pairing_channel_id if pairing_channel_id
     format_pairing_properties_keys(pairing_properties, camelize_keys)
   end
