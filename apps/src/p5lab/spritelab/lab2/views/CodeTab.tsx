@@ -124,6 +124,12 @@ const CodeTab = forwardRef<CodeTabHandle, CodeTabProps>(
         trashcan: true,
       } as BlocklyCore.BlocklyOptions);
 
+      // CDO Blockly shrinks the container by the workspace-header height to
+      // leave room for a header bar we don't render, leaving a gap at the
+      // bottom. Reclaim the full height and resize the workspace SVG to fill.
+      blocklyDiv.style.height = '100%';
+      Blockly.svgResize(workspace.current);
+
       if (initialSource) {
         loadBlocksToWorkspace(
           workspace.current as BlocklyCore.WorkspaceSvg,
