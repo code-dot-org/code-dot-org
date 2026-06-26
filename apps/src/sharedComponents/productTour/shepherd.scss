@@ -1,6 +1,23 @@
 @import 'shepherd.js/dist/css/shepherd.css';
 @import 'color.scss';
 
+// Keep Shepherd below our modal stack ($zindex-modal-backdrop: 1040,
+// $zindex-modal: 1060) so dialogs that open during a tour appear on top.
+.shepherd-element {
+  z-index: 1038;
+}
+
+.shepherd-modal-overlay-container {
+  z-index: 1035;
+}
+
+// Opt-in for steps that attach to an element inside an open modal.
+// Add 'tour-step-above-modal' to the step's `classes` to restore
+// the step above the modal stack.
+.shepherd-element.tour-step-above-modal {
+  z-index: 9999;
+}
+
 .tour-step-highlight {
   position: relative !important;
   outline: none;
