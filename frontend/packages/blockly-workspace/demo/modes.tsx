@@ -291,8 +291,7 @@ export const modes: Mode[] = [
       {
         name: 'Functions',
         key: 'PROCEDURE',
-        onLoad: workspace =>
-          Blockly.Procedures.flyoutCategory(workspace, false),
+        onLoad: workspace => Blockly.Procedures.flyoutCategory(workspace),
       },
       {name: 'Text', blocks: ['text', 'text_print']},
     ],

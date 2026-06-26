@@ -1759,7 +1759,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@blockly/field-grid-dropdown@npm:^6.0.10, @blockly/field-grid-dropdown@npm:^6.0.3":
+"@blockly/field-grid-dropdown@npm:^6.0.10":
   version: 6.0.10
   resolution: "@blockly/field-grid-dropdown@npm:6.0.10"
   peerDependencies:
@@ -1834,7 +1834,6 @@ __metadata:
   dependencies:
     "@blockly/block-shareable-procedures": "npm:^6.0.10"
     "@blockly/field-colour": "npm:^6.0.4"
-    "@blockly/field-grid-dropdown": "npm:^6.0.3"
     "@blockly/theme-dark": "npm:^8.0.3"
     "@blockly/theme-highcontrast": "npm:^7.0.3"
     "@code-dot-org/changelogs": "workspace:*"
@@ -1852,7 +1851,7 @@ __metadata:
     "@types/react": "catalog:"
     "@types/react-dom": "catalog:"
     "@vitest/browser-playwright": "catalog:"
-    blockly: "npm:12.2.0"
+    blockly: "npm:^13.0.0"
     classnames: "catalog:"
     clean-package: "npm:^2.2.0"
     eslint: "catalog:"
@@ -9462,12 +9461,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"blockly@npm:12.2.0":
-  version: 12.2.0
-  resolution: "blockly@npm:12.2.0"
-  dependencies:
-    jsdom: "npm:26.1.0"
-  checksum: 10c0/ef9fc45a354b163eeec00705a86905ab36d6c49398eeccf3bf4ba4f25e195c3d48161184eef01339dd00105e97854eac8a08f8d89a550a65cd6fdf66420e976b
+"blockly@npm:^13.0.0":
+  version: 13.0.0
+  resolution: "blockly@npm:13.0.0"
+  peerDependencies:
+    jsdom: ^27.4.0
+  checksum: 10c0/7b796da539e5e99a2a74de978e0e906890b9c5d838fada5f34be14b7daf87af811687f0604c184f11c843e62da615ac5e7c360251b7ed73f2b952ce2314ba591
   languageName: node
   linkType: hard
 
@@ -15866,7 +15865,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsdom@npm:26.1.0, jsdom@npm:^26.0.0":
+"jsdom@npm:^26.0.0":
   version: 26.1.0
   resolution: "jsdom@npm:26.1.0"
   dependencies:

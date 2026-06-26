@@ -5,7 +5,6 @@ import {
   javascriptGenerator,
   type JavascriptGenerator,
 } from 'blockly/javascript';
-import * as En from 'blockly/msg/en';
 import classNames from 'classnames';
 import {createElement, useCallback, useEffect, useRef} from 'react';
 import type {ReactElement, MutableRefObject} from 'react';
@@ -255,10 +254,9 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
     }
   }, [workspaceRef, javascriptGeneratorRef, anchor]);
 
-  // Register any new custom blocks
+  // Register any new custom blocks. Locale loading now happens in Agent.inject
+  // (before inject), so it is not repeated here.
   useEffect(() => {
-    Blockly.setLocale(En as unknown as {[key: string]: string});
-
     if (agentRef.current && blocks) {
       agentRef.current.driver.setBlocks(blocks);
     }

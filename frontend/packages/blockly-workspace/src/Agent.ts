@@ -1,4 +1,5 @@
 import * as Blockly from 'blockly/core';
+import * as En from 'blockly/msg/en';
 import EventEmitter from 'events';
 import type TypedEmitter from 'typed-emitter';
 import type {EventMap} from 'typed-emitter';
@@ -156,6 +157,13 @@ class Agent<T extends Environment = Environment> extends TypedEventEmitter<T> {
 
     if (this._workspace) {
       throw new Error('Blockly inject attempted a second time');
+    }
+
+    // Blockly v13 reads Blockly.Msg while building ARIA labels during inject, so
+    // a locale must be loaded first. Fall back to English only when the embedder
+    // has not already set one, so we do not clobber a chosen locale.
+    if (Object.keys(Blockly.Msg).length === 0) {
+      Blockly.setLocale(En as unknown as {[key: string]: string});
     }
 
     const container = this._inline
