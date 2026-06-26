@@ -26,4 +26,38 @@ describe('sharableProcedures plugin', () => {
       expect(Blockly.Blocks[type]).toBeDefined();
     }
   });
+
+  it('registers the shareable definitions, not stand-ins of the same name', () => {
+    plugin.initialize();
+
+    // Each registered block is the exact shareable definition object — proof it
+    // installed the shareable version rather than merely leaving something named
+    // the same in place.
+    for (const type of Object.keys(blocks)) {
+      expect(Blockly.Blocks[type]).toBe(blocks[type as keyof typeof blocks]);
+    }
+  });
+
+  it('replaces an existing procedure block of the same type', () => {
+    const [type] = Object.keys(blocks);
+    // Stand in a different definition under one of the procedure type names.
+    const placeholder = {init() {}};
+    Blockly.Blocks[type] = placeholder;
+
+    plugin.initialize();
+
+    expect(Blockly.Blocks[type]).not.toBe(placeholder);
+    expect(Blockly.Blocks[type]).toBe(blocks[type as keyof typeof blocks]);
+  });
+
+  it('can be initialized repeatedly without error', () => {
+    expect(() => {
+      plugin.initialize();
+      plugin.initialize();
+    }).not.toThrow();
+
+    for (const type of Object.keys(blocks)) {
+      expect(Blockly.Blocks[type]).toBe(blocks[type as keyof typeof blocks]);
+    }
+  });
 });
