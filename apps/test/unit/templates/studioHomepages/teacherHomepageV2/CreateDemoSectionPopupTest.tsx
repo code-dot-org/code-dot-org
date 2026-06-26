@@ -161,7 +161,7 @@ describe('CreateDemoSectionPopup', () => {
     await flush();
 
     expect(postSpy).toHaveBeenCalledWith(
-      '/api/v1/sections/demo/high',
+      '/api/v1/sections/demo/create/high',
       undefined,
       true
     );

@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-06-25T18:30:48.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "title": "Reflection: Working with AI",
+    "long_instructions": "Way to go! You explored how AI responds to prompts, how patterns in training data can shape outputs, and how AI can support the process of designing and building a webpage. Think about the role you played while working with AI. When were you the pilot making decisions? When did AI act as a co-pilot helping you improve or carry out your ideas? When did the work start to feel like autopilot, and how did you stay engaged?\r\n\r\n**After completing both activities, what do you notice about how you should work with AI? What would you do differently the next time you use AI to create, revise, or evaluate something?**\r\n\r\n_(Note: There is no \"right\" or \"wrong\" answer to this question - it's just a moment of reflection!)_",
+    "stay_on_level_after_submit": "false",
+    "submittable": "false",
+    "allow_multiple_attempts": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_iste-2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-25T18:30:48.671+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-13_pilot2_launch_iste-2026\\\"\"],\"cloned_from\":\"hoai-web-design-v2-13_pilot2_launch_iste-2026\"},{\"changed_at\":\"2026-06-25 18:30:52 +0000\",\"changed\":[],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"},{\"changed_at\":\"2026-06-25 18:46:48 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"},{\"changed_at\":\"2026-06-25 23:33:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

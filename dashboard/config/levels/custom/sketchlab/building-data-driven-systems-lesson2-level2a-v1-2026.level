@@ -21,7 +21,7 @@
             },
             "data": {
               "text": "Map Data to a Card",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 139.7748902707639,
               "showHandles": false
             },
@@ -43,7 +43,7 @@
             },
             "data": {
               "text": "Label each part of the card with the kind of information \nit should show.",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 61.61662781962848,
               "showHandles": false
             },
@@ -68,7 +68,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1518,
@@ -85,7 +85,7 @@
             },
             "data": {
               "text": "My card represents: ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 67.81137649894099,
               "showHandles": false
             },
@@ -109,8 +109,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 542,
@@ -127,7 +127,7 @@
             },
             "data": {
               "text": "image",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -150,8 +150,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#d0bfff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-purple)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 542,
@@ -167,7 +167,7 @@
             },
             "data": {
               "text": "title",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -190,8 +190,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#b2f2bb",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 542,
@@ -207,7 +207,7 @@
             },
             "data": {
               "text": "description",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -230,8 +230,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 542,
@@ -247,7 +247,7 @@
             },
             "data": {
               "text": "badge",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -271,7 +271,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1832,
@@ -293,8 +293,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#d0bfff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-purple)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1414,
@@ -310,7 +310,7 @@
             },
             "data": {
               "text": "title",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 114.54180294517,
               "showHandles": false
             },
@@ -333,8 +333,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#b2f2bb",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1414,
@@ -350,7 +350,7 @@
             },
             "data": {
               "text": "description",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 121.5517016416495,
               "showHandles": false
             },
@@ -373,8 +373,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 542,
@@ -390,7 +390,7 @@
             },
             "data": {
               "text": "badge",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 91.92206296977425,
               "showHandles": false
             },
@@ -413,8 +413,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1437,
@@ -451,7 +451,7 @@
             },
             "data": {
               "text": "image",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 110.07405598958339,
               "showHandles": false
             },
@@ -469,7 +469,7 @@
             },
             "data": {
               "text": "Example mapping:",
-              "fontColor": "#6741d9",
+              "fontColor": "var(--sketchlab-stroke-purple)",
               "fontSize": 96.6945281759697,
               "showHandles": false
             },
@@ -494,7 +494,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1832,
@@ -691,7 +691,7 @@
             },
             "data": {
               "text": "Map Data to a Card",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 139.7748902707639,
               "showHandles": false
             },
@@ -713,7 +713,7 @@
             },
             "data": {
               "text": "Label each part of the card with the kind of information \nit should show.",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 61.61662781962848,
               "showHandles": false
             },
@@ -738,7 +738,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1518,
@@ -754,7 +754,7 @@
             },
             "data": {
               "text": "My card represents: ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 67.81137649894099,
               "showHandles": false
             },
@@ -772,7 +772,7 @@
             },
             "data": {
               "text": "one squishy toy",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 107.62275299788189,
               "showHandles": false
             },
@@ -795,8 +795,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 542,
@@ -812,7 +812,7 @@
             },
             "data": {
               "text": "image",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -835,8 +835,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#d0bfff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-purple)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 542,
@@ -852,7 +852,7 @@
             },
             "data": {
               "text": "title",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -875,8 +875,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#b2f2bb",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 542,
@@ -892,7 +892,7 @@
             },
             "data": {
               "text": "description",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -915,8 +915,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 542,
@@ -932,7 +932,7 @@
             },
             "data": {
               "text": "badge",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 68.21836830831614,
               "showHandles": false
             },
@@ -950,7 +950,7 @@
             },
             "data": {
               "text": "squishy photo",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 89.61667197437507,
               "showHandles": false
             },
@@ -969,7 +969,7 @@
             },
             "data": {
               "text": "squishy name",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 88.71334738039951,
               "showHandles": false
             },
@@ -988,7 +988,7 @@
             },
             "data": {
               "text": "texture and style \n(soft, slow-rising, \nscented, etc.)",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 86.19782992063074,
               "showHandles": false
             },
@@ -1007,7 +1007,7 @@
             },
             "data": {
               "text": "type or category\n(food squishy, \nanimal squishy, etc)",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 85.43213990896898,
               "showHandles": false
             },
@@ -1032,7 +1032,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1832,
@@ -1054,8 +1054,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#d0bfff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-purple)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1414,
@@ -1072,7 +1072,7 @@
             },
             "data": {
               "text": "Strawberry Squishy",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 114.54180294517,
               "showHandles": false
             },
@@ -1096,8 +1096,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#b2f2bb",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1414,
@@ -1114,7 +1114,7 @@
             },
             "data": {
               "text": "Soft, slow-rising, and \nstrawberry scented toy.",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 109.31046449767143,
               "showHandles": false
             },
@@ -1138,8 +1138,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 642,
@@ -1156,7 +1156,7 @@
             },
             "data": {
               "text": "food squishy",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 91.92206296977425,
               "showHandles": false
             },
@@ -1197,7 +1197,7 @@
             },
             "data": {
               "text": "Example mapping:",
-              "fontColor": "#6741d9",
+              "fontColor": "var(--sketchlab-stroke-purple)",
               "fontSize": 96.6945281759697,
               "showHandles": false
             },
@@ -1373,7 +1373,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1832,

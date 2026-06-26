@@ -225,9 +225,12 @@ Dashboard::Application.routes.draw do
           get 'valid_course_offerings'
           get 'available_participant_types'
           get 'require_captcha'
-          get 'demo/presets', action: 'presets', as: 'presets'
-          post 'demo/:demo_type', action: 'create_demo', as: 'create_demo'
           get 'assigned_essential_ai_dependency'
+        end
+        collection do
+          get 'demo/presets', action: 'presets', as: 'presets'
+          get 'demo/check_staleness', action: 'check_demo_section_staleness', as: 'check_demo_section_staleness'
+          post 'demo/create/:demo_type', action: 'create_demo', as: 'create_demo'
         end
       end
     end
@@ -1167,6 +1170,10 @@ Dashboard::Application.routes.draw do
         # Routes used by personalization alert
         post 'users/has_dismissed_personalization_alert', to: 'users#post_has_dismissed_personalization_alert'
         get 'users/has_dismissed_personalization_alert', to: 'users#get_has_dismissed_personalization_alert'
+
+        # Routes used by the teacher onboarding checklist hide/resume control
+        post 'users/teacher_onboarding_hidden', to: 'users#post_teacher_onboarding_hidden'
+        get 'users/teacher_onboarding_hidden', to: 'users#get_teacher_onboarding_hidden'
 
         # Routes used by UI test status pages
         get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: {format: 'json'}

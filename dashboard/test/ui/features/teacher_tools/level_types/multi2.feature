@@ -1,3 +1,4 @@
+@playwright
 Feature: Playing multi2 levels
 
 Background:

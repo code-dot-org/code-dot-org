@@ -1,3 +1,8 @@
+// The :global(.react-flow__*) selectors below target class names that
+// @xyflow/react owns; they can't import the reactFlowSelectors.ts constants.
+// reactFlowSelectorsTest.tsx renders a live flow to catch a rename, which
+// would also break these overrides.
+
 // Pixels of clickable padding added around connection handles so users don't
 // have to land precisely on the small visible dot.
 $handle-grab-buffer: 10px;
@@ -122,6 +127,19 @@ $handle-grab-buffer: 10px;
 .connectSource {
   box-shadow: 0 0 0 4px var(--borders-neutral-solid);
   border-radius: 4px;
+}
+
+// Keyboard group-mode instruction banner shown at the bottom of the canvas.
+.groupModeIndicator {
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  border: 1px solid var(--borders-brand-teal-primary);
+  border-left: 4px solid var(--borders-brand-teal-primary);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  pointer-events: none;
+  user-select: none;
 }
 
 // Visually hidden but announced by screen readers.

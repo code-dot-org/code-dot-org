@@ -1,3 +1,4 @@
+@playwright
 Feature: Playing multi levels 3
 
   Scenario: Rendering in another language

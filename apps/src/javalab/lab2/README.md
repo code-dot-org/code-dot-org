@@ -139,7 +139,7 @@ still on the TODO list. Differences from legacy use:
 - Run button enabled at mount — Java has no client-side runtime to warm
   up, so `setLoadedCodeEnvironment(true)` dispatches in a `useEffect`.
 - Utilizes Lab2 resource panel, which gives us instructions, version history,
-  and committing a named version for free.
+  backpack, and committing a named version for free.
 - Can create/edit start sources and exemplars.
 - Validation (student run path): a level with validation files shows the
   Lab2 Validate button; clicking it runs the level's tests on Javabuilder
@@ -167,7 +167,6 @@ still on the TODO list. Differences from legacy use:
   deleted cannot re-seed from it.
 
 ## To Dos
-- **Backpack**
 - **Captcha dialog** on `AuthorizerSignalType.CAPTCHA`.
 - **Code review**.
 - **Contained levels (predict levels)** — Java Lab uses the old 'contained levels'
