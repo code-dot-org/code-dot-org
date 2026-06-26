@@ -131,6 +131,7 @@ const CODE_STUDIO_ENTRIES = {
 
 // prettier-ignore
 const INTERNAL_ENTRIES = {
+  'ai_iteration/image_safety_eval': './src/sites/studio/pages/ai_iteration/image_safety_eval.js',
   'ai_iteration/tools': './src/sites/studio/pages/ai_iteration/tools.js',
   'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
   'blocks/index': './src/sites/studio/pages/blocks/index.js',
