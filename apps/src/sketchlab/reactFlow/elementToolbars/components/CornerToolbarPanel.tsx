@@ -26,7 +26,7 @@ interface CornerToolbarPanelProps {
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
   pushSnapshot: () => void;
-  multiSelectedNodeIds: string[];
+  groupableCount: number;
   onGroupNodes: () => void;
   onUngroupNode: (groupId: string) => void;
 }
@@ -42,7 +42,7 @@ export default function CornerToolbarPanel({
   setNodes,
   setEdges,
   pushSnapshot,
-  multiSelectedNodeIds,
+  groupableCount,
   onGroupNodes,
   onUngroupNode,
 }: CornerToolbarPanelProps) {
@@ -64,21 +64,6 @@ export default function CornerToolbarPanel({
     setEdges,
     pushSnapshot,
   });
-
-  // Count logical groupable elements: regular nodes as 1 each, standalone-line
-  // anchor pairs as 1 (each line adds 2 lineAnchor IDs to the selection).
-  // Already-grouped and locked nodes are excluded.
-  const groupableCount = useMemo(() => {
-    let anchors = 0;
-    let nonAnchors = 0;
-    for (const id of multiSelectedNodeIds) {
-      const node = nodes.find(n => n.id === id);
-      if (!node || node.parentId || node.data?.locked) continue;
-      if (node.type === 'lineAnchor') anchors++;
-      else nonAnchors++;
-    }
-    return nonAnchors + anchors / 2;
-  }, [multiSelectedNodeIds, nodes]);
 
   const body = useMemo(() => {
     // Multi-selection takes priority: show group button when 2+ logical elements.
