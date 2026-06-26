@@ -27,6 +27,8 @@ This flowchart simulates a simple program that checks the value of the score to 
 
 Before looking at the code, use the flowchart logic to predict what the program will display.
 
+*Click the boxes below to reveal the answer.*
+
 <div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:16px; margin:24px 0;">
 
   <details style="background:#F5F7F8; border-radius:14px; padding:18px; box-shadow:2px 2px 8px rgba(0,0,0,0.1);">
