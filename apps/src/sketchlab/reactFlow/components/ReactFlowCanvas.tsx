@@ -605,6 +605,7 @@ export default function ReactFlowCanvas({
   const handleAddNode = useCallback(
     (request: AddNodeRequest) => {
       pushSnapshot();
+      setCanvasTool('cursor');
       const {type} = request;
       const stagger = addedNodeCountRef.current * NEW_NODE_STAGGER_PX;
       addedNodeCountRef.current += 1;
@@ -688,6 +689,7 @@ export default function ReactFlowCanvas({
       openToolbar,
       pushSnapshot,
       screenToFlowPosition,
+      setCanvasTool,
       setNodes,
       setEdges,
     ]
