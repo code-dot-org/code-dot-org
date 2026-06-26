@@ -73,7 +73,7 @@ describe('disableOrphans', () => {
   it('re-enables a block attached under an enabled parent', () => {
     const parent = append('text_print');
     const child = append('text_print');
-    parent.nextConnection.connect(child.previousConnection);
+    parent.nextConnection!.connect(child.previousConnection!);
     // Simulate the stale-disabled state the handler should clear.
     child.setDisabledReason(true, Blockly.constants.MANUALLY_DISABLED);
 

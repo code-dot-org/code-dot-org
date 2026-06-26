@@ -170,7 +170,7 @@ export class ToolboxTrashcan extends Blockly.DeleteArea {
       // Toggle the toolbox/flyout contents: the flyout workspace for a
       // flyout-only toolbox, and the category list for a categorized one. (An
       // earlier separate query for .blocklyToolboxContents was dead code — that
-      // class does not exist in Blockly v11 and matched nothing.)
+      // class does not exist in Blockly v13 and matched nothing.)
       document
         .querySelectorAll<SVGElement>(
           '.blocklyFlyout:not(.blockFieldFlyout) .blocklyWorkspace, .blocklyToolboxCategoryGroup',

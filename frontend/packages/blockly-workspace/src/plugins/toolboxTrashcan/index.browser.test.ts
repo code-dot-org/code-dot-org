@@ -181,7 +181,7 @@ describe('ToolboxTrashcan', () => {
     trashcan = new ToolboxTrashcan(workspace, DefaultTheme);
 
     const block = append('text_print');
-    // In Blockly v11 the category list renders as .blocklyToolboxCategoryGroup
+    // In Blockly v13 the category list renders as .blocklyToolboxCategoryGroup
     // (the handler's first selector). Its second selector, .blocklyToolboxContents,
     // matches nothing in this version.
     const categoryGroup = document.querySelector<HTMLElement>(
