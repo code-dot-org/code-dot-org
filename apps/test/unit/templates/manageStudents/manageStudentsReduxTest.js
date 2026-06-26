@@ -74,9 +74,15 @@ describe('parseAge', () => {
     assert.strictEqual(parseAge('  4  '), '4');
   });
 
+  it('normalizes ages 21 and up', () => {
+    assert.strictEqual(parseAge('21'), '21+');
+    assert.strictEqual(parseAge('22'), '21+');
+    assert.strictEqual(parseAge('  30  '), '21+');
+    assert.strictEqual(parseAge(21), '21+');
+  });
+
   it('rejects invalid ages', () => {
     assert.strictEqual(parseAge('3'), '');
-    assert.strictEqual(parseAge('22'), '');
     assert.strictEqual(parseAge('abc'), '');
     assert.strictEqual(parseAge('   '), '');
   });

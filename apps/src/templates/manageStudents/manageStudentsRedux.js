@@ -400,7 +400,11 @@ export const addStudents = studentIds => {
 
 export const parseAge = raw => {
   if (!raw) return '';
-  const trimmed = raw.trim();
+  const trimmed = raw.toString().trim();
+  const numericAge = Number(trimmed);
+  if (Number.isInteger(numericAge) && numericAge >= 21) {
+    return '21+';
+  }
   return ages.includes(trimmed) ? trimmed : '';
 };
 
