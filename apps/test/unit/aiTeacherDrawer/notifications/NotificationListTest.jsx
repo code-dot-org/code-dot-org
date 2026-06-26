@@ -1,7 +1,7 @@
 import {render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 
-import AiDiffNotificationList from '@cdo/apps/aiTeacherDrawer/notifications/AiDiffNotificationList';
+import NotificationList from '@cdo/apps/aiTeacherDrawer/notifications/NotificationList';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 jest.mock('@cdo/apps/util/HttpClient');
@@ -39,7 +39,7 @@ const mockNotifications = [
   NOTIFICATION_1,
 ];
 
-describe('AiDiffNotificationList', () => {
+describe('NotificationList', () => {
   beforeEach(() => {
     jest.clearAllMocks();
     console.error = jest.fn();
@@ -53,7 +53,7 @@ describe('AiDiffNotificationList', () => {
     it('displays loading skeleton notifications while fetching', () => {
       HttpClient.fetchJson.mockReturnValue(new Promise(() => {}));
 
-      render(<AiDiffNotificationList />);
+      render(<NotificationList />);
 
       const skeletonElements = document.querySelectorAll('.skeletonizeContent');
       expect(skeletonElements.length).toEqual(9);
@@ -75,7 +75,7 @@ describe('AiDiffNotificationList', () => {
         ],
       });
 
-      render(<AiDiffNotificationList />);
+      render(<NotificationList />);
 
       await waitFor(() => {
         screen.getByText('First External Notification:');
@@ -100,7 +100,7 @@ describe('AiDiffNotificationList', () => {
         value: [EXTERNAL_NOTIFICATION_2],
       });
 
-      render(<AiDiffNotificationList />);
+      render(<NotificationList />);
 
       await waitFor(() => {
         screen.getByText('Second External Notification:');
@@ -115,7 +115,7 @@ describe('AiDiffNotificationList', () => {
   it('displays empty state message when no notifications exist', async () => {
     HttpClient.fetchJson.mockResolvedValue({value: []});
 
-    render(<AiDiffNotificationList />);
+    render(<NotificationList />);
 
     await waitFor(() => {
       screen.getByText(/You don't have any new notifications/);
@@ -129,7 +129,7 @@ describe('AiDiffNotificationList', () => {
       const mockError = new Error('Network error');
       HttpClient.fetchJson.mockRejectedValue(mockError);
 
-      render(<AiDiffNotificationList />);
+      render(<NotificationList />);
 
       await waitFor(() => {
         expect(console.error).toHaveBeenCalledWith(
@@ -142,7 +142,7 @@ describe('AiDiffNotificationList', () => {
     it('handles malformed response data gracefully', async () => {
       HttpClient.fetchJson.mockResolvedValue({value: 'invalid-data'});
 
-      render(<AiDiffNotificationList />);
+      render(<NotificationList />);
 
       await waitFor(() => {
         screen.getByText(/You don't have any new notifications/);
@@ -153,7 +153,7 @@ describe('AiDiffNotificationList', () => {
   it('sorts notifications by most recent publishedAt date', async () => {
     HttpClient.fetchJson.mockResolvedValue({value: mockNotifications});
 
-    render(<AiDiffNotificationList />);
+    render(<NotificationList />);
 
     await waitFor(() => {
       screen.getByText('First Notification:');

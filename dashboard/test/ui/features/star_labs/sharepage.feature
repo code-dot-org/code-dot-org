@@ -2,7 +2,7 @@
 Feature: Puzzle share page
 
 Scenario: Share a flappy game, visit the share page, and visit the workspace
-  Given I am on "http://studio.code.org/flappy/10?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/7/levels/2?noautoplay=true"
   And I wait for the lab page to fully load
   And I've initialized the workspace with my flappy puzzle.
 

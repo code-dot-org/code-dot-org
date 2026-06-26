@@ -3,7 +3,7 @@ require 'metrics/events'
 class Api::V1::SectionsController < Api::V1::JSONApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
-  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :create_demo, :presets, :update, :require_captcha, :assigned_essential_ai_dependency]
+  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :create_demo, :presets, :update, :check_demo_section_staleness, :require_captcha, :assigned_essential_ai_dependency]
   before_action :get_course_and_unit, only: [:create, :update]
 
   skip_before_action :verify_authenticity_token, only: [:update]
@@ -95,7 +95,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     render json: section.summarize
   end
 
-  # POST /api/v1/sections/demo/:demo_type
+  # POST /api/v1/sections/demo/create/:demo_type
   # Creates a demo section with preset properties and adds demo students.
   def create_demo
     authorize! :create, Section
@@ -156,6 +156,23 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
 
     preset_views = Policies::DemoSections.preset_views_for_all_types
     render json: preset_views
+  end
+
+  # GET /api/v1/sections/demo/check_staleness?id=<id>
+  # Confirms that a demo section tracks fields necessary for onboarding
+  # 403: forbidden = section does not exist or is not a demo section.
+  # 200: ok = with a message when the section has drifted from its preset
+  # 204: No Content = section is up to date with its preset
+  def check_demo_section_staleness
+    section = Section.find(params[:id])
+    authorize! :manage, section
+    raise ActiveRecord::RecordNotFound unless section.demo_section?
+
+    unless Policies::DemoSections.section_matches_preset?(section)
+      return render json: {message: 'Demo section curriculum is out of date.'}, status: :ok
+    end
+
+    head :no_content
   end
 
   # PATCH /api/v1/sections/<id>

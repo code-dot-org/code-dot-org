@@ -3,6 +3,7 @@ import {Slider} from '@mui/material';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {DEFAULT_ROTATION} from '@cdo/apps/sketchlab/reactFlow/constants';
+import {REACT_FLOW_INTERACTION_CLASS} from '@cdo/apps/sketchlab/reactFlow/reactFlowSelectors';
 
 import ToolbarSection from '../components/ToolbarSection';
 
@@ -141,7 +142,9 @@ export default function RotationGroup({
        * descendants) carry the `nopan` class. Without it a slider drag pans
        * the workspace instead of moving the thumb.
        */}
-      <div className={`${styles.rotationRow} nopan`}>
+      <div
+        className={`${styles.rotationRow} ${REACT_FLOW_INTERACTION_CLASS.noPan}`}
+      >
         <Slider
           className={styles.rotationSlider}
           size="small"
