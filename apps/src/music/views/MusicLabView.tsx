@@ -434,14 +434,10 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               {teacherViewingStudent && (
                 <TeacherViewingStudentProjectAlert inWorkspaceContainer />
               )}
-              {teacherViewingStudent ? (
-                <PairingNavigatorAlert
-                  inWorkspaceContainer
-                  isTeacherViewingStudent={true}
-                />
-              ) : (
-                <PairingNavigatorAlert inWorkspaceContainer />
-              )}
+              <PairingNavigatorAlert
+                inWorkspaceContainer
+                isTeacherViewingStudent={teacherViewingStudent}
+              />
               {viewingOldVersion && (
                 <div
                   id="viewingOldVersionBanner"

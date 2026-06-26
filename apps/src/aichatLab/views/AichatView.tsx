@@ -386,16 +386,10 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
             </div>
           )}
           {teacherViewingStudent && <TeacherViewingStudentProjectAlert />}
-          {teacherViewingStudent ? (
-            <PairingNavigatorAlert
-              isTeacherViewingStudent={true}
-              doesAppTypeHaveStandaloneProjectLevel={false}
-            />
-          ) : (
-            <PairingNavigatorAlert
-              doesAppTypeHaveStandaloneProjectLevel={false}
-            />
-          )}
+          <PairingNavigatorAlert
+            isTeacherViewingStudent={teacherViewingStudent}
+            doesAppTypeHaveStandaloneProjectLevel={false}
+          />
           <div className={moduleStyles.labCoreContainer}>
             {viewMode === ViewMode.EDIT && (
               <>

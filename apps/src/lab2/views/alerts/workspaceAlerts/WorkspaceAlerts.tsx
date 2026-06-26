@@ -31,18 +31,11 @@ const WorkspaceAlerts: React.FC<WorkspaceAlertsProps> = ({
           inWorkspaceContainer={inWorkspaceContainer}
         />
       )}
-      {teacherViewingStudent ? (
-        <PairingNavigatorAlert
-          inWorkspaceContainer={inWorkspaceContainer}
-          isTeacherViewingStudent={true}
-          doesAppTypeHaveStandaloneProjectLevel={hasStandaloneProjectLevel}
-        />
-      ) : (
-        <PairingNavigatorAlert
-          inWorkspaceContainer={inWorkspaceContainer}
-          doesAppTypeHaveStandaloneProjectLevel={hasStandaloneProjectLevel}
-        />
-      )}
+      <PairingNavigatorAlert
+        inWorkspaceContainer={inWorkspaceContainer}
+        isTeacherViewingStudent={teacherViewingStudent}
+        doesAppTypeHaveStandaloneProjectLevel={hasStandaloneProjectLevel}
+      />
       <PreviousVersionAlert />
     </>
   );
