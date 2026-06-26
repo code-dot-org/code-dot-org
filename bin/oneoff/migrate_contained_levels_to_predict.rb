@@ -99,8 +99,7 @@ def build_predict(contained)
       'placeholderText' => contained.properties['placeholder'].to_s,
       'freeResponseHeight' => height,
     }
-    instructions = contained.properties['long_instructions'].to_s
-    [settings, instructions, warnings]
+    [settings, with_title(contained, contained.properties['long_instructions']), warnings]
   elsif contained.is_a?(Multi)
     answers = contained.properties['answers'] || []
     option_texts = answers.map {|a| a['text']}
@@ -118,8 +117,15 @@ def build_predict(contained)
       'multipleChoiceOptions' => option_texts,
       'isMultiSelect' => correct.length > 1,
     }
-    [settings, contained.get_question_text.to_s, warnings]
+    [settings, with_title(contained, contained.get_question_text), warnings]
   end
+end
+
+# Prepend the contained level's title as an h1 to its question text, when present.
+def with_title(contained, body)
+  title = contained.properties['title'].to_s.strip
+  body = body.to_s
+  title.empty? ? body : "# #{title}\n\n#{body}"
 end
 
 def truncate(str, len = 80)
