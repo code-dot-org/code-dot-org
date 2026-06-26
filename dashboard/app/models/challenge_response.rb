@@ -5,7 +5,6 @@
 #  id                :bigint           not null, primary key
 #  challenge_id      :bigint           not null
 #  user_id           :integer          not null
-#  modality          :string(255)
 #  student_text      :text(65535)
 #  transcript        :text(65535)
 #  student_feedback  :text(65535)
@@ -24,11 +23,4 @@ class ChallengeResponse < ApplicationRecord
   belongs_to :challenge
   belongs_to :user
   has_many :challenge_response_assets, dependent: :destroy
-
-  # What the student actually used: whiteboard / video / both. Nullable.
-  enum modality: {
-    whiteboard: 'whiteboard',
-    video: 'video',
-    both: 'both',
-  }, _prefix: :modality
 end

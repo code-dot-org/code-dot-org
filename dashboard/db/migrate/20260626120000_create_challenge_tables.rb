@@ -23,8 +23,6 @@ class CreateChallengeTables < ActiveRecord::Migration[7.0]
       t.references :challenge, null: false, foreign_key: true, index: false
       # users.id is :integer, so the FK column must match that type.
       t.references :user, null: false, type: :integer, foreign_key: true
-      # enum string: whiteboard / video / both (what the student actually used).
-      t.string :modality
       t.text :student_text
       t.text :transcript
       t.text :student_feedback

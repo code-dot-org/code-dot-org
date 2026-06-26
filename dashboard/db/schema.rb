@@ -379,7 +379,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_06_26_120000) do
   create_table "challenge_responses", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "challenge_id", null: false
     t.integer "user_id", null: false
-    t.string "modality"
     t.text "student_text"
     t.text "transcript"
     t.text "student_feedback"
