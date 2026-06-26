@@ -30,7 +30,6 @@ class SessionsController < Devise::SessionsController
   def destroy
     redirect_path = after_sign_out_path_for(:user)
 
-    clear_pairing_session_state
     sign_out
 
     yield resource if block_given?
@@ -118,11 +117,6 @@ class SessionsController < Devise::SessionsController
   end
 
   # Override default Devise sign_out path method
-  private def clear_pairing_session_state
-    session.delete(:pairings)
-    session.delete(:pairing_section_id)
-  end
-
   private def after_sign_out_path_for(resource_or_scope)
     user = resource_or_scope && send(:"current_#{resource_or_scope}")
     if user&.oauth?
