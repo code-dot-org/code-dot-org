@@ -13,12 +13,17 @@ const LABS_WITH_IMAGE_MODERATION = [
   'game_design',
 ];
 
-type CategoryName = 'Hate' | 'SelfHarm' | 'Sexual' | 'Violence';
-type SeverityThresholds = Partial<Record<CategoryName, number>>;
-type CategoryAnalysis = {
+export type CategoryName = 'Hate' | 'SelfHarm' | 'Sexual' | 'Violence';
+export type SeverityThresholds = Partial<Record<CategoryName, number>>;
+export type CategoryAnalysis = {
   category: CategoryName;
   severity: 0 | 2 | 4 | 6;
 };
+// The parsed body of a /v3/images/moderate response (Azure AI Content Safety),
+// or null when the moderation service is unavailable.
+export type ImageModerationResult = {
+  categoriesAnalysis?: CategoryAnalysis[];
+} | null;
 
 // Severity level blocked by category for AI Content Safety.
 // If any category's severity level is greater than or equal to the severity level blocked value,
@@ -31,6 +36,27 @@ const CATEGORY_SEVERITY_LEVEL_BLOCKED: Record<CategoryName, number> = {
   SelfHarm: 2,
   Sexual: 2,
   Violence: 4,
+};
+
+// Applies the per-category severity thresholds to a parsed Azure response and
+// returns the flag/allow decision. Single source of truth shared by
+// moderateImage() and the image-safety eval. Matches the historical inline
+// check: 'safe' only when every reported category is below its blocked
+// severity; a missing/non-array categoriesAnalysis is treated as 'flagged'.
+export const getImageModerationVerdict = (
+  result: ImageModerationResult,
+  overrideSeverityThresholds?: SeverityThresholds
+): 'safe' | 'flagged' => {
+  const categorySeverityLevelBlocked: Record<CategoryName, number> = {
+    ...CATEGORY_SEVERITY_LEVEL_BLOCKED,
+    ...overrideSeverityThresholds,
+  };
+  const categories = result?.categoriesAnalysis;
+  const safe = categories?.every(
+    category =>
+      category?.severity < categorySeverityLevelBlocked[category?.category]
+  );
+  return safe ? 'safe' : 'flagged';
 };
 
 interface AnalyticsData {
@@ -79,16 +105,8 @@ export const moderateImage = async (
 
     MetricsReporter.incrementCounter('ModerateCustomImage.Success', dimensions);
 
-    const categorySeverityLevelBlocked: Record<CategoryName, number> = {
-      ...CATEGORY_SEVERITY_LEVEL_BLOCKED,
-      ...overrideSeverityThresholds,
-    };
-    const categories = json?.categoriesAnalysis;
     if (
-      categories?.every(
-        (category: CategoryAnalysis) =>
-          category?.severity < categorySeverityLevelBlocked[category?.category]
-      )
+      getImageModerationVerdict(json, overrideSeverityThresholds) === 'safe'
     ) {
       return 'safe';
     }

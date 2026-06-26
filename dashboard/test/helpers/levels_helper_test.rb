@@ -478,7 +478,6 @@ class LevelsHelperTest < ActionView::TestCase
   test 'applab levels should include pairing_driver and pairing_channel_id when viewed by navigator' do
     @level = create(:applab)
     @driver = create(:student)
-    stub_storage_id_for_user_id(@driver.id)
     @navigator = create(:student)
     create_applab_progress_for_pair @level, @driver, @navigator
 
@@ -525,7 +524,8 @@ class LevelsHelperTest < ActionView::TestCase
     create(:paired_user_level,
       driver_user_level: driver_user_level, navigator_user_level: navigator_user_level
 )
-    create(:channel_token, level: level, storage_id: fake_storage_id_for_user_id(driver.id))
+    driver_storage_id = storage_id_for_user_id(driver.id) || create_storage_id_for_user(driver.id)
+    create(:channel_token, level: level, storage_id: driver_storage_id)
   end
 
   def stub_country(code)
