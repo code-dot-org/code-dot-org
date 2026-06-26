@@ -78,11 +78,3 @@ export const AnchorDraggingProvider = AnchorDraggingContext.Provider;
 export function useIsAnchorDragging(): boolean {
   return useContext(AnchorDraggingContext);
 }
-
-const SketchLabGrabModeContext = createContext(false);
-
-export const SketchLabGrabModeProvider = SketchLabGrabModeContext.Provider;
-
-export function useSketchLabGrabMode(): boolean {
-  return useContext(SketchLabGrabModeContext);
-}

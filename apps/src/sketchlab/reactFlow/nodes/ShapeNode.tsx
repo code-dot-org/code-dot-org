@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 
 import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
-import {usePushSnapshot, useSketchLabGrabMode, useSketchLabReadOnly} from '../context';
+import {usePushSnapshot, useSketchLabReadOnly} from '../context';
 import {
   fontSizePx,
   DEFAULT_TEXT_ALIGN,
@@ -101,7 +101,6 @@ function ShapeNode({
   isConnectable,
 }: NodeProps<ShapeNodeType>) {
   const readOnly = useSketchLabReadOnly();
-  const grabMode = useSketchLabGrabMode();
   const {updateNodeData} = useReactFlow();
   const pushSnapshot = usePushSnapshot();
   const [isEditing, setIsEditing] = useState(false);
@@ -115,7 +114,7 @@ function ShapeNode({
   const {shapeType, label, backgroundColor, strokeColor} = data;
 
   const startEditing = useCallback(() => {
-    if (isEditing || readOnly || grabMode || data.locked) {
+    if (isEditing || readOnly || data.locked) {
       return;
     }
     labelAtEditStart.current = label;
@@ -131,7 +130,7 @@ function ShapeNode({
         selection?.addRange(range);
       }
     }, 0);
-  }, [isEditing, readOnly, grabMode, data.locked, label]);
+  }, [isEditing, readOnly, data.locked, label]);
 
   const commitEdit = useCallback(() => {
     setIsEditing(false);

@@ -36,7 +36,6 @@ import {
   AnchorDraggingProvider,
   ClipboardProvider,
   PushSnapshotProvider,
-  SketchLabGrabModeProvider,
   SketchLabReadOnlyProvider,
   ToolbarVisibilityProvider,
   type ToolbarTarget,
@@ -711,121 +710,119 @@ export default function ReactFlowCanvas({
   };
 
   return (
-    <SketchLabGrabModeProvider value={canvasTool === 'grab'}>
-      <SketchLabReadOnlyProvider value={readOnly}>
-        <ToolbarVisibilityProvider value={toolbarVisibility}>
-          <ClipboardProvider value={clipboardContextValue}>
-            <PushSnapshotProvider value={pushSnapshot}>
-              <AnchorDraggingProvider value={isAnchorDragging}>
-                <FocusTrap
-                  active={isGroupMode}
-                  focusTrapOptions={{
-                    initialFocus: false,
-                    escapeDeactivates: false,
-                    allowOutsideClick: true,
-                    returnFocusOnDeactivate: false,
-                  }}
+    <SketchLabReadOnlyProvider value={readOnly || isGrabMode}>
+      <ToolbarVisibilityProvider value={toolbarVisibility}>
+        <ClipboardProvider value={clipboardContextValue}>
+          <PushSnapshotProvider value={pushSnapshot}>
+            <AnchorDraggingProvider value={isAnchorDragging}>
+              <FocusTrap
+                active={isGroupMode}
+                focusTrapOptions={{
+                  initialFocus: false,
+                  escapeDeactivates: false,
+                  allowOutsideClick: true,
+                  returnFocusOnDeactivate: false,
+                }}
+              >
+                <div
+                  ref={canvasContainerRef}
+                  className={classNames(
+                    styles.canvasContainer,
+                    {
+                      [styles.connectMode]: !!connectingFrom,
+                    },
+                    SKETCHLAB_CONTAINER_CLASS
+                  )}
+                  tabIndex={-1}
+                  onKeyDownCapture={handleKeyDown}
+                  onFocusCapture={handleFocusCapture}
+                  onBlur={handleContainerBlur}
+                  onMouseMove={handleMouseMove}
+                  onMouseLeave={handleMouseLeave}
                 >
-                  <div
-                    ref={canvasContainerRef}
-                    className={classNames(
-                      styles.canvasContainer,
-                      {
-                        [styles.connectMode]: !!connectingFrom,
-                      },
-                      SKETCHLAB_CONTAINER_CLASS
-                    )}
-                    tabIndex={-1}
-                    onKeyDownCapture={handleKeyDown}
-                    onFocusCapture={handleFocusCapture}
-                    onBlur={handleContainerBlur}
-                    onMouseMove={handleMouseMove}
-                    onMouseLeave={handleMouseLeave}
-                  >
-                    {!readOnly && (
-                      <Toolbar
-                        onAddNode={handleAddNode}
-                        levelName={levelName}
-                        canvasTool={canvasTool}
-                        onSetCanvasTool={setCanvasTool}
-                      />
-                    )}
-                    <div aria-live="assertive" className={styles.srOnly}>
-                      {connectAnnouncement}
-                    </div>
-                    <div aria-live="polite" className={styles.srOnly}>
-                      {ariaAnnouncement}
-                    </div>
-                    <ReactFlow
-                      nodes={displayNodes}
-                      edges={displayEdges}
-                      onNodesChange={handleNodesChange}
-                      onEdgesChange={handleEdgesChange}
-                      {...grabModeProps}
-                      onPaneClick={handlePaneClick}
-                      onConnect={onConnect}
-                      onNodesDelete={handleElementsDeleted}
-                      onEdgesDelete={handleElementsDeleted}
-                      onNodeDragStart={handleNodeDragStart}
-                      onNodeDrag={handleNodeDrag}
-                      onNodeDragStop={handleNodeDragStop}
-                      isValidConnection={isValidConnection}
-                      connectionLineComponent={ConnectionLine}
-                      minZoom={MIN_ZOOM}
-                      connectionRadius={LINE_RECONNECT_SNAP_RADIUS_PX}
-                      nodeTypes={NODE_TYPES}
-                      onMoveEnd={handleMoveEnd}
-                      defaultViewport={initialViewport}
-                      fitView={!initialViewport}
-                      colorMode={colorMode}
-                      // We implement our own shift+click multi-selection; disable
-                      // React Flow's built-in so it doesn't fight our selection state.
-                      multiSelectionKeyCode={null}
-                      deleteKeyCode={readOnly ? null : 'Delete'}
-                      proOptions={{hideAttribution: true}}
-                      // Even though we manage tab order, we keep React Flow's keyboard A11y on because
-                      // it manages things like moving nodes with arrow keys.
-                      disableKeyboardA11y={false}
-                      autoPanOnNodeFocus={false} // We manage viewport on focus manually in useFocusManagement.
-                      zIndexMode={'manual'}
-                      defaultEdgeOptions={DEFAULT_EDGE_OPTIONS}
-                      defaultMarkerColor={DEFAULT_STROKE_COLOR}
-                    >
-                      <CornerToolbarPanel
-                        nodes={nodes}
-                        edges={edges}
-                        setNodes={setNodes}
-                        setEdges={setEdges}
-                        pushSnapshot={pushSnapshot}
-                        groupableCount={groupableCount}
-                        onGroupNodes={handleGroupNodes}
-                        onUngroupNode={handleUngroupNode}
-                      />
-                      {isGroupMode && (
-                        <Panel
-                          position="bottom-center"
-                          className={styles.groupModeIndicator}
-                        >
-                          {groupModeError ??
-                            'Tab to move — Enter to select/deselect — G to group — Esc to cancel'}
-                        </Panel>
-                      )}
-                      <Background />
-                      <CanvasControls
-                        onUndo={handleUndo}
-                        onRedo={handleRedo}
-                        canUndo={canUndo}
-                        canRedo={canRedo}
-                        isReadOnly={readOnly}
-                      />
-                    </ReactFlow>
+                  {!readOnly && (
+                    <Toolbar
+                      onAddNode={handleAddNode}
+                      levelName={levelName}
+                      canvasTool={canvasTool}
+                      onSetCanvasTool={setCanvasTool}
+                    />
+                  )}
+                  <div aria-live="assertive" className={styles.srOnly}>
+                    {connectAnnouncement}
                   </div>
-                </FocusTrap>
-              </AnchorDraggingProvider>
-            </PushSnapshotProvider>
-          </ClipboardProvider>
-        </ToolbarVisibilityProvider>
-      </SketchLabReadOnlyProvider>
-    </SketchLabGrabModeProvider>
+                  <div aria-live="polite" className={styles.srOnly}>
+                    {ariaAnnouncement}
+                  </div>
+                  <ReactFlow
+                    nodes={displayNodes}
+                    edges={displayEdges}
+                    onNodesChange={handleNodesChange}
+                    onEdgesChange={handleEdgesChange}
+                    {...grabModeProps}
+                    onPaneClick={handlePaneClick}
+                    onConnect={onConnect}
+                    onNodesDelete={handleElementsDeleted}
+                    onEdgesDelete={handleElementsDeleted}
+                    onNodeDragStart={handleNodeDragStart}
+                    onNodeDrag={handleNodeDrag}
+                    onNodeDragStop={handleNodeDragStop}
+                    isValidConnection={isValidConnection}
+                    connectionLineComponent={ConnectionLine}
+                    minZoom={MIN_ZOOM}
+                    connectionRadius={LINE_RECONNECT_SNAP_RADIUS_PX}
+                    nodeTypes={NODE_TYPES}
+                    onMoveEnd={handleMoveEnd}
+                    defaultViewport={initialViewport}
+                    fitView={!initialViewport}
+                    colorMode={colorMode}
+                    // We implement our own shift+click multi-selection; disable
+                    // React Flow's built-in so it doesn't fight our selection state.
+                    multiSelectionKeyCode={null}
+                    deleteKeyCode={readOnly ? null : 'Delete'}
+                    proOptions={{hideAttribution: true}}
+                    // Even though we manage tab order, we keep React Flow's keyboard A11y on because
+                    // it manages things like moving nodes with arrow keys.
+                    disableKeyboardA11y={false}
+                    autoPanOnNodeFocus={false} // We manage viewport on focus manually in useFocusManagement.
+                    zIndexMode={'manual'}
+                    defaultEdgeOptions={DEFAULT_EDGE_OPTIONS}
+                    defaultMarkerColor={DEFAULT_STROKE_COLOR}
+                  >
+                    <CornerToolbarPanel
+                      nodes={nodes}
+                      edges={edges}
+                      setNodes={setNodes}
+                      setEdges={setEdges}
+                      pushSnapshot={pushSnapshot}
+                      groupableCount={groupableCount}
+                      onGroupNodes={handleGroupNodes}
+                      onUngroupNode={handleUngroupNode}
+                    />
+                    {isGroupMode && (
+                      <Panel
+                        position="bottom-center"
+                        className={styles.groupModeIndicator}
+                      >
+                        {groupModeError ??
+                          'Tab to move — Enter to select/deselect — G to group — Esc to cancel'}
+                      </Panel>
+                    )}
+                    <Background />
+                    <CanvasControls
+                      onUndo={handleUndo}
+                      onRedo={handleRedo}
+                      canUndo={canUndo}
+                      canRedo={canRedo}
+                      isReadOnly={readOnly}
+                    />
+                  </ReactFlow>
+                </div>
+              </FocusTrap>
+            </AnchorDraggingProvider>
+          </PushSnapshotProvider>
+        </ClipboardProvider>
+      </ToolbarVisibilityProvider>
+    </SketchLabReadOnlyProvider>
   );
 }

@@ -1,7 +1,7 @@
 import {useConnection} from '@xyflow/react';
 import {useCallback, useMemo, useState} from 'react';
 
-import {useIsAnchorDragging, useSketchLabGrabMode} from '../context';
+import {useIsAnchorDragging, useSketchLabReadOnly} from '../context';
 
 /**
  * Decides when a node's connection handles are shown. Handles appear while the
@@ -15,14 +15,14 @@ export function useConnectionHandleVisibility(
 ) {
   const connection = useConnection();
   const isAnchorDragging = useIsAnchorDragging();
-  const grabMode = useSketchLabGrabMode();
+  const readOnly = useSketchLabReadOnly();
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = useCallback(() => setIsHovered(true), []);
   const handleMouseLeave = useCallback(() => setIsHovered(false), []);
 
   const showHandles =
-    !grabMode &&
+    !readOnly &&
     (selected ||
       isAnchorDragging ||
       connection.inProgress ||

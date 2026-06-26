@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
 
 import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
-import {usePushSnapshot, useSketchLabGrabMode, useSketchLabReadOnly} from '../context';
+import {usePushSnapshot, useSketchLabReadOnly} from '../context';
 import {
   fontSizePx,
   DEFAULT_TEXT_ALIGN,
@@ -22,7 +22,6 @@ function TextNode({
   isConnectable,
 }: NodeProps<TextNodeType>) {
   const readOnly = useSketchLabReadOnly();
-  const grabMode = useSketchLabGrabMode();
   const {updateNodeData} = useReactFlow();
   const pushSnapshot = usePushSnapshot();
   const [isEditing, setIsEditing] = useState(false);
@@ -52,7 +51,7 @@ function TextNode({
   );
 
   const startEditing = useCallback(() => {
-    if (isEditing || readOnly || grabMode || data.locked) {
+    if (isEditing || readOnly || data.locked) {
       return;
     }
     textAtEditStart.current = text;
@@ -68,7 +67,7 @@ function TextNode({
         selection?.addRange(range);
       }
     }, 0);
-  }, [isEditing, readOnly, grabMode, data.locked, text]);
+  }, [isEditing, readOnly, data.locked, text]);
 
   const commitEdit = useCallback(() => {
     setIsEditing(false);
