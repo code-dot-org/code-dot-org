@@ -1,6 +1,6 @@
 Feature: Block auto-layout
 Background:
-  Given I am on "http://studio.code.org/flappy/10?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/7/levels/2?noautoplay=true"
   And I wait for the lab page to fully load
 
 Scenario: Auto-placing malformed start blocks

@@ -357,6 +357,7 @@ class LevelsController < ApplicationController
     if @level.respond_to?(:validation)
       @level.validation = changes["validation"]
     end
+    @level.clear_lab2_starter_assets if @level.respond_to?(:clear_lab2_starter_assets)
     return update_properties(ignored_keys: ["validation"])
   end
 

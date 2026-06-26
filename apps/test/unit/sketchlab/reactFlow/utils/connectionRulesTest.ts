@@ -49,6 +49,11 @@ describe('canCreateConnection', () => {
     expect(canCreateConnection('a', 'b', nodes)).toBe(false);
     expect(canCreateConnection('b', 'a', nodes)).toBe(false);
   });
+
+  it('blocks self-connections on the same node', () => {
+    const nodes = [shapeNode('a')];
+    expect(canCreateConnection('a', 'a', nodes)).toBe(false);
+  });
 });
 
 describe('isLineAnchorNodeId', () => {

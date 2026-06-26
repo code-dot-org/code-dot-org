@@ -159,6 +159,9 @@ export default function ReactFlowCanvas({
   const {target: openToolbarTarget, trapFocus} = openToolbarInfo;
 
   const [isAnyPopoverOpen, setPopoverOpen] = useState(false);
+  const [keyboardMovingLineId, setKeyboardMovingLineId] = useState<
+    string | null
+  >(null);
 
   const openToolbar = useCallback(
     (target: ToolbarTarget, options?: {trapFocus?: boolean}) => {
@@ -337,6 +340,7 @@ export default function ReactFlowCanvas({
       redo: handleRedo,
       pushSnapshot,
       lastFocusedEntry,
+      onLineKeyboardMove: setKeyboardMovingLineId,
     });
 
   const {handleEdgeMouseDown, isLineDragging} = useLineEdgeDrag({
@@ -347,7 +351,18 @@ export default function ReactFlowCanvas({
     flowToScreenPosition,
     pushSnapshot,
   });
-  const isAnchorDragging = isDirectAnchorDragging || isLineDragging;
+  const isAnchorDragging =
+    isDirectAnchorDragging || isLineDragging || keyboardMovingLineId !== null;
+
+  // Clear the keyboard-move flag once focus leaves the anchor or edge being moved.
+  useEffect(() => {
+    if (!keyboardMovingLineId) return;
+    const stillFocused =
+      nodeOrEdgeFocused && lastFocusedEntry?.id === keyboardMovingLineId;
+    if (!stillFocused) {
+      setKeyboardMovingLineId(null);
+    }
+  }, [lastFocusedEntry, keyboardMovingLineId, nodeOrEdgeFocused]);
 
   // Close the toolbar when focus moves off the owning node/edge: to a
   // different node/edge, or out of the canvas entirely. Skips clearing
@@ -556,7 +571,6 @@ export default function ReactFlowCanvas({
       });
 
       const newNodeId = createUuid();
-      // Text nodes auto-size to fit content; shapes and images use fixed defaults.
       // width/height are the React Flow fields NodeResizer also writes on drag,
       // keeping creation and resize consistent. style is reserved for appearance.
       // Cast is needed because TS can't preserve the (type, data) correlation
@@ -566,10 +580,8 @@ export default function ReactFlowCanvas({
         type,
         data: request.data,
         position,
-        ...(type !== 'text' && {
-          width: DEFAULT_NODE_WIDTH,
-          height: DEFAULT_NODE_HEIGHT,
-        }),
+        width: DEFAULT_NODE_WIDTH,
+        height: DEFAULT_NODE_HEIGHT,
       } as SketchLabNode;
 
       setNodes(currentNodes => [...currentNodes, newNode]);

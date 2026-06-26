@@ -32,13 +32,6 @@ class MarkdownInstructions extends React.Component {
     }
   }
 
-  componentWillUnmount() {
-    const detailsDOM = $(ReactDOM.findDOMNode(this)).find('details');
-    if (detailsDOM.details) {
-      detailsDOM.off('toggle.details.TopInstructions');
-    }
-  }
-
   /**
    * Attach any necessary jQuery to our markdown
    */
@@ -48,17 +41,10 @@ class MarkdownInstructions extends React.Component {
     }
 
     const thisNode = ReactDOM.findDOMNode(this);
-    // If we have the jQuery details plugin, enable its usage on any details
-    // elements
-    const detailsDOM = $(thisNode).find('details');
-    if (detailsDOM.details) {
-      detailsDOM.details();
-      detailsDOM.on({
-        'toggle.details.TopInstructions': () => {
-          this.props.onResize();
-        },
-      });
-    }
+
+    thisNode.querySelectorAll('details').forEach(details => {
+      details.addEventListener('toggle', this.props.onResize);
+    });
 
     if (this.props.isBlockly) {
       // Convert any inline XML into blockly blocks. Note that we want to

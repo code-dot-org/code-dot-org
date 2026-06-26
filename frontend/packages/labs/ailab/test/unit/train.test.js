@@ -1,10 +1,8 @@
 import {createStore} from 'redux';
 
-import {ColumnTypes} from '../../src/constants';
+import { ColumnTypes } from '../../src/constants';
 import {getConvertedPredictedLabel} from '../../src/helpers/valueConversion';
 import rootReducer, {
-  setFirehoseMetricsLogger,
-  setInstructionsKeyCallback,
   setImportedData,
   setLabelColumn,
   addSelectedFeature,
@@ -16,9 +14,6 @@ import train from '../../src/train';
 describe('train functions', () => {
   test('train and predict with numerical data', async () => {
     const store = createStore(rootReducer);
-
-    store.dispatch(setFirehoseMetricsLogger(() => {}));
-    store.dispatch(setInstructionsKeyCallback(() => {}));
 
     const data = [
       {temperature: '0', cost: '20', rain: '1000'},
@@ -50,9 +45,6 @@ describe('train functions', () => {
 
   test('train and predict with categorical data', async () => {
     const store = createStore(rootReducer);
-
-    store.dispatch(setFirehoseMetricsLogger(() => {}));
-    store.dispatch(setInstructionsKeyCallback(() => {}));
 
     const data = [
       {color: 'blue', flavor: 'sour', texture: 'crunchy'},

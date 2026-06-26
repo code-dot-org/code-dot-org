@@ -19,14 +19,9 @@ const makeJsonResponse = (body: unknown) =>
     headers: {'Content-Type': 'application/json'},
   });
 
-const makeTour = () => ({start: jest.fn()});
-
-const defaultProps = {
-  createSectionTour: null,
-  reviewSyllabusTour: null,
-  learnHowToEvaluateTour: null,
-  demoType: 'elementary' as const,
-};
+// A Tour exposes many methods; the checklist only ever calls start(), so we
+// stub just that and cast through unknown.
+const fakeTour = () => ({start: jest.fn()} as unknown as Tour);
 
 describe('OnboardingChecklist', () => {
   beforeEach(() => {
@@ -35,17 +30,60 @@ describe('OnboardingChecklist', () => {
     mockPost.mockResolvedValue(new Response());
   });
 
-  it('calls HttpClient.post with started_at and demo_type when a tour button is clicked', () => {
-    const createSectionTour = makeTour();
+  function renderComponent(
+    overrides: Partial<React.ComponentProps<typeof OnboardingChecklist>> = {}
+  ) {
+    const props = {
+      createSectionTour: fakeTour(),
+      reviewSyllabusTour: fakeTour(),
+      learnHowToEvaluateTour: fakeTour(),
+      demoType: 'high' as const,
+      isHidden: false,
+      onHide: jest.fn(),
+      ...overrides,
+    };
+    return {props, ...render(<OnboardingChecklist {...props} />)};
+  }
 
-    render(
-      <OnboardingChecklist
-        createSectionTour={createSectionTour as unknown as Tour}
-        reviewSyllabusTour={null}
-        learnHowToEvaluateTour={null}
-        demoType="elementary"
-      />
-    );
+  it('renders the checklist items when not hidden', () => {
+    renderComponent();
+
+    expect(screen.queryByText('Where should we start?')).not.toBeNull();
+    expect(screen.queryByText('Review the syllabus')).not.toBeNull();
+    expect(screen.queryByText('Learn how to evaluate')).not.toBeNull();
+    expect(screen.queryByText('Create a class section')).not.toBeNull();
+  });
+
+  it('renders nothing when hidden', () => {
+    const {container} = renderComponent({isHidden: true});
+
+    expect(container.firstChild).toBeNull();
+    expect(screen.queryByText('Where should we start?')).toBeNull();
+  });
+
+  it('calls onHide when the hide button is clicked', () => {
+    const {props} = renderComponent();
+
+    fireEvent.click(screen.getByText('Hide onboarding'));
+
+    expect(props.onHide).toHaveBeenCalledTimes(1);
+  });
+
+  it('starts the matching tour when a checklist item is clicked', () => {
+    const {props} = renderComponent();
+
+    fireEvent.click(screen.getByText('Create a class section'));
+    expect(props.createSectionTour?.start).toHaveBeenCalledTimes(1);
+
+    fireEvent.click(screen.getByText('Review the syllabus'));
+    expect(props.reviewSyllabusTour?.start).toHaveBeenCalledTimes(1);
+
+    fireEvent.click(screen.getByText('Learn how to evaluate'));
+    expect(props.learnHowToEvaluateTour?.start).toHaveBeenCalledTimes(1);
+  });
+
+  it('calls HttpClient.post with started_at and demo_type when a tour button is clicked', () => {
+    renderComponent({demoType: 'elementary'});
 
     fireEvent.click(screen.getByText('Create a class section'));
 
@@ -62,16 +100,7 @@ describe('OnboardingChecklist', () => {
   });
 
   it('starts the correct tour after recording', () => {
-    const reviewSyllabusTour = makeTour();
-
-    render(
-      <OnboardingChecklist
-        createSectionTour={null}
-        reviewSyllabusTour={reviewSyllabusTour as unknown as Tour}
-        learnHowToEvaluateTour={null}
-        demoType="high"
-      />
-    );
+    const {props} = renderComponent({demoType: 'high'});
 
     fireEvent.click(screen.getByText('Review the syllabus'));
 
@@ -85,20 +114,11 @@ describe('OnboardingChecklist', () => {
       true,
       {'Content-Type': 'application/json'}
     );
-    expect(reviewSyllabusTour.start).toHaveBeenCalled();
+    expect(props.reviewSyllabusTour?.start).toHaveBeenCalled();
   });
 
   it('sends the correct tour name for learn-to-evaluate', () => {
-    const learnHowToEvaluateTour = makeTour();
-
-    render(
-      <OnboardingChecklist
-        createSectionTour={null}
-        reviewSyllabusTour={null}
-        learnHowToEvaluateTour={learnHowToEvaluateTour as unknown as Tour}
-        demoType="middle"
-      />
-    );
+    renderComponent({demoType: 'middle'});
 
     fireEvent.click(screen.getByText('Learn how to evaluate'));
 
@@ -118,7 +138,7 @@ describe('OnboardingChecklist', () => {
     mockPost.mockRejectedValue(new Error('network error'));
     jest.spyOn(console, 'error').mockImplementation(() => {});
 
-    render(<OnboardingChecklist {...defaultProps} />);
+    renderComponent();
 
     fireEvent.click(screen.getByText('Create a class section'));
 
@@ -129,7 +149,7 @@ describe('OnboardingChecklist', () => {
   it('shows no check icons when no tours are completed', async () => {
     mockGet.mockResolvedValue(makeJsonResponse([]));
 
-    render(<OnboardingChecklist {...defaultProps} />);
+    renderComponent();
 
     await waitFor(() => {
       expect(mockGet).toHaveBeenCalledWith(
@@ -144,7 +164,7 @@ describe('OnboardingChecklist', () => {
   it('shows a check icon only for tours that are completed', async () => {
     mockGet.mockResolvedValue(makeJsonResponse(['create_class_section']));
 
-    render(<OnboardingChecklist {...defaultProps} />);
+    renderComponent();
 
     await waitFor(() => {
       expect(
@@ -161,7 +181,7 @@ describe('OnboardingChecklist', () => {
   it('does not show a check icon for tours that are not completed', async () => {
     mockGet.mockResolvedValue(makeJsonResponse(['create_class_section']));
 
-    render(<OnboardingChecklist {...defaultProps} />);
+    renderComponent();
 
     await waitFor(() => expect(mockGet).toHaveBeenCalled());
 
@@ -177,7 +197,7 @@ describe('OnboardingChecklist', () => {
       .spyOn(console, 'error')
       .mockImplementation(() => {});
 
-    render(<OnboardingChecklist {...defaultProps} />);
+    renderComponent();
 
     await waitFor(() => expect(consoleErrorSpy).toHaveBeenCalled());
     consoleErrorSpy.mockRestore();

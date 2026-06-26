@@ -4,7 +4,6 @@ Feature: Using the V2 teacher dashboard local navigation - Eyes
   Background:
     Given I am on "http://studio.code.org/home"
 
-  @properties_encryption_key
   Scenario: Local navigation on Progress v2
     When I open my eyes to test "teacher local nav v2 - progress"
     Given I create an authorized teacher-associated student named "Sally"
@@ -44,7 +43,6 @@ Feature: Using the V2 teacher dashboard local navigation - Eyes
 
     And I close my eyes
 
-  @properties_encryption_key
   Scenario: Local navigation on Unit and Course overview pages
     When I open my eyes to test "teacher local nav v2 - unit/course overview"
     Given I create an authorized teacher-associated student named "Sally"

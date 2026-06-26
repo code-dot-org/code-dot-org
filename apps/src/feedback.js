@@ -988,14 +988,6 @@ FeedbackUtils.prototype.getShowCodeElement_ = function (options) {
     legacyReactDomRender: true,
   });
 
-  // If the jQuery details polyfill is available, use it on the
-  // newly-created details element. If the details polyfill is not
-  // available - either because it failed to load or was removed - then
-  // the browser-specified details functionality will be applied.
-  if ($.fn.details) {
-    $(showCodeDiv).find('details').details();
-  }
-
   return showCodeDiv;
 };
 

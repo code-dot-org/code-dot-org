@@ -6,13 +6,14 @@
   "original_script_names": [
     "iste-2026"
   ],
-  "published_state": "in_development",
+  "published_state": "pilot",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "iste-2026",
     "has_verified_resources": true,
+    "pilot_experiment": "iste-2026",
     "version_year": "unversioned"
   },
   "resources": [
