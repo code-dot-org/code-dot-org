@@ -44,6 +44,7 @@ export default function Lab({
   return (
     <ErrorBoundary
       key={levelId}
+      // Plain <p> — error boundary fallbacks must be minimal to avoid cascading failures.
       fallback={<p role="alert">{ERROR_MESSAGE}</p>}
       onError={handleError}
     >
