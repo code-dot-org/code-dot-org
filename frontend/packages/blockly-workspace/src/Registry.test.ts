@@ -170,6 +170,69 @@ describe('registerFromBlockDefinition', () => {
   });
 });
 
+describe('mutator state roundtrip', () => {
+  interface CounterState {
+    count: number;
+  }
+
+  // A stateful mutator whose count survives only if saveExtraState/loadExtraState
+  // are wired through registration and Blockly's JSON serialization.
+  const counterMutator = defineMutator('registry_test_counter_mutator', {
+    count_: 0,
+    saveExtraState(): CounterState {
+      return {count: this.count_};
+    },
+    loadExtraState(state: CounterState) {
+      this.count_ = state.count;
+    },
+  });
+
+  const defineCounterBlock = (registry: Registry) => {
+    const definition = {
+      type: 'registry_test_counter_block',
+      tooltip: '',
+      message0: 'counter',
+      mutator: counterMutator,
+    } as unknown as BlockDefinition;
+    const formed = registry.registerFromBlockDefinition(definition);
+    Blockly.common.defineBlocksWithJsonArray([
+      formed as Parameters<
+        typeof Blockly.common.defineBlocksWithJsonArray
+      >[0][number],
+    ]);
+  };
+
+  it("preserves a block's mutator state across save and load", () => {
+    defineCounterBlock(registry);
+
+    const source = new Blockly.Workspace();
+    const target = new Blockly.Workspace();
+    try {
+      const block = source.newBlock(
+        'registry_test_counter_block',
+      ) as unknown as {
+        count_: number;
+      };
+      block.count_ = 7;
+
+      const state = Blockly.serialization.workspaces.save(source);
+      Blockly.serialization.workspaces.load(state, target);
+
+      const loaded = target.getAllBlocks(false)[0] as unknown as {
+        count_: number;
+        getEnvironment?: () => unknown;
+      };
+      // The state survived the roundtrip (it would default back to 0 otherwise)...
+      expect(loaded.count_).toBe(7);
+      // ...and registration still layered the environment accessor onto the block.
+      expect(typeof loaded.getEnvironment).toBe('function');
+    } finally {
+      source.dispose();
+      target.dispose();
+    }
+  });
+});
+
 describe('inject plugins', () => {
   it('constructs an instance per workspace and disposes it on disposeInject', () => {
     const workspace = {} as Blockly.WorkspaceSvg;

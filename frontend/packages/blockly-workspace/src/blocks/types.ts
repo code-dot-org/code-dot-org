@@ -171,8 +171,15 @@ export type BlockGenerator<
   environment: U,
 ) => string | [string, number] | null;
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type AnyBlockGenerator = BlockGenerator<BlockSvg, any, Environment>;
+/**
+ * A block generator for an unspecified generator language (the catch-all slot
+ * in {@link OriginalGeneratorFunctions}). The generator parameter is `never`
+ * rather than `any` so concrete generators such as {@link JavascriptBlockGenerator}
+ * stay assignable to it through parameter contravariance, without punching an
+ * `any` hole: the slot can be stored but never soundly invoked with the wrong
+ * generator type.
+ */
+export type AnyBlockGenerator = BlockGenerator<BlockSvg, never, Environment>;
 
 /**
  * The code generation function specific for Javascript generators.

@@ -293,6 +293,13 @@ export function createReactField<T>(config: ReactFieldConfig<T>): FieldPlugin {
       const width = this.currentWidth + 2 * fieldPadding;
       const height = this.currentHeight + 2 * fieldPadding;
 
+      // Only write when the dimensions actually change. Blockly re-renders the
+      // parent block whenever size_ changes, which re-enters render_/updateSize_;
+      // skipping no-op updates keeps a stable getSize from driving a render loop.
+      if (this.size_.width === width && this.size_.height === height) {
+        return;
+      }
+
       this.borderRect_?.setAttribute('width', String(width));
       this.borderRect_?.setAttribute('height', String(height));
 
