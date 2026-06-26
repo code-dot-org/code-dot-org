@@ -42,6 +42,7 @@ import {getTypedKeys} from '@cdo/apps/types/utils';
 import {findFirstFocusableElement} from '@cdo/apps/util/findFirstFocusableElement';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import ForTeachersOnly from '../ForTeachersOnly';
 import Instructions, {InstructionsProps} from '../InstructionsV2';
@@ -270,6 +271,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   });
   const aiChatDisabledState = useAiChatDisabledState({
     appName,
+    clientType: AiChatClientTypes.AI_TUTOR,
     isPredictLevel: !!isPredictLevel,
     hasSubmittedPredictResponse,
   });

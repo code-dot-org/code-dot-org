@@ -31,17 +31,20 @@ export const MAX_FILE_SIZE_MB = 5;
 
 export const AI_SETTINGS_SUPPORT_LINK =
   'https://support.code.org/hc/en-us/articles/42550900593677-AI-Settings';
-
 export const VERIFIED_TEACHER_SUPPORT_LINK =
   'https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher';
+export const AI_CHAT_LAB_FAQ_LINK =
+  'https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ';
+export const AI_TUTOR_FAQ_LINK =
+  'https://support.code.org/hc/en-us/articles/40542019587213-AI-Tutor-FAQ';
 
 export const AI_CHAT_NOT_AUTHORIZED_TEACHER =
   'You must be a verified teacher or sign in via Google, Microsoft, Facebook, or an LMS to use and assign this tool.';
 export const AI_CHAT_NOT_AUTHORIZED_STUDENT =
   'Your teacher has not enabled this tool. Check with your teacher if you think this is an error.';
-// TODO: confirm final copy (and any support link) with product before launch.
 export const AI_CHAT_NOT_AVAILABLE_INTERNATIONAL =
   'AI Chat tools are not currently available in your region.';
+
 // Shown to international teachers in the Teacher Dashboard AI Settings, where
 // the verified-teacher message would be misleading (verification won't help).
 export const AI_CHAT_NOT_AVAILABLE_INTERNATIONAL_TEACHER_SETTINGS =
