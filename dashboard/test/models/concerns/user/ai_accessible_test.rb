@@ -214,6 +214,16 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
         end
       end
 
+      context 'when a verified teacher has legacy countryless school_info and a US geolocation' do
+        it 'falls back to geolocation rather than treating the missing country as non-US' do
+          allow(user).to receive(:teacher?).and_return(true)
+          allow(user).to receive(:verified_instructor?).and_return(true)
+          allow(user).to receive(:school_info).and_return(build(:school_info_without_country))
+          allow(user).to receive(:user_geos).and_return([build(:user_geo, :seattle)])
+          _ai_chat_access_level.must_equal Section::AI_CHAT_ACCESS_LEVELS[:ENABLED]
+        end
+      end
+
       context 'when all of a student\'s teachers are non-US' do
         it 'returns DISABLED even though a section would otherwise grant access' do
           non_us_teacher = create(:teacher).tap {|t| allow(t).to receive(:teacher_can_access_aichat?).and_return(true)}

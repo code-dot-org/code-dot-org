@@ -101,10 +101,12 @@ module User::AiAccessible
   end
 
   # True only when we can positively determine the user is outside the US, so we
-  # never block users whose location we can't establish. Prefer school_info;
-  # fall back to the most recent geolocation when no school_info exists.
+  # never block users whose location we can't establish. Prefer school_info, but
+  # only when it has a country (legacy rows may have only state/district data);
+  # otherwise fall back to the most recent geolocation, and fail open if neither
+  # is known.
   private def non_us_ai_chat_user?(user)
-    return !user.school_info.usa? if user.school_info
+    return !user.school_info.usa? if user.school_info&.country.present?
     geo_country = user.user_geos.first&.country
     geo_country.present? && geo_country != 'United States'
   end
