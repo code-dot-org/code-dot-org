@@ -65,8 +65,14 @@ class UserLevelsController < ApplicationController
     level = Level.find(params[:level_id])
     return head :bad_request, text: "Level not found" unless level
     return head :forbidden, text: 'User must be instructor of section' unless section.instructors.include?(@current_user)
-    responses = UserLevel.where(level_id: predict_level_ids(level), user: section.students)
-    return render json: {response_count: responses.distinct.count(:user_id), num_students: section.students.count}, status: :ok
+    level_ids = predict_level_ids(level)
+    responses = UserLevel.where(level_id: level_ids, user: section.students)
+    # When a level resolves to more than one id (a migrated predict level plus its
+    # legacy contained level), a student may have a response under each; count
+    # distinct students so they aren't double-counted. Otherwise preserve the
+    # original row count.
+    response_count = level_ids.length > 1 ? responses.distinct.count(:user_id) : responses.count
+    return render json: {response_count: response_count, num_students: section.students.count}, status: :ok
   end
 
   private def set_user_level

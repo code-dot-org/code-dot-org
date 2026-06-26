@@ -247,8 +247,9 @@ const Javalab2View: React.FunctionComponent<
     );
     if (!isPredictLevel) {
       dispatch(sendStartedReportIfNotStarted(levelProperties.appName || ''));
+    } else {
+      dispatch(submitPredictResponse({appType: levelProperties.appName || ''}));
     }
-    dispatch(submitPredictResponse({appType: levelProperties.appName || ''}));
   };
 
   return (
