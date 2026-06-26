@@ -85,8 +85,10 @@ if names.empty?
 end
 
 # Build the predict_settings hash and question text for a contained level.
-# Returns [predict_settings, instructions, warnings] or nil if the contained
-# level is not a type we know how to migrate.
+# Returns [predict_settings, question_body, warnings] or nil if the contained
+# level is not a type we know how to migrate. question_body is the raw question
+# text without the title prepended; the caller adds the title and decides what
+# to do when the body is blank.
 def build_predict(contained)
   warnings = []
   if contained.is_a?(FreeResponse)
@@ -99,7 +101,7 @@ def build_predict(contained)
       'placeholderText' => contained.properties['placeholder'].to_s,
       'freeResponseHeight' => height,
     }
-    [settings, with_title(contained, contained.properties['long_instructions']), warnings]
+    [settings, contained.properties['long_instructions'], warnings]
   elsif contained.is_a?(Multi)
     answers = contained.properties['answers'] || []
     option_texts = answers.map {|a| a['text']}
@@ -117,7 +119,7 @@ def build_predict(contained)
       'multipleChoiceOptions' => option_texts,
       'isMultiSelect' => correct.length > 1,
     }
-    [settings, with_title(contained, contained.get_question_text), warnings]
+    [settings, contained.get_question_text, warnings]
   end
 end
 
@@ -190,8 +192,18 @@ names.each do |name|
     counts[:skipped] += 1
     next
   end
-  settings, instructions, warnings = result
+  settings, question_body, warnings = result
   warnings.each {|w| warn "WARN  #{name}: #{w}"}
+
+  # Skip only when there is no text at all to show. A title alone is an
+  # acceptable question, so check the assembled instructions (title + body)
+  # rather than the body, and skip the level when even that is empty.
+  instructions = with_title(contained, question_body)
+  if instructions.blank?
+    warn "SKIP  #{name}: contained level #{contained.name} has no question text"
+    counts[:skipped] += 1
+    next
+  end
 
   puts "MIGRATE #{name}"
   puts "  contained: #{contained.name} (#{contained.class})"
