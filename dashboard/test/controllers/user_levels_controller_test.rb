@@ -259,6 +259,76 @@ class UserLevelsControllerTest < ActionController::TestCase
     assert_equal 2, body['num_students']
   end
 
+  test "migrated Java Lab predict level reads legacy response from contained level" do
+    user = create(:user)
+    sign_in user
+    script = create(:unit, :in_single_unit_course)
+    contained = create(:level, type: "Multi")
+    parent = create(:level, type: "Javalab", properties: {predict_settings: {isPredictLevel: true}, contained_level_names: [contained.name]})
+    level_source = create(:level_source, level: contained, data: "0")
+    create(:user_level, user: user, best_result: 30, script: script, level: contained, level_source: level_source)
+
+    get :get_level_source, params: {script_id: script.id, level_id: parent.id}
+    assert_response :success
+    assert_equal "0", JSON.parse(response.body)["data"]
+  end
+
+  test "migrated Java Lab predict level prefers a parent response over the legacy contained one" do
+    user = create(:user)
+    sign_in user
+    script = create(:unit, :in_single_unit_course)
+    contained = create(:level, type: "Multi")
+    parent = create(:level, type: "Javalab", properties: {predict_settings: {isPredictLevel: true}, contained_level_names: [contained.name]})
+
+    legacy_source = create(:level_source, level: contained, data: "0")
+    legacy_user_level = create(:user_level, user: user, best_result: 30, script: script, level: contained, level_source: legacy_source)
+    legacy_user_level.update_column(:updated_at, 1.day.ago)
+    new_source = create(:level_source, level: parent, data: "2")
+    create(:user_level, user: user, best_result: 30, script: script, level: parent, level_source: new_source)
+
+    get :get_level_source, params: {script_id: script.id, level_id: parent.id}
+    assert_response :success
+    assert_equal "2", JSON.parse(response.body)["data"]
+  end
+
+  test "teacher deleting progress on a migrated Java Lab predict level clears parent and contained" do
+    teacher = create(:teacher)
+    sign_in teacher
+    script = create(:unit, :in_single_unit_course)
+    contained = create(:level, type: "Multi")
+    parent = create(:level, type: "Javalab", properties: {predict_settings: {isPredictLevel: true}, contained_level_names: [contained.name]})
+    create(:user_level, user: teacher, script: script, level: contained)
+    create(:user_level, user: teacher, script: script, level: parent)
+
+    assert_difference("UserLevel.count", -2) do
+      post :delete_predict_level_progress, params: {script_id: script.id, level_id: parent.id}
+      assert_response :success
+    end
+  end
+
+  test "section response summary for a migrated Java Lab predict level counts students across both levels" do
+    teacher = create(:teacher)
+    sign_in teacher
+    section = create(:section, user: teacher)
+    contained = create(:level, type: "Multi")
+    parent = create(:level, type: "Javalab", properties: {predict_settings: {isPredictLevel: true}, contained_level_names: [contained.name]})
+
+    only_legacy = create(:student)
+    both_levels = create(:student)
+    section.students << only_legacy
+    section.students << both_levels
+    create(:user_level, user: only_legacy, level: contained)
+    # A student with a response on both levels should be counted once.
+    create(:user_level, user: both_levels, level: contained)
+    create(:user_level, user: both_levels, level: parent)
+
+    get :get_section_response_summary, params: {section_id: section.id, level_id: parent.id}
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal 2, body["response_count"]
+    assert_equal 2, body["num_students"]
+  end
+
   test "student cannot get section response summary" do
     student = create(:student)
     sign_in student

@@ -33,7 +33,7 @@ class UserLevelsController < ApplicationController
       return head :bad_request, text: "Clearing progress on level type #{level.type} is not supported"
     end
 
-    UserLevel.where(user_id: current_user.id, script_id: script.id, level: level.id).destroy_all
+    UserLevel.where(user_id: current_user.id, script_id: script.id, level_id: predict_level_ids(level)).destroy_all
     return head :ok
   end
 
@@ -47,7 +47,11 @@ class UserLevelsController < ApplicationController
   # Get the level source data for the current user's most recent attempt at the given level in the given script.
   # If there is no attempt, return null.
   def get_level_source
-    user_levels = UserLevel.where(user_id: current_user.id, level_id: params[:level_id], script_id: params[:script_id])
+    level = Level.find_by(id: params[:level_id])
+    level_ids = level ? predict_level_ids(level) : [params[:level_id]]
+    user_levels = UserLevel.where(user_id: current_user.id, level_id: level_ids, script_id: params[:script_id])
+    # Ordering across the parent and any legacy contained level means a response
+    # submitted after migration (on the parent) wins over an older contained one.
     most_recent_user_level = user_levels.order(updated_at: :desc).first
     return render json: {data: most_recent_user_level&.level_source&.data}, status: :ok
   end
@@ -61,8 +65,8 @@ class UserLevelsController < ApplicationController
     level = Level.find(params[:level_id])
     return head :bad_request, text: "Level not found" unless level
     return head :forbidden, text: 'User must be instructor of section' unless section.instructors.include?(@current_user)
-    responses = UserLevel.where(level: level, user: section.students)
-    return render json: {response_count: responses.count, num_students: section.students.count}, status: :ok
+    responses = UserLevel.where(level_id: predict_level_ids(level), user: section.students)
+    return render json: {response_count: responses.distinct.count(:user_id), num_students: section.students.count}, status: :ok
   end
 
   private def set_user_level
@@ -79,5 +83,20 @@ class UserLevelsController < ApplicationController
   # We allow clearing progress on these levels as well as multi or free-response levels.
   private def clearable_level_type?(level)
     ['Multi', 'FreeResponse'].include?(level.type) || level.predict_level?
+  end
+
+  # The level ids that hold a student's predict response for the given level.
+  #
+  # A lab2 predict level migrated from the legacy contained-level model keeps
+  # its contained_level_names, but the response may have been recorded against
+  # either the parent level (post-migration) or the original contained level
+  # (pre-migration). Return both so reads and resets cover either location. Any
+  # other level returns just its own id, preserving existing behavior.
+  private def predict_level_ids(level)
+    ids = [level.id]
+    if level.is_a?(Javalab) && level.predict_level?
+      ids.concat(Array(level.contained_level_names).filter_map {|name| Level.find_by(name: name)&.id})
+    end
+    ids.uniq
   end
 end
