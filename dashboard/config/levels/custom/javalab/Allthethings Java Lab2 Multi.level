@@ -1,8 +1,7 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
-  "game_id": 68,
   "created_at": "2026-06-26T18:35:12.000Z",
+  "game_id": 68,
   "level_num": "custom",
   "user_id": 16889,
   "properties": {
@@ -361,14 +360,23 @@
     ],
     "map_reference": "/programming_environments/javalab",
     "ai_tutor_available": "false",
-    "encrypted_examples": [
-
-    ],
     "uses_lab2": "true",
     "predict_settings": {
-      "isPredictLevel": false
-    }
+      "isPredictLevel": true,
+      "questionType": "multipleChoice",
+      "solution": "The semicolon is missing from Line 8.",
+      "codeEditableAfterSubmit": false,
+      "multipleChoiceOptions": [
+        "The semicolon is missing from Line 8.",
+        "The `main` method should not have the word `static`.",
+        "The name of the class is incorrect.",
+        "The name of the file should be `MyNeighborhood.Java`."
+      ],
+      "isMultiSelect": false
+    },
+    "long_instructions": "This program is supposed to make the `Painter`(#e7e8ea) move forward one space, but it has an error!\n\nWhich of the following do you think is causing the error?\n"
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2026-06-26T11:35:12.660-07:00\",\"changed\":[\"cloned from \\\"CSA U1L2-L3_2022\\\"\"],\"cloned_from\":\"CSA U1L2-L3_2022\"},{\"changed_at\":\"2026-06-26 11:35:24 -0700\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>
