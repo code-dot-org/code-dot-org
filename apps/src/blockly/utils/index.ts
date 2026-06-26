@@ -26,7 +26,6 @@ export * from './workspace/blocks';
 export * from './workspace/clearAllStudentWorkspaces';
 export * from './workspace/getCode';
 export * from './workspace/disabledBlocks';
-export * from './workspace/focus';
 export * from './workspace/layout';
 export * from './workspace/loadBlocks';
 export * from './workspace/refresh';
