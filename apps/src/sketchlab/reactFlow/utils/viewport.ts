@@ -1,3 +1,5 @@
+import {REACT_FLOW_SELECTOR} from '../reactFlowSelectors';
+
 interface VisibleAreaInsets {
   top?: number;
   right?: number;
@@ -20,7 +22,7 @@ export function getViewportOverflow(
   element: HTMLElement,
   insets: VisibleAreaInsets = {}
 ): {dx: number; dy: number} | null {
-  const container = element.closest<HTMLElement>('.react-flow');
+  const container = element.closest<HTMLElement>(REACT_FLOW_SELECTOR.container);
   if (!container) return null;
   const containerRect = container.getBoundingClientRect();
   const elementRect = element.getBoundingClientRect();

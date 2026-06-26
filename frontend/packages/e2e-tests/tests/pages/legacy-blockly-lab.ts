@@ -3,10 +3,10 @@ import {expect, type Locator, type Page} from '@playwright/test';
 import {AuthoredHintsComponent} from '../components/authored-hints';
 import {labLevelUrl, type LabLevelUrlParams} from '../shared/routes';
 
-import {BasePage} from './base-page';
+import {LessonLevelPage} from './lesson-level-page';
 
 /** Base for legacy Blockly labs (maze, artist, flappy, ...). */
-export class LegacyBlocklyLab extends BasePage {
+export class LegacyBlocklyLab extends LessonLevelPage {
   /** Instructions tab; its text localizes with the lab locale. */
   readonly instructionsTab: Locator;
 

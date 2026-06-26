@@ -31,6 +31,33 @@ export class BasePage {
   }
 
   /**
+   * Rotate the viewport to landscape by swapping its dimensions, the Playwright
+   * stand-in for the Cucumber "I rotate to landscape" device step. No-op when
+   * already landscape, as the desktop projects here are.
+   */
+  async rotateToLandscape(): Promise<void> {
+    const viewport = this.page.viewportSize();
+    if (viewport && viewport.width < viewport.height) {
+      await this.page.setViewportSize({
+        width: viewport.height,
+        height: viewport.width,
+      });
+    }
+  }
+
+  /**
+   * Whether the document overflows horizontally. Mirrors the Cucumber step
+   * "there is no horizontal scrollbar" via document.documentElement geometry.
+   */
+  async hasHorizontalScrollbar(): Promise<boolean> {
+    return this.page.evaluate(
+      () =>
+        document.documentElement.scrollWidth >
+        document.documentElement.clientWidth,
+    );
+  }
+
+  /**
    * Switch Global Edition region via the ?ge_region=<code> override, which the
    * Rails Global Edition middleware honors on any path, then confirm the region
    * took effect on the resulting page.
