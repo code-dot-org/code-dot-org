@@ -1,6 +1,6 @@
 {
-  "key": "self-paced-pl-csd",
-  "display_name": "Teaching CS Discoveries",
+  "key": "self-paced-pl-aid",
+  "display_name": "Teaching AI Discoveries",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": null,
@@ -11,10 +11,10 @@
   "cs_topic": "artificial_intelligence",
   "school_subject": null,
   "device_compatibility": null,
-  "description": "After completing this online professional learning module, you'll be ready to get started teaching CodeAI's CS Discoveries curriculum with your students.",
+  "description": "After completing this online professional learning module, you'll be ready to get started teaching CodeAI's AI Discoveries curriculum with your students.",
   "professional_learning_program": null,
   "video": null,
-  "published_date": "2025-05-30 05:00:00 UTC",
+  "published_date": null,
   "self_paced_pl_course_offering_key": null,
   "ai_teaching_assistant_available": false,
   "facilitator_course_permissions": [
