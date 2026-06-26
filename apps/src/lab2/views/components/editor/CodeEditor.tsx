@@ -367,13 +367,19 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   }
 
   return (
-    <div
-      ref={editorRef}
-      className={classNames(
-        'codemirror-container',
-        moduleStyles.codeEditorContainer
-      )}
-    />
+    <div className={moduleStyles.codeEditorWrapper}>
+      <div
+        ref={editorRef}
+        className={classNames(
+          'codemirror-container',
+          moduleStyles.codeEditorContainer
+        )}
+      />
+      {/* CSS-controlled: visible only when .cm-scroller has :focus-visible. */}
+      <div className={moduleStyles.keyboardHint} aria-hidden="true">
+        Enter to edit · Esc to exit · Arrows to scroll
+      </div>
+    </div>
   );
 };
 

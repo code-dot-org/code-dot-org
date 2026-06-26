@@ -141,40 +141,53 @@ export const FileTabs = React.memo(() => {
   }, [files, source.files]);
 
   return (
-    <div className={moduleStyles.fileTabs}>
-      <DndContext
-        onDragEnd={handleDragEnd}
-        onDragStart={handleDragStart}
-        onDragCancel={handleDragCancel}
-        sensors={sensors}
-        collisionDetection={closestCenter}
-        modifiers={[restrictToParentElement, restrictToHorizontalAxis]}
-        accessibility={{
-          announcements,
-          screenReaderInstructions: {
-            draggable:
-              'Press m to pick up, arrow keys to move, m, space, or enter to drop, escape to cancel.',
-          },
-        }}
-      >
-        <SortableContext items={files} strategy={horizontalListSortingStrategy}>
-          {files.map(f => (
-            <FileTab
-              file={f}
-              key={f.id}
-              isDragging={f.id === draggingFileId}
-              onKeyDown={event => handleTabActivation(event, f.id)}
-            />
-          ))}
-          <DragOverlay>
-            {draggingFileId ? (
-              <FileTabDragClone
-                file={files.find(f => f.id === draggingFileId)!}
+    <div className={moduleStyles.fileTabsWrapper}>
+      <div className={moduleStyles.fileTabs}>
+        <DndContext
+          onDragEnd={handleDragEnd}
+          onDragStart={handleDragStart}
+          onDragCancel={handleDragCancel}
+          sensors={sensors}
+          collisionDetection={closestCenter}
+          modifiers={[restrictToParentElement, restrictToHorizontalAxis]}
+          accessibility={{
+            announcements,
+            screenReaderInstructions: {
+              draggable:
+                'Press m to pick up, arrow keys to move, m, space, or enter to drop, escape to cancel.',
+            },
+          }}
+        >
+          <SortableContext
+            items={files}
+            strategy={horizontalListSortingStrategy}
+          >
+            {files.map(f => (
+              <FileTab
+                file={f}
+                key={f.id}
+                isDragging={f.id === draggingFileId}
+                onKeyDown={event => handleTabActivation(event, f.id)}
               />
-            ) : null}
-          </DragOverlay>
-        </SortableContext>
-      </DndContext>
+            ))}
+            <DragOverlay>
+              {draggingFileId ? (
+                <FileTabDragClone
+                  file={files.find(f => f.id === draggingFileId)!}
+                />
+              ) : null}
+            </DragOverlay>
+          </SortableContext>
+        </DndContext>
+      </div>
+      {/* CSS-controlled: visible only when a tab label has :focus-visible.
+          M-to-reorder is bound to the label, not the close button, so we
+          hide the hint when focus moves to the X to avoid lying about what
+          M does. Positioned below the tab row so a focused right-edge tab
+          doesn't collide with it. */}
+      <div className={moduleStyles.keyboardHint} aria-hidden="true">
+        Press M to reorder · Esc to cancel
+      </div>
     </div>
   );
 });
