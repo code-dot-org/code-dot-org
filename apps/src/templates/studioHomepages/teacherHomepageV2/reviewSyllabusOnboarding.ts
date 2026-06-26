@@ -111,7 +111,7 @@ const createTeacherResourcesStep = (
   id: 'teacher-resources-dropdown',
   attachTo: {
     element: '#teacher-resources-dropdown',
-    on: 'bottom',
+    on: 'right',
   },
   text: withSparkle(
     "If admin asks what standards you're covering or you need a refresher before starting something new, the implementation guides, standards alignment, and how-tos are all here."
