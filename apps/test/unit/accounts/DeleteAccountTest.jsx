@@ -212,6 +212,14 @@ describe('DeleteAccount', () => {
     });
 
     describe('when user is an admin', () => {
+      it('does not show AdminAccountDialog before the delete button is clicked', () => {
+        renderComponent({isAdmin: true});
+
+        expect(
+          screen.queryByText(i18n.adminAccountDeletionDialog_header())
+        ).not.toBeInTheDocument();
+      });
+
       it('displays AdminAccountDialog if trying to delete admin account', async () => {
         const user = userEvent.setup();
         renderComponent({isAdmin: true});
