@@ -19,7 +19,6 @@ export const SignedInCurrentUserSchema = z
     sort_by_family_name: z.boolean(),
     ai_rubrics_disabled: z.boolean(),
     progress_table_v2_closed_beta: z.boolean(),
-    ai_tutor_access_denied: z.boolean(),
     has_seen_progress_table_v2_invitation: z.boolean(),
     has_seen_homepage_welcome: z.boolean(),
     has_dismissed_personalization_alert: z.boolean(),
