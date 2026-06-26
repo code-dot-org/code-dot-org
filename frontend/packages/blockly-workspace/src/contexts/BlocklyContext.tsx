@@ -1,5 +1,12 @@
 import type {PropsWithChildren, MutableRefObject} from 'react';
-import {useCallback, createContext, useRef, useEffect, useContext} from 'react';
+import {
+  useCallback,
+  createContext,
+  useMemo,
+  useRef,
+  useEffect,
+  useContext,
+} from 'react';
 
 import Driver from '../Driver';
 import type {Plugin} from '../plugins';
@@ -62,17 +69,16 @@ export const BlocklyProvider = <T extends Environment = Environment>({
     driver.current.blocks = blocks || [];
   }, [blocks]);
 
+  // Memoize so the provider does not hand every consumer a new object (and
+  // force them to re-render) on each render of an ancestor. `driver` is a
+  // stable ref and `setTheme` is stabilized by useCallback.
+  const value = useMemo(
+    () => ({driver, blocks, setTheme, environment}),
+    [driver, blocks, setTheme, environment],
+  );
+
   return (
-    <BlocklyContext.Provider
-      value={{
-        driver,
-        blocks,
-        setTheme,
-        environment,
-      }}
-    >
-      {children}
-    </BlocklyContext.Provider>
+    <BlocklyContext.Provider value={value}>{children}</BlocklyContext.Provider>
   );
 };
 

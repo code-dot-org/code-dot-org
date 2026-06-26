@@ -4,10 +4,16 @@ import {afterEach, beforeEach, describe, expect, it} from 'vitest';
 import {defineExtension} from './extensions/defineExtension';
 import {defineMixin} from './mixins/defineMixin';
 import {defineMutator} from './mutators/defineMutator';
+import {RectangleInputPlugin} from './inputs';
 import {PluginType} from './plugins';
-import type {InjectPlugin, FieldPlugin, GlobalPlugin} from './plugins';
+import type {
+  InjectPlugin,
+  FieldPlugin,
+  GlobalPlugin,
+  InputPlugin,
+} from './plugins';
 import Registry from './Registry';
-import type {BlockDefinition, OldBlockDefinition} from './types';
+import type {BlockDefinition, OldBlockDefinition, Renderer} from './types';
 
 /*
  * Registry's job is bookkeeping against Blockly's global registries
@@ -230,6 +236,35 @@ describe('mutator state roundtrip', () => {
       source.dispose();
       target.dispose();
     }
+  });
+});
+
+describe('input plugin teardown', () => {
+  it('re-registers the renderer with empty inputs on unregisterAll', () => {
+    // The renderer is the only thing registered for an input plugin; record the
+    // input set it is (re)built with each time so teardown can be observed.
+    const inputSets: InputPlugin[][] = [];
+    const fakeRenderer: Renderer = {
+      name: 'registry_test_input_renderer',
+      class: (inputs: InputPlugin[]) => {
+        inputSets.push(inputs);
+        return class extends Blockly.blockRendering.Renderer {};
+      },
+    };
+
+    const reg = new Registry(undefined, undefined, fakeRenderer);
+    // The constructor registers the renderer with no inputs.
+    expect(inputSets.at(-1)).toEqual([]);
+
+    const input = RectangleInputPlugin('RegistryTestType');
+    reg.register(input);
+    // Registering an input re-registers the renderer carrying that input.
+    expect(inputSets.at(-1)).toEqual([input]);
+
+    reg.unregisterAll();
+    // Teardown resets the renderer back to an empty input set, rather than
+    // leaving it baking in the now-unregistered input.
+    expect(inputSets.at(-1)).toEqual([]);
   });
 });
 

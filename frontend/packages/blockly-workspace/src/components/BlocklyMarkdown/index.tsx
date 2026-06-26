@@ -78,6 +78,11 @@ const workspaceExtension = ({
  * Blockly tags past sanitization, and a local extension turns each `<xml>` into
  * a live workspace. Callers may pass additional `extensions`; they compose after
  * the Blockly handling.
+ *
+ * SECURITY: render TRUSTED content only (curriculum/levelbuilder markdown). The
+ * `blockly` extension clears the sanitizer's `clobberPrefix`, which drops
+ * DOM-clobbering protection on `id`/`name` for the whole document. Do not point
+ * this component at student-authored or otherwise untrusted markdown.
  */
 const BlocklyMarkdown = ({
   blocks,
