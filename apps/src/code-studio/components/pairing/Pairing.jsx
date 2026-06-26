@@ -23,6 +23,7 @@ export default class Pairing extends React.Component {
   state = {
     pairings: [],
     sections: [],
+    selectedSectionId: null,
     hasError: false,
     loading: true,
   };
@@ -37,6 +38,7 @@ export default class Pairing extends React.Component {
         this.setState({
           pairings: result.pairings,
           sections: result.sections,
+          selectedSectionId: result.selectedSectionId,
           loading: false,
         });
       })
