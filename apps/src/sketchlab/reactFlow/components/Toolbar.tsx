@@ -109,9 +109,9 @@ export default function Toolbar({
         </IconButton>
       </Tooltip>
 
-      <Tooltip title="Pan" placement="right">
+      <Tooltip title="Hand Tool" placement="right">
         <IconButton
-          aria-label="Pan tool"
+          aria-label="Hand Tool"
           aria-pressed={canvasTool === 'grab'}
           onClick={() => onSetCanvasTool('grab')}
           size="small"
