@@ -16,10 +16,27 @@ import {ToolboxTrashcan} from './index';
 
 Blockly.setLocale(En as unknown as {[key: string]: string});
 
-// Reach the private SVG bits the handler toggles, without a real drag gesture.
-type Internals = {container: SVGElement; notAllowed: SVGElement};
+// Reach the private SVG bits and drag state the handler toggles, without a real
+// drag gesture.
+type Internals = {
+  container: SVGElement;
+  notAllowed: SVGElement;
+  isLidOpen: boolean;
+  wouldDelete_: boolean;
+};
 const internals = (trashcan: ToolboxTrashcan) =>
   trashcan as unknown as Internals;
+
+// The handler reads workspace.currentGesture_?.flyout to tell a drag that
+// originates in the toolbox apart from one on the workspace.
+const setDraggingFromToolbox = (
+  ws: Blockly.WorkspaceSvg,
+  fromToolbox: boolean,
+) => {
+  (ws as unknown as {currentGesture_: unknown}).currentGesture_ = fromToolbox
+    ? {flyout: {}}
+    : null;
+};
 
 const dragEvent = (blocks: Blockly.BlockSvg[], isStart: boolean) =>
   ({
@@ -85,6 +102,79 @@ describe('ToolboxTrashcan', () => {
 
     trashcan.workspaceChangeHandler(dragEvent([block], true));
     expect(notAllowed.style.visibility).toBe('hidden');
+  });
+
+  it('treats a shadow block as deletable despite isDeletable() being false', () => {
+    trashcan = new ToolboxTrashcan(workspace, DefaultTheme);
+    const block = append('text_print');
+    block.setShadow(true);
+    // Blockly reports shadow blocks as undeletable; the handler overrides that.
+    expect(block.isDeletable()).toBe(false);
+    const {notAllowed} = internals(trashcan);
+
+    trashcan.workspaceChangeHandler(dragEvent([block], true));
+    expect(notAllowed.style.visibility).toBe('hidden');
+  });
+
+  it('flags "not allowed" if any block in the drag is undeletable', () => {
+    trashcan = new ToolboxTrashcan(workspace, DefaultTheme);
+    const deletable = append('text_print');
+    const locked = append('text_print');
+    locked.setDeletable(false);
+    const {notAllowed} = internals(trashcan);
+
+    // The handler uses every(): a single undeletable block in the group flags it.
+    trashcan.workspaceChangeHandler(dragEvent([deletable, locked], true));
+    expect(notAllowed.style.visibility).toBe('visible');
+  });
+
+  it('keeps the trashcan hidden when the block is dragged from the toolbox', () => {
+    trashcan = new ToolboxTrashcan(workspace, DefaultTheme);
+    const block = append('text_print');
+    const {container: overlay} = internals(trashcan);
+
+    setDraggingFromToolbox(workspace, true);
+    trashcan.workspaceChangeHandler(dragEvent([block], true));
+    expect(overlay.style.visibility).toBe('hidden');
+    setDraggingFromToolbox(workspace, false);
+  });
+
+  it('opens the lid over a delete-eligible target and closes it on exit', () => {
+    trashcan = new ToolboxTrashcan(workspace, DefaultTheme);
+    const inner = internals(trashcan);
+    const draggable = {} as Blockly.IDraggable;
+
+    // wouldDelete_ is set by Blockly while a deletable block hovers the area.
+    inner.wouldDelete_ = true;
+    trashcan.onDragOver(draggable);
+    expect(inner.isLidOpen).toBe(true);
+
+    trashcan.onDragExit(draggable);
+    expect(inner.isLidOpen).toBe(false);
+  });
+
+  it('does not open the lid over a target that would not delete', () => {
+    trashcan = new ToolboxTrashcan(workspace, DefaultTheme);
+    const inner = internals(trashcan);
+
+    inner.wouldDelete_ = false;
+    trashcan.onDragOver({} as Blockly.IDraggable);
+    expect(inner.isLidOpen).toBe(false);
+  });
+
+  it('ignores events other than BLOCK_DRAG', () => {
+    trashcan = new ToolboxTrashcan(workspace, DefaultTheme);
+    const block = append('text_print');
+    const {container: overlay} = internals(trashcan);
+
+    trashcan.workspaceChangeHandler(dragEvent([block], true));
+    expect(overlay.style.visibility).toBe('visible');
+
+    // An unrelated event must leave the overlay state untouched.
+    trashcan.workspaceChangeHandler({
+      type: Blockly.Events.BLOCK_MOVE,
+    } as Blockly.Events.Abstract);
+    expect(overlay.style.visibility).toBe('visible');
   });
 
   it('removes the trashcan SVG on dispose', () => {
