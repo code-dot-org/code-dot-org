@@ -5,3 +5,6 @@ description 'Use Sketch Lab or AI Chat to help you plan out your music app.'
 sublevels
 level 'designing-reliable-apps-lesson6-sketchlab-test-v2_2026'
 level 'designing-reliable-apps-lesson6-aichat-test-2025-pilot_2025-pilot_2026'
+
+
+uses_lab2
