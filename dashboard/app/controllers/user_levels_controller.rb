@@ -90,12 +90,14 @@ class UserLevelsController < ApplicationController
   # A lab2 predict level migrated from the legacy contained-level model keeps
   # its contained_level_names, but the response may have been recorded against
   # either the parent level (post-migration) or the original contained level
-  # (pre-migration). Return both so reads and resets cover either location. Any
-  # other level returns just its own id, preserving existing behavior.
+  # (pre-migration). Return both so reads and resets cover either location. A
+  # predict level with no contained level, or any non-predict level, returns
+  # just its own id, preserving existing behavior. This is not Javalab-specific:
+  # any lab2 lab whose contained predict levels are migrated this way qualifies.
   private def predict_level_ids(level)
     ids = [level.id]
-    if level.is_a?(Javalab) && level.predict_level?
-      ids.concat(Array(level.contained_level_names).filter_map {|name| Level.find_by(name: name)&.id})
+    if level.predict_level? && level.contained_level_names.present?
+      ids.concat(level.contained_levels.map(&:id))
     end
     ids.uniq
   end

@@ -329,6 +329,33 @@ class UserLevelsControllerTest < ActionController::TestCase
     assert_equal 2, body["num_students"]
   end
 
+  test "migrated predict level reads legacy contained response for any lab2 lab, not just Java Lab" do
+    user = create(:user)
+    sign_in user
+    script = create(:unit, :in_single_unit_course)
+    contained = create(:level, type: "Multi")
+    parent = create(:level, type: "Pythonlab", properties: {predict_settings: {isPredictLevel: true}, contained_level_names: [contained.name]})
+    level_source = create(:level_source, level: contained, data: "0")
+    create(:user_level, user: user, best_result: 30, script: script, level: contained, level_source: level_source)
+
+    get :get_level_source, params: {script_id: script.id, level_id: parent.id}
+    assert_response :success
+    assert_equal "0", JSON.parse(response.body)["data"]
+  end
+
+  test "predict level with no contained level reads only its own response" do
+    user = create(:user)
+    sign_in user
+    script = create(:unit, :in_single_unit_course)
+    parent = create(:level, type: "Javalab", properties: {predict_settings: {isPredictLevel: true}})
+    level_source = create(:level_source, level: parent, data: "2")
+    create(:user_level, user: user, best_result: 30, script: script, level: parent, level_source: level_source)
+
+    get :get_level_source, params: {script_id: script.id, level_id: parent.id}
+    assert_response :success
+    assert_equal "2", JSON.parse(response.body)["data"]
+  end
+
   test "student cannot get section response summary" do
     student = create(:student)
     sign_in student

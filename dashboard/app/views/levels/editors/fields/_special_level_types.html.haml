@@ -62,7 +62,7 @@
     .field
       = f.label :contained_level_names, 'Contained Level Names'
       %p The text area to add contained levels to create predict levels. Each level name referenced here will be embedded in the Instructions Pane (click the plus sign to add a contained level)
-      - if @level.is_a?(Javalab) 
+      - if @level.is_a?(Javalab)
         %p 
           %b If this level is set to use lab2, the contained level will not be used! Use predict level settings instead.
       %p
