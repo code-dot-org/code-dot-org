@@ -24,7 +24,7 @@ describe('ForParentsAndGuardians', () => {
     screen.getByText('None');
     screen.getByText('Only one parent email is supported.');
     // The Update link keeps the id the controller attaches to.
-    expect(screen.getByRole('button', {name: 'Update'})).toHaveAttribute(
+    expect(screen.getByRole('link', {name: 'Update'})).toHaveAttribute(
       'id',
       'add-parent-email-link'
     );
@@ -39,7 +39,7 @@ describe('ForParentsAndGuardians', () => {
       />
     );
 
-    expect(screen.getByRole('button', {name: 'Remove'})).toHaveAttribute(
+    expect(screen.getByRole('link', {name: 'Remove'})).toHaveAttribute(
       'id',
       'remove-parent-email-link'
     );
@@ -48,7 +48,7 @@ describe('ForParentsAndGuardians', () => {
   it('omits the Remove link when there is no parent email', () => {
     render(<ForParentsAndGuardians {...defaultProps} />);
     expect(
-      screen.queryByRole('button', {name: 'Remove'})
+      screen.queryByRole('link', {name: 'Remove'})
     ).not.toBeInTheDocument();
   });
 });

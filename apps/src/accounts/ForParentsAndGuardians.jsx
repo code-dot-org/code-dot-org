@@ -41,14 +41,14 @@ export default function ForParentsAndGuardians({
       <MuiTypography variant="body2">
         <strong>{emailLabel}:</strong>{' '}
         <span id="displayed-parent-email">{currentEmail}</span> ({' '}
-        <Link id="add-parent-email-link" href="#" role="button">
+        <Link id="add-parent-email-link" href="#">
           {updateLabel}
         </Link>
         {hasParentEmail && (
           <>
             {' '}
             {orLabel}{' '}
-            <Link id="remove-parent-email-link" href="#" role="button">
+            <Link id="remove-parent-email-link" href="#">
               {removeLabel}
             </Link>
           </>

@@ -4,6 +4,8 @@ import {Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import {navigateToHref} from '@cdo/apps/utils';
+
 import styles from './account-edit-header.module.scss';
 
 /**
@@ -19,7 +21,14 @@ export default function AccountEditHeader({title, backLabel}) {
         className={styles.backLink}
         onClick={e => {
           e.preventDefault();
-          window.history.back();
+          // Mirror Rails `link_to :back`: use in-app history when present, but
+          // fall back to the referrer (or home) when the page was opened
+          // directly with no history entry, where history.back() is a no-op.
+          if (window.history.length > 1) {
+            window.history.back();
+          } else {
+            navigateToHref(document.referrer || '/home');
+          }
         }}
       >
         <FontAwesomeV6Icon iconName="chevron-left" iconStyle="solid" />

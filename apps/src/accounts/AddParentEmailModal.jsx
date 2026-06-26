@@ -78,6 +78,13 @@ export default class AddParentEmailModal extends React.Component {
 
   cancel = () => this.props.handleCancel();
 
+  // Submit on Enter from either email field; save() no-ops when invalid.
+  onKeyDown = event => {
+    if (event.key === 'Enter') {
+      this.save();
+    }
+  };
+
   // The DSCO Modal close affordances (X button, Esc) route here; ignore them
   // while a save is in flight, matching the old BaseDialog `uncloseable` prop.
   handleClose = () => {
@@ -176,6 +183,7 @@ export default class AddParentEmailModal extends React.Component {
               errorMessage={validationErrors.parentEmail}
               value={values.parentEmail}
               onChange={this.onParentEmailChange}
+              onKeyDown={this.onKeyDown}
               disabled={saving}
               autoComplete="off"
               maxLength={255}
@@ -187,6 +195,7 @@ export default class AddParentEmailModal extends React.Component {
               errorMessage={validationErrors.confirmedParentEmail}
               value={values.confirmedParentEmail}
               onChange={this.onConfirmedParentEmailChange}
+              onKeyDown={this.onKeyDown}
               disabled={saving}
               autoComplete="off"
               maxLength={255}

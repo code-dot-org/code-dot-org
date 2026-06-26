@@ -122,6 +122,30 @@ describe('AddParentEmailModal', () => {
       await expect(getCancelButton()).toBeDisabled();
       await expect(screen.getByText(i18n.saving())).toBeInTheDocument();
     });
+
+    it('submits on Enter when the form is valid', async () => {
+      const handleSubmit = jest.fn(() => Promise.resolve());
+      const user = userEvent.setup();
+      renderComponent({handleSubmit});
+      await user.clear(getParentEmailInput());
+      await user.type(getParentEmailInput(), 'new@example.com');
+      await user.type(getConfirmedParentEmailInput(), 'new@example.com{Enter}');
+
+      expect(handleSubmit).toHaveBeenCalledWith(
+        expect.objectContaining({parentEmail: 'new@example.com'})
+      );
+    });
+
+    it('does not submit on Enter when the form is invalid', async () => {
+      const handleSubmit = jest.fn(() => Promise.resolve());
+      const user = userEvent.setup();
+      renderComponent({handleSubmit});
+      await user.clear(getParentEmailInput());
+      // Confirmed email left blank -> mismatch -> invalid -> Enter is a no-op.
+      await user.type(getParentEmailInput(), 'new@example.com{Enter}');
+
+      expect(handleSubmit).not.toHaveBeenCalled();
+    });
   });
 
   describe('onCancel', () => {
