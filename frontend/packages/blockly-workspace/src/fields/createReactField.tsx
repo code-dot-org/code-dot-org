@@ -404,38 +404,49 @@ export function createReactField<T>(config: ReactFieldConfig<T>): FieldPlugin {
     private renderReactContent(): void {
       if (!this.dropdownDiv) return;
 
-      // Get theme from workspace
-      const workspace = this.sourceBlock_?.workspace as
-        | Blockly.WorkspaceSvg
-        | undefined;
-      const siteTheme = getWorkspaceTheme(workspace);
+      try {
+        // Get theme from workspace
+        const workspace = this.sourceBlock_?.workspace as
+          | Blockly.WorkspaceSvg
+          | undefined;
+        const siteTheme = getWorkspaceTheme(workspace);
 
-      // Create root if needed
-      if (!this.root) {
-        this.root = createRoot(this.dropdownDiv);
+        // Create root if needed
+        if (!this.root) {
+          this.root = createRoot(this.dropdownDiv);
+        }
+
+        // Deep copy value to prevent direct mutation of Blockly's data
+        const valueCopy = JSON.parse(JSON.stringify(this.getValue())) as T;
+
+        const editorElement = (
+          <Editor
+            value={valueCopy}
+            onChange={this.handleValueChange}
+            onClose={this.handleClose}
+            onRefresh={this.handleRefresh}
+            field={this}
+            sourceBlock={this.sourceBlock_ as Blockly.BlockSvg | null}
+          />
+        );
+
+        const content = EditorWrapper ? (
+          <EditorWrapper>{editorElement}</EditorWrapper>
+        ) : (
+          editorElement
+        );
+
+        this.root.render(<div data-theme={siteTheme}>{content}</div>);
+      } catch (error) {
+        // A throw here (an unserializable value, an Editor that crashes on
+        // mount, etc.) must not propagate: render_() calls this on every
+        // Blockly render, so an uncaught error would break the whole
+        // workspace render loop. Tear the root down so it is not left
+        // half-mounted; the next open recreates it cleanly.
+        console.error(`Failed to render React field "${name}":`, error);
+        this.root?.unmount();
+        this.root = null;
       }
-
-      // Deep copy value to prevent direct mutation of Blockly's data
-      const valueCopy = JSON.parse(JSON.stringify(this.getValue())) as T;
-
-      const editorElement = (
-        <Editor
-          value={valueCopy}
-          onChange={this.handleValueChange}
-          onClose={this.handleClose}
-          onRefresh={this.handleRefresh}
-          field={this}
-          sourceBlock={this.sourceBlock_ as Blockly.BlockSvg | null}
-        />
-      );
-
-      const content = EditorWrapper ? (
-        <EditorWrapper>{editorElement}</EditorWrapper>
-      ) : (
-        editorElement
-      );
-
-      this.root.render(<div data-theme={siteTheme}>{content}</div>);
     }
 
     private handleValueChange = (value: T): void => {

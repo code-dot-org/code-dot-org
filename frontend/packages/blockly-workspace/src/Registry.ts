@@ -37,6 +37,44 @@ import type {
   OldBlockDefinition,
 } from './types';
 
+/** Block-definition keys that may hold positional argument arrays. */
+const ARG_KEYS = ['args0', 'args1', 'args2', 'args3'] as const;
+
+/**
+ * Produces a copy of a block definition that the registry can freely rewrite —
+ * replacing inline plugin, field, extension and mutator references with their
+ * registered string names — without ever mutating the caller's definition.
+ *
+ * The copy is deep enough to cover every property the registry reassigns: the
+ * top-level object, the positional argument arrays and their entries, and the
+ * extensions/mixins arrays. References to members that must not be cloned
+ * (generator functions, field/plugin classes, mutator and extension objects)
+ * are deliberately shared.
+ */
+function cloneBlockDefinition<D extends BlockDefinition | OldBlockDefinition>(
+  definition: D,
+): D {
+  const source = definition as unknown as Record<string, unknown>;
+  const clone: Record<string, unknown> = {...source};
+
+  for (const key of ARG_KEYS) {
+    const args = source[key];
+    if (Array.isArray(args)) {
+      clone[key] = args.map(arg => ({...(arg as object)}));
+    }
+  }
+
+  const {extensions, mixins} = definition as Partial<BlockDefinition>;
+  if (extensions) {
+    clone.extensions = [...extensions];
+  }
+  if (mixins) {
+    clone.mixins = [...mixins];
+  }
+
+  return clone as unknown as D;
+}
+
 class Registry<T extends Environment = Environment> {
   /** The current Theme. */
   private theme: Theme;
@@ -152,17 +190,21 @@ class Registry<T extends Environment = Environment> {
   }
 
   /**
-   * Registers any unknown plugins referenced within block definitions and
-   * returns a list of those plugins. The block definition is modified to
-   * remove the references to the plugins and instead refer to the name of the
-   * extension or field instead.
+   * Registers any unknown plugins referenced within a block definition and
+   * returns a rewritten copy of that definition in which the plugin, field,
+   * extension and mutator references have been replaced by their registered
+   * string names (the form Blockly itself expects). The caller's definition is
+   * left untouched.
    */
   registerFromBlockDefinition(
     definition: BlockDefinition | OldBlockDefinition,
   ): (typeof Blockly.Blocks)[string] {
-    const block: (typeof Blockly.Blocks)[string] = {
-      ...definition,
-    };
+    // Work entirely on our own copy: the routine below rewrites plugin, field,
+    // extension and mutator references to their registered names, and the
+    // caller's definition (which Driver retains and re-registers) must not see
+    // any of that.
+    const block: (typeof Blockly.Blocks)[string] =
+      cloneBlockDefinition(definition);
     const plugins: Plugin[] = [];
 
     // Ignore old-style block initializers, typically supplied via Blockly itself
@@ -181,32 +223,30 @@ class Registry<T extends Environment = Environment> {
     }
 
     // Register fields if we have never seen it before
-    (['args0', 'args1', 'args2', 'args3'] as (keyof BlockDefinition)[]).forEach(
-      key => {
-        if (key in blockDefinition) {
-          (
-            blockDefinition as unknown as {
-              [key: string]: BlockFlatArgDefinition[];
-            }
-          )[key] = (blockDefinition[key] as BlockArgDefinition[]).map(arg => {
-            if (
-              typeof arg.type !== 'string' &&
-              (arg.type as FieldPlugin).type === PluginType.Field
-            ) {
-              const fieldPlugin = arg.type as FieldPlugin;
-              const formedArg: BlockFlatArgDefinition = {
-                ...arg,
-                type: fieldPlugin.name,
-              };
-              this.register(fieldPlugin);
-              plugins.push(fieldPlugin);
-              return formedArg;
-            }
-            return arg as BlockFlatArgDefinition;
-          });
-        }
-      },
-    );
+    (ARG_KEYS as readonly (keyof BlockDefinition)[]).forEach(key => {
+      if (key in blockDefinition) {
+        (
+          blockDefinition as unknown as {
+            [key: string]: BlockFlatArgDefinition[];
+          }
+        )[key] = (blockDefinition[key] as BlockArgDefinition[]).map(arg => {
+          if (
+            typeof arg.type !== 'string' &&
+            (arg.type as FieldPlugin).type === PluginType.Field
+          ) {
+            const fieldPlugin = arg.type as FieldPlugin;
+            const formedArg: BlockFlatArgDefinition = {
+              ...arg,
+              type: fieldPlugin.name,
+            };
+            this.register(fieldPlugin);
+            plugins.push(fieldPlugin);
+            return formedArg;
+          }
+          return arg as BlockFlatArgDefinition;
+        });
+      }
+    });
 
     // Register mutator if we have never seen it before and it exists
     if (blockDefinition.mutator) {

@@ -146,7 +146,6 @@
     "stylelint:fix": "yarn run stylelint --fix",
     "test": "vitest --run",
     "test:browser": "vitest --run --config vitest.browser.config.ts",
-    "test:browser:update": "vitest --run --update --config vitest.browser.config.ts",
     "typecheck": "tsc --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",

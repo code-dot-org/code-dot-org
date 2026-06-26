@@ -113,6 +113,37 @@ describe('registerFromBlockDefinition', () => {
     expect(Blockly.Extensions.isRegistered(MIXIN_NAME)).toBe(true);
   });
 
+  it('leaves the caller-supplied definition untouched', () => {
+    const args0 = [{type: fieldPlugin, name: 'FIELD'}];
+    const extensions = [extension];
+    const mixins = [mixin];
+    const definition = {
+      type: 'registry_test_block_immutable',
+      tooltip: '',
+      message0: '%1',
+      args0,
+      mutator,
+      extensions,
+      mixins,
+    } as unknown as BlockDefinition;
+
+    const block = registry.registerFromBlockDefinition(definition);
+
+    // The returned copy is rewritten...
+    expect((block.args0 as {type: string}[])[0].type).toBe(FIELD_NAME);
+    expect(block.mutator).toBe(MUTATOR_NAME);
+
+    // ...but the caller's definition still holds the original references,
+    // unmodified, and its arrays were not reused by the returned copy.
+    expect(definition.args0).toBe(args0);
+    expect(args0[0].type).toBe(fieldPlugin);
+    expect(definition.mutator).toBe(mutator);
+    expect(definition.extensions).toBe(extensions);
+    expect(definition.extensions).toEqual([extension]);
+    expect((definition as unknown as {mixins: unknown}).mixins).toBe(mixins);
+    expect(block.args0).not.toBe(args0);
+  });
+
   it('assigns the blank mutator when a block defines none', () => {
     const definition = {
       type: 'registry_test_block_plain',

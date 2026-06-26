@@ -5,7 +5,7 @@ import {defineConfig} from 'vitest/config';
 // Blockly injection and rendering depend on SVG layout (getBBox, getHeightWidth,
 // metrics) that jsdom does not implement. Kept separate from the jsdom unit
 // tests so `yarn test` does not require launching a browser. Run with
-// `yarn test:browser` (or `:update` to refresh any screenshot baselines).
+// `yarn test:browser`.
 export default defineConfig({
   // Pre-bundle React entrypoints up front; otherwise the first test importing
   // react-dom/client triggers an on-the-fly optimize + page reload mid-run,
@@ -22,9 +22,8 @@ export default defineConfig({
       provider: playwright({}),
       viewport: {width: 1024, height: 768},
       instances: [{browser: 'chromium'}],
-      // Don't drop generic capture-on-failure images into __screenshots__; that
-      // directory holds the intentional toMatchScreenshot baselines we commit.
-      // toMatchScreenshot still writes its own actual/diff on mismatch.
+      // These are behavioral browser tests, not visual ones; never write
+      // capture-on-failure screenshots into the package.
       screenshotFailures: false,
     },
   },
