@@ -145,10 +145,14 @@ class SessionsControllerTest < ActionController::TestCase
   test "users go to code.org after logging out" do
     student = create(:student)
     sign_in student
+    session[:pairings] = [create(:student).id]
+    session[:pairing_section_id] = 123
 
     delete :destroy
 
     assert_redirected_to root_path
+    assert_nil session[:pairings]
+    assert_nil session[:pairing_section_id]
   end
 
   test "if you're not signed in you can still sign out" do
