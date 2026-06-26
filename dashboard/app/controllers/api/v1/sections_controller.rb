@@ -526,6 +526,16 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     student_ids.each do |student_id|
       student = User.find_by(id: student_id)
       next unless student
+
+      unless Policies::DemoSections.demo_student?(student_id)
+        failures << student_id
+        Honeybadger.notify(
+          "Refused to add non-demo student to demo section",
+          context: {section_id: section.id, student_id: student_id}
+        )
+        next
+      end
+
       begin
         result = section.add_student(student)
         next if [Section::ADD_STUDENT_SUCCESS, Section::ADD_STUDENT_EXISTS].include?(result)
