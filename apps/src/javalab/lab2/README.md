@@ -165,6 +165,14 @@ still on the TODO list. Differences from legacy use:
   (`Javalab#clear_lab2_starter_assets`, called from
   `levels_controller#update_start_code`) so assets a levelbuilder
   deleted cannot re-seed from it.
+- Lab2 predict settings can be added to a level that uses_lab2. A legacy level
+  can migrate its settings via the `bin/oneoff/migrate_contained_levels_to_predict.rb`
+  script (see script for details). That script will write the old contained level
+  settings into the new predict level format. The script has not yet been run for
+  all existing levels, but can run on an entire folder if desired.
+  When loading predict levels, we will check for student responses stored on the contained 
+  level and fall back to that response, if it exists, so student data
+  is not lost in a migration.
 
 ## To Dos
 - **Theater photo prompter** — the `GET_IMAGE` signal (crosshair overlay +
@@ -172,9 +180,6 @@ still on the TODO list. Differences from legacy use:
   (image + audio playback) is supported.
 - **Captcha dialog** on `AuthorizerSignalType.CAPTCHA`.
 - **Code review**.
-- **Contained levels (predict levels)** — Java Lab uses the old 'contained levels'
-  version of predict levels. We will need to support converting these levels
-  to the lab2 predict level setup.
 - **Decommissioning the legacy bundle**. `apps/src/javalab/` stays
   until parity is reached and all production levels have flipped
   `uses_lab2`.
