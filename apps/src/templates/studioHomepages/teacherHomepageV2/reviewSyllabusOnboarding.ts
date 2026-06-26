@@ -110,7 +110,7 @@ const createTeacherResourcesStep = (
 ): StepOptions => ({
   id: 'teacher-resources-dropdown',
   attachTo: {
-    element: '#teacher-resources-dropdown',
+    element: '#teacher-resources-dropdown-dropdown-button',
     on: 'right',
   },
   text: withSparkle(
@@ -118,9 +118,13 @@ const createTeacherResourcesStep = (
   ),
   buttons: [nextButton(tour)],
   beforeShowPromise: controller
-    ? () => waitForElement('#teacher-resources-dropdown', controller.signal)
+    ? () =>
+        waitForElement(
+          '#teacher-resources-dropdown-dropdown-button',
+          controller.signal
+        )
     : undefined,
-  when: highlightAttachedElement('#teacher-resources-dropdown'),
+  when: highlightAttachedElement('#teacher-resources-dropdown-dropdown-button'),
 });
 
 const createLessonResourcesStep = (
