@@ -4,21 +4,21 @@ import React from 'react';
 
 import {getUserAppOptionsPath} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {LevelProperties} from '@cdo/apps/lab2/types';
+import fetchUserAppOptions from '@cdo/apps/lab2/utils/fetchUserAppOptions';
 import PairingNavigatorAlert from '@cdo/apps/lab2/views/alerts/pairingNavigator/PairingNavigatorAlert';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 jest.mock('@cdo/apps/code-studio/progressReduxSelectors', () => ({
   getUserAppOptionsPath: jest.fn(() => '/api/user_app_options/test/1/1/1'),
 }));
-jest.mock('@cdo/apps/util/HttpClient');
+jest.mock('@cdo/apps/lab2/utils/fetchUserAppOptions');
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
   useAppSelector: jest.fn(),
 }));
 
 const mockedUseAppSelector = useAppSelector as jest.Mock;
 const mockedGetUserAppOptionsPath = getUserAppOptionsPath as jest.Mock;
-const mockedFetchJson = HttpClient.fetchJson as jest.Mock;
+const mockedFetchUserAppOptions = fetchUserAppOptions as jest.Mock;
 
 function setState({
   levelProperties,
@@ -39,7 +39,7 @@ function setState({
 
 describe('PairingNavigatorAlert', () => {
   beforeEach(() => {
-    mockedFetchJson.mockResolvedValue({value: {isNavigator: false}});
+    mockedFetchUserAppOptions.mockResolvedValue({isNavigator: false});
   });
 
   afterEach(() => {
@@ -59,12 +59,10 @@ describe('PairingNavigatorAlert', () => {
         appName: 'music',
       },
     });
-    mockedFetchJson.mockResolvedValue({
-      value: {
-        isNavigator: true,
-        pairingDriver: 'A Student',
-        pairingChannelId: 'abc123',
-      },
+    mockedFetchUserAppOptions.mockResolvedValue({
+      isNavigator: true,
+      pairingDriver: 'A Student',
+      pairingChannelId: 'abc123',
     });
 
     render(<PairingNavigatorAlert />);
@@ -86,12 +84,10 @@ describe('PairingNavigatorAlert', () => {
       },
       viewAsUserId: 7,
     });
-    mockedFetchJson.mockResolvedValue({
-      value: {
-        isNavigator: true,
-        pairingDriver: 'A Student',
-        pairingChannelId: 'abc123',
-      },
+    mockedFetchUserAppOptions.mockResolvedValue({
+      isNavigator: true,
+      pairingDriver: 'A Student',
+      pairingChannelId: 'abc123',
     });
 
     render(<PairingNavigatorAlert isTeacherViewingStudent={true} />);
@@ -103,10 +99,8 @@ describe('PairingNavigatorAlert', () => {
         })
       ).toBeInTheDocument()
     );
-    expect(mockedFetchJson).toHaveBeenCalledWith(
-      '/api/user_app_options/test/1/1/1?user_id=7',
-      undefined,
-      expect.any(Function)
+    expect(mockedFetchUserAppOptions).toHaveBeenCalledWith(
+      '/api/user_app_options/test/1/1/1?user_id=7'
     );
   });
 
@@ -116,12 +110,10 @@ describe('PairingNavigatorAlert', () => {
         appName: 'sketchlab',
       },
     });
-    mockedFetchJson.mockResolvedValue({
-      value: {
-        isNavigator: true,
-        pairingDriver: 'A Student',
-        pairingChannelId: 'abc123',
-      },
+    mockedFetchUserAppOptions.mockResolvedValue({
+      isNavigator: true,
+      pairingDriver: 'A Student',
+      pairingChannelId: 'abc123',
     });
 
     render(
@@ -142,11 +134,9 @@ describe('PairingNavigatorAlert', () => {
         appName: 'sketchlab',
       },
     });
-    mockedFetchJson.mockResolvedValue({
-      value: {
-        isNavigator: true,
-        pairingDriver: 'A Student',
-      },
+    mockedFetchUserAppOptions.mockResolvedValue({
+      isNavigator: true,
+      pairingDriver: 'A Student',
     });
 
     render(
@@ -168,11 +158,9 @@ describe('PairingNavigatorAlert', () => {
       },
       viewAsUserId: 7,
     });
-    mockedFetchJson.mockResolvedValue({
-      value: {
-        isNavigator: true,
-        pairingChannelId: 'abc123',
-      },
+    mockedFetchUserAppOptions.mockResolvedValue({
+      isNavigator: true,
+      pairingChannelId: 'abc123',
     });
 
     const {container} = render(

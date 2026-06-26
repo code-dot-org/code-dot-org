@@ -3,7 +3,8 @@ import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
 import {getUserAppOptionsPath} from '@cdo/apps/code-studio/progressReduxSelectors';
-import HttpClient from '@cdo/apps/util/HttpClient';
+import {PartialUserAppOptions} from '@cdo/apps/lab2/types';
+import fetchUserAppOptions from '@cdo/apps/lab2/utils/fetchUserAppOptions';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './pairingNavigatorAlert.module.scss';
@@ -19,12 +20,6 @@ type PairingNavigatorAlertProps = {
   isTeacherViewingStudent?: boolean;
 };
 
-type PairingProperties = {
-  isNavigator?: boolean;
-  pairingDriver?: string;
-  pairingChannelId?: string;
-};
-
 const PairingNavigatorAlert: React.FC<PairingNavigatorAlertProps> = ({
   inWorkspaceContainer,
   className,
@@ -35,7 +30,7 @@ const PairingNavigatorAlert: React.FC<PairingNavigatorAlertProps> = ({
   const userAppOptionsPath = useAppSelector(getUserAppOptionsPath);
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const [userPairingProperties, setUserPairingProperties] =
-    useState<PairingProperties>();
+    useState<PartialUserAppOptions>();
 
   useEffect(() => {
     if (!userAppOptionsPath) {
@@ -53,12 +48,8 @@ const PairingNavigatorAlert: React.FC<PairingNavigatorAlertProps> = ({
     const userAppOptionsUrl = `${userAppOptionsPath}${userIdQuery}`;
     let isCancelled = false;
 
-    HttpClient.fetchJson<PairingProperties>(
-      userAppOptionsUrl,
-      undefined,
-      response => response as PairingProperties
-    )
-      .then(({value}) => {
+    fetchUserAppOptions(userAppOptionsUrl)
+      .then(value => {
         if (isCancelled) {
           return;
         }
