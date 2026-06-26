@@ -14,10 +14,6 @@ export function useLevelProperties() {
   return useContext(LevelPropertiesContext).levelProperties;
 }
 
-export function useMaybeLevelProperties() {
-  return useContext(LevelPropertiesContext).levelProperties;
-}
-
 interface LevelPropertiesProviderProps extends PropsWithChildren {
   levelId: number;
   levelPropertiesMap: LevelPropertiesMap;

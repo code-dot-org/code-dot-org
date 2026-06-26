@@ -1,22 +1,18 @@
-interface LoadingProps {
-  isLoading: boolean;
-}
-
-export default function Loading({isLoading}: LoadingProps) {
+export default function Loading() {
   return (
     <div
       role="status"
       aria-live="polite"
       aria-atomic="true"
       style={{
-        display: isLoading ? 'flex' : 'none',
+        display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         height: '100%',
         width: '100%',
       }}
     >
-      {isLoading ? 'Loading…' : ''}
+      Loading…
     </div>
   );
 }

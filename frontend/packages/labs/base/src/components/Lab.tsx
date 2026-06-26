@@ -13,6 +13,9 @@ export interface LabProps extends PropsWithChildren {
   onError?: (error: Error, componentStack: string) => void;
 }
 
+const ERROR_MESSAGE =
+  'An error occurred while loading the lab. Try reloading the page.';
+
 export default function Lab({
   levelId,
   levelPropertiesMap,
@@ -23,9 +26,7 @@ export default function Lab({
 
   const handleError = useCallback(
     (error: Error, componentStack: string) => {
-      setErrorMessage(
-        'An error occurred while loading the lab. Try reloading the page.',
-      );
+      setErrorMessage(ERROR_MESSAGE);
       (onError ?? defaultOnError)(error, componentStack);
     },
     [onError],
@@ -45,18 +46,22 @@ export default function Lab({
 
   return (
     <>
-      <div role="alert" aria-live="assertive" aria-atomic="true">
-        {errorMessage}
-      </div>
-      <Suspense fallback={<Loading isLoading />}>
-        <ErrorBoundary fallback={<p>{errorMessage}</p>} onError={handleError}>
-          {content}
-        </ErrorBoundary>
-      </Suspense>
+      {errorMessage && (
+        <div role="alert" aria-live="assertive" aria-atomic="true">
+          {errorMessage}
+        </div>
+      )}
+      <ErrorBoundary
+        key={levelId}
+        fallback={<p>{ERROR_MESSAGE}</p>}
+        onError={handleError}
+      >
+        <Suspense fallback={<Loading />}>{content}</Suspense>
+      </ErrorBoundary>
     </>
   );
 }
 
-function defaultOnError(error: Error) {
-  console.error('[Lab] render error:', error);
+function defaultOnError(error: Error, componentStack: string) {
+  console.error('[Lab] render error:', error, componentStack);
 }

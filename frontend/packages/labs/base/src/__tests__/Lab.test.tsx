@@ -91,6 +91,50 @@ describe('Lab error containment', () => {
 
     consoleSpy.mockRestore();
   });
+
+  it('does not render an alert region before any error', () => {
+    render(
+      <Lab levelId={29091} levelPropertiesMap={LEVEL_MAP}>
+        <LevelDisplay />
+      </Lab>,
+    );
+
+    expect(screen.queryByRole('alert')).toBeNull();
+  });
+
+  it('recovers from error when levelId changes', () => {
+    let shouldThrow = true;
+
+    function MaybeBomb() {
+      if (shouldThrow) {
+        throw new Error('level broke');
+      }
+      return <div data-testid="recovered">OK</div>;
+    }
+
+    const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+
+    const {rerender} = render(
+      <Lab levelId={29091} levelPropertiesMap={LEVEL_MAP}>
+        <MaybeBomb />
+      </Lab>,
+    );
+
+    expect(screen.getByRole('alert')).toHaveTextContent(
+      /error occurred.*reloading/i,
+    );
+
+    shouldThrow = false;
+    rerender(
+      <Lab levelId={29092} levelPropertiesMap={LEVEL_MAP}>
+        <MaybeBomb />
+      </Lab>,
+    );
+
+    expect(screen.getByTestId('recovered')).toHaveTextContent('OK');
+
+    consoleSpy.mockRestore();
+  });
 });
 
 describe('Lab without level properties (project route)', () => {

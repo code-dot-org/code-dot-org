@@ -40,17 +40,15 @@ class LabMetricsReporter {
   }
 
   reportLoadTime(metricName: string, loadTimeMs: number) {
-    metrics.distribution(metricName, loadTimeMs, {
-      ...this.getCommonAttributes(),
-    });
+    metrics.distribution(metricName, loadTimeMs, this.getCommonAttributes());
   }
 
   incrementCounter(metricName: string) {
-    metrics.count(metricName, 1, {...this.getCommonAttributes()});
+    metrics.count(metricName, 1, this.getCommonAttributes());
   }
 
   reportSevereError() {
-    metrics.count('SevereError', 1, {...this.getCommonAttributes()});
+    metrics.count('SevereError', 1, this.getCommonAttributes());
   }
 
   reset() {
@@ -63,11 +61,14 @@ class LabMetricsReporter {
   }
 
   private getCommonAttributes(): Record<string, unknown> {
-    const attrs: Record<string, unknown> = {};
-    if (this.commonProperties.appName) {
-      attrs.AppName = this.commonProperties.appName;
-    }
-    return attrs;
+    const {appName, channelId, currentLevelId, scriptId} =
+      this.commonProperties;
+    return {
+      ...(appName && {AppName: appName}),
+      ...(channelId && {ChannelId: channelId}),
+      ...(currentLevelId != null && {LevelId: String(currentLevelId)}),
+      ...(scriptId != null && {ScriptId: String(scriptId)}),
+    };
   }
 }
 
