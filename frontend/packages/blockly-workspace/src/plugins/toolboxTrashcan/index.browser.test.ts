@@ -162,6 +162,43 @@ describe('ToolboxTrashcan', () => {
     expect(inner.isLidOpen).toBe(false);
   });
 
+  it('hides the toolbox contents while a workspace block is dragging', () => {
+    // Re-inject with a category toolbox so .blocklyToolboxContents exists; the
+    // afterEach still disposes this (reassigned) workspace.
+    workspace.dispose();
+    workspace = Blockly.inject(container, {
+      toolbox: {
+        kind: 'categoryToolbox',
+        contents: [
+          {
+            kind: 'category',
+            name: 'Text',
+            contents: [{kind: 'block', type: 'text_print'}],
+          },
+        ],
+      },
+    });
+    trashcan = new ToolboxTrashcan(workspace, DefaultTheme);
+
+    const block = append('text_print');
+    // In Blockly v11 the category list renders as .blocklyToolboxCategoryGroup
+    // (the handler's first selector). Its second selector, .blocklyToolboxContents,
+    // matches nothing in this version.
+    const categoryGroup = document.querySelector<HTMLElement>(
+      '.blocklyToolboxCategoryGroup',
+    );
+    expect(categoryGroup).not.toBeNull();
+
+    // Dragging a workspace block (not from the toolbox) hides the toolbox...
+    setDraggingFromToolbox(workspace, false);
+    trashcan.workspaceChangeHandler(dragEvent([block], true));
+    expect(categoryGroup?.style.visibility).toBe('hidden');
+
+    // ...and ending the drag reveals it again.
+    trashcan.workspaceChangeHandler(dragEvent([block], false));
+    expect(categoryGroup?.style.visibility).toBe('visible');
+  });
+
   it('ignores events other than BLOCK_DRAG', () => {
     trashcan = new ToolboxTrashcan(workspace, DefaultTheme);
     const block = append('text_print');
