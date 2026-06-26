@@ -199,6 +199,11 @@ const buildProcessor = (
     Fragment,
     jsx,
     jsxs,
+    // Pass each source hast node to its mapped component as a `node` prop.
+    // Extensions that reconstruct the original subtree (e.g. an embedded
+    // Blockly `<xml>` re-serialized to a workspace) need it; base components
+    // destructure only the props they use, so the extra prop is inert for them.
+    passNode: true,
     components: composeComponents(baseComponents(localized), extensions),
   });
 };
