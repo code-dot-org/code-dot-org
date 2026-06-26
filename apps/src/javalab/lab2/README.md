@@ -151,8 +151,8 @@ still on the TODO list. Differences from legacy use:
 - Support for theater (image + audio playback): a `theater` `csaViewMode`
   level renders the generated image and plays its audio in the Lab2 preview
   panel, with run / reset wired up. Shares the new `apps/src/miniApps/theater/`
-  mini-app with a Lab2 `TheaterPreview` wrapper, mirroring neighborhood. The
-  `GET_IMAGE` photo prompter is deferred (see To Dos).
+  mini-app with a Lab2 `TheaterPreview` wrapper, mirroring neighborhood. 
+  Also supports the prompter, with a button over the preview.
 - Image and audio assets (`png jpg jpeg gif wav mp3`): uploadable via the
   codebridge file browser in both student and start mode, displayed
   inline for images, stripped into `assetUrls` server-side for
@@ -167,9 +167,6 @@ still on the TODO list. Differences from legacy use:
   deleted cannot re-seed from it.
 
 ## To Dos
-- **Theater photo prompter** — the `GET_IMAGE` signal (crosshair overlay +
-  photo upload) is stubbed with a console notice; the core theater mini-app
-  (image + audio playback) is supported.
 - **Captcha dialog** on `AuthorizerSignalType.CAPTCHA`.
 - **Code review**.
 - **Contained levels (predict levels)** — Java Lab uses the old 'contained levels'
