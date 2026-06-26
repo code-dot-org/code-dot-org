@@ -1,5 +1,8 @@
 %h1.control-legend{data: {toggle: "collapse", target: "#predict-settings-container"}}
   Predict Level Settings
+  - if @level.is_a?(Javalab) 
+    %p 
+      %b These settings only work when the level is set to use lab2. If this level is not set to use lab2, use a contained level instead.
 
 #predict-settings-container.in.collapse
   #predict-settings-editor
