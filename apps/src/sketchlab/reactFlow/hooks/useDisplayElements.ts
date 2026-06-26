@@ -122,7 +122,7 @@ export function useDisplayElements({
           selected,
           // Derive draggable/connectable/deletable from locked/read-only/grouped state
           draggable: !locked && !readOnly && !groupedChild && !grabMode,
-          deletable: !locked && !readOnly && !groupedChild,
+          deletable: !locked && !readOnly && !groupedChild && !grabMode,
           // Nodes are still connectable when locked, but not in read-only or grab mode
           connectable: !readOnly && !grabMode,
           // Override React Flow's default "{type} node" aria-label on the
@@ -157,7 +157,7 @@ export function useDisplayElements({
         return {
           ...edge,
           selected,
-          deletable: !locked && !readOnly,
+          deletable: !locked && !readOnly && !grabMode,
           ariaLabel: getEdgeLabel(
             edge,
             nodeMap,

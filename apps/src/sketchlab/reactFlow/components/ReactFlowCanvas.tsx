@@ -704,6 +704,7 @@ export default function ReactFlowCanvas({
     edgesFocusable: !isGrabMode,
     onNodeClick: isGrabMode ? undefined : handleNodeClick,
     onEdgeClick: isGrabMode ? undefined : handleEdgeClick,
+    deleteKeyCode: !readOnly && !isGrabMode ? 'Delete' : null,
   };
 
   return (
@@ -777,7 +778,6 @@ export default function ReactFlowCanvas({
                     // We implement our own shift+click multi-selection; disable
                     // React Flow's built-in so it doesn't fight our selection state.
                     multiSelectionKeyCode={null}
-                    deleteKeyCode={readOnly ? null : 'Delete'}
                     proOptions={{hideAttribution: true}}
                     // Even though we manage tab order, we keep React Flow's keyboard A11y on because
                     // it manages things like moving nodes with arrow keys.
