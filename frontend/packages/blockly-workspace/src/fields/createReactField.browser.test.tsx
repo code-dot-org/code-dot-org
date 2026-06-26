@@ -67,4 +67,52 @@ describe('createReactField rendering', () => {
     expect(last.value).toEqual({label: 'hi'});
     expect(last.element.tagName.toLowerCase()).toBe('g');
   });
+
+  it('contains a render failure instead of breaking the workspace', () => {
+    const plugin = createReactField<Value>({
+      name: 'field_rf_bad_value',
+      defaultValue: {label: 'ok'},
+      Editor: () => null,
+    });
+    Blockly.fieldRegistry.register(
+      plugin.name,
+      plugin.field as Parameters<typeof Blockly.fieldRegistry.register>[1],
+    );
+    Blockly.defineBlocksWithJsonArray([
+      {
+        type: 'rf_bad_value_block',
+        message0: '%1',
+        args0: [{type: 'field_rf_bad_value', name: 'F'}],
+      },
+    ]);
+    Blockly.serialization.blocks.append(
+      {type: 'rf_bad_value_block'},
+      workspace,
+    );
+
+    const block = workspace
+      .getAllBlocks(false)
+      .find(b => b.type === 'rf_bad_value_block');
+    const field = block?.getField('F');
+    expect(field).toBeTruthy();
+
+    // A value carrying a BigInt cannot survive the JSON round-trip the field
+    // uses to copy it for React, so renderReactContent throws synchronously
+    // when the dropdown opens. The try/catch must contain that.
+    field?.setValue({label: 'boom', n: 1n} as unknown as Value);
+
+    const editable = field as unknown as {
+      showEditor_: () => void;
+      root: unknown;
+    };
+    expect(() => editable.showEditor_()).not.toThrow();
+    // The half-created root was torn down rather than left dangling.
+    expect(editable.root).toBeNull();
+    // The workspace is unharmed and still holds the block.
+    expect(
+      workspace.getAllBlocks(false).some(b => b.type === 'rf_bad_value_block'),
+    ).toBe(true);
+
+    Blockly.DropDownDiv.hideWithoutAnimation();
+  });
 });

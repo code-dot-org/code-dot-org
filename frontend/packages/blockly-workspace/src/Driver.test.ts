@@ -65,6 +65,25 @@ describe('block registration', () => {
 
     expect(driver.blocks).toEqual([]);
   });
+
+  it('clears retained stock-generator backups on deconstruct', () => {
+    const localEnv = {} as Environment;
+    const localDriver = new Driver(localEnv, ThrasosRenderer, DefaultTheme);
+
+    localDriver.setBlocks([blockDef]);
+    // setBlocks records a backup slot for the block's original generator so a
+    // block overriding a stock generator can still reach it.
+    expect(
+      Object.keys(localEnv.originalGeneratorFunctions.javascript),
+    ).toContain('driver_test_block');
+
+    localDriver.deconstruct();
+    // deconstruct drops those backups instead of letting them accumulate across
+    // re-registrations.
+    expect(
+      Object.keys(localEnv.originalGeneratorFunctions.javascript),
+    ).toHaveLength(0);
+  });
 });
 
 describe('theme', () => {

@@ -105,6 +105,16 @@ export interface FieldSizeContext<T> {
 /**
  * Configuration for creating a React-based Blockly field.
  */
+/**
+ * Configuration for {@link createReactField}.
+ *
+ * The value type `T` must be JSON-serializable. The field value is the unit
+ * Blockly saves and loads, and the editor receives a structured-clone copy of
+ * it (via JSON round-trip) to keep React from mutating Blockly's state — so
+ * functions, class instances, Dates, and circular references will not survive.
+ * Use {@link saveState}/{@link loadState} if the in-memory value needs a
+ * different serialized shape.
+ */
 export interface ReactFieldConfig<T> {
   /** The field name used in block definitions (e.g., 'field_tune'). */
   name: string;

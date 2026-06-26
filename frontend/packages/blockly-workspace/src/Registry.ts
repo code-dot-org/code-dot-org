@@ -546,9 +546,19 @@ class Registry<T extends Environment = Environment> {
     this.mutators.forEach(mutator => this.unregisterMutator(mutator));
     this.mutators = [];
 
-    // Input plugins do not have to be registered... the renderer is the only
-    // object that is registered in this case.
-    this.inputs = [];
+    // Input plugins are not registered individually; instead the renderer is
+    // re-registered carrying the accumulated inputs. Dropping the inputs alone
+    // would leave the registered renderer still baking in the old set, so
+    // re-register it empty to keep teardown symmetric.
+    if (this.inputs.length > 0) {
+      this.inputs = [];
+      Blockly.registry.register(
+        Blockly.registry.Type.RENDERER,
+        this.renderer.name,
+        this.renderer.class(this.inputs),
+        true,
+      );
+    }
 
     // Dispose any inject-plugin instances still tracked (workspaces that were
     // not individually torn down via disposeInject).

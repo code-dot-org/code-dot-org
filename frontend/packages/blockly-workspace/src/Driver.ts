@@ -316,6 +316,12 @@ class Driver<
     this.blocks = [];
     this._injectPlugins = [];
     this._registry.unregisterAll();
+
+    // Drop the retained stock-generator backups. They accumulate per block
+    // type across registerBlocks() calls and are never otherwise cleared;
+    // reset the map in place so environment.originalGeneratorFunctions keeps
+    // pointing at the same object.
+    originalGeneratorFunctions.javascript = {};
   }
 }
 
