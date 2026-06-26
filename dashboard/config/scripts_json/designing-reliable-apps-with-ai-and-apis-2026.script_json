@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-26 19:25:31 UTC",
+    "serialized_at": "2026-06-26 19:34:57 UTC",
     "hide_within_course": true,
     "published_state": "in_development",
     "instruction_type": null,
@@ -263,8 +263,8 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "overview": "**Why would I choose messy live data over simple local data that I fully control?**\n\nThis lesson introduces students to architectural decision-making around data sourcing in web applications. Students examine the distinction between local data (stored in the app) and live data (retrieved from an external API) and analyze the tradeoffs between speed, reliability, freshness, and flexibility. Through discussion and implementation, they design a hybrid app that combines local and live data, using fallback logic to ensure the application remains functional even when external data fails.",
-        "student_overview": "**Why would I choose messy live data over simple local data that I fully control?**\n\nIn this lesson, you will explore how real-world apps decide where their data lives. You’ll compare local data (stored in the app) and live data (fetched from an external API) and analyze the tradeoffs between speed, reliability, freshness, and flexibility. Then, you’ll build a hybrid app that combines local and live data to create a more reliable and resilient user experience."
+        "overview": "**How do Data Engineers design systems that keep apps running even when their data sources fail?**\n\nIn this lesson, students learn about the Data Engineer career and take on the role as they examine the distinction between local data (stored in the app) and live data (retrieved from an external API). Through discussion and hands-on implementation, students analyze the tradeoffs between speed, reliability, freshness, and control, then design a hybrid app that combines both data sources using fallback logic to keep the application functional even when the external API fails.",
+        "student_overview": "**How do Data Engineers design systems that keep apps running even when their data sources fail?**\n\nIn this lesson, you learn about the Data Engineer career and then take on the role — building a hybrid app that stays functional even when the live data source fails."
       },
       "seeding_key": {
         "lesson.key": "Lesson 10: Local vs Live Data",
@@ -702,7 +702,7 @@
       "key": "6f29cce2-a5a0-4d7c-a6ef-7c67f343567c",
       "position": 1,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -2756,7 +2756,7 @@
       "key": "af8e70ac-0551-4cb5-9222-dd8ef9d0a59a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define human-centered reliability."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define human-centered reliability and have students fill in the vocabulary section in their Unit Guide. Connect back to the warm up by pointing out that each loading screen example demonstrated this concept in action — the skeleton screen, the progress bar with text, and the bare spinner all showed different levels of transparency with the user."
       },
       "seeding_key": {
         "activity_section.key": "af8e70ac-0551-4cb5-9222-dd8ef9d0a59a",
@@ -2764,52 +2764,23 @@
       }
     },
     {
-      "key": "9578cf57-9c1e-41a9-a646-3f798aab33b4",
+      "key": "5126359b-9381-46d9-9ab3-f12ac80ab96f",
       "position": 3,
       "properties": {
-        "description": "Every time your app makes a request to an API, it needs to handle these three scenarios. You never want to leave a user looking at a blank screen or a broken page. Handling these states is what makes an app feel professional and reliable.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "9578cf57-9c1e-41a9-a646-3f798aab33b4",
-        "lesson_activity.key": "37053ffc-7e23-46d6-ae37-d198dcef63fa"
-      }
-    },
-    {
-      "key": "7d298994-2f42-4c35-b9cb-e6a156f93a01",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain loading state, empty state, and error state. Remind students that loading the page perfectly, i.e. following the “Happy Path, is only one possible outcome for the user experience. Reliability comes from handling the other paths well so the user never feels confused or upset.",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students design and implement loading, empty, and error states for a web app, test their implementation with a partner, and reflect on how these states support human-centered reliability.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 1 to complete Levels 1-4.\n* **Level 1:** Students use Sketch Lab to design their three states.\n* **Level 2:** Students implement their loading, empty, and error states in Web Lab and test their work.\n* **Level 3:** Students test a partner’s app by forcing the data array to be empty and checking if their \"vibe\" holds up\n* **Level 4:** Students answer reflection questions to demonstrate their understanding of human-centered reliability.\n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are correctly placing their innerHTML updates before the fetch call begins (for the loading state).\n",
+        "duration": "20",
+        "name": "Human-Centered Reliability ",
+        "progression_name": "Vocab: Human-Centered Reliability",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "An empty state isn't the same as an error state. A good empty state tells the user why there is no data being displayed. An error state communicates that something went wrong and the user will need to try again."
+            "markdown": "The program on Level 3 is designed to choose an outcome randomly. Make sure students keep clicking \"Find flights\" and resetting the results until they have tested all three states.\n"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The levels can be used as a formative assessment of the lesson objectives. \n\nOn Level 2, check that students have successfully implemented a visible loading indicator that appears as soon as the button is clicked. Check that students have implemented an empty state and error state.\n"
           }
         ]
-      },
-      "seeding_key": {
-        "activity_section.key": "7d298994-2f42-4c35-b9cb-e6a156f93a01",
-        "lesson_activity.key": "37053ffc-7e23-46d6-ae37-d198dcef63fa"
-      }
-    },
-    {
-      "key": "3c5cbdbc-cd94-47f8-b6be-da3423781191",
-      "position": 5,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "3c5cbdbc-cd94-47f8-b6be-da3423781191",
-        "lesson_activity.key": "37053ffc-7e23-46d6-ae37-d198dcef63fa"
-      }
-    },
-    {
-      "key": "5126359b-9381-46d9-9ab3-f12ac80ab96f",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students implement the logic for loading, empty, and error states in Web Lab using the assets they designed.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 1 to complete Levels 1 through 5.\n- Level 1: Students read the definition for human-centered reliability.\n- Level 2: Students write their own definition of human-centered reliability.\n- Level 3: Students use Sketch Lab to design their three states.\n- Level 4: Students implement their loading, empty, and error states in Web Lab and test their work.\n- Level 5: Students test a partner’s app by forcing the data array to be empty and checking if their \"vibe\" holds up.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are correctly placing their innerHTML updates before the fetch call begins (for the loading state).\n",
-        "duration": "20",
-        "name": "Build Phase",
-        "progression_name": "Vocab: Human-Centered Reliability"
       },
       "seeding_key": {
         "activity_section.key": "5126359b-9381-46d9-9ab3-f12ac80ab96f",
@@ -2817,85 +2788,10 @@
       }
     },
     {
-      "key": "a7136c52-10c2-425e-a224-19008201ec76",
-      "position": 7,
-      "properties": {
-        "progression_name": "Drafting the Web App State"
-      },
-      "seeding_key": {
-        "activity_section.key": "a7136c52-10c2-425e-a224-19008201ec76",
-        "lesson_activity.key": "37053ffc-7e23-46d6-ae37-d198dcef63fa"
-      }
-    },
-    {
-      "key": "cb9732e5-bdd0-4a92-8408-996570390ccf",
-      "position": 8,
-      "properties": {
-        "progression_name": "Build Your Web App State"
-      },
-      "seeding_key": {
-        "activity_section.key": "cb9732e5-bdd0-4a92-8408-996570390ccf",
-        "lesson_activity.key": "37053ffc-7e23-46d6-ae37-d198dcef63fa"
-      }
-    },
-    {
-      "key": "24f93856-1409-43c3-a4e9-d1831832fa04",
-      "position": 9,
-      "properties": {
-        "progression_name": "Getting Feedback",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The program on Level 3 is designed to choose an outcome randomly. Make sure students keep clicking \"Find flights\" and resetting the results until they have tested all three states."
-          },
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Check student responses on Level 2. An exemplar response explains that good communication builds trust and prevents users from guessing what the app is doing. On Level 4, check that students have successfully implemented a visible loading indicator that appears as soon as the button is clicked. Check that students have implemented an empty state and error state."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "24f93856-1409-43c3-a4e9-d1831832fa04",
-        "lesson_activity.key": "37053ffc-7e23-46d6-ae37-d198dcef63fa"
-      }
-    },
-    {
-      "key": "c03d22aa-370c-4eab-a953-00376129cfb8",
-      "position": 10,
-      "properties": {
-        "progression_name": "Check for Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "c03d22aa-370c-4eab-a953-00376129cfb8",
-        "lesson_activity.key": "37053ffc-7e23-46d6-ae37-d198dcef63fa"
-      }
-    },
-    {
-      "key": "0cfb2c03-5076-42a7-87a9-8d183f7a554c",
-      "position": 11,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "0cfb2c03-5076-42a7-87a9-8d183f7a554c",
-        "lesson_activity.key": "37053ffc-7e23-46d6-ae37-d198dcef63fa"
-      }
-    },
-    {
-      "key": "9497948e-7350-4e2a-814c-0f28e6b2453e",
-      "position": 12,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How does seeing a loading message impact your trust in an app?*\n- *What happens if an app shows nothing when a search has no results?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that clear communication prevents users from assuming the app is broken. Loading states tell the user that the data is loading and not to navigate away from the page. Empty states communicate that no data matches the search criteria, rather than leaving users confused by seeing a blank screen.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "9497948e-7350-4e2a-814c-0f28e6b2453e",
-        "lesson_activity.key": "37053ffc-7e23-46d6-ae37-d198dcef63fa"
-      }
-    },
-    {
       "key": "eaf82bcd-93cd-4d36-9c79-d00ffedfdfed",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day. Have students turn and talk with a partner to share their answer using a specific example from the lesson — a loading, empty, or error state they implemented, or a choice they made in their design. After partner discussion, invite a few students to share out with the class. Listen for students connecting their design and implementation decisions back to the idea of keeping users informed.\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "eaf82bcd-93cd-4d36-9c79-d00ffedfdfed",
@@ -2903,15 +2799,13 @@
       }
     },
     {
-      "key": "30ca2332-23bc-43a8-834d-93f21849d9ba",
+      "key": "c4a20d06-1d5a-4be4-a090-afd77ccc7950",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 6 to complete the End of Lesson Survey.",
-        "name": "End of Lesson Survey",
-        "progression_name": "End of Lesson Survey"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary."
       },
       "seeding_key": {
-        "activity_section.key": "30ca2332-23bc-43a8-834d-93f21849d9ba",
+        "activity_section.key": "c4a20d06-1d5a-4be4-a090-afd77ccc7950",
         "lesson_activity.key": "a60a8286-4646-4a53-a6b6-aab8104ff526"
       }
     },
@@ -2919,7 +2813,7 @@
       "key": "abba226d-81b9-4864-ac09-9f3a371fda2b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students build an intuitive understanding of the tradeoffs between local and live data sources."
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students build an intuitive understanding of the tradeoffs between local and live data sources — framed through the real decision-making a Data Engineer faces when an app goes down."
       },
       "seeding_key": {
         "activity_section.key": "abba226d-81b9-4864-ac09-9f3a371fda2b",
@@ -2930,7 +2824,7 @@
       "key": "a28769b7-5c39-43e4-a67c-25903b535f43",
       "position": 2,
       "properties": {
-        "description": "When we build apps, we make decisions about where data lives. We can hardcode it directly into the app, or fetch it from the internet. Today, you’ll act as developers making that decision.",
+        "description": "Data Engineers are the people responsible for making sure apps always have the data they need — no matter what. One of the most important decisions they make is: where should this data live? Should it be hardcoded into the app, or fetched live from the internet? Today, you're going to think like a Data Engineer. Here's the situation: A Data Engineer at a sports app just got paged at 2am. The app is showing a blank screen — no scores, no stats, nothing. The live API that serves game data went down.",
         "remarks": true
       },
       "seeding_key": {
@@ -2942,7 +2836,7 @@
       "key": "a5b26ce3-9de9-4cf6-adfd-1cbeda4c77c9",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** You're building an app. For each item, decide: Local (hardcoded) or Live (fetched):\n- *Live NBA Game Scores*\n- *Home Icon Image*\n- *List of Music Genres (Rock, Pop, Jazz)*\n- *Weather Forecast*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that frequently changing, time-sensitive data should be Live, while stable structural elements are better stored locally.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What pattern do you notice in the solution below?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify that frequently changing, time-sensitive data should be fetched Live, while stable, structural, or rarely changing data is better stored locally for speed and reliability.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Why not make the Home icon Live?*\n- *Why not make the NBA scores Local?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students articulate why developers choose Local data for stability and instant load times, and Live data for real-time updates and dynamic content.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompt. \n\n*For each item, decide: Local (hardcoded) or Live (fetched):*\n* *Live NBA Game Scores*\n* *Team Logo Image*\n* *List of Sports Categories*\n* *Weather Forecast for Game Day*\n\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that frequently changing, time-sensitive data (scores, weather) should be fetched Live, while stable, structural data (team logos, sport category lists) are better stored locally for speed and reliability. Push students to articulate why — a Data Engineer (whose job is to make those decisions before something breaks) chooses Local for instant load times and reliability, and Live for real-time updates and dynamic content. This is the core tradeoff Data Engineers navigate every time they design a data system. \n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What pattern do you notice in the solution below?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify that frequently changing, time-sensitive data should be fetched Live, while stable, structural, or rarely changing data is better stored locally for speed and reliability.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Why not make the Home icon Live?*\n- *Why not make the NBA scores Local?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students articulate why developers choose Local data for stability and instant load times, and Live data for real-time updates and dynamic content.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "a5b26ce3-9de9-4cf6-adfd-1cbeda4c77c9",
@@ -4417,7 +4311,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Drafting the Web App State"
+        "progression": "Vocab: Human-Centered Reliability"
       },
       "bonus": false,
       "seeding_key": {
@@ -4427,7 +4321,7 @@
         "lesson.key": "Lesson 9: Keeping Users Informed",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "a7136c52-10c2-425e-a224-19008201ec76"
+        "activity_section.key": "5126359b-9381-46d9-9ab3-f12ac80ab96f"
       },
       "level_keys": [
         "designing-reliable-apps-lesson9-sketchlab-test-2025-pilot_2025-pi_2026"
@@ -4436,10 +4330,10 @@
     {
       "chapter": 37,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Build Your Web App State"
+        "progression": "Vocab: Human-Centered Reliability"
       },
       "bonus": false,
       "seeding_key": {
@@ -4449,7 +4343,7 @@
         "lesson.key": "Lesson 9: Keeping Users Informed",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "cb9732e5-bdd0-4a92-8408-996570390ccf"
+        "activity_section.key": "5126359b-9381-46d9-9ab3-f12ac80ab96f"
       },
       "level_keys": [
         "designing-reliable-apps-lesson9-level4-weblab-2025-pilot_2025-pil_2026"
@@ -4458,10 +4352,10 @@
     {
       "chapter": 38,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Getting Feedback"
+        "progression": "Vocab: Human-Centered Reliability"
       },
       "bonus": false,
       "seeding_key": {
@@ -4471,7 +4365,7 @@
         "lesson.key": "Lesson 9: Keeping Users Informed",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "24f93856-1409-43c3-a4e9-d1831832fa04"
+        "activity_section.key": "5126359b-9381-46d9-9ab3-f12ac80ab96f"
       },
       "level_keys": [
         "designing-reliable-apps-lesson9-level5-test-2025-pilot_2025-pilot_2026"
@@ -4480,10 +4374,10 @@
     {
       "chapter": 39,
       "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
+      "activity_section_position": 4,
+      "assessment": true,
       "properties": {
-        "progression": "Check for Understanding"
+        "progression": "Vocab: Human-Centered Reliability"
       },
       "bonus": false,
       "seeding_key": {
@@ -4493,7 +4387,7 @@
         "lesson.key": "Lesson 9: Keeping Users Informed",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "c03d22aa-370c-4eab-a953-00376129cfb8"
+        "activity_section.key": "5126359b-9381-46d9-9ab3-f12ac80ab96f"
       },
       "level_keys": [
         "designing-reliable-apps-lesson9-level4-2026"
@@ -4501,28 +4395,6 @@
     },
     {
       "chapter": 40,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "End of Lesson Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson9-pilot-survey_2026"
-        ],
-        "lesson.key": "Lesson 9: Keeping Users Informed",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "30ca2332-23bc-43a8-834d-93f21849d9ba"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson9-pilot-survey_2026"
-      ]
-    },
-    {
-      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4544,7 +4416,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4566,7 +4438,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 42,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4588,7 +4460,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 43,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4610,7 +4482,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 44,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -4632,7 +4504,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4654,7 +4526,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 46,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4676,7 +4548,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 47,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4698,7 +4570,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 48,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4720,7 +4592,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 49,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4742,7 +4614,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5194,7 +5066,7 @@
         "lesson.key": "Lesson 9: Keeping Users Informed",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "a7136c52-10c2-425e-a224-19008201ec76"
+        "activity_section.key": "5126359b-9381-46d9-9ab3-f12ac80ab96f"
       }
     },
     {
@@ -5206,7 +5078,7 @@
         "lesson.key": "Lesson 9: Keeping Users Informed",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "cb9732e5-bdd0-4a92-8408-996570390ccf"
+        "activity_section.key": "5126359b-9381-46d9-9ab3-f12ac80ab96f"
       }
     },
     {
@@ -5218,7 +5090,7 @@
         "lesson.key": "Lesson 9: Keeping Users Informed",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "24f93856-1409-43c3-a4e9-d1831832fa04"
+        "activity_section.key": "5126359b-9381-46d9-9ab3-f12ac80ab96f"
       }
     },
     {
@@ -5230,19 +5102,7 @@
         "lesson.key": "Lesson 9: Keeping Users Informed",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "c03d22aa-370c-4eab-a953-00376129cfb8"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson9-pilot-survey_2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson9-pilot-survey_2026"
-        ],
-        "lesson.key": "Lesson 9: Keeping Users Informed",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "30ca2332-23bc-43a8-834d-93f21849d9ba"
+        "activity_section.key": "5126359b-9381-46d9-9ab3-f12ac80ab96f"
       }
     },
     {
@@ -5596,7 +5456,7 @@
     },
     {
       "name": "Local vs Live Data",
-      "url": "https://docs.google.com/presentation/d/1Dk5iaXKMnquo7K5suajiOQiXsBMhHhtZfrRSuCcMeVw/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1KeEkp3Qj7xGHHBslfQstC4APfI_Q6JX5Zxsdlk7vJhA/edit?usp=sharing",
       "key": "local_vs_live_data",
       "properties": {
         "audience": "Teacher",
@@ -5768,6 +5628,18 @@
     }
   ],
   "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Local vs Live Data",
+        "resource.key": "_exemplar_designing_reliable_apps_with_ai_and_apis_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Local vs Live Data",
+        "resource.key": "designing_reliable_apps_with_ai_and_apis_unit_guide"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Lesson 10: Local vs Live Data",
@@ -6457,7 +6329,7 @@
     {
       "key": "80eb203c-ad45-4799-b452-871b354b6db6",
       "properties": {
-        "description": "Identify risks of depending on an external API, including data integrity and accountability"
+        "description": "Identify risks of depending on an external API, including service failure and data being up to date"
       },
       "seeding_key": {
         "lesson.key": "Lesson 10: Local vs Live Data",
@@ -6547,7 +6419,7 @@
     {
       "key": "d5006578-17f6-454e-841f-22c43b74c4c4",
       "properties": {
-        "description": "Analyze tradeoffs in speed, control, freshness, and reliability"
+        "description": "Analyze trade offs in speed, control, reliability, and having up to date data"
       },
       "seeding_key": {
         "lesson.key": "Lesson 10: Local vs Live Data",
