@@ -39,6 +39,7 @@ import {
 import {
   handleRunClick,
   sendJavaConsoleInput,
+  sendTypedInputMessage,
   stopJavaCode,
 } from './javabuilderRunUtils';
 import {deriveLabConfig} from './labConfig';
@@ -260,6 +261,7 @@ const Javalab2View: React.FunctionComponent<
           onRun={onRun}
           onStop={stopJavaCode}
           sendConsoleInput={sendJavaConsoleInput}
+          sendTypedInputMessage={sendTypedInputMessage}
           levelProperties={codebridgeLevelProperties}
           allowMultipleValidationFiles={true}
         />
