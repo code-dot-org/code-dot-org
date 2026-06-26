@@ -139,28 +139,6 @@ profiles:
             mountDotAWS: true
             mountDotConfigGcloud: true
 
-# Skip the full apps webpack build. This is useful when you only need Rails,
-# e.g. ActiveJob or backend-only debugging on a memory-constrained machine.
-- name: backend-only
-  patches:
-    - op: replace
-      path: /build/artifacts/0/custom/buildCommand
-      value: |
-        k8s/bin/docker-buildx -f k8s/docker/code-dot-org.dockerfile \
-          --build-arg CODE_DOT_ORG_CORE="$CODE_DOT_ORG_CORE" \
-          --build-arg CODE_DOT_ORG_DB_SEED="$CODE_DOT_ORG_DB_SEED" \
-          --build-arg CODE_DOT_ORG_PEGASUS="$CODE_DOT_ORG_PEGASUS" \
-          --build-arg CODE_DOT_ORG_STATIC="$CODE_DOT_ORG_STATIC" \
-          --build-arg BUNDLE_JOBS=1 \
-          --build-arg BUNDLE_WITHOUT=production:adhoc:staging:levelbuilder:integration \
-          --build-arg SKIP_FRONTEND_BUILD=1
-    - op: replace
-      path: /build/artifacts/3/custom/buildCommand
-      value: k8s/bin/docker-buildx -f k8s/docker/code-dot-org-static.dockerfile --no-cache
-    - op: replace
-      path: /build/artifacts/4/custom/buildCommand
-      value: k8s/bin/docker-buildx -f k8s/docker/code-dot-org-db-seed.dockerfile --no-cache
-
 # Build only enough image to boot Rails for ActiveJob experiments. This skips
 # frontend dependencies, pegasus, static assets, DB seed image layers, and Puma.
 - name: activejob-only

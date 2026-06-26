@@ -52,19 +52,12 @@ fi
 set -x # show the command
 docker buildx build --tag $IMAGE $args $cache_from $cache_to "$BUILD_CONTEXT" $@
 
-if [ "$PUSH_IMAGE" != true ] || [ -n "$LOCAL_REGISTRY" ] || [ "$IMPORT_IMAGE_TO_K8S_NODE" = true ]; then
+if [ "$PUSH_IMAGE" != true ] || [ "$IMPORT_IMAGE_TO_K8S_NODE" = true ]; then
   image_id=$(docker image inspect --format '{{.Id}}' "$IMAGE" | sed 's/^sha256://')
 fi
 
 if [ "$PUSH_IMAGE" != true ]; then
   docker tag "$IMAGE" "$IMAGE_REPO:$image_id"
-fi
-
-if [ -n "$LOCAL_REGISTRY" ]; then
-  docker tag "$IMAGE" "$LOCAL_REGISTRY/$IMAGE_REPO:$IMAGE_TAG"
-  docker push "$LOCAL_REGISTRY/$IMAGE_REPO:$IMAGE_TAG"
-  docker tag "$IMAGE" "$LOCAL_REGISTRY/$IMAGE_REPO:$image_id"
-  docker push "$LOCAL_REGISTRY/$IMAGE_REPO:$image_id"
 fi
 
 if [ "$IMPORT_IMAGE_TO_K8S_NODE" = true ]; then
