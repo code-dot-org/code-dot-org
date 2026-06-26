@@ -45,11 +45,6 @@ export const AI_CHAT_NOT_AUTHORIZED_STUDENT =
 export const AI_CHAT_NOT_AVAILABLE_INTERNATIONAL =
   'AI Chat tools are not currently available in your region.';
 
-// Shown to international teachers in the Teacher Dashboard AI Settings, where
-// the verified-teacher message would be misleading (verification won't help).
-export const AI_CHAT_NOT_AVAILABLE_INTERNATIONAL_TEACHER_SETTINGS =
-  'AI Chat Tools are not available in your region. These settings will not take effect.';
-
 export const MODEL_PARAMETER_LABELS: {
   [key in keyof ModelParameters]: string;
 } = {

@@ -20,7 +20,7 @@ import {
 import {handleUpdateSectionAiChatAccessLevel} from '../../accessControlsApi';
 import {
   AI_SETTINGS_SUPPORT_LINK,
-  AI_CHAT_NOT_AVAILABLE_INTERNATIONAL_TEACHER_SETTINGS,
+  AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
   VERIFIED_TEACHER_SUPPORT_LINK,
 } from '../../constants';
 import {shouldShowAiChatEssentialAlert} from '../../helpers/aiChatAccess';
@@ -144,7 +144,7 @@ const AiChatAccessControls: React.FC = () => {
       {isCurrentUserAccessDisabled &&
         (isCurrentUserInternational ? (
           <Alert
-            text={AI_CHAT_NOT_AVAILABLE_INTERNATIONAL_TEACHER_SETTINGS}
+            text={AI_CHAT_NOT_AVAILABLE_INTERNATIONAL}
             type={alertTypes.warning}
             icon={{iconName: 'triangle-exclamation', iconStyle: 'solid'}}
           />
