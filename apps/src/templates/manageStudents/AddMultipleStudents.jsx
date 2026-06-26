@@ -99,7 +99,7 @@ class AddMultipleStudents extends Component {
     rows.map(parts => {
       const name = (parts[0] || '').trim();
       const familyName = (parts[1] || '').trim() || null;
-      const age = parseAge(parts[2]);
+      const age = parseAge(parts.length > 2 ? parts[2] : '');
       const gender = parseGender(parts[3]);
       const usState = parseUsState(parts[4]) || null;
       return {name, familyName, age, gender, usState};
