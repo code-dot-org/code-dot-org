@@ -36,6 +36,7 @@ import {
   AnchorDraggingProvider,
   ClipboardProvider,
   PushSnapshotProvider,
+  SketchLabGrabModeProvider,
   SketchLabReadOnlyProvider,
   ToolbarVisibilityProvider,
   type ToolbarTarget,
@@ -515,6 +516,7 @@ export default function ReactFlowCanvas({
     lastFocusedEntry,
     connectingFrom,
     readOnly,
+    grabMode: canvasTool === 'grab',
     focusEntry,
     handleEdgeMouseDown,
     multiSelectedNodeIds,
@@ -694,6 +696,7 @@ export default function ReactFlowCanvas({
   );
 
   return (
+    <SketchLabGrabModeProvider value={canvasTool === 'grab'}>
     <SketchLabReadOnlyProvider value={readOnly}>
       <ToolbarVisibilityProvider value={toolbarVisibility}>
         <ClipboardProvider value={clipboardContextValue}>
@@ -743,8 +746,12 @@ export default function ReactFlowCanvas({
                     edges={displayEdges}
                     onNodesChange={handleNodesChange}
                     onEdgesChange={handleEdgesChange}
-                    onNodeClick={handleNodeClick}
-                    onEdgeClick={handleEdgeClick}
+                    onNodeClick={
+                      canvasTool === 'cursor' ? handleNodeClick : undefined
+                    }
+                    onEdgeClick={
+                      canvasTool === 'cursor' ? handleEdgeClick : undefined
+                    }
                     onPaneClick={handlePaneClick}
                     onConnect={onConnect}
                     onNodesDelete={handleElementsDeleted}
@@ -768,10 +775,10 @@ export default function ReactFlowCanvas({
                     proOptions={{hideAttribution: true}}
                     panOnDrag={canvasTool === 'grab'}
                     nodesDraggable={!readOnly && canvasTool === 'cursor'}
-                    nodesConnectable={!readOnly}
+                    nodesConnectable={!readOnly && canvasTool === 'cursor'}
                     elementsSelectable={!readOnly && canvasTool === 'cursor'}
-                    nodesFocusable={true}
-                    edgesFocusable={true}
+                    nodesFocusable={canvasTool === 'cursor'}
+                    edgesFocusable={canvasTool === 'cursor'}
                     // Even though we manage tab order, we keep React Flow's keyboard A11y on because
                     // it manages things like moving nodes with arrow keys.
                     disableKeyboardA11y={false}
@@ -815,5 +822,6 @@ export default function ReactFlowCanvas({
         </ClipboardProvider>
       </ToolbarVisibilityProvider>
     </SketchLabReadOnlyProvider>
+    </SketchLabGrabModeProvider>
   );
 }

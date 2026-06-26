@@ -20,6 +20,7 @@ interface UseDisplayElementsOptions {
   lastFocusedEntry: TabOrderEntry | null;
   connectingFrom: string | null;
   readOnly: boolean;
+  grabMode: boolean;
   focusEntry: (entry: TabOrderEntry) => void;
   handleEdgeMouseDown: (
     event: React.MouseEvent,
@@ -36,6 +37,7 @@ export function useDisplayElements({
   lastFocusedEntry,
   connectingFrom,
   readOnly,
+  grabMode,
   focusEntry,
   handleEdgeMouseDown,
   multiSelectedNodeIds,
@@ -58,8 +60,9 @@ export function useDisplayElements({
 
     const applyDisplayProps = (item: {id: string}, type: 'node' | 'edge') => {
       const isTabTarget =
-        activeEntry?.type === type && activeEntry.id === item.id;
+        !grabMode && activeEntry?.type === type && activeEntry.id === item.id;
       const isSelected =
+        !grabMode &&
         nodeOrEdgeFocused &&
         lastFocusedEntry?.type === type &&
         lastFocusedEntry.id === item.id;
@@ -118,10 +121,10 @@ export function useDisplayElements({
           ...node,
           selected,
           // Derive draggable/connectable/deletable from locked/read-only/grouped state
-          draggable: !locked && !readOnly && !groupedChild,
+          draggable: !locked && !readOnly && !groupedChild && !grabMode,
           deletable: !locked && !readOnly && !groupedChild,
-          // Nodes are still connectable when locked, but not in read-only
-          connectable: !readOnly,
+          // Nodes are still connectable when locked, but not in read-only or grab mode
+          connectable: !readOnly && !grabMode,
           // Override React Flow's default "{type} node" aria-label on the
           // wrapper div for line anchors so it reads as "Line endpoint" instead
           // of "Line endpoint node".
@@ -185,6 +188,7 @@ export function useDisplayElements({
     lastFocusedEntry?.id,
     connectingFrom,
     readOnly,
+    grabMode,
     focusEntry,
     handleEdgeMouseDown,
     multiSelectedNodeIds,
