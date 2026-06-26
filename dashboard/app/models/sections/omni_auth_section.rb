@@ -68,8 +68,13 @@ class OmniAuthSection < Section
     oauth_students = students.filter_map do |student|
       user = User.from_omniauth(student, {'user_type' => User::TYPE_STUDENT, 'roster_synced' => true})
       unless user&.persisted?
-        payload = {event: 'roster_sync_student_skipped', namespace: 'OmniAuthSection', student_provider: student.provider, errors: user&.errors&.full_messages}
-        CDO.log.warn(payload.to_json)
+        Observability::Errors.capture_message(
+          'OmniAuthSection: skipping student who failed to persist during roster sync',
+          extra: {
+            student_provider: student.provider,
+            errors: user&.errors&.full_messages,
+          }
+        )
         next
       end
       user
