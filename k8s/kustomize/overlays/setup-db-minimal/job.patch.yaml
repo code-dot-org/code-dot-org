@@ -8,7 +8,7 @@ spec:
       containers:
         - name: setup-db
           args:
-            - cd dashboard && bundle exec rake db:setup_or_migrate && echo 'setup-db-minimal COMPLETE'
+            - cd dashboard && RAILS_ENV=adhoc RACK_ENV=adhoc bundle exec rake db:setup_or_migrate && echo 'setup-db-minimal COMPLETE'
       securityContext:
         runAsUser: 0
         runAsGroup: 0

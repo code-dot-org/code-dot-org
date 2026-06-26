@@ -7,7 +7,7 @@ spec:
     spec:
       containers:
         - name: dashboard
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Never
           command:
             - zsh
             - -c

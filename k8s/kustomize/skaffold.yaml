@@ -170,7 +170,7 @@ profiles:
         if [ ! -x "$K8S_DIR/bin/docker-buildx" ]; then
           K8S_DIR="$(cd "$BUILD_CONTEXT/../.." && pwd)"
         fi
-        LOCAL_REGISTRY=localhost:5000 "$K8S_DIR/bin/docker-buildx" -f "$K8S_DIR/docker/code-dot-org.dockerfile" \
+        IMPORT_IMAGE_TO_K8S_NODE=true "$K8S_DIR/bin/docker-buildx" -f "$K8S_DIR/docker/code-dot-org.dockerfile" \
           --target code-dot-org-activejob-only \
           --build-arg CODE_DOT_ORG_CORE="$CODE_DOT_ORG_CORE" \
           --build-arg CODE_DOT_ORG_DB_SEED="$CODE_DOT_ORG_CORE" \
