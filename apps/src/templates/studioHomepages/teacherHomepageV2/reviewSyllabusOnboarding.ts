@@ -19,9 +19,8 @@ export const REVIEW_SYLLABUS_ONBOARDING_STEP_KEY =
 const DROPDOWN_BUTTON_ID = 'go-to-lesson-dropdown-button';
 const FIRST_DROPDOWN_ITEM_SELECTOR = '#go-to-lesson-dropdown ul li:first-child';
 const ALL_DROPDOWN_ITEMS_SELECTOR = '#go-to-lesson-dropdown ul li';
-const UNIT_BREADCRUMB_SELECTOR = '.unit-breadcrumb';
-const UNIT_BREADCRUMB_LINK_SELECTOR = '.unit-breadcrumb a';
-export const UNIT_BREADCRUMB_STEP_ID = 'unit-breadcrumb-step';
+const COURSE_HEADER_SELECTOR = '#unit-overview-page-header';
+export const COURSE_HEADER_STEP_ID = 'unit-overview-page-step';
 
 const waitForElement = (
   selector: string,
@@ -169,62 +168,20 @@ const createQuizStep = (
 const createBreadcrumbStep = (
   tour: Tour,
   controller: AbortController
-): StepOptions => {
-  let breadcrumbClickHandler: ((e: Event) => void) | null = null;
-
-  return {
-    id: UNIT_BREADCRUMB_STEP_ID,
-    attachTo: {
-      element: UNIT_BREADCRUMB_SELECTOR,
-      on: 'bottom',
-    },
-    text: withSparkle(
-      'The Course page is where you can map out what students will learn, lesson by lesson. Need to zoom out and see the bigger picture for the full course? Click the course name above the unit header.'
-    ),
-    buttons: [nextButton(tour)],
-    beforeShowPromise: () =>
-      waitForElement(UNIT_BREADCRUMB_SELECTOR, controller.signal),
-    // No advanceOn: we prevent default on the anchor click so the celebration
-    // popup can appear before navigation, then let the tour buttons decide
-    // where to go.
-    when: {
-      show() {
-        document
-          .querySelector(UNIT_BREADCRUMB_SELECTOR)
-          ?.classList.add('tour-step-highlight');
-
-        breadcrumbClickHandler = (e: Event) => {
-          e.preventDefault();
-          document
-            .querySelector(UNIT_BREADCRUMB_SELECTOR)
-            ?.classList.remove('tour-step-highlight');
-          if (breadcrumbClickHandler !== null) {
-            document
-              .querySelector(UNIT_BREADCRUMB_LINK_SELECTOR)
-              ?.removeEventListener('click', breadcrumbClickHandler);
-          }
-          breadcrumbClickHandler = null;
-          tour.next();
-        };
-
-        document
-          .querySelector(UNIT_BREADCRUMB_LINK_SELECTOR)
-          ?.addEventListener('click', breadcrumbClickHandler);
-      },
-      hide() {
-        document
-          .querySelector(UNIT_BREADCRUMB_SELECTOR)
-          ?.classList.remove('tour-step-highlight');
-        if (breadcrumbClickHandler !== null) {
-          document
-            .querySelector(UNIT_BREADCRUMB_LINK_SELECTOR)
-            ?.removeEventListener('click', breadcrumbClickHandler);
-          breadcrumbClickHandler = null;
-        }
-      },
-    },
-  };
-};
+): StepOptions => ({
+  id: COURSE_HEADER_STEP_ID,
+  attachTo: {
+    element: COURSE_HEADER_SELECTOR,
+    on: 'bottom',
+  },
+  text: withSparkle(
+    'The Course page is where you can map out what students will learn, lesson by lesson. Need to zoom out and see the bigger picture for the full course? Click the course name above the unit header.'
+  ),
+  buttons: [nextButton(tour)],
+  beforeShowPromise: () =>
+    waitForElement(COURSE_HEADER_SELECTOR, controller.signal),
+  when: highlightAttachedElement(COURSE_HEADER_SELECTOR),
+});
 
 // ── Homepage steps ─────────────────────────────────────────────────────────────
 
@@ -325,7 +282,7 @@ export const createReviewSyllabusHomepageSteps = (
       return createHomepageSteps(
         tour,
         sessionStorageKey,
-        UNIT_BREADCRUMB_STEP_ID
+        COURSE_HEADER_STEP_ID
       );
     case 'elementary':
       return createHomepageSteps(

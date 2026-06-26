@@ -1942,6 +1942,170 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :ok
   end
 
+  test 'check_demo_section_staleness: reports stale when a prescribed student is missing' do
+    stub_demo_preset
+    demo_student = create(:student, :in_email_section)
+    DemoStudent.create!(user: demo_student, demo_type: 'high')
+    Policies::DemoSections.reset_cache!
+
+    # Curriculum matches the preset, but the prescribed demo student is absent.
+    section = create(
+      :section,
+      user: @teacher,
+      login_type: 'email',
+      demo_type: 'high',
+      script_id: @csp_script.id,
+      course_id: @csp_unit_group.id,
+    )
+    sign_in @teacher
+
+    get :check_demo_section_staleness, params: {id: section.id}
+    assert_response :ok
+    assert JSON.parse(@response.body)['message'].present?
+  end
+
+  test 'check_demo_section_staleness: returns no_content when curriculum and roster match' do
+    stub_demo_preset
+    demo_student = create(:student, :in_email_section)
+    DemoStudent.create!(user: demo_student, demo_type: 'high')
+    Policies::DemoSections.reset_cache!
+
+    section = create(
+      :section,
+      user: @teacher,
+      login_type: 'email',
+      demo_type: 'high',
+      script_id: @csp_script.id,
+      course_id: @csp_unit_group.id,
+    )
+    section.add_student(demo_student)
+    sign_in @teacher
+
+    get :check_demo_section_staleness, params: {id: section.id}
+    assert_response :no_content
+  end
+
+  # reset_demo_section
+
+  test 'reset_demo_section: returns forbidden when not signed in' do
+    section = create_stale_demo_section
+    post :reset_demo_section, params: {id: section.id}
+    assert_response :forbidden
+  end
+
+  test 'reset_demo_section: returns forbidden for a co-instructor who is not the owner' do
+    coteacher = create(:teacher)
+    section = create_stale_demo_section
+    create(:section_instructor, instructor: coteacher, section: section, status: :active)
+    sign_in coteacher
+
+    post :reset_demo_section, params: {id: section.id}
+    assert_response :forbidden
+  end
+
+  test 'reset_demo_section: returns forbidden when section is not a demo section' do
+    section = create(:section, user: @teacher, login_type: 'word')
+    sign_in @teacher
+
+    post :reset_demo_section, params: {id: section.id}
+    assert_response :forbidden
+  end
+
+  test 'reset_demo_section: restores script_id and course_id to preset defaults' do
+    stub_demo_preset
+    section = create_stale_demo_section
+    sign_in @teacher
+
+    post :reset_demo_section, params: {id: section.id}
+    assert_response :no_content
+
+    section.reload
+    assert_equal @csp_script.id, section.script_id
+    assert_equal @csp_unit_group.id, section.course_id
+  end
+
+  test 'reset_demo_section: is idempotent and does not write a section already matching its preset' do
+    stub_demo_preset
+    section = create(
+      :section,
+      user: @teacher,
+      login_type: 'email',
+      demo_type: 'high',
+      script_id: @csp_script.id,
+      course_id: @csp_unit_group.id,
+    )
+    sign_in @teacher
+
+    Section.any_instance.expects(:update!).never
+    post :reset_demo_section, params: {id: section.id}
+    assert_response :no_content
+
+    section.reload
+    assert_equal @csp_script.id, section.script_id
+    assert_equal @csp_unit_group.id, section.course_id
+  end
+
+  test 'reset_demo_section: adds prescribed demo students that are missing' do
+    stub_demo_preset
+    demo_student = create(:student, :in_email_section)
+    DemoStudent.create!(user: demo_student, demo_type: 'high')
+    Policies::DemoSections.reset_cache!
+    section = create_stale_demo_section
+    sign_in @teacher
+
+    post :reset_demo_section, params: {id: section.id}
+    assert_response :no_content
+
+    section.reload
+    assert_includes section.students.map(&:id), demo_student.id
+  end
+
+  test 'reset_demo_section: removes students the preset no longer prescribes' do
+    stub_demo_preset
+    # A demo student of a different type: enrollable in the demo section, but
+    # not part of the 'high' preset roster.
+    extra_student = create(:student, :in_email_section)
+    DemoStudent.create!(user: extra_student, demo_type: 'middle')
+    Policies::DemoSections.reset_cache!
+    section = create(
+      :section,
+      user: @teacher,
+      login_type: 'email',
+      demo_type: 'high',
+      script_id: @csp_script.id,
+      course_id: @csp_unit_group.id,
+    )
+    section.add_student(extra_student)
+    assert_includes section.students.map(&:id), extra_student.id
+    sign_in @teacher
+
+    post :reset_demo_section, params: {id: section.id}
+    assert_response :no_content
+
+    section.reload
+    refute_includes section.students.map(&:id), extra_student.id
+  end
+
+  test 'reset_demo_section: returns unprocessable_entity and rolls back when a student cannot be added' do
+    stub_demo_preset
+    demo_student = create(:student, :in_email_section)
+    DemoStudent.create!(user: demo_student, demo_type: 'high')
+    Policies::DemoSections.reset_cache!
+    # Stale curriculum, so a successful reset would rewrite script_id/course_id.
+    section = create_stale_demo_section
+    sign_in @teacher
+
+    # add_student reports failure by returning a status string, not by raising.
+    Section.any_instance.stubs(:add_student).returns(Section::ADD_STUDENT_FULL)
+
+    post :reset_demo_section, params: {id: section.id}
+    assert_response :unprocessable_entity
+
+    # The whole reset rolled back: the stale script_id is left untouched.
+    section.reload
+    assert_equal @csp_script2.id, section.script_id
+  end
+
   private def create_stale_demo_section
     create(
       :section,
