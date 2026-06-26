@@ -730,6 +730,7 @@ export default function ReactFlowCanvas({
                     styles.canvasContainer,
                     {
                       [styles.connectMode]: !!connectingFrom,
+                      [styles.grabMode]: isGrabMode,
                     },
                     SKETCHLAB_CONTAINER_CLASS
                   )}

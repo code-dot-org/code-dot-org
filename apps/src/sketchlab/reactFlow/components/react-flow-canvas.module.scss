@@ -31,6 +31,16 @@ $handle-grab-buffer: 10px;
     cursor: crosshair;
   }
 
+  // Grab/pan mode: override node cursors so the whole canvas feels like a
+  // panning surface. Node labels use cursor: inherit so they pick this up.
+  &.grabMode * {
+    cursor: grab;
+  }
+
+  &.grabMode:active * {
+    cursor: grabbing;
+  }
+
   // Focus outline for keyboard navigation, matching the component library pattern.
   // Group nodes are excluded — React Flow provides their focus indicator.
   // Line anchors are excluded too — they get a focus ring on the handle dot
