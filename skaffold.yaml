@@ -168,7 +168,7 @@ profiles:
     - op: replace
       path: /build/artifacts/0/custom/buildCommand
       value: |
-        LOCAL_REGISTRY=localhost:5000 k8s/bin/docker-buildx -f k8s/docker/code-dot-org.dockerfile \
+        IMPORT_IMAGE_TO_K8S_NODE=true k8s/bin/docker-buildx -f k8s/docker/code-dot-org.dockerfile \
           --target code-dot-org-activejob-only \
           --build-arg CODE_DOT_ORG_CORE="$CODE_DOT_ORG_CORE" \
           --build-arg CODE_DOT_ORG_DB_SEED="$CODE_DOT_ORG_CORE" \
@@ -194,7 +194,7 @@ profiles:
       value: k8s/helm/activejob-only.values.yaml
     - op: replace
       path: /deploy/helm/releases/0/setValueTemplates/image
-      value: "kubernetes.docker.internal:5000/code-dot-org:{{.IMAGE_TAG_code_dot_org}}"
+      value: "code-dot-org:{{.IMAGE_TAG_code_dot_org}}"
 
 # Populates Dashboard DB (rake dashboard:setup_db)
 # Run: skaffold dev --trigger=manual -p setup-db -p setup-s3
@@ -216,7 +216,7 @@ profiles:
         value:
           enabled: true
           name: setup-db-minimal
-          args: ["cd dashboard && bundle exec rake db:setup_or_migrate && echo 'setup-db-minimal COMPLETE'"]
+          args: ["cd dashboard && RAILS_ENV=adhoc RACK_ENV=adhoc bundle exec rake db:setup_or_migrate && echo 'setup-db-minimal COMPLETE'"]
 
 # Create standard cdo-v3-* S3 buckets in minio.
 # Run: skaffold dev --trigger=manual -p setup-db -p setup-s3

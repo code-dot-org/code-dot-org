@@ -202,6 +202,10 @@ EOF
 FROM code-dot-org-core AS code-dot-org-activejob-only
 ################################################################################
 
+ARG BUNDLE_WITHOUT
+
+ENV BUNDLE_WITHOUT=${BUNDLE_WITHOUT}
+
 COPY --chown=${UID} --link \
   --from=code-dot-org-bundle-install ${HOME}/.rbenv \
   ${HOME}/.rbenv
