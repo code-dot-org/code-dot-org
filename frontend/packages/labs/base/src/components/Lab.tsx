@@ -1,5 +1,5 @@
 import type {PropsWithChildren} from 'react';
-import {Suspense, useCallback, useState} from 'react';
+import {Suspense, useCallback} from 'react';
 
 import {LevelPropertiesProvider} from '../contexts/LevelPropertiesContext';
 import type {LevelPropertiesMap} from '../types';
@@ -22,11 +22,8 @@ export default function Lab({
   onError,
   children,
 }: LabProps) {
-  const [errorMessage, setErrorMessage] = useState('');
-
   const handleError = useCallback(
     (error: Error, componentStack: string) => {
-      setErrorMessage(ERROR_MESSAGE);
       (onError ?? defaultOnError)(error, componentStack);
     },
     [onError],
@@ -45,20 +42,13 @@ export default function Lab({
     );
 
   return (
-    <>
-      {errorMessage && (
-        <div role="alert" aria-live="assertive" aria-atomic="true">
-          {errorMessage}
-        </div>
-      )}
-      <ErrorBoundary
-        key={levelId}
-        fallback={<p>{ERROR_MESSAGE}</p>}
-        onError={handleError}
-      >
-        <Suspense fallback={<Loading />}>{content}</Suspense>
-      </ErrorBoundary>
-    </>
+    <ErrorBoundary
+      key={levelId}
+      fallback={<p role="alert">{ERROR_MESSAGE}</p>}
+      onError={handleError}
+    >
+      <Suspense fallback={<Loading />}>{content}</Suspense>
+    </ErrorBoundary>
   );
 }
 

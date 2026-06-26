@@ -102,14 +102,14 @@ describe('Lab error containment', () => {
     expect(screen.queryByRole('alert')).toBeNull();
   });
 
-  it('recovers from error when levelId changes', () => {
+  it('clears the alert and renders children after recovery', () => {
     let shouldThrow = true;
 
     function MaybeBomb() {
       if (shouldThrow) {
         throw new Error('level broke');
       }
-      return <div data-testid="recovered">OK</div>;
+      return <div>recovered</div>;
     }
 
     const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
@@ -131,7 +131,8 @@ describe('Lab error containment', () => {
       </Lab>,
     );
 
-    expect(screen.getByTestId('recovered')).toHaveTextContent('OK');
+    expect(screen.getByText('recovered')).toBeInTheDocument();
+    expect(screen.queryByRole('alert')).toBeNull();
 
     consoleSpy.mockRestore();
   });
