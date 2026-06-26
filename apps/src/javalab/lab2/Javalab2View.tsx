@@ -10,11 +10,13 @@ import {LanguageSupport} from '@codemirror/language';
 import {isEqual} from 'lodash';
 import React, {useContext, useEffect, useMemo, useRef, useState} from 'react';
 
+import {sendStartedReportIfNotStarted} from '@cdo/apps/code-studio/progressRedux';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import TestResultValidator from '@cdo/apps/lab2/progress/TestResultValidator';
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
+import {submitPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {setLoadedCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
 import {
   LabConfig,
@@ -84,6 +86,7 @@ const Javalab2View: React.FunctionComponent<
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
   const dispatch = useAppDispatch();
   const progressManager = useContext(ProgressManagerContext);
+  const isPredictLevel = levelProperties.predictSettings?.isPredictLevel;
 
   // Register the lab-specific validator so the Lab2 progress system can
   // evaluate validation results (driven by Javabuilder test runs).
@@ -241,6 +244,10 @@ const Javalab2View: React.FunctionComponent<
       /* needsInitialSourcesSave */ !initialSources &&
         !initialSourcesSaved.current
     );
+    if (!isPredictLevel) {
+      dispatch(sendStartedReportIfNotStarted(levelProperties.appName || ''));
+    }
+    dispatch(submitPredictResponse({appType: levelProperties.appName || ''}));
   };
 
   return (
