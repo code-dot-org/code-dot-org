@@ -88,7 +88,7 @@ class Agent<T extends Environment = Environment> extends TypedEventEmitter<T> {
       workspace.setTheme(theme);
 
       // Blockly does not re-lay-out blocks when only the font size changes
-      // (google/blockly#7782): setTheme enlarges the rendered text via injected
+      // (RaspberryPiFoundation/blockly#7782): setTheme enlarges the rendered text via injected
       // CSS, but block geometry keeps the measurements taken at the old size, so
       // text overflows. Re-render against the new font when the size changes.
       const fontSize = theme.fontStyle?.size;
@@ -104,7 +104,7 @@ class Agent<T extends Environment = Environment> extends TypedEventEmitter<T> {
    * Re-measures and re-renders every block (and the flyout's, if open) so their
    * geometry matches the current theme's font size. Blockly only refreshes block
    * colours on a theme change, not their layout, so a font-size change needs an
-   * explicit re-render (see google/blockly#7782).
+   * explicit re-render (see RaspberryPiFoundation/blockly#7782).
    */
   private rerenderForFontChange(workspace: Blockly.WorkspaceSvg) {
     const rerender = (ws: Blockly.WorkspaceSvg) => {

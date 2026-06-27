@@ -15,7 +15,7 @@ export const plugin: (check: string) => InputPlugin = (check: string) => ({
     const height = this.TAB_HEIGHT;
 
     function makeMainPath(up: number) {
-      // Definition of curve function at https://github.com/google/blockly/blob/2bbb3aa1fcc1cc2df1a75bfbdefa42ab56182872/core/utils/svg_paths.ts#L26-L40
+      // Definition of curve function at https://github.com/RaspberryPiFoundation/blockly/blob/2bbb3aa1fcc1cc2df1a75bfbdefa42ab56182872/core/utils/svg_paths.ts#L26-L40
       const path = Blockly.utils.svgPaths.curve('c', [
         -width * 1.5 + ', 0 ',
         -width * 1.5 + ', ' + -1 * up * height + ' ',
