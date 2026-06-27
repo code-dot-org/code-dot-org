@@ -239,10 +239,10 @@ describe('mutator state roundtrip', () => {
   });
 });
 
-describe('input plugin teardown', () => {
-  it('re-registers the renderer with empty inputs on unregisterAll', () => {
-    // The renderer is the only thing registered for an input plugin; record the
-    // input set it is (re)built with each time so teardown can be observed.
+describe('input plugin renderer', () => {
+  it('builds a uniquely named renderer per workspace from the accumulated inputs', () => {
+    // Record the input set the renderer is built with each time its class
+    // factory runs, so we can observe when (and with what) a renderer is built.
     const inputSets: InputPlugin[][] = [];
     const fakeRenderer: Renderer = {
       name: 'registry_test_input_renderer',
@@ -253,18 +253,35 @@ describe('input plugin teardown', () => {
     };
 
     const reg = new Registry(undefined, undefined, fakeRenderer);
-    // The constructor registers the renderer with no inputs.
-    expect(inputSets.at(-1)).toEqual([]);
+    const RENDERER = Blockly.registry.Type.RENDERER;
 
+    // Construction and input registration only accumulate; no renderer is built
+    // and nothing is written to Blockly's global renderer registry until a
+    // workspace acquires one.
     const input = RectangleInputPlugin('RegistryTestType');
     reg.register(input);
-    // Registering an input re-registers the renderer carrying that input.
-    expect(inputSets.at(-1)).toEqual([input]);
+    expect(inputSets).toHaveLength(0);
 
-    reg.unregisterAll();
-    // Teardown resets the renderer back to an empty input set, rather than
-    // leaving it baking in the now-unregistered input.
-    expect(inputSets.at(-1)).toEqual([]);
+    // Each acquire builds the renderer from the accumulated inputs under a fresh
+    // unique name, so independent workspaces never share a registry slot.
+    const nameA = reg.acquireRenderer();
+    const nameB = reg.acquireRenderer();
+    expect(inputSets).toEqual([[input], [input]]);
+    expect(nameA).not.toBe(nameB);
+    expect(Blockly.registry.hasItem(RENDERER, nameA)).toBe(true);
+    expect(Blockly.registry.hasItem(RENDERER, nameB)).toBe(true);
+
+    // Releasing removes only that workspace's entry.
+    reg.releaseRenderer(nameA);
+    expect(Blockly.registry.hasItem(RENDERER, nameA)).toBe(false);
+    expect(Blockly.registry.hasItem(RENDERER, nameB)).toBe(true);
+
+    // Idempotent: releasing again is a no-op, as is releasing an unknown name.
+    reg.releaseRenderer(nameA);
+    reg.releaseRenderer('never_registered');
+
+    reg.releaseRenderer(nameB);
+    expect(Blockly.registry.hasItem(RENDERER, nameB)).toBe(false);
   });
 });
 

@@ -1,5 +1,17 @@
+import {Order} from 'blockly/javascript';
+
 import {BaseBlocks, Blockly} from '../src';
-import type {BlockDefinitions, BlocklySerialization, Toolbox} from '../src';
+import type {
+  BlockDefinition,
+  BlockDefinitions,
+  BlocklySerialization,
+  Toolbox,
+} from '../src';
+import {
+  RectangleInputPlugin,
+  RoundInputPlugin,
+  TriangleInputPlugin,
+} from '../src/inputs';
 import type {Plugin} from '../src/plugins';
 import {plugin as blockLimitsPlugin} from '../src/plugins/blockLimits';
 import {plugin as disableOrphansPlugin} from '../src/plugins/disableOrphans';
@@ -78,6 +90,105 @@ const REPEAT_PRINT: BlocklySerialization = {
   },
 };
 
+// Blocks for the "Typed sockets" mode. Blocks only declare a plain type string
+// (`output` on value blocks, `check` on the consumer's sockets); Blockly's
+// checker uses those strings to decide what connects to what. The connection
+// *shape* for each type is defined separately by an input plugin supplied via
+// the mode's `plugins` (see `INPUT_SHAPE_PLUGINS` below), so an output and a
+// socket drawn for the same type share a notch without either block knowing
+// about the renderer.
+const NUMBER_TYPE = 'Number';
+const BOOLEAN_TYPE = 'Boolean';
+const STRING_TYPE = 'String';
+
+// Binds each type string to a notch shape. Registered once, at the workspace
+// level, rather than per block.
+const INPUT_SHAPE_PLUGINS: Plugin[] = [
+  RectangleInputPlugin(NUMBER_TYPE),
+  RoundInputPlugin(BOOLEAN_TYPE),
+  TriangleInputPlugin(STRING_TYPE),
+];
+
+// Number value — rectangle notch.
+const demoNumber: BlockDefinition = {
+  type: 'demo_number',
+  style: 'math_blocks',
+  tooltip: 'A number value — rectangle notch (Number).',
+  helpUrl: '',
+  output: NUMBER_TYPE,
+  message0: 'number %1',
+  args0: [{type: 'field_number', name: 'NUM', value: 42}],
+  generator: {
+    javascript: block => [String(block.getFieldValue('NUM')), Order.ATOMIC],
+  },
+};
+
+// Boolean value — round notch.
+const demoBoolean: BlockDefinition = {
+  type: 'demo_boolean',
+  style: 'logic_blocks',
+  tooltip: 'A boolean value — round notch (Boolean).',
+  helpUrl: '',
+  output: BOOLEAN_TYPE,
+  message0: 'boolean %1',
+  args0: [
+    {
+      type: 'field_dropdown',
+      name: 'BOOL',
+      options: [
+        ['true', 'TRUE'],
+        ['false', 'FALSE'],
+      ],
+    },
+  ],
+  generator: {
+    javascript: block => [
+      block.getFieldValue('BOOL') === 'TRUE' ? 'true' : 'false',
+      Order.ATOMIC,
+    ],
+  },
+};
+
+// Text value — triangle notch.
+const demoText: BlockDefinition = {
+  type: 'demo_text',
+  style: 'text_blocks',
+  tooltip: 'A text value — triangle notch (String).',
+  helpUrl: '',
+  output: STRING_TYPE,
+  message0: 'text %1',
+  args0: [{type: 'field_input', name: 'TEXT', text: 'hi'}],
+  generator: {
+    javascript: block => [
+      JSON.stringify(block.getFieldValue('TEXT')),
+      Order.ATOMIC,
+    ],
+  },
+};
+
+// Consumer with one socket per type. Each `check` matches a value block's
+// output type, so the socket draws that type's notch and rejects the others.
+const demoConsumer: BlockDefinition = {
+  type: 'demo_consumer',
+  style: 'procedure_blocks',
+  tooltip: 'Each socket only accepts a block whose shape it shares.',
+  helpUrl: '',
+  message0: 'count %1 flag %2 label %3',
+  args0: [
+    {type: 'input_value', name: 'NUM', check: NUMBER_TYPE, align: 'RIGHT'},
+    {type: 'input_value', name: 'FLAG', check: BOOLEAN_TYPE, align: 'RIGHT'},
+    {type: 'input_value', name: 'LABEL', check: STRING_TYPE, align: 'RIGHT'},
+  ],
+  generator: {
+    javascript: (block, generator) => {
+      const num = generator.valueToCode(block, 'NUM', Order.NONE);
+      const flag = generator.valueToCode(block, 'FLAG', Order.NONE);
+      const label = generator.valueToCode(block, 'LABEL', Order.NONE);
+      return `display(${num || '0'}, ${flag || 'false'}, ${label || '""'});\n`;
+    },
+  },
+};
+
 export const modes: Mode[] = [
   {
     id: 'loops',
@@ -141,6 +252,55 @@ export const modes: Mode[] = [
               },
             },
           },
+        ],
+      },
+    },
+  },
+  {
+    id: 'inputShapes',
+    name: 'Typed sockets',
+    instructions: [
+      '## Typed sockets and connection shapes',
+      '',
+      'Each value block has an **output type** that decides both its connection',
+      '**shape** and what it is allowed to plug into:',
+      '',
+      '- `number` — a **rectangle** notch (`Number`)',
+      '- `boolean` — a **round** notch (`Boolean`)',
+      '- `text` — a **triangle** notch (`String`)',
+      '',
+      'The consumer block has one socket per type, each drawn in the matching',
+      'shape. A value block only drops into a socket whose shape it shares:',
+      'drag the loose `boolean` onto the rectangular `count` socket and Blockly',
+      'refuses the connection.',
+      '',
+      'Blocks only name the type (a plain `output`/`check` string, which is what',
+      'Blockly checks); the shape for each type comes from an **input plugin**',
+      'installed via this mode’s `plugins`. Swap the filled blocks between',
+      'sockets to see which the checker accepts.',
+    ].join('\n'),
+    blocks: [demoNumber, demoBoolean, demoText, demoConsumer],
+    plugins: INPUT_SHAPE_PLUGINS,
+    toolbox: [
+      {name: 'Values', blocks: ['demo_number', 'demo_boolean', 'demo_text']},
+      {name: 'Consumer', blocks: ['demo_consumer']},
+    ],
+    startBlocks: {
+      blocks: {
+        blocks: [
+          {
+            type: 'demo_consumer',
+            x: 48,
+            y: 48,
+            inputs: {
+              NUM: {block: {type: 'demo_number', fields: {NUM: 7}}},
+              FLAG: {block: {type: 'demo_boolean', fields: {BOOL: 'TRUE'}}},
+              LABEL: {block: {type: 'demo_text', fields: {TEXT: 'score'}}},
+            },
+          },
+          {type: 'demo_number', x: 96, y: 220, fields: {NUM: 3}},
+          {type: 'demo_boolean', x: 96, y: 270, fields: {BOOL: 'FALSE'}},
+          {type: 'demo_text', x: 96, y: 320, fields: {TEXT: 'hi'}},
         ],
       },
     },

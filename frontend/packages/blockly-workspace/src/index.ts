@@ -11,10 +11,14 @@ export {defineBlock} from './blocks/defineBlock';
 export {createInjectPlugin} from './plugins';
 export type {
   InjectPlugin,
+  InputPlugin,
   InjectSetupFunction,
   InjectReadyFunction,
   InjectDisposeFunction,
 } from './plugins';
+// Input plugins define the connection notch shape for a given type string;
+// supply them via the workspace/provider `plugins` prop.
+export * from './inputs';
 
 export * from './components';
 export * from './fields';
