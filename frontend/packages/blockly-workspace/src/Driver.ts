@@ -175,6 +175,15 @@ class Driver<
   }
 
   /**
+   * The main (non-inline, non-hidden) workspace, once one has been injected.
+   * This is the workspace other surfaces target — e.g. a BlocklyFlyout creates
+   * its dragged blocks here.
+   */
+  get mainWorkspace(): Blockly.WorkspaceSvg | undefined {
+    return this._mainAgents[0]?.workspace;
+  }
+
+  /**
    * Registers a renderer for one workspace and returns the unique name to inject
    * with (it carries the current input-plugin shapes). Released via
    * {@link releaseRenderer} when the workspace is torn down.

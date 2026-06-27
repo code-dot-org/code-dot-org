@@ -1,11 +1,28 @@
 import {useState} from 'react';
 
-import {BlocklyMarkdown, BlocklyWorkspace} from '../src';
+import {
+  Blockly,
+  BlocklyFlyout,
+  BlocklyMarkdown,
+  BlocklyProvider,
+  BlocklyWorkspace,
+} from '../src';
 import {themeOptions, themes} from '../src/themes';
 
 import {modes} from './modes';
 
 const INSTRUCTIONS_WIDTH = 360;
+
+// Blocks offered by the flyout in the "Flyout spike" mode. Dragging one creates
+// a real block in the main workspace.
+const FLYOUT_SPIKE_BLOCKS: Blockly.utils.toolbox.FlyoutDefinition = [
+  {kind: 'block', type: 'when_run'},
+  {kind: 'block', type: 'controls_repeat_ext'},
+  {kind: 'block', type: 'controls_if'},
+  {kind: 'block', type: 'math_number'},
+  {kind: 'block', type: 'text'},
+  {kind: 'block', type: 'text_print'},
+];
 
 /**
  * Dev playground for the Blockly workspace. A mode selector (above the
@@ -90,38 +107,79 @@ export const Demo = () => {
         </label>
       </header>
 
-      <div style={{display: 'flex', flex: '1 1 auto', minHeight: 0}}>
-        <aside
-          style={{
-            borderRight: '1px solid var(--border-neutral-secondary, #ccc)',
-            boxSizing: 'border-box',
-            flex: `0 0 ${INSTRUCTIONS_WIDTH}px`,
-            overflowY: 'auto',
-            padding: 16,
-          }}
+      {mode.id === 'flyoutSpike' ? (
+        // Spike: a BlocklyProvider lets the sidebar flyout and the main workspace
+        // share one driver, so the flyout can target the main workspace. The
+        // flyout lives in the sidebar — external to the canvas. Dragging a block
+        // creates it at the drop point; note it only becomes visible as it
+        // crosses into the canvas (see BlocklyFlyout docs).
+        <BlocklyProvider
+          key={mode.id}
+          blocks={mode.blocks}
+          plugins={mode.plugins}
+          theme={theme}
         >
-          <BlocklyMarkdown
-            content={mode.instructions}
-            blocks={mode.blocks}
-            plugins={mode.plugins}
-            theme={theme}
-          />
-        </aside>
+          <div style={{display: 'flex', flex: '1 1 auto', minHeight: 0}}>
+            <aside
+              style={{
+                borderRight: '1px solid var(--border-neutral-secondary, #ccc)',
+                boxSizing: 'border-box',
+                flex: `0 0 ${INSTRUCTIONS_WIDTH}px`,
+                overflowY: 'auto',
+                padding: 16,
+              }}
+            >
+              <p style={{marginTop: 0}}>
+                Drag a block from the panel below into the workspace.
+              </p>
+              <div
+                style={{
+                  border: '1px dashed var(--border-neutral-secondary, #ccc)',
+                }}
+              >
+                <BlocklyFlyout blocks={FLYOUT_SPIKE_BLOCKS} />
+              </div>
+            </aside>
 
-        <main style={{display: 'flex', flex: '1 1 auto', minWidth: 0}}>
-          {/* Remount per mode so each loads its own toolbox, start blocks, and
-              plugins from a clean workspace rather than mutating the previous
-              one. */}
-          <BlocklyWorkspace
-            key={mode.id}
-            toolbox={mode.toolbox}
-            startBlocks={mode.startBlocks}
-            plugins={mode.plugins}
-            blocks={mode.blocks}
-            theme={theme}
-          />
-        </main>
-      </div>
+            <main style={{display: 'flex', flex: '1 1 auto', minWidth: 0}}>
+              <BlocklyWorkspace startBlocks={mode.startBlocks} theme={theme} />
+            </main>
+          </div>
+        </BlocklyProvider>
+      ) : (
+        <div style={{display: 'flex', flex: '1 1 auto', minHeight: 0}}>
+          <aside
+            style={{
+              borderRight: '1px solid var(--border-neutral-secondary, #ccc)',
+              boxSizing: 'border-box',
+              flex: `0 0 ${INSTRUCTIONS_WIDTH}px`,
+              overflowY: 'auto',
+              padding: 16,
+            }}
+          >
+            <BlocklyMarkdown
+              content={mode.instructions}
+              blocks={mode.blocks}
+              plugins={mode.plugins}
+              theme={theme}
+            />
+          </aside>
+
+          <main style={{display: 'flex', flex: '1 1 auto', minWidth: 0}}>
+            {/* Remount per mode so each loads its own toolbox, start blocks, and
+                plugins from a clean workspace rather than mutating the previous
+                one. */}
+            <BlocklyWorkspace
+              key={mode.id}
+              toolbox={mode.toolbox}
+              startBlocks={mode.startBlocks}
+              plugins={mode.plugins}
+              blocks={mode.blocks}
+              theme={theme}
+            />
+          </main>
+        </div>
+      )}
     </div>
   );
 };

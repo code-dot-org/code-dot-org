@@ -496,4 +496,17 @@ export const modes: Mode[] = [
       },
     ],
   },
+  {
+    // Spike: validate dragging a block from a BlocklyFlyout in the (separate,
+    // scrolling) sidebar into the main workspace. Demo.tsx renders this mode with
+    // a BlocklyProvider and a BlocklyFlyout in place of the usual instructions.
+    id: 'flyoutSpike',
+    name: 'Flyout spike',
+    instructions: '', // unused — the spike branch renders a flyout instead
+    toolbox: [], // the spike drags from the flyout, not a toolbox
+    blocks: [BaseBlocks.when_run],
+    startBlocks: {
+      blocks: {blocks: [{type: 'when_run', x: 48, y: 48}]},
+    },
+  },
 ];
