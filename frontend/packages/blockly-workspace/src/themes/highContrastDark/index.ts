@@ -33,6 +33,13 @@ export const definition = {
   ...DarkDefinition,
   name: 'high-contrast-dark',
   option: 'High Contrast Dark Theme',
+  // Same larger high-contrast font as the light variant: omit `size` so the base
+  // @blockly/theme-highcontrast size (16) survives defineTheme's fontStyle merge
+  // rather than being overridden by the spread dark definition's size (11).
+  fontStyle: {
+    family: DarkDefinition.fontStyle.family,
+    weight: DarkDefinition.fontStyle.weight,
+  },
   blockStyles: {
     ...HighContrastDefinition.blockStyles,
   },

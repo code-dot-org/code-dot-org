@@ -4,6 +4,7 @@ import {afterEach, describe, expect, it, vi} from 'vitest';
 
 import RectangleInputPlugin from '../../../inputs/rectangle';
 import TriangleInputPlugin from '../../../inputs/triangle';
+import {defaultTheme, highContrastTheme} from '../../../themes';
 import type {BlockDefinitions, BlocklySerialization} from '../../../types';
 
 import BlocklyWorkspace from '../index';
@@ -144,6 +145,67 @@ describe('BlocklyWorkspace', () => {
         expect(rect.TRIANGLE).toBeUndefined();
         expect(tri.TRIANGLE).toBeDefined();
         expect(tri.RECTANGLE).toBeUndefined();
+      },
+      {timeout: 5000, interval: 50},
+    );
+  });
+
+  // Switching to a theme with a larger font must grow the blocks to fit. Blockly
+  // refreshes only block colours on a theme change, not their layout, so without
+  // an explicit re-render the text would overflow a block kept at its old size.
+  it('re-lays-out blocks when the theme increases the font size', async () => {
+    const workspaceRef: {current: Blockly.WorkspaceSvg | null} = {
+      current: null,
+    };
+    const startBlocks: BlocklySerialization = {
+      blocks: {
+        blocks: [
+          {
+            type: 'text_print',
+            inputs: {
+              TEXT: {shadow: {type: 'text', fields: {TEXT: 'Hello world'}}},
+            },
+          },
+        ],
+      },
+    };
+
+    const blockHeight = () =>
+      (
+        workspaceRef.current!.getAllBlocks(false)[0] as Blockly.BlockSvg
+      ).getHeightWidth().height;
+
+    const {rerender} = render(
+      <BlocklyWorkspace
+        startBlocks={startBlocks}
+        theme={defaultTheme}
+        workspaceRef={workspaceRef}
+      />,
+    );
+
+    let defaultHeight = 0;
+    await vi.waitFor(
+      () => {
+        expect(workspaceRef.current).not.toBeNull();
+        expect(workspaceRef.current!.getAllBlocks(false)[0]).toBeDefined();
+        defaultHeight = blockHeight();
+        expect(defaultHeight).toBeGreaterThan(0);
+      },
+      {timeout: 5000, interval: 50},
+    );
+
+    rerender(
+      <BlocklyWorkspace
+        startBlocks={startBlocks}
+        theme={highContrastTheme}
+        workspaceRef={workspaceRef}
+      />,
+    );
+
+    await vi.waitFor(
+      () => {
+        // The larger high-contrast font (16 vs 11) makes the block taller.
+        expect(blockHeight()).toBeGreaterThan(defaultHeight);
       },
       {timeout: 5000, interval: 50},
     );
