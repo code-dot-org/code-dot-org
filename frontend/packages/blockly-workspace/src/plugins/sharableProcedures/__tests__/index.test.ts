@@ -2,9 +2,9 @@ import {blocks} from '@blockly/block-shareable-procedures';
 import * as Blockly from 'blockly/core';
 import {describe, expect, it} from 'vitest';
 
-import {PluginType} from '../../plugins';
+import {PluginType} from '../../../plugins';
 
-import plugin from './index';
+import plugin from '../index';
 
 /*
  * A thin global plugin: on initialize it swaps Blockly's stock procedure blocks

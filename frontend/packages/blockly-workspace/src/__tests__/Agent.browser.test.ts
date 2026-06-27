@@ -3,12 +3,12 @@ import * as Blockly from 'blockly/core';
 import * as En from 'blockly/msg/en';
 import {afterEach, beforeEach, describe, expect, it, vi} from 'vitest';
 
-import Agent, {AgentEvent} from './Agent';
-import Driver from './Driver';
-import ThrasosRenderer from './renderers/thrasos';
-import darkTheme from './themes/dark';
-import DefaultTheme from './themes/default';
-import type {BlocklySerialization, Environment} from './types';
+import Agent, {AgentEvent} from '../Agent';
+import Driver from '../Driver';
+import ThrasosRenderer from '../renderers/thrasos';
+import darkTheme from '../themes/dark';
+import DefaultTheme from '../themes/default';
+import type {BlocklySerialization, Environment} from '../types';
 
 /*
  * Agent injects a real Blockly workspace into a container and wires it to the

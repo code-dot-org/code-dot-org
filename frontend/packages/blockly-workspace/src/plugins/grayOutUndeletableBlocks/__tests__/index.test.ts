@@ -3,7 +3,7 @@ import * as Blockly from 'blockly/core';
 import * as En from 'blockly/msg/en';
 import {afterEach, beforeEach, describe, expect, it} from 'vitest';
 
-import {grayOutUndeletableBlocks} from './index';
+import {grayOutUndeletableBlocks} from '../index';
 
 /*
  * The handler only recolors blocks and reads their deletable/movable flags — no

@@ -1,9 +1,9 @@
 import * as Blockly from 'blockly/core';
 import {describe, expect, it, vi} from 'vitest';
 
-import {PluginType} from '../../plugins';
+import {PluginType} from '../../../plugins';
 
-import plugin, {FieldButton} from './index';
+import plugin, {FieldButton} from '../index';
 
 /*
  * FieldButton's value/text/click logic is plain field behavior that needs no

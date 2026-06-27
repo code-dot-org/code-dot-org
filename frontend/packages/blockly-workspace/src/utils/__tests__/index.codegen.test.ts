@@ -7,7 +7,7 @@ import {
   domToBlockSpace,
   getCodeFromBlockJsonSource,
   getCodeFromBlockXmlSource,
-} from './index';
+} from '../index';
 
 /*
  * The code-generation helpers build a throwaway headless workspace from XML or

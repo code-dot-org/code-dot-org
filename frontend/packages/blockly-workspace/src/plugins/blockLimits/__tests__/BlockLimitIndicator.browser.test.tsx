@@ -3,10 +3,10 @@ import * as Blockly from 'blockly/core';
 import * as En from 'blockly/msg/en';
 import {afterEach, beforeEach, describe, expect, it} from 'vitest';
 
-import DefaultTheme from '../../themes/default';
+import DefaultTheme from '../../../themes/default';
 
-import BlockLimitIndicator from './BlockLimitIndicator';
-import BlockLimitMap from './BlockLimitMap';
+import BlockLimitIndicator from '../BlockLimitIndicator';
+import BlockLimitMap from '../BlockLimitMap';
 
 /*
  * The indicator draws an SVG bubble on the block and sizes it via getBBox(), so

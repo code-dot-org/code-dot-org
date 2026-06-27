@@ -1,7 +1,7 @@
 import type * as Blockly from 'blockly/core';
 import {afterEach, describe, expect, it, vi} from 'vitest';
 
-import {toolboxToWorkspaceBlocks} from './toolboxToWorkspaceBlocks';
+import {toolboxToWorkspaceBlocks} from '../toolboxToWorkspaceBlocks';
 
 /*
  * A pure transform from a Blockly ToolboxInfo into the workspace blocks used by

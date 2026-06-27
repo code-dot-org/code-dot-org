@@ -1,7 +1,7 @@
 import {cleanup, render} from '@testing-library/react';
 import {afterEach, describe, expect, it, vi} from 'vitest';
 
-import BlocklyMarkdown from './index';
+import BlocklyMarkdown from '../index';
 
 /*
  * End-to-end browser test: markdown with an embedded <xml> sequence should

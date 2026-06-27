@@ -6,8 +6,8 @@ import {
   insertCollider,
   isOverlapping,
   partitionJsonBlocksByType,
-} from './serialization';
-import type {Collider} from './types';
+} from '../serialization';
+import type {Collider} from '../types';
 
 const collider = (x: number, y: number, width = 10, height = 10): Collider => ({
   x,

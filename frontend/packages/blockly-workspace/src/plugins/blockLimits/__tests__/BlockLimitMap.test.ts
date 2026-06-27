@@ -1,9 +1,9 @@
 import type * as Blockly from 'blockly/core';
 import {describe, expect, it} from 'vitest';
 
-import type {Theme} from '../../types';
+import type {Theme} from '../../../types';
 
-import BlockLimitMap from './BlockLimitMap';
+import BlockLimitMap from '../BlockLimitMap';
 
 /*
  * BlockLimitMap is pure count/limit bookkeeping built from a toolbox definition;
