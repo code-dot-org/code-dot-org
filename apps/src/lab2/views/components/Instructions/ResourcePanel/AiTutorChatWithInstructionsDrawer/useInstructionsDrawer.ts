@@ -2,7 +2,9 @@ import {throttle} from 'lodash';
 import {useState, useCallback, useMemo, useEffect, useRef} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {RESIZE_BAR_SIZE_PX} from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
@@ -63,6 +65,21 @@ export const useInstructionsDrawer = ({
       instructionsHeightAtDragStartRef.current = rawInstructionsHeight;
     },
   });
+
+  // Lab2 swaps levels without remounting this hook, so its height state would
+  // carry over: a stale rawInstructionsHeight makes the next expand size to the
+  // previous level's drawer. Reset on each level load so every level measures its
+  // own instructions.
+  const resetHeightForNewLevel = useCallback(() => {
+    hasSetInitialHeightFromContentRef.current = false;
+    hasUserManuallyResizedRef.current = false;
+    setMaxInstructionsHeight(undefined);
+    setRawInstructionsHeight(DEFAULT_INITIAL_INSTRUCTIONS_HEIGHT);
+  }, [setRawInstructionsHeight]);
+  useLifecycleNotifier(
+    LifecycleEvent.LevelLoadCompleted,
+    resetHeightForNewLevel
+  );
 
   // Report increase/decrease when drag ends; use effect so we read the final
   // position after state has updated (avoids stale closure in onResizeEnd).
@@ -187,8 +204,8 @@ export const useInstructionsDrawer = ({
   // Measure the instructions content height on load and when it changes,
   // (e.g., details elements expanded/collapsed), and set the drawer height to match.
   useEffect(() => {
-    // Skip if instructions drawer is collapsed (unmounted).
-    // Reset the flag in cleanup so the next expand always restores to appropriate height.
+    // Skip while the drawer is collapsed; its content can't be measured then.
+    // Reset the flags in cleanup so the next expand re-measures from scratch.
     if (isCollapsed) {
       return () => {
         hasSetInitialHeightFromContentRef.current = false;

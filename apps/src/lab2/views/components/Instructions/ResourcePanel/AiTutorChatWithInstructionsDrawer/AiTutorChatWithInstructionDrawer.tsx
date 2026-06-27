@@ -111,11 +111,9 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   }, [isCollapsed]);
   const animateLayout = !isCollapsed || !drawerSettledClosed;
 
-  // Compute the drawer height synchronously (not from the effect-driven
-  // instructionsHeight, which lags a frame) for the two "instant" states, so the
-  // chat — which flex-fills the space below the drawer — is sized right on the
-  // first frame: no full-height flash when switching to a closed AI Tutor tab,
-  // and no lingering chat when switching back to a full-instructions tab. Only
+  // Size the hidden/full states synchronously, not from the frame-late
+  // instructionsHeight, so the first frame is right: no full-height flash entering
+  // a closed AI Tutor tab, no lingering chat returning to full instructions. Only
   // the open, resizable drawer uses the (animating) instructionsHeight.
   const drawerHeight = !showInstructions
     ? 0

@@ -16,8 +16,9 @@
   // floor and can collapse smoothly all the way to 0 — no instant settle step.
   // overflow:hidden clips the scroll area's residual padding box as it reaches 0.
   overflow: hidden;
-  // Smoothly resize when switching between the Instructions tab (full height)
-  // and the AI Tutor tab (drawer height). Suppressed while dragging the resize bar.
+  // Animate the drawer height: between the Instructions tab (full height) and the
+  // AI Tutor tab (drawer height), and when opening/closing via the toggle.
+  // Suppressed while dragging the resize bar and in the .instant state.
   transition: height 0.2s ease;
 }
 
@@ -54,8 +55,8 @@
   // Fill the space left below the instructions drawer. Sizing the chat by flex
   // (rather than an explicit height) keeps its bottom pinned to the container
   // bottom on every frame, regardless of the drawer's animation timing, so the
-  // message input never drifts. The drawer's own height transition drives the
-  // reveal; this panel just clips the (fixed-height) chat content.
+  // message input never drifts. This panel clips the chat content, whose own
+  // height animates in lockstep with the drawer (see .chatContent).
   flex: 1;
   min-height: 0;
   overflow: hidden;
@@ -75,7 +76,8 @@
 // must track the pointer with no lag, so suppress those transitions (the opacity
 // fades are unaffected by dragging and can stay).
 .dragging {
-  .instructionsDrawer {
+  .instructionsDrawer,
+  .chatContent {
     transition: none;
   }
   .chatPanel,
@@ -90,6 +92,7 @@
 // tab switches and the open/close toggle still animate.)
 .instant {
   .instructionsDrawer,
+  .chatContent,
   .chatPanel,
   .toggleButtonContainer {
     transition: none;
@@ -98,6 +101,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .instructionsDrawer,
+  .chatContent,
   .chatPanel,
   .toggleButtonContainer {
     transition: none;
@@ -107,14 +111,17 @@
 .chatContent {
   // Sized (inline) to the visible chat area below the drawer, so its messages sit
   // just below the instructions rather than behind them. Anchored to the bottom of
-  // the flex chat panel (whose bottom is pinned to the container) so that, as the
-  // panel grows on a tab switch, the chat is revealed in place from the bottom up
-  // with the message input staying put — rather than reflowing.
+  // the flex chat panel (whose bottom is pinned to the container).
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
   box-sizing: border-box;
+  // Animate the visible height in lockstep with the drawer (same duration/easing),
+  // so the chat's top edge tracks the drawer's bottom edge as it opens and closes:
+  // the blind slides over the chat — which stays visible and bottom-pinned — rather
+  // than the chat vacating and leaving a blank gap for the drawer to grow into.
+  transition: height 0.2s ease;
 }
 
 .toggleButton {
