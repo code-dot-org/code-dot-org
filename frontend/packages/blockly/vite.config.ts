@@ -77,7 +77,7 @@ export default defineConfig({
         'src/fields/fieldColour/index.ts',
         'src/blocks/types.ts',
       ],
-      name: 'blockly-workspace',
+      name: 'blockly',
     },
     rollupOptions: {
       output: [getRollupOutputConfig('es'), getRollupOutputConfig('cjs')],

@@ -33,7 +33,7 @@ blocks. For this, each block will be defined with the `BlockDefinition` type.
 For example, we can create a 'Move Forward' block:
 
 ```
-import type {BlockDefinition} from '@code-dot-org/blockly-workspace';
+import type {BlockDefinition} from '@code-dot-org/blockly';
 
 const blocks: BlockDefinition[] = [
   {
@@ -127,7 +127,7 @@ attach this extension on the `extensions` property of the `BlockDefinition`.
 ```
 import * as Blockly from 'blockly';
 
-import type {Environment, Extension} from '@code-dot-org/blockly-workspace';
+import type {Environment, Extension} from '@code-dot-org/blockly';
 
 export const behaviorsBlockFrame: Extension = {
   name: 'behaviors_block_frame',
@@ -170,7 +170,7 @@ own `Environment` block.
 ```
 import * as Blockly from 'blockly';
 
-import type {Environment, Extension} from '@code-dot-org/blockly-workspace';
+import type {Environment, Extension} from '@code-dot-org/blockly';
 
 export interface FooEnvironment extends Environment {
   noFunctionBlockFrame: boolean;
@@ -291,8 +291,8 @@ Here is a simple example, (generally practical examples will be implementing the
 ```
 import * as Blockly from 'blockly';
 
-import {PluginType} from '@code-dot-org/blockly-workspace/plugins';
-import type {FieldPlugin} from '@code-dot-org/blockly-workspace/plugins';
+import {PluginType} from '@code-dot-org/blockly/plugins';
+import type {FieldPlugin} from '@code-dot-org/blockly/plugins';
 
 class CustomTextField extends Blockly.FieldTextInput {
   constructor(value, _validator, config) {
@@ -334,8 +334,8 @@ definition, or the `check` for an argument. For instance, to ensure that the
 then we define the block as such:
 
 ```
-import type {BlockDefinition} from '@code-dot-org/blockly-workspace';
-import {RectangleInputPlugin} from '@code-dot-org/blockly-workspace/plugins/inputs';
+import type {BlockDefinition} from '@code-dot-org/blockly';
+import {RectangleInputPlugin} from '@code-dot-org/blockly/plugins/inputs';
 
 import FieldLocation from './fields/FieldLocation';
 
@@ -390,7 +390,7 @@ the `extensions` property when defining the block.
 ```
 import * as Blockly from 'blockly';
 
-import type {Extension} from '@code-dot-org/blockly-workspace';
+import type {Extension} from '@code-dot-org/blockly';
 
 export const randomColourBlockExtension: Extension = {
   name: 'randomColourBlock',
