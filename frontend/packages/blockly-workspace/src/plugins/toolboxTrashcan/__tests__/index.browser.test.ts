@@ -3,9 +3,9 @@ import * as Blockly from 'blockly/core';
 import * as En from 'blockly/msg/en';
 import {afterEach, beforeEach, describe, expect, it} from 'vitest';
 
-import DefaultTheme from '../../themes/default';
+import DefaultTheme from '../../../themes/default';
 
-import {ToolboxTrashcan} from './index';
+import {ToolboxTrashcan} from '../index';
 
 /*
  * ToolboxTrashcan draws an SVG overlay on the workspace and toggles it in

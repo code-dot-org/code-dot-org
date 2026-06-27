@@ -2,12 +2,12 @@ import * as Blockly from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
 import {afterEach, beforeEach, describe, expect, it, vi} from 'vitest';
 
-import type Agent from './Agent';
-import Driver, {DriverEvent} from './Driver';
-import ThrasosRenderer from './renderers/thrasos';
-import darkTheme from './themes/dark';
-import DefaultTheme from './themes/default';
-import type {BlockDefinition, Environment} from './types';
+import type Agent from '../Agent';
+import Driver, {DriverEvent} from '../Driver';
+import ThrasosRenderer from '../renderers/thrasos';
+import darkTheme from '../themes/dark';
+import DefaultTheme from '../themes/default';
+import type {BlockDefinition, Environment} from '../types';
 
 /*
  * Driver orchestrates block/generator registration, theme state, and agent

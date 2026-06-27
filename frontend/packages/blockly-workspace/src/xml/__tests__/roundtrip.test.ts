@@ -1,7 +1,7 @@
 import * as Blockly from 'blockly/core';
 import {afterEach, beforeAll, describe, expect, it} from 'vitest';
 
-import {convertBlocklyXmlToJson} from './index';
+import {convertBlocklyXmlToJson} from '../index';
 
 /*
  * The converter's purpose is to turn Blockly XML into JSON offline — JSON that

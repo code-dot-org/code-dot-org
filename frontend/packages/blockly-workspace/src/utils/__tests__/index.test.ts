@@ -1,6 +1,6 @@
 import {describe, expect, it} from 'vitest';
 
-import {getBlockElements} from './index';
+import {getBlockElements} from '../index';
 
 /*
  * getBlockElements is a pure DOM query (the direct <block> children of <xml>),

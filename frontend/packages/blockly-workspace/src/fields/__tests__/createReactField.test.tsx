@@ -1,10 +1,10 @@
 import type * as Blockly from 'blockly/core';
 import {describe, expect, it} from 'vitest';
 
-import {PluginType} from '../plugins';
+import {PluginType} from '../../plugins';
 
-import {createReactField} from './createReactField';
-import type {ReactFieldConfig} from './createReactField';
+import {createReactField} from '../createReactField';
+import type {ReactFieldConfig} from '../createReactField';
 
 /*
  * createReactField's field logic — construction, fromJson, save/loadState, and
@@ -29,6 +29,8 @@ const build = (
     name: 'field_test',
     defaultValue: {n: 0},
     Editor,
+    ariaLabel: 'test field',
+    getAriaValue: value => `value ${value.n}`,
     ...overrides,
   });
 
@@ -37,6 +39,9 @@ interface FieldInstance extends Blockly.Field {
   loadState(state: unknown): void;
   getText(): string;
   getValue(): Value;
+  getAriaTypeName(): string | null;
+  getAriaValue(): string | null;
+  computeAriaLabel(includeTypeInfo?: boolean): string;
 }
 
 const fieldClassOf = (plugin: ReturnType<typeof build>) =>
@@ -100,6 +105,29 @@ describe('createReactField', () => {
     it('falls back to the base field text when none is given', () => {
       const Field = fieldClassOf(build());
       expect(typeof new Field({n: 3}).getText()).toBe('string');
+    });
+  });
+
+  describe('aria', () => {
+    it('reports the configured ariaLabel as the field type name', () => {
+      const Field = fieldClassOf(build({ariaLabel: 'tune editor'}));
+      expect(new Field().getAriaTypeName()).toBe('tune editor');
+    });
+
+    it('announces the value via the configured getAriaValue', () => {
+      const Field = fieldClassOf(
+        build({getAriaValue: value => `count ${value.n}`}),
+      );
+      expect(new Field({n: 5}).getAriaValue()).toBe('count 5');
+    });
+
+    it('composes a verbose label from the type and value', () => {
+      const Field = fieldClassOf(
+        build({ariaLabel: 'tune editor', getAriaValue: () => 'three notes'}),
+      );
+      const label = new Field().computeAriaLabel(true);
+      expect(label).toContain('tune editor');
+      expect(label).toContain('three notes');
     });
   });
 });

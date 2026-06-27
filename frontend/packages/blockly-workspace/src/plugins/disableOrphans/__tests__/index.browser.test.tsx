@@ -3,9 +3,9 @@ import * as Blockly from 'blockly/core';
 import * as En from 'blockly/msg/en';
 import {afterEach, beforeEach, describe, expect, it} from 'vitest';
 
-import {BlockTypes} from '../../constants';
+import {BlockTypes} from '../../../constants';
 
-import {disableOrphanBlocks, disableOrphans} from './index';
+import {disableOrphanBlocks, disableOrphans} from '../index';
 
 /*
  * disableOrphans updates enabled state and then fades the block via

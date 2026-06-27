@@ -21,6 +21,10 @@
  *     />
  *   ),
  *
+ *   // Required: screen-reader announcements (Blockly keyboard navigation)
+ *   ariaLabel: 'tune editor',
+ *   getAriaValue: (value) => `${value.notes.length} notes`,
+ *
  *   // Optional: SVG preview on block
  *   renderPreview: ({ value, element, width, height }) => {
  *     // Draw SVG elements to `element`
@@ -141,6 +145,22 @@ export interface ReactFieldConfig<T> {
   getText?: (value: T) => string;
 
   /**
+   * ARIA label describing the *type* of this field for screen readers (e.g.
+   * 'tune editor'). Surfaced via Blockly's getAriaTypeName(); Blockly's keyboard
+   * navigation reads it when announcing the field. Required: custom React fields
+   * render arbitrary visual UI, so without it they have no spoken type.
+   */
+  ariaLabel: string;
+
+  /**
+   * ARIA announcement for the field's *value* (e.g. 'three notes'). Surfaced via
+   * Blockly's getAriaValue() when navigation announces the field. Required, and
+   * should return a localized placeholder for empty values so the field is not
+   * skipped by screen readers.
+   */
+  getAriaValue: (value: T) => string;
+
+  /**
    * Optional custom serialization for saving state.
    * Defaults to returning the value as-is.
    */
@@ -204,6 +224,8 @@ export function createReactField<T>(config: ReactFieldConfig<T>): FieldPlugin {
     Editor,
     renderPreview,
     getText: getTextFn,
+    ariaLabel,
+    getAriaValue: getAriaValueFn,
     saveState: saveStateFn,
     loadState: loadStateFn,
     getSize: getSizeFn,
@@ -258,6 +280,19 @@ export function createReactField<T>(config: ReactFieldConfig<T>): FieldPlugin {
         return getTextFn(this.getValue() as T);
       }
       return super.getText();
+    }
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // Accessibility (ARIA) — read by Blockly v13 keyboard navigation when it
+    // announces this field. The base getAriaValue() falls back to getText().
+    // ─────────────────────────────────────────────────────────────────────────
+
+    getAriaTypeName(): string | null {
+      return ariaLabel;
+    }
+
+    getAriaValue(): string | null {
+      return getAriaValueFn(this.getValue() as T);
     }
 
     // ─────────────────────────────────────────────────────────────────────────

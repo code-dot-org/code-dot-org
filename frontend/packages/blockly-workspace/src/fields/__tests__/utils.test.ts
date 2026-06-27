@@ -7,7 +7,7 @@ import {
   defaultDropdownStyles,
   getCSSVariable,
   getWorkspaceTheme,
-} from './utils';
+} from '../utils';
 
 /*
  * These field helpers are DOM/string utilities (CSS-variable lookup, theme

@@ -12,7 +12,7 @@ import {
   isBlockAtEdge,
   isOverlapping,
   positionBlocksOnWorkspace,
-} from './serialization';
+} from '../serialization';
 
 /*
  * Browser-mode tests for the position logic: it reads block geometry

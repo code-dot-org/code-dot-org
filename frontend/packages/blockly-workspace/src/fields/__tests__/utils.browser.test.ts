@@ -1,6 +1,6 @@
 import {describe, expect, it} from 'vitest';
 
-import {measureTextWidth} from './utils';
+import {measureTextWidth} from '../utils';
 
 /*
  * measureTextWidth delegates to Blockly's canvas-backed text measurement, which

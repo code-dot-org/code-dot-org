@@ -1,19 +1,19 @@
 import * as Blockly from 'blockly/core';
 import {afterEach, beforeEach, describe, expect, it} from 'vitest';
 
-import {defineExtension} from './extensions/defineExtension';
-import {defineMixin} from './mixins/defineMixin';
-import {defineMutator} from './mutators/defineMutator';
-import {RectangleInputPlugin} from './inputs';
-import {PluginType} from './plugins';
+import {defineExtension} from '../extensions/defineExtension';
+import {defineMixin} from '../mixins/defineMixin';
+import {defineMutator} from '../mutators/defineMutator';
+import {RectangleInputPlugin} from '../inputs';
+import {PluginType} from '../plugins';
 import type {
   InjectPlugin,
   FieldPlugin,
   GlobalPlugin,
   InputPlugin,
-} from './plugins';
-import Registry from './Registry';
-import type {BlockDefinition, OldBlockDefinition, Renderer} from './types';
+} from '../plugins';
+import Registry from '../Registry';
+import type {BlockDefinition, OldBlockDefinition, Renderer} from '../types';
 
 /*
  * Registry's job is bookkeeping against Blockly's global registries

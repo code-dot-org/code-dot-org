@@ -1,6 +1,6 @@
 import {describe, expect, it} from 'vitest';
 
-import {convertBlocklyXmlToJson, convertBlocklyXmlToToolbox} from './index';
+import {convertBlocklyXmlToJson, convertBlocklyXmlToToolbox} from '../index';
 
 // jsdom supplies DOMParser; the production caller (BlocklyMarkdown) injects the
 // same `new DOMParser()`, so the tests exercise the real parse path.

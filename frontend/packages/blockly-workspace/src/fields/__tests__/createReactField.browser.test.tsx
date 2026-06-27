@@ -3,8 +3,8 @@ import * as Blockly from 'blockly/core';
 import * as En from 'blockly/msg/en';
 import {afterEach, beforeEach, describe, expect, it} from 'vitest';
 
-import {createReactField} from './createReactField';
-import type {ReactFieldPreviewContext} from './createReactField';
+import {createReactField} from '../createReactField';
+import type {ReactFieldPreviewContext} from '../createReactField';
 
 /*
  * createReactField's preview path draws into an SVG group and only runs when the
@@ -44,6 +44,8 @@ describe('createReactField rendering', () => {
       name: 'field_rf_preview',
       defaultValue: {label: 'hi'},
       Editor,
+      ariaLabel: 'preview field',
+      getAriaValue: value => value.label,
       renderPreview: ctx => previews.push(ctx),
     });
 
@@ -73,6 +75,8 @@ describe('createReactField rendering', () => {
       name: 'field_rf_bad_value',
       defaultValue: {label: 'ok'},
       Editor: () => null,
+      ariaLabel: 'bad value field',
+      getAriaValue: value => value.label,
     });
     Blockly.fieldRegistry.register(
       plugin.name,

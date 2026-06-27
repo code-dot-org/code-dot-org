@@ -1,9 +1,9 @@
 import {cleanup, render} from '@testing-library/react';
 import {afterEach, describe, expect, it, vi} from 'vitest';
 
-import type {BlocklySerialization} from '../../types';
+import type {BlocklySerialization} from '../../../types';
 
-import BlocklyWorkspace from './index';
+import BlocklyWorkspace from '../index';
 
 /*
  * Browser-mode tests: Blockly injects a real <svg> and lays blocks out using

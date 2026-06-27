@@ -1,7 +1,7 @@
 import type * as Blockly from 'blockly/core';
 import {describe, expect, it} from 'vitest';
 
-import {buildToolbox} from './index';
+import {buildToolbox} from '../index';
 
 /*
  * buildToolbox is a pure transform from our simplified toolbox config into the

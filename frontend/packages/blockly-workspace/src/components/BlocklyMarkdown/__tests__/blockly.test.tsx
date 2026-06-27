@@ -3,7 +3,7 @@ import {describe, expect, it} from 'vitest';
 
 import {Markdown} from '@code-dot-org/markdown';
 
-import {blockly} from './blockly';
+import {blockly} from '../blockly';
 
 const render = (markdown: string, enabled: boolean) =>
   renderToStaticMarkup(
