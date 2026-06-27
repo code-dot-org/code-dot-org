@@ -50,6 +50,9 @@ class Agent<T extends Environment = Environment> extends TypedEventEmitter<T> {
   protected _container?: HTMLDivElement | HTMLSpanElement;
   // Holds the blocks/categories in the toolbox
   protected _toolbox?: Toolbox;
+  // The unique renderer-registry name this workspace was injected with, held so
+  // it can be released when the workspace is torn down.
+  protected _rendererName?: string;
   protected _themeChangedEvent: () => void;
 
   /**
@@ -170,10 +173,15 @@ class Agent<T extends Environment = Environment> extends TypedEventEmitter<T> {
       ? document.createElement('div')
       : this._container;
 
+    // Register a renderer unique to this workspace, carrying the driver's
+    // current input-plugin shapes, and inject with its name. Released in
+    // deconstruct().
+    this._rendererName = this.driver.acquireRenderer();
+
     // Inject!
     this._workspace = Blockly.inject(container, {
       ...this._options,
-      renderer: this.driver.renderer.name,
+      renderer: this._rendererName,
       theme: this.driver.theme.instance,
       toolbox: this._toolbox ? buildToolbox(this._toolbox) : undefined,
     });
@@ -281,6 +289,13 @@ class Agent<T extends Environment = Environment> extends TypedEventEmitter<T> {
     // Deconstruct the workspace
     this._workspace?.dispose();
     this._workspace = undefined;
+
+    // Release the per-workspace renderer registered at inject. The workspace
+    // held its own renderer instance, so the registry entry is no longer needed.
+    if (this._rendererName) {
+      this.driver.releaseRenderer(this._rendererName);
+      this._rendererName = undefined;
+    }
   }
 }
 

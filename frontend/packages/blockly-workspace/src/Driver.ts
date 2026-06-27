@@ -175,6 +175,22 @@ class Driver<
   }
 
   /**
+   * Registers a renderer for one workspace and returns the unique name to inject
+   * with (it carries the current input-plugin shapes). Released via
+   * {@link releaseRenderer} when the workspace is torn down.
+   */
+  acquireRenderer(): string {
+    return this._registry.acquireRenderer();
+  }
+
+  /**
+   * Releases a renderer previously produced by {@link acquireRenderer}.
+   */
+  releaseRenderer(name: string) {
+    this._registry.releaseRenderer(name);
+  }
+
+  /**
    * Retrieves a reference to the blockly Environment.
    */
   get environment(): T {

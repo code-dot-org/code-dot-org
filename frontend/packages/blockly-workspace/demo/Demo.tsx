@@ -103,6 +103,7 @@ export const Demo = () => {
           <BlocklyMarkdown
             content={mode.instructions}
             blocks={mode.blocks}
+            plugins={mode.plugins}
             theme={theme}
           />
         </aside>

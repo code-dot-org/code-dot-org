@@ -41,6 +41,15 @@ import type {
 const ARG_KEYS = ['args0', 'args1', 'args2', 'args3'] as const;
 
 /**
+ * Monotonic counter used to mint a unique Blockly renderer-registry name per
+ * acquired renderer. Blockly's renderer registry is process-global and keyed by
+ * name; giving every workspace its own name keeps independent workspaces (even
+ * ones sharing the same base renderer) from overwriting one another's
+ * input-plugin set. See {@link Registry.acquireRenderer}.
+ */
+let rendererInstanceCount = 0;
+
+/**
  * Produces a copy of a block definition that the registry can freely rewrite —
  * replacing inline plugin, field, extension and mutator references with their
  * registered string names — without ever mutating the caller's definition.
@@ -120,13 +129,40 @@ class Registry<T extends Environment = Environment> {
       );
     }
 
-    // Register the renderer
+    // The renderer is not registered here. Each workspace registers its own
+    // uniquely-named renderer at inject time (see acquireRenderer), so two
+    // workspaces sharing this base renderer never collide in Blockly's global
+    // renderer registry.
+  }
+
+  /**
+   * Registers a renderer for a single workspace and returns the unique name to
+   * inject with. The renderer bakes in the current input-plugin set, so the
+   * shapes a workspace draws are fixed at the moment it is acquired. The name is
+   * unique per call, so concurrent workspaces never overwrite one another's
+   * registry entry. Pair every call with {@link releaseRenderer} when the
+   * workspace is torn down.
+   */
+  acquireRenderer(): string {
+    const name = `${this.renderer.name}-${rendererInstanceCount++}`;
     Blockly.registry.register(
       Blockly.registry.Type.RENDERER,
-      this.renderer.name,
-      this.renderer.class([]),
+      name,
+      this.renderer.class(this.inputs),
       true,
     );
+    return name;
+  }
+
+  /**
+   * Unregisters a renderer previously produced by {@link acquireRenderer}.
+   * Idempotent: releasing an already-released (or never-registered) name is a
+   * no-op.
+   */
+  releaseRenderer(name: string) {
+    if (Blockly.registry.hasItem(Blockly.registry.Type.RENDERER, name)) {
+      Blockly.registry.unregister(Blockly.registry.Type.RENDERER, name);
+    }
   }
 
   /**
@@ -214,14 +250,6 @@ class Registry<T extends Environment = Environment> {
 
     const blockDefinition: BlockDefinition = block as BlockDefinition;
 
-    // Register input plugin if we have never seen it before
-    if (blockDefinition.output && typeof blockDefinition.output !== 'string') {
-      const inputPlugin: InputPlugin = blockDefinition.output;
-      this.register(inputPlugin);
-      plugins.push(inputPlugin);
-      blockDefinition.output = inputPlugin.check;
-    }
-
     // Register fields if we have never seen it before
     (ARG_KEYS as readonly (keyof BlockDefinition)[]).forEach(key => {
       if (key in blockDefinition) {
@@ -292,16 +320,10 @@ class Registry<T extends Environment = Environment> {
    * types.
    */
   private registerInput(inputPlugin: InputPlugin) {
-    // Append this input
+    // Only accumulate the type→shape mapping. The renderer that bakes these in
+    // is built per workspace at inject time (see acquireRenderer), not here, so
+    // adding an input never mutates the shared global renderer registry.
     this.inputs.push(inputPlugin);
-
-    // Re-Register the renderer
-    Blockly.registry.register(
-      Blockly.registry.Type.RENDERER,
-      this.renderer.name,
-      this.renderer.class(this.inputs),
-      true,
-    );
   }
 
   /**
@@ -546,19 +568,10 @@ class Registry<T extends Environment = Environment> {
     this.mutators.forEach(mutator => this.unregisterMutator(mutator));
     this.mutators = [];
 
-    // Input plugins are not registered individually; instead the renderer is
-    // re-registered carrying the accumulated inputs. Dropping the inputs alone
-    // would leave the registered renderer still baking in the old set, so
-    // re-register it empty to keep teardown symmetric.
-    if (this.inputs.length > 0) {
-      this.inputs = [];
-      Blockly.registry.register(
-        Blockly.registry.Type.RENDERER,
-        this.renderer.name,
-        this.renderer.class(this.inputs),
-        true,
-      );
-    }
+    // Input plugins only accumulate a type→shape map here; the per-workspace
+    // renderers that bake them in are released individually as each workspace is
+    // torn down (Agent.deconstruct -> releaseRenderer). Just drop the set.
+    this.inputs = [];
 
     // Dispose any inject-plugin instances still tracked (workspaces that were
     // not individually torn down via disposeInject).

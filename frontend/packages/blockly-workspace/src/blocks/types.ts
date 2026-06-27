@@ -2,7 +2,7 @@ import type {IProcedureBlock} from '@blockly/block-shareable-procedures';
 import * as Blockly from 'blockly/core';
 import type {JavascriptGenerator} from 'blockly/javascript';
 
-import type {FieldPlugin, InputPlugin} from '../plugins';
+import type {FieldPlugin} from '../plugins';
 import type {Mutator, Environment, Extension, Mixin} from '../types';
 
 /**
@@ -223,8 +223,13 @@ export interface BaseBlockDefinition {
   previousStatement?: boolean;
   /** Whether or not the block can have subsequent blocks attached to it */
   nextStatement?: boolean;
-  /** The output type, which makes this a potential input for another block. */
-  output?: string | InputPlugin;
+  /**
+   * The output type, which makes this a potential input for another block. This
+   * is a plain type string; the connection's notch *shape* for that type is
+   * defined separately by an input plugin supplied via the workspace `plugins`
+   * (see {@link InputPlugin}), not here.
+   */
+  output?: string;
   /** The first caption */
   message0?: string;
   /** The first set of interactive arguments */
