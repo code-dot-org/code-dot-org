@@ -1,19 +1,19 @@
 {
-  "name": "@code-dot-org/blockly-workspace",
+  "name": "@code-dot-org/blockly",
   "version": "0.1.0",
   "private": true,
   "keywords": [
     "blockly",
     "code.org"
   ],
-  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/blockly-workspace/#readme",
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/blockly/#readme",
   "bugs": {
     "url": "https://github.com/code-dot-org/code-dot-org/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/code-dot-org/code-dot-org.git",
-    "directory": "frontend/packages/blockly-workspace"
+    "directory": "frontend/packages/blockly"
   },
   "license": "SEE LICENSE IN LICENSE",
   "sideEffects": [
