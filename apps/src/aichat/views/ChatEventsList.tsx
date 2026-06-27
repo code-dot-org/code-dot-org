@@ -64,11 +64,13 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   const previousEventsLength = useRef<number | null>(null);
   const parentRef = useRef<HTMLDivElement>(null);
   const finalEventRef = useRef<HTMLDivElement>(null);
-  // Whether the user is currently pinned to the bottom of the conversation.
-  // Updated from scroll events (the only way the user un-pins is by scrolling up)
-  // and read when the container is resized — a resize doesn't move scrollTop, so
-  // it fires no scroll event and we can't recompute this after the fact.
+  // Whether the user is pinned to the bottom. Re-pinned on resize unless a scroll
+  // up has cleared it.
   const pinnedToBottomRef = useRef(true);
+  // Previous scrollTop, for scroll direction. Only an upward scroll un-pins; the
+  // re-pin's own writes and the grow-time clamp move scrollTop toward the bottom,
+  // so direction tells intent from byproduct.
+  const lastScrollTopRef = useRef(0);
 
   const scrollToLastMessage = useCallback((keepTopOfMessageVisible = false) => {
     if (conversationContainerRef.current) {
@@ -133,15 +135,24 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
     }
 
     const handleUserScroll = () => {
-      pinnedToBottomRef.current = isAtBottom();
-      setShowScrollToBottom(!isAtBottom());
+      const container = conversationContainerRef.current;
+      if (!container) {
+        return;
+      }
+      const atBottom = isAtBottom();
+      const scrolledUp = container.scrollTop < lastScrollTopRef.current;
+      lastScrollTopRef.current = container.scrollTop;
+      // Reaching the bottom pins; an upward scroll un-pins; anything else leaves it.
+      if (atBottom) {
+        pinnedToBottomRef.current = true;
+      } else if (scrolledUp) {
+        pinnedToBottomRef.current = false;
+      }
+      setShowScrollToBottom(!atBottom);
     };
 
-    // When the container is resized (e.g. the instructions drawer opening above
-    // shrinks the chat), keep the latest content pinned to the bottom — but only
-    // if the user was already there. If they'd scrolled up to read, leave their
-    // position alone. Jump instantly (not smoothly) so the chat stays glued to
-    // the bottom across every frame of the drawer's resize animation.
+    // On resize (e.g. the drawer opening shrinks the chat), re-pin to the bottom
+    // if the user was already there. Jump, not smooth, to stay glued every frame.
     const handleResize = () => {
       const container = conversationContainerRef.current;
       if (pinnedToBottomRef.current && container) {
