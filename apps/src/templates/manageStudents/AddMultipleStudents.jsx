@@ -1,6 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Modal from '@code-dot-org/component-library/modal';
-import {Button as MuiButton} from '@mui/material';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import Papa from 'papaparse';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
@@ -17,6 +17,13 @@ import {
 } from './manageStudentsRedux';
 
 import moduleStyles from './addMultipleStudents.module.scss';
+
+const CSV_TEMPLATE =
+  'Display Name,Family Name,Age,Gender,State\n' +
+  'Ada,Lovelace,18,female,CA\n' +
+  'Alan,Turing,21+,M,ny\n' +
+  'Sam,Taylor,15,non-binary,FL\n' +
+  'Alex,Tang,13,preferred term not listed,GA\n';
 
 class AddMultipleStudents extends Component {
   static propTypes = {
@@ -112,6 +119,35 @@ class AddMultipleStudents extends Component {
       const familyName = parts.length > 1 ? parts[1].trim() : null;
       return {name, familyName};
     });
+
+  renderCsvDescription() {
+    return (
+      <MuiTypography id="dsco-dialog-description" variant="body2" gutterBottom>
+        {i18n.addStudentsMultipleCSVInstructions()}{' '}
+        <a
+          href={`data:text/csv;charset=utf-8,${encodeURIComponent(
+            CSV_TEMPLATE
+          )}`}
+          download="students_template.csv"
+        >
+          {i18n.downloadCSVTemplate()}
+        </a>
+      </MuiTypography>
+    );
+  }
+
+  renderModalContent() {
+    if (experiments.isEnabled('add-students-csv-import')) {
+      return (
+        <>
+          {this.renderCsvDescription()}
+          {this.renderCsvContent()}
+        </>
+      );
+    }
+
+    return this.renderTextareaContent();
+  }
 
   add = () => {
     if (experiments.isEnabled('add-students-csv-import')) {
@@ -270,15 +306,11 @@ class AddMultipleStudents extends Component {
             title={i18n.addStudentsMultiple()}
             description={
               isCsvImportEnabled
-                ? i18n.addStudentsMultipleCSVInstructions()
+                ? undefined
                 : i18n.addStudentsMultipleWithFamilyNameInstructions()
             }
             onClose={this.closeDialog}
-            customContent={
-              isCsvImportEnabled
-                ? this.renderCsvContent()
-                : this.renderTextareaContent()
-            }
+            customContent={this.renderModalContent()}
             primaryButtonProps={{
               children: i18n.done(),
               onClick: this.add,
