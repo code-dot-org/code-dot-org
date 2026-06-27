@@ -13,8 +13,9 @@
   border-radius: 4px;
   box-sizing: border-box;
   // The 10px inset lives on the scroll area, not here, so this box has no padding
-  // floor and can collapse smoothly all the way to 0 — no instant settle step.
-  // overflow:hidden clips the scroll area's residual padding box as it reaches 0.
+  // floor and can collapse smoothly to 0 (an inset here would hold the height at
+  // the padding, then jump the last stretch to 0). overflow:hidden clips the
+  // scroll area's residual padding box as it reaches 0.
   overflow: hidden;
   // Animate the drawer height: between the Instructions tab (full height) and the
   // AI Tutor tab (drawer height), and when opening/closing via the toggle.
@@ -86,10 +87,10 @@
   }
 }
 
-// When the instructions drawer is closed, switching between the Instructions and
-// AI Tutor tabs is instant: both views are already mounted and laid out, so the
-// chat shouldn't grow in and the instructions shouldn't slide back. (Open-drawer
-// tab switches and the open/close toggle still animate.)
+// Suppress the layout transitions. Applied (via animateLayout) when the drawer is
+// collapsed and idle — not open, not mid open/close, not mid tab switch — so an
+// incidental relayout such as a window resize doesn't animate when nothing should
+// be moving.
 .instant {
   .instructionsDrawer,
   .chatContent,

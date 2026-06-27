@@ -95,11 +95,9 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     }
   }, [showInstructions]);
 
-  // Animate the layout (drawer resize, chat reveal, toggle slide) only while the
-  // instructions drawer is open. Once it has settled closed, switching tabs is
-  // instant so the chat doesn't grow in and the instructions don't slide back.
-  // The settle delay spans the close animation so the open/close toggle itself
-  // still animates in both directions.
+  // Animate the layout (drawer resize, chat reveal/fade, toggle slide) while the
+  // drawer is open and across the close-settle window, so the open/close toggle
+  // animates in both directions.
   const [drawerSettledClosed, setDrawerSettledClosed] = useState(isCollapsed);
   useEffect(() => {
     if (!isCollapsed) {
@@ -109,12 +107,35 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     const id = setTimeout(() => setDrawerSettledClosed(true), 220);
     return () => clearTimeout(id);
   }, [isCollapsed]);
-  const animateLayout = !isCollapsed || !drawerSettledClosed;
 
-  // Size the hidden/full states synchronously, not from the frame-late
-  // instructionsHeight, so the first frame is right: no full-height flash entering
-  // a closed AI Tutor tab, no lingering chat returning to full instructions. Only
-  // the open, resizable drawer uses the (animating) instructionsHeight.
+  // Also animate around a tab switch, so switching to/from a collapsed AI Tutor
+  // tab rolls the instructions down to 0 (or back up to full) rather than cutting.
+  // `tabSwitching` is derived during render (before the effect updates the ref),
+  // so the transition is already live on the very frame the drawer height changes
+  // — an effect-set flag arrives a frame late, after the height has jumped.
+  // `animatingTabSwitch` then keeps it live for the rest of the animation so the
+  // transition isn't cancelled when `.instant` would otherwise return.
+  const previousAiTutorActiveRef = useRef(aiTutorActive);
+  const tabSwitching = previousAiTutorActiveRef.current !== aiTutorActive;
+  const [animatingTabSwitch, setAnimatingTabSwitch] = useState(false);
+  useEffect(() => {
+    if (previousAiTutorActiveRef.current === aiTutorActive) {
+      return;
+    }
+    previousAiTutorActiveRef.current = aiTutorActive;
+    setAnimatingTabSwitch(true);
+    const id = setTimeout(() => setAnimatingTabSwitch(false), 220);
+    return () => clearTimeout(id);
+  }, [aiTutorActive]);
+
+  const animateLayout =
+    !isCollapsed || !drawerSettledClosed || tabSwitching || animatingTabSwitch;
+
+  // Size each state's drawer height synchronously (0 hidden, full on the
+  // Instructions tab), not from the frame-late instructionsHeight, so the height —
+  // and the transition's target — is right on the first frame and the roll
+  // animates cleanly to it rather than via a stale intermediate. Only the open,
+  // resizable drawer uses the (animating) instructionsHeight.
   const drawerHeight = !showInstructions
     ? 0
     : aiTutorActive
