@@ -18,12 +18,12 @@ import {
 
 import moduleStyles from './addMultipleStudents.module.scss';
 
-const CSV_TEMPLATE =
-  'Display Name,Family Name,Age,Gender,State\n' +
+const csvTemplate = () =>
+  `${i18n.addStudentsMultipleCSVFormat()}\n` +
   'Ada,Lovelace,18,female,CA\n' +
   'Alan,Turing,21+,M,ny\n' +
-  'Sam,Taylor,15,non-binary,FL\n' +
-  'Alex,Tang,13,preferred term not listed,GA\n';
+  'Sam,Taylor,,non-binary,fl\n' +
+  'Alex,,13,preferred term not listed,GA\n';
 
 class AddMultipleStudents extends Component {
   static propTypes = {
@@ -122,17 +122,18 @@ class AddMultipleStudents extends Component {
 
   renderCsvDescription() {
     return (
-      <MuiTypography id="dsco-dialog-description" variant="body2" gutterBottom>
-        {i18n.addStudentsMultipleCSVInstructions()}{' '}
-        <a
-          href={`data:text/csv;charset=utf-8,${encodeURIComponent(
-            CSV_TEMPLATE
-          )}`}
-          download="students_template.csv"
-        >
-          {i18n.downloadCSVTemplate()}
-        </a>
-      </MuiTypography>
+      <div id="dsco-dialog-description">
+        <MuiTypography variant="body2" gutterBottom>
+          {i18n.addStudentsMultipleCSVInstructions()}{' '}
+          <code className={moduleStyles.csvFormat}>
+            {i18n.addStudentsMultipleCSVFormat()}
+          </code>
+        </MuiTypography>
+
+        <MuiTypography variant="body2" gutterBottom>
+          {i18n.addStudentsMultipleCSVOnlyDisplayNameRequired()}
+        </MuiTypography>
+      </div>
     );
   }
 
@@ -214,12 +215,23 @@ class AddMultipleStudents extends Component {
           <div className={moduleStyles.verticalDivider} />
         </div>
         <div className={moduleStyles.dropSection}>
-          <label
-            className={moduleStyles.label}
-            htmlFor="students-csv-file-input"
-          >
-            {i18n.addStudentsImportLabel()}
-          </label>
+          <div className={moduleStyles.importHeader}>
+            <label
+              className={moduleStyles.label}
+              htmlFor="students-csv-file-input"
+            >
+              {i18n.addStudentsImportLabel()}
+            </label>
+            <a
+              href={`data:text/csv;charset=utf-8,${encodeURIComponent(
+                csvTemplate()
+              )}`}
+              download="students_template.csv"
+              className={moduleStyles.templateLink}
+            >
+              {i18n.downloadCSVTemplate()}
+            </a>
+          </div>
           <input
             id="students-csv-file-input"
             type="file"

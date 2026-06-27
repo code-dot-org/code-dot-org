@@ -24,6 +24,14 @@
   color: var(--text-neutral-primary);
 }
 
+.csvFormat {
+  padding: 0 0.25rem;
+  border-radius: 0.25rem;
+  background-color: var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
+  font-size: inherit;
+}
+
 .hiddenFileInput {
   display: none;
 }
@@ -89,6 +97,18 @@
   flex-direction: column;
   width: 0;
   min-width: 0;
+}
+
+.importHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.templateLink {
+  font-size: 0.875rem;
+  white-space: nowrap;
 }
 
 .dropZone {
