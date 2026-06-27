@@ -312,7 +312,7 @@ class AddMultipleStudents extends Component {
             onClose={this.closeDialog}
             customContent={this.renderModalContent()}
             primaryButtonProps={{
-              children: i18n.done(),
+              children: i18n.addStudents(),
               onClick: this.add,
             }}
             secondaryButtonProps={{
