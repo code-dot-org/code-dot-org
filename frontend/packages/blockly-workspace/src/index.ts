@@ -21,6 +21,7 @@ export type {
 export * from './inputs';
 
 export * from './components';
+export * from './contexts';
 export * from './fields';
 
 export * as Blockly from 'blockly/core';
