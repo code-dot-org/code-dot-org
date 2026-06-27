@@ -37,6 +37,16 @@ export const definition = {
   ...DefaultDefinition,
   name: 'high-contrast',
   option: 'High Contrast Theme',
+  // The high-contrast theme uses a larger font for legibility. Carry the
+  // default family/weight but omit `size`: Blockly's defineTheme merges the base
+  // theme's fontStyle first, so leaving `size` out lets the base
+  // @blockly/theme-highcontrast size (16) survive. Spreading DefaultDefinition
+  // wholesale would reimpose the default size (11) and lose the bump — this is
+  // how the mainline app keeps the larger high-contrast font.
+  fontStyle: {
+    family: DefaultDefinition.fontStyle.family,
+    weight: DefaultDefinition.fontStyle.weight,
+  },
   blockStyles: {
     default: {
       colourPrimary: '#00818A',

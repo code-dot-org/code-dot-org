@@ -53,6 +53,9 @@ class Agent<T extends Environment = Environment> extends TypedEventEmitter<T> {
   // The unique renderer-registry name this workspace was injected with, held so
   // it can be released when the workspace is torn down.
   protected _rendererName?: string;
+  // The font size of the currently applied theme, tracked so a theme change that
+  // alters the font size can trigger a re-layout (see _themeChangedEvent).
+  protected _appliedFontSize?: number;
   protected _themeChangedEvent: () => void;
 
   /**
@@ -77,9 +80,51 @@ class Agent<T extends Environment = Environment> extends TypedEventEmitter<T> {
 
     this.driver.initialize(this);
     this._themeChangedEvent = () => {
-      this._workspace?.setTheme(this.driver.theme.instance);
+      const workspace = this._workspace;
+      if (!workspace) {
+        return;
+      }
+      const theme = this.driver.theme.instance;
+      workspace.setTheme(theme);
+
+      // Blockly does not re-lay-out blocks when only the font size changes
+      // (google/blockly#7782): setTheme enlarges the rendered text via injected
+      // CSS, but block geometry keeps the measurements taken at the old size, so
+      // text overflows. Re-render against the new font when the size changes.
+      const fontSize = theme.fontStyle?.size;
+      if (fontSize !== this._appliedFontSize) {
+        this._appliedFontSize = fontSize;
+        this.rerenderForFontChange(workspace);
+      }
     };
     this.driver.addListener(DriverEvent.ThemeChanged, this._themeChangedEvent);
+  }
+
+  /**
+   * Re-measures and re-renders every block (and the flyout's, if open) so their
+   * geometry matches the current theme's font size. Blockly only refreshes block
+   * colours on a theme change, not their layout, so a font-size change needs an
+   * explicit re-render (see google/blockly#7782).
+   */
+  private rerenderForFontChange(workspace: Blockly.WorkspaceSvg) {
+    const rerender = (ws: Blockly.WorkspaceSvg) => {
+      // markDirty repoints each block at the renderer's freshly rebuilt
+      // constants; render() then queues a re-measure against them.
+      (ws.getAllBlocks(false) as Blockly.BlockSvg[]).forEach(block =>
+        block.markDirty(),
+      );
+      ws.render();
+    };
+
+    rerender(workspace);
+    const flyout = workspace.getFlyout();
+    if (flyout) {
+      rerender(flyout.getWorkspace());
+    }
+    // Flush the queued renders synchronously so a flyout reflow measures the
+    // freshly sized blocks rather than their stale bounds.
+    Blockly.renderManagement.triggerQueuedRenders();
+    flyout?.reflow();
   }
 
   get driver(): Driver<T> {
@@ -185,6 +230,10 @@ class Agent<T extends Environment = Environment> extends TypedEventEmitter<T> {
       theme: this.driver.theme.instance,
       toolbox: this._toolbox ? buildToolbox(this._toolbox) : undefined,
     });
+
+    // The workspace was injected with this theme's font size; track it so a
+    // later font-size change can be detected and trigger a re-layout.
+    this._appliedFontSize = this.driver.theme.instance.fontStyle?.size;
 
     Blockly.svgResize(this._workspace);
     this.driver.onInject(this);
