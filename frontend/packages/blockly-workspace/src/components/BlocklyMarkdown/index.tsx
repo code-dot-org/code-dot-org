@@ -7,7 +7,9 @@ import type {MarkdownExtension, MarkdownProps} from '@code-dot-org/markdown';
 
 import type {Plugin} from '../../plugins';
 import type {Theme, Renderer, BlockDefinitions} from '../../types';
-import {convertBlocklyXmlToJson} from '../../xml';
+import {convertBlocklyXmlToJson, convertBlocklyXmlToToolbox} from '../../xml';
+import BlocklyFlyout from '../BlocklyFlyout';
+import type {BlocklyFlyoutProps} from '../BlocklyFlyout';
 import BlocklyWorkspace from '../BlocklyWorkspace';
 
 import {blockly} from './blockly';
@@ -17,6 +19,13 @@ export interface BlocklyMarkdownProps extends MarkdownProps {
   renderer?: Renderer;
   plugins?: Plugin[];
   theme?: Theme;
+  /**
+   * Render each embedded `<xml>` as a draggable {@link BlocklyFlyout} instead of
+   * a static preview, so readers can drag (or keyboard-place) its blocks into
+   * the workspace. Requires a {@link BlocklyProvider} ancestor with a main
+   * workspace — the flyout's drag target. Without one, the previews render empty.
+   */
+  draggable?: boolean;
 }
 
 // The XML never depends on a workspace to parse, so one parser serves every
@@ -28,6 +37,7 @@ interface WorkspaceOptions {
   renderer?: Renderer;
   plugins?: Plugin[];
   theme?: Theme;
+  draggable?: boolean;
 }
 
 /*
@@ -46,10 +56,32 @@ const workspaceExtension = ({
   renderer,
   plugins,
   theme,
+  draggable,
 }: WorkspaceOptions): MarkdownExtension => {
   const Workspace = ({node}: {node?: Element}) => {
     if (!node) {
       return null;
+    }
+    const xml = toHtml(node);
+    // Draggable: offer the embedded blocks for drag/keyboard placement into the
+    // enclosing provider's main workspace, rather than a read-only preview.
+    // containerRole="group" rather than the default "region": this flyout is
+    // inline in prose, not a standalone page section, so it must not create a
+    // landmark entry. A group + aria-label still announces name and role on
+    // focus; it just stays out of the screen-reader landmark navigation list.
+    // This also prevents multiple <xml> snippets in one document from
+    // producing identically-named "Block palette" region landmarks that are
+    // indistinguishable to AT users.
+    if (draggable) {
+      return (
+        <BlocklyFlyout
+          containerRole="group"
+          blocks={
+            convertBlocklyXmlToToolbox(parser, xml)
+              .blocks as BlocklyFlyoutProps['blocks']
+          }
+        />
+      );
     }
     return (
       <BlocklyWorkspace
@@ -58,7 +90,7 @@ const workspaceExtension = ({
         plugins={plugins}
         theme={theme}
         inline
-        startBlocks={convertBlocklyXmlToJson(parser, toHtml(node))}
+        startBlocks={convertBlocklyXmlToJson(parser, xml)}
       />
     );
   };
@@ -89,16 +121,17 @@ const BlocklyMarkdown = ({
   renderer,
   plugins,
   theme,
+  draggable,
   extensions: extraExtensions,
   ...props
 }: BlocklyMarkdownProps) => {
   const markdownExtensions = useMemo(
     () => [
       blockly,
-      workspaceExtension({blocks, renderer, plugins, theme}),
+      workspaceExtension({blocks, renderer, plugins, theme, draggable}),
       ...(extraExtensions ?? []),
     ],
-    [blocks, renderer, plugins, theme, extraExtensions],
+    [blocks, renderer, plugins, theme, draggable, extraExtensions],
   );
 
   return <Markdown {...props} extensions={markdownExtensions} />;

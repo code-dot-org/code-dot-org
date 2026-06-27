@@ -81,6 +81,11 @@ function showDragGhostOnPointerDown(event: PointerEvent): void {
   );
   const overlay = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   overlay.classList.add('blocklyFlyoutDragGhost');
+  // The overlay is purely decorative; hide it from the accessibility tree so AT
+  // cannot traverse into it during a drag. The inner clone already carries
+  // aria-hidden, but hiding the wrapper is required — AT can still discover
+  // children of a non-hidden ancestor even when each child is individually hidden.
+  overlay.setAttribute('aria-hidden', 'true');
   // Block text font and fill are scoped to `.<renderer> .blocklyText`, where the
   // renderer/theme classes live on the workspace's injection div. The overlay
   // sits on document.body, outside that scope, so carry those classes (taken
@@ -133,6 +138,27 @@ export interface BlocklyFlyoutProps {
   blocks: Blockly.utils.toolbox.FlyoutDefinition;
   /** Optional class for the container element. */
   className?: string;
+  /**
+   * Accessible name announced by screen readers when the user navigates to or
+   * into this element. Defaults to "Block palette". Override when context makes
+   * a more specific name meaningful, e.g. "Sprite blocks".
+   */
+  label?: string;
+  /**
+   * ARIA role for the container element.
+   *
+   * - `"region"` (default) — creates a named landmark. Correct for a
+   *   standalone side-panel flyout that users should be able to jump to via
+   *   screen-reader landmark navigation.
+   * - `"group"` — groups the blocks without creating a landmark. Use this
+   *   when the flyout is embedded inline in prose (e.g. from
+   *   {@link BlocklyMarkdown}), where a region landmark would clutter the
+   *   page's landmark list, and identically-named regions across multiple
+   *   `<xml>` snippets would be indistinguishable. A `group` + `aria-label`
+   *   still announces name and role on focus; it simply does not appear in the
+   *   screen-reader landmark summary.
+   */
+  containerRole?: 'region' | 'group';
   /** Receives the flyout's internal workspace once it is created. */
   workspaceRef?: MutableRefObject<Blockly.WorkspaceSvg | null>;
 }
@@ -156,6 +182,8 @@ export interface BlocklyFlyoutProps {
 export function BlocklyFlyout({
   blocks,
   className,
+  label = 'Block palette',
+  containerRole = 'region',
   workspaceRef,
 }: BlocklyFlyoutProps): ReactElement {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -197,11 +225,16 @@ export function BlocklyFlyout({
       const mainWorkspace = driverInstance.mainWorkspace;
       if (container?.isConnected && mainWorkspace) {
         // Matching the main workspace's options gives the same renderer (whose
-        // unique name is still registered while that workspace is alive), theme
-        // and RTL, so previews look identical to the canvas.
+        // unique name is still registered while that workspace is alive) and RTL,
+        // so previews look identical to the canvas. Take the theme from
+        // getTheme() rather than options.theme: options holds the *injection-time*
+        // theme, which setTheme never updates, so a flyout (re)created after a
+        // theme change — as happens when an enclosing BlocklyMarkdown re-renders —
+        // would otherwise be built with the stale original theme.
         const flyout = new InlineFlyout({
           ...mainWorkspace.options,
           RTL: mainWorkspace.RTL,
+          theme: mainWorkspace.getTheme(),
         } as Blockly.Options);
         flyoutRef.current = flyout;
         const svg = flyout.createDom(Blockly.utils.Svg.SVG);
@@ -308,7 +341,22 @@ export function BlocklyFlyout({
     }
   }, [blocks]);
 
-  return <div ref={containerRef} className={className} />;
+  // role + aria-label names this element for screen readers:
+  //   "region" (default): a named landmark for a standalone side-panel flyout
+  //   that AT users can jump to via landmark navigation (e.g. VoiceOver rotor,
+  //   NVDA elements list).
+  //   "group": for a flyout embedded inline in prose — groups the blocks
+  //   without adding a landmark entry, so multiple <xml> snippets in one doc
+  //   do not produce a cluttered list of identically-named regions. A group
+  //   with aria-label still announces name and role on focus.
+  return (
+    <div
+      ref={containerRef}
+      className={className}
+      role={containerRole}
+      aria-label={label}
+    />
+  );
 }
 
 export default BlocklyFlyout;

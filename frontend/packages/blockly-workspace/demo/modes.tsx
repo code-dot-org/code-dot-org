@@ -502,8 +502,25 @@ export const modes: Mode[] = [
     // a BlocklyProvider and a BlocklyFlyout in place of the usual instructions.
     id: 'flyoutSpike',
     name: 'Flyout spike',
-    instructions: '', // unused — the spike branch renders a flyout instead
-    toolbox: [], // the spike drags from the flyout, not a toolbox
+    // Demonstrates BlocklyMarkdown's draggable mode: the embedded <xml> blocks
+    // render as a flyout the reader can drag — or keyboard-place — into the
+    // workspace. Demo.tsx renders this mode's instructions with `draggable`
+    // inside a BlocklyProvider so the flyout can target the main workspace.
+    instructions: [
+      '## Drag from the instructions',
+      '',
+      'Drag a block below into the workspace, or use the keyboard: Tab to the',
+      'palette, arrow keys to move between blocks, Enter to place the focused',
+      'block, Escape to leave.',
+      '',
+      '<xml>',
+      '<block type="when_run"></block>',
+      '<block type="controls_repeat_ext"></block>',
+      '<block type="controls_if"></block>',
+      '<block type="text_print"></block>',
+      '</xml>',
+    ].join('\n'),
+    toolbox: [], // blocks come from the draggable instructions, not a toolbox
     blocks: [BaseBlocks.when_run],
     startBlocks: {
       blocks: {blocks: [{type: 'when_run', x: 48, y: 48}]},

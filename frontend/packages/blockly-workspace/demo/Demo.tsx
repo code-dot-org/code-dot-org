@@ -1,28 +1,11 @@
 import {useState} from 'react';
 
-import {
-  Blockly,
-  BlocklyFlyout,
-  BlocklyMarkdown,
-  BlocklyProvider,
-  BlocklyWorkspace,
-} from '../src';
+import {BlocklyMarkdown, BlocklyProvider, BlocklyWorkspace} from '../src';
 import {themeOptions, themes} from '../src/themes';
 
 import {modes} from './modes';
 
 const INSTRUCTIONS_WIDTH = 360;
-
-// Blocks offered by the flyout in the "Flyout spike" mode. Dragging one creates
-// a real block in the main workspace.
-const FLYOUT_SPIKE_BLOCKS: Blockly.utils.toolbox.FlyoutDefinition = [
-  {kind: 'block', type: 'when_run'},
-  {kind: 'block', type: 'controls_repeat_ext'},
-  {kind: 'block', type: 'controls_if'},
-  {kind: 'block', type: 'math_number'},
-  {kind: 'block', type: 'text'},
-  {kind: 'block', type: 'text_print'},
-];
 
 /**
  * Dev playground for the Blockly workspace. A mode selector (above the
@@ -108,11 +91,10 @@ export const Demo = () => {
       </header>
 
       {mode.id === 'flyoutSpike' ? (
-        // Spike: a BlocklyProvider lets the sidebar flyout and the main workspace
-        // share one driver, so the flyout can target the main workspace. The
-        // flyout lives in the sidebar — external to the canvas. Dragging a block
-        // creates it at the drop point; note it only becomes visible as it
-        // crosses into the canvas (see BlocklyFlyout docs).
+        // Spike: a BlocklyProvider lets the instructions and the main workspace
+        // share one driver. The instructions render with `draggable`, so each
+        // embedded <xml> becomes a flyout that drags (or keyboard-places) its
+        // blocks into the main workspace.
         <BlocklyProvider
           key={mode.id}
           blocks={mode.blocks}
@@ -121,6 +103,7 @@ export const Demo = () => {
         >
           <div style={{display: 'flex', flex: '1 1 auto', minHeight: 0}}>
             <aside
+              aria-label="Instructions"
               style={{
                 borderRight: '1px solid var(--border-neutral-secondary, #ccc)',
                 boxSizing: 'border-box',
@@ -129,19 +112,19 @@ export const Demo = () => {
                 padding: 16,
               }}
             >
-              <p style={{marginTop: 0}}>
-                Drag a block from the panel below into the workspace.
-              </p>
-              <div
-                style={{
-                  border: '1px dashed var(--border-neutral-secondary, #ccc)',
-                }}
-              >
-                <BlocklyFlyout blocks={FLYOUT_SPIKE_BLOCKS} />
-              </div>
+              <BlocklyMarkdown
+                draggable
+                content={mode.instructions}
+                blocks={mode.blocks}
+                plugins={mode.plugins}
+                theme={theme}
+              />
             </aside>
 
-            <main style={{display: 'flex', flex: '1 1 auto', minWidth: 0}}>
+            <main
+              aria-label="Coding workspace"
+              style={{display: 'flex', flex: '1 1 auto', minWidth: 0}}
+            >
               <BlocklyWorkspace startBlocks={mode.startBlocks} theme={theme} />
             </main>
           </div>

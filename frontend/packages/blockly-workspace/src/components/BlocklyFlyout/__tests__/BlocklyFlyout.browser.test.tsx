@@ -235,6 +235,11 @@ describe('BlocklyFlyout', () => {
     const ghost = document.querySelector('.blocklyFlyoutDragGhost');
     expect(ghost).not.toBeNull();
 
+    // The overlay wrapper itself must be aria-hidden, not just the inner clone.
+    // Hiding only the clone is insufficient: AT can traverse from a non-hidden
+    // ancestor into its children even when each child is individually hidden.
+    expect(ghost!.getAttribute('aria-hidden')).toBe('true');
+
     // The ghost carries the workspace's renderer/theme classes, so Blockly's
     // scoped block CSS styles its labels — white fill and the workspace font,
     // matching the flyout (which gets the same scoping on its container).
@@ -306,6 +311,61 @@ describe('BlocklyFlyout', () => {
       },
       {timeout: 5000, interval: 50},
     );
+  });
+
+  it('exposes a named region landmark for screen-reader navigation', async () => {
+    // Without role="region" + aria-label, the flyout is an anonymous div that AT
+    // cannot navigate to via landmark shortcuts. The default label identifies the
+    // panel as "Block palette".
+    //
+    // div[role="region"] discriminates the flyout's container <div> from
+    // Blockly's internal <g role="region"> (its own workspace element).
+    const {container} = renderFlyout({
+      blocks: [{kind: 'block', type: 'controls_if'}],
+    });
+
+    const region = container.querySelector('div[role="region"]');
+    expect(region).not.toBeNull();
+    expect(region!.getAttribute('aria-label')).toBe('Block palette');
+  });
+
+  it('uses the label prop to override the region name', async () => {
+    // Callers that host multiple flyouts can disambiguate them for AT by
+    // passing a context-specific label (e.g. "Sprite blocks").
+    const {container} = renderFlyout({
+      blocks: [{kind: 'block', type: 'controls_if'}],
+      label: 'Sprite blocks',
+    });
+
+    const region = container.querySelector('div[role="region"]');
+    expect(region).not.toBeNull();
+    expect(region!.getAttribute('aria-label')).toBe('Sprite blocks');
+  });
+
+  it('uses group role when containerRole="group" is passed', async () => {
+    // Inline flyouts embedded in prose (e.g. from BlocklyMarkdown) must not
+    // add a landmark entry to the page's region list — a group with aria-label
+    // still announces name and role on focus but stays out of landmark nav.
+    // This prevents multiple <xml> snippets from producing identically-named
+    // "Block palette" regions that are indistinguishable in the VoiceOver
+    // rotor or NVDA elements list.
+    //
+    // Note: Blockly core itself assigns role="region" to its internal workspace
+    // <g> element (a browser-level implementation detail). The assertions below
+    // use div[role="..."] to discriminate the flyout's container <div> from
+    // Blockly's internal SVG <g> elements.
+    const {container} = renderFlyout({
+      blocks: [{kind: 'block', type: 'controls_if'}],
+      containerRole: 'group',
+    });
+
+    // No region landmark on the flyout's own container div.
+    expect(container.querySelector('div[role="region"]')).toBeNull();
+
+    // A group div with the label is created instead.
+    const group = container.querySelector('div[role="group"]');
+    expect(group).not.toBeNull();
+    expect(group!.getAttribute('aria-label')).toBe('Block palette');
   });
 
   it('drags a flyout block into the main workspace at the drop point', async () => {
