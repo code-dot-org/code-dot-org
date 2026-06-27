@@ -29,7 +29,7 @@ export function disableOrphanBlocks(eventWorkspace: Blockly.Workspace) {
  * immediately disabled until it is attached to the main block.
  * Copied and modified from Blockly/core/events/utils:disableOrphans. The change from
  * the original function was to remove a check on eventWorkspace.isDragging():
- * https: *github.com/google/blockly/blob/1e3b5b4c76f24d2274ef4947c1fcf657f0058f11/core/events/utils.ts#L549
+ * https://github.com/RaspberryPiFoundation/blockly/blob/1e3b5b4c76f24d2274ef4947c1fcf657f0058f11/core/events/utils.ts#L549
 
  * Second, we also run this event if a block change event fired for a block going from
  * enabled to disabled. This is because of a bug in procedure renames.
@@ -39,7 +39,7 @@ export function disableOrphanBlocks(eventWorkspace: Blockly.Workspace) {
  * Related to this, moving a procedure definition on the main workspace also enables all call blocks.
  * We re-disable any orphan call blocks when the definition block is dragged.
  * This bug is tracked by the Blockly team and is currently merged.
- * https://github.com/google/blockly-samples/issues/2035
+ * https://github.com/RaspberryPiFoundation/blockly-samples/issues/2035
  */
 export function disableOrphans(event: Blockly.Events.Abstract) {
   // This check is for when a block goes from disabled to enabled (value false is enabled).
