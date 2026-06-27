@@ -102,15 +102,31 @@ class AddMultipleStudents extends Component {
     this.setState({fileName: file.name, selectedFile: file});
   };
 
+  isHeaderRow = parts => {
+    const normalizedParts = parts.map(part =>
+      (part || '').trim().toLowerCase()
+    );
+
+    return (
+      normalizedParts[0] === 'display name' &&
+      normalizedParts[1] === 'family name' &&
+      normalizedParts[2] === 'age' &&
+      normalizedParts[3] === 'gender' &&
+      normalizedParts[4] === 'state'
+    );
+  };
+
   parseCsvRows = rows =>
-    rows.map(parts => {
-      const name = (parts[0] || '').trim();
-      const familyName = (parts[1] || '').trim() || null;
-      const age = parseAge(parts.length > 2 ? parts[2] : '');
-      const gender = parseGender(parts[3]);
-      const usState = parseUsState(parts[4]) || null;
-      return {name, familyName, age, gender, usState};
-    });
+    rows
+      .filter((parts, index) => index !== 0 || !this.isHeaderRow(parts))
+      .map(parts => {
+        const name = (parts[0] || '').trim();
+        const familyName = (parts[1] || '').trim() || null;
+        const age = parseAge(parts.length > 2 ? parts[2] : '');
+        const gender = parseGender(parts[3]);
+        const usState = parseUsState(parts[4]) || null;
+        return {name, familyName, age, gender, usState};
+      });
 
   parseBasicRows = value =>
     value.split('\n').map(line => {
