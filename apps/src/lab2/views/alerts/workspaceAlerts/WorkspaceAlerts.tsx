@@ -2,12 +2,15 @@ import React from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import PairingNavigatorAlert from '../pairingNavigator';
 import PreviousVersionAlert from '../previousVersion';
 import TeacherViewingStudentProjectAlert from '../teacherViewingStudentProject';
 
 type WorkspaceAlertsProps = {
   /** Is the alert displayed within the workspace area */
   inWorkspaceContainer?: boolean;
+  /** Does the app type have a standalone project level? */
+  hasStandaloneProjectLevel?: boolean;
 };
 
 // Bundles the alerts shown at the top of a lab2 workspace: the
@@ -15,6 +18,7 @@ type WorkspaceAlertsProps = {
 // the previous-version banner (self-gating).
 const WorkspaceAlerts: React.FC<WorkspaceAlertsProps> = ({
   inWorkspaceContainer,
+  hasStandaloneProjectLevel = true,
 }) => {
   const teacherViewingStudent = Boolean(
     useAppSelector(state => state.progress.viewAsUserId)
@@ -27,6 +31,11 @@ const WorkspaceAlerts: React.FC<WorkspaceAlertsProps> = ({
           inWorkspaceContainer={inWorkspaceContainer}
         />
       )}
+      <PairingNavigatorAlert
+        inWorkspaceContainer={inWorkspaceContainer}
+        isTeacherViewingStudent={teacherViewingStudent}
+        doesAppTypeHaveStandaloneProjectLevel={hasStandaloneProjectLevel}
+      />
       <PreviousVersionAlert />
     </>
   );

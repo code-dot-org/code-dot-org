@@ -5,6 +5,7 @@ import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 import {useSelector} from 'react-redux';
 
+import DCDO from '@cdo/apps/dcdo';
 import {FlashHandler, Flash} from '@cdo/apps/flashes/FlashHandler';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -28,11 +29,15 @@ import styles from './teacherHomepage.module.scss';
 interface HeaderProps {
   selectedArchiveToggle: ArchivedToggleOption;
   setSelectedArchiveToggle: (value: ArchivedToggleOption) => void;
+  onResumeOnboarding: () => void;
+  onboardingHidden: boolean;
 }
 
 export const Header: React.FC<HeaderProps> = ({
   selectedArchiveToggle,
   setSelectedArchiveToggle,
+  onResumeOnboarding,
+  onboardingHidden,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -125,7 +130,7 @@ export const Header: React.FC<HeaderProps> = ({
             options={[
               {
                 label: i18n.archiveAllSections(),
-                icon: {iconName: 'gear', iconStyle: 'solid'},
+                icon: {iconName: 'box-archive', iconStyle: 'solid'},
                 value: 'archive',
                 onClick: () => {
                   setArchiveAllModalOpen(true);
@@ -146,7 +151,7 @@ export const Header: React.FC<HeaderProps> = ({
               ...(experiments.isEnabled('demo-section')
                 ? [
                     {
-                      label: 'Create Practice Class',
+                      label: 'Create practice class',
                       icon: {
                         iconName: 'square-dashed-circle-plus',
                         iconStyle: 'solid' as const,
@@ -155,6 +160,21 @@ export const Header: React.FC<HeaderProps> = ({
                       onClick: () => {
                         setCreateDemoOpen(true);
                       },
+                    },
+                  ]
+                : []),
+              ...((experiments.isEnabled(experiments.ONBOARDING) ||
+                DCDO.get('onboarding-enabled', false)) &&
+              onboardingHidden
+                ? [
+                    {
+                      label: 'Resume onboarding',
+                      icon: {
+                        iconName: 'rocket',
+                        iconStyle: 'solid' as const,
+                      },
+                      value: 'resume-onboarding',
+                      onClick: onResumeOnboarding,
                     },
                   ]
                 : []),

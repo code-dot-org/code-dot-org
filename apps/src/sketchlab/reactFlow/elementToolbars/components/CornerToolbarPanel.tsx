@@ -9,8 +9,10 @@ import {SKETCHLAB_TOOLBAR_PANEL_CLASS} from '@cdo/apps/sketchlab/reactFlow/const
 import {useToolbarVisibility} from '@cdo/apps/sketchlab/reactFlow/context';
 import {useLineToolbar} from '@cdo/apps/sketchlab/reactFlow/hooks/useLineToolbar';
 
+import GroupNodeToolbar from '../GroupNodeToolbar';
 import ImageNodeToolbar from '../ImageNodeToolbar';
 import LineEdgeToolbar from '../LineEdgeToolbar';
+import MultiElementSelectionToolbar from '../MultiElementSelectionToolbar';
 import ShapeNodeToolbar from '../ShapeNodeToolbar';
 import TextNodeToolbar from '../TextNodeToolbar';
 
@@ -24,12 +26,15 @@ interface CornerToolbarPanelProps {
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
   pushSnapshot: () => void;
+  groupableCount: number;
+  onGroupNodes: () => void;
+  onUngroupNode: (groupId: string) => void;
 }
 
 /**
  * Renders the toolbar for the currently open node or edge, pinned to the
- * top-right corner of the canvas. Only one toolbar is visible at once,
- * driven by openToolbarTarget. Renders nothing when no element is open.
+ * top-right corner of the canvas. Only one toolbar is visible at once.
+ * Multi-selection (2+ nodes) takes priority and shows the group toolbar.
  */
 export default function CornerToolbarPanel({
   nodes,
@@ -37,6 +42,9 @@ export default function CornerToolbarPanel({
   setNodes,
   setEdges,
   pushSnapshot,
+  groupableCount,
+  onGroupNodes,
+  onUngroupNode,
 }: CornerToolbarPanelProps) {
   const {openToolbarTarget} = useToolbarVisibility();
   const {
@@ -58,10 +66,23 @@ export default function CornerToolbarPanel({
   });
 
   const body = useMemo(() => {
+    // Multi-selection takes priority: show group button when 2+ logical elements.
+    if (groupableCount >= 2) {
+      return <MultiElementSelectionToolbar onGroup={onGroupNodes} />;
+    }
+
     if (openToolbarTarget?.type === 'node') {
       const node = nodes.find(
         candidate => candidate.id === openToolbarTarget.id
       );
+      if (node?.type === 'group') {
+        return (
+          <GroupNodeToolbar
+            nodeId={node.id}
+            onUngroup={() => onUngroupNode(node.id)}
+          />
+        );
+      }
       if (node?.type === 'shape') {
         return <ShapeNodeToolbar nodeId={node.id} />;
       }
@@ -95,6 +116,9 @@ export default function CornerToolbarPanel({
     }
     return null;
   }, [
+    groupableCount,
+    onGroupNodes,
+    onUngroupNode,
     openToolbarTarget,
     nodes,
     openLineEdge,

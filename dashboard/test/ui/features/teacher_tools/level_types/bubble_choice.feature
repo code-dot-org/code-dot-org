@@ -1,6 +1,5 @@
 Feature: BubbleChoice
   @no_mobile
-  @properties_encryption_key
   Scenario: Viewing BubbleChoice progress
     Given I create a teacher-associated student named "Alice"
     Given I am assigned to course "allthethingscourse" unit 1 with teacher "Teacher_Alice"
@@ -52,7 +51,6 @@ Feature: BubbleChoice
   @no_mobile
   @no_firefox
   @no_safari
-  @properties_encryption_key
   Scenario: Lab2 BubbleChoice progress
     Given I create a teacher-associated student named "Alice"
     Given I am assigned to course "allthethingscourse" unit 1 with teacher "Teacher_Alice"

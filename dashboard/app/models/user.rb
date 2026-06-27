@@ -88,6 +88,61 @@ require 'policies/lti'
 require 'services/user'
 
 class User < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    studio_person_id: :confidential,
+    email: :restricted,
+    parent_email: :restricted,
+    encrypted_password: :highly_restricted,
+    reset_password_token: :highly_restricted,
+    reset_password_sent_at: :restricted,
+    remember_created_at: :restricted,
+    sign_in_count: :confidential,
+    current_sign_in_at: :confidential,
+    last_sign_in_at: :confidential,
+    current_sign_in_ip: :restricted,
+    last_sign_in_ip: :restricted,
+    created_at: :confidential,
+    updated_at: :confidential,
+    username: :restricted,
+    provider: :confidential,
+    uid: :restricted,
+    admin: :confidential,
+    gender: :confidential,
+    name: :restricted,
+    locale: :confidential,
+    birthday: :confidential,
+    user_type: :confidential,
+    school: :restricted,
+    full_address: :restricted,
+    school_info_id: :confidential,
+    total_lines: :confidential,
+    secret_picture_id: :highly_restricted,
+    active: :confidential,
+    hashed_email: :restricted,
+    deleted_at: :confidential,
+    purged_at: :confidential,
+    secret_words: :highly_restricted,
+    properties: :restricted,
+    invitation_token: :highly_restricted,
+    invitation_created_at: :restricted,
+    invitation_sent_at: :restricted,
+    invitation_accepted_at: :restricted,
+    invitation_limit: :restricted,
+    invited_by_id: :confidential,
+    invited_by_type: :confidential,
+    invitations_count: :restricted,
+    terms_of_service_version: :confidential,
+    urm: :confidential,
+    races: :confidential,
+    primary_contact_info_id: :confidential,
+    unlock_token: :highly_restricted,
+    cap_status: :confidential,
+    cap_status_date: :confidential,
+  )
+
   include SerializedProperties
   include SchoolInfoDeduplicator
   include EmailPreferences
@@ -214,6 +269,7 @@ class User < ApplicationRecord
     signup_sources_tracking
     has_dismissed_personalization_alert
     grades_teaching
+    teacher_onboarding_hidden
   )
 
   attr_accessor(

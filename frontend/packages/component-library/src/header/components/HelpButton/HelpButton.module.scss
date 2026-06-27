@@ -1,0 +1,37 @@
+// HelpButton styles. These override MUI's IconButton theme styles; they win
+// because MUI's emotion styles are in `@layer mui` (enableCssLayer) and these
+// module classes are unlayered. @media value is static px (original derives from
+// HEADER_BREAKPOINTS). The Menu items stay in the shared `headerMenu*` sx
+// (MUI-override).
+
+// Help-menu trigger. Authored default-visible + hidden below the desktop-nav
+// breakpoint via a max-width query, so the button is present in jsdom (which
+// ignores @media) where the unit tests drive it.
+.helpTrigger {
+  display: inline-flex;
+  min-width: 0;
+  min-height: 0;
+  // Symmetric padding centers the glyph so the focus ring frames it evenly.
+  padding: 6.5px 5px;
+  color: var(--neutral-base-white);
+  font-size: 22px;
+
+  @media (max-width: 1060px) {
+    display: none;
+  } // < HEADER_BREAKPOINTS.desktopNav
+
+  &:hover,
+  &:active {
+    background-color: transparent;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--text-neutral-white-fixed);
+    outline-offset: 2px;
+  }
+
+  // Match prod's 22px "?" — the FA glyph otherwise renders at 16px.
+  & i {
+    font-size: 22px;
+  }
+}

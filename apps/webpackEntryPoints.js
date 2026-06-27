@@ -131,6 +131,7 @@ const CODE_STUDIO_ENTRIES = {
 
 // prettier-ignore
 const INTERNAL_ENTRIES = {
+  'ai_iteration/image_safety_eval': './src/sites/studio/pages/ai_iteration/image_safety_eval.js',
   'ai_iteration/tools': './src/sites/studio/pages/ai_iteration/tools.js',
   'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
   'blocks/index': './src/sites/studio/pages/blocks/index.js',
@@ -156,7 +157,8 @@ const INTERNAL_ENTRIES = {
   'levels/editors/_craft': './src/sites/studio/pages/levels/editors/_craft.js',
   'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',
   'levels/editors/fields/_aichat_settings': './src/sites/studio/pages/levels/editors/fields/_aichat_settings.js',
-  'levels/editors/fields/_ai_tutor_prompt_settings': './src/sites/studio/pages/levels/editors/fields/_ai_tutor_prompt_settings.js',
+  'levels/editors/fields/_weblab2_ai_tutor_prompt_settings': './src/sites/studio/pages/levels/editors/fields/_weblab2_ai_tutor_prompt_settings.js',
+  'levels/editors/fields/_pythonlab_ai_tutor_prompt_settings': './src/sites/studio/pages/levels/editors/fields/_pythonlab_ai_tutor_prompt_settings.js',
   'levels/editors/fields/_animation': './src/sites/studio/pages/levels/editors/fields/_animation.js',
   'levels/editors/fields/_bubble_choice_sublevel': './src/sites/studio/pages/levels/editors/fields/_bubble_choice_sublevel.js',
   'levels/editors/fields/_blockly': './src/sites/studio/pages/levels/editors/fields/_blockly.js',

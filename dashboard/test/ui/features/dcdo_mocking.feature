@@ -1,3 +1,4 @@
+@playwright
 Feature: DCDO mocking
   Scenario: Using a cookie to mock DCDO
     Given I am on "http://studio.code.org/api/test/get_dcdo"

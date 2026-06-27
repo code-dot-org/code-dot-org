@@ -31,8 +31,8 @@ class Policies::DemoSections
       login_type: 'word',
       participant_type: 'student',
       grades: %w[6 7 8],
-      unit_name: 'csd3-2024',
-      unit_group_name: 'csd-2024',
+      unit_name: 'csd2-2026',
+      unit_group_name: 'csd-2026',
       # Pink fire: COLORS[1] = Pink, EMOJIS[0] = 🔥
       avatar_color: 1,
       avatar_emoji: 0,
@@ -51,8 +51,8 @@ class Policies::DemoSections
       login_type: 'email',
       participant_type: 'student',
       grades: %w[9 10 11 12],
-      unit_name: 'aif2-2025',
-      unit_group_name: 'artificial-intelligence-foundations-2025',
+      unit_name: 'aif2-v2-2025',
+      unit_group_name: 'artificial-intelligence-foundations-2026',
       # Green robot: COLORS[8] = Green, EMOJIS[5] = 🤖
       avatar_color: 8,
       avatar_emoji: 5,
@@ -110,6 +110,26 @@ class Policies::DemoSections
         display_name: unit_group.localized_title,
       },
     }
+  end
+
+  # Only checks fields important for onboarding.
+  def self.section_matches_preset?(section)
+    preset = get_preset(section.demo_type)
+    return false unless preset
+
+    unit = resolve_unit(preset[:unit_name])
+    unit_group = resolve_unit_group(preset[:unit_group_name])
+    return false unless unit && unit_group
+
+    section.script_id == unit.id &&
+      section.course_id == unit_group.id &&
+      section_roster_matches_preset?(section)
+  end
+
+  # True if the demo section's roster exactly matches the preset.
+  def self.section_roster_matches_preset?(section)
+    section.followers.pluck(:student_user_id).to_set ==
+      demo_student_ids(section.demo_type).to_set
   end
 
   def self.preset_views_for_all_types
@@ -194,8 +214,6 @@ class Policies::DemoSections
   end
 
   private_class_method(
-    :resolve_unit,
-    :resolve_unit_group,
     :curriculum_names,
     :adhoc_curriculum_overrides
   )

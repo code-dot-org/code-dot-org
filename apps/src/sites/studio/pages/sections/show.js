@@ -1,63 +1,23 @@
-import clientState from '@cdo/apps/code-studio/clientState.js';
+import React from 'react';
 
-const script = document.querySelector('script[data-section]');
-const sectionData = JSON.parse(script.dataset['section']);
-const {loginType, loginTypeWord, loginTypePicture, pairingAllowed} =
-  sectionData;
+import SectionSignIn from '@cdo/apps/templates/sections/SectionSignIn';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
-$(function () {
-  // Select name.
-  $('ul.students li').click(function () {
-    $('ul.students li').removeClass('selected');
-    $(this).addClass('selected');
-    $('input#user_id').val($(this).attr('id'));
+function mount() {
+  const script = document.querySelector('script[data-section]');
+  const data = JSON.parse(script.dataset.section);
 
-    if (loginType === loginTypeWord) {
-      // Clear the password.
-      $('#secret_words').val('');
-    } else if (loginType === loginTypePicture) {
-      // Deselect picture.
-      $('ul.pictures li').removeClass('selected');
-    }
+  createReactRoot(
+    <SectionSignIn {...data} />,
+    document.getElementById('section-sign-in'),
+    {legacyReactDomRender: true}
+  );
+}
 
-    // Disable the login button.
-    $('#login_button').prop('disabled', true);
-
-    // Hide the pairing checkbox
-    $('#pairing_checkbox').hide();
-
-    // Reveal the secret section...
-    $('#secret').hide().slideDown();
-
-    // ...and simultaneously fade in the login button.
-    $('#login_button').fadeIn();
-  });
-
-  // Select secret picture.
-  $('ul.pictures li').click(function () {
-    $('ul.pictures li').removeClass('selected');
-    $(this).addClass('selected');
-    $('input#secret_picture_id').val($(this).attr('id'));
-
-    // Show the pairing checkbox
-    if (pairingAllowed) {
-      $('#pairing_checkbox').show();
-    }
-
-    // Enable the login button.
-    $('#login_button').prop('disabled', false);
-  });
-
-  // Type something in password box.
-  $('#secret_words').keyup(function () {
-    // Show the pairing checkbox
-    if (pairingAllowed) {
-      $('#pairing_checkbox').show();
-    }
-
-    // Enable the login button.
-    $('#login_button').prop('disabled', false);
-  });
-
-  $('.section-user-sign-in').on('submit', clientState.reset);
-});
+// The entry script tag precedes the mount-point div in the view, so wait for
+// the document to finish parsing before looking it up.
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', mount);
+} else {
+  mount();
+}

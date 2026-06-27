@@ -27,6 +27,28 @@
 #  index_student_work_evaluations_on_type        (type)
 #
 class StudentWorkEvaluation < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :restricted,
+    type: :restricted,
+    student_id: :restricted,
+    requester_id: :restricted,
+    level_id: :restricted,
+    unit_id: :restricted,
+    skill_id: :restricted,
+    section_id: :restricted,
+    school_year: :restricted,
+    evaluator: :restricted,
+    evaluation_criteria: :restricted,
+    reasoning: :restricted,
+    evaluation: :restricted,
+    ai_model_version: :restricted,
+    code_version: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
+  )
+
   self.inheritance_column = :type
 
   has_many :ai_interaction_feedbacks, as: :ai_interaction

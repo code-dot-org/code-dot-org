@@ -172,6 +172,16 @@ class Javalab < Level
     save!
   end
 
+  # Lab2 carries each asset's url directly in start_sources, the single
+  # source of truth. The frozen legacy starter_assets mapping is consulted
+  # only to re-seed sources with no url entries, which lets assets a
+  # levelbuilder deleted re-appear. Drop the mapping when start code is
+  # saved so it can no longer re-seed. No-op (and harmless) on non-lab2
+  # levels, which still rely on starter_assets.
+  def clear_lab2_starter_assets
+    self.starter_assets = nil if uses_lab2?
+  end
+
   def age_13_required?
     true
   end

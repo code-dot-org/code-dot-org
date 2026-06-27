@@ -80,26 +80,16 @@ namespace :seed do
   SCRIPTS_GLOB = Dir.glob("#{CURRICULUM_CONTENT_DIR}/config/scripts_json/**/*.script_json").sort.flatten.freeze
   SPECIAL_UI_TEST_SCRIPTS = Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/scripts_json/*.script_json").sort.freeze
   UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + %w(
-    20-hour
-    algebra
     allthehiddenthings
     allthelessonplans
     alltheplcthings
     alltheselfpacedplthings
     allthethings
     allthettsthings
-    artist
-    customizing-llms-2024
-    dance
-    events
-    flappy
     frozen
     hero
     hourofcode
     mc
-    playlab
-    starwars
-    step
     oceans
     mix-move-ai-2025
   ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
@@ -148,7 +138,6 @@ namespace :seed do
     csa-postap-se-and-computer-vision-2024
   ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
   ADHOC_SCRIPTS = MOST_RECENT_ADHOC_SCRIPTS + %w(
-    algebra
     allthehiddenthings
     allthelessonplans
     alltheplcthings
@@ -156,7 +145,6 @@ namespace :seed do
     allthethings
     allthettsthings
     artist
-    20-hour
     dance
     events
     flappy
@@ -264,16 +252,9 @@ namespace :seed do
   timed_task_with_logging courses_ui_tests: :environment do
     # seed those courses that are needed for UI tests
     %w(allthethingscourse
-       20-hour
-       algebra
        allthelessonplans
        alltheselfpacedplthings
        allthettsthings
-       artist
-       customizing-llms-2024
-       dance
-       events
-       flappy
        frozen
        hero
        hourofcode
@@ -281,9 +262,6 @@ namespace :seed do
        original-allthelessonplans-course
        original-allthethings-course
        original-alltheselfpacedplthings-course
-       playlab
-       starwars
-       step
        oceans
        mix-move-ai-2025).each do |course_name|
       UnitGroup.load_from_path("#{CURRICULUM_CONTENT_DIR}/config/courses/#{course_name}.course")

@@ -93,17 +93,11 @@ export async function handleRunClick(
     return;
   }
 
-  if (csaViewMode === 'theater') {
-    // Theater is not yet supported.
-    writeToConsole(
-      `[JAVALAB] csaViewMode='${csaViewMode}' is not yet supported in Java Lab 2; running as console.`
-    );
-    writeNewline();
-  }
-
   const miniApp =
     csaViewMode === 'neighborhood'
       ? CodebridgeRegistry.getInstance().getNeighborhood()
+      : csaViewMode === 'theater'
+      ? CodebridgeRegistry.getInstance().getTheater()
       : null;
 
   // Only claim a mini-app mode when the instance is actually present;
@@ -160,7 +154,7 @@ export async function handleRunClick(
       resolve();
     };
 
-    // TODO: Theater, Captcha handling.
+    // TODO: Captcha handling.
     activeConnection = new JavabuilderConnection(
       writeToConsole,
       miniApp,
@@ -191,13 +185,8 @@ export async function handleRunClick(
       activeConnection.connectJavabuilder();
     }
 
-    // Console runs resolve this promise via finishRun when the program exits.
-    // Neighborhood runs don't: the connection delegates clean exit to
-    // miniApp.onClose() (never calling finishRun), run/stop state is
-    // derived from lab2System.isRunning. Nothing awaits true completion here,
-    // so resolve now rather than leaving the promise pending forever.
-    // Validation runs are the exception: their output goes to the console,
-    // not the mini-app, so we let finishRun fire on exit as usual.
+    // Non-test run mini apps don't call finishRun() when the program completes,
+    // so we resolve now rather than leaving the promise pending.
     if (miniApp && !runTests) {
       finishRun();
     }
@@ -208,9 +197,10 @@ export function stopJavaCode(): void {
   // Invalidate any run that has no connection yet (still saving or fetching
   // the token); handleRunClick rechecks its captured id before connecting.
   mostRecentRunId++;
-  // If the neighborhood exists, stop it. This prevents extra animation
-  // from occurring after stop.
+  // Stop the active mini-app so its output doesn't keep playing after stop:
+  // the neighborhood's animation, the theater's image/audio.
   CodebridgeRegistry.getInstance().getNeighborhood()?.onStop();
+  CodebridgeRegistry.getInstance().getTheater()?.onStop();
   if (activeConnection) {
     activeConnection.closeConnection();
     activeConnection = null;
@@ -218,8 +208,14 @@ export function stopJavaCode(): void {
 }
 
 export function sendJavaConsoleInput(input: string): void {
+  sendTypedInputMessage(InputMessageType.SYSTEM_IN, input);
+}
+
+// Relay an input message of a given type back to Javabuilder.
+export function sendTypedInputMessage(
+  messageType: string,
+  message: string
+): void {
   if (!activeConnection) return;
-  activeConnection.sendMessage(
-    JSON.stringify({messageType: InputMessageType.SYSTEM_IN, message: input})
-  );
+  activeConnection.sendMessage(JSON.stringify({messageType, message}));
 }

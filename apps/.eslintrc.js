@@ -53,7 +53,6 @@ module.exports = {
     $: 'readonly',
     ace: 'readonly',
     addToHome: 'readonly',
-    adjustScroll: 'readonly',
     Applab: 'readonly',
     appOptions: 'readonly',
     Blockly: 'readonly',

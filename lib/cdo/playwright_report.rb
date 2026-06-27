@@ -22,9 +22,7 @@ module Cdo
     def self.upload(report_dir)
       return nil unless File.directory?(report_dir)
 
-      # Absolute ::AWS — inside module Cdo, a bare AWS resolves to Cdo::AWS
-      # (defined by cdo/aws/* siblings) and would miss the top-level uploader.
-      uploader = ::AWS::S3::LogUploader.new(BUCKET, "#{prefix}/playwright", make_public: true)
+      uploader = AWS::S3::LogUploader.new(BUCKET, "#{prefix}/playwright", make_public: true)
       index_url = nil
       Dir.glob(File.join(report_dir, '**', '*')).each do |path|
         next unless File.file?(path)
@@ -42,6 +40,14 @@ module Cdo
       index_url
     rescue StandardError => exception
       CDO.log.error "Failed to upload Playwright report: #{exception.message}"
+      nil
+    end
+
+    # Computed without uploading, so the report can be linked before the run finishes.
+    def self.index_url
+      AWS::S3.public_url(BUCKET, "#{prefix}/playwright/index.html")
+    rescue StandardError => exception
+      CDO.log.error "Failed to compute Playwright report URL: #{exception.message}"
       nil
     end
 

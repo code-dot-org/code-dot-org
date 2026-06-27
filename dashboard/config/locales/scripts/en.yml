@@ -15374,15 +15374,15 @@ en:
           description: |-
             ## Welcome!
 
-            #### This **internal guide** is written and maintained by the Code.org Professional Learning team. It was created to unify the look and feel of our professional learning offerings and ensure we publish accessible content.
+            This **internal guide** is written and maintained by the Code.org Professional Learning team. It was created to unify the look and feel of our professional learning offerings and ensure we publish accessible content.
 
-            #### This guide houses norms, best practices, and examples for creating self-paced, asynchronous learning experiences. Please do not revise this script without permission from the team, but feel free to look at the code for individual levels for inspiration and guidance.
+            This guide houses norms, best practices, and examples for creating self-paced, asynchronous learning experiences. Please do not revise this script without permission from the team, but feel free to look at the code for individual levels for inspiration and guidance.
           student_description: |-
             ## Welcome!
 
-            #### This **internal** guide is written and maintained by the Code.org Professional Learning team. It was created to unify the look and feel of our professional learning offerings and ensure we publish accessible content.
+            This **internal guide** is written and maintained by the Code.org Professional Learning team. It was created to unify the look and feel of our professional learning offerings and ensure we publish accessible content.
 
-            #### This guide houses norms, best practices, and examples for creating a self-paced, asynchronous learning experience. **Please do not revise this script without permission from the team**, but please feel free to look at the code for individual levels for inspiration and guidance.
+            This guide houses norms, best practices, and examples for creating self-paced, asynchronous learning experiences. Please do not revise this script without permission from the team, but feel free to look at the code for individual levels for inspiration and guidance.
         self-paced-pl-microbit-2024-1:
           lessons:
             lesson-1:
@@ -27725,6 +27725,8 @@ en:
             &nbsp;
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: problem-solving-with-ai-2026
         ai-and-the-systems-that-power-it-2026:
           lesson_groups:
             lessonGroup-2:
@@ -27778,6 +27780,8 @@ en:
             &nbsp;
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: ai-and-the-systems-that-power-it-2026
         the-fabric-of-the-internet-and-ai-2026:
           lesson_groups:
             lessonGroup-2:
@@ -27829,6 +27833,8 @@ en:
             &nbsp;
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: the-fabric-of-the-internet-and-ai-2026
         ai-powered-threats-and-defenses-2026:
           lesson_groups:
             lessonGroup-2:
@@ -27869,6 +27875,8 @@ en:
             :::
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: ai-powered-threats-and-defenses-2026
         insights-from-data-and-ai-2026:
           lesson_groups:
             lessonGroup-2:
@@ -27884,6 +27892,8 @@ en:
           student_description: "This unit introduces you to the foundational concepts of data science, including developing effective data questions, collecting data, and using spreadsheets to analyze and visualize data. You will work on creating various visualizations such as bar charts, scatter plots, and dot plots to communicate data insights. Additionally, you will explore the ethical implications of data collection and analysis. The unit culminates in a project where you will tell a compelling data story, using data visualizations to present your findings to your peers.\n\n<div style=\"overflow: hidden;\">\n      <img src=\"https://images.code.org/7fe1b2e1fc05e1c6961f9b7e5d8e952e-NSF_Official_logo_small.png\" style=\"float: left; margin-right:15px\">\n      <div><i>This unit includes material developed with the support of the National Science Foundation under Grant No. 2122485. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</i></div>\n</div>\n\n&nbsp;\n\n::: details [<i class=\"fa-solid fa-badge-check\"></i> **By the end of this unit, you will be able to . . .**]\n- Understand the foundations of data science and its interdisciplinary nature. \n- Create and refine data questions to guide investigations. \n- Analyze data using CODAP and apply various analysis techniques. \n- Develop visualizations to help answer data questions. \n- Use analysis results to tell a compelling data story. \n- Consider ethical concerns when creating data questions, analyzing data, and telling a data story. \n:::\n\n&nbsp;"
           description_short: Students are introduced to foundational data science concepts, data collection strategies, and effective ways to communicate insights through data stories.
           description_audience: ''
+          lessons: {}
+          name: insights-from-data-and-ai-2026
         building-data-driven-systems-with-ai-2026:
           lesson_groups:
             lessonGroup-3:
@@ -29399,6 +29409,15 @@ en:
           lesson_groups: {}
           name: international-pedagogy-u1
           title: CodeAI Pedagogy - International Course
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        iste-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: iste-2026
+          title: Inside a CodeAI Classroom
           description_audience: ''
           description_short: ''
           description: ''

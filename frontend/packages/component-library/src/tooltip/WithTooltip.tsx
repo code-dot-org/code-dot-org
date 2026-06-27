@@ -103,6 +103,17 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
       },
     }));
 
+    // Cancel a pending hide timer on unmount: otherwise it fires afterwards and
+    // setStates a gone component, which throws once `window` is torn down (jsdom).
+    useEffect(
+      () => () => {
+        if (hideTimeoutRef.current) {
+          clearTimeout(hideTimeoutRef.current);
+        }
+      },
+      [],
+    );
+
     const tailLength = tailLengths[tooltipProps.size || 'm'];
 
     const updateTooltipStyles = useCallback(

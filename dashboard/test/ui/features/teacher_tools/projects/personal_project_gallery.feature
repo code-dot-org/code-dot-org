@@ -20,7 +20,8 @@ Scenario: Can Rename a Project
   And the first project in the table is named "Old Name"
   Then I scroll the ".ui-projects-table-dropdown" element into view
   Then I click selector ".ui-projects-table-dropdown"
-  And I press the child number 0 of class ".pop-up-menu-item"
+  And I wait until element "button:contains('Rename')" is visible
+  And I click selector "button:contains('Rename')"
   And I wait until element "#ui-project-rename-input" is visible
   And I clear the text from element "#ui-project-rename-input"
   And I press keys "New Name" for element "#ui-project-rename-input"
@@ -38,7 +39,8 @@ Scenario: Can Remix a Project
   And the first project in the table is named "Remix Template"
   Then I scroll the ".ui-projects-table-dropdown" element into view
   Then I click selector ".ui-projects-table-dropdown"
-  And I press the child number 1 of class ".pop-up-menu-item"
+  And I wait until element "button:contains('Remix')" is visible
+  And I click selector "button:contains('Remix')"
   And I wait until current URL contains "/edit"
 
 Scenario: Can Delete a Project
@@ -50,7 +52,8 @@ Scenario: Can Delete a Project
   And the first project in the table is named "To Be Deleted"
   Then I scroll the ".ui-projects-table-dropdown" element into view
   Then I click selector ".ui-projects-table-dropdown"
-  And I press the child number 2 of class ".pop-up-menu-item"
+  And I wait until element "button:contains('Delete')" is visible
+  And I click selector "button:contains('Delete')"
   And I wait until element ".ui-confirm-project-delete-button" is visible
   Then I click selector ".ui-confirm-project-delete-button"
   And I wait until element ".ui-confirm-project-delete-button" is not visible

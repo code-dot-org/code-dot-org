@@ -424,9 +424,9 @@ describe('AiDiffWorkspace', () => {
     expect(user_messages[1]).toHaveTextContent('hello help again');
 
     //click button for a new chat
-    const new_thread_btn = screen.getByRole('button', {
+    const new_thread_btn = screen.getAllByRole('button', {
       name: i18n.aiDifferentiation_new_chat(),
-    });
+    })[0];
     fireEvent.click(new_thread_btn);
 
     //initial messages for a new thread
@@ -564,9 +564,9 @@ describe('AiDiffWorkspace', () => {
     ).toHaveTextContent("Beep boop I'm a bot");
 
     //click button for a new chat
-    const new_thread_btn = screen.getByRole('button', {
+    const new_thread_btn = screen.getAllByRole('button', {
       name: i18n.aiDifferentiation_new_chat(),
-    });
+    })[0];
     fireEvent.click(new_thread_btn);
 
     //initial messages for a new thread

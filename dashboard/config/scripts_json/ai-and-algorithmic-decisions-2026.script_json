@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-13 04:28:54 UTC",
+    "serialized_at": "2026-06-23 17:37:19 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -194,7 +194,6 @@
       "relative_position": 6,
       "properties": {
         "overview": "**How can I make functions more flexible by passing information into them?**\n\nParameters come alive through the \"Guess the Pizza\" kinesthetic activity — one function, many pizzas. The spec.md plan-first pattern repeats, this time with parameter planning explicit in the spec. The lesson treats parameters as the way one function adapts to many use cases, planting the seed that parameterization is how features serve different users at scale.",
-        "preparation": "- (Optional) Print copies of the Functions with Parameters activity guide if your students will not use Sketch Lab",
         "student_overview": "**How can I make functions more flexible by passing information into them?**\n\nA pizza app needs to take orders for any pizza — not just one. That's where parameters come in: they let a function take in information and adapt. You'll play \"Guess the Pizza\" with a partner, then learn to write functions that take parameters and use a plan in `spec.md` to tell AI what your function should take in and what it should return."
       },
       "seeding_key": {
@@ -229,7 +228,6 @@
       "relative_position": 8,
       "properties": {
         "overview": "**How can my app handle multiple layers of decisions?**\n\nNested conditionals get their first formal treatment, paired with a test-all-4-outcomes discipline (TT / TF / FT / FF) anchored in the Movie Spoiler Checker. The lesson explicitly connects branching code to how AI systems classify — and the discussion goal flags moments where students notice an AI implementation has oversimplified or encoded bias. This is the unit's most direct bridge between code logic and algorithmic decision-making.",
-        "preparation": "- Print copies of the Nested Conditionals activity guide (one for each student)",
         "student_overview": "**How can my app handle multiple layers of decisions?**\n\nSometimes one yes/no question isn't enough — your app needs to check one thing, then another. That's a nested conditional, and it's how apps decide whether to show a spoiler alert, age-gate a video, or send you a recommendation. You plan a nested decision with a flowchart, test every possible outcome (there are always four), and think about what AI assumes when it writes branching code for you."
       },
       "seeding_key": {
@@ -5237,6 +5235,20 @@
   "resources": [
     {
       "name": "[KEY] AI and Algorithmic Decisions Unit Guide",
+      "url": "https://docs.google.com/document/d/19KlUZxnJMMugJshdYEcyiAtOnyccfqbbkE72b4Tau1A/edit?usp=drive_link",
+      "key": "_key_ai_and_algorithmic_decisions_unit_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_algorithmic_decisions_unit_guide"
+      }
+    },
+    {
+      "name": "[KEY] AI and Algorithmic Decisions Unit Guide",
       "url": "https://docs.google.com/document/d/19KlUZxnJMMugJshdYEcyiAtOnyccfqbbkE72b4Tau1A/edit?usp=sharing",
       "key": "_key_ai_and_algorithmic_decisions_unit_guide_-_activity_guide",
       "properties": {
@@ -5247,6 +5259,145 @@
       },
       "seeding_key": {
         "resource.key": "_key_ai_and_algorithmic_decisions_unit_guide_-_activity_guide"
+      }
+    },
+    {
+      "name": "[KEY] AI and Algorithmic Decisions Unit Guide",
+      "url": "https://docs.google.com/document/d/19KlUZxnJMMugJshdYEcyiAtOnyccfqbbkE72b4Tau1A/edit?usp=drive_link",
+      "key": "_key_ai_and_algorithmic_decisions_unit_guide_-_activity_guide_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_algorithmic_decisions_unit_guide_-_activity_guide_1"
+      }
+    },
+    {
+      "name": "[KEY] AI and Algorithmic Decisions Unit Guide",
+      "url": "https://docs.google.com/document/d/19KlUZxnJMMugJshdYEcyiAtOnyccfqbbkE72b4Tau1A/edit?usp=drive_link",
+      "key": "_key_ai_and_algorithmic_decisions_unit_guide_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_algorithmic_decisions_unit_guide_1"
+      }
+    },
+    {
+      "name": "[KEY] AI and Algorithmic Decisions Unit Guide",
+      "url": "https://docs.google.com/document/d/19KlUZxnJMMugJshdYEcyiAtOnyccfqbbkE72b4Tau1A/edit?usp=drive_link",
+      "key": "_key_ai_and_algorithmic_decisions_unit_guide_2",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_algorithmic_decisions_unit_guide_2"
+      }
+    },
+    {
+      "name": "[KEY] AI and Algorithmic Decisions Unit Guide",
+      "url": "https://docs.google.com/document/d/19KlUZxnJMMugJshdYEcyiAtOnyccfqbbkE72b4Tau1A/edit?usp=drive_link",
+      "key": "_key_ai_and_algorithmic_decisions_unit_guide_3",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_algorithmic_decisions_unit_guide_3"
+      }
+    },
+    {
+      "name": "[KEY] AI and Algorithmic Decisions Unit Guide",
+      "url": "https://docs.google.com/document/d/19KlUZxnJMMugJshdYEcyiAtOnyccfqbbkE72b4Tau1A/edit?usp=drive_link",
+      "key": "_key_ai_and_algorithmic_decisions_unit_guide_4",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_algorithmic_decisions_unit_guide_4"
+      }
+    },
+    {
+      "name": "[KEY] AI and Algorithmic Decisions Unit Guide",
+      "url": "https://docs.google.com/document/d/19KlUZxnJMMugJshdYEcyiAtOnyccfqbbkE72b4Tau1A/edit?usp=drive_link",
+      "key": "_key_ai_and_algorithmic_decisions_unit_guide_5",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_algorithmic_decisions_unit_guide_5"
+      }
+    },
+    {
+      "name": "[KEY] AI and Algorithmic Decisions Unit Guide",
+      "url": "https://docs.google.com/document/d/19KlUZxnJMMugJshdYEcyiAtOnyccfqbbkE72b4Tau1A/edit?usp=drive_link",
+      "key": "_key_ai_and_algorithmic_decisions_unit_guide_6",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_algorithmic_decisions_unit_guide_6"
+      }
+    },
+    {
+      "name": "[KEY] AI and Algorithmic Decisions Unit Guide",
+      "url": "https://docs.google.com/document/d/19KlUZxnJMMugJshdYEcyiAtOnyccfqbbkE72b4Tau1A/edit?usp=drive_link",
+      "key": "_key_ai_and_algorithmic_decisions_unit_guide_7",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_algorithmic_decisions_unit_guide_7"
+      }
+    },
+    {
+      "name": "[KEY] AI and Algorithmic Decisions Unit Guide",
+      "url": "https://docs.google.com/document/d/19KlUZxnJMMugJshdYEcyiAtOnyccfqbbkE72b4Tau1A/edit?usp=drive_link",
+      "key": "_key_ai_and_algorithmic_decisions_unit_guide_8",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_and_algorithmic_decisions_unit_guide_8"
+      }
+    },
+    {
+      "name": "[KEY] Combining Conditions with AND/OR",
+      "url": "https://docs.google.com/document/d/1bBZN3rFxEQ_lylUGOrlGsgKhbGesuVOjbvn93Hokx0I/edit?usp=drive_link",
+      "key": "_key_combining_conditions_with_and_or",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_key_combining_conditions_with_and_or"
       }
     },
     {
@@ -5261,6 +5412,34 @@
       },
       "seeding_key": {
         "resource.key": "_key_create_a_flowchart"
+      }
+    },
+    {
+      "name": "[KEY] Interactivity in Web Apps ",
+      "url": "https://docs.google.com/document/d/16LUaqAate71lc7AMzArsvMIjs8_ZZjRSjeAh00GsDDs/edit?usp=drive_link",
+      "key": "_key_interactivity_in_web_apps",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_key_interactivity_in_web_apps"
+      }
+    },
+    {
+      "name": "Adding NOT and Complex Conditions",
+      "url": "https://docs.google.com/presentation/d/1rr1DDRbO55EJe0FA6C-e8qZMMjZl-kFj1Us7MIlyZ9Q/edit?usp=drive_link",
+      "key": "adding_not_and_complex_conditions",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "adding_not_and_complex_conditions"
       }
     },
     {
@@ -5279,25 +5458,81 @@
       }
     },
     {
-      "name": "All Resources",
-      "url": "/courses/artificial-intelligence-foundations-semester2-2026/units/2/resources",
-      "key": "all_resources_1",
+      "name": "AI and Algorithmic Decisions Unit Guide",
+      "url": "https://docs.google.com/document/d/1LHWHa9kEeeUXwnbgA-tQLnPLoniN35z84Y2GtJuavtU/edit?usp=drive_link",
+      "key": "ai_and_algorithmic_decisions_unit_guide_1",
       "properties": {
-        "is_rollup": true
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "all_resources_1"
+        "resource.key": "ai_and_algorithmic_decisions_unit_guide_1"
       }
     },
     {
-      "name": "All Vocabulary",
-      "url": "/courses/artificial-intelligence-foundations-semester2-2026/units/2/vocab",
-      "key": "all_vocabulary_1",
+      "name": "All Resources",
+      "url": "/courses/ai-foundations-designing-and-building-with-ai-2026/units/2/resources",
+      "key": "all_resources_2",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_vocabulary_1"
+        "resource.key": "all_resources_2"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/ai-foundations-designing-and-building-with-ai-2026/units/2/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "Building More Dynamic Pages",
+      "url": "https://docs.google.com/presentation/d/1dWhBYvK2whW2FU7EeFCRS_B_pmos1cIRJPV2ENczibk/edit?usp=drive_link",
+      "key": "building_more_dynamic_pages",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "building_more_dynamic_pages"
+      }
+    },
+    {
+      "name": "Combining Conditions with AND/OR",
+      "url": "https://docs.google.com/presentation/d/1yBsiXl9PS0uBunl06dE3uR8POQYFztlRlPY4ajlEn54/edit?usp=drive_link",
+      "key": "combining_conditions_with_and_or",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "combining_conditions_with_and_or"
+      }
+    },
+    {
+      "name": "Combining Conditions with AND/OR",
+      "url": "https://docs.google.com/document/d/1dteOFH87IUJcqI7yIELgu7OkU9QNxVUCwlxKMxf9k_c/edit?usp=drive_link",
+      "key": "combining_conditions_with_and_or_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "combining_conditions_with_and_or_1"
       }
     },
     {
@@ -5315,6 +5550,62 @@
       }
     },
     {
+      "name": "Functions with Parameters",
+      "url": "https://docs.google.com/presentation/d/1BOM8b4N3BVBMUA4vgFzvA6QCoHAl57GeeKDjQ0LFNdU/edit?usp=drive_link",
+      "key": "functions_with_parameters",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "functions_with_parameters"
+      }
+    },
+    {
+      "name": "Interactivity In Web Apps",
+      "url": "https://docs.google.com/presentation/d/1vDM5wouUgzL4K_CXxiCk5djNvQit9OLOxlmYqQfKxUE/edit?usp=drive_link",
+      "key": "interactivity_in_web_apps",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "interactivity_in_web_apps"
+      }
+    },
+    {
+      "name": "Interactivity in Web Apps",
+      "url": "https://docs.google.com/document/d/1AtRRufIl4mUbldpHK-seyaVGiGvaUAX3IZwcpw7Ymgo/edit?usp=drive_link",
+      "key": "interactivity_in_web_apps_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "interactivity_in_web_apps_1"
+      }
+    },
+    {
+      "name": "Making a Button Respond",
+      "url": "https://docs.google.com/presentation/d/15sOFlbQCvpY9Ss-t0GWe_bABaJ1sBhU1cMd01tMkkhk/edit?usp=drive_link",
+      "key": "making_a_button_respond",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "making_a_button_respond"
+      }
+    },
+    {
       "name": "Making Decisions with If/Else",
       "url": "https://docs.google.com/presentation/d/1dCZzt_m1ZGNSzdUlRF4jfxlH36tn7v97eJdR1FB7dgw/edit?usp=sharing",
       "key": "making_decisions_with_if_else",
@@ -5327,6 +5618,34 @@
       },
       "seeding_key": {
         "resource.key": "making_decisions_with_if_else"
+      }
+    },
+    {
+      "name": "Nested Conditionals for Complex Logic",
+      "url": "https://docs.google.com/presentation/d/1TpzkVw-VHMQtqkfW-jW2C9jMHyFlgb6V2nGJHlp73HY/edit?usp=drive_link",
+      "key": "nested_conditionals_for_complex_logic",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "nested_conditionals_for_complex_logic"
+      }
+    },
+    {
+      "name": "Peer Feedback with TAG",
+      "url": "https://docs.google.com/document/d/16iglxfSWoMLxNKZn-TckTSdC6sDSJDgDCDl4M5bJLoc/edit?usp=drive_link",
+      "key": "peer_feedback_with_tag",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "peer_feedback_with_tag"
       }
     },
     {
@@ -5348,7 +5667,7 @@
       "url": "https://docs.google.com/document/d/1X021QnqLwRY6l76aiCUluE56ARKPdgLPC2K3SXcCD90/edit?usp=drive_link",
       "key": "rubric_-_reactive_logic_project",
       "properties": {
-        "audience": "Verified Teacher",
+        "audience": "Student",
         "curriculum_category": "curriculum",
         "embeddability_type": "embed_and_resource_dropdown",
         "type": "Rubric"
@@ -5356,13 +5675,71 @@
       "seeding_key": {
         "resource.key": "rubric_-_reactive_logic_project"
       }
+    },
+    {
+      "name": "Variables and Live Updates",
+      "url": "https://docs.google.com/presentation/d/1JeElDI0BcujuG2vzEuTiJIkcWyj6z-K6rQuxjuWCFcg/edit?usp=drive_link",
+      "key": "variables_and_live_updates",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "variables_and_live_updates"
+      }
+    },
+    {
+      "name": "Writing Reusable Functions",
+      "url": "https://docs.google.com/presentation/d/1Tinbznitfuw4q9sV-XvR2WfWFvNl8OPsMOai9N5sS5E/edit?usp=drive_link",
+      "key": "writing_reusable_functions",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "writing_reusable_functions"
+      }
     }
   ],
   "lessons_resources": [
     {
       "seeding_key": {
         "lesson.key": "Lesson 10: Adding NOT and Complex Conditions",
+        "resource.key": "_key_ai_and_algorithmic_decisions_unit_guide_7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Adding NOT and Complex Conditions",
+        "resource.key": "adding_not_and_complex_conditions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Adding NOT and Complex Conditions",
         "resource.key": "ai_and_algorithmic_decisions_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "resource.key": "_key_ai_and_algorithmic_decisions_unit_guide_8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "resource.key": "ai_and_algorithmic_decisions_unit_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "resource.key": "peer_feedback_with_tag"
       }
     },
     {
@@ -5380,7 +5757,37 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 1: Interactivity in Web Apps",
+        "resource.key": "_key_ai_and_algorithmic_decisions_unit_guide_-_activity_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Interactivity in Web Apps",
+        "resource.key": "_key_interactivity_in_web_apps"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Interactivity in Web Apps",
         "resource.key": "ai_and_algorithmic_decisions_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Interactivity in Web Apps",
+        "resource.key": "interactivity_in_web_apps"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Interactivity in Web Apps",
+        "resource.key": "interactivity_in_web_apps_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "resource.key": "_key_ai_and_algorithmic_decisions_unit_guide"
       }
     },
     {
@@ -5391,14 +5798,44 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "resource.key": "making_a_button_respond"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "resource.key": "_key_ai_and_algorithmic_decisions_unit_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 3: Variables and Live Updates",
         "resource.key": "ai_and_algorithmic_decisions_unit_guide"
       }
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "resource.key": "variables_and_live_updates"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "resource.key": "_key_ai_and_algorithmic_decisions_unit_guide_2"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 4: Writing Reusable Functions",
         "resource.key": "ai_and_algorithmic_decisions_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "resource.key": "writing_reusable_functions"
       }
     },
     {
@@ -5434,13 +5871,25 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 6: Functions with Parameters",
+        "resource.key": "_key_ai_and_algorithmic_decisions_unit_guide_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Functions with Parameters",
         "resource.key": "ai_and_algorithmic_decisions_unit_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 6: Functions with Parameters",
-        "resource.key": "create_a_flowchart"
+        "resource.key": "functions_with_parameters"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Building More Dynamic Pages",
+        "resource.key": "_key_ai_and_algorithmic_decisions_unit_guide_4"
       }
     },
     {
@@ -5451,8 +5900,38 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 7: Building More Dynamic Pages",
+        "resource.key": "building_more_dynamic_pages"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Nested Conditionals for Complex Logic",
+        "resource.key": "_key_ai_and_algorithmic_decisions_unit_guide_5"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 8: Nested Conditionals for Complex Logic",
         "resource.key": "ai_and_algorithmic_decisions_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Nested Conditionals for Complex Logic",
+        "resource.key": "nested_conditionals_for_complex_logic"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Combining Conditions with AND/OR",
+        "resource.key": "_key_ai_and_algorithmic_decisions_unit_guide_6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Combining Conditions with AND/OR",
+        "resource.key": "_key_combining_conditions_with_and_or"
       }
     },
     {
@@ -5460,18 +5939,30 @@
         "lesson.key": "Lesson 9: Combining Conditions with AND/OR",
         "resource.key": "ai_and_algorithmic_decisions_unit_guide"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Combining Conditions with AND/OR",
+        "resource.key": "combining_conditions_with_and_or"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Combining Conditions with AND/OR",
+        "resource.key": "combining_conditions_with_and_or_1"
+      }
     }
   ],
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources_1",
+        "resource.key": "all_resources_2",
         "script.name": "ai-and-algorithmic-decisions-2026"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_vocabulary_1",
+        "resource.key": "all_standards",
         "script.name": "ai-and-algorithmic-decisions-2026"
       }
     }

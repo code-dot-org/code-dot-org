@@ -594,7 +594,7 @@ class ApiController < ApplicationController
 
     # length of time these cookies are considered valid by cloudfront
     expiration_date = Time.now + 4.hours
-    resource = CDO.studio_url('/restricted/*')
+    resource = CDO.studio_url('/restricted/*', ge_region: nil)
 
     cloudfront_cookies = AWS::CloudFront.signed_cookies(resource, expiration_date)
 
@@ -704,22 +704,14 @@ class ApiController < ApplicationController
         source: level_source
       }
 
-      # Pairing info
-      is_navigator = user_level.navigator?
-      if is_navigator
-        driver = user_level.driver
-        driver_level_source_id = user_level.driver_level_source_id
-      end
-
-      response[:isNavigator] = is_navigator
-      if driver
-        response[:pairingDriver] = driver.name
-        if driver_level_source_id
-          response[:pairingAttempt] = edit_level_source_path(driver_level_source_id)
-        elsif level.channel_backed?
-          response[:pairingChannelId] = get_channel_for(level, script.id, driver)
-        end
-      end
+      response.merge!(
+        level.pairing_properties_for(
+          user,
+          script,
+          camelize_keys: true,
+          user_level: user_level
+        )
+      )
     end
 
     response

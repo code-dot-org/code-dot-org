@@ -437,7 +437,7 @@ class UsersHelperTest < ActionView::TestCase
         }
       },
       {
-        user_1.id => sublevel1_last_progress,
+        user_1.id => sublevel2_last_progress,
         user_2.id => sublevel2_last_progress_2,
         user_3.id => nil
       }
