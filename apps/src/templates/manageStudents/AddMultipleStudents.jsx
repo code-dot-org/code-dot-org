@@ -205,6 +205,7 @@ class AddMultipleStudents extends Component {
             ref={this.textareaRef}
             className={textareaClassName}
             disabled={!!this.state.selectedFile}
+            placeholder="Ada,Lovelace,18,female,CA"
           />
         </div>
         <div className={moduleStyles.dividerSection} aria-hidden="true">
