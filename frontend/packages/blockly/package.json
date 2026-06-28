@@ -165,9 +165,11 @@
   },
   "devDependencies": {
     "@code-dot-org/changelogs": "workspace:*",
+    "@code-dot-org/component-library": "workspace:*",
     "@code-dot-org/component-library-styles": "workspace:*",
     "@code-dot-org/lint-config": "workspace:*",
     "@eslint/js": "catalog:",
+    "@mui/material": "catalog:",
     "@release-it/conventional-changelog": "^10.0.0",
     "@testing-library/jest-dom": "catalog:",
     "@testing-library/react": "catalog:",

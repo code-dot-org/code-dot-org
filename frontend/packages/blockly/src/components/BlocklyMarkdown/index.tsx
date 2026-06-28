@@ -73,9 +73,13 @@ const workspaceExtension = ({
     // producing identically-named "Block palette" region landmarks that are
     // indistinguishable to AT users.
     if (draggable) {
+      // inline: an <xml> can appear mid-paragraph in prose, so the flyout flows
+      // as an inline-block span (a block element would break the surrounding
+      // <p>), matching how the static inline preview renders.
       return (
         <BlocklyFlyout
           containerRole="group"
+          inline
           blocks={
             convertBlocklyXmlToToolbox(parser, xml)
               .blocks as BlocklyFlyoutProps['blocks']

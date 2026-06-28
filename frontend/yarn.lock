@@ -1828,21 +1828,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@code-dot-org/blockly-workspace@workspace:packages/blockly-workspace":
+"@code-dot-org/blockly@workspace:packages/blockly":
   version: 0.0.0-use.local
-  resolution: "@code-dot-org/blockly-workspace@workspace:packages/blockly-workspace"
+  resolution: "@code-dot-org/blockly@workspace:packages/blockly"
   dependencies:
     "@blockly/block-shareable-procedures": "npm:^6.0.10"
     "@blockly/field-colour": "npm:^6.0.4"
     "@blockly/theme-dark": "npm:^8.0.3"
     "@blockly/theme-highcontrast": "npm:^7.0.3"
     "@code-dot-org/changelogs": "workspace:*"
+    "@code-dot-org/component-library": "workspace:*"
     "@code-dot-org/component-library-styles": "workspace:*"
     "@code-dot-org/fonts": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
     "@code-dot-org/markdown": "workspace:*"
     "@eslint/js": "catalog:"
     "@mantine/hooks": "npm:^8.3.13"
+    "@mui/material": "catalog:"
     "@release-it/conventional-changelog": "npm:^10.0.0"
     "@testing-library/jest-dom": "catalog:"
     "@testing-library/react": "catalog:"

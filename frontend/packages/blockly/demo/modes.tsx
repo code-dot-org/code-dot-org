@@ -519,6 +519,10 @@ export const modes: Mode[] = [
       '<block type="controls_if"></block>',
       '<block type="text_print"></block>',
       '</xml>',
+      '',
+      'Blocks can also be dragged straight out of a sentence — grab this',
+      '<xml><block type="text_print"></block></xml> one and drop it into your',
+      'program.',
     ].join('\n'),
     toolbox: [], // blocks come from the draggable instructions, not a toolbox
     blocks: [BaseBlocks.when_run],

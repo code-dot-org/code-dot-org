@@ -140,13 +140,57 @@ describe('BlocklyMarkdown', () => {
       {timeout: 5000, interval: 50},
     );
 
-    // The flyout's own container div uses role="group", not role="region".
-    // Note: Blockly core assigns role="region" to its internal workspace <g>
-    // element; div[role="..."] discriminates that from the flyout container.
-    expect(container.querySelector('div[role="region"]')).toBeNull();
-    const group = container.querySelector('div[role="group"]');
+    // The flyout's own container is an inline-block <span> (so it can sit in
+    // prose) with role="group", not role="region". Note: Blockly core assigns
+    // role="region" to its internal workspace <g> element; the span[role="..."]
+    // discriminator distinguishes that from the flyout container.
+    expect(container.querySelector('span[role="region"]')).toBeNull();
+    const group = container.querySelector('span[role="group"]');
     expect(group).not.toBeNull();
     expect(group!.getAttribute('aria-label')).toBe('Block palette');
+  });
+
+  it('flows a draggable flyout inline mid-paragraph without breaking the prose', async () => {
+    // The whole point of inline mode: an <xml> embedded mid-sentence renders as
+    // an inline-block flyout *inside* the surrounding <p>, with the block's
+    // background panel suppressed, and still sizes to its content.
+    const {container} = render(
+      <StrictMode>
+        <BlocklyProvider>
+          <div style={{display: 'flex', width: 640, height: 480}}>
+            <div style={{flex: '0 0 240px'}}>
+              <BlocklyMarkdown draggable content={MARKDOWN} />
+            </div>
+            <div style={{flex: '1 1 auto'}}>
+              <BlocklyWorkspace />
+            </div>
+          </div>
+        </BlocklyProvider>
+      </StrictMode>,
+    );
+
+    await vi.waitFor(
+      () => {
+        expect(
+          container.querySelector('.blocklyFlyout .blocklyDraggable'),
+        ).not.toBeNull();
+      },
+      {timeout: 5000, interval: 50},
+    );
+
+    const group = container.querySelector('span[role="group"]')!;
+    // It lives inside the paragraph, which still reads as one sentence.
+    const paragraph = group.closest('p');
+    expect(paragraph).not.toBeNull();
+    expect(paragraph!.textContent).toContain('Drag this:');
+    expect(paragraph!.textContent).toContain('into your program.');
+    // The inline container sizes to its block rather than collapsing.
+    const rect = group.getBoundingClientRect();
+    expect(rect.width).toBeGreaterThan(0);
+    expect(rect.height).toBeGreaterThan(0);
+    // The flyout's background panel is suppressed (transparent fill).
+    const background = container.querySelector('.blocklyFlyoutBackground')!;
+    expect(getComputedStyle(background).fill).toBe('rgba(0, 0, 0, 0)');
   });
 
   it('restyles draggable flyout blocks when the theme changes', async () => {
