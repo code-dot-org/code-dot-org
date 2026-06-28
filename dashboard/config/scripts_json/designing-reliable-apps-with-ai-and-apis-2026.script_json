@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-26 19:34:57 UTC",
+    "serialized_at": "2026-06-26 19:49:16 UTC",
     "hide_within_course": true,
     "published_state": "in_development",
     "instruction_type": null,
@@ -716,7 +716,7 @@
       "key": "b837c16f-ef91-4c7e-9bb9-0d3c5c6b5a4a",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -2844,20 +2844,19 @@
       }
     },
     {
-      "key": "d735da17-5702-438f-ae41-44bdcada8f1e",
+      "key": "864c1892-a58a-4b9d-9c23-1ec4fd0bc203",
       "position": 1,
       "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "d735da17-5702-438f-ae41-44bdcada8f1e",
-        "lesson_activity.key": "b837c16f-ef91-4c7e-9bb9-0d3c5c6b5a4a"
-      }
-    },
-    {
-      "key": "864c1892-a58a-4b9d-9c23-1ec4fd0bc203",
-      "position": 2,
-      "properties": {
-        "progression_name": "Meet the Career: Data Engineer"
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students learn what a Data Engineer does, then simulate the role by building a hybrid app that uses both local and live data to stay functional even when an API fails.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Data Engineer career.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 1 to learn about the Data Engineer career.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students move through the panels, listen for students who are already connecting the career to apps they use. These students can be cold-called during the discussion on the next slide. Also note any students who are rushing through — the panels are short but the discussion will expect them to recall specific details.\n\n",
+        "duration": "15",
+        "name": "Meet the Career: Data Engineer",
+        "progression_name": "Meet the Career: Data Engineer",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may conflate \"Data Engineer\" with \"Data Scientist.\" If this comes up, a quick distinction: Data Scientists analyze data to find insights; Data Engineers build the systems that make sure the data is available, reliable, and in the right place to begin with.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "864c1892-a58a-4b9d-9c23-1ec4fd0bc203",
@@ -2865,15 +2864,31 @@
       }
     },
     {
-      "key": "e2cf8aa4-2836-40b0-aa0c-171fa6f12046",
-      "position": 3,
+      "key": "de772490-c106-4839-bdee-ade270350cb6",
+      "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students will distinguish between live and local data and explain why professional apps use both for speed and reliability.",
-        "duration": "10",
-        "name": "Mini-Lesson: Live vs Local Data"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts.\n* *What does a Data Engineer do, and why does it matter?*\n* *How did you see Data Engineers using AI in their work?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students can describe the Data Engineer role in their own words and identify at least one way Data Engineers use AI tools in their work. This discussion bridges the career introduction to the coding work ahead and primes students to use AI Chat intentionally in the levels.\n"
       },
       "seeding_key": {
-        "activity_section.key": "e2cf8aa4-2836-40b0-aa0c-171fa6f12046",
+        "activity_section.key": "de772490-c106-4839-bdee-ade270350cb6",
+        "lesson_activity.key": "b837c16f-ef91-4c7e-9bb9-0d3c5c6b5a4a"
+      }
+    },
+    {
+      "key": "bf78dcae-bd16-4865-92cf-fb00a65c263a",
+      "position": 3,
+      "properties": {
+        "description": "Today, you will act as Data Engineers. Your job is to build a Global Population Tracker — an app that fetches live country population data from the internet. But like any real app, it needs to keep working even when the live source goes down. You'll set up the app's \"shell\" - the static structure that loads instantly while the app waits for live data, create a backup, and write the logic that decides which data to use. You can also use AI Tutor to help you understand what the API data looks like and build backup data that matches its structure.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The warm-up used a sports app to introduce the concept — this app is different, but the Data Engineer's decisions are exactly the same. If students notice the switch, that's actually worth acknowledging: Data Engineers apply the same local vs. live thinking to any app they build, regardless of what the data is about.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bf78dcae-bd16-4865-92cf-fb00a65c263a",
         "lesson_activity.key": "b837c16f-ef91-4c7e-9bb9-0d3c5c6b5a4a"
       }
     },
@@ -2893,7 +2908,13 @@
       "key": "31aac166-d071-43c7-8dd6-5d7e611d15dd",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *live data*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *local data*.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is the biggest risk of relying ONLY on live data for your app?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify that if the API goes down or the user is offline, the app will be empty or broken (the \"White Screen of Death\").\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *live data*. Remind students that in the warm-up, the NBA scores and weather forecast were examples of live data — they had to be fetched because they change constantly. When a Data Engineer connects an app to an external server to get that kind of real-time data, they're working with live data. Direct students to fill in the vocab term in their Unit Guides.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *local data*. Point back to the warm-up — the team logo and list of sport categories were examples of local data. They don't change often, so there's no need to fetch them. A Data Engineer hardcodes that kind of data directly into the app so it loads instantly, every time, regardless of internet connection. Direct students to fill in the vocab term in their Unit Guides.\n\n\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students sometimes assume local data is always \"worse\" because it can go stale. Push back on this — for stable, structural data, local is actually the better choice. Speed and reliability are features, not compromises.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "31aac166-d071-43c7-8dd6-5d7e611d15dd",
@@ -2904,7 +2925,7 @@
       "key": "2ad3c510-ab6e-4ae5-a03c-ff1eb906f584",
       "position": 6,
       "properties": {
-        "description": "When we build professional apps, we don't just use live data. We also use local data for two very specific jobs.",
+        "description": "Data Engineers weigh four factors when deciding where data should live: speed, reliability, control, and whether the data needs to be up-to-date.",
         "remarks": true
       },
       "seeding_key": {
@@ -2916,7 +2937,13 @@
       "key": "ca0a385e-5245-46c6-bb2d-e042c6c51aee",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain why we use static constants for UI speed and the safety role of fallback data."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through each factor and compare how local and live data handle it. Ask students which column describes the NBA scores from the warm-up, and which describes the team logo. Students should recognize that neither approach is universally better — the right choice depends on what the data is and how it's used.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may assume live data is always better because it's more current. Push back on this — for stable, structural data, local is faster, more reliable, and fully controlled by the engineer. The tradeoff is always intentional, not a compromise.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "ca0a385e-5245-46c6-bb2d-e042c6c51aee",
@@ -2924,20 +2951,19 @@
       }
     },
     {
-      "key": "794e03cd-9ba1-47cd-b7d7-81bbf028cbff",
+      "key": "c0f9ad26-342c-45d4-a63a-44027267663a",
       "position": 8,
       "properties": {
-        "description": "Imagine opening an app and seeing nothing but a blank screen for five seconds while it waits for a server. Static constants let us \"paint\" the app's structure instantly while the live data is still fetching in the background.\n\nAPIs are powerful, but they are also fragile. A server might go down, or a user's Wi-Fi might drop and backup data is our \"Safety Net\" that keeps the app functional even when things go wrong.",
-        "remarks": true,
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Now that students can see how local and live data compare, zoom in on the two specific ways Data Engineers use local data in their apps. Job 1 addresses speed and control. Data Engineers always set up the app shell first because it loads instantly, no internet is needed, and the developer owns the data completely. Job 2 addresses reliability — backup data keeps the app functional when the live source fails. Point out the up-to-date tradeoff: backup data is a safety net, but it may not reflect the latest changes. This is a real risk Data Engineers have to account for. Together, these two uses of local data form what developers call an app shell — the static structure that loads instantly before any live data arrives. Students will build this in Level 2 and create the backup data in Level 3.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Emphasize that backup data must have the exact same structure (the same keys like \"title\" or \"image\") as the real API data. If they don't match, the code will break when it switches to the backup."
+            "markdown": "Backup data must have the exact same structure as the real API data — the same keys, like name and population. If the structure doesn't match, the code will break when it switches to the backup.\n"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "794e03cd-9ba1-47cd-b7d7-81bbf028cbff",
+        "activity_section.key": "c0f9ad26-342c-45d4-a63a-44027267663a",
         "lesson_activity.key": "b837c16f-ef91-4c7e-9bb9-0d3c5c6b5a4a"
       }
     },
@@ -2945,8 +2971,20 @@
       "key": "fe7aa2da-494a-42be-93a5-55637b153e0a",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 1 to complete Levels 1 through 4.\n- Level 1: Students read the formal definition of local data.\n- Level 2: Students write a personal definition for local data and provide one example.\n- Level 3: Students read the formal definition of live data.\n- Level 4: Students write a personal definition for live data and provide one example.\n",
-        "progression_name": "Vocab: Local Data"
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students will design a resilient hybrid web app that combines static configuration, live API data, and local backup data — demonstrating how real-world Data Engineers handle both dynamic content and failure conditions.\n\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 2 to complete Levels 2 through 5.\n* **Level 2:** Students initialize the static UI using an appConfig object.\n* **Level 3:** Students create the backupData array to match the API structure.\n* **Level 4:** Students implement try/catch logic to switch to backup data if the fetch fails.\n* **Level 5:** Students complete a Check for Understanding question\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Check that students' backup data in Level 3 uses the same keys (name and population) as the live API response. This is the most common point of failure in Level 4.\n",
+        "duration": "20",
+        "name": "Build Like a Data Engineer ",
+        "progression_name": "Build Like a Data Engineer",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students finish early, ask them: \"Your app works great now — but what if the backup data also became outdated? How would you solve that as a Data Engineer?\" This pushes early finishers to think beyond the lesson without requiring additional code.\n"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Level 4 is the culmination of the activity and can be used as a formative assessment of the lesson objectives:\n* Compare local arrays and objects with data from an external API — look for students successfully switching between localCountries and live API data\n* Analyze tradeoffs in speed, control, reliability, and having up to date data — look for students who can explain why the app shell loads first and why backup data is a safety net\n* Identify risks of depending on an external API, including service failure and data being up to date— look for students whose try/catch logic correctly handles a failed fetch without breaking the app\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "fe7aa2da-494a-42be-93a5-55637b153e0a",
@@ -2954,93 +2992,24 @@
       }
     },
     {
-      "key": "099c9d7e-19f0-47dd-a0d8-49f45ea46a7c",
-      "position": 10,
-      "properties": {
-        "progression_name": "Vocab: Live Data",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Have students test their definitions against a real example (e.g., a weather app or a saved photo) to check whether they truly understand the difference between local and live data."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "099c9d7e-19f0-47dd-a0d8-49f45ea46a7c",
-        "lesson_activity.key": "b837c16f-ef91-4c7e-9bb9-0d3c5c6b5a4a"
-      }
-    },
-    {
-      "key": "f1203bd6-b8fb-475d-abc8-e3f7ce5b4790",
-      "position": 11,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "f1203bd6-b8fb-475d-abc8-e3f7ce5b4790",
-        "lesson_activity.key": "b837c16f-ef91-4c7e-9bb9-0d3c5c6b5a4a"
-      }
-    },
-    {
-      "key": "8648b775-53cb-4aa0-98f9-f94e2294c941",
-      "position": 12,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How would you decide what data to always load as a static constant? What data should be used as a backup?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students understand that core interface elements and essential structure should be static and reliable, while external or frequently changing data should be dynamic with a fallback to preserve usability.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "8648b775-53cb-4aa0-98f9-f94e2294c941",
-        "lesson_activity.key": "b837c16f-ef91-4c7e-9bb9-0d3c5c6b5a4a"
-      }
-    },
-    {
-      "key": "bf77bddf-9e1b-4582-91b0-b337a4b50273",
-      "position": 13,
-      "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students will design a resilient “hybrid” web app that combines static configuration, live API data, and local backup data, demonstrating how real-world systems handle both dynamic content and failure conditions.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 5 to complete Levels 5 through 7.\n- Level 5: Initialize the static UI using an appConfig object.\n- Level 6: Create the backupData array to match the API structure.\n- Level 7: Implement try/catch logic to switch to backup data if the fetch fails.\n",
-        "duration": "20",
-        "name": "The Hybrid Architecture",
-        "progression_name": "Create an App Shell"
-      },
-      "seeding_key": {
-        "activity_section.key": "bf77bddf-9e1b-4582-91b0-b337a4b50273",
-        "lesson_activity.key": "b837c16f-ef91-4c7e-9bb9-0d3c5c6b5a4a"
-      }
-    },
-    {
-      "key": "9abca4ba-66fc-460c-8f70-4094eb47df66",
-      "position": 14,
-      "properties": {
-        "progression_name": "Store Backup Data"
-      },
-      "seeding_key": {
-        "activity_section.key": "9abca4ba-66fc-460c-8f70-4094eb47df66",
-        "lesson_activity.key": "b837c16f-ef91-4c7e-9bb9-0d3c5c6b5a4a"
-      }
-    },
-    {
-      "key": "f327158a-ff61-47c1-870c-84fdbdb4ddb7",
-      "position": 15,
-      "properties": {
-        "progression_name": "Implement Hybrid Logic",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Level 7 is the culmination. Check that the app renders the static shell immediately and falls back to backupData when the fetch fails."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "f327158a-ff61-47c1-870c-84fdbdb4ddb7",
-        "lesson_activity.key": "b837c16f-ef91-4c7e-9bb9-0d3c5c6b5a4a"
-      }
-    },
-    {
       "key": "e04ed013-3120-4aee-95a6-4626f78b2545",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day. Have students turn and talk with a partner to share their answers. Encourage them to address both halves — why a Data Engineer would choose live data over local data (real-time updates, dynamic content) and what they built to keep the app running when the live source fails (the app shell and backup data). Encourage students to use examples from their own app in Levels 2 through 4, or the sports app scenario from the warm-up. After partner discussion, invite a few students to share out with the class. Listen for students using the terms live data, local data, app shell, backup data, and fallback in their responses.\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "e04ed013-3120-4aee-95a6-4626f78b2545",
+        "lesson_activity.key": "1fe98b09-0dd9-434c-a6d9-2bbdfa88a420"
+      }
+    },
+    {
+      "key": "2bc77620-099d-48f7-875b-2e23679d1da8",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "2bc77620-099d-48f7-875b-2e23679d1da8",
         "lesson_activity.key": "1fe98b09-0dd9-434c-a6d9-2bbdfa88a420"
       }
     },
@@ -4421,7 +4390,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Create an App Shell"
+        "progression": "Build Like a Data Engineer"
       },
       "bonus": false,
       "seeding_key": {
@@ -4431,7 +4400,7 @@
         "lesson.key": "Lesson 10: Local vs Live Data",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "bf77bddf-9e1b-4582-91b0-b337a4b50273"
+        "activity_section.key": "fe7aa2da-494a-42be-93a5-55637b153e0a"
       },
       "level_keys": [
         "designing-reliable-apps-lesson10-level5-test_2025-pilot_2025-pilo_2026"
@@ -4443,7 +4412,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Create an App Shell"
+        "progression": "Build Like a Data Engineer"
       },
       "bonus": false,
       "seeding_key": {
@@ -4453,7 +4422,7 @@
         "lesson.key": "Lesson 10: Local vs Live Data",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "bf77bddf-9e1b-4582-91b0-b337a4b50273"
+        "activity_section.key": "fe7aa2da-494a-42be-93a5-55637b153e0a"
       },
       "level_keys": [
         "designing-reliable-apps-lesson10-level6-test_2025-pilot_2025-pilo_2026"
@@ -4465,7 +4434,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Create an App Shell"
+        "progression": "Build Like a Data Engineer"
       },
       "bonus": false,
       "seeding_key": {
@@ -4475,7 +4444,7 @@
         "lesson.key": "Lesson 10: Local vs Live Data",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "bf77bddf-9e1b-4582-91b0-b337a4b50273"
+        "activity_section.key": "fe7aa2da-494a-42be-93a5-55637b153e0a"
       },
       "level_keys": [
         "designing-reliable-apps-lesson10-level7-test_2025-pilot_2025-pilo_2026"
@@ -4485,9 +4454,9 @@
       "chapter": 44,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": true,
       "properties": {
-        "progression": "Create an App Shell"
+        "progression": "Build Like a Data Engineer"
       },
       "bonus": false,
       "seeding_key": {
@@ -4497,7 +4466,7 @@
         "lesson.key": "Lesson 10: Local vs Live Data",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "bf77bddf-9e1b-4582-91b0-b337a4b50273"
+        "activity_section.key": "fe7aa2da-494a-42be-93a5-55637b153e0a"
       },
       "level_keys": [
         "designing-reliable-apps-lesson10-level5- 2026"
@@ -5126,7 +5095,7 @@
         "lesson.key": "Lesson 10: Local vs Live Data",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "bf77bddf-9e1b-4582-91b0-b337a4b50273"
+        "activity_section.key": "fe7aa2da-494a-42be-93a5-55637b153e0a"
       }
     },
     {
@@ -5138,7 +5107,7 @@
         "lesson.key": "Lesson 10: Local vs Live Data",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "bf77bddf-9e1b-4582-91b0-b337a4b50273"
+        "activity_section.key": "fe7aa2da-494a-42be-93a5-55637b153e0a"
       }
     },
     {
@@ -5150,7 +5119,7 @@
         "lesson.key": "Lesson 10: Local vs Live Data",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "bf77bddf-9e1b-4582-91b0-b337a4b50273"
+        "activity_section.key": "fe7aa2da-494a-42be-93a5-55637b153e0a"
       }
     },
     {
@@ -5162,7 +5131,7 @@
         "lesson.key": "Lesson 10: Local vs Live Data",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "bf77bddf-9e1b-4582-91b0-b337a4b50273"
+        "activity_section.key": "fe7aa2da-494a-42be-93a5-55637b153e0a"
       }
     },
     {
