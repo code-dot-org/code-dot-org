@@ -1975,6 +1975,8 @@
   "contactSupportFullSection": "Questions about this limit? [Contact support]({supportLink})",
   "manageStudentsNotificationAddSuccess": "You added {numStudents, plural, one {1 student} other {# students}} to your section.",
   "manageStudentsNotificationSuccess": "Success!",
+  "manageStudentsNotificationCSVImportWarning": "Some optional CSV values were left blank.",
+  "manageStudentsNotificationCSVImportWarningDetails": "Unrecognized age, gender, or state values were left blank in {numRows, plural, one {1 CSV row} other {# CSV rows}}.",
   "manageStudentsNotificationLocked": "You have locked this section",
   "manageStudentsNotificationLockedDetails": "Students cannot join this section using the section code. You can still add students {loginType, select, google_classroom {by syncing with Google Classroom} clever {by syncing with Clever} email {manually by moving or copying them from another section} other {manually on the Manage Students tab}}. You can unlock this section by clicking \"Edit Section Details\".",
   "manageYourLibraries": "Manage Your Libraries",

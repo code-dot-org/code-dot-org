@@ -25,10 +25,69 @@ const csvTemplate = () =>
   'Sam,Taylor,,non-binary,fl\n' +
   'Alex,,13,preferred term not listed,GA\n';
 
+const CSV_IMPORT_OPTIONAL_FIELDS = [
+  {name: 'age', columnIndex: 2, parse: parseAge},
+  {name: 'gender', columnIndex: 3, parse: parseGender},
+  {name: 'state', columnIndex: 4, parse: parseUsState},
+];
+
+const hasCsvValue = raw => !!(raw && raw.toString().trim());
+
+export const isHeaderRow = parts => {
+  const normalizedParts = parts.map(part => (part || '').trim().toLowerCase());
+
+  return (
+    normalizedParts[0] === 'display name' &&
+    normalizedParts[1] === 'family name' &&
+    normalizedParts[2] === 'age' &&
+    normalizedParts[3] === 'gender' &&
+    normalizedParts[4] === 'state'
+  );
+};
+
+export const parseStudentsCsv = rows => {
+  const students = [];
+  const invalidRows = new Set();
+
+  rows.forEach((parts, index) => {
+    if (index === 0 && isHeaderRow(parts)) {
+      return;
+    }
+
+    const name = (parts[0] || '').trim();
+    const familyName = (parts[1] || '').trim() || null;
+    const age = parseAge(parts.length > 2 ? parts[2] : '');
+    const gender = parseGender(parts[3]);
+    const usState = parseUsState(parts[4]) || null;
+
+    if (name) {
+      CSV_IMPORT_OPTIONAL_FIELDS.forEach(field => {
+        const rawValue = parts[field.columnIndex];
+        if (hasCsvValue(rawValue) && !field.parse(rawValue)) {
+          invalidRows.add(index + 1);
+        }
+      });
+    }
+
+    students.push({name, familyName, age, gender, usState});
+  });
+
+  return {
+    students,
+    warning:
+      invalidRows.size > 0
+        ? {
+            rowCount: invalidRows.size,
+          }
+        : null,
+  };
+};
+
 class AddMultipleStudents extends Component {
   static propTypes = {
     sectionId: PropTypes.number,
     disabled: PropTypes.bool,
+    onCsvImportWarning: PropTypes.func,
     // Provided by redux
     addMultipleStudents: PropTypes.func.isRequired,
   };
@@ -102,31 +161,13 @@ class AddMultipleStudents extends Component {
     this.setState({fileName: file.name, selectedFile: file});
   };
 
-  isHeaderRow = parts => {
-    const normalizedParts = parts.map(part =>
-      (part || '').trim().toLowerCase()
-    );
-
-    return (
-      normalizedParts[0] === 'display name' &&
-      normalizedParts[1] === 'family name' &&
-      normalizedParts[2] === 'age' &&
-      normalizedParts[3] === 'gender' &&
-      normalizedParts[4] === 'state'
-    );
+  addCsvRows = rows => {
+    const {students, warning} = parseStudentsCsv(rows);
+    this.props.addMultipleStudents(students);
+    if (this.props.onCsvImportWarning) {
+      this.props.onCsvImportWarning(warning);
+    }
   };
-
-  parseCsvRows = rows =>
-    rows
-      .filter((parts, index) => index !== 0 || !this.isHeaderRow(parts))
-      .map(parts => {
-        const name = (parts[0] || '').trim();
-        const familyName = (parts[1] || '').trim() || null;
-        const age = parseAge(parts.length > 2 ? parts[2] : '');
-        const gender = parseGender(parts[3]);
-        const usState = parseUsState(parts[4]) || null;
-        return {name, familyName, age, gender, usState};
-      });
 
   parseBasicRows = value =>
     value.split('\n').map(line => {
@@ -171,7 +212,7 @@ class AddMultipleStudents extends Component {
       if (this.state.selectedFile) {
         Papa.parse(this.state.selectedFile, {
           complete: results => {
-            this.props.addMultipleStudents(this.parseCsvRows(results.data));
+            this.addCsvRows(results.data);
             this.closeDialog();
           },
           error: () => {
@@ -182,7 +223,7 @@ class AddMultipleStudents extends Component {
       }
 
       const results = Papa.parse(this.textareaRef.current.value);
-      this.props.addMultipleStudents(this.parseCsvRows(results.data));
+      this.addCsvRows(results.data);
       this.closeDialog();
       return;
     }
