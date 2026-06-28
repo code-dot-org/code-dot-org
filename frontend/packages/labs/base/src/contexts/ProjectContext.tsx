@@ -1,6 +1,7 @@
 import type {PropsWithChildren} from 'react';
 import {createContext, useContext, useEffect} from 'react';
 
+import type {AppOptions} from '@code-dot-org/core/api';
 import {useApiClient, useQueryClient} from '@code-dot-org/core/api';
 import {progressActions} from '@code-dot-org/progress/redux';
 
@@ -39,6 +40,12 @@ export const useProject = () => {
 export interface ProjectProviderProps extends PropsWithChildren {
   /** Channel ID for the project, if already known. Used for standalone projects and projects without levels. */
   channelId?: string;
+  /**
+   * Resolved app options, supplied by the host. When present, the package does
+   * not fetch them; when absent, the package fetches them itself (transitional,
+   * until the studio host owns this).
+   */
+  appOptions?: AppOptions;
 }
 
 /**
@@ -46,12 +53,17 @@ export interface ProjectProviderProps extends PropsWithChildren {
  */
 export const ProjectProvider = ({
   channelId,
+  appOptions,
   children,
 }: ProjectProviderProps) => {
   const apiClient = useApiClient();
   const queryClient = useQueryClient();
   const levelProperties = useMaybeLevelProperties();
-  const {appOptions} = useLoadAppOptions();
+  // Host-supplied app options are used directly; otherwise fetch them.
+  const {appOptions: fetchedAppOptions} = useLoadAppOptions({
+    enabled: !appOptions,
+  });
+  const resolvedAppOptions = appOptions ?? fetchedAppOptions;
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const userId = useAppSelector(
     state => state.progress.viewAsUserId || undefined,
@@ -92,12 +104,12 @@ export const ProjectProvider = ({
     // we will load the project based on that channel id, otherwise we will look up a channel id
     // for the level.
     const promise =
-      currentLevelId && levelProperties && appOptions
+      currentLevelId && levelProperties && resolvedAppOptions
         ? dispatch(
             labActions.loadLab({
               apiClient,
               queryClient,
-              appOptions,
+              appOptions: resolvedAppOptions,
               levelId: currentLevelId,
               userId,
               scriptId,
@@ -114,7 +126,7 @@ export const ProjectProvider = ({
       promise?.abort();
     };
   }, [
-    appOptions,
+    resolvedAppOptions,
     apiClient,
     queryClient,
     channelId,
