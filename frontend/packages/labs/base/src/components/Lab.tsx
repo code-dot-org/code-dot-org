@@ -2,7 +2,6 @@ import type {PropsWithChildren} from 'react';
 import {Suspense, useEffect} from 'react';
 
 import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
-import {RootStateProvider} from '@code-dot-org/core/redux';
 import {injectFontAwesome} from '@code-dot-org/fonts';
 import {progressActions} from '@code-dot-org/progress/redux';
 
@@ -55,6 +54,14 @@ export interface LabProps extends PropsWithChildren {
 /**
  * A wrapper for any lab that will connect it to the appropriate data sources
  * and contexts.
+ *
+ * The host (e.g. the studio app) owns the redux store and must render this
+ * component inside a `RootStateProvider` from `@code-dot-org/core/redux`.
+ * Importing this package injects the lab slices into the shared store, so the
+ * host only needs to provide the store, not assemble it. `<Lab>` deliberately
+ * does not provide the store itself: a single host-owned provider keeps one
+ * source of truth and lets the host coordinate the lab with the rest of the
+ * page (progress, header, etc.).
  */
 const Lab = ({
   isLoading,
@@ -70,24 +77,21 @@ const Lab = ({
   return (
     <Suspense fallback={<Loading isLoading={isLoading} />}>
       {!isLoading && (
-        /* Redux */
-        <RootStateProvider>
-          {/* UI theming */}
-          <ThemeProvider>
-            {/* Supports extra links buttons and toggling */}
-            <ExtraLinksButtonProvider>
-              <LevelPropertiesProvider>
-                {/* The actual lab content */}
-                <LabWrapper
-                  levelId={levelId}
-                  standaloneProjectType={standaloneProjectType}
-                >
-                  {children}
-                </LabWrapper>
-              </LevelPropertiesProvider>
-            </ExtraLinksButtonProvider>
-          </ThemeProvider>
-        </RootStateProvider>
+        /* UI theming */
+        <ThemeProvider>
+          {/* Supports extra links buttons and toggling */}
+          <ExtraLinksButtonProvider>
+            <LevelPropertiesProvider>
+              {/* The actual lab content */}
+              <LabWrapper
+                levelId={levelId}
+                standaloneProjectType={standaloneProjectType}
+              >
+                {children}
+              </LabWrapper>
+            </LevelPropertiesProvider>
+          </ExtraLinksButtonProvider>
+        </ThemeProvider>
       )}
     </Suspense>
   );
