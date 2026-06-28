@@ -2,11 +2,15 @@ import type {PropsWithChildren} from 'react';
 import {Suspense, useEffect} from 'react';
 
 import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
+import type {LevelPropertiesMap} from '@code-dot-org/core/api';
 import {injectFontAwesome} from '@code-dot-org/fonts';
 import {progressActions} from '@code-dot-org/progress/redux';
 
 import {ExtraLinksButtonProvider} from '../contexts/ExtraLinksButtonContext';
-import {LevelPropertiesProvider} from '../contexts/LevelPropertiesContext';
+import {
+  LevelPropertiesProvider,
+  FetchedLevelPropertiesProvider,
+} from '../contexts/LevelPropertiesContext';
 import {useAppDispatch} from '../redux/store';
 
 import Loading from './Loading';
@@ -49,6 +53,13 @@ export interface LabProps extends PropsWithChildren {
   standaloneProjectType?: string;
   /** Optionally, a channel id for a standalone level */
   channelId?: string;
+  /**
+   * Resolved level-properties map, supplied by the host. When present, the
+   * package does not fetch it (and reads no progress fetch params); when
+   * absent, the package fetches it itself via {@link FetchedLevelPropertiesProvider}
+   * (transitional, until the studio host owns this).
+   */
+  levelPropertiesMap?: LevelPropertiesMap;
 }
 
 /**
@@ -67,12 +78,20 @@ const Lab = ({
   isLoading,
   levelId,
   standaloneProjectType,
+  levelPropertiesMap,
   children,
 }: LabProps) => {
   // Ensure FontAwesome icons are available for all labs
   useEffect(() => {
     injectFontAwesome();
   }, []);
+
+  // The actual lab content, wrapped to set the current level identity in redux.
+  const labContent = (
+    <LabWrapper levelId={levelId} standaloneProjectType={standaloneProjectType}>
+      {children}
+    </LabWrapper>
+  );
 
   return (
     <Suspense fallback={<Loading isLoading={isLoading} />}>
@@ -81,15 +100,17 @@ const Lab = ({
         <ThemeProvider>
           {/* Supports extra links buttons and toggling */}
           <ExtraLinksButtonProvider>
-            <LevelPropertiesProvider>
-              {/* The actual lab content */}
-              <LabWrapper
-                levelId={levelId}
-                standaloneProjectType={standaloneProjectType}
-              >
-                {children}
-              </LabWrapper>
-            </LevelPropertiesProvider>
+            {/* Host-supplied level properties are used directly; otherwise the
+                package fetches them (transitional). */}
+            {levelPropertiesMap ? (
+              <LevelPropertiesProvider levelPropertiesMap={levelPropertiesMap}>
+                {labContent}
+              </LevelPropertiesProvider>
+            ) : (
+              <FetchedLevelPropertiesProvider>
+                {labContent}
+              </FetchedLevelPropertiesProvider>
+            )}
           </ExtraLinksButtonProvider>
         </ThemeProvider>
       )}

@@ -94,7 +94,7 @@ export const ProjectProvider = ({
     const promise =
       currentLevelId && levelProperties && appOptions
         ? dispatch(
-            labActions.setUpWithLevel({
+            labActions.loadLab({
               apiClient,
               queryClient,
               appOptions,

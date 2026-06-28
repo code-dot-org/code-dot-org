@@ -168,22 +168,19 @@ const slice: Slice<LabState> = createSlice({
     },
   },
   extraReducers: builder => {
-    builder.addCase(setUpWithLevel.fulfilled, state => {
+    builder.addCase(loadLab.fulfilled, state => {
       state.isLoadingProjectOrLevel = false;
     });
-    builder.addCase(setUpWithLevel.rejected, (state, action) => {
+    builder.addCase(loadLab.rejected, (state, action) => {
       // If the set up was aborted, that means another load got started
       // before we finished. Therefore we only set loading to false if the
       // action was not aborted.
       if (!action.meta.aborted) {
         state.isLoadingProjectOrLevel = false;
-        state.pageError = getErrorFromThunkAction(
-          action,
-          'setUpWithLevel failed',
-        );
+        state.pageError = getErrorFromThunkAction(action, 'loadLab failed');
       }
     });
-    builder.addCase(setUpWithLevel.pending, state => {
+    builder.addCase(loadLab.pending, state => {
       state.isLoadingProjectOrLevel = true;
     });
   },
@@ -191,27 +188,56 @@ const slice: Slice<LabState> = createSlice({
 
 // Thunks
 
+/**
+ * Host-facing input for {@link loadLab}.
+ *
+ * These are the *post-resolution* inputs. The studio host fetches level
+ * properties and app options itself (see `useLevelProperties` /
+ * `useAppOptions` in `@code-dot-org/core/api`) and dispatches `loadLab` with
+ * the resolved values. Fields that the package used to read from
+ * `state.progress` during the load path are now supplied explicitly by the
+ * host, severing the package's coupling to the progress slice for loading.
+ *
+ * Note the level-properties fetch concerns (`scriptName`, `lessonPosition`,
+ * `standaloneProjectType`) are deliberately absent: they parameterize the
+ * host's LP/AO fetch, not this thunk. Standalone projects carry no level id of
+ * their own, so the host pre-resolves `levelId` to the first key of the
+ * level-properties map before dispatching — matching what the package did
+ * internally before.
+ */
+export interface LoadLabInput {
+  /** API client — already host-injected via context. */
+  apiClient: ApiClient;
+  /** Query client — already host-injected via context. */
+  queryClient: QueryClient;
+  /** Resolved level properties for the current level (host-fetched). */
+  levelProperties: LevelProperties;
+  /** Resolved app options for the current level (host-fetched). */
+  appOptions: AppOptions;
+  /** Optional user app options (instructor flag for cached levels). */
+  userAppOptions?: UserAppOptions;
+  /** Current level id; pre-resolved by the host for standalone projects. (was `state.progress.currentLevelId`) */
+  levelId: number;
+  /** Script id, when the level is part of a unit. (was `state.progress.scriptId`) */
+  scriptId?: number;
+  /** User app options path, when in a script level. (was `progressActions.getUserAppOptionsPath`) */
+  userAppOptionsPath?: string;
+  /** Channel id for standalone projects / projects without levels. */
+  channelId?: string;
+  /** User being viewed, e.g. a teacher viewing a student. (was `state.progress.viewAsUserId`) */
+  userId?: number;
+}
+
 // Set up the lab properties and project manager for the given level (and optional script),
 // then load the project and store the channel and source in redux.
 // If we are given a channel id, we will use that to load the project, otherwise we will
 // get the channel id based on the level and script id.
 // If we get an aborted signal, we will exit early.
-export const setUpWithLevel = createAsyncThunk<
+export const loadLab = createAsyncThunk<
   void,
-  {
-    apiClient: ApiClient;
-    queryClient: QueryClient;
-    appOptions: AppOptions;
-    userAppOptions?: UserAppOptions;
-    levelId: number;
-    scriptId?: number;
-    levelProperties: LevelProperties;
-    userAppOptionsPath?: string;
-    channelId?: string;
-    userId?: number;
-  },
+  LoadLabInput,
   {dispatch: AppDispatch; state: RootState}
->('lab/setUpWithLevel', async (payload, thunkAPI) => {
+>('lab/loadLab', async (payload, thunkAPI) => {
   LabRegistry.lifecycleNotifier.notify(
     LifecycleEvent.LevelLoadStarted,
     payload.levelId,

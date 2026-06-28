@@ -68,13 +68,14 @@ const LabWithSources = <
   children,
   ...props
 }: LabWithSourcesProps<T, U>) => {
-  const {levelId, standaloneProjectType, isLoading} = props;
+  const {levelId, standaloneProjectType, isLoading, levelPropertiesMap} = props;
 
   return (
     <Lab
       levelId={levelId}
       standaloneProjectType={standaloneProjectType}
       isLoading={isLoading}
+      levelPropertiesMap={levelPropertiesMap}
     >
       <LabWithSourcesWrapper<T, U> {...props}>{children}</LabWithSourcesWrapper>
     </Lab>
