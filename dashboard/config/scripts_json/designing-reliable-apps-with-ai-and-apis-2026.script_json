@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-26 03:07:02 UTC",
+    "serialized_at": "2026-06-26 19:49:16 UTC",
     "hide_within_course": true,
     "published_state": "in_development",
     "instruction_type": null,
@@ -195,7 +195,6 @@
       "relative_position": 6,
       "properties": {
         "overview": "**How do I turn a list of objects into visible cards on the page?**\n\nIn this lesson, students learn how apps turn raw JSON data into visible content. They plan out a music app by selecting which information from the JSON data to display and then coding a loop to dynamically display it. Finally, they learn to debug and refactor code in instances where the backend JSON object has been modified.",
-        "preparation": "- (Optional) Print copies of the Showing Data on the Page activity guide",
         "student_overview": "**How do I turn a list of objects into visible cards on the page?**\n\nLearn how to turn JSON data into visible cards or lists on a webpage by building a dynamic, data-driven music app."
       },
       "seeding_key": {
@@ -212,9 +211,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "**What should a user experience when the system fails?**\n\nThis lesson introduces error handling as a design and engineering practice focused on anticipating and managing failure in networked apps. Students analyze real failure pages, diagnose common error types such as network failures and invalid data, and make tradeoff decisions that affect user trust. Students practice designing recovery states that communicate clearly and maintain user confidence.",
+        "overview": "**How do Reliability Engineers design systems that users can still trust when something breaks?**\n\nThis lesson introduces error handling as a design and engineering practice through the lens of a Reliability Engineer. Students analyze failure pages, work through support tickets from a concert ticketing app to diagnose common error types — network failure, server failure, and invalid data — and make tradeoff decisions between failing fast and failing quietly. Students then design recovery states that communicate clearly and maintain user confidence.",
         "preparation": "- Print copies of the When Things Break activity guide (one for each student)\n- (Optional) Print copies of the Designing for Failure activity guide",
-        "student_overview": "**What should a user experience when the system fails?**\n\nExplore what happens when apps fail and how designers and developers respond. You’ll identify common problems like network issues and missing data, decide how an app should behave when something goes wrong, and design clear recovery messages for users."
+        "student_overview": "**How do Reliability Engineers design systems that users can still trust when something breaks?**\n\nStep into the role of a Reliability Engineer for a concert ticketing app. You'll review support tickets, diagnose what type of failure caused each problem, and decide how the app should respond. Then you'll design a recovery message that gives users a clear next step, even when things go wrong."
       },
       "seeding_key": {
         "lesson.key": "Lesson 7: When Things Break",
@@ -248,7 +247,6 @@
       "relative_position": 9,
       "properties": {
         "overview": "**How can my app communicate what it is doing so users do not guess?**\n\nThis lesson focuses on designing apps that clearly communicate with users by introducing loading, empty, and error states. Students design and implement visible feedback that builds trust and supports human-centered reliability.",
-        "preparation": "- (Optional) Print copies of the Keeping Users Informed activity guide",
         "student_overview": "**How can my app communicate what it is doing so users do not guess?**\n\nLearn how to design loading, empty, and error states so your app clearly communicates what it’s doing instead of leaving people guessing."
       },
       "seeding_key": {
@@ -265,8 +263,8 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "overview": "**Why would I choose messy live data over simple local data that I fully control?**\n\nThis lesson introduces students to architectural decision-making around data sourcing in web applications. Students examine the distinction between local data (stored in the app) and live data (retrieved from an external API) and analyze the tradeoffs between speed, reliability, freshness, and flexibility. Through discussion and implementation, they design a hybrid app that combines local and live data, using fallback logic to ensure the application remains functional even when external data fails.",
-        "student_overview": "**Why would I choose messy live data over simple local data that I fully control?**\n\nIn this lesson, you will explore how real-world apps decide where their data lives. You’ll compare local data (stored in the app) and live data (fetched from an external API) and analyze the tradeoffs between speed, reliability, freshness, and flexibility. Then, you’ll build a hybrid app that combines local and live data to create a more reliable and resilient user experience."
+        "overview": "**How do Data Engineers design systems that keep apps running even when their data sources fail?**\n\nIn this lesson, students learn about the Data Engineer career and take on the role as they examine the distinction between local data (stored in the app) and live data (retrieved from an external API). Through discussion and hands-on implementation, students analyze the tradeoffs between speed, reliability, freshness, and control, then design a hybrid app that combines both data sources using fallback logic to keep the application functional even when the external API fails.",
+        "student_overview": "**How do Data Engineers design systems that keep apps running even when their data sources fail?**\n\nIn this lesson, you learn about the Data Engineer career and then take on the role — building a hybrid app that stays functional even when the live data source fails."
       },
       "seeding_key": {
         "lesson.key": "Lesson 10: Local vs Live Data",
@@ -491,21 +489,8 @@
       }
     },
     {
-      "key": "0ca70945-71b9-43d2-90c0-be668db4e97a",
-      "position": 1,
-      "properties": {
-        "name": "New Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0ca70945-71b9-43d2-90c0-be668db4e97a",
-        "lesson.key": "Lesson 5: Making Sense of Data",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026"
-      }
-    },
-    {
       "key": "5f39c74c-347b-438d-98ce-87e06e0d7c90",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -519,7 +504,7 @@
     },
     {
       "key": "592b4703-cf99-4e80-9361-d07c0d28f8e9",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -533,7 +518,7 @@
     },
     {
       "key": "0b8b4beb-d1cf-4da3-b454-fb2145551f91",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -591,7 +576,7 @@
       "key": "27178ab6-e9ad-4ff7-a90e-e625385fd117",
       "position": 1,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -605,7 +590,7 @@
       "key": "83f9cc83-409d-480c-8787-9bc6c026de13",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -630,21 +615,8 @@
       }
     },
     {
-      "key": "d0f2618b-4253-41d7-85f8-419e7e8d70d5",
-      "position": 1,
-      "properties": {
-        "name": "Revised Progression"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d0f2618b-4253-41d7-85f8-419e7e8d70d5",
-        "lesson.key": "Lesson 8: Catching Problems",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026"
-      }
-    },
-    {
       "key": "f8093cb6-68c4-447a-bacb-efdd6121e8ab",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 10,
         "name": "Warm Up"
@@ -657,14 +629,14 @@
       }
     },
     {
-      "key": "610c721b-681b-46fc-838f-c6dcbc1743b5",
-      "position": 3,
+      "key": "d0f2618b-4253-41d7-85f8-419e7e8d70d5",
+      "position": 2,
       "properties": {
         "duration": 30,
         "name": "Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "610c721b-681b-46fc-838f-c6dcbc1743b5",
+        "lesson_activity.key": "d0f2618b-4253-41d7-85f8-419e7e8d70d5",
         "lesson.key": "Lesson 8: Catching Problems",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026"
@@ -672,7 +644,7 @@
     },
     {
       "key": "1a2cd29b-d4e9-49e7-9b8c-e3d04ce2b979",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -730,7 +702,7 @@
       "key": "6f29cce2-a5a0-4d7c-a6ef-7c67f343567c",
       "position": 1,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -744,7 +716,7 @@
       "key": "b837c16f-ef91-4c7e-9bb9-0d3c5c6b5a4a",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1952,21 +1924,10 @@
       }
     },
     {
-      "key": "ef187174-252b-4b58-a0c7-5e62e0a10afe",
-      "position": 1,
-      "properties": {
-        "progression_name": "New CFU Level "
-      },
-      "seeding_key": {
-        "activity_section.key": "ef187174-252b-4b58-a0c7-5e62e0a10afe",
-        "lesson_activity.key": "0ca70945-71b9-43d2-90c0-be668db4e97a"
-      }
-    },
-    {
       "key": "10dc01f9-1d25-4124-8175-cc4afe63271f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Engage students with the idea that UI elements come from specific pieces of JSON data.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show a small UI mockup card (title, subtitle, one stat/label) next to an unexplained raw JSON response. Give students a quiet moment to scan both.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If you were building this app, which 3 pieces of information would you want from this data? What looks unuseful?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students start to see that not all data from an API is equally important. Guide them toward identifying a small set of key fields that directly match what they see on the UI card (for example, name, a description, one key stat) and labeling the rest as “nice to have” or “extra.”\n"
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Engage students with the idea that UI elements come from specific pieces of JSON data.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the UI card and raw JSON side by side. Give students a moment to look at both quietly before asking anything.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If you were building this app, which 3 pieces of information would you want from this data? What looks unuseful?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students start to see that not all data from an API is equally important. Guide them toward identifying a small set of key fields that directly match what they see on the UI card (for example, name, a description, one key stat) and labeling the rest as “nice to have” or “extra.”\n"
       },
       "seeding_key": {
         "activity_section.key": "10dc01f9-1d25-4124-8175-cc4afe63271f",
@@ -2000,8 +1961,16 @@
       "key": "c08214b8-181f-46ff-a0ae-066f4e085bab",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Help students recognize arrays, objects, and primitives as the structural “shape” of JSON.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Briefly explain that JSON has patterns: square brackets for arrays, curly braces for objects, and different kinds of values. Tell students they will annotate a JSON snippet to make these patterns visible.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 1 to work in Sketch Lab. They will annotate a JSON snippet by highlighting arrays [], objects {}, and labeling example values as strings, numbers, or booleans.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students correctly identifying arrays, objects, primitives, and nested structures. Ask questions like: How do you know this is an array? What tells you this value is nested inside something else? Support students who feel overwhelmed by helping them focus on one bracket and character type at a time.\n",
-        "progression_name": "Seeing the Shape of the JSON"
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students explore the structure of a real JSON response by identifying visual patterns — brackets, braces, nested sections, and value types — before vocabulary is formally introduced. This builds readiness for the JSON Structure slide that follows.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 1 to work in Sketch Lab. Students make their best guesses about the structure of the JSON by highlighting and labeling patterns they notice, including brackets, braces, nested sections, and different kinds of values. They may not know every answer yet — the goal is to look closely and predict how the data is organized before the structure is formally explained.\n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students using visual clues in the JSON, such as [], {}, quotation marks, numbers, and repeated key:value patterns. Ask questions like: \n* What symbols seem to group the whole dataset? \n* Where does one pet entry seem to begin and end? \n* What looks like it is inside something else? \n\n",
+        "duration": "15",
+        "name": "Annotate a JSON ",
+        "progression_name": "Seeing the Shape of the JSON",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students feel overwhelmed by the size of the JSON, encourage them to focus on one symbol or pattern at a time rather than trying to understand the whole thing at once. The :@computed_region fields near the bottom may confuse students — let them know it's okay to notice those look different and set them aside for now.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c08214b8-181f-46ff-a0ae-066f4e085bab",
@@ -2009,22 +1978,50 @@
       }
     },
     {
-      "key": "605eefe8-bff8-4930-84af-776e88d413d0",
+      "key": "32fba4aa-ff6b-4738-afab-196a0c6d3431",
       "position": 2,
       "properties": {
-        "description": "When you can see where things live inside the JSON, you can follow a path to grab exactly the value you need. The next step is learning the pattern we use to write those paths.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the annotated JSON and walk through each color-coded pattern. Connect what students just labeled in Level 1 to the correct terms: the outer [ ] is the array, each { } is an object, text and number values are strings and numbers, and location and image are nested objects.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This slide uses a simplified version of the Level 1 JSON — fields like at_aac, intake_date, color, and the :@computed_region entries have been removed to make the four structural patterns easier to see. Give students a heads-up so they aren't thrown off when comparing this to what they annotated. You might say: \"This is the same JSON, cleaned up so the patterns stand out.\" Point students to the JSON Structure section of their unit guide — let them know this same annotated JSON is there as a reference as they work through the remaining levels.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "32fba4aa-ff6b-4738-afab-196a0c6d3431",
+        "lesson_activity.key": "592b4703-cf99-4e80-9361-d07c0d28f8e9"
+      }
+    },
+    {
+      "key": "5231074d-9018-46f2-ae64-fcc0e8177241",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have students get out their Designing Reliable Apps with AI and APIs Unit Guide and turn to Lesson 5.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "5231074d-9018-46f2-ae64-fcc0e8177241",
+        "lesson_activity.key": "592b4703-cf99-4e80-9361-d07c0d28f8e9"
+      }
+    },
+    {
+      "key": "a2744890-20d8-49e9-aa89-ca9a03687a6b",
+      "position": 4,
+      "properties": {
+        "description": "When you can see where things live inside the JSON, you can follow a path to grab exactly the value you need. The next step is learning the pattern we use to write those paths.\n",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "605eefe8-bff8-4930-84af-776e88d413d0",
+        "activity_section.key": "a2744890-20d8-49e9-aa89-ca9a03687a6b",
         "lesson_activity.key": "592b4703-cf99-4e80-9361-d07c0d28f8e9"
       }
     },
     {
       "key": "17918a40-7c3b-40ff-af14-42e6fb97c8d6",
-      "position": 3,
+      "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *dot notation*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 2 to complete Levels 2 through 4.\n- Level 2: Students read the definition and example of dot notation.\n- Level 3: Students write their own definition of dot notation.\n- Level 4: Use the JSON snippet to write dot-notation paths.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students write valid paths that match the JSON (no guessing field names). Ask: Where do you see that property in the JSON? What comes first in your path? Support students by having them point in the JSON and say the path out loud before writing it.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *dot notation*. Point out the code example — show how data[0] gets the first item in the array and .looks_like accesses that key on the object. Direct students to fill in the dot notation definition in their unit guide.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animation to show how an object in the array is accessed and how dot notation is used to access a key on the object and chain into a nested object.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define .map(). Click through the animation to show how .map() processes one item at a time, builds a new object using return, and pulls values from each item using dot notation. Point out that the dot notation students just learned is being used here inside the .map() callback to access values from each pet object.\n\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Connect dot notation to the new idea of transforming arrays. Walk through the before/after JSON to show how .map() selects only the fields needed, renames keys to be more UI-friendly, and can pull values out of nested objects to flatten the structure.\n",
         "progression_name": "Vocab: Dot Notation"
       },
       "seeding_key": {
@@ -2034,13 +2031,20 @@
     },
     {
       "key": "f44dde9e-4c67-406e-98e2-36f86dd93e7e",
-      "position": 4,
+      "position": 6,
       "properties": {
-        "progression_name": "Trace a Dot-Notation Path",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students apply their understanding of dot notation and .map() by designing a cleaned object from the pet shelter JSON, choosing UI-relevant fields, writing dot-notation paths, and explaining their choices — building toward the CFU at Level 4.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Levels 2-4.\n* **Level 2:** Students use the JSON snippet to write dot-notation paths.\n* **Level 3:** Students imagine an info card. Choose three properties, give each a clear key name in the clean object, match each to a dot-notation path in the raw JSON, and explain why it is useful for the UI.\n* **Level 4:** Students demonstrate their understanding of dot notation and .map() by accessing a value in an array and explaining how to create a cleaner array of objects.\n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who choose UI-relevant fields and pair them with correct dot-notation paths. Prompt with: What will each item in your new array look like? How will this help you loop and render cards later?\n\n",
+        "duration": "20",
+        "name": "Design a Mapped Object",
+        "progression_name": "Design a Mapped Object",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If students keep guessing paths, have them trace with their finger from the top-level object down to the value, saying each key out loud as before turning it into code.."
+            "markdown": "If students keep guessing paths, have them trace with their finger from the top-level object down to the value, saying each key out loud as before turning it into code..\n"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use Level 4 responses to check if students can connect JSON structure, dot notation, and UI needs. Strong responses pick appropriate fields, write valid dot-notation paths, and give a clear reason each field helps the UI. Offer quick feedback or conferencing with students who only copy raw field names without thinking about the UI.\n"
           }
         ]
       },
@@ -2050,60 +2054,16 @@
       }
     },
     {
-      "key": "06afd8ff-08cd-4723-8e55-98bf71440bab",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define .map().\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Connect dot notation to the new idea of transforming arrays. Explain that .map() lets you walk through an array and build a cleaner version of each item that is easier to use in the UI.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 5 to complete Levels 5 through 7.\n- Level 5: Students read the formal definition of .map().\n- Level 6: Students write a personal definition for .map() and provide one example.\n- Level 7: Imagine a info card. Choose three properties, give each a clear key name in the clean object, match each to a dot-notation path in the raw JSON, and explain why it is useful for the UI.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who choose UI-relevant fields and pair them with correct dot-notation paths. Prompt with: What will each item in your new array look like? How will this help you loop and render cards later?\n",
-        "progression_name": "Vocab: .map()"
-      },
-      "seeding_key": {
-        "activity_section.key": "06afd8ff-08cd-4723-8e55-98bf71440bab",
-        "lesson_activity.key": "592b4703-cf99-4e80-9361-d07c0d28f8e9"
-      }
-    },
-    {
-      "key": "0894b8ec-8349-450e-b137-e567f97a516b",
-      "position": 6,
-      "properties": {
-        "progression_name": "Design a Mapped Object for the UI",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Use Level 7 responses to check if students can connect JSON structure, dot notation, and UI needs. Strong responses pick appropriate fields, write valid dot-notation paths, and give a clear reason each field helps the UI. Offer quick feedback or conferencing with students who only copy raw field names without thinking about the UI."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "0894b8ec-8349-450e-b137-e567f97a516b",
-        "lesson_activity.key": "592b4703-cf99-4e80-9361-d07c0d28f8e9"
-      }
-    },
-    {
-      "key": "483e5394-ac4c-4125-83c1-8fe9ac890d2b",
-      "position": 7,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "483e5394-ac4c-4125-83c1-8fe9ac890d2b",
-        "lesson_activity.key": "592b4703-cf99-4e80-9361-d07c0d28f8e9"
-      }
-    },
-    {
-      "key": "38b6501f-77de-411e-bfed-cbde5308d7b0",
-      "position": 8,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did understanding the shape of the JSON help you write dot-notation paths? How did dot notation and .map() work together to get UI-ready data?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students connect the full progression: see JSON structure → write accurate dot-notation paths → use .map() plus those paths to design clean, loopable data for the UI. Listen for students mentioning arrays/objects, specific paths, and the idea of building a new, simpler array.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "38b6501f-77de-411e-bfed-cbde5308d7b0",
-        "lesson_activity.key": "592b4703-cf99-4e80-9361-d07c0d28f8e9"
-      }
-    },
-    {
       "key": "2c17d7d7-7203-4c86-af17-044af9caee93",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day. Have students turn and talk with a partner to share their answer using a specific example from the lesson — the JSON they annotated, a dot-notation path they wrote, or a .map() transformation they designed. After partner discussion, invite a few students to share with the class. Listen for students connecting JSON.parse() turning text into a JavaScript array, dot notation accessing specific values, and .map() transforming the array into a cleaner structure for the UI.\n\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time is short, skip the partner talk and do a quick whole-class share-out instead — collect two or three responses that together cover the full answer: parsing the JSON, accessing values with dot notation, and transforming the array with .map(). This ensures the complete picture is named before students leave.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "2c17d7d7-7203-4c86-af17-044af9caee93",
@@ -2111,10 +2071,21 @@
       }
     },
     {
+      "key": "8fca0873-e39c-4aa4-b15c-de77da307bd4",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "8fca0873-e39c-4aa4-b15c-de77da307bd4",
+        "lesson_activity.key": "0b8b4beb-d1cf-4da3-b454-fb2145551f91"
+      }
+    },
+    {
       "key": "dbf9c71a-61e9-4f35-8129-22dc1001e9a7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students see that the same data can be visualized in multiple ways."
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** StStudents see that the same data can be visualized in multiple ways, setting up the lesson's exploration of data-driven content and layout decisions.\nudents see that the same data can be visualized in multiple ways."
       },
       "seeding_key": {
         "activity_section.key": "dbf9c71a-61e9-4f35-8129-22dc1001e9a7",
@@ -2122,22 +2093,10 @@
       }
     },
     {
-      "key": "091a37d7-17b2-4e18-8165-b2cacd5b94b0",
+      "key": "8477bec0-cf55-42bc-bfa3-09e260e9ad45",
       "position": 2,
       "properties": {
-        "description": "Look at these two ways of showing the same dishes. One is cards, the other is a list. Both are representations of the exact same data, but they serve different user needs.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "091a37d7-17b2-4e18-8165-b2cacd5b94b0",
-        "lesson_activity.key": "dae705e6-5ea5-4230-8275-32d1e1633382"
-      }
-    },
-    {
-      "key": "8477bec0-cf55-42bc-bfa3-09e260e9ad45",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *When is it more helpful for a user to see the data as a card layout?*\n- *When is it more helpful to see it in a list view?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students realize layout depends on user needs (e.g., searching vs. browsing). Lists are better for sorting and comparing information quickly, while cards are better for visual exploration and featuring images.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *When is it more helpful for a user to see the data as a card layout?*\n- *When is it more helpful to see it in a list view?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that layout choices depend on user needs. Listen for students connecting card layouts to browsing or image-heavy content, and list views to scanning or comparing data quickly. Both are correct — the goal is for students to see that the same data can serve different purposes depending on how it's displayed.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "8477bec0-cf55-42bc-bfa3-09e260e9ad45",
@@ -2145,18 +2104,34 @@
       }
     },
     {
-      "key": "734c8a6b-6967-4284-887f-abebfd0fc166",
+      "key": "a3b5ffa5-6626-413c-9f9c-b3cbf706a36b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students learn how apps display live data from API calls and how to parse JSON so it can be used effectively in a program.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *data-driven content*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain what it means to parse JSON.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:**  Students explore the relationship between raw JSON data and a finished card layout, then connect that exploration to the key concepts of data-driven content and parsing JSON.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  Click through the animated slide to display the prompts:\n* *What do you notice about the JSON data? What information is there?*\n* *What would you need to understand about the data before you could build the card?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students noticing specific fields in the JSON (track, artist, image_url, etc.) and connecting them to what appears on the card. Guide students toward recognizing that you need to understand what the data contains — its fields, types, and structure — before you can design with it. Avoid introducing \"parsing\" or \"JSON\" as defined terms here; those land on the next slides.\n",
         "duration": "10",
-        "name": "Understanding Data-Driven Content",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Check if students understand that parsing is the 'translation' step between raw data and usable code. Ask: 'Why can't we just use the raw string directly in our HTML?' Use the analogy of reading a sentence. You 'parse' the words to find the subject and the verb so you can understand the meaning. Computers do the same thing with JSON strings to turn them into JavaScript objects."
-          }
-        ]
+        "name": "From JSON to Design"
+      },
+      "seeding_key": {
+        "activity_section.key": "a3b5ffa5-6626-413c-9f9c-b3cbf706a36b",
+        "lesson_activity.key": "92865c38-4858-4ded-9077-ea8cf1675325"
+      }
+    },
+    {
+      "key": "964ec84a-a043-4c3e-a800-96d188911c1a",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have students get out their copy of the Designing Reliable Apps with AI and APIs Unit Guide and turn to Lesson 6.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "964ec84a-a043-4c3e-a800-96d188911c1a",
+        "lesson_activity.key": "92865c38-4858-4ded-9077-ea8cf1675325"
+      }
+    },
+    {
+      "key": "734c8a6b-6967-4284-887f-abebfd0fc166",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *data-driven content*. Direct students to record it in their unit guide. Connect this definition back to the discussion students just had — they were already thinking about data-driven content when they considered what a developer needs to know before building a card from JSON. \"Dynamically generated\" may be unfamiliar; clarify that it means the page content is built from data automatically, so if the data changes, the page updates too — without anyone rewriting the HTML by hand.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the term Parsing JSON and its definition. Direct students to record it in their unit guide. Help students understand that parsing is the translation step between raw data and usable code — computers read JSON strings the same way we read sentences, finding the structure to extract meaning. If students wonder why they can't just use the raw string directly in HTML, use this as a quick comprehension check: a raw string is just text; parsing turns it into a JavaScript object your code can actually work with.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "734c8a6b-6967-4284-887f-abebfd0fc166",
@@ -2165,10 +2140,22 @@
     },
     {
       "key": "89c2842f-a52f-4095-a823-e54e725dc5d5",
-      "position": 2,
+      "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 1 to complete Levels 1 through 4.\n- Level 1: Students read the formal definition of Data-Driven Content.\n- Level 2: Students write a personal definition for Data-Driven Content and provide one example.\n- Level 3: Students read the formal definition of Parsing JSON.\n- Level 4: Students write a personal definition for Parsing JSON and provide one example.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who can connect the concept to apps they use daily. Ask: “What part of Instagram is data-driven? What part is the same every time the app loads?“ Misconception: Students may think all text on a page is data-driven. Clarify that static titles or buttons are not usually data-driven.\n",
-        "progression_name": "Vocab: Data-Driven Content"
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students apply their understanding of JSON and data-driven content by building a web app that renders cards from an array of objects, debugging issues caused by inconsistent JSON structure, and demonstrating their understanding in a CFU.\n\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 1 to complete Levels 1-4. \n* **Level 1:** Students design a visual mockup of a content card or playlist view in Sketch Lab.\n* **Level 2:** Students build a web app to display their music playlist or card view.\n* **Level 3:** Students adjust their loop logic and add safeguards to handle the new JSON structure.\n* **Level 4:** Students answer the Check for Understanding question.\n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Watch for students struggling with loop syntax and make sure they use the correct variable names inside the loop. Remind students that key names in the JSON must match exactly what they use in their code, including case sensitivity — this is a common source of bugs where data simply doesn't show up. Ensure students are choosing keys that make sense for their app (for example, a card view needs the image URL).\n",
+        "duration": "25",
+        "name": "Building from the Blueprint",
+        "progression_name": "Building from the Blueprint",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students that the key name in the JSON must match exactly what they call in their code, including case sensitivity, or the data won't show up.\n"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use Levels 3 and 4 to assess student understanding of the lesson objectives. In Level 3, check whether students have successfully updated their code to handle the new JSON structure. In Level 4, review student responses to assess their ability to loop through data and generate UI cards from an array of objects.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "89c2842f-a52f-4095-a823-e54e725dc5d5",
@@ -2176,119 +2163,10 @@
       }
     },
     {
-      "key": "9b82c4c6-87bf-4c96-824f-7a533c4ec637",
-      "position": 3,
-      "properties": {
-        "progression_name": "Vocab: Parsing JSON"
-      },
-      "seeding_key": {
-        "activity_section.key": "9b82c4c6-87bf-4c96-824f-7a533c4ec637",
-        "lesson_activity.key": "92865c38-4858-4ded-9077-ea8cf1675325"
-      }
-    },
-    {
-      "key": "8852683f-5d6d-47a4-814d-fd98fdb6192a",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students act as UI designers to decide which data fields from JSON are relevant and how they should be visually arranged.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Why is it important to parse the JSON data before designing and coding our web app?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that parsing the JSON data allows the computer to interpret the information properly so it can be displayed on screen. Students should read over the JSON themselves to be able to plan out their design before coding. This prevents errors and ensures the UI displays the most relevant data for the app's purpose. It's much easier to sketch a blueprint than to rewrite complex loop logic later.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 5 to design a visual mockup of a content card or playlist view in Sketch Lab.\n",
-        "duration": "10",
-        "name": "Designing the Blueprint",
-        "progression_name": "Sketch Your Music App",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Students should use AI Chat in Level 5 if they need support brainstorming their app layout. Consider distributing the Showing Data on the Page activity guide for students to plan out their idea on paper."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "8852683f-5d6d-47a4-814d-fd98fdb6192a",
-        "lesson_activity.key": "92865c38-4858-4ded-9077-ea8cf1675325"
-      }
-    },
-    {
-      "key": "26cbe939-0c9f-4aae-8a1f-b048040ada7c",
+      "key": "1d96c0f2-4087-48e8-bccd-2535b63732ff",
       "position": 5,
       "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "26cbe939-0c9f-4aae-8a1f-b048040ada7c",
-        "lesson_activity.key": "92865c38-4858-4ded-9077-ea8cf1675325"
-      }
-    },
-    {
-      "key": "ae8c8cfa-b6a7-40e6-9831-5d0ff7959ae1",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students practice rendering data-driven content using loops and learn to fix common bugs caused by inconsistent backend data.",
-        "duration": "15",
-        "name": "Building from the Blueprint"
-      },
-      "seeding_key": {
-        "activity_section.key": "ae8c8cfa-b6a7-40e6-9831-5d0ff7959ae1",
-        "lesson_activity.key": "92865c38-4858-4ded-9077-ea8cf1675325"
-      }
-    },
-    {
-      "key": "23dfaa60-4a87-4088-b4f1-5260e7808cd9",
-      "position": 7,
-      "properties": {
-        "description": "Now that we have a blueprint, we need to build it. For every artist in data.json, make one card or row of a playlist using your design from the previous level.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "23dfaa60-4a87-4088-b4f1-5260e7808cd9",
-        "lesson_activity.key": "92865c38-4858-4ded-9077-ea8cf1675325"
-      }
-    },
-    {
-      "key": "192c205b-8e12-44e7-bb37-d68afd5e60b1",
-      "position": 8,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 6 to complete Levels 6 and 7.\n- Level 6: Students build a web app to display their music playlist or card view.\n- Level 7: Students adjust their loop logic and add safeguards to handle the new JSON structure.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Watch for students struggling with the loop syntax. Make sure they use the correct variable names inside the loop. Ensure students are choosing keys that make sense for their app. For example, if they are building a card view, they need the image url.\n",
-        "progression_name": "Design Your Web App"
-      },
-      "seeding_key": {
-        "activity_section.key": "192c205b-8e12-44e7-bb37-d68afd5e60b1",
-        "lesson_activity.key": "92865c38-4858-4ded-9077-ea8cf1675325"
-      }
-    },
-    {
-      "key": "34b57c78-0877-4399-b347-961eef3148f2",
-      "position": 9,
-      "properties": {
-        "progression_name": "Debug the Code",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Remind students that the key name in the JSON must match exactly what they call in their code, including case sensitivity, or the data won't show up."
-          },
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Check if students have successfully fixed issues with the updated JSON structure by assessing their code in Level 7. Compare their final web previews in Levels 6 and 7 which should look relatively similar."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "34b57c78-0877-4399-b347-961eef3148f2",
-        "lesson_activity.key": "92865c38-4858-4ded-9077-ea8cf1675325"
-      }
-    },
-    {
-      "key": "0c489247-5759-4401-bd6e-ae402e2113aa",
-      "position": 10,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "0c489247-5759-4401-bd6e-ae402e2113aa",
-        "lesson_activity.key": "92865c38-4858-4ded-9077-ea8cf1675325"
-      }
-    },
-    {
-      "key": "1d96c0f2-4087-48e8-bccd-2535b63732ff",
-      "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *When you make an API call and get back a JSON response, how can you design your code so it still works if a property is different than expected?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that they can design their code to check whether a property exists before using it, provide default or fallback values if something is missing, and avoid hard-coding property names without validation. That way, even if the backend engineers change a field name or structure, their app won’t crash — it will handle the change gracefully and still look good to the user.\n"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *When you make an API call and get back a JSON response, how can you design your code so it still works if a property is different than expected?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that they can write code defensively — checking whether a property exists before using it, providing fallback values for missing data, and avoiding hard-coded property names without validation. Listen for students connecting this to what they experienced in Level 3, where the JSON structure changed and their code broke.\n"
       },
       "seeding_key": {
         "activity_section.key": "1d96c0f2-4087-48e8-bccd-2535b63732ff",
@@ -2297,7 +2175,7 @@
     },
     {
       "key": "d0c1ea46-62c9-4233-b59e-15db098b6eb1",
-      "position": 12,
+      "position": 6,
       "properties": {
         "description": "Sometimes the data we get from a server isn't perfect. It might be messy, in the wrong format, or missing entirely. Your job as a developer is to make the app look good anyway!",
         "remarks": true
@@ -2311,10 +2189,21 @@
       "key": "3c27e93e-1cf3-4cca-b2ed-c3e7b82b067f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day. Have students turn and talk with a partner to share their answer using a specific example from the lesson — their loop logic, a JSON field they accessed, or a card they built. After partner discussion, invite a few students to share out with the class. Listen for students connecting looping through an array to the cards that appeared on the page, and for students who can name the relationship between a JSON field and what showed up in their UI.\n\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "3c27e93e-1cf3-4cca-b2ed-c3e7b82b067f",
+        "lesson_activity.key": "5dc4db5a-8c4f-4709-a0fe-20ae86a18871"
+      }
+    },
+    {
+      "key": "3c6c2661-4208-4c1e-9b74-ed4ab90affb7",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "3c6c2661-4208-4c1e-9b74-ed4ab90affb7",
         "lesson_activity.key": "5dc4db5a-8c4f-4709-a0fe-20ae86a18871"
       }
     },
@@ -2333,7 +2222,7 @@
       "key": "fbc73759-4912-4b0a-b434-fd8815742803",
       "position": 2,
       "properties": {
-        "description": "We've all seen screens like these. Whether it's a 'dinosaur' game when the Wi-Fi drops or a '404' message on a website, these screens are a developer's way of handling a problem. Today, we're going to consider the user experience when a system failure occurs.",
+        "description": "We have all seen screens like these. Whether it is a “404” page, a loading spinner that never ends, or a message that says something went wrong, these screens are a developer’s way of handling a problem. Today, we are going to think about the user experience when a system failure occurs.",
         "remarks": true
       },
       "seeding_key": {
@@ -2345,11 +2234,11 @@
       "key": "20caf013-f88c-4af4-92ed-a5f27d695e7b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How helpful is the error message?*\n- *How did the page make you feel (calm, confused, or blamed)?*\n- *What is one improvement that you would make?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students reflect on whether the cause of failure is clear or not. They should recognize that clear communication and a helpful next step (like a 'Back to homepage' button) maintain user trust even when things break.\n",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How helpful is the error message?*\n- *How does the page make you feel ?*\n- *What is one improvement that you would make?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should notice whether the page feels friendly, clear, and helpful. Push students to identify whether the user knows what happened and what to do next.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Encourage students to think about the 'vibe' of each page. Is it playful and apologetic, or cold and technical? This sets the stage for understanding Human Centered Reliability."
+            "markdown": "Encourage students to think about the “vibe” of the page. Is it playful and apologetic, or cold and technical? This sets the stage for understanding human-centered reliability.\n"
           }
         ]
       },
@@ -2372,7 +2261,7 @@
       "key": "b0f3e50b-1b4c-4807-ac60-2845ced84f43",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How helpful is the error message?*\n- *How did the page make you feel (calm, confused, or blamed)?*\n- *What is one improvement that you would make?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students reflect on whether the cause of failure is clear or not. Push them to think about what they would add or change about this page.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How helpful is the error message?*\n- *How did the page make you feel (calm, confused, or blamed)?*\n- *What is one improvement that you would make?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students reflect on whether the cause of failure is clear or not. Listen for mentions of 'confusing technical language' or 'missing next steps'.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "b0f3e50b-1b4c-4807-ac60-2845ced84f43",
@@ -2380,12 +2269,41 @@
       }
     },
     {
-      "key": "a4a650ac-bc88-4bd2-a8b2-e0cbdb415ef6",
+      "key": "e14a5cd3-e05a-4db2-b34b-f724d42d9574",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students identify failure types in a real-world ticket app scenario and translate user complaints into technical categories.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the When Things Break activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *network failure*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *server failure*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *invalid data*.\n",
-        "duration": "15",
-        "name": "The Diagnostics"
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students learn what Reliability Engineers do and connect the role to trustworthy app experiences.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Reliability Engineer career.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Frame the student task. For this lesson, students will act as a Reliability Engineer for a concert ticketing application.",
+        "duration": "10",
+        "name": "Reliability Engineer"
+      },
+      "seeding_key": {
+        "activity_section.key": "e14a5cd3-e05a-4db2-b34b-f724d42d9574",
+        "lesson_activity.key": "83f9cc83-409d-480c-8787-9bc6c026de13"
+      }
+    },
+    {
+      "key": "3a3666d4-8076-4e58-881b-97d81f707691",
+      "position": 2,
+      "properties": {
+        "description": "Today, you will act as Reliability Engineers for a concert ticketing application. Imagine users are trying to buy tickets, choose seats, or view their account, but something in the system breaks. Your job has three parts. First, you will diagnose what type of failure is happening. Second, you will decide how the app should respond. Third, you will design what the user actually sees.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3a3666d4-8076-4e58-881b-97d81f707691",
+        "lesson_activity.key": "83f9cc83-409d-480c-8787-9bc6c026de13"
+      }
+    },
+    {
+      "key": "a4a650ac-bc88-4bd2-a8b2-e0cbdb415ef6",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *network failure*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *server failure*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *invalid data*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Highlight and compare examples of network failures, server failures, and invalid data.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Reinforce that different failures need different user messages. “Check your internet connection” makes sense for a network failure, but not for invalid data.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a4a650ac-bc88-4bd2-a8b2-e0cbdb415ef6",
@@ -2393,23 +2311,30 @@
       }
     },
     {
-      "key": "60a5ceae-da09-4cd7-b1fd-b28bf7011940",
-      "position": 2,
+      "key": "04498572-c98e-48d5-9ac2-11976544a61a",
+      "position": 4,
       "properties": {
-        "description": "Imagine you're trying to buy tickets for your favorite band, and the app just spins forever. Frustrating, right? Today, we’ll act as the engineers behind a concert ticket app. Right now, our app is fragile and doesn’t load consistently. We're going to learn how to diagnose these failures and build a more resilient app.",
-        "remarks": true
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students identify failure types in a real-world ticket app scenario and translate user complaints into technical categories.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the When Things Break activity guide.\n",
+        "duration": "10",
+        "name": "Diagnose Failures "
       },
       "seeding_key": {
-        "activity_section.key": "60a5ceae-da09-4cd7-b1fd-b28bf7011940",
+        "activity_section.key": "04498572-c98e-48d5-9ac2-11976544a61a",
         "lesson_activity.key": "83f9cc83-409d-480c-8787-9bc6c026de13"
       }
     },
     {
       "key": "ddd8bed1-84fb-4726-a7d5-50ca81a7339e",
-      "position": 3,
+      "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the three main types of failures students will encounter.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1.\n- Level 1: Students read three specific user complaints and identify if they are Network, Server, or Data failures. Have them complete both sections of their activity guide.\n- Level 2: Students read the definition and example of network failure.\n- Level 3: Students write their own definition of server failure and include a real-world example.\n- Level 4: Students read the definition and example of server failure.\n- Level 5: Students write their own definition of network failure and include a real-world example.\n- Level 6: Students read the definition and example of invalid data.\n- Level 7: Students write their own definition of invalid data and include a real-world example.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who might confuse a slow server with a network failure. As students complete the “Considering the User Experience” section, remind students that “user trust” is the primary metric here. Ask: 'Which choice makes the user feel more in control and less confused?'\n",
-        "progression_name": "Diagnose Failures"
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1. In Level 1, students will read three user complaints from a concert ticketing app. For each one, use the user complaint and the system report to diagnose the failure type. Record your answer in the activity guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who confuse network and server failures. Ask: Is the problem that the request cannot travel, or that the server cannot respond?\n",
+        "progression_name": "Diagnose Failures",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students that user complaints usually describe what the user sees, not the exact technical cause. For the technical cause, they should refer to the system log messages.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "ddd8bed1-84fb-4726-a7d5-50ca81a7339e",
@@ -2418,7 +2343,7 @@
     },
     {
       "key": "db1dbc54-8469-42f1-a46b-ca8a2e9b9cd2",
-      "position": 4,
+      "position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -2427,10 +2352,31 @@
       }
     },
     {
-      "key": "c9628e50-edd2-4475-b381-857112cf81e9",
-      "position": 5,
+      "key": "04a05b84-eb5c-4b6e-ac29-5c7667a9cf3e",
+      "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students weigh the trade-offs between showing partial data and blocking access to ensure user trust.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students turn to the Fail Fast vs. Fail Quietly section of their activity guides. Have them discuss the prompt with a partner and record their opinion. As students discuss, listen for whether they can explain their choice in terms of trade-offs — there is no perfect answer here. Students should be able to articulate whether Fail Fast or Fail Quietly better serves user trust and why.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students that 'User Trust' is the primary metric here. Ask: 'Which choice makes the user feel more in control and less confused?'\n"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Check for justifications that connect the technical strategy back to the human experience. For example: “Failing fast prevents the user from trying to buy a seat that is not available.”\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "04a05b84-eb5c-4b6e-ac29-5c7667a9cf3e",
+        "lesson_activity.key": "83f9cc83-409d-480c-8787-9bc6c026de13"
+      }
+    },
+    {
+      "key": "c9628e50-edd2-4475-b381-857112cf81e9",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students design user-facing solutions for technical failures using a reliability checklist and wireframe sketches.\n",
         "duration": "15",
         "name": "Considering the User Experience"
       },
@@ -2441,9 +2387,9 @@
     },
     {
       "key": "064cabd0-f143-4ef8-a6ef-a887c29b6e2b",
-      "position": 6,
+      "position": 9,
       "properties": {
-        "description": "Imagine you’re now the website developer. You have a tough choice. If you show the page without seats, users might think it's sold out. If you block it, they can't even see the band info. What do you do?",
+        "description": "Now it's time to design the fix. You've diagnosed the problem, now what does the user actually see? Decide if you want the page to fail fast or fail quietly and design an appropriate solution.",
         "remarks": true
       },
       "seeding_key": {
@@ -2452,64 +2398,21 @@
       }
     },
     {
-      "key": "09dab312-1736-4609-b92c-fb762a45a03b",
-      "position": 7,
+      "key": "cf81d590-02a4-44cd-84ba-76355a150f0f",
+      "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *The page loaded, but the seat map API is down. Would you choose to show the page with missing data or block off the page entirely?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students explain whether they chose Fail Fast or Fail Quietly in their activity guide. Students should recognize that there is no 'perfect' answer, only trade-offs. If students struggle, ask: 'Which choice makes the app look more broken?'\n",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 2 to design the UI for a types of failures:\n* **Level 2:** Students brainstorm a recovery state design with AI Chat.\n* **Level 3:** Students use Sketch Lab to design a planned failure message for the ticketing app.\n* **Level 4:** Students response to a free-response question. \n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for “the action.” Every error message should give the user something to do, such as retry, refresh, check their connection, choose another seat, or contact support. If a student only writes, “It broke,” ask: What action should the user take now?\n",
+        "progression_name": "Brainstorm With AI",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Remind students that 'User Trust' is the primary metric here. Ask: 'Which choice makes the user feel more in control and less confused?'"
+            "markdown": "Consider distributing the (Optional) Designing for Failure activity guide for students to sketch out their ideas on paper.\n"
           },
           {
             "type": "assessmentOpportunity",
-            "markdown": "Check for justifications that connect the technical strategy back to the human experience (e.g., 'Failing fast prevents the user from trying to buy a seat that isn't there')."
+            "markdown": "Review students’ designs. A successful design includes non-technical language, a clear next step, and a 'calm' tone rather than an alarming or highly technical one.\n"
           }
         ]
-      },
-      "seeding_key": {
-        "activity_section.key": "09dab312-1736-4609-b92c-fb762a45a03b",
-        "lesson_activity.key": "83f9cc83-409d-480c-8787-9bc6c026de13"
-      }
-    },
-    {
-      "key": "b7ac7f15-1403-4f6d-9f1e-50ea48c1d54d",
-      "position": 8,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "b7ac7f15-1403-4f6d-9f1e-50ea48c1d54d",
-        "lesson_activity.key": "83f9cc83-409d-480c-8787-9bc6c026de13"
-      }
-    },
-    {
-      "key": "27c6e162-5aaf-400e-a03c-e3962f8c63c3",
-      "position": 9,
-      "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students design user-facing solutions for technical failures using a reliability checklist and wireframe sketches."
-      },
-      "seeding_key": {
-        "activity_section.key": "27c6e162-5aaf-400e-a03c-e3962f8c63c3",
-        "lesson_activity.key": "83f9cc83-409d-480c-8787-9bc6c026de13"
-      }
-    },
-    {
-      "key": "a903032a-8f88-4691-a6ff-c25a02a0dcd5",
-      "position": 10,
-      "properties": {
-        "description": "Now it's time to design the fix. You've diagnosed the problem, now what does the user actually see? Decide if you want the page to fail fast or fail quickly and design an appropriate solution.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "a903032a-8f88-4691-a6ff-c25a02a0dcd5",
-        "lesson_activity.key": "83f9cc83-409d-480c-8787-9bc6c026de13"
-      }
-    },
-    {
-      "key": "cf81d590-02a4-44cd-84ba-76355a150f0f",
-      "position": 11,
-      "properties": {
-        "progression_name": "Brainstorm With AI"
       },
       "seeding_key": {
         "activity_section.key": "cf81d590-02a4-44cd-84ba-76355a150f0f",
@@ -2517,51 +2420,8 @@
       }
     },
     {
-      "key": "9f93607e-5e84-4b28-ac49-2f94b242be05",
-      "position": 12,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 8 to design the UI for a types of failures.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for 'The Action'. Every error message should give the user something to do (Retry, Refresh, Contact Support). If a student just says 'It broke', ask them: 'What action should the user take now?'\n",
-        "progression_name": "Design the Recovery State",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Consider distributing the (Optional) Designing for Failure activity guide for students to sketch out their ideas on paper."
-          },
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Review students’ designs. A successful design includes non-technical language, a clear next step, and a 'calm' tone rather than an alarming or highly technical one."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "9f93607e-5e84-4b28-ac49-2f94b242be05",
-        "lesson_activity.key": "83f9cc83-409d-480c-8787-9bc6c026de13"
-      }
-    },
-    {
-      "key": "4d5f7019-02f0-4db4-8ad8-c35630d67219",
-      "position": 13,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "4d5f7019-02f0-4db4-8ad8-c35630d67219",
-        "lesson_activity.key": "83f9cc83-409d-480c-8787-9bc6c026de13"
-      }
-    },
-    {
-      "key": "4a744fae-a78d-4adf-a441-ac3d31ffb020",
-      "position": 14,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How does a well-designed error message build trust even when an app is broken?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students understand that transparency and guidance maintain the relationship between the user and the software. Trust is built when the app \"takes responsibility\" for the error and offers a path forward.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "4a744fae-a78d-4adf-a441-ac3d31ffb020",
-        "lesson_activity.key": "83f9cc83-409d-480c-8787-9bc6c026de13"
-      }
-    },
-    {
       "key": "88a1701c-b385-4e5f-8d3b-3f201f7e8ac7",
-      "position": 15,
+      "position": 11,
       "properties": {
         "progression_name": "Check For Understanding"
       },
@@ -2582,32 +2442,16 @@
       }
     },
     {
-      "key": "fd31b9ae-73a0-4e17-8400-6159087dbb84",
-      "position": 1,
-      "properties": {
-        "progression_name": "Predict"
-      },
-      "seeding_key": {
-        "activity_section.key": "fd31b9ae-73a0-4e17-8400-6159087dbb84",
-        "lesson_activity.key": "d0f2618b-4253-41d7-85f8-419e7e8d70d5"
-      }
-    },
-    {
-      "key": "ad432219-272a-460d-996e-76cf39cc70ef",
-      "position": 2,
-      "properties": {
-        "description": "\nLevel 2 Modify: \nLevel 3 Panel:\nLevel 4 Choice: \nLevel 5 CFU"
-      },
-      "seeding_key": {
-        "activity_section.key": "ad432219-272a-460d-996e-76cf39cc70ef",
-        "lesson_activity.key": "d0f2618b-4253-41d7-85f8-419e7e8d70d5"
-      }
-    },
-    {
       "key": "4e85e262-7573-4afa-85fa-a2cc3236b67b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students analyze how different failure experiences affect user trust and begin recognizing that good apps are designed to handle errors intentionally, not accidentally.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Rank the three failure screens from most to least trustworthy. Explain your ranking.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that how a system fails matters as much as whether it fails. A friendly fallback communicates planning and care, a blank screen communicates neglect or instability, and exposed technical errors communicate lack of user-centered design. Students should begin to see trust as a product of intentional error handling.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *When nothing appears on the screen, what questions start running through your head as a user?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify that a blank screen creates uncertainty and loss of control. Without feedback, users may blame themselves, their device, or the app. Students should understand that silence is not neutral, it is a communication failure, and that good systems provide feedback even when something goes wrong.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What message does this error screen send about the reliability of the system?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that exposing raw technical errors reduces perceived reliability and trust. Even if the issue is minor, showing stack traces or code suggests poor planning and lack of audience awareness. Students should understand that error messages must match the user’s level of understanding.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Why does the cat screen make the failure feel less frustrating, even though the problem isn't actually fixed?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that tone, visuals, and clear messaging regulate user emotion and preserve trust. A fallback does not fix the underlying technical problem, but it protects the user experience by communicating awareness and offering guidance. Students should connect this to intentional design through try/catch.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students analyze how different failure experiences affect user trust and begin recognizing that good apps are designed to handle errors intentionally, not accidentally.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Rank the three failure screens from most to least trustworthy. Explain your ranking.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that how a system fails matters as much as whether it fails. A friendly fallback communicates planning and care, a blank screen communicates neglect or instability, and exposed technical errors communicate lack of user-centered design. Students should begin to see trust as a product of intentional error handling.\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may initially rank based on aesthetics rather than trust signals. Push them to articulate why one feels more trustworthy — listen for language around clarity, intention, and user awareness. These ideas will anchor the vocabulary introduced later.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4e85e262-7573-4afa-85fa-a2cc3236b67b",
@@ -2615,256 +2459,170 @@
       }
     },
     {
-      "key": "03775361-feaf-4b6f-bdf3-49f01bc2e282",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students learn to wrap asynchronous fetch logic in try and catch blocks to handle errors gracefully and maintain user trust."
-      },
-      "seeding_key": {
-        "activity_section.key": "03775361-feaf-4b6f-bdf3-49f01bc2e282",
-        "lesson_activity.key": "610c721b-681b-46fc-838f-c6dcbc1743b5"
-      }
-    },
-    {
-      "key": "49b7af70-3783-401b-b77d-73bcceca4546",
+      "key": "778c58c5-b822-483d-bb47-32c94870e303",
       "position": 2,
       "properties": {
-        "description": "Fetching data from an API is like a trapeze act. Usually, the artist catches the bar—that's our data—and the show goes on. But sometimes, things go wrong. The bar is slippery because the data is bad, or the rope snaps because the WiFi is out. Without a safety net, the show ends immediately in a crash. Today, we're going to learn how to build that safety net using try and catch.",
-        "remarks": true
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *When nothing appears on the screen, what questions start running through your head as a user?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify that a blank screen creates uncertainty and loss of control. Without feedback, users may blame themselves, their device, or the app. Students should understand that silence is not neutral, it is a communication failure, and that good systems provide feedback even when something goes wrong.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What message does this error screen send about the reliability of the system?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that exposing raw technical errors reduces perceived reliability and trust. Even if the issue is minor, showing stack traces or code suggests poor planning and lack of audience awareness. Students should understand that error messages must match the user’s level of understanding.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Why does the cat screen make the failure feel less frustrating, even though the problem isn't actually fixed?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that tone, visuals, and clear messaging regulate user emotion and preserve trust. A fallback does not fix the underlying technical problem, but it protects the user experience by communicating awareness and offering guidance. Students should connect this to intentional design through try/catch.\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Avoid introducing the term \"try/catch\" during this discussion — let students sit with the design observation. The goal here is building intuition; the vocabulary comes in the Activity.\n"
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "49b7af70-3783-401b-b77d-73bcceca4546",
-        "lesson_activity.key": "610c721b-681b-46fc-838f-c6dcbc1743b5"
+        "activity_section.key": "778c58c5-b822-483d-bb47-32c94870e303",
+        "lesson_activity.key": "f8093cb6-68c4-447a-bacb-efdd6121e8ab"
       }
     },
     {
-      "key": "1e6bbc57-4124-4418-8674-8797f898e67e",
+      "key": "18e7b053-d574-4638-8145-ac580d487c9a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the trapeze metaphor for fetching data.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "18e7b053-d574-4638-8145-ac580d487c9a",
+        "lesson_activity.key": "f8093cb6-68c4-447a-bacb-efdd6121e8ab"
+      }
+    },
+    {
+      "key": "fd31b9ae-73a0-4e17-8400-6159087dbb84",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students experience what happens when fetch code has no error handling, then connect that failure to the user experience — building the need for try/catch before vocabulary is introduced.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 8, Level 1 by predicting and then running code with a broken URL to see it crash.\n",
+        "duration": "5",
+        "name": "Predict, Run, and Reflect",
+        "progression_name": "Predict, Run, and Reflect",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Use this metaphor to emphasize that errors aren't always the programmer's fault—sometimes the \"rope\" (network) just breaks, and we have to be ready for it."
+            "markdown": "Encourage them to write a genuine prediction rather than a placeholder — even a brief one — so the run feels like a real test of their thinking.\n"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "1e6bbc57-4124-4418-8674-8797f898e67e",
-        "lesson_activity.key": "610c721b-681b-46fc-838f-c6dcbc1743b5"
+        "activity_section.key": "fd31b9ae-73a0-4e17-8400-6159087dbb84",
+        "lesson_activity.key": "d0f2618b-4253-41d7-85f8-419e7e8d70d5"
       }
     },
     {
-      "key": "d1ca7290-0a95-4363-952f-eaeeade68830",
+      "key": "967efffd-c24b-433a-8411-b0d122478275",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\nWhen an app tries to load something and it fails, what should the user see? \nWhy is that better than showing nothing or showing a technical error?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should connect the failed request they just observed to the user experience. Listen for students noticing that users need clear feedback when something goes wrong, not a blank screen or raw error text. This sets up the idea that error handling should protect the user experience, not just prevent code from crashing.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "967efffd-c24b-433a-8411-b0d122478275",
+        "lesson_activity.key": "d0f2618b-4253-41d7-85f8-419e7e8d70d5"
+      }
+    },
+    {
+      "key": "18362d0d-56dc-43a6-926f-6ff1d7639987",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students build conceptual understanding of try, catch, and fallback through the trapeze metaphor and annotated code, using the unit guide to anchor key vocabulary before applying it in the Chaos Challenge.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have students get out their copy of the Designing Reliable Apps with AI and APIs Unit Guide and turn to Lesson 8.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the trapeze metaphor using the three points on the slide. Connect each point to what students just observed in Level 1 — the crash they saw was the show ending without a net.",
+        "duration": "10",
+        "name": "Building the Safety Net ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use this metaphor to emphasize that errors aren't always the programmer's fault—sometimes the \"rope\" (network) just breaks, and we have to be ready for it.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "18362d0d-56dc-43a6-926f-6ff1d7639987",
+        "lesson_activity.key": "d0f2618b-4253-41d7-85f8-419e7e8d70d5"
+      }
+    },
+    {
+      "key": "cfde9bda-f3ab-49b8-844a-e96a10545405",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the try block and direct students to fill in the definition in their unit guide. Connect back to the trapeze metaphor — the code inside the try block is the \"dangerous stunt,\" the part of the program that might fail. Ask students: \"In Level 1, which line of code do you think was the risky one?\" This helps students identify the fetch call as the code that belongs inside a try block.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the catch block and direct students to fill in the definition in their unit guide. Connect back to the trapeze metaphor — the catch block is the safety net waiting below. Emphasize that the net only activates when something goes wrong; if the try block succeeds, the catch block is skipped entirely. Ask students: \"In Level 1, what did the app do when the fetch failed — was there a net?\"\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define fallback and direct students to fill in the definition in their unit guide. Connect back to the warm up — the cat screen students ranked as most trustworthy was a fallback. Now they have the vocabulary for what they already recognized instinctively. Ask students: \"What made the cat screen a good fallback compared to the blank screen or the error message?\"\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animation to reveal each annotation one at a time. As each label appears, connect it back to the vocabulary students just filled in — the try block wraps the risky fetch code, the catch block handles the failure, and line 6 is the fallback. Have students annotate the code segment in their unit guide as you walk through it.\n\n"
       },
       "seeding_key": {
-        "activity_section.key": "d1ca7290-0a95-4363-952f-eaeeade68830",
-        "lesson_activity.key": "610c721b-681b-46fc-838f-c6dcbc1743b5"
+        "activity_section.key": "cfde9bda-f3ab-49b8-844a-e96a10545405",
+        "lesson_activity.key": "d0f2618b-4253-41d7-85f8-419e7e8d70d5"
       }
     },
     {
-      "key": "e0e4939c-9d33-4742-9120-9d5c309d6e1f",
+      "key": "c79d9aaa-1ff0-4325-8409-8c9d8debf18e",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the try block.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Remind students that the code inside the try block is the \"dangerous stunt.\" We only put code there that has a chance of failing, like an API request."
-          }
-        ]
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students apply their understanding of try, catch, and fallback by choosing and implementing a fallback strategy in a realistic error scenario, connecting code decisions to user experience outcomes.\n",
+        "duration": "15",
+        "name": "The Chaos Challenge "
       },
       "seeding_key": {
-        "activity_section.key": "e0e4939c-9d33-4742-9120-9d5c309d6e1f",
-        "lesson_activity.key": "610c721b-681b-46fc-838f-c6dcbc1743b5"
+        "activity_section.key": "c79d9aaa-1ff0-4325-8409-8c9d8debf18e",
+        "lesson_activity.key": "d0f2618b-4253-41d7-85f8-419e7e8d70d5"
       }
     },
     {
-      "key": "bf95f373-7060-4ace-808e-7c57e21c18cf",
+      "key": "b409dd9a-68f0-4e8d-a1b1-faa798ba1f8f",
       "position": 6,
       "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "bf95f373-7060-4ace-808e-7c57e21c18cf",
-        "lesson_activity.key": "610c721b-681b-46fc-838f-c6dcbc1743b5"
-      }
-    },
-    {
-      "key": "f83041cb-5425-4f0a-a949-e297fa74975a",
-      "position": 7,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the catch block."
-      },
-      "seeding_key": {
-        "activity_section.key": "f83041cb-5425-4f0a-a949-e297fa74975a",
-        "lesson_activity.key": "610c721b-681b-46fc-838f-c6dcbc1743b5"
-      }
-    },
-    {
-      "key": "1450fda3-7183-4eee-bbe6-2f688cbae9d4",
-      "position": 8,
-      "properties": {
-        "description": "If the try block is the stunt, the catch block is the safety net. It's waiting right below. If everything goes perfectly, the net is never used. But if there's a fall, the catch block grabs the error so the whole app doesn't hit the ground.",
+        "description": " It's Launch Day, and everything is going wrong! The API is down, and users are starting to complain. You are the Crisis Manager. You need to choose one of three problems and fix it so our users don't abandon the app.\n",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "1450fda3-7183-4eee-bbe6-2f688cbae9d4",
-        "lesson_activity.key": "610c721b-681b-46fc-838f-c6dcbc1743b5"
+        "activity_section.key": "b409dd9a-68f0-4e8d-a1b1-faa798ba1f8f",
+        "lesson_activity.key": "d0f2618b-4253-41d7-85f8-419e7e8d70d5"
       }
     },
     {
-      "key": "26850c35-bb2e-429e-96d6-24db5f76d4e9",
-      "position": 9,
+      "key": "a62c31b5-e69c-4e89-ae6d-42a1a8f08cb8",
+      "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the syntax of a try...catch block."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Briefly describe the three options students can choose from — fixing the error message language (The Apology), adding a fallback image, or adding a Retry button — and direct students to pick the one that interests them most before moving to the levels."
       },
       "seeding_key": {
-        "activity_section.key": "26850c35-bb2e-429e-96d6-24db5f76d4e9",
-        "lesson_activity.key": "610c721b-681b-46fc-838f-c6dcbc1743b5"
+        "activity_section.key": "a62c31b5-e69c-4e89-ae6d-42a1a8f08cb8",
+        "lesson_activity.key": "d0f2618b-4253-41d7-85f8-419e7e8d70d5"
       }
     },
     {
-      "key": "d0091f37-cd86-49af-9896-2473bc298263",
-      "position": 10,
+      "key": "ad432219-272a-460d-996e-76cf39cc70ef",
+      "position": 8,
       "properties": {
-        "description": "Notice the curly braces. Everything inside the 'try' curly braces is protected. If any line in there fails, the computer immediately jumps down to the 'catch' block. It ignores the rest of the 'try' code and runs the safety instructions instead. This is a professional concept called Defensive Design. It means you don't just code for when things go right; you code for when things go wrong. By handling errors gracefully, you keep your users from feeling frustrated or scared that your app is broken or unsafe.",
-        "remarks": true,
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Point out the (error) next to catch. Explain that this is a variable that holds the details of what went wrong, though we don't always have to show it to the user."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "d0091f37-cd86-49af-9896-2473bc298263",
-        "lesson_activity.key": "610c721b-681b-46fc-838f-c6dcbc1743b5"
-      }
-    },
-    {
-      "key": "01c62fa1-f366-44ad-9b05-01bfbad4f4ff",
-      "position": 11,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "01c62fa1-f366-44ad-9b05-01bfbad4f4ff",
-        "lesson_activity.key": "610c721b-681b-46fc-838f-c6dcbc1743b5"
-      }
-    },
-    {
-      "key": "d8a1ecaa-7e0e-4689-991c-e94e757b56d1",
-      "position": 12,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "d8a1ecaa-7e0e-4689-991c-e94e757b56d1",
-        "lesson_activity.key": "610c721b-681b-46fc-838f-c6dcbc1743b5"
-      }
-    },
-    {
-      "key": "3b54ebc9-5969-456c-b166-ec496240b83c",
-      "position": 13,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Imagine a login attempt fails. What should the system show the user, and why?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students will evaluate how different error-handling strategies influence user experience, trust, and system design tradeoffs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 5 to complete Levels 5 through 6.\n- Level 5: Students predict and then run code with a broken URL to see it crash.\n- Level 6: Students modify the code by wrapping the fetch in a try block and adding a catch block that prints to the console.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who forget the curly braces for the catch block. Remind them that catch needs its own block of code to run. Ask: \"Now that you've added the catch, does the red error still stop the whole program?\"\n",
-        "progression_name": "Predict and Run: Broken Fetch"
-      },
-      "seeding_key": {
-        "activity_section.key": "3b54ebc9-5969-456c-b166-ec496240b83c",
-        "lesson_activity.key": "610c721b-681b-46fc-838f-c6dcbc1743b5"
-      }
-    },
-    {
-      "key": "a6f946ce-8920-45fe-a850-d3195017b023",
-      "position": 14,
-      "properties": {
-        "progression_name": "Modify: Broken Fetch",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "In Level 6, the code should successfully print the \"Caught you!\" message instead of crashing the console."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "a6f946ce-8920-45fe-a850-d3195017b023",
-        "lesson_activity.key": "610c721b-681b-46fc-838f-c6dcbc1743b5"
-      }
-    },
-    {
-      "key": "094e96a9-95ce-4fcb-80a3-cf420bb8806d",
-      "position": 15,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "094e96a9-95ce-4fcb-80a3-cf420bb8806d",
-        "lesson_activity.key": "610c721b-681b-46fc-838f-c6dcbc1743b5"
-      }
-    },
-    {
-      "key": "83d1e07e-9cb3-46dc-a595-c78d9890cdc0",
-      "position": 16,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How does using try and catch make your app more trustworthy for users?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that even if a feature fails, a controlled error message maintains user trust better than a crash or technical jargon. Even if the data doesn't load, a polite message or fallback image keeps the user feeling safe and in control.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Chaos Challenge scenarios.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "83d1e07e-9cb3-46dc-a595-c78d9890cdc0",
-        "lesson_activity.key": "610c721b-681b-46fc-838f-c6dcbc1743b5"
-      }
-    },
-    {
-      "key": "5809c5dc-6214-4e24-9057-d403ec2124a0",
-      "position": 17,
-      "properties": {
-        "description": "It's Launch Day, and everything is going wrong! The API is down, and users are starting to complain. You are the Crisis Manager. You need to choose one of three problems and fix it so our users don't abandon the app.",
-        "remarks": true,
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Briefly explain the three options: 1. Fixing 'Tech Speak' (The Apology), 2. Adding a 'Fallback' image, or 3. Adding a 'Retry' button. Encourage students to pick the one that sounds most interesting to them."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "5809c5dc-6214-4e24-9057-d403ec2124a0",
-        "lesson_activity.key": "610c721b-681b-46fc-838f-c6dcbc1743b5"
-      }
-    },
-    {
-      "key": "90d6d4f3-22ed-4bc1-afee-05d7f93d5e34",
-      "position": 18,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 7 to complete Levels 7 through 8.\n- Level 7: Students read the three \"Chaos\" scenarios.\n- Level 8A: Students write code to display a polite, non-technical apology message.\n- Level 8B: Students write code to display a local fallback image when the fetch fails.\n- Level 8C: Student write code to wire up a \"Try Again\" button to the fetch function.\n",
-        "progression_name": "Chaos Challenge Introduction"
-      },
-      "seeding_key": {
-        "activity_section.key": "90d6d4f3-22ed-4bc1-afee-05d7f93d5e34",
-        "lesson_activity.key": "610c721b-681b-46fc-838f-c6dcbc1743b5"
-      }
-    },
-    {
-      "key": "ee66e050-d755-43ab-9bfa-feeeac0aa0c5",
-      "position": 19,
-      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 2 to complete Levels 2-5.\n* **Level 2:** Students modify the code by wrapping the fetch in a try block and adding a catch block that prints to the console.\n* **Level 3:** Students read the three \"Chaos\" scenarios.\n* **Level 4:** Students choose a fallback strategy and update the catch block to show a more helpful response when the fetch fails.\n* **Level 5:** Students demonstrate their understanding of try...catch by explaining how a fallback message changes the user experience when an API request fails.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who forget the curly braces for the catch block — remind them that catch needs its own block of code to run. Ask students whether the red error still stops the whole program now that they've added the catch block.\n",
         "progression_name": "Chaos Challenge",
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "Check that students have placed their fallback logic (the apology, image, or button) inside the catch block, not the try block."
+            "markdown": "Level 5 can be used as a formative assessment of the objective Describe how try and catch contributes to defensive design. Check that students have placed their fallback logic (the apology, image, or button) inside the catch block, not the try block, as evidence of the objective Wrap async fetch logic in try and catch blocks.\n"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "ee66e050-d755-43ab-9bfa-feeeac0aa0c5",
-        "lesson_activity.key": "610c721b-681b-46fc-838f-c6dcbc1743b5"
+        "activity_section.key": "ad432219-272a-460d-996e-76cf39cc70ef",
+        "lesson_activity.key": "d0f2618b-4253-41d7-85f8-419e7e8d70d5"
+      }
+    },
+    {
+      "key": "27f9043d-47dc-4d86-81fa-cee62a7d3c88",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How does using try and catch make your app more trustworthy for users?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that even if a feature fails, a controlled error message maintains user trust better than a crash or technical jargon. Even if the data doesn't load, a polite message or fallback image keeps the user feeling safe and in control.\n\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may give surface responses like \"it doesn't crash.\" Push them to connect to the user — ask what the user feels or thinks when they see a polite fallback versus a blank screen or an error. Listen for language around trust, clarity, and intention, which echoes the warm up discussion and sets up the Wrap Up vocabulary review.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "27f9043d-47dc-4d86-81fa-cee62a7d3c88",
+        "lesson_activity.key": "d0f2618b-4253-41d7-85f8-419e7e8d70d5"
       }
     },
     {
       "key": "f086392a-e841-491e-9389-521abca0cf93",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day. Have students turn and talk with a partner to answer using a specific example from the lesson — the crash they saw in Level 1, the fallback they built in the Chaos Challenge, or the annotated code from the slide. After partner discussion, invite a few students to share out. Listen for students connecting try and catch to both preventing crashes and protecting the user experience.\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "f086392a-e841-491e-9389-521abca0cf93",
@@ -2872,10 +2630,21 @@
       }
     },
     {
+      "key": "53f9b80d-0385-411c-a673-5069f2f75fcd",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "53f9b80d-0385-411c-a673-5069f2f75fcd",
+        "lesson_activity.key": "1a2cd29b-d4e9-49e7-9b8c-e3d04ce2b979"
+      }
+    },
+    {
       "key": "07036994-c17d-4377-a7d7-21ea7e52af23",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students engage with the concept of loading states and how visual cues set user expectations."
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students explore how loading screens communicate app state through visual cues, building intuition for why user-facing feedback matters before the concept of human-centered reliability is introduced."
       },
       "seeding_key": {
         "activity_section.key": "07036994-c17d-4377-a7d7-21ea7e52af23",
@@ -2883,26 +2652,14 @@
       }
     },
     {
-      "key": "690c7b2e-d424-4d25-96f3-a7bec204b9a5",
-      "position": 2,
-      "properties": {
-        "description": "We're going to play a guessing game. I am going to show you a loading screen and you have to describe what you think is about to appear on the screen.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "690c7b2e-d424-4d25-96f3-a7bec204b9a5",
-        "lesson_activity.key": "2f0dd913-425f-4d78-9d14-a7c8f560889d"
-      }
-    },
-    {
       "key": "0f0e891c-5191-47c6-a17b-0d055e643a17",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you think is loading here? How do you know?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify that the shape and layout of the gray boxes (the 'skeleton') mimics the layout of a social media profile. Students should realize that even without text, certain shapes suggest specific types of content. Because gray boxes tell your brain what to expect, you aren't staring at a blank screen; you're looking at a layout that is about to be filled.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Push students to go beyond just saying the app is loading. Have them be specific about what kind of content they would expect to see. If students struggle, ask them to think about the apps they use most often."
+            "markdown": "Push students to go beyond just saying the app is loading. Have them be specific about what kind of content they would expect to see. If students struggle, ask them to think about the apps they use most often.\n"
           }
         ]
       },
@@ -2913,7 +2670,7 @@
     },
     {
       "key": "3bcb5478-a5ca-48bc-ad05-dea251e44631",
-      "position": 4,
+      "position": 3,
       "properties": {
       },
       "seeding_key": {
@@ -2923,7 +2680,7 @@
     },
     {
       "key": "08265f2a-2420-42fc-b3d6-45306e66759f",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What do you think is loading here?*\n- *Why include text as well as a progress bar?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students understand that the progress bar manages patience by showing time remaining, while the text communicates that the app is actively working on specific tasks behind the scenes. Without the bar, you don't know how long it will take. Without the text, you don't know if the app is actually doing anything useful.\n",
         "tips": [
@@ -2940,7 +2697,7 @@
     },
     {
       "key": "643a37ce-7773-43a4-905f-40b1209daf4b",
-      "position": 6,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -2950,9 +2707,15 @@
     },
     {
       "key": "ddef6117-62ad-4cbc-81d5-7e73602105b3",
-      "position": 7,
+      "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What do you think is loading here?*\n- *Why does this represent poor design?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Introduce that poor design can lead to low user trust. Students should realize that without context, the user has no clue what is happening behind the scenes, how long it will take, or what to expect when the page loads. Students should understand that it is best to communicate clearly so users aren't left guessing.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What do you think is loading here?*\n- *Why does this represent poor design?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students understand that without any context — no text, no progress bar, no skeleton layout — the user has no way of knowing what's happening, how long it will take, or what to expect. Poor design erodes user trust. Apps that communicate clearly keep users informed and in control.\n\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students say it \"looks bad\" or \"is confusing,\" push them further: What specifically does the user not know? How might that affect whether they trust the app? This sets up the concept of human-centered reliability introduced right after.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "ddef6117-62ad-4cbc-81d5-7e73602105b3",
@@ -2960,12 +2723,29 @@
       }
     },
     {
+      "key": "6ac121e8-3023-43a9-8f4d-5aa1352604fe",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "6ac121e8-3023-43a9-8f4d-5aa1352604fe",
+        "lesson_activity.key": "2f0dd913-425f-4d78-9d14-a7c8f560889d"
+      }
+    },
+    {
       "key": "09cff89a-9fed-442a-9834-4b1d4c31d64e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students design loading, empty, and error states for a web app by deciding on text and visual assets..\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define human-centered reliability.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students are introduced to the three possible outcomes of a page load — loading, empty, and error states — and connect them to the concept of human-centered reliability before applying these ideas in the Unit Guide and on Code Studio.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have students get out their Designing Reliable Apps with AI and APIs Unit Guide and turn to Lesson 9.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that every time your app makes a request to an API, it needs to handle three scenarios. You never want to leave a user looking at a blank screen or a broken page. Click through the animated slide to explain each state: the loading state, empty state, and error state. Remind students that loading the page perfectly, i.e. following the “Happy Path, is only one possible outcome for the user experience. Reliability comes from handling the other paths well so the user never feels confused or upset.\n\n",
         "duration": "10",
-        "name": "Design Phase"
+        "name": "Introduction to the Three States ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "An empty state and an error state are easy to confuse. A good empty state tells the user why there is no data being displayed. An error state communicates that something went wrong and the user will need to try again. Push students to be precise about the difference.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "09cff89a-9fed-442a-9834-4b1d4c31d64e",
@@ -2973,52 +2753,34 @@
       }
     },
     {
-      "key": "9578cf57-9c1e-41a9-a646-3f798aab33b4",
+      "key": "af8e70ac-0551-4cb5-9222-dd8ef9d0a59a",
       "position": 2,
       "properties": {
-        "description": "Every time your app makes a request to an API, it needs to handle these three scenarios. You never want to leave a user looking at a blank screen or a broken page. Handling these states is what makes an app feel professional and reliable.",
-        "remarks": true
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define human-centered reliability and have students fill in the vocabulary section in their Unit Guide. Connect back to the warm up by pointing out that each loading screen example demonstrated this concept in action — the skeleton screen, the progress bar with text, and the bare spinner all showed different levels of transparency with the user."
       },
       "seeding_key": {
-        "activity_section.key": "9578cf57-9c1e-41a9-a646-3f798aab33b4",
-        "lesson_activity.key": "37053ffc-7e23-46d6-ae37-d198dcef63fa"
-      }
-    },
-    {
-      "key": "7d298994-2f42-4c35-b9cb-e6a156f93a01",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain loading state, empty state, and error state. Remind students that loading the page perfectly, i.e. following the “Happy Path, is only one possible outcome for the user experience. Reliability comes from handling the other paths well so the user never feels confused or upset.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "An empty state isn't the same as an error state. A good empty state tells the user why there is no data being displayed. An error state communicates that something went wrong and the user will need to try again."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "7d298994-2f42-4c35-b9cb-e6a156f93a01",
-        "lesson_activity.key": "37053ffc-7e23-46d6-ae37-d198dcef63fa"
-      }
-    },
-    {
-      "key": "3c5cbdbc-cd94-47f8-b6be-da3423781191",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "3c5cbdbc-cd94-47f8-b6be-da3423781191",
+        "activity_section.key": "af8e70ac-0551-4cb5-9222-dd8ef9d0a59a",
         "lesson_activity.key": "37053ffc-7e23-46d6-ae37-d198dcef63fa"
       }
     },
     {
       "key": "5126359b-9381-46d9-9ab3-f12ac80ab96f",
-      "position": 5,
+      "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students implement the logic for loading, empty, and error states in Web Lab using the assets they designed.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 1 to complete Levels 1 through 5.\n- Level 1: Students read the definition for human-centered reliability.\n- Level 2: Students write their own definition of human-centered reliability.\n- Level 3: Students use Sketch Lab to design their three states.\n- Level 4: Students implement their loading, empty, and error states in Web Lab and test their work.\n- Level 5: Students test a partner’s app by forcing the data array to be empty and checking if their \"vibe\" holds up.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are correctly placing their innerHTML updates before the fetch call begins (for the loading state).\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students design and implement loading, empty, and error states for a web app, test their implementation with a partner, and reflect on how these states support human-centered reliability.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 1 to complete Levels 1-4.\n* **Level 1:** Students use Sketch Lab to design their three states.\n* **Level 2:** Students implement their loading, empty, and error states in Web Lab and test their work.\n* **Level 3:** Students test a partner’s app by forcing the data array to be empty and checking if their \"vibe\" holds up\n* **Level 4:** Students answer reflection questions to demonstrate their understanding of human-centered reliability.\n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are correctly placing their innerHTML updates before the fetch call begins (for the loading state).\n",
         "duration": "20",
-        "name": "Build Phase",
-        "progression_name": "Vocab: Human-Centered Reliability"
+        "name": "Human-Centered Reliability ",
+        "progression_name": "Vocab: Human-Centered Reliability",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The program on Level 3 is designed to choose an outcome randomly. Make sure students keep clicking \"Find flights\" and resetting the results until they have tested all three states.\n"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The levels can be used as a formative assessment of the lesson objectives. \n\nOn Level 2, check that students have successfully implemented a visible loading indicator that appears as soon as the button is clicked. Check that students have implemented an empty state and error state.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5126359b-9381-46d9-9ab3-f12ac80ab96f",
@@ -3026,85 +2788,10 @@
       }
     },
     {
-      "key": "a7136c52-10c2-425e-a224-19008201ec76",
-      "position": 6,
-      "properties": {
-        "progression_name": "Drafting the Web App State"
-      },
-      "seeding_key": {
-        "activity_section.key": "a7136c52-10c2-425e-a224-19008201ec76",
-        "lesson_activity.key": "37053ffc-7e23-46d6-ae37-d198dcef63fa"
-      }
-    },
-    {
-      "key": "cb9732e5-bdd0-4a92-8408-996570390ccf",
-      "position": 7,
-      "properties": {
-        "progression_name": "Build Your Web App State"
-      },
-      "seeding_key": {
-        "activity_section.key": "cb9732e5-bdd0-4a92-8408-996570390ccf",
-        "lesson_activity.key": "37053ffc-7e23-46d6-ae37-d198dcef63fa"
-      }
-    },
-    {
-      "key": "24f93856-1409-43c3-a4e9-d1831832fa04",
-      "position": 8,
-      "properties": {
-        "progression_name": "Getting Feedback",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The program on Level 3 is designed to choose an outcome randomly. Make sure students keep clicking \"Find flights\" and resetting the results until they have tested all three states."
-          },
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Check student responses on Level 2. An exemplar response explains that good communication builds trust and prevents users from guessing what the app is doing. On Level 4, check that students have successfully implemented a visible loading indicator that appears as soon as the button is clicked. Check that students have implemented an empty state and error state."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "24f93856-1409-43c3-a4e9-d1831832fa04",
-        "lesson_activity.key": "37053ffc-7e23-46d6-ae37-d198dcef63fa"
-      }
-    },
-    {
-      "key": "c03d22aa-370c-4eab-a953-00376129cfb8",
-      "position": 9,
-      "properties": {
-        "progression_name": "Check for Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "c03d22aa-370c-4eab-a953-00376129cfb8",
-        "lesson_activity.key": "37053ffc-7e23-46d6-ae37-d198dcef63fa"
-      }
-    },
-    {
-      "key": "0cfb2c03-5076-42a7-87a9-8d183f7a554c",
-      "position": 10,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "0cfb2c03-5076-42a7-87a9-8d183f7a554c",
-        "lesson_activity.key": "37053ffc-7e23-46d6-ae37-d198dcef63fa"
-      }
-    },
-    {
-      "key": "9497948e-7350-4e2a-814c-0f28e6b2453e",
-      "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How does seeing a loading message impact your trust in an app?*\n- *What happens if an app shows nothing when a search has no results?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that clear communication prevents users from assuming the app is broken. Loading states tell the user that the data is loading and not to navigate away from the page. Empty states communicate that no data matches the search criteria, rather than leaving users confused by seeing a blank screen.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "9497948e-7350-4e2a-814c-0f28e6b2453e",
-        "lesson_activity.key": "37053ffc-7e23-46d6-ae37-d198dcef63fa"
-      }
-    },
-    {
       "key": "eaf82bcd-93cd-4d36-9c79-d00ffedfdfed",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day. Have students turn and talk with a partner to share their answer using a specific example from the lesson — a loading, empty, or error state they implemented, or a choice they made in their design. After partner discussion, invite a few students to share out with the class. Listen for students connecting their design and implementation decisions back to the idea of keeping users informed.\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "eaf82bcd-93cd-4d36-9c79-d00ffedfdfed",
@@ -3112,15 +2799,13 @@
       }
     },
     {
-      "key": "30ca2332-23bc-43a8-834d-93f21849d9ba",
+      "key": "c4a20d06-1d5a-4be4-a090-afd77ccc7950",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 6 to complete the End of Lesson Survey.",
-        "name": "End of Lesson Survey",
-        "progression_name": "End of Lesson Survey"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary."
       },
       "seeding_key": {
-        "activity_section.key": "30ca2332-23bc-43a8-834d-93f21849d9ba",
+        "activity_section.key": "c4a20d06-1d5a-4be4-a090-afd77ccc7950",
         "lesson_activity.key": "a60a8286-4646-4a53-a6b6-aab8104ff526"
       }
     },
@@ -3128,7 +2813,7 @@
       "key": "abba226d-81b9-4864-ac09-9f3a371fda2b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students build an intuitive understanding of the tradeoffs between local and live data sources."
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students build an intuitive understanding of the tradeoffs between local and live data sources — framed through the real decision-making a Data Engineer faces when an app goes down."
       },
       "seeding_key": {
         "activity_section.key": "abba226d-81b9-4864-ac09-9f3a371fda2b",
@@ -3139,7 +2824,7 @@
       "key": "a28769b7-5c39-43e4-a67c-25903b535f43",
       "position": 2,
       "properties": {
-        "description": "When we build apps, we make decisions about where data lives. We can hardcode it directly into the app, or fetch it from the internet. Today, you’ll act as developers making that decision.",
+        "description": "Data Engineers are the people responsible for making sure apps always have the data they need — no matter what. One of the most important decisions they make is: where should this data live? Should it be hardcoded into the app, or fetched live from the internet? Today, you're going to think like a Data Engineer. Here's the situation: A Data Engineer at a sports app just got paged at 2am. The app is showing a blank screen — no scores, no stats, nothing. The live API that serves game data went down.",
         "remarks": true
       },
       "seeding_key": {
@@ -3151,7 +2836,7 @@
       "key": "a5b26ce3-9de9-4cf6-adfd-1cbeda4c77c9",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** You're building an app. For each item, decide: Local (hardcoded) or Live (fetched):\n- *Live NBA Game Scores*\n- *Home Icon Image*\n- *List of Music Genres (Rock, Pop, Jazz)*\n- *Weather Forecast*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that frequently changing, time-sensitive data should be Live, while stable structural elements are better stored locally.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What pattern do you notice in the solution below?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify that frequently changing, time-sensitive data should be fetched Live, while stable, structural, or rarely changing data is better stored locally for speed and reliability.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Why not make the Home icon Live?*\n- *Why not make the NBA scores Local?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students articulate why developers choose Local data for stability and instant load times, and Live data for real-time updates and dynamic content.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompt. \n\n*For each item, decide: Local (hardcoded) or Live (fetched):*\n* *Live NBA Game Scores*\n* *Team Logo Image*\n* *List of Sports Categories*\n* *Weather Forecast for Game Day*\n\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that frequently changing, time-sensitive data (scores, weather) should be fetched Live, while stable, structural data (team logos, sport category lists) are better stored locally for speed and reliability. Push students to articulate why — a Data Engineer (whose job is to make those decisions before something breaks) chooses Local for instant load times and reliability, and Live for real-time updates and dynamic content. This is the core tradeoff Data Engineers navigate every time they design a data system. \n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What pattern do you notice in the solution below?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify that frequently changing, time-sensitive data should be fetched Live, while stable, structural, or rarely changing data is better stored locally for speed and reliability.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Why not make the Home icon Live?*\n- *Why not make the NBA scores Local?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students articulate why developers choose Local data for stability and instant load times, and Live data for real-time updates and dynamic content.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "a5b26ce3-9de9-4cf6-adfd-1cbeda4c77c9",
@@ -3159,20 +2844,19 @@
       }
     },
     {
-      "key": "d735da17-5702-438f-ae41-44bdcada8f1e",
+      "key": "864c1892-a58a-4b9d-9c23-1ec4fd0bc203",
       "position": 1,
       "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "d735da17-5702-438f-ae41-44bdcada8f1e",
-        "lesson_activity.key": "b837c16f-ef91-4c7e-9bb9-0d3c5c6b5a4a"
-      }
-    },
-    {
-      "key": "864c1892-a58a-4b9d-9c23-1ec4fd0bc203",
-      "position": 2,
-      "properties": {
-        "progression_name": "Meet the Career: Data Engineer"
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students learn what a Data Engineer does, then simulate the role by building a hybrid app that uses both local and live data to stay functional even when an API fails.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Data Engineer career.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 1 to learn about the Data Engineer career.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students move through the panels, listen for students who are already connecting the career to apps they use. These students can be cold-called during the discussion on the next slide. Also note any students who are rushing through — the panels are short but the discussion will expect them to recall specific details.\n\n",
+        "duration": "15",
+        "name": "Meet the Career: Data Engineer",
+        "progression_name": "Meet the Career: Data Engineer",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may conflate \"Data Engineer\" with \"Data Scientist.\" If this comes up, a quick distinction: Data Scientists analyze data to find insights; Data Engineers build the systems that make sure the data is available, reliable, and in the right place to begin with.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "864c1892-a58a-4b9d-9c23-1ec4fd0bc203",
@@ -3180,15 +2864,31 @@
       }
     },
     {
-      "key": "e2cf8aa4-2836-40b0-aa0c-171fa6f12046",
-      "position": 3,
+      "key": "de772490-c106-4839-bdee-ade270350cb6",
+      "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students will distinguish between live and local data and explain why professional apps use both for speed and reliability.",
-        "duration": "10",
-        "name": "Mini-Lesson: Live vs Local Data"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts.\n* *What does a Data Engineer do, and why does it matter?*\n* *How did you see Data Engineers using AI in their work?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students can describe the Data Engineer role in their own words and identify at least one way Data Engineers use AI tools in their work. This discussion bridges the career introduction to the coding work ahead and primes students to use AI Chat intentionally in the levels.\n"
       },
       "seeding_key": {
-        "activity_section.key": "e2cf8aa4-2836-40b0-aa0c-171fa6f12046",
+        "activity_section.key": "de772490-c106-4839-bdee-ade270350cb6",
+        "lesson_activity.key": "b837c16f-ef91-4c7e-9bb9-0d3c5c6b5a4a"
+      }
+    },
+    {
+      "key": "bf78dcae-bd16-4865-92cf-fb00a65c263a",
+      "position": 3,
+      "properties": {
+        "description": "Today, you will act as Data Engineers. Your job is to build a Global Population Tracker — an app that fetches live country population data from the internet. But like any real app, it needs to keep working even when the live source goes down. You'll set up the app's \"shell\" - the static structure that loads instantly while the app waits for live data, create a backup, and write the logic that decides which data to use. You can also use AI Tutor to help you understand what the API data looks like and build backup data that matches its structure.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The warm-up used a sports app to introduce the concept — this app is different, but the Data Engineer's decisions are exactly the same. If students notice the switch, that's actually worth acknowledging: Data Engineers apply the same local vs. live thinking to any app they build, regardless of what the data is about.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bf78dcae-bd16-4865-92cf-fb00a65c263a",
         "lesson_activity.key": "b837c16f-ef91-4c7e-9bb9-0d3c5c6b5a4a"
       }
     },
@@ -3208,7 +2908,13 @@
       "key": "31aac166-d071-43c7-8dd6-5d7e611d15dd",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *live data*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *local data*.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is the biggest risk of relying ONLY on live data for your app?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify that if the API goes down or the user is offline, the app will be empty or broken (the \"White Screen of Death\").\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *live data*. Remind students that in the warm-up, the NBA scores and weather forecast were examples of live data — they had to be fetched because they change constantly. When a Data Engineer connects an app to an external server to get that kind of real-time data, they're working with live data. Direct students to fill in the vocab term in their Unit Guides.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *local data*. Point back to the warm-up — the team logo and list of sport categories were examples of local data. They don't change often, so there's no need to fetch them. A Data Engineer hardcodes that kind of data directly into the app so it loads instantly, every time, regardless of internet connection. Direct students to fill in the vocab term in their Unit Guides.\n\n\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students sometimes assume local data is always \"worse\" because it can go stale. Push back on this — for stable, structural data, local is actually the better choice. Speed and reliability are features, not compromises.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "31aac166-d071-43c7-8dd6-5d7e611d15dd",
@@ -3219,7 +2925,7 @@
       "key": "2ad3c510-ab6e-4ae5-a03c-ff1eb906f584",
       "position": 6,
       "properties": {
-        "description": "When we build professional apps, we don't just use live data. We also use local data for two very specific jobs.",
+        "description": "Data Engineers weigh four factors when deciding where data should live: speed, reliability, control, and whether the data needs to be up-to-date.",
         "remarks": true
       },
       "seeding_key": {
@@ -3231,7 +2937,13 @@
       "key": "ca0a385e-5245-46c6-bb2d-e042c6c51aee",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain why we use static constants for UI speed and the safety role of fallback data."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through each factor and compare how local and live data handle it. Ask students which column describes the NBA scores from the warm-up, and which describes the team logo. Students should recognize that neither approach is universally better — the right choice depends on what the data is and how it's used.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may assume live data is always better because it's more current. Push back on this — for stable, structural data, local is faster, more reliable, and fully controlled by the engineer. The tradeoff is always intentional, not a compromise.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "ca0a385e-5245-46c6-bb2d-e042c6c51aee",
@@ -3239,20 +2951,19 @@
       }
     },
     {
-      "key": "794e03cd-9ba1-47cd-b7d7-81bbf028cbff",
+      "key": "c0f9ad26-342c-45d4-a63a-44027267663a",
       "position": 8,
       "properties": {
-        "description": "Imagine opening an app and seeing nothing but a blank screen for five seconds while it waits for a server. Static constants let us \"paint\" the app's structure instantly while the live data is still fetching in the background.\n\nAPIs are powerful, but they are also fragile. A server might go down, or a user's Wi-Fi might drop and backup data is our \"Safety Net\" that keeps the app functional even when things go wrong.",
-        "remarks": true,
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Now that students can see how local and live data compare, zoom in on the two specific ways Data Engineers use local data in their apps. Job 1 addresses speed and control. Data Engineers always set up the app shell first because it loads instantly, no internet is needed, and the developer owns the data completely. Job 2 addresses reliability — backup data keeps the app functional when the live source fails. Point out the up-to-date tradeoff: backup data is a safety net, but it may not reflect the latest changes. This is a real risk Data Engineers have to account for. Together, these two uses of local data form what developers call an app shell — the static structure that loads instantly before any live data arrives. Students will build this in Level 2 and create the backup data in Level 3.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Emphasize that backup data must have the exact same structure (the same keys like \"title\" or \"image\") as the real API data. If they don't match, the code will break when it switches to the backup."
+            "markdown": "Backup data must have the exact same structure as the real API data — the same keys, like name and population. If the structure doesn't match, the code will break when it switches to the backup.\n"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "794e03cd-9ba1-47cd-b7d7-81bbf028cbff",
+        "activity_section.key": "c0f9ad26-342c-45d4-a63a-44027267663a",
         "lesson_activity.key": "b837c16f-ef91-4c7e-9bb9-0d3c5c6b5a4a"
       }
     },
@@ -3260,8 +2971,20 @@
       "key": "fe7aa2da-494a-42be-93a5-55637b153e0a",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 1 to complete Levels 1 through 4.\n- Level 1: Students read the formal definition of local data.\n- Level 2: Students write a personal definition for local data and provide one example.\n- Level 3: Students read the formal definition of live data.\n- Level 4: Students write a personal definition for live data and provide one example.\n",
-        "progression_name": "Vocab: Local Data"
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students will design a resilient hybrid web app that combines static configuration, live API data, and local backup data — demonstrating how real-world Data Engineers handle both dynamic content and failure conditions.\n\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 2 to complete Levels 2 through 5.\n* **Level 2:** Students initialize the static UI using an appConfig object.\n* **Level 3:** Students create the backupData array to match the API structure.\n* **Level 4:** Students implement try/catch logic to switch to backup data if the fetch fails.\n* **Level 5:** Students complete a Check for Understanding question\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Check that students' backup data in Level 3 uses the same keys (name and population) as the live API response. This is the most common point of failure in Level 4.\n",
+        "duration": "20",
+        "name": "Build Like a Data Engineer ",
+        "progression_name": "Build Like a Data Engineer",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students finish early, ask them: \"Your app works great now — but what if the backup data also became outdated? How would you solve that as a Data Engineer?\" This pushes early finishers to think beyond the lesson without requiring additional code.\n"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Level 4 is the culmination of the activity and can be used as a formative assessment of the lesson objectives:\n* Compare local arrays and objects with data from an external API — look for students successfully switching between localCountries and live API data\n* Analyze tradeoffs in speed, control, reliability, and having up to date data — look for students who can explain why the app shell loads first and why backup data is a safety net\n* Identify risks of depending on an external API, including service failure and data being up to date— look for students whose try/catch logic correctly handles a failed fetch without breaking the app\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "fe7aa2da-494a-42be-93a5-55637b153e0a",
@@ -3269,93 +2992,24 @@
       }
     },
     {
-      "key": "099c9d7e-19f0-47dd-a0d8-49f45ea46a7c",
-      "position": 10,
-      "properties": {
-        "progression_name": "Vocab: Live Data",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Have students test their definitions against a real example (e.g., a weather app or a saved photo) to check whether they truly understand the difference between local and live data."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "099c9d7e-19f0-47dd-a0d8-49f45ea46a7c",
-        "lesson_activity.key": "b837c16f-ef91-4c7e-9bb9-0d3c5c6b5a4a"
-      }
-    },
-    {
-      "key": "f1203bd6-b8fb-475d-abc8-e3f7ce5b4790",
-      "position": 11,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "f1203bd6-b8fb-475d-abc8-e3f7ce5b4790",
-        "lesson_activity.key": "b837c16f-ef91-4c7e-9bb9-0d3c5c6b5a4a"
-      }
-    },
-    {
-      "key": "8648b775-53cb-4aa0-98f9-f94e2294c941",
-      "position": 12,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How would you decide what data to always load as a static constant? What data should be used as a backup?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students understand that core interface elements and essential structure should be static and reliable, while external or frequently changing data should be dynamic with a fallback to preserve usability.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "8648b775-53cb-4aa0-98f9-f94e2294c941",
-        "lesson_activity.key": "b837c16f-ef91-4c7e-9bb9-0d3c5c6b5a4a"
-      }
-    },
-    {
-      "key": "bf77bddf-9e1b-4582-91b0-b337a4b50273",
-      "position": 13,
-      "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students will design a resilient “hybrid” web app that combines static configuration, live API data, and local backup data, demonstrating how real-world systems handle both dynamic content and failure conditions.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 5 to complete Levels 5 through 7.\n- Level 5: Initialize the static UI using an appConfig object.\n- Level 6: Create the backupData array to match the API structure.\n- Level 7: Implement try/catch logic to switch to backup data if the fetch fails.\n",
-        "duration": "20",
-        "name": "The Hybrid Architecture",
-        "progression_name": "Create an App Shell"
-      },
-      "seeding_key": {
-        "activity_section.key": "bf77bddf-9e1b-4582-91b0-b337a4b50273",
-        "lesson_activity.key": "b837c16f-ef91-4c7e-9bb9-0d3c5c6b5a4a"
-      }
-    },
-    {
-      "key": "9abca4ba-66fc-460c-8f70-4094eb47df66",
-      "position": 14,
-      "properties": {
-        "progression_name": "Store Backup Data"
-      },
-      "seeding_key": {
-        "activity_section.key": "9abca4ba-66fc-460c-8f70-4094eb47df66",
-        "lesson_activity.key": "b837c16f-ef91-4c7e-9bb9-0d3c5c6b5a4a"
-      }
-    },
-    {
-      "key": "f327158a-ff61-47c1-870c-84fdbdb4ddb7",
-      "position": 15,
-      "properties": {
-        "progression_name": "Implement Hybrid Logic",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Level 7 is the culmination. Check that the app renders the static shell immediately and falls back to backupData when the fetch fails."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "f327158a-ff61-47c1-870c-84fdbdb4ddb7",
-        "lesson_activity.key": "b837c16f-ef91-4c7e-9bb9-0d3c5c6b5a4a"
-      }
-    },
-    {
       "key": "e04ed013-3120-4aee-95a6-4626f78b2545",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day. Have students turn and talk with a partner to share their answers. Encourage them to address both halves — why a Data Engineer would choose live data over local data (real-time updates, dynamic content) and what they built to keep the app running when the live source fails (the app shell and backup data). Encourage students to use examples from their own app in Levels 2 through 4, or the sports app scenario from the warm-up. After partner discussion, invite a few students to share out with the class. Listen for students using the terms live data, local data, app shell, backup data, and fallback in their responses.\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "e04ed013-3120-4aee-95a6-4626f78b2545",
+        "lesson_activity.key": "1fe98b09-0dd9-434c-a6d9-2bbdfa88a420"
+      }
+    },
+    {
+      "key": "2bc77620-099d-48f7-875b-2e23679d1da8",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "2bc77620-099d-48f7-875b-2e23679d1da8",
         "lesson_activity.key": "1fe98b09-0dd9-434c-a6d9-2bbdfa88a420"
       }
     },
@@ -4252,28 +3906,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "New CFU Level "
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson5-level4-2026"
-        ],
-        "lesson.key": "Lesson 5: Making Sense of Data",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "ef187174-252b-4b58-a0c7-5e62e0a10afe"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson5-level4-2026"
-      ]
-    },
-    {
-      "chapter": 20,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
         "progression": "Seeing the Shape of the JSON"
       },
       "bonus": false,
@@ -4291,12 +3923,12 @@
       ]
     },
     {
-      "chapter": 21,
-      "position": 3,
+      "chapter": 20,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Trace a Dot-Notation Path"
+        "progression": "Design a Mapped Object"
       },
       "bonus": false,
       "seeding_key": {
@@ -4313,12 +3945,12 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 4,
-      "activity_section_position": 1,
+      "chapter": 21,
+      "position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Design a Mapped Object for the UI"
+        "progression": "Design a Mapped Object"
       },
       "bonus": false,
       "seeding_key": {
@@ -4328,10 +3960,32 @@
         "lesson.key": "Lesson 5: Making Sense of Data",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "0894b8ec-8349-450e-b137-e567f97a516b"
+        "activity_section.key": "f44dde9e-4c67-406e-98e2-36f86dd93e7e"
       },
       "level_keys": [
         "designing-reliable-apps-lesson5-level7-2025-pilot_2025-pilot_2026"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Design a Mapped Object"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson5-level4-2026"
+        ],
+        "lesson.key": "Lesson 5: Making Sense of Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "f44dde9e-4c67-406e-98e2-36f86dd93e7e"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson5-level4-2026"
       ]
     },
     {
@@ -4340,7 +3994,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Vocab: Parsing JSON"
+        "progression": "Building from the Blueprint"
       },
       "bonus": false,
       "seeding_key": {
@@ -4350,7 +4004,7 @@
         "lesson.key": "Lesson 6: Showing Data on the Page",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "9b82c4c6-87bf-4c96-824f-7a533c4ec637"
+        "activity_section.key": "89c2842f-a52f-4095-a823-e54e725dc5d5"
       },
       "level_keys": [
         "designing-reliable-apps-lesson6-choicelevel-test-2025-pilot_2025-_2026"
@@ -4362,7 +4016,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Vocab: Parsing JSON"
+        "progression": "Building from the Blueprint"
       },
       "bonus": false,
       "seeding_key": {
@@ -4372,7 +4026,7 @@
         "lesson.key": "Lesson 6: Showing Data on the Page",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "9b82c4c6-87bf-4c96-824f-7a533c4ec637"
+        "activity_section.key": "89c2842f-a52f-4095-a823-e54e725dc5d5"
       },
       "level_keys": [
         "designing-reliable-apps-lesson6-level1-test-2025-pilot_2025-pilot_2026"
@@ -4384,7 +4038,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Vocab: Parsing JSON"
+        "progression": "Building from the Blueprint"
       },
       "bonus": false,
       "seeding_key": {
@@ -4394,7 +4048,7 @@
         "lesson.key": "Lesson 6: Showing Data on the Page",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "9b82c4c6-87bf-4c96-824f-7a533c4ec637"
+        "activity_section.key": "89c2842f-a52f-4095-a823-e54e725dc5d5"
       },
       "level_keys": [
         "designing-reliable-apps-lesson6-level2-test-2025-pilot_2025-pilot_2026"
@@ -4406,7 +4060,7 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "progression": "Vocab: Parsing JSON"
+        "progression": "Building from the Blueprint"
       },
       "bonus": false,
       "seeding_key": {
@@ -4416,7 +4070,7 @@
         "lesson.key": "Lesson 6: Showing Data on the Page",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "9b82c4c6-87bf-4c96-824f-7a533c4ec637"
+        "activity_section.key": "89c2842f-a52f-4095-a823-e54e725dc5d5"
       },
       "level_keys": [
         "designing-reliable-apps-lesson6-level4-2026"
@@ -4469,10 +4123,10 @@
     {
       "chapter": 29,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Design the Recovery State"
+        "progression": "Brainstorm With AI"
       },
       "bonus": false,
       "seeding_key": {
@@ -4482,7 +4136,7 @@
         "lesson.key": "Lesson 7: When Things Break",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "9f93607e-5e84-4b28-ac49-2f94b242be05"
+        "activity_section.key": "cf81d590-02a4-44cd-84ba-76355a150f0f"
       },
       "level_keys": [
         "designing-reliable-apps-lesson7-sketchlab-choice-2025-pilot_2025-_2026"
@@ -4491,10 +4145,10 @@
     {
       "chapter": 30,
       "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
+      "activity_section_position": 3,
+      "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Brainstorm With AI"
       },
       "bonus": false,
       "seeding_key": {
@@ -4504,7 +4158,7 @@
         "lesson.key": "Lesson 7: When Things Break",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "88a1701c-b385-4e5f-8d3b-3f201f7e8ac7"
+        "activity_section.key": "cf81d590-02a4-44cd-84ba-76355a150f0f"
       },
       "level_keys": [
         "designing-reliable-apps-lesson7-frq-2025-pilo_2025-_2026"
@@ -4516,7 +4170,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Predict"
+        "progression": "Predict, Run, and Reflect"
       },
       "bonus": false,
       "seeding_key": {
@@ -4538,6 +4192,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Chaos Challenge"
       },
       "bonus": false,
       "seeding_key": {
@@ -4559,6 +4214,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Chaos Challenge"
       },
       "bonus": false,
       "seeding_key": {
@@ -4580,6 +4236,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Chaos Challenge"
       },
       "bonus": false,
       "seeding_key": {
@@ -4599,8 +4256,9 @@
       "chapter": 35,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": true,
       "properties": {
+        "progression": "Chaos Challenge"
       },
       "bonus": false,
       "seeding_key": {
@@ -4622,7 +4280,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Drafting the Web App State"
+        "progression": "Vocab: Human-Centered Reliability"
       },
       "bonus": false,
       "seeding_key": {
@@ -4632,7 +4290,7 @@
         "lesson.key": "Lesson 9: Keeping Users Informed",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "a7136c52-10c2-425e-a224-19008201ec76"
+        "activity_section.key": "5126359b-9381-46d9-9ab3-f12ac80ab96f"
       },
       "level_keys": [
         "designing-reliable-apps-lesson9-sketchlab-test-2025-pilot_2025-pi_2026"
@@ -4641,10 +4299,10 @@
     {
       "chapter": 37,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Build Your Web App State"
+        "progression": "Vocab: Human-Centered Reliability"
       },
       "bonus": false,
       "seeding_key": {
@@ -4654,7 +4312,7 @@
         "lesson.key": "Lesson 9: Keeping Users Informed",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "cb9732e5-bdd0-4a92-8408-996570390ccf"
+        "activity_section.key": "5126359b-9381-46d9-9ab3-f12ac80ab96f"
       },
       "level_keys": [
         "designing-reliable-apps-lesson9-level4-weblab-2025-pilot_2025-pil_2026"
@@ -4663,10 +4321,10 @@
     {
       "chapter": 38,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Getting Feedback"
+        "progression": "Vocab: Human-Centered Reliability"
       },
       "bonus": false,
       "seeding_key": {
@@ -4676,7 +4334,7 @@
         "lesson.key": "Lesson 9: Keeping Users Informed",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "24f93856-1409-43c3-a4e9-d1831832fa04"
+        "activity_section.key": "5126359b-9381-46d9-9ab3-f12ac80ab96f"
       },
       "level_keys": [
         "designing-reliable-apps-lesson9-level5-test-2025-pilot_2025-pilot_2026"
@@ -4685,10 +4343,10 @@
     {
       "chapter": 39,
       "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
+      "activity_section_position": 4,
+      "assessment": true,
       "properties": {
-        "progression": "Check for Understanding"
+        "progression": "Vocab: Human-Centered Reliability"
       },
       "bonus": false,
       "seeding_key": {
@@ -4698,7 +4356,7 @@
         "lesson.key": "Lesson 9: Keeping Users Informed",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "c03d22aa-370c-4eab-a953-00376129cfb8"
+        "activity_section.key": "5126359b-9381-46d9-9ab3-f12ac80ab96f"
       },
       "level_keys": [
         "designing-reliable-apps-lesson9-level4-2026"
@@ -4706,28 +4364,6 @@
     },
     {
       "chapter": 40,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "End of Lesson Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson9-pilot-survey_2026"
-        ],
-        "lesson.key": "Lesson 9: Keeping Users Informed",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "30ca2332-23bc-43a8-834d-93f21849d9ba"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson9-pilot-survey_2026"
-      ]
-    },
-    {
-      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4749,12 +4385,12 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Create an App Shell"
+        "progression": "Build Like a Data Engineer"
       },
       "bonus": false,
       "seeding_key": {
@@ -4764,19 +4400,19 @@
         "lesson.key": "Lesson 10: Local vs Live Data",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "bf77bddf-9e1b-4582-91b0-b337a4b50273"
+        "activity_section.key": "fe7aa2da-494a-42be-93a5-55637b153e0a"
       },
       "level_keys": [
         "designing-reliable-apps-lesson10-level5-test_2025-pilot_2025-pilo_2026"
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 42,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Create an App Shell"
+        "progression": "Build Like a Data Engineer"
       },
       "bonus": false,
       "seeding_key": {
@@ -4786,19 +4422,19 @@
         "lesson.key": "Lesson 10: Local vs Live Data",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "bf77bddf-9e1b-4582-91b0-b337a4b50273"
+        "activity_section.key": "fe7aa2da-494a-42be-93a5-55637b153e0a"
       },
       "level_keys": [
         "designing-reliable-apps-lesson10-level6-test_2025-pilot_2025-pilo_2026"
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 43,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Create an App Shell"
+        "progression": "Build Like a Data Engineer"
       },
       "bonus": false,
       "seeding_key": {
@@ -4808,19 +4444,19 @@
         "lesson.key": "Lesson 10: Local vs Live Data",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "bf77bddf-9e1b-4582-91b0-b337a4b50273"
+        "activity_section.key": "fe7aa2da-494a-42be-93a5-55637b153e0a"
       },
       "level_keys": [
         "designing-reliable-apps-lesson10-level7-test_2025-pilot_2025-pilo_2026"
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 44,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": true,
       "properties": {
-        "progression": "Create an App Shell"
+        "progression": "Build Like a Data Engineer"
       },
       "bonus": false,
       "seeding_key": {
@@ -4830,14 +4466,14 @@
         "lesson.key": "Lesson 10: Local vs Live Data",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "bf77bddf-9e1b-4582-91b0-b337a4b50273"
+        "activity_section.key": "fe7aa2da-494a-42be-93a5-55637b153e0a"
       },
       "level_keys": [
         "designing-reliable-apps-lesson10-level5- 2026"
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4859,7 +4495,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 46,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4881,7 +4517,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 47,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4903,7 +4539,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 48,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4925,7 +4561,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 49,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4947,7 +4583,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5188,18 +4824,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson5-level4-2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson5-level4-2026"
-        ],
-        "lesson.key": "Lesson 5: Making Sense of Data",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "ef187174-252b-4b58-a0c7-5e62e0a10afe"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "designing-reliable-apps-lesson5-level1-2025-pilot_2025-pilot_2026",
         "script_level.level_keys": [
           "designing-reliable-apps-lesson5-level1-2025-pilot_2025-pilot_2026"
@@ -5231,7 +4855,19 @@
         "lesson.key": "Lesson 5: Making Sense of Data",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "0894b8ec-8349-450e-b137-e567f97a516b"
+        "activity_section.key": "f44dde9e-4c67-406e-98e2-36f86dd93e7e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson5-level4-2026",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson5-level4-2026"
+        ],
+        "lesson.key": "Lesson 5: Making Sense of Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
+        "activity_section.key": "f44dde9e-4c67-406e-98e2-36f86dd93e7e"
       }
     },
     {
@@ -5243,7 +4879,7 @@
         "lesson.key": "Lesson 6: Showing Data on the Page",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "9b82c4c6-87bf-4c96-824f-7a533c4ec637"
+        "activity_section.key": "89c2842f-a52f-4095-a823-e54e725dc5d5"
       }
     },
     {
@@ -5255,7 +4891,7 @@
         "lesson.key": "Lesson 6: Showing Data on the Page",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "9b82c4c6-87bf-4c96-824f-7a533c4ec637"
+        "activity_section.key": "89c2842f-a52f-4095-a823-e54e725dc5d5"
       }
     },
     {
@@ -5267,7 +4903,7 @@
         "lesson.key": "Lesson 6: Showing Data on the Page",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "9b82c4c6-87bf-4c96-824f-7a533c4ec637"
+        "activity_section.key": "89c2842f-a52f-4095-a823-e54e725dc5d5"
       }
     },
     {
@@ -5279,7 +4915,7 @@
         "lesson.key": "Lesson 6: Showing Data on the Page",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "9b82c4c6-87bf-4c96-824f-7a533c4ec637"
+        "activity_section.key": "89c2842f-a52f-4095-a823-e54e725dc5d5"
       }
     },
     {
@@ -5315,7 +4951,7 @@
         "lesson.key": "Lesson 7: When Things Break",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "9f93607e-5e84-4b28-ac49-2f94b242be05"
+        "activity_section.key": "cf81d590-02a4-44cd-84ba-76355a150f0f"
       }
     },
     {
@@ -5327,7 +4963,7 @@
         "lesson.key": "Lesson 7: When Things Break",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "88a1701c-b385-4e5f-8d3b-3f201f7e8ac7"
+        "activity_section.key": "cf81d590-02a4-44cd-84ba-76355a150f0f"
       }
     },
     {
@@ -5399,7 +5035,7 @@
         "lesson.key": "Lesson 9: Keeping Users Informed",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "a7136c52-10c2-425e-a224-19008201ec76"
+        "activity_section.key": "5126359b-9381-46d9-9ab3-f12ac80ab96f"
       }
     },
     {
@@ -5411,7 +5047,7 @@
         "lesson.key": "Lesson 9: Keeping Users Informed",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "cb9732e5-bdd0-4a92-8408-996570390ccf"
+        "activity_section.key": "5126359b-9381-46d9-9ab3-f12ac80ab96f"
       }
     },
     {
@@ -5423,7 +5059,7 @@
         "lesson.key": "Lesson 9: Keeping Users Informed",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "24f93856-1409-43c3-a4e9-d1831832fa04"
+        "activity_section.key": "5126359b-9381-46d9-9ab3-f12ac80ab96f"
       }
     },
     {
@@ -5435,19 +5071,7 @@
         "lesson.key": "Lesson 9: Keeping Users Informed",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "c03d22aa-370c-4eab-a953-00376129cfb8"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson9-pilot-survey_2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson9-pilot-survey_2026"
-        ],
-        "lesson.key": "Lesson 9: Keeping Users Informed",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "30ca2332-23bc-43a8-834d-93f21849d9ba"
+        "activity_section.key": "5126359b-9381-46d9-9ab3-f12ac80ab96f"
       }
     },
     {
@@ -5471,7 +5095,7 @@
         "lesson.key": "Lesson 10: Local vs Live Data",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "bf77bddf-9e1b-4582-91b0-b337a4b50273"
+        "activity_section.key": "fe7aa2da-494a-42be-93a5-55637b153e0a"
       }
     },
     {
@@ -5483,7 +5107,7 @@
         "lesson.key": "Lesson 10: Local vs Live Data",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "bf77bddf-9e1b-4582-91b0-b337a4b50273"
+        "activity_section.key": "fe7aa2da-494a-42be-93a5-55637b153e0a"
       }
     },
     {
@@ -5495,7 +5119,7 @@
         "lesson.key": "Lesson 10: Local vs Live Data",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "bf77bddf-9e1b-4582-91b0-b337a4b50273"
+        "activity_section.key": "fe7aa2da-494a-42be-93a5-55637b153e0a"
       }
     },
     {
@@ -5507,7 +5131,7 @@
         "lesson.key": "Lesson 10: Local vs Live Data",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "bf77bddf-9e1b-4582-91b0-b337a4b50273"
+        "activity_section.key": "fe7aa2da-494a-42be-93a5-55637b153e0a"
       }
     },
     {
@@ -5598,20 +5222,6 @@
       }
     },
     {
-      "name": "[KEY] Keeping Users Informed",
-      "url": "https://docs.google.com/document/d/1HWnm8as7X2jKu2xPNtoYY18DRzOVdVdozOFHWwsklvs/edit?usp=sharing",
-      "key": "_key_keeping_users_informed",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_keeping_users_informed"
-      }
-    },
-    {
       "name": "[KEY] Making Steps Clear",
       "url": "https://docs.google.com/document/d/1RbS_GXhb1MuI_VaPHC_yMFfEX950TUXyFzDyIXIN8W0/edit?usp=sharing",
       "key": "_key_making_steps_clear",
@@ -5627,7 +5237,7 @@
     },
     {
       "name": "[KEY] (Optional) Designing for Failure",
-      "url": "https://docs.google.com/document/d/1TWu_xPjiGazchBgMHomwjwVlKKiNruX3-sajHX7Zf4A/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1A2FBfhoyu2sCHV6gaNo0r6GgXUtqsKGZl4Q9y3lBttU/edit?usp=drive_link",
       "key": "_key_optional_designing_for_failure",
       "properties": {
         "audience": "Verified Teacher",
@@ -5640,36 +5250,8 @@
       }
     },
     {
-      "name": "[KEY] (Optional) Showing Data on the Page",
-      "url": "https://docs.google.com/document/d/1D2uEnV_C0fBs-NExKMTchtj-C12VBvW8vw8dPzZsL7M/edit?tab=t.0",
-      "key": "_key_optional_showing_data_on_the_page",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_optional_showing_data_on_the_page"
-      }
-    },
-    {
-      "name": "[KEY] Seeing the Shape of the JSON",
-      "url": "https://docs.google.com/document/d/1e6NGsGJpqN_8WDpfGPLP7A6-pprkpW7JpNEwWMqaht0/edit?usp=sharing",
-      "key": "_key_seeing_the_shape_of_the_json",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_seeing_the_shape_of_the_json"
-      }
-    },
-    {
       "name": "[KEY] When Things Break",
-      "url": "https://docs.google.com/document/d/1gm9Z5TfdpwhF2qqftJO19seDwJX-97tb5uKK09RDlf4/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1qLEoJ46r7JOrmhGkBzHF56AtTVnN4bCbn_tsEj6e5vE/edit?usp=drive_link",
       "key": "_key_when_things_break",
       "properties": {
         "audience": "Verified Teacher",
@@ -5711,7 +5293,7 @@
     },
     {
       "name": "(Optional) Designing for Failure",
-      "url": "https://docs.google.com/document/d/1DNW-QtZTH5i8NA64f3bSDDNB3LMewugFTukRwn2CLcE/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1zyv7Ju2T4XP9KbPaegimM9ErgUPaYwx2zx7xPt3942Q/edit?usp=drive_link",
       "key": "_optional_designing_for_failure",
       "properties": {
         "audience": "Student",
@@ -5722,36 +5304,6 @@
       },
       "seeding_key": {
         "resource.key": "_optional_designing_for_failure"
-      }
-    },
-    {
-      "name": "(Optional) Keeping Users Informed",
-      "url": "https://docs.google.com/document/d/1bSY4l39EI79q9lNVIZUlMuapdOgURY-wglNsepLkuho/edit?usp=sharing",
-      "key": "_optional_keeping_users_informed",
-      "properties": {
-        "audience": "Student",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "_optional_keeping_users_informed"
-      }
-    },
-    {
-      "name": "(Optional) Showing Data on the Page",
-      "url": "https://docs.google.com/document/d/1BTCN99Eg7Lpl4Hb4PHaG-vLvFscBqIQc9Rd1chL-6Oc/edit?tab=t.0#heading=h.10sosi3gwomj",
-      "key": "_optional_showing_data_on_the_page",
-      "properties": {
-        "audience": "Student",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "_optional_showing_data_on_the_page"
       }
     },
     {
@@ -5789,7 +5341,7 @@
     },
     {
       "name": "Catching Problems",
-      "url": "https://docs.google.com/presentation/d/11lr6R-xHn_UmzYGnZcgdzeU5JyM8QjlX4LMgQEkwl74/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1Uvigt_5CFbo0PfhbMnLqLhz2GUjaZ0HuMg2tTBAAW_c/edit?usp=sharing",
       "key": "catching_problems",
       "properties": {
         "audience": "Teacher",
@@ -5859,7 +5411,7 @@
     },
     {
       "name": "Keeping Users Informed",
-      "url": "https://docs.google.com/presentation/d/1jwgRgaMSEAS21k5Fv-ucPi2z0PGfueWQp-0D4kKDa04/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1O8juzSsJMAmUXU4QuC5eftzFlouWwOFUi4Uc2u7JTt0/edit?usp=sharing",
       "key": "keeping_users_informed",
       "properties": {
         "audience": "Teacher",
@@ -5873,7 +5425,7 @@
     },
     {
       "name": "Local vs Live Data",
-      "url": "https://docs.google.com/presentation/d/1Dk5iaXKMnquo7K5suajiOQiXsBMhHhtZfrRSuCcMeVw/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1KeEkp3Qj7xGHHBslfQstC4APfI_Q6JX5Zxsdlk7vJhA/edit?usp=sharing",
       "key": "local_vs_live_data",
       "properties": {
         "audience": "Teacher",
@@ -5887,7 +5439,7 @@
     },
     {
       "name": "Making Sense of Data",
-      "url": "https://docs.google.com/presentation/d/11xdVSoudl0mga5P3PDsrV3hfA0EJf5KFKGyiMe1YETA/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1SDEwhxs_AC9WSYu8EhUg4sCTYM7EuCpk9XXfvbTa9NI/edit?usp=sharing",
       "key": "making_sense_of_data",
       "properties": {
         "audience": "Teacher",
@@ -5943,23 +5495,8 @@
       }
     },
     {
-      "name": "Seeing the Shape of the JSON",
-      "url": "https://docs.google.com/document/d/1VjtSR53LmNXfXGDDIyygrZ3CO-zvNS3pVzSELerHco0/edit?usp=drive_link",
-      "key": "seeing_the_shape_of_the_json",
-      "properties": {
-        "audience": "Student",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "seeing_the_shape_of_the_json"
-      }
-    },
-    {
       "name": "Showing Data on the Page",
-      "url": "https://docs.google.com/presentation/d/1UTuXYN73XqPDAjkhrXDH6em-r9kOleQ-zfCxlJBgq2M/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1v1Ae8uhAltrdAn0Xx35MpM0PxbZfhtu4MGHtG4ZkYHk/edit?usp=sharing",
       "key": "showing_data_on_the_page",
       "properties": {
         "audience": "Teacher",
@@ -5973,7 +5510,7 @@
     },
     {
       "name": "When Things Break",
-      "url": "https://docs.google.com/presentation/d/1-qs2qv1GpCFMvhOIfThWQ525yaBM6JFYWVD54wDxoog/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1fzKO6sfMlcAj2l8ixjG6IgHtPQOBBS66WE2KMqq0EKQ/edit?usp=sharing",
       "key": "when_things_break",
       "properties": {
         "audience": "Teacher",
@@ -5987,7 +5524,7 @@
     },
     {
       "name": "When Things Break",
-      "url": "https://docs.google.com/document/d/1s22YF1h2KITM2r0SOPrWcT4h-D_uGA_62198r12KHYk/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1Ju5EauFqAV5Zkb2aLZY1UA4E9x4IZMW0s0Xb53uVwUQ/edit?usp=drive_link",
       "key": "when_things_break_1",
       "properties": {
         "audience": "Student",
@@ -6060,6 +5597,18 @@
     }
   ],
   "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Local vs Live Data",
+        "resource.key": "_exemplar_designing_reliable_apps_with_ai_and_apis_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Local vs Live Data",
+        "resource.key": "designing_reliable_apps_with_ai_and_apis_unit_guide"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Lesson 10: Local vs Live Data",
@@ -6195,7 +5744,13 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 5: Making Sense of Data",
-        "resource.key": "_key_seeing_the_shape_of_the_json"
+        "resource.key": "_exemplar_designing_reliable_apps_with_ai_and_apis_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Making Sense of Data",
+        "resource.key": "designing_reliable_apps_with_ai_and_apis_unit_guide"
       }
     },
     {
@@ -6206,20 +5761,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson 5: Making Sense of Data",
-        "resource.key": "seeing_the_shape_of_the_json"
+        "lesson.key": "Lesson 6: Showing Data on the Page",
+        "resource.key": "_exemplar_designing_reliable_apps_with_ai_and_apis_unit_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 6: Showing Data on the Page",
-        "resource.key": "_key_optional_showing_data_on_the_page"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 6: Showing Data on the Page",
-        "resource.key": "_optional_showing_data_on_the_page"
+        "resource.key": "designing_reliable_apps_with_ai_and_apis_unit_guide"
       }
     },
     {
@@ -6261,19 +5810,31 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 8: Catching Problems",
+        "resource.key": "_exemplar_designing_reliable_apps_with_ai_and_apis_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Catching Problems",
         "resource.key": "catching_problems"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson 9: Keeping Users Informed",
-        "resource.key": "_key_keeping_users_informed"
+        "lesson.key": "Lesson 8: Catching Problems",
+        "resource.key": "designing_reliable_apps_with_ai_and_apis_unit_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 9: Keeping Users Informed",
-        "resource.key": "_optional_keeping_users_informed"
+        "resource.key": "_exemplar_designing_reliable_apps_with_ai_and_apis_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Keeping Users Informed",
+        "resource.key": "designing_reliable_apps_with_ai_and_apis_unit_guide"
       }
     },
     {
@@ -6418,6 +5979,16 @@
       }
     },
     {
+      "key": "parsing_json",
+      "word": "parsing JSON",
+      "definition": "analyzing a string of JSON symbols to determine its structure and break it down into smaller, meaningful components",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "parsing_json"
+      }
+    },
+    {
       "key": "promise",
       "word": "Promise",
       "definition": "an object that represents a value that is not available yet but will be resolved in the future. It has three states: pending, fulfilled, or rejected",
@@ -6505,6 +6076,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 6: Showing Data on the Page",
+        "vocabulary.key": "parsing_json"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 7: When Things Break",
         "vocabulary.key": "invalid_data"
       }
@@ -6551,7 +6128,7 @@
     {
       "key": "083cae7e-f913-4637-a931-69e97f6d17ff",
       "properties": {
-        "description": "Identify arrays and nested objects in a sample JSON"
+        "description": "Identify arrays, objects, and nested objects in a JSON response"
       },
       "seeding_key": {
         "lesson.key": "Lesson 5: Making Sense of Data",
@@ -6601,7 +6178,7 @@
     {
       "key": "1c59da5a-ea9b-4141-9738-4027b48d82de",
       "properties": {
-        "description": "Define error handling as anticipating and managing problems in code"
+        "description": "Explain how different error-handling strategies affect user trust and human-centered reliability"
       },
       "seeding_key": {
         "lesson.key": "Lesson 7: When Things Break",
@@ -6679,16 +6256,6 @@
       }
     },
     {
-      "key": "5d7cd589-cf91-48c1-b3d8-f5a1be7d03ee",
-      "properties": {
-        "description": "Identify common error types in networked apps, such as network failure and invalid data"
-      },
-      "seeding_key": {
-        "lesson.key": "Lesson 7: When Things Break",
-        "objective.key": "5d7cd589-cf91-48c1-b3d8-f5a1be7d03ee"
-      }
-    },
-    {
       "key": "625cc52f-6421-48e1-954e-653d17c69a21",
       "properties": {
         "description": "Wrap async fetch logic in try and catch blocks"
@@ -6731,7 +6298,7 @@
     {
       "key": "80eb203c-ad45-4799-b452-871b354b6db6",
       "properties": {
-        "description": "Identify risks of depending on an external API, including data integrity and accountability"
+        "description": "Identify risks of depending on an external API, including service failure and data being up to date"
       },
       "seeding_key": {
         "lesson.key": "Lesson 10: Local vs Live Data",
@@ -6791,7 +6358,7 @@
     {
       "key": "a9082a4f-447a-454c-89de-d5d444842661",
       "properties": {
-        "description": "Connect error handling to user trust and human centered reliability"
+        "description": "Identify common error types in networked apps, such as network failure and invalid data"
       },
       "seeding_key": {
         "lesson.key": "Lesson 7: When Things Break",
@@ -6821,7 +6388,7 @@
     {
       "key": "d5006578-17f6-454e-841f-22c43b74c4c4",
       "properties": {
-        "description": "Analyze tradeoffs in speed, control, freshness, and reliability"
+        "description": "Analyze trade offs in speed, control, reliability, and having up to date data"
       },
       "seeding_key": {
         "lesson.key": "Lesson 10: Local vs Live Data",
@@ -6871,7 +6438,7 @@
     {
       "key": "f6d3d5d2-30a7-41be-b878-4d452dfeb3bf",
       "properties": {
-        "description": "Access specific properties from the parsed data"
+        "description": "Use dot notation to access specific properties from JSON data"
       },
       "seeding_key": {
         "lesson.key": "Lesson 5: Making Sense of Data",
@@ -6881,7 +6448,7 @@
     {
       "key": "ffadf938-60ad-4020-8c53-4ca0241190b2",
       "properties": {
-        "description": "Parse JSON from an API response into JavaScript objects"
+        "description": "Use .map() to transform an array of JSON objects into a cleaner structure"
       },
       "seeding_key": {
         "lesson.key": "Lesson 5: Making Sense of Data",
