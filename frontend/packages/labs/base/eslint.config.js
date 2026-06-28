@@ -29,6 +29,24 @@ export default defineConfig([
           caughtErrorsIgnorePattern: '^_',
         },
       ],
+      // labs/base (@code-dot-org/lab) is a leaf dependency: specific lab
+      // packages depend on it, never the reverse. A `base -> specific-lab`
+      // edge creates a dependency cycle and breaks the build. Lab selection
+      // happens at the host via appName/LabRegistry, never a static import.
+      // New lab packages following the `*-lab` convention are covered by the
+      // glob; add any that do not (e.g. `ailab`) by name.
+      'no-restricted-imports': [
+        'error',
+        {
+          patterns: [
+            {
+              group: ['@code-dot-org/*-lab', '@code-dot-org/ailab'],
+              message:
+                'labs/base must not import a specific lab package — it is a leaf dependency. Labs depend on @code-dot-org/lab, never the reverse. Select labs at the host via appName/LabRegistry instead.',
+            },
+          ],
+        },
+      ],
     },
   },
 ]);
