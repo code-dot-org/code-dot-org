@@ -73,7 +73,7 @@
   },
   "devDependencies": {
     "@code-dot-org/lint-config": "workspace:*",
-    "@reduxjs/toolkit": "^2.8.2",
+    "@reduxjs/toolkit": "catalog:",
     "@sentry/browser": "catalog:",
     "@tanstack/react-query": "catalog:",
     "@types/flat": "^5.0.5",
@@ -87,7 +87,7 @@
     "msw": "catalog:",
     "prettier": "catalog:",
     "react": "catalog:",
-    "react-redux": "^9.2.0",
+    "react-redux": "catalog:",
     "typescript": "catalog:",
     "uuid": "^14.0.0",
     "vite": "catalog:",

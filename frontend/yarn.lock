@@ -1863,7 +1863,7 @@ __metadata:
   resolution: "@code-dot-org/core@workspace:packages/core"
   dependencies:
     "@code-dot-org/lint-config": "workspace:*"
-    "@reduxjs/toolkit": "npm:^2.8.2"
+    "@reduxjs/toolkit": "catalog:"
     "@sentry/browser": "catalog:"
     "@tanstack/react-query": "catalog:"
     "@types/flat": "npm:^5.0.5"
@@ -1880,7 +1880,7 @@ __metadata:
     msw: "catalog:"
     prettier: "catalog:"
     react: "catalog:"
-    react-redux: "npm:^9.2.0"
+    react-redux: "catalog:"
     tldts: "npm:^7.0.23"
     typescript: "catalog:"
     uuid: "npm:^14.0.0"
