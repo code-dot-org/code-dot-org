@@ -9,7 +9,7 @@ import {themeOptions, themes} from '../src/themes';
 
 import {modes} from './modes';
 
-import moduleStyles from './demo.module.scss';
+import moduleStyles from './demo.module.css';
 
 /**
  * Dev playground for the Blockly workspace. A mode selector swaps the lesson —

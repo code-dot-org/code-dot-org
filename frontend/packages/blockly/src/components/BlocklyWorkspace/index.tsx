@@ -24,7 +24,7 @@ import type {
   Environment,
 } from '../../types';
 
-import moduleStyles from './blocklyWorkspace.module.scss';
+import moduleStyles from './blocklyWorkspace.module.css';
 
 export interface BlocklyWorkspaceProps<T extends Environment & object> {
   /** A set of custom blocks to load within the Blockly instance. */
