@@ -1,19 +1,29 @@
+import {Typography} from '@mui/material';
 import {useState} from 'react';
+
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
+import Toggle from '@code-dot-org/component-library/toggle';
 
 import {BlocklyMarkdown, BlocklyProvider, BlocklyWorkspace} from '../src';
 import {themeOptions, themes} from '../src/themes';
 
 import {modes} from './modes';
 
-const INSTRUCTIONS_WIDTH = 360;
+import moduleStyles from './demo.module.scss';
 
 /**
- * Dev playground for the Blockly workspace. A mode selector (above the
- * instructions) swaps the lesson — its instructions, toolbox, starting blocks,
- * and plugins — a theme selector picks the block palette, and a light/dark
- * toggle restyles both the blocks and the surrounding chrome live. The
- * instructions render through BlocklyMarkdown on the left (so any inline `<xml>`
- * shows as a live block preview); the editable workspace fills the rest.
+ * Dev playground for the Blockly workspace. A mode selector swaps the lesson —
+ * its instructions, toolbox, starting blocks, and plugins — a theme selector
+ * picks the block palette, and a light/dark toggle restyles both the blocks and
+ * the surrounding chrome live. The instructions render through BlocklyMarkdown
+ * on the left (so any inline `<xml>` shows as a live block preview); the
+ * editable workspace fills the rest.
+ *
+ * The chrome is built from the design system, mirroring the markdown package's
+ * demo: DSCO controls (SimpleDropdown, Toggle) and MUI Typography, with layout
+ * in a CSS module. `data-theme` on the root bridges to the design-system color
+ * variables so the chrome (and the BlocklyMarkdown instructions) track the
+ * light/dark toggle; the Blockly block palette is themed separately via `theme`.
  */
 export const Demo = () => {
   const [modeId, setModeId] = useState(modes[0].id);
@@ -25,69 +35,38 @@ export const Demo = () => {
   // fall back to the light theme if a variant is ever missing.
   const theme = (dark && themes[`${themeName}-dark`]) || themes[themeName];
 
-  const selectStyle = {fontSize: 14, padding: '4px 8px'};
-
   return (
-    <div
-      // data-theme drives the design-system color variables the BlocklyMarkdown
-      // instructions (and this chrome) read; the Blockly block palette is themed
-      // separately via the `theme` prop below.
-      data-theme={dark ? 'Dark' : 'Light'}
-      style={{
-        background: 'var(--background-neutral-primary)',
-        color: 'var(--text-neutral-primary)',
-        display: 'flex',
-        flexDirection: 'column',
-        fontFamily: 'sans-serif',
-        height: '100vh',
-      }}
-    >
-      <header
-        style={{
-          alignItems: 'center',
-          borderBottom: '1px solid var(--border-neutral-secondary, #ccc)',
-          display: 'flex',
-          flex: '0 0 auto',
-          gap: 24,
-          padding: '8px 16px',
-        }}
-      >
-        <label style={{flex: `0 0 ${INSTRUCTIONS_WIDTH}px`}}>
-          Mode{' '}
-          <select
-            value={modeId}
-            onChange={event => setModeId(event.target.value)}
-            style={selectStyle}
-          >
-            {modes.map(candidate => (
-              <option key={candidate.id} value={candidate.id}>
-                {candidate.name}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label>
-          Theme{' '}
-          <select
-            value={themeName}
-            onChange={event => setThemeName(event.target.value)}
-            style={selectStyle}
-          >
-            {themeOptions.map(option => (
-              <option key={option.value} value={option.value}>
-                {option.text}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            checked={dark}
-            onChange={event => setDark(event.target.checked)}
-          />{' '}
-          Dark mode
-        </label>
+    <div className={moduleStyles.app} data-theme={dark ? 'Dark' : 'Light'}>
+      <header className={moduleStyles.header}>
+        <Typography variant="h6" component="h1" className={moduleStyles.title}>
+          Blockly demo
+        </Typography>
+        <SimpleDropdown
+          name="mode"
+          labelText="Mode"
+          selectedValue={modeId}
+          onChange={event => setModeId(event.target.value)}
+          items={modes.map(candidate => ({
+            value: candidate.id,
+            text: candidate.name,
+          }))}
+        />
+        <SimpleDropdown
+          name="theme"
+          labelText="Theme"
+          selectedValue={themeName}
+          onChange={event => setThemeName(event.target.value)}
+          items={themeOptions.map(option => ({
+            value: option.value,
+            text: option.text,
+          }))}
+        />
+        <Toggle
+          name="dark"
+          label="Dark mode"
+          checked={dark}
+          onChange={event => setDark(event.target.checked)}
+        />
       </header>
 
       {mode.id === 'flyoutSpike' ? (
@@ -101,17 +80,8 @@ export const Demo = () => {
           plugins={mode.plugins}
           theme={theme}
         >
-          <div style={{display: 'flex', flex: '1 1 auto', minHeight: 0}}>
-            <aside
-              aria-label="Instructions"
-              style={{
-                borderRight: '1px solid var(--border-neutral-secondary, #ccc)',
-                boxSizing: 'border-box',
-                flex: `0 0 ${INSTRUCTIONS_WIDTH}px`,
-                overflowY: 'auto',
-                padding: 16,
-              }}
-            >
+          <div className={moduleStyles.body}>
+            <aside aria-label="Instructions" className={moduleStyles.sidebar}>
               <BlocklyMarkdown
                 draggable
                 content={mode.instructions}
@@ -121,25 +91,14 @@ export const Demo = () => {
               />
             </aside>
 
-            <main
-              aria-label="Coding workspace"
-              style={{display: 'flex', flex: '1 1 auto', minWidth: 0}}
-            >
+            <main aria-label="Coding workspace" className={moduleStyles.canvas}>
               <BlocklyWorkspace startBlocks={mode.startBlocks} theme={theme} />
             </main>
           </div>
         </BlocklyProvider>
       ) : (
-        <div style={{display: 'flex', flex: '1 1 auto', minHeight: 0}}>
-          <aside
-            style={{
-              borderRight: '1px solid var(--border-neutral-secondary, #ccc)',
-              boxSizing: 'border-box',
-              flex: `0 0 ${INSTRUCTIONS_WIDTH}px`,
-              overflowY: 'auto',
-              padding: 16,
-            }}
-          >
+        <div className={moduleStyles.body}>
+          <aside className={moduleStyles.sidebar}>
             <BlocklyMarkdown
               content={mode.instructions}
               blocks={mode.blocks}
@@ -148,7 +107,7 @@ export const Demo = () => {
             />
           </aside>
 
-          <main style={{display: 'flex', flex: '1 1 auto', minWidth: 0}}>
+          <main className={moduleStyles.canvas}>
             {/* Remount per mode so each loads its own toolbox, start blocks, and
                 plugins from a clean workspace rather than mutating the previous
                 one. */}

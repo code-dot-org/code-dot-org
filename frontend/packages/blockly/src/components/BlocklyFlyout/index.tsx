@@ -1,5 +1,5 @@
 import * as Blockly from 'blockly/core';
-import {useEffect, useRef} from 'react';
+import {createElement, useEffect, useRef} from 'react';
 import type {MutableRefObject, ReactElement} from 'react';
 
 import {DriverEvent} from '../../Driver';
@@ -159,6 +159,14 @@ export interface BlocklyFlyoutProps {
    *   screen-reader landmark summary.
    */
   containerRole?: 'region' | 'group';
+  /**
+   * Flow the flyout inline rather than as a block. The container becomes an
+   * `inline-block` `<span>` (valid inside a `<p>`, so it can sit mid-paragraph),
+   * and the flyout's background panel is suppressed so just the block(s) appear
+   * in the text. Use for blocks embedded in prose (e.g. {@link BlocklyMarkdown});
+   * leave off for a standalone side panel.
+   */
+  inline?: boolean;
   /** Receives the flyout's internal workspace once it is created. */
   workspaceRef?: MutableRefObject<Blockly.WorkspaceSvg | null>;
 }
@@ -184,9 +192,10 @@ export function BlocklyFlyout({
   className,
   label = 'Block palette',
   containerRole = 'region',
+  inline = false,
   workspaceRef,
 }: BlocklyFlyoutProps): ReactElement {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLElement>(null);
   const flyoutRef = useRef<InlineFlyout | null>(null);
   const {driver} = useBlocklyContext();
 
@@ -286,6 +295,16 @@ export function BlocklyFlyout({
         Blockly.renderManagement.triggerQueuedRenders();
         flyout.reflow();
 
+        if (inline) {
+          // Suppress the flyout's background panel so only the block(s) show in
+          // the surrounding prose. An inline style outranks Blockly's themed
+          // `fill` attribute, so it survives theme changes without re-applying.
+          const background = svg.querySelector('.blocklyFlyoutBackground');
+          if (background instanceof SVGElement) {
+            background.style.fill = 'transparent';
+          }
+        }
+
         // Block text is measured with the active font; if a web font is still
         // loading every block measures narrow and the panel collapses. The main
         // workspace re-renders when the font arrives; this flyout does not, so
@@ -349,14 +368,19 @@ export function BlocklyFlyout({
   //   without adding a landmark entry, so multiple <xml> snippets in one doc
   //   do not produce a cluttered list of identically-named regions. A group
   //   with aria-label still announces name and role on focus.
-  return (
-    <div
-      ref={containerRef}
-      className={className}
-      role={containerRole}
-      aria-label={label}
-    />
-  );
+  // An inline flyout renders an inline-block <span> so it can sit mid-paragraph
+  // (a block <div> is invalid inside a <p> and would break the surrounding
+  // prose); vertical-align keeps the block centred against the text. A
+  // standalone flyout stays a block <div>.
+  return createElement(inline ? 'span' : 'div', {
+    ref: containerRef,
+    className,
+    role: containerRole,
+    'aria-label': label,
+    style: inline
+      ? {display: 'inline-block', verticalAlign: 'middle'}
+      : undefined,
+  });
 }
 
 export default BlocklyFlyout;
