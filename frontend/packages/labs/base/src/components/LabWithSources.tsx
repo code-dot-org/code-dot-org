@@ -34,6 +34,11 @@ export interface LabWithSourcesProps<
    * not fetch them; when absent, it fetches them itself (transitional).
    */
   appOptions?: AppOptions;
+  /**
+   * When true, the host drives the project load itself (calling `useLoadLab`);
+   * the package will not load from store-derived values. Transitional.
+   */
+  manageLoadExternally?: boolean;
 }
 
 const LabWithSourcesWrapper = <
@@ -47,6 +52,7 @@ const LabWithSourcesWrapper = <
   startOverMessage,
   channelId,
   appOptions,
+  manageLoadExternally,
   transform,
   children,
 }: LabWithSourcesProps<T, U>) => {
@@ -62,7 +68,11 @@ const LabWithSourcesWrapper = <
       defaultStartOverMessage={startOverMessage}
       transform={transform}
     >
-      <ProjectProvider channelId={channelId} appOptions={appOptions}>
+      <ProjectProvider
+        channelId={channelId}
+        appOptions={appOptions}
+        manageLoadExternally={manageLoadExternally}
+      >
         {children}
       </ProjectProvider>
     </SourcesProvider>

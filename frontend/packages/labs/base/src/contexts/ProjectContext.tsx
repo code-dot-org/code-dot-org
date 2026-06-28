@@ -1,7 +1,7 @@
 import type {PropsWithChildren} from 'react';
 import {createContext, useContext, useEffect} from 'react';
 
-import type {AppOptions} from '@code-dot-org/core/api';
+import type {AppOptions, LevelProperties} from '@code-dot-org/core/api';
 import {useApiClient, useQueryClient} from '@code-dot-org/core/api';
 import {progressActions} from '@code-dot-org/progress/redux';
 
@@ -37,15 +37,147 @@ export const useProject = () => {
   return useContext(ProjectContext);
 };
 
+/** Explicit inputs to {@link useLoadLab}, resolved by the caller. */
+export interface UseLoadLabInput {
+  /** Resolved level properties for the current level. */
+  levelProperties?: LevelProperties;
+  /** Resolved app options for the current level. */
+  appOptions?: AppOptions;
+  /** Current level id; pre-resolved by the host for standalone projects. */
+  levelId?: number;
+  /** User being viewed, e.g. a teacher viewing a student. */
+  userId?: number;
+  /** Script id, when the level is part of a unit. */
+  scriptId?: number;
+  /** User app options path, when in a script level. */
+  userAppOptionsPath?: string;
+  /** Channel id for standalone projects / projects without levels. */
+  channelId?: string;
+}
+
+/**
+ * Drives the project/level load: dispatches {@link labActions.loadLab} once the
+ * required inputs are present, and aborts the in-flight load if they change
+ * (e.g. the level changes mid-load). The API and query clients are injected
+ * from context; everything else is supplied explicitly by the caller.
+ *
+ * This is the host seam for "studio dispatches explicitly": the host resolves
+ * the inputs and calls this hook directly. The package's transitional
+ * {@link StoreDrivenProjectLoader} calls it from store-derived values until the
+ * host takes over.
+ */
+export const useLoadLab = ({
+  levelProperties,
+  appOptions,
+  levelId,
+  userId,
+  scriptId,
+  userAppOptionsPath,
+  channelId,
+}: UseLoadLabInput) => {
+  const apiClient = useApiClient();
+  const queryClient = useQueryClient();
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    // If we have a level id, set up the lab with that level. If we also have a
+    // channel id, we will load the project based on that channel id, otherwise
+    // we will look up a channel id for the level.
+    const promise =
+      levelId && levelProperties && appOptions
+        ? dispatch(
+            labActions.loadLab({
+              apiClient,
+              queryClient,
+              appOptions,
+              levelId,
+              userId,
+              scriptId,
+              levelProperties,
+              userAppOptionsPath,
+              channelId,
+            }),
+          )
+        : undefined;
+
+    return () => {
+      // Abort the in-flight load if the inputs change before it finishes
+      // (e.g. the level changed mid-load).
+      promise?.abort();
+    };
+  }, [
+    apiClient,
+    queryClient,
+    appOptions,
+    levelId,
+    userId,
+    scriptId,
+    levelProperties,
+    userAppOptionsPath,
+    channelId,
+    dispatch,
+  ]);
+};
+
+/**
+ * Transitional in-package loader: gathers the load inputs from `state.progress`
+ * (and the package's own app-options fetch) and drives the load via
+ * {@link useLoadLab}. Rendered by {@link ProjectProvider} unless the host opts
+ * to manage loading itself. Remove once the studio host calls `useLoadLab` with
+ * explicit inputs.
+ */
+const StoreDrivenProjectLoader = ({
+  channelId,
+  appOptions,
+}: {
+  channelId?: string;
+  appOptions?: AppOptions;
+}) => {
+  const levelProperties = useMaybeLevelProperties();
+  // Host-supplied app options are used directly; otherwise fetch them.
+  const {appOptions: fetchedAppOptions} = useLoadAppOptions({
+    enabled: !appOptions,
+  });
+  const resolvedAppOptions = appOptions ?? fetchedAppOptions;
+
+  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+  const userId = useAppSelector(
+    state => state.progress.viewAsUserId || undefined,
+  );
+  const scriptId = useAppSelector(
+    state => state.progress.scriptId || undefined,
+  );
+  const userAppOptionsPath = useAppSelector(
+    progressActions.getUserAppOptionsPath,
+  );
+
+  useLoadLab({
+    levelProperties,
+    appOptions: resolvedAppOptions,
+    levelId: currentLevelId,
+    userId,
+    scriptId,
+    userAppOptionsPath,
+    channelId,
+  });
+
+  return null;
+};
+
 export interface ProjectProviderProps extends PropsWithChildren {
   /** Channel ID for the project, if already known. Used for standalone projects and projects without levels. */
   channelId?: string;
   /**
-   * Resolved app options, supplied by the host. When present, the package does
-   * not fetch them; when absent, the package fetches them itself (transitional,
-   * until the studio host owns this).
+   * Resolved app options, supplied by the host. Forwarded to the transitional
+   * loader; when present the package does not fetch them.
    */
   appOptions?: AppOptions;
+  /**
+   * When true, the package does not drive the project load itself; the host is
+   * responsible for calling {@link useLoadLab} with explicit inputs. Defaults
+   * to false (transitional in-package loading via {@link StoreDrivenProjectLoader}).
+   */
+  manageLoadExternally?: boolean;
 }
 
 /**
@@ -54,23 +186,10 @@ export interface ProjectProviderProps extends PropsWithChildren {
 export const ProjectProvider = ({
   channelId,
   appOptions,
+  manageLoadExternally = false,
   children,
 }: ProjectProviderProps) => {
-  const apiClient = useApiClient();
-  const queryClient = useQueryClient();
   const levelProperties = useMaybeLevelProperties();
-  // Host-supplied app options are used directly; otherwise fetch them.
-  const {appOptions: fetchedAppOptions} = useLoadAppOptions({
-    enabled: !appOptions,
-  });
-  const resolvedAppOptions = appOptions ?? fetchedAppOptions;
-  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
-  const userId = useAppSelector(
-    state => state.progress.viewAsUserId || undefined,
-  );
-  const scriptId = useAppSelector(
-    state => state.progress.scriptId || undefined,
-  );
 
   const isStandaloneProjectLevel = !!levelProperties?.isProjectLevel;
   // Only show share and remix if hideShareAndRemix is explicitly false.
@@ -82,10 +201,6 @@ export const ProjectProvider = ({
     state => state.lab.channel && state.lab.channel.isOwner,
   );
 
-  const userAppOptionsPath = useAppSelector(
-    progressActions.getUserAppOptionsPath,
-  );
-
   const dispatch = useAppDispatch();
   const isReadOnly = useAppSelector(labActions.isReadOnlyWorkspace);
 
@@ -93,50 +208,6 @@ export const ProjectProvider = ({
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () =>
     dispatch(labProjectActions.resetProjectMetadata()),
   );
-
-  useEffect(() => {
-    // Before loading, clear the header so we don't accidentally show share and remix
-    // for a level that does not allow it.
-    // TODO: the header hooks come later
-    //dispatch(clearHeader());
-
-    // If we have a level id, set up the lab with that level. If we also have a channel id,
-    // we will load the project based on that channel id, otherwise we will look up a channel id
-    // for the level.
-    const promise =
-      currentLevelId && levelProperties && resolvedAppOptions
-        ? dispatch(
-            labActions.loadLab({
-              apiClient,
-              queryClient,
-              appOptions: resolvedAppOptions,
-              levelId: currentLevelId,
-              userId,
-              scriptId,
-              levelProperties,
-              userAppOptionsPath,
-              channelId,
-            }),
-          )
-        : undefined;
-
-    return () => {
-      // If we have an early return, we will abort the promise in progress.
-      // An early return could happen if the level is changed mid-load.
-      promise?.abort();
-    };
-  }, [
-    resolvedAppOptions,
-    apiClient,
-    queryClient,
-    channelId,
-    currentLevelId,
-    scriptId,
-    levelProperties,
-    userAppOptionsPath,
-    dispatch,
-    userId,
-  ]);
 
   useEffect(() => {
     window.addEventListener('beforeunload', event => {
@@ -207,6 +278,12 @@ export const ProjectProvider = ({
         isStandaloneProjectLevel,
       }}
     >
+      {!manageLoadExternally && (
+        <StoreDrivenProjectLoader
+          channelId={channelId}
+          appOptions={appOptions}
+        />
+      )}
       {children}
     </ProjectContext.Provider>
   );
