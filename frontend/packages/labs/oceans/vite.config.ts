@@ -77,7 +77,13 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: ['src/index.ts'],
+      // Object-form entry so the fixtures chunk emits at dist/fixtures/index.*
+      // alongside the main dist/index.* — the `./mocks` export subpath
+      // resolves to the former.
+      entry: {
+        index: 'src/index.ts',
+        'fixtures/index': 'src/fixtures/index.ts',
+      },
       name: 'oceans-lab',
       formats: ['es', 'cjs'],
     },
