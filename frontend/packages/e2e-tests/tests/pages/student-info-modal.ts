@@ -1,12 +1,16 @@
 import {type Locator, type Page} from '@playwright/test';
 
-import {BasePage} from './base-page';
-
 /**
- * Page object for the student-information interstitial that collects a
- * student's US state on the first home visit.
+ * Component object for the student-information interstitial modal. It is
+ * rendered from the global application layout
+ * (dashboard/app/views/layouts/_student_information_interstitial.html.haml), so
+ * it overlays whatever page is showing when a student still owes US state / age
+ * info — in these tests, /home. It is a modal, not a page, so it does not
+ * extend BasePage.
  */
-export class StudentInfoModalPage extends BasePage {
+export class StudentInfoModal {
+  private readonly page: Page;
+
   /** Interstitial heading; visibility signal for the modal. */
   readonly heading: Locator;
 
@@ -17,7 +21,7 @@ export class StudentInfoModalPage extends BasePage {
   readonly submitButton: Locator;
 
   constructor(page: Page) {
-    super(page);
+    this.page = page;
     this.heading = page.getByRole('heading', {
       name: /Finish creating your account/,
     });
