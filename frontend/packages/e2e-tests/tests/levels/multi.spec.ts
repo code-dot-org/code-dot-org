@@ -5,16 +5,20 @@ import {MultiLevel} from '../pages/multi-level';
 
 const WCAG_TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'];
 
-// Baseline of axe rule IDs we currently fail at each state. New violations make
-// the test fail; if you fix one, drop it from this list so the test stays honest.
-const EXPECTED_VIOLATIONS = {
-  initialLoad: ['color-contrast', 'image-alt'],
-  winModal: ['color-contrast'],
-  afterDismissedIncorrectModal: ['color-contrast', 'image-alt'],
+// Baseline of axe violations per state, keyed by rule id and counting the
+// failing nodes. A new rule, or more failing nodes for an existing rule, both
+// fail the test. If you fix something, lower the count (or remove the rule)
+// so the baseline stays honest.
+const EXPECTED_VIOLATIONS: Record<string, Record<string, number>> = {
+  initialLoad: {'color-contrast': 2, 'image-alt': 5},
+  winModal: {'color-contrast': 1},
+  afterDismissedIncorrectModal: {'color-contrast': 2, 'image-alt': 5},
 };
 
-const violationIds = (results: {violations: {id: string}[]}): string[] =>
-  results.violations.map(v => v.id).sort();
+const violationCounts = (results: {
+  violations: {id: string; nodes: unknown[]}[];
+}): Record<string, number> =>
+  Object.fromEntries(results.violations.map(v => [v.id, v.nodes.length]));
 
 test.describe('Playing multi levels', () => {
   /**
@@ -32,7 +36,7 @@ test.describe('Playing multi levels', () => {
     );
 
     const results = await new AxeBuilder({page}).withTags(WCAG_TAGS).analyze();
-    expect(violationIds(results)).toEqual(EXPECTED_VIOLATIONS.initialLoad);
+    expect(violationCounts(results)).toEqual(EXPECTED_VIOLATIONS.initialLoad);
   });
 
   /**
@@ -65,7 +69,7 @@ test.describe('Playing multi levels', () => {
       .include('.modal')
       .withTags(WCAG_TAGS)
       .analyze();
-    expect(violationIds(results)).toEqual(EXPECTED_VIOLATIONS.winModal);
+    expect(violationCounts(results)).toEqual(EXPECTED_VIOLATIONS.winModal);
   });
 
   /**
@@ -94,7 +98,7 @@ test.describe('Playing multi levels', () => {
     await expect(level.crossMark(0)).toBeVisible();
 
     const results = await new AxeBuilder({page}).withTags(WCAG_TAGS).analyze();
-    expect(violationIds(results)).toEqual(
+    expect(violationCounts(results)).toEqual(
       EXPECTED_VIOLATIONS.afterDismissedIncorrectModal,
     );
   });
