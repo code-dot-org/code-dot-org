@@ -187,6 +187,36 @@ class OmniAuthSectionTest < ActiveSupport::TestCase
     assert_equal [owner.id, coteacher.id].sort, new_section.instructors.pluck(:id).sort
   end
 
+  test 'skips student with blank name during roster sync' do
+    owner = create(:teacher)
+    students = [
+      OmniAuth::AuthHash.new(
+        uid: 100,
+        provider: 'google_oauth2',
+        info: {name: 'Valid Student'},
+      ),
+      OmniAuth::AuthHash.new(
+        uid: 101,
+        provider: 'google_oauth2',
+        info: {name: ''},
+      ),
+    ]
+
+    section = nil
+    assert_nothing_raised do
+      section = OmniAuthSection.from_omniauth(
+        code: 'G-333333',
+        type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM,
+        owner_id: owner.id,
+        students: students,
+      )
+    end
+
+    section.reload
+    assert_equal 1, section.students.count
+    assert_equal 'Valid Student', section.students.first.name
+  end
+
   test 'set exact student list' do
     teacher = create(:teacher)
     section = create(:section, user: teacher, login_type: 'clever')
