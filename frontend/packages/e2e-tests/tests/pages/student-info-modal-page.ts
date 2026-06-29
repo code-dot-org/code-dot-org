@@ -3,23 +3,25 @@ import {type Locator, type Page} from '@playwright/test';
 import {BasePage} from './base-page';
 
 /**
- * Page object for the student-information interstitial modal that collects a
+ * Page object for the student-information interstitial that collects a
  * student's US state on the first home visit.
  */
 export class StudentInfoModalPage extends BasePage {
-  /** The interstitial modal container. */
-  readonly modal: Locator;
+  /** Interstitial heading; visibility signal for the modal. */
+  readonly heading: Locator;
 
-  /** US-state dropdown. */
+  /** US-state dropdown, addressed by its accessible label. */
   readonly stateDropdown: Locator;
 
-  /** Submit button. */
+  /** Submit button. Located by id; the server-rendered modal exposes no stable role+name. */
   readonly submitButton: Locator;
 
   constructor(page: Page) {
     super(page);
-    this.modal = page.locator('#student-information-modal');
-    this.stateDropdown = page.locator('#user_us_state');
+    this.heading = page.getByRole('heading', {
+      name: /Finish creating your account/,
+    });
+    this.stateDropdown = page.getByRole('combobox', {name: 'State'});
     this.submitButton = page.locator('#submit-btn');
   }
 

@@ -7,36 +7,47 @@ const CHILD_ACCOUNT_CONSENT_URL = '/policy_compliance/child_account_consent';
 
 /**
  * Page object for the CAP lockout panel shown to under-13 accounts that must
- * obtain parental permission. Owns the panel locators and the submit/resend
- * actions; assertions stay in the spec.
+ * obtain parental permission. Locators favor accessible roles/labels; assertions
+ * stay in the spec.
  */
 export class LockoutPage extends BasePage {
-  /** The request form; container for the prompt, deletion note, and status. */
-  readonly panelForm: Locator;
+  /** The .lockout-panel container; scope and visibility signal for the panel. */
+  readonly panel: Locator;
 
-  /** Panel heading (.lockout-panel h2), rendered outside the form. */
+  /** Panel heading; its text varies by state, asserted in the spec. */
   readonly heading: Locator;
 
-  /** Parent-permission status chip: Not Submitted / Pending / Granted. */
-  readonly permissionStatus: Locator;
-
-  /** Parent-email input. */
+  /** Parent-email textbox, addressed by its accessible label. */
   readonly parentEmailInput: Locator;
 
-  /** Submit/Update button; replaced by a spinner while a request is in flight. */
+  /**
+   * Submit/Update button. Located by id, not role+name: its accessible name
+   * flips between "Send permission request" and "Update and send" by state, so
+   * the stable id is the more robust anchor.
+   */
   readonly submitButton: Locator;
 
-  /** Resend-email link, shown only once a request is pending. */
+  /** Resend-email button, shown only once a request is pending. */
   readonly resendButton: Locator;
+
+  /**
+   * Parent-permission status value. Located by id: it is a bare <span> with no
+   * role or labelable affordance, so there is no accessible handle for it.
+   */
+  readonly permissionStatus: Locator;
 
   constructor(page: Page) {
     super(page);
-    this.panelForm = page.locator('#lockout-panel-form');
-    this.heading = page.locator('.lockout-panel h2');
-    this.permissionStatus = page.locator('#permission-status');
-    this.parentEmailInput = page.locator('#parent-email');
+    this.panel = page.locator('.lockout-panel');
+    this.heading = this.panel.getByRole('heading');
+    this.parentEmailInput = page.getByRole('textbox', {
+      name: /Parent\/Guardian Email/,
+    });
     this.submitButton = page.locator('#lockout-submit');
-    this.resendButton = page.locator('#lockout-resend');
+    this.resendButton = page.getByRole('button', {
+      name: 'Resend permission email',
+    });
+    this.permissionStatus = page.locator('#permission-status');
   }
 
   /** Type a parent email into the field. */
@@ -50,28 +61,24 @@ export class LockoutPage extends BasePage {
     await this.parentEmailInput.fill(email);
   }
 
+  /** Submit the request. Readiness is observed in the spec via the resulting UI. */
+  async submit(): Promise<void> {
+    await this.submitButton.click();
+  }
+
   /**
-   * Submit the request and wait for the permission POST to round-trip. The
-   * submit handler is an async thunk, so callers must await this before reload
-   * or the navigation races the in-flight request.
+   * Resend the pending request and wait for the permission POST to round-trip.
+   * Resend leaves the email and status unchanged, so there is no distinguishing
+   * UI signal; the response is the only confirmation the resend was accepted.
    */
-  async submit(): Promise<Response> {
-    return this.clickAndAwaitConsent(this.submitButton);
-  }
-
-  /** Resend the pending request and wait for the permission POST to round-trip. */
   async resend(): Promise<Response> {
-    return this.clickAndAwaitConsent(this.resendButton);
-  }
-
-  private async clickAndAwaitConsent(button: Locator): Promise<Response> {
     const [response] = await Promise.all([
       this.page.waitForResponse(
         response =>
           response.url().includes(CHILD_ACCOUNT_CONSENT_URL) &&
           response.request().method() === 'POST',
       ),
-      button.click(),
+      this.resendButton.click(),
     ]);
     return response;
   }

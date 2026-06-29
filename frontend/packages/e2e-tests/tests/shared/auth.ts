@@ -89,6 +89,85 @@ export async function createEuStudent(
   });
 }
 
+export interface CreateStudentOptions {
+  /** Display name; defaults to "Test Student". */
+  name?: string;
+  /** Age; defaults to '16'. Pass '10' for an under-13 account. */
+  age?: string;
+  /** Sign-in count; defaults to 2. Pass 0 for a "never signed in" account. */
+  signInCount?: number;
+  /** US state code (e.g. 'CO'); sets country_code='US' and marks it user-provided. */
+  usState?: string;
+  /** ISO created_at, e.g. to place the account relative to a policy date. */
+  createdAt?: string;
+  /**
+   * Mark the account as parent-created by pre-populating the student's own
+   * email as the parent-permission email, which lets the student re-enter it
+   * on the CAP lockout page.
+   */
+  parentCreated?: boolean;
+}
+
+/**
+ * Create a student via /api/test/create_user (which signs them in via Devise)
+ * and return their credentials. Unlike createUser, this does NOT issue a second
+ * /users/sign_in: that goes through Warden, which increments sign_in_count off
+ * 0 (breaking "never signed in" setups) and re-authenticates locked-out
+ * accounts. The page must already be on the target host.
+ */
+export async function createStudent(
+  page: Page,
+  {
+    name = 'Test Student',
+    age = '16',
+    signInCount = 2,
+    usState,
+    createdAt,
+    parentCreated = false,
+  }: CreateStudentOptions = {},
+): Promise<UserCredentials> {
+  const timestamp = Date.now();
+  const rand = Math.floor(Math.random() * 1_000_000);
+  const email = `student${timestamp}_${rand}@test.xx`;
+  const password = `${name}password`;
+
+  const user: Record<string, string | number> = {
+    user_type: 'student',
+    email,
+    password,
+    password_confirmation: password,
+    name,
+    age,
+    terms_of_service_version: '1',
+    sign_in_count: signInCount,
+    ...(createdAt ? {created_at: createdAt} : {}),
+    ...(usState
+      ? {country_code: 'US', us_state: usState, user_provided_us_state: 'true'}
+      : {}),
+    ...(parentCreated
+      ? {
+          parent_email_preference_opt_in_required: '1',
+          parent_email_preference_opt_in: 'no',
+          parent_email_preference_email: email,
+          parent_email_preference_request_ip: '127.0.0.1',
+          parent_email_preference_source: 'ACCOUNT_SIGN_UP',
+        }
+      : {}),
+  };
+
+  const {ok, status} = await requestWithCsrf(
+    page,
+    'POST',
+    '/api/test/create_user',
+    {user},
+  );
+  if (!ok) {
+    throw new Error(`create_student failed: ${status}`);
+  }
+
+  return {email, password, name};
+}
+
 /**
  * Sign in via POST /users/sign_in. The page must already be on the target host
  * for the CSRF token fetch.
