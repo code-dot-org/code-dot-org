@@ -30,6 +30,15 @@ const simple: LabFixture = {
       exemplarSources: null,
     }),
   },
+  // Minimal app options so the studio host can drive the level through
+  // `loadLab` (which populates `state.lab.levelProperties` for progression).
+  appOptions: {
+    levelId: 1,
+    channel: null,
+    publicCaching: null,
+    displayTheme: null,
+    isSignedIn: false,
+  },
   theme: {},
 };
 

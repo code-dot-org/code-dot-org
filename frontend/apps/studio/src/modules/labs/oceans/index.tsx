@@ -1,6 +1,11 @@
 import {Box} from '@mui/material';
 
-import {useApiClient, useLevelProperties} from '@code-dot-org/core/api';
+import {
+  useApiClient,
+  useAppOptions,
+  useLevelProperties,
+} from '@code-dot-org/core/api';
+import {useLoadLab} from '@code-dot-org/lab/contexts';
 import OceansLab from '@code-dot-org/oceans-lab';
 import '@code-dot-org/oceans-lab/styles.css';
 
@@ -21,16 +26,31 @@ function OceansHosted() {
 
   // Standalone projects carry no level id of their own; use the map's first key.
   const levelId = levelPropertiesMap
-    ? Object.keys(levelPropertiesMap)[0]
+    ? Number(Object.keys(levelPropertiesMap)[0])
     : undefined;
+
+  const {data: appOptions} = useAppOptions(
+    api,
+    {levelId: levelId as number},
+    {enabled: levelId !== undefined},
+  );
+
+  const levelProperties =
+    levelId !== undefined ? levelPropertiesMap?.[String(levelId)] : undefined;
+
+  // Host drives the load explicitly. Oceans is no-sources (usesProjects:false),
+  // so loadLab short-circuits the project load but still populates
+  // state.lab.levelProperties — which base lesson progression (the activity's
+  // onContinue) reads.
+  useLoadLab({levelProperties, appOptions, levelId});
 
   return (
     <Box className="oceans-lab-shell">
       <Box className="oceans-lab-frame">
         <OceansLab
-          isLoading={!levelPropertiesMap}
+          isLoading={!levelPropertiesMap || !appOptions}
           standaloneProjectType="oceans"
-          levelId={levelId}
+          levelId={levelId !== undefined ? String(levelId) : undefined}
           levelPropertiesMap={levelPropertiesMap}
         />
       </Box>
