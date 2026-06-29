@@ -8,7 +8,7 @@ import {
   signIn,
   signOut,
 } from '../shared/auth';
-import {setEuropeanIp} from '../shared/geolocation';
+import {setCountryOverride} from '../shared/geolocation';
 
 test.describe('GDPR Dialog - data transfer agreement', () => {
   /**
@@ -29,7 +29,7 @@ test.describe('GDPR Dialog - data transfer agreement', () => {
       signInCount: 2,
     });
 
-    await setEuropeanIp(page);
+    await setCountryOverride(page, {countryCode: 'ES'});
     await gdpr.goto();
     await expect(gdpr.dialog).toBeVisible();
   });
@@ -53,7 +53,7 @@ test.describe('GDPR Dialog - data transfer agreement', () => {
       signInCount: 2,
     });
 
-    await setEuropeanIp(page);
+    await setCountryOverride(page, {countryCode: 'ES'});
     await gdpr.goto();
     await expect(gdpr.dialog).toBeVisible();
 
@@ -88,7 +88,7 @@ test.describe('GDPR Dialog - data transfer agreement', () => {
     await page.goto('/');
     await createEuStudent(page, {name: 'Viktor Krum'});
 
-    await setEuropeanIp(page);
+    await setCountryOverride(page, {countryCode: 'ES'});
     await gdpr.goto();
     await gdpr.waitForSignedIn();
     await expect(gdpr.dialog).not.toBeVisible();
@@ -112,7 +112,7 @@ test.describe('GDPR Dialog - data transfer agreement', () => {
       signInCount: 2,
     });
 
-    await setEuropeanIp(page);
+    await setCountryOverride(page, {countryCode: 'ES'});
     await gdpr.goto();
     // Wait for the dialog heading to confirm the dialog is open. #gdpr-dialog is
     // a zero-height React mount point (absolutely positioned modal content), so
@@ -145,7 +145,7 @@ test.describe('GDPR Dialog - data transfer agreement', () => {
       signInCount: 2,
     });
 
-    await setEuropeanIp(page);
+    await setCountryOverride(page, {countryCode: 'ES'});
     await gdpr.goto();
     await expect(gdpr.dialog).toBeVisible();
 
@@ -162,7 +162,7 @@ test.describe('GDPR Dialog - data transfer agreement', () => {
     await resetSession(page);
     await page.goto('/');
     await signIn(page, {email, password});
-    await setEuropeanIp(page);
+    await setCountryOverride(page, {countryCode: 'ES'});
     await gdpr.goto();
     await gdpr.waitForSignedIn();
     await expect(gdpr.dialog).not.toBeVisible();

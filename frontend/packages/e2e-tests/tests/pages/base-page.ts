@@ -13,11 +13,19 @@ export class BasePage {
   /** Header user-menu element; duplicates per breakpoint, .first() avoids strict-mode failure. */
   protected readonly headerUser: Locator;
 
+  /** #header_user_menu — the signed-in user menu node; .first() guards breakpoint duplicates. */
+  readonly headerUserMenu: Locator;
+
+  /** .display_name — the signed-in user's display name chip; .first() guards breakpoint duplicates. */
+  readonly displayName: Locator;
+
   constructor(page: Page) {
     this.page = page;
     this.localeDropdown = page.getByRole('combobox', {name: 'Select language'});
     this.selectedLocale = this.localeDropdown.locator('option:checked');
     this.headerUser = page.locator('.header_user').first();
+    this.headerUserMenu = page.locator('#header_user_menu').first();
+    this.displayName = page.locator('.display_name').first();
   }
 
   /** Wait for the locale dropdown to render. */

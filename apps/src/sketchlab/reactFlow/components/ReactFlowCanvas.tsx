@@ -58,6 +58,7 @@ import ShapeNode from '../nodes/ShapeNode';
 import TextNode from '../nodes/TextNode';
 import {
   AddNodeRequest,
+  CanvasTool,
   ReactFlowSketchLabSources,
   SketchLabNode,
 } from '../types';
@@ -159,6 +160,8 @@ export default function ReactFlowCanvas({
     trapFocus: boolean;
   }>({target: null, trapFocus: false});
   const {target: openToolbarTarget, trapFocus} = openToolbarInfo;
+
+  const [canvasTool, setCanvasTool] = useState<CanvasTool>('cursor');
 
   const [isAnyPopoverOpen, setPopoverOpen] = useState(false);
   const [keyboardMovingLineId, setKeyboardMovingLineId] = useState<
@@ -504,6 +507,8 @@ export default function ReactFlowCanvas({
     [setLastFocusedEntry, setNodeOrEdgeFocused]
   );
 
+  const isGrabMode = canvasTool === 'grab';
+
   const {displayNodes, displayEdges} = useDisplayElements({
     nodes,
     edges,
@@ -512,6 +517,7 @@ export default function ReactFlowCanvas({
     lastFocusedEntry,
     connectingFrom,
     readOnly,
+    grabMode: isGrabMode,
     focusEntry,
     handleEdgeMouseDown,
     multiSelectedNodeIds,
@@ -599,6 +605,7 @@ export default function ReactFlowCanvas({
   const handleAddNode = useCallback(
     (request: AddNodeRequest) => {
       pushSnapshot();
+      setCanvasTool('cursor');
       const {type} = request;
       const stagger = addedNodeCountRef.current * NEW_NODE_STAGGER_PX;
       addedNodeCountRef.current += 1;
@@ -682,13 +689,28 @@ export default function ReactFlowCanvas({
       openToolbar,
       pushSnapshot,
       screenToFlowPosition,
+      setCanvasTool,
       setNodes,
       setEdges,
     ]
   );
 
+  // All ReactFlow props that differ between cursor and grab mode, collected in
+  // one place so the grab mode contract is visible at a glance.
+  const grabModeProps = {
+    panOnDrag: isGrabMode,
+    nodesDraggable: !readOnly && !isGrabMode,
+    nodesConnectable: !readOnly && !isGrabMode,
+    elementsSelectable: !readOnly && !isGrabMode,
+    nodesFocusable: !isGrabMode,
+    edgesFocusable: !isGrabMode,
+    onNodeClick: isGrabMode ? undefined : handleNodeClick,
+    onEdgeClick: isGrabMode ? undefined : handleEdgeClick,
+    deleteKeyCode: !readOnly && !isGrabMode ? 'Delete' : null,
+  };
+
   return (
-    <SketchLabReadOnlyProvider value={readOnly}>
+    <SketchLabReadOnlyProvider value={readOnly || isGrabMode}>
       <ToolbarVisibilityProvider value={toolbarVisibility}>
         <ClipboardProvider value={clipboardContextValue}>
           <PushSnapshotProvider value={pushSnapshot}>
@@ -708,6 +730,7 @@ export default function ReactFlowCanvas({
                     styles.canvasContainer,
                     {
                       [styles.connectMode]: !!connectingFrom,
+                      [styles.grabMode]: isGrabMode,
                     },
                     SKETCHLAB_CONTAINER_CLASS
                   )}
@@ -719,7 +742,12 @@ export default function ReactFlowCanvas({
                   onMouseLeave={handleMouseLeave}
                 >
                   {!readOnly && (
-                    <Toolbar onAddNode={handleAddNode} levelName={levelName} />
+                    <Toolbar
+                      onAddNode={handleAddNode}
+                      levelName={levelName}
+                      canvasTool={canvasTool}
+                      onSetCanvasTool={setCanvasTool}
+                    />
                   )}
                   <div aria-live="assertive" className={styles.srOnly}>
                     {connectAnnouncement}
@@ -732,8 +760,7 @@ export default function ReactFlowCanvas({
                     edges={displayEdges}
                     onNodesChange={handleNodesChange}
                     onEdgesChange={handleEdgesChange}
-                    onNodeClick={handleNodeClick}
-                    onEdgeClick={handleEdgeClick}
+                    {...grabModeProps}
                     onPaneClick={handlePaneClick}
                     onConnect={onConnect}
                     onNodesDelete={handleElementsDeleted}
@@ -753,13 +780,7 @@ export default function ReactFlowCanvas({
                     // We implement our own shift+click multi-selection; disable
                     // React Flow's built-in so it doesn't fight our selection state.
                     multiSelectionKeyCode={null}
-                    deleteKeyCode={readOnly ? null : 'Delete'}
                     proOptions={{hideAttribution: true}}
-                    nodesDraggable={!readOnly}
-                    nodesConnectable={!readOnly}
-                    elementsSelectable={!readOnly}
-                    nodesFocusable={true}
-                    edgesFocusable={true}
                     // Even though we manage tab order, we keep React Flow's keyboard A11y on because
                     // it manages things like moving nodes with arrow keys.
                     disableKeyboardA11y={false}
