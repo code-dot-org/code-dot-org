@@ -301,14 +301,17 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
     const tabMap: {[key in Tabs]?: React.ReactNode} = {};
 
-    const instructionsContent = levelProperties.longInstructions ? (
+    const hasInstructions =
+      !!instructionsProps.dynamicInstructions ||
+      !!levelProperties.longInstructions;
+    const instructionsContent = hasInstructions ? (
       <Instructions
         {...instructionsProps}
         hideNavigation={hideInstructionsNavigation}
       />
     ) : null;
 
-    if (levelProperties.longInstructions) {
+    if (hasInstructions) {
       tabMap[Tabs.Instructions] = instructionsContent;
     }
 
@@ -331,7 +334,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         onAssetRemoved,
         initialWelcomeMessage,
       };
-      if (!hasInstructionsDrawer || !levelProperties.longInstructions) {
+      if (!hasInstructionsDrawer || !hasInstructions) {
         tabMap[Tabs.AiTutor] = <AiTutorChat {...aiTutorProps} />;
       } else {
         tabMap[Tabs.AiTutor] = (
