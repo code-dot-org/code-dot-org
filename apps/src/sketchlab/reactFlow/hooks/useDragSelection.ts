@@ -32,6 +32,10 @@ interface UseDragSelectionOptions {
   onGroupNodes: (ids: Set<string>) => void;
 }
 
+// Returns the set of node/anchor IDs that overlap the drag box in canvas space.
+// lineAnchor nodes are intentionally skipped in the node loop; they are
+// detected via edges below so a standalone line is captured as a unit (both
+// anchor IDs together) rather than as two independent hits.
 function computeOverlapIds(
   nodes: SketchlabReactFlowNode[],
   edges: SketchlabReactFlowEdge[],
@@ -71,6 +75,9 @@ function computeOverlapIds(
     if (isGroupedChildNode(src) || isGroupedChildNode(tgt)) continue;
     if (src.parentId || tgt.parentId) continue;
 
+    // Anchors are 10×10px positioned by top-left corner, so use a partial-
+    // overlap check rather than a point-in-box test: a drag box that starts
+    // at the visible line endpoint would miss the anchor with a point test.
     const anchorOverlaps = (anchor: SketchlabReactFlowNode) => {
       const {x, y} = anchor.position;
       return (
@@ -90,6 +97,8 @@ function computeOverlapIds(
   return ids;
 }
 
+// Guards setPendingSelectedIds against unnecessary re-renders: mousemove fires
+// on every pixel, so skip the state update when the overlap set hasn't changed.
 function setsEqual(a: ReadonlySet<string>, b: Set<string>): boolean {
   if (a.size !== b.size) return false;
   for (const id of b) {
