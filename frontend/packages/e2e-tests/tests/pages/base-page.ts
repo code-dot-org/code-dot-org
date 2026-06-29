@@ -10,15 +10,59 @@ export class BasePage {
   /** The dropdown's selected option; assert its text for the active locale. */
   readonly selectedLocale: Locator;
 
+  /** Header user-menu element; duplicates per breakpoint, .first() avoids strict-mode failure. */
+  protected readonly headerUser: Locator;
+
+  /** #header_user_menu — the signed-in user menu node; .first() guards breakpoint duplicates. */
+  readonly headerUserMenu: Locator;
+
+  /** .display_name — the signed-in user's display name chip; .first() guards breakpoint duplicates. */
+  readonly displayName: Locator;
+
   constructor(page: Page) {
     this.page = page;
     this.localeDropdown = page.getByRole('combobox', {name: 'Select language'});
     this.selectedLocale = this.localeDropdown.locator('option:checked');
+    this.headerUser = page.locator('.header_user').first();
+    this.headerUserMenu = page.locator('#header_user_menu').first();
+    this.displayName = page.locator('.display_name').first();
   }
 
   /** Wait for the locale dropdown to render. */
   async waitForLocaleDropdownVisible(): Promise<void> {
     await expect(this.localeDropdown).toBeVisible();
+  }
+
+  /** Wait until the signed-in header chrome is visible. */
+  async waitForSignedIn(): Promise<void> {
+    await expect(this.headerUser).toBeVisible();
+  }
+
+  /**
+   * Rotate the viewport to landscape by swapping its dimensions, the Playwright
+   * stand-in for the Cucumber "I rotate to landscape" device step. No-op when
+   * already landscape, as the desktop projects here are.
+   */
+  async rotateToLandscape(): Promise<void> {
+    const viewport = this.page.viewportSize();
+    if (viewport && viewport.width < viewport.height) {
+      await this.page.setViewportSize({
+        width: viewport.height,
+        height: viewport.width,
+      });
+    }
+  }
+
+  /**
+   * Whether the document overflows horizontally. Mirrors the Cucumber step
+   * "there is no horizontal scrollbar" via document.documentElement geometry.
+   */
+  async hasHorizontalScrollbar(): Promise<boolean> {
+    return this.page.evaluate(
+      () =>
+        document.documentElement.scrollWidth >
+        document.documentElement.clientWidth,
+    );
   }
 
   /**

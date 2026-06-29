@@ -77,6 +77,28 @@ export default class UserPreferences extends Record({userId: 'me'}) {
   }
 
   /**
+   * Save whether the teacher has hidden the homepage onboarding checklist.
+   * @param {boolean} teacherOnboardingHidden: True if the checklist is hidden, false otherwise.
+   */
+  setTeacherOnboardingHidden(teacherOnboardingHidden) {
+    return $.post(`/api/v1/users/teacher_onboarding_hidden`, {
+      teacher_onboarding_hidden: teacherOnboardingHidden,
+    });
+  }
+
+  async getTeacherOnboardingHidden() {
+    try {
+      const response = await HttpClient.fetchJson(
+        '/api/v1/users/teacher_onboarding_hidden'
+      );
+      return response.value.teacher_onboarding_hidden;
+    } catch (error) {
+      console.error('Error fetching teacher onboarding hidden status:', error);
+      return false;
+    }
+  }
+
+  /**
    * Save the preference to opt-out of AI Rubrics (AI TA).
    * @param {boolean} aiRubricsDisabled: True if disabling AI rubric features, false otherwise.
    */

@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2026-04-01T21:44:01.000Z",
   "level_num": "custom",
@@ -9,7 +10,7 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "## Exploring the Network Tab\n\nIn Level 6, you'll look at a call made to a weather API. \n\nClick through the following panels to learn how to access the **Network** tab and view the **Response Data**.\n\n**Note:** These panels show an example of a call made to the Pokemon API. ",
+        "text": "## Exploring the Network Tab\n\nIn the next level, you'll look at a call made to a weather API. \n\nClick through the following panels to learn how to access the **Network** tab and view the **Response Data**.\n\n**Note:** These panels show an example of a call made to the Pokemon API. ",
         "imageUrl": "https://images.code.org/7c7a9feca6443b38fb7f50664a2721a9-Screenshot 2026-02-27 at 1.12.52 PM.png",
         "key": "designing-reliable-apps-lesson1-level1-networks-panel-2025-pilot-971efea8-62fe-4c25-8789-7dbc0de296ad",
         "layout": "text-bottom-right"
@@ -37,9 +38,10 @@
         "key": "designing-reliable-apps-lesson1-level1-networks-panel-2025-pilot-2b241c0a-7d23-4faf-977c-c85c8fa8a7db"
       }
     ],
-    "name_suffix": "_2026"
+    "name_suffix": "_2026",
+    "display_name": "coursedocs@code.org",
+    "use_links": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:01.435+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson1-level1-networks-panel-2025-_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson1-level1-networks-panel-2025-_2025-pilot\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:01.435+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson1-level1-networks-panel-2025-_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson1-level1-networks-panel-2025-_2025-pilot\"},{\"changed_at\":\"2026-06-23 20:02:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

@@ -213,14 +213,3 @@ cron-user-hierarchy-pii:
 - dashboard.user_geos
 - dashboard.user_school_infos
 
-# All tables in this section are exported to the Redshift `dashboard_production` schema. Do NOT export columns containing
-# sensitive data to this schema.
-cron-user-levels:
-- dashboard.user_levels
-
-# All tables in this section are exported to the Redshift `dashboard_production_pii` schema. Sensitive data may be
-# exported to this schema, but should be limited to only columns that have an identified analytics purpose.
-cron-level-sources-pii:
-- dashboard.level_sources:
-    skip_staging_table: true
-    schedule: 'weekly'

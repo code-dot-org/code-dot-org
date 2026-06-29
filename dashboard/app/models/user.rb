@@ -269,6 +269,7 @@ class User < ApplicationRecord
     signup_sources_tracking
     has_dismissed_personalization_alert
     grades_teaching
+    teacher_onboarding_hidden
   )
 
   attr_accessor(

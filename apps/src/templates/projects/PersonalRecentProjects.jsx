@@ -1,8 +1,8 @@
+import {Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
 
 import ProjectCard from './ProjectCard.jsx';
@@ -20,7 +20,14 @@ class PersonalRecentProjects extends Component {
 
     return (
       <div style={styles.grid}>
-        <div style={styles.description}>{i18n.projectsContinueWorking()}</div>
+        <MuiTypography
+          style={styles.description}
+          variant="h5"
+          component="h5"
+          gutterBottom
+        >
+          {i18n.projectsContinueWorking()}
+        </MuiTypography>
         <div>
           {this.props.projectList &&
             this.props.projectList.slice(0, 4).map((project, index) => {
@@ -60,14 +67,8 @@ const styles = {
     paddingLeft: 35,
   },
   description: {
-    paddingRight: 10,
-    paddingBottom: 10,
-    fontSize: 16,
-    ...fontConstants['main-font-regular'],
     zIndex: 2,
-    color: 'var(--text-neutral-primary)',
     width: 940,
-    marginBottom: 0,
   },
 };
 

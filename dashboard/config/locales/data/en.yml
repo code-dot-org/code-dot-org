@@ -937,6 +937,7 @@ en:
         aif2-pl-redesign-filter-logic: Redesigning Filter Logic
         pl-aif2-transparency-cues-U4: Transparency Cues
         pl-aif2-making-decions-in-code: Making Decisions in Code
+        pl-aif2-debugging-variables: Debugging Variables
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

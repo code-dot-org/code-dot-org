@@ -679,7 +679,7 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffffff",
+              "backgroundColor": "transparent",
               "locked": true
             },
             "position": {

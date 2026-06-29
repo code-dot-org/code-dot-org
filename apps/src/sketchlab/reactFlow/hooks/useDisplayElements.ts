@@ -7,7 +7,6 @@ import type {
 } from '@cdo/apps/lab2/types';
 
 import type {TabOrderEntry} from '../utils/computeTabOrder';
-import {getEdgeReconnectability} from '../utils/connectionRules';
 import {getEdgeLabel} from '../utils/elementLabel';
 import {isGroupedChildNode} from '../utils/grouping';
 
@@ -21,6 +20,7 @@ interface UseDisplayElementsOptions {
   lastFocusedEntry: TabOrderEntry | null;
   connectingFrom: string | null;
   readOnly: boolean;
+  grabMode: boolean;
   focusEntry: (entry: TabOrderEntry) => void;
   handleEdgeMouseDown: (
     event: React.MouseEvent,
@@ -37,6 +37,7 @@ export function useDisplayElements({
   lastFocusedEntry,
   connectingFrom,
   readOnly,
+  grabMode,
   focusEntry,
   handleEdgeMouseDown,
   multiSelectedNodeIds,
@@ -59,8 +60,9 @@ export function useDisplayElements({
 
     const applyDisplayProps = (item: {id: string}, type: 'node' | 'edge') => {
       const isTabTarget =
-        activeEntry?.type === type && activeEntry.id === item.id;
+        !grabMode && activeEntry?.type === type && activeEntry.id === item.id;
       const isSelected =
+        !grabMode &&
         nodeOrEdgeFocused &&
         lastFocusedEntry?.type === type &&
         lastFocusedEntry.id === item.id;
@@ -119,10 +121,10 @@ export function useDisplayElements({
           ...node,
           selected,
           // Derive draggable/connectable/deletable from locked/read-only/grouped state
-          draggable: !locked && !readOnly && !groupedChild,
-          deletable: !locked && !readOnly && !groupedChild,
-          // Nodes are still connectable when locked, but not in read-only
-          connectable: !readOnly,
+          draggable: !locked && !readOnly && !groupedChild && !grabMode,
+          deletable: !locked && !readOnly && !groupedChild && !grabMode,
+          // Nodes are still connectable when locked, but not in read-only or grab mode
+          connectable: !readOnly && !grabMode,
           // Override React Flow's default "{type} node" aria-label on the
           // wrapper div for line anchors so it reads as "Line endpoint" instead
           // of "Line endpoint node".
@@ -143,30 +145,30 @@ export function useDisplayElements({
           edge,
           'edge'
         );
-        // A standalone line (both endpoints are line anchors) is shown as
-        // selected when both its anchors are in the multi-selection.
-        const bothAnchorsSelected =
+        const isStandaloneLine =
           nodeMap.get(edge.source)?.type === 'lineAnchor' &&
-          nodeMap.get(edge.target)?.type === 'lineAnchor' &&
+          nodeMap.get(edge.target)?.type === 'lineAnchor';
+        // A standalone line is shown as selected when both its anchors are in
+        // the multi-selection.
+        const bothAnchorsSelected =
+          isStandaloneLine &&
           multiSelectedNodeIds.has(edge.source) &&
           multiSelectedNodeIds.has(edge.target);
         const selected = singleSelected || bothAnchorsSelected;
-        const reconnectable = getEdgeReconnectability(edge, nodeMap, {
-          locked,
-          readOnly,
-        });
 
         return {
           ...edge,
           selected,
-          reconnectable,
-          deletable: !locked && !readOnly,
+          deletable: !locked && !readOnly && !grabMode,
           ariaLabel: getEdgeLabel(
             edge,
             nodeMap,
             floatingLineIndex.get(edge.id)
           ),
-          className: styles.lineEdge,
+          className: classNames(
+            styles.lineEdge,
+            isStandaloneLine && styles.standaloneLineEdge
+          ),
           domAttributes: {
             ...domAttributes,
             ...(!readOnly && !locked
@@ -191,6 +193,7 @@ export function useDisplayElements({
     lastFocusedEntry?.id,
     connectingFrom,
     readOnly,
+    grabMode,
     focusEntry,
     handleEdgeMouseDown,
     multiSelectedNodeIds,

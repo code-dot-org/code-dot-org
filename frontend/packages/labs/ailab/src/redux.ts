@@ -1,3 +1,4 @@
+import {createSlice, type PayloadAction} from '@reduxjs/toolkit';
 import type KNN from 'ml-knn';
 
 import {
@@ -13,7 +14,7 @@ import {
 } from './helpers/accuracy';
 import {isRegression, getColumnDataToSave} from './helpers/columnDetails';
 import {getDatasetDetails} from './helpers/datasetDetails';
-import {reportPanelView} from './helpers/metrics';
+import {type InstructionsKey} from './helpers/instructions';
 import {
   uniqLabelFeaturesSelected,
   prevNextButtons,
@@ -29,47 +30,6 @@ import type {
   ModelDataToSave,
   PrevNextButtons,
 } from './types';
-
-// Action types
-const RESET_STATE = 'RESET_STATE';
-const SET_MODE = 'SET_MODE';
-const SET_SELECTED_NAME = 'SET_SELECTED_NAME';
-const SET_SELECTED_CSV = 'SET_SELECTED_CSV';
-const SET_SELECTED_JSON = 'SET_SELECTED_JSON';
-const SET_INVALID_DATA = 'SET_INVALID_DATA';
-const SET_IMPORTED_DATA = 'SET_IMPORTED_DATA';
-const SET_IMPORTED_METADATA = 'SET_IMPORTED_METADATA';
-const SET_REMOVED_ROWS_COUNT = 'SET_REMOVED_ROWS_COUNT';
-const SET_COLUMNS_BY_DATA_TYPE = 'SET_COLUMNS_BY_DATA_TYPE';
-const ADD_SELECTED_FEATURE = 'ADD_SELECTED_FEATURE';
-const REMOVE_SELECTED_FEATURE = 'REMOVE_SELECTED_FEATURE';
-const SET_LABEL_COLUMN = 'SET_LABEL_COLUMN';
-const SET_FEATURE_NUMBER_KEY = 'SET_FEATURE_NUMBER_KEY';
-const SET_RESERVE_LOCATION = 'SET_RESERVE_LOCATION';
-const SET_ACCURACY_CHECK_EXAMPLES = 'SET_ACCURACY_CHECK_EXAMPLES';
-const SET_ACCURACY_CHECK_LABELS = 'SET_ACCURACY_CHECK_LABELS';
-const SET_ACCURACY_CHECK_PREDICTED_LABELS =
-  'SET_ACCURACY_CHECK_PREDICTED_LABELS';
-const SET_TRAINING_EXAMPLES = 'SET_TRAINING_EXAMPLES';
-const SET_TRAINING_LABELS = 'SET_TRAINING_LABELS';
-const SET_TEST_DATA = 'SET_TEST_DATA';
-const SET_PREDICTION = 'SET_PREDICTION';
-const SET_TRAINED_MODEL = 'SET_TRAINED_MODEL';
-const SET_TRAINED_MODEL_DETAIL = 'SET_TRAINED_MODEL_DETAIL';
-const SET_CURRENT_PANEL = 'SET_CURRENT_PANEL';
-const SET_CURRENT_COLUMN = 'SET_CURRENT_COLUMN';
-const SET_HIGHLIGHT_COLUMN = 'SET_HIGHLIGHT_COLUMN';
-const SET_HIGHLIGHT_DATASET = 'SET_HIGHLIGHT_DATASET';
-const SET_RESULTS_PHASE = 'SET_RESULTS_PHASE';
-const SET_RESULTS_HIGHLIGHT_ROW = 'SET_RESULTS_HIGHLIGHT_ROW';
-const SET_INSTRUCTIONS_KEY_CALLBACK = 'SET_INSTRUCTIONS_KEY_CALLBACK';
-const SET_SAVE_STATUS = 'SET_SAVE_STATUS';
-const SET_HISTORIC_RESULT = 'SET_HISTORIC_RESULT';
-const SET_SHOW_RESULTS_DETAILS = 'SET_SHOW_RESULTS_DETAILS';
-const SET_K_VALUE = 'SET_K_VALUE';
-const SET_INSTRUCTIONS_DISMISSED = 'SET_INSTRUCTIONS_DISMISSED';
-const SET_RESULTS_TAB = 'SET_RESULTS_TAB';
-const SET_FIREHOSE_METRICS_LOGGER = 'SET_FIREHOSE_METRICS_LOGGER';
 
 export interface RootState {
   name: string | undefined;
@@ -95,251 +55,25 @@ export interface RootState {
   prediction: number | string | undefined;
   trainedModel: KNN | undefined;
   trainedModelDetails: TrainedModelDetailsSave;
-  instructionsKeyCallback:
-    | ((key: string, options: {showOverlay?: boolean} | null) => void)
-    | undefined;
   currentPanel: string;
   currentColumn: string | undefined;
   resultsPhase: number | undefined;
   saveStatus: string;
   saveResponseData: SaveResponseData | undefined;
-  columnRefs: Record<string, HTMLElement>;
   historicResults: HistoricResult[];
   showResultsDetails: boolean;
   resultsHighlightRow: number | undefined;
   kValue: number | null;
   viewedPanels: string[];
   instructionsOverlayActive: boolean;
+  instructionsEnabled: boolean;
+  instructionsKey: InstructionsKey | null;
+  showOverlay: boolean;
   resultsTab: string;
-  firehoseMetricsLogger:
-    | ((eventName: string, details: Record<string, unknown>) => void)
-    | undefined;
   mode?: Mode;
 }
 
-// Exported so the inferred type of the `store` singleton (re-exported from the
-// package entry) is nameable in the emitted declaration file.
-export interface ReduxAction {
-  type: string;
-  // Actions carry arbitrary, per-type payloads keyed by name, which the
-  // reducer reads by field (~60 sites). A discriminated union over all ~40
-  // action creators would remove this `any`, but that is a larger refactor
-  // tracked separately.
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  [key: string]: any;
-}
-
-// Action creators
-export function setMode(mode: Mode): ReduxAction {
-  return {type: SET_MODE, mode};
-}
-
-export function setSelectedName(name: string): ReduxAction {
-  return {type: SET_SELECTED_NAME, name};
-}
-
-export function setSelectedCSV(csvfile: string): ReduxAction {
-  return {type: SET_SELECTED_CSV, csvfile};
-}
-
-export function setSelectedJSON(jsonfile: string): ReduxAction {
-  return {type: SET_SELECTED_JSON, jsonfile};
-}
-
-export function setInvalidData(invalidData: string): ReduxAction {
-  return {type: SET_INVALID_DATA, invalidData};
-}
-
-export function setImportedData(
-  data: DataRow[],
-  userUploadedData: boolean,
-): ReduxAction {
-  return {type: SET_IMPORTED_DATA, data, userUploadedData};
-}
-
-export function setImportedMetadata(metadata: Metadata): ReduxAction {
-  return {type: SET_IMPORTED_METADATA, metadata};
-}
-
-export function setRemovedRowsCount(removedRowsCount: number): ReduxAction {
-  return {type: SET_REMOVED_ROWS_COUNT, removedRowsCount};
-}
-
-export const setColumnsByDataType = (
-  column: string,
-  dataType: string,
-): ReduxAction => ({
-  type: SET_COLUMNS_BY_DATA_TYPE,
-  column,
-  dataType,
-});
-
-export function addSelectedFeature(selectedFeature: string): ReduxAction {
-  return {type: ADD_SELECTED_FEATURE, selectedFeature};
-}
-
-export function removeSelectedFeature(selectedFeature: string): ReduxAction {
-  return {type: REMOVE_SELECTED_FEATURE, selectedFeature};
-}
-
-export function setLabelColumn(labelColumn: string): ReduxAction {
-  return {type: SET_LABEL_COLUMN, labelColumn};
-}
-
-/* featureNumberKey maps feature names to a hash of category options mapped to integers.
-  {
-    feature1: {
-      option1 : 0,
-      option2 : 1,
-      option3: 2,
-      ...
-    },
-    feature2: {
-      option1 : 0,
-      option2 : 1,
-      ...
-    }
-  }
-*/
-export function setFeatureNumberKey(
-  featureNumberKey: Record<string, Record<string, number>>,
-): ReduxAction {
-  return {type: SET_FEATURE_NUMBER_KEY, featureNumberKey};
-}
-
-export function setReserveLocation(reserveLocation: string): ReduxAction {
-  return {type: SET_RESERVE_LOCATION, reserveLocation};
-}
-
-export function setAccuracyCheckExamples(
-  accuracyCheckExamples: number[][],
-): ReduxAction {
-  return {type: SET_ACCURACY_CHECK_EXAMPLES, accuracyCheckExamples};
-}
-
-export function setAccuracyCheckLabels(
-  accuracyCheckLabels: (number | string)[],
-): ReduxAction {
-  return {type: SET_ACCURACY_CHECK_LABELS, accuracyCheckLabels};
-}
-
-export function setAccuracyCheckPredictedLabels(
-  predictedLabels: (number | string)[],
-): ReduxAction {
-  return {type: SET_ACCURACY_CHECK_PREDICTED_LABELS, predictedLabels};
-}
-
-export function setTrainingExamples(trainingExamples: number[][]): ReduxAction {
-  return {type: SET_TRAINING_EXAMPLES, trainingExamples};
-}
-
-export function setTrainingLabels(
-  trainingLabels: (number | string)[],
-): ReduxAction {
-  return {type: SET_TRAINING_LABELS, trainingLabels};
-}
-
-export function setTestData(
-  feature: string,
-  value: string | number,
-): ReduxAction {
-  return {type: SET_TEST_DATA, feature, value};
-}
-
-export function setPrediction(prediction: number | string): ReduxAction {
-  return {type: SET_PREDICTION, prediction};
-}
-
-export function resetState(): ReduxAction {
-  return {type: RESET_STATE};
-}
-
-export function setTrainedModel(trainedModel: KNN): ReduxAction {
-  return {type: SET_TRAINED_MODEL, trainedModel};
-}
-
-export function setTrainedModelDetail(
-  field: string,
-  value: string,
-  isColumn: boolean,
-): ReduxAction {
-  return {type: SET_TRAINED_MODEL_DETAIL, field, value, isColumn};
-}
-
-export function setInstructionsKeyCallback(
-  instructionsKeyCallback: (
-    key: string,
-    options: {showOverlay?: boolean} | null,
-  ) => void,
-): ReduxAction {
-  return {type: SET_INSTRUCTIONS_KEY_CALLBACK, instructionsKeyCallback};
-}
-
-export function setCurrentPanel(currentPanel: string): ReduxAction {
-  return {type: SET_CURRENT_PANEL, currentPanel};
-}
-
-export function setCurrentColumn(currentColumn: string): ReduxAction {
-  return {type: SET_CURRENT_COLUMN, currentColumn};
-}
-
-export function setHighlightColumn(highlightColumn: string): ReduxAction {
-  return {type: SET_HIGHLIGHT_COLUMN, highlightColumn};
-}
-
-export function setHighlightDataset(highlightDataset: string): ReduxAction {
-  return {type: SET_HIGHLIGHT_DATASET, highlightDataset};
-}
-
-export function setResultsPhase(phase: number): ReduxAction {
-  return {type: SET_RESULTS_PHASE, phase};
-}
-
-export function setResultsHighlightRow(highlightRow: number): ReduxAction {
-  return {type: SET_RESULTS_HIGHLIGHT_ROW, highlightRow};
-}
-
-export function setSaveStatus(
-  status: string,
-  data?: SaveResponseData,
-): ReduxAction {
-  return {type: SET_SAVE_STATUS, status, data};
-}
-
-export function setHistoricResult(
-  label: string,
-  features: string[],
-  accuracy: string,
-): ReduxAction {
-  return {type: SET_HISTORIC_RESULT, label, features, accuracy};
-}
-
-export function setShowResultsDetails(show: boolean): ReduxAction {
-  return {type: SET_SHOW_RESULTS_DETAILS, show};
-}
-
-export function setKValue(kValue: number): ReduxAction {
-  return {type: SET_K_VALUE, kValue};
-}
-
-export function setInstructionsDismissed(): ReduxAction {
-  return {type: SET_INSTRUCTIONS_DISMISSED};
-}
-
-export function setResultsTab(key: string): ReduxAction {
-  return {type: SET_RESULTS_TAB, key};
-}
-
-export function setFirehoseMetricsLogger(
-  firehoseMetricsLogger: (
-    eventName: string,
-    details: Record<string, unknown>,
-  ) => void,
-): ReduxAction {
-  return {type: SET_FIREHOSE_METRICS_LOGGER, firehoseMetricsLogger};
-}
-
-const initialState: RootState = {
+export const initialState: RootState = {
   name: undefined,
   csvfile: undefined,
   jsonfile: undefined,
@@ -366,7 +100,6 @@ const initialState: RootState = {
   prediction: undefined,
   trainedModel: undefined,
   trainedModelDetails: {},
-  instructionsKeyCallback: undefined,
   currentPanel: 'selectDataset',
   currentColumn: undefined,
   resultsPhase: undefined,
@@ -376,431 +109,366 @@ const initialState: RootState = {
   // Additional data for a failed save response.  Currently contains
   // details when server-side "share filtering" prevents a save.
   saveResponseData: undefined,
-  columnRefs: {},
   historicResults: [],
   showResultsDetails: false,
   resultsHighlightRow: undefined,
   kValue: null,
   viewedPanels: [],
   instructionsOverlayActive: false,
+  instructionsEnabled: false,
+  instructionsKey: null,
+  showOverlay: false,
   resultsTab: ResultsGrades.CORRECT,
-  firehoseMetricsLogger: undefined,
 };
 
-// Reducer
-export default function rootReducer(
-  state: RootState = initialState,
-  action: ReduxAction,
-): RootState {
-  if (action.type === SET_MODE) {
-    return {
-      ...state,
-      mode: action.mode,
-    };
-  }
-  if (action.type === SET_SELECTED_NAME) {
-    return {
-      ...state,
-      name: action.name,
-    };
-  }
-  if (action.type === SET_SELECTED_CSV) {
-    return {
-      ...state,
-      csvfile: action.csvfile,
-    };
-  }
-  if (action.type === SET_SELECTED_JSON) {
-    return {
-      ...state,
-      jsonfile: action.jsonfile,
-    };
-  }
-  if (action.type === SET_INVALID_DATA) {
-    return {
-      ...state,
-      invalidData: action.invalidData,
-    };
-  }
-  if (action.type === SET_IMPORTED_DATA) {
-    if (state.currentPanel === 'selectDataset') {
-      // Reducer must stay pure: the consumer-supplied callback dispatches
-      // into its own redux store, which would interleave React commits
-      // (and a getState cascade) into this dispatch and trip the
-      // "getState() while reducer is executing" guard. Defer to a
-      // microtask so the dispatch fully unwinds before the callback fires.
-      if (state.instructionsKeyCallback) {
-        const callback = state.instructionsKeyCallback;
-        queueMicrotask(() =>
-          callback(
-            action.userUploadedData ? 'uploadedDataset' : 'selectedDataset',
-            null,
-          ),
-        );
-      }
-    }
-
-    return {
-      ...state,
-      data: action.data,
-    };
-  }
-  if (action.type === SET_IMPORTED_METADATA) {
-    const newState = {
-      ...state,
-      metadata: action.metadata,
-    };
-
-    if (
-      state.mode &&
-      state.mode.datasets &&
-      state.mode.datasets.length > 1 &&
-      state.mode.hideSelectLabel
-    ) {
-      newState.labelColumn = action.metadata.defaultLabelColumn;
-    }
-
-    return newState;
-  }
-  if (action.type === SET_COLUMNS_BY_DATA_TYPE) {
-    return {
-      ...state,
-      columnsByDataType: {
-        ...state.columnsByDataType,
-        [action.column]: action.dataType,
-      },
-    };
-  }
-  if (action.type === SET_REMOVED_ROWS_COUNT) {
-    return {
-      ...state,
-      removedRowsCount: action.removedRowsCount,
-    };
-  }
-  if (action.type === ADD_SELECTED_FEATURE) {
-    if (!state.selectedFeatures.includes(action.selectedFeature)) {
-      return {
-        ...state,
-        selectedFeatures: [...state.selectedFeatures, action.selectedFeature],
-      };
-    }
-  }
-  if (action.type === REMOVE_SELECTED_FEATURE) {
-    return {
-      ...state,
-      selectedFeatures: state.selectedFeatures.filter(
-        item => item !== action.selectedFeature,
-      ),
-    };
-  }
-  if (action.type === SET_LABEL_COLUMN) {
-    return {
-      ...state,
-      labelColumn: action.labelColumn,
-    };
-  }
-  if (action.type === SET_FEATURE_NUMBER_KEY) {
-    return {
-      ...state,
-      featureNumberKey: action.featureNumberKey,
-    };
-  }
-  if (action.type === SET_TRAINING_EXAMPLES) {
-    return {
-      ...state,
-      trainingExamples: action.trainingExamples,
-    };
-  }
-  if (action.type === SET_TRAINING_LABELS) {
-    return {
-      ...state,
-      trainingLabels: action.trainingLabels,
-    };
-  }
-  if (action.type === SET_RESERVE_LOCATION) {
-    return {
-      ...state,
-      reserveLocation: action.reserveLocation,
-    };
-  }
-  if (action.type === SET_ACCURACY_CHECK_EXAMPLES) {
-    return {
-      ...state,
-      accuracyCheckExamples: action.accuracyCheckExamples,
-    };
-  }
-  if (action.type === SET_ACCURACY_CHECK_LABELS) {
-    return {
-      ...state,
-      accuracyCheckLabels: action.accuracyCheckLabels,
-    };
-  }
-  if (action.type === SET_ACCURACY_CHECK_PREDICTED_LABELS) {
-    return {
-      ...state,
-      accuracyCheckPredictedLabels: action.predictedLabels,
-    };
-  }
-  if (action.type === SET_TEST_DATA) {
-    return {
-      ...state,
-      testData: {...state.testData, [action.feature]: action.value},
-      prediction: undefined,
-    };
-  }
-  if (action.type === SET_PREDICTION) {
-    return {
-      ...state,
-      prediction: action.prediction,
-    };
-  }
-  if (action.type === RESET_STATE) {
-    return {
-      ...initialState,
-      instructionsKeyCallback: state.instructionsKeyCallback,
-      mode: state.mode,
-      reserveLocation: state.reserveLocation,
-      firehoseMetricsLogger: state.firehoseMetricsLogger,
-    };
-  }
-  if (action.type === SET_TRAINED_MODEL) {
-    return {
-      ...state,
-      trainedModel: action.trainedModel,
-    };
-  }
-  if (action.type === SET_TRAINED_MODEL_DETAIL) {
-    const trainedModelDetails = {...state.trainedModelDetails};
-
-    if (action.isColumn) {
-      if (!trainedModelDetails.columns) {
-        trainedModelDetails.columns = [];
-      }
-
-      const column = trainedModelDetails.columns.find(
-        (column: {id: string; description: string}) => {
-          return column.id === action.field;
-        },
-      );
-
-      if (column) {
-        column.description = action.value;
-      } else {
-        trainedModelDetails.columns.push({
-          id: action.field,
-          description: action.value,
-        });
-      }
-    } else {
-      trainedModelDetails[action.field] = action.value;
-    }
-
-    return {
-      ...state,
-      trainedModelDetails,
-    };
-  }
-  if (action.type === SET_INSTRUCTIONS_KEY_CALLBACK) {
-    return {
-      ...state,
-      instructionsKeyCallback: action.instructionsKeyCallback,
-    };
-  }
-  if (action.type === SET_CURRENT_PANEL) {
-    reportPanelView(action.currentPanel);
-    let showedOverlay = false;
-    if (state.instructionsKeyCallback) {
-      const options: {showOverlay?: boolean} = {};
-      if (
-        !(state.mode && state.mode.hideInstructionsOverlay) &&
-        !state.viewedPanels.includes(action.currentPanel)
+const ailabSlice = createSlice({
+  name: 'ailab',
+  initialState,
+  reducers: {
+    setMode(state, action: PayloadAction<Mode>) {
+      state.mode = action.payload;
+    },
+    setSelectedName(state, action: PayloadAction<string>) {
+      state.name = action.payload;
+    },
+    setSelectedCSV(state, action: PayloadAction<string>) {
+      state.csvfile = action.payload;
+    },
+    setSelectedJSON(state, action: PayloadAction<string>) {
+      state.jsonfile = action.payload;
+    },
+    setInvalidData(state, action: PayloadAction<string>) {
+      state.invalidData = action.payload;
+    },
+    setImportedData: {
+      reducer(
+        state,
+        action: PayloadAction<{data: DataRow[]; userUploadedData: boolean}>,
       ) {
-        options.showOverlay = true;
-        state.viewedPanels.push(action.currentPanel);
+        const {data, userUploadedData} = action.payload;
+        if (state.currentPanel === 'selectDataset') {
+          state.instructionsKey = userUploadedData
+            ? 'uploadedDataset'
+            : 'selectedDataset';
+          state.showOverlay = false;
+        }
+        state.data = data;
+      },
+      prepare(data: DataRow[], userUploadedData: boolean) {
+        return {payload: {data, userUploadedData}};
+      },
+    },
+    setImportedMetadata(state, action: PayloadAction<Metadata>) {
+      state.metadata = action.payload;
+      if (
+        state.mode &&
+        state.mode.datasets &&
+        state.mode.datasets.length > 1 &&
+        state.mode.hideSelectLabel
+      ) {
+        state.labelColumn = action.payload.defaultLabelColumn;
+      }
+    },
+    setRemovedRowsCount(state, action: PayloadAction<number>) {
+      state.removedRowsCount = action.payload;
+    },
+    setColumnsByDataType: {
+      reducer(
+        state,
+        action: PayloadAction<{column: string; dataType: string}>,
+      ) {
+        state.columnsByDataType[action.payload.column] =
+          action.payload.dataType;
+      },
+      prepare(column: string, dataType: string) {
+        return {payload: {column, dataType}};
+      },
+    },
+    addSelectedFeature(state, action: PayloadAction<string>) {
+      if (!state.selectedFeatures.includes(action.payload)) {
+        state.selectedFeatures.push(action.payload);
+      }
+    },
+    removeSelectedFeature(state, action: PayloadAction<string>) {
+      state.selectedFeatures = state.selectedFeatures.filter(
+        item => item !== action.payload,
+      );
+    },
+    setLabelColumn(state, action: PayloadAction<string>) {
+      state.labelColumn = action.payload;
+    },
+    /* featureNumberKey maps feature names to a hash of category options mapped
+      to integers.
+      {
+        feature1: {option1: 0, option2: 1, ...},
+        feature2: {option1: 0, option2: 1, ...}
+      }
+    */
+    setFeatureNumberKey(
+      state,
+      action: PayloadAction<Record<string, Record<string, number>>>,
+    ) {
+      state.featureNumberKey = action.payload;
+    },
+    setReserveLocation(state, action: PayloadAction<string>) {
+      state.reserveLocation = action.payload;
+    },
+    setAccuracyCheckExamples(state, action: PayloadAction<number[][]>) {
+      state.accuracyCheckExamples = action.payload;
+    },
+    setAccuracyCheckLabels(state, action: PayloadAction<(number | string)[]>) {
+      state.accuracyCheckLabels = action.payload;
+    },
+    setAccuracyCheckPredictedLabels(
+      state,
+      action: PayloadAction<(number | string)[]>,
+    ) {
+      state.accuracyCheckPredictedLabels = action.payload;
+    },
+    setTrainingExamples(state, action: PayloadAction<number[][]>) {
+      state.trainingExamples = action.payload;
+    },
+    setTrainingLabels(state, action: PayloadAction<(number | string)[]>) {
+      state.trainingLabels = action.payload;
+    },
+    setTestData: {
+      reducer(
+        state,
+        action: PayloadAction<{feature: string; value: string | number}>,
+      ) {
+        state.testData[action.payload.feature] = action.payload.value;
+        state.prediction = undefined;
+      },
+      prepare(feature: string, value: string | number) {
+        return {payload: {feature, value}};
+      },
+    },
+    setPrediction(state, action: PayloadAction<number | string>) {
+      state.prediction = action.payload;
+    },
+    resetState(state) {
+      return {
+        ...initialState,
+        mode: state.mode,
+        reserveLocation: state.reserveLocation,
+      };
+    },
+    setTrainedModel(state, action: PayloadAction<KNN>) {
+      state.trainedModel = action.payload;
+    },
+    setTrainedModelDetail: {
+      reducer(
+        state,
+        action: PayloadAction<{
+          field: string;
+          value: string;
+          isColumn: boolean;
+        }>,
+      ) {
+        const {field, value, isColumn} = action.payload;
+        const details = state.trainedModelDetails;
+        if (isColumn) {
+          if (!details.columns) {
+            details.columns = [];
+          }
+          const column = details.columns.find(c => c.id === field);
+          if (column) {
+            column.description = value;
+          } else {
+            details.columns.push({id: field, description: value});
+          }
+        } else {
+          details[field] = value;
+        }
+      },
+      prepare(field: string, value: string, isColumn: boolean) {
+        return {payload: {field, value, isColumn}};
+      },
+    },
+    setCurrentPanel(state, action: PayloadAction<string>) {
+      const currentPanel = action.payload;
+      // Show the overlay only on a panel's first visit, only when 
+      // instructions are enabled, and the mode doesn't suppress it.
+      let showedOverlay = false;
+      if (
+        state.instructionsEnabled &&
+        !(state.mode && state.mode.hideInstructionsOverlay) &&
+        !state.viewedPanels.includes(currentPanel)
+      ) {
+        state.viewedPanels.push(currentPanel);
         showedOverlay = true;
       }
-      // Deferred to a microtask — see the comment on the SET_IMPORTED_DATA
-      // branch above for why the reducer must not synchronously fire a
-      // consumer callback that dispatches into another store.
-      const callback = state.instructionsKeyCallback;
-      const callbackAction = action.currentPanel;
-      const callbackOptions = options;
-      queueMicrotask(() => callback(callbackAction, callbackOptions));
-    }
-
-    if (action.currentPanel === 'dataDisplayLabel') {
-      return {
-        ...state,
-        currentPanel: action.currentPanel,
-        instructionsOverlayActive: showedOverlay,
-        currentColumn: undefined,
-        selectedFeatures: [],
-      };
-    }
-
-    if (action.currentPanel === 'results') {
-      return {
-        ...state,
-        currentPanel: action.currentPanel,
-        instructionsOverlayActive: showedOverlay,
-        testData: {},
-        prediction: undefined,
-        resultsTab: ResultsGrades.CORRECT,
-        showResultsDetails: false,
-      };
-    }
-
-    return {
-      ...state,
-      currentPanel: action.currentPanel,
-      instructionsOverlayActive: showedOverlay,
-      currentColumn: undefined,
-    };
-  }
-  if (action.type === SET_HIGHLIGHT_COLUMN) {
-    if (!getShowColumnClicking(state)) {
-      // If no column clicking, do nothing.
-      return state;
-    }
-    if (
-      state.currentPanel === 'dataDisplayFeatures' &&
-      action.highlightColumn === state.labelColumn
-    ) {
-      // If doing feature selection, and the label column is clicked, do nothing.
-      return state;
-    }
-    return {
-      ...state,
-      highlightColumn: action.highlightColumn,
-    };
-  }
-  if (action.type === SET_HIGHLIGHT_DATASET) {
-    return {
-      ...state,
-      highlightDataset: action.highlightDataset,
-    };
-  }
-  if (action.type === SET_CURRENT_COLUMN) {
-    if (!getShowColumnClicking(state)) {
-      // If no column clicking, do nothing.
-      return state;
-    }
-    if (
-      state.currentPanel === 'dataDisplayFeatures' &&
-      action.currentColumn === state.labelColumn
-    ) {
-      // If doing feature selection, and the label column is clicked, do nothing.
-      return state;
-    } else if (state.currentColumn === action.currentColumn) {
-      // If column is selected, then deselect.
-      if (state.currentPanel === 'dataDisplayFeatures') {
-        // Deferred — see SET_IMPORTED_DATA comment.
-        if (state.instructionsKeyCallback) {
-          const callback = state.instructionsKeyCallback;
-          queueMicrotask(() => callback('dataDisplayFeatures', null));
-        }
+      state.currentPanel = currentPanel;
+      state.instructionsOverlayActive = showedOverlay;
+      state.instructionsKey = currentPanel as InstructionsKey;
+      state.showOverlay = showedOverlay;
+      if (currentPanel === 'dataDisplayLabel') {
+        state.currentColumn = undefined;
+        state.selectedFeatures = [];
+      } else if (currentPanel === 'results') {
+        state.testData = {};
+        state.prediction = undefined;
+        state.resultsTab = ResultsGrades.CORRECT;
+        state.showResultsDetails = false;
+      } else {
+        state.currentColumn = undefined;
       }
-      return {
-        ...state,
-        currentColumn: undefined,
-      };
-    } else {
-      if (state.currentPanel === 'dataDisplayFeatures') {
-        // Deferred — see SET_IMPORTED_DATA comment.
-        if (state.instructionsKeyCallback) {
-          const callback = state.instructionsKeyCallback;
+    },
+    setCurrentColumn(state, action: PayloadAction<string>) {
+      const currentColumn = action.payload;
+      if (!getShowColumnClicking(state)) {
+        // If no column clicking, do nothing.
+        return;
+      }
+      if (
+        state.currentPanel === 'dataDisplayFeatures' &&
+        currentColumn === state.labelColumn
+      ) {
+        // If doing feature selection, and the label column is clicked, do
+        // nothing.
+        return;
+      } else if (state.currentColumn === currentColumn) {
+        // If column is selected, then deselect.
+        if (state.currentPanel === 'dataDisplayFeatures') {
+          state.instructionsKey = 'dataDisplayFeatures';
+          state.showOverlay = false;
+        }
+        state.currentColumn = undefined;
+      } else {
+        if (state.currentPanel === 'dataDisplayFeatures') {
           if (
-            state.columnsByDataType[action.currentColumn] ===
-            ColumnTypes.NUMERICAL
+            state.columnsByDataType[currentColumn] === ColumnTypes.NUMERICAL
           ) {
-            queueMicrotask(() => callback('selectedFeatureNumerical', null));
+            state.instructionsKey = 'selectedFeatureNumerical';
+            state.showOverlay = false;
           } else if (
-            state.columnsByDataType[action.currentColumn] ===
-            ColumnTypes.CATEGORICAL
+            state.columnsByDataType[currentColumn] === ColumnTypes.CATEGORICAL
           ) {
-            queueMicrotask(() => callback('selectedFeatureCategorical', null));
+            state.instructionsKey = 'selectedFeatureCategorical';
+            state.showOverlay = false;
           }
         }
+        // Select the column.
+        state.currentColumn = currentColumn;
       }
+    },
+    setHighlightColumn(state, action: PayloadAction<string>) {
+      const highlightColumn = action.payload;
+      if (!getShowColumnClicking(state)) {
+        // If no column clicking, do nothing.
+        return;
+      }
+      if (
+        state.currentPanel === 'dataDisplayFeatures' &&
+        highlightColumn === state.labelColumn
+      ) {
+        // If doing feature selection, and the label column is clicked, do
+        // nothing.
+        return;
+      }
+      state.highlightColumn = highlightColumn;
+    },
+    setHighlightDataset(state, action: PayloadAction<string>) {
+      state.highlightDataset = action.payload;
+    },
+    setResultsPhase(state, action: PayloadAction<number>) {
+      state.resultsPhase = action.payload;
+    },
+    setResultsHighlightRow(state, action: PayloadAction<number>) {
+      state.resultsHighlightRow = action.payload;
+    },
+    setSaveStatus: {
+      reducer(
+        state,
+        action: PayloadAction<{status: string; data?: SaveResponseData}>,
+      ) {
+        state.saveStatus = action.payload.status;
+        state.saveResponseData = action.payload.data;
+      },
+      prepare(status: string, data?: SaveResponseData) {
+        return {payload: {status, data}};
+      },
+    },
+    setHistoricResult: {
+      reducer(
+        state,
+        action: PayloadAction<{
+          label: string;
+          features: string[];
+          accuracy: string;
+        }>,
+      ) {
+        state.historicResults.unshift({
+          label: action.payload.label,
+          features: action.payload.features,
+          accuracy: action.payload.accuracy,
+        });
+      },
+      prepare(label: string, features: string[], accuracy: string) {
+        return {payload: {label, features, accuracy}};
+      },
+    },
+    setShowResultsDetails(state, action: PayloadAction<boolean>) {
+      state.instructionsKey = action.payload ? 'resultsDetails' : 'results';
+      state.showOverlay = false;
+      state.showResultsDetails = action.payload;
+    },
+    setKValue(state, action: PayloadAction<number>) {
+      state.kValue = action.payload;
+    },
+    setInstructionsDismissed(state) {
+      state.instructionsOverlayActive = false;
+    },
+    setInstructionsEnabled(state, action: PayloadAction<boolean>) {
+      state.instructionsEnabled = action.payload;
+    },
+    setResultsTab(state, action: PayloadAction<string>) {
+      state.resultsTab = action.payload;
+    },
+  },
+});
 
-      // Select the column.
-      return {
-        ...state,
-        currentColumn: action.currentColumn,
-      };
-    }
-  }
-  if (action.type === SET_RESULTS_PHASE) {
-    return {
-      ...state,
-      resultsPhase: action.phase,
-    };
-  }
-  if (action.type === SET_RESULTS_HIGHLIGHT_ROW) {
-    return {
-      ...state,
-      resultsHighlightRow: action.highlightRow,
-    };
-  }
-  if (action.type === SET_SAVE_STATUS) {
-    return {
-      ...state,
-      saveStatus: action.status,
-      saveResponseData: action.data,
-    };
-  }
-  if (action.type === SET_HISTORIC_RESULT) {
-    return {
-      ...state,
-      historicResults: [
-        {
-          label: action.label,
-          features: action.features,
-          accuracy: action.accuracy,
-        },
-        ...state.historicResults,
-      ],
-    };
-  }
-  if (action.type === SET_SHOW_RESULTS_DETAILS) {
-    // Deferred — see SET_IMPORTED_DATA comment.
-    if (state.instructionsKeyCallback) {
-      const callback = state.instructionsKeyCallback;
-      queueMicrotask(() =>
-        callback(action.show ? 'resultsDetails' : 'results', null),
-      );
-    }
-    return {
-      ...state,
-      showResultsDetails: action.show,
-    };
-  }
-  if (action.type === SET_K_VALUE) {
-    return {
-      ...state,
-      kValue: action.kValue,
-    };
-  }
-  if (action.type === SET_INSTRUCTIONS_DISMISSED) {
-    return {
-      ...state,
-      instructionsOverlayActive: false,
-    };
-  }
-  if (action.type === SET_RESULTS_TAB) {
-    return {
-      ...state,
-      resultsTab: action.key,
-    };
-  }
-  if (action.type === SET_FIREHOSE_METRICS_LOGGER) {
-    return {
-      ...state,
-      firehoseMetricsLogger: action.firehoseMetricsLogger,
-    };
-  }
-  return state;
-}
+export const {
+  setMode,
+  setSelectedName,
+  setSelectedCSV,
+  setSelectedJSON,
+  setInvalidData,
+  setImportedData,
+  setImportedMetadata,
+  setRemovedRowsCount,
+  setColumnsByDataType,
+  addSelectedFeature,
+  removeSelectedFeature,
+  setLabelColumn,
+  setFeatureNumberKey,
+  setReserveLocation,
+  setAccuracyCheckExamples,
+  setAccuracyCheckLabels,
+  setAccuracyCheckPredictedLabels,
+  setTrainingExamples,
+  setTrainingLabels,
+  setTestData,
+  setPrediction,
+  resetState,
+  setTrainedModel,
+  setTrainedModelDetail,
+  setCurrentPanel,
+  setCurrentColumn,
+  setHighlightColumn,
+  setHighlightDataset,
+  setResultsPhase,
+  setResultsHighlightRow,
+  setSaveStatus,
+  setHistoricResult,
+  setShowResultsDetails,
+  setKValue,
+  setInstructionsDismissed,
+  setInstructionsEnabled,
+  setResultsTab,
+} = ailabSlice.actions;
+
+export default ailabSlice.reducer;
 
 export function getSpecifiedDatasets(state: RootState): string[] | undefined {
   return state.mode && state.mode.datasets;

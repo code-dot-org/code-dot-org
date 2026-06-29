@@ -3,7 +3,7 @@ require 'metrics/events'
 class Api::V1::SectionsController < Api::V1::JSONApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
-  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :create_demo, :presets, :update, :require_captcha, :assigned_essential_ai_dependency]
+  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :create_demo, :presets, :update, :check_demo_section_staleness, :reset_demo_section, :require_captcha, :assigned_essential_ai_dependency]
   before_action :get_course_and_unit, only: [:create, :update]
 
   skip_before_action :verify_authenticity_token, only: [:update]
@@ -95,7 +95,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     render json: section.summarize
   end
 
-  # POST /api/v1/sections/demo/:demo_type
+  # POST /api/v1/sections/demo/create/:demo_type
   # Creates a demo section with preset properties and adds demo students.
   def create_demo
     authorize! :create, Section
@@ -112,7 +112,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     end
 
     section = ActiveRecord::Base.transaction do
-      s = Section.create!(
+      section = Section.create!(
         {
           user_id: current_user.id,
           name: config[:section_name],
@@ -128,17 +128,9 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
         }.compact
       )
 
-      Policies::DemoSections.demo_student_ids(demo_type).each do |student_id|
-        student = User.find_by(id: student_id)
-        next unless student
-        begin
-          s.add_student(student)
-        rescue ActiveRecord::ActiveRecordError => exception
-          Honeybadger.notify(exception, context: {section_id: s.id, student_id: student_id})
-        end
-      end
+      add_demo_students(section, Policies::DemoSections.demo_student_ids(demo_type))
 
-      s
+      section
     end
 
     render json: section.summarize
@@ -156,6 +148,67 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
 
     preset_views = Policies::DemoSections.preset_views_for_all_types
     render json: preset_views
+  end
+
+  # GET /api/v1/sections/demo/check_staleness?id=<id>
+  # Confirms that a demo section tracks fields necessary for onboarding
+  # 403: forbidden = section does not exist or is not a demo section.
+  # 200: ok = with a message when the section has drifted from its preset
+  # 204: No Content = section is up to date with its preset
+  def check_demo_section_staleness
+    section = Section.find(params[:id])
+    authorize! :manage, section
+    raise ActiveRecord::RecordNotFound unless section.demo_section?
+
+    unless Policies::DemoSections.section_matches_preset?(section)
+      return render json: {message: 'Demo section curriculum is out of date.'}, status: :ok
+    end
+
+    head :no_content
+  end
+
+  # POST /api/v1/sections/demo/reset  (body: {id: <id>})
+  # Reset a demo section to its preset configuration.
+  # Only resets fields that are required for onboarding.
+  def reset_demo_section
+    section = Section.find(params[:id])
+    return head :forbidden unless section.user_id == current_user&.id
+    raise ActiveRecord::RecordNotFound unless section.demo_section?
+
+    config = Policies::DemoSections.get_preset(section.demo_type)
+    raise ActiveRecord::RecordNotFound unless config
+
+    unit = Unit.get_from_cache(config[:unit_name], raise_exceptions: false) if config[:unit_name].present?
+    unit_group = UnitGroup.get_from_cache(config[:unit_group_name]) if config[:unit_group_name].present?
+
+    if unit.nil? || unit_group.nil?
+      Honeybadger.notify(
+        "Demo section staleness reset failed due to misconfigured unit or course",
+        context: {section_id: section.id, demo_type: section.demo_type, unit_name: config[:unit_name], unit_group_name: config[:unit_group_name]}
+      )
+      return head :unprocessable_entity
+    end
+
+    roster_failures = []
+    ActiveRecord::Base.transaction do
+      unless section.script_id == unit.id && section.course_id == unit_group.id
+        section.update!(script_id: unit.id, course_id: unit_group.id)
+      end
+
+      roster_failures = reset_demo_section_roster(section)
+      # Roll everything back if anything failed.
+      raise ActiveRecord::Rollback if roster_failures.any?
+    end
+
+    if roster_failures.any?
+      Honeybadger.notify(
+        "Demo section reset rolled back: roster could not be reconciled",
+        context: {section_id: section.id, demo_type: section.demo_type, failed_student_ids: roster_failures}
+      )
+      return render json: {error: 'Failed to reset demo section roster'}, status: :unprocessable_entity
+    end
+
+    head :no_content
   end
 
   # PATCH /api/v1/sections/<id>
@@ -443,5 +496,60 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       # Should not get a unit_id unless also get a course version which is course
       return head :bad_request if params[:unit_id]
     end
+  end
+
+  private def reset_demo_section_roster(section)
+    preset_student_ids = Policies::DemoSections.demo_student_ids(section.demo_type)
+    current_followers = section.followers.index_by(&:student_user_id)
+
+    failures = add_demo_students(section, preset_student_ids - current_followers.keys)
+
+    students_to_remove = current_followers.keys - preset_student_ids
+    students_to_remove.each do |student_id|
+      follower = current_followers[student_id]
+      student = follower.student_user
+      next follower.destroy if student.nil?
+
+      begin
+        section.remove_student(student, follower, notify: false)
+      rescue ActiveRecord::ActiveRecordError => exception
+        failures << student_id
+        Honeybadger.notify(exception, context: {section_id: section.id, student_id: student_id})
+      end
+    end
+
+    failures
+  end
+
+  private def add_demo_students(section, student_ids)
+    failures = []
+    student_ids.each do |student_id|
+      student = User.find_by(id: student_id)
+      next unless student
+
+      unless Policies::DemoSections.demo_student?(student_id)
+        failures << student_id
+        Honeybadger.notify(
+          "Refused to add non-demo student to demo section",
+          context: {section_id: section.id, student_id: student_id}
+        )
+        next
+      end
+
+      begin
+        result = section.add_student(student)
+        next if [Section::ADD_STUDENT_SUCCESS, Section::ADD_STUDENT_EXISTS].include?(result)
+
+        failures << student_id
+        Honeybadger.notify(
+          "Failed to add demo student to section",
+          context: {section_id: section.id, student_id: student_id, result: result}
+        )
+      rescue ActiveRecord::ActiveRecordError => exception
+        failures << student_id
+        Honeybadger.notify(exception, context: {section_id: section.id, student_id: student_id})
+      end
+    end
+    failures
   end
 end

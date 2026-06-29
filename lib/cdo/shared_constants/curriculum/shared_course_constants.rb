@@ -69,6 +69,7 @@ module Curriculum
         CSF_self_paced_pl: 'Self-paced PL - CSF',
         CSC_k_5_self_paced_pl: 'Self-paced PL - CSC K-5',
         foundations_of_cs_selfpaced_pl: 'Self-paced PL - AIF',
+        AID_self_paced_pl: 'Self-paced PL - AID',
         ai_for_teachers_selfpaced_pl: 'Self-paced PL - AI for teachers',
         special_topics_curriculum_selfpaced_pl_k_5: 'Self-paced PL - K-5 special topics',
         special_topics_curriculum_selfpaced_pl_6_8: 'Self-paced PL - 6-8 special topics',

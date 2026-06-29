@@ -79,24 +79,24 @@ module Cdo
       '/home/health_check'
     ].freeze
 
-    # Extends Rails route URL generation to automatically include the current Global Edition path
-    # as the request script name when one is not already provided.
+    # Extends Rails URL path generation to automatically prefix generated paths with the current GE region path.
     #
-    # This module is intended to be prepended to Rails route URL helpers
-    # so that generated URLs preserve the active Global Edition region path.
+    # @see https://github.com/rails/rails/blob/v7.0.10/actionpack/lib/action_dispatch/http/url.rb#L70-L80
     #
     # @example
-    #   Rails.application.routes.url_helpers.home_url => 'https://studio.code.org/in/en/home'
+    #   Cdo::GlobalEdition.current_region = 'in'
+    #   I18n.locale = 'hi-IN'
     #
-    # @see https://github.com/rails/rails/blob/v7.0.10/actionpack/lib/action_dispatch/routing/route_set.rb#L801
-    module RouteSet
-      def url_for(options, ...)
-        if options.is_a?(Hash) && !options.key?(:script_name)
-          ge_region = Cdo::GlobalEdition.current_region
-          options = options.merge(script_name: Cdo::GlobalEdition.path_prefix(ge_region)) if ge_region
-        end
+    #   Rails.application.routes.url_helpers.home_path => '/in/hi/home'
+    #   Rails.application.routes.url_helpers.home_url => 'https://studio.code.org/in/hi/home'
+    module URL
+      def path_for(...)
+        path = super
 
-        super
+        ge_region = Cdo::GlobalEdition.current_region
+        path = Cdo::GlobalEdition.path(ge_region, path) if ge_region
+
+        path
       end
     end
 
@@ -341,4 +341,4 @@ module Cdo
   end
 end
 
-ActionDispatch::Routing::RouteSet.prepend(Cdo::GlobalEdition::RouteSet) if defined?(ActionDispatch::Routing::RouteSet)
+ActionDispatch::Http::URL.singleton_class.prepend(Cdo::GlobalEdition::URL) if defined?(ActionDispatch::Http::URL)

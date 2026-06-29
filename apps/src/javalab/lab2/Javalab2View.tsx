@@ -10,6 +10,7 @@ import {LanguageSupport} from '@codemirror/language';
 import {isEqual} from 'lodash';
 import React, {useContext, useEffect, useMemo, useRef, useState} from 'react';
 
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import TestResultValidator from '@cdo/apps/lab2/progress/TestResultValidator';
@@ -21,6 +22,7 @@ import {
   MultiFileSource,
   ProjectSources,
 } from '@cdo/apps/lab2/types';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils';
 import {
   AppDispatch,
   useAppDispatch,
@@ -35,6 +37,7 @@ import {
 import {
   handleRunClick,
   sendJavaConsoleInput,
+  sendTypedInputMessage,
   stopJavaCode,
 } from './javabuilderRunUtils';
 import {deriveLabConfig} from './labConfig';
@@ -118,6 +121,9 @@ const Javalab2View: React.FunctionComponent<
       dispatch(setLoadedCodeEnvironment(false));
     };
   }, [dispatch]);
+
+  // Stop any in-progress program when switching levels
+  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, stopJavaCode);
 
   // Codebridge expects MultiFileSource, but legacy Java lab/Javabuilder expects a flat source.
   // Convert here before passing to codebridge. Also merge in the level's starter assets
@@ -248,6 +254,7 @@ const Javalab2View: React.FunctionComponent<
           onRun={onRun}
           onStop={stopJavaCode}
           sendConsoleInput={sendJavaConsoleInput}
+          sendTypedInputMessage={sendTypedInputMessage}
           levelProperties={codebridgeLevelProperties}
           allowMultipleValidationFiles={true}
         />

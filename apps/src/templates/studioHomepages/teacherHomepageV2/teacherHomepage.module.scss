@@ -522,7 +522,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-flex;
-  padding-right: 4px;
+  padding-right: 8px;
 }
 
 .onboardingChecklistOuter {
@@ -535,6 +535,7 @@
 .onboardingChecklistInner {
   border-radius: 10px;
   padding: 3px;
+  width: 100%;
   background: linear-gradient(
     90deg,
     #15c5f9,
@@ -555,11 +556,11 @@
 .onboardingChecklistInnerContent {
   background: var(--background-neutral-primary, #fff);
   border-radius: 7px;
-  padding: 28px 32px 20px;
+  padding: 40px 32px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 4px;
   text-align: center;
 }
 

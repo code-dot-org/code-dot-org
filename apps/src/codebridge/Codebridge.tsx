@@ -10,6 +10,7 @@ import {
   SetConfigFunction,
   OnRunFunction,
   SendConsoleInputFunction,
+  SendTypedInputMessageFunction,
   CodebridgeLevelProperties,
   ProjectPickerSettings,
   LayoutProps,
@@ -46,6 +47,7 @@ type CodebridgeProps = {
   onRun?: OnRunFunction;
   onStop?: () => void;
   sendConsoleInput?: SendConsoleInputFunction;
+  sendTypedInputMessage?: SendTypedInputMessageFunction;
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
   hiddenContextCallback?: () => Promise<string>;
@@ -59,6 +61,7 @@ type CodebridgeProps = {
   onAssetRemoved?: (asset: ChatAsset) => void;
   aiTutorInitialWelcomeMessage?: string;
   allowMultipleValidationFiles?: boolean;
+  enableUserAddedSelectionContext?: boolean;
 };
 
 export const Codebridge = React.memo(
@@ -69,6 +72,7 @@ export const Codebridge = React.memo(
     onRun,
     onStop,
     sendConsoleInput,
+    sendTypedInputMessage,
     levelProperties,
     projectPickerSettings,
     hiddenContextCallback,
@@ -82,6 +86,7 @@ export const Codebridge = React.memo(
     onAssetRemoved,
     aiTutorInitialWelcomeMessage,
     allowMultipleValidationFiles,
+    enableUserAddedSelectionContext = false,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
     const isWidgetView = !!levelProperties.widgetView;
@@ -224,6 +229,7 @@ export const Codebridge = React.memo(
           onRun,
           onStop,
           sendConsoleInput,
+          sendTypedInputMessage,
           levelProperties,
           projectPickerSettings,
           hiddenContextCallback,
@@ -238,6 +244,7 @@ export const Codebridge = React.memo(
           onAssetRemoved,
           aiTutorInitialWelcomeMessage,
           allowMultipleValidationFiles,
+          enableUserAddedSelectionContext,
         }}
       >
         <BackpackAPIContext.Provider value={backpackContext}>

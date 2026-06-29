@@ -6,10 +6,11 @@ import {
 } from 'react-redux';
 
 import type {RootState} from './redux';
+import type {AppDispatch} from './store';
 
 // Typed react-redux hooks for use throughout the package, in place of connect().
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
-export const useAppDispatch = useDispatch;
+export const useAppDispatch: () => AppDispatch = useDispatch;
 
 // Re-exported for selectors that build a fresh object/array each call (e.g.
 // derived shapes that also read non-Redux globals like I18n and so can't be
