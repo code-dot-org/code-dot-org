@@ -510,9 +510,12 @@ module UsersHelper
     include_timestamp:
   )
     sublevel_ids = sublevels.map(&:id)
-    sublevels_for_progress_ids = sublevels.map do |sublevel|
-      (sublevel.contained_levels.first || sublevel).id
+    # A sublevel records progress on itself, or — for a migrated predict level —
+    # possibly on its contained level (pre-migration). Consider both per sublevel.
+    progress_ids_by_sublevel = sublevels.to_h do |sublevel|
+      [sublevel.id, sublevel.levels_for_progress.map(&:id)]
     end
+    sublevels_for_progress_ids = progress_ids_by_sublevel.values.flatten
 
     # The progress we return for the parent level is cloned from a particular
     # sublevel (as determined by get_sublevel_for_progress), with the sum
@@ -527,10 +530,11 @@ module UsersHelper
 
     # get progress for sublevels to save in levels hash
     sublevels.each do |sublevel|
-      level_for_progress = sublevel.get_level_for_progress
+      progress_level_ids = progress_ids_by_sublevel[sublevel.id]
+      user_level = progress_level_ids.filter_map {|id| user_levels_by_level[id]}.max_by(&:best_result)
       sublevel_progress = get_level_progress(
         user_id: user.id,
-        user_level: user_levels_by_level[level_for_progress.id],
+        user_level: user_level,
         teacher_feedback: teacher_feedback_by_level[sublevel.id],
         script_level: script_level,
         paired_user_levels: paired_user_levels,
@@ -540,7 +544,7 @@ module UsersHelper
 
       sublevel_progress.compact!
 
-      if sublevel.id == cloned_level_id || level_for_progress.id == cloned_level_id
+      if sublevel.id == cloned_level_id || progress_level_ids.include?(cloned_level_id)
         progress[level.id] = sublevel_progress.clone
       end
 
