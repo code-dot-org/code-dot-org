@@ -234,10 +234,6 @@ steps:
       CI_JOB: 'ui_tests'
       # Each Drone secret below must be explicitly passed to the corresponding
       # config value in test.yml.erb.
-      CLOUDFRONT_KEY_PAIR_ID:
-        from_secret: CLOUDFRONT_KEY_PAIR_ID
-      CLOUDFRONT_PRIVATE_KEY:
-        from_secret: CLOUDFRONT_PRIVATE_KEY
       CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
         from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
       PROPERTIES_ENCRYPTION_KEY:
@@ -370,6 +366,6 @@ trigger:
 
 ---
 kind: signature
-hmac: cb0669666e88d455dfab2517f28adf77e19bd165d289d431e6db1e6f36ae226b
+hmac: d7b09f5ef706dce9b35e52f28616ef21e276c7bcb6cc66c9fc6b58e2c364e006
 
 ...
