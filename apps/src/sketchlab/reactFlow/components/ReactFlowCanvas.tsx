@@ -730,7 +730,6 @@ export default function ReactFlowCanvas({
     ]
   );
 
-  // Pre-compute the selection box geometry so the JSX stays clean.
   const dragBoxContainerRect = selectionBox
     ? canvasContainerRef.current?.getBoundingClientRect()
     : null;
