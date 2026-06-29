@@ -1,6 +1,28 @@
+import AxeBuilder from '@axe-core/playwright';
 import {expect, test} from '@playwright/test';
 
 import {MultiLevel} from '../pages/multi-level';
+
+const WCAG_TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'];
+
+// target-size results vary between local and Drone (font metrics, DPR) and
+// undermine regression detection. Excluded here; cover SC 2.5.8 separately.
+const DISABLED_RULES = ['target-size'];
+
+// Baseline of axe violations per state, keyed by rule id and counting the
+// failing nodes. A new rule, or more failing nodes for an existing rule, both
+// fail the test. If you fix something, lower the count (or remove the rule)
+// so the baseline stays honest.
+const EXPECTED_VIOLATIONS: Record<string, Record<string, number>> = {
+  initialLoad: {'color-contrast': 2, 'image-alt': 5},
+  winModal: {'color-contrast': 1},
+  afterDismissedIncorrectModal: {'color-contrast': 2, 'image-alt': 5},
+};
+
+const violationCounts = (results: {
+  violations: {id: string; nodes: unknown[]}[];
+}): Record<string, number> =>
+  Object.fromEntries(results.violations.map(v => [v.id, v.nodes.length]));
 
 test.describe('Playing multi levels', () => {
   /**
@@ -16,6 +38,12 @@ test.describe('Playing multi levels', () => {
     await expect(level.question).toHaveText(
       'Which arrow gets the Flurb to the treasure?',
     );
+
+    const results = await new AxeBuilder({page})
+      .withTags(WCAG_TAGS)
+      .disableRules(DISABLED_RULES)
+      .analyze();
+    expect(violationCounts(results)).toEqual(EXPECTED_VIOLATIONS.initialLoad);
   });
 
   /**
@@ -40,6 +68,16 @@ test.describe('Playing multi levels', () => {
 
     // Win modal is server-gated: appears after the milestone POST.
     await expect(level.modal).toBeVisible();
+
+    // Scope the scan to the modal only — the rest of the page didn't change,
+    // and a page-level scan flakes on background re-renders triggered by the
+    // milestone POST.
+    const results = await new AxeBuilder({page})
+      .include('.modal')
+      .withTags(WCAG_TAGS)
+      .disableRules(DISABLED_RULES)
+      .analyze();
+    expect(violationCounts(results)).toEqual(EXPECTED_VIOLATIONS.winModal);
   });
 
   /**
@@ -66,5 +104,13 @@ test.describe('Playing multi levels', () => {
 
     await level.dismissModal();
     await expect(level.crossMark(0)).toBeVisible();
+
+    const results = await new AxeBuilder({page})
+      .withTags(WCAG_TAGS)
+      .disableRules(DISABLED_RULES)
+      .analyze();
+    expect(violationCounts(results)).toEqual(
+      EXPECTED_VIOLATIONS.afterDismissedIncorrectModal,
+    );
   });
 });
