@@ -31,17 +31,21 @@ $handle-grab-buffer: 10px;
     border-radius: 50%;
   }
 
-  // Draggable nodes and standalone lines: show move cursor instead of React
-  // Flow's default grab. .nodrag is added by React Flow when
-  // nodesDraggable=false (read-only, grab mode), so the node rule only fires
-  // when a node is actually draggable. .standaloneLineEdge is only added to
-  // edges whose both endpoints are lineAnchors (not connector edges between
-  // nodes). .grabMode * below overrides both rules in hand tool mode (same
-  // specificity, later rule wins).
-  :global(.react-flow__node:not(.nodrag)) {
+  // Cursor affordances in select mode. .nodrag is added by React Flow when a
+  // node is non-draggable (read-only, grab mode). .grabMode * below overrides
+  // all three rules in hand tool mode (same specificity, later rule wins).
+  // move      — whole-element repositioning (regular nodes, standalone line bodies)
+  // crosshair — single-endpoint repositioning (line anchor nodes)
+  :global(.react-flow__node:not(.nodrag, .react-flow__node-lineAnchor)) {
     cursor: move;
   }
 
+  :global(.react-flow__node-lineAnchor:not(.nodrag)) {
+    cursor: crosshair;
+  }
+
+  // .standaloneLineEdge is only added to edges whose both endpoints are
+  // lineAnchors (not connector edges between nodes).
   :global(.react-flow__edge).standaloneLineEdge {
     cursor: move;
   }
