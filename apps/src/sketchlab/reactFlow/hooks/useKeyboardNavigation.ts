@@ -122,7 +122,6 @@ interface UseKeyboardNavigationOptions {
   openToolbar: (entry: TabOrderEntry, options?: {trapFocus?: boolean}) => void;
   copyEntry: (entry: TabOrderEntry) => void;
   cutEntry: (entry: TabOrderEntry) => void;
-  paste: () => void;
   undo: () => void;
   redo: () => void;
   pushSnapshot: () => void;
@@ -181,7 +180,6 @@ export function useKeyboardNavigation({
   openToolbar,
   copyEntry,
   cutEntry,
-  paste,
   undo,
   redo,
   pushSnapshot,
@@ -341,18 +339,6 @@ export function useKeyboardNavigation({
       return true;
     },
     [cutEntry, getNode, lastFocusedEntry]
-  );
-
-  const handlePaste = useCallback(
-    (keyContext: KeyContext): boolean => {
-      const {event} = keyContext;
-      if (event.key !== 'v' || !(event.ctrlKey || event.metaKey)) return false;
-      paste();
-      event.preventDefault();
-      event.stopPropagation();
-      return true;
-    },
-    [paste]
   );
 
   // Undo: Ctrl/Cmd+Z.
@@ -809,7 +795,6 @@ export function useKeyboardNavigation({
 
       if (handleCopy(keyContext)) return;
       if (handleCut(keyContext)) return;
-      if (handlePaste(keyContext)) return;
       if (handleUndo(keyContext)) return;
       if (handleRedo(keyContext)) return;
 
@@ -846,7 +831,6 @@ export function useKeyboardNavigation({
       handleGroupModeKey,
       handleCopy,
       handleCut,
-      handlePaste,
       handleUndo,
       handleRedo,
       handleOpenToolbar,

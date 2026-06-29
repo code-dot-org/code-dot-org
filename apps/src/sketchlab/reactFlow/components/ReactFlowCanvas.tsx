@@ -21,6 +21,7 @@ import {
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
 import {
@@ -49,6 +50,7 @@ import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
 import {useLineEdgeDrag} from '../hooks/useLineEdgeDrag';
 import {useNodeDrag} from '../hooks/useNodeDrag';
+import {usePasteImage} from '../hooks/usePasteImage';
 import {useTabOrder} from '../hooks/useTabOrder';
 import {useUndoHistory} from '../hooks/useUndoHistory';
 import GroupNode from '../nodes/GroupNode';
@@ -207,6 +209,7 @@ export default function ReactFlowCanvas({
   >();
   const addedNodeCountRef = useRef(0);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
+  const channelId = useAppSelector(state => state.lab.channel?.id) ?? '';
 
   const {
     isDirectAnchorDragging,
@@ -411,7 +414,6 @@ export default function ReactFlowCanvas({
       openToolbar,
       copyEntry,
       cutEntry,
-      paste,
       undo: handleUndo,
       redo: handleRedo,
       pushSnapshot,
@@ -603,7 +605,7 @@ export default function ReactFlowCanvas({
   }, [edges, setNodes]);
 
   const handleAddNode = useCallback(
-    (request: AddNodeRequest) => {
+    (request: AddNodeRequest, dimensions?: {width: number; height: number}) => {
       pushSnapshot();
       setCanvasTool('cursor');
       const {type} = request;
@@ -653,9 +655,11 @@ export default function ReactFlowCanvas({
         return;
       }
 
+      const width = dimensions?.width ?? DEFAULT_NODE_WIDTH;
+      const height = dimensions?.height ?? DEFAULT_NODE_HEIGHT;
       const position = screenToFlowPosition({
-        x: window.innerWidth / 2 - DEFAULT_NODE_WIDTH / 2 + stagger,
-        y: window.innerHeight / 2 - DEFAULT_NODE_HEIGHT / 2 + stagger,
+        x: window.innerWidth / 2 - width / 2 + stagger,
+        y: window.innerHeight / 2 - height / 2 + stagger,
       });
 
       const newNodeId = createUuid();
@@ -668,8 +672,8 @@ export default function ReactFlowCanvas({
         type,
         data: request.data,
         position,
-        width: DEFAULT_NODE_WIDTH,
-        height: DEFAULT_NODE_HEIGHT,
+        width,
+        height,
       } as SketchLabNode;
 
       setNodes(currentNodes => [...currentNodes, newNode]);
@@ -694,6 +698,15 @@ export default function ReactFlowCanvas({
       setEdges,
     ]
   );
+
+  usePasteImage({
+    canvasContainerRef,
+    readOnly,
+    levelName,
+    channelId,
+    pasteInternal: paste,
+    addImageNode: handleAddNode,
+  });
 
   // All ReactFlow props that differ between cursor and grab mode, collected in
   // one place so the grab mode contract is visible at a glance.
