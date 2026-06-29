@@ -407,6 +407,7 @@ export default function ReactFlowCanvas({
 
   const {
     selectionBox,
+    pendingSelectedIds,
     dragSelectMouseDown,
     dragSelectMouseMove,
     dragSelectMouseUp,
@@ -553,7 +554,8 @@ export default function ReactFlowCanvas({
     grabMode: isGrabMode,
     focusEntry,
     handleEdgeMouseDown,
-    multiSelectedNodeIds,
+    multiSelectedNodeIds:
+      pendingSelectedIds.size > 0 ? pendingSelectedIds : multiSelectedNodeIds,
   });
 
   // Debounced save: sync ReactFlow state back to project sources.
