@@ -16,6 +16,15 @@ export interface CreateUserOptions {
   name: string;
   /** Defaults to 2. Pass 0 for a "never signed in" account. */
   signInCount?: number;
+  /** Use this email instead of a generated one (lets a caller reference it). */
+  email?: string;
+  /**
+   * POST /users/sign_in after creating. Defaults to true. create_user already
+   * establishes a Devise session, so pass false to skip the redundant Warden
+   * sign-in, which would increment sign_in_count and re-authenticate the
+   * account.
+   */
+  signInAfterCreate?: boolean;
   /** Extra fields merged into the `user` body sent to /api/test/create_user. */
   extraFields?: Record<string, string | number | boolean>;
 }
@@ -32,11 +41,18 @@ export async function resetSession(page: Page): Promise<void> {
  */
 export async function createUser(
   page: Page,
-  {type, name, signInCount = 2, extraFields}: CreateUserOptions,
+  {
+    type,
+    name,
+    signInCount = 2,
+    email: emailOverride,
+    signInAfterCreate = true,
+    extraFields,
+  }: CreateUserOptions,
 ): Promise<UserCredentials> {
   const timestamp = Date.now();
   const rand = Math.floor(Math.random() * 1_000_000);
-  const email = `user${timestamp}_${rand}@test.xx`;
+  const email = emailOverride ?? `user${timestamp}_${rand}@test.xx`;
   const password = `${name}password`;
   const age = type === 'teacher' ? '21+' : '16';
 
@@ -66,7 +82,9 @@ export async function createUser(
     throw new Error(`create_user failed: ${status}`);
   }
 
-  await signIn(page, {email, password});
+  if (signInAfterCreate) {
+    await signIn(page, {email, password});
+  }
 
   return {email, password, name};
 }
@@ -109,11 +127,11 @@ export interface CreateStudentOptions {
 }
 
 /**
- * Create a student via /api/test/create_user (which signs them in via Devise)
- * and return their credentials. Unlike createUser, this does NOT issue a second
- * /users/sign_in: that goes through Warden, which increments sign_in_count off
- * 0 (breaking "never signed in" setups) and re-authenticates locked-out
- * accounts. The page must already be on the target host.
+ * Create a student via createUser with the student-specific knobs these CAP
+ * tests need. The email is generated here so parentCreated can reference it.
+ * signInAfterCreate is false: create_user already signs the user in via Devise,
+ * and the extra Warden sign-in would increment sign_in_count off 0 (breaking
+ * "never signed in") and re-authenticate a locked-out account.
  */
 export async function createStudent(
   page: Page,
@@ -126,46 +144,35 @@ export async function createStudent(
     parentCreated = false,
   }: CreateStudentOptions = {},
 ): Promise<UserCredentials> {
-  const timestamp = Date.now();
-  const rand = Math.floor(Math.random() * 1_000_000);
-  const email = `student${timestamp}_${rand}@test.xx`;
-  const password = `${name}password`;
+  const email = `student${Date.now()}_${Math.floor(Math.random() * 1_000_000)}@test.xx`;
 
-  const user: Record<string, string | number> = {
-    user_type: 'student',
-    email,
-    password,
-    password_confirmation: password,
+  return createUser(page, {
+    type: 'student',
     name,
-    age,
-    terms_of_service_version: '1',
-    sign_in_count: signInCount,
-    ...(createdAt ? {created_at: createdAt} : {}),
-    ...(usState
-      ? {country_code: 'US', us_state: usState, user_provided_us_state: 'true'}
-      : {}),
-    ...(parentCreated
-      ? {
-          parent_email_preference_opt_in_required: '1',
-          parent_email_preference_opt_in: 'no',
-          parent_email_preference_email: email,
-          parent_email_preference_request_ip: '127.0.0.1',
-          parent_email_preference_source: 'ACCOUNT_SIGN_UP',
-        }
-      : {}),
-  };
-
-  const {ok, status} = await requestWithCsrf(
-    page,
-    'POST',
-    '/api/test/create_user',
-    {user},
-  );
-  if (!ok) {
-    throw new Error(`create_student failed: ${status}`);
-  }
-
-  return {email, password, name};
+    email,
+    signInCount,
+    signInAfterCreate: false,
+    extraFields: {
+      age,
+      ...(createdAt ? {created_at: createdAt} : {}),
+      ...(usState
+        ? {
+            country_code: 'US',
+            us_state: usState,
+            user_provided_us_state: 'true',
+          }
+        : {}),
+      ...(parentCreated
+        ? {
+            parent_email_preference_opt_in_required: '1',
+            parent_email_preference_opt_in: 'no',
+            parent_email_preference_email: email,
+            parent_email_preference_request_ip: '127.0.0.1',
+            parent_email_preference_source: 'ACCOUNT_SIGN_UP',
+          }
+        : {}),
+    },
+  });
 }
 
 /**
