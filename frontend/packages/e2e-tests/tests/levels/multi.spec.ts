@@ -5,6 +5,10 @@ import {MultiLevel} from '../pages/multi-level';
 
 const WCAG_TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'];
 
+// target-size results vary between local and Drone (font metrics, DPR) and
+// undermine regression detection. Excluded here; cover SC 2.5.8 separately.
+const DISABLED_RULES = ['target-size'];
+
 // Baseline of axe violations per state, keyed by rule id and counting the
 // failing nodes. A new rule, or more failing nodes for an existing rule, both
 // fail the test. If you fix something, lower the count (or remove the rule)
@@ -35,7 +39,10 @@ test.describe('Playing multi levels', () => {
       'Which arrow gets the Flurb to the treasure?',
     );
 
-    const results = await new AxeBuilder({page}).withTags(WCAG_TAGS).analyze();
+    const results = await new AxeBuilder({page})
+      .withTags(WCAG_TAGS)
+      .disableRules(DISABLED_RULES)
+      .analyze();
     expect(violationCounts(results)).toEqual(EXPECTED_VIOLATIONS.initialLoad);
   });
 
@@ -68,6 +75,7 @@ test.describe('Playing multi levels', () => {
     const results = await new AxeBuilder({page})
       .include('.modal')
       .withTags(WCAG_TAGS)
+      .disableRules(DISABLED_RULES)
       .analyze();
     expect(violationCounts(results)).toEqual(EXPECTED_VIOLATIONS.winModal);
   });
@@ -97,7 +105,10 @@ test.describe('Playing multi levels', () => {
     await level.dismissModal();
     await expect(level.crossMark(0)).toBeVisible();
 
-    const results = await new AxeBuilder({page}).withTags(WCAG_TAGS).analyze();
+    const results = await new AxeBuilder({page})
+      .withTags(WCAG_TAGS)
+      .disableRules(DISABLED_RULES)
+      .analyze();
     expect(violationCounts(results)).toEqual(
       EXPECTED_VIOLATIONS.afterDismissedIncorrectModal,
     );
