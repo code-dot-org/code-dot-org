@@ -1,6 +1,20 @@
+import AxeBuilder from '@axe-core/playwright';
 import {expect, test} from '@playwright/test';
 
 import {MultiLevel} from '../pages/multi-level';
+
+const WCAG_TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'];
+
+// Baseline of axe rule IDs we currently fail at each state. New violations make
+// the test fail; if you fix one, drop it from this list so the test stays honest.
+const EXPECTED_VIOLATIONS = {
+  initialLoad: ['color-contrast', 'image-alt'],
+  winModal: ['color-contrast'],
+  afterDismissedIncorrectModal: ['color-contrast', 'image-alt'],
+};
+
+const violationIds = (results: {violations: {id: string}[]}): string[] =>
+  results.violations.map(v => v.id).sort();
 
 test.describe('Playing multi levels', () => {
   /**
@@ -16,6 +30,9 @@ test.describe('Playing multi levels', () => {
     await expect(level.question).toHaveText(
       'Which arrow gets the Flurb to the treasure?',
     );
+
+    const results = await new AxeBuilder({page}).withTags(WCAG_TAGS).analyze();
+    expect(violationIds(results)).toEqual(EXPECTED_VIOLATIONS.initialLoad);
   });
 
   /**
@@ -40,6 +57,15 @@ test.describe('Playing multi levels', () => {
 
     // Win modal is server-gated: appears after the milestone POST.
     await expect(level.modal).toBeVisible();
+
+    // Scope the scan to the modal only — the rest of the page didn't change,
+    // and a page-level scan flakes on background re-renders triggered by the
+    // milestone POST.
+    const results = await new AxeBuilder({page})
+      .include('.modal')
+      .withTags(WCAG_TAGS)
+      .analyze();
+    expect(violationIds(results)).toEqual(EXPECTED_VIOLATIONS.winModal);
   });
 
   /**
@@ -66,5 +92,10 @@ test.describe('Playing multi levels', () => {
 
     await level.dismissModal();
     await expect(level.crossMark(0)).toBeVisible();
+
+    const results = await new AxeBuilder({page}).withTags(WCAG_TAGS).analyze();
+    expect(violationIds(results)).toEqual(
+      EXPECTED_VIOLATIONS.afterDismissedIncorrectModal,
+    );
   });
 });
