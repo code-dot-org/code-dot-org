@@ -6,7 +6,11 @@ import type {
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 
-import {DEFAULT_NODE_HEIGHT, DEFAULT_NODE_WIDTH} from '../constants';
+import {
+  DEFAULT_NODE_HEIGHT,
+  DEFAULT_NODE_WIDTH,
+  LINE_ANCHOR_SIZE_PX,
+} from '../constants';
 import {isGroupedChildNode} from '../utils/grouping';
 
 const DRAG_THRESHOLD_PX = 4;
@@ -67,13 +71,17 @@ function computeOverlapIds(
     if (isGroupedChildNode(src) || isGroupedChildNode(tgt)) continue;
     if (src.parentId || tgt.parentId) continue;
 
-    const inBox = (pos: XYPosition) =>
-      pos.x >= canvasMin.x &&
-      pos.x <= canvasMax.x &&
-      pos.y >= canvasMin.y &&
-      pos.y <= canvasMax.y;
+    const anchorOverlaps = (anchor: SketchlabReactFlowNode) => {
+      const {x, y} = anchor.position;
+      return (
+        x < canvasMax.x &&
+        x + LINE_ANCHOR_SIZE_PX > canvasMin.x &&
+        y < canvasMax.y &&
+        y + LINE_ANCHOR_SIZE_PX > canvasMin.y
+      );
+    };
 
-    if (inBox(src.position) || inBox(tgt.position)) {
+    if (anchorOverlaps(src) || anchorOverlaps(tgt)) {
       ids.add(edge.source);
       ids.add(edge.target);
     }
