@@ -33,7 +33,7 @@ export default defineConfig({
     sourcemap: true,
     cssCodeSplit: true,
     lib: {
-      entry: ['src/index.ts'],
+      entry: ['src/host.ts', 'src/contexts.ts'],
       name: 'lab',
     },
     rollupOptions: {

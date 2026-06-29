@@ -1,7 +1,4 @@
-export {default as Lab} from './components/Lab';
-export type {LabProps} from './components/Lab';
-export {default as ErrorBoundary} from './components/ErrorBoundary';
-export {default as Loading} from './components/Loading';
-export {default as LabMetricsReporter} from './LabMetricsReporter';
-export {useLevelProperties} from './contexts/LevelPropertiesContext';
-export type {LevelPropertiesMap} from './types';
+// No root entrypoint — import from subpaths:
+//   @code-dot-org/lab/host      (shell components for Studio / apps)
+//   @code-dot-org/lab/contexts  (hooks and types for labs)
+export {};

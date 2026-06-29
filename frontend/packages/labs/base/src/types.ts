@@ -1,1 +1,1 @@
-export type LevelPropertiesMap = Record<string, Record<string, unknown>>;
+export type {LevelPropertiesMap} from '@code-dot-org/core/api';

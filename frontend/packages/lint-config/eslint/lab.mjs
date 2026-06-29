@@ -10,8 +10,8 @@ export default [
         {
           paths: [
             {
-              name: '@code-dot-org/lab',
-              message: `Labs are embeddable apps that run inside any host (Studio, Storybook, standalone). @code-dot-org/lab is the host shell that wraps labs with error boundaries, level context, and routing — importing it from a lab creates a circular dependency and breaks embeddability. Move host-specific wiring to a Studio adapter (e.g. apps/studio/src/modules/labs/).`,
+              name: '@code-dot-org/lab/host',
+              message: `@code-dot-org/lab/host is the shell that wraps labs with error boundaries, level context, and loading UI — only platform hosts (Studio, apps) should import it. Labs import @code-dot-org/lab/contexts for hooks and types.`,
             },
           ],
         },

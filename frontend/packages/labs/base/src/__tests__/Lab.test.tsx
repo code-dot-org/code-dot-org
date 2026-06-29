@@ -5,10 +5,11 @@ import Lab from '../components/Lab';
 import {useLevelProperties} from '../contexts/LevelPropertiesContext';
 import type {LevelPropertiesMap} from '../types';
 
-const LEVEL_MAP: LevelPropertiesMap = {
+// Minimal stub — the shell threads this through context without inspecting it.
+const LEVEL_MAP = {
   '29091': {appName: 'fish', mode: 'fishvtrash'},
   '29092': {appName: 'fish', mode: 'short'},
-};
+} as unknown as LevelPropertiesMap;
 
 function LevelDisplay() {
   const props = useLevelProperties();

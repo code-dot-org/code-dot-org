@@ -1,6 +1,6 @@
 import {createFileRoute, notFound} from '@tanstack/react-router';
 
-import {Lab} from '@code-dot-org/lab';
+import {Lab} from '@code-dot-org/lab/host';
 
 import {getLabEntrypoint} from '@/modules/labs/router/getLabEntrypoint';
 import {getLabFixtures} from '@/modules/labs/router/getLabFixtures';

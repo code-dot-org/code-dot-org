@@ -14,10 +14,15 @@
   },
   "license": "SEE LICENSE IN LICENSE",
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+    "./host": {
+      "types": "./dist/host.d.ts",
+      "import": "./dist/host.mjs",
+      "require": "./dist/host.cjs"
+    },
+    "./contexts": {
+      "types": "./dist/contexts.d.ts",
+      "import": "./dist/contexts.mjs",
+      "require": "./dist/contexts.cjs"
     }
   },
   "scripts": {
