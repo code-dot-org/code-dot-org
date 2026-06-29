@@ -14,7 +14,7 @@ function isTargetEditable(target: HTMLElement): boolean {
   );
 }
 
-interface UsePasteImageOptions {
+interface UsePasteOptions {
   canvasContainerRef: React.RefObject<HTMLDivElement>;
   readOnly: boolean;
   levelName: string;
@@ -32,14 +32,14 @@ interface UsePasteImageOptions {
  * paste from the keydown-driven internal paste) is what keeps a single Ctrl/Cmd+V
  * from both pasting an internal element and dropping the image.
  */
-export function usePasteImage({
+export function usePaste({
   canvasContainerRef,
   readOnly,
   levelName,
   channelId,
   pasteInternal,
   addImageNode,
-}: UsePasteImageOptions) {
+}: UsePasteOptions) {
   useEffect(() => {
     const handlePaste = async (event: ClipboardEvent) => {
       if (readOnly) {

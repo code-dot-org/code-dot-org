@@ -50,7 +50,7 @@ import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
 import {useLineEdgeDrag} from '../hooks/useLineEdgeDrag';
 import {useNodeDrag} from '../hooks/useNodeDrag';
-import {usePasteImage} from '../hooks/usePasteImage';
+import {usePaste} from '../hooks/usePaste';
 import {useTabOrder} from '../hooks/useTabOrder';
 import {useUndoHistory} from '../hooks/useUndoHistory';
 import GroupNode from '../nodes/GroupNode';
@@ -697,7 +697,7 @@ export default function ReactFlowCanvas({
     ]
   );
 
-  usePasteImage({
+  usePaste({
     canvasContainerRef,
     readOnly,
     levelName,

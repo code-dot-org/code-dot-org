@@ -1,6 +1,6 @@
 import {renderHook} from '@testing-library/react-hooks';
 
-import {usePasteImage} from '@cdo/apps/sketchlab/reactFlow/hooks/usePasteImage';
+import {usePaste} from '@cdo/apps/sketchlab/reactFlow/hooks/usePaste';
 import {uploadImageAsset} from '@cdo/apps/sketchlab/reactFlow/utils/uploadImageAsset';
 
 jest.mock('@cdo/apps/sketchlab/reactFlow/utils/uploadImageAsset');
@@ -22,7 +22,7 @@ function buildPasteEvent(items: Array<Partial<DataTransferItem>>): Event {
   return event;
 }
 
-describe('usePasteImage', () => {
+describe('usePaste', () => {
   let container: HTMLDivElement;
   let pasteInternal: jest.Mock;
   let addImageNode: jest.Mock;
@@ -45,10 +45,10 @@ describe('usePasteImage', () => {
     mockUploadImageAsset.mockReset();
   });
 
-  function renderPasteImage(readOnly = false) {
+  function renderPaste(readOnly = false) {
     const canvasContainerRef = {current: container};
     return renderHook(() =>
-      usePasteImage({
+      usePaste({
         canvasContainerRef,
         readOnly,
         levelName: 'test-level',
@@ -60,7 +60,7 @@ describe('usePasteImage', () => {
   }
 
   it('uploads a pasted image and adds an ImageNode', async () => {
-    renderPasteImage();
+    renderPaste();
     const file = new File(['x'], 'pasted.png', {type: 'image/png'});
     const event = buildPasteEvent([{type: 'image/png', getAsFile: () => file}]);
 
@@ -79,7 +79,7 @@ describe('usePasteImage', () => {
   });
 
   it('falls back to internal paste when the clipboard has no image', async () => {
-    renderPasteImage();
+    renderPaste();
     const event = buildPasteEvent([
       {type: 'text/plain', getAsFile: () => null},
     ]);
@@ -93,7 +93,7 @@ describe('usePasteImage', () => {
   });
 
   it('ignores pastes when the canvas is not focused', async () => {
-    renderPasteImage();
+    renderPaste();
     container.blur();
     const file = new File(['x'], 'pasted.png', {type: 'image/png'});
     const event = buildPasteEvent([{type: 'image/png', getAsFile: () => file}]);
@@ -107,7 +107,7 @@ describe('usePasteImage', () => {
   });
 
   it('does nothing in read-only mode', async () => {
-    renderPasteImage(true);
+    renderPaste(true);
     const file = new File(['x'], 'pasted.png', {type: 'image/png'});
     const event = buildPasteEvent([{type: 'image/png', getAsFile: () => file}]);
 
