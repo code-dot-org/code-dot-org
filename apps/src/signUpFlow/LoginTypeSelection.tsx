@@ -257,6 +257,7 @@ const LoginTypeSelection: React.FunctionComponent<{
                   iconFamily="brands"
                   iconName="google"
                   iconStyle="solid"
+                  aria-hidden={true}
                 />
               }
             >
@@ -277,6 +278,7 @@ const LoginTypeSelection: React.FunctionComponent<{
                   iconFamily="brands"
                   iconName="microsoft"
                   iconStyle="regular"
+                  aria-hidden={true}
                 />
               }
             >
@@ -296,6 +298,7 @@ const LoginTypeSelection: React.FunctionComponent<{
                 <FontAwesomeV6Icon
                   iconName="brands fa-facebook-f"
                   iconStyle="solid"
+                  aria-hidden={true}
                 />
               }
             >
@@ -316,6 +319,7 @@ const LoginTypeSelection: React.FunctionComponent<{
                   iconFamily="kit"
                   iconName="clever"
                   iconStyle="solid"
+                  aria-hidden={true}
                 />
               }
             >
@@ -336,6 +340,7 @@ const LoginTypeSelection: React.FunctionComponent<{
                   iconFamily="kit"
                   iconName="classlink"
                   iconStyle="solid"
+                  aria-hidden={true}
                 />
               }
             >
@@ -414,6 +419,7 @@ const LoginTypeSelection: React.FunctionComponent<{
                   <FontAwesomeV6Icon
                     className={style.red}
                     iconName={EXCLAMATION_ICON}
+                    aria-hidden={true}
                   />
                   <Typography
                     className={style.red}
@@ -439,6 +445,7 @@ const LoginTypeSelection: React.FunctionComponent<{
                 <FontAwesomeV6Icon
                   className={passwordIconClass}
                   iconName={passwordIcon}
+                  aria-hidden={true}
                 />
                 <Typography variant="body3" gutterBottom>
                   {locale.minimum_num_chars({minChars: passwordMinLength})}
@@ -460,6 +467,7 @@ const LoginTypeSelection: React.FunctionComponent<{
                   <FontAwesomeV6Icon
                     className={style.red}
                     iconName={EXCLAMATION_ICON}
+                    aria-hidden={true}
                   />
                   <Typography
                     className={style.red}
