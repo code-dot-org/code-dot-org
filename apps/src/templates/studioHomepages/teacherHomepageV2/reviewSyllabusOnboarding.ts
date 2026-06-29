@@ -110,17 +110,21 @@ const createTeacherResourcesStep = (
 ): StepOptions => ({
   id: 'teacher-resources-dropdown',
   attachTo: {
-    element: '#teacher-resources-dropdown',
-    on: 'bottom',
+    element: '#teacher-resources-dropdown-dropdown-button',
+    on: 'right',
   },
   text: withSparkle(
     "If admin asks what standards you're covering or you need a refresher before starting something new, the implementation guides, standards alignment, and how-tos are all here."
   ),
   buttons: [nextButton(tour)],
   beforeShowPromise: controller
-    ? () => waitForElement('#teacher-resources-dropdown', controller.signal)
+    ? () =>
+        waitForElement(
+          '#teacher-resources-dropdown-dropdown-button',
+          controller.signal
+        )
     : undefined,
-  when: highlightAttachedElement('#teacher-resources-dropdown'),
+  when: highlightAttachedElement('#teacher-resources-dropdown-dropdown-button'),
 });
 
 const createLessonResourcesStep = (
