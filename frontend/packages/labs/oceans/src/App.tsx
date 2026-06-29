@@ -1,7 +1,10 @@
+import {useCallback} from 'react';
+
 import {registerLevelKindSchema} from '@code-dot-org/core/api';
 import type {LevelPropertiesMap} from '@code-dot-org/core/api';
-import {Lab} from '@code-dot-org/lab';
+import {Lab, continueOrFinishLesson} from '@code-dot-org/lab';
 import {useMaybeLevelProperties} from '@code-dot-org/lab/contexts';
+import {useAppDispatch} from '@code-dot-org/lab/redux';
 
 import OceansActivity from './OceansActivity';
 import {LevelKindSchema} from './schema';
@@ -37,12 +40,20 @@ export interface OceansLabProps {
  */
 function OceansActivityFromLevel() {
   const levelProperties = useMaybeLevelProperties<OceansLevelProperties>();
+  const dispatch = useAppDispatch();
+
+  // Advancing past the activity hands off to base lesson progression: send a
+  // success report and continue to the next level (or finish the lesson).
+  const onContinue = useCallback(() => {
+    dispatch(continueOrFinishLesson());
+  }, [dispatch]);
 
   return (
     <OceansActivity
       appMode={levelProperties?.appMode}
       guides={levelProperties?.guides}
       textToSpeechLocale={levelProperties?.textToSpeechLocale}
+      onContinue={onContinue}
     />
   );
 }
