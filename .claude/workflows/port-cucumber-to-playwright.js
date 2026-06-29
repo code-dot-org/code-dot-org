@@ -6,6 +6,7 @@ export const meta = {
     {title: 'Dry Run'},
     {title: 'Generate'},
     {title: 'Review'},
+    {title: 'A11y'},
     {title: 'Heal'},
     {title: 'Commit'},
   ],
@@ -448,7 +449,70 @@ the Healer owns runtime stability.`,
 )
 if (!reviewed) throw new Error('review agent was skipped — port not reviewed before the stress gate')
 
-// ── Phase 5: Heal ─────────────────────────────────────────────────────────────
+// ── Phase 5: A11y ─────────────────────────────────────────────────────────────
+// Authors dedicated axe-core specs (tests/a11y/) for the pages this port touches that
+// lack a11y coverage, baselined green. Runs BEFORE Heal so the a11y spec is stress-gated
+// alongside the functional one. Non-blocking: a skip just means no a11y spec to gate.
+phase('A11y')
+
+const A11Y_SCHEMA = {
+  type: 'object',
+  required: ['authoredSpec', 'testsAdded', 'statesCovered', 'flaggedUnportedFeatures'],
+  properties: {
+    authoredSpec: {
+      type: ['string', 'null'],
+      description:
+        'repo-root-relative path to the tests/a11y spec authored/extended, or null if none',
+    },
+    testsAdded: {type: 'number', description: 'count of a11y test() blocks added'},
+    statesCovered: {
+      type: 'array',
+      items: {type: 'string'},
+      description: '(page, state) labels newly covered this run',
+    },
+    statesSkipped: {
+      type: 'array',
+      items: {type: 'string'},
+      description: '(page, state) labels skipped because already covered',
+    },
+    flaggedUnportedFeatures: {
+      type: 'array',
+      items: {type: 'string'},
+      description: "Cucumber features whose page is the best home but isn't ported yet",
+    },
+    reason: {type: 'string', description: 'one line on what was done or why nothing was'},
+  },
+}
+
+const a11y = await agent(
+  `Add accessibility coverage for the pages this port touches. Follow your agent instructions.
+
+AUTHORITATIVE CONTRACT: ${featureFile} (+ its step definitions). Scope is THIS feature's pages only.
+FUNCTIONAL SPEC just produced: ${plan.targetSpec} (feature group ${plan.featureGroup}).
+DRY RUN READINESS (state checkpoints to scan at): ${JSON.stringify(readiness)}
+
+Identify the pages + meaningful states this feature reaches, dedup against existing tests/a11y/
+coverage, and author dedicated axe-core specs ONLY for uncovered (page, state) pairs — baselined
+green, scoped where a full-page scan is noisy. Reuse the page's POM to navigate; never disable a
+rule. If a page's best home is an unported Cucumber feature, flag it (do not port). Typecheck before
+returning.`,
+  {agentType: 'playwright-a11y-author', schema: A11Y_SCHEMA, label: 'a11y', phase: 'A11y', model: 'sonnet'},
+)
+const a11ySpec = a11y?.authoredSpec || null
+if (a11y) {
+  log(
+    a11ySpec
+      ? `A11y: +${a11y.testsAdded} test(s) in ${a11ySpec}`
+      : `A11y: no spec authored — ${a11y.reason || 'pages already covered or not scannable'}`,
+  )
+  if (a11y.flaggedUnportedFeatures?.length) {
+    log(`A11y: best home is unported — flagged ${a11y.flaggedUnportedFeatures.join(', ')}`)
+  }
+} else {
+  log('A11y: agent skipped — continuing without an a11y spec')
+}
+
+// ── Phase 6: Heal ─────────────────────────────────────────────────────────────
 // Zero-flake gate: the spec must pass 5x across all browsers with retries=0. The workflow
 // owns the gate and the 3-attempt budget; the (vanilla-fork) Healer owns root-cause
 // diagnosis and fixes. On budget exhaustion the Healer marks test.fixme().
@@ -470,6 +534,12 @@ const STRESS_SCHEMA = {
           project: {type: 'string', description: 'chromium/firefox/webkit'},
           error: {type: 'string', description: 'first relevant error line'},
           tracePath: {type: 'string', description: 'trace.zip path for this failure, if produced'},
+          specFile: {
+            type: 'string',
+            description:
+              'repo-root-relative path of the spec file this failure is in (the runner prints ' +
+              'it above each failure) — needed to tell the functional spec from the a11y spec',
+          },
         },
       },
     },
@@ -483,7 +553,12 @@ const STRESS_SCHEMA = {
   },
 }
 
-const specRel = plan.targetSpec.replace('frontend/packages/e2e-tests/', '')
+// Gate the functional spec AND the a11y spec (when the A11y phase authored one) together —
+// the axe scans are a real flake source, so they get the same zero-flake treatment.
+const gatedSpecs = [plan.targetSpec, a11ySpec].filter(Boolean)
+const specRels = gatedSpecs
+  .map(s => s.replace('frontend/packages/e2e-tests/', ''))
+  .join(' ')
 // CI=1 makes the shared playwright.config.ts skip @no_ci tests (grepInvert: /@no_ci/ when
 // isCI) — infra this gate can't provide. --reporter=line and --workers=N below are explicit
 // CLI overrides of the config's CI defaults (reporter html+junit, workers:'100%'), so the
@@ -492,7 +567,7 @@ const specRel = plan.targetSpec.replace('frontend/packages/e2e-tests/', '')
 // `playwright` than the package's @playwright/test, and npx would pick the wrong
 // one ("two different versions"). yarn resolves the package's own bin.
 const stressCmd =
-  `cd frontend/packages/e2e-tests && CI=1 yarn playwright test ${specRel} ` +
+  `cd frontend/packages/e2e-tests && CI=1 yarn playwright test ${specRels} ` +
   `--repeat-each=5 --retries=0 --workers=${STRESS_WORKERS} --trace=retain-on-failure ` +
   `--project=chromium --project=firefox --project=webkit --reporter=line`
 
@@ -520,14 +595,16 @@ while (!result.passed && attempt < 3) {
   attempt++
   log(`Stress failed (${result.failures.length}/${result.totalRuns}) — heal ${attempt}/3`)
   await agent(
-    `Stabilize the spec at ${plan.targetSpec}; it FLAKED under the 5x/all-browser gate ` +
-      `(attempt ${attempt} of 3). Failures:\n` +
+    `Stabilize the gated spec(s); one FLAKED under the 5x/all-browser gate ` +
+      `(attempt ${attempt} of 3). Specs under gate: ${gatedSpecs.join(', ')}. Fix whichever ` +
+      `flaked — match each failure's test title to its file. Failures:\n` +
       result.failures
         .map(f => `  [${f.project}] ${f.test}: ${f.error}${f.tracePath ? ` (trace ${f.tracePath})` : ''}`)
         .join('\n') +
       `\nDiagnose the ROOT CAUSE from the traces and fix it within e2e-tests only, per ` +
       `your instructions. Do NOT loosen assertions to force a pass — fix the real ` +
-      `timing/selector/state cause.`,
+      `timing/selector/state cause. For an a11y spec, that means a tighter scan {selector} ` +
+      `or a union baseline (see tests/a11y/README.md), never a disabled rule or widened baseline.`,
     {agentType: 'playwright-test-healer', label: `heal-${attempt}`, phase: 'Heal', model: 'sonnet'},
   )
   const reverify = await stress(`reverify-${attempt}`)
@@ -535,22 +612,30 @@ while (!result.passed && attempt < 3) {
   result = reverify
 }
 
-const healStatus = result.passed ? 'green' : 'fixme'
+// The PORT's green/fixme status hinges on the FUNCTIONAL spec only: an a11y scan that can't
+// be stabilized gets its own test.fixme() but must not block tagging the Cucumber feature.
+// A failure with no specFile is assumed functional (conservative — keeps the port honest).
+const functionalFailures = result.passed
+  ? []
+  : result.failures.filter(f => !a11ySpec || f.specFile !== a11ySpec)
+const healStatus = functionalFailures.length === 0 ? 'green' : 'fixme'
 if (!result.passed) {
-  log('Budget exhausted — marking fixme')
+  log('Budget exhausted — marking the still-failing test(s) fixme')
   await agent(
-    `The 3-attempt budget for ${plan.targetSpec} is exhausted; it still flakes under the ` +
-      `5x/all-browser gate. Per your protocol, mark each still-failing test test.fixme() with ` +
-      `a full root-cause explanation and the source ${featureFile}. Do NOT delete the tests. ` +
-      `Remaining failures:\n` +
-      result.failures.map(f => `  [${f.project}] ${f.test}: ${f.error}`).join('\n'),
+    `The 3-attempt budget is exhausted; gated spec(s) still flake under the 5x/all-browser ` +
+      `gate. Per your protocol, mark each still-failing test test.fixme() with a full ` +
+      `root-cause explanation — cite the source ${featureFile} for functional tests and ` +
+      `tests/a11y/README.md for a11y tests. Do NOT delete the tests. Remaining failures:\n` +
+      result.failures
+        .map(f => `  [${f.project}] ${f.test}${f.specFile ? ` (${f.specFile})` : ''}: ${f.error}`)
+        .join('\n'),
     {agentType: 'playwright-test-healer', label: 'fixme', phase: 'Heal', model: 'sonnet'},
   )
 }
 
 log(`Heal: ${healStatus}${result.passed ? ` (${result.totalRuns} runs clean)` : ''}`)
 
-// ── Phase 6: Commit ───────────────────────────────────────────────────────────
+// ── Phase 7: Commit ───────────────────────────────────────────────────────────
 const commitFiles = 'frontend/packages/e2e-tests/'
 // Conventional commit. Green gate -> tag the original Cucumber feature @playwright
 // so the Cucumber suite skips the now-ported scenarios (the Playwright port owns
@@ -567,13 +652,20 @@ const subject =
     ? `test(e2e): port ${featureSlug} to playwright`
     : `test(e2e): port ${featureSlug} to playwright [fixme]`
 
+const a11yLine =
+  a11ySpec && a11y?.testsAdded
+    ? `Added ${a11y.testsAdded} axe-core accessibility test(s) in ${a11ySpec}.\n`
+    : ''
+
 const body =
   healStatus === 'green'
     ? `Port ${plan.scenarios.length} ${scenarioWord} from ${featureFile}.\n` +
+      a11yLine +
       `Green under the 5x/all-browser stress gate; original Cucumber feature tagged ` +
       `@playwright so the Cucumber suite skips it.\n\n` +
       `Source: ${featureFile}`
     : `Port ${plan.scenarios.length} ${scenarioWord} from ${featureFile}.\n` +
+      a11yLine +
       `Stress gate exhausted the 3-attempt budget; affected tests marked test.fixme() for ` +
       `human review. Cucumber feature retained.\n\nSource: ${featureFile}`
 

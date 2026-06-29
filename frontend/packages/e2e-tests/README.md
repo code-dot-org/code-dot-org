@@ -33,6 +33,12 @@ This suite runs in three places, each with a distinct purpose:
 GitHub Actions is not a stepping stone to Drone; it is a parallel track that
 keeps the suite secret-free and independently runnable.
 
+## Accessibility tests
+
+Automated axe-core scans live in their own specs under `tests/a11y/`, one per
+page/area, deduplicated per page state. See [tests/a11y/README.md](tests/a11y/README.md)
+for the convention before adding or editing them.
+
 ## Agent skill setup
 
 The Cucumber→Playwright porting agents read the `playwright-best-practices`
