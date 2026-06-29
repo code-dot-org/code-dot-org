@@ -1,5 +1,5 @@
 import {useReactFlow} from '@xyflow/react';
-import React, {useCallback, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import type {
   SketchlabReactFlowEdge,
@@ -11,6 +11,7 @@ import {
   DEFAULT_NODE_HEIGHT,
   DEFAULT_NODE_WIDTH,
   DEFAULT_PASTE_OFFSET_PX,
+  INTERNAL_CLIPBOARD_MARKER,
 } from '../constants';
 import type {ClipboardContents} from '../context';
 import type {TabOrderEntry} from '../utils/computeTabOrder';
@@ -72,10 +73,70 @@ export function useCopyPaste({
   const lastDuplicateRef = useRef<ClipboardContents | null>(null);
   const lastDuplicateIdRef = useRef<string | null>(null);
 
+  // Set by an in-app copy/cut so the next native copy/cut event stamps our
+  // marker onto the system clipboard.
+  const pendingMarkerStampRef = useRef(false);
+
   const writeClipboard = useCallback((contents: ClipboardContents) => {
     clipboardRef.current = contents;
     setHasClipboard(true);
+    // Flag the imminent native copy/cut event to stamp our marker onto the
+    // system clipboard. We do it there (not here) because clipboardData.setData
+    // is synchronous and reliable, unlike navigator.clipboard.writeText which
+    // is async, permission-gated, and frequently a no-op. The flag is cleared on
+    // a timeout in case the copy/cut event never fires, so it can't leak into an
+    // unrelated later copy.
+    pendingMarkerStampRef.current = true;
+    setTimeout(() => {
+      pendingMarkerStampRef.current = false;
+    }, 0);
   }, []);
+
+  // Stamp the system clipboard with our marker on the native copy/cut event that
+  // follows an in-app copy/cut. Its presence lets the paste handler know the
+  // in-app copy is the most recent clipboard action and paste the element rather
+  // than a stale clipboard image; an external image copy replaces the whole
+  // clipboard, wiping the marker, which restores image paste.
+  useEffect(() => {
+    const stampMarker = (event: ClipboardEvent) => {
+      if (!pendingMarkerStampRef.current) return;
+      pendingMarkerStampRef.current = false;
+      event.clipboardData?.setData('text/plain', INTERNAL_CLIPBOARD_MARKER);
+      event.preventDefault();
+    };
+    document.addEventListener('copy', stampMarker);
+    document.addEventListener('cut', stampMarker);
+    return () => {
+      document.removeEventListener('copy', stampMarker);
+      document.removeEventListener('cut', stampMarker);
+    };
+  }, []);
+
+  // Drop a clipboard-pasted image onto the canvas as an ImageNode. Positioned
+  // top-left at the cursor when it's over the canvas (matching the internal
+  // element paste), else centered in the viewport.
+  const pasteImage = useCallback(
+    (src: string) => {
+      const mousePos = mousePositionRef.current;
+      const position =
+        mousePos ??
+        screenToFlowPosition({
+          x: window.innerWidth / 2 - DEFAULT_NODE_WIDTH / 2,
+          y: window.innerHeight / 2 - DEFAULT_NODE_HEIGHT / 2,
+        });
+      const newImageNode = {
+        id: createUuid(),
+        type: 'image',
+        data: {src, altText: ''},
+        position,
+        width: DEFAULT_NODE_WIDTH,
+        height: DEFAULT_NODE_HEIGHT,
+      } as SketchlabReactFlowNode;
+      pushSnapshot();
+      setNodes(currentNodes => [...currentNodes, newImageNode]);
+    },
+    [screenToFlowPosition, pushSnapshot, setNodes]
+  );
 
   const buildNodeClipboard = useCallback(
     (nodeId: string): ClipboardContents | null => {
@@ -345,6 +406,7 @@ export function useCopyPaste({
     copyEntry,
     cutEntry,
     paste,
+    pasteImage,
     hasClipboard,
     handleMouseMove,
     handleMouseLeave,

@@ -24,6 +24,12 @@ export const SAVE_DEBOUNCE_MS = 300;
 
 export const DEFAULT_PASTE_OFFSET_PX = 30;
 
+// Written to the system clipboard when a canvas element is copied in-app. Its
+// presence in a paste event tells us the in-app copy is the most recent
+// clipboard action (an external image copy replaces the whole clipboard and so
+// wipes this marker), letting node/line paste win over a stale clipboard image.
+export const INTERNAL_CLIPBOARD_MARKER = 'cdo-sketchlab-internal-clipboard';
+
 // S3 asset path prefix for project files.
 export const ASSET_PATH_PREFIX = '/v3/assets';
 

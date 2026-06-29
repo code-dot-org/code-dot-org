@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 
-import {AddNodeRequest} from '../types';
+import {INTERNAL_CLIPBOARD_MARKER} from '../constants';
 import {uploadImageAsset} from '../utils/uploadImageAsset';
 
 // True when the paste target is a place where typing is the point — an input,
@@ -21,16 +21,18 @@ interface UsePasteOptions {
   channelId: string;
   // The internal element-clipboard paste (duplicating a copied node/line).
   pasteInternal: () => void;
-  addImageNode: (request: AddNodeRequest) => void;
+  // Drops a clipboard-pasted image onto the canvas as an ImageNode at the cursor.
+  pasteImage: (src: string) => void;
 }
 
 /**
  * Listens for native paste events on the document and, when the clipboard holds
  * an image and the canvas is focused, uploads it and drops it onto the canvas as
- * an ImageNode. When the clipboard holds no image, it falls back to the internal
- * element-clipboard paste. Owning both paths here (rather than splitting image
- * paste from the keydown-driven internal paste) is what keeps a single Ctrl/Cmd+V
- * from both pasting an internal element and dropping the image.
+ * an ImageNode at the cursor. When the clipboard holds no image, it falls back
+ * to the internal element-clipboard paste. An in-app copy stamps the system
+ * clipboard with a marker (see useCopyPaste); when that marker is present the
+ * in-app copy is the most recent clipboard action, so a freshly copied node
+ * pastes as a node rather than losing to a stale system-clipboard image.
  */
 export function usePaste({
   canvasContainerRef,
@@ -38,7 +40,7 @@ export function usePaste({
   levelName,
   channelId,
   pasteInternal,
-  addImageNode,
+  pasteImage,
 }: UsePasteOptions) {
   useEffect(() => {
     const handlePaste = async (event: ClipboardEvent) => {
@@ -54,10 +56,17 @@ export function usePaste({
         return;
       }
 
+      // When our marker is present, the most recent clipboard action was an
+      // in-app copy, so paste the copied element even if a stale image also
+      // lingers in the clipboard.
+      const clipboardText = event.clipboardData?.getData('text/plain') ?? '';
+      const internalCopyIsLatest = clipboardText === INTERNAL_CLIPBOARD_MARKER;
+
       const items = event.clipboardData?.items;
-      const imageItem = items
-        ? Array.from(items).find(item => item.type.startsWith('image/'))
-        : undefined;
+      const imageItem =
+        !internalCopyIsLatest && items
+          ? Array.from(items).find(item => item.type.startsWith('image/'))
+          : undefined;
 
       if (!imageItem) {
         event.preventDefault();
@@ -76,7 +85,7 @@ export function usePaste({
         if (!uploadUrl) {
           return;
         }
-        addImageNode({type: 'image', data: {src: uploadUrl, altText: ''}});
+        pasteImage(uploadUrl);
       } catch (error) {
         console.error('Failed to upload pasted image:', error);
       }
@@ -90,6 +99,6 @@ export function usePaste({
     levelName,
     channelId,
     pasteInternal,
-    addImageNode,
+    pasteImage,
   ]);
 }

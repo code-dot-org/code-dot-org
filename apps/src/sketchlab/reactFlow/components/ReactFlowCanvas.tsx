@@ -358,6 +358,7 @@ export default function ReactFlowCanvas({
     copyEntry,
     cutEntry,
     paste,
+    pasteImage,
     handleMouseMove,
     handleMouseLeave,
   } = useCopyPaste({nodes, edges, setNodes, setEdges, pushSnapshot});
@@ -703,7 +704,7 @@ export default function ReactFlowCanvas({
     levelName,
     channelId,
     pasteInternal: paste,
-    addImageNode: handleAddNode,
+    pasteImage,
   });
 
   // All ReactFlow props that differ between cursor and grab mode, collected in

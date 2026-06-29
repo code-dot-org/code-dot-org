@@ -312,7 +312,8 @@ export function useKeyboardNavigation({
       const entry = focusedEntry ?? lastFocusedEntry;
       if (!entry) return false;
       copyEntry(entry);
-      event.preventDefault();
+      // Don't preventDefault: the keydown's default copy command is what fires
+      // the native 'copy' event that useCopyPaste uses to stamp its marker.
       event.stopPropagation();
       return true;
     },
@@ -334,7 +335,8 @@ export function useKeyboardNavigation({
         }
       }
       cutEntry(entry);
-      event.preventDefault();
+      // Don't preventDefault: the keydown's default cut command is what fires
+      // the native 'cut' event that useCopyPaste uses to stamp its marker.
       event.stopPropagation();
       return true;
     },
