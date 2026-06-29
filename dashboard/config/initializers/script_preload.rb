@@ -42,6 +42,7 @@ Rails.application.config.to_prepare do
 
   warmed_records = {}.compare_by_identity
   warmed_class_names = {}
+  warmed_class_counts = Hash.new(0)
   warmed_strings = 0
   warmed_associations = 0
   records_to_warm = [
@@ -74,6 +75,7 @@ Rails.application.config.to_prepare do
       next if warmed_records[record]
 
       warmed_records[record] = true
+      warmed_class_counts[record.class.name] += 1
 
       unless warmed_class_names[record.class.name]
         record.class.init_internals if record.class.respond_to?(:init_internals)
@@ -108,7 +110,11 @@ Rails.application.config.to_prepare do
       warmed_records: warmed_records.size,
       warmed_classes: warmed_class_names.size,
       warmed_associations: warmed_associations,
-      warmed_strings: warmed_strings
+      warmed_strings: warmed_strings,
+      # Per-class record counts, "ClassName:count" sorted by count desc, comma-joined
+      # (no spaces, so it stays a single key=value token in the log line). This is the
+      # authoritative list of which curriculum models the warm walk actually reached.
+      warmed_by_class: warmed_class_counts.sort_by {|_name, count| -count}.map {|name, count| "#{name}:#{count}"}.join(',')
     )
   )
 end
