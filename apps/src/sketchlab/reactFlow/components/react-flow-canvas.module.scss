@@ -31,10 +31,18 @@ $handle-grab-buffer: 10px;
     border-radius: 50%;
   }
 
-  // Draggable nodes: show move cursor instead of React Flow's default grab.
-  // .nodrag is added by React Flow when nodesDraggable=false (read-only, grab
-  // mode), so this only fires when a node is actually draggable.
+  // Draggable nodes and standalone lines: show move cursor instead of React
+  // Flow's default grab. .nodrag is added by React Flow when
+  // nodesDraggable=false (read-only, grab mode), so the node rule only fires
+  // when a node is actually draggable. .standaloneLineEdge is only added to
+  // edges whose both endpoints are lineAnchors (not connector edges between
+  // nodes). .grabMode * below overrides both rules in hand tool mode (same
+  // specificity, later rule wins).
   :global(.react-flow__node:not(.nodrag)) {
+    cursor: move;
+  }
+
+  :global(.react-flow__edge).standaloneLineEdge {
     cursor: move;
   }
 

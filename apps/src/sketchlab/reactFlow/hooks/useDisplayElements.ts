@@ -145,11 +145,13 @@ export function useDisplayElements({
           edge,
           'edge'
         );
-        // A standalone line (both endpoints are line anchors) is shown as
-        // selected when both its anchors are in the multi-selection.
-        const bothAnchorsSelected =
+        const isStandaloneLine =
           nodeMap.get(edge.source)?.type === 'lineAnchor' &&
-          nodeMap.get(edge.target)?.type === 'lineAnchor' &&
+          nodeMap.get(edge.target)?.type === 'lineAnchor';
+        // A standalone line is shown as selected when both its anchors are in
+        // the multi-selection.
+        const bothAnchorsSelected =
+          isStandaloneLine &&
           multiSelectedNodeIds.has(edge.source) &&
           multiSelectedNodeIds.has(edge.target);
         const selected = singleSelected || bothAnchorsSelected;
@@ -163,7 +165,10 @@ export function useDisplayElements({
             nodeMap,
             floatingLineIndex.get(edge.id)
           ),
-          className: styles.lineEdge,
+          className: classNames(
+            styles.lineEdge,
+            isStandaloneLine && styles.standaloneLineEdge
+          ),
           domAttributes: {
             ...domAttributes,
             ...(!readOnly && !locked
