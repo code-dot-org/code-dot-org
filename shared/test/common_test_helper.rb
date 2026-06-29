@@ -49,10 +49,10 @@ VCR.configure do |c|
 end
 
 # Truncate database tables to ensure repeatable tests.
-DASHBOARD_TEST_TABLES = %w(channel_tokens user_project_storage_ids projects project_commits code_review_comments code_reviews).freeze
+DASHBOARD_TEST_TABLES = %w(channel_tokens project_storage_geos user_project_storage_ids projects project_commits code_review_comments code_reviews).freeze
 DASHBOARD_TEST_TABLES.each do |table|
   # rubocop:disable CustomCops/DashboardDbUsage
-  DASHBOARD_DB[table.to_sym].truncate
+  DASHBOARD_DB[table.to_sym].delete
   # rubocop:enable CustomCops/DashboardDbUsage
 end.freeze
 
