@@ -17,6 +17,10 @@ const LOCKED_STUDENT = {
   age: '10',
   signInCount: 0,
   createdAt: CAP_LOCKOUT_DATE,
+  // create_user already signs the student in; skip the extra Warden sign-in so
+  // sign_in_count stays 0 ("never signed in") and the locked account is not
+  // re-authenticated.
+  signInAfterCreate: false,
 } as const;
 
 // Exact on-screen copy from the lockout panel (apps/i18n/common/en_us.json),

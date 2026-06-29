@@ -89,13 +89,12 @@ export async function createUser(
   return {email, password, name};
 }
 
-/** Create an EU student with data_transfer_agreement pre-accepted. */
+/** Create an EU student (createStudent variant) with data_transfer_agreement pre-accepted. */
 export async function createEuStudent(
   page: Page,
   {name}: {name: string},
 ): Promise<UserCredentials> {
-  return createUser(page, {
-    type: 'student',
+  return createStudent(page, {
     name,
     extraFields: {
       data_transfer_agreement_accepted: true,
@@ -124,14 +123,18 @@ export interface CreateStudentOptions {
    * on the CAP lockout page.
    */
   parentCreated?: boolean;
+  /** POST /users/sign_in after creating; defaults to true. See createUser. */
+  signInAfterCreate?: boolean;
+  /** Extra fields merged into the create_user body after the derived ones. */
+  extraFields?: Record<string, string | number | boolean>;
 }
 
 /**
- * Create a student via createUser with the student-specific knobs these CAP
- * tests need. The email is generated here so parentCreated can reference it.
- * signInAfterCreate is false: create_user already signs the user in via Devise,
- * and the extra Warden sign-in would increment sign_in_count off 0 (breaking
- * "never signed in") and re-authenticate a locked-out account.
+ * Create a student via createUser with student-shaped sugar: age, US state,
+ * created_at, and the parent-created variant (which needs the generated email,
+ * so it is generated here). The base student creator other student helpers
+ * build on. Pass signInAfterCreate:false to keep a "never signed in" account at
+ * sign_in_count 0 and avoid re-authenticating a locked-out account.
  */
 export async function createStudent(
   page: Page,
@@ -142,6 +145,8 @@ export async function createStudent(
     usState,
     createdAt,
     parentCreated = false,
+    signInAfterCreate = true,
+    extraFields,
   }: CreateStudentOptions = {},
 ): Promise<UserCredentials> {
   const email = `student${Date.now()}_${Math.floor(Math.random() * 1_000_000)}@test.xx`;
@@ -151,7 +156,7 @@ export async function createStudent(
     name,
     email,
     signInCount,
-    signInAfterCreate: false,
+    signInAfterCreate,
     extraFields: {
       age,
       ...(createdAt ? {created_at: createdAt} : {}),
@@ -171,6 +176,7 @@ export async function createStudent(
             parent_email_preference_source: 'ACCOUNT_SIGN_UP',
           }
         : {}),
+      ...extraFields,
     },
   });
 }
