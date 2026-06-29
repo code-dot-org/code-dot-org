@@ -1,9 +1,13 @@
 import {type Locator, type Page} from '@playwright/test';
 
-import {BasePage} from './base-page';
-
-/** Page object for the GDPR data-transfer-agreement dialog on /home. */
-export class GdprDialogPage extends BasePage {
+/**
+ * Component object for the GDPR data-transfer-agreement dialog. It is mounted
+ * from the global application layout (application.html.haml -> #gdpr-dialog,
+ * rendered by code-studio.js when show_gdpr_dialog), so it overlays whatever
+ * page is showing for an EU user without an agreement on file — in these tests,
+ * /home. It is a modal, not a page, so it does not extend BasePage.
+ */
+export class GdprDialogComponent {
   /** The dialog heading — present and visible when the dialog is shown. */
   readonly dialog: Locator;
 
@@ -21,18 +25,12 @@ export class GdprDialogPage extends BasePage {
   readonly gdprContainer: Locator;
 
   constructor(page: Page) {
-    super(page);
     this.dialog = page.locator('.ui-test-gdpr-dialog');
     this.acceptButton = page.locator('.ui-test-gdpr-dialog-accept');
     this.gdprContainer = page.locator('#gdpr-dialog');
     this.privacyLink = this.gdprContainer.getByRole('link', {
       name: /Visit CodeAI/,
     });
-  }
-
-  /** Navigate to /home. */
-  async goto(): Promise<void> {
-    await this.page.goto('/home');
   }
 
   /** Click the accept button. */
