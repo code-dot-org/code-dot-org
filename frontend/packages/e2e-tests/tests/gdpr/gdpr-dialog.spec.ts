@@ -1,6 +1,5 @@
 import {expect, test} from '@playwright/test';
 
-import {GdprDialogComponent} from '../components/gdpr-dialog';
 import {HomePage} from '../pages/home-page';
 import {
   createEuStudent,
@@ -20,7 +19,7 @@ test.describe('GDPR Dialog - data transfer agreement', () => {
    */
   test('EU user sees the GDPR Dialog on dashboard, opt out', async ({page}) => {
     const home = new HomePage(page);
-    const gdpr = new GdprDialogComponent(page);
+    const gdpr = home.gdprDialog;
 
     await resetSession(page);
     await page.goto('/');
@@ -46,7 +45,7 @@ test.describe('GDPR Dialog - data transfer agreement', () => {
     page,
   }) => {
     const home = new HomePage(page);
-    const gdpr = new GdprDialogComponent(page);
+    const gdpr = home.gdprDialog;
 
     await resetSession(page);
     await page.goto('/');
@@ -86,7 +85,7 @@ test.describe('GDPR Dialog - data transfer agreement', () => {
     page,
   }) => {
     const home = new HomePage(page);
-    const gdpr = new GdprDialogComponent(page);
+    const gdpr = home.gdprDialog;
 
     await resetSession(page);
     await page.goto('/');
@@ -106,7 +105,7 @@ test.describe('GDPR Dialog - data transfer agreement', () => {
    */
   test('GDPR Dialog privacy link works from dashboard', async ({page}) => {
     const home = new HomePage(page);
-    const gdpr = new GdprDialogComponent(page);
+    const gdpr = home.gdprDialog;
 
     await resetSession(page);
     await page.goto('/');
@@ -141,7 +140,7 @@ test.describe('GDPR Dialog - data transfer agreement', () => {
    */
   test('Accept, sign out, sign in again, no dialog', async ({page}) => {
     const home = new HomePage(page);
-    const gdpr = new GdprDialogComponent(page);
+    const gdpr = home.gdprDialog;
 
     await resetSession(page);
     await page.goto('/');

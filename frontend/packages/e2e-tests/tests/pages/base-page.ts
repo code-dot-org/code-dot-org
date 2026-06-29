@@ -1,5 +1,8 @@
 import {expect, type Locator, type Page} from '@playwright/test';
 
+import {GdprDialogComponent} from '../components/gdpr-dialog';
+import {StudentInfoModalComponent} from '../components/student-info-modal';
+
 /** Base for every page object — home for the UI common to all pages. */
 export class BasePage {
   protected readonly page: Page;
@@ -19,6 +22,12 @@ export class BasePage {
   /** .display_name — the signed-in user's display name chip; .first() guards breakpoint duplicates. */
   readonly displayName: Locator;
 
+  /** GDPR data-transfer dialog — a global overlay that can appear on any page. */
+  readonly gdprDialog: GdprDialogComponent;
+
+  /** Student-information interstitial — a global overlay that can appear on any page. */
+  readonly studentInfoModal: StudentInfoModalComponent;
+
   constructor(page: Page) {
     this.page = page;
     this.localeDropdown = page.getByRole('combobox', {name: 'Select language'});
@@ -26,6 +35,8 @@ export class BasePage {
     this.headerUser = page.locator('.header_user').first();
     this.headerUserMenu = page.locator('#header_user_menu').first();
     this.displayName = page.locator('.display_name').first();
+    this.gdprDialog = new GdprDialogComponent(page);
+    this.studentInfoModal = new StudentInfoModalComponent(page);
   }
 
   /** Wait for the locale dropdown to render. */

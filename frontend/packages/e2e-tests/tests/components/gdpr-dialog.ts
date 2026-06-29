@@ -1,12 +1,6 @@
 import {type Locator, type Page} from '@playwright/test';
 
-/**
- * Component object for the GDPR data-transfer-agreement dialog. It is mounted
- * from the global application layout (application.html.haml -> #gdpr-dialog,
- * rendered by code-studio.js when show_gdpr_dialog), so it overlays whatever
- * page is showing for an EU user without an agreement on file — in these tests,
- * /home. It is a modal, not a page, so it does not extend BasePage.
- */
+/** The GDPR data-transfer-agreement dialog: a global app-layout overlay (#gdpr-dialog), not a page. */
 export class GdprDialogComponent {
   /** The dialog heading — present and visible when the dialog is shown. */
   readonly dialog: Locator;

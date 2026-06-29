@@ -1,4 +1,3 @@
-import {StudentInfoModalComponent} from '../components/student-info-modal';
 import {expect, test} from '../fixtures';
 import {LockoutPage} from '../pages/lockout-page';
 import {createStudent, resetSession} from '../shared/auth';
@@ -82,8 +81,8 @@ test.describe('Policy Compliance - Parental Permission', () => {
     'New under 13 account should be able to provide state and see lockout page to send parental request',
     {tag: ['@no_mobile']},
     async ({page}) => {
-      const modal = new StudentInfoModalComponent(page);
       const lockout = new LockoutPage(page);
+      const modal = lockout.studentInfoModal;
       await createStudent(page, {...LOCKED_STUDENT});
       await page.goto('/home?forceStudentInterstitial=true');
 
