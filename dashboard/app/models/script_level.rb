@@ -579,7 +579,9 @@ class ScriptLevel < ApplicationRecord
   # Bring together all the information needed to show the teacher panel on a level
   def summarize_for_teacher_panel(student, teacher = nil)
     level_for_progress = oldest_active_level.get_level_for_progress(student, script)
-    user_level = student.last_attempt_for_any([level_for_progress], script_id: script_id)
+    # For a migrated predict level, the attempt may live on the level itself (new)
+    # or its contained level (pre-migration), so consider both.
+    user_level = student.last_attempt_for_any(oldest_active_level.levels_for_progress(student, script), script_id: script_id)
 
     status = activity_css_class(user_level)
     passed = [SharedConstants::LEVEL_STATUS.passed, SharedConstants::LEVEL_STATUS.perfect].include?(status)
