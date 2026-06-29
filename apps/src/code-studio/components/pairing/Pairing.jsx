@@ -2,6 +2,8 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Spinner from '@cdo/apps/sharedComponents/Spinner.jsx';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
@@ -21,6 +23,7 @@ export default class Pairing extends React.Component {
   state = {
     pairings: [],
     sections: [],
+    selectedSectionId: null,
     hasError: false,
     loading: true,
   };
@@ -35,6 +38,7 @@ export default class Pairing extends React.Component {
         this.setState({
           pairings: result.pairings,
           sections: result.sections,
+          selectedSectionId: result.selectedSectionId,
           loading: false,
         });
       })
@@ -68,13 +72,17 @@ export default class Pairing extends React.Component {
       hasError: false,
       loading: true,
     });
-    const pairings = this.selectedSection().students.filter(
+    const selectedSection = this.selectedSection();
+    const pairings = selectedSection.students.filter(
       student => studentIds.indexOf(student.id) !== -1
     );
+    analyticsReporter.sendEvent(EVENTS.PAIRING_ADD_PARTNER_BUTTON_CLICKED, {
+      sectionId: selectedSection.id,
+    });
 
     $.ajax({
       url: this.props.source,
-      data: JSON.stringify({pairings, sectionId: this.selectedSection().id}),
+      data: JSON.stringify({pairings, sectionId: selectedSection.id}),
       contentType: 'application/json; charset=utf-8',
       method: 'PUT',
       dataType: 'json',
@@ -97,6 +105,12 @@ export default class Pairing extends React.Component {
       hasError: false,
       loading: true,
     });
+    analyticsReporter.sendEvent(
+      EVENTS.PAIRING_STOP_PAIR_PROGRAMMING_BUTTON_CLICKED,
+      {
+        sectionId: this.selectedSectionId(),
+      }
+    );
 
     $.ajax({
       url: this.props.source,

@@ -1,8 +1,10 @@
 import {faSpinner} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import type React from 'react';
+import {type ReactNode, useEffect} from 'react';
 
 import {styles} from './constants';
+import {showInstructions} from './helpers/instructions';
+import {reportPanelView} from './helpers/metrics';
 import {
   isSaveComplete,
   shouldDisplaySaveStatus,
@@ -150,7 +152,7 @@ const PanelButtons = ({
 };
 
 interface BodyContainerProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const BodyContainer = ({children}: BodyContainerProps) => {
@@ -158,7 +160,7 @@ const BodyContainer = ({children}: BodyContainerProps) => {
 };
 
 interface ContainerLeftProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const ContainerLeft = ({children}: ContainerLeftProps) => {
@@ -170,7 +172,7 @@ const ContainerLeft = ({children}: ContainerLeftProps) => {
 };
 
 interface ContainerRightProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const ContainerRight = ({children}: ContainerRightProps) => {
@@ -182,7 +184,7 @@ const ContainerRight = ({children}: ContainerRightProps) => {
 };
 
 interface ContainerFullWidthProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const ContainerFullWidth = ({children}: ContainerFullWidthProps) => {
@@ -207,6 +209,20 @@ const App = ({onContinue, startSaveTrainedModel}: AppProps) => {
   const resultsPhase = useAppSelector(state => state.resultsPhase);
   const saveStatus = useAppSelector(state => state.saveStatus);
   const saveResponseData = useAppSelector(state => state.saveResponseData);
+  const instructionsKey = useAppSelector(state => state.instructionsKey);
+  const showOverlay = useAppSelector(state => state.showOverlay);
+
+  // Notify the consumer of instructions key changes when they occur.
+  useEffect(() => {
+    if (instructionsKey) {
+      showInstructions(instructionsKey, {showOverlay});
+    }
+  }, [instructionsKey, showOverlay]);
+
+  // Report panel view on every panel change.
+  useEffect(() => {
+    reportPanelView(currentPanel);
+  }, [currentPanel]);
 
   return (
     <div style={styles.app}>

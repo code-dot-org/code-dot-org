@@ -17,6 +17,7 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
 import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {
   onDismissRedirectDialog,
   dismissedRedirectDialog,
@@ -65,6 +66,7 @@ class CourseOverview extends Component {
     // Redux
     announcements: PropTypes.arrayOf(announcementShape),
     isSignedIn: PropTypes.bool.isRequired,
+    demoType: PropTypes.string.isRequired,
   };
 
   constructor(props) {
@@ -143,12 +145,16 @@ class CourseOverview extends Component {
       isSignedIn,
       participantAudience,
       aiChatToolsDependency,
+      demoType,
     } = this.props;
 
     const viewAsTeacher = viewAs === ViewType.Instructor;
 
     const showNotification =
-      viewAsTeacher && !isVerifiedInstructor && hasVerifiedResources;
+      viewAsTeacher &&
+      !isVerifiedInstructor &&
+      hasVerifiedResources &&
+      !demoType;
 
     const determineUnitDescription = script => {
       return viewAs === ViewType.Participant
@@ -271,5 +277,6 @@ export default connect((state, ownProps) => ({
   viewAs: state.viewAs,
   isVerifiedInstructor: state.verifiedInstructor.isVerified,
   hasVerifiedResources: state.verifiedInstructor.hasVerifiedResources,
+  demoType: selectedSectionSelector(state)?.demoType,
   announcements: state.announcements || [],
 }))(CourseOverview);

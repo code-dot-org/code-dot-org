@@ -122,6 +122,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
           curriculumCourses={curriculumCourses}
           showSidebar={showChatList}
           onSidebarChatSelect={() => setShowChatList(false)}
+          onViewThreads={() => setShowChatList(true)}
         />
       );
     }
