@@ -24,11 +24,6 @@ export const SAVE_DEBOUNCE_MS = 300;
 
 export const DEFAULT_PASTE_OFFSET_PX = 30;
 
-// Largest width or height (px) a clipboard-pasted image is scaled to fit while
-// preserving its aspect ratio, so big screenshots don't drop onto the canvas
-// oversized.
-export const MAX_PASTED_IMAGE_DIMENSION_PX = 320;
-
 // S3 asset path prefix for project files.
 export const ASSET_PATH_PREFIX = '/v3/assets';
 

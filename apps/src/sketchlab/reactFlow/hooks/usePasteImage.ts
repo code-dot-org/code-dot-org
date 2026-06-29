@@ -1,10 +1,5 @@
 import React, {useEffect} from 'react';
 
-import {
-  DEFAULT_NODE_HEIGHT,
-  DEFAULT_NODE_WIDTH,
-  MAX_PASTED_IMAGE_DIMENSION_PX,
-} from '../constants';
 import {AddNodeRequest} from '../types';
 import {uploadImageAsset} from '../utils/uploadImageAsset';
 
@@ -19,44 +14,6 @@ function isTargetEditable(target: HTMLElement): boolean {
   );
 }
 
-// Scale natural image dimensions down to fit MAX_PASTED_IMAGE_DIMENSION_PX on
-// the longest side, preserving aspect ratio. Images already within bounds keep
-// their natural size.
-function scaleToFit(naturalWidth: number, naturalHeight: number) {
-  if (naturalWidth <= 0 || naturalHeight <= 0) {
-    return {width: DEFAULT_NODE_WIDTH, height: DEFAULT_NODE_HEIGHT};
-  }
-  const longestSide = Math.max(naturalWidth, naturalHeight);
-  if (longestSide <= MAX_PASTED_IMAGE_DIMENSION_PX) {
-    return {width: naturalWidth, height: naturalHeight};
-  }
-  const scale = MAX_PASTED_IMAGE_DIMENSION_PX / longestSide;
-  return {
-    width: Math.round(naturalWidth * scale),
-    height: Math.round(naturalHeight * scale),
-  };
-}
-
-// Read a blob's natural dimensions by decoding it through an Image. Falls back
-// to the default node size if the image can't be decoded.
-function readImageDimensions(
-  file: File
-): Promise<{width: number; height: number}> {
-  return new Promise(resolve => {
-    const objectUrl = URL.createObjectURL(file);
-    const image = new Image();
-    image.onload = () => {
-      URL.revokeObjectURL(objectUrl);
-      resolve(scaleToFit(image.naturalWidth, image.naturalHeight));
-    };
-    image.onerror = () => {
-      URL.revokeObjectURL(objectUrl);
-      resolve({width: DEFAULT_NODE_WIDTH, height: DEFAULT_NODE_HEIGHT});
-    };
-    image.src = objectUrl;
-  });
-}
-
 interface UsePasteImageOptions {
   canvasContainerRef: React.RefObject<HTMLDivElement>;
   readOnly: boolean;
@@ -64,10 +21,7 @@ interface UsePasteImageOptions {
   channelId: string;
   // The internal element-clipboard paste (duplicating a copied node/line).
   pasteInternal: () => void;
-  addImageNode: (
-    request: AddNodeRequest,
-    dimensions?: {width: number; height: number}
-  ) => void;
+  addImageNode: (request: AddNodeRequest) => void;
 }
 
 /**
@@ -117,16 +71,12 @@ export function usePasteImage({
         return;
       }
 
-      const dimensions = await readImageDimensions(file);
       try {
         const uploadUrl = await uploadImageAsset(file, {levelName, channelId});
         if (!uploadUrl) {
           return;
         }
-        addImageNode(
-          {type: 'image', data: {src: uploadUrl, altText: ''}},
-          dimensions
-        );
+        addImageNode({type: 'image', data: {src: uploadUrl, altText: ''}});
       } catch (error) {
         console.error('Failed to upload pasted image:', error);
       }

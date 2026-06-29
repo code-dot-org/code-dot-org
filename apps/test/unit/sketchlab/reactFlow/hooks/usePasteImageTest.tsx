@@ -9,19 +9,6 @@ const mockUploadImageAsset = uploadImageAsset as jest.MockedFunction<
   typeof uploadImageAsset
 >;
 
-// Decode immediately with a fixed natural size so dimension scaling is
-// deterministic. The hook assigns onload before setting src, so calling it from
-// the src setter is enough.
-class MockImage {
-  onload: (() => void) | null = null;
-  onerror: (() => void) | null = null;
-  naturalWidth = 800;
-  naturalHeight = 400;
-  set src(_value: string) {
-    this.onload?.();
-  }
-}
-
 function flushPromises() {
   return new Promise(resolve => setTimeout(resolve, 0));
 }
@@ -39,13 +26,8 @@ describe('usePasteImage', () => {
   let container: HTMLDivElement;
   let pasteInternal: jest.Mock;
   let addImageNode: jest.Mock;
-  const originalImage = window.Image;
 
   beforeEach(() => {
-    window.Image = MockImage as unknown as typeof Image;
-    // jsdom does not implement these, so define rather than spy.
-    URL.createObjectURL = jest.fn().mockReturnValue('blob:fake');
-    URL.revokeObjectURL = jest.fn();
     mockUploadImageAsset.mockResolvedValue('/v3/assets/channel-1/pasted.png');
 
     container = document.createElement('div');
@@ -58,7 +40,6 @@ describe('usePasteImage', () => {
   });
 
   afterEach(() => {
-    window.Image = originalImage;
     container.remove();
     jest.restoreAllMocks();
     mockUploadImageAsset.mockReset();
@@ -78,7 +59,7 @@ describe('usePasteImage', () => {
     );
   }
 
-  it('uploads a pasted image and adds an aspect-ratio-scaled ImageNode', async () => {
+  it('uploads a pasted image and adds an ImageNode', async () => {
     renderPasteImage();
     const file = new File(['x'], 'pasted.png', {type: 'image/png'});
     const event = buildPasteEvent([{type: 'image/png', getAsFile: () => file}]);
@@ -90,14 +71,10 @@ describe('usePasteImage', () => {
       levelName: 'test-level',
       channelId: 'channel-1',
     });
-    expect(addImageNode).toHaveBeenCalledWith(
-      {
-        type: 'image',
-        data: {src: '/v3/assets/channel-1/pasted.png', altText: ''},
-      },
-      // 800x400 scaled to fit 320 on the longest side.
-      {width: 320, height: 160}
-    );
+    expect(addImageNode).toHaveBeenCalledWith({
+      type: 'image',
+      data: {src: '/v3/assets/channel-1/pasted.png', altText: ''},
+    });
     expect(pasteInternal).not.toHaveBeenCalled();
   });
 

@@ -605,7 +605,7 @@ export default function ReactFlowCanvas({
   }, [edges, setNodes]);
 
   const handleAddNode = useCallback(
-    (request: AddNodeRequest, dimensions?: {width: number; height: number}) => {
+    (request: AddNodeRequest) => {
       pushSnapshot();
       setCanvasTool('cursor');
       const {type} = request;
@@ -655,11 +655,9 @@ export default function ReactFlowCanvas({
         return;
       }
 
-      const width = dimensions?.width ?? DEFAULT_NODE_WIDTH;
-      const height = dimensions?.height ?? DEFAULT_NODE_HEIGHT;
       const position = screenToFlowPosition({
-        x: window.innerWidth / 2 - width / 2 + stagger,
-        y: window.innerHeight / 2 - height / 2 + stagger,
+        x: window.innerWidth / 2 - DEFAULT_NODE_WIDTH / 2 + stagger,
+        y: window.innerHeight / 2 - DEFAULT_NODE_HEIGHT / 2 + stagger,
       });
 
       const newNodeId = createUuid();
@@ -672,8 +670,8 @@ export default function ReactFlowCanvas({
         type,
         data: request.data,
         position,
-        width,
-        height,
+        width: DEFAULT_NODE_WIDTH,
+        height: DEFAULT_NODE_HEIGHT,
       } as SketchLabNode;
 
       setNodes(currentNodes => [...currentNodes, newNode]);
