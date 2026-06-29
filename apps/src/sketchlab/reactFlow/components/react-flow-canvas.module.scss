@@ -31,6 +31,13 @@ $handle-grab-buffer: 10px;
     border-radius: 50%;
   }
 
+  // Draggable nodes: show move cursor instead of React Flow's default grab.
+  // .nodrag is added by React Flow when nodesDraggable=false (read-only, grab
+  // mode), so this only fires when a node is actually draggable.
+  :global(.react-flow__node:not(.nodrag)) {
+    cursor: move;
+  }
+
   // Keyboard connect-mode: pulse the source node so the user knows it's selected.
   &.connectMode :global(.react-flow__node) {
     cursor: crosshair;
