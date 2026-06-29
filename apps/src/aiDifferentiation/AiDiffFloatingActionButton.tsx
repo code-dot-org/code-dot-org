@@ -1,6 +1,6 @@
 import {Badge} from '@mui/material';
 import classNames from 'classnames';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import {
   setChatIsOpen,
@@ -186,6 +186,91 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
 
   const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
 
+  const [fabPosition, setFabPosition] = useState<{top: number} | null>(null);
+  const [dragging, setDragging] = useState(false);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const dragStateRef = useRef<{
+    mouseY: number;
+    elemTop: number;
+    isDragging: boolean;
+    currentTop: number;
+  } | null>(null);
+  const wasDraggingRef = useRef(false);
+
+  const FAB_SIZE = 48;
+  const HEADER_HEIGHT = 50;
+
+  useEffect(() => {
+    const onResize = () => {
+      setFabPosition(prev => {
+        if (!prev) return null;
+        return prev.top > window.innerHeight - FAB_SIZE ? null : prev;
+      });
+    };
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+
+  const onDragMove = (clientY: number) => {
+    const drag = dragStateRef.current;
+    if (!drag) return;
+    const dy = clientY - drag.mouseY;
+    if (!drag.isDragging && Math.abs(dy) < 4) return;
+    if (!drag.isDragging) {
+      drag.isDragging = true;
+      wasDraggingRef.current = true;
+      setDragging(true);
+    }
+    drag.currentTop = Math.max(
+      HEADER_HEIGHT,
+      Math.min(window.innerHeight - FAB_SIZE, drag.elemTop + dy)
+    );
+    // Direct DOM write bypasses React scheduling so the position tracks
+    // the pointer on every mousemove frame without waiting for a render.
+    if (buttonRef.current) {
+      buttonRef.current.style.top = `${drag.currentTop}px`;
+      buttonRef.current.style.bottom = 'auto';
+    }
+  };
+
+  const onDragEnd = () => {
+    const drag = dragStateRef.current;
+    dragStateRef.current = null;
+    setDragging(false);
+    if (drag?.isDragging) {
+      setFabPosition({top: drag.currentTop});
+    }
+    // Some browsers don't fire 'click' after a large drag, leaving
+    // wasDraggingRef stuck true and eating the next tap. Self-clear after
+    // the click event window (a few ms) has passed.
+    setTimeout(() => {
+      wasDraggingRef.current = false;
+    }, 300);
+  };
+
+  const handlePointerDown = (e: React.PointerEvent<HTMLButtonElement>) => {
+    e.currentTarget.setPointerCapture(e.pointerId);
+    const rect = e.currentTarget.getBoundingClientRect();
+    dragStateRef.current = {
+      mouseY: e.clientY,
+      elemTop: rect.top,
+      isDragging: false,
+      currentTop: rect.top,
+    };
+  };
+
+  const handlePointerMove = (e: React.PointerEvent<HTMLButtonElement>) => {
+    if (!dragStateRef.current) return;
+    e.preventDefault();
+    onDragMove(e.clientY);
+  };
+
+  const handlePointerUp = (e: React.PointerEvent<HTMLButtonElement>) => {
+    if (!dragStateRef.current) return;
+    e.currentTarget.releasePointerCapture(e.pointerId);
+    onDragEnd();
+  };
+
   const showPulse = canShowPulse && !hasOpened && isFabImageLoaded;
   const classes = showPulse
     ? classNames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
@@ -194,6 +279,10 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     : style.floatingActionButton;
 
   const handleClick = () => {
+    if (wasDraggingRef.current) {
+      wasDraggingRef.current = false;
+      return;
+    }
     const eventData = {
       aiDiffChatContext: context,
       scriptName,
@@ -221,69 +310,85 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
 
   return (
     <div id="fab-contained">
-      <button
-        id="ui-floatingActionButton"
-        aria-label={i18n.openOrCloseTeachingAssistant()}
-        className={classes}
-        onClick={handleClick}
-        type="button"
-        style={
-          drawerIsEnabled
-            ? {
-                right: chatIsOpen
-                  ? `${DRAWER_WIDTH + DRAWER_FAB_MARGIN}px`
-                  : `${DRAWER_FAB_MARGIN}px`,
-                transition: chatIsOpen
-                  ? 'right 225ms cubic-bezier(0, 0, 0.2, 1) 0ms'
-                  : 'right 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms',
-              }
-            : {}
-        }
-      >
-        <Badge
-          badgeContent={
-            unreadNotificationCount === 'loading'
-              ? 0
-              : unreadNotificationCount > 0
-              ? unreadNotificationCount
-              : 'TA'
-          }
-          color="error"
-          overlap="circular"
-          aria-label={
-            unreadNotificationCount &&
-            i18n.unreadNotificationsCount({
-              unreadCount: unreadNotificationCount,
-            })
-          }
-          sx={{
-            height: '48px',
-            width: '48px',
-            '& .MuiBadge-badge': {
-              backgroundColor:
-                unreadNotificationCount === 'loading' ||
-                unreadNotificationCount > 0
-                  ? 'var(--background-error-primary)'
-                  : 'var(--background-brand-aqua-primary)',
-              color:
-                unreadNotificationCount === 'loading' ||
-                unreadNotificationCount > 0
-                  ? 'var(--text-neutral-white-fixed)'
-                  : 'var(--text-neutral-black-fixed)',
-              top: '5%',
-              right: '5%',
-            },
+      {(!chatIsOpen || !drawerIsEnabled) && (
+        <button
+          ref={buttonRef}
+          id="ui-floatingActionButton"
+          aria-label={i18n.openOrCloseTeachingAssistant()}
+          className={classes}
+          onClick={handleClick}
+          onPointerDown={handlePointerDown}
+          onPointerMove={handlePointerMove}
+          onPointerUp={handlePointerUp}
+          onDragStart={e => e.preventDefault()}
+          type="button"
+          style={{
+            touchAction: 'none',
+            ...(drawerIsEnabled
+              ? {
+                  right: chatIsOpen
+                    ? `${DRAWER_WIDTH + DRAWER_FAB_MARGIN}px`
+                    : `${DRAWER_FAB_MARGIN}px`,
+                  transition: chatIsOpen
+                    ? 'right 225ms cubic-bezier(0, 0, 0.2, 1) 0ms'
+                    : 'right 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms',
+                }
+              : {}),
+            ...(fabPosition
+              ? {
+                  top: `${fabPosition.top}px`,
+                  bottom: 'auto',
+                  cursor: dragging ? 'grabbing' : 'grab',
+                }
+              : {cursor: 'grab'}),
           }}
-          className={style.badge}
         >
-          <img
-            alt="AI bot - unread notifications"
-            src={aiFabWithoutText}
-            onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
-            className={style.fabImageWithBadge}
-          />
-        </Badge>
-      </button>
+          <Badge
+            badgeContent={
+              unreadNotificationCount === 'loading'
+                ? 0
+                : unreadNotificationCount > 0
+                ? unreadNotificationCount
+                : 'TA'
+            }
+            color="error"
+            overlap="circular"
+            aria-label={
+              unreadNotificationCount &&
+              i18n.unreadNotificationsCount({
+                unreadCount: unreadNotificationCount,
+              })
+            }
+            sx={{
+              height: '48px',
+              width: '48px',
+              '& .MuiBadge-badge': {
+                backgroundColor:
+                  unreadNotificationCount === 'loading' ||
+                  unreadNotificationCount > 0
+                    ? 'var(--background-error-primary)'
+                    : 'var(--background-brand-aqua-primary)',
+                color:
+                  unreadNotificationCount === 'loading' ||
+                  unreadNotificationCount > 0
+                    ? 'var(--text-neutral-white-fixed)'
+                    : 'var(--text-neutral-black-fixed)',
+                top: '5%',
+                right: '5%',
+              },
+            }}
+            className={style.badge}
+          >
+            <img
+              alt="AI bot - unread notifications"
+              src={aiFabWithoutText}
+              onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
+              className={style.fabImageWithBadge}
+              draggable={false}
+            />
+          </Badge>
+        </button>
+      )}
       <React.Suspense fallback={<div />}>
         {drawerIsEnabled ? (
           <LazyAiDiffDrawer
