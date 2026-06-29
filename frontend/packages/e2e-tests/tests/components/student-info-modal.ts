@@ -8,7 +8,7 @@ import {type Locator, type Page} from '@playwright/test';
  * info — in these tests, /home. It is a modal, not a page, so it does not
  * extend BasePage.
  */
-export class StudentInfoModal {
+export class StudentInfoModalComponent {
   private readonly page: Page;
 
   /** Interstitial heading; visibility signal for the modal. */

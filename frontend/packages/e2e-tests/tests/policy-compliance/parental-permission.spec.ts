@@ -1,6 +1,6 @@
+import {StudentInfoModalComponent} from '../components/student-info-modal';
 import {expect, test} from '../fixtures';
 import {LockoutPage} from '../pages/lockout-page';
-import {StudentInfoModal} from '../pages/student-info-modal';
 import {createStudent, resetSession} from '../shared/auth';
 
 // CO lockout date pinned into the past so every CO account sits in the all-user
@@ -82,7 +82,7 @@ test.describe('Policy Compliance - Parental Permission', () => {
     'New under 13 account should be able to provide state and see lockout page to send parental request',
     {tag: ['@no_mobile']},
     async ({page}) => {
-      const modal = new StudentInfoModal(page);
+      const modal = new StudentInfoModalComponent(page);
       const lockout = new LockoutPage(page);
       await createStudent(page, {...LOCKED_STUDENT});
       await page.goto('/home?forceStudentInterstitial=true');
