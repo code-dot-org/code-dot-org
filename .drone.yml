@@ -232,7 +232,8 @@ steps:
     network_mode: host
     environment:
       CI_JOB: 'ui_tests'
-      # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_env.sh
+      # Each Drone secret below must be explicitly passed to the corresponding
+      # config value in test.yml.erb.
       CLOUDFRONT_KEY_PAIR_ID:
         from_secret: CLOUDFRONT_KEY_PAIR_ID
       CLOUDFRONT_PRIVATE_KEY:
@@ -369,6 +370,6 @@ trigger:
 
 ---
 kind: signature
-hmac: aa13ab87a048d1dc8557a667b0c1deecd368190da791ae5eebe055b138686b7a
+hmac: cb0669666e88d455dfab2517f28adf77e19bd165d289d431e6db1e6f36ae226b
 
 ...
