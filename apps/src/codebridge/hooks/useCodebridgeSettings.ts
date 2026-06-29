@@ -4,6 +4,7 @@ import {useState} from 'react';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {FontSize} from '@cdo/apps/lab2/constants';
 import {
+  setCodeSuggestionsEnabled,
   setConsoleFontSize,
   setEditorFontSize,
 } from '@cdo/apps/lab2/redux/lab2ViewRedux';
@@ -39,12 +40,27 @@ const fontSizeOptions = [
     text: codebridgeI18n.fontSizeHuge(),
   },
 ];
+
+const codeSuggestionsOptions = [
+  {
+    value: 'on',
+    text: codebridgeI18n.on(),
+  },
+  {
+    value: 'off',
+    text: codebridgeI18n.off(),
+  },
+];
+
 export function useCodebridgeSettings(): Setting[] {
   const currentEditorFontSizeKey = useAppSelector(
     state => state.lab2View.editorFontSizeKey
   );
   const currentConsoleFontSizeKey = useAppSelector(
     state => state.lab2View.consoleFontSizeKey
+  );
+  const codeSuggestionsEnabled = useAppSelector(
+    state => state.lab2View.codeSuggestionsEnabled
   );
 
   const {signInState} = useAppSelector(state => state.currentUser);
@@ -107,6 +123,22 @@ export function useCodebridgeSettings(): Setting[] {
     });
   };
 
+  const handleCodeSuggestionsChange = (value: string) => {
+    const enabled = value === 'on';
+
+    if (enabled === codeSuggestionsEnabled) {
+      return;
+    }
+
+    if (signInState === SignInState.SignedIn) {
+      new UserPreferences().setEditorSettings(
+        {codeSuggestions: enabled},
+        appName
+      );
+    }
+    dispatch(setCodeSuggestionsEnabled(enabled));
+  };
+
   const layoutDropdownOptions = [
     {
       value: 'horizontal',
@@ -129,6 +161,13 @@ export function useCodebridgeSettings(): Setting[] {
       options: fontSizeOptions,
       selectedValue: selectedEditorFontSizeValue,
       onChange: onTextEditorDropdownChange,
+    },
+    {
+      id: 'codeSuggestions',
+      label: codebridgeI18n.codeSuggestions(),
+      options: codeSuggestionsOptions,
+      selectedValue: codeSuggestionsEnabled ? 'on' : 'off',
+      onChange: handleCodeSuggestionsChange,
     },
     ...(hasConsole
       ? [

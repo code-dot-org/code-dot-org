@@ -66,6 +66,7 @@ Dashboard::Application.routes.draw do
       get '/font_size/console', to: 'user_preferences#console_font_size'
       get '/font_size/editor', to: 'user_preferences#editor_font_size'
       get '/theme', to: 'user_preferences#theme'
+      get '/editor_settings', to: 'user_preferences#editor_settings'
     end
 
     resources :survey_results, only: [:create], defaults: {format: 'json'}

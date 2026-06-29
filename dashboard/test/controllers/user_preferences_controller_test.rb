@@ -50,6 +50,17 @@ class UserPreferencesControllerTest < ActionController::TestCase
     assert_equal theme, preference.theme
   end
 
+  test 'updates editor_settings for the current user' do
+    editor_settings = {'weblab2' => {'codeSuggestions' => false}}
+
+    patch :update, params: {editor_settings: editor_settings}, as: :json
+
+    assert_response :success
+
+    preference = UserPreference.find_by(user_id: @user.id)
+    assert_equal editor_settings, preference.editor_settings
+  end
+
   test 'updates existing preference for section_order without creating a new record' do
     initial_order = ['3', '2', '1']
     preference = UserPreference.create!(user_id: @user.id, section_order: initial_order)
@@ -112,6 +123,31 @@ class UserPreferencesControllerTest < ActionController::TestCase
 
     preference.reload
     assert_equal merged_theme, preference.theme
+  end
+
+  test 'updates existing preference for editor_settings without creating a new record and merges successfully' do
+    initial_editor_settings = {
+      'pythonlab' => {'codeSuggestions' => true},
+      'weblab2' => {'codeSuggestions' => true}
+    }
+    preference = UserPreference.create!(user_id: @user.id, editor_settings: initial_editor_settings)
+
+    new_editor_settings = {
+      'weblab2' => {'codeSuggestions' => false}
+    }
+    merged_editor_settings = {
+      'pythonlab' => {'codeSuggestions' => true},
+      'weblab2' => {'codeSuggestions' => false}
+    }
+
+    assert_no_difference 'UserPreference.count' do
+      patch :update, params: {editor_settings: new_editor_settings}, as: :json
+    end
+
+    assert_response :success
+
+    preference.reload
+    assert_equal merged_editor_settings, preference.editor_settings
   end
 
   test 'ignores non-permitted parameters' do
@@ -179,6 +215,24 @@ class UserPreferencesControllerTest < ActionController::TestCase
     UserPreference.create!(user_id: @user.id)
 
     get :theme
+
+    assert_response :not_found
+  end
+
+  test 'gets editor_settings for the current user' do
+    editor_settings = {'weblab2' => {'codeSuggestions' => false}}
+    UserPreference.create!(user_id: @user.id, editor_settings: editor_settings)
+
+    get :editor_settings
+
+    assert_response :success
+    assert_equal editor_settings, JSON.parse(response.body)['editor_settings']
+  end
+
+  test 'returns 404 if no editor_settings exists for the current user' do
+    UserPreference.create!(user_id: @user.id)
+
+    get :editor_settings
 
     assert_response :not_found
   end

@@ -201,6 +201,46 @@ export default class UserPreferences extends Record({userId: 'me'}) {
   }
 
   /**
+   * Save the user's editor behavior settings for a lab.
+   * @param {Object} editorSettings
+   * @param {string} appName
+   */
+  setEditorSettings(editorSettings, appName) {
+    const body = {
+      editorSettings: {
+        [appName]: editorSettings,
+      },
+    };
+
+    HttpClient.put('/user_preference', JSON.stringify(body), true, {
+      'Content-Type': 'application/json',
+    });
+  }
+
+  /**
+   * Fetch the user's editor behavior settings.
+   * @param {string} appName
+   */
+  async getEditorSettings(appName) {
+    try {
+      const editorSettingsResponse = await HttpClient.fetchJson(
+        '/user_preference/editor_settings'
+      );
+      return editorSettingsResponse.value.editor_settings[appName];
+    } catch (error) {
+      // Don't log error if not found. The default editor settings apply.
+      if (error.response.status !== 404) {
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError('Error fetching editor settings', undefined, {
+            message: error.response,
+          });
+      }
+      return null;
+    }
+  }
+
+  /**
    * Fetches all user theme settings (e.g., global, blockly).
    * @param {function} [errorCallback]
    */
