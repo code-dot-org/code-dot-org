@@ -2,6 +2,8 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import remeasureOnFontsReady from './remeasureOnFontsReady';
+
 export default class HeaderFinish extends React.Component {
   static propTypes = {
     lessonData: PropTypes.object,
@@ -22,6 +24,13 @@ export default class HeaderFinish extends React.Component {
 
   componentDidMount() {
     this.setDesiredWidth();
+    this.cancelFontRemeasure = remeasureOnFontsReady(() =>
+      this.setDesiredWidth()
+    );
+  }
+
+  componentWillUnmount() {
+    this.cancelFontRemeasure?.();
   }
 
   componentDidUpdate() {

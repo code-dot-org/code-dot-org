@@ -424,6 +424,15 @@ class Ability
       can [:tools], :ai_iteration
     end
 
+    # The image-safety eval drives the live aichat image pipeline (gateway image
+    # generation + Azure moderation). Restricted to admins (not levelbuilders).
+    # Admins are migrated google-oauth teachers, so they satisfy
+    # teacher_can_access_aichat? and the /ai_gateway/access_token endpoint will
+    # still issue them tokens.
+    if user.persisted? && user.admin?
+      can [:image_safety_eval], :ai_iteration
+    end
+
     if user.persisted? && user.can_access_student_work?
       can [:fetch_student_code_samples], :student_work_sample
       can [:fetch_free_response_answers], :student_work_sample
