@@ -121,7 +121,15 @@ class Policies::DemoSections
     unit_group = resolve_unit_group(preset[:unit_group_name])
     return false unless unit && unit_group
 
-    section.script_id == unit.id && section.course_id == unit_group.id
+    section.script_id == unit.id &&
+      section.course_id == unit_group.id &&
+      section_roster_matches_preset?(section)
+  end
+
+  # True if the demo section's roster exactly matches the preset.
+  def self.section_roster_matches_preset?(section)
+    section.followers.pluck(:student_user_id).to_set ==
+      demo_student_ids(section.demo_type).to_set
   end
 
   def self.preset_views_for_all_types
@@ -206,8 +214,6 @@ class Policies::DemoSections
   end
 
   private_class_method(
-    :resolve_unit,
-    :resolve_unit_group,
     :curriculum_names,
     :adhoc_curriculum_overrides
   )

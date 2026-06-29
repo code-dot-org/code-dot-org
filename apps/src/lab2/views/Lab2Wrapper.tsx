@@ -17,20 +17,19 @@ import {
   getAppOptionsLevelId,
   getAppOptionsTheme,
   getIsShareView,
-  getPublicCaching,
 } from '@cdo/apps/lab2/projects/utils';
 import {
   hasPageError,
   isLabLoading,
 } from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import fetchPermissions from '@cdo/apps/lab2/utils/fetchPermissions';
+import fetchUserAppOptions from '@cdo/apps/lab2/utils/fetchUserAppOptions';
 import {useBrowserTextToSpeech} from '@cdo/apps/sharedComponents/BrowserTextToSpeechWrapper';
 import {
   CourseRoles,
   setUserRoleInCourse,
 } from '@cdo/apps/templates/currentUserRedux';
 import {capitalizeFirstLetter} from '@cdo/apps/util/capitalizeFirstLetter';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {PERMISSIONS} from '../constants';
@@ -126,15 +125,14 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
     }
   }, [isShareView, dispatch]);
 
-  // If we are cached, and there is a user app options path because we are in a script
-  // level, then make an async call to the server to find out whether the user is an
-  // instructor, and if they are, then update the user role.  This is needed for the
-  // teacher panel to appear in cached levels.
+  // If there is a user app options path because we are in a script level, prefetch it.
+  // This is the shared source for both pairing data and teacher-role state. We use it
+  // to set teacher role state because it is the only way to get this info on cached levels.
   const userAppOptionsPath = useSelector(getUserAppOptionsPath);
   useEffect(() => {
-    if (getPublicCaching() && userAppOptionsPath) {
-      HttpClient.fetchJson<PartialUserAppOptions>(userAppOptionsPath).then(
-        ({value}) => {
+    if (userAppOptionsPath) {
+      fetchUserAppOptions(userAppOptionsPath).then(
+        (value: PartialUserAppOptions) => {
           if (value.isInstructor) {
             dispatch(setUserRoleInCourse(CourseRoles.Instructor));
           }
