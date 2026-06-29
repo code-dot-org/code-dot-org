@@ -21,6 +21,7 @@ import {
   getHandleFlowPosition,
   lineAnchorHandleId,
 } from '../utils/lineAnchors';
+import {uploadImageAsset} from '../utils/uploadImageAsset';
 
 interface UseCopyPasteOptions {
   nodes: SketchlabReactFlowNode[];
@@ -32,6 +33,21 @@ interface UseCopyPasteOptions {
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
   pushSnapshot: () => void;
+  canvasContainerRef: React.RefObject<HTMLDivElement>;
+  readOnly: boolean;
+  levelName: string;
+  channelId: string;
+}
+
+// True when the paste target is a place where typing is the point — an input,
+// textarea, or contentEditable (e.g. a TextNode editor). There we let the
+// browser do its normal text paste instead of dropping an image node.
+function isTargetEditable(target: HTMLElement): boolean {
+  return (
+    target.isContentEditable ||
+    target.tagName === 'INPUT' ||
+    target.tagName === 'TEXTAREA'
+  );
 }
 
 // Returns the handle-to-handle horizontal span of a line clipboard's anchor
@@ -54,6 +70,10 @@ export function useCopyPaste({
   setNodes,
   setEdges,
   pushSnapshot,
+  canvasContainerRef,
+  readOnly,
+  levelName,
+  channelId,
 }: UseCopyPasteOptions) {
   const {deleteElements, screenToFlowPosition} = useReactFlow<
     SketchlabReactFlowNode,
@@ -400,13 +420,52 @@ export function useCopyPaste({
     mousePositionRef.current = null;
   }, []);
 
+  // Native paste while the canvas is focused: drop a clipboard image as an
+  // ImageNode at the cursor, otherwise fall back to the internal element paste.
+  // When our marker is present, the most recent clipboard action was an in-app
+  // copy, so paste the copied element even if a stale image also lingers.
+  useEffect(() => {
+    const handlePaste = async (event: ClipboardEvent) => {
+      if (readOnly) return;
+      const container = canvasContainerRef.current;
+      if (!container || !container.contains(document.activeElement)) return;
+      const target = event.target as HTMLElement | null;
+      if (target && isTargetEditable(target)) return;
+
+      const clipboardText = event.clipboardData?.getData('text/plain') ?? '';
+      const internalCopyIsLatest = clipboardText === INTERNAL_CLIPBOARD_MARKER;
+      const items = event.clipboardData?.items;
+      const imageItem =
+        !internalCopyIsLatest && items
+          ? Array.from(items).find(item => item.type.startsWith('image/'))
+          : undefined;
+
+      if (!imageItem) {
+        event.preventDefault();
+        paste();
+        return;
+      }
+
+      event.preventDefault();
+      const file = imageItem.getAsFile();
+      if (!file) return;
+      try {
+        const uploadUrl = await uploadImageAsset(file, {levelName, channelId});
+        if (!uploadUrl) return;
+        pasteImage(uploadUrl);
+      } catch (error) {
+        console.error('Failed to upload pasted image:', error);
+      }
+    };
+    document.addEventListener('paste', handlePaste);
+    return () => document.removeEventListener('paste', handlePaste);
+  }, [canvasContainerRef, readOnly, levelName, channelId, paste, pasteImage]);
+
   return {
     duplicateNode,
     duplicateLine,
     copyEntry,
     cutEntry,
-    paste,
-    pasteImage,
     hasClipboard,
     handleMouseMove,
     handleMouseLeave,

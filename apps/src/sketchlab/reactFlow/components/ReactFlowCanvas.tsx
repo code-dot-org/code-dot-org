@@ -50,7 +50,6 @@ import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
 import {useLineEdgeDrag} from '../hooks/useLineEdgeDrag';
 import {useNodeDrag} from '../hooks/useNodeDrag';
-import {usePaste} from '../hooks/usePaste';
 import {useTabOrder} from '../hooks/useTabOrder';
 import {useUndoHistory} from '../hooks/useUndoHistory';
 import GroupNode from '../nodes/GroupNode';
@@ -357,11 +356,19 @@ export default function ReactFlowCanvas({
     duplicateLine,
     copyEntry,
     cutEntry,
-    paste,
-    pasteImage,
     handleMouseMove,
     handleMouseLeave,
-  } = useCopyPaste({nodes, edges, setNodes, setEdges, pushSnapshot});
+  } = useCopyPaste({
+    nodes,
+    edges,
+    setNodes,
+    setEdges,
+    pushSnapshot,
+    canvasContainerRef,
+    readOnly,
+    levelName,
+    channelId,
+  });
 
   const clipboardContextValue = useMemo(
     () => ({duplicateNode, duplicateLine}),
@@ -697,15 +704,6 @@ export default function ReactFlowCanvas({
       setEdges,
     ]
   );
-
-  usePaste({
-    canvasContainerRef,
-    readOnly,
-    levelName,
-    channelId,
-    pasteInternal: paste,
-    pasteImage,
-  });
 
   // All ReactFlow props that differ between cursor and grab mode, collected in
   // one place so the grab mode contract is visible at a glance.

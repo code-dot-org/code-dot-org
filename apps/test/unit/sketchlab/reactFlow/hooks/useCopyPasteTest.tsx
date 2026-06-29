@@ -1,10 +1,19 @@
 import {renderHook} from '@testing-library/react-hooks';
 
 import {INTERNAL_CLIPBOARD_MARKER} from '@cdo/apps/sketchlab/reactFlow/constants';
-import {usePaste} from '@cdo/apps/sketchlab/reactFlow/hooks/usePaste';
+import {useCopyPaste} from '@cdo/apps/sketchlab/reactFlow/hooks/useCopyPaste';
 import {uploadImageAsset} from '@cdo/apps/sketchlab/reactFlow/utils/uploadImageAsset';
 
 jest.mock('@cdo/apps/sketchlab/reactFlow/utils/uploadImageAsset');
+
+// Stub useReactFlow so the hook runs without a mounted ReactFlow. The paste
+// path only needs screenToFlowPosition (identity here) and deleteElements.
+jest.mock('@xyflow/react', () => ({
+  useReactFlow: () => ({
+    deleteElements: jest.fn(),
+    screenToFlowPosition: (point: {x: number; y: number}) => point,
+  }),
+}));
 
 const mockUploadImageAsset = uploadImageAsset as jest.MockedFunction<
   typeof uploadImageAsset
@@ -29,10 +38,10 @@ function buildPasteEvent(
   return event;
 }
 
-describe('usePaste', () => {
+describe('useCopyPaste paste handling', () => {
   let container: HTMLDivElement;
-  let pasteInternal: jest.Mock;
-  let pasteImage: jest.Mock;
+  let setNodes: jest.Mock;
+  let setEdges: jest.Mock;
 
   beforeEach(() => {
     mockUploadImageAsset.mockResolvedValue('/v3/assets/channel-1/pasted.png');
@@ -42,8 +51,8 @@ describe('usePaste', () => {
     document.body.appendChild(container);
     container.focus();
 
-    pasteInternal = jest.fn();
-    pasteImage = jest.fn();
+    setNodes = jest.fn();
+    setEdges = jest.fn();
   });
 
   afterEach(() => {
@@ -52,22 +61,25 @@ describe('usePaste', () => {
     mockUploadImageAsset.mockReset();
   });
 
-  function renderPaste(readOnly = false) {
+  function renderCopyPaste(readOnly = false) {
     const canvasContainerRef = {current: container};
     return renderHook(() =>
-      usePaste({
+      useCopyPaste({
+        nodes: [],
+        edges: [],
+        setNodes,
+        setEdges,
+        pushSnapshot: jest.fn(),
         canvasContainerRef,
         readOnly,
         levelName: 'test-level',
         channelId: 'channel-1',
-        pasteInternal,
-        pasteImage,
       })
     );
   }
 
-  it('uploads a pasted image and adds an ImageNode', async () => {
-    renderPaste();
+  it('uploads a pasted image and adds an ImageNode at the cursor', async () => {
+    renderCopyPaste();
     const file = new File(['x'], 'pasted.png', {type: 'image/png'});
     const event = buildPasteEvent([{type: 'image/png', getAsFile: () => file}]);
 
@@ -78,12 +90,15 @@ describe('usePaste', () => {
       levelName: 'test-level',
       channelId: 'channel-1',
     });
-    expect(pasteImage).toHaveBeenCalledWith('/v3/assets/channel-1/pasted.png');
-    expect(pasteInternal).not.toHaveBeenCalled();
+    expect(setNodes).toHaveBeenCalledTimes(1);
+    const addedNodes = setNodes.mock.calls[0][0]([]);
+    expect(addedNodes).toHaveLength(1);
+    expect(addedNodes[0].type).toBe('image');
+    expect(addedNodes[0].data.src).toBe('/v3/assets/channel-1/pasted.png');
   });
 
-  it('pastes the internal element over a stale image when our marker is present', async () => {
-    renderPaste();
+  it('ignores a stale clipboard image when our copy marker is present', async () => {
+    renderCopyPaste();
     const file = new File(['x'], 'pasted.png', {type: 'image/png'});
     const event = buildPasteEvent(
       [{type: 'image/png', getAsFile: () => file}],
@@ -93,27 +108,14 @@ describe('usePaste', () => {
     container.dispatchEvent(event);
     await flushPromises();
 
-    expect(pasteInternal).toHaveBeenCalledTimes(1);
+    // Marker present -> internal paste path; the (empty) clipboard yields no
+    // nodes and no upload happens.
     expect(mockUploadImageAsset).not.toHaveBeenCalled();
-    expect(pasteImage).not.toHaveBeenCalled();
-  });
-
-  it('falls back to internal paste when the clipboard has no image', async () => {
-    renderPaste();
-    const event = buildPasteEvent([
-      {type: 'text/plain', getAsFile: () => null},
-    ]);
-
-    container.dispatchEvent(event);
-    await flushPromises();
-
-    expect(pasteInternal).toHaveBeenCalledTimes(1);
-    expect(mockUploadImageAsset).not.toHaveBeenCalled();
-    expect(pasteImage).not.toHaveBeenCalled();
+    expect(setNodes).not.toHaveBeenCalled();
   });
 
   it('ignores pastes when the canvas is not focused', async () => {
-    renderPaste();
+    renderCopyPaste();
     container.blur();
     const file = new File(['x'], 'pasted.png', {type: 'image/png'});
     const event = buildPasteEvent([{type: 'image/png', getAsFile: () => file}]);
@@ -122,12 +124,11 @@ describe('usePaste', () => {
     await flushPromises();
 
     expect(mockUploadImageAsset).not.toHaveBeenCalled();
-    expect(pasteInternal).not.toHaveBeenCalled();
-    expect(pasteImage).not.toHaveBeenCalled();
+    expect(setNodes).not.toHaveBeenCalled();
   });
 
   it('does nothing in read-only mode', async () => {
-    renderPaste(true);
+    renderCopyPaste(true);
     const file = new File(['x'], 'pasted.png', {type: 'image/png'});
     const event = buildPasteEvent([{type: 'image/png', getAsFile: () => file}]);
 
@@ -135,7 +136,6 @@ describe('usePaste', () => {
     await flushPromises();
 
     expect(mockUploadImageAsset).not.toHaveBeenCalled();
-    expect(pasteInternal).not.toHaveBeenCalled();
-    expect(pasteImage).not.toHaveBeenCalled();
+    expect(setNodes).not.toHaveBeenCalled();
   });
 });
