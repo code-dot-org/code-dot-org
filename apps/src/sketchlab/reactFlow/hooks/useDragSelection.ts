@@ -153,9 +153,10 @@ export function useDragSelection({
 
   const handleMouseDown = useCallback(
     (event: React.MouseEvent) => {
-      if (isGrabMode || readOnly) return;
+      if (isGrabMode || readOnly || event.button !== 0) return;
       // Only begin on a click directly on the pane background, not on a node/edge.
-      const target = event.target as HTMLElement;
+      const target = event.target;
+      if (!(target instanceof Element)) return;
       if (!target.classList.contains('react-flow__pane')) return;
       dragRef.current = {
         startX: event.clientX,
