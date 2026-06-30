@@ -169,7 +169,7 @@ $handle-grab-buffer: 10px;
   user-select: none;
 }
 
-.groupModeIndicator {
+.bannerInfo {
   @extend %canvas-message;
 
   color: var(--text-neutral-primary);
@@ -177,7 +177,7 @@ $handle-grab-buffer: 10px;
   border-left: 4px solid var(--borders-brand-teal-primary);
 }
 
-.uploadError {
+.bannerError {
   @extend %canvas-message;
 
   color: var(--text-error-primary);

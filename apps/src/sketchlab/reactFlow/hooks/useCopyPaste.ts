@@ -410,10 +410,10 @@ export function useCopyPaste({
   }, []);
 
   // Native paste while the canvas is focused, with the following precedence:
-  // - If we are over an editable element use native paste (allowing copy/paste of text).
-  // - If the last clipboard action was an in-app copy, paste the copied element.
-  // - If there is a clipboard image, paste it as an ImageNode.
-  // - Otherwise, fall back to internal element paste.
+  // 1. If we are over an editable element use native paste (allowing copy/paste of text).
+  // 2. If the last clipboard action was an in-app copy, paste the copied element.
+  // 3. If there is a clipboard image, paste it as an ImageNode.
+  // 4. Otherwise, fall back to internal element paste.
   useEffect(() => {
     const handlePaste = async (event: ClipboardEvent) => {
       if (readOnly) return;
@@ -441,7 +441,10 @@ export function useCopyPaste({
       if (!file) return;
       try {
         const uploadUrl = await uploadImageAsset(file, {levelName, channelId});
-        if (!uploadUrl) return;
+        if (!uploadUrl) {
+          onImageUploadError();
+          return;
+        }
         pasteImage(uploadUrl);
       } catch (error) {
         console.error('Failed to upload pasted image:', error);

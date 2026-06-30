@@ -87,6 +87,9 @@ const NODE_TYPES = {
 const NEW_NODE_STAGGER_PX = 20;
 const FOCUS_DELAY_MS = 100;
 
+const GROUP_MODE_HINT =
+  'Tab to move — Enter to select/deselect — G to group — Esc to cancel';
+
 // Fallbacks for edges that don't specify type/style, kept in sync with the
 // fields a new line gets. markerEnd is intentionally omitted so edges saved
 // without an explicit marker don't gain arrows.
@@ -304,6 +307,17 @@ export default function ReactFlowCanvas({
     announceGroupMode(message);
     showImageUploadError(message);
   }, [announceGroupMode, showImageUploadError]);
+
+  // One banner at a time, highest priority first: an upload error, then a
+  // group-mode error, then the group-mode hint while group mode is active.
+  const banner: {message: string; variant: 'info' | 'error'} | null =
+    imageUploadError
+      ? {message: imageUploadError, variant: 'error'}
+      : groupModeError
+      ? {message: groupModeError, variant: 'info'}
+      : isGroupMode
+      ? {message: GROUP_MODE_HINT, variant: 'info'}
+      : null;
 
   const handlePaneClick = useCallback(() => {
     canvasContainerRef.current?.focus();
@@ -811,21 +825,16 @@ export default function ReactFlowCanvas({
                       onGroupNodes={handleGroupNodes}
                       onUngroupNode={handleUngroupNode}
                     />
-                    {isGroupMode && (
+                    {banner && (
                       <Panel
                         position="bottom-center"
-                        className={styles.groupModeIndicator}
+                        className={
+                          banner.variant === 'error'
+                            ? styles.bannerError
+                            : styles.bannerInfo
+                        }
                       >
-                        {groupModeError ??
-                          'Tab to move — Enter to select/deselect — G to group — Esc to cancel'}
-                      </Panel>
-                    )}
-                    {imageUploadError && (
-                      <Panel
-                        position="bottom-center"
-                        className={styles.uploadError}
-                      >
-                        {imageUploadError}
+                        {banner.message}
                       </Panel>
                     )}
                     <Background />
