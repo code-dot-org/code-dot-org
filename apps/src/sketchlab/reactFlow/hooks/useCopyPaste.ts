@@ -17,6 +17,7 @@ import {
 } from '../constants';
 import type {ClipboardContents} from '../context';
 import type {TabOrderEntry} from '../utils/computeTabOrder';
+import {isTargetEditable} from '../utils/isTargetEditable';
 import {
   anchorHandleFlowPosition,
   createLineAnchorAtHandle,
@@ -38,17 +39,6 @@ interface UseCopyPasteOptions {
   canvasContainerRef: React.RefObject<HTMLDivElement>;
   readOnly: boolean;
   levelName: string;
-}
-
-// True when the paste target is a place where typing is the point — an input,
-// textarea, or contentEditable (e.g. a TextNode editor). There we let the
-// browser do its normal text paste.
-function isTargetEditable(target: HTMLElement): boolean {
-  return (
-    target.isContentEditable ||
-    target.tagName === 'INPUT' ||
-    target.tagName === 'TEXTAREA'
-  );
 }
 
 // Returns the handle-to-handle horizontal span of a line clipboard's anchor

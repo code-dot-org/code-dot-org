@@ -28,6 +28,7 @@ import {
   findNearestHandleInRadius,
   snapAnchorIfNearby,
 } from '../utils/handleSnap';
+import {isTargetEditable} from '../utils/isTargetEditable';
 import {
   anchorHandleFlowPosition,
   attachEdgeToFreshAnchor,
@@ -76,18 +77,6 @@ function resizeNodeByDelta(
     const newHeight = Math.max(MIN_NODE_HEIGHT, currentHeight + deltaHeight);
     return {...node, width: newWidth, height: newHeight};
   });
-}
-
-/**
- * Returns true if `target` is a context where text editing/typing is the
- * primary purpose — input, textarea, or contentEditable.
- */
-function isTargetEditable(target: HTMLElement): boolean {
-  return (
-    target.isContentEditable ||
-    target.tagName === 'INPUT' ||
-    target.tagName === 'TEXTAREA'
-  );
 }
 
 /**

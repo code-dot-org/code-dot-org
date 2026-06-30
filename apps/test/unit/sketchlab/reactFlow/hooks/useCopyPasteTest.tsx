@@ -124,6 +124,22 @@ describe('useCopyPaste paste handling', () => {
     expect(setNodes).not.toHaveBeenCalled();
   });
 
+  it('ignores pastes when focus is on another element', async () => {
+    renderCopyPaste();
+    const otherInput = document.createElement('input');
+    document.body.appendChild(otherInput);
+    otherInput.focus();
+    const file = new File(['x'], 'pasted.png', {type: 'image/png'});
+    const event = buildPasteEvent([{type: 'image/png', getAsFile: () => file}]);
+
+    otherInput.dispatchEvent(event);
+    await flushPromises();
+
+    expect(mockUploadImageAsset).not.toHaveBeenCalled();
+    expect(setNodes).not.toHaveBeenCalled();
+    otherInput.remove();
+  });
+
   it('ignores pastes when the canvas is not focused', async () => {
     renderCopyPaste();
     container.blur();
