@@ -26,7 +26,26 @@ export default defineConfig({
     // Inject CSS directly into JS bundle as inline styles.
     // This ensures CSS is automatically loaded when the module is imported,
     // so consumers don't need separate CSS imports.
-    cssInjectedByJsPlugin(),
+    //
+    // Prepend (rather than append) base's <style> tags to <head> so framework
+    // styles sit at the top — lowest precedence among equal-specificity CSS
+    // modules — letting a lab's own styles override them. The default appends
+    // at runtime per chunk, which lands base styles last (highest precedence)
+    // and wrongly overrides the lab. (A `@layer`-based scheme would make this
+    // order-independent; this is the lighter-weight ordering fix.)
+    cssInjectedByJsPlugin({
+      injectCodeFunction: cssCode => {
+        try {
+          if (typeof document !== 'undefined') {
+            const style = document.createElement('style');
+            style.appendChild(document.createTextNode(cssCode));
+            document.head.prepend(style);
+          }
+        } catch (e) {
+          console.error('vite-plugin-css-injected-by-js', e);
+        }
+      },
+    }),
     // Generate Typescript declaration files using the Vite default tsconfig
     dts({
       tsconfigPath: './tsconfig.json',

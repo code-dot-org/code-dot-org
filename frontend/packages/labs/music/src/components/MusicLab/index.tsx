@@ -1,0 +1,296 @@
+import classNames from 'classnames';
+import {useRef, useContext, useCallback, useMemo, useEffect} from 'react';
+
+import {BlockTypes} from '../../blockly/blockTypes';
+import {BlockMode} from '../../constants';
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import {BlocklyWorkspace} from '@code-dot-org/blockly';
+import type {BlocklySerialization} from '@code-dot-org/blockly';
+import {
+  GuideInstructions,
+  //LabConstants,
+  Layout,
+  Panel,
+  PanelContainer,
+  WorkspaceHeader,
+} from '@code-dot-org/lab';
+import {useLevelProperties, useSources} from '@code-dot-org/lab/contexts';
+import {useBlocklySettings} from '@code-dot-org/lab/hooks';
+import type {ProjectSources} from '@code-dot-org/core/api';
+import Controls from '../Controls';
+import Timeline from '../Timeline';
+import HeaderButtons from '../HeaderButtons';
+import PackDialog from '../PackDialog';
+import ResourcePanel from '@code-dot-org/lab/resourcePanel';
+import toolboxes from '../../blockly/toolbox';
+
+import ExemplarPlayerView from '../ExemplarPlayerView';
+
+import AppConfig from '../../appConfig';
+import PlayerContext from '../../contexts/PlayerContext';
+import type {PlaybackEvent} from '../../player/interfaces/PlaybackEvent';
+import {InstructionsPosition, showCallout} from '../../redux/musicSlice';
+import {useAppDispatch, useAppSelector} from '../../redux/store';
+import {labActions} from '@code-dot-org/lab/redux';
+import type {Trigger, MusicLevelProperties} from '../../types';
+
+import moduleStyles from './musicLab.module.scss';
+
+const DEFAULT_TOOLBOX = toolboxes[BlockMode.SIMPLE2];
+
+const exemplarPlayerInsideInstructions =
+  AppConfig.getValue('exemplar-player-bottom') !== 'true';
+
+// TODO: use AppOptions api;
+//const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+//const isToolboxMode = getAppOptionsEditBlocks() === LabConstants.TOOLBOX_BLOCKS;
+const isToolboxMode = false;
+
+/** By default, a blank level should at least show a 'When Run' block */
+const DefaultStartBlocks: BlocklySerialization = {
+  blocks: {
+    blocks: [
+      {
+        type: BlockTypes.WHEN_RUN_SIMPLE2,
+      },
+    ],
+  },
+};
+
+const MusicLab = () => {
+  const settings = useBlocklySettings();
+  const dispatch = useAppDispatch();
+
+  const levelProperties = useLevelProperties<MusicLevelProperties>();
+
+  const {currentSources} = useSources<BlocklySerialization>();
+
+  const {skipUrl} = levelProperties;
+  const guideMode = levelProperties.levelData.guideMode;
+  const startSources: ProjectSources = {
+    source: 'hello world',
+  };
+
+  const {theme, setTheme} = useTheme();
+  const timelineAreaRef = useRef<HTMLDivElement | null>(null);
+
+  const {
+    loadAndInitializePlayer,
+    onInject,
+    onChange,
+    javascriptGeneratorRef,
+    driver,
+    player,
+  } = useContext(PlayerContext);
+
+  const hideChaff = useCallback(() => {}, []);
+  const undo = useCallback(() => !!driver?.undo(), [driver]);
+  const redo = useCallback(() => !!driver?.redo(), [driver]);
+  const clearCode: (maintainPackId?: boolean) => void = _ => {};
+  const allowPackSelection = true;
+  const setPlaying = useCallback(
+    (play: boolean) => driver?.setPlaying(play),
+    [driver],
+  );
+  const triggers: Trigger[] = [];
+  const playTrigger: (id: string) => void = _ => {};
+
+  useEffect(() => {
+    // Ensure we use dark theme for music lab, for now
+    if (theme === 'Light') {
+      setTheme('Dark');
+
+      // TODO: add a channel/progress wrapper for offline levels
+      dispatch(
+        labActions.setChannel({
+          id: '1',
+          name: 'my-channel',
+          isOwner: true,
+          projectType: 'music',
+          createdAt: '2026-01-01',
+          updatedAt: '2026-01-01',
+          hidden: false,
+        }),
+      );
+      loadAndInitializePlayer('launch2024');
+    }
+  }, [loadAndInitializePlayer, dispatch, theme, setTheme]);
+
+  // Set up the driver
+  useEffect(() => {
+    return () => {
+      console.log('UNINIT THE MUSIC LEVEL');
+    };
+  }, [levelProperties]);
+
+  const onInstructionsTextClick = useCallback(
+    (id: string) => {
+      dispatch(showCallout(id));
+    },
+    [dispatch],
+  );
+
+  const toolbox = useMemo(
+    () =>
+      levelProperties.multipleChoice
+        ? undefined
+        : (levelProperties.toolboxBlocks?.contents?.length || 0) === 0
+          ? DEFAULT_TOOLBOX
+          : levelProperties.toolboxBlocks,
+    [levelProperties],
+  );
+
+  const timelineAtTop = useAppSelector(state => state.music.timelineAtTop);
+  const hideHeaders = useAppSelector(state => state.music.hideHeaders);
+  const instructionsPosition = useAppSelector(
+    state => state.music.instructionsPosition,
+  );
+
+  const hasRun = false;
+  const hasEdited = false;
+  const isPlaying = useAppSelector(state => state.music.isPlaying);
+  const showExemplarPlayer = false;
+  const exemplarPlaybackEvents: PlaybackEvent[] = [];
+
+  return (
+    <Layout
+      className={classNames(
+        moduleStyles.mainContent,
+        timelineAtTop && moduleStyles.reverse,
+      )}
+    >
+      {allowPackSelection && player && (
+        <PackDialog
+          player={player}
+          forcePackSelect={guideMode === 'aiCodeGenerate'}
+        />
+      )}
+      {guideMode === 'instructions' && (
+        <GuideInstructions
+          levelProperties={levelProperties}
+          isRunning={false}
+          hasRun={false}
+          hasEdited={false}
+        />
+      )}
+      <Panel
+        id="work-area"
+        className={classNames(moduleStyles.workArea, {
+          // Allow full height when the play area is hidden.
+          [moduleStyles.toolboxMode]: isToolboxMode,
+          [moduleStyles.reverse]:
+            instructionsPosition === InstructionsPosition.RIGHT,
+        })}
+      >
+        <ResourcePanel
+          isRunning={isPlaying}
+          onInstructionsTextClick={onInstructionsTextClick}
+          bottomComponent={
+            exemplarPlayerInsideInstructions &&
+            showExemplarPlayer &&
+            player && (
+              <ExemplarPlayerView
+                playbackEvents={exemplarPlaybackEvents}
+                title={levelProperties.levelData.exemplarSettings!.playerTitle!}
+                player={player}
+                insideInstructions={exemplarPlayerInsideInstructions}
+              />
+            )
+          }
+          hasRun={hasRun}
+          hasEdited={hasEdited}
+          fixedDarkBackground={true}
+          overrideTheme={'Light'}
+          includeFooterSpacing={false}
+          levelProperties={levelProperties}
+          headerClassName={moduleStyles.headerWithBorder}
+          settings={settings}
+          hideContinueIfDisabled={true}
+          hideNavigation={false}
+          styleNavigationAsBubble={true}
+          documentationUrl={'/docs/ide/music'}
+          sidebarOnly={!!guideMode}
+          versionHistoryProps={{startSources, alwaysShowAutoSaves: true}}
+        />
+        <PanelContainer
+          className={moduleStyles.blocklyArea}
+          id="workspace-panel"
+          headerContent={<WorkspaceHeader />}
+          hideHeaders={hideHeaders}
+          rightHeaderContent={
+            <HeaderButtons
+              onClickUndo={undo}
+              onClickRedo={redo}
+              clearCode={clearCode}
+              allowPackSelection={allowPackSelection}
+              skipUrl={skipUrl}
+              hideChaff={hideChaff}
+            />
+          }
+          headerClassName={moduleStyles.headerWithBorder}
+        >
+          <BlocklyWorkspace
+            className={moduleStyles.blocklyWorkspace}
+            options={{
+              readOnly: levelProperties.multipleChoice ? true : undefined,
+              trashcan: false,
+            }}
+            startBlocks={
+              // An empty source is the truthy `{}` (a new/empty project), which
+              // would otherwise win this `||` chain and skip the defaults. Only
+              // use it when it actually has blocks; otherwise fall back to the
+              // level's start blocks or the default "when run" block.
+              (currentSources?.source &&
+              Object.keys(currentSources.source).length
+                ? currentSources.source
+                : undefined) ||
+              levelProperties.startBlocks ||
+              DefaultStartBlocks
+            }
+            toolbox={toolbox}
+            onInject={onInject}
+            onChange={onChange}
+            javascriptGeneratorRef={javascriptGeneratorRef}
+          />
+        </PanelContainer>
+      </Panel>
+
+      {!isToolboxMode && (
+        <Panel id="play-area" className={classNames(moduleStyles.playArea)}>
+          <PanelContainer
+            className={moduleStyles.controlsArea}
+            id="controls-panel"
+            headerContent="Controls"
+            hideHeaders={hideHeaders}
+          >
+            <Controls
+              setPlaying={setPlaying}
+              playTrigger={playTrigger}
+              triggers={triggers}
+              isPredictLevel={levelProperties.predictSettings?.isPredictLevel}
+              enableSkipControls={
+                AppConfig.getValue('skip-controls-enabled') === 'true'
+              }
+            />
+          </PanelContainer>
+          <PanelContainer
+            className={moduleStyles.timelineArea}
+            id="timeline-panel"
+            headerContent="Timeline"
+            hideHeaders={hideHeaders}
+            ref={timelineAreaRef}
+          >
+            <Timeline
+              allowChangeStartingPlayheadPosition={
+                levelProperties.levelData?.allowChangeStartingPlayheadPosition
+              }
+              isPredictLevel={levelProperties.predictSettings?.isPredictLevel}
+            />
+          </PanelContainer>
+        </Panel>
+      )}
+    </Layout>
+  );
+};
+
+export default MusicLab;

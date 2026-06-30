@@ -56,7 +56,12 @@ const BlocklyLab = <T extends LevelProperties = LevelProperties>({
     if (typeof sources.source === 'string') {
       sources = {
         ...sources,
-        source: JSON.parse(sources.source) as Source<BlocklySerialization>,
+        // An empty string is a new/empty project (the server and mocks return
+        // `source: ''` for one); deserialize it to an empty workspace rather
+        // than letting `JSON.parse('')` throw.
+        source: (sources.source
+          ? JSON.parse(sources.source)
+          : {}) as Source<BlocklySerialization>,
       };
     }
     return sources;

@@ -41,12 +41,22 @@ class LabMetricsReporter {
     });
   }
 
-  reportLoadTime(metricName: string, loadTimeMs: number) {
-    metrics.distribution(metricName, loadTimeMs, this.getCommonAttributes());
+  reportLoadTime(metricName: string, loadTimeMs: number, details?: object) {
+    metrics.distribution(metricName, loadTimeMs, {
+      ...this.getCommonAttributes(),
+      ...(details || {}),
+    });
   }
 
   incrementCounter(metricName: string, details?: object) {
     metrics.count(metricName, 1, {
+      ...this.getCommonAttributes(),
+      ...(details || {}),
+    });
+  }
+
+  incrementCounterBy(metricName: string, count: number, details?: object) {
+    metrics.count(metricName, count, {
       ...this.getCommonAttributes(),
       ...(details || {}),
     });
