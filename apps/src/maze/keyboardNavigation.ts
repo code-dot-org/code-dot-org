@@ -178,7 +178,7 @@ export default class MazeKeyboardNavigation {
   private handleFocusOut = (e: FocusEvent): void => {
     if (!this.active) return;
     const next = e.relatedTarget as Node | null;
-    if (next && this.wrapper.contains(next)) return;
+    if (next && next !== this.wrapper && this.wrapper.contains(next)) return;
     this.exit({restoreWrapperFocus: false});
   };
 
