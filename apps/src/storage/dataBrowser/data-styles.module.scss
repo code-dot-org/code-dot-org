@@ -86,11 +86,12 @@ $max-cell-width: 350px;
 }
 
 .input {
-  width: calc(100% - 14px);
-  height: 20px;
+  width: 100%;
+  height: 30px;
   border: 1px solid gray;
   border-radius: 5px;
   padding: 4px 6px;
+  margin-bottom: 0;
 }
 
 .buttonText {
