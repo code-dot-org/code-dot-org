@@ -28,13 +28,9 @@ class ProjectStorage::AnonymousGeoRecordingJob < ApplicationJob
     location = Geocoder.find(ip_address)
 
     project_storage.create_geo!(
-      ip_address:  ip_address,
-      country:     location&.country.presence,
-      state:       location&.state.presence,
-      city:        location&.city.presence,
-      postal_code: location&.postal_code.presence,
-      latitude:    location&.latitude&.to_f&.nonzero?,
-      longitude:   location&.longitude&.to_f&.nonzero?,
+      country: location&.country.presence,
+      state:   location&.state.presence,
+      city:    location&.city.presence,
     )
   end
 end

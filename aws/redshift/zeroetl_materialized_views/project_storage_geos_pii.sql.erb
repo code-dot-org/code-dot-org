@@ -11,13 +11,9 @@ CREATE MATERIALIZED VIEW learning_platform_<%=environment_type%>_pii.project_sto
 AS SELECT
   "id",
   "storage_id",
-  "ip_address",
   "country",
   "state",
   "city",
-  "postal_code",
-  "latitude",
-  "longitude",
   "created_at",
   "updated_at"
 FROM <%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.project_storage_geos;

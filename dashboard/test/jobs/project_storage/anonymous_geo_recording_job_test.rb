@@ -3,6 +3,8 @@
 require 'test_helper'
 
 class ProjectStorage::AnonymousGeoRecordingJobTest < ActiveJob::TestCase
+  GeocoderResultMock = Data.define(:country, :state, :city)
+
   subject(:described_class) {ProjectStorage::AnonymousGeoRecordingJob}
   subject(:described_instance) {described_class.new}
 
@@ -14,19 +16,16 @@ class ProjectStorage::AnonymousGeoRecordingJobTest < ActiveJob::TestCase
     subject(:perform_job) {described_instance.perform(project_storage_id, ip_address)}
 
     let(:project_storage_id) {project_storage.id}
-    let(:ip_address) {'203.0.113.7'}
+    let(:ip_address) {Faker::Internet.unique.public_ip_v4_address}
 
     let(:user) {nil}
     let(:project_storage) {create(:project_storage, user:)}
 
     let(:geocoder_result) do
-      OpenStruct.new(
-        country: 'US',
-        state: 'WA',
-        city: 'Seattle',
-        postal_code: '98101',
-        latitude: '47.6062',
-        longitude: '-122.3321'
+      GeocoderResultMock.new(
+        country: Faker::Address.unique.country,
+        state:   Faker::Address.unique.state,
+        city:    Faker::Address.unique.city,
       )
     end
 
@@ -35,52 +34,40 @@ class ProjectStorage::AnonymousGeoRecordingJobTest < ActiveJob::TestCase
     end
 
     it 'creates geo data for anonymous project storage' do
-      _ {perform_job}.must_change -> {project_storage.reload.geo&.ip_address}, from: nil, to: ip_address
+      _ {perform_job}.must_change -> {project_storage.reload.geo}, from: nil, to: lambda(&:present?)
 
       _(project_storage.geo.country).must_equal geocoder_result.country
       _(project_storage.geo.state).must_equal geocoder_result.state
       _(project_storage.geo.city).must_equal geocoder_result.city
-      _(project_storage.geo.postal_code).must_equal geocoder_result.postal_code
-      _(project_storage.geo.latitude).must_be_close_to geocoder_result.latitude.to_f, 0.000001
-      _(project_storage.geo.longitude).must_be_close_to geocoder_result.longitude.to_f, 0.000001
     end
 
     context 'when geocoder returns no location' do
       let(:geocoder_result) {nil}
 
       it 'creates geo data with only the ip address' do
-        _ {perform_job}.must_change -> {project_storage.reload.geo&.ip_address}, from: nil, to: ip_address
+        _ {perform_job}.must_change -> {project_storage.reload.geo}, from: nil, to: lambda(&:present?)
 
         _(project_storage.geo.country).must_be_nil
         _(project_storage.geo.state).must_be_nil
         _(project_storage.geo.city).must_be_nil
-        _(project_storage.geo.postal_code).must_be_nil
-        _(project_storage.geo.latitude).must_be_nil
-        _(project_storage.geo.longitude).must_be_nil
       end
     end
 
     context 'when geocoder returns blank location data' do
       let(:geocoder_result) do
-        OpenStruct.new(
+        GeocoderResultMock.new(
           country: '',
           state: ' ',
           city: nil,
-          postal_code: '',
-          latitude: '0',
-          longitude: 0
         )
       end
 
       it 'stores blank fields as nil' do
-        _ {perform_job}.must_change -> {project_storage.reload.geo&.ip_address}, from: nil, to: ip_address
+        _ {perform_job}.must_change -> {project_storage.reload.geo}, from: nil, to: lambda(&:present?)
 
         _(project_storage.geo.country).must_be_nil
         _(project_storage.geo.state).must_be_nil
         _(project_storage.geo.city).must_be_nil
-        _(project_storage.geo.postal_code).must_be_nil
-        _(project_storage.geo.latitude).must_be_nil
-        _(project_storage.geo.longitude).must_be_nil
       end
     end
 

@@ -1269,13 +1269,9 @@ FactoryBot.define do
   factory :project_storage_geo, class: 'ProjectStorage::Geo' do
     association :project_storage
 
-    ip_address {Faker::Internet.unique.public_ip_v4_address}
     country {Faker::Address.unique.country}
     state {Faker::Address.unique.state}
     city {Faker::Address.unique.city}
-    postal_code {Faker::Address.unique.postcode}
-    latitude {Faker::Address.unique.latitude.round(6)}
-    longitude {Faker::Address.unique.longitude.round(6)}
   end
 
   # WARNING: using this factory in new tests may cause other tests, including
