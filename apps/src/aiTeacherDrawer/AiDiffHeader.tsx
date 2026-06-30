@@ -1,11 +1,9 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import Tags from '@code-dot-org/component-library/tags';
 import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
 import {commonI18n} from '@cdo/apps/types/locale';
-import i18n from '@cdo/locale';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import style from './ai-differentiation.module.scss';
@@ -35,13 +33,6 @@ const AiDiffHeader: React.FC<AiDiffHeaderProps> = ({
           </div>
         </div>
         <span className={style.aiDiffHeaderText}>{AI_DIFF_HEADER_TEXT}</span>
-        <span>
-          <Tags
-            tagsList={[{label: i18n.experiment()}]}
-            size="s"
-            className={style.headerTag}
-          />
-        </span>
       </div>
       <div className={style.aiDiffHeaderRightSide}>
         <MuiIconButton

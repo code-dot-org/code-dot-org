@@ -38,7 +38,10 @@ export {Theme};
 // Partial definition of the UserAppOptions structure, only defining the
 // pieces we need at the moment.
 export interface PartialUserAppOptions {
-  isInstructor: boolean;
+  isInstructor?: boolean;
+  isNavigator?: boolean;
+  pairingDriver?: string;
+  pairingChannelId?: string;
 }
 
 /// ------ PROJECTS ------ ///

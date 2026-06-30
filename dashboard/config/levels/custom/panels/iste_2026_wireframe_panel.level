@@ -10,7 +10,7 @@
     "offer_browser_tts": "true",
     "panels": [
       {
-        "text": "Being a web designer means being someone with a vision. It's about knowing what you want to build - and then figuring out how to turn that idea into something real.",
+        "text": "**Structure** is the plan for how a website is put together. It helps decide what the audience sees first, how ideas are grouped, and where each part of the page belongs. A **wireframe** is like a rough draft of that structure. It shows the layout before the page has colors, fonts, or final images, so designers can focus on whether the page makes sense.",
         "imageUrl": "https://images.code.org/0d4add0b21cd8dd5adab409d7ec339a7-iste_wireframe_panel.png",
         "key": "hoai-web-design-v2-1-11300f40-e480-4236-9f18-43bbbb1f36af",
         "typing": false,
@@ -21,6 +21,6 @@
     "name_suffix": "_iste-2026",
     "use_links": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-06-22T22:15:40.253+00:00\",\"changed\":[\"cloned from \\\"iste_2026_content_panel\\\"\"],\"cloned_from\":\"iste_2026_content_panel\"},{\"changed_at\":\"2026-06-22 22:17:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-06-22T22:15:40.253+00:00\",\"changed\":[\"cloned from \\\"iste_2026_content_panel\\\"\"],\"cloned_from\":\"iste_2026_content_panel\"},{\"changed_at\":\"2026-06-22 22:17:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"},{\"changed_at\":\"2026-06-23 11:56:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22603,\"changed_by_email\":\"sam.morris+level@code.org\"}]"
 }]]></config>
 </Panels>

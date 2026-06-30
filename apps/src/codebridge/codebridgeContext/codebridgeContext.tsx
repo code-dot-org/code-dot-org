@@ -11,6 +11,7 @@ import {
   OnRunFunction,
   OnStopFunction,
   SendConsoleInputFunction,
+  SendTypedInputMessageFunction,
   CodebridgeLevelProperties,
   ProjectPickerSettings,
 } from '../types';
@@ -22,6 +23,7 @@ export type CodebridgeContextType = {
   onStop?: OnStopFunction;
   startSources: ProjectSources;
   sendConsoleInput?: SendConsoleInputFunction;
+  sendTypedInputMessage?: SendTypedInputMessageFunction;
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
   hiddenContextCallback?: () => Promise<string>;

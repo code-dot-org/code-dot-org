@@ -29,15 +29,19 @@ class LevelTest < ActiveSupport::TestCase
     end
   end
 
-  test 'with_ai_tutor_available returns levels with ai_tutor_available true' do
+  test 'with_ai_tutor_available returns levels with ai_tutor_available true or prompt settings with answer types' do
     level_true = Level.create(name: 'ai_tutor_true', properties: {'ai_tutor_available' => true})
     level_str_true = Level.create(name: 'ai_tutor_str_true', properties: {'ai_tutor_available' => 'true'})
+    level_prompt_settings = Level.create(name: 'ai_tutor_prompt_settings', properties: {'ai_tutor_prompt_settings' => {'answerTypes' => ['hint']}})
+    level_empty_prompt_settings = Level.create(name: 'ai_tutor_empty_prompt_settings', properties: {'ai_tutor_prompt_settings' => {'answerTypes' => []}})
     level_false = Level.create(name: 'ai_tutor_false', properties: {'ai_tutor_available' => false})
     level_nil = Level.create(name: 'ai_tutor_nil', properties: {})
 
     result = Level.with_ai_tutor_available
     assert_includes result, level_true
     assert_includes result, level_str_true
+    assert_includes result, level_prompt_settings
+    refute_includes result, level_empty_prompt_settings
     refute_includes result, level_false
     refute_includes result, level_nil
   end

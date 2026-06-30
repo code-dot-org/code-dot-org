@@ -327,18 +327,6 @@ describe('BackpackClientApi (jest)', () => {
       fetchChannelIdSpy.mockRestore();
     });
 
-    it('getFileList calls error callback for javalab without channel id', async () => {
-      await backpackClientApi.getFileList(errorCallback, successCallback);
-      expect(errorCallback).toHaveBeenCalledTimes(1);
-      expect(successCallback).not.toHaveBeenCalled();
-    });
-
-    it('getFileList rejects for javalab without channel id and no error callback', async () => {
-      await expect(backpackClientApi.getFileList()).rejects.toThrow(
-        'Missing backpack channel id for javalab'
-      );
-    });
-
     it('saveCodebridgeFileFromUrl calls error callback when channel id missing', async () => {
       await backpackClientApi.saveCodebridgeFileFromUrl(
         'a.txt',
@@ -369,7 +357,7 @@ describe('BackpackClientApi (jest)', () => {
     });
   });
 
-  describe('without provided channel id (non-javalab)', () => {
+  describe('without provided channel id', () => {
     beforeEach(() => {
       backpackClientApi = new BackpackClientApi('pythonlab', null);
     });

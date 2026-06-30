@@ -7,6 +7,7 @@ import {
 import {createUuid} from '@cdo/apps/utils';
 
 import {LINE_ANCHOR_SIZE_PX} from '../constants';
+import {reactFlowHandlesByNodeSelector} from '../reactFlowSelectors';
 
 import {
   endpointPatch,
@@ -192,7 +193,7 @@ export function snapEdgesIntoDraggedNode({
   radiusPx: number;
 }): void {
   const draggedNodeHandles = document.querySelectorAll<HTMLElement>(
-    `.react-flow__handle[data-nodeid="${CSS.escape(draggedNodeId)}"]`
+    reactFlowHandlesByNodeSelector(draggedNodeId)
   );
   if (draggedNodeHandles.length === 0) return;
 
@@ -239,7 +240,7 @@ export function getHandleFlowPosition(
   screenToFlowPosition: (point: XYPosition) => XYPosition
 ): XYPosition | null {
   const handles = document.querySelectorAll<HTMLElement>(
-    `.react-flow__handle[data-nodeid="${CSS.escape(nodeId)}"]`
+    reactFlowHandlesByNodeSelector(nodeId)
   );
   if (handles.length === 0) {
     return null;

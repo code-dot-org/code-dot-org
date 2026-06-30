@@ -1,10 +1,11 @@
 import Drawer from '@mui/material/Drawer';
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import FocusLock from 'react-focus-lock';
 
 import {useTeachingProfileData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
+import {fetchThreadMessages} from '@cdo/apps/aiDifferentiation/redux';
 
-import {useAppSelector} from '../util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
 import AiDiffArtifactSavePage from './AiDiffArtifactSavePage';
 import AiDiffHeader from './AiDiffHeader';
@@ -12,6 +13,7 @@ import AiDiffWorkSpace from './AiDiffWorkspace';
 import BottomNav from './BottomNav';
 import {DRAWER_WIDTH, DRAWER_WIDTH_WELCOME} from './constants';
 import HomeScreen from './HomeScreen';
+import NotificationList from './notifications/NotificationList';
 import {Context} from './types';
 import AiDiffWelcome from './welcome/AiDiffWelcome';
 
@@ -39,6 +41,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   const [activeNav, setActiveNav] = useState('Chats');
   const [showChatList, setShowChatList] = useState(false);
   const {personalizationData} = useTeachingProfileData();
+  const dispatch = useAppDispatch();
 
   const hasCompletedAiDifferentiationWelcome = useAppSelector(
     state => state.currentUser.hasCompletedAiDifferentiationWelcome
@@ -68,6 +71,22 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     mainContent.style.marginRight = chatIsOpen ? `${drawerWidth}px` : '0px';
   }, [chatIsOpen, drawerWidth]);
 
+  const onAlertPromptClick = useCallback(
+    (label: string, prompt: string) => {
+      dispatch(
+        fetchThreadMessages({
+          contextType: context.type,
+          thread: 0,
+          initialThreadPrompt: {label, prompt},
+          curriculumCourses,
+        })
+      );
+      setActiveNav('Chats');
+      setShowChatList(false);
+    },
+    [dispatch, context, curriculumCourses]
+  );
+
   let content;
   if (pendingArtifactMessage) {
     content = <AiDiffArtifactSavePage message={pendingArtifactMessage} />;
@@ -92,6 +111,8 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
           }}
         />
       );
+    } else if (activeNav === 'Alerts') {
+      content = <NotificationList aiPromptClick={onAlertPromptClick} />;
     } else {
       content = (
         <AiDiffWorkSpace
@@ -99,9 +120,9 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
           personalizationData={personalizationData}
           scriptName={scriptName}
           curriculumCourses={curriculumCourses}
-          unreadNotificationCount={unreadNotificationCount}
           showSidebar={showChatList}
           onSidebarChatSelect={() => setShowChatList(false)}
+          onViewThreads={() => setShowChatList(true)}
         />
       );
     }
@@ -133,6 +154,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
             setActiveNav(label);
             setShowChatList(label === 'Chats');
           }}
+          unreadNotificationCount={unreadNotificationCount}
         />
       </FocusLock>
     </Drawer>

@@ -3,4 +3,7 @@ class AiIterationController < ApplicationController
 
   def tools
   end
+
+  def image_safety_eval
+  end
 end

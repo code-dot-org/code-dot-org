@@ -9,6 +9,7 @@ import LevelBuilderSaveButton from './LevelBuilderSaveButton';
 import MinimalProjectHeader from './MinimalProjectHeader';
 import ProjectBackedHeader from './ProjectBackedHeader';
 import ProjectHeader from './ProjectHeader';
+import remeasureOnFontsReady from './remeasureOnFontsReady';
 
 const headerComponents = {
   [possibleHeaders.project]: ProjectHeader,
@@ -39,6 +40,13 @@ class ProjectInfo extends React.Component {
 
   componentDidMount() {
     this.setDesiredWidth();
+    this.cancelFontRemeasure = remeasureOnFontsReady(() =>
+      this.setDesiredWidth()
+    );
+  }
+
+  componentWillUnmount() {
+    this.cancelFontRemeasure?.();
   }
 
   componentDidUpdate() {

@@ -70,7 +70,7 @@
             },
             "data": {
               "text": "Use the colored circles to annotate the user \nactions and inputs the function needs.",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },

@@ -1,7 +1,7 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2026-03-20T23:46:26.000Z",
+  "created_at": "2026-04-02T18:13:20.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
@@ -101,7 +101,7 @@
             },
             "data": {
               "text": "meetsGrades (T/F)",
-              "fontColor": "#ffffff",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false
             },
@@ -120,7 +120,7 @@
             },
             "data": {
               "text": "meetsAttendance (T/F)",
-              "fontColor": "#ffffff",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false
             },
@@ -139,7 +139,7 @@
             },
             "data": {
               "text": "Outcome (Eligible for the Team?)",
-              "fontColor": "#ffffff",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -603,9 +603,9 @@
           }
         ],
         "viewport": {
-          "x": -406.1948457737726,
-          "y": 9.71410967702775,
-          "zoom": 0.7762211292058355
+          "x": -779.0998494805268,
+          "y": 1.248688658675917,
+          "zoom": 1.0588803727937481
         }
       }
     },
@@ -629,8 +629,8 @@
               "shapeType": "diamond",
               "label": "Meets \nGrade \nRequirement?",
               "backgroundColor": "var(--sketchlab-bg-yellow)",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 20
             },
             "measured": {
@@ -654,8 +654,8 @@
               "shapeType": "diamond",
               "label": "Meets \nAttendance \nRequirement?",
               "backgroundColor": "var(--sketchlab-bg-yellow)",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 20
             },
             "measured": {
@@ -679,8 +679,8 @@
               "shapeType": "diamond",
               "label": "Meets \nAttendance \nRequirement?",
               "backgroundColor": "var(--sketchlab-bg-yellow)",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 20
             },
             "measured": {
@@ -1088,6 +1088,6 @@
     "bubble_choice_description": "Decide if a student can join a team based on grade and attendance requirements."
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-20T23:46:26.277+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson9-level9c_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson9-level9c_2025\"},{\"changed_at\":\"2026-04-16 02:14:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:15:43 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:16:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:19:32 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:19:44 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:30:57 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 13:17:58 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-08 13:16:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-16 17:50:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-16 17:53:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-18 23:07:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 23:09:01 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 23:16:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-26 05:52:50 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:46:26.277+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson9-level9c_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson9-level9c_2025\"},{\"changed_at\":\"2026-04-16 02:14:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:15:43 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:16:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:19:32 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:19:44 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 02:30:57 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 13:17:58 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-08 13:16:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-16 17:50:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-16 17:53:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-18 23:07:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 23:09:01 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 23:16:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-26 05:52:50 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-24 12:45:54 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-25 10:45:20 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

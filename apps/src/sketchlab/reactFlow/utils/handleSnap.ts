@@ -5,6 +5,11 @@ import {XYPosition} from '@xyflow/react';
 
 import type {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
+import {
+  REACT_FLOW_SELECTOR,
+  reactFlowNodeTypeClass,
+} from '../reactFlowSelectors';
+
 // Builds the partial edge fields that point one side at a node+handle.
 export function endpointPatch(
   side: 'source' | 'target',
@@ -88,7 +93,9 @@ export function findNearestHandleInRadius(
   requiredType: 'source' | 'target',
   radiusPx: number
 ): SnapTarget | null {
-  const handles = document.querySelectorAll<HTMLElement>('.react-flow__handle');
+  const handles = document.querySelectorAll<HTMLElement>(
+    REACT_FLOW_SELECTOR.handle
+  );
   return findNearestHandleAmong(
     handles,
     screenPoint,
@@ -102,8 +109,8 @@ export function findNearestHandleInRadius(
       // Lines only attach to real nodes (shape/text/image), not other line's hidden anchors.
       if (
         handle
-          .closest('.react-flow__node')
-          ?.classList.contains('react-flow__node-lineAnchor')
+          .closest(REACT_FLOW_SELECTOR.node)
+          ?.classList.contains(reactFlowNodeTypeClass('lineAnchor'))
       ) {
         return null;
       }

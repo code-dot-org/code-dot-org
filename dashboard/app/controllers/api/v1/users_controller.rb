@@ -250,6 +250,24 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     }
   end
 
+  # POST /api/v1/users/teacher_onboarding_hidden
+  def post_teacher_onboarding_hidden
+    return head :unauthorized unless current_user
+
+    current_user.teacher_onboarding_hidden = !!params[:teacher_onboarding_hidden].try(:to_bool)
+    current_user.save!
+
+    head :no_content
+  end
+
+  # GET /api/v1/users/teacher_onboarding_hidden
+  def get_teacher_onboarding_hidden
+    return head :unauthorized unless current_user
+    render json: {
+      teacher_onboarding_hidden: !!current_user.teacher_onboarding_hidden
+    }
+  end
+
   # POST /api/v1/users/ai_rubrics_disabled
   def post_ai_rubrics_disabled
     return head :unauthorized unless current_user

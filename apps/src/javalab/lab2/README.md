@@ -139,7 +139,7 @@ still on the TODO list. Differences from legacy use:
 - Run button enabled at mount — Java has no client-side runtime to warm
   up, so `setLoadedCodeEnvironment(true)` dispatches in a `useEffect`.
 - Utilizes Lab2 resource panel, which gives us instructions, version history,
-  and committing a named version for free.
+  backpack, and committing a named version for free.
 - Can create/edit start sources and exemplars.
 - Validation (student run path): a level with validation files shows the
   Lab2 Validate button; clicking it runs the level's tests on Javabuilder
@@ -151,8 +151,8 @@ still on the TODO list. Differences from legacy use:
 - Support for theater (image + audio playback): a `theater` `csaViewMode`
   level renders the generated image and plays its audio in the Lab2 preview
   panel, with run / reset wired up. Shares the new `apps/src/miniApps/theater/`
-  mini-app with a Lab2 `TheaterPreview` wrapper, mirroring neighborhood. The
-  `GET_IMAGE` photo prompter is deferred (see To Dos).
+  mini-app with a Lab2 `TheaterPreview` wrapper, mirroring neighborhood. 
+  Also supports the prompter, with a button over the preview.
 - Image and audio assets (`png jpg jpeg gif wav mp3`): uploadable via the
   codebridge file browser in both student and start mode, displayed
   inline for images, stripped into `assetUrls` server-side for
@@ -161,17 +161,12 @@ still on the TODO list. Differences from legacy use:
   The level's `starter_assets` mapping is never updated by lab2
   (`add_starter_asset!` no-ops for `uses_lab2` levels); it survives as
   frozen legacy data consulted only when seeding a source that has no
-  url entries yet.
+  url entries yet. Saving start code in start mode drops the mapping
+  (`Javalab#clear_lab2_starter_assets`, called from
+  `levels_controller#update_start_code`) so assets a levelbuilder
+  deleted cannot re-seed from it.
 
 ## To Dos
-- **Theater photo prompter** — the `GET_IMAGE` signal (crosshair overlay +
-  photo upload) is stubbed with a console notice; the core theater mini-app
-  (image + audio playback) is supported.
-- **Starter assets can re-appear** In start mode only, if a level
-  was migrated from legacy to lab2, if a levelbuilder edits the start code
-  and deletes all the assets they will re-populate from the legacy starterAssets
-  field. We should clear out starterAssets post-migration.
-- **Backpack**
 - **Captcha dialog** on `AuthorizerSignalType.CAPTCHA`.
 - **Code review**.
 - **Contained levels (predict levels)** — Java Lab uses the old 'contained levels'
