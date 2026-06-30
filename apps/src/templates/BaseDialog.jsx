@@ -95,15 +95,14 @@ export default class BaseDialog extends React.Component {
     };
 
     if (this.props.fullWidth) {
-      bodyStyle = {
-        ...bodyStyle,
+      dialogStyle = {
+        ...dialogStyle,
         width: '90%',
-        marginLeft: '-45%',
       };
     }
     if (this.props.fullHeight) {
-      bodyStyle = {
-        ...bodyStyle,
+      dialogStyle = {
+        ...dialogStyle,
         height: '80%',
       };
       modalBodyStyle = {
@@ -114,7 +113,7 @@ export default class BaseDialog extends React.Component {
 
     let wrapperClassNames = '';
     let modalClassNames = 'modal dash_modal';
-    let modalBodyClassNames = 'modal-body dash_modal_body';
+    let modalBodyClassNames = 'modal-body';
     let modalDialogClassNames = 'modal-dialog';
     let modalContentClassNames = 'modal-content';
     let modalBackdropClassNames = 'modal-backdrop in';

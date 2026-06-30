@@ -1,8 +1,9 @@
 @import "color.scss";
 
-$thumbnail-size: 105px;
+$thumbnail-size: 115px;
 $thumbnail-border-width: 1px;
 $hover-plus-size: 24px;
+$thumbnail-margin-height: 10px;
 
 // Used for the width and height properties of AnimationPreview
 :export {
@@ -13,7 +14,7 @@ $hover-plus-size: 24px;
   float: left;
   width: $thumbnail-size;
   text-align: center;
-  margin: 1px 1px 10px 1px;
+  margin: 1px 1px $thumbnail-margin-height 1px;
   position: relative;
   border: 0;
   padding-right: 10px;
@@ -21,7 +22,7 @@ $hover-plus-size: 24px;
 }
 
 .thumbnail {
-  height: $thumbnail-size;
+  height: $thumbnail-size - $thumbnail-margin-height;
   width: 100%;
   border-style: solid;
   border-color: $light_gray;
@@ -39,7 +40,7 @@ $hover-plus-size: 24px;
   color: $white;
   background-color: $purple;
   border-color: $purple;
-  font-size: calc($thumbnail-size / 2);
+  font-size: calc(($thumbnail-size - $thumbnail-margin-height) / 2);
   &:hover {
     background-color: $light_purple;
     border-color: $light_purple;
