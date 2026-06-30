@@ -29,6 +29,7 @@ jest.mock('@cdo/apps/maze/locale', () => ({
   mazeNavCollectibles: ({count}: {count: number}) => `ITEMS(${count})`,
   mazeNavDirtPile: ({count}: {count: number}) => `DIRT(${count})`,
   mazeNavHole: ({count}: {count: number}) => `HOLE(${count})`,
+  mazeNavLetter: ({letter}: {letter: string}) => `LETTER(${letter})`,
   mazeNavCorn: ({count}: {count: number}) => `CORN(${count})`,
   mazeNavPumpkin: ({count}: {count: number}) => `PUMPKIN(${count})`,
   mazeNavLettuce: ({count}: {count: number}) => `LETTUCE(${count})`,
@@ -267,6 +268,51 @@ describe('maze keyboard navigation reporting', () => {
       expect(describeObject(planterCtrl(empty), 1, 1)).toBeNull();
     });
   });
+
+  describe('describeObject - wordsearch (letter read from the DOM)', () => {
+    const wordSearchCtrl = () =>
+      makeController({subtype: {isWordSearch: () => true}});
+
+    // WordSearch draws each letter into <text id="letter_<row>_<col>">.
+    const renderLetter = (row: number, col: number, text: string) => {
+      const el = document.createElement('div');
+      el.id = `letter_${row}_${col}`;
+      el.textContent = text;
+      document.body.appendChild(el);
+    };
+
+    afterEach(() => {
+      document.querySelectorAll('[id^="letter_"]').forEach(el => el.remove());
+    });
+
+    it('reports the letter rendered on a tile', () => {
+      renderLetter(1, 2, 'E');
+      expect(describeObject(wordSearchCtrl(), 2, 1)).toBe('LETTER(E)');
+    });
+
+    it('returns null for the start-square glyph', () => {
+      renderLetter(1, 2, '-');
+      expect(describeObject(wordSearchCtrl(), 2, 1)).toBeNull();
+    });
+
+    it('returns null when no letter has been rendered', () => {
+      expect(describeObject(wordSearchCtrl(), 2, 1)).toBeNull();
+    });
+
+    it('reports the letter with position via describeCell', () => {
+      renderLetter(1, 2, 'S');
+      expect(describeCell(wordSearchCtrl(), 2, 1)).toBe('LETTER(S) POS(2,3)');
+    });
+
+    it('falls back to the start label on the start square', () => {
+      renderLetter(1, 2, '-');
+      const ctrl = makeController({
+        subtype: {isWordSearch: () => true},
+        tiles: {'1,2': SquareType.START},
+      });
+      expect(describeCell(ctrl, 2, 1)).toBe('START POS(2,3)');
+    });
+  });
 });
 
 describe('MazeKeyboardNavigation interaction', () => {
@@ -304,6 +350,20 @@ describe('MazeKeyboardNavigation interaction', () => {
   const press = (key: string, target: EventTarget = wrapper) =>
     target.dispatchEvent(new KeyboardEvent('keydown', {key, bubbles: true}));
 
+  // The controller is read fresh on each navigation action, so a test can
+  // swap in a tailored map before pressing Enter.
+  const useController = (opts: Parameters<typeof makeController>[0]) => {
+    (window as unknown as {Maze: {controller: Controller}}).Maze.controller =
+      makeController(opts);
+  };
+
+  // announce() clears the live region then sets the text on a 0ms timeout;
+  // flush pending timers before reading it.
+  const liveRegionText = () => {
+    jest.runOnlyPendingTimers();
+    return wrapper.querySelector('[aria-live="polite"]')?.textContent;
+  };
+
   it('creates a focusable cursor labelled for pegman on Enter', () => {
     press('Enter');
     const cursor = focusableCursor();
@@ -323,5 +383,34 @@ describe('MazeKeyboardNavigation interaction', () => {
     expect(focusableCursor()).not.toBeNull();
     press('Escape');
     expect(focusableCursor()).toBeNull();
+  });
+
+  it('announces a wall and holds position when moving into one', () => {
+    // Wall east of pegman: tileAt(col, row) reads getTile(row, col).
+    useController({pegman: {x: 1, y: 1}, tiles: {'1,2': SquareType.WALL}});
+    press('Enter');
+    press('ArrowRight');
+    expect(liveRegionText()).toBe('WALL');
+    // Cursor stayed on pegman's cell.
+    expect(focusableCursor()?.getAttribute('aria-label')).toBe(
+      'OPEN POS(2,2) HERE'
+    );
+  });
+
+  it('announces the edge when moving out of bounds', () => {
+    useController({pegman: {x: 0, y: 0}});
+    press('Enter');
+    press('ArrowLeft');
+    expect(liveRegionText()).toBe('EDGE');
+    expect(focusableCursor()?.getAttribute('aria-label')).toBe(
+      'OPEN POS(1,1) HERE'
+    );
+  });
+
+  it('announces exit and restores focus to the wrapper on Escape', () => {
+    press('Enter');
+    press('Escape');
+    expect(liveRegionText()).toBe('EXITED');
+    expect(document.activeElement).toBe(wrapper);
   });
 });

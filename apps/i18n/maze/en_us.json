@@ -77,6 +77,7 @@
   "mazeNavHive": "Hive, {count} honey needed.",
   "mazeNavHiveUnlimited": "Hive, unlimited honey.",
   "mazeNavHole": "Hole, {count} dirt needed.",
+  "mazeNavLetter": "{letter}, letter.",
   "mazeNavLettuce": "Lettuce, {count}.",
   "mazeNavObstacle": "Obstacle.",
   "mazeNavOpenPath": "Open path.",

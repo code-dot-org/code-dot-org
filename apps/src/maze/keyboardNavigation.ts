@@ -38,6 +38,7 @@ interface MazeSubtype {
   isBee?: () => boolean;
   isCollector?: () => boolean;
   isFarmer?: () => boolean;
+  isWordSearch?: () => boolean;
   getCell?: (row: number, col: number) => MazeCell;
   // Bee-only helpers; take (row, col) and do not record user checks.
   isRedFlower?: (row: number, col: number) => boolean;
@@ -106,17 +107,39 @@ function tileAt(
   return ctrl.map.getTile(row, col);
 }
 
+// WordSearch renders one letter per cell into an SVG <text> whose id is
+// "letter_<row>_<col>"; that glyph lives only in the DOM, not the cell
+// model, so it's read straight from the document. '-' marks the start
+// square (drawn from a numeric map value), which describeCell already
+// labels, so it's reported as having no letter.
+const WORD_SEARCH_START_GLYPH = '-';
+
+function wordSearchLetterAt(row: number, col: number): string | null {
+  const text = document
+    .getElementById(`letter_${row}_${col}`)
+    ?.textContent?.trim();
+  return text && text !== WORD_SEARCH_START_GLYPH ? text : null;
+}
+
 // Describe the gameplay object occupying a cell, for the subtypes whose
 // goals are richer than reach-the-finish (bee nectar/honey, collector
-// items, farmer dirt, harvester crops, planter soil/sprout). Returns null
-// when the cell holds nothing type-specific, so describeCell falls back to
-// the plain tile description. All reads are side-effect-free.
+// items, farmer dirt, harvester crops, planter soil/sprout, wordsearch
+// letters). Returns null when the cell holds nothing type-specific, so
+// describeCell falls back to the plain tile description. All reads are
+// side-effect-free.
 export function describeObject(
   ctrl: MazeController,
   col: number,
   row: number
 ): string | null {
   const sub = ctrl.subtype;
+
+  // WordSearch reads the rendered letter from the DOM, not the cell model.
+  if (sub.isWordSearch?.()) {
+    const letter = wordSearchLetterAt(row, col);
+    return letter ? msg.mazeNavLetter({letter}) : null;
+  }
+
   const cell = sub.getCell?.(row, col);
   if (!cell) {
     return null;
