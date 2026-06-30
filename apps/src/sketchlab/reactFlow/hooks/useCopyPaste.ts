@@ -5,6 +5,7 @@ import type {
   SketchlabReactFlowEdge,
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
 import {
@@ -36,7 +37,6 @@ interface UseCopyPasteOptions {
   canvasContainerRef: React.RefObject<HTMLDivElement>;
   readOnly: boolean;
   levelName: string;
-  channelId: string;
 }
 
 // True when the paste target is a place where typing is the point — an input,
@@ -73,12 +73,12 @@ export function useCopyPaste({
   canvasContainerRef,
   readOnly,
   levelName,
-  channelId,
 }: UseCopyPasteOptions) {
   const {deleteElements, screenToFlowPosition} = useReactFlow<
     SketchlabReactFlowNode,
     SketchlabReactFlowEdge
   >();
+  const channelId = useAppSelector(state => state.lab.channel?.id) ?? '';
 
   // Keyboard clipboard. useRef holds data (no re-renders); useState tracks
   // whether anything is available so dependent UI can update.

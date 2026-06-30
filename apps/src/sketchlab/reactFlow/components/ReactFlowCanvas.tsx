@@ -21,7 +21,6 @@ import {
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
 import {
@@ -208,7 +207,6 @@ export default function ReactFlowCanvas({
   >();
   const addedNodeCountRef = useRef(0);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
-  const channelId = useAppSelector(state => state.lab.channel?.id) ?? '';
 
   const {
     isDirectAnchorDragging,
@@ -367,7 +365,6 @@ export default function ReactFlowCanvas({
     canvasContainerRef,
     readOnly,
     levelName,
-    channelId,
   });
 
   const clipboardContextValue = useMemo(

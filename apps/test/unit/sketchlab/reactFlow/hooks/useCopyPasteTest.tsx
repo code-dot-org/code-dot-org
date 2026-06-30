@@ -6,6 +6,11 @@ import {uploadImageAsset} from '@cdo/apps/sketchlab/reactFlow/utils/uploadImageA
 
 jest.mock('@cdo/apps/sketchlab/reactFlow/utils/uploadImageAsset');
 
+// The hook reads channelId from redux; stub it so no store/Provider is needed.
+jest.mock('@cdo/apps/util/reduxHooks', () => ({
+  useAppSelector: () => 'channel-1',
+}));
+
 // Stub useReactFlow so the hook runs without a mounted ReactFlow. The paste
 // path only needs screenToFlowPosition (identity here) and deleteElements.
 jest.mock('@xyflow/react', () => ({
@@ -73,7 +78,6 @@ describe('useCopyPaste paste handling', () => {
         canvasContainerRef,
         readOnly,
         levelName: 'test-level',
-        channelId: 'channel-1',
       })
     );
   }
