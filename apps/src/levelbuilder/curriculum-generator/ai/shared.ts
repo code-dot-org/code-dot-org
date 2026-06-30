@@ -13,6 +13,8 @@ export const PROMPT_TAGS = {
   WEBLAB2_EXEMPLAR: 'lesson-gen/weblab2-exemplar',
   AILAB_PLAN: 'lesson-gen/ailab-plan',
   AICHAT_PLAN: 'lesson-gen/aichat-plan',
+  MULTI_PLAN: 'lesson-gen/multi-plan',
+  MATCH_PLAN: 'lesson-gen/match-plan',
   SLIDES_OUTLINE: 'lesson-gen/slides-outline',
   SLIDE_PLAN: 'lesson-gen/slide-plan',
 } as const;

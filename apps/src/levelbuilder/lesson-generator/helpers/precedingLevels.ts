@@ -3,6 +3,7 @@ import {Panel, PanelsLevelProperties} from '@cdo/apps/panels/types';
 
 import {AichatGeneration} from '../ai/aichat';
 import {AilabGeneration} from '../ai/ailab';
+import {MatchGeneration, MultiGeneration} from '../ai/assessments';
 import {Weblab2Generation} from '../ai/weblab2';
 import {LabType} from '../types';
 
@@ -16,6 +17,8 @@ export interface PriorOutputByLab {
   weblab2: Weblab2Generation;
   ailab: AilabGeneration;
   aichat: AichatGeneration;
+  multi: MultiGeneration;
+  match: MatchGeneration;
 }
 
 // Per-spec content captured during a single Generate run, so each level we
@@ -64,6 +67,33 @@ export function priorOutputFromLevelProperties(
         startSources: startSources || {folders: {}, files: {}},
         longInstructions,
         files,
+      },
+    };
+  }
+  if (labType === 'multi' || labType === 'match') {
+    // Multi/Match are DSL-defined and rendered through legacy paths;
+    // their content lands in level_properties as parsed JSON fields
+    // (questions, answers, markdown). We only need a one-line summary
+    // for continuity context, not the full DSL — so pull the question
+    // text and correct-answer count and skip the rest.
+    const summary = formatAssessmentSummary(props, labType);
+    if (!summary) return undefined;
+    if (labType === 'multi') {
+      return {
+        multi: {
+          dslText: '',
+          summary,
+          longInstructions:
+            (props as {longInstructions?: string}).longInstructions || '',
+        },
+      };
+    }
+    return {
+      match: {
+        dslText: '',
+        summary,
+        longInstructions:
+          (props as {longInstructions?: string}).longInstructions || '',
       },
     };
   }
@@ -151,6 +181,38 @@ function tryParseJson(text: string): unknown {
   }
 }
 
+// Walk the camelCased multi/match property shape and produce a single-
+// line summary suitable for the preceding-levels block. The shape
+// matches what Match#summarize_for_lab2_properties surfaces (camelKey'd
+// `questions` / `answers` arrays, `markdown` for the body); Multi
+// extends Match and reuses the same fields plus a `correct` flag on
+// each answer.
+function formatAssessmentSummary(
+  props: LevelProperties,
+  labType: 'multi' | 'match'
+): string | null {
+  const p = props as {
+    markdown?: string;
+    questions?: {text: string}[];
+    answers?: {text: string; correct?: boolean}[];
+  };
+  const body = (p.markdown ?? p.questions?.[0]?.text ?? '').trim();
+  if (labType === 'multi') {
+    const right = p.answers?.find(a => a.correct)?.text ?? '(unknown)';
+    if (!body && !p.answers?.length) return null;
+    return `Multi — Q: ${body || '(missing question)'}; A: ${right}`;
+  }
+  const pairs = (p.questions || []).map((q, i) => ({
+    q: q.text,
+    a: p.answers?.[i]?.text ?? '',
+  }));
+  if (!pairs.length) return null;
+  return `Match (${pairs.length} pairs): ${pairs
+    .slice(0, 3)
+    .map(({q, a}) => `${q} → ${a}`)
+    .join('; ')}`;
+}
+
 // Render the running preceding-levels context as a plain-text block. Image
 // URLs and binary data are deliberately left out — only the text content
 // matters for continuity, and feeding image bytes to a text model is
@@ -193,6 +255,14 @@ export function formatPrecedingLevels(entries: PriorEntry[]): string {
           lines.push(`    ${line}`);
         }
       }
+    }
+    if (e.output?.multi || e.output?.match) {
+      // Assessment levels: just the summary line. Their content is
+      // structured Q/A data — re-feeding the full DSL back into a
+      // downstream level's prompt would either confuse the model or
+      // tempt it to copy the question.
+      const a = e.output.multi || e.output.match;
+      if (a) lines.push(`  ${a.summary}`);
     }
     if (e.output?.aichat) {
       // aichat: a one-line summary of the bot's persona. The full

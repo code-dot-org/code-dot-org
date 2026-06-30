@@ -11,6 +11,12 @@ import {useReorderableList} from '../curriculum-generator/hooks/useReorderableLi
 
 import {AICHAT_PRESETS, AichatPresetId, generateAichatLevel} from './ai/aichat';
 import {generateAilabLevel} from './ai/ailab';
+import {
+  generateMatchLevel,
+  generateMultiLevel,
+  type MatchGeneration,
+  type MultiGeneration,
+} from './ai/assessments';
 import {generateLessonOutline} from './ai/outline';
 import {generatePanelsForLevel} from './ai/panels';
 import {generateWeblab2Exemplar, generateWeblab2Level} from './ai/weblab2';
@@ -56,6 +62,8 @@ const LAB_LABELS = {
   weblab2: 'Web Lab 2',
   ailab: 'AI Lab',
   aichat: 'AI Chat',
+  multi: 'Multiple Choice',
+  match: 'Matching',
 } as const satisfies Record<LabType, string>;
 
 const DEFAULT_AICHAT_PRESET: AichatPresetId = 'explore';
@@ -339,36 +347,79 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
       let generatedOutput: PriorOutput | undefined;
 
       try {
+        // Narrow the lesson-scope context to a LevelContext for this
+        // specific level. Hoisted out of the shouldGenerate branch so
+        // the DSL-defined types (multi/match) can run their AI before
+        // createOrFindLevel — the Rails create path REQUIRES dsl_text
+        // on POST. Outer-scope fields propagate via the spread;
+        // sibling-forward (precedingLevels) is fresh per call from the
+        // running priorEntries list.
+        const levelCtx = {
+          unitName: lesson.unitName,
+          unitOutline: lesson.unitOutline,
+          lessonName: lesson.name,
+          lessonOutline: outline.trim() || undefined,
+          targetProject,
+          levelName,
+          levelDescription: spec.description.trim(),
+          precedingLevels: precedingLevelsText || undefined,
+        };
+
+        // DSL-defined types must plan their content before the create
+        // call so we can pass dsl_text on POST. For every other lab
+        // type, the dslText stays undefined and we follow the
+        // create-first-then-save path below.
+        let multiResult: MultiGeneration | undefined;
+        let matchResult: MatchGeneration | undefined;
+        let dslText: string | undefined;
+        if (shouldGenerate && spec.labType === 'multi') {
+          setStage('planning');
+          appendLog(`Planning content for "${levelName}"…`);
+          multiResult = await generateMultiLevel(levelCtx);
+          dslText = multiResult.dslText;
+        } else if (shouldGenerate && spec.labType === 'match') {
+          setStage('planning');
+          appendLog(`Planning content for "${levelName}"…`);
+          matchResult = await generateMatchLevel(levelCtx);
+          dslText = matchResult.dslText;
+        }
+
         setStage('creating');
         appendLog(
           shouldGenerate
             ? `Creating level "${levelName}"…`
             : `Skipping content generation for "${levelName}" (Generate is unchecked).`
         );
-        const level = await createOrFindLevel(spec.labType, levelName);
+        const level = await createOrFindLevel(spec.labType, levelName, dslText);
         if (level.reused && shouldGenerate && !isExisting) {
           appendLog(
             `Level "${levelName}" already exists — reusing and overwriting its content.`
           );
+          // For DSL types we PATCHed nothing on create (the existing
+          // record kept its old dsl_text). Re-write with the fresh DSL.
+          if (multiResult) {
+            await updateLevelProperty(
+              level.id,
+              'dsl_text',
+              multiResult.dslText
+            );
+          } else if (matchResult) {
+            await updateLevelProperty(
+              level.id,
+              'dsl_text',
+              matchResult.dslText
+            );
+          }
         }
 
         if (shouldGenerate) {
-          setStage('planning');
-          appendLog(`Planning content for "${levelName}"…`);
-          // Narrow the lesson-scope context to a LevelContext for this
-          // specific level. Outer-scope fields propagate via the spread;
-          // sibling-forward (precedingLevels) is fresh per call from the
-          // running priorEntries list.
-          const levelCtx = {
-            unitName: lesson.unitName,
-            unitOutline: lesson.unitOutline,
-            lessonName: lesson.name,
-            lessonOutline: outline.trim() || undefined,
-            targetProject,
-            levelName,
-            levelDescription: spec.description.trim(),
-            precedingLevels: precedingLevelsText || undefined,
-          };
+          // Multi/Match ran the planning stage above (before create);
+          // the others run it here. Either way the stage label lines up
+          // with where the AI work actually happens.
+          if (spec.labType !== 'multi' && spec.labType !== 'match') {
+            setStage('planning');
+            appendLog(`Planning content for "${levelName}"…`);
+          }
           if (spec.labType === 'panels') {
             const panels = await generatePanelsForLevel(levelCtx, {
               onPlanned: count =>
@@ -468,6 +519,32 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
               result.longInstructions
             );
             generatedOutput = {aichat: result};
+          } else if (spec.labType === 'multi' && multiResult) {
+            // The DSL was either saved as part of the create POST above
+            // (fresh level) or PATCHed in the level.reused branch right
+            // after createOrFindLevel. All that's left here is the
+            // long_instructions stub for parity with the other labs.
+            setStage('saving-properties');
+            if (multiResult.longInstructions) {
+              appendLog(`Saving instructions for "${levelName}"…`);
+              await updateLevelProperty(
+                level.id,
+                'long_instructions',
+                multiResult.longInstructions
+              );
+            }
+            generatedOutput = {multi: multiResult};
+          } else if (spec.labType === 'match' && matchResult) {
+            setStage('saving-properties');
+            if (matchResult.longInstructions) {
+              appendLog(`Saving instructions for "${levelName}"…`);
+              await updateLevelProperty(
+                level.id,
+                'long_instructions',
+                matchResult.longInstructions
+              );
+            }
+            generatedOutput = {match: matchResult};
           }
         }
 

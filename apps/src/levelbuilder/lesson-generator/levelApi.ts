@@ -18,9 +18,16 @@ export interface CreatedLevel {
 //
 // POST passes `do_not_redirect=true` so the controller returns the created
 // Level record as JSON instead of a redirect URL.
+//
+// `dslText` is required for DSL-defined lab types (Multi / Match), whose
+// create path on the Rails side parses the DSL text to extract every
+// other field — name included. Passing it on create avoids a second
+// round-trip; for the reused-existing case the caller follows up with
+// updateLevelProperty(id, 'dsl_text', ...) to overwrite.
 export async function createOrFindLevel(
   type: LabType,
-  name: string
+  name: string,
+  dslText?: string
 ): Promise<CreatedLevel> {
   const existing = await findLevelByName(type, name);
   if (existing) return {...existing, reused: true};
@@ -32,6 +39,7 @@ export async function createOrFindLevel(
         type: RAILS_TYPE_BY_LAB[type],
         name,
         published: true,
+        ...(dslText !== undefined ? {dsl_text: dslText} : {}),
       }),
       true,
       {
@@ -139,7 +147,8 @@ export type LevelProperty =
   | 'mode'
   | 'dynamic_instructions'
   | 'uses_lab2'
-  | 'aichat_settings';
+  | 'aichat_settings'
+  | 'dsl_text';
 
 export async function updateLevelProperty(
   levelId: number,

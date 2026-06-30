@@ -1,27 +1,37 @@
-import {AppName} from '@cdo/apps/lab2/types';
-
 // Lab types the AI generator supports. Add an entry here and a matching
-// generator in aiGeneration.ts to add a new lab. SUPPORTED_LAB_TYPES is
-// `readonly AppName[]`-typed so the entries are checked against the
-// canonical Lab2 lab list.
+// generator under ai/ to add a new lab. The list mixes Lab2 lab ids
+// (panels, weblab2, ailab, aichat) with the assessment types Multi and
+// Match — the latter are not Lab2-backed but the generator treats them
+// as first-class slots in the lesson activity tree.
 export const SUPPORTED_LAB_TYPES = [
   'panels',
   'weblab2',
   'ailab',
   'aichat',
-] as const satisfies readonly AppName[];
+  'multi',
+  'match',
+] as const;
 
 export type LabType = (typeof SUPPORTED_LAB_TYPES)[number];
 
-// Rails STI class name corresponding to each supported AppName. Used when
-// POSTing to /levels (the Rails create endpoint takes :type as the STI
-// name) and when filtering a search by level_type.
+// Rails STI class name corresponding to each supported lab type. Used
+// when POSTing to /levels (the Rails create endpoint takes :type as
+// the STI name) and when filtering a search by level_type.
 export const RAILS_TYPE_BY_LAB: Record<LabType, string> = {
   panels: 'Panels',
   weblab2: 'Weblab2',
   ailab: 'Ailab',
   aichat: 'Aichat',
+  multi: 'Multi',
+  match: 'Match',
 };
+
+// Lab types whose level content is a parsed DSL text file (.multi /
+// .match under dashboard/config/scripts) rather than serialized JSON
+// properties. createOrFindLevel and updateLevelProperty have a
+// dsl_text branch for these; the per-level generators render structured
+// AI output into the DSL syntax before saving.
+export const DSL_LAB_TYPES: readonly LabType[] = ['multi', 'match'];
 
 // Inverse of RAILS_TYPE_BY_LAB. ScriptLevel#summarize_for_lesson_edit
 // returns level.type as the Rails STI name; convert it to AppName at the
