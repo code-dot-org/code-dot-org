@@ -59,9 +59,10 @@ class ProjectStorage::AnonymousGeoRecordingJobTest < ActiveJob::TestCase
     context 'when geocoder returns blank location data' do
       let(:geocoder_result) do
         GeocoderResultMock.new(
-          country: '',
-          state: ' ',
-          city: nil,
+          country:     '',
+          state:       ' ',
+          city:        nil,
+          postal_code: nil,
         )
       end
 
