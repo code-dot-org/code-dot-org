@@ -108,10 +108,9 @@ export function useCopyPaste({
     const stampMarker = (event: ClipboardEvent) => {
       if (!pendingMarkerStampRef.current) return;
       pendingMarkerStampRef.current = false;
-      event.clipboardData?.setData(
-        INTERNAL_CLIPBOARD_MIME,
-        INTERNAL_CLIPBOARD_MARKER
-      );
+      const clipboardData = event.clipboardData;
+      if (!clipboardData) return;
+      clipboardData.setData(INTERNAL_CLIPBOARD_MIME, INTERNAL_CLIPBOARD_MARKER);
       event.preventDefault();
     };
     document.addEventListener('copy', stampMarker);
