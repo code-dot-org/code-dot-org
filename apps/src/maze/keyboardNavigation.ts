@@ -17,8 +17,26 @@ import * as mazeMsg from './locale';
 // source strings JSON, so missing/mistyped message keys fail typecheck.
 const msg = mazeMsg as Locale<typeof import('@cdo/i18n/maze/en_us.json')>;
 
-const {SquareType} = maze.tiles;
+const {SquareType, Direction} = maze.tiles;
 const {HarvesterCell, PlanterCell} = maze.cells;
+
+// Direction value (from maze.tiles.Direction) -> localized name accessor.
+const DIRECTION_NAME: Record<number, () => string> = {
+  [Direction.NORTH]: () => msg.mazeNavNorth(),
+  [Direction.EAST]: () => msg.mazeNavEast(),
+  [Direction.SOUTH]: () => msg.mazeNavSouth(),
+  [Direction.WEST]: () => msg.mazeNavWest(),
+};
+
+// Pegman's facing only matters where the level lets the user turn. The turn
+// block (maze_turn) is offered through the toolbox (and sometimes seeded in
+// startBlocks); absolute-movement levels (maze_moveNorth, ...) omit it.
+function usesTurns(ctrl: MazeController): boolean {
+  const {toolbox, startBlocks} = ctrl.level ?? {};
+  return [toolbox, startBlocks].some(
+    xml => typeof xml === 'string' && xml.includes('maze_turn')
+  );
+}
 
 // Cell is whatever subclass the active subtype uses (Cell, BeeCell,
 // HarvesterCell, ...). Every method below is optional because only the
@@ -55,8 +73,12 @@ interface MazeGlobal {
       COLS: number;
       getTile: (row: number, col: number) => number | undefined;
     };
+    // toolbox/startBlocks are the rendered block XML; we scan them to learn
+    // whether turning is part of this level's controls.
+    level?: {toolbox?: string; startBlocks?: string};
     getPegmanX: (id?: string) => number;
     getPegmanY: (id?: string) => number;
+    getPegmanD: (id?: string) => number | undefined;
   };
 }
 
@@ -220,6 +242,23 @@ export function describeObject(
   return null;
 }
 
+// The "character is here" clause, empty unless the cursor is on pegman.
+// On turn levels it names pegman's facing so the student can reason about
+// turnLeft/turnRight; absolute-movement levels omit it as noise.
+function describeCharacterHere(
+  ctrl: MazeController,
+  col: number,
+  row: number
+): string {
+  if (ctrl.getPegmanX() !== col || ctrl.getPegmanY() !== row) {
+    return '';
+  }
+  const name = usesTurns(ctrl) && DIRECTION_NAME[ctrl.getPegmanD() as number];
+  return name
+    ? msg.mazeNavCharacterHereFacing({direction: name()})
+    : msg.mazeNavCharacterHere();
+}
+
 export function describeCell(
   ctrl: MazeController,
   col: number,
@@ -242,10 +281,7 @@ export function describeCell(
         : msg.mazeNavOpenPath();
   }
   const position = msg.mazeNavPosition({row: row + 1, col: col + 1});
-  const here =
-    ctrl.getPegmanX() === col && ctrl.getPegmanY() === row
-      ? msg.mazeNavCharacterHere()
-      : '';
+  const here = describeCharacterHere(ctrl, col, row);
   return [primary, position, here].filter(Boolean).join(' ');
 }
 

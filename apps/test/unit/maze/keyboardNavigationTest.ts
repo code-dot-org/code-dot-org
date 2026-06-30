@@ -16,6 +16,12 @@ jest.mock('@cdo/apps/maze/locale', () => ({
   mazeNavPosition: ({row, col}: {row: number; col: number}) =>
     `POS(${row},${col})`,
   mazeNavCharacterHere: () => 'HERE',
+  mazeNavCharacterHereFacing: ({direction}: {direction: string}) =>
+    `FACING(${direction})`,
+  mazeNavNorth: () => 'north',
+  mazeNavEast: () => 'east',
+  mazeNavSouth: () => 'south',
+  mazeNavWest: () => 'west',
   mazeNavWall: () => 'WALL',
   mazeNavEdge: () => 'EDGE',
   mazeNavExited: () => 'EXITED',
@@ -38,7 +44,7 @@ jest.mock('@cdo/apps/maze/locale', () => ({
   mazeNavSprout: () => 'SPROUT',
 }));
 
-const {SquareType} = tiles;
+const {SquareType, Direction} = tiles;
 const {HarvesterCell, PlanterCell} = cells;
 
 type Controller = Parameters<typeof describeCell>[0];
@@ -46,12 +52,15 @@ type Controller = Parameters<typeof describeCell>[0];
 // Build a minimal fake controller. tiles is keyed "row,col" -> SquareType
 // (matching map.getTile(row, col)); absent entries read as OPEN. subtype is
 // merged over a bare default so each test only specifies what it needs.
+// pegman.d is the facing direction; level carries the block XML scanned to
+// decide whether the level uses turning.
 function makeController(
   opts: {
     subtype?: object;
     tiles?: Record<string, number>;
-    pegman?: {x: number; y: number};
+    pegman?: {x: number; y: number; d?: number};
     finish?: {x: number; y: number};
+    level?: {toolbox?: string; startBlocks?: string};
   } = {}
 ): Controller {
   const {
@@ -59,10 +68,12 @@ function makeController(
     tiles: tileMap = {},
     pegman = {x: -1, y: -1},
     finish,
+    level,
   } = opts;
   return {
     SQUARE_SIZE: 50,
     subtype: {finish, ...subtype},
+    level,
     map: {
       ROWS: 10,
       COLS: 10,
@@ -70,6 +81,7 @@ function makeController(
     },
     getPegmanX: () => pegman.x,
     getPegmanY: () => pegman.y,
+    getPegmanD: () => pegman.d,
   } as Controller;
 }
 
@@ -98,6 +110,52 @@ describe('maze keyboard navigation reporting', () => {
     it('appends the character-here clause when pegman is on the cell', () => {
       const ctrl = makeController({pegman: {x: 2, y: 3}});
       expect(describeCell(ctrl, 2, 3)).toBe('OPEN POS(4,3) HERE');
+    });
+  });
+
+  describe('describeCell - character facing (turn levels only)', () => {
+    const turnLevel = {
+      toolbox: '<xml><block type="maze_turn" id="turnLeft"/></xml>',
+    };
+
+    it.each([
+      [Direction.NORTH, 'FACING(north)'],
+      [Direction.EAST, 'FACING(east)'],
+      [Direction.SOUTH, 'FACING(south)'],
+      [Direction.WEST, 'FACING(west)'],
+    ])(
+      'names pegman facing when the level offers turn blocks (d=%i)',
+      (d, token) => {
+        const ctrl = makeController({
+          pegman: {x: 1, y: 1, d},
+          level: turnLevel,
+        });
+        expect(describeCell(ctrl, 1, 1)).toBe(`OPEN POS(2,2) ${token}`);
+      }
+    );
+
+    it('detects turning seeded in startBlocks', () => {
+      const ctrl = makeController({
+        pegman: {x: 1, y: 1, d: Direction.EAST},
+        level: {startBlocks: '<xml><block type="maze_turn"/></xml>'},
+      });
+      expect(describeCell(ctrl, 1, 1)).toBe('OPEN POS(2,2) FACING(east)');
+    });
+
+    it('omits facing on absolute-movement levels', () => {
+      const ctrl = makeController({
+        pegman: {x: 1, y: 1, d: Direction.NORTH},
+        level: {toolbox: '<xml><block type="maze_moveNorth"/></xml>'},
+      });
+      expect(describeCell(ctrl, 1, 1)).toBe('OPEN POS(2,2) HERE');
+    });
+
+    it('reports no character clause away from pegman on turn levels', () => {
+      const ctrl = makeController({
+        pegman: {x: 1, y: 1, d: Direction.NORTH},
+        level: turnLevel,
+      });
+      expect(describeCell(ctrl, 2, 2)).toBe('OPEN POS(3,3)');
     });
   });
 
