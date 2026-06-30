@@ -161,6 +161,7 @@ export default class BaseDialog extends React.Component {
     xCloseStyle = {
       position: 'absolute',
       top: 0,
+      zIndex: 100,
       insetInlineEnd: 0,
       padding: 0,
       color: color.neutral_dark30,
