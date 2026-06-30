@@ -1,6 +1,7 @@
 import React from 'react';
 
 import ReorderableCard from '../../curriculum-generator/components/ReorderableCard';
+import {AICHAT_PRESETS, AichatPresetId} from '../ai/aichat';
 import {LabType, LevelSpec} from '../types';
 
 import sharedStyles from '../../curriculum-generator/curriculum-generator.module.scss';
@@ -92,6 +93,27 @@ const LevelCard: React.FC<LevelCardProps> = ({
               </select>
             )}
           </div>
+          {!unsupported && spec.labType === 'aichat' && (
+            <div className={sharedStyles.cardField}>
+              <label htmlFor={`preset-${spec.key}`}>Preset</label>
+              <select
+                id={`preset-${spec.key}`}
+                value={spec.aichatPreset ?? 'explore'}
+                onChange={e =>
+                  onChange(spec.key, {
+                    aichatPreset: e.target.value as AichatPresetId,
+                  })
+                }
+                disabled={disabled}
+              >
+                {Object.values(AICHAT_PRESETS).map(preset => (
+                  <option key={preset.id} value={preset.id}>
+                    {preset.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
           {!unsupported && (
             <label className={moduleStyles.skipLabel}>
               <input

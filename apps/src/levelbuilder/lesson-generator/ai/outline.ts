@@ -12,11 +12,17 @@ import {
 } from '../../curriculum-generator/ai/shared';
 import {LabType, SUPPORTED_LAB_TYPES} from '../types';
 
+import {AICHAT_PRESET_IDS, AichatPresetId} from './aichat';
+
 // Build the labType enum from SUPPORTED_LAB_TYPES so adding a new lab is
 // a single-line change. zod's z.enum requires a non-empty tuple, so we
 // cast through the canonical list.
 const supportedLabTypeEnum = z.enum(
   SUPPORTED_LAB_TYPES as unknown as [LabType, ...LabType[]]
+);
+
+const aichatPresetEnum = z.enum(
+  AICHAT_PRESET_IDS as unknown as [AichatPresetId, ...AichatPresetId[]]
 );
 
 const lessonOutlineSchema = Output.object({
@@ -30,12 +36,17 @@ const lessonOutlineSchema = Output.object({
               'Short kebab-case identifier unique within the lesson, e.g. "intro-1" or "build-form". No prefix; that is added separately.'
             ),
           labType: supportedLabTypeEnum.describe(
-            '"panels" for narrative / explanation panels with overlay text on illustrations. "weblab2" for hands-on HTML/CSS/JS coding levels. "ailab" for guided machine-learning levels where the student picks a dataset, picks features, trains a model, and inspects the result.'
+            '"panels" for narrative / explanation panels with overlay text on illustrations. "weblab2" for hands-on HTML/CSS/JS coding levels. "ailab" for guided machine-learning levels where the student picks a dataset, picks features, trains a model, and inspects the result. "aichat" for chat-with-an-LLM levels (set `aichatPreset` to pick which preset to use).'
           ),
           description: z
             .string()
             .describe(
               'A 1-3 sentence description of what this level should teach or do. Used as the AI prompt that builds the level content.'
+            ),
+          aichatPreset: aichatPresetEnum
+            .optional()
+            .describe(
+              'For aichat levels only — pick one of: "explore" (free chat with a persona bot), "tutor" (bot guides a specific skill), "evaluation" (bot evaluates the student\'s work, possibly with an uploaded artifact), "domainExpert" (bot constrained to a single subject), or "botBuilder" (student designs their own bot). Omit for non-aichat labTypes.'
             ),
         })
       )
@@ -48,6 +59,7 @@ export interface OutlineLevel {
   id: string;
   labType: LabType;
   description: string;
+  aichatPreset?: AichatPresetId;
 }
 
 // Given the lesson's context (free-form outline plus whatever outer
@@ -79,11 +91,16 @@ export async function generateLessonOutline(
     '    picks features, trains a model, and inspects accuracy. Use this',
     '    only when the lesson is about data, machine learning, bias in',
     '    data, or model evaluation — not for general coding.',
+    '  - Aichat: a chat-with-an-LLM level. Pick a preset via aichatPreset:',
+    '    "explore" for free-form chat with a persona bot, "tutor" for a',
+    '    skill-guiding bot, "evaluation" for a bot that evaluates the',
+    '    student\'s work, "domainExpert" for a subject-constrained bot,',
+    '    "botBuilder" when the student designs their own bot.',
     '',
     'Choose Panels for explanation/narrative, Weblab2 for web-coding',
-    'practice, and Ailab for ML pipeline practice. A typical lesson',
-    'alternates: Panels intro -> practice -> Panels reflection, but you',
-    'can deviate when the outline asks.',
+    'practice, Ailab for ML pipeline practice, and Aichat for talking-to-AI',
+    'practice. A typical lesson alternates: Panels intro -> practice ->',
+    'Panels reflection, but you can deviate when the outline asks.',
     '',
     'For each level, return:',
     '  - id: a short kebab-case identifier (e.g. "intro-1", "build-form")',

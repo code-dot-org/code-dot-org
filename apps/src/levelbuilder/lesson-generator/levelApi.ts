@@ -138,7 +138,8 @@ export type LevelProperty =
   | 'panels'
   | 'mode'
   | 'dynamic_instructions'
-  | 'uses_lab2';
+  | 'uses_lab2'
+  | 'aichat_settings';
 
 export async function updateLevelProperty(
   levelId: number,

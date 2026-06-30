@@ -1,6 +1,7 @@
 import {LevelProperties, MultiFileSource} from '@cdo/apps/lab2/types';
 import {Panel, PanelsLevelProperties} from '@cdo/apps/panels/types';
 
+import {AichatGeneration} from '../ai/aichat';
 import {AilabGeneration} from '../ai/ailab';
 import {Weblab2Generation} from '../ai/weblab2';
 import {LabType} from '../types';
@@ -14,6 +15,7 @@ export interface PriorOutputByLab {
   panels: Panel[];
   weblab2: Weblab2Generation;
   ailab: AilabGeneration;
+  aichat: AichatGeneration;
 }
 
 // Per-spec content captured during a single Generate run, so each level we
@@ -62,6 +64,33 @@ export function priorOutputFromLevelProperties(
         startSources: startSources || {folders: {}, files: {}},
         longInstructions,
         files,
+      },
+    };
+  }
+  if (labType === 'aichat') {
+    // The Aichat lab stores its config as `aichat_settings` (parsed into
+    // an object by the server before reaching the client). We only need
+    // a one-line summary for continuity context, so pull the visible
+    // bits and skip the deep tree.
+    const longInstructions =
+      (props as {longInstructions?: string}).longInstructions || '';
+    const settings = (props as {aichatSettings?: unknown}).aichatSettings as
+      | {
+          initialCustomizations?: {systemPrompt?: string};
+          hidePresentationPanel?: boolean;
+          multimodalEnabled?: boolean;
+        }
+      | undefined;
+    const systemPrompt =
+      settings?.initialCustomizations?.systemPrompt?.replace(/\s+/g, ' ') || '';
+    if (!longInstructions && !systemPrompt) return undefined;
+    return {
+      aichat: {
+        longInstructions,
+        aichatSettings: settings as never, // opaque, only the summary is used downstream
+        summary: `system="${systemPrompt.slice(0, 120)}${
+          systemPrompt.length > 120 ? '…' : ''
+        }"`,
       },
     };
   }
@@ -161,6 +190,18 @@ export function formatPrecedingLevels(entries: PriorEntry[]): string {
       if (e.output.ailab.longInstructions) {
         lines.push('  Instructions:');
         for (const line of e.output.ailab.longInstructions.split('\n')) {
+          lines.push(`    ${line}`);
+        }
+      }
+    }
+    if (e.output?.aichat) {
+      // aichat: a one-line summary of the bot's persona. The full
+      // system prompt is the bot's behavior, not a thing for the next
+      // level to imitate, so we don't propagate it.
+      lines.push(`  Bot: ${e.output.aichat.summary}`);
+      if (e.output.aichat.longInstructions) {
+        lines.push('  Instructions:');
+        for (const line of e.output.aichat.longInstructions.split('\n')) {
           lines.push(`    ${line}`);
         }
       }

@@ -9,6 +9,7 @@ import {useAichatContext} from '../curriculum-generator/hooks/useAichatContext';
 import {useBeforeUnloadWhile} from '../curriculum-generator/hooks/useBeforeUnloadWhile';
 import {useReorderableList} from '../curriculum-generator/hooks/useReorderableList';
 
+import {AICHAT_PRESETS, AichatPresetId, generateAichatLevel} from './ai/aichat';
 import {generateAilabLevel} from './ai/ailab';
 import {generateLessonOutline} from './ai/outline';
 import {generatePanelsForLevel} from './ai/panels';
@@ -54,7 +55,10 @@ const LAB_LABELS = {
   panels: 'Panels',
   weblab2: 'Web Lab 2',
   ailab: 'AI Lab',
+  aichat: 'AI Chat',
 } as const satisfies Record<LabType, string>;
+
+const DEFAULT_AICHAT_PRESET: AichatPresetId = 'explore';
 
 const LAB_OPTIONS: {value: LabType; label: string}[] = SUPPORTED_LAB_TYPES.map(
   v => ({value: v, label: LAB_LABELS[v]})
@@ -177,6 +181,12 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         labType: level.labType,
         description: level.description,
         generate: true,
+        // Honour the outline AI's preset pick; for non-aichat labs the
+        // field is ignored. Default to 'explore' when the AI omits it
+        // on an aichat level so the dropdown lands on something valid.
+        ...(level.labType === 'aichat'
+          ? {aichatPreset: level.aichatPreset ?? DEFAULT_AICHAT_PRESET}
+          : {}),
       }));
       // Drop any blank brand-new rows (the default "Add level" placeholder
       // when nothing has been typed yet) before appending the AI plan, so
@@ -430,6 +440,34 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
               result.longInstructions
             );
             generatedOutput = {ailab: result};
+          } else if (spec.labType === 'aichat') {
+            // Honour the per-card preset override; fall back to the default
+            // if somehow the spec arrived without one (shouldn't happen via
+            // the outline path, but defensive against hand edits).
+            const presetId: AichatPresetId =
+              (spec.aichatPreset as AichatPresetId | undefined) &&
+              spec.aichatPreset! in AICHAT_PRESETS
+                ? (spec.aichatPreset as AichatPresetId)
+                : DEFAULT_AICHAT_PRESET;
+            const result = await generateAichatLevel(levelCtx, presetId);
+            setStage('saving-properties');
+            appendLog(`Saving AI Chat settings for "${levelName}"…`);
+            // aichat_settings is one of the JSON-string-to-object keys
+            // in the levels controller's handle_json_params allow-list,
+            // so a serialized payload lands as a nested object on the
+            // server side.
+            await updateLevelProperty(
+              level.id,
+              'aichat_settings',
+              JSON.stringify(result.aichatSettings)
+            );
+            appendLog(`Saving instructions for "${levelName}"…`);
+            await updateLevelProperty(
+              level.id,
+              'long_instructions',
+              result.longInstructions
+            );
+            generatedOutput = {aichat: result};
           }
         }
 

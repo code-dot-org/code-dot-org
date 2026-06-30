@@ -8,6 +8,7 @@ export const SUPPORTED_LAB_TYPES = [
   'panels',
   'weblab2',
   'ailab',
+  'aichat',
 ] as const satisfies readonly AppName[];
 
 export type LabType = (typeof SUPPORTED_LAB_TYPES)[number];
@@ -19,6 +20,7 @@ export const RAILS_TYPE_BY_LAB: Record<LabType, string> = {
   panels: 'Panels',
   weblab2: 'Weblab2',
   ailab: 'Ailab',
+  aichat: 'Aichat',
 };
 
 // Inverse of RAILS_TYPE_BY_LAB. ScriptLevel#summarize_for_lesson_edit
@@ -47,6 +49,10 @@ export interface LevelSpec {
   // decide whether to default `generate` on or off as the user edits.
   // Undefined means the level has never been generated.
   lastGeneratedDescription?: string;
+  // For aichat levels only: which preset to drive generation with. The
+  // outline AI suggests one; the per-card dropdown lets the curriculum
+  // author override before generation. Ignored for non-aichat labTypes.
+  aichatPreset?: string;
   // Set if this card represents a level already in the lesson. Carries the
   // information needed to put the level back in the same activity/section
   // on save while honouring the new order.
