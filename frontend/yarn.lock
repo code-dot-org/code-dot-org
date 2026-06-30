@@ -1891,6 +1891,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/e2e-tests@workspace:packages/e2e-tests"
   dependencies:
+    "@axe-core/playwright": "npm:^4.10.1"
     "@code-dot-org/lint-config": "workspace:*"
     "@playwright/test": "catalog:"
     "@types/node": "catalog:"
@@ -1946,7 +1947,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/frontend@workspace:."
   dependencies:
-    "@axe-core/playwright": "npm:^4.10.1"
     "@eslint/js": "catalog:"
     "@turbo/gen": "npm:^2.6.3"
     "@types/node": "catalog:"
