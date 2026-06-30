@@ -44,12 +44,7 @@ export default function StudioLabHost({
   // Studio owns the discriminated request params (the union that previously
   // lived inside the lab package).
   const params: LevelPropertiesRequestParams = {standaloneProjectType};
-  const {
-    data: levelPropertiesMap,
-    isError,
-    error,
-  } = useLevelProperties(api, params);
-  console.log('map', isError, error, levelPropertiesMap);
+  const {data: levelPropertiesMap} = useLevelProperties(api, params);
 
   // Standalone projects carry no level id of their own; resolve it to the first
   // key of the map, matching what the lab package did internally before.
@@ -65,8 +60,6 @@ export default function StudioLabHost({
 
   const levelProperties =
     levelId !== undefined ? levelPropertiesMap?.[levelId] : undefined;
-
-  console.log('level props', levelProperties, levelId, channelId);
 
   // Host drives the load explicitly.
   useLoadLab({
