@@ -1,6 +1,7 @@
 import React, {useCallback, useEffect, useState} from 'react';
 
 import {PersonalizationData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
+import {fetchThreadMessages} from '@cdo/apps/aiDifferentiation/redux';
 import DCDO from '@cdo/apps/dcdo';
 import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import experiments from '@cdo/apps/util/experiments';
@@ -22,6 +23,7 @@ interface AiDiffWorkSpaceProps {
   setArtifactMessageId?: (id: number) => void;
   showSidebar?: boolean;
   onSidebarChatSelect?: () => void;
+  onViewThreads?: () => void;
 }
 
 const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
@@ -31,6 +33,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   personalizationData,
   showSidebar = false,
   onSidebarChatSelect,
+  onViewThreads,
 }) => {
   const [threads, setThreads] = useState<ChatThread[]>();
 
@@ -59,6 +62,16 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
     fetchThreads();
     dispatch(asyncLoadSectionData());
   }, [fetchThreads, dispatch]);
+
+  const handleNewChat = useCallback(() => {
+    dispatch(
+      fetchThreadMessages({
+        contextType: context.type,
+        thread: 0,
+        curriculumCourses: curriculumCourses,
+      })
+    );
+  }, [dispatch, context, curriculumCourses]);
 
   const drawerIsEnabled =
     experiments.isEnabled('ai-diff-drawer') ||
@@ -91,6 +104,8 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
         context={context}
         scriptName={scriptName}
         threadFetchCallback={fetchThreads}
+        onNewChat={handleNewChat}
+        onViewThreads={onViewThreads}
         personalizationData={personalizationData}
       />
     </div>

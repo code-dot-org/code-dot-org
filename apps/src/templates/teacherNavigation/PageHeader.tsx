@@ -90,10 +90,32 @@ const PageHeader: React.FC<{urlSectionId: string}> = ({urlSectionId}) => {
     </div>
   );
 
+  const isUnitOverviewPage =
+    matchPath(
+      LABELED_TEACHER_NAVIGATION_PATHS.courseOverview.absoluteUrl,
+      location.pathname
+    ) !== null ||
+    matchPath(
+      LABELED_TEACHER_NAVIGATION_PATHS.nestedUnitOverview.absoluteUrl,
+      location.pathname
+    ) !== null ||
+    matchPath(
+      LABELED_TEACHER_NAVIGATION_PATHS.unitOverview.absoluteUrl,
+      location.pathname
+    ) !== null;
+
   return (
     <div className={styles.header}>
       {isLoadingSectionData ? skeletonSectionName : sectionName}
-      <Typography variant="h1" gutterBottom>
+      <Typography
+        variant="h1"
+        gutterBottom
+        id={
+          isUnitOverviewPage
+            ? 'unit-overview-page-header'
+            : 'teacher-navigation-page-header'
+        }
+      >
         {pathName}
       </Typography>
       {showAgeGatedStudentsBanner && (

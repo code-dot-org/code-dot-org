@@ -4,6 +4,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import ProjectUpdatedAt from './ProjectUpdatedAt';
+import remeasureOnFontsReady from './remeasureOnFontsReady';
 
 class ScriptName extends React.Component {
   static propTypes = {
@@ -31,6 +32,13 @@ class ScriptName extends React.Component {
 
   componentDidMount() {
     this.setDesiredWidth();
+    this.cancelFontRemeasure = remeasureOnFontsReady(() =>
+      this.setDesiredWidth()
+    );
+  }
+
+  componentWillUnmount() {
+    this.cancelFontRemeasure?.();
   }
 
   componentDidUpdate() {
