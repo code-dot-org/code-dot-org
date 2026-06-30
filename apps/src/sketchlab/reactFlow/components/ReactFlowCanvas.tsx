@@ -563,7 +563,10 @@ export default function ReactFlowCanvas({
     grabMode: isGrabMode,
     focusEntry,
     handleEdgeMouseDown,
-    multiSelectedNodeIds: selectionBox ? pendingSelectedIds : multiSelectedNodeIds,
+    multiSelectedNodeIds: selectionBox
+      ? pendingSelectedIds
+      : multiSelectedNodeIds,
+  });
 
   // Debounced save: sync ReactFlow state back to project sources.
   const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
