@@ -9,6 +9,9 @@ spec:
         - name: setup-db
           args:
             - cd dashboard && RAILS_ENV=adhoc RACK_ENV=adhoc bundle exec rake db:setup_or_migrate && echo 'setup-db-minimal COMPLETE'
+          env:
+            - name: AWS_EC2_METADATA_DISABLED
+              value: "true"
       securityContext:
         runAsUser: 0
         runAsGroup: 0

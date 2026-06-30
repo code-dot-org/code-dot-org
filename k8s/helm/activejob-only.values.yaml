@@ -27,3 +27,6 @@ locals.yml:
   puma_control_server_token: ""
   recaptcha_secret_key: ""
   recaptcha_site_key: ""
+
+extraEnv:
+  AWS_EC2_METADATA_DISABLED: "true"
