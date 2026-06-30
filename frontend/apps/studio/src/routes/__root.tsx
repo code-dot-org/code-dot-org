@@ -10,7 +10,12 @@ import {
   StyledEngineProvider,
   ThemeProvider,
 } from '@mui/material';
-import {createRootRoute, Outlet, useRouter} from '@tanstack/react-router';
+import {
+  createRootRoute,
+  Outlet,
+  useMatches,
+  useRouter,
+} from '@tanstack/react-router';
 import {TanStackRouterDevtools} from '@tanstack/react-router-devtools';
 import {useCallback} from 'react';
 
@@ -62,6 +67,11 @@ function RootContent() {
   const router = useRouter();
   const onRetry = useCallback(() => router.invalidate(), [router]);
 
+  // Routes opt out of the global footer via `staticData.hideFooter` (e.g. the
+  // full-bleed lab route). The match is active for the whole route, so the
+  // footer stays hidden through that route's loading and not-found states too.
+  const hideFooter = useMatches().some(match => match.staticData.hideFooter);
+
   return (
     <>
       <SiteHeader />
@@ -69,10 +79,16 @@ function RootContent() {
           the fold while a route's chunk or data loads, and doesn't jump down when
           the content arrives. Layout-level concern shared by every async route;
           the offset approximates the header height. */}
-      <Box sx={{minHeight: 'calc(100vh - 50px)'}}>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          minHeight: 'calc(100vh - 50px)',
+        }}
+      >
         {renderRouteArea(auth, onRetry)}
       </Box>
-      <StudioFooter />
+      {!hideFooter && <StudioFooter />}
       <TanStackRouterDevtools />
     </>
   );

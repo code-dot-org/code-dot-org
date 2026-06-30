@@ -10,13 +10,14 @@
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "import": "./dist/App.js",
+      "types": "./dist/App.d.ts",
+      "import": "./dist/App.mjs",
       "require": "./dist/App.cjs"
     },
     "./mocks": {
       "types": "./dist/fixtures/index.d.ts",
       "import": "./dist/fixtures/index.mjs",
-      "require": "./dist/fixtures/index.js"
+      "require": "./dist/fixtures/index.cjs"
     },
     "./components": {
       "types": "./dist/types/components/index.d.ts",

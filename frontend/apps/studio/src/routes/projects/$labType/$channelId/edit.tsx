@@ -8,6 +8,8 @@ import {getLabFixtures} from '@/modules/labs/router/getLabFixtures';
 // There is no need to manually edit this, it is done via the Tanstack Router Vite plugin
 // See: https://tanstack.com/router/latest/docs/framework/react/routing/routing-concepts#anatomy-of-a-route
 export const Route = createFileRoute('/projects/$labType/$channelId/edit')({
+  // Labs are full-bleed; suppress the global StudioFooter on this route.
+  staticData: {hideFooter: true},
   loader: async ({params: {labType, channelId}}) => {
     // Lazy load each lab's entrypoint to ensure each lab's code is only loaded when needed.
     // This causes each lab to be code-split into its own chunk.
@@ -39,10 +41,11 @@ export const Route = createFileRoute('/projects/$labType/$channelId/edit')({
 
 function RouteComponent() {
   const {LabEntrypoint} = Route.useLoaderData();
+  const {channelId} = Route.useParams();
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <LabEntrypoint />
+      <LabEntrypoint channelId={channelId} />
     </Suspense>
   );
 }

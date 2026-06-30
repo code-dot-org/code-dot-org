@@ -28,6 +28,13 @@ declare module '@tanstack/react-router' {
   interface Register {
     router: typeof router;
   }
+
+  // Per-route static metadata read by the root shell. `hideFooter` lets a
+  // route opt out of the global `StudioFooter` (e.g. the full-bleed lab route);
+  // the shell reads it from the matched routes via `useMatches`.
+  interface StaticDataRouteOption {
+    hideFooter?: boolean;
+  }
 }
 
 export default router;

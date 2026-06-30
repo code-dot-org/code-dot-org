@@ -15,7 +15,7 @@ function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
   return {
     format,
     exports: 'named',
-    entryFileNames: format === 'es' ? '[name].mjs' : '[name].js',
+    entryFileNames: format === 'es' ? '[name].mjs' : '[name].cjs',
     preserveModules: true,
     preserveModulesRoot: 'src',
   };
