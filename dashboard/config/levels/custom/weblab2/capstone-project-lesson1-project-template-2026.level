@@ -1,0 +1,92 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-06-30T20:58:08.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    Content goes here!\n  </body>\n</html>\n  ",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "Add your changes to style.css",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "Add your changes to script.js",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "capstone.md",
+          "contents": "# APP PLAN\n\n## App Idea\nWhat is your app about? What problem does it solve?\n\n\n## Audience\nWho is this app for? Why does this problem matter to them?\n\n\n## Scope\nWhat will this version of your app include?\n\n\nWhat did you intentionally leave out? Why?\n\n\n## System\nDescribe one complete user interaction:\n- User action:\n- App decision or logic:\n- Result:\n\n-------------------------------\n\n# TESTING LOG\n\nWhat we tested:\n\n\nWhat happened:\n\n\nWhat we changed or decided because of the test:\n\n\n-------------------------------\n\n# AI USE LOG\n\nWhat we asked AI to help with:\n\n\nWhat we accepted, revised, or rejected — and why:\n\n\n-------------------------------\n\n# FEEDBACK LOG\n\nWho gave us feedback (peers, teachers, users, AI tools)?\n\n\nFeedback we received:\n\n\nWhat we changed based on feedback:\n\n\nWhat we chose not to change — and why:\n\n\n\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "buildJavaScript",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-30T20:58:08.429+00:00\",\"changed\":[\"cloned from \\\"capstone-project-lesson1-project-template-test_2025-pilot_2026\\\"\"],\"cloned_from\":\"capstone-project-lesson1-project-template-test_2025-pilot_2026\"},{\"changed_at\":\"2026-06-30 20:58:12 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-30 21:42:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>
