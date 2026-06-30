@@ -26,9 +26,6 @@ const Visualization = function ({useProtectedDiv = true}) {
   }, []);
 
   const innerComponent = (
-    // Activation gate for the custom keymap inside. role=application is
-    // the right ARIA role for a widget that handles its own keys, but the
-    // jsx-a11y allowlist for tabIndex doesn't include it by default.
     <div
       ref={wrapperRef}
       // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex

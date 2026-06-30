@@ -9,12 +9,46 @@
 
 import maze from '@code-dot-org/maze';
 
+import {Locale} from '@cdo/apps/types/locale';
+
+import * as mazeMsg from './locale';
+
+// Cast the runtime locale object to a type whose keys are derived from the
+// source strings JSON, so missing/mistyped message keys fail typecheck.
+const msg = mazeMsg as Locale<typeof import('@cdo/i18n/maze/en_us.json')>;
+
 const {SquareType} = maze.tiles;
+const {HarvesterCell, PlanterCell} = maze.cells;
+
+// Cell is whatever subclass the active subtype uses (Cell, BeeCell,
+// HarvesterCell, ...). Every method below is optional because only the
+// matching subtype populates it; describeObject calls each behind the
+// relevant subtype guard. All are read-only — none mutate puzzle state.
+interface MazeCell {
+  getCurrentValue: () => number | undefined;
+  isFlower?: () => boolean; // BeeCell
+  isHive?: () => boolean; // BeeCell
+  isStaticCloud?: () => boolean; // BeeCell
+  featureName?: () => string; // HarvesterCell / PlanterCell
+  startsHidden?: () => boolean; // HarvesterCell
+}
+
+interface MazeSubtype {
+  finish?: {x: number; y: number};
+  isBee?: () => boolean;
+  isCollector?: () => boolean;
+  isFarmer?: () => boolean;
+  getCell?: (row: number, col: number) => MazeCell;
+  // Bee-only helpers; take (row, col) and do not record user checks.
+  isRedFlower?: (row: number, col: number) => boolean;
+  flowerRemainingCapacity?: (row: number, col: number) => number;
+  hiveRemainingCapacity?: (row: number, col: number) => number;
+}
 
 interface MazeGlobal {
   controller?: {
     SQUARE_SIZE: number;
-    subtype: {finish?: {x: number; y: number}};
+    subtype: MazeSubtype;
     map: {
       ROWS: number;
       COLS: number;
@@ -72,22 +106,124 @@ function tileAt(
   return ctrl.map.getTile(row, col);
 }
 
-function describeCell(ctrl: MazeController, col: number, row: number): string {
-  const tile = tileAt(ctrl, col, row);
+// Describe the gameplay object occupying a cell, for the subtypes whose
+// goals are richer than reach-the-finish (bee nectar/honey, collector
+// items, farmer dirt, harvester crops, planter soil/sprout). Returns null
+// when the cell holds nothing type-specific, so describeCell falls back to
+// the plain tile description. All reads are side-effect-free.
+export function describeObject(
+  ctrl: MazeController,
+  col: number,
+  row: number
+): string | null {
+  const sub = ctrl.subtype;
+  const cell = sub.getCell?.(row, col);
+  if (!cell) {
+    return null;
+  }
+
+  if (sub.isBee?.()) {
+    if (cell.isFlower?.()) {
+      const red = sub.isRedFlower?.(row, col);
+      const count = sub.flowerRemainingCapacity?.(row, col) ?? 0;
+      if (!Number.isFinite(count)) {
+        return red
+          ? msg.mazeNavFlowerRedUnlimited()
+          : msg.mazeNavFlowerPurpleUnlimited();
+      }
+      return red
+        ? msg.mazeNavFlowerRed({count})
+        : msg.mazeNavFlowerPurple({count});
+    }
+    if (cell.isHive?.()) {
+      const count = sub.hiveRemainingCapacity?.(row, col) ?? 0;
+      return Number.isFinite(count)
+        ? msg.mazeNavHive({count})
+        : msg.mazeNavHiveUnlimited();
+    }
+    if (cell.isStaticCloud?.()) {
+      return msg.mazeNavCloud();
+    }
+    return null;
+  }
+
+  if (sub.isCollector?.()) {
+    const count = cell.getCurrentValue();
+    return count && count > 0 ? msg.mazeNavCollectibles({count}) : null;
+  }
+
+  if (sub.isFarmer?.()) {
+    const value = cell.getCurrentValue();
+    if (value === undefined || value === 0) {
+      return null;
+    }
+    return value > 0
+      ? msg.mazeNavDirtPile({count: value})
+      : msg.mazeNavHole({count: -value});
+  }
+
+  // Harvester and Planter have no subtype predicate; discriminate by the
+  // cell subclass the subtype instantiated.
+  if (HarvesterCell && cell instanceof HarvesterCell) {
+    if (cell.startsHidden?.()) {
+      return msg.mazeNavHiddenCrop();
+    }
+    const count = cell.getCurrentValue() ?? 0;
+    switch (cell.featureName?.()) {
+      case 'corn':
+        return msg.mazeNavCorn({count});
+      case 'pumpkin':
+        return msg.mazeNavPumpkin({count});
+      case 'lettuce':
+        return msg.mazeNavLettuce({count});
+      case 'unknown':
+        return msg.mazeNavHiddenCrop();
+      default:
+        return null;
+    }
+  }
+
+  if (PlanterCell && cell instanceof PlanterCell) {
+    switch (cell.featureName?.()) {
+      case 'soil':
+        return msg.mazeNavSoil();
+      case 'sprout':
+        return msg.mazeNavSprout();
+      default:
+        return null;
+    }
+  }
+
+  return null;
+}
+
+export function describeCell(
+  ctrl: MazeController,
+  col: number,
+  row: number
+): string {
+  const object = describeObject(ctrl, col, row);
   const finish = ctrl.subtype.finish;
-  const what =
-    finish?.x === col && finish?.y === row
-      ? 'goal'
-      : tile === SquareType.OBSTACLE
-      ? 'obstacle'
-      : tile === SquareType.START
-      ? 'start'
-      : 'open path';
+  let primary: string;
+  if (object) {
+    primary = object;
+  } else if (finish?.x === col && finish?.y === row) {
+    primary = msg.mazeNavGoal();
+  } else {
+    const tile = tileAt(ctrl, col, row);
+    primary =
+      tile === SquareType.OBSTACLE
+        ? msg.mazeNavObstacle()
+        : tile === SquareType.START
+        ? msg.mazeNavStart()
+        : msg.mazeNavOpenPath();
+  }
+  const position = msg.mazeNavPosition({row: row + 1, col: col + 1});
   const here =
     ctrl.getPegmanX() === col && ctrl.getPegmanY() === row
-      ? ' Character is here.'
+      ? msg.mazeNavCharacterHere()
       : '';
-  return `${what}. Row ${row + 1}, column ${col + 1}.${here}`;
+  return [primary, position, here].filter(Boolean).join(' ');
 }
 
 function createCursorRect(
@@ -213,7 +349,6 @@ export default class MazeKeyboardNavigation {
     }
     const label = describeCell(ctrl, col, row);
     this.cursor.setAttribute('aria-label', label);
-    this.announce(label);
   }
 
   private tryMove(delta: {dx: number; dy: number}): void {
@@ -222,11 +357,11 @@ export default class MazeKeyboardNavigation {
     const nx = this.cursorPos.col + delta.dx;
     const ny = this.cursorPos.row + delta.dy;
     if (nx < 0 || nx >= ctrl.map.COLS || ny < 0 || ny >= ctrl.map.ROWS) {
-      this.announce('Edge of maze.');
+      this.announce(msg.mazeNavEdge());
       return;
     }
     if (tileAt(ctrl, nx, ny) === SquareType.WALL) {
-      this.announce('Wall.');
+      this.announce(msg.mazeNavWall());
       return;
     }
     this.cursorPos = {col: nx, row: ny};
@@ -250,7 +385,7 @@ export default class MazeKeyboardNavigation {
     halo?.remove();
     if (restoreWrapperFocus) {
       this.wrapper.focus();
-      this.announce('Exited maze navigation.');
+      this.announce(msg.mazeNavExited());
     }
   }
 }
