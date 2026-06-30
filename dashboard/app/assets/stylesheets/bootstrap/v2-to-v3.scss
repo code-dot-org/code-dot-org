@@ -161,6 +161,11 @@ td, th {
   padding: 10px 12px;
 }
 
+/* undo bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/_navbar.scss:149 */
+.navbar-static-top.header {
+  z-index: revert;
+}
+
 // Undo bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/_normalize.scss:33
 // May also want to apply to: article, aside, details, figcaption, figure,
 // footer, header, hgroup, main, menu, nav, or section.
