@@ -251,6 +251,7 @@ const ailabSlice = createSlice({
         ...initialState,
         mode: state.mode,
         reserveLocation: state.reserveLocation,
+        instructionsEnabled: state.instructionsEnabled,
       };
     },
     setTrainedModel(state, action: PayloadAction<KNN>) {

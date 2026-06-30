@@ -120,6 +120,12 @@ describe('ailab reducer', () => {
       expect(next.selectedFeatures).toEqual([]);
       expect(next.currentPanel).toBe('selectDataset');
     });
+
+    test('preserves instructionsEnabled through reset', () => {
+      const enabled = reducer(initialState, setInstructionsEnabled(true));
+      const next = reducer(enabled, resetState());
+      expect(next.instructionsEnabled).toBe(true);
+    });
   });
 
   describe('instructionsKey selection', () => {

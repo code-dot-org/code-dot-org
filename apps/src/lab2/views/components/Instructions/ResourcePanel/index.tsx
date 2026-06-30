@@ -294,6 +294,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     return {levelTours, otherAvailableTours};
   }, [levelProperties]);
 
+  const hasInstructions =
+    !!instructionsProps.dynamicInstructions ||
+    !!levelProperties.longInstructions;
+
   // When the AI tutor and a long-instructions drawer are both present, the
   // Instructions and AI Tutor tabs share one AiTutorChatWithInstructionDrawer so
   // the instructions persist across the switch.
@@ -301,7 +305,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     !!hasInstructionsDrawer &&
     aiTutorVisible &&
     !!hiddenContextCallback &&
-    !!levelProperties.longInstructions;
+    hasInstructions;
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
@@ -310,14 +314,14 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     }
     const tabMap: {[key in Tabs]?: React.ReactNode} = {};
 
-    const instructionsContent = levelProperties.longInstructions ? (
+    const instructionsContent = hasInstructions ? (
       <Instructions
         {...instructionsProps}
         hideNavigation={hideInstructionsNavigation}
       />
     ) : null;
 
-    if (levelProperties.longInstructions) {
+    if (hasInstructions) {
       tabMap[Tabs.Instructions] = instructionsContent;
     }
 
@@ -456,6 +460,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     setBackpackTabAsActive,
     backpackRefreshKey,
     onImageFlagged,
+    hasInstructions,
   ]);
 
   const hasTabs = useMemo(() => {
