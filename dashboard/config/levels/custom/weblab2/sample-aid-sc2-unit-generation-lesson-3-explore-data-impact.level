@@ -1,0 +1,32 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-06-29T17:07:04.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "require_edit_to_continue": true,
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "dd174fd0-3996-44fc-b267-f0dbf550c9c8": {
+          "id": "dd174fd0-3996-44fc-b267-f0dbf550c9c8",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>AI Training Data Experiment</title>\n    <style>\n        body {\n            font-family: sans-serif;\n            margin: 20px;\n            background-color: #f4f4f4;\n            color: #333;\n        }\n        .container {\n            max-width: 700px;\n            margin: 0 auto;\n            background-color: #fff;\n            padding: 30px;\n            border-radius: 8px;\n            box-shadow: 0 2px 10px rgba(0,0,0,0.1);\n        }\n        h1 {\n            color: #2c3e50;\n            text-align: center;\n            margin-bottom: 25px;\n        }\n        p {\n            margin-bottom: 20px;\n            line-height: 1.5;\n        }\n        label {\n            display: block;\n            margin-bottom: 8px;\n            font-weight: bold;\n        }\n        textarea {\n            width: 100%;\n            height: 150px;\n            padding: 10px;\n            border: 1px solid #ccc;\n            border-radius: 4px;\n            font-size: 16px;\n            resize: vertical;\n            box-sizing: border-box;\n            margin-bottom: 15px;\n        }\n        button {\n            display: block;\n            width: 100%;\n            padding: 12px 20px;\n            background-color: #007bff;\n            color: white;\n            border: none;\n            border-radius: 4px;\n            font-size: 18px;\n            cursor: pointer;\n            transition: background-color 0.3s ease;\n        }\n        button:hover {\n            background-color: #0056b3;\n        }\n        #output-area {\n            margin-top: 30px;\n            padding: 15px;\n            background-color: #e9ecef;\n            border: 1px solid #dee2e6;\n            border-radius: 4px;\n            min-height: 80px;\n            font-style: italic;\n            color: #555;\n            line-height: 1.6;\n        }\n        #output-area strong {\n            color: #2c3e50;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"container\">\n        <h1>AI Training Data Experiment</h1>\n        <p>This simple tool simulates how an AI uses its \"training data\" to generate new text. What you put in the box below is all it knows!</p>\n        \n        <label for=\"training-data\">Your AI's Training Data:</label>\n        <textarea id=\"training-data\">The cat sat on the mat.\nThe dog chased the ball.\nA bird flew high in the sky.\nThe sun shines brightly today.\nThe boy played outside with friends.\nFlowers bloom in spring.</textarea>\n        \n        <button onclick=\"generateText()\">Generate Text</button>\n        \n        <div id=\"output-area\">\n            <strong>Generated Text:</strong> <span id=\"generated-output\">Click 'Generate Text' to see what the AI creates!</span>\n        </div>\n    </div>\n\n    <script>\n        function generateText() {\n            const trainingDataText = document.getElementById('training-data').value;\n            const phrases = trainingDataText.split('\\n').map(phrase => phrase.trim()).filter(phrase => phrase.length > 0);\n\n            if (phrases.length === 0) {\n                document.getElementById('generated-output').textContent = \"Please add some training data first!\";\n                return;\n            }\n\n            let generatedOutput = [];\n            // Generate between 2 and 4 phrases\n            const numPhrasesToGenerate = Math.floor(Math.random() * 3) + 2;\n\n            for (let i = 0; i < numPhrasesToGenerate; i++) {\n                const randomIndex = Math.floor(Math.random() * phrases.length);\n                generatedOutput.push(phrases[randomIndex]);\n            }\n\n            document.getElementById('generated-output').textContent = generatedOutput.join(' ');\n        }\n    </script>\n</body>\n</html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "dd174fd0-3996-44fc-b267-f0dbf550c9c8"
+      ]
+    },
+    "long_instructions": "In this level, you'll explore how changing a small set of \"training data\" can directly affect what an AI-like tool generates. Imagine this data is what the AI has learned from!\r\n\r\n1.  Open `index.html` in the editor.\r\n2.  Find the `textarea` box labeled \"Your AI's Training Data\". This is the simple dataset our tool uses.\r\n3.  **Experiment:** Try adding new words or short phrases to the `textarea`. Each new line can be a new piece of data. For example, add \"The rabbit hopped fast\" or \"A flower bloomed\".\r\n4.  Click the \"Generate Text\" button and observe how the output changes. Does it use your new phrases? Does it still use old ones?\r\n5.  **Challenge:** Try removing some existing lines of data. What happens when you generate text now? Does the AI tool still \"remember\" those phrases, or are they gone?",
+    "generate_outline": "Students will interact with a simulated text generation tool. They can modify a small \"training dataset\" (e.g., add or remove specific words/phrases) and then observe how these changes directly influence the AI's generated text, demonstrating the relationship between data and output."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:07:26 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:07:26 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:08:01 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

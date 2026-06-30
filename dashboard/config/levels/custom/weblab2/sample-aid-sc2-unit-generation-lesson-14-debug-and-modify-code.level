@@ -1,0 +1,50 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-06-29T17:09:22.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "require_edit_to_continue": true,
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "5b44f1be-36c6-496d-b8df-427a92f858b5": {
+          "id": "5b44f1be-36c6-496d-b8df-427a92f858b5",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>AI Sentiment Analyzer</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n    <div class=\"container\">\n        <h1>AI Sentiment Analyzer</h1>\n        <p>Enter a word below to see how our simple AI classifies its sentiment.</p>\n        <div class=\"input-section\">\n            <input type=\"text\" id=\"wordInput\" placeholder=\"Type a word here...\">\n            <button id=\"analyzeButton\">Analyze Sentiment</button>\n        </div>\n        <div class=\"output-section\">\n            <h2>AI Analysis:</h2>\n            <p id=\"sentimentOutput\">Enter a word to start...</p>\n            <p id=\"reasonOutput\"></p>\n        </div>\n    </div>\n    <script src=\"script.js\"></script>\n</body>\n</html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        },
+        "5715867f-c3de-45cd-bf8a-6cf9076bffc1": {
+          "id": "5715867f-c3de-45cd-bf8a-6cf9076bffc1",
+          "name": "style.css",
+          "contents": "body {\n    font-family: Arial, sans-serif;\n    display: flex;\n    justify-content: center;\n    align-items: flex-start;\n    min-height: 100vh;\n    background-color: #f4f4f4;\n    margin: 0;\n    padding-top: 50px;\n}\n\n.container {\n    background-color: #fff;\n    padding: 30px;\n    border-radius: 8px;\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\n    text-align: center;\n    max-width: 500px;\n    width: 90%;\n}\n\nh1 {\n    color: #333;\n    margin-bottom: 20px;\n}\n\np {\n    color: #555;\n    line-height: 1.6;\n}\n\n.input-section {\n    margin: 25px 0;\n    display: flex;\n    justify-content: center;\n    gap: 10px;\n}\n\n#wordInput {\n    padding: 10px;\n    border: 1px solid #ddd;\n    border-radius: 4px;\n    flex-grow: 1;\n    max-width: 250px;\n}\n\n#analyzeButton {\n    padding: 10px 15px;\n    background-color: #007bff;\n    color: white;\n    border: none;\n    border-radius: 4px;\n    cursor: pointer;\n    font-size: 16px;\n}\n\n#analyzeButton:hover {\n    background-color: #0056b3;\n}\n\n.output-section {\n    margin-top: 30px;\n    padding: 20px;\n    background-color: #e9ecef;\n    border-radius: 5px;\n    text-align: left;\n}\n\n.output-section h2 {\n    color: #333;\n    margin-top: 0;\n    font-size: 1.2em;\n}\n\n.output-section p {\n    margin-bottom: 5px;\n}\n",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        },
+        "a27b7779-371d-4e72-a588-0497a0ef4e21": {
+          "id": "a27b7779-371d-4e72-a588-0497a0ef4e21",
+          "name": "script.js",
+          "contents": "document.addEventListener('DOMContentLoaded', () => {\n    const wordInput = document.getElementById('wordInput');\n    const analyzeButton = document.getElementById('analyzeButton');\n    const sentimentOutput = document.getElementById('sentimentOutput');\n    const reasonOutput = document.getElementById('reasonOutput');\n\n    analyzeButton.addEventListener('click', () => {\n        const word = wordInput.value.trim();\n        if (word === \"\") {\n            sentimentOutput.textContent = \"Please enter a word.\";\n            reasonOutput.textContent = \"\";\n            return;\n        }\n        const result = classifySentiment(word);\n        sentimentOutput.textContent = `Sentiment: ${result.sentiment}`;\n        reasonOutput.textContent = `Reason: ${result.reason}`;\n    });\n\n    // Simulate a simple AI classification model\n    function classifySentiment(word) {\n        word = word.toLowerCase();\n\n        const positiveWords = [\"happy\", \"joy\", \"great\", \"awesome\", \"good\", \"love\"];\n        const negativeWords = [\"sad\", \"bad\", \"terrible\", \"angry\", \"disappointed\", \"hate\"];\n        const neutralWords = [\"the\", \"a\", \"is\", \"it\", \"neutral\", \"ok\", \"fine\"];\n\n        if (positiveWords.includes(word)) {\n            return { sentiment: \"Positive\", reason: \"Identified as a common positive word.\" };\n        } else if (negativeWords.includes(word)) {\n            return { sentiment: \"Negative\", reason: \"Identified as a common negative word.\" };\n        } else if (neutralWords.includes(word)) {\n            return { sentiment: \"Neutral\", reason: \"Identified as a neutral or common word.\" };\n        } else if (word === \"confused\") {\n            // An example of an unexpected classification\n            return { sentiment: \"Positive\", reason: \"This word is complex; AI found a subtle positive pattern.\" };\n        } else if (word === \"excellent\") {\n            // Another example of an unexpected classification\n            return { sentiment: \"Neutral\", reason: \"AI needs more training data for strong positive synonyms.\" };\n        } else if (word === \"challenging\") {\n            // An example where the AI might misinterpret a nuanced word\n            return { sentiment: \"Positive\", reason: \"AI interprets 'challenging' as an opportunity, hence positive.\" };\n        } else {\n            return { sentiment: \"Unknown\", reason: \"Word not in training data or low confidence.\" };\n        }\n    }\n});\n",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "5b44f1be-36c6-496d-b8df-427a92f858b5",
+        "5715867f-c3de-45cd-bf8a-6cf9076bffc1",
+        "a27b7779-371d-4e72-a588-0497a0ef4e21"
+      ]
+    },
+    "long_instructions": "In the last level, you observed that our AI Sentiment Analyzer sometimes makes unexpected or incorrect classifications. Now, you'll put on your programmer hat and *debug* the program to handle these AI \"mistakes\" more gracefully!\r\n\r\n1. Open `script.js`. Remember the `classifySentiment` function? That's where our simulated AI lives, and where some of those surprising results came from. Your task is to improve how our program responds to words where the AI model struggles.\r\n2. For example, if you type \"confused\", the AI currently says it's \"Positive\". Most people would agree \"confused\" is more \"Neutral\" or even \"Negative\". Add a new `if` statement *before* the current `else if (word === \"confused\")` line to catch this specific word. Make your program output \"Neutral\" and a `reason` like: \"Program corrected AI: 'confused' is more neutral.\"\r\n3. Do the same for \"excellent\" and \"challenging\". The AI currently classifies \"excellent\" as \"Neutral\" and \"challenging\" as \"Positive\". Modify your program so it outputs \"Positive\" for \"excellent\" and \"Neutral\" or \"Negative\" for \"challenging\", providing appropriate reasons for your program's override.\r\n4. Finally, look at the `else` block that handles \"Unknown\" words. Can you make this message more helpful or user-friendly? Perhaps suggest that the AI couldn't classify it and ask the user to try another word.\r\n\r\nBy making these changes, you're building a more *robust* program that can adapt and provide better results, even when the AI it uses isn't perfect!",
+    "generate_outline": "Students will debug their program's code to improve its robustness against AI model errors. This involves implementing conditional logic, adding user feedback mechanisms, or providing alternative responses when the AI's output is uncertain or incorrect."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:09:47 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:09:47 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:09:49 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>
