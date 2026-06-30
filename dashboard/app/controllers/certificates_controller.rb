@@ -57,6 +57,7 @@ class CertificatesController < ApplicationController
 
     begin
       course_name = params[:course] ? Base64.urlsafe_decode64(params[:course]) : 'hourofcode'
+      puts "batch course_name: #{course_name}"
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       return render status: :bad_request, json: {message: 'invalid base64'}
     end
@@ -65,6 +66,7 @@ class CertificatesController < ApplicationController
     return render status: :bad_request, json: {message: "invalid course name: #{course_name.inspect}"} unless course_version
 
     course_title = course_name == 'hourofcode' ? I18n.t('certificate_hour_of_code') : course_version.localized_title
+    puts "batch course_title: #{course_title}"
 
     student_names = params[:names]&.present? || request.method == 'POST' ? params[:names] : []
 
