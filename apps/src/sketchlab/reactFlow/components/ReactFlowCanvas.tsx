@@ -378,6 +378,14 @@ export default function ReactFlowCanvas({
       const selectedIds = [...(explicitIds ?? multiSelectedNodeIds)];
       if (selectedIds.length === 0) return;
       const groupId = createUuid();
+
+      // groupSelectedNodes returns the input unchanged when the selection
+      // doesn't meet the minimum threshold (e.g. a single standalone line).
+      // Pre-check so pushSnapshot / announce / focus don't fire when no group
+      // is actually created. The updater re-runs against authoritative current
+      // state in case nodes changed between this render and the flush.
+      if (groupSelectedNodes(selectedIds, nodes, groupId) === nodes) return;
+
       pushSnapshot();
       setNodes(current => groupSelectedNodes(selectedIds, current, groupId));
       clearSelection();
@@ -387,6 +395,7 @@ export default function ReactFlowCanvas({
     },
     [
       multiSelectedNodeIds,
+      nodes,
       pushSnapshot,
       setNodes,
       clearSelection,
