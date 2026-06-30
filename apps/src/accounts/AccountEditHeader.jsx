@@ -27,7 +27,10 @@ export default function AccountEditHeader({title, backLabel}) {
           // referrer is. Only walk back when the referrer is same-origin
           // (history.back() returns to it); otherwise go home.
           const referrer = document.referrer;
-          if (referrer && referrer.indexOf(window.location.origin + '/') === 0) {
+          if (
+            referrer &&
+            referrer.indexOf(window.location.origin + '/') === 0
+          ) {
             window.history.back();
           } else {
             navigateToHref('/home');
