@@ -157,8 +157,13 @@ export interface ModelDataToSave {
   kValue: number | null;
 }
 
+export type SaveTrainedModel = (
+  dataToSave: ModelDataToSave,
+  callback: (response: SaveResponse) => void,
+) => void;
+
 export interface NavButton {
-  panel: string;
+  panel: Panel;
   text: string | undefined;
   enabled?: boolean;
 }
@@ -167,3 +172,23 @@ export interface PrevNextButtons {
   prev?: NavButton;
   next?: NavButton;
 }
+
+export type Panel =
+  | 'selectDataset'
+  | 'dataDisplayLabel'
+  | 'dataDisplayFeatures'
+  | 'trainModel'
+  | 'generateResults'
+  | 'results'
+  | 'saveModel'
+  | 'modelSummary'
+  | 'continue'
+  | 'finish';
+
+export type InstructionsKey =
+  | Panel
+  | 'uploadedDataset'
+  | 'selectedDataset'
+  | 'selectedFeatureNumerical'
+  | 'selectedFeatureCategorical'
+  | 'resultsDetails';
