@@ -39,6 +39,20 @@ class HocLegacy::TutorialsTest < ActiveSupport::TestCase
       end
     end
 
+    # The ui-test-* courses are served by a dev/test stand-in (so the HoC UI
+    # tests need no Contentful access token), ahead of the Contentful lookup.
+    context 'for a ui-test course' do
+      let(:tutorial_code) {'ui-test-artist'}
+
+      it 'serves the stand-in entry without querying Contentful' do
+        expect(CdoContentful::CsForAll::Entry::Tutorial).not_to receive(:find_each)
+
+        _(get_tutorial.tutorial_id).must_equal 'ui-test-artist'
+        _(get_tutorial.primary_link_ref.fields[:primary_target]).
+          must_equal CDO.studio_url('/s/ui-test-artist/reset')
+      end
+    end
+
     context 'when Tutorial entry is invalid' do
       let(:error) {StandardError.new('Invalid Tutorial entry')}
 
