@@ -3,13 +3,13 @@
 @import '@code-dot-org/component-library-styles/typography.module';
 
 @mixin link-style {
-  color: $light_black;
+  color: var(--text-neutral-primary);
   text-decoration: underline;
   font-weight: 500;
 }
 
 body {
-  background-color: $light_gray_50 !important;
+  background-color: var(--background-neutral-secondary) !important;
 }
 
 main.wrapper {
@@ -64,7 +64,7 @@ span:not(:global(.MuiButton-icon)) {
 
 .errorMessage {
   margin-top: 0.4375rem;
-  color: $light_negative_500;
+  color: var(--text-error-primary);
 }
 
 // Login Type Selection page
@@ -86,11 +86,11 @@ span:not(:global(.MuiButton-icon)) {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    background-color: $white;
+    background-color: var(--background-neutral-primary);
     padding: 30px;
     gap: 16px;
     border-radius: $regular-border-radius;
-    border: 1px solid $light_gray_200;
+    border: 1px solid var(--borders-neutral-primary);
     margin-bottom: 1rem;
     box-sizing: border-box;
     max-width: 970px;
@@ -113,7 +113,7 @@ span:not(:global(.MuiButton-icon)) {
     .verticalDividerTop,
     .verticalDividerBottom {
       width: 1px;
-      background-color: $light_gray_200;
+      background-color: var(--background-neutral-quaternary);
       height: 50%;
     }
 
@@ -204,15 +204,15 @@ span:not(:global(.MuiButton-icon)) {
       }
 
       .teal {
-        color: $teal;
+        color: var(--text-brand-teal-primary);
       }
 
       .lightGray {
-        color: $light_gray_500;
+        color: var(--text-neutral-placeholder);
       }
 
       .red {
-        color: $light_negative_500;
+        color: var(--text-error-primary);
       }
 
       p {
@@ -272,7 +272,7 @@ span:not(:global(.MuiButton-icon)) {
 
     .greyTextbox {
       margin-top: 1rem;
-      background-color: $light_gray_50;
+      background-color: var(--background-neutral-secondary);
       padding: 1rem;
       border-radius: $regular-border-radius;
       box-sizing: border-box;
@@ -299,8 +299,8 @@ span:not(:global(.MuiButton-icon)) {
         img {
           height: 20px;
           padding: 0.5rem;
-          background: $light_white;
-          border: 1px solid $light_gray_200;
+          background: var(--background-neutral-primary);
+          border: 1px solid var(--borders-neutral-primary);
           border-radius: $regular-border-radius;
         }
       }
@@ -322,23 +322,22 @@ span:not(:global(.MuiButton-icon)) {
         float: right;
         margin: 0.625rem 0 0.5rem 0.5rem;
         font-size: 1rem;
-        color: $light_gray_400;
+        color: var(--text-neutral-placeholder);
       }
 
       span {
         font-weight: 600;
         font-size: 0.875rem;
-        color: $black;
+        color: var(--text-neutral-primary);
       }
 
-      a {
-        border-color: $light_gray_400;
+      a,
+      :global(.MuiButton-root) {
+        border-color: var(--borders-neutral-strong);
         box-shadow: none;
         margin: 0.5rem 0.5rem 0 0;
         padding-inline: 14px;
         height: 37px;
-        display: flex;
-        align-items: center;
         transition: all 0.2s ease-in-out;
       }
     }
@@ -394,7 +393,7 @@ span:not(:global(.MuiButton-icon)) {
 
     i {
       font-size: 1.375rem;
-      color: $light_gray_400;
+      color: var(--text-neutral-placeholder);
       margin-bottom: 0.5rem;
     }
 
@@ -412,12 +411,12 @@ span:not(:global(.MuiButton-icon)) {
       margin: unset !important;
       padding: unset !important;
       background: none;
-      color: $light_gray_800;
+      color: var(--text-neutral-tertiary);
       text-decoration: underline !important;
       transition: all 0.2s ease-in-out;
 
       &:hover {
-        color: $light_black;
+        color: var(--text-neutral-primary);
         background: none;
       }
 
@@ -434,7 +433,7 @@ span:not(:global(.MuiButton-icon)) {
   flex-direction: column;
 
   .contentWrapper {
-    border-block: 1px solid $light_gray_200;
+    border-block: 1px solid var(--borders-neutral-primary);
     padding-block: 1rem;
     margin-bottom: 1.25rem;
 
@@ -464,9 +463,9 @@ span:not(:global(.MuiButton-icon)) {
   margin: 4rem 4rem 1rem 4rem;
   padding: 30px;
   text-align: center;
-  background-color: $light_white;
+  background-color: var(--background-neutral-primary);
   border-radius: $regular-border-radius;
-  border: 1px solid $light_gray_200 !important;
+  border: 1px solid var(--borders-neutral-primary) !important;
 
   .headerTextContainer {
     margin-bottom: 30px;
@@ -525,7 +524,7 @@ span:not(:global(.MuiButton-icon)) {
 
         :focus {
           outline-style: solid;
-          outline-color: var(--brand-teal-50);
+          outline-color: var(--borders-brand-teal-primary);
           outline-width: 2px;
           outline-offset: 2px;
           border-radius: $regular-border-radius;
@@ -620,13 +619,13 @@ span:not(:global(.MuiButton-icon)) {
   display: flex;
   flex-direction: column;
   gap: 1.125rem;
-  background-color: $light_gray_50;
+  background-color: var(--background-neutral-secondary);
   padding: 1.125rem;
   border-radius: $regular-border-radius;
-  border: 1px solid $light_gray_200;
+  border: 1px solid var(--borders-neutral-primary);
 
   i {
-    background-color: $light_white;
+    background-color: var(--background-neutral-primary);
   }
 }
 
@@ -656,7 +655,7 @@ span:not(:global(.MuiButton-icon)) {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: $light_negative_100;
+  background-color: var(--background-error-extra-light);
   border-radius: $regular-border-radius;
   padding: 0.625rem 0.75rem;
   margin-bottom: 1.125rem;
@@ -668,7 +667,7 @@ span:not(:global(.MuiButton-icon)) {
     gap: 0.625rem;
 
     .xIcon {
-      color: $light_negative_500;
+      color: var(--text-error-primary);
       font-size: 0.875rem;
     }
 
@@ -676,7 +675,7 @@ span:not(:global(.MuiButton-icon)) {
       margin-top: 2px;
 
       a {
-        color: $light_black;
+        color: var(--text-neutral-primary);
       }
     }
   }

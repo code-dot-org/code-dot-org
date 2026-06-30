@@ -5,7 +5,6 @@ import cookies from 'js-cookie';
 import React, {useState, useEffect} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import OldButton from '@cdo/apps/legacySharedComponents/Button';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -366,26 +365,32 @@ const LoginTypeSelection: React.FunctionComponent<{
             </Typography>
             {isTeacher && (
               <div className={style.buttonContainer}>
-                <OldButton
+                <MuiButton
                   href="https://support.code.org/hc/en-us/articles/24825250283021-Single-Sign-On-with-Canvas"
                   onClick={sendLMSAnalyticsEvent}
-                  color={OldButton.ButtonColor.white}
-                  text={'Canvas'}
-                  icon={'arrow-up-right-from-square'}
-                  __useDeprecatedTag
+                  variant="outlined"
+                  color="secondary"
+                  size="small"
+                  startIcon={<img src={canvas} alt="" />}
+                  endIcon={
+                    <FontAwesomeV6Icon iconName="arrow-up-right-from-square" />
+                  }
                 >
-                  <img src={canvas} alt="" />
-                </OldButton>
-                <OldButton
+                  Canvas
+                </MuiButton>
+                <MuiButton
                   href="https://support.code.org/hc/en-us/articles/26677769411085-Single-Sign-On-with-Schoology"
                   onClick={sendLMSAnalyticsEvent}
-                  color={OldButton.ButtonColor.white}
-                  text={'Schoology'}
-                  icon={'arrow-up-right-from-square'}
-                  __useDeprecatedTag
+                  variant="outlined"
+                  color="secondary"
+                  size="small"
+                  startIcon={<img src={schoology} alt="" />}
+                  endIcon={
+                    <FontAwesomeV6Icon iconName="arrow-up-right-from-square" />
+                  }
                 >
-                  <img src={schoology} alt="" />
-                </OldButton>
+                  Schoology
+                </MuiButton>
               </div>
             )}
           </div>
