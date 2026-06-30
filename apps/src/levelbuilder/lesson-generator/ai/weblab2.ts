@@ -18,7 +18,13 @@ const weblabPlanSchema = Output.object({
     longInstructions: z
       .string()
       .describe(
-        'Student-facing instructions for the level, in markdown. Tell the student what to do — what they should change, add, or build on top of the starter code. 2-5 short paragraphs or a numbered list. No headings above ## level.'
+        'STUB ONLY. A short, terse outline that the curriculum author will ' +
+          'flesh out into real prose later. Render as a markdown bullet ' +
+          'list of 4-8 items (use `- TODO:` prefixes), naming the files the ' +
+          'student will touch and the moves they need to make — what to ' +
+          'open, what to change, what to add, what success looks like. Do ' +
+          'NOT write polished student-facing copy; this is scaffolding. No ' +
+          'headings, no paragraphs.'
       ),
     files: z
       .array(
@@ -52,8 +58,9 @@ export interface Weblab2Generation {
 
 // Web Lab 2 stores its starter sources as a MultiFileSource, the same
 // structure produced by prepareSourceForLevelbuilderSave in the codebridge
-// editor. Alongside the starter files we ask the model for student-facing
-// instructions (the level's `long_instructions` markdown field).
+// editor. Alongside the starter files we produce a bullet-stub outline of
+// the level's `long_instructions` — the curriculum author writes the final
+// student-facing prose by hand later.
 export async function generateWeblab2Level(
   ctx: LevelContext
 ): Promise<Weblab2Generation> {
@@ -63,9 +70,11 @@ export async function generateWeblab2Level(
     'middle-school student unless the description below names a different',
     'grade band or audience, in which case follow it. Based on the',
     'description below, produce two things:',
-    '  1. Student-facing instructions in markdown that tell the student',
-    '     what to do in this level. Reference the file names you create',
-    '     so the student knows where to look. Keep it tight.',
+    '  1. A STUB outline for the student-facing instructions. Render as a',
+    '     terse markdown bullet list of 4-8 items prefixed `- TODO:`. Name',
+    '     the files the student will touch and the moves they need to',
+    '     make. Do NOT write polished student-facing copy — the curriculum',
+    '     author will write that by hand later. No headings, no paragraphs.',
     '  2. Starter files (HTML / CSS / JS) the student will edit. Always',
     '     include an index.html. Keep total content under a few kilobytes',
     '     per file. Do not include external script or stylesheet links —',
