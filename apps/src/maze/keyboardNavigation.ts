@@ -28,9 +28,8 @@ const DIRECTION_NAME: Record<number, () => string> = {
   [Direction.WEST]: () => msg.mazeNavWest(),
 };
 
-// Pegman's facing only matters where the level lets the user turn. The turn
-// block (maze_turn) is offered through the toolbox (and sometimes seeded in
-// startBlocks); absolute-movement levels (maze_moveNorth, ...) omit it.
+// Returns whether the level requires "turn right/left" movement
+// to enable reporting of the direction the character is facing.
 function usesTurns(ctrl: MazeController): boolean {
   const {toolbox, startBlocks} = ctrl.level ?? {};
   return [toolbox, startBlocks].some(
@@ -119,8 +118,6 @@ function getMazeController(): MazeController | undefined {
   return (window as unknown as {Maze?: MazeGlobal}).Maze?.controller;
 }
 
-// map.getTile internally indexes grid_[firstArg][secondArg], where the
-// first arg is the row. Pegman/finish use (x=col, y=row). Wrap once.
 function tileAt(
   ctrl: MazeController,
   col: number,
@@ -156,7 +153,6 @@ export function describeObject(
 ): string | null {
   const sub = ctrl.subtype;
 
-  // WordSearch reads the rendered letter from the DOM, not the cell model.
   if (sub.isWordSearch?.()) {
     const letter = wordSearchLetterAt(row, col);
     return letter ? msg.mazeNavLetter({letter}) : null;
@@ -283,9 +279,6 @@ export function describeCell(
   }
   const position = msg.mazeNavPosition({row: row + 1, col: col + 1});
   const here = describeCharacterHere(ctrl, col, row);
-  // Position is announced last on every cell, after the object/tile label
-  // and the (usually absent) character clause: e.g. "Start. Character is
-  // here, facing north. Row 1, column 1."
   return [primary, here, position].filter(Boolean).join(' ');
 }
 
