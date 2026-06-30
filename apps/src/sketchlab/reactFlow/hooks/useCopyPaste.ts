@@ -41,7 +41,7 @@ interface UseCopyPasteOptions {
 
 // True when the paste target is a place where typing is the point — an input,
 // textarea, or contentEditable (e.g. a TextNode editor). There we let the
-// browser do its normal text paste instead of dropping an image node.
+// browser do its normal text paste.
 function isTargetEditable(target: HTMLElement): boolean {
   return (
     target.isContentEditable ||
@@ -101,22 +101,14 @@ export function useCopyPaste({
     clipboardRef.current = contents;
     setHasClipboard(true);
     // Flag the imminent native copy/cut event to stamp our marker onto the
-    // system clipboard. We do it there (not here) because clipboardData.setData
-    // is synchronous and reliable, unlike navigator.clipboard.writeText which
-    // is async, permission-gated, and frequently a no-op. The flag is cleared on
-    // a timeout in case the copy/cut event never fires, so it can't leak into an
-    // unrelated later copy.
+    // system clipboard.
     pendingMarkerStampRef.current = true;
-    setTimeout(() => {
-      pendingMarkerStampRef.current = false;
-    }, 0);
   }, []);
 
   // Stamp the system clipboard with our marker on the native copy/cut event that
   // follows an in-app copy/cut. Its presence lets the paste handler know the
-  // in-app copy is the most recent clipboard action and paste the element rather
-  // than a stale clipboard image; an external image copy replaces the whole
-  // clipboard, wiping the marker, which restores image paste.
+  // in-app copy is the most recent clipboard action; an external copy
+  // replaces the whole clipboard, wiping the marker, which restores paste.
   useEffect(() => {
     const stampMarker = (event: ClipboardEvent) => {
       if (!pendingMarkerStampRef.current) return;
@@ -133,8 +125,7 @@ export function useCopyPaste({
   }, []);
 
   // Drop a clipboard-pasted image onto the canvas as an ImageNode. Positioned
-  // top-left at the cursor when it's over the canvas (matching the internal
-  // element paste), else centered in the viewport.
+  // top-left at the cursor when it's over the canvas, else centered in the viewport.
   const pasteImage = useCallback(
     (src: string) => {
       const mousePos = mousePositionRef.current;
@@ -420,10 +411,11 @@ export function useCopyPaste({
     mousePositionRef.current = null;
   }, []);
 
-  // Native paste while the canvas is focused: drop a clipboard image as an
-  // ImageNode at the cursor, otherwise fall back to the internal element paste.
-  // When our marker is present, the most recent clipboard action was an in-app
-  // copy, so paste the copied element even if a stale image also lingers.
+  // Native paste while the canvas is focused, with the following precedence:
+  // - If we are over an editable element use native paste (allowing copy/paste of text).
+  // - If the last clipboard action was an in-app copy, paste the copied element.
+  // - If there is a clipboard image, paste it as an ImageNode.
+  // - Otherwise, fall back to internal element paste.
   useEffect(() => {
     const handlePaste = async (event: ClipboardEvent) => {
       if (readOnly) return;
@@ -432,6 +424,7 @@ export function useCopyPaste({
       const target = event.target as HTMLElement | null;
       if (target && isTargetEditable(target)) return;
 
+      event.preventDefault();
       const clipboardText = event.clipboardData?.getData('text/plain') ?? '';
       const internalCopyIsLatest = clipboardText === INTERNAL_CLIPBOARD_MARKER;
       const items = event.clipboardData?.items;
@@ -441,12 +434,10 @@ export function useCopyPaste({
           : undefined;
 
       if (!imageItem) {
-        event.preventDefault();
         paste();
         return;
       }
 
-      event.preventDefault();
       const file = imageItem.getAsFile();
       if (!file) return;
       try {

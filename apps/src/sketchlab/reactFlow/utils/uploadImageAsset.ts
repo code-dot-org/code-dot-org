@@ -7,7 +7,7 @@ import {createUuid} from '@cdo/apps/utils';
 
 import {ASSET_PATH_PREFIX} from '../constants';
 
-// Pull a file extension from the name, falling back to the MIME subtype so
+// Pull a file extension from the name, falling back to the MIME subtype or png so
 // clipboard blobs (which usually have no filename) still upload sensibly.
 function extensionFor(file: File): string {
   const fromName = file.name.includes('.')
