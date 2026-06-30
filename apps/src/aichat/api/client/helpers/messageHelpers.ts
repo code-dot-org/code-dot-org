@@ -2,8 +2,22 @@ import {type FilePart, type ModelMessage, type TextPart} from 'ai';
 
 import {ChatAsset, ChatMessage, ModelParameters} from '@cdo/apps/aichat/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {ValueOf} from '@cdo/apps/types/utils';
+import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 import {assetToFilePart} from './fileHelpers';
+
+/**
+ * Default system prompts applied per model, prepended to the level- and
+ * student-authored prompts. A model without an entry here contributes no
+ * default prompt.
+ */
+const MODEL_SYSTEM_PROMPTS: Partial<
+  Record<ValueOf<typeof AiChatModelIds>, string>
+> = {
+  [AiChatModelIds.GEMINI_2_5_FLASH_IMAGE]:
+    'Only generate images that are appropriate for a middle schooler to see.',
+};
 
 /**
  * Converts a {@link ChatMessage} to an AI SDK-specific {@link ModelMessage}.
@@ -33,6 +47,7 @@ export function formatSystemMessages(
   levelSystemPrompt?: string
 ): ModelMessage[] {
   return [
+    MODEL_SYSTEM_PROMPTS[modelParameters.selectedModelId],
     levelSystemPrompt,
     modelParameters.systemPrompt,
     ...modelParameters.retrievalContexts,

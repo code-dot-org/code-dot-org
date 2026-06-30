@@ -13,6 +13,7 @@ import {
 } from '@cdo/generated-scripts/sharedConstants';
 
 import AichatContextManager from '../aichatContextManager';
+import {formatSystemMessages} from '../api/client/helpers/messageHelpers';
 import {getModel} from '../api/client/helpers/modelHelpers';
 import {isTextSafe} from '../api/client/helpers/safetyHelpers';
 
@@ -156,10 +157,23 @@ export async function evaluatePrompt(
 
     // Gate 2: image generation.
     currentGate = EvalGate.GENERATION;
+    // Assemble system messages exactly as production does, so the eval
+    // exercises the model-level default prompt and stays in sync with any
+    // future changes to it. Level/student prompts are intentionally empty:
+    // this measures the floor — the hardcoded model default on its own.
+    const systemMessages = formatSystemMessages({
+      selectedModelId: AiChatModelIds.GEMINI_2_5_FLASH_IMAGE,
+      systemPrompt: '',
+      retrievalContexts: [],
+      temperature: 0, // Unused by formatSystemMessages; required by the type.
+    });
     const {text, files, finishReason} = await throttled(() =>
       generateText({
         model: getModel(AiChatModelIds.GEMINI_2_5_FLASH_IMAGE),
-        messages: [{role: 'user', content: item.prompt}] as ModelMessage[],
+        messages: [
+          ...systemMessages,
+          {role: 'user', content: item.prompt},
+        ] as ModelMessage[],
         ...(options.temperature !== undefined
           ? {temperature: options.temperature}
           : {}),
