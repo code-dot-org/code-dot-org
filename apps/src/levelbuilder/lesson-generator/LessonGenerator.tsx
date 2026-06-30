@@ -318,41 +318,44 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     }
     const templates = new Map<string, ResolvedTemplate>();
     const templateLevelsCreated: GenerationSummary['created'] = [];
+
+    // Count members per group regardless of `generate` or `existing`: the
+    // group is defined by the lesson's full set of weblab2 cards carrying
+    // that templateGroup id. Groups of one are a no-op (the single member
+    // takes the standalone path).
     const groupCounts = new Map<string, number>();
     for (const spec of levelSpecs) {
-      if (
-        spec.labType === 'weblab2' &&
-        spec.generate &&
-        !spec.existing &&
-        spec.templateGroup?.trim()
-      ) {
+      if (spec.labType === 'weblab2' && spec.templateGroup?.trim()) {
         const groupId = spec.templateGroup.trim();
         groupCounts.set(groupId, (groupCounts.get(groupId) ?? 0) + 1);
       }
     }
+    // Trigger condition: at least one member of the group is being
+    // generated this run (whether brand-new or a regenerated existing
+    // level). Regenerating any group member rebuilds the shared template
+    // so a previously-failed template generation can be re-tried, and so
+    // the template stays in sync with edited member descriptions.
+    const groupsToGenerate = new Set<string>();
     for (const spec of levelSpecs) {
+      const groupId = spec.templateGroup?.trim();
       if (
-        spec.labType !== 'weblab2' ||
-        !spec.generate ||
-        spec.existing ||
-        !spec.templateGroup?.trim()
+        spec.labType === 'weblab2' &&
+        spec.generate &&
+        groupId &&
+        (groupCounts.get(groupId) ?? 0) >= 2
       ) {
-        continue;
+        groupsToGenerate.add(groupId);
       }
-      const groupId = spec.templateGroup.trim();
-      // A group of one is a no-op: the member can just generate its own
-      // starter sources via the standalone path.
-      if ((groupCounts.get(groupId) ?? 0) < 2) continue;
-      if (templates.has(groupId)) continue;
+    }
 
+    for (const groupId of groupsToGenerate) {
       const templateName = fullName(`template-${groupId}`);
+      // Feed the prompt every member of the group so the template
+      // scaffolds for all of them, not just the ones being regenerated
+      // this run.
       const members = levelSpecs
         .filter(
-          s =>
-            s.labType === 'weblab2' &&
-            s.generate &&
-            !s.existing &&
-            s.templateGroup?.trim() === groupId
+          s => s.labType === 'weblab2' && s.templateGroup?.trim() === groupId
         )
         .map(s => ({
           name: fullName(s.id.trim()),
