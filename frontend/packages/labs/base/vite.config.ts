@@ -34,6 +34,13 @@ export default defineConfig({
     // and wrongly overrides the lab. (A `@layer`-based scheme would make this
     // order-independent; this is the lighter-weight ordering fix.)
     cssInjectedByJsPlugin({
+      // `relativeCSSInjection: true` is required for this `preserveModules` +
+      // multi-entry library build. The plugin's default global mode concatenates
+      // ALL css onto a single entry chunk, and with multiple entries it picks the
+      // LAST one (`src/interpreter/index.ts`), leaving the `.` export (index.mjs,
+      // which consumers load via `@code-dot-org/lab`) with no styles. Relative
+      // mode injects each chunk's css alongside the module that imports it.
+      relativeCSSInjection: true,
       injectCodeFunction: cssCode => {
         try {
           if (typeof document !== 'undefined') {

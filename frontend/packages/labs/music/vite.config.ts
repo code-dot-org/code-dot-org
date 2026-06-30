@@ -28,9 +28,18 @@ export default defineConfig({
     react(),
     // Generate Typescript declaration files using the Vite default tsconfig
     dts({tsconfigPath: './tsconfig.app.json'}),
-    // Inject CSS directly into JS bundle as inline styles
-    // This ensures CSS is automatically loaded when the module is lazy loaded.
-    cssInjectedByJsPlugin(),
+    // Inject CSS directly into JS bundle as inline styles so CSS loads
+    // automatically when a module is imported (no separate CSS import needed).
+    //
+    // `relativeCSSInjection: true` is required for this `preserveModules` +
+    // multi-entry library build. In the plugin's default global mode it
+    // concatenates ALL css and appends it to a single entry chunk — and with
+    // multiple entries it picks the LAST one (here `src/fixtures/index.ts`, the
+    // `./mocks` export), leaving the `.` export (`src/App.tsx` -> App.mjs) with
+    // no styles at all. Studio loads the `.` export, so styles never applied.
+    // Relative mode instead injects each chunk's css alongside the module that
+    // imports it, so styles ride along with whatever entry pulls them in.
+    cssInjectedByJsPlugin({relativeCSSInjection: true}),
     // Ensure dependencies are externalized for library build
     // Libraries such as react, react-dom, lodash, etc. should not be bundled by the library.
     // Instead, they are expected to be provided by the host application.
