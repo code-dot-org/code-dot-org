@@ -31,9 +31,38 @@ $handle-grab-buffer: 10px;
     border-radius: 50%;
   }
 
+  // Cursor affordances in select mode. .nodrag is added by React Flow when a
+  // node is non-draggable (read-only, grab mode). .grabMode * below overrides
+  // all three rules in hand tool mode (same specificity, later rule wins).
+  // move      — whole-element repositioning (regular nodes, standalone line bodies)
+  // crosshair — single-endpoint repositioning (line anchor nodes)
+  :global(.react-flow__node:not(.nodrag, .react-flow__node-lineAnchor)) {
+    cursor: move;
+  }
+
+  :global(.react-flow__node-lineAnchor:not(.nodrag)) {
+    cursor: crosshair;
+  }
+
+  // .standaloneLineEdge is only added to edges whose both endpoints are
+  // lineAnchors (not connector edges between nodes).
+  :global(.react-flow__edge).standaloneLineEdge {
+    cursor: move;
+  }
+
   // Keyboard connect-mode: pulse the source node so the user knows it's selected.
   &.connectMode :global(.react-flow__node) {
     cursor: crosshair;
+  }
+
+  // Grab/pan mode: override node cursors so the whole canvas feels like a
+  // panning surface. Node labels use cursor: inherit so they pick this up.
+  &.grabMode * {
+    cursor: grab;
+  }
+
+  &.grabMode:active * {
+    cursor: grabbing;
   }
 
   // Focus outline for keyboard navigation, matching the component library pattern.
@@ -127,6 +156,19 @@ $handle-grab-buffer: 10px;
 .connectSource {
   box-shadow: 0 0 0 4px var(--borders-neutral-solid);
   border-radius: 4px;
+}
+
+// Keyboard group-mode instruction banner shown at the bottom of the canvas.
+.groupModeIndicator {
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  border: 1px solid var(--borders-brand-teal-primary);
+  border-left: 4px solid var(--borders-brand-teal-primary);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  pointer-events: none;
+  user-select: none;
 }
 
 // Visually hidden but announced by screen readers.

@@ -7,7 +7,9 @@ import type {
 } from '@cdo/apps/lab2/types';
 
 import type {ToolbarTarget} from '../context';
+import type {TabOrderEntry} from '../utils/computeTabOrder';
 import {isLineAnchorNodeId} from '../utils/connectionRules';
+import {getEdgeLabel, getNodeLabel} from '../utils/elementLabel';
 import {isGroupedChildNode} from '../utils/grouping';
 import {getStandaloneLineAnchorIds} from '../utils/lineAnchors';
 
@@ -34,15 +36,103 @@ export function useElementClickHandlers({
   const [multiSelectedNodeIds, setMultiSelectedNodeIds] = useState<Set<string>>(
     () => new Set()
   );
+  const [isGroupMode, setIsGroupMode] = useState(false);
+  const [ariaAnnouncement, setAriaAnnouncement] = useState('');
   // Tracks the last plain-clicked groupable target so the first Shift+click of
   // a fresh multi-selection can include it automatically. Standalone lines
   // contribute both of their lineAnchor node ids here.
   const multiSelectSeedRef = useRef<string[] | null>(null);
 
-  const clearSelection = useCallback(() => {
+  // Resets multi-selection state without touching isGroupMode.
+  const clearMultiSelect = useCallback(() => {
     setMultiSelectedNodeIds(new Set());
     multiSelectSeedRef.current = null;
   }, []);
+
+  // Resets everything: exits group mode and clears selection.
+  const clearSelection = useCallback(() => {
+    setIsGroupMode(false);
+    clearMultiSelect();
+  }, [clearMultiSelect]);
+
+  // Enters group mode: clears any existing selection, closes toolbar.
+  const enterGroupMode = useCallback(() => {
+    setIsGroupMode(true);
+    clearMultiSelect();
+    closeToolbar();
+    setAriaAnnouncement(
+      'Group mode. Tab to navigate, Enter to select or deselect, G to create group, Escape to cancel.'
+    );
+  }, [clearMultiSelect, closeToolbar]);
+
+  // Exits group mode without creating a group.
+  const exitGroupMode = useCallback(() => {
+    setIsGroupMode(false);
+    clearMultiSelect();
+    setAriaAnnouncement('Exited group mode.');
+  }, [clearMultiSelect]);
+
+  // Toggles the focused element in/out of the group selection.
+  // Used by the keyboard path (Enter key in group mode); no seed logic.
+  const toggleEntryInGroupMode = useCallback(
+    (entry: TabOrderEntry) => {
+      if (entry.type === 'node') {
+        const node = nodes.find(n => n.id === entry.id);
+        if (
+          !node ||
+          isLineAnchorNodeId(entry.id, nodes) ||
+          node.type === 'group' ||
+          isGroupedChildNode(node) ||
+          node.data?.locked
+        ) {
+          return;
+        }
+        setMultiSelectedNodeIds(prev => {
+          const removing = prev.has(entry.id);
+          const label = getNodeLabel(node);
+          setAriaAnnouncement(
+            removing
+              ? `${label} removed from group.`
+              : `${label} added to group.`
+          );
+          const next = new Set(prev);
+          if (removing) {
+            next.delete(entry.id);
+          } else {
+            next.add(entry.id);
+          }
+          return next;
+        });
+      } else if (entry.type === 'edge') {
+        const edge = edges.find(e => e.id === entry.id);
+        if (!edge || edge.data?.locked) return;
+        const anchorIds = getStandaloneLineAnchorIds(edge, getNode);
+        if (!anchorIds) return;
+        const lineIsGrouped = anchorIds.some(id =>
+          isGroupedChildNode(getNode(id))
+        );
+        if (lineIsGrouped) return;
+        const nodeMap = new Map(nodes.map(n => [n.id, n]));
+        setMultiSelectedNodeIds(prev => {
+          const allSelected = anchorIds.every(id => prev.has(id));
+          const label = getEdgeLabel(edge, nodeMap, undefined);
+          setAriaAnnouncement(
+            allSelected ? `${label} removed.` : `${label} added.`
+          );
+          const next = new Set(prev);
+          anchorIds.forEach(id => {
+            if (allSelected) {
+              next.delete(id);
+            } else {
+              next.add(id);
+            }
+          });
+          return next;
+        });
+      }
+    },
+    [nodes, edges, getNode]
+  );
 
   const handleNodeClick = useCallback(
     (event: React.MouseEvent, node: {id: string}) => {
@@ -91,8 +181,10 @@ export function useElementClickHandlers({
         return;
       }
 
-      // Plain click: record selection seed, clear any multi-selection, open toolbar.
-      // Group nodes, grouped children, and locked nodes get null seed.
+      // Plain click: exit group mode, record selection seed, clear any
+      // multi-selection, open toolbar. Group nodes, grouped children, and
+      // locked nodes get null seed.
+      setIsGroupMode(false);
       multiSelectSeedRef.current =
         nodeType === 'group' ||
         isGroupedChildNode(fullNode) ||
@@ -150,7 +242,9 @@ export function useElementClickHandlers({
         return;
       }
 
-      // Plain click: record standalone, ungrouped, unlocked line as selection seed.
+      // Plain click: exit group mode, record standalone ungrouped unlocked
+      // line as selection seed.
+      setIsGroupMode(false);
       multiSelectSeedRef.current =
         lineIsGrouped || lineIsLocked ? null : anchorIds;
       setMultiSelectedNodeIds(new Set());
@@ -163,6 +257,12 @@ export function useElementClickHandlers({
     multiSelectedNodeIds,
     setMultiSelectedNodeIds,
     clearSelection,
+    isGroupMode,
+    ariaAnnouncement,
+    announceGroupMode: setAriaAnnouncement,
+    enterGroupMode,
+    exitGroupMode,
+    toggleEntryInGroupMode,
     handleNodeClick,
     handleEdgeClick,
   };

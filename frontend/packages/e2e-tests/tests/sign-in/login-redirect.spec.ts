@@ -1,3 +1,4 @@
+import AxeBuilder from '@axe-core/playwright';
 import {expect, test} from '@playwright/test';
 
 import {SignInPage} from '../pages/sign-in';
@@ -35,7 +36,7 @@ test.describe('Navigating to a level page with login required', () => {
     await signIn.waitForForm();
 
     // Fill credentials and submit; server redirects back to the level (no login_required).
-    await signIn.fillCredentials(email, password);
+    await signIn.fillCredentials({email, password});
     await signIn.submit();
 
     // The post-sign-in redirect lands on the original level path (no login_required param).
@@ -73,5 +74,56 @@ test.describe('Navigating to a level page with login required', () => {
         url.pathname.endsWith(LEVEL_PATH) &&
         !url.searchParams.has('login_required'),
     );
+  });
+
+  /**
+   * Accessibility baseline scan. The page currently ships a known batch of WCAG
+   * violations we cannot fix all at once. Rather than fail outright or skip a11y
+   * coverage entirely, we bound the violation set with two lists:
+   *
+   *   - REQUIRED: violations present on every target. The scan must report all of
+   *     them; if one disappears it was fixed (a happy regression) and should be
+   *     promoted out of this list.
+   *   - IN_TRANSITION: violations we have fixed in source but whose fix may not be
+   *     live on the scan target yet. The suite scans whatever is deployed
+   *     (test-studio by default, a PR's own build under Drone), so a fix lands in
+   *     code before it reaches test-studio. These are tolerated whether present
+   *     (pre-deploy) or absent (post-deploy / PR build). Once a fix is everywhere,
+   *     delete its entry — leaving it only widens the tolerance window.
+   *
+   * Any violation outside REQUIRED ∪ IN_TRANSITION fails the test (a real
+   * regression). This is granular to the rule id, not the node count.
+   *
+   * TODO: drive both lists to empty and switch back to `toEqual([])`.
+   */
+  test('login page accessibility violations match documented baseline', async ({
+    page,
+  }) => {
+    await page.goto('/', {waitUntil: 'domcontentloaded'});
+
+    const REQUIRED_VIOLATIONS = [
+      'color-contrast', // serious: insufficient text/background contrast
+      'heading-order', // moderate: heading levels skipped
+      'page-has-heading-one', // moderate: page lacks a top-level <h1>
+      'region', // moderate: content not contained in a landmark
+    ];
+    const IN_TRANSITION_VIOLATIONS = [
+      'image-alt', // fixed: decorative OAuth logos now carry alt=""
+      'label', // fixed: sign-in login field now bound via f.label :login
+    ];
+    const allowed = new Set([
+      ...REQUIRED_VIOLATIONS,
+      ...IN_TRANSITION_VIOLATIONS,
+    ]);
+
+    const results = await new AxeBuilder({page}).analyze();
+    const actual = results.violations.map(v => v.id);
+
+    // No violation outside the documented set — catches genuine new regressions.
+    expect(actual.filter(id => !allowed.has(id)).sort()).toEqual([]);
+
+    // Every required violation is still present — catches a happy regression that
+    // should shrink the REQUIRED list.
+    expect(REQUIRED_VIOLATIONS.filter(id => !actual.includes(id))).toEqual([]);
   });
 });

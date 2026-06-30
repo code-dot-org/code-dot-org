@@ -701,6 +701,12 @@ const EVENTS = {
 
   LATAM_GE_REGION_NOTICE_CLICKED: 'LATAM GE region notice clicked',
   LATAM_GE_REGION_NOTICE_CLOSED: 'LATAM GE region notice closed',
+
+  // Pair programming
+  PAIRING_ADD_PARTNER_BUTTON_CLICKED:
+    'Add pair programming partner button clicked',
+  PAIRING_STOP_PAIR_PROGRAMMING_BUTTON_CLICKED:
+    'Stop pair programming button clicked',
 };
 
 const EVENT_GROUP_NAMES = {
