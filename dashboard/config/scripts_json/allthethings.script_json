@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-22 22:19:57 UTC",
+    "serialized_at": "2026-06-26 18:36:48 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -2797,6 +2797,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "frozen square loop 3x"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -8651,6 +8654,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Java Lab2 Theater"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -8668,6 +8674,48 @@
     },
     {
       "chapter": 263,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Java Lab2 Free Response"
+        ],
+        "lesson.key": "lesson-59",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "2704c5ff-0e8e-4b8f-9e94-d8c63c0af7e1"
+      },
+      "level_keys": [
+        "Allthethings Java Lab2 Free Response"
+      ]
+    },
+    {
+      "chapter": 264,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Java Lab2 Multi"
+        ],
+        "lesson.key": "lesson-59",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "2704c5ff-0e8e-4b8f-9e94-d8c63c0af7e1"
+      },
+      "level_keys": [
+        "Allthethings Java Lab2 Multi"
+      ]
+    },
+    {
+      "chapter": 265,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11955,6 +12003,30 @@
         "level.key": "Allthethings Java Lab2 Theater",
         "script_level.level_keys": [
           "Allthethings Java Lab2 Theater"
+        ],
+        "lesson.key": "lesson-59",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "2704c5ff-0e8e-4b8f-9e94-d8c63c0af7e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings Java Lab2 Free Response",
+        "script_level.level_keys": [
+          "Allthethings Java Lab2 Free Response"
+        ],
+        "lesson.key": "lesson-59",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "2704c5ff-0e8e-4b8f-9e94-d8c63c0af7e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings Java Lab2 Multi",
+        "script_level.level_keys": [
+          "Allthethings Java Lab2 Multi"
         ],
         "lesson.key": "lesson-59",
         "lesson_group.key": "",
