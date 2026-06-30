@@ -1,0 +1,84 @@
+{"frames": {
+
+"AOeffect_Left":
+{
+	"frame": {"x":0,"y":0,"w":12,"h":40},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":28,"y":0,"w":12,"h":40},
+	"sourceSize": {"w":64,"h":64},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"AOeffect_Top":
+{
+	"frame": {"x":24,"y":16,"w":40,"h":8},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":32,"w":40,"h":8},
+	"sourceSize": {"w":64,"h":64},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"AOeffect_TopRight":
+{
+	"frame": {"x":48,"y":24,"w":10,"h":8},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":32,"w":10,"h":8},
+	"sourceSize": {"w":64,"h":64},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"AOeffect_TopLeft":
+{
+	"frame": {"x":48,"y":32,"w":10,"h":8},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":30,"y":32,"w":10,"h":8},
+	"sourceSize": {"w":64,"h":64},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"AOeffect_BottomLeft":
+{
+	"frame": {"x":24,"y":24,"w":12,"h":16},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":28,"y":0,"w":12,"h":16},
+	"sourceSize": {"w":64,"h":64},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"AOeffect_BottomRight":
+{
+	"frame": {"x":36,"y":24,"w":12,"h":16},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":12,"h":16},
+	"sourceSize": {"w":64,"h":64},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"AOeffect_Right":
+{
+	"frame": {"x":12,"y":0,"w":12,"h":40},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":12,"h":40},
+	"sourceSize": {"w":64,"h":64},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"AOeffect_Bottom":
+{
+	"frame": {"x":24,"y":0,"w":40,"h":16},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":16},
+	"sourceSize": {"w":64,"h":64},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "WaterAO.png",
+	"format": "RGBA8888",
+	"size": {"w":64,"h":40},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:9c9b2d199a4ec9e95de28dd2d2060b34:09781ad36a4908d3eb07d2a1bdccc83b:dc4d5788172292d564bc29435a79fc5a$"
+}
+}

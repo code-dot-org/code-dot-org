@@ -1,0 +1,93 @@
+{"frames": {
+
+"Leaves_SpruceSnowy0.png":
+{
+	"frame": {"x":299,"y":0,"w":155,"h":152},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":58,"y":22,"w":155,"h":152},
+	"sourceSize": {"w":240,"h":240},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Leaves_SpruceSnowy1.png":
+{
+	"frame": {"x":0,"y":164,"w":155,"h":152},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":58,"y":22,"w":155,"h":152},
+	"sourceSize": {"w":240,"h":240},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Leaves_SpruceSnowy2.png":
+{
+	"frame": {"x":155,"y":159,"w":155,"h":154},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":58,"y":22,"w":155,"h":154},
+	"sourceSize": {"w":240,"h":240},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Leaves_SpruceSnowy3.png":
+{
+	"frame": {"x":0,"y":0,"w":155,"h":164},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":58,"y":22,"w":155,"h":164},
+	"sourceSize": {"w":240,"h":240},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Leaves_SpruceSnowy4.png":
+{
+	"frame": {"x":155,"y":313,"w":155,"h":152},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":58,"y":22,"w":155,"h":152},
+	"sourceSize": {"w":240,"h":240},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Leaves_SpruceSnowy5.png":
+{
+	"frame": {"x":0,"y":316,"w":155,"h":152},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":58,"y":22,"w":155,"h":152},
+	"sourceSize": {"w":240,"h":240},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Leaves_SpruceSnowy6.png":
+{
+	"frame": {"x":310,"y":152,"w":144,"h":141},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":59,"y":22,"w":144,"h":141},
+	"sourceSize": {"w":240,"h":240},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Leaves_SpruceSnowy7.png":
+{
+	"frame": {"x":155,"y":0,"w":144,"h":159},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":59,"y":24,"w":144,"h":159},
+	"sourceSize": {"w":240,"h":240},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Leaves_SpruceSnowy8.png":
+{
+	"frame": {"x":310,"y":293,"w":109,"h":128},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":60,"y":24,"w":109,"h":128},
+	"sourceSize": {"w":240,"h":240},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "Leaves_Spruce_Snowy_Decay.png",
+	"format": "RGBA8888",
+	"size": {"w":454,"h":468},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:2088ee6c716de5ab4cc3eb4a2a65eac9:998df42b1fc229517c05f306334ae886:59a24bef466163c587043a6906932405$"
+}
+}
