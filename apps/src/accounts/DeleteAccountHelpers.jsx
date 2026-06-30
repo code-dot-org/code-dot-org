@@ -1,4 +1,5 @@
 import Link from '@code-dot-org/component-library/link';
+import {Typography as MuiTypography} from '@mui/material';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -40,7 +41,11 @@ export const TeacherWarning = props => (
 );
 
 export const StudentWarning = () => {
-  return <div>{i18n.deleteAccount_studentWarning()}</div>;
+  return (
+    <MuiTypography variant="body2">
+      {i18n.deleteAccount_studentWarning()}
+    </MuiTypography>
+  );
 };
 
 export const getCheckboxes = (dependedUponForLogin, hasStudents) => {
