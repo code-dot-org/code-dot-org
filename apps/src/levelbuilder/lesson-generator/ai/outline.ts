@@ -30,7 +30,7 @@ const lessonOutlineSchema = Output.object({
               'Short kebab-case identifier unique within the lesson, e.g. "intro-1" or "build-form". No prefix; that is added separately.'
             ),
           labType: supportedLabTypeEnum.describe(
-            '"panels" for narrative / explanation panels with overlay text on illustrations. "weblab2" for hands-on HTML/CSS/JS coding levels.'
+            '"panels" for narrative / explanation panels with overlay text on illustrations. "weblab2" for hands-on HTML/CSS/JS coding levels. "ailab" for guided machine-learning levels where the student picks a dataset, picks features, trains a model, and inspects the result.'
           ),
           description: z
             .string()
@@ -75,10 +75,15 @@ export async function generateLessonOutline(
     '    introduction, framing, or summarising. No coding.',
     '  - Weblab2: a hands-on HTML/CSS/JS exercise where the student edits',
     '    starter code.',
+    '  - Ailab: a guided ML pipeline where the student picks a dataset,',
+    '    picks features, trains a model, and inspects accuracy. Use this',
+    '    only when the lesson is about data, machine learning, bias in',
+    '    data, or model evaluation — not for general coding.',
     '',
-    'Choose Panels for explanation/narrative and Weblab2 for practice.',
-    'A typical lesson alternates: Panels intro -> Weblab2 practice ->',
-    'Panels reflection, etc., but you can deviate when the outline asks.',
+    'Choose Panels for explanation/narrative, Weblab2 for web-coding',
+    'practice, and Ailab for ML pipeline practice. A typical lesson',
+    'alternates: Panels intro -> practice -> Panels reflection, but you',
+    'can deviate when the outline asks.',
     '',
     'For each level, return:',
     '  - id: a short kebab-case identifier (e.g. "intro-1", "build-form")',

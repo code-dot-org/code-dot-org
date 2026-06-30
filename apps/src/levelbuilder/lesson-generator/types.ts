@@ -7,6 +7,7 @@ import {AppName} from '@cdo/apps/lab2/types';
 export const SUPPORTED_LAB_TYPES = [
   'panels',
   'weblab2',
+  'ailab',
 ] as const satisfies readonly AppName[];
 
 export type LabType = (typeof SUPPORTED_LAB_TYPES)[number];
@@ -17,6 +18,7 @@ export type LabType = (typeof SUPPORTED_LAB_TYPES)[number];
 export const RAILS_TYPE_BY_LAB: Record<LabType, string> = {
   panels: 'Panels',
   weblab2: 'Weblab2',
+  ailab: 'Ailab',
 };
 
 // Inverse of RAILS_TYPE_BY_LAB. ScriptLevel#summarize_for_lesson_edit

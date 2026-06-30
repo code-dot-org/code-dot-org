@@ -1,6 +1,7 @@
 import {LevelProperties, MultiFileSource} from '@cdo/apps/lab2/types';
 import {Panel, PanelsLevelProperties} from '@cdo/apps/panels/types';
 
+import {AilabGeneration} from '../ai/ailab';
 import {Weblab2Generation} from '../ai/weblab2';
 import {LabType} from '../types';
 
@@ -12,6 +13,7 @@ import {LabType} from '../types';
 export interface PriorOutputByLab {
   panels: Panel[];
   weblab2: Weblab2Generation;
+  ailab: AilabGeneration;
 }
 
 // Per-spec content captured during a single Generate run, so each level we
@@ -63,7 +65,61 @@ export function priorOutputFromLevelProperties(
       },
     };
   }
+  if (labType === 'ailab') {
+    // The ailab editor stores mode and dynamic_instructions as JSON
+    // strings (or untouched when read back through summarize_for_lab2_properties).
+    // Read the dataset id and visible-screen list defensively so a hand-
+    // edited level still produces a usable summary.
+    const longInstructions =
+      (props as {longInstructions?: string}).longInstructions || '';
+    const rawMode = (props as {mode?: unknown}).mode;
+    const mode = typeof rawMode === 'string' ? tryParseJson(rawMode) : rawMode;
+    const dynamicRaw = (props as {dynamicInstructions?: unknown})
+      .dynamicInstructions;
+    const dynamic =
+      typeof dynamicRaw === 'string' ? tryParseJson(dynamicRaw) : dynamicRaw;
+    const datasetId =
+      Array.isArray((mode as {datasets?: unknown[]})?.datasets) &&
+      typeof (mode as {datasets: unknown[]}).datasets[0] === 'string'
+        ? (mode as {datasets: string[]}).datasets[0]
+        : '(unknown)';
+    const visibleScreens =
+      dynamic && typeof dynamic === 'object'
+        ? Object.entries(dynamic as Record<string, unknown>)
+            .filter(([, v]) => typeof v === 'string' && v.trim() !== '')
+            .map(([k]) => k)
+        : [];
+    if (
+      !longInstructions &&
+      datasetId === '(unknown)' &&
+      visibleScreens.length === 0
+    ) {
+      return undefined;
+    }
+    return {
+      ailab: {
+        longInstructions,
+        mode:
+          typeof rawMode === 'string' ? rawMode : JSON.stringify(mode ?? {}),
+        dynamicInstructions:
+          typeof dynamicRaw === 'string'
+            ? dynamicRaw
+            : JSON.stringify(dynamic ?? {}),
+        summary: `dataset=${datasetId}; screens=${
+          visibleScreens.join(',') || '(none)'
+        }`,
+      },
+    };
+  }
   return undefined;
+}
+
+function tryParseJson(text: string): unknown {
+  try {
+    return JSON.parse(text);
+  } catch {
+    return undefined;
+  }
 }
 
 // Render the running preceding-levels context as a plain-text block. Image
@@ -96,6 +152,17 @@ export function formatPrecedingLevels(entries: PriorEntry[]): string {
       lines.push('  Instructions:');
       for (const line of e.output.weblab2.longInstructions.split('\n')) {
         lines.push(`    ${line}`);
+      }
+    }
+    if (e.output?.ailab) {
+      // ailab carries a structured summary string already; the per-screen
+      // text is stub material the next level shouldn't try to extend.
+      lines.push(`  Setup: ${e.output.ailab.summary}`);
+      if (e.output.ailab.longInstructions) {
+        lines.push('  Instructions:');
+        for (const line of e.output.ailab.longInstructions.split('\n')) {
+          lines.push(`    ${line}`);
+        }
       }
     }
     return lines.join('\n');

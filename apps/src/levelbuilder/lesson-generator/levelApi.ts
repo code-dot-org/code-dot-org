@@ -112,7 +112,13 @@ export async function updateStartSources(
 // Narrow the property name to keys this page actually writes. The level
 // edit controller would accept any permitted attribute, but limiting the
 // call sites here catches typos at the boundary and documents intent.
-export type LevelProperty = 'long_instructions' | 'generate_outline' | 'panels';
+export type LevelProperty =
+  | 'long_instructions'
+  | 'generate_outline'
+  | 'panels'
+  | 'mode'
+  | 'dynamic_instructions'
+  | 'uses_lab2';
 
 export async function updateLevelProperty(
   levelId: number,

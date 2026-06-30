@@ -9,6 +9,7 @@ import {useAichatContext} from '../curriculum-generator/hooks/useAichatContext';
 import {useBeforeUnloadWhile} from '../curriculum-generator/hooks/useBeforeUnloadWhile';
 import {useReorderableList} from '../curriculum-generator/hooks/useReorderableList';
 
+import {generateAilabLevel} from './ai/ailab';
 import {generateLessonOutline} from './ai/outline';
 import {generatePanelsForLevel} from './ai/panels';
 import {generateWeblab2Level} from './ai/weblab2';
@@ -51,6 +52,7 @@ import sharedStyles from '../curriculum-generator/curriculum-generator.module.sc
 const LAB_LABELS = {
   panels: 'Panels',
   weblab2: 'Web Lab 2',
+  ailab: 'AI Lab',
 } as const satisfies Record<LabType, string>;
 
 const LAB_OPTIONS: {value: LabType; label: string}[] = SUPPORTED_LAB_TYPES.map(
@@ -381,6 +383,29 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
               result.longInstructions
             );
             generatedOutput = {weblab2: result};
+          } else if (spec.labType === 'ailab') {
+            const result = await generateAilabLevel(levelCtx);
+            setStage('saving-properties');
+            // The AI Lab editor stores mode and dynamic_instructions as
+            // serialized JSON strings (textareas in the legacy editor); we
+            // produced them that way upstream. uses_lab2 flips the level
+            // onto the new Lab2 view; the generator only targets the new
+            // port.
+            appendLog(`Saving AI Lab mode for "${levelName}"…`);
+            await updateLevelProperty(level.id, 'mode', result.mode);
+            await updateLevelProperty(
+              level.id,
+              'dynamic_instructions',
+              result.dynamicInstructions
+            );
+            await updateLevelProperty(level.id, 'uses_lab2', 'true');
+            appendLog(`Saving instructions for "${levelName}"…`);
+            await updateLevelProperty(
+              level.id,
+              'long_instructions',
+              result.longInstructions
+            );
+            generatedOutput = {ailab: result};
           }
         }
 
