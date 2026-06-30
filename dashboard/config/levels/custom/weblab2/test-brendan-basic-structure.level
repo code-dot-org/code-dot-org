@@ -1,0 +1,32 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-06-29T19:39:19.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "require_edit_to_continue": true,
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "0197704e-4ef2-4085-9ff0-7f693ab74236": {
+          "id": "0197704e-4ef2-4085-9ff0-7f693ab74236",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>My Pet Fish Page</title>\n</head>\n<body>\n\n</body>\n</html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "0197704e-4ef2-4085-9ff0-7f693ab74236"
+      ]
+    },
+    "long_instructions": "Welcome back! In the last level, we learned that HTML is like a blueprint for building web pages. Now, let's start building our own blueprint for a web page about your pet fish!\r\n\r\n1. Look at the `index.html` file. This is where we'll write all our HTML code.\r\n2. You'll see some code already there. This is the very basic structure every HTML page needs. Let's break it down:\r\n    *   The first line, `<!DOCTYPE html>`, tells the browser that this is an HTML5 document.\r\n    *   Next, the `<html>` tag is like the main container for your entire web page. Everything else goes inside it.\r\n    *   Inside the `<html>` tag, you'll see two main sections: `<head>` and `<body>`.\r\n    *   The `<head>` section is for information *about* the page itself, like its title or links to stylesheets. This stuff usually isn't directly shown on the page.\r\n    *   The `<body>` section is where all the content that *does* show up on your web page goes – like text, images, and videos. Think of it as the main display area.\r\n\r\nYour task: Take a moment to read through the `index.html` file and make sure you understand where each of these main tags (`<html>`, `<head>`, `<body>`) are located. We'll be adding content to the `<body>` in the next level!",
+    "generate_outline": "Guide students to create a new index.html file. Provide starter code for the basic HTML structure: <!DOCTYPE html>, <html>, <head>, and <body> tags. Instruct them to identify and understand the purpose of each tag."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 19:39:25 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 19:39:25 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 19:40:00 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

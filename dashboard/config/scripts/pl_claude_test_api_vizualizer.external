@@ -1,0 +1,22 @@
+name 'pl-claude-test-api-vizualizer'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+#Fetch Chain Visualiser 
+
+##Directions
+*Step through the fetch() chain below — one line at a time. Run each step and see exactly what it produces before moving to the next.*
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dotcom.github.io/Unit5AIF2/fetch-chain-visualizer.html"
+    width="100%"
+    height="760"
+    frameborder="0"
+    scrolling="no"
+    title="How fetch() Works: Step by Step visualizer"
+    style="display:block; border-radius:10px;">
+  </iframe>
+</div>
+MARKDOWN
