@@ -43,9 +43,9 @@
     %script{data: {'statsig-api-client-key-session-replay': CDO.safe_statsig_api_client_key_session_replay}}
     -# for statsig to recognized managed test server
     %script{data: {'managed-test-server': CDO.managed_test_server?.to_s}}
-    -# user id and type for analytics logging- may not work for cached pages
+    -# analytics user id/type; user-id may be nil on cached pages (session disabled).
     %script{data: {'user-id': current_user&.id}}
-    %script{data: {'user-type': current_user&.user_type}}
+    %script{data: {'user-type': analytics_user_type}}
     -# webpack-runtime.js must appear exactly once on any page containing webpack entries
     %script{src: webpack_asset_path('js/webpack-runtime.js'), 'data-ot-ignore' => ''}
     %script{src: webpack_asset_path('js/essential.js'), 'data-ot-ignore' => ''}
