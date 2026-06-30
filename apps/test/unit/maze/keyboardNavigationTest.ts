@@ -109,7 +109,7 @@ describe('maze keyboard navigation reporting', () => {
 
     it('appends the character-here clause when pegman is on the cell', () => {
       const ctrl = makeController({pegman: {x: 2, y: 3}});
-      expect(describeCell(ctrl, 2, 3)).toBe('OPEN POS(4,3) HERE');
+      expect(describeCell(ctrl, 2, 3)).toBe('OPEN HERE POS(4,3)');
     });
   });
 
@@ -130,7 +130,7 @@ describe('maze keyboard navigation reporting', () => {
           pegman: {x: 1, y: 1, d},
           level: turnLevel,
         });
-        expect(describeCell(ctrl, 1, 1)).toBe(`OPEN POS(2,2) ${token}`);
+        expect(describeCell(ctrl, 1, 1)).toBe(`OPEN ${token} POS(2,2)`);
       }
     );
 
@@ -139,7 +139,7 @@ describe('maze keyboard navigation reporting', () => {
         pegman: {x: 1, y: 1, d: Direction.EAST},
         level: {startBlocks: '<xml><block type="maze_turn"/></xml>'},
       });
-      expect(describeCell(ctrl, 1, 1)).toBe('OPEN POS(2,2) FACING(east)');
+      expect(describeCell(ctrl, 1, 1)).toBe('OPEN FACING(east) POS(2,2)');
     });
 
     it('omits facing on absolute-movement levels', () => {
@@ -147,7 +147,7 @@ describe('maze keyboard navigation reporting', () => {
         pegman: {x: 1, y: 1, d: Direction.NORTH},
         level: {toolbox: '<xml><block type="maze_moveNorth"/></xml>'},
       });
-      expect(describeCell(ctrl, 1, 1)).toBe('OPEN POS(2,2) HERE');
+      expect(describeCell(ctrl, 1, 1)).toBe('OPEN HERE POS(2,2)');
     });
 
     it('reports no character clause away from pegman on turn levels', () => {
@@ -160,8 +160,8 @@ describe('maze keyboard navigation reporting', () => {
   });
 
   describe('describeCell - start block ordering', () => {
-    // On the start square the position is announced last, after the
-    // character and (on turn levels) its facing.
+    // Position is announced last on every cell; on the start square that
+    // means label, then character and (on turn levels) facing, then row/col.
     it('leads with character and facing, position last, on a turn level', () => {
       const ctrl = makeController({
         tiles: {'1,1': SquareType.START},
@@ -455,7 +455,7 @@ describe('MazeKeyboardNavigation interaction', () => {
     press('Enter');
     const cursor = focusableCursor();
     expect(cursor).not.toBeNull();
-    expect(cursor?.getAttribute('aria-label')).toBe('OPEN POS(2,2) HERE');
+    expect(cursor?.getAttribute('aria-label')).toBe('OPEN HERE POS(2,2)');
   });
 
   it('relabels the cursor as it moves to an adjacent cell', () => {
@@ -480,7 +480,7 @@ describe('MazeKeyboardNavigation interaction', () => {
     expect(liveRegionText()).toBe('WALL');
     // Cursor stayed on pegman's cell.
     expect(focusableCursor()?.getAttribute('aria-label')).toBe(
-      'OPEN POS(2,2) HERE'
+      'OPEN HERE POS(2,2)'
     );
   });
 
@@ -490,7 +490,7 @@ describe('MazeKeyboardNavigation interaction', () => {
     press('ArrowLeft');
     expect(liveRegionText()).toBe('EDGE');
     expect(focusableCursor()?.getAttribute('aria-label')).toBe(
-      'OPEN POS(1,1) HERE'
+      'OPEN HERE POS(1,1)'
     );
   });
 
