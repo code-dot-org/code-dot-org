@@ -266,13 +266,15 @@ export function describeCell(
 ): string {
   const object = describeObject(ctrl, col, row);
   const finish = ctrl.subtype.finish;
+  const isGoal = finish?.x === col && finish?.y === row;
+  const tile = tileAt(ctrl, col, row);
+  const isStart = !object && !isGoal && tile === SquareType.START;
   let primary: string;
   if (object) {
     primary = object;
-  } else if (finish?.x === col && finish?.y === row) {
+  } else if (isGoal) {
     primary = msg.mazeNavGoal();
   } else {
-    const tile = tileAt(ctrl, col, row);
     primary =
       tile === SquareType.OBSTACLE
         ? msg.mazeNavObstacle()
@@ -282,7 +284,11 @@ export function describeCell(
   }
   const position = msg.mazeNavPosition({row: row + 1, col: col + 1});
   const here = describeCharacterHere(ctrl, col, row);
-  return [primary, position, here].filter(Boolean).join(' ');
+  // On the start square, lead with the character and facing, then position:
+  // "Start. Character is here, facing north. Row 1, column 1." Every other
+  // cell keeps position before the (usually absent) character clause.
+  const parts = isStart ? [primary, here, position] : [primary, position, here];
+  return parts.filter(Boolean).join(' ');
 }
 
 function createCursorRect(

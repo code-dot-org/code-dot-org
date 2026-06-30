@@ -159,6 +159,35 @@ describe('maze keyboard navigation reporting', () => {
     });
   });
 
+  describe('describeCell - start block ordering', () => {
+    // On the start square the position is announced last, after the
+    // character and (on turn levels) its facing.
+    it('leads with character and facing, position last, on a turn level', () => {
+      const ctrl = makeController({
+        tiles: {'1,1': SquareType.START},
+        pegman: {x: 1, y: 1, d: Direction.NORTH},
+        level: {toolbox: '<xml><block type="maze_turn"/></xml>'},
+      });
+      expect(describeCell(ctrl, 1, 1)).toBe('START FACING(north) POS(2,2)');
+    });
+
+    it('leads with the plain character clause on an absolute level', () => {
+      const ctrl = makeController({
+        tiles: {'1,1': SquareType.START},
+        pegman: {x: 1, y: 1, d: Direction.NORTH},
+      });
+      expect(describeCell(ctrl, 1, 1)).toBe('START HERE POS(2,2)');
+    });
+
+    it('reads "Start" then position when pegman has moved away', () => {
+      const ctrl = makeController({
+        tiles: {'1,1': SquareType.START},
+        pegman: {x: 3, y: 3},
+      });
+      expect(describeCell(ctrl, 1, 1)).toBe('START POS(2,2)');
+    });
+  });
+
   describe('describeObject - bee', () => {
     const beeCtrl = (cell: object, extra: object = {}) =>
       makeController({
