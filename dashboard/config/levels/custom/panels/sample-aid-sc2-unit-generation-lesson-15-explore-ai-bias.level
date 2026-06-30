@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-06-29T17:07:57.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "panels": [
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-15-explore-ai-bias-155c06d6-2713-47e0-b12a-95aad56862d5",
+        "text": "Many companies now use AI to help with hiring decisions, hoping to make the process more efficient and fair for everyone.",
+        "imageUrl": "https://images.code.org/b6fee2f7104ecb87023b4fb6cd502866-sample-aid-sc2-unit-generation-lesson-15-explore-ai-bias-panel-1-fa885e8e-7102-4cd7-8787-0e4cd693b0ce.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-15-explore-ai-bias-42263ee0-20c3-4907-9f6f-7655e516972c",
+        "text": "However, one company's new AI hiring tool began to consistently reject many highly qualified candidates, especially from certain backgrounds.",
+        "imageUrl": "https://images.code.org/f1dfa9a725a0c9b73886c01252439e0d-sample-aid-sc2-unit-generation-lesson-15-explore-ai-bias-panel-2-20dcdd99-902a-4042-9f35-145af2d8075f.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-15-explore-ai-bias-2224726f-a6ce-4d4e-b0dd-9de474a9ec38",
+        "text": "Developers investigated and found the AI was trained on years of past hiring data, which contained unintended biases against certain demographic groups.",
+        "imageUrl": "https://images.code.org/f1bd4b0fee30c3de783adc439ef0025e-sample-aid-sc2-unit-generation-lesson-15-explore-ai-bias-panel-3-78bd7d6b-1264-4e8c-9b31-0ac284622968.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-15-explore-ai-bias-25b4df7a-27cc-4e4e-afce-cb82a80cd595",
+        "text": "The AI, without human understanding, had learned and amplified these historical biases, unfairly denying opportunities to deserving individuals.",
+        "imageUrl": "https://images.code.org/67f3543841b02c46799ce469fc2a9fe5-sample-aid-sc2-unit-generation-lesson-15-explore-ai-bias-panel-4-280d8027-733d-4b92-a01c-f80d88512a01.png",
+        "layout": "text-bottom-left"
+      }
+    ],
+    "generate_outline": "Present students with a fictional but realistic case study of an AI system exhibiting bias or making unfair decisions, for example, in a hiring process or loan application. Guide students to identify the source of the bias (e.g., biased training data, flawed algorithm) and discuss its ethical implications."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:08:34 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:08:35 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

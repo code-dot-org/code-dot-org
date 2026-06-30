@@ -1,0 +1,22 @@
+name 'pl-claude-test-api-roleplay'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+#API Misconception Roleplay
+
+##Directions
+*You're mid-lesson and a student makes a connection. It's not wrong — but it's not quite right either. How do you respond?*
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dotcom.github.io/Unit5AIF2/api-misconception-roleplay.html"
+    width="100%"
+    height="640"
+    frameborder="0"
+    scrolling="no"
+    title="Classroom scenario: how would you respond?"
+    style="display:block; border-radius:10px;">
+  </iframe>
+</div>
+MARKDOWN
