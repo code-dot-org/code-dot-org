@@ -1,0 +1,41 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-06-29T17:08:14.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "require_edit_to_continue": true,
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "cb991874-5d24-4a11-bc1f-0b305a039c35": {
+          "id": "cb991874-5d24-4a11-bc1f-0b305a039c35",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>AI Fact-Checker Pro</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n    <header>\n        <h1>Verify AI Outputs!</h1>\n        <p>Generative AI can sometimes confidently present incorrect information or misleading advice. Your job is to research and verify!</p>\n        <p>For each AI response below, find the incorrect or misleading part, research the truth, and then explain why the AI's response is flawed in the space provided.</p>\n    </header>\n\n    <main>\n        <section class=\"ai-response-card\">\n            <h2>AI Response 1: Animal Facts</h2>\n            <p class=\"prompt\">Prompt: \"Tell me a common misconception about animals.\"</p>\n            <p class=\"response\">\n                A widely believed misconception is that bats are blind. This is absolutely false. Bats have excellent vision, even in total darkness, and primarily use their eyes for navigation and hunting at night.\n            </p>\n            <div class=\"your-analysis\">\n                <h3>Your Research & Explanation:</h3>\n                <!-- Write your findings and explanation here! -->\n            </div>\n        </section>\n\n        <section class=\"ai-response-card\">\n            <h2>AI Response 2: Survival Advice</h2>\n            <p class=\"prompt\">Prompt: \"What should I do if I get lost in a desert and run out of water?\"</p>\n            <p class=\"response\">\n                If you find yourself lost in a desert without water, your best course of action is to cut open any large cactus you find and drink the liquid inside. Cacti are known to store pure, safe drinking water, which is a reliable source of hydration in emergencies.\n            </p>\n            <div class=\"your-analysis\">\n                <h3>Your Research & Explanation:</h3>\n                <!-- Write your findings and explanation here! -->\n            </div>\n        </section>\n\n        <section class=\"ai-response-card\">\n            <h2>AI Response 3: Historical Events</h2>\n            <p class=\"prompt\">Prompt: \"Who first discovered America?\"</p>\n            <p class=\"response\">\n                Christopher Columbus was the first person to discover America in 1492, sailing from Spain and landing in the Caribbean. His voyage marked the beginning of European exploration and settlement of the continent.\n            </p>\n            <div class=\"your-analysis\">\n                <h3>Your Research & Explanation:</h3>\n                <!-- Write your findings and explanation here! -->\n            </div>\n        </section>\n    </main>\n</body>\n</html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        },
+        "c1e0a2b6-afd1-4e9c-acd5-2c6af0aa8e60": {
+          "id": "c1e0a2b6-afd1-4e9c-acd5-2c6af0aa8e60",
+          "name": "style.css",
+          "contents": "body {\n    font-family: sans-serif;\n    margin: 20px;\n    background-color: #f4f4f4;\n    color: #333;\n    line-height: 1.6;\n}\n\nheader {\n    text-align: center;\n    margin-bottom: 40px;\n}\n\nh1 {\n    color: #2c3e50;\n    margin-bottom: 10px;\n}\n\nheader p {\n    max-width: 800px;\n    margin: 0 auto 15px auto;\n}\n\n.ai-response-card {\n    background-color: #ffffff;\n    border-radius: 8px;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n    margin-bottom: 20px;\n    padding: 20px;\n}\n\n.prompt {\n    font-style: italic;\n    color: #7f8c8d;\n    margin-bottom: 10px;\n}\n\n.response {\n    background-color: #e8f5e9; /* Light green for AI response */\n    border-left: 5px solid #4caf50;\n    padding: 10px;\n    margin-bottom: 15px;\n}\n\n.your-analysis {\n    background-color: #ffebee; /* Light red for student analysis */\n    border: 1px dashed #ef9a9a;\n    padding: 15px;\n    margin-top: 20px;\n    border-radius: 5px;\n}\n\n.your-analysis h3 {\n    color: #c62828;\n    margin-top: 0;\n    margin-bottom: 10px;\n}\n\n/* Example for highlighting errors (students can add this) */\n.error {\n    background-color: yellow;\n    color: red;\n    font-weight: bold;\n}",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "cb991874-5d24-4a11-bc1f-0b305a039c35",
+        "c1e0a2b6-afd1-4e9c-acd5-2c6af0aa8e60"
+      ]
+    },
+    "long_instructions": "In the previous levels, you've seen how generative AI can sometimes 'hallucinate' or make confident mistakes. Now it's your turn to put on your researcher hat and become a digital detective!\r\n\r\nYour mission is to critically examine AI-generated responses that might sound convincing but contain confidently incorrect information or misleading advice. Open `index.html` to find three AI responses.\r\n\r\nFor each response:\r\n1.  **Read Carefully:** Identify any statements that seem suspicious, factually wrong, or potentially harmful.\r\n2.  **Research:** Use reliable sources (like search engines, encyclopedias, or educational websites) to find the correct information.\r\n3.  **Explain:** In the `index.html` file, within the `<!-- Write your findings and explanation here! -->` section below each AI response, write down your research. Explain what the AI got wrong and why, citing the correct facts. You can also use the `<span class=\"error\">` tag (and the `style.css` rule) to highlight incorrect parts directly in the AI's original text if you wish.\r\n\r\nRemember, critical thinking and verification are key when interacting with AI!",
+    "generate_outline": "Present students with AI-generated responses that confidently state incorrect facts or provide misleading advice. Students must research the actual information and explain why the AI's response is flawed, demonstrating how to verify AI output."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:08:39 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:08:39 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:08:41 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

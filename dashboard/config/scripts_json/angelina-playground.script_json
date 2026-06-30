@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-14 22:35:49 UTC",
+    "serialized_at": "2026-06-29 17:04:46 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -23,9 +23,21 @@
   },
   "lesson_groups": [
     {
-      "key": "lessonGroup-11",
+      "key": "lessonGroup-12",
       "user_facing": true,
       "position": 1,
+      "properties": {
+        "display_name": "Levelbuilder: generate w/AI"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-12",
+        "script.name": "angelina-playground"
+      }
+    },
+    {
+      "key": "lessonGroup-11",
+      "user_facing": true,
+      "position": 2,
       "properties": {
         "display_name": "Web Lab 2"
       },
@@ -37,7 +49,7 @@
     {
       "key": "lessonGroup-10",
       "user_facing": true,
-      "position": 2,
+      "position": 3,
       "properties": {
         "display_name": "CSD 2.0"
       },
@@ -49,7 +61,7 @@
     {
       "key": "lessonGroup-9",
       "user_facing": true,
-      "position": 3,
+      "position": 4,
       "properties": {
         "display_name": "Web Dev - AIF Sem 2"
       },
@@ -61,7 +73,7 @@
     {
       "key": "lessonGroup-8",
       "user_facing": true,
-      "position": 4,
+      "position": 5,
       "properties": {
         "display_name": "AI Tutor"
       },
@@ -73,7 +85,7 @@
     {
       "key": "lessonGroup-7",
       "user_facing": true,
-      "position": 5,
+      "position": 6,
       "properties": {
         "display_name": "Python"
       },
@@ -85,7 +97,7 @@
     {
       "key": "lessonGroup-2",
       "user_facing": true,
-      "position": 6,
+      "position": 7,
       "properties": {
         "display_name": "Cyber"
       },
@@ -97,7 +109,7 @@
     {
       "key": "lessonGroup-3",
       "user_facing": true,
-      "position": 7,
+      "position": 8,
       "properties": {
         "display_name": "CSD"
       },
@@ -109,7 +121,7 @@
     {
       "key": "lessonGroup-5",
       "user_facing": true,
-      "position": 8,
+      "position": 9,
       "properties": {
         "display_name": "Coding w/AI"
       },
@@ -121,7 +133,7 @@
     {
       "key": "lessonGroup-6",
       "user_facing": true,
-      "position": 9,
+      "position": 10,
       "properties": {
         "display_name": "PL Stuff"
       },
@@ -133,7 +145,7 @@
     {
       "key": "lessonGroup-4",
       "user_facing": true,
-      "position": 10,
+      "position": 11,
       "properties": {
         "display_name": "Random"
       },
@@ -145,12 +157,27 @@
   ],
   "lessons": [
     {
-      "key": "lesson-25",
-      "name": "Edit modes",
+      "key": "lesson-27",
+      "name": "Generate lesson with AI and project",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-27",
+        "lesson_group.key": "lessonGroup-12",
+        "script.name": "angelina-playground"
+      }
+    },
+    {
+      "key": "lesson-25",
+      "name": "Edit modes",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
       "properties": {
       },
       "seeding_key": {
@@ -162,10 +189,10 @@
     {
       "key": "lesson-26",
       "name": "Lesson 3 exploration",
-      "absolute_position": 2,
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 2,
+      "relative_position": 3,
       "properties": {
       },
       "seeding_key": {
@@ -177,10 +204,10 @@
     {
       "key": "lesson-24",
       "name": "Step 5 Project Design Prototype",
-      "absolute_position": 3,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 3,
+      "relative_position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -192,10 +219,10 @@
     {
       "key": "lesson-13",
       "name": "U5 L1",
-      "absolute_position": 4,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 4,
+      "relative_position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -207,10 +234,10 @@
     {
       "key": "lesson-14",
       "name": "U5 L2",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -222,10 +249,10 @@
     {
       "key": "lesson-15",
       "name": "U5 L3",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 7,
       "properties": {
       },
       "seeding_key": {
@@ -237,10 +264,10 @@
     {
       "key": "lesson-16",
       "name": "U5 L4",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -252,10 +279,10 @@
     {
       "key": "lesson-17",
       "name": "U5 L5",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 9,
       "properties": {
       },
       "seeding_key": {
@@ -267,10 +294,10 @@
     {
       "key": "lesson-18",
       "name": "U5 L6",
-      "absolute_position": 9,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 10,
       "properties": {
       },
       "seeding_key": {
@@ -282,10 +309,10 @@
     {
       "key": "lesson-19",
       "name": "U5 L7",
-      "absolute_position": 10,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 11,
       "properties": {
       },
       "seeding_key": {
@@ -297,10 +324,10 @@
     {
       "key": "lesson-20",
       "name": "U5 L8",
-      "absolute_position": 11,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 12,
       "properties": {
       },
       "seeding_key": {
@@ -312,10 +339,10 @@
     {
       "key": "lesson-21",
       "name": "U5 L9",
-      "absolute_position": 12,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 13,
       "properties": {
       },
       "seeding_key": {
@@ -327,10 +354,10 @@
     {
       "key": "lesson-22",
       "name": "U5 L10",
-      "absolute_position": 13,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -342,10 +369,10 @@
     {
       "key": "lesson-23",
       "name": "U5 Project",
-      "absolute_position": 14,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -357,10 +384,10 @@
     {
       "key": "lesson-12",
       "name": "AI Tutor - Python Lab",
-      "absolute_position": 15,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 16,
       "properties": {
       },
       "seeding_key": {
@@ -372,10 +399,10 @@
     {
       "key": "lesson-9",
       "name": "Validation practice",
-      "absolute_position": 16,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 16,
+      "relative_position": 17,
       "properties": {
       },
       "seeding_key": {
@@ -387,10 +414,10 @@
     {
       "key": "lesson-7",
       "name": "Pygame",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -402,10 +429,10 @@
     {
       "key": "lesson-8",
       "name": "Intro to Programming",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -417,10 +444,10 @@
     {
       "key": "lesson-10",
       "name": "Widget Playground",
-      "absolute_position": 19,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 19,
+      "relative_position": 20,
       "properties": {
       },
       "seeding_key": {
@@ -432,10 +459,10 @@
     {
       "key": "lesson-3",
       "name": "CTF Flash Talk",
-      "absolute_position": 20,
+      "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 20,
+      "relative_position": 21,
       "properties": {
       },
       "seeding_key": {
@@ -447,10 +474,10 @@
     {
       "key": "lesson-11",
       "name": "AI-Powered Threats and Defenses Removed Levels",
-      "absolute_position": 21,
+      "absolute_position": 22,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 21,
+      "relative_position": 22,
       "properties": {
       },
       "seeding_key": {
@@ -462,10 +489,10 @@
     {
       "key": "lesson-4",
       "name": "CSS Flex & Grid",
-      "absolute_position": 22,
+      "absolute_position": 23,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 22,
+      "relative_position": 23,
       "properties": {
       },
       "seeding_key": {
@@ -477,10 +504,10 @@
     {
       "key": "lesson-5",
       "name": "Assessments",
-      "absolute_position": 23,
+      "absolute_position": 24,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 23,
+      "relative_position": 24,
       "properties": {
       },
       "seeding_key": {
@@ -492,10 +519,10 @@
     {
       "key": "lesson-6",
       "name": "Lesson 1",
-      "absolute_position": 24,
+      "absolute_position": 25,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 24,
+      "relative_position": 25,
       "properties": {
       },
       "seeding_key": {
@@ -507,10 +534,10 @@
     {
       "key": "Introduction to Creating Apps with Devices ",
       "name": "Introduction to Creating Apps with Devices ",
-      "absolute_position": 25,
+      "absolute_position": 26,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 25,
+      "relative_position": 26,
       "properties": {
         "overview": "**You will:**\n\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground.\n\n**Suggested time:** 20 minutes",
         "student_overview": "**You will:**\n\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground.\n\n**Suggested time:** 20 minutes"
@@ -524,10 +551,10 @@
     {
       "key": "Experiment with Inputs and Outputs",
       "name": "Experiment with Inputs and Outputs",
-      "absolute_position": 26,
+      "absolute_position": 27,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 26,
+      "relative_position": 27,
       "properties": {
         "overview": "**You will:**\n\n* Use board inputs such as buttons and toggle switches to control app events and board outputs. \n* Program apps to control board outputs such as the buzzer and LED lights. \n\n**Suggested time:** 35 minutes",
         "student_overview": "**You will:**\n\n* Use board inputs such as buttons and toggle switches to control app events and board outputs. \n* Program apps to control board outputs such as the buzzer and LED lights. \n\n**Suggested time:** 35 minutes"
@@ -541,10 +568,10 @@
     {
       "key": "Engage with Prototypes",
       "name": "Engage with Prototypes",
-      "absolute_position": 27,
+      "absolute_position": 28,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 27,
+      "relative_position": 28,
       "properties": {
         "overview": "**You will:**\n\n* Explore sample apps and prototypes. \n\n**Suggested time:** 20 minutes",
         "student_overview": "**You will:**\n\n* Explore sample apps and prototypes. \n\n**Suggested time:** 20 minutes"
@@ -558,10 +585,10 @@
     {
       "key": "Teaching Creating Apps for Devices ",
       "name": "Teaching Creating Apps for Devices ",
-      "absolute_position": 28,
+      "absolute_position": 29,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 28,
+      "relative_position": 29,
       "properties": {
         "overview": "**You will:**\n\n* Consider the role of the teacher in a computer science classroom.\n* Learn about authentic CS practices that students will develop throughout the Creating Apps for Devices unit.\n* Reflect on how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.\n\n**Suggested Time:** 25 minutes",
         "student_overview": "**You will:**\n\n* Consider the role of the teacher in a computer science classroom.\n* Learn about authentic CS practices that students will develop throughout the Creating Apps for Devices unit.\n* Reflect on how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.\n\n**Suggested Time:** 25 minutes"
@@ -575,10 +602,10 @@
     {
       "key": "lesson-2",
       "name": "OG States of Matter",
-      "absolute_position": 29,
+      "absolute_position": 30,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 29,
+      "relative_position": 30,
       "properties": {
       },
       "seeding_key": {
@@ -590,10 +617,10 @@
     {
       "key": "lesson-1",
       "name": "States of Matter",
-      "absolute_position": 30,
+      "absolute_position": 31,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 30,
+      "relative_position": 31,
       "properties": {
       },
       "seeding_key": {
@@ -7974,6 +8001,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

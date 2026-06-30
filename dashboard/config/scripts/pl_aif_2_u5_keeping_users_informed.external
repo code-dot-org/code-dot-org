@@ -104,7 +104,7 @@ When designing apps, it’s important to keep users informed about what’s happ
 
 ## Different States
 
-<img src="https://images.code.org/abe7409544e61552fc76f7f141a86e13-image-1772733806258.png" alt="Iwebpage loading symbol" width="300px" style="border-radius:10px; float:right; margin: 0 40px 0px 40px;">
+<img src="https://images.code.org/abe7409544e61552fc76f7f141a86e13-image-1772733806258.png" alt="Iwebpage loading symbol" width="250px" style="border-radius:10px; float:right; margin: 0 40px 0px 40px;">
 
 
 - **Loading State:** The app is fetching data. 
@@ -135,5 +135,5 @@ Every time your app makes a request to an API, it needs to handle these three sc
 
 </div>
 
-![]()
+
 MARKDOWN
