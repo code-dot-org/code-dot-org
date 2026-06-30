@@ -13,6 +13,7 @@ import {
   DEFAULT_NODE_WIDTH,
   DEFAULT_PASTE_OFFSET_PX,
   INTERNAL_CLIPBOARD_MARKER,
+  INTERNAL_CLIPBOARD_MIME,
 } from '../constants';
 import type {ClipboardContents} from '../context';
 import type {TabOrderEntry} from '../utils/computeTabOrder';
@@ -105,15 +106,20 @@ export function useCopyPaste({
     pendingMarkerStampRef.current = true;
   }, []);
 
-  // Stamp the system clipboard with our marker on the native copy/cut event that
-  // follows an in-app copy/cut. Its presence lets the paste handler know the
-  // in-app copy is the most recent clipboard action; an external copy
-  // replaces the whole clipboard, wiping the marker, which restores paste.
+  // Stamp our marker onto the system clipboard via a custom MIME type on the
+  // native copy/cut event that follows an in-app copy/cut. Its presence lets the
+  // paste handler know the in-app copy is the most recent clipboard action; an
+  // external copy replaces the whole clipboard, dropping the marker, which
+  // restores paste. The custom type keeps the marker out of text/plain so it
+  // never appears when pasting into another app.
   useEffect(() => {
     const stampMarker = (event: ClipboardEvent) => {
       if (!pendingMarkerStampRef.current) return;
       pendingMarkerStampRef.current = false;
-      event.clipboardData?.setData('text/plain', INTERNAL_CLIPBOARD_MARKER);
+      event.clipboardData?.setData(
+        INTERNAL_CLIPBOARD_MIME,
+        INTERNAL_CLIPBOARD_MARKER
+      );
       event.preventDefault();
     };
     document.addEventListener('copy', stampMarker);
@@ -425,8 +431,9 @@ export function useCopyPaste({
       if (target && isTargetEditable(target)) return;
 
       event.preventDefault();
-      const clipboardText = event.clipboardData?.getData('text/plain') ?? '';
-      const internalCopyIsLatest = clipboardText === INTERNAL_CLIPBOARD_MARKER;
+      const internalCopyIsLatest =
+        event.clipboardData?.getData(INTERNAL_CLIPBOARD_MIME) ===
+        INTERNAL_CLIPBOARD_MARKER;
       const items = event.clipboardData?.items;
       const imageItem =
         !internalCopyIsLatest && items

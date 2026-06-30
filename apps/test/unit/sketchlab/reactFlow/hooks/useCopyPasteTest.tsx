@@ -1,6 +1,9 @@
 import {renderHook} from '@testing-library/react-hooks';
 
-import {INTERNAL_CLIPBOARD_MARKER} from '@cdo/apps/sketchlab/reactFlow/constants';
+import {
+  INTERNAL_CLIPBOARD_MARKER,
+  INTERNAL_CLIPBOARD_MIME,
+} from '@cdo/apps/sketchlab/reactFlow/constants';
 import {useCopyPaste} from '@cdo/apps/sketchlab/reactFlow/hooks/useCopyPaste';
 import {uploadImageAsset} from '@cdo/apps/sketchlab/reactFlow/utils/uploadImageAsset';
 
@@ -30,13 +33,16 @@ function flushPromises() {
 
 function buildPasteEvent(
   items: Array<Partial<DataTransferItem>>,
-  text = ''
+  {internalCopy = false}: {internalCopy?: boolean} = {}
 ): Event {
   const event = new Event('paste', {bubbles: true});
   Object.defineProperty(event, 'clipboardData', {
     value: {
       items,
-      getData: (type: string) => (type === 'text/plain' ? text : ''),
+      getData: (type: string) =>
+        type === INTERNAL_CLIPBOARD_MIME && internalCopy
+          ? INTERNAL_CLIPBOARD_MARKER
+          : '',
     },
     writable: false,
   });
@@ -106,7 +112,7 @@ describe('useCopyPaste paste handling', () => {
     const file = new File(['x'], 'pasted.png', {type: 'image/png'});
     const event = buildPasteEvent(
       [{type: 'image/png', getAsFile: () => file}],
-      INTERNAL_CLIPBOARD_MARKER
+      {internalCopy: true}
     );
 
     container.dispatchEvent(event);
