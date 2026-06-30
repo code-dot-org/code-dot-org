@@ -49,6 +49,7 @@ export const LevelPropertiesBaseSchema = z.object({
     .transform(value => value ?? false),
   parentLevelLink: z
     .string()
+    .nullable()
     .optional()
     .transform(value => value ?? undefined),
   longInstructions: z.string().optional(),

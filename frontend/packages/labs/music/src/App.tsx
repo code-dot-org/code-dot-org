@@ -24,10 +24,6 @@ const plugins = [ToolboxTrashcanPlugin];
 const App = ({
   ...props
 }: Omit<BlocklyLabProps, 'defaultSources' | 'blocklyProps'>) => {
-  const channelId = window.location.pathname.match(
-    /^\/app\/projects\/music\/([^/]+)\/edit$/,
-  )?.[1];
-
   const api = useApiClient();
   const musicApi = useMemo(
     () => (api ? createMusicApiClient(api) : undefined),
@@ -43,7 +39,6 @@ const App = ({
           {...props}
           defaultSources={{source: {}}}
           standaloneProjectType="music"
-          channelId={props.channelId || channelId}
           blocklyProps={{
             theme: darkTheme,
             renderer: ThrasosRenderer,
