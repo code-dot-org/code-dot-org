@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-06-29T17:05:44.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "panels": [
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-2-gen-ai-intro-e7d07368-a9e3-427c-b2ca-7806e59846be",
+        "text": "Imagine a computer that can create completely new things. Not just follow instructions, but _imagine_!",
+        "imageUrl": "https://images.code.org/4cb8926270ddcbf292b77e9df4f96a3c-sample-aid-sc2-unit-generation-lesson-2-gen-ai-intro-panel-1-0e13d040-dce1-409b-9628-c59637e70165.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-2-gen-ai-intro-2ef0c4e4-fdd8-4cf9-9235-738d021daf6a",
+        "text": "From writing captivating stories and poems to even crafting complex code, AI can generate text that feels truly human.",
+        "imageUrl": "https://images.code.org/d117fd10230a3adb91f0684161d45717-sample-aid-sc2-unit-generation-lesson-2-gen-ai-intro-panel-2-8414f333-3147-4bd8-bc46-d1963361699b.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-2-gen-ai-intro-3a3bf61c-6596-46dd-af2e-ae238f5da0ea",
+        "text": "And it's not just words! Generative AI can paint breathtaking landscapes, design unique characters, and bring entirely new worlds to life visually.",
+        "imageUrl": "https://images.code.org/168b206e2799fbede93fe97be8dcb7f2-sample-aid-sc2-unit-generation-lesson-2-gen-ai-intro-panel-3-2ca964a3-642e-4347-93c5-c3f6ea573cdc.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-2-gen-ai-intro-963267d5-badd-4e9e-a532-4a23d5db2674",
+        "text": "These creations often feel like pure magic, conjured out of thin air by an intelligent machine.",
+        "imageUrl": "https://images.code.org/ea05a398243d7b01ddf77c7d8958095d-sample-aid-sc2-unit-generation-lesson-2-gen-ai-intro-panel-4-a5d770c3-e06b-4745-bad3-41ca047e89dd.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-2-gen-ai-intro-0a99e454-b04f-469f-91f1-60f39f7cbc51",
+        "text": "But what if I told you the \"magic\" comes from something surprisingly simple: predicting what comes next?",
+        "imageUrl": "https://images.code.org/342ca519e39962ecb9e7d39cde0cf088-sample-aid-sc2-unit-generation-lesson-2-gen-ai-intro-panel-5-2e2ff9fa-16ef-4fb1-a638-0d1a66cee10a.png",
+        "layout": "text-top-center"
+      }
+    ],
+    "generate_outline": "Introduce generative AI by showcasing exciting examples of text and images it can create. Frame it as powerful but prepare to reveal the simple core idea behind its \"magic.\""
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:06:34 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:06:34 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>
