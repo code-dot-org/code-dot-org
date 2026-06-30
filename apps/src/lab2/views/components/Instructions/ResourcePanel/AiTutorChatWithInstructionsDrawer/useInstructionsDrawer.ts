@@ -11,9 +11,8 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 const MIN_CHAT_HEIGHT = 133; // Minimum so that user message editor is always visible + some chat.
 const MIN_INSTRUCTIONS_HEIGHT = 150;
 const DEFAULT_INITIAL_INSTRUCTIONS_HEIGHT = 250; // Initial height needed before instructions content is measured.
-// Matches .instructionsDrawer padding (10px top + 10px bottom). Must stay in sync
-// so the drawer can grow tall enough to show the full instructions without a
-// leftover scrollbar when there's room.
+// The .instructionsScrollArea vertical padding (10px top + bottom); the drawer's
+// full height is the measured content height plus this.
 const INSTRUCTIONS_DRAWER_VERTICAL_PADDING_PX = 20;
 
 interface UseInstructionsDrawerOptions {
@@ -299,17 +298,14 @@ export const useInstructionsDrawer = ({
     setIsCollapsed(prev => !prev);
   }, [isCollapsed]);
 
-  // The full panel height (whole container). Derived from containerAvailableHeight,
-  // which is stable across tab switches, so it's correct synchronously — unlike the
-  // effect-driven instructionsHeight, which lags a frame.
+  // Whole-container height, derived synchronously (instructionsHeight lags a frame).
   const fullHeight =
     containerAvailableHeight === undefined
       ? undefined
       : containerAvailableHeight + RESIZE_BAR_SIZE_PX;
 
-  // The instructions drawer height when the AI Tutor tab is active — computed
-  // independent of the current tab, so the chat's size below is stable across a
-  // tab switch.
+  // Open-drawer height, computed independent of the current tab so the chat below
+  // stays the same size across a tab switch.
   const activeInstructionsHeight =
     containerAvailableHeight === undefined
       ? undefined
@@ -320,11 +316,9 @@ export const useInstructionsDrawer = ({
           containerAvailableHeight - MIN_CHAT_HEIGHT
         );
 
-  // The chat's height when shown on the AI Tutor tab: the visible area below the
-  // drawer, so its messages sit just below the instructions (not behind them).
-  // Computed independent of the current tab so it stays constant across a tab
-  // switch — the flex chat panel then clips/reveals it in place rather than the
-  // chat reflowing.
+  // The visible chat area below the drawer. Sized to it (rather than full height
+  // behind the opaque drawer) so messages stay readable below the drawer instead
+  // of being occluded by it.
   const chatContentHeight =
     containerAvailableHeight === undefined
       ? undefined

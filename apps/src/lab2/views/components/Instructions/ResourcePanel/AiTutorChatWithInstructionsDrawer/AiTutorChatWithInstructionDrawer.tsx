@@ -84,10 +84,9 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   // unless the user has collapsed the drawer.
   const showInstructions = !aiTutorActive || !isCollapsed;
 
-  // The instructions drawer stays mounted even while hidden (height 0), so that
-  // switching back to the Instructions tab doesn't remount it and replay the
-  // instructions' slide-in animation. Make it inert while hidden so its links
-  // aren't tabbable.
+  // Keep the drawer mounted while hidden (height 0) so switching back doesn't
+  // remount it and replay the slide-in; inert while hidden so its links aren't
+  // tabbable.
   const instructionsDrawerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (instructionsDrawerRef.current) {
@@ -108,13 +107,9 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     return () => clearTimeout(id);
   }, [isCollapsed]);
 
-  // Also animate around a tab switch, so switching to/from a collapsed AI Tutor
-  // tab rolls the instructions down to 0 (or back up to full) rather than cutting.
-  // `tabSwitching` is derived during render (before the effect updates the ref),
-  // so the transition is already live on the very frame the drawer height changes
-  // — an effect-set flag arrives a frame late, after the height has jumped.
-  // `animatingTabSwitch` then keeps it live for the rest of the animation so the
-  // transition isn't cancelled when `.instant` would otherwise return.
+  // Animate the roll on a tab switch too. tabSwitching is derived during render so
+  // the transition is live on the frame the height changes (an effect flag lands a
+  // frame late); animatingTabSwitch then holds it on for the rest of the roll.
   const previousAiTutorActiveRef = useRef(aiTutorActive);
   const tabSwitching = previousAiTutorActiveRef.current !== aiTutorActive;
   const [animatingTabSwitch, setAnimatingTabSwitch] = useState(false);
@@ -131,11 +126,8 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   const animateLayout =
     !isCollapsed || !drawerSettledClosed || tabSwitching || animatingTabSwitch;
 
-  // Size each state's drawer height synchronously (0 hidden, full on the
-  // Instructions tab), not from the frame-late instructionsHeight, so the height —
-  // and the transition's target — is right on the first frame and the roll
-  // animates cleanly to it rather than via a stale intermediate. Only the open,
-  // resizable drawer uses the (animating) instructionsHeight.
+  // Hidden (0) and full heights are derived synchronously so the first frame is
+  // right; only the open drawer uses the frame-late instructionsHeight.
   const drawerHeight = !showInstructions
     ? 0
     : aiTutorActive

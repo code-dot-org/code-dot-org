@@ -12,10 +12,7 @@
   background: var(--background-neutral-primary);
   border-radius: 4px;
   box-sizing: border-box;
-  // The 10px inset lives on the scroll area, not here, so this box has no padding
-  // floor and can collapse smoothly to 0 (an inset here would hold the height at
-  // the padding, then jump the last stretch to 0). overflow:hidden clips the
-  // scroll area's residual padding box as it reaches 0.
+  // Clip content so the height can animate down to 0.
   overflow: hidden;
   // Animate the drawer height: between the Instructions tab (full height) and the
   // AI Tutor tab (drawer height), and when opening/closing via the toggle.
@@ -66,8 +63,8 @@
   transition: opacity 0.2s ease;
 }
 
-// Applied to the chat panel and toggle when the Instructions tab is showing:
-// fully transparent and non-interactive, so only the instructions remain.
+// Fade the chat panel and toggle out on the Instructions tab (the opacity
+// transition lives on those elements) and disable interaction.
 .fadeHidden {
   opacity: 0;
   pointer-events: none;

@@ -294,6 +294,15 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     return {levelTours, otherAvailableTours};
   }, [levelProperties]);
 
+  // weblab2 with the AI tutor and long instructions: the Instructions and AI Tutor
+  // tabs render one shared AiTutorChatWithInstructionDrawer so the instructions
+  // persist across the switch. Both tab buttons still appear in availableTabs.
+  const usesSharedInstructionsDrawer =
+    !!hasInstructionsDrawer &&
+    aiTutorVisible &&
+    !!hiddenContextCallback &&
+    !!levelProperties.longInstructions;
+
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {
     if (sidebarOnly) {
@@ -331,12 +340,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         onAssetRemoved,
         initialWelcomeMessage,
       };
-      if (!hasInstructionsDrawer || !levelProperties.longInstructions) {
-        tabMap[Tabs.AiTutor] = <AiTutorChat {...aiTutorProps} />;
-      } else {
-        // This drawer is rendered as a single shared instance covering both the
-        // Instructions and AI Tutor tabs (see the tab content render below), so
-        // the instructions never unmount/crossfade when switching between them.
+      if (usesSharedInstructionsDrawer) {
         tabMap[Tabs.AiTutor] = (
           <AiTutorChatWithInstructionDrawer
             {...aiTutorProps}
@@ -345,6 +349,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             aiTutorActive={currentTab === Tabs.AiTutor}
           />
         );
+      } else {
+        tabMap[Tabs.AiTutor] = <AiTutorChat {...aiTutorProps} />;
       }
     }
 
@@ -439,7 +445,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     onAssetUploaded,
     onAssetRemoved,
     initialWelcomeMessage,
-    hasInstructionsDrawer,
+    usesSharedInstructionsDrawer,
     isPredictLevel,
     selectedVersion,
     levelId,
@@ -462,16 +468,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       availableTabs[Tabs.VersionHistory] !== undefined
     );
   }, [availableTabs]);
-
-  // When the instructions drawer is used (weblab2 with AI tutor + instructions),
-  // the Instructions and AI Tutor tabs share a single AiTutorChatWithInstructionDrawer
-  // instance so the instructions stay put across the switch; only the chat and
-  // toggle animate in/out. Both tab buttons still appear in availableTabs.
-  const usesSharedInstructionsDrawer =
-    !!hasInstructionsDrawer &&
-    aiTutorVisible &&
-    !!hiddenContextCallback &&
-    !!levelProperties.longInstructions;
 
   const floatingSettingsPanelStyles = usePanelPosition(
     isFloatingSettingsOpen,
@@ -598,6 +594,35 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isSettingsOpen,
     isFloatingSettingsOpen,
   ]);
+
+  // A tab's content pane: hidden (inert + transparent) unless it's the current
+  // tab. refTab, when given, exposes the pane via tabContentRefs for focus
+  // management. The shared instructions/AI Tutor pane reuses this with its own
+  // visibility rule, since one instance serves both tabs.
+  const renderTabContentPane = (
+    key: string,
+    content: React.ReactNode,
+    hidden: boolean,
+    refTab?: Tabs
+  ) => (
+    <div
+      key={key}
+      className={classNames(
+        styles.tabContent,
+        hidden && styles.tabContentHidden
+      )}
+      ref={el => {
+        if (el) {
+          el.inert = hidden;
+        }
+        if (refTab) {
+          tabContentRefs.current[refTab] = el;
+        }
+      }}
+    >
+      {content}
+    </div>
+  );
 
   return (
     <>
@@ -776,72 +801,33 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
               }
             >
               <div className={styles.tabContentContainer}>
-                {usesSharedInstructionsDrawer && (
-                  // Single persistent panel shared by the Instructions and AI
-                  // Tutor tabs. Visible whenever either is selected, so switching
-                  // between them never crossfades the instructions.
-                  <div
-                    key="instructions-aitutor-shared"
-                    className={classNames(
-                      styles.tabContent,
-                      currentTab !== Tabs.Instructions &&
-                        currentTab !== Tabs.AiTutor &&
-                        styles.tabContentHidden
-                    )}
-                    ref={el => {
-                      const hidden =
-                        currentTab !== Tabs.Instructions &&
-                        currentTab !== Tabs.AiTutor;
-                      if (el) {
-                        el.inert = hidden;
-                        tabContentRefs.current[Tabs.AiTutor] = el;
-                      } else {
-                        tabContentRefs.current[Tabs.AiTutor] = null;
-                      }
-                    }}
-                  >
-                    {availableTabs[Tabs.AiTutor]}
-                  </div>
-                )}
+                {/* One shared pane serves both the Instructions and AI Tutor tabs
+                    so the instructions persist across the switch; it's visible
+                    whenever either tab is current. */}
+                {usesSharedInstructionsDrawer &&
+                  renderTabContentPane(
+                    'instructions-aitutor-shared',
+                    availableTabs[Tabs.AiTutor],
+                    currentTab !== Tabs.Instructions &&
+                      currentTab !== Tabs.AiTutor,
+                    Tabs.AiTutor
+                  )}
                 {getTypedKeys(availableTabs).map(tab => {
-                  // The Instructions and AI Tutor tabs are rendered together in
-                  // the shared panel above when the drawer is in use.
                   if (
                     usesSharedInstructionsDrawer &&
                     (tab === Tabs.Instructions || tab === Tabs.AiTutor)
                   ) {
                     return null;
                   }
-                  return (
-                    <div
-                      key={tab}
-                      className={classNames(
-                        styles.tabContent,
-                        tab !== currentTab && styles.tabContentHidden
-                      )}
-                      ref={el => {
-                        if (el) {
-                          el.inert = tab !== currentTab;
-                          // Store ref for AI Tutor and Version History tabs.
-                          if (
-                            tab === Tabs.AiTutor ||
-                            tab === Tabs.VersionHistory
-                          ) {
-                            tabContentRefs.current[tab] = el;
-                          }
-                        } else {
-                          // Clear ref when element is removed.
-                          if (
-                            tab === Tabs.AiTutor ||
-                            tab === Tabs.VersionHistory
-                          ) {
-                            tabContentRefs.current[tab] = null;
-                          }
-                        }
-                      }}
-                    >
-                      {availableTabs[tab]}
-                    </div>
+                  const refTab =
+                    tab === Tabs.AiTutor || tab === Tabs.VersionHistory
+                      ? tab
+                      : undefined;
+                  return renderTabContentPane(
+                    tab,
+                    availableTabs[tab],
+                    tab !== currentTab,
+                    refTab
                   );
                 })}
               </div>
