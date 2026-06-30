@@ -322,7 +322,7 @@ describe('TeacherHomepage', () => {
   it('creates a demo section and navigates to progress without reloading', async () => {
     fetchSpy.mockImplementation(demoPresetsFetchMock());
     postSpy.mockImplementation((url: string) => {
-      if (url === '/api/v1/sections/demo/high') {
+      if (url === '/api/v1/sections/demo/create/high') {
         return Promise.resolve({
           json: () =>
             Promise.resolve({
@@ -366,7 +366,7 @@ describe('TeacherHomepage', () => {
       })
     );
     postSpy.mockImplementation((url: string) => {
-      if (url === '/api/v1/sections/demo/high') {
+      if (url === '/api/v1/sections/demo/create/high') {
         return Promise.resolve({
           json: () =>
             Promise.resolve({

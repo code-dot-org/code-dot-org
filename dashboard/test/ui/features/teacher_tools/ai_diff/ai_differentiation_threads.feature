@@ -4,7 +4,6 @@
 Feature: Read and create AI diff threads
   @eyes
   @chrome
-  @properties_encryption_key
   Scenario: Teacher can see threads and create new threads
     Given I create a teacher named "Stilgar"
     And I add the current user to the "ai-differentiation" single user experiment

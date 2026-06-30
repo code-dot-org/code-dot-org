@@ -298,7 +298,10 @@ function ReactFlowSketchLabViewInner({
               </>
             }
           >
-            <WorkspaceAlerts inWorkspaceContainer />
+            <WorkspaceAlerts
+              inWorkspaceContainer
+              hasStandaloneProjectLevel={false}
+            />
             <ReactFlowCanvas
               key={mountKey}
               updateSources={updateSources}

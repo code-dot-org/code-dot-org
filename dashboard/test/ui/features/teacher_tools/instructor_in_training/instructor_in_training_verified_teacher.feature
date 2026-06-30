@@ -67,7 +67,6 @@ Feature: Self Paced PL Instructor in Training - Verified Instructor
     And element "#instructor_in_training_tag" contains text "Viewing As Instructor"
 
   @no_mobile
-  @properties_encryption_key
   Scenario: View Instructor In Training LevelGroup Level as Verified Teacher
     Given I create an authorized teacher-associated student named "Manuel"
     And I sign in as "Teacher_Manuel"

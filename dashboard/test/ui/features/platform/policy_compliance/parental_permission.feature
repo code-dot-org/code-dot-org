@@ -1,4 +1,5 @@
 @no_mobile
+@playwright
 Feature: Policy Compliance and Parental Permission
   Scenario: New under 13 account should be able to send a parental request.
     Given I am on "http://studio.code.org"

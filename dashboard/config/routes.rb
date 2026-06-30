@@ -136,6 +136,7 @@ Dashboard::Application.routes.draw do
     resources :images, only: [:new]
 
     get "/ai_iteration/tools", to: "ai_iteration#tools"
+    get "/ai_iteration/image_safety_eval", to: "ai_iteration#image_safety_eval"
     post "/student_code_samples", to: "student_work_sample#fetch_student_code_samples"
     post "/free_response_answers", to: "student_work_sample#fetch_free_response_answers"
 
@@ -225,9 +226,13 @@ Dashboard::Application.routes.draw do
           get 'valid_course_offerings'
           get 'available_participant_types'
           get 'require_captcha'
-          get 'demo/presets', action: 'presets', as: 'presets'
-          post 'demo/:demo_type', action: 'create_demo', as: 'create_demo'
           get 'assigned_essential_ai_dependency'
+        end
+        collection do
+          get 'demo/presets', action: 'presets', as: 'presets'
+          get 'demo/check_staleness', action: 'check_demo_section_staleness', as: 'check_demo_section_staleness'
+          post 'demo/reset', action: 'reset_demo_section', as: 'reset_demo_section'
+          post 'demo/create/:demo_type', action: 'create_demo', as: 'create_demo'
         end
       end
     end

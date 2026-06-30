@@ -21,6 +21,18 @@
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
+    "announcements": [
+      {
+        "key": "ba312b7f-825b-45f2-9341-785eb2ecff4f",
+        "notice": "Units 9-11 Coming Soon!",
+        "details": "Units 9-11 are currently getting some polish and will be available after July 10! ",
+        "link": "",
+        "type": "information",
+        "visibility": "Teacher-only",
+        "dismissible": true,
+        "buttonText": ""
+      }
+    ],
     "family_name": "ai-foundations-year1",
     "has_verified_resources": true,
     "numbered_units": "auto",

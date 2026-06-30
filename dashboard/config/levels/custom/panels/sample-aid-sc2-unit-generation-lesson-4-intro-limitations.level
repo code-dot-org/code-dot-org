@@ -1,0 +1,33 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-06-29T17:05:56.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "panels": [
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-4-intro-limitations-f0263627-a90e-441c-9d9f-21c71984abf9",
+        "text": "Generative AI can sometimes 'hallucinate' – meaning it makes up information that sounds convincing but isn't real. It's like when your friend tells a wild story that's completely false!",
+        "imageUrl": "https://images.code.org/8b85ce2528e6bb0aae111c35d9ac171d-sample-aid-sc2-unit-generation-lesson-4-intro-limitations-panel-1-3cc3b255-f8c5-4140-8d13-93561629517e.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-4-intro-limitations-22f4539f-7723-4dfc-a2c5-5c8b8e2ea21f",
+        "text": "Even worse, AI can be *very confident* about these made-up facts! It doesn't know what it doesn't know, and will present false information as if it's 100% correct.",
+        "imageUrl": "https://images.code.org/fbac165f847563c9d06657a6efade084-sample-aid-sc2-unit-generation-lesson-4-intro-limitations-panel-2-32858520-3c2e-4d60-a2b7-4097f7cdd16d.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-4-intro-limitations-c8a539f0-81be-44f2-a65f-f22a6b6c2fa5",
+        "text": "AI models learn from the data they're trained on. If that data is incomplete or biased, the AI won't have all the information and might give incomplete or unfair answers. It can't know what wasn't in its 'textbooks'!",
+        "imageUrl": "https://images.code.org/ad472cd4c7e4c68f85fda976a9d12638-sample-aid-sc2-unit-generation-lesson-4-intro-limitations-panel-3-d5f463c1-ca99-4cac-bdf3-9a9908fb7531.png",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "generate_outline": "Introduce students to the inherent limitations of generative AI, focusing on hallucination (making up false information), confidence calibration (being confidently wrong), and gaps due to incomplete or biased training data. Use relatable examples to illustrate each concept."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:06:27 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:06:28 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

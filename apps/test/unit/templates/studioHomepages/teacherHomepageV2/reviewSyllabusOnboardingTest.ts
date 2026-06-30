@@ -2,7 +2,7 @@ import {Tour} from 'shepherd.js';
 
 import {
   REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
-  UNIT_BREADCRUMB_STEP_ID,
+  COURSE_HEADER_STEP_ID,
   createReviewSyllabusHomepageSteps,
   createReviewSyllabusUnitOverviewSteps,
   ReviewSyllabusQuizConfig,
@@ -153,7 +153,7 @@ describe('createReviewSyllabusUnitOverviewSteps', () => {
       HIGH_QUIZ_CONFIG
     );
     const ids = steps.map(s => s.id);
-    expect(ids).toContain(UNIT_BREADCRUMB_STEP_ID);
+    expect(ids).toContain(COURSE_HEADER_STEP_ID);
     expect(ids).toContain('quiz-level-priority');
     expect(ids).toContain('lesson-resources-intro');
   });
@@ -166,7 +166,7 @@ describe('createReviewSyllabusUnitOverviewSteps', () => {
       MIDDLE_QUIZ_CONFIG
     );
     const ids = steps.map(s => s.id);
-    expect(ids).toContain(UNIT_BREADCRUMB_STEP_ID);
+    expect(ids).toContain(COURSE_HEADER_STEP_ID);
     expect(ids).toContain('quiz-level-priority');
     expect(ids).toContain('lesson-resources-intro');
   });
@@ -179,7 +179,7 @@ describe('createReviewSyllabusUnitOverviewSteps', () => {
       null
     );
     const ids = steps.map(s => s.id);
-    expect(ids).not.toContain(UNIT_BREADCRUMB_STEP_ID);
+    expect(ids).not.toContain(COURSE_HEADER_STEP_ID);
     expect(ids).not.toContain('quiz-level-priority');
     expect(ids).toContain('lesson-resources-intro');
   });
@@ -264,7 +264,7 @@ describe('select-first-lesson when handler', () => {
     document.body.innerHTML = '';
   });
 
-  it('saves UNIT_BREADCRUMB_STEP_ID to sessionStorage for demoType "high"', () => {
+  it('saves COURSE_HEADER_STEP_ID to sessionStorage for demoType "high"', () => {
     const tour = makeMockTour();
     const steps = createReviewSyllabusHomepageSteps(
       tour,
@@ -278,11 +278,11 @@ describe('select-first-lesson when handler', () => {
 
     expect(mockTrySetSessionStorage).toHaveBeenCalledWith(
       REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
-      UNIT_BREADCRUMB_STEP_ID
+      COURSE_HEADER_STEP_ID
     );
   });
 
-  it('saves UNIT_BREADCRUMB_STEP_ID to sessionStorage for demoType "middle"', () => {
+  it('saves COURSE_HEADER_STEP_ID to sessionStorage for demoType "middle"', () => {
     const tour = makeMockTour();
     const steps = createReviewSyllabusHomepageSteps(
       tour,
@@ -296,7 +296,7 @@ describe('select-first-lesson when handler', () => {
 
     expect(mockTrySetSessionStorage).toHaveBeenCalledWith(
       REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
-      UNIT_BREADCRUMB_STEP_ID
+      COURSE_HEADER_STEP_ID
     );
   });
 

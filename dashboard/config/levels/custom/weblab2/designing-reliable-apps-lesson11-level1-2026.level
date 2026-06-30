@@ -1,0 +1,55 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-06-25T07:43:11.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+      },
+      "openFiles": [
+
+      ]
+    },
+    "encrypted": "false",
+    "long_instructions": "# Explore and Test Your API\r\n\r\n**Goal**: Choose an API and confirm it works in your project before building your list view.\r\n\r\n1. **Choose Your API:** Select an API from the [curated list](https://studio.code.org/docs/ide/applab/expressions/startWebRequest) that fits your app idea and audience.\r\n2. **Make a Simple Fetch Call:** Write a basic fetch request using the API URL.\r\n3. **Inspect the Network Tab:** Check the Network tab to view the response data.\r\n4. **Identify Key Fields:** Locate 2 to 4 fields you will display in your card view, such as title, image, description, or id. Confirm they exist in the response.\r\n\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "code",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildJavaScript",
+        "documentation",
+        "example",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "project_template_level_name": "designing-reliable-apps-lesson11-level1-template-2026",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-25T07:43:11.292+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson11-level1b-test_2025-pilot_2025-pil_2026\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson11-level1b-test_2025-pilot_2025-pil_2026\"},{\"changed_at\":\"2026-06-25 07:44:43 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"ai_tutor_prompt_settings\",\"project_template_level_name\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -77,13 +77,13 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
     <div className={styles.onboardingChecklistOuter}>
       <div className={styles.onboardingChecklistInner}>
         <div className={styles.onboardingChecklistInnerContent}>
-          <Typography variant="h4" gutterBottom>
+          <Typography variant="h4">
             <span className={styles.gradientIcon}>
               <FontAwesomeV6Icon iconName="sparkle" iconStyle="solid" />
             </span>
             Where should we start?
           </Typography>
-          <Typography variant="body2">
+          <Typography variant="body2" gutterBottom>
             Teaching Assistant can help you get started with CodeAI
           </Typography>
           <div className={styles.onboardingChecklistButtons}>
@@ -95,6 +95,7 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
                 className={styles.onboardingChecklistButton}
                 onClick={() => handleButtonClick(id)}
                 type="button"
+                size="small"
               >
                 {completedTourNames.has(id) && (
                   <span className={styles.onboardingChecklistCheckIcon}>
