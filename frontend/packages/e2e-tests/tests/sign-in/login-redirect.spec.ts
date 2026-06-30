@@ -1,8 +1,8 @@
-import AxeBuilder from '@axe-core/playwright';
 import {expect, test} from '@playwright/test';
 
 import {SignInPage} from '../pages/sign-in';
 import {createUser, resetSession} from '../shared/auth';
+import {analyze} from '../shared/axe';
 
 /** MC level URL with login_required param. After sign-in the server strips the param. */
 const LEVEL_PATH = '/courses/mc/units/1/lessons/1/levels/1';
@@ -116,14 +116,16 @@ test.describe('Navigating to a level page with login required', () => {
       ...IN_TRANSITION_VIOLATIONS,
     ]);
 
-    const results = await new AxeBuilder({page}).analyze();
-    const actual = results.violations.map(v => v.id);
+    // Default rules, not WCAG-only: REQUIRED needs best-practice ids (region etc.).
+    const violations = Object.keys(await analyze(page));
 
     // No violation outside the documented set — catches genuine new regressions.
-    expect(actual.filter(id => !allowed.has(id)).sort()).toEqual([]);
+    expect(violations.filter(id => !allowed.has(id)).sort()).toEqual([]);
 
     // Every required violation is still present — catches a happy regression that
     // should shrink the REQUIRED list.
-    expect(REQUIRED_VIOLATIONS.filter(id => !actual.includes(id))).toEqual([]);
+    expect(REQUIRED_VIOLATIONS.filter(id => !violations.includes(id))).toEqual(
+      [],
+    );
   });
 });
