@@ -53,6 +53,7 @@ describe('useCopyPaste paste handling', () => {
   let container: HTMLDivElement;
   let setNodes: jest.Mock;
   let setEdges: jest.Mock;
+  let onImageUploadError: jest.Mock;
 
   beforeEach(() => {
     mockUploadImageAsset.mockResolvedValue('/v3/assets/channel-1/pasted.png');
@@ -64,6 +65,7 @@ describe('useCopyPaste paste handling', () => {
 
     setNodes = jest.fn();
     setEdges = jest.fn();
+    onImageUploadError = jest.fn();
   });
 
   afterEach(() => {
@@ -84,6 +86,7 @@ describe('useCopyPaste paste handling', () => {
         canvasContainerRef,
         readOnly,
         levelName: 'test-level',
+        onImageUploadError,
       })
     );
   }
@@ -105,6 +108,20 @@ describe('useCopyPaste paste handling', () => {
     expect(addedNodes).toHaveLength(1);
     expect(addedNodes[0].type).toBe('image');
     expect(addedNodes[0].data.src).toBe('/v3/assets/channel-1/pasted.png');
+    expect(onImageUploadError).not.toHaveBeenCalled();
+  });
+
+  it('reports an error and adds no node when the upload fails', async () => {
+    mockUploadImageAsset.mockRejectedValue(new Error('network down'));
+    renderCopyPaste();
+    const file = new File(['x'], 'pasted.png', {type: 'image/png'});
+    const event = buildPasteEvent([{type: 'image/png', getAsFile: () => file}]);
+
+    container.dispatchEvent(event);
+    await flushPromises();
+
+    expect(onImageUploadError).toHaveBeenCalledTimes(1);
+    expect(setNodes).not.toHaveBeenCalled();
   });
 
   it('ignores a stale clipboard image when our copy marker is present', async () => {

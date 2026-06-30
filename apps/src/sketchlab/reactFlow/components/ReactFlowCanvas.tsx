@@ -31,6 +31,7 @@ import {
   MIN_ZOOM,
   SAVE_DEBOUNCE_MS,
   SKETCHLAB_TOOLBAR_PANEL_CLASS,
+  TRANSIENT_MESSAGE_DURATION_MS,
 } from '../constants';
 import {
   AnchorDraggingProvider,
@@ -50,6 +51,7 @@ import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
 import {useLineEdgeDrag} from '../hooks/useLineEdgeDrag';
 import {useNodeDrag} from '../hooks/useNodeDrag';
 import {useTabOrder} from '../hooks/useTabOrder';
+import {useTransientMessage} from '../hooks/useTransientMessage';
 import {useUndoHistory} from '../hooks/useUndoHistory';
 import GroupNode from '../nodes/GroupNode';
 import ImageNode from '../nodes/ImageNode';
@@ -283,23 +285,25 @@ export default function ReactFlowCanvas({
     return count;
   }, [nodes, edges]);
 
-  const [groupModeError, setGroupModeError] = useState<string | null>(null);
-  const groupModeErrorTimerRef = useRef<ReturnType<typeof setTimeout> | null>(
-    null
+  const [groupModeError, showGroupModeError] = useTransientMessage(
+    TRANSIENT_MESSAGE_DURATION_MS
   );
   const handleCannotGroup = useCallback(
     (msg: string) => {
       announceGroupMode(msg);
-      setGroupModeError(msg);
-      if (groupModeErrorTimerRef.current)
-        clearTimeout(groupModeErrorTimerRef.current);
-      groupModeErrorTimerRef.current = setTimeout(
-        () => setGroupModeError(null),
-        2000
-      );
+      showGroupModeError(msg);
     },
-    [announceGroupMode]
+    [announceGroupMode, showGroupModeError]
   );
+
+  const [imageUploadError, showImageUploadError] = useTransientMessage(
+    TRANSIENT_MESSAGE_DURATION_MS
+  );
+  const handleImageUploadError = useCallback(() => {
+    const message = 'Could not upload image. Please try again.';
+    announceGroupMode(message);
+    showImageUploadError(message);
+  }, [announceGroupMode, showImageUploadError]);
 
   const handlePaneClick = useCallback(() => {
     canvasContainerRef.current?.focus();
@@ -365,6 +369,7 @@ export default function ReactFlowCanvas({
     canvasContainerRef,
     readOnly,
     levelName,
+    onImageUploadError: handleImageUploadError,
   });
 
   const clipboardContextValue = useMemo(
@@ -813,6 +818,14 @@ export default function ReactFlowCanvas({
                       >
                         {groupModeError ??
                           'Tab to move — Enter to select/deselect — G to group — Esc to cancel'}
+                      </Panel>
+                    )}
+                    {imageUploadError && (
+                      <Panel
+                        position="bottom-center"
+                        className={styles.uploadError}
+                      >
+                        {imageUploadError}
                       </Panel>
                     )}
                     <Background />

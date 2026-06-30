@@ -39,6 +39,7 @@ interface UseCopyPasteOptions {
   canvasContainerRef: React.RefObject<HTMLDivElement>;
   readOnly: boolean;
   levelName: string;
+  onImageUploadError: () => void;
 }
 
 // Returns the handle-to-handle horizontal span of a line clipboard's anchor
@@ -64,6 +65,7 @@ export function useCopyPaste({
   canvasContainerRef,
   readOnly,
   levelName,
+  onImageUploadError,
 }: UseCopyPasteOptions) {
   const {deleteElements, screenToFlowPosition} = useReactFlow<
     SketchlabReactFlowNode,
@@ -443,11 +445,20 @@ export function useCopyPaste({
         pasteImage(uploadUrl);
       } catch (error) {
         console.error('Failed to upload pasted image:', error);
+        onImageUploadError();
       }
     };
     document.addEventListener('paste', handlePaste);
     return () => document.removeEventListener('paste', handlePaste);
-  }, [canvasContainerRef, readOnly, levelName, channelId, paste, pasteImage]);
+  }, [
+    canvasContainerRef,
+    readOnly,
+    levelName,
+    channelId,
+    paste,
+    pasteImage,
+    onImageUploadError,
+  ]);
 
   return {
     duplicateNode,

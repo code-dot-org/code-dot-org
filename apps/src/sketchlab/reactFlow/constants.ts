@@ -24,6 +24,9 @@ export const SAVE_DEBOUNCE_MS = 300;
 
 export const DEFAULT_PASTE_OFFSET_PX = 30;
 
+// How long transient on-canvas messages (mode hints, upload errors) stay up.
+export const TRANSIENT_MESSAGE_DURATION_MS = 3000;
+
 // Custom clipboard MIME type stamped onto the system clipboard when a canvas
 // element is copied in-app. A dedicated type (rather than text/plain) keeps the
 // marker out of what external apps paste; they only read standard formats.
