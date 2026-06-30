@@ -12,7 +12,7 @@ saucelabs_authkey: !Secret
 saucelabs_username: !Secret
 puma_control_server_token: !Secret
 redshift_cluster_id: !Secret
-device_farm_desktop_project_arn: !Secret
+device_farm_desktop_project_arn: 'DTT Project ARN to be inserted after code review'
 device_farm_mobile_project_arn: !Secret
 <% else %>
 
@@ -126,7 +126,7 @@ skip_seed_all: true
 
 # Pass in secrets via env vars, since Drone cannot access secrets directly.
 contentful_cs_for_all_access_token: <%= ENV['CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN'] %>
-device_farm_desktop_project_arn: <%= ENV['DEVICE_FARM_DESKTOP_PROJECT_ARN'] %>
+device_farm_desktop_project_arn: 'CI Project ARN to be inserted after code review'
 saucelabs_authkey: <%= ENV['SAUCE_ACCESS_KEY'] %>
 saucelabs_username: <%= ENV['SAUCE_USERNAME'] %>
 properties_encryption_key: <%= ENV['PROPERTIES_ENCRYPTION_KEY'] %>
