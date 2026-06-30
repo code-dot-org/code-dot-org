@@ -4,6 +4,13 @@ import {TestResults, ResultType} from '../constants';
 import AppView from '../templates/AppView';
 import {createReactRoot} from '../util/createReactRoot';
 
+import {
+  announceResult,
+  announceStep,
+  focusAnnouncer,
+  setupResultAnnouncer,
+} from './resultAnnouncer';
+
 const maze = require('@code-dot-org/maze');
 const React = require('react');
 const Provider = require('react-redux').Provider;
@@ -68,6 +75,8 @@ module.exports = class Maze {
     // replace studioApp() methods with our own
     studioApp().runButtonClick = this.runButtonClick_;
     studioApp().reset = this.reset_;
+
+    setupResultAnnouncer();
 
     const skin = config.skin;
     const level = config.level;
@@ -264,6 +273,15 @@ module.exports = class Maze {
   resetButtonClick_ = () => {
     var stepButton = document.getElementById('stepButton');
     stepButton.removeAttribute('disabled');
+
+    var runButton = document.getElementById('runButton');
+    if (
+      runButton &&
+      runButton.style.display !== 'none' &&
+      document.activeElement === document.body
+    ) {
+      runButton.focus();
+    }
   };
 
   /**
@@ -292,7 +310,20 @@ module.exports = class Maze {
     if (!resetButton.style.minWidth) {
       resetButton.style.minWidth = runButton.offsetWidth + 'px';
     }
+
+    // toggleRunReset is about to hide the Run button with display:none. If a
+    // keyboard/screen-reader user activated it, the focused button vanishing
+    // collapses focus to <body>, and VoiceOver re-announces the page title —
+    // which also flushes our run announcements. Park focus on the live region
+    // instead, so focus stays put and VoiceOver's cursor sits right where the
+    // step announcements land. The region has no accessible name, so this is
+    // quiet; the per-step announcements narrate what happens.
+    var runButtonHadFocus = document.activeElement === runButton;
     studioApp().toggleRunReset('reset');
+    if (runButtonHadFocus) {
+      focusAnnouncer();
+    }
+
     studioApp().reset(false);
     studioApp().attempts++;
   }
@@ -580,6 +611,12 @@ module.exports = class Maze {
       options.message = message;
     }
 
+    announceResult({
+      result: this.result,
+      testResults: this.testResults,
+      message,
+    });
+
     // We will usually want to allow subtypes to situationally prevent a dialog
     // from being shown if they want to allow the user to pass but keep them on
     // the page for iteration; we only refrain from doing so if we know this is
@@ -631,72 +668,96 @@ module.exports = class Maze {
       studioApp().highlight(String(action.blockId));
     }
 
+    const DIRECTION_NAME = ['north', 'east', 'south', 'west'];
+    const facing = () => DIRECTION_NAME[this.controller.getPegmanD()];
+
     switch (action.command) {
       case 'north':
         this.controller.animatedMove(tiles.Direction.NORTH, timePerStep);
+        announceStep('North, moved.');
         break;
       case 'east':
         this.controller.animatedMove(tiles.Direction.EAST, timePerStep);
+        announceStep('East, moved.');
         break;
       case 'south':
         this.controller.animatedMove(tiles.Direction.SOUTH, timePerStep);
+        announceStep('South, moved.');
         break;
       case 'west':
         this.controller.animatedMove(tiles.Direction.WEST, timePerStep);
+        announceStep('West, moved.');
         break;
       case 'look_north':
         this.controller.animatedLook(tiles.Direction.NORTH);
+        announceStep('North, looked.');
         break;
       case 'look_east':
         this.controller.animatedLook(tiles.Direction.EAST);
+        announceStep('East, looked.');
         break;
       case 'look_south':
         this.controller.animatedLook(tiles.Direction.SOUTH);
+        announceStep('South, looked.');
         break;
       case 'look_west':
         this.controller.animatedLook(tiles.Direction.WEST);
+        announceStep('West, looked.');
         break;
       case 'fail_forward':
         this.controller.animatedFail(true);
+        announceStep('Bonked into wall.');
         break;
       case 'fail_backward':
         this.controller.animatedFail(false);
+        announceStep('Bonked into wall.');
         break;
       case 'left':
         this.controller.animatedTurn(tiles.TurnDirection.LEFT);
+        announceStep(`Turned left, facing ${facing()}.`);
         break;
       case 'right':
         this.controller.animatedTurn(tiles.TurnDirection.RIGHT);
+        announceStep(`Turned right, facing ${facing()}.`);
         break;
       case 'finish':
         this.finish_(timePerStep);
         break;
       case 'putdown':
         this.controller.scheduleFill();
+        announceStep('Put down.');
         break;
       case 'pickup':
         this.controller.scheduleDig();
+        announceStep('Picked up.');
         break;
       case 'fail_pickup':
         this.controller.animatedFail(false);
+        announceStep('Fail pick up.');
         break;
       case 'nectar':
         this.controller.subtype.animateGetNectar();
+        announceStep('Picked up nectar.');
         break;
       case 'honey':
         this.controller.subtype.animateMakeHoney();
+        announceStep('Made honey.');
         break;
       case 'get_corn':
         this.controller.subtype.animateGetCorn();
+        announceStep('Picked up corn.');
         break;
       case 'get_pumpkin':
         this.controller.subtype.animateGetPumpkin();
+        announceStep('Picked up pumpkin.');
         break;
       case 'get_lettuce':
         this.controller.subtype.animateGetLettuce();
+        announceStep('Picked up lettuce.');
         break;
       case 'plant':
         this.controller.subtype.animatePlant();
+        announceStep('Planted.');
         break;
       default:
         // action[0] is null if generated by studioApp().checkTimeout().
