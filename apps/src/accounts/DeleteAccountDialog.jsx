@@ -1,5 +1,5 @@
+import Alert from '@code-dot-org/component-library/alert';
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Modal from '@code-dot-org/component-library/modal';
 import TextField from '@code-dot-org/component-library/textField';
 import PropTypes from 'prop-types';
@@ -77,21 +77,23 @@ export default class DeleteAccountDialog extends React.Component {
         closeLabel={i18n.closeDialog()}
         customContent={
           <div className={styles.container}>
-            <div className={styles.bodyContainer}>
-              <FontAwesomeV6Icon
-                iconName="triangle-exclamation"
-                iconStyle="solid"
-                className={styles.icon}
-              />
-              <div className={styles.text}>
-                <SafeMarkdown markdown={renderedMarkdown(isTeacher)} />
-                {warnAboutDeletingStudents && (
-                  <span>
-                    <SafeMarkdown markdown={i18n.deleteAccountDialog_body3()} />
-                  </span>
-                )}
-              </div>
-            </div>
+            <Alert
+              type="danger"
+              text={
+                <>
+                  <SafeMarkdown
+                    unwrapped
+                    markdown={renderedMarkdown(isTeacher)}
+                  />
+                  {warnAboutDeletingStudents && (
+                    <SafeMarkdown
+                      unwrapped
+                      markdown={i18n.deleteAccountDialog_body3()}
+                    />
+                  )}
+                </>
+              }
+            />
             {checkboxesLength > 0 && (
               <div className={styles.section}>
                 <strong>
