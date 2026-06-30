@@ -4,13 +4,14 @@
 #
 # Table name: project_storage_geos
 #
-#  id         :bigint           not null, primary key
-#  storage_id :integer          not null
-#  country    :string(255)
-#  state      :string(255)
-#  city       :string(255)
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id          :bigint           not null, primary key
+#  storage_id  :integer          not null
+#  country     :string(255)
+#  state       :string(255)
+#  city        :string(255)
+#  postal_code :string(255)
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
 #
 # Indexes
 #
@@ -27,6 +28,7 @@ class ProjectStorage::Geo < ApplicationRecord
     country: :confidential,
     state: :confidential,
     city: :confidential,
+    postal_code: :confidential,
     created_at: :confidential,
     updated_at: :confidential,
   )

@@ -3,7 +3,7 @@
 require 'test_helper'
 
 class ProjectStorage::AnonymousGeoRecordingJobTest < ActiveJob::TestCase
-  GeocoderResultMock = Data.define(:country, :state, :city)
+  GeocoderResultMock = Data.define(:country, :state, :city, :postal_code)
 
   subject(:described_class) {ProjectStorage::AnonymousGeoRecordingJob}
   subject(:described_instance) {described_class.new}
@@ -23,9 +23,10 @@ class ProjectStorage::AnonymousGeoRecordingJobTest < ActiveJob::TestCase
 
     let(:geocoder_result) do
       GeocoderResultMock.new(
-        country: Faker::Address.unique.country,
-        state:   Faker::Address.unique.state,
-        city:    Faker::Address.unique.city,
+        country:     Faker::Address.unique.country,
+        state:       Faker::Address.unique.state,
+        city:        Faker::Address.unique.city,
+        postal_code: Faker::Address.unique.postcode,
       )
     end
 
@@ -39,6 +40,7 @@ class ProjectStorage::AnonymousGeoRecordingJobTest < ActiveJob::TestCase
       _(project_storage.geo.country).must_equal geocoder_result.country
       _(project_storage.geo.state).must_equal geocoder_result.state
       _(project_storage.geo.city).must_equal geocoder_result.city
+      _(project_storage.geo.postal_code).must_equal geocoder_result.postal_code
     end
 
     context 'when geocoder returns no location' do
@@ -50,6 +52,7 @@ class ProjectStorage::AnonymousGeoRecordingJobTest < ActiveJob::TestCase
         _(project_storage.geo.country).must_be_nil
         _(project_storage.geo.state).must_be_nil
         _(project_storage.geo.city).must_be_nil
+        _(project_storage.geo.postal_code).must_be_nil
       end
     end
 
@@ -68,6 +71,7 @@ class ProjectStorage::AnonymousGeoRecordingJobTest < ActiveJob::TestCase
         _(project_storage.geo.country).must_be_nil
         _(project_storage.geo.state).must_be_nil
         _(project_storage.geo.city).must_be_nil
+        _(project_storage.geo.postal_code).must_be_nil
       end
     end
 

@@ -1272,6 +1272,7 @@ FactoryBot.define do
     country {Faker::Address.unique.country}
     state {Faker::Address.unique.state}
     city {Faker::Address.unique.city}
+    postal_code {Faker::Address.unique.postcode}
   end
 
   # WARNING: using this factory in new tests may cause other tests, including
