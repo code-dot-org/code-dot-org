@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-01 18:44:11 UTC",
+    "serialized_at": "2026-06-29 19:43:42 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -46,33 +46,33 @@
   ],
   "lessons": [
     {
-      "key": "intro-web-fish",
-      "name": "My Pet Fish Webpage: Part 1 - Getting Started",
+      "key": "intro-web-pages",
+      "name": "Your First Pet Fish Web Page",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "generate_outline": "This lesson introduces students to what a web page is and its basic structure using HTML. Students will learn how to create a simple HTML file, add a title to their web page, and include a main heading for their pet fish's name using the <h1> tag. They will also add a paragraph describing their pet fish using the <p> tag. By the end, students will have a basic web page displaying their pet fish's name and a short description."
+        "generate_outline": "This lesson introduces students to the basic structure of a web page using HTML. Students will learn how to create a simple HTML file, add a title to their page, and display text about their pet fish using paragraphs and headings. By the end, students should be able to create a functional web page with basic information about their pet fish."
       },
       "seeding_key": {
-        "lesson.key": "intro-web-fish",
+        "lesson.key": "intro-web-pages",
         "lesson_group.key": "outlines",
         "script.name": "test-brendan"
       }
     },
     {
-      "key": "add-images-fish",
-      "name": "My Pet Fish Webpage: Part 2 - Pictures and Personality",
+      "key": "images-and-styles",
+      "name": "Adding Pictures and Style to Your Pet Fish Page",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "generate_outline": "Building on the previous lesson, students will enhance their pet fish web page by adding images and more detailed information. This lesson teaches how to insert an image of their pet fish using the <img> tag, including important attributes like src and alt. Students will also add additional descriptive paragraphs to share more about their fish's personality or tank setup. By the end, students will have a more complete web page featuring their pet fish's name, a description, and an image."
+        "generate_outline": "Building on their first web page, students will learn how to enhance it by adding images of their pet fish using the `<img>` tag. They will also be introduced to basic CSS concepts, such as changing text color and background, to make their page more visually appealing. By the end, students should be able to include images and apply simple styling to their pet fish web page."
       },
       "seeding_key": {
-        "lesson.key": "add-images-fish",
+        "lesson.key": "images-and-styles",
         "lesson_group.key": "outlines",
         "script.name": "test-brendan"
       }
@@ -80,14 +80,14 @@
   ],
   "lesson_activities": [
     {
-      "key": "d2391ebb-94de-4d75-88dc-b857dac269a8",
+      "key": "2ee1615c-76ba-4ee4-bf5e-eb68ba93cb2a",
       "position": 1,
       "properties": {
         "duration": 0
       },
       "seeding_key": {
-        "lesson_activity.key": "d2391ebb-94de-4d75-88dc-b857dac269a8",
-        "lesson.key": "intro-web-fish",
+        "lesson_activity.key": "2ee1615c-76ba-4ee4-bf5e-eb68ba93cb2a",
+        "lesson.key": "intro-web-pages",
         "lesson_group.key": "outlines",
         "script.name": "test-brendan"
       }
@@ -95,14 +95,14 @@
   ],
   "activity_sections": [
     {
-      "key": "df4d80a5-4c44-4211-980c-3952c42630f0",
+      "key": "e9fc7c01-7774-4677-80d6-a8eed9fddc82",
       "position": 1,
       "properties": {
         "duration": 0
       },
       "seeding_key": {
-        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0",
-        "lesson_activity.key": "d2391ebb-94de-4d75-88dc-b857dac269a8"
+        "activity_section.key": "e9fc7c01-7774-4677-80d6-a8eed9fddc82",
+        "lesson_activity.key": "2ee1615c-76ba-4ee4-bf5e-eb68ba93cb2a"
       }
     }
   ],
@@ -117,15 +117,15 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test-brendan-what-is-a-webpage"
+          "test-brendan-intro-web"
         ],
-        "lesson.key": "intro-web-fish",
+        "lesson.key": "intro-web-pages",
         "lesson_group.key": "outlines",
         "script.name": "test-brendan",
-        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
+        "activity_section.key": "e9fc7c01-7774-4677-80d6-a8eed9fddc82"
       },
       "level_keys": [
-        "test-brendan-what-is-a-webpage"
+        "test-brendan-intro-web"
       ]
     },
     {
@@ -138,15 +138,15 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test-brendan-html-structure-title"
+          "test-brendan-basic-structure"
         ],
-        "lesson.key": "intro-web-fish",
+        "lesson.key": "intro-web-pages",
         "lesson_group.key": "outlines",
         "script.name": "test-brendan",
-        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
+        "activity_section.key": "e9fc7c01-7774-4677-80d6-a8eed9fddc82"
       },
       "level_keys": [
-        "test-brendan-html-structure-title"
+        "test-brendan-basic-structure"
       ]
     },
     {
@@ -159,15 +159,15 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test-brendan-pet-name-heading"
+          "test-brendan-page-title-intro"
         ],
-        "lesson.key": "intro-web-fish",
+        "lesson.key": "intro-web-pages",
         "lesson_group.key": "outlines",
         "script.name": "test-brendan",
-        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
+        "activity_section.key": "e9fc7c01-7774-4677-80d6-a8eed9fddc82"
       },
       "level_keys": [
-        "test-brendan-pet-name-heading"
+        "test-brendan-page-title-intro"
       ]
     },
     {
@@ -180,15 +180,15 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test-brendan-pet-description-paragraph"
+          "test-brendan-add-pet-title"
         ],
-        "lesson.key": "intro-web-fish",
+        "lesson.key": "intro-web-pages",
         "lesson_group.key": "outlines",
         "script.name": "test-brendan",
-        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
+        "activity_section.key": "e9fc7c01-7774-4677-80d6-a8eed9fddc82"
       },
       "level_keys": [
-        "test-brendan-pet-description-paragraph"
+        "test-brendan-add-pet-title"
       ]
     },
     {
@@ -201,77 +201,143 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test-brendan-review-first-page"
+          "test-brendan-text-elements-intro"
         ],
-        "lesson.key": "intro-web-fish",
+        "lesson.key": "intro-web-pages",
         "lesson_group.key": "outlines",
         "script.name": "test-brendan",
-        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
+        "activity_section.key": "e9fc7c01-7774-4677-80d6-a8eed9fddc82"
       },
       "level_keys": [
-        "test-brendan-review-first-page"
+        "test-brendan-text-elements-intro"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-brendan-describe-fish"
+        ],
+        "lesson.key": "intro-web-pages",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan",
+        "activity_section.key": "e9fc7c01-7774-4677-80d6-a8eed9fddc82"
+      },
+      "level_keys": [
+        "test-brendan-describe-fish"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-brendan-summary-complete"
+        ],
+        "lesson.key": "intro-web-pages",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan",
+        "activity_section.key": "e9fc7c01-7774-4677-80d6-a8eed9fddc82"
+      },
+      "level_keys": [
+        "test-brendan-summary-complete"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "test-brendan-what-is-a-webpage",
+        "level.key": "test-brendan-intro-web",
         "script_level.level_keys": [
-          "test-brendan-what-is-a-webpage"
+          "test-brendan-intro-web"
         ],
-        "lesson.key": "intro-web-fish",
+        "lesson.key": "intro-web-pages",
         "lesson_group.key": "outlines",
         "script.name": "test-brendan",
-        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
+        "activity_section.key": "e9fc7c01-7774-4677-80d6-a8eed9fddc82"
       }
     },
     {
       "seeding_key": {
-        "level.key": "test-brendan-html-structure-title",
+        "level.key": "test-brendan-basic-structure",
         "script_level.level_keys": [
-          "test-brendan-html-structure-title"
+          "test-brendan-basic-structure"
         ],
-        "lesson.key": "intro-web-fish",
+        "lesson.key": "intro-web-pages",
         "lesson_group.key": "outlines",
         "script.name": "test-brendan",
-        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
+        "activity_section.key": "e9fc7c01-7774-4677-80d6-a8eed9fddc82"
       }
     },
     {
       "seeding_key": {
-        "level.key": "test-brendan-pet-name-heading",
+        "level.key": "test-brendan-page-title-intro",
         "script_level.level_keys": [
-          "test-brendan-pet-name-heading"
+          "test-brendan-page-title-intro"
         ],
-        "lesson.key": "intro-web-fish",
+        "lesson.key": "intro-web-pages",
         "lesson_group.key": "outlines",
         "script.name": "test-brendan",
-        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
+        "activity_section.key": "e9fc7c01-7774-4677-80d6-a8eed9fddc82"
       }
     },
     {
       "seeding_key": {
-        "level.key": "test-brendan-pet-description-paragraph",
+        "level.key": "test-brendan-add-pet-title",
         "script_level.level_keys": [
-          "test-brendan-pet-description-paragraph"
+          "test-brendan-add-pet-title"
         ],
-        "lesson.key": "intro-web-fish",
+        "lesson.key": "intro-web-pages",
         "lesson_group.key": "outlines",
         "script.name": "test-brendan",
-        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
+        "activity_section.key": "e9fc7c01-7774-4677-80d6-a8eed9fddc82"
       }
     },
     {
       "seeding_key": {
-        "level.key": "test-brendan-review-first-page",
+        "level.key": "test-brendan-text-elements-intro",
         "script_level.level_keys": [
-          "test-brendan-review-first-page"
+          "test-brendan-text-elements-intro"
         ],
-        "lesson.key": "intro-web-fish",
+        "lesson.key": "intro-web-pages",
         "lesson_group.key": "outlines",
         "script.name": "test-brendan",
-        "activity_section.key": "df4d80a5-4c44-4211-980c-3952c42630f0"
+        "activity_section.key": "e9fc7c01-7774-4677-80d6-a8eed9fddc82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-brendan-describe-fish",
+        "script_level.level_keys": [
+          "test-brendan-describe-fish"
+        ],
+        "lesson.key": "intro-web-pages",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan",
+        "activity_section.key": "e9fc7c01-7774-4677-80d6-a8eed9fddc82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-brendan-summary-complete",
+        "script_level.level_keys": [
+          "test-brendan-summary-complete"
+        ],
+        "lesson.key": "intro-web-pages",
+        "lesson_group.key": "outlines",
+        "script.name": "test-brendan",
+        "activity_section.key": "e9fc7c01-7774-4677-80d6-a8eed9fddc82"
       }
     }
   ],

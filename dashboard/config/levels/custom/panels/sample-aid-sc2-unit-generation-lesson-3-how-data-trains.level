@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-06-29T17:06:18.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "panels": [
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-3-how-data-trains-0c059a66-4832-4241-9666-ef4b9080f605",
+        "text": "Imagine a super-smart computer that learns from *lots* of information. This is called **training data**.",
+        "imageUrl": "https://images.code.org/8fec56fbfb836adde4c1e214c3a7c022-sample-aid-sc2-unit-generation-lesson-3-how-data-trains-panel-1-13356f43-f77a-49d7-8bc2-218c09b49fa2.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-3-how-data-trains-a3b46be9-de63-45cb-98f9-ef78d0808a13",
+        "text": "It sifts through everything, looking for **patterns** — things that happen together, or usually come next.",
+        "imageUrl": "https://images.code.org/1ba341d9345985b138963a92d66d75aa-sample-aid-sc2-unit-generation-lesson-3-how-data-trains-panel-2-779c7a5b-8b6a-4a5c-a183-4aed9202237b.png",
+        "layout": "text-bottom-right"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-3-how-data-trains-ebeb4be1-b75b-49cd-97ed-e29549fff92b",
+        "text": "If it's seen 'The cat sat on the _' thousands of times, it predicts 'mat' is a very likely next word.",
+        "imageUrl": "https://images.code.org/8a5ae8d8829b2b11a3e690df74613d29-sample-aid-sc2-unit-generation-lesson-3-how-data-trains-panel-3-5256371d-bbb4-4098-80c5-df122a1e718a.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-3-how-data-trains-d91d73be-93a9-4b3e-bcad-b1dd7fe1dd6e",
+        "text": "Or, if it's seen many pictures of trees, it knows what kind of leaves and branches usually come next to complete a tree.",
+        "imageUrl": "https://images.code.org/15b8aaa84380ddca409a95accf3e19c8-sample-aid-sc2-unit-generation-lesson-3-how-data-trains-panel-4-25022f93-1cd9-458d-b507-af43be716b24.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-3-how-data-trains-b917c6e1-d93f-4f01-9210-605db9302053",
+        "text": "By finding patterns, AI can generate *new* text or images that are similar to what it learned, but not exact copies!",
+        "imageUrl": "https://images.code.org/83d0dc353d6e2c93271d016e19d5a482-sample-aid-sc2-unit-generation-lesson-3-how-data-trains-panel-5-0e326cf1-d47d-47b7-91c6-6fea286393b2.png",
+        "layout": "text-top-right"
+      }
+    ],
+    "generate_outline": "Explain how generative AI uses training data to predict likely next words or image components. Describe how patterns in the data allow the AI to generate new, but similar, content. Provide simple examples of text or image generation guided by data."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:07:04 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:07:04 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>
