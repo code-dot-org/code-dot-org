@@ -29476,3 +29476,16 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        ai-history:
+          lessons:
+            lesson-1:
+              name: Lesson 1
+            lesson-2:
+              name: Lesson 2
+          lesson_groups: {}
+          name: ai-history
+          title: "[DEV] AI History"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

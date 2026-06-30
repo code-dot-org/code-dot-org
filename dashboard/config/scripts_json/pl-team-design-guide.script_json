@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-29 17:31:19 UTC",
+    "serialized_at": "2026-06-30 18:15:10 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -41,7 +41,7 @@
       "name": "Product & Engineering Demo",
       "absolute_position": 1,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -480,6 +480,94 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Embedded Content"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sandbox_AT4"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "ce187e34-f233-46ed-8a01-529be17c0f11"
+      },
+      "level_keys": [
+        "sandbox_AT4"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Embedded Content"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sandbox-array-visualizer-AD"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "ce187e34-f233-46ed-8a01-529be17c0f11"
+      },
+      "level_keys": [
+        "sandbox-array-visualizer-AD"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Embedded Content"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sandbox-debugging-simulation-AD"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "ce187e34-f233-46ed-8a01-529be17c0f11"
+      },
+      "level_keys": [
+        "sandbox-debugging-simulation-AD"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Embedded Content"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod3-closing-01_2026-embeddings"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "ce187e34-f233-46ed-8a01-529be17c0f11"
+      },
+      "level_keys": [
+        "pl-ai-101-V2-mod3-closing-01_2026-embeddings"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "PLGuide_L1_ReadMe"
         ],
@@ -500,7 +588,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -525,7 +613,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 7,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -550,7 +638,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 8,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -575,7 +663,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 9,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -600,7 +688,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 10,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -625,7 +713,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 11,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -650,7 +738,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 12,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -675,7 +763,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 13,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
@@ -700,7 +788,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 14,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -725,7 +813,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 15,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -750,7 +838,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 16,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -775,7 +863,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 17,
       "position": 13,
       "activity_section_position": 2,
       "assessment": false,
@@ -800,7 +888,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 18,
       "position": 14,
       "activity_section_position": 3,
       "assessment": false,
@@ -825,7 +913,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 19,
       "position": 15,
       "activity_section_position": 4,
       "assessment": false,
@@ -850,7 +938,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 20,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -875,7 +963,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -900,7 +988,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -925,7 +1013,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -950,7 +1038,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 24,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -975,7 +1063,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 25,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -1000,7 +1088,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1025,7 +1113,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1050,7 +1138,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1075,7 +1163,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 29,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -1100,7 +1188,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 30,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -1125,7 +1213,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 31,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -1150,7 +1238,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 32,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -1175,7 +1263,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 33,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -1200,7 +1288,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 34,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -1225,7 +1313,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 35,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -1250,7 +1338,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 36,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -1275,7 +1363,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 37,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -1300,7 +1388,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 38,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -1325,7 +1413,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 39,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -1350,7 +1438,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 40,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -1375,7 +1463,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1400,7 +1488,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 42,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1423,17 +1511,12 @@
       "level_keys": [
         "Design Guide Video"
       ]
-    },
+    }
+  ],
+  "levels_script_levels": [
     {
-      "chapter": 39,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Embedded Content"
-      },
-      "bonus": false,
       "seeding_key": {
+        "level.key": "sandbox_AT4",
         "script_level.level_keys": [
           "sandbox_AT4"
         ],
@@ -1441,13 +1524,44 @@
         "lesson_group.key": "",
         "script.name": "pl-team-design-guide",
         "activity_section.key": "ce187e34-f233-46ed-8a01-529be17c0f11"
-      },
-      "level_keys": [
-        "sandbox_AT4"
-      ]
-    }
-  ],
-  "levels_script_levels": [
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sandbox-array-visualizer-AD",
+        "script_level.level_keys": [
+          "sandbox-array-visualizer-AD"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "ce187e34-f233-46ed-8a01-529be17c0f11"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sandbox-debugging-simulation-AD",
+        "script_level.level_keys": [
+          "sandbox-debugging-simulation-AD"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "ce187e34-f233-46ed-8a01-529be17c0f11"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-ai-101-V2-mod3-closing-01_2026-embeddings",
+        "script_level.level_keys": [
+          "pl-ai-101-V2-mod3-closing-01_2026-embeddings"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "ce187e34-f233-46ed-8a01-529be17c0f11"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "PLGuide_L1_ReadMe",
@@ -1902,18 +2016,6 @@
         "lesson_group.key": "",
         "script.name": "pl-team-design-guide",
         "activity_section.key": "636701b5-8142-4e25-9add-bd4a10a962da"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "sandbox_AT4",
-        "script_level.level_keys": [
-          "sandbox_AT4"
-        ],
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "",
-        "script.name": "pl-team-design-guide",
-        "activity_section.key": "ce187e34-f233-46ed-8a01-529be17c0f11"
       }
     }
   ],
