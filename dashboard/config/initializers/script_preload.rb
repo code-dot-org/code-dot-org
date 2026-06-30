@@ -6,6 +6,9 @@ require 'cdo/process_memory'
 Rails.application.config.to_prepare do
   next unless Unit.should_cache? && !ENV['SKIP_SCRIPT_PRELOAD']
 
+  # Only prewarm in the web application server.
+  next unless CDO.running_web_application?
+
   log_curriculum_preload = lambda do |event, started_at: nil, counts: {}|
     gc = GC.stat
     fields = {
