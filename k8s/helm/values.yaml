@@ -48,6 +48,13 @@ dashboardJob:
   backoffLimit: 1
   ttlSecondsAfterFinished: 3600 # cleanup job an hour after it completes
 
+activeJobWorker:
+  enabled: false
+  replicas: 1
+  command: ["zsh", "-c"]
+  args:
+    - cd dashboard && bundle exec bin/delayed_job run
+
 services:
   redis:
     enabled: false

@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cdo-active-job-worker
+  labels:
+    app.kubernetes.io/component: active-job-worker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: active-job-worker
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/component: active-job-worker
+    spec:
+      containers:
+        - name: active-job-worker
+          image: code-dot-org:latest
+          imagePullPolicy: Never
+          command:
+            - zsh
+            - -c
+          args:
+            - cd dashboard && RAILS_ENV=adhoc RACK_ENV=adhoc bundle exec bin/delayed_job run
+          tty: true
+          env:
+            - name: RAILS_ENV
+              value: adhoc
+            - name: RACK_ENV
+              value: adhoc
+            - name: PERMIT_UNKNOWN_PROPERTIES_IN_CDO
+              value: "1"
+            - name: AWS_EC2_METADATA_DISABLED
+              value: "true"
+          envFrom:
+            - prefix: CDO_
+              configMapRef:
+                name: cdo-locals.yml
+            - prefix: CDO_
+              secretRef:
+                name: cdo-external-secrets
+                optional: true
+            - prefix: CDO_
+              secretRef:
+                name: cdo-local-secrets
+          resources:
+            requests:
+              cpu: 1
+              memory: 2Gi
+              ephemeral-storage: 30Gi
+            limits:
+              cpu: 1
+              memory: 2Gi
+              ephemeral-storage: 30Gi
+          securityContext:
+            allowPrivilegeEscalation: true
+      securityContext:
+        runAsUser: 0
+        runAsGroup: 0
+        fsGroup: 0
+      enableServiceLinks: false

@@ -30,3 +30,12 @@ locals.yml:
 
 extraEnv:
   AWS_EC2_METADATA_DISABLED: "true"
+
+activeJobWorker:
+  enabled: true
+  replicas: 1
+  command:
+    - zsh
+    - -c
+  args:
+    - cd dashboard && RAILS_ENV=adhoc RACK_ENV=adhoc bundle exec bin/delayed_job run
