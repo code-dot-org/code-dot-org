@@ -5,16 +5,16 @@ import AccountEditHeader from '@cdo/apps/accounts/AccountEditHeader';
 import * as utils from '@cdo/apps/utils';
 
 describe('AccountEditHeader', () => {
-  // window.history.length is read-only on the prototype; shadow it with an own
-  // configurable property for the duration of a test.
-  const stubHistoryLength = length =>
-    Object.defineProperty(window.history, 'length', {
+  // document.referrer is read-only; shadow it with an own configurable
+  // property for the duration of a test.
+  const stubReferrer = value =>
+    Object.defineProperty(document, 'referrer', {
       configurable: true,
-      value: length,
+      value,
     });
 
   afterEach(() => {
-    delete window.history.length;
+    delete document.referrer;
     jest.restoreAllMocks();
   });
 
@@ -24,24 +24,11 @@ describe('AccountEditHeader', () => {
     screen.getByRole('link', {name: 'Back'});
   });
 
-  it('navigates back when there is in-app history', () => {
-    stubHistoryLength(2);
+  it('walks back when the referrer is same-origin', () => {
+    stubReferrer(window.location.origin + '/home');
     const backSpy = jest
       .spyOn(window.history, 'back')
       .mockImplementation(() => {});
-    render(<AccountEditHeader title="Account settings" backLabel="Back" />);
-
-    fireEvent.click(screen.getByRole('link', {name: 'Back'}));
-
-    expect(backSpy).toHaveBeenCalled();
-  });
-
-  it('falls back to the referrer when there is no in-app history', () => {
-    stubHistoryLength(1);
-    Object.defineProperty(document, 'referrer', {
-      configurable: true,
-      value: 'https://studio.code.org/home',
-    });
     const navSpy = jest
       .spyOn(utils, 'navigateToHref')
       .mockImplementation(() => {});
@@ -49,6 +36,39 @@ describe('AccountEditHeader', () => {
 
     fireEvent.click(screen.getByRole('link', {name: 'Back'}));
 
-    expect(navSpy).toHaveBeenCalledWith('https://studio.code.org/home');
+    expect(backSpy).toHaveBeenCalled();
+    expect(navSpy).not.toHaveBeenCalled();
+  });
+
+  it('goes home when the referrer is cross-origin', () => {
+    stubReferrer('https://www.google.com/');
+    const backSpy = jest
+      .spyOn(window.history, 'back')
+      .mockImplementation(() => {});
+    const navSpy = jest
+      .spyOn(utils, 'navigateToHref')
+      .mockImplementation(() => {});
+    render(<AccountEditHeader title="Account settings" backLabel="Back" />);
+
+    fireEvent.click(screen.getByRole('link', {name: 'Back'}));
+
+    expect(navSpy).toHaveBeenCalledWith('/home');
+    expect(backSpy).not.toHaveBeenCalled();
+  });
+
+  it('goes home when there is no referrer', () => {
+    stubReferrer('');
+    const backSpy = jest
+      .spyOn(window.history, 'back')
+      .mockImplementation(() => {});
+    const navSpy = jest
+      .spyOn(utils, 'navigateToHref')
+      .mockImplementation(() => {});
+    render(<AccountEditHeader title="Account settings" backLabel="Back" />);
+
+    fireEvent.click(screen.getByRole('link', {name: 'Back'}));
+
+    expect(navSpy).toHaveBeenCalledWith('/home');
+    expect(backSpy).not.toHaveBeenCalled();
   });
 });

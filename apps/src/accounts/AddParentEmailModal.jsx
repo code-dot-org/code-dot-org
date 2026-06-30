@@ -17,7 +17,7 @@ const STATE_INITIAL = 'initial';
 const STATE_SAVING = 'saving';
 const STATE_UNKNOWN_ERROR = 'unknown-error';
 
-const PARENT_EMAIL_SELECTOR = 'input[type="email"]';
+const PARENT_EMAIL_SELECTOR = 'input[name="parentEmail"]';
 
 export default class AddParentEmailModal extends React.Component {
   static propTypes = {
@@ -52,9 +52,9 @@ export default class AddParentEmailModal extends React.Component {
   }
 
   // The DSCO TextField is a function component and does not forward a ref to
-  // its <input>, so we reach the (first) email node through the modal content
-  // root. A content-scoped querySelector keeps focus working under enzyme's
-  // detached mount.
+  // its <input>, so we reach the parent-email node by its name attribute
+  // through the modal content root (not by field order). A content-scoped
+  // querySelector keeps focus working under enzyme's detached mount.
   focusOnError() {
     const {errors} = this.state;
     if (errors.parentEmail) {

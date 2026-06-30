@@ -21,13 +21,16 @@ export default function AccountEditHeader({title, backLabel}) {
         className={styles.backLink}
         onClick={e => {
           e.preventDefault();
-          // Mirror Rails `link_to :back`: use in-app history when present, but
-          // fall back to the referrer (or home) when the page was opened
-          // directly with no history entry, where history.back() is a no-op.
-          if (window.history.length > 1) {
+          // Mirror Rails `link_to :back`, but never send the user off-site.
+          // history.length can't tell an in-app history entry from a
+          // pre-existing cross-origin one, so it's not a safe signal; the
+          // referrer is. Only walk back when the referrer is same-origin
+          // (history.back() returns to it); otherwise go home.
+          const referrer = document.referrer;
+          if (referrer && referrer.indexOf(window.location.origin + '/') === 0) {
             window.history.back();
           } else {
-            navigateToHref(document.referrer || '/home');
+            navigateToHref('/home');
           }
         }}
       >
