@@ -148,9 +148,29 @@ export async function generateWeblab2Level(
     throw new Error('Model returned no instructions');
   }
 
-  // The implicit root folder has id "0". Subfolders sit under it via
-  // `parentId: "0"`; their own ids are uuids referenced by files in them.
-  // See dashboard/config/levels/custom/weblab2 for the canonical shape.
+  return {
+    startSources: filesToMultiFileSource(plan.files, ProjectFileType.STARTER),
+    longInstructions: plan.longInstructions.trim(),
+    files: plan.files,
+  };
+}
+
+// Wrap a flat list of {name, contents} into the MultiFileSource shape
+// the lab2 weblab2 view expects. Same logic the codebridge editor uses
+// when it saves: subfolders are expressed as forward-slash segments in
+// the file name, each segment becomes a folder record with a fresh
+// uuid, and exactly one file is marked active (top-level index.html
+// when present, else the first file).
+//
+// Shared between the starter pass and the exemplar pass. The starter
+// pass tags every file as STARTER so the lab knows they were given to
+// the student; the exemplar pass leaves type undefined so its files
+// read as plain solution source (matching what the codebridge editor
+// stores when a teacher saves an exemplar by hand).
+export function filesToMultiFileSource(
+  plan: {name: string; contents: string}[],
+  fileType: ProjectFileType | undefined
+): MultiFileSource {
   const folders: MultiFileSource['folders'] = {};
   const folderIdByPath = new Map<string, string>();
   folderIdByPath.set('', '0');
@@ -159,10 +179,9 @@ export async function generateWeblab2Level(
   const fileIds: string[] = [];
   let activeFileId: string | null = null;
 
-  for (const f of plan.files) {
+  for (const f of plan) {
     const segments = f.name.split('/').filter(Boolean);
     const baseName = segments.pop() || f.name;
-    // Walk the folder path, creating any missing folder entries.
     let parentId = '0';
     let pathSoFar = '';
     for (const segment of segments) {
@@ -185,7 +204,6 @@ export async function generateWeblab2Level(
 
     const id = createUuid();
     fileIds.push(id);
-    // Prefer top-level index.html for the active file, else the first file.
     if (
       !activeFileId ||
       (segments.length === 0 && /^index\.html?$/i.test(baseName))
@@ -197,21 +215,77 @@ export async function generateWeblab2Level(
       name: baseName,
       contents: f.contents,
       folderId: parentId,
-      type: ProjectFileType.STARTER,
-      active: false, // overwritten below for activeFileId
+      ...(fileType ? {type: fileType} : {}),
+      active: false,
     };
   }
   if (activeFileId) {
     files[activeFileId] = {...files[activeFileId], active: true};
   }
+  return {folders, files, openFiles: fileIds};
+}
 
-  return {
-    startSources: {
-      folders,
-      files,
-      openFiles: fileIds,
-    },
-    longInstructions: plan.longInstructions.trim(),
-    files: plan.files,
-  };
+// Schema for the exemplar pass. Same shape as the starter file list,
+// without instructions — those belong to the student-facing pass and
+// are written once. The exemplar is teacher-only content.
+const weblabExemplarSchema = Output.object({
+  schema: z.object({
+    files: z
+      .array(
+        z.object({
+          name: z.string(),
+          contents: z.string().describe('Full file contents.'),
+        })
+      )
+      .min(1)
+      .max(20),
+  }),
+});
+
+// Second AI pass: given the starter files we just wrote, produce a
+// working solution with the same file names. This is the exemplar the
+// teacher sees (gated by verified_instructor in summarize_for_lab2_properties);
+// students never see it. Failures must be non-fatal at the caller — the
+// student-facing level is already saved by the time we get here.
+export async function generateWeblab2Exemplar(
+  ctx: LevelContext,
+  starterFiles: {name: string; contents: string}[]
+): Promise<MultiFileSource> {
+  const starterListing = starterFiles
+    .map(f => `=== ${f.name} ===\n${f.contents}`)
+    .join('\n\n');
+  const prompt = [
+    'You are writing the teacher-facing EXEMPLAR solution for a Web Lab 2',
+    'level. The student sees the starter files below; their task is the',
+    'level description below. Produce a complete, working solution that',
+    'satisfies the description. Use the SAME file names as the starter',
+    '(do not add new files unless the description requires them); keep',
+    'the same languages, libraries, and structure.',
+    '',
+    'Constraints:',
+    '  - Output must run in Web Lab 2 (HTML/CSS/JS only, no external',
+    '    script or stylesheet links).',
+    '  - Replace placeholder content with a real, working implementation.',
+    '  - Keep it minimal — a model solution, not a portfolio piece. The',
+    '    teacher uses this to check their own work or demo to students.',
+    '',
+    'Starter files:',
+    starterListing,
+    '',
+    `Level description: ${ctx.levelDescription}`,
+  ].join('\n');
+
+  const logContext = {level: ctx.levelName, subtask: 'exemplar'};
+  logPrompt(PROMPT_TAGS.WEBLAB2_EXEMPLAR, prompt, logContext);
+  const response = await generateText({
+    model: getTextModel(),
+    prompt,
+    output: weblabExemplarSchema,
+  });
+  const plan = response.output as {files: {name: string; contents: string}[]};
+  logResponse(PROMPT_TAGS.WEBLAB2_EXEMPLAR, plan, logContext);
+  if (!plan.files?.length) {
+    throw new Error('Model returned no exemplar files');
+  }
+  return filesToMultiFileSource(plan.files, undefined);
 }

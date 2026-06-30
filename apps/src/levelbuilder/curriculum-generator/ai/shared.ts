@@ -10,6 +10,7 @@ export const PROMPT_TAGS = {
   PANELS_PLAN: 'lesson-gen/panels-plan',
   PANELS_IMAGE: 'lesson-gen/panels-image',
   WEBLAB2_PLAN: 'lesson-gen/weblab2-plan',
+  WEBLAB2_EXEMPLAR: 'lesson-gen/weblab2-exemplar',
   AILAB_PLAN: 'lesson-gen/ailab-plan',
   SLIDES_OUTLINE: 'lesson-gen/slides-outline',
   SLIDE_PLAN: 'lesson-gen/slide-plan',

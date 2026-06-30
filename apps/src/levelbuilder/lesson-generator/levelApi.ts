@@ -103,6 +103,26 @@ export async function updateStartSources(
   );
 }
 
+// POST /levels/:id/update_exemplar_code — write exemplar_sources into a
+// Weblab2 (or any encrypted_exemplar_sources-backed) level. Same shape
+// as start_sources; the controller assigns to the level's
+// `exemplar_sources` setter, which the SerializedProperties concern
+// transparently encrypts before storing in encrypted_exemplar_sources.
+export async function updateExemplarSources(
+  levelId: number,
+  exemplarSources: MultiFileSource
+): Promise<void> {
+  await HttpClient.post(
+    `/levels/${levelId}/update_exemplar_code`,
+    JSON.stringify({exemplar_sources: exemplarSources}),
+    true,
+    {
+      'Content-Type': 'application/json;charset=UTF-8',
+      Accept: 'application/json',
+    }
+  );
+}
+
 // PATCH /levels/:id — write a single string-valued serialized property on
 // the level. The levels controller's level_params allow-list pulls in
 // every serialized_attrs entry from the level subclass via

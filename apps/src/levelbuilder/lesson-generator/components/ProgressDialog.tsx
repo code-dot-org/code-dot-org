@@ -13,6 +13,10 @@ const phaseLabel = (phase: ProgressUpdate['phase']): string => {
       return 'Generating image';
     case 'saving-properties':
       return 'Saving content';
+    case 'generating-exemplar':
+      return 'Generating exemplar';
+    case 'saving-exemplar':
+      return 'Saving exemplar';
     case 'attaching':
       return 'Attaching levels to lesson';
   }

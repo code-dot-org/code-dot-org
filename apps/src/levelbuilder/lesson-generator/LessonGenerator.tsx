@@ -12,7 +12,7 @@ import {useReorderableList} from '../curriculum-generator/hooks/useReorderableLi
 import {generateAilabLevel} from './ai/ailab';
 import {generateLessonOutline} from './ai/outline';
 import {generatePanelsForLevel} from './ai/panels';
-import {generateWeblab2Level} from './ai/weblab2';
+import {generateWeblab2Exemplar, generateWeblab2Level} from './ai/weblab2';
 import LevelCard from './components/LevelCard';
 import ProgressDialog from './components/ProgressDialog';
 import SummaryDialog from './components/SummaryDialog';
@@ -29,6 +29,7 @@ import {
   createOrFindLevel,
   loadProjectSources,
   saveLessonActivities,
+  updateExemplarSources,
   updateLevelProperty,
   updatePanelsLevel,
   updateStartSources,
@@ -383,6 +384,29 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
               result.longInstructions
             );
             generatedOutput = {weblab2: result};
+
+            // Exemplar pass: a second AI call produces a working solution
+            // with the same filenames; the teacher sees it via the
+            // showExemplarLink / exemplarSources path. Non-fatal: the
+            // student-facing level is already saved by this point, so a
+            // model error or transient API failure here only loses the
+            // teacher's solution view, not the level itself.
+            try {
+              setStage('generating-exemplar');
+              appendLog(`Generating exemplar for "${levelName}"…`);
+              const exemplarSources = await generateWeblab2Exemplar(
+                levelCtx,
+                result.files
+              );
+              setStage('saving-exemplar');
+              appendLog(`Saving exemplar for "${levelName}"…`);
+              await updateExemplarSources(level.id, exemplarSources);
+            } catch (err) {
+              const message = err instanceof Error ? err.message : String(err);
+              appendLog(
+                `Warning: exemplar generation failed for "${levelName}": ${message}`
+              );
+            }
           } else if (spec.labType === 'ailab') {
             const result = await generateAilabLevel(levelCtx);
             setStage('saving-properties');

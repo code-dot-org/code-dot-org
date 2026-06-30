@@ -133,6 +133,8 @@ export type ProgressPhase =
   | 'planning'
   | 'generating-image'
   | 'saving-properties'
+  | 'generating-exemplar'
+  | 'saving-exemplar'
   | 'attaching';
 
 export interface ProgressUpdate {
