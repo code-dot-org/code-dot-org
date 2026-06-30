@@ -73,7 +73,20 @@ module HocLegacy
         CDO.shared_cache
       end
 
+      private def require_contentful_access!
+        return unless CDO.rack_env?(:development)
+        return if CDO.contentful_cs_for_all_access_token.present?
+
+        raise <<~MESSAGE
+          Please set contentful_cs_for_all_access_token in locals.yml to access prod courses on
+          HoC tutorial routes, or use ui-test-artist (or other course in UI_TEST_TUTORIAL_PATHS)
+          to run the HoC begin/finish -> congrats/certificate flow locally without the access token.
+        MESSAGE
+      end
+
       private def fetch_all
+        require_contentful_access!
+
         CdoContentful::CsForAll::Entry::Tutorial.
           find_each(order: FETCH_ORDER, limit: FETCH_LIMIT, 'tutorialID[exists]': true).
           with_object({}) do |tutorial, data|

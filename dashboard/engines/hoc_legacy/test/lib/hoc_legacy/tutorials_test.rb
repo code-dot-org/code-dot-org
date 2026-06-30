@@ -84,6 +84,20 @@ class HocLegacy::TutorialsTest < ActiveSupport::TestCase
                                                           to: hash_including(tutorial_code => instance_of(Contentful::Entry))
     end
 
+    context 'in development without a Contentful access token' do
+      before do
+        allow(CDO).to receive(:rack_env?).and_call_original
+        allow(CDO).to receive(:rack_env?).with(:development).and_return(true)
+        allow(CDO).to receive(:contentful_cs_for_all_access_token).and_return(nil)
+      end
+
+      it 'raises an actionable error instead of the opaque Contentful failure' do
+        error = _ {refresh_tutorials}.must_raise RuntimeError
+        _(error.message).must_match(/contentful_cs_for_all_access_token/)
+        _(error.message).must_match(%r{ui-test-})
+      end
+    end
+
     context 'when fetching tutorials fails second time' do
       before do
         allow(CdoContentful::CsForAll::Entry::Tutorial).to receive(:find_each).
