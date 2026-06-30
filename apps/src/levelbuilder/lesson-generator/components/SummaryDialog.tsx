@@ -45,6 +45,23 @@ const SummaryDialog: React.FC<SummaryDialogProps> = ({
           </ul>
         </>
       )}
+      {summary.templates && summary.templates.length > 0 && (
+        <>
+          <h3 className={moduleStyles.summaryGood}>Templates</h3>
+          <p className={sharedStyles.dialogNote}>
+            Shared starter files backing the levels above. Templates sit outside
+            the lesson's activity tree — open each one to tune the files by
+            hand.
+          </p>
+          <ul>
+            {summary.templates.map(t => (
+              <li key={t.editUrl}>
+                <a href={t.editUrl}>{t.name}</a>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
       {summary.failed.length > 0 && (
         <>
           <h3 className={sharedStyles.summaryBad}>Failed</h3>

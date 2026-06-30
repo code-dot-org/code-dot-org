@@ -93,6 +93,22 @@ const LevelCard: React.FC<LevelCardProps> = ({
               </select>
             )}
           </div>
+          {!unsupported && spec.labType === 'weblab2' && (
+            <div className={sharedStyles.cardField}>
+              <label htmlFor={`template-${spec.key}`}>Template group</label>
+              <input
+                id={`template-${spec.key}`}
+                value={spec.templateGroup ?? ''}
+                onChange={e =>
+                  onChange(spec.key, {
+                    templateGroup: e.target.value,
+                  })
+                }
+                placeholder="e.g. main (optional)"
+                disabled={disabled}
+              />
+            </div>
+          )}
           {!unsupported && spec.labType === 'aichat' && (
             <div className={sharedStyles.cardField}>
               <label htmlFor={`preset-${spec.key}`}>Preset</label>

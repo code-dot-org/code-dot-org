@@ -19,7 +19,12 @@ import {
 } from './ai/assessments';
 import {generateLessonOutline} from './ai/outline';
 import {generatePanelsForLevel} from './ai/panels';
-import {generateWeblab2Exemplar, generateWeblab2Level} from './ai/weblab2';
+import {
+  generateWeblab2Exemplar,
+  generateWeblab2Level,
+  generateWeblab2Template,
+  generateWeblab2TemplateBackedLevel,
+} from './ai/weblab2';
 import LevelCard from './components/LevelCard';
 import ProgressDialog from './components/ProgressDialog';
 import SummaryDialog from './components/SummaryDialog';
@@ -195,6 +200,9 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         ...(level.labType === 'aichat'
           ? {aichatPreset: level.aichatPreset ?? DEFAULT_AICHAT_PRESET}
           : {}),
+        ...(level.labType === 'weblab2' && level.templateGroup
+          ? {templateGroup: level.templateGroup}
+          : {}),
       }));
       // Drop any blank brand-new rows (the default "Add level" placeholder
       // when nothing has been typed yet) before appending the AI plan, so
@@ -295,6 +303,94 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     // doesn't yield anything usable, every level just runs without the
     // extra context — same as if the field were blank.
     const targetProject = await loadTargetProject(appendLog);
+
+    // ─── Template-group pre-pass ────────────────────────────────────
+    // For each weblab2 templateGroup with ≥2 generating-non-existing
+    // members, generate ONE shared template level. The members in the
+    // per-spec loop below then carry only their own instructions +
+    // exemplar and point project_template_level_name at the template.
+    // Templates aren't placed in the activity tree — they live as
+    // standalone level records the levelbuilder edits via the Summary
+    // dialog's "Templates" section.
+    interface ResolvedTemplate {
+      templateName: string;
+      files: {name: string; contents: string}[];
+    }
+    const templates = new Map<string, ResolvedTemplate>();
+    const templateLevelsCreated: GenerationSummary['created'] = [];
+    const groupCounts = new Map<string, number>();
+    for (const spec of levelSpecs) {
+      if (
+        spec.labType === 'weblab2' &&
+        spec.generate &&
+        !spec.existing &&
+        spec.templateGroup?.trim()
+      ) {
+        const groupId = spec.templateGroup.trim();
+        groupCounts.set(groupId, (groupCounts.get(groupId) ?? 0) + 1);
+      }
+    }
+    for (const spec of levelSpecs) {
+      if (
+        spec.labType !== 'weblab2' ||
+        !spec.generate ||
+        spec.existing ||
+        !spec.templateGroup?.trim()
+      ) {
+        continue;
+      }
+      const groupId = spec.templateGroup.trim();
+      // A group of one is a no-op: the member can just generate its own
+      // starter sources via the standalone path.
+      if ((groupCounts.get(groupId) ?? 0) < 2) continue;
+      if (templates.has(groupId)) continue;
+
+      const templateName = fullName(`template-${groupId}`);
+      const members = levelSpecs
+        .filter(
+          s =>
+            s.labType === 'weblab2' &&
+            s.generate &&
+            !s.existing &&
+            s.templateGroup?.trim() === groupId
+        )
+        .map(s => ({
+          name: fullName(s.id.trim()),
+          description: s.description.trim(),
+        }));
+
+      try {
+        appendLog(
+          `Generating shared template "${templateName}" for ${members.length} levels…`
+        );
+        const {startSources, files} = await generateWeblab2Template({
+          unitName: lesson.unitName,
+          unitOutline: lesson.unitOutline,
+          lessonName: lesson.name,
+          lessonOutline: outline.trim() || undefined,
+          targetProject,
+          templateName,
+          members,
+        });
+        const templateLevel = await createOrFindLevel('weblab2', templateName);
+        await updateStartSources(templateLevel.id, startSources);
+        await updateLevelProperty(templateLevel.id, 'uses_lab2', 'true');
+        templates.set(groupId, {templateName, files});
+        templateLevelsCreated.push({
+          name: templateName,
+          editUrl: `/levels/${templateLevel.id}/edit`,
+        });
+        appendLog(`Saved template "${templateName}".`);
+      } catch (err) {
+        const message = err instanceof Error ? err.message : String(err);
+        appendLog(
+          `Warning: template "${templateName}" failed: ${message}. ` +
+            'Members in this group will fall back to standalone generation.'
+        );
+        // Don't record in `failed` — members still get a chance to
+        // succeed standalone in the main loop below.
+      }
+    }
 
     for (let i = 0; i < levelSpecs.length; i++) {
       const spec = levelSpecs[i];
@@ -434,30 +530,71 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
             await updatePanelsLevel(level.id, panels);
             generatedOutput = {panels};
           } else if (spec.labType === 'weblab2') {
-            const result = await generateWeblab2Level(levelCtx);
-            setStage('saving-properties');
-            appendLog(`Saving start sources for "${levelName}"…`);
-            await updateStartSources(level.id, result.startSources);
-            appendLog(`Saving instructions for "${levelName}"…`);
-            await updateLevelProperty(
-              level.id,
-              'long_instructions',
-              result.longInstructions
-            );
-            generatedOutput = {weblab2: result};
+            const groupId = spec.templateGroup?.trim();
+            const template = groupId ? templates.get(groupId) : undefined;
+            let sourcesForExemplar: {name: string; contents: string}[];
+            if (template) {
+              // Template-backed path: starter files came from the
+              // template pre-pass; this level only writes its own
+              // instructions and points project_template_level_name at
+              // the shared template.
+              const {longInstructions} =
+                await generateWeblab2TemplateBackedLevel(
+                  levelCtx,
+                  template.files
+                );
+              setStage('saving-properties');
+              appendLog(`Saving instructions for "${levelName}"…`);
+              await updateLevelProperty(
+                level.id,
+                'long_instructions',
+                longInstructions
+              );
+              appendLog(
+                `Linking "${levelName}" to template "${template.templateName}"…`
+              );
+              await updateLevelProperty(
+                level.id,
+                'project_template_level_name',
+                template.templateName
+              );
+              generatedOutput = {
+                weblab2: {
+                  startSources: {folders: {}, files: {}},
+                  longInstructions,
+                  files: template.files,
+                },
+              };
+              sourcesForExemplar = template.files;
+            } else {
+              const result = await generateWeblab2Level(levelCtx);
+              setStage('saving-properties');
+              appendLog(`Saving start sources for "${levelName}"…`);
+              await updateStartSources(level.id, result.startSources);
+              appendLog(`Saving instructions for "${levelName}"…`);
+              await updateLevelProperty(
+                level.id,
+                'long_instructions',
+                result.longInstructions
+              );
+              generatedOutput = {weblab2: result};
+              sourcesForExemplar = result.files;
+            }
 
             // Exemplar pass: a second AI call produces a working solution
-            // with the same filenames; the teacher sees it via the
-            // showExemplarLink / exemplarSources path. Non-fatal: the
-            // student-facing level is already saved by this point, so a
-            // model error or transient API failure here only loses the
-            // teacher's solution view, not the level itself.
+            // with the same filenames as whatever this level shows the
+            // student (its own starter files standalone, or the shared
+            // template's files when template-backed). The teacher sees
+            // it via the showExemplarLink / exemplarSources path.
+            // Non-fatal: the student-facing level is already saved by
+            // this point, so a model error or transient API failure
+            // here only loses the teacher's solution view.
             try {
               setStage('generating-exemplar');
               appendLog(`Generating exemplar for "${levelName}"…`);
               const exemplarSources = await generateWeblab2Exemplar(
                 levelCtx,
-                result.files
+                sourcesForExemplar
               );
               setStage('saving-exemplar');
               appendLog(`Saving exemplar for "${levelName}"…`);
@@ -684,7 +821,13 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
       );
     }
 
-    setSummary({created, failed});
+    setSummary({
+      created,
+      failed,
+      ...(templateLevelsCreated.length
+        ? {templates: templateLevelsCreated}
+        : {}),
+    });
     setIsGenerating(false);
     setProgress(null);
   }, [

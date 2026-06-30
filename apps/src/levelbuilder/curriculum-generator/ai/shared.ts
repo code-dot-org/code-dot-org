@@ -11,6 +11,8 @@ export const PROMPT_TAGS = {
   PANELS_IMAGE: 'lesson-gen/panels-image',
   WEBLAB2_PLAN: 'lesson-gen/weblab2-plan',
   WEBLAB2_EXEMPLAR: 'lesson-gen/weblab2-exemplar',
+  WEBLAB2_TEMPLATE: 'lesson-gen/weblab2-template',
+  WEBLAB2_TEMPLATE_LEVEL: 'lesson-gen/weblab2-template-level',
   AILAB_PLAN: 'lesson-gen/ailab-plan',
   AICHAT_PLAN: 'lesson-gen/aichat-plan',
   MULTI_PLAN: 'lesson-gen/multi-plan',

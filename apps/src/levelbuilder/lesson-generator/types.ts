@@ -63,6 +63,13 @@ export interface LevelSpec {
   // outline AI suggests one; the per-card dropdown lets the curriculum
   // author override before generation. Ignored for non-aichat labTypes.
   aichatPreset?: string;
+  // For weblab2 levels only: short id that groups multiple cards onto a
+  // shared project template. Two or more weblab2 specs with the same
+  // non-empty templateGroup get backed by one generated template level
+  // (named "<prefix>-template-<groupId>"); each member then carries only
+  // its own long_instructions and an exemplar, with project_template_level_name
+  // pointing at the template. Empty/absent means "stand alone".
+  templateGroup?: string;
   // Set if this card represents a level already in the lesson. Carries the
   // information needed to put the level back in the same activity/section
   // on save while honouring the new order.
@@ -164,4 +171,10 @@ export interface ProgressUpdate {
 export interface GenerationSummary {
   created: {name: string; editUrl: string}[];
   failed: {name: string; error: string}[];
+  // Shared weblab2 template levels created this run. Reported separately
+  // from `created` because templates don't appear in the lesson's
+  // activity tree — they're standalone level records backing one or
+  // more lesson members. The Summary dialog links them so the
+  // curriculum author can edit the template content by hand.
+  templates?: {name: string; editUrl: string}[];
 }

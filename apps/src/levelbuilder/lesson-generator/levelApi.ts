@@ -148,7 +148,8 @@ export type LevelProperty =
   | 'dynamic_instructions'
   | 'uses_lab2'
   | 'aichat_settings'
-  | 'dsl_text';
+  | 'dsl_text'
+  | 'project_template_level_name';
 
 export async function updateLevelProperty(
   levelId: number,

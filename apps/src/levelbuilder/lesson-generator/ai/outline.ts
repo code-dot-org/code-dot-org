@@ -48,6 +48,12 @@ const lessonOutlineSchema = Output.object({
             .describe(
               'For aichat levels only — pick one of: "explore" (free chat with a persona bot), "tutor" (bot guides a specific skill), "evaluation" (bot evaluates the student\'s work, possibly with an uploaded artifact), "domainExpert" (bot constrained to a single subject), or "botBuilder" (student designs their own bot). Omit for non-aichat labTypes.'
             ),
+          templateGroup: z
+            .string()
+            .optional()
+            .describe(
+              'For weblab2 levels only — short kebab-case id (e.g. "main", "puzzle") that groups multiple weblab2 cards onto a shared starter project. When 2+ weblab2 levels carry the same templateGroup, they share one generated template level; each per-level card only writes its own long_instructions and exemplar on top of the template. Use ONE group per lesson when the weblab2 levels build the same app across multiple steps; use distinct groups when the levels are independent projects. Omit for stand-alone weblab2 levels.'
+            ),
         })
       )
       .min(2)
@@ -60,6 +66,7 @@ export interface OutlineLevel {
   labType: LabType;
   description: string;
   aichatPreset?: AichatPresetId;
+  templateGroup?: string;
 }
 
 // Given the lesson's context (free-form outline plus whatever outer
