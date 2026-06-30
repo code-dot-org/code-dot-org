@@ -19,6 +19,8 @@ locals.yml:
   # build_apps: false
   # ...etc...
 
+extraEnv: {}
+
 # Require the k8s secret `cdo-external-secrets` to exist before bootup
 # Aka: "Require AWS Secrets Manager access to boot" mode
 require_external_secrets: false

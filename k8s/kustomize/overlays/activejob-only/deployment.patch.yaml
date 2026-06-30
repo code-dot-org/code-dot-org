@@ -18,6 +18,8 @@ spec:
               value: adhoc
             - name: RACK_ENV
               value: adhoc
+            - name: AWS_EC2_METADATA_DISABLED
+              value: "true"
           resources:
             requests:
               cpu: 1

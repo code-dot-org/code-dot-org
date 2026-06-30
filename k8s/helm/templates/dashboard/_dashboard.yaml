@@ -65,6 +65,10 @@ spec:
             value: {{ .Values.RAILS_ENV }}
           - name: PERMIT_UNKNOWN_PROPERTIES_IN_CDO
             value: "1"
+          {{- range $name, $value := .Values.extraEnv }}
+          - name: {{ $name }}
+            value: {{ $value | quote }}
+          {{- end }}
           {{- if .Values.localDev.mounts.mountDotAWS }}
           - name: AWS_PROFILE
             value: {{ .Values.localDev.mounts.AWS_PROFILE }}
