@@ -469,8 +469,8 @@ const styles = {
   thumbnail: {
     float: 'left',
     marginRight: 16,
-    width: 125,
-    height: 125,
+    width: 127,
+    height: 127,
     overflow: 'hidden',
     borderRadius: 2,
     border: '1px solid rgb(187,187,187)',
