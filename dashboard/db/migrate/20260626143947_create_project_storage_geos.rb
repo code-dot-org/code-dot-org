@@ -6,6 +6,7 @@ class CreateProjectStorageGeos < ActiveRecord::Migration[7.0]
       t.string :country
       t.string :state
       t.string :city
+      t.string :postal_code
 
       t.timestamps
     end

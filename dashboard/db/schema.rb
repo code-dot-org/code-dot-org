@@ -2018,6 +2018,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_06_26_143947) do
     t.string "country"
     t.string "state"
     t.string "city"
+    t.string "postal_code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["storage_id"], name: "index_project_storage_geos_on_storage_id", unique: true
