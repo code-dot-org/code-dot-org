@@ -294,9 +294,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     return {levelTours, otherAvailableTours};
   }, [levelProperties]);
 
-  // weblab2 with the AI tutor and long instructions: the Instructions and AI Tutor
-  // tabs render one shared AiTutorChatWithInstructionDrawer so the instructions
-  // persist across the switch. Both tab buttons still appear in availableTabs.
+  // When the AI tutor and a long-instructions drawer are both present, the
+  // Instructions and AI Tutor tabs share one AiTutorChatWithInstructionDrawer so
+  // the instructions persist across the switch.
   const usesSharedInstructionsDrawer =
     !!hasInstructionsDrawer &&
     aiTutorVisible &&
