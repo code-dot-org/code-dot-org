@@ -1,3 +1,5 @@
+import {extension as mimeToExtension} from 'mime-types';
+
 import {
   getAppOptionsEditingExemplar,
   getIsStartMode,
@@ -7,17 +9,13 @@ import {createUuid} from '@cdo/apps/utils';
 
 import {ASSET_PATH_PREFIX} from '../constants';
 
-// Pull a file extension from the name, falling back to the MIME subtype or png so
+// Pull a file extension from the name, falling back to the MIME type or png so
 // clipboard blobs (which usually have no filename) still upload sensibly.
 function extensionFor(file: File): string {
   const fromName = file.name.includes('.')
     ? file.name.split('.').pop()
     : undefined;
-  if (fromName) {
-    return fromName;
-  }
-  const fromMime = file.type.split('/')[1];
-  return fromMime || 'png';
+  return fromName || mimeToExtension(file.type) || 'png';
 }
 
 interface UploadImageAssetOptions {
