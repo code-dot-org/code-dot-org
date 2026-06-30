@@ -1,10 +1,4 @@
-import {
-  Handle,
-  type NodeProps,
-  Position,
-  useNodeConnections,
-} from '@xyflow/react';
-import classNames from 'classnames';
+import {Handle, type NodeProps, Position} from '@xyflow/react';
 import React, {memo} from 'react';
 
 import {LineAnchorNodeType} from '../types';
@@ -16,18 +10,6 @@ function LineAnchorNode({data}: NodeProps<LineAnchorNodeType>) {
   const isSourceAnchor = data.lineAnchorRole === 'source';
   const handleType = isSourceAnchor ? 'source' : 'target';
   const handlePosition = isSourceAnchor ? Position.Right : Position.Left;
-  const connections = useNodeConnections();
-
-  // This should become false immediately after a line is created,
-  // as we create two hidden nodes with an edge in between them.
-  const isConnectable = connections.length === 0;
-
-  // When data.showHandles is false the handle is hidden via the .hidden
-  // class. The handle is re-shown when the wrapper .react-flow__node-lineAnchor
-  // has DOM :focus — see react-flow-canvas.module.scss. We rely on DOM
-  // focus rather than the `selected` prop so the override still applies in
-  // read-only mode (where displayNodes forces selected=false).
-  const showHandles = data.showHandles !== false;
 
   return (
     <div className={styles.anchorNode}>
@@ -35,10 +17,13 @@ function LineAnchorNode({data}: NodeProps<LineAnchorNodeType>) {
         type={handleType}
         id={lineAnchorHandleId(handleType)}
         position={handlePosition}
-        isConnectable={isConnectable}
-        className={classNames(styles.anchorHandle, {
-          [styles.hidden]: !showHandles,
-        })}
+        // The handle exists only so the line edge has an attachment point.
+        // Anchors aren't used for interactive connections (user drags from anchor to create a new edge),
+        // so we mark them as not connectable. You can still drag an anchor and connect it to
+        // a node.
+        isConnectableStart={false}
+        isConnectableEnd={false}
+        className={`${styles.anchorHandle} ${styles.hidden}`}
       />
     </div>
   );

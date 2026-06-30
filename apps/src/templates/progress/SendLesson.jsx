@@ -1,7 +1,8 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
 
 import SendLessonDialog from './SendLessonDialog';
@@ -34,14 +35,18 @@ export default class SendLesson extends React.Component {
   render() {
     return (
       <div className="uitest-sendlesson">
-        <Button
+        <MuiButton
           onClick={this.openDialog}
-          text={i18n.sendLessonButton()}
-          icon="share-from-square"
-          iconStyleProp="solid"
-          color={Button.ButtonColor.gray}
+          variant="outlined"
+          color="secondary"
+          size="small"
+          startIcon={
+            <FontAwesomeV6Icon iconName="share-from-square" iconStyle="solid" />
+          }
           style={this.props.buttonStyle}
-        />
+        >
+          {i18n.sendLessonButton()}
+        </MuiButton>
         {this.state.isDialogOpen && (
           <SendLessonDialog
             isOpen={true}

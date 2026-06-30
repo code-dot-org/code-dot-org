@@ -136,6 +136,7 @@ Dashboard::Application.routes.draw do
     resources :images, only: [:new]
 
     get "/ai_iteration/tools", to: "ai_iteration#tools"
+    get "/ai_iteration/image_safety_eval", to: "ai_iteration#image_safety_eval"
     post "/student_code_samples", to: "student_work_sample#fetch_student_code_samples"
     post "/free_response_answers", to: "student_work_sample#fetch_free_response_answers"
 
@@ -225,9 +226,13 @@ Dashboard::Application.routes.draw do
           get 'valid_course_offerings'
           get 'available_participant_types'
           get 'require_captcha'
-          get 'demo/presets', action: 'presets', as: 'presets'
-          post 'demo/:demo_type', action: 'create_demo', as: 'create_demo'
           get 'assigned_essential_ai_dependency'
+        end
+        collection do
+          get 'demo/presets', action: 'presets', as: 'presets'
+          get 'demo/check_staleness', action: 'check_demo_section_staleness', as: 'check_demo_section_staleness'
+          post 'demo/reset', action: 'reset_demo_section', as: 'reset_demo_section'
+          post 'demo/create/:demo_type', action: 'create_demo', as: 'create_demo'
         end
       end
     end
@@ -475,6 +480,8 @@ Dashboard::Application.routes.draw do
         get 'standards'
         get 'instructions'
         get 'get_rollup_resources'
+        get 'generate', to: 'scripts#generate'
+        put 'lesson_outlines', to: 'scripts#update_lesson_outlines'
       end
 
       resources :lessons, only: [:show, :index], param: 'position', format: false do
@@ -483,6 +490,9 @@ Dashboard::Application.routes.draw do
         get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
         get 'edit', to: 'lessons#edit_with_lesson_position'
         get 'generate', to: 'lessons#generate_with_lesson_position'
+        get 'slides/generate', to: 'lessons/slides#generate'
+        get 'slides', to: 'lessons/slides#show'
+        get 'slides/edit', to: 'lessons/slides#edit'
         get 'level_properties', to: 'lessons#level_properties', format: false
         get 'tutor', to: 'lessons#tutor', format: false
 
@@ -583,6 +593,10 @@ Dashboard::Application.routes.draw do
         get :show, to: 'lessons#show_by_id'
         get :level_properties, to: 'lessons#level_properties_by_id', format: false
         get :generate
+        get 'slides/generate', to: 'lessons/slides#generate', as: 'generate_slides'
+        get 'slides', to: 'lessons/slides#show', as: 'slides'
+        get 'slides/edit', to: 'lessons/slides#edit', as: 'slides_edit'
+        put 'slides_data', to: 'lessons/slides#update'
         post :clone
       end
     end
@@ -1088,9 +1102,11 @@ Dashboard::Application.routes.draw do
       end
     end
     if rack_env?(:staging, :test)
-      scope path: '/api/dev', controller: :dev do
-        post 'check-dts', action: 'check_dts'
-        post 'start-build', action: 'start_build'
+      scope '/api' do
+        namespace :dev do
+          post 'check-dts', action: :check_dts
+          post 'start-build', action: :start_build
+        end
       end
     end
 
@@ -1098,6 +1114,11 @@ Dashboard::Application.routes.draw do
       namespace :v1 do
         concerns :api_v1_pd_routes
         concerns :section_api_routes
+
+        namespace :users do
+          resource :settings, only: :show, path: 'me/settings'
+        end
+
         post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
         post 'users/:user_id/display_theme', to: 'users#update_display_theme'
         post 'users/:user_id/mute_music', to: 'users#post_mute_music'
@@ -1151,6 +1172,10 @@ Dashboard::Application.routes.draw do
         # Routes used by personalization alert
         post 'users/has_dismissed_personalization_alert', to: 'users#post_has_dismissed_personalization_alert'
         get 'users/has_dismissed_personalization_alert', to: 'users#get_has_dismissed_personalization_alert'
+
+        # Routes used by the teacher onboarding checklist hide/resume control
+        post 'users/teacher_onboarding_hidden', to: 'users#post_teacher_onboarding_hidden'
+        get 'users/teacher_onboarding_hidden', to: 'users#get_teacher_onboarding_hidden'
 
         # Routes used by UI test status pages
         get 'test_logs/*prefix/since/:time', to: 'test_logs#get_logs_since', defaults: {format: 'json'}
@@ -1207,9 +1232,11 @@ Dashboard::Application.routes.draw do
     end
 
     # AI Student Podcast routes
-    resources :ai_student_podcasts, only: [:show] do
+    resources :ai_student_podcasts, only: [] do
       collection do
+        get :show # GET /ai_student_podcasts?lesson_id=1&objective_ids[]=2
         post :generate_podcast
+        get :retrieve_podcast_from_s3
       end
     end
 
@@ -1254,6 +1281,7 @@ Dashboard::Application.routes.draw do
     get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
     get '/dashboardapi/v1/schools/:id', to: 'api/v1/schools#show', defaults: {format: 'json'}
 
+    get '/dashboardapi/v1/user_product_tours', to: 'api/v1/user_product_tours#index'
     post '/dashboardapi/v1/user_product_tours', to: 'api/v1/user_product_tours#create'
     post '/dashboardapi/v1/users/:user_id/verify_captcha', to: 'api/v1/users#verify_captcha'
 
@@ -1289,8 +1317,6 @@ Dashboard::Application.routes.draw do
     post '/profanity/find', to: 'profanity#find'
 
     get '/help', to: redirect("https://support.code.org")
-
-    post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
 
     get '/javabuilder/access_token', to: 'javabuilder_sessions#get_access_token'
     post '/javabuilder/access_token_with_override_sources', to: 'javabuilder_sessions#access_token_with_override_sources'
@@ -1421,6 +1447,9 @@ Dashboard::Application.routes.draw do
     end
 
     resources :aidiff_artifacts, only: [:index, :create]
+
+    resources :user_practice_problem_attempts, only: [:index, :update, :create, :show]
+    resources :practice_problems, only: [:index, :show]
 
     resources :aidiff_exit_tickets, only: [:index, :update, :create, :show]
     resources :aidiff_lesson_hooks, only: [:index, :update, :create, :show]

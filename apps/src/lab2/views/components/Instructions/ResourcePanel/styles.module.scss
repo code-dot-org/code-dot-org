@@ -204,6 +204,13 @@
     left: 0;
     width: 100%;
     height: 100%;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+
+    // Honor reduced-motion preferences: snap instead of fade.
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
 
     &Hidden {
       opacity: 0;
@@ -229,4 +236,44 @@
 
 .hiddenFooter {
   display: none;
+}
+
+.tabWithNotificationDot {
+  position: relative;
+}
+
+.tabNotificationDot {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--background-brand-aqua-strong);
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes tab-notification-ring-expand {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.tabNotificationDotPulsing::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 2px solid var(--background-brand-aqua-primary);
+  animation: tab-notification-ring-expand 1.5s ease-out infinite;
 }

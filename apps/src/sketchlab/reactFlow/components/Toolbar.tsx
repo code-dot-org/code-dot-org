@@ -12,26 +12,22 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
 import {ASSET_PATH_PREFIX} from '../constants';
-import {AddNodeRequest, ShapeType} from '../types';
+import {AddNodeRequest, CanvasTool, ShapeType} from '../types';
 
 import styles from './toolbar.module.scss';
 
 interface ToolbarProps {
   onAddNode: (request: AddNodeRequest) => void;
   levelName: string;
-  onUndo: () => void;
-  canUndo: boolean;
-  onRedo: () => void;
-  canRedo: boolean;
+  canvasTool: CanvasTool;
+  onSetCanvasTool: (tool: CanvasTool) => void;
 }
 
 export default function Toolbar({
   onAddNode,
   levelName,
-  onUndo,
-  canUndo,
-  onRedo,
-  canRedo,
+  canvasTool,
+  onSetCanvasTool,
 }: ToolbarProps) {
   const channelId = useAppSelector(state => state.lab.channel?.id) ?? '';
   // Use a stable ID prefix for accessibility.
@@ -100,6 +96,34 @@ export default function Toolbar({
       aria-label="Canvas tools"
       aria-orientation="vertical"
     >
+      <Tooltip title="Select" placement="right">
+        <IconButton
+          aria-label="Select tool"
+          aria-pressed={canvasTool === 'cursor'}
+          onClick={() => onSetCanvasTool('cursor')}
+          size="small"
+          color={canvasTool === 'cursor' ? 'primary' : 'tertiary'}
+          variant={canvasTool === 'cursor' ? 'contained' : 'outlined'}
+        >
+          <FontAwesomeV6Icon iconName="arrow-pointer" />
+        </IconButton>
+      </Tooltip>
+
+      <Tooltip title="Hand Tool" placement="right">
+        <IconButton
+          aria-label="Hand Tool"
+          aria-pressed={canvasTool === 'grab'}
+          onClick={() => onSetCanvasTool('grab')}
+          size="small"
+          color={canvasTool === 'grab' ? 'primary' : 'tertiary'}
+          variant={canvasTool === 'grab' ? 'contained' : 'outlined'}
+        >
+          <FontAwesomeV6Icon iconName="hand" />
+        </IconButton>
+      </Tooltip>
+
+      <Divider className={styles.divider} />
+
       <Tooltip title="Add rectangle" placement="right">
         <IconButton
           aria-label="Add rectangle"
@@ -191,36 +215,6 @@ export default function Toolbar({
         </IconButton>
       </Tooltip>
       <FileInput />
-      <Divider flexItem />
-      <Tooltip title="Undo" placement="right">
-        {/* span wrapper required so Tooltip receives pointer events when button is disabled */}
-        <span>
-          <IconButton
-            aria-label="Undo"
-            onClick={onUndo}
-            disabled={!canUndo}
-            size="small"
-            color="tertiary"
-            variant="outlined"
-          >
-            <FontAwesomeV6Icon iconName="rotate-left" />
-          </IconButton>
-        </span>
-      </Tooltip>
-      <Tooltip title="Redo" placement="right">
-        <span>
-          <IconButton
-            aria-label="Redo"
-            onClick={onRedo}
-            disabled={!canRedo}
-            size="small"
-            color="tertiary"
-            variant="outlined"
-          >
-            <FontAwesomeV6Icon iconName="rotate-right" />
-          </IconButton>
-        </span>
-      </Tooltip>
     </Paper>
   );
 }

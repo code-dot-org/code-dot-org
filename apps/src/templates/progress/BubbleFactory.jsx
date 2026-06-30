@@ -9,7 +9,7 @@ import {currentLocation, makeEnum} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import {getIconForLevel, isLevelAssessment} from './progressHelpers';
-import {flex, font, marginLeftRight, marginTopBottom} from './progressStyles';
+import {flex, marginLeftRight, marginTopBottom} from './progressStyles';
 import {levelWithProgressType} from './progressTypes';
 import TooltipWithIcon from './TooltipWithIcon';
 import './styles.scss';
@@ -326,7 +326,7 @@ const fontSizes = {
 const bubbleStyles = {
   main: {
     ...flex,
-    ...font,
+    fontWeight: 600,
     ...marginTopBottom(3),
     boxSizing: 'border-box',
     letterSpacing: -0.11,

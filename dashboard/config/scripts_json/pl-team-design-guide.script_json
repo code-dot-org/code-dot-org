@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-27 22:20:55 UTC",
+    "serialized_at": "2026-06-29 17:31:19 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -37,12 +37,27 @@
   ],
   "lessons": [
     {
-      "key": "lesson-6",
-      "name": "Style Guidelines",
+      "key": "lesson-7",
+      "name": "Product & Engineering Demo",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Style Guidelines",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
       "properties": {
       },
       "seeding_key": {
@@ -54,10 +69,10 @@
     {
       "key": "lesson-5",
       "name": "Component Library",
-      "absolute_position": 2,
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 2,
+      "relative_position": 3,
       "properties": {
       },
       "seeding_key": {
@@ -69,10 +84,10 @@
     {
       "key": "lesson-1",
       "name": "Page Library",
-      "absolute_position": 3,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 3,
+      "relative_position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -84,21 +99,6 @@
     {
       "key": "lesson-4",
       "name": "Additional Pages",
-      "absolute_position": 4,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "",
-        "script.name": "pl-team-design-guide"
-      }
-    },
-    {
-      "key": "lesson-7",
-      "name": "Melissa's Section",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -106,13 +106,25 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "lesson-7",
+        "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "pl-team-design-guide"
       }
     }
   ],
   "lesson_activities": [
+    {
+      "key": "7554974b-adbc-4fac-810a-fee0c7f658cb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7554974b-adbc-4fac-810a-fee0c7f658cb",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide"
+      }
+    },
     {
       "key": "4b540635-b690-4294-8c83-4cc1d2ee7be0",
       "position": 1,
@@ -160,21 +172,20 @@
         "lesson_group.key": "",
         "script.name": "pl-team-design-guide"
       }
-    },
-    {
-      "key": "7554974b-adbc-4fac-810a-fee0c7f658cb",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "7554974b-adbc-4fac-810a-fee0c7f658cb",
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "",
-        "script.name": "pl-team-design-guide"
-      }
     }
   ],
   "activity_sections": [
+    {
+      "key": "ce187e34-f233-46ed-8a01-529be17c0f11",
+      "position": 1,
+      "properties": {
+        "progression_name": "Embedded Content"
+      },
+      "seeding_key": {
+        "activity_section.key": "ce187e34-f233-46ed-8a01-529be17c0f11",
+        "lesson_activity.key": "7554974b-adbc-4fac-810a-fee0c7f658cb"
+      }
+    },
     {
       "key": "685316ae-5ac4-48c5-8be5-46eb3a9ddb30",
       "position": 1,
@@ -459,17 +470,6 @@
       "seeding_key": {
         "activity_section.key": "636701b5-8142-4e25-9add-bd4a10a962da",
         "lesson_activity.key": "1a21b280-518f-4601-8d8d-c645c2d9ad61"
-      }
-    },
-    {
-      "key": "ce187e34-f233-46ed-8a01-529be17c0f11",
-      "position": 1,
-      "properties": {
-        "progression_name": "Computational Thinking"
-      },
-      "seeding_key": {
-        "activity_section.key": "ce187e34-f233-46ed-8a01-529be17c0f11",
-        "lesson_activity.key": "7554974b-adbc-4fac-810a-fee0c7f658cb"
       }
     }
   ],
@@ -1355,6 +1355,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGuide_L1_Closing-Cert"
+        ],
         "progression": "Congratulations [NEW - Certificate Emphasis]"
       },
       "bonus": false,
@@ -1427,15 +1430,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "self-paced-equity-U2L4-realizingpossibilities"
-        ],
-        "progression": "Computational Thinking"
+        "progression": "Embedded Content"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-equity-U2L4-realizingpossibilities"
+          "sandbox_AT4"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
@@ -1443,7 +1443,7 @@
         "activity_section.key": "ce187e34-f233-46ed-8a01-529be17c0f11"
       },
       "level_keys": [
-        "self-paced-equity-U2L4-realizingpossibilities"
+        "sandbox_AT4"
       ]
     }
   ],
@@ -1906,9 +1906,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-equity-U2L4-realizingpossibilities",
+        "level.key": "sandbox_AT4",
         "script_level.level_keys": [
-          "self-paced-equity-U2L4-realizingpossibilities"
+          "sandbox_AT4"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
@@ -1991,6 +1991,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

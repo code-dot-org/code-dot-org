@@ -1,3 +1,5 @@
+import NotificationBanner from '@code-dot-org/component-library/notification-banner';
+import {Button as MuiButton, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
@@ -6,15 +8,13 @@ import {connect} from 'react-redux';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import PlcHeader from '@cdo/apps/code-studio/plc/header';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import Notification, {
-  NotificationType,
-} from '@cdo/apps/sharedComponents/Notification';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {
   dismissedRedirectWarning,
   onDismissRedirectWarning,
@@ -24,6 +24,8 @@ import i18n from '@cdo/locale';
 import Announcements from './Announcements';
 
 import styles from './unit-overview.module.scss';
+
+const WARNING_ICON = {iconName: 'triangle-exclamation'};
 
 /**
  * This component takes some of the HAML generated content on the script overview
@@ -61,13 +63,29 @@ class UnitOverviewHeader extends Component {
     isSignedIn: PropTypes.bool.isRequired,
     isVerifiedInstructor: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
+    demoType: PropTypes.string.isRequired,
     localeCode: PropTypes.string,
     children: PropTypes.node,
+  };
+
+  // Local dismissal state. The legacy `sharedComponents/Notification` component
+  // tracked this internally; the DSCO `NotificationBanner` we migrated to does
+  // not, so we have to hide the banner ourselves on close. Each flag gates one
+  // of the warning banners below.
+  state = {
+    redirectWarningDismissed: false,
+    versionWarningDismissed: false,
   };
 
   componentDidMount() {
     $('#lesson-heading-extras').appendTo(ReactDOM.findDOMNode(this.protected));
   }
+
+  handleDismissRedirectWarning = () => {
+    const {courseName, scriptName} = this.props;
+    onDismissRedirectWarning(courseName || scriptName);
+    this.setState({redirectWarningDismissed: true});
+  };
 
   onDismissVersionWarning = () => {
     const {scriptId, courseId} = this.props;
@@ -88,6 +106,7 @@ class UnitOverviewHeader extends Component {
         data: JSON.stringify({version_warning_dismissed: true}),
       });
     }
+    this.setState({versionWarningDismissed: true});
   };
 
   render() {
@@ -108,18 +127,21 @@ class UnitOverviewHeader extends Component {
       userId,
       isVerifiedInstructor,
       hasVerifiedResources,
+      demoType,
       children,
       isOnTeacherDashboard,
     } = this.props;
 
-    const displayVerifiedResources =
+    const displayVerifiedResourcesWarning =
       viewAs === ViewType.Instructor &&
       !isVerifiedInstructor &&
-      hasVerifiedResources;
+      hasVerifiedResources &&
+      !demoType;
 
     const displayVersionWarning =
       showRedirectWarning &&
-      !dismissedRedirectWarning(courseName || scriptName);
+      !dismissedRedirectWarning(courseName || scriptName) &&
+      !this.state.redirectWarningDismissed;
 
     let versionWarningDetails;
     if (showCourseUnitVersionWarning) {
@@ -147,41 +169,61 @@ class UnitOverviewHeader extends Component {
           />
         )}
         {userId && <ParticipantFeedbackNotification studentId={userId} />}
-        {displayVerifiedResources && <VerifiedResourcesNotification />}
+        {displayVerifiedResourcesWarning && <VerifiedResourcesNotification />}
         {displayVersionWarning && (
-          <Notification
-            type={NotificationType.warning}
-            notice=""
-            details={i18n.redirectCourseVersionWarningDetails()}
-            dismissible={true}
-            onDismiss={() => onDismissRedirectWarning(courseName || scriptName)}
+          <NotificationBanner
+            className="announcement-notification"
+            variant="warning"
+            style="filled"
+            icon={WARNING_ICON}
+            title={i18n.redirectCourseVersionWarningDetails()}
+            onClose={this.handleDismissRedirectWarning}
           />
         )}
-        {versionWarningDetails && (
-          <Notification
-            type={NotificationType.warning}
-            notice={i18n.wrongCourseVersionWarningNotice()}
-            details={versionWarningDetails}
-            dismissible={true}
-            onDismiss={this.onDismissVersionWarning}
+        {versionWarningDetails && !this.state.versionWarningDismissed && (
+          <NotificationBanner
+            className="announcement-notification"
+            variant="warning"
+            style="filled"
+            icon={WARNING_ICON}
+            title={i18n.wrongCourseVersionWarningNotice()}
+            description={versionWarningDetails}
+            onClose={this.onDismissVersionWarning}
           />
         )}
         {showHiddenUnitWarning && (
-          <Notification
-            type={NotificationType.warning}
-            notice={i18n.hiddenUnitWarningNotice()}
-            details={i18n.hiddenUnitWarningDetails()}
-            dismissible={false}
-            buttonText={i18n.learnMore()}
-            buttonLink="https://support.code.org/hc/en-us/articles/115001479372-Hiding-units-and-lessons-in-Code-org-s-CS-Principles-and-CS-Discoveries-courses"
+          <NotificationBanner
+            className="announcement-notification"
+            variant="warning"
+            style="filled"
+            icon={WARNING_ICON}
+            title={i18n.hiddenUnitWarningNotice()}
+            description={i18n.hiddenUnitWarningDetails()}
+            actions={
+              <MuiButton
+                href="https://support.code.org/hc/en-us/articles/115001479372-Hiding-units-and-lessons-in-Code-org-s-CS-Principles-and-CS-Discoveries-courses"
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="outlined"
+                color="secondary"
+                size="small"
+              >
+                {i18n.learnMore()}
+              </MuiButton>
+            }
           />
         )}
         <div id="lesson">
           <div className={styles.heading}>
             <div className={styles.titleWrapper}>
-              <h1 className={styles.title} id="script-title">
+              <Typography
+                variant="h2"
+                component="h1"
+                className={styles.title}
+                id="script-title"
+              >
                 {unitTitle}
-              </h1>
+              </Typography>
             </div>
             {children}
             <div />
@@ -224,5 +266,6 @@ export default connect(state => ({
   viewAs: state.viewAs,
   isVerifiedInstructor: state.verifiedInstructor.isVerified,
   hasVerifiedResources: state.verifiedInstructor.hasVerifiedResources,
+  demoType: selectedSectionSelector(state)?.demoType,
   localeCode: state.locales.localeCode,
 }))(UnitOverviewHeader);

@@ -102,6 +102,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
                   <SafeMarkdown
                     markdown={text}
                     rehypeMap={rehypeMap}
+                    localized={false}
                     openExternalLinksInNewTab
                   />
                   {postText}

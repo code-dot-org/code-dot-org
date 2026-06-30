@@ -2,7 +2,7 @@
 Feature: Puzzle share page
 
 Scenario: Share a flappy game, visit the share page, and visit the workspace
-  Given I am on "http://studio.code.org/flappy/10?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/7/levels/2?noautoplay=true"
   And I wait for the lab page to fully load
   And I've initialized the workspace with my flappy puzzle.
 
@@ -36,7 +36,7 @@ Scenario: Share a flappy game, visit the share page, and visit the workspace
 
 @as_student
 Scenario: Share and save an artist level to the project gallery
-  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/3/levels/10"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/3/levels/11"
   And I wait for the lab page to fully load
   And I've initialized the workspace with artist project blocks
 

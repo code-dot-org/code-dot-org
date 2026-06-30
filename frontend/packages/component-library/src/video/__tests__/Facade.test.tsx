@@ -1,9 +1,10 @@
 import {render, screen, fireEvent} from '@testing-library/react';
+import {vi} from 'vitest';
 
 import Facade from '../Facade';
 
 describe('Facade', () => {
-  const mockOnClick = jest.fn();
+  const mockOnClick = vi.fn();
   const defaultProps = {
     label: 'Play Video',
     posterThumbnail: 'thumbnail.jpg',

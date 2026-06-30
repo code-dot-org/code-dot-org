@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-06-29T17:08:38.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "panels": [
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-14-systematic-testing-strategies-e3107d9d-10af-430a-9b30-43fbd7a986dd",
+        "text": "You just found out that even simple AI models can make unexpected mistakes! To truly understand and improve our AI programs, we need to test them *systematically*.",
+        "imageUrl": "https://images.code.org/369393b97e9aedb325c0447d1b5adb57-sample-aid-sc2-unit-generation-lesson-14-systematic-testing-strategies-panel-1-04a7b57e-abfe-43c3-a846-8821750bf258.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-14-systematic-testing-strategies-7e8122d4-2492-40ed-a68c-7bf7c510be1d",
+        "text": "Systematic testing means trying a *diverse* range of inputs, not just the obvious ones. Don't forget 'edge cases' – inputs that are unusual, tricky, or right at the boundary of what the AI should handle.",
+        "imageUrl": "https://images.code.org/b29f50306909a5166b328dd58d263e62-sample-aid-sc2-unit-generation-lesson-14-systematic-testing-strategies-panel-2-8c2797b6-b68f-4d0d-8d5d-4d241cad4d61.png",
+        "layout": "text-bottom-right"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-14-systematic-testing-strategies-c2d1c45d-a3b5-4c66-9b26-cc0b85dec2c8",
+        "text": "Beyond our own testing, *user feedback* is invaluable. Real users will interact with your AI in ways you never imagined, revealing new problems and helping you find blind spots.",
+        "imageUrl": "https://images.code.org/28bb88ac8c11e5aff4dc7197042ed09f-sample-aid-sc2-unit-generation-lesson-14-systematic-testing-strategies-panel-3-c631a6c3-a297-4ee2-ad40-c782e726e431.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-14-systematic-testing-strategies-efb19a08-f012-42f0-8420-f482345c3c1a",
+        "text": "When the AI misbehaves, look for *patterns*. Are certain types of inputs always wrong? This can help you *diagnose* the problem, whether it's in the training data, the model's logic, or how your program uses the AI.",
+        "imageUrl": "https://images.code.org/a2531322f6077a3e71863779469bd93c-sample-aid-sc2-unit-generation-lesson-14-systematic-testing-strategies-panel-4-ce7e1d8a-977e-43ed-9f89-e6c14afb656f.png",
+        "layout": "text-bottom-left"
+      }
+    ],
+    "generate_outline": "Explain common strategies for systematically testing AI-powered programs, such as using diverse test cases, edge cases, and incorporating user feedback. Discuss how to identify patterns in AI misbehavior and diagnose potential issues."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:09:21 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:09:22 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

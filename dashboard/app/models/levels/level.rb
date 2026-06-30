@@ -28,6 +28,25 @@
 require 'cdo/shared_constants'
 
 class Level < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    game_id: :public,
+    name: :public,
+    created_at: :public,
+    updated_at: :public,
+    level_num: :public,
+    ideal_level_source_id: :public,
+    user_id: :confidential,
+    properties: :public,
+    type: :public,
+    md5: :public,
+    published: :public,
+    notes: :public,
+    audit_log: :public,
+  )
+
   include SharedConstants
   include Levels::LevelsWithinLevels
 
@@ -43,7 +62,11 @@ class Level < ApplicationRecord
   has_many :hint_view_requests
   has_many :rubrics, dependent: :destroy
 
-  scope :with_ai_tutor_available, -> {where("levels.properties->>'$.ai_tutor_available' = 'true'")}
+  scope :with_ai_tutor_available, (lambda do
+    where("levels.properties->>'$.ai_tutor_available' = 'true'").or(
+      where("JSON_LENGTH(JSON_EXTRACT(levels.properties, '$.ai_tutor_prompt_settings.answerTypes')) > 0")
+    )
+  end)
 
   # scope for levels that require ai chat tools to reasonably function.
   scope :with_essential_ai_chat_tools, -> {where(type: %w[Aichat Weblab2])}
@@ -970,6 +993,37 @@ class Level < ApplicationRecord
     return game&.app
   end
 
+  # Returns pair-programming properties for this level and script.
+  # Includes :is_navigator if a user_level exists.
+  # Lab2 levels only include :pairing_channel_id; non-Lab2 levels may include
+  # :pairing_attempt from the driver's latest level source.
+  def pairing_properties_for(user, script, camelize_keys: false, user_level: nil)
+    return {} unless user
+
+    user_level ||= user.last_attempt(self, script)
+    return {} unless user_level
+
+    pairing_properties = {is_navigator: user_level.navigator?}
+    return format_pairing_properties_keys(pairing_properties, camelize_keys) unless pairing_properties[:is_navigator]
+
+    driver = user_level.driver
+    return format_pairing_properties_keys(pairing_properties, camelize_keys) unless driver
+
+    pairing_properties[:pairing_driver] = driver.name
+
+    unless uses_lab2?
+      driver_level_source_id = user_level.driver_level_source_id
+      if driver_level_source_id
+        pairing_properties[:pairing_attempt] = Rails.application.routes.url_helpers.edit_level_source_path(driver_level_source_id)
+        return format_pairing_properties_keys(pairing_properties, camelize_keys)
+      end
+    end
+
+    pairing_channel_id = driver_pairing_channel_id(driver, script&.id)
+    pairing_properties[:pairing_channel_id] = pairing_channel_id if pairing_channel_id
+    format_pairing_properties_keys(pairing_properties, camelize_keys)
+  end
+
   # Whether this level has validation for the completion of student work.
   def validated?
     if uses_lab2?
@@ -1083,6 +1137,21 @@ class Level < ApplicationRecord
     lessons_from_script_levels = script_levels.map(&:lesson).compact.uniq.map(&:summarize_for_special_level_types)
     lessons_from_parent_script_levels = parent_levels.flat_map(&:script_levels).map(&:lesson).compact.uniq.map(&:summarize_for_special_level_types)
     (lessons_from_script_levels + lessons_from_parent_script_levels).uniq
+  end
+
+  private def driver_pairing_channel_id(driver, script_id)
+    return unless channel_backed?
+
+    driver_storage_id = driver.user_storage_id
+    return unless driver_storage_id
+
+    ChannelToken.find_channel_token(self, driver_storage_id, script_id)&.channel
+  end
+
+  private def format_pairing_properties_keys(pairing_properties, camelize_keys)
+    return pairing_properties unless camelize_keys
+
+    pairing_properties.transform_keys {|key| key.to_s.camelize(:lower).to_sym}
   end
 
   # Returns the level name, removing the name_suffix first (if present), and

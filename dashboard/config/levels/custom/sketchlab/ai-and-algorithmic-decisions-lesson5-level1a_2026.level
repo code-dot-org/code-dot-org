@@ -1,8 +1,7 @@
 <Sketchlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 75,
-  "created_at": "2026-03-20T23:43:29.000Z",
+  "created_at": "2026-04-02T18:13:20.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
@@ -25,7 +24,7 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#f5f5f5",
+              "backgroundColor": "var(--sketchlab-bg-purple)",
               "strokeColor": "var(--sketchlab-stroke-default)",
               "fontColor": "var(--sketchlab-stroke-default)"
             },
@@ -67,10 +66,7 @@
             "zIndex": -1,
             "width": 419,
             "height": 658,
-            "resizing": false,
-            "draggable": false,
-            "connectable": false,
-            "deletable": false
+            "resizing": false
           },
           {
             "id": "FtgHojQj0r-NGEdWG3qwn",
@@ -189,10 +185,7 @@
               "width": 1880,
               "height": 1228
             },
-            "dragging": false,
-            "draggable": false,
-            "connectable": false,
-            "deletable": false
+            "dragging": false
           },
           {
             "id": "8oCi9FdX4b1qwt-t9szdG",
@@ -684,13 +677,16 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
-              "width": 406,
-              "height": 635
+              "width": 480,
+              "height": 673
             },
-            "dragging": false
+            "dragging": false,
+            "width": 480,
+            "height": 673,
+            "resizing": false
           },
           {
             "id": "8X-BnVzSA4EoPsgs50OQ2",
@@ -706,9 +702,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Process",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 20
             },
             "measured": {
@@ -731,9 +727,9 @@
             "data": {
               "shapeType": "diamond",
               "label": "Decision",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 20
             },
             "measured": {
@@ -756,9 +752,9 @@
             "data": {
               "shapeType": "circle",
               "label": "Start / End",
-              "backgroundColor": "#ffc9c9",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 20
             },
             "measured": {
@@ -776,7 +772,7 @@
             },
             "data": {
               "text": "Flowchart Components ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 28,
               "showHandles": false
             },
@@ -801,7 +797,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1084,
@@ -821,7 +817,7 @@
             },
             "data": {
               "text": "Your Workspace",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 28,
               "showHandles": false
             },
@@ -844,9 +840,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Favorites count is\nset to 0",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 24.305689651027826
             },
             "measured": {
@@ -868,9 +864,9 @@
             "data": {
               "shapeType": "diamond",
               "label": "Is\n\n",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 24.305689651027826
             },
             "measured": {
@@ -892,9 +888,9 @@
             "data": {
               "shapeType": "circle",
               "label": "Go to \nwebsite",
-              "backgroundColor": "#ffc9c9",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 24.305689651027826
             },
             "measured": {
@@ -916,9 +912,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "User clicks heart \nbutton",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 24.305689651027826
             },
             "measured": {
@@ -940,9 +936,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Fill in heart and \nadd one to \nfavoritesCount",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 24.305689651027826
             },
             "measured": {
@@ -964,9 +960,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Remove fill from \nheart and \nsubtract one from\nfavoritesCount",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 24.305689651027826
             },
             "measured": {
@@ -983,7 +979,7 @@
             },
             "data": {
               "text": "Model",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 34.02796551143896,
               "showHandles": false
             },
@@ -1006,9 +1002,9 @@
             "data": {
               "shapeType": "circle",
               "label": "favorites",
-              "backgroundColor": "#b2f2bb",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 24.305689651027826
             },
             "measured": {
@@ -1025,7 +1021,7 @@
             },
             "data": {
               "text": "favorites set \nto true?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 28.832460948025982,
               "showHandles": false
             },
@@ -1048,9 +1044,9 @@
             "data": {
               "shapeType": "circle",
               "label": "favoritesCount",
-              "backgroundColor": "#b2f2bb",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 24.305689651027826
             },
             "measured": {
@@ -1072,9 +1068,9 @@
             "data": {
               "shapeType": "circle",
               "label": "Variable",
-              "backgroundColor": "#b2f2bb",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 20
             },
             "measured": {
@@ -1120,6 +1116,25 @@
               "width": 10,
               "height": 10
             }
+          },
+          {
+            "id": "b70b9ed4-dcd3-4fd5-b1be-64102e233ebc",
+            "type": "text",
+            "data": {
+              "text": "Use dots on shapes to create connectors"
+            },
+            "position": {
+              "x": 190.06248030097447,
+              "y": 172.1476099688655
+            },
+            "measured": {
+              "width": 110,
+              "height": 79
+            },
+            "width": 110,
+            "height": 79,
+            "resizing": false,
+            "dragging": false
           }
         ],
         "edges": [
@@ -1204,14 +1219,15 @@
           }
         ],
         "viewport": {
-          "x": 158.76570654107567,
-          "y": 204.15831642016337,
+          "x": 82.7657065410757,
+          "y": 184.15831642016332,
           "zoom": 0.4405619316675571
         }
       }
     },
     "name_suffix": "_2026"
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-20T23:43:29.924+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson5-level1a_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson5-level1a_2025\"},{\"changed_at\":\"2026-04-01 17:12:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 17:19:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 17:23:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 17:25:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 17:31:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 17:43:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:42:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:57:02 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:59:04 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:59:21 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-02 00:00:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-03 18:00:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 17:55:47 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:15:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:16:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:18:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:21:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:24:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:24:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:28:52 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:29:02 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:34:44 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:35:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:36:43 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:36:55 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:37:02 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:41:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 23:18:48 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 09:49:04 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 09:51:10 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 20:06:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 12:57:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-13 14:21:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-13 14:23:14 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-13 14:25:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-13 14:29:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-18 18:44:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 18:53:31 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:08:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:08:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:08:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:08:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:08:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:09:25 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:43:29.924+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson5-level1a_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson5-level1a_2025\"},{\"changed_at\":\"2026-04-01 17:12:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 17:19:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 17:23:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 17:25:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 17:31:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 17:43:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:42:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:57:02 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:59:04 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-01 23:59:21 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-02 00:00:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-03 18:00:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 17:55:47 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:15:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:16:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:18:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:21:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:24:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:24:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:28:52 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:29:02 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:34:44 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:35:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:36:43 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:36:55 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:37:02 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:41:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 23:18:48 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 09:49:04 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-01 09:51:10 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 20:06:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 12:57:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-13 14:21:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-13 14:23:14 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-13 14:25:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-13 14:29:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-18 18:44:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 18:53:31 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:08:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:08:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:08:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:08:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:08:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:09:25 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-26 01:36:49 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-24 12:27:00 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

@@ -4681,7 +4681,7 @@ class UserTest < ActiveSupport::TestCase
       let(:compliant) {true}
 
       it 'returns nil' do
-        _(at_risk_age_gated_date).must_equal nil
+        _(at_risk_age_gated_date).must_be_nil
       end
     end
   end

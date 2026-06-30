@@ -3,6 +3,7 @@ require 'cgi'
 require 'httparty'
 require_relative '../../../../../deployment'
 require 'cdo/ci_utils'
+require 'cdo/aws/ec2'
 require_relative '../../../../../lib/cdo/aws/device_farm'
 require 'active_support/core_ext/object/blank'
 require_relative '../../utils/selenium_browser'
@@ -88,11 +89,30 @@ end
 
 def device_farm_desktop_browser(http_client: nil)
   # One-shot TestGrid URL, ready immediately.
-  url = Cdo::AWS::DeviceFarm.create_test_grid_url
+  url = AWS::DeviceFarm.create_test_grid_url
 
   capabilities = Selenium::WebDriver::Remote::Capabilities.new(
-    $device_farm_browser_config.except(*Cdo::AWS::DeviceFarm::INTERNAL_KEYS)
+    $device_farm_browser_config.except(*AWS::DeviceFarm::INTERNAL_KEYS)
   )
+
+  # In CI, use Chrome's --host-resolver-rules to map localhost-studio.code.org
+  # and localhost.code.org to the drone worker's IP address.
+  if $device_farm_browser_config['browserName'] == 'chrome' && ENV['CI']
+    # AWS::EC2 handles the IMDSv2 token/metadata fetch (with timeouts and
+    # error handling); on the drone worker this should always resolve. Fail
+    # loudly rather than set empty host-resolver-rules, which would silently
+    # break localhost name resolution and produce confusing connection errors.
+    worker_ip = AWS::EC2.local_ipv4
+    if worker_ip.blank?
+      raise 'Could not resolve drone worker IP when building Chrome --host-resolver-rules'
+    end
+
+    chrome_options = capabilities['goog:chromeOptions'] || {}
+    chrome_args = chrome_options['args'] || []
+    chrome_args << "--host-resolver-rules=MAP localhost-studio.code.org #{worker_ip}, MAP localhost.code.org #{worker_ip}"
+    chrome_options['args'] = chrome_args
+    capabilities['goog:chromeOptions'] = chrome_options
+  end
 
   SeleniumBrowser.remote(
     url,
@@ -107,20 +127,20 @@ end
 # Inspector disabled, etc.), tear it down and pick a fresh device from
 # the pool.
 def device_farm_mobile_browser(http_client: nil)
-  Retryable.retryable(tries: Cdo::AWS::DeviceFarm::MOBILE_DEVICE_TRIES) do |try, exception|
+  Retryable.retryable(tries: AWS::DeviceFarm::MOBILE_DEVICE_TRIES) do |try, exception|
     if exception
       puts "Device Farm: previous mobile session attempt failed " \
            "(#{exception.class}: #{exception.message.lines.first&.strip}); " \
            "provisioning a fresh device (attempt #{try})..."
     end
-    session = Cdo::AWS::DeviceFarm.create_mobile_session(
+    session = AWS::DeviceFarm.create_mobile_session(
       device_arns: $device_farm_browser_config['device_arns']
     )
     $device_farm_mobile_session_arn = session[:session_arn]
     $device_farm_mobile_device = session[:device]
 
     capabilities = Selenium::WebDriver::Remote::Capabilities.new(
-      $device_farm_browser_config.except(*Cdo::AWS::DeviceFarm::INTERNAL_KEYS)
+      $device_farm_browser_config.except(*AWS::DeviceFarm::INTERNAL_KEYS)
     )
 
     # Anything after a successful create_mobile_session leaks a running
@@ -129,8 +149,8 @@ def device_farm_mobile_browser(http_client: nil)
     # the next attempt, and lets the outer Retryable pick a different one.
     begin
       browser = Retryable.retryable(
-        tries: Cdo::AWS::DeviceFarm::MOBILE_CONNECT_TRIES,
-        sleep: Cdo::AWS::DeviceFarm::MOBILE_CONNECT_RETRY_SLEEP,
+        tries: AWS::DeviceFarm::MOBILE_CONNECT_TRIES,
+        sleep: AWS::DeviceFarm::MOBILE_CONNECT_RETRY_SLEEP,
       ) do
         SeleniumBrowser.remote(
           session[:url],
@@ -152,7 +172,7 @@ def device_farm_mobile_browser(http_client: nil)
 
       browser
     rescue
-      Cdo::AWS::DeviceFarm.stop_mobile_session($device_farm_mobile_session_arn)
+      AWS::DeviceFarm.stop_mobile_session($device_farm_mobile_session_arn)
       $device_farm_mobile_session_arn = nil
       raise
     end
@@ -194,9 +214,9 @@ def get_device_farm_browser
     end
   console_url =
     if is_mobile
-      Cdo::AWS::DeviceFarm.mobile_session_url($device_farm_mobile_session_arn)
+      AWS::DeviceFarm.mobile_session_url($device_farm_mobile_session_arn)
     else
-      Cdo::AWS::DeviceFarm.desktop_session_url(browser.session_id)
+      AWS::DeviceFarm.desktop_session_url(browser.session_id)
     end
   if console_url
     account_suffix = CI::Utils.running_on_ci? ? ' (codeorg-dev AWS account)' : ''
@@ -295,7 +315,7 @@ def quit_browser
   # Release the Device Farm device so subsequent sessions don't block
   # on PENDING_CONCURRENCY.
   if $device_farm_mobile_session_arn
-    Cdo::AWS::DeviceFarm.stop_mobile_session($device_farm_mobile_session_arn)
+    AWS::DeviceFarm.stop_mobile_session($device_farm_mobile_session_arn)
     $device_farm_mobile_session_arn = nil
   end
   $browser = @browser = nil

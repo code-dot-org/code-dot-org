@@ -1,0 +1,42 @@
+.optionList:global(.MuiList-root) {
+  padding: 4px 0;
+}
+
+.optionListItem:global(.MuiMenuItem-root) {
+  padding: 6px 12px;
+  gap: 8px;
+  height: 24px;
+
+  &:hover,
+  &:global(.Mui-focusVisible) {
+    background-color: var(--background-neutral-secondary);
+  }
+
+  &:global(.Mui-selected) {
+    background-color: var(--background-brand-teal-primary);
+  }
+}
+
+.optionListIcon:global(.MuiListItemIcon-root) {
+  min-width: 0;
+  color: var(--text-neutral-primary);
+}
+
+.optionListIconSelected:global(.MuiListItemIcon-root) {
+  color: var(--text-neutral-white-fixed);
+}
+
+.optionListLabel:global(.MuiListItemText-root) {
+  margin: 0;
+  flex: 1 1 auto;
+}
+
+.optionListLabelSelected {
+  color: var(--text-neutral-white-fixed);
+}
+
+.optionListCheck {
+  font-size: 12px;
+  color: var(--text-neutral-white-fixed);
+  margin-left: 8px;
+}

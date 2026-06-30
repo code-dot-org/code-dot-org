@@ -4,6 +4,7 @@ import React, {useCallback, useEffect} from 'react';
 import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
 import {SKETCHLAB_TOOLBAR_PANEL_CLASS} from '../constants';
+import {REACT_FLOW_SELECTOR} from '../reactFlowSelectors';
 import {
   entriesMatch,
   getElementForEntry,
@@ -42,8 +43,8 @@ export function useFocusManagement(
       const target = event.target as HTMLElement | null;
       if (!target) return;
       if (
-        target.closest('.react-flow__node') ||
-        target.closest('.react-flow__edge') ||
+        target.closest(REACT_FLOW_SELECTOR.node) ||
+        target.closest(REACT_FLOW_SELECTOR.edge) ||
         target.closest(`.${SKETCHLAB_TOOLBAR_PANEL_CLASS}`)
       ) {
         return;

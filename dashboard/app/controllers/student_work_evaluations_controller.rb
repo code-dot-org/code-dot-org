@@ -3,11 +3,13 @@ require 'json'
 class StudentWorkEvaluationsController < ApplicationController
   include Rails.application.routes.url_helpers
   before_action :authenticate_user!
-  load_and_authorize_resource :student_work_evaluation
+  load_and_authorize_resource :student_work_evaluation, except: :create
 
   # POST /student_work_evaluations
   def create
     @student_work_evaluation = StudentWorkEvaluation.new(student_work_evaluation_params)
+    authorize! :create, @student_work_evaluation
+
     if @student_work_evaluation.save
       render(status: :created, json: {message: "Successfully created #{@student_work_evaluation.type}.", id: @student_work_evaluation.id})
     else

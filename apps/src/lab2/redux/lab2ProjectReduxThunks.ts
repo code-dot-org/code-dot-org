@@ -3,12 +3,10 @@ import {
   ThunkAction,
   createAsyncThunk,
 } from '@reduxjs/toolkit';
-import {debounce} from 'lodash';
 import {AnyAction} from 'redux';
 
-import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
+import {sendStartedReportIfNotStarted} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
-import {TestResults} from '@cdo/apps/constants';
 import {setIsBlockedAbuse} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
@@ -277,8 +275,9 @@ export const deleteFileThunk = createAsyncThunk<
     try {
       // In the case of a failure, we just end up with an orphaned file in S3.
       await HttpClient.delete(deletedFileAsset.url);
-      // If the project is blocked for abuse, unblock the project if the abuse score is now < 15.
-      if (isBlockedAbuse) {
+      // If the project is blocked for abuse and the deleted file was flagged,
+      // unblock the project if the abuse score is now < 15.
+      if (deletedFileAsset.flagged && isBlockedAbuse) {
         await unflagProjectChannel(
           deletedFileAsset.channelId,
           thunkAPI.dispatch
@@ -315,7 +314,7 @@ function saveProjectIfEditable(
   if (levelStatus === LevelStatus.not_tried && hasEdited) {
     const appName = Lab2Registry.getInstance().getAppName();
     if (appName) {
-      debouncedStartedProgressReport(dispatch, appName);
+      dispatch(sendStartedReportIfNotStarted(appName));
     }
   }
   if (
@@ -328,13 +327,6 @@ function saveProjectIfEditable(
       ?.save(projectSources, forceSave, forceNewVersion);
   }
 }
-
-const debouncedStartedProgressReport = debounce(
-  (dispatch: AppDispatch, appName: string) => {
-    dispatch(sendProgressReport(appName, TestResults.LEVEL_STARTED));
-  },
-  100
-);
 
 const unflagProjectChannel = async (
   channelId: string,

@@ -21,16 +21,21 @@ import {
   asyncLoadCoteacherInvite,
   fetchDemoPresets,
 } from '../../teacherDashboard/teacherSectionsRedux';
+import {DemoType} from '../../teacherDashboard/types/teacherSectionTypes';
 import CoteacherInviteNotification from '../CoteacherInviteNotification';
 
 import DemoSectionCard from './DemoSectionCard';
 import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
+import LogoTransition from './LogoTransition';
 import OnboardingChecklist from './OnboardingChecklist';
 import {SectionList} from './SectionList';
 import TeacherHomepagePopups from './TeacherHomepagePopups';
 import TeacherPromotions from './TeacherPromotions';
+import {TempRebrandBanner} from './tempRebrandBanner/TempRebrandBanner';
 import useCreateSectionTour from './useCreateSectionTour';
+import useLearnHowToEvaluateTour from './useLearnHowToEvaluateTour';
+import useReviewSyllabusTour from './useReviewSyllabusTour';
 
 import styles from './teacherHomepage.module.scss';
 
@@ -39,23 +44,41 @@ export type ArchivedToggleOption = 'teaching' | 'archived';
 const LOGGED_TEACHER_SESSION = 'logged_teacher_session';
 interface TeacherHomepageProps {
   studioUrlPrefix: string;
+  logoTransitionEnabled?: boolean;
 }
 
 interface EssentialAiDependencyResponse {
   has_assigned_essential_ai_dependency: boolean;
 }
 
-const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
+const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
+  studioUrlPrefix,
+  logoTransitionEnabled,
+}) => {
   const isMiniTutorialEnabled =
     experiments.isEnabled(experiments.ONBOARDING) ||
     DCDO.get('onboarding-enabled', false);
-  // TODO: replace with real data once teacher grade level is stored on the platform
-  const isElementaryTeacher = true;
-  const tour = useCreateSectionTour(isElementaryTeacher);
+  const gradesTeaching = useAppSelector(
+    state => state.currentUser.gradesTeaching
+  );
+  const sections = useAppSelector(state => state.teacherSections.sections);
+
+  const demoSectionDemoType = React.useMemo<DemoType | null>(() => {
+    const demo = Object.values(sections).find(
+      s => s.demoType !== null && s.demoType !== undefined
+    );
+    return demo?.demoType ?? null;
+  }, [sections]);
+
+  const tour = useCreateSectionTour(gradesTeaching);
+  const reviewSyllabusTour = useReviewSyllabusTour(demoSectionDemoType);
+  const learnHowToEvaluateTour = useLearnHowToEvaluateTour(demoSectionDemoType);
   const isDemoSectionEnabled = experiments.isEnabled('demo-section');
 
   const teacherName = useAppSelector(state => state.currentUser.displayName);
   const teacherId = useAppSelector(state => state.currentUser.userId);
+
+  const showRebrandBanner = DCDO.get('codeai-rebrand-banner', false);
 
   const [personaData, setPersonaData] = React.useState<{
     hasMatchedPersona: boolean | null;
@@ -76,8 +99,22 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     hasAssignedEssentialAiDependency,
     setHasAssignedEssentialAiDependency,
   ] = React.useState<boolean>(false);
+  const [onboardingHidden, setOnboardingHidden] =
+    React.useState<boolean>(false);
+  const [isLoadingOnboardingHiddenStatus, setIsLoadingOnboardingHiddenStatus] =
+    React.useState<boolean>(true);
 
   const dispatch = useAppDispatch();
+
+  const handleHideOnboarding = React.useCallback(() => {
+    setOnboardingHidden(true);
+    new UserPreferences().setTeacherOnboardingHidden(true);
+  }, []);
+
+  const handleResumeOnboarding = React.useCallback(() => {
+    setOnboardingHidden(false);
+    new UserPreferences().setTeacherOnboardingHidden(false);
+  }, []);
 
   React.useEffect(() => {
     dispatch(asyncLoadTeacherHomepageSectionData());
@@ -86,22 +123,23 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     }
     dispatch(asyncLoadCoteacherInvite());
 
-    // Fetch personalization alert dismissal status
-    const fetchPersonalizationStatus = async () => {
+    // Fetch user preference statuses
+    const fetchUserPreferenceStatuses = async () => {
+      const userPreferences = new UserPreferences();
       try {
-        const userPreferences = new UserPreferences();
-        const hasDismissed =
-          await userPreferences.getHasDismissedPersonalizationAlert();
+        const [hasDismissed, hidden] = await Promise.all([
+          userPreferences.getHasDismissedPersonalizationAlert(),
+          userPreferences.getTeacherOnboardingHidden(),
+        ]);
         setHasDismissedPersonalizationAlert(hasDismissed);
-      } catch (error) {
-        console.error('Error fetching personalization alert status:', error);
-        setHasDismissedPersonalizationAlert(false);
+        setOnboardingHidden(hidden);
       } finally {
         setIsLoadingPersonalizationAlertStatus(false);
+        setIsLoadingOnboardingHiddenStatus(false);
       }
     };
 
-    fetchPersonalizationStatus();
+    fetchUserPreferenceStatuses();
 
     // Fetch teaching profile data
     const fetchTeachingProfileData = async () => {
@@ -209,8 +247,6 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   const [selectedArchiveToggle, setSelectedArchiveToggle] =
     React.useState<ArchivedToggleOption>('teaching');
 
-  const sections = useAppSelector(state => state.teacherSections.sections);
-
   // The server uses hidden to mean the same thing as archived.
   const showHiddenOnly = selectedArchiveToggle === 'archived';
 
@@ -238,6 +274,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
 
   return (
     <div className={styles.teacherHomepage}>
+      {logoTransitionEnabled && <LogoTransition />}
       <div className={styles.teacherHomepageBody}>
         <Typography variant="h2" gutterBottom>
           {teacherName
@@ -246,6 +283,9 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
         </Typography>
         <div className={styles.teacherHomepageContent}>
           <div className={styles.teacherHomepageLeftContent}>
+            {showRebrandBanner && (
+              <TempRebrandBanner showBanner={showRebrandBanner === true} />
+            )}
             {shouldShowPersonalizationAlert && (
               <Alert
                 aria-labelledby="feedback-banner-title"
@@ -279,15 +319,26 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
             <Header
               selectedArchiveToggle={selectedArchiveToggle}
               setSelectedArchiveToggle={onArchiveToggleChange}
+              onResumeOnboarding={handleResumeOnboarding}
+              onboardingHidden={onboardingHidden}
             />
 
             <CoteacherInviteNotification
               isForPl={false}
               destructiveLoad={true}
             />
-            {!!isMiniTutorialEnabled && (
-              <OnboardingChecklist createSectionTour={tour} />
-            )}
+            {!!isMiniTutorialEnabled &&
+              demoSectionDemoType !== null &&
+              !isLoadingOnboardingHiddenStatus && (
+                <OnboardingChecklist
+                  createSectionTour={tour}
+                  reviewSyllabusTour={reviewSyllabusTour}
+                  learnHowToEvaluateTour={learnHowToEvaluateTour}
+                  demoType={demoSectionDemoType}
+                  isHidden={onboardingHidden}
+                  onHide={handleHideOnboarding}
+                />
+              )}
             {!isDemoSectionEnabled ? (
               numSections === 0 ? (
                 <EmptyHomepage showHiddenOnly={showHiddenOnly} />
@@ -298,7 +349,11 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
                 />
               )
             ) : numSections === 0 ? (
-              <DemoSectionCard showHiddenOnly={showHiddenOnly} />
+              showHiddenOnly ? (
+                <EmptyHomepage showHiddenOnly={showHiddenOnly} />
+              ) : (
+                <DemoSectionCard showHiddenOnly={showHiddenOnly} />
+              )
             ) : (
               <SectionList
                 showHiddenOnly={showHiddenOnly}

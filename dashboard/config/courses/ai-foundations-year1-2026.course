@@ -4,6 +4,7 @@
     "problem-solving-with-ai-2026",
     "ai-and-the-systems-that-power-it-2026",
     "the-fabric-of-the-internet-and-ai-2026",
+    "ai-powered-threats-and-defenses-2026",
     "insights-from-data-and-ai-2026",
     "ai-generated-design-2026",
     "ai-and-algorithmic-decisions-2026",
@@ -20,6 +21,18 @@
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
+    "announcements": [
+      {
+        "key": "ba312b7f-825b-45f2-9341-785eb2ecff4f",
+        "notice": "Units 9-11 Coming Soon!",
+        "details": "Units 9-11 are currently getting some polish and will be available after July 10! ",
+        "link": "",
+        "type": "information",
+        "visibility": "Teacher-only",
+        "dismissible": true,
+        "buttonText": ""
+      }
+    ],
     "family_name": "ai-foundations-year1",
     "has_verified_resources": true,
     "numbered_units": "auto",

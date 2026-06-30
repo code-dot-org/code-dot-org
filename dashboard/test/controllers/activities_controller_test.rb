@@ -835,23 +835,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
-  test 'sharing program with street address is allowed' do
-    Geocoder.stubs(:find_potential_street_address).returns('1600 Pennsylvania Ave NW, Washington, DC 20500')
-
-    assert_creates(LevelSource) do
-      post :milestone,
-        params: @milestone_params.merge(
-          script_level_id: @playlab_script_level.id,
-          course_id: @playlab_script.original_unit_group_id,
-          program: studio_program_with_text('1600 Pennsylvania Ave NW, Washington, DC 20500')
-        )
-    end
-    assert_response :success
-    response = JSON.parse(@response.body)
-    assert_nil response['share_failure']
-    refute_nil response['level_source']
-  end
-
   test 'sharing when gatekeeper has disabled sharing does not work' do
     Gatekeeper.set('shareEnabled', where: {script_name: @playlab_script.name}, value: false)
 

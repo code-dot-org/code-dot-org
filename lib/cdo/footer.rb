@@ -8,8 +8,7 @@ module Cdo
 
     def self.get_footer_contents(options)
       # Get the 'footer' section from the requested region
-      ge_region = options[:ge_region] || :root
-      footer_config = Cdo::GlobalEdition.configuration_for(ge_region)[:footer] || {}
+      footer_config = Cdo::GlobalEdition.region_config(options[:ge_region], :footer) || {}
       site = options[:site] || :code_org
       footer_links = footer_config.dig(:links, site) || []
 

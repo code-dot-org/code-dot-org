@@ -33,8 +33,9 @@
       ],
       "answerTypeCustomizations": {
       }
-    }
+    },
+    "teacher_markdown": "### **Teacher Tips**\r\n\r\n**Students may ask for test cases without clearly describing the filter**\r\n\r\nSome students may tell AI, “give me test cases,” without explaining what their filter is supposed to do. Encourage them to include the condition by asking: **\"What kind of movies should your filter keep, and what kind should it remove?\"**\r\n\r\nExample AI prompt:\r\n```markdown\r\nMy filter should show only movies where `movie.genre === \"Action\"`. Give me test cases to check whether it works correctly.\r\n```\r\n\r\n---\r\n\r\n**Students may only test a movie that should appear**\r\n\r\nStudents often check that an Action movie appears but forget to test that non-Action movies are removed. Encourage them to test both matching and non-matching cases by asking: **\"What should happen to movies that do not match the filter?\"**\r\n\r\nHelpful test cases:\r\n```markdown\r\nAction movie → should appear\r\nComedy movie → should not appear\r\nDrama movie → should not appear\r\nMovie count → should match the number of Action movies\r\n```\r\n\r\n---\r\n\r\n**Students may not connect comments to the filter condition**\r\n\r\nSome students may write a vague comment like `// filter movies` instead of explaining the condition being checked. Encourage them to make the comment specific by asking: **\"Could someone understand the rule without reading the whole function?\"**\r\n\r\nRelevant comment:\r\n```javascript\r\n// Shows only movies with the genre \"Action\"\r\nconst filterActionMovies = () => {\r\n  ...\r\n};\r\n```\r\n\r\nThis helps students document the purpose of their code clearly."
   },
-  "audit_log": "[{\"changed_at\":\"2026-05-07 22:17:49 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-07 22:17:49 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-25 14:38:51 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Weblab2>

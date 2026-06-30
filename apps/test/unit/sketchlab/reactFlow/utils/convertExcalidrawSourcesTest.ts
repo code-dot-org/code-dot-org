@@ -70,7 +70,7 @@ describe('convertExcalidrawToReactFlow', () => {
     expect(nodes[0].style).toEqual({width: 3, height: 4});
   });
 
-  it('passes hex stroke and background colors through verbatim', () => {
+  it('preserves unrecognized/custom hex colors verbatim', () => {
     const source: ExcalidrawSourceWithExternalFiles = {
       elements: [
         el({
@@ -88,6 +88,169 @@ describe('convertExcalidrawToReactFlow', () => {
     };
     expect(data.strokeColor).toBe('#abcdef');
     expect(data.backgroundColor).toBe('#123456');
+  });
+
+  describe('color theming', () => {
+    function shapeData(source: ExcalidrawSourceWithExternalFiles) {
+      const {nodes} = convertExcalidrawToReactFlow(source);
+      return nodes[0].data as {strokeColor: string; backgroundColor: string};
+    }
+
+    it('maps black ink to the themed default stroke in a light source', () => {
+      const data = shapeData({
+        appState: {viewBackgroundColor: '#ffffff'} as never,
+        elements: [el({type: 'rectangle', id: 'r1', strokeColor: '#1e1e1e'})],
+      });
+      expect(data.strokeColor).toBe('var(--sketchlab-stroke-default)');
+    });
+
+    it('treats #000000 the same as black ink in a light source', () => {
+      const data = shapeData({
+        appState: {viewBackgroundColor: '#ffffff'} as never,
+        elements: [el({type: 'rectangle', id: 'r1', strokeColor: '#000000'})],
+      });
+      expect(data.strokeColor).toBe('var(--sketchlab-stroke-default)');
+    });
+
+    it('preserves white ink literally in a light source', () => {
+      const data = shapeData({
+        appState: {viewBackgroundColor: '#ffffff'} as never,
+        elements: [el({type: 'rectangle', id: 'r1', strokeColor: '#ffffff'})],
+      });
+      expect(data.strokeColor).toBe('#ffffff');
+    });
+
+    it('maps white ink to the themed default stroke in a dark source', () => {
+      const data = shapeData({
+        appState: {viewBackgroundColor: '#1e1e1e'} as never,
+        elements: [el({type: 'rectangle', id: 'r1', strokeColor: '#ffffff'})],
+      });
+      expect(data.strokeColor).toBe('var(--sketchlab-stroke-default)');
+    });
+
+    it('falls back to appState.theme when viewBackgroundColor is absent', () => {
+      const data = shapeData({
+        appState: {theme: 'dark'} as never,
+        elements: [el({type: 'rectangle', id: 'r1', strokeColor: '#ffffff'})],
+      });
+      expect(data.strokeColor).toBe('var(--sketchlab-stroke-default)');
+    });
+
+    it('maps open-color palette strokes to themed hue vars', () => {
+      const data = shapeData({
+        appState: {viewBackgroundColor: '#ffffff'} as never,
+        elements: [el({type: 'rectangle', id: 'r1', strokeColor: '#e03131'})],
+      });
+      expect(data.strokeColor).toBe('var(--sketchlab-stroke-red)');
+    });
+
+    it('collapses grape strokes onto the sketchlab purple', () => {
+      const data = shapeData({
+        appState: {viewBackgroundColor: '#ffffff'} as never,
+        elements: [el({type: 'rectangle', id: 'r1', strokeColor: '#9c36b5'})],
+      });
+      expect(data.strokeColor).toBe('var(--sketchlab-stroke-purple)');
+    });
+
+    it('maps open-color palette fills to themed background vars', () => {
+      const data = shapeData({
+        appState: {viewBackgroundColor: '#ffffff'} as never,
+        elements: [
+          el({type: 'rectangle', id: 'r1', backgroundColor: '#ffc9c9'}),
+        ],
+      });
+      expect(data.backgroundColor).toBe('var(--sketchlab-bg-red)');
+    });
+
+    it('maps gray fills to the themed gray background', () => {
+      const data = shapeData({
+        appState: {viewBackgroundColor: '#ffffff'} as never,
+        elements: [
+          el({type: 'rectangle', id: 'r1', backgroundColor: '#ced4da'}),
+        ],
+      });
+      expect(data.backgroundColor).toBe('var(--sketchlab-bg-gray)');
+    });
+
+    it('treats a white fill as transparent in a light source', () => {
+      const data = shapeData({
+        appState: {viewBackgroundColor: '#ffffff'} as never,
+        elements: [
+          el({type: 'rectangle', id: 'r1', backgroundColor: '#ffffff'}),
+        ],
+      });
+      expect(data.backgroundColor).toBe('transparent');
+    });
+
+    it('keeps a transparent fill transparent', () => {
+      const data = shapeData({
+        appState: {viewBackgroundColor: '#ffffff'} as never,
+        elements: [
+          el({type: 'rectangle', id: 'r1', backgroundColor: 'transparent'}),
+        ],
+      });
+      expect(data.backgroundColor).toBe('transparent');
+    });
+
+    it('themes a bound arrow stroke and arrowhead', () => {
+      const source: ExcalidrawSourceWithExternalFiles = {
+        appState: {viewBackgroundColor: '#ffffff'} as never,
+        elements: [
+          el({type: 'rectangle', id: 'a', x: 0, y: 0, width: 100, height: 100}),
+          el({
+            type: 'rectangle',
+            id: 'b',
+            x: 300,
+            y: 0,
+            width: 100,
+            height: 100,
+          }),
+          el({
+            type: 'arrow',
+            id: 'arr',
+            strokeColor: '#1e1e1e',
+            points: [
+              [0, 0],
+              [300, 0],
+            ],
+            startBinding: {elementId: 'a', focus: 0, gap: 0},
+            endBinding: {elementId: 'b', focus: 0, gap: 0},
+            startArrowhead: null,
+            endArrowhead: 'arrow',
+            lastCommittedPoint: null,
+          }),
+        ],
+      };
+      const {edges} = convertExcalidrawToReactFlow(source);
+      expect(edges[0].style?.stroke).toBe('var(--sketchlab-stroke-default)');
+      expect(edges[0].markerEnd).toMatchObject({
+        color: 'var(--sketchlab-stroke-default)',
+      });
+    });
+
+    it('themes a free-floating line stroke', () => {
+      const source: ExcalidrawSourceWithExternalFiles = {
+        appState: {viewBackgroundColor: '#ffffff'} as never,
+        elements: [
+          el({
+            type: 'line',
+            id: 'ln',
+            strokeColor: '#e03131',
+            points: [
+              [0, 0],
+              [100, 100],
+            ],
+            startBinding: null,
+            endBinding: null,
+            startArrowhead: null,
+            endArrowhead: null,
+            lastCommittedPoint: null,
+          }),
+        ],
+      };
+      const {edges} = convertExcalidrawToReactFlow(source);
+      expect(edges[0].style?.stroke).toBe('var(--sketchlab-stroke-red)');
+    });
   });
 
   it('emits standalone text as a TextNode with handles hidden by default', () => {
@@ -110,7 +273,6 @@ describe('convertExcalidrawToReactFlow', () => {
       text: 'hello',
       fontColor: '#222222',
       fontSize: 16,
-      showHandles: false,
     });
   });
 
@@ -159,7 +321,6 @@ describe('convertExcalidrawToReactFlow', () => {
     expect(nodes[0].data).toEqual({
       src: 'https://example.com/f1.png',
       altText: '',
-      showHandles: false,
     });
   });
 
@@ -188,7 +349,6 @@ describe('convertExcalidrawToReactFlow', () => {
     expect(nodes[0].data).toEqual({
       src: 'data:image/png;base64,AAAA',
       altText: '',
-      showHandles: false,
     });
   });
 
@@ -371,7 +531,7 @@ describe('convertExcalidrawToReactFlow', () => {
     const {nodes, edges} = convertExcalidrawToReactFlow(source);
     expect(nodes.filter(n => n.type === 'lineAnchor')).toHaveLength(2);
     expect(edges).toHaveLength(1);
-    expect(edges[0].markerEnd).toEqual({type: 'arrowclosed'});
+    expect(edges[0].markerEnd).toMatchObject({type: 'arrowclosed'});
   });
 
   it('does not emit a viewport', () => {

@@ -6,3 +6,4 @@ ruby tools/hooks/lint.rb &&
   ruby tools/hooks/restrict_staging_changes.rb &&
   ruby tools/hooks/restrict_migration_changes.rb &&
   ruby tools/hooks/restrict_large_files.rb
+  ruby tools/hooks/gitattributes_renormalize_reminder.rb

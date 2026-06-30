@@ -9,10 +9,10 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 # count decreases by more than 10 thousand projects.
 
 require 'sequel'
-require File.expand_path('../../../pegasus/src/env', __FILE__)
-require_relative '../../pegasus/helpers/properties'
+require File.expand_path('../../../lib/cdo/pegasus/src/env', __FILE__)
+require 'cdo/pegasus/properties'
 require 'cdo/sequel'
-require src_dir 'database'
+require 'cdo/pegasus/src/database'
 require_relative '../../deployment'
 require 'cdo/honeybadger'
 

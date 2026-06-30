@@ -71,7 +71,39 @@ class ShareFilteringTest < Minitest::Test
     )
   end
 
-  def test_find_share_failure_with_street_address
+  def test_extract_address_candidate
+    # No multi-digit number → nil.
+    assert_nil Geocoder.extract_address_candidate(nil)
+    assert_nil Geocoder.extract_address_candidate('')
+    assert_nil Geocoder.extract_address_candidate('just some text')
+    assert_nil Geocoder.extract_address_candidate('level 5 game over')
+
+    # Word-boundary: digits attached to non-digit chars are not house numbers.
+    assert_nil Geocoder.extract_address_candidate('300b')
+    assert_nil Geocoder.extract_address_candidate('1_Counter')
+
+    # Too few words (candidate has < 3 tokens).
+    assert_nil Geocoder.extract_address_candidate('300')
+    assert_nil Geocoder.extract_address_candidate('123 Post')
+
+    # Too short (candidate length < MIN_ADDRESS_LENGTH).
+    assert_nil Geocoder.extract_address_candidate('Hi 12 Go')
+
+    # Valid: extraction starts at the first multi-digit number.
+    assert_equal '123 Post Road', Geocoder.extract_address_candidate('Hi I live at 123 Post Road')
+    assert_equal '123 Post Road Westport CT', Geocoder.extract_address_candidate('Hi I live at 123 Post Road Westport CT')
+    assert_equal '123, Post Road, Westport, CT', Geocoder.extract_address_candidate('Hi I live at 123, Post Road, Westport, CT')
+
+    # Semicolon and other non-address characters, which can be geocoder delimiters, are stripped.
+    assert_equal '00,100 player.setAnimation fly bot player.scale 0.8', Geocoder.extract_address_candidate('00,100; player.setAnimation(fly_bot); player.scale = 0.8')
+
+    # Caps at MAX_ADDRESS_WORDS words.
+    long_text = "Hi 12 #{(['word'] * 20).join(' ')}"
+    candidate = Geocoder.extract_address_candidate(long_text)
+    assert_equal Geocoder::MAX_ADDRESS_WORDS, candidate.split.length
+  end
+
+  def test_find_share_failure_temporarily_ignores_street_address
     Geocoder.
       stubs(:find_potential_street_address).
       returns('1600 Pennsylvania Ave NW, Washington, DC 20500')

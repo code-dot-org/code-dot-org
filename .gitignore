@@ -55,7 +55,6 @@ dashboard/brakeman_security_report.htm
 /apps/coverage
 /apps/log
 /apps/node_modules/
-/bin/i18n/node_modules/
 /apps/npm-debug.log
 /apps/src/generated/*
 !/apps/src/generated/README.md
@@ -87,11 +86,6 @@ dashboard/brakeman_security_report.htm
 /aws/offsite/lambda/*.zip
 /bin/cron/.dts
 /bin/cron/log
-/bin/i18n/*_credentials.yml
-/bin/i18n/crowdin/etags/*testing_etags.json
-/bin/i18n/crowdin/etags/*test_etags.json
-/bin/i18n/crowdin/etags/**/*testing.json
-/bin/i18n/crowdin/etags/**/*test.json
 /bin/test/coverage
 /dashboard/public/blockly
 /dashboard/public/code-studio
@@ -99,12 +93,6 @@ dashboard/brakeman_security_report.htm
 /dashboard/public/styleguide
 /pegasus/.sass-cache
 /pegasus/sites.v3/*/public/css/generated
-/i18n/crowdin/*
-/i18n/locales/*/codeorg-markdown/
-/i18n/locales/*/curriculum_content/
-/i18n/locales/*/piskel/
-/i18n/locales/*/standards/
-/i18n/locales/*/docs/
 
 # python venv:
 .venv
@@ -127,3 +115,7 @@ CLAUDE.local.md
 # agent skills standard: https://agentskills.io/
 .agents/**/*.local.*
 .agents/skills/*.local
+
+# playwright-best-practices: managed by skills-lock.json, not vendored.
+# Restore with `npx skills experimental_install` (see e2e-tests/README.md).
+.agents/skills/playwright-best-practices/

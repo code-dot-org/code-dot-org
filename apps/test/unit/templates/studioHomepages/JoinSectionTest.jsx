@@ -1,3 +1,5 @@
+import TextField from '@code-dot-org/component-library/textField';
+import {Button as MuiButton} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
@@ -5,6 +7,8 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 import {UnconnectedJoinSection as JoinSection} from '@cdo/apps/templates/studioHomepages/JoinSection';
 
 import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
+import styles from '@cdo/apps/templates/studioHomepages/join-section.module.scss';
 
 const DEFAULT_PROPS = {
   enrolledInASection: false,
@@ -23,32 +27,32 @@ describe('JoinSection', () => {
     server.restore();
   });
 
-  it('renders with a dashed border when not enrolled in a section', () => {
+  it('renders with the dashed-border class when not enrolled in a section', () => {
     const wrapper = shallow(
       <JoinSection {...DEFAULT_PROPS} enrolledInASection={false} />
     );
-    expect(wrapper.prop('style')).to.include({borderStyle: 'dashed'});
+    expect(wrapper.prop('className')).to.include(styles.mainDashed);
   });
 
-  it('renders with a solid border when enrolled in a section', () => {
+  it('renders without the dashed-border class when enrolled in a section', () => {
     const wrapper = shallow(
       <JoinSection {...DEFAULT_PROPS} enrolledInASection={true} />
     );
-    expect(wrapper.prop('style')).to.include({borderStyle: 'solid'});
+    expect(wrapper.prop('className')).to.not.include(styles.mainDashed);
   });
 
   it('renders with disabled button when input is empty', () => {
     const wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
-    expect(wrapper.find('Button').prop('disabled')).to.be.true;
-    wrapper.find('input').simulate('change', {target: {value: 'ABCDEF'}});
-    expect(wrapper.find('Button').prop('disabled')).to.be.false;
+    expect(wrapper.find(MuiButton).prop('disabled')).to.be.true;
+    wrapper.find(TextField).simulate('change', {target: {value: 'ABCDEF'}});
+    expect(wrapper.find(MuiButton).prop('disabled')).to.be.false;
   });
 
   it('updates state when typing', () => {
     const wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
-    wrapper.find('input').simulate('change', {target: {value: 'ABCDEF'}});
+    wrapper.find(TextField).simulate('change', {target: {value: 'ABCDEF'}});
     expect(wrapper.state()).to.deep.equal({sectionCode: 'ABCDEF'});
-    expect(wrapper.find('input').prop('value')).to.equal('ABCDEF');
+    expect(wrapper.find(TextField).prop('value')).to.equal('ABCDEF');
   });
 
   it('button click sends join request', done => {
@@ -63,7 +67,7 @@ describe('JoinSection', () => {
 
     const updateSections = sinon.spy(function () {
       expect(wrapper.state()).to.deep.equal({sectionCode: ''});
-      expect(wrapper.find('input').prop('value')).to.equal('');
+      expect(wrapper.find(TextField).prop('value')).to.equal('');
 
       expect(updateSections).to.have.been.calledOnce;
 
@@ -73,8 +77,8 @@ describe('JoinSection', () => {
     const wrapper = shallow(
       <JoinSection {...DEFAULT_PROPS} updateSections={updateSections} />
     );
-    wrapper.find('input').simulate('change', {target: {value: 'ABCDEF'}});
-    wrapper.find('Button').simulate('click');
+    wrapper.find(TextField).simulate('change', {target: {value: 'ABCDEF'}});
+    wrapper.find(MuiButton).simulate('click');
     server.respond();
   });
 
@@ -90,7 +94,7 @@ describe('JoinSection', () => {
 
     const updateSections = sinon.spy(function () {
       expect(wrapper.state()).to.deep.equal({sectionCode: ''});
-      expect(wrapper.find('input').prop('value')).to.equal('');
+      expect(wrapper.find(TextField).prop('value')).to.equal('');
 
       expect(updateSections).to.have.been.calledOnce;
 
@@ -100,8 +104,8 @@ describe('JoinSection', () => {
     const wrapper = shallow(
       <JoinSection {...DEFAULT_PROPS} updateSections={updateSections} />
     );
-    wrapper.find('input').simulate('change', {target: {value: ' aBcDeF  '}});
-    wrapper.find('Button').simulate('click');
+    wrapper.find(TextField).simulate('change', {target: {value: ' aBcDeF  '}});
+    wrapper.find(MuiButton).simulate('click');
     server.respond();
   });
 
@@ -117,7 +121,7 @@ describe('JoinSection', () => {
 
     const updateSections = sinon.spy(function () {
       expect(wrapper.state()).to.deep.equal({sectionCode: ''});
-      expect(wrapper.find('input').prop('value')).to.equal('');
+      expect(wrapper.find(TextField).prop('value')).to.equal('');
 
       expect(updateSections).to.have.been.calledOnce;
 
@@ -127,8 +131,8 @@ describe('JoinSection', () => {
     const wrapper = shallow(
       <JoinSection {...DEFAULT_PROPS} updateSections={updateSections} />
     );
-    wrapper.find('input').simulate('change', {target: {value: 'ABCDEF'}});
-    wrapper.find('input').simulate('keyup', {key: 'Enter'});
+    wrapper.find(TextField).simulate('change', {target: {value: 'ABCDEF'}});
+    wrapper.find(TextField).simulate('keyup', {key: 'Enter'});
     server.respond();
   });
 
@@ -136,18 +140,18 @@ describe('JoinSection', () => {
     const wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
     wrapper.setState({sectionCode: 'ABCDEF'});
 
-    wrapper.find('input').simulate('keyup', {key: 'Escape'});
+    wrapper.find(TextField).simulate('keyup', {key: 'Escape'});
     expect(wrapper.state()).to.deep.equal({sectionCode: ''});
-    expect(wrapper.find('input').prop('value')).to.equal('');
+    expect(wrapper.find(TextField).prop('value')).to.equal('');
   });
 
   it('ignores other keyup events gracefully', () => {
     const wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
     wrapper.setState({sectionCode: 'ABC'});
 
-    wrapper.find('input').simulate('keyup', {key: 'Z'});
+    wrapper.find(TextField).simulate('keyup', {key: 'Z'});
     expect(wrapper.state()).to.deep.equal({sectionCode: 'ABC'});
-    expect(wrapper.find('input').prop('value')).to.equal('ABC');
+    expect(wrapper.find(TextField).prop('value')).to.equal('ABC');
   });
 
   it('handles failed request with specific reason', done => {
@@ -162,7 +166,7 @@ describe('JoinSection', () => {
 
     const updateSectionsResult = sinon.spy(function () {
       expect(wrapper.state()).to.deep.equal({sectionCode: ''});
-      expect(wrapper.find('input').prop('value')).to.equal('');
+      expect(wrapper.find(TextField).prop('value')).to.equal('');
 
       expect(updateSectionsResult).to.have.been.calledOnce;
 
@@ -175,8 +179,8 @@ describe('JoinSection', () => {
         updateSectionsResult={updateSectionsResult}
       />
     );
-    wrapper.find('input').simulate('change', {target: {value: 'ABCDEF'}});
-    wrapper.find('Button').simulate('click');
+    wrapper.find(TextField).simulate('change', {target: {value: 'ABCDEF'}});
+    wrapper.find(MuiButton).simulate('click');
     server.respond();
   });
 
@@ -189,7 +193,7 @@ describe('JoinSection', () => {
 
     const updateSectionsResult = sinon.spy(function () {
       expect(wrapper.state()).to.deep.equal({sectionCode: ''});
-      expect(wrapper.find('input').prop('value')).to.equal('');
+      expect(wrapper.find(TextField).prop('value')).to.equal('');
 
       expect(updateSectionsResult).to.have.been.calledOnce;
 
@@ -202,8 +206,8 @@ describe('JoinSection', () => {
         updateSectionsResult={updateSectionsResult}
       />
     );
-    wrapper.find('input').simulate('change', {target: {value: 'ABCDEF'}});
-    wrapper.find('Button').simulate('click');
+    wrapper.find(TextField).simulate('change', {target: {value: 'ABCDEF'}});
+    wrapper.find(MuiButton).simulate('click');
     server.respond();
   });
 

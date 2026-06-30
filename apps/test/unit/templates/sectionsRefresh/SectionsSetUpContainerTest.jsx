@@ -1,327 +1,300 @@
-import {Button as MuiButton} from '@mui/material';
-import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import '@testing-library/jest-dom';
+import {render, screen, fireEvent, waitFor} from '@testing-library/react';
 import React from 'react';
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import * as utils from '@cdo/apps/code-studio/utils';
-import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/SectionsSetUpContainer';
 import {
-  COLORS,
-  EMOJIS,
-} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/sectionAvatars/avatarConstants';
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux,
+} from '@cdo/apps/redux';
+import currentUser, {
+  setInitialData,
+} from '@cdo/apps/templates/currentUserRedux';
+import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/SectionsSetUpContainer';
 import * as windowUtils from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+const DEFAULT_PROPS = {defaultRedirectUrl: '/home'};
 
-const DEFAULT_PROPS = {
-  defaultRedirectUrl: '/home',
-};
+const renderContainer = (props = {}) =>
+  render(<SectionsSetUpContainer {...DEFAULT_PROPS} {...props} />);
+
+// Resolved mock response — json() must return a Promise for the fetch chain to work.
+const mockFetchResponse = () =>
+  Promise.resolve({ok: true, json: () => Promise.resolve({})});
 
 describe('SectionsSetUpContainer', () => {
+  let fetchSpy;
+
+  beforeEach(() => {
+    // Notification (used in CAP notice) is connected to Redux and reads state.isRtl.
+    stubRedux();
+    registerReducers({isRtl});
+    // CurriculumQuickAssign fetches course offerings on mount; mock to prevent failures.
+    fetchSpy = jest
+      .spyOn(window, 'fetch')
+      .mockImplementation(mockFetchResponse);
+  });
+
   afterEach(() => {
-    sinon.restore();
+    restoreRedux();
+    jest.restoreAllMocks();
   });
+
   it('renders an initial set up section form', () => {
-    const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
-
-    expect(wrapper.find('SingleSectionSetUp').length).to.equal(1);
+    renderContainer();
+    screen.getByText(i18n.classSection());
   });
 
-  it('initializes with random avatar_color and avatar_emoji within valid range', () => {
-    const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
-    const section = wrapper.find('SingleSectionSetUp').prop('section');
-
-    expect(section.avatar_color).to.be.at.least(0);
-    expect(section.avatar_color).to.be.below(COLORS.length);
-    expect(section.avatar_emoji).to.be.at.least(0);
-    expect(section.avatar_emoji).to.be.below(EMOJIS.length);
+  it('renders avatar edit button', () => {
+    renderContainer();
+    screen.getByText(i18n.editAvatar());
   });
 
-  it('renders headers and button', () => {
-    const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
-
-    expect(wrapper.find(MuiButton).length).to.equal(4);
-    expect(wrapper.find(MuiButton).last().props().children).to.equal(
-      'Finish creating sections'
-    );
+  it('renders Finish creating sections button for new section', () => {
+    renderContainer();
+    screen.getByText(i18n.finishCreatingSections());
   });
 
-  it('renders edit header and save button', () => {
-    const wrapper = shallow(
-      <SectionsSetUpContainer {...DEFAULT_PROPS} sectionToBeEdited={{}} />
-    );
-
-    expect(wrapper.find(MuiButton).length).to.equal(3);
-    expect(wrapper.find(MuiButton).last().props().children).to.equal('Save');
+  it('renders Save button when editing an existing section', () => {
+    renderContainer({sectionToBeEdited: {}});
+    screen.getByText(i18n.save());
+    expect(
+      screen.queryByText(i18n.finishCreatingSections())
+    ).not.toBeInTheDocument();
   });
 
   it('renders curriculum quick assign', () => {
-    const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
+    renderContainer();
+    screen.getByText(i18n.decideLater());
+  });
 
+  it('renders Child Account Policy Notice for US, student, and email sections', () => {
+    jest.spyOn(utils, 'queryParams').mockImplementation(param => {
+      if (param === 'loginType') return 'email';
+      if (param === 'participantType') return 'student';
+      return null;
+    });
+
+    renderContainer({userCountry: 'US'});
+    screen.getByText(i18n.childAccountPolicy_LearnMore());
+  });
+
+  it('does not render Child Account Policy Notice when section login is not email', () => {
+    jest.spyOn(utils, 'queryParams').mockImplementation(param => {
+      if (param === 'loginType') return 'word';
+      if (param === 'participantType') return 'student';
+      return null;
+    });
+
+    renderContainer({userCountry: 'US'});
     expect(
-      wrapper.find('GlobalEditionWrapper', {
-        componentId: 'CurriculumQuickAssign',
-      }).length
-    ).to.equal(1);
+      screen.queryByText(i18n.childAccountPolicy_LearnMore())
+    ).not.toBeInTheDocument();
   });
 
-  it('renders Child Account Policy Notice for US, student and email sections', () => {
-    sinon
-      .stub(utils, 'queryParams')
-      .withArgs('loginType')
-      .returns('email')
-      .withArgs('participantType')
-      .returns('student');
+  it('does not render Child Account Policy Notice for non-US country', () => {
+    jest.spyOn(utils, 'queryParams').mockImplementation(param => {
+      if (param === 'loginType') return 'email';
+      if (param === 'participantType') return 'student';
+      return null;
+    });
 
-    const wrapper = shallow(
-      <SectionsSetUpContainer {...DEFAULT_PROPS} userCountry={'US'} />
-    );
-    expect(wrapper.find('Connect(Notification)').exists()).to.equal(true);
+    renderContainer({userCountry: 'ES'});
+    expect(
+      screen.queryByText(i18n.childAccountPolicy_LearnMore())
+    ).not.toBeInTheDocument();
   });
 
-  it('does not render Child Account Policy Notice when sections are not email', () => {
-    sinon
-      .stub(utils, 'queryParams')
-      .withArgs('loginType')
-      .returns('word')
-      .withArgs('participantType')
-      .returns('student');
-
-    const wrapper = shallow(
-      <SectionsSetUpContainer {...DEFAULT_PROPS} userCountry={'US'} />
-    );
-    expect(wrapper.find('Connect(Notification)').exists()).to.equal(false);
+  it('renders coteacher section', () => {
+    renderContainer();
+    screen.getByText(i18n.coteacherAdd());
   });
 
-  it('does not render Child Account Policy Notice for country different that US', () => {
-    sinon
-      .stub(utils, 'queryParams')
-      .withArgs('loginType')
-      .returns('email')
-      .withArgs('participantType')
-      .returns('student');
+  it('shows coteacher settings when Add Co-Teachers is clicked', () => {
+    renderContainer();
+    expect(screen.queryByText(i18n.coteacherLabel())).not.toBeInTheDocument();
 
-    const wrapper = shallow(
-      <SectionsSetUpContainer {...DEFAULT_PROPS} userCountry={'ES'} />
-    );
-    expect(wrapper.find('Connect(Notification)').exists()).to.equal(false);
+    fireEvent.click(document.getElementById('uitest-expandable-coteacher'));
+
+    screen.getByText(i18n.coteacherLabel());
   });
 
-  it('renders coteacher settings', () => {
-    const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
+  it('shows advanced settings when Advanced Settings is clicked', () => {
+    renderContainer();
+    expect(screen.queryByText(i18n.pairProgramming())).not.toBeInTheDocument();
 
-    expect(wrapper.find('InfoHelpTip').length).to.equal(1);
+    fireEvent.click(document.getElementById('uitest-expandable-settings'));
+
+    screen.getByText(i18n.pairProgramming());
   });
 
-  it('updates caret direction when Add Coteachers is clicked', () => {
-    const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
+  it('hides advanced settings when Advanced Settings is clicked again', () => {
+    renderContainer();
 
-    const caretIcon = button => button.props().startIcon.props.iconName;
-    expect(caretIcon(wrapper.find(MuiButton).at(0))).to.equal('caret-right');
-    wrapper
-      .find(MuiButton)
-      .at(0)
-      .simulate('click', {preventDefault: () => {}});
-    expect(caretIcon(wrapper.find(MuiButton).at(0))).to.equal('caret-down');
+    fireEvent.click(document.getElementById('uitest-expandable-settings'));
+    screen.getByText(i18n.pairProgramming());
+
+    fireEvent.click(document.getElementById('uitest-expandable-settings'));
+    expect(screen.queryByText(i18n.pairProgramming())).not.toBeInTheDocument();
   });
 
-  it('renders advanced settings', () => {
-    const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
+  it('reports form validity when save is clicked with invalid form', () => {
+    jest
+      .spyOn(HTMLFormElement.prototype, 'checkValidity')
+      .mockReturnValue(false);
+    const reportSpy = jest
+      .spyOn(HTMLFormElement.prototype, 'reportValidity')
+      .mockImplementation(() => {});
 
-    wrapper
-      .find(MuiButton)
-      .at(1)
-      .simulate('click', {preventDefault: () => {}});
+    renderContainer();
+    fireEvent.click(screen.getByText(i18n.finishCreatingSections()));
 
-    expect(wrapper.find('AdvancedSettingToggles').length).to.equal(1);
+    expect(reportSpy).toHaveBeenCalledTimes(1);
   });
 
-  it('updates caret direction when Advanced Settings is clicked', () => {
-    const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
+  it('makes an ajax request when save is clicked with valid form', async () => {
+    jest
+      .spyOn(HTMLFormElement.prototype, 'checkValidity')
+      .mockReturnValue(true);
+    const navigateSpy = jest
+      .spyOn(windowUtils, 'navigateToHref')
+      .mockImplementation(() => {});
 
-    const caretIcon = button => button.props().startIcon.props.iconName;
-    expect(caretIcon(wrapper.find(MuiButton).at(0))).to.equal('caret-right');
-    wrapper
-      .find(MuiButton)
-      .at(1)
-      .simulate('click', {preventDefault: () => {}});
-    expect(caretIcon(wrapper.find(MuiButton).at(1))).to.equal('caret-down');
-  });
+    renderContainer();
+    fetchSpy.mockClear(); // clear CurriculumQuickAssign's mount fetch
+    fireEvent.click(screen.getByText(i18n.finishCreatingSections()));
 
-  it('validates the form when save is clicked', () => {
-    const reportSpy = sinon.spy();
-    sinon
-      .stub(document, 'querySelector')
-      .withArgs('#sections-set-up-container')
-      .returns({
-        checkValidity: () => {},
-        reportValidity: reportSpy,
-      });
-
-    const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
-
-    wrapper
-      .find(MuiButton)
-      .last()
-      .simulate('click', {preventDefault: () => {}});
-
-    expect(reportSpy).to.have.been.called.once;
-  });
-
-  it('makes an ajax request when save is clicked', async () => {
-    sinon
-      .stub(document, 'querySelector')
-      .withArgs('#sections-set-up-container')
-      .returns({
-        checkValidity: () => true,
-      })
-      .withArgs('meta[name="csrf-token"]')
-      .returns({
-        attributes: {content: {value: null}},
-      });
-    const fetchSpy = sinon.stub(window, 'fetch');
-    fetchSpy.returns(Promise.resolve({ok: true, json: () => {}}));
-    const navigateToHrefSpy = sinon.spy(windowUtils, 'navigateToHref');
-
-    const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
-
-    wrapper
-      .find(MuiButton)
-      .last()
-      .simulate('click', {preventDefault: () => {}});
-
-    expect(fetchSpy).to.have.been.called.once;
-
-    await new Promise(resolve => setTimeout(resolve, 0));
-    expect(navigateToHrefSpy).to.have.been.called.once;
-    expect(navigateToHrefSpy.getCall(0).args[0]).to.include('/home');
+    expect(fetchSpy).toHaveBeenCalledTimes(1);
+    await waitFor(() => expect(navigateSpy).toHaveBeenCalledTimes(1));
+    expect(navigateSpy.mock.calls[0][0]).toContain('/home');
   });
 
   it('appends showSectionCreationDialog to url if isUsersFirstSection is true', async () => {
-    sinon
-      .stub(document, 'querySelector')
-      .withArgs('#sections-set-up-container')
-      .returns({
-        checkValidity: () => true,
-      })
-      .withArgs('meta[name="csrf-token"]')
-      .returns({
-        attributes: {content: {value: null}},
-      });
-    const fetchSpy = sinon.stub(window, 'fetch');
-    fetchSpy.returns(Promise.resolve({ok: true, json: () => {}}));
-    const navigateToHrefSpy = sinon.spy(windowUtils, 'navigateToHref');
+    jest
+      .spyOn(HTMLFormElement.prototype, 'checkValidity')
+      .mockReturnValue(true);
+    const navigateSpy = jest
+      .spyOn(windowUtils, 'navigateToHref')
+      .mockImplementation(() => {});
 
-    const wrapper = shallow(
-      <SectionsSetUpContainer {...DEFAULT_PROPS} isUsersFirstSection />
-    );
+    renderContainer({isUsersFirstSection: true});
+    fetchSpy.mockClear();
+    fireEvent.click(screen.getByText(i18n.finishCreatingSections()));
 
-    wrapper
-      .find(MuiButton)
-      .last()
-      .simulate('click', {preventDefault: () => {}});
-
-    expect(fetchSpy).to.have.been.called.once;
-
-    await new Promise(resolve => setTimeout(resolve, 0));
-    expect(navigateToHrefSpy).to.have.been.called.once;
-    expect(navigateToHrefSpy.getCall(0).args[0]).to.include(
+    await waitFor(() => expect(navigateSpy).toHaveBeenCalledTimes(1));
+    expect(navigateSpy.mock.calls[0][0]).toContain(
       '/home?showSectionCreationDialog=true'
     );
   });
 
   it('passes participantType and loginType to ajax request when save is clicked', () => {
-    sinon
-      .stub(document, 'querySelector')
-      .withArgs('#sections-set-up-container')
-      .returns({
-        checkValidity: () => true,
-      })
-      .withArgs('meta[name="csrf-token"]')
-      .returns({
-        attributes: {content: {value: null}},
-      });
-    sinon
-      .stub(utils, 'queryParams')
-      .withArgs('loginType')
-      .returns('word')
-      .withArgs('participantType')
-      .returns('student');
-    const fetchSpy = sinon.spy(window, 'fetch');
+    jest.spyOn(utils, 'queryParams').mockImplementation(param => {
+      if (param === 'loginType') return 'word';
+      if (param === 'participantType') return 'student';
+      return null;
+    });
+    jest
+      .spyOn(HTMLFormElement.prototype, 'checkValidity')
+      .mockReturnValue(true);
 
-    const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
+    renderContainer();
+    fetchSpy.mockClear();
+    fireEvent.click(screen.getByText(i18n.finishCreatingSections()));
 
-    wrapper
-      .find(MuiButton)
-      .last()
-      .simulate('click', {preventDefault: () => {}});
-
-    expect(fetchSpy).to.have.been.called.once;
-    const fetchBody = JSON.parse(fetchSpy.getCall(0).args[1].body);
-    expect(fetchBody.login_type).to.equal('word');
-    expect(fetchBody.participant_type).to.equal('student');
+    expect(fetchSpy).toHaveBeenCalledTimes(1);
+    const fetchBody = JSON.parse(fetchSpy.mock.calls[0][1].body);
+    expect(fetchBody.login_type).toBe('word');
+    expect(fetchBody.participant_type).toBe('student');
   });
 
-  it('passes url attribute to make a new section if save and create new is clicked', () => {
-    sinon
-      .stub(document, 'querySelector')
-      .withArgs('#sections-set-up-container')
-      .returns({
-        checkValidity: () => true,
-      })
-      .withArgs('meta[name="csrf-token"]')
-      .returns({
-        attributes: {content: {value: null}},
-      });
-    sinon
-      .stub(utils, 'queryParams')
-      .withArgs('showSectionCreationDialog')
-      .returns('true');
-    const fetchSpy = sinon.spy(window, 'fetch');
+  it('makes a request when save and add another section is clicked', () => {
+    jest
+      .spyOn(HTMLFormElement.prototype, 'checkValidity')
+      .mockReturnValue(true);
 
-    const wrapper = shallow(<SectionsSetUpContainer {...DEFAULT_PROPS} />);
+    renderContainer();
+    fetchSpy.mockClear();
+    fireEvent.click(screen.getByText(i18n.addAnotherClassSection()));
 
-    const buttons = wrapper.find(MuiButton);
-    buttons
-      .at(buttons.length - 2)
-      .simulate('click', {preventDefault: () => {}});
-
-    expect(fetchSpy).to.have.been.called.once;
+    expect(fetchSpy).toHaveBeenCalledTimes(1);
   });
 
-  it('redirects to defaultRedirectUrl', async () => {
-    sinon
-      .stub(document, 'querySelector')
-      .withArgs('#sections-set-up-container')
-      .returns({
-        checkValidity: () => true,
-      })
-      .withArgs('meta[name="csrf-token"]')
-      .returns({
-        attributes: {content: {value: null}},
+  it('redirects to defaultRedirectUrl after save', async () => {
+    jest
+      .spyOn(HTMLFormElement.prototype, 'checkValidity')
+      .mockReturnValue(true);
+    const navigateSpy = jest
+      .spyOn(windowUtils, 'navigateToHref')
+      .mockImplementation(() => {});
+
+    renderContainer({defaultRedirectUrl: '/test_redirect_url'});
+    fetchSpy.mockClear();
+    fireEvent.click(screen.getByText(i18n.finishCreatingSections()));
+
+    await waitFor(() => expect(navigateSpy).toHaveBeenCalledTimes(1));
+    expect(navigateSpy.mock.calls[0][0]).toContain('/test_redirect_url');
+  });
+
+  describe('grade pre-population from gradesTeaching', () => {
+    beforeEach(() => {
+      // Global beforeEach already stubbed Redux; just add currentUser reducer.
+      registerReducers({currentUser});
+      jest.spyOn(utils, 'queryParams').mockImplementation(param => {
+        if (param === 'participantType') return 'student';
+        return null;
       });
-    const fetchSpy = sinon.stub(window, 'fetch');
-    fetchSpy.returns(Promise.resolve({ok: true, json: () => {}}));
-    const navigateToHrefSpy = sinon.spy(windowUtils, 'navigateToHref');
+    });
 
-    const wrapper = shallow(
-      <SectionsSetUpContainer
-        {...DEFAULT_PROPS}
-        defaultRedirectUrl="/test_redirect_url"
-      />
-    );
+    it('pre-selects grades from gradesTeaching when creating a new section', () => {
+      getStore().dispatch(
+        setInitialData({
+          id: 1,
+          grades_teaching: ['11', '12'],
+          user_type: 'teacher',
+        })
+      );
 
-    wrapper
-      .find(MuiButton)
-      .last()
-      .simulate('click', {preventDefault: () => {}});
+      renderContainer();
 
-    expect(fetchSpy).to.have.been.called.once;
+      expect(screen.getByRole('checkbox', {name: '11'})).toBeChecked();
+      expect(screen.getByRole('checkbox', {name: '12'})).toBeChecked();
+      expect(screen.getByRole('checkbox', {name: 'K'})).not.toBeChecked();
+    });
 
-    await new Promise(resolve => setTimeout(resolve, 0));
-    expect(navigateToHrefSpy).to.have.been.called.once;
-    expect(navigateToHrefSpy.getCall(0).args[0]).to.include(
-      '/test_redirect_url'
-    );
+    it('initializes grades to empty array when gradesTeaching is empty', () => {
+      getStore().dispatch(
+        setInitialData({id: 1, grades_teaching: [], user_type: 'teacher'})
+      );
+
+      renderContainer();
+
+      expect(screen.getByRole('checkbox', {name: '11'})).not.toBeChecked();
+      expect(screen.getByRole('checkbox', {name: 'K'})).not.toBeChecked();
+    });
+
+    it('does not override grades when editing an existing section', () => {
+      getStore().dispatch(
+        setInitialData({
+          id: 1,
+          grades_teaching: ['11', '12'],
+          user_type: 'teacher',
+        })
+      );
+      const existingSection = {
+        grades: ['K', '1'],
+        name: 'My Class',
+        participantType: 'student',
+      };
+
+      renderContainer({sectionToBeEdited: existingSection});
+
+      expect(screen.getByRole('checkbox', {name: 'K'})).toBeChecked();
+      expect(screen.getByRole('checkbox', {name: '1'})).toBeChecked();
+      expect(screen.getByRole('checkbox', {name: '11'})).not.toBeChecked();
+    });
   });
 });

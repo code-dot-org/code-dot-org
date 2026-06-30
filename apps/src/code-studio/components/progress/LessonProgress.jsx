@@ -18,8 +18,8 @@ import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes'
 import experiments from '@cdo/apps/util/experiments';
 import {LevelKind, LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
-import color from '../../../util/color';
 import {canChangeLevelInPage} from '../../browserNavigation';
+import remeasureOnFontsReady from '../header/remeasureOnFontsReady';
 
 /**
  * Lesson progress component used in level header and course overview.
@@ -56,6 +56,13 @@ class LessonProgress extends Component {
 
   componentDidMount() {
     this.setDesiredWidth();
+    this.cancelFontRemeasure = remeasureOnFontsReady(() =>
+      this.setDesiredWidth()
+    );
+  }
+
+  componentWillUnmount() {
+    this.cancelFontRemeasure?.();
   }
 
   componentDidUpdate() {
@@ -254,8 +261,8 @@ class LessonProgress extends Component {
 
 const styles = {
   container: {
-    backgroundColor: color.lightest_gray,
-    border: `1px solid ${color.lighter_gray}`,
+    backgroundColor: 'var(--background-neutral-secondary)',
+    border: '1px solid var(--borders-neutral-primary)',
     borderRadius: 5,
     height: 40,
     position: 'relative',

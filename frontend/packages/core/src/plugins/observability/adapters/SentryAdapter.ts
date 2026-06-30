@@ -1,8 +1,8 @@
 import * as Sentry from '@sentry/browser';
 import {flatten} from 'flat';
 
-import {CodeStudioConfig, getDashboardApiUrl} from '../../../index';
-import type {Environment} from '../../../environment';
+import {CodeStudioConfig} from '../../../index';
+import {getAllowedTracingTargets} from '../getAllowedTracingTargets';
 import type {ObservabilityConfig, SpanOptions, TagValue} from '../types';
 
 import {BaseAdapter} from './BaseAdapter';
@@ -43,9 +43,9 @@ export class SentryAdapter extends BaseAdapter {
       sendDefaultPii: false,
       integrations,
       propagateTraceparent: true, // Enables trace propagation via the W3C Trace Context standard
-      tracePropagationTargets: config.tracePropagationTargets ?? [
-        this.getAllowedTracingTarget(CodeStudioConfig.environment),
-      ],
+      tracePropagationTargets:
+        config.tracePropagationTargets ??
+        getAllowedTracingTargets(CodeStudioConfig.environment),
       sampleRate: config.sampling?.errorSampleRate ?? 1.0,
       tracesSampleRate: config.sampling?.tracesSampleRate ?? 0,
       enableLogs,
@@ -188,22 +188,28 @@ export class SentryAdapter extends BaseAdapter {
   }
 
   /**
-   * Capture an exception with optional structured context, if initialized.
+   * Capture an exception with optional structured context and per-event tags.
    * @param error The thrown value or exception-like object to record.
    * @param context Optional structured metadata to attach to the error event.
+   * @param tags Optional low-cardinality tags indexed by Sentry for filtering.
    */
-  recordError(error: unknown, context?: Record<string, unknown>): void {
+  recordError(
+    error: unknown,
+    context?: Record<string, unknown>,
+    tags?: Record<string, TagValue>,
+  ): string | undefined {
     if (!this.initialized) {
-      return;
+      return undefined;
     }
 
     try {
-      Sentry.captureException(error, {extra: context});
+      return Sentry.captureException(error, {extra: context, tags});
     } catch (sdkError) {
       console.warn(
         '[observability] SentryAdapter.recordError failed:',
         sdkError,
       );
+      return undefined;
     }
   }
 
@@ -213,19 +219,5 @@ export class SentryAdapter extends BaseAdapter {
    */
   async shutdown(): Promise<void> {
     await Sentry.close();
-  }
-
-  /**
-   * Keep trace propagation limited to dashboard-origin requests, except in
-   * adhoc environments where assets may be served from CDN hosts.
-   * @param environment Current Code.org environment.
-   * @returns Host or pattern allowed to receive Sentry tracing headers.
-   */
-  private getAllowedTracingTarget(environment: Environment): string | RegExp {
-    if (environment === 'adhoc') {
-      return /^https:\/\/.*\.cdn-code\.org/;
-    }
-
-    return getDashboardApiUrl(environment);
   }
 }

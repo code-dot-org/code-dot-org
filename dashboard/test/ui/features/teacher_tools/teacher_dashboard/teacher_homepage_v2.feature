@@ -1,5 +1,8 @@
 @no_mobile
 Feature: Using the teacher homepage
+  Background:
+    Given I am on "http://studio.code.org"
+    Given I use a cookie to mock the DCDO key "hide-teacher-dashboard-logo-animation" as "true"
 
   Scenario: Teacher can access section pages from section options dropdown
     Given I create a teacher named "Teacher Hank"
@@ -67,18 +70,18 @@ Feature: Using the teacher homepage
     And I create a new student section
     And I am on "http://studio.code.org/teacher_dashboard/home"
     And I click "#ui-test-empty-state-button-Assign-a-course" once it exists to load a new page
-    Then I wait until element "h4:contains(AI for Oceans)" is visible
-    And I click selector "[aria-label='Assign AI for Oceans to your classroom']"
+    Then I wait until element "h4:contains(UI Test CSF)" is visible
+    And I click selector "[aria-label='Assign UI Test CSF to your classroom']"
     And element "span:contains(Untitled Section)" is visible
     And I click the "Untitled Section" checkbox in the dialog
     And I click selector "button:contains(Confirm section assignments)"
     And I wait until element "p:contains(You have successfully assigned)" is visible
     Given I am on "http://studio.code.org/teacher_dashboard/home"
     And I wait until element "#course-content-dropdown-Untitled-Section" is visible
-    And element "#course-content-dropdown-Untitled-Section" has text "Course: AI for Oceans"
+    And element "#course-content-dropdown-Untitled-Section" has text "Course: ui-test-csf"
     Then I click "#go-to-lesson-dropdown-button" once it exists
-    And I click "#ui-test-lesson-AI-for-Oceans" once it exists
-    Then I wait until element "a:contains(AI for Oceans)" is visible
+    And I click "#ui-test-lesson-Unit-1---UI-Test-CSF" once it exists
+    Then I wait until element "a:contains(UI Test CSF)" is visible
 
   Scenario: Teacher can access section roster from the "Add students" button on the section card
     Given I am a teacher

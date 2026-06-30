@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-06-29T17:09:41.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "panels": [
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-10-resilient-ux-summary-de39a6cf-9a58-4449-b205-cdc39b0aad93",
+        "text": "Our AI models aren't perfect; sometimes they're uncertain or even wrong. Recognizing this is the first step in building great AI programs.",
+        "imageUrl": "https://images.code.org/4d0f358a4a7a8349922f70db2dd17a18-sample-aid-sc2-unit-generation-lesson-10-resilient-ux-summary-panel-1-8fc620b6-0c6f-4c7e-8c6f-c8abddaf9881.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-10-resilient-ux-summary-cac4181b-3830-48ea-9348-2d8abd36b5c7",
+        "text": "Instead of ignoring these imperfections, we can *design* our programs to handle them gracefully. This makes them much more robust!",
+        "imageUrl": "https://images.code.org/9bae19ae8e70f55aed694967fab83114-sample-aid-sc2-unit-generation-lesson-10-resilient-ux-summary-panel-2-c38260b6-a8c1-4382-9939-2811ba0d26d4.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-10-resilient-ux-summary-d1a47f89-6b52-4a3d-b897-607571c2e289",
+        "text": "Strategies like setting **confidence thresholds** or asking for **clarification** help our programs respond intelligently when the AI isn't sure.",
+        "imageUrl": "https://images.code.org/5743a4ac34863896085f2b465d487b8f-sample-aid-sc2-unit-generation-lesson-10-resilient-ux-summary-panel-3-43a19722-8875-4fd3-9904-c1c3f33c96e2.png",
+        "layout": "text-bottom-right"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-10-resilient-ux-summary-41eee3e2-1ce5-4cc2-90b3-57e3caa1d02f",
+        "text": "These design choices lead to a much better user experience. Users feel supported and informed, even when the AI can't give a direct answer.",
+        "imageUrl": "https://images.code.org/7c581df84ae3633d5ce9948ae7a9f054-sample-aid-sc2-unit-generation-lesson-10-resilient-ux-summary-panel-4-e1ac9b3e-9d90-4575-95ad-f98dba4ff3fa.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-10-resilient-ux-summary-86329f2c-c652-4b64-9677-87aab6b038de",
+        "text": "By anticipating AI's limits, we're making responsible design decisions, just like real-world AI developers. Our choices have a big impact on users!",
+        "imageUrl": "https://images.code.org/5ef59177bc4dd077a00f028d4b5b803c-sample-aid-sc2-unit-generation-lesson-10-resilient-ux-summary-panel-5-8cc3180a-96dd-4fb4-b193-3455d2d0c5b4.png",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "generate_outline": "Summarize the importance of designing AI-powered programs for resilience and a good user experience. Emphasize that anticipating and managing AI errors or uncertainties through strategies like thresholds and clarification makes programs more reliable and user-friendly, reflecting real-world design choices."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:10:25 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:10:25 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

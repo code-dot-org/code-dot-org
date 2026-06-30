@@ -83,6 +83,7 @@ const demoPresetFromServerDemoPreset = (
   avatarEmoji: demoPreset.avatar_emoji,
   loginType: demoPreset.login_type,
   participantType: demoPreset.participant_type,
+  grades: demoPreset.grades,
   unit: demoPreset.unit
     ? {
         name: demoPreset.unit.name,
@@ -95,6 +96,10 @@ const demoPresetFromServerDemoPreset = (
         displayName: demoPreset.unit_group.display_name,
       }
     : null,
+  studentSnapshotDefaultTourLesson:
+    demoPreset.student_snapshot_default_tour_lesson ?? null,
+  reviewSyllabusQuizLesson: demoPreset.review_syllabus_quiz_lesson ?? null,
+  reviewSyllabusQuizOptions: demoPreset.review_syllabus_quiz_options ?? null,
 });
 
 export class DemoSectionCreationError extends Error {
@@ -104,6 +109,12 @@ export class DemoSectionCreationError extends Error {
     Object.setPrototypeOf(this, DemoSectionCreationError.prototype);
   }
 }
+
+const DEMO_TYPE_LABELS: Record<DemoType, string> = {
+  elementary: 'Elementary School',
+  middle: 'Middle School',
+  high: 'High School',
+};
 
 export interface TeacherSectionState {
   nextTempId: number;
@@ -970,7 +981,7 @@ export const createDemoSection =
 
     try {
       const response = await HttpClient.post(
-        `/api/v1/sections/demo/${demoType}`,
+        `/api/v1/sections/demo/create/${demoType}`,
         undefined,
         true
       );
@@ -982,7 +993,7 @@ export const createDemoSection =
         if (error.response?.status === 409) {
           throw new DemoSectionCreationError(
             'conflict',
-            'You already have a practice section.'
+            `You already have a ${DEMO_TYPE_LABELS[demoType]} practice section.`
           );
         }
 

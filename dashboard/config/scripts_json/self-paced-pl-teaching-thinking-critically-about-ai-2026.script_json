@@ -2,18 +2,21 @@
   "script": {
     "name": "self-paced-pl-teaching-thinking-critically-about-ai-2026",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "content_area": "self_paced_pl_6_8",
       "curriculum_umbrella": "AID",
+      "has_unnumbered_lessons": true,
       "is_migrated": true,
+      "student_detail_progress_view": true,
       "topic_tags": [
         "ai"
-      ]
+      ],
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-22 02:54:47 UTC",
+    "serialized_at": "2026-05-27 19:04:36 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -88,6 +91,7 @@
       "key": "d75c1543-1052-49a9-8c28-6661924f366e",
       "position": 1,
       "properties": {
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "d75c1543-1052-49a9-8c28-6661924f366e",
@@ -100,6 +104,7 @@
       "key": "d374cc07-d493-4a8d-b234-0524a5684f39",
       "position": 1,
       "properties": {
+        "duration": 40
       },
       "seeding_key": {
         "lesson_activity.key": "d374cc07-d493-4a8d-b234-0524a5684f39",
@@ -112,6 +117,7 @@
       "key": "763c9472-4e38-4878-8d66-cdba398b1eeb",
       "position": 1,
       "properties": {
+        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "763c9472-4e38-4878-8d66-cdba398b1eeb",
@@ -641,138 +647,6 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-TCaAI-L3-OpeningLevel_2026"
-        ],
-        "lesson.key": "The Generate and Judge Project",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-thinking-critically-about-ai-2026",
-        "activity_section.key": "a30a9ed7-c6db-49b3-833c-afbb4bb9a6a7"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L3-OpeningLevel_2026"
-      ]
-    },
-    {
-      "chapter": 18,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Project Deep Dive"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L3-ProjectDeepDive_2026"
-        ],
-        "lesson.key": "The Generate and Judge Project",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-thinking-critically-about-ai-2026",
-        "activity_section.key": "9e0e0f65-c5d7-4722-b317-d73d63176ac5"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L3-ProjectDeepDive_2026"
-      ]
-    },
-    {
-      "chapter": 19,
-      "position": 3,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Project Deep Dive"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L3-SampleProject_2026"
-        ],
-        "lesson.key": "The Generate and Judge Project",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-thinking-critically-about-ai-2026",
-        "activity_section.key": "9e0e0f65-c5d7-4722-b317-d73d63176ac5"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L3-SampleProject_2026"
-      ]
-    },
-    {
-      "chapter": 20,
-      "position": 4,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Project Deep Dive"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L3-Placeholder_2026"
-        ],
-        "lesson.key": "The Generate and Judge Project",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-thinking-critically-about-ai-2026",
-        "activity_section.key": "9e0e0f65-c5d7-4722-b317-d73d63176ac5"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L3-Placeholder_2026"
-      ]
-    },
-    {
-      "chapter": 21,
-      "position": 5,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Project Deep Dive"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L3-RubricReflection_2026"
-        ],
-        "lesson.key": "The Generate and Judge Project",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-thinking-critically-about-ai-2026",
-        "activity_section.key": "9e0e0f65-c5d7-4722-b317-d73d63176ac5"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L3-RubricReflection_2026"
-      ]
-    },
-    {
-      "chapter": 22,
-      "position": 6,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Wrap Up"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L3-Closing_2026"
-        ],
-        "lesson.key": "The Generate and Judge Project",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-thinking-critically-about-ai-2026",
-        "activity_section.key": "c517ec2e-3e1b-4757-9158-16bc8965a1fc"
-      },
-      "level_keys": [
-        "self-paced-TCaAI-L3-Closing_2026"
-      ]
-    },
-    {
-      "chapter": 23,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Opening"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
           "self-paced-TCaAI-L2-BI1-OpeningLevel"
         ],
         "lesson.key": "Big Ideas in Thinking Critically About AI",
@@ -785,7 +659,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -807,7 +681,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 19,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -829,7 +703,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 20,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -851,7 +725,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 21,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -873,7 +747,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 22,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -895,7 +769,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 23,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -917,7 +791,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 24,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -939,7 +813,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 25,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -961,7 +835,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 26,
       "position": 10,
       "activity_section_position": 5,
       "assessment": false,
@@ -983,7 +857,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 27,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -1005,7 +879,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 28,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -1027,7 +901,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 29,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
@@ -1049,7 +923,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 30,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -1071,7 +945,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 31,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
@@ -1093,7 +967,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 32,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -1112,6 +986,138 @@
       },
       "level_keys": [
         "self-paced-TCaAI-L2_Closing"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Opening"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-TCaAI-L3-OpeningLevel_2026"
+        ],
+        "lesson.key": "The Generate and Judge Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-thinking-critically-about-ai-2026",
+        "activity_section.key": "a30a9ed7-c6db-49b3-833c-afbb4bb9a6a7"
+      },
+      "level_keys": [
+        "self-paced-TCaAI-L3-OpeningLevel_2026"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Deep Dive"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-TCaAI-L3-ProjectDeepDive_2026"
+        ],
+        "lesson.key": "The Generate and Judge Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-thinking-critically-about-ai-2026",
+        "activity_section.key": "9e0e0f65-c5d7-4722-b317-d73d63176ac5"
+      },
+      "level_keys": [
+        "self-paced-TCaAI-L3-ProjectDeepDive_2026"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Deep Dive"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-TCaAI-L3-SampleProject_2026"
+        ],
+        "lesson.key": "The Generate and Judge Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-thinking-critically-about-ai-2026",
+        "activity_section.key": "9e0e0f65-c5d7-4722-b317-d73d63176ac5"
+      },
+      "level_keys": [
+        "self-paced-TCaAI-L3-SampleProject_2026"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Deep Dive"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-TCaAI-L3-Placeholder_2026"
+        ],
+        "lesson.key": "The Generate and Judge Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-thinking-critically-about-ai-2026",
+        "activity_section.key": "9e0e0f65-c5d7-4722-b317-d73d63176ac5"
+      },
+      "level_keys": [
+        "self-paced-TCaAI-L3-Placeholder_2026"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Deep Dive"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-TCaAI-L3-RubricReflection_2026"
+        ],
+        "lesson.key": "The Generate and Judge Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-thinking-critically-about-ai-2026",
+        "activity_section.key": "9e0e0f65-c5d7-4722-b317-d73d63176ac5"
+      },
+      "level_keys": [
+        "self-paced-TCaAI-L3-RubricReflection_2026"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-TCaAI-L3-Closing_2026"
+        ],
+        "lesson.key": "The Generate and Judge Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-thinking-critically-about-ai-2026",
+        "activity_section.key": "c517ec2e-3e1b-4757-9158-16bc8965a1fc"
+      },
+      "level_keys": [
+        "self-paced-TCaAI-L3-Closing_2026"
       ]
     }
   ],
@@ -1310,78 +1316,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-TCaAI-L3-OpeningLevel_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L3-OpeningLevel_2026"
-        ],
-        "lesson.key": "The Generate and Judge Project",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-thinking-critically-about-ai-2026",
-        "activity_section.key": "a30a9ed7-c6db-49b3-833c-afbb4bb9a6a7"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L3-ProjectDeepDive_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L3-ProjectDeepDive_2026"
-        ],
-        "lesson.key": "The Generate and Judge Project",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-thinking-critically-about-ai-2026",
-        "activity_section.key": "9e0e0f65-c5d7-4722-b317-d73d63176ac5"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L3-SampleProject_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L3-SampleProject_2026"
-        ],
-        "lesson.key": "The Generate and Judge Project",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-thinking-critically-about-ai-2026",
-        "activity_section.key": "9e0e0f65-c5d7-4722-b317-d73d63176ac5"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L3-Placeholder_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L3-Placeholder_2026"
-        ],
-        "lesson.key": "The Generate and Judge Project",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-thinking-critically-about-ai-2026",
-        "activity_section.key": "9e0e0f65-c5d7-4722-b317-d73d63176ac5"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L3-RubricReflection_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L3-RubricReflection_2026"
-        ],
-        "lesson.key": "The Generate and Judge Project",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-thinking-critically-about-ai-2026",
-        "activity_section.key": "9e0e0f65-c5d7-4722-b317-d73d63176ac5"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "self-paced-TCaAI-L3-Closing_2026",
-        "script_level.level_keys": [
-          "self-paced-TCaAI-L3-Closing_2026"
-        ],
-        "lesson.key": "The Generate and Judge Project",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-thinking-critically-about-ai-2026",
-        "activity_section.key": "c517ec2e-3e1b-4757-9158-16bc8965a1fc"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "self-paced-TCaAI-L2-BI1-OpeningLevel",
         "script_level.level_keys": [
           "self-paced-TCaAI-L2-BI1-OpeningLevel"
@@ -1570,6 +1504,78 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-teaching-thinking-critically-about-ai-2026",
         "activity_section.key": "84d8d7cb-e537-4c57-9eb5-70934852e2a9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-TCaAI-L3-OpeningLevel_2026",
+        "script_level.level_keys": [
+          "self-paced-TCaAI-L3-OpeningLevel_2026"
+        ],
+        "lesson.key": "The Generate and Judge Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-thinking-critically-about-ai-2026",
+        "activity_section.key": "a30a9ed7-c6db-49b3-833c-afbb4bb9a6a7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-TCaAI-L3-ProjectDeepDive_2026",
+        "script_level.level_keys": [
+          "self-paced-TCaAI-L3-ProjectDeepDive_2026"
+        ],
+        "lesson.key": "The Generate and Judge Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-thinking-critically-about-ai-2026",
+        "activity_section.key": "9e0e0f65-c5d7-4722-b317-d73d63176ac5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-TCaAI-L3-SampleProject_2026",
+        "script_level.level_keys": [
+          "self-paced-TCaAI-L3-SampleProject_2026"
+        ],
+        "lesson.key": "The Generate and Judge Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-thinking-critically-about-ai-2026",
+        "activity_section.key": "9e0e0f65-c5d7-4722-b317-d73d63176ac5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-TCaAI-L3-Placeholder_2026",
+        "script_level.level_keys": [
+          "self-paced-TCaAI-L3-Placeholder_2026"
+        ],
+        "lesson.key": "The Generate and Judge Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-thinking-critically-about-ai-2026",
+        "activity_section.key": "9e0e0f65-c5d7-4722-b317-d73d63176ac5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-TCaAI-L3-RubricReflection_2026",
+        "script_level.level_keys": [
+          "self-paced-TCaAI-L3-RubricReflection_2026"
+        ],
+        "lesson.key": "The Generate and Judge Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-thinking-critically-about-ai-2026",
+        "activity_section.key": "9e0e0f65-c5d7-4722-b317-d73d63176ac5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-TCaAI-L3-Closing_2026",
+        "script_level.level_keys": [
+          "self-paced-TCaAI-L3-Closing_2026"
+        ],
+        "lesson.key": "The Generate and Judge Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-thinking-critically-about-ai-2026",
+        "activity_section.key": "c517ec2e-3e1b-4757-9158-16bc8965a1fc"
       }
     }
   ],

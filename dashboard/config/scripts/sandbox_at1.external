@@ -1,0 +1,15 @@
+name 'sandbox_AT1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lesson 1 - Prompting AI
+
+**Prompting AI** is the kickoff lesson for Thinking Critically About AI, and sets the scene for students to begin engaging thoughtfully with AI-generated content. 
+
+## Preparing to Deliver
+
+Scroll through the slide deck below. Consider the teaching moves that you'll implement to deliver this content for your students. Specifically, how might you help students come to a consensus about what AI is?
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTu8WqLFe7f5jQPj5Ugnl5BuaMgKKp12sudvDgRX-WxRTEZv-1lyASx-czSSzubuH9kW_w8A2BnFoAv/pubembed?start=false&loop=false&delayms=3000" frameborder="0" style="width: 80%; height: 45vw; display: block; margin: 0 auto;" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+MARKDOWN

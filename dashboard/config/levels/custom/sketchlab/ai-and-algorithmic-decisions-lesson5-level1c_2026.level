@@ -1,6 +1,5 @@
 <Sketchlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 75,
   "created_at": "2026-04-14T17:53:05.000Z",
   "level_num": "custom",
@@ -25,7 +24,7 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#fafafa",
+              "backgroundColor": "var(--sketchlab-bg-purple)",
               "strokeColor": "var(--sketchlab-stroke-default)",
               "fontColor": "var(--sketchlab-stroke-default)"
             },
@@ -575,14 +574,17 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
-              "width": 406,
-              "height": 635
+              "width": 465,
+              "height": 663
             },
             "dragging": false,
-            "zIndex": -1
+            "zIndex": -1,
+            "width": 465,
+            "height": 663,
+            "resizing": false
           },
           {
             "id": "8X-BnVzSA4EoPsgs50OQ2",
@@ -598,9 +600,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Process",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 20
             },
             "measured": {
@@ -623,9 +625,9 @@
             "data": {
               "shapeType": "diamond",
               "label": "Decision",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 20
             },
             "measured": {
@@ -648,9 +650,9 @@
             "data": {
               "shapeType": "circle",
               "label": "Start / End",
-              "backgroundColor": "#ffc9c9",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 20
             },
             "measured": {
@@ -668,7 +670,7 @@
             },
             "data": {
               "text": "Flowchart Components ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 30,
               "showHandles": false
             },
@@ -693,7 +695,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 992,
@@ -713,7 +715,7 @@
             },
             "data": {
               "text": "Your Workspace",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 28,
               "showHandles": false
             },
@@ -737,9 +739,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Volume is set to \n50%",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 24.305689651027826
             },
             "measured": {
@@ -762,9 +764,9 @@
             "data": {
               "shapeType": "diamond",
               "label": "Is\nsound set to MUTE?\n",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 24.305689651027826
             },
             "measured": {
@@ -787,9 +789,9 @@
             "data": {
               "shapeType": "circle",
               "label": "Start playing\nmusic",
-              "backgroundColor": "#ffc9c9",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 24.305689651027826
             },
             "measured": {
@@ -812,9 +814,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "User presses \nsound button",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 24.305689651027826
             },
             "measured": {
@@ -836,9 +838,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Turn off sound",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 24.305689651027826
             },
             "measured": {
@@ -860,9 +862,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Turn on sound",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 24.305689651027826
             },
             "measured": {
@@ -879,7 +881,7 @@
             },
             "data": {
               "text": "Model",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 34.02796551143896,
               "showHandles": false
             },
@@ -902,9 +904,9 @@
             "data": {
               "shapeType": "circle",
               "label": "volume",
-              "backgroundColor": "#b2f2bb",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 24.305689651027826
             },
             "measured": {
@@ -922,7 +924,7 @@
             },
             "data": {
               "text": "\n",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 28.832460948025982,
               "showHandles": false
             },
@@ -945,9 +947,9 @@
             "data": {
               "shapeType": "circle",
               "label": "Variable",
-              "backgroundColor": "#b2f2bb",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 20
             },
             "measured": {
@@ -1012,6 +1014,25 @@
               "width": 10,
               "height": 10
             },
+            "dragging": false
+          },
+          {
+            "id": "723086b7-da92-4906-90d1-49f10d882fca",
+            "type": "text",
+            "data": {
+              "text": "Use dots on shapes to create connectors"
+            },
+            "position": {
+              "x": 205.13169766083206,
+              "y": 129.6029022136833
+            },
+            "measured": {
+              "width": 104,
+              "height": 94
+            },
+            "width": 104,
+            "height": 94,
+            "resizing": false,
             "dragging": false
           }
         ],
@@ -1129,13 +1150,14 @@
         ],
         "viewport": {
           "x": 108.0456204845517,
-          "y": 175.34848406222912,
+          "y": 174.34848406222912,
           "zoom": 0.4872693038435942
         }
       }
     },
     "name_suffix": "_2026"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-14T17:53:05.333+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson5-level1a_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson5-level1a_2026\"},{\"changed_at\":\"2026-04-14 17:53:08 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 17:56:23 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:24:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:25:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:35:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:37:15 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 23:19:01 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 12:32:53 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 20:11:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 12:59:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-13 14:25:31 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-13 14:29:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-18 18:59:16 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:01:39 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:01:43 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:06:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:07:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:07:09 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-04-14T17:53:05.333+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson5-level1a_2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson5-level1a_2026\"},{\"changed_at\":\"2026-04-14 17:53:08 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 17:56:23 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:24:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:25:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:35:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 18:37:15 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-14 23:19:01 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-01 12:32:53 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 20:11:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 12:59:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-13 14:25:31 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-13 14:29:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-18 18:59:16 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:01:39 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:01:43 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:06:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:07:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:07:09 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-26 01:37:56 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Sketchlab>

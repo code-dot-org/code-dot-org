@@ -1,6 +1,4 @@
 // Analytics constants used within the apps directory.
-// (See pegasus/helpers/analytics_constants.rb for constants in the
-// pegasus directory)
 
 const EVENTS = {
   // Sign-up flow
@@ -483,6 +481,30 @@ const EVENTS = {
   SECTION_CARD_DELETE_CLICKED: 'Section Card Delete Clicked',
   SECTION_CARD_RESTORE_CLICKED: 'Section Card Restore Clicked',
 
+  // Demo Sections
+  DEMO_SECTION_CARD_VIEWED: 'Demo Section Card Viewed',
+  DEMO_SECTION_CREATION_SUCCEEDED: 'Demo Section Creation Succeeded',
+  DEMO_SECTION_CREATION_FAILED: 'Demo Section Creation Failed',
+  DEMO_SECTION_CREATION_CONFLICT: 'Demo Section Creation Conflict',
+  DEMO_SECTION_CARD_VIEW_PROGRESS_CLICKED:
+    'Demo Section Card View Progress Clicked',
+  DEMO_SECTION_CARD_VIEW_LESSON_MATERIALS_CLICKED:
+    'Demo Section Card View Lesson Materials Clicked',
+  DEMO_SECTION_CARD_GO_TO_COURSE_CLICKED:
+    'Demo Section Card Go To Course Clicked',
+  DEMO_SECTION_CARD_JUMP_TO_LESSON_CLICKED:
+    'Demo Section Card Jump To Lesson Clicked',
+  DEMO_SECTION_CARD_JUMP_TO_UNIT_OVERVIEW_CLICKED:
+    'Demo Section Card Jump To Unit Overview Clicked',
+  DEMO_SECTION_CARD_SETTINGS_CLICKED: 'Demo Section Card Settings Clicked',
+  DEMO_SECTION_CARD_ROSTER_CLICKED: 'Demo Section Card Roster Clicked',
+  DEMO_SECTION_CARD_LOGIN_CARDS_CLICKED:
+    'Demo Section Card Login Cards Clicked',
+  DEMO_SECTION_CARD_PRINT_CERTIFICATES_CLICKED:
+    'Demo Section Card Print Certificates Clicked',
+  DEMO_SECTION_TEACHER_DASHBOARD_VIEWED:
+    'Demo Section Teacher Dashboard Viewed',
+
   // Student Homepage
   STUDENT_HOMEPAGE_VISITED: 'Student Homepage Visited',
 
@@ -582,16 +604,6 @@ const EVENTS = {
   // Lab2
   SKIP_TO_PROJECT: 'User Skipped To Project From Tutorial Level',
 
-  // Global Edition - Region Switch Confirm events
-  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_SHOWN:
-    'Global Edition Region Switch Confirm Shown',
-  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_CLOSED:
-    'Global Edition Region Switch Confirm Closed',
-  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_ACCEPTED:
-    'Global Edition Region Switch Confirm Accepted',
-  GLOBAL_EDITION_REGION_SWITCH_CONFIRM_REJECTED:
-    'Global Edition Region Switch Confirm Rejected',
-
   // Sign in callout on CSF and CSC levels
   LEVEL_SIGN_IN_CALLOUT_SHOWN: 'Level Sign In Callout Shown',
 
@@ -687,11 +699,14 @@ const EVENTS = {
   LESSON_SNAPSHOT_FEEDBACK_WIDGET_LOADED:
     "Teacher opens a student's lesson view and the feedback widget is rendered",
 
-  LANGUAGE_DEPRECATION_WARNING_SHOWN: 'Language deprecation warning shown',
-  LANGUAGE_DEPRECATION_WARNING_CLICKED: 'Language deprecation warning clicked',
-
   LATAM_GE_REGION_NOTICE_CLICKED: 'LATAM GE region notice clicked',
   LATAM_GE_REGION_NOTICE_CLOSED: 'LATAM GE region notice closed',
+
+  // Pair programming
+  PAIRING_ADD_PARTNER_BUTTON_CLICKED:
+    'Add pair programming partner button clicked',
+  PAIRING_STOP_PAIR_PROGRAMMING_BUTTON_CLICKED:
+    'Stop pair programming button clicked',
 };
 
 const EVENT_GROUP_NAMES = {

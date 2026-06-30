@@ -18,7 +18,7 @@ export default class SetupChecker {
   }
 
   /**
-   * Resolve if using WebSerial or Code.org Browser (Maker App)
+   * Resolve if using WebSerial or CodeAI Browser (Maker App)
    * @return {Promise}
    */
   detectSupportedBrowser() {

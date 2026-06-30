@@ -16,6 +16,17 @@
 #
 
 class SurveyResult < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    user_id: :confidential,
+    kind: :confidential,
+    properties: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+  )
+
   include SerializedProperties
 
   SYSTEM_DELETED = 'system_deleted'.freeze

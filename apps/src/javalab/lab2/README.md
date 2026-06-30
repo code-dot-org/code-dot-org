@@ -45,6 +45,32 @@ default to `isOpen=true`, `isActive=false`, so legacy levels without
 these fields convert as they always have. Javabuilder ignores
 unknown keys.
 
+Asset (image/audio) files are flat entries with a `url` field pointing
+at where the bytes live (`/v3/assets/<channelId>/<uuid>.<ext>` for
+student uploads, `/level_starter_assets/<levelName>/uuid/<uuid>.<ext>`
+for start-mode uploads) and `text: ''`. Javabuilder never sees these
+entries: `JavalabFilesHelper` strips them out of `main.json` on every
+run and folds them into the `assetUrls` map (friendly name → absolute
+URL) it already sends, so the Javabuilder contract is unchanged.
+
+Starter assets authored in legacy Java Lab exist only as the level's
+`starter_assets` property (`{friendlyName => uuidName}`); their levels'
+start sources carry no url entries. Lab2 treats that mapping as frozen
+legacy data: `Javalab#add_starter_asset!` is a no-op for `uses_lab2`
+levels (the weblab2 pattern), so lab2 uploads/deletes/renames never
+touch it — the url entries in the sources are the single source of
+truth. `starterAssets.ts` merges the mapping into the level's
+start/template/exemplar sources as `LOCKED_STARTER` files, but only when the
+source has no url-backed entries of its own; once a lab2 save persists
+url entries, the mapping is never consulted for tree contents again.
+
+The flat shape doesn't persist file types, so the converter re-derives
+asset types from where the url points: `/level_starter_assets/...` is a
+levelbuilder-owned shared level asset (`STARTER` or `LOCKED_STARTER`), while
+`/v3/assets/<channelId>/...` is the student's own upload and stays
+untyped — lab2 treats typed url files as levelbuilder-owned and would
+otherwise skip the S3 delete + abuse unflag when a student removes one.
+
 Codebridge, on the other hand, speaks `MultiFileSource`:
 
     {
@@ -77,8 +103,8 @@ that format.
 ## Run flow
 
 `javabuilderRunner.ts` reuses the legacy
-`apps/src/javalab/JavabuilderConnection` JS class as-is. A TS port can
-come in a later phase. Differences from legacy use:
+`apps/src/javalab/JavabuilderConnection` JS class as-is. A TS port is
+still on the TODO list. Differences from legacy use:
 
 - The legacy class reads `project.getCurrentId()` from the legacy
   project singleton, which is not initialized in lab2. The constructor
@@ -93,11 +119,13 @@ come in a later phase. Differences from legacy use:
   as a `SYSTEM_IN` message via `sendJavaConsoleInput`.
 - `flushSave()` on the lab2 ProjectManager is awaited before connecting,
   so Javabuilder reads fresh source from S3 instead of a stale version.
+  A brand-new project is force-saved instead (nothing is persisted before
+  the first edit, and Javabuilder can't run a project with no sources).
 - The access-token request requires `miniAppType`; we pin it to
   `'console'` (or `levelProperties.csaViewMode`, but only `'console'`
-  is supported in Phase 1).
+  is supported so far).
 
-## Phase 1 (current status of conversion)
+## Current Status of Conversion
 
 - Per-level `uses_lab2` opt-in for `Javalab` (`dancelab` pattern).
 - Horizontal layout (`layout/HorizontalLayout.tsx`)
@@ -111,23 +139,36 @@ come in a later phase. Differences from legacy use:
 - Run button enabled at mount — Java has no client-side runtime to warm
   up, so `setLoadedCodeEnvironment(true)` dispatches in a `useEffect`.
 - Utilizes Lab2 resource panel, which gives us instructions, version history,
-  and committing a named version for free.
+  backpack, and committing a named version for free.
+- Can create/edit start sources and exemplars.
+- Validation (student run path): a level with validation files shows the
+  Lab2 Validate button; clicking it runs the level's tests on Javabuilder
+  (`ExecutionType.TEST`), streams per-test results into the Lab2
+  validation table, and an all-pass run reports completion. Plumbed via
+  `get_validations` on `Javalab`, `TestResultValidator`, `ValidationTracker`,
+  and an `onValidationResult` hook on the legacy `JavabuilderConnection`.
+- Support for neighborhood
+- Support for theater (image + audio playback): a `theater` `csaViewMode`
+  level renders the generated image and plays its audio in the Lab2 preview
+  panel, with run / reset wired up. Shares the new `apps/src/miniApps/theater/`
+  mini-app with a Lab2 `TheaterPreview` wrapper, mirroring neighborhood. 
+  Also supports the prompter, with a button over the preview.
+- Image and audio assets (`png jpg jpeg gif wav mp3`): uploadable via the
+  codebridge file browser in both student and start mode, displayed
+  inline for images, stripped into `assetUrls` server-side for
+  Javabuilder. Legacy `starter_assets` levels seed their assets into the
+  start sources. 
+  The level's `starter_assets` mapping is never updated by lab2
+  (`add_starter_asset!` no-ops for `uses_lab2` levels); it survives as
+  frozen legacy data consulted only when seeding a source that has no
+  url entries yet. Saving start code in start mode drops the mapping
+  (`Javalab#clear_lab2_starter_assets`, called from
+  `levels_controller#update_start_code`) so assets a levelbuilder
+  deleted cannot re-seed from it.
 
-## Deferred to later phases
-- **Validation** (`get_validations` override on `Javalab`,
-  `JavaValidator`, `JavaValidationTracker`, test-result handling).
-- **Neighborhood mini-app**
-- **Theater mini-app** + photo prompter.
-- **Backpack**
+## To Dos
 - **Captcha dialog** on `AuthorizerSignalType.CAPTCHA`.
 - **Code review**.
-- **start_sources and exemplar edit modes** — currently trying
-  to edit start sources will break things, as it will save the MultiFileSource
-  version of the code.
-- **Starter assets** and image asset support in general.
-- **TS port of `JavabuilderConnection`** — currently imported from
-  `@cdo/apps/javalab/JavabuilderConnection`. A port should drop the
-  redux-thunk side effects and emit events instead.
 - **Contained levels (predict levels)** — Java Lab uses the old 'contained levels'
   version of predict levels. We will need to support converting these levels
   to the lab2 predict level setup.
@@ -142,10 +183,14 @@ come in a later phase. Differences from legacy use:
   hands off to `<Codebridge>`. Also flips `loadedCodeEnvironment` true
   at mount.
 - `entrypoint.ts`, `index.js` — `Lab2EntryPoint` registration plumbing.
-- `constants.ts` — `DEFAULT_PROJECT`, editable/supported file types
-  (`java`, `txt`, `csv`, `json`).
+- `constants.ts` — `DEFAULT_PROJECT`, editable file types (`java`,
+  `txt`, `csv`, `json`) plus uploadable media types (`png`, `jpg`,
+  `jpeg`, `gif`, `wav`, `mp3`).
 - `types.ts` — `JavalabLevelProperties` extends
   `CodebridgeLevelProperties` with `csaViewMode`.
+- `starterAssets.ts` — merges the level's legacy `starter_assets`
+  mapping into url-free level sources as `STARTER` files; also home of
+  the starter-asset url helpers the converter uses for typing.
 - `layout/HorizontalLayout.tsx` — three-panel layout (InfoPanel |
   Editor over Console). Vertical/share/widget slots all point at the
   same horizontal layout for now.
@@ -155,6 +200,8 @@ come in a later phase. Differences from legacy use:
 - `javabuilderRunner.ts` — `handleRunClick`, `stopJavaCode`,
   `sendJavaConsoleInput`. Wraps the legacy
   `JavabuilderConnection`.
+- `progress/JavaValidationTracker.ts` — singleton holding the per-test
+  `ValidationResult[]` from the latest validation run.
 - `codemirrorLangJava.d.ts` — minimal module declaration for
   `@codemirror/lang-java`, whose package.json doesn't expose its types
   via node16 `exports`.
@@ -185,6 +232,21 @@ come in a later phase. Differences from legacy use:
 - `apps/src/javalab/JavabuilderConnection.js` — constructor accepts an
   optional `channelId` (falls back to `project.getCurrentId()`); the
   "project not edited yet" guard now reads `this.channelId` instead of
-  re-fetching from the legacy singleton.
+  re-fetching from the legacy singleton. Also accepts an optional
+  `onValidationResult` callback, invoked per validation `TEST_RESULT` so
+  Lab2 can populate its validation table.
+- `apps/src/javalab/testResultHandler.js` — `onTestResult` additionally
+  returns a `validationResult` (`{message, result}` with a Lab2
+  `TestStatus`) for `TEST_STATUS` messages; legacy callers ignore it.
+- `dashboard/app/models/levels/javalab.rb` — `get_validations` returns a
+  single `PASSED_ALL_TESTS` condition when the level has validation.
 - `dashboard/test/models/javalab_test.rb` — assertion that `uses_lab2?`
   defaults to false and honors the serialized property.
+- `dashboard/app/helpers/javalab_files_helper.rb` — strips url-backed
+  asset entries out of `main.json` (saved and override sources) and
+  folds them into `assetUrls` as absolute URLs.
+- `dashboard/app/models/levels/javalab.rb` —
+  `summarize_for_lab2_properties` resolves `starterAssets` through the
+  project template, matching run-time precedence.
+- `apps/src/util/moderateImage.ts` — `javalab` added to
+  `LABS_WITH_IMAGE_MODERATION` so student image uploads are moderated.

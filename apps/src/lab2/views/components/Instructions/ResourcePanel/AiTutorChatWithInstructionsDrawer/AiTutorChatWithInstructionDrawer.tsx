@@ -1,13 +1,14 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import {
   AiChatDisabledState,
   ChatButtonData,
   ResponseSchemaSettings,
 } from '@cdo/apps/aichat/types';
+import {ChatAsset} from '@cdo/apps/aichat/types/assets';
 import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
@@ -25,10 +26,16 @@ interface AiTutorChatWithInstructionDrawerProps {
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   instructionsContent?: React.ReactNode;
-  isCollapsedByDefault: boolean;
   tutorVideos?: JsonVideoFileMetadata[];
   isPredictLevel?: boolean;
   disabledState?: AiChatDisabledState;
+  onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
+  onAssetRemoved?: (asset: ChatAsset) => void;
+  // True when the AI Tutor tab is selected. This component is shared with the
+  // Instructions tab (where it renders instructions only); the chat and the
+  // Hide/Show Instructions toggle fade in only when the AI Tutor tab is active.
+  aiTutorActive: boolean;
+  initialWelcomeMessage?: string;
 }
 
 const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
@@ -42,44 +49,124 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
   instructionsContent,
-  isCollapsedByDefault,
   tutorVideos,
   isPredictLevel,
   disabledState,
+  onAssetUploaded,
+  onAssetRemoved,
+  aiTutorActive,
+  initialWelcomeMessage,
 }) => {
   const {
     containerRef,
     instructionsScrollAreaRef,
     instructionsContentRef,
     instructionsHeight,
-    chatHeight,
+    fullHeight,
+    chatContentHeight,
     isCollapsed,
     showScrollFade,
     separatorProps,
     isDragging,
     toggleInstructions,
-  } = useInstructionsDrawer({isCollapsedByDefault, isPredictLevel});
+  } = useInstructionsDrawer({isPredictLevel, aiTutorActive});
+
+  // Keep the chat mounted across tab switches (so its state persists) but inert
+  // when the Instructions tab is showing, so its hidden controls aren't tabbable.
+  const chatPanelRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (chatPanelRef.current) {
+      chatPanelRef.current.inert = !aiTutorActive;
+    }
+  }, [aiTutorActive]);
+
+  // Instructions are visible on the Instructions tab, and on the AI Tutor tab
+  // unless the user has collapsed the drawer.
+  const showInstructions = !aiTutorActive || !isCollapsed;
+
+  // Keep the drawer mounted while hidden (height 0) so switching back doesn't
+  // remount it and replay the slide-in; inert while hidden so its links aren't
+  // tabbable.
+  const instructionsDrawerRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (instructionsDrawerRef.current) {
+      instructionsDrawerRef.current.inert = !showInstructions;
+    }
+  }, [showInstructions]);
+
+  // Animate the layout (drawer resize, chat reveal/fade, toggle slide) while the
+  // drawer is open and across the close-settle window, so the open/close toggle
+  // animates in both directions.
+  const [drawerSettledClosed, setDrawerSettledClosed] = useState(isCollapsed);
+  useEffect(() => {
+    if (!isCollapsed) {
+      setDrawerSettledClosed(false);
+      return;
+    }
+    const id = setTimeout(() => setDrawerSettledClosed(true), 220);
+    return () => clearTimeout(id);
+  }, [isCollapsed]);
+
+  // Animate the roll on a tab switch too. tabSwitching is derived during render so
+  // the transition is live on the frame the height changes (an effect flag lands a
+  // frame late); animatingTabSwitch then holds it on for the rest of the roll.
+  const previousAiTutorActiveRef = useRef(aiTutorActive);
+  const tabSwitching = previousAiTutorActiveRef.current !== aiTutorActive;
+  const [animatingTabSwitch, setAnimatingTabSwitch] = useState(false);
+  useEffect(() => {
+    if (previousAiTutorActiveRef.current === aiTutorActive) {
+      return;
+    }
+    previousAiTutorActiveRef.current = aiTutorActive;
+    setAnimatingTabSwitch(true);
+    const id = setTimeout(() => setAnimatingTabSwitch(false), 220);
+    return () => clearTimeout(id);
+  }, [aiTutorActive]);
+
+  const animateLayout =
+    !isCollapsed || !drawerSettledClosed || tabSwitching || animatingTabSwitch;
+
+  // Hidden (0) and full heights are derived synchronously so the first frame is
+  // right; only the open drawer uses the frame-late instructionsHeight.
+  const drawerHeight = !showInstructions
+    ? 0
+    : aiTutorActive
+    ? instructionsHeight
+    : fullHeight;
 
   return (
-    <div ref={containerRef} className={styles.container}>
-      {!isCollapsed && (
-        <div
-          id="instructions-drawer"
-          className={styles.instructionsDrawer}
-          style={{height: instructionsHeight}}
-        >
-          <div
-            ref={instructionsScrollAreaRef}
-            className={styles.instructionsScrollArea}
-          >
-            <div ref={instructionsContentRef}>{instructionsContent}</div>
-          </div>
-          {showScrollFade && <div className={styles.scrollFade} aria-hidden />}
-        </div>
+    <div
+      ref={containerRef}
+      className={classNames(
+        styles.container,
+        isDragging && styles.dragging,
+        !animateLayout && styles.instant
       )}
+    >
       <div
-        className={styles.toggleButtonContainer}
-        style={{top: instructionsHeight}}
+        ref={instructionsDrawerRef}
+        id="instructions-drawer"
+        className={styles.instructionsDrawer}
+        style={{height: drawerHeight}}
+        aria-hidden={!showInstructions}
+      >
+        <div
+          ref={instructionsScrollAreaRef}
+          className={styles.instructionsScrollArea}
+        >
+          <div ref={instructionsContentRef}>{instructionsContent}</div>
+        </div>
+        {showInstructions && showScrollFade && (
+          <div className={styles.scrollFade} aria-hidden />
+        )}
+      </div>
+      <div
+        className={classNames(
+          styles.toggleButtonContainer,
+          !aiTutorActive && styles.fadeHidden
+        )}
+        style={{top: drawerHeight}}
+        aria-hidden={!aiTutorActive}
       >
         <MuiButton
           variant="text"
@@ -88,6 +175,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
           className={styles.toggleButton}
           onClick={toggleInstructions}
           type="button"
+          tabIndex={aiTutorActive ? undefined : -1}
           startIcon={
             <FontAwesomeV6Icon iconName="info-circle" iconStyle="solid" />
           }
@@ -101,7 +189,7 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
           {isCollapsed ? 'Show Instructions' : 'Hide Instructions'}
         </MuiButton>
       </div>
-      {!isCollapsed && (
+      {aiTutorActive && !isCollapsed && (
         <ResizeBar
           className={classNames(
             styles.resizeBar,
@@ -112,8 +200,14 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
           isDragging={isDragging}
         />
       )}
-      <div className={styles.chatPanel} style={{height: chatHeight}}>
-        <div className={styles.chatContent}>
+      <div
+        ref={chatPanelRef}
+        className={classNames(
+          styles.chatPanel,
+          !aiTutorActive && styles.fadeHidden
+        )}
+      >
+        <div className={styles.chatContent} style={{height: chatContentHeight}}>
           <AiTutorChat
             hiddenContextCallback={hiddenContextCallback}
             aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
@@ -125,6 +219,9 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
             hasInstructionsDrawer={true}
             tutorVideos={tutorVideos}
             disabledState={disabledState}
+            onAssetUploaded={onAssetUploaded}
+            onAssetRemoved={onAssetRemoved}
+            initialWelcomeMessage={initialWelcomeMessage}
           />
         </div>
       </div>

@@ -199,7 +199,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
       level = create(:level, :blockly, :with_ideal_level_source)
       sl = create(:script_level, levels: [level], script: script)
 
-      assert_equal ["//test-studio.code.org/courses/#{script.original_unit_group.name}/units/1/lessons/1/levels/1?solution=true"],
+      assert_equal ["https://test-studio.code.org/courses/#{script.original_unit_group.name}/units/1/lessons/1/levels/1?solution=true"],
                    sl.get_example_solutions(level, @authorized_teacher, unit_group_unit: script.original_unit_group_unit)
     end
 
@@ -208,7 +208,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
       level = create(:level, :blockly, :with_ideal_level_source)
       sl = create(:script_level, levels: [level], script: script)
 
-      assert_equal ["//test-studio.code.org/courses/#{script.original_unit_group.name}/units/1/lessons/1/levels/1?section_id=5&solution=true"],
+      assert_equal ["https://test-studio.code.org/courses/#{script.original_unit_group.name}/units/1/lessons/1/levels/1?section_id=5&solution=true"],
                    sl.get_example_solutions(level, @authorized_teacher, 5, unit_group_unit: script.original_unit_group_unit)
     end
 

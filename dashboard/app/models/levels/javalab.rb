@@ -40,9 +40,10 @@ class Javalab < Level
     start_direction
     contained_level_names
     uses_lab2
+    predict_settings
   )
 
-  before_save :fix_examples, :parse_maze
+  before_save :fix_examples, :parse_maze, :clean_up_predict_settings
 
   def self.start_directions
     [['None', nil], ['North', 0], ['East', 1], ['South', 2], ['West', 3]]
@@ -155,7 +156,11 @@ class Javalab < Level
   #   # friendly_name => uuid_name
   #   "welcome.png" => "123-abc-456.png"
   # }
+  # Lab2 levels don't maintain this mapping: their start_sources carry a
+  # url entry per asset, which is the single source of truth.
+  # Existing mappings are frozen legacy data.
   def add_starter_asset!(friendly_name, uuid_name)
+    return true if uses_lab2?
     self.starter_assets ||= {}
     self.starter_assets[friendly_name] = uuid_name
     save!
@@ -168,6 +173,16 @@ class Javalab < Level
     save!
   end
 
+  # Lab2 carries each asset's url directly in start_sources, the single
+  # source of truth. The frozen legacy starter_assets mapping is consulted
+  # only to re-seed sources with no url entries, which lets assets a
+  # levelbuilder deleted re-appear. Drop the mapping when start code is
+  # saved so it can no longer re-seed. No-op (and harmless) on non-lab2
+  # levels, which still rely on starter_assets.
+  def clear_lab2_starter_assets
+    self.starter_assets = nil if uses_lab2?
+  end
+
   def age_13_required?
     true
   end
@@ -176,7 +191,45 @@ class Javalab < Level
     properties['encrypted_validation'].present?
   end
 
+  # Return the validation condition for this level.
+  # If the level has at least one validation file, the condition
+  # is that all tests passed. If there are no validation files, there are no conditions.
+  # Follows the same logic as pythonlab.rb.
+  def get_validations
+    return nil unless validated?
+    [{
+      conditions: [
+        {
+          name: 'PASSED_ALL_TESTS',
+          value: 'true',
+        }
+      ],
+      message: '',
+      next: true,
+    }]
+  end
+
   def get_starter_code
     properties["start_sources"]
+  end
+
+  # Replace the camelized `encryptedValidation` blob with a usable
+  # `validation` field. Only levelbuilders get the decrypted source —
+  # matches legacy Javalab, where the decrypted source is only sent by
+  # levels_controller#edit_blocks (levelbuilder-only). For everyone
+  # else, emit a names-only stub `{filename => ""}` so the frontend can
+  # still detect filename collisions without seeing solution code.
+  def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
+    level_properties = super
+    level_properties.delete('encryptedValidation')
+    if validation
+      is_levelbuilder = current_user&.permission?(UserPermission::LEVELBUILDER)
+      level_properties['validation'] = is_levelbuilder ? validation : validation.transform_values {''}
+    end
+    # Resolve starter assets through the project template, matching the
+    # precedence JavalabFilesHelper#get_level_files uses at run time.
+    resolved_starter_assets = project_template_level&.starter_assets || starter_assets
+    level_properties['starterAssets'] = resolved_starter_assets if resolved_starter_assets.present?
+    level_properties
   end
 end

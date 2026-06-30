@@ -174,41 +174,6 @@ gdrive_export_secret:     !Secret
 mapbox_upload_token:
 mapbox_access_token:      !Secret
 
-# Crowdin
-crowdin_codeorg_api_key:
-
-crowdin_projects:
-  codeorg:
-    id: 26074
-    source_language: 'enus'
-  hour-of-code:
-    id: 55536
-    source_language: 'en'
-  codeorg-markdown:
-    id: 314545
-    source_language: 'en'
-  codeorg-restricted:
-    id: 464582
-    source_language: 'en'
-  codeorg-testing:
-    id: 346087
-    source_language: 'en'
-  codeorg-markdown-testing:
-    id: 547997
-    source_language: 'en'
-  hour-of-code-test:
-    id: 634038
-    source_language: 'en'
-  codeorg-restricted-test:
-    id: 634320
-    source_language: 'en'
-
-crowdin_project_test_mapping:
-  codeorg: codeorg-testing
-  codeorg-markdown: codeorg-markdown-testing
-  codeorg-restricted: codeorg-restricted-test
-  hour-of-code: hour-of-code-test
-
 # Azure AI Content Safety
 azure_ai_content_safety_endpoint: https://cdo-ai-content-safety.cognitiveservices.azure.com
 azure_ai_content_safety_key: !Secret
@@ -316,6 +281,23 @@ libraries_s3_directory:    libraries<%=_env%>
 videos_s3_bucket:          videos.code.org
 videos_url:                //videos.code.org
 
+# S3 bucket for runtime-generated user content (podcasts, etc). The bucket is
+# created by the stack's s3.yml.erb CloudFormation template, named from the
+# stack's studio_subdomain rather than the user-facing dashboard hostname, so
+# we enumerate per env here instead of deriving at runtime. Adhocs and other
+# environments override this in locals.yml as needed.
+#
+# Planned: rename the prod bucket to org.code.studio.user-content (matching the
+# user-facing FQDN) so this map collapses to a single value derivable from env.
+user_content_s3_bucket: <%=
+  {
+    'production'   => 'org.code.autoscale-prod-studio.user-content',
+    'staging'      => 'org.code.staging-studio.user-content',
+    'test'         => 'org.code.test-studio.user-content',
+    'levelbuilder' => 'org.code.levelbuilder-studio.user-content',
+  }[env]
+%>
+
 # Dashboard Redis instance (uses ElastiCache on prod)
 #
 # Please use the CDO.redis_url instance for all your dashboard Redis needs, just use
@@ -379,9 +361,6 @@ cloudfront_private_key: !Secret
 discourse_sso_secret:
 
 ### Application configuration defaults
-
-# Installs bin/i18n dependencies
-build_i18n: false
 
 i18n_backend:
 cache:

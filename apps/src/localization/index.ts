@@ -1,4 +1,3 @@
-import localization, {Localization} from './Localization';
-import {useLocalization} from './useLocalization';
-export {Localization, useLocalization};
-export default localization;
+export {useLocalization} from './useLocalization';
+export * from './Localization';
+export {default} from './Localization';

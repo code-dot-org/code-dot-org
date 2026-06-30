@@ -24,6 +24,18 @@
   .create_menu_arrow_up {
     font-size: 0.875rem;
     margin-inline-start: 5px;
+    // Reserve the glyph box. Otherwise the width comes from the Font Awesome
+    // webfont: it collapses before the font loads, then expands, shifting the
+    // adjacent header buttons. Each width matches its glyph advance, so the
+    // loaded layout is unchanged.
+    display: inline-block;
+    text-align: center;
+    width: 14px;
+  }
+
+  .create_menu_arrow_down,
+  .create_menu_arrow_up {
+    width: 12.25px;
   }
 
   .user_options, .create_options {
@@ -120,6 +132,12 @@
     font-size: 22px;
     color: $white;
     cursor: pointer;
+    // Reserve the glyph box. Otherwise the width comes from the Font Awesome
+    // webfont: zero until it loads, then 22px, shifting the adjacent user menu.
+    // 22px matches the glyph advance, so the layout holds across the font swap.
+    display: inline-block;
+    width: 22px;
+    text-align: center;
     height: 20px;
     vertical-align: middle;
     text-decoration: none;
@@ -153,6 +171,7 @@
       display: none;
     }
   }
+
 }
 
 .create_menu {
@@ -196,6 +215,25 @@
   @media screen and (max-width: 1120px) {
     &.hide-mobile {
       display: none;
+    }
+  }
+
+  // CodeAI's wider header logo eats ~100px of horizontal space, so the
+  // create menu has to collapse sooner to keep the inline nav from wrapping.
+  // Bump each threshold up; preserve the original ~97px gap between the
+  // signed-in (hide-mobile) and signed-out (show-small-desktop) variants.
+  html[data-brand="codeai"] &,
+  html[data-brand="codeai-next"] & {
+    @media screen and (max-width: 1103px) {
+      &.show-small-desktop {
+        display: none !important;
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      &.hide-mobile {
+        display: none;
+      }
     }
   }
 }
