@@ -374,7 +374,6 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         });
         const templateLevel = await createOrFindLevel('weblab2', templateName);
         await updateStartSources(templateLevel.id, startSources);
-        await updateLevelProperty(templateLevel.id, 'uses_lab2', 'true');
         templates.set(groupId, {templateName, files});
         templateLevelsCreated.push({
           name: templateName,
