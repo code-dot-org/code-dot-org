@@ -7,7 +7,7 @@ describe('resultAnnouncer.describeResult', function () {
       result: ResultType.SUCCESS,
       testResults: TestResults.ALL_PASS,
     });
-    expect(text).to.equal('Success. Character reached the goal.');
+    expect(text).toBe('Success. Character reached the goal.');
   });
 
   it('appends an app-specific message on an imperfect pass', function () {
@@ -16,7 +16,7 @@ describe('resultAnnouncer.describeResult', function () {
       testResults: TestResults.APP_SPECIFIC_IMPERFECT_PASS,
       message: 'You used too many blocks.',
     });
-    expect(text).to.equal(
+    expect(text).toBe(
       'Success. Character reached the goal. You used too many blocks.'
     );
   });
@@ -26,7 +26,7 @@ describe('resultAnnouncer.describeResult', function () {
       result: ResultType.SUCCESS,
       testResults: TestResults.APP_SPECIFIC_IMPERFECT_PASS,
     });
-    expect(text).to.equal('Success. Character reached the goal.');
+    expect(text).toBe('Success. Character reached the goal.');
   });
 
   it('prefers an app-specific message over the coarse failure text', function () {
@@ -35,7 +35,7 @@ describe('resultAnnouncer.describeResult', function () {
       testResults: TestResults.APP_SPECIFIC_FAIL,
       message: 'You did not collect every gem.',
     });
-    expect(text).to.equal('You did not collect every gem.');
+    expect(text).toBe('You did not collect every gem.');
   });
 
   it('describes a timeout', function () {
@@ -43,7 +43,7 @@ describe('resultAnnouncer.describeResult', function () {
       result: ResultType.TIMEOUT,
       testResults: TestResults.GENERIC_FAIL,
     });
-    expect(text).to.equal('Timeout. Goal not reached.');
+    expect(text).toBe('Timeout. Goal not reached.');
   });
 
   it('describes an error as hitting a wall', function () {
@@ -51,7 +51,7 @@ describe('resultAnnouncer.describeResult', function () {
       result: ResultType.ERROR,
       testResults: TestResults.GENERIC_FAIL,
     });
-    expect(text).to.equal('Bonk, character hit a wall.');
+    expect(text).toBe('Bonk, character hit a wall.');
   });
 
   it('describes a plain failure as not reaching the goal', function () {
@@ -59,6 +59,6 @@ describe('resultAnnouncer.describeResult', function () {
       result: ResultType.FAILURE,
       testResults: TestResults.LEVEL_INCOMPLETE_FAIL,
     });
-    expect(text).to.equal('End. Goal not reached.');
+    expect(text).toBe('End. Goal not reached.');
   });
 });
