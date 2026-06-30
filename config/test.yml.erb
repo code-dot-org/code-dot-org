@@ -12,7 +12,7 @@ saucelabs_authkey: !Secret
 saucelabs_username: !Secret
 puma_control_server_token: !Secret
 redshift_cluster_id: !Secret
-device_farm_desktop_project_arn: 'DTT Project ARN to be inserted after code review'
+device_farm_desktop_project_id: '5f0a34c4-0202-463b-83b6-cacf75e66345'
 device_farm_mobile_project_arn: !Secret
 <% else %>
 
@@ -126,7 +126,6 @@ skip_seed_all: true
 
 # Pass in secrets via env vars, since Drone cannot access secrets directly.
 contentful_cs_for_all_access_token: <%= ENV['CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN'] %>
-device_farm_desktop_project_arn: 'CI Project ARN to be inserted after code review'
 saucelabs_authkey: <%= ENV['SAUCE_ACCESS_KEY'] %>
 saucelabs_username: <%= ENV['SAUCE_USERNAME'] %>
 properties_encryption_key: <%= ENV['PROPERTIES_ENCRYPTION_KEY'] %>
@@ -154,6 +153,8 @@ sources_s3_directory: <%= "sources_circle/#{ENV['CI_BUILD_NUMBER']}" %>
 
 # custom tunnel name to avoid collisions between concurrent CI jobs
 saucelabs_tunnel_name: cdo-tunnel-<%= ENV['CI_BUILD_NUMBER'] %>
+
+device_farm_desktop_project_id: '582f3c7b-1e7e-4f96-b8fe-49105e44535e'
 
 # we run eyes features in CI, but skip comparing visual diffs
 disable_all_eyes_running: true

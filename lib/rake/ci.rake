@@ -159,7 +159,7 @@ namespace :ci do
     end
 
     # In order for Device Farm to reach localhost, the Device Farm project (set
-    # in CDO.device_farm_desktop_project_arn) must live in the same VPC as the
+    # in CDO.device_farm_desktop_project_id) must live in the same VPC as the
     # drone workers and belong to the DeviceFarmToDroneWorker security group.
     # This works because:
     # - the ui-tests step in .drone.yml runs in `network_mode: host`, making
