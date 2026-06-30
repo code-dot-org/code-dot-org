@@ -16,4 +16,12 @@ namespace :v1 do
       get :level_properties
     end
   end
+
+  # /api/v1/levels/:id
+  resources :levels, only: [] do
+    member do
+      # /api/v1/levels/:id/app_options
+      get :app_options
+    end
+  end
 end

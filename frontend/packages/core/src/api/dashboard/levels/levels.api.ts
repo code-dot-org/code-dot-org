@@ -142,14 +142,14 @@ export function createLevelsApi(transport: Transport) {
     },
 
     /**
-     * GET /levels/:levelId/app_options
+     * GET /api/v1/levels/:levelId/app_options
      */
     async getAppOptions(params: {levelId: number}) {
       const {levelId} = params;
 
       const raw = await transport.request<unknown>({
         method: 'GET',
-        url: `/levels/${levelId}/app_options`,
+        url: `/api/v1/levels/${levelId}/app_options`,
       });
 
       return AppOptionsSchema.parse(raw);
