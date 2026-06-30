@@ -25,12 +25,12 @@ module UsersHelper
       # We don't want to destroy an account with progress. Log to Redshift and return false.
       firehose_params[:type] = "cancelled-#{takeover_type}"
       firehose_params[:error] = "Attempted takeover for account with progress."
-      log_account_takeover_to_firehose(firehose_params)
+      log_account_takeover_to_firehose(**firehose_params)
       return false
     end
 
     # TODO: Remove this call https://codedotorg.atlassian.net/browse/FND-1927
-    log_self_takeover_investigation_to_firehose(firehose_params.merge({type: 'self'})) if source_user&.id == destination_user&.id
+    log_self_takeover_investigation_to_firehose(**firehose_params.merge({type: 'self'})) if source_user&.id == destination_user&.id
 
     ActiveRecord::Base.transaction do
       # Move over sections that source_user follows
@@ -44,6 +44,10 @@ module UsersHelper
           si.update! instructor: destination_user
         end
         Section.where(user: source_user).each do |owned_section|
+          # Skip demo sections that would violate the (user_id, demo_type, deleted_at)
+          # uniqueness constraint — destination already owns an equivalent demo section.
+          next if owned_section.demo_type.present? &&
+            Section.exists?(user: destination_user, demo_type: owned_section.demo_type, deleted_at: owned_section.deleted_at)
           owned_section.update! user: destination_user
         end
       end
@@ -63,7 +67,7 @@ module UsersHelper
         provider: provider,
         error: "Type: #{exception.class} Message: #{exception.message}"
       }
-      log_self_takeover_investigation_to_firehose(firehose_params)
+      log_self_takeover_investigation_to_firehose(**firehose_params)
     end
     false
   end

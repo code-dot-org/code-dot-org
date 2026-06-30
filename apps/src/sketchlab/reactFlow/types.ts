@@ -9,6 +9,8 @@ import type {FontSize, TextAlignValue} from './elementToolbars/toolbarPalettes';
 
 export type ShapeType = 'rectangle' | 'triangle' | 'circle' | 'diamond';
 
+export type CanvasTool = 'cursor' | 'grab';
+
 export type ReactFlowSketchLabSources = ProjectSources & {
   source: SketchlabReactFlowSource;
 };
