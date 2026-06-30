@@ -66,11 +66,12 @@ function computeOverlapIds(
       ids.add(node.id);
     }
   }
+  const nodeMap = new Map(nodes.map(node => [node.id, node]));
 
   for (const edge of edges) {
     if (edge.data?.locked) continue;
-    const src = nodes.find(n => n.id === edge.source);
-    const tgt = nodes.find(n => n.id === edge.target);
+    const src = nodeMap.get(edge.source);
+    const tgt = nodeMap.get(edge.target);
     if (src?.type !== 'lineAnchor' || tgt?.type !== 'lineAnchor') continue;
     if (isGroupedChildNode(src) || isGroupedChildNode(tgt)) continue;
     if (src.parentId || tgt.parentId) continue;
