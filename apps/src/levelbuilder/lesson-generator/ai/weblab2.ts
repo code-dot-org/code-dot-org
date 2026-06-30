@@ -19,12 +19,14 @@ const weblabPlanSchema = Output.object({
       .string()
       .describe(
         'STUB ONLY. A short, terse outline that the curriculum author will ' +
-          'flesh out into real prose later. Render as a markdown bullet ' +
-          'list of 4-8 items (use `- TODO:` prefixes), naming the files the ' +
-          'student will touch and the moves they need to make — what to ' +
-          'open, what to change, what to add, what success looks like. Do ' +
-          'NOT write polished student-facing copy; this is scaffolding. No ' +
-          'headings, no paragraphs.'
+          'flesh out into real prose later. Format:\n\n' +
+          '  TODOs:\n' +
+          '  - name a file the student touches and the move they make\n' +
+          '  - …\n\n' +
+          'Exactly one literal `TODOs:` header, then 4-8 bullet items. Each ' +
+          'bullet is bare content (no `TODO:` prefix on the bullets — the ' +
+          'header sets the context once). Do NOT write polished student- ' +
+          'facing copy; this is scaffolding. No other headings, no paragraphs.'
       ),
     files: z
       .array(
@@ -70,11 +72,13 @@ export async function generateWeblab2Level(
     'middle-school student unless the description below names a different',
     'grade band or audience, in which case follow it. Based on the',
     'description below, produce two things:',
-    '  1. A STUB outline for the student-facing instructions. Render as a',
-    '     terse markdown bullet list of 4-8 items prefixed `- TODO:`. Name',
-    '     the files the student will touch and the moves they need to',
-    '     make. Do NOT write polished student-facing copy — the curriculum',
-    '     author will write that by hand later. No headings, no paragraphs.',
+    '  1. A STUB outline for the student-facing instructions. Format as a',
+    '     single literal `TODOs:` line followed by 4-8 markdown bullets,',
+    '     each bare content (no `TODO:` prefix on the bullet — the header',
+    '     sets the context once). Name files the student touches and the',
+    '     moves they make. Do NOT write polished student-facing copy — the',
+    '     curriculum author writes that later. No other headings, no',
+    '     paragraphs.',
     '  2. Starter files (HTML / CSS / JS) the student will edit. Always',
     '     include an index.html. Keep total content under a few kilobytes',
     '     per file. Do not include external script or stylesheet links —',
@@ -411,9 +415,11 @@ const weblabTemplateLevelSchema = Output.object({
     longInstructions: z
       .string()
       .describe(
-        'STUB ONLY. Markdown bullet list of 4-8 items prefixed `- TODO:`, ' +
-          'naming what the student does in THIS member level on top of ' +
-          'the shared template. The curriculum author writes final prose later.'
+        'STUB ONLY. Format as a single literal `TODOs:` line followed by ' +
+          '4-8 markdown bullets, each bare content (no `TODO:` prefix on the ' +
+          'bullet). Name what the student does in THIS member level on top ' +
+          'of the shared template. The curriculum author writes final prose ' +
+          'later.'
       ),
   }),
 });
@@ -433,10 +439,11 @@ export async function generateWeblab2TemplateBackedLevel(
     'You are writing the STUB student-facing instructions for a Web Lab 2',
     'level that shares its starter files with other levels in the lesson.',
     'The student already has the template files below open; this level',
-    'asks them to do one specific thing on top of those files. Produce a',
-    'terse markdown bullet list of 4-8 items prefixed `- TODO:` naming',
-    'the files the student touches and the moves they make. Do NOT write',
-    'polished prose; the curriculum author writes that later. No headings.',
+    'asks them to do one specific thing on top of those files. Format as a',
+    'single literal `TODOs:` line followed by 4-8 markdown bullets, each',
+    'bare content (no `TODO:` prefix on the bullet). Name the files the',
+    'student touches and the moves they make. Do NOT write polished prose;',
+    'the curriculum author writes that later. No other headings.',
     '',
     "Shared template files (already open in the student's editor):",
     templateListing,

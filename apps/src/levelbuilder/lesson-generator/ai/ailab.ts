@@ -85,10 +85,11 @@ const ailabPlanSchema = Output.object({
     longInstructions: z
       .string()
       .describe(
-        'STUB ONLY. Markdown bullet list of 4-8 items prefixed `- TODO:`, ' +
-          'naming what the student is asked to do across the visible ' +
-          'screens. The curriculum author will write the final prose ' +
-          'later.'
+        'STUB ONLY. Format as a single literal `TODOs:` line followed by ' +
+          '4-8 markdown bullets, each bare content (no `TODO:` prefix on ' +
+          'the bullet — the header sets the context once). Name what the ' +
+          'student is asked to do across the visible screens. The ' +
+          'curriculum author writes the final prose later.'
       ),
     mode: ailabModeSchema,
     dynamicInstructions: z
@@ -144,9 +145,11 @@ export async function generateAilabLevel(
     '',
     'Assume a middle-school student unless the description below names a',
     'different grade band. Produce three things:',
-    '  1. A STUB outline (`longInstructions`) — terse markdown bullet list',
-    '     of 4-8 items prefixed `- TODO:`. No polished student-facing copy;',
-    '     the curriculum author will write the final prose later.',
+    '  1. A STUB outline (`longInstructions`) — a single literal `TODOs:`',
+    '     line followed by 4-8 markdown bullets, each bare content (no',
+    '     `TODO:` prefix on the bullet — the header sets the context once).',
+    '     No polished student-facing copy; the curriculum author writes the',
+    '     final prose later.',
     '  2. A `mode` blob: dataset id + hide-screen toggles + optional',
     '     requireAccuracy. Hide every screen that is not the focus of this',
     '     level. Pick toy datasets (suffix `_toy`) only when the level is',

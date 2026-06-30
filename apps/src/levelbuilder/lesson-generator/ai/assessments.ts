@@ -49,9 +49,11 @@ const multiPlanSchema = Output.object({
     longInstructions: z
       .string()
       .describe(
-        'STUB only. Optional markdown bullet list of 1-4 `- TODO:` items ' +
-          'giving the curriculum author hints (context to add, source ' +
-          'material to cite, etc.). May be the empty string.'
+        'STUB only. Optional hints for the curriculum author. When set, ' +
+          'format as a single literal `TODOs:` line followed by 1-4 ' +
+          'markdown bullets, each bare content (no `TODO:` prefix on the ' +
+          'bullet). Hints like context to add, source material to cite, ' +
+          'etc. May be the empty string.'
       ),
   }),
 });
@@ -83,8 +85,9 @@ export async function generateMultiLevel(
     '  - answers: 3-5 short answer choices, exactly one marked correct.',
     '    Distractors should be plausibly wrong (related to the topic), not',
     '    nonsense.',
-    '  - longInstructions: optional `- TODO:` bullet list of hints for the',
-    '    author. May be empty.',
+    '  - longInstructions: optional hints for the author. When set, format',
+    '    as a single literal `TODOs:` line followed by bare-content bullets.',
+    '    May be empty.',
     ...(ctx.lessonOutline
       ? [
           '',
@@ -157,8 +160,9 @@ const matchPlanSchema = Output.object({
     longInstructions: z
       .string()
       .describe(
-        'STUB only. Optional `- TODO:` bullet list of hints for the author. ' +
-          'May be the empty string.'
+        'STUB only. Optional hints for the curriculum author. When set, ' +
+          'format as a single literal `TODOs:` line followed by 1-4 bare- ' +
+          'content markdown bullets. May be the empty string.'
       ),
   }),
 });
@@ -183,8 +187,9 @@ export async function generateMatchLevel(
     '    matching grid. Placeholder prose.',
     '  - pairs: 3-6 question/answer pairs. The student drags each answer',
     '    to its matching question; the order is randomized for them.',
-    '  - longInstructions: optional `- TODO:` bullet list of hints for the',
-    '    author. May be empty.',
+    '  - longInstructions: optional hints for the author. When set, format',
+    '    as a single literal `TODOs:` line followed by bare-content bullets.',
+    '    May be empty.',
     ...(ctx.lessonOutline
       ? [
           '',

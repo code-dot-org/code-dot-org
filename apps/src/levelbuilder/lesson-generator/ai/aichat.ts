@@ -178,9 +178,11 @@ const baseAichatSchema = z.object({
   longInstructions: z
     .string()
     .describe(
-      'STUB ONLY. Markdown bullet list of 4-8 items prefixed `- TODO:`, ' +
-        'naming what the student is asked to try with the bot. The ' +
-        'curriculum author writes the final prose later.'
+      'STUB ONLY. Format as a single literal `TODOs:` line followed by ' +
+        '4-8 markdown bullets, each bare content (no `TODO:` prefix on ' +
+        'the bullet — the header sets the context once). Name what the ' +
+        'student is asked to try with the bot. The curriculum author ' +
+        'writes the final prose later.'
     ),
   systemPrompt: z
     .string()
@@ -194,7 +196,8 @@ const baseAichatSchema = z.object({
     .describe(
       "Hidden safety/scope rules appended to the bot's system prompt. " +
         'Use to add length limits, citation requirements, refusal rules, ' +
-        'or other guardrails. Stub `- TODO:` bullets are fine here.'
+        'or other guardrails. Stub format is fine here: a single literal ' +
+        '`TODOs:` line followed by bare-content bullets.'
     ),
 });
 
@@ -291,13 +294,16 @@ export async function generateAichatLevel(
     '',
     'Assume a middle-school student unless the description below names a',
     'different grade band. Produce:',
-    '  - longInstructions: STUB only. Bullet list of 4-8 items prefixed',
-    '    `- TODO:`. The curriculum author writes student-facing prose later.',
+    '  - longInstructions: STUB only. Format as a single literal `TODOs:`',
+    '    line followed by 4-8 markdown bullets, each bare content (no',
+    '    `TODO:` prefix on the bullet). The curriculum author writes',
+    '    student-facing prose later.',
     "  - systemPrompt: a real, runnable prompt that defines the bot's persona,",
     '    knowledge, and refusal rules for this level. This is the bot itself —',
     '    NOT a stub.',
     '  - levelSystemPrompt: hidden safety/scope rules appended to systemPrompt.',
-    '    `- TODO:` bullets are acceptable; the curriculum author will tune.',
+    '    The same stub format is acceptable here (TODOs: header + bare',
+    '    bullets); the curriculum author will tune.',
     ...(preset.promptForModelCard
       ? [
           '  - modelCard: placeholder strings the student edits. Brief and',
