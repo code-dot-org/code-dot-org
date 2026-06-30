@@ -29476,3 +29476,14 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        ui-test-oceans:
+          lessons:
+            lesson-1:
+              name: Lesson One
+          lesson_groups: {}
+          name: ui-test-oceans
+          title: UI Test Oceans
+          description_audience: ''
+          description_short: UI Test Oceans Unit Short Overview
+          description: UI Test Oceans Unit Teacher Overview
+          student_description: UI Test Oceans Unit Student Overview
