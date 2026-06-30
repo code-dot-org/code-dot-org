@@ -8,4 +8,12 @@ namespace :v1 do
       end
     end
   end
+
+  # /api/v1/projects/:type
+  resources :projects, only: [], param: :type do
+    member do
+      # /api/v1/projects/:type/level_properties
+      get :level_properties
+    end
+  end
 end

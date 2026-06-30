@@ -11,7 +11,9 @@
  * flex-column main area.  No JS measurement required.
  */
 
-/* The host opts in to this file; the lab itself ships its own styles. */
+/* Shipped with the package; the default OceansLab entrypoint renders the
+ * .oceans-lab-shell / .oceans-lab-frame wrappers itself, so a generic host
+ * needs no lab-specific framing. */
 
 .oceans-lab-shell {
   flex: 1;

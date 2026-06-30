@@ -110,12 +110,17 @@ yarn turbo gen lab
 The generator creates all scaffold files and automatically registers the lab
 in Studio:
 
-- `apps/studio/src/modules/labs/config/labs.ts` — adds the lab key
-- `apps/studio/src/modules/labs/router/getLabEntrypoint.ts` — adds the lazy
-  component import
-- `apps/studio/src/modules/labs/router/getLabFixtures.ts` — adds the MSW
-  fixtures loader
+- `apps/studio/src/modules/labs/config/labs.ts` — adds the lab's `LAB_REGISTRY`
+  entry. This is the single registration seam: the lazy entrypoint component
+  (`getLabEntrypoint`), the MSW fixtures loader (`getLabFixtures`), the
+  `AVAILABLE_LABS` list, and the `isLab` guard all derive from it.
 - `apps/studio/package.json` — adds the workspace dependency
+
+Studio mounts every `@code-dot-org/lab`-based lab through one generic path —
+`LabProviders` (store / react-query / API client) wrapping `StudioLabHost`
+(host-owned load), which renders the lab package's own default export. There is
+no per-lab Studio container; the lab owns its entrypoint and supplies the
+host-driven loading contract itself.
 
 The lab is then reachable at `/app/projects/<name>/:channelId/edit`.
 
@@ -145,10 +150,10 @@ The lab's `package.json` `./mocks` subpath and `vite.config.ts`
 `lib.entry: {index, 'fixtures/index'}` are part of the scaffold so the
 fixtures emit as `dist/fixtures/index.*` at build time.
 
-If a lab has no MSW story, delete `src/fixtures/` and remove the lab's
-entry from `getLabFixtures.ts`. MSW mode still works against the lab; the
-handlers fall back to a generic default channel, empty sources, an empty
-levelProperties map, and so on.
+If a lab has no MSW story, delete `src/fixtures/` and drop the `fixtures`
+loader from the lab's `LAB_REGISTRY` entry (it is optional). MSW mode still
+works against the lab; the handlers fall back to a generic default channel,
+empty sources, an empty levelProperties map, and so on.
 
 See `packages/core/src/api/mocks/README.md` for the handler/registry model
 and the `scenarioStore` write-through behavior.

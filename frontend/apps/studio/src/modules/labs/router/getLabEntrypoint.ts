@@ -1,23 +1,25 @@
-import {lazy} from 'react';
+import {lazy, type ComponentType, type LazyExoticComponent} from 'react';
 
-import {isLab, type Lab} from '@/modules/labs/types/lab';
+import {isLab, LAB_REGISTRY, type Lab} from '@/modules/labs/config/labs';
+import type {LabEntrypointProps} from '@/modules/labs/types/labEntrypoint';
 
-type LabEntrypointMap = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  [labType in Lab]: React.LazyExoticComponent<React.ComponentType<any>>;
-};
-
-const LabEntrypoints: LabEntrypointMap = {
-  ['music']: lazy(() => import('@/modules/labs/music')),
-  // Oceans is wrapped in a studio-side container that replicates the FishView
-  // sizing algorithm (16:9, clamped, proportional font size).
-  ['oceans']: lazy(() => import('@/modules/labs/oceans')),
-};
+// Pre-build one lazy component per registered lab, created once at module load
+// so navigating back to a lab reuses the same component (no remount). Each
+// lab's chunk is still fetched on first use only — `lazy` defers the registry's
+// static `import()` until the component first renders.
+const LabEntrypoints = Object.fromEntries(
+  Object.entries(LAB_REGISTRY).map(([labType, {load}]) => [
+    labType,
+    lazy(load),
+  ]),
+) as Record<Lab, LazyExoticComponent<ComponentType<LabEntrypointProps>>>;
 
 /**
- * Resolves and returns the appropriate lab entrypoint component based on the provided lab type.
- * @param labType - The type of lab for which to retrieve the entrypoint component.
- * @returns A lazy-loaded React component for the specified lab type, or undefined if the lab type is unrecognized.
+ * Resolves the lazy-loaded entrypoint component for a lab type. The component
+ * is the lab package's own default export (e.g. `@code-dot-org/music-lab`),
+ * rendered by the host through `StudioLabHost`.
+ * @param labType - The `$labType` route segment.
+ * @returns The lab's lazy entrypoint component, or undefined if unrecognized.
  */
 export const getLabEntrypoint = (labType: string) => {
   if (!isLab(labType)) {

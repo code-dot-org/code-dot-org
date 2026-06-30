@@ -239,30 +239,17 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
         path: '{{turbo.paths.workspace}}/packages/labs/{{name}}/src/fixtures/index.ts',
         templateFile: 'templates/lab/src/fixtures/index.ts.hbs',
       },
-      // Studio integration — labs.ts: append name to AVAILABLE_LABS array
+      // Studio integration — labs.ts: register the lab in LAB_REGISTRY. This
+      // single entry is the one seam: the entrypoint component, the MSW
+      // fixtures loader, AVAILABLE_LABS, and the isLab guard all derive from
+      // it. The string-key form (`'name': {`) keeps hyphenated lab names valid;
+      // lint:fix drops the quotes where they are unnecessary.
       {
         type: 'modify',
         path: '{{turbo.paths.workspace}}/apps/studio/src/modules/labs/config/labs.ts',
-        pattern: /(export const AVAILABLE_LABS = \[[^\]]*?)(\] as const;)/,
-        template: "$1, '{{name}}'$2",
-      },
-      // Studio integration — getLabEntrypoint.ts: append lazy import entry
-      {
-        type: 'modify',
-        path: '{{turbo.paths.workspace}}/apps/studio/src/modules/labs/router/getLabEntrypoint.ts',
-        pattern: /(const LabEntrypoints: LabEntrypointMap = \{[\s\S]*?)(\};)/,
+        pattern: /(export const LAB_REGISTRY = \{[\s\S]*?)(\} as const satisfies)/,
         template:
-          "$1  ['{{name}}']: lazy(() => import('@code-dot-org/{{name}}-lab')),\n$2",
-      },
-      // Studio integration — getLabFixtures.ts: append MSW loader entry.
-      // Bracket-string form handles hyphenated lab names safely.
-      {
-        type: 'modify',
-        path: '{{turbo.paths.workspace}}/apps/studio/src/modules/labs/router/getLabFixtures.ts',
-        pattern:
-          /(const LabFixturesLoaders: Partial<Record<Lab, LabFixturesLoader>> = \{[\s\S]*?)(\};)/,
-        template:
-          "$1  ['{{name}}']: () => import('@code-dot-org/{{name}}-lab/mocks'),\n$2",
+          "$1  '{{name}}': {\n    load: () => import('@code-dot-org/{{name}}-lab'),\n    fixtures: () => import('@code-dot-org/{{name}}-lab/mocks'),\n  },\n$2",
       },
       // Studio integration — studio/package.json: add workspace dep after the
       // last @code-dot-org workspace:* entry (before non-@code-dot-org deps)

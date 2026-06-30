@@ -63,11 +63,20 @@ function OceansActivityFromLevel() {
  * host (studio) provides the redux store and level data; `<Lab>` sets up
  * theming and the level-properties context that {@link OceansActivityFromLevel}
  * reads to configure the activity.
+ *
+ * The lab owns its own framing: the CSS-only responsive shell (16:9, clamped,
+ * proportional font size) mirrors the FishView curriculum-path layout, so a
+ * generic host can mount this entrypoint with no lab-specific wrapper. The
+ * shell styles ship from this package (`oceans/styles/oceansLab.css`).
  */
 export default function OceansLab(props: OceansLabProps) {
   return (
-    <Lab {...props}>
-      <OceansActivityFromLevel />
-    </Lab>
+    <div className="oceans-lab-shell">
+      <div className="oceans-lab-frame">
+        <Lab {...props}>
+          <OceansActivityFromLevel />
+        </Lab>
+      </div>
+    </div>
   );
 }
