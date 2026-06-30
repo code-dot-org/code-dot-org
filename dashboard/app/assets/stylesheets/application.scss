@@ -3658,7 +3658,7 @@ html[data-brand="codeai"], html[data-brand="codeai-next"] {
   top: 0;
   right: 0;
   color: $white;
-  background-color: $light_purple;
+  background-color: var(--background-brand-purple-primary);
   padding: 3px;
   z-index: 100;
   cursor: pointer;
