@@ -7,10 +7,12 @@ export async function gotoCraftHarness(page: Page): Promise<void> {
   await page.goto(`${CRAFT_DEV_URL}/test/integration-harness.html`, {
     waitUntil: 'domcontentloaded',
   });
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  await page.waitForFunction(() => (window as any).__craftTest?.ready, {
-    timeout: 30_000,
-  });
+  await page.waitForFunction(
+    () =>
+      (window as unknown as {__craftTest?: {ready: boolean}}).__craftTest
+        ?.ready,
+    {timeout: 30_000},
+  );
 }
 
 /** Check whether the craft Vite dev server is reachable. */

@@ -6,7 +6,6 @@
  *
  * Phaser is loaded as a UMD script in the HTML (sets window.Phaser + window.PIXI).
  */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import GameController from '../src/js/game/GameController';
 import Position from '../src/js/game/LevelMVC/Position';
 
@@ -19,7 +18,17 @@ import FunctionalityLevels from './helpers/FunctionalityLevels';
 // Deterministic randomness (matches original Karma stub)
 Math.random = () => 0.5;
 
-const levels: Record<string, any> = {
+// GameController is untyped JS — minimal interface for the properties we touch.
+interface GameControllerInstance {
+  codeOrgAPI: unknown;
+  levelModel: unknown;
+  game: {destroy(): void; time: Record<string, unknown>};
+  loadLevel(config: Record<string, unknown>): void;
+}
+
+declare const Phaser: unknown;
+
+const levels: Record<string, unknown> = {
   ...AdventurerLevels,
   ...AgentLevels,
   ...AquaticLevels,
@@ -49,20 +58,20 @@ const audioPlayer = {
   },
 };
 
-type CommandsFn = (api: any, levelModel: any) => Promise<any>;
+type CommandsFn = (api: unknown, levelModel: unknown) => Promise<unknown>;
 
 function runLevel(
   levelKey: string,
   commands: CommandsFn,
   step = 0.1,
-): Promise<any> {
+): Promise<unknown> {
   return new Promise((resolve, reject) => {
     const container = document.getElementById('phaser-game');
     if (container) container.innerHTML = '';
 
-    const gc: any = new GameController({
+    const gc = new GameController({
       forceSetTimeOut: true,
-      Phaser: (window as any).Phaser,
+      Phaser,
       containerId: 'phaser-game',
       assetRoot: '/src/assets/',
       audioPlayer,
@@ -72,24 +81,27 @@ function runLevel(
         const api = gc.codeOrgAPI;
         api.resetAttempt();
         commands(api, gc.levelModel)
-          .then((result: any) => {
+          .then((result: unknown) => {
             gc.game.destroy();
             gc.game.time = {};
             resolve(result);
           })
-          .catch((err: any) => {
+          .catch((err: unknown) => {
             gc.game.destroy();
             gc.game.time = {};
             reject(err);
           });
       },
-    });
+    }) as unknown as GameControllerInstance;
 
-    gc.loadLevel(Object.assign({}, defaults, levels[levelKey]));
+    gc.loadLevel({
+      ...defaults,
+      ...(levels[levelKey] as Record<string, unknown>),
+    });
   });
 }
 
-(window as any).__craftTest = {
+(window as unknown as {__craftTest: unknown}).__craftTest = {
   ready: true,
   runLevel,
   Position,
