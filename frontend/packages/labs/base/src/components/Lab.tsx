@@ -8,8 +8,9 @@ import {progressActions} from '@code-dot-org/progress/redux';
 
 import {ExtraLinksButtonProvider} from '../contexts/ExtraLinksButtonContext';
 import {LevelPropertiesProvider} from '../contexts/LevelPropertiesContext';
-import {useAppDispatch} from '../redux/store';
+import {useAppDispatch, useAppSelector} from '../redux/store';
 
+import ErrorFallbackPage from './errorFallbackPage';
 import Loading from './Loading';
 
 interface LabWrapperProps extends PropsWithChildren {
@@ -74,10 +75,18 @@ const Lab = ({
   levelPropertiesMap,
   children,
 }: LabProps) => {
+  const pageError = useAppSelector(state => state.lab.pageError);
+
   // Ensure FontAwesome icons are available for all labs
   useEffect(() => {
     injectFontAwesome();
   }, []);
+
+  // Any page error (a failed host fetch or a failed `loadLab`) replaces the lab
+  // with the reload-able error page, rather than leaving the loading spinner up.
+  if (pageError) {
+    return <ErrorFallbackPage message={pageError.errorMessage} />;
+  }
 
   // The actual lab content, wrapped to set the current level identity in redux.
   const labContent = (

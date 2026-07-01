@@ -1,4 +1,5 @@
 import type {ComponentType} from 'react';
+import {useEffect} from 'react';
 
 import {
   useApiClient,
@@ -9,6 +10,8 @@ import {
 } from '@code-dot-org/core/api';
 
 import {useLoadLab} from '../contexts/ProjectContext';
+import {labActions} from '../redux';
+import {useAppDispatch} from '../redux/store';
 
 /**
  * The prop contract a `@code-dot-org/lab`-based lab entrypoint accepts from a
@@ -65,11 +68,13 @@ export default function LabHost({
   userId,
 }: LabHostProps) {
   const api = useApiClient();
+  const dispatch = useAppDispatch();
 
   // The host owns the discriminated request params. Standalone projects are
   // keyed by their project type.
   const params: LevelPropertiesRequestParams = {standaloneProjectType};
-  const {data: levelPropertiesMap} = useLevelProperties(api, params);
+  const {data: levelPropertiesMap, error: levelPropertiesError} =
+    useLevelProperties(api, params);
 
   // Standalone projects carry no level id of their own; resolve it to the first
   // key of the map.
@@ -77,7 +82,7 @@ export default function LabHost({
     ? Number(Object.keys(levelPropertiesMap)[0])
     : undefined;
 
-  const {data: appOptions} = useAppOptions(
+  const {data: appOptions, error: appOptionsError} = useAppOptions(
     api,
     {levelId: levelId as number},
     {enabled: levelId !== undefined},
@@ -85,6 +90,31 @@ export default function LabHost({
 
   const levelProperties =
     levelId !== undefined ? levelPropertiesMap?.[levelId] : undefined;
+
+  // Surface fetch failures as a page error. Without this a failed level-
+  // properties / app-options fetch leaves `isLoading` true forever (an infinite
+  // spinner); recording the error lets the lab render the error page instead.
+  // Load-time failures (the `loadLab` thunk) already set the page error
+  // themselves, so this only covers the host-owned fetches.
+  useEffect(() => {
+    if (levelPropertiesError) {
+      dispatch(
+        labActions.setPageError({
+          errorMessage: 'Error loading level properties',
+          error: levelPropertiesError,
+          details: {},
+        }),
+      );
+    } else if (appOptionsError) {
+      dispatch(
+        labActions.setPageError({
+          errorMessage: 'Error loading app options',
+          error: appOptionsError,
+          details: {},
+        }),
+      );
+    }
+  }, [dispatch, levelPropertiesError, appOptionsError]);
 
   // Host drives the load explicitly. `useLoadLab` no-ops until its inputs are
   // present, and `loadLab` short-circuits for labs that do not use projects.
