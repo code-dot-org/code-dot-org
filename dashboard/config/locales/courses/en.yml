@@ -7519,3 +7519,9 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        ui-test-mix-move-ai:
+          title: ui-test-mix-move-ai
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
