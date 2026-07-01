@@ -86,6 +86,22 @@ export function useCopyPaste({
     [nodes]
   );
 
+  const buildGroupClipboard = useCallback(
+    (groupId: string): ClipboardContents | null => {
+      const groupNode = nodes.find(n => n.id === groupId && n.type === 'group');
+      if (!groupNode) return null;
+      const children = nodes.filter(n => n.parentId === groupId);
+      const childIds = new Set(children.map(n => n.id));
+      // Only include edges fully contained in the group (both endpoints are children).
+      const groupEdges = edges.filter(
+        e => childIds.has(e.source) && childIds.has(e.target)
+      );
+      // Group node first so children can remap parentId in a single pass during paste.
+      return {nodes: [groupNode, ...children], edges: groupEdges};
+    },
+    [nodes, edges]
+  );
+
   // A line is stored as an edge with two nodes - the nodes are either anchor nodes or real nodes.
   // all three elements must travel together in the clipboard.
   // When an endpoint is a real (non-anchor) node, a new anchor node is
@@ -221,23 +237,45 @@ export function useCopyPaste({
   const copyEntry = useCallback(
     (entry: TabOrderEntry) => {
       if (entry.type === 'node') {
-        const contents = buildNodeClipboard(entry.id);
+        const node = nodes.find(n => n.id === entry.id);
+        const contents =
+          node?.type === 'group'
+            ? buildGroupClipboard(entry.id)
+            : buildNodeClipboard(entry.id);
         if (contents) writeClipboard(contents);
       } else if (entry.type === 'edge') {
         const contents = buildLineEdgeClipboard(entry.id);
         if (contents) writeClipboard(contents);
       }
     },
-    [buildNodeClipboard, buildLineEdgeClipboard, writeClipboard]
+    [
+      nodes,
+      buildGroupClipboard,
+      buildNodeClipboard,
+      buildLineEdgeClipboard,
+      writeClipboard,
+    ]
   );
 
   const cutEntry = useCallback(
     (entry: TabOrderEntry) => {
       if (entry.type === 'node') {
-        const contents = buildNodeClipboard(entry.id);
-        if (!contents) return;
-        writeClipboard(contents);
-        deleteElements({nodes: [{id: entry.id}]});
+        const node = nodes.find(n => n.id === entry.id);
+        if (node?.type === 'group') {
+          const contents = buildGroupClipboard(entry.id);
+          if (!contents) return;
+          writeClipboard(contents);
+          // Delete the group and its children explicitly; React Flow does not cascade-delete children.
+          const children = nodes.filter(n => n.parentId === entry.id);
+          deleteElements({
+            nodes: [{id: entry.id}, ...children.map(n => ({id: n.id}))],
+          });
+        } else {
+          const contents = buildNodeClipboard(entry.id);
+          if (!contents) return;
+          writeClipboard(contents);
+          deleteElements({nodes: [{id: entry.id}]});
+        }
       } else if (entry.type === 'edge') {
         const contents = buildLineEdgeClipboard(entry.id);
         if (!contents) return;
@@ -259,12 +297,13 @@ export function useCopyPaste({
       }
     },
     [
+      nodes,
+      buildGroupClipboard,
       buildNodeClipboard,
       writeClipboard,
       deleteElements,
       buildLineEdgeClipboard,
       edges,
-      nodes,
     ]
   );
 
@@ -283,8 +322,10 @@ export function useCopyPaste({
       deltaX = mousePos.x - anchorNode.position.x;
       deltaY = mousePos.y - anchorNode.position.y;
     } else {
-      const isLine = contents.edges.length > 0;
-      if (isLine) {
+      // Groups use anchor width; standalone lines use their horizontal span.
+      const hasGroup = contents.nodes.some(n => n.type === 'group');
+      const isStandaloneLine = !hasGroup && contents.edges.length > 0;
+      if (isStandaloneLine) {
         const lineHorizontalSpan = lineHorizontalSpanFromClipboardNodes(
           contents.nodes
         );
@@ -297,17 +338,28 @@ export function useCopyPaste({
       deltaY = 0;
     }
 
+    // IDs in the clipboard — used to detect parent-child relationships below.
+    const clipboardNodeIds = new Set(contents.nodes.map(n => n.id));
+
+    // Build idMap before creating new nodes so parentId remapping works in one
+    // pass: the group node (index 0) is mapped before its children are processed.
     const idMap = new Map<string, string>();
+    for (const node of contents.nodes) {
+      idMap.set(node.id, createUuid());
+    }
+
     const newNodes = contents.nodes.map(node => {
-      const newId = createUuid();
-      idMap.set(node.id, newId);
+      // Children of a group have positions relative to the group — don't offset them.
+      const isGroupChild = node.parentId && clipboardNodeIds.has(node.parentId);
       return {
         ...node,
-        id: newId,
-        position: {
-          x: node.position.x + deltaX,
-          y: node.position.y + deltaY,
-        },
+        id: idMap.get(node.id)!,
+        position: isGroupChild
+          ? node.position
+          : {x: node.position.x + deltaX, y: node.position.y + deltaY},
+        ...(node.parentId
+          ? {parentId: idMap.get(node.parentId) ?? node.parentId}
+          : {}),
       };
     });
 
