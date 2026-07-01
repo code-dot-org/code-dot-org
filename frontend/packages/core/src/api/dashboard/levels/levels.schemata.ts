@@ -25,9 +25,12 @@ export const LevelPredictSettingsSchema = z.object({
 });
 
 export const ExemplarSettingsSchema = z.object({
+  playerEnabled: z.boolean().optional(),
   validationEnabled: z.boolean(),
-  validationSuccessMessage: z.string(),
-  validationFailureMessage: z.string(),
+  // Optional: the server omits these when no exemplar validation messages are
+  // configured (it sends only `playerEnabled`/`validationEnabled`).
+  validationSuccessMessage: z.string().optional(),
+  validationFailureMessage: z.string().optional(),
 });
 
 /**
@@ -35,62 +38,70 @@ export const ExemplarSettingsSchema = z.object({
  *
  * This can be extended in the type form `LevelProperties<T>`.
  */
-export const LevelPropertiesBaseSchema = z.object({
-  id: z.number(),
-  appName: z.enum(ProjectTypes),
-  type: z.string(),
-  name: z.string(),
-  background: z.string().optional(),
-  encrypted: z.boolean().optional(),
-  isAssessment: z
-    .boolean()
-    .nullable()
-    .default(false)
-    .transform(value => value ?? false),
-  parentLevelLink: z
-    .string()
-    .nullable()
-    .optional()
-    .transform(value => value ?? undefined),
-  longInstructions: z.string().optional(),
-  shortInstructions: z.string().optional(),
-  instructionsImportant: z.boolean().optional(),
-  isProjectLevel: z.boolean().optional(),
-  hideShareAndRemix: z.boolean().optional(),
-  usesProjects: z.boolean().optional(),
-  startSources: MultiFileSourceSchema.optional(),
-  multipleChoice: z.boolean().optional(),
-  templateSources: MultiFileSourceSchema.optional(),
-  exemplarSources: z
-    .union([ProjectSourcesSchema, MultiFileSourceSchema])
-    .nullable()
-    .transform(value => value ?? undefined),
-  hideVersionHistory: z.boolean().optional(),
-  aiTutorAvailable: z.boolean().optional(),
-  showRubric: z.boolean().optional(),
-  // Project Template level name for the level if it exists.
-  projectTemplateLevelName: z.string().optional(),
-  // For Teachers Only value
-  teacherMarkdown: z.string().optional(),
-  predictSettings: LevelPredictSettingsSchema.optional(),
-  exemplarSettings: ExemplarSettingsSchema.optional(),
-  submittable: z.boolean().optional(),
-  disableEditRunForSubmission: z.boolean().optional(),
-  skipUrl: z.string().optional(),
-  finishUrl: z.string().optional(),
-  finishDialog: z.string().optional(),
-  offerBrowserTts: z.boolean().nullable(),
-  useSecondaryFinishButton: z.boolean().optional(),
-  // Legacy
-  helpVideos: z.array(z.string()).default([]),
-  baseAssetUrl: z.string().default('/blockly/'),
-  showExemplarLink: z
-    .boolean()
-    .nullable()
-    .transform(value => value ?? false),
-  // Codebridge
-  widgetView: z.boolean().optional(),
-});
+export const LevelPropertiesBaseSchema = z
+  .object({
+    id: z.number(),
+    appName: z.enum(ProjectTypes),
+    type: z.string(),
+    name: z.string(),
+    background: z.string().optional(),
+    encrypted: z.boolean().optional(),
+    isAssessment: z
+      .boolean()
+      .nullable()
+      .default(false)
+      .transform(value => value ?? false),
+    parentLevelLink: z
+      .string()
+      .nullable()
+      .optional()
+      .transform(value => value ?? undefined),
+    longInstructions: z.string().optional(),
+    shortInstructions: z.string().optional(),
+    instructionsImportant: z.boolean().optional(),
+    isProjectLevel: z.boolean().optional(),
+    hideShareAndRemix: z.boolean().optional(),
+    usesProjects: z.boolean().optional(),
+    startSources: MultiFileSourceSchema.optional(),
+    multipleChoice: z.boolean().optional(),
+    templateSources: MultiFileSourceSchema.optional(),
+    exemplarSources: z
+      .union([ProjectSourcesSchema, MultiFileSourceSchema])
+      .nullable()
+      .transform(value => value ?? undefined),
+    hideVersionHistory: z.boolean().optional(),
+    aiTutorAvailable: z.boolean().optional(),
+    showRubric: z.boolean().optional(),
+    // Project Template level name for the level if it exists.
+    projectTemplateLevelName: z.string().optional(),
+    // For Teachers Only value
+    teacherMarkdown: z.string().optional(),
+    predictSettings: LevelPredictSettingsSchema.optional(),
+    exemplarSettings: ExemplarSettingsSchema.optional(),
+    submittable: z.boolean().optional(),
+    disableEditRunForSubmission: z.boolean().optional(),
+    skipUrl: z.string().optional(),
+    finishUrl: z.string().optional(),
+    finishDialog: z.string().optional(),
+    offerBrowserTts: z.boolean().nullable(),
+    useSecondaryFinishButton: z.boolean().optional(),
+    // Legacy
+    helpVideos: z.array(z.string()).default([]),
+    baseAssetUrl: z.string().default('/blockly/'),
+    showExemplarLink: z
+      .boolean()
+      .nullable()
+      .transform(value => value ?? false),
+    // Codebridge
+    widgetView: z.boolean().optional(),
+  })
+  // Preserve lab-specific fields this base schema does not enumerate (e.g.
+  // music's `levelData`). A lab's kind schema (`registerLevelKindSchema`)
+  // refines them, but only if it is registered before the fetch parses — and
+  // that ordering is not guaranteed, since a lab's module (which registers the
+  // schema) loads lazily and may arrive after level properties are fetched.
+  // Passthrough keeps the raw fields instead of silently dropping them.
+  .passthrough();
 
 /**
  * Fields common to Blockly-based levels.
@@ -156,7 +167,9 @@ export const ExtraLinksLevelDataSchema = z
 
 export const AppOptionsSchema = z.object({
   levelId: z.number(),
-  channel: z.string().nullable(),
+  // Optional and nullable: the server omits `channel` entirely when the level
+  // has none (e.g. no project yet), rather than sending null.
+  channel: z.string().nullable().optional(),
   editBlocks: z.string().optional(),
   isEditingExemplar: z.boolean().optional(),
   isViewingExemplar: z.boolean().optional(),

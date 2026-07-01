@@ -1,5 +1,6 @@
 import {useState, type PropsWithChildren} from 'react';
 import {
+  QueryCache,
   QueryClient,
   QueryClientProvider as QueryClientProviderBase,
 } from '@tanstack/react-query';
@@ -23,6 +24,18 @@ function createDefaultClient(
   defaultOptions?: QueryClientProviderProps['defaultOptions'],
 ): QueryClient {
   return new QueryClient({
+    // Surface every query failure. Without this a failed fetch — or a schema
+    // (zod) parse error on a 200 response — only flips the query's `isError`
+    // and is never logged, so a lab that renders its error page shows no reason
+    // in the console or network tab.
+    queryCache: new QueryCache({
+      onError: (error, query) => {
+        console.error(
+          `[react-query] query failed: ${JSON.stringify(query.queryKey)}`,
+          error,
+        );
+      },
+    }),
     defaultOptions: {
       queries: {
         staleTime: 30_000,
