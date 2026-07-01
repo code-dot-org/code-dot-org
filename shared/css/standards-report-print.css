@@ -2,7 +2,7 @@
     font-family: 'Geist';
     font-style: normal;
     font-weight: 400;
-    src: url('/fonts/Geist/Geist-VariableFont_wght.ttf');
+    src: url('/fonts/Geist/Geist.woff2') format('woff2');
 }
 
 @media print and (color) {
