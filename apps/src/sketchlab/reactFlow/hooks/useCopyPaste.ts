@@ -349,17 +349,17 @@ export function useCopyPaste({
     }
 
     const newNodes = contents.nodes.map(node => {
-      // Children of a group have positions relative to the group — don't offset them.
-      const isGroupChild = node.parentId && clipboardNodeIds.has(node.parentId);
       return {
         ...node,
         id: idMap.get(node.id)!,
-        position: isGroupChild
-          ? node.position
-          : {x: node.position.x + deltaX, y: node.position.y + deltaY},
-        ...(node.parentId
-          ? {parentId: idMap.get(node.parentId) ?? node.parentId}
-          : {}),
+        // Children have positions relative to the parent group — don't offset them.
+        position:
+          node.parentId && clipboardNodeIds.has(node.parentId)
+            ? node.position
+            : {x: node.position.x + deltaX, y: node.position.y + deltaY},
+        ...(node.parentId && {
+          parentId: idMap.get(node.parentId) ?? node.parentId,
+        }),
       };
     });
 
