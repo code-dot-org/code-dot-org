@@ -1,7 +1,6 @@
 import {Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Typography from '@code-dot-org/component-library/typography';
-import classNames from 'classnames';
 import {memo, useCallback, useContext, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
@@ -9,12 +8,13 @@ import {labActions} from '@code-dot-org/lab/redux';
 import {IconButtonWithTooltip} from '@code-dot-org/lab';
 import {useDialogControl} from '@code-dot-org/lab/contexts';
 import {DialogType} from '@code-dot-org/lab/dialogs';
-import {useAppSelector} from '../../redux/store';
+import {useAppDispatch, useAppSelector} from '../../redux/store';
 
 import {getBaseAssetUrl} from '../../appConfig';
 import AnalyticsContext from '../../contexts/AnalyticsContext';
 import type {SoundFolder} from '../../api';
 import MusicLibrary from '../../player/MusicLibrary';
+import {setPackId} from '../../redux/musicSlice';
 
 import moduleStyles from './headerButtons.module.scss';
 
@@ -80,9 +80,16 @@ const HeaderButtons = ({
   const currentPackId = useAppSelector(state => state.music.packId);
   const analyticsReporter = useContext(AnalyticsContext);
   const dialogControl = useDialogControl();
+  const dispatch = useAppDispatch();
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   const library = MusicLibrary.getInstance();
+
+  // Re-open the pack picker by clearing the current pack: PackDialog renders
+  // whenever no pack is selected.
+  const onClickChangePack = useCallback(() => {
+    dispatch(setPackId(null));
+  }, [dispatch]);
 
   let packFolder = null;
 
@@ -138,30 +145,32 @@ const HeaderButtons = ({
 
   return (
     <div className={moduleStyles.container} ref={containerRef} tabIndex={-1}>
-      {/* Show static pack information. */}
-      {!allowPackSelection && packFolder && (
-        <CurrentPack packFolder={packFolder} />
-      )}
-      {/* Show Start Over button, possibly with pack information inside it. */}
-      {!readOnlyWorkspace && (
-        <>
+      {/* Pack art + name, next to the Start Over button (not part of it).
+          Clickable to re-open the pack picker when selection is allowed;
+          static otherwise. */}
+      {packFolder &&
+        (allowPackSelection ? (
           <button
-            onClick={onClickStartOver}
             type="button"
-            id="start-over-button"
-            className={classNames(
-              moduleStyles.startOverButton,
-              allowPackSelection &&
-                packFolder &&
-                moduleStyles.startOverButtonWithPack,
-            )}
+            className={moduleStyles.packButton}
+            onClick={onClickChangePack}
+            aria-label="Change pack"
           >
-            {allowPackSelection && packFolder && (
-              <CurrentPack packFolder={packFolder} />
-            )}
-            <FontAwesomeV6Icon iconName="refresh" iconStyle="solid" />
+            <CurrentPack packFolder={packFolder} />
           </button>
-        </>
+        ) : (
+          <CurrentPack packFolder={packFolder} />
+        ))}
+      {/* Start Over button. */}
+      {!readOnlyWorkspace && (
+        <button
+          onClick={onClickStartOver}
+          type="button"
+          id="start-over-button"
+          className={moduleStyles.startOverButton}
+        >
+          <FontAwesomeV6Icon iconName="refresh" iconStyle="solid" />
+        </button>
       )}
       {!readOnlyWorkspace && (
         <>

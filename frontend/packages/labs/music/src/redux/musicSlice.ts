@@ -117,7 +117,9 @@ const musicSlice = createSlice({
   name: 'music',
   initialState,
   reducers: {
-    setPackId: (state, action: PayloadAction<string>) => {
+    setPackId: (state, action: PayloadAction<string | null>) => {
+      // `null` clears the selected pack, which re-opens the pack picker
+      // (PackDialog renders whenever no pack is selected).
       state.packId = action.payload;
     },
     setIsPlaying: (state, action: PayloadAction<boolean>) => {

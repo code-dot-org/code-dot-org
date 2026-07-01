@@ -29,6 +29,7 @@ import ExemplarPlayerView from '../ExemplarPlayerView';
 import AppConfig from '../../appConfig';
 import PlayerContext from '../../contexts/PlayerContext';
 import type {PlaybackEvent} from '../../player/interfaces/PlaybackEvent';
+import MusicLibrary from '../../player/MusicLibrary';
 import {InstructionsPosition, showCallout} from '../../redux/musicSlice';
 import {useAppDispatch, useAppSelector} from '../../redux/store';
 import {labActions} from '@code-dot-org/lab/redux';
@@ -85,7 +86,14 @@ const MusicLab = () => {
   const undo = useCallback(() => !!driver?.undo(), [driver]);
   const redo = useCallback(() => !!driver?.redo(), [driver]);
   const clearCode: (maintainPackId?: boolean) => void = _ => {};
-  const allowPackSelection = true;
+  const isReadOnly = useAppSelector(labActions.isReadOnlyWorkspace);
+  // The student may pick a pack only when the library offers a choice, the
+  // level did not fix one, and the workspace is editable. A level-fixed pack
+  // (levelData.packId) renders as static art, not the "change pack" button.
+  const allowPackSelection =
+    !!MusicLibrary.getInstance()?.getHasRestrictedPacks() &&
+    !levelProperties.levelData?.packId &&
+    !isReadOnly;
   const setPlaying = useCallback(
     (play: boolean) => driver?.setPlaying(play),
     [driver],
