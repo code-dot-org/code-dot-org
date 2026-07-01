@@ -3,7 +3,7 @@ import type {Components} from 'hast-util-to-jsx-runtime';
 import {
   useMemo,
   useSyncExternalStore,
-  type ComponentType,
+  type ElementType,
   type ReactNode,
 } from 'react';
 import {Fragment, jsx, jsxs} from 'react/jsx-runtime';
@@ -15,15 +15,12 @@ import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import {unified} from 'unified';
 
+import {Typography, type TypographyProps} from '@mui/material';
+
 import Link from '@code-dot-org/component-library/link';
-import Typography, {
-  Heading1,
-  Heading2,
-  Heading3,
-  Heading4,
-  StrongText,
-  EmText,
-} from '@code-dot-org/component-library/typography';
+// Load the design-system MUI augmentations so the custom Typography variants
+// (e.g. `strong`, `em`) are recognized. Type-only: no runtime cost.
+import type {} from '@code-dot-org/component-library/themes';
 
 import {
   collectRehypePlugins,
@@ -93,21 +90,18 @@ const MarkdownLink: Components['a'] = ({children, href, className, target}) => (
 );
 
 /*
- * Paragraphs render through the base Typography component rather than the
- * generated `BodyTwoText`: the generated typography elements drop unknown props,
- * which would silently strip the localization attribute. The base component
- * forwards rest props to the underlying element.
- *
- * When localization is active, rehypeLocalize has already translated the
- * content at build time, so we mark the paragraph data-notranslate. Otherwise we
- * mark it data-isolate for the runtime translation path.
+ * MUI Typography forwards unknown props (including our `data-*` localization
+ * attributes) to the rendered element, so the isolation/notranslate markers
+ * survive. When localization is active, rehypeLocalize has already translated
+ * the content at build time, so we mark the paragraph data-notranslate;
+ * otherwise data-isolate marks it for the runtime translation path.
  */
 const makeParagraph =
   (localized: boolean): Components['p'] =>
   ({children, className}) => (
     <Typography
-      semanticTag="p"
-      visualAppearance="body-two"
+      variant="body2"
+      component="p"
       className={className}
       {...(localized ? LOCALIZE_NOTRANSLATE_ATTRS : LOCALIZE_PARAGRAPH_ATTRS)}
     >
@@ -116,23 +110,30 @@ const makeParagraph =
   );
 
 /*
- * The design-system typography components require `children`, but rehype-react's
- * component slots type it as optional. This adapter bridges that gap (and
- * forwards className), producing a component assignable to any tag slot.
+ * Adapts an element slot to a MUI Typography with the given variant (the
+ * design-system type scale) and semantic tag. The tag is pinned via `component`
+ * rather than left to the theme's `variantMapping`, so it is correct even when
+ * the content renders outside the CdoTheme provider. rehype-react types children
+ * as optional and passes a `node` prop we do not spread; this bridges that and
+ * forwards className.
  */
-const styledText =
-  (Element: ComponentType<{children: ReactNode; className?: string}>) =>
+const muiText =
+  (variant: TypographyProps['variant'], component: ElementType) =>
   ({children, className}: {children?: ReactNode; className?: string}) => (
-    <Element className={className}>{children}</Element>
+    <Typography variant={variant} component={component} className={className}>
+      {children}
+    </Typography>
   );
 
 const baseComponents = (localized: boolean): Partial<Components> => ({
-  h1: styledText(Heading1),
-  h2: styledText(Heading2),
-  h3: styledText(Heading3),
-  h4: styledText(Heading4),
-  strong: styledText(StrongText),
-  em: styledText(EmText),
+  h1: muiText('h1', 'h1'),
+  h2: muiText('h2', 'h2'),
+  h3: muiText('h3', 'h3'),
+  h4: muiText('h4', 'h4'),
+  h5: muiText('h5', 'h5'),
+  h6: muiText('h6', 'h6'),
+  strong: muiText('strong', 'strong'),
+  em: muiText('em', 'em'),
   a: MarkdownLink,
   p: makeParagraph(localized),
 });
