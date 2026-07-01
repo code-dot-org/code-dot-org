@@ -3,13 +3,9 @@ import {ManageStudentsPage} from '../pages/manage-students-page';
 import {createTeacherAssociatedStudent, signIn, signOut} from '../shared/auth';
 import {setCountryOverride} from '../shared/geolocation';
 
-// CO lockout date pinned into the past so the CAP-locked-out under-13 student
-// this scenario creates sits in the all-user lockout phase. Mirrors
-// cap_steps.rb's @cap_lockout_date and the CO default in state_policies.rb
-// (DateTime.parse('2024-07-01T00:00:00MDT')).
+// Mirrors cap_steps.rb's @cap_lockout_date / CO default in state_policies.rb.
 const CAP_LOCKOUT_DATE = '2024-07-01T06:00:00.000Z';
-// cap_steps.rb also sets cap_CO_start_date_override to one year before the
-// lockout date (DST-crossing artifact of ActiveSupport's 1.year.ago).
+// cap_steps.rb's cap_CO_start_date_override (DST-crossing artifact of 1.year.ago).
 const CAP_START_DATE = '2023-07-02T00:10:48.000Z';
 
 test.describe('Manage students tab', () => {
@@ -27,9 +23,7 @@ test.describe('Manage students tab', () => {
       await page.goto('/');
       await dcdo.mock('cap_CO_start_date_override', CAP_START_DATE);
       await dcdo.mock('cap_CO_lockout_date_override', CAP_LOCKOUT_DATE);
-      // The State column only renders for a teacher whose own country_code is
-      // US, which is set from geolocation at account-creation time — the
-      // override must be in place before createTeacherAssociatedStudent runs.
+      // State column requires country_code=US on the teacher, set at creation time.
       await setCountryOverride(page, {countryCode: 'US'});
 
       const {email, password} = await createTeacherAssociatedStudent(page, {
@@ -39,8 +33,6 @@ test.describe('Manage students tab', () => {
         createdAt: CAP_LOCKOUT_DATE,
       });
 
-      // createTeacherAssociatedStudent leaves the student's session active;
-      // switch to the teacher to view/manage the roster.
       await signOut(page);
       await page.goto('/');
       await signIn(page, {email, password});

@@ -1,4 +1,5 @@
-@no_mobile @playwright
+@no_mobile
+@playwright
 Feature: Using the manage students tab of the teacher dashboard
   Scenario: Teacher bulk updates US state for all section students
     Given I am on "http://studio.code.org"
