@@ -1,6 +1,7 @@
 import '@testing-library/jest-dom';
 import {render, screen, fireEvent, waitFor} from '@testing-library/react';
 import React from 'react';
+import {Provider} from 'react-redux';
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import * as utils from '@cdo/apps/code-studio/utils';
@@ -20,7 +21,11 @@ import i18n from '@cdo/locale';
 const DEFAULT_PROPS = {defaultRedirectUrl: '/home'};
 
 const renderContainer = (props = {}) =>
-  render(<SectionsSetUpContainer {...DEFAULT_PROPS} {...props} />);
+  render(
+    <Provider store={getStore()}>
+      <SectionsSetUpContainer {...DEFAULT_PROPS} {...props} />
+    </Provider>
+  );
 
 // Resolved mock response — json() must return a Promise for the fetch chain to work.
 const mockFetchResponse = () =>
