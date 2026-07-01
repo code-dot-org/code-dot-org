@@ -322,7 +322,7 @@ export function useCopyPaste({
       deltaX = mousePos.x - anchorNode.position.x;
       deltaY = mousePos.y - anchorNode.position.y;
     } else {
-      // Groups use anchor width; standalone lines use their horizontal span.
+      // Nodes and groups offset by width; standalone lines offset by their horizontal span.
       const hasGroup = contents.nodes.some(n => n.type === 'group');
       const isStandaloneLine = !hasGroup && contents.edges.length > 0;
       if (isStandaloneLine) {
@@ -357,9 +357,7 @@ export function useCopyPaste({
           node.parentId && clipboardNodeIds.has(node.parentId)
             ? node.position
             : {x: node.position.x + deltaX, y: node.position.y + deltaY},
-        ...(node.parentId && {
-          parentId: idMap.get(node.parentId) ?? node.parentId,
-        }),
+        ...(node.parentId && {parentId: idMap.get(node.parentId)}),
       };
     });
 
