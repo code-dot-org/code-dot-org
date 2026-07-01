@@ -75,13 +75,6 @@ var LegacyDialog = (module.exports = function (options) {
     .attr('data-dismiss', 'modal');
   this.div = $('<div tabindex="-1"/>').addClass('modal');
 
-  if (options.width) {
-    this.div.css({
-      width: `${options.width}px`,
-      marginLeft: `-${options.width / 2}px`,
-    });
-  }
-
   this.div.addClass('dash_modal');
   if (options.id) {
     this.div.attr('id', options.id);
@@ -89,6 +82,12 @@ var LegacyDialog = (module.exports = function (options) {
 
   var modalDialog = $('<div/>').addClass('modal-dialog');
   var modalContent = $('<div/>').addClass('modal-content');
+
+  if (options.width) {
+    modalDialog.css({
+      width: `${options.width}px`,
+    });
+  }
 
   var modalBody = $('<div/>').addClass('modal-body');
   modalBody.addClass('dash_modal_body');
