@@ -332,8 +332,6 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
     [availableTabs, setCurrentTab],
   );
 
-  useEffect(() => {}, [currentTab, availableTabs]);
-
   // Reset current tab to instructions when switching levels or viewAsUserId.
   const [prevLevelId, setPrevLevelId] = useState(levelId);
   const [prevViewAsUserId, setPrevViewAsUserId] = useState(viewAsUserId);
@@ -341,6 +339,13 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
     setCurrentTab(Tabs.Instructions);
     setPrevLevelId(levelId);
     setPrevViewAsUserId(viewAsUserId);
+  }
+
+  // On initial mount no tab is selected, so the expanded panel would render
+  // empty. If the level has instructions (the Instructions tab is available),
+  // default to opening it.
+  if (currentTab === undefined && Tabs.Instructions in availableTabs) {
+    setCurrentTab(Tabs.Instructions);
   }
 
   // Move focus to panel content when AI Tutor or Version History tab is selected via keyboard.
