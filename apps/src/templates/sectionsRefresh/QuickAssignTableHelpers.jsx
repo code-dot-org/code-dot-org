@@ -66,21 +66,23 @@ function renderOfferings(
         )}
         key={course.display_name}
       >
-        <RadioButton
-          name={course.display_name}
-          label={
-            course.display_name +
-            (isSelected && selectedCourseUnavailable
-              ? ' (Unavailable in this language)'
-              : '')
-          }
-          value={course.display_name}
-          checked={isSelected}
-          onChange={() => {
-            updateSectionCourse(updateCourse, course);
-            setSelectedCourseOffering(course);
-          }}
-        />
+        <div>
+          <RadioButton
+            name={course.display_name}
+            label={course.display_name}
+            value={course.display_name}
+            checked={isSelected}
+            onChange={() => {
+              updateSectionCourse(updateCourse, course);
+              setSelectedCourseOffering(course);
+            }}
+          />
+          {isSelected && selectedCourseUnavailable && (
+            <span className={moduleStyles.unavailableLanguageTag}>
+              Unavailable for the current language
+            </span>
+          )}
+        </div>
         {course.ai_teaching_assistant_available && (
           <img
             src={taImage}
