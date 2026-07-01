@@ -16,6 +16,12 @@ const EnhancedMarkdown = ({
       extensions.clickableText({
         onActivate: onInstructionsTextClick,
       }),
+      // Curriculum instructions are legacy content: they embed FontAwesome
+      // icons as `<i class="fa-...">` (inlineStyles permits the `className` that
+      // sanitization would otherwise strip) and write headings without a space
+      // after the '#'s (lenientHeadings restores that).
+      extensions.inlineStyles,
+      extensions.lenientHeadings,
       ...(extraExtensions ?? []),
     ],
     [onInstructionsTextClick, extraExtensions],
