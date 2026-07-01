@@ -28,7 +28,7 @@ import LabErrorBoundary from './LabErrorBoundary';
 export interface LabEntrypointProps {
   /** Whether the host is still resolving level properties / app options. */
   isLoading: boolean;
-  /** Current level id (host-resolved; for standalone projects, the map's first key). */
+  /** Current level id (host-resolved: the given unit level id, or a standalone project's first map key). */
   levelId?: string;
   /** Standalone project type, when not a particular level. */
   standaloneProjectType?: string;
@@ -36,25 +36,60 @@ export interface LabEntrypointProps {
   levelPropertiesMap?: LevelPropertiesMap;
 }
 
-/** Props for {@link LabHost}. */
-export interface LabHostProps {
+/** Inputs shared by both level-identification modes. */
+interface LabHostBaseProps {
   /** The lab entrypoint to render once level data is resolved. */
   LabEntrypoint: ComponentType<LabEntrypointProps>;
-  /** Standalone project type for the route (the `$labType` segment). */
-  standaloneProjectType: string;
-  /** Channel id for the project (the `$channelId` segment). */
+  /** Channel id for the project, if known (e.g. the `$channelId` segment). */
   channelId?: string;
-  /** Script id, when the project is reached through a unit. */
-  scriptId?: number;
   /** User being viewed, e.g. a teacher viewing a student. */
   userId?: number;
 }
 
 /**
+ * A standalone project route (`/projects/$labType/$channelId`). The level is
+ * identified by its project type; it carries no level id of its own, so the
+ * host resolves the id to the first key of the level-properties map.
+ */
+export interface ProjectLabHostProps extends LabHostBaseProps {
+  standaloneProjectType: string;
+  levelId?: never;
+  scriptId?: never;
+  scriptName?: never;
+  lessonPosition?: never;
+}
+
+/**
+ * A level within a unit/script. The level id is known directly; `scriptName`
+ * and `lessonPosition` widen the level-properties fetch to the whole lesson,
+ * and `scriptId` scopes the load (predict responses, per-level project manager).
+ */
+export interface UnitLabHostProps extends LabHostBaseProps {
+  standaloneProjectType?: never;
+  /** The level id (known directly for unit levels). */
+  levelId: number;
+  /** Script id, when the level is part of a unit. */
+  scriptId?: number;
+  /** Script name, to fetch level properties across the lesson. */
+  scriptName?: string;
+  /** Lesson position within the script. */
+  lessonPosition?: number;
+}
+
+/** Props for {@link LabHost}: standalone project, or a level within a unit. */
+export type LabHostProps = ProjectLabHostProps | UnitLabHostProps;
+
+/**
  * Host-owned loading boundary (the "host dispatches explicitly" model): the
- * host resolves level properties and app options for the route's project,
- * dispatches the load via {@link useLoadLab}, and renders the lab with the
- * resolved level data. The lab does no loading of its own.
+ * host resolves level properties and app options for the level, dispatches the
+ * load via {@link useLoadLab}, and renders the lab with the resolved level
+ * data. The lab does no loading of its own.
+ *
+ * Handles both level-identification modes: a standalone project
+ * ({@link ProjectLabHostProps}) or a level within a unit
+ * ({@link UnitLabHostProps}). The only differences are how the level-properties
+ * request is keyed and where the level id comes from; everything downstream
+ * (app options, the load dispatch) is the same.
  *
  * Shared by the studio host and the standalone lab dev harnesses so there is a
  * single resolve-and-dispatch path. Must be rendered inside the data-provider
@@ -72,28 +107,36 @@ export default function LabHost(props: LabHostProps) {
   );
 }
 
-function LabHostContent({
-  LabEntrypoint,
-  standaloneProjectType,
-  channelId,
-  scriptId,
-  userId,
-}: LabHostProps) {
+function LabHostContent(props: LabHostProps) {
+  const {LabEntrypoint, channelId, userId} = props;
   const api = useApiClient();
 
-  // The host owns the discriminated request params. Standalone projects are
-  // keyed by their project type. `throwOnError` routes fetch failures to the
-  // surrounding LabErrorBoundary instead of leaving `isLoading` true forever.
-  const params: LevelPropertiesRequestParams = {standaloneProjectType};
+  // The host owns the discriminated request params: a standalone project is
+  // keyed by its project type; a unit level is keyed by its id (widened to the
+  // lesson by scriptName/lessonPosition). `throwOnError` routes fetch failures
+  // to the surrounding LabErrorBoundary instead of leaving `isLoading` true.
+  // (The `!== undefined` checks stay inline so TS narrows `props` per branch.)
+  const params: LevelPropertiesRequestParams =
+    props.standaloneProjectType !== undefined
+      ? {standaloneProjectType: props.standaloneProjectType}
+      : {
+          levelId: props.levelId,
+          scriptName: props.scriptName,
+          lessonPosition: props.lessonPosition,
+        };
   const {data: levelPropertiesMap} = useLevelProperties(api, params, {
     throwOnError: true,
   });
 
-  // Standalone projects carry no level id of their own; resolve it to the first
-  // key of the map.
-  const levelId = levelPropertiesMap
-    ? Number(Object.keys(levelPropertiesMap)[0])
-    : undefined;
+  // A unit level is identified by the id we were given; a standalone project
+  // carries none of its own, so resolve it to the first key of the map.
+  const givenLevelId =
+    props.standaloneProjectType !== undefined ? undefined : props.levelId;
+  const levelId =
+    givenLevelId ??
+    (levelPropertiesMap
+      ? Number(Object.keys(levelPropertiesMap)[0])
+      : undefined);
 
   const {data: appOptions} = useAppOptions(
     api,
@@ -111,7 +154,8 @@ function LabHostContent({
     appOptions,
     levelId,
     userId,
-    scriptId,
+    scriptId:
+      props.standaloneProjectType !== undefined ? undefined : props.scriptId,
     channelId,
   });
 
@@ -121,7 +165,7 @@ function LabHostContent({
   return (
     <LabEntrypoint
       isLoading={!levelPropertiesMap || !appOptions}
-      standaloneProjectType={standaloneProjectType}
+      standaloneProjectType={props.standaloneProjectType}
       levelId={levelId !== undefined ? String(levelId) : undefined}
       levelPropertiesMap={levelPropertiesMap}
     />
