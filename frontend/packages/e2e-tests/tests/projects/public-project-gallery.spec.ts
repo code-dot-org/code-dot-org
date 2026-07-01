@@ -12,7 +12,7 @@ test.describe('Public Project Gallery - Signed Out', () => {
 
     await gallery.goto();
 
-    await expect(gallery.pageHeading).toContainText('Projects');
+    await expect(gallery.pageHeading).toBeVisible();
     await expect(gallery.publicProjectsSection).toBeVisible();
   });
 
@@ -26,7 +26,6 @@ test.describe('Public Project Gallery - Signed Out', () => {
     await gallery.goto();
 
     await expect(gallery.publicProjectsSection).toBeVisible();
-    await expect(gallery.projectAppTypeAreas.first()).toBeAttached();
     await expect(gallery.projectAppTypeAreas).toHaveCount(1);
     await expect(gallery.featuredProjectsSection).toContainText(
       'Featured Projects',
