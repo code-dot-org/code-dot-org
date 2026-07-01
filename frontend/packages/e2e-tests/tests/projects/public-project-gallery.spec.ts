@@ -1,6 +1,7 @@
 import {expect, test} from '@playwright/test';
 
 import {PublicProjectGalleryPage} from '../pages/public-project-gallery';
+import {analyze, WCAG_AA_TAGS} from '../shared/axe';
 
 test.describe('Public Project Gallery - Signed Out', () => {
   /**
@@ -28,5 +29,18 @@ test.describe('Public Project Gallery - Signed Out', () => {
     await expect(gallery.publicProjectsSection).toBeVisible();
     await expect(gallery.projectAppTypeAreas).toHaveCount(1);
     await expect(gallery.featuredProjectsHeading).toBeVisible();
+  });
+
+  test('public gallery has no WCAG AA violations', async ({page}) => {
+    const gallery = new PublicProjectGalleryPage(page);
+    await gallery.goto();
+    await expect(gallery.publicProjectsSection).toBeVisible();
+
+    expect(
+      await analyze(page, {
+        include: '#uitest-public-projects',
+        tags: WCAG_AA_TAGS,
+      }),
+    ).toEqual({});
   });
 });
