@@ -54,6 +54,7 @@ const SublevelSection: React.FC<SublevelSectionProps> = ({
       ) : (
         <ol className={moduleStyles.sublevelList}>
           {sublevels.map((sub, i) => {
+            const unsupported = !!sub.unsupportedType;
             const preview = sub.id.trim()
               ? `${parentPreviewName}-${sub.id.trim()}`
               : `${parentPreviewName}-${i + 1}`;
@@ -71,8 +72,15 @@ const SublevelSection: React.FC<SublevelSectionProps> = ({
                   onMoveDown={() => onMove(sub.key, 'down')}
                   onRemove={() => onRemove(sub.key)}
                   removeAriaLabel="Remove sublevel"
-                  removeTitle="Remove sublevel"
+                  removeTitle={
+                    unsupported
+                      ? 'Remove from this bubble choice (the level itself is preserved)'
+                      : 'Remove sublevel'
+                  }
                   disabled={disabled}
+                  cardClassName={
+                    unsupported ? moduleStyles.cardUnsupported : undefined
+                  }
                 >
                   <div className={sharedStyles.cardBody}>
                     <div className={sharedStyles.cardSidebar}>
@@ -83,29 +91,37 @@ const SublevelSection: React.FC<SublevelSectionProps> = ({
                           value={sub.id}
                           onChange={e => onPatch(sub.key, {id: e.target.value})}
                           placeholder="e.g. art"
-                          disabled={disabled}
+                          disabled={disabled || unsupported}
                         />
                       </div>
                       <div className={sharedStyles.cardField}>
                         <label htmlFor={`sublab-${sub.key}`}>Lab</label>
-                        <select
-                          id={`sublab-${sub.key}`}
-                          value={sub.labType}
-                          onChange={e =>
-                            onPatch(sub.key, {
-                              labType: e.target.value as LabType,
-                            })
-                          }
-                          disabled={disabled}
-                        >
-                          {labOptions.map(opt => (
-                            <option key={opt.value} value={opt.value}>
-                              {opt.label}
-                            </option>
-                          ))}
-                        </select>
+                        {unsupported ? (
+                          <input
+                            id={`sublab-${sub.key}`}
+                            value={sub.unsupportedType}
+                            disabled
+                          />
+                        ) : (
+                          <select
+                            id={`sublab-${sub.key}`}
+                            value={sub.labType}
+                            onChange={e =>
+                              onPatch(sub.key, {
+                                labType: e.target.value as LabType,
+                              })
+                            }
+                            disabled={disabled}
+                          >
+                            {labOptions.map(opt => (
+                              <option key={opt.value} value={opt.value}>
+                                {opt.label}
+                              </option>
+                            ))}
+                          </select>
+                        )}
                       </div>
-                      {sub.labType === 'aichat' && (
+                      {!unsupported && sub.labType === 'aichat' && (
                         <div className={sharedStyles.cardField}>
                           <label htmlFor={`subpreset-${sub.key}`}>Preset</label>
                           <select
@@ -126,29 +142,44 @@ const SublevelSection: React.FC<SublevelSectionProps> = ({
                           </select>
                         </div>
                       )}
-                      <label className={moduleStyles.skipLabel}>
-                        <input
-                          type="checkbox"
-                          checked={sub.generate}
-                          onChange={e =>
-                            onPatch(sub.key, {generate: e.target.checked})
-                          }
-                          disabled={disabled}
-                        />
-                        Generate
-                      </label>
+                      {!unsupported && (
+                        <label className={moduleStyles.skipLabel}>
+                          <input
+                            type="checkbox"
+                            checked={sub.generate}
+                            onChange={e =>
+                              onPatch(sub.key, {generate: e.target.checked})
+                            }
+                            disabled={disabled}
+                          />
+                          Generate
+                        </label>
+                      )}
                     </div>
                     <div className={sharedStyles.cardMain}>
-                      <label htmlFor={`subdesc-${sub.key}`}>Description</label>
-                      <textarea
-                        id={`subdesc-${sub.key}`}
-                        value={sub.description}
-                        onChange={e =>
-                          onPatch(sub.key, {description: e.target.value})
-                        }
-                        placeholder="What this sublevel activity teaches or does."
-                        disabled={disabled}
-                      />
+                      {unsupported ? (
+                        <p className={moduleStyles.unsupportedNote}>
+                          The generator doesn't support this lab type as a
+                          sublevel. The sublevel stays in the bubble choice at
+                          this position; edit its content from the level edit
+                          page.
+                        </p>
+                      ) : (
+                        <>
+                          <label htmlFor={`subdesc-${sub.key}`}>
+                            Description
+                          </label>
+                          <textarea
+                            id={`subdesc-${sub.key}`}
+                            value={sub.description}
+                            onChange={e =>
+                              onPatch(sub.key, {description: e.target.value})
+                            }
+                            placeholder="What this sublevel activity teaches or does."
+                            disabled={disabled}
+                          />
+                        </>
+                      )}
                     </div>
                   </div>
                 </ReorderableCard>

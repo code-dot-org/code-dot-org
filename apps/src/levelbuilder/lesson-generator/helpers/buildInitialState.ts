@@ -1,6 +1,7 @@
 import {createUuid} from '@cdo/apps/utils';
 
 import {
+  BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES,
   ExistingLessonData,
   labTypeFromRailsType,
   LevelSpec,
@@ -112,16 +113,32 @@ export function buildInitialState(lesson: ExistingLessonData): InitialState {
         const parentPrefix = level.name + '-';
         spec.sublevels = level.sublevels.map(sub => {
           const subLabType = labTypeFromRailsType(sub.type);
+          // Restrict to the sublevel-allowed set. Sublevels whose Rails
+          // type maps to a top-level LabType outside that set (e.g. an
+          // older dance/spritelab sublevel) or doesn't map at all are
+          // marked unsupported so the UI shows them read-only and the
+          // generator skips them.
+          const supportedSubLabType =
+            subLabType &&
+            (BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES as readonly string[]).includes(
+              subLabType
+            )
+              ? subLabType
+              : undefined;
           const subId = sub.name.startsWith(parentPrefix)
             ? sub.name.slice(parentPrefix.length)
             : sub.name;
           return {
             key: createUuid(),
             id: subId,
-            labType: subLabType ?? SUPPORTED_LAB_TYPES[0],
+            labType: supportedSubLabType ?? BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES[0],
             description: sub.generateOutline || '',
             lastGeneratedDescription: sub.generateOutline || undefined,
-            generate: subLabType !== undefined && !sub.generateOutline,
+            generate: supportedSubLabType !== undefined && !sub.generateOutline,
+            unsupportedType:
+              supportedSubLabType === undefined
+                ? sub.type ?? '(unknown)'
+                : undefined,
           };
         });
       }
