@@ -17,6 +17,7 @@ import {unified} from 'unified';
 
 import {Typography, type TypographyProps} from '@mui/material';
 
+import Divider from '@code-dot-org/component-library/divider';
 import Link from '@code-dot-org/component-library/link';
 // Load the design-system MUI augmentations so the custom Typography variants
 // (e.g. `strong`, `em`) are recognized. Type-only: no runtime cost.
@@ -136,6 +137,9 @@ const baseComponents = (localized: boolean): Partial<Components> => ({
   em: muiText('em', 'em'),
   a: MarkdownLink,
   p: makeParagraph(localized),
+  // `---` renders as a themed design-system divider. (Divider is not yet
+  // MUI-migrated, so the DSCO component is the design-system component here.)
+  hr: ({className}) => <Divider className={className} />,
 });
 
 const NO_EXTENSIONS: MarkdownExtension[] = [];
