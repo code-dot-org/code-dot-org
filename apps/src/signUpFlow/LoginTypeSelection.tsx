@@ -491,14 +491,19 @@ const LoginTypeSelection: React.FunctionComponent<{
           </MuiButton>
         </div>
       </div>
-      <SafeMarkdown
+      <Typography
+        variant="body3"
+        component="div"
         className={style.tosAndPrivacy}
-        markdown={locale.by_signing_up({
-          tosLink: 'https://code.org/tos',
-          privacyPolicyLink: 'https://code.org/privacy',
-        })}
-        openExternalLinksInNewTab={true}
-      />
+      >
+        <SafeMarkdown
+          markdown={locale.by_signing_up({
+            tosLink: 'https://code.org/tos',
+            privacyPolicyLink: 'https://code.org/privacy',
+          })}
+          openExternalLinksInNewTab={true}
+        />
+      </Typography>
     </div>
   );
 };

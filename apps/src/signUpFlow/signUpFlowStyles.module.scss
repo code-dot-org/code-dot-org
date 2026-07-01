@@ -645,7 +645,7 @@ span:not(:global(.MuiButton-icon)) {
 
   a {
     text-decoration: underline !important;
-    color: unset !important;
+    color: var(--text-neutral-primary);
     font-weight: 700;
   }
 }
