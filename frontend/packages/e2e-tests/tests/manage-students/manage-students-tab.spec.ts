@@ -1,5 +1,6 @@
 import {expect, test} from '../fixtures';
 import {ManageStudentsPage} from '../pages/manage-students-page';
+import {TeacherDashboardPage} from '../pages/teacher-dashboard';
 import {createTeacherAssociatedStudent, signIn, signOut} from '../shared/auth';
 import {setCountryOverride} from '../shared/geolocation';
 
@@ -18,6 +19,7 @@ test.describe('Manage students tab', () => {
     'Teacher bulk updates US state for all section students',
     {tag: '@no_mobile'},
     async ({page, dcdo}) => {
+      const dashboard = new TeacherDashboardPage(page);
       const roster = new ManageStudentsPage(page);
 
       await page.goto('/');
@@ -37,7 +39,8 @@ test.describe('Manage students tab', () => {
       await page.goto('/');
       await signIn(page, {email, password});
 
-      await roster.openRoster();
+      await dashboard.navigateToRoster();
+      await roster.waitForTable();
       await roster.openStateBulkSetModal();
 
       await expect(roster.bulkSetModalHeading).toBeVisible();

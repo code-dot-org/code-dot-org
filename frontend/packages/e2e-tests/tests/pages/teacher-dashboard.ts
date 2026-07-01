@@ -21,4 +21,14 @@ export class TeacherDashboardPage extends BasePage {
     await this.page.goto('/teacher_dashboard/home');
     await expect(this.homeHeader).toBeVisible();
   }
+
+  async navigateToRoster(): Promise<void> {
+    await this.goto();
+    const dropdownTrigger = this.page.getByRole('button', {
+      name: 'Section options dropdown',
+    });
+    await expect(dropdownTrigger).toBeVisible();
+    await dropdownTrigger.click();
+    await this.page.getByRole('link', {name: 'Roster'}).click();
+  }
 }

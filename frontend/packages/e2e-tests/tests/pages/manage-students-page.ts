@@ -30,14 +30,7 @@ export class ManageStudentsPage extends BasePage {
     });
   }
 
-  async openRoster(): Promise<void> {
-    await this.page.goto('/teacher_dashboard/home');
-    const dropdownTrigger = this.page.getByRole('button', {
-      name: 'Section options dropdown',
-    });
-    await expect(dropdownTrigger).toBeVisible();
-    await dropdownTrigger.click();
-    await this.page.getByRole('link', {name: 'Roster'}).click();
+  async waitForTable(): Promise<void> {
     await expect(this.table).toBeVisible();
   }
 
