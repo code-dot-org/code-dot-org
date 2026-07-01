@@ -86,7 +86,7 @@
 
 // Shared styles for all shepherd step containers.
 %shepherd-step-container-base {
-  font-family: Geist, sans-serif;
+  font-family: var(--font-family-main);
   color: var(--text-neutral-primary);
   background-color: var(--background-neutral-primary);
   box-shadow: 0 12px 40px rgb(28 45 94 / 16%);
@@ -257,7 +257,7 @@
   border-radius: 6px;
   background: transparent;
   color: var(--neutral-base-white);
-  font-family: Geist, sans-serif;
+  font-family: var(--font-family-main);
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
@@ -288,7 +288,7 @@ div .quiz-option-correct {
 .quiz-feedback {
   margin-top: 12px;
   min-height: 18px;
-  font-family: Geist, sans-serif;
+  font-family: var(--font-family-main);
   font-size: 14px;
   font-weight: 600;
   color: var(--neutral-gray-50);
