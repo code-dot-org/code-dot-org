@@ -40,9 +40,10 @@ class Javalab < Level
     start_direction
     contained_level_names
     uses_lab2
+    predict_settings
   )
 
-  before_save :fix_examples, :parse_maze
+  before_save :fix_examples, :parse_maze, :clean_up_predict_settings
 
   def self.start_directions
     [['None', nil], ['North', 0], ['East', 1], ['South', 2], ['West', 3]]

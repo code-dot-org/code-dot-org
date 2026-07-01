@@ -1,0 +1,219 @@
+{
+  "script": {
+    "name": "ai-history",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "has_unnumbered_lessons": true,
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-07-01 07:25:13 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "ai-history"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "ai-history"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Lesson 1",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ai-history"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Lesson 2",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "ai-history"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "c7f26b77-7b03-4e3b-84a7-975de7927686",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c7f26b77-7b03-4e3b-84a7-975de7927686",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ai-history"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "f469c84f-8c64-460a-ba08-eadd80757380",
+      "position": 1,
+      "properties": {
+        "progression_name": "Milestones & Eras of AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "f469c84f-8c64-460a-ba08-eadd80757380",
+        "lesson_activity.key": "c7f26b77-7b03-4e3b-84a7-975de7927686"
+      }
+    },
+    {
+      "key": "e45576d5-1416-4161-b180-45ba7ff4b63a",
+      "position": 2,
+      "properties": {
+        "progression_name": "Compare Chatbots"
+      },
+      "seeding_key": {
+        "activity_section.key": "e45576d5-1416-4161-b180-45ba7ff4b63a",
+        "lesson_activity.key": "c7f26b77-7b03-4e3b-84a7-975de7927686"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestones & Eras of AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-history-lesson1-level1-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ai-history",
+        "activity_section.key": "f469c84f-8c64-460a-ba08-eadd80757380"
+      },
+      "level_keys": [
+        "ai-history-lesson1-level1-2026"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Compare Chatbots"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-history-lesson1-level2-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ai-history",
+        "activity_section.key": "e45576d5-1416-4161-b180-45ba7ff4b63a"
+      },
+      "level_keys": [
+        "ai-history-lesson1-level2-2026"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "ai-history-lesson1-level1-2026",
+        "script_level.level_keys": [
+          "ai-history-lesson1-level1-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ai-history",
+        "activity_section.key": "f469c84f-8c64-460a-ba08-eadd80757380"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-history-lesson1-level2-2026",
+        "script_level.level_keys": [
+          "ai-history-lesson1-level2-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ai-history",
+        "activity_section.key": "e45576d5-1416-4161-b180-45ba7ff4b63a"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

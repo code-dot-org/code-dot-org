@@ -1,5 +1,3 @@
-import experiments from '@cdo/apps/util/experiments';
-
 import {TestResults} from '../../constants.js';
 import mazeMsg from '../locale';
 import {
@@ -163,14 +161,9 @@ export default class CollectorHandler extends ResultsHandler {
           count: this.getLastTotalCollected(),
         });
       case true:
-        // Remove this case when we turn the bubble dialog on for everyone
-        if (!experiments.isEnabled(experiments.BUBBLE_DIALOG)) {
-          return mazeMsg.collectorCollectedEverything({
-            count: this.getPotentialMaxCollected(),
-          });
-        } else {
-          return super.getMessage(terminationValue);
-        }
+        return mazeMsg.collectorCollectedEverything({
+          count: this.getPotentialMaxCollected(),
+        });
       default:
         return super.getMessage(terminationValue);
     }

@@ -39,7 +39,6 @@ import msg from '@cdo/locale';
 
 import annotationList from './acemode/annotationList';
 import * as aceMode from './acemode/mode-javascript_codeorg';
-import getAchievements from './achievements';
 import * as assetPrefix from './assetManagement/assetPrefix';
 import AuthoredHints from './authoredHints';
 import * as blockUtils from './block_utils';
@@ -72,12 +71,6 @@ import {configCircuitPlayground, configMicrobit} from './maker/dropletConfig';
 import './polyfills';
 import puzzleRatingUtils from './puzzleRatingUtils';
 import {getStore} from './redux';
-import {
-  setAchievements,
-  setBlockLimit,
-  setFeedbackData,
-  showFeedback,
-} from './redux/feedback';
 import {
   determineInstructionsConstants,
   setFeedback,
@@ -1713,47 +1706,6 @@ StudioApp.prototype.displayFeedback = function (options) {
     options.feedbackType = TestResults.EDIT_BLOCKS;
   }
 
-  if (experiments.isEnabled(experiments.BUBBLE_DIALOG)) {
-    const {response, preventDialog, feedbackType, feedbackImage} = options;
-
-    const newFinishDialogApps = {
-      turtle: true,
-      karel: true,
-      maze: true,
-      studio: true,
-      flappy: true,
-      bounce: true,
-    };
-    const hasNewFinishDialog = newFinishDialogApps[this.config.app];
-
-    if (hasNewFinishDialog && !this.hasContainedLevels) {
-      const store = getStore();
-      const generatedCodeProperties = this.feedback_.getGeneratedCodeProperties(
-        this.config.appStrings
-      );
-      const studentCode = {
-        message: generatedCodeProperties.shortMessage,
-        code: generatedCodeProperties.code,
-      };
-      const canShare = !this.disableSocialShare && !options.disableSocialShare;
-      store.dispatch(
-        setFeedbackData({
-          isChallenge: this.config.isChallengeLevel,
-          isPerfect: feedbackType >= TestResults.MINIMUM_OPTIMAL_RESULT,
-          blocksUsed: this.feedback_.getNumCountableBlocks(),
-          displayFunometer: response && response.puzzle_ratings_enabled,
-          studentCode,
-          feedbackImage: canShare && feedbackImage,
-        })
-      );
-      store.dispatch(setAchievements(getAchievements(store.getState())));
-      if (this.shouldDisplayFeedbackDialog_(preventDialog, feedbackType)) {
-        store.dispatch(showFeedback());
-        this.onFeedback(options);
-        return;
-      }
-    }
-  }
   options.onContinue = this.onContinue;
   options.backToPreviousLevel = this.backToPreviousLevel;
   options.isUS = this.isUS;
@@ -2068,12 +2020,6 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 
   this.appMsg = config.appMsg;
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
-  if (experiments.isEnabled(experiments.BUBBLE_DIALOG)) {
-    // This seems to break levels that start in the animation/costume tab.
-    // If this feature comes out from behind the experiment, make sure not to
-    // regress those levels.
-    getStore().dispatch(setBlockLimit(this.IDEAL_BLOCK_NUM));
-  }
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
   this.recommendedBlocks_ = config.level.recommendedBlocks || [];
