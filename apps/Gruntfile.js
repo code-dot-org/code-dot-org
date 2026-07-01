@@ -114,7 +114,7 @@ module.exports = function (grunt) {
         },
         {
           expand: true,
-          cwd: 'node_modules/@code-dot-org/craft/dist/assets',
+          cwd: 'node_modules/@code-dot-org/craft-lab/dist/assets',
           src: ['**'],
           dest: 'build/package/media/skins/craft',
         },

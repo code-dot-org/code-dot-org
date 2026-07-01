@@ -1,4 +1,4 @@
-import {EventType} from '@code-dot-org/craft';
+import {EventType} from '@code-dot-org/craft-lab';
 import _ from 'lodash';
 
 import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
