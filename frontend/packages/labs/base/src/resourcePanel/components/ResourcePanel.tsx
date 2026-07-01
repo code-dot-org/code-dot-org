@@ -433,7 +433,11 @@ const ResourcePanel: FunctionComponent<ResourcePanelProps> = ({
     <>
       <div
         id={id || resourcePanelInstructionsElementId}
-        className={classNames(styles.resourcePanel, className)}
+        className={classNames(
+          styles.resourcePanel,
+          className,
+          isStandaloneCollapsed && styles.resourcePanelCollapsed,
+        )}
       >
         {isOnboardingTourEnabled && <OnboardingTourSteps />}
         {isValidationTourEnabled && (
