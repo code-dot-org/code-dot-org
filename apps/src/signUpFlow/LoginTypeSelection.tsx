@@ -369,7 +369,7 @@ const LoginTypeSelection: React.FunctionComponent<{
                   href="https://support.code.org/hc/en-us/articles/24825250283021-Single-Sign-On-with-Canvas"
                   onClick={sendLMSAnalyticsEvent}
                   variant="outlined"
-                  color="secondary"
+                  color="tertiary"
                   size="small"
                   startIcon={<img src={canvas} alt="" />}
                   endIcon={
@@ -382,7 +382,7 @@ const LoginTypeSelection: React.FunctionComponent<{
                   href="https://support.code.org/hc/en-us/articles/26677769411085-Single-Sign-On-with-Schoology"
                   onClick={sendLMSAnalyticsEvent}
                   variant="outlined"
-                  color="secondary"
+                  color="tertiary"
                   size="small"
                   startIcon={<img src={schoology} alt="" />}
                   endIcon={
