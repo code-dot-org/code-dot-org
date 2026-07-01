@@ -151,7 +151,8 @@ export type LevelProperty =
   | 'dsl_text'
   | 'project_template_level_name'
   | 'thumbnail_url'
-  | 'bubble_choice_description';
+  | 'bubble_choice_description'
+  | 'display_name';
 
 export async function updateLevelProperty(
   levelId: number,

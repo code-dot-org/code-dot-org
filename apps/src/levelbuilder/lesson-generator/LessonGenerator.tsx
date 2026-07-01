@@ -894,8 +894,11 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
             //      notes; separate from the DSL's student-facing
             //      description),
             //   2. for each sublevel, generate + upload a thumbnail,
-            //      then save thumbnail_url + bubble_choice_description
-            //      to the sublevel level record.
+            //      then save display_name + thumbnail_url +
+            //      bubble_choice_description to the sublevel level
+            //      record. display_name is what the picker UI shows on
+            //      each bubble; without it, the summary falls back to
+            //      the ugly kebab-case internal level name.
             setStage('saving-properties');
             appendLog(`Saving instructions for "${levelName}"…`);
             await updateLevelProperty(
@@ -930,6 +933,11 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
                   `Warning: thumbnail for sublevel "${sub.fullName}" failed: ${message}`
                 );
               }
+              await updateLevelProperty(
+                sub.levelId,
+                'display_name',
+                subPlan.displayName
+              );
               await updateLevelProperty(
                 sub.levelId,
                 'bubble_choice_description',

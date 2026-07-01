@@ -34,10 +34,21 @@ export interface BubbleChoiceMember {
   description: string;
 }
 
-// Per-sublevel plan the model emits. `bubbleChoiceDescription` is the
-// one-line teaser shown next to the bubble; `thumbnailPrompt` drives
-// the separate image-generation pass.
+// Per-sublevel plan the model emits.
+// - `displayName`: the human-readable title shown on the bubble.
+//   BubbleChoice#summarize_sublevels falls back to the raw level name
+//   when this is unset, so a missing displayName renders the ugly
+//   kebab-case internal name; the AI must produce a real one.
+// - `bubbleChoiceDescription`: one-line teaser beneath the title.
+// - `thumbnailPrompt`: drives the separate image-generation pass.
 const sublevelPlanSchema = z.object({
+  displayName: z
+    .string()
+    .describe(
+      'Human-readable title shown on the bubble in the picker UI. Real ' +
+        'student-facing copy (not a stub), 2-5 words, Title Case. Do NOT ' +
+        'echo the internal level name.'
+    ),
   bubbleChoiceDescription: z
     .string()
     .describe(
@@ -85,6 +96,7 @@ const bubbleChoicePlanSchema = Output.object({
 });
 
 export interface BubbleChoiceSublevelPlan {
+  displayName: string;
   bubbleChoiceDescription: string;
   thumbnailPrompt: string;
 }
@@ -134,9 +146,11 @@ export async function generateBubbleChoiceLevel(
     '  - longInstructions: STUB only. Single literal `TODOs:` line then',
     '    4-8 bare-content bullets. Curriculum author writes final prose.',
     '  - sublevels: EXACTLY one entry per input member below, in the same',
-    '    order. Each entry has bubbleChoiceDescription (a one-sentence',
-    '    teaser, real copy, ~8-16 words) and thumbnailPrompt (an image',
-    "    subject description for the bubble's thumbnail, no embedded text).",
+    '    order. Each entry has displayName (2-5 word Title Case title shown',
+    '    on the bubble; do not echo the internal level name),',
+    '    bubbleChoiceDescription (a one-sentence teaser, real copy, ~8-16',
+    '    words), and thumbnailPrompt (an image subject description for the',
+    "    bubble's thumbnail, no embedded text).",
     '',
     'Sublevel members (in order):',
     memberListing,
@@ -207,6 +221,7 @@ export async function generateBubbleChoiceLevel(
     description: plan.description.trim(),
     longInstructions: plan.longInstructions.trim(),
     sublevels: plan.sublevels.map(s => ({
+      displayName: s.displayName.trim(),
       bubbleChoiceDescription: s.bubbleChoiceDescription.trim(),
       thumbnailPrompt: s.thumbnailPrompt.trim(),
     })),
