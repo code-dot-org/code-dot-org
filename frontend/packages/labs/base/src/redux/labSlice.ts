@@ -93,6 +93,12 @@ const initialState: LabState = {
   permissions: [],
 };
 
+// Standalone action so its type stays a clean `ActionCreatorWithoutPayload`.
+// (createSlice degrades this slice's generated action-creator types to a union
+// that is not callable with zero arguments; a standalone createAction avoids
+// that, matching `setLoadedPredictResponse` below.) Handled in extraReducers.
+export const clearPageError = createAction('lab/clearPageError');
+
 // Slice
 
 const slice: Slice<LabState> = createSlice({
@@ -114,9 +120,6 @@ const slice: Slice<LabState> = createSlice({
       }>,
     ) {
       state.pageError = action.payload;
-    },
-    clearPageError(state) {
-      state.pageError = undefined;
     },
     setChannel(state, action: PayloadAction<Channel | undefined>) {
       state.channel = action.payload;
@@ -182,6 +185,9 @@ const slice: Slice<LabState> = createSlice({
     });
     builder.addCase(loadLab.pending, state => {
       state.isLoadingProjectOrLevel = true;
+    });
+    builder.addCase(clearPageError, state => {
+      state.pageError = undefined;
     });
   },
 });
@@ -628,7 +634,6 @@ export const {
   setIsLoading,
   setIsLoadingTheme,
   setPageError,
-  clearPageError,
   setValidationState,
   setIsShareView,
   setOverrideValidations,

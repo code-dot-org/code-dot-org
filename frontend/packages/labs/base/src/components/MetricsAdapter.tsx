@@ -9,8 +9,8 @@ import {useAppSelector} from '../redux/store';
 
 /**
  * Listens for Redux state changes and updates the LabMetricsReporter accordingly.
- * Reports errors whenever the pageError state is updated, and reports a LevelLoad
- * metric when a new level is loaded.
+ * Reports a LevelLoad metric when a new level is loaded. Load errors are
+ * reported by the lab error boundary (see `LabErrorBoundary`), not here.
  */
 const MetricsAdapter: FunctionComponent = () => {
   const channelId = useAppSelector(state => state.lab.channel?.id);
@@ -21,7 +21,6 @@ const MetricsAdapter: FunctionComponent = () => {
   const scriptId = useAppSelector(
     state => state.progress.scriptId || undefined,
   );
-  const pageError = useAppSelector(state => state.lab.pageError);
 
   const isShareView = useAppSelector(state => state.lab.isShareView);
 
@@ -43,16 +42,6 @@ const MetricsAdapter: FunctionComponent = () => {
   useEffect(() => {
     LabRegistry.metricsReporter.updateProperties({appName});
   }, [appName]);
-
-  useEffect(() => {
-    if (pageError) {
-      LabRegistry.metricsReporter.logError(
-        pageError.errorMessage,
-        pageError.error,
-        pageError.details,
-      );
-    }
-  }, [pageError]);
 
   // Log a LevelLoad metric when a level is loaded.
   const logLoadMetric: Callback<typeof LifecycleEvent.LevelLoadCompleted> = (

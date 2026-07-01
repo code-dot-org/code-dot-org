@@ -1,5 +1,4 @@
 import type {ComponentType} from 'react';
-import {useEffect} from 'react';
 
 import {
   useApiClient,
@@ -10,8 +9,9 @@ import {
 } from '@code-dot-org/core/api';
 
 import {useLoadLab} from '../contexts/ProjectContext';
-import {labActions} from '../redux';
-import {useAppDispatch} from '../redux/store';
+import {useThrowIfPageError} from '../hooks/useThrowIfPageError';
+
+import LabErrorBoundary from './LabErrorBoundary';
 
 /**
  * The prop contract a `@code-dot-org/lab`-based lab entrypoint accepts from a
@@ -59,8 +59,20 @@ export interface LabHostProps {
  * Shared by the studio host and the standalone lab dev harnesses so there is a
  * single resolve-and-dispatch path. Must be rendered inside the data-provider
  * stack (shared redux store + react-query + API client).
+ *
+ * Wraps the load in {@link LabErrorBoundary}: the host fetches below throw on
+ * failure (via `throwOnError`) and the `loadLab` error is re-thrown by
+ * {@link useThrowIfPageError}, so any load failure renders the error page.
  */
-export default function LabHost({
+export default function LabHost(props: LabHostProps) {
+  return (
+    <LabErrorBoundary>
+      <LabHostContent {...props} />
+    </LabErrorBoundary>
+  );
+}
+
+function LabHostContent({
   LabEntrypoint,
   standaloneProjectType,
   channelId,
@@ -68,13 +80,14 @@ export default function LabHost({
   userId,
 }: LabHostProps) {
   const api = useApiClient();
-  const dispatch = useAppDispatch();
 
   // The host owns the discriminated request params. Standalone projects are
-  // keyed by their project type.
+  // keyed by their project type. `throwOnError` routes fetch failures to the
+  // surrounding LabErrorBoundary instead of leaving `isLoading` true forever.
   const params: LevelPropertiesRequestParams = {standaloneProjectType};
-  const {data: levelPropertiesMap, error: levelPropertiesError} =
-    useLevelProperties(api, params);
+  const {data: levelPropertiesMap} = useLevelProperties(api, params, {
+    throwOnError: true,
+  });
 
   // Standalone projects carry no level id of their own; resolve it to the first
   // key of the map.
@@ -82,39 +95,14 @@ export default function LabHost({
     ? Number(Object.keys(levelPropertiesMap)[0])
     : undefined;
 
-  const {data: appOptions, error: appOptionsError} = useAppOptions(
+  const {data: appOptions} = useAppOptions(
     api,
     {levelId: levelId as number},
-    {enabled: levelId !== undefined},
+    {enabled: levelId !== undefined, throwOnError: true},
   );
 
   const levelProperties =
     levelId !== undefined ? levelPropertiesMap?.[levelId] : undefined;
-
-  // Surface fetch failures as a page error. Without this a failed level-
-  // properties / app-options fetch leaves `isLoading` true forever (an infinite
-  // spinner); recording the error lets the lab render the error page instead.
-  // Load-time failures (the `loadLab` thunk) already set the page error
-  // themselves, so this only covers the host-owned fetches.
-  useEffect(() => {
-    if (levelPropertiesError) {
-      dispatch(
-        labActions.setPageError({
-          errorMessage: 'Error loading level properties',
-          error: levelPropertiesError,
-          details: {},
-        }),
-      );
-    } else if (appOptionsError) {
-      dispatch(
-        labActions.setPageError({
-          errorMessage: 'Error loading app options',
-          error: appOptionsError,
-          details: {},
-        }),
-      );
-    }
-  }, [dispatch, levelPropertiesError, appOptionsError]);
 
   // Host drives the load explicitly. `useLoadLab` no-ops until its inputs are
   // present, and `loadLab` short-circuits for labs that do not use projects.
@@ -126,6 +114,9 @@ export default function LabHost({
     scriptId,
     channelId,
   });
+
+  // Re-throw a failed `loadLab` (recorded in redux) into the boundary.
+  useThrowIfPageError();
 
   return (
     <LabEntrypoint

@@ -8,6 +8,7 @@ export {default as ProjectBlockedUI} from './projectBlockedUI';
 export * from './errorFallbackPage';
 export {default as ErrorFallbackPage} from './errorFallbackPage';
 export {default as ErrorBoundary} from './ErrorBoundary';
+export {default as LabErrorBoundary} from './LabErrorBoundary';
 export {default as Lab} from './Lab';
 export * from './LabHost';
 export {default as LabHost} from './LabHost';
