@@ -9,7 +9,7 @@ const CAP_LOCKOUT_DATE = '2024-07-01T06:00:00.000Z';
 // cap_steps.rb's cap_CO_start_date_override (DST-crossing artifact of 1.year.ago).
 const CAP_START_DATE = '2023-07-02T00:10:48.000Z';
 
-test.describe('Manage students tab', () => {
+test.describe('CAP US state bulk set', () => {
   /**
    * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/teacher_dashboard/manage_students_tab.feature
