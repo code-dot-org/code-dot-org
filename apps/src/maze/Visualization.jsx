@@ -7,6 +7,7 @@ import ProtectedVisualizationDiv, {
 
 import {LOOK_ID, SVG_ID} from './constants';
 import MazeKeyboardNavigation from './keyboardNavigation';
+import {teardownResultAnnouncer} from './resultAnnouncer';
 
 const NAV_HINT =
   'Maze visualization. Press Enter to walk the path with the arrow keys. Press Escape to exit.';
@@ -22,7 +23,10 @@ const Visualization = function ({useProtectedDiv = true}) {
     const svg = svgRef.current;
     if (!wrapper || !svg) return undefined;
     const nav = new MazeKeyboardNavigation(wrapper, svg);
-    return () => nav.destroy();
+    return () => {
+      nav.destroy();
+      teardownResultAnnouncer();
+    };
   }, []);
 
   const innerComponent = (
