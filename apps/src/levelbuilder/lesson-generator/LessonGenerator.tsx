@@ -636,6 +636,20 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
               levelDescription: sub.description.trim(),
             };
             await generateSublevelContent(sub, subCtx, subLevel.id, appendLog);
+            // Persist the sublevel prompt so reopening /generate later
+            // pre-populates the sublevel description. Non-fatal.
+            try {
+              await updateLevelProperty(
+                subLevel.id,
+                'generate_outline',
+                sub.description.trim()
+              );
+            } catch (err) {
+              const message = err instanceof Error ? err.message : String(err);
+              appendLog(
+                `Warning: couldn't save generate outline for sublevel "${subName}": ${message}`
+              );
+            }
             bubbleChoiceSublevelLevels.push({
               spec: sub,
               fullName: subName,
