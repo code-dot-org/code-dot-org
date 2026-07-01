@@ -25,6 +25,25 @@ module UnnecessarySessionWritePrevention
     super
   end
 
+  # Guards against an un-initialized session leaking in from an upstream Rack
+  # app. Middleware ahead of this store in the stack (the Sinatra +*Api+ apps,
+  # the dev reloader/error machinery, etc.) can call +Rack::Request#session+,
+  # which lazily seeds +env['rack.session']+ with a bare +{}+ (Rack's
+  # +default_session+) before we initialize the real session.
+  # +ActionDispatch::Request::Session.create+ then runs +session.merge!(session_was)+
+  # *before* it installs the real session object, so the merge triggers a load
+  # that calls +.id+ on that bare Hash and raises
+  # +NoMethodError: undefined method 'id' for {}:Hash+. The seeded value carries
+  # no real data (it is Rack's empty +default_session+), so we drop it and let
+  # +create+ build a clean session.
+  #
+  # @see https://github.com/rails/rails/blob/v7.0.10/actionpack/lib/action_dispatch/request/session.rb#L17-L26
+  def prepare_session(req)
+    existing = req.get_header(Rack::RACK_SESSION)
+    req.set_header(Rack::RACK_SESSION, nil) if existing && !existing.is_a?(ActionDispatch::Request::Session)
+    super
+  end
+
   # Overrides +Rack::Session::Abstract::Persisted#commit_session?+ to skip
   # committing a session that is unchanged for an AJAX request, reducing
   # Redis traffic in general.

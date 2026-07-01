@@ -19,6 +19,30 @@ class RedisSessionStoreTest < ActiveSupport::TestCase
     redis_session_store.write_session(request, session_id, session_data)
   end
 
+  describe '#prepare_session' do
+    # Regression: middleware ahead of this store (the Sinatra *Api apps, the dev
+    # reloader/error machinery) can call Rack::Request#session, seeding
+    # env['rack.session'] with a bare Hash before the real session is
+    # initialized. Session.create then merges that Hash and raises calling `.id`
+    # on it. The store must drop the foreign value and build a clean session.
+    let(:seeded_request) {ActionDispatch::TestRequest.create}
+
+    before do
+      seeded_request.set_header(Rack::RACK_SESSION, {})
+    end
+
+    it 'replaces a foreign bare-Hash session with a real Session' do
+      redis_session_store.prepare_session(seeded_request)
+      _(seeded_request.get_header(Rack::RACK_SESSION)).must_be_instance_of ActionDispatch::Request::Session
+    end
+
+    it 'loads and writes the fresh session without raising' do
+      redis_session_store.prepare_session(seeded_request)
+      seeded_request.session[:fake_session_data] = 'written'
+      _(seeded_request.session[:fake_session_data]).must_equal 'written'
+    end
+  end
+
   describe '#delete_session' do
     subject(:delete_session) {redis_session_store.delete_session(request, session_id, session.options)}
 
