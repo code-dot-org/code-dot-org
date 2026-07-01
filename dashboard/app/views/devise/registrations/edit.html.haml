@@ -79,57 +79,16 @@
   %div#turn-off-ai-diff
 
 - if current_user.can_create_personal_login?
-  %hr.account-section-divider
-  %h2= t('user.create_personal_login')
-
-  %p#edit_user_create_personal_account_description
-    - unless @personal_account_linking_enabled
-      - if current_user.us_state.nil?
-        = t('user.create_personal_login_state_required')
-      - else
-        = t('user.create_personal_login_parental_permission_required')
-    - else
-      = no_email ? t('user.create_personal_login_under_13_info') : t('user.create_personal_login_info')
-      = t('user.create_personal_login_link_account') if current_user.migrated?
-  .div{style: 'position: relative'}
-    = form_for(current_user, as: :user, url: '/users/upgrade', html: {id: 'edit_user_create_personal_account', style: (!@personal_account_linking_enabled ? 'opacity: 0.25;' : '')}, namespace: 'create_personal') do |form|
-      = form.hidden_field :hashed_email
-      %h3= t('user.enter_new_login_info')
-      - if no_email
-        = hidden_field_tag :noEmail, true
-        .field
-          = form.label t('user.create_personal_login_under_13_username'), class: "label-bold"
-          = form.text_field :username, maxlength: 255, disabled: !@personal_account_linking_enabled
-      - else
-        .field
-          = form.label :personal_email, class: "label-bold" do
-            %span
-              = t('activerecord.attributes.user.personal_email_markdown', url: CDO.studio_url('users/edit/?noEmail=true'), markdown: :inline).html_safe
-          = form.email_field :email, placeholder: '', autocomplete: 'off', maxlength: 255
-      .field
-        = form.label :password, maxlength: 255, class: "label-bold"
-        = form.password_field :password, autocomplete: 'off', maxlength: 255, disabled: !@personal_account_linking_enabled
-      .field
-        = form.label :password_confirmation, class: "label-bold"
-        = form.password_field :password_confirmation, autocomplete: 'off', maxlength: 255
-      - if @personal_account_linking_enabled
-        - if current_user.secret_word_account?
-          %h3= t('user.confirm_secret_words')
-          .field
-            = form.label :secret_words, class: "label-bold"
-            = form.text_field :secret_words, autocomplete: 'off', value: '', maxlength: 255, disabled: !@personal_account_linking_enabled
-        - if no_email
-          %h3= t('user.enter_parent_email')
-          .field
-            = form.label t('user.create_personal_login_under_13_parent_email'), class: "label-bold"
-            = form.text_field :parent_email, maxlength: 255, disabled: !@personal_account_linking_enabled
-        = t('user.create_personal_login_terms_markdown', terms_of_service_url: CDO.code_org_url('/tos'), markdown: true).html_safe
-        - unless no_email
-          = t('user.create_personal_login_email_note_markdown', privacy_policy_url: CDO.code_org_url('/privacy'), markdown: true).html_safe
-        %div= form.submit t('crud.submit'), id: 'create-personal-login', class: 'btn btn-warning'
-    - if !@personal_account_linking_enabled
-      %div{style: 'position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: flex; flex-direction: row; align-items: center; justify-content: center; pointer-events: none'}
-        %img{src: asset_path('auth/lock.svg'), style: 'width: 3rem; height: 3rem'}
+  -# Mount point for the React CreatePersonalLogin component. It renders a native
+  -# form that POSTs to /users/upgrade; the email hashing and under-13 plaintext
+  -# clearing now live in the component's onSubmit (see CreatePersonalLogin.jsx).
+  -# Copy, markdown, and URLs are resolved here so localization stays Rails-side.
+  - if !@personal_account_linking_enabled
+    - create_personal_login_description = current_user.us_state.nil? ? t('user.create_personal_login_state_required') : t('user.create_personal_login_parental_permission_required')
+  - else
+    - create_personal_login_description = no_email ? t('user.create_personal_login_under_13_info') : t('user.create_personal_login_info')
+    - create_personal_login_description = "#{create_personal_login_description} #{t('user.create_personal_login_link_account')}" if current_user.migrated?
+  #create-personal-login{data: {linking_enabled: @personal_account_linking_enabled.to_s, no_email: no_email.to_s, secret_word_account: current_user.secret_word_account?.to_s, hashed_email: current_user.hashed_email, heading: t('user.create_personal_login'), description: create_personal_login_description, enter_new_login_info: t('user.enter_new_login_info'), username_label: t('user.create_personal_login_under_13_username'), email_label_markdown: t('activerecord.attributes.user.personal_email_markdown', url: CDO.studio_url('users/edit/?noEmail=true')), password_label: User.human_attribute_name(:password), password_confirmation_label: User.human_attribute_name(:password_confirmation), confirm_secret_words_heading: t('user.confirm_secret_words'), secret_words_label: User.human_attribute_name(:secret_words), enter_parent_email_heading: t('user.enter_parent_email'), parent_email_label: t('user.create_personal_login_under_13_parent_email'), terms_markdown: t('user.create_personal_login_terms_markdown', terms_of_service_url: CDO.code_org_url('/tos')), email_note_markdown: t('user.create_personal_login_email_note_markdown', privacy_policy_url: CDO.code_org_url('/privacy')), submit_label: t('crud.submit'), lock_icon_src: asset_path('auth/lock.svg')}}
 
 -# Separately-submittable form section allowing the user to edit their own
 -# account type.  We keep this separate because it's sometimes a multi-step
