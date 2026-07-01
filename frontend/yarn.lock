@@ -1859,6 +1859,7 @@ __metadata:
     eslint: "catalog:"
     jsdom: "catalog:"
     phaser-ce: "npm:^2.20.0"
+    playwright: "catalog:"
     prettier: "catalog:"
     react: "catalog:"
     react-dom: "catalog:"

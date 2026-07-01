@@ -1,7 +1,7 @@
 {
   "name": "@code-dot-org/craft-lab",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
   "description": "Minecraft-themed 2D game engine for Code.org Craft lab variants",
   "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/labs/craft/#readme",
   "bugs": {
@@ -33,6 +33,8 @@
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "test": "vitest --run",
+    "test:ui": "playwright test",
+    "test:ui:ci": "CI=true playwright test",
     "typecheck": "tsc -b --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
@@ -46,6 +48,7 @@
     "@vitejs/plugin-react": "catalog:",
     "eslint": "catalog:",
     "jsdom": "catalog:",
+    "playwright": "catalog:",
     "prettier": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
