@@ -481,6 +481,7 @@ Dashboard::Application.routes.draw do
         get 'instructions'
         get 'get_rollup_resources'
         get 'generate', to: 'scripts#generate'
+        get 'listing', to: 'scripts#listing'
         put 'lesson_outlines', to: 'scripts#update_lesson_outlines'
       end
 
