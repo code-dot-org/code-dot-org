@@ -33,7 +33,7 @@
     "creating-apps-with-devices-circuit-2026",
     "creating-apps-with-devices-microbit-2026"
   ],
-  "published_state": "stable",
+  "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",

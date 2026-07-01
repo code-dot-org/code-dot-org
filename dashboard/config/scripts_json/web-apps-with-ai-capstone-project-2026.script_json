@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-23 17:39:47 UTC",
+    "serialized_at": "2026-06-30 21:57:13 UTC",
     "hide_within_course": true,
     "published_state": "in_development",
     "instruction_type": null,
@@ -326,8 +326,108 @@
       }
     },
     {
-      "key": "9f007043-b21e-4b52-99c0-9050ea736053",
+      "key": "09d138da-33e3-421c-a257-7386af8cccb5",
       "position": 10,
+      "properties": {
+        "name": "New Levels",
+        "progression_name": "Milestone 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "09d138da-33e3-421c-a257-7386af8cccb5",
+        "lesson_activity.key": "920dc160-b813-48ab-b02a-8a62401bd2f7"
+      }
+    },
+    {
+      "key": "a30df019-0685-4949-af41-0afdf397f35c",
+      "position": 11,
+      "properties": {
+        "progression_name": "Milestone 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "a30df019-0685-4949-af41-0afdf397f35c",
+        "lesson_activity.key": "920dc160-b813-48ab-b02a-8a62401bd2f7"
+      }
+    },
+    {
+      "key": "66bc2d53-46b5-4849-981b-d42feb4814a0",
+      "position": 12,
+      "properties": {
+        "progression_name": "Benchmark A Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "66bc2d53-46b5-4849-981b-d42feb4814a0",
+        "lesson_activity.key": "920dc160-b813-48ab-b02a-8a62401bd2f7"
+      }
+    },
+    {
+      "key": "b8e87f1d-9eba-4d53-8046-35cec86b4ce7",
+      "position": 13,
+      "properties": {
+        "progression_name": "Milestone 3"
+      },
+      "seeding_key": {
+        "activity_section.key": "b8e87f1d-9eba-4d53-8046-35cec86b4ce7",
+        "lesson_activity.key": "920dc160-b813-48ab-b02a-8a62401bd2f7"
+      }
+    },
+    {
+      "key": "4435f2f0-4399-4c1e-b994-75f32802c5a9",
+      "position": 14,
+      "properties": {
+        "progression_name": "Benchmark B Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "4435f2f0-4399-4c1e-b994-75f32802c5a9",
+        "lesson_activity.key": "920dc160-b813-48ab-b02a-8a62401bd2f7"
+      }
+    },
+    {
+      "key": "c2ee3df8-7edf-4993-acdb-a91b214ca802",
+      "position": 15,
+      "properties": {
+        "progression_name": "Milestone 4"
+      },
+      "seeding_key": {
+        "activity_section.key": "c2ee3df8-7edf-4993-acdb-a91b214ca802",
+        "lesson_activity.key": "920dc160-b813-48ab-b02a-8a62401bd2f7"
+      }
+    },
+    {
+      "key": "417b781f-a958-46dc-87b2-c6c890676769",
+      "position": 16,
+      "properties": {
+        "progression_name": "Benchmark C Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "417b781f-a958-46dc-87b2-c6c890676769",
+        "lesson_activity.key": "920dc160-b813-48ab-b02a-8a62401bd2f7"
+      }
+    },
+    {
+      "key": "3cc1a143-a0a9-4cae-a61d-dcf97730ef27",
+      "position": 17,
+      "properties": {
+        "progression_name": "Milestone 5"
+      },
+      "seeding_key": {
+        "activity_section.key": "3cc1a143-a0a9-4cae-a61d-dcf97730ef27",
+        "lesson_activity.key": "920dc160-b813-48ab-b02a-8a62401bd2f7"
+      }
+    },
+    {
+      "key": "b95af50b-2d2b-45f2-b892-92458bbfa00a",
+      "position": 18,
+      "properties": {
+        "progression_name": "Final Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "b95af50b-2d2b-45f2-b892-92458bbfa00a",
+        "lesson_activity.key": "920dc160-b813-48ab-b02a-8a62401bd2f7"
+      }
+    },
+    {
+      "key": "9f007043-b21e-4b52-99c0-9050ea736053",
+      "position": 19,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to begin Milestone 1: Intent and Scope. Remind them that they can choose the tool that best supports their current task and that they may move between tools as their thinking evolves.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work in the Milestone 1 hub, ask guiding questions such as:\n- Who is your app for?\n- What problem are you trying to solve?\n- What are you intentionally including in this first version?\n- What are you leaving out for now?\n\nUse these check-ins to confirm students are moving from ideas toward clear intent and scope, rather than jumping straight into code.\n",
         "progression_name": "Milestone 1: Intent and Scope",
@@ -349,7 +449,7 @@
     },
     {
       "key": "ce8624f3-e8be-4325-8cf4-e14ddb106299",
-      "position": 11,
+      "position": 20,
       "properties": {
       },
       "seeding_key": {
@@ -359,7 +459,7 @@
     },
     {
       "key": "39c927fc-8b24-45d6-94b1-4a198677f6b8",
-      "position": 12,
+      "position": 21,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete or update the Milestone 1 section in their Project Guide. Let them know this section may continue to evolve if their idea or scope changes in later lessons.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students wrap up, ensure they are discussing and aligning on their Milestone 1 responses as a team. Listen for shared understanding around audience, problem, and scope.\n",
         "duration": "5",
@@ -1180,20 +1280,20 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Milestone 1: Intent and Scope"
+        "progression": "Milestone 1"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "capstone-project-lesson1-level1-hub-test_2025-pilot_2026"
+          "capstone-project-lesson1-level1-2026"
         ],
         "lesson.key": "Capstone Project",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "web-apps-with-ai-capstone-project-2026",
-        "activity_section.key": "9f007043-b21e-4b52-99c0-9050ea736053"
+        "activity_section.key": "09d138da-33e3-421c-a257-7386af8cccb5"
       },
       "level_keys": [
-        "capstone-project-lesson1-level1-hub-test_2025-pilot_2026"
+        "capstone-project-lesson1-level1-2026"
       ]
     },
     {
@@ -1202,20 +1302,20 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Milestone 2: System Explanation"
+        "progression": "Milestone 2"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "capstone-project-lesson1-level2-hub-test_2025-pilot_2026"
+          "capstone-project-lesson1-level2-2026"
         ],
         "lesson.key": "Capstone Project",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "web-apps-with-ai-capstone-project-2026",
-        "activity_section.key": "629143ce-939f-4ab4-8f95-cdd300070b9e"
+        "activity_section.key": "a30df019-0685-4949-af41-0afdf397f35c"
       },
       "level_keys": [
-        "capstone-project-lesson1-level2-hub-test_2025-pilot_2026"
+        "capstone-project-lesson1-level2-2026"
       ]
     },
     {
@@ -1224,20 +1324,20 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Milestone 3: Testing and Behavior"
+        "progression": "Benchmark A Reflection"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "capstone-project-lesson1-level3-hub-test_2025-pilot_2026"
+          "capstone-project-lesson1-level3-2026"
         ],
         "lesson.key": "Capstone Project",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "web-apps-with-ai-capstone-project-2026",
-        "activity_section.key": "6cbd10a3-993d-408a-909b-75fa02a87f76"
+        "activity_section.key": "66bc2d53-46b5-4849-981b-d42feb4814a0"
       },
       "level_keys": [
-        "capstone-project-lesson1-level3-hub-test_2025-pilot_2026"
+        "capstone-project-lesson1-level3-2026"
       ]
     },
     {
@@ -1246,20 +1346,20 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Milestone 4: Feedback and Iteration"
+        "progression": "Milestone 3"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "capstone-project-lesson1-level4-test_2025-pilot_2026"
+          "capstone-project-lesson1-level4-2026"
         ],
         "lesson.key": "Capstone Project",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "web-apps-with-ai-capstone-project-2026",
-        "activity_section.key": "901697f9-f9da-4901-8973-5dc9abdc477d"
+        "activity_section.key": "b8e87f1d-9eba-4d53-8046-35cec86b4ce7"
       },
       "level_keys": [
-        "capstone-project-lesson1-level4-test_2025-pilot_2026"
+        "capstone-project-lesson1-level4-2026"
       ]
     },
     {
@@ -1268,82 +1368,252 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Milestone 5: Final App and Presentation"
+        "progression": "Benchmark B Reflection"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "capstone-project-lesson1-level5-hub-test_2025-pilot_2026"
+          "capstone-project-lesson1-level5-2026"
         ],
         "lesson.key": "Capstone Project",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "web-apps-with-ai-capstone-project-2026",
-        "activity_section.key": "9cd46315-e6b2-4393-915b-45240c16b82a"
+        "activity_section.key": "4435f2f0-4399-4c1e-b994-75f32802c5a9"
       },
       "level_keys": [
-        "capstone-project-lesson1-level5-hub-test_2025-pilot_2026"
+        "capstone-project-lesson1-level5-2026"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone 4"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level6-2026"
+        ],
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "c2ee3df8-7edf-4993-acdb-a91b214ca802"
+      },
+      "level_keys": [
+        "capstone-project-lesson1-level6-2026"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Benchmark C Reflection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level7-2026"
+        ],
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "417b781f-a958-46dc-87b2-c6c890676769"
+      },
+      "level_keys": [
+        "capstone-project-lesson1-level7-2026"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone 5"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level8-2026"
+        ],
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "3cc1a143-a0a9-4cae-a61d-dcf97730ef27"
+      },
+      "level_keys": [
+        "capstone-project-lesson1-level8-2026"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone 5"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level9-2026"
+        ],
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "3cc1a143-a0a9-4cae-a61d-dcf97730ef27"
+      },
+      "level_keys": [
+        "capstone-project-lesson1-level9-2026"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Reflection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level10-2026"
+        ],
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "b95af50b-2d2b-45f2-b892-92458bbfa00a"
+      },
+      "level_keys": [
+        "capstone-project-lesson1-level10-2026"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "capstone-project-lesson1-level1-hub-test_2025-pilot_2026",
+        "level.key": "capstone-project-lesson1-level1-2026",
         "script_level.level_keys": [
-          "capstone-project-lesson1-level1-hub-test_2025-pilot_2026"
+          "capstone-project-lesson1-level1-2026"
         ],
         "lesson.key": "Capstone Project",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "web-apps-with-ai-capstone-project-2026",
-        "activity_section.key": "9f007043-b21e-4b52-99c0-9050ea736053"
+        "activity_section.key": "09d138da-33e3-421c-a257-7386af8cccb5"
       }
     },
     {
       "seeding_key": {
-        "level.key": "capstone-project-lesson1-level2-hub-test_2025-pilot_2026",
+        "level.key": "capstone-project-lesson1-level2-2026",
         "script_level.level_keys": [
-          "capstone-project-lesson1-level2-hub-test_2025-pilot_2026"
+          "capstone-project-lesson1-level2-2026"
         ],
         "lesson.key": "Capstone Project",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "web-apps-with-ai-capstone-project-2026",
-        "activity_section.key": "629143ce-939f-4ab4-8f95-cdd300070b9e"
+        "activity_section.key": "a30df019-0685-4949-af41-0afdf397f35c"
       }
     },
     {
       "seeding_key": {
-        "level.key": "capstone-project-lesson1-level3-hub-test_2025-pilot_2026",
+        "level.key": "capstone-project-lesson1-level3-2026",
         "script_level.level_keys": [
-          "capstone-project-lesson1-level3-hub-test_2025-pilot_2026"
+          "capstone-project-lesson1-level3-2026"
         ],
         "lesson.key": "Capstone Project",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "web-apps-with-ai-capstone-project-2026",
-        "activity_section.key": "6cbd10a3-993d-408a-909b-75fa02a87f76"
+        "activity_section.key": "66bc2d53-46b5-4849-981b-d42feb4814a0"
       }
     },
     {
       "seeding_key": {
-        "level.key": "capstone-project-lesson1-level4-test_2025-pilot_2026",
+        "level.key": "capstone-project-lesson1-level4-2026",
         "script_level.level_keys": [
-          "capstone-project-lesson1-level4-test_2025-pilot_2026"
+          "capstone-project-lesson1-level4-2026"
         ],
         "lesson.key": "Capstone Project",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "web-apps-with-ai-capstone-project-2026",
-        "activity_section.key": "901697f9-f9da-4901-8973-5dc9abdc477d"
+        "activity_section.key": "b8e87f1d-9eba-4d53-8046-35cec86b4ce7"
       }
     },
     {
       "seeding_key": {
-        "level.key": "capstone-project-lesson1-level5-hub-test_2025-pilot_2026",
+        "level.key": "capstone-project-lesson1-level5-2026",
         "script_level.level_keys": [
-          "capstone-project-lesson1-level5-hub-test_2025-pilot_2026"
+          "capstone-project-lesson1-level5-2026"
         ],
         "lesson.key": "Capstone Project",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "web-apps-with-ai-capstone-project-2026",
-        "activity_section.key": "9cd46315-e6b2-4393-915b-45240c16b82a"
+        "activity_section.key": "4435f2f0-4399-4c1e-b994-75f32802c5a9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "capstone-project-lesson1-level6-2026",
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level6-2026"
+        ],
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "c2ee3df8-7edf-4993-acdb-a91b214ca802"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "capstone-project-lesson1-level7-2026",
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level7-2026"
+        ],
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "417b781f-a958-46dc-87b2-c6c890676769"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "capstone-project-lesson1-level8-2026",
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level8-2026"
+        ],
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "3cc1a143-a0a9-4cae-a61d-dcf97730ef27"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "capstone-project-lesson1-level9-2026",
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level9-2026"
+        ],
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "3cc1a143-a0a9-4cae-a61d-dcf97730ef27"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "capstone-project-lesson1-level10-2026",
+        "script_level.level_keys": [
+          "capstone-project-lesson1-level10-2026"
+        ],
+        "lesson.key": "Capstone Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "b95af50b-2d2b-45f2-b892-92458bbfa00a"
       }
     }
   ],
