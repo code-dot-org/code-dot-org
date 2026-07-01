@@ -1,6 +1,6 @@
 import {expect, type Locator, type Page} from '@playwright/test';
 
-import {BasePage} from './base-page';
+import {BasePage} from '../base-page';
 
 /** Page object for the teacher dashboard home (/teacher_dashboard/home). */
 export class TeacherDashboardPage extends BasePage {

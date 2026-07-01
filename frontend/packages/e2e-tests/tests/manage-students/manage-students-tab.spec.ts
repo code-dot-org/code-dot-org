@@ -1,6 +1,6 @@
 import {expect, test} from '../fixtures';
-import {ManageStudentsPage} from '../pages/manage-students-page';
-import {TeacherDashboardPage} from '../pages/teacher-dashboard';
+import {ManageStudentsPage} from '../pages/teacher-dashboard/manage-students-page';
+import {TeacherDashboardPage} from '../pages/teacher-dashboard/teacher-dashboard';
 import {createTeacherAssociatedStudent, signIn, signOut} from '../shared/auth';
 import {setCountryOverride} from '../shared/geolocation';
 

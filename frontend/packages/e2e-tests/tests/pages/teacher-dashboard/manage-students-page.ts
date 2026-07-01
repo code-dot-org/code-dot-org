@@ -1,6 +1,6 @@
 import {expect, type Locator, type Page} from '@playwright/test';
 
-import {BasePage} from './base-page';
+import {BasePage} from '../base-page';
 
 export class ManageStudentsPage extends BasePage {
   readonly table: Locator;
