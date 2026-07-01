@@ -134,12 +134,6 @@ class AppServerHooksTest < Minitest::Test
     Cdo::AppServerHooks.after_booted
   end
 
-  private def stub_puma_stats_collector
-    puma_collector = mock('puma_collector')
-    puma_collector.stubs(:start)
-    Cdo::PumaStatsCollector.stubs(:new).returns(puma_collector)
-  end
-
   def test_prefork_memory_metric_published_with_host_only
     DCDO.stubs(:get).with('worker_memory_metrics', {}).returns({'interval_seconds' => 120})
     Cdo::ProcessMemory.stubs(:snapshot_kb).returns(proc_vm_rss_kb: 1_800_000)
@@ -208,5 +202,11 @@ class AppServerHooksTest < Minitest::Test
     CDO.stubs(:log).returns(logger)
 
     Cdo::AppServerHooks.send(:publish_prefork_memory_metric)
+  end
+
+  private def stub_puma_stats_collector
+    puma_collector = mock('puma_collector')
+    puma_collector.stubs(:start)
+    Cdo::PumaStatsCollector.stubs(:new).returns(puma_collector)
   end
 end
