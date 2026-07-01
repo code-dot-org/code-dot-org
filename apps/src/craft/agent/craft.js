@@ -3,7 +3,7 @@ import {
   FacingDirection,
   EventType,
   utils as CraftUtils,
-} from '@code-dot-org/craft';
+} from '@code-dot-org/craft-lab';
 import Hammer from 'hammerjs';
 import $ from 'jquery';
 import React from 'react';

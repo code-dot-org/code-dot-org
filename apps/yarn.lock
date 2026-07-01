@@ -3973,12 +3973,16 @@ __metadata:
   languageName: node
   linkType: soft
 
-"@code-dot-org/craft@npm:0.2.2":
-  version: 0.2.2
-  resolution: "@code-dot-org/craft@npm:0.2.2"
-  checksum: 10/5a622fdb35c1ac4d79e13f658b828334923be3a039b2fa13a1052d7ae80fd09f30d6d72af07ccd84d3bbf20755e8cda60fae6107a01a5f0ebe5c2ccd0ce7f101
+"@code-dot-org/craft-lab@portal:../frontend/packages/labs/craft/::locator=blockly-mooc%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/craft-lab@portal:../frontend/packages/labs/craft/::locator=blockly-mooc%40workspace%3A."
+  dependencies:
+    phaser-ce: "npm:^2.20.0"
+  peerDependencies:
+    react: ^18 || ^19
+    react-dom: ^18 || ^19
   languageName: node
-  linkType: hard
+  linkType: soft
 
 "@code-dot-org/dance-party@npm:2.0.4":
   version: 2.0.4
@@ -11448,7 +11452,7 @@ __metadata:
     "@code-dot-org/component-library": "portal:../frontend/packages/component-library/"
     "@code-dot-org/component-library-styles": "portal:../frontend/packages/component-library-styles/"
     "@code-dot-org/core": "portal:../frontend/packages/core/"
-    "@code-dot-org/craft": "npm:0.2.2"
+    "@code-dot-org/craft-lab": "portal:../frontend/packages/labs/craft/"
     "@code-dot-org/dance-party": "npm:2.0.4"
     "@code-dot-org/fonts": "portal:../frontend/packages/fonts/"
     "@code-dot-org/johnny-five": "npm:2.1.0-cdo.3"
@@ -24339,6 +24343,13 @@ canvg@gabelerner/canvg:
   version: 2.1.0
   resolution: "performance-now@npm:2.1.0"
   checksum: 10/534e641aa8f7cba160f0afec0599b6cecefbb516a2e837b512be0adbe6c1da5550e89c78059c7fabc5c9ffdf6627edabe23eb7c518c4500067a898fa65c2b550
+  languageName: node
+  linkType: hard
+
+"phaser-ce@npm:^2.20.0":
+  version: 2.20.2
+  resolution: "phaser-ce@npm:2.20.2"
+  checksum: 10/b53c07746b2d8a926f8c48a8eaf90c2cff24049c2457952005a03c9184ed7a3472e4eed95daca13f31a4251e0c8426dbc15aa1b22d38fa6b17b1337a04c12af4
   languageName: node
   linkType: hard
 
