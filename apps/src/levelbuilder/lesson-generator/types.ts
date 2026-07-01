@@ -50,17 +50,22 @@ export const BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES: readonly LabType[] = [
   'aichat',
 ];
 
-// Inverse of RAILS_TYPE_BY_LAB. ScriptLevel#summarize_for_lesson_edit
-// returns level.type as the Rails STI name; convert it to AppName at the
-// page boundary.
+const LAB_TYPE_BY_RAILS: Record<string, LabType> = Object.fromEntries(
+  (Object.entries(RAILS_TYPE_BY_LAB) as [LabType, string][]).map(
+    ([lab, sti]) => [sti, lab]
+  )
+);
+
+// ScriptLevel#summarize_for_lesson_edit returns level.type as the Rails
+// STI name; look it up in the inverted RAILS_TYPE_BY_LAB map. Case-
+// sensitive on the STI name (e.g. "BubbleChoice") — since RAILS_TYPE_BY_LAB
+// is the authoritative map, a mismatch here means the level truly isn't
+// a supported type.
 export function labTypeFromRailsType(
   railsType: string | undefined
 ): LabType | undefined {
   if (!railsType) return undefined;
-  const lower = railsType.toLowerCase();
-  return (SUPPORTED_LAB_TYPES as readonly string[]).includes(lower)
-    ? (lower as LabType)
-    : undefined;
+  return LAB_TYPE_BY_RAILS[railsType];
 }
 
 export interface LevelSpec {
