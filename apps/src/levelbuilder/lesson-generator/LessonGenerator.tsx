@@ -350,13 +350,8 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     // extra context — same as if the field were blank.
     const targetProject = await loadTargetProject(appendLog);
 
-    // Populate a freshly-created sublevel level record with content from
-    // the appropriate per-lab AI, mirroring the top-level per-spec loop
-    // but scoped to Bubble Choice sublevels. Runs during the parent's
-    // pre-plan phase, since the parent's DSL create call needs each
-    // sublevel to exist (by name) before it fires. Sublevels are
-    // limited to BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES (panels/weblab2/ailab/
-    // aichat), so we only need those four branches here.
+    // Runs in the parent's pre-plan phase: the BubbleChoice DSL create
+    // needs each sublevel to exist by name before it fires.
     const generateSublevelContent = async (
       sub: LevelSpec,
       subCtx: {
@@ -396,10 +391,7 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           'long_instructions',
           result.longInstructions
         );
-        // Exemplar pass (non-fatal). Same soft-fail policy as the top-
-        // level weblab2 branch: the student-facing content is already
-        // saved by the time this runs, so a model error here only
-        // loses the teacher's solution view.
+        // Exemplar is non-fatal — student-facing content is already saved.
         try {
           log(`Generating exemplar for sublevel "${subName}"…`);
           const exemplarSources = await generateWeblab2Exemplar(
@@ -607,17 +599,11 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           precedingLevels: precedingLevelsText || undefined,
         };
 
-        // DSL-defined types must plan their content before the create
-        // call so we can pass dsl_text on POST. For every other lab
-        // type, the dslText stays undefined and we follow the
-        // create-first-then-save path below.
+        // DSL-defined labs (multi / match / bubbleChoice) must plan
+        // their content before createOrFindLevel so we can pass
+        // dsl_text on POST; other labs go the create-then-save path.
         let multiResult: MultiGeneration | undefined;
         let matchResult: MatchGeneration | undefined;
-        // Bubble Choice pre-plan: generate every sublevel level record
-        // and its content, then run the parent's AI to produce the DSL
-        // blurb + per-sublevel teasers and thumbnail prompts. Kept
-        // alongside multi/match pre-plans because BubbleChoice is
-        // DSL-defined; the parent's create call needs dsl_text.
         let bubbleChoicePlan: BubbleChoiceGeneration | undefined;
         const bubbleChoiceSublevelLevels: {
           spec: LevelSpec;
@@ -641,10 +627,6 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           appendLog(
             `Planning ${sublevels.length} sublevel(s) for "${levelName}"…`
           );
-          // Generate each sublevel independently. The parent's DSL
-          // needs their names, so we materialize each Level record
-          // (via createOrFindLevel) and populate its content before
-          // running the bubble-choice AI.
           for (const sub of sublevels) {
             const subName = fullName(`${spec.id.trim()}-${sub.id.trim()}`);
             const subLevel = await createOrFindLevel(sub.labType, subName);
@@ -888,17 +870,9 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
             }
             generatedOutput = {match: matchResult};
           } else if (spec.labType === 'bubbleChoice' && bubbleChoicePlan) {
-            // Parent DSL is already saved (via createOrFindLevel or the
-            // dsl_text re-PATCH above). Remaining work:
-            //   1. save the parent's long_instructions stub (author
-            //      notes; separate from the DSL's student-facing
-            //      description),
-            //   2. for each sublevel, generate + upload a thumbnail,
-            //      then save display_name + thumbnail_url +
-            //      bubble_choice_description to the sublevel level
-            //      record. display_name is what the picker UI shows on
-            //      each bubble; without it, the summary falls back to
-            //      the ugly kebab-case internal level name.
+            // Parent DSL was written by createOrFindLevel / the reused-
+            // level PATCH; still owing are the parent's stub notes and
+            // each sublevel's picker-facing fields.
             setStage('saving-properties');
             appendLog(`Saving instructions for "${levelName}"…`);
             await updateLevelProperty(

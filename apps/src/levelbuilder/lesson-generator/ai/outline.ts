@@ -18,16 +18,10 @@ import {
 
 import {AICHAT_PRESET_IDS, AichatPresetId} from './aichat';
 
-// Build the labType enum from SUPPORTED_LAB_TYPES so adding a new lab is
-// a single-line change. zod's z.enum requires a non-empty tuple, so we
-// cast through the canonical list.
 const supportedLabTypeEnum = z.enum(
   SUPPORTED_LAB_TYPES as unknown as [LabType, ...LabType[]]
 );
 
-// A narrower enum used only for the nested sublevels of a bubbleChoice
-// level. Excludes bubbleChoice itself (no nesting) and multi/match
-// (assessments-as-bubbles reads poorly).
 const sublevelLabTypeEnum = z.enum(
   BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES as unknown as [LabType, ...LabType[]]
 );
@@ -36,9 +30,6 @@ const aichatPresetEnum = z.enum(
   AICHAT_PRESET_IDS as unknown as [AichatPresetId, ...AichatPresetId[]]
 );
 
-// A single nested sublevel entry the outline AI emits inside a
-// bubbleChoice level. Bubble choices don't nest, so this schema
-// deliberately omits `templateGroup` and its own `sublevels` field.
 const sublevelSchema = z.object({
   id: z
     .string()
@@ -120,17 +111,8 @@ export interface OutlineLevel {
   sublevels?: OutlineSublevel[];
 }
 
-// Given the lesson's context (free-form outline plus whatever outer
-// scopes filled in), ask the model to break it down into a sequence of
-// 2-8 levels alternating between Panels (narrative) and Weblab2
-// (hands-on coding). Returns the level specs the caller can drop
-// straight into the per-level form.
-//
-// ctx.targetProject, when supplied, is the formatted final-app snapshot
-// (same string the per-level prompts read from ctx.targetProject). It
-// lets the outline AI plan a progression aimed at that destination —
-// picking weblab2 milestones that move the code toward the target and
-// panels that frame the concepts the target uses.
+// ctx.targetProject shapes the plan toward a specific final-app
+// destination when set.
 export async function generateLessonOutline(
   ctx: LessonContext
 ): Promise<OutlineLevel[]> {

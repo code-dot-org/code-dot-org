@@ -15,32 +15,19 @@ import {
 } from '../../curriculum-generator/ai/shared';
 import {uploadLevelAsset} from '../levelApi';
 
-// A Bubble Choice level is a picker page: the student sees a set of
-// "bubbles", each with a thumbnail image and a short description, and
-// picks one to open. The parent is a DSLDefined `BubbleChoice` level
-// whose DSL lists its sublevels by name; each sublevel is a full Level
-// record in its own right (generated separately via the standard
-// per-lab path). This generator handles the parent's own copy plus
-// per-sublevel thumbnails + one-line teasers.
+// Bubble Choice is a DSLDefined picker page whose sublevels are full
+// Level records generated separately via the standard per-lab path.
+// This file handles the parent's own copy plus per-sublevel thumbnails
+// and teasers.
 
 export interface BubbleChoiceMember {
-  // Level name (prefix + parent id + sublevel id) — used in filenames
-  // for generated thumbnails and as a stable key across parent + child
-  // generation.
   name: string;
-  // The levelbuilder's per-sublevel description. Fed to the AI so the
-  // per-sublevel teaser and thumbnail prompt line up with the actual
-  // content that will be generated separately.
   description: string;
 }
 
-// Per-sublevel plan the model emits.
-// - `displayName`: the human-readable title shown on the bubble.
-//   BubbleChoice#summarize_sublevels falls back to the raw level name
-//   when this is unset, so a missing displayName renders the ugly
-//   kebab-case internal name; the AI must produce a real one.
-// - `bubbleChoiceDescription`: one-line teaser beneath the title.
-// - `thumbnailPrompt`: drives the separate image-generation pass.
+// displayName is what the picker UI shows on each bubble. Without it,
+// BubbleChoice#summarize_sublevels falls back to the raw kebab-case
+// level name.
 const sublevelPlanSchema = z.object({
   displayName: z
     .string()
@@ -105,26 +92,16 @@ export interface BubbleChoiceGeneration {
   displayName: string;
   description: string;
   longInstructions: string;
-  // Same length as the members array passed in, in the same order.
+  // Same length + order as the members array passed in.
   sublevels: BubbleChoiceSublevelPlan[];
-  // One-line summary for the preceding-levels formatter so downstream
-  // levels can reference "in level N, the student picked from A/B/C"
-  // without re-reading the parent's whole DSL.
   summary: string;
 }
 
-// Generate the parent's own copy — displayName, description, stub
-// longInstructions — plus the per-sublevel teaser + thumbnail prompt
-// pairs. The AI sees every sublevel's description so its teasers and
-// image prompts line up with the actual sublevel content that will be
-// generated in a separate pass.
 export async function generateBubbleChoiceLevel(
   ctx: LessonContext & {
     parentLevelName: string;
     parentDescription: string;
     members: BubbleChoiceMember[];
-    // Level content generated in the same run for sibling levels
-    // preceding this bubble-choice, formatted for prompt inclusion.
     precedingLevels?: string;
   }
 ): Promise<BubbleChoiceGeneration> {
@@ -231,10 +208,7 @@ export async function generateBubbleChoiceLevel(
   };
 }
 
-// Generate a single square thumbnail from the AI-produced thumbnail
-// prompt, upload it as a level asset, return the public URL. Mirrors
-// panels' generateAndUploadPanelImage but frames the request as a
-// square icon rather than a 16:9 illustration.
+// Square icon variant of the panels image-generation flow.
 export async function generateBubbleChoiceThumbnail(
   thumbnailPrompt: string,
   sublevelName: string
@@ -290,12 +264,11 @@ export async function generateBubbleChoiceThumbnail(
   return uploadLevelAsset(imageFile.uint8Array, filename, imageFile.mediaType);
 }
 
-// Escape a string for inclusion inside a single-quoted DSL literal.
 function dslQuote(s: string): string {
   return `'${s.replace(/\\/g, '\\\\').replace(/'/g, "\\'")}'`;
 }
 
-// Pick a heredoc terminator that doesn't appear anywhere in the body.
+// Picks a heredoc terminator absent from the body.
 function dslHeredoc(body: string, defaultTag = 'MARKDOWN'): string {
   let tag = defaultTag;
   let suffix = 0;
@@ -306,9 +279,8 @@ function dslHeredoc(body: string, defaultTag = 'MARKDOWN'): string {
   return `<<${tag}\n${body}\n${tag}`;
 }
 
-// Render the parent BubbleChoice DSL body. `sublevelNames` must be in
-// the display order the levelbuilder wants; the DSL parser preserves
-// that order via ParentLevelsChildLevel.position.
+// sublevelNames order becomes the picker order via
+// ParentLevelsChildLevel.position.
 export function renderBubbleChoiceDsl(
   name: string,
   displayName: string,
@@ -325,9 +297,7 @@ export function renderBubbleChoiceDsl(
     lines.push(`level ${dslQuote(sub)}`);
   }
   lines.push('');
-  // uses_lab2 is a bare flag in the DSL, no value. It tells lab2 to
-  // route this level through the BubbleChoiceEntryPoint rather than
-  // legacy paths.
+  // Bare flag; routes the level through BubbleChoiceEntryPoint.
   lines.push('uses_lab2');
   return lines.join('\n') + '\n';
 }

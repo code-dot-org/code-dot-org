@@ -102,6 +102,20 @@
   margin-bottom: 8px;
 }
 
+.sublevelAddButton {
+  padding: 4px 10px;
+  font-size: 13px;
+  line-height: 1.2;
+  height: auto;
+}
+
+.sublevelEmpty {
+  margin: 0;
+  font-style: italic;
+  color: #555;
+  font-size: 13px;
+}
+
 .sublevelList {
   list-style: none;
   margin: 0;
@@ -112,34 +126,102 @@
 }
 
 .sublevelRow {
-  padding: 8px;
+  padding: 8px 10px;
   border: 1px solid #e2e8f0;
   border-radius: 4px;
   background: #fff;
 }
 
-.sublevelRowHeader {
+.sublevelTopLine {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  margin-bottom: 6px;
-}
-
-.sublevelRowActions {
-  display: flex;
-  gap: 4px;
-}
-
-.sublevelRowActions button {
-  padding: 2px 6px;
-  font-size: 12px;
-}
-
-.sublevelRowFields {
-  display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  align-items: flex-end;
+  gap: 10px;
   margin-bottom: 6px;
+}
+
+.sublevelPreview {
+  font-size: 11px;
+  color: #475569;
+  background: #f1f5f9;
+  padding: 2px 6px;
+  border-radius: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 240px;
+  flex: 0 1 auto;
+}
+
+.sublevelField {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.sublevelField label {
+  font-size: 11px;
+  color: #475569;
+  font-weight: 600;
+}
+
+.sublevelField input,
+.sublevelField select {
+  padding: 3px 6px;
+  font-size: 13px;
+  height: 26px;
+  min-width: 0;
+  width: 140px;
+}
+
+.sublevelField input {
+  width: 120px;
+}
+
+.sublevelGenerate {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #475569;
+  user-select: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.sublevelGenerate input[type='checkbox'] {
+  margin: 0;
+}
+
+.sublevelActions {
+  display: flex;
+  gap: 2px;
+}
+
+.sublevelActions button {
+  padding: 0 6px;
+  height: 22px;
+  min-width: 22px;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.sublevelDescField {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sublevelDescField label {
+  font-size: 11px;
+  color: #475569;
+  font-weight: 600;
+}
+
+.sublevelDescField textarea {
+  font-size: 13px;
+  padding: 4px 6px;
+  min-height: 42px;
 }

@@ -8,11 +8,8 @@ import {BubbleChoiceGeneration} from '../ai/bubbleChoice';
 import {Weblab2Generation} from '../ai/weblab2';
 import {LabType} from '../types';
 
-// Per-LabType payload shapes captured during a single Generate run.
-// One entry per supported lab; PriorOutput then narrows to "at most
-// one" of these via Partial. Keep this in sync with SUPPORTED_LAB_TYPES
-// — the call sites that build a PriorOutput are typed against
-// LabType, so adding a lab fails to compile until you add the row.
+// Keep in sync with SUPPORTED_LAB_TYPES; call sites are typed against
+// LabType so a missing row is a compile error.
 export interface PriorOutputByLab {
   panels: Panel[];
   weblab2: Weblab2Generation;
@@ -23,9 +20,7 @@ export interface PriorOutputByLab {
   bubbleChoice: BubbleChoiceGeneration;
 }
 
-// Per-spec content captured during a single Generate run, so each level we
-// process can be told what came before it. Exactly one lab key is
-// populated per entry (the one matching the spec's labType).
+// Exactly one lab key is populated per entry (matching the spec's labType).
 export type PriorOutput = Partial<PriorOutputByLab>;
 
 export interface PriorEntry {
@@ -36,10 +31,9 @@ export interface PriorEntry {
   output?: PriorOutput;
 }
 
-// Adapt the camelCased level properties returned by /lessons/:id/level_properties
-// to the same PriorOutput shape we use for content we just generated. This
-// lets the continuity context for skipped levels match what we'd send for
-// regenerated ones, so the AI sees a uniform record.
+// Adapts /lessons/:id/level_properties output to the PriorOutput shape,
+// so skipped-and-existing levels feed continuity context the same way
+// freshly generated ones do.
 export function priorOutputFromLevelProperties(
   props: LevelProperties | undefined,
   labType: LabType
@@ -53,8 +47,6 @@ export function priorOutputFromLevelProperties(
     return undefined;
   }
   if (labType === 'weblab2') {
-    // Weblab2 stores starter sources as MultiFileSource (per the
-    // ProjectSources | MultiFileSource union on LevelProperties).
     const startSources = props.startSources as MultiFileSource | undefined;
     const longInstructions = props.longInstructions || '';
     const files = startSources?.files
@@ -73,11 +65,6 @@ export function priorOutputFromLevelProperties(
     };
   }
   if (labType === 'multi' || labType === 'match') {
-    // Multi/Match are DSL-defined and rendered through legacy paths;
-    // their content lands in level_properties as parsed JSON fields
-    // (questions, answers, markdown). We only need a one-line summary
-    // for continuity context, not the full DSL — so pull the question
-    // text and correct-answer count and skip the rest.
     const summary = formatAssessmentSummary(props, labType);
     if (!summary) return undefined;
     if (labType === 'multi') {
@@ -100,10 +87,6 @@ export function priorOutputFromLevelProperties(
     };
   }
   if (labType === 'aichat') {
-    // The Aichat lab stores its config as `aichat_settings` (parsed into
-    // an object by the server before reaching the client). We only need
-    // a one-line summary for continuity context, so pull the visible
-    // bits and skip the deep tree.
     const longInstructions =
       (props as {longInstructions?: string}).longInstructions || '';
     const settings = (props as {aichatSettings?: unknown}).aichatSettings as
@@ -127,10 +110,8 @@ export function priorOutputFromLevelProperties(
     };
   }
   if (labType === 'ailab') {
-    // The ailab editor stores mode and dynamic_instructions as JSON
-    // strings (or untouched when read back through summarize_for_lab2_properties).
-    // Read the dataset id and visible-screen list defensively so a hand-
-    // edited level still produces a usable summary.
+    // Read mode + dynamic_instructions defensively — both round-trip
+    // as JSON strings and may be hand-edited.
     const longInstructions =
       (props as {longInstructions?: string}).longInstructions || '';
     const rawMode = (props as {mode?: unknown}).mode;
@@ -183,12 +164,9 @@ function tryParseJson(text: string): unknown {
   }
 }
 
-// Walk the camelCased multi/match property shape and produce a single-
-// line summary suitable for the preceding-levels block. The shape
-// matches what Match#summarize_for_lab2_properties surfaces (camelKey'd
-// `questions` / `answers` arrays, `markdown` for the body); Multi
-// extends Match and reuses the same fields plus a `correct` flag on
-// each answer.
+// One-line summary from the camelCased multi/match properties.
+// Multi extends Match; both use `questions`/`answers`/`markdown`, with
+// Multi's answers carrying a `correct` flag.
 function formatAssessmentSummary(
   props: LevelProperties,
   labType: 'multi' | 'match'

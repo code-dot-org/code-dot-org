@@ -14,28 +14,18 @@ import {
   PROMPT_TAGS,
 } from '../../curriculum-generator/ai/shared';
 
-// Five presets distilled from the existing AI Chat level corpus. Each
-// fixes everything except the prompts: the model, temperature, which
-// fields the student can see/edit, whether multimodal is on, etc. The
-// per-level AI call only writes the prompts and (for bot-builder) the
-// model card. Keeps the per-level prompt small and stops the model from
-// hallucinating UI choices the curriculum team rarely wants to vary.
-//
-// Field names mirror LevelAichatSettings. Anything not set here falls
-// through to the AI Chat lab's runtime defaults.
+// Presets fix every field except the prompts (systemPrompt +
+// levelSystemPrompt) and, for Bot Builder, the model card — those are
+// AI-generated per level. Fields mirror LevelAichatSettings;
+// responseJsonSchema is omitted because no shipped preset varies it.
 export interface AichatPreset {
   id: AichatPresetId;
   label: string;
   description: string;
-  // Default values the AI Chat lab seeds the student session with.
   defaults: {
     selectedModelId: LevelAichatSettings['initialCustomizations']['selectedModelId'];
     temperature: number;
   };
-  // Per-field visibility: hidden / readonly / editable. Visibility keys
-  // map 1:1 to AiCustomizations fields the LevelAichatSettings type
-  // demands; we omit `responseJsonSchema` because no shipped preset
-  // varies it.
   visibilities: {
     selectedModelId: Visibility;
     temperature: Visibility;
@@ -43,12 +33,8 @@ export interface AichatPreset {
     retrievalContexts: Visibility;
     modelCardInfo: Visibility;
   };
-  // Lab-level flags. Some presets hide the presentation panel; multimodal
-  // is opt-in because it requires every available model to support it.
   hidePresentationPanel: boolean;
   multimodalEnabled: boolean;
-  // Which model card the lab will let the student edit. Only Bot Builder
-  // exposes the modelCardInfo controls; the others leave it empty.
   promptForModelCard: boolean;
 }
 
@@ -172,8 +158,6 @@ export const AICHAT_PRESETS: Record<AichatPresetId, AichatPreset> = {
   },
 };
 
-// Schema for the per-level AI call. The model writes only the prompts +
-// (for Bot Builder) the model card. Everything else lives on the preset.
 const baseAichatSchema = z.object({
   longInstructions: z
     .string()
@@ -224,14 +208,9 @@ const aichatPlanSchema = Output.object({
 export interface AichatGeneration {
   longInstructions: string;
   aichatSettings: LevelAichatSettings;
-  // One-line summary the preceding-levels formatter uses so downstream
-  // levels can keep continuity (same persona, escalating challenges)
-  // without re-reading the full system prompt.
   summary: string;
 }
 
-// Build the final LevelAichatSettings record by combining the preset's
-// fixed knobs with the AI-generated prompts.
 function settingsFromPresetAndPlan(
   preset: AichatPreset,
   plan: {
@@ -271,8 +250,6 @@ function settingsFromPresetAndPlan(
     },
     visibilities: {
       ...preset.visibilities,
-      // responseJsonSchema isn't varied by any preset; mirror the lab's
-      // default of HIDDEN.
       responseJsonSchema: Visibility.HIDDEN,
     },
     levelSystemPrompt: plan.levelSystemPrompt,
@@ -372,9 +349,8 @@ export async function generateAichatLevel(
 
   const aichatSettings = settingsFromPresetAndPlan(preset, plan);
 
-  // One-line gist for the preceding-levels formatter. We deliberately
-  // don't pass the full system prompt forward — it's the persona, not
-  // a thing for the next level to imitate.
+  // Only a gist forward: the full system prompt is the persona itself,
+  // not something for the next level to imitate.
   const summary = `preset=${preset.id}; system="${plan.systemPrompt
     .replace(/\s+/g, ' ')
     .slice(0, 120)}…"`;

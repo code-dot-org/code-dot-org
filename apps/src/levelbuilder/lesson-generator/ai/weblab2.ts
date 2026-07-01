@@ -52,17 +52,10 @@ const weblabPlanSchema = Output.object({
 export interface Weblab2Generation {
   startSources: MultiFileSource;
   longInstructions: string;
-  // The raw file list as returned by the model, before it's wrapped into a
-  // MultiFileSource. Exposed so callers can include it in continuity
-  // context for later levels without re-parsing the wrapped form.
+  // Exposed for continuity-context reuse without re-parsing the MultiFileSource.
   files: {name: string; contents: string}[];
 }
 
-// Web Lab 2 stores its starter sources as a MultiFileSource, the same
-// structure produced by prepareSourceForLevelbuilderSave in the codebridge
-// editor. Alongside the starter files we produce a bullet-stub outline of
-// the level's `long_instructions` — the curriculum author writes the final
-// student-facing prose by hand later.
 export async function generateWeblab2Level(
   ctx: LevelContext
 ): Promise<Weblab2Generation> {
@@ -159,18 +152,9 @@ export async function generateWeblab2Level(
   };
 }
 
-// Wrap a flat list of {name, contents} into the MultiFileSource shape
-// the lab2 weblab2 view expects. Same logic the codebridge editor uses
-// when it saves: subfolders are expressed as forward-slash segments in
-// the file name, each segment becomes a folder record with a fresh
-// uuid, and exactly one file is marked active (top-level index.html
-// when present, else the first file).
-//
-// Shared between the starter pass and the exemplar pass. The starter
-// pass tags every file as STARTER so the lab knows they were given to
-// the student; the exemplar pass leaves type undefined so its files
-// read as plain solution source (matching what the codebridge editor
-// stores when a teacher saves an exemplar by hand).
+// fileType is STARTER for the starter pass and undefined for the exemplar
+// pass — matches what codebridge stores when a teacher writes an exemplar
+// by hand.
 export function filesToMultiFileSource(
   plan: {name: string; contents: string}[],
   fileType: ProjectFileType | undefined
@@ -229,9 +213,6 @@ export function filesToMultiFileSource(
   return {folders, files, openFiles: fileIds};
 }
 
-// Schema for the exemplar pass. Same shape as the starter file list,
-// without instructions — those belong to the student-facing pass and
-// are written once. The exemplar is teacher-only content.
 const weblabExemplarSchema = Output.object({
   schema: z.object({
     files: z
@@ -246,11 +227,8 @@ const weblabExemplarSchema = Output.object({
   }),
 });
 
-// Second AI pass: given the starter files we just wrote, produce a
-// working solution with the same file names. This is the exemplar the
-// teacher sees (gated by verified_instructor in summarize_for_lab2_properties);
-// students never see it. Failures must be non-fatal at the caller — the
-// student-facing level is already saved by the time we get here.
+// Callers must treat failures as non-fatal: the student-facing level is
+// already saved by the time this runs.
 export async function generateWeblab2Exemplar(
   ctx: LevelContext,
   starterFiles: {name: string; contents: string}[]
@@ -294,17 +272,10 @@ export async function generateWeblab2Exemplar(
   return filesToMultiFileSource(plan.files, undefined);
 }
 
-// ─── Template-group generation ───────────────────────────────────────
-//
-// A "template group" is a set of weblab2 levels that share starter
-// sources. The Rails Level model already supports this via the
-// project_template_level_name property — when set on a level, the lab
-// resolves templateSources from the named template level instead of the
-// level's own start_sources. The lesson generator wraps that mechanism:
-// it creates ONE template level per group and points every member at
-// it. The template never appears in the lesson activity tree; the
-// curriculum author edits it via its edit URL, surfaced in the Summary
-// dialog.
+// Template groups: multiple weblab2 members share one starter-source
+// level via project_template_level_name. The template sits outside the
+// activity tree; the curriculum author edits it via its edit URL,
+// surfaced in the Summary dialog.
 
 const weblabTemplateSchema = Output.object({
   schema: z.object({
@@ -321,18 +292,12 @@ const weblabTemplateSchema = Output.object({
 });
 
 export interface TemplateMember {
-  // The full level name (prefix + id) — used in the prompt only so the
-  // model can refer to members by name when reasoning about scope.
   name: string;
-  // The level description the curriculum author typed for this member.
   description: string;
 }
 
-// Generate the shared starter files for a group of weblab2 levels. The
-// model sees every member's description and is asked to produce files
-// that all of them build on, without solving any one member's task.
-// Returns the same shape generateWeblab2Level does (modulo
-// longInstructions, which doesn't apply at the template level).
+// Sees every member's description; produces files that all members
+// build on without solving any one member's task.
 export async function generateWeblab2Template(
   ctx: Omit<
     LevelContext,
@@ -424,10 +389,9 @@ const weblabTemplateLevelSchema = Output.object({
   }),
 });
 
-// Per-member instructions for a template-backed weblab2 level. The
-// model sees the shared template's files PLUS this member's description
-// and asks the student to do something on top of the template — does
-// NOT produce starter files (those came from the template pass).
+// Emits only long_instructions; the starter files come from the
+// template pass. Prompt shows both the template's files and this
+// member's description.
 export async function generateWeblab2TemplateBackedLevel(
   ctx: LevelContext,
   templateFiles: {name: string; contents: string}[]

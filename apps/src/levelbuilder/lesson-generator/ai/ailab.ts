@@ -13,11 +13,8 @@ import {
 
 import {AILAB_DATASETS} from './datasets';
 
-// Closed set of dynamic_instructions slots that the AI Lab UI looks up by
-// key. Slots map 1:1 to screens in the ML pipeline: pick a dataset, see
-// the data, pick features, train, evaluate, save. Anything not in this
-// list is dropped — the legacy editor's textarea is a JSON blob with the
-// exact same keys.
+// Closed set of dynamic_instructions slots the AI Lab UI reads. Any
+// key outside this set is dropped by the editor.
 const AILAB_STEP_KEYS = [
   'selectDataset',
   'uploadedDataset',
@@ -40,10 +37,6 @@ const datasetIdEnum = z.enum(
   AILAB_DATASETS.map(d => d.id) as unknown as [string, ...string[]]
 );
 
-// The mode JSON the AI Lab editor reads. Hide-toggles collapse the UI to
-// only the screens that matter for this level; the legacy editor renders
-// these as a JSON textarea, so we serialize back to a string at the save
-// boundary.
 const ailabModeSchema = z.object({
   datasetId: datasetIdEnum.describe(
     'The dataset the student trains on. Must be one of the listed ids.'
@@ -75,11 +68,6 @@ const ailabModeSchema = z.object({
     ),
 });
 
-// Stub instructions, like Web Lab 2 — bullet-point TODOs the curriculum
-// author flesh out by hand. Per-step text lives in dynamicInstructions,
-// keyed by screen. Only emit text for the screens this level actually
-// uses (i.e. not hidden); leave the rest as the empty string so the
-// stored JSON shape stays the canonical one.
 const ailabPlanSchema = Output.object({
   schema: z.object({
     longInstructions: z
@@ -116,10 +104,8 @@ export interface AilabGeneration {
   longInstructions: string;
   mode: string;
   dynamicInstructions: string;
-  // Plain-text rendering of which screens are enabled and which datasets the
-  // level uses. Surfaced in the per-level preceding-levels context so
-  // downstream levels can keep continuity (same dataset, escalating accuracy
-  // requirements, etc.) without re-parsing the serialized mode blob.
+  // For the preceding-levels formatter: dataset + enabled screens, so
+  // downstream levels can build continuity without re-parsing the mode blob.
   summary: string;
 }
 
@@ -127,11 +113,6 @@ const datasetList = AILAB_DATASETS.map(d => `  - ${d.id}: ${d.name}`).join(
   '\n'
 );
 
-// Single call: ask Claude for a stub instruction outline + the JSON mode
-// blob + per-screen stub text. The AI picks a dataset from a closed enum
-// of ids; we serialize mode and dynamicInstructions back into JSON
-// strings at the save boundary because that's the shape the legacy AI
-// Lab editor stores.
 export async function generateAilabLevel(
   ctx: LevelContext
 ): Promise<AilabGeneration> {
@@ -221,8 +202,8 @@ export async function generateAilabLevel(
     throw new Error('Model returned no instructions');
   }
 
-  // The AI Lab editor stores mode and dynamic_instructions as serialized
-  // JSON strings (the legacy textareas). Build the actual record the
+  // The AI Lab editor stores mode + dynamic_instructions as JSON
+  // strings; build the record then stringify at the save boundary.
   // editor would write — datasets is an array of one in nearly every
   // existing level — and stringify on the way out.
   const modeRecord: Record<string, unknown> = {
@@ -239,8 +220,6 @@ export async function generateAilabLevel(
     modeRecord.requireAccuracy = plan.mode.requireAccuracy;
   }
 
-  // List the visible screens so the preceding-levels formatter can drop
-  // a one-line summary into the context block.
   const visibleScreens = AILAB_STEP_KEYS.filter(
     key => (plan.dynamicInstructions[key] || '').trim() !== ''
   );
