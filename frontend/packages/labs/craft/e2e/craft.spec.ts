@@ -3,15 +3,11 @@
  * browser tests. Each test instantiates GameController with inline level data
  * via the Vite dev server harness (no Rails).
  *
- * Prerequisites:
- *   cd frontend/packages/labs/craft && yarn dev
- *
  * Run:
- *   npx playwright test tests/levels/craft.spec.ts
+ *   yarn test:ui                        (auto-starts dev server)
+ *   npx playwright test e2e/craft.spec.ts
  */
-import {expect, test} from '@playwright/test';
-
-import {gotoCraftHarness, isCraftDevServerUp} from '../pages/craft-lab';
+import {expect, test, type Page} from 'playwright/test';
 
 // Browser-side types for the craft test harness (window.__craftTest).
 // These describe the shape visible inside page.evaluate() callbacks.
@@ -92,20 +88,21 @@ interface CraftTestHarness {
   Position: CraftPositionClass;
 }
 
-test.beforeAll(async () => {
-  const up = await isCraftDevServerUp();
-  test.skip(
-    !up,
-    'Craft Vite dev server not running — start with: cd frontend/packages/labs/craft && yarn dev',
+async function gotoCraftHarness(page: Page): Promise<void> {
+  await page.goto('/test/integration-harness.html', {
+    waitUntil: 'domcontentloaded',
+  });
+  await page.waitForFunction(
+    () =>
+      (window as unknown as {__craftTest?: {ready: boolean}}).__craftTest
+        ?.ready,
+    {timeout: 30_000},
   );
-});
+}
 
 // These tests mutate shared game state per-page; run sequentially within each
 // group but allow groups to run in parallel across workers.
 test.describe.configure({mode: 'serial'});
-
-// Generous timeout — Phaser asset loading + game simulation can be slow.
-test.setTimeout(120_000);
 
 // ---------------------------------------------------------------------------
 // Adventurer
