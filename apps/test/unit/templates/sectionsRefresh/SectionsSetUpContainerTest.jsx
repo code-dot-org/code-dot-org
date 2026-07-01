@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import {render, screen, fireEvent, waitFor} from '@testing-library/react';
+import {render, screen, fireEvent, waitFor, act} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 
@@ -300,6 +300,57 @@ describe('SectionsSetUpContainer', () => {
       expect(screen.getByRole('checkbox', {name: 'K'})).toBeChecked();
       expect(screen.getByRole('checkbox', {name: '1'})).toBeChecked();
       expect(screen.getByRole('checkbox', {name: '11'})).not.toBeChecked();
+    });
+
+    it('applies gradesTeaching when Redux is populated after initial render', async () => {
+      // Render before gradesTeaching data has arrived (store starts empty).
+      renderContainer();
+      expect(screen.getByRole('checkbox', {name: '11'})).not.toBeChecked();
+      expect(screen.getByRole('checkbox', {name: '12'})).not.toBeChecked();
+
+      // Simulate async /api/v1/users/current response landing.
+      act(() => {
+        getStore().dispatch(
+          setInitialData({
+            id: 1,
+            grades_teaching: ['11', '12'],
+            user_type: 'teacher',
+          })
+        );
+      });
+
+      await waitFor(() => {
+        expect(screen.getByRole('checkbox', {name: '11'})).toBeChecked();
+        expect(screen.getByRole('checkbox', {name: '12'})).toBeChecked();
+        expect(screen.getByRole('checkbox', {name: 'K'})).not.toBeChecked();
+      });
+    });
+
+    it('does not overwrite grades the user changed before gradesTeaching arrived', async () => {
+      // Render before gradesTeaching data has arrived.
+      renderContainer();
+
+      // User explicitly selects grade '5'.
+      fireEvent.click(screen.getByRole('checkbox', {name: '5'}));
+      expect(screen.getByRole('checkbox', {name: '5'})).toBeChecked();
+
+      // gradesTeaching data arrives with different grades.
+      act(() => {
+        getStore().dispatch(
+          setInitialData({
+            id: 1,
+            grades_teaching: ['11', '12'],
+            user_type: 'teacher',
+          })
+        );
+      });
+
+      // User's selection is preserved; gradesTeaching is not applied.
+      await waitFor(() => {
+        expect(screen.getByRole('checkbox', {name: '5'})).toBeChecked();
+        expect(screen.getByRole('checkbox', {name: '11'})).not.toBeChecked();
+        expect(screen.getByRole('checkbox', {name: '12'})).not.toBeChecked();
+      });
     });
   });
 });
