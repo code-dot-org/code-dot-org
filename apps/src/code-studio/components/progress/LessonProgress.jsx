@@ -19,6 +19,7 @@ import experiments from '@cdo/apps/util/experiments';
 import {LevelKind, LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {canChangeLevelInPage} from '../../browserNavigation';
+import remeasureOnFontsReady from '../header/remeasureOnFontsReady';
 
 /**
  * Lesson progress component used in level header and course overview.
@@ -55,6 +56,13 @@ class LessonProgress extends Component {
 
   componentDidMount() {
     this.setDesiredWidth();
+    this.cancelFontRemeasure = remeasureOnFontsReady(() =>
+      this.setDesiredWidth()
+    );
+  }
+
+  componentWillUnmount() {
+    this.cancelFontRemeasure?.();
   }
 
   componentDidUpdate() {

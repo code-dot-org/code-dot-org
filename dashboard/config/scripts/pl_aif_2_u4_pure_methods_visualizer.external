@@ -27,15 +27,10 @@ When you run a function to filter that list, one of two things happens:
 
 ## Array State Vizualizer
 
->**How to use this visualizer:**
-> 1. Look at the code — notice the original array and the method being used.
-> 2. Try to predict: will the original array change, or stay the same?
-> 3. Press **Run this code** and compare the original array to the result.
-
 
 <div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
   <iframe 
-    src="https://amandadennard-dotcom.github.io/Unit4-pure-methods-vizualizer/array-state-visualizer.html"
+    src="https://amandadennard-dotcom.github.io/Unit4-pure-methods-vizualizer/array-state-visualizer2.html"
     width="100%" 
     height="920" 
     frameborder="0"

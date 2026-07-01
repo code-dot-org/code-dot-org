@@ -9,13 +9,21 @@ import {
 import type {ApiClient} from '../../client/createApiClient';
 import type {
   ContactDetails,
+  CreatePasswordParams,
   CurrentPermissions,
   CurrentUser,
+  DeleteUserParams,
   DonorTeacherBannerDetails,
   HasDismissedPersonalizationAlert,
   NetsimSignedIn,
   PostponeCensusBanner,
   SchoolName,
+  UpdateEmailParams,
+  UpdateParentEmailParams,
+  UpdatePasswordParams,
+  UpdateProfileParams,
+  UpdateUserTypeParams,
+  UserSettings,
 } from './users.types';
 import {usersKeys} from './users.keys';
 
@@ -354,6 +362,139 @@ export function useVerifyCaptcha(
   return useMutation({
     mutationFn: (params: {recaptchaResponse: string}) =>
       api.users.verifyCaptcha(params),
+    ...options,
+  });
+}
+
+// --- My Account settings ---
+
+export function useUserSettings(
+  api: ApiClient,
+  options?: Omit<UseQueryOptions<UserSettings>, 'queryKey' | 'queryFn'>,
+) {
+  return useQuery({
+    queryKey: usersKeys.settings(),
+    queryFn: ({signal}) => api.users.getSettings(signal),
+    ...options,
+  });
+}
+
+// Mutations that change the settings payload invalidate the read.
+function useSettingsMutation<TParams>(
+  mutationFn: (params: TParams) => Promise<void>,
+  options?: Omit<UseMutationOptions<void, Error, TParams>, 'mutationFn'>,
+) {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn,
+    onSuccess: () => {
+      queryClient.invalidateQueries({queryKey: usersKeys.settings()});
+    },
+    ...options,
+  });
+}
+
+export function useUpdateProfile(
+  api: ApiClient,
+  options?: Omit<
+    UseMutationOptions<void, Error, UpdateProfileParams>,
+    'mutationFn'
+  >,
+) {
+  return useSettingsMutation(
+    params => api.users.updateProfile(params),
+    options,
+  );
+}
+
+export function useUpdateEmail(
+  api: ApiClient,
+  options?: Omit<
+    UseMutationOptions<void, Error, UpdateEmailParams>,
+    'mutationFn'
+  >,
+) {
+  return useSettingsMutation(params => api.users.updateEmail(params), options);
+}
+
+export function useUpdatePassword(
+  api: ApiClient,
+  options?: Omit<
+    UseMutationOptions<void, Error, UpdatePasswordParams>,
+    'mutationFn'
+  >,
+) {
+  return useSettingsMutation(
+    params => api.users.updatePassword(params),
+    options,
+  );
+}
+
+export function useCreatePassword(
+  api: ApiClient,
+  options?: Omit<
+    UseMutationOptions<void, Error, CreatePasswordParams>,
+    'mutationFn'
+  >,
+) {
+  return useSettingsMutation(
+    params => api.users.createPassword(params),
+    options,
+  );
+}
+
+export function useUpdateUserType(
+  api: ApiClient,
+  options?: Omit<
+    UseMutationOptions<void, Error, UpdateUserTypeParams>,
+    'mutationFn'
+  >,
+) {
+  return useSettingsMutation(
+    params => api.users.updateUserType(params),
+    options,
+  );
+}
+
+export function useUpdateParentEmail(
+  api: ApiClient,
+  options?: Omit<
+    UseMutationOptions<void, Error, UpdateParentEmailParams>,
+    'mutationFn'
+  >,
+) {
+  return useSettingsMutation(
+    params => api.users.updateParentEmail(params),
+    options,
+  );
+}
+
+export function useRemoveParentEmail(
+  api: ApiClient,
+  options?: Omit<UseMutationOptions<void, Error, void>, 'mutationFn'>,
+) {
+  return useSettingsMutation(() => api.users.removeParentEmail(), options);
+}
+
+export function useDeleteUser(
+  api: ApiClient,
+  options?: Omit<
+    UseMutationOptions<void, Error, DeleteUserParams>,
+    'mutationFn'
+  >,
+) {
+  return useMutation({
+    mutationFn: (params: DeleteUserParams) => api.users.deleteUser(params),
+    ...options,
+  });
+}
+
+export function useSignOutOtherSessions(
+  api: ApiClient,
+  options?: Omit<UseMutationOptions<void, Error, void>, 'mutationFn'>,
+) {
+  return useMutation({
+    mutationFn: () => api.users.signOutOtherSessions(),
     ...options,
   });
 }

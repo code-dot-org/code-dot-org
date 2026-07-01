@@ -12,7 +12,8 @@ import React, {ChangeEvent, useRef} from 'react';
 export default function useHiddenFileInput(
   onChange: (event: ChangeEvent<HTMLInputElement>) => void,
   accept?: string,
-  multiple?: boolean
+  multiple?: boolean,
+  capture?: boolean | 'user' | 'environment'
 ) {
   const inputRef = useRef<HTMLInputElement>(null);
   const openFileInput = () => {
@@ -31,6 +32,7 @@ export default function useHiddenFileInput(
       onChange={onChange}
       accept={accept}
       multiple={multiple}
+      capture={capture}
       onClick={event => {
         event.stopPropagation();
       }}

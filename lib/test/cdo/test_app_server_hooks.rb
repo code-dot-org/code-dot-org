@@ -1,6 +1,7 @@
 require_relative '../test_helper'
 require 'cdo/app_server_hooks'
 require 'cdo/worker_memory_collector'
+require 'cdo/process_memory'
 require 'cdo/statsig'
 
 class AppServerHooksTest < Minitest::Test
@@ -93,5 +94,75 @@ class AppServerHooksTest < Minitest::Test
     Cdo::WorkerMemoryCollector.expects(:new).never
 
     Cdo::AppServerHooks.before_worker_boot(host: 'test.example.net', worker_index: 0)
+  end
+
+  def test_prefork_memory_metric_published_with_host_only
+    DCDO.stubs(:get).with('worker_memory_metrics', {}).returns({'interval_seconds' => 120})
+    Cdo::ProcessMemory.stubs(:snapshot_kb).returns(proc_vm_rss_kb: 1_800_000)
+
+    Cdo::Metrics.expects(:put).with('App Server', 'PreforkRssKb', 1_800_000, {Host: 'test.example.net'})
+
+    Cdo::AppServerHooks.send(:publish_prefork_memory_metric)
+  end
+
+  def test_prefork_memory_metric_includes_instance_id_when_per_instance
+    DCDO.stubs(:get).with('worker_memory_metrics', {}).returns({'interval_seconds' => 60, 'per_instance' => true})
+    AWS::EC2.stubs(:instance_id).returns('i-abc123')
+    Cdo::ProcessMemory.stubs(:snapshot_kb).returns(proc_vm_rss_kb: 1_800_000)
+
+    Cdo::Metrics.expects(:put).with(
+      'App Server', 'PreforkRssKb', 1_800_000, {Host: 'test.example.net', InstanceId: 'i-abc123'}
+    )
+
+    Cdo::AppServerHooks.send(:publish_prefork_memory_metric)
+  end
+
+  def test_prefork_memory_metric_omits_instance_id_when_imds_unavailable
+    DCDO.stubs(:get).with('worker_memory_metrics', {}).returns({'interval_seconds' => 60, 'per_instance' => true})
+    AWS::EC2.stubs(:instance_id).returns(nil)
+    Cdo::ProcessMemory.stubs(:snapshot_kb).returns(proc_vm_rss_kb: 1_800_000)
+
+    Cdo::Metrics.expects(:put).with('App Server', 'PreforkRssKb', 1_800_000, {Host: 'test.example.net'})
+
+    Cdo::AppServerHooks.send(:publish_prefork_memory_metric)
+  end
+
+  def test_prefork_memory_metric_not_published_when_interval_zero
+    DCDO.stubs(:get).with('worker_memory_metrics', {}).returns({'interval_seconds' => 0})
+
+    Cdo::Metrics.expects(:put).never
+
+    Cdo::AppServerHooks.send(:publish_prefork_memory_metric)
+  end
+
+  def test_prefork_memory_metric_not_published_in_development
+    CDO.stubs(:rack_env?).returns(false)
+    CDO.stubs(:test_system?).returns(false)
+    DCDO.stubs(:get).with('worker_memory_metrics', {}).returns({'interval_seconds' => 60})
+
+    Cdo::Metrics.expects(:put).never
+
+    Cdo::AppServerHooks.send(:publish_prefork_memory_metric)
+  end
+
+  def test_prefork_memory_metric_omits_value_when_rss_unavailable
+    DCDO.stubs(:get).with('worker_memory_metrics', {}).returns({'interval_seconds' => 60})
+    Cdo::ProcessMemory.stubs(:snapshot_kb).returns({})
+
+    Cdo::Metrics.expects(:put).never
+
+    Cdo::AppServerHooks.send(:publish_prefork_memory_metric)
+  end
+
+  def test_prefork_memory_metric_swallows_errors
+    DCDO.stubs(:get).with('worker_memory_metrics', {}).returns({'interval_seconds' => 60})
+    Cdo::ProcessMemory.stubs(:snapshot_kb).returns(proc_vm_rss_kb: 1_800_000)
+    Cdo::Metrics.stubs(:put).raises(StandardError, 'cloudwatch unreachable')
+
+    logger = mock('logger')
+    logger.expects(:warn).with(regexp_matches(/puma_prefork_memory_metric_failed/))
+    CDO.stubs(:log).returns(logger)
+
+    Cdo::AppServerHooks.send(:publish_prefork_memory_metric)
   end
 end

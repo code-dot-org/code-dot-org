@@ -14,8 +14,7 @@ import {
 } from './helpers/accuracy';
 import {isRegression, getColumnDataToSave} from './helpers/columnDetails';
 import {getDatasetDetails} from './helpers/datasetDetails';
-import {showInstructions, type InstructionsKey} from './helpers/instructions';
-import {reportPanelView} from './helpers/metrics';
+import {type InstructionsKey} from './helpers/instructions';
 import {
   uniqLabelFeaturesSelected,
   prevNextButtons,
@@ -68,6 +67,8 @@ export interface RootState {
   viewedPanels: string[];
   instructionsOverlayActive: boolean;
   instructionsEnabled: boolean;
+  instructionsKey: InstructionsKey | null;
+  showOverlay: boolean;
   resultsTab: string;
   mode?: Mode;
 }
@@ -115,6 +116,8 @@ export const initialState: RootState = {
   viewedPanels: [],
   instructionsOverlayActive: false,
   instructionsEnabled: false,
+  instructionsKey: null,
+  showOverlay: false,
   resultsTab: ResultsGrades.CORRECT,
 };
 
@@ -144,17 +147,10 @@ const ailabSlice = createSlice({
       ) {
         const {data, userUploadedData} = action.payload;
         if (state.currentPanel === 'selectDataset') {
-          // Reducer must stay pure: the consumer-supplied callback dispatches
-          // into its own redux store, which would interleave React commits
-          // (and a getState cascade) into this dispatch and trip the
-          // "getState() while reducer is executing" guard. Defer to a
-          // microtask so the dispatch fully unwinds before the callback fires.
-          queueMicrotask(() =>
-            showInstructions(
-              userUploadedData ? 'uploadedDataset' : 'selectedDataset',
-              null,
-            ),
-          );
+          state.instructionsKey = userUploadedData
+            ? 'uploadedDataset'
+            : 'selectedDataset';
+          state.showOverlay = false;
         }
         state.data = data;
       },
@@ -255,6 +251,7 @@ const ailabSlice = createSlice({
         ...initialState,
         mode: state.mode,
         reserveLocation: state.reserveLocation,
+        instructionsEnabled: state.instructionsEnabled,
       };
     },
     setTrainedModel(state, action: PayloadAction<KNN>) {
@@ -291,33 +288,21 @@ const ailabSlice = createSlice({
     },
     setCurrentPanel(state, action: PayloadAction<string>) {
       const currentPanel = action.payload;
-      reportPanelView(currentPanel);
+      // Show the overlay only on a panel's first visit, only when 
+      // instructions are enabled, and the mode doesn't suppress it.
       let showedOverlay = false;
-      // Only track overlay state / notify the consumer when an instructions
-      // callback is wired up. Without one there is no overlay to show or
-      // dismiss, so leaving instructionsOverlayActive false keeps panels (and
-      // their train/test animations) from being frozen on a flag that would
-      // never clear.
-      if (state.instructionsEnabled) {
-        const options: {showOverlay?: boolean} = {};
-        if (
-          !(state.mode && state.mode.hideInstructionsOverlay) &&
-          !state.viewedPanels.includes(currentPanel)
-        ) {
-          options.showOverlay = true;
-          state.viewedPanels.push(currentPanel);
-          showedOverlay = true;
-        }
-        // Deferred to a microtask — see the comment on the setImportedData
-        // reducer above for why the reducer must not synchronously fire a
-        // consumer callback that dispatches into another store.
-        queueMicrotask(() =>
-          showInstructions(currentPanel as InstructionsKey, options),
-        );
+      if (
+        state.instructionsEnabled &&
+        !(state.mode && state.mode.hideInstructionsOverlay) &&
+        !state.viewedPanels.includes(currentPanel)
+      ) {
+        state.viewedPanels.push(currentPanel);
+        showedOverlay = true;
       }
-
       state.currentPanel = currentPanel;
       state.instructionsOverlayActive = showedOverlay;
+      state.instructionsKey = currentPanel as InstructionsKey;
+      state.showOverlay = showedOverlay;
       if (currentPanel === 'dataDisplayLabel') {
         state.currentColumn = undefined;
         state.selectedFeatures = [];
@@ -346,25 +331,22 @@ const ailabSlice = createSlice({
       } else if (state.currentColumn === currentColumn) {
         // If column is selected, then deselect.
         if (state.currentPanel === 'dataDisplayFeatures') {
-          // Deferred — see setImportedData comment.
-          queueMicrotask(() => showInstructions('dataDisplayFeatures', null));
+          state.instructionsKey = 'dataDisplayFeatures';
+          state.showOverlay = false;
         }
         state.currentColumn = undefined;
       } else {
         if (state.currentPanel === 'dataDisplayFeatures') {
-          // Deferred — see setImportedData comment.
           if (
             state.columnsByDataType[currentColumn] === ColumnTypes.NUMERICAL
           ) {
-            queueMicrotask(() =>
-              showInstructions('selectedFeatureNumerical', null),
-            );
+            state.instructionsKey = 'selectedFeatureNumerical';
+            state.showOverlay = false;
           } else if (
             state.columnsByDataType[currentColumn] === ColumnTypes.CATEGORICAL
           ) {
-            queueMicrotask(() =>
-              showInstructions('selectedFeatureCategorical', null),
-            );
+            state.instructionsKey = 'selectedFeatureCategorical';
+            state.showOverlay = false;
           }
         }
         // Select the column.
@@ -428,10 +410,8 @@ const ailabSlice = createSlice({
       },
     },
     setShowResultsDetails(state, action: PayloadAction<boolean>) {
-      // Deferred — see setImportedData comment.
-      queueMicrotask(() =>
-        showInstructions(action.payload ? 'resultsDetails' : 'results', null),
-      );
+      state.instructionsKey = action.payload ? 'resultsDetails' : 'results';
+      state.showOverlay = false;
       state.showResultsDetails = action.payload;
     },
     setKValue(state, action: PayloadAction<number>) {

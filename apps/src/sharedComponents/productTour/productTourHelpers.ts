@@ -124,6 +124,9 @@ export const createQuizWhenHandlers = (
 
         if (target.dataset.answer === 'correct') {
           target.classList.add('quiz-option-correct');
+          target.textContent = `✓ ${
+            target.dataset.originalText ?? target.textContent?.trim() ?? ''
+          }`;
           allOptions.forEach(btn => {
             btn.disabled = true;
           });

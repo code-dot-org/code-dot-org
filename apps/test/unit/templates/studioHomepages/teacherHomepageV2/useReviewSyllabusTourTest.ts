@@ -10,6 +10,7 @@ import {
   stubRedux,
 } from '@cdo/apps/redux';
 import {createShepherdTour} from '@cdo/apps/sharedComponents/productTour/shepherdTourFactory';
+import {COURSE_HEADER_STEP_ID} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/reviewSyllabusOnboarding';
 import useReviewSyllabusTour, {
   resumeReviewSyllabusOnboardingTour,
   recordViewSyllabusCompletion,
@@ -117,7 +118,7 @@ describe('resumeReviewSyllabusOnboardingTour', () => {
 
   it('does nothing when step ID is present but demoType is missing', () => {
     mockTryGetSessionStorage
-      .mockReturnValueOnce('unit-breadcrumb-step') // step key
+      .mockReturnValueOnce(COURSE_HEADER_STEP_ID) // step key
       .mockReturnValueOnce(''); // demo type key
     resumeReviewSyllabusOnboardingTour();
     expect(mockCreateShepherdTour).not.toHaveBeenCalled();
@@ -125,7 +126,7 @@ describe('resumeReviewSyllabusOnboardingTour', () => {
 
   it('clears the step key and does not show when no steps are built for the demoType', () => {
     mockTryGetSessionStorage
-      .mockReturnValueOnce('unit-breadcrumb-step')
+      .mockReturnValueOnce(COURSE_HEADER_STEP_ID)
       .mockReturnValueOnce('unknown' as 'high'); // unrecognized demoType — hits default case, returns []
 
     resumeReviewSyllabusOnboardingTour();
@@ -138,7 +139,7 @@ describe('resumeReviewSyllabusOnboardingTour', () => {
   });
 
   it('builds a tour and shows the saved step when both keys are present', () => {
-    const savedStepId = 'unit-breadcrumb-step';
+    const savedStepId = COURSE_HEADER_STEP_ID;
     (mockTour.steps as {id: string}[]).push({id: savedStepId});
 
     mockTryGetSessionStorage
@@ -152,7 +153,7 @@ describe('resumeReviewSyllabusOnboardingTour', () => {
   });
 
   it('falls back to the first step when the saved step ID is not found', () => {
-    (mockTour.steps as {id: string}[]).push({id: 'unit-breadcrumb-step'});
+    (mockTour.steps as {id: string}[]).push({id: COURSE_HEADER_STEP_ID});
 
     mockTryGetSessionStorage
       .mockReturnValueOnce('nonexistent-step-id')
@@ -160,11 +161,11 @@ describe('resumeReviewSyllabusOnboardingTour', () => {
 
     resumeReviewSyllabusOnboardingTour();
 
-    expect(mockTour.show).toHaveBeenCalledWith('unit-breadcrumb-step');
+    expect(mockTour.show).toHaveBeenCalledWith(COURSE_HEADER_STEP_ID);
   });
 
   it('clears sessionStorage and records completion on complete', () => {
-    const savedStepId = 'unit-breadcrumb-step';
+    const savedStepId = COURSE_HEADER_STEP_ID;
     (mockTour.steps as {id: string}[]).push({id: savedStepId});
 
     mockTryGetSessionStorage
@@ -191,7 +192,7 @@ describe('resumeReviewSyllabusOnboardingTour', () => {
   });
 
   it('clears sessionStorage but does not record completion on cancel', () => {
-    const savedStepId = 'unit-breadcrumb-step';
+    const savedStepId = COURSE_HEADER_STEP_ID;
     (mockTour.steps as {id: string}[]).push({id: savedStepId});
 
     mockTryGetSessionStorage

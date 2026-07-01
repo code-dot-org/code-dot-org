@@ -10,6 +10,7 @@ import {
   SetConfigFunction,
   OnRunFunction,
   SendConsoleInputFunction,
+  SendTypedInputMessageFunction,
   CodebridgeLevelProperties,
   ProjectPickerSettings,
   LayoutProps,
@@ -46,6 +47,7 @@ type CodebridgeProps = {
   onRun?: OnRunFunction;
   onStop?: () => void;
   sendConsoleInput?: SendConsoleInputFunction;
+  sendTypedInputMessage?: SendTypedInputMessageFunction;
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
   hiddenContextCallback?: () => Promise<string>;
@@ -70,6 +72,7 @@ export const Codebridge = React.memo(
     onRun,
     onStop,
     sendConsoleInput,
+    sendTypedInputMessage,
     levelProperties,
     projectPickerSettings,
     hiddenContextCallback,
@@ -226,6 +229,7 @@ export const Codebridge = React.memo(
           onRun,
           onStop,
           sendConsoleInput,
+          sendTypedInputMessage,
           levelProperties,
           projectPickerSettings,
           hiddenContextCallback,

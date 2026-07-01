@@ -11,6 +11,8 @@ import reducer, {
   setPrediction,
   setMode,
   setReserveLocation,
+  setShowResultsDetails,
+  setImportedData,
   resetState,
 } from '../../src/redux';
 
@@ -117,6 +119,52 @@ describe('ailab reducer', () => {
       expect(next.reserveLocation).toBe('random');
       expect(next.selectedFeatures).toEqual([]);
       expect(next.currentPanel).toBe('selectDataset');
+    });
+
+    test('preserves instructionsEnabled through reset', () => {
+      const enabled = reducer(initialState, setInstructionsEnabled(true));
+      const next = reducer(enabled, resetState());
+      expect(next.instructionsEnabled).toBe(true);
+    });
+  });
+
+  describe('instructionsKey selection', () => {
+    test('setCurrentPanel records the panel as the key; showOverlay tracks first visit', () => {
+      const enabled = reducer(initialState, setInstructionsEnabled(true));
+      const first = reducer(enabled, setCurrentPanel('trainModel'));
+      expect(first.instructionsKey).toBe('trainModel');
+      expect(first.showOverlay).toBe(true);
+      const second = reducer(first, setCurrentPanel('trainModel'));
+      expect(second.instructionsKey).toBe('trainModel');
+      expect(second.showOverlay).toBe(false);
+    });
+
+    test('setCurrentPanel sets showOverlay false when instructions are disabled', () => {
+      const next = reducer(initialState, setCurrentPanel('trainModel'));
+      expect(next.instructionsKey).toBe('trainModel');
+      expect(next.showOverlay).toBe(false);
+    });
+
+    test('selecting a numerical feature records selectedFeatureNumerical', () => {
+      let state = reducer(initialState, setColumnsByDataType('a', ColumnTypes.NUMERICAL));
+      state = reducer(state, setCurrentPanel('dataDisplayFeatures'));
+      const next = reducer(state, setCurrentColumn('a'));
+      expect(next.instructionsKey).toBe('selectedFeatureNumerical');
+      expect(next.showOverlay).toBe(false);
+    });
+
+    test('the results-details toggle records resultsDetails / results', () => {
+      const open = reducer(initialState, setShowResultsDetails(true));
+      expect(open.instructionsKey).toBe('resultsDetails');
+      const closed = reducer(open, setShowResultsDetails(false));
+      expect(closed.instructionsKey).toBe('results');
+    });
+
+    test('importing a dataset records uploaded vs selected', () => {
+      const uploaded = reducer(initialState, setImportedData([], true));
+      expect(uploaded.instructionsKey).toBe('uploadedDataset');
+      const selected = reducer(initialState, setImportedData([], false));
+      expect(selected.instructionsKey).toBe('selectedDataset');
     });
   });
 });

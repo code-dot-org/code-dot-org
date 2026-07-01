@@ -10330,6 +10330,8 @@ en:
               name: Edit modes
             lesson-26:
               name: Lesson 3 exploration
+            lesson-27:
+              name: Generate lesson with AI and project
           lesson_groups:
             lessonGroup-2:
               display_name: Cyber
@@ -10351,6 +10353,8 @@ en:
               display_name: CSD 2.0
             lessonGroup-11:
               display_name: Web Lab 2
+            lessonGroup-12:
+              display_name: 'Levelbuilder: generate w/AI'
           name: angelina-playground
           title: Angelina's Place To Do Stuff
           description_audience: ''
@@ -29418,6 +29422,69 @@ en:
           lesson_groups: {}
           name: iste-2026
           title: Inside a CodeAI Classroom
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        aif1-india-2025:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Pre-Assessment
+            lessonGroup-4:
+              display_name: Content
+            lessonGroup-5:
+              display_name: End of Unit Project
+            lessonGroup-2:
+              display_name: End of Unit Assessment and Survey
+          title: Problem Solving with AI
+          description: |-
+            As AI becomes increasingly integrated into daily life, students need to move beyond simply using AI tools—they must develop the skills to critically evaluate, refine, and apply AI-generated content in responsible ways. This unit introduces students to AI as a collaborator in analytical and creative work, helping them explore where AI succeeds, where it fails, and how human oversight improves AI-driven problem solving.
+
+            This unit blends hands-on AI experimentation with critical evaluation and refinement, guiding students through an iterative cycle of testing, analyzing, and improving AI-generated outputs. Instead of passively accepting AI responses, students will actively investigate AI's reasoning, challenge its assumptions, and refine its outputs through computational thinking and ethical frameworks.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Investigate how AI generates responses, using neural networks, transformers, and probabilistic models.
+            - Critically evaluate AI-generated outputs, identifying bias, misinformation, and hallucinations.
+            - Refine AI-generated content through prompt engineering and debugging techniques.
+            - Explore AI's role in creativity, forecasting, and decision-making, balancing its strengths with ethical considerations.
+            - Design and test AI-assisted solutions to real-world challenges, ensuring that AI is used responsibly and with human oversight.
+            :::
+            &nbsp;
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/aif_post_unit_survey?survey_data[unit_number]=unit_1) to let the Code.org curriculum team know how the unit went.
+          student_description: |-
+            AI is becoming a bigger part of everyday life—from helping write emails to suggesting music and planning trips. But using AI isn't just about typing in a prompt and accepting the answer. In this unit, you learn how to work with AI as a creative and problem-solving partner. You explore what AI does well, where it struggles, and how your thinking and choices can improve its results.
+
+            Through hands-on activities, you experiment with AI tools, test different inputs, and learn how to refine and evaluate what AI creates. You ask questions, spot mistakes, and use problem-solving strategies to make AI’s responses better and more useful. Instead of just using AI, you learn how to think critically about it—and how to use it responsibly.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you'll be able to . . .**]
+            - Investigate how AI generates responses, using neural networks, transformers, and probabilistic models.
+            - Critically evaluate AI-generated outputs, identifying bias, misinformation, and hallucinations.
+            - Refine AI-generated content through prompt engineering and debugging techniques.
+            - Explore AI's role in creativity, forecasting, and decision-making, balancing its strengths with ethical considerations.
+            - Design and test AI-assisted solutions to real-world challenges, ensuring that AI is used responsibly and with human oversight.
+            :::
+            &nbsp;
+          description_short: ''
+          description_audience: ''
+        sample-aid-sc2-unit-generation:
+          lessons: {}
+          lesson_groups: {}
+          name: sample-aid-sc2-unit-generation
+          title: sample-aid-sc2-unit-generation
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        ai-history:
+          lessons:
+            lesson-1:
+              name: Lesson 1
+            lesson-2:
+              name: Lesson 2
+          lesson_groups: {}
+          name: ai-history
+          title: "[DEV] AI History"
           description_audience: ''
           description_short: ''
           description: ''

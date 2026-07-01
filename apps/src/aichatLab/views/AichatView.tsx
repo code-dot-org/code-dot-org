@@ -38,6 +38,7 @@ import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetr
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {LabProps} from '@cdo/apps/lab2/types';
+import PairingNavigatorAlert from '@cdo/apps/lab2/views/alerts/pairingNavigator';
 import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import ResourcePanel, {
@@ -385,6 +386,10 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
             </div>
           )}
           {teacherViewingStudent && <TeacherViewingStudentProjectAlert />}
+          <PairingNavigatorAlert
+            isTeacherViewingStudent={teacherViewingStudent}
+            doesAppTypeHaveStandaloneProjectLevel={false}
+          />
           <div className={moduleStyles.labCoreContainer}>
             {viewMode === ViewMode.EDIT && (
               <>
