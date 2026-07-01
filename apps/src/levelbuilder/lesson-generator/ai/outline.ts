@@ -37,7 +37,7 @@ const sublevelSchema = z.object({
       'Short kebab-case identifier unique within the bubble choice parent, e.g. "art" or "music". No prefix; that is added separately.'
     ),
   labType: sublevelLabTypeEnum.describe(
-    'One of "panels", "weblab2", "ailab", "aichat". Nested bubbleChoice is not allowed, and multi/match make poor bubble-choice options.'
+    'One of "panels", "weblab2", "ailab", "aichat", "sketchlab". Nested bubbleChoice is not allowed, and multi/match make poor bubble-choice options.'
   ),
   description: z
     .string()
@@ -62,7 +62,7 @@ const lessonOutlineSchema = Output.object({
               'Short kebab-case identifier unique within the lesson, e.g. "intro-1" or "build-form". No prefix; that is added separately.'
             ),
           labType: supportedLabTypeEnum.describe(
-            '"panels" for narrative / explanation panels with overlay text on illustrations. "weblab2" for hands-on HTML/CSS/JS coding levels. "ailab" for guided machine-learning levels where the student picks a dataset, picks features, trains a model, and inspects the result. "aichat" for chat-with-an-LLM levels (set `aichatPreset` to pick which preset to use).'
+            '"panels" for narrative / explanation panels with overlay text on illustrations. "weblab2" for hands-on HTML/CSS/JS coding levels. "ailab" for guided machine-learning levels where the student picks a dataset, picks features, trains a model, and inspects the result. "aichat" for chat-with-an-LLM levels (set `aichatPreset` to pick which preset to use). "sketchlab" for open-ended drawing / annotation levels on a blank canvas.'
           ),
           description: z
             .string()
@@ -136,6 +136,11 @@ export async function generateLessonOutline(
     '    skill-guiding bot, "evaluation" for a bot that evaluates the',
     '    student\'s work, "domainExpert" for a subject-constrained bot,',
     '    "botBuilder" when the student designs their own bot.',
+    '  - Sketchlab: an open-ended drawing / annotation level on a blank',
+    '    canvas. Use for diagramming, marking-up, or free-form visual',
+    '    reflection. Content will be a STUB: only the instructions are',
+    '    generated, the sketch canvas itself is left blank for the',
+    '    student to draw.',
     '  - Multi: a multiple-choice question. Use as a quick check-for-',
     '    understanding after a concept has been introduced. Content will',
     '    be a STUB the curriculum author rewrites.',
@@ -146,15 +151,16 @@ export async function generateLessonOutline(
     '    parallel options (e.g. "pick a project theme") rather than a',
     '    single linear step. REQUIRED: emit a `sublevels` array with 2-6',
     '    entries in the order the student sees them. Sublevel labType is',
-    '    limited to panels/weblab2/ailab/aichat.',
+    '    limited to panels/weblab2/ailab/aichat/sketchlab.',
     '',
     'Choose Panels for explanation/narrative, Weblab2 for web-coding',
     'practice, Ailab for ML pipeline practice, Aichat for talking-to-AI',
-    'practice, Multi/Match for short formative assessments, and BubbleChoice',
-    'when the lesson benefits from student choice. A typical lesson',
-    'alternates: Panels intro -> practice -> assessment -> Panels reflection,',
-    'but you can deviate when the outline asks. Never open with an',
-    'assessment — pair it with a concept the student has already seen.',
+    'practice, Sketchlab for drawing / annotation exercises, Multi/Match',
+    'for short formative assessments, and BubbleChoice when the lesson',
+    'benefits from student choice. A typical lesson alternates: Panels',
+    'intro -> practice -> assessment -> Panels reflection, but you can',
+    'deviate when the outline asks. Never open with an assessment — pair',
+    'it with a concept the student has already seen.',
     '',
     'For each level, return:',
     '  - id: a short kebab-case identifier (e.g. "intro-1", "build-form")',

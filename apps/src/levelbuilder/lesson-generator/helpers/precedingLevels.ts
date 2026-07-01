@@ -5,6 +5,7 @@ import {AichatGeneration} from '../ai/aichat';
 import {AilabGeneration} from '../ai/ailab';
 import {MatchGeneration, MultiGeneration} from '../ai/assessments';
 import {BubbleChoiceGeneration} from '../ai/bubbleChoice';
+import {SketchlabGeneration} from '../ai/sketchlab';
 import {Weblab2Generation} from '../ai/weblab2';
 import {LabType} from '../types';
 
@@ -15,6 +16,7 @@ export interface PriorOutputByLab {
   weblab2: Weblab2Generation;
   ailab: AilabGeneration;
   aichat: AichatGeneration;
+  sketchlab: SketchlabGeneration;
   multi: MultiGeneration;
   match: MatchGeneration;
   bubbleChoice: BubbleChoiceGeneration;
@@ -108,6 +110,12 @@ export function priorOutputFromLevelProperties(
         }"`,
       },
     };
+  }
+  if (labType === 'sketchlab') {
+    const longInstructions =
+      (props as {longInstructions?: string}).longInstructions || '';
+    if (!longInstructions) return undefined;
+    return {sketchlab: {longInstructions}};
   }
   if (labType === 'ailab') {
     // Read mode + dynamic_instructions defensively — both round-trip
@@ -251,6 +259,14 @@ export function formatPrecedingLevels(entries: PriorEntry[]): string {
       // Surface just the parent's summary so downstream levels know
       // the student was offered a choice here.
       lines.push(`  ${e.output.bubbleChoice.summary}`);
+    }
+    if (e.output?.sketchlab) {
+      // The sketch canvas is intentionally blank; only the instructions
+      // are worth propagating.
+      lines.push('  Instructions:');
+      for (const line of e.output.sketchlab.longInstructions.split('\n')) {
+        lines.push(`    ${line}`);
+      }
     }
     if (e.output?.aichat) {
       // aichat: a one-line summary of the bot's persona. The full

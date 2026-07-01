@@ -8,6 +8,7 @@ export const SUPPORTED_LAB_TYPES = [
   'weblab2',
   'ailab',
   'aichat',
+  'sketchlab',
   'multi',
   'match',
   'bubbleChoice',
@@ -23,6 +24,7 @@ export const RAILS_TYPE_BY_LAB: Record<LabType, string> = {
   weblab2: 'Weblab2',
   ailab: 'Ailab',
   aichat: 'Aichat',
+  sketchlab: 'Sketchlab',
   multi: 'Multi',
   match: 'Match',
   bubbleChoice: 'BubbleChoice',
@@ -48,6 +50,7 @@ export const BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES: readonly LabType[] = [
   'weblab2',
   'ailab',
   'aichat',
+  'sketchlab',
 ];
 
 const LAB_TYPE_BY_RAILS: Record<string, LabType> = Object.fromEntries(

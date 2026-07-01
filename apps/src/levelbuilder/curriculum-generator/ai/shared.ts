@@ -15,6 +15,7 @@ export const PROMPT_TAGS = {
   WEBLAB2_TEMPLATE_LEVEL: 'lesson-gen/weblab2-template-level',
   AILAB_PLAN: 'lesson-gen/ailab-plan',
   AICHAT_PLAN: 'lesson-gen/aichat-plan',
+  SKETCHLAB_PLAN: 'lesson-gen/sketchlab-plan',
   MULTI_PLAN: 'lesson-gen/multi-plan',
   MATCH_PLAN: 'lesson-gen/match-plan',
   BUBBLE_CHOICE_PLAN: 'lesson-gen/bubble-choice-plan',

@@ -25,6 +25,7 @@ import {
 } from './ai/bubbleChoice';
 import {generateLessonOutline} from './ai/outline';
 import {generatePanelsForLevel} from './ai/panels';
+import {generateSketchlabLevel} from './ai/sketchlab';
 import {
   generateWeblab2Exemplar,
   generateWeblab2Level,
@@ -73,6 +74,7 @@ const LAB_LABELS = {
   weblab2: 'Web Lab 2',
   ailab: 'AI Lab',
   aichat: 'AI Chat',
+  sketchlab: 'Sketch Lab',
   multi: 'Multiple Choice',
   match: 'Matching',
   bubbleChoice: 'Bubble Choice',
@@ -432,6 +434,14 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           'aichat_settings',
           JSON.stringify(result.aichatSettings)
         );
+        await updateLevelProperty(
+          subLevelId,
+          'long_instructions',
+          result.longInstructions
+        );
+      } else if (sub.labType === 'sketchlab') {
+        const result = await generateSketchlabLevel(subCtx);
+        log(`Saving instructions for sublevel "${subName}"…`);
         await updateLevelProperty(
           subLevelId,
           'long_instructions',
@@ -857,6 +867,16 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
               result.longInstructions
             );
             generatedOutput = {aichat: result};
+          } else if (spec.labType === 'sketchlab') {
+            const result = await generateSketchlabLevel(levelCtx);
+            setStage('saving-properties');
+            appendLog(`Saving instructions for "${levelName}"…`);
+            await updateLevelProperty(
+              level.id,
+              'long_instructions',
+              result.longInstructions
+            );
+            generatedOutput = {sketchlab: result};
           } else if (spec.labType === 'multi' && multiResult) {
             // The DSL was either saved as part of the create POST above
             // (fresh level) or PATCHed in the level.reused branch right
