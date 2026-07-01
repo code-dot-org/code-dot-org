@@ -1,4 +1,3 @@
-module.exports = {};
 
 /**
  * Creates a new event in a cross-browswer-compatible way.
@@ -12,7 +11,7 @@ module.exports = {};
  * @param {boolean} [bubbles=false]
  * @param {boolean} [cancelable=false]
  */
-module.exports.createEvent = function createEvent(type, bubbles = false, cancelable = false) {
+export function createEvent(type, bubbles = false, cancelable = false) {
   var customEvent;
   try {
     customEvent = new Event(type, { bubbles, cancelable });
@@ -23,7 +22,7 @@ module.exports.createEvent = function createEvent(type, bubbles = false, cancela
   return customEvent;
 };
 
-module.exports.bisect = function bisect(array, conditional) {
+export function bisect(array, conditional) {
   const positive = array.filter(x => conditional(x));
   const negative = array.filter(x => !conditional(x));
   return [positive, negative];

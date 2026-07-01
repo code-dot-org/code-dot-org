@@ -1,5 +1,5 @@
-const BaseEntity = require("./BaseEntity.js");
-module.exports = class Chicken extends BaseEntity {
+import BaseEntity from './BaseEntity';
+export default class Chicken extends BaseEntity {
     constructor(controller, type, identifier, x, y, facing) {
         super(controller, type, identifier, x, y, facing);
         this.offset = [-25, -32];

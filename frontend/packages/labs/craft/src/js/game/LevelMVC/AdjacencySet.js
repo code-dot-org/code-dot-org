@@ -1,11 +1,11 @@
-const Position = require("./Position");
+import Position from './Position';
 
 /**
  * Group an array of positions into sets of connected positions. Default
  * definition of "connected" is "orthogonally adjacent", but that can be
  * overridden.
  */
-module.exports = class AdjacencySet {
+export default class AdjacencySet {
   /**
    * @param {Position[]} positions
    * @param {Function} [comparisonFunction = Position.isAdjacent]

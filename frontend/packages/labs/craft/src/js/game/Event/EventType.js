@@ -1,4 +1,4 @@
-module.exports = Object.freeze({
+export default Object.freeze({
   WhenTouched : 0,
   WhenUsed : 1,
   WhenSpawned : 2,

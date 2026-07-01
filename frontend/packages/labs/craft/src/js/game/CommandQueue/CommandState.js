@@ -1,4 +1,4 @@
-module.exports = Object.freeze({
+export default Object.freeze({
   NOT_STARTED: 0,
   WORKING: 1,
   SUCCESS: 2,

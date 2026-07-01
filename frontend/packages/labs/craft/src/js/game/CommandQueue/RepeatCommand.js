@@ -1,6 +1,6 @@
-const BaseCommand = require("./BaseCommand.js");
+import BaseCommand from './BaseCommand';
 
-module.exports = class RepeatCommand extends BaseCommand {
+export default class RepeatCommand extends BaseCommand {
   constructor(gameController, highlightCallback, actionCallback, iteration, targetEntity) {
     super(gameController, highlightCallback, targetEntity);
     this.actionCallback = actionCallback;

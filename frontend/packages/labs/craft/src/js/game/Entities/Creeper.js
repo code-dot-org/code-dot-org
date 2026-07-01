@@ -1,5 +1,5 @@
-const BaseEntity = require("./BaseEntity.js");
-module.exports = class Creeper extends BaseEntity {
+import BaseEntity from './BaseEntity';
+export default class Creeper extends BaseEntity {
     constructor(controller, type, identifier, x, y, facing) {
         super(controller, type, identifier, x, y, facing);
         this.offset = [-43, -55];

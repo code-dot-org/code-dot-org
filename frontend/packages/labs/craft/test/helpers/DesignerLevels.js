@@ -8,7 +8,7 @@ const houseActionPlane = ["grass", "grass", "bricks", "", "", "", "bricks", "gra
 
 const fourChickens = [["chicken", 3, 3, 1], ["chicken", 6, 3, 1], ["chicken", 3, 6, 1], ["chicken", 6, 6, 1]];
 
-module.exports = {
+export default {
   designer01: {
     isEventLevel: true,
     groundPlane: baseGroundPlane,

@@ -1,7 +1,7 @@
-const BaseEntity = require("./BaseEntity");
-const FacingDirection = require("../LevelMVC/FacingDirection");
+import BaseEntity from './BaseEntity';
+import FacingDirection from '../LevelMVC/FacingDirection';
 
-module.exports = class Dolphin extends BaseEntity {
+export default class Dolphin extends BaseEntity {
   constructor(controller, type, identifier, x, y, facing) {
     super(controller, type, identifier, x, y, facing);
     this.offset = this.controller.levelModel.isUnderwater() ? [-8, -8] : [-40, 0];

@@ -1,5 +1,5 @@
-const BaseEntity = require("./BaseEntity.js");
-module.exports = class Zombie extends BaseEntity {
+import BaseEntity from './BaseEntity';
+export default class Zombie extends BaseEntity {
     constructor(controller, type, identifier, x, y, facing) {
         super(controller, type, identifier, x, y, facing);
         this.offset = [-43, -45];
@@ -170,7 +170,6 @@ module.exports = class Zombie extends BaseEntity {
         // set burn
         this.setBurn(this.controller.levelModel.isDaytime);
     }
-
 
     takeDamage(callbackCommand) {
         let levelView = this.controller.levelView;

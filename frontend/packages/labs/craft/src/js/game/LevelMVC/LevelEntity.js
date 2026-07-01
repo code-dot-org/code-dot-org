@@ -1,25 +1,25 @@
-const BaseEntity = require("../Entities/BaseEntity");
-const Sheep = require("../Entities/Sheep");
-const Zombie = require("../Entities/Zombie");
-const IronGolem = require("../Entities/IronGolem");
-const Creeper = require("../Entities/Creeper");
-const Cow = require("../Entities/Cow");
-const Chicken = require("../Entities/Chicken");
-const Dolphin = require("../Entities/Dolphin");
-const Cod = require("../Entities/Cod");
-const Salmon = require("../Entities/Salmon");
-const SeaTurtle = require("../Entities/SeaTurtle");
-const Squid = require("../Entities/Squid");
-const TropicalFish = require("../Entities/TropicalFish");
-const Ghast = require("../Entities/Ghast");
-const Boat = require("../Entities/Boat");
+import BaseEntity from '../Entities/BaseEntity';
+import Sheep from '../Entities/Sheep';
+import Zombie from '../Entities/Zombie';
+import IronGolem from '../Entities/IronGolem';
+import Creeper from '../Entities/Creeper';
+import Cow from '../Entities/Cow';
+import Chicken from '../Entities/Chicken';
+import Dolphin from '../Entities/Dolphin';
+import Cod from '../Entities/Cod';
+import Salmon from '../Entities/Salmon';
+import SeaTurtle from '../Entities/SeaTurtle';
+import Squid from '../Entities/Squid';
+import TropicalFish from '../Entities/TropicalFish';
+import Ghast from '../Entities/Ghast';
+import Boat from '../Entities/Boat';
 
-const Position = require("./Position");
+import Position from './Position';
 
 /**
  * Handling non-player entities inside of the level
  */
-module.exports = class LevelEntity {
+export default class LevelEntity {
   constructor(controller) {
     this.controller = controller;
     this.game = controller.game;

@@ -1,11 +1,11 @@
-const test = require('tape');
+import { describe, it, expect } from 'vitest';
 
-const LevelPlane = require('../../src/js/game/LevelMVC/LevelPlane');
-const LevelBlock = require('../../src/js/game/LevelMVC/LevelBlock');
-const FacingDirection = require('../../src/js/game/LevelMVC/FacingDirection');
-const Position = require('../../src/js/game/LevelMVC/Position');
+import LevelPlane from '../../src/js/game/LevelMVC/LevelPlane';
+import LevelBlock from '../../src/js/game/LevelMVC/LevelBlock';
+import FacingDirection from '../../src/js/game/LevelMVC/FacingDirection';
+import Position from '../../src/js/game/LevelMVC/Position';
 
-test('get blocks', t => {
+it('get blocks', () => {
   const data = [
     'grass', 'dirt', 'stone', 'sand',
     'water', 'lava', 'water', 'lava',
@@ -13,36 +13,35 @@ test('get blocks', t => {
   ];
   const plane = new LevelPlane(data, 4, 3, null, "actionPlane");
 
-  t.equal(plane.getBlockAt(new Position(0, 0)).blockType, 'grass');
-  t.equal(plane.getBlockAt(new Position(2, 1)).blockType, 'water');
-  t.equal(plane.getBlockAt(new Position(2, 2)).blockType, 'stone');
-  t.equal(plane.getBlockAt(new Position(1, 0)).blockType, 'dirt');
-  t.equal(plane.getBlockAt(new Position(-1, -1), undefined));
-  t.equal(plane.getBlockAt(new Position(4, 1)), undefined);
-  t.equal(plane.getBlockAt(new Position(2, 3)), undefined);
+  expect(plane.getBlockAt(new Position(0, 0)).blockType).toBe('grass');
+  expect(plane.getBlockAt(new Position(2, 1)).blockType).toBe('water');
+  expect(plane.getBlockAt(new Position(2, 2)).blockType).toBe('stone');
+  expect(plane.getBlockAt(new Position(1, 0)).blockType).toBe('dirt');
+  expect(plane.getBlockAt(new Position(-1, -1))).toBeUndefined();
+  expect(plane.getBlockAt(new Position(4, 1))).toBeUndefined();
+  expect(plane.getBlockAt(new Position(2, 3))).toBeUndefined();
 
-  t.deepEqual(plane.getOrthogonalBlocks(new Position(1, 1)), {
+  expect(plane.getOrthogonalBlocks(new Position(1, 1))).toEqual({
     north: {block: new LevelBlock('dirt'), relative: FacingDirection.South},
     south: {block: new LevelBlock('dirt'), relative: FacingDirection.North},
     east: {block: new LevelBlock('water'), relative: FacingDirection.West},
     west: {block: new LevelBlock('water'), relative: FacingDirection.East},
   });
 
-  t.deepEqual(plane.getOrthogonalBlocks(new Position(2, 0)), {
+  expect(plane.getOrthogonalBlocks(new Position(2, 0))).toEqual({
     north: {block: undefined, relative: FacingDirection.South},
     south: {block: new LevelBlock('water'), relative: FacingDirection.North},
     east: {block: new LevelBlock('sand'), relative: FacingDirection.West},
     west: {block: new LevelBlock('dirt'), relative: FacingDirection.East},
   });
 
-  t.deepEqual(plane.getOrthogonalBlocks(new Position(2, 3)), {
+  expect(plane.getOrthogonalBlocks(new Position(2, 3))).toEqual({
     north: {block: new LevelBlock('stone'), relative: FacingDirection.South},
     south: {block: undefined, relative: FacingDirection.North},
     east: {block: undefined, relative: FacingDirection.West},
     west: {block: undefined, relative: FacingDirection.East},
   });
 
-  t.end();
 });
 
 //   0 1 2 3 4 5
@@ -50,7 +49,7 @@ test('get blocks', t => {
 // 1   ┌─┤   │
 // 2 ──┼─┴──   │
 // 3   │     ──┘
-test('redstone wires', t => {
+it('redstone wires', () => {
   const data = new Array(24).fill('');
   const plane = new LevelPlane(data, 6, 4, null, "actionPlane");
 
@@ -78,7 +77,7 @@ test('redstone wires', t => {
     null,        'Vertical',  null,        null,        'Horizontal','UpLeft',
   ].map(wire => wire === null ? '' : `redstoneWire${wire}`);
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
   // Destroy a few wires.
   plane.setBlockAt(new Position(2, 1), new LevelBlock(''));
@@ -93,9 +92,8 @@ test('redstone wires', t => {
     null,        'Vertical',  null,        null,        '',           null,
   ].map(wire => wire === null ? '' : `redstoneWire${wire}`);
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
 // Before:              After:
@@ -106,7 +104,7 @@ test('redstone wires', t => {
 // ║   ║   ║            ║ ╚══   ══╗
 //           ║                    ║
 //
-test('rail connections: T-junctions', t => {
+it('rail connections: T-junctions', () => {
   const data = [
     'rails',  '',       'rails',  '',       '',       'rails',  '',
     '',       'rails',  '',       '',       '',       '',       'rails',
@@ -117,10 +115,10 @@ test('rail connections: T-junctions', t => {
   ];
   const plane = new LevelPlane(data, 7, 6, null, "actionPlane");
 
-  t.equal(plane.setBlockAt(new Position(1, 0), new LevelBlock('rails')).blockType, 'railsSouthEast');
-  t.equal(plane.setBlockAt(new Position(5, 1), new LevelBlock('rails')).blockType, 'railsSouthEast');
-  t.equal(plane.setBlockAt(new Position(1, 4), new LevelBlock('rails')).blockType, 'railsNorthEast');
-  t.equal(plane.setBlockAt(new Position(5, 4), new LevelBlock('rails')).blockType, 'railsSouthWest');
+  expect(plane.setBlockAt(new Position(1, 0), new LevelBlock('rails')).blockType).toBe('railsSouthEast');
+  expect(plane.setBlockAt(new Position(5, 1), new LevelBlock('rails')).blockType).toBe('railsSouthEast');
+  expect(plane.setBlockAt(new Position(1, 4), new LevelBlock('rails')).blockType).toBe('railsNorthEast');
+  expect(plane.setBlockAt(new Position(5, 4), new LevelBlock('rails')).blockType).toBe('railsSouthWest');
 
   const expected = [
     'rails',  'railsSE','railsW', '',       '',       'rails',  '',
@@ -133,9 +131,8 @@ test('rail connections: T-junctions', t => {
     return rail.replace('N', 'North').replace('S', 'South').replace('E', 'East').replace('W', 'West');
   });
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
 // Before:              After:
@@ -146,7 +143,7 @@ test('rail connections: T-junctions', t => {
 // ║   ║   ║            ═════   ═══
 //           ║                    ║
 //
-test('rail connections: unpowered T-junctions', t => {
+it('rail connections: unpowered T-junctions', () => {
   const data = [
     'rails',  '',       'rails',  '',       '',       'rails',  '',
     '',       'rails',  '',       '',       '',       '',       'rails',
@@ -157,10 +154,10 @@ test('rail connections: unpowered T-junctions', t => {
   ];
   const plane = new LevelPlane(data, 7, 6, null, "actionPlane");
 
-  t.equal(plane.setBlockAt(new Position(1, 0), new LevelBlock('railsUnpowered')).blockType, 'railsUnpoweredEastWest');
-  t.equal(plane.setBlockAt(new Position(5, 1), new LevelBlock('railsUnpowered')).blockType, 'railsUnpoweredEastWest');
-  t.equal(plane.setBlockAt(new Position(1, 4), new LevelBlock('railsUnpowered')).blockType, 'railsUnpoweredEastWest');
-  t.equal(plane.setBlockAt(new Position(5, 4), new LevelBlock('railsUnpowered')).blockType, 'railsUnpoweredEastWest');
+  expect(plane.setBlockAt(new Position(1, 0), new LevelBlock('railsUnpowered')).blockType).toBe('railsUnpoweredEastWest');
+  expect(plane.setBlockAt(new Position(5, 1), new LevelBlock('railsUnpowered')).blockType).toBe('railsUnpoweredEastWest');
+  expect(plane.setBlockAt(new Position(1, 4), new LevelBlock('railsUnpowered')).blockType).toBe('railsUnpoweredEastWest');
+  expect(plane.setBlockAt(new Position(5, 4), new LevelBlock('railsUnpowered')).blockType).toBe('railsUnpoweredEastWest');
 
   const expected = [
     'railsE',  'railsUEW','railsW',  '',        '',        'rails',   '',
@@ -173,9 +170,8 @@ test('rail connections: unpowered T-junctions', t => {
     return rail.replace('U', 'Unpowered').replace('N', 'North').replace('S', 'South').replace('E', 'East').replace('W', 'West');
   });
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
 // Place four tracks in a circle.
@@ -183,23 +179,22 @@ test('rail connections: unpowered T-junctions', t => {
 //   ║     ═══    ╔══    ╔═╗
 //                ║      ╚═╝
 //
-test('rail connections: 2x2 loop', t => {
+it('rail connections: 2x2 loop', () => {
   const data = new Array(4).fill('');
   const plane = new LevelPlane(data, 2, 2, null, "actionPlane");
 
-  t.equal(plane.setBlockAt(new Position(1, 0), new LevelBlock('rails')).blockType, 'rails');
-  t.equal(plane.setBlockAt(new Position(0, 0), new LevelBlock('rails')).blockType, 'railsEast');
-  t.equal(plane.setBlockAt(new Position(0, 1), new LevelBlock('rails')).blockType, 'railsNorth');
-  t.equal(plane.setBlockAt(new Position(1, 1), new LevelBlock('rails')).blockType, 'railsNorthWest');
+  expect(plane.setBlockAt(new Position(1, 0), new LevelBlock('rails')).blockType).toBe('rails');
+  expect(plane.setBlockAt(new Position(0, 0), new LevelBlock('rails')).blockType).toBe('railsEast');
+  expect(plane.setBlockAt(new Position(0, 1), new LevelBlock('rails')).blockType).toBe('railsNorth');
+  expect(plane.setBlockAt(new Position(1, 1), new LevelBlock('rails')).blockType).toBe('railsNorthWest');
 
   const expected = [
     'railsSouthEast', 'railsSouthWest',
     'railsNorthEast', 'railsNorthWest',
   ];
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
 // Place a longer minecart track.
@@ -208,7 +203,7 @@ test('rail connections: 2x2 loop', t => {
 //    2 A B       ║ ╔══
 //    4 9 8       ║ ╚═╗
 //    5 6 7       ╚═══╝
-test('rail connections: longer track', t => {
+it('rail connections: longer track', () => {
   const data = new Array(16).fill('');
   const plane = new LevelPlane(data, 4, 4, null, "actionPlane");
 
@@ -231,9 +226,8 @@ test('rail connections: longer track', t => {
     '',               'railsNorthEast', 'railsEastWest',  'railsNorthWest',
   ];
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
 // Destroying part of a track should leave T-junctions intact. Don't heal the
@@ -243,7 +237,7 @@ test('rail connections: longer track', t => {
 //    ║         ║
 // X══╗        ═╗
 //    ║         ║
-test('rail connections: destroy block', t => {
+it('rail connections: destroy block', () => {
   const data = new Array(9).fill('');
   const plane = new LevelPlane(data, 3, 3, null, "actionPlane");
 
@@ -261,9 +255,8 @@ test('rail connections: destroy block', t => {
     '',               'railsNorth','',
   ];
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
 // Placing track after a previously-destroyed T-junction should heal it
@@ -272,7 +265,7 @@ test('rail connections: destroy block', t => {
 //              ║
 //   ═╗         ║
 //    ║         ║
-test('rail connections: destroy block', t => {
+it('rail connections: destroy block', () => {
   const data = new Array(9).fill('');
   const plane = new LevelPlane(data, 3, 3, null, "actionPlane");
 
@@ -289,7 +282,7 @@ test('rail connections: destroy block', t => {
     '', 'railsNorth','',
   ];
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
   plane.setBlockAt(new Position(1, 0), new LevelBlock('rails'));
 
@@ -299,9 +292,8 @@ test('rail connections: destroy block', t => {
     '', 'railsNorth','',
   ];
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
 //Placing/destroying redstoneWire should update charge propagation throughout
@@ -310,7 +302,7 @@ test('rail connections: destroy block', t => {
 //    T        T║
 //              ║
 //           X  ║
-test('redstone charge: place block', t => {
+it('redstone charge: place block', () => {
   const data = [
     '','railsRedstoneTorch',      '',
     '','',                        '',
@@ -329,12 +321,11 @@ test('redstone charge: place block', t => {
     'redstoneWire',      '',         'redstoneWireVerticalOn',
   ];
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
-test('powered rails: vertical charge propagation', t => {
+it('powered rails: vertical charge propagation', () => {
   const data = [
     '', 'railsRedstoneTorch',       '',
     '', 'railsUnpoweredSouth', '',
@@ -343,13 +334,12 @@ test('powered rails: vertical charge propagation', t => {
   const plane = new LevelPlane(data, 3, 3, null, "actionPlane");
 
   plane.refreshRedstone();
-  t.equal(plane.getBlockAt(new Position(1, 1)).blockType, "railsPoweredSouth");
-  t.equal(plane.getBlockAt(new Position(1, 2)).blockType, "railsPoweredNorth");
+  expect(plane.getBlockAt(new Position(1, 1)).blockType).toBe("railsPoweredSouth");
+  expect(plane.getBlockAt(new Position(1, 2)).blockType).toBe("railsPoweredNorth");
 
-  t.end();
 });
 
-test('powered rails: horizontal charge propagation', t => {
+it('powered rails: horizontal charge propagation', () => {
   const data = [
     '', '', '',
     'railsRedstoneTorch', 'railsUnpoweredEast', 'railsUnpoweredWest',
@@ -358,10 +348,9 @@ test('powered rails: horizontal charge propagation', t => {
   const plane = new LevelPlane(data, 3, 3, null, "actionPlane");
 
   plane.refreshRedstone();
-  t.equal(plane.getBlockAt(new Position(1, 1)).blockType, "railsPoweredEast");
-  t.equal(plane.getBlockAt(new Position(2, 1)).blockType, "railsPoweredWest");
+  expect(plane.getBlockAt(new Position(1, 1)).blockType).toBe("railsPoweredEast");
+  expect(plane.getBlockAt(new Position(2, 1)).blockType).toBe("railsPoweredWest");
 
-  t.end();
 });
 
 // Powered: =
@@ -376,7 +365,7 @@ test('powered rails: horizontal charge propagation', t => {
 // T║   |   |           T═════    --
 //            ║                    ║
 //            T                    T
-test('powered rails: only propagate along straight lines', t => {
+it('powered rails: only propagate along straight lines', () => {
   const TORCH = "railsRedstoneTorch";
   const RAILS = "railsUnpowered";
   const EMPTY = "";
@@ -392,10 +381,10 @@ test('powered rails: only propagate along straight lines', t => {
   ];
   const plane = new LevelPlane(data, 8, 8, null, "actionPlane");
 
-  t.equal(plane.setBlockAt(new Position(2, 1), new LevelBlock('railsUnpowered')).blockType, 'railsPoweredEastWest');
-  t.equal(plane.setBlockAt(new Position(2, 5), new LevelBlock('railsUnpowered')).blockType, 'railsPoweredEastWest');
-  t.equal(plane.setBlockAt(new Position(6, 2), new LevelBlock('railsUnpowered')).blockType, 'railsUnpoweredEastWest');
-  t.equal(plane.setBlockAt(new Position(6, 5), new LevelBlock('railsUnpowered')).blockType, 'railsUnpoweredEastWest');
+  expect(plane.setBlockAt(new Position(2, 1), new LevelBlock('railsUnpowered')).blockType).toBe('railsPoweredEastWest');
+  expect(plane.setBlockAt(new Position(2, 5), new LevelBlock('railsUnpowered')).blockType).toBe('railsPoweredEastWest');
+  expect(plane.setBlockAt(new Position(6, 2), new LevelBlock('railsUnpowered')).blockType).toBe('railsUnpoweredEastWest');
+  expect(plane.setBlockAt(new Position(6, 5), new LevelBlock('railsUnpowered')).blockType).toBe('railsUnpoweredEastWest');
 
   const expected = [
     '',       '',         '',         '',        '', '',        'railsT',   '',
@@ -417,9 +406,8 @@ test('powered rails: only propagate along straight lines', t => {
         .replace('W', 'West');
   });
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
 //Placing/destroying redstoneWire should update charge propagation throughout
@@ -428,7 +416,7 @@ test('powered rails: only propagate along straight lines', t => {
 //    T║       T
 //     ║        ║
 //  X  ║     X  ║
-test('redstone charge: destroy block', t => {
+it('redstone charge: destroy block', () => {
   const data = [
     '',         'railsRedstoneTorch','redstoneWireDownLeftOn',
     '',                  '',         'redstoneWireVerticalOn',
@@ -444,9 +432,8 @@ test('redstone charge: destroy block', t => {
     'redstoneWire',      '',         'redstoneWireVertical',
   ];
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
 //Placing/destroying redstoneWire should update charge propagation throughout
@@ -455,7 +442,7 @@ test('redstone charge: destroy block', t => {
 //    T║        ║
 //     ║        ║
 //  X  ║     X  ║
-test('torch charge: destroy block', t => {
+it('torch charge: destroy block', () => {
   const data = [
     '',         'railsRedstoneTorch','redstoneWireDownLeftOn',
     '',                  '',         'redstoneWireVerticalOn',
@@ -471,9 +458,8 @@ test('torch charge: destroy block', t => {
     'redstoneWire',      '',         'redstoneWireVertical',
   ];
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
 //Placing/destroying redstoneWire should update charge propagation throughout
@@ -482,7 +468,7 @@ test('torch charge: destroy block', t => {
 // X   ║     X  T║
 //     ║         ║
 //     ║         ║
-test('torch charge: place block', t => {
+it('torch charge: place block', () => {
   const data = [
     'redstoneWire','',      'redstoneWireVertical',
     '',            '',      'redstoneWireVertical',
@@ -498,12 +484,11 @@ test('torch charge: place block', t => {
     '',            'railsRedstoneTorch','redstoneWireUpLeftOn',
   ];
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
-test('iron door open: place block', t => {
+it('iron door open: place block', () => {
   const data = [
     'redstoneWireVertical','',      '',
     'redstoneWireVertical','',      '',
@@ -513,13 +498,12 @@ test('iron door open: place block', t => {
 
   plane.setBlockAt(new Position(1, 0), new LevelBlock('railsRedstoneTorch'));
 
-  t.false(plane.getBlockAt(new Position(2, 2)).isOpen);
-  t.true(plane.getBlockAt(new Position(0, 2)).isOpen);
+  expect(plane.getBlockAt(new Position(2, 2)).isOpen).toBe(false);
+  expect(plane.getBlockAt(new Position(0, 2)).isOpen).toBe(true);
 
-  t.end();
 });
 
-test('iron door close: destroy block', t => {
+it('iron door close: destroy block', () => {
   const data = [
     'railsRedstoneTorch',    '','',
     'redstoneWireVerticalOn','','',
@@ -529,13 +513,12 @@ test('iron door close: destroy block', t => {
 
   plane.setBlockAt(new Position(0, 0), new LevelBlock(''));
 
-  t.false(plane.getBlockAt(new Position(2, 2)).isOpen);
-  t.false(plane.getBlockAt(new Position(1, 2)).isOpen);
+  expect(plane.getBlockAt(new Position(2, 2)).isOpen).toBe(false);
+  expect(plane.getBlockAt(new Position(1, 2)).isOpen).toBe(false);
 
-  t.end();
 });
 
-test('piston activate: place block', t => {
+it('piston activate: place block', () => {
   const data = [
     '','','grass','pistonLeft','','pistonRight','grass','',
     '','','','redstoneWireVertical','','redstoneWireVertical','','',
@@ -557,12 +540,11 @@ test('piston activate: place block', t => {
     '','','','','','','grass','',
   ];
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
-test('piston deactivate: destroy block', t => {
+it('piston deactivate: destroy block', () => {
   const data = [
     '','grass','pistonArmLeft','pistonLeftOn','','pistonRightOn','pistonArmRight','grass',
     '','','grass','redstoneWireVerticalOn','','redstoneWireVerticalOn','','',
@@ -584,12 +566,11 @@ test('piston deactivate: destroy block', t => {
     '','','','','','','grass','',
   ];
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
-test('sticky piston activate: place block', t => {
+it('sticky piston activate: place block', () => {
   const data = [
     '','','grass','pistonLeftSticky','','pistonRightSticky','grass','',
     '','','','redstoneWireVertical','','redstoneWireVertical','','',
@@ -611,12 +592,11 @@ test('sticky piston activate: place block', t => {
     '','','','','','','grass','',
   ];
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
-test('sticky piston deactivate: destroy block', t => {
+it('sticky piston deactivate: destroy block', () => {
   const data = [
     '','grass','pistonArmLeft','pistonLeftOnSticky','','pistonRightOnSticky','pistonArmRight','grass',
     '','','grass','redstoneWireVerticalOn','','redstoneWireVerticalOn','','',
@@ -638,12 +618,11 @@ test('sticky piston deactivate: destroy block', t => {
     '','','','','','','','',
   ];
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
-test('piston destroy torch: adjacent to piston', t => {
+it('piston destroy torch: adjacent to piston', () => {
   const data = [
     '','','railsRedstoneTorch','pistonLeft','','','','',
     '','','','redstoneWireVertical','','','','',
@@ -665,12 +644,11 @@ test('piston destroy torch: adjacent to piston', t => {
     '','','','','','','','',
   ];
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
-test('piston destroy torch: not adjacent to piston', t => {
+it('piston destroy torch: not adjacent to piston', () => {
   const data = [
     '','railsRedstoneTorch','grass','pistonLeft','','','','',
     '','','','redstoneWireVertical','','','','',
@@ -692,12 +670,11 @@ test('piston destroy torch: not adjacent to piston', t => {
     '','','','','','','','',
   ];
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
-test('piston destroy door: adjacent to piston', t => {
+it('piston destroy door: adjacent to piston', () => {
   const data = [
     '','','doorIron','pistonLeft','','','','',
     '','','','redstoneWireVertical','','','','',
@@ -719,12 +696,11 @@ test('piston destroy door: adjacent to piston', t => {
     '','','','','','','','',
   ];
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
-test('piston destroy door: not adjacent to piston', t => {
+it('piston destroy door: not adjacent to piston', () => {
   const data = [
     '','doorIron','grass','pistonLeft','','','','',
     '','','','redstoneWireVertical','','','','',
@@ -746,12 +722,11 @@ test('piston destroy door: not adjacent to piston', t => {
     '','','','','','','','',
   ];
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
-test('piston destroy pressure Plate: adjacent to piston', t => {
+it('piston destroy pressure Plate: adjacent to piston', () => {
   const data = [
     '','','pressurePlateUp','pistonLeft','','','','',
     '','','','redstoneWireVertical','','','','',
@@ -773,12 +748,11 @@ test('piston destroy pressure Plate: adjacent to piston', t => {
     '','','','','','','','',
   ];
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
-test('piston destroy door: not adjacent to piston', t => {
+it('piston destroy door: not adjacent to piston', () => {
   const data = [
     '','pressurePlateUp','grass','pistonLeft','','','','',
     '','','','redstoneWireVertical','','','','',
@@ -800,12 +774,11 @@ test('piston destroy door: not adjacent to piston', t => {
     '','','','','','','','',
   ];
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
-test('piston destroy redstoneWire: adjacent to piston', t => {
+it('piston destroy redstoneWire: adjacent to piston', () => {
   const data = [
     '','','redstoneWireHorizontal','pistonLeft','','','','',
     '','','','redstoneWireVertical','','','','',
@@ -827,12 +800,11 @@ test('piston destroy redstoneWire: adjacent to piston', t => {
     '','','','','','','','',
   ];
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
-test('piston destroy redstoneWire: not adjacent to piston', t => {
+it('piston destroy redstoneWire: not adjacent to piston', () => {
   const data = [
     '','redstoneWireHorizontal','grass','pistonLeft','','','','',
     '','','','redstoneWireVertical','','','','',
@@ -854,12 +826,11 @@ test('piston destroy redstoneWire: not adjacent to piston', t => {
     '','','','','','','','',
   ];
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
-test('piston directional power: torch at arm side', t => {
+it('piston directional power: torch at arm side', () => {
   const data = [
     '','','','pistonLeft','','','','',
     '','','','','','','','',
@@ -881,12 +852,11 @@ test('piston directional power: torch at arm side', t => {
     '','','','','','','','',
   ];
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
-test('sticky piston directional power: torch at arm side', t => {
+it('sticky piston directional power: torch at arm side', () => {
   const data = [
     '','','','pistonLeftSticky','','','','',
     '','','','','','','','',
@@ -908,12 +878,11 @@ test('sticky piston directional power: torch at arm side', t => {
     '','','','','','','','',
   ];
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
-test('certain objets arent weakly charged', t => {
+it('certain objets arent weakly charged', () => {
   const data = [
     '','','','','','','','',
     '','','','','','','','',
@@ -938,12 +907,11 @@ test('certain objets arent weakly charged', t => {
     'railsRedstoneTorch','','railsRedstoneTorch','','railsRedstoneTorch','','railsRedstoneTorch','',
   ];
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
-test('Sticky piston grabbing, do not pull', t => {
+it('Sticky piston grabbing, do not pull', () => {
   const data = [
     '','','','','','','','',
     '','','','','','','','',
@@ -968,12 +936,11 @@ test('Sticky piston grabbing, do not pull', t => {
     '','','','','','','','',
   ];
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
-test('Sticky piston grabbing, do pull', t => {
+it('Sticky piston grabbing, do pull', () => {
   const data = [
     '','','','','','','','',
     '','','','','','','','',
@@ -998,12 +965,11 @@ test('Sticky piston grabbing, do pull', t => {
     '','','','','','','','',
   ];
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
-test('Weak Charge: placeblock', t => {
+it('Weak Charge: placeblock', () => {
   const data = [
     '','','','','','','','',
     '','pistonRight','','','','','','',
@@ -1025,12 +991,11 @@ test('Weak Charge: placeblock', t => {
     '','','','','','','','',
   ];
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
-test('weak charge: destroy block', t => {
+it('weak charge: destroy block', () => {
   const data = [
     '','','','','','','','',
     'grass','pistonRightOn','pistonArmRight','','','','','',
@@ -1052,12 +1017,11 @@ test('weak charge: destroy block', t => {
     '','','','','','','','',
   ];
 
-  t.deepEqual(plane._data.map(block => block.blockType), expected);
+  expect(plane._data.map(block => block.blockType)).toEqual(expected);
 
-  t.end();
 });
 
-test('conduit activation/deactivation: placing and removing prismarine', t => {
+it('conduit activation/deactivation: placing and removing prismarine', () => {
   const data = [
     '',          '',          '',          '',          '',          '',
     '',          '',          'prismarine','prismarine','prismarine','',
@@ -1070,27 +1034,26 @@ test('conduit activation/deactivation: placing and removing prismarine', t => {
 
   // Add prismarine to a valid activation index, but fail to complete the ring
   plane.setBlockAt(new Position(1, 1), new LevelBlock('prismarine'));
-  t.deepEqual(plane.getBlockAt(new Position(2, 3)).isActivatedConduit, false);
+  expect(plane.getBlockAt(new Position(2, 3)).isActivatedConduit).toBe(false);
 
   // Add prismarine, so we have the right amount, but not in the proper configuration
   plane.setBlockAt(new Position(1, 0), new LevelBlock('prismarine'));
-  t.deepEqual(plane.getBlockAt(new Position(2, 3)).isActivatedConduit, false);
+  expect(plane.getBlockAt(new Position(2, 3)).isActivatedConduit).toBe(false);
 
   // Complete the prismarine ring
   plane.setBlockAt(new Position(0, 1), new LevelBlock('prismarine'));
-  t.deepEqual(plane.getBlockAt(new Position(2, 3)).isActivatedConduit, true);
+  expect(plane.getBlockAt(new Position(2, 3)).isActivatedConduit).toBe(true);
 
   // Disrupt ring of air around prismarine
   plane.setBlockAt(new Position(1, 2), new LevelBlock('prismarine'));
-  t.deepEqual(plane.getBlockAt(new Position(2, 3)).isActivatedConduit, false);
+  expect(plane.getBlockAt(new Position(2, 3)).isActivatedConduit).toBe(false);
 
   // Reactivate by removing disruptive block
   plane.setBlockAt(new Position(1, 2), new LevelBlock(''));
-  t.deepEqual(plane.getBlockAt(new Position(2, 3)).isActivatedConduit, true);
+  expect(plane.getBlockAt(new Position(2, 3)).isActivatedConduit).toBe(true);
 
   // Break ring of prismarine
   plane.setBlockAt(new Position(0, 1), new LevelBlock(''));
-  t.deepEqual(plane.getBlockAt(new Position(2, 3)).isActivatedConduit, false);
+  expect(plane.getBlockAt(new Position(2, 3)).isActivatedConduit).toBe(false);
 
-  t.end();
 });

@@ -1,6 +1,6 @@
-const CommandState = require("./CommandState.js");
+import CommandState from './CommandState';
 
-module.exports = class BaseCommand {
+export default class BaseCommand {
   constructor(gameController, highlightCallback, targetEntity, onFinish) {
     this.GameController = gameController;
     this.Game = gameController.game;

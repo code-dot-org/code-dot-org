@@ -1,8 +1,8 @@
-const BaseEntity = require("./BaseEntity.js");
-const CallbackCommand = require("../CommandQueue/CallbackCommand.js");
-const Position = require("../LevelMVC/Position");
+import BaseEntity from './BaseEntity';
+import CallbackCommand from '../CommandQueue/CallbackCommand';
+import Position from '../LevelMVC/Position';
 
-module.exports = class Player extends BaseEntity {
+export default class Player extends BaseEntity {
   constructor(controller, type, x, y, name, isOnBlock, facing) {
     super(controller, type, 'Player', x, y, facing);
     this.offset = [-18, -32];

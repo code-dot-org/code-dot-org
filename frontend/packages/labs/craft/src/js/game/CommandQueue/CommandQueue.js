@@ -1,6 +1,6 @@
-const CommandState = require("./CommandState.js");
+import CommandState from './CommandState';
 
-module.exports = class CommandQueue {
+export default class CommandQueue {
   constructor(gameController) {
     this.gameController = gameController;
     this.game = gameController.game;
@@ -104,7 +104,6 @@ module.exports = class CommandQueue {
       }
     }
   }
-
 
   getLength() {
     return this.commandList_ ? this.commandList_.length : 0;

@@ -1,9 +1,11 @@
-const LevelBlock = require("./LevelBlock.js");
-const FacingDirection = require("./FacingDirection.js");
-const Position = require("./Position.js");
-const createEvent = require("../../utils").createEvent;
-const randomInt = require("./Utils").randomInt;
-const addBobTween = require("../Entities/Boat").addBobTween;
+import LevelBlock from './LevelBlock';
+import FacingDirection from './FacingDirection';
+import Position from './Position';
+import { createEvent } from '../../utils';
+
+import { randomInt } from './Utils';
+
+import Boat from '../Entities/Boat';
 
 // Hack: `PIXI.canUseNewCanvasBlendModes()` sometimes erroneously returns false.
 // It's supported in all browsers we support.
@@ -11,7 +13,7 @@ if (window.PIXI) {
   PIXI.canUseNewCanvasBlendModes = () => true;
 }
 
-module.exports = class LevelView {
+export default class LevelView {
   constructor(controller) {
     this.controller = controller;
     this.audioPlayer = controller.audioPlayer;
@@ -2049,7 +2051,7 @@ module.exports = class LevelView {
       }
 
       // Boat bobs up and down
-      addBobTween(this.game, entity.animationRig);
+      Boat.addBobTween(this.game, entity.animationRig);
     }
   }
 
@@ -2230,7 +2232,6 @@ module.exports = class LevelView {
       frame,
       xOffset,
       yOffset;
-
 
     var buildTree = function (levelView, frame) {
       let type = blockType.substring(4);

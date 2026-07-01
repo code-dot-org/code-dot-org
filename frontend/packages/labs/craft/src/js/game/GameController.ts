@@ -1,17 +1,18 @@
-const CommandQueue = require("./CommandQueue/CommandQueue.js");
-const CallbackCommand = require("./CommandQueue/CallbackCommand.js");
+// @ts-nocheck -- untyped JS renamed to .ts for progressive adoption
+import CommandQueue from './CommandQueue/CommandQueue';
+import CallbackCommand from './CommandQueue/CallbackCommand';
 
-const EventType = require("./Event/EventType.js");
-const FacingDirection = require("./LevelMVC/FacingDirection.js");
-const Position = require("./LevelMVC/Position.js");
+import EventType from './Event/EventType';
+import FacingDirection from './LevelMVC/FacingDirection';
+import Position from './LevelMVC/Position';
 
-const LevelModel = require("./LevelMVC/LevelModel.js");
-const LevelView = require("./LevelMVC/LevelView.js");
-const LevelEntity = require("./LevelMVC/LevelEntity.js");
-const AssetLoader = require("./LevelMVC/AssetLoader.js");
-const convertNameToEntity = require("./LevelMVC/Utils.js").convertNameToEntity;
+import LevelModel from './LevelMVC/LevelModel';
+import LevelView from './LevelMVC/LevelView';
+import LevelEntity from './LevelMVC/LevelEntity';
+import AssetLoader from './LevelMVC/AssetLoader';
+import { convertNameToEntity } from './LevelMVC/Utils';
 
-const CodeOrgAPI = require("./API/CodeOrgAPI.js");
+import { get as getCodeOrgAPI } from './API/CodeOrgAPI';
 
 var GAME_WIDTH = 400;
 var GAME_HEIGHT = 400;
@@ -40,7 +41,7 @@ class GameController {
      * @public {Object} codeOrgAPI - API with externally-callable methods for
      * starting an attempt, issuing commands, etc.
      */
-    this.codeOrgAPI = CodeOrgAPI.get(this);
+    this.codeOrgAPI = getCodeOrgAPI(this);
 
     var Phaser = gameControllerConfig.Phaser;
 
@@ -522,7 +523,6 @@ class GameController {
       }
     }
   }
-
 
   /**
    * @param {any} commandQueueItem
@@ -1527,4 +1527,4 @@ class GameController {
 
 window.GameController = GameController;
 
-module.exports = GameController;
+export default GameController;

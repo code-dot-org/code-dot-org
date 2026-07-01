@@ -1,6 +1,6 @@
-const Position = require("./Position");
+import Position from './Position';
 
-module.exports = class AStarPathFinding {
+export default class AStarPathFinding {
   constructor(model) {
     this.levelModel = model;
 

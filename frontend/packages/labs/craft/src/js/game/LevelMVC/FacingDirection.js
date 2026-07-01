@@ -54,4 +54,4 @@ const FacingDirection = Object.freeze({
 
 });
 
-module.exports = FacingDirection;
+export default FacingDirection;

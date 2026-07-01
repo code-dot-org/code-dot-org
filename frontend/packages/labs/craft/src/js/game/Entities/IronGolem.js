@@ -1,5 +1,5 @@
-const BaseEntity = require("./BaseEntity.js");
-module.exports = class IronGolem extends BaseEntity {
+import BaseEntity from './BaseEntity';
+export default class IronGolem extends BaseEntity {
     constructor(controller, type, identifier, x, y, facing) {
         super(controller, type, identifier, x, y, facing);
         this.offset = [-43, -55];
@@ -76,7 +76,6 @@ module.exports = class IronGolem extends BaseEntity {
             this.sprite.animations.add("lookDown" + facingName, frameList, frameRate, false).onComplete.add(() => {
                 this.controller.levelView.playScaledSpeed(this.sprite.animations, "lookDown_2" + this.controller.levelView.getDirectionName(this.facing));
             });
-
 
             frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][4][1], frameListPerDirection[i][4][0], ".png", 3);
             this.sprite.animations.add("lookDown_2" + facingName, frameList, frameRate, false).onComplete.add(() => {

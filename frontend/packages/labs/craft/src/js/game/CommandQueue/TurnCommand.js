@@ -1,6 +1,6 @@
-const BaseCommand = require("./BaseCommand.js");
+import BaseCommand from './BaseCommand';
 
-module.exports = class TurnCommand extends BaseCommand {
+export default class TurnCommand extends BaseCommand {
   constructor(gameController, highlightCallback, direction, targetEntity) {
     super(gameController, highlightCallback, targetEntity);
 

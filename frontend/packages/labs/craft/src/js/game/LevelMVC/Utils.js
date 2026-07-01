@@ -1,4 +1,4 @@
-const FacingDirection = require("./FacingDirection.js");
+import FacingDirection from './FacingDirection';
 
 /**
  * Converts entities found within the levelConfig.actionPlane to a
@@ -8,7 +8,7 @@ const FacingDirection = require("./FacingDirection.js");
  *
  * @param levelConfig
  */
-module.exports.convertActionPlaneEntitiesToConfig = function (levelConfig) {
+export function convertActionPlaneEntitiesToConfig(levelConfig) {
   const [width, height] = levelConfig.gridWidth && levelConfig.gridHeight ?
     [levelConfig.gridWidth, levelConfig.gridHeight] : [10, 10];
 
@@ -17,7 +17,7 @@ module.exports.convertActionPlaneEntitiesToConfig = function (levelConfig) {
     for (let i = 0; i < plane.length; i++) {
       const x = i % width;
       const y = Math.floor(i / height);
-      const entity = module.exports.convertNameToEntity(plane[i], x, y);
+      const entity = convertNameToEntity(plane[i], x, y);
 
       if (entity) {
         levelConfig.entities = levelConfig.entities || [];
@@ -28,7 +28,7 @@ module.exports.convertActionPlaneEntitiesToConfig = function (levelConfig) {
   });
 };
 
-module.exports.randomInt = function (min, max) {
+export function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 };
 
@@ -39,7 +39,7 @@ const suffixToDirection = {
   Right: FacingDirection.East,
 };
 
-module.exports.convertNameToEntity = function (item, x, y) {
+export function convertNameToEntity(item, x, y) {
   if (item.match(/^(sheep|zombie|ironGolem|creeper|cod|cow|chicken|dolphin|ghast|boat|salmon|squid|tropicalFish|seaTurtle)(Right|Left|Up|Down|$)/)) {
     const directionMatch = item.match(/(.*)(Right|Left|Up|Down)/);
     const directionToUse = directionMatch ?

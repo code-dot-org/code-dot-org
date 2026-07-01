@@ -1,18 +1,17 @@
-const test = require('tape');
+import { describe, it, expect } from 'vitest';
 
-const LevelBlock = require('../../src/js/game/LevelMVC/LevelBlock');
+import LevelBlock from '../../src/js/game/LevelMVC/LevelBlock';
 
-test('isMiniblock', t => {
+it('isMiniblock', () => {
   const defaultBlock = new LevelBlock("");
-  t.equal(defaultBlock.getIsMiniblock(), false);
+  expect(defaultBlock.getIsMiniblock()).toBe(false);
 
   const miniBlock = new LevelBlock("diamondMiniblock");
-  t.equal(miniBlock.getIsMiniblock(), true);
+  expect(miniBlock.getIsMiniblock()).toBe(true);
 
-  t.end();
 });
 
-test('getMiniblockFrame', t => {
+it('getMiniblockFrame', () => {
   // All the various forms of redstone resolve to the same thing
   [
     'oreRedstone',
@@ -23,13 +22,13 @@ test('getMiniblockFrame', t => {
     'redstoneWireOn',
     'redstoneWireTUp',
   ].forEach(blockType => {
-    t.equal(LevelBlock.getMiniblockFrame(blockType), "redstoneDust");
+    expect(LevelBlock.getMiniblockFrame(blockType)).toBe("redstoneDust");
   });
 
   // Rails give us nothing
-  t.equal(LevelBlock.getMiniblockFrame("rails"), "railNormal");
-  t.equal(LevelBlock.getMiniblockFrame("glass"), undefined);
-  t.equal(LevelBlock.getMiniblockFrame("ice"), undefined);
+  expect(LevelBlock.getMiniblockFrame("rails")).toBe("railNormal");
+  expect(LevelBlock.getMiniblockFrame("glass")).toBe(undefined);
+  expect(LevelBlock.getMiniblockFrame("ice")).toBe(undefined);
 
   // Generally, the in-world blocks, the miniblock-specific blocks, and the
   // miniblock frame itself should all resolve to just the miniblock frame
@@ -38,8 +37,7 @@ test('getMiniblockFrame', t => {
     "diamondMiniblock",
     "diamond"
   ].forEach(blockType => {
-    t.equal(LevelBlock.getMiniblockFrame(blockType), "diamond");
+    expect(LevelBlock.getMiniblockFrame(blockType)).toBe("diamond");
   });
 
-  t.end();
 });

@@ -1,10 +1,10 @@
-const sinon = require("sinon");
-const GameController = require("../../src/js/game/GameController");
-const AdventurerLevels = require("./AdventurerLevels");
-const AgentLevels = require("./AgentLevels");
-const AquaticLevels = require("./AquaticLevels");
-const DesignerLevels = require("./DesignerLevels");
-const FunctionalityLevels = require("./FunctionalityLevels");
+import sinon from 'sinon';
+import GameController from '../../src/js/game/GameController';
+import AdventurerLevels from './AdventurerLevels';
+import AgentLevels from './AgentLevels';
+import AquaticLevels from './AquaticLevels';
+import DesignerLevels from './DesignerLevels';
+import FunctionalityLevels from './FunctionalityLevels';
 
 sinon.stub(Math, "random").returns(0.5);
 
@@ -21,7 +21,7 @@ const defaults = {
   playerStartPosition: [],
 };
 
-module.exports = (level, commands, step = 0.1) => {
+export default (level, commands, step = 0.1) => {
   const gameController = new GameController({
     forceSetTimeOut: true,
     Phaser: window.Phaser,

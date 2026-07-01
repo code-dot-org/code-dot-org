@@ -1848,6 +1848,31 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@code-dot-org/craft-lab@workspace:packages/labs/craft":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/craft-lab@workspace:packages/labs/craft"
+  dependencies:
+    "@code-dot-org/core": "workspace:*"
+    "@code-dot-org/lint-config": "workspace:*"
+    "@types/node": "catalog:"
+    "@vitejs/plugin-react": "catalog:"
+    eslint: "catalog:"
+    jsdom: "catalog:"
+    phaser-ce: "npm:^2.20.0"
+    prettier: "catalog:"
+    react: "catalog:"
+    react-dom: "catalog:"
+    typescript: "catalog:"
+    vite: "catalog:"
+    vite-plugin-dts: "catalog:"
+    vite-plugin-externalize-deps: "catalog:"
+    vitest: "catalog:"
+  peerDependencies:
+    react: ^18 || ^19
+    react-dom: ^18 || ^19
+  languageName: unknown
+  linkType: soft
+
 "@code-dot-org/design-system-storybook@workspace:apps/design-system-storybook":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/design-system-storybook@workspace:apps/design-system-storybook"
@@ -18401,6 +18426,13 @@ __metadata:
   version: 1.2.0
   resolution: "pend@npm:1.2.0"
   checksum: 10c0/8a87e63f7a4afcfb0f9f77b39bb92374afc723418b9cb716ee4257689224171002e07768eeade4ecd0e86f1fa3d8f022994219fb45634f2dbd78c6803e452458
+  languageName: node
+  linkType: hard
+
+"phaser-ce@npm:^2.20.0":
+  version: 2.20.2
+  resolution: "phaser-ce@npm:2.20.2"
+  checksum: 10c0/044501ed1de2e192d1a3d482619abcaff08816e4b8dd463ca6e2c9ec58d6780d2841573bbe697689c1aa5bc3a9e1946f4c9d49a48c17d22226039a80bee0417d
   languageName: node
   linkType: hard
 
