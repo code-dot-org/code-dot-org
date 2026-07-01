@@ -1,5 +1,6 @@
 import {faBan, faCheck, faInfo} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {Box, IconButton} from '@mui/material';
 import _ from 'lodash';
 import * as React from 'react';
 
@@ -14,6 +15,11 @@ import guide from '@/oceans/models/guide';
 import {arrangeFish} from '@/oceans/models/pond';
 import soundLibrary from '@/oceans/models/soundLibrary';
 import {getState, setState} from '@/oceans/state';
+import {
+  cornerIconButtonBaseSx,
+  orangeCornerButtonSx,
+  srOnlySx,
+} from '@/oceans/styles/layout';
 import SVMTrainer from '@/utils/SVMTrainer';
 
 /** True when the current mode trains an SVM on word-attribute fish. */
@@ -44,6 +50,21 @@ function Collide(
   // Otherwise we have a collision.
   return true;
 }
+
+/** Base sx for the two recall-toggle buttons. */
+const toggleBaseSx = {
+  cursor: 'pointer',
+  height: '100%',
+  width: '50%',
+  backgroundColor: 'var(--ocean-color-white)',
+  color: 'var(--ocean-color-grey)',
+  border: 'none',
+  padding: '12%',
+  display: 'flex',
+  margin: 0,
+  borderRadius: 0,
+  '&:focus-visible': {position: 'relative', zIndex: 1},
+};
 
 class Pond extends React.Component {
   constructor(props: Record<string, never>) {
@@ -213,27 +234,15 @@ class Pond extends React.Component {
       state.pondFish.length > 0 &&
       state.recallFish.length > 0;
 
-    // When the info button is hidden, the recall icons shift to the lab's
-    // right edge to take its place.
-    const recallIconsClassName = showInfoButton
-      ? 'ocean-pond__recall-icons'
-      : 'ocean-pond__recall-icons ocean-pond__recall-icons--no-info';
-
-    // The currently-active toggle is highlighted; the inactive one stays
-    // on the white base.
-    const matchingToggleClassName = state.showRecallFish
-      ? 'ocean-toggle-icon ocean-toggle-icon--matching-left'
-      : 'ocean-toggle-icon ocean-toggle-icon--matching-left ocean-toggle-icon--bg-green';
-    const nonMatchingToggleClassName = state.showRecallFish
-      ? 'ocean-toggle-icon ocean-toggle-icon--non-matching-right ocean-toggle-icon--bg-red'
-      : 'ocean-toggle-icon ocean-toggle-icon--non-matching-right';
-    const infoButtonClassName = state.pondPanelShowing
-      ? 'ocean-info-icon-container ocean-info-icon-container--active'
-      : 'ocean-info-icon-container';
-
     return (
       <Body>
-        <div
+        {/* Screen-reader announcement for fish selection changes. */}
+        <Box role="status" aria-live="polite" aria-atomic="true" sx={srOnlySx}>
+          {state.pondClickedFish ? 'Fish selected' : ''}
+        </Box>
+
+        {/* Canvas surface — fish animation renders here. */}
+        <Box
           role="button"
           aria-label="Fish pond"
           tabIndex={0}
@@ -244,57 +253,147 @@ class Pond extends React.Component {
               setState({pondClickedFish: null});
             }
           }}
-          className="ocean-pond__surface"
+          sx={{
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
+            top: 0,
+            left: 0,
+          }}
         />
-        <div className={recallIconsClassName}>
-          <button
-            key="toggle-matching"
+
+        {/* Recall-mode toggle (matching / non-matching) */}
+        <Box
+          sx={[
+            {
+              position: 'absolute',
+              top: '2%',
+              height: '8.5%',
+              width: '9.5%',
+              display: 'flex',
+              alignItems: 'center',
+              direction: 'ltr',
+            },
+            showInfoButton ? {right: '7%'} : {right: '1.2%'},
+          ]}
+        >
+          <Box
+            component="button"
             type="button"
-            onClick={e => this.getMatchingFishSet(e, true)}
+            key="toggle-matching"
+            onClick={(e: React.MouseEvent) => this.getMatchingFishSet(e, true)}
             aria-label={I18n.t('switchToMatchingItems')}
-            className={matchingToggleClassName}
+            aria-pressed={!state.showRecallFish}
+            sx={[
+              toggleBaseSx,
+              {
+                borderTopLeftRadius: '8px',
+                borderBottomLeftRadius: '8px',
+              },
+              !state.showRecallFish
+                ? {
+                    backgroundColor: 'var(--ocean-color-green)',
+                    color: 'var(--ocean-color-white)',
+                  }
+                : {},
+            ]}
           >
             <FontAwesomeIcon
               icon={faCheck}
               style={{width: '100%', height: '100%'}}
             />
-          </button>
-          <button
-            key="toggle-non-matching"
+          </Box>
+          <Box
+            component="button"
             type="button"
-            onClick={e => this.getMatchingFishSet(e, false)}
+            key="toggle-non-matching"
+            onClick={(e: React.MouseEvent) => this.getMatchingFishSet(e, false)}
             aria-label={I18n.t('switchToNonMatchingItems')}
-            className={nonMatchingToggleClassName}
+            aria-pressed={state.showRecallFish}
+            sx={[
+              toggleBaseSx,
+              {
+                borderTopRightRadius: '8px',
+                borderBottomRightRadius: '8px',
+              },
+              state.showRecallFish
+                ? {
+                    backgroundColor: 'var(--ocean-color-red)',
+                    color: 'var(--ocean-color-white)',
+                  }
+                : {},
+            ]}
           >
             <FontAwesomeIcon
               icon={faBan}
               style={{width: '100%', height: '100%'}}
             />
-          </button>
-        </div>
+          </Box>
+        </Box>
+
+        {/* Info icon button */}
         {showInfoButton && (
-          <button
-            type="button"
-            id="uitest-info-btn"
+          <IconButton
             aria-label={I18n.t('fishInformation')}
-            aria-pressed={state.pondPanelShowing ? 'true' : 'false'}
-            className={infoButtonClassName}
+            aria-pressed={state.pondPanelShowing}
             onClick={this.onPondPanelButtonClick}
+            sx={[
+              cornerIconButtonBaseSx,
+              {
+                width: '2.5%',
+                '&:hover, &:focus-visible': {
+                  backgroundColor: 'var(--ocean-color-teal)',
+                  color: 'var(--ocean-color-white)',
+                },
+              },
+              state.pondPanelShowing
+                ? {
+                    backgroundColor: 'var(--ocean-color-teal)',
+                    color: 'var(--ocean-color-white)',
+                  }
+                : {},
+            ]}
           >
             <FontAwesomeIcon
               icon={faInfo}
-              className="ocean-info-icon"
+              style={{display: 'block', margin: 'auto', height: '100%'}}
               aria-hidden
             />
-          </button>
+          </IconButton>
         )}
-        <img className="ocean-pond__bot" src={aiBotClosed} alt="" />
+
+        {/* AI bot image */}
+        <Box
+          component="img"
+          src={aiBotClosed}
+          alt=""
+          sx={{
+            position: 'absolute',
+            height: '27%',
+            top: '59%',
+            left: '50%',
+            bottom: 0,
+            transform: 'translateX(-45%)',
+            pointerEvents: 'none',
+          }}
+        />
+
+        {/* Navigation buttons when the user can skip the pond scene */}
         {state.canSkipPond && (
-          <div id="uitest-nav-btns">
+          <Box component="nav" aria-label="Pond navigation">
             {state.appMode === AppMode.FishLong ? (
-              <div>
+              <Box>
                 <Button
-                  className="ocean-button--play-again"
+                  sx={{
+                    backgroundColor: 'var(--ocean-color-yellow-green)',
+                    color: 'var(--ocean-color-white)',
+                    position: 'absolute',
+                    bottom: '13.5%',
+                    right: '1.2%',
+                    '&:hover': {
+                      backgroundColor: 'var(--ocean-color-yellow-green)',
+                    },
+                  }}
                   onClick={() => {
                     setState({pondClickedFish: null, pondPanelShowing: false});
                     helpers.resetTraining(state);
@@ -303,24 +402,22 @@ class Pond extends React.Component {
                 >
                   {I18n.t('newWord')}
                 </Button>
-                <Button
-                  className="ocean-button--finish"
-                  onClick={state.onContinue}
-                >
+                <Button sx={orangeCornerButtonSx} onClick={state.onContinue}>
                   {I18n.t('finish')}
                 </Button>
-              </div>
+              </Box>
             ) : (
-              <Button
-                className="ocean-button--continue"
-                onClick={state.onContinue}
-              >
+              <Button sx={orangeCornerButtonSx} onClick={state.onContinue}>
                 {I18n.t('continue')}
               </Button>
             )}
-            <div>
+            <Box>
               <Button
-                className="ocean-button--back"
+                sx={{
+                  position: 'absolute',
+                  bottom: '2%',
+                  left: '1.2%',
+                }}
                 onClick={() => {
                   modeHelpers.toMode(Modes.Training);
                   setState({pondClickedFish: null, pondPanelShowing: false});
@@ -328,9 +425,10 @@ class Pond extends React.Component {
               >
                 {I18n.t('trainMore')}
               </Button>
-            </div>
-          </div>
+            </Box>
+          </Box>
         )}
+
         {state.pondPanelShowing && <PondPanel />}
       </Body>
     );

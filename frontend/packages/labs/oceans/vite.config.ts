@@ -1,7 +1,7 @@
 import react from '@vitejs/plugin-react';
 import fs from 'fs';
 import path from 'path';
-import {defineConfig, type Plugin} from 'vite';
+import {defineConfig, searchForWorkspaceRoot, type Plugin} from 'vite';
 import dts from 'vite-plugin-dts';
 import {externalizeDeps} from 'vite-plugin-externalize-deps';
 
@@ -74,6 +74,11 @@ export default defineConfig({
   },
   server: {
     allowedHosts: ['localhost-studio.code.org'],
+    fs: {
+      // Serve files from the whole Yarn workspace so symlinked CSS url()s
+      // (e.g. @code-dot-org/fonts woff2) resolve. Matches studio.
+      allow: [searchForWorkspaceRoot(process.cwd())],
+    },
   },
   build: {
     lib: {

@@ -846,6 +846,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@axe-core/playwright@npm:^4.11.3":
+  version: 4.11.3
+  resolution: "@axe-core/playwright@npm:4.11.3"
+  dependencies:
+    axe-core: "npm:~4.11.4"
+  peerDependencies:
+    playwright-core: ">= 1.0.0"
+  checksum: 10c0/da1854726dbc461a71ac25e0435f5dd9b7d143dc9142f53b1aeb4a8d7edcb4533eddb59949e8a07c4f4e3dce85ae43b7f249b3801e8b255f605fc974b94616fe
+  languageName: node
+  linkType: hard
+
 "@babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.10.4, @babel/code-frame@npm:^7.22.13, @babel/code-frame@npm:^7.27.1":
   version: 7.27.1
   resolution: "@babel/code-frame@npm:7.27.1"
@@ -2061,17 +2072,24 @@ __metadata:
   resolution: "@code-dot-org/oceans-lab@workspace:packages/labs/oceans"
   dependencies:
     "@applitools/eyes-playwright": "npm:^1.34.0"
+    "@axe-core/playwright": "npm:^4.11.3"
+    "@code-dot-org/component-library": "workspace:*"
     "@code-dot-org/core": "workspace:*"
+    "@code-dot-org/fonts": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
     "@code-dot-org/redactable-markdown": "npm:^0.4.0"
     "@code-dot-org/svm": "npm:^0.1.1"
+    "@emotion/react": "catalog:"
+    "@emotion/styled": "catalog:"
     "@fortawesome/fontawesome-svg-core": "npm:^1.2.25"
     "@fortawesome/free-solid-svg-icons": "npm:^5.11.2"
     "@fortawesome/react-fontawesome": "npm:^0.1.7"
+    "@mui/material": "catalog:"
     "@tensorflow-models/knn-classifier": "npm:~1.1.0"
     "@tensorflow-models/mobilenet": "npm:^2.0.4"
     "@tensorflow/tfjs": "npm:^1.3.1"
     "@testing-library/dom": "catalog:"
+    "@testing-library/jest-dom": "catalog:"
     "@testing-library/react": "catalog:"
     "@types/node": "catalog:"
     "@vitejs/plugin-react": "catalog:"
@@ -2097,9 +2115,12 @@ __metadata:
     vitest: "catalog:"
     zod: "catalog:"
   peerDependencies:
+    "@emotion/react": ^11.0.0
+    "@emotion/styled": ^11.0.0
     "@fortawesome/fontawesome-svg-core": ^1.2.25
     "@fortawesome/free-solid-svg-icons": ^5.11.2
     "@fortawesome/react-fontawesome": ^0.1.7
+    "@mui/material": ^7.0.0
     lodash: ^4.17.5
     react: ^18 || ^19
     react-dom: ^18 || ^19
@@ -8905,6 +8926,13 @@ __metadata:
   version: 4.10.3
   resolution: "axe-core@npm:4.10.3"
   checksum: 10c0/1b1c24f435b2ffe89d76eca0001cbfff42dbf012ad9bd37398b70b11f0d614281a38a28bc3069e8972e3c90ec929a8937994bd24b0ebcbaab87b8d1e241ab0c7
+  languageName: node
+  linkType: hard
+
+"axe-core@npm:~4.11.4":
+  version: 4.11.4
+  resolution: "axe-core@npm:4.11.4"
+  checksum: 10c0/c4aa83fc3eac5f7a0d0cb1a28f9d073acf0c06ce8daacc38608faa278c57ce084c028c850746b98817ae4c101c30c1a32e95ea34748c4b4c7419b9b81221ef84
   languageName: node
   linkType: hard
 

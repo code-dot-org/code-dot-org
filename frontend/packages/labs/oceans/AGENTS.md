@@ -15,7 +15,10 @@ Consumed by:
 
 Stack: React 18 + TypeScript, Vite library mode, vitest, Playwright,
 ESLint flat config, Prettier, Stylelint. Scene components are class
-components styled via CSS classes (`scenes.css`).
+components.
+
+Styling follows the design-system skill
+(`.agents/skills/design-system/SKILL.md`), which is authoritative.
 
 ## Setup
 

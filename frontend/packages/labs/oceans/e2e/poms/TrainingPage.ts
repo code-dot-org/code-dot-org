@@ -22,24 +22,32 @@ export abstract class TrainingPage extends OceansPage {
    * (~1 s fish-eat animation), so a single click/keypress that lands during
    * that window is silently ignored.
    *
-   * @param isYes - `true` for Yes, `false` for No.
-   * @param via - Activation method: mouse click (default) or keyboard Enter.
+   * @param opts - Classification options.
+   * @param opts.answer - `'yes'` to press the Yes button, `'no'` to press No.
+   * @param opts.via - Activation method: `'click'` (default) or `'key'` (Enter).
    */
-  async classifyOne(
-    isYes: boolean,
-    via: 'click' | 'key' = 'click',
-  ): Promise<void> {
+  async classifyOne(opts: {
+    answer: 'yes' | 'no';
+    via?: 'click' | 'key';
+  }): Promise<void> {
+    const {answer, via = 'click'} = opts;
     const currentText = (await this.trainCount.textContent()) ?? '0';
     const count = parseInt(currentText.trim(), 10);
     const next = Math.min(999, count + 1);
-    const button = isYes ? this.yesButton : this.noButton;
+    const button = answer === 'yes' ? this.yesButton : this.noButton;
 
     await expect(async () => {
       if (via === 'key') {
-        await button.press('Enter');
+        // Press via page.keyboard to dodge the stability gate that lands keys mid-animation.
+        await button.focus();
+        await button.page().keyboard.press('Enter');
       } else {
         await button.click();
       }
+      // Dropped-press detection: if the counter hasn't moved within 3 s the
+      // click/keypress was swallowed (landed during isRunning animation).
+      // 3 s covers the ~1 s fish-eat animation plus Firefox-under-load jitter
+      // while keeping the retry latency well below the 15 s outer toPass budget.
       await expect(this.trainCount).toHaveText(String(next), {timeout: 3_000});
     }).toPass({timeout: 15_000});
   }
@@ -47,29 +55,36 @@ export abstract class TrainingPage extends OceansPage {
   /**
    * Perform a training sequence of yes-clicks followed by no-clicks.
    *
-   * @param yesCount - Number of Yes classifications to submit.
-   * @param noCount  - Number of No classifications to submit.
+   * @param opts - Training counts.
+   * @param opts.yesCount - Number of Yes classifications to submit.
+   * @param opts.noCount  - Number of No classifications to submit.
    */
-  async train(yesCount: number, noCount: number): Promise<void> {
-    for (let i = 0; i < yesCount; i++) {
-      await this.classifyOne(true);
+  async train(opts: {yesCount: number; noCount: number}): Promise<void> {
+    for (let i = 0; i < opts.yesCount; i++) {
+      await this.classifyOne({answer: 'yes'});
     }
-    for (let i = 0; i < noCount; i++) {
-      await this.classifyOne(false);
+    for (let i = 0; i < opts.noCount; i++) {
+      await this.classifyOne({answer: 'no'});
     }
   }
 
   /**
    * Complete the Training → Predicting → Pond flow.
    *
-   * Trains `yesCount` yes + `noCount` no examples (default: 0 each), then
-   * runs prediction and advances to the Pond scene.
+   * Trains the given yes/no examples (default: 0 each), then runs prediction
+   * and advances to the Pond scene.
    *
-   * @param yesCount - Yes classifications to submit before advancing.
-   * @param noCount  - No classifications to submit before advancing.
+   * @param opts - Optional training counts.
+   * @param opts.yesCount - Yes classifications to submit before advancing.
+   * @param opts.noCount  - No classifications to submit before advancing.
    */
-  async fullFlow(yesCount = 0, noCount = 0): Promise<void> {
-    await this.train(yesCount, noCount);
+  async fullFlow(
+    opts: {yesCount?: number; noCount?: number} = {},
+  ): Promise<void> {
+    await this.train({
+      yesCount: opts.yesCount ?? 0,
+      noCount: opts.noCount ?? 0,
+    });
     await this.advanceToPredictScene();
     await this.runPrediction();
     await this.predictContinueButton.click();

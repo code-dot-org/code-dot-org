@@ -2,91 +2,9 @@ import {expect, test} from './fixtures/visual';
 import {FishVTrashPage} from './poms/FishVTrashPage';
 import {AppMode, OceansPage} from './poms/OceansPage';
 
-// ─────────────────────────────────────────────────────────────────────────────
-// FishVTrash — Training scene
-// ─────────────────────────────────────────────────────────────────────────────
-
-test.describe('FishVTrash — training scene', () => {
-  test('loads with training scene and counter at zero', async ({page}) => {
-    const oceans = await FishVTrashPage.load(page);
-    await expect(oceans.trainCount).toHaveText('0');
-    await expect(oceans.yesButton).toBeVisible();
-    await expect(oceans.noButton).toBeVisible();
-    await expect(oceans.eraseButton).toBeVisible();
-  });
-
-  test('yes button label is "Fish" in fishvtrash mode', async ({page}) => {
-    const oceans = await FishVTrashPage.load(page);
-    await expect(oceans.yesButton).toContainText('Fish');
-  });
-
-  test('no button label is "Not Fish" in fishvtrash mode', async ({page}) => {
-    const oceans = await FishVTrashPage.load(page);
-    await expect(oceans.noButton).toContainText('Not Fish');
-  });
-
-  test('yes click increments training count', async ({page}) => {
-    const oceans = await FishVTrashPage.load(page);
-    await oceans.classifyOne(true);
-    await expect(oceans.trainCount).toHaveText('1');
-  });
-
-  test('no click increments training count', async ({page}) => {
-    const oceans = await FishVTrashPage.load(page);
-    await oceans.classifyOne(false);
-    await expect(oceans.trainCount).toHaveText('1');
-  });
-
-  test('mixed training updates count correctly', async ({page}) => {
-    const oceans = await FishVTrashPage.load(page);
-    await oceans.classifyOne(true);
-    await oceans.classifyOne(false);
-    await expect(oceans.trainCount).toHaveText('2');
-  });
-
-  test('training question contains "fish"', async ({page}) => {
-    const oceans = await FishVTrashPage.load(page);
-    await expect(oceans.page.getByText(/fish/i).first()).toBeVisible();
-  });
-});
-
-// ─────────────────────────────────────────────────────────────────────────────
-// FishVTrash — Erase confirmation dialog
-// ─────────────────────────────────────────────────────────────────────────────
-
-test.describe('FishVTrash — erase confirmation dialog', () => {
-  test('erase button opens confirmation dialog', async ({page}) => {
-    const oceans = await FishVTrashPage.load(page);
-    await oceans.eraseButton.click();
-    await expect(oceans.confirmationHeader).toBeVisible();
-  });
-
-  test('cancel dismisses dialog without resetting count', async ({page}) => {
-    const oceans = await FishVTrashPage.load(page);
-    await oceans.classifyOne(true);
-    await oceans.eraseButton.click();
-    await oceans.confirmationCancelButton.click();
-    await expect(oceans.trainCount).toHaveText('1');
-  });
-
-  test('confirm erase resets training count to zero', async ({page}) => {
-    const oceans = await FishVTrashPage.load(page);
-    await oceans.classifyOne(true);
-    await oceans.eraseButton.click();
-    await oceans.confirmationEraseButton.click();
-    await expect(oceans.trainCount).toHaveText('0');
-  });
-
-  test('erase dialog shows warning text', async ({page}) => {
-    const oceans = await FishVTrashPage.load(page);
-    await oceans.eraseButton.click();
-    await expect(oceans.page.getByText(/permanently delete/i)).toBeVisible();
-  });
-});
-
-// ─────────────────────────────────────────────────────────────────────────────
-// FishVTrash — Predict scene
-// ─────────────────────────────────────────────────────────────────────────────
+/*
+ * FishVTrash — Predict scene
+ */
 
 test.describe('FishVTrash — predict scene', () => {
   test('continue from training shows run button', async ({page}) => {
@@ -120,14 +38,14 @@ test.describe('FishVTrash — predict scene', () => {
   test('continue button appears after prediction runs', async ({page}) => {
     const oceans = await FishVTrashPage.load(page);
     await oceans.advanceToPredictScene();
-    await oceans.runPrediction();
-    await expect(oceans.predictContinueButton).toBeVisible();
+    await oceans.runButton.click();
+    await oceans.waitForPredictComplete();
   });
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
-// FishVTrash — Pond scene
-// ─────────────────────────────────────────────────────────────────────────────
+/*
+ * FishVTrash — Pond scene
+ */
 
 test.describe('FishVTrash — pond scene', () => {
   test('full flow reaches pond with toggle buttons', async ({page}) => {
@@ -154,9 +72,9 @@ test.describe('FishVTrash — pond scene', () => {
   });
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
-// CreaturesVTrashDemo — starts in Predict
-// ─────────────────────────────────────────────────────────────────────────────
+/*
+ * CreaturesVTrashDemo — starts in Predict
+ */
 
 test.describe('CreaturesVTrashDemo mode', () => {
   test('loads directly in predict scene with run button', async ({page}) => {
@@ -169,9 +87,9 @@ test.describe('CreaturesVTrashDemo mode', () => {
   });
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Visual regression
-// ─────────────────────────────────────────────────────────────────────────────
+/*
+ * Visual regression
+ */
 
 test.describe('@visual', () => {
   test('FishVTrash initial training scene', async ({page, visualCheck}) => {
@@ -186,7 +104,7 @@ test.describe('@visual', () => {
     await oceans.waitForPredictScene();
     // Mask media controls — their Pause/Play label flips with state.
     await visualCheck('creaturesvtrashdemo-predict', {
-      mask: [page.locator('#uitest-media-ctrl')],
+      mask: [page.getByRole('group', {name: 'Playback controls'})],
     });
   });
 });

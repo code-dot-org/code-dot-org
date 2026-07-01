@@ -1,4 +1,4 @@
-import {type Locator, type Page} from 'playwright/test';
+import {expect, type Locator, type Page} from 'playwright/test';
 
 /** App mode values mirrored from `src/oceans/constants.ts`. */
 export const AppMode = {
@@ -33,11 +33,11 @@ export class OceansPage {
     return this.page.getByRole('button', {name: label});
   }
 
-  // ── Training scene ──────────────────────────────────────────────────
+  /* Training scene */
 
   /** Counter span showing total classifications so far. */
   get trainCount(): Locator {
-    return this.page.locator('#uitest-train-count');
+    return this.page.getByTestId('training-count');
   }
 
   /** Erase button — also the sentinel for "training scene is visible". */
@@ -50,23 +50,23 @@ export class OceansPage {
     return this.page.getByRole('button', {name: 'Continue'});
   }
 
-  // ── Words scene (FishShort / FishLong) ──────────────────────────────
+  /* Words scene (FishShort / FishLong) */
 
   /** All word-choice buttons rendered in the Words scene. */
   get wordButtons(): Locator {
-    return this.page.locator('.words-button');
+    return this.page.getByTestId('word-button');
   }
 
-  // ── Predict scene ───────────────────────────────────────────────────
+  /* Predict scene */
 
   /** Run button that starts prediction. */
   get runButton(): Locator {
-    return this.page.locator('#uitest-run-btn');
+    return this.page.getByRole('button', {name: 'Run prediction'});
   }
 
   /** Container div holding the three media-control buttons. */
   get mediaControlsContainer(): Locator {
-    return this.page.locator('#uitest-media-ctrl');
+    return this.page.getByRole('group', {name: 'Playback controls'});
   }
 
   /** Rewind media control. */
@@ -89,10 +89,10 @@ export class OceansPage {
 
   /** Continue button in Predict scene (appears after canSkipPredict). */
   get predictContinueButton(): Locator {
-    return this.page.locator('#uitest-continue-btn');
+    return this.page.getByRole('button', {name: 'Continue from predict'});
   }
 
-  // ── Pond scene ──────────────────────────────────────────────────────
+  /* Pond scene */
 
   /** Clickable fish-pond surface (role=button). */
   get pondSurface(): Locator {
@@ -116,7 +116,7 @@ export class OceansPage {
    * Has `aria-pressed` reflecting open/closed state.
    */
   get infoButton(): Locator {
-    return this.page.locator('#uitest-info-btn');
+    return this.page.getByRole('button', {name: 'Fish Information'});
   }
 
   /** Train More button that returns to the Training scene. */
@@ -127,28 +127,82 @@ export class OceansPage {
   /** Continue button inside the pond nav-buttons container. */
   get pondContinueButton(): Locator {
     return this.page
-      .locator('#uitest-nav-btns')
+      .getByRole('navigation', {name: 'Pond navigation'})
       .getByRole('button', {name: 'Continue'});
   }
 
-  // ── Confirmation dialog ─────────────────────────────────────────────
+  /* Guide overlay */
 
-  /** Header text of the erase-confirmation dialog ("Are you sure?"). */
+  /** Guide overlay; clicking or pressing Enter/Space dismisses a modal guide. */
+  get guideOverlay(): Locator {
+    return this.page.getByRole('button', {name: 'Dismiss guide'});
+  }
+
+  /** Guide dialog element; carries the guide text on aria-label. */
+  get guideDialog(): Locator {
+    return this.page.locator('dialog.guide-dialog');
+  }
+
+  /**
+   * Press Enter until every queued guide dismisses, capped at 30 s wall-clock.
+   *
+   * @param maxGuides - Safety cap to avoid infinite loops.
+   */
+  async dismissAllGuides(maxGuides = 10): Promise<void> {
+    const appeared = await this.guideOverlay
+      .waitFor({state: 'visible', timeout: 15_000})
+      .then(() => true)
+      .catch(() => false);
+    if (!appeared) return;
+
+    const deadline = Date.now() + 30_000;
+    for (let i = 0; i < maxGuides; i++) {
+      if (!(await this.guideOverlay.isVisible().catch(() => false))) break;
+      const remaining = deadline - Date.now();
+      const iterTimeout =
+        i === 0 ? 20_000 : Math.max(2_000, Math.min(20_000, remaining));
+      const labelBefore = await this.guideDialog
+        .getAttribute('aria-label')
+        .catch(() => null);
+      // Animation may swallow the first press; retry until aria-label changes.
+      await expect(async () => {
+        if (!(await this.guideOverlay.isVisible())) return;
+        await this.guideDialog.press('Enter');
+        if (!(await this.guideOverlay.isVisible())) return;
+        const label = await this.guideDialog
+          .getAttribute('aria-label')
+          .catch(() => null);
+        expect(label).not.toBe(labelBefore);
+      }).toPass({timeout: iterTimeout});
+      if (Date.now() >= deadline) break;
+    }
+  }
+
+  /* Confirmation dialog */
+
+  /** Erase-confirmation dialog, scoped by name. */
+  get confirmationDialog(): Locator {
+    return this.page.getByRole('dialog', {name: 'Are you sure?'});
+  }
+
+  /** Heading element inside the erase-confirmation dialog ("Are you sure?"). */
   get confirmationHeader(): Locator {
-    return this.page.locator('.confirmation-text');
+    return this.confirmationDialog.getByRole('heading', {
+      name: 'Are you sure?',
+    });
   }
 
   /** Erase confirm button inside the confirmation dialog. */
   get confirmationEraseButton(): Locator {
-    return this.page.locator('.dialog-button', {hasText: 'Erase'});
+    return this.confirmationDialog.getByRole('button', {name: 'Erase'});
   }
 
   /** Cancel button inside the confirmation dialog. */
   get confirmationCancelButton(): Locator {
-    return this.page.locator('.dialog-button', {hasText: 'Cancel'});
+    return this.confirmationDialog.getByRole('button', {name: 'Cancel'});
   }
 
-  // ── Navigation ──────────────────────────────────────────────────────
+  /* Navigation */
 
   /** The app mode this page expects. Subclasses override. */
   protected get appMode(): AppModeValue {
@@ -156,18 +210,25 @@ export class OceansPage {
   }
 
   /**
-   * Navigate to the standalone dev server for the given mode. Appends
-   * `?guide=off`, plus `?testFreeze=1` when opts.freeze is set
-   * (deterministic mode for visual-regression specs).
+   * Navigate to the standalone dev server for the given mode.
+   *
+   * By default appends `?guide=off` to suppress guide overlays.
+   * Pass `guides: 'K5'` (or another variant) to load with guides enabled
+   * instead — useful for testing guide keyboard-dismissal flows.
    *
    * @param mode - App mode to load; defaults to FishVTrash.
-   * @param opts - Optional freeze flag for visual-regression callers.
+   * @param opts - Optional freeze/guides flags.
    */
   async goto(
     mode: AppModeValue = AppMode.FishVTrash,
-    opts: {freeze?: boolean} = {},
+    opts: {freeze?: boolean; guides?: string} = {},
   ): Promise<void> {
-    const params = new URLSearchParams({guide: 'off', mode});
+    const params = new URLSearchParams({mode});
+    if (opts.guides) {
+      params.set('guides', opts.guides);
+    } else {
+      params.set('guide', 'off');
+    }
     if (opts.freeze) {
       params.set('testFreeze', '1');
     }
@@ -233,13 +294,33 @@ export class OceansPage {
   }
 
   /**
-   * Start prediction and wait until the Continue button is available
-   * (canSkipPredict becomes true after the prediction animation runs).
+   * Wait until the Continue button appears in the Predict scene
+   * (canSkipPredict becomes true after the prediction animation completes).
    *
-   * @param timeout - Max ms to wait for the Continue button; defaults to 15 s.
+   * The state flip lives inside the renderer's RAF loop, which can stall for
+   * tens of seconds under 32-worker Firefox CPU contention.  120 s budgets
+   * the worst CPU-starvation case observed in the prove suite.
    */
-  async runPrediction(timeout = 15_000): Promise<void> {
-    await this.runButton.click();
+  async waitForPredictComplete(timeout = 120_000): Promise<void> {
     await this.predictContinueButton.waitFor({state: 'visible', timeout});
+  }
+
+  /** Click the Run button then wait for the Continue button to appear. */
+  async runPrediction(): Promise<void> {
+    await this.runButton.click();
+    await this.waitForPredictComplete();
+  }
+
+  /**
+   * Focus `locator` then press Enter at the page level. No toBeFocused
+   * assertion — `locator.focus()` already retries actionability, and the
+   * intermediate poll window races with RAF-driven state updates that can
+   * briefly unmount the target.
+   *
+   * @param locator - The control to focus and activate.
+   */
+  async pressEnter(locator: Locator): Promise<void> {
+    await locator.focus();
+    await this.page.keyboard.press('Enter');
   }
 }

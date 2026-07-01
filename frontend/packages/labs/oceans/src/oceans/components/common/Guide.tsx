@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions, jsx-a11y/no-noninteractive-tabindex */
+import {type SxProps, Box, Typography} from '@mui/material';
 import * as React from 'react';
 import Typist from 'react-typist';
 
@@ -12,11 +12,27 @@ import I18n from '@/oceans/i18n';
 import guide from '@/oceans/models/guide';
 import soundLibrary from '@/oceans/models/soundLibrary';
 import {getState, setState} from '@/oceans/state';
+import {DIALOG_TITLE_FONT_SIZE} from '@/oceans/styles/layout';
 import {
   startTextToSpeech,
   stopTextToSpeech,
   hasTextToSpeechVoices,
 } from '@/utils/TextToSpeech';
+
+/** Padding applied to both the Typist animation box and the accessible text box. */
+const GUIDE_DIALOG_PADDING = '20px';
+
+/** Interval between keystroke sound ticks while the guide text is animating. */
+const TYPING_SOUND_INTERVAL_MS = 100;
+
+/**
+ * Whether `key` is one of the ARIA `role="button"` activation keys.
+ *
+ * @param key - `KeyboardEvent.key` value to test.
+ * @returns true for Enter, Space (' ' on modern UAs, 'Spacebar' on IE/legacy).
+ */
+const isActivationKey = (key: string): boolean =>
+  key === 'Enter' || key === ' ' || key === 'Spacebar';
 
 export const stopTypingSounds = () => {
   const state = getState();
@@ -26,60 +42,114 @@ export const stopTypingSounds = () => {
   }
 };
 
-/**
- * Map a `GuideEntry.style` value to its modifier class name.  The
- * registry's keys are typed as strings ("Info" / "Center" / etc.); we
- * mirror them here to a small registry so the lookup is type-safe.
- */
-const GUIDE_STYLE_CLASS: Record<string, string> = {
-  Info: 'ocean-guide--info',
-  Center: 'ocean-guide--center',
+/** Per-style sx overrides; default style anchors a dark scrim at the bottom. */
+const GUIDE_STYLE_SX: Record<string, SxProps> = {
+  Info: {
+    backgroundColor: 'var(--ocean-color-white)',
+    color: 'var(--ocean-color-dark-grey)',
+    transform: 'translate(-50%, -50%)',
+    top: '50%',
+    bottom: 'initial',
+    left: '50%',
+    padding: '2%',
+  },
+  Center: {
+    top: '50%',
+    left: '50%',
+    bottom: 'initial',
+    maxWidth: '47%',
+    transform: 'translate(-50%, -50%)',
+  },
 };
 
-/** Map a `GuideEntry.arrow` value to its modifier class name. */
-const GUIDE_ARROW_CLASS: Record<string, string> = {
-  BotRight: 'ocean-guide__arrow--bot-right',
-  LowerLeft: 'ocean-guide__arrow--lower-left',
-  LowerRight: 'ocean-guide__arrow--lower-right',
-  LowishRight: 'ocean-guide__arrow--lowish-right',
-  LowerCenter: 'ocean-guide__arrow--lower-center',
-  UpperRight: 'ocean-guide__arrow--upper-right',
-  UpperFarRight: 'ocean-guide__arrow--upper-far-right',
+/** Per-arrow position offsets; base position and width are applied at the call site. */
+const GUIDE_ARROW_SX: Record<string, SxProps> = {
+  BotRight: {top: '15%', right: '12.5%', transform: 'translateX(-50%)'},
+  LowerLeft: {bottom: '17%', left: '8.5%', transform: 'translateX(-50%)'},
+  LowerRight: {bottom: '17%', right: '0.75%', transform: 'translateX(-50%)'},
+  LowishRight: {bottom: '28%', right: '0.75%', transform: 'translateX(-50%)'},
+  LowerCenter: {
+    bottom: '22%',
+    left: '50.5%',
+    transform: 'translateX(-50%)',
+  },
+  UpperRight: {
+    top: '13%',
+    right: '-2%',
+    transform: 'translateX(-50%) rotate(180deg)',
+  },
+  UpperFarRight: {
+    top: '15%',
+    right: '-4.6%',
+    transform: 'translateX(-50%) rotate(180deg)',
+  },
 };
 
 class Guide extends React.Component<Record<string, never>> {
-  guideDialogRef = React.createRef<HTMLDivElement>();
-  lastFocusedGuideId: string | null = null;
+  lastGuideId: string | null = null;
 
   componentDidUpdate() {
-    // Focus the dialog only when the guide changes, not on every re-render
     const currentGuide = guide.getCurrentGuide();
-    const currentGuideId = currentGuide ? currentGuide.id : null;
-
-    if (
-      currentGuideId !== this.lastFocusedGuideId &&
-      currentGuide &&
-      this.guideDialogRef &&
-      this.guideDialogRef.current
-    ) {
-      // `focusVisible` is a non-standard option (Firefox extension) accepted
-      // by some browsers; cast since it isn't in lib.dom's FocusOptions.
-      this.guideDialogRef.current.focus({focusVisible: false} as FocusOptions);
-      this.lastFocusedGuideId = currentGuideId;
-    } else if (!currentGuide) {
-      this.lastFocusedGuideId = null;
+    const currentId = currentGuide?.id ?? null;
+    if (currentId === this.lastGuideId) return;
+    const isFirstGuideQueue = this.lastGuideId === null;
+    this.lastGuideId = currentId;
+    // Don't steal focus on the very first queue — keeps the skip link
+    // reachable on initial load.  Once the user has engaged via the
+    // skip link, subsequent guide transitions move focus normally.
+    if (isFirstGuideQueue) return;
+    // Move focus to the dialog or to the next scene control as the guide changes.
+    if (!currentGuide || currentGuide.noDimBackground) {
+      // Fall back to body when the host container isn't present.
+      const container =
+        document.getElementById('container-react') ?? document.body;
+      const target =
+        container.querySelector<HTMLElement>('[data-guide-dismiss-focus]') ??
+        container.querySelector<HTMLElement>(
+          'button:not([disabled]), [tabindex]:not([tabindex="-1"])',
+        );
+      target?.focus();
+    } else if (currentGuide.style !== 'Info') {
+      (
+        document.querySelector<HTMLElement>('dialog.guide-dialog') ?? undefined
+      )?.focus();
     }
   }
-  onTypingDone() {
-    clearInterval(
-      getState().guideTypingTimer as ReturnType<typeof setInterval>,
-    );
-    setState({guideShowing: true, guideTypingTimer: undefined});
-  }
 
-  onGuideKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === ' ' || e.key === 'Enter' || e.key === 'Spacebar') {
+  /**
+   * Overlay-only dismissal: fire onGuideClick on Enter / Space, but only when
+   * the event originated on the overlay itself.  Bubbles from the inner
+   * <dialog> are filtered out by the target check; the dialog's own handler
+   * already stops propagation on those keys.
+   *
+   * @param e - Keyboard event from the overlay Box.
+   */
+  onOverlayKeyDown = (e: React.KeyboardEvent) => {
+    if (e.target !== e.currentTarget) return;
+    if (isActivationKey(e.key)) {
       e.preventDefault();
+      this.onGuideClick();
+    }
+  };
+
+  /**
+   * Dialog dismissal + Tab trap.  Tab is swallowed when the guide is modal;
+   * Escape / Enter / Space all dismiss.  Stop propagation so the surrounding
+   * overlay's keydown guard doesn't fire a second dismissal.
+   *
+   * @param e - Keyboard event from the inner <dialog> Box.
+   */
+  onDialogKeyDown = (e: React.KeyboardEvent) => {
+    const isModal = !!(
+      guide.getCurrentGuide() && !guide.getCurrentGuide()?.noDimBackground
+    );
+    if (e.key === 'Tab' && isModal) {
+      e.preventDefault();
+      return;
+    }
+    if (e.key === 'Escape' || isActivationKey(e.key)) {
+      e.preventDefault();
+      e.stopPropagation();
       this.onGuideClick();
     }
   };
@@ -153,19 +223,29 @@ class Guide extends React.Component<Record<string, never>> {
     );
   };
 
+  onTypingDone() {
+    clearInterval(
+      getState().guideTypingTimer as ReturnType<typeof setInterval>,
+    );
+    setState({guideShowing: true, guideTypingTimer: undefined});
+  }
+
   render() {
     const state = getState();
     const currentGuide = guide.getCurrentGuide();
 
     // Background variant: hidden, info-darkened, or the default scrim.
-    let bgClassName = 'ocean-guide__bg';
-    if (currentGuide) {
-      if (currentGuide.noDimBackground) {
-        bgClassName = 'ocean-guide__bg ocean-guide__bg--hidden';
-      } else if (currentGuide.style === 'Info') {
-        bgClassName = 'ocean-guide__bg ocean-guide__bg--info';
-      }
-    }
+    const bgSx: React.ComponentProps<typeof Box>['sx'] = currentGuide
+      ? currentGuide.noDimBackground
+        ? {
+            backgroundColor: 'transparent',
+            pointerEvents: 'none',
+            borderRadius: 0,
+          }
+        : currentGuide.style === 'Info'
+          ? {backgroundColor: 'var(--ocean-color-transparent-black)'}
+          : {backgroundColor: 'rgb(0 0 0 / 30%)'}
+      : {backgroundColor: 'rgb(0 0 0 / 30%)'};
 
     // Start playing the typing sounds.
     if (
@@ -176,7 +256,7 @@ class Guide extends React.Component<Record<string, never>> {
     ) {
       const guideTypingTimer = setInterval(() => {
         soundLibrary.playSound('no', 0.5);
-      }, 1000 / 10);
+      }, TYPING_SOUND_INTERVAL_MS);
       setState({guideTypingTimer}, {skipCallback: true});
     }
 
@@ -192,56 +272,123 @@ class Guide extends React.Component<Record<string, never>> {
       !currentGuide.noDimBackground &&
       currentGuide.style !== 'Info';
 
-    const guideClassName =
-      currentGuide &&
-      currentGuide.style &&
-      GUIDE_STYLE_CLASS[currentGuide.style]
-        ? `ocean-guide ${GUIDE_STYLE_CLASS[currentGuide.style]}`
-        : 'ocean-guide';
+    const styleOverrideSx =
+      currentGuide?.style && GUIDE_STYLE_SX[currentGuide.style]
+        ? GUIDE_STYLE_SX[currentGuide.style]
+        : {};
 
-    const arrowClassName =
-      currentGuide &&
-      currentGuide.arrow &&
-      GUIDE_ARROW_CLASS[currentGuide.arrow]
-        ? `ocean-guide__arrow ${GUIDE_ARROW_CLASS[currentGuide.arrow]}`
-        : 'ocean-guide__arrow';
+    const arrowSx =
+      currentGuide?.arrow && GUIDE_ARROW_SX[currentGuide.arrow]
+        ? GUIDE_ARROW_SX[currentGuide.arrow]
+        : {};
 
     // imageStyle on a GuideEntry is one of two opaque {top,left} object
     // literals from guidesHoc / guidesK5; pass through verbatim.
     const imageStyle = currentGuide?.imageStyle;
 
+    /** True when this guide dims background and traps focus. */
+    const isModal = !!(currentGuide && !currentGuide.noDimBackground);
+
     return (
-      <div>
+      <Box>
         {currentGuide && currentGuide.image && (
-          <img
+          <Box
+            component="img"
             src={currentGuide.image}
-            className="ocean-guide__image"
-            style={imageStyle}
             alt=""
+            style={imageStyle}
+            sx={{
+              position: 'absolute',
+              bottom: '1%',
+              left: '15%',
+              zIndex: 2,
+              maxHeight: '45%',
+              maxWidth: '35%',
+            }}
           />
         )}
         {!!currentGuide && (
-          <div>
-            <div
+          <Box>
+            <Box
               key={currentGuide.id}
-              className={bgClassName}
+              role="button"
+              tabIndex={0}
+              aria-label="Dismiss guide"
               onClick={this.onGuideClick}
-              id="uitest-dismiss-guide"
+              onKeyDown={this.onOverlayKeyDown}
+              sx={[
+                {
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  borderRadius: '10px',
+                },
+                bgSx,
+              ]}
             >
-              <div
-                aria-labelledby="guide-heading"
+              {/* Use <dialog open>, not showModal(): the top layer would escape the canvas-relative coords. */}
+              <Box
+                id="oceans-guide"
+                component="dialog"
+                {...({
+                  open: true,
+                } as React.DialogHTMLAttributes<HTMLDialogElement>)}
+                role="dialog"
+                aria-labelledby={
+                  currentGuide.style === 'Info' ? 'guide-heading' : undefined
+                }
+                aria-label={
+                  currentGuide.style !== 'Info'
+                    ? currentGuide.textFn(getState())
+                    : undefined
+                }
+                aria-modal={isModal || undefined}
+                // Programmatic focus only; keep it out of the natural Tab order.
                 tabIndex={-1}
-                className={`guide-dialog ${guideClassName}`}
+                className="guide-dialog"
+                onKeyDown={this.onDialogKeyDown}
+                sx={
+                  {
+                    position: 'absolute',
+                    backgroundColor: 'var(--ocean-color-transparent-black)',
+                    color: 'var(--ocean-color-white)',
+                    borderRadius: '5px',
+                    maxWidth: '80%',
+                    bottom: '2%',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    // Reset UA <dialog> defaults.
+                    margin: 0,
+                    padding: 0,
+                    border: 'none',
+                    maxHeight: 'none',
+                    overflow: 'visible',
+                    ...styleOverrideSx,
+                  } as SxProps
+                }
               >
-                <div>
+                <Box>
                   {currentGuide.style === 'Info' && (
-                    <div id="guide-heading" className="ocean-guide__heading">
+                    <Typography
+                      id="guide-heading"
+                      sx={{
+                        fontSize: DIALOG_TITLE_FONT_SIZE,
+                        color: 'var(--ocean-color-dark-grey)',
+                        paddingBottom: '5%',
+                        textAlign: 'center',
+                      }}
+                    >
                       {I18n.t('didYouKnow')}
-                    </div>
+                    </Typography>
                   )}
 
                   {/* Visible Typist animation for sighted users */}
-                  <div className="ocean-guide__typing-text" aria-hidden="true">
+                  <Box
+                    sx={{position: 'absolute', padding: GUIDE_DIALOG_PADDING}}
+                    aria-hidden="true"
+                  >
                     <Typist
                       avgTypingDelay={35}
                       stdTypingDelay={15}
@@ -250,57 +397,102 @@ class Guide extends React.Component<Record<string, never>> {
                     >
                       {currentGuide.textFn(getState())}
                     </Typist>
-                  </div>
+                  </Box>
 
-                  <div
-                    className={
+                  <Box
+                    sx={
                       currentGuide.style === 'Info'
-                        ? 'ocean-guide__final-text-container--info'
+                        ? {
+                            backgroundColor: 'var(--ocean-color-light-grey)',
+                            borderRadius: '10px',
+                          }
                         : undefined
                     }
                   >
-                    <div
-                      ref={this.guideDialogRef}
+                    <Box
                       aria-live="polite"
-                      tabIndex={0}
-                      onKeyDown={this.onGuideKeyDown}
-                      className="ocean-guide__final-text"
+                      aria-atomic="true"
+                      sx={{
+                        padding: GUIDE_DIALOG_PADDING,
+                        // Invisible sibling sizes the dialog; aria-live announces the text.
+                        color: 'transparent',
+                        userSelect: 'none',
+                        pointerEvents: 'none',
+                      }}
                     >
                       {currentGuide.textFn(getState())}
-                    </div>
-                  </div>
+                    </Box>
+                  </Box>
+
                   {renderClickToContinueReminder && (
-                    <div className="ocean-guide__continue-reminder">
-                      <img
+                    <Box
+                      sx={{
+                        position: 'absolute',
+                        right: '1%',
+                        bottom: 0,
+                        width: '5%',
+                        minWidth: '25px',
+                        height: '15px',
+                        animation:
+                          '0.25s ease-in 4s 1 normal backwards running fadein',
+                      }}
+                    >
+                      <Box
+                        component="img"
                         src={fingerClickIcon1}
                         alt=""
-                        className="ocean-guide__continue-reminder-1"
+                        sx={{width: '100%', position: 'absolute'}}
                       />
-                      <img
+                      <Box
+                        component="img"
                         src={fingerClickIcon2}
                         alt=""
-                        className="ocean-guide__continue-reminder-2"
+                        sx={{
+                          animation:
+                            '1s linear 0.5s infinite normal none running blink',
+                          width: '100%',
+                          position: 'absolute',
+                        }}
                       />
-                    </div>
+                    </Box>
                   )}
+
                   {currentGuide.style === 'Info' && (
                     <Button
-                      className="ocean-guide__info-button"
-                      onClick={() => {}}
+                      // eslint-disable-next-line jsx-a11y/no-autofocus -- sole content of a modal dialog
+                      autoFocus
+                      sx={{
+                        backgroundColor: 'var(--ocean-color-orange)',
+                        color: 'var(--ocean-color-white)',
+                        transform: 'translate(-50%)',
+                        marginLeft: '50%',
+                        marginTop: '2%',
+                        padding: '3% 7%',
+                        '&:hover': {
+                          backgroundColor: 'var(--ocean-color-orange)',
+                        },
+                      }}
+                      onClick={this.onGuideClick}
                     >
                       {I18n.t('continue')}
                     </Button>
                   )}
-                </div>
-              </div>
-            </div>
+                </Box>
+              </Box>
+            </Box>
             {currentGuide.arrow && (
-              <img src={arrowDownImage} className={arrowClassName} alt="" />
+              <Box
+                component="img"
+                src={arrowDownImage}
+                alt=""
+                sx={{position: 'absolute', width: '8%', ...arrowSx} as SxProps}
+              />
             )}
-          </div>
+          </Box>
         )}
-      </div>
+      </Box>
     );
   }
 }
+
 export default Guide;

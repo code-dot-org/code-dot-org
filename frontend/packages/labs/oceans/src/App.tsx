@@ -125,6 +125,7 @@ export default function OceansLab({
          */}
         <div
           id={OCEANS_UI_CONTAINER_ID}
+          tabIndex={-1}
           style={{
             position: 'absolute',
             top: 0,
