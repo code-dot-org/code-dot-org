@@ -10,6 +10,7 @@ export const SUPPORTED_LAB_TYPES = [
   'aichat',
   'multi',
   'match',
+  'bubbleChoice',
 ] as const;
 
 export type LabType = (typeof SUPPORTED_LAB_TYPES)[number];
@@ -24,14 +25,30 @@ export const RAILS_TYPE_BY_LAB: Record<LabType, string> = {
   aichat: 'Aichat',
   multi: 'Multi',
   match: 'Match',
+  bubbleChoice: 'BubbleChoice',
 };
 
 // Lab types whose level content is a parsed DSL text file (.multi /
-// .match under dashboard/config/scripts) rather than serialized JSON
-// properties. createOrFindLevel and updateLevelProperty have a
-// dsl_text branch for these; the per-level generators render structured
-// AI output into the DSL syntax before saving.
-export const DSL_LAB_TYPES: readonly LabType[] = ['multi', 'match'];
+// .match / .bubble_choice under dashboard/config/scripts) rather than
+// serialized JSON properties. createOrFindLevel and updateLevelProperty
+// have a dsl_text branch for these; the per-level generators render
+// structured AI output into the DSL syntax before saving.
+export const DSL_LAB_TYPES: readonly LabType[] = [
+  'multi',
+  'match',
+  'bubbleChoice',
+];
+
+// Lab types that can appear as sublevels of a Bubble Choice parent.
+// Bubble Choice can't nest inside itself, and assessment types
+// (multi/match) read poorly as "pick one activity to try", so they're
+// excluded. Keep in sync with the outline schema's sublevel enum.
+export const BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES: readonly LabType[] = [
+  'panels',
+  'weblab2',
+  'ailab',
+  'aichat',
+];
 
 // Inverse of RAILS_TYPE_BY_LAB. ScriptLevel#summarize_for_lesson_edit
 // returns level.type as the Rails STI name; convert it to AppName at the
@@ -70,6 +87,12 @@ export interface LevelSpec {
   // its own long_instructions and an exemplar, with project_template_level_name
   // pointing at the template. Empty/absent means "stand alone".
   templateGroup?: string;
+  // For bubbleChoice levels only: the nested list of sublevel cards
+  // shown as bubbles on the parent's picker page. Each sublevel is a
+  // full LevelSpec whose labType is one of BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES.
+  // Nested bubbleChoice is not allowed. Ignored for non-bubbleChoice
+  // labTypes.
+  sublevels?: LevelSpec[];
   // Set if this card represents a level already in the lesson. Carries the
   // information needed to put the level back in the same activity/section
   // on save while honouring the new order.

@@ -17,6 +17,8 @@ export const PROMPT_TAGS = {
   AICHAT_PLAN: 'lesson-gen/aichat-plan',
   MULTI_PLAN: 'lesson-gen/multi-plan',
   MATCH_PLAN: 'lesson-gen/match-plan',
+  BUBBLE_CHOICE_PLAN: 'lesson-gen/bubble-choice-plan',
+  BUBBLE_CHOICE_THUMBNAIL: 'lesson-gen/bubble-choice-thumbnail',
   SLIDES_OUTLINE: 'lesson-gen/slides-outline',
   SLIDE_PLAN: 'lesson-gen/slide-plan',
 } as const;

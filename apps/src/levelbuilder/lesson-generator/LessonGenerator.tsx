@@ -17,6 +17,12 @@ import {
   type MatchGeneration,
   type MultiGeneration,
 } from './ai/assessments';
+import {
+  BubbleChoiceGeneration,
+  generateBubbleChoiceLevel,
+  generateBubbleChoiceThumbnail,
+  renderBubbleChoiceDsl,
+} from './ai/bubbleChoice';
 import {generateLessonOutline} from './ai/outline';
 import {generatePanelsForLevel} from './ai/panels';
 import {
@@ -69,6 +75,7 @@ const LAB_LABELS = {
   aichat: 'AI Chat',
   multi: 'Multiple Choice',
   match: 'Matching',
+  bubbleChoice: 'Bubble Choice',
 } as const satisfies Record<LabType, string>;
 
 const DEFAULT_AICHAT_PRESET: AichatPresetId = 'explore';
@@ -203,6 +210,25 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         ...(level.labType === 'weblab2' && level.templateGroup
           ? {templateGroup: level.templateGroup}
           : {}),
+        // Nested sublevels are only honoured on bubbleChoice specs; the
+        // outline AI is prompted to emit them only there. Each sublevel
+        // gets a fresh client key so React can track it independently.
+        ...(level.labType === 'bubbleChoice' && level.sublevels
+          ? {
+              sublevels: level.sublevels.map(sub => ({
+                key: createUuid(),
+                id: sub.id,
+                labType: sub.labType,
+                description: sub.description,
+                generate: true,
+                ...(sub.labType === 'aichat'
+                  ? {
+                      aichatPreset: sub.aichatPreset ?? DEFAULT_AICHAT_PRESET,
+                    }
+                  : {}),
+              })),
+            }
+          : {}),
       }));
       // Drop any blank brand-new rows (the default "Add level" placeholder
       // when nothing has been typed yet) before appending the AI plan, so
@@ -239,6 +265,26 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
       if (spec.unsupportedType) continue;
       if (!spec.id.trim()) return 'Every level needs an ID.';
       if (!spec.description.trim()) return 'Every level needs a description.';
+      if (spec.labType === 'bubbleChoice') {
+        const subs = spec.sublevels ?? [];
+        if (subs.length < 2) {
+          return `Bubble Choice "${spec.id}" needs at least 2 sublevels.`;
+        }
+        const subIds = new Set<string>();
+        for (const sub of subs) {
+          if (!sub.id.trim()) {
+            return `Bubble Choice "${spec.id}" has a sublevel with no ID.`;
+          }
+          if (!sub.description.trim()) {
+            return `Bubble Choice "${spec.id}" sublevel "${sub.id}" needs a description.`;
+          }
+          const subId = sub.id.trim();
+          if (subIds.has(subId)) {
+            return `Bubble Choice "${spec.id}" has a duplicate sublevel ID "${subId}".`;
+          }
+          subIds.add(subId);
+        }
+      }
     }
     const ids = new Set<string>();
     for (const spec of levelSpecs) {
@@ -303,6 +349,104 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
     // doesn't yield anything usable, every level just runs without the
     // extra context — same as if the field were blank.
     const targetProject = await loadTargetProject(appendLog);
+
+    // Populate a freshly-created sublevel level record with content from
+    // the appropriate per-lab AI, mirroring the top-level per-spec loop
+    // but scoped to Bubble Choice sublevels. Runs during the parent's
+    // pre-plan phase, since the parent's DSL create call needs each
+    // sublevel to exist (by name) before it fires. Sublevels are
+    // limited to BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES (panels/weblab2/ailab/
+    // aichat), so we only need those four branches here.
+    const generateSublevelContent = async (
+      sub: LevelSpec,
+      subCtx: {
+        unitName?: string;
+        unitOutline?: string;
+        lessonName: string;
+        lessonOutline?: string;
+        targetProject?: string;
+        levelName: string;
+        levelDescription: string;
+        precedingLevels?: string;
+      },
+      subLevelId: number,
+      log: (line: string) => void
+    ) => {
+      const subName = subCtx.levelName;
+      if (sub.labType === 'panels') {
+        const panels = await generatePanelsForLevel(subCtx, {
+          onPlanned: count =>
+            log(`Planned ${count} panel(s) for sublevel "${subName}".`),
+          onPanelStart: (idx, count) =>
+            log(
+              `Generating image for panel ${
+                idx + 1
+              } of ${count} in "${subName}"…`
+            ),
+        });
+        log(`Saving panel data for sublevel "${subName}"…`);
+        await updatePanelsLevel(subLevelId, panels);
+      } else if (sub.labType === 'weblab2') {
+        const result = await generateWeblab2Level(subCtx);
+        log(`Saving start sources for sublevel "${subName}"…`);
+        await updateStartSources(subLevelId, result.startSources);
+        log(`Saving instructions for sublevel "${subName}"…`);
+        await updateLevelProperty(
+          subLevelId,
+          'long_instructions',
+          result.longInstructions
+        );
+        // Exemplar pass (non-fatal). Same soft-fail policy as the top-
+        // level weblab2 branch: the student-facing content is already
+        // saved by the time this runs, so a model error here only
+        // loses the teacher's solution view.
+        try {
+          log(`Generating exemplar for sublevel "${subName}"…`);
+          const exemplarSources = await generateWeblab2Exemplar(
+            subCtx,
+            result.files
+          );
+          log(`Saving exemplar for sublevel "${subName}"…`);
+          await updateExemplarSources(subLevelId, exemplarSources);
+        } catch (err) {
+          const message = err instanceof Error ? err.message : String(err);
+          log(`Warning: exemplar for sublevel "${subName}" failed: ${message}`);
+        }
+      } else if (sub.labType === 'ailab') {
+        const result = await generateAilabLevel(subCtx);
+        log(`Saving AI Lab config for sublevel "${subName}"…`);
+        await updateLevelProperty(subLevelId, 'mode', result.mode);
+        await updateLevelProperty(
+          subLevelId,
+          'dynamic_instructions',
+          result.dynamicInstructions
+        );
+        await updateLevelProperty(subLevelId, 'uses_lab2', 'true');
+        await updateLevelProperty(
+          subLevelId,
+          'long_instructions',
+          result.longInstructions
+        );
+      } else if (sub.labType === 'aichat') {
+        const presetId: AichatPresetId =
+          (sub.aichatPreset as AichatPresetId | undefined) &&
+          sub.aichatPreset! in AICHAT_PRESETS
+            ? (sub.aichatPreset as AichatPresetId)
+            : DEFAULT_AICHAT_PRESET;
+        const result = await generateAichatLevel(subCtx, presetId);
+        log(`Saving AI Chat settings for sublevel "${subName}"…`);
+        await updateLevelProperty(
+          subLevelId,
+          'aichat_settings',
+          JSON.stringify(result.aichatSettings)
+        );
+        await updateLevelProperty(
+          subLevelId,
+          'long_instructions',
+          result.longInstructions
+        );
+      }
+    };
 
     // ─── Template-group pre-pass ────────────────────────────────────
     // For each weblab2 templateGroup with ≥2 generating-non-existing
@@ -469,6 +613,17 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
         // create-first-then-save path below.
         let multiResult: MultiGeneration | undefined;
         let matchResult: MatchGeneration | undefined;
+        // Bubble Choice pre-plan: generate every sublevel level record
+        // and its content, then run the parent's AI to produce the DSL
+        // blurb + per-sublevel teasers and thumbnail prompts. Kept
+        // alongside multi/match pre-plans because BubbleChoice is
+        // DSL-defined; the parent's create call needs dsl_text.
+        let bubbleChoicePlan: BubbleChoiceGeneration | undefined;
+        const bubbleChoiceSublevelLevels: {
+          spec: LevelSpec;
+          fullName: string;
+          levelId: number;
+        }[] = [];
         let dslText: string | undefined;
         if (shouldGenerate && spec.labType === 'multi') {
           setStage('planning');
@@ -480,6 +635,52 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           appendLog(`Planning content for "${levelName}"…`);
           matchResult = await generateMatchLevel(levelCtx);
           dslText = matchResult.dslText;
+        } else if (shouldGenerate && spec.labType === 'bubbleChoice') {
+          const sublevels = spec.sublevels ?? [];
+          setStage('planning');
+          appendLog(
+            `Planning ${sublevels.length} sublevel(s) for "${levelName}"…`
+          );
+          // Generate each sublevel independently. The parent's DSL
+          // needs their names, so we materialize each Level record
+          // (via createOrFindLevel) and populate its content before
+          // running the bubble-choice AI.
+          for (const sub of sublevels) {
+            const subName = fullName(`${spec.id.trim()}-${sub.id.trim()}`);
+            const subLevel = await createOrFindLevel(sub.labType, subName);
+            const subCtx = {
+              ...levelCtx,
+              levelName: subName,
+              levelDescription: sub.description.trim(),
+            };
+            await generateSublevelContent(sub, subCtx, subLevel.id, appendLog);
+            bubbleChoiceSublevelLevels.push({
+              spec: sub,
+              fullName: subName,
+              levelId: subLevel.id,
+            });
+          }
+          appendLog(`Planning bubble-choice parent "${levelName}"…`);
+          bubbleChoicePlan = await generateBubbleChoiceLevel({
+            unitName: lesson.unitName,
+            unitOutline: lesson.unitOutline,
+            lessonName: lesson.name,
+            lessonOutline: outline.trim() || undefined,
+            targetProject,
+            parentLevelName: levelName,
+            parentDescription: spec.description.trim(),
+            members: bubbleChoiceSublevelLevels.map(m => ({
+              name: m.fullName,
+              description: m.spec.description.trim(),
+            })),
+            precedingLevels: precedingLevelsText || undefined,
+          });
+          dslText = renderBubbleChoiceDsl(
+            levelName,
+            bubbleChoicePlan.displayName,
+            bubbleChoicePlan.description,
+            bubbleChoiceSublevelLevels.map(m => m.fullName)
+          );
         }
 
         setStage('creating');
@@ -507,6 +708,8 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
               'dsl_text',
               matchResult.dslText
             );
+          } else if (bubbleChoicePlan && dslText) {
+            await updateLevelProperty(level.id, 'dsl_text', dslText);
           }
         }
 
@@ -684,6 +887,56 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
               );
             }
             generatedOutput = {match: matchResult};
+          } else if (spec.labType === 'bubbleChoice' && bubbleChoicePlan) {
+            // Parent DSL is already saved (via createOrFindLevel or the
+            // dsl_text re-PATCH above). Remaining work:
+            //   1. save the parent's long_instructions stub (author
+            //      notes; separate from the DSL's student-facing
+            //      description),
+            //   2. for each sublevel, generate + upload a thumbnail,
+            //      then save thumbnail_url + bubble_choice_description
+            //      to the sublevel level record.
+            setStage('saving-properties');
+            appendLog(`Saving instructions for "${levelName}"…`);
+            await updateLevelProperty(
+              level.id,
+              'long_instructions',
+              bubbleChoicePlan.longInstructions
+            );
+            for (let s = 0; s < bubbleChoiceSublevelLevels.length; s++) {
+              const sub = bubbleChoiceSublevelLevels[s];
+              const subPlan = bubbleChoicePlan.sublevels[s];
+              try {
+                setStage(
+                  'generating-image',
+                  `sublevel ${s + 1} of ${bubbleChoiceSublevelLevels.length}`
+                );
+                appendLog(
+                  `Generating thumbnail for sublevel "${sub.fullName}"…`
+                );
+                const thumbnailUrl = await generateBubbleChoiceThumbnail(
+                  subPlan.thumbnailPrompt,
+                  sub.fullName
+                );
+                await updateLevelProperty(
+                  sub.levelId,
+                  'thumbnail_url',
+                  thumbnailUrl
+                );
+              } catch (err) {
+                const message =
+                  err instanceof Error ? err.message : String(err);
+                appendLog(
+                  `Warning: thumbnail for sublevel "${sub.fullName}" failed: ${message}`
+                );
+              }
+              await updateLevelProperty(
+                sub.levelId,
+                'bubble_choice_description',
+                subPlan.bubbleChoiceDescription
+              );
+            }
+            generatedOutput = {bubbleChoice: bubbleChoicePlan};
           }
         }
 

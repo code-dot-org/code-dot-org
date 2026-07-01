@@ -4,6 +4,7 @@ import {Panel, PanelsLevelProperties} from '@cdo/apps/panels/types';
 import {AichatGeneration} from '../ai/aichat';
 import {AilabGeneration} from '../ai/ailab';
 import {MatchGeneration, MultiGeneration} from '../ai/assessments';
+import {BubbleChoiceGeneration} from '../ai/bubbleChoice';
 import {Weblab2Generation} from '../ai/weblab2';
 import {LabType} from '../types';
 
@@ -19,6 +20,7 @@ export interface PriorOutputByLab {
   aichat: AichatGeneration;
   multi: MultiGeneration;
   match: MatchGeneration;
+  bubbleChoice: BubbleChoiceGeneration;
 }
 
 // Per-spec content captured during a single Generate run, so each level we
@@ -263,6 +265,14 @@ export function formatPrecedingLevels(entries: PriorEntry[]): string {
       // tempt it to copy the question.
       const a = e.output.multi || e.output.match;
       if (a) lines.push(`  ${a.summary}`);
+    }
+    if (e.output?.bubbleChoice) {
+      // Bubble choice's own copy is short prose; the sublevels'
+      // per-lab content already appears elsewhere in the preceding-
+      // levels block (each sublevel is generated as its own level).
+      // Surface just the parent's summary so downstream levels know
+      // the student was offered a choice here.
+      lines.push(`  ${e.output.bubbleChoice.summary}`);
     }
     if (e.output?.aichat) {
       // aichat: a one-line summary of the bot's persona. The full

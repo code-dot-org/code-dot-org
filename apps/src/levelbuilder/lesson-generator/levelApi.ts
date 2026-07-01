@@ -149,7 +149,9 @@ export type LevelProperty =
   | 'uses_lab2'
   | 'aichat_settings'
   | 'dsl_text'
-  | 'project_template_level_name';
+  | 'project_template_level_name'
+  | 'thumbnail_url'
+  | 'bubble_choice_description';
 
 export async function updateLevelProperty(
   levelId: number,
