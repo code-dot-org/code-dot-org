@@ -1,6 +1,7 @@
 import {type Locator, type Page} from '@playwright/test';
 
 import {cssColorMatchesVar} from '../shared/colors';
+import {labLevelUrl, type LabLevelUrlParams} from '../shared/routes';
 
 import {BasePage} from './base-page';
 
@@ -17,6 +18,18 @@ export class LessonLevelPage extends BasePage {
   constructor(page: Page) {
     super(page);
     this.lessonProgress = page.locator('.header_level .react_stage');
+  }
+
+  /**
+   * Navigate to a lab level's URL, built from labLevelUrl params. Subclasses
+   * whose level type needs a readiness wait after navigation (a lab boot, a
+   * widget render, ...) should override gotoLevel to call this, then their
+   * own waitForReady. LegacyBlocklyLab.gotoLevelUrl is a different, public
+   * method (arbitrary URL string) — this one stays protected/params-based to
+   * avoid the name clash.
+   */
+  protected async navigateToLevel(params: LabLevelUrlParams): Promise<void> {
+    await this.page.goto(labLevelUrl(params), {waitUntil: 'domcontentloaded'});
   }
 
   /** Progress bubble for a 1-based level number (see progress.rb header_bubble_selector). */
