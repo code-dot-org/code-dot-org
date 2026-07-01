@@ -44,5 +44,5 @@ Scenario: Signed-out joining non-picture non-word section from sign in page goes
   Given I sign out
   Given I am on "http://studio.code.org/users/sign_in/"
   And I type the section code into "#section_code"
-  And I click ".section-sign-in button" to load a new page
+  And I click "#section_code_submit" to load a new page
   And I wait until element "a:contains(Create an account)" is visible
