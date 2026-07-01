@@ -197,15 +197,9 @@ export async function signIn(
   }
 }
 
-export interface CreateTeacherAssociatedStudentOptions {
+export type CreateTeacherAssociatedStudentOptions = {
   studentName: string;
-  /** Student age; defaults to '16'. Pass '10' for an under-13 account. */
-  age?: string;
-  /** Student US state code (e.g. 'CO'); sets country_code='US' too. See createStudent. */
-  usState?: string;
-  /** Student's ISO created_at, e.g. to place the account relative to a policy date. */
-  createdAt?: string;
-}
+} & Omit<CreateStudentOptions, 'name' | 'signInAfterCreate' | 'extraFields'>;
 
 /**
  * Create a teacher, open an email-login section, create a student, and enroll
@@ -214,7 +208,7 @@ export interface CreateTeacherAssociatedStudentOptions {
  */
 export async function createTeacherAssociatedStudent(
   page: Page,
-  {studentName, age, usState, createdAt}: CreateTeacherAssociatedStudentOptions,
+  {studentName, ...studentOpts}: CreateTeacherAssociatedStudentOptions,
 ): Promise<{sectionCode: string} & UserCredentials> {
   // createUser signs the teacher in; the /dashboardapi/sections POST needs that
   // session, so reload to pick up the teacher's CSRF token before posting.
@@ -240,7 +234,7 @@ export async function createTeacherAssociatedStudent(
 
   // createUser signs the student in, replacing the teacher session; reload to
   // pick up the student's CSRF token before enrolling via /join.
-  await createStudent(page, {name: studentName, age, usState, createdAt});
+  await createStudent(page, {name: studentName, ...studentOpts});
   await page.goto('/');
 
   const join = await requestWithCsrf(page, 'POST', `/join/${sectionCode}`);
