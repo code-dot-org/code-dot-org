@@ -1,0 +1,46 @@
+/*
+ * Chrome for the Blockly dev playground. Built from the design system: the
+ * controls are DSCO (SimpleDropdown, Toggle) and the title is MUI Typography;
+ * colors come from the design-system semantic CSS variables, switched
+ * light/dark by the `data-theme` attribute on `.app` (see Demo.tsx).
+ */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+}
+
+.header {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: flex-end;
+  gap: 24px;
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--border-neutral-secondary);
+}
+
+.title {
+  margin-right: auto;
+}
+
+.body {
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.sidebar {
+  box-sizing: border-box;
+  flex: 0 0 360px;
+  padding: 16px;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-neutral-secondary);
+}
+
+.canvas {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
+}

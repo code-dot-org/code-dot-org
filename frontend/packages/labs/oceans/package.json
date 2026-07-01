@@ -19,6 +19,11 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     },
+    "./mocks": {
+      "types": "./dist/fixtures/index.d.ts",
+      "import": "./dist/fixtures/index.mjs",
+      "require": "./dist/fixtures/index.cjs"
+    },
     "./styles.css": "./dist/oceans-lab.css"
   },
   "scripts": {
@@ -41,6 +46,7 @@
   },
   "dependencies": {
     "@code-dot-org/core": "workspace:*",
+    "@code-dot-org/lab": "workspace:*",
     "@code-dot-org/redactable-markdown": "^0.4.0",
     "@code-dot-org/svm": "^0.1.1",
     "@tensorflow-models/knn-classifier": "~1.1.0",

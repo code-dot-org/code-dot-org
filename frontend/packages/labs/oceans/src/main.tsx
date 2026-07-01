@@ -4,8 +4,8 @@ import {createRoot} from 'react-dom/client';
 import {initializeCore} from '@code-dot-org/core';
 import {localizationPlugin} from '@code-dot-org/core/plugins/localization';
 
-import OceansLab from './App';
 import {AppMode, type AppModeValue} from './oceans/constants';
+import OceansActivity from './OceansActivity';
 
 initializeCore({plugins: [localizationPlugin]});
 
@@ -105,7 +105,7 @@ function DemoShell() {
             maxWidth: 1280,
           }}
         >
-          <OceansLab
+          <OceansActivity
             appMode={appMode}
             guides={params.get('guides') ?? undefined}
             textToSpeechLocale={params.get('tts') ?? undefined}

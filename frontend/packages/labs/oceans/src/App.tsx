@@ -1,139 +1,73 @@
-import {useCallback, useEffect, useRef} from 'react';
+import {useCallback} from 'react';
 
-// Scene styles live in CSS classes — pull them in here so the lab works
-// in any consumer (standalone dev harness, library build, studio embed)
-// without each consumer having to remember to import the CSS separately.
-import './oceans/styles/scenes.css';
+import {registerLevelKindSchema} from '@code-dot-org/core/api';
+import type {LevelPropertiesMap} from '@code-dot-org/core/api';
+import {Lab, continueOrFinishLesson} from '@code-dot-org/lab';
+import {useMaybeLevelProperties} from '@code-dot-org/lab/contexts';
+import {useAppDispatch} from '@code-dot-org/lab/redux';
 
-import {
-  AppMode,
-  type AppModeValue,
-  OCEANS_UI_CONTAINER_ID,
-} from './oceans/constants';
-import {initAll, stopUIRerender} from './oceans/init';
-import Sounds from './oceans/Sounds';
+import OceansActivity from './OceansActivity';
+import {LevelKindSchema} from './schema';
+import type {OceansLevelProperties} from './schema';
 
-/** Props for the OceansLab React component. */
+// Register the oceans level kind so appMode/guides/textToSpeechLocale survive
+// level-properties validation (zod strips unknown keys otherwise).
+registerLevelKindSchema('oceans', LevelKindSchema);
+
+/**
+ * Host-supplied props for the oceans entrypoint. AI for Oceans is a no-sources
+ * lab, so it needs only the base `<Lab>` host props — no project, app options,
+ * or external-load management. (Mirrors the base `LabProps` host fields; the
+ * `<Lab {...props}>` site below type-checks them against `Lab`'s signature.)
+ */
 export interface OceansLabProps {
-  /** One of the AppMode values (e.g. 'fishvtrash'). Defaults to FishVTrash. */
-  appMode?: AppModeValue;
-  /** Guide key for the on-screen guide sequence (e.g. 'K5'). */
-  guides?: string;
-  /** BCP-47 locale for text-to-speech (e.g. 'en'). */
-  textToSpeechLocale?: string;
-  /** Called when the user advances past the current activity. */
-  onContinue?: () => void;
+  /** Whether the host is still resolving level properties. */
+  isLoading: boolean;
+  /** Current level id (host-resolved; for standalone projects, the map's first key). */
+  levelId?: string;
+  /** Standalone project type, when not a particular level. */
+  standaloneProjectType?: string;
+  /** Channel id for the project. */
+  channelId?: string;
+  /** Resolved level-properties map (host-fetched). */
+  levelPropertiesMap?: LevelPropertiesMap;
 }
 
 /**
- * OceansLab mounts the AI for Oceans activity into two canvas elements and
- * calls initAll imperatively. Consumers can pass appMode and onContinue to
- * control which activity runs and what happens when the user completes it.
+ * Reads the resolved oceans level properties and renders the activity. Falls
+ * back to OceansActivity's own defaults (FishVTrash) when no level properties
+ * are present yet — e.g. before the host supplies them.
  */
-export default function OceansLab({
-  appMode = AppMode.FishVTrash,
-  guides,
-  textToSpeechLocale,
-  onContinue,
-}: OceansLabProps) {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const backgroundCanvasRef = useRef<HTMLCanvasElement>(null);
-  // Sounds is exported from a `@ts-nocheck` module (PR 1 verbatim) so it
-  // surfaces as `any`; pin the ref through the constructable form.
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const soundsRef = useRef<any>(null);
+function OceansActivityFromLevel() {
+  const levelProperties = useMaybeLevelProperties<OceansLevelProperties>();
+  const dispatch = useAppDispatch();
 
-  // Stable ref so onContinue identity changes never retrigger initAll.
-  const onContinueRef = useRef(onContinue);
-  onContinueRef.current = onContinue;
+  // Advancing past the activity hands off to base lesson progression: send a
+  // success report and continue to the next level (or finish the lesson).
+  const onContinue = useCallback(() => {
+    dispatch(continueOrFinishLesson());
+  }, [dispatch]);
 
-  // Wrapper with a stable identity for the initAll dependency array.
-  const stableOnContinue = useCallback(() => {
-    onContinueRef.current?.();
-  }, []);
-
-  useEffect(() => {
-    if (!soundsRef.current) {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      soundsRef.current = new (Sounds as any)();
-    }
-    const sounds = soundsRef.current;
-
-    initAll({
-      appMode,
-      guides,
-      textToSpeechLocale,
-      onContinue: stableOnContinue,
-      canvas: canvasRef.current as HTMLCanvasElement,
-      backgroundCanvas: backgroundCanvasRef.current as HTMLCanvasElement,
-      playSound: sounds.play.bind(sounds),
-      registerSound: sounds.register.bind(sounds),
-    });
-
-    // Stop the canvas RAF loop on cleanup, but leave the React UI root alive.
-    // Unmounting the root here triggers React's "synchronously unmount during
-    // render" warning under StrictMode's double-invoke cycle — the deferred
-    // unmount then clears the container after the second initAll, leaving the
-    // UI empty. The root is safely orphaned when the container DOM node is
-    // removed on true component unmount.
-    return stopUIRerender;
-  }, [appMode, guides, textToSpeechLocale, stableOnContinue]);
-
-  // 16:9 responsive wrapper — padding-top 56.25% creates the aspect-ratio box.
-  // Canvas JS resolution is set to 1024×576 by initAll; CSS width/height 100%
-  // scales them to fill whatever space the studio (or any other consumer) gives us.
   return (
-    <div style={{width: '100%', position: 'relative', paddingTop: '56.25%'}}>
-      <div
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-        }}
-      >
-        <canvas
-          id="background-canvas"
-          ref={backgroundCanvasRef}
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            borderRadius: 10,
-          }}
-        />
-        <canvas
-          id="activity-canvas"
-          ref={canvasRef}
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            borderRadius: 10,
-          }}
-        />
-        {/*
-         * renderUI() in init.tsx mounts a second React root here via createRoot.
-         * Must be a sibling of the canvases — createRoot evicts all existing
-         * children of its container, so nesting canvases inside would remove
-         * them from the DOM on first render.
-         */}
-        <div
-          id={OCEANS_UI_CONTAINER_ID}
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-          }}
-        />
-      </div>
-    </div>
+    <OceansActivity
+      appMode={levelProperties?.appMode}
+      guides={levelProperties?.guides}
+      textToSpeechLocale={levelProperties?.textToSpeechLocale}
+      onContinue={onContinue}
+    />
+  );
+}
+
+/**
+ * The oceans lab entrypoint, built on the base `@code-dot-org/lab` package. The
+ * host (studio) provides the redux store and level data; `<Lab>` sets up
+ * theming and the level-properties context that {@link OceansActivityFromLevel}
+ * reads to configure the activity.
+ */
+export default function OceansLab(props: OceansLabProps) {
+  return (
+    <Lab {...props}>
+      <OceansActivityFromLevel />
+    </Lab>
   );
 }
