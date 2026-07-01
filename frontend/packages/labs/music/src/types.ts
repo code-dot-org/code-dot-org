@@ -49,7 +49,6 @@ export interface MusicLevelData {
 
 export interface MusicData {
   startBlocks?: BlocklySerialization;
-  toolboxBlocks?: Blockly.utils.toolbox.ToolboxInfo;
   // Top-level music fields from `MusicLevelPropertiesSchema`, kept in sync with
   // the validation schema (all have schema defaults, so optional here).
   preloadAssetList?: boolean;

@@ -1,7 +1,7 @@
 import type * as Blockly from 'blockly/core';
 import {describe, expect, it} from 'vitest';
 
-import {buildToolbox} from '../index';
+import {buildToolbox, toolboxFromCategoryBlocks} from '../index';
 
 /*
  * buildToolbox is a pure transform from our simplified toolbox config into the
@@ -71,5 +71,39 @@ describe('buildToolbox', () => {
         {kind: 'block', type: 'text_print'},
       ],
     });
+  });
+});
+
+describe('toolboxFromCategoryBlocks', () => {
+  it('builds categories from the spec, names taken as given', () => {
+    const result = toolboxFromCategoryBlocks(
+      {Play: ['play_sound'], 'My Bespoke': ['repeat', 'when_run']},
+      'category',
+    );
+    expect(result).toEqual([
+      {name: 'Play', blocks: ['play_sound']},
+      {name: 'My Bespoke', blocks: ['repeat', 'when_run']},
+    ]);
+  });
+
+  it('flattens all blocks into a single flyout', () => {
+    const result = toolboxFromCategoryBlocks(
+      {Play: ['play_sound', 'play_pattern']},
+      'flyout',
+    );
+    expect(result).toEqual({name: '', blocks: ['play_sound', 'play_pattern']});
+  });
+
+  it('defaults to a category toolbox', () => {
+    const result = toolboxFromCategoryBlocks({Play: ['play_sound']});
+    expect(result).toEqual([{name: 'Play', blocks: ['play_sound']}]);
+  });
+
+  it('skips categories mapped to undefined', () => {
+    const result = toolboxFromCategoryBlocks(
+      {Play: ['play_sound'], Empty: undefined},
+      'category',
+    );
+    expect(result).toEqual([{name: 'Play', blocks: ['play_sound']}]);
   });
 });

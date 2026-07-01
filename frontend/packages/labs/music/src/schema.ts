@@ -18,7 +18,6 @@ export const LevelDataSchema = z.object({
  */
 export const MusicLevelPropertiesSchema = z.object({
   startBlocks: z.record(z.string(), z.unknown()).optional(),
-  toolboxBlocks: z.record(z.string(), z.unknown()).optional(),
   preloadAssetList: z
     .boolean()
     .nullable()

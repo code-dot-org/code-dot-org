@@ -22,7 +22,7 @@ import Timeline from '../Timeline';
 import HeaderButtons from '../HeaderButtons';
 import PackDialog from '../PackDialog';
 import ResourcePanel from '@code-dot-org/lab/resourcePanel';
-import toolboxes from '../../blockly/toolbox';
+import {getToolbox} from '../../blockly/toolbox';
 
 import ExemplarPlayerView from '../ExemplarPlayerView';
 
@@ -35,8 +35,6 @@ import {labActions} from '@code-dot-org/lab/redux';
 import type {Trigger, MusicLevelProperties} from '../../types';
 
 import moduleStyles from './musicLab.module.scss';
-
-const DEFAULT_TOOLBOX = toolboxes[BlockMode.SIMPLE2];
 
 const exemplarPlayerInsideInstructions =
   AppConfig.getValue('exemplar-player-bottom') !== 'true';
@@ -134,9 +132,7 @@ const MusicLab = () => {
     () =>
       levelProperties.multipleChoice
         ? undefined
-        : (levelProperties.toolboxBlocks?.contents?.length || 0) === 0
-          ? DEFAULT_TOOLBOX
-          : levelProperties.toolboxBlocks,
+        : getToolbox(BlockMode.SIMPLE2, levelProperties.levelData?.toolbox),
     [levelProperties],
   );
 

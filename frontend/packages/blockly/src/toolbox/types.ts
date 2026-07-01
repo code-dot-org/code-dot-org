@@ -51,3 +51,12 @@ export type Toolbox =
   | ToolboxCategory[]
   // Flyout is just a single category
   | ToolboxFlyout;
+
+/**
+ * A level-defined toolbox: category name -> the block types that category
+ * contains. The names may match existing categories or be bespoke; the blocks
+ * are drawn from the shared block pool. See {@link toolboxFromCategoryBlocks}.
+ */
+export type CategoryBlocks = {
+  [categoryName: string]: readonly string[] | undefined;
+};
