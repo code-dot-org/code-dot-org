@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Craft Integration Test Harness</title>
+    <!-- phaser-ce must load as UMD to set window.PIXI + window.Phaser -->
+    <script>window.PhaserGlobal = { disableAudio: true, disableWebAudio: true, hideBanner: true };</script>
+    <script src="/phaser.js"></script>
+  </head>
+  <body>
+    <div id="phaser-game" style="width: 400px; height: 400px"></div>
+    <script type="module" src="./integration-harness.ts"></script>
+  </body>
+</html>
