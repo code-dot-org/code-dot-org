@@ -1208,9 +1208,10 @@ $height-to-width: math.div(434, 477);
     }
   }
 
-  #puzzleRatingButtons a:hover.puzzle-rating-btn {
+  #puzzleRatingButtons .puzzle-rating-btn:hover {
     background: none !important;
     fill: white !important;
+    box-shadow: none !important;
   }
 
   p {
