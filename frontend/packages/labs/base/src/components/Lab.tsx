@@ -7,10 +7,7 @@ import {injectFontAwesome} from '@code-dot-org/fonts';
 import {progressActions} from '@code-dot-org/progress/redux';
 
 import {ExtraLinksButtonProvider} from '../contexts/ExtraLinksButtonContext';
-import {
-  LevelPropertiesProvider,
-  FetchedLevelPropertiesProvider,
-} from '../contexts/LevelPropertiesContext';
+import {LevelPropertiesProvider} from '../contexts/LevelPropertiesContext';
 import {useAppDispatch} from '../redux/store';
 
 import Loading from './Loading';
@@ -51,13 +48,9 @@ export interface LabProps extends PropsWithChildren {
   levelId?: string;
   /** The standalone project type, if not a particular level */
   standaloneProjectType?: string;
-  /** Optionally, a channel id for a standalone level */
-  channelId?: string;
   /**
-   * Resolved level-properties map, supplied by the host. When present, the
-   * package does not fetch it (and reads no progress fetch params); when
-   * absent, the package fetches it itself via {@link FetchedLevelPropertiesProvider}
-   * (transitional, until the studio host owns this).
+   * Resolved level-properties map, supplied by the host. The package performs
+   * no level-properties fetching of its own.
    */
   levelPropertiesMap?: LevelPropertiesMap;
 }
@@ -100,17 +93,10 @@ const Lab = ({
         <ThemeProvider>
           {/* Supports extra links buttons and toggling */}
           <ExtraLinksButtonProvider>
-            {/* Host-supplied level properties are used directly; otherwise the
-                package fetches them (transitional). */}
-            {levelPropertiesMap ? (
-              <LevelPropertiesProvider levelPropertiesMap={levelPropertiesMap}>
-                {labContent}
-              </LevelPropertiesProvider>
-            ) : (
-              <FetchedLevelPropertiesProvider>
-                {labContent}
-              </FetchedLevelPropertiesProvider>
-            )}
+            {/* The host supplies the resolved level-properties map. */}
+            <LevelPropertiesProvider levelPropertiesMap={levelPropertiesMap}>
+              {labContent}
+            </LevelPropertiesProvider>
           </ExtraLinksButtonProvider>
         </ThemeProvider>
       )}

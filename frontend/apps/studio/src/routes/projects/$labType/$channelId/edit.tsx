@@ -1,10 +1,11 @@
 import {createFileRoute, notFound} from '@tanstack/react-router';
 import {Suspense} from 'react';
 
+import {LabHost} from '@code-dot-org/lab';
+
 import LabProviders from '@/modules/labs/LabProviders';
 import {getLabEntrypoint} from '@/modules/labs/router/getLabEntrypoint';
 import {getLabFixtures} from '@/modules/labs/router/getLabFixtures';
-import StudioLabHost from '@/modules/labs/StudioLabHost';
 
 // `createFileRoute` automatically sets the route's id and path based on the file path
 // There is no need to manually edit this, it is done via the Tanstack Router Vite plugin
@@ -47,13 +48,13 @@ function RouteComponent() {
 
   // Every `@code-dot-org/lab`-based lab mounts the same way: the studio host
   // provides the data-provider stack (`LabProviders`) and drives the
-  // host-owned load (`StudioLabHost`), then renders the lab's own entrypoint.
-  // The lab supplies the lab-specific bits itself, so there is no per-lab
-  // studio container.
+  // host-owned load (the shared `LabHost`), then renders the lab's own
+  // entrypoint. The lab supplies the lab-specific bits itself, so there is no
+  // per-lab studio container.
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <LabProviders>
-        <StudioLabHost
+        <LabHost
           LabEntrypoint={LabEntrypoint}
           standaloneProjectType={labType}
           channelId={channelId}

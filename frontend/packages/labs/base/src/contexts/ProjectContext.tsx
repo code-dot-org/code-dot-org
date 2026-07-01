@@ -3,10 +3,8 @@ import {createContext, useContext, useEffect} from 'react';
 
 import type {AppOptions, LevelProperties} from '@code-dot-org/core/api';
 import {useApiClient, useQueryClient} from '@code-dot-org/core/api';
-import {progressActions} from '@code-dot-org/progress/redux';
 
 import useLifecycleNotifier from '../hooks/useLifecycleNotifier';
-import {useLoadAppOptions} from '../hooks/useLoadAppOptions';
 import LabRegistry from '../LabRegistry';
 import {LifecycleEvent} from '../LifecycleNotifier';
 import {labActions, labProjectActions} from '../redux';
@@ -62,9 +60,8 @@ export interface UseLoadLabInput {
  * from context; everything else is supplied explicitly by the caller.
  *
  * This is the host seam for "studio dispatches explicitly": the host resolves
- * the inputs and calls this hook directly. The package's transitional
- * {@link StoreDrivenProjectLoader} calls it from store-derived values until the
- * host takes over.
+ * the inputs and calls this hook directly. The package does no project loading
+ * of its own.
  */
 export const useLoadLab = ({
   levelProperties,
@@ -120,75 +117,13 @@ export const useLoadLab = ({
 };
 
 /**
- * Transitional in-package loader: gathers the load inputs from `state.progress`
- * (and the package's own app-options fetch) and drives the load via
- * {@link useLoadLab}. Rendered by {@link ProjectProvider} unless the host opts
- * to manage loading itself. Remove once the studio host calls `useLoadLab` with
- * explicit inputs.
+ * Holds the current project data and metadata. The host owns the project load
+ * (it calls {@link useLoadLab} with explicit inputs); this provider only
+ * reflects the resulting redux state.
  */
-const StoreDrivenProjectLoader = ({
-  channelId,
-  appOptions,
-}: {
-  channelId?: string;
-  appOptions?: AppOptions;
-}) => {
-  const levelProperties = useMaybeLevelProperties();
-  // Host-supplied app options are used directly; otherwise fetch them.
-  const {appOptions: fetchedAppOptions} = useLoadAppOptions({
-    enabled: !appOptions,
-  });
-  const resolvedAppOptions = appOptions ?? fetchedAppOptions;
+export type ProjectProviderProps = PropsWithChildren;
 
-  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
-  const userId = useAppSelector(
-    state => state.progress.viewAsUserId || undefined,
-  );
-  const scriptId = useAppSelector(
-    state => state.progress.scriptId || undefined,
-  );
-  const userAppOptionsPath = useAppSelector(
-    progressActions.getUserAppOptionsPath,
-  );
-
-  useLoadLab({
-    levelProperties,
-    appOptions: resolvedAppOptions,
-    levelId: currentLevelId,
-    userId,
-    scriptId,
-    userAppOptionsPath,
-    channelId,
-  });
-
-  return null;
-};
-
-export interface ProjectProviderProps extends PropsWithChildren {
-  /** Channel ID for the project, if already known. Used for standalone projects and projects without levels. */
-  channelId?: string;
-  /**
-   * Resolved app options, supplied by the host. Forwarded to the transitional
-   * loader; when present the package does not fetch them.
-   */
-  appOptions?: AppOptions;
-  /**
-   * When true, the package does not drive the project load itself; the host is
-   * responsible for calling {@link useLoadLab} with explicit inputs. Defaults
-   * to false (transitional in-package loading via {@link StoreDrivenProjectLoader}).
-   */
-  manageLoadExternally?: boolean;
-}
-
-/**
- * Holds the current project data and metadata.
- */
-export const ProjectProvider = ({
-  channelId,
-  appOptions,
-  manageLoadExternally = false,
-  children,
-}: ProjectProviderProps) => {
+export const ProjectProvider = ({children}: ProjectProviderProps) => {
   const levelProperties = useMaybeLevelProperties();
 
   const isStandaloneProjectLevel = !!levelProperties?.isProjectLevel;
@@ -278,12 +213,6 @@ export const ProjectProvider = ({
         isStandaloneProjectLevel,
       }}
     >
-      {!manageLoadExternally && (
-        <StoreDrivenProjectLoader
-          channelId={channelId}
-          appOptions={appOptions}
-        />
-      )}
       {children}
     </ProjectContext.Provider>
   );

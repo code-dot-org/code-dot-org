@@ -17,7 +17,7 @@ import {
 } from '@code-dot-org/core/api';
 import {localizationPlugin} from '@code-dot-org/core/plugins/localization';
 import {injectFontAwesome} from '@code-dot-org/fonts';
-import {RootStateProvider} from '@code-dot-org/lab';
+import {LabHost, RootStateProvider} from '@code-dot-org/lab';
 
 // Import lab CSS variables (borders, z-indices, etc.)
 import '@code-dot-org/lab/styles/variables.scss';
@@ -65,14 +65,16 @@ await enableMocks();
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     {/* Host-provided stack: shared redux store, react-query, and API client —
-        the same providers the studio host supplies around a lab. */}
+        the same providers the studio host supplies around a lab. `LabHost`
+        drives the load exactly as studio does, so this harness exercises the
+        real host path. */}
     <RootStateProvider>
       <QueryClientProvider>
         <ApiClientProvider client={DashboardApiClient}>
-          <App
+          <LabHost
+            LabEntrypoint={App}
             standaloneProjectType="music"
             channelId={channelId}
-            isLoading={false}
           />
         </ApiClientProvider>
       </QueryClientProvider>

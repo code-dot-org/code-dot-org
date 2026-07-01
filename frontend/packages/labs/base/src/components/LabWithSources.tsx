@@ -1,4 +1,4 @@
-import type {AppOptions, LevelProperties} from '@code-dot-org/core/api';
+import type {LevelProperties} from '@code-dot-org/core/api';
 
 import {useMaybeLevelProperties} from '../contexts/LevelPropertiesContext';
 import {ProjectProvider} from '../contexts/ProjectContext';
@@ -29,16 +29,6 @@ export interface LabWithSourcesProps<
   startOverMessage?: string;
   /** A transformer to parse the sources into the typed ProjectSources form expected */
   transform?: (projectSources: ProjectSources<U>) => ProjectSources<U>;
-  /**
-   * Resolved app options, supplied by the host. When present, the package does
-   * not fetch them; when absent, it fetches them itself (transitional).
-   */
-  appOptions?: AppOptions;
-  /**
-   * When true, the host drives the project load itself (calling `useLoadLab`);
-   * the package will not load from store-derived values. Transitional.
-   */
-  manageLoadExternally?: boolean;
 }
 
 const LabWithSourcesWrapper = <
@@ -50,9 +40,6 @@ const LabWithSourcesWrapper = <
   getInitialSources,
   startOverSources,
   startOverMessage,
-  channelId,
-  appOptions,
-  manageLoadExternally,
   transform,
   children,
 }: LabWithSourcesProps<T, U>) => {
@@ -68,13 +55,7 @@ const LabWithSourcesWrapper = <
       defaultStartOverMessage={startOverMessage}
       transform={transform}
     >
-      <ProjectProvider
-        channelId={channelId}
-        appOptions={appOptions}
-        manageLoadExternally={manageLoadExternally}
-      >
-        {children}
-      </ProjectProvider>
+      <ProjectProvider>{children}</ProjectProvider>
     </SourcesProvider>
   ) : undefined;
 };

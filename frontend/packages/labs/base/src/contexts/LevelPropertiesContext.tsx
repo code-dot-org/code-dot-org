@@ -1,7 +1,6 @@
 import type {PropsWithChildren} from 'react';
 import {createContext, useContext, useMemo} from 'react';
 
-import {useLoadLevelProperties} from '../hooks/useLoadLevelProperties';
 import {useAppSelector} from '../redux/store';
 import type {LevelProperties, LevelPropertiesMap} from '@code-dot-org/core/api';
 
@@ -49,8 +48,6 @@ export const useMaybeLevelProperties = <
  * This provider is pure: the host supplies the resolved `levelPropertiesMap`.
  * It performs no fetching and reads nothing from `state.progress` other than
  * the host-set `currentLevelId` used to select the current level from the map.
- * Hosts that want the package to fetch the map for them can wrap with
- * {@link FetchedLevelPropertiesProvider} instead.
  */
 export const LevelPropertiesProvider = ({
   levelPropertiesMap,
@@ -71,24 +68,6 @@ export const LevelPropertiesProvider = ({
     >
       {children}
     </LevelPropertiesContext.Provider>
-  );
-};
-
-/**
- * Transitional fetching wrapper: resolves the level-properties map inside the
- * package (keyed off `state.progress`) and feeds it to the pure provider. Used
- * when the host has not yet taken ownership of level-properties loading. Once
- * the studio host resolves and supplies the map to `<Lab>`, this and
- * {@link useLoadLevelProperties} can be removed.
- */
-export const FetchedLevelPropertiesProvider = ({
-  children,
-}: PropsWithChildren) => {
-  const levelPropertiesMap = useLoadLevelProperties();
-  return (
-    <LevelPropertiesProvider levelPropertiesMap={levelPropertiesMap}>
-      {children}
-    </LevelPropertiesProvider>
   );
 };
 

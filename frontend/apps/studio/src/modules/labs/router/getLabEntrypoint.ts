@@ -1,7 +1,8 @@
 import {lazy, type ComponentType, type LazyExoticComponent} from 'react';
 
+import type {LabEntrypointProps} from '@code-dot-org/lab';
+
 import {isLab, LAB_REGISTRY, type Lab} from '@/modules/labs/config/labs';
-import type {LabEntrypointProps} from '@/modules/labs/types/labEntrypoint';
 
 // Pre-build one lazy component per registered lab, created once at module load
 // so navigating back to a lab reuses the same component (no remount). Each
@@ -17,7 +18,7 @@ const LabEntrypoints = Object.fromEntries(
 /**
  * Resolves the lazy-loaded entrypoint component for a lab type. The component
  * is the lab package's own default export (e.g. `@code-dot-org/music-lab`),
- * rendered by the host through `StudioLabHost`.
+ * rendered by the host through the shared `LabHost`.
  * @param labType - The `$labType` route segment.
  * @returns The lab's lazy entrypoint component, or undefined if unrecognized.
  */

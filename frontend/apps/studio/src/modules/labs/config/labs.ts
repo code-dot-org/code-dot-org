@@ -1,8 +1,7 @@
 import type {ComponentType} from 'react';
 
 import type {LabFixtures} from '@code-dot-org/core/api/mocks';
-
-import type {LabEntrypointProps} from '@/modules/labs/types/labEntrypoint';
+import type {LabEntrypointProps} from '@code-dot-org/lab';
 
 /** A lazily-loaded `./mocks` module: a default and/or named `<Lab>Fixtures`. */
 type LabFixturesModule = {

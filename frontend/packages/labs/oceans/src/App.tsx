@@ -27,8 +27,6 @@ export interface OceansLabProps {
   levelId?: string;
   /** Standalone project type, when not a particular level. */
   standaloneProjectType?: string;
-  /** Channel id for the project. */
-  channelId?: string;
   /** Resolved level-properties map (host-fetched). */
   levelPropertiesMap?: LevelPropertiesMap;
 }
