@@ -38,6 +38,7 @@ require_relative '../../../deployment'
 raise "Unsupported environment: #{rack_env}" unless rack_env?(:production)
 
 require_relative '../../../lib/cdo/redshift'
+require_relative '../../../lib/cdo/aws/ec2'
 
 start_time = Time.now
 puts "Loading Rails environment..."
