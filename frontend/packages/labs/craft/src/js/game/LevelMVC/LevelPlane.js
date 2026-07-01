@@ -1,17 +1,9 @@
-const LevelBlock = require("./LevelBlock.js");
-const {
-  North,
-  South,
-  East,
-  West,
-  opposite,
-  turnDirection,
-  turn,
-  directionToRelative
-} = require("./FacingDirection.js");
+import LevelBlock from './LevelBlock';
+import FacingDirection from './FacingDirection';
+import Position from './Position';
+import AdjacencySet from './AdjacencySet';
 
-const Position = require("./Position");
-const AdjacencySet = require("./AdjacencySet");
+const { North, South, East, West, opposite, turnDirection, turn, directionToRelative } = FacingDirection;
 
 const connectionName = function (connection) {
   switch (connection) {
@@ -44,7 +36,7 @@ const PoweredRailConnectionPriority = [
   [East, West], [East, West], [East, West], [East, West],
 ];
 
-module.exports = class LevelPlane {
+export default class LevelPlane {
   constructor(planeData, width, height, levelModel, planeType) {
     this._data = [];
     this.width = width;
@@ -389,7 +381,6 @@ module.exports = class LevelPlane {
         return a || b;
       });
 
-
       // Look up what type of connection to create, based on the surrounding tracks.
       [block.connectionA, block.connectionB] = priority[mask];
     }
@@ -611,7 +602,6 @@ module.exports = class LevelPlane {
     const workingPosition = Position.add(position, offset);
     return this.checkEntityConflict(workingPosition);
   }
-
 
   /**
    * Deactivates a piston at a given position by determining what the arm

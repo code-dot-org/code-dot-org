@@ -1,6 +1,6 @@
-const BaseCommand = require("./BaseCommand.js");
+import BaseCommand from './BaseCommand';
 
-module.exports = class MoveForwardCommand extends BaseCommand {
+export default class MoveForwardCommand extends BaseCommand {
   constructor(gameController, highlightCallback, targetEntity, onFinish) {
     super(gameController, highlightCallback, targetEntity, onFinish);
   }

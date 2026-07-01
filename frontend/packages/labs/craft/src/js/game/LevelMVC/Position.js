@@ -1,4 +1,4 @@
-const FacingDirection = require("./FacingDirection");
+import FacingDirection from './FacingDirection';
 
 const directions = [
   FacingDirection.North,
@@ -7,7 +7,7 @@ const directions = [
   FacingDirection.West
 ];
 
-module.exports = class Position {
+export default class Position {
 
   constructor(x, y) {
     this.x = x;

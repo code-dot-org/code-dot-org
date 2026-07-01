@@ -1,4 +1,5 @@
-module.exports = class AssetLoader {
+// @ts-nocheck -- untyped JS renamed to .ts for progressive adoption
+export default class AssetLoader {
   constructor(controller) {
     this.controller = controller;
     this.audioPlayer = controller.audioPlayer;

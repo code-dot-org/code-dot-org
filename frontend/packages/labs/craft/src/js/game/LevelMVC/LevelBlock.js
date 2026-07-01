@@ -1,11 +1,6 @@
-const {
-  North,
-  South,
-  East,
-  West,
-} = require("./FacingDirection.js");
-
-module.exports = class LevelBlock {
+import FacingDirection from './FacingDirection';
+const { North, South, East, West } = FacingDirection;
+export default class LevelBlock {
   constructor(blockType) {
     this.blockType = blockType;
 

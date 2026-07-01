@@ -1,7 +1,7 @@
-const BaseEntity = require("./BaseEntity");
-const FacingDirection = require("../LevelMVC/FacingDirection");
+import BaseEntity from './BaseEntity';
+import FacingDirection from '../LevelMVC/FacingDirection';
 
-module.exports = class Squid extends BaseEntity {
+export default class Squid extends BaseEntity {
   constructor(controller, type, identifier, x, y, facing) {
     super(controller, type, identifier, x, y, facing);
     this.prepareSprite();

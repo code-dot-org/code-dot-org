@@ -1,14 +1,15 @@
-const PlaceBlockCommand = require("../CommandQueue/PlaceBlockCommand.js");
-const PlaceInFrontCommand = require("../CommandQueue/PlaceInFrontCommand.js");
-const PlaceDirectionCommand = require("../CommandQueue/PlaceDirectionCommand.js");
-const MoveForwardCommand = require("../CommandQueue/MoveForwardCommand.js");
-const MoveBackwardCommand = require("../CommandQueue/MoveBackwardCommand.js");
-const MoveDirectionCommand = require("../CommandQueue/MoveDirectionCommand.js");
-const IfBlockAheadCommand = require("../CommandQueue/IfBlockAheadCommand.js");
-const CallbackCommand = require("../CommandQueue/CallbackCommand.js");
-const RepeatCommand = require("../CommandQueue/RepeatCommand.js");
+// @ts-nocheck -- untyped JS renamed to .ts for progressive adoption
+import PlaceBlockCommand from '../CommandQueue/PlaceBlockCommand';
+import PlaceInFrontCommand from '../CommandQueue/PlaceInFrontCommand';
+import PlaceDirectionCommand from '../CommandQueue/PlaceDirectionCommand';
+import MoveForwardCommand from '../CommandQueue/MoveForwardCommand';
+import MoveBackwardCommand from '../CommandQueue/MoveBackwardCommand';
+import MoveDirectionCommand from '../CommandQueue/MoveDirectionCommand';
+import IfBlockAheadCommand from '../CommandQueue/IfBlockAheadCommand';
+import CallbackCommand from '../CommandQueue/CallbackCommand';
+import RepeatCommand from '../CommandQueue/RepeatCommand';
 
-module.exports.get = function (controller) {
+export function get(controller) {
   return {
     /**
      * Called before a list of user commands will be issued.

@@ -1,11 +1,11 @@
-const test = require('tape');
+import { describe, it, expect } from 'vitest';
 
-const LevelBlock = require('../../src/js/game/LevelMVC/LevelBlock');
-const LevelPlane = require('../../src/js/game/LevelMVC/LevelPlane');
-const BaseEntity = require('../../src/js/game/Entities/BaseEntity');
-const Sheep = require('../../src/js/game/Entities/Sheep');
-const Player = require('../../src/js/game/Entities/Player');
-const Agent = require('../../src/js/game/Entities/Agent');
+import LevelBlock from '../../src/js/game/LevelMVC/LevelBlock';
+import LevelPlane from '../../src/js/game/LevelMVC/LevelPlane';
+import BaseEntity from '../../src/js/game/Entities/BaseEntity';
+import Sheep from '../../src/js/game/Entities/Sheep';
+import Player from '../../src/js/game/Entities/Player';
+import Agent from '../../src/js/game/Entities/Agent';
 
 const mockGameController = {
   getIsDirectPlayerControl: () => false,
@@ -21,7 +21,7 @@ const mockPlane = {
   getBlockAt: () => new LevelBlock(""),
 };
 
-test('canPlaceBlockOver', t => {
+it('canPlaceBlockOver', () => {
   const solidBlocks = ["dirt", "cobblestone"].map((type) => new LevelBlock(type));
   const liquidBlocks = ["water", "lava"].map((type) => new LevelBlock(type));
 
@@ -31,57 +31,56 @@ test('canPlaceBlockOver', t => {
 
   // default entities can't place blocks at all
   solidBlocks.concat(liquidBlocks).forEach((block) => {
-    t.false(baseEntity.canPlaceBlockOver(new LevelBlock("anything"), block).canPlace);
+    expect(baseEntity.canPlaceBlockOver(new LevelBlock("anything"), block).canPlace).toBe(false);
   });
 
   // Player can only place on the ground plane if on top of water or lava
   solidBlocks.forEach((block) => {
     const result = player.canPlaceBlockOver(new LevelBlock("anything"), block);
-    t.true(result.canPlace);
-    t.equal(result.plane, "actionPlane");
+    expect(result.canPlace).toBe(true);
+    expect(result.plane).toBe("actionPlane");
   });
   liquidBlocks.forEach((block) => {
     const result = player.canPlaceBlockOver(new LevelBlock("anything"), block);
-    t.true(result.canPlace);
-    t.equal(result.plane, "groundPlane");
+    expect(result.canPlace).toBe(true);
+    expect(result.plane).toBe("groundPlane");
   });
 
   // Player can only place wheat on farmland
   const wheat = new LevelBlock("cropWheat");
   const farmland = new LevelBlock("farmlandWet");
   solidBlocks.concat(liquidBlocks).forEach((block) => {
-    t.false(player.canPlaceBlockOver(wheat, block).canPlace);
+    expect(player.canPlaceBlockOver(wheat, block).canPlace).toBe(false);
   });
-  t.true(player.canPlaceBlockOver(wheat, farmland).canPlace);
+  expect(player.canPlaceBlockOver(wheat, farmland).canPlace).toBe(true);
 
   // Agents can only place solid blocks if they are standing on liquid
   solidBlocks.forEach((blockToPlace) => {
     solidBlocks.forEach((groundBlock) => {
-      t.false(agent.canPlaceBlockOver(blockToPlace, groundBlock).canPlace);
+      expect(agent.canPlaceBlockOver(blockToPlace, groundBlock).canPlace).toBe(false);
     });
     liquidBlocks.forEach((groundBlock) => {
-      t.true(agent.canPlaceBlockOver(blockToPlace, groundBlock).canPlace);
+      expect(agent.canPlaceBlockOver(blockToPlace, groundBlock).canPlace).toBe(true);
     });
   });
 
   // Agents cannot place redstone, pistons, rails, or torches on liquid
   ["redstoneWire", "piston", "rails", "torch", "railsRedstoneTorch"].map((type) => new LevelBlock(type)).forEach((blockToPlace) => {
     liquidBlocks.forEach((groundBlock) => {
-      t.false(agent.canPlaceBlockOver(blockToPlace, groundBlock).canPlace);
+      expect(agent.canPlaceBlockOver(blockToPlace, groundBlock).canPlace).toBe(false);
     });
   });
 
   // Agents will place redstone and rails on the action plane
   ["redstoneWire", "rails"].map((type) => new LevelBlock(type)).forEach((blockToPlace) => {
     solidBlocks.forEach((groundBlock) => {
-      t.equal(agent.canPlaceBlockOver(blockToPlace, groundBlock).plane, "actionPlane");
+      expect(agent.canPlaceBlockOver(blockToPlace, groundBlock).plane).toBe("actionPlane");
     });
   });
 
-  t.end();
 });
 
-test('playerCanOpenTreasureChest', t => {
+it('playerCanOpenTreasureChest', () => {
   const controller = Object.assign({}, mockGameController, {
     levelView: {
       trees: [],
@@ -110,14 +109,13 @@ test('playerCanOpenTreasureChest', t => {
   const chest = actionPlane.getBlockAt([3, 1]);
   controller.levelModel.actionPlane = actionPlane;
 
-  t.equal(chest.isOpen, false);
+  expect(chest.isOpen).toBe(false);
   player.doMoveForward();
-  t.equal(chest.isOpen, true);
+  expect(chest.isOpen).toBe(true);
 
-  t.end();
 });
 
-test('canPlaceBlock, by entity case', t => {
+it('canPlaceBlock, by entity case', () => {
   const walkableBlocks = ["rails", "redstoneWire"].map((type) => new LevelBlock(type));
   const emptyBlock = new LevelBlock("");
 
@@ -126,30 +124,28 @@ test('canPlaceBlock, by entity case', t => {
 
   // If there is something in the actionPlane that's walkable, it should still block placement.
   walkableBlocks.forEach((block) => {
-    t.false(agent.canPlaceBlock(block));
+    expect(agent.canPlaceBlock(block)).toBe(false);
   });
   // The Player should follow the same rules.
   walkableBlocks.forEach((block) => {
-    t.false(player.canPlaceBlock(block));
+    expect(player.canPlaceBlock(block)).toBe(false);
   });
 
   // Blocks should be placeable if the actionPlane is empty.
-  t.true(agent.canPlaceBlock(emptyBlock));
-  t.true(player.canPlaceBlock(emptyBlock));
+  expect(agent.canPlaceBlock(emptyBlock)).toBe(true);
+  expect(player.canPlaceBlock(emptyBlock)).toBe(true);
 
-  t.end();
 });
 
-test('sheep Drop', t => {
+it('sheep Drop', () => {
   const sheep = new Sheep(mockGameController, "Sheep", "Sheep", 1, 1, 1);
 
   // Sheep starts !naked
-  t.false(sheep.naked);
+  expect(sheep.naked).toBe(false);
   // if(!naked) drop returns true and sets naked = true;
-  t.true(sheep.drop(null, "wool"));
-  t.true(sheep.naked);
+  expect(sheep.drop(null, "wool")).toBe(true);
+  expect(sheep.naked).toBe(true);
   // if(naked) drop returns false
-  t.false(sheep.drop(null, "wool"));
+  expect(sheep.drop(null, "wool")).toBe(false);
 
-  t.end();
 });

@@ -1,6 +1,6 @@
-const BaseCommand = require("./BaseCommand.js");
+import BaseCommand from './BaseCommand';
 
-module.exports = class DestroyBlockCommand extends BaseCommand {
+export default class DestroyBlockCommand extends BaseCommand {
   constructor(gameController, highlightCallback, targetEntity) {
 
     super(gameController, highlightCallback, targetEntity);

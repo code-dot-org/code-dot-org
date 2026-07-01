@@ -1,8 +1,8 @@
-const CommandState = require("./CommandState.js");
-const CommandQueue = require("./CommandQueue.js");
-const BaseCommand = require("./BaseCommand.js");
+import CommandState from './CommandState';
+import CommandQueue from './CommandQueue';
+import BaseCommand from './BaseCommand';
 
-module.exports = class IfBlockAheadCommand extends BaseCommand {
+export default class IfBlockAheadCommand extends BaseCommand {
   constructor(gameController, highlightCallback, blockType, targetEntity, callback) {
     super(gameController, highlightCallback, targetEntity);
 

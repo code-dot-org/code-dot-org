@@ -1,7 +1,7 @@
-const BaseEntity = require("./BaseEntity");
-const FacingDirection = require("../LevelMVC/FacingDirection");
+import BaseEntity from './BaseEntity';
+import FacingDirection from '../LevelMVC/FacingDirection';
 
-module.exports = class SeaTurtle extends BaseEntity {
+export default class SeaTurtle extends BaseEntity {
   constructor(controller, type, identifier, x, y, facing) {
     super(controller, type, identifier, x, y, facing);
     this.offset = this.controller.levelModel.isUnderwater() ? [-95,-100] : [-95, -90];

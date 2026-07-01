@@ -1,8 +1,8 @@
-const test = require('tape');
+import { describe, it, expect } from 'vitest';
 
-const LevelModel = require('../../src/js/game/LevelMVC/LevelModel');
-const LevelEntity = require('../../src/js/game/LevelMVC/LevelEntity');
-const Position = require('../../src/js/game/LevelMVC/Position');
+import LevelModel from '../../src/js/game/LevelMVC/LevelModel';
+import LevelEntity from '../../src/js/game/LevelMVC/LevelEntity';
+import Position from '../../src/js/game/LevelMVC/Position';
 
 const makePlane = (n, type) => new Array(n).fill(type);
 const gridToIndex = (x, y) => y * 10 + x;
@@ -34,44 +34,42 @@ const mockGameController = {
   followingPlayer: () => false,
 };
 
-test('LevelModel', (t) => {
-  t.test('sanity', (t) => {
+describe('LevelModel', () => {
+  it('sanity', () => {
     const levelDefinition = makeLevelDefinition(5, 5);
     const model = new LevelModel(levelDefinition, mockGameController);
 
     model.placeBlock("grass");
-    t.true(model.actionPlane.getBlockAt([0,2]).blockType === "grass");
+    expect(model.actionPlane.getBlockAt([0,2]).blockType).toBe("grass");
     model.placeBlock("gravel");
-    t.true(model.actionPlane.getBlockAt([0,2]).blockType === "gravel");
+    expect(model.actionPlane.getBlockAt([0,2]).blockType).toBe("gravel");
     model.placeBlock("ice");
-    t.false(model.actionPlane.getBlockAt([0,2]).blockType === "grass");
+    expect(model.actionPlane.getBlockAt([0,2]).blockType).not.toBe("grass");
 
-    t.equal(model.planeArea(), 25);
+    expect(model.planeArea()).toBe(25);
 
-    t.assert(model.inBounds(new Position(2, 4)));
-    t.false(model.inBounds(new Position(-1, 1)));
-    t.false(model.inBounds(new Position(5, 3)));
-    t.false(model.inBounds(new Position(3, 5)));
+    expect(model.inBounds(new Position(2, 4))).toBeTruthy();
+    expect(model.inBounds(new Position(-1, 1))).toBe(false);
+    expect(model.inBounds(new Position(5, 3))).toBe(false);
+    expect(model.inBounds(new Position(3, 5))).toBe(false);
 
-    t.equal(model.yToIndex(2), 10);
+    expect(model.yToIndex(2)).toBe(10);
 
-    t.assert(model.isPlayerAt(new Position(0, 2)));
+    expect(model.isPlayerAt(new Position(0, 2))).toBeTruthy();
 
-    t.end();
   });
 
-  t.test('place block: entity conflict', (t) => {
+  it('place block: entity conflict', () => {
     const levelDefinition = makeLevelDefinition(5, 5);
     const model = new LevelModel(levelDefinition, mockGameController);
 
     // player at 0,2 should cause conflict
-    t.true(model.checkEntityConflict(new Position(0, 2)));
-    t.false(model.checkEntityConflict(new Position(0, 3)));
+    expect(model.checkEntityConflict(new Position(0, 2))).toBe(true);
+    expect(model.checkEntityConflict(new Position(0, 3))).toBe(false);
 
-    t.end();
   });
 
-  t.test('place block: block conflict', (t) => {
+  it('place block: block conflict', () => {
     const levelDefinition = makeLevelDefinition(5, 5);
     const model = new LevelModel(levelDefinition, mockGameController);
 
@@ -79,75 +77,70 @@ test('LevelModel', (t) => {
     model.player.position = new Position(0, 0);
 
     // player at 0,0 so only the grass block is left to cause conflict
-    t.true(model.checkEntityConflict(new Position(0, 2)));
-    t.false(model.checkEntityConflict(new Position(0, 3)));
+    expect(model.checkEntityConflict(new Position(0, 2))).toBe(true);
+    expect(model.checkEntityConflict(new Position(0, 3))).toBe(false);
 
-    t.end();
   });
 
-  t.test('can track player position', (t) => {
+  it('can track player position', () => {
     let levelDefinition = makeLevelDefinition(10, 10);
     levelDefinition.actionPlane[gridToIndex(2, 2)] = 'sheep';
     let levelModel = new LevelModel(levelDefinition, mockGameController);
-    t.ok(levelModel.isPlayerAt(new Position(0, 2)));
-    t.notOk(levelModel.isPlayerNextTo('sheep'));
-    t.ok(levelModel.canMoveForward());
+    expect(levelModel.isPlayerAt(new Position(0, 2))).toBeTruthy();
+    expect(levelModel.isPlayerNextTo('sheep')).toBeFalsy();
+    expect(levelModel.canMoveForward()).toBeTruthy();
     levelModel.moveForward();
-    t.ok(levelModel.isPlayerNextTo('sheep'));
-    t.ok(levelModel.isPlayerAt(new Position(1, 2)));
-    t.notOk(levelModel.isPlayerAt(new Position(0, 2)));
-    t.notOk(levelModel.isPlayerAt(new Position(0, 0)));
+    expect(levelModel.isPlayerNextTo('sheep')).toBeTruthy();
+    expect(levelModel.isPlayerAt(new Position(1, 2))).toBeTruthy();
+    expect(levelModel.isPlayerAt(new Position(0, 2))).toBeFalsy();
+    expect(levelModel.isPlayerAt(new Position(0, 0))).toBeFalsy();
 
-    t.end();
   });
 
-  t.test('can move player to given position', (t) => {
+  it('can move player to given position', () => {
     let levelDefinition = makeLevelDefinition(10, 10);
     levelDefinition.actionPlane[gridToIndex(2, 2)] = 'sheep';
     let levelModel = new LevelModel(levelDefinition, mockGameController);
-    t.notOk(levelModel.isPlayerNextTo('sheep'));
+    expect(levelModel.isPlayerNextTo('sheep')).toBeFalsy();
     levelModel.moveTo(new Position(1, 2));
-    t.ok(levelModel.isPlayerAt(new Position(1, 2)));
-    t.ok(levelModel.isPlayerNextTo('sheep'));
+    expect(levelModel.isPlayerAt(new Position(1, 2))).toBeTruthy();
+    expect(levelModel.isPlayerNextTo('sheep')).toBeTruthy();
 
-    t.end();
   });
 
-  t.test('can get move forward position', (t) => {
+  it('can get move forward position', () => {
     let levelDefinition = makeLevelDefinition(10, 10);
     levelDefinition.playerStartPosition = [2, 2];
     levelDefinition.playerStartDirection = 1; // right
     let levelModel = new LevelModel(levelDefinition, mockGameController);
     // facing right
-    t.deepEqual(levelModel.getMoveForwardPosition(), new Position(3, 2));
+    expect(levelModel.getMoveForwardPosition()).toEqual(new Position(3, 2));
     levelModel.turnRight(); // to face down
-    t.deepEqual(levelModel.getMoveForwardPosition(), new Position(2, 3));
+    expect(levelModel.getMoveForwardPosition()).toEqual(new Position(2, 3));
     levelModel.turnRight(); // to face left
-    t.deepEqual(levelModel.getMoveForwardPosition(), new Position(1, 2));
+    expect(levelModel.getMoveForwardPosition()).toEqual(new Position(1, 2));
     levelModel.turnRight(); // to face up
-    t.deepEqual(levelModel.getMoveForwardPosition(), new Position(2, 1));
+    expect(levelModel.getMoveForwardPosition()).toEqual(new Position(2, 1));
     levelModel.moveForward(); // move up
-    t.deepEqual(levelModel.getMoveForwardPosition(), new Position(2, 0));
+    expect(levelModel.getMoveForwardPosition()).toEqual(new Position(2, 0));
 
-    t.end();
   });
 
-  t.test('checkForwardBlock', (t) => {
-    t.test('can check forward block is of type water and lava on ground', (t) => {
+  describe('checkForwardBlock', () => {
+    it('can check forward block is of type water and lava on ground', () => {
       let levelDefinition = makeLevelDefinition(10, 10);
       levelDefinition.playerStartPosition = [0, 0];
       levelDefinition.playerStartDirection = 1; // right
       levelDefinition.groundPlane[gridToIndex(1, 0)] = 'water';
 
       let levelModel = new LevelModel(levelDefinition, mockGameController);
-      t.ok(levelModel.isForwardBlockOfType('water'));
-      t.notOk(levelModel.isForwardBlockOfType('lava'));
-      t.ok(levelModel.isForwardBlockOfType('')); // '' means action plane empty
+      expect(levelModel.isForwardBlockOfType('water')).toBeTruthy();
+      expect(levelModel.isForwardBlockOfType('lava')).toBeFalsy();
+      expect(levelModel.isForwardBlockOfType('')).toBeTruthy(); // '' means action plane empty
 
-      t.end();
     });
 
-    t.test('can check forward block is an action plane block', (t) => {
+    it('can check forward block is an action plane block', () => {
       let levelDefinition = makeLevelDefinition(10, 10);
       levelDefinition.playerStartPosition = [0, 0];
       levelDefinition.playerStartDirection = 1; // right
@@ -155,116 +148,108 @@ test('LevelModel', (t) => {
       levelDefinition.actionPlane[gridToIndex(1, 0)] = 'logOak';
 
       let levelModel = new LevelModel(levelDefinition, mockGameController);
-      t.ok(levelModel.isForwardBlockOfType('logOak'));
-      t.notOk(levelModel.isForwardBlockOfType(''));
-      t.notOk(levelModel.isForwardBlockOfType('dirtCoarse'));
+      expect(levelModel.isForwardBlockOfType('logOak')).toBeTruthy();
+      expect(levelModel.isForwardBlockOfType('')).toBeFalsy();
+      expect(levelModel.isForwardBlockOfType('dirtCoarse')).toBeFalsy();
 
-      t.end();
     });
 
-    t.test('can check forward block is a tree', (t) => {
+    it('can check forward block is a tree', () => {
       let levelDefinition = makeLevelDefinition(10, 10);
       levelDefinition.playerStartPosition = [0, 0];
       levelDefinition.playerStartDirection = 1; // right
       levelDefinition.actionPlane[gridToIndex(1, 0)] = 'treeOak';
 
       let levelModel = new LevelModel(levelDefinition, mockGameController);
-      t.ok(levelModel.isForwardBlockOfType('tree'));
-      t.ok(levelModel.isForwardBlockOfType('treeOak'));
-      t.notOk(levelModel.isForwardBlockOfType('logOak'));
-      t.notOk(levelModel.isForwardBlockOfType(''));
+      expect(levelModel.isForwardBlockOfType('tree')).toBeTruthy();
+      expect(levelModel.isForwardBlockOfType('treeOak')).toBeTruthy();
+      expect(levelModel.isForwardBlockOfType('logOak')).toBeFalsy();
+      expect(levelModel.isForwardBlockOfType('')).toBeFalsy();
 
-      t.end();
     });
 
-    t.test('returns an empty block when checking outside the level boundary', (t) => {
+    it('returns an empty block when checking outside the level boundary', () => {
       const levelDefinition = makeLevelDefinition(1, 1);
       levelDefinition.playerStartPosition = [0, 0];
       levelDefinition.playerStartDirection = 1; // right
 
       let levelModel = new LevelModel(levelDefinition, mockGameController);
-      t.equal(levelModel.getForwardBlockType(), '');
+      expect(levelModel.getForwardBlockType()).toBe('');
 
-      t.end();
     });
   });
 
-  t.test('isPlayerNextTo', (t) => {
-    t.test('can check if player is next to something in any direction', (t) => {
+  describe('isPlayerNextTo', () => {
+    it('can check if player is next to something in any direction', () => {
       let levelDefinition = makeLevelDefinition(10, 10);
       levelDefinition.actionPlane[gridToIndex(2, 2)] = 'sheep';
       let levelModel = new LevelModel(levelDefinition, mockGameController);
-      t.notOk(levelModel.isPlayerNextTo('sheep'));
+      expect(levelModel.isPlayerNextTo('sheep')).toBeFalsy();
 
       levelModel.moveTo(new Position(2, 1)); // above sheep
-      t.ok(levelModel.isPlayerNextTo('sheep'));
+      expect(levelModel.isPlayerNextTo('sheep')).toBeTruthy();
       levelModel.moveTo(new Position(2, 3)); // below sheep
-      t.ok(levelModel.isPlayerNextTo('sheep'));
+      expect(levelModel.isPlayerNextTo('sheep')).toBeTruthy();
       levelModel.moveTo(new Position(1, 2)); // left of sheep
-      t.ok(levelModel.isPlayerNextTo('sheep'));
+      expect(levelModel.isPlayerNextTo('sheep')).toBeTruthy();
       levelModel.moveTo(new Position(3, 2)); // right of sheep
-      t.ok(levelModel.isPlayerNextTo('sheep'));
+      expect(levelModel.isPlayerNextTo('sheep')).toBeTruthy();
 
-      t.end();
     });
   });
 
-  t.test('yToIndex and coordinatesToIndex', (t) => {
-    t.test('can calculate plane array offset from grid (x, y)', (t) => {
+  describe('yToIndex and coordinatesToIndex', () => {
+    it('can calculate plane array offset from grid (x, y)', () => {
       let levelModel = new LevelModel(makeLevelDefinition(10, 10), mockGameController);
-      t.equal(levelModel.yToIndex(5), 50);
-      t.equal(levelModel.coordinatesToIndex(new Position(3, 5)), 53);
+      expect(levelModel.yToIndex(5)).toBe(50);
+      expect(levelModel.coordinatesToIndex(new Position(3, 5))).toBe(53);
 
       let levelModelSmaller = new LevelModel(makeLevelDefinition(5, 5), mockGameController);
-      t.equal(levelModelSmaller.yToIndex(5), 25);
-      t.equal(levelModelSmaller.coordinatesToIndex(new Position(1, 5)), 26);
+      expect(levelModelSmaller.yToIndex(5)).toBe(25);
+      expect(levelModelSmaller.coordinatesToIndex(new Position(1, 5))).toBe(26);
 
-      t.end();
     });
   });
 
-  t.test('inBounds', (t) => {
-    t.test('can check 10x10 level boundaries', (t) => {
+  describe('inBounds', () => {
+    it('can check 10x10 level boundaries', () => {
       let levelModel = new LevelModel(makeLevelDefinition(10, 10), mockGameController);
 
-      t.ok(levelModel.inBounds(new Position(0, 0)));
-      t.ok(levelModel.inBounds(new Position(9, 9)));
-      t.ok(levelModel.inBounds(new Position(5, 5)));
-      t.ok(levelModel.inBounds(new Position(0, 9)));
-      t.ok(levelModel.inBounds(new Position(9, 0)));
+      expect(levelModel.inBounds(new Position(0, 0))).toBeTruthy();
+      expect(levelModel.inBounds(new Position(9, 9))).toBeTruthy();
+      expect(levelModel.inBounds(new Position(5, 5))).toBeTruthy();
+      expect(levelModel.inBounds(new Position(0, 9))).toBeTruthy();
+      expect(levelModel.inBounds(new Position(9, 0))).toBeTruthy();
 
-      t.notOk(levelModel.inBounds(new Position(10, 10)));
-      t.notOk(levelModel.inBounds(new Position(10, 0)));
-      t.notOk(levelModel.inBounds(new Position(0, 10)));
-      t.notOk(levelModel.inBounds(new Position(-1, -1)));
-      t.notOk(levelModel.inBounds(new Position(-1, 0)));
-      t.notOk(levelModel.inBounds(new Position(0, -1)));
+      expect(levelModel.inBounds(new Position(10, 10))).toBeFalsy();
+      expect(levelModel.inBounds(new Position(10, 0))).toBeFalsy();
+      expect(levelModel.inBounds(new Position(0, 10))).toBeFalsy();
+      expect(levelModel.inBounds(new Position(-1, -1))).toBeFalsy();
+      expect(levelModel.inBounds(new Position(-1, 0))).toBeFalsy();
+      expect(levelModel.inBounds(new Position(0, -1))).toBeFalsy();
 
-      t.end();
     });
 
-    t.test('can check 20x20 level boundaries', (t) => {
+    it('can check 20x20 level boundaries', () => {
       let largerDefinition = makeLevelDefinition(20, 20);
       let largerLevelModel = new LevelModel(largerDefinition, mockGameController);
-      t.ok(largerLevelModel.inBounds(new Position(0, 0)));
-      t.ok(largerLevelModel.inBounds(new Position(19, 19)));
-      t.notOk(largerLevelModel.inBounds(new Position(20, 20)));
-      t.notOk(largerLevelModel.inBounds(new Position(0, 20)));
-      t.notOk(largerLevelModel.inBounds(new Position(20, 0)));
+      expect(largerLevelModel.inBounds(new Position(0, 0))).toBeTruthy();
+      expect(largerLevelModel.inBounds(new Position(19, 19))).toBeTruthy();
+      expect(largerLevelModel.inBounds(new Position(20, 20))).toBeFalsy();
+      expect(largerLevelModel.inBounds(new Position(0, 20))).toBeFalsy();
+      expect(largerLevelModel.inBounds(new Position(20, 0))).toBeFalsy();
 
-      t.end();
     });
 
-    t.test('can check 10x20 level boundaries', (t) => {
+    it('can check 10x20 level boundaries', () => {
       let rectDefinition = makeLevelDefinition(10, 20);
       rectDefinition.gridDimensions = [10, 20];
       let rectLevelModel = new LevelModel(rectDefinition, mockGameController);
-      t.ok(rectLevelModel.inBounds(new Position(0, 0)));
-      t.ok(rectLevelModel.inBounds(new Position(9, 19)));
-      t.notOk(rectLevelModel.inBounds(new Position(10, 19)));
-      t.notOk(rectLevelModel.inBounds(new Position(9, 20)));
+      expect(rectLevelModel.inBounds(new Position(0, 0))).toBeTruthy();
+      expect(rectLevelModel.inBounds(new Position(9, 19))).toBeTruthy();
+      expect(rectLevelModel.inBounds(new Position(10, 19))).toBeFalsy();
+      expect(rectLevelModel.inBounds(new Position(9, 20))).toBeFalsy();
 
-      t.end();
     });
   });
 });

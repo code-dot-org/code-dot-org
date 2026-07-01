@@ -1,7 +1,7 @@
-const BaseEntity = require("./BaseEntity.js");
-const EventType = require("../Event/EventType.js");
+import BaseEntity from './BaseEntity';
+import EventType from '../Event/EventType';
 
-module.exports = class Sheep extends BaseEntity {
+export default class Sheep extends BaseEntity {
     constructor(controller, type, identifier, x, y, facing) {
         super(controller, type, identifier, x, y, facing);
         this.offset = [-43, -55];
@@ -302,7 +302,6 @@ module.exports = class Sheep extends BaseEntity {
             commandQueueItem.succeeded();
         });
     }
-
 
     updateAnimationDirection() {
         let facingName = this.controller.levelView.getDirectionName(this.facing);

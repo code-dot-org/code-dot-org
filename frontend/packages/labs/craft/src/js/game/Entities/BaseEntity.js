@@ -1,11 +1,11 @@
-const CommandQueue = require("../CommandQueue/CommandQueue.js");
-const FacingDirection = require("../LevelMVC/FacingDirection.js");
-const Position = require("../LevelMVC/Position.js");
-const EventType = require("../Event/EventType.js");
-const CallbackCommand = require("../CommandQueue/CallbackCommand.js");
-const LevelBlock = require("../LevelMVC/LevelBlock.js");
+import CommandQueue from '../CommandQueue/CommandQueue';
+import FacingDirection from '../LevelMVC/FacingDirection';
+import Position from '../LevelMVC/Position';
+import EventType from '../Event/EventType';
+import CallbackCommand from '../CommandQueue/CallbackCommand';
+import LevelBlock from '../LevelMVC/LevelBlock';
 
-module.exports = class BaseEntity {
+export default class BaseEntity {
   constructor(controller, type, identifier, x, y, facing) {
     this.queue = new CommandQueue(controller);
     this.controller = controller;
@@ -429,7 +429,6 @@ module.exports = class BaseEntity {
             }
         }
     }
-
 
     moveTo(commandQueueItem, moveTowardTo) {
         if (Position.absoluteDistanceSquare(moveTowardTo.position, this.position) === 1) {

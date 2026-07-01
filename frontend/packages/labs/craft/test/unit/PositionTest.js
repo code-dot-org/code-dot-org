@@ -1,27 +1,25 @@
-const test = require('tape');
+import { describe, it, expect } from 'vitest';
 
-const Position = require("../../src/js/game/LevelMVC/Position");
+import Position from '../../src/js/game/LevelMVC/Position';
 
-test('isAdjacent', t => {
+it('isAdjacent', () => {
   const center = new Position(0, 0);
-  t.true(Position.isAdjacent(center, new Position(0, 1)));
-  t.true(Position.isAdjacent(center, new Position(1, 0)));
-  t.true(Position.isAdjacent(center, new Position(0, -1)));
-  t.true(Position.isAdjacent(center, new Position(-1, 0)));
+  expect(Position.isAdjacent(center, new Position(0, 1))).toBe(true);
+  expect(Position.isAdjacent(center, new Position(1, 0))).toBe(true);
+  expect(Position.isAdjacent(center, new Position(0, -1))).toBe(true);
+  expect(Position.isAdjacent(center, new Position(-1, 0))).toBe(true);
 
-  t.false(Position.isAdjacent(center, new Position(-1, -1)));
-  t.false(Position.isAdjacent(center, new Position(1, 1)));
+  expect(Position.isAdjacent(center, new Position(-1, -1))).toBe(false);
+  expect(Position.isAdjacent(center, new Position(1, 1))).toBe(false);
 
-  t.end();
 });
 
-test('getOrthogonalPositions', t => {
-  t.deepEqual(Position.getOrthogonalPositions(new Position(0, 0)), [
+it('getOrthogonalPositions', () => {
+  expect(Position.getOrthogonalPositions(new Position(0, 0))).toEqual([
     new Position(0, -1),
     new Position(1, 0),
     new Position(0, 1),
     new Position(-1, 0)
   ]);
 
-  t.end();
 });

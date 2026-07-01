@@ -1,6 +1,7 @@
-const BaseEntity = require("./BaseEntity.js");
-const randomInt = require("./../LevelMVC/Utils.js").randomInt;
-module.exports = class Ghast extends BaseEntity {
+import BaseEntity from './BaseEntity';
+import { randomInt } from './../LevelMVC/Utils';
+
+export default class Ghast extends BaseEntity {
     constructor(controller, type, identifier, x, y, facing) {
         super(controller, type, identifier, x, y, facing);
         this.offset = [-50, -84];

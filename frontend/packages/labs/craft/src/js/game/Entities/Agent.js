@@ -1,7 +1,7 @@
-const BaseEntity = require("./BaseEntity.js");
-const CallbackCommand = require("../CommandQueue/CallbackCommand.js");
+import BaseEntity from './BaseEntity';
+import CallbackCommand from '../CommandQueue/CallbackCommand';
 
-module.exports = class Agent extends BaseEntity {
+export default class Agent extends BaseEntity {
   constructor(controller, type, x, y, name, isOnBlock, facing) {
     super(controller, type, 'PlayerAgent', x, y, facing);
     this.offset = [-16, -15];

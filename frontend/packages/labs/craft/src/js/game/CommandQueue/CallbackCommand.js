@@ -1,6 +1,6 @@
-const BaseCommand = require("./BaseCommand.js");
+import BaseCommand from './BaseCommand';
 
-module.exports = class CallbackCommand extends BaseCommand {
+export default class CallbackCommand extends BaseCommand {
   constructor(gameController, highlightCallback, actionCallback, targetEntity, onFinish) {
     super(gameController, highlightCallback, targetEntity, onFinish);
     this.actionCallback = actionCallback;

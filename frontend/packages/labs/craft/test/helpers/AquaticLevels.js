@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   aquatic01: {
     isAquaticLevel: true,
     playerName: "SteveAquatic",

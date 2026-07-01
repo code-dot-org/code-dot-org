@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   functionality01: {
     isAgentLevel: true,
     useAgent: true,
