@@ -6,6 +6,12 @@ import {LessonLevelPage} from './lesson-level-page';
 
 /** Page object for the multi-choice (multi) level type. */
 export class MultiLevel extends LessonLevelPage {
+  /** Multi widget root; a11y scans scope here, not the shared chrome. */
+  readonly rootSelector = '.multi';
+
+  /** Dialog shown on submit (win or incorrect). */
+  readonly modalSelector = '.modal';
+
   /** The multiple-choice question text. */
   readonly question: Locator;
 
@@ -28,10 +34,10 @@ export class MultiLevel extends LessonLevelPage {
     super(page);
     this.question = page.locator('.multi-question');
     this.submitButton = page.locator('.submitButton');
-    this.modal = page.locator('.modal');
-    this.modalTitle = page.locator('.modal .dialog-title');
+    this.modal = page.locator(this.modalSelector);
+    this.modalTitle = page.locator(`${this.modalSelector} .dialog-title`);
     this.nextLevelButton = page.locator('.nextLevelButton');
-    this.heading = page.locator('.multi h1');
+    this.heading = page.locator(`${this.rootSelector} h1`);
   }
 
   /** Navigate to a multi level and wait for the widget to render. */
@@ -57,7 +63,7 @@ export class MultiLevel extends LessonLevelPage {
 
   /** Dismiss the modal by clicking its OK button. */
   async dismissModal(): Promise<void> {
-    await this.page.locator('.modal #ok-button').click();
+    await this.modal.locator('#ok-button').click();
   }
 
   /** Locator for the cross-mark element at a given answer index (shown after incorrect submit). */
