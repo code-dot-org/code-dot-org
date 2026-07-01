@@ -6,8 +6,10 @@ import type {LevelPropertiesMap} from '@code-dot-org/core/api';
 import {injectFontAwesome} from '@code-dot-org/fonts';
 import {progressActions} from '@code-dot-org/progress/redux';
 
+import {DialogControlProvider} from '../contexts/DialogControlContext';
 import {ExtraLinksButtonProvider} from '../contexts/ExtraLinksButtonContext';
 import {LevelPropertiesProvider} from '../contexts/LevelPropertiesContext';
+import DialogViews from '../dialogs/DialogViews';
 import {useAppDispatch} from '../redux/store';
 
 import Loading from './Loading';
@@ -95,7 +97,11 @@ const Lab = ({
           <ExtraLinksButtonProvider>
             {/* The host supplies the resolved level-properties map. */}
             <LevelPropertiesProvider levelPropertiesMap={levelPropertiesMap}>
-              {labContent}
+              {/* Manages the shared lab dialogs (Start Over, Skip, Share, …);
+                  without it `useDialogControl().showDialog` is a no-op. */}
+              <DialogControlProvider dialogViews={DialogViews}>
+                {labContent}
+              </DialogControlProvider>
             </LevelPropertiesProvider>
           </ExtraLinksButtonProvider>
         </ThemeProvider>
