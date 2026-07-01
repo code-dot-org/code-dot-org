@@ -476,7 +476,7 @@ class ScriptLevel < ApplicationRecord
     summary[:id] = id.to_s
     summary[:activitySectionPosition] = activity_section_position
     summary[:levels] = levels.map do |level|
-      {
+      entry = {
         id: level.id.to_s,
         name: level.name,
         url: edit_level_path(id: level.id),
@@ -485,6 +485,18 @@ class ScriptLevel < ApplicationRecord
         # /generate page can re-populate the prompt for an existing level.
         generateOutline: level.try(:generate_outline),
       }
+      if level.is_a?(BubbleChoice)
+        entry[:sublevels] = level.sublevels.map do |sub|
+          {
+            id: sub.id.to_s,
+            name: sub.name,
+            url: edit_level_path(id: sub.id),
+            type: sub.type,
+            generateOutline: sub.try(:generate_outline),
+          }
+        end
+      end
+      entry
     end
 
     # For now, the lesson edit page does not allow modification of level

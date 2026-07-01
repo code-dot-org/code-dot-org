@@ -95,7 +95,7 @@ export function buildInitialState(lesson: ExistingLessonData): InitialState {
     ({level, scriptLevel, activityIndex, sectionIndex}) => {
       const labType = labTypeFromRailsType(level.type);
       const description = level.generateOutline || '';
-      return {
+      const spec: LevelSpec = {
         key: createUuid(),
         id: stripPrefix(level.name),
         // Filler value when unsupported; the dropdown is hidden then.
@@ -108,6 +108,24 @@ export function buildInitialState(lesson: ExistingLessonData): InitialState {
         existing: {activityIndex, sectionIndex, scriptLevel},
         unsupportedType: labType === undefined ? level.type : undefined,
       };
+      if (labType === 'bubbleChoice' && Array.isArray(level.sublevels)) {
+        const parentPrefix = level.name + '-';
+        spec.sublevels = level.sublevels.map(sub => {
+          const subLabType = labTypeFromRailsType(sub.type);
+          const subId = sub.name.startsWith(parentPrefix)
+            ? sub.name.slice(parentPrefix.length)
+            : sub.name;
+          return {
+            key: createUuid(),
+            id: subId,
+            labType: subLabType ?? SUPPORTED_LAB_TYPES[0],
+            description: sub.generateOutline || '',
+            lastGeneratedDescription: sub.generateOutline || undefined,
+            generate: subLabType !== undefined && !sub.generateOutline,
+          };
+        });
+      }
+      return spec;
     }
   );
   return {prefix, specs};

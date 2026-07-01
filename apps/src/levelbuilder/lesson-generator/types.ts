@@ -177,6 +177,9 @@ export interface SerializedLevel {
   // levels in the lesson.
   type?: string;
   generateOutline?: string | null;
+  // Populated for BubbleChoice parents by script_level.rb; each entry
+  // is a nested SerializedLevel for one sublevel in picker order.
+  sublevels?: SerializedLevel[];
 }
 
 export type ProgressPhase =
