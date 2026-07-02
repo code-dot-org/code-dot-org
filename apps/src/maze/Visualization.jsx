@@ -23,10 +23,8 @@ const Visualization = function ({useProtectedDiv = true}) {
     return () => nav.destroy();
   }, []);
 
-  // The svg is both the maze surface and the keyboard-nav host, so it stays
-  // #visualization's direct child and the responsive scaling anchors on it
-  // the way it did before nav was added. role=application is the right ARIA
-  // role for a widget that owns its keys.
+  // The svg is both the maze surface and the keyboard-nav host
+  // role=application is the right ARIA role for a widget that owns its keys
   const innerComponent = (
     <svg
       id={SVG_ID}
