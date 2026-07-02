@@ -6,6 +6,16 @@ import Shepherd, {
 
 import {navigateToHref} from '@cdo/apps/utils';
 
+// Scrolls the element to the center of the viewport only if it is not already
+// fully visible. Avoids jarring scroll when the target is already on screen.
+export const scrollIntoViewIfNeeded = (el: HTMLElement): void => {
+  const rect = el.getBoundingClientRect();
+  const fullyVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+  if (!fullyVisible) {
+    el.scrollIntoView({block: 'center'});
+  }
+};
+
 export const nextButton = (tour: Tour): StepOptionsButton => ({
   text: 'Next',
   action: () => tour.next(),
@@ -114,6 +124,9 @@ export const createQuizWhenHandlers = (
 
         if (target.dataset.answer === 'correct') {
           target.classList.add('quiz-option-correct');
+          target.textContent = `✓ ${
+            target.dataset.originalText ?? target.textContent?.trim() ?? ''
+          }`;
           allOptions.forEach(btn => {
             btn.disabled = true;
           });
@@ -176,6 +189,7 @@ export const createTourWithSteps = (
     defaultStepOptions: {
       cancelIcon: {enabled: true},
       scrollTo: true,
+      scrollToHandler: scrollIntoViewIfNeeded,
       classes: 'custom-shepherd-step-container',
       ...(additionalStepOptions ?? {}),
     },

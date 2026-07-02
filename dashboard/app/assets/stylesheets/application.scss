@@ -27,7 +27,6 @@
  *= require user-menu
  *= require buttons
  *= require course-blocks
- *= require details-polyfill
  *= require warning-banner
  */
 
@@ -113,6 +112,11 @@ h3 {
 hr {
   border-color: $teal;
   border-bottom: none;
+}
+
+// Account edit page: neutral section dividers instead of the brand teal above.
+hr.account-section-divider {
+  border-color: var(--borders-neutral-strong);
 }
 
 #classroom-sections hr {
@@ -1863,46 +1867,6 @@ a.download-video {
 
 .course_progress {
   margin: 10px 0;
-}
-
-#signinsection {
-  ul.students, ul.pictures {
-    margin-left: 0;
-  }
-
-  ul.students li,
-  ul.pictures li {
-    list-style-type: none;
-    border: 1px solid $lighter_gray;
-    border-radius: 5px;
-    background-color: $lightest_gray;
-    float: left;
-    margin: 5px;
-    padding: 5px;
-    cursor: pointer;
-  }
-
-  ul.students li:hover,
-  ul.pictures li:hover {
-    background-color: $light_yellow;
-  }
-
-  ul.students li.selected,
-  ul.pictures li.selected {
-    background-color: $yellow;
-  }
-
-  #pairing_checkbox {
-    margin: 5px 0;
-    label {
-      font-size: 17.5px;
-    }
-    label, input {
-      margin: 5px;
-      display: inline-block;
-      vertical-align: middle;
-    }
-  }
 }
 
 .flex-container {
@@ -3699,7 +3663,7 @@ html[data-brand="codeai"], html[data-brand="codeai-next"] {
   top: 0;
   right: 0;
   color: $white;
-  background-color: $light_purple;
+  background-color: var(--background-brand-purple-primary);
   padding: 3px;
   z-index: 100;
   cursor: pointer;
@@ -4451,4 +4415,23 @@ a {
 
 .cm-editor {
   height: 100%;
+}
+
+// @see https://github.com/code-dot-org/code-dot-org/commit/3a5ecdffd3ea400182896aa031d9d70b77eba2b1#diff-12c03faea22f2ff4ab3508193ed80cd058cce54ef3e6708ce46703c29b92511cR3-R28
+details {
+  summary {
+    cursor: pointer;
+
+    // Supports `<summary><h1>Title</h1><p>See more</p></summary>` idiom often used by level builders
+    h1 {
+      display: inline;
+      margin-right: 10px;
+    }
+
+    &:hover {
+      // Include hover effect on mouseover
+      background: $lightest_gray;
+      cursor: pointer;
+    }
+  }
 }

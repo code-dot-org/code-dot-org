@@ -311,13 +311,13 @@ namespace :test do
 
   desc 'Runs full QA test pass (to be run on the chef-managed test system)'
   timed_task_with_logging qa: [
-    :shared_qa,
-    :pegasus_qa,
     :dashboard_qa,
     :dashboard_legacy_qa,
     :dashboard_hoc_legacy_engine_qa,
     :dashboard_cdo_contentful_engine_qa,
     :dashboard_observability_engine_qa,
+    :shared_qa,
+    :pegasus_qa,
     :lib_qa,
     :bin_qa,
     :ui_live
@@ -389,7 +389,6 @@ namespace :test do
         [
           'apps/**/*',
           'dashboard/config/libraries/*.interpreted.js',
-          'shared/js/**/*',
           'shared/css/**/*',
           'frontend/**/*',
           'lib/cdo/shared_constants/**/*',

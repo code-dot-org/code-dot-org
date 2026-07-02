@@ -38,7 +38,7 @@ const TurnOffAiDiff: React.FC = () => {
 
   return (
     <div>
-      <hr />
+      <hr className={moduleStyles.sectionDivider} />
       <Typography
         className={moduleStyles.sectionHeader}
         variant="h5"

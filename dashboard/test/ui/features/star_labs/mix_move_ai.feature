@@ -1,7 +1,7 @@
 @no_mobile
 @no_safari
-@no_device_farm
-
+@no_firefox
+@cloudfront_key
 Feature: Mix & Move with AI
 Scenario: Dancer, music, dance
 

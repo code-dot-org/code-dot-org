@@ -38,6 +38,9 @@ const createCommonStore = function (options = {}) {
   instructionsConstants.longInstructions =
     'some *markdown enabled* instructions; can take advantage of\n- various\n- markdown\n- rendering options\n\nto provide more in-depth (and vertically more intrusive) instruction';
 
+  instructionsConstants.longInstructions +=
+    '\n<details><summary>Click to show more details</summary><p>This content is hidden until expanded</p></details>';
+
   document.head.parentElement.dir = options.rtl ? 'rtl' : 'ltr';
   store.dispatch(setRtlFromDOM());
 

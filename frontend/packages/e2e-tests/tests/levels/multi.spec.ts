@@ -1,6 +1,18 @@
 import {expect, test} from '@playwright/test';
 
 import {MultiLevel} from '../pages/multi-level';
+import {analyze, WCAG_AA_TAGS} from '../shared/axe';
+
+// Expected violations per state: rule id -> failing node count (settle() makes
+// the counts deterministic). Scoped to the widget; the header's color-contrast
+// belongs to the sign-in spec. Inventory:
+//   image-alt: 4 answer-option images + the content image (.content > img).
+//   color-contrast: the win dialog #ok-button, white on #ffa400 (1.98:1).
+const EXPECTED_VIOLATIONS: Record<string, Record<string, number>> = {
+  initialLoad: {'image-alt': 5},
+  winModal: {'color-contrast': 1},
+  afterDismissedIncorrectModal: {'image-alt': 5},
+};
 
 test.describe('Playing multi levels', () => {
   /**
@@ -16,6 +28,10 @@ test.describe('Playing multi levels', () => {
     await expect(level.question).toHaveText(
       'Which arrow gets the Flurb to the treasure?',
     );
+
+    expect(
+      await analyze(page, {include: level.rootSelector, tags: WCAG_AA_TAGS}),
+    ).toEqual(EXPECTED_VIOLATIONS.initialLoad);
   });
 
   /**
@@ -40,6 +56,11 @@ test.describe('Playing multi levels', () => {
 
     // Win modal is server-gated: appears after the milestone POST.
     await expect(level.modal).toBeVisible();
+
+    // Scope to the dialog: the milestone POST re-renders the background.
+    expect(
+      await analyze(page, {include: level.modalSelector, tags: WCAG_AA_TAGS}),
+    ).toEqual(EXPECTED_VIOLATIONS.winModal);
   });
 
   /**
@@ -66,5 +87,9 @@ test.describe('Playing multi levels', () => {
 
     await level.dismissModal();
     await expect(level.crossMark(0)).toBeVisible();
+
+    expect(
+      await analyze(page, {include: level.rootSelector, tags: WCAG_AA_TAGS}),
+    ).toEqual(EXPECTED_VIOLATIONS.afterDismissedIncorrectModal);
   });
 });
