@@ -8,13 +8,13 @@ import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 // see MessageType in ../types) are relayed through unchanged and are not listed here.
 export enum PyodideSandboxMessageType {
   // sandbox -> outer
-  SANDBOX_READY = 'pyodide_sandbox_ready',
-  SERVICE_WORKER_UNAVAILABLE = 'pyodide_sandbox_service_worker_unavailable',
-  AWAITING_INPUT = 'pyodide_sandbox_awaiting_input',
+  SANDBOX_READY = 'sandbox_ready',
+  SERVICE_WORKER_UNAVAILABLE = 'sandbox_service_worker_unavailable',
+  AWAITING_INPUT = 'sandbox_awaiting_input',
   // outer -> sandbox
-  RUN = 'pyodide_sandbox_run',
-  SENDING_INPUT = 'pyodide_sandbox_sending_input',
-  RESTART_WORKER = 'pyodide_sandbox_restart_worker',
+  RUN = 'sandbox_run',
+  SENDING_INPUT = 'sandbox_sending_input',
+  RESTART_WORKER = 'sandbox_restart_worker',
 }
 
 export interface PyodideSandboxRunMessage {
