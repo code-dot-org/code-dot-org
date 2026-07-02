@@ -9,6 +9,16 @@ Dashboard::Application.routes.draw do
 
   get "frontend-studio(/*path)", to: "frontend_studio#index"
 
+  # Development-only: proxy CloudFront-restricted musiclab assets to the upstream
+  # (production) using cookies signed there, for local boxes without real
+  # CloudFront keys. Gated on the `localoverride` key-pair sentinel so it is
+  # never mounted anywhere with real keys. The sentinel literal must match
+  # RestrictedProxyController::LOCAL_OVERRIDE_KEY_PAIR_ID (kept literal here to
+  # avoid autoloading the controller during route drawing).
+  if rack_env?(:development) && CDO.cloudfront_key_pair_id == 'localoverride'
+    get "/restricted/*path", to: "restricted_proxy#show", format: false
+  end
+
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
 
