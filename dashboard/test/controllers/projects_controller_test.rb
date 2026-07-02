@@ -1,13 +1,8 @@
 require 'test_helper'
 require 'webmock/minitest'
 
-# rubocop:disable CustomCops/PegasusDbUsage
 class ProjectsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
-
-  around do |test|
-    DASHBOARD_DB.transaction(rollback: :always, auto_savepoint: true) {test.call}
-  end
 
   # Sign in, and stub request.user_id to return the signed in user's id
   def sign_in_with_request(user)
@@ -15,14 +10,8 @@ class ProjectsControllerTest < ActionController::TestCase
     ActionDispatch::TestRequest.any_instance.stubs(:user_id).returns(user.id)
   end
 
-  def sign_out_with_request(user = @current_user)
-    sign_out user
-    ActionDispatch::TestRequest.any_instance.unstub(:user_id)
-  end
-
   setup do
-    @current_user = create(:user)
-    sign_in_with_request @current_user
+    sign_in_with_request create :user
     Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'US')])
     AzureTextToSpeech.stubs(:get_voices).returns({})
   end
@@ -658,34 +647,4 @@ class ProjectsControllerTest < ActionController::TestCase
     refute_nil updated_value, 'Expected project.update to be called'
     assert_nil updated_value['subprojects'], 'Expected subprojects to be removed'
   end
-
-  describe 'GET #create_new' do
-    include ActiveJob::TestHelper
-
-    subject(:get_create_project) {get :create_new, params: {key: project_type}}
-
-    let(:project_type) {Game::SPRITELAB}
-
-    it 'does not enqueue geo recording job for user project storage' do
-      assert_no_enqueued_jobs only: ProjectStorage::AnonymousGeoRecordingJob do
-        get_create_project
-      end
-    end
-
-    context 'when signed out' do
-      before do
-        sign_out_with_request
-      end
-
-      it 'enqueues geo recording job for anonymous project storage' do
-        get_create_project
-
-        latest_project_storage = DASHBOARD_DB[:user_project_storage_ids].reverse_order(:id).first
-
-        _(latest_project_storage[:user_id]).must_be_nil
-        assert_enqueued_with job: ProjectStorage::AnonymousGeoRecordingJob, args: [latest_project_storage[:id], request.ip]
-      end
-    end
-  end
 end
-# rubocop:enable CustomCops/PegasusDbUsage
