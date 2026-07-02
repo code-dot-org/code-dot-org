@@ -2620,6 +2620,30 @@ class UnitTest < ActiveSupport::TestCase
     assert_raises(RuntimeError) {unit.update_lesson_outlines([{'key' => 'a'}])}
   end
 
+  test 'lesson_tutor_available? is true for AIF and AID student courses' do
+    %w[AIF AID].each_with_index do |initiative, i|
+      unit_group = create(:single_unit_course, :with_course_offering, family_name: "ai-tutor-#{i}", version_year: '2026')
+      unit_group.course_version.course_offering.update!(marketing_initiative: initiative)
+      assert unit_group.first_unit.lesson_tutor_available?, "expected #{initiative} course to offer the lesson tutor"
+    end
+  end
+
+  test 'lesson_tutor_available? is false for non-AI course offerings' do
+    unit_group = create(:single_unit_course, :with_course_offering, family_name: 'not-ai', version_year: '2026')
+    unit_group.course_version.course_offering.update!(marketing_initiative: 'CSD')
+    refute unit_group.first_unit.lesson_tutor_available?
+  end
+
+  test 'lesson_tutor_available? is false for PL courses even with an AI marketing initiative' do
+    unit_group = create(:single_unit_course, :pl_course, :with_course_offering, family_name: 'ai-pl', version_year: '2026')
+    unit_group.course_version.course_offering.update!(marketing_initiative: 'AIF')
+    refute unit_group.first_unit.lesson_tutor_available?
+  end
+
+  test 'lesson_tutor_available? is false for a unit with no course version' do
+    refute create(:unit).lesson_tutor_available?
+  end
+
   private def has_unlaunched_unit?(units)
     units.any? {|u| !u.launched?}
   end

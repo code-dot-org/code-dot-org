@@ -338,7 +338,7 @@ class Lesson < ApplicationRecord
         description_student: description_student,
         description_teacher: description_teacher,
         unplugged: unplugged,
-        lessonTutorPath: "#{get_uncached_show_path}/tutor",
+        lessonTutorPath: lesson_tutor_available? ? "#{get_uncached_show_path}/tutor" : nil,
         lessonEditPath: get_uncached_edit_path,
         lessonStartUrl: start_url(unit_group_unit: unit_group_unit),
         duration: total_lesson_duration,
@@ -417,6 +417,12 @@ class Lesson < ApplicationRecord
 
   def total_lesson_duration
     lesson_activities.map(&:summarize).sum {|activity| activity[:duration] || 0}
+  end
+
+  # The lesson tutor deep dive is available only for lessons with a lesson plan
+  # (assessments/surveys are excluded) that belong to an AIF/AID student course.
+  def lesson_tutor_available?
+    has_lesson_plan && !!script&.lesson_tutor_available?
   end
 
   def summarize_for_calendar(unit_group_unit: nil)
