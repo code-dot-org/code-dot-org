@@ -69,6 +69,7 @@ export default defineConfig({
         'src/plugins/blockLimits/index.ts',
         'src/plugins/grayOutUndeletableBlocks/index.ts',
         'src/plugins/disableOrphans/index.ts',
+        'src/plugins/scrollOptions/index.ts',
         'src/inputs/index.ts',
         'src/inputs/rectangle.ts',
         'src/inputs/round.ts',
