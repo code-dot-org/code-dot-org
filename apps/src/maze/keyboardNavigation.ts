@@ -1,11 +1,16 @@
-// Keyboard navigation for the maze. The maze SVG wrapper is the only
+// Keyboard navigation for the maze. The maze SVG itself is the only
 // thing in the tab order. Enter activates a focus cursor on Pegman's
 // cell. Arrows walk it along open cells, obstacles, and the goal;
 // walls and out-of-bounds block. Escape removes the cursor.
 //
+// The svg is the interactive host (rather than a wrapping div) so it
+// stays the direct child of #visualization; the responsive scaling in
+// common.scss / responsive-visualization.scss targets that direct child,
+// and an intermediate wrapper box shifts where the scale is anchored.
+//
 // Pegman and maze state are never mutated. Cells are read through
-// window.Maze.controller (set by loadMaze.js); without it the wrapper
-// is just inert focus.
+// window.Maze.controller (set by loadMaze.js); without it the svg is
+// just inert focus.
 
 import maze from '@code-dot-org/maze';
 
@@ -306,7 +311,6 @@ function createCursorRect(
 }
 
 export default class MazeKeyboardNavigation {
-  private readonly wrapper: HTMLElement;
   private readonly svg: SVGSVGElement;
   private readonly liveRegion: HTMLElement;
   private cursor: SVGRectElement | null = null;
@@ -314,23 +318,25 @@ export default class MazeKeyboardNavigation {
   private cursorPos: CursorPos | null = null;
   private active = false;
 
-  constructor(wrapper: HTMLElement, svg: SVGSVGElement) {
-    this.wrapper = wrapper;
+  constructor(svg: SVGSVGElement) {
     this.svg = svg;
+    // The live region is an HTML element and can't live inside the svg
+    // namespace, so it hangs off document.body. It works from anywhere in
+    // the document and is removed in destroy().
     this.liveRegion = document.createElement('div');
     this.liveRegion.setAttribute('aria-live', 'polite');
     this.liveRegion.setAttribute('aria-atomic', 'true');
     Object.assign(this.liveRegion.style, SR_ONLY);
-    this.wrapper.appendChild(this.liveRegion);
+    document.body.appendChild(this.liveRegion);
 
-    this.wrapper.addEventListener('keydown', this.handleKeyDown);
-    this.wrapper.addEventListener('focusout', this.handleFocusOut);
+    this.svg.addEventListener('keydown', this.handleKeyDown);
+    this.svg.addEventListener('focusout', this.handleFocusOut);
   }
 
   destroy(): void {
-    this.exit({restoreWrapperFocus: false});
-    this.wrapper.removeEventListener('keydown', this.handleKeyDown);
-    this.wrapper.removeEventListener('focusout', this.handleFocusOut);
+    this.exit({restoreFocus: false});
+    this.svg.removeEventListener('keydown', this.handleKeyDown);
+    this.svg.removeEventListener('focusout', this.handleFocusOut);
     this.liveRegion.remove();
   }
 
@@ -349,7 +355,7 @@ export default class MazeKeyboardNavigation {
       e.stopPropagation();
     };
     if (!this.active) {
-      if (e.key === 'Enter' && e.target === this.wrapper) {
+      if (e.key === 'Enter' && e.target === this.svg) {
         consume();
         this.enter();
       }
@@ -370,8 +376,8 @@ export default class MazeKeyboardNavigation {
   private handleFocusOut = (e: FocusEvent): void => {
     if (!this.active) return;
     const next = e.relatedTarget as Node | null;
-    if (next && next !== this.wrapper && this.wrapper.contains(next)) return;
-    this.exit({restoreWrapperFocus: false});
+    if (next && next !== this.svg && this.svg.contains(next)) return;
+    this.exit({restoreFocus: false});
   };
 
   private enter(): void {
@@ -428,8 +434,8 @@ export default class MazeKeyboardNavigation {
   // removing the focused cursor bubbles to focusout, which re-enters
   // this method; without the early flip we'd double-remove a node
   // mid-removal and the browser throws NotFoundError.
-  private exit(opts: {restoreWrapperFocus?: boolean} = {}): void {
-    const {restoreWrapperFocus = true} = opts;
+  private exit(opts: {restoreFocus?: boolean} = {}): void {
+    const {restoreFocus = true} = opts;
     if (!this.active) return;
     this.active = false;
     const cursor = this.cursor;
@@ -439,8 +445,8 @@ export default class MazeKeyboardNavigation {
     this.cursorPos = null;
     cursor?.remove();
     halo?.remove();
-    if (restoreWrapperFocus) {
-      this.wrapper.focus();
+    if (restoreFocus) {
+      this.svg.focus();
       this.announce(msg.mazeNavExited());
     }
   }

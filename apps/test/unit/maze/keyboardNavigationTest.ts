@@ -403,7 +403,6 @@ describe('maze keyboard navigation reporting', () => {
 });
 
 describe('MazeKeyboardNavigation interaction', () => {
-  let wrapper: HTMLElement;
   let svg: SVGSVGElement;
   let nav: MazeKeyboardNavigation;
 
@@ -414,27 +413,26 @@ describe('MazeKeyboardNavigation interaction', () => {
 
   beforeEach(() => {
     jest.useFakeTimers();
-    wrapper = document.createElement('div');
-    wrapper.tabIndex = 0;
+    // The svg is the interactive host; tabindex lets it take focus like the
+    // real Visualization renders it.
     svg = document.createElementNS(SVG_NS, 'svg') as SVGSVGElement;
-    document.body.appendChild(wrapper);
+    svg.setAttribute('tabindex', '0');
     document.body.appendChild(svg);
     (window as unknown as {Maze: object}).Maze = {
       controller: makeController({pegman: {x: 1, y: 1}}),
     };
-    nav = new MazeKeyboardNavigation(wrapper, svg);
+    nav = new MazeKeyboardNavigation(svg);
   });
 
   afterEach(() => {
     nav.destroy();
     jest.runOnlyPendingTimers();
     jest.useRealTimers();
-    wrapper.remove();
     svg.remove();
     delete (window as unknown as {Maze?: object}).Maze;
   });
 
-  const press = (key: string, target: EventTarget = wrapper) =>
+  const press = (key: string, target: EventTarget = svg) =>
     target.dispatchEvent(new KeyboardEvent('keydown', {key, bubbles: true}));
 
   // The controller is read fresh on each navigation action, so a test can
@@ -445,10 +443,10 @@ describe('MazeKeyboardNavigation interaction', () => {
   };
 
   // announce() clears the live region then sets the text on a 0ms timeout;
-  // flush pending timers before reading it.
+  // the region hangs off document.body. Flush pending timers before reading.
   const liveRegionText = () => {
     jest.runOnlyPendingTimers();
-    return wrapper.querySelector('[aria-live="polite"]')?.textContent;
+    return document.body.querySelector('[aria-live="polite"]')?.textContent;
   };
 
   it('creates a focusable cursor labelled for pegman on Enter', () => {
@@ -494,10 +492,10 @@ describe('MazeKeyboardNavigation interaction', () => {
     );
   });
 
-  it('announces exit and restores focus to the wrapper on Escape', () => {
+  it('announces exit and restores focus to the svg on Escape', () => {
     press('Enter');
     press('Escape');
     expect(liveRegionText()).toBe('EXITED');
-    expect(document.activeElement).toBe(wrapper);
+    expect(document.activeElement).toBe(svg);
   });
 });
