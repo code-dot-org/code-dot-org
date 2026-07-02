@@ -2,7 +2,7 @@ import {BasePage} from './base-page';
 
 /**
  * Page object for the signed-in home page (/home). Owns navigation; the
- * signed-in chrome checks (waitForSignedIn, etc.) come from BasePage. Global
+ * signed-in chrome checks (header.waitForSignedIn, etc.) come from the header
  * overlays that appear here — the GDPR dialog, the student-information
  * interstitial — are modeled as their own component objects, not as part of
  * this page.
