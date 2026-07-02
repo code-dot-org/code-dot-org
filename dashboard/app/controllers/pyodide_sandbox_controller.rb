@@ -24,11 +24,7 @@ class PyodideSandboxController < ApplicationController
     default_src = "'self'"
     connect_src = "'self'"
 
-    # wasm-unsafe-eval is Pyodide's post-0.28 requirement for WASM compilation without
-    # full eval. unsafe-eval is still required for Safari, which does not yet support
-    # wasm-unsafe-eval.
-    # TODO: drop 'unsafe-eval' once Safari supports 'wasm-unsafe-eval'.
-    script_src = "'self' 'unsafe-eval' 'wasm-unsafe-eval'"
+    script_src = "'self' 'wasm-unsafe-eval'"
 
     # Explicit rather than relying on the worker-src -> script-src CSP3 fallback, since
     # this is exactly what lets us spawn the inner pyodide web worker.
