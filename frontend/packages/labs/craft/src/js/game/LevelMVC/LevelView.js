@@ -519,13 +519,21 @@ export default class LevelView {
     }
   }
 
+  resetSpriteOrigin(sprite) {
+    if (sprite.originX !== 0 || sprite.originY !== 0) {
+      sprite.setOrigin(0, 0);
+    }
+  }
+
   /**
    * Make a top-left-anchored sprite inside a display group (container).
    * Undefined key gets the transparent default texture (CE blank sprites).
    */
   createSprite(group, x, y, key, frame) {
     const sprite = this.scene.add.sprite(x, y, key ?? '__DEFAULT', frame);
-    sprite.setOrigin(0, 0);
+    this.resetSpriteOrigin(sprite);
+    sprite.on('animationstart', () => this.resetSpriteOrigin(sprite));
+    sprite.on('animationupdate', () => this.resetSpriteOrigin(sprite));
     sprite.sortOrder = 0;
     group.add(sprite);
     return sprite;
@@ -1304,16 +1312,26 @@ export default class LevelView {
     }
   }
 
+  removeActionPlaneBlock(blockIndex) {
+    const sprite = this.actionPlaneBlocks[blockIndex];
+    if (!sprite) {
+      return;
+    }
+
+    this.actionGroup.remove(sprite);
+    this.groundGroup.remove(sprite);
+    sprite.destroy();
+    this.actionPlaneBlocks[blockIndex] = null;
+  }
+
   createActionPlaneBlock(position, blockType) {
     const block = new LevelBlock(blockType);
     const blockIndex = (this.yToIndex(position[1])) + position[0];
 
     // Remove the old sprite at this position, if there is one.
-    this.actionGroup.remove(this.actionPlaneBlocks[blockIndex]);
-    this.groundGroup.remove(this.actionPlaneBlocks[blockIndex]);
+    this.removeActionPlaneBlock(blockIndex);
 
     if (block.isEmpty) {
-      this.actionPlaneBlocks[blockIndex] = null;
       return;
     }
 
@@ -1884,8 +1902,7 @@ export default class LevelView {
         } else if (newBlock) {
           // Remove the old sprite at this position, if there is one.
           const index = this.coordinatesToIndex(position);
-          this.actionGroup.remove(this.actionPlaneBlocks[index]);
-          this.groundGroup.remove(this.actionPlaneBlocks[index]);
+          this.removeActionPlaneBlock(index);
         }
       }
     });
@@ -1894,7 +1911,12 @@ export default class LevelView {
   updateShadingGroup(shadingData) {
     var index, shadowItem, sx, sy, atlas;
 
-    this.shadingGroup.removeAll();
+    [this.baseShading, this.selectionIndicator].forEach(child => {
+      if (child && this.shadingGroup.list.includes(child)) {
+        this.shadingGroup.remove(child);
+      }
+    });
+    this.shadingGroup.removeAll(true);
 
     this.shadingGroup.add(this.baseShading);
     // guard: during resetGroups the old indicator is already destroyed
@@ -1919,7 +1941,7 @@ export default class LevelView {
   updateFowGroup(fowData) {
     var index, fx, fy, atlas;
 
-    this.fowGroup.removeAll();
+    this.fowGroup.removeAll(true);
 
     for (index = 0; index < fowData.length; ++index) {
       let fowItem = fowData[index];
