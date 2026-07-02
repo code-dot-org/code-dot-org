@@ -19,6 +19,10 @@ export interface MusicLevelData {
   // Required to match the validation schema (`LevelDataSchema.toolbox`): a
   // validated music level always carries a toolbox (defaulting `includeAi`).
   toolbox: ToolboxData;
+  // The level's authored starting workspace (Blockly serialization). This is
+  // the field legacy's getStartSources reads; the workspace loads it as the
+  // initial blocks. Falls back to DefaultStartBlocks when absent.
+  startSources?: BlocklySerialization;
   sounds?: Sounds;
   library?: string;
   packId?: string;

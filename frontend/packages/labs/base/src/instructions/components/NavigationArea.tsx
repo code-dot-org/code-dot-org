@@ -64,7 +64,6 @@ const NavigationArea: FunctionComponent<NavigationAreaProps> = ({
     useSecondaryFinishButton,
     submittable,
     disableEditRunForSubmission,
-    offerBrowserTts,
   } = levelProperties;
   const hasValidationConditions = useAppSelector(
     state => state.lab.validationState?.hasConditions,
@@ -95,7 +94,9 @@ const NavigationArea: FunctionComponent<NavigationAreaProps> = ({
       ? 'Finished with your project?'
       : validationMessage;
 
-  const showTts = offerBrowserTts || queryParams('show-tts') === 'true';
+  // Browser TTS is always offered here; the legacy `offerBrowserTts` experiment
+  // gate is ignored. TextToSpeech self-gates on locale + engine availability.
+  const showTts = true;
   const hasSubmitted = useAppSelector(
     state => getCurrentLevel(state)?.status === LevelStatuses.Submitted,
   );

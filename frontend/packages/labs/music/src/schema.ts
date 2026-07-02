@@ -11,6 +11,8 @@ export const LevelDataSchema = z.object({
   showSoundFilters: z.boolean().default(false),
   library: z.string(),
   toolbox: ToolboxSchema,
+  // The level's authored starting workspace (Blockly serialization).
+  startSources: z.record(z.string(), z.unknown()).optional(),
 });
 
 /**

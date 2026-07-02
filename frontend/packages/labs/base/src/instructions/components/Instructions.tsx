@@ -10,7 +10,6 @@ import {
 import type {LevelProperties} from '@code-dot-org/core/api';
 
 import InstructorsOnly from '../../components/InstructorsOnly';
-import {queryParams} from '../../utils/queryParams';
 
 import MainInstructionsContent from './MainInstructionsContent';
 import NavigationArea from './NavigationArea';
@@ -82,9 +81,11 @@ const Instructions: FunctionComponent<InstructionsProps> = ({
   hideContinueIfDisabled = false,
   ...feedbackProps
 }) => {
-  const {longInstructions, predictSettings, offerBrowserTts} = levelProperties;
+  const {longInstructions, predictSettings} = levelProperties;
   const isPredictLevel = predictSettings?.isPredictLevel;
-  const showTts = offerBrowserTts || queryParams('show-tts') === 'true';
+  // Browser TTS is always offered here; the legacy `offerBrowserTts` experiment
+  // gate is ignored. TextToSpeech self-gates on locale + engine availability.
+  const showTts = true;
   const {theme: defaultTheme} = useTheme();
   const ref: MutableRefObject<HTMLDivElement | null> = useRef(null);
 

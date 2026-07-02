@@ -4,7 +4,6 @@ import type {LevelProperties} from '@code-dot-org/core/api';
 
 import MainInstructionsContent from '../../instructions/components/MainInstructionsContent';
 import NavigationArea from '../../instructions/components/NavigationArea';
-import {queryParams} from '../../utils/queryParams';
 
 import Guide from '../Guide';
 
@@ -25,8 +24,10 @@ const GuideInstructions: FunctionComponent<GuideInstructionsProps> = ({
   hasRun,
   hasEdited,
 }) => {
-  const {longInstructions, offerBrowserTts} = levelProperties;
-  const showTts = offerBrowserTts || queryParams('show-tts') === 'true';
+  const {longInstructions} = levelProperties;
+  // Browser TTS is always offered here; the legacy `offerBrowserTts` experiment
+  // gate is ignored. TextToSpeech self-gates on locale + engine availability.
+  const showTts = true;
 
   const levelSpecificId = `guide-instructions-${levelProperties.id}`;
 

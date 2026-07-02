@@ -1,6 +1,7 @@
 import type {PropsWithChildren} from 'react';
 import {Suspense, useEffect} from 'react';
 
+import {BrowserTextToSpeechWrapper} from '@code-dot-org/audio/textToSpeech';
 import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
 import type {LevelPropertiesMap} from '@code-dot-org/core/api';
 import {injectFontAwesome} from '@code-dot-org/fonts';
@@ -100,7 +101,11 @@ const Lab = ({
               {/* Manages the shared lab dialogs (Start Over, Skip, Share, …);
                   without it `useDialogControl().showDialog` is a no-op. */}
               <DialogControlProvider dialogViews={DialogViews}>
-                {labContent}
+                {/* Provides browser text-to-speech availability to the
+                    instructions' TextToSpeech buttons. */}
+                <BrowserTextToSpeechWrapper>
+                  {labContent}
+                </BrowserTextToSpeechWrapper>
               </DialogControlProvider>
             </LevelPropertiesProvider>
           </ExtraLinksButtonProvider>

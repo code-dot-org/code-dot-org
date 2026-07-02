@@ -112,15 +112,21 @@ const MusicLab = () => {
     [driver],
   );
 
+  // The level's authored starting workspace, falling back to the default "when
+  // run" block. Matches legacy getStartSources, which reads levelData.startSources.
+  const levelStartBlocks: BlocklySerialization =
+    levelProperties.levelData?.startSources ||
+    levelProperties.startBlocks ||
+    DefaultStartBlocks;
+
   // "Start Over" confirm handler. Resets the workspace to the level's start
   // blocks, clears the pack (which re-opens the picker) unless the level fixed
   // one or we're told to keep it, and stops playback.
   const clearCode = useCallback(
     (maintainPackId?: boolean) => {
       // Reset the live workspace, then persist the reset sources.
-      const startSources = levelProperties.startBlocks || DefaultStartBlocks;
-      driver?.loadCode(startSources);
-      updateSources({source: startSources});
+      driver?.loadCode(levelStartBlocks);
+      updateSources({source: levelStartBlocks});
 
       if (!levelProperties.levelData?.packId && !maintainPackId) {
         dispatch(setPackId(null));
@@ -128,7 +134,14 @@ const MusicLab = () => {
       }
       setPlaying(false);
     },
-    [levelProperties, driver, updateSources, dispatch, setPlaying],
+    [
+      levelStartBlocks,
+      levelProperties,
+      driver,
+      updateSources,
+      dispatch,
+      setPlaying,
+    ],
   );
   const triggers: Trigger[] = [];
   const playTrigger: (id: string) => void = _ => {};
@@ -296,13 +309,11 @@ const MusicLab = () => {
               // An empty source is the truthy `{}` (a new/empty project), which
               // would otherwise win this `||` chain and skip the defaults. Only
               // use it when it actually has blocks; otherwise fall back to the
-              // level's start blocks or the default "when run" block.
+              // level's authored start blocks (or the default "when run" block).
               (currentSources?.source &&
               Object.keys(currentSources.source).length
                 ? currentSources.source
-                : undefined) ||
-              levelProperties.startBlocks ||
-              DefaultStartBlocks
+                : undefined) || levelStartBlocks
             }
             toolbox={toolbox}
             onInject={onInject}
