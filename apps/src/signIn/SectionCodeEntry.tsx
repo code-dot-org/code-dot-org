@@ -1,14 +1,13 @@
 import TextField from '@code-dot-org/component-library/textField';
-import {Typography, Button as MuiButton} from '@mui/material';
+import {Button as MuiButton} from '@mui/material';
 import React, {useState} from 'react';
 
 import style from './signInStyles.module.scss';
 
 export interface SectionCodeEntryProps {
-  // Visible heading above the field, e.g. "Enter your 6 letter section code".
-  sectionCodeHeading: string;
-  // Accessible name for the input; the field has no visible label of its own
-  // to avoid duplicating the heading text.
+  // Field label, e.g. "Enter your 6 letter section code". Rendered as the
+  // TextField's own label so it matches the sign-in fields' labels exactly
+  // (same size, weight, padding, and top alignment).
   sectionCodeLabel: string;
   sectionCodePlaceholder: string;
   defaultSectionCode: string;
@@ -18,7 +17,6 @@ export interface SectionCodeEntryProps {
 }
 
 const SectionCodeEntry: React.FunctionComponent<SectionCodeEntryProps> = ({
-  sectionCodeHeading,
   sectionCodeLabel,
   sectionCodePlaceholder,
   defaultSectionCode,
@@ -29,15 +27,12 @@ const SectionCodeEntry: React.FunctionComponent<SectionCodeEntryProps> = ({
 
   return (
     <div className={style.sectionCode}>
-      <Typography variant="h6" component="h6">
-        {sectionCodeHeading}
-      </Typography>
       <form action={formAction} method="get" className={style.sectionCodeForm}>
         <TextField
           id="section_code"
           className={style.sectionCodeField}
           name="section_code"
-          aria-label={sectionCodeLabel}
+          label={sectionCodeLabel}
           placeholder={sectionCodePlaceholder}
           value={sectionCode}
           onChange={e => setSectionCode(e.target.value)}

@@ -50,7 +50,6 @@ $(document).ready(() => {
     const data = sectionCodeMount.dataset;
     createReactRoot(
       <SectionCodeEntry
-        sectionCodeHeading={data.sectionCodeHeading}
         sectionCodeLabel={data.sectionCodeLabel}
         sectionCodePlaceholder={data.sectionCodePlaceholder}
         defaultSectionCode={data.defaultSectionCode || ''}

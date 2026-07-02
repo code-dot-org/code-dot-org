@@ -7,7 +7,6 @@ import SectionCodeEntry, {
 } from '@cdo/apps/signIn/SectionCodeEntry';
 
 const DEFAULT_PROPS: SectionCodeEntryProps = {
-  sectionCodeHeading: 'Enter your 6 letter section code',
   sectionCodeLabel: 'Enter your 6 letter section code',
   sectionCodePlaceholder: 'Section Code (ABCDEF)',
   defaultSectionCode: '',
@@ -20,10 +19,9 @@ describe('SectionCodeEntry', () => {
     return render(<SectionCodeEntry {...DEFAULT_PROPS} {...overrides} />);
   }
 
-  it('renders the heading, section-code input, and Go button', () => {
+  it('renders the labeled section-code input and Go button', () => {
     renderEntry();
 
-    screen.getByRole('heading', {name: DEFAULT_PROPS.sectionCodeHeading});
     expect(
       screen.getByRole('textbox', {name: DEFAULT_PROPS.sectionCodeLabel})
     ).toHaveAttribute('name', 'section_code');
