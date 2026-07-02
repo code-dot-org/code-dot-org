@@ -244,19 +244,18 @@ class HttpCache
             trusted_signer: true,
           },
           {
+            # Preserve cookies and headers on images which would otherwise
+            # match the STATIC_ASSET_EXTENSION_PATHS rule below:
+            # - certificate images rendering depends on the user's language.
+            # - user authentication is required to delete starter assets.
             path: %w(
+              /certificate_images/*
+              /level_starter_assets/*
               /v3/assets/*
               /v3/animations/*
               /v3/files/*
               /v3/libraries/*
             ),
-            headers: ALLOWLISTED_HEADERS,
-            cookies: allowlisted_cookies
-          },
-          {
-            # Pass through cookies when requesting or deleting starter assets, as user authentication
-            # is required when deleting assets.
-            path: '/level_starter_assets/*',
             headers: ALLOWLISTED_HEADERS,
             cookies: allowlisted_cookies
           },
