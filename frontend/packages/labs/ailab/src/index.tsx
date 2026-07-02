@@ -17,6 +17,7 @@ import {
   setSelectedJSON,
   setReserveLocation,
   setInstructionsDismissed,
+  setInstructionsEnabled,
   resetState,
 } from './redux';
 import {store} from './store';
@@ -55,6 +56,8 @@ export const mount = function (options: MountOptions): void {
   if (options.logMetric) {
     setMetricsLogger(options.logMetric);
   }
+  // Dispatching early so instructions enabled state is set before processMode().
+  store.dispatch(setInstructionsEnabled(!!options.setInstructionsKey));
 
   root = createRoot(document.getElementById('root')!);
   root.render(
@@ -62,6 +65,14 @@ export const mount = function (options: MountOptions): void {
       <App {...options} />
     </Provider>,
   );
+};
+
+/**
+ * Tears down the lab.
+ */
+export const unmount = function (): void {
+  root?.unmount();
+  root = undefined;
 };
 
 /**

@@ -74,6 +74,8 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
       saveTrainedModel,
       logMetric,
     });
+
+    return () => ailab.unmount();
   }, [dispatch]);
 
   // Reload whenever the level changes regardless of if the mode has changed.

@@ -173,7 +173,7 @@ export interface PrevNextButtons {
   next?: NavButton;
 }
 
-export type Panel =
+type ContentPanel =
   | 'selectDataset'
   | 'dataDisplayLabel'
   | 'dataDisplayFeatures'
@@ -181,12 +181,13 @@ export type Panel =
   | 'generateResults'
   | 'results'
   | 'saveModel'
-  | 'modelSummary'
-  | 'continue'
-  | 'finish';
+  | 'modelSummary';
+
+// Valid panels are content panels + Continue/Finish targets.
+export type Panel = ContentPanel | 'continue' | 'finish';
 
 export type InstructionsKey =
-  | Panel
+  | ContentPanel
   | 'uploadedDataset'
   | 'selectedDataset'
   | 'selectedFeatureNumerical'

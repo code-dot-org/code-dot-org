@@ -10,12 +10,7 @@ import {
 } from './helpers/navigationValidation';
 import {shallowEqual, useAppDispatch, useAppSelector} from './hooks';
 import I18n from './i18n';
-import {
-  getPanelButtons,
-  saveModel,
-  setCurrentPanel,
-  setInstructionsEnabled,
-} from './redux';
+import {getPanelButtons, saveModel, setCurrentPanel} from './redux';
 import type {
   InstructionsKey,
   Panel,
@@ -228,10 +223,6 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
   const saveResponseData = useAppSelector(state => state.saveResponseData);
   const instructionsKey = useAppSelector(state => state.instructionsKey);
   const showOverlay = useAppSelector(state => state.showOverlay);
-
-  useEffect(() => {
-    dispatch(setInstructionsEnabled(!!setInstructionsKey));
-  }, [setInstructionsKey]);
 
   // Notify the consumer of instructions key changes when they occur.
   useEffect(() => {
