@@ -1,5 +1,6 @@
 //import {ProcedureBase} from '@blockly/block-shareable-procedures';
 import {serialization} from '@code-dot-org/blockly';
+import type {BlocklySerialization} from '@code-dot-org/blockly';
 import * as Blockly from 'blockly/core';
 import type {JavascriptGenerator} from 'blockly/javascript';
 import EventEmitter from 'events';
@@ -145,6 +146,20 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
 
   async loadAndInitializePlayer(libraryName: string) {
     this.library = await MusicLibrary.loadLibrary(this.api, libraryName);
+
+    // Apply the level's sound allowlist and fixed pack before announcing the
+    // library, so sound filtering and getDefaultSound() (used by field
+    // defaults) are correct from the first render. The allowlist restricts a
+    // pack to a level-chosen subset (e.g. twinkle_twinkle -> the four
+    // vocals_chorus_* sounds), which also determines the default sound.
+    const {sounds, packId} = this.levelProperties.levelData ?? {};
+    if (sounds) {
+      this.library.setAllowedSounds(sounds);
+    }
+    if (packId) {
+      this.library.setCurrentPackId(packId);
+    }
+
     this.emit(DriverEvent.LibraryUpdated, this.library);
   }
 
@@ -559,8 +574,16 @@ class Driver extends (EventEmitter as unknown as new () => TypedEmitter<DriverEv
     // TODO
   }
 
-  loadCode(_code: string) {
-    // TODO
+  /**
+   * Replaces the workspace contents with the given serialization. Used to reset
+   * to a level's start blocks (e.g. from Start Over). `serialization.load`
+   * clears the workspace before loading.
+   */
+  loadCode(code: BlocklySerialization) {
+    if (!this.workspace) {
+      return;
+    }
+    Blockly.serialization.workspaces.load(code, this.workspace);
   }
 
   stopSong() {

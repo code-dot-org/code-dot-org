@@ -157,7 +157,9 @@ function SoundsEditor({
  */
 export const plugin = createReactField<string>({
   name: 'field_sounds',
-  defaultValue: MusicLibrary.getInstance()?.getDefaultSound() || '',
+  // Lazy: the library loads asynchronously, so resolve the default sound when a
+  // field is created rather than at module load (when it would be empty).
+  defaultValue: () => MusicLibrary.getInstance()?.getDefaultSound() || '',
 
   Editor: SoundsEditor,
 

@@ -2,7 +2,11 @@ import classNames from 'classnames';
 import {useRef, useContext, useCallback, useMemo, useEffect} from 'react';
 
 import {BlockTypes} from '../../blockly/blockTypes';
-import {BlockMode} from '../../constants';
+import {
+  BlockMode,
+  DEFAULT_LIBRARY,
+  LEGACY_DEFAULT_LIBRARY,
+} from '../../constants';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {BlocklyWorkspace} from '@code-dot-org/blockly';
 import type {BlocklySerialization} from '@code-dot-org/blockly';
@@ -30,7 +34,11 @@ import AppConfig from '../../appConfig';
 import PlayerContext from '../../contexts/PlayerContext';
 import type {PlaybackEvent} from '../../player/interfaces/PlaybackEvent';
 import MusicLibrary from '../../player/MusicLibrary';
-import {InstructionsPosition, showCallout} from '../../redux/musicSlice';
+import {
+  InstructionsPosition,
+  setPackId,
+  showCallout,
+} from '../../redux/musicSlice';
 import {useAppDispatch, useAppSelector} from '../../redux/store';
 import {labActions} from '@code-dot-org/lab/redux';
 import type {Trigger, MusicLevelProperties} from '../../types';
@@ -62,7 +70,7 @@ const MusicLab = () => {
 
   const levelProperties = useLevelProperties<MusicLevelProperties>();
 
-  const {currentSources} = useSources<BlocklySerialization>();
+  const {currentSources, updateSources} = useSources<BlocklySerialization>();
 
   const {skipUrl} = levelProperties;
   const guideMode = levelProperties.levelData.guideMode;
@@ -80,12 +88,12 @@ const MusicLab = () => {
     javascriptGeneratorRef,
     driver,
     player,
+    library,
   } = useContext(PlayerContext);
 
   const hideChaff = useCallback(() => {}, []);
   const undo = useCallback(() => !!driver?.undo(), [driver]);
   const redo = useCallback(() => !!driver?.redo(), [driver]);
-  const clearCode: (maintainPackId?: boolean) => void = _ => {};
   const isReadOnly = useAppSelector(labActions.isReadOnlyWorkspace);
   // The student may pick a pack only when the library offers a choice, the
   // level did not fix one, and the workspace is editable. A level-fixed pack
@@ -97,6 +105,25 @@ const MusicLab = () => {
   const setPlaying = useCallback(
     (play: boolean) => driver?.setPlaying(play),
     [driver],
+  );
+
+  // "Start Over" confirm handler. Resets the workspace to the level's start
+  // blocks, clears the pack (which re-opens the picker) unless the level fixed
+  // one or we're told to keep it, and stops playback.
+  const clearCode = useCallback(
+    (maintainPackId?: boolean) => {
+      // Reset the live workspace, then persist the reset sources.
+      const startSources = levelProperties.startBlocks || DefaultStartBlocks;
+      driver?.loadCode(startSources);
+      updateSources({source: startSources});
+
+      if (!levelProperties.levelData?.packId && !maintainPackId) {
+        dispatch(setPackId(null));
+        MusicLibrary.getInstance()?.setCurrentPackId(null);
+      }
+      setPlaying(false);
+    },
+    [levelProperties, driver, updateSources, dispatch, setPlaying],
   );
   const triggers: Trigger[] = [];
   const playTrigger: (id: string) => void = _ => {};
@@ -118,9 +145,15 @@ const MusicLab = () => {
           hidden: false,
         }),
       );
-      loadAndInitializePlayer('launch2024');
+      // Load the library the level asks for (mapping the legacy 'default'
+      // alias), rather than a hardcoded one.
+      let libraryName = levelProperties.levelData?.library;
+      if (libraryName === LEGACY_DEFAULT_LIBRARY) {
+        libraryName = DEFAULT_LIBRARY;
+      }
+      loadAndInitializePlayer(libraryName || DEFAULT_LIBRARY);
     }
-  }, [loadAndInitializePlayer, dispatch, theme, setTheme]);
+  }, [loadAndInitializePlayer, dispatch, theme, setTheme, levelProperties]);
 
   // Set up the driver
   useEffect(() => {
@@ -136,12 +169,25 @@ const MusicLab = () => {
     [dispatch],
   );
 
+  // Once the library is loaded, reflect a level-fixed pack into redux so the
+  // header shows it. (The library itself is filtered to the pack by the driver.)
+  useEffect(() => {
+    const packId = levelProperties.levelData?.packId;
+    if (library && packId) {
+      dispatch(setPackId(packId));
+    }
+  }, [library, levelProperties, dispatch]);
+
   const toolbox = useMemo(
     () =>
       levelProperties.multipleChoice
         ? undefined
         : getToolbox(BlockMode.SIMPLE2, levelProperties.levelData?.toolbox),
-    [levelProperties],
+    // `library` is a dependency because the flyout blocks' field defaults (e.g.
+    // FieldSounds' default sound) are resolved from the library when the blocks
+    // are built; recomputing rebuilds the flyout once the library has loaded.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [levelProperties, library],
   );
 
   const timelineAtTop = useAppSelector(state => state.music.timelineAtTop);
