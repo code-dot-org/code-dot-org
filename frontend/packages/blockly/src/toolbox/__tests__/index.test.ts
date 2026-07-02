@@ -111,4 +111,64 @@ describe('toolboxFromCategoryBlocks', () => {
     );
     expect(result).toEqual([{name: 'Play', blocks: ['play_sound']}]);
   });
+
+  describe('with a pool', () => {
+    // Mirrors the music default toolbox shape: a bare id, a type seeded once per
+    // variant (set_effect), and a single seeded entry (function_def).
+    const pool = [
+      {name: 'Sounds', blocks: ['play_sound']},
+      {
+        name: 'Effects',
+        blocks: [
+          {kind: 'block', type: 'set_effect', fields: {effect: 'volume'}},
+          {kind: 'block', type: 'set_effect', fields: {effect: 'filter'}},
+        ],
+      },
+      {
+        name: 'Functions',
+        blocks: [
+          {kind: 'block', type: 'function_def', fields: {NAME: 'my function'}},
+        ],
+      },
+    ];
+
+    it('resolves ids against the pool, preserving seeded fields', () => {
+      const result = toolboxFromCategoryBlocks(
+        {My: ['play_sound', 'function_def', 'unknown']},
+        'category',
+        pool,
+      );
+      expect(result).toEqual([
+        {
+          name: 'My',
+          blocks: [
+            // bare pool id stays bare; seeded entry keeps its fields; a type
+            // absent from the pool falls back to a bare id.
+            'play_sound',
+            {
+              kind: 'block',
+              type: 'function_def',
+              fields: {NAME: 'my function'},
+            },
+            'unknown',
+          ],
+        },
+      ]);
+    });
+
+    it('expands a type with several pooled entries to all of them', () => {
+      const result = toolboxFromCategoryBlocks(
+        {Fx: ['set_effect']},
+        'flyout',
+        pool,
+      );
+      expect(result).toEqual({
+        name: '',
+        blocks: [
+          {kind: 'block', type: 'set_effect', fields: {effect: 'volume'}},
+          {kind: 'block', type: 'set_effect', fields: {effect: 'filter'}},
+        ],
+      });
+    });
+  });
 });
