@@ -73,66 +73,68 @@ const SignInForm: React.FunctionComponent<SignInFormProps> = ({
 
   return (
     <div id="signin" className={style.signInColumn}>
-      <form action={SIGN_IN_PATH} method="post" className={style.form}>
-        <RailsAuthenticityToken />
-        <input type="hidden" name="user[hashed_email]" value={hashedEmail} />
+      <div className={style.formArea}>
+        <form action={SIGN_IN_PATH} method="post" className={style.form}>
+          <RailsAuthenticityToken />
+          <input type="hidden" name="user[hashed_email]" value={hashedEmail} />
 
-        <TextField
-          id={LOGIN_FIELD_ID}
-          className={style.field}
-          name="user[login]"
-          label={loginLabel}
-          value={login}
-          onChange={e => setLogin(e.target.value)}
-          autoComplete="username"
-        />
-        <TextField
-          id={PASSWORD_FIELD_ID}
-          className={style.field}
-          name="user[password]"
-          label={passwordLabel}
-          inputType="password"
-          value={password}
-          onChange={e => setPassword(e.target.value)}
-          autoComplete="current-password"
-        />
+          <TextField
+            id={LOGIN_FIELD_ID}
+            className={style.field}
+            name="user[login]"
+            label={loginLabel}
+            value={login}
+            onChange={e => setLogin(e.target.value)}
+            autoComplete="username"
+          />
+          <TextField
+            id={PASSWORD_FIELD_ID}
+            className={style.field}
+            name="user[password]"
+            label={passwordLabel}
+            inputType="password"
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+            autoComplete="current-password"
+          />
 
-        {forgotPasswordPath && (
-          <Link
-            className={style.forgotPassword}
-            href={forgotPasswordPath}
-            type="secondary"
-            size="s"
+          {forgotPasswordPath && (
+            <Link
+              className={style.forgotPassword}
+              href={forgotPasswordPath}
+              type="secondary"
+              size="s"
+            >
+              {forgotPasswordLabel}
+            </Link>
+          )}
+
+          <MuiButton
+            id="signin-button"
+            variant="contained"
+            color="primary"
+            type="submit"
           >
-            {forgotPasswordLabel}
-          </Link>
+            {signInLabel}
+          </MuiButton>
+        </form>
+
+        {showSignUp && (
+          <MuiButton
+            variant="outlined"
+            color="secondary"
+            href={signUpPath}
+            onClick={() =>
+              analyticsReporter.sendEvent(
+                EVENTS.LOGIN_PAGE_CREATE_ACCOUNT_CLICKED,
+                {}
+              )
+            }
+          >
+            {signUpLabel}
+          </MuiButton>
         )}
-
-        <MuiButton
-          id="signin-button"
-          variant="contained"
-          color="primary"
-          type="submit"
-        >
-          {signInLabel}
-        </MuiButton>
-      </form>
-
-      {showSignUp && (
-        <MuiButton
-          variant="outlined"
-          color="secondary"
-          href={signUpPath}
-          onClick={() =>
-            analyticsReporter.sendEvent(
-              EVENTS.LOGIN_PAGE_CREATE_ACCOUNT_CLICKED,
-              {}
-            )
-          }
-        >
-          {signUpLabel}
-        </MuiButton>
-      )}
+      </div>
     </div>
   );
 };
