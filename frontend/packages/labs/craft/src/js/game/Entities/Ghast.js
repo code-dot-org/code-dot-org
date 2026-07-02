@@ -1,5 +1,5 @@
+import { randomInt, generateFrameNames } from './../LevelMVC/Utils';
 import BaseEntity from './BaseEntity';
-import { randomInt } from './../LevelMVC/Utils';
 
 export default class Ghast extends BaseEntity {
     constructor(controller, type, identifier, x, y, facing) {
@@ -23,8 +23,8 @@ export default class Ghast extends BaseEntity {
         let actionGroup = this.controller.levelView.actionGroup;
         var frameList = [];
         var frameName = "Ghast";
-        this.sprite = actionGroup.create(0, 0, 'ghast', 'Ghast0000.png');
-        this.sprite.scale.setTo(1,1);
+        this.sprite = this.controller.levelView.createSprite(actionGroup, 0, 0, 'ghast', 'Ghast0000.png');
+        this.sprite.setScale(1,1);
         let idleDelayFrame = 0;
         // [direction][[idle],[shoot]]
         var frameListPerDirection = [[[72, 83], [84, 95]], // down
@@ -35,7 +35,7 @@ export default class Ghast extends BaseEntity {
             var facingName = this.controller.levelView.getDirectionName(i);
 
             // idle sequence
-            frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][0][0], frameListPerDirection[i][0][1], ".png", 4);
+            frameList = generateFrameNames(frameName, frameListPerDirection[i][0][0], frameListPerDirection[i][0][1], ".png", 4);
 
             let randomOffset = randomInt(2, frameList.length);
             let framesToOffset = [];
@@ -50,25 +50,25 @@ export default class Ghast extends BaseEntity {
             for (var j = 0; j < idleDelayFrame; j++) {
                 frameList.push(frameList[0]);
             }
-            this.sprite.animations.add("idle" + facingName, frameList, frameRate, false).onComplete.add(() => {
+            this.addAnimation("idle" + facingName, frameList, frameRate, false, () => {
                 this.playRandomIdle(this.facing);
             });
             // shoot
-            frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][1][0], frameListPerDirection[i][1][1], ".png", 4);
-            this.sprite.animations.add("shoot" + facingName, frameList, frameRate, false).onComplete.add(() => {
-                this.sprite.animations.stop();
+            frameList = generateFrameNames(frameName, frameListPerDirection[i][1][0], frameListPerDirection[i][1][1], ".png", 4);
+            this.addAnimation("shoot" + facingName, frameList, frameRate, false, () => {
+                this.sprite.anims.stop();
                 setTimeout(() => {
-                    this.controller.levelView.playScaledSpeed(this.sprite.animations, "shoot" + this.controller.levelView.getDirectionName(this.facing) + "_2");
+                    this.controller.levelView.playScaledSpeed(this.sprite, "shoot" + this.controller.levelView.getDirectionName(this.facing) + "_2");
                 }, getRandomSecondBetween(randomPauseMin, randomPauseMax));
 
             });
-            frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][1][1], frameListPerDirection[i][1][0], ".png", 4);
-            this.sprite.animations.add("shoot" + facingName + "_2", frameList, frameRate, false).onComplete.add(() => {
-                this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
+            frameList = generateFrameNames(frameName, frameListPerDirection[i][1][1], frameListPerDirection[i][1][0], ".png", 4);
+            this.addAnimation("shoot" + facingName + "_2", frameList, frameRate, false, () => {
+                this.controller.levelView.playScaledSpeed(this.sprite, "idle" + this.controller.levelView.getDirectionName(this.facing));
             });
         }
         // initialize
-        this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
+        this.controller.levelView.playScaledSpeed(this.sprite, "idle" + this.controller.levelView.getDirectionName(this.facing));
         this.sprite.x = this.offset[0] + 40 * this.position.x;
         this.sprite.y = this.offset[1] + 40 * this.position.y;
     }
@@ -88,7 +88,7 @@ export default class Ghast extends BaseEntity {
     animationName += "idle";
 
     animationName += facingName;
-    this.controller.levelView.playScaledSpeed(this.sprite.animations, animationName);
+    this.controller.levelView.playScaledSpeed(this.sprite, animationName);
 
     if (this.audioDelay > 0) {
       --this.audioDelay;
@@ -120,26 +120,46 @@ export default class Ghast extends BaseEntity {
   }
 
   patrolA() {
-    const options = [Phaser.Easing.Sinusoidal.InOut, true, 0, -1, true];
+    this.controller.levelView.addResettableTween({
+      targets: this.sprite,
+      y: (this.offset[1] + 40 * this.position.y + 80),
+      duration: randomInt(2500, 3500),
+      ease: 'Sine.easeInOut',
+      delay: 0,
+      repeat: -1,
+      yoyo: true,
+    });
 
-    this.controller.levelView.addResettableTween(this.sprite).to({
-        y: (this.offset[1] + 40 * this.position.y + 80),
-      }, randomInt(2500, 3500), ...options);
-
-    this.controller.levelView.addResettableTween(this.sprite).to({
-        x: (this.offset[0] + 40 * this.position.x + 10),
-      }, randomInt(1500, 2000), ...options);
+    this.controller.levelView.addResettableTween({
+      targets: this.sprite,
+      x: (this.offset[0] + 40 * this.position.x + 10),
+      duration: randomInt(1500, 2000),
+      ease: 'Sine.easeInOut',
+      delay: 0,
+      repeat: -1,
+      yoyo: true,
+    });
   }
 
   patrolB() {
-    const options = [Phaser.Easing.Sinusoidal.InOut, true, 0, -1, true];
-
-    this.controller.levelView.addResettableTween(this.sprite).to({
+    this.controller.levelView.addResettableTween({
+      targets: this.sprite,
       y: (this.offset[1] + 40 * this.position.y - 80),
-    }, randomInt(2500, 3500), ...options);
+      duration: randomInt(2500, 3500),
+      ease: 'Sine.easeInOut',
+      delay: 0,
+      repeat: -1,
+      yoyo: true,
+    });
 
-    this.controller.levelView.addResettableTween(this.sprite).to({
+    this.controller.levelView.addResettableTween({
+      targets: this.sprite,
       x: (this.offset[0] + 40 * this.position.x - 10),
-    }, randomInt(1500, 2000), ...options);
+      duration: randomInt(1500, 2000),
+      ease: 'Sine.easeInOut',
+      delay: 0,
+      repeat: -1,
+      yoyo: true,
+    });
   }
 };

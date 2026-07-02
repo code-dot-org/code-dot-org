@@ -1858,7 +1858,7 @@ __metadata:
     "@vitejs/plugin-react": "catalog:"
     eslint: "catalog:"
     jsdom: "catalog:"
-    phaser-ce: "npm:^2.20.0"
+    phaser: "npm:^4.2.0"
     playwright: "catalog:"
     prettier: "catalog:"
     react: "catalog:"
@@ -12166,6 +12166,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eventemitter3@npm:^5.0.4":
+  version: 5.0.4
+  resolution: "eventemitter3@npm:5.0.4"
+  checksum: 10c0/575b8cac8d709e1473da46f8f15ef311b57ff7609445a7c71af5cd42598583eee6f098fa7a593e30f27e94b8865642baa0689e8fa97c016f742abdb3b1bf6d9a
+  languageName: node
+  linkType: hard
+
 "events@npm:^3.3.0":
   version: 3.3.0
   resolution: "events@npm:3.3.0"
@@ -18430,10 +18437,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"phaser-ce@npm:^2.20.0":
-  version: 2.20.2
-  resolution: "phaser-ce@npm:2.20.2"
-  checksum: 10c0/044501ed1de2e192d1a3d482619abcaff08816e4b8dd463ca6e2c9ec58d6780d2841573bbe697689c1aa5bc3a9e1946f4c9d49a48c17d22226039a80bee0417d
+"phaser@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "phaser@npm:4.2.0"
+  dependencies:
+    eventemitter3: "npm:^5.0.4"
+  checksum: 10c0/906a1f41a867b1410c18f2e3708723802001197c922403f9b9594487d26dd29e3ebad6eeb8e8a8f7a4c8dd683ce6b31497bac48c5de1de60135327a49df6d6e3
   languageName: node
   linkType: hard
 

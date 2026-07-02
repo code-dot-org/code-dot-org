@@ -403,14 +403,8 @@ Craft.init = function (config) {
           Craft.gameController.codeOrgAPI.clickUp(() => {})
         );
 
-        // Prevent Phaser from scrolling up on iPhones when it receives a resize event.
-        Craft.gameController.game.device.whenReady(
-          () => {
-            Craft.gameController.game.scale.compatibility.scrollTo = false;
-          },
-          this,
-          false
-        );
+        // (Phaser 4) the CE iPhone scroll workaround (device.whenReady +
+        // scale.compatibility.scrollTo) is no longer needed or available.
       },
       twitter: {
         text: 'Share on Twitter',
@@ -681,7 +675,7 @@ Craft.reset = function (first) {
 };
 
 Craft.phaserLoaded = function () {
-  return !!Craft.gameController?.game?.load;
+  return !!Craft.gameController?.game;
 };
 
 Craft.levelInitialized = function () {
@@ -709,7 +703,9 @@ Craft.runButtonClick = function () {
   if (Craft.level.usePlayer) {
     Craft.showSoftButtons();
   }
-  Craft.gameController.game.input.touch.preventDefault = false;
+  if (Craft.gameController.game.input?.touch) {
+    Craft.gameController.game.input.touch.capture = false;
+  }
 
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');

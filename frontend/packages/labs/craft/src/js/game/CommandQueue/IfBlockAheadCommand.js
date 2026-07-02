@@ -1,6 +1,6 @@
-import CommandState from './CommandState';
-import CommandQueue from './CommandQueue';
 import BaseCommand from './BaseCommand';
+import CommandQueue from './CommandQueue';
+import CommandState from './CommandState';
 
 export default class IfBlockAheadCommand extends BaseCommand {
   constructor(gameController, highlightCallback, blockType, targetEntity, callback) {

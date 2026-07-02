@@ -1,7 +1,7 @@
-import LevelBlock from './LevelBlock';
-import FacingDirection from './FacingDirection';
-import Position from './Position';
 import AdjacencySet from './AdjacencySet';
+import FacingDirection from './FacingDirection';
+import LevelBlock from './LevelBlock';
+import Position from './Position';
 
 const { North, South, East, West, opposite, turnDirection, turn, directionToRelative } = FacingDirection;
 

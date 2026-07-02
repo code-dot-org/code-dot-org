@@ -1,5 +1,7 @@
-import BaseEntity from './BaseEntity';
 import FacingDirection from '../LevelMVC/FacingDirection';
+import {generateFrameNames} from '../LevelMVC/Utils';
+
+import BaseEntity from './BaseEntity';
 
 export default class Dolphin extends BaseEntity {
   constructor(controller, type, identifier, x, y, facing) {
@@ -35,7 +37,7 @@ export default class Dolphin extends BaseEntity {
     console.log(this.controller.levelModel.isUnderwater());
     const frame = this.getFrameForDirection();
     const actionGroup = this.controller.levelView.actionGroup;
-    this.sprite = actionGroup.create(0, 0, 'dolphin', frame+'.png');
+    this.sprite = this.controller.levelView.createSprite(actionGroup, 0, 0, 'dolphin', frame+'.png');
     let frameBase = this.controller.levelModel.isUnderwater() ? 'Dolphin' : 'Dolphin_Surface';
     let frameListPerDirection = [[0, 14], // up
       [15, 29], // right
@@ -49,14 +51,14 @@ export default class Dolphin extends BaseEntity {
     }
     for (var i = 0; i < 4; i++) {
       let facingName = this.controller.levelView.getDirectionName(i);
-      let frameList = Phaser.Animation.generateFrameNames(frameBase, frameListPerDirection[i][0], frameListPerDirection[i][1], ".png", 2);
-      this.sprite.animations.add("idle"+facingName, frameList, frameRate, false).onComplete.add(() => {
-          this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle"+facingName,.5);
+      let frameList = generateFrameNames(frameBase, frameListPerDirection[i][0], frameListPerDirection[i][1], ".png", 2);
+      this.addAnimation("idle"+facingName, frameList, frameRate, false, () => {
+          this.controller.levelView.playScaledSpeed(this.sprite, "idle"+facingName,.5);
       });
     }
     // Initialize
     let facingName = this.controller.levelView.getDirectionName(this.facing);
-    this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + facingName,.5);
+    this.controller.levelView.playScaledSpeed(this.sprite, "idle" + facingName,.5);
     this.sprite.x = this.offset[0] + 40 * this.position.x;
     this.sprite.y = this.offset[1] + 40 * this.position.y;
   }

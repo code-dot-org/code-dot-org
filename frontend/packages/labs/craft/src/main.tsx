@@ -1,7 +1,8 @@
 import {initializeCore} from '@code-dot-org/core';
 
-import {GameController} from './index';
 import {CraftLabFixtures} from './fixtures';
+
+import {GameController} from './index';
 
 initializeCore({plugins: []});
 
@@ -21,7 +22,6 @@ const level = CraftLabFixtures.defaultLevel;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any -- GameController is untyped
 const gameController: any = new GameController({
-  Phaser: window.Phaser,
   containerId: 'phaser-game',
   assetRoot,
   audioPlayer,

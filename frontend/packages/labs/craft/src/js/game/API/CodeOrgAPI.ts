@@ -1,12 +1,12 @@
 // @ts-nocheck -- untyped JS renamed to .ts for progressive adoption
-import PlaceBlockCommand from '../CommandQueue/PlaceBlockCommand';
-import PlaceInFrontCommand from '../CommandQueue/PlaceInFrontCommand';
-import PlaceDirectionCommand from '../CommandQueue/PlaceDirectionCommand';
-import MoveForwardCommand from '../CommandQueue/MoveForwardCommand';
+import CallbackCommand from '../CommandQueue/CallbackCommand';
+import IfBlockAheadCommand from '../CommandQueue/IfBlockAheadCommand';
 import MoveBackwardCommand from '../CommandQueue/MoveBackwardCommand';
 import MoveDirectionCommand from '../CommandQueue/MoveDirectionCommand';
-import IfBlockAheadCommand from '../CommandQueue/IfBlockAheadCommand';
-import CallbackCommand from '../CommandQueue/CallbackCommand';
+import MoveForwardCommand from '../CommandQueue/MoveForwardCommand';
+import PlaceBlockCommand from '../CommandQueue/PlaceBlockCommand';
+import PlaceDirectionCommand from '../CommandQueue/PlaceDirectionCommand';
+import PlaceInFrontCommand from '../CommandQueue/PlaceInFrontCommand';
 import RepeatCommand from '../CommandQueue/RepeatCommand';
 
 export function get(controller) {
@@ -201,8 +201,8 @@ export function get(controller) {
     },
     // -1 for infinite repeat
     repeatRandom: function (highlightCallback, codeBlock, targetEntity) {
-      var maxIteration = 10;
-      var randomIteration = Math.floor(Math.random() * maxIteration) + 1;
+      const maxIteration = 10;
+      const randomIteration = Math.floor(Math.random() * maxIteration) + 1;
       controller.addCommand(new RepeatCommand(controller, highlightCallback, codeBlock, randomIteration, targetEntity));
     },
 

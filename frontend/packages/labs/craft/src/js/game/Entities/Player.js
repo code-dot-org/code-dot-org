@@ -1,6 +1,7 @@
-import BaseEntity from './BaseEntity';
 import CallbackCommand from '../CommandQueue/CallbackCommand';
 import Position from '../LevelMVC/Position';
+
+import BaseEntity from './BaseEntity';
 
 export default class Player extends BaseEntity {
   constructor(controller, type, x, y, name, isOnBlock, facing) {
@@ -243,11 +244,11 @@ export default class Player extends BaseEntity {
     this.healthPoint--;
     // still alive
     if (this.healthPoint > 0) {
-      this.controller.levelView.playScaledSpeed(this.getAnimationManager(), "hurt" + facingName);
+      this.controller.levelView.playScaledSpeed(this.getAnimationTarget(), "hurt" + facingName);
       callbackCommand.succeeded();
       // report failure since player died
     } else {
-      this.getAnimationManager().stop(null, true);
+      this.getAnimationTarget().anims.stop();
       this.controller.levelView.playFailureAnimation(this.position, this.facing, this.isOnBlock, () => {
         callbackCommand.failed();
         this.controller.handleEndState(false);

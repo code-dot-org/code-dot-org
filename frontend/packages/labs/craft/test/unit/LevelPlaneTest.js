@@ -1,8 +1,8 @@
 import { describe, it, expect } from 'vitest';
 
-import LevelPlane from '../../src/js/game/LevelMVC/LevelPlane';
-import LevelBlock from '../../src/js/game/LevelMVC/LevelBlock';
 import FacingDirection from '../../src/js/game/LevelMVC/FacingDirection';
+import LevelBlock from '../../src/js/game/LevelMVC/LevelBlock';
+import LevelPlane from '../../src/js/game/LevelMVC/LevelPlane';
 import Position from '../../src/js/game/LevelMVC/Position';
 
 it('get blocks', () => {

@@ -1,3 +1,5 @@
+import {generateFrameNames} from '../LevelMVC/Utils';
+
 import BaseEntity from './BaseEntity';
 export default class Chicken extends BaseEntity {
     constructor(controller, type, identifier, x, y, facing) {
@@ -15,8 +17,8 @@ export default class Chicken extends BaseEntity {
         let actionGroup = this.controller.levelView.actionGroup;
         var frameList = [];
         var frameName = "chicken";
-        this.sprite = actionGroup.create(0, 0, 'chicken', 'chicken0001.png');
-        this.sprite.scale.setTo(0.75,0.75);
+        this.sprite = this.controller.levelView.createSprite(actionGroup, 0, 0, 'chicken', 'chicken0001.png');
+        this.sprite.setScale(0.75,0.75);
         let stillFrameName = ['chicken0222.png', 'chicken0111.png', 'chicken0001.png', 'chicken0333.png'];
         let idleDelayFrame = 8;
         // [direction][[idle],[look left],[look right],[look up],[look down],[walk],[attack],[take dmg],[die],[bump],[eat]]
@@ -28,93 +30,93 @@ export default class Chicken extends BaseEntity {
             var facingName = this.controller.levelView.getDirectionName(i);
 
             // idle sequence
-            frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][0][0], frameListPerDirection[i][0][1], ".png", 4);
+            frameList = generateFrameNames(frameName, frameListPerDirection[i][0][0], frameListPerDirection[i][0][1], ".png", 4);
             for (var j = 0; j < idleDelayFrame; j++) {
                 frameList.push(stillFrameName[i]);
             }
-            this.sprite.animations.add("idle" + facingName, frameList, frameRate, false).onComplete.add(() => {
+            this.addAnimation("idle" + facingName, frameList, frameRate, false, () => {
                 this.playRandomIdle(this.facing);
             });
             // look left sequence ( look left -> pause for random time -> look front -> idle)
-            frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][1][0], frameListPerDirection[i][1][1], ".png", 4);
-            this.sprite.animations.add("lookLeft" + facingName, frameList, frameRate, false).onComplete.add(() => {
-                this.sprite.animations.stop();
+            frameList = generateFrameNames(frameName, frameListPerDirection[i][1][0], frameListPerDirection[i][1][1], ".png", 4);
+            this.addAnimation("lookLeft" + facingName, frameList, frameRate, false, () => {
+                this.sprite.anims.stop();
                 setTimeout(() => {
-                    this.controller.levelView.playScaledSpeed(this.sprite.animations, "lookLeft" + this.controller.levelView.getDirectionName(this.facing) + "_2");
+                    this.controller.levelView.playScaledSpeed(this.sprite, "lookLeft" + this.controller.levelView.getDirectionName(this.facing) + "_2");
                 }, getRandomSecondBetween(randomPauseMin, randomPauseMax));
 
             });
-            frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][1][1], frameListPerDirection[i][1][0], ".png", 4);
-            this.sprite.animations.add("lookLeft" + facingName + "_2", frameList, frameRate, false).onComplete.add(() => {
-                this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
+            frameList = generateFrameNames(frameName, frameListPerDirection[i][1][1], frameListPerDirection[i][1][0], ".png", 4);
+            this.addAnimation("lookLeft" + facingName + "_2", frameList, frameRate, false, () => {
+                this.controller.levelView.playScaledSpeed(this.sprite, "idle" + this.controller.levelView.getDirectionName(this.facing));
             });
             // look right sequence ( look right -> pause for random time -> look front -> idle)
-            frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][2][0], frameListPerDirection[i][2][1], ".png", 4);
-            this.sprite.animations.add("lookRight" + facingName, frameList, frameRate, false).onComplete.add(() => {
-                this.sprite.animations.stop();
+            frameList = generateFrameNames(frameName, frameListPerDirection[i][2][0], frameListPerDirection[i][2][1], ".png", 4);
+            this.addAnimation("lookRight" + facingName, frameList, frameRate, false, () => {
+                this.sprite.anims.stop();
                 setTimeout(() => {
-                    this.controller.levelView.playScaledSpeed(this.sprite.animations, "lookRight" + this.controller.levelView.getDirectionName(this.facing) + "_2");
+                    this.controller.levelView.playScaledSpeed(this.sprite, "lookRight" + this.controller.levelView.getDirectionName(this.facing) + "_2");
                 }, getRandomSecondBetween(randomPauseMin, randomPauseMax));
 
             });
-            frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][2][1], frameListPerDirection[i][2][0], ".png", 4);
-            this.sprite.animations.add("lookRight" + facingName + "_2", frameList, frameRate, false).onComplete.add(() => {
-                this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
+            frameList = generateFrameNames(frameName, frameListPerDirection[i][2][1], frameListPerDirection[i][2][0], ".png", 4);
+            this.addAnimation("lookRight" + facingName + "_2", frameList, frameRate, false, () => {
+                this.controller.levelView.playScaledSpeed(this.sprite, "idle" + this.controller.levelView.getDirectionName(this.facing));
             });
             // look up sequence ( look up -> pause for random time -> look front -> play random idle)
-            frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][3][0], frameListPerDirection[i][3][1], ".png", 4);
-            this.sprite.animations.add("lookAtCam" + facingName, frameList, frameRate, false).onComplete.add(() => {
-                this.sprite.animations.stop();
+            frameList = generateFrameNames(frameName, frameListPerDirection[i][3][0], frameListPerDirection[i][3][1], ".png", 4);
+            this.addAnimation("lookAtCam" + facingName, frameList, frameRate, false, () => {
+                this.sprite.anims.stop();
                 setTimeout(() => {
-                    this.controller.levelView.playScaledSpeed(this.sprite.animations, "lookAtCam" + this.controller.levelView.getDirectionName(this.facing) + "_2");
+                    this.controller.levelView.playScaledSpeed(this.sprite, "lookAtCam" + this.controller.levelView.getDirectionName(this.facing) + "_2");
                 }, getRandomSecondBetween(randomPauseMin, randomPauseMax));
 
             });
-            frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][3][1], frameListPerDirection[i][3][0], ".png", 4);
-            this.sprite.animations.add("lookAtCam" + facingName + "_2", frameList, frameRate, false).onComplete.add(() => {
-                this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
+            frameList = generateFrameNames(frameName, frameListPerDirection[i][3][1], frameListPerDirection[i][3][0], ".png", 4);
+            this.addAnimation("lookAtCam" + facingName + "_2", frameList, frameRate, false, () => {
+                this.controller.levelView.playScaledSpeed(this.sprite, "idle" + this.controller.levelView.getDirectionName(this.facing));
             });
             // look down
-            frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][4][0], frameListPerDirection[i][4][1], ".png", 4);
-            this.sprite.animations.add("lookDown" + facingName, frameList, frameRate, false).onComplete.add(() => {
-                this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
+            frameList = generateFrameNames(frameName, frameListPerDirection[i][4][0], frameListPerDirection[i][4][1], ".png", 4);
+            this.addAnimation("lookDown" + facingName, frameList, frameRate, false, () => {
+                this.controller.levelView.playScaledSpeed(this.sprite, "idle" + this.controller.levelView.getDirectionName(this.facing));
             });
             // walk
-            frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][5][0], frameListPerDirection[i][5][1], ".png", 4);
-            this.sprite.animations.add("walk" + facingName, frameList, frameRate, true);
+            frameList = generateFrameNames(frameName, frameListPerDirection[i][5][0], frameListPerDirection[i][5][1], ".png", 4);
+            this.addAnimation("walk" + facingName, frameList, frameRate, true);
             // attack
-            frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][6][0], frameListPerDirection[i][6][1], ".png", 4);
-            this.sprite.animations.add("attack" + facingName, frameList, frameRate, false).onComplete.add(() => {
-                this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
+            frameList = generateFrameNames(frameName, frameListPerDirection[i][6][0], frameListPerDirection[i][6][1], ".png", 4);
+            this.addAnimation("attack" + facingName, frameList, frameRate, false, () => {
+                this.controller.levelView.playScaledSpeed(this.sprite, "idle" + this.controller.levelView.getDirectionName(this.facing));
             });
             // take damage
-            frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][7][0], frameListPerDirection[i][7][1], ".png", 4);
-            this.sprite.animations.add("hurt" + facingName, frameList, frameRate, false).onComplete.add(() => {
-                this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
+            frameList = generateFrameNames(frameName, frameListPerDirection[i][7][0], frameListPerDirection[i][7][1], ".png", 4);
+            this.addAnimation("hurt" + facingName, frameList, frameRate, false, () => {
+                this.controller.levelView.playScaledSpeed(this.sprite, "idle" + this.controller.levelView.getDirectionName(this.facing));
             });
             // die
-            frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][8][0], frameListPerDirection[i][8][1], ".png", 4);
-            this.sprite.animations.add("die" + facingName, frameList, frameRate, false);
+            frameList = generateFrameNames(frameName, frameListPerDirection[i][8][0], frameListPerDirection[i][8][1], ".png", 4);
+            this.addAnimation("die" + facingName, frameList, frameRate, false);
             // bump
             frameList = this.controller.levelView.generateReverseFrames(frameName, frameListPerDirection[i][9][0], frameListPerDirection[i][9][1], ".png", 4);
-            this.sprite.animations.add("bump" + facingName, frameList, frameRate, false).onComplete.add(() => {
-                this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
+            this.addAnimation("bump" + facingName, frameList, frameRate, false, () => {
+                this.controller.levelView.playScaledSpeed(this.sprite, "idle" + this.controller.levelView.getDirectionName(this.facing));
             });
             // eat
-            frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][10][0], frameListPerDirection[i][10][1], ".png", 4);
-            this.sprite.animations.add("eat" + facingName, frameList, frameRate, false).onComplete.add(() => {
-                this.sprite.animations.stop();
+            frameList = generateFrameNames(frameName, frameListPerDirection[i][10][0], frameListPerDirection[i][10][1], ".png", 4);
+            this.addAnimation("eat" + facingName, frameList, frameRate, false, () => {
+                this.sprite.anims.stop();
                 setTimeout(() => {
-                    this.controller.levelView.playScaledSpeed(this.sprite.animations, "eat" + this.controller.levelView.getDirectionName(this.facing) + "_2");
+                    this.controller.levelView.playScaledSpeed(this.sprite, "eat" + this.controller.levelView.getDirectionName(this.facing) + "_2");
                 }, getRandomSecondBetween(randomPauseMin, randomPauseMax));
             });
-            frameList = Phaser.Animation.generateFrameNames(frameName, frameListPerDirection[i][10][1], frameListPerDirection[i][10][0], ".png", 4);
-            this.sprite.animations.add("eat" + facingName + "_2", frameList, frameRate, false).onComplete.add(() => {
-                this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
+            frameList = generateFrameNames(frameName, frameListPerDirection[i][10][1], frameListPerDirection[i][10][0], ".png", 4);
+            this.addAnimation("eat" + facingName + "_2", frameList, frameRate, false, () => {
+                this.controller.levelView.playScaledSpeed(this.sprite, "idle" + this.controller.levelView.getDirectionName(this.facing));
             });
         }
         // initialize
-        this.controller.levelView.playScaledSpeed(this.sprite.animations, "idle" + this.controller.levelView.getDirectionName(this.facing));
+        this.controller.levelView.playScaledSpeed(this.sprite, "idle" + this.controller.levelView.getDirectionName(this.facing));
         this.sprite.x = this.offset[0] + 40 * this.position.x;
         this.sprite.y = this.offset[1] + 40 * this.position.y;
     }

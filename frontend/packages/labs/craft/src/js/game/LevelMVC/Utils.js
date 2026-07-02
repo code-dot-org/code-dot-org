@@ -32,6 +32,20 @@ export function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 };
 
+/**
+ * Build a list of texture-atlas frame names: prefix + padded counter +
+ * suffix, inclusive of both endpoints. A start greater than stop counts
+ * down (used for reverse animations).
+ */
+export function generateFrameNames(prefix, start, stop, suffix = '', zeroPad = 0) {
+  const frames = [];
+  const step = start <= stop ? 1 : -1;
+  for (let i = start; step > 0 ? i <= stop : i >= stop; i += step) {
+    frames.push(prefix + String(i).padStart(zeroPad, '0') + suffix);
+  }
+  return frames;
+};
+
 const suffixToDirection = {
   Up: FacingDirection.North,
   Down: FacingDirection.South,

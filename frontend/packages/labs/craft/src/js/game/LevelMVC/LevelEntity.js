@@ -1,18 +1,18 @@
 import BaseEntity from '../Entities/BaseEntity';
-import Sheep from '../Entities/Sheep';
-import Zombie from '../Entities/Zombie';
-import IronGolem from '../Entities/IronGolem';
-import Creeper from '../Entities/Creeper';
-import Cow from '../Entities/Cow';
+import Boat from '../Entities/Boat';
 import Chicken from '../Entities/Chicken';
-import Dolphin from '../Entities/Dolphin';
 import Cod from '../Entities/Cod';
+import Cow from '../Entities/Cow';
+import Creeper from '../Entities/Creeper';
+import Dolphin from '../Entities/Dolphin';
+import Ghast from '../Entities/Ghast';
+import IronGolem from '../Entities/IronGolem';
 import Salmon from '../Entities/Salmon';
 import SeaTurtle from '../Entities/SeaTurtle';
+import Sheep from '../Entities/Sheep';
 import Squid from '../Entities/Squid';
 import TropicalFish from '../Entities/TropicalFish';
-import Ghast from '../Entities/Ghast';
-import Boat from '../Entities/Boat';
+import Zombie from '../Entities/Zombie';
 
 import Position from './Position';
 
@@ -22,7 +22,6 @@ import Position from './Position';
 export default class LevelEntity {
   constructor(controller) {
     this.controller = controller;
-    this.game = controller.game;
     this.entityMap = new Map();
     this.entityDeathCount = new Map();
     this.sprite = null;
@@ -51,7 +50,7 @@ export default class LevelEntity {
     if (!this.entityMap.has(entity.identifier)) {
       this.entityMap.set(entity.identifier, entity);
     } else if (this.controller.DEBUG) {
-      this.game.debug.text("Duplicate entity name : " + entity.identifier + "\n");
+      console.debug("Duplicate entity name : " + entity.identifier + "\n");
     }
   }
 
@@ -122,7 +121,7 @@ export default class LevelEntity {
       }
       this.entityMap.set(identifier, entity);
     } else if (this.controller.DEBUG) {
-      this.game.debug.text("Duplicate entity name : " + identifier + "\n");
+      console.debug("Duplicate entity name : " + identifier + "\n");
     }
     return entity;
   }
@@ -279,11 +278,11 @@ export default class LevelEntity {
         this.entityDeathCount.set(entity.type, 1);
       }
       entity.reset();
-      entity.getAnimationManager().stop(null, true);
+      entity.getAnimationTarget().anims.stop();
       entity.sprite.destroy();
       this.entityMap.delete(identifier);
     } else if (this.controller.DEBUG) {
-      this.game.debug.text("It's impossible to delete since entity name : " + identifier + " is not existing\n");
+      console.debug("It's impossible to delete since entity name : " + identifier + " is not existing\n");
     }
   }
 

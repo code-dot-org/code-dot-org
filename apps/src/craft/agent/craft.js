@@ -350,14 +350,8 @@ export default class Craft {
               Craft.gameController.codeOrgAPI.clickUp(() => {})
             );
 
-            // Prevent Phaser from scrolling up on iPhones when it receives a resize event.
-            Craft.gameController.game.device.whenReady(
-              () => {
-                Craft.gameController.game.scale.compatibility.scrollTo = false;
-              },
-              this,
-              false
-            );
+            // (Phaser 4) the CE iPhone scroll workaround (device.whenReady +
+            // scale.compatibility.scrollTo) is no longer needed or available.
           },
           twitter: {
             text: 'Share on Twitter',
@@ -611,7 +605,7 @@ export default class Craft {
   }
 
   static phaserLoaded() {
-    return !!Craft.gameController?.game?.load;
+    return !!Craft.gameController?.game;
   }
 
   static levelInitialized() {

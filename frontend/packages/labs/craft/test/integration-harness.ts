@@ -4,7 +4,8 @@
  * Exposes window.__craftTest with a runLevel() helper that
  * mirrors the original Karma RunLevel.js pattern.
  *
- * Phaser is loaded as a UMD script in the HTML (sets window.Phaser + window.PIXI).
+ * Phaser 4 is imported as an ES module by the engine itself — no UMD
+ * script, no window.Phaser.
  */
 import GameController from '../src/js/game/GameController';
 import Position from '../src/js/game/LevelMVC/Position';
@@ -25,8 +26,6 @@ interface GameControllerInstance {
   game: {destroy(): void; time: Record<string, unknown>};
   loadLevel(config: Record<string, unknown>): void;
 }
-
-declare const Phaser: unknown;
 
 const levels: Record<string, unknown> = {
   ...AdventurerLevels,
@@ -71,7 +70,6 @@ function runLevel(
 
     const gc = new GameController({
       forceSetTimeOut: true,
-      Phaser,
       containerId: 'phaser-game',
       assetRoot: '/src/assets/',
       audioPlayer,

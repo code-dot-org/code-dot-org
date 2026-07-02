@@ -1,27 +1,8 @@
 import fs from 'fs';
-import {createRequire} from 'module';
 import path from 'path';
 import {defineConfig, type Plugin} from 'vite';
 import dts from 'vite-plugin-dts';
 import {externalizeDeps} from 'vite-plugin-externalize-deps';
-
-const require = createRequire(import.meta.url);
-
-function servePhaserUmd(): Plugin {
-  const phaserPath = path.join(
-    path.dirname(require.resolve('phaser-ce/package.json')),
-    'build/phaser.js',
-  );
-  return {
-    name: 'serve-phaser-umd',
-    configureServer(server) {
-      server.middlewares.use('/phaser.js', (_req, res) => {
-        res.setHeader('Content-Type', 'application/javascript');
-        fs.createReadStream(phaserPath).pipe(res);
-      });
-    },
-  };
-}
 
 function emitCraftAssets(): Plugin {
   return {
@@ -50,13 +31,15 @@ function emitCraftAssets(): Plugin {
 
 export default defineConfig({
   plugins: [
-    servePhaserUmd(),
     emitCraftAssets(),
     dts({tsconfigPath: './tsconfig.app.json', entryRoot: 'src'}),
+    // phaser is a devDependency on purpose: externalizeDeps only externalizes
+    // dependencies/peerDependencies, so phaser 4 gets bundled into dist and
+    // apps/ needs no new dependency (PoC packaging; revisit for the real port).
     externalizeDeps(),
   ],
   optimizeDeps: {
-    include: ['phaser-ce'],
+    include: ['phaser'],
   },
   server: {
     allowedHosts: ['localhost-studio.code.org'],

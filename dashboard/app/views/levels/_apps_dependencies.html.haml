@@ -47,8 +47,7 @@
   %script{src: webpack_asset_path('js/fileupload/jquery.iframe-transport.js')}
   %script{src: webpack_asset_path('js/fileupload/jquery.fileupload.js')}
 
-- if use_phaser
-  %script{src: webpack_asset_path('js/phaser/phaser.js')}
+-# Phaser 4 ships inside the craft bundle as an ES module; no UMD script tag.
 
 -# Blockly script dependencies
 - if use_blockly

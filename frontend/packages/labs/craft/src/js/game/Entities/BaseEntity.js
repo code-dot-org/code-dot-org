@@ -1,9 +1,9 @@
-import CommandQueue from '../CommandQueue/CommandQueue';
-import FacingDirection from '../LevelMVC/FacingDirection';
-import Position from '../LevelMVC/Position';
-import EventType from '../Event/EventType';
 import CallbackCommand from '../CommandQueue/CallbackCommand';
+import CommandQueue from '../CommandQueue/CommandQueue';
+import EventType from '../Event/EventType';
+import FacingDirection from '../LevelMVC/FacingDirection';
 import LevelBlock from '../LevelMVC/LevelBlock';
+import Position from '../LevelMVC/Position';
 
 export default class BaseEntity {
   constructor(controller, type, identifier, x, y, facing) {
@@ -73,12 +73,26 @@ export default class BaseEntity {
     this.queue.begin();
   }
 
-  addAnimation(...args) {
-    return this.getAnimationManager().add(...args);
+  /**
+   * Register a sprite-local animation from atlas frame names. The optional
+   * onComplete fires every time the animation finishes (non-looping only).
+   */
+  addAnimation(key, frames, frameRate = 60, loop = false, onComplete = null) {
+    const sprite = this.getAnimationTarget();
+    sprite.anims.create({
+      key,
+      frames: frames.map(frame => ({key: sprite.texture.key, frame})),
+      frameRate,
+      repeat: loop ? -1 : 0,
+    });
+    if (onComplete) {
+      sprite.on('animationcomplete-' + key, onComplete);
+    }
   }
 
-  getAnimationManager() {
-    return this.animationRig ? this.animationRig.animations : this.sprite.animations;
+  /** The sprite that carries this entity's animations (rig for player/agent). */
+  getAnimationTarget() {
+    return this.animationRig ? this.animationRig : this.sprite;
   }
 
   getWalkAnimation() {
@@ -91,26 +105,27 @@ export default class BaseEntity {
 
   playMoveForwardAnimation(position, facing, commandQueueItem, groundType) {
     var levelView = this.controller.levelView;
-    var tween;
     // update z order
     var zOrderYIndex = position[1] + (facing === FacingDirection.North ? 1 : 0);
     this.sprite.sortOrder = this.controller.levelView.yToIndex(zOrderYIndex) + 1;
     // stepping sound
     levelView.playBlockSound(groundType);
     // play walk animation
-    levelView.playScaledSpeed(this.getAnimationManager(), this.getWalkAnimation());
-    setTimeout(() => {
-      tween = this.controller.levelView.addResettableTween(this.sprite).to({
-        x: (this.offset[0] + 40 * position[0]), y: (this.offset[1] + 40 * position[1])
-      }, 300, Phaser.Easing.Linear.None);
-      tween.onComplete.add(() => {
-        levelView.playScaledSpeed(this.getAnimationManager(), this.getIdleAnimation());
-        commandQueueItem.succeeded();
-      });
-
-      tween.start();
-    }, 50 / this.controller.tweenTimeScale);
+    levelView.playScaledSpeed(this.getAnimationTarget(), this.getWalkAnimation());
     // smooth movement using tween
+    setTimeout(() => {
+      levelView.addResettableTween({
+        targets: this.sprite,
+        x: this.offset[0] + 40 * position[0],
+        y: this.offset[1] + 40 * position[1],
+        duration: 300,
+        ease: 'Linear',
+        onComplete: () => {
+          levelView.playScaledSpeed(this.getAnimationTarget(), this.getIdleAnimation());
+          commandQueueItem.succeeded();
+        },
+      });
+    }, 50 / this.controller.tweenTimeScale);
   }
 
   /**
@@ -165,11 +180,9 @@ export default class BaseEntity {
             if (frontBlock && !frontBlock.isTransparent) {
                 var sprite = levelView.actionPlaneBlocks[levelView.coordinatesToIndex(frontPosition)];
                 if (sprite !== null) {
-                    var tween = entity.controller.levelView.addResettableTween(sprite).to({
-                        alpha: 0.8
-                    }, 300, Phaser.Easing.Linear.None);
-
-                    tween.start();
+                    entity.controller.levelView.addResettableTween({
+                        targets: sprite, alpha: 0.8, duration: 300, ease: 'Linear',
+                    });
                 }
             }
         };
@@ -179,11 +192,9 @@ export default class BaseEntity {
             if (frontPosition.y < 10) {
                 var sprite = levelView.actionPlaneBlocks[levelView.coordinatesToIndex(frontPosition)];
                 if (sprite !== null) {
-                    var tween = entity.controller.levelView.addResettableTween(sprite).to({
-                        alpha: 1
-                    }, 300, Phaser.Easing.Linear.None);
-
-                    tween.start();
+                    entity.controller.levelView.addResettableTween({
+                        targets: sprite, alpha: 1, duration: 300, ease: 'Linear',
+                    });
                 }
             }
         };
@@ -212,7 +223,7 @@ export default class BaseEntity {
     bump(commandQueueItem) {
         var animName = "bump";
         var facingName = this.controller.levelView.getDirectionName(this.facing);
-        this.controller.levelView.playScaledSpeed(this.getAnimationManager(), animName + facingName);
+        this.controller.levelView.playScaledSpeed(this.getAnimationTarget(), animName + facingName);
         let forwardPosition = this.controller.levelModel.getMoveForwardPosition(this);
         let forwardEntity = this.controller.levelEntity.getEntityAt(forwardPosition);
         if (forwardEntity !== null) {
@@ -483,7 +494,7 @@ export default class BaseEntity {
     use(commandQueueItem, userEntity) {
         // default behavior for use ?
         var animationName = "lookAtCam" + this.controller.levelView.getDirectionName(this.facing);
-        this.controller.levelView.playScaledSpeed(this.getAnimationManager(), animationName);
+        this.controller.levelView.playScaledSpeed(this.getAnimationTarget(), animationName);
         this.queue.startPushHighPriorityCommands();
         this.controller.events.forEach(e => e({ eventType: EventType.WhenUsed, targetType: this.type, eventSenderIdentifier: userEntity.identifier, targetIdentifier: this.identifier }));
         this.queue.endPushHighPriorityCommands();
@@ -507,7 +518,7 @@ export default class BaseEntity {
     attack(commandQueueItem) {
         this.controller.addCommandRecord("attack", this.type, commandQueueItem.repeat);
         let facingName = this.controller.levelView.getDirectionName(this.facing);
-        this.controller.levelView.playScaledSpeed(this.getAnimationManager(), "attack" + facingName);
+        this.controller.levelView.playScaledSpeed(this.getAnimationTarget(), "attack" + facingName);
         setTimeout((entity) => {
             let frontEntity = entity.controller.levelEntity.getEntityAt(entity.controller.levelModel.getMoveForwardPosition(entity));
             if (frontEntity) {
@@ -533,18 +544,21 @@ export default class BaseEntity {
             this.updateHidingBlock(this.position);
             this.position = pushBackPosition;
             this.updateHidingTree();
-            var tween = this.controller.levelView.addResettableTween(this.sprite).to({
-                x: (this.offset[0] + 40 * this.position[0]), y: (this.offset[1] + 40 * this.position[1])
-            }, movementTime, Phaser.Easing.Linear.None);
-            tween.onComplete.add(() => {
-                setTimeout(() => {
-                    commandQueueItem.succeeded();
-                    if (completionHandler !== undefined) {
-                        completionHandler(this);
-                    }
-                }, movementTime  / this.controller.tweenTimeScale);
+            this.controller.levelView.addResettableTween({
+                targets: this.sprite,
+                x: this.offset[0] + 40 * this.position[0],
+                y: this.offset[1] + 40 * this.position[1],
+                duration: movementTime,
+                ease: 'Linear',
+                onComplete: () => {
+                    setTimeout(() => {
+                        commandQueueItem.succeeded();
+                        if (completionHandler !== undefined) {
+                            completionHandler(this);
+                        }
+                    }, movementTime  / this.controller.tweenTimeScale);
+                },
             });
-            tween.start();
         } else {
             commandQueueItem.succeeded();
             if (completionHandler !== undefined) {
@@ -557,23 +571,25 @@ export default class BaseEntity {
         let levelView = this.controller.levelView;
         let facingName = levelView.getDirectionName(this.facing);
         if (this.healthPoint > 1) {
-            levelView.playScaledSpeed(this.getAnimationManager(), "hurt" + facingName);
+            levelView.playScaledSpeed(this.getAnimationTarget(), "hurt" + facingName);
             setTimeout(() => {
                 this.healthPoint--;
                 callbackCommand.succeeded();
             }, 1500 / this.controller.tweenTimeScale);
         } else {
             this.healthPoint--;
-            this.getAnimationManager().stop(null, true);
-            this.controller.levelView.playScaledSpeed(this.getAnimationManager(), "die" + facingName);
+            this.getAnimationTarget().anims.stop();
+            this.controller.levelView.playScaledSpeed(this.getAnimationTarget(), "die" + facingName);
             setTimeout(() => {
-                var tween = this.controller.levelView.addResettableTween(this.sprite).to({
-                    alpha: 0
-                }, 300, Phaser.Easing.Linear.None);
-                tween.onComplete.add(() => {
-                    this.controller.levelEntity.destroyEntity(this.identifier);
+                this.controller.levelView.addResettableTween({
+                    targets: this.sprite,
+                    alpha: 0,
+                    duration: 300,
+                    ease: 'Linear',
+                    onComplete: () => {
+                        this.controller.levelEntity.destroyEntity(this.identifier);
+                    },
                 });
-                tween.start();
             }, 1500 / this.controller.tweenTimeScale);
         }
     }
@@ -605,12 +621,12 @@ export default class BaseEntity {
         }
 
         animationName += facingName;
-        this.controller.levelView.playScaledSpeed(this.getAnimationManager(), animationName);
+        this.controller.levelView.playScaledSpeed(this.getAnimationTarget(), animationName);
     }
 
     updateAnimationDirection() {
         let facingName = this.controller.levelView.getDirectionName(this.facing);
-        this.controller.levelView.playScaledSpeed(this.getAnimationManager(), "idle" + facingName);
+        this.controller.levelView.playScaledSpeed(this.getAnimationTarget(), "idle" + facingName);
     }
 
     getDistance(entity) {

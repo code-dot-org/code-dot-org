@@ -3,7 +3,6 @@ export default class AssetLoader {
   constructor(controller) {
     this.controller = controller;
     this.audioPlayer = controller.audioPlayer;
-    this.game = controller.game;
     this.assetRoot = controller.assetRoot;
 
     this.assets = {
@@ -991,21 +990,22 @@ export default class AssetLoader {
   }
 
   loadPack(packName) {
-    let packAssets = this.assetPacks[packName];
+    const packAssets = this.assetPacks[packName];
     this.loadAssets(packAssets);
   }
 
   loadAssets(assetNames) {
     assetNames.forEach((assetKey) => {
-      let assetConfig = this.assets[assetKey];
+      const assetConfig = this.assets[assetKey];
       this.loadAsset(assetKey, assetConfig);
     });
   }
 
   loadAsset(key, config) {
+    const loader = this.controller.scene.load;
     switch (config.type) {
       case 'image':
-        this.game.load.image(key, config.path);
+        loader.image(key, config.path);
         break;
       case 'sound':
         this.audioPlayer.register({
@@ -1015,7 +1015,7 @@ export default class AssetLoader {
         });
         break;
       case 'atlasJSON':
-        this.game.load.atlasJSONHash(key, config.pngPath, config.jsonPath);
+        loader.atlas(key, config.pngPath, config.jsonPath);
         break;
       default:
         throw `Asset ${key} needs config.type set in configuration.`;

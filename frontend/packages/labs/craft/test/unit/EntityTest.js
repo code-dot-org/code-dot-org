@@ -1,11 +1,11 @@
 import { describe, it, expect } from 'vitest';
 
+import Agent from '../../src/js/game/Entities/Agent';
+import BaseEntity from '../../src/js/game/Entities/BaseEntity';
+import Player from '../../src/js/game/Entities/Player';
+import Sheep from '../../src/js/game/Entities/Sheep';
 import LevelBlock from '../../src/js/game/LevelMVC/LevelBlock';
 import LevelPlane from '../../src/js/game/LevelMVC/LevelPlane';
-import BaseEntity from '../../src/js/game/Entities/BaseEntity';
-import Sheep from '../../src/js/game/Entities/Sheep';
-import Player from '../../src/js/game/Entities/Player';
-import Agent from '../../src/js/game/Entities/Agent';
 
 const mockGameController = {
   getIsDirectPlayerControl: () => false,

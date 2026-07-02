@@ -1,9 +1,11 @@
-import LevelPlane from './LevelPlane';
-import LevelBlock from './LevelBlock';
-import FacingDirection from './FacingDirection';
-import Position from './Position';
-import Player from '../Entities/Player';
 import Agent from '../Entities/Agent';
+import Player from '../Entities/Player';
+
+import FacingDirection from './FacingDirection';
+import LevelBlock from './LevelBlock';
+import LevelPlane from './LevelPlane';
+import Position from './Position';
+
 
 // for blocks on the action plane, we need an actual "block" object, so we can model
 

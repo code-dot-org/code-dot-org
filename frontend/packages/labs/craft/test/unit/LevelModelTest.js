@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 
-import LevelModel from '../../src/js/game/LevelMVC/LevelModel';
 import LevelEntity from '../../src/js/game/LevelMVC/LevelEntity';
+import LevelModel from '../../src/js/game/LevelMVC/LevelModel';
 import Position from '../../src/js/game/LevelMVC/Position';
 
 const makePlane = (n, type) => new Array(n).fill(type);

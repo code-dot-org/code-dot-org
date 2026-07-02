@@ -1,5 +1,7 @@
 import sinon from 'sinon';
+
 import GameController from '../../src/js/game/GameController';
+
 import AdventurerLevels from './AdventurerLevels';
 import AgentLevels from './AgentLevels';
 import AquaticLevels from './AquaticLevels';
