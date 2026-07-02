@@ -8,10 +8,8 @@ import sharedStyles from '../../curriculum-generator/curriculum-generator.module
 import moduleStyles from '../lesson-generator.module.scss';
 
 // Nested sublevel list rendered inside a Bubble Choice parent card.
-// Each sublevel uses the same ReorderableCard chrome as top-level
-// cards so the layout matches: sidebar with ID / Lab / (Preset) /
-// Generate on the left, description textarea to the right, reorder +
-// trash icons at the header's top-right.
+// Reuses ReorderableCard so the sublevels visually match the top-level
+// cards; the same cardSidebar/cardMain classes lay them out.
 interface SublevelSectionProps {
   sublevels: LevelSpec[];
   labOptions: {value: LabType; label: string}[];

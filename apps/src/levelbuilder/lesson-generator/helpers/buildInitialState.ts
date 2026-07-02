@@ -113,11 +113,9 @@ export function buildInitialState(lesson: ExistingLessonData): InitialState {
         const parentPrefix = level.name + '-';
         spec.sublevels = level.sublevels.map(sub => {
           const subLabType = labTypeFromRailsType(sub.type);
-          // Restrict to the sublevel-allowed set. Sublevels whose Rails
-          // type maps to a top-level LabType outside that set (e.g. an
-          // older dance/spritelab sublevel) or doesn't map at all are
-          // marked unsupported so the UI shows them read-only and the
-          // generator skips them.
+          // Sublevels whose lab type falls outside the sublevel-allowed
+          // set get marked unsupported so the UI renders them read-only
+          // and the generator skips them.
           const supportedSubLabType =
             subLabType &&
             (BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES as readonly string[]).includes(

@@ -29,9 +29,8 @@ export interface SketchlabGeneration {
   longInstructions: string;
 }
 
-// Sketch Lab lets the student draw / annotate on a blank canvas. The
-// generator only stubs the student-facing instructions; the sketch
-// itself is left empty for the curriculum author to draw by hand.
+// Only stubs long_instructions; the sketch canvas is intentionally
+// left blank for the curriculum author to draw by hand.
 export async function generateSketchlabLevel(
   ctx: LevelContext
 ): Promise<SketchlabGeneration> {
