@@ -50,8 +50,11 @@ lives on branch `phaser4`:
   `game.device.whenReady` scroll hack, the `phaserLoaded()` probe
   (`game.load` → `game`), and designer touch capture.
 - Port the aquatic underwater wave shader (CE `Phaser.Filter` GLSL on
-  `game.world`) to a Phaser 4 camera Filter. This is the one visual the
-  PoC stubbed; the GLSL is preserved and maps onto v4's Filters system.
+  `game.world`) to a Phaser 4 camera Filter — **done**: `WaveFilter.js` is
+  a `BaseFilterShader` render node carrying the CE GLSL (adapted to the v4
+  contract) plus a `Filters.Controller` for the per-frame uniforms,
+  attached to the main camera on underwater levels. Verified equivalent to
+  prod on all six underwater levels.
 - Decide the packaging strategy for Phaser (see Open questions).
 
 ## Capabilities
@@ -186,8 +189,6 @@ global equivalent; the port reproduces it exactly:
   any debug overlay.
 - Corner-shadow/sparkle lifecycle follows block `destroy` but not CE
   kill-visibility; acceptable visually, worth a second look.
-- The aquatic wave-shader port is stubbed with TODO markers in
-  `LevelView` (`waveShader`, `world.filters`, uniforms plumbing).
 - Legacy lint debt in the engine files (`no-var`, `@ts-nocheck`,
   `no-this-alias`) predates the port and fails the repo-root pre-commit
   hook even though the package's own gates pass; PoC commits used
@@ -225,9 +226,43 @@ The gates that validated the PoC become the acceptance gates:
      block/shadow/fog sprites. The existing e2e harness destroys the game
      per level and does not drive this UI flow, so add an explicit
      chop→reset visual + invariant assertion.
-- Beyond the PoC: spot-check one level each from aquatic (`/s/aquatic`),
-  agent, and designer (`/s/minecraft`) in the dashboard once the wave
-  shader is ported, plus a before/after boot-time and FPS sanity check.
+- Cross-variant sweep (done in the PoC): a persistent verifier drove
+  38 craft levels across adventurer, agent, and aquatic in a real browser
+  on both prod (studio.code.org) and dev (localhost-studio.code.org:9000),
+  capturing the `#phaser-game` canvas before solving, after solving, after
+  an incorrect solution, and as a freeze-frame, and pixel-diffing dev vs
+  prod with the idle-animating player region masked. Result: 0 console
+  errors, 0 renderer mismatches, 0 behavior divergences, full visual
+  parity — including the underwater wave on all six aquatic levels and the
+  cold-ocean tint where the level specifies it.
+- Wave-shader black-bar fix: the initial port let the wave displacement
+  push the sample past `[0,1]`, where `boundedSampler` returns transparent
+  and the frame edge read black — a bar that pulsed with the wave. CE's
+  render texture wrapped clamp-to-edge; the port matches that by clamping
+  the displaced Y coordinate into `[0,1]`. Verified against prod on the
+  underwater levels.
+
+### FPS
+
+Boot time and steady-state FPS were spot-checked; no measurable
+regression was found, but the check has a hard ceiling: the sandbox
+verifier runs Firefox under Xvfb, whose software timer caps at 60 Hz, so
+any headroom above 60 fps is invisible to it. A real gap, if one exists,
+needs a Performance-tab trace on the user's actual display.
+
+Two candidate trims were evaluated and **rejected**:
+
+- Dropping the per-frame worldGroup depth sort — it is sub-millisecond and
+  production (CE) does the same sort, so it is not a dev-vs-prod delta.
+- Turning off `preserveDrawingBuffer` — it is shared with production and,
+  more importantly, removing it breaks `canvas.toDataURL`, which both the
+  share-thumbnail feature and the pixel-diff verifier depend on.
+
+Note the renderer split observed during verification: prod serves the CE
+Canvas renderer while dev runs the Phaser 4 Beam WebGL renderer. Part of
+that split is a sandbox artifact (chromium SIGTRAPs on WebGL under the
+sandbox, and firefox-headless silently falls back to Canvas2D), so the
+comparison is not apples-to-apples for raw throughput.
 
 ## Impact
 

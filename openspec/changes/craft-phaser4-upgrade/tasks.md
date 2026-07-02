@@ -1,8 +1,10 @@
 # Tasks: Craft Phaser 2 (CE) → Phaser 4 native upgrade
 
-A validated PoC exists on this branch (`e363046df1b`, `f4f862a0e95`).
-These tasks productionize it. Boxes checked below were proven in the PoC
-and carry over; unchecked boxes are remaining productionization work.
+A validated PoC exists on this branch (native port `e363046df1b`,
+sprite-lifecycle fix `f4f862a0e95`, wave shader `b82b95fde0c` +
+`71366465289`). These tasks productionize it. Boxes checked below were
+proven in the PoC and carry over; unchecked boxes are remaining
+productionization work.
 
 ## 1. Dependency + module boundary
 
@@ -34,8 +36,8 @@ and carry over; unchecked boxes are remaining productionization work.
 
 ## 4. Aquatic wave shader
 
-- [ ] 4.1 Port the CE `Phaser.Filter` GLSL (underwater wave/caustics) to a Phaser 4 camera Filter; remove the `LevelView` TODO stubs (`waveShader`, `world.filters`, uniforms).
-- [ ] 4.2 Verify aquatic levels (cold/warm ocean tint, surface scroll) against production.
+- [x] 4.1 Port the CE `Phaser.Filter` GLSL (underwater wave/caustics) to a Phaser 4 camera Filter (`WaveFilter.js`: `BaseFilterShader` render node + `Filters.Controller`, attached via `attachWaveFilter`); no TODO stubs remain. Includes the clamp-to-`[0,1]` fix matching CE's clamp-to-edge wrap (else a wave-synced black bar).
+- [x] 4.2 Verify aquatic levels (cold/warm ocean tint, surface scroll) against production — verified equivalent on all six underwater levels in the PoC sweep.
 
 ## 5. apps/ + dashboard glue
 
@@ -60,4 +62,5 @@ and carry over; unchecked boxes are remaining productionization work.
 - [x] 7.4 Full mc course (levels 1–14) driven end to end in the dashboard, including minecart, day/night, free-play zoom-out, share thumbnail.
 - [ ] 7.5 Add a chop→reset rendering-regression test (pixel diff + sprite-lifecycle/origin invariants) — the existing e2e harness does not drive the reset UI flow.
 - [x] 7.6 Chop+reset pixel parity proven (initial vs post-reset 0px, tree + player-masked scene) with the LevelView fix.
-- [ ] 7.7 Spot-check one aquatic, one agent, and one designer level vs production after the wave shader lands; before/after boot-time and FPS sanity check.
+- [x] 7.7 Cross-variant sweep vs production: a persistent verifier drove 38 levels across adventurer, agent, and aquatic on prod and dev, diffing the canvas at before-solve / after-solve / incorrect / freeze-frame states (player region masked) — 0 console errors, 0 renderer mismatches, 0 behavior divergences, full visual parity. Designer variant still to spot-check.
+- [ ] 7.8 FPS: no regression observed, but the sandbox verifier (Firefox under Xvfb) caps at 60 Hz so headroom above 60 fps is unmeasurable. Trims evaluated and rejected (worldGroup depth sort is sub-ms and prod-shared; `preserveDrawingBuffer` is prod-shared and required for `toDataURL`). Get a Performance-tab trace on a real display to confirm parity. Renderer split noted (prod Canvas / dev Beam WebGL), partly a sandbox artifact.

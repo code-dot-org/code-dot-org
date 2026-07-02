@@ -95,9 +95,19 @@ the cause at a fraction of the cost. (History on branch `craft`,
 CE `BitmapData` effects (white-flash silhouette, dashed hint path,
 prismarine frame blend) become `CanvasTexture`s drawn with the 2D
 context. The aquatic underwater wave shader (CE `Phaser.Filter` GLSL on
-`game.world`) maps onto the Phaser 4 Filters system as a camera filter;
-the GLSL is preserved. The PoC stubs the shader with TODO markers — it is
-the one visual not yet ported and the main remaining implementation item.
+`game.world`) maps onto the Phaser 4 Filters system as a camera filter
+(`WaveFilter.js`): a `BaseFilterShader` render node carries the CE GLSL
+adapted to the v4 contract (scene arrives as `uMainSampler` via
+`boundedSampler`, varying `outTexCoord`, caustics atlas bound as a second
+sampler), and a `Filters.Controller` holds the per-frame uniforms (time,
+surface texture, camera offset, tint). `attachWaveFilter(camera)`
+registers the node once per renderer and attaches a controller to the
+main camera's internal filter list. One fix beyond a literal transcription:
+the displaced sample is clamped into `[0,1]` to match CE's clamp-to-edge
+wrap — without it the wave pushes the top/bottom rows off-frame where
+`boundedSampler` returns transparent, producing a black bar that pulses
+with the wave. Ported and verified equivalent to prod on all six
+underwater levels, including the cold-ocean tint.
 
 ### 7. Phaser packaging: bundled in dist (revisit)
 
@@ -120,6 +130,19 @@ the lab is consumed today. Open for the design review (see proposal).
   (WebGL, as CE effectively did). Pixel-art config (`pixelArt: true`,
   nearest, `roundPixels`) is the correct end state for crisp sprites and
   should be set as part of this change.
+- **FPS could not be measured above 60 Hz in the sandbox.** The verifier
+  runs Firefox under Xvfb, whose software timer caps at 60 Hz, so any
+  headroom above 60 fps is invisible; no regression was observed within
+  that ceiling. Two candidate trims were evaluated and rejected: the
+  per-frame worldGroup depth sort is sub-millisecond and production does
+  the same sort (not a dev-vs-prod delta), and `preserveDrawingBuffer` is
+  prod-shared and required for `toDataURL` (share thumbnail + pixel-diff
+  verifier). A real gap, if any, needs a Performance-tab trace on the
+  user's actual display. Note also the renderer split seen in
+  verification — prod runs the CE Canvas renderer, dev the v4 Beam WebGL
+  renderer — which is partly a sandbox artifact (chromium SIGTRAPs on
+  WebGL under the sandbox; firefox-headless falls back to Canvas2D), so
+  raw-throughput comparison is not apples-to-apples.
 
 ## Rendering regression gate (new)
 
@@ -137,8 +160,9 @@ undetected:
 
 Behavioral parity means no flag is needed; the swap is internal to the
 package plus the apps/dashboard glue that supplied the global. Ship
-behind the existing test gates. The wave-shader port and the pixel gate
-land in the same change so aquatic levels are covered before release.
+behind the existing test gates. The wave-shader port (done in the PoC)
+and the pixel gate land in the same change so aquatic levels are covered
+before release.
 
 ## Open questions
 
