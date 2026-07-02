@@ -7,6 +7,9 @@ def create_storage_id_cookie
   if defined?(Dashboard::Application)
     ActiveRecord::Base.connected_to(role: :writing) do
       ProjectStorage::AnonymousGeoRecordingJob.perform_later(storage_id, request.ip)
+    rescue StandardError => exception
+      raise exception if rack_env?(:development, :test)
+      Observability::Errors.capture_exception(exception)
     end
   end
 
