@@ -20,9 +20,13 @@ isolation goal Web Lab 2 already solves for student HTML/JS (see
   console output, and metrics reporting -- nothing in the sandbox has
   access to any of that.
 - `sandbox/pyodideSandbox.ts` (runs inside the iframe, on the sandbox
-  subdomain) owns the actual `Worker` and the input service worker
-  registration. It only relays messages up to `pyodideWorkerManager.ts`
-  via `postMessage`; it contains no business logic of its own.
+  subdomain) owns the actual `Worker` and dispatches messages from
+  `pyodideWorkerManager.ts` to it. It only relays results back up via
+  `postMessage`; it contains no business logic of its own.
+- `sandbox/pyodideSandboxHelpers.ts` holds the sandbox's supporting
+  plumbing -- computing its own origin and registering/using the input
+  service worker -- kept separate so `pyodideSandbox.ts` reads as the
+  message dispatch loop it actually is.
 - `sandbox/constants.ts` defines the `postMessage` contract shared by
   both sides (`PyodideSandboxMessageType`), so the message type strings
   can't drift between the two separate webpack bundles.
