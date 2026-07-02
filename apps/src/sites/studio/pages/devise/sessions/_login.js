@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import $ from 'jquery';
 import React from 'react';
 
@@ -8,6 +9,19 @@ import SignInForm from '@cdo/apps/signIn/SignInForm';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 $(document).ready(() => {
+  // Page title (full-width, above both columns). Rendered as MUI Typography so
+  // it matches the design system rather than the legacy global <h2> styles.
+  const titleMount = document.getElementById('sign-in-title');
+  if (titleMount) {
+    createReactRoot(
+      <Typography variant="h2" component="h2" gutterBottom>
+        {titleMount.dataset.title}
+      </Typography>,
+      titleMount,
+      {legacyReactDomRender: true}
+    );
+  }
+
   const signInMount = document.getElementById('sign-in-page-layout');
   if (signInMount) {
     const data = signInMount.dataset;

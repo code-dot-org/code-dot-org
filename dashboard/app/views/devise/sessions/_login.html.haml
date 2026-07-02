@@ -1,7 +1,8 @@
 - content_for :head do
   %script{src: webpack_asset_path('js/devise/sessions/_login.js')}
 
-%h2= t('signin_form.title')
+/ Page title, rendered as MUI Typography by devise/sessions/_login.js.
+#sign-in-title{data: {title: t('signin_form.title')}}
 
 / Login errors (e.g. "invalid password") are still delivered via the Rails
 / flash. show_flashes consumes the flash the first time it is called, so
