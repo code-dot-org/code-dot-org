@@ -1,0 +1,24 @@
+{
+  "name": "ui-test-hourofcode",
+  "script_names": [
+    "ui-test-hourofcode"
+  ],
+  "original_script_names": [
+    "ui-test-hourofcode"
+  ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "ui-test-hourofcode",
+    "numbered_units": "auto",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
