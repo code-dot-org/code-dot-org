@@ -1,6 +1,6 @@
 import {expect, type Locator, type Page} from '@playwright/test';
 
-import {BasePage} from './base-page';
+import {BasePage} from '../base-page';
 
 /** Page object for the teacher dashboard home (/teacher_dashboard/home). */
 export class TeacherDashboardPage extends BasePage {
@@ -20,5 +20,15 @@ export class TeacherDashboardPage extends BasePage {
   async goto(): Promise<void> {
     await this.page.goto('/teacher_dashboard/home');
     await expect(this.homeHeader).toBeVisible();
+  }
+
+  async navigateToRoster(): Promise<void> {
+    await this.goto();
+    const dropdownTrigger = this.page.getByRole('button', {
+      name: 'Section options dropdown',
+    });
+    await expect(dropdownTrigger).toBeVisible();
+    await dropdownTrigger.click();
+    await this.page.getByRole('link', {name: 'Roster'}).click();
   }
 }
