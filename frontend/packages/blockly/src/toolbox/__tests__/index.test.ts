@@ -35,9 +35,13 @@ describe('buildToolbox', () => {
         {
           kind: 'category',
           name: 'Loops',
-          // string entries become {kind:'block', type}, object entries pass through
+          // string entries become {kind:'block', type, id:type}; object entries pass through
           contents: [
-            {kind: 'block', type: 'controls_repeat_ext'},
+            {
+              kind: 'block',
+              type: 'controls_repeat_ext',
+              id: 'controls_repeat_ext',
+            },
             {kind: 'block', type: 'controls_whileUntil'},
           ],
         },
@@ -67,7 +71,8 @@ describe('buildToolbox', () => {
     expect(result).toEqual({
       kind: 'flyoutToolbox',
       contents: [
-        {kind: 'block', type: 'text'},
+        // string entry gets id:type; object entry passes through unchanged
+        {kind: 'block', type: 'text', id: 'text'},
         {kind: 'block', type: 'text_print'},
       ],
     });

@@ -60,10 +60,15 @@ export const buildToolbox: (
         contents:
           blocks?.map(
             (type: string | Blockly.utils.toolbox.FlyoutItemInfo) => ({
+              // `id: type` gives each palette block a stable, type-based
+              // `data-id`, which UI targeting (e.g. instruction callouts)
+              // relies on. Dragging into the workspace assigns a fresh id, so
+              // this only affects the palette copy.
               ...(typeof type === 'string'
                 ? {
                     kind: 'block',
                     type,
+                    id: type,
                   }
                 : type),
             }),
@@ -77,10 +82,13 @@ export const buildToolbox: (
       kind: 'flyoutToolbox',
       contents: flyout.blocks.map(
         (type: string | Blockly.utils.toolbox.BlockInfo) => ({
+          // See the category branch: `id: type` gives palette blocks a stable,
+          // type-based `data-id` for UI targeting (instruction callouts).
           ...(typeof type === 'string'
             ? {
                 kind: 'block',
                 type,
+                id: type,
               }
             : type),
         }),
