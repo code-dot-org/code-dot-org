@@ -18,7 +18,7 @@ Scenario: Frozen tutorial in Spanish
   Then element ".csf-top-instructions p" has "es-MX" text from key "data.short_instructions.frozen square loop 3x"
 
 Scenario: Minecraft:Agent tutorial in Spanish
-  Given I am on "http://studio.code.org/courses/hero/units/1/lessons/1/levels/1/lang/es-MX"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/25/levels/7/lang/es-MX"
   And I wait for the lab page to fully load
   Then element "#toggleButton" is visible
   And I click selector "#toggleButton"
@@ -63,7 +63,7 @@ Scenario: Frozen tutorial in Portuguese
   Then element ".csf-top-instructions p" has "pt-BR" text from key "data.short_instructions.frozen square loop 3x"
 
 Scenario: Minecraft:Agent tutorial in Portuguese
-  Given I am on "http://studio.code.org/courses/hero/units/1/lessons/1/levels/1/lang/pt-br"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/25/levels/7/lang/pt-br"
   And I wait for the lab page to fully load
   Then element "#toggleButton" is visible
   And I click selector "#toggleButton"
@@ -108,7 +108,7 @@ Scenario: Frozen tutorial in Arabic (RTL)
   Then element ".csf-top-instructions p" has "ar-SA" text from key "data.short_instructions.frozen square loop 3x"
 
 Scenario: Minecraft:Agent tutorial in Arabic (RTL)
-  Given I am on "http://studio.code.org/courses/hero/units/1/lessons/1/levels/1/lang/ar-sa"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/25/levels/7/lang/ar-sa"
   And I wait for the lab page to fully load
   Then element "#toggleButton" is visible
   And I click selector "#toggleButton"
