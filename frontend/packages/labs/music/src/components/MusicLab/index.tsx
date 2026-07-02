@@ -21,6 +21,7 @@ import {
 import {useLevelProperties, useSources} from '@code-dot-org/lab/contexts';
 import {useBlocklySettings} from '@code-dot-org/lab/hooks';
 import type {ProjectSources} from '@code-dot-org/core/api';
+import Callouts from '../Callouts';
 import Controls from '../Controls';
 import Timeline from '../Timeline';
 import HeaderButtons from '../HeaderButtons';
@@ -215,6 +216,8 @@ const MusicLab = () => {
           forcePackSelect={guideMode === 'aiCodeGenerate'}
         />
       )}
+      {/* Visual hint arrows shown when instruction text is clicked. */}
+      <Callouts />
       {guideMode === 'instructions' && (
         <GuideInstructions
           levelProperties={levelProperties}
