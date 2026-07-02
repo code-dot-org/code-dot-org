@@ -1266,15 +1266,6 @@ FactoryBot.define do
   factory :project_storage do
   end
 
-  factory :project_storage_geo, class: 'ProjectStorage::Geo' do
-    association :project_storage
-
-    country {Faker::Address.unique.country}
-    state {Faker::Address.unique.state}
-    city {Faker::Address.unique.city}
-    postal_code {Faker::Address.unique.postcode}
-  end
-
   # WARNING: using this factory in new tests may cause other tests, including
   # ProjectsController tests, to fail with: `Mysql2::Error::TimeoutError`
   # See: https://codedotorg.atlassian.net/browse/TEACH-230

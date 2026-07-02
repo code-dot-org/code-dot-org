@@ -4,10 +4,6 @@ require 'base64'
 def create_storage_id_cookie
   storage_id = create_storage_id_for_user(nil)
 
-  if defined?(ProjectStorage::AnonymousGeoRecordingJob)
-    ProjectStorage::AnonymousGeoRecordingJob.perform_later(storage_id, request.ip)
-  end
-
   response.set_cookie(
     storage_id_cookie_name,
     {
