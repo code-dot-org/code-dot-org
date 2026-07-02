@@ -685,6 +685,11 @@ Dashboard::Application.routes.draw do
     get '/hoc/reset', to: 'script_levels#reset', script_id: Unit::HOC_NAME, as: 'hoc_reset'
     get '/hoc/:chapter', to: 'script_levels#show', script_id: Unit::HOC_NAME, as: 'hoc_chapter', format: false
 
+    if rack_env?(:development, :test)
+      get '/ui-test-hoc/reset', to: 'script_levels#reset', script_id: '', as: Unit::UI_TEST_HOC_NAME
+      get '/ui-test-hoc/:chapter', to: 'script_levels#show', script_id: Unit::UI_TEST_HOC_NAME, as: 'ui_test_hoc_chapter', format: false
+    end
+
     get '/flappy/:chapter', to: 'script_levels#show', script_id: Unit::FLAPPY_NAME, as: 'flappy_chapter', format: false
     get '/jigsaw/:chapter', to: 'script_levels#show', script_id: Unit::JIGSAW_NAME, as: 'jigsaw_chapter', format: false
 

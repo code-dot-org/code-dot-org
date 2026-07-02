@@ -304,6 +304,9 @@ module ScriptConstants
     VIGENERE = 'vigenere'.freeze
   ]
 
+  # UI Test units available only in development and test
+  UI_TEST_HOC_NAME = 'ui-test-hourofcode'
+
   DEFAULT_VERSION_YEAR = '2017'
 
   # An allowlist of all family names which are not course offerings.
