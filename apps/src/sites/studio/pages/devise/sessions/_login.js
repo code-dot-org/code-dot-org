@@ -29,6 +29,7 @@ $(document).ready(() => {
       <SignInForm
         hashedEmail={data.hashedEmail || ''}
         loginValue={data.loginValue || ''}
+        signInPath={data.signInPath}
         loginLabel={data.loginLabel}
         passwordLabel={data.passwordLabel}
         signInLabel={data.signInLabel}

@@ -10,9 +10,8 @@ import {USER_RETURN_TO_SESSION_KEY} from '@cdo/apps/signUpFlow/signUpFlowConstan
 
 import style from './signInStyles.module.scss';
 
-// Devise session endpoint. The field names below (user[login],
-// user[password], user[hashed_email]) match what the Rails controller expects.
-const SIGN_IN_PATH = '/users/sign_in';
+// The field names below (user[login], user[password], user[hashed_email])
+// match what the Rails controller expects.
 
 // These ids double as the DOM hooks the UI (Cucumber) tests drive:
 // #signin (wrapper), #user_login, #user_password, #signin-button.
@@ -25,6 +24,9 @@ export interface SignInFormProps {
   hashedEmail: string;
   // Pre-populated login value (from @email), if any.
   loginValue: string;
+  // Form action from the server (session_path) so regional/localized sign-in
+  // routes (e.g. /fa/users/sign_in) are preserved.
+  signInPath: string;
   loginLabel: string;
   passwordLabel: string;
   signInLabel: string;
@@ -42,6 +44,7 @@ export interface SignInFormProps {
 const SignInForm: React.FunctionComponent<SignInFormProps> = ({
   hashedEmail,
   loginValue,
+  signInPath,
   loginLabel,
   passwordLabel,
   signInLabel,
@@ -74,7 +77,12 @@ const SignInForm: React.FunctionComponent<SignInFormProps> = ({
   return (
     <div id="signin" className={style.signInColumn}>
       <div className={style.formArea}>
-        <form action={SIGN_IN_PATH} method="post" className={style.form}>
+        <form
+          id="new_user"
+          action={signInPath}
+          method="post"
+          className={style.form}
+        >
           <RailsAuthenticityToken />
           <input type="hidden" name="user[hashed_email]" value={hashedEmail} />
 
@@ -98,7 +106,7 @@ const SignInForm: React.FunctionComponent<SignInFormProps> = ({
             autoComplete="current-password"
           />
 
-          {forgotPasswordPath && (
+          {forgotPasswordPath && forgotPasswordLabel && (
             <Link
               className={style.forgotPassword}
               href={forgotPasswordPath}

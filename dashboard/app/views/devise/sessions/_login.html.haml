@@ -17,6 +17,7 @@
     data: {
       hashed_email: resource.hashed_email,
       login_value: (@email || ''),
+      sign_in_path: session_path(resource_name),
       login_label: t('signin_form.login_username'),
       password_label: resource.class.human_attribute_name(:password),
       sign_in_label: t('signin_form.submit'),

@@ -10,6 +10,7 @@ import {USER_RETURN_TO_SESSION_KEY} from '@cdo/apps/signUpFlow/signUpFlowConstan
 const DEFAULT_PROPS: SignInFormProps = {
   hashedEmail: 'hashed-abc',
   loginValue: '',
+  signInPath: '/users/sign_in',
   loginLabel: 'Email address or username',
   passwordLabel: 'Password',
   signInLabel: 'Sign in',
@@ -52,13 +53,14 @@ describe('SignInForm', () => {
     screen.getByRole('button', {name: DEFAULT_PROPS.signInLabel});
   });
 
-  it('posts to /users/sign_in', () => {
-    renderForm();
+  it('posts to signInPath as form#new_user (Rails/global-edition hooks)', () => {
+    renderForm({signInPath: '/fa/users/sign_in'});
     const form = screen
       .getByRole('button', {name: DEFAULT_PROPS.signInLabel})
       .closest('form');
-    expect(form).toHaveAttribute('action', '/users/sign_in');
+    expect(form).toHaveAttribute('action', '/fa/users/sign_in');
     expect(form).toHaveAttribute('method', 'post');
+    expect(form).toHaveAttribute('id', 'new_user');
   });
 
   it('threads the hashed_email through as a hidden field, unchanged', () => {
