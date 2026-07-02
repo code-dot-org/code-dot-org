@@ -7,6 +7,7 @@ import {localization} from '@code-dot-org/core/plugins/localization';
  */
 
 let ttsAvailable: boolean = false;
+let initialized = false;
 
 function onTtsAvailable(callback: (isAvailable: boolean) => void) {
   if (ttsAvailable) {
@@ -20,6 +21,12 @@ function onTtsAvailable(callback: (isAvailable: boolean) => void) {
 }
 
 function initialize() {
+  // Run once, and only in a browser with a speech engine (guards SSR/tests).
+  if (initialized || typeof window === 'undefined' || !window.speechSynthesis) {
+    return;
+  }
+  initialized = true;
+
   ttsAvailable = window.speechSynthesis.getVoices().length > 0;
 
   // Add a listener to update the ttsAvailable flag when voices are loaded.

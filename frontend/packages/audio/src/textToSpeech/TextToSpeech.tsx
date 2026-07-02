@@ -1,3 +1,4 @@
+import IconButton from '@mui/material/IconButton';
 import classNames from 'classnames';
 import type {FunctionComponent, MutableRefObject} from 'react';
 import {useState, useEffect} from 'react';
@@ -16,7 +17,10 @@ export interface TextToSpeechProps {
   contentRef?: MutableRefObject<HTMLElement | null>;
 }
 
-const usePause: boolean = true;
+// When false, a second press stops playback (cancel) and resets to the play
+// state immediately, rather than pausing. Matches the legacy default; browser
+// `pause()` is unreliable (e.g. Chrome delays/ignores it).
+const usePause: boolean = false;
 
 const enabledLocales = ['en', 'es', 'fr'];
 
@@ -95,7 +99,7 @@ const TextToSpeech: FunctionComponent<TextToSpeechProps> = ({
   }
 
   return (
-    <button
+    <IconButton
       className={classNames(
         moduleStyles.playButton,
         isPlaying && moduleStyles.playButtonPlaying,
@@ -103,14 +107,15 @@ const TextToSpeech: FunctionComponent<TextToSpeechProps> = ({
       onClick={playText}
       onKeyDown={handleKeyDown}
       aria-label="Play text-to-speech"
-      type="button"
+      // No padding — this is an inline affordance, not a standalone control.
+      sx={{padding: 0}}
     >
       <FontAwesomeV6Icon
-        iconName={isPlaying ? 'stop' : 'play'}
+        iconName={isPlaying ? 'circle-stop' : 'volume'}
         iconStyle={'regular'}
         className={moduleStyles.icon}
       />
-    </button>
+    </IconButton>
   );
 };
 
