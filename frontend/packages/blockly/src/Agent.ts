@@ -191,6 +191,20 @@ class Agent<T extends Environment = Environment> extends TypedEventEmitter<T> {
 
   setToolbox(toolbox: Toolbox | undefined) {
     this._toolbox = toolbox;
+
+    // Apply to the live workspace when it is already injected. setToolbox may
+    // be called after injection (e.g. async data changes the toolbox, or a
+    // flyout block's field defaults depend on a library that loads later), and
+    // the injection-time toolbox alone would leave a stale flyout. Blockly only
+    // supports updateToolbox when the workspace was injected with a toolbox, so
+    // guard on an existing toolbox/flyout.
+    if (
+      toolbox &&
+      this._workspace &&
+      (this._workspace.getToolbox() || this._workspace.getFlyout())
+    ) {
+      this._workspace.updateToolbox(buildToolbox(toolbox));
+    }
   }
 
   /**

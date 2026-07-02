@@ -69,6 +69,30 @@ describe('createReactField', () => {
     expect(new Field().getValue()).toEqual({n: 0});
   });
 
+  it('resolves a function defaultValue lazily on each construction', () => {
+    let calls = 0;
+    const Field = fieldClassOf(
+      createReactField<Value>({
+        name: 'field_lazy',
+        defaultValue: () => ({n: ++calls}),
+        Editor,
+        ariaLabel: 'lazy field',
+        getAriaValue: value => `value ${value.n}`,
+      }),
+    );
+
+    // Not evaluated at plugin-creation time.
+    expect(calls).toBe(0);
+
+    // Resolved fresh on each construction and each fromJson fallback.
+    expect(new Field().getValue()).toEqual({n: 1});
+    expect(Field.fromJson({}).getValue()).toEqual({n: 2});
+
+    // An explicit currentValue still takes precedence over the default.
+    expect(Field.fromJson({currentValue: {n: 99}}).getValue()).toEqual({n: 99});
+    expect(calls).toBe(2);
+  });
+
   describe('serialization', () => {
     it('round-trips the value as-is by default', () => {
       const Field = fieldClassOf(build());

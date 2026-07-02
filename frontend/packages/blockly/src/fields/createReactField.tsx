@@ -123,8 +123,13 @@ export interface ReactFieldConfig<T> {
   /** The field name used in block definitions (e.g., 'field_tune'). */
   name: string;
 
-  /** The default value for new instances of this field. */
-  defaultValue: T;
+  /**
+   * The default value for new instances of this field. May be a function, in
+   * which case it is resolved lazily each time a field is created — use this
+   * when the default depends on state not available at module-load time (e.g.
+   * an asynchronously-loaded asset library).
+   */
+  defaultValue: T | (() => T);
 
   /**
    * The React component to render in the dropdown editor.
@@ -238,6 +243,14 @@ export function createReactField<T>(config: ReactFieldConfig<T>): FieldPlugin {
     onDisposeDropdown,
   } = config;
 
+  // Resolve the default lazily: `defaultValue` may be a function so a default
+  // that depends on state unavailable at module load (e.g. the sound library)
+  // is computed when a field is actually created.
+  const resolveDefaultValue = (): T =>
+    typeof defaultValue === 'function'
+      ? (defaultValue as () => T)()
+      : defaultValue;
+
   /**
    * The generated Blockly Field class.
    */
@@ -249,11 +262,11 @@ export function createReactField<T>(config: ReactFieldConfig<T>): FieldPlugin {
     private currentHeight: number = fieldHeight;
 
     static fromJson(options: Blockly.FieldConfig & {currentValue?: T}) {
-      return new ReactField(options.currentValue ?? defaultValue);
+      return new ReactField(options.currentValue ?? resolveDefaultValue());
     }
 
-    constructor(value: T = defaultValue) {
-      super(value);
+    constructor(value?: T) {
+      super(value === undefined ? resolveDefaultValue() : value);
       this.SERIALIZABLE = true;
     }
 
