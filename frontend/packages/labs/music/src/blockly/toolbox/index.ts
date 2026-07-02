@@ -29,22 +29,25 @@ const map: {
 
 /**
  * Builds the Music Lab toolbox for a block mode. A level-defined toolbox is an
- * override: it is built directly from its `{category: blocks}` map and `type`
- * (flyout vs. categories) via {@link toolboxFromCategoryBlocks}. When the level
+ * override: it is built from its `{category: blocks}` map and `type` (flyout
+ * vs. categories) via {@link toolboxFromCategoryBlocks}, resolving each block id
+ * against the mode's default toolbox (the pool) so blocks with toolbox-seeded
+ * fields (e.g. the Effects block's effect/value) keep them. When the level
  * defines no toolbox, the mode's full default toolbox is used.
- *
- * TODO: resolve level block ids against the default toolbox's pool so blocks
- * with toolbox-seeded fields (e.g. the Effects block) keep them; today each id
- * is rendered with the block's own defaults.
  */
 export function getToolbox(
   blockMode: BlockModeValue,
   toolboxData?: ToolboxData,
 ): Toolbox {
+  const defaultToolbox = map[blockMode] ?? [];
   if (toolboxData?.blocks) {
-    return toolboxFromCategoryBlocks(toolboxData.blocks, toolboxData.type);
+    return toolboxFromCategoryBlocks(
+      toolboxData.blocks,
+      toolboxData.type,
+      defaultToolbox,
+    );
   }
-  return map[blockMode] ?? [];
+  return defaultToolbox;
 }
 
 export * from './types';
