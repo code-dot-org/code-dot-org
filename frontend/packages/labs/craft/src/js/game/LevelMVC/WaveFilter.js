@@ -41,7 +41,12 @@ void main(void) {
   vec2 relativeCoord = outTexCoord + vec2(x * 0.9, -y * 0.9);
   float offsetA = sin(relativeCoord.y * 31.0 + time / 18.0) * 0.0014;
   float offsetB = sin(relativeCoord.y * 57.0 + time / 18.0) * 0.0007;
-  vec4 base = boundedSampler(uMainSampler, outTexCoord + vec2(0.0, offsetA + offsetB));
+  // Clamp the wave-displaced sample into the frame. Without this the offset
+  // pushes the top/bottom rows past [0,1], where boundedSampler returns
+  // transparent (black) — a bar that pulses with the wave. CE's render
+  // texture wrapped clamp-to-edge, so match that by clamping the coordinate.
+  vec2 baseCoord = vec2(outTexCoord.x, clamp(outTexCoord.y + offsetA + offsetB, 0.0, 1.0));
+  vec4 base = boundedSampler(uMainSampler, baseCoord);
   float frame = mod(floor(time / 5.0), 31.0);
   vec4 surfaceColor = texture2D(
     surface,
