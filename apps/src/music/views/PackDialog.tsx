@@ -1,5 +1,5 @@
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
-import {Typography, Button as MuiButton} from '@mui/material';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import React, {
   useCallback,
@@ -72,7 +72,6 @@ const PackEntry: React.FunctionComponent<PackEntryProps> = ({
           onEntryClick();
         }
       }}
-      aria-label={folder.name}
       tabIndex={0}
       role="button"
       data-notranslate
@@ -93,23 +92,27 @@ const PackEntry: React.FunctionComponent<PackEntryProps> = ({
           />
         </div>
       )}
-      <div
+      <MuiTypography
         className={classNames(
           styles.packName,
           mode !== 'artist' && styles.packBold
         )}
+        component="div"
+        variant="body2"
       >
         {folder.name}
-      </div>
+      </MuiTypography>
       {folder.artist && (
-        <div
+        <MuiTypography
           className={classNames(
             styles.packArtist,
             mode === 'artist' && styles.packBold
           )}
+          component="div"
+          variant="body2"
         >
           {folder.artist}
-        </div>
+        </MuiTypography>
       )}
     </div>
   );
@@ -250,6 +253,7 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({
     <FocusOn className={styles.focusLock}>
       <div
         className={styles.dialogContainer}
+        data-theme="Dark"
         onKeyDown={event => {
           if (event.key === 'Escape') {
             setPackToDefault();
@@ -258,14 +262,14 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({
       >
         <div id="pack-dialog" className={styles.packDialog}>
           <div id="hidden-item" tabIndex={0} role="button" />
-          <Typography
+          <MuiTypography
             className={styles.heading}
             component="h1"
             variant="h3"
             gutterBottom
           >
             {musicI18n.packDialogTitle()}
-          </Typography>
+          </MuiTypography>
 
           <div
             className={classNames(
@@ -274,7 +278,9 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({
                 styles.bodyStacked
             )}
           >
-            <div>{musicI18n.packDialogBody()}</div>
+            <MuiTypography className={styles.bodyText} variant="body2">
+              {musicI18n.packDialogBody()}
+            </MuiTypography>
 
             <SegmentedButtons
               selectedButtonValue={mode}
