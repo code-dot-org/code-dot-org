@@ -7,6 +7,7 @@ import FacingDirection from './FacingDirection';
 import LevelBlock from './LevelBlock';
 import Position from './Position';
 import { randomInt, generateFrameNames } from './Utils';
+import { attachWaveFilter } from './WaveFilter';
 
 
 
@@ -18,17 +19,9 @@ export default class LevelView {
     this.baseShading = null;
     this.prismarinePhase = 0;
 
-    this.uniforms = {
-      time: {type: '1f', value: 0},
-      surface: {type: 'sampler2D', value: null},
-      tint: {type: '4fv', value: [67 / 255, 213 / 255, 238 / 255, 1]},
-      x: {type: '1f', value: 0},
-      y: {type: '1f', value: 0},
-    };
-    // TODO(phaser4-filter): the aquatic underwater "wave" shader was a CE
-    // Phaser.Filter applied to game.world. Port the GLSL to a Phaser 4
-    // camera Filter (Phaser.Filters). Visual-only; gameplay unaffected.
-    this.waveShader = null;
+    // Underwater wave/caustics camera filter (aquatic levels only); attached
+    // in create() when the level is underwater. See WaveFilter.js.
+    this.waveFilter = null;
 
     this.player = null;
     this.agent = null;
@@ -548,10 +541,18 @@ export default class LevelView {
     this.reset(levelModel);
 
     if (levelModel.isUnderwater()) {
+      // The caustics atlas is the shader's scrolling "surface" sampler.
       const underwaterOverlay = this.scene.add.sprite(0, 0, 'underwaterOverlay').setOrigin(0, 0);
       underwaterOverlay.visible = false;
       underwaterOverlay.texture.setFilter(Phaser.Textures.FilterMode.NEAREST);
-      this.uniforms.surface.value = underwaterOverlay.texture;
+
+      this.waveFilter = attachWaveFilter(this.scene.cameras.main);
+      if (this.waveFilter) {
+        this.waveFilter.setSurfaceTexture(underwaterOverlay.texture);
+        if (levelModel.getOceanType() === 'cold') {
+          this.waveFilter.setTint([57 / 255, 56 / 255, 201 / 255, 1]);
+        }
+      }
     }
   }
 
@@ -587,12 +588,8 @@ export default class LevelView {
       }
     }
 
-    if (levelModel.isUnderwater()) {
-      if (levelModel.getOceanType() === 'cold') {
-        this.uniforms.tint.value = [57 / 255, 56 / 255, 201 / 255, 1];
-      }
-      // TODO(phaser4-filter): apply the ported wave shader to the main camera
-    }
+    // The underwater wave filter is attached once in create() and persists on
+    // the camera across resets; the cold-ocean tint is set there too.
 
     this.updateShadingGroup(levelModel.shadingPlane);
     this.updateFowGroup(levelModel.fowPlane);
@@ -628,10 +625,12 @@ export default class LevelView {
     // CE also sorted fluffGroup by 'z' (auto-assigned insertion index), which
     // is a no-op re-ordering; native containers already render in add order.
 
-    const view = this.scene.cameras.main.worldView;
-    this.uniforms.x.value = view.x / view.width;
-    this.uniforms.y.value = view.y / view.height;
-    this.uniforms.time.value++;
+    if (this.waveFilter) {
+      const view = this.scene.cameras.main.worldView;
+      this.waveFilter.x = view.x / view.width;
+      this.waveFilter.y = view.y / view.height;
+      this.waveFilter.time++;
+    }
   }
 
   scaleShowWholeWorld(completionHandler) {
