@@ -5833,6 +5833,43 @@ columns:
     comment: 
   - *26
   - *27
+  project_storage_geos:
+  - *9
+  - *43
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: country
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: state
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: city
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: postal_code
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
+  - *12
+  - *13
   projects:
   - *5
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -9130,6 +9167,7 @@ primary_keys:
   programming_expressions: id
   programming_methods: id
   project_commits: id
+  project_storage_geos: id
   projects: id
   puzzle_ratings: id
   queued_account_purges: id
@@ -9374,6 +9412,7 @@ data_sources:
   programming_expressions: true
   programming_methods: true
   project_commits: true
+  project_storage_geos: true
   projects: true
   puzzle_ratings: true
   queued_account_purges: true
@@ -14077,6 +14116,20 @@ indexes:
     type: 
     using: :btree
     comment: 
+  project_storage_geos:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: project_storage_geos
+    name: index_project_storage_geos_on_storage_id
+    unique: true
+    columns:
+    - storage_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
   projects:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: projects
@@ -16239,7 +16292,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20260626120000
+version: 20260626143947
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
