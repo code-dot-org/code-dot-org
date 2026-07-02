@@ -9,7 +9,7 @@ markdown <<MARKDOWN
  
 In **Iterating with AI**, students learn how iteration and loops enable programs to process collections of data and create interactive features such as filters and view. 
 
-Building on their earlier work with arrays and objects, they design systems that users control over how information is displayed, while reflecting on how algorithmic filtering can introduce issues of bias, transparency, and trust.
+Building on their earlier work with arrays and objects, they design systems for users to control how information is displayed, while reflecting on how algorithmic filtering can introduce issues of bias, transparency, and trust.
 
 
 ---

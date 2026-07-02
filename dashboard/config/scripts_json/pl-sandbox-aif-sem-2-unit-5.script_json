@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-10 19:13:56 UTC",
+    "serialized_at": "2026-07-01 21:17:55 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -313,15 +313,12 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl-aif-2-U5-JSON-weblab-scavhunt"
-        ],
         "progression": "What is an API? (15 min)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl-aif-2-U5-JSON-weblab-scavhunt"
+          "pl-aif2-u5-json-weather-data"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -329,7 +326,7 @@
         "activity_section.key": "4d771bdd-4b14-497d-8242-18db5bb3efbc"
       },
       "level_keys": [
-        "pl-aif-2-U5-JSON-weblab-scavhunt"
+        "pl-aif2-u5-json-weather-data"
       ]
     },
     {
@@ -338,15 +335,12 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl-aif-U5-api-documentation-chat-lab"
-        ],
         "progression": "What is an API? (15 min)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl-aif-U5-api-documentation-chat-lab"
+          "pl-AIF2-U5-API-panel"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -354,7 +348,7 @@
         "activity_section.key": "4d771bdd-4b14-497d-8242-18db5bb3efbc"
       },
       "level_keys": [
-        "pl-aif-U5-api-documentation-chat-lab"
+        "pl-AIF2-U5-API-panel"
       ]
     },
     {
@@ -363,15 +357,12 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "pl-aif-2-U5-pokemon-api-weblab"
-        ],
         "progression": "What is an API? (15 min)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl-aif-2-U5-pokemon-api-weblab"
+          "pl-aif2-u5-pokemon-generate-weblab"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -379,7 +370,7 @@
         "activity_section.key": "4d771bdd-4b14-497d-8242-18db5bb3efbc"
       },
       "level_keys": [
-        "pl-aif-2-U5-pokemon-api-weblab"
+        "pl-aif2-u5-pokemon-generate-weblab"
       ]
     },
     {
@@ -615,7 +606,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl-aif2-U5-async-await-weblab"
+          "pl-aif2-u5-refactor-joke-gen-weblab"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -623,7 +614,7 @@
         "activity_section.key": "bf61b007-61d0-4778-90fc-930cbec114bc"
       },
       "level_keys": [
-        "pl-aif2-U5-async-await-weblab"
+        "pl-aif2-u5-refactor-joke-gen-weblab"
       ]
     },
     {
@@ -1142,9 +1133,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-aif-2-U5-JSON-weblab-scavhunt",
+        "level.key": "pl-aif2-u5-json-weather-data",
         "script_level.level_keys": [
-          "pl-aif-2-U5-JSON-weblab-scavhunt"
+          "pl-aif2-u5-json-weather-data"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1154,9 +1145,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-aif-U5-api-documentation-chat-lab",
+        "level.key": "pl-AIF2-U5-API-panel",
         "script_level.level_keys": [
-          "pl-aif-U5-api-documentation-chat-lab"
+          "pl-AIF2-U5-API-panel"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1166,9 +1157,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-aif-2-U5-pokemon-api-weblab",
+        "level.key": "pl-aif2-u5-pokemon-generate-weblab",
         "script_level.level_keys": [
-          "pl-aif-2-U5-pokemon-api-weblab"
+          "pl-aif2-u5-pokemon-generate-weblab"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1286,9 +1277,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-aif2-U5-async-await-weblab",
+        "level.key": "pl-aif2-u5-refactor-joke-gen-weblab",
         "script_level.level_keys": [
-          "pl-aif2-U5-async-await-weblab"
+          "pl-aif2-u5-refactor-joke-gen-weblab"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1565,6 +1556,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [
