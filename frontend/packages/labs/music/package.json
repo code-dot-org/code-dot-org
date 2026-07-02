@@ -101,8 +101,10 @@
   },
   "peerDependencies": {
     "@blockly/block-shareable-procedures": "^6.0.10",
+    "@reduxjs/toolkit": "^2.8.2",
     "blockly": "^13.0.0",
-    "react": "^18.0.0 || ^19.0.0"
+    "react": "^18.0.0 || ^19.0.0",
+    "react-redux": "^9.2.0"
   },
   "msw": {
     "workerDirectory": [
