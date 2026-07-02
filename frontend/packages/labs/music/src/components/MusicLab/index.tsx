@@ -60,6 +60,10 @@ const DefaultStartBlocks: BlocklySerialization = {
     blocks: [
       {
         type: BlockTypes.WHEN_RUN_SIMPLE2,
+        // The "when run" hat is the fixed root: not deletable or movable
+        // (matches legacy startSourcesSimple2.json).
+        deletable: false,
+        movable: false,
       },
     ],
   },
