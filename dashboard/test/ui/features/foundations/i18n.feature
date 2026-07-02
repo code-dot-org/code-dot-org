@@ -10,12 +10,12 @@ Scenario: HoC tutorial in Spanish
   Then element ".csf-top-instructions p" has "es-MX" text from key "data.level.instructions.maze_2_14"
 
 Scenario: Frozen tutorial in Spanish
-  Given I am on "http://studio.code.org/courses/frozen/units/1/lessons/1/levels/2/lang/es-MX"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/3/levels/10/lang/es-MX"
   And I wait for the lab page to fully load
-  Then element ".csf-top-instructions p" has "es-MX" text from key "data.short_instructions.frozen perpendicular"
+  Then element ".csf-top-instructions p" has "es-MX" text from key "data.short_instructions.frozen square loop 3x"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
-  Then element ".csf-top-instructions p" has "es-MX" text from key "data.short_instructions.frozen perpendicular"
+  Then element ".csf-top-instructions p" has "es-MX" text from key "data.short_instructions.frozen square loop 3x"
 
 Scenario: Minecraft:Agent tutorial in Spanish
   Given I am on "http://studio.code.org/courses/hero/units/1/lessons/1/levels/1/lang/es-MX"
@@ -54,14 +54,13 @@ Scenario: HoC tutorial in Portuguese
   And element "#resetButton" is hidden
   Then element ".csf-top-instructions p" has "pt-BR" text from key "data.level.instructions.maze_2_14"
 
-@no_ci
 Scenario: Frozen tutorial in Portuguese
-  Given I am on "http://studio.code.org/courses/frozen/units/1/lessons/1/levels/2/lang/pt-br"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/3/levels/10/lang/pt-br"
   And I wait for the lab page to fully load
-  Then element ".csf-top-instructions p" has "pt-BR" text from key "data.short_instructions.frozen perpendicular"
+  Then element ".csf-top-instructions p" has "pt-BR" text from key "data.short_instructions.frozen square loop 3x"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
-  Then element ".csf-top-instructions p" has "pt-BR" text from key "data.short_instructions.frozen perpendicular"
+  Then element ".csf-top-instructions p" has "pt-BR" text from key "data.short_instructions.frozen square loop 3x"
 
 Scenario: Minecraft:Agent tutorial in Portuguese
   Given I am on "http://studio.code.org/courses/hero/units/1/lessons/1/levels/1/lang/pt-br"
@@ -101,12 +100,12 @@ Scenario: HoC tutorial in Arabic (RTL)
   Then element ".csf-top-instructions p" has "ar-SA" text from key "data.level.instructions.maze_2_14"
 
 Scenario: Frozen tutorial in Arabic (RTL)
-  Given I am on "http://studio.code.org/courses/frozen/units/1/lessons/1/levels/2/lang/ar-sa"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/3/levels/10/lang/ar-sa"
   And I wait for the lab page to fully load
-  Then element ".csf-top-instructions p" has "ar-SA" text from key "data.short_instructions.frozen perpendicular"
+  Then element ".csf-top-instructions p" has "ar-SA" text from key "data.short_instructions.frozen square loop 3x"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
-  Then element ".csf-top-instructions p" has "ar-SA" text from key "data.short_instructions.frozen perpendicular"
+  Then element ".csf-top-instructions p" has "ar-SA" text from key "data.short_instructions.frozen square loop 3x"
 
 Scenario: Minecraft:Agent tutorial in Arabic (RTL)
   Given I am on "http://studio.code.org/courses/hero/units/1/lessons/1/levels/1/lang/ar-sa"
