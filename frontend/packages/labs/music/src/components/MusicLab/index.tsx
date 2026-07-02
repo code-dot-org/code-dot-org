@@ -8,7 +8,11 @@ import {
   LEGACY_DEFAULT_LIBRARY,
 } from '../../constants';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {BlocklyWorkspace} from '@code-dot-org/blockly';
+import {
+  BlocklyWorkspace,
+  ScrollBlockDragger,
+  TopLeftMetricsManager,
+} from '@code-dot-org/blockly';
 import type {BlocklySerialization} from '@code-dot-org/blockly';
 import {
   GuideInstructions,
@@ -304,6 +308,22 @@ const MusicLab = () => {
             options={{
               readOnly: levelProperties.multipleChoice ? true : undefined,
               trashcan: false,
+              // Match legacy's move config verbatim: wheel + drag panning with
+              // scrollbars enabled. Note the top-level `scrollbars: true`
+              // shortcut instead defaults `move.wheel` to false (no wheel pan),
+              // so the `move` object is set explicitly. Because
+              // TopLeftMetricsManager bounds the scroll area to the content,
+              // Blockly auto-hides the scrollbars when everything fits and shows
+              // them only once a block is off-screen.
+              move: {
+                wheel: true,
+                drag: true,
+                scrollbars: {horizontal: true, vertical: true},
+              },
+              plugins: {
+                metricsManager: TopLeftMetricsManager,
+                blockDragger: ScrollBlockDragger,
+              },
             }}
             startBlocks={
               // An empty source is the truthy `{}` (a new/empty project), which

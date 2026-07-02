@@ -1,6 +1,7 @@
 import {registerLevelKindSchema, useApiClient} from '@code-dot-org/core/api';
 import {darkTheme} from '@code-dot-org/blockly/themes';
 import ToolboxTrashcanPlugin from '@code-dot-org/blockly/plugins/toolboxTrashcan';
+import ScrollOptionsPlugin from '@code-dot-org/blockly/plugins/scrollOptions';
 import ThrasosRenderer from '@code-dot-org/blockly/renderers/thrasos';
 import type {BlocklyLabProps} from '@code-dot-org/lab';
 import {BlocklyLab} from '@code-dot-org/lab';
@@ -19,7 +20,7 @@ import styles from './app.module.scss';
 // unknown keys otherwise.
 registerLevelKindSchema('music', LevelKindSchema);
 
-const plugins = [ToolboxTrashcanPlugin];
+const plugins = [ToolboxTrashcanPlugin, ScrollOptionsPlugin];
 
 const App = ({
   ...props
