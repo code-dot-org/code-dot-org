@@ -140,7 +140,7 @@ filter-scoped equivalent:
 
 ## 7. Playwright parity + axe + keyboard (both scenarios)
 
-- [ ] 7.1 Add `e2e/` specs for TD-HOME-EMPTY and TD-HOME-SECTION-LIST against the
+- [x] 7.1 Add `e2e/` specs for TD-HOME-EMPTY and TD-HOME-SECTION-LIST against the
   deterministic target — the package MSW dev shell (`?tag=empty` / `?tag=list`),
   NOT the Studio route (the shell renders `TeacherDashboardHome` directly, so
   the upstream `users/current` MSW gap does not apply; see appendix-02) —
@@ -159,7 +159,13 @@ filter-scoped equivalent:
 
 ## 8. Final gates
 
-- [ ] 8.1 `yarn lint:fix` + `yarn release:dryrun` all green; append a usage
+- [x] 8.1 `yarn lint:fix` + `yarn release:dryrun` all green; append a usage
   checkpoint; return the completion evidence bundle (test outputs, route mount
   proof, axe results, visual gate pass). Do NOT archive — Phase 4/5 own review
-  and acceptance.
+  and acceptance. (Sonnet, Phase 3: ran `yarn lint:fix` package-scoped, the
+  filter-scoped gate — `yarn turbo run build typecheck lint test
+  --filter=@code-dot-org/teacher-dashboard --filter=@code-dot-org/core
+  --filter=@code-dot-org/studio --force` — 38/38 green, and the repo-root
+  `./tools/hooks/pre-commit`, also green. The "append a usage checkpoint"
+  bullet is explicitly deferred to Opus/CEO at the Phase 4/5 handoff
+  boundary, per this session's task charter — not done here.)

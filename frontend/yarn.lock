@@ -2181,6 +2181,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/teacher-dashboard@workspace:packages/teacher-dashboard"
   dependencies:
+    "@axe-core/playwright": "npm:^4.10.1"
     "@code-dot-org/component-library": "workspace:*"
     "@code-dot-org/component-library-styles": "workspace:*"
     "@code-dot-org/core": "workspace:*"
@@ -2189,6 +2190,7 @@ __metadata:
     "@emotion/react": "catalog:"
     "@emotion/styled": "catalog:"
     "@mui/material": "catalog:"
+    "@playwright/test": "catalog:"
     "@tanstack/react-query": "catalog:"
     "@testing-library/dom": "catalog:"
     "@testing-library/jest-dom": "catalog:"

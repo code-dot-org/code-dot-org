@@ -106,4 +106,49 @@ cherry-pick `@code-dot-org/playwright-support`; use the native
 
 ## Artifacts (appended in Phase 3/4)
 
-_None yet — populated when the visual specs run._
+Task 7.1 (Sonnet, Phase 3): specs added at
+`frontend/packages/teacher-dashboard/e2e/td-home-empty.spec.ts` and
+`e2e/td-home-section-list.spec.ts`, config at
+`frontend/packages/teacher-dashboard/playwright.config.ts` (Firefox-only
+project, `expect.toHaveScreenshot` = `{animations: 'disabled',
+maxDiffPixelRatio: 0.01}`, viewport `1280×800` @ `deviceScaleFactor: 1`).
+
+Baseline flow run locally against the package's own MSW dev shell
+(`yarn dev` via the config's `webServer`, port 5173):
+
+1. First pass (no baseline): 8/10 pass (functional + axe + keyboard); the 2
+   `toHaveScreenshot` assertions fail with "snapshot doesn't exist" — expected,
+   proves the gate is live.
+2. `npx playwright test --project=firefox --update-snapshots`: 10/10 pass,
+   baselines written.
+3. `npx playwright test --project=firefox --repeat-each=5`: 50/50 pass (10
+   tests × 5 repeats) — visual, axe, and keyboard assertions all stable.
+
+Ephemeral ("deleted after") baseline PNGs produced at:
+
+- `frontend/packages/teacher-dashboard/e2e/tmp/baselines/td-home-empty.spec.ts/td-home-empty-firefox.png`
+- `frontend/packages/teacher-dashboard/e2e/tmp/baselines/td-home-section-list.spec.ts/td-home-section-list-firefox.png`
+
+(gitignored per this package's `.gitignore`; not committed, regenerable via
+`--update-snapshots`.)
+
+Axe: `@axe-core/playwright`, scoped via `.include(REGION_SELECTOR)` to each
+scenario's region root — 0 violations for TD-HOME-EMPTY and
+TD-HOME-SECTION-LIST, stable across 5 repeats.
+
+Keyboard/focus: both regions have zero focusable elements by design (D5/R4 —
+no mutating or navigational control is rendered), asserted explicitly
+(`expect(elements).toHaveLength(0)`) rather than skipped; the generic
+tab-and-check-visible-focus helper (`e2e/helpers/keyboard.ts`) executes over
+whatever the region exposes, so it would catch a regression if a focusable
+element were later added without a visible `:focus-visible` style.
+TD-HOME-SECTION-LIST additionally asserts `role=list` with 2 `listitem`
+children via `page.getByRole('list')`/`getByRole('listitem')`.
+
+Known non-fix: `SectionList.module.scss`'s `.sectionList { list-style: none }`
+on the `<ol>` is a documented Safari/WebKit gotcha (list-style: none can strip
+list/listitem roles from the accessibility tree in WebKit — Firefox and
+Chromium are unaffected). Not observed as a failure here because the gate is
+Firefox-only per this doc's Browser ruling; not fixed speculatively (no
+failing check to fix against) — flagged as a follow-up for whoever adds a
+WebKit lane.
