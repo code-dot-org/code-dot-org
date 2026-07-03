@@ -1,0 +1,25 @@
+.field {
+  width: 100%;
+
+  /*
+   * Readable width cap; full-width on mobile. Override per-field via inline
+   * style or on any ancestor by setting the custom property, e.g.
+   * `style={{'--cdo-form-field-max-width': '40rem'}}` (or `none` for no cap).
+   */
+  max-width: var(--cdo-form-field-max-width, 30rem);
+}
+
+/*
+ * Stretch the wrapped DSCO control and its input to fill the column; a DSCO
+ * field keeps a fixed width otherwise, and a TextField's input wouldn't match a
+ * dropdown's <select>. The tripled class matches the specificity needed to beat
+ * the control's own rules.
+ */
+.field.field.field > * {
+  width: 100%;
+  min-width: 0;
+}
+
+.field.field.field input {
+  width: 100%;
+}
