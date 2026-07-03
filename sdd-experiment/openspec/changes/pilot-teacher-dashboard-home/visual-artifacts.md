@@ -194,17 +194,19 @@ Side-by-side observations (explanatory, NOT a parity declaration):
   the candidate uses `h2` (similar rendered size); image rendered slightly
   smaller in candidate.
 - TD-HOME-SECTION-LIST: content-equivalent for the approved read-only slice
-  only. Both render two cards in order (unassigned first) with section name,
-  join code, and course-or-unassigned state. Divergences, all traceable to
-  the charter's out-of-scope list or fixture identity: legacy cards carry
-  avatar chips, drag handles, kebab menus, and mutating/navigational panels
+  only. Both render two cards in order (unassigned first) with an avatar chip
+  (same COLORS/EMOJIS mapping — the default fire-on-magenta matches legacy),
+  section name, "Section code:" label, and course-or-unassigned state.
+  (Avatar + label terminology added by the ceo-decision-03 redelegation,
+  commit `aeebf68a05c`; candidate captures refreshed.) Divergences, all
+  traceable to the charter's out-of-scope list or fixture identity: legacy
+  cards carry drag handles, kebab menus, and mutating/navigational panels
   (Assign a course / Add students / Jump to / View progress / View lesson
   materials) that the candidate deliberately does not build; legacy card face
   shows no student-count label (the candidate's "0 students"/"1 student" line
   is a read-only stand-in for legacy's roster affordances); section names
   differ because legacy names come from the live recipe ("Untitled Section",
-  "New Section") while the candidate renders its MSW fixtures ("Period 1/2");
-  candidate cards are visually flatter (no avatar, single column).
+  "New Section") while the candidate renders its MSW fixtures ("Period 1/2").
 
 Verdict inputs for Phase 5: the strict tool-enforced gate (candidate
 self-consistency) PASSES; cross-stack strict acceptance remains DEFERRED per

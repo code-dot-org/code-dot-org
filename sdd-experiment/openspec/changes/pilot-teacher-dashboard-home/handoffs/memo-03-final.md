@@ -71,3 +71,23 @@ rows 10-11.
 3. Approve the recorded follow-ups (VoiceOver/NVDA manual pass, react-hooks
    lint upstream, users/current MSW gap, generator react-pin template fix) as
    exit notes rather than pilot work.
+
+## Addendum — ceo-decision-03 redelegation (avatar + label parity)
+
+CEO spot-check found the candidate card rendered no avatar despite
+ceo-decision-01's in-scope confirmation and the contract matrix listing
+`avatar_color`/`avatar_emoji` as consumed; card wording also said "Join code"
+vs legacy "Section code". Registry assertions reconciled FIRST (traceable to
+ceo-decision-03), then TDD autofix (`aeebf68a05c`): two component tests added
+and observed failing (2/12), then SectionCard gained a read-only avatar label
+using the legacy SectionAvatar mapping (minimal `avatarConstants.ts` replica —
+importing across the apps/ bundle boundary would drag legacy UI deps) and the
+legacy label wording. Gates: vitest 12/12, filter-scoped turbo 38/38,
+Playwright 55/55 (`--repeat-each=5`) with DECLARED regenerated baselines, axe
+still zero-violation, pre-commit clean. Candidate advisory captures refreshed
+— the avatar chip is now visible and its default fire-on-magenta matches the
+legacy capture. Workflow lesson recorded in the registry: CEO-decision
+confirmations must be absorbed into the scenario assertion list at
+reconciliation time, or they stay invisible to implementers and reviewers.
+Verdict framing unchanged: strict gate PASS, cross-stack visual acceptance
+DEFERRED → WORKFLOW-PARTIAL.

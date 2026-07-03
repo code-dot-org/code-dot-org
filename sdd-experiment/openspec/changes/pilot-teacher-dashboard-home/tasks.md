@@ -104,8 +104,12 @@ filter-scoped equivalent:
   - Files: package `src/__tests__/*` only.
   - Verify: `yarn test` FAILS for the new assertions.
 - [x] 4.2 Implement `SectionList.tsx` + `SectionCard.tsx` (read-only labels: name,
-  join code, student count, course display name or unassigned affordance) using
-  semantic `<ol>`/`<li>` and design-system components. No mutating handlers.
+  section code, student count, course display name or unassigned affordance,
+  and an avatar label from `avatar_color`/`avatar_emoji` via the legacy
+  mapping — amended per ceo-decision-03; the avatar confirmation from
+  ceo-decision-01 had never reached this task or the registry assertions)
+  using semantic `<ol>`/`<li>` and design-system components. No mutating
+  handlers.
   - Files: `src/components/SectionList.tsx`, `src/components/SectionCard.tsx`,
     the module scss, and `TeacherDashboardHome.tsx` (list branch).
   - Verify: `yarn test` PASSES; `yarn release:dryrun` green.

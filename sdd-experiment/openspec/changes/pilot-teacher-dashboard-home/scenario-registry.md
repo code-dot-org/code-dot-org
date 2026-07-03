@@ -97,6 +97,14 @@ Common dimensions (both scenarios):
   - Section B card shows the "Single-Unit Course 2026" course display name and
     student count 1.
   - Section A card shows the unassigned affordance and student count 0.
+  - Each card shows a read-only avatar label rendered from
+    `avatar_color`/`avatar_emoji` via the legacy mapping (indexed
+    COLORS/EMOJIS with clamp-to-0 fallback; `role="img"` named
+    "{Color}, {Emoji}"). (Absorbed from ceo-decision-01's avatar
+    confirmation per ceo-decision-03 — the assertion list had never
+    picked it up.)
+  - Card labels use legacy-equivalent terminology: "Section code", not
+    "Join code" (ceo-decision-03).
   - No mutating control present or wired
     (create/edit/archive/delete/reorder/add-students/assign-course).
 - **Visual coverage:** REQUIRED — region-scoped parity check on the
