@@ -53,14 +53,16 @@ describe('SignInForm', () => {
     screen.getByRole('button', {name: DEFAULT_PROPS.signInLabel});
   });
 
-  it('posts to signInPath as form#new_user (Rails/global-edition hooks)', () => {
+  it('posts to signInPath (preserves the regional/localized action)', () => {
     renderForm({signInPath: '/fa/users/sign_in'});
     const form = screen
       .getByRole('button', {name: DEFAULT_PROPS.signInLabel})
       .closest('form');
     expect(form).toHaveAttribute('action', '/fa/users/sign_in');
     expect(form).toHaveAttribute('method', 'post');
-    expect(form).toHaveAttribute('id', 'new_user');
+    // Must NOT be id="new_user": devise/sessions/new.js hooks that form's
+    // submit to hash the email, which breaks this React-native POST.
+    expect(form).not.toHaveAttribute('id', 'new_user');
   });
 
   it('threads the hashed_email through as a hidden field, unchanged', () => {

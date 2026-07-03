@@ -77,12 +77,14 @@ const SignInForm: React.FunctionComponent<SignInFormProps> = ({
   return (
     <div id="signin" className={style.signInColumn}>
       <div className={style.formArea}>
-        <form
-          id="new_user"
-          action={signInPath}
-          method="post"
-          className={style.form}
-        >
+        {/*
+          Do NOT set id="new_user" on this form. devise/sessions/new.js hooks
+          form#new_user's submit to run window.dashboard.hashEmail against
+          #user_hashed_email (which this React form doesn't have), which breaks
+          the native POST and login never completes. The region-versioned action
+          is verified server-side via the mount's data-sign-in-path instead.
+        */}
+        <form action={signInPath} method="post" className={style.form}>
           <RailsAuthenticityToken />
           <input type="hidden" name="user[hashed_email]" value={hashedEmail} />
 
