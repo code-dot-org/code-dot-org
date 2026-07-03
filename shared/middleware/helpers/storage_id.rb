@@ -8,7 +8,7 @@ def create_storage_id_cookie
     ActiveRecord::Base.connected_to(role: :writing) do
       ProjectStorage::AnonymousGeoRecordingJob.perform_later(storage_id, request.ip)
     rescue StandardError => exception
-      raise exception if rack_env?(:development, :test)
+      raise exception unless rack_env?(:production)
       Observability::Errors.capture_exception(exception)
     end
   end
