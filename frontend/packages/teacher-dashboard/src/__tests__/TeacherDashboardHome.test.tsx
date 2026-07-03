@@ -85,6 +85,32 @@ describe('TeacherDashboardHome', () => {
       expect(screen.queryByRole('combobox')).not.toBeInTheDocument();
     });
 
+    it('shows the section code with legacy label terminology', async () => {
+      mockSectionsResponse(listSections);
+      render(<TeacherDashboardHome />);
+
+      const list = await screen.findByRole('list');
+      expect(
+        within(list).getByText(/Section code: ABCDEF/),
+      ).toBeInTheDocument();
+      expect(within(list).queryByText(/join code/i)).not.toBeInTheDocument();
+    });
+
+    it('shows a read-only avatar label from avatar_color/avatar_emoji', async () => {
+      mockSectionsResponse(listSections);
+      render(<TeacherDashboardHome />);
+
+      const list = await screen.findByRole('list');
+      // Fixtures: Period 1 = color 0/emoji 0, Period 2 = color 1/emoji 1,
+      // named "{Color}, {Emoji}" per the legacy SectionAvatar mapping.
+      expect(
+        within(list).getByRole('img', {name: 'Magenta, Fire'}),
+      ).toBeInTheDocument();
+      expect(
+        within(list).getByRole('img', {name: 'Pink, Penguin'}),
+      ).toBeInTheDocument();
+    });
+
     it('nests card headings under a region-level heading', async () => {
       mockSectionsResponse(listSections);
       render(<TeacherDashboardHome />);

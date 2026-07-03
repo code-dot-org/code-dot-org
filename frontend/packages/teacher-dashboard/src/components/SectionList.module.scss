@@ -16,6 +16,25 @@
   border-radius: 0.5rem;
 }
 
+.sectionCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+// Matches the legacy small SectionAvatar: emoji glyph on a colored circle.
+// Background color comes from the wire's avatar_color index (inline style).
+.sectionAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
 .sectionName {
   margin: 0;
 }
