@@ -14,7 +14,14 @@ export interface SectionListProps {
  */
 export function SectionList({sections}: SectionListProps) {
   return (
-    <ol id="teacher-dashboard-home-section-list" className={styles.sectionList}>
+    /* eslint-disable-next-line jsx-a11y/no-redundant-roles -- WebKit strips
+       the implicit `list` AX role when `list-style: none` is set; VoiceOver
+       needs it reaffirmed explicitly. */
+    <ol
+      id="teacher-dashboard-home-section-list"
+      role="list"
+      className={styles.sectionList}
+    >
       {sections.map(section => (
         <SectionCard key={section.id} section={section} />
       ))}

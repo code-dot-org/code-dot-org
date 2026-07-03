@@ -78,6 +78,10 @@ function readOnlyRoutes(fixture: LabFixture): MockRoute[] {
     });
   }
 
+  if (fixture.sections) {
+    routes.push({path: '*/api/v1/sections', respond: fixture.sections});
+  }
+
   return routes;
 }
 

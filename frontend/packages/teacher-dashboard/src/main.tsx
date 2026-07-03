@@ -48,7 +48,11 @@ async function bootMocks(tag: FixtureTag) {
   await startMockWorker();
 }
 
-await bootMocks(getFixtureTag());
+await bootMocks(getFixtureTag()).catch((error: unknown) => {
+  // Dev-only shell: fail loudly instead of rendering against a dead API.
+  document.body.textContent = 'MSW boot failed — see console.';
+  throw error;
+});
 
 const root = document.getElementById('root');
 if (!root) {

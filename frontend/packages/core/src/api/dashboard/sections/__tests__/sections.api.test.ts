@@ -98,4 +98,25 @@ describe('createSectionsApi.listSections', () => {
 
     await expect(api.listSections()).rejects.toThrow();
   });
+
+  it('accepts a pre-avatar-migration legacy section with null grades and avatar fields', async () => {
+    // grades has no presence validation; avatar_color/avatar_emoji shipped
+    // without a backfill — old sections carry NULL for all three. One legacy
+    // section must not reject the whole list.
+    const legacy = {
+      ...WIRE_SECTION_SUMMARY,
+      grades: null,
+      avatar_color: null,
+      avatar_emoji: null,
+    };
+    const {api} = fakeTransport([legacy]);
+
+    const sections = await api.listSections();
+
+    expect(sections[0]).toMatchObject({
+      grades: null,
+      avatarColor: null,
+      avatarEmoji: null,
+    });
+  });
 });

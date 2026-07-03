@@ -211,15 +211,18 @@ export const SectionListSummarySchema = z
     code: z.string().nullable(),
     login_type: z.enum(Object.values(SectionLoginTypes)),
     hidden: z.boolean(),
-    grades: z.array(z.string()),
+    // Nullable on the wire: the grades column has no presence validation, and
+    // avatar_color/avatar_emoji were added without a backfill — pre-migration
+    // sections carry NULL. A single legacy section must not reject the list.
+    grades: z.array(z.string()).nullable(),
     participant_type: z.enum(Object.values(SectionParticipationTypes)),
     studentCount: z.number(),
     course_display_name: z.string().nullable(),
     courseVersionName: z.string().nullable(),
     unit_id: z.number().nullable(),
     unitPosition: z.number().nullable(),
-    avatar_color: z.number(),
-    avatar_emoji: z.number(),
+    avatar_color: z.number().nullable(),
+    avatar_emoji: z.number().nullable(),
     demo_type: z.string().nullable(),
   })
   .transform(data => camelcaseKeys(data, {deep: true}));

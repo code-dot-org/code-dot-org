@@ -84,5 +84,36 @@ describe('TeacherDashboardHome', () => {
       expect(screen.queryByRole('link')).not.toBeInTheDocument();
       expect(screen.queryByRole('combobox')).not.toBeInTheDocument();
     });
+
+    it('nests card headings under a region-level heading', async () => {
+      mockSectionsResponse(listSections);
+      render(<TeacherDashboardHome />);
+
+      await screen.findByRole('list');
+      expect(
+        screen.getByRole('heading', {level: 2, name: /class sections/i}),
+      ).toBeInTheDocument();
+      expect(screen.getAllByRole('heading', {level: 3})).toHaveLength(2);
+    });
+  });
+
+  describe('error state', () => {
+    it('announces an error instead of an indefinite silent loading state', async () => {
+      mockServer.use(
+        http.get('*/api/v1/sections', () =>
+          HttpResponse.json({error: 'boom'}, {status: 500}),
+        ),
+      );
+      render(<TeacherDashboardHome />);
+
+      expect(
+        await screen.findByRole(
+          'alert',
+          {},
+          // The shared query client retries twice before settling into error.
+          {timeout: 15_000},
+        ),
+      ).toHaveTextContent(/went wrong loading your class sections/i);
+    });
   });
 });

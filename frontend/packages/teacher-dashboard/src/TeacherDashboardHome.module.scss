@@ -12,11 +12,30 @@
   text-align: center;
 }
 
+// Matches the legacy empty-state illustration width
+// (teacherHomepage.module.scss .emptyImage: 220px).
 .emptyStateImage {
-  width: 8rem;
-  height: 8rem;
+  width: 220px;
 }
 
 .emptyStateDescription {
   color: var(--text-neutral-secondary);
+}
+
+.errorMessage {
+  padding: 1rem;
+  color: var(--text-neutral-secondary);
+}
+
+// Visually hidden, available to assistive tech (standard sr-only pattern).
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }

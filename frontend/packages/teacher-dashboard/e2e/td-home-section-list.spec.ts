@@ -7,8 +7,12 @@ import {
 } from './helpers/keyboard';
 import {settle} from './helpers/settle';
 
-// Region root per visual-artifacts.md (TD-HOME-SECTION-LIST candidate selector).
+// Tight visual bound per visual-artifacts.md (TD-HOME-SECTION-LIST candidate
+// selector); the region ROOT (incl. the visually-hidden region heading) is the
+// axe/a11y scope — axe page-level and heading-order rules see nothing when
+// scoped to the bare <ol>.
 const REGION_SELECTOR = 'ol#teacher-dashboard-home-section-list';
+const REGION_ROOT_SELECTOR = '#teacher-dashboard-home[data-state="list"]';
 
 test.describe('TD-HOME-SECTION-LIST', () => {
   test.beforeEach(async ({page}) => {
@@ -37,15 +41,22 @@ test.describe('TD-HOME-SECTION-LIST', () => {
   });
 
   test('renders no mutating control', async ({page}) => {
-    const region = page.locator(REGION_SELECTOR);
+    const region = page.locator(REGION_ROOT_SELECTOR);
     await expect(region.getByRole('button')).toHaveCount(0);
     await expect(region.getByRole('link')).toHaveCount(0);
+    await expect(region.getByRole('combobox')).toHaveCount(0);
+  });
+
+  test('nests card headings under a single region-level h2', async ({page}) => {
+    const region = page.locator(REGION_ROOT_SELECTOR);
+    await expect(region.getByRole('heading', {level: 2})).toHaveCount(1);
+    await expect(region.getByRole('heading', {level: 3})).toHaveCount(2);
   });
 
   test('has no axe violations in the section-list region', async ({page}) => {
     await settle(page);
     const results = await new AxeBuilder({page})
-      .include(REGION_SELECTOR)
+      .include(REGION_ROOT_SELECTOR)
       .analyze();
     expect(results.violations).toEqual([]);
   });
@@ -53,7 +64,7 @@ test.describe('TD-HOME-SECTION-LIST', () => {
   test('every focusable element in the region is reachable with a visible focus indicator', async ({
     page,
   }) => {
-    const region = page.locator(REGION_SELECTOR);
+    const region = page.locator(REGION_ROOT_SELECTOR);
     const elements = await focusableElements(region);
     // SectionCard is read-only (no create/edit/archive/delete/reorder/
     // add-students/assign-course control — see design.md D5 / R4): zero
