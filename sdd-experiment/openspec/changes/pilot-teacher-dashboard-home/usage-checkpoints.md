@@ -24,3 +24,4 @@ and avoids idle agents holding resources.
 | 4 | 2026-07-03 (America/Los_Angeles) | CEO — registry gate decision + Phase 2 delegation | 19% | 47% | 7% | Jul 3, 7:30am | Jul 6, 9am | PASS — proceed |
 | 5 | 2026-07-03 (America/Los_Angeles) | Opus — Phase 2 start (scaffold) | 19% | 47% | 7% | Jul 3, 7:29am | Jul 6, 8:59am | PASS — proceed |
 | 6 | 2026-07-03 (America/Los_Angeles) | Opus — Phase 2 handoff; PREFLIGHT FOR SONNET TASK 1 (hard gate) | 25% | 48% | 9% | Jul 3, 7:30am | Jul 6, 9am | PASS — Sonnet may start task 1 |
+| 7 | 2026-07-03 (America/Los_Angeles) | Opus — Session A interim review; PREFLIGHT FOR SONNET SESSION B (tasks 3.1-3.2, 4.1-4.2, hard gate) | 30% | 48% | 9% | Jul 3, 7:29am | Jul 6, 8:59am | PASS — Sonnet may start Session B |

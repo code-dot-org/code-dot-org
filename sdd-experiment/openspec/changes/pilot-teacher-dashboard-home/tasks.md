@@ -37,19 +37,21 @@ filter-scoped equivalent:
 - [x] 1.1 Add failing parser tests in
   `frontend/packages/core/src/api/dashboard/sections/__tests__/sections.api.test.ts`
   (extend existing file, `fakeTransport` pattern): `listSections()` parses an
-  empty array; parses a two-element array into camelCased `SectionSummary`
+  empty array; parses a two-element array into camelCased `SectionListSummary`
   objects with the consumed fields; rejects when an element is missing `id` or
   `name`.
   - Files: that test file only.
   - Verify: `yarn test` in core shows the new tests FAIL (method/schema absent).
   - Evidence: failing test output.
-- [x] 1.2 Add `SectionSummarySchema` to `sections.schemata.ts` and the inferred
-  `SectionSummary` to `sections.types.ts`, modeling only the consumed fields
-  from `summarize_without_students` (see design.md D3 / api-contract-matrix.md).
-  Do NOT reuse `ConciseSectionSchema`.
+- [x] 1.2 Add `SectionListSummarySchema` to `sections.schemata.ts` and the
+  inferred `SectionListSummary` to `sections.types.ts`, modeling only the
+  consumed fields from `summarize_without_students` (see design.md D3 /
+  api-contract-matrix.md). Do NOT reuse `ConciseSectionSchema`. (Symbols renamed
+  from the planned `SectionSummarySchema`/`SectionSummary` in Session A, commit
+  `5c280e06d1a` — barrel collision with the levels domain; contract unchanged.)
   - Files: `sections.schemata.ts`, `sections.types.ts`.
 - [x] 1.3 Add `listSections()` to `sections.api.ts` → `GET /api/v1/sections` →
-  `z.array(SectionSummarySchema).parse(raw)`. Export via the domain barrel.
+  `z.array(SectionListSummarySchema).parse(raw)`. Export via the domain barrel.
   - Files: `sections.api.ts` (and `index.ts` if needed).
   - Verify: `yarn test` in core — 1.1 tests now PASS. Then `yarn release:dryrun`.
   - Evidence: passing test output; dryrun green.
@@ -64,7 +66,7 @@ filter-scoped equivalent:
   `frontend/packages/teacher-dashboard/src/fixtures/` matching the two scenarios
   (empty `[]`; one unassigned/0 students, one assigned to
   `ui-test-single-unit-course-2026` unit 1 / 1 student). Values must satisfy
-  `SectionSummarySchema`.
+  `SectionListSummarySchema`.
   - Files: package `src/fixtures/*` only.
 - [x] 2.2 Add an `http.get('*/api/v1/sections', …)` handler in
   `frontend/packages/core/src/api/mocks/` that serves the active fixture, and
@@ -125,9 +127,14 @@ filter-scoped equivalent:
 
 - [ ] 6.1 Ensure `src/main.tsx` renders `TeacherDashboardHome` under `CdoTheme`
   with MSW enabled, selecting fixture by URL/tag (empty vs list), for the visual
-  gate and local dev.
-  - Files: package `src/main.tsx`, minimal `index.html` if the dev shell needs
-    one (per package conventions).
+  gate and local dev. Session A note: the fixtures (`src/fixtures/empty.ts`,
+  `src/fixtures/list.ts`) export plain wire-shaped arrays; this task owns the
+  aggregation decision — wire them into the core mocks registry's
+  `LabFixture.sections` field (typed `z.input<typeof SectionListSummarySchema>[]`),
+  tightening the fixtures' local types to match.
+  - Files: package `src/main.tsx`, `src/fixtures/*` (type tightening + registry
+    wiring only), minimal `index.html` if the dev shell needs one (per package
+    conventions).
   - Verify: `yarn dev` in the package renders both fixtures deterministically.
   - Evidence: note of the two dev URLs.
 

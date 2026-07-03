@@ -111,7 +111,10 @@ needed. Add `"@code-dot-org/teacher-dashboard": "workspace:*"` to
 Extend the existing core `sections` domain
 (`frontend/packages/core/src/api/dashboard/sections/`), additively:
 
-- `sections.schemata.ts`: add a new `SectionSummarySchema` modeling the fields
+- `sections.schemata.ts`: add a new `SectionListSummarySchema` (planned as
+  `SectionSummarySchema`; renamed in Session A, commit `5c280e06d1a`, to fix a
+  barrel collision with the unrelated `SectionSummarySchema` in the `levels`
+  domain — wire contract, field set, camelCasing unchanged) modeling the fields
   the pilot UI consumes from `summarize_without_students`, camelCasing at the
   boundary (`.transform(d => camelcaseKeys(d, {deep: true}))`), consistent with
   the domain's existing schemas. Consumed fields: `id`, `name`, `code`
@@ -124,10 +127,10 @@ Extend the existing core `sections` domain
   `code` non-nullable and `code_review_expires_at` typed as number there — both
   wrong for the API payload).
 - `sections.api.ts`: add `async listSections()` → `GET /api/v1/sections` →
-  `z.array(SectionSummarySchema).parse(raw)`.
+  `z.array(SectionListSummarySchema).parse(raw)`.
 - `sections.keys.ts` / `sections.query.ts`: add a `useSections` react-query hook
   and key, matching the existing `useValidCourseOfferings` pattern.
-- `sections.types.ts`: add the inferred `SectionSummary` type.
+- `sections.types.ts`: add the inferred `SectionListSummary` type.
 
 ### D4 — MSW fixture design
 

@@ -123,15 +123,17 @@ and MUST NOT be reused for this endpoint.
 
 ## Frontend schema / parser + MSW plan
 
-- **Schema:** new `SectionSummarySchema` in
+- **Schema:** new `SectionListSummarySchema` (renamed from the planned
+  `SectionSummarySchema` in Session A, commit `5c280e06d1a` — barrel collision
+  with the levels domain; wire contract, field set, camelCasing unchanged) in
   `frontend/packages/core/src/api/dashboard/sections/sections.schemata.ts`,
   modeling only the consumed fields above, camelCasing via
   `.transform(d => camelcaseKeys(d, {deep: true}))` (domain convention). Unmodeled
-  keys are dropped by zod's default strip. Type `SectionSummary` in
+  keys are dropped by zod's default strip. Type `SectionListSummary` in
   `sections.types.ts`.
 - **API method:** `listSections()` in `sections.api.ts` →
   `transport.request<unknown>({method:'GET', url:'/api/v1/sections'})` →
-  `z.array(SectionSummarySchema).parse(raw)`.
+  `z.array(SectionListSummarySchema).parse(raw)`.
 - **Query hook:** `useSections` + key in `sections.query.ts` / `sections.keys.ts`.
 - **Parser tests** (`sections.api.test.ts`, `fakeTransport`): empty `[]`;
   two-element list → camelCased objects with consumed fields; reject on element
