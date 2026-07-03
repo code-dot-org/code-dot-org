@@ -106,6 +106,18 @@ lint error above, so the gate ran filtered:
 First scoped lint run failed on the scaffold's own `eslint.config.mjs`
 import-order (see table); after the package-scoped autofix all tasks green.
 
+## Session C observations (recorded by Opus interim review 03)
+
+- UPSTREAM GAP (not pilot scope; mocks feedback): core's MSW handler set has no
+  handler for `GET /api/v1/users/current`, so Studio standalone
+  `VITE_API_MODE=msw` renders `AuthErrorPage` on every route (reproduced on an
+  unrelated route in Session C, commit `a8e9d9d8fcb`). The pilot's visual gate
+  is unaffected — it targets the package dev shell, which has no auth guard.
+- ENVIRONMENT QUIRK: headless Chromium hard-crashes loading the `:5173` MSW dev
+  shell in this dev environment (disconnects right after MSW activates; sandbox
+  on and off); headless Firefox is clean. Ruling (interim review 03): visual
+  gate runs Firefox-only; no pilot budget spent diagnosing Chromium.
+
 ## Sonnet Phase 3 batching recommendation
 
 Recorded in memo-02. Constraint reminders: Sonnet runs `/opsx:apply

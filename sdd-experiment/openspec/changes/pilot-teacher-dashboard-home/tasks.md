@@ -141,10 +141,14 @@ filter-scoped equivalent:
 ## 7. Playwright parity + axe + keyboard (both scenarios)
 
 - [ ] 7.1 Add `e2e/` specs for TD-HOME-EMPTY and TD-HOME-SECTION-LIST against the
-  deterministic target (design.md D4 / visual-artifacts.md): region-scoped
-  visual check via native `toHaveScreenshot` (per ceo-decision-01; no shared
-  helper), a scoped axe pass, and keyboard/focus assertions. Follow the
-  isolate-then-capture + mask pattern.
+  deterministic target — the package MSW dev shell (`?tag=empty` / `?tag=list`),
+  NOT the Studio route (the shell renders `TeacherDashboardHome` directly, so
+  the upstream `users/current` MSW gap does not apply; see appendix-02) —
+  per design.md D4 / visual-artifacts.md: region-scoped visual check via native
+  `toHaveScreenshot` (per ceo-decision-01; no shared helper), a scoped axe
+  pass, and keyboard/focus assertions. Follow the isolate-then-capture + mask
+  pattern. BROWSER: Firefox only (Opus interim review 03 ruling — headless
+  Chromium crashes on the MSW shell in this environment; visual-artifacts.md).
   - Files: package `e2e/*` and its `playwright.config.ts` only.
   - Verify: run the visual determinism gate (`--update-snapshots` then
     `--repeat-each=5`); axe clean; keyboard reachable.

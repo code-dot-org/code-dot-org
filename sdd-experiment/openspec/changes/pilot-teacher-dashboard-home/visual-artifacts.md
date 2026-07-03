@@ -17,8 +17,15 @@ is the tightest legacy bound and is used for the advisory capture only.
 
 ## Determinism controls
 
-- **Viewport:** fixed `1280×800`, `deviceScaleFactor: 1` (Desktop Chrome), set on
-  the visual project.
+- **Viewport:** fixed `1280×800`, `deviceScaleFactor: 1`, set on the visual
+  project.
+- **Browser (RULED post-Session-C, Opus interim review 03):** the strict
+  self-consistency gate runs on FIREFOX ONLY. Headless Chromium hard-crashes
+  loading the `:5173` MSW dev shell in this environment (disconnects right
+  after MSW activates; sandbox on/off — Session C observation), while Firefox
+  is clean. Playwright baselines are per-browser and self-consistency does not
+  require Chromium; a bounded Chromium diagnosis is deliberately NOT spent from
+  the pilot budget. Revisit only if CI later mandates Chromium.
 - **Locale:** `en-US`; no `ge_region` cookie (Global Edition out of scope).
 - **Data:** deterministic — the strict candidate capture is fed MSW `empty` /
   `list` fixtures (fixed names, join codes, counts). The advisory legacy capture
@@ -27,10 +34,14 @@ is the tightest legacy bound and is used for the advisory capture only.
 - **Animations disabled:** `animations: 'disabled'` on `toHaveScreenshot` (and in
   the consumer config default). On the candidate, no logo transition or tour
   exists to animate.
-- **Fonts-ready wait:** the shared visual helper does NOT await
-  `document.fonts.ready`; the spec MUST add a readiness wait before the check
+- **Fonts-ready wait:** the spec MUST add a readiness wait before the check
   (the `settle()` pattern: `document.fonts.ready` + double-rAF) since the region
-  uses web fonts / emoji glyphs.
+  uses web fonts (the dev shell loads `@code-dot-org/fonts`).
+- **Auth independence:** the gate targets the package dev shell, which renders
+  `TeacherDashboardHome` directly — no Studio root auth guard, so the known
+  upstream MSW gap (no handler for `GET /api/v1/users/current`, which makes the
+  Studio standalone `VITE_API_MODE=msw` render `AuthErrorPage` on every route)
+  does NOT affect the visual gate. Upstream note recorded in appendix-02.
 - **Volatile elements masked or absent:**
   - Candidate: volatile UI is simply NOT built (no logo animation, promotions,
     drawers, NPS, school-info, AI-diff FAB, onboarding, rebrand banner, demo
