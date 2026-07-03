@@ -11,9 +11,17 @@ Verification baseline (run from `frontend/`): `yarn lint:fix` then
 `yarn release:dryrun` (build + typecheck + test). Package tests: `yarn test`
 within the package. Do not run the full repo suites.
 
+GATE SCOPING (Phase 2 finding): workspace-wide `yarn release:dryrun` currently
+FAILS on a pre-existing e2e-tests lint error (`tests/platform/header.spec.ts`
+imports `../pages/teacher-dashboard`, a directory without index.ts; staging
+commit `efa54994177` — NOT pilot-caused, do NOT fix it). Until it is resolved
+upstream, every "release:dryrun" verification in these tasks means the
+filter-scoped equivalent:
+`yarn turbo run build typecheck lint test --filter=@code-dot-org/teacher-dashboard --filter=@code-dot-org/core --filter=@code-dot-org/studio`.
+
 ## 0. Scaffold the package — OPUS-OWNED (do NOT run as Sonnet)
 
-- [ ] 0.1 **[OPUS, Phase 2]** Scaffold `frontend/packages/teacher-dashboard` via
+- [x] 0.1 **[OPUS, Phase 2]** Scaffold `frontend/packages/teacher-dashboard` via
   `yarn turbo gen package` (name `teacher-dashboard`), then adjust
   `vitest.config.ts` to extend `@code-dot-org/lint-config/vitest/react.mjs`, add
   `@code-dot-org/core: workspace:*` to `dependencies`, and confirm the generator
