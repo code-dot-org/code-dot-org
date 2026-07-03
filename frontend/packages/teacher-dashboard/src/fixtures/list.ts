@@ -1,3 +1,7 @@
+import type {z} from 'zod';
+
+import type {SectionListSummarySchema} from '@code-dot-org/core/api';
+
 /**
  * GET /api/v1/sections → 200 array — two sections for TD-HOME-SECTION-LIST:
  * one unassigned with 0 students, one assigned to
@@ -5,7 +9,7 @@
  * satisfy `SectionListSummarySchema` (wire shape — snake_case/camelCase mix
  * as returned by `summarize_without_students`).
  */
-export const listSections: Record<string, unknown>[] = [
+export const listSections: z.input<typeof SectionListSummarySchema>[] = [
   {
     id: 101,
     name: 'Period 1',

@@ -113,7 +113,7 @@ filter-scoped equivalent:
 
 ## 5. Studio route + lazy boundary
 
-- [ ] 5.1 Add `frontend/apps/studio/src/routes/teacher_dashboard/home.tsx` per
+- [x] 5.1 Add `frontend/apps/studio/src/routes/teacher_dashboard/home.tsx` per
   design.md D2 (route def + `React.lazy` + `<Suspense>` only). Let the Vite
   plugin regenerate `routeTree.gen.ts` (do not hand-edit it). Confirm the
   workspace dep exists in `frontend/apps/studio/package.json` (added in task 0).
@@ -125,7 +125,7 @@ filter-scoped equivalent:
 
 ## 6. Standalone dev shell (deterministic visual/dev target)
 
-- [ ] 6.1 Ensure `src/main.tsx` renders `TeacherDashboardHome` under `CdoTheme`
+- [x] 6.1 Ensure `src/main.tsx` renders `TeacherDashboardHome` under `CdoTheme`
   with MSW enabled, selecting fixture by URL/tag (empty vs list), for the visual
   gate and local dev. Session A note: the fixtures (`src/fixtures/empty.ts`,
   `src/fixtures/list.ts`) export plain wire-shaped arrays; this task owns the

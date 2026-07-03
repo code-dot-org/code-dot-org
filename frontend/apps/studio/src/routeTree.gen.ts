@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as Teacher_dashboardHomeRouteImport } from './routes/teacher_dashboard/home'
 import { Route as ProjectsLabTypeChannelIdEditRouteImport } from './routes/projects/$labType/$channelId/edit'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Teacher_dashboardHomeRoute = Teacher_dashboardHomeRouteImport.update({
+  id: '/teacher_dashboard/home',
+  path: '/teacher_dashboard/home',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjectsLabTypeChannelIdEditRoute =
@@ -26,27 +32,38 @@ const ProjectsLabTypeChannelIdEditRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/teacher_dashboard/home': typeof Teacher_dashboardHomeRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/teacher_dashboard/home': typeof Teacher_dashboardHomeRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/teacher_dashboard/home': typeof Teacher_dashboardHomeRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/projects/$labType/$channelId/edit'
+  fullPaths:
+    | '/'
+    | '/teacher_dashboard/home'
+    | '/projects/$labType/$channelId/edit'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/projects/$labType/$channelId/edit'
-  id: '__root__' | '/' | '/projects/$labType/$channelId/edit'
+  to: '/' | '/teacher_dashboard/home' | '/projects/$labType/$channelId/edit'
+  id:
+    | '__root__'
+    | '/'
+    | '/teacher_dashboard/home'
+    | '/projects/$labType/$channelId/edit'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  Teacher_dashboardHomeRoute: typeof Teacher_dashboardHomeRoute
   ProjectsLabTypeChannelIdEditRoute: typeof ProjectsLabTypeChannelIdEditRoute
 }
 
@@ -57,6 +74,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/teacher_dashboard/home': {
+      id: '/teacher_dashboard/home'
+      path: '/teacher_dashboard/home'
+      fullPath: '/teacher_dashboard/home'
+      preLoaderRoute: typeof Teacher_dashboardHomeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projects/$labType/$channelId/edit': {
@@ -71,6 +95,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  Teacher_dashboardHomeRoute: Teacher_dashboardHomeRoute,
   ProjectsLabTypeChannelIdEditRoute: ProjectsLabTypeChannelIdEditRoute,
 }
 export const routeTree = rootRouteImport

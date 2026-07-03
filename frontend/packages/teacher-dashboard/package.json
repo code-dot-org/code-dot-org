@@ -39,6 +39,8 @@
     "@code-dot-org/core": "workspace:*"
   },
   "devDependencies": {
+    "@code-dot-org/component-library-styles": "workspace:*",
+    "@code-dot-org/fonts": "workspace:*",
     "@code-dot-org/lint-config": "workspace:*",
     "@emotion/react": "catalog:",
     "@emotion/styled": "catalog:",
@@ -62,7 +64,8 @@
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",
     "vite-plugin-externalize-deps": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "zod": "catalog:"
   },
   "peerDependencies": {
     "@emotion/react": "^11.0.0",

@@ -2182,7 +2182,9 @@ __metadata:
   resolution: "@code-dot-org/teacher-dashboard@workspace:packages/teacher-dashboard"
   dependencies:
     "@code-dot-org/component-library": "workspace:*"
+    "@code-dot-org/component-library-styles": "workspace:*"
     "@code-dot-org/core": "workspace:*"
+    "@code-dot-org/fonts": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
     "@emotion/react": "catalog:"
     "@emotion/styled": "catalog:"
@@ -2207,6 +2209,7 @@ __metadata:
     vite-plugin-dts: "catalog:"
     vite-plugin-externalize-deps: "catalog:"
     vitest: "catalog:"
+    zod: "catalog:"
   peerDependencies:
     "@emotion/react": ^11.0.0
     "@emotion/styled": ^11.0.0
