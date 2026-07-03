@@ -2181,21 +2181,39 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/teacher-dashboard@workspace:packages/teacher-dashboard"
   dependencies:
+    "@code-dot-org/component-library": "workspace:*"
     "@code-dot-org/core": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
+    "@emotion/react": "catalog:"
+    "@emotion/styled": "catalog:"
+    "@mui/material": "catalog:"
+    "@tanstack/react-query": "catalog:"
+    "@testing-library/dom": "catalog:"
+    "@testing-library/jest-dom": "catalog:"
+    "@testing-library/react": "catalog:"
     "@types/node": "catalog:"
+    "@types/react": "catalog:"
+    "@types/react-dom": "catalog:"
     "@vitejs/plugin-react": "catalog:"
     eslint: "catalog:"
     jsdom: "catalog:"
+    msw: "catalog:"
     prettier: "catalog:"
-    react: "npm:^19.2.0"
+    react: "catalog:"
+    react-dom: "catalog:"
+    stylelint: "catalog:"
     typescript: "catalog:"
     vite: "catalog:"
     vite-plugin-dts: "catalog:"
     vite-plugin-externalize-deps: "catalog:"
     vitest: "catalog:"
   peerDependencies:
+    "@emotion/react": ^11.0.0
+    "@emotion/styled": ^11.0.0
+    "@mui/material": ^7.0.0
+    "@tanstack/react-query": "*"
     react: ^17.0.0 || ^18.0.0 || ^19.0.0
+    react-dom: ^17.0.0 || ^18.0.0 || ^19.0.0
   languageName: unknown
   linkType: soft
 
@@ -19475,13 +19493,6 @@ __metadata:
   dependencies:
     loose-envify: "npm:^1.1.0"
   checksum: 10c0/283e8c5efcf37802c9d1ce767f302dd569dd97a70d9bb8c7be79a789b9902451e0d16334b05d73299b20f048cbc3c7d288bbbde10b701fa194e2089c237dbea3
-  languageName: node
-  linkType: hard
-
-"react@npm:^19.2.0":
-  version: 19.2.7
-  resolution: "react@npm:19.2.7"
-  checksum: 10c0/0bd0e2f1bbd4ba97561c6597bf8a5fec05e6476fe61e165c1065598d16668efc6715205599c94d3ddd49d36cb0f21cbf1b9bcc18ee840b805ce222c3e8d558ac
   languageName: node
   linkType: hard
 

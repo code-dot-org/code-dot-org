@@ -1,0 +1,25 @@
+.sectionList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 0;
+  list-style: none;
+}
+
+.sectionCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 0.5rem;
+}
+
+.sectionName {
+  margin: 0;
+}
+
+.unassigned {
+  color: var(--text-neutral-secondary);
+}

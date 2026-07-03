@@ -79,13 +79,13 @@ filter-scoped equivalent:
 
 ## 3. Empty-state component — write component test first (TD-HOME-EMPTY)
 
-- [ ] 3.1 Add a failing Vitest component test
+- [x] 3.1 Add a failing Vitest component test
   (`src/__tests__/TeacherDashboardHome.test.tsx`): rendering with the empty
   fixture shows the empty headline, description, and image; asserts NO section
   card/list node; asserts a single region heading.
   - Files: package `src/__tests__/*` only.
   - Verify: `yarn test` FAILS (component absent).
-- [ ] 3.2 Implement `EmptyHome.tsx` and the empty branch of
+- [x] 3.2 Implement `EmptyHome.tsx` and the empty branch of
   `TeacherDashboardHome.tsx` (fetch via `useSections`; empty when `[]`), on
   design-system components + `.module.scss` semantic tokens. Export
   `TeacherDashboardHome` from `src/index.ts`.
@@ -96,14 +96,14 @@ filter-scoped equivalent:
 
 ## 4. Section-list component — extend component test first (TD-HOME-SECTION-LIST)
 
-- [ ] 4.1 Extend the component test: rendering with the list fixture shows two
+- [x] 4.1 Extend the component test: rendering with the list fixture shows two
   cards; the assigned card shows the `ui-test-single-unit-course-2026` course
   display name and student count 1; the unassigned card shows its unassigned
   affordance and student count 0; assert NO mutating control
   (create/edit/archive/delete/reorder/add-students/assign-course) is present.
   - Files: package `src/__tests__/*` only.
   - Verify: `yarn test` FAILS for the new assertions.
-- [ ] 4.2 Implement `SectionList.tsx` + `SectionCard.tsx` (read-only labels: name,
+- [x] 4.2 Implement `SectionList.tsx` + `SectionCard.tsx` (read-only labels: name,
   join code, student count, course display name or unassigned affordance) using
   semantic `<ol>`/`<li>` and design-system components. No mutating handlers.
   - Files: `src/components/SectionList.tsx`, `src/components/SectionCard.tsx`,

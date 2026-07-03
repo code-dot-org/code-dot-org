@@ -1,0 +1,22 @@
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.emptyStateImage {
+  width: 8rem;
+  height: 8rem;
+}
+
+.emptyStateDescription {
+  color: var(--text-neutral-secondary);
+}
