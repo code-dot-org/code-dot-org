@@ -196,3 +196,30 @@ export const SectionSchema = z.intersection(
   SelectedSectionSchema,
   ConciseSectionSchema,
 );
+
+/**
+ * Models `summarize_without_students` (`GET /api/v1/sections`), NOT
+ * `concise_summarize` (see `ConciseSectionSchema`). The two payloads overlap
+ * but differ in field presence/nullability — do not conflate them. Only the
+ * fields the teacher-dashboard-home pilot consumes are modeled; zod strips
+ * the rest.
+ */
+export const SectionListSummarySchema = z
+  .object({
+    id: z.number(),
+    name: z.string(),
+    code: z.string().nullable(),
+    login_type: z.enum(Object.values(SectionLoginTypes)),
+    hidden: z.boolean(),
+    grades: z.array(z.string()),
+    participant_type: z.enum(Object.values(SectionParticipationTypes)),
+    studentCount: z.number(),
+    course_display_name: z.string().nullable(),
+    courseVersionName: z.string().nullable(),
+    unit_id: z.number().nullable(),
+    unitPosition: z.number().nullable(),
+    avatar_color: z.number(),
+    avatar_emoji: z.number(),
+    demo_type: z.string().nullable(),
+  })
+  .transform(data => camelcaseKeys(data, {deep: true}));

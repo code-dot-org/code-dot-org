@@ -4,8 +4,20 @@ import type {ApiClient} from '../../client/createApiClient';
 import type {
   AssignmentCourseOfferings,
   AvailableParticipantTypes,
+  SectionListSummary,
 } from './sections.types';
 import {sectionsKeys} from './sections.keys';
+
+export function useSections(
+  api: ApiClient,
+  options?: Omit<UseQueryOptions<SectionListSummary[]>, 'queryKey' | 'queryFn'>,
+) {
+  return useQuery({
+    queryKey: sectionsKeys.list(),
+    queryFn: () => api.sections.listSections(),
+    ...options,
+  });
+}
 
 export function useValidCourseOfferings(
   api: ApiClient,

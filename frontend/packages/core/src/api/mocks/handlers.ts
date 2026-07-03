@@ -5,6 +5,7 @@ import {dispatchHandlers} from './dispatch.handlers';
 import {levelsHandlers} from './levels.handlers';
 import {preferencesHandlers} from './preferences.handlers';
 import {projectsHandlers} from './projects.handlers';
+import {sectionsHandlers} from './sections.handlers';
 import {sourcesHandlers} from './sources.handlers';
 
 /**
@@ -24,5 +25,6 @@ export function getMockHandlers(): RequestHandler[] {
     ...channelsHandlers,
     ...sourcesHandlers,
     ...projectsHandlers,
+    ...sectionsHandlers,
   ];
 }

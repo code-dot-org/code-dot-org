@@ -34,7 +34,7 @@ filter-scoped equivalent:
 
 ## 1. sections list schema + parser (core) — write tests first
 
-- [ ] 1.1 Add failing parser tests in
+- [x] 1.1 Add failing parser tests in
   `frontend/packages/core/src/api/dashboard/sections/__tests__/sections.api.test.ts`
   (extend existing file, `fakeTransport` pattern): `listSections()` parses an
   empty array; parses a two-element array into camelCased `SectionSummary`
@@ -43,30 +43,30 @@ filter-scoped equivalent:
   - Files: that test file only.
   - Verify: `yarn test` in core shows the new tests FAIL (method/schema absent).
   - Evidence: failing test output.
-- [ ] 1.2 Add `SectionSummarySchema` to `sections.schemata.ts` and the inferred
+- [x] 1.2 Add `SectionSummarySchema` to `sections.schemata.ts` and the inferred
   `SectionSummary` to `sections.types.ts`, modeling only the consumed fields
   from `summarize_without_students` (see design.md D3 / api-contract-matrix.md).
   Do NOT reuse `ConciseSectionSchema`.
   - Files: `sections.schemata.ts`, `sections.types.ts`.
-- [ ] 1.3 Add `listSections()` to `sections.api.ts` → `GET /api/v1/sections` →
+- [x] 1.3 Add `listSections()` to `sections.api.ts` → `GET /api/v1/sections` →
   `z.array(SectionSummarySchema).parse(raw)`. Export via the domain barrel.
   - Files: `sections.api.ts` (and `index.ts` if needed).
   - Verify: `yarn test` in core — 1.1 tests now PASS. Then `yarn release:dryrun`.
   - Evidence: passing test output; dryrun green.
-- [ ] 1.4 Add `useSections` query hook + key
+- [x] 1.4 Add `useSections` query hook + key
   (`sections.query.ts`, `sections.keys.ts`) matching `useValidCourseOfferings`.
   - Files: `sections.query.ts`, `sections.keys.ts`.
   - Verify: typecheck via `yarn release:dryrun`.
 
 ## 2. MSW fixtures + handler (core mocks + package fixtures)
 
-- [ ] 2.1 Add empty and two-section fixtures under
+- [x] 2.1 Add empty and two-section fixtures under
   `frontend/packages/teacher-dashboard/src/fixtures/` matching the two scenarios
   (empty `[]`; one unassigned/0 students, one assigned to
   `ui-test-single-unit-course-2026` unit 1 / 1 student). Values must satisfy
   `SectionSummarySchema`.
   - Files: package `src/fixtures/*` only.
-- [ ] 2.2 Add an `http.get('*/api/v1/sections', …)` handler in
+- [x] 2.2 Add an `http.get('*/api/v1/sections', …)` handler in
   `frontend/packages/core/src/api/mocks/` that serves the active fixture, and
   register it in the handler aggregation. Follow the existing per-domain handler
   pattern.

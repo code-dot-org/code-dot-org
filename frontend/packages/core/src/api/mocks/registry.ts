@@ -19,7 +19,9 @@ import type {
   LevelPropertiesBaseInput,
 } from '../dashboard/levels';
 import type {UserThemeSettings} from '../dashboard/preferences';
+import type {SectionListSummarySchema} from '../dashboard/sections';
 import type {ProjectSourcesAny} from '../dashboard/sources';
+import type {z} from 'zod';
 
 import {
   clearMockFixtures,
@@ -37,6 +39,8 @@ export type LabFixture = {
   sources?: ProjectSourcesAny;
   levelProperties?: LevelPropertiesMap;
   theme?: UserThemeSettings | null;
+  /** Wire-shaped (pre-transform) `GET /api/v1/sections` response. */
+  sections?: z.input<typeof SectionListSummarySchema>[];
 };
 
 /** All scenarios for a lab, keyed by tag (e.g. `simple`, `complex`, `error`). */

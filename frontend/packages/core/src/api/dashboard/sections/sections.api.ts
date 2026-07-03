@@ -1,8 +1,11 @@
+import {z} from 'zod';
+
 import type {Transport} from '../../transports/types';
 import {
   AssignmentCourseOfferingsSchema,
   AvailableParticipantTypesSchema,
   SectionSchema,
+  SectionListSummarySchema,
 } from './sections.schemata';
 
 export function createSectionsApi(transport: Transport) {
@@ -19,6 +22,19 @@ export function createSectionsApi(transport: Transport) {
       });
 
       return SectionSchema.parse(raw);
+    },
+
+    /**
+     * GET /api/v1/sections — the caller's instructed sections
+     * (`summarize_without_students`).
+     */
+    async listSections() {
+      const raw = await transport.request<unknown>({
+        method: 'GET',
+        url: '/api/v1/sections',
+      });
+
+      return z.array(SectionListSummarySchema).parse(raw);
     },
 
     /**
