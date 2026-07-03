@@ -27,3 +27,5 @@ and avoids idle agents holding resources.
 | 7 | 2026-07-03 (America/Los_Angeles) | Opus — Session A interim review; PREFLIGHT FOR SONNET SESSION B (tasks 3.1-3.2, 4.1-4.2, hard gate) | 30% | 48% | 9% | Jul 3, 7:29am | Jul 6, 8:59am | PASS — Sonnet may start Session B |
 | 8 | 2026-07-03 (America/Los_Angeles) | Opus — Session B interim review; PREFLIGHT FOR SONNET SESSION C (tasks 5.1 + 6.1, hard gate) | 39% | 49% | 11% | Jul 3, 7:30am | Jul 6, 9am | PASS — Sonnet may start Session C |
 | 9 | 2026-07-03 (America/Los_Angeles) | Opus — Session C interim review; PREFLIGHT FOR SONNET SESSION D (tasks 7.1 + 8.1, hard gate) | 55% | 51% | 14% | Jul 3, 7:30am | Jul 6, 9am | PASS — Sonnet may start Session D |
+| 10 | 2026-07-03 (America/Los_Angeles) | Opus — Phase 4 start (review/autofix + advisory capture) | 64% | 52% | 16% | Jul 3, 7:30am | Jul 6, 9am | PASS — proceed |
+| 11 | 2026-07-03 (America/Los_Angeles) | Opus — Phase 4 handoff (memo-03) | 80% | 54% | 19% | Jul 3, 7:30am | Jul 6, 9am | PASS — session headroom thin; recommend fresh session for Phase 5 |

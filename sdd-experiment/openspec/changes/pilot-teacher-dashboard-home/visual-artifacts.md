@@ -151,4 +151,62 @@ list/listitem roles from the accessibility tree in WebKit — Firefox and
 Chromium are unaffected). Not observed as a failure here because the gate is
 Firefox-only per this doc's Browser ruling; not fixed speculatively (no
 failing check to fix against) — flagged as a follow-up for whoever adds a
-WebKit lane.
+WebKit lane. RESOLVED in Phase 4 (commit `9740560a49a`): a11y review ruled
+fix-now; explicit `role="list"` added with a justified one-line jsx-a11y
+disable.
+
+## Phase 4 autofix — deliberate baseline regeneration
+
+Commit `9740560a49a` deliberately changed the empty-state visual (legacy
+`emptySectionHeadline`/`emptyClassSections` copy verbatim; legacy
+`no_sections.png` at 220px replacing the invented SVG) and added a
+visually-hidden region h2 in list state (outside the `ol` visual bound).
+Baselines regenerated per the standard flow: `--update-snapshots`, then
+`--repeat-each=5` → 55/55 (11 tests × 5). Axe scope for the list scenario
+widened from the bare `ol` to the region root
+`#teacher-dashboard-home[data-state="list"]` so heading rules participate;
+still 0 violations.
+
+## Phase 4 advisory captures (Opus-owned; test-studio legacy vs MSW candidate)
+
+Artifacts (Firefox 1280×800, dsf 1, en-US, determinism controls above;
+capture specs archived under `artifacts/capture-specs/`):
+
+- `artifacts/visual/td-home-empty.legacy.png` (test-studio, fresh teacher via
+  `createUser`, logo transition suppressed by cookie, overlays hidden)
+- `artifacts/visual/td-home-empty.candidate.png` (dev shell `?tag=empty`)
+- `artifacts/visual/td-home-section-list.legacy.png` (test-studio, registry
+  recipe: `/dashboardapi/sections` unassigned + `/api/test/
+  create_student_section_assigned_to_course_and_unit` with
+  `ui-test-single-unit-course-2026` unit 1 + one joined student)
+- `artifacts/visual/td-home-section-list.candidate.png` (dev shell `?tag=list`)
+
+No `.diff.png` files: a pixel diff across the two stacks is exactly the
+non-meaningful comparison the environment decision rejects; the strict gate
+remains the tool assertion (candidate self-consistency, above).
+
+Side-by-side observations (explanatory, NOT a parity declaration):
+
+- TD-HOME-EMPTY: near-equivalent. Same illustration asset, byte-identical
+  copy, matching type family/weight. Divergences: candidate region spans the
+  full 1280px shell (legacy sits in a ~670px column imposed by the host page
+  layout, outside the region bound); legacy headline is an `h3` element where
+  the candidate uses `h2` (similar rendered size); image rendered slightly
+  smaller in candidate.
+- TD-HOME-SECTION-LIST: content-equivalent for the approved read-only slice
+  only. Both render two cards in order (unassigned first) with section name,
+  join code, and course-or-unassigned state. Divergences, all traceable to
+  the charter's out-of-scope list or fixture identity: legacy cards carry
+  avatar chips, drag handles, kebab menus, and mutating/navigational panels
+  (Assign a course / Add students / Jump to / View progress / View lesson
+  materials) that the candidate deliberately does not build; legacy card face
+  shows no student-count label (the candidate's "0 students"/"1 student" line
+  is a read-only stand-in for legacy's roster affordances); section names
+  differ because legacy names come from the live recipe ("Untitled Section",
+  "New Section") while the candidate renders its MSW fixtures ("Period 1/2");
+  candidate cards are visually flatter (no avatar, single column).
+
+Verdict inputs for Phase 5: the strict tool-enforced gate (candidate
+self-consistency) PASSES; cross-stack strict acceptance remains DEFERRED per
+ceo-decision-01 — these captures are advisory evidence for human review, not
+a pass.
