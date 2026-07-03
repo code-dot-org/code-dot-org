@@ -20,7 +20,7 @@ Copy data when you want to try something (like filtering, sorting, or editing) w
 
 - Multiple parts of your app rely on the same dataset
 
-<div style="background-color:#B7E0E5; border-radius:10px; padding:14px; margin:18px auto; max-width:85%;"> <p style="font-size:14pt; margin:0; line-height:135%;"><strong>Key idea:</strong> If you mutate the original data, you can’t easily “go back” unless you saved a copy first.</p> </div>
+<div style="background-color:#e4e2f8; border-radius:10px; padding:14px; margin:18px auto; max-width:85%;"> <p style="font-size:12pt; margin:0; line-height:135%;"><strong>Key idea:</strong> If you mutate the original data, you can’t easily “go back” unless you saved a copy first.</p> </div>
 
 <iframe src="https://amandadennard-dotcom.github.io/Unit4_testing/undo_reset_flip_cards.html" width="100%" height="290" style="border:none;" title="Undo vs Reset flip cards"></iframe>
 
@@ -44,7 +44,7 @@ Users expect these options because mistakes are normal. A good interface helps t
 
 <div style="clear:both;"></div>
 
----
+
 ## Reflect
 
 **Take a moment to reflect before moving on**.
@@ -55,8 +55,8 @@ Users expect these options because mistakes are normal. A good interface helps t
 
 - How could changing the original data make recovery harder?
 
-<details style="background-color:#FFFFFF;padding:12px;margin-bottom:10px;border:1px solid #D9E3E5;border-radius:8px;box-shadow:2px 2px 8px rgba(0,0,0,0.06);">
-  <summary style="font-size:1.4em; font-weight:bold;">💡 Check your thinking</summary> <div style="margin-top:12px; margin-left:14px; margin-right:14px; margin-bottom:10px; font-size:13pt; line-height:145%;"> <ul> <li style = "font-size: 14pt";>Undo and reset let users recover from mistakes without fear. They support experimentation by making it safe to try things and go back if something doesn’t work.</li> <li style = "font-size: 14pt">The app needs access to a previous version of the data (often the original state or a history of changes) so it can restore what existed before the change.</li> <li style = "font-size: 14pt">If the original data is mutated, the previous state is lost. Without a saved copy, the app has nothing to return to, making undo or reset difficult or impossible.</li> </ul> </div> </details>
+<details style="background-color:#ececec;padding:12px;margin-bottom:10px;border:1px solid #D9E3E5;border-radius:8px;box-shadow:2px 2px 8px rgba(0,0,0,0.06);">
+  <summary style="font-size:12pt; font-weight:bold;">💡 Check your thinking</summary> <div style="margin-top:12px; margin-left:14px; margin-right:14px; margin-bottom:10px; font-size:13pt; line-height:145%;"> <ul> <li style = "font-size: 12pt";>Undo and reset let users recover from mistakes without fear. They support experimentation by making it safe to try things and go back if something doesn’t work.</li> <li style = "font-size: 12pt">The app needs access to a previous version of the data (often the original state or a history of changes) so it can restore what existed before the change.</li> <li style = "font-size: 12pt">If the original data is mutated, the previous state is lost. Without a saved copy, the app has nothing to return to, making undo or reset difficult or impossible.</li> </ul> </div> </details>
 
 
 
