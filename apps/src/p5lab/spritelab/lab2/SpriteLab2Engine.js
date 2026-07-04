@@ -6,6 +6,8 @@ import {getStore} from '@cdo/apps/redux';
 
 import SpriteLab from '../SpriteLab';
 
+import {trimAnimationListImages} from './imageTrim';
+
 const NOOP = () => {};
 
 /**
@@ -331,9 +333,12 @@ export default class SpriteLab2Engine extends SpriteLab {
     // scene jump to a "set background" of a new image rendered white). The
     // preload helper skips entries whose dataURI is already loaded, so this
     // only fetches what's new. External scenes preload from their own
-    // project's animation list instead.
+    // project's animation list instead. Costume images are border-trimmed on
+    // the way in (cached, so re-runs are free).
     await this.p5Wrapper.preloadSpriteImages(
-      this.preloadAnimationsOverride || getStore().getState().animationList
+      await trimAnimationListImages(
+        this.preloadAnimationsOverride || getStore().getState().animationList
+      )
     );
     p5.allSprites.removeSprites();
     if (this.JSInterpreter) {
@@ -395,7 +400,18 @@ export default class SpriteLab2Engine extends SpriteLab {
         );
       }
     }, 8000);
-    return this.preloadSpriteImages_().finally(() => clearTimeout(watchdog));
+    return this.preloadTrimmedSpriteImages_().finally(() =>
+      clearTimeout(watchdog)
+    );
+  }
+
+  // The base preloadSpriteImages_ with costume border-trimming applied to the
+  // list on the way in (see imageTrim.ts).
+  async preloadTrimmedSpriteImages_() {
+    await this.whenAnimationsAreReady();
+    return this.p5Wrapper.preloadSpriteImages(
+      await trimAnimationListImages(getStore().getState().animationList)
+    );
   }
 
   // --- Overrides that sever the global studioApp() singleton ---
