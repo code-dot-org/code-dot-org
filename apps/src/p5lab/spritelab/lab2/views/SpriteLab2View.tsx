@@ -116,13 +116,34 @@ const SpriteLab2View: React.FunctionComponent<{
   const engineRef = useRef<SpriteLab2Engine | null>(null);
   const codeTabRef = useRef<CodeTabHandle>(null);
   const [engineReady, setEngineReady] = useState(false);
+  const [animationsSeeded, setAnimationsSeeded] = useState(false);
 
-  // Instantiate the p5.play engine once, seeding the animation list from saved
-  // sources. Unlike classic Sprite Lab we don't auto-load the legacy default
-  // sprite library; SpriteLab2 sprites come from the Items tab (AI generation,
-  // the image editor, or the animation picker), so a new project starts with an
-  // empty list. p5 preload then completes immediately instead of blocking on
-  // remote default-sprite assets.
+  // Seed the animation list from saved sources BEFORE the Code tab mounts (the
+  // Code tab is gated on animationsSeeded below). The costume/background
+  // dropdown fields validate their saved values against the animation list at
+  // block-load time; loading blocks against an empty list nulls every saved
+  // selection — broken thumbnails and null-costume code. This must be a render
+  // gate, not just dispatch ordering: a child's mount effect (where the
+  // workspace loads blocks) runs before any parent effect.
+  useEffect(() => {
+    dispatch(
+      setInitialAnimationList(
+        sourcesRef.current.animations || EMPTY_ANIMATION_LIST,
+        // No v3 migration; the engine never runs the legacy share path.
+        undefined as unknown as object,
+        true /* isSpriteLab */
+      )
+    );
+    setAnimationsSeeded(true);
+    // Re-seed only when the level changes.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [levelProperties.id]);
+
+  // Instantiate the p5.play engine once. Unlike classic Sprite Lab we don't
+  // auto-load the legacy default sprite library; SpriteLab2 sprites come from
+  // the Images tab (AI generation), so a new project starts with an empty
+  // list. p5 preload then completes immediately instead of blocking on remote
+  // default-sprite assets.
   useEffect(() => {
     let cancelled = false;
     const savedAnimations =
@@ -136,14 +157,6 @@ const SpriteLab2View: React.FunctionComponent<{
         return;
       }
       engineRef.current = engine;
-      dispatch(
-        setInitialAnimationList(
-          savedAnimations,
-          // No v3 migration; the engine never runs the legacy share path.
-          undefined as unknown as object,
-          true /* isSpriteLab */
-        )
-      );
       setEngineReady(true);
     };
 
@@ -260,7 +273,10 @@ const SpriteLab2View: React.FunctionComponent<{
       onTabChange={handleTabChange}
       enabledTabs={ENABLED_TABS}
     >
-      {/* Keep the Code tab mounted so the Blockly workspace survives switches. */}
+      {/* Keep the Code tab mounted so the Blockly workspace survives switches.
+          Mount it only after the animation list is seeded: its dropdown fields
+          resolve saved costume/background names against the list at
+          block-load time. */}
       <div
         className={moduleStyles.codeTabWrapper}
         style={{
@@ -268,18 +284,20 @@ const SpriteLab2View: React.FunctionComponent<{
           pointerEvents: activeTab === 'Code' ? 'auto' : 'none',
         }}
       >
-        <CodeTab
-          ref={codeTabRef}
-          initialSource={
-            currentSources.source as WorkspaceSerialization | undefined
-          }
-          toolboxDefinition={levelProperties.toolboxDefinition}
-          toolboxXml={levelProperties.toolbox}
-          sharedBlocks={levelProperties.sharedBlocks}
-          theme={theme === 'Dark' ? 'Dark' : 'Light'}
-          onSourceChange={handleSourceChange}
-          onEdit={handleEdit}
-        />
+        {animationsSeeded && (
+          <CodeTab
+            ref={codeTabRef}
+            initialSource={
+              currentSources.source as WorkspaceSerialization | undefined
+            }
+            toolboxDefinition={levelProperties.toolboxDefinition}
+            toolboxXml={levelProperties.toolbox}
+            sharedBlocks={levelProperties.sharedBlocks}
+            theme={theme === 'Dark' ? 'Dark' : 'Light'}
+            onSourceChange={handleSourceChange}
+            onEdit={handleEdit}
+          />
+        )}
       </div>
 
       {activeTab === 'Images' && (
