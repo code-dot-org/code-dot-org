@@ -11,6 +11,8 @@ const NEW_SCENE_VALUE = '__new_scene__';
 interface SceneSelectorProps {
   scenes: SceneMetadata[];
   activeSceneId: string | null;
+  // Scene switching only makes sense while the Code tab is showing.
+  disabled?: boolean;
   onSelectScene: (sceneId: string) => void;
   onCreateScene: (name: string) => void;
 }
@@ -24,6 +26,7 @@ interface SceneSelectorProps {
 const SceneSelector: React.FunctionComponent<SceneSelectorProps> = ({
   scenes,
   activeSceneId,
+  disabled,
   onSelectScene,
   onCreateScene,
 }) => {
@@ -50,6 +53,7 @@ const SceneSelector: React.FunctionComponent<SceneSelectorProps> = ({
       className={moduleStyles.sceneSelect}
       value={activeSceneId ?? ''}
       onChange={handleChange}
+      disabled={disabled}
       aria-label="Scene"
     >
       {scenes.map(scene => (

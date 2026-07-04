@@ -438,6 +438,7 @@ const SpriteLab2View: React.FunctionComponent<{
           <SceneSelector
             scenes={sceneMetadata}
             activeSceneId={activeSceneId}
+            disabled={activeTab !== 'Code'}
             onSelectScene={handleSelectScene}
             onCreateScene={handleCreateScene}
           />

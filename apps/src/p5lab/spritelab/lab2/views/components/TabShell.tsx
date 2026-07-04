@@ -38,24 +38,39 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
       <div className={moduleStyles.tabBar} role="tablist">
         {SPRITE_LAB2_TABS.filter(tab => visibleTabs.includes(tab)).map(tab => {
           const enabled = enabledTabs.includes(tab);
-          return (
-            <React.Fragment key={tab}>
-              <button
-                type="button"
-                role="tab"
-                aria-selected={activeTab === tab}
-                disabled={!enabled}
-                className={classNames(
-                  moduleStyles.tab,
-                  activeTab === tab && moduleStyles.tabActive
-                )}
-                onClick={() => onTabChange(tab)}
-              >
-                {tab}
-              </button>
-              {tab === 'Code' && codeTabExtra}
-            </React.Fragment>
+          const button = (
+            <button
+              type="button"
+              role="tab"
+              aria-selected={activeTab === tab}
+              disabled={!enabled}
+              className={classNames(
+                moduleStyles.tab,
+                activeTab === tab && moduleStyles.tabActive
+              )}
+              onClick={() => onTabChange(tab)}
+            >
+              {tab}
+            </button>
           );
+          // The Code tab and its extra (the scene selector) read as one
+          // segmented control: the group carries the active-tab background,
+          // the pieces inside are transparent.
+          if (tab === 'Code' && codeTabExtra) {
+            return (
+              <div
+                key={tab}
+                className={classNames(
+                  moduleStyles.tabGroup,
+                  activeTab === 'Code' && moduleStyles.tabGroupActive
+                )}
+              >
+                {button}
+                {codeTabExtra}
+              </div>
+            );
+          }
+          return <React.Fragment key={tab}>{button}</React.Fragment>;
         })}
       </div>
       <div className={moduleStyles.tabContent}>{children}</div>

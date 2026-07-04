@@ -37,19 +37,44 @@
   font-weight: 600;
 }
 
-// Scene picker in the tab bar, right after the Code tab (scenes UI variant).
-.sceneSelect {
-  align-self: center;
-  max-width: 160px;
-  height: 26px;
-  margin: 0 4px;
-  padding: 0 4px;
-  border: 1px solid var(--borders-neutral-primary);
-  border-radius: 4px;
+// The Code tab + scene picker as one segmented control (scenes UI variant):
+// the group carries the tab pill's shape and active background; the button
+// and select inside are transparent segments split by a divider.
+.tabGroup {
+  display: flex;
+  align-items: stretch;
+  border-radius: 4px 4px 0 0;
+
+  .tab {
+    border-radius: 4px 0 0 0;
+  }
+
+  // The group paints the active background so both segments share it.
+  .tabActive {
+    background: transparent;
+  }
+}
+
+.tabGroupActive {
   background: var(--background-neutral-primary);
+}
+
+.sceneSelect {
+  align-self: stretch;
+  max-width: 160px;
+  padding: 0 8px;
+  border: none;
+  border-left: 1px solid var(--borders-neutral-primary);
+  border-radius: 0 4px 0 0;
+  background: transparent;
   color: var(--text-neutral-primary);
   font-size: 13px;
   cursor: pointer;
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
 }
 
 .tabContent {
