@@ -43,10 +43,12 @@ state, so parity is generated-content equality, not a wrapper concern.
 - **THEN** the generated CSV equals legacy for the same state
 
 ### Requirement: Typed data paths and page-scoped state
-The assessments data SHALL be consumed through typed wrappers
-(package-local, in `features/assessments/api/` over core's
-`DashboardApiClient` transport — see design.md Frontend structure intent)
-implementing the API table pinned in design.md — four cookie-auth GETs
+The assessments data SHALL be consumed through typed DashboardApi
+wrappers in `core/src/api/dashboard/assessments/` (api/keys/query/
+schemata/types + default MSW handlers — see design.md Frontend structure
+intent; the feature package consumes the hooks and owns no backend
+contract code) implementing the API table pinned in design.md — four
+cookie-auth GETs
 with exact query params: `/dashboardapi/assessments?script_id`,
 `/dashboardapi/assessments/section_responses?section_id[&script_id]
 [&course_version_id]`, `/dashboardapi/assessments/section_surveys` and
@@ -78,7 +80,11 @@ features, the feedback-download feature, stories) exposed as visible
 dev-shell choices (floor: mc-populated, match-populated,
 free-response-populated, surveys, no-submissions, zero-students,
 no-progress, error). No pixel gate (non-DSCO legacy JSX); gates are
-behavior, en-US copy, axe + keyboard (including the detail dialogs).
+behavior, en-US copy, axe + keyboard (including the detail dialogs), and
+desktop/laptop responsiveness (common desktop widths, 200% zoom,
+split-screen, narrow laptop: tables scroll within their containers, no
+overlapping or unreachable controls; tablet/mobile parity NOT required,
+no fixed page widths in the feature root).
 Design-system mapping (recorded here, executed by the modernization pass;
 grep-verified usage: reactabular ×9, react-tooltip, DSCO dialog ×4):
 reactabular-table + sortabular → MUI Table; react-tooltip → DSCO tooltip;

@@ -85,7 +85,12 @@ as a visible dev-shell choice plus a component test citing its oracle.
 Pixel parity applies per the gate table (form per participant type,
 save-blocker modal; section-name masked), captured via the shell harness
 at `http://localhost-studio.code.org:9000` with serving-checkout
-validated; Playwright MCP MAY be used during implementation.
+validated; Playwright MCP MAY be used during implementation. The form
+MUST be responsive within desktop/laptop constraints (common desktop
+widths, 200% zoom, split-screen, narrow laptop: no overlapping controls
+or clipped inputs; tables scroll within their containers) — tablet/mobile
+parity is NOT required, and no fixed page widths may be baked into the
+feature root.
 
 #### Scenario: Recorded save is the contract
 - **WHEN** the PATCH wrapper is authored

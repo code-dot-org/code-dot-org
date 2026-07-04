@@ -71,6 +71,7 @@ Oracle key: J = sectionAssessments jest suite, C1/C2 =
 | all tables + selector | behavior + copy + a11y; NO pixel | legacy reactabular (×9) JSX |
 | FreeResponseDetailsDialog | behavior + a11y (keyboard-complete, axe) | DSCO dialog shell retained |
 | both CSVs | content equality | generated-file diff vs legacy for identical state |
+| responsive (desktop/laptop) | behavior | tables scroll within their own containers across common desktop widths, 200% zoom, split-screen, narrow laptop; no overlapping or unreachable controls. Tablet/mobile parity NOT required; no fixed page widths in the feature root |
 
 ## Design-system mapping
 
@@ -90,12 +91,16 @@ DSCO dialog ×4, DSCO dropdown ×2, DSCO link ×7, fontAwesomeV6Icon ×6,
 Per the program architecture report
 (`sdd-experiment/openspec/teacher-dashboard-frontend-architecture-report.md`):
 
-- Package boundary: everything lands in
-  `packages/teacher-dashboard/src/features/assessments/`. The four-GET
-  family is PACKAGE-LOCAL (`features/assessments/api/`, core file-role
-  discipline, over `DashboardApiClient`) — no consumer outside this tab,
-  so it does not enter core. (This supersedes the earlier "core wrappers"
-  phrasing; the API table itself is unchanged.)
+- Package boundary: UI lands in
+  `packages/teacher-dashboard/src/features/assessments/` with a lazy
+  entry (the assessments chunk, including its transitional reactabular
+  deps, stays out of the shell entry chunk). The four-GET family lives in
+  CORE as a DashboardApi domain (`core/src/api/dashboard/assessments/` —
+  api/keys/query/schemata/types + default MSW handlers), per the human
+  ruling that DashboardApi is the general dashboard backend wrapper
+  client even for single-consumer endpoints. The feature consumes typed
+  hooks and owns no backend contract code; its `fixtures/` compose MSW
+  scenarios over core's handlers. The API table itself is unchanged.
 - State boundary: `sectionAssessmentsRedux` moves verbatim into
   `legacy/assessments/`, page-scoped, hydrated only via the shared
   `legacy/bridge.ts`. Unit selection comes from the `shared/`

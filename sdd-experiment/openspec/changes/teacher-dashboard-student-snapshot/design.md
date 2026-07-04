@@ -76,6 +76,7 @@ Oracles: S = sources above (incl. the TSX response types), stories
 | header + each widget | pixel | modern MUI/DSCO surface. Capture regions: header, each widget card (populated + empty); masks: student names, code content (CodeMirror text), timestamps, AI-generated text |
 | feedback CRUD, gating flows | behavior | request-shape tests from captures |
 | a11y | axe + keyboard per widget | CodeMirror read-only region reachable; textbox labeled |
+| responsive (desktop/laptop) | behavior | widget cards reflow/stack across common desktop widths, 200% zoom, split-screen, narrow laptop; code widget scrolls within its container. Tablet/mobile parity NOT required; no fixed page widths in the feature root |
 | copy | en-US verbatim | per widget |
 
 ## Design-system mapping
@@ -91,13 +92,19 @@ Oracles: S = sources above (incl. the TSX response types), stories
 Per the program architecture report
 (`sdd-experiment/openspec/teacher-dashboard-frontend-architecture-report.md`):
 
-- Package boundary: everything lands in
+- Package boundary: UI lands in
   `packages/teacher-dashboard/src/features/studentSnapshot/`, widgets as
-  subfolders mirroring the legacy layout. The full 12-row endpoint family
-  is PACKAGE-LOCAL (`features/studentSnapshot/api/`, over
-  `DashboardApiClient`) — snapshot-only consumers; the
-  progress-overlapping payloads REUSE the progress feature's api modules
-  through `shared/` re-export, never a second wrapper.
+  subfolders mirroring the legacy layout, behind a lazy entry — the
+  snapshot chunk (including its CodeMirror 6 dependency) must not enter
+  the shell entry chunk. The full 12-row endpoint family lives in CORE as
+  DashboardApi domains (`core/src/api/dashboard/studentSnapshots/` +
+  `dashboard/lessonFeedbacks/`, plus the rubric calls in whatever domain
+  the shared rubrics components resolve to), per the human ruling that
+  DashboardApi is the general dashboard backend wrapper client. The
+  progress-overlapping payloads REUSE the progress core domain — never a
+  second wrapper. The feature consumes typed hooks; its `fixtures/`
+  compose MSW scenarios (incl. write-through feedback state) over core's
+  default handlers.
 - State boundary: Query-only — no transitional store and no bridge; the
   legacy widgets are already per-widget `fetchJson`, which maps 1:1 onto
   Query hooks in the feature's api layer (the network-call-site rewrite

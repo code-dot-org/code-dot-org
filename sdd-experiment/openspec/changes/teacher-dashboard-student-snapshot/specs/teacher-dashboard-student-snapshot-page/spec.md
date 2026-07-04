@@ -65,7 +65,11 @@ a test per row. Pixel baselines/checkpoints are captured per the gate
 table (header + each widget card, populated and empty; masks: student
 names, CodeMirror text, timestamps, AI-generated text) via the shell
 harness at `http://localhost-studio.code.org:9000` with serving-checkout
-validated; Playwright MCP MAY be used during implementation. The move
+validated; Playwright MCP MAY be used during implementation. Widgets MUST
+be responsive within desktop/laptop constraints (common desktop widths,
+200% zoom, split-screen, narrow laptop: cards reflow/stack, the code
+widget scrolls within its container) — tablet/mobile parity is NOT
+required, and no fixed page widths may be baked into the feature root. The move
 copies at a recorded legacy SHA with a divergence ledger entry; if the
 experiment is retired upstream first, this change closes with a recorded
 disposition instead of silently lapsing.

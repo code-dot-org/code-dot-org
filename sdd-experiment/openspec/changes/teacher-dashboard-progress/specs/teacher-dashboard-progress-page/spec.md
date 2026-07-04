@@ -110,7 +110,12 @@ contract; each row becomes an MSW fixture exposed as a visible dev-shell
 choice plus a component test citing its oracle. Performance is a named
 gate: on the populated-large fixture the candidate grid MUST NOT be
 perceptibly slower than legacy (render + unit-switch timings, same
-machine). No pixel gate (custom non-DSCO grid; the @eyes Cucumber
+machine). The tab MUST be responsive within desktop/laptop constraints
+(common desktop widths, 200% browser zoom, split-screen, narrow laptop:
+no overlap or unusable controls; the grid scrolls in its own container) —
+tablet/mobile parity is NOT required, and layout choices must not bake in
+fixed page widths that would block future mobile work. No pixel gate
+(custom non-DSCO grid; the @eyes Cucumber
 scenarios re-express as structural assertions); the DS mapping table in
 design.md (grid stays custom; react-tooltip → DSCO tooltip;
 skeletonize-content → MUI Skeleton; MoreDetailsDialog → DSCO dialog) is

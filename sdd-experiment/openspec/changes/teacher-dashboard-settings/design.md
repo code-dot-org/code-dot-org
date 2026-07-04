@@ -64,6 +64,7 @@ with renamed section in sidebar dropdown), S = source cited above.
 | save/redirect flow | behavior | PATCH body field-equality vs recorded legacy request; redirect URL via shell map |
 | validation, blocker semantics | behavior | native validity + blocker tests |
 | a11y | axe + keyboard | form completable by keyboard; modal focus-trapped |
+| responsive (desktop/laptop) | behavior | form reflows across common desktop widths, 200% zoom, split-screen, narrow laptop — no overlapping controls or clipped inputs; quick-assign tables scroll within their container. Tablet/mobile parity NOT required; no fixed page widths in the feature root |
 | copy | en-US verbatim | incl. `saveBlockerModalTitle/Description` i18n keys |
 
 ## Design-system mapping
@@ -82,14 +83,17 @@ Per the program architecture report
 
 - Package boundary: the moved form set lands in
   `packages/teacher-dashboard/src/features/settings/`; the rewritten
-  wrapper is this feature's `index.ts` entry (route wrappers are one of
-  the three structurally-required rewrites — react-router `useBlocker`
-  cannot cross into the TanStack host). API placement splits: the PATCH
-  save and `quick_assign_course_offerings` wrappers are package-local
-  (`features/settings/api/`); the coteacher `section_instructors`
-  endpoints go to CORE (`dashboard/sectionInstructors/`) because the
-  homepage change consumes them too — the one cross-feature domain this
-  change touches.
+  wrapper is this feature's lazy `index.ts` entry (route wrappers are one
+  of the three structurally-required rewrites — react-router `useBlocker`
+  cannot cross into the TanStack host), and the settings chunk stays out
+  of the shell entry chunk. ALL wrappers live in CORE as DashboardApi
+  domains per the human ruling: the PATCH save in
+  `core/src/api/dashboard/sections/` (it IS `/api/v1/sections#update`),
+  `quick_assign_course_offerings` in a course-offerings domain, and the
+  coteacher endpoints in `dashboard/sectionInstructors/` (also consumed
+  by homepage). The feature consumes typed DashboardApi hooks and owns no
+  backend contract code; its `fixtures/` compose MSW scenarios over
+  core's default handlers.
 - State boundary: Query-only. No transitional store — form state is
   component-local, exactly as legacy holds it inside
   `SectionsSetUpContainer`. Loading gate reads the shell's

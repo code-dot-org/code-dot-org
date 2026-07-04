@@ -90,6 +90,7 @@ S = source cited above.
 | CSV | content equality | generated file diff vs legacy for identical state |
 | performance | non-regression | populated-large fixture; render + unit-switch timings, candidate vs legacy, same machine (program M6) |
 | a11y | axe + keyboard per scenario | dialogs (lock, more-details) keyboard-complete |
+| responsive (desktop/laptop) | behavior | common desktop widths, 200% zoom, split-screen, narrow laptop: no overlap/unusable controls; the grid scrolls in its own container (floating scrollbar) rather than breaking the page. Tablet/mobile parity NOT required; no fixed page widths baked into the feature root |
 
 ## Design-system mapping (executed by the modernization pass, not here)
 
@@ -111,13 +112,19 @@ react-tooltip ×1, `skeletonize-content` ×3.
 Per the program architecture report
 (`sdd-experiment/openspec/teacher-dashboard-frontend-architecture-report.md`):
 
-- Package boundary: everything lands in
+- Package boundary: UI lands in
   `packages/teacher-dashboard/src/features/progress/` (components +
-  `api/` + `fixtures/`), entry re-exported for Studio's lazy route. The
-  progress endpoints (#1-#3) are PACKAGE-LOCAL api modules over core's
-  `DashboardApiClient` — not core domains; they have no consumer outside
-  this tab. Promotion to core only if a second non-dashboard consumer
-  appears.
+  `fixtures/` scenario compositions), with a lazy entry Studio's route
+  imports — the progress chunk (including its heavy grid code) must not
+  enter the shell entry chunk. The progress endpoints (#1-#3) live in
+  CORE as DashboardApi domains
+  (`core/src/api/dashboard/...` — api/keys/query/schemata/types; exact
+  domain naming finalized against the owning Rails controllers), per the
+  human ruling that DashboardApi is the general dashboard backend wrapper
+  client even for single-consumer endpoints. The feature consumes the
+  typed hooks; it owns no backend contract code. Default MSW handlers
+  ride with the core domains; the feature's `fixtures/` only compose
+  scenarios over them.
 - State boundary: the transitional store module lives in
   `legacy/progress-store/` (built by the course-unit-overview change,
   extended here with `sectionProgress` + `unitSelection`); hydrated only
