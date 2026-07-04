@@ -194,35 +194,60 @@ const SpriteLab2View: React.FunctionComponent<{
     dispatch(setScenes(scenes.map(s => ({id: s.id, name: s.name}))));
     dispatch(setActiveSceneId(scenes[0].id));
 
-    // Section-mates' scenes for the go-to-external-scene dropdown. Saved
-    // references not present in the API result (API down, project deleted)
-    // become placeholder options so saved blocks keep their values.
-    const seedExternalScenes = async () => {
-      let options: ExternalSceneOption[] = [];
-      try {
-        const refs = await fetchSectionScenes(levelProperties.id);
-        options = refs.map(ref => ({
-          key: externalSceneKey(ref.channel, ref.sceneId),
-          label: `${ref.sceneName} — ${ref.ownerName} · #${ref.channel.slice(
-            0,
-            6
-          )}`,
-        }));
-      } catch (e) {
-        console.warn('section scenes unavailable', e);
-      }
-      const known = new Set(options.map(o => o.key));
-      collectSavedExternalKeys(scenes).forEach(key => {
-        if (!known.has(key)) {
-          options.push({key, label: `(unavailable) #${key.slice(0, 10)}`});
+    // Section-mates' scenes for the go-to-external-scene dropdown. The Code
+    // tab only waits for this when saved blocks actually reference external
+    // scenes (their dropdown values validate against the options at block-load
+    // time); otherwise blocks mount immediately and the list arrives in the
+    // background. A slow/hung API must never blank the lab, so the gated path
+    // also times out into placeholder options.
+    const savedExternalKeys = collectSavedExternalKeys(scenes);
+    const toOptions = (
+      refs: Awaited<ReturnType<typeof fetchSectionScenes>>
+    ): ExternalSceneOption[] =>
+      refs.map(ref => ({
+        key: externalSceneKey(ref.channel, ref.sceneId),
+        label: `${ref.sceneName} — ${ref.ownerName} · #${ref.channel.slice(
+          0,
+          6
+        )}`,
+      }));
+    if (savedExternalKeys.length === 0) {
+      setAnimationsSeeded(true);
+      fetchSectionScenes(levelProperties.id)
+        .then(refs => {
+          if (!cancelled) {
+            dispatch(setExternalScenes(toOptions(refs)));
+          }
+        })
+        .catch(e => console.warn('section scenes unavailable', e));
+    } else {
+      const seedExternalScenes = async () => {
+        let options: ExternalSceneOption[] = [];
+        try {
+          const timeout = new Promise<never>((_, reject) =>
+            setTimeout(() => reject(new Error('timeout')), 5000)
+          );
+          const refs = await Promise.race([
+            fetchSectionScenes(levelProperties.id),
+            timeout,
+          ]);
+          options = toOptions(refs);
+        } catch (e) {
+          console.warn('section scenes unavailable', e);
         }
-      });
-      if (!cancelled) {
-        dispatch(setExternalScenes(options));
-        setAnimationsSeeded(true);
-      }
-    };
-    seedExternalScenes();
+        const known = new Set(options.map(o => o.key));
+        savedExternalKeys.forEach(key => {
+          if (!known.has(key)) {
+            options.push({key, label: `(unavailable) #${key.slice(0, 10)}`});
+          }
+        });
+        if (!cancelled) {
+          dispatch(setExternalScenes(options));
+          setAnimationsSeeded(true);
+        }
+      };
+      seedExternalScenes();
+    }
     return () => {
       cancelled = true;
     };
