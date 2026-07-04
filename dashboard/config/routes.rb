@@ -1115,6 +1115,10 @@ Dashboard::Application.routes.draw do
         concerns :api_v1_pd_routes
         concerns :section_api_routes
 
+        namespace :teacher_dashboard do
+          resources :sections, only: [:index]
+        end
+
         namespace :users do
           resource :settings, only: :show, path: 'me/settings'
         end

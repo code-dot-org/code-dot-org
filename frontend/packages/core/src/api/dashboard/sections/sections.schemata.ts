@@ -71,11 +71,14 @@ export const SelectedUnitSchema = z
 
 export const SectionCourseSchema = z
   .object({
-    course_offering_id: z.number(),
+    // course_offering_id: null in section-merged-scriptless.json, section-merged-provider.json.
+    course_offering_id: z.number().nullable(),
     version_id: z.number().nullable(),
     unit_id: z.number().nullable(),
-    lesson_extras_available: z.boolean(),
-    text_to_speech_enabled: z.boolean(),
+    // lesson_extras_available: null in all four recorded fixtures, incl. section-merged-script.json.
+    lesson_extras_available: z.boolean().nullable(),
+    // text_to_speech_enabled: null in section-merged-scriptless.json, -unit-group.json, -provider.json.
+    text_to_speech_enabled: z.boolean().nullable(),
   })
   .transform(data => camelcaseKeys(data, {deep: true}));
 
@@ -149,8 +152,9 @@ export const SelectedSectionSchema = z
     any_student_has_progress: z.boolean(),
     is_assigned_single_unit_course: z.boolean().nullable(),
     primaryInstructor: SectionPrimaryInstructorSchema.nullable(),
-    avatar_color: z.number(),
-    avatar_emoji: z.number(),
+    // avatar_color/avatar_emoji: null in all four recorded fixtures.
+    avatar_color: z.number().nullable(),
+    avatar_emoji: z.number().nullable(),
   })
   .transform(data => camelcaseKeys(data, {deep: true}));
 
@@ -163,7 +167,8 @@ export const ConciseSectionSchema = z
     unitPosition: z.number().nullable(),
     createdAt: z.string(),
     login_type: z.enum(Object.values(SectionLoginTypes)),
-    grades: z.array(z.string()),
+    // grades: null in all four recorded fixtures.
+    grades: z.array(z.string()).nullable(),
     providerManaged: z.boolean(),
     lesson_extras: z.boolean(),
     pairing_allowed: z.boolean(),
@@ -184,9 +189,11 @@ export const ConciseSectionSchema = z
     participant_type: z.enum(Object.values(SectionParticipationTypes)),
     sectionInstructors: z.array(SectionInstructorInfoSchema),
     sync_enabled: z.boolean().nullable(),
-    ai_tutor_enabled: z.boolean(),
-    avatar_color: z.number(),
-    avatar_emoji: z.number(),
+    // ai_tutor_enabled: absent (not just null) in all four recorded fixtures.
+    ai_tutor_enabled: z.boolean().optional(),
+    // avatar_color/avatar_emoji: null in all four recorded fixtures.
+    avatar_color: z.number().nullable(),
+    avatar_emoji: z.number().nullable(),
     at_risk_age_gated_date: z.string().nullable(),
     at_risk_age_gated_us_state: z.string().nullable(),
   })
@@ -196,3 +203,11 @@ export const SectionSchema = z.intersection(
   SelectedSectionSchema,
   ConciseSectionSchema,
 );
+
+// GET /api/v1/teacher_dashboard/sections (design.md §2). section_order is an
+// ordered section-id list from UserPreference, or null when the user has no
+// UserPreference row (recorded in bootstrap-sections.json, F0-T1).
+export const TeacherDashboardSectionsResponseSchema = z.object({
+  sections: z.array(ConciseSectionSchema),
+  section_order: z.array(z.number()).nullable(),
+});

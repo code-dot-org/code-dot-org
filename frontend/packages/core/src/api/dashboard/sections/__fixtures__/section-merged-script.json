@@ -1,0 +1,65 @@
+{
+  "id": 6,
+  "name": "SDD Fixture: scripted",
+  "students": [],
+  "login_type_name": "Email",
+  "script": {
+    "id": 1,
+    "name": "20-hour",
+    "project_sharing": null
+  },
+  "course": {
+    "course_offering_id": 1,
+    "version_id": 1,
+    "unit_id": 1,
+    "lesson_extras_available": null,
+    "text_to_speech_enabled": false
+  },
+  "any_student_has_progress": false,
+  "is_assigned_single_unit_course": true,
+  "primaryInstructor": {
+    "email": "sdd-fixture-recorder-1@example.com",
+    "name": "SDD Fixture Recorder",
+    "ltiRosterSyncEnabled": null
+  },
+  "avatar_color": null,
+  "avatar_emoji": null,
+  "demo_type": null,
+  "assigned_ai_chat_tools_dependency": "none",
+  "ai_chat_access_level": "disabled",
+  "courseVersionName": "20-hour",
+  "unitName": "20-hour",
+  "unitPosition": 1,
+  "createdAt": "2026-07-03T16:51:37.000Z",
+  "login_type": "email",
+  "grades": null,
+  "providerManaged": false,
+  "lesson_extras": false,
+  "pairing_allowed": true,
+  "tts_autoplay_enabled": false,
+  "sharing_disabled": false,
+  "studentCount": 0,
+  "code": "FXHZXN",
+  "course_display_name": "Accelerated Intro to CS Course",
+  "course_offering_id": 1,
+  "course_version_id": 1,
+  "unit_id": 1,
+  "course_id": 663,
+  "hidden": false,
+  "restrict_section": false,
+  "post_milestone_disabled": false,
+  "code_review_expires_at": null,
+  "is_assigned_csa": false,
+  "participant_type": "student",
+  "sectionInstructors": [
+    {
+      "id": 17,
+      "status": "active",
+      "instructor_name": "SDD Fixture Recorder",
+      "instructor_email": "sdd-fixture-recorder-1@example.com"
+    }
+  ],
+  "sync_enabled": null,
+  "at_risk_age_gated_date": null,
+  "at_risk_age_gated_us_state": null
+}

@@ -1895,7 +1895,10 @@ __metadata:
     "@code-dot-org/lint-config": "workspace:*"
     "@playwright/test": "catalog:"
     "@types/node": "catalog:"
+    "@types/pngjs": "npm:^6.0.5"
     eslint: "catalog:"
+    pixelmatch: "npm:^7.2.0"
+    pngjs: "npm:^7.0.0"
     prettier: "catalog:"
     typescript: "catalog:"
   languageName: unknown
@@ -2136,6 +2139,7 @@ __metadata:
     "@code-dot-org/lint-config": "workspace:*"
     "@code-dot-org/music-lab": "workspace:*"
     "@code-dot-org/oceans-lab": "workspace:*"
+    "@code-dot-org/teacher-dashboard": "workspace:*"
     "@emotion/react": "catalog:"
     "@emotion/styled": "catalog:"
     "@mui/material": "catalog:"
@@ -2175,6 +2179,42 @@ __metadata:
   checksum: 10c0/9b06731963523ac8889cf4e1e5e74009f8706355de2c46ef09f638b966677f5b99167859521268c0c44cc04f75530c3c31a8806bcc44cbfa2b8d6319b1beaba9
   languageName: node
   linkType: hard
+
+"@code-dot-org/teacher-dashboard@workspace:*, @code-dot-org/teacher-dashboard@workspace:packages/teacher-dashboard":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/teacher-dashboard@workspace:packages/teacher-dashboard"
+  dependencies:
+    "@code-dot-org/core": "workspace:*"
+    "@code-dot-org/lint-config": "workspace:*"
+    "@sentry/browser": "catalog:"
+    "@tanstack/react-query": "catalog:"
+    "@testing-library/dom": "catalog:"
+    "@testing-library/jest-dom": "catalog:"
+    "@testing-library/react": "catalog:"
+    "@types/node": "catalog:"
+    "@types/react": "catalog:"
+    "@types/react-dom": "catalog:"
+    "@vitejs/plugin-react": "catalog:"
+    eslint: "catalog:"
+    eslint-plugin-react-hooks: "catalog:"
+    jsdom: "catalog:"
+    ky: "catalog:"
+    msw: "catalog:"
+    prettier: "catalog:"
+    react: "catalog:"
+    react-dom: "catalog:"
+    typescript: "catalog:"
+    vite: "catalog:"
+    vite-plugin-dts: "catalog:"
+    vite-plugin-externalize-deps: "catalog:"
+    vitest: "catalog:"
+    vitest-axe: "npm:^0.1.0"
+    zod: "catalog:"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
 
 "@code-dot-org/users@workspace:packages/users":
   version: 0.0.0-use.local
@@ -7300,6 +7340,15 @@ __metadata:
   version: 7.0.3
   resolution: "@types/parse-path@npm:7.0.3"
   checksum: 10c0/8344b6c7acba4e4e5a8d542f56f53c297685fa92f9b0c085d7532cc7e1b661432cecfc1c75c76cdb0d161c95679b6ecfe0573d9fef7c836962aacf604150a984
+  languageName: node
+  linkType: hard
+
+"@types/pngjs@npm:^6.0.5":
+  version: 6.0.5
+  resolution: "@types/pngjs@npm:6.0.5"
+  dependencies:
+    "@types/node": "npm:*"
+  checksum: 10c0/11979d0690e774046d3a1e8cfc613a6b53a613909d81c93831cf253800e93ba1a2d47950979b523aebd4fc023351b644d7f4aa2dfcc027c70816a2968420e7da
   languageName: node
   linkType: hard
 
@@ -18575,6 +18624,17 @@ __metadata:
   version: 4.0.7
   resolution: "pirates@npm:4.0.7"
   checksum: 10c0/a51f108dd811beb779d58a76864bbd49e239fa40c7984cd11596c75a121a8cc789f1c8971d8bb15f0dbf9d48b76c05bb62fcbce840f89b688c0fa64b37e8478a
+  languageName: node
+  linkType: hard
+
+"pixelmatch@npm:^7.2.0":
+  version: 7.2.0
+  resolution: "pixelmatch@npm:7.2.0"
+  dependencies:
+    pngjs: "npm:^7.0.0"
+  bin:
+    pixelmatch: bin/pixelmatch
+  checksum: 10c0/d8a2454ecf3a977738d6050ed087effa0a9f1b53a0da92d37381a74bb04db5c21e14cfcd41965fbdac4a5967aa5ff2525e2afe9826a77eae043b8339dafc53b6
   languageName: node
   linkType: hard
 

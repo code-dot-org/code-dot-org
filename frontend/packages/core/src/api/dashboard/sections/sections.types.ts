@@ -13,6 +13,7 @@ import {
   SectionLoginTypes,
   SectionParticipationTypes,
   SectionSchema,
+  TeacherDashboardSectionsResponseSchema,
 } from './sections.schemata';
 
 export type AssignmentCourseVersionUnit = z.infer<
@@ -43,3 +44,6 @@ export type SectionLoginType =
   (typeof SectionLoginTypes)[keyof typeof SectionLoginTypes];
 export type SectionParticipationType =
   (typeof SectionParticipationTypes)[keyof typeof SectionParticipationTypes];
+export type TeacherDashboardSectionsResponse = z.infer<
+  typeof TeacherDashboardSectionsResponseSchema
+>;

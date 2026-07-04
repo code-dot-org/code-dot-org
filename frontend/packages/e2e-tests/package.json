@@ -29,7 +29,10 @@
     "@code-dot-org/lint-config": "workspace:*",
     "@playwright/test": "catalog:",
     "@types/node": "catalog:",
+    "@types/pngjs": "^6.0.5",
     "eslint": "catalog:",
+    "pixelmatch": "^7.2.0",
+    "pngjs": "^7.0.0",
     "prettier": "catalog:",
     "typescript": "catalog:"
   }

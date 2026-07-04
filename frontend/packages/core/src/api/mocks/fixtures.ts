@@ -142,6 +142,17 @@ export function clearMockFixtures(scope?: {
   }
 }
 
+/**
+ * Tags registered for a lab, in registration order. Lets a scenario selector
+ * enumerate available scenarios without a hand-kept list.
+ */
+export function getRegisteredFixtureTags(labKey: string): string[] {
+  const prefix = `${labKey}${SCOPE_SEP}`;
+  return [...routes.keys()]
+    .filter(key => key.startsWith(prefix))
+    .map(key => key.slice(prefix.length));
+}
+
 function matchInList(
   list: MockRoute[] | undefined,
   method: string,

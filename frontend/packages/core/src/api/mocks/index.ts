@@ -7,6 +7,7 @@ export {
 export {
   registerMockFixture,
   clearMockFixtures,
+  getRegisteredFixtureTags,
   type HttpMethod,
   type MockJsonBody,
   type MockResponder,

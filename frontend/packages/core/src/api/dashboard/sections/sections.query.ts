@@ -4,6 +4,7 @@ import type {ApiClient} from '../../client/createApiClient';
 import type {
   AssignmentCourseOfferings,
   AvailableParticipantTypes,
+  TeacherDashboardSectionsResponse,
 } from './sections.types';
 import {sectionsKeys} from './sections.keys';
 
@@ -31,6 +32,20 @@ export function useAvailableParticipantTypes(
   return useQuery({
     queryKey: sectionsKeys.availableParticipantTypes(),
     queryFn: () => api.sections.getAvailableParticipantTypes(),
+    ...options,
+  });
+}
+
+export function useTeacherDashboardSections(
+  api: ApiClient,
+  options?: Omit<
+    UseQueryOptions<TeacherDashboardSectionsResponse>,
+    'queryKey' | 'queryFn'
+  >,
+) {
+  return useQuery({
+    queryKey: sectionsKeys.teacherDashboardSections(),
+    queryFn: () => api.sections.getTeacherDashboardSections(),
     ...options,
   });
 }

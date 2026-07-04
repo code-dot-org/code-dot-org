@@ -6,4 +6,7 @@ export const sectionsKeys = {
 
   availableParticipantTypes: () =>
     [...sectionsKeys.all, 'availableParticipantTypes'] as const,
+
+  teacherDashboardSections: () =>
+    [...sectionsKeys.all, 'teacherDashboardSections'] as const,
 };

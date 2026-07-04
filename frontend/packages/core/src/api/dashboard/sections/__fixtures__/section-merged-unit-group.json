@@ -1,0 +1,65 @@
+{
+  "id": 7,
+  "name": "SDD Fixture: unit_group",
+  "students": [],
+  "login_type_name": "Email",
+  "script": {
+    "id": null,
+    "name": null,
+    "project_sharing": null
+  },
+  "course": {
+    "course_offering_id": 7,
+    "version_id": 542,
+    "unit_id": null,
+    "lesson_extras_available": null,
+    "text_to_speech_enabled": null
+  },
+  "any_student_has_progress": false,
+  "is_assigned_single_unit_course": false,
+  "primaryInstructor": {
+    "email": "sdd-fixture-recorder-1@example.com",
+    "name": "SDD Fixture Recorder",
+    "ltiRosterSyncEnabled": null
+  },
+  "avatar_color": null,
+  "avatar_emoji": null,
+  "demo_type": null,
+  "assigned_ai_chat_tools_dependency": "none",
+  "ai_chat_access_level": "disabled",
+  "courseVersionName": "3-5gamedesign-2024",
+  "unitName": null,
+  "unitPosition": null,
+  "createdAt": "2026-07-03T16:51:37.000Z",
+  "login_type": "email",
+  "grades": null,
+  "providerManaged": false,
+  "lesson_extras": false,
+  "pairing_allowed": true,
+  "tts_autoplay_enabled": false,
+  "sharing_disabled": false,
+  "studentCount": 0,
+  "code": "TQFXTF",
+  "course_display_name": "Teaching Elementary Game Design",
+  "course_offering_id": 7,
+  "course_version_id": 542,
+  "unit_id": null,
+  "course_id": 30,
+  "hidden": false,
+  "restrict_section": false,
+  "post_milestone_disabled": false,
+  "code_review_expires_at": null,
+  "is_assigned_csa": false,
+  "participant_type": "student",
+  "sectionInstructors": [
+    {
+      "id": 18,
+      "status": "active",
+      "instructor_name": "SDD Fixture Recorder",
+      "instructor_email": "sdd-fixture-recorder-1@example.com"
+    }
+  ],
+  "sync_enabled": null,
+  "at_risk_age_gated_date": null,
+  "at_risk_age_gated_us_state": null
+}

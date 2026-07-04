@@ -3,6 +3,7 @@ import {
   AssignmentCourseOfferingsSchema,
   AvailableParticipantTypesSchema,
   SectionSchema,
+  TeacherDashboardSectionsResponseSchema,
 } from './sections.schemata';
 
 export function createSectionsApi(transport: Transport) {
@@ -43,6 +44,18 @@ export function createSectionsApi(transport: Transport) {
       });
 
       return AvailableParticipantTypesSchema.parse(raw);
+    },
+
+    /**
+     * GET /api/v1/teacher_dashboard/sections
+     */
+    async getTeacherDashboardSections() {
+      const raw = await transport.request<unknown>({
+        method: 'GET',
+        url: '/api/v1/teacher_dashboard/sections',
+      });
+
+      return TeacherDashboardSectionsResponseSchema.parse(raw);
     },
   };
 }
