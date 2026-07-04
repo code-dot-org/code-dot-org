@@ -160,6 +160,39 @@ variants (`skills-enabled`, `snapshot-enabled`, `modularity-on`,
 arms covered and the flag state pinned per scenario. Fixtures register via
 core's `registerMockFixture`; write-through for mutations.
 
+## Hardening addendum (2026-07-04, post architecture rulings)
+
+Source files (all verified this session): `show.html.haml` (data contract,
+:23-41), `TeacherDashboardController` (:1-45, AccessDenied rescue :8-19),
+`show.js` (boot, zero-section branch :99-109),
+`TeacherNavigationRouter.tsx` (full route tree, redirects, empty-state
+gates), `TeacherNavigationPaths.tsx` (path constants, labels),
+`TeacherNavigationBar.tsx` (sidebar; student-snapshot gate :132 per
+inventory), `PageLayout`/`ElementOrEmptyPage`,
+`selectedSectionLoader.ts` (silent catch :52-56). Ownership: chrome
+components re-implemented on DSCO/MUI in `shell/` (they are small and
+router-coupled — the sanctioned route-wrapper rewrite class);
+`ElementOrEmptyPage` equivalent becomes a shared shell component.
+
+API table (all in CORE DashboardApi per the human ruling —
+`core/src/api/dashboard/sections/`):
+
+| Method + path | Params | Notes |
+| --- | --- | --- |
+| GET `/api/v1/teacher_dashboard/sections` (new) | — | `{sections: concise_summarize[], section_order}`; field-equivalence tests per the bootstrap-api spec |
+| GET `/dashboardapi/section/:id` | path | selected-section reload; merge-precedence caveat (D3) |
+| GET `/dashboardapi/sections` | — | legacy mount-refresh list used by `asyncLoadTeacherHomepageSectionData` (teacherSectionsRedux.ts:829-836). Candidate uses the new bootstrap endpoint for refresh too; BLOCKED-EVIDENCE: capture this endpoint's shape once to confirm no consumed field exists only here |
+
+Performance shape (ruling): the shell entry chunk carries `shell/` + the
+route map only; every tab entry lazy-loads; a per-change bundle check
+asserts the shell chunk did not grow when tab changes land.
+
+Additional gate row — responsive (desktop/laptop): sidebar + tab frame
+usable at common desktop widths, 200% zoom, split-screen, narrow laptop
+(sidebar may collapse per its existing behavior; no overlap; content
+region scrolls independently). Tablet/mobile parity NOT required; no
+fixed page widths in shell layout.
+
 ## Risks / Trade-offs
 
 - [Bootstrap/API drift between `concise_summarize` and the endpoint] →

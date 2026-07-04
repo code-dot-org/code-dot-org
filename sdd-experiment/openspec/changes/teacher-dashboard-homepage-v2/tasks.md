@@ -32,6 +32,18 @@ bootstrap API, core sections mocks, home route shell, parity harness).
       demo-section-treatment, demo-section-stale, onboarding-checklist,
       error)
 
+## 2b. BLOCKED-EVIDENCE resolution (blocking; from hardening addendum)
+
+- [ ] 2b.1 Capture `GET /dashboardapi/sections` once; confirm no consumed
+      field exists only in its shape vs the bootstrap endpoint
+- [ ] 2b.2 Pin the section-reorder affordance + `PUT /user_preference`
+      payload (`SectionList.tsx`, `sectionOrderUtils.ts`) + one runtime
+      capture
+- [ ] 2b.3 Runtime-confirm whether any demo staleness/reset UI exists
+      (endpoints absent from `apps/src`); record the correction either way
+- [ ] 2b.4 Pin the promotions-column breakpoint behavior from
+      `teacherHomepage.module.scss` for the responsive gate
+
 ## 3. Read-only slice: list, cards, empty states
 
 - [ ] 3.1 Move `teacherHomepageV2/` components into the package (extraction

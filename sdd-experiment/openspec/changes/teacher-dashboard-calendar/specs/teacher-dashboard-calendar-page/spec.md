@@ -20,9 +20,15 @@ not the router, decides calendar vs empty state), matching legacy.
   redirect or gate)
 
 ### Requirement: Typed data path with recorded contract
-The calendar's data request(s) SHALL be confirmed and recorded from a local
-Rails run at implementation start, then consumed through typed core
-wrappers (schemata tested against recordings) with MSW handlers.
+The calendar data SHALL be consumed through a typed DashboardApi wrapper
+in `core/src/api/dashboard/...` for the pinned endpoint
+`GET /dashboardapi/unit_summary/:courseName/:unitPosition`
+(`UnitCalendar.tsx:104-105`), with the response schema capture-gated
+(BLOCKED-EVIDENCE: one runtime JSON capture) and a default MSW handler in
+core. The legacy `calendarRedux` slice is pure client state
+(`createSlice`, no fetch) and re-expresses as component/Query state — no
+transitional store, no bridge. The feature package owns scenario fixtures
+only.
 
 #### Scenario: Contract recorded before schema
 - **WHEN** the wrapper schema is authored

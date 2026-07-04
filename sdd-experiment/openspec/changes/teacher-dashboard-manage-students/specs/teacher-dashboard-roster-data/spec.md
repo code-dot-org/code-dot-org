@@ -3,15 +3,18 @@
 ## ADDED Requirements
 
 ### Requirement: Typed wrappers for reused roster endpoints
-The roster's server traffic SHALL flow through typed core wrappers with
-recorded-JSON schemata and MSW handlers, reusing the legacy endpoints
-unchanged: `GET/POST/PATCH /dashboardapi/sections/:id/students` (and the
-per-student update/remove paths), `POST .../students/bulk_add`,
-`GET .../students/completed_levels_count`,
-`/dashboardapi/sections/transfers`, and
-`GET /api/v1/roster/{clever,google}/sections/sync`. No hand-rolled fetch or
-jQuery ajax survives the move; the adapter preserves request shapes (URL,
-method, payload) verified against recorded legacy requests.
+The roster's server traffic SHALL flow through typed DashboardApi
+wrappers in `core/src/api/dashboard/...` (api/keys/query/schemata/types +
+default MSW handlers; the feature package owns no backend contract code),
+reusing the legacy endpoints unchanged with methods pinned in design.md:
+`GET /dashboardapi/sections/:id/students`,
+`PATCH .../students/:studentId`, `POST .../students/bulk_add`,
+`POST /dashboardapi/sections/transfers`,
+`GET .../students/completed_levels_count`, the remove/reset paths
+(methods BLOCKED-EVIDENCE, pinned from the redux before wrappers), and
+`GET /api/v1/roster/{clever,google}/sections/sync`. No hand-rolled fetch
+or jQuery ajax survives the move; the adapter preserves request shapes
+(URL, method, payload) verified against recorded legacy requests.
 
 #### Scenario: Request-shape equivalence
 - **WHEN** the moved slice issues any roster mutation through the adapter

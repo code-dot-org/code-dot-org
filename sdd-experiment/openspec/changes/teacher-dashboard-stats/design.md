@@ -22,10 +22,16 @@ only the participant-type branch inside this tab.
   a page-scoped store with the one-way bridge to shell Query state;
   components move with import adapters (`@cdo/locale`, HttpClient → core
   transport). Blocker evidence rule applies.
-- D2. Endpoint confirmation is the first task: record the exact stats
-  request (URL, shape) from a local Rails run, then write the wrapper
-  schema from the recording (the program's API catalog left it "confirm at
-  feature start").
+- D2. Endpoint PINNED (2026-07-04 hardening): the stats tab loads
+  `GET /dashboardapi/sections/:sectionId/students/completed_levels_count`
+  via `$.ajax` (`statsRedux.js:59-60`) — the same endpoint the roster's
+  completed-levels column uses; one CORE DashboardApi wrapper serves
+  both (human ruling: all Rails wrappers in
+  `core/src/api/dashboard/...`; the feature owns fixtures only).
+  Response shape remains capture-gated (BLOCKED-EVIDENCE: one runtime
+  JSON capture; also confirm whether the lines-of-code column derives
+  from this response or another source — pin from `StatsTableWithData`
+  before wrappers).
 - D3. Empty-state gating reuses the shell's `ElementOrEmptyPage`
   equivalent (studentCount, anyStudentHasProgress from the selected-section
   query) — shared shell component, not per-tab logic.

@@ -29,6 +29,20 @@ add/remove for provider-managed sections).
 - **THEN** ordering honors `section_order` with PL sections excluded from
   the order preference, as legacy does
 
+### Requirement: Section reordering persists (coverage addition)
+The candidate homepage SHALL support the legacy section-reordering
+affordance in the section list, persisting the new order via
+`PUT /user_preference` (`sectionOrderUtils.ts:47-48`) so the order
+round-trips into the bootstrap's `section_order` on subsequent loads.
+BLOCKED-EVIDENCE (blocking task): pin the exact affordance and payload
+from `SectionList.tsx`/`sectionOrderUtils.ts` plus one runtime capture
+before building the fixture.
+
+#### Scenario: Reorder round-trip
+- **WHEN** a teacher reorders sections on the candidate homepage
+- **THEN** the new order persists via `PUT /user_preference` and is
+  reflected after reload through the bootstrap's `section_order`
+
 ### Requirement: Section lifecycle flows
 The candidate homepage SHALL support create (routed to the legacy section
 setup flow at its current URL), edit, archive/unarchive, delete (with
@@ -106,10 +120,13 @@ the experiment off, none of this surfaces (control-arm scenarios).
 - **THEN** the Teaching view shows the demo section card with its create
   flow, and the Archived view shows the empty homepage
 
-#### Scenario: Demo staleness reset
-- **WHEN** an existing demo section is stale per the staleness check
-- **THEN** the reset flow restores it via the legacy endpoint with the
-  legacy messaging
+#### Scenario: Demo staleness — corrected, evidence-gated
+- **WHEN** implementation reaches the demo flows
+- **THEN** the staleness/reset behavior is ported ONLY if the
+  BLOCKED-EVIDENCE runtime check finds such UI in the legacy demo card
+  (`check_staleness`/`demo/reset` endpoints appear nowhere in `apps/src`;
+  the prior inventory claim is unsupported client-side) — otherwise the
+  correction is recorded and nothing is invented
 
 ### Requirement: Onboarding checklist and tours
 The candidate homepage SHALL reproduce the onboarding checklist and its

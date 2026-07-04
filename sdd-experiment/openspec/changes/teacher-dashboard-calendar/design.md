@@ -17,10 +17,17 @@ new views.
 ## Decisions
 
 - D1. Port like homepage (TSX extraction + Query spine).
-- D2. Data-source confirmation is the first task: record the exact
-  request(s) the calendar makes on a local Rails run, then write the
-  wrapper schema from recordings (the program's API catalog does not pin
-  this endpoint).
+- D2. Data source PINNED (2026-07-04 hardening):
+  `GET /dashboardapi/unit_summary/:courseName/:unitPosition` via
+  `HttpClient.fetchJson<UnitSummaryResponse>` (`UnitCalendar.tsx:104-105`)
+  feeding the client-only `calendarRedux` slice
+  (`code-studio/calendarRedux.ts` — createSlice, no fetch of its own;
+  lesson fields: id, lessonNumber, title, duration, assessment,
+  unplugged, url). Wrapper lives in CORE DashboardApi (human ruling;
+  shared with course/unit overview if it consumes unit_summary too — one
+  wrapper). Response shape capture-gated (BLOCKED-EVIDENCE: one runtime
+  JSON capture). The moved slice becomes local component/Query state —
+  it is pure client state, no bridge needed.
 - D3. The renders-unconditionally quirk is preserved: no
   empty-state-matrix gate is added around the route; the component's own
   branch is the parity target.

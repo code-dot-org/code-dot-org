@@ -38,6 +38,24 @@ gate (legacy shared JSX); no curriculum-authoring affordances.
 - D4. Lesson lock and view-as mutate teacher panel/lock state through the
   same legacy endpoints, wrapped and recorded like every mutation.
 
+## Hardening addendum (2026-07-04)
+
+Endpoints pinned this session:
+
+| Method + path | Evidence | Notes |
+| --- | --- | --- |
+| GET `/s/:scriptName/hidden_lessons` | `hiddenLessonRedux.js:196-198` | hidden-lesson state load |
+| POST `/s/:scriptName/toggle_hidden` | `hiddenLessonRedux.js:175-177` | hide/show mutation (`$.ajax`; CSRF mechanism shares the progress change's BLOCKED-EVIDENCE capture) |
+| GET `/dashboardapi/script_structure/courses/:courseId/units/:unitPosition` | progress change API #1 | same core wrapper |
+| GET `/dashboardapi/unit_summary/:courseName/:unitPosition` | `UnitCalendar.tsx:104` (calendar change) | if the overviews consume unit_summary too, reuse that core wrapper — BLOCKED-EVIDENCE: confirm the overviews' exact data calls (announcements source included) from `TeacherCourseOverview`/`TeacherUnitOverview` before wrappers |
+
+All wrappers in CORE DashboardApi (human ruling); the feature owns
+fixtures only; overview entries lazy-load outside the shell chunk.
+
+Additional gate row — responsive (desktop/laptop): overview content
+reflows at common desktop widths, 200% zoom, split-screen, narrow laptop.
+Tablet/mobile parity NOT required.
+
 ## Risks / Trade-offs
 
 - [Shared-component dual copy is the largest yet (overview trees)] → same

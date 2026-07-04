@@ -31,6 +31,22 @@ AI-differentiation internals; no new AI settings.
   legacy, not tab-scoped) under the same two gates; scenario axes cover
   both arms of each gate.
 
+## Hardening addendum (2026-07-04)
+
+Endpoint evidence: `aichat/accessControlsApi.ts` is the existing wrapper
+module — `POST /api/v1/sections/:sectionId/ai_chat_access_level`
+(`handleUpdateSectionAiChatAccessLevel`). This file is the
+consume-or-move unit for D1: it becomes (or feeds) the CORE DashboardApi
+domain (human ruling — wrappers in `core/src/api/dashboard/...`); the
+read side and any per-student mutation remain BLOCKED-EVIDENCE (read the
+rest of `accessControlsApi.ts` + one runtime capture) before schemata.
+Feature owns fixtures only; the tab entry lazy-loads outside the shell
+chunk.
+
+Additional gate row — responsive (desktop/laptop): access-control rows
+reflow; no overlap at 200% zoom / narrow laptop. Tablet/mobile parity NOT
+required.
+
 ## Risks / Trade-offs
 
 - [aichat import graph is large and shared] → D1's wrapper path keeps this

@@ -34,9 +34,16 @@ only when experiment `ai-differentiation` is enabled and
 - **THEN** no FAB renders
 
 ### Requirement: Data paths, discovery, pixel parity
-The access-level endpoints SHALL be recorded and consumed through typed
-wrappers with MSW handlers (auth scenarios included: non-owner cannot
-mutate). Implementation begins with behavior-scenario discovery (aichat
+The access-level endpoints SHALL be consumed through typed DashboardApi
+wrappers in `core/src/api/dashboard/...` — the pinned
+`POST /api/v1/sections/:sectionId/ai_chat_access_level`
+(`aichat/accessControlsApi.ts`, the existing wrapper module that becomes
+or feeds the core domain) plus the read side (BLOCKED-EVIDENCE: read the
+rest of `accessControlsApi.ts` + one runtime capture) — with default MSW
+handlers in core and auth scenarios included (non-owner cannot mutate).
+The feature owns scenario fixtures only; its entry lazy-loads outside the
+shell chunk. Desktop/laptop responsiveness applies (rows reflow at 200%
+zoom / narrow laptop; tablet/mobile parity NOT required). Implementation begins with behavior-scenario discovery (aichat
 access-controls tests and sources) exposed as visible dev-shell choices
 (floor: populated, guard-redirect, gates-on/off matrix, mutation-error).
 The access-controls tab is a modern DSCO/TSX surface: pixel

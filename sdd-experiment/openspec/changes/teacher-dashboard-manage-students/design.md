@@ -109,6 +109,37 @@ textField/dropdown (already partially adopted); react-tooltip → DSCO
 tooltip; hand-rolled dialogs → DSCO dialog. Temporary wrappers during the
 move keep the legacy widgets untouched.
 
+## Hardening addendum (2026-07-04, post architecture rulings)
+
+API/mutation methods pinned from `manageStudentsRedux.js` (this session):
+
+| Method + path | Evidence | Notes |
+| --- | --- | --- |
+| GET `/dashboardapi/sections/:id/students` | :1044-1045 | roster load |
+| PATCH `/dashboardapi/sections/:id/students/:studentId` | :958-960 | per-student update (incl. `us_state`, family name, gender, age, sharing) |
+| POST `/dashboardapi/sections/:id/students/bulk_add` | :991-994 | JSON `{students: [...]}` |
+| POST `/dashboardapi/sections/transfers` | :1019-1022 | JSON incl. `new_section_code`, `stay_enrolled_in_current_section` |
+| GET `/dashboardapi/sections/:id/students/completed_levels_count` | statsRedux.js:59-60 (same endpoint) | shared with stats |
+| add/remove/reset paths | grep'd URL set in proposal | methods BLOCKED-EVIDENCE where not yet read (`.../remove`, add-row save, password/secret resets) — pin from the redux before wrappers |
+
+DashboardApi placement (human ruling): all of the above live in CORE
+(`core/src/api/dashboard/...` — students/roster domain naming finalized
+against the owning controllers) with default MSW handlers; the feature
+keeps scenario fixture compositions and the page-scoped store + bridge
+only. This supersedes any earlier package-local wrapper phrasing; the
+endpoint set and request shapes are unchanged.
+
+Performance/entry shape: the roster entry lazy-loads; reactabular +
+sortabular + react-csv stay inside the roster chunk, never the shell
+entry chunk.
+
+Additional gate row — responsive (desktop/laptop): the roster table
+scrolls horizontally within its own container at narrow laptop widths,
+200% zoom, and split-screen (legacy behavior with long names — the
+`SallyHasAVeryVeryLongFirstName` Eyes scenario is adjacent evidence);
+dialogs remain fully visible and operable. Tablet/mobile parity NOT
+required.
+
 ## Risks / Trade-offs
 
 - [Two copies of roster code (legacy + package) drift while both live] →

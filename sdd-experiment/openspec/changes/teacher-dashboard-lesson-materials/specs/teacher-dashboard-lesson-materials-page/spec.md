@@ -56,9 +56,17 @@ the AI artifact entries with the legacy analytics event on open
 - **THEN** the entries render and clicking one emits the legacy event name
 
 ### Requirement: Typed data path and discovery gate
-The tab's data SHALL flow through typed wrappers with recorded-JSON
-schemata and MSW handlers for `/dashboardapi/lesson_materials/:unit_id`
-and `unit_in_aif` (bad unit id = 404 pinned by a parser/contract test).
+The tab's data SHALL flow through typed DashboardApi wrappers in
+`core/src/api/dashboard/...` with capture-gated schemata and default MSW
+handlers for: `/dashboardapi/lesson_materials/...`, `unit_in_aif` (bad
+unit id = 404 pinned by a parser/contract test), and
+`GET /ai_lesson_summaries/show?lesson_id=` (whose `lesson_summary` field
+is JSON-in-string — `JSON.parse` at `LessonMaterialsContainer.tsx:209` —
+and the schema models the double encoding). CORRECTED: podcasts stream
+via `<audio src="/ai_lesson_summary_podcasts/show?lesson_id=">`
+(container:437), not a JSON fetch — MSW scenarios stub or mask the audio
+response, and no JSON wrapper is invented for it. The feature owns
+scenario fixtures only; its entry lazy-loads outside the shell chunk.
 Implementation begins with behavior-scenario discovery
 (`lesson_materials_eyes.feature`, component sources, AITA/podcast state
 machines) exposed as visible dev-shell choices (floor: populated,

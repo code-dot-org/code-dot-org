@@ -28,11 +28,16 @@ assigned curriculum).
 
 ### Requirement: Typed data path, discovery gate, non-pixel parity
 `GET /dashboardapi/v1/projects/section/:sectionId` SHALL be consumed
-through a typed wrapper with recorded-JSON schema (parser tests) and MSW
-handler. Implementation begins with behavior-scenario discovery (projects
+through a typed DashboardApi wrapper in `core/src/api/dashboard/...`
+(capture-gated schema, default MSW handler in core; the feature owns
+scenario fixtures only, and its entry lazy-loads outside the shell
+chunk). Implementation begins with behavior-scenario discovery (projects
 jest coverage, component sources) exposed as visible dev-shell choices
 (floor: populated, zero-students, students-no-projects, error). No pixel
-gate (non-DSCO legacy JSX); behavior, en-US copy, axe + keyboard gates.
+gate (non-DSCO legacy JSX); behavior, en-US copy, axe + keyboard, and
+desktop/laptop responsiveness gates (table scrolls in its container at
+narrow laptop widths / 200% zoom / split-screen; tablet/mobile parity NOT
+required; no fixed page widths in the feature root).
 Design-system mapping (recorded here, executed by the modernization pass):
 reactabular-table + sortabular → MUI Table; existing DSCO
 modal/dropdown/link/segmentedButtons/fontAwesomeV6Icon usage retained;

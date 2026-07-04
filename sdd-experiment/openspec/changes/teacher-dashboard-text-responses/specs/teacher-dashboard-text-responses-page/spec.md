@@ -25,10 +25,15 @@ progress).
 - **THEN** the corresponding empty-state page renders as legacy
 
 ### Requirement: Typed data path
-`GET /dashboardapi/section_text_responses/:id` SHALL be consumed through a
-typed core wrapper with a recorded-JSON schema (parser tests) and an MSW
-handler; the moved data module uses the core transport with request shapes
-preserved.
+The pinned request SHALL be consumed through a typed DashboardApi wrapper
+in `core/src/api/dashboard/...`:
+`GET /dashboardapi/section_text_responses/:sectionId[?script_id=]`,
+`credentials: 'same-origin'` (`textReponsesDataApi.js:5-15` — note the
+legacy filename typo travels with the move), with the response schema
+capture-gated (the client post-processes via
+`convertTextResponseServerData`, so the recorded RAW response is the
+contract, the converter moves with tests) and a default MSW handler in
+core; the feature package owns scenario fixtures only.
 
 #### Scenario: Contract break is loud
 - **WHEN** a consumed field is dropped from a recorded payload in tests

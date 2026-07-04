@@ -47,7 +47,13 @@ oracles (SectionLoginInfo story/jest coverage, component sources,
 `teacher_homepage_v2.feature` login-cards path) and expose discovered
 scenarios as visible dev-shell choices (floor: the six login types, demo
 section tooltip state, error). No pixel gate (non-DSCO legacy JSX); gates
-are behavior, en-US copy, axe + keyboard, and print-preview checks.
+are behavior, en-US copy, axe + keyboard, print-preview checks, and
+desktop/laptop responsiveness (instructions and imagery reflow at common
+desktop widths, 200% zoom, split-screen, narrow laptop; tablet/mobile
+parity NOT required). This tab needs no new wrappers — it reads the
+shell's selected-section DashboardApi payload; the parent-letter route
+reuses the same core wrapper. Its entry lazy-loads outside the shell
+chunk.
 Design-system mapping (recorded here, executed by the modernization pass):
 `legacySharedComponents/Button` → MUI Button; hardcoded `color`/
 `fontConstants` styling → SCSS modules with semantic tokens; SafeMarkdown →

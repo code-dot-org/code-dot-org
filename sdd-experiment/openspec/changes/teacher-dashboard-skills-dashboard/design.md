@@ -22,7 +22,17 @@ un-gating.
   copies at a recorded legacy SHA and the change's ledger entry tracks
   divergence until cutover (dual-copy policy, highest drift risk of the
   set — the tab is still changing).
-- D3. Data contract recorded first; wrappers from recordings.
+- D3. Data contract partially PINNED (2026-07-04):
+  `SkillsDashboard.tsx` posts `POST /openai/evaluate_section`
+  (`EVALUATE_URL`, :11,:55) and reads results via
+  `HttpClient.fetchJson<SkillsResponse>` (:69; URL + response shape
+  capture-gated — BLOCKED-EVIDENCE: read the fetch site + one runtime
+  capture). Wrappers live in CORE DashboardApi (human ruling); the
+  feature owns fixtures only and its entry lazy-loads outside the shell
+  chunk. Note the POST hits an `/openai/*` route — flag to security
+  review alongside the CanCan scoping check. Responsive gate
+  (desktop/laptop) applies as everywhere: no overlap at 200% zoom /
+  narrow laptop; tablet/mobile parity not required.
 
 ## Risks / Trade-offs
 

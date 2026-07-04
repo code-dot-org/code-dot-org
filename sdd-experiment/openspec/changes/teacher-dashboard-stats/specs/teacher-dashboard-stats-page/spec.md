@@ -27,11 +27,16 @@ when no student has progress).
   Cucumber feature is the oracle)
 
 ### Requirement: Typed data path with recorded contract
-The stats data request SHALL be confirmed and recorded from a local Rails
-run at implementation start, then consumed through a typed core wrapper
-(schema validated against the recording) with an MSW handler; the moved
-`statsRedux` runs page-scoped with the shell bridge (no global store, no
-hand-rolled fetch).
+The stats data SHALL be consumed through a typed DashboardApi wrapper in
+`core/src/api/dashboard/...` for the pinned endpoint
+`GET /dashboardapi/sections/:sectionId/students/completed_levels_count`
+(`statsRedux.js:59-60`; shared with the roster's completed-levels
+column — one wrapper serves both), with the response schema
+capture-gated (BLOCKED-EVIDENCE: runtime JSON capture, plus pinning
+whether lines-of-code derives from this response) and a default MSW
+handler in core; the moved `statsRedux` runs page-scoped with the shell
+bridge (no global store, no hand-rolled fetch), and the feature package
+owns scenario fixtures only.
 
 #### Scenario: Contract recorded before schema
 - **WHEN** the wrapper schema is authored

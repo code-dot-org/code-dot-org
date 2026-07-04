@@ -124,6 +124,44 @@ recorded per scenario and masked out of diffs. Analytics events named in
 the legacy component (teacher login, homepage visited, toggle clicks) are
 carried across with the same event names so funnels do not go dark.
 
+## Hardening addendum (2026-07-04, post architecture rulings)
+
+API/mutation table additions and corrections (evidence:
+`teacherSectionsRedux.ts`, `sectionOrderUtils.ts`,
+`TeacherHomepage.tsx` — read this session). All wrappers live in CORE
+DashboardApi domains per the human ruling; the feature keeps only
+scenario fixture compositions.
+
+| Method + path | Params/body | Notes |
+| --- | --- | --- |
+| GET `/dashboardapi/sections` | — | legacy mount refresh (`asyncLoadTeacherHomepageSectionData`, redux:829-836). Candidate refreshes via the shell bootstrap endpoint instead; BLOCKED-EVIDENCE: one capture of this endpoint to confirm no consumed field exists only in its shape |
+| GET `/api/v1/section_instructors` | — | coteacher invite load (redux:1082); accept/decline per the existing table |
+| PUT `/user_preference` | section-order payload (`sectionOrderUtils.ts:47-48`) | persists homepage section reordering — see coverage addition below. BLOCKED-EVIDENCE: capture the exact body |
+| GET `/api/v1/sections/demo/presets` | — | demo presets (redux:948) |
+| POST `/api/v1/sections/demo/create/:type` | path | demo create (redux:984) |
+| CORRECTION | — | `check_staleness` / `demo/reset` endpoints appear NOWHERE in `apps/src` (repo-wide grep). The prior inventory's staleness/reset claim is unsupported client-side; the spec's staleness scenario is replaced by a BLOCKED-EVIDENCE task: runtime-confirm whether any staleness UI exists in the demo card before porting it |
+
+Coverage addition (found from gathered context): homepage section
+REORDERING. `SectionList.tsx` imports `sectionOrderUtils` and persists
+order via `PUT /user_preference`; `sectionOrder` then feeds the bootstrap.
+This was missing from the spec and is now a requirement: the reorder
+affordance, its persistence, and order round-trip into the shell's
+section ordering. BLOCKED-EVIDENCE: pin the exact affordance (drag
+handles vs buttons) from `SectionList.tsx` before building the fixture.
+
+Promotions naming precision: BOTH `TeacherPromotions` and
+`PermanentPromotions` port (distinct components; plus
+`SkeletonTeacherPromo` loading state); the spec's "promotions" covers
+both and the discovery task must treat them separately.
+
+Additional gate row — responsive (desktop/laptop): card grid reflows
+across common desktop widths, 200% zoom, split-screen, narrow laptop
+(cards stack; promotions column wraps below per its existing breakpoint
+behavior — BLOCKED-EVIDENCE: pin the legacy breakpoint behavior from
+`teacherHomepage.module.scss` before asserting). Tablet/mobile parity NOT
+required. Homepage entry is lazy-loaded; its chunk stays out of the shell
+entry chunk.
+
 ## Risks / Trade-offs
 
 - [Drawer popups depend on `get_drawer_data`, whose GET mutates
