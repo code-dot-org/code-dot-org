@@ -22,6 +22,9 @@ const PREVIEW_SCALE = 0.64;
 
 interface PlayspaceProps {
   mode: PlayspaceMode;
+  // Scenes UI variant: increment to play a quick fade-in-from-black over the
+  // canvas (used when the go-to-scene block jumps scenes). 0 = never faded.
+  fadeTrigger?: number;
 }
 
 /**
@@ -31,7 +34,10 @@ interface PlayspaceProps {
  * tab). Because it's always mounted, switching tabs only moves/scales it — the
  * engine keeps running, so the preview is always live without pressing Run.
  */
-const Playspace: React.FunctionComponent<PlayspaceProps> = ({mode}) => {
+const Playspace: React.FunctionComponent<PlayspaceProps> = ({
+  mode,
+  fadeTrigger = 0,
+}) => {
   const overlayRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState({w: 0, h: 0});
@@ -152,6 +158,10 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({mode}) => {
           id="divGameLab"
           className={moduleStyles.playspaceCanvas}
         />
+        {/* Keyed so each scene jump restarts the fade-from-black animation. */}
+        {fadeTrigger > 0 && (
+          <div key={fadeTrigger} className={moduleStyles.sceneFade} />
+        )}
       </div>
     </div>
   );

@@ -1,7 +1,12 @@
+import * as BlocklyCore from 'blockly/core';
+
 import * as blockUtils from '@cdo/apps/block_utils';
 import {BlockDefinition, CustomInputTypes} from '@cdo/apps/blockly/types';
 import * as blocksCommonModule from '@cdo/apps/blocksCommon';
 import spritelabBlocks from '@cdo/apps/p5lab/spritelab/blocks';
+import {getStore} from '@cdo/apps/redux';
+
+import {SCENES_UI_VARIANT} from '../experiments';
 
 // blocksCommon is a plain CommonJS module (exports.install = ...); give it a
 // minimal typed view.
@@ -27,7 +32,98 @@ export function setupSpriteLab2BlocklyEnvironment(
   const blockInstallOptions = {skin, isK1: false, level};
   blocksCommon.install(Blockly, blockInstallOptions);
   spritelabBlocks.install(Blockly, blockInstallOptions);
+  if (SCENES_UI_VARIANT) {
+    installSceneBlocks();
+  }
   isSetup = true;
+}
+
+// Scenes UI variant: the go-to-scene block. Registered client-side (not in the
+// DB block pool) because its dropdown options are the project's scenes, which
+// only this lab knows.
+export const GO_TO_SCENE_BLOCK_TYPE = 'spritelab2_goToScene';
+
+// Dropdown options for the go-to-scene block: [friendly name, scene id]. The
+// scene id is the source of truth; the name is just the label. Reads the
+// redux mirror so the menu stays current as scenes are added.
+function sceneMenuOptions(): [string, string][] {
+  const scenes = getStore().getState().spriteLab2?.scenes || [];
+  if (scenes.length === 0) {
+    return [['no scenes', '']];
+  }
+  return scenes.map((s: {id: string; name: string}) => [s.name, s.id]);
+}
+
+function installSceneBlocks(): void {
+  if (Blockly.Blocks[GO_TO_SCENE_BLOCK_TYPE]) {
+    return;
+  }
+  Blockly.Blocks[GO_TO_SCENE_BLOCK_TYPE] = {
+    init: function (this: BlocklyCore.Block) {
+      this.appendDummyInput()
+        .appendField('go to scene')
+        .appendField(new BlocklyCore.FieldDropdown(sceneMenuOptions), 'SCENE');
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setStyle('default');
+      this.setTooltip(
+        'Stop this scene and start the chosen one. Its "when run" code runs ' +
+          'after a quick fade from black.'
+      );
+    },
+  };
+  Blockly.getGenerator().forBlock[GO_TO_SCENE_BLOCK_TYPE] = block =>
+    `goToScene(${JSON.stringify(block.getFieldValue('SCENE'))});\n`;
+}
+
+/**
+ * Ensure the toolbox offers the go-to-scene block. It goes at the end of the
+ * "Game Design" category when the level has one, since scene jumps are a game
+ * mechanic. No-op when the variant is off or the category is absent.
+ */
+export function ensureSceneBlocks(toolboxXml: string): string {
+  if (!SCENES_UI_VARIANT) {
+    return toolboxXml;
+  }
+  try {
+    const doc = new DOMParser().parseFromString(toolboxXml, 'text/xml');
+    const category = Array.from(
+      doc.getElementsByTagNameNS('*', 'category')
+    ).find(c => c.getAttribute('name') === 'Game Design');
+    if (!category) {
+      return toolboxXml;
+    }
+    const present = Array.from(
+      category.getElementsByTagNameNS('*', 'block')
+    ).some(b => b.getAttribute('type') === GO_TO_SCENE_BLOCK_TYPE);
+    if (!present) {
+      const block = doc.createElementNS(category.namespaceURI, 'block');
+      block.setAttribute('type', GO_TO_SCENE_BLOCK_TYPE);
+      category.appendChild(block);
+    }
+    return new XMLSerializer().serializeToString(doc);
+  } catch {
+    return toolboxXml;
+  }
+}
+
+/**
+ * Compile a scene's serialized workspace to JS on a headless workspace. Used
+ * for scenes that aren't open in the Code tab (the visible workspace compiles
+ * itself). Returns '' for an empty/missing source.
+ */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function compileWorkspaceSource(source: any): string {
+  if (!source) {
+    return '';
+  }
+  const workspace = new BlocklyCore.Workspace();
+  try {
+    Blockly.serialization.workspaces.load(source, workspace);
+    return Blockly.JavaScript.workspaceToCode(workspace);
+  } finally {
+    workspace.dispose();
+  }
 }
 
 /**

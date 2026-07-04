@@ -39,12 +39,27 @@ export interface SpriteLab2World {
   grid: string[][];
 }
 
+// One scene in the scenes UI variant: a named code workspace. The id is the
+// source of truth (the go-to-scene block stores it); the name is the friendly
+// label users see. Scenes share the project-wide image library. scenes[0] is
+// the default scene the Play tab starts at.
+export interface SpriteLab2Scene {
+  id: string;
+  name: string;
+  // This scene's Blockly workspace serialization.
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  source?: any;
+}
+
 // The single ProjectSources.source JSON for a SpriteLab2 project.
 export interface SpriteLab2Source extends ProjectSources {
   // Code tab Blockly workspace serialization.
   toolboxDefinition?: BlocklyCore.utils.toolbox.ToolboxInfo;
   // Sprite Lab costumes + backgrounds, classic serialized animationList shape.
   animations?: SerializedAnimationList;
+  // Scenes UI variant: per-scene code workspaces. When present, `source`
+  // mirrors scenes[0].source so projects still open with the variant off.
+  scenes?: SpriteLab2Scene[];
   // World tab state.
   worlds?: SpriteLab2World[];
   activeWorldId?: string;

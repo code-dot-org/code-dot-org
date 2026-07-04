@@ -16,11 +16,22 @@ export type AiGenerateState =
   | 'editing'
   | 'edited';
 
+// Scene metadata for the scenes UI variant. Full scene data (including each
+// workspace serialization) lives in project sources; this mirror exists so the
+// scene selector and the go-to-scene block's dropdown can read it reactively.
+export interface SceneMetadata {
+  id: string;
+  name: string;
+}
+
 export interface SpriteLab2State {
   activeTab: SpriteLab2Tab;
   hasRun: boolean;
   hasEdited: boolean;
   aiGenerateState: AiGenerateState;
+  scenes: SceneMetadata[];
+  // The scene whose workspace is open in the Code tab.
+  activeSceneId: string | null;
 }
 
 const initialState: SpriteLab2State = {
@@ -28,6 +39,8 @@ const initialState: SpriteLab2State = {
   hasRun: false,
   hasEdited: false,
   aiGenerateState: 'none',
+  scenes: [],
+  activeSceneId: null,
 };
 
 const spriteLab2Slice = createSlice({
@@ -46,6 +59,12 @@ const spriteLab2Slice = createSlice({
     setAiGenerateState: (state, action: PayloadAction<AiGenerateState>) => {
       state.aiGenerateState = action.payload;
     },
+    setScenes: (state, action: PayloadAction<SceneMetadata[]>) => {
+      state.scenes = action.payload;
+    },
+    setActiveSceneId: (state, action: PayloadAction<string | null>) => {
+      state.activeSceneId = action.payload;
+    },
     resetSpriteLab2: () => initialState,
   },
 });
@@ -55,6 +74,8 @@ export const {
   setHasRun,
   setHasEdited,
   setAiGenerateState,
+  setScenes,
+  setActiveSceneId,
   resetSpriteLab2,
 } = spriteLab2Slice.actions;
 

@@ -61,6 +61,31 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.showMobileControls = NOOP;
     this.debuggerEnabled = false;
     this.userCode = '';
+    // Scenes UI variant: the view sets this to handle the go-to-scene block
+    // (it compiles the target scene and re-runs the program).
+    this.onGoToScene = null;
+  }
+
+  /**
+   * @override
+   * Add the scene-jump command to the library. initInterpreter exposes every
+   * library command as an interpreter global, so the go-to-scene block's
+   * generated `goToScene("id")` lands here. A fresh library is created on every
+   * (re)run, which is also what clears the background and input events between
+   * scenes.
+   */
+  createLibrary(args) {
+    const library = super.createLibrary(args);
+    library.commands.goToScene = sceneId => {
+      if (!this.onGoToScene) {
+        return;
+      }
+      const id = String(sceneId);
+      // Defer a tick: this command runs inside the interpreter, and jumping
+      // scenes tears the interpreter down. Don't saw off the branch mid-step.
+      setTimeout(() => this.onGoToScene && this.onGoToScene(id), 0);
+    };
+    return library;
   }
 
   /**

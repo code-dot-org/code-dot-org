@@ -8,6 +8,7 @@ import {loadBlocksToWorkspace} from '@cdo/apps/blockly/utils/workspace/loadBlock
 
 import {
   ensurePredefinedBehaviors,
+  ensureSceneBlocks,
   filterToolboxToRegisteredBlocks,
   installSharedBlocks,
   setupSpriteLab2BlocklyEnvironment,
@@ -23,6 +24,11 @@ export interface CodeTabHandle {
   // Replace the workspace contents with the given serialization (e.g. from the
   // AI code generator).
   loadCode: (source: WorkspaceSerialization) => void;
+  // Scenes UI variant: swap the workspace to another scene's blocks. Unlike
+  // loadCode this doesn't mark the project edited — switching scenes isn't an
+  // edit. The caller flips its active-scene bookkeeping BEFORE calling so the
+  // change events this fires save under the new scene.
+  loadScene: (source: WorkspaceSerialization) => void;
 }
 
 interface CodeTabProps {
@@ -84,6 +90,16 @@ const CodeTab = forwardRef<CodeTabHandle, CodeTabProps>(
           onEditRef.current();
         }
       },
+      loadScene: (source: WorkspaceSerialization) => {
+        if (workspace.current) {
+          // workspaces.load replaces the workspace contents (loadCode's
+          // loadBlocksToWorkspace merges into them).
+          Blockly.serialization.workspaces.load(
+            source as object,
+            workspace.current
+          );
+        }
+      },
     }));
 
     // Inject the workspace once on mount.
@@ -110,11 +126,12 @@ const CodeTab = forwardRef<CodeTabHandle, CodeTabProps>(
           ? toolboxDefinition
           : undefined;
       if (!toolbox && toolboxXml) {
-        // Add the full predefined behavior set, then drop any blocks the
-        // level's toolbox references that aren't installed in this block pool
-        // (so opening a category never throws).
+        // Add the full predefined behavior set and (scenes variant) the
+        // go-to-scene block, then drop any blocks the level's toolbox
+        // references that aren't installed in this block pool (so opening a
+        // category never throws).
         toolbox = filterToolboxToRegisteredBlocks(
-          ensurePredefinedBehaviors(toolboxXml)
+          ensureSceneBlocks(ensurePredefinedBehaviors(toolboxXml))
         );
       }
 

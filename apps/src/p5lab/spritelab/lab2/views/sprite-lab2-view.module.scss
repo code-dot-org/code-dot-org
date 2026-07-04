@@ -37,6 +37,21 @@
   font-weight: 600;
 }
 
+// Scene picker in the tab bar, right after the Code tab (scenes UI variant).
+.sceneSelect {
+  align-self: center;
+  max-width: 160px;
+  height: 26px;
+  margin: 0 4px;
+  padding: 0 4px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  font-size: 13px;
+  cursor: pointer;
+}
+
 .tabContent {
   position: relative;
   flex: 1 1 auto;
@@ -292,5 +307,26 @@
 .playspaceCanvas {
   width: 400px;
   height: 400px;
+}
+
+// Scene-jump transition: a black cover that fades out, so the hard cut to the
+// new scene happens under full black (scenes UI variant).
+.sceneFade {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  opacity: 0;
+  animation: scene-fade-in 0.45s ease-out;
+  pointer-events: none;
+}
+
+@keyframes scene-fade-in {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
 

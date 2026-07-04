@@ -10,6 +10,12 @@ interface TabShellProps {
   onTabChange: (tab: SpriteLab2Tab) => void;
   // Tabs not yet implemented are disabled in the bar.
   enabledTabs: readonly SpriteLab2Tab[];
+  // Tabs to show at all. Defaults to every tab; the scenes UI variant drops
+  // World entirely rather than disabling it.
+  visibleTabs?: readonly SpriteLab2Tab[];
+  // Rendered in the tab bar immediately after the Code button (the scenes
+  // variant puts the scene selector there).
+  codeTabExtra?: React.ReactNode;
   children: React.ReactNode;
 }
 
@@ -23,28 +29,32 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
   activeTab,
   onTabChange,
   enabledTabs,
+  visibleTabs = SPRITE_LAB2_TABS,
+  codeTabExtra,
   children,
 }) => {
   return (
     <div className={moduleStyles.tabShell}>
       <div className={moduleStyles.tabBar} role="tablist">
-        {SPRITE_LAB2_TABS.map(tab => {
+        {SPRITE_LAB2_TABS.filter(tab => visibleTabs.includes(tab)).map(tab => {
           const enabled = enabledTabs.includes(tab);
           return (
-            <button
-              key={tab}
-              type="button"
-              role="tab"
-              aria-selected={activeTab === tab}
-              disabled={!enabled}
-              className={classNames(
-                moduleStyles.tab,
-                activeTab === tab && moduleStyles.tabActive
-              )}
-              onClick={() => onTabChange(tab)}
-            >
-              {tab}
-            </button>
+            <React.Fragment key={tab}>
+              <button
+                type="button"
+                role="tab"
+                aria-selected={activeTab === tab}
+                disabled={!enabled}
+                className={classNames(
+                  moduleStyles.tab,
+                  activeTab === tab && moduleStyles.tabActive
+                )}
+                onClick={() => onTabChange(tab)}
+              >
+                {tab}
+              </button>
+              {tab === 'Code' && codeTabExtra}
+            </React.Fragment>
           );
         })}
       </div>
