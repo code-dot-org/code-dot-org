@@ -75,6 +75,33 @@ with renamed section in sidebar dropdown), S = source cited above.
 | `GradeLevelChips` custom chips | DSCO segmentedButtons or MUI Chip — decide at modernization with design review; wrapper keeps legacy chips during the move |
 | quick-assign tables (custom) | stay custom through the move; modernization maps to MUI Table |
 
+## Frontend structure intent
+
+Per the program architecture report
+(`sdd-experiment/openspec/teacher-dashboard-frontend-architecture-report.md`):
+
+- Package boundary: the moved form set lands in
+  `packages/teacher-dashboard/src/features/settings/`; the rewritten
+  wrapper is this feature's `index.ts` entry (route wrappers are one of
+  the three structurally-required rewrites — react-router `useBlocker`
+  cannot cross into the TanStack host). API placement splits: the PATCH
+  save and `quick_assign_course_offerings` wrappers are package-local
+  (`features/settings/api/`); the coteacher `section_instructors`
+  endpoints go to CORE (`dashboard/sectionInstructors/`) because the
+  homepage change consumes them too — the one cross-feature domain this
+  change touches.
+- State boundary: Query-only. No transitional store — form state is
+  component-local, exactly as legacy holds it inside
+  `SectionsSetUpContainer`. Loading gate reads the shell's
+  selected-section query hooks.
+- Shared-dependency boundary: the `sectionsRefresh/` form set is the
+  program's largest dual copy after roster; every copied file gets a
+  `docs/legacy-mirror.md` row (copied-at SHA, owner, resolution =
+  creation-flow migration inherits the moved copy).
+- Modernization boundary: move commits do not restyle; the
+  `GradeLevelChips`/quick-assign-table mappings below execute in a later
+  pass, pixel baselines captured against the moved (unrestyled) form.
+
 ## Decisions
 
 - D1. The wrapper is re-implemented against TanStack Router's blocker API

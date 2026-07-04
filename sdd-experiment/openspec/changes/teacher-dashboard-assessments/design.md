@@ -85,6 +85,29 @@ DSCO dialog ×4, DSCO dropdown ×2, DSCO link ×7, fontAwesomeV6Icon ×6,
 | DSCO dialog/dropdown/link/icon, MUI Button/Typography | keep |
 | `SafeMarkdown` (FeedbackDownload) | `@code-dot-org/markdown` (done in the move) |
 
+## Frontend structure intent
+
+Per the program architecture report
+(`sdd-experiment/openspec/teacher-dashboard-frontend-architecture-report.md`):
+
+- Package boundary: everything lands in
+  `packages/teacher-dashboard/src/features/assessments/`. The four-GET
+  family is PACKAGE-LOCAL (`features/assessments/api/`, core file-role
+  discipline, over `DashboardApiClient`) — no consumer outside this tab,
+  so it does not enter core. (This supersedes the earlier "core wrappers"
+  phrasing; the API table itself is unchanged.)
+- State boundary: `sectionAssessmentsRedux` moves verbatim into
+  `legacy/assessments/`, page-scoped, hydrated only via the shared
+  `legacy/bridge.ts`. Unit selection comes from the `shared/`
+  URL-state re-expression built by text-responses — this tab must not
+  import the progress store's moved `unitSelection` slice.
+- Shared-dependency boundary: none beyond the unit-selector; the
+  reactabular/sortabular/react-csv deps enter the package manifest with
+  the move and exit in the modernization pass.
+- Modernization boundary: move commits do not restyle; the DS mapping
+  below executes later. `SafeMarkdown` → `@code-dot-org/markdown` is the
+  sanctioned at-move swap.
+
 ## Decisions
 
 - D1. Move-not-rewrite, roster pattern: slice page-scoped + bridge;

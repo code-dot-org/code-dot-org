@@ -106,6 +106,36 @@ react-tooltip ×1, `skeletonize-content` ×3.
 | `MoreDetailsDialog` legacy dialog chrome | DSCO dialog |
 | DSCO ActionDropdown, fontAwesomeV6Icon | keep |
 
+## Frontend structure intent
+
+Per the program architecture report
+(`sdd-experiment/openspec/teacher-dashboard-frontend-architecture-report.md`):
+
+- Package boundary: everything lands in
+  `packages/teacher-dashboard/src/features/progress/` (components +
+  `api/` + `fixtures/`), entry re-exported for Studio's lazy route. The
+  progress endpoints (#1-#3) are PACKAGE-LOCAL api modules over core's
+  `DashboardApiClient` — not core domains; they have no consumer outside
+  this tab. Promotion to core only if a second non-dashboard consumer
+  appears.
+- State boundary: the transitional store module lives in
+  `legacy/progress-store/` (built by the course-unit-overview change,
+  extended here with `sectionProgress` + `unitSelection`); hydrated only
+  through `legacy/bridge.ts` (one-way, Query → store). Nothing outside
+  `features/progress/` imports it. The loader moves into the feature's
+  api layer with its `$.ajax`/fetch call sites rewritten onto the
+  transport (request shapes preserved — the one structurally required
+  rewrite besides the route wrapper).
+- Shared-dependency boundary: the `progressHelpers` trio extracts to
+  `shared/` with unit-test parity (non-dashboard consumers keep the
+  legacy module); GE wrapper equivalent lives in `shared/` once its
+  BLOCKED-EVIDENCE mechanism resolves. Dual copies get rows in
+  `docs/legacy-mirror.md` in the same commit.
+- Modernization boundary: move commits do not restyle; the DS mapping
+  table below executes in a later modernization pass. The
+  two-`unitSelection` asymmetry (shared/ URL-state form vs this store's
+  moved slice) converges there too.
+
 ## Decisions (unchanged from the prior revision where still valid)
 
 - Sub-splits (a) read-only grid, (b) floating chrome, (c) lock/view-as/

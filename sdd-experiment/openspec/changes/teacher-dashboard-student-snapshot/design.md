@@ -86,6 +86,35 @@ Oracles: S = sources above (incl. the TSX response types), stories
 | `sharedComponents/Spinner` ×2 | MUI CircularProgress (or DSCO spinner if sanctioned at execution) |
 | CodeMirror 6 editor | keep (not a DS concern); read-only config preserved |
 
+## Frontend structure intent
+
+Per the program architecture report
+(`sdd-experiment/openspec/teacher-dashboard-frontend-architecture-report.md`):
+
+- Package boundary: everything lands in
+  `packages/teacher-dashboard/src/features/studentSnapshot/`, widgets as
+  subfolders mirroring the legacy layout. The full 12-row endpoint family
+  is PACKAGE-LOCAL (`features/studentSnapshot/api/`, over
+  `DashboardApiClient`) — snapshot-only consumers; the
+  progress-overlapping payloads REUSE the progress feature's api modules
+  through `shared/` re-export, never a second wrapper.
+- State boundary: Query-only — no transitional store and no bridge; the
+  legacy widgets are already per-widget `fetchJson`, which maps 1:1 onto
+  Query hooks in the feature's api layer (the network-call-site rewrite
+  is the only structural rewrite here).
+- Shared-dependency boundary: `templates/rubrics/` components and
+  `@cdo/apps/codemirror/editorConfig` are consume-not-fork
+  (BLOCKED-EVIDENCE items pin their graphs); CodeMirror 6 packages enter
+  as peer deps. `sharedComponents/Spinner` is replaced at move time by
+  the package's shared loading idiom (resilience-ux components) rather
+  than copied. Every copy/consumption decision gets a
+  `docs/legacy-mirror.md` row (this feature carries the recorded-SHA
+  divergence ledger because the legacy surface is under active
+  development).
+- Modernization boundary: this surface is already DS-era; the only
+  mapping entries (Spinner, theme tokens) execute at move time — there is
+  no deferred modernization pass for this tab.
+
 ## Decisions
 
 - D1. Port order: header + widgetTemplate → code → CFU → feedback →

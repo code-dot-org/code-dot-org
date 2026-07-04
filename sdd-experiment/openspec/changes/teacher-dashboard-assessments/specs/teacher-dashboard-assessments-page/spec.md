@@ -43,7 +43,9 @@ state, so parity is generated-content equality, not a wrapper concern.
 - **THEN** the generated CSV equals legacy for the same state
 
 ### Requirement: Typed data paths and page-scoped state
-The assessments data SHALL be consumed through typed core wrappers
+The assessments data SHALL be consumed through typed wrappers
+(package-local, in `features/assessments/api/` over core's
+`DashboardApiClient` transport — see design.md Frontend structure intent)
 implementing the API table pinned in design.md — four cookie-auth GETs
 with exact query params: `/dashboardapi/assessments?script_id`,
 `/dashboardapi/assessments/section_responses?section_id[&script_id]
