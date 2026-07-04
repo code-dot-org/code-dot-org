@@ -1,3 +1,5 @@
+import * as BlocklyCore from 'blockly/core';
+
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 import {getStore} from '@cdo/apps/redux';
@@ -210,6 +212,28 @@ export default class SpriteLab2Engine extends SpriteLab {
 
   /**
    * @override
+   * P5Lab.initInterpreter registers command names in the Blockly generator's
+   * reserved-word list, but the generator's nameDB_ only exists after its
+   * first init/workspaceToCode. If the engine's first run beats the Code tab
+   * to compiling anything (a page-load timing race), initInterpreter crashes
+   * on nameDB_.reservedWords and the swallowed execution error leaves the
+   * playspace permanently blank. Initialize the name DB against a throwaway
+   * headless workspace first.
+   */
+  initInterpreter(attachDebugger) {
+    if (!Blockly.JavaScript.nameDB_) {
+      const scratch = new BlocklyCore.Workspace();
+      try {
+        Blockly.JavaScript.init(scratch);
+      } finally {
+        scratch.dispose();
+      }
+    }
+    super.initInterpreter(attachDebugger);
+  }
+
+  /**
+   * @override
    * Runs when p5's preload phase completes — possibly long after the run that
    * started it, and (because preload is async) possibly after a teardown left
    * the interpreter non-runnable. Executing then crashes in the interpreter's
@@ -323,9 +347,13 @@ export default class SpriteLab2Engine extends SpriteLab {
   // --- Overrides that sever the global studioApp() singleton ---
 
   // Sprite Lab has no user-facing console, so the base class surfaces execution
-  // errors via a StudioApp workspace alert. We have no StudioApp; swallow for
-  // now (the injected error handler still logs to the browser console).
-  reactToExecutionError() {}
+  // errors via a StudioApp workspace alert. We have no StudioApp; log loudly
+  // instead — the injected error handler's own log lands in a collapsed
+  // console group that's easy to miss, and an execution error here halts the
+  // program (a silently blank playspace otherwise).
+  reactToExecutionError(msg) {
+    console.error('SpriteLab2 execution error (program halted):', msg);
+  }
   clearExecutionErrorWorkspaceAlert() {}
 
   // The classic SpriteLab.reset() ends by calling preview() to render a static
