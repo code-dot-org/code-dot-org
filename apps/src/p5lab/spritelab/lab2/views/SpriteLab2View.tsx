@@ -323,6 +323,9 @@ const SpriteLab2View: React.FunctionComponent<{
       const engine = engineRef.current;
       const scene = scenesRef.current.find(s => s.id === sceneId);
       if (!engine || !scene) {
+        // If a jump triggered this, resume the old scene instead of leaving
+        // it frozen.
+        engineRef.current?.cancelSceneJump();
         return;
       }
       // Running a local scene leaves any external-project context behind.
@@ -418,6 +421,7 @@ const SpriteLab2View: React.FunctionComponent<{
       const engine = engineRef.current;
       const scene = project.scenes.find(s => s.id === sceneId);
       if (!engine || !scene) {
+        engineRef.current?.cancelSceneJump();
         return;
       }
       currentExternalProjectRef.current = project;
@@ -455,6 +459,7 @@ const SpriteLab2View: React.FunctionComponent<{
     async (key: string) => {
       const parsed = parseExternalSceneKey(key);
       if (!parsed) {
+        engineRef.current?.cancelSceneJump();
         return;
       }
       setExternalLoading(true);
@@ -466,6 +471,7 @@ const SpriteLab2View: React.FunctionComponent<{
         project = externalProjectsRef.current.get(parsed.channel);
         if (!project) {
           console.error('Failed to load external scene', key, e);
+          engineRef.current?.cancelSceneJump();
           return;
         }
         console.warn('Using last-loaded copy of external scene', key, e);
@@ -516,7 +522,10 @@ const SpriteLab2View: React.FunctionComponent<{
           const external = currentExternalProjectRef.current;
           if (external && external.scenes.some(s => s.id === sceneId)) {
             runExternalProjectSceneRef.current(external, sceneId);
+            return;
           }
+          // Unknown scene id: resume the old scene rather than staying frozen.
+          engine.cancelSceneJump();
         };
         engine.onGoToExternalScene = (key: string) =>
           runExternalSceneRef.current(key);

@@ -77,6 +77,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.executeInFlight_ = false;
     this.executeStartedAt_ = 0;
     this.rerunAfterExecute_ = false;
+    // True from a scene-jump trigger until the target scene runs (or the jump
+    // is cancelled); repeat triggers are ignored meanwhile.
+    this.sceneJumpInFlight_ = false;
   }
 
   /**
@@ -90,7 +93,7 @@ export default class SpriteLab2Engine extends SpriteLab {
   createLibrary(args) {
     const library = super.createLibrary(args);
     library.commands.goToScene = sceneId => {
-      if (!this.onGoToScene) {
+      if (!this.onGoToScene || !this.beginSceneJump_()) {
         return;
       }
       const id = String(sceneId);
@@ -99,7 +102,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       setTimeout(() => this.onGoToScene && this.onGoToScene(id), 0);
     };
     library.commands.goToExternalScene = sceneKey => {
-      if (!this.onGoToExternalScene) {
+      if (!this.onGoToExternalScene || !this.beginSceneJump_()) {
         return;
       }
       const key = String(sceneKey);
@@ -109,6 +112,39 @@ export default class SpriteLab2Engine extends SpriteLab {
       );
     };
     return library;
+  }
+
+  /**
+   * A scene jump was triggered: stop processing the old scene's events until
+   * the new scene is running. Stopping the tick timer freezes the interpreted
+   * program (events, behaviors), so a "when touching"-style trigger can't
+   * re-fire the jump every frame while an external scene is still being
+   * fetched; the draw loop keeps rendering the last frame under the fade.
+   * Returns false if a jump is already in flight (callers then ignore the
+   * repeat trigger).
+   */
+  beginSceneJump_() {
+    if (this.sceneJumpInFlight_) {
+      return false;
+    }
+    this.sceneJumpInFlight_ = true;
+    this.stopTickTimer();
+    return true;
+  }
+
+  /**
+   * The view calls this when a triggered jump can't complete (unknown scene,
+   * failed fetch with no fallback); the old scene resumes. No-op when no jump
+   * is in flight.
+   */
+  cancelSceneJump() {
+    if (!this.sceneJumpInFlight_) {
+      return;
+    }
+    this.sceneJumpInFlight_ = false;
+    if (this.p5Wrapper.p5 && !this.isTickTimerRunning()) {
+      this.startTickTimer();
+    }
   }
 
   /**
@@ -303,6 +339,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     }
     this.onP5Setup();
     this.p5Wrapper.setLoop(true);
+    // A new program is running: any pending scene jump has landed.
+    this.sceneJumpInFlight_ = false;
     if (!this.isTickTimerRunning()) {
       this.startTickTimer();
     }
