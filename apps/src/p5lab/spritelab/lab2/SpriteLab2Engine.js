@@ -62,9 +62,15 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.showMobileControls = NOOP;
     this.debuggerEnabled = false;
     this.userCode = '';
-    // Scenes UI variant: the view sets this to handle the go-to-scene block
-    // (it compiles the target scene and re-runs the program).
+    // Scenes UI variant: the view sets these to handle the go-to-scene and
+    // go-to-external-scene blocks (it compiles the target scene and re-runs
+    // the program).
     this.onGoToScene = null;
+    this.onGoToExternalScene = null;
+    // When set, the next re-runs preload from this serialized animation list
+    // instead of the project's own (used while running an external project's
+    // scenes, whose images live in their animation list).
+    this.preloadAnimationsOverride = null;
   }
 
   /**
@@ -85,6 +91,16 @@ export default class SpriteLab2Engine extends SpriteLab {
       // Defer a tick: this command runs inside the interpreter, and jumping
       // scenes tears the interpreter down. Don't saw off the branch mid-step.
       setTimeout(() => this.onGoToScene && this.onGoToScene(id), 0);
+    };
+    library.commands.goToExternalScene = sceneKey => {
+      if (!this.onGoToExternalScene) {
+        return;
+      }
+      const key = String(sceneKey);
+      setTimeout(
+        () => this.onGoToExternalScene && this.onGoToExternalScene(key),
+        0
+      );
     };
     return library;
   }
@@ -201,9 +217,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     // costume/background commands silently no-op on unknown names (e.g. a
     // scene jump to a "set background" of a new image rendered white). The
     // preload helper skips entries whose dataURI is already loaded, so this
-    // only fetches what's new.
+    // only fetches what's new. External scenes preload from their own
+    // project's animation list instead.
     await this.p5Wrapper.preloadSpriteImages(
-      getStore().getState().animationList
+      this.preloadAnimationsOverride || getStore().getState().animationList
     );
     p5.allSprites.removeSprites();
     if (this.JSInterpreter) {

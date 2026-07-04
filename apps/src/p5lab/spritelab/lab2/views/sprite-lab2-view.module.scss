@@ -385,3 +385,46 @@ $tab-segment-height: $tab-item-height - 2px;
   }
 }
 
+// Loading an external scene: a dimming overlay + spinner that fades in only
+// after a delay, so fast loads never flash it (the Lab2 loading pattern).
+.sceneLoading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(0 0 0 / 55%);
+  opacity: 0;
+  animation: scene-loading-fade-in 0.4s ease-in 1.5s both;
+  pointer-events: none;
+}
+
+.sceneLoadingSpinner {
+  width: 48px;
+  height: 48px;
+  border: 5px solid rgb(255 255 255 / 30%);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: scene-loading-spin 0.9s linear infinite;
+}
+
+@keyframes scene-loading-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scene-loading-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+

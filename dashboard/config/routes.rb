@@ -1432,6 +1432,10 @@ Dashboard::Application.routes.draw do
     post '/aichat_events/submit_teacher_feedback', to: 'aichat_events#submit_teacher_feedback'
     get '/aichat_events/chat_history', to: 'aichat_events#chat_history'
 
+    # Lab2 Sprite Lab scenes UI variant: cross-project scene jumps.
+    get '/sprite_lab2/section_scenes', to: 'sprite_lab2#section_scenes'
+    get '/sprite_lab2/external_scenes', to: 'sprite_lab2#external_scenes'
+
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 
     resources :ai_interaction_feedback, only: [:create]

@@ -54,6 +54,19 @@ function sceneMenuOptions(): [string, string][] {
   return scenes.map((s: {id: string; name: string}) => [s.name, s.id]);
 }
 
+// Cross-project variant: jump into a scene from a section-mate's project.
+export const GO_TO_EXTERNAL_SCENE_BLOCK_TYPE = 'spritelab2_goToExternalScene';
+
+// Options for the go-to-external-scene block: [label, "<channel>:<sceneId>"].
+// Populated from the section-scenes API into redux before blocks load.
+function externalSceneMenuOptions(): [string, string][] {
+  const options = getStore().getState().spriteLab2?.externalScenes || [];
+  if (options.length === 0) {
+    return [['no scenes shared with you', '']];
+  }
+  return options.map((o: {key: string; label: string}) => [o.label, o.key]);
+}
+
 function installSceneBlocks(): void {
   if (Blockly.Blocks[GO_TO_SCENE_BLOCK_TYPE]) {
     return;
@@ -74,6 +87,26 @@ function installSceneBlocks(): void {
   };
   Blockly.getGenerator().forBlock[GO_TO_SCENE_BLOCK_TYPE] = block =>
     `goToScene(${JSON.stringify(block.getFieldValue('SCENE'))});\n`;
+
+  Blockly.Blocks[GO_TO_EXTERNAL_SCENE_BLOCK_TYPE] = {
+    init: function (this: BlocklyCore.Block) {
+      this.appendDummyInput()
+        .appendField('go to external scene')
+        .appendField(
+          new BlocklyCore.FieldDropdown(externalSceneMenuOptions),
+          'SCENE'
+        );
+      this.setPreviousStatement(true);
+      this.setNextStatement(true);
+      this.setStyle('default');
+      this.setTooltip(
+        'Jump into a scene from a classmate’s project (loads their scene ' +
+          'and images, then fades in).'
+      );
+    },
+  };
+  Blockly.getGenerator().forBlock[GO_TO_EXTERNAL_SCENE_BLOCK_TYPE] = block =>
+    `goToExternalScene(${JSON.stringify(block.getFieldValue('SCENE'))});\n`;
 }
 
 /**
@@ -93,14 +126,18 @@ export function ensureSceneBlocks(toolboxXml: string): string {
     if (!category) {
       return toolboxXml;
     }
-    const present = Array.from(
-      category.getElementsByTagNameNS('*', 'block')
-    ).some(b => b.getAttribute('type') === GO_TO_SCENE_BLOCK_TYPE);
-    if (!present) {
-      const block = doc.createElementNS(category.namespaceURI, 'block');
-      block.setAttribute('type', GO_TO_SCENE_BLOCK_TYPE);
-      category.appendChild(block);
-    }
+    const present = new Set(
+      Array.from(category.getElementsByTagNameNS('*', 'block')).map(b =>
+        b.getAttribute('type')
+      )
+    );
+    [GO_TO_SCENE_BLOCK_TYPE, GO_TO_EXTERNAL_SCENE_BLOCK_TYPE].forEach(type => {
+      if (!present.has(type)) {
+        const block = doc.createElementNS(category.namespaceURI, 'block');
+        block.setAttribute('type', type);
+        category.appendChild(block);
+      }
+    });
     return new XMLSerializer().serializeToString(doc);
   } catch {
     return toolboxXml;

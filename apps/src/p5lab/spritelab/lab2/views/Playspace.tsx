@@ -25,6 +25,9 @@ interface PlayspaceProps {
   // Scenes UI variant: increment to play a quick fade-in-from-black over the
   // canvas (used when the go-to-scene block jumps scenes). 0 = never faded.
   fadeTrigger?: number;
+  // Show the loading overlay (delayed fade-in, so quick loads never flash a
+  // spinner). Used while fetching an external project.
+  loading?: boolean;
 }
 
 /**
@@ -37,6 +40,7 @@ interface PlayspaceProps {
 const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   mode,
   fadeTrigger = 0,
+  loading = false,
 }) => {
   const overlayRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLDivElement>(null);
@@ -161,6 +165,13 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         {/* Keyed so each scene jump restarts the fade-from-black animation. */}
         {fadeTrigger > 0 && (
           <div key={fadeTrigger} className={moduleStyles.sceneFade} />
+        )}
+        {/* Loading overlay: mounted for the whole load, but CSS delays its
+            fade-in so only slow loads ever show it. */}
+        {loading && (
+          <div className={moduleStyles.sceneLoading}>
+            <div className={moduleStyles.sceneLoadingSpinner} />
+          </div>
         )}
       </div>
     </div>

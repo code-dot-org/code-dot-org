@@ -24,6 +24,14 @@ export interface SceneMetadata {
   name: string;
 }
 
+// A scene from a section-mate's project, offered by the go-to-external-scene
+// block's dropdown. key = "<channel>:<sceneId>" (the value the block stores);
+// label is what the dropdown shows.
+export interface ExternalSceneOption {
+  key: string;
+  label: string;
+}
+
 export interface SpriteLab2State {
   activeTab: SpriteLab2Tab;
   hasRun: boolean;
@@ -32,6 +40,7 @@ export interface SpriteLab2State {
   scenes: SceneMetadata[];
   // The scene whose workspace is open in the Code tab.
   activeSceneId: string | null;
+  externalScenes: ExternalSceneOption[];
 }
 
 const initialState: SpriteLab2State = {
@@ -41,6 +50,7 @@ const initialState: SpriteLab2State = {
   aiGenerateState: 'none',
   scenes: [],
   activeSceneId: null,
+  externalScenes: [],
 };
 
 const spriteLab2Slice = createSlice({
@@ -65,6 +75,12 @@ const spriteLab2Slice = createSlice({
     setActiveSceneId: (state, action: PayloadAction<string | null>) => {
       state.activeSceneId = action.payload;
     },
+    setExternalScenes: (
+      state,
+      action: PayloadAction<ExternalSceneOption[]>
+    ) => {
+      state.externalScenes = action.payload;
+    },
     resetSpriteLab2: () => initialState,
   },
 });
@@ -76,6 +92,7 @@ export const {
   setAiGenerateState,
   setScenes,
   setActiveSceneId,
+  setExternalScenes,
   resetSpriteLab2,
 } = spriteLab2Slice.actions;
 

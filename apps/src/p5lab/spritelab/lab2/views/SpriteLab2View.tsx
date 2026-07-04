@@ -15,7 +15,7 @@ import SourcesContainer, {
 import * as p5labReducersModule from '@cdo/apps/p5lab/reducers';
 import {setInitialAnimationList} from '@cdo/apps/p5lab/redux/animationList';
 import {getSerializedAnimationList} from '@cdo/apps/p5lab/shapes';
-import {registerReducers} from '@cdo/apps/redux';
+import {getStore, registerReducers} from '@cdo/apps/redux';
 import pageConstants, {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import runState, {setIsRunning} from '@cdo/apps/redux/runState';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -26,12 +26,22 @@ import {compileWorkspaceSource} from '../blockly/setup';
 import defaultSources from '../defaultSources.json';
 import {SCENES_UI_VARIANT} from '../experiments';
 import spriteLab2Reducer, {
+  ExternalSceneOption,
   setActiveSceneId,
   setActiveTab,
+  setExternalScenes,
   setHasEdited,
   setScenes,
   SpriteLab2Tab,
 } from '../redux/spriteLab2Redux';
+import {
+  collectSavedExternalKeys,
+  ExternalProject,
+  externalSceneKey,
+  fetchExternalProject,
+  fetchSectionScenes,
+  parseExternalSceneKey,
+} from '../scenesApi';
 import SpriteLab2Engine from '../SpriteLab2Engine';
 import {
   SpriteLab2LevelProperties,
@@ -147,15 +157,16 @@ const SpriteLab2View: React.FunctionComponent<{
   const sceneMetadata = useAppSelector(state => state.spriteLab2.scenes);
   const activeSceneId = useAppSelector(state => state.spriteLab2.activeSceneId);
 
-  // Seed the animation list and (scenes variant) the scene list from saved
-  // sources BEFORE the Code tab mounts (the Code tab is gated on
-  // animationsSeeded below). The costume/background dropdown fields — and the
-  // go-to-scene block's scene dropdown — validate their saved values against
-  // the store at block-load time; loading blocks against empty lists nulls
-  // every saved selection. This must be a render gate, not just dispatch
-  // ordering: a child's mount effect (where the workspace loads blocks) runs
-  // before any parent effect.
+  // Seed the animation list and (scenes variant) the scene lists — local and
+  // section-mates' — from saved sources and the section-scenes API BEFORE the
+  // Code tab mounts (the Code tab is gated on animationsSeeded below). The
+  // costume/background dropdown fields — and both scene dropdowns — validate
+  // their saved values against the store at block-load time; loading blocks
+  // against empty lists nulls every saved selection. This must be a render
+  // gate, not just dispatch ordering: a child's mount effect (where the
+  // workspace loads blocks) runs before any parent effect.
   useEffect(() => {
+    let cancelled = false;
     dispatch(
       setInitialAnimationList(
         sourcesRef.current.animations || EMPTY_ANIMATION_LIST,
@@ -164,23 +175,57 @@ const SpriteLab2View: React.FunctionComponent<{
         true /* isSpriteLab */
       )
     );
-    if (SCENES_UI_VARIANT) {
-      // Migrate single-workspace projects to one scene on first open.
-      const scenes: SpriteLab2Scene[] = sourcesRef.current.scenes?.length
-        ? sourcesRef.current.scenes
-        : [
-            {
-              id: createUuid(),
-              name: 'Scene 1',
-              source: sourcesRef.current.source ?? DEFAULT_SCENE_SOURCE,
-            },
-          ];
-      scenesRef.current = scenes;
-      activeSceneIdRef.current = scenes[0].id;
-      dispatch(setScenes(scenes.map(s => ({id: s.id, name: s.name}))));
-      dispatch(setActiveSceneId(scenes[0].id));
+    if (!SCENES_UI_VARIANT) {
+      setAnimationsSeeded(true);
+      return;
     }
-    setAnimationsSeeded(true);
+    // Migrate single-workspace projects to one scene on first open.
+    const scenes: SpriteLab2Scene[] = sourcesRef.current.scenes?.length
+      ? sourcesRef.current.scenes
+      : [
+          {
+            id: createUuid(),
+            name: 'Scene 1',
+            source: sourcesRef.current.source ?? DEFAULT_SCENE_SOURCE,
+          },
+        ];
+    scenesRef.current = scenes;
+    activeSceneIdRef.current = scenes[0].id;
+    dispatch(setScenes(scenes.map(s => ({id: s.id, name: s.name}))));
+    dispatch(setActiveSceneId(scenes[0].id));
+
+    // Section-mates' scenes for the go-to-external-scene dropdown. Saved
+    // references not present in the API result (API down, project deleted)
+    // become placeholder options so saved blocks keep their values.
+    const seedExternalScenes = async () => {
+      let options: ExternalSceneOption[] = [];
+      try {
+        const refs = await fetchSectionScenes(levelProperties.id);
+        options = refs.map(ref => ({
+          key: externalSceneKey(ref.channel, ref.sceneId),
+          label: `${ref.sceneName} — ${ref.ownerName} · #${ref.channel.slice(
+            0,
+            6
+          )}`,
+        }));
+      } catch (e) {
+        console.warn('section scenes unavailable', e);
+      }
+      const known = new Set(options.map(o => o.key));
+      collectSavedExternalKeys(scenes).forEach(key => {
+        if (!known.has(key)) {
+          options.push({key, label: `(unavailable) #${key.slice(0, 10)}`});
+        }
+      });
+      if (!cancelled) {
+        dispatch(setExternalScenes(options));
+        setAnimationsSeeded(true);
+      }
+    };
+    seedExternalScenes();
+    return () => {
+      cancelled = true;
+    };
     // Re-seed only when the level changes.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [levelProperties.id]);
@@ -262,6 +307,9 @@ const SpriteLab2View: React.FunctionComponent<{
       if (!engine || !scene) {
         return;
       }
+      // Running a local scene leaves any external-project context behind.
+      currentExternalProjectRef.current = null;
+      engine.preloadAnimationsOverride = null;
       let code = '';
       try {
         code =
@@ -284,13 +332,152 @@ const SpriteLab2View: React.FunctionComponent<{
   const runSceneRef = useRef(runScene);
   runSceneRef.current = runScene;
 
-  // Start the live preview once the engine is ready, and wire the go-to-scene
-  // block's runtime jump.
+  // --- External scenes (cross-project jumps) ---
+  const externalProjectsRef = useRef(new Map<string, ExternalProject>());
+  // The external project whose scene is currently running; its own go-to-scene
+  // blocks resolve against this.
+  const currentExternalProjectRef = useRef<ExternalProject | null>(null);
+  const [externalLoading, setExternalLoading] = useState(false);
+
+  // Compile an external scene. Its costume/background dropdowns validate
+  // against the redux animation list at block-load time — and its go-to-scene
+  // dropdowns against the redux scene list — so merge the external project's
+  // animations and scenes in for the (synchronous) compile and restore after.
+  // React batches the dispatches, so effects only ever see the restored state.
+  const compileExternalScene = useCallback(
+    (scene: SpriteLab2Scene, project: ExternalProject) => {
+      const currentAnimations = getSerializedAnimationList(
+        getStore().getState().animationList
+      );
+      const theirs = project.animations;
+      const merged = {
+        orderedKeys: [
+          ...currentAnimations.orderedKeys,
+          ...(theirs.orderedKeys || []).filter(
+            k => !currentAnimations.propsByKey[k]
+          ),
+        ],
+        propsByKey: {
+          ...(theirs.propsByKey || {}),
+          ...currentAnimations.propsByKey,
+        },
+      };
+      const currentSceneMetadata = scenesRef.current.map(s => ({
+        id: s.id,
+        name: s.name,
+      }));
+      dispatch(
+        setInitialAnimationList(
+          merged,
+          undefined as unknown as object,
+          true /* isSpriteLab */
+        )
+      );
+      dispatch(
+        setScenes([
+          ...currentSceneMetadata,
+          ...project.scenes.map(s => ({id: s.id, name: s.name})),
+        ])
+      );
+      try {
+        return compileWorkspaceSource(scene.source ?? DEFAULT_SCENE_SOURCE);
+      } finally {
+        dispatch(
+          setInitialAnimationList(
+            currentAnimations,
+            undefined as unknown as object,
+            true /* isSpriteLab */
+          )
+        );
+        dispatch(setScenes(currentSceneMetadata));
+      }
+    },
+    [dispatch]
+  );
+
+  const runExternalProjectScene = useCallback(
+    (project: ExternalProject, sceneId: string) => {
+      const engine = engineRef.current;
+      const scene = project.scenes.find(s => s.id === sceneId);
+      if (!engine || !scene) {
+        return;
+      }
+      currentExternalProjectRef.current = project;
+      let code = '';
+      try {
+        code = compileExternalScene(scene, project);
+      } catch (e) {
+        console.error('Failed to compile external scene', sceneId, e);
+      }
+      // Preload the external project's images. Their saved animations carry
+      // sourceUrl (dataURI is stripped on save); p5.loadImage takes URLs too.
+      const theirs = project.animations;
+      engine.preloadAnimationsOverride = {
+        orderedKeys: theirs.orderedKeys || [],
+        propsByKey: Object.fromEntries(
+          Object.entries(theirs.propsByKey || {}).map(([key, props]) => [
+            key,
+            {...props, dataURI: props.sourceUrl},
+          ])
+        ),
+      };
+      setFadeTrigger(t => t + 1);
+      dispatch(setIsRunning(true));
+      engine.runProgram(code);
+    },
+    [dispatch, compileExternalScene]
+  );
+
+  // Handle the go-to-external-scene block: fetch (and cache) the classmate's
+  // project, then run the target scene. The playspace shows a delayed-fade-in
+  // spinner while the fetch is slow.
+  const runExternalScene = useCallback(
+    async (key: string) => {
+      const parsed = parseExternalSceneKey(key);
+      if (!parsed) {
+        return;
+      }
+      let project = externalProjectsRef.current.get(parsed.channel);
+      if (!project) {
+        setExternalLoading(true);
+        try {
+          project = await fetchExternalProject(parsed.channel);
+          externalProjectsRef.current.set(parsed.channel, project);
+        } catch (e) {
+          console.error('Failed to load external scene', key, e);
+          return;
+        } finally {
+          setExternalLoading(false);
+        }
+      }
+      runExternalProjectScene(project, parsed.sceneId);
+    },
+    [runExternalProjectScene]
+  );
+  const runExternalSceneRef = useRef(runExternalScene);
+  runExternalSceneRef.current = runExternalScene;
+  const runExternalProjectSceneRef = useRef(runExternalProjectScene);
+  runExternalProjectSceneRef.current = runExternalProjectScene;
+
+  // Start the live preview once the engine is ready, and wire the scene-jump
+  // blocks. A plain go-to-scene inside a running external scene resolves
+  // against that project's scenes, so classmates' multi-scene games work.
   useEffect(() => {
     if (engineReady) {
-      if (engineRef.current) {
-        engineRef.current.onGoToScene = (sceneId: string) =>
-          runSceneRef.current(sceneId, true /* withFade */);
+      const engine = engineRef.current;
+      if (engine) {
+        engine.onGoToScene = (sceneId: string) => {
+          if (scenesRef.current.some(s => s.id === sceneId)) {
+            runSceneRef.current(sceneId, true /* withFade */);
+            return;
+          }
+          const external = currentExternalProjectRef.current;
+          if (external && external.scenes.some(s => s.id === sceneId)) {
+            runExternalProjectSceneRef.current(external, sceneId);
+          }
+        };
+        engine.onGoToExternalScene = (key: string) =>
+          runExternalSceneRef.current(key);
       }
       runProgram();
     }
@@ -485,7 +672,11 @@ const SpriteLab2View: React.FunctionComponent<{
       {/* The single, persistent playspace: a live preview pinned to the
           top-right on the Code tab, animating to a large centered view on the
           Play tab. Always mounted so the engine keeps running. */}
-      <Playspace mode={playspaceMode} fadeTrigger={fadeTrigger} />
+      <Playspace
+        mode={playspaceMode}
+        fadeTrigger={fadeTrigger}
+        loading={externalLoading}
+      />
 
       {/* Lab2 Guide overlay (Music-style), driven by the level's guideMode.
           Only shown on the Code tab. */}
