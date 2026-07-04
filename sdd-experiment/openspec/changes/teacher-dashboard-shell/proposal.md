@@ -47,8 +47,14 @@ change, not that one.
 - Candidate route tree in `frontend/apps/studio` (TanStack Router, file-based)
   under `/frontend-studio/teacher_dashboard/*`: `home`, and
   `sections/:sectionId/<tab>` chrome with the sidebar, redirect parity (bare
-  section and unknown paths → `progress`, `manage_students` → `roster`), and
-  links out to legacy tab routes for every tab not yet migrated.
+  section and unknown paths → `progress`, `manage_students` → `roster`),
+  flag-gated routes and sidebar entries reproduced under the same gates as
+  legacy (`skills_in_dev` under DCDO `skills-dashboard`, `student_snapshot`
+  under experiment `student-snapshot`, MODULARITY link swap,
+  AI-differentiation FAB entry point), and links out to legacy tab routes
+  for every tab not yet migrated. The full V2 feature surface is the
+  parity target — both arms of every gate; per-tab content lands in the
+  sequenced changes that follow this one.
 - Client-side auth gating that reproduces the legacy CanCan AccessDenied
   redirect branches (`teacher_dashboard_controller.rb:8-19`) for the routes
   the shell owns, backed by server-side enforcement on the new endpoint.

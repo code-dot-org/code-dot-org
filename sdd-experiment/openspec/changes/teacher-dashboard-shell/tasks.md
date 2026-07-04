@@ -44,7 +44,9 @@
       and chosen coverage (fixture / test / exclusion)
 - [ ] 3.4 Build MSW fixtures for the discovered scenarios (at minimum
       `many-sections`, `zero-sections`, `archived-only`,
-      `coteacher-invite-pending`, `provider-managed`, `error`) and wire the
+      `coteacher-invite-pending`, `provider-managed`, `error`, and flag-arm
+      variants `skills-enabled` / `snapshot-enabled` / `modularity-on` /
+      `ai-differentiation-on`; every flag pinned per scenario) and wire the
       visible scenario selector (`?scenario=`, corner dropdown,
       `?devChrome=off`)
 
@@ -52,7 +54,9 @@
 
 - [ ] 4.1 Implement the sidebar chrome and tab frame in the package using
       DSCO/MUI per the design-system mapping (DSCO dropdown/fontAwesomeV6Icon,
-      MUI Typography; SCSS modules with semantic tokens)
+      MUI Typography; SCSS modules with semantic tokens), including the
+      flag-gated entries (skills, snapshot, MODULARITY link swap, AI-diff
+      FAB entry point) per pinned flag state
 - [ ] 4.2 Add Studio file-based routes `teacher_dashboard/home` and
       `teacher_dashboard/sections/$sectionId/*` with lazy loading, underscore
       segments preserved, and the per-tab redirect map (candidate vs legacy

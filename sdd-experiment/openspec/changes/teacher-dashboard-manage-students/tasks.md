@@ -40,7 +40,7 @@ deviation from verbatim extraction.
 
 - [ ] 4.1 Extract wrapper + `Table/` + cells read-only path with import
       adapters (`@cdo/locale`, `SafeMarkdown`→`@code-dot-org/markdown`,
-      DemoSectionTooltip disposition per demo-section exclusion); mount at
+      DemoSectionTooltip ported — demo sections are in scope); mount at
       the candidate roster route; alias redirect target verified
 - [ ] 4.2 Extract mutation flows and dialogs in oracle order: add/edit/save,
       remove-confirm, bulk add, password/secret reset, login export +

@@ -46,10 +46,13 @@ later changes flip individual entries to candidate routes.
 The shell SHALL render the section-scoped sidebar equivalent to
 `TeacherNavigationBar`: section dropdown (switching sections rewrites
 `:sectionId` and preserves the active tab), grouped tab links with icons and
-localized labels, and the same conditional entries as legacy under default
-flag state (skills dashboard and student snapshot excluded; MODULARITY,
-`student-snapshot`, and `ai-differentiation` experiment arms excluded — the
-default arm is the parity target). Unmigrated tabs render as links to their
+localized labels, and every conditional entry reproduced per flag state
+with BOTH arms as parity targets: the skills-dashboard entry when DCDO
+`skills-dashboard` is on, the student-snapshot entry when experiment
+`student-snapshot` is on, MODULARITY swapping which unit-overview key the
+course-content group links to, and the AI-differentiation FAB entry point
+when its experiment and `aiDifferentiationEnabled` are both set. Every
+scenario pins its flag state. Unmigrated tabs render as links to their
 legacy URLs (full page navigation is acceptable and expected).
 
 #### Scenario: Section switch preserves tab
@@ -64,6 +67,12 @@ legacy URLs (full page navigation is acceptable and expected).
 - **THEN** the browser navigates to
   `/teacher_dashboard/sections/<id>/progress` (legacy), which renders
   normally
+
+#### Scenario: Flag-gated entries appear with their flags
+- **WHEN** the `skills-dashboard` DCDO key (or the `student-snapshot`
+  experiment) is enabled in a scenario
+- **THEN** the corresponding sidebar entry and route exist exactly as in
+  legacy, and are absent when the flag is off
 
 ### Requirement: Section selection and reload semantics
 The shell SHALL default-select the first section (by `section_order` when

@@ -21,14 +21,16 @@ bootstrap API, core sections mocks, home route shell, parity harness).
 ## 2. Behavior scenario discovery (gate)
 
 - [ ] 2.1 Walk the oracles: 26 `teacherHomepageV2` jest files,
-      `teacher_homepage_v2.feature`, `teacherSectionsReduxTest.js`,
-      component sources; record scenario list with evidence, coverage
-      choice (fixture/test), and the pre-recorded exclusions (demo-section
-      treatment arm, onboarding/tours, skills, snapshot)
+      `teacher_homepage_v2.feature`, `demo_section_card.feature`,
+      `teacherSectionsReduxTest.js`, component sources; record scenario
+      list with evidence and coverage choice (fixture/test); both arms of
+      every flag gate contribute scenarios
 - [ ] 2.2 Build MSW fixtures for discovered scenarios and expose them as
       visible dev-shell choices (floor: sections-with-courses,
       zero-sections, archived-only, coteacher-invite-pending,
-      personalization-alert, verification-alert, drawer-popups, error)
+      personalization-alert, verification-alert, drawer-popups,
+      demo-section-treatment, demo-section-stale, onboarding-checklist,
+      error)
 
 ## 3. Read-only slice: list, cards, empty states
 
@@ -55,6 +57,18 @@ bootstrap API, core sections mocks, home route shell, parity harness).
       events
 - [ ] 4.3 Component tests incl. cancel paths and provider-managed
       (sync-instead-of-edit) variants
+
+## 4b. Demo sections + onboarding (both gate arms)
+
+- [ ] 4b.1 Typed wrappers + MSW for `/api/v1/sections/demo/{presets,
+      create/:type,check_staleness,reset}` with recorded JSON
+- [ ] 4b.2 Port DemoSectionCard, demo course-content/options dropdowns,
+      CreateDemoSectionPopup + pickDemoType, staleness/reset flows;
+      component tests per treatment-arm scenario
+- [ ] 4b.3 Port OnboardingChecklist + the three tours
+      (createSectionOnboarding, reviewSyllabusOnboarding,
+      learnHowToEvaluateOnboarding hooks) with hide/resume via user
+      preferences; tests for gate-met and gate-unmet states
 
 ## 5. Engagement surfaces + popups
 

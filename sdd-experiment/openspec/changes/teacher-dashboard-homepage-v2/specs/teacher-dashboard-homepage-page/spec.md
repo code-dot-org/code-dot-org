@@ -18,11 +18,11 @@ add/remove for provider-managed sections).
 - **THEN** the list shows only matching sections and the toggle emits the
   same analytics event names as legacy
 
-#### Scenario: Zero sections
-- **WHEN** a teacher has no un-archived sections
+#### Scenario: Zero sections (demo-section experiment off)
+- **WHEN** a teacher has no un-archived sections and the demo-section
+  experiment is off
 - **THEN** the empty homepage renders with its create-section and
   assign-course calls to action, matching the legacy `EmptyHomepage` branch
-  (demo-section experiment off — control arm is the parity target)
 
 #### Scenario: PL sections excluded from ordering
 - **WHEN** the section list orders sections
@@ -89,6 +89,46 @@ the animation mounts.
 - **WHEN** the DCDO/brand gate is on but the dismissal cookie is present
 - **THEN** no animation runs and the header logo renders normally
 
+### Requirement: Demo-section experience (experiment treatment arm)
+The candidate homepage SHALL reproduce the demo-section experiment's
+treatment arm: with the experiment on, demo presets are fetched
+(`/api/v1/sections/demo/presets`); a zero-section teacher sees the
+`DemoSectionCard` in the Teaching view (empty homepage remains in the
+Archived view); the create-demo flow (`pickDemoType`,
+`CreateDemoSectionPopup`, `/api/v1/sections/demo/create/:type`) works; a
+demo section renders its own course-content and options dropdowns; and
+staleness check/reset (`check_staleness`, `reset`) behave as legacy. With
+the experiment off, none of this surfaces (control-arm scenarios).
+
+#### Scenario: Treatment arm, zero sections
+- **WHEN** the demo-section experiment is on and a teacher has no
+  un-archived sections
+- **THEN** the Teaching view shows the demo section card with its create
+  flow, and the Archived view shows the empty homepage
+
+#### Scenario: Demo staleness reset
+- **WHEN** an existing demo section is stale per the staleness check
+- **THEN** the reset flow restores it via the legacy endpoint with the
+  legacy messaging
+
+### Requirement: Onboarding checklist and tours
+The candidate homepage SHALL reproduce the onboarding checklist and its
+three tours (create-section, review-syllabus, learn-how-to-evaluate) under
+the legacy gates: (ONBOARDING experiment OR DCDO `onboarding-enabled`) AND
+a demo section present (`demoSectionDemoType !== null`). Hide/resume
+persists via user preferences; tour content and step behavior match
+legacy. When either gate is unmet the checklist does not render.
+
+#### Scenario: Checklist under both gates
+- **WHEN** the onboarding gate is on and the teacher has a demo section
+- **THEN** the checklist renders with the three tours, and hide/resume
+  round-trips through user preferences
+
+#### Scenario: Gate unmet
+- **WHEN** the onboarding gate is on but no demo section exists (or the
+  gate is off)
+- **THEN** no checklist renders, matching legacy
+
 ### Requirement: Homepage analytics parity
 The candidate homepage SHALL emit the same analytics event names as legacy
 for: teacher login (session-storage once-per-session), homepage visited,
@@ -104,26 +144,28 @@ uninterrupted.
 Implementation SHALL begin by discovering homepage behavior scenarios from
 the legacy oracles — the 26 `teacherHomepageV2` jest files,
 `teacher_homepage_v2.feature` (8 Cucumber scenarios incl. the @eyes one),
-`teacherSectionsReduxTest.js`, and the component sources — and expressing
-each as an MSW scenario, a test, or a documented exclusion (demo-section
-treatment arm, onboarding checklist/tours, skills dashboard, student
-snapshot are pre-recorded exclusions). Discovered scenarios SHALL be exposed
-as visible choices in the standalone dev shell.
+`demo_section_card.feature`, `teacherSectionsReduxTest.js`, and the
+component sources — and expressing each as an MSW scenario or a test.
+Every flag gate contributes scenarios for BOTH arms. Discovered scenarios
+SHALL be exposed as visible choices in the standalone dev shell.
 
 #### Scenario: Discovery output recorded
 - **WHEN** the discovery task completes
-- **THEN** the scenario list with evidence, coverage choice, and exclusions
-  is recorded in the change's task log, and the dev shell selector offers at
-  minimum: sections-with-courses, zero-sections, archived-only,
+- **THEN** the scenario list with evidence and coverage choice is recorded
+  in the change's task log, and the dev shell selector offers at minimum:
+  sections-with-courses, zero-sections, archived-only,
   coteacher-invite-pending, personalization-alert, verification-alert,
-  drawer-popups, error (bootstrap failure)
+  drawer-popups, demo-section-treatment, demo-section-stale,
+  onboarding-checklist, error (bootstrap failure)
 
 ### Requirement: Homepage visual parity is pixel-gated
 Implementation SHALL capture legacy baselines and candidate checkpoints
 through the shell's harness — the homepage is a DSCO/MUI surface, so pixel
 parity is part of this migration contract — for: the section list with
 populated cards, the empty homepage (teaching and archived), the alerts
-region, the promotions region, and each section-lifecycle modal. Legacy is
+region, the promotions region, each section-lifecycle modal, the demo
+section card and create-demo popup (treatment arm), and the onboarding
+checklist (gates met). Legacy is
 captured at `http://localhost-studio.code.org:9000/teacher_dashboard/home`,
 candidate at
 `http://localhost-studio.code.org:9000/frontend-studio/teacher_dashboard/home`,

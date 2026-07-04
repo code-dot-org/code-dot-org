@@ -42,12 +42,18 @@ sections mocks, route tree, visual-parity harness).
 - Visual parity baselines/checkpoints for the homepage (a DSCO/MUI surface —
   pixel parity is part of this migration contract), via the shell's harness.
 - Legacy `/teacher_dashboard/home` remains untouched.
-- Out of parity scope, recorded with evidence: demo-section experiment
-  treatment arm (`DemoSectionCard`, presets/staleness/reset), onboarding
-  checklist + three tours (render only when a demo section exists —
+- Full-fidelity flag coverage: BOTH arms of every homepage gate are parity
+  targets, each pinned per scenario. That includes the demo-section
+  experiment treatment arm (`DemoSectionCard`, demo course-content and
+  options dropdowns, `CreateDemoSectionPopup`/`pickDemoType`,
+  presets/create/staleness/reset via `/api/v1/sections/demo/*`) and the
+  onboarding checklist + three tours (create-section, review-syllabus,
+  learn-how-to-evaluate; gated on ONBOARDING experiment or DCDO
+  `onboarding-enabled` and requiring a demo section —
   `TeacherHomepage.tsx` gates `OnboardingChecklist` on
-  `demoSectionDemoType !== null`), skills dashboard, student snapshot.
-  Default flag state (experiments off, DCDO defaults) is the parity target.
+  `demoSectionDemoType !== null`; hide/resume persists via
+  UserPreferences). Skills dashboard and student snapshot are separate
+  tabs, ported in their own sequenced changes.
 
 ## Capabilities
 
@@ -58,7 +64,8 @@ sections mocks, route tree, visual-parity harness).
   typed reuse wrappers for the page-adjacent legacy endpoints.
 - `teacher-dashboard-homepage-page`: the migrated homepage UI — header,
   toggle, section list/cards/empty states, section lifecycle modals, alerts,
-  coteacher invite, promotions, logo transition.
+  coteacher invite, promotions, logo transition, demo-section experience
+  (both experiment arms), onboarding checklist + tours (both gate arms).
 - `teacher-dashboard-homepage-popups`: drawer-driven popups (school info,
   NPS, AFE), section-creation celebration, flash toast relay, and the
   explicit dispositions for the HAML-level TOS interstitial and admin

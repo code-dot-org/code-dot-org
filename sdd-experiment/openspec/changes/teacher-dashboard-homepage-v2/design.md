@@ -29,9 +29,8 @@ mocks, and the visual-parity harness.
 
 **Non-Goals:**
 
-- Demo-section treatment arm, onboarding checklist + tours (gated on a demo
-  section existing), skills dashboard, student snapshot. Re-inclusion is a
-  human product-scope decision.
+- Skills dashboard and student snapshot: separate tabs with their own
+  sequenced changes, not homepage scope.
 - No rewrite of section-setup pages (`sectionsRefresh/`), OAuth roster
   dialogs, or the personalization quiz page — the homepage links to them at
   their legacy URLs.
@@ -101,6 +100,18 @@ gates MUST be honored; the animation targets Studio's header logo element.
 - Admin partial (`home/_admin`): not ported in this change; admins see the
   candidate homepage without the admin block, and the disposition is
   recorded. Legacy remains available.
+
+### D6a. Every flag gate is a scenario axis, both arms in scope
+
+The homepage carries four gates: `demo-section` (experiment; swaps the
+zero-section experience and adds the demo card/dropdowns/presets flows),
+ONBOARDING-or-DCDO `onboarding-enabled` (checklist + three tours, requires
+a demo section), `codeai-rebrand-banner` (DCDO), and the logo-transition
+pair. Parity is proven per arm: every MSW scenario and every parity capture
+pins its flag state, and both arms of each gate get scenarios. A parity
+claim under an unpinned flag state is void. The demo flows exercise
+`/api/v1/sections/demo/{presets,create/:type,check_staleness,reset}` —
+typed wrappers + MSW handlers like every other reused endpoint.
 
 ### D6. Visual parity is pixel-gated; loading states are masked
 

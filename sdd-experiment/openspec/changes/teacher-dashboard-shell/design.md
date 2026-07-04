@@ -57,8 +57,10 @@ Constraints, from the program rules:
   or `TeacherDashboardController`.
 - No port of `teacherSectionsRedux`; state-layer semantics are re-expressed,
   not copied (see Decisions).
-- Excluded surfaces per program scope: skills dashboard (`skills_in_dev`),
-  student snapshot, demo-section experiment treatment arm.
+- No tab content — including the flag-gated tabs (skills dashboard under
+  DCDO `skills-dashboard`, student snapshot under experiment
+  `student-snapshot`): the shell provides their routes and sidebar entries
+  under the same gates; their content ports in their own sequenced changes.
 
 ## Decisions
 
@@ -152,8 +154,11 @@ MSW with a corner scenario selector (users-package `?scenario=` +
 `?devChrome=off` conventions). Scenario fixtures are the behavior-scenario
 axes discovered from legacy code, at minimum: `many-sections` (default),
 `zero-sections`, `archived-only`, `coteacher-invite-pending`,
-`provider-managed` (Clever/Google), `error` (bootstrap 500). Fixtures
-register via core's `registerMockFixture`; write-through for mutations.
+`provider-managed` (Clever/Google), `error` (bootstrap 500), plus flag-arm
+variants (`skills-enabled`, `snapshot-enabled`, `modularity-on`,
+`ai-differentiation-on`) — every flag gate is a scenario axis with both
+arms covered and the flag state pinned per scenario. Fixtures register via
+core's `registerMockFixture`; write-through for mutations.
 
 ## Risks / Trade-offs
 
