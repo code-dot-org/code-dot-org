@@ -11,11 +11,14 @@ Progress (`.../sections/:sectionId/progress`) is the deepest tab:
 `apps/src/templates/sectionProgressV2/` (24 unit-test files) renders the
 unit selector, the lesson/level progress grid with expanded columns, the
 floating header and floating scrollbar, view-as-student, the more-details
-dialog, the teacher panel, lesson lock, teacher scores, and CSV download,
-over three interlocking redux slices (`progressRedux`, `sectionProgress`,
-`unitSelection`) and the endpoints
-`/dashboardapi/section_level_progress/:id`, script structure, unit
-summary, and `/dashboardapi/v1/teacher_scores`. It is wrapped by
+dialog, lesson lock, and client-generated CSV download, over the
+interlocking slices (`sectionProgress`, `unitSelection`, lock/view-as) and
+the endpoints pinned in design.md:
+`GET /dashboardapi/script_structure/courses/:courseId/units/:unitPosition`,
+`GET /dashboardapi/section_level_progress/:id?script_id&page&per=20`
+(paginated fan-out), and `GET/POST /api/lock_status`. (CORRECTED from
+earlier planning: teacher panel and `/dashboardapi/v1/teacher_scores` are
+not used by this tab — zero client references.) It is wrapped by
 `GlobalEditionWrapper` (componentId SectionProgressV2, Router:210-225) and
 gated by the standard empty-state matrix. Sequencing it after every other
 tab lets it land on a proven pipeline and reuse the overview change's
@@ -25,9 +28,9 @@ store module.
 
 - Candidate route `.../sections/:sectionId/progress` renders the moved
   progress experience in sub-splits: (a) read-only grid (unit selector,
-  lesson/level columns, expanded views, icon key, CSV download); then (b)
-  floating header/scrollbar; then (c) teacher panel, lesson lock, teacher
-  scores, view-as, more-details dialog.
+  lesson/level columns, expanded views, icon key, client-side CSV
+  download); then (b) floating header/scrollbar; then (c) lesson lock,
+  view-as, more-details dialog.
 - The three slices move page-scoped (reusing the overview change's store
   module for progressRedux; adding sectionProgress + unitSelection
   integration) with the shell bridge; every endpoint gains typed wrappers

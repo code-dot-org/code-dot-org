@@ -24,27 +24,50 @@ anonymous survey results, and the legacy empty-state matrix.
 - **WHEN** survey results are below the anonymity threshold legacy enforces
 - **THEN** the candidate withholds/aggregates results identically
 
-### Requirement: Feedback download at parity
-The assessment-feedback CSV download SHALL produce the same file content as
-legacy for the same data (`assessment_feedback_download.feature` is the
-oracle), through the typed wrapper with download semantics preserved.
+### Requirement: CSV downloads at parity (client-generated)
+Both CSV downloads SHALL produce byte-equal content to legacy for
+identical state: the feedback CSV (`FeedbackDownload.jsx`, a `react-csv`
+`CSVLink` over the `section_feedback` data —
+`assessment_feedback_download.feature` is the oracle) and the
+submission-status CSV. CORRECTED from prior planning: there is no server
+download endpoint; both files are client-generated from loaded redux
+state, so parity is generated-content equality, not a wrapper concern.
 
-#### Scenario: CSV round-trip
+#### Scenario: Feedback CSV equality
 - **WHEN** the teacher downloads feedback on the candidate tab
-- **THEN** the CSV matches the legacy download for the same fixture data
+- **THEN** the generated CSV equals the legacy file for the same fixture
+  data (Cucumber oracle)
+
+#### Scenario: Submission-status CSV equality
+- **WHEN** the teacher downloads submission status
+- **THEN** the generated CSV equals legacy for the same state
 
 ### Requirement: Typed data paths and page-scoped state
-The assessments data SHALL be consumed through typed core wrappers — the
-`/dashboardapi/assessments*` family (assessments, section_surveys,
-section_responses, section_feedback) — with recorded-JSON schemata
-(parser tests) and MSW handlers;
-`sectionAssessmentsRedux` moves page-scoped with the shell bridge and its
-jest coverage re-expressed.
+The assessments data SHALL be consumed through typed core wrappers
+implementing the API table pinned in design.md — four cookie-auth GETs
+with exact query params: `/dashboardapi/assessments?script_id`,
+`/dashboardapi/assessments/section_responses?section_id[&script_id]
+[&course_version_id]`, `/dashboardapi/assessments/section_surveys` and
+`.../section_feedback` (both `script_id`+`section_id`), per
+`sectionAssessmentsRedux.js:1182-1240`. No mutations exist on this tab.
+Response schemata are authored only from the BLOCKED-EVIDENCE runtime
+captures (per fixture kind), cross-checked against
+`assessmentDataShapes.js` — captures win on conflict, discrepancies
+recorded. `sectionAssessmentsRedux` moves page-scoped with the shell
+bridge and its jest coverage re-expressed; the submission-status
+accounting fields (`multi_correct`, `multi_count`, `match_correct`,
+`match_count`, `submitted`, `url`, redux :770-786) are pinned by test.
 
 #### Scenario: Family recorded per kind
 - **WHEN** wrapper schemata are authored
 - **THEN** each derives from recorded JSON for MC, match, free-response,
-  and survey fixtures
+  and survey fixtures (the BLOCKED-EVIDENCE tasks are blocking)
+
+#### Scenario: Survey anonymity rule pinned first
+- **WHEN** the surveys fixture is authored
+- **THEN** the server-side anonymity rule has been read from the
+  `section_surveys` controller and recorded (the client renders what the
+  server sends; the rule is not client-side)
 
 ### Requirement: Discovery gate and non-pixel parity gates
 Implementation SHALL begin with behavior-scenario discovery from the legacy

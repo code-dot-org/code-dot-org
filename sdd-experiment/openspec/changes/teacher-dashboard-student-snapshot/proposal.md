@@ -22,9 +22,12 @@ the candidate. It shares the progress empty-state matrix
   ported snapshot (header + all six widgets) when experiment
   `student-snapshot` is on, with the no-students/no-curriculum empty-state
   matrix; absent when off. Both arms are scenario axes.
-- Each widget's data dependencies are recorded at implementation start and
-  wrapped (typed schemata + MSW), reusing the progress change's wrappers
-  where the payloads overlap.
+- The endpoint family is pinned in design.md (12-row API table): the
+  `/student_snapshots/*` GETs (routes.rb:1252-1261), the
+  `/lesson_feedbacks` CRUD (create/update + saved_feedback), and the
+  rubric widget's shared-component calls. Schemata are capture-gated
+  (BLOCKED-EVIDENCE items in design.md); progress-change wrappers are
+  reused where payloads overlap.
 - Pixel gate applies (modern TSX/MUI/DSCO surface —
   `studentSnapshot/` imports MUI ×21, DSCO alert/dropdown/textField).
 

@@ -1,63 +1,129 @@
 # Design: teacher-dashboard-progress
 
-## Context
+Hardened 2026-07-04 against source in this checkout. Claims below carry
+file:line evidence; unknowns are marked `BLOCKED-EVIDENCE` with the exact
+capture needed. Two prior-inventory claims are CORRECTED here (teacher
+scores, teacher panel — see Corrections).
 
-`sectionProgressV2/` is the largest tab tree: grid columns
-(lesson/expanded/level data cells), floating header + floating scrollbar,
-teacher panel, lesson lock dialog, view-as, more-details dialog, CSV
-download, skeleton loading columns. Three slices interlock:
-`progressRedux` (also used by overviews), `sectionProgress` (grid data,
-paginated loads), `unitSelection`. GE wrapper hides the component per
-region. 24 jest files are the behavior oracle;
-`teacher_dashboard_progress_v2.feature` carries e2e incl. @eyes scenarios.
+## Source files and ownership
 
-## Goals / Non-Goals
+All under `apps/src/` unless noted. Ownership: `move` = extracted into the
+package (dual-copy where shared); `shared-dep` = consumed via
+adapter/bridge, not forked.
 
-**Goals:** full progress parity in three sub-splits; the last core tab off
-the legacy shell.
+| File | Role | Plan |
+| --- | --- | --- |
+| `templates/sectionProgressV2/SectionProgressV2.jsx` | root; effects call `loadUnitProgress` | move |
+| `templates/sectionProgressV2/sectionProgressLoader.js` | data loader (see API table) | move (transport adapter) |
+| `templates/sectionProgressV2/sectionProgressRedux.js` | grid slice | move (page-scoped) |
+| `templates/sectionProgressV2/ProgressTableV2.jsx`, `StudentColumn.jsx`, `LessonProgressColumnHeader/DataColumn.jsx`, `ExpandedProgressColumnHeader/DataColumn.jsx`, `LevelDataCell.jsx`, `LessonDataCell.jsx`, `LevelProgressHeader.jsx`, `ProgressIcon.jsx`, `SkeletonProgressDataColumn.jsx`, `LessonTitleTooltip.jsx` | grid | move |
+| `templates/sectionProgressV2/IconKey.jsx`, `LegendItem.jsx`, `LevelTypesBox.jsx`, `AssignmentCompletionStatesBox.jsx`, `TeacherActionsBox.jsx` | legend/actions | move |
+| `templates/sectionProgressV2/MoreDetailsDialog.jsx`, `MoreOptionsDropdown.jsx` (DSCO ActionDropdown), `MetadataHelpers.jsx`, `LockedLessonUtils.jsx`, `sectionProgressConstants.js` | dialogs/utils | move |
+| `templates/sectionProgressV2/DownloadProgressCsv.tsx` | client-side CSV (Blob; deliberate non-react-csv, comment at :209) | move |
+| `templates/sectionProgressV2/floatingHeader/FloatingHeader.jsx`, `floatingScrollbar/FloatingScrollbar.jsx` + `scrollbarUtils.jsx` | floating chrome | move |
+| `templates/progress/progressHelpers.js` (`processedLevel`, `processServerSectionProgress`, `lessonProgressForSection`) | payload post-processing | shared-dep: used by loader AND overview/public pages — extract these three pure functions with unit-test parity (program C1 rule), do not fork the module |
+| `code-studio/lessonLockRedux.js` | lock state + `/api/lock_status` | move (page-scoped, shared with overview change's store module) |
+| `redux/unitSelectionRedux.js` | unit selection | move as-is into the store module (recorded asymmetry with text-responses) |
+| `code-studio/viewAsRedux.js` | view-as | shared-dep via store module; no API on this tab |
 
-**Non-Goals:** no pixel gate (legacy JSX; the @eyes scenarios' assertions
-port as behavior/structural checks, not pixel diffs); no grid redesign; no
-new progress metrics.
+## API and mutation table
 
-## Decisions
+Auth on all: session cookie (`credentials: 'include'`); CanCan section
+scoping server-side.
 
-- D1. Sub-splits are ordered, independently landable slices behind the
-  same route: read-only grid first (proves data volume + selector), then
-  floating chrome (pure UI, riskiest for subtle behavior), then
-  interactive surfaces (panel, lock, scores, view-as, dialog). Each slice
-  has its own scenario subset and verification.
-- D2. State: reuse the overview change's scoped store module for
-  progressRedux; move `sectionProgress` + `unitSelection` into the same
-  module here. The unitSelection re-expression from text-responses (URL/
-  Query state) is NOT reused here initially — progress moves the slice
-  as-is (move-not-rewrite; the grid's paging and selection interlock is
-  too load-bearing to re-spine in the same change). Convergence belongs to
-  the modernization pass. This asymmetry is deliberate and recorded.
-- D3. GE parity: the candidate wraps the progress component in the same
-  region-gating logic driven by `<html data-ge-region>`;
-  `fa-teacher-dashboard.spec.ts` runs against the candidate route as the
-  gate.
-- D4. Performance non-regression is a first-class gate: fixture sections
-  at realistic sizes (e.g. 30+ students, multi-unit courses) with render
-  and interaction timing compared to legacy on the same machine; candidate
-  must not be perceptibly slower (program recommendation M6).
+| # | Method + path | Params | Consumed response fields | Side effects / notes |
+| - | --- | --- | --- | --- |
+| 1 | GET `/dashboardapi/script_structure/courses/:courseId/units/:unitPosition` | path only | `id, csf, isCsd, isCsp, title, path, lessons[].levels[] (incl. bonus), family_name, version_year, name` (filter list at loader:117-130; bonus levels dropped unless `sectionData.lessonExtras`, loader:142-145) | none |
+| 2 | GET `/dashboardapi/section_level_progress/:sectionId` | query `script_id`, `page`, `per=20`; client fans out `ceil(students/20)` parallel page requests (loader:71-92) | `student_progress` (via `processServerSectionProgress`), `student_last_updates` | none |
+| 3 | GET `/api/lock_status` | query `script_id` (lessonLockRedux:327-331; NOTE sectionId is dispatch-side only, not sent) | lock status per lesson/student | none |
+| 4 | POST `/api/lock_status` | JSON `{updates: [{user_level_data, locked, readonly_answers}]}` (lessonLockRedux:203-226); only changed rows sent | — | mutates user-level lock state. Sent via `$.ajax`; BLOCKED-EVIDENCE: confirm the CSRF header mechanism for legacy `$.ajax` writes (jQuery prefilter vs rails-ujs) by capturing one legacy POST's request headers at runtime before the adapter is written |
+| 5 | CSV download | none — client-side Blob built from loaded grid state (`level_progress_<unit>.csv`, `lesson_progress_<unit>.csv`, DownloadProgressCsv.tsx:124,186,209-227) | — | no server endpoint; parity = generated file content equality |
 
-## Risks / Trade-offs
+Response body shapes for #1-#3: BLOCKED-EVIDENCE — capture JSON from a
+local Rails run (seeded section with progress; small and >20-student
+sections for #2's pagination) before authoring Zod schemata. The consumed
+field lists above are the minimum the schema must carry.
 
-- [Floating header/scrollbar rely on scroll math that differs under the
-  candidate layout] → dedicated sub-split with its own tests; masks not
-  applicable (no pixel gate) — behavior checks assert pinned positions at
-  scroll offsets.
-- [Three-slice interlock breaks under partial moves] → the store module
-  moves whole, never slice-by-slice across changes.
-- [Data volume: recorded fixtures for large sections are heavy] → one
-  large recorded fixture set shared by tests and MSW; smaller synthetic
-  fixtures for unit tests.
+## Corrections to prior planning
 
-## Migration Plan
+- `teacher_scores`: routes exist (`dashboard/config/routes.rb:1295-1296`)
+  but `grep -r teacher_scores apps/src` has ZERO client references. It is
+  NOT part of progress V2 parity. Dropped from scope. One blocking task
+  re-confirms the grep at implementation time.
+- Teacher panel: no references in `templates/sectionProgressV2/` — it is
+  level-page UI, not a dashboard-progress surface. Dropped from scope.
+- No DCDO/experiment reads inside `sectionProgressV2/` files (grep clean).
+  The only gates touching this tab are route-level: GE wrapper
+  (`GlobalEditionWrapper` componentId `SectionProgressV2`,
+  TeacherNavigationRouter:217-221) and the empty-state matrix
+  (Router:213-215).
 
-Wrappers + recordings → discovery → slice (a) grid read-only → slice (b)
-floating chrome → slice (c) interactive surfaces → GE gate → flip map
-entry (incl. bare-section redirect) → perf gate → verify. Rollback per
-slice commit train.
+## Scenario matrix
+
+Oracle key: J = sectionProgressV2 jest suite (24 files), C =
+`teacher_dashboard_progress_v2.feature`, P = `fa-teacher-dashboard.spec.ts`,
+S = source cited above.
+
+| Scenario | Flags | Section/fixture shape | Expected UI | Oracle |
+| --- | --- | --- | --- | --- |
+| populated-small | none | ≤20 students, unit w/ progress | grid, 1 progress request page | J, C |
+| populated-large | none | >20 students (e.g. 45 → 3 pages) | identical grid; parallel page fan-out merges | S(loader:71-92), J |
+| zero-students | none | studentCount 0 | no-students empty page | C, Router:213 |
+| no-progress | none | students, `anyStudentHasProgress` false | no-curriculum empty page | Router:214 |
+| lesson-extras-on | none | section.lessonExtras true | bonus levels included in columns | S(loader:142-145), J |
+| lesson-extras-off | none | lessonExtras false | bonus levels filtered out | S |
+| refresh-path | none | data already in slice for unit | UI stays; `startRefreshingProgress` silent update | S(loader:29-45), J |
+| unit-switch | none | multi-unit assignment | reload per selected unit (unitSelection) | J |
+| locked-lesson | none | lockable unit, locked lesson | lock icons/dialog; GET/POST #3/#4 round-trip | J, C |
+| view-as | none | any populated | student-perspective links; no API call | S, J |
+| csv-download | none | populated | Blob CSV content equals legacy for same state | S(DownloadProgressCsv) |
+| ge-region | GE region set (fa) | populated | component hidden per GE wrapper | P |
+| skeleton-loading | none | slow fixture | `#ui-test-skeleton-progress-column` then grid | C (`local_nav_v2` waits on it) |
+| error | none | endpoint 500 | retriable error state (resilience-ux carve-out, recorded + masked) | resilience spec |
+
+## Gate table
+
+| Surface | Gate | Detail |
+| --- | --- | --- |
+| grid, legend, floating chrome | behavior + copy + a11y; NO pixel | custom legacy grid (`progress-table-v2.module.scss`), non-DSCO. The @eyes scenarios in C re-express as structural assertions (element presence/order), not pixel diffs |
+| floating header/scrollbar | behavior | pinned positions asserted at defined scroll offsets (tests, not screenshots) |
+| CSV | content equality | generated file diff vs legacy for identical state |
+| performance | non-regression | populated-large fixture; render + unit-switch timings, candidate vs legacy, same machine (program M6) |
+| a11y | axe + keyboard per scenario | dialogs (lock, more-details) keyboard-complete |
+
+## Design-system mapping (executed by the modernization pass, not here)
+
+Verified imports: fontAwesomeV6Icon ×8, @mui ×7, DSCO dropdown ×2
+(`MoreOptionsDropdown` already DSCO ActionDropdown), DSCO modal ×1,
+react-tooltip ×1, `skeletonize-content` ×3.
+
+| Legacy | Target |
+| --- | --- |
+| custom grid table (`progress-table-v2.module.scss`) | stays custom (no DSCO primitive fits a virtualized progress grid); tokens migrate to semantic CSS vars |
+| react-tooltip (`LessonTitleTooltip`) | DSCO tooltip |
+| `skeletonize-content.module.scss` | MUI Skeleton |
+| MUI buttons/typography already present | keep |
+| `MoreDetailsDialog` legacy dialog chrome | DSCO dialog |
+| DSCO ActionDropdown, fontAwesomeV6Icon | keep |
+
+## Decisions (unchanged from the prior revision where still valid)
+
+- Sub-splits (a) read-only grid, (b) floating chrome, (c) lock/view-as/
+  dialog, each independently landable. Store module extends the overview
+  change's module; `unitSelection` moves as-is (asymmetry with
+  text-responses recorded).
+- Loader's `logToCloud.addPageAction` latency events
+  (LoadScriptProgressStarted/Finished, loader:40-44,97-102) are carried
+  across with the same event names (analytics/observability parity).
+
+## Open questions (each has a blocking task)
+
+- BLOCKED-EVIDENCE (API #1-#3 response shapes): runtime JSON capture from
+  local Rails, small + large sections, before schemata.
+- BLOCKED-EVIDENCE (API #4 CSRF mechanism for `$.ajax`): capture legacy
+  POST request headers.
+- BLOCKED-EVIDENCE (GE candidate mechanism): confirm how the candidate
+  reads the region (legacy: `<html data-ge-region>` set by Rails layout;
+  the Studio HAML shell must expose the same signal or an API equivalent)
+  — inspect `FrontendStudioController` layout output under a GE region
+  before implementing the wrapper.

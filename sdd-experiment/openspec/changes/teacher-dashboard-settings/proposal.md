@@ -6,28 +6,33 @@ and reuses the section-mutation wrappers from
 
 ## Why
 
-Settings (`.../sections/:sectionId/settings`) is the section-edit tab:
-`DashboardSectionSettings.tsx`
-(`apps/src/templates/teacherNavigation/`) edits section name, grade,
-curriculum assignment (with version/participant filtering), lesson extras,
-pairing, text-to-speech, project sharing, and restrict-section, plus
-section delete — with a save-blocker confirmation modal and a redirect to
-the progress tab on successful save (Router passes the progress URL as
-`redirectUrl`). It is mutation-heavy but self-contained, and it shares the
-curriculum-assignment machinery (valid course offerings, participant
-types) already wrapped in core.
+Settings (`.../sections/:sectionId/settings`) is the section-edit tab.
+`DashboardSectionSettings.tsx` is an 88-line wrapper (loading gate +
+dirty-navigation blocker + DSCO save-blocker modal); the actual form is
+`sectionsRefresh/SectionsSetUpContainer` — the SAME container as the
+section-creation flow — editing name, grade chips, curriculum quick-assign
+(participant-type + locale-filtered versions via
+`GET /course_offerings/quick_assign_course_offerings`), lesson extras,
+pairing, text-to-speech, project sharing, restrict-section, and
+coteachers. Save is `PATCH /api/v1/sections/:id` with an `X-CSRF-Token`
+header and a full-page redirect to the progress URL passed by the router.
+CORRECTED from earlier planning: there is no section-delete on this tab
+(delete lives on the homepage options dropdown), and the offerings
+endpoint is `quick_assign_course_offerings`, not `valid_course_offerings`.
+Full contract tables are in design.md.
 
 ## What Changes
 
 - Candidate route `.../sections/:sectionId/settings` renders the ported
-  settings form with every legacy field, validation, the save-blocker
-  modal, delete with confirmation, and the on-save redirect to the
-  progress destination via the shell's per-tab map (candidate progress
-  once it exists; legacy URL until then).
-- Section update/delete and course-offering lookups reuse existing
-  endpoints through typed wrappers (`valid_course_offerings` and
-  `available_participant_types` are already wrapped in core
-  `sections.api.ts`; verify then reuse).
+  settings form with every legacy field, native validation, the
+  save-blocker modal (re-implemented on the host router's blocker API —
+  recorded rewrite), and the on-save redirect to the progress destination
+  via the shell's per-tab map (candidate progress once it exists; legacy
+  URL until then).
+- Section update, quick-assign offerings, and coteacher
+  check/add/remove reuse existing endpoints through typed wrappers whose
+  schemata come from recorded legacy traffic (BLOCKED-EVIDENCE captures
+  listed in design.md).
 - Shell per-tab map flips `settings` to the candidate route.
 - Pixel gate applies (TSX/DSCO-era surface: DSCO inputs, MUI buttons,
   i18n modal).
