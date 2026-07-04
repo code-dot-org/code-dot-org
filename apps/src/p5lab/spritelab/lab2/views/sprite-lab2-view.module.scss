@@ -6,8 +6,14 @@
   min-height: 0;
 }
 
+// One outer height for every tab item — plain tabs and the Code+scene group —
+// so the bar reads as a row of equal boxes (border-box: height includes the
+// 1px outlines).
+$tab-item-height: 34px;
+
 .tabBar {
   display: flex;
+  align-items: center;
   flex-shrink: 0;
   gap: 4px;
   padding: 6px 8px;
@@ -17,7 +23,8 @@
 }
 
 .tab {
-  padding: 6px 16px;
+  height: $tab-item-height;
+  padding: 0 16px;
   // A subtle outline gives every tab item the same "button" structure, so
   // the Code+scene segmented group reads coherently next to plain tabs.
   border: 1px solid var(--borders-neutral-primary);
@@ -43,11 +50,14 @@
 // the group carries the tab pill's shape and active background; the button
 // and select inside are transparent segments split by a divider. Both
 // segments get the same explicit height so their text shares a centerline.
-$tab-segment-height: 32px;
+// Segments sit inside the group's 1px outline.
+$tab-segment-height: $tab-item-height - 2px;
 
 .tabGroup {
   display: flex;
   align-items: center;
+  box-sizing: border-box;
+  height: $tab-item-height;
   // The group carries the single outline; the segments inside are borderless
   // except for the divider between them.
   border: 1px solid var(--borders-neutral-primary);
