@@ -4,8 +4,11 @@ Position 15. Depends on teacher-dashboard-shell (gate + route exist).
 
 ## 1. Data + discovery (gate)
 
-- [ ] 1.1 Record the component's data requests on a local Rails run (flag
-      on); typed wrappers + parser tests + MSW handlers
+- [ ] 1.1 Read the results-fetch site (`SkillsDashboard.tsx:69`) and
+      capture request/response on a local Rails run (flag on) for the
+      pinned `POST /openai/evaluate_section` and the results read;
+      DashboardApi wrappers in `core/src/api/dashboard/...` + parser
+      tests against captures; default MSW handlers in core
 - [ ] 1.2 Scenario discovery from source; MSW fixtures + visible choices
       (flag-on populated, flag-off, error)
 

@@ -107,8 +107,9 @@ Per the program architecture report
   default handlers.
 - State boundary: Query-only — no transitional store and no bridge; the
   legacy widgets are already per-widget `fetchJson`, which maps 1:1 onto
-  Query hooks in the feature's api layer (the network-call-site rewrite
-  is the only structural rewrite here).
+  the core DashboardApi hooks, consumed through thin feature data
+  adapters/orchestration (the network-call-site rewrite is the only
+  structural rewrite here).
 - Shared-dependency boundary: `templates/rubrics/` components and
   `@cdo/apps/codemirror/editorConfig` are consume-not-fork
   (BLOCKED-EVIDENCE items pin their graphs); CodeMirror 6 packages enter

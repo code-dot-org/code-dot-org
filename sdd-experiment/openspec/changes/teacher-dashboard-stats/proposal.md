@@ -22,8 +22,10 @@ empty-state gating — at minimal risk before the bigger tabs consume it.
 - PL-section variant: the participant-type branch renders as legacy for
   professional-learning sections.
 - Legacy `statsRedux` data path moves with adapters (legacy JSX,
-  move-not-rewrite); its endpoint is confirmed and recorded at
-  implementation start, then wrapped (typed schema + MSW handler).
+  move-not-rewrite); its endpoint is PINNED —
+  `GET /dashboardapi/sections/:id/students/completed_levels_count`
+  (`statsRedux.js:59-60`, shared with the roster) — wrapped in core
+  DashboardApi with a capture-gated response schema.
 - Shell per-tab map flips `stats` to the candidate route.
 - No pixel gate: legacy non-DSCO JSX table. Behavior, copy, and a11y
   parity; design-system mapping recorded for the later modernization pass.

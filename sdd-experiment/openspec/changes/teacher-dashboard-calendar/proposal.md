@@ -17,8 +17,11 @@ state). TSX/DSCO-era surface with an existing visual oracle
 - Candidate route `.../sections/:sectionId/calendar` renders the ported
   unit calendar, including the empty state when no curriculum supports a
   calendar.
-- The calendar's data source is confirmed and recorded at implementation
-  start (unit/script structure payload), then wrapped (typed schema + MSW).
+- The calendar's data source is PINNED —
+  `GET /dashboardapi/unit_summary/:courseName/:unitPosition`
+  (`UnitCalendar.tsx:104-105`) into the pure client `calendarRedux`
+  slice — wrapped in core DashboardApi with a capture-gated response
+  schema.
 - Shell per-tab map flips `calendar` to the candidate route.
 - Pixel gate applies (TSX/DSCO-era surface; `calendar_eyes.feature` is the
   legacy visual oracle).

@@ -4,9 +4,11 @@ Position 7. Depends on teacher-dashboard-shell.
 
 ## 1. Data + discovery (gate)
 
-- [ ] 1.1 Confirm + record the calendar's data request(s) from a local
-      Rails run (calendar-bearing unit, no-calendar unit)
-- [ ] 1.2 Typed wrappers + parser tests + MSW handlers
+- [ ] 1.1 Capture response JSON for the pinned endpoint
+      (`GET /dashboardapi/unit_summary/:courseName/:unitPosition`) for a
+      calendar-bearing unit and a no-calendar unit
+- [ ] 1.2 DashboardApi wrapper in `core/src/api/dashboard/...` + parser
+      tests against captures; default MSW handler in core
 - [ ] 1.3 Walk oracles (`calendar_eyes.feature`, sources); record matrix;
       MSW fixtures + visible choices (populated, empty, error)
 

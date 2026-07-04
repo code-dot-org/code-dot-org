@@ -5,10 +5,14 @@ teacher-dashboard-homepage-v2 (home endpoint AITA flags).
 
 ## 1. Data layer
 
-- [ ] 1.1 Record `/dashboardapi/lesson_materials/:unit_id` JSON for units
+- [ ] 1.1 Record `/dashboardapi/lesson_materials/...` JSON for units
       with/without resources and custom resources; record `unit_in_aif`
-      valid + 404 cases
-- [ ] 1.2 Typed wrappers + parser tests (404 pinned) + MSW handlers
+      valid + 404 cases; record `GET /ai_lesson_summaries/show?lesson_id=`
+      (JSON-in-string `lesson_summary` field per container:209)
+- [ ] 1.2 DashboardApi wrappers in `core/src/api/dashboard/...` + parser
+      tests (404 + double-encoding pinned) + default MSW handlers in core;
+      audio podcast src stubbed/masked in MSW scenarios (no JSON wrapper
+      invented — streamed via `<audio src>`, container:437)
 
 ## 2. Discovery (gate)
 

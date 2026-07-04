@@ -106,13 +106,15 @@ the animation mounts.
 ### Requirement: Demo-section experience (experiment treatment arm)
 The candidate homepage SHALL reproduce the demo-section experiment's
 treatment arm: with the experiment on, demo presets are fetched
-(`/api/v1/sections/demo/presets`); a zero-section teacher sees the
-`DemoSectionCard` in the Teaching view (empty homepage remains in the
-Archived view); the create-demo flow (`pickDemoType`,
-`CreateDemoSectionPopup`, `/api/v1/sections/demo/create/:type`) works; a
-demo section renders its own course-content and options dropdowns; and
-staleness check/reset (`check_staleness`, `reset`) behave as legacy. With
-the experiment off, none of this surfaces (control-arm scenarios).
+(`GET /api/v1/sections/demo/presets`, redux:948); a zero-section teacher
+sees the `DemoSectionCard` in the Teaching view (empty homepage remains
+in the Archived view); the create-demo flow (`pickDemoType`,
+`CreateDemoSectionPopup`, `POST /api/v1/sections/demo/create/:type`,
+redux:984) works; and a demo section renders its own course-content and
+options dropdowns. Staleness/reset is NOT asserted: those endpoints
+appear nowhere in `apps/src`, so that behavior is evidence-gated (see
+scenario below). With the experiment off, none of this surfaces
+(control-arm scenarios).
 
 #### Scenario: Treatment arm, zero sections
 - **WHEN** the demo-section experiment is on and a teacher has no

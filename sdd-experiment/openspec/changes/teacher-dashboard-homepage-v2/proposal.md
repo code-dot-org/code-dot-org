@@ -45,8 +45,9 @@ sections mocks, route tree, visual-parity harness).
 - Full-fidelity flag coverage: BOTH arms of every homepage gate are parity
   targets, each pinned per scenario. That includes the demo-section
   experiment treatment arm (`DemoSectionCard`, demo course-content and
-  options dropdowns, `CreateDemoSectionPopup`/`pickDemoType`,
-  presets/create/staleness/reset via `/api/v1/sections/demo/*`) and the
+  options dropdowns, `CreateDemoSectionPopup`/`pickDemoType`, presets +
+  create via `/api/v1/sections/demo/*`; staleness/reset evidence-gated —
+  those endpoints are absent from `apps/src`) and the
   onboarding checklist + three tours (create-section, review-syllabus,
   learn-how-to-evaluate; gated on ONBOARDING experiment or DCDO
   `onboarding-enabled` and requiring a demo section —

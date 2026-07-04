@@ -18,8 +18,11 @@ teachers in the gated rollout must not lose it at cutover.
   ported skills dashboard when DCDO `skills-dashboard` is on; the route
   and sidebar entry are absent when off (shell already specifies the
   gate; this change supplies the content).
-- The component's data dependencies are recorded at implementation start
-  and wrapped (typed schemata + MSW).
+- The component's data path is partially PINNED —
+  `POST /openai/evaluate_section` (`SkillsDashboard.tsx:11,55`; flagged
+  to security review) plus a results read whose URL/shape is
+  BLOCKED-EVIDENCE — wrapped in core DashboardApi with capture-gated
+  schemata.
 - Both flag arms are scenario axes.
 - Pixel gate applies (modern TSX surface).
 

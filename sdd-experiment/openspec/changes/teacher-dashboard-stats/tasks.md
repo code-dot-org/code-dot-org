@@ -4,10 +4,14 @@ Position 4. Depends on teacher-dashboard-shell.
 
 ## 1. Data layer
 
-- [ ] 1.1 Confirm + record the stats endpoint (URL, JSON) from a local
-      Rails run for populated, zero-student, no-progress, and PL sections
-- [ ] 1.2 Typed core wrapper + schema + parser tests against recordings;
-      MSW handler
+- [ ] 1.1 Capture response JSON for the pinned endpoint
+      (`GET /dashboardapi/sections/:id/students/completed_levels_count`)
+      for populated, zero-student, no-progress, and PL sections; pin
+      whether lines-of-code derives from this response
+      (`StatsTableWithData`)
+- [ ] 1.2 DashboardApi wrapper in `core/src/api/dashboard/...` (shared
+      with roster) + schema + parser tests against captures; default MSW
+      handler in core
 
 ## 2. Discovery (gate)
 
