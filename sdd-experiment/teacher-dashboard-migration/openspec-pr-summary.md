@@ -89,6 +89,38 @@ ports its own oracles); legacy-freeze tooling during the dual-copy window
 (ledger process entry, not spec-worthy); candidate-only analytics
 additions beyond event parity (no evidence gathered).
 
+## Hardening and architecture passes (2026-07-04, same branch)
+
+After the initial full-surface planning, four follow-up passes landed:
+
+1. Deep spec-hardening of progress, settings, assessments, and
+   student-snapshot: file-ownership tables, exact API/mutation tables,
+   scenario matrices with oracles, gate tables, DS mappings; corrections
+   (no `teacher_scores`/teacher-panel on progress; no delete on settings;
+   client-generated CSVs; `quick_assign_course_offerings`); remaining
+   unknowns as `BLOCKED-EVIDENCE` items with blocking capture tasks.
+2. Frontend architecture report
+   (`sdd-experiment/openspec/teacher-dashboard-frontend-architecture-report.md`)
+   + boundary backport, then revised per human rulings and the Next-Gen
+   Frontend Platform PRFAQ: Vite + TanStack (not Next.js/SSR); ALL
+   Dashboard/Rails wrappers in core DashboardApi
+   (`core/src/api/dashboard/...`), features own scenario fixtures only;
+   one-package module with lazy per-tab entries and a light shell chunk;
+   standalone MSW is a dev/test capability (no teacher-facing offline
+   claim); desktop/laptop responsive gates now, tablet/mobile parity out
+   but not boxed out.
+3. Remaining-spec hardening + coverage completeness: endpoints pinned
+   across all other tabs (stats, calendar, text-responses, materials
+   incl. AITA summary JSON-in-string + podcast audio-src correction,
+   ai-chat, skills, overview hidden-lessons, roster mutation methods);
+   coverage additions from evidence — homepage section reordering
+   (`PUT /user_preference`), `PermanentPromotions`; demo staleness/reset
+   claim corrected (endpoints absent from `apps/src`, now
+   evidence-gated).
+4. Consistency sweep aligning older proposal/spec/task wording with the
+   addenda; the hardening/sweep prompt artifacts are committed at the
+   repo root for audit/replay.
+
 ## Notes for reviewers
 
 - OpenSpec root: `sdd-experiment/openspec/` (git-excluded via
