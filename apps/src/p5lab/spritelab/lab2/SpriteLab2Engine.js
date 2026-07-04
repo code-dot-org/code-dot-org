@@ -1,5 +1,6 @@
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
+import {getStore} from '@cdo/apps/redux';
 
 import SpriteLab from '../SpriteLab';
 
@@ -176,17 +177,34 @@ export default class SpriteLab2Engine extends SpriteLab {
   }
 
   /**
-   * Re-run the current program inside the already-created p5 instance: clear
-   * sprites, rebuild the interpreter with the latest code, re-run setup, and
-   * keep the draw loop going. Synchronous (no async preload), so it can't race
-   * with a teardown.
+   * Re-run the current program inside the already-created p5 instance: refresh
+   * preloaded images, clear sprites, rebuild the interpreter with the latest
+   * code, re-run setup, and keep the draw loop going. Serialized through a
+   * queue so overlapping re-runs (rapid edits, scene jumps) can't interleave
+   * across the preload await.
    */
   rerun() {
+    this.rerunQueue_ = (this.rerunQueue_ || Promise.resolve()).then(() =>
+      this.doRerun_()
+    );
+    return this.rerunQueue_;
+  }
+
+  async doRerun_() {
     const p5 = this.p5Wrapper.p5;
     if (!p5) {
       this.execute();
       return;
     }
+    // p5 only preloads project images during the initial execute(); an image
+    // generated since then isn't in p5._predefinedSpriteAnimations, and the
+    // costume/background commands silently no-op on unknown names (e.g. a
+    // scene jump to a "set background" of a new image rendered white). The
+    // preload helper skips entries whose dataURI is already loaded, so this
+    // only fetches what's new.
+    await this.p5Wrapper.preloadSpriteImages(
+      getStore().getState().animationList
+    );
     p5.allSprites.removeSprites();
     if (this.JSInterpreter) {
       this.JSInterpreter.deinitialize();
