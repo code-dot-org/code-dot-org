@@ -210,6 +210,15 @@ export default class SpriteLab2Engine extends SpriteLab {
       this.JSInterpreter.deinitialize();
     }
     this.initInterpreter(false /* attachDebugger */);
+    // The classic engine builds a fresh p5 per run, so CoreLibrary's world-
+    // timer baseline of 0 is correct there. We reuse p5 across re-runs, where
+    // the world clock keeps counting — without a re-baseline, "at time N"
+    // events can never fire again after the first run. Reset (same as the
+    // reset-timer block) so N means "into this run" — and for scene jumps,
+    // "into this scene".
+    if (this.library?.commands?.resetTimer) {
+      this.library.commands.resetTimer.call(this.library);
+    }
     this.onP5Setup();
     this.p5Wrapper.setLoop(true);
     if (!this.isTickTimerRunning()) {
