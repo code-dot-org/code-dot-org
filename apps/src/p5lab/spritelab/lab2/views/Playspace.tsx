@@ -138,6 +138,14 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       if (!picking) {
         return;
       }
+      // The click belongs to the location picker alone — don't let it reach
+      // Blockly (or anything else) as a click/deselect too. selectLocation
+      // exits picking mode before the browser fires the trailing click event,
+      // so the click swallow is armed via a ref rather than the (already
+      // stale) picking flag.
+      e.stopPropagation();
+      e.preventDefault();
+      swallowNextClickRef.current = true;
       const coords = coordsFromEvent(e);
       if (coords) {
         // Update first so the block's live value matches the click point, then
@@ -147,6 +155,22 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       }
     },
     [picking, coordsFromEvent, dispatch]
+  );
+
+  // Swallow the whole gesture while picking: pointerdown (focus/selection
+  // side effects) and the browser-synthesized click after pointerup.
+  const swallowNextClickRef = useRef(false);
+  const swallowWhilePicking = useCallback(
+    (e: React.PointerEvent | React.MouseEvent) => {
+      if (picking || swallowNextClickRef.current) {
+        e.stopPropagation();
+        e.preventDefault();
+        if (e.type === 'click') {
+          swallowNextClickRef.current = false;
+        }
+      }
+    },
+    [picking]
   );
 
   // Only animate the move/scale when going directly between the two visible
@@ -222,9 +246,11 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           pointerEvents: mode === 'play' || picking ? 'auto' : 'none',
           cursor: picking ? 'crosshair' : undefined,
         }}
+        onPointerDown={swallowWhilePicking}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
         onPointerLeave={handlePointerLeave}
+        onClick={swallowWhilePicking}
       >
         {/* The id is hardcoded in P5Wrapper.startExecution. */}
         <div
