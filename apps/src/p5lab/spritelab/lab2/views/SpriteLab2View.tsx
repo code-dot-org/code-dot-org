@@ -6,6 +6,7 @@ import {Reducer} from 'redux';
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {LabProps} from '@cdo/apps/lab2/types';
+import setFooterVisibility from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/Footer/setFooterVisibility';
 import SourcesContainer, {
   useSources,
 } from '@cdo/apps/lab2/views/SourcesContainer';
@@ -110,6 +111,13 @@ const SpriteLab2View: React.FunctionComponent<{
       })
     );
   }, [dispatch, channelId, currentLevelId, scriptId]);
+
+  // This lab owns the full viewport; hide the server-rendered small footer
+  // (language selector + copyright) while it's mounted.
+  useEffect(() => {
+    setFooterVisibility(false);
+    return () => setFooterVisibility(true);
+  }, []);
 
   const sourcesRef = useRef(currentSources);
   useEffect(() => {
