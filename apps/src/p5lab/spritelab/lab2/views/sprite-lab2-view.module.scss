@@ -364,8 +364,16 @@ $tab-segment-height: $tab-item-height - 2px;
   height: 400px;
 }
 
-// Scene-jump transition: a black cover that fades out, so the hard cut to the
-// new scene happens under full black (scenes UI variant).
+// Scene-jump transition (scenes UI variant): sceneCover blanks the canvas the
+// instant a jump triggers and holds while the target loads; sceneFade takes
+// over when it lands and fades out, revealing the new scene.
+.sceneCover {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  pointer-events: none;
+}
+
 .sceneFade {
   position: absolute;
   inset: 0;

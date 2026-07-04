@@ -149,7 +149,10 @@ const SpriteLab2View: React.FunctionComponent<{
   const codeTabRef = useRef<CodeTabHandle>(null);
   const [engineReady, setEngineReady] = useState(false);
   const [animationsSeeded, setAnimationsSeeded] = useState(false);
-  // Scene-jump fade: incremented per jump; Playspace replays the fade.
+  // Scene-jump transition: the cover blanks the playspace to black the moment
+  // a jump is triggered (held while the target loads); fadeTrigger increments
+  // when the jump lands and Playspace plays the fade-from-black reveal.
+  const [jumpCover, setJumpCover] = useState(false);
   const [fadeTrigger, setFadeTrigger] = useState(0);
 
   // Scenes UI variant. Full scenes (with workspace sources) live here and in
@@ -316,10 +319,10 @@ const SpriteLab2View: React.FunctionComponent<{
 
   // Scenes UI variant: run one scene's program. The scene open in the Code tab
   // compiles from the live workspace; other scenes compile headless from their
-  // saved sources. withFade plays the fade-from-black (used for runtime jumps
-  // via the go-to-scene block, not for editor/tab switches).
+  // saved sources. Jump transitions (cover + fade) are driven by the engine's
+  // scene-jump lifecycle callbacks, not here — editor/tab switches don't fade.
   const runScene = useCallback(
-    (sceneId: string | null, withFade = false) => {
+    (sceneId: string | null) => {
       const engine = engineRef.current;
       const scene = scenesRef.current.find(s => s.id === sceneId);
       if (!engine || !scene) {
@@ -341,9 +344,6 @@ const SpriteLab2View: React.FunctionComponent<{
         // A scene that fails to compile shouldn't kill the jump entirely;
         // run it as an empty scene.
         console.error('Failed to compile scene', scene.id, e);
-      }
-      if (withFade) {
-        setFadeTrigger(t => t + 1);
       }
       dispatch(setIsRunning(true));
       engine.runProgram(code);
@@ -443,7 +443,6 @@ const SpriteLab2View: React.FunctionComponent<{
           ])
         ),
       };
-      setFadeTrigger(t => t + 1);
       dispatch(setIsRunning(true));
       engine.runProgram(code);
     },
@@ -516,7 +515,7 @@ const SpriteLab2View: React.FunctionComponent<{
       if (engine) {
         engine.onGoToScene = (sceneId: string) => {
           if (scenesRef.current.some(s => s.id === sceneId)) {
-            runSceneRef.current(sceneId, true /* withFade */);
+            runSceneRef.current(sceneId);
             return;
           }
           const external = currentExternalProjectRef.current;
@@ -529,6 +528,16 @@ const SpriteLab2View: React.FunctionComponent<{
         };
         engine.onGoToExternalScene = (key: string) =>
           runExternalSceneRef.current(key);
+        // Jump transition: black out the playspace the moment a jump block
+        // fires, hold while the target loads, and play the fade-from-black
+        // when it lands (the cover and the fade's opaque first frame swap in
+        // the same commit, so there's no flash).
+        engine.onSceneJumpStart = () => setJumpCover(true);
+        engine.onSceneJumpLand = () => {
+          setFadeTrigger(t => t + 1);
+          setJumpCover(false);
+        };
+        engine.onSceneJumpCancel = () => setJumpCover(false);
       }
       runProgram();
     }
@@ -726,6 +735,7 @@ const SpriteLab2View: React.FunctionComponent<{
       <Playspace
         mode={playspaceMode}
         fadeTrigger={fadeTrigger}
+        covered={jumpCover}
         loading={externalLoading}
       />
 

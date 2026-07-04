@@ -25,6 +25,9 @@ interface PlayspaceProps {
   // Scenes UI variant: increment to play a quick fade-in-from-black over the
   // canvas (used when the go-to-scene block jumps scenes). 0 = never faded.
   fadeTrigger?: number;
+  // Hold a solid black cover over the canvas (from a jump trigger until the
+  // target scene lands, when the fade takes over).
+  covered?: boolean;
   // Show the loading overlay (delayed fade-in, so quick loads never flash a
   // spinner). Used while fetching an external project.
   loading?: boolean;
@@ -40,6 +43,7 @@ interface PlayspaceProps {
 const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   mode,
   fadeTrigger = 0,
+  covered = false,
   loading = false,
 }) => {
   const overlayRef = useRef<HTMLDivElement>(null);
@@ -162,6 +166,8 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           id="divGameLab"
           className={moduleStyles.playspaceCanvas}
         />
+        {/* Solid black while a scene jump is loading its target. */}
+        {covered && <div className={moduleStyles.sceneCover} />}
         {/* Keyed so each scene jump restarts the fade-from-black animation. */}
         {fadeTrigger > 0 && (
           <div key={fadeTrigger} className={moduleStyles.sceneFade} />

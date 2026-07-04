@@ -69,6 +69,12 @@ export default class SpriteLab2Engine extends SpriteLab {
     // the program).
     this.onGoToScene = null;
     this.onGoToExternalScene = null;
+    // Scene-jump lifecycle, for the view's black cover + fade: start fires
+    // synchronously with the triggering block, land when the target scene's
+    // program starts, cancel when a jump aborts.
+    this.onSceneJumpStart = null;
+    this.onSceneJumpLand = null;
+    this.onSceneJumpCancel = null;
     // When set, the next re-runs preload from this serialized animation list
     // instead of the project's own (used while running an external project's
     // scenes, whose images live in their animation list).
@@ -129,6 +135,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     }
     this.sceneJumpInFlight_ = true;
     this.stopTickTimer();
+    if (this.onSceneJumpStart) {
+      this.onSceneJumpStart();
+    }
     return true;
   }
 
@@ -144,6 +153,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.sceneJumpInFlight_ = false;
     if (this.p5Wrapper.p5 && !this.isTickTimerRunning()) {
       this.startTickTimer();
+    }
+    if (this.onSceneJumpCancel) {
+      this.onSceneJumpCancel();
     }
   }
 
@@ -340,9 +352,13 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onP5Setup();
     this.p5Wrapper.setLoop(true);
     // A new program is running: any pending scene jump has landed.
+    const jumpLanded = this.sceneJumpInFlight_;
     this.sceneJumpInFlight_ = false;
     if (!this.isTickTimerRunning()) {
       this.startTickTimer();
+    }
+    if (jumpLanded && this.onSceneJumpLand) {
+      this.onSceneJumpLand();
     }
   }
 
