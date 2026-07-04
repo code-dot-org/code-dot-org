@@ -71,6 +71,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     // instead of the project's own (used while running an external project's
     // scenes, whose images live in their animation list).
     this.preloadAnimationsOverride = null;
+    // Guards against overlapping execute() calls (see runProgram/onP5Setup).
+    this.executeInFlight_ = false;
+    this.executeStartedAt_ = 0;
+    this.rerunAfterExecute_ = false;
   }
 
   /**
@@ -185,10 +189,47 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (code !== undefined) {
       this.setCode(code);
     }
+    // While the initial execute()'s async preload is pending, a second
+    // execute() would tear down state the pending preload callback still
+    // runs against (crashing in the interpreter's getScope). Defer: the
+    // in-flight run completes, then re-runs with the latest code. The
+    // timestamp is a safety valve so a run that never completes (e.g. a
+    // parse failure aborted it) can't wedge the engine.
+    if (this.executeInFlight_ && Date.now() - this.executeStartedAt_ < 15000) {
+      this.rerunAfterExecute_ = true;
+      return;
+    }
     if (this.p5Wrapper.p5 && !this.p5Wrapper.p5decrementPreload) {
       this.rerun();
     } else {
+      this.executeInFlight_ = true;
+      this.executeStartedAt_ = Date.now();
       this.execute();
+    }
+  }
+
+  /**
+   * @override
+   * Runs when p5's preload phase completes — possibly long after the run that
+   * started it, and (because preload is async) possibly after a teardown left
+   * the interpreter non-runnable. Executing then crashes in the interpreter's
+   * getScope; skip instead. Overlap is also prevented in runProgram — this is
+   * the backstop.
+   */
+  onP5Setup() {
+    const interpreterRunnable =
+      !this.JSInterpreter ||
+      (this.JSInterpreter.initialized() &&
+        this.JSInterpreter.interpreter.stateStack);
+    if (!interpreterRunnable) {
+      this.executeInFlight_ = false;
+      return;
+    }
+    super.onP5Setup();
+    this.executeInFlight_ = false;
+    if (this.rerunAfterExecute_) {
+      this.rerunAfterExecute_ = false;
+      this.rerun();
     }
   }
 
