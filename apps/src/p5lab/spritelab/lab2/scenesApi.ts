@@ -35,6 +35,16 @@ export function parseExternalSceneKey(
   return {channel: key.slice(0, i), sceneId: key.slice(i + 1)};
 }
 
+// Dropdown options for a set of external scene refs.
+export function toExternalSceneOptions(
+  refs: ExternalSceneRef[]
+): {key: string; label: string}[] {
+  return refs.map(ref => ({
+    key: externalSceneKey(ref.channel, ref.sceneId),
+    label: `${ref.sceneName} — ${ref.ownerName} · #${ref.channel.slice(0, 6)}`,
+  }));
+}
+
 export async function fetchSectionScenes(
   levelId: number | string
 ): Promise<ExternalSceneRef[]> {

@@ -301,7 +301,23 @@ export default class SpriteLab2Engine extends SpriteLab {
   // (e.g. a background asset 404) never decrements p5._preloadCount, leaving the
   // engine stuck in the preload phase forever.
   preloadLabAssets() {
-    return this.preloadSpriteImages_();
+    // Preload wedges are invisible (the playspace just stays an empty box):
+    // whenAnimationsAreReady() waits for every animation's image fetch, and a
+    // single failed asset never resolves it. Surface what it's stuck on.
+    const watchdog = setTimeout(() => {
+      const list = getStore().getState().animationList;
+      const pending = list.orderedKeys
+        .filter(key => !list.propsByKey[key]?.loadedFromSource)
+        .map(key => list.propsByKey[key]?.name || key);
+      if (pending.length) {
+        console.warn(
+          'SpriteLab2: still waiting on animation image loads after 8s:',
+          pending.join(', '),
+          '— check the Network tab for failing asset requests.'
+        );
+      }
+    }, 8000);
+    return this.preloadSpriteImages_().finally(() => clearTimeout(watchdog));
   }
 
   // --- Overrides that sever the global studioApp() singleton ---

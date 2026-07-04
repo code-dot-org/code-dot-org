@@ -22,7 +22,10 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import {compileWorkspaceSource} from '../blockly/setup';
+import {
+  compileWorkspaceSource,
+  setExternalSceneRefreshHandler,
+} from '../blockly/setup';
 import defaultSources from '../defaultSources.json';
 import {SCENES_UI_VARIANT} from '../experiments';
 import spriteLab2Reducer, {
@@ -37,10 +40,10 @@ import spriteLab2Reducer, {
 import {
   collectSavedExternalKeys,
   ExternalProject,
-  externalSceneKey,
   fetchExternalProject,
   fetchSectionScenes,
   parseExternalSceneKey,
+  toExternalSceneOptions,
 } from '../scenesApi';
 import SpriteLab2Engine from '../SpriteLab2Engine';
 import {
@@ -201,22 +204,12 @@ const SpriteLab2View: React.FunctionComponent<{
     // background. A slow/hung API must never blank the lab, so the gated path
     // also times out into placeholder options.
     const savedExternalKeys = collectSavedExternalKeys(scenes);
-    const toOptions = (
-      refs: Awaited<ReturnType<typeof fetchSectionScenes>>
-    ): ExternalSceneOption[] =>
-      refs.map(ref => ({
-        key: externalSceneKey(ref.channel, ref.sceneId),
-        label: `${ref.sceneName} — ${ref.ownerName} · #${ref.channel.slice(
-          0,
-          6
-        )}`,
-      }));
     if (savedExternalKeys.length === 0) {
       setAnimationsSeeded(true);
       fetchSectionScenes(levelProperties.id)
         .then(refs => {
           if (!cancelled) {
-            dispatch(setExternalScenes(toOptions(refs)));
+            dispatch(setExternalScenes(toExternalSceneOptions(refs)));
           }
         })
         .catch(e => console.warn('section scenes unavailable', e));
@@ -231,7 +224,7 @@ const SpriteLab2View: React.FunctionComponent<{
             fetchSectionScenes(levelProperties.id),
             timeout,
           ]);
-          options = toOptions(refs);
+          options = toExternalSceneOptions(refs);
         } catch (e) {
           console.warn('section scenes unavailable', e);
         }
@@ -453,27 +446,31 @@ const SpriteLab2View: React.FunctionComponent<{
     [dispatch, compileExternalScene]
   );
 
-  // Handle the go-to-external-scene block: fetch (and cache) the classmate's
-  // project, then run the target scene. The playspace shows a delayed-fade-in
-  // spinner while the fetch is slow.
+  // Handle the go-to-external-scene block: fetch the classmate's project
+  // fresh — their scenes may have changed while this lab has been open — and
+  // run the target scene. The last good copy is kept only as a fallback when
+  // the fetch fails. The playspace shows a delayed-fade-in spinner while the
+  // fetch is slow.
   const runExternalScene = useCallback(
     async (key: string) => {
       const parsed = parseExternalSceneKey(key);
       if (!parsed) {
         return;
       }
-      let project = externalProjectsRef.current.get(parsed.channel);
-      if (!project) {
-        setExternalLoading(true);
-        try {
-          project = await fetchExternalProject(parsed.channel);
-          externalProjectsRef.current.set(parsed.channel, project);
-        } catch (e) {
+      setExternalLoading(true);
+      let project: ExternalProject | undefined;
+      try {
+        project = await fetchExternalProject(parsed.channel);
+        externalProjectsRef.current.set(parsed.channel, project);
+      } catch (e) {
+        project = externalProjectsRef.current.get(parsed.channel);
+        if (!project) {
           console.error('Failed to load external scene', key, e);
           return;
-        } finally {
-          setExternalLoading(false);
         }
+        console.warn('Using last-loaded copy of external scene', key, e);
+      } finally {
+        setExternalLoading(false);
       }
       runExternalProjectScene(project, parsed.sceneId);
     },
@@ -483,6 +480,26 @@ const SpriteLab2View: React.FunctionComponent<{
   runExternalSceneRef.current = runExternalScene;
   const runExternalProjectSceneRef = useRef(runExternalProjectScene);
   runExternalProjectSceneRef.current = runExternalProjectScene;
+
+  // The go-to-external-scene dropdown re-fetches the section list every time
+  // it opens, so scenes classmates add while this lab is open show up.
+  useEffect(() => {
+    if (!SCENES_UI_VARIANT) {
+      return;
+    }
+    setExternalSceneRefreshHandler(async () => {
+      const refs = await fetchSectionScenes(levelProperties.id);
+      const options = toExternalSceneOptions(refs);
+      const known = new Set(options.map(o => o.key));
+      collectSavedExternalKeys(scenesRef.current).forEach(key => {
+        if (!known.has(key)) {
+          options.push({key, label: `(unavailable) #${key.slice(0, 10)}`});
+        }
+      });
+      dispatch(setExternalScenes(options));
+    });
+    return () => setExternalSceneRefreshHandler(null);
+  }, [levelProperties.id, dispatch]);
 
   // Start the live preview once the engine is ready, and wire the scene-jump
   // blocks. A plain go-to-scene inside a running external scene resolves

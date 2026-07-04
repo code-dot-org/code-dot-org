@@ -58,13 +58,41 @@ function sceneMenuOptions(): [string, string][] {
 export const GO_TO_EXTERNAL_SCENE_BLOCK_TYPE = 'spritelab2_goToExternalScene';
 
 // Options for the go-to-external-scene block: [label, "<channel>:<sceneId>"].
-// Populated from the section-scenes API into redux before blocks load.
+// Populated from the section-scenes API into redux before blocks load, and
+// refreshed each time the dropdown is opened (see ExternalSceneDropdown).
 function externalSceneMenuOptions(): [string, string][] {
   const options = getStore().getState().spriteLab2?.externalScenes || [];
   if (options.length === 0) {
     return [['no scenes shared with you', '']];
   }
   return options.map((o: {key: string; label: string}) => [o.label, o.key]);
+}
+
+// The view registers a handler that re-fetches section scenes into redux, so
+// the dropdown can show classmates' scenes added while the lab is open.
+let externalSceneRefreshHandler: (() => Promise<void>) | null = null;
+export function setExternalSceneRefreshHandler(
+  handler: (() => Promise<void>) | null
+): void {
+  externalSceneRefreshHandler = handler;
+}
+
+// A dropdown whose options come from other students' live projects: refresh
+// the list from the server on every open. The menu render is deferred briefly
+// (capped, so a slow API degrades to the last-known list instead of blocking
+// the click).
+class ExternalSceneDropdown extends BlocklyCore.FieldDropdown {
+  protected showEditor_(e?: MouseEvent) {
+    const open = () => super.showEditor_(e);
+    if (!externalSceneRefreshHandler) {
+      open();
+      return;
+    }
+    const timeout = new Promise<void>(resolve => setTimeout(resolve, 1200));
+    Promise.race([externalSceneRefreshHandler().catch(() => {}), timeout])
+      .then(open)
+      .catch(open);
+  }
 }
 
 function installSceneBlocks(): void {
@@ -93,7 +121,7 @@ function installSceneBlocks(): void {
       this.appendDummyInput()
         .appendField('go to external scene')
         .appendField(
-          new BlocklyCore.FieldDropdown(externalSceneMenuOptions),
+          new ExternalSceneDropdown(externalSceneMenuOptions),
           'SCENE'
         );
       this.setPreviousStatement(true);
