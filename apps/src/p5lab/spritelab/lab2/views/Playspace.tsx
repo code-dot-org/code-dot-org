@@ -31,6 +31,10 @@ interface PlayspaceProps {
   // Show the loading overlay (delayed fade-in, so quick loads never flash a
   // spinner). Used while fetching an external project.
   loading?: boolean;
+  // The engine's current default sprite size (canvas units), for sizing the
+  // location-picker's hover ghost. Read at hover time — helper libraries can
+  // change it per run.
+  getDefaultSpriteSize?: () => number;
 }
 
 /**
@@ -45,6 +49,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   fadeTrigger = 0,
   covered = false,
   loading = false,
+  getDefaultSpriteSize,
 }) => {
   const overlayRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLDivElement>(null);
@@ -56,6 +61,45 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   const picking = useAppSelector(state =>
     isPickingLocation(state.locationPicker)
   );
+
+  // Hover ghost (legacy Sprite Lab behavior): while picking, preview the
+  // sprite being placed at the hovered location. The costume comes from the
+  // selected block — the user just clicked the pin on it — when that block
+  // carries a costume dropdown (e.g. "make new sprite at"); location pickers
+  // on costume-less blocks fall back to crosshair only.
+  const [hoverCoords, setHoverCoords] = useState<{x: number; y: number} | null>(
+    null
+  );
+  const [ghostCostume, setGhostCostume] = useState<string | null>(null);
+  useEffect(() => {
+    if (!picking) {
+      setHoverCoords(null);
+      setGhostCostume(null);
+      return;
+    }
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const selected = (Blockly as any).getSelected?.();
+    const costumeValue =
+      selected?.getFieldValue?.('ANIMATION_NAME') ||
+      selected?.getParent?.()?.getFieldValue?.('ANIMATION_NAME');
+    // Costume field values are quoted names, e.g. '"owl_1"'.
+    setGhostCostume(
+      typeof costumeValue === 'string'
+        ? costumeValue.replace(/^"|"$/g, '')
+        : null
+    );
+  }, [picking]);
+  const ghostImage = useAppSelector(state => {
+    if (!picking || !ghostCostume) {
+      return null;
+    }
+    const list = state.animationList;
+    const key = list.orderedKeys.find(
+      k => list.propsByKey[k]?.name === ghostCostume
+    );
+    const props = key && list.propsByKey[key];
+    return props ? props.dataURI || props.sourceUrl : null;
+  });
 
   // calculateOffsetCoordinates maps a screen point to the canvas's intrinsic
   // 400x400 space via getBoundingClientRect vs offsetWidth, so it's correct
@@ -79,10 +123,15 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       const coords = coordsFromEvent(e);
       if (coords) {
         dispatch(updateLocation(coords) as unknown as AnyAction);
+        setHoverCoords(coords);
       }
     },
     [picking, coordsFromEvent, dispatch]
   );
+
+  const handlePointerLeave = useCallback(() => {
+    setHoverCoords(null);
+  }, []);
 
   const handlePointerUp = useCallback(
     (e: React.PointerEvent) => {
@@ -175,6 +224,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         }}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
+        onPointerLeave={handlePointerLeave}
       >
         {/* The id is hardcoded in P5Wrapper.startExecution. */}
         <div
@@ -182,6 +232,27 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           id="divGameLab"
           className={moduleStyles.playspaceCanvas}
         />
+        {/* Location-picker hover ghost: preview the sprite being placed at
+            the hovered spot (box coordinates are canvas coordinates). */}
+        {picking &&
+          hoverCoords &&
+          ghostImage &&
+          (() => {
+            const ghostSize = getDefaultSpriteSize?.() || 100;
+            return (
+              <img
+                src={ghostImage}
+                alt=""
+                className={moduleStyles.locationGhost}
+                style={{
+                  left: hoverCoords.x - ghostSize / 2,
+                  top: hoverCoords.y - ghostSize / 2,
+                  width: ghostSize,
+                  height: ghostSize,
+                }}
+              />
+            );
+          })()}
         {/* Solid black while a scene jump is loading its target. */}
         {covered && <div className={moduleStyles.sceneCover} />}
         {/* Keyed so each scene jump restarts the fade-from-black animation. */}

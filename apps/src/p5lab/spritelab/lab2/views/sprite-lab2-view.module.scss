@@ -365,6 +365,15 @@ $tab-segment-height: $tab-item-height - 2px;
   height: 400px;
 }
 
+// Location-picker hover ghost: the sprite being placed, previewed at the
+// hovered spot.
+.locationGhost {
+  position: absolute;
+  opacity: 0.6;
+  object-fit: contain;
+  pointer-events: none;
+}
+
 // Scene-jump transition (scenes UI variant): sceneCover blanks the canvas the
 // instant a jump triggers and holds while the target loads; sceneFade takes
 // over when it lands and fades out, revealing the new scene.

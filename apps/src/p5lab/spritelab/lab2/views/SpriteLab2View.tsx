@@ -666,6 +666,13 @@ const SpriteLab2View: React.FunctionComponent<{
   const playspaceMode: PlayspaceMode =
     activeTab === 'Play' ? 'play' : activeTab === 'Code' ? 'preview' : 'hidden';
 
+  // Sizes the location-picker's hover ghost like the sprite the program would
+  // create (helper libraries can change the default per run).
+  const getDefaultSpriteSize = useCallback(
+    () => engineRef.current?.library?.defaultSpriteSize || 100,
+    []
+  );
+
   // Scenes variant: the workspace opens on the default scene's blocks (the
   // seed effect makes scenes[0] active before the Code tab mounts).
   const initialWorkspaceSource = SCENES_UI_VARIANT
@@ -737,6 +744,7 @@ const SpriteLab2View: React.FunctionComponent<{
         fadeTrigger={fadeTrigger}
         covered={jumpCover}
         loading={externalLoading}
+        getDefaultSpriteSize={getDefaultSpriteSize}
       />
 
       {/* Lab2 Guide overlay (Music-style), driven by the level's guideMode.
