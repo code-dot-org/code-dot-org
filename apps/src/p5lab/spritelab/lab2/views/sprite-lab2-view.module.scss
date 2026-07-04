@@ -39,13 +39,17 @@
 
 // The Code tab + scene picker as one segmented control (scenes UI variant):
 // the group carries the tab pill's shape and active background; the button
-// and select inside are transparent segments split by a divider.
+// and select inside are transparent segments split by a divider. Both
+// segments get the same explicit height so their text shares a centerline.
+$tab-segment-height: 32px;
+
 .tabGroup {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   border-radius: 4px 4px 0 0;
 
   .tab {
+    height: $tab-segment-height;
     border-radius: 4px 0 0 0;
   }
 
@@ -60,15 +64,17 @@
 }
 
 .sceneSelect {
-  align-self: stretch;
+  height: $tab-segment-height;
   max-width: 160px;
-  padding: 0 8px;
+  margin: 0;
+  padding: 0 10px;
   border: none;
   border-left: 1px solid var(--borders-neutral-primary);
   border-radius: 0 4px 0 0;
   background: transparent;
   color: var(--text-neutral-primary);
-  font-size: 13px;
+  // Match the tab buttons.
+  font-size: 14px;
   cursor: pointer;
 
   &:disabled {
