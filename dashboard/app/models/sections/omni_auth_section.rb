@@ -65,8 +65,19 @@ class OmniAuthSection < Section
     # Unarchive archived sections, even if there are no changes
     oauth_section.update(hidden: false) if oauth_section.hidden
 
-    oauth_students = students.map do |student|
-      User.from_omniauth(student, {'user_type' => User::TYPE_STUDENT, 'roster_synced' => true})
+    oauth_students = students.filter_map do |student|
+      user = User.from_omniauth(student, {'user_type' => User::TYPE_STUDENT, 'roster_synced' => true})
+      unless user&.persisted?
+        Observability::Errors.capture_message(
+          'OmniAuthSection: skipping student who failed to persist during roster sync',
+          extra: {
+            student_provider: student.provider,
+            errors: user&.errors&.full_messages,
+          }
+        )
+        next
+      end
+      user
     end
 
     oauth_section.set_exact_student_list(oauth_students)

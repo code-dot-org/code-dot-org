@@ -68,6 +68,10 @@ export type OnRunFunction = (
 ) => Promise<void>;
 export type OnStopFunction = () => void;
 export type SendConsoleInputFunction = (input: string) => void;
+export type SendTypedInputMessageFunction = (
+  messageType: string,
+  message: string
+) => void;
 
 export type ReducerAction = {
   type: string;

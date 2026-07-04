@@ -11568,7 +11568,6 @@ __metadata:
     css-loader: "npm:^6.2.0"
     dapjs: "npm:^2.3.0"
     dedent: "npm:^1.5.1"
-    details-element-polyfill: "https://github.com/javan/details-element-polyfill"
     ejs: "npm:^3.1.10"
     enzyme: "npm:^3.9.0"
     eslint: "npm:^8.56.0"
@@ -11710,7 +11709,6 @@ __metadata:
     react-typist: "npm:^2.0.5"
     react-virtualized: "npm:^9.18.5"
     react-virtualized-select: "npm:^3.0.1"
-    react-with-context: "npm:^2.0.0"
     reactabular-sticky: "npm:^8.14.0"
     reactabular-table: "npm:^8.14.0"
     reactabular-virtualized: "npm:^8.18.0"
@@ -13397,7 +13395,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"create-react-class@npm:^15.5.1, create-react-class@npm:^15.5.x, create-react-class@npm:^15.6.0":
+"create-react-class@npm:^15.5.1, create-react-class@npm:^15.5.x":
   version: 15.6.3
   resolution: "create-react-class@npm:15.6.3"
   dependencies:
@@ -14406,13 +14404,6 @@ canvg@gabelerner/canvg:
   version: 1.2.0
   resolution: "destroy@npm:1.2.0"
   checksum: 10/0acb300b7478a08b92d810ab229d5afe0d2f4399272045ab22affa0d99dbaf12637659411530a6fcd597a9bdac718fc94373a61a95b4651bbc7b83684a565e38
-  languageName: node
-  linkType: hard
-
-"details-element-polyfill@https://github.com/javan/details-element-polyfill":
-  version: 1.1.0
-  resolution: "details-element-polyfill@https://github.com/javan/details-element-polyfill.git#commit=25f3fa9b42c2dbe59e45cd0778ee7c425263d9c1"
-  checksum: 10/2892c90f924ef304a4d89a008894875e6249310f0b442cefd3326c04b88cbc421864cae20a649b9748c1d65cbfaa9b46c5bbb32ba9a2ef80b6cf68c6e5334797
   languageName: node
   linkType: hard
 
@@ -26359,29 +26350,6 @@ canvg@gabelerner/canvg:
     react: ^15.3.0 || ^16.0.0-alpha
     react-dom: ^15.3.0 || ^16.0.0-alpha
   checksum: 10/4adab310f13951f2f466314fc39d5d72de45f8c095e728d271882d9d10209b216940ecaa7b2dc8e64cac402236776bd348ec9f96e8d0a30ccb5de299f8b459b4
-  languageName: node
-  linkType: hard
-
-"react-with-context@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "react-with-context@npm:2.0.0"
-  dependencies:
-    "@types/react": "npm:^16.0.7"
-    react: "npm:^15.6.2"
-  checksum: 10/b51c3995737837640960c34b559e0cc5389d3de6bb5be072371efd72fcd48bd580dcfc1458719212079256d7ba0c9fed37fc5fce3d26c8b1c6e761969c00cd7d
-  languageName: node
-  linkType: hard
-
-"react@npm:^15.6.2":
-  version: 15.6.2
-  resolution: "react@npm:15.6.2"
-  dependencies:
-    create-react-class: "npm:^15.6.0"
-    fbjs: "npm:^0.8.9"
-    loose-envify: "npm:^1.1.0"
-    object-assign: "npm:^4.1.0"
-    prop-types: "npm:^15.5.10"
-  checksum: 10/8c55337715dc20a12393f1381bafd9a2d2452d7245ccfb5ea2bc1181c2dde4cc6b6319e1ae56fdffe58f3f9e7da95f0e6b45c79e7982789378b8eafa41a6016f
   languageName: node
   linkType: hard
 

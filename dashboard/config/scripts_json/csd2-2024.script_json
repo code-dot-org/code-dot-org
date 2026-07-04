@@ -25,13 +25,46 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "supported_locales": [
+        "ar-SA",
+        "cs-CZ",
+        "de-DE",
+        "es-ES",
+        "es-LA",
+        "es-MX",
+        "fa-IR",
+        "fr-FR",
+        "gu-IN",
+        "hi-IN",
+        "id-ID",
+        "it-IT",
+        "ja-JP",
+        "kn-IN",
+        "ko-KR",
+        "mr-IN",
+        "or-IN",
+        "pl-PL",
+        "pt-BR",
+        "pt-PT",
+        "ro-RO",
+        "ru-RU",
+        "sk-SK",
+        "ta-IN",
+        "te-IN",
+        "th-TH",
+        "tr-TR",
+        "uk-UA",
+        "zh-CN",
+        "zh-TW"
+      ],
       "tts": true,
       "version_year": "2024",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-05 00:06:34 UTC",
+    "serialized_at": "2026-06-25 15:32:05 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -14613,6 +14646,9 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

@@ -72,7 +72,6 @@ Feature: Self Paced PL Instructor in Training - Universal Instructor
     And element "#instructor_in_training_tag" is not visible
 
   @no_mobile
-  @properties_encryption_key
   Scenario: View Instructor In Training LevelGroup Level as Universal Instructor
     Given I create a teacher named "Universal Instructor"
     And I sign in as "Universal Instructor" and go home

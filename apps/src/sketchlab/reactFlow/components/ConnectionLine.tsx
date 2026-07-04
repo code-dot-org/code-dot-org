@@ -11,6 +11,7 @@ import {getMarkerId} from '@xyflow/system';
 import React from 'react';
 
 import {type EdgeTypeValue} from '../elementToolbars/toolbarPalettes';
+import {REACT_FLOW_CLASS} from '../reactFlowSelectors';
 import {defaultLineEdgeFields} from '../utils/lineEdges';
 
 interface GhostPathParams {
@@ -77,7 +78,7 @@ export default function ConnectionLine({
     <path
       d={path}
       fill="none"
-      className="react-flow__connection-path"
+      className={REACT_FLOW_CLASS.connectionPath}
       style={style}
       markerStart={markerUrl(startMarker)}
       markerEnd={markerUrl(endMarker)}

@@ -6943,7 +6943,7 @@ en:
 
             ## Did you know?
 
-            * Professional development is available to help you get started teaching AI Foundations. [**Click here**](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [**click here**](https://studio.code.org/courses/teaching-ai-foundations-2026) for our self-paced online option.
+            * Professional development is available to help you get started teaching AI Foundations. [**Click here**](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [**click here**](https://studio.code.org/courses/teaching-designing-and-building-with-ai-2026) for our self-paced online option.
 
             * This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
 
@@ -7508,7 +7508,13 @@ en:
           description_teacher: ''
           version_title: ''
         iste-2026:
-          title: ISTE
+          title: Inside a CodeAI Classroom
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        artificial-intelligence-foundations-india-2025:
+          title: artificial-intelligence-foundations-india-2025
           description_short: ''
           description_student: ''
           description_teacher: ''

@@ -3,6 +3,12 @@ import {
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 
+import {
+  REACT_FLOW_SELECTOR,
+  reactFlowEdgeSelector,
+  reactFlowNodeSelector,
+} from '../reactFlowSelectors';
+
 /**
  * Compare two nodes by position: top-to-bottom (y), then left-to-right (x).
  */
@@ -140,12 +146,12 @@ export function entriesMatch(a: TabOrderEntry, b: TabOrderEntry): boolean {
 
 /**
  * Resolve the focused React Flow node or edge from a DOM element by walking
- * up to the nearest `.react-flow__node` or `.react-flow__edge` wrapper.
+ * up to the nearest node or edge wrapper.
  */
 export function getEntryFromDOM(target: HTMLElement): TabOrderEntry | null {
-  const nodeEl = target.closest('.react-flow__node');
+  const nodeEl = target.closest(REACT_FLOW_SELECTOR.node);
   if (nodeEl) return {type: 'node', id: nodeEl.getAttribute('data-id')!};
-  const edgeEl = target.closest('.react-flow__edge');
+  const edgeEl = target.closest(REACT_FLOW_SELECTOR.edge);
   if (edgeEl) return {type: 'edge', id: edgeEl.getAttribute('data-id')!};
   return null;
 }
@@ -162,8 +168,8 @@ export function getElementForEntry(
 ): HTMLElement | null {
   const selector =
     entry.type === 'node'
-      ? `.react-flow__node[data-id="${entry.id}"]`
-      : `.react-flow__edge[data-id="${entry.id}"]`;
+      ? reactFlowNodeSelector(entry.id)
+      : reactFlowEdgeSelector(entry.id);
   return scope.querySelector<HTMLElement>(selector);
 }
 

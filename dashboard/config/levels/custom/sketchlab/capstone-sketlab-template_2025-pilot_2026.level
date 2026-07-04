@@ -23,7 +23,7 @@
             "data": {
               "shapeType": "rectangle",
               "label": "page /state",
-              "backgroundColor": "#b2f2bb",
+              "backgroundColor": "var(--sketchlab-bg-green)",
               "strokeColor": "#495057"
             },
             "measured": {
@@ -44,7 +44,7 @@
             },
             "data": {
               "text": "\n",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -63,7 +63,7 @@
             },
             "data": {
               "text": "Take your information from Milestone 1 above and map out the flow of your app system\n\nFocus on one user interaction at a time. If your app has multiple important interactions, you can add more flow rows..",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false
             },
@@ -82,7 +82,7 @@
             },
             "data": {
               "text": "MILESTONE 1: INTENT & SCOPE",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -107,7 +107,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-green)",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 669,
@@ -127,7 +127,7 @@
             },
             "data": {
               "text": "Audience & Goal",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -146,7 +146,7 @@
             },
             "data": {
               "text": "My app is for ... ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -166,7 +166,7 @@
             },
             "data": {
               "text": "It helps users ... ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -192,7 +192,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-blue)",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 721,
@@ -212,7 +212,7 @@
             },
             "data": {
               "text": "Pages / States List",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -231,7 +231,7 @@
             },
             "data": {
               "text": "Page Example:\n- Home\n",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -254,7 +254,7 @@
             },
             "data": {
               "text": "State Example:\n- Empty / Error\n",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -283,7 +283,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-yellow)",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 765,
@@ -303,7 +303,7 @@
             },
             "data": {
               "text": "User Actions List",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -322,7 +322,7 @@
             },
             "data": {
               "text": "Example:\n- When the user selects a category, the app should filter\nby that category\n",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -342,7 +342,7 @@
             },
             "data": {
               "text": "What exists at a high level — who is it for, what pages or states exist, and what do users do?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false
             },
@@ -361,7 +361,7 @@
             },
             "data": {
               "text": "MILESTONE 2: SYSTEM EXPLANATION",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -380,7 +380,7 @@
             },
             "data": {
               "text": "What will exist at a high level - who is it for, what screens/states exist, what do users do?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false
             },
@@ -399,7 +399,7 @@
             },
             "data": {
               "text": "When the user __, the app should __.",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -425,7 +425,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-green)",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 523,
@@ -451,8 +451,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "1. App Pages / States",
-              "backgroundColor": "#b2f2bb",
-              "strokeColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -473,7 +473,7 @@
             },
             "data": {
               "text": "\n",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -498,7 +498,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-blue)",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 524,
@@ -524,8 +524,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "2. User Actions",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -546,7 +546,7 @@
             },
             "data": {
               "text": "\n",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -570,7 +570,7 @@
             "data": {
               "shapeType": "rectangle",
               "label": "User does what?",
-              "backgroundColor": "#a5d8ff",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
               "strokeColor": "#495057"
             },
             "measured": {
@@ -591,7 +591,7 @@
             },
             "data": {
               "text": "\n",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -616,7 +616,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-yellow)",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 545,
@@ -642,8 +642,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "3. What App Checks/Decides\n(logic or rules)",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -695,8 +695,8 @@
             "data": {
               "shapeType": "diamond",
               "label": "?",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#f08c00",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-yellow)",
               "fontSize": "large"
             },
             "measured": {
@@ -723,7 +723,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-red)",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 608,
@@ -749,8 +749,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "4. What the User Sees",
-              "backgroundColor": "#ffc9c9",
-              "strokeColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-red)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -771,7 +771,7 @@
             },
             "data": {
               "text": "\n",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -795,7 +795,7 @@
             "data": {
               "shapeType": "rectangle",
               "label": "User sees what?",
-              "backgroundColor": "#ffc9c9",
+              "backgroundColor": "var(--sketchlab-bg-red)",
               "strokeColor": "#495057"
             },
             "measured": {
@@ -816,7 +816,7 @@
             },
             "data": {
               "text": "\n",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -841,7 +841,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-yellow)",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 735,
@@ -866,8 +866,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 736,
@@ -887,7 +887,7 @@
             },
             "data": {
               "text": "Optional: Local Data (already in app)",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -912,7 +912,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-yellow)",
-              "strokeColor": "#1e1e1e"
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 831,
@@ -937,8 +937,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 830,
@@ -958,7 +958,7 @@
             },
             "data": {
               "text": "Optional: External Data",
-              "fontColor": "#000000",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -977,7 +977,7 @@
             },
             "data": {
               "text": "What data does your app already have at this moment?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false
             },
@@ -996,7 +996,7 @@
             },
             "data": {
               "text": "Example:\n- list of items\n- user selection stored in variables",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -1017,7 +1017,7 @@
             },
             "data": {
               "text": "Do any actions above require data from outside your app?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false
             },
@@ -1036,7 +1036,7 @@
             },
             "data": {
               "text": "Example:\n- API request",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false,
               "textAlign": "left"
@@ -1056,7 +1056,7 @@
             },
             "data": {
               "text": "Note: This is only needed if your project includes an API",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "medium",
               "showHandles": false
             },
@@ -1075,7 +1075,7 @@
             },
             "data": {
               "text": "Coding tip: Each flow you sketch in this Milestone workspace \ncan become a piece of logic you implement in Milestone 3 (for example, an event handler or conditional).",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },

@@ -4,7 +4,7 @@ Feature: Announcement for AI Assessments
     Given I am a teacher
 
     # no announcement on non-ai units
-    When I am on "http://studio.code.org/courses/flappy/units/1"
+    When I am on "http://studio.code.org/courses/ui-test-csf/units/1"
     Then I wait until element "#uitest-no-ai-assessments-announcement" is visible
 
     # announcement visible on ai unit

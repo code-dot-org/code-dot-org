@@ -11,7 +11,6 @@ import HttpClient from '../util/HttpClient';
 
 import AiDiffChat from './AiDiffChat';
 import ChatList from './ChatList';
-import AiDiffNotificationList from './notifications/AiDiffNotificationList';
 import {ChatThread, chatThreadValidator, Context} from './types';
 
 import style from './ai-differentiation.module.scss';
@@ -20,24 +19,23 @@ interface AiDiffWorkSpaceProps {
   context: Context;
   scriptName?: string;
   curriculumCourses: string[];
-  unreadNotificationCount: number;
   personalizationData?: PersonalizationData;
   setArtifactMessageId?: (id: number) => void;
   showSidebar?: boolean;
   onSidebarChatSelect?: () => void;
+  onViewThreads?: () => void;
 }
 
 const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   context,
   scriptName,
   curriculumCourses,
-  unreadNotificationCount,
   personalizationData,
   showSidebar = false,
   onSidebarChatSelect,
+  onViewThreads,
 }) => {
   const [threads, setThreads] = useState<ChatThread[]>();
-  const [showNotifications, setShowNotifications] = useState<boolean>(false);
 
   const dispatch = useAppDispatch();
 
@@ -65,23 +63,15 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
     dispatch(asyncLoadSectionData());
   }, [fetchThreads, dispatch]);
 
-  const aiPromptOutsideChatClicked = useCallback(
-    (label: string, prompt: string) => {
-      setShowNotifications(false);
-      dispatch(
-        fetchThreadMessages({
-          contextType: context.type,
-          thread: 0,
-          initialThreadPrompt: {
-            label: label,
-            prompt: prompt,
-          },
-          curriculumCourses: curriculumCourses,
-        })
-      );
-    },
-    [dispatch, context, curriculumCourses]
-  );
+  const handleNewChat = useCallback(() => {
+    dispatch(
+      fetchThreadMessages({
+        contextType: context.type,
+        thread: 0,
+        curriculumCourses: curriculumCourses,
+      })
+    );
+  }, [dispatch, context, curriculumCourses]);
 
   const drawerIsEnabled =
     experiments.isEnabled('ai-diff-drawer') ||
@@ -110,16 +100,14 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
           curriculumCourses={curriculumCourses}
         />
       )}
-      {showNotifications ? (
-        <AiDiffNotificationList aiPromptClick={aiPromptOutsideChatClicked} />
-      ) : (
-        <AiDiffChat
-          context={context}
-          scriptName={scriptName}
-          threadFetchCallback={fetchThreads}
-          personalizationData={personalizationData}
-        />
-      )}
+      <AiDiffChat
+        context={context}
+        scriptName={scriptName}
+        threadFetchCallback={fetchThreads}
+        onNewChat={handleNewChat}
+        onViewThreads={onViewThreads}
+        personalizationData={personalizationData}
+      />
     </div>
   );
 };
