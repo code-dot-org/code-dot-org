@@ -356,7 +356,8 @@ $tab-segment-height: $tab-item-height - 2px;
   height: 400px;
   transform-origin: 0 0;
   background: var(--background-neutral-secondary);
-  transition: transform 0.45s ease;
+  // Transitions are set inline: transform only animates between the two
+  // visible placements; opacity fades the box in on appearance.
 }
 
 .playspaceCanvas {

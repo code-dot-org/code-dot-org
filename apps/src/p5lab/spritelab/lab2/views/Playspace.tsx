@@ -101,13 +101,24 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   );
 
   // Only animate the move/scale when going directly between the two visible
-  // placements (Code preview <-> Play). Appearing from or disappearing to a tab
-  // without the playspace (Images/World) should be instant, not a slide.
+  // placements (Code preview <-> Play). Appearing from or disappearing to a
+  // tab without the playspace (Images/World) should be instant — and so
+  // should the first paint: until the ResizeObserver delivers a measurement,
+  // the transform is computed against a 0x0 overlay, and animating away from
+  // that stale position reads as the box sliding in from the left. The box
+  // stays transparent until measured and quickly fades in at its destination
+  // instead.
+  const measured = size.w > 0 && size.h > 0;
+  const wasMeasured = useRef(false);
   const prevMode = useRef<PlayspaceMode>(mode);
-  const animate = prevMode.current !== 'hidden' && mode !== 'hidden';
+  const animate =
+    wasMeasured.current && prevMode.current !== 'hidden' && mode !== 'hidden';
   useEffect(() => {
     prevMode.current = mode;
   }, [mode]);
+  useEffect(() => {
+    wasMeasured.current = measured;
+  }, [measured]);
 
   // Track the overlay's size so we can center/scale the canvas to fit.
   useEffect(() => {
@@ -151,7 +162,12 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         className={moduleStyles.playspaceBox}
         style={{
           transform,
-          transition: animate ? undefined : 'none',
+          // Fade in on appearance (first measurement or hidden -> visible);
+          // slide only between the two visible placements.
+          opacity: measured && mode !== 'hidden' ? 1 : 0,
+          transition: animate
+            ? 'transform 0.45s ease, opacity 0.18s ease-in'
+            : 'opacity 0.18s ease-in',
           // Interactive in Play, and while picking a location (so the preview
           // can be clicked even on the Code tab).
           pointerEvents: mode === 'play' || picking ? 'auto' : 'none',
