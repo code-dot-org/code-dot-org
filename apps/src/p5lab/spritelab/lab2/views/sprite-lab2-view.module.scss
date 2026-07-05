@@ -234,11 +234,14 @@ $tab-segment-height: $tab-item-height - 2px;
   width: 80px;
   height: 80px;
   border: 1px solid var(--borders-neutral-primary);
-  // Checkerboard so transparent sprites are visible.
-  background-image: linear-gradient(45deg, #ccc 25%, transparent 25%),
-    linear-gradient(-45deg, #ccc 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, #ccc 75%),
-    linear-gradient(-45deg, transparent 75%, #ccc 75%);
+  // Subtle checkerboard: enough to signal transparency without competing
+  // with the sprite (translucent grey works on light and dark themes).
+  $check: rgb(128 128 128 / 16%);
+
+  background-image: linear-gradient(45deg, $check 25%, transparent 25%),
+    linear-gradient(-45deg, $check 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, $check 75%),
+    linear-gradient(-45deg, transparent 75%, $check 75%);
   background-size: 16px 16px;
   background-position: 0 0, 0 8px, 8px -8px, -8px 0;
 

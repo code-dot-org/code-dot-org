@@ -1,6 +1,6 @@
 import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {AnyAction} from 'redux';
 
 import {
@@ -16,6 +16,7 @@ import {
   SpriteLab2ItemType,
   uploadAssetToProject,
 } from '../ai/items/itemGeneration';
+import {getTrimmedThumbnail, onTrimsUpdated} from '../imageTrim';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
@@ -117,6 +118,12 @@ const GenerateImagePane: React.FunctionComponent = () => {
     }))
   );
 
+  // Gallery thumbnails prefer the border-trimmed image (backgrounds aren't
+  // trimmed and fall through). Trims land as the engine preloads; re-render
+  // when they do.
+  const [, setTrimVersion] = useState(0);
+  useEffect(() => onTrimsUpdated(() => setTrimVersion(v => v + 1)), []);
+
   const handleDelete = useCallback(
     (key: string) => {
       dispatch(
@@ -207,7 +214,11 @@ const GenerateImagePane: React.FunctionComponent = () => {
             <div className={moduleStyles.imageThumb}>
               {(props?.dataURI || props?.sourceUrl) && (
                 <img
-                  src={props.dataURI || props.sourceUrl}
+                  src={
+                    getTrimmedThumbnail(props?.name) ||
+                    props.dataURI ||
+                    props.sourceUrl
+                  }
                   alt={props?.name || 'image'}
                 />
               )}
