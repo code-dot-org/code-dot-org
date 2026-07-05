@@ -135,10 +135,27 @@ const CodeTab = forwardRef<CodeTabHandle, CodeTabProps>(
         );
       }
 
+      // Variable naming (and function/behavior naming) prompts go through
+      // Blockly.customSimpleDialog, which the inject wrapper takes from these
+      // options — creating a variable crashes without one. Same minimal
+      // prompt-based dialog Music Lab uses.
+      const customSimpleDialog = (options: {
+        bodyText: string;
+        promptPrefill: string;
+        onCancel: (p1: string | null) => void;
+      }) => {
+        Blockly.dialog.prompt(
+          options.bodyText,
+          options.promptPrefill,
+          options.onCancel
+        );
+      };
+
       workspace.current = Blockly.inject(blocklyDiv, {
         toolbox,
         theme: theme === 'Dark' ? cdoDark : cdoTheme,
         trashcan: true,
+        customSimpleDialog,
       } as BlocklyCore.BlocklyOptions);
 
       // CDO Blockly shrinks the container by the workspace-header height to
