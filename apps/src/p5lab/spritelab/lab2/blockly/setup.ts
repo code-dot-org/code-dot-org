@@ -216,6 +216,43 @@ export const SPRITELAB2_EXTRA_SHARED_BLOCKS = [
       '}',
     ].join('\n'),
   },
+  {
+    name: 'spritelab2_patrollingLeftRight',
+    pool: 'spritelab2',
+    category: 'Behaviors',
+    config: {
+      func: 'patrollingLeftRight',
+      blockText: 'patrolling left and right',
+      returnType: 'Behavior',
+      style: 'behavior_blocks',
+    },
+    // Mirrors NativeSpriteLab's patrollingUpDown, on x. Its own direction
+    // property, so both patrols can ride one sprite.
+    helperCode: [
+      'function patrollingLeftRight(spriteId) {',
+      '  var behavior = function (spriteId) {',
+      "    if (getProp(spriteId, 'patrollingDirectionLR') == undefined) {",
+      "      setProp(spriteId, 'patrollingDirectionLR', 'right');",
+      '    }',
+      "    var direction = getProp(spriteId, 'patrollingDirectionLR');",
+      "    if (direction == 'right') {",
+      "      changePropBy(spriteId, 'x', 6);",
+      '    }',
+      "    if (direction == 'left') {",
+      "      changePropBy(spriteId, 'x', -6);",
+      '    }',
+      "    var x = getProp(spriteId, 'x');",
+      '    if (x <= 40) {',
+      "      setProp(spriteId, 'patrollingDirectionLR', 'right');",
+      '    }',
+      '    if (x >= 360) {',
+      "      setProp(spriteId, 'patrollingDirectionLR', 'left');",
+      '    }',
+      '  };',
+      "  return {func: behavior, name: 'patrollingLeftRight'};",
+      '}',
+    ].join('\n'),
+  },
 ] as unknown as BlockDefinition[];
 
 /**
@@ -250,6 +287,7 @@ const PREDEFINED_BEHAVIOR_BLOCKS = [
   'gamelab_patrollingUpDown',
   // Lab-owned (see SPRITELAB2_EXTRA_SHARED_BLOCKS).
   'spritelab2_movingLeft',
+  'spritelab2_patrollingLeftRight',
 ];
 
 /**
