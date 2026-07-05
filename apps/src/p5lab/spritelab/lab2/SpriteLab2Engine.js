@@ -360,12 +360,17 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (this.library?.commands?.resetTimer) {
       this.library.commands.resetTimer.call(this.library);
     }
-    this.onP5Setup();
-    this.p5Wrapper.setLoop(true);
-    // A new program is running: any pending scene jump has landed.
+    // The pending jump has landed once the new interpreter exists. Clear the
+    // gate BEFORE onP5Setup: it executes the new scene's "when run", whose own
+    // scene-jump blocks are legitimate new jumps — with the gate still set
+    // they'd be swallowed as repeats.
     const jumpLanded = this.sceneJumpInFlight_;
     this.sceneJumpInFlight_ = false;
-    if (!this.isTickTimerRunning()) {
+    this.onP5Setup();
+    this.p5Wrapper.setLoop(true);
+    // Don't restart the tick timer if the new scene's "when run" already
+    // triggered the next jump (which freezes events until it lands).
+    if (!this.sceneJumpInFlight_ && !this.isTickTimerRunning()) {
       this.startTickTimer();
     }
     if (jumpLanded && this.onSceneJumpLand) {

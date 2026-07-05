@@ -13,7 +13,10 @@ import SourcesContainer, {
 // p5lab/reducers is a CommonJS bundle of all the classic Sprite Lab slices;
 // pull the ones the engine and image list need by key.
 import * as p5labReducersModule from '@cdo/apps/p5lab/reducers';
-import {setInitialAnimationList} from '@cdo/apps/p5lab/redux/animationList';
+import {
+  SET_INITIAL_ANIMATION_LIST,
+  setInitialAnimationList,
+} from '@cdo/apps/p5lab/redux/animationList';
 import {getSerializedAnimationList} from '@cdo/apps/p5lab/shapes';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import pageConstants, {setPageConstants} from '@cdo/apps/redux/pageConstants';
@@ -373,18 +376,20 @@ const SpriteLab2View: React.FunctionComponent<{
   // against the redux animation list at block-load time — and its go-to-scene
   // dropdowns against the redux scene list — so merge the external project's
   // animations and scenes in for the (synchronous) compile and restore after.
-  // React batches the dispatches, so effects only ever see the restored state.
+  // Uses the RAW reducer action, not the setInitialAnimationList thunk: the
+  // thunk re-fetches every animation's image data on each dispatch, which
+  // turns repeated scene jumps into a memory-eating fetch storm. Restoring
+  // the exact captured state object also keeps selectors reference-equal, so
+  // no effects fire.
   const compileExternalScene = useCallback(
     (scene: SpriteLab2Scene, project: ExternalProject) => {
-      const currentAnimations = getSerializedAnimationList(
-        getStore().getState().animationList
-      );
+      const currentAnimations = getStore().getState().animationList;
       const theirs = project.animations;
       const merged = {
         orderedKeys: [
           ...currentAnimations.orderedKeys,
           ...(theirs.orderedKeys || []).filter(
-            k => !currentAnimations.propsByKey[k]
+            (k: string) => !currentAnimations.propsByKey[k]
           ),
         ],
         propsByKey: {
@@ -396,29 +401,25 @@ const SpriteLab2View: React.FunctionComponent<{
         id: s.id,
         name: s.name,
       }));
-      dispatch(
-        setInitialAnimationList(
-          merged,
-          undefined as unknown as object,
-          true /* isSpriteLab */
-        )
-      );
+      dispatch({type: SET_INITIAL_ANIMATION_LIST, animationList: merged});
+      // Dedupe: the external project can be the user's own (a jump back into
+      // this project), and duplicate ids break the selector's list rendering.
+      const knownSceneIds = new Set(currentSceneMetadata.map(s => s.id));
       dispatch(
         setScenes([
           ...currentSceneMetadata,
-          ...project.scenes.map(s => ({id: s.id, name: s.name})),
+          ...project.scenes
+            .filter(s => !knownSceneIds.has(s.id))
+            .map(s => ({id: s.id, name: s.name})),
         ])
       );
       try {
         return compileWorkspaceSource(scene.source ?? DEFAULT_SCENE_SOURCE);
       } finally {
-        dispatch(
-          setInitialAnimationList(
-            currentAnimations,
-            undefined as unknown as object,
-            true /* isSpriteLab */
-          )
-        );
+        dispatch({
+          type: SET_INITIAL_ANIMATION_LIST,
+          animationList: currentAnimations,
+        });
         dispatch(setScenes(currentSceneMetadata));
       }
     },
