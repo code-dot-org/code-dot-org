@@ -18,6 +18,10 @@ export type PlayspaceMode = 'preview' | 'play' | 'hidden';
 // play area.
 const CANVAS = 400;
 const MARGIN = 12;
+// The corner preview sits over the Blockly workspace, whose scrollbar hugs
+// the right edge; a larger margin (equal top and side) keeps them visually
+// separated.
+const PREVIEW_MARGIN = 24;
 const PREVIEW_SCALE = 0.64;
 
 interface PlayspaceProps {
@@ -218,8 +222,11 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     transform = `translate(${x}px, ${y}px) scale(${scale})`;
   } else {
     // Preview: small box pinned to the top-right corner.
-    const x = Math.max(MARGIN, size.w - CANVAS * PREVIEW_SCALE - MARGIN);
-    transform = `translate(${x}px, ${MARGIN}px) scale(${PREVIEW_SCALE})`;
+    const x = Math.max(
+      PREVIEW_MARGIN,
+      size.w - CANVAS * PREVIEW_SCALE - PREVIEW_MARGIN
+    );
+    transform = `translate(${x}px, ${PREVIEW_MARGIN}px) scale(${PREVIEW_SCALE})`;
   }
 
   return (
