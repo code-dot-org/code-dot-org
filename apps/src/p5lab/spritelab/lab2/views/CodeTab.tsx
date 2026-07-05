@@ -45,6 +45,10 @@ interface CodeTabProps {
   ) => void;
   // Mark the project as edited (first user change).
   onEdit: () => void;
+  // Fired on intermediate field edits (e.g. painting pixels in the grid
+  // editor while it's still open), so the live preview can follow along.
+  // These don't serialize/save — the final change on editor close does.
+  onIntermediateChange?: () => void;
 }
 
 /**
@@ -62,6 +66,7 @@ const CodeTab = forwardRef<CodeTabHandle, CodeTabProps>(
       theme,
       onSourceChange,
       onEdit,
+      onIntermediateChange,
     },
     ref
   ) => {
@@ -69,8 +74,10 @@ const CodeTab = forwardRef<CodeTabHandle, CodeTabProps>(
     // Keep the latest callbacks without re-injecting the workspace.
     const onSourceChangeRef = useRef(onSourceChange);
     const onEditRef = useRef(onEdit);
+    const onIntermediateChangeRef = useRef(onIntermediateChange);
     onSourceChangeRef.current = onSourceChange;
     onEditRef.current = onEdit;
+    onIntermediateChangeRef.current = onIntermediateChange;
 
     useImperativeHandle(ref, () => ({
       getCode: () =>
@@ -172,6 +179,12 @@ const CodeTab = forwardRef<CodeTabHandle, CodeTabProps>(
       }
 
       const onChange = (e: BlocklyCore.Events.Abstract) => {
+        // Mid-editor field edits (grid painting): follow along in the preview
+        // without serializing — the editor-close change event saves.
+        if (e.type === BlocklyCore.Events.BLOCK_FIELD_INTERMEDIATE_CHANGE) {
+          onIntermediateChangeRef.current?.();
+          return;
+        }
         if (
           e.type !== BlocklyCore.Events.BLOCK_CHANGE &&
           e.type !== BlocklyCore.Events.BLOCK_MOVE &&

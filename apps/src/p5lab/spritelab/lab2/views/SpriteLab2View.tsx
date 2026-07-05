@@ -730,6 +730,7 @@ const SpriteLab2View: React.FunctionComponent<{
             theme={theme === 'Dark' ? 'Dark' : 'Light'}
             onSourceChange={handleSourceChange}
             onEdit={handleEdit}
+            onIntermediateChange={scheduleRun}
           />
         )}
       </div>
