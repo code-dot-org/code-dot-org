@@ -191,17 +191,48 @@ export function compileWorkspaceSource(source: any): string {
   }
 }
 
+// Lab-owned additions to the level's shared block pool, delivered the same
+// way DB pool blocks are (block config + interpreted helperCode, which the
+// engine prepends to user code). Keep block names as pool_func.
+export const SPRITELAB2_EXTRA_SHARED_BLOCKS = [
+  {
+    name: 'spritelab2_movingLeft',
+    pool: 'spritelab2',
+    category: 'Behaviors',
+    config: {
+      func: 'movingLeft',
+      blockText: 'moving left',
+      returnType: 'Behavior',
+      style: 'behavior_blocks',
+    },
+    helperCode: [
+      'function movingLeft() {',
+      '  return {',
+      '    func: function (spriteId) {',
+      '      moveInDirection(spriteId, 2, "West");',
+      '    },',
+      "    name: 'moving left',",
+      '  };',
+      '}',
+    ].join('\n'),
+  },
+] as unknown as BlockDefinition[];
+
 /**
  * Installs the level's shared/custom block definitions (the DB-backed Sprite Lab
- * block pool, e.g. GamelabJr) and returns a map of category -> block type names
- * for toolbox construction. Mirrors dance/blockly/setup.ts installSharedBlocks.
+ * block pool, e.g. GamelabJr) plus the lab's own additions, and returns a map
+ * of category -> block type names for toolbox construction. Mirrors
+ * dance/blockly/setup.ts installSharedBlocks.
  */
 export function installSharedBlocks(sharedBlocks: BlockDefinition[]): {
   [category: string]: string[];
 } {
   return blockUtils.installCustomBlocks({
     blockly: Blockly,
-    blockDefinitions: sharedBlocks || [],
+    blockDefinitions: [
+      ...(sharedBlocks || []),
+      ...SPRITELAB2_EXTRA_SHARED_BLOCKS,
+    ],
     customInputTypes:
       spritelabBlocks.customInputTypes as unknown as CustomInputTypes,
   });
@@ -217,6 +248,8 @@ const PREDEFINED_BEHAVIOR_BLOCKS = [
   'gamelab_followingTargets',
   'gamelab_tumbling',
   'gamelab_patrollingUpDown',
+  // Lab-owned (see SPRITELAB2_EXTRA_SHARED_BLOCKS).
+  'spritelab2_movingLeft',
 ];
 
 /**

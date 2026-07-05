@@ -6,6 +6,7 @@ import {getStore} from '@cdo/apps/redux';
 
 import SpriteLab from '../SpriteLab';
 
+import {SPRITELAB2_EXTRA_SHARED_BLOCKS} from './blockly/setup';
 import {trimAnimationListImages} from './imageTrim';
 
 const NOOP = () => {};
@@ -184,7 +185,12 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.level = {
       helperLibraries,
       softButtons: [],
-      sharedBlocks: levelProperties.sharedBlocks || [],
+      // Include the lab's own block additions so their helperCode (e.g. the
+      // moving-left behavior) is prepended to user code like any pool block's.
+      sharedBlocks: [
+        ...(levelProperties.sharedBlocks || []),
+        ...SPRITELAB2_EXTRA_SHARED_BLOCKS,
+      ],
       customHelperLibrary: levelProperties.customHelperLibrary,
     };
 
