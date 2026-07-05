@@ -49,6 +49,22 @@ export function findOpaqueBounds(
 // Trimming is deterministic; cache by source so re-runs don't redo the work.
 const trimCache = new Map<string, Promise<string>>();
 
+// Trimmed image per costume name, for the block image fields (dropdown
+// thumbnails). Populated as animation lists get trimmed for preload.
+const trimmedByName = new Map<string, string>();
+const trimListeners = new Set<() => void>();
+
+export function getTrimmedThumbnail(name: string): string | undefined {
+  return trimmedByName.get(name);
+}
+
+// Notifies when new trims land, so already-rendered block thumbnails can
+// refresh. Returns an unsubscribe.
+export function onTrimsUpdated(listener: () => void): () => void {
+  trimListeners.add(listener);
+  return () => trimListeners.delete(listener);
+}
+
 /**
  * Load an image (dataURI or URL), crop transparent borders, and return the
  * cropped image as a dataURI. Returns the input unchanged when there's
@@ -110,6 +126,7 @@ export async function trimAnimationListImages(
   list: SerializedAnimationList
 ): Promise<SerializedAnimationList> {
   const propsByKey: SerializedAnimationList['propsByKey'] = {};
+  let newTrims = false;
   await Promise.all(
     (list.orderedKeys || []).map(async key => {
       const props = list.propsByKey[key];
@@ -127,12 +144,20 @@ export async function trimAnimationListImages(
         propsByKey[key] = props;
         return;
       }
+      const trimmed = await trimTransparentBorder(dataURI);
+      if (props.name && trimmedByName.get(props.name) !== trimmed) {
+        trimmedByName.set(props.name, trimmed);
+        newTrims = true;
+      }
       propsByKey[key] = {
         ...props,
-        dataURI: await trimTransparentBorder(dataURI),
+        dataURI: trimmed,
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } as any;
     })
   );
+  if (newTrims) {
+    trimListeners.forEach(listener => listener());
+  }
   return {orderedKeys: list.orderedKeys || [], propsByKey};
 }

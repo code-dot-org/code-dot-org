@@ -1,12 +1,15 @@
 import * as BlocklyCore from 'blockly/core';
 
 import * as blockUtils from '@cdo/apps/block_utils';
+import CdoFieldAnimationDropdown from '@cdo/apps/blockly/addons/cdoFieldAnimationDropdown';
 import {BlockDefinition, CustomInputTypes} from '@cdo/apps/blockly/types';
 import * as blocksCommonModule from '@cdo/apps/blocksCommon';
+import {animationSourceUrl} from '@cdo/apps/p5lab/redux/animationList';
 import spritelabBlocks from '@cdo/apps/p5lab/spritelab/blocks';
 import {getStore} from '@cdo/apps/redux';
 
 import {SCENES_UI_VARIANT} from '../experiments';
+import {getTrimmedThumbnail} from '../imageTrim';
 
 // blocksCommon is a plain CommonJS module (exports.install = ...); give it a
 // minimal typed view.
@@ -255,6 +258,82 @@ export const SPRITELAB2_EXTRA_SHARED_BLOCKS = [
   },
 ] as unknown as BlockDefinition[];
 
+// Costume thumbnails for block image fields, preferring the border-trimmed
+// image (see imageTrim.ts) so the sprite's content fills the field instead of
+// floating in its transparent margins. Mirrors the classic costumeList in
+// spritelab/blocks.js otherwise.
+function trimmedCostumeList(): [string, string][] {
+  const state = getStore().getState();
+  const animationList = state.animationList;
+  if (!animationList || animationList.orderedKeys.length === 0) {
+    return [['sprites missing', 'null']];
+  }
+  const results: [string, string][] = [];
+  animationList.orderedKeys.forEach((key: string) => {
+    const animation = animationList.propsByKey[key];
+    if ((animation.categories || []).includes('backgrounds')) {
+      return;
+    }
+    const url =
+      getTrimmedThumbnail(animation.name) ||
+      animation.sourceUrl ||
+      animationSourceUrl(key, animation, state.pageConstants?.channelId);
+    results.push([url, `"${animation.name}"`]);
+  });
+  return results.length ? results : [['sprites missing', 'null']];
+}
+
+// The classic costumePicker input type, with trimmed thumbnails. (The
+// animation-mode buttons don't apply here — this lab has no AnimationTab.)
+const trimmedCostumePicker = {
+  addInput(
+    blockly: unknown,
+    block: BlocklyCore.Block,
+    inputConfig: {name: string; label: string},
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    currentInputRow: any
+  ) {
+    currentInputRow
+      .appendField(inputConfig.label)
+      .appendField(
+        new CdoFieldAnimationDropdown(trimmedCostumeList, 32, 32, undefined),
+        inputConfig.name
+      );
+  },
+  generateCode(block: BlocklyCore.Block, arg: {name: string}) {
+    return block.getFieldValue(arg.name);
+  },
+};
+
+/**
+ * Refresh the selected-thumbnail image of every costume dropdown on the main
+ * workspace, so blocks rendered before an image was trimmed pick up the
+ * trimmed thumbnail.
+ */
+export function refreshAnimationDropdownThumbnails(): void {
+  const workspace = Blockly.getMainWorkspace?.();
+  if (!workspace) {
+    return;
+  }
+  workspace.getAllBlocks(false).forEach((block: BlocklyCore.Block) => {
+    block.inputList.forEach(input => {
+      input.fieldRow.forEach(field => {
+        if (field instanceof CdoFieldAnimationDropdown) {
+          const options = field.getOptions(false);
+          const selected = options.find(o => o[1] === field.getValue());
+          if (selected) {
+            // selectedOption_ drives the rendered thumbnail; re-resolve it
+            // from the fresh options and repaint.
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            (field as any).selectedOption_ = selected;
+            field.forceRerender();
+          }
+        }
+      });
+    });
+  });
+}
+
 /**
  * Installs the level's shared/custom block definitions (the DB-backed Sprite Lab
  * block pool, e.g. GamelabJr) plus the lab's own additions, and returns a map
@@ -270,8 +349,11 @@ export function installSharedBlocks(sharedBlocks: BlockDefinition[]): {
       ...(sharedBlocks || []),
       ...SPRITELAB2_EXTRA_SHARED_BLOCKS,
     ],
-    customInputTypes:
-      spritelabBlocks.customInputTypes as unknown as CustomInputTypes,
+    customInputTypes: {
+      ...(spritelabBlocks.customInputTypes as unknown as CustomInputTypes),
+      // Trim-aware costume thumbnails (backgrounds stay untrimmed).
+      costumePicker: trimmedCostumePicker,
+    } as unknown as CustomInputTypes,
   });
 }
 

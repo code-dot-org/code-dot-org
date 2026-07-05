@@ -24,10 +24,12 @@ import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {
   compileWorkspaceSource,
+  refreshAnimationDropdownThumbnails,
   setExternalSceneRefreshHandler,
 } from '../blockly/setup';
 import defaultSources from '../defaultSources.json';
 import {SCENES_UI_VARIANT} from '../experiments';
+import {onTrimsUpdated} from '../imageTrim';
 import spriteLab2Reducer, {
   ExternalSceneOption,
   setActiveSceneId,
@@ -131,6 +133,10 @@ const SpriteLab2View: React.FunctionComponent<{
     setFooterVisibility(false);
     return () => setFooterVisibility(true);
   }, []);
+
+  // Blocks rendered before an image finished trimming show the untrimmed
+  // thumbnail; refresh the costume dropdowns as trims land.
+  useEffect(() => onTrimsUpdated(refreshAnimationDropdownThumbnails), []);
 
   const sourcesRef = useRef(currentSources);
   useEffect(() => {
