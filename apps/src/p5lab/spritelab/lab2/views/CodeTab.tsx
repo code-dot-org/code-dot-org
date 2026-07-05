@@ -176,7 +176,13 @@ const CodeTab = forwardRef<CodeTabHandle, CodeTabProps>(
           e.type !== BlocklyCore.Events.BLOCK_CHANGE &&
           e.type !== BlocklyCore.Events.BLOCK_MOVE &&
           e.type !== BlocklyCore.Events.BLOCK_CREATE &&
-          e.type !== BlocklyCore.Events.BLOCK_DELETE
+          e.type !== BlocklyCore.Events.BLOCK_DELETE &&
+          // Variables live in the workspace serialization too; without these,
+          // a newly created/renamed variable isn't saved until some block
+          // event happens to fire.
+          e.type !== BlocklyCore.Events.VAR_CREATE &&
+          e.type !== BlocklyCore.Events.VAR_RENAME &&
+          e.type !== BlocklyCore.Events.VAR_DELETE
         ) {
           return;
         }

@@ -145,8 +145,11 @@ const SpriteLab2View: React.FunctionComponent<{
 
   const mergeSources = useCallback(
     (patch: Partial<SpriteLab2Source>, forceSave = false) => {
-      const next = {...sourcesRef.current, ...patch};
-      updateSources(next, forceSave);
+      // Use the updater form: sourcesRef only syncs after a render, so two
+      // merges in quick succession (a code edit and the animation-save
+      // effect, say) would otherwise build on a stale base and silently drop
+      // each other's changes.
+      updateSources(prev => ({...prev, ...patch}), forceSave);
     },
     [updateSources]
   );
