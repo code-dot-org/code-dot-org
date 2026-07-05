@@ -759,14 +759,18 @@ const SpriteLab2View: React.FunctionComponent<{
       />
 
       {/* Lab2 Guide overlay (Music-style), driven by the level's guideMode.
-          Only shown on the Code tab. */}
-      {levelProperties.guideMode && activeTab === 'Code' && (
-        <GenerateSpriteLab
-          guideMode={levelProperties.guideMode}
-          instructions={levelProperties.longInstructions}
-          onCodeGenerated={handleCodeGenerated}
-        />
-      )}
+          Only shown on the Code tab. Hidden (not removed) under the scenes
+          variant while that UI is being explored — it competes for the same
+          bottom-of-workspace attention. */}
+      {!SCENES_UI_VARIANT &&
+        levelProperties.guideMode &&
+        activeTab === 'Code' && (
+          <GenerateSpriteLab
+            guideMode={levelProperties.guideMode}
+            instructions={levelProperties.longInstructions}
+            onCodeGenerated={handleCodeGenerated}
+          />
+        )}
     </TabShell>
   );
 };
