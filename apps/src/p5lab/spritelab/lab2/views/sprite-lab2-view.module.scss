@@ -58,6 +58,8 @@ $tab-segment-height: $tab-item-height - 2px;
   align-items: center;
   box-sizing: border-box;
   height: $tab-item-height;
+  // The whole group activates the Code tab when it isn't active.
+  cursor: pointer;
   // The group carries the single outline; the segments inside are borderless
   // except for the divider between them.
   border: 1px solid var(--borders-neutral-primary);
@@ -101,7 +103,9 @@ $tab-segment-height: $tab-item-height - 2px;
 
   &:disabled {
     opacity: 0.4;
-    cursor: default;
+    // Disabled controls swallow clicks entirely; let them fall through so
+    // clicking the dropdown area activates the Code tab (see tabGroup).
+    pointer-events: none;
     // Chrome re-applies a UA background-color on :disabled; keep ours.
     background-color: transparent;
   }

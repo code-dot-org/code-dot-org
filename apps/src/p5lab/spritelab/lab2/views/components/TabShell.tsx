@@ -64,6 +64,14 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
                   moduleStyles.tabGroup,
                   activeTab === 'Code' && moduleStyles.tabGroupActive
                 )}
+                // The whole group is the Code tab's click target: the scene
+                // selector is disabled (pointer-events: none) on other tabs,
+                // so clicks on it land here and activate the tab.
+                onClick={() => {
+                  if (activeTab !== 'Code' && enabled) {
+                    onTabChange('Code');
+                  }
+                }}
               >
                 {button}
                 {codeTabExtra}
