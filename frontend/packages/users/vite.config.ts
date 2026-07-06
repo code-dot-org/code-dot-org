@@ -25,6 +25,7 @@ export default defineConfig({
     lib: {
       entry: {
         index: 'src/index.ts',
+        'redux/index': 'src/redux/index.ts',
       },
       name: 'accounts',
       formats: ['es', 'cjs'],
