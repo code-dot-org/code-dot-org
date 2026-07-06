@@ -1,7 +1,6 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
 import type {
   PayloadAction,
-  Reducer,
   ThunkAction,
   ThunkDispatch,
   AnyAction,
@@ -12,19 +11,9 @@ import _ from 'lodash';
 import type {Lesson, Sublevel, UnitLevel} from '@code-dot-org/core/api';
 import {LevelKinds} from '@code-dot-org/core/api';
 import type {StateFor, MockStore} from '@code-dot-org/core/redux';
+import type currentUserSlice from '@code-dot-org/users/redux/currentUserSlice';
 
-// @code-dot-org/users does not ship its currentUser redux slice yet; model the
-// one field the thunks below read (state.currentUser.userId). Once it lands,
-// replace this with
-//   import type currentUserSlice from '@code-dot-org/users/redux/currentUserSlice';
-// and use `typeof currentUserSlice` in the Store tuple.
-interface CurrentUserSliceLike {
-  name: 'currentUser';
-  reducer: Reducer<{userId?: number}>;
-  getInitialState: () => {userId?: number};
-}
-
-type Store = MockStore<[typeof progressSlice, CurrentUserSliceLike]>;
+type Store = MockStore<[typeof progressSlice, typeof currentUserSlice]>;
 type RootState = StateFor<Store>;
 type ProgressThunkAction = ThunkAction<void, RootState, undefined, AnyAction>;
 type AsyncProgressThunkAction = ThunkAction<
