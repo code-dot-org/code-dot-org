@@ -6,19 +6,20 @@ import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 // can't drift between the two webpack bundles that share this contract.
 // Messages produced directly by pyodideWebWorker.ts (sysout, syserr, run_complete, etc,
 // see MessageType in ../types) are relayed through unchanged and are not listed here.
-export enum PyodideSandboxMessageType {
-  // sandbox -> outer
-  SANDBOX_READY = 'sandbox_ready',
-  SERVICE_WORKER_UNAVAILABLE = 'sandbox_service_worker_unavailable',
-  AWAITING_INPUT = 'sandbox_awaiting_input',
-  // outer -> sandbox
-  RUN = 'sandbox_run',
-  SENDING_INPUT = 'sandbox_sending_input',
-  RESTART_WORKER = 'sandbox_restart_worker',
+export enum ToPyodideSandboxMessage {
+  RUN = 'run',
+  SENDING_INPUT = 'sending_input',
+  RESTART_WEB_WORKER = 'restart_web_worker',
+}
+
+export enum FromPyodideSandboxMessage {
+  READY = 'ready',
+  SERVICE_WORKER_UNAVAILABLE = 'service_worker_unavailable',
+  AWAITING_INPUT = 'awaiting_input',
 }
 
 export interface PyodideSandboxRunMessage {
-  type: PyodideSandboxMessageType.RUN;
+  type: ToPyodideSandboxMessage.RUN;
   id: string;
   python: string;
   source: MultiFileSource;
@@ -26,12 +27,12 @@ export interface PyodideSandboxRunMessage {
 }
 
 export interface PyodideSandboxSendingInputMessage {
-  type: PyodideSandboxMessageType.SENDING_INPUT;
+  type: ToPyodideSandboxMessage.SENDING_INPUT;
   value: string;
   id: string;
 }
 
 export interface PyodideSandboxAwaitingInputMessage {
-  type: PyodideSandboxMessageType.AWAITING_INPUT;
+  type: FromPyodideSandboxMessage.AWAITING_INPUT;
   id: string;
 }

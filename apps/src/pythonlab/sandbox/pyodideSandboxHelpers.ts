@@ -1,8 +1,8 @@
 import {AWAITING_INPUT, SENDING_INPUT} from '../pythonHelpers/constants';
 
 import {
+  FromPyodideSandboxMessage,
   PyodideSandboxAwaitingInputMessage,
-  PyodideSandboxMessageType,
 } from './constants';
 
 // Mirrors apps/src/weblab2/htmlPreview/InnerHTMLPreview.tsx's computation of its own
@@ -30,7 +30,7 @@ const canSupportInput = () => {
 const registerServiceWorker = async () => {
   if (!canSupportInput()) {
     window.parent.postMessage(
-      {type: PyodideSandboxMessageType.SERVICE_WORKER_UNAVAILABLE},
+      {type: FromPyodideSandboxMessage.SERVICE_WORKER_UNAVAILABLE},
       outerOrigin
     );
     return;
@@ -64,7 +64,7 @@ const registerServiceWorker = async () => {
     console.error(`Registration failed with ${error}`);
     // Log that we failed to register the service worker.
     window.parent.postMessage(
-      {type: PyodideSandboxMessageType.SERVICE_WORKER_UNAVAILABLE},
+      {type: FromPyodideSandboxMessage.SERVICE_WORKER_UNAVAILABLE},
       outerOrigin
     );
     return;
@@ -77,7 +77,7 @@ const registerServiceWorker = async () => {
         inputServiceWorker = event.source;
       }
       const message: PyodideSandboxAwaitingInputMessage = {
-        type: PyodideSandboxMessageType.AWAITING_INPUT,
+        type: FromPyodideSandboxMessage.AWAITING_INPUT,
         id: event.data.id,
       };
       window.parent.postMessage(message, outerOrigin);

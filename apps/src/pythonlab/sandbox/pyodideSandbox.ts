@@ -1,7 +1,8 @@
 import {
-  PyodideSandboxMessageType,
+  FromPyodideSandboxMessage,
   PyodideSandboxRunMessage,
   PyodideSandboxSendingInputMessage,
+  ToPyodideSandboxMessage,
 } from './constants';
 import {
   initializeServiceWorker,
@@ -9,11 +10,11 @@ import {
   sendToInputServiceWorker,
 } from './pyodideSandboxHelpers';
 
-// Runs the pyodide web worker (and the input service worker it depends on) inside a
+// Creates the pyodide web worker and dispatches messages from
+// pyodideWorkerManager.ts to it, relaying results back via postMessage. Runs inside a
 // hidden iframe served from a dedicated codeprojects.org subdomain, isolated from
-// studio.code.org's cookies/session. Owned and messaged by
-// apps/src/pythonlab/pyodideWorkerManager.ts. See apps/src/pythonlab/README.md for the
-// full architecture and the postMessage contract in ./constants.ts.
+// studio.code.org's cookies/session. See apps/src/pythonlab/README.md for the full
+// architecture and the postMessage contract in ./constants.ts.
 
 const setUpPyodideWorker = () => {
   // The web worker is versioned to ensure the correct version is loaded.
@@ -46,18 +47,18 @@ window.addEventListener('message', event => {
   }
 
   switch (event.data?.type) {
-    case PyodideSandboxMessageType.RUN: {
+    case ToPyodideSandboxMessage.RUN: {
       const {python, id, source, validationFile} =
         event.data as PyodideSandboxRunMessage;
       pyodideWorker.postMessage({python, id, source, validationFile});
       break;
     }
-    case PyodideSandboxMessageType.SENDING_INPUT: {
+    case ToPyodideSandboxMessage.SENDING_INPUT: {
       const {value, id} = event.data as PyodideSandboxSendingInputMessage;
       sendToInputServiceWorker(value, id);
       break;
     }
-    case PyodideSandboxMessageType.RESTART_WORKER:
+    case ToPyodideSandboxMessage.RESTART_WEB_WORKER:
       pyodideWorker.terminate();
       pyodideWorker = setUpPyodideWorker();
       break;
@@ -68,7 +69,7 @@ window.addEventListener('message', event => {
 
 initializeServiceWorker().then(() => {
   window.parent.postMessage(
-    {type: PyodideSandboxMessageType.SANDBOX_READY},
+    {type: FromPyodideSandboxMessage.READY},
     outerOrigin
   );
 });

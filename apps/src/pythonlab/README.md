@@ -28,8 +28,10 @@ isolation goal Web Lab 2 already solves for student HTML/JS (see
   service worker -- kept separate so `pyodideSandbox.ts` reads as the
   message dispatch loop it actually is.
 - `sandbox/constants.ts` defines the `postMessage` contract shared by
-  both sides (`PyodideSandboxMessageType`), so the message type strings
-  can't drift between the two separate webpack bundles.
+  both sides: `ToPyodideSandboxMessage` and `FromPyodideSandboxMessage`,
+  two separate enums (rather than one enum with directional prefixes) so
+  the compiler -- not just a naming convention -- rejects a message used
+  in the wrong direction.
 
 `pyodideWebWorker.ts` itself is unaware of any of this -- it only talks
 to whatever page creates it, same as before.

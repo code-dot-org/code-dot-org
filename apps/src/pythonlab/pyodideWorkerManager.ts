@@ -25,7 +25,10 @@ import {
   parseErrorMessage,
 } from './pythonHelpers/messageHelpers';
 import {MessageTag} from './pythonHelpers/patches';
-import {PyodideSandboxMessageType} from './sandbox/constants';
+import {
+  FromPyodideSandboxMessage,
+  ToPyodideSandboxMessage,
+} from './sandbox/constants';
 import {PyodideMessage} from './types';
 
 let callbacks: {[key: string]: (event: PyodideMessage) => void} = {};
@@ -220,16 +223,16 @@ const setUpPyodideSandbox = () => {
         return;
       }
       switch (event.data?.type) {
-        case PyodideSandboxMessageType.SANDBOX_READY:
+        case FromPyodideSandboxMessage.READY:
           resolve();
           break;
-        case PyodideSandboxMessageType.SERVICE_WORKER_UNAVAILABLE:
+        case FromPyodideSandboxMessage.SERVICE_WORKER_UNAVAILABLE:
           sandboxServiceWorkerUnavailable = true;
           Lab2Registry.getInstance()
             .getMetricsReporter()
             .logWarning('Service worker unavailable');
           break;
-        case PyodideSandboxMessageType.AWAITING_INPUT:
+        case FromPyodideSandboxMessage.AWAITING_INPUT:
           lastInputId = event.data.id;
           break;
         default:
@@ -283,7 +286,7 @@ const asyncRun = (() => {
       callbacks[id] = onSuccess;
       pyodideSandboxIframe.contentWindow?.postMessage(
         {
-          type: PyodideSandboxMessageType.RUN,
+          type: ToPyodideSandboxMessage.RUN,
           python: script,
           id,
           source,
@@ -312,7 +315,7 @@ const restartPyodideIfProgramIsRunning = () => {
   if (Object.keys(callbacks).length > 0) {
     callbacks = {};
     pyodideSandboxIframe.contentWindow?.postMessage(
-      {type: PyodideSandboxMessageType.RESTART_WORKER},
+      {type: ToPyodideSandboxMessage.RESTART_WEB_WORKER},
       sandboxOrigin
     );
     Lab2Registry.getInstance()
@@ -334,7 +337,7 @@ const sendInput = (value: string): void => {
   // registered input service worker.
   pyodideSandboxIframe.contentWindow?.postMessage(
     {
-      type: PyodideSandboxMessageType.SENDING_INPUT,
+      type: ToPyodideSandboxMessage.SENDING_INPUT,
       value,
       id: lastInputId,
     },
