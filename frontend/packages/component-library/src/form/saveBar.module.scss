@@ -1,0 +1,24 @@
+.saveBar {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+  background: var(--background-neutral-primary);
+}
+
+/* The bar only takes up space (padding + top border) once it has a status. */
+.hasContent {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-top: 1px solid var(--borders-neutral-light);
+}
+
+.grow {
+  flex: 1;
+}
+
+.errorText {
+  color: var(--text-error-primary);
+}

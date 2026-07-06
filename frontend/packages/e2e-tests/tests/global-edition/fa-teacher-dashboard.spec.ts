@@ -1,5 +1,5 @@
 import {expect, test} from '../fixtures';
-import {TeacherDashboardPage} from '../pages/teacher-dashboard';
+import {TeacherDashboardPage} from '../pages/teacher-dashboard/teacher-dashboard';
 
 test.describe('Global Edition - Farsi MVP - Teacher Dashboard', () => {
   test.skip(

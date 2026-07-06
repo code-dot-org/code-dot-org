@@ -92,7 +92,7 @@ export class LegacyBlocklyLab extends LessonLevelPage {
       timeout: LAB_LOAD_TIMEOUT_MS,
     });
     await expect(this.runButton).toBeVisible({timeout: LAB_LOAD_TIMEOUT_MS});
-    await this.waitForSignedIn();
+    await this.header.waitForSignedIn();
     // Dismiss the instructions overlay if shown (anonymous sessions).
     const overlay = this.page.locator('#overlay');
     if (await overlay.isVisible()) {
@@ -114,7 +114,7 @@ export class LegacyBlocklyLab extends LessonLevelPage {
         url => url.href !== previousUrl && url.href.includes('lang='),
         {waitUntil: 'domcontentloaded'},
       ),
-      this.localeDropdown.selectOption({label}),
+      this.footer.localeDropdown.selectOption({label}),
     ]);
     await this.waitForReady();
   }

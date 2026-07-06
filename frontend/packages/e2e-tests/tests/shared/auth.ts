@@ -197,17 +197,25 @@ export async function signIn(
   }
 }
 
+export type CreateTeacherAssociatedStudentOptions = {
+  studentName: string;
+} & Omit<CreateStudentOptions, 'name' | 'signInAfterCreate' | 'extraFields'>;
+
 /**
  * Create a teacher, open an email-login section, create a student, and enroll
- * the student in that section. The student's session is active on return.
+ * the student in that section. The student's session is active on return; use
+ * the returned teacher credentials with signIn to switch back to the teacher.
  */
 export async function createTeacherAssociatedStudent(
   page: Page,
-  {studentName}: {studentName: string},
-): Promise<{sectionCode: string}> {
+  {studentName, ...studentOpts}: CreateTeacherAssociatedStudentOptions,
+): Promise<{sectionCode: string} & UserCredentials> {
   // createUser signs the teacher in; the /dashboardapi/sections POST needs that
   // session, so reload to pick up the teacher's CSRF token before posting.
-  await createUser(page, {type: 'teacher', name: `Teacher_${studentName}`});
+  const teacher = await createUser(page, {
+    type: 'teacher',
+    name: `Teacher_${studentName}`,
+  });
   await page.goto('/');
 
   const section = await requestWithCsrf(
@@ -226,7 +234,7 @@ export async function createTeacherAssociatedStudent(
 
   // createUser signs the student in, replacing the teacher session; reload to
   // pick up the student's CSRF token before enrolling via /join.
-  await createUser(page, {type: 'student', name: studentName});
+  await createStudent(page, {name: studentName, ...studentOpts});
   await page.goto('/');
 
   const join = await requestWithCsrf(page, 'POST', `/join/${sectionCode}`);
@@ -234,7 +242,7 @@ export async function createTeacherAssociatedStudent(
     throw new Error(`join POST failed: ${join.status}`);
   }
 
-  return {sectionCode};
+  return {sectionCode, ...teacher};
 }
 
 /**
