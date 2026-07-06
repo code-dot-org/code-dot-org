@@ -83,7 +83,7 @@ let {writeConsoleMessage, writePartialLine} = getMessageHandlers(
 // The pyodide worker runs inside a hidden iframe on a dedicated codeprojects.org
 // subdomain (a wholly separate registrable domain from code.org), so student Python
 // execution never has access to studio.code.org's cookies/session. See
-// apps/src/pythonlab/sandbox/pyodideSandbox.ts, which owns the actual worker, and
+// apps/src/pythonlab/sandbox/pyodideWorkerManager.ts, which owns the actual worker, and
 // apps/src/pythonlab/README.md for the full architecture.
 // Mirrors the environment-stripping logic in apps/src/weblab2/htmlPreview/HTMLPreview.tsx
 // so the sandbox resolves to the same environment (dev/adhoc/prod) as the current page.

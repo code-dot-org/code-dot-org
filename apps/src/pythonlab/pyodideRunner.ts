@@ -23,7 +23,7 @@ import PythonValidationTracker from './progress/PythonValidationTracker';
 import {
   asyncRun,
   restartPyodideIfProgramIsRunning,
-} from './pyodideWorkerManager';
+} from './pyodideSandboxManager';
 import {runStudentTests, runValidationTests} from './pythonHelpers/scripts';
 
 const appName = 'pythonlab';

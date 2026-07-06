@@ -23,7 +23,7 @@ import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {
   restartPyodideIfProgramIsRunning,
   sendInput,
-} from '@cdo/apps/pythonlab/pyodideWorkerManager';
+} from '@cdo/apps/pythonlab/pyodideSandboxManager';
 import {
   AppDispatch,
   useAppDispatch,

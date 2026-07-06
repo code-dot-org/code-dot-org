@@ -10,9 +10,10 @@ import {
   sendToInputServiceWorker,
 } from './pyodideSandboxHelpers';
 
-// Creates the pyodide web worker and dispatches messages from
-// pyodideWorkerManager.ts to it, relaying results back via postMessage. Runs inside a
-// hidden iframe served from a dedicated codeprojects.org subdomain, isolated from
+// Manages the actual pyodide web worker -- creating it, restarting it, and relaying
+// its messages -- on behalf of pyodideSandboxManager.ts, which only manages the
+// sandbox iframe itself and never touches the worker directly. Runs inside a hidden
+// iframe served from a dedicated codeprojects.org subdomain, isolated from
 // studio.code.org's cookies/session. See apps/src/pythonlab/README.md for the full
 // architecture and the postMessage contract in ./constants.ts.
 
@@ -29,7 +30,7 @@ const setUpPyodideWorker = () => {
 
   // This sandbox has no Redux store, console, or metrics reporter of its own -- all
   // pyodideWebWorker.ts messages (sysout, syserr, run_complete, updated_source, etc.)
-  // are relayed unchanged for pyodideWorkerManager.ts to handle.
+  // are relayed unchanged for pyodideSandboxManager.ts to handle.
   worker.onmessage = event => {
     window.parent.postMessage(event.data, outerOrigin);
   };
@@ -40,7 +41,7 @@ const setUpPyodideWorker = () => {
 let pyodideWorker = setUpPyodideWorker();
 
 window.addEventListener('message', event => {
-  // pyodideWorkerManager.ts (studio.code.org) is the only origin we should ever trust
+  // pyodideSandboxManager.ts (studio.code.org) is the only origin we should ever trust
   // messages from.
   if (event.origin !== outerOrigin) {
     return;
