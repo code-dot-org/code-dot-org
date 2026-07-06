@@ -1,5 +1,3 @@
-import type {Store} from 'redux';
-
 /**
  * Collapses a union of object types into a single intersection. Used to
  * merge per-slice state contributions into the combined store shape.
@@ -34,13 +32,6 @@ type SliceStateEntry<S> = S extends {
  */
 export type SlicesState<SlicesT extends readonly unknown[]> =
   UnionToIntersection<SliceStateEntry<SlicesT[number]>>;
-
-/**
- * Pulls out the inferred redux state from an existing store.
- */
-export type StateFromStore<TStore> =
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  TStore extends Store<infer S, any> ? S : never;
 
 /**
  * Augments an existing store definition to include the given redux state.
