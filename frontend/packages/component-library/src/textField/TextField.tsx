@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import {ChangeEvent, InputHTMLAttributes} from 'react';
+import {ChangeEvent, InputHTMLAttributes, useId} from 'react';
 
 import {ComponentSizeXSToL} from '@/common/types';
 import {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
@@ -83,8 +83,18 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
   color = 'black',
   size = 'm',
   ['aria-describedby']: describedBy,
+  ['aria-invalid']: ariaInvalid,
   ...HTMLAttributes
 }) => {
+  const errorId = useId();
+  // When there's an error, mark the input invalid and point its
+  // aria-describedby at the rendered message (merged with any the caller
+  // passed), so a screen reader reads the error on reaching the field.
+  const describedByIds =
+    [errorMessage ? errorId : undefined, describedBy]
+      .filter(Boolean)
+      .join(' ') || undefined;
+
   return (
     <FormFieldWrapper
       color={color}
@@ -93,13 +103,13 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
       helperMessage={helperMessage}
       helperIcon={helperIcon}
       errorMessage={errorMessage}
+      errorMessageId={errorMessage ? errorId : undefined}
       className={classNames(
         moduleStyles.textField,
         moduleStyles[`textField-color-${color}`],
         moduleStyles[`textField-size-${size}`],
         className,
       )}
-      aria-describedby={describedBy}
     >
       <input
         id={id}
@@ -117,6 +127,8 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
           [moduleStyles.hasError]: errorMessage,
         })}
         {...HTMLAttributes}
+        aria-invalid={errorMessage ? true : ariaInvalid}
+        aria-describedby={describedByIds}
         aria-disabled={disabled || HTMLAttributes['aria-disabled']}
       />
     </FormFieldWrapper>

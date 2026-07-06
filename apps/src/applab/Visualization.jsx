@@ -66,6 +66,7 @@ class Visualization extends React.Component {
       <div
         id={VISUALIZATION_DIV_ID}
         className={this.getVisualizationClassNames()}
+        data-notranslate="true"
         style={combineStyles(
           !isResponsive && {
             ...styles.nonResponsive,

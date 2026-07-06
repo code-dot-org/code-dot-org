@@ -1,27 +1,88 @@
-// Keyboard navigation for the maze. The maze SVG wrapper is the only
+// Keyboard navigation for the maze. The maze SVG itself is the only
 // thing in the tab order. Enter activates a focus cursor on Pegman's
 // cell. Arrows walk it along open cells, obstacles, and the goal;
 // walls and out-of-bounds block. Escape removes the cursor.
 //
+// The svg is the interactive host (rather than a wrapping div) so it
+// stays the direct child of #visualization; the responsive scaling in
+// common.scss / responsive-visualization.scss targets that direct child,
+// and an intermediate wrapper box shifts where the scale is anchored.
+//
 // Pegman and maze state are never mutated. Cells are read through
-// window.Maze.controller (set by loadMaze.js); without it the wrapper
-// is just inert focus.
+// window.Maze.controller (set by loadMaze.js); without it the svg is
+// just inert focus.
 
 import maze from '@code-dot-org/maze';
 
-const {SquareType} = maze.tiles;
+import {Locale} from '@cdo/apps/types/locale';
+
+import * as mazeMsg from './locale';
+
+// Cast the runtime locale object to a type whose keys are derived from the
+// source strings JSON, so missing/mistyped message keys fail typecheck.
+const msg = mazeMsg as Locale<typeof import('@cdo/i18n/maze/en_us.json')>;
+
+const {SquareType, Direction} = maze.tiles;
+const {HarvesterCell, PlanterCell} = maze.cells;
+
+// Direction value (from maze.tiles.Direction) -> localized name accessor.
+const DIRECTION_NAME: Record<number, () => string> = {
+  [Direction.NORTH]: () => msg.mazeNavNorth(),
+  [Direction.EAST]: () => msg.mazeNavEast(),
+  [Direction.SOUTH]: () => msg.mazeNavSouth(),
+  [Direction.WEST]: () => msg.mazeNavWest(),
+};
+
+// Returns whether the level requires "turn right/left" movement
+// to enable reporting of the direction the character is facing.
+function usesTurns(ctrl: MazeController): boolean {
+  const {toolbox, startBlocks} = ctrl.level ?? {};
+  return [toolbox, startBlocks].some(
+    xml => typeof xml === 'string' && xml.includes('maze_turn')
+  );
+}
+
+// Cell is whatever subclass the active subtype uses (Cell, BeeCell,
+// HarvesterCell, ...). Every method below is optional because only the
+// matching subtype populates it; describeObject calls each behind the
+// relevant subtype guard. All are read-only — none mutate puzzle state.
+interface MazeCell {
+  getCurrentValue: () => number | undefined;
+  isFlower?: () => boolean; // BeeCell
+  isHive?: () => boolean; // BeeCell
+  isStaticCloud?: () => boolean; // BeeCell
+  featureName?: () => string; // HarvesterCell / PlanterCell
+  startsHidden?: () => boolean; // HarvesterCell
+}
+
+interface MazeSubtype {
+  finish?: {x: number; y: number};
+  isBee?: () => boolean;
+  isCollector?: () => boolean;
+  isFarmer?: () => boolean;
+  isWordSearch?: () => boolean;
+  getCell?: (row: number, col: number) => MazeCell;
+  // Bee-only helpers; take (row, col) and do not record user checks.
+  isRedFlower?: (row: number, col: number) => boolean;
+  flowerRemainingCapacity?: (row: number, col: number) => number;
+  hiveRemainingCapacity?: (row: number, col: number) => number;
+}
 
 interface MazeGlobal {
   controller?: {
     SQUARE_SIZE: number;
-    subtype: {finish?: {x: number; y: number}};
+    subtype: MazeSubtype;
     map: {
       ROWS: number;
       COLS: number;
       getTile: (row: number, col: number) => number | undefined;
     };
+    // toolbox/startBlocks are the rendered block XML; we scan them to learn
+    // whether turning is part of this level's controls.
+    level?: {toolbox?: string; startBlocks?: string};
     getPegmanX: (id?: string) => number;
     getPegmanY: (id?: string) => number;
+    getPegmanD: (id?: string) => number | undefined;
   };
 }
 
@@ -62,8 +123,6 @@ function getMazeController(): MazeController | undefined {
   return (window as unknown as {Maze?: MazeGlobal}).Maze?.controller;
 }
 
-// map.getTile internally indexes grid_[firstArg][secondArg], where the
-// first arg is the row. Pegman/finish use (x=col, y=row). Wrap once.
 function tileAt(
   ctrl: MazeController,
   col: number,
@@ -72,22 +131,160 @@ function tileAt(
   return ctrl.map.getTile(row, col);
 }
 
-function describeCell(ctrl: MazeController, col: number, row: number): string {
-  const tile = tileAt(ctrl, col, row);
+// WordSearch renders one letter per cell into an SVG <text> whose id is
+// "letter_<row>_<col>"; that glyph lives only in the DOM, not the cell
+// model, so it's read straight from the document. '-' marks the start
+// square (drawn from a numeric map value), which describeCell already
+// labels, so it's reported as having no letter.
+const WORD_SEARCH_START_GLYPH = '-';
+
+function wordSearchLetterAt(row: number, col: number): string | null {
+  const text = document
+    .getElementById(`letter_${row}_${col}`)
+    ?.textContent?.trim();
+  return text && text !== WORD_SEARCH_START_GLYPH ? text : null;
+}
+
+// Describe the gameplay object occupying a cell, for the subtypes whose
+// goals are richer than reach-the-finish (bee nectar/honey, collector
+// items, farmer dirt, harvester crops, planter soil/sprout, wordsearch
+// letters). Returns null when the cell holds nothing type-specific, so
+// describeCell falls back to the plain tile description. All reads are
+// side-effect-free.
+export function describeObject(
+  ctrl: MazeController,
+  col: number,
+  row: number
+): string | null {
+  const sub = ctrl.subtype;
+
+  if (sub.isWordSearch?.()) {
+    const letter = wordSearchLetterAt(row, col);
+    return letter ? msg.mazeNavLetter({letter}) : null;
+  }
+
+  const cell = sub.getCell?.(row, col);
+  if (!cell) {
+    return null;
+  }
+
+  if (sub.isBee?.()) {
+    if (cell.isFlower?.()) {
+      const red = sub.isRedFlower?.(row, col);
+      const count = sub.flowerRemainingCapacity?.(row, col) ?? 0;
+      if (!Number.isFinite(count)) {
+        return red
+          ? msg.mazeNavFlowerRedUnlimited()
+          : msg.mazeNavFlowerPurpleUnlimited();
+      }
+      return red
+        ? msg.mazeNavFlowerRed({count})
+        : msg.mazeNavFlowerPurple({count});
+    }
+    if (cell.isHive?.()) {
+      const count = sub.hiveRemainingCapacity?.(row, col) ?? 0;
+      return Number.isFinite(count)
+        ? msg.mazeNavHive({count})
+        : msg.mazeNavHiveUnlimited();
+    }
+    if (cell.isStaticCloud?.()) {
+      return msg.mazeNavCloud();
+    }
+    return null;
+  }
+
+  if (sub.isCollector?.()) {
+    const count = cell.getCurrentValue();
+    return count && count > 0 ? msg.mazeNavCollectibles({count}) : null;
+  }
+
+  if (sub.isFarmer?.()) {
+    const value = cell.getCurrentValue();
+    if (value === undefined || value === 0) {
+      return null;
+    }
+    return value > 0
+      ? msg.mazeNavDirtPile({count: value})
+      : msg.mazeNavHole({count: -value});
+  }
+
+  // Harvester and Planter have no subtype predicate; discriminate by the
+  // cell subclass the subtype instantiated.
+  if (HarvesterCell && cell instanceof HarvesterCell) {
+    if (cell.startsHidden?.()) {
+      return msg.mazeNavHiddenCrop();
+    }
+    const count = cell.getCurrentValue() ?? 0;
+    switch (cell.featureName?.()) {
+      case 'corn':
+        return msg.mazeNavCorn({count});
+      case 'pumpkin':
+        return msg.mazeNavPumpkin({count});
+      case 'lettuce':
+        return msg.mazeNavLettuce({count});
+      case 'unknown':
+        return msg.mazeNavHiddenCrop();
+      default:
+        return null;
+    }
+  }
+
+  if (PlanterCell && cell instanceof PlanterCell) {
+    switch (cell.featureName?.()) {
+      case 'soil':
+        return msg.mazeNavSoil();
+      case 'sprout':
+        return msg.mazeNavSprout();
+      default:
+        return null;
+    }
+  }
+
+  return null;
+}
+
+// The "character is here" clause, empty unless the cursor is on pegman.
+// On turn levels it names pegman's facing so the student can reason about
+// turnLeft/turnRight; absolute-movement levels omit it as noise.
+function describeCharacterHere(
+  ctrl: MazeController,
+  col: number,
+  row: number
+): string {
+  if (ctrl.getPegmanX() !== col || ctrl.getPegmanY() !== row) {
+    return '';
+  }
+  const name = usesTurns(ctrl) && DIRECTION_NAME[ctrl.getPegmanD() as number];
+  return name
+    ? msg.mazeNavCharacterHereFacing({direction: name()})
+    : msg.mazeNavCharacterHere();
+}
+
+export function describeCell(
+  ctrl: MazeController,
+  col: number,
+  row: number
+): string {
+  const object = describeObject(ctrl, col, row);
   const finish = ctrl.subtype.finish;
-  const what =
-    finish?.x === col && finish?.y === row
-      ? 'goal'
-      : tile === SquareType.OBSTACLE
-      ? 'obstacle'
-      : tile === SquareType.START
-      ? 'start'
-      : 'open path';
-  const here =
-    ctrl.getPegmanX() === col && ctrl.getPegmanY() === row
-      ? ' Character is here.'
-      : '';
-  return `${what}. Row ${row + 1}, column ${col + 1}.${here}`;
+  const isGoal = finish?.x === col && finish?.y === row;
+  const tile = tileAt(ctrl, col, row);
+  let primary: string;
+  if (object) {
+    primary = object;
+  } else if (isGoal) {
+    primary = msg.mazeNavGoal();
+  } else {
+    primary =
+      tile === SquareType.OBSTACLE
+        ? msg.mazeNavObstacle()
+        : tile === SquareType.START
+        ? msg.mazeNavStart()
+        : msg.mazeNavOpenPath();
+  }
+  const position = msg.mazeNavPosition({row: row + 1, col: col + 1});
+  const here = describeCharacterHere(ctrl, col, row);
+  return [primary, here, position].filter(Boolean).join(' ');
 }
 
 function createCursorRect(
@@ -114,7 +311,6 @@ function createCursorRect(
 }
 
 export default class MazeKeyboardNavigation {
-  private readonly wrapper: HTMLElement;
   private readonly svg: SVGSVGElement;
   private readonly liveRegion: HTMLElement;
   private cursor: SVGRectElement | null = null;
@@ -122,23 +318,25 @@ export default class MazeKeyboardNavigation {
   private cursorPos: CursorPos | null = null;
   private active = false;
 
-  constructor(wrapper: HTMLElement, svg: SVGSVGElement) {
-    this.wrapper = wrapper;
+  constructor(svg: SVGSVGElement) {
     this.svg = svg;
+    // The live region is an HTML element and can't live inside the svg
+    // namespace, so it hangs off document.body. It works from anywhere in
+    // the document and is removed in destroy().
     this.liveRegion = document.createElement('div');
     this.liveRegion.setAttribute('aria-live', 'polite');
     this.liveRegion.setAttribute('aria-atomic', 'true');
     Object.assign(this.liveRegion.style, SR_ONLY);
-    this.wrapper.appendChild(this.liveRegion);
+    document.body.appendChild(this.liveRegion);
 
-    this.wrapper.addEventListener('keydown', this.handleKeyDown);
-    this.wrapper.addEventListener('focusout', this.handleFocusOut);
+    this.svg.addEventListener('keydown', this.handleKeyDown);
+    this.svg.addEventListener('focusout', this.handleFocusOut);
   }
 
   destroy(): void {
-    this.exit({restoreWrapperFocus: false});
-    this.wrapper.removeEventListener('keydown', this.handleKeyDown);
-    this.wrapper.removeEventListener('focusout', this.handleFocusOut);
+    this.exit({restoreFocus: false});
+    this.svg.removeEventListener('keydown', this.handleKeyDown);
+    this.svg.removeEventListener('focusout', this.handleFocusOut);
     this.liveRegion.remove();
   }
 
@@ -157,7 +355,7 @@ export default class MazeKeyboardNavigation {
       e.stopPropagation();
     };
     if (!this.active) {
-      if (e.key === 'Enter' && e.target === this.wrapper) {
+      if (e.key === 'Enter' && e.target === this.svg) {
         consume();
         this.enter();
       }
@@ -178,8 +376,8 @@ export default class MazeKeyboardNavigation {
   private handleFocusOut = (e: FocusEvent): void => {
     if (!this.active) return;
     const next = e.relatedTarget as Node | null;
-    if (next && this.wrapper.contains(next)) return;
-    this.exit({restoreWrapperFocus: false});
+    if (next && next !== this.svg && this.svg.contains(next)) return;
+    this.exit({restoreFocus: false});
   };
 
   private enter(): void {
@@ -213,7 +411,6 @@ export default class MazeKeyboardNavigation {
     }
     const label = describeCell(ctrl, col, row);
     this.cursor.setAttribute('aria-label', label);
-    this.announce(label);
   }
 
   private tryMove(delta: {dx: number; dy: number}): void {
@@ -222,11 +419,11 @@ export default class MazeKeyboardNavigation {
     const nx = this.cursorPos.col + delta.dx;
     const ny = this.cursorPos.row + delta.dy;
     if (nx < 0 || nx >= ctrl.map.COLS || ny < 0 || ny >= ctrl.map.ROWS) {
-      this.announce('Edge of maze.');
+      this.announce(msg.mazeNavEdge());
       return;
     }
     if (tileAt(ctrl, nx, ny) === SquareType.WALL) {
-      this.announce('Wall.');
+      this.announce(msg.mazeNavWall());
       return;
     }
     this.cursorPos = {col: nx, row: ny};
@@ -237,8 +434,8 @@ export default class MazeKeyboardNavigation {
   // removing the focused cursor bubbles to focusout, which re-enters
   // this method; without the early flip we'd double-remove a node
   // mid-removal and the browser throws NotFoundError.
-  private exit(opts: {restoreWrapperFocus?: boolean} = {}): void {
-    const {restoreWrapperFocus = true} = opts;
+  private exit(opts: {restoreFocus?: boolean} = {}): void {
+    const {restoreFocus = true} = opts;
     if (!this.active) return;
     this.active = false;
     const cursor = this.cursor;
@@ -248,9 +445,9 @@ export default class MazeKeyboardNavigation {
     this.cursorPos = null;
     cursor?.remove();
     halo?.remove();
-    if (restoreWrapperFocus) {
-      this.wrapper.focus();
-      this.announce('Exited maze navigation.');
+    if (restoreFocus) {
+      this.svg.focus();
+      this.announce(msg.mazeNavExited());
     }
   }
 }

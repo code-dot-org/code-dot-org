@@ -21,6 +21,37 @@ function makeTextNode(
   } as SketchLabNode;
 }
 
+function makeLineAnchorNode(id: string, x: number, y: number): SketchLabNode {
+  return {
+    id,
+    type: 'lineAnchor',
+    position: {x, y},
+    data: {},
+  } as SketchLabNode;
+}
+
+describe('groupSelectedNodes', () => {
+  it('does not create a group from a single standalone line (two lineAnchor nodes)', () => {
+    const nodes = [
+      makeLineAnchorNode('a1', 0, 0),
+      makeLineAnchorNode('a2', 100, 0),
+    ];
+    const result = groupSelectedNodes(['a1', 'a2'], nodes, 'g');
+    expect(result).toBe(nodes);
+  });
+
+  it('creates a group when a standalone line and another node are selected', () => {
+    const nodes = [
+      makeLineAnchorNode('a1', 0, 0),
+      makeLineAnchorNode('a2', 100, 0),
+      makeTextNode('t1', 200, 0),
+    ];
+    const result = groupSelectedNodes(['a1', 'a2', 't1'], nodes, 'g');
+    expect(result).not.toBe(nodes);
+    expect(result.find(n => n.type === 'group')).toBeDefined();
+  });
+});
+
 describe('grouping', () => {
   it('marks grouped children as immovable until ungrouped', () => {
     const grouped = groupSelectedNodes(

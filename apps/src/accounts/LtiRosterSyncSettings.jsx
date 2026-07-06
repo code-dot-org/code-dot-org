@@ -1,4 +1,5 @@
 import Toggle from '@code-dot-org/component-library/toggle';
+import {Typography as MuiTypography, Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
@@ -7,6 +8,8 @@ import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {LmsLinks} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
+
+import commonStyles from './common/common.styles.module.scss';
 
 export function LtiRosterSyncSettings(props) {
   const enabledLabel = i18n.ltiSectionSyncEnabled();
@@ -34,8 +37,10 @@ export function LtiRosterSyncSettings(props) {
 
   return (
     <div>
-      <hr />
-      <h2>{i18n.ltiSectionSyncSettingsTitle()}</h2>
+      <hr className={commonStyles.sectionDivider} />
+      <MuiTypography variant="h5" component="h2" gutterBottom>
+        {i18n.ltiSectionSyncSettingsTitle()}
+      </MuiTypography>
       <SafeMarkdown markdown={settingsDescription} />
       <Toggle
         onChange={() => {
@@ -49,15 +54,16 @@ export function LtiRosterSyncSettings(props) {
         name={'lti_roster_sync_enabled'}
       />
       <div style={styles.buttonContainer}>
-        <button
-          type={'button'}
-          className={'btn'}
+        <MuiButton
+          type="button"
+          variant="contained"
+          color="primary"
+          size="small"
           onClick={handleSubmit}
-          tabIndex={'0'}
           disabled={!changed}
         >
           {i18n.ltiSectionSyncSettingsButtonText()}
-        </button>
+        </MuiButton>
       </div>
     </div>
   );

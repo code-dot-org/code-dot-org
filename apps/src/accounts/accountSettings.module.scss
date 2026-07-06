@@ -1,3 +1,8 @@
 .sectionHeader {
-  color: var(--text-brand-teal-primary);
+  color: var(--text-neutral-primary);
+}
+
+// Overrides the global `hr { border-color: $teal }` with a neutral border.
+hr.sectionDivider {
+  border-color: var(--borders-neutral-strong);
 }
