@@ -1,4 +1,18 @@
-import {expect, type Locator} from '@playwright/test';
+import {expect, type Locator, type Page} from '@playwright/test';
+
+/**
+ * Await web fonts then a post-layout paint. An unsettled axe scan reports
+ * transient color-contrast (dequelabs/axe-core#1866).
+ */
+export async function settle(page: Page): Promise<void> {
+  await page.evaluate(() => document.fonts.ready.then(() => undefined));
+  await page.evaluate(
+    () =>
+      new Promise<void>(resolve =>
+        requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+      ),
+  );
+}
 
 /**
  * Resolve once the locator's box stops moving. Playwright's built-in 2-frame

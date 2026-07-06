@@ -1,0 +1,50 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-06-29T17:07:43.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "require_edit_to_continue": true,
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "250b8d13-be68-4be2-a5f4-b823ccaff18d": {
+          "id": "250b8d13-be68-4be2-a5f4-b823ccaff18d",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>AI Sentiment Analyzer</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n    <div class=\"container\">\n        <h1>AI Sentiment Analyzer</h1>\n        <p>Enter a word below to see how our simple AI classifies its sentiment.</p>\n        <div class=\"input-section\">\n            <input type=\"text\" id=\"wordInput\" placeholder=\"Type a word here...\">\n            <button id=\"analyzeButton\">Analyze Sentiment</button>\n        </div>\n        <div class=\"output-section\">\n            <h2>AI Analysis:</h2>\n            <p id=\"sentimentOutput\">Enter a word to start...</p>\n            <p id=\"reasonOutput\"></p>\n        </div>\n    </div>\n    <script src=\"script.js\"></script>\n</body>\n</html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        },
+        "ca56c604-bcc3-4012-8ab3-0e4f36c1b7b9": {
+          "id": "ca56c604-bcc3-4012-8ab3-0e4f36c1b7b9",
+          "name": "style.css",
+          "contents": "body {\n    font-family: Arial, sans-serif;\n    display: flex;\n    justify-content: center;\n    align-items: flex-start;\n    min-height: 100vh;\n    background-color: #f4f4f4;\n    margin: 0;\n    padding-top: 50px;\n}\n\n.container {\n    background-color: #fff;\n    padding: 30px;\n    border-radius: 8px;\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\n    text-align: center;\n    max-width: 500px;\n    width: 90%;\n}\n\nh1 {\n    color: #333;\n    margin-bottom: 20px;\n}\n\np {\n    color: #555;\n    line-height: 1.6;\n}\n\n.input-section {\n    margin: 25px 0;\n    display: flex;\n    justify-content: center;\n    gap: 10px;\n}\n\n#wordInput {\n    padding: 10px;\n    border: 1px solid #ddd;\n    border-radius: 4px;\n    flex-grow: 1;\n    max-width: 250px;\n}\n\n#analyzeButton {\n    padding: 10px 15px;\n    background-color: #007bff;\n    color: white;\n    border: none;\n    border-radius: 4px;\n    cursor: pointer;\n    font-size: 16px;\n}\n\n#analyzeButton:hover {\n    background-color: #0056b3;\n}\n\n.output-section {\n    margin-top: 30px;\n    padding: 20px;\n    background-color: #e9ecef;\n    border-radius: 5px;\n    text-align: left;\n}\n\n.output-section h2 {\n    color: #333;\n    margin-top: 0;\n    font-size: 1.2em;\n}\n\n.output-section p {\n    margin-bottom: 5px;\n}\n",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        },
+        "28bbd4b1-f276-4d7f-992e-e22ac4d1b7ea": {
+          "id": "28bbd4b1-f276-4d7f-992e-e22ac4d1b7ea",
+          "name": "script.js",
+          "contents": "document.addEventListener('DOMContentLoaded', () => {\n    const wordInput = document.getElementById('wordInput');\n    const analyzeButton = document.getElementById('analyzeButton');\n    const sentimentOutput = document.getElementById('sentimentOutput');\n    const reasonOutput = document.getElementById('reasonOutput');\n\n    analyzeButton.addEventListener('click', () => {\n        const word = wordInput.value.trim();\n        if (word === \"\") {\n            sentimentOutput.textContent = \"Please enter a word.\";\n            reasonOutput.textContent = \"\";\n            return;\n        }\n        const result = classifySentiment(word);\n        sentimentOutput.textContent = `Sentiment: ${result.sentiment}`;\n        reasonOutput.textContent = `Reason: ${result.reason}`;\n    });\n\n    // Simulate a simple AI classification model\n    function classifySentiment(word) {\n        word = word.toLowerCase();\n\n        const positiveWords = [\"happy\", \"joy\", \"great\", \"awesome\", \"good\", \"love\"];\n        const negativeWords = [\"sad\", \"bad\", \"terrible\", \"angry\", \"disappointed\", \"hate\"];\n        const neutralWords = [\"the\", \"a\", \"is\", \"it\", \"neutral\", \"ok\", \"fine\"];\n\n        if (positiveWords.includes(word)) {\n            return { sentiment: \"Positive\", reason: \"Identified as a common positive word.\" };\n        } else if (negativeWords.includes(word)) {\n            return { sentiment: \"Negative\", reason: \"Identified as a common negative word.\" };\n        } else if (neutralWords.includes(word)) {\n            return { sentiment: \"Neutral\", reason: \"Identified as a neutral or common word.\" };\n        } else if (word === \"confused\") {\n            // An example of an unexpected classification\n            return { sentiment: \"Positive\", reason: \"This word is complex; AI found a subtle positive pattern.\" };\n        } else if (word === \"excellent\") {\n            // Another example of an unexpected classification\n            return { sentiment: \"Neutral\", reason: \"AI needs more training data for strong positive synonyms.\" };\n        } else if (word === \"challenging\") {\n            // An example where the AI might misinterpret a nuanced word\n            return { sentiment: \"Positive\", reason: \"AI interprets 'challenging' as an opportunity, hence positive.\" };\n        } else {\n            return { sentiment: \"Unknown\", reason: \"Word not in training data or low confidence.\" };\n        }\n    }\n});",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "250b8d13-be68-4be2-a5f4-b823ccaff18d",
+        "ca56c604-bcc3-4012-8ab3-0e4f36c1b7b9",
+        "28bbd4b1-f276-4d7f-992e-e22ac4d1b7ea"
+      ]
+    },
+    "long_instructions": "In this lab, you'll explore a simple web program that tries to act like an AI! Your task is to play around with it and see how it performs.\r\n\r\n1.  Open the `index.html` file in your web browser. You'll see a simple page with an input box and a button.\r\n2.  Take a look at `script.js`. This file contains the JavaScript code that runs the \"AI\" part of the program. The `classifySentiment` function is where the magic (and sometimes the mistakes!) happens.\r\n3.  Type different words into the input box on your web page and click the \"Analyze Sentiment\" button. Watch what the program says about each word.\r\n4.  Your main goal is to find words where the AI's classification seems *wrong* or *unexpected*. For example, what happens if you type \"confused\" or \"excellent\"? Make a mental note of these surprising results. This will help us improve the AI in the next step!",
+    "generate_outline": "Students will be given a simple program that integrates an AI classification model. They will run the program with various inputs and observe its outputs, identifying instances where the AI model performs poorly or produces unexpected results."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:08:01 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:08:01 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:08:38 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

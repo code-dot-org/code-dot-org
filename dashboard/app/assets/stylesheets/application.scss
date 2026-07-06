@@ -122,6 +122,11 @@ hr {
   border-bottom: none;
 }
 
+// Account edit page: neutral section dividers instead of the brand teal above.
+hr.account-section-divider {
+  border-color: var(--borders-neutral-strong);
+}
+
 #classroom-sections hr {
   border-color: $gray;
 }
@@ -3666,7 +3671,7 @@ html[data-brand="codeai"], html[data-brand="codeai-next"] {
   top: 0;
   right: 0;
   color: $white;
-  background-color: $light_purple;
+  background-color: var(--background-brand-purple-primary);
   padding: 3px;
   z-index: 1010; // must be greater than bootstrap's .navbar-static-top (1000)
   cursor: pointer;

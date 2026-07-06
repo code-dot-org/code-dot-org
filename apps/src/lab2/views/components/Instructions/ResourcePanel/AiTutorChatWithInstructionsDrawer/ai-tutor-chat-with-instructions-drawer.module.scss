@@ -9,14 +9,21 @@
 .instructionsDrawer {
   position: relative;
   flex-shrink: 0;
-  padding: 10px;
   background: var(--background-neutral-primary);
   border-radius: 4px;
   box-sizing: border-box;
+  // Clip content so the height can animate down to 0.
+  overflow: hidden;
+  // Animate the drawer height: between the Instructions tab (full height) and the
+  // AI Tutor tab (drawer height), and when opening/closing via the toggle.
+  // Suppressed while dragging the resize bar and in the .instant state.
+  transition: height 0.2s ease;
 }
 
 .instructionsScrollArea {
   height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
   overflow: auto;
   border-radius: 4px;
 
@@ -42,13 +49,77 @@
 }
 
 .chatPanel {
-  flex-shrink: 0;
+  position: relative;
+  // Fill the space left below the instructions drawer. Sizing the chat by flex
+  // (rather than an explicit height) keeps its bottom pinned to the container
+  // bottom on every frame, regardless of the drawer's animation timing, so the
+  // message input never drifts. This panel clips the chat content, whose own
+  // height animates in lockstep with the drawer (see .chatContent).
+  flex: 1;
+  min-height: 0;
   overflow: hidden;
+  // Fade out on the Instructions tab.
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+// Fade the chat panel and toggle out on the Instructions tab (the opacity
+// transition lives on those elements) and disable interaction.
+.fadeHidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+// While the user is dragging the resize bar, heights and the toggle position
+// must track the pointer with no lag, so suppress those transitions (the opacity
+// fades are unaffected by dragging and can stay).
+.dragging {
+  .instructionsDrawer,
+  .chatContent {
+    transition: none;
+  }
+  .chatPanel,
+  .toggleButtonContainer {
+    transition: opacity 0.2s ease;
+  }
+}
+
+// Suppress the layout transitions. Applied (via animateLayout) when the drawer is
+// collapsed and idle — not open, not mid open/close, not mid tab switch — so an
+// incidental relayout such as a window resize doesn't animate when nothing should
+// be moving.
+.instant {
+  .instructionsDrawer,
+  .chatContent,
+  .chatPanel,
+  .toggleButtonContainer {
+    transition: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .instructionsDrawer,
+  .chatContent,
+  .chatPanel,
+  .toggleButtonContainer {
+    transition: none;
+  }
 }
 
 .chatContent {
-  height: 100%;
+  // Sized (inline) to the visible chat area below the drawer, so its messages sit
+  // just below the instructions rather than behind them. Anchored to the bottom of
+  // the flex chat panel (whose bottom is pinned to the container).
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
   box-sizing: border-box;
+  // Animate the visible height in lockstep with the drawer (same duration/easing),
+  // so the chat's top edge tracks the drawer's bottom edge as it opens and closes:
+  // the blind slides over the chat — which stays visible and bottom-pinned — rather
+  // than the chat vacating and leaving a blank gap for the drawer to grow into.
+  transition: height 0.2s ease;
 }
 
 .toggleButton {
@@ -72,6 +143,9 @@
   border-radius: 0 0 6px 6px;
   box-shadow: 0 2px 3px 0 rgb(0 0 0 / 0.05);
   transform: translateX(-50%);
+  // `top` follows the instructions height so the toggle rides the drawer's
+  // bottom edge as it resizes; opacity fades the toggle in on the AI Tutor tab.
+  transition: top 0.2s ease, opacity 0.2s ease;
 }
 
 .resizeBar {

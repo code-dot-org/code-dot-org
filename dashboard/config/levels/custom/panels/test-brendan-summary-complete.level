@@ -1,0 +1,51 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-06-29T19:42:46.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-brendan-summary-complete-60302d44-c5cd-4088-bf18-26a5ea8cc563",
+        "text": "We've learned that every web page is built like a house, starting with its basic blueprint: the `<html>`, `<head>`, and `<body>` tags.",
+        "imageUrl": "https://images.code.org/686bb228927c52bc5315cb0932338958-test-brendan-summary-complete-panel-1-2a695d86-6471-4559-a0e0-c9e4adfddb9b.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-brendan-summary-complete-151df5d7-1f74-45f2-9697-5764b8d1f9da",
+        "text": "The `<head>` section holds important information about the page, like its `<title>`! This is what appears in your browser tab, helping you keep track of your pages.",
+        "imageUrl": "https://images.code.org/18b00bed9754d9c10bca1ab5fe689a87-test-brendan-summary-complete-panel-2-86b5bfcf-afb7-4778-9c66-fe7c0995cbf9.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-brendan-summary-complete-e726503e-0a3e-46f2-aba5-afe166c8cdc6",
+        "text": "And the `<body>`? That's where all the fun stuff goes! Everything you actually *see* on the web page, from text to images, lives inside these tags.",
+        "imageUrl": "https://images.code.org/a65b22f362311d604baeb4cc182037d4-test-brendan-summary-complete-panel-3-636c3ab0-5f96-4cb0-8bd8-d5a9960ffbba.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-brendan-summary-complete-afe66b61-76a7-4d69-98ab-eb214d503e9e",
+        "text": "For text, we learned how to structure it with headings and paragraphs. `<h1>` is for the main title, like your pet fish's name, and `<h2>` for subtitles.",
+        "imageUrl": "https://images.code.org/2a426afeac8536e23e630cdc30521902-test-brendan-summary-complete-panel-4-b5d50473-fbc8-4ca3-9012-2cf899e6ac73.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-brendan-summary-complete-4a957d12-fbf6-4a7b-9f67-bc7b122ba486",
+        "text": "And for all the interesting details about your fish – its personality, what it eats, its favorite toys – we use `<p>` tags to create neat paragraphs of text.",
+        "imageUrl": "https://images.code.org/f3c027eeb82ddfbb241d8f284e049957-test-brendan-summary-complete-panel-5-0b6dc4c0-7701-40ee-8b27-2270f7fee86e.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-brendan-summary-complete-b1b622ac-1cee-4dba-b9b4-a4022e5bcc2a",
+        "text": "Look at what you've created! From simple tags, you built a complete web page about your pet fish, with a title, a main heading, a subtitle, and descriptive paragraphs. Awesome job!",
+        "imageUrl": "https://images.code.org/e5b1c42308c2caf79e569f7c35bed8a6-test-brendan-summary-complete-panel-6-771b9565-d7a2-4861-af2b-2e4cf9c5b7dd.png",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "generate_outline": "Summarize the key HTML elements learned: <html>, <head>, <body>, <title>, <h1>, <h2>, and <p>. Show a finished example of the pet fish page students have created, emphasizing how these simple tags build a complete web page."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 19:43:42 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 19:43:42 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

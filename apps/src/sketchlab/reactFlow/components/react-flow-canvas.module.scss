@@ -171,6 +171,15 @@ $handle-grab-buffer: 10px;
   user-select: none;
 }
 
+// Drag-to-select overlay drawn on the canvas pane in cursor mode.
+.dragSelectionBox {
+  position: absolute;
+  pointer-events: none;
+  z-index: 5;
+  border: 1px solid var(--borders-brand-teal-primary);
+  background: color-mix(in srgb, var(--borders-brand-teal-primary) 10%, transparent);
+}
+
 // Visually hidden but announced by screen readers.
 .srOnly {
   position: absolute;

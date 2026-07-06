@@ -25,6 +25,7 @@ export default class ElementSelect extends React.Component {
           value={selected}
           onChange={this.handleChange}
           style={{width: '150px'}}
+          data-notranslate="true"
         >
           {this.props.elementIdList.map(function (id) {
             return <option key={id}>{id}</option>;

@@ -131,6 +131,7 @@ export const createHomepageSteps = (
           ? 'Personal logins work best for high school classes. Students can use their email address to sign in and reset their password if they forget it.'
           : "Secret words work best for middle school classes. They're simple enough to remember, no email account required. Select a login method to continue."
       ),
+      classes: 'custom-shepherd-step-container tour-step-above-modal',
       beforeShowPromise: () => waitForElement(loginSelector, controller.signal),
       // No advanceOn: this is the last homepage step, so tour.next() would fire
       // tour.complete() and clear sessionStorage before the page navigates to

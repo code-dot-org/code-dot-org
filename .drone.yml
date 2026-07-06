@@ -102,13 +102,6 @@ steps:
     pull: always
     environment:
       CI_JOB: 'unit_tests'
-      # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_env.sh
-      CLOUDFRONT_KEY_PAIR_ID:
-        from_secret: CLOUDFRONT_KEY_PAIR_ID
-      CLOUDFRONT_PRIVATE_KEY:
-        from_secret: CLOUDFRONT_PRIVATE_KEY
-      CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
-        from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
     commands:
       # Cached data gets restored by the root user, so we need to reassign
       - sudo chown -R ci:ci .
@@ -239,11 +232,8 @@ steps:
     network_mode: host
     environment:
       CI_JOB: 'ui_tests'
-      # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_env.sh
-      CLOUDFRONT_KEY_PAIR_ID:
-        from_secret: CLOUDFRONT_KEY_PAIR_ID
-      CLOUDFRONT_PRIVATE_KEY:
-        from_secret: CLOUDFRONT_PRIVATE_KEY
+      # Each Drone secret below must be explicitly passed to the corresponding
+      # config value in test.yml.erb.
       CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
         from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
       PROPERTIES_ENCRYPTION_KEY:
@@ -252,8 +242,6 @@ steps:
         from_secret: SAUCE_USERNAME
       SAUCE_ACCESS_KEY:
         from_secret: SAUCE_ACCESS_KEY
-      DEVICE_FARM_DESKTOP_PROJECT_ARN:
-        from_secret: DEVICE_FARM_DESKTOP_PROJECT_ARN
     shm_size: '2gb' # necessary to avoid "invalid session id"/"session deleted because of page crash" errors in Selenium
     commands:
       # Cached data gets restored by the root user, so we need to reassign
@@ -376,6 +364,6 @@ trigger:
 
 ---
 kind: signature
-hmac: e75b83c2d058f6f4465e93bf9ebaf9ce75b9120378e5a9198e27eae5599ce56e
+hmac: f0e141ca9f4aef68803fc038b9c5f765d8ceb0f1940903fb48b73292ca8131f4
 
 ...

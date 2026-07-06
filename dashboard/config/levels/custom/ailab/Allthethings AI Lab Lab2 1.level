@@ -10,8 +10,10 @@
     "instructions_important": "false",
     "uses_lab2": "true",
     "long_instructions": "AI Lab Lab2!",
-    "hide_share_and_remix": "false"
+    "hide_share_and_remix": "false",
+    "mode": "{\"hideSpecifyColumns\":true,\"hideChooseReserve\":true}",
+    "dynamic_instructions": "{\"dataDisplayFeatures\": \"So, **choose one or more columns**.\\n\\nThey will do the predicting.\", \"selectTrainer\": \"So, set up the training.\"}"
   },
-  "audit_log": "[{\"changed_at\":\"2026-06-08 22:49:53 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2026-06-08 22:51:18 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-06-08 22:49:53 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2026-06-08 22:51:18 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2026-06-26 23:22:54 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2026-06-29 18:18:48 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]"
 }]]></config>
 </Ailab>
