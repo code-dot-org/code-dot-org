@@ -6,15 +6,15 @@ import {configureStore, createSlice} from '@reduxjs/toolkit';
 import type {PayloadAction} from '@reduxjs/toolkit';
 import {beforeEach, describe, expect, expectTypeOf, it} from 'vitest';
 
-import reduxSlice, {incrementCount} from '../reduxSlice';
-import {injectSlice, injectSlices} from '../store';
+import reduxSlice, {setCount} from '../reduxSlice';
+import {injectSlices} from '../store';
 import type {MockStore, StateFor} from '../store';
 import type {SlicesState, StoreWithState} from '../types';
 
 // Fixture slices stand in for real platform slices. They intentionally have
-// dissimilar reducer shapes — that's what previously broke when the type
-// constraint was `Slice<any, any, string>` (the invariant `actions` map made
-// these unassignable to a common tuple type).
+// dissimilar reducer shapes — the case a `Slice<any, any, string>` constraint
+// would reject (its invariant `actions` map makes such slices unassignable to
+// a common tuple type), which is why `injectSlices` matches structurally.
 
 const sliceA = createSlice({
   name: 'a',
@@ -72,7 +72,8 @@ describe('injectSlices', () => {
     const state = injected.getState();
     expect(state.a).toEqual({value: 0});
     expect(state.b).toEqual({label: 'none'});
-    expect(state.redux).toEqual({reducerCount: 0});
+    // The built-in slice tracks how many slices have been injected.
+    expect(state.redux).toEqual({reducerCount: 2});
   });
 
   it('dispatches reach the injected slices', () => {
@@ -90,19 +91,21 @@ describe('injectSlices', () => {
     const withA = injectSlices([sliceA] as const, store);
     withA.dispatch(sliceA.actions.setA(7));
     expect(withA.getState().a.value).toBe(7);
+    expect(withA.getState().redux.reducerCount).toBe(1);
 
     const withAB = injectSlices([sliceB] as const, withA);
     // sliceA's state survives the replaceReducer call
     expect(withAB.getState().a.value).toBe(7);
     // newly added slice gets its initial state
     expect(withAB.getState().b).toEqual({label: 'none'});
+    // and the count accumulates across calls
+    expect(withAB.getState().redux.reducerCount).toBe(2);
   });
 
   it('built-in redux slice keeps responding to actions after injection', () => {
     const injected = injectSlices([sliceA] as const, store);
-    injected.dispatch(incrementCount());
-    injected.dispatch(incrementCount());
-    expect(injected.getState().redux.reducerCount).toBe(2);
+    injected.dispatch(setCount(41));
+    expect(injected.getState().redux.reducerCount).toBe(41);
   });
 
   it('re-injecting a slice replaces its reducer without dropping siblings', () => {
@@ -118,17 +121,14 @@ describe('injectSlices', () => {
     expect(withABC.getState().b).toEqual({label: 'keep me'});
     expect(withABC.getState().c).toEqual({count: 0});
 
+    // Re-injection doesn't double-count: a, b, c — not a, b, a, c.
+    expect(withABC.getState().redux.reducerCount).toBe(3);
+
     // And sliceA still responds — its reducer reference was replaced but
     // identity doesn't matter, only that dispatches still mutate state.
     withABC.dispatch(sliceC.actions.bumpC());
     expect(withABC.getState().c.count).toBe(1);
     expect(withABC.getState().a.value).toBe(11);
-  });
-
-  it('injectSlice is sugar for the multi-slice form', () => {
-    const injected = injectSlice(sliceA, store);
-    injected.dispatch(sliceA.actions.setA(3));
-    expect(injected.getState().a.value).toBe(3);
   });
 });
 
