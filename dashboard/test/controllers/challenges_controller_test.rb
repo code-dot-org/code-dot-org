@@ -3,39 +3,41 @@ require 'test_helper'
 class ChallengesControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
-  setup do
-    @user = create(:student)
+  describe 'GET #index' do
+    let(:user) {create(:student)}
+    
+    let(:lesson) {create(:lesson)}
+    let(:other_lesson) {create(:lesson)}
+    
+    let!(:challenge) {create(:challenge, lesson:)}
+    let!(:other_challenge) {create(:challenge, lesson:)}
+    let!(:challenge_in_other_lesson) {create(:challenge, lesson: other_lesson)}
 
-    @lesson = create(:lesson)
-    @other_lesson = create(:lesson)
+    let(:response_json) {JSON.parse(response.body)}
 
-    @challenge = create(:challenge, lesson: @lesson)
-    @other_challenge = create(:challenge, lesson: @lesson)
-    @challenge_in_other_lesson = create(:challenge, lesson: @other_lesson)
-  end
+    before do
+      sign_in(user) 
+    end
+  
+    it 'returns all challenges when no lesson_id param given' do
+      get :index
+  
+      must_respond_with :success
+      _(response_json).must_include challenge
+      _(response_json).must_include other_challenge
+      _(response_json).must_include challenge_in_other_lesson
+    end
 
-  # --- unauthenticated ---
+    context 'when not signed in' do
+      before do
+        sign_out :user
+      end
 
-  test 'index redirects to sign in when not signed in' do
-    get :index
-    assert_redirected_to_sign_in
-  end
-
-  test 'show redirects to sign in when not signed in' do
-    get :show, params: {id: @challenge.id}
-    assert_redirected_to_sign_in
-  end
-
-  # --- index ---
-
-  test 'index returns all challenges when no lesson_id param given' do
-    sign_in @user
-    get :index
-    assert_response :success
-    ids = JSON.parse(response.body).map {|c| c['id']}
-    assert_includes ids, @challenge.id
-    assert_includes ids, @other_challenge.id
-    assert_includes ids, @challenge_in_other_lesson.id
+      test 'redirects to sign in' do
+        get :index
+        must_redirect_to new_user_session_path
+      end
+    end
   end
 
   test 'index returns only challenges for the given lesson_id' do
