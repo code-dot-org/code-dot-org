@@ -1,17 +1,9 @@
-import {configureStore, combineReducers} from '@reduxjs/toolkit';
+import {configureStore, combineSlices} from '@reduxjs/toolkit';
 import {useDispatch, useSelector} from 'react-redux';
-import type {AnyAction, Reducer, ReducersMapObject, Store} from 'redux';
+import type {AnyAction, Reducer, Store} from 'redux';
 
 import reduxSlice from './reduxSlice';
-import type {
-  SlicesState,
-  StoreWithState,
-  StoreWithAsyncReducers,
-} from './types';
-
-const staticReducers: ReducersMapObject = {
-  redux: reduxSlice.reducer as Reducer,
-};
+import type {SlicesState, StoreWithState} from './types';
 
 export type StoreFor<TExtendedStore> =
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -20,9 +12,35 @@ export type StateFor<TExtendedStore> =
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   TExtendedStore extends StoreWithState<any, infer S> ? S : never;
 
+/**
+ * Every store starts from the built-in redux slice; injected slices are added
+ * to this combined reducer over time. `combineSlices` owns the injection
+ * mechanics (the reducer map, caching, override semantics) that were
+ * previously hand-rolled here with `combineReducers` + an `asyncReducers` bag
+ * mutated onto the store.
+ */
+function createRootReducer() {
+  return combineSlices(reduxSlice);
+}
+
+/**
+ * The injectable combined reducer backing each store. Keyed weakly by store
+ * so `injectSlices` can keep injecting into the same reducer across calls
+ * without decorating the store object itself.
+ */
+const rootReducers = new WeakMap<
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  Store<any, AnyAction>,
+  ReturnType<typeof createRootReducer>
+>();
+
+const initialRootReducer = createRootReducer();
+
 const initialStore = configureStore({
-  reducer: staticReducers,
+  reducer: initialRootReducer,
 });
+
+rootReducers.set(initialStore, initialRootReducer);
 
 /**
  * Slice-like shape we accept everywhere a real `Slice` would do. Structural
@@ -48,23 +66,30 @@ export function injectSlices<
   StoreFor<TExtendedStore>,
   StateFor<TExtendedStore> & SlicesState<TSlices>
 > {
-  const s = store as StoreWithAsyncReducers<typeof store>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const s = store as unknown as Store<any, AnyAction>;
 
-  // start from whatever we already have (or an empty object)
-  const nextReducers: ReducersMapObject = {
-    ...staticReducers,
-    ...(s.asyncReducers ?? {}),
-  };
-
-  // add/replace each slice reducer under its slice name
-  for (const slice of slices) {
-    nextReducers[slice.name] = slice.reducer as Reducer;
+  let root = rootReducers.get(s);
+  if (!root) {
+    root = createRootReducer();
+    rootReducers.set(s, root);
   }
 
-  s.asyncReducers = nextReducers;
+  for (const slice of slices) {
+    // Key by `name`, not `reducerPath`: this module's typing (`SlicesState`)
+    // and its pre-combineSlices runtime both keyed injected state by the
+    // slice name, so keep that contract regardless of a slice's reducerPath.
+    root.inject(
+      {reducerPath: slice.name, reducer: slice.reducer},
+      {overrideExisting: true},
+    );
+  }
 
-  const root = combineReducers(nextReducers);
-  store.replaceReducer(root);
+  // `inject` alone defers the new slice's state until the next dispatched
+  // action; `replaceReducer` dispatches a REPLACE action, which both wires the
+  // combined reducer into the store (first call) and materializes the freshly
+  // injected slice state immediately.
+  s.replaceReducer(root as Reducer);
 
   // refine the type of getState() to include the injected slices
   return store as unknown as StoreWithState<

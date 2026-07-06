@@ -46,10 +46,10 @@ const sliceC = createSlice({
   },
 });
 
-// A fresh store per test — `injectSlices` mutates `asyncReducers` on the
-// input, so we can't reuse the shared `defaultStore` singleton across cases.
-// Cast mirrors what `defaultStore` does: `StoreFor`/`StateFor` can only
-// extract a useful type when the input is already a `StoreWithState`.
+// A fresh store per test — `injectSlices` accumulates slices in the store's
+// combined reducer, so we can't reuse the shared `defaultStore` singleton
+// across cases. Cast mirrors what `defaultStore` does: `StoreFor`/`StateFor`
+// can only extract a useful type when the input is already a `StoreWithState`.
 function makeStore() {
   const raw = configureStore({reducer: {redux: reduxSlice.reducer}});
   return raw as unknown as StoreWithState<
@@ -111,7 +111,8 @@ describe('injectSlices', () => {
     withAB.dispatch(sliceB.actions.setB('keep me'));
 
     // Re-inject sliceA alongside a new sliceC. sliceB's reducer must remain
-    // wired up (asyncReducers carries it forward) so its state survives.
+    // wired up (the store's combined reducer carries it forward) so its
+    // state survives.
     const withABC = injectSlices([sliceA, sliceC] as const, withAB);
 
     expect(withABC.getState().b).toEqual({label: 'keep me'});

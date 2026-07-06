@@ -1,4 +1,4 @@
-import type {Store, ReducersMapObject} from 'redux';
+import type {Store} from 'redux';
 
 /**
  * Collapses a union of object types into a single intersection. Used to
@@ -47,11 +47,4 @@ export type StateFromStore<TStore> =
  */
 export type StoreWithState<TStore, TState> = Omit<TStore, 'getState'> & {
   getState(): TState;
-};
-
-/**
- * The augmented store definition to include the embedded asyncReducers list.
- */
-export type StoreWithAsyncReducers<TStore> = TStore & {
-  asyncReducers?: ReducersMapObject;
 };
