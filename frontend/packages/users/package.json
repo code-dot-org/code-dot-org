@@ -23,9 +23,6 @@
       "types": "./dist/redux/index.d.ts",
       "import": "./dist/redux/index.mjs",
       "require": "./dist/redux/index.cjs"
-    },
-    "./redux/currentUserSlice": {
-      "types": "./dist/redux/currentUserSlice.d.ts"
     }
   },
   "scripts": {
