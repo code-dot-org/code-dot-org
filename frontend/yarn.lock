@@ -1998,7 +1998,7 @@ __metadata:
     "@emotion/styled": "catalog:"
     "@mui/material": "catalog:"
     "@testing-library/react": "catalog:"
-    "@types/node": "npm:^20"
+    "@types/node": "catalog:"
     "@vitejs/plugin-react": "catalog:"
     classnames: "catalog:"
     eslint: "catalog:"
@@ -2008,7 +2008,7 @@ __metadata:
     hast-util-to-html: "npm:^9.0.5"
     jsdom: "catalog:"
     playwright: "catalog:"
-    prettier: "npm:3.4.2"
+    prettier: "catalog:"
     react: "catalog:"
     react-dom: "catalog:"
     rehype-raw: "npm:^7.0.0"
@@ -2023,8 +2023,12 @@ __metadata:
     vite: "catalog:"
     vite-plugin-dts: "catalog:"
     vite-plugin-externalize-deps: "catalog:"
+    vite-plugin-lib-inject-css: "npm:^2.2.2"
     vitest: "catalog:"
   peerDependencies:
+    "@emotion/react": ^11.0.0
+    "@emotion/styled": ^11.0.0
+    "@mui/material": ^7.0.0
     react: ^18.0.0 || ^19.0.0
   languageName: unknown
   linkType: soft
@@ -7268,15 +7272,6 @@ __metadata:
   dependencies:
     undici-types: "npm:~5.26.4"
   checksum: 10c0/9c093f13749dccd16a3e9cd17080db057d1e94cb5205a871d2818ad51ec19d7d392a7c12a11661c6a6f4404cbd85b19d09ab6c564a4763cab2ff5bb0e198617d
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:^20":
-  version: 20.19.41
-  resolution: "@types/node@npm:20.19.41"
-  dependencies:
-    undici-types: "npm:~6.21.0"
-  checksum: 10c0/aa2a07317bbd700bea68d5784b403a738dbcebadbe2d8ef05649f7953065120d5d37f7edfdd7881df3a3bd15328c8a4dc46fdd69732ab540d552c505378c585b
   languageName: node
   linkType: hard
 
