@@ -1,5 +1,3 @@
-@import "color.scss";
-
 $thumbnail-size: 105px;
 $thumbnail-border-width: 1px;
 $hover-plus-size: 24px;
@@ -24,7 +22,7 @@ $hover-plus-size: 24px;
   height: $thumbnail-size;
   width: 100%;
   border-style: solid;
-  border-color: $light_gray;
+  border-color: var(--borders-neutral-primary);
   border-width: $thumbnail-border-width;
   border-radius: 12px;
   padding: 2px;
@@ -36,17 +34,17 @@ $hover-plus-size: 24px;
 }
 
 .thumbnailIcon {
-  color: $white;
-  background-color: $purple;
-  border-color: $purple;
+  color: var(--text-neutral-white-fixed);
+  background-color: var(--background-brand-purple-primary);
+  border-color: var(--borders-brand-purple-primary);
   font-size: calc($thumbnail-size / 2);
   &:hover {
-    background-color: $light_purple;
-    border-color: $light_purple;
+    background-color: var(--background-brand-purple-strong);
+    border-color: var(--borders-brand-purple-strong);
   }
   &:focus {
-    background-color: $light_purple;
-    border-color: $light_purple;
+    background-color: var(--background-brand-purple-strong);
+    border-color: var(--borders-brand-purple-strong);
   }
 }
 
@@ -86,15 +84,15 @@ $hover-plus-size: 24px;
 }
 
 .hoverIcon {
-  color: $purple;
-  background-color: $white;
-  border-color: $purple;
+  color: var(--text-brand-purple-primary);
+  background-color: var(--background-neutral-white-fixed);
+  border-color: var(--borders-brand-purple-primary);
 }
 
 .selectIcon {
-  color: $white;
-  background-color: $level_perfect;
-  border-color: $level_perfect;
+  color: var(--text-neutral-white-fixed);
+  background-color: var(--background-success-primary);
+  border-color: var(--borders-success-primary);
 }
 
 .multiSelectBorder {
@@ -106,13 +104,13 @@ $hover-plus-size: 24px;
 }
 
 .hoverBorder {
-  border-color: $purple;
+  border-color: var(--borders-brand-purple-primary);
 }
 
 .selectBorder {
   border-width: 3px;
   padding: 0;
-  border-color: $level_perfect;
+  border-color: var(--borders-success-primary);
 }
 
 .block {
