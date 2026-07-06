@@ -140,41 +140,44 @@ const Header: React.FC<HeaderProps> = ({
           isLabelVisible={true}
           labelText="Unit"
         />
-        <LessonSelector
-          lessons={lessons || []}
-          selectedLesson={selectedLesson}
-          onLessonChange={(lessonId: number) => {
-            setSelectedLessonId(lessonId);
-          }}
-          hasUnnumberedLessons={hasUnnumberedLessons}
-          isLoading={isLessonsLoading}
-          className={styles.dropdown}
-          isLabelVisible={true}
-          labelText="Lesson"
-        />
-        <div className={styles.buttonGroup}>
-          <MuiButton
-            variant="outlined"
-            color="tertiary"
-            size="medium"
-            disabled={!previousLesson || !lessons?.length || isLessonsLoading}
-            className={styles.button}
-            onClick={handlePreviousLesson}
-            type="button"
-          >
-            {'< Previous lesson'}
-          </MuiButton>
-          <MuiButton
-            variant="outlined"
-            color="tertiary"
-            size="medium"
-            disabled={!nextLesson || !lessons?.length || isLessonsLoading}
-            className={styles.button}
-            onClick={handleNextLesson}
-            type="button"
-          >
-            {'Next lesson >'}
-          </MuiButton>
+        <div className={styles.selectorRow}>
+          <div className={styles.buttonGroup}>
+            <MuiButton
+              variant="outlined"
+              color="tertiary"
+              size="small"
+              disabled={!previousLesson || !lessons?.length || isLessonsLoading}
+              className={styles.button}
+              onClick={handlePreviousLesson}
+              type="button"
+            >
+              Prev
+            </MuiButton>
+            <MuiButton
+              variant="outlined"
+              color="tertiary"
+              size="small"
+              disabled={!nextLesson || !lessons?.length || isLessonsLoading}
+              className={styles.button}
+              onClick={handleNextLesson}
+              type="button"
+            >
+              Next
+            </MuiButton>
+          </div>
+          <LessonSelector
+            lessons={lessons || []}
+            selectedLesson={selectedLesson}
+            onLessonChange={(lessonId: number) => {
+              setSelectedLessonId(lessonId);
+            }}
+            hasUnnumberedLessons={hasUnnumberedLessons}
+            isLoading={isLessonsLoading}
+            className={styles.dropdown}
+            isLabelVisible={true}
+            labelText="Lesson"
+            dropdownTextThickness="thin"
+          />
         </div>
       </div>
 
@@ -185,39 +188,42 @@ const Header: React.FC<HeaderProps> = ({
           source="STUDENT_SNAPSHOT"
           className={styles.dropdown}
         />
-        <SimpleDropdown
-          labelText="Student"
-          name="student"
-          items={studentOptions}
-          selectedValue={selectedStudent?.id.toString() || ''}
-          onChange={event => setSelectedStudentId(Number(event.target.value))}
-          className={styles.dropdown}
-          size="s"
-          color="gray"
-        />
-        <div className={styles.buttonGroup}>
-          <MuiButton
-            variant="outlined"
-            color="tertiary"
-            size="medium"
-            disabled={!previousStudent || !selectedStudents?.length}
-            className={styles.button}
-            onClick={handlePreviousStudent}
-            type="button"
-          >
-            {'< Previous student'}
-          </MuiButton>
-          <MuiButton
-            variant="contained"
-            color="primary"
-            size="medium"
-            disabled={!nextStudent || !selectedStudents?.length}
-            className={styles.button}
-            onClick={handleNextStudent}
-            type="button"
-          >
-            {'Next student >'}
-          </MuiButton>
+        <div className={styles.selectorRow}>
+          <div className={styles.buttonGroup}>
+            <MuiButton
+              variant="outlined"
+              color="tertiary"
+              size="small"
+              disabled={!previousStudent || !selectedStudents?.length}
+              className={styles.button}
+              onClick={handlePreviousStudent}
+              type="button"
+            >
+              Prev
+            </MuiButton>
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="small"
+              disabled={!nextStudent || !selectedStudents?.length}
+              className={styles.button}
+              onClick={handleNextStudent}
+              type="button"
+            >
+              Next
+            </MuiButton>
+          </div>
+          <SimpleDropdown
+            labelText="Student"
+            name="student"
+            items={studentOptions}
+            selectedValue={selectedStudent?.id.toString() || ''}
+            onChange={event => setSelectedStudentId(Number(event.target.value))}
+            className={styles.dropdown}
+            size="s"
+            color="gray"
+            dropdownTextThickness="thin"
+          />
         </div>
       </div>
     </div>

@@ -76,7 +76,9 @@ describe('StudentSnapshot', () => {
       );
     });
 
-    screen.getByText('Next student >');
+    // Lesson and student content controls each render a Prev/Next pair.
+    expect(screen.getAllByRole('button', {name: 'Prev'})).toHaveLength(2);
+    expect(screen.getAllByRole('button', {name: 'Next'})).toHaveLength(2);
     screen.getByRole('heading', {level: 4, name: 'Student1 Test'});
     screen.getByText('Lesson Insight');
   });
