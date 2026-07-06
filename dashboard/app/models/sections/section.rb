@@ -241,7 +241,8 @@ class Section < ApplicationRecord
         end
       end
 
-      if completed_count >= section_students.size / 2.0
+      threshold = [section_students.size / 2.0, 3].min
+      if completed_count >= threshold
         last_completed_lesson = lesson
         finished_unit = true
       else

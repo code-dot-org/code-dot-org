@@ -227,6 +227,7 @@ Dashboard::Application.routes.draw do
           get 'available_participant_types'
           get 'require_captcha'
           get 'assigned_essential_ai_dependency'
+          get 'suggested_lessons'
         end
         collection do
           get 'demo/presets', action: 'presets', as: 'presets'
