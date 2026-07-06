@@ -28,6 +28,12 @@ class AiGatewayAuthController < ApplicationController
     # expire token in 1 minute
     expiration_time = (Time.now + 1.minute).to_i
 
+    # The client may request the safety-check bypass, but only the server
+    # decides whether to grant it. Default (missing/unrecognized/denied
+    # request) is false -- safety checks stay on.
+    safety_checks_disabled = ActiveModel::Type::Boolean.new.cast(aichat_context[:disableSafetyChecks]) == true &&
+      current_user.can_disable_aichat_safety_checks?
+
     token = JWT.encode(
       {
         issued_at_time: issued_at_time,
@@ -40,6 +46,7 @@ class AiGatewayAuthController < ApplicationController
         script_id: aichat_context[:scriptId],
         channel_id: aichat_context[:channelId],
         lesson_id: aichat_context[:lessonId],
+        safety_checks_disabled: safety_checks_disabled,
       },
       OpenSSL::PKey::RSA.new(PRIVATE_KEY, PASSPHRASE),
       'RS256'
