@@ -1,6 +1,6 @@
 import {expect, test} from '../fixtures';
 import {HomePage} from '../pages/home-page';
-import {TeacherDashboardPage} from '../pages/teacher-dashboard';
+import {TeacherDashboardPage} from '../pages/teacher-dashboard/teacher-dashboard';
 import {createStudent, createUser, resetSession, signOut} from '../shared/auth';
 import {suppressCookieConsentOverlay} from '../shared/consent';
 import {setCookie} from '../shared/cookies';
