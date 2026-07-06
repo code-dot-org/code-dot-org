@@ -5,8 +5,6 @@
 import {useDispatch, useSelector} from 'react-redux';
 
 import {default as defaultStore, injectSlices} from '@code-dot-org/core/redux';
-// Value import: the ./redux/currentUserSlice subpath is types-only, so the
-// runtime slice object comes from the ./redux entry's re-export.
 import {currentUserSlice} from '@code-dot-org/users/redux';
 
 import teacherSectionsSlice from './teacherSectionsSlice';
