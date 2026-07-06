@@ -5,10 +5,10 @@ class ChallengesControllerTest < ActionController::TestCase
 
   describe 'GET #index' do
     let(:user) {create(:student)}
-    
+
     let(:lesson) {create(:lesson)}
     let(:other_lesson) {create(:lesson)}
-    
+
     let!(:challenge) {create(:challenge, lesson:)}
     let!(:other_challenge) {create(:challenge, lesson:)}
     let!(:challenge_in_other_lesson) {create(:challenge, lesson: other_lesson)}
@@ -16,12 +16,12 @@ class ChallengesControllerTest < ActionController::TestCase
     let(:response_json) {JSON.parse(response.body)}
 
     before do
-      sign_in(user) 
+      sign_in(user)
     end
-  
+
     it 'returns all challenges when no lesson_id param given' do
       get :index
-  
+
       must_respond_with :success
       _(response_json).must_include challenge
       _(response_json).must_include other_challenge
