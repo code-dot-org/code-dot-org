@@ -686,7 +686,7 @@ Dashboard::Application.routes.draw do
     get '/hoc/:chapter', to: 'script_levels#show', script_id: Unit::HOC_NAME, as: 'hoc_chapter', format: false
 
     if rack_env?(:development, :test)
-      get '/ui-test-hoc/reset', to: 'script_levels#reset', script_id: '', as: Unit::UI_TEST_HOC_NAME
+      get '/ui-test-hoc/reset', to: 'script_levels#reset', script_id: Unit::UI_TEST_HOC_NAME, as: 'ui_test_hoc_reset'
       get '/ui-test-hoc/:chapter', to: 'script_levels#show', script_id: Unit::UI_TEST_HOC_NAME, as: 'ui_test_hoc_chapter', format: false
     end
 
