@@ -114,35 +114,41 @@ const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
     fetchData();
   }, [lessonId, levelId, studentId, studentLevelInfo]);
 
-  // Determine widget content based on state
-  let widgetContent: React.ReactNode;
-  let scrollable = false;
-
+  // While the rubric is being fetched, show the widget in its loading state.
   if (isLoading) {
-    widgetContent = (
-      <Typography variant="body3" gutterBottom>
-        Loading rubric...
-      </Typography>
+    return (
+      <WidgetTemplate
+        widgetName="Rubric"
+        gridWidth={gridWidth}
+        gridHeight={gridHeight}
+        loading={true}
+      >
+        <Typography variant="body3" gutterBottom>
+          Loading rubric...
+        </Typography>
+      </WidgetTemplate>
     );
-  } else if (error) {
-    widgetContent = (
-      <Typography variant="body3" gutterBottom>
-        {error}
-      </Typography>
-    );
-  } else if (
+  }
+
+  // When the lesson has no associated rubric -- a fetch error, a missing
+  // rubric, or a rubric with no learning goals -- hide the widget entirely
+  // rather than rendering an empty-state message. (TEACHING-268)
+  if (
+    error ||
     !rubric ||
     !rubric.learningGoals ||
-    rubric.learningGoals.length === 0
+    !rubric.learningGoals.length
   ) {
-    widgetContent = (
-      <Typography variant="body3" gutterBottom>
-        This lesson doesn't have a rubric.
-      </Typography>
-    );
-  } else {
-    scrollable = true;
-    widgetContent = (
+    return null;
+  }
+
+  return (
+    <WidgetTemplate
+      widgetName="Rubric"
+      gridWidth={gridWidth}
+      gridHeight={gridHeight}
+      scrollable={true}
+    >
       <div className={styles.studentRubricWidgetContent}>
         <LearningGoals
           productTour={false}
@@ -174,18 +180,6 @@ const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
             </div>
           )}
       </div>
-    );
-  }
-
-  return (
-    <WidgetTemplate
-      widgetName="Rubric"
-      gridWidth={gridWidth}
-      gridHeight={gridHeight}
-      loading={isLoading}
-      scrollable={scrollable}
-    >
-      {widgetContent}
     </WidgetTemplate>
   );
 };
