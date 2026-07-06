@@ -114,6 +114,11 @@ hr {
   border-bottom: none;
 }
 
+// Account edit page: neutral section dividers instead of the brand teal above.
+hr.account-section-divider {
+  border-color: var(--borders-neutral-strong);
+}
+
 #classroom-sections hr {
   border-color: $gray;
 }

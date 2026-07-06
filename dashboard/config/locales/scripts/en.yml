@@ -29487,3 +29487,16 @@ en:
           description_short: UI Test Oceans Unit Short Overview
           description: UI Test Oceans Unit Teacher Overview
           student_description: UI Test Oceans Unit Student Overview
+        ai-history:
+          lessons:
+            lesson-1:
+              name: Lesson 1
+            lesson-2:
+              name: Lesson 2
+          lesson_groups: {}
+          name: ai-history
+          title: "[DEV] AI History"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
