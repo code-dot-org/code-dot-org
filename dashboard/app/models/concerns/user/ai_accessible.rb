@@ -18,6 +18,14 @@ module User::AiAccessible
     levelbuilder?
   end
 
+  # Whether this user is allowed to request an AI Gateway token with the
+  # input/output content-safety checks disabled. Requesting the bypass is not
+  # enough on its own -- see AiGatewayAuthController#get_access_token, which
+  # only honors the request when this returns true.
+  def can_disable_aichat_safety_checks?
+    levelbuilder?
+  end
+
   def teacher_can_access_aichat?
     teacher? && (verified_instructor? || oauth? || Policies::Lti.lti?(self) || SingleUserExperiment.enabled?(user: self, experiment_name: TEACHER_PREVERIFICATION_PILOT))
   end
