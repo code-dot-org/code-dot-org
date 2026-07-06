@@ -3,13 +3,13 @@ import {defineConfig, devices} from 'playwright/test';
 import {visualProjects} from '@code-dot-org/playwright-support/visual';
 
 /**
- * Base URL of the standalone oceans dev server.
+ * Base URL of the standalone {{name}} dev server.
  * Override with TARGET_URL env var to target a different host.
  */
 const BASE_URL = process.env.TARGET_URL ?? 'http://localhost:5173';
 
 /**
- * Playwright configuration for the AI for Oceans standalone dev server.
+ * Playwright configuration for the {{pascalCase name}} Lab standalone dev server.
  *
  * Tests live in `./e2e/`. The `webServer` block auto-starts `yarn dev` at
  * port 5173 and re-uses a server already running at that address, so you can
@@ -42,20 +42,10 @@ export default defineConfig({
       use: {...devices['Desktop Chrome']},
       grepInvert: /@visual/,
     },
-    {
-      name: 'firefox',
-      use: {...devices['Desktop Firefox']},
-      grepInvert: /@visual/,
-    },
-    {
-      name: 'webkit',
-      use: {...devices['Desktop Safari']},
-      grepInvert: /@visual/,
-    },
-    // Visual projects register only when VISUAL_PROVIDER is set; `playwright
-    // test` (no args) runs the 3 e2e projects only. Oceans widens past the
-    // chromium-only default to cover all three browsers.
-    ...visualProjects({browsers: ['chromium', 'firefox', 'webkit']}),
+    // Visual projects register only when VISUAL_PROVIDER is set (chromium-only
+    // by default), so `playwright test` with no args runs the functional
+    // project alone. Widen via visualProjects({browsers: [...]}) if needed.
+    ...visualProjects(),
   ],
   webServer: {
     command: 'yarn dev --port 5173',
