@@ -7,7 +7,7 @@ import type {PayloadAction} from '@reduxjs/toolkit';
 import {beforeEach, describe, expect, expectTypeOf, it} from 'vitest';
 
 import reduxSlice, {setCount} from '../reduxSlice';
-import {injectSlices} from '../store';
+import {createInjectableStore, injectSlices, storeHooks} from '../store';
 import type {MockStore, StateFor} from '../store';
 import type {SlicesState, StoreWithState} from '../types';
 
@@ -48,15 +48,8 @@ const sliceC = createSlice({
 
 // A fresh store per test — `injectSlices` accumulates slices in the store's
 // combined reducer, so we can't reuse the shared `defaultStore` singleton
-// across cases. Cast mirrors what `defaultStore` does: `StoreFor`/`StateFor`
-// can only extract a useful type when the input is already a `StoreWithState`.
-function makeStore() {
-  const raw = configureStore({reducer: {redux: reduxSlice.reducer}});
-  return raw as unknown as StoreWithState<
-    typeof raw,
-    {redux: {reducerCount: number}}
-  >;
-}
+// across cases.
+const makeStore = createInjectableStore;
 
 type RootStore = ReturnType<typeof makeStore>;
 
@@ -106,6 +99,20 @@ describe('injectSlices', () => {
     const injected = injectSlices([sliceA] as const, store);
     injected.dispatch(setCount(41));
     expect(injected.getState().redux.reducerCount).toBe(41);
+  });
+
+  it('adopts a store not created by createInjectableStore', () => {
+    // A store from plain configureStore has no combined reducer registered;
+    // injectSlices must create one for it on first contact.
+    const raw = configureStore({reducer: {redux: reduxSlice.reducer}});
+    const foreign = raw as unknown as StoreWithState<
+      typeof raw,
+      {redux: {reducerCount: number}}
+    >;
+
+    const injected = injectSlices([sliceA] as const, foreign);
+    expect(injected.getState().a).toEqual({value: 0});
+    expect(injected.getState().redux.reducerCount).toBe(1);
   });
 
   it('re-injecting a slice replaces its reducer without dropping siblings', () => {
@@ -176,17 +183,24 @@ describe('redux module type surface', () => {
   });
 
   it('injectSlices return widens the store state with the new slices', () => {
-    const fresh = configureStore({
-      reducer: {redux: reduxSlice.reducer},
-    }) as unknown as StoreWithState<
-      ReturnType<typeof configureStore>,
-      {redux: {reducerCount: number}}
-    >;
-    const injected = injectSlices([sliceA, sliceB] as const, fresh);
+    const injected = injectSlices([sliceA, sliceB] as const, makeStore());
     expectTypeOf(injected.getState()).branded.toEqualTypeOf<{
       redux: {reducerCount: number};
       a: {value: number};
       b: {label: string};
     }>();
+  });
+
+  it('storeHooks derives hook typings from the given store', () => {
+    const injected = injectSlices([sliceA] as const, makeStore());
+    const hooks = storeHooks(injected);
+    // The selector's state parameter carries the injected shape.
+    expectTypeOf(hooks.useAppSelector)
+      .parameter(0)
+      .parameter(0)
+      .branded.toEqualTypeOf<{
+        redux: {reducerCount: number};
+        a: {value: number};
+      }>();
   });
 });
