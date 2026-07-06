@@ -110,11 +110,22 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
   };
 
   const handleStalenessReset = () => {
-    // TODO: reset the demo section's course assignment. For now we just
-    // continue with the tour the teacher was trying to start.
     const tour = pendingTour;
     setPendingTour(null);
-    tour?.start();
+    if (!demoSection) {
+      return;
+    }
+    HttpClient.post(
+      '/api/v1/sections/demo/reset',
+      JSON.stringify({id: demoSection.id}),
+      true,
+      {'Content-Type': 'application/json'}
+    )
+      .then(() => {
+        setIsDemoSectionStale(false);
+        tour?.start();
+      })
+      .catch(err => console.error('Failed to reset demo section:', err));
   };
 
   if (isHidden) {
