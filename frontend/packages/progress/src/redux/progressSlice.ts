@@ -11,7 +11,9 @@ import _ from 'lodash';
 import type {Lesson, Sublevel, UnitLevel} from '@code-dot-org/core/api';
 import {LevelKinds} from '@code-dot-org/core/api';
 import type {StateFor, MockStore} from '@code-dot-org/core/redux';
-import type currentUserSlice from '@code-dot-org/users/redux/currentUserSlice';
+// Type-only import of the slice value binding; `typeof` recovers the slice
+// type without a runtime dependency on the users package.
+import type {currentUserSlice} from '@code-dot-org/users/redux';
 
 type Store = MockStore<[typeof progressSlice, typeof currentUserSlice]>;
 type RootState = StateFor<Store>;
