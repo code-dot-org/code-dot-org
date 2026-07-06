@@ -50,6 +50,10 @@ describe('SignInForm', () => {
       'name',
       'user[password]'
     );
+    // Required for a11y: native `required` => implicit aria-required, announced
+    // by screen readers and enforced on empty submit.
+    expect(screen.getByLabelText(DEFAULT_PROPS.loginLabel)).toBeRequired();
+    expect(screen.getByLabelText(DEFAULT_PROPS.passwordLabel)).toBeRequired();
     screen.getByRole('button', {name: DEFAULT_PROPS.signInLabel});
   });
 

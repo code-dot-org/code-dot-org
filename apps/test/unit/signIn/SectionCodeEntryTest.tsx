@@ -22,9 +22,11 @@ describe('SectionCodeEntry', () => {
   it('renders the labeled section-code input and Go button', () => {
     renderEntry();
 
-    expect(
-      screen.getByRole('textbox', {name: DEFAULT_PROPS.sectionCodeLabel})
-    ).toHaveAttribute('name', 'section_code');
+    const input = screen.getByRole('textbox', {
+      name: DEFAULT_PROPS.sectionCodeLabel,
+    });
+    expect(input).toHaveAttribute('name', 'section_code');
+    expect(input).toBeRequired();
     screen.getByRole('button', {name: DEFAULT_PROPS.goLabel});
   });
 

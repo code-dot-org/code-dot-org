@@ -91,6 +91,7 @@ const SignInForm: React.FunctionComponent<SignInFormProps> = ({
           <TextField
             id={LOGIN_FIELD_ID}
             className={style.field}
+            required
             name="user[login]"
             label={loginLabel}
             value={login}
@@ -100,6 +101,7 @@ const SignInForm: React.FunctionComponent<SignInFormProps> = ({
           <TextField
             id={PASSWORD_FIELD_ID}
             className={style.field}
+            required
             name="user[password]"
             label={passwordLabel}
             inputType="password"

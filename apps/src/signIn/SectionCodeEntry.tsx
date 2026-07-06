@@ -36,6 +36,7 @@ const SectionCodeEntry: React.FunctionComponent<SectionCodeEntryProps> = ({
           placeholder={sectionCodePlaceholder}
           value={sectionCode}
           onChange={e => setSectionCode(e.target.value)}
+          required
         />
         <MuiButton
           id="section_code_submit"
