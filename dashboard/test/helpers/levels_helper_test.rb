@@ -745,6 +745,31 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal "/courses/#{unit.original_unit_group.name}/units/1/lessons/3/levels/1/page/1", build_script_level_path(lesson.script_levels[0], unit_group_unit: unit_group_unit, puzzle_page: '1')
   end
 
+  test 'build_script_level_path uses hoc chapter routing for hourofcode unit' do
+    unit = Unit.get_from_cache(Unit::HOC_NAME)
+    unit_group_unit = unit.original_unit_group_unit
+    script_level = ScriptLevel.find_by(script_id: unit.id, chapter: 1)
+
+    # Modular course path (the reset redirect and in-course links pass unit_group_unit).
+    assert_equal '/hoc/1', build_script_level_path(script_level, unit_group_unit: unit_group_unit)
+    # Deprecated /s/ path (no unit_group_unit, e.g. header progress bubbles).
+    assert_equal '/hoc/1', build_script_level_path(script_level)
+  end
+
+  test 'build_script_level_path uses ui-test-hoc chapter routing for ui-test-hourofcode unit' do
+    unit = create(:script, :in_single_unit_course, name: Unit::UI_TEST_HOC_NAME)
+    unit_group_unit = unit.original_unit_group_unit
+    level = create(:deprecated_blockly_level)
+    lesson = create(:lesson, script: unit)
+    script_level = create(:script_level, script: unit, levels: [level], lesson: lesson, chapter: 1)
+
+    # Modular course path (the reset redirect and in-course links pass unit_group_unit).
+    assert_equal '/ui-test-hoc/1', build_script_level_path(script_level, unit_group_unit: unit_group_unit)
+    # Deprecated /s/ path (no unit_group_unit, e.g. header progress bubbles) must
+    # special-case ui-test-hoc too, mirroring hourofcode.
+    assert_equal '/ui-test-hoc/1', build_script_level_path(script_level)
+  end
+
   test 'build_script_level_path uses names for bonus levels to support cross-environment links' do
     unit = create(:script, :in_single_unit_course, :with_levels, name: 'test-bonus-level-links')
     unit.script_levels.last.update(bonus: true)

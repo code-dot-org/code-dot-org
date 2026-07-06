@@ -893,6 +893,23 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal "/s/jigsaw/lessons/1/levels/3", build_script_level_path(jigsaw_level)
   end
 
+  # ui-test-hoc mirrors the special /hoc top-level chapter routing for the
+  # ui-test-hourofcode fixture, but is only defined in the development and test
+  # environments (see the rack_env? guard in config/routes.rb). The reset route
+  # must carry script_id: Unit::UI_TEST_HOC_NAME so ScriptLevelsController#reset
+  # can resolve the unit; passing a blank script_id raises RecordNotFound.
+  test "chapter based routing for ui-test-hoc" do
+    assert_routing(
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/ui-test-hoc/reset"},
+      {controller: "script_levels", action: "reset", script_id: Unit::UI_TEST_HOC_NAME}
+    )
+
+    assert_routing(
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/ui-test-hoc/1"},
+      {controller: "script_levels", action: "show", script_id: Unit::UI_TEST_HOC_NAME, chapter: "1"}
+    )
+  end
+
   test "routing for custom scripts with lesson" do
     assert_routing(
       {method: "get", path: "http://#{CDO.dashboard_hostname}/courses/laurel/units/1/lessons/1/levels/1"},
