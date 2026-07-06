@@ -25,6 +25,13 @@ class PyodideSandboxController < ApplicationController
     connect_src = "'self'"
 
     script_src = "'self' 'wasm-unsafe-eval'"
+    if rack_env?(:development) || rack_env?(:test)
+      # webpack's non-production builds (local dev, and CI via `devtool: 'eval'`) wrap
+      # every module in an eval() call for source maps -- wasm-unsafe-eval doesn't cover
+      # that, only actual eval() does. Minified/production builds use devtool: 'source-map'
+      # instead, which doesn't need this.
+      script_src += " 'unsafe-eval'"
+    end
 
     # Explicit rather than relying on the worker-src -> script-src CSP3 fallback, since
     # this is exactly what lets us spawn the inner pyodide web worker.
