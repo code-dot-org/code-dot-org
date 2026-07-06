@@ -53,6 +53,7 @@
   },
   "devDependencies": {
     "@code-dot-org/lint-config": "workspace:*",
+    "@code-dot-org/users": "workspace:*",
     "@types/node": "catalog:",
     "eslint": "catalog:",
     "eslint-plugin-react-hooks": "catalog:",
