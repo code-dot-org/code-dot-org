@@ -4,6 +4,7 @@ import FocusLock from 'react-focus-lock';
 
 import {useTeachingProfileData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
 import {fetchThreadMessages} from '@cdo/apps/aiDifferentiation/redux';
+import experiments from '@cdo/apps/util/experiments';
 
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
@@ -13,6 +14,7 @@ import AiDiffWorkSpace from './AiDiffWorkspace';
 import BottomNav from './BottomNav';
 import {DRAWER_WIDTH, DRAWER_WIDTH_WELCOME} from './constants';
 import HomeScreen from './HomeScreen';
+import PrepareList from './PrepareList';
 import NotificationList from './notifications/NotificationList';
 import {Context} from './types';
 import AiDiffWelcome from './welcome/AiDiffWelcome';
@@ -39,6 +41,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   // Welcome experience shut off in preparation for spring 2026 redesign.
   const [showWelcomeExperience, setShowWelcomeExperience] = useState(false);
   const [activeNav, setActiveNav] = useState('Chats');
+  const showLearn = experiments.isEnabled('sidebar-prepare');
   const [showChatList, setShowChatList] = useState(false);
   const {personalizationData} = useTeachingProfileData();
   const dispatch = useAppDispatch();
@@ -113,6 +116,8 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       );
     } else if (activeNav === 'Alerts') {
       content = <NotificationList aiPromptClick={onAlertPromptClick} />;
+    } else if (activeNav === 'Prepare') {
+      content = <PrepareList />;
     } else {
       content = (
         <AiDiffWorkSpace
@@ -155,6 +160,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
             setShowChatList(label === 'Chats');
           }}
           unreadNotificationCount={unreadNotificationCount}
+          showLearn={showLearn}
         />
       </FocusLock>
     </Drawer>
