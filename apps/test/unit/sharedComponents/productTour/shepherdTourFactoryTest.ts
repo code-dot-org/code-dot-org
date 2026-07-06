@@ -75,7 +75,6 @@ type TestApi = {
   resetHandlers: () => void;
 };
 
-// eslint-disable-next-line @typescript-eslint/no-require-imports
 const api = (require('shepherd.js') as {__testApi: TestApi}).__testApi;
 
 const ANCHOR_SELECTOR = '#test-anchor';

@@ -61,8 +61,7 @@ export const resumeReviewSyllabusOnboardingTour = () => {
     }
   }
 
-  // Cancel any running tour (e.g. the homepage tour still mounted during SPA
-  // navigation) so we never show two tour popovers simultaneously.
+  // Cancel any running tour so we never show two tour popovers simultaneously.
   Shepherd.activeTour?.cancel();
 
   const tour = createShepherdTour({
