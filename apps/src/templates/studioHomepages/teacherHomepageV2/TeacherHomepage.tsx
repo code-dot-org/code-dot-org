@@ -29,6 +29,7 @@ import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
 import LogoTransition from './LogoTransition';
 import OnboardingChecklist from './OnboardingChecklist';
+import {pickDemoType} from './pickDemoType';
 import {SectionList} from './SectionList';
 import TeacherHomepagePopups from './TeacherHomepagePopups';
 import TeacherPromotions from './TeacherPromotions';
@@ -70,10 +71,24 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
     return demo?.demoType ?? null;
   }, [sections]);
 
-  const tour = useCreateSectionTour(gradesTeaching);
-  const reviewSyllabusTour = useReviewSyllabusTour(demoSectionDemoType);
-  const learnHowToEvaluateTour = useLearnHowToEvaluateTour(demoSectionDemoType);
   const isDemoSectionEnabled = experiments.isEnabled('demo-section');
+
+  // When no real demo section exists yet but the DemoSectionCard is shown
+  // (isDemoSectionEnabled + no sections created), infer the demo type from
+  // the teacher's grades so the onboarding checklist appears.
+  const effectiveDemoType = React.useMemo<DemoType | null>(() => {
+    if (demoSectionDemoType !== null) {
+      return demoSectionDemoType;
+    }
+    if (isDemoSectionEnabled && Object.keys(sections).length === 0) {
+      return pickDemoType(gradesTeaching);
+    }
+    return null;
+  }, [demoSectionDemoType, isDemoSectionEnabled, sections, gradesTeaching]);
+
+  const tour = useCreateSectionTour(gradesTeaching);
+  const reviewSyllabusTour = useReviewSyllabusTour(effectiveDemoType);
+  const learnHowToEvaluateTour = useLearnHowToEvaluateTour(effectiveDemoType);
 
   const teacherName = useAppSelector(state => state.currentUser.displayName);
   const teacherId = useAppSelector(state => state.currentUser.userId);
@@ -328,13 +343,13 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
               destructiveLoad={true}
             />
             {!!isMiniTutorialEnabled &&
-              demoSectionDemoType !== null &&
+              effectiveDemoType !== null &&
               !isLoadingOnboardingHiddenStatus && (
                 <OnboardingChecklist
                   createSectionTour={tour}
                   reviewSyllabusTour={reviewSyllabusTour}
                   learnHowToEvaluateTour={learnHowToEvaluateTour}
-                  demoType={demoSectionDemoType}
+                  demoType={effectiveDemoType}
                   isHidden={onboardingHidden}
                   onHide={handleHideOnboarding}
                 />
