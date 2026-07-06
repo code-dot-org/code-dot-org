@@ -11,3 +11,12 @@ export type VisualCheck = (
   name: string,
   opts?: VisualCheckOptions,
 ) => Promise<void>;
+
+/** Per-consumer configuration for {@link createVisualTest}. */
+export interface VisualTestConfig {
+  /**
+   * Applitools application name shown in the Eyes dashboard, e.g.
+   * 'Code.org Oceans Lab'. One per consuming package.
+   */
+  appName: string;
+}

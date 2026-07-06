@@ -61,6 +61,7 @@ jobs:
               - 'frontend/packages/labs/oceans/**'
               - 'frontend/packages/core/**'
               - 'frontend/packages/lint-config/**'
+              - 'frontend/packages/playwright-support/**'
               - 'frontend/*'
               - '.github/**'
             # Trigger on the suite's own test code and its CI config — NOT on the PR's
