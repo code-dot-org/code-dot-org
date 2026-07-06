@@ -132,7 +132,6 @@ const StudentRubricWidget: React.FC<StudentRubricWidgetProps> = ({
 
   // When the lesson has no associated rubric -- a fetch error, a missing
   // rubric, or a rubric with no learning goals -- hide the widget entirely
-  // rather than rendering an empty-state message. (TEACHING-268)
   if (
     error ||
     !rubric ||
