@@ -14,7 +14,7 @@ export const AppNames = [
   'bubble_choice',
   'dance',
   'music',
-  'oceans',
+  'fish',
   'panels',
   'pythonlab',
   'standalone_video',
