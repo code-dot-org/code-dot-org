@@ -12,6 +12,7 @@
   gap: 1rem;
   flex-grow: 2;
   min-width: 450px;
+  margin-block-start: 1rem;
 }
 
 // The form wrapper (#signin). Sizing lives on .leftColumn above.
@@ -50,6 +51,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  margin-block-start: 1rem;
 }
 
 .sectionCodeForm {
