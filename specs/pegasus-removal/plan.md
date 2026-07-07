@@ -402,6 +402,30 @@ note, docs sweep: `docs/pegasus-dashboard-integration.md` (delete),
 Final gate: `grep -ri pegasus` across the repo returns only
 git history references and the marketing-rename fossils if D4 = out.
 
+## Implementation notes for agents
+
+- **Manual tasks are hard stops.** Checkboxes marked `MANUAL TASK`
+  are executed by humans. An agent reaching one unchecked reports
+  status and waits; it never performs the step itself.
+- **Cross-series conflicts.** This series and the sinatra-port
+  series both edit `dashboard/config/application.rb` and
+  `Gemfile.lock`. Within tier 1: `dead-code-sweep` →
+  `core-ext-extraction` → `cron-detach` are a dependent chain;
+  `shared-resources-port` and `poste-dead-links` run parallel to it
+  but rebase after any sinatra-port change touching
+  `application.rb` merges.
+- **Environment prerequisites.** Verify tasks assume seeded local
+  dev/test DBs (see TESTING.md first-time setup; tier-2 changes
+  additionally need the local pegasus dev schema migrated via
+  `cd pegasus && bundle exec rake db:ensure_created db:migrate`
+  while it still exists). `pegasus-shared-resources-port` task 1.3
+  needs a running dashboard server — ask the user to start it
+  rather than starting it yourself.
+- **Line numbers drift.** Every task's `~:N` reference is a hint,
+  not an address: run the paired grep first, trust the tree, and if
+  a verification grep contradicts the task, skip that item and note
+  it rather than expanding scope.
+
 ## Dependency graph
 
 ```
