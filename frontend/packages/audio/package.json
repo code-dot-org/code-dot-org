@@ -39,7 +39,6 @@
     "lint:fix": "eslint --fix .",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
-    "test": "vitest --run",
     "typecheck": "tsc -b --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
@@ -47,6 +46,7 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "dependencies": {
+    "@code-dot-org/component-library": "workspace:*",
     "@code-dot-org/core": "workspace:*",
     "markdown-to-txt": "^2.0.1"
   },
