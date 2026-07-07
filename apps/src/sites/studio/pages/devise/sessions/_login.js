@@ -1,32 +1,20 @@
-import {Typography} from '@mui/material';
 import $ from 'jquery';
 import React from 'react';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SectionCodeEntry from '@cdo/apps/signIn/SectionCodeEntry';
-import SignInForm from '@cdo/apps/signIn/SignInForm';
+import SignInPage from '@cdo/apps/signIn/SignInPage';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 $(document).ready(() => {
-  // Page title (full-width, above both columns). Rendered as MUI Typography so
-  // it matches the design system rather than the legacy global <h2> styles.
-  const titleMount = document.getElementById('sign-in-title');
-  if (titleMount) {
-    createReactRoot(
-      <Typography variant="h2" component="h2" gutterBottom>
-        {titleMount.dataset.title}
-      </Typography>,
-      titleMount,
-      {legacyReactDomRender: true}
-    );
-  }
-
+  // Left column: page title + sign-in form, in a single React root.
   const signInMount = document.getElementById('sign-in-page-layout');
   if (signInMount) {
     const data = signInMount.dataset;
     createReactRoot(
-      <SignInForm
+      <SignInPage
+        title={data.title}
         hashedEmail={data.hashedEmail || ''}
         loginValue={data.loginValue || ''}
         signInPath={data.signInPath}
@@ -40,12 +28,11 @@ $(document).ready(() => {
         forgotPasswordLabel={data.forgotPasswordLabel}
         userReturnTo={data.userReturnTo || null}
       />,
-      signInMount,
-      {legacyReactDomRender: true}
+      signInMount
     );
   }
 
-  // Only present on the sessions (sign-in) page.
+  // Right column: section-code entry (present only on the sessions page).
   const sectionCodeMount = document.getElementById('section-code-entry-mount');
   if (sectionCodeMount) {
     const data = sectionCodeMount.dataset;
@@ -55,10 +42,9 @@ $(document).ready(() => {
         sectionCodePlaceholder={data.sectionCodePlaceholder}
         defaultSectionCode={data.defaultSectionCode || ''}
         goLabel={data.goLabel}
-        formAction={data.formAction}
+        formActionUrl={data.formAction}
       />,
-      sectionCodeMount,
-      {legacyReactDomRender: true}
+      sectionCodeMount
     );
   }
 

@@ -11,7 +11,7 @@ const DEFAULT_PROPS: SectionCodeEntryProps = {
   sectionCodePlaceholder: 'Section Code (ABCDEF)',
   defaultSectionCode: '',
   goLabel: 'Go',
-  formAction: '/users/new',
+  formActionUrl: '/users/new',
 };
 
 describe('SectionCodeEntry', () => {
@@ -38,7 +38,7 @@ describe('SectionCodeEntry', () => {
   });
 
   it('submits via GET to the provided form action', () => {
-    renderEntry({formAction: '/users/new'});
+    renderEntry({formActionUrl: '/users/new'});
     const form = screen
       .getByRole('button', {name: DEFAULT_PROPS.goLabel})
       .closest('form');

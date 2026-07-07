@@ -1,9 +1,6 @@
 - content_for :head do
   %script{src: webpack_asset_path('js/devise/sessions/_login.js')}
 
-/ Page title, rendered as MUI Typography by devise/sessions/_login.js.
-#sign-in-title{data: {title: t('signin_form.title')}}
-
 / Login errors (e.g. "invalid password") are still delivered via the Rails
 / flash. show_flashes consumes the flash the first time it is called, so
 / keeping it here (the view renders before the layout) is what actually
@@ -11,10 +8,12 @@
 = show_flashes.html_safe
 
 .flex-container
-  / Left column: sign-in form + sign-up button (React). display:contents makes
-  / the mounted component's own root, not this div, the flex child.
+  / Left column: page title + sign-in form + sign-up button, one React root
+  / (SignInPage). display:contents makes the component's own root, not this div,
+  / the flex child.
   #sign-in-page-layout{style: 'display: contents',
     data: {
+      title: t('signin_form.title'),
       hashed_email: resource.hashed_email,
       login_value: (@email || ''),
       sign_in_path: session_path(resource_name),

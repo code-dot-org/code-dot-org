@@ -2,13 +2,22 @@
 // through semantic tokens, so this module owns layout only -- there are no raw
 // hex values or legacy SCSS color variables here.
 
-.signInColumn {
+// The left column: page title + sign-in form (owned by SignInPage). Match the
+// legacy #signin min-width so the sign-in and OAuth columns split the row
+// evenly; without it the OAuth column (flex-grow: 2, uncapped) grows to fill
+// the extra space and dwarfs the sign-in form.
+.leftColumn {
   display: flex;
-  // Match the legacy #signin min-width so the sign-in and OAuth columns split
-  // the row evenly. Without it the OAuth column (flex-grow: 2, uncapped) grows
-  // to fill the extra space and dwarfs the sign-in form.
+  flex-direction: column;
+  gap: 1rem;
   flex-grow: 2;
   min-width: 450px;
+}
+
+// The form wrapper (#signin). Sizing lives on .leftColumn above.
+.signInColumn {
+  display: flex;
+  flex-direction: column;
 }
 
 .formArea {

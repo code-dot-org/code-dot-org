@@ -10,6 +10,11 @@ import {USER_RETURN_TO_SESSION_KEY} from '@cdo/apps/signUpFlow/signUpFlowConstan
 
 import style from './signInStyles.module.scss';
 
+// Untyped CommonJS module; require() keeps it typed as `any` (see
+// JavabuilderConnection.ts for the same pattern).
+
+const clientState = require('@cdo/apps/code-studio/clientState');
+
 // The field names below (user[login], user[password], user[hashed_email])
 // match what the Rails controller expects.
 
@@ -74,6 +79,13 @@ const SignInForm: React.FunctionComponent<SignInFormProps> = ({
     document.getElementById(id)?.focus();
   }, [emailPrefilled]);
 
+  // Preserve the legacy submit behavior from devise/sessions/new.js: clear
+  // client-side session state on sign-in. (The email-hashing it also did is not
+  // needed here -- hashed_email is set server-side.)
+  const handleSubmit = () => {
+    clientState.reset();
+  };
+
   return (
     <div id="signin" className={style.signInColumn}>
       <div className={style.formArea}>
@@ -84,7 +96,12 @@ const SignInForm: React.FunctionComponent<SignInFormProps> = ({
           the native POST and login never completes. The region-versioned action
           is verified server-side via the mount's data-sign-in-path instead.
         */}
-        <form action={signInPath} method="post" className={style.form}>
+        <form
+          action={signInPath}
+          method="post"
+          onSubmit={handleSubmit}
+          className={style.form}
+        >
           <RailsAuthenticityToken />
           <input type="hidden" name="user[hashed_email]" value={hashedEmail} />
 

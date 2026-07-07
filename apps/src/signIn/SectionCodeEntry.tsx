@@ -13,7 +13,7 @@ export interface SectionCodeEntryProps {
   defaultSectionCode: string;
   goLabel: string;
   // Where the GET form submits (student_user_new_path -> /users/new).
-  formAction: string;
+  formActionUrl: string;
 }
 
 const SectionCodeEntry: React.FunctionComponent<SectionCodeEntryProps> = ({
@@ -21,13 +21,17 @@ const SectionCodeEntry: React.FunctionComponent<SectionCodeEntryProps> = ({
   sectionCodePlaceholder,
   defaultSectionCode,
   goLabel,
-  formAction,
+  formActionUrl,
 }) => {
   const [sectionCode, setSectionCode] = useState(defaultSectionCode || '');
 
   return (
     <div className={style.sectionCode}>
-      <form action={formAction} method="get" className={style.sectionCodeForm}>
+      <form
+        action={formActionUrl}
+        method="get"
+        className={style.sectionCodeForm}
+      >
         <TextField
           id="section_code"
           className={style.sectionCodeField}
