@@ -16,6 +16,9 @@
     "directory": "frontend/packages/markdown"
   },
   "license": "SEE LICENSE IN LICENSE",
+  "sideEffects": [
+    "**/*.css"
+  ],
   "type": "module",
   "exports": {
     ".": {
@@ -74,9 +77,9 @@
     "stylelint": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",
-    "vite-plugin-css-injected-by-js": "^3.5.2",
     "vite-plugin-dts": "catalog:",
     "vite-plugin-externalize-deps": "catalog:",
+    "vite-plugin-lib-inject-css": "^2.2.2",
     "vitest": "catalog:"
   },
   "peerDependencies": {

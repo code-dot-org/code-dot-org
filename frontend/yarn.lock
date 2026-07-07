@@ -2243,9 +2243,9 @@ __metadata:
     typescript: "catalog:"
     unified: "npm:^11.0.5"
     vite: "catalog:"
-    vite-plugin-css-injected-by-js: "npm:^3.5.2"
     vite-plugin-dts: "catalog:"
     vite-plugin-externalize-deps: "catalog:"
+    vite-plugin-lib-inject-css: "npm:^2.2.2"
     vitest: "catalog:"
   peerDependencies:
     "@emotion/react": ^11.0.0
