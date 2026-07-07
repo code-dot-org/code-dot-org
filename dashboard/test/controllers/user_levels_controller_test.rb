@@ -273,7 +273,7 @@ class UserLevelsControllerTest < ActionController::TestCase
     assert_equal "0", JSON.parse(response.body)["data"]
   end
 
-  test "migrated Java Lab predict level prefers a parent response over the legacy contained one" do
+  test "migrated Java Lab predict level with both responses prefers the most recent response" do
     user = create(:user)
     sign_in user
     script = create(:unit, :in_single_unit_course)
@@ -329,7 +329,7 @@ class UserLevelsControllerTest < ActionController::TestCase
     assert_equal 2, body["num_students"]
   end
 
-  test "migrated predict level reads legacy contained response for any lab2 lab, not just Java Lab" do
+  test "migrated predict level reads legacy contained response for any lab2 lab" do
     user = create(:user)
     sign_in user
     script = create(:unit, :in_single_unit_course)
@@ -343,7 +343,7 @@ class UserLevelsControllerTest < ActionController::TestCase
     assert_equal "0", JSON.parse(response.body)["data"]
   end
 
-  test "predict level with no contained level reads only its own response" do
+  test "predict level with no contained level reads its own response" do
     user = create(:user)
     sign_in user
     script = create(:unit, :in_single_unit_course)
