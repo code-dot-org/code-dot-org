@@ -10,8 +10,19 @@ require 'js-routes'
 
 require_relative '../../dashboard/config/environment'
 
-JsRoutes.generate!(
-  apps_dir('generated-scripts/studioRoutes.js'),
+STUDIO_JS_ROUTES_INSTANCE = Class.new(JsRoutes::Instance) do
+  # @see https://github.com/railsware/js-routes/blob/v2.3.7/lib/js_routes/instance.rb#L225-L228
+  protected def route_helpers_if_match(route, ...)
+    # Excludes routes that belong to non-Studio Dashboard hosts, such as `codeprojects.org`.
+    route_host = route.constraints[:host] || route.defaults[:host]
+    return [] if route_host && !route_host.match?(CDO.dashboard_hostname)
+
+    super
+  end
+end
+
+STUDIO_JS_ROUTES_INSTANCE.new(
+  file: apps_dir('generated-scripts/studioRoutes.js'),
   exclude: [/^dev_/, /^test_/],
   url_links: true,
-)
+).generate!

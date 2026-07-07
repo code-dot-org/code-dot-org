@@ -7,6 +7,9 @@ export type RequestOptions = {
   body?: unknown;
   headers?: Record<string, string>;
   signal?: AbortSignal;
+  // 'manual' for endpoints that 302 on success (e.g. /expire_other): don't
+  // follow the redirect (it would re-fire the verb); the opaqueredirect = success.
+  redirect?: RequestRedirect;
 };
 
 export type ResponseMeta = {
@@ -60,6 +63,11 @@ export class ApiError extends Error {
   readonly type?: string;
   readonly details?: unknown;
   readonly headers?: Headers;
+  /**
+   * Parsed error body, so callers can read validation errors (e.g. Rails 422)
+   * without re-reading the already-consumed Response.
+   */
+  readonly body?: unknown;
   name = 'ApiError' as const;
 
   constructor(
@@ -71,6 +79,7 @@ export class ApiError extends Error {
       url: string;
       method: HttpMethod;
       headers?: Headers;
+      body?: unknown;
     },
   ) {
     super(message);
@@ -81,6 +90,7 @@ export class ApiError extends Error {
     this.url = details.url;
     this.method = details.method;
     this.headers = details.headers;
+    this.body = details.body;
   }
 
   getDetails(): ApiErrorDetails {

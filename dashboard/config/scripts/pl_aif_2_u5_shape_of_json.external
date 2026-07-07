@@ -7,8 +7,6 @@ markdown <<MARKDOWN
 
 Before you write any code, you need to **see the shape** of the data.
 
----
-
 ## Scan the JSON
 
 Don’t try to understand *everything* yet.
@@ -19,10 +17,8 @@ First, look for the **patterns**:
 - **Values**: can be primitive (**string, number, boolean**) or nested inside objects/arrays
 
 <div style="background-color:#B7E0E5; border-radius:10px; padding:14px; margin:18px auto; max-width:85%; box-sizing:border-box;">
-  <p style="font-size:14pt; margin:0; line-height:130%;">💡 <strong>Tip:</strong> JSON isn’t random text. It has a structure. Your job is to spot the structure first.</p>
+  <p style="font-size:12pt; margin:0; line-height:130%;">💡 <strong>Tip:</strong> JSON isn’t random text. It has a structure. Your job is to spot the structure first.</p>
 </div>
-
----
 
 ## JSON Sample 
 

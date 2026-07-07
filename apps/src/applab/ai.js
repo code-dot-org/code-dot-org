@@ -1,6 +1,7 @@
 import $ from 'jquery';
 
 import {stripSpaceAndSpecial} from '@cdo/apps/aiUtils';
+import localization from '@cdo/apps/localization';
 
 import designMode from './designMode';
 
@@ -35,7 +36,7 @@ function generateCodeDesignElements(modelId, modelData) {
     y = y + SPACER_PIXELS;
     if (feature.values) {
       // Create dropdown menu for each categorical feature.
-      label.textContent = feature.id + ':';
+      label.textContent = localization.translate(feature.id) + ':';
       fieldId = alphaNumFeature + '_dropdown';
       var select = designMode.createElement('DROPDOWN', x, y);
       select.id = 'design_' + fieldId;
@@ -45,13 +46,13 @@ function generateCodeDesignElements(modelId, modelData) {
       select.options.remove(0);
       feature.values.forEach(option => {
         var optionElement = document.createElement('option');
-        optionElement.text = option;
+        optionElement.text = localization.translate(option);
         select.options.add(optionElement);
       });
       y = y + SPACER_PIXELS;
     } else {
       // Create text input field for each continuous feature.
-      label.textContent = feature.id;
+      label.textContent = localization.translate(feature.id || '');
       var input = designMode.createElement('TEXT_INPUT', x, y);
       var min = feature.min.toFixed(2);
       var max = feature.max.toFixed(2);
@@ -67,7 +68,7 @@ function generateCodeDesignElements(modelId, modelData) {
   });
   y = y + 2 * SPACER_PIXELS;
   var label = designMode.createElement('LABEL', x, y);
-  label.textContent = modelData.labelColumn;
+  label.textContent = localization.translate(modelData.labelColumn || '');
   var alphaNumModelName = stripSpaceAndSpecial(modelData.name);
   label.id = 'design_' + alphaNumModelName + '_label';
   label.className = modelClass;
@@ -75,7 +76,7 @@ function generateCodeDesignElements(modelId, modelData) {
   var predictionId = alphaNumModelName + '_prediction';
   // Button to do the prediction.
   var predictButton = designMode.createElement('BUTTON', x, y);
-  predictButton.textContent = 'Predict';
+  predictButton.textContent = localization.translate('Predict');
   var predictButtonId = alphaNumModelName + '_predict';
   designMode.updateProperty(predictButton, 'id', predictButtonId);
   predictButton.className = modelClass;

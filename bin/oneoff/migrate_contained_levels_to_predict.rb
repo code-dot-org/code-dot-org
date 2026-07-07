@@ -14,6 +14,8 @@
 #   - long_instructions is set to the contained level's question text. Any
 #     existing instructions are discarded: when a level has a contained level
 #     its own instructions are never shown, so they are throwaway.
+#   - teacher_markdown from the contained level, if any, is appended to the
+#     parent level's existing teacher_markdown.
 #   - contained_level_names is left in place.
 #
 # Changes are applied via Level#save!, so after_save callbacks run and the
@@ -205,6 +207,20 @@ names.each do |name|
     next
   end
 
+  # Append the contained level's teacher_markdown to the parent's, when present.
+  # Both pieces are kept; a blank-line separator is inserted between them so
+  # they don't run together.
+  contained_teacher_markdown = contained.properties['teacher_markdown'].to_s
+  existing_teacher_markdown = level.properties['teacher_markdown'].to_s
+  teacher_markdown =
+    if contained_teacher_markdown.blank?
+      existing_teacher_markdown
+    elsif existing_teacher_markdown.blank?
+      contained_teacher_markdown
+    else
+      "#{existing_teacher_markdown}\n\n#{contained_teacher_markdown}"
+    end
+
   puts "MIGRATE #{name}"
   puts "  contained: #{contained.name} (#{contained.class})"
   puts "  questionType: #{settings['questionType']}"
@@ -215,6 +231,7 @@ names.each do |name|
   else
     puts "  placeholder: #{settings['placeholderText'].inspect}, height: #{settings['freeResponseHeight']}"
   end
+  puts "  teacher_markdown: #{truncate(teacher_markdown)}" if contained_teacher_markdown.present?
 
   warn "WARN  #{name}: not published; .level file will not be rewritten" unless level.published
 
@@ -226,6 +243,7 @@ names.each do |name|
   begin
     level.predict_settings = settings
     level.properties['long_instructions'] = instructions
+    level.properties['teacher_markdown'] = teacher_markdown if teacher_markdown.present?
     original_created_at = file_created_at(level)
     level.created_at = original_created_at if original_created_at
     level.save!

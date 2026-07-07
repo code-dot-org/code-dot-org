@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-06-29T17:09:50.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "panels": [
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-14-reconsider-ai-integration-6179a3c1-90c9-49a1-83d4-b273ea37a08c",
+        "text": "You just saw that sometimes the best way to handle an AI's unexpected output is to write *your own code* around it! This is a powerful design choice.",
+        "imageUrl": "https://images.code.org/9d653def886df13b754439e9a08999a8-sample-aid-sc2-unit-generation-lesson-14-reconsider-ai-integration-panel-1-2cd4d28e-8f87-4dd3-b191-9b0e80c299c1.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-14-reconsider-ai-integration-2a0db491-4e20-4d8a-9038-10017367fa75",
+        "text": "But what if the AI is often wrong, or struggles with too many diverse or unusual inputs? Simply patching every mistake might make your program overly complicated.",
+        "imageUrl": "https://images.code.org/0a4bf03cf746308153512225eaa4a5d2-sample-aid-sc2-unit-generation-lesson-14-reconsider-ai-integration-panel-2-ab0f18a7-c9f1-4f82-8181-0fb64275b5fd.png",
+        "layout": "text-bottom-right"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-14-reconsider-ai-integration-4ff93c73-6b1d-4409-ab50-20c6c65e1556",
+        "text": "This is when you might need to *rethink* how the AI fits into your program, or even decide that AI isn't the right tool for this particular task after all!",
+        "imageUrl": "https://images.code.org/ffc65a713df277dfbff446dc62ade321-sample-aid-sc2-unit-generation-lesson-14-reconsider-ai-integration-panel-3-c063db0d-da0c-49ba-be18-9ee77fc6069e.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-14-reconsider-ai-integration-64457ed6-228d-4635-aaa4-fdb32d5b2b9f",
+        "text": "Every decision about how to use (or not use) AI in your program impacts the user. The ultimate goal is always to create a reliable and helpful experience, informed by careful testing and user feedback.",
+        "imageUrl": "https://images.code.org/212f20daa6470d288e40863618ddef7f-sample-aid-sc2-unit-generation-lesson-14-reconsider-ai-integration-panel-4-0437fb16-e873-4664-8c7f-6fb1088b11da.png",
+        "layout": "text-bottom-left"
+      }
+    ],
+    "generate_outline": "Discuss scenarios where modifying the program's interaction with the AI model, or even reconsidering the use of AI for a specific task, might be necessary. Emphasize how design choices impact user satisfaction and program effectiveness, aligning with user feedback."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:10:30 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:10:30 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

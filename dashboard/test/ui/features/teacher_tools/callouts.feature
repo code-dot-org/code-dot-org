@@ -1,4 +1,5 @@
 @single_session
+@playwright
 Feature: Callouts
 
   Background:

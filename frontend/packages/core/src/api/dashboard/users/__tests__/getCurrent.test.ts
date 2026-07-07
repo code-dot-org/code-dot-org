@@ -3,7 +3,7 @@ import {describe, it, expect, vi} from 'vitest';
 import {ZodError} from 'zod';
 
 import {getCurrent} from '../getCurrent';
-import type {CurrentUserResponseSignedIn} from '../currentUserTypes';
+import type {CurrentUserResponseSignedIn} from '../users.types';
 
 const SIGNED_IN_RESPONSE: CurrentUserResponseSignedIn = {
   is_signed_in: true,
@@ -28,7 +28,6 @@ const SIGNED_IN_RESPONSE: CurrentUserResponseSignedIn = {
   has_seen_homepage_welcome: false,
   has_dismissed_personalization_alert: false,
   ai_chat_access_level: 'enabled',
-  ai_tutor_access_denied: false,
   ai_rubrics_disabled: null,
   ai_differentiation_enabled: false,
   has_seen_ai_assessments_announcement: false,

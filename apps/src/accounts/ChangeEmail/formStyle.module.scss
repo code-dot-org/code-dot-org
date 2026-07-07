@@ -1,5 +1,3 @@
-@import 'color';
-
 .form {
   display: flex;
   flex-direction: column;
@@ -15,7 +13,7 @@
   }
 
   .errorMessage {
-    color: $light_negative_500;
+    color: var(--text-error-primary);
     font-size: 0.875rem;
     display: flex;
     align-items: baseline;

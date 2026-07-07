@@ -11,52 +11,45 @@ This professional learning module is designed to give you a guided preview of th
 
 Although it does not cover every lesson or activity in depth, this module will help you build confidence with the unit’s content and pedagogy before teaching it in your classroom.
 
+## How Unit 4 Builds on Unit 3
 
+Unit 3 teaches students how to **organize and manage data using arrays and objects**. 
+
+Unit 4 builds on that foundation by teaching students how to **process that data repeatedly with loops** to create features like filtering, searching, and dynamic displays.
 
 <br>
 
-## This Module Covers:
+### **This Module Covers:**
 
 <div style="width: 100%; margin: 25px 0px;">
 
-<div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 15px;">
+  <div style="display: flex; justify-content: space-between; gap: 15px; flex-wrap: nowrap;">
 
-<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; width: 30%; min-height: 180px; text-align: center; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); box-sizing: border-box;">
-      <p style="font-size: 16pt; font-weight: bold; margin-bottom: 10px;">🔁 Introducing Loops</p>
-      <p style="font-size: 14pt; line-height: 1.3; margin: 0;">
+  <div style="background-color: #F5F7F8; color: #000000; padding: 16px; border-radius: 10px; width: 23%; min-height: 165px; text-align: center; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); box-sizing: border-box;">
+      <p style="font-size: 12pt; font-weight: bold; margin-bottom: 10px;">🔁 Introducing Loops</p>
+      <p style="font-size: 11pt; line-height: 1.3; margin: 0;">
         Explore how repeated logic helps programs process collections of data instead of single items.
       </p>
     </div>
 
-  <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; width: 30%; min-height: 180px; text-align: center; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); box-sizing: border-box;">
-    <p style="font-size: 16pt; font-weight: bold; margin-bottom: 10px;">🔎 Filtering and Transparency</p>
-      <p style="font-size: 14pt; line-height: 1.3; margin: 0;">
+  <div style="background-color: #F5F7F8; color: #000000; padding: 16px; border-radius: 10px; width: 23%; min-height: 165px; text-align: center; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); box-sizing: border-box;">
+      <p style="font-size: 12pt; font-weight: bold; margin-bottom: 10px;">🔎 Filtering and Transparency</p>
+      <p style="font-size: 11pt; line-height: 1.3; margin: 0;">
         Consider how filtering choices affect fairness, inclusivity, transparency, and user trust.
       </p>
     </div>
 
-<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; width: 30%; min-height: 180px; text-align: center; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); box-sizing: border-box;">
-      <p style="font-size: 16pt; font-weight: bold; margin-bottom: 10px;">📋 Copying Data</p>
-      <p style="font-size: 14pt; line-height: 1.3; margin: 0;">
+  <div style="background-color: #F5F7F8; color: #000000; padding: 16px; border-radius: 10px; width: 23%; min-height: 165px; text-align: center; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); box-sizing: border-box;">
+      <p style="font-size: 12pt; font-weight: bold; margin-bottom: 10px;">📋 Copying Data</p>
+      <p style="font-size: 11pt; line-height: 1.3; margin: 0;">
         Learn how students use data structures thoughtfully as they prepare information for searching, filtering, and display.
       </p>
     </div>
 
-  </div>
-
-  <div style="display: flex; justify-content: center; gap: 15px;">
-
-<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; width: 30%; min-height: 180px; text-align: center; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); box-sizing: border-box;">
-  <p style="font-size: 16pt; font-weight: bold; margin-bottom: 10px;">🧮 Filtering Data</p>
-    <p style="font-size: 14pt; line-height: 1.3; margin: 0;">
+  <div style="background-color: #F5F7F8; color: #000000; padding: 16px; border-radius: 10px; width: 23%; min-height: 165px; text-align: center; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); box-sizing: border-box;">
+      <p style="font-size: 12pt; font-weight: bold; margin-bottom: 10px;">🧮 Filtering Data</p>
+      <p style="font-size: 11pt; line-height: 1.3; margin: 0;">
         Practice using loops in JavaScript to build interactive features such as filters, searches, and views.
-      </p>
-    </div>
-
-<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; width: 30%; min-height: 180px; text-align: center; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); box-sizing: border-box;">
-      <p style="font-size: 16pt; font-weight: bold; margin-bottom: 10px;">🤖 AI Pedagogy Support</p>
-      <p style="font-size: 14pt; line-height: 1.3; margin: 0;">
-        Explore how to help students document, justify, and take ownership of coding decisions when using AI support.
       </p>
     </div>
 
