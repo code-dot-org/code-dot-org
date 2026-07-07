@@ -21,8 +21,9 @@
 
 - [ ] 3.1 replayTransport: blob requests throw explicit unsupported
       error; unit test the path
-- [ ] 3.2 Decide `record` mode: wire into `bootstrapApiClient` or remove
-      from the transport; test whichever lands
+- [ ] 3.2 Remove `'record'` from the replay transport's mode union
+      (recording-on-miss stays inside `auto`); update the mode's unit
+      tests; document re-record = clear IndexedDB namespace + `auto`
 - [ ] 3.3 `users.schemata.ts`: drop `'admin'` from `user_type`; verify
       against `api/v1/users_controller.rb#current` render
 - [ ] 3.4 kyTransport: same-origin guard on `X-CSRF-Token`; unit tests

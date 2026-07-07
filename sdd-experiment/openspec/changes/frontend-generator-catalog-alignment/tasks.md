@@ -13,20 +13,27 @@
 
 ## 2. Registration robustness
 
-- [ ] 2.1 Replace the insertion regexes in `config.ts` with deterministic
-      anchors across the four registration sites (design decision on the
-      package.json anchor mechanism recorded here)
-- [ ] 2.2 Post-generation assertion: all four edits present, exit
-      non-zero with the failing file otherwise
-- [ ] 2.3 Unit-test the modify actions against fixture copies of the
+- [ ] 2.1 Add `// turbo-gen:<slot>` markers to `labs.ts`,
+      `getLabEntrypoint.ts`, `getLabFixtures.ts`; rewrite their modify
+      actions to insert before the marker
+- [ ] 2.2 Replace the `apps/studio/package.json` regex with a
+      JSON parse → insert dep → stringify → prettier custom action
+- [ ] 2.3 Post-generation assertion: re-read all four files, verify the
+      lab key in each; exit non-zero naming the failing file otherwise
+- [ ] 2.4 Unit-test the modify actions against fixture copies of the
       registration files (ordering permutations included)
 
 ## 3. Conformance CI
 
-- [ ] 3.1 Script: generate package + lab into a throwaway member, build,
-      lint, diff scaffold file list against `packages.md`
+- [ ] 3.1 Script `frontend/turbo/generators/scripts/check-conformance.mjs`:
+      run both generators non-interactively (fixed name
+      `tmp-gen-conformance`), `turbo build --filter` + lint the output,
+      diff its file list against the list in `packages.md`, then restore
+      (`git checkout -- yarn.lock apps/studio/package.json src-files`,
+      `git clean -fd` generated dirs)
 - [ ] 3.2 Wire as a path-filtered job in `frontend-ci.yml`
-      (`turbo/generators/**`, `docs/conventions/packages.md`)
+      (`frontend/turbo/generators/**`, `frontend/docs/conventions/
+      packages.md`)
 - [ ] 3.3 Update `packages.md` + `AGENTS.md` coupling rule text to name
       the CI check as the enforcement mechanism
 

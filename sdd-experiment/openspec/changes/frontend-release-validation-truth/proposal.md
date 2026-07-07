@@ -18,14 +18,16 @@ tag ↔ catalog pin lockstep is enforced only by comments in four files.
 
 ## What Changes
 
-- `release:dryrun` is made truthful — preferred direction: keep the name
-  and make it earn it by adding a real package-validation step per
-  publishable package (`npm pack --dry-run` + publint-class checks:
-  exports-map resolvability for all subpaths, ESM/CJS dual-build
-  integrity, files-list completeness). Fallback direction if that is
-  deemed heavyweight: rename the aggregate to `validate` and reserve
-  `release:*` for tasks that touch packaging. One direction is chosen at
-  design time; both end the current misnomer.
+- `release:dryrun` is made truthful — keep the name and make it earn it
+  by adding a real package-validation step per publishable package:
+  `publint` (added as a workspace devDep) against the built package,
+  plus a node resolution smoke that imports/requires every `exports`
+  subpath from `dist/` in both ESM and CJS forms, plus `yarn pack
+  --dry-run` file-list verification. Fallback, taken only if the
+  measured overhead exceeds 60 seconds on a full `yarn release:dryrun`
+  run: rename the aggregate to `validate` and reserve `release:*` for
+  tasks that touch packaging. Either outcome ends the misnomer; the
+  threshold makes the choice mechanical.
 - Export-map validation catches today's known gap class:
   `component-library-styles` has no `exports` field at all (consumers
   deep-import file paths; renames break ~85 consuming files silently).
@@ -33,10 +35,12 @@ tag ↔ catalog pin lockstep is enforced only by comments in four files.
 - `.github/actions/frontend/setup/action.yml` installs with
   `--immutable`, matching the Drone/DTT lane, so lockfile drift fails
   fast on GHA too (per the accounts-CI incident precedent).
-- A lockstep assertion script checks the `PLAYWRIGHT_IMAGE_TAG` in the
-  three workflows against the catalog's exact playwright pin; wired into
-  frontend CI setup so drift fails loudly instead of breaking e2e lanes
-  at a distance.
+- A lockstep assertion script checks the `PLAYWRIGHT_IMAGE_TAG` value
+  in `.github/workflows/frontend-ci.yml`, `.github/workflows/dtt.yml`,
+  and `.github/workflows/component-library-deploy.yml` against the
+  catalog's exact playwright pin in `frontend/.yarnrc.yml`; wired into
+  the frontend setup action so drift fails loudly instead of breaking
+  e2e lanes at a distance.
 - Publish automation decision recorded: either a `workflow_dispatch`
   release workflow invoking the existing `release-it` configs with
   GitHub Packages auth, or an explicit statement in the READMEs that

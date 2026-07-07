@@ -35,14 +35,19 @@ shipped capability to authors and to tooling that resolves the nearest
   normalization and CSRF machinery; the raw-ky variant is the one
   deleted.
 - **Context layer: remove now, re-add with its first consumer.** The
-  app-package-conventions proposal explicitly considers context-based
-  client injection; if adopted there, it re-lands consumed and tested.
-  Exported-but-unconsumed React surface is how the users README problem
-  happened.
+  app-package-conventions change ruled for the module singleton, so
+  nothing adopts context injection; it re-lands only consumed and
+  tested. Exported-but-unconsumed React surface is how the users README
+  problem happened.
 - **Blob replay: explicit throw over silent fix-forward.** Fixing
   requires an IndexedDB blob serialization design nothing needs yet;
   an `unsupported` error is honest and cheap, and upgrading later is
   non-breaking.
+- **`record` mode: removed, not wired.** `auto` = replay-with-record-
+  on-miss (`replayTransport.ts:23-30`) already covers every recording
+  use; force-re-record = clear the `vite-app` IndexedDB namespace, run
+  `auto`. Wiring a third env value would add surface for a use case
+  the existing mode satisfies.
 
 ## Risks / Trade-offs
 

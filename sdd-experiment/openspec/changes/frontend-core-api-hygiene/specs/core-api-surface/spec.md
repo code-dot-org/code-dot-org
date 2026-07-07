@@ -33,11 +33,12 @@ removed (the context layer may return with its first consumer).
 
 ### Requirement: Transport labels match behavior
 
-The replay transport SHALL either support blob round-trips or reject
-blob requests with an explicit unsupported error; it MUST NOT silently
-record or return non-blob data for a blob request. Every `ApiMode`
-accepted by `bootstrapApiClient` SHALL be selectable and documented;
-modes that cannot be selected are removed.
+The replay transport SHALL reject blob requests with an explicit
+unsupported-operation error; it MUST NOT silently record or return
+non-blob data for a blob request. The transport's mode union SHALL
+contain only modes `bootstrapApiClient` can select: `'record'` is
+removed (its recording behavior is subsumed by `auto`, which records
+on cache miss; re-recording = clear the IndexedDB namespace).
 
 #### Scenario: Blob request under replay
 

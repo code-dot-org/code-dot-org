@@ -37,11 +37,14 @@ silently.
   declared single source of truth (`.yarnrc.yml`); templates referencing
   it can never drift on shared deps. Rejected alternative: a template
   variable interpolated at gen time — still a second copy.
-- **Marker-comment anchors over smarter regex.** A regex that understands
-  package.json ordering is still order-coupled; an explicit
-  `/* turbo-gen:labs */`-style anchor in the four registration sites is
-  trivially greppable and self-documenting. Post-gen assertion verifies
-  all four anchors were hit.
+- **Two edit mechanisms, both deterministic.** The three TS
+  registration files get `// turbo-gen:<slot>` marker comments
+  (greppable, self-documenting); the generator inserts immediately
+  before its slot marker. `apps/studio/package.json` cannot carry
+  comments, so it is edited structurally: `JSON.parse` → insert into
+  `dependencies` → `JSON.stringify` → prettier for formatting parity.
+  No regex against JSON text anywhere. Post-gen assertion re-reads all
+  four files and verifies the new lab key is present in each.
 - **Conformance check generates into a temp dir inside the workspace,
   builds, then discards.** Full-fidelity (real yarn/turbo resolution)
   beats snapshot-comparing template text, which would not have caught
@@ -53,10 +56,10 @@ silently.
 
 - The conformance job adds CI time when generator paths change; bounded
   by path filtering and turbo cache.
-- Marker comments in `apps/studio/package.json` are unconventional
-  (comments in JSON are not portable) — the anchor there is instead a
-  well-known dep name boundary or a sidecar registration module;
-  decided at implementation, assertion requirement is what the spec
-  pins.
+- Turbo's generator API runs `modify` actions with plop-style
+  transforms; the JSON-structural edit runs as a custom action
+  function. If the plop API resists, the fallback is a `modify` with a
+  transform callback (still parse/stringify, no pattern matching).
 - Temp-workspace generation mutates `yarn.lock` transiently; the job
-  must run with a throwaway checkout, never push artifacts.
+  runs in CI's throwaway checkout, never commits, and ends with
+  `git checkout -- yarn.lock && git clean -fd` on the generated paths.

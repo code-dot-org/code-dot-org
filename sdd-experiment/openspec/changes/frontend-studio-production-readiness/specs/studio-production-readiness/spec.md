@@ -21,11 +21,12 @@ dedicated cutover change that records the rollout shape.
 
 ### Requirement: Auth outcome is cached and gateable
 
-The shell SHALL fetch the auth outcome at most once per session
-(revalidating on window focus and on auth-mutating events), not on
-every navigation; and SHALL provide a `requireAuth` route primitive so
-feature routes declare their signed-out behavior (redirect or explicit
-signed-out render). Routes without the primitive default to public.
+The shell SHALL fetch the auth outcome at most once per page load
+(revalidating when the window regains focus), not on every navigation;
+and SHALL provide a `requireAuth` route primitive so feature routes
+declare their signed-out behavior (redirect to the Rails sign-in URL
+or an explicit signed-out render). Routes without the primitive
+default to public.
 
 #### Scenario: Five navigations, one fetch
 

@@ -12,7 +12,9 @@
 ## 2. Generator
 
 - [ ] 2.1 `app-package` generator + templates (structure, `./mocks`
-      persona stub, dev shell with `?scenario=`, vitest+axe baseline)
+      persona stub, dev shell with `?scenario=`, vitest+axe baseline);
+      no studio modify actions — final message points at the route
+      recipe
 - [ ] 2.2 Extend the conformance CI check to the new generator
 - [ ] 2.3 Conventions-doc file list updated in the same PR (coupling
       rule)

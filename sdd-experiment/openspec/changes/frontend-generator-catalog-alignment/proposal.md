@@ -22,11 +22,14 @@ that actively violates them, and nothing in CI would notice.
 - The studio-registration insertion in `turbo/generators/config.ts`
   (regex at `config.ts:117-119,272-274`, which silently no-ops if the
   last `@code-dot-org/*` workspace dep is not followed by a
-  non-`@code-dot-org` dep) is replaced with a deterministic anchor
-  (explicit marker comment in `apps/studio/package.json` and the three
-  registration files) plus a post-generation assertion that all four
-  edits landed — turning the silent-`notFound()` failure mode into a
-  loud generation error.
+  non-`@code-dot-org` dep) is replaced deterministically:
+  `apps/studio/package.json` is edited by JSON parse → insert dep →
+  stringify → prettier (never regex; JSON cannot carry anchors), and
+  each of the three TS registration files (`labs.ts`,
+  `getLabEntrypoint.ts`, `getLabFixtures.ts`) gains a
+  `// turbo-gen:<slot>` marker comment the generator inserts before.
+  A post-generation assertion verifies all four edits landed — turning
+  the silent-`notFound()` failure mode into a loud generation error.
 - A generator-conformance CI check is added to the frontend lint/test
   lane: run both generators into a temp workspace member, assert the
   scaffold builds (`turbo build --filter`), passes lint, and that the

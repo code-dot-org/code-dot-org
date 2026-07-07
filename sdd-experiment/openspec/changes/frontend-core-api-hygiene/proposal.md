@@ -28,14 +28,19 @@ thing.
   path) into `users.api.ts#getCurrent` so exactly one implementation
   fetches `/api/v1/users/current`; migrate its one factory consumer.
 - Remove `ApiClientContext`/`ApiClientProvider`/`useApiClient`
-  (`src/api/contexts/`, zero consumers) — or, if the app-package
-  conventions change adopts context injection as its contract, keep and
-  consume it there; default is removal until a consumer exists.
-- `replayTransport`: fix the blob path (`requestBlob` passes a blob flag
-  `requestWithMeta` ignores) or make blob requests throw
-  `unsupported-in-replay` explicitly; decide whether `record` mode is
-  bootstrap-selectable (`bootstrapApiClient.ts` never selects it today)
-  and either wire or remove the mode.
+  (`src/api/contexts/`, zero consumers). The app-package conventions
+  change has ruled for the module singleton as the injection mechanism,
+  so removal is unconditional; the context layer returns only via a
+  future spec change with a real consumer.
+- `replayTransport`: blob requests throw an explicit
+  unsupported-in-replay error (`requestBlob` currently passes a blob
+  flag `requestWithMeta` ignores — a silent type mismatch); and
+  `'record'` is removed from the transport's mode union. Rationale:
+  `auto` mode already records on cache miss
+  (`replayTransport.ts:23-30`), so standalone record is redundant —
+  re-recording is achieved by clearing the IndexedDB namespace and
+  running `auto`. `bootstrapApiClient` never selected `record`, so no
+  consumer changes.
 - Tighten `users.schemata.ts:18`: `user_type` enum admits `'admin'`,
   which Rails never renders from the `current` action (admin is a
   separate flag) — align the schema with the wire contract.

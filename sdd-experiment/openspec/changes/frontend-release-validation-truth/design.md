@@ -26,13 +26,14 @@ comment in four files against a catalog exact pin.
 
 ## Decisions
 
-- **Make the name earn itself (add pack-dry-run + export checks) over
-  renaming.** Renaming touches muscle memory, AGENTS.md, and CI configs
-  for cosmetic honesty; adding the missing validation makes the existing
-  contract true and catches a real defect class (the styles package's
-  missing exports map). The rename remains the recorded fallback if
-  pack-dry-run proves slow in the turbo graph — decision checkpoint in
-  tasks.
+- **Make the name earn itself (publint + resolution smoke + pack
+  dry-run) over renaming.** Renaming touches muscle memory, AGENTS.md,
+  and CI configs for cosmetic honesty; adding the missing validation
+  makes the existing contract true and catches a real defect class
+  (the styles package's missing exports map). The rename is the
+  recorded fallback, triggered mechanically: >60s added wall time on a
+  full `yarn release:dryrun` (checkpoint task 1.2 measures and
+  records).
 - **publint-class checking as a turbo task on publishable packages
   only** (`private: false` is the selector); private packages keep the
   cheap aggregate.

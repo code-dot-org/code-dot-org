@@ -26,10 +26,11 @@ generation run loudly when any edit did not apply. Silent partial
 registration (today's regex no-op → runtime `notFound()`) MUST NOT be
 possible.
 
-#### Scenario: Insertion anchor missing
+#### Scenario: Registration edit cannot apply
 
 - **WHEN** a registration site has been refactored so the generator's
-  anchor no longer matches
+  marker comment (TS files) or expected JSON structure (package.json)
+  is absent
 - **THEN** generation exits non-zero naming the file that failed, and no
   partial scaffold is left registered
 

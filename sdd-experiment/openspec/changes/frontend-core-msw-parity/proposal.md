@@ -18,8 +18,12 @@ schema check, so both silently drift from the client they exist to mock.
 
 - Default MSW handlers for the five uncovered wired domains, matching the
   existing pattern (fixture-registry dispatch first, behavioral default
-  second). `users/current` gets signed-out and signed-in personas since
-  studio's root route fetches it on every navigation.
+  second). Default bodies are the minimal values that satisfy each
+  domain's Zod schema: empty collections for list endpoints, the
+  signed-out variant of the `is_signed_in` discriminated union for
+  `users/current` (a signed-in teacher persona ships alongside as a
+  registerable fixture), and a success acknowledgement (2xx, schema-
+  minimal body) for write-shaped endpoints such as metrics.
 - Shared URL constants: each domain's path literals move to one module
   consumed by both `<domain>.api.ts` and `<domain>.handlers.ts`, so an
   endpoint rename cannot desync the mock.
@@ -27,9 +31,11 @@ schema check, so both silently drift from the client they exist to mock.
   parses: default handlers and `registerLabFixtures` desugaring run
   `.parse()` on what they emit (dev/test only), converting
   consumer-side parse failures into definition-site failures.
-- `getLabFixtures.ts` asymmetry resolved: oceans is either registered
-  with a fixtures entry or its generic-fallback behavior is documented at
-  the registration site (today the omission is silent and undocumented).
+- `getLabFixtures.ts` asymmetry resolved by documenting, not wiring:
+  oceans is fully client-side (no Rails API), so it gets an explicit
+  annotation at the registration site stating the generic fallback is
+  intended. Fabricating fixture data for symmetry is rejected; an
+  owning-team ruling may wire real fixtures later.
 - The scenario/fixture contract (`{labKey, tag}` scoping, sessionStorage
   write-through, `?cdoMockReset=1`, `onUnhandledRequest` policy split
   between worker `warn` and vitest `error`) is documented in one place in

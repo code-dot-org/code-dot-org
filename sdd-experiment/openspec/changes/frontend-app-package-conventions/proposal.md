@@ -26,7 +26,10 @@ after they land means writing it three divergent times.
   sketch from aspiration to convention:
   - package exports page-level components taking a minimal typed props
     surface; URL/router state stays host-owned (components receive
-    values + callbacks, never import the router);
+    values + callbacks, never import the router). Normative example:
+    the users README's `<UsersSettingsPage tab={...}
+    onTabChange={...}>` sketch — that shape is the contract this
+    change promotes;
   - React/MUI/core externalized as peers (lab rule reused verbatim);
   - API access through `@code-dot-org/core/api`; the client injection
     mechanism is decided here (module singleton, today's de facto
@@ -43,7 +46,11 @@ after they land means writing it three divergent times.
     config edits, wrapper components — the oceans smells, named).
 - Generator support: `yarn turbo gen app-package` scaffolding the above,
   built on the existing generator + the conformance check from
-  `frontend-generator-catalog-alignment`.
+  `frontend-generator-catalog-alignment`. Unlike the lab generator, it
+  performs NO studio edits — app-package routes are product decisions,
+  so studio integration is a manual step following the route recipe
+  (one route file + one workspace dep). The generator's final output
+  message points at the recipe.
 - A studio route-integration recipe documenting how an app package
   mounts: route file shape, lazy boundary, auth expectation (consumes
   whatever gating primitive `frontend-studio-production-readiness`

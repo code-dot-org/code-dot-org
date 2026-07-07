@@ -2,15 +2,19 @@
 
 ## 1. Rulings
 
-- [ ] 1.1 Release-owner ruling: automate publish (workflow) vs document
-      manual policy
-- [ ] 1.2 Checkpoint: pack-dry-run cost measured; confirm keep-the-name
-      direction or fall back to rename (record either way)
+- [ ] 1.1 MANUAL-TASK (release owner): rule automate-publish (workflow)
+      vs document-manual-policy. Blocks section 4 only; sections 2-3
+      and 5 proceed regardless
+- [ ] 1.2 Checkpoint: measure validation overhead on a full
+      `yarn release:dryrun`; if >60s added wall time, execute the
+      rename fallback instead; record the measurement either way
 
 ## 2. Packaging validation
 
-- [ ] 2.1 Add publint-class check task (exports resolution ESM+CJS,
-      packed file list) for `private: false` packages; wire into the
+- [ ] 2.1 Add `publint` as a workspace devDep; new turbo task per
+      `private: false` package: publint against the built package +
+      node ESM/CJS resolution smoke over every `exports` subpath +
+      `yarn pack --dry-run` file-list check; wire into the
       `release:dryrun` graph
 - [ ] 2.2 Write component-library-styles `exports` map covering all
       currently consumed deep paths (enumerate consumers first); verify
@@ -22,8 +26,10 @@
 
 - [ ] 3.1 `--immutable` in `.github/actions/frontend/setup/action.yml`;
       contributor note in `frontend/README.md`
-- [ ] 3.2 Lockstep script: workflows' `PLAYWRIGHT_IMAGE_TAG` vs catalog
-      pin; run in the setup action; negative-test it
+- [ ] 3.2 Lockstep script: `PLAYWRIGHT_IMAGE_TAG` in frontend-ci.yml /
+      dtt.yml / component-library-deploy.yml vs the exact playwright
+      pin in `frontend/.yarnrc.yml`; run in the setup action;
+      negative-test it
 
 ## 4. Publish path (per ruling 1.1)
 

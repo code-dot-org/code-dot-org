@@ -22,12 +22,15 @@ expensive to leave: each new package copies the drift forward.
 - `frontend/AGENTS.md`: structure diagram gains `markdown`, `users`,
   `e2e-tests`, `changelogs`, `design-system-storybook`, labs
   `oceans`/`ailab`; the conventions-table row pointing at
-  `docs/conventions/tech.md` is satisfied by writing that doc
-  (consolidating the Rails-Vite integration contract: `app-config` meta
-  tag, `vite_typescript_tag`, `/frontend-studio` basepath lockstep across
-  `config/vite.json` / `router/index.ts` / `routes.rb:10`) —
-  `BLOCKED-EVIDENCE: owner may prefer repointing the row instead;
-  default is to write the doc`.
+  `docs/conventions/tech.md` is satisfied by writing that doc. Required
+  sections (implementer writes these; no further ruling needed): the
+  `<meta name="app-config">` contract (emitted by
+  `dashboard/app/views/frontend_studio/index.html.haml`, parsed by
+  core's `SiteConfig`), the `vite_typescript_tag` entrypoint hookup, and
+  the `/frontend-studio` basepath lockstep across `config/vite.json` /
+  `src/modules/router/index.ts:24` / `dashboard/config/routes.rb:10`.
+  An owner may instead rule to repoint the AGENTS row; absent that
+  ruling, write the doc.
 - Route-path truth: `/app/projects/<name>/…` corrected to the real
   `/frontend-studio/projects/$labType/$channelId/edit` in
   `frontend/docs/conventions/packages.md:120,127-128`,
@@ -41,7 +44,8 @@ expensive to leave: each new package copies the drift forward.
   `createHttpTransport`/`fetch` mode and the bogus `rails` mode name;
   document the real `ApiMode` union (`dashboard|msw|replay|auto`).
 - MUI augmentation truth: `component-library/MIGRATION_STATUS.md:76`, the
-  design-system skill, and `frontend/apps/studio/src/types/mui.d.ts`
+  design-system skill (`.agents/skills/design-system/SKILL.md:39`), and
+  `frontend/apps/studio/src/types/mui.d.ts`
   header all point at nonexistent files; corrected to the real source
   `src/themes/code.org/muiAugmentation.ts`, and the obsolete "manually
   sync to `apps/src/types/mui.d.ts`" workflow is deleted (that file does
@@ -63,12 +67,13 @@ expensive to leave: each new package copies the drift forward.
   README stops reading as shipped.
 - `frontend/apps/studio/docs/architecture.md:70-79`: the react/react-dom
   alias claim corrected to match `vite.config.ts` (only `@` alias + MUI/
-  emotion dedupe; React singleton rests on hoisting) — or the alias is
-  restored, which belongs to `frontend-generator-catalog-alignment`'s
-  React-singleton decision, and this doc then records it.
+  emotion dedupe; React singleton rests on workspace hoisting).
+  Restoring an explicit alias is out of scope for this change; document
+  reality.
 - `ailab` status: one sentence in `AGENTS.md` structure notes it is
-  vendored and unregistered in Studio — `BLOCKED-EVIDENCE: owning-team
-  decision on register-vs-park; default is to label current state`.
+  vendored, versioned 0.0.52, and unregistered in Studio. That labels
+  current state and needs no ruling; an owning-team register-vs-park
+  decision may later supersede the sentence.
 
 ## Capabilities
 

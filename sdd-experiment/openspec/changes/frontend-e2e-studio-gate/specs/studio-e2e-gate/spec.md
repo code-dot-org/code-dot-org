@@ -5,9 +5,10 @@
 ### Requirement: Studio shell is browser-verified on PRs
 
 Studio CI SHALL run a hermetic Playwright smoke suite (MSW mode, no
-Rails, no deployed environment, no secrets) as a required check whenever
+Rails, no deployed environment, no secrets) on every PR touching
 `frontend/apps/studio/**`, `frontend/packages/core/**`, or the workspace
-scaffold changes. The suite MUST cover: shell render at the basepath,
+scaffold; marking the job required in branch protection is a recorded
+repo-admin step, not an implementer action. The suite MUST cover: shell render at the basepath,
 lazy lab-chunk load with fixture-scenario activation, router 404 for an
 unregistered lab, and the signed-out auth outcome.
 
