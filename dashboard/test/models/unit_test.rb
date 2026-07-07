@@ -2620,6 +2620,24 @@ class UnitTest < ActiveSupport::TestCase
     assert_raises(RuntimeError) {unit.update_lesson_outlines([{'key' => 'a'}])}
   end
 
+  test 'hoc_2014_unit returns the hourofcode unit when it is seeded' do
+    assert_equal Unit::HOC_NAME, Unit.hoc_2014_unit.name
+  end
+
+  test 'hoc_2014_unit falls back to ui-test-hourofcode in dev/test when hourofcode is not seeded' do
+    Unit.find_by(name: Unit::HOC_NAME).delete
+    ui_test_hoc = create(:script, name: Unit::UI_TEST_HOC_NAME)
+    assert_equal ui_test_hoc, Unit.hoc_2014_unit
+  end
+
+  test 'hoc_2014_unit does not fall back to ui-test-hourofcode in production' do
+    Unit.find_by(name: Unit::HOC_NAME).delete
+    create(:script, name: Unit::UI_TEST_HOC_NAME)
+    with_rack_env(:production) do
+      assert_raises(ActiveRecord::RecordNotFound) {Unit.hoc_2014_unit}
+    end
+  end
+
   private def has_unlaunched_unit?(units)
     units.any? {|u| !u.launched?}
   end
