@@ -205,12 +205,14 @@ class BubbleChoice < DSLDefined
         level_path(level.id)
 
       if user_id
-        level_for_sublevel_progress = BubbleChoice.level_for_progress_for_sublevel(level)
-        user_level = UserLevel.find_by(
-          level: level_for_sublevel_progress,
+        # A sublevel's attempt may live on the sublevel itself or, for a
+        # contained or migrated predict level, on its contained level.
+        # Take the most recent attempt across them.
+        user_level = UserLevel.where(
+          level: level.levels_for_progress,
           script: script_level.try(:script),
           user_id: user_id
-          )
+        ).order(updated_at: :desc).first
         level_info[:perfect] = user_level&.perfect?
         level_info[:status] = activity_css_class(user_level)
 
@@ -327,17 +329,14 @@ class BubbleChoice < DSLDefined
     reload
   end
 
-  # Some BubbleChoice sublevels also have a contained level
-  def self.level_for_progress_for_sublevel(sublevel)
-    sublevel.contained_levels.any? ? sublevel.contained_levels.first : sublevel
-  end
-
   # Returns the sublevel for a user that has the highest best_result.
   # @param [User]
   # @param [Unit]
   # @return [Level]
   private def best_result_sublevel(user, script)
-    sublevels_for_progress = sublevels.map {|sublevel| BubbleChoice.level_for_progress_for_sublevel(sublevel)}
+    # Each sublevel's progress may live on the sublevel itself or, for a
+    # contained or migrated predict level, on its contained level.
+    sublevels_for_progress = sublevels.flat_map(&:levels_for_progress)
     ul = user.user_levels.where(level: sublevels_for_progress, script: script).max_by(&:best_result)
     ul&.level
   end
