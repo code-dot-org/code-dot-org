@@ -48,16 +48,34 @@ VCR.configure do |c|
   end
 end
 
-# Truncate database tables to ensure repeatable tests.
+# Dashboard tables emptied before each test to ensure repeatable tests.
 DASHBOARD_TEST_TABLES = %w(channel_tokens project_storage_geos user_project_storage_ids projects project_commits code_review_comments code_reviews).freeze
-DASHBOARD_TEST_TABLES.each do |table|
-  # rubocop:disable CustomCops/DashboardDbUsage
-  DASHBOARD_DB[table.to_sym].delete
-  # rubocop:enable CustomCops/DashboardDbUsage
-end.freeze
 
 module SetupTest
+  # Empty the dashboard tables used by these tests and reset their
+  # AUTO_INCREMENT counters. The counters matter because auto-increment ids
+  # are embedded in the S3 paths recorded in VCR cassettes
+  # ("<dir>/<storage_id>/<project_id>/..."), so each test must start from
+  # identical counter values or playback will not match. Ids allocated
+  # inside a transaction are not returned on rollback, hence the explicit
+  # reset.
+  def self.reset_dashboard_test_tables
+    DASHBOARD_TEST_TABLES.each do |table|
+      # rubocop:disable CustomCops/DashboardDbUsage
+      DASHBOARD_DB[table.to_sym].delete
+      DASHBOARD_DB.execute("ALTER TABLE `#{table}` AUTO_INCREMENT = 1")
+      # rubocop:enable CustomCops/DashboardDbUsage
+    end
+  end
+
   def around(&block)
+    # Reset table state before the test rather than after: cleanup placed
+    # after the test body is skipped when the test fails or errors, and a
+    # single skipped reset drifts the auto-increment ids for every
+    # subsequent test in the process, which VCR then rejects as unrecorded
+    # HTTP requests.
+    SetupTest.reset_dashboard_test_tables
+
     random = Random.new(0)
     # 4 test wrappers:
     # VCR (record/replay HTTP interactions)
@@ -110,24 +128,27 @@ module SetupTest
           # rubocop:enable CustomCops/PreferMochaStubsToMinitestStub
         end
       end
-
-      # Return connection validation to default settings.
-      PEGASUS_DB.pool.connection_validation_timeout = 3600
-      DASHBOARD_DB.pool.connection_validation_timeout = 3600
       # rubocop:enable CustomCops/PegasusDbUsage
       # rubocop:enable CustomCops/DashboardDbUsage
     end
+  ensure
+    # Return connection validation to default settings. The pool only
+    # responds to this once the connection_validator extension has loaded,
+    # which the test may have failed before reaching.
+    # rubocop:disable CustomCops/PegasusDbUsage
+    # rubocop:disable CustomCops/DashboardDbUsage
+    [PEGASUS_DB, DASHBOARD_DB].each do |db|
+      db.pool.connection_validation_timeout = 3600 if db.pool.respond_to?(:connection_validation_timeout=)
+    end
+    # rubocop:enable CustomCops/PegasusDbUsage
+    # rubocop:enable CustomCops/DashboardDbUsage
 
     # Cached S3-client objects contain AWS credentials,
     # so reset them to ensure that they are not reused across tests.
     BucketHelper.s3_client = nil if defined?(BucketHelper)
     AWS::S3.s3 = nil
-
-    # Reset AUTO_INCREMENT, since it is unaffected by transaction rollback.
-    DASHBOARD_TEST_TABLES.each do |table|
-      # rubocop:disable CustomCops/DashboardDbUsage
-      DASHBOARD_DB.execute("ALTER TABLE `#{table}` AUTO_INCREMENT = 1")
-      # rubocop:enable CustomCops/DashboardDbUsage
-    end
   end
 end
+
+# Also reset at load, for tests that read these tables without SetupTest.
+SetupTest.reset_dashboard_test_tables
