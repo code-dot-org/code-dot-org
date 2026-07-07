@@ -66,12 +66,16 @@ encrypt/url machinery before starting.
 
 ## 4. DMS
 
-- [ ] 4.1 HUMAN GATE (data team): sign-off covering (a) Redshift
+- [ ] 4.1 MANUAL TASK — STOP HERE. An implementing agent MUST NOT
+      proceed past this checkbox: report status and wait for a human
+      to obtain and record data-team sign-off covering (a) Redshift
       relocation of contacts + poste_deliveries to
       `dashboard_production_pii`, (b) re-load scheduling and the
       purge-propagation gap window until the new task is live,
-      (c) snapshot-vs-discard for poste_opens/poste_urls/poste_clicks
-      before DROP
+      (c) snapshot-vs-discard for
+      poste_opens/poste_urls/poste_clicks before DROP. Task 4.2 and
+      the ops runbook resume only after this box is checked by a
+      human.
 - [ ] 4.2 `aws/dms/tasks.yml`: move `pegasus.contacts` and
       `pegasus.poste_deliveries` entries to `dashboard.`
 

@@ -105,7 +105,9 @@ returns nothing before starting.
 - [ ] 5.5 `bundle exec rake --tasks | grep -i pegasus` empty;
       local `bundle exec rake build` completes (dashboard-only)
 - [ ] 5.6 `./tools/hooks/pre-commit` passes
-- [ ] 5.7 PR carries the ops runbook: quiet-period connection check →
-      drop leftover views → `DROP DATABASE` pegasus schemas → chef
-      globals sweep (`pegasus_db_*`, `poste_secret`, `poste_host`);
-      Redshift `pegasus_production*` schemas noted as data-team-owned
+- [ ] 5.7 PR carries the ops runbook. Every runbook step is a
+      MANUAL TASK executed by a human, never by an implementing
+      agent: quiet-period connection check → drop leftover views →
+      `DROP DATABASE` pegasus schemas → chef globals sweep
+      (`pegasus_db_*`, `poste_secret`, `poste_host`); Redshift
+      `pegasus_production*` schemas noted as data-team-owned

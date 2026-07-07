@@ -98,10 +98,17 @@ file. Do not chase new scope.
       `get_recent_issues`)
 - [ ] 6.2 Fix stale comment `lib/cdo/sequel.rb:98-100` (references
       bin/pegasus-server)
-- [ ] 6.3 HUMAN GATE: reviewer confirms the `production-pegasus` ELB
-      no longer exists in AWS. Only then remove its entries from
-      `lib/cdo/server_tools.rb` (~lines 107,110). If it still exists,
-      leave this and note it.
+- [ ] 6.3 Remove the dead ELB deregistration code from
+      `lib/cdo/server_tools.rb`. VERIFIED 2026-07-07 (read-only AWS
+      check, account 475661607190, us-east-1): zero classic ELBs
+      exist — `production-pegasus`, `production-dashboard`, and
+      `production-redirects` are all gone, so the whole
+      `deregister_frontends_internal` method (~:100-115) references
+      nothing. Check its callers
+      (`grep -rn "deregister_frontends" --include=*.rb lib/ bin/`);
+      if caller-free, delete the method and its callers' dead
+      branches; otherwise remove only the pegasus entry and note the
+      rest as follow-up.
 - [ ] 6.4 Remove the dead `pegasus_dir` helper definition from
       `cookbooks/cdo-apps/templates/default/crontab.erb` (~lines
       30-31; verify no cron entry in the template body calls it)

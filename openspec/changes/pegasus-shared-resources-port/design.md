@@ -64,10 +64,15 @@ precompile.** Matches Sass::Plugin's observable behavior exactly
 per process lifetime since sources never change post-deploy).
 Compiled output goes to `dashboard/tmp/cache/shared-css/` (survives
 nothing, needs no cleanup task). SassC (`SassC::Engine`, already in
-the bundle) with `load_paths: [shared/css]` — verify each of the 19
-.scss files compiles identically enough (they were written for Ruby
-Sass; SassC is the more modern compiler — any divergence is a
-diff-review task with byte comparison).
+the bundle) with `load_paths: [shared/css]`.
+
+SassC-vs-Ruby-Sass parity was MEASURED 2026-07-07 (all 19 files,
+`style: :nested`): 12 byte-identical, 6 whitespace-only,
+1 (`hamburger.scss`) differing solely in comma-list selector
+ordering within groups (`span, span::before, span::after` reordered)
+— equal after selector-sort normalization across all 56 rules.
+Selector order within a comma list has no CSS semantics: visual
+parity holds for every file with no pinning needed.
 
 **2. Controller, not ActionDispatch::Static.** Static serving loses
 the DCDO-driven Cache-Control and the image manipulation. One
@@ -107,12 +112,11 @@ the cache headers. Use `fresh_when(last_modified:)` /
 
 ## Risks / Trade-offs
 
-- **Risk: SassC output differs from Ruby Sass** (selector ordering,
-  number formatting). Mitigation: a one-time task compiles all 19
-  files with both compilers and diffs; cosmetic whitespace diffs are
-  acceptable, rule diffs are not — if any rule diff appears, pin the
-  affected file by committing the Ruby-Sass output as a static .css
-  and dropping its .scss compile.
+- **Risk: SassC output differs from Ruby Sass** — RETIRED. Measured
+  2026-07-07 (decision 1): no semantic differences across all 19
+  files. The implementation re-runs the comparison as a regression
+  check (task 1.2) with the recorded expectation: whitespace and
+  hamburger.scss's selector ordering are the only allowed diffs.
 - **Risk: middleware-order interactions** — SharedResources sat
   before the Rails router; anything shadowing `/shared/*` in Rails
   routes would previously never receive traffic. Verify no existing

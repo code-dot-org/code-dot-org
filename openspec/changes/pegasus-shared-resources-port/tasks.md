@@ -9,12 +9,14 @@ before starting).
 
 - [ ] 1.1 Verify no existing Rails route matches `/shared/`:
       `grep -n "shared" dashboard/config/routes.rb` and review hits
-- [ ] 1.2 SassC parity check: write a throwaway script compiling each
-      of the 19 `shared/css/*.scss` with Ruby Sass
-      (`Sass::Engine`, still in the bundle) and with `SassC::Engine`
-      (load_paths `shared/css`), diff outputs. Whitespace/formatting
-      diffs OK; report any RULE difference in the PR and pin that
-      file per design.md decision 1. Delete the script after.
+- [ ] 1.2 SassC parity regression check: re-run the measured
+      comparison from design.md decision 1 (throwaway script:
+      compile each `shared/css/*.scss` with `Sass::Engine` and
+      `SassC::Engine`, both `style: :nested`, load_paths
+      `shared/css`; diff). EXPECTED result (recorded 2026-07-07):
+      12 identical, 6 whitespace-only, hamburger.scss selector-order
+      only. Anything beyond that expectation is a STOP — report in
+      the PR before proceeding. Delete the script after.
 - [ ] 1.3 Record baseline responses for the parity suite: with the
       dev server running, `curl -sD -` each of:
       `/shared/css/2022-rebrand-update.css`, `/shared/css/print.css`,

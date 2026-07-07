@@ -50,10 +50,13 @@ Prerequisite: `pegasus-cron-detach` merged (the crons use explicit
 
 ## 3. DMS
 
-- [ ] 3.1 HUMAN GATE (data team): confirm the Redshift relocation of
-      `hoc_activity` from `pegasus_production_pii` to
-      `dashboard_production_pii` and schedule the DMS task
-      re-generation + full re-load; record sign-off in the PR
+- [ ] 3.1 MANUAL TASK — STOP HERE. An implementing agent MUST NOT
+      proceed past this checkbox: report status and wait for a human
+      to (a) obtain data-team confirmation of the Redshift
+      relocation of `hoc_activity` from `pegasus_production_pii` to
+      `dashboard_production_pii`, (b) schedule the DMS task
+      re-generation + full re-load, and (c) record the sign-off in
+      the PR and check this box. Tasks 3.2+ resume only after.
 - [ ] 3.2 In `aws/dms/tasks.yml`, move the `pegasus.hoc_activity`
       entry (with its full `remove_column` block) to
       `dashboard.hoc_activity`, keeping list ordering conventions

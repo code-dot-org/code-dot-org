@@ -69,5 +69,6 @@ zero callers._
   `aws/cloudformation/vpc.yml.erb`: dead entries removed. The SG-rule
   removal takes effect on the next VPC stack update; no separate
   deploy step.
-- One human gate: confirm in AWS that the `production-pegasus` ELB no
-  longer exists before merging the `server_tools.rb` edit.
+- ELB verification already done (2026-07-07, read-only AWS check):
+  no classic ELBs exist at all; `server_tools.rb`'s dead
+  deregistration method deletes whole if caller-free.

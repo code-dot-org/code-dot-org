@@ -25,7 +25,10 @@ check is permanently failing or its alerting is dead.
 
 Product decision (2026-07-07, user): all Poste email is
 transactional; marketing email left Poste. Therefore the unsubscribe
-surface is removed rather than re-served.
+surface is removed rather than re-served. The header removal
+specifically — including the disappearance of mail clients' native
+Unsubscribe affordance — was explicitly approved ("drop it",
+2026-07-07).
 
 ## What Changes
 

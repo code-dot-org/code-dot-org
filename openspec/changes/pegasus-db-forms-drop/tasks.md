@@ -1,13 +1,16 @@
 # Tasks: pegasus-db-forms-drop
 
 Prerequisites: `pegasus-poste-dead-links` (poste form branch gone)
-and `pegasus-cron-detach` (src/database gone) merged. Code tasks
-(2-4) are mergeable ahead of the gate; the DMS edit (5.2) and ops
-DROP (6) wait for it.
+and `pegasus-cron-detach` (src/database gone) merged. Execution
+split for implementing agents: code tasks (2-4, 5.1) may be
+implemented ahead of the gate; tasks 5.2 and 6 are BLOCKED until a
+human checks 1.1 — an agent reaching them with 1.1 unchecked STOPS
+and reports.
 
 ## 1. Data-team gate (decision D2)
 
-- [ ] 1.1 HUMAN GATE: obtain and record data-team sign-off in the PR:
+- [ ] 1.1 MANUAL TASK — an implementing agent MUST NOT perform this:
+      a human obtains and records data-team sign-off in the PR:
       (a) stop DMS replication of `pegasus.forms`/`pegasus.form_geos`;
       (b) disposition of the Redshift `pegasus_production_pii`
       copies — DROP (breaks
@@ -16,7 +19,7 @@ DROP (6) wait for it.
       the snapshot's purge/compliance story);
       (c) acknowledgment that purge propagation to Redshift for these
       tables ends
-- [ ] 1.2 Ops evidence: from monitoring history, note when the
+- [ ] 1.2 MANUAL TASK (ops): from monitoring history, note when the
       `confirm_usage` forms freshness check last passed (confirms the
       write-dead claim); record in the PR
 

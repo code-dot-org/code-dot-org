@@ -38,10 +38,13 @@ Neither is required anywhere (`Rack::Csrf`, `PDF::Reader`: zero
 matches). Lock regeneration via `bundle install`; expect only
 removals in the diff.
 
-**4. The `production-pegasus` ELB entry is a human gate.** The
-implementer cannot query AWS. The task list carries an explicit
-"reviewer confirms ELB is gone" checkbox; if the ELB still exists the
-edit to `server_tools.rb:107,110` must wait.
+**4. The ELB question is settled.** A read-only AWS check
+(2026-07-07, account 475661607190, us-east-1) found ZERO classic
+ELBs — all three names in `server_tools.rb`'s
+`deregister_frontends_internal` (`production-dashboard`,
+`production-pegasus`, `production-redirects`) reference
+decommissioned infrastructure. The method is deleted whole if
+caller-free (verify-then-delete, as with everything else here).
 
 **5. `vpc.yml.erb` SG rules ride the next stack update.** Nothing
 listens on 9001; removing the three "Pegasus Puma" ingress/egress

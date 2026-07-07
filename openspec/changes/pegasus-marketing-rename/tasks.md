@@ -3,15 +3,18 @@
 Standalone; may land any time after `pegasus-dead-code-sweep`.
 Lowest priority of the series.
 
-## 1. Pre-work gates
+## 1. Pre-work gates (MANUAL — must be figured out FIRST)
 
-- [ ] 1.1 HUMAN GATE (infra): sweep chef-managed globals for
-      environments setting `override_pegasus`, `pegasus_hostname`,
-      `pegasus_port`, `pegasus_host`; list them in the PR and plan
-      the coordinated rename of those globals
-- [ ] 1.2 HUMAN GATE (infra): confirm all production/staging
+- [ ] 1.1 MANUAL TASK — STOP: no implementation of this change may
+      begin until a human (infra) sweeps the chef-managed globals
+      store for environments setting `override_pegasus`,
+      `pegasus_hostname`, `pegasus_port`, `pegasus_host`, lists them
+      in the PR, and plans the coordinated rename of those globals.
+      An implementing agent reaching this change with 1.1 unchecked
+      reports and waits.
+- [ ] 1.2 MANUAL TASK (infra): confirm all production/staging
       instances have converged since `cdo-apps::pegasus` (teardown
-      recipe) landed, clearing its deletion
+      recipe) landed, clearing its deletion (blocks task 3.2 only)
 - [ ] 1.3 Capture parity baselines:
       `bin/rails runner 'puts CDO.code_org_url("/about")'` output per
       env config, saved for 4.2
