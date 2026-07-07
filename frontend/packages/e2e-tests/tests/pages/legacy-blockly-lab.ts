@@ -18,6 +18,14 @@ declare global {
   }
 }
 
+/** Shape of the browser window's Blockly global used by loadBlocks. */
+type BlocklyWindow = {
+  Blockly?: {
+    getMainWorkspace(): object | null;
+    serialization: {workspaces: {load(state: object, workspace: object): void}};
+  };
+};
+
 /** Base for legacy Blockly labs (maze, artist, flappy, ...). */
 export class LegacyBlocklyLab extends LessonLevelPage {
   /** Instructions tab; its text localizes with the lab locale. */
@@ -108,7 +116,9 @@ export class LegacyBlocklyLab extends LessonLevelPage {
       timeout: LAB_LOAD_TIMEOUT_MS,
     });
     await expect(this.runButton).toBeVisible({timeout: LAB_LOAD_TIMEOUT_MS});
-    await this.header.waitForSignedIn();
+    // State-agnostic: labs boot for anonymous sessions too, so wait for the
+    // header user area in either auth state, not specifically signed-in.
+    await this.header.waitForUserChrome();
     // Dismiss the instructions overlay if shown (anonymous sessions).
     const overlay = this.page.locator('#overlay');
     if (await overlay.isVisible()) {
@@ -182,29 +192,17 @@ export class LegacyBlocklyLab extends LessonLevelPage {
    */
   async loadBlocks(blocksJson: object): Promise<void> {
     await this.page.waitForFunction(() =>
-      Boolean(
-        (
-          window as unknown as {
-            Blockly?: {getMainWorkspace(): unknown};
-          }
-        ).Blockly?.getMainWorkspace(),
-      ),
+      Boolean((window as unknown as BlocklyWindow).Blockly?.getMainWorkspace()),
     );
     await this.page.evaluate(state => {
-      const blockly = (
-        window as unknown as {
-          Blockly?: {
-            getMainWorkspace(): object;
-            serialization: {
-              workspaces: {load(state: object, workspace: object): void};
-            };
-          };
-        }
-      ).Blockly;
+      const blockly = (window as unknown as BlocklyWindow).Blockly;
       const workspace = blockly?.getMainWorkspace();
-      if (blockly && workspace) {
-        blockly.serialization.workspaces.load(state, workspace);
+      if (!blockly || !workspace) {
+        throw new Error(
+          'Blockly main workspace unavailable when loading blocks',
+        );
       }
+      blockly.serialization.workspaces.load(state, workspace);
     }, blocksJson);
   }
 

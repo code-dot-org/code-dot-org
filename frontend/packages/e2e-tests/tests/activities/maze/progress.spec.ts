@@ -1,3 +1,5 @@
+import {type Page} from '@playwright/test';
+
 import {expect, test} from '../../fixtures';
 import {MazeLab} from '../../pages/maze-lab';
 import {UnitOverviewPage} from '../../pages/unit-overview-page';
@@ -5,12 +7,51 @@ import {resetSession} from '../../shared/auth';
 
 import {K1_MAZE_BLOCKS} from './blocks';
 
-/** Completes lesson 2 level 1 and returns to the level page it started from. */
+// Progress repaints only after the milestone POST + re-fetch settle; match
+// progress.rb's 30s color poll rather than the suite's default 15s expect
+// timeout, which under CI contention can lapse before the bubble updates.
+const PROGRESS_TIMEOUT_MS = 30_000;
+
+/** Completes lesson 2 level 1, ending on the level page it started from. */
 async function completeLevelOne(maze: MazeLab): Promise<void> {
   await maze.gotoLevel({lesson: 2, level: 1});
   await maze.loadBlocks(K1_MAZE_BLOCKS);
   await maze.run();
-  await expect(maze.congratsMessage).toBeVisible();
+  await expect(maze.congratsMessage).toBeVisible({
+    timeout: PROGRESS_TIMEOUT_MS,
+  });
+}
+
+/**
+ * Verifies level 1 shows 'perfect' and level 2 'not_tried' in the lesson header
+ * (on both level pages) and the unit-overview summary — the shared tail of both
+ * progress scenarios. Each not_tried check follows a perfect check on the same
+ * page load, which gates on progress having settled.
+ */
+async function assertProgressPersisted(
+  page: Page,
+  maze: MazeLab,
+): Promise<void> {
+  const poll = {timeout: PROGRESS_TIMEOUT_MS};
+
+  await expect.poll(() => maze.isProgressBubblePerfect(1), poll).toBe(true);
+  await expect.poll(() => maze.isProgressBubbleNotTried(2), poll).toBe(true);
+
+  await maze.gotoLevel({lesson: 2, level: 2});
+
+  await expect.poll(() => maze.isProgressBubblePerfect(1), poll).toBe(true);
+  await expect.poll(() => maze.isProgressBubbleNotTried(2), poll).toBe(true);
+
+  const unitOverview = new UnitOverviewPage(page);
+  await unitOverview.goto();
+  await expect(unitOverview.lessonCell(/Maze/)).toBeVisible();
+
+  await expect
+    .poll(() => unitOverview.isProgressBubblePerfect(2, 1), poll)
+    .toBe(true);
+  await expect
+    .poll(() => unitOverview.isProgressBubbleNotTried(2, 2), poll)
+    .toBe(true);
 }
 
 test.describe('Level Progress', () => {
@@ -26,25 +67,7 @@ test.describe('Level Progress', () => {
 
       const maze = new MazeLab(page);
       await completeLevelOne(maze);
-
-      await expect.poll(() => maze.isProgressBubblePerfect(1)).toBe(true);
-      await expect.poll(() => maze.isProgressBubbleNotTried(2)).toBe(true);
-
-      await maze.gotoLevel({lesson: 2, level: 2});
-
-      await expect.poll(() => maze.isProgressBubblePerfect(1)).toBe(true);
-      await expect.poll(() => maze.isProgressBubbleNotTried(2)).toBe(true);
-
-      const unitOverview = new UnitOverviewPage(page);
-      await unitOverview.goto();
-      await expect(unitOverview.lessonCell(/Maze/)).toBeVisible();
-
-      await expect
-        .poll(() => unitOverview.isProgressBubblePerfect(2, 1))
-        .toBe(true);
-      await expect
-        .poll(() => unitOverview.isProgressBubbleNotTried(2, 2))
-        .toBe(true);
+      await assertProgressPersisted(page, maze);
     },
   );
 
@@ -65,25 +88,7 @@ test.describe('Level Progress', () => {
       const maze = new MazeLab(page);
       await completeLevelOne(maze);
       await maze.header.waitForSignedOut();
-
-      await expect.poll(() => maze.isProgressBubblePerfect(1)).toBe(true);
-      await expect.poll(() => maze.isProgressBubbleNotTried(2)).toBe(true);
-
-      await maze.gotoLevel({lesson: 2, level: 2});
-
-      await expect.poll(() => maze.isProgressBubblePerfect(1)).toBe(true);
-      await expect.poll(() => maze.isProgressBubbleNotTried(2)).toBe(true);
-
-      const unitOverview = new UnitOverviewPage(page);
-      await unitOverview.goto();
-      await expect(unitOverview.lessonCell(/Maze/)).toBeVisible();
-
-      await expect
-        .poll(() => unitOverview.isProgressBubblePerfect(2, 1))
-        .toBe(true);
-      await expect
-        .poll(() => unitOverview.isProgressBubbleNotTried(2, 2))
-        .toBe(true);
+      await assertProgressPersisted(page, maze);
     },
   );
 });

@@ -38,11 +38,11 @@ export class HeaderComponent {
   /** .display_name — the signed-in user's display name chip; .first() guards breakpoint duplicates. */
   readonly displayName: Locator;
 
-  /** .header_user — the signed-in chrome; .first() avoids strict-mode failure across breakpoints. */
+  /** .header_user — the header user slot, present signed-in (menu) or out (sign-in); .first() avoids strict-mode across breakpoints. */
   private readonly user: Locator;
 
-  /** "Sign in" link shown in place of the user menu when signed out. */
-  readonly signInLink: Locator;
+  /** #header_user_signin — the signed-out chrome shown in place of the user menu; .first() guards breakpoint duplicates. */
+  readonly signInButton: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -56,7 +56,7 @@ export class HeaderComponent {
     this.userMenu = page.locator('#header_user_menu').first();
     this.displayName = page.locator('.display_name').first();
     this.user = page.locator('.header_user').first();
-    this.signInLink = page.getByRole('link', {name: 'Sign in'}).first();
+    this.signInButton = page.locator('#header_user_signin').first();
   }
 
   /** A header nav link by its visible label (its accessible name). */
@@ -78,14 +78,23 @@ export class HeaderComponent {
     await expect(this.headerLinks).toBeVisible();
   }
 
-  /** Wait until the signed-in header chrome is visible. */
-  async waitForSignedIn(): Promise<void> {
+  /**
+   * Wait until the header user area has rendered, in either auth state — the
+   * state-agnostic readiness signal used by lab boot. Prefer waitForSignedIn /
+   * waitForSignedOut when the auth state itself is what's under test.
+   */
+  async waitForUserChrome(): Promise<void> {
     await expect(this.user).toBeVisible();
   }
 
-  /** Wait until the signed-out "Sign in" chrome is visible. */
+  /** Wait until the signed-in user menu (#header_user_menu) is visible. */
+  async waitForSignedIn(): Promise<void> {
+    await expect(this.userMenu).toBeVisible();
+  }
+
+  /** Wait until the signed-out sign-in chrome (#header_user_signin) is visible. */
   async waitForSignedOut(): Promise<void> {
-    await expect(this.signInLink).toBeVisible();
+    await expect(this.signInButton).toBeVisible();
   }
 
   /**

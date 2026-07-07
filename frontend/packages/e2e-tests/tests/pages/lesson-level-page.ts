@@ -1,6 +1,6 @@
 import {type Locator, type Page} from '@playwright/test';
 
-import {cssColorMatchesVar} from '../shared/colors';
+import {progressBubbleShows} from '../shared/colors';
 
 import {BasePage} from './base-page';
 
@@ -34,44 +34,16 @@ export class LessonLevelPage extends BasePage {
       .locator('.progress-bubble');
   }
 
-  /**
-   * Whether the level's bubble shows 'perfect', comparing its colors to the DSCO
-   * success tokens the way progress.rb verify_progress does (it keys off color).
-   */
+  /** Whether the level's header bubble shows 'perfect' (see progress.rb verify_progress). */
   async isProgressBubblePerfect(levelNum: number): Promise<boolean> {
-    const bubble = this.headerProgressBubble(levelNum);
-    return (
-      (await cssColorMatchesVar({
-        locator: bubble,
-        colorProperty: 'background-color',
-        cssVar: '--background-success-primary',
-      })) &&
-      (await cssColorMatchesVar({
-        locator: bubble,
-        colorProperty: 'border-top-color',
-        cssVar: '--borders-success-primary',
-      }))
-    );
+    return progressBubbleShows(this.headerProgressBubble(levelNum), 'perfect');
   }
 
-  /**
-   * Whether the level's bubble shows 'not_tried', comparing its colors to the
-   * DSCO neutral tokens the way progress.rb verify_progress does (it keys off
-   * color).
-   */
+  /** Whether the level's header bubble shows 'not_tried' (see progress.rb verify_progress). */
   async isProgressBubbleNotTried(levelNum: number): Promise<boolean> {
-    const bubble = this.headerProgressBubble(levelNum);
-    return (
-      (await cssColorMatchesVar({
-        locator: bubble,
-        colorProperty: 'background-color',
-        cssVar: '--background-neutral-primary',
-      })) &&
-      (await cssColorMatchesVar({
-        locator: bubble,
-        colorProperty: 'border-top-color',
-        cssVar: '--borders-neutral-primary',
-      }))
+    return progressBubbleShows(
+      this.headerProgressBubble(levelNum),
+      'not_tried',
     );
   }
 }
