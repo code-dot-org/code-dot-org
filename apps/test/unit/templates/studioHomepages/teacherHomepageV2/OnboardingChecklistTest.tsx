@@ -120,17 +120,23 @@ describe('OnboardingChecklist', () => {
     expect(props.onHide).toHaveBeenCalledTimes(1);
   });
 
-  it('starts the matching tour when a checklist item is clicked', () => {
+  it('starts the matching tour when a checklist item is clicked', async () => {
     renderComponent();
 
     fireEvent.click(screen.getByText('Create a class section'));
     expect(createSectionTour.start).toHaveBeenCalledTimes(1);
 
+    // The syllabus/evaluate tours run through the async staleness gate, so
+    // their start() lands a microtask after the click.
     fireEvent.click(screen.getByText('Review the syllabus'));
-    expect(reviewSyllabusTour.start).toHaveBeenCalledTimes(1);
+    await waitFor(() =>
+      expect(reviewSyllabusTour.start).toHaveBeenCalledTimes(1)
+    );
 
     fireEvent.click(screen.getByText('Learn how to evaluate'));
-    expect(learnHowToEvaluateTour.start).toHaveBeenCalledTimes(1);
+    await waitFor(() =>
+      expect(learnHowToEvaluateTour.start).toHaveBeenCalledTimes(1)
+    );
   });
 
   it('calls HttpClient.post with started_at and demo_type when a tour button is clicked', () => {
@@ -150,7 +156,7 @@ describe('OnboardingChecklist', () => {
     );
   });
 
-  it('starts the correct tour after recording', () => {
+  it('starts the correct tour after recording', async () => {
     renderComponent({demoType: 'high'});
 
     fireEvent.click(screen.getByText('Review the syllabus'));
@@ -165,7 +171,7 @@ describe('OnboardingChecklist', () => {
       true,
       {'Content-Type': 'application/json'}
     );
-    expect(reviewSyllabusTour.start).toHaveBeenCalled();
+    await waitFor(() => expect(reviewSyllabusTour.start).toHaveBeenCalled());
   });
 
   it('sends the correct tour name for learn-to-evaluate', () => {
@@ -278,7 +284,7 @@ describe('OnboardingChecklist', () => {
 
       fireEvent.click(screen.getByText('Review the syllabus'));
 
-      expect(screen.getByText(STALENESS_TITLE)).not.toBeNull();
+      expect(await screen.findByText(STALENESS_TITLE)).not.toBeNull();
       expect(reviewSyllabusTour.start).not.toHaveBeenCalled();
     });
 
@@ -297,7 +303,7 @@ describe('OnboardingChecklist', () => {
       await flushMountEffects();
 
       fireEvent.click(screen.getByText('Review the syllabus'));
-      fireEvent.click(screen.getByText('Cancel'));
+      fireEvent.click(await screen.findByText('Cancel'));
 
       expect(reviewSyllabusTour.cancel).toHaveBeenCalledTimes(1);
       expect(reviewSyllabusTour.start).not.toHaveBeenCalled();
@@ -309,13 +315,7 @@ describe('OnboardingChecklist', () => {
       await flushMountEffects();
 
       fireEvent.click(screen.getByText('Review the syllabus'));
-      // Wrap the reset click so the reset POST's resolution (and the tour
-      // start it triggers) is flushed deterministically.
-      await act(async () => {
-        fireEvent.click(screen.getByText('Reset course assignment'));
-        await Promise.resolve();
-        await Promise.resolve();
-      });
+      fireEvent.click(await screen.findByText('Reset course assignment'));
 
       expect(mockPost).toHaveBeenCalledWith(
         '/api/v1/sections/demo/reset',
@@ -323,7 +323,10 @@ describe('OnboardingChecklist', () => {
         true,
         {'Content-Type': 'application/json'}
       );
-      expect(reviewSyllabusTour.start).toHaveBeenCalledTimes(1);
+      // The tour starts once the reset POST resolves, a microtask later.
+      await waitFor(() =>
+        expect(reviewSyllabusTour.start).toHaveBeenCalledTimes(1)
+      );
     });
 
     it('surfaces an error and leaves the tour unstarted when reset fails', async () => {
@@ -340,7 +343,7 @@ describe('OnboardingChecklist', () => {
       await flushMountEffects();
 
       fireEvent.click(screen.getByText('Review the syllabus'));
-      fireEvent.click(screen.getByText('Reset course assignment'));
+      fireEvent.click(await screen.findByText('Reset course assignment'));
 
       expect(await screen.findByText(RESET_ERROR)).not.toBeNull();
       expect(reviewSyllabusTour.start).not.toHaveBeenCalled();
