@@ -12,12 +12,14 @@ let initialized = false;
 function onTtsAvailable(callback: (isAvailable: boolean) => void) {
   if (ttsAvailable) {
     callback(true);
-  } else {
+  } else if (typeof window !== 'undefined' && window.speechSynthesis) {
     // On some old browsers (e.g. Safari <16), the voiceschanged event is not implemented.
     window.speechSynthesis.addEventListener?.('voiceschanged', () => {
       callback(speechSynthesis.getVoices().length > 0);
     });
   }
+  // Without a speech engine (SSR, tests, browsers lacking speechSynthesis),
+  // TTS never becomes available and the callback is never invoked.
 }
 
 function initialize() {

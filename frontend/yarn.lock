@@ -1739,6 +1739,7 @@ __metadata:
     eslint: "catalog:"
     eslint-plugin-react-hooks: "catalog:"
     eslint-plugin-react-refresh: "catalog:"
+    jsdom: "catalog:"
     markdown-to-txt: "npm:^2.0.1"
     prettier: "catalog:"
     react: "catalog:"
