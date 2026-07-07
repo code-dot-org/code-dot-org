@@ -7,25 +7,6 @@ import {waitUntilStable} from '../shared/stability';
 
 import {LessonLevelPage} from './lesson-level-page';
 
-declare global {
-  /** Blockly's test-only globals, exposed on window by legacy labs. */
-  interface Window {
-    Blockly?: {mainBlockSpace: {clear(): void}};
-    __TestInterface?: {
-      arrangeBlockPosition(blocksXml: string, options: object): string;
-      loadBlocks(blocksXml: string): void;
-    };
-  }
-}
-
-/** Shape of the browser window's Blockly global used by loadBlocks. */
-type BlocklyWindow = {
-  Blockly?: {
-    getMainWorkspace(): object | null;
-    serialization: {workspaces: {load(state: object, workspace: object): void}};
-  };
-};
-
 /** Base for legacy Blockly labs (maze, artist, flappy, ...). */
 export class LegacyBlocklyLab extends LessonLevelPage {
   /** Instructions tab; its text localizes with the lab locale. */
@@ -192,10 +173,10 @@ export class LegacyBlocklyLab extends LessonLevelPage {
    */
   async loadBlocks(blocksJson: object): Promise<void> {
     await this.page.waitForFunction(() =>
-      Boolean((window as unknown as BlocklyWindow).Blockly?.getMainWorkspace()),
+      Boolean(window.Blockly?.getMainWorkspace()),
     );
     await this.page.evaluate(state => {
-      const blockly = (window as unknown as BlocklyWindow).Blockly;
+      const blockly = window.Blockly;
       const workspace = blockly?.getMainWorkspace();
       if (!blockly || !workspace) {
         throw new Error(

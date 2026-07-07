@@ -25,10 +25,13 @@ const STATE_TOKENS: Record<
  * them, so resolve each token via a probe in the bubble's own theme context and
  * compare rgb() to rgb() — both properties in one evaluate.
  */
-export async function progressBubbleShows(
-  bubble: Locator,
-  state: ProgressBubbleState,
-): Promise<boolean> {
+export async function progressBubbleShows({
+  bubble,
+  state,
+}: {
+  bubble: Locator;
+  state: ProgressBubbleState;
+}): Promise<boolean> {
   return bubble.evaluate((el, tokens) => {
     const resolve = (cssVar: string): string => {
       const probe = document.createElement('span');

@@ -36,14 +36,17 @@ export class LessonLevelPage extends BasePage {
 
   /** Whether the level's header bubble shows 'perfect' (see progress.rb verify_progress). */
   async isProgressBubblePerfect(levelNum: number): Promise<boolean> {
-    return progressBubbleShows(this.headerProgressBubble(levelNum), 'perfect');
+    return progressBubbleShows({
+      bubble: this.headerProgressBubble(levelNum),
+      state: 'perfect',
+    });
   }
 
   /** Whether the level's header bubble shows 'not_tried' (see progress.rb verify_progress). */
   async isProgressBubbleNotTried(levelNum: number): Promise<boolean> {
-    return progressBubbleShows(
-      this.headerProgressBubble(levelNum),
-      'not_tried',
-    );
+    return progressBubbleShows({
+      bubble: this.headerProgressBubble(levelNum),
+      state: 'not_tried',
+    });
   }
 }
