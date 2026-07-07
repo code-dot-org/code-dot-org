@@ -10,16 +10,25 @@
 }
 
 /*
- * Stretch the wrapped DSCO control and its input to fill the column; a DSCO
- * field keeps a fixed width otherwise, and a TextField's input wouldn't match a
- * dropdown's <select>. The tripled class matches the specificity needed to beat
- * the control's own rules.
+ * Stretch the wrapped DSCO control to fill the column; a DSCO field keeps a
+ * fixed width otherwise. The tripled class matches the specificity needed to
+ * beat the control's own rules.
  */
 .field.field.field > * {
   width: 100%;
   min-width: 0;
 }
 
-.field.field.field input {
+/*
+ * Stretch the control's inner elements to match. A TextField's <input> and a
+ * SimpleDropdown's <select> both need this: the DSCO control lays its parts out
+ * in a flex column aligned to flex-start, so widening the outer label alone
+ * leaves the input/select at content width. The dropdown nests its <select> in
+ * an intermediate <div>, so that wrapper has to stretch too — otherwise the
+ * select fills a content-width parent, i.e. is not actually full-width.
+ */
+.field.field.field input,
+.field.field.field select,
+.field.field.field div:has(> select) {
   width: 100%;
 }
