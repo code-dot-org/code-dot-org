@@ -177,6 +177,7 @@ still on the TODO list. Differences from legacy use:
 ## To Dos
 - **Captcha dialog** on `AuthorizerSignalType.CAPTCHA`.
 - **Code review**.
+- **Teacher feedback** populate teacher feedback in resource panel.
 - **Decommissioning the legacy bundle**. `apps/src/javalab/` stays
   until parity is reached and all production levels have flipped
   `uses_lab2`.
