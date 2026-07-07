@@ -50,8 +50,6 @@ class UserLevelsController < ApplicationController
     level = Level.find_by(id: params[:level_id])
     level_ids = level ? predict_level_ids(level) : [params[:level_id]]
     user_levels = UserLevel.where(user_id: current_user.id, level_id: level_ids, script_id: params[:script_id])
-    # Ordering across the parent and any legacy contained level means a response
-    # submitted after migration (on the parent) wins over an older contained one.
     most_recent_user_level = user_levels.order(updated_at: :desc).first
     return render json: {data: most_recent_user_level&.level_source&.data}, status: :ok
   end
@@ -67,7 +65,7 @@ class UserLevelsController < ApplicationController
     return head :forbidden, text: 'User must be instructor of section' unless section.instructors.include?(@current_user)
     level_ids = predict_level_ids(level)
     responses = UserLevel.where(level_id: level_ids, user: section.students)
-    # When a level resolves to more than one id (a migrated predict level plus its
+    # When a level resolves to more than one id (ex. a migrated predict level plus its
     # legacy contained level), a student may have a response under each; count
     # distinct students so they aren't double-counted. Otherwise preserve the
     # original row count.
@@ -98,8 +96,7 @@ class UserLevelsController < ApplicationController
   # either the parent level (post-migration) or the original contained level
   # (pre-migration). Return both so reads and resets cover either location. A
   # predict level with no contained level, or any non-predict level, returns
-  # just its own id, preserving existing behavior. This is not Javalab-specific:
-  # any lab2 lab whose contained predict levels are migrated this way qualifies.
+  # just its own id, preserving existing behavior.
   private def predict_level_ids(level)
     ids = [level.id]
     if level.predict_level? && level.contained_level_names.present?

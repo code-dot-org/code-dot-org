@@ -423,12 +423,11 @@ module UsersHelper
         else
           progress_level_ids = level.levels_for_progress.map(&:id)
           # Teacher feedback for a contained level is stored under the primary
-          # level id, so always look it up there (see
-          # ScriptLevel#summarize_for_teacher_panel).
+          # level id.
           feedback_level_id = progress_level_ids.first
           users.each do |user|
             user_levels_for_user = user_levels_by_level[user.id]
-            # Prefer the most recent attempt across the candidate levels, so a
+            # Prefer the most recent attempt across the levels, so a
             # migrated predict level surfaces either its new (on-level) progress
             # or legacy progress from its contained level.
             user_level = progress_level_ids.filter_map {|id| user_levels_for_user[id]}.max_by(&:updated_at)
@@ -514,8 +513,8 @@ module UsersHelper
     include_timestamp:
   )
     sublevel_ids = sublevels.map(&:id)
-    # A sublevel records progress on itself, or — for a migrated predict level —
-    # possibly on its contained level (pre-migration). Consider both per sublevel.
+    # A sublevel records progress on itself, or, for a migrated predict level,
+    # possibly on its contained level (pre-migration).
     progress_ids_by_sublevel = sublevels.to_h do |sublevel|
       [sublevel.id, sublevel.levels_for_progress.map(&:id)]
     end

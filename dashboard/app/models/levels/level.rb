@@ -892,7 +892,7 @@ class Level < ApplicationRecord
   # The levels that may hold this level's progress, in priority order (preferred
   # first). Usually a single level. A lab2 predict level migrated from the legacy
   # contained-level model records new progress on itself, but a student's progress
-  # from before the migration still lives on the contained level, so include both:
+  # from before the migration still lives on the contained level, so include
   # the level itself first, then the contained level as a fallback.
   def levels_for_progress(student = nil, script = nil)
     return [self, *contained_levels] if predict_level? && !contained_levels.empty?
