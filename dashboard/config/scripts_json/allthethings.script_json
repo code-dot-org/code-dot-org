@@ -5125,9 +5125,6 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "MC_HOC_2017_01_RETRY"
-        ]
       },
       "bonus": false,
       "seeding_key": {
