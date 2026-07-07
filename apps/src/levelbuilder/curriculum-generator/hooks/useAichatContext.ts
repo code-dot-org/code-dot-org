@@ -10,6 +10,12 @@ import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 // scope identifier(s) it has — lesson id at the lesson scope, unit
 // (script) id at the unit scope. Levelbuilders pass the check
 // unconditionally regardless of which fields are populated.
+//
+// These pages also request content-safety checks be skipped: they're
+// generating curriculum content for trusted authors, not moderating a
+// student's chat turn. The server only honors this for levelbuilders
+// (see AiGatewayAuthController#get_access_token), so it's a no-op for
+// anyone else who somehow reuses this hook.
 
 export interface AichatContextScope {
   lessonId?: number;
@@ -24,6 +30,7 @@ export function useAichatContext({lessonId, scriptId}: AichatContextScope) {
       scriptId: scriptId ?? null,
       channelId: undefined,
       lessonId: lessonId ?? undefined,
+      disableSafetyChecks: true,
     });
   }, [lessonId, scriptId]);
 }
