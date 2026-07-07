@@ -64,8 +64,9 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
     Set<string>
   >(new Set());
   const [pendingTour, setPendingTour] = React.useState<Tour | null>(null);
-  const [isDemoSectionStale, setIsDemoSectionStale] = React.useState(false);
   const [resetFailed, setResetFailed] = React.useState(false);
+
+  const stalenessCheck = React.useRef<Promise<boolean>>(Promise.resolve(false));
 
   React.useEffect(() => {
     HttpClient.get('/dashboardapi/v1/user_product_tours', true)
@@ -76,24 +77,14 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
       );
   }, []);
 
+  const demoSectionId = demoSection?.id;
+
   React.useEffect(() => {
-    let active = true;
-    if (!demoSection?.id) {
-      return;
-    }
+    stalenessCheck.current = confirmDemoSectionSettings(demoSectionId);
+  }, [demoSectionId]);
 
-    confirmDemoSectionSettings(demoSection?.id).then(stale => {
-      if (active) {
-        setIsDemoSectionStale(stale);
-      }
-    });
-    return () => {
-      active = false;
-    };
-  }, [demoSection?.id]);
-
-  const startTourOrBlock = (tour: Tour | null) => {
-    if (isDemoSectionStale) {
+  const startTourOrBlock = async (tour: Tour | null) => {
+    if (await stalenessCheck.current) {
       setPendingTour(tour);
     } else {
       tour?.start();
@@ -129,7 +120,7 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
       {'Content-Type': 'application/json'}
     )
       .then(() => {
-        setIsDemoSectionStale(false);
+        stalenessCheck.current = Promise.resolve(false);
         tour?.start();
       })
       .catch(err => {

@@ -1,5 +1,4 @@
 import confirmDemoSectionSettings from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/confirmDemoSectionSettings';
-import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
@@ -7,9 +6,6 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
 }));
 
 const mockGet = HttpClient.get as jest.MockedFunction<typeof HttpClient.get>;
-
-// The check only reads id/demoType off the section; a bare cast is enough.
-const demoSection = (id: number) => ({id} as unknown as Section);
 
 // The endpoint replies 204 (up to date) with no body, so a real Response is
 // unnecessary; casting a status-only stub avoids the 204-with-body quirk.
@@ -34,7 +30,7 @@ describe('confirmDemoSectionSettings', () => {
   it('queries the demo staleness endpoint with the section id', async () => {
     mockGet.mockResolvedValue(noContent);
 
-    await confirmDemoSectionSettings(demoSection(42));
+    await confirmDemoSectionSettings(42);
 
     expect(mockGet).toHaveBeenCalledWith(
       '/api/v1/sections/demo/check_staleness?id=42'
@@ -43,17 +39,17 @@ describe('confirmDemoSectionSettings', () => {
 
   it('treats a 204 as up to date', async () => {
     mockGet.mockResolvedValue(noContent);
-    expect(await confirmDemoSectionSettings(demoSection(1))).toBe(false);
+    expect(await confirmDemoSectionSettings(1)).toBe(false);
   });
 
   it('treats a 200 carrying a message as stale', async () => {
     mockGet.mockResolvedValue(okWith({message: 'out of date'}));
-    expect(await confirmDemoSectionSettings(demoSection(1))).toBe(true);
+    expect(await confirmDemoSectionSettings(1)).toBe(true);
   });
 
   it('treats a 200 without a message as up to date', async () => {
     mockGet.mockResolvedValue(okWith({}));
-    expect(await confirmDemoSectionSettings(demoSection(1))).toBe(false);
+    expect(await confirmDemoSectionSettings(1)).toBe(false);
   });
 
   it('resolves false and logs when the request fails', async () => {
@@ -62,7 +58,7 @@ describe('confirmDemoSectionSettings', () => {
       .spyOn(console, 'error')
       .mockImplementation(() => {});
 
-    expect(await confirmDemoSectionSettings(demoSection(1))).toBe(false);
+    expect(await confirmDemoSectionSettings(1)).toBe(false);
     expect(consoleErrorSpy).toHaveBeenCalled();
     consoleErrorSpy.mockRestore();
   });
