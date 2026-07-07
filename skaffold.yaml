@@ -24,6 +24,7 @@ build:
     custom:
       buildCommand: |
         k8s/bin/docker-buildx -f k8s/docker/code-dot-org.dockerfile \
+          --target runtime \
           --build-arg CODE_DOT_ORG_CORE="$CODE_DOT_ORG_CORE" \
           --build-arg CODE_DOT_ORG_DB_SEED="$CODE_DOT_ORG_DB_SEED" \
           --build-arg CODE_DOT_ORG_PEGASUS="$CODE_DOT_ORG_PEGASUS" \
@@ -42,14 +43,9 @@ build:
       alias: CODE_DOT_ORG_STATIC
   - image: code-dot-org-core
     custom:
-      # skaffold sync only works when the user is root 😤:
-      # https://github.com/GoogleContainerTools/skaffold/issues/2479
-      # If we find a solution, we can drop this override:
       buildCommand: |
         k8s/bin/docker-buildx -f k8s/docker/code-dot-org-core.dockerfile \
-          --build-arg USERNAME=root \
-          --build-arg UID=0 \
-          --build-arg GID=0
+          --target code-dot-org-core
       dependencies:
         dockerfile:
           path: k8s/docker/code-dot-org-core.dockerfile
@@ -139,34 +135,21 @@ profiles:
             mountDotAWS: true
             mountDotConfigGcloud: true
 
-# Build only enough image to boot Rails for ActiveJob experiments. This skips
-# frontend dependencies, pegasus, static assets, DB seed image layers, and Puma.
+# Build the runtime image with a minimal frontend package for ActiveJob experiments.
 - name: activejob-only
   patches:
     - op: replace
       path: /build/artifacts/0/custom/buildCommand
       value: |
         IMPORT_IMAGE_TO_K8S_NODE=true k8s/bin/docker-buildx -f k8s/docker/code-dot-org.dockerfile \
-          --target code-dot-org-activejob-only \
+          --target runtime \
           --build-arg CODE_DOT_ORG_CORE="$CODE_DOT_ORG_CORE" \
-          --build-arg CODE_DOT_ORG_DB_SEED="$CODE_DOT_ORG_CORE" \
-          --build-arg CODE_DOT_ORG_PEGASUS="$CODE_DOT_ORG_CORE" \
-          --build-arg CODE_DOT_ORG_STATIC="$CODE_DOT_ORG_CORE" \
+          --build-arg CODE_DOT_ORG_DB_SEED="$CODE_DOT_ORG_DB_SEED" \
+          --build-arg CODE_DOT_ORG_PEGASUS="$CODE_DOT_ORG_PEGASUS" \
+          --build-arg CODE_DOT_ORG_STATIC="$CODE_DOT_ORG_STATIC" \
           --build-arg BUNDLE_JOBS=1 \
           --build-arg BUNDLE_WITHOUT=development:test:production:adhoc:staging:levelbuilder:integration \
           --build-arg SKIP_FRONTEND_BUILD=1
-    - op: remove
-      path: /build/artifacts/0/requires/3
-    - op: remove
-      path: /build/artifacts/0/requires/2
-    - op: remove
-      path: /build/artifacts/0/requires/1
-    - op: remove
-      path: /build/artifacts/4
-    - op: remove
-      path: /build/artifacts/3
-    - op: remove
-      path: /build/artifacts/2
     - op: add
       path: /deploy/helm/releases/0/valuesFiles/-
       value: k8s/helm/activejob-only.values.yaml

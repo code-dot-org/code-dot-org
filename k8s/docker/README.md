@@ -18,7 +18,7 @@ If the slow iteration time of our "source included" build is annoying, check out
 
 The dockerfiles are designed in layers, which allows minimal rebuilds when files change:
 - code-dot-org: final layer, links all the below layers together AND adds all our source code
-- code-dot-org-core: installs core binaries, including ruby and node
+- code-dot-org-core: installs the slim Ruby runtime base; its `dev` target adds developer tools
 - code-dot-org-static: contains many of our large static files, like pngs, jpegs, etc
 - code-dot-org-pegasus: contains the pegasus/ directory
 - code-dot-org-db-seed: contains level and script files required for seeding the db
