@@ -7,10 +7,22 @@
 single Playwright run against one local Rails server
 (`http://localhost-studio.code.org:9000`), captures a named legacy surface
 and its candidate counterpart, masks declared dynamic regions, and
-pixel-compares region-scoped screenshots. The helper is built once in this
-change and consumed by every subsequent teacher-dashboard feature change.
-Implementers MAY use Playwright MCP for interactive capture and mask tuning
-during implementation.
+pixel-compares region-scoped screenshots. Mechanism (pinned so
+implementers do not design it): both surfaces are captured in the same
+run as buffers via Playwright `page.screenshot({clip, mask})` — `clip`
+from a declared locator's bounding box, `mask` as an array of locators —
+and diffed with `pixelmatch` (devDependency) against a per-surface
+declared `maxDiffPixelRatio`. There are no stored golden baselines for
+this gate (both images come from the live run); on failure the helper
+writes both captures plus the diff PNG into the run's Playwright
+test-results output. A comparison pair is data: `{name, legacyUrl,
+candidateUrl, region: locator, masks: locator[], maxDiffPixelRatio}`. If
+the `@code-dot-org/playwright-support` visual package has landed by
+implementation time, its primitives MAY replace the hand-rolled
+pixelmatch plumbing (same declaration shape; recorded as a substitution).
+The helper is built once in this change and consumed by every subsequent
+teacher-dashboard feature change. Implementers MAY use Playwright MCP for
+interactive capture and mask tuning during implementation.
 
 #### Scenario: Same-run comparison
 - **WHEN** the harness runs a comparison pair

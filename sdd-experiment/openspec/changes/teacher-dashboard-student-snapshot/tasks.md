@@ -5,6 +5,10 @@ wrappers where payloads overlap. Contract tables live in design.md.
 
 ## 0. BLOCKED-EVIDENCE resolution (blocking)
 
+All captures follow `sdd-experiment/openspec/teacher-dashboard-evidence-playbook.md`
+(environment startup, seeding, authenticated capture, fixture storage,
+flag pinning).
+
 - [ ] 0.1 Capture responses for API #1-#5 (path-param GETs) from local
       Rails with the experiment on; commit as fixtures; cross-check the
       client `fetchJson<T>` types

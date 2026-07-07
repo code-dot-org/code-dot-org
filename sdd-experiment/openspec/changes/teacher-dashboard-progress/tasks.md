@@ -7,6 +7,10 @@ design.md and are the contract; tasks below reference them.
 
 ## 0. BLOCKED-EVIDENCE resolution (blocking; nothing else starts first)
 
+All captures follow `sdd-experiment/openspec/teacher-dashboard-evidence-playbook.md`
+(environment startup, seeding, authenticated capture, fixture storage,
+flag pinning).
+
 - [ ] 0.1 Capture response JSON from local Rails for API #1
       (script_structure) and #2 (section_level_progress; one ≤20-student
       and one >20-student section to cover pagination) and #3 (lock_status

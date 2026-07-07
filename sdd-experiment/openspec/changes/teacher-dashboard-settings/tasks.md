@@ -5,6 +5,10 @@ design.md.
 
 ## 0. BLOCKED-EVIDENCE resolution (blocking)
 
+All captures follow `sdd-experiment/openspec/teacher-dashboard-evidence-playbook.md`
+(environment startup, seeding, authenticated capture, fixture storage,
+flag pinning).
+
 - [ ] 0.1 Capture one legacy save round-trip (PATCH `/api/v1/sections/:id`
       request incl. the `...section` spread effect + response) for a
       student section and a PL section; commit as fixtures

@@ -110,15 +110,33 @@ functions/hooks and own zero backend contract code.
 
 Consequences for this program:
 
-| Core domain (per core's controller-mirroring convention; exact names finalized against the owning controllers at implementation) | Endpoints from the pinned API tables |
+Domain names are PINNED (2026-07-07; previously deferred). Naming rule:
+resource-oriented. The `/api/*` and `/dashboardapi/*` prefixes are dual
+mounts onto the same controller actions (verified: routes.rb:1045
+`/dashboardapi/section/:id → api#section`; :251-252 transfers mounted at
+both prefixes) — the `/dashboardapi/...` forms pinned in the specs are
+canonical; aliases are equivalent and must not be modeled as separate
+endpoints.
+
+| Core domain | Endpoints from the pinned API tables |
 | --- | --- |
-| `dashboard/sections/` | teacher-dashboard bootstrap, section reload, home scalars, `PATCH /api/v1/sections/:id` (settings save) |
-| `dashboard/sectionInstructors/` | coteacher check/add/remove (homepage + settings) |
-| `dashboard/courseOfferings/` | `quick_assign_course_offerings` |
-| `dashboard/sectionProgress/` (or per owning controller) | `section_level_progress`, `script_structure`, `GET/POST /api/lock_status` |
+| `dashboard/sections/` | teacher-dashboard bootstrap, section reload, home scalars, sections CRUD (`PATCH /api/v1/sections/:id`, delete, hidden toggle), demo presets/create |
+| `dashboard/sectionInstructors/` | coteacher check/add/remove/accept/decline |
+| `dashboard/courseOfferings/` | `quick_assign_course_offerings`, `valid_course_offerings`, `available_participant_types` |
+| `dashboard/students/` | roster students CRUD/bulk_add/remove/resets, `completed_levels_count` (shared w/ stats), transfers |
+| `dashboard/rosterSync/` | `/api/v1/roster/{clever,google}/sections/sync`, classroom list/import |
+| `dashboard/sectionProgress/` | `section_level_progress`, `script_structure`, `unit_summary` (shared w/ calendar) |
+| `dashboard/lockStatus/` | `GET/POST /api/lock_status` |
+| `dashboard/hiddenLessons/` | `/s/:script/hidden_lessons`, `toggle_hidden` |
 | `dashboard/assessments/` | the four-GET assessments family |
+| `dashboard/textResponses/` | `section_text_responses` |
+| `dashboard/projects/` | `/dashboardapi/v1/projects/section/:id` |
+| `dashboard/lessonMaterials/` | `lesson_materials`, `unit_in_aif`, `ai_lesson_summaries/show` |
 | `dashboard/studentSnapshots/` + `dashboard/lessonFeedbacks/` | the 12-row snapshot family |
-| (per feature as later changes harden) | roster students/transfers/sync, drawer, tours, teaching profile, demo sections, materials, text responses, projects, stats |
+| `dashboard/aiChatAccess/` | `ai_chat_access_level` family |
+| `dashboard/skills/` | `POST /openai/evaluate_section` + results read |
+| `dashboard/userPreferences/` | `PUT /user_preference` (section order), preference dismissals |
+| `dashboard/teacherDashboard/` | drawer data, `teaching_profile_data`, product tours |
 
 MSW default handlers for these domains live beside them in core's mocks
 (the existing registry model); feature packages register scenario
@@ -137,6 +155,64 @@ store module (built by course-unit-overview, extended by progress).
 Settings and student snapshot are Query-only. Two `unitSelection` forms
 coexist deliberately (shared/ URL-state re-expression vs the moved slice
 inside the progress store); recorded, converging at modernization.
+
+### 4a. Compatibility contract with the RTK-slice prototype
+
+A prototype `@code-dot-org/teacher-dashboard` exists on
+`ngfp/music-lab-updated`: a data-only package with a TypeScript RTK
+rewrite of `teacherSectionsRedux` (hybrid thunks receiving
+`(apiClient, queryClient)`, reads via `queryClient.fetchQuery` under
+shared `sectionsKeys`, mutations still raw `fetch`), a core Redux layer
+(`injectSlices` + `RootStateProvider`), and a small core sections domain.
+Ruling (2026-07-07): resolvable, no structural action — the two models
+are compatible under three constraints that this program enforces:
+
+1. The Query cache is the source of truth for server data. RTK slices may
+   CONSUME it — hydrated one-way — which is exactly what
+   `legacy/bridge.ts` does; the prototype slice can serve as a
+   transitional-store implementation behind the bridge if useful.
+2. Slices never fetch independently: all network goes through DashboardApi
+   with shared query keys (the prototype's raw-`fetch` mutation sites do
+   not survive as-is).
+3. `injectSlices` remains a per-page/per-feature utility; it is not the
+   shell's data spine, and Redux does not become a core-mandated
+   platform dependency.
+
+Reusable prototype assets under this contract: the TS types
+(`Section`, `SectionMap`, `UserEditableSection`, …), the
+`sectionOrderUtils` TS port, the core `sections.keys/query/schemata`
+files, and the slice itself as reference (or transitional-store) code.
+Note two reconciliations when consuming it: the prototype's
+`/api/section?section_id=` is a dual-mount alias of the canonical
+`/dashboardapi/section/:id` (§3), and its `"type": "module"` package flag
+violates `docs/conventions/packages.md` — do not copy that flag.
+
+### 4b. Bridge interface (pinned so implementers do not design it)
+
+`legacy/bridge.ts` exposes one factory:
+
+```ts
+type LegacyBridge = {
+  attach(store: Store): () => void; // subscribe queries → dispatch hydrate; returns detach
+  invalidations: {
+    onStudentCountChanged(sectionId: number): void; // → invalidate selected-section + sections queries
+    onSectionMutated(sectionId: number): void;
+  };
+};
+createLegacyBridge(queryClient: QueryClient, hooks: {
+  hydrateSections(sections: SectionMap, selectedId: number | null): AnyAction;
+  hydrateCurrentUser(user: CurrentUser): AnyAction;
+}): LegacyBridge;
+```
+
+Semantics: on attach, current Query data is dispatched immediately, then
+on every relevant query-cache update (subscription), the hydrate actions
+re-dispatch. Reverse flow is ONLY the named invalidation callbacks —
+slices never write into the Query cache. One implementation in
+`legacy/bridge.ts`; per-feature stores pass their own hydrate action
+creators. The per-tab destination map (shell) is likewise pinned:
+`Record<TabKey, {kind: 'candidate'} | {kind: 'legacy'; url: (sectionId:
+number) => string}>` — flipping a tab is a one-entry edit.
 
 ## 5. Move vs rewrite — structural rulings
 
@@ -201,11 +277,17 @@ row fails review.
 
 ## 8. Ambiguities that remain (deliberate)
 
-- Exact core domain names for the new DashboardApi areas: finalized at
-  implementation against the owning Rails controllers (core convention is
-  controller-mirroring); the ownership (core) is decided, naming is not.
 - The GE region signal under `FrontendStudioController`
   (BLOCKED-EVIDENCE, progress change).
 - Final home of moved `SyncOmniAuthSectionControl` (roster) and the
   DSCO-vs-MUI table primitive question (modernization) stay open where
   their changes record them.
+
+Closed since first publication: core domain names (§3, pinned); the
+prototype state fork (§4a, compatibility contract); evidence-capture
+mechanics (every `0.x` capture task follows
+`sdd-experiment/openspec/teacher-dashboard-evidence-playbook.md` —
+environment startup, non-destructive seeding recipes, authenticated
+capture methods, fixture storage convention, flag pinning); the visual
+harness mechanism (pinned in the shell change's
+teacher-dashboard-visual-parity-harness spec).

@@ -6,6 +6,10 @@ in design.md.
 
 ## 0. BLOCKED-EVIDENCE resolution (blocking)
 
+All captures follow `sdd-experiment/openspec/teacher-dashboard-evidence-playbook.md`
+(environment startup, seeding, authenticated capture, fixture storage,
+flag pinning).
+
 - [ ] 0.1 Capture responses for the four GETs (design.md API table) across
       MC, match, free-response, and survey fixtures on local Rails; commit
       as fixtures; record any conflicts with `assessmentDataShapes.js`

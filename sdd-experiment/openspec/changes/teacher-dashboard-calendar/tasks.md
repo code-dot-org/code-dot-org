@@ -4,6 +4,10 @@ Position 7. Depends on teacher-dashboard-shell.
 
 ## 1. Data + discovery (gate)
 
+All captures follow `sdd-experiment/openspec/teacher-dashboard-evidence-playbook.md`
+(environment startup, seeding, authenticated capture, fixture storage,
+flag pinning).
+
 - [ ] 1.1 Capture response JSON for the pinned endpoint
       (`GET /dashboardapi/unit_summary/:courseName/:unitPosition`) for a
       calendar-bearing unit and a no-calendar unit

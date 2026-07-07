@@ -4,6 +4,10 @@ Position 4. Depends on teacher-dashboard-shell.
 
 ## 1. Data layer
 
+All captures follow `sdd-experiment/openspec/teacher-dashboard-evidence-playbook.md`
+(environment startup, seeding, authenticated capture, fixture storage,
+flag pinning).
+
 - [ ] 1.1 Capture response JSON for the pinned endpoint
       (`GET /dashboardapi/sections/:id/students/completed_levels_count`)
       for populated, zero-student, no-progress, and PL sections; pin

@@ -34,6 +34,10 @@ bootstrap API, core sections mocks, home route shell, parity harness).
 
 ## 2b. BLOCKED-EVIDENCE resolution (blocking; from hardening addendum)
 
+All captures follow `sdd-experiment/openspec/teacher-dashboard-evidence-playbook.md`
+(environment startup, seeding, authenticated capture, fixture storage,
+flag pinning).
+
 - [ ] 2b.1 Capture `GET /dashboardapi/sections` once; confirm no consumed
       field exists only in its shape vs the bootstrap endpoint
 - [ ] 2b.2 Pin the section-reorder affordance + `PUT /user_preference`
