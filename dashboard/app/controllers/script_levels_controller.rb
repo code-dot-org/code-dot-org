@@ -181,30 +181,26 @@ class ScriptLevelsController < ApplicationController
     # TODO: If this adds too much to the load time in prod, move it to an API.
     if current_user&.teacher?
       @responses = []
-      # We use this for the level summary entry point, so on contained levels
-      # what we actually care about are responses to the contained level.
-      # Predict levels may have contained levels if they were previously migrated;
-      # to cover that case we use levels_for_progress below on the level, not the contained level,
-      # as migrated predict levels may have progress on either the level itself or its contained level.
-      levels =
-        if @level.is_a?(LevelGroup)
-          @level.levels
-        elsif @level.predict_level?
-          [@level]
-        else
-          [@level.contained_levels.any? ? @level.contained_levels.first : @level]
-        end
+      # The levels whose responses the summary view shows. A LevelGroup exposes
+      # one response set per sublevel; every other type answers on its own
+      # progress levels — a predict level on itself (plus its contained level if
+      # migrated), a plain contained level on its contained level.
+      response_levels = @level.is_a?(LevelGroup) ? @level.levels : @level.levels_for_progress
 
+      # Gate on the type of the level actually holding responses (the contained
+      # level for a plain contained level, the level itself otherwise).
       # TODO: Change/remove this check as we add support for more level types.
-      if levels[0].is_a?(FreeResponse) || levels[0].is_a?(Multi) || levels[0]&.predict_level? || levels[0].is_a?(LevelGroup)
+      first_level = response_levels.first
+      if first_level.is_a?(FreeResponse) || first_level.is_a?(Multi) || first_level&.predict_level? || first_level.is_a?(LevelGroup)
         if @level.is_a?(LevelGroup)
-          @responses = levels.map do |sublevel|
+          @responses = response_levels.map do |sublevel|
             UserLevel.where(level: sublevel, user: @section&.students)
           end
         else
-          progress_levels = @level.levels_for_progress
-          user_levels = UserLevel.where(level: progress_levels, user: @section&.students)
-          user_levels = user_levels.group_by(&:user_id).map {|_, uls| uls.max_by(&:updated_at)} if progress_levels.many?
+          user_levels = UserLevel.where(level: response_levels, user: @section&.students)
+          # A migrated predict level may have progress on both the level and its
+          # contained level; keep each student's most recent attempt.
+          user_levels = user_levels.group_by(&:user_id).map {|_, uls| uls.max_by(&:updated_at)} if response_levels.many?
           @responses = [user_levels]
         end
       end
