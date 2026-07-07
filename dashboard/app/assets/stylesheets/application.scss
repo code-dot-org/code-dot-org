@@ -2786,8 +2786,8 @@ a.download-video {
 .bubble-choice {
   #markdown.teacher {
     max-width: 1000px;
-    border: 5px solid $cyan;
-    background-color: $lightest_cyan;
+    border: 5px solid var(--borders-info-primary);
+    background-color: var(--background-info-extra-light);
     border-radius: 5px;
     margin: 10px auto;
     .level-group-content & {
@@ -2801,12 +2801,13 @@ a.download-video {
       font-size: 18px;
       line-height: 18px;
       @include main-font-bold;
-      color: $white;
-      background: $cyan;
+      color: var(--text-neutral-white-fixed);
+      background: var(--background-info-primary);
       margin: 0;
     }
     p {
       font-size: 13px;
+      color: var(--text-neutral-primary);
     }
   }
 
