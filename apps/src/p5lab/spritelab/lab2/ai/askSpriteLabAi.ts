@@ -2,6 +2,7 @@ import {postAichatCompletionMessage} from '@cdo/apps/aichat/aichatApi';
 import {AichatContext, PendingChatMessage} from '@cdo/apps/aichat/types';
 import {EMPTY_AI_CUSTOMIZATIONS} from '@cdo/apps/aichatLab/views/modelCustomization/constants';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {getStore} from '@cdo/apps/redux';
 import {
   AiChatClientTypes,
   AiChatModelIds,
@@ -9,6 +10,26 @@ import {
 } from '@cdo/generated-scripts/sharedConstants';
 
 import {buildPrompt} from '../blockly/generateContent';
+
+// The project's costume and background names from the animationList slice, so
+// the model only references images that actually exist.
+function getAvailableImageNames(): {costumes: string[]; backgrounds: string[]} {
+  const costumes: string[] = [];
+  const backgrounds: string[] = [];
+  const animationList = getStore().getState().animationList;
+  (animationList?.orderedKeys || []).forEach((key: string) => {
+    const props = animationList.propsByKey[key];
+    if (!props?.name) {
+      return;
+    }
+    if ((props.categories || []).includes('backgrounds')) {
+      backgrounds.push(props.name);
+    } else {
+      costumes.push(props.name);
+    }
+  });
+  return {costumes, backgrounds};
+}
 
 /**
  * Ask the AI to turn a natural-language request into Sprite Lab pseudocode.
@@ -18,10 +39,11 @@ import {buildPrompt} from '../blockly/generateContent';
 export default async function askSpriteLabAi(
   userPrompt: string
 ): Promise<string> {
+  const {costumes, backgrounds} = getAvailableImageNames();
   const newUserMessage: PendingChatMessage = {
     role: Role.USER,
     status: Status.UNKNOWN,
-    chatMessageText: buildPrompt(userPrompt),
+    chatMessageText: buildPrompt(userPrompt, costumes, backgrounds),
     assets: undefined,
     timestamp: Date.now(),
   };
