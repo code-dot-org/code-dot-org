@@ -422,7 +422,6 @@ module UsersHelper
           end
         else
           progress_level_ids = level.levels_for_progress.map(&:id)
-          feedback_level_id = progress_level_ids.first
           users.each do |user|
             user_levels_for_user = user_levels_by_level[user.id]
             # Prefer the most recent attempt across the levels, so a
@@ -432,7 +431,8 @@ module UsersHelper
             level_progress = get_level_progress(
               user_id: user.id,
               user_level: user_level,
-              teacher_feedback: teacher_feedback_by_level[user.id][feedback_level_id],
+              # Teacher feedback is always on the level, even for levels with contained levels.
+              teacher_feedback: teacher_feedback_by_level[user.id][level.id],
               script_level: sl,
               paired_user_levels: paired_user_levels[user.id],
               include_timestamp: include_timestamp
