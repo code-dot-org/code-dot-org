@@ -3,7 +3,7 @@
  */
 
 import {createSlice} from '@reduxjs/toolkit';
-import type {PayloadAction} from '@reduxjs/toolkit';
+import type {PayloadAction, ThunkAction, UnknownAction} from '@reduxjs/toolkit';
 import {beforeEach, describe, expect, expectTypeOf, it} from 'vitest';
 
 import reduxSlice, {setCount} from '../reduxSlice';
@@ -218,5 +218,20 @@ describe('redux module type surface', () => {
         redux: {reducerCount: number};
         a: {value: number};
       }>();
+  });
+
+  it('storeHooks dispatch accepts thunks over the widened state', () => {
+    const injected = injectSlices([sliceA] as const, makeStore());
+    const hooks = storeHooks(injected);
+    // A thunk typed against the *injected* state must be dispatchable —
+    // TStore['dispatch'] alone would only accept thunks over the
+    // pre-injection state.
+    const thunk: ThunkAction<
+      void,
+      StateFor<typeof injected>,
+      undefined,
+      UnknownAction
+    > = () => {};
+    expectTypeOf(hooks.useAppDispatch).returns.toBeCallableWith(thunk);
   });
 });
