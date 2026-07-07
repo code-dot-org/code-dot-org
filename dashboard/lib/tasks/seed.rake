@@ -85,7 +85,6 @@ namespace :seed do
     frozen
     hourofcode
     mc
-    oceans
     mix-move-ai-2025
   ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
 
@@ -256,7 +255,6 @@ namespace :seed do
        original-allthelessonplans-course
        original-allthethings-course
        original-alltheselfpacedplthings-course
-       oceans
        mix-move-ai-2025).each do |course_name|
       UnitGroup.load_from_path("#{CURRICULUM_CONTENT_DIR}/config/courses/#{course_name}.course")
     end
