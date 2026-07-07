@@ -21,12 +21,37 @@ class LanguageTest < ActionDispatch::IntegrationTest
     end
   end
 
-  it_behaves_like 'renders in expected locale', 'en-US'
-  it_behaves_like 'renders in expected locale', 'en-US', http_locale: ''
-  it_behaves_like 'renders in expected locale', 'en-US', http_locale: 'invalid_locale'
+  it_behaves_like 'renders in expected locale', Cdo::I18n::DEFAULT_LOCALE
+  it_behaves_like 'renders in expected locale', Cdo::I18n::DEFAULT_LOCALE, http_locale: '', cookie_locale: ''
+  it_behaves_like 'renders in expected locale', Cdo::I18n::DEFAULT_LOCALE, http_locale: 'invalid_locale', cookie_locale: 'invalid_locale'
   it_behaves_like 'renders in expected locale', 'fa-IR', http_locale: 'fa'
   it_behaves_like 'renders in expected locale', 'fa-IR', http_locale: 'es', cookie_locale: 'fa'
   it_behaves_like 'renders in expected locale', 'fa-IR', http_locale: 'en', cookie_locale: 'es', param_locale: 'fa'
+
+  context 'when I18n.locale leaks from previous request' do
+    let(:leaked_locale) {'es-MX'}
+
+    let!(:original_locale) {I18n.locale}
+
+    before do
+      I18n.locale = leaked_locale
+    end
+
+    after do
+      I18n.locale = original_locale
+    end
+
+    it 'resets leaked I18n.locale to default locale' do
+      _ {get new_user_session_path}.must_change -> {I18n.locale.to_s}, from: leaked_locale, to: Cdo::I18n::DEFAULT_LOCALE
+    end
+
+    it 'does not use leaked I18n.locale when no preferred-language data is present' do
+      get new_user_session_path, env: {}, params: {}
+
+      must_respond_with :success
+      must_select "html[lang='#{Cdo::I18n::DEFAULT_LOCALE}']"
+    end
+  end
 
   describe 'aliases' do
     Cdo::I18n::LOCALE_ALIASES.each do |short_locale, normalized_locale|

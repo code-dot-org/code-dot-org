@@ -1,33 +1,32 @@
 import {expect, type Locator, type Page} from '@playwright/test';
 
+import {FooterComponent} from '../components/footer';
+import {GdprDialogComponent} from '../components/gdpr-dialog';
+import {HeaderComponent} from '../components/header';
+import {StudentInfoModalComponent} from '../components/student-info-modal';
+
 /** Base for every page object — home for the UI common to all pages. */
 export class BasePage {
   protected readonly page: Page;
 
-  /** Global language dropdown. */
-  protected readonly localeDropdown: Locator;
+  /** Site-wide navigation header (nav links, user menu, display name). */
+  readonly header: HeaderComponent;
 
-  /** The dropdown's selected option; assert its text for the active locale. */
-  readonly selectedLocale: Locator;
+  /** Site-wide page footer (language selector). */
+  readonly footer: FooterComponent;
 
-  /** Header user-menu element; duplicates per breakpoint, .first() avoids strict-mode failure. */
-  protected readonly headerUser: Locator;
+  /** GDPR data-transfer dialog — a global overlay that can appear on any page. */
+  readonly gdprDialog: GdprDialogComponent;
+
+  /** Student-information interstitial — a global overlay that can appear on any page. */
+  readonly studentInfoModal: StudentInfoModalComponent;
 
   constructor(page: Page) {
     this.page = page;
-    this.localeDropdown = page.getByRole('combobox', {name: 'Select language'});
-    this.selectedLocale = this.localeDropdown.locator('option:checked');
-    this.headerUser = page.locator('.header_user').first();
-  }
-
-  /** Wait for the locale dropdown to render. */
-  async waitForLocaleDropdownVisible(): Promise<void> {
-    await expect(this.localeDropdown).toBeVisible();
-  }
-
-  /** Wait until the signed-in header chrome is visible. */
-  async waitForSignedIn(): Promise<void> {
-    await expect(this.headerUser).toBeVisible();
+    this.header = new HeaderComponent(page);
+    this.footer = new FooterComponent(page);
+    this.gdprDialog = new GdprDialogComponent(page);
+    this.studentInfoModal = new StudentInfoModalComponent(page);
   }
 
   /**

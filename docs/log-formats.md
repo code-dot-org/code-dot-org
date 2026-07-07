@@ -172,7 +172,7 @@ Fields are defined by the comma-delimited `LOG_FIELDS` parameter in the access l
 
 The Application Load Balancer writes logs for every HTTP/HTTPS request it receives. Logs are written directly to S3 at `s3://cdo-logs/<stack-name>-alb-access-logs/AWSLogs/<account>/elasticloadbalancing/<region>/YYYY/MM/DD/`. Query these records in Athena via table `elb_logs.prod_dashboard_alb`.
 
-**CodeProjects ALB:** The codeprojects.org Application Load Balancer (manually configured) writes logs to `s3://cdo-logs/codeprojects-elb/AWSLogs/475661607190/elasticloadbalancing/us-east-1/YYYY/MM/DD/`. These logs are discovered by a Glue crawler and exposed in Athena as table `elb_logs.codeprojects_alb` (partitioned by `year/month/day`). The format is identical to the main dashboard ALB logs described above.
+**CodeProjects ALB:** The codeprojects.org Application Load Balancer (manually configured) writes logs to `s3://cdo-logs/codeprojects-elb/AWSLogs/[AccountID]/elasticloadbalancing/us-east-1/YYYY/MM/DD/`. These logs are discovered by a Glue crawler and exposed in Athena as table `elb_logs.codeprojects_alb` (partitioned by `year/month/day`). The format is identical to the main dashboard ALB logs described above.
 
 ### Example Log Entries
 
@@ -576,7 +576,7 @@ fields @timestamp, @message
 ## CloudTrail Logs
 
 **Format:** JSON (CloudTrail event schema)  
-**Location:** `s3://cdo-logs/AWSLogs/475661607190/CloudTrail/us-east-1`  
+**Location:** `s3://cdo-logs/AWSLogs/[AccountID]/CloudTrail/us-east-1`  
 **Athena Table:** `cdo.cloudtrail_logs` (projection on `datedir`)
 
 CloudTrail captures API activity across the AWS account, including console, CLI, SDK, and service operations. AWS delivers gzipped JSON objects partitioned by `YYYY/MM/DD`; Athena queries them via external table `cdo.cloudtrail_logs`, which uses partition projection and the CloudTrail SerDe so new dates do not require manual partition operations.

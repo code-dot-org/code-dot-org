@@ -44,6 +44,7 @@ import CornerToolbarPanel from '../elementToolbars/components/CornerToolbarPanel
 import {DEFAULT_STROKE_COLOR} from '../elementToolbars/toolbarPalettes';
 import {useCopyPaste} from '../hooks/useCopyPaste';
 import {useDisplayElements} from '../hooks/useDisplayElements';
+import {useDragSelection} from '../hooks/useDragSelection';
 import {useElementClickHandlers} from '../hooks/useElementClickHandlers';
 import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
@@ -58,6 +59,7 @@ import ShapeNode from '../nodes/ShapeNode';
 import TextNode from '../nodes/TextNode';
 import {
   AddNodeRequest,
+  CanvasTool,
   ReactFlowSketchLabSources,
   SketchLabNode,
 } from '../types';
@@ -159,6 +161,8 @@ export default function ReactFlowCanvas({
     trapFocus: boolean;
   }>({target: null, trapFocus: false});
   const {target: openToolbarTarget, trapFocus} = openToolbarInfo;
+
+  const [canvasTool, setCanvasTool] = useState<CanvasTool>('cursor');
 
   const [isAnyPopoverOpen, setPopoverOpen] = useState(false);
   const [keyboardMovingLineId, setKeyboardMovingLineId] = useState<
@@ -352,8 +356,8 @@ export default function ReactFlowCanvas({
     copyEntry,
     cutEntry,
     paste,
-    handleMouseMove,
-    handleMouseLeave,
+    handleMouseMove: copyPasteMouseMove,
+    handleMouseLeave: copyPasteMouseLeave,
   } = useCopyPaste({nodes, edges, setNodes, setEdges, pushSnapshot});
 
   const clipboardContextValue = useMemo(
@@ -369,24 +373,37 @@ export default function ReactFlowCanvas({
     setNodeOrEdgeFocused
   );
 
-  const handleGroupNodes = useCallback(() => {
-    const selectedIds = [...multiSelectedNodeIds];
-    const groupId = createUuid();
-    pushSnapshot();
-    setNodes(current => groupSelectedNodes(selectedIds, current, groupId));
-    clearSelection();
-    closeToolbar();
-    announceGroupMode('Group created.');
-    setTimeout(() => focusEntry({type: 'node', id: groupId}), 0);
-  }, [
-    multiSelectedNodeIds,
-    pushSnapshot,
-    setNodes,
-    clearSelection,
-    closeToolbar,
-    announceGroupMode,
-    focusEntry,
-  ]);
+  const handleGroupNodes = useCallback(
+    (explicitIds?: Set<string>) => {
+      const selectedIds = [...(explicitIds ?? multiSelectedNodeIds)];
+      if (selectedIds.length === 0) return;
+      const groupId = createUuid();
+
+      // groupSelectedNodes returns the input unchanged when the selection
+      // doesn't meet the minimum threshold (e.g. a single standalone line).
+      // Pre-check so pushSnapshot / announce / focus don't fire when no group
+      // is actually created. The updater re-runs against authoritative current
+      // state in case nodes changed between this render and the flush.
+      if (groupSelectedNodes(selectedIds, nodes, groupId) === nodes) return;
+
+      pushSnapshot();
+      setNodes(current => groupSelectedNodes(selectedIds, current, groupId));
+      clearSelection();
+      closeToolbar();
+      announceGroupMode('Group created.');
+      setTimeout(() => focusEntry({type: 'node', id: groupId}), 0);
+    },
+    [
+      multiSelectedNodeIds,
+      nodes,
+      pushSnapshot,
+      setNodes,
+      clearSelection,
+      closeToolbar,
+      announceGroupMode,
+      focusEntry,
+    ]
+  );
 
   const handleUngroupNode = useCallback(
     (groupId: string) => {
@@ -396,6 +413,35 @@ export default function ReactFlowCanvas({
     },
     [pushSnapshot, setNodes, closeToolbar]
   );
+
+  const {
+    selectionBox,
+    pendingSelectedIds,
+    dragSelectMouseDown,
+    dragSelectMouseMove,
+    dragSelectMouseUp,
+    dragSelectMouseLeave,
+  } = useDragSelection({
+    nodes,
+    edges,
+    isGrabMode: canvasTool === 'grab',
+    readOnly,
+    screenToFlowPosition,
+    onGroupNodes: handleGroupNodes,
+  });
+
+  const handleMouseMove = useCallback(
+    (event: React.MouseEvent<HTMLDivElement>) => {
+      copyPasteMouseMove(event);
+      dragSelectMouseMove(event);
+    },
+    [copyPasteMouseMove, dragSelectMouseMove]
+  );
+
+  const handleMouseLeave = useCallback(() => {
+    copyPasteMouseLeave();
+    dragSelectMouseLeave();
+  }, [copyPasteMouseLeave, dragSelectMouseLeave]);
 
   const {connectingFrom, connectAnnouncement, handleKeyDown} =
     useKeyboardNavigation({
@@ -504,6 +550,8 @@ export default function ReactFlowCanvas({
     [setLastFocusedEntry, setNodeOrEdgeFocused]
   );
 
+  const isGrabMode = canvasTool === 'grab';
+
   const {displayNodes, displayEdges} = useDisplayElements({
     nodes,
     edges,
@@ -512,9 +560,12 @@ export default function ReactFlowCanvas({
     lastFocusedEntry,
     connectingFrom,
     readOnly,
+    grabMode: isGrabMode,
     focusEntry,
     handleEdgeMouseDown,
-    multiSelectedNodeIds,
+    multiSelectedNodeIds: selectionBox
+      ? pendingSelectedIds
+      : multiSelectedNodeIds,
   });
 
   // Debounced save: sync ReactFlow state back to project sources.
@@ -599,6 +650,7 @@ export default function ReactFlowCanvas({
   const handleAddNode = useCallback(
     (request: AddNodeRequest) => {
       pushSnapshot();
+      setCanvasTool('cursor');
       const {type} = request;
       const stagger = addedNodeCountRef.current * NEW_NODE_STAGGER_PX;
       addedNodeCountRef.current += 1;
@@ -682,13 +734,45 @@ export default function ReactFlowCanvas({
       openToolbar,
       pushSnapshot,
       screenToFlowPosition,
+      setCanvasTool,
       setNodes,
       setEdges,
     ]
   );
 
+  const dragBoxContainerRect = selectionBox
+    ? canvasContainerRef.current?.getBoundingClientRect()
+    : null;
+  const dragBoxStyle: React.CSSProperties | null =
+    selectionBox && dragBoxContainerRect
+      ? {
+          left:
+            Math.min(selectionBox.startX, selectionBox.endX) -
+            dragBoxContainerRect.left,
+          top:
+            Math.min(selectionBox.startY, selectionBox.endY) -
+            dragBoxContainerRect.top,
+          width: Math.abs(selectionBox.endX - selectionBox.startX),
+          height: Math.abs(selectionBox.endY - selectionBox.startY),
+        }
+      : null;
+
+  // All ReactFlow props that differ between cursor and grab mode, collected in
+  // one place so the grab mode contract is visible at a glance.
+  const grabModeProps = {
+    panOnDrag: isGrabMode,
+    nodesDraggable: !readOnly && !isGrabMode,
+    nodesConnectable: !readOnly && !isGrabMode,
+    elementsSelectable: !readOnly && !isGrabMode,
+    nodesFocusable: !isGrabMode,
+    edgesFocusable: !isGrabMode,
+    onNodeClick: isGrabMode ? undefined : handleNodeClick,
+    onEdgeClick: isGrabMode ? undefined : handleEdgeClick,
+    deleteKeyCode: !readOnly && !isGrabMode ? 'Delete' : null,
+  };
+
   return (
-    <SketchLabReadOnlyProvider value={readOnly}>
+    <SketchLabReadOnlyProvider value={readOnly || isGrabMode}>
       <ToolbarVisibilityProvider value={toolbarVisibility}>
         <ClipboardProvider value={clipboardContextValue}>
           <PushSnapshotProvider value={pushSnapshot}>
@@ -708,6 +792,7 @@ export default function ReactFlowCanvas({
                     styles.canvasContainer,
                     {
                       [styles.connectMode]: !!connectingFrom,
+                      [styles.grabMode]: isGrabMode,
                     },
                     SKETCHLAB_CONTAINER_CLASS
                   )}
@@ -715,11 +800,18 @@ export default function ReactFlowCanvas({
                   onKeyDownCapture={handleKeyDown}
                   onFocusCapture={handleFocusCapture}
                   onBlur={handleContainerBlur}
+                  onMouseDown={dragSelectMouseDown}
                   onMouseMove={handleMouseMove}
+                  onMouseUp={dragSelectMouseUp}
                   onMouseLeave={handleMouseLeave}
                 >
                   {!readOnly && (
-                    <Toolbar onAddNode={handleAddNode} levelName={levelName} />
+                    <Toolbar
+                      onAddNode={handleAddNode}
+                      levelName={levelName}
+                      canvasTool={canvasTool}
+                      onSetCanvasTool={setCanvasTool}
+                    />
                   )}
                   <div aria-live="assertive" className={styles.srOnly}>
                     {connectAnnouncement}
@@ -732,8 +824,7 @@ export default function ReactFlowCanvas({
                     edges={displayEdges}
                     onNodesChange={handleNodesChange}
                     onEdgesChange={handleEdgesChange}
-                    onNodeClick={handleNodeClick}
-                    onEdgeClick={handleEdgeClick}
+                    {...grabModeProps}
                     onPaneClick={handlePaneClick}
                     onConnect={onConnect}
                     onNodesDelete={handleElementsDeleted}
@@ -750,16 +841,11 @@ export default function ReactFlowCanvas({
                     defaultViewport={initialViewport}
                     fitView={!initialViewport}
                     colorMode={colorMode}
-                    // We implement our own shift+click multi-selection; disable
-                    // React Flow's built-in so it doesn't fight our selection state.
+                    // We implement our own shift+click multi-selection and
+                    // drag-to-select; disable React Flow's built-in versions.
                     multiSelectionKeyCode={null}
-                    deleteKeyCode={readOnly ? null : 'Delete'}
+                    selectionKeyCode={null}
                     proOptions={{hideAttribution: true}}
-                    nodesDraggable={!readOnly}
-                    nodesConnectable={!readOnly}
-                    elementsSelectable={!readOnly}
-                    nodesFocusable={true}
-                    edgesFocusable={true}
                     // Even though we manage tab order, we keep React Flow's keyboard A11y on because
                     // it manages things like moving nodes with arrow keys.
                     disableKeyboardA11y={false}
@@ -796,6 +882,13 @@ export default function ReactFlowCanvas({
                       isReadOnly={readOnly}
                     />
                   </ReactFlow>
+                  {dragBoxStyle && (
+                    <div
+                      aria-hidden="true"
+                      className={styles.dragSelectionBox}
+                      style={dragBoxStyle}
+                    />
+                  )}
                 </div>
               </FocusTrap>
             </AnchorDraggingProvider>

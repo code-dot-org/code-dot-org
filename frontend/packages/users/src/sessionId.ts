@@ -21,7 +21,7 @@ const tryGetSessionStorage: <T = string | number | boolean>(
   let returnValue: string | T | null = defaultValue;
   try {
     returnValue = sessionStorage.getItem(key);
-  } catch (_) {
+  } catch {
     // Ignore, return default
   }
   return returnValue !== null ? returnValue : defaultValue;

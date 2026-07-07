@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-06-29T17:07:21.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "panels": [
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-4-confident-errors-explain-6de73c00-e0e8-4e4b-922c-daba0d5e5fe0",
+        "text": "Remember how AI can sometimes make things up? Well, it can also present those made-up facts with *a lot* of confidence, as if it's absolutely right!",
+        "imageUrl": "https://images.code.org/fe453f5e6262789078941c71264a9e8c-sample-aid-sc2-unit-generation-lesson-4-confident-errors-explain-panel-1-85d2d7e0-70cc-4f95-9a85-2d6ac32549a7.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-4-confident-errors-explain-25f7a8f0-231a-4325-89bb-d30e9de2c30a",
+        "text": "This isn't because the AI is trying to trick you. It's because it finds patterns in massive amounts of data and predicts what *seems* most likely. It doesn't actually 'understand' if something is true or false in the human sense.",
+        "imageUrl": "https://images.code.org/46f5a73de61601473faa56631bdae28e-sample-aid-sc2-unit-generation-lesson-4-confident-errors-explain-panel-2-6557fb8e-e576-4bb9-9cd0-cee0f31c4a62.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-4-confident-errors-explain-2cc90683-ce43-495e-bd6e-4199d89aa066",
+        "text": "Think of it like this: if an AI has read many texts that combine 'famous inventor' and 'telephone', it might confidently pick 'Thomas Edison' even if it's historically inaccurate, because that's a common pattern it's seen.",
+        "imageUrl": "https://images.code.org/fe29907421986d5f73cc9b197c310c75-sample-aid-sc2-unit-generation-lesson-4-confident-errors-explain-panel-3-024ee5b2-61f6-4892-be7c-9af2f9584ea3.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-4-confident-errors-explain-2dd04417-b978-457a-9c11-5cc5bad725e0",
+        "text": "The danger? If we blindly trust AI outputs without checking, we might spread misinformation or make decisions based on false information. It can be really hard to spot when the AI sounds so sure!",
+        "imageUrl": "https://images.code.org/250e1f07a6d32ec66c61ce4dc219250b-sample-aid-sc2-unit-generation-lesson-4-confident-errors-explain-panel-4-c0c92a03-139c-4496-8ebf-c2719b7b458b.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-4-confident-errors-explain-74faaf6c-3456-4c79-a467-8b31492ff47b",
+        "text": "That's why *you* are the most important fact-checker! Always question, verify, and use your own critical thinking when an AI gives you information, especially on important topics.",
+        "imageUrl": "https://images.code.org/cc166b821ea16d30ff334d10304ae2b8-sample-aid-sc2-unit-generation-lesson-4-confident-errors-explain-panel-5-c9156b71-d815-47b9-a7b6-82448e834b37.png",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "generate_outline": "Explain the concept of 'confidence calibration' in AI, where a model might present incorrect information with high certainty. Discuss why this happens (e.g., pattern matching without understanding) and the dangers of blindly trusting AI outputs. Provide examples of seemingly authoritative but incorrect AI statements."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:08:13 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:08:13 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

@@ -1,25 +1,18 @@
 {
   "name": "@code-dot-org/users",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "private": true,
-  "keywords": [
-    "platform",
-    "code.org"
-  ],
-  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/users/#readme",
+  "description": "Code.org account settings feature module",
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/accounts/#readme",
   "bugs": {
     "url": "https://github.com/code-dot-org/code-dot-org/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/code-dot-org/code-dot-org.git",
-    "directory": "frontend/packages/users"
+    "directory": "frontend/packages/accounts"
   },
   "license": "SEE LICENSE IN LICENSE",
-  "sideEffects": [
-    "**/*.css"
-  ],
-  "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -36,37 +29,49 @@
     }
   },
   "scripts": {
-    "build": "vite build && tsc --noEmit",
+    "build": "vite build",
     "dev": "vite",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
+    "preview": "vite preview",
     "test": "vitest --run",
+    "test:ui": "playwright test",
     "typecheck": "tsc -b --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "stylelint": {
+    "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
+  },
   "dependencies": {
     "@code-dot-org/core": "workspace:*",
-    "@reduxjs/toolkit": "catalog:",
-    "lodash": "^4.17.21",
-    "react-redux": "catalog:"
+    "@reduxjs/toolkit": "catalog:"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.10.1",
     "@code-dot-org/lint-config": "workspace:*",
+    "@playwright/test": "^1.59.1",
+    "@testing-library/dom": "catalog:",
+    "@testing-library/jest-dom": "catalog:",
     "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
     "eslint": "catalog:",
-    "eslint-plugin-react-hooks": "catalog:",
-    "eslint-plugin-react-refresh": "catalog:",
+    "jsdom": "catalog:",
     "prettier": "catalog:",
     "react": "catalog:",
+    "react-dom": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",
     "vite-plugin-externalize-deps": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "vitest-axe": "^0.1.0"
   },
   "peerDependencies": {
-    "react": "^18.0.0 || ^19.0.0"
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
   }
 }

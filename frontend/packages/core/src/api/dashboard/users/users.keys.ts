@@ -13,4 +13,5 @@ export const usersKeys = {
   currentPermissions: () => [...usersKeys.all, 'currentPermissions'] as const,
   hasDismissedPersonalizationAlert: () =>
     [...usersKeys.all, 'hasDismissedPersonalizationAlert'] as const,
+  settings: () => [...usersKeys.all, 'settings'] as const,
 };

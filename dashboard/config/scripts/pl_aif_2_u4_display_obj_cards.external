@@ -9,8 +9,6 @@ Many apps display information as cards that combine text, images, and ratings in
 
 When this happens, programmers and designers must decide what to show instead and those choices can influence how users understand and trust the information they see.
 
-<hr>
-
 ## Why Websites Do This
 
 Below are two versions of the same card. One includes a missing value.
@@ -131,14 +129,13 @@ Below are three versions of the same product card. Each presents the information
   </ul>
 </div>
 
-<hr>
 
-<div style="display:flex; flex-direction:column; gap:12px; margin-top:20px;">
+<div style="display:flex; justify-content:center; align-items:flex-start; gap:24px; flex-wrap:wrap; margin-top:20px;">
 
-  <details style="background-color:#FFFFFF; padding:12px; border:1px solid #D9E3E5; border-radius:8px;">
+  <details style="width:205px; background-color:#FFFFFF; padding:12px; border:1px solid #D9E3E5; border-radius:8px;">
     <summary style="font-size:18px; font-weight:bold;">Version 1</summary>
 
-<div style="margin-top:16px;">
+  <div style="margin-top:16px;">
       <p style="font-size:16px; line-height:1.5;">
         This version feels more <b>neutral</b> because it presents the rating directly without extra persuasive language.
       </p>
@@ -149,12 +146,12 @@ Below are three versions of the same product card. Each presents the information
     </div>
   </details>
 
-  <details style="background-color:#FFFFFF; padding:12px; border:1px solid #D9E3E5; border-radius:8px;">
+  <details style="width:205px; background-color:#FFFFFF; padding:12px; border:1px solid #D9E3E5; border-radius:8px;">
     <summary style="font-size:18px; font-weight:bold;">Version 2</summary>
 
-<div style="margin-top:16px;">
+  <div style="margin-top:16px;">
       <p style="font-size:16px; line-height:1.5;">
-        This version uses <b>persuasive framing</b>, such as the “Top Value Pick!” label and highlighted button styling.
+        This version uses <b>persuasive framing</b>, such as the "Top Value Pick!" label and highlighted button styling.
       </p>
 
   <p style="font-size:16px; line-height:1.5;">
@@ -163,10 +160,10 @@ Below are three versions of the same product card. Each presents the information
     </div>
   </details>
 
-  <details style="background-color:#FFFFFF; padding:12px; border:1px solid #D9E3E5; border-radius:8px;">
+  <details style="width:205px; background-color:#FFFFFF; padding:12px; border:1px solid #D9E3E5; border-radius:8px;">
     <summary style="font-size:18px; font-weight:bold;">Version 3</summary>
 
-<div style="margin-top:16px;">
+  <div style="margin-top:16px;">
       <p style="font-size:16px; line-height:1.5;">
         This version removes the rating entirely, which hides potentially important information from the user.
       </p>
@@ -179,10 +176,10 @@ Below are three versions of the same product card. Each presents the information
 
 </div>
 
-<hr>
+
 
 <div style="background-color:#e4e2f8; border-radius:30px; color:#000000; width:95%; padding:18px 24px; margin:24px 0;">
-  <p style="font-size:18px; line-height:1.5; margin:0;">
+  <p style="font-size:16px; line-height:1.5; margin:0;">
     <strong>💡 Teacher Tip:</strong> Encourage students to notice not only what information appears on a page, but also what is emphasized, minimized, or omitted. Small design choices can strongly influence how users interpret information online.
   </p>
 </div>

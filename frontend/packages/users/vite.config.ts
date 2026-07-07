@@ -1,63 +1,50 @@
-import path from 'node:path';
-import type {OutputOptions} from 'rollup';
+import react from '@vitejs/plugin-react';
 import {defineConfig} from 'vite';
 import dts from 'vite-plugin-dts';
 import {externalizeDeps} from 'vite-plugin-externalize-deps';
 
-/**
- * Get Rollup output configuration.
- * @param format es or cjs
- * @returns Rollup output configuration
- */
-function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
-  return {
-    format,
-    exports: 'named',
-    entryFileNames: format === 'es' ? '[name].mjs' : '[name].cjs',
-    preserveModules: true,
-    preserveModulesRoot: 'src',
-  };
-}
-
+// Library build, app-shaped (see docs/conventions/packages.md). React, MUI, and
+// @code-dot-org/core stay external — the Studio host provides them so the lazy
+// chunk shares one React/QueryClient instance.
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    // Generate Typescript declaration files using the Vite default tsconfig
+    react(),
+    // Emit declaration files following tsconfig.app.json's project graph.
     dts({
-      tsconfigPath: './tsconfig.json',
-      rollupTypes: false, // Disable rolling up types to a single file
+      tsconfigPath: './tsconfig.app.json',
       entryRoot: 'src',
-      insertTypesEntry: false, // Prevent inserting a single types entry
-      exclude: ['**/__tests__/**', '**/*.test.tsx'],
+      exclude: ['**/__tests__/**', '**/*.test.ts', '**/*.test.tsx'],
     }),
-    // Ensure dependencies are externalized for library build
-    // Libraries such as react, react-dom, lodash, etc. should not be bundled by the library.
-    // Instead, they are expected to be provided by the host application.
     externalizeDeps(),
   ],
-  resolve: {
-    dedupe: [
-      'blockly',
-      'react',
-      'react-dom',
-      'react/jsx-runtime',
-      'react/jsx-dev-runtime',
-      'react-redux',
-      '@reduxjs/toolkit',
-    ],
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
+  server: {
+    allowedHosts: ['localhost-studio.code.org'],
   },
   build: {
-    sourcemap: true,
-    cssCodeSplit: true,
     lib: {
-      entry: ['src/index.ts', 'src/redux/index.ts'],
-      name: 'users',
+      entry: {
+        index: 'src/index.ts',
+        'redux/index': 'src/redux/index.ts',
+      },
+      name: 'accounts',
+      formats: ['es', 'cjs'],
     },
     rollupOptions: {
-      output: [getRollupOutputConfig('es'), getRollupOutputConfig('cjs')],
+      output: [
+        {
+          format: 'es',
+          entryFileNames: '[name].mjs',
+          preserveModules: false,
+          dir: 'dist',
+        },
+        {
+          format: 'cjs',
+          entryFileNames: '[name].cjs',
+          preserveModules: false,
+          dir: 'dist',
+        },
+      ],
     },
   },
 });
