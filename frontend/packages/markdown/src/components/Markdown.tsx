@@ -19,9 +19,6 @@ import {Typography, type TypographyProps} from '@mui/material';
 
 import Divider from '@code-dot-org/component-library/divider';
 import Link from '@code-dot-org/component-library/link';
-// Load the design-system MUI augmentations so the custom Typography variants
-// (e.g. `strong`, `em`) are recognized. Type-only: no runtime cost.
-import type {} from '@code-dot-org/component-library/themes';
 
 import {
   collectRehypePlugins,
