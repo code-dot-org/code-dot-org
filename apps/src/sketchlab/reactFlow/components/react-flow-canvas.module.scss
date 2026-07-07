@@ -170,17 +170,31 @@ $handle-grab-buffer: 10px;
   border-radius: 4px;
 }
 
-// Keyboard group-mode instruction banner shown at the bottom of the canvas.
-.groupModeIndicator {
+// Shared look for the transient banners shown at the bottom of the canvas
+// (group-mode hint, upload error). Each variant sets its own colors.
+%canvas-message {
   background-color: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
-  border: 1px solid var(--borders-brand-teal-primary);
-  border-left: 4px solid var(--borders-brand-teal-primary);
   padding: 8px 16px;
   border-radius: 6px;
   font-size: 13px;
   pointer-events: none;
   user-select: none;
+}
+
+.bannerInfo {
+  @extend %canvas-message;
+
+  color: var(--text-neutral-primary);
+  border: 1px solid var(--borders-brand-teal-primary);
+  border-left: 4px solid var(--borders-brand-teal-primary);
+}
+
+.bannerError {
+  @extend %canvas-message;
+
+  color: var(--text-error-primary);
+  border: 1px solid var(--borders-error-primary);
+  border-left: 4px solid var(--borders-error-primary);
 }
 
 // Drag-to-select overlay drawn on the canvas pane in cursor mode.
