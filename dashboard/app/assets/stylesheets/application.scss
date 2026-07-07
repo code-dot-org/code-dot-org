@@ -2962,14 +2962,26 @@ a.download-video {
 
 .previousPageButton {
   margin-right: 5px;
+  background-color: var(--background-neutral-primary);
+  border-color: var(--borders-neutral-primary);
+  color: var(--text-neutral-primary);
+  background-image: none;
+
+  &:hover {
+    background-color: var(--background-neutral-tertiary);
+    color: var(--text-border-neutral-primary);
+  }
 }
 
-.buttons.submittable {
-  .submitButton, .unsubmitButton {
-    border-color: $purple;
-    background-color: $purple;
-    color: $white;
-    background-image: none;
+.submitButton, .unsubmitButton {
+  border-color: var(--borders-brand-purple-primary);
+  background-color: var(--background-brand-purple-primary);
+  color: var(--text-neutral-white-fixed);
+  background-image: none;
+
+  &:hover {
+    background-color: var(--background-brand-purple-strong);
+    border-color: var(--borders-brand-purple-strong);
   }
 }
 
