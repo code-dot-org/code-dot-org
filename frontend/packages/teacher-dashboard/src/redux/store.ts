@@ -5,7 +5,7 @@
 import {useDispatch, useSelector} from 'react-redux';
 
 import {default as defaultStore, injectSlices} from '@code-dot-org/core/redux';
-import currentUserSlice from '@code-dot-org/users/redux/currentUserSlice';
+import {currentUserSlice} from '@code-dot-org/users/redux';
 
 import teacherSectionsSlice from './teacherSectionsSlice';
 
