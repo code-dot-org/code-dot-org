@@ -25,10 +25,10 @@ class ProjectStorage::Geo < ApplicationRecord
   data_classification(
     id: :confidential,
     storage_id: :confidential,
-    country: :confidential,
-    state: :confidential,
-    city: :confidential,
-    postal_code: :confidential,
+    country: :restricted,
+    state: :restricted,
+    city: :restricted,
+    postal_code: :restricted,
     created_at: :confidential,
     updated_at: :confidential,
   )
