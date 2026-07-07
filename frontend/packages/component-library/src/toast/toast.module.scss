@@ -1,0 +1,21 @@
+/* Standard visually-hidden pattern: removed from view but read by screen
+ * readers. The announcer relies on this so the toast text is announced once
+ * from the always-mounted live region, not from the Snackbar's Alert. */
+.visuallyHidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+}
+
+/* Elevation for the floating toast surface. */
+.elevated {
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+}

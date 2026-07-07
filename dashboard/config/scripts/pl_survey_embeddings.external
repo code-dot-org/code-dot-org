@@ -13,9 +13,11 @@ markdown <<MARKDOWN
 
 ## Pulse Check
 
-<iframe src="https://micahkennedy.github.io/pulse_check/?Activity_Type=video" width="340" height="50" style="border:none;overflow:hidden;"></iframe>
-
 <br>
 
-<iframe src="https://micahkennedy.github.io/pulse_check/?page=mod1level5&content=ai-example-1&type=activity" width="340" height="50" style="border:none;overflow:hidden;"></iframe>
+<iframe src="https://micahkennedy.github.io/pulse_check/?Script=AI101&Version_Year=2026&Unit=unit5&Level=level5&Activity_Type=activity" width="340" height="50" style="border:none;overflow:hidden;"></iframe>
+
+<br><br>
+
+<iframe src="https://micahkennedy.github.io/pulse_check/?Script=AI101&Version_Year=2026&Level=level7&Activity_Type=video" width="340" height="50" style="border:none;overflow:hidden;"></iframe>
 MARKDOWN

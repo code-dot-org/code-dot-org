@@ -71,7 +71,7 @@ test.describe('GDPR Dialog - data transfer agreement', () => {
 
     // Reload — dialog must not reappear.
     await home.goto();
-    await home.waitForSignedIn();
+    await home.header.waitForSignedIn();
     await expect(gdpr.dialog).not.toBeVisible();
   });
 
@@ -93,7 +93,7 @@ test.describe('GDPR Dialog - data transfer agreement', () => {
 
     await setCountryOverride(page, {countryCode: 'ES'});
     await home.goto();
-    await home.waitForSignedIn();
+    await home.header.waitForSignedIn();
     await expect(gdpr.dialog).not.toBeVisible();
   });
 
@@ -169,7 +169,7 @@ test.describe('GDPR Dialog - data transfer agreement', () => {
     await signIn(page, {email, password});
     await setCountryOverride(page, {countryCode: 'ES'});
     await home.goto();
-    await home.waitForSignedIn();
+    await home.header.waitForSignedIn();
     await expect(gdpr.dialog).not.toBeVisible();
   });
 });

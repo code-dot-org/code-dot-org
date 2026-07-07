@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
+import localization from '@cdo/apps/localization';
 import color from '@cdo/apps/util/color';
 
 class FeatureDetails extends React.Component {
@@ -23,7 +24,10 @@ class FeatureDetails extends React.Component {
               min: {feature.min}, max: {feature.max}
             </p>
           )}
-          {feature.values && feature.values.join(', ')}
+          {feature.values &&
+            feature.values
+              .map(value => localization.translate(value))
+              .join(', ')}
         </div>
         <br />
       </div>

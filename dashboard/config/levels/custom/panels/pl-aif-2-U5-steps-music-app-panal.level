@@ -28,13 +28,13 @@
         "layout": "text-bottom-right"
       },
       {
-        "text": "## Upload the layout image\nFirst, upload the layout card image you created earlier.\nOpen the AI Tutor, attach your image file, and include a brief description of what you’d like it to help you build.",
-        "imageUrl": "https://images.code.org/38f51c21a5fbb20d1d72d70eb564b633-playlist (3).png",
+        "text": "## Upload the layout image\nFirst, upload the layout card image you created earlier by selecting it in the backpack. ",
+        "imageUrl": "https://images.code.org/d37716b513b615fa61f5e2d05f2fafc3-nested conditionals .png",
         "key": "pl-aif-2-U5-steps-music-app-panal-a71e2a5c-f44c-4368-a991-9dda3d2dd025",
         "layout": "text-bottom-right"
       },
       {
-        "text": "## Build the HTML Structure\nStart with the HTML—the foundation of your website.\nUpload your layout image to the AI Tutor, then write a simple prompt explaining what you want to build and how the playlist cards should be structured.\n",
+        "text": "## Build the HTML Structure\nStart with the HTML—the foundation of your website.\nWrite a simple prompt explaining what you want to build and how the playlist cards should be structured referring to the layout image. \n",
         "imageUrl": "https://images.code.org/9f112e59dc21365a6b74fbe334a218ef-playlist (4).png",
         "key": "pl-aif-2-U5-steps-music-app-panal-70132e35-b3f0-4f70-984c-9892671f8e77",
         "layout": "text-bottom-right"
@@ -64,8 +64,9 @@
         "layout": "text-bottom-right"
       }
     ],
-    "name_suffix": "_2025-pilot"
+    "name_suffix": "_2025-pilot",
+    "use_links": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-02T16:25:43.405+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U5-API-Calll-POkemon-panel\\\"\"],\"cloned_from\":\"pl-aif-2-U5-API-Calll-POkemon-panel\"},{\"changed_at\":\"2026-03-03 17:49:27 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-02T16:25:43.405+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U5-API-Calll-POkemon-panel\\\"\"],\"cloned_from\":\"pl-aif-2-U5-API-Calll-POkemon-panel\"},{\"changed_at\":\"2026-03-03 17:49:27 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-07-02 15:17:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Panels>
