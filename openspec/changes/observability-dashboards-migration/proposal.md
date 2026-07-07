@@ -6,9 +6,9 @@ Grafana dashboards and alerts for app-level behavior are authored in the infrast
 
 ## What Changes
 
-- Move the Foundation SDK dashboard/alert source tree from `infrastructure/observability/dashboards/grafana` into a new `frontend/packages/` workspace package.
+- Move the Foundation SDK dashboard/alert source tree from `infrastructure/observability/dashboards/grafana` into a new `frontend/packages/grafana-dashboards` workspace package, with a sibling zero-dependency `frontend/packages/telemetry-catalog`.
 - Extract a typed signal catalog (metric names, units, dimensions, Lab2 log attributes, app slugs) importable by both the dashboard builders and the `apps/` emit sites (via existing `portal:` links).
-- Strip deployment bindings from dashboard source: datasource UIDs, AMG workspace URL, and Sentry org/project IDs move behind Grafana datasource template variables where supported, and `templatefile()`-style placeholders for the residue. Generic JSON only; binding values stay in the infrastructure repo.
+- Strip deployment bindings from dashboard source: datasource UIDs, AMG workspace URL, and Sentry org/project IDs move behind Grafana datasource template variables where supported, and `%%NAME%%` placeholder tokens for the residue (consumer binds via Tofu `replace()`). Generic JSON only; binding values stay in the infrastructure repo.
 - Publish generated dashboards as a **public OCI artifact** on `ghcr.io/code-dot-org` from monorepo CI on merge, with GitHub artifact attestations (SLSA provenance). Generated `dist/` is never committed.
 - Add a **notify push**: after publish, monorepo CI dispatches the infrastructure repo's reconcile workflow via a GitHub App token (`actions: write`, single-repo installation). The target repo is bound only via Actions secrets — no private consumer named in OSS source; forks get a clean no-op or can bind their own consumer.
 - Infrastructure repo gains a pull-based **reconcile workflow**: `workflow_dispatch` + daily cron backstop → pull artifact by tag → `gh attestation verify` → bind config → `tofu plan` → environment-gated `tofu apply`. The Tofu grafana module keeps datasources, folders, and notification routing; per-dashboard `file()` resources are replaced by artifact-sourced JSON.
@@ -29,7 +29,7 @@ _None — no existing openspec specs in this repo cover observability._
 
 ## Impact
 
-- **This repo**: new `frontend/packages/` package (name decided in design); emit sites in `apps/src` incrementally adopt catalog constants (no behavior change); new GitHub Actions release workflow; drone unaffected.
+- **This repo**: two new `frontend/packages/` packages (`telemetry-catalog`, `grafana-dashboards`); emit sites in `apps/src` incrementally adopt catalog constants (no behavior change); new GitHub Actions release workflow; drone unaffected.
 - **Infrastructure repo**: `observability/dashboards/grafana` deleted; `opentofu/modules/grafana` dashboards/alerts wiring reworked to consume the artifact; new `reconcile.yml` workflow; new GitHub App (notify push) and OIDC/apply credentials (phase 2).
 - **Dependencies**: `@grafana/grafana-foundation-sdk` moves into the frontend workspace; `oras`/`gh attestation` in CI; no runtime app dependencies change.
 - **People**: dashboard/alert review moves to monorepo PRs (CODEOWNERS on the package); infra on-call keeps a gate via the prod environment required-reviewer approval on apply.
