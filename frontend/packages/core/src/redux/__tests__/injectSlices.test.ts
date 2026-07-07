@@ -2,19 +2,19 @@
  * @vitest-environment jsdom
  */
 
-import {configureStore, createSlice} from '@reduxjs/toolkit';
+import {createSlice} from '@reduxjs/toolkit';
 import type {PayloadAction} from '@reduxjs/toolkit';
 import {beforeEach, describe, expect, expectTypeOf, it} from 'vitest';
 
-import reduxSlice, {incrementCount} from '../reduxSlice';
-import {injectSlice, injectSlices} from '../store';
+import reduxSlice, {setCount} from '../reduxSlice';
+import {createInjectableStore, injectSlices, storeHooks} from '../store';
 import type {MockStore, StateFor} from '../store';
-import type {SlicesState, StoreWithState} from '../types';
+import type {SlicesState} from '../types';
 
 // Fixture slices stand in for real platform slices. They intentionally have
-// dissimilar reducer shapes — that's what previously broke when the type
-// constraint was `Slice<any, any, string>` (the invariant `actions` map made
-// these unassignable to a common tuple type).
+// dissimilar reducer shapes — the case a `Slice<any, any, string>` constraint
+// would reject (its invariant `actions` map makes such slices unassignable to
+// a common tuple type), which is why `injectSlices` matches structurally.
 
 const sliceA = createSlice({
   name: 'a',
@@ -46,17 +46,10 @@ const sliceC = createSlice({
   },
 });
 
-// A fresh store per test — `injectSlices` mutates `asyncReducers` on the
-// input, so we can't reuse the shared `defaultStore` singleton across cases.
-// Cast mirrors what `defaultStore` does: `StoreFor`/`StateFor` can only
-// extract a useful type when the input is already a `StoreWithState`.
-function makeStore() {
-  const raw = configureStore({reducer: {redux: reduxSlice.reducer}});
-  return raw as unknown as StoreWithState<
-    typeof raw,
-    {redux: {reducerCount: number}}
-  >;
-}
+// A fresh store per test isolates *state*; the slice registry is shared
+// module-wide (one root reducer), so tests must not assume absolute
+// reducerCount values — counting has its own order-independent test below.
+const makeStore = createInjectableStore;
 
 type RootStore = ReturnType<typeof makeStore>;
 
@@ -72,7 +65,8 @@ describe('injectSlices', () => {
     const state = injected.getState();
     expect(state.a).toEqual({value: 0});
     expect(state.b).toEqual({label: 'none'});
-    expect(state.redux).toEqual({reducerCount: 0});
+    // The built-in slice is present; exact counting is pinned separately.
+    expect(state.redux.reducerCount).toBeGreaterThanOrEqual(2);
   });
 
   it('dispatches reach the injected slices', () => {
@@ -92,7 +86,7 @@ describe('injectSlices', () => {
     expect(withA.getState().a.value).toBe(7);
 
     const withAB = injectSlices([sliceB] as const, withA);
-    // sliceA's state survives the replaceReducer call
+    // sliceA's state survives the later injection
     expect(withAB.getState().a.value).toBe(7);
     // newly added slice gets its initial state
     expect(withAB.getState().b).toEqual({label: 'none'});
@@ -100,9 +94,44 @@ describe('injectSlices', () => {
 
   it('built-in redux slice keeps responding to actions after injection', () => {
     const injected = injectSlices([sliceA] as const, store);
-    injected.dispatch(incrementCount());
-    injected.dispatch(incrementCount());
-    expect(injected.getState().redux.reducerCount).toBe(2);
+    injected.dispatch(setCount(41));
+    expect(injected.getState().redux.reducerCount).toBe(41);
+  });
+
+  it('fresh stores share the reducer registry with isolated state', () => {
+    const first = injectSlices([sliceA] as const, makeStore());
+    first.dispatch(sliceA.actions.setA(42));
+
+    // A second store sees sliceA's reducer (shared root reducer) but not
+    // the first store's state.
+    const second = injectSlices([sliceA] as const, makeStore());
+    expect(second.getState().a.value).toBe(0);
+    expect(first.getState().a.value).toBe(42);
+  });
+
+  it('reducerCount tracks distinct slices injected app-wide', () => {
+    // Injecting an empty tuple just syncs the count into this store,
+    // giving an order-independent baseline.
+    const before = injectSlices([] as const, makeStore()).getState().redux
+      .reducerCount;
+
+    const sliceX = createSlice({
+      name: 'count-x',
+      initialState: {v: 0},
+      reducers: {},
+    });
+    const sliceY = createSlice({
+      name: 'count-y',
+      initialState: {v: 0},
+      reducers: {},
+    });
+
+    const injected = injectSlices([sliceX, sliceY] as const, makeStore());
+    expect(injected.getState().redux.reducerCount).toBe(before + 2);
+
+    // Re-injection doesn't double-count.
+    const again = injectSlices([sliceX] as const, makeStore());
+    expect(again.getState().redux.reducerCount).toBe(before + 2);
   });
 
   it('re-injecting a slice replaces its reducer without dropping siblings', () => {
@@ -111,7 +140,8 @@ describe('injectSlices', () => {
     withAB.dispatch(sliceB.actions.setB('keep me'));
 
     // Re-inject sliceA alongside a new sliceC. sliceB's reducer must remain
-    // wired up (asyncReducers carries it forward) so its state survives.
+    // wired up (the store's combined reducer carries it forward) so its
+    // state survives.
     const withABC = injectSlices([sliceA, sliceC] as const, withAB);
 
     expect(withABC.getState().b).toEqual({label: 'keep me'});
@@ -122,12 +152,6 @@ describe('injectSlices', () => {
     withABC.dispatch(sliceC.actions.bumpC());
     expect(withABC.getState().c.count).toBe(1);
     expect(withABC.getState().a.value).toBe(11);
-  });
-
-  it('injectSlice is sugar for the multi-slice form', () => {
-    const injected = injectSlice(sliceA, store);
-    injected.dispatch(sliceA.actions.setA(3));
-    expect(injected.getState().a.value).toBe(3);
   });
 });
 
@@ -175,17 +199,24 @@ describe('redux module type surface', () => {
   });
 
   it('injectSlices return widens the store state with the new slices', () => {
-    const fresh = configureStore({
-      reducer: {redux: reduxSlice.reducer},
-    }) as unknown as StoreWithState<
-      ReturnType<typeof configureStore>,
-      {redux: {reducerCount: number}}
-    >;
-    const injected = injectSlices([sliceA, sliceB] as const, fresh);
+    const injected = injectSlices([sliceA, sliceB] as const, makeStore());
     expectTypeOf(injected.getState()).branded.toEqualTypeOf<{
       redux: {reducerCount: number};
       a: {value: number};
       b: {label: string};
     }>();
+  });
+
+  it('storeHooks derives hook typings from the given store', () => {
+    const injected = injectSlices([sliceA] as const, makeStore());
+    const hooks = storeHooks(injected);
+    // The selector's state parameter carries the injected shape.
+    expectTypeOf(hooks.useAppSelector)
+      .parameter(0)
+      .parameter(0)
+      .branded.toEqualTypeOf<{
+        redux: {reducerCount: number};
+        a: {value: number};
+      }>();
   });
 });

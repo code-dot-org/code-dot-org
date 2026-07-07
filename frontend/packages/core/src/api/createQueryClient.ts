@@ -1,4 +1,8 @@
-import {QueryClient, type QueryClientConfig} from '@tanstack/react-query';
+import {
+  QueryCache,
+  QueryClient,
+  type QueryClientConfig,
+} from '@tanstack/react-query';
 
 /**
  * QueryClient with Code.org's shared defaults. Exported so a host can own one
@@ -8,6 +12,18 @@ export function createQueryClient(
   defaultOptions?: QueryClientConfig['defaultOptions'],
 ): QueryClient {
   return new QueryClient({
+    // Surface every query failure. Without this a failed fetch — or a schema
+    // (zod) parse error on a 200 response — only flips the query's `isError`
+    // and is never logged, so a lab that renders its error page shows no reason
+    // in the console or network tab.
+    queryCache: new QueryCache({
+      onError: (error, query) => {
+        console.error(
+          `[react-query] query failed: ${JSON.stringify(query.queryKey)}`,
+          error,
+        );
+      },
+    }),
     defaultOptions: {
       queries: {
         staleTime: 30_000,

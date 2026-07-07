@@ -1,6 +1,6 @@
 import {http, HttpResponse} from 'msw';
 
-import type {CurrentUserResponse} from '../dashboard/users/currentUserTypes';
+import type {CurrentUserResponse} from '../dashboard/users/users.types';
 
 /**
  * Default `/api/v1/users/current` response: signed-out. Studio's auth bootstrap
