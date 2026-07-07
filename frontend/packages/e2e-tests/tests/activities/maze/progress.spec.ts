@@ -2,6 +2,7 @@ import {expect, test} from '../../fixtures';
 import {LegacyBlocklyLab} from '../../pages/legacy-blockly-lab';
 import {UnitOverviewPage} from '../../pages/unit-overview-page';
 import {resetSession} from '../../shared/auth';
+import {analyze, WCAG_AA_TAGS} from '../../shared/axe';
 
 import {K1_MAZE_BLOCKS} from './blocks';
 
@@ -10,6 +11,18 @@ import {K1_MAZE_BLOCKS} from './blocks';
 // timeout, which under CI contention can lapse before the bubble updates.
 const PROGRESS_TIMEOUT_MS = 30_000;
 const poll = {timeout: PROGRESS_TIMEOUT_MS};
+
+// Accessibility baseline for the two progress surfaces, each scoped to its own
+// DOM (not the shared header/footer chrome). rule id -> failing node count, the
+// way multi.spec documents it; a new violation outside this set fails the scan.
+//   lessonHeader: the lesson-progress bubble strip is clean.
+//   summaryTable: 3 color-contrast nodes — a pre-existing DSCO contrast
+//     shortfall in the unit-overview progress bubbles, not introduced by this
+//     port; baselined here so a new regression still fails.
+const EXPECTED_VIOLATIONS: Record<string, Record<string, number>> = {
+  lessonHeader: {},
+  summaryTable: {'color-contrast': 3},
+};
 
 /** Solves lesson 2 level 1 (load the K1 solution and run), ending on that level page. */
 async function solveLevelOne(maze: LegacyBlocklyLab): Promise<void> {
@@ -41,6 +54,13 @@ test.describe('Level Progress', () => {
         .poll(() => maze.isProgressBubbleNotTried(2), poll)
         .toBe(true);
 
+      expect(
+        await analyze(page, {
+          include: maze.progressSelector,
+          tags: WCAG_AA_TAGS,
+        }),
+      ).toEqual(EXPECTED_VIOLATIONS.lessonHeader);
+
       await maze.gotoLevel({lesson: 2, level: 2});
 
       await expect.poll(() => maze.isProgressBubblePerfect(1), poll).toBe(true);
@@ -49,7 +69,7 @@ test.describe('Level Progress', () => {
         .toBe(true);
 
       const unitOverview = new UnitOverviewPage(page);
-      await unitOverview.goto();
+      await unitOverview.gotoOverview();
       await expect(unitOverview.lessonCell(/Maze/)).toBeVisible();
 
       await expect
@@ -64,6 +84,13 @@ test.describe('Level Progress', () => {
           poll,
         )
         .toBe(true);
+
+      expect(
+        await analyze(page, {
+          include: unitOverview.summaryTableSelector,
+          tags: WCAG_AA_TAGS,
+        }),
+      ).toEqual(EXPECTED_VIOLATIONS.summaryTable);
     },
   );
 
@@ -100,7 +127,7 @@ test.describe('Level Progress', () => {
         .toBe(true);
 
       const unitOverview = new UnitOverviewPage(page);
-      await unitOverview.goto();
+      await unitOverview.gotoOverview();
       await expect(unitOverview.lessonCell(/Maze/)).toBeVisible();
 
       await expect

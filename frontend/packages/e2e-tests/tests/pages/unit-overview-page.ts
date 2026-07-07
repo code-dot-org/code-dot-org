@@ -13,16 +13,19 @@ export interface LessonLevelRef {
 
 /** The unit overview page (course/unit index listing lessons and levels). */
 export class UnitOverviewPage extends BasePage {
+  /** Summary progress table; a11y scans scope here, not the shared chrome. */
+  readonly summaryTableSelector = '.uitest-summary-progress-table';
+
   /** Summary progress table; one row per lesson, one bubble per level. */
   private readonly summaryProgressTable: Locator;
 
   constructor(page: Page) {
     super(page);
-    this.summaryProgressTable = page.locator('.uitest-summary-progress-table');
+    this.summaryProgressTable = page.locator(this.summaryTableSelector);
   }
 
   /** Navigate to the unit overview page. */
-  async goto(params: UnitOverviewUrlParams = {}): Promise<void> {
+  async gotoOverview(params: UnitOverviewUrlParams = {}): Promise<void> {
     await this.page.goto(unitOverviewUrl(params));
   }
 

@@ -11,6 +11,9 @@ import {BasePage} from './base-page';
  * sign-in, or dashboards.
  */
 export class LessonLevelPage extends BasePage {
+  /** Lesson-progress strip; a11y scans scope here, not the shared chrome. */
+  readonly progressSelector = '.header_level .react_stage';
+
   /** Lesson-progress strip; one bubble link per level. */
   readonly lessonProgress: Locator;
 
@@ -22,7 +25,7 @@ export class LessonLevelPage extends BasePage {
 
   constructor(page: Page) {
     super(page);
-    this.lessonProgress = page.locator('.header_level .react_stage');
+    this.lessonProgress = page.locator(this.progressSelector);
     this.lessonHeaderInfo = page.locator('.header_level');
   }
 
