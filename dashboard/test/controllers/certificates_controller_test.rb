@@ -99,4 +99,40 @@ class CertificatesControllerTest < ActionController::TestCase
     assert_equal 'oceans', response_data['courseName']
     assert_equal expected_image_url, response_data['imageUrl']
   end
+
+  # Simulate a UI test environment with no hourofcode course.
+  def stub_ui_test_hoc
+    Unit.find_by_name('hourofcode').destroy
+    UnitGroup.find_by_name('hourofcode').destroy
+    ui_test_hoc_unit = create(:script, name: Unit::UI_TEST_HOC_NAME)
+    ui_test_hoc_course = create(:single_unit_course, unit: ui_test_hoc_unit, name: Unit::UI_TEST_HOC_NAME)
+    create(:course_version, content_root: ui_test_hoc_course)
+  end
+
+  test 'batch page without a course param falls back to ui-test-hourofcode when hourofcode is unavailable in dev/test' do
+    stub_ui_test_hoc
+    sign_in @teacher
+    get :batch
+    assert_response :success
+    response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
+    assert_equal Unit::UI_TEST_HOC_NAME, response_data['courseName']
+  end
+
+  test 'batch page does not fall back to ui-test-hourofcode in production' do
+    stub_ui_test_hoc
+    sign_in @teacher
+    with_rack_env(:production) do
+      get :batch
+    end
+    assert_response :bad_request
+    assert_equal 'invalid course name: "hourofcode"', JSON.parse(response.body)['message']
+  end
+
+  test 'batch page does not fall back when a course param is provided' do
+    stub_ui_test_hoc
+    sign_in @teacher
+    get :batch, params: {course: Base64.urlsafe_encode64('hourofcode')}
+    assert_response :bad_request
+    assert_equal 'invalid course name: "hourofcode"', JSON.parse(response.body)['message']
+  end
 end

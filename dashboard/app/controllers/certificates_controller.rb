@@ -62,6 +62,17 @@ class CertificatesController < ApplicationController
     end
 
     course_version = CurriculumHelper.find_matching_course_version(course_name)
+
+    # The production hourofcode course is not seeded in the ui-test
+    # environments. When the batch page is opened without a course param and the
+    # default hourofcode course is missing, fall back to the ui-test-hourofcode
+    # fixture that stands in for it — but only in development and test, and
+    # never for a course explicitly requested via the param.
+    if course_version.nil? && !params[:course] && rack_env?(:development, :test)
+      course_name = Unit::UI_TEST_HOC_NAME
+      course_version = CurriculumHelper.find_matching_course_version(course_name)
+    end
+
     return render status: :bad_request, json: {message: "invalid course name: #{course_name.inspect}"} unless course_version
 
     course_title = course_name == 'hourofcode' ? I18n.t('certificate_hour_of_code') : course_version.localized_title
