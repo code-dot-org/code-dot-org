@@ -1,7 +1,7 @@
 import type {Page, TestInfo} from 'playwright/test';
 import {expect} from 'playwright/test';
 
-import type {VisualCheck, VisualCheckOptions} from './types';
+import type {VisualCheck} from './types';
 
 /**
  * Native Playwright screenshot backend for visualCheck. Local-only — CI
@@ -23,10 +23,7 @@ export async function withPlaywrightCheck(
     );
   }
 
-  const check: VisualCheck = async (
-    name: string,
-    opts: VisualCheckOptions = {},
-  ): Promise<void> => {
+  const check: VisualCheck = async (name, opts = {}) => {
     await expect(page).toHaveScreenshot(`${name}.png`, {
       animations: 'disabled',
       mask: opts.mask,

@@ -83,7 +83,6 @@ namespace :seed do
     allthethings
     allthettsthings
     frozen
-    hero
     hourofcode
     mc
     oceans
@@ -252,7 +251,6 @@ namespace :seed do
        alltheselfpacedplthings
        allthettsthings
        frozen
-       hero
        hourofcode
        mc
        original-allthelessonplans-course

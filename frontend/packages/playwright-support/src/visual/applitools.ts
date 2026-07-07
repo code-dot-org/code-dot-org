@@ -7,14 +7,15 @@ import {
 } from '@applitools/eyes-playwright';
 import type {Page, TestInfo} from 'playwright/test';
 
-import type {VisualCheck, VisualCheckOptions} from './types';
+import type {VisualCheck} from './types';
 
 /**
- * Eyes config. `parentBranchName='default'` uses Applitools' trunk concept
- * (not a git ref).
+ * Shared Eyes config. `appName` is supplied per consumer via
+ * {@link withApplitoolsCheck}; everything else is a frontend-wide default or
+ * sourced from the CI environment. `parentBranchName='default'` uses
+ * Applitools' trunk concept (not a git ref).
  */
 const EYES_CONFIG = {
-  appName: 'Code.org Oceans Lab',
   parentBranchName: 'default',
   branchName: process.env.APPLITOOLS_BRANCH || undefined,
   batchId: process.env.APPLITOOLS_BATCH_ID || undefined,
@@ -34,11 +35,13 @@ let warnedAboutMissingKey = false;
  * @param page - Playwright Page fixture.
  * @param testInfo - Current test metadata (title, status).
  * @param use - Fixture use callback.
+ * @param appName - Applitools application name for this consumer.
  */
 export async function withApplitoolsCheck(
   page: Page,
   testInfo: TestInfo,
   use: (check: VisualCheck) => Promise<void>,
+  appName: string,
 ): Promise<void> {
   const apiKey = process.env.APPLITOOLS_API_KEY;
 
@@ -58,7 +61,6 @@ export async function withApplitoolsCheck(
   }
 
   const {
-    appName,
     parentBranchName,
     branchName,
     batchId,
@@ -91,10 +93,7 @@ export async function withApplitoolsCheck(
   await eyes.open(page, appName, testInfo.title);
 
   /** Capture the current window; opts.mask becomes Eyes ignoreRegions. */
-  const check: VisualCheck = async (
-    name: string,
-    opts: VisualCheckOptions = {},
-  ): Promise<void> => {
+  const check: VisualCheck = async (name, opts = {}) => {
     const target = Target.window().fully();
     if (opts.mask && opts.mask.length > 0) {
       target.ignoreRegions(...opts.mask);
