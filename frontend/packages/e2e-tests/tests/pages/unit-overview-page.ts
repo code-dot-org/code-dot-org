@@ -1,6 +1,6 @@
 import {type Locator, type Page} from '@playwright/test';
 
-import {progressBubbleShows} from '../shared/colors';
+import {progressBubbleShows} from '../shared/progress';
 import {unitOverviewUrl, type UnitOverviewUrlParams} from '../shared/routes';
 
 import {BasePage} from './base-page';

@@ -1,38 +1,27 @@
 import {type Locator} from '@playwright/test';
 
-/** A progress bubble's rendered state, named for the DSCO tokens progress.rb keys on. */
-export type ProgressBubbleState = 'perfect' | 'not_tried';
-
-/** Background + top-border DSCO tokens that define each bubble state. */
-const STATE_TOKENS: Record<
-  ProgressBubbleState,
-  {background: string; border: string}
-> = {
-  perfect: {
-    background: '--background-success-primary',
-    border: '--borders-success-primary',
-  },
-  not_tried: {
-    background: '--background-neutral-primary',
-    border: '--borders-neutral-primary',
-  },
-};
+/** A computed color property paired with the CSS custom property it should resolve to. */
+export interface ColorVarMatch {
+  /** A color-valued computed property, e.g. 'background-color'. */
+  property: string;
+  /** A CSS custom property, e.g. '--background-success-primary'. */
+  cssVar: string;
+}
 
 /**
- * Whether `bubble`'s computed background and top-border colors match the DSCO
- * tokens for `state`, the way progress.rb verify_progress does (it keys off
- * color). getComputedStyle returns resolved values, not the vars that produced
- * them, so resolve each token via a probe in the bubble's own theme context and
- * compare rgb() to rgb() — both properties in one evaluate.
+ * Whether every match holds: `locator`'s computed `property` equals the resolved
+ * value of its `cssVar`. getComputedStyle returns resolved values, not the vars
+ * that produced them, so resolve each var via a probe in the element's own theme
+ * context and compare rgb() to rgb() — all pairs in a single evaluate.
  */
-export async function progressBubbleShows({
-  bubble,
-  state,
+export async function cssColorsMatchVars({
+  locator,
+  matches,
 }: {
-  bubble: Locator;
-  state: ProgressBubbleState;
+  locator: Locator;
+  matches: ColorVarMatch[];
 }): Promise<boolean> {
-  return bubble.evaluate((el, tokens) => {
+  return locator.evaluate((el, pairs) => {
     const resolve = (cssVar: string): string => {
       const probe = document.createElement('span');
       el.appendChild(probe);
@@ -42,10 +31,9 @@ export async function progressBubbleShows({
       return value;
     };
     const style = window.getComputedStyle(el);
-    return (
-      style.getPropertyValue('background-color') ===
-        resolve(tokens.background) &&
-      style.getPropertyValue('border-top-color') === resolve(tokens.border)
+    return pairs.every(
+      ({property, cssVar}) =>
+        style.getPropertyValue(property) === resolve(cssVar),
     );
-  }, STATE_TOKENS[state]);
+  }, matches);
 }
