@@ -291,6 +291,8 @@ const asyncRun = (() => {
           id,
           source,
           validationFile,
+          host: location.origin,
+          channelId: getStore().getState().lab?.channel?.id,
         },
         sandboxOrigin
       );

@@ -12,7 +12,7 @@ import commonI18n from '@cdo/locale';
 import {HOME_FOLDER} from './constants';
 
 // List of packages we expect students to have access to in their code.
-const supportedPackages = ['pandas', 'matplotlib', 'numpy'];
+const supportedPackages = ['pandas', 'matplotlib', 'numpy', 'requests'];
 
 /**
  * This method parses an error message from pyodide and makes it more readable and useful

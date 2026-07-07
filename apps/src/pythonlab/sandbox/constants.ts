@@ -24,6 +24,11 @@ export interface PyodideSandboxRunMessage {
   python: string;
   source: MultiFileSource;
   validationFile?: ProjectFile;
+  // studio.code.org's own origin, and the current project's channel id. Together these
+  // let the worker patch requests.get() to route through the dashboard's XHR proxy.
+  // channelId is omitted for levels with no project (exemplars, start mode).
+  host: string;
+  channelId?: string;
 }
 
 export interface PyodideSandboxSendingInputMessage {

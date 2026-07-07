@@ -30,6 +30,15 @@ builtins.input = get_input
 sys.stdin.readline = lambda: pythonlab_input.getInput("${id}", "")
 `;
 
+// Routes requests.get() through the dashboard's XHR proxy, which only allows an
+// allow-listed set of hostnames. host and channelId identify which dashboard to proxy
+// through and which project is making the request; the proxy uses channelId as an
+// unforgeable auth token, not the caller's session.
+export const patchRequestsCode = (host: string, channelId: string) => `
+from pythonlab_setup.patch_requests import reload_requests_and_patch
+reload_requests_and_patch("${host}", "${channelId}")
+`;
+
 export const pythonlabInputModule = {
   getInput: (id: string, prompt: string) => {
     const request = new XMLHttpRequest();

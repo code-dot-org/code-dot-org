@@ -34,6 +34,8 @@ class XhrProxyController < ApplicationController
   # is an unforgeable token which identifies the app lab app which is generating the request,
   # and may be used to enforce a per-app rate-limit.
   def get
+    allow_pyodide_sandbox_cors
+
     channel_id = params[:c]
     url = params[:u]
 
@@ -58,5 +60,19 @@ class XhrProxyController < ApplicationController
       expiry_time: EXPIRY_TIME,
       infer_content_type: false,
     )
+  end
+
+  private def allow_pyodide_sandbox_cors
+    preview_host = CDO.preview_codeprojects_hostname
+    return if preview_host.blank?
+
+    # Lets the isolated pyodide sandbox (see PyodideSandboxController) call this
+    # endpoint cross-origin for requests.get() support (CT-537). No credentials are
+    # involved -- this endpoint authorizes via the unforgeable channel_id token above,
+    # not cookies -- so allowing just this one origin to read the response is safe.
+    sandbox_regex = %r{\Ahttps?://pyodide-sandbox\.#{Regexp.escape(preview_host)}(:\d+)?\z}
+    if request.origin&.match?(sandbox_regex)
+      response.headers['Access-Control-Allow-Origin'] = request.origin
+    end
   end
 end

@@ -6,6 +6,7 @@ import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {HOME_FOLDER} from './pythonHelpers/constants';
 import {
   patchInputCode,
+  patchRequestsCode,
   pythonlabInputModule,
   SETUP_CODE,
 } from './pythonHelpers/patches';
@@ -28,9 +29,19 @@ async function loadPyodideAndPackages() {
     env: {
       HOME: `/${HOME_FOLDER}/`,
     },
-    // Remove all JS globals so Python can’t call browser APIs (like fetch) unless we
-    // explicitly add them.
-    jsglobals: {},
+    // jsglobals intentionally left at its default (globalThis, this worker's own global
+    // scope), giving Python direct access to browser APIs like fetch. This used to be
+    // hidden entirely, but requests.get() (CT-537) needs it: urllib3's own Emscripten
+    // transport calls fetch/AbortController/etc. directly to make any network request
+    // at all, and hand-picking which specific globals to expose is fragile -- it needs
+    // several, and exactly which ones is an internal urllib3 implementation detail that
+    // can change. The real security boundary here is the sandbox's cross-origin,
+    // cookie-less isolation plus its CSP connect-src allow-list (studio.code.org and
+    // self only) -- those still hold regardless of whether Python reaches the network
+    // via requests.get() or by calling a browser API directly.
+    // TODO: narrow this to the specific globals urllib3's Emscripten transport
+    // (site-packages/urllib3/contrib/emscripten/) actually needs, instead of all of
+    // globalThis, once that set is pinned down.
   });
   pyodide.setStdout(getStreamHandlerOptions('sysout'));
   pyodide.setStderr(getStreamHandlerOptions('syserr'));
@@ -95,7 +106,7 @@ initializePyodide();
 onmessage = async event => {
   // make sure loading is done
   await initializePyodide();
-  const {id, python, source, validationFile} = event.data;
+  const {id, python, source, validationFile, host, channelId} = event.data;
   let results = undefined;
   let sourceToWrite = source;
   // Add the validation file to the source if it exists. Use the id "validation"
@@ -115,6 +126,11 @@ onmessage = async event => {
     await importPackagesFromFiles(sourceToWrite, pyodide);
     postMessage({type: 'loaded_packages'});
     await patchInput(id);
+    // Levels with no project (exemplars, start mode) have no channel id, so there's
+    // nothing to authorize proxied requests with -- skip patching entirely.
+    if (channelId) {
+      await patchRequests(host, channelId, id);
+    }
     results = await pyodide.runPythonAsync(python, {
       filename: `/${HOME_FOLDER}/${MAIN_PYTHON_FILE}`,
     });
@@ -180,6 +196,10 @@ async function patchInput(id: number) {
   await runInternalCode(patchInputCode(id), id);
 }
 
+async function patchRequests(host: string, channelId: string, id: number) {
+  await runInternalCode(patchRequestsCode(host, channelId), id);
+}
+
 async function loadPackages() {
   const loadErrors: string[] = [];
   // We explicitly load all dependencies of the packages we want to be available to users,
@@ -191,6 +211,7 @@ async function loadPackages() {
       // Main packages
       'matplotlib',
       'numpy',
+      'requests',
       // Dependencies of main packages
       'contourpy',
       'cycler',

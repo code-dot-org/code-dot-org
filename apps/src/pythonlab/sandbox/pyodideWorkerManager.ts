@@ -49,9 +49,16 @@ window.addEventListener('message', event => {
 
   switch (event.data?.type) {
     case ToPyodideSandboxMessage.RUN: {
-      const {python, id, source, validationFile} =
+      const {python, id, source, validationFile, host, channelId} =
         event.data as PyodideSandboxRunMessage;
-      pyodideWorker.postMessage({python, id, source, validationFile});
+      pyodideWorker.postMessage({
+        python,
+        id,
+        source,
+        validationFile,
+        host,
+        channelId,
+      });
       break;
     }
     case ToPyodideSandboxMessage.SENDING_INPUT: {

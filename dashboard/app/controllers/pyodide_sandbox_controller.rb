@@ -16,13 +16,12 @@ class PyodideSandboxController < ApplicationController
       code_studio_url += " #{port_9000_url}"
     end
 
-    # Unlike codeprojects_preview_controller, this sandbox never makes external network
-    # requests or renders student HTML/CSS, so default-src/connect-src stay at 'self'.
-    # TODO(CT-537): once patch_requests.py is wired up, requests.get() calls made from
-    # inside this sandbox will hit the dashboard's xhr_proxy_controller on studio.code.org,
-    # which will require adding code_studio_url to connect-src.
+    # Unlike codeprojects_preview_controller, this sandbox never renders student
+    # HTML/CSS, so default-src stays at 'self'. connect-src additionally allows
+    # code_studio_url because requests.get() (CT-537) routes through the dashboard's
+    # xhr_proxy_controller on studio.code.org.
     default_src = "'self'"
-    connect_src = "'self'"
+    connect_src = "'self' #{code_studio_url}"
 
     script_src = "'self' 'wasm-unsafe-eval'"
     if rack_env?(:development) || rack_env?(:test)
