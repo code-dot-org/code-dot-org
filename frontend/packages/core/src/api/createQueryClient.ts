@@ -18,10 +18,15 @@ export function createQueryClient(
     // (zod) parse error on a 200 response — only flips the query's `isError`
     // and is never reported, so a lab that renders its error page leaves no
     // trace of the reason. Recorded through the observability plugin (a no-op
-    // until a provider is configured); the query key identifies which fetch
-    // failed.
+    // until a provider is configured) with the query key identifying which
+    // fetch failed; the console.error keeps the reason visible in development,
+    // where no provider is configured.
     queryCache: new QueryCache({
       onError: (error, query) => {
+        console.error(
+          `[react-query] query failed: ${JSON.stringify(query.queryKey)}`,
+          error,
+        );
         recordError(error, {queryKey: query.queryKey});
       },
     }),
