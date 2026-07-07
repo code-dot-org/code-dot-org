@@ -102,6 +102,6 @@ class UserLevelsController < ApplicationController
     if level.predict_level? && level.contained_level_names.present?
       ids.concat(level.contained_levels.map(&:id))
     end
-    ids.uniq
+    ids
   end
 end

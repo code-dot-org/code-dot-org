@@ -170,7 +170,7 @@ still on the TODO list. Differences from legacy use:
   script (see script for details). That script will write the old contained level
   settings into the new predict level format. The script has not yet been run for
   all existing levels, but can run on an entire folder if desired.
-  When loading predict levels, we will check for student responses stored on the contained 
+  When loading predict levels, we will check for student responses stored on the contained
   level and fall back to that response, if it exists, so student data
   is not lost in a migration.
 

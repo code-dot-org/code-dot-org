@@ -534,7 +534,7 @@ module UsersHelper
     # get progress for sublevels to save in levels hash
     sublevels.each do |sublevel|
       progress_level_ids = progress_ids_by_sublevel[sublevel.id]
-      user_level = progress_level_ids.filter_map {|id| user_levels_by_level[id]}.max_by(&:best_result)
+      user_level = progress_level_ids.filter_map {|id| user_levels_by_level[id]}.max_by(&:updated_at)
       sublevel_progress = get_level_progress(
         user_id: user.id,
         user_level: user_level,
