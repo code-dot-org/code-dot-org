@@ -25,7 +25,7 @@ jest.mock('@codebridge/Codebridge', () => {
   };
 });
 
-jest.mock('@cdo/apps/pythonlab/pyodideSandboxManager', () => {
+jest.mock('@cdo/apps/pythonlab/pyodideManager', () => {
   return {
     restartPyodideIfProgramIsRunning: jest.fn(),
     sendInput: jest.fn(),
