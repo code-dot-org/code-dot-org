@@ -9,7 +9,7 @@ spec:
         - name: dashboard
           imagePullPolicy: Never
           command:
-            - zsh
+            - sh
             - -c
           args:
             - sleep infinity

@@ -3,7 +3,7 @@ RAILS_ENV: adhoc
 imagePullPolicy: Never
 
 command:
-  - zsh
+  - sh
   - -c
 args:
   - sleep infinity
@@ -35,7 +35,7 @@ activeJobWorker:
   enabled: true
   replicas: 1
   command:
-    - zsh
+    - sh
     - -c
   args:
     - cd dashboard && RAILS_ENV=adhoc RACK_ENV=adhoc bundle exec bin/delayed_job run

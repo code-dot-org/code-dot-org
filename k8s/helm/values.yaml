@@ -41,8 +41,8 @@ autoscaling:
 
 dashboardJob:
   enabled: false
-  name: zsh
-  command: ["zsh", "-c"]
+  name: sh
+  command: ["sh", "-c"]
   args: []
   restartPolicy: Never
   backoffLimit: 1
@@ -51,7 +51,7 @@ dashboardJob:
 activeJobWorker:
   enabled: false
   replicas: 1
-  command: ["zsh", "-c"]
+  command: ["sh", "-c"]
   args:
     - cd dashboard && bundle exec bin/delayed_job run
 
