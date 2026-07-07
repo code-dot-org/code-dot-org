@@ -15,7 +15,7 @@ export const AppNames = [
   'dance',
   'fish',
   'music',
-  'oceans',
+  'fish',
   'panels',
   'pythonlab',
   'standalone_video',
