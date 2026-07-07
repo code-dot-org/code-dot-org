@@ -10,32 +10,18 @@ export type StateFor<TExtendedStore> =
   TExtendedStore extends StoreWithState<any, infer S> ? S : never;
 
 /**
- * Every store starts from the built-in redux slice; injected slices are added
- * to this combined reducer over time. `combineSlices` owns the injection
- * mechanics: the reducer map, caching, and override semantics.
+ * The app-wide combined reducer, seeded with the built-in redux slice.
+ * `combineSlices` owns the injection mechanics: the reducer map, caching,
+ * and override semantics. Every store this module creates shares it, so an
+ * injected slice's reducer is live in all of them; state remains per-store.
  */
-function createRootReducer() {
-  return combineSlices(reduxSlice);
-}
+const rootReducer = combineSlices(reduxSlice);
 
-interface InjectableEntry {
-  root: ReturnType<typeof createRootReducer>;
-  /** Names of the slices injected so far, backing `redux.reducerCount`. */
-  names: Set<string>;
-}
-
-/**
- * The injectable combined reducer backing each store. Keyed weakly by store
- * so `injectSlices` can keep injecting into the same reducer across calls
- * without decorating the store object itself.
- */
-const injectables = new WeakMap<Store, InjectableEntry>();
+/** Names of the slices injected so far, backing `redux.reducerCount`. */
+const injectedNames = new Set<string>();
 
 function buildStore() {
-  const root = createRootReducer();
-  const store = configureStore({reducer: root});
-  injectables.set(store, {root, names: new Set()});
-  return store;
+  return configureStore({reducer: rootReducer});
 }
 
 // The store backing the module's default export; `typeof initialStore` also
@@ -61,15 +47,22 @@ export type MockStore<TSlices extends readonly SliceLike[]> = StoreWithState<
 >;
 
 /**
- * Creates a fresh injectable store, seeded with the built-in redux slice and
- * pre-registered so `injectSlices` extends it in place. The module's default
- * export is one of these; tests create isolated stores here instead of
- * casting a raw `configureStore` result.
+ * Creates a fresh store over the shared root reducer. State is isolated per
+ * store; the slice registry is not — a slice injected anywhere is live in
+ * every store from this module. The module's default export is one of these;
+ * tests create isolated ones here instead of casting a raw `configureStore`
+ * result.
  */
 export function createInjectableStore(): MockStore<[typeof reduxSlice]> {
   return buildStore() as unknown as MockStore<[typeof reduxSlice]>;
 }
 
+/**
+ * Injects the slices into the shared root reducer and returns the store with
+ * `getState` widened to include them. The store must be one of this module's
+ * (the default export or `createInjectableStore()`) — injection lands in the
+ * shared reducer, so a store built on any other reducer would never see it.
+ */
 export function injectSlices<
   TSlices extends readonly SliceLike[],
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -85,31 +78,21 @@ export function injectSlices<
   TExtendedStore,
   StateFor<TExtendedStore> & SlicesState<TSlices>
 > {
-  const s = store as unknown as Store;
-
-  let entry = injectables.get(s);
-  if (!entry) {
-    entry = {root: createRootReducer(), names: new Set()};
-    injectables.set(s, entry);
-  }
-
   for (const slice of slices) {
     // Key by `name`, not `reducerPath`: this module's typing (`SlicesState`)
     // keys injected state by the slice name, so the runtime must match
     // regardless of a slice's reducerPath.
-    entry.root.inject(
+    rootReducer.inject(
       {reducerPath: slice.name, reducer: slice.reducer},
       {overrideExisting: true},
     );
-    entry.names.add(slice.name);
+    injectedNames.add(slice.name);
   }
 
-  // `inject` alone defers the new slice's state until the next dispatched
-  // action; `replaceReducer` dispatches a REPLACE action, which both wires the
-  // combined reducer into the store (first call) and materializes the freshly
-  // injected slice state immediately.
-  s.replaceReducer(entry.root as Reducer);
-  s.dispatch(setCount(entry.names.size));
+  // `inject` alone defers the new slices' state until the next dispatched
+  // action; the setCount dispatch materializes it immediately, and records
+  // how many distinct slices the app has loaded.
+  (store as unknown as Store).dispatch(setCount(injectedNames.size));
 
   // refine the type of getState() to include the injected slices
   return store as unknown as StoreWithState<

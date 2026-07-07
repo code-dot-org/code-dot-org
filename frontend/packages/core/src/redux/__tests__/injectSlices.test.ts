@@ -2,14 +2,14 @@
  * @vitest-environment jsdom
  */
 
-import {configureStore, createSlice} from '@reduxjs/toolkit';
+import {createSlice} from '@reduxjs/toolkit';
 import type {PayloadAction} from '@reduxjs/toolkit';
 import {beforeEach, describe, expect, expectTypeOf, it} from 'vitest';
 
 import reduxSlice, {setCount} from '../reduxSlice';
 import {createInjectableStore, injectSlices, storeHooks} from '../store';
 import type {MockStore, StateFor} from '../store';
-import type {SlicesState, StoreWithState} from '../types';
+import type {SlicesState} from '../types';
 
 // Fixture slices stand in for real platform slices. They intentionally have
 // dissimilar reducer shapes — the case a `Slice<any, any, string>` constraint
@@ -46,9 +46,9 @@ const sliceC = createSlice({
   },
 });
 
-// A fresh store per test — `injectSlices` accumulates slices in the store's
-// combined reducer, so we can't reuse the shared `defaultStore` singleton
-// across cases.
+// A fresh store per test isolates *state*; the slice registry is shared
+// module-wide (one root reducer), so tests must not assume absolute
+// reducerCount values — counting has its own order-independent test below.
 const makeStore = createInjectableStore;
 
 type RootStore = ReturnType<typeof makeStore>;
@@ -65,8 +65,8 @@ describe('injectSlices', () => {
     const state = injected.getState();
     expect(state.a).toEqual({value: 0});
     expect(state.b).toEqual({label: 'none'});
-    // The built-in slice tracks how many slices have been injected.
-    expect(state.redux).toEqual({reducerCount: 2});
+    // The built-in slice is present; exact counting is pinned separately.
+    expect(state.redux.reducerCount).toBeGreaterThanOrEqual(2);
   });
 
   it('dispatches reach the injected slices', () => {
@@ -84,15 +84,12 @@ describe('injectSlices', () => {
     const withA = injectSlices([sliceA] as const, store);
     withA.dispatch(sliceA.actions.setA(7));
     expect(withA.getState().a.value).toBe(7);
-    expect(withA.getState().redux.reducerCount).toBe(1);
 
     const withAB = injectSlices([sliceB] as const, withA);
-    // sliceA's state survives the replaceReducer call
+    // sliceA's state survives the later injection
     expect(withAB.getState().a.value).toBe(7);
     // newly added slice gets its initial state
     expect(withAB.getState().b).toEqual({label: 'none'});
-    // and the count accumulates across calls
-    expect(withAB.getState().redux.reducerCount).toBe(2);
   });
 
   it('built-in redux slice keeps responding to actions after injection', () => {
@@ -101,18 +98,40 @@ describe('injectSlices', () => {
     expect(injected.getState().redux.reducerCount).toBe(41);
   });
 
-  it('adopts a store not created by createInjectableStore', () => {
-    // A store from plain configureStore has no combined reducer registered;
-    // injectSlices must create one for it on first contact.
-    const raw = configureStore({reducer: {redux: reduxSlice.reducer}});
-    const foreign = raw as unknown as StoreWithState<
-      typeof raw,
-      {redux: {reducerCount: number}}
-    >;
+  it('fresh stores share the reducer registry with isolated state', () => {
+    const first = injectSlices([sliceA] as const, makeStore());
+    first.dispatch(sliceA.actions.setA(42));
 
-    const injected = injectSlices([sliceA] as const, foreign);
-    expect(injected.getState().a).toEqual({value: 0});
-    expect(injected.getState().redux.reducerCount).toBe(1);
+    // A second store sees sliceA's reducer (shared root reducer) but not
+    // the first store's state.
+    const second = injectSlices([sliceA] as const, makeStore());
+    expect(second.getState().a.value).toBe(0);
+    expect(first.getState().a.value).toBe(42);
+  });
+
+  it('reducerCount tracks distinct slices injected app-wide', () => {
+    // Injecting an empty tuple just syncs the count into this store,
+    // giving an order-independent baseline.
+    const before = injectSlices([] as const, makeStore()).getState().redux
+      .reducerCount;
+
+    const sliceX = createSlice({
+      name: 'count-x',
+      initialState: {v: 0},
+      reducers: {},
+    });
+    const sliceY = createSlice({
+      name: 'count-y',
+      initialState: {v: 0},
+      reducers: {},
+    });
+
+    const injected = injectSlices([sliceX, sliceY] as const, makeStore());
+    expect(injected.getState().redux.reducerCount).toBe(before + 2);
+
+    // Re-injection doesn't double-count.
+    const again = injectSlices([sliceX] as const, makeStore());
+    expect(again.getState().redux.reducerCount).toBe(before + 2);
   });
 
   it('re-injecting a slice replaces its reducer without dropping siblings', () => {
@@ -127,9 +146,6 @@ describe('injectSlices', () => {
 
     expect(withABC.getState().b).toEqual({label: 'keep me'});
     expect(withABC.getState().c).toEqual({count: 0});
-
-    // Re-injection doesn't double-count: a, b, c — not a, b, a, c.
-    expect(withABC.getState().redux.reducerCount).toBe(3);
 
     // And sliceA still responds — its reducer reference was replaced but
     // identity doesn't matter, only that dispatches still mutate state.

@@ -58,18 +58,25 @@ it, so packages never need types-only sub-path exports for their slices.
 
 ## Mechanics
 
-- The root reducer is a `combineSlices` reducer seeded with the built-in
-  `redux` slice; `injectSlices` adds each slice's reducer under its `name`
-  and calls `replaceReducer`, whose REPLACE dispatch materializes the new
-  slice state immediately (bare `inject` defers it to the next action).
+- There is one root reducer for the whole app: a `combineSlices` reducer
+  seeded with the built-in `redux` slice. Every store this module creates
+  shares it, so an injected slice's reducer is live in all of them; state
+  remains per-store. `injectSlices` adds each slice's reducer under its
+  `name`, then dispatches on the given store to materialize the new state
+  immediately (bare `inject` defers it to the next action).
+- Stores must come from this module (the default export or
+  `createInjectableStore()`); a store built on any other reducer never sees
+  the injections.
 - The built-in slice records `reducerCount` — the number of distinct slices
-  injected into that store — as a debugging surface.
+  injected so far — as a debugging surface.
 - Slices are matched structurally (`{name, reducer, getInitialState}`), not
   as `Slice<...>`; see the `SliceLike` note in `store.ts` for why.
 
 ## Tests
 
 `createInjectableStore()` returns a fresh, correctly typed store — use it
-instead of casting a raw `configureStore` result. `injectSlices` also adopts
-stores it has never seen (tracked weakly, keyed by store identity), so a
-hand-built store still works.
+instead of casting a raw `configureStore` result. Fresh stores isolate
+state, not the slice registry: slices injected by an earlier test are still
+wired in a later test's store (with their initial state), so don't assert
+on the absence of another test's slice or on absolute `reducerCount`
+values.
