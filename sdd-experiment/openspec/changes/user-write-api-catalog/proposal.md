@@ -37,7 +37,8 @@ constraint and must be specified once, not per change.
     `UpdatePreferences` (user-write-api-foundation).
   - New: `UpdateName`, `UpdateEmail`, `UpdatePassword`,
     `UpdateParentEmail`, `UpdateAgeAndState`, `UpdateDemographics`,
-    `UpdateSchoolInfo`, `AcceptDataTransferAgreement`,
+    `UpdateEducatorProfile`, `UpdateSchoolInfo`,
+    `AcceptTermsOfService`, `AcceptDataTransferAgreement`,
     `AddAuthenticationOption`, `RemoveAuthenticationOption`,
     `SetPrimaryContactInfo`, `GrantPermission`, `RevokePermission`,
     `RevokeAllPermissions`, `SoftDelete`, `Undestroy`, `Purge` (wrapping

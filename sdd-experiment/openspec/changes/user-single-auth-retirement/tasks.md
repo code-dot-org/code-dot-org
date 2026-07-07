@@ -23,6 +23,13 @@
 
 ## 2. Backfill (the risk locus)
 
+- [ ] 2.0 **DECISION (blocking, before 2.3)**: schedule the run window
+      against the school calendar — this is a K-12 platform and
+      back-to-school (Aug-Sep) is peak; summer break is the default
+      window. Same ask names the failures-file triage owner and the
+      DB-ops reviewer for batch size/replica-lag thresholds. Owner:
+      platform lead + DBA.
+
 - [ ] 2.1 Write `bin/oneoff` script per design D3: `in_batches(of:
       10_000)` over `with_deleted` legacy rows, per-row
       `MultiAuthMigrator.call` + `save!`, id checkpointing with

@@ -12,17 +12,19 @@ instrumentation seam per invocation.
 | Create | all persisting construction funnels | defined in user-multi-auth-at-creation |
 | UpdatePreferences | 18 serialized-flag actions, api/v1/users_controller.rb:199-412; rubrics_controller.rb:373-379 (`ai_rubrics_tour_seen`, teacher-guarded) | foundation |
 | UpdateName | name/given_name/family_name slices of registrations `update_params` (:572) | |
-| UpdateEmail | update_user_email flow (registrations :484-501), `update_primary_contact_info` (user.rb:763-772) | migrated + unmigrated arms until retirement |
+| UpdateEmail | update_user_email flow (registrations :484-501), `update_primary_contact_info` (user.rb:763-772), admin account_repair (admin_users_controller.rb:37) | migrated + unmigrated arms until retirement; takes `actor_mode:` — `:self` (current-password rules apply per needs_password?) or `:admin` (no password; instrumentation event carries acting admin id) |
 | UpdatePassword | password slice of `update_params`; Devise current-password gate preserved | |
 | UpdateParentEmail | set_parent_email (registrations :365-369) | |
 | UpdateAgeAndState | set_student_information (:309-320), `enforce_age_or_state_update` callback (user.rb:2014) | absorbs the throwaway-User validation rebuild |
 | UpdateDemographics | gender/races slices; wraps GenderNormalizer | |
+| UpdateEducatorProfile | educator_role, facilitator_info_attributes[bio] (registrations update_params :577/:596) | teacher-role metadata, editable without type change |
+| AcceptTermsOfService | terms_of_service_version (update_params :590), TermsOfService concern | compliance write, idempotence like AcceptDataTransferAgreement |
 | UpdateSchoolInfo | api/v1/user_school_infos_controller.rb:38 + registrations school_info nested attrs | also owns user_school_infos confirmation write (:42-43) |
 | AcceptDataTransferAgreement | api/v1/users_controller.rb:323-334 (5 fields + save) | compliance record; excluded from UpdatePreferences by foundation |
 | AddAuthenticationOption | `add_credential` (user.rb), omniauth link flows | |
 | RemoveAuthenticationOption | authentication_options_controller#disconnect (:3-25) | |
 | SetPrimaryContactInfo | disconnect replacement write (:19), update_primary_contact_info | transaction-wrapped (fixes A12 non-atomicity; documented pin exception) |
-| SetUserType (UserTypeSetter) | set_user_type (registrations :386-412), wraps UpgradeToTeacher/DowngradeToStudent | returns correctly-classed object per user-sti-becomes-consistency |
+| SetUserType | set_user_type (registrations :386-412), wraps UpgradeToTeacher/DowngradeToStudent | implementing class remains `Services::User::UserTypeSetter` — do NOT rename; returns correctly-classed object per user-sti-becomes-consistency |
 | GrantPermission / RevokePermission / RevokeAllPermissions | admin_users_controller :293-341 (`@user.permission =` :301), user_permission_grantee.rb | RevokeAllPermissions carries the A2 audit fix |
 | SoftDelete / Undestroy | registrations #destroy (:234, :650), `undestroy` (user.rb) | |
 | Purge | wraps Purgeable concern flows | account-deletion pipeline entry |

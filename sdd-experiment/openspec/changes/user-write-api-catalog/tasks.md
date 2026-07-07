@@ -13,8 +13,10 @@ three per-surface migration changes.
 
 ## 2. Catalog
 
-- [ ] 2.1 Ratify command names/inputs with the team (they are referenced
-      by three sibling changes — renames after this point are breaking)
+- [ ] 2.1 **DECISION (blocking — gate for all per-surface changes)**:
+      ratify command names/inputs with the team; they are referenced by
+      three sibling changes and renames after this point are breaking.
+      Default on no objection within a week: the catalog as written.
 - [ ] 2.2 Record per-command absorbed-callback notes (which of the 18
       User callbacks each command will eventually own explicitly)
 

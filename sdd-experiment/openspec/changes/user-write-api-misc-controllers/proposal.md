@@ -14,7 +14,11 @@ cannot graduate:
 - admin_users_controller: `account_repair` does
   `teacher.update!(email:)` (:37); `grant_permission` does
   `@user.permission = params[:permission]` (:301); `revoke_permission`
-  (:306) and `bulk_grant_permission` (:316) mutate permissions directly.
+  (:306) and `bulk_grant_permission` (:316) mutate permissions directly;
+  `delete_progress` (:215) and the controller's remaining actions have
+  NOT been inventoried — task 1.1 enumerates every action in this
+  580-line controller and classifies each write (User row → command;
+  non-User rows like user_levels → exempt from this program, noted).
   Admin-privilege writes without a named, instrumented operation — the
   same surface as report finding A2.
 - api/v1/users_controller#accept_data_transfer_agreement (:323-334) —

@@ -4,6 +4,15 @@ Depends on user-write-api-foundation + user-write-api-catalog.
 Coordinates with user-multi-auth-at-creation (creation excluded) and
 user-single-auth-retirement (dual-path deletion later).
 
+## 0. Blocking asks
+
+- [ ] 0.1 **DECISION (blocking)**: sign off the one deliberate behavior
+      change in this program — SetPrimaryContactInfo wrapping
+      save + destroy_all in a transaction (fixes finding A12's
+      crash-window orphans). Security-adjacent; needs an explicit ack
+      that closing the non-atomic window is desired. Default: yes, per
+      design D2. Owner: auth/platform code owner.
+
 ## 1. Pins
 
 - [ ] 1.1 Characterization suite for authentication_options#disconnect

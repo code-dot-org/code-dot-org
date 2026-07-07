@@ -35,6 +35,21 @@ the commands (public API stable per the program's delegation rule);
 direct callers migrate over time; shims die with the callback-retirement
 work (report recommendation 5).
 
+## Boundary table: omniauth_callbacks_controller.rb site ownership
+
+Normative split with user-multi-auth-at-creation; every mutation site
+in that controller belongs to exactly one change:
+
+| Site | Operation | Owner |
+|---|---|---|
+| :55, :65, :83, :283, :290 | `update_oauth_credential_tokens` refresh | this change (AddAuthenticationOption token path) |
+| :163 | `auth_option.save` (link new AO) | this change |
+| :360 | Clever V3 AO upgrade (`ao.update!`) | this change |
+| :523 | `update_email_for` | this change (UpdateEmail) |
+| :556 | `lookup_user.update!` | this change (classify the exact write during task 1.2; absorb or exempt with justification) |
+| :234, :268, :314 | `User.new` construction funnels | user-multi-auth-at-creation |
+| :655 | `User.new_with_session` partial user | user-multi-auth-at-creation |
+
 ## Characterization matrix
 
 disconnect: provider (email/google/clever) × is-primary/not ×

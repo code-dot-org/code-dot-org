@@ -27,6 +27,12 @@ first_or_create resolution stays controller/query-side (it is input
 resolution, not User mutation). The complete_school_info validation
 behavior (user.rb:376) is pinned across the school-shape matrix.
 
+**D4a — account_repair uses UpdateEmail's `actor_mode: :admin`.** The
+catalog defines the mode: no current-password demand, instrumentation
+event carries the acting admin's id. This codifies today's password-less
+admin email change; whether that behavior should survive at all is task
+0.1's blocking ask.
+
 **D5 — closing sweep is a ratchet, not a promise.** The change lands
 with a re-run inventory committed alongside; any newly-appeared site
 (code moves while this program runs) is classified in the same PR. Cop

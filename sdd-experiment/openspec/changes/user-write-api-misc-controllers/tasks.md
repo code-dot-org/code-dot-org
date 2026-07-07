@@ -3,10 +3,21 @@
 Last of the per-surface changes; lands after registrations and
 auth-options so the closing sweep is meaningful.
 
+## 0. Blocking asks
+
+- [ ] 0.1 **DECISION (blocking)**: account_repair changes a teacher's
+      email with no password verification. Wrapping it in
+      UpdateEmail(actor_mode: :admin) codifies that. Bless (default:
+      keep, it is an admin support tool behind admin auth) or kill
+      (require a re-auth/sudo step). Owner: security + support-tools
+      owner.
+
 ## 1. Pins
 
-- [ ] 1.1 Admin permission endpoints (grant/revoke/bulk/account_repair)
-      incl. current audit-message behavior
+- [ ] 1.1 Enumerate EVERY action in admin_users_controller.rb (580
+      lines — grant/revoke/bulk/account_repair/delete_progress and the
+      rest); classify each write per proposal; then pin the admin
+      permission endpoints incl. current audit-message behavior
 - [ ] 1.2 accept_data_transfer_agreement (first + repeat),
       postpone_census_banner, rubrics tour-seen (teacher + student
       actor), user_school_infos update (complete/incomplete matrix)

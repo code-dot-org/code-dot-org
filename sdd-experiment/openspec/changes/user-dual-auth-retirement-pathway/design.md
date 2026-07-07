@@ -31,7 +31,12 @@ audit becomes meaningless.
 **G2 → stage 3a (backfill).** Entry: G1 passed AND
 user-email-source-of-truth landed (see proposal ruling 1). Exit: the
 audit metric reads zero across live and soft-deleted rows; login
-success-rate (per-provider) flat across the backfill window;
+success-rate (per-provider) flat across the backfill window — "flat"
+defaults to: each provider's daily success rate stays within ±2
+percentage points of its trailing 28-day mean, evaluated on the
+Prometheus/Grafana per-route metrics already used for 5xx alerting
+(rack_calls_total spanmetrics), with the sign-in routes split by
+provider; ratifying or tightening this threshold is tasks item 0.3;
 `demigrate_from_multi_auth` exercised against a sampled batch in a
 non-prod environment as the verified rollback tool. Backfill mechanics
 are stage 3's design (in_batches per-row migrator+save!, precedent

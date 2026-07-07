@@ -19,6 +19,27 @@ resolved by the same predicate; the predicate's inputs
 account shape. Behavior — which requests 422 on missing/wrong
 current_password — must be byte-identical.
 
+**D2a — field→command disposition for update_params (:572-616).**
+Normative; every permitted field has exactly one home:
+
+| Fields | Command |
+|---|---|
+| name, given_name, family_name, username | UpdateName |
+| password, password_confirmation (current_password = gate input, not data) | UpdatePassword |
+| gender, gender_student_input, races | UpdateDemographics |
+| age, birthday, us_state, country_code, user_provided_us_state | UpdateAgeAndState |
+| parent_email | UpdateParentEmail |
+| school, full_address, school_info_attributes[...] | UpdateSchoolInfo |
+| locale, ai_rubrics_disabled, lti_roster_sync_enabled | UpdatePreferences |
+| educator_role, facilitator_info_attributes[bio] | UpdateEducatorProfile |
+| terms_of_service_version | AcceptTermsOfService |
+| provider, encrypted_password | NO command — dropped from the permit list, pending task 0.1's mitigation ruling |
+
+The email-preference virtual attrs merged by `email_preference_params`
+(:632) ride into UpdateEmail/SetUserType as an `email_preference:`
+argument (they feed the EmailPreferences concern callbacks today; the
+commands own that side effect explicitly).
+
 **D2 — `update` decomposes by changed slice, atomically.** One request
 may change name and password together; the controller invokes the
 relevant commands inside a single transaction and merges error objects

@@ -1,5 +1,15 @@
 # Tasks: user-single-multi-auth-migrator
 
+## 0. Blocking asks
+
+- [ ] 0.1 **DECISION (blocking, before 2.1)**: ratify design D3 — the
+      unified migrator drops the service's Clever `version = 'v3'`
+      assignment (adopting the inline path's nil, because the migrated
+      uid's vintage is unrecorded). This affects how migrated Clever
+      users match on re-login (the v3 assertion stays where vintage is
+      known: omniauth_callbacks_controller.rb:159, :358-361). Owner:
+      whoever owns Clever auth. Default: D3 as written.
+
 ## 1. Pin current behavior
 
 - [ ] 1.1 Read the live production DCDO value of

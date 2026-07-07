@@ -3,7 +3,14 @@
 Gate-tracking checklist; implementation lives in the three stage
 changes.
 
-## 0. Standing rules (now)
+## 0. Standing rules and blocking asks (now)
+
+- [ ] 0.3 **DECISION (blocking, before G1 evaluation)**: ratify the
+      authored defaults — 14-day G1 soak, 30-day G3 soak, ±2pp/28-day
+      "flat" login threshold — and name the gate reviewer (each "gate
+      review recorded" task needs a person, suggested: platform lead).
+      Defaults stand if unobjected; the gate reviewer name is the only
+      part with no default.
 
 - [ ] 0.1 Confirm `migration_service_enabled` is OFF in prod DCDO and
       annotate the flag (crash hazard, see

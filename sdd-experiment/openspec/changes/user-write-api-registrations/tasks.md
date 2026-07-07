@@ -3,14 +3,25 @@
 Depends on user-write-api-foundation + user-write-api-catalog. One
 endpoint per PR, pins first.
 
+## 0. Blocking asks (resolve before any extraction)
+
+- [ ] 0.1 **DECISION (blocking, security)**: update_params permits
+      `:provider` and `:encrypted_password` from user input
+      (registrations_controller.rb:591/:579). Verify whether
+      `forbidden_change?` (:532) or model validations actually block
+      them; if unmitigated this is a live mass-assignment finding to
+      fix out-of-band immediately. Ruling needed: drop both from the
+      permit list (default, per design D2a) or document why either is
+      required. Owner: security + a registrations code owner.
+
 ## 1. Pins
 
 - [ ] 1.1 Shared matrix fixtures (student/teacher × migrated/sponsored/
       manual × password-present/absent) via existing factories
 - [ ] 1.2 Characterization suites for set_parent_email,
-      set_student_information, update_user_email, update, destroy,
-      set_user_type (audit existing set_user_type_test.rb coverage
-      first; fill gaps only)
+      set_student_information, update_user_email, update, upgrade,
+      destroy, set_user_type (audit existing set_user_type_test.rb and
+      registrations_controller_test.rb coverage first; fill gaps only)
 
 ## 2. Commands
 

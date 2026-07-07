@@ -36,11 +36,13 @@ instrumented as a unit; each rides the full 18-callback chain.
 
 Each endpoint delegates to its catalog command, tests-first:
 
-- `update` → decomposed into `UpdateName` + `UpdatePassword` +
-  `UpdateDemographics` slices (single command invocation per changed
-  slice; the Devise current-password gate — `needs_password?` :542 —
-  moves into the commands' shared precondition, preserving exactly which
-  updates demand current_password).
+- `update` → decomposed by changed slice per the field→command
+  disposition table in design D2a (every one of update_params'
+  ~27 permitted fields has exactly one home; `:provider` and
+  `:encrypted_password` are dropped pending task 0.1's ruling). The
+  Devise current-password gate — `needs_password?` :542 — moves into
+  the commands' shared precondition, preserving exactly which updates
+  demand current_password.
 - `set_student_information` → `UpdateAgeAndState` (+ `UpdateName` slice).
 - `set_parent_email` → `UpdateParentEmail`.
 - `set_user_type` → `SetUserType` (wrapping
@@ -50,6 +52,12 @@ Each endpoint delegates to its catalog command, tests-first:
 - `update_user_email` → `UpdateEmail` (owning all three arms; the
   migrated/unmigrated split lives inside the command until
   user-single-auth-retirement deletes it — callers never see it).
+- `upgrade` (:322-340) → already command-routed
+  (`Services::User::UpgradeToPersonalLogin.call` :329); scope here is
+  pins plus moving the controller-side param mutation (the
+  hashed_email computation at :326, with its **rage** comment) into
+  the command. The ParentMailer send and reload choreography stay
+  controller-side, pinned.
 - `destroy` → `SoftDelete` (self + dependent users).
 - Permit lists shrink to the fields each command consumes.
 
