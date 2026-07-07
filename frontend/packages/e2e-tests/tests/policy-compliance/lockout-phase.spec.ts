@@ -1,6 +1,7 @@
 import {expect, test} from '../fixtures';
 import {AccountEditPage} from '../pages/account-edit-page';
 import {createStudent, resetSession} from '../shared/auth';
+import {analyze, WCAG_AA_TAGS} from '../shared/axe';
 import {setCountryOverride} from '../shared/geolocation';
 
 // CO lockout date pinned into the past so every CO account sits in the all-user
@@ -288,6 +289,40 @@ test.describe('Child Account Policy Lockout Phase', () => {
       await expect(accountEdit.usStateSelect).toBeVisible();
       await expect(accountEdit.usStateSelect).toBeEnabled();
       await expect(accountEdit.ageSelect).toBeEnabled();
+    },
+  );
+
+  /**
+   * Accessibility baseline scan of the account-edit form while a student is
+   * locked out. Scoped to #account-information (the account fields CAP disables);
+   * an unscoped scan pulls in header/footer chrome unrelated to this feature.
+   *
+   * EXPECTED_VIOLATIONS is the WCAG AA baseline the form currently ships, as a
+   * {rule id: node count} map. The scan must match it exactly: a new or larger
+   * violation fails (a regression), and a fixed or smaller one also fails (a
+   * happy regression that should shrink this baseline).
+   */
+  test(
+    'locked-out account-edit form matches its documented a11y baseline',
+    {tag: ['@no_mobile']},
+    async ({page}) => {
+      await createStudent(page, {
+        name: 'Tandy',
+        age: '10',
+        usState: 'CO',
+        createdAt: BEFORE_CAP_START,
+      });
+      await page.goto('/users/edit');
+
+      const EXPECTED_VIOLATIONS: Record<string, number> = {
+        'color-contrast': 1, // serious: low-contrast text within the account form
+      };
+      expect(
+        await analyze(page, {
+          include: '#account-information',
+          tags: WCAG_AA_TAGS,
+        }),
+      ).toEqual(EXPECTED_VIOLATIONS);
     },
   );
 });
