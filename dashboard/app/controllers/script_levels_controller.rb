@@ -183,18 +183,29 @@ class ScriptLevelsController < ApplicationController
       @responses = []
       # We use this for the level summary entry point, so on contained levels
       # what we actually care about are responses to the contained level.
-
+      # Predict levels may have contained levels if they were previously migrated;
+      # to cover that case we use levels_for_progress below on the level, not the contained level,
+      # as migrated predict levels may have progress on either the level itself or its contained level.
       levels =
         if @level.is_a?(LevelGroup)
           @level.levels
+        elsif @level.predict_level?
+          [@level]
         else
           [@level.contained_levels.any? ? @level.contained_levels.first : @level]
         end
 
       # TODO: Change/remove this check as we add support for more level types.
       if levels[0].is_a?(FreeResponse) || levels[0].is_a?(Multi) || levels[0]&.predict_level? || levels[0].is_a?(LevelGroup)
-        @responses = levels.map do |sublevel|
-          UserLevel.where(level: sublevel, user: @section&.students)
+        if @level.is_a?(LevelGroup)
+          @responses = levels.map do |sublevel|
+            UserLevel.where(level: sublevel, user: @section&.students)
+          end
+        else
+          progress_levels = @level.levels_for_progress
+          user_levels = UserLevel.where(level: progress_levels, user: @section&.students)
+          user_levels = user_levels.group_by(&:user_id).map {|_, uls| uls.max_by(&:updated_at)} if progress_levels.many?
+          @responses = [user_levels]
         end
       end
     end
