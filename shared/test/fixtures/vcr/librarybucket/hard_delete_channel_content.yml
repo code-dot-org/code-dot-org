@@ -115,8 +115,6 @@ http_interactions:
       - NPOTh8ZsHYflLpw0.2aS2E7K8hAaW4kx
       X-Amz-Server-Side-Encryption:
       - aws:kms
-      X-Amz-Server-Side-Encryption-Aws-Kms-Key-Id:
-      - arn:aws:kms:us-east-1:123456789012:key/a861dba1-42ea-42dd-b786-903384721883
       Etag:
       - '"7ed3e875daa7654fcb85d9f5a9e4a338"'
       Content-Length:
