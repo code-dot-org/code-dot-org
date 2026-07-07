@@ -1,7 +1,5 @@
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-import {Section} from '../../teacherDashboard/types/teacherSectionTypes';
-
 interface DemoSectionStalenessResponse {
   message?: string;
 }
@@ -11,16 +9,12 @@ interface DemoSectionStalenessResponse {
 // has drifted from those requirements and the teacher should be prompted to
 // fix it, false when the section is up to date or the check could not be run.
 const confirmDemoSectionSettings = (
-  demoSection: Section | null
+  demoSectionId: number
 ): Promise<boolean> => {
-  if (!demoSection) {
-    return Promise.resolve(false);
-  }
-
   // An up-to-date section responds with a 204; a stale one responds with a
   // 200 carrying a {message} body.
   return HttpClient.get(
-    `/api/v1/sections/${demoSection.id}/check_demo_section_staleness`
+    `/api/v1/sections/demo/check_staleness?id=${demoSectionId}`
   )
     .then(response => {
       if (response.status === 204) {

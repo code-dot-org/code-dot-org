@@ -1,5 +1,7 @@
+import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography, Button as MuiButton} from '@mui/material';
+import Snackbar from '@mui/material/Snackbar';
 import React from 'react';
 import {Tour} from 'shepherd.js';
 
@@ -63,6 +65,7 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
   >(new Set());
   const [pendingTour, setPendingTour] = React.useState<Tour | null>(null);
   const [isDemoSectionStale, setIsDemoSectionStale] = React.useState(false);
+  const [resetFailed, setResetFailed] = React.useState(false);
 
   React.useEffect(() => {
     HttpClient.get('/dashboardapi/v1/user_product_tours', true)
@@ -75,7 +78,11 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
 
   React.useEffect(() => {
     let active = true;
-    confirmDemoSectionSettings(demoSection).then(stale => {
+    if (!demoSection?.id) {
+      return;
+    }
+
+    confirmDemoSectionSettings(demoSection?.id).then(stale => {
       if (active) {
         setIsDemoSectionStale(stale);
       }
@@ -83,7 +90,7 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
     return () => {
       active = false;
     };
-  }, [demoSection]);
+  }, [demoSection?.id]);
 
   const startTourOrBlock = (tour: Tour | null) => {
     if (isDemoSectionStale) {
@@ -125,7 +132,10 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
         setIsDemoSectionStale(false);
         tour?.start();
       })
-      .catch(err => console.error('Failed to reset demo section:', err));
+      .catch(err => {
+        console.error('Failed to reset demo section:', err);
+        setResetFailed(true);
+      });
   };
 
   if (isHidden) {
@@ -140,6 +150,19 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
           onReset={handleStalenessReset}
         />
       )}
+      <Snackbar
+        open={resetFailed}
+        autoHideDuration={6000}
+        onClose={() => setResetFailed(false)}
+        anchorOrigin={{vertical: 'top', horizontal: 'center'}}
+      >
+        <Alert
+          type="danger"
+          size="m"
+          text="We couldn't reset your demo section. Please try again."
+          onClose={() => setResetFailed(false)}
+        />
+      </Snackbar>
       <div className={styles.onboardingChecklistOuter}>
         <div className={styles.onboardingChecklistInner}>
           <div className={styles.onboardingChecklistInnerContent}>

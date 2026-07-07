@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import {fireEvent, render, screen, waitFor} from '@testing-library/react';
+import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 import {Tour} from 'shepherd.js';
 
@@ -8,6 +8,7 @@ import OnboardingChecklist from '@cdo/apps/templates/studioHomepages/teacherHome
 import useCreateSectionTour from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useCreateSectionTour';
 import useLearnHowToEvaluateTour from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useLearnHowToEvaluateTour';
 import useReviewSyllabusTour from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useReviewSyllabusTour';
+import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
@@ -251,5 +252,99 @@ describe('OnboardingChecklist', () => {
 
     await waitFor(() => expect(consoleErrorSpy).toHaveBeenCalled());
     consoleErrorSpy.mockRestore();
+  });
+
+  describe('when the demo section is stale', () => {
+    const STALENESS_TITLE = 'Your onboarding experience is just one step away';
+    const RESET_ERROR =
+      "We couldn't reset your demo section. Please try again.";
+    const staleDemoSection = {id: 42} as unknown as Section;
+
+    // The mount-time staleness check resolves on a microtask; drain it so
+    // isDemoSectionStale is set before we click a checklist item.
+    const flushMountEffects = () =>
+      act(async () => {
+        await Promise.resolve();
+        await Promise.resolve();
+      });
+
+    beforeEach(() => {
+      mockConfirmDemoSectionSettings.mockResolvedValue(true);
+    });
+
+    it('blocks the syllabus tour behind the dialog instead of starting it', async () => {
+      renderComponent({demoSection: staleDemoSection});
+      await flushMountEffects();
+
+      fireEvent.click(screen.getByText('Review the syllabus'));
+
+      expect(screen.getByText(STALENESS_TITLE)).not.toBeNull();
+      expect(reviewSyllabusTour.start).not.toHaveBeenCalled();
+    });
+
+    it('does not block the create-section tour', async () => {
+      renderComponent({demoSection: staleDemoSection});
+      await flushMountEffects();
+
+      fireEvent.click(screen.getByText('Create a class section'));
+
+      expect(createSectionTour.start).toHaveBeenCalledTimes(1);
+      expect(screen.queryByText(STALENESS_TITLE)).toBeNull();
+    });
+
+    it('cancels the pending tour and dismisses the dialog on cancel', async () => {
+      renderComponent({demoSection: staleDemoSection});
+      await flushMountEffects();
+
+      fireEvent.click(screen.getByText('Review the syllabus'));
+      fireEvent.click(screen.getByText('Cancel'));
+
+      expect(reviewSyllabusTour.cancel).toHaveBeenCalledTimes(1);
+      expect(reviewSyllabusTour.start).not.toHaveBeenCalled();
+      expect(screen.queryByText(STALENESS_TITLE)).toBeNull();
+    });
+
+    it('resets the demo section then starts the tour on confirm', async () => {
+      renderComponent({demoSection: staleDemoSection});
+      await flushMountEffects();
+
+      fireEvent.click(screen.getByText('Review the syllabus'));
+      // Wrap the reset click so the reset POST's resolution (and the tour
+      // start it triggers) is flushed deterministically.
+      await act(async () => {
+        fireEvent.click(screen.getByText('Reset course assignment'));
+        await Promise.resolve();
+        await Promise.resolve();
+      });
+
+      expect(mockPost).toHaveBeenCalledWith(
+        '/api/v1/sections/demo/reset',
+        JSON.stringify({id: 42}),
+        true,
+        {'Content-Type': 'application/json'}
+      );
+      expect(reviewSyllabusTour.start).toHaveBeenCalledTimes(1);
+    });
+
+    it('surfaces an error and leaves the tour unstarted when reset fails', async () => {
+      mockPost.mockImplementation((url: string) =>
+        url === '/api/v1/sections/demo/reset'
+          ? Promise.reject(new Error('network error'))
+          : Promise.resolve(new Response())
+      );
+      const consoleErrorSpy = jest
+        .spyOn(console, 'error')
+        .mockImplementation(() => {});
+
+      renderComponent({demoSection: staleDemoSection});
+      await flushMountEffects();
+
+      fireEvent.click(screen.getByText('Review the syllabus'));
+      fireEvent.click(screen.getByText('Reset course assignment'));
+
+      expect(await screen.findByText(RESET_ERROR)).not.toBeNull();
+      expect(reviewSyllabusTour.start).not.toHaveBeenCalled();
+      consoleErrorSpy.mockRestore();
+    });
   });
 });
