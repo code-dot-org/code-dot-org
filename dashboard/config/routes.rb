@@ -1452,6 +1452,8 @@ Dashboard::Application.routes.draw do
     resources :practice_problems, only: [:index, :show]
 
     resources :challenges, only: [:index, :show]
+    resources :challenge_responses, only: [:create, :show]
+    resources :challenge_response_assets, only: [:show]
 
     resources :aidiff_exit_tickets, only: [:index, :update, :create, :show]
     resources :aidiff_lesson_hooks, only: [:index, :update, :create, :show]
