@@ -15,17 +15,20 @@ proves out the chef deploy pipeline with zero behavioral risk.
   `cookbooks/cdo-nginx/templates/default/nginx.conf.erb`. Repo-wide search
   finds no consumer; the APM integration that read it is long gone.
 - Delete `cookbooks/cdo-apps/templates/default/unicorn.sh.erb`. The
-  `app_server` attribute has been `puma` since the Unicorn migration;
-  the template is unrendered. The `unicorn.sh.erb` under
-  `cookbooks/cdo-nginx/test/cookbooks/nginx_test/` goes with it.
-- Remove the `unicorn` remnants that exist only to support the dead
-  template path where trivially safe (comments referencing it), but keep
-  `RuntimeDirectory=unicorn` in `puma.service.erb` — the socket path is
-  live production configuration, renamed in a later change.
+  `app_server` attribute has been `puma` since the Unicorn migration, so
+  `cdo_apps.rb` renders `puma.service.erb` and this template is
+  unrendered dead code.
 
-Explicitly out of scope: the `/var/log/nginx/error.log` entry in
-`cdo-cloudwatch-agent` attributes. That log is still written while nginx
-runs; it is removed by the `alb-direct-cutover` change.
+Explicitly out of scope:
+- `cookbooks/cdo-nginx/test/cookbooks/nginx_test/` in its entirety. Its
+  `unicorn.sh.erb` is a separate vendored fixture that the test recipe
+  renders for a toy unicorn app to smoke-test nginx proxying; it is
+  self-contained and unaffected by the cdo-apps deletion.
+- `RuntimeDirectory=unicorn` in `puma.service.erb` and the `/run/unicorn`
+  socket path attribute — live production configuration.
+- The `/var/log/nginx/error.log` entry in `cdo-cloudwatch-agent`
+  attributes. That log is still written while nginx runs; it is removed
+  by the `alb-direct-cutover` change.
 
 ## Capabilities
 

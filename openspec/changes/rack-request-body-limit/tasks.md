@@ -2,17 +2,19 @@
 
 ## 1. Middleware
 
-- [ ] 1.1 Add `lib/cdo/rack/request_body_limit.rb`: 413 on oversize `Content-Length` before body read; counting `rack.input` wrapper that 413s at the cap for chunked/absent length
-- [ ] 1.2 Add `max_request_body_size` to CDO config with a 4 GiB default (nginx parity)
-- [ ] 1.3 Insert the middleware in `dashboard/config/application.rb` ahead of `ActionDispatch::Static` and the legacy files-api middleware
+- [ ] 1.1 Add `lib/cdo/rack/request_body_limit.rb` per the design's enforcement mechanism: 413 on oversize `CONTENT_LENGTH` before calling the app; counting `rack.input` wrapper raising a middleware-private exception at the cap, rescued to 413
+- [ ] 1.2 Add `max_request_body_size: 4294967296` (4 GiB, nginx parity) to the repo-root `config.yml.erb` defaults; reference it as `CDO.max_request_body_size`
+- [ ] 1.3 Register with `config.middleware.insert_before 0, Cdo::Rack::RequestBodyLimit` in `dashboard/config/application.rb`, adjacent to the `insert_before 0, Rack::Cors` block (line ~53) — position 0 is load-bearing, see design
 
 ## 2. Tests
 
-- [ ] 2.1 Unit tests in `lib/test/cdo/rack/`: over-cap Content-Length, over-cap chunked stream, at-cap pass-through, no-body GET pass-through
-- [ ] 2.2 Run with `bundle exec ruby -Itest` from `lib/` per TESTING.md
+- [ ] 2.1 Unit tests in `lib/test/cdo/rack/test_request_body_limit.rb`: over-cap Content-Length → 413 with input unread, over-cap chunked stream → 413 mid-read, at-cap body passes through byte-identical, GET without body passes through
+- [ ] 2.2 Run from `lib/`: `bundle exec ruby -Itest ./test/cdo/rack/test_request_body_limit.rb`
 
 ## 3. Rollout verification
 
-- [ ] 3.1 Soak on staging: zero 413s from the middleware in per-route dashboards over one release cycle
-- [ ] 3.2 Manual check: multi-MB files-api upload succeeds through the middleware
-- [ ] 3.3 Gate recorded: `alb-weighted-canary` must not start until this has soaked in production
+- [ ] 3.1 [ops] Soak on staging: zero 413s from the middleware in per-route dashboards over one release cycle
+- [ ] 3.2 [ops] Manual check: multi-MB files-api upload succeeds through the middleware
+- [ ] 3.3 [ops] Gate recorded: `alb-weighted-canary` ramp must not start until this has soaked in production
+
+Tasks marked [ops] require deployed-environment access: implement and test 1.x–2.x, then hand off.

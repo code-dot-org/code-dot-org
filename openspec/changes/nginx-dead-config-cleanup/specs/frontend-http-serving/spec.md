@@ -17,5 +17,5 @@ server named by `node['cdo-apps']['app_server']`.
 
 #### Scenario: No Unicorn launcher template
 - **WHEN** the cdo-apps cookbook is synced to a node with `app_server: puma`
-- **THEN** no `unicorn.sh.erb` template exists in the cookbook
+- **THEN** no `unicorn.sh.erb` template exists in the cdo-apps cookbook (the nginx_test fixture's vendored copy is out of scope)
 - **THEN** the rendered systemd unit is `puma.service.erb`'s output, unchanged

@@ -30,8 +30,13 @@ weighted target groups; weights are integers and take effect immediately.
   metrics split and requiring instance surgery to roll back. Weighted
   groups keep the fleet homogeneous — every instance serves both paths —
   and make the traffic split the only variable.
-- **`TargetGroupStickinessConfig` on the ForwardConfig** (e.g. 1 hour) so
-  a client stays on one path for a session. Both paths are functionally
+- **The new target group gets no `Name` property.** The existing group
+  uses `!Ref AWS::StackName`, and stack names may legally use the entire
+  32-character target-group name budget — any suffix scheme can overflow
+  it. Let CloudFormation generate the name; nothing keys off target-group
+  names (consumers use ARNs/Refs).
+- **`TargetGroupStickinessConfig` on the ForwardConfig, duration 3600
+  seconds**, so a client stays on one path for a session. Both paths are functionally
   identical, but pinning makes user-visible anomalies attributable to a
   path instead of smeared across both. The existing per-target-group
   lb_cookie stickiness (30s) is kept unchanged.

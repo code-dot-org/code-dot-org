@@ -26,17 +26,32 @@ TLS cert into cdo-nginx only `unless load_balancer`.
 
 ## Decisions
 
-- **Gate cdo-nginx on load-balancer presence, not a standalone
-  `nginx_enabled` attribute.** The attribute was `true` everywhere and
-  encoded no topology fact. Deriving from the stack's `load_balancer`
-  option makes the invariant structural: nginx exists exactly where
-  nothing else terminates TLS. The signal reaches chef the same way the
-  cert content does today (`bootstrap_chef_stack.sh.erb` node attributes).
-- **All five port sites in one commit, deployed as one stack update +
-  converge.** The TG port change re-registers the ASG automatically; a
-  partial flip leaves health checks probing a dead port and takes the
-  fleet unhealthy. This atomicity requirement is why the canary change
-  kept both paths alive until here.
+- **Gate cdo-nginx on `node['cdo-apps']['load_balancer']`, not a
+  standalone `nginx_enabled` attribute.** `nginx_enabled` was `true`
+  everywhere and encoded no topology fact. The `load_balancer` first-boot
+  attribute (established in `puma-alb-readiness`,
+  `bootstrap_chef_stack.sh.erb`) makes the invariant structural: nginx
+  exists exactly where nothing else terminates TLS. Concretely, the
+  include in `cdo-apps/recipes/default.rb` becomes
+  `node['cdo-apps']['load_balancer'] ? 'cdo-nginx::stop' : 'cdo-nginx'`,
+  and the `nginx_enabled` attribute is deleted.
+- **Extend `cdo-nginx::stop` to remove the package.** Today it only stops
+  the service; add `apt_package('nginx') { action :remove }` after the
+  stop so long-lived converged instances (daemon, staging) shed nginx
+  rather than orphaning it. Keep the socket-cleanup file resources.
+- **The cutover's atomic unit is small by construction**: listener
+  `ForwardConfig` collapse + old target-group deletion (stack update),
+  bootstrap curl repoint, and the cookbook gating (converge) ship in one
+  deploy window. Ports, health checks, and daemon targets already moved
+  in `alb-weighted-canary`; the port attribute plumbing in
+  `puma-alb-readiness`. At no point do health checks probe a dead port:
+  the direct TG has been healthy on 9000 throughout the canary.
+- **No `puma.rb` edit.** Dropping the cdo-nginx include removes the
+  `dashboard_sock` override, and the bind table from `puma-alb-readiness`
+  resolves to the single 9000 listener on LB nodes, the socket on adhoc,
+  and the tcp fallback in development. `dashboard_port` (8080) keeps its
+  value — development and adhoc's nginx `dashboard_proxy` listener still
+  use it.
 - **Delete the port-80 target group rather than repointing it.** The
   canary already created the correctly-configured 9000 group with
   metric history; keeping it avoids a rename-in-place (TG names are

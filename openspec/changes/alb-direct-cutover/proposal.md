@@ -16,23 +16,32 @@ it there would kill HTTPS and expose plaintext Puma on a public instance
 ## What Changes
 
 - `cloud_formation_stack.yml.erb`: the weighted forward collapses back to
-  a single forward to the 9000 target group; the port-80 nginx target
-  group is deleted. **BREAKING** for anything targeting instance port 80.
-- The five coordinated port sites move together (adversarial review,
-  blocker 2): target group port and `HealthCheckPort`; the explicit
-  non-frontends daemon target (`Targets: [{Id: daemon, Port: 80}]`,
-  line ~381); `cdo-apps` port plumbing; the
-  `bootstrap_frontend.sh.erb` first-boot health-check curl
-  (`localhost:9000/health_check`).
-- `cookbooks/cdo-apps/recipes/default.rb` gates `cdo-nginx` on the
-  environment having no load balancer (adhoc), replacing the always-true
-  `nginx_enabled` attribute; LB instances run `cdo-nginx::stop` and the
-  nginx package is removed from them.
-- LB environments stop setting `dashboard_sock`; Puma's unix-socket bind
-  disappears there (the existing conditional in `puma.rb` handles this),
-  leaving the single TCP :9000 listener. Adhoc keeps the socket + nginx.
-- `cdo-cloudwatch-agent` drops `/var/log/nginx/error.log` for LB
-  environments.
+  a single forward to the direct (9000) target group; the port-80 nginx
+  target group is deleted, taking its health check and daemon target with
+  it (the direct group has carried its own since `alb-weighted-canary`).
+  **BREAKING** for anything targeting instance port 80.
+- `bootstrap_frontend.sh.erb` first-boot health-check curl moves to
+  `localhost:9000/health_check`.
+- `cookbooks/cdo-apps/recipes/default.rb` gates `cdo-nginx` on
+  `node['cdo-apps']['load_balancer']` (the first-boot attribute
+  established by `puma-alb-readiness`), replacing the always-true
+  `nginx_enabled` attribute: LB instances run `cdo-nginx::stop` (extended
+  to also remove the nginx package), adhoc keeps the full recipe.
+- With cdo-nginx no longer included on LB instances, its
+  `node.override` of `dashboard_sock` disappears, so Puma's unix-socket
+  bind falls away and the `dashboard_alb_port` TCP listener remains as
+  the only one — no `puma.rb` edit needed (the bind table in
+  `puma-alb-readiness` was designed for exactly this state). Adhoc keeps
+  socket + nginx; development keeps its tcp fallback.
+- `cdo-cloudwatch-agent` drops `/var/log/nginx/error.log` on nodes where
+  `node['cdo-apps']['load_balancer']` is true.
+
+The adversarial review's "five coordinated port sites" (blocker 2) are
+covered across the series: target-group port, health-check port, and the
+non-frontends daemon target moved in `alb-weighted-canary`; the port
+attribute plumbing landed in `puma-alb-readiness`; this change performs
+the remaining two moves (listener collapse, bootstrap curl) plus the
+nginx retirement, in one deployable unit.
 
 ## Capabilities
 

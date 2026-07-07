@@ -36,9 +36,21 @@ time rather than unbounded.
   part of this change. A lower default would risk breaking an unknown
   large-upload flow during the same window as the serving-path migration —
   one variable at a time.
-- **Insert before `ActionDispatch::Static`/`Rack::Optimize`** in
-  `dashboard/config/application.rb` so every path, including the legacy
-  `files_api` middleware routes, is covered.
+- **Insert at position 0** —
+  `config.middleware.insert_before 0, Cdo::Rack::RequestBodyLimit` in
+  `dashboard/config/application.rb` (next to the existing
+  `insert_before 0, Rack::Cors` at line 53). Position 0 is required, not
+  a style choice: the legacy API middlewares (`FilesApi` at line 101,
+  `ChannelsApi`, `NetSimApi`, sound/animation libraries) terminate
+  requests deep in the stack, so an `insert_before ActionDispatch::Static`
+  placement would not cover the exact upload endpoints this change
+  exists to protect.
+- **Enforcement mechanism**: for declared lengths, compare
+  `env['CONTENT_LENGTH'].to_i` against the cap and return 413 without
+  calling the app. For undeclared lengths, replace `env['rack.input']`
+  with a wrapper that counts bytes across `read`/`gets`/`each` and raises
+  a middleware-private exception at the cap; the middleware rescues that
+  exception class (only) and returns 413.
 - **413 with a plain-text body**, matching what nginx returns today for
   the same condition.
 

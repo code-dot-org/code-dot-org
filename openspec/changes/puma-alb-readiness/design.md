@@ -46,6 +46,31 @@ listeners and forked workers share the accept queues.
   On adhoc the instance is internet-facing with a public IP; an ungated
   `0.0.0.0:9000` listener would be a new plaintext exposure. Adversarial
   review, blocker 1.
+- **How chef learns "this environment has a load balancer": an explicit
+  first-boot attribute.** `aws/cloudformation/bootstrap_chef_stack.sh.erb`
+  already branches on the stack's `load_balancer` option (it injects the
+  real TLS cert into cdo-nginx `unless load_balancer`). Extend the same
+  first-boot JSON with `"cdo-apps": {"load_balancer": <%= !!load_balancer %>}`.
+  The cookbook then gates on `node['cdo-apps']['load_balancer']` — no
+  inference from cert presence or hostname. Add
+  `'load_balancer' => false` to the cdo-apps attribute defaults so
+  unmanaged/dev nodes read as non-LB. This attribute is also the gating
+  signal `alb-direct-cutover` uses later.
+- **Final bind logic in `puma.rb` — three independent conditionals,
+  written once here and untouched by later changes:**
+
+  ```
+  bind unix://CDO.dashboard_sock            if CDO.dashboard_sock
+  bind tcp://0.0.0.0:CDO.dashboard_alb_port if CDO.dashboard_alb_port
+  bind tcp://host:CDO.dashboard_port        if neither is set
+  ```
+
+  Which yields per environment: dual-bind LB (sock + alb_port → both
+  listeners, this change's state); adhoc (sock only → unix socket);
+  development/CI (neither → today's tcp fallback, unchanged); post-cutover
+  LB (alb_port only → single 9000 listener). The cutover change flips
+  states purely by which config keys chef sets, with no further puma.rb
+  edits.
 - **`persistent_timeout 75`.** ALB idle timeout is 60s (default, and no
   override found in `cloud_formation_stack.yml.erb`); 75 gives a 15s
   margin. Applied unconditionally — it is harmless behind nginx.

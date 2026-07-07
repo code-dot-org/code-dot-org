@@ -25,9 +25,12 @@ config (`cdo-nginx/attributes/default.rb:6`, `puma.service.erb`
 ## Decisions
 
 - Delete rather than comment out. Git history is the archive.
-- Keep the nginx_test fixture cookbook consistent by deleting its copy of
-  `unicorn.sh.erb` in the same commit, so kitchen runs don't reference a
-  pattern the main cookbook no longer has.
+- Leave the nginx_test fixture cookbook untouched. Its `unicorn.sh.erb`
+  is a vendored copy rendered by
+  `test/cookbooks/nginx_test/recipes/default.rb` for a toy unicorn app —
+  deleting it would require rewriting the fixture for no production
+  benefit. It is not the cdo-apps template and does not keep the dead
+  path alive.
 
 ## Risks / Trade-offs
 
