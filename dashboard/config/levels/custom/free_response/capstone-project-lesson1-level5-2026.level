@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-06-30T20:28:22.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "title": "Benchmark B Reflection",
+    "long_instructions": ">**Reflect on your app's behavior and what testing revealed.**\r\n> 1. What did you test in your app? What worked as expected, and what behaved differently than you anticipated?\r\n> 2. Describe one thing you changed or decided because of testing. Why did that test change your thinking?\r\n> 3. How has your app evolved from your original plan? What is the most important thing that changed, and why?\r\n",
+    "stay_on_level_after_submit": "false",
+    "height": "150",
+    "placeholder": "Enter answer here",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-30T20:28:22.314+00:00\",\"changed\":[\"cloned from \\\"capstone-project-lesson1-level3-2026\\\"\"],\"cloned_from\":\"capstone-project-lesson1-level3-2026\"},{\"changed_at\":\"2026-06-30 20:29:20 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-30 21:29:21 +0000\",\"changed\":[\"height\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-30 21:51:04 +0000\",\"changed\":[\"title\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -11,43 +11,7 @@ This repeated execution of instructions is called **iteration**, and it’s a co
 
 Before we look at how iteration appears in code, let’s ground the idea in a familiar situation.
 
----
 
-<img src="https://images.code.org/94f55e513cce8e0dc448aff4c12c4f33-image-1781706617134.png" alt="basketball going through hoop" width="180px" style="border-radius:10px; float:right; margin: 0 60px 0 30px;">
-
-
-## Hoop, there it is! 
-
-
-Imagine you are practicing your free throw shot.
-
-**Round 1:**
-You take exactly five free throws.
-
-**Round 2:**
-You keep tossing the basketball until you make one shot, no matter how many tries it takes.
-
-👉**Which round do you think would take longer and why?**
-
-
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px; width:60%;">
-    <summary style="font-size: 1.5em; font-weight: bold;">💡 Check your thinking:</summary>
-<div style="margin: 20px;">
-    <p style = "font-size: 12pt;">
-    <ul>
-    <li style = "font-size: 12pt;">In one case, you already know how many times you’ll repeat the action.</li>
-    <li style = "font-size: 12pt;">In the other, you don’t know how many tries it will take—you stop only when a condition is met.</li>
-    </ul>
-    <p style = "font-size: 12pt;"> This same distinction shows up in programming.</p>
-
-</p>
-</div>
-</details>
-
-<div style="clear:both;"></div>
-
----
 
 ## What is Iteration?
 

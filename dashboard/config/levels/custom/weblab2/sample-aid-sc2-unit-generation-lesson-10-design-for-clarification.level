@@ -1,0 +1,50 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-06-29T17:08:48.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "require_edit_to_continue": true,
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "46b5f417-9924-40e8-b58d-893218da07be": {
+          "id": "46b5f417-9924-40e8-b58d-893218da07be",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>AI Prediction with Confidence</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n    <div class=\"container\">\n        <h1>Ask the AI!</h1>\n        <p>Type something below and see what the AI predicts.</p>\n        <textarea id=\"userInput\" placeholder=\"What's on your mind?\" rows=\"5\"></textarea>\n        <button id=\"predictButton\">Get AI Prediction</button>\n        <div id=\"resultDisplay\" class=\"result\"></div>\n    </div>\n\n    <script src=\"script.js\"></script>\n</body>\n</html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        },
+        "e36b5bbf-eda8-4c82-8a9a-44332122e88f": {
+          "id": "e36b5bbf-eda8-4c82-8a9a-44332122e88f",
+          "name": "style.css",
+          "contents": "body {\n    font-family: sans-serif;\n    margin: 0;\n    padding: 20px;\n    background-color: #f4f4f4;\n    display: flex;\n    justify-content: center;\n    align-items: flex-start;\n    min-height: 100vh;\n}\n\n.container {\n    background-color: #fff;\n    padding: 30px;\n    border-radius: 8px;\n    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);\n    width: 100%;\n    max-width: 600px;\n    text-align: center;\n}\n\nh1 {\n    color: #333;\n    margin-bottom: 20px;\n}\n\np {\n    color: #666;\n    margin-bottom: 25px;\n}\n\ntextarea {\n    width: calc(100% - 20px);\n    padding: 10px;\n    margin-bottom: 20px;\n    border: 1px solid #ddd;\n    border-radius: 4px;\n    font-size: 16px;\n    resize: vertical;\n}\n\nbutton {\n    background-color: #007bff;\n    color: white;\n    padding: 12px 25px;\n    border: none;\n    border-radius: 4px;\n    font-size: 18px;\n    cursor: pointer;\n    transition: background-color 0.2s ease;\n}\n\nbutton:hover {\n    background-color: #0056b3;\n}\n\n.result {\n    margin-top: 30px;\n    padding: 15px;\n    background-color: #e9ecef;\n    border-radius: 4px;\n    border: 1px solid #ced4da;\n    min-height: 50px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    font-size: 1.1em;\n    color: #495057;\n    text-align: left;\n}\n",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        },
+        "11e26aba-ef69-4c19-8d9b-02eff505082f": {
+          "id": "11e26aba-ef69-4c19-8d9b-02eff505082f",
+          "name": "script.js",
+          "contents": "document.addEventListener(\"DOMContentLoaded\", () => {\n    const userInput = document.getElementById(\"userInput\");\n    const predictButton = document.getElementById(\"predictButton\");\n    const resultDisplay = document.getElementById(\"resultDisplay\");\n\n    // This function simulates an AI prediction and its confidence\n    // In a real app, this would involve calling a machine learning model\n    function getSimulatedPrediction(input) {\n        let confidence;\n        let predictionText;\n\n        // Simulate different confidence levels based on input\n        if (input.toLowerCase().includes(\"weather\")) {\n            confidence = Math.random() * 30 + 70; // 70-100% for weather\n            predictionText = \"It looks like it might be sunny, but check your local forecast!\";\n        } else if (input.toLowerCase().includes(\"feeling\")) {\n            confidence = Math.random() * 40 + 50; // 50-90% for feelings (harder to predict)\n            predictionText = \"It sounds like you might be feeling thoughtful today.\";\n        } else if (input.toLowerCase().includes(\"love\")) {\n            confidence = Math.random() * 20 + 10; // 10-30% for something abstract like love\n            predictionText = \"Love is a complex emotion that means different things to different people.\";\n        } else {\n            confidence = Math.random() * 60 + 30; // 30-90% for other things\n            predictionText = `Based on \"${input}\", I predict... something interesting!`;\n        }\n\n        return {\n            text: predictionText,\n            confidence: confidence\n        };\n    }\n\n    predictButton.addEventListener(\"click\", () => {\n        const input = userInput.value;\n        if (input.trim() === \"\") {\n            resultDisplay.textContent = \"Please enter something to predict!\";\n            return;\n        }\n\n        const aiResult = getSimulatedPrediction(input);\n        const prediction = aiResult.text;\n        const confidence = aiResult.confidence;\n\n        const confidenceThreshold = 70;\n\n        if (confidence < confidenceThreshold) {\n            // TODO: Student's new task starts here!\n            // Instead of a generic \"I'm not sure...\",\n            // make the AI suggest an alternative action or ask a clarifying question.\n            // Use if/else if statements to check for keywords in the 'input'\n            // to give more relevant follow-up questions.\n\n            if (input.toLowerCase().includes(\"weather\")) {\n                resultDisplay.textContent = \"I'm not very confident about the weather. Can you tell me which city or region you're interested in?\";\n            } else if (input.toLowerCase().includes(\"feeling\")) {\n                resultDisplay.textContent = \"I'm not sure about your feelings. Could you describe them in more detail, or tell me what's on your mind?\";\n            } else if (input.toLowerCase().includes(\"love\")) {\n                resultDisplay.textContent = \"Love is quite abstract! To help me understand, could you tell me more about what you mean by 'love'?\";\n            } else {\n                // Default generic fallback if no specific keywords match\n                resultDisplay.textContent = \"I'm not sure what you mean. Could you rephrase your question or provide more context?\";\n            }\n\n            // End of student's task section.\n\n        } else {\n            resultDisplay.textContent = `Prediction: ${prediction} (Confidence: ${confidence.toFixed(1)}%)`;\n        }\n    });\n});",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "46b5f417-9924-40e8-b58d-893218da07be",
+        "e36b5bbf-eda8-4c82-8a9a-44332122e88f",
+        "11e26aba-ef69-4c19-8d9b-02eff505082f"
+      ]
+    },
+    "long_instructions": "In the last level, we taught our AI to say \"I'm not sure\" when its confidence was low. That was a great start! But sometimes, we can make our AI even more helpful by suggesting specific next steps or asking clarifying questions.\r\n\r\nYour task is to improve the AI's low-confidence responses in `script.js`:\r\n\r\n1.  Open `script.js` and find the `if` block that handles `confidence < confidenceThreshold`.\r\n2.  Inside this block, instead of the generic \"I'm not sure, can you give me more information?\", add `if/else if` statements to check for keywords in the `input` variable.\r\n3.  For example, if the input includes \"weather\" (and confidence is low), suggest: \"I'm not very confident about the weather. Can you tell me which city or region you're interested in?\"\r\n4.  Add similar specific questions or alternative actions for other keywords you find in the `getSimulatedPrediction` function (like \"feeling\" or \"love\").\r\n5.  Include a final `else` block to provide a general clarifying question if no specific keywords are matched, such as: \"I'm not sure what you mean. Could you rephrase your question or provide more context?\"\r\n\r\nTest your changes by typing different things into the input box, especially phrases that might trigger a low-confidence prediction, and observe how the AI responds now!",
+    "generate_outline": "Students will further enhance their program. If the AI's confidence is low or if it predicts something that seems off, the program should now either suggest an alternative action the user could take or ask a clarifying question to get more input, rather than just stating uncertainty."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:09:06 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:09:06 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:09:41 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

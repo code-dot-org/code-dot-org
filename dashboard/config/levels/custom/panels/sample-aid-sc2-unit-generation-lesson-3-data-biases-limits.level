@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-06-29T17:08:01.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "panels": [
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-3-data-biases-limits-eff8a25f-2410-40fe-a4c7-a4ed05cb03ab",
+        "text": "We just saw how AI learns patterns from its training data. But what if that data isn't perfect?",
+        "imageUrl": "https://images.code.org/477fbe0c30a4d27435fab91585631929-sample-aid-sc2-unit-generation-lesson-3-data-biases-limits-panel-1-38bdfcd3-e24e-4ca1-a712-e15776633c58.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-3-data-biases-limits-4c160e41-4545-4ec0-984d-42ef90bf75b4",
+        "text": "If the training data is *incomplete*, the AI won't know about things it's never seen. It has no way to guess!",
+        "imageUrl": "https://images.code.org/54ea7cc7d47cb31c6c6640611af6cd55-sample-aid-sc2-unit-generation-lesson-3-data-biases-limits-panel-2-55aa10c4-cd77-443e-9d7a-bca13aa844a0.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-3-data-biases-limits-9cd08367-68dd-4d9d-bb15-ec27faa508df",
+        "text": "Sometimes, training data can be *biased*, reflecting unfair patterns from the real world. This can lead to the AI making unfair suggestions.",
+        "imageUrl": "https://images.code.org/37024b4eb3489d20af6ad4bbe3b9ac82-sample-aid-sc2-unit-generation-lesson-3-data-biases-limits-panel-3-2107fb05-0e85-4b24-b6db-f8ae97374942.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-3-data-biases-limits-afe52f59-6c0e-4e83-b2c1-14832124a6d5",
+        "text": "Or, the data might just have *errors* or confusing information mixed in. Then the AI gets confused and creates nonsense!",
+        "imageUrl": "https://images.code.org/1c7a8da32420a46a72eaa7df0ef66a10-sample-aid-sc2-unit-generation-lesson-3-data-biases-limits-panel-4-7e098dac-ab12-4a11-b6d5-6d0b5730a332.png",
+        "layout": "text-bottom-right"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-3-data-biases-limits-a4a15529-8c1a-44ca-88e5-d310ccc85359",
+        "text": "Remember, AI only knows what it's taught. If the data is flawed, the AI's output can be inaccurate, unfair, or just plain wrong.",
+        "imageUrl": "https://images.code.org/e4f961b45bc6871eee13c84f3855845c-sample-aid-sc2-unit-generation-lesson-3-data-biases-limits-panel-5-af299ad2-1ef7-42d0-9229-0083cc64deb0.png",
+        "layout": "text-top-center"
+      }
+    ],
+    "generate_outline": "Introduce the idea that training data can be biased, incomplete, or contain errors. Explain how these limitations can lead to AI generating inaccurate, unfair, or nonsensical outputs, providing clear, age-appropriate examples."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:08:51 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:08:51 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

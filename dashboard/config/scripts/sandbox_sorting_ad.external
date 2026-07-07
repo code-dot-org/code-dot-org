@@ -1,0 +1,86 @@
+name 'sandbox-sorting-AD'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Pure or not? Sorting what you know
+
+Now that you've seen how each method behaves, let's look at the bigger picture.
+
+Pure functions and side effects aren't just about individual methods,they reflect 
+two different approaches to working with data. 
+
+Understanding the difference will help you write code that is easier to predict, test, and share with others.
+
+
+## Pure Function vs. Side Effects
+
+<div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center; margin-top:16px;">
+
+  <div style="background:#f0eefa; border-radius:12px; padding:14px; width:360px;">
+    <strong style="font-size:14pt; color:#444;">Pure function</strong>
+    <ul>
+      <li style="font-size:14pt;">Predictable results</li>
+      <li style="font-size:14pt;">Original data stays the same</li>
+      <li style="font-size:14pt;">Easier to test and debug</li>
+      <li style="font-size:14pt;">Safer for shared data</li>
+    </ul>
+  </div>
+
+  <div style="background:#f0f0ee; border-radius:12px; padding:14px; width:360px;">
+    <strong style="font-size:14pt; color:#444;">Function with side effects</strong>
+    <ul>
+      <li style="font-size:14pt;">Can change data unexpectedly</li>
+      <li style="font-size:14pt;">Harder to reason about</li>
+      <li style="font-size:14pt;">Order of operations matters</li>
+      <li style="font-size:14pt;">Can impact other code</li>
+    </ul>
+  </div>
+
+</div>
+
+### **Common Methods and Their Behavior**
+
+<div style="display:flex; gap:14px; flex-wrap:wrap; justify-content:center; margin-top:16px;">
+
+  <div style="background:#f0eefa; border-radius:12px; padding:14px; width:360px;">
+    <strong style="font-size:14pt; color:#444;">Pure (non-mutating)</strong>
+    <p style="font-size:14pt;">These methods return a <strong>new array</strong> and leave the original unchanged.</p>
+    <ul>
+      <li style="font-size:14pt;"><code>.map()</code></li>
+      <li style="font-size:14pt;"><code>.filter()</code></li>
+      <li style="font-size:14pt;">Loops that build a copy</li>
+    </ul>
+  </div>
+
+  <div style="background:#f0f0ee; border-radius:12px; padding:14px; width:360px;">
+    <strong style="font-size:14pt; color:#444;">Mutating (side effects)</strong>
+    <p style="font-size:14pt;">These approaches can change existing data or rely on external effects.</p>
+    <ul>
+      <li style="font-size:14pt;"><code>.forEach()</code></li>
+      <li style="font-size:14pt;"><code>.shift()</code></li>
+      <li style="font-size:14pt;">Loops that modify the original array</li>
+    </ul>
+  </div>
+
+</div>
+
+---
+
+## Sort it out
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dotcom.github.io/Unit4-pure-methods-vizualizer/pure-or-not-sort.html"
+    width="100%"
+    height="480"
+    frameborder="0"
+    scrolling="no"
+    style="display:block; border-radius:10px;">
+  </iframe>
+</div>
+
+
+
+
+MARKDOWN

@@ -1,7 +1,7 @@
 import type {KyInstance} from 'ky';
 
-import {CurrentUserResponseSchema} from './currentUserTypes';
-import type {CurrentUserResponse} from './currentUserTypes';
+import {CurrentUserResponseSchema} from './users.schemata';
+import type {CurrentUserResponse} from './users.types';
 
 /**
  * Factory for `GET /api/v1/users/current`.
