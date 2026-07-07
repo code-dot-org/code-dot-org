@@ -148,8 +148,14 @@ const onClickPredict = (store: Store<RootState>): void => {
   trainingState.trainer?.predict(testValues);
 };
 
+// Discard the trainer held from a prior level/model.
+const reset = (): void => {
+  trainingState.trainer = undefined;
+};
+
 export default {
   init,
   onClickTrain,
   onClickPredict,
+  reset,
 };
