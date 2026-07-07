@@ -1,5 +1,11 @@
 import {configureStore, combineSlices} from '@reduxjs/toolkit';
-import type {Dispatch, Reducer, Store, UnknownAction} from '@reduxjs/toolkit';
+import type {
+  Dispatch,
+  Reducer,
+  Store,
+  ThunkDispatch,
+  UnknownAction,
+} from '@reduxjs/toolkit';
 import {useDispatch, useSelector} from 'react-redux';
 
 import reduxSlice, {setCount} from './reduxSlice';
@@ -112,8 +118,14 @@ export function storeHooks<
   TStore extends {getState(): unknown; dispatch: Dispatch<UnknownAction>},
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
 >(_store: TStore) {
+  // Stores from this module carry redux-thunk (configureStore's default
+  // middleware), so type dispatch against the store's *widened* state:
+  // TStore['dispatch'] alone still carries the pre-injection thunk state,
+  // which would reject thunks written for the injected store.
+  type AppDispatch = TStore['dispatch'] &
+    ThunkDispatch<ReturnType<TStore['getState']>, undefined, UnknownAction>;
   return {
-    useAppDispatch: useDispatch.withTypes<TStore['dispatch']>(),
+    useAppDispatch: useDispatch.withTypes<AppDispatch>(),
     useAppSelector: useSelector.withTypes<ReturnType<TStore['getState']>>(),
   };
 }
