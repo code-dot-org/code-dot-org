@@ -654,6 +654,34 @@ class BubbleChoiceTest < ActiveSupport::TestCase
     assert_equal sublevel, bubble_choice.get_sublevel_for_progress(student, script)
   end
 
+  # A migrated predict sublevel can hold an unscored attempt on itself and a
+  # scored one on its contained level in the same set; best_result_sublevel
+  # must pick the scored attempt rather than raise on the nil/non-nil mix.
+  test 'best_result_sublevel handles a mix of nil and non-nil best_result across a migrated predict sublevel' do
+    student = create(:student)
+    sublevel, contained = create_migrated_predict_sublevel('predict_sublevel_mixed_results')
+    bubble_choice = create(:bubble_choice_level, name: 'bubble_choice_predict_mixed', sublevels: [sublevel])
+    script_level = create(:script_level, levels: [bubble_choice])
+    script = script_level.script
+
+    create(:user_level, user: student, level: sublevel, script: script, best_result: nil)
+    create(:user_level, user: student, level: contained, script: script, best_result: ActivityConstants::BEST_PASS_RESULT)
+
+    assert_equal contained, bubble_choice.get_sublevel_for_progress(student, script)
+  end
+
+  test 'get_sublevel_for_progress_optimized handles a mix of nil and non-nil best_result' do
+    student = create(:student)
+    unscored = create(:user_level, user: student, level: @sublevel1, best_result: nil)
+    scored = create(:user_level, user: student, level: @sublevel2, best_result: ActivityConstants::BEST_PASS_RESULT)
+
+    result_id = @bubble_choice.get_sublevel_for_progress_optimized(
+      teacher_feedbacks: [],
+      user_levels: [unscored, scored]
+    )
+    assert_equal @sublevel2.id, result_id
+  end
+
   # A migrated predict sublevel keeps its contained level (for reading back
   # pre-migration responses) but records new progress on itself.
   private def create_migrated_predict_sublevel(name)

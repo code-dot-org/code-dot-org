@@ -262,7 +262,7 @@ class BubbleChoice < DSLDefined
 
     return keep_working_level_id if keep_working_level_id
 
-    user_levels.max_by(&:best_result)&.level_id
+    user_level_with_best_result(user_levels)&.level_id
   end
 
   def project_type
@@ -337,8 +337,15 @@ class BubbleChoice < DSLDefined
     # Each sublevel's progress may live on the sublevel itself or, for a
     # contained or migrated predict level, on its contained level.
     sublevels_for_progress = sublevels.flat_map(&:levels_for_progress)
-    ul = user.user_levels.where(level: sublevels_for_progress, script: script).max_by(&:best_result)
+    ul = user_level_with_best_result(user.user_levels.where(level: sublevels_for_progress, script: script))
     ul&.level
+  end
+
+  # max_by(&:best_result) raises when best_result mixes nil and non-nil
+  # (nil <=> Integer is undefined); an unscored attempt sorts as the lowest
+  # result so a scored sublevel still wins.
+  private def user_level_with_best_result(user_levels)
+    user_levels.max_by {|ul| ul.best_result || -Float::INFINITY}
   end
 
   private def keep_working_sublevel(user, script)

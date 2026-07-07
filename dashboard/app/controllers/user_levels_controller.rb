@@ -33,7 +33,7 @@ class UserLevelsController < ApplicationController
       return head :bad_request, text: "Clearing progress on level type #{level.type} is not supported"
     end
 
-    UserLevel.where(user_id: current_user.id, script_id: script.id, level_id: predict_level_ids(level)).destroy_all
+    UserLevel.where(user_id: current_user.id, script_id: script.id, level_id: response_level_ids(level)).destroy_all
     return head :ok
   end
 
@@ -48,7 +48,7 @@ class UserLevelsController < ApplicationController
   # If there is no attempt, return null.
   def get_level_source
     level = Level.find_by(id: params[:level_id])
-    level_ids = level ? predict_level_ids(level) : [params[:level_id]]
+    level_ids = level ? response_level_ids(level) : [params[:level_id]]
     user_levels = UserLevel.where(user_id: current_user.id, level_id: level_ids, script_id: params[:script_id])
     most_recent_user_level = user_levels.order(updated_at: :desc).first
     return render json: {data: most_recent_user_level&.level_source&.data}, status: :ok
@@ -63,7 +63,7 @@ class UserLevelsController < ApplicationController
     level = Level.find(params[:level_id])
     return head :bad_request, text: "Level not found" unless level
     return head :forbidden, text: 'User must be instructor of section' unless section.instructors.include?(@current_user)
-    level_ids = predict_level_ids(level)
+    level_ids = response_level_ids(level)
     responses = UserLevel.where(level_id: level_ids, user: section.students)
     # When a level resolves to more than one id (ex. a migrated predict level plus its
     # legacy contained level), a student may have a response under each; count
@@ -89,19 +89,13 @@ class UserLevelsController < ApplicationController
     ['Multi', 'FreeResponse'].include?(level.type) || level.predict_level?
   end
 
-  # The level ids that hold a student's predict response for the given level.
-  #
-  # A lab2 predict level migrated from the legacy contained-level model keeps
-  # its contained_level_names, but the response may have been recorded against
-  # either the parent level (post-migration) or the original contained level
-  # (pre-migration). Return both so reads and resets cover either location. A
-  # predict level with no contained level, or any non-predict level, returns
-  # just its own id, preserving existing behavior.
-  private def predict_level_ids(level)
-    ids = [level.id]
-    if level.predict_level? && level.contained_level_names.present?
-      ids.concat(level.contained_levels.map(&:id))
-    end
-    ids
+  # The level ids that may hold a student's response for the given level.
+  # A migrated predict level's response may live on the level itself
+  # (post-migration) or its legacy contained level (pre-migration), so
+  # levels_for_progress returns both. Non-predict levels stay parent-only,
+  # which these generic endpoints rely on.
+  private def response_level_ids(level)
+    return [level.id] unless level.predict_level?
+    level.levels_for_progress.map(&:id)
   end
 end
