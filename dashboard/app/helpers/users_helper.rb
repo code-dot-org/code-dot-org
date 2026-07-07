@@ -422,8 +422,6 @@ module UsersHelper
           end
         else
           progress_level_ids = level.levels_for_progress.map(&:id)
-          # Teacher feedback for a contained level is stored under the primary
-          # level id.
           feedback_level_id = progress_level_ids.first
           users.each do |user|
             user_levels_for_user = user_levels_by_level[user.id]
