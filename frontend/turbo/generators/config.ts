@@ -247,7 +247,8 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
       {
         type: 'modify',
         path: '{{turbo.paths.workspace}}/apps/studio/src/modules/labs/config/labs.ts',
-        pattern: /(export const LAB_REGISTRY = \{[\s\S]*?)(\} as const satisfies)/,
+        pattern:
+          /(export const LAB_REGISTRY = \{[\s\S]*?)(\} as const satisfies)/,
         template:
           "$1  '{{name}}': {\n    load: () => import('@code-dot-org/{{name}}-lab'),\n    fixtures: () => import('@code-dot-org/{{name}}-lab/mocks'),\n  },\n$2",
       },
