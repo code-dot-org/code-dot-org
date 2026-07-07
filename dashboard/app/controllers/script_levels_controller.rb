@@ -183,12 +183,9 @@ class ScriptLevelsController < ApplicationController
       @responses = []
       # The levels whose responses the summary view shows. A LevelGroup exposes
       # one response set per sublevel; every other type answers on its own
-      # progress levels — a predict level on itself (plus its contained level if
-      # migrated), a plain contained level on its contained level.
+      # progress levels.
       response_levels = @level.is_a?(LevelGroup) ? @level.levels : @level.levels_for_progress
 
-      # Gate on the type of the level actually holding responses (the contained
-      # level for a plain contained level, the level itself otherwise).
       # TODO: Change/remove this check as we add support for more level types.
       first_level = response_levels.first
       if first_level.is_a?(FreeResponse) || first_level.is_a?(Multi) || first_level&.predict_level? || first_level.is_a?(LevelGroup)
