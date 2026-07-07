@@ -85,7 +85,6 @@ namespace :seed do
     frozen
     hourofcode
     mc
-    mix-move-ai-2025
   ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
 
   # To improve adhoc start time, we only seed the most recent year of our common curriculum
@@ -245,17 +244,18 @@ namespace :seed do
 
   timed_task_with_logging courses_ui_tests: :environment do
     # seed those courses that are needed for UI tests
-    %w(allthethingscourse
-       allthelessonplans
-       alltheselfpacedplthings
-       allthettsthings
-       frozen
-       hourofcode
-       mc
-       original-allthelessonplans-course
-       original-allthethings-course
-       original-alltheselfpacedplthings-course
-       mix-move-ai-2025).each do |course_name|
+    %w(
+      allthethingscourse
+      allthelessonplans
+      alltheselfpacedplthings
+      allthettsthings
+      frozen
+      hourofcode
+      mc
+      original-allthelessonplans-course
+      original-allthethings-course
+      original-alltheselfpacedplthings-course
+    ).each do |course_name|
       UnitGroup.load_from_path("#{CURRICULUM_CONTENT_DIR}/config/courses/#{course_name}.course")
     end
     Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/courses/*.course").sort.each do |path|
