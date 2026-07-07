@@ -56,9 +56,8 @@ module SetupTest
   # AUTO_INCREMENT counters. The counters matter because auto-increment ids
   # are embedded in the S3 paths recorded in VCR cassettes
   # ("<dir>/<storage_id>/<project_id>/..."), so each test must start from
-  # identical counter values or playback will not match. Ids allocated
-  # inside a transaction are not returned on rollback, hence the explicit
-  # reset.
+  # identical counter values or playback will not match. Rolling back a transaction
+  # does not rewind the AUTO_INCREMENT counter, hence the explicit reset.
   def self.reset_dashboard_test_tables
     DASHBOARD_TEST_TABLES.each do |table|
       # rubocop:disable CustomCops/DashboardDbUsage
