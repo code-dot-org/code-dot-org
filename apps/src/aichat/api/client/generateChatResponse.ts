@@ -1,3 +1,4 @@
+import * as Observability from '@code-dot-org/core/plugins/observability';
 import {type ModelMessage} from 'ai';
 
 import {generateText} from '@cdo/apps/aiGateway';
@@ -108,10 +109,18 @@ export async function generateChatResponse(
     assets.push(asset);
     if (file.mediaType.startsWith('image/')) {
       sendLab2AnalyticsEvent(EVENTS.MODEL_OUTPUT_IMAGE_CREATED);
-      // Check generated images for safety.
+      const assetUrl = buildAssetUrl(asset);
+      // Log every generated image URL to Sentry Logs at 100% (logSampleRate
+      // is the only 100%-sampled channel in prod). Lets us spot images that
+      // should have been flagged by moderation but weren't.
+      Observability.logger.info('ai-chat.image_generated', {
+        assetUrl,
+        mediaType: file.mediaType,
+        model: modelParameters.selectedModelId,
+      });
       const imageModerationStatus = await getImageModerationStatus(
         file,
-        buildAssetUrl(asset)
+        assetUrl
       );
       if (imageModerationStatus === 'flagged') {
         return {
