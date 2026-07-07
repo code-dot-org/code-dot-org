@@ -12,4 +12,8 @@ export type AichatContext = {
   scriptId: number | null;
   channelId: string | undefined;
   lessonId?: number;
+  // Requests that the AI Gateway token be issued with content-safety checks
+  // disabled. The server (AiGatewayAuthController) decides whether to honor
+  // this -- it's granted only for levelbuilders, regardless of what's sent.
+  disableSafetyChecks?: boolean;
 };
