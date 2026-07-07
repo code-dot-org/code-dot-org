@@ -31,13 +31,19 @@
 
 ## 3. Sudo mode
 
-- [ ] 3.1 require_sudo! helper checking session[:admin_sudo_at] against a
-      DCDO-tunable window (default 15 min); 403 sudo_required envelope
-- [ ] 3.2 Re-auth flow: endpoint/callback that stamps
-      session[:admin_sudo_at] only after a fresh Google OAuth round-trip
-      (resolve the design.md open question here)
+- [ ] 3.1 require_sudo! helper checking session[:admin_sudo_at] against
+      DCDO admin_sudo_window_minutes (default 15); 403 sudo_required
+      envelope
+- [ ] 3.2 Re-auth flow per design Decision 5: GET /admin/sudo sets
+      admin_sudo_pending + validated return_to and redirects to
+      /users/auth/google_oauth2; google_oauth2 callback stamps
+      admin_sudo_at only when the credential resolves to current_user,
+      clears the flag, redirects to return_to (mismatch: no stamp, no
+      session change, failure indicator)
 - [ ] 3.3 Tests: stale stamp → 403 + no state change, fresh stamp →
-      action runs, client-supplied timestamp ignored
+      action runs, client-supplied timestamp ignored, credential
+      mismatch does not stamp and does not alter the session,
+      return_to restricted to same-origin relative paths
 
 ## 4. Verification
 

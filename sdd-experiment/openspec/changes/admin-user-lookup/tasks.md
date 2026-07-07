@@ -18,8 +18,10 @@
 
 ## 3. Client + SPA pages
 
-- [ ] 3.1 Zod schemata + query modules for the new endpoints (location
-      per current core client conventions)
+- [ ] 3.1 Zod schemata + query modules in
+      packages/core/src/api/dashboard/admin/ registered as
+      DashboardApiClient.admin.* (admin-frontend-shell design
+      Decision 6)
 - [ ] 3.2 Search, section-lookup, and inspector pages in
       packages/admin with cross-links; MSW fixtures
 - [ ] 3.3 Vitest for pages; landing-page links flipped from legacy to

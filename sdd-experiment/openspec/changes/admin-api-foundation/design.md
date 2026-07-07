@@ -64,14 +64,36 @@ same-origin admin use).
    enrichment is optional, the baseline row is automatic.
 
 5. **Sudo mode = session timestamp, not a token.**
-   `session[:admin_sudo_at]` set by a re-auth confirmation endpoint;
+   `session[:admin_sudo_at]` set only by the re-auth flow below;
    `require_sudo!` compares against a freshness window (default 15 min,
-   DCDO-tunable). Admins are Google-SSO-only with no password
-   (user.rb enforce_google_sso_for_admin), so re-auth = a fresh OAuth
-   round-trip, not a password prompt. Declarative opt-in per endpoint
-   (`before_action :require_sudo!`), not automatic, because only the
-   destructive tier needs it. 403 with `{error: "sudo_required"}` lets
-   the SPA trigger the re-auth flow.
+   DCDO key `admin_sudo_window_minutes`). Admins are Google-SSO-only
+   with no password (user.rb enforce_google_sso_for_admin), so re-auth =
+   a fresh OAuth round-trip, not a password prompt. Declarative opt-in
+   per endpoint (`before_action :require_sudo!`), not automatic, because
+   only the destructive tier needs it. 403 with
+   `{error: "sudo_required"}` lets the SPA trigger the re-auth flow.
+
+   Re-auth flow, following the established session-flag dispatch
+   pattern in omniauth_callbacks_controller (the same mechanism as
+   should_link_accounts?/should_connect_provider?):
+   - GET /admin/sudo?return_to=<path> (Rails, admin-gated): stores
+     `session[:admin_sudo_return_to]` (validated same-origin relative
+     path), sets `session[:admin_sudo_pending] = true`, redirects to
+     /users/auth/google_oauth2.
+   - In OmniauthCallbacksController#google_oauth2, before the normal
+     sign-in branch: if `session[:admin_sudo_pending]` is set AND the
+     authenticated credential resolves to the CURRENT signed-in admin
+     (find_user_by_credential.id == current_user.id — a different
+     Google account must NOT stamp sudo), clear the pending flag, set
+     `session[:admin_sudo_at] = Time.now.to_i`, and redirect to the
+     stored return_to. On identity mismatch: clear the flag, do not
+     stamp, redirect to return_to with a failure indicator; the
+     existing session is left untouched (no sign-out, no sign-in as
+     the other account).
+   - The SPA opens /admin/sudo?return_to=<current admin route> as a
+     top-level navigation (not fetch), so the OAuth dance runs as a
+     normal page flow and lands back on the SPA page, which retries
+     the failed action.
 
 6. **Error envelope**: `{error: <machine-readable-key>, message?:
    <human>, details?: {...}}` with conventional status codes. 401
@@ -102,7 +124,4 @@ migration ahead of or with the code (no data backfill).
 
 ## Open Questions
 
-- Exact re-auth confirmation mechanics (dedicated /api/admin/sudo
-  endpoint vs reusing the Devise/OmniAuth callback with a return-to) —
-  settle during implementation; the session-stamp contract is fixed
-  either way.
+- None. (Re-auth mechanics pinned in Decision 5.)

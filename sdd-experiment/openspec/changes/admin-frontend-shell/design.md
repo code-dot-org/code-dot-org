@@ -20,9 +20,6 @@ scaffold — admin will co-evolve the pattern.
 **Non-Goals:**
 - No feature pages, no admin API consumption beyond the smoke endpoint.
 - No production enablement of frontend-studio.
-- No shared "client extension" refactor of DashboardApiClient — admin
-  query modules follow whatever pattern core has when each feature chunk
-  lands.
 
 ## Decisions
 
@@ -53,6 +50,17 @@ scaffold — admin will co-evolve the pattern.
 5. **Design system first**: DSCO component-library components per the
    component hierarchy (browser semantics > DSCO > MUI > custom); CSS
    modules for overrides.
+
+6. **Admin API client lives in core as `DashboardApiClient.admin.*`.**
+   Feature chunks add a `dashboard/admin/` folder in
+   packages/core/src/api following the existing per-domain pattern
+   (*.api.ts, *.schemata.ts, *.types.ts, *.query.ts, *.keys.ts) and
+   register the namespace in createApiClient. Consistent with the
+   "all dashboard calls via DashboardApiClient" convention; bundle
+   hygiene is unaffected because only the admin package imports the
+   admin query modules and the SPA shell's lazy chunking keeps them
+   out of student bundles. A package-local client was rejected: it
+   would fork transport/CSRF/error handling or re-wrap core anyway.
 
 ## Risks / Trade-offs
 

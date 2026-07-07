@@ -32,3 +32,9 @@ passwordless); no API endpoint may set it from a client-supplied value.
 #### Scenario: Client cannot self-grant
 - **WHEN** a request attempts to supply a sudo timestamp as a parameter
 - **THEN** it has no effect on the session stamp
+
+#### Scenario: Re-auth as a different account
+- **WHEN** the OAuth round-trip completes with a credential that does
+  not resolve to the currently signed-in admin
+- **THEN** no sudo stamp is set and the existing session is unchanged
+  (no sign-out, no identity switch)

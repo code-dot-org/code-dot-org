@@ -16,8 +16,9 @@
 - [ ] 2.1 Permissions page in packages/admin: search-integrated user
       picker, permission list, grant/revoke with confirmation dialogs,
       bulk-grant with per-email result rendering, CSV link to legacy GET
-- [ ] 2.2 Client module + Zod schemata + MSW fixtures; Vitest coverage
-      incl. partial bulk failure rendering
+- [ ] 2.2 Client module + Zod schemata in core's dashboard/admin
+      namespace (DashboardApiClient.admin.*) + MSW fixtures; Vitest
+      coverage incl. partial bulk failure rendering
 - [ ] 2.3 Flip landing-page link to the SPA page
 
 ## 3. Verification
