@@ -224,7 +224,7 @@ class Section < ApplicationRecord
       transform_values {|uls| uls.to_set(&:level_id)}
 
     last_completed_lesson = nil
-    finished_unit = false
+    finished_unit = true
     checked_last_lesson = false
     threshold = [section_students.size / 2.0, 3].min
 
