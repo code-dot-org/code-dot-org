@@ -2363,6 +2363,7 @@ __metadata:
   dependencies:
     "@code-dot-org/core": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
+    "@code-dot-org/users": "workspace:*"
     "@reduxjs/toolkit": "catalog:"
     "@types/node": "catalog:"
     eslint: "catalog:"
