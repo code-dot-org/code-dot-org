@@ -7,4 +7,8 @@ class ApplicationJob < ActiveJob::Base
 
   # Most jobs are safe to ignore if the underlying records are no longer available
   # discard_on ActiveJob::DeserializationError
+
+  around_enqueue do |_job, block|
+    ActiveRecord::Base.connected_to(role: :writing, &block)
+  end
 end

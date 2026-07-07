@@ -5,7 +5,7 @@ def create_storage_id_cookie
   storage_id = create_storage_id_for_user(nil)
 
   if defined?(Dashboard::Application)
-    ActiveRecord::Base.connected_to(role: :writing) do
+    begin
       ProjectStorage::AnonymousGeoRecordingJob.perform_later(storage_id, request.ip)
     rescue StandardError => exception
       raise exception unless rack_env?(:production)
