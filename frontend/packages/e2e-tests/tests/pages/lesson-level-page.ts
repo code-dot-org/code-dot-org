@@ -53,4 +53,25 @@ export class LessonLevelPage extends BasePage {
       }))
     );
   }
+
+  /**
+   * Whether the level's bubble shows 'not_tried', comparing its colors to the
+   * DSCO neutral tokens the way progress.rb verify_progress does (it keys off
+   * color).
+   */
+  async isProgressBubbleNotTried(levelNum: number): Promise<boolean> {
+    const bubble = this.headerProgressBubble(levelNum);
+    return (
+      (await cssColorMatchesVar({
+        locator: bubble,
+        colorProperty: 'background-color',
+        cssVar: '--background-neutral-primary',
+      })) &&
+      (await cssColorMatchesVar({
+        locator: bubble,
+        colorProperty: 'border-top-color',
+        cssVar: '--borders-neutral-primary',
+      }))
+    );
+  }
 }

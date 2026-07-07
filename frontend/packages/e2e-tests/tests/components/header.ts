@@ -41,6 +41,9 @@ export class HeaderComponent {
   /** .header_user — the signed-in chrome; .first() avoids strict-mode failure across breakpoints. */
   private readonly user: Locator;
 
+  /** "Sign in" link shown in place of the user menu when signed out. */
+  readonly signInLink: Locator;
+
   constructor(page: Page) {
     this.page = page;
     this.headerLinks = page.locator('.headerlinks');
@@ -53,6 +56,7 @@ export class HeaderComponent {
     this.userMenu = page.locator('#header_user_menu').first();
     this.displayName = page.locator('.display_name').first();
     this.user = page.locator('.header_user').first();
+    this.signInLink = page.getByRole('link', {name: 'Sign in'}).first();
   }
 
   /** A header nav link by its visible label (its accessible name). */
@@ -77,6 +81,11 @@ export class HeaderComponent {
   /** Wait until the signed-in header chrome is visible. */
   async waitForSignedIn(): Promise<void> {
     await expect(this.user).toBeVisible();
+  }
+
+  /** Wait until the signed-out "Sign in" chrome is visible. */
+  async waitForSignedOut(): Promise<void> {
+    await expect(this.signInLink).toBeVisible();
   }
 
   /**

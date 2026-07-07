@@ -47,6 +47,9 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   /** Inline feedback panel rendered below the instructions after an incorrect solution. */
   readonly inlineFeedback: Locator;
 
+  /** Congratulations overlay shown on puzzle completion. */
+  readonly congratsMessage: Locator;
+
   constructor(page: Page) {
     super(page);
     this.instructionsTab = page.locator('.uitest-instructionsTab');
@@ -60,6 +63,7 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     this.inlineFeedback = page.locator(
       '.uitest-topInstructions-inline-feedback',
     );
+    this.congratsMessage = page.locator('.congrats');
   }
 
   /**
@@ -170,5 +174,42 @@ export class LegacyBlocklyLab extends LessonLevelPage {
       this.footer.localeDropdown.selectOption({label}),
     ]);
     await this.waitForReady();
+  }
+
+  /**
+   * Load a Blockly workspace from a serialization object. Mirrors
+   * load_json_blocks() from blockly_initialization_blocks.rb.
+   */
+  async loadBlocks(blocksJson: object): Promise<void> {
+    await this.page.waitForFunction(() =>
+      Boolean(
+        (
+          window as unknown as {
+            Blockly?: {getMainWorkspace(): unknown};
+          }
+        ).Blockly?.getMainWorkspace(),
+      ),
+    );
+    await this.page.evaluate(state => {
+      const blockly = (
+        window as unknown as {
+          Blockly?: {
+            getMainWorkspace(): object;
+            serialization: {
+              workspaces: {load(state: object, workspace: object): void};
+            };
+          };
+        }
+      ).Blockly;
+      const workspace = blockly?.getMainWorkspace();
+      if (blockly && workspace) {
+        blockly.serialization.workspaces.load(state, workspace);
+      }
+    }, blocksJson);
+  }
+
+  /** Click Run to execute the current workspace program. */
+  async run(): Promise<void> {
+    await this.runButton.click();
   }
 }
