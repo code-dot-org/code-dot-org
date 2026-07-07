@@ -125,6 +125,17 @@ experiments.getEnabledExperiments = function () {
   return this.getStoredExperiments_().map(experiment => experiment.key);
 };
 
+/**
+ * Returns the experiments enabled in this browser via local storage (the kind
+ * setEnabled manages), along with the metadata we store for them. Does not
+ * include user experiments mirrored into the _experiments cookie at sign-in.
+ * @returns {Array<{key: string, expiration?: number}>} expiration is ms since
+ *   epoch, present only for temporarily-enabled experiments.
+ */
+experiments.getLocalStorageExperimentDetails = function () {
+  return this.getLocalStorageExperiments_();
+};
+
 experiments.setEnabled = function (key, shouldEnable, expiration = undefined) {
   const allEnabled = this.getLocalStorageExperiments_();
   const experimentIndex = allEnabled.findIndex(

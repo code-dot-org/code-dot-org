@@ -13,6 +13,34 @@ class ExperimentsControllerTest < ActionController::TestCase
     create(:unit_group_unit, unit_group: unit_group, script: default_script, position: 2)
   end
 
+  test_redirect_to_sign_in_for(:index)
+
+  test 'index lists experiments the user opted into' do
+    sign_in(@teacher)
+    SingleUserExperiment.create!(min_user_id: @teacher.id, name: @pilot_name)
+    SingleUserExperiment.create!(min_user_id: @teacher.id + 1, name: 'someone-elses-experiment')
+    SingleUserExperiment.create!(min_user_id: @teacher.id, name: 'ended-experiment', end_at: 1.day.ago)
+    # covers 100% of users, but is not an opt-in, so it must not be listed
+    UserBasedExperiment.create!(name: 'everyone-percentage', percentage: 100)
+
+    get :index
+    assert_response :success
+    experiments = assigns(:user_experiments)
+    assert_equal [@pilot_name], experiments.pluck(:name)
+    assert experiments.first[:canLeave]
+  end
+
+  test 'index marks experiments without a joinable pilot as not leavable' do
+    sign_in(@teacher)
+    SingleUserExperiment.create!(min_user_id: @teacher.id, name: 'not-a-pilot')
+
+    get :index
+    assert_response :success
+    experiments = assigns(:user_experiments)
+    assert_equal ['not-a-pilot'], experiments.pluck(:name)
+    refute experiments.first[:canLeave]
+  end
+
   test_redirect_to_sign_in_for(
     :set_single_user_experiment,
     params: -> {{experiment_name: @pilot_name}}

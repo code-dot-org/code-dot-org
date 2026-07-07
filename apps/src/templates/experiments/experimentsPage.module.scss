@@ -1,0 +1,45 @@
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+
+  section {
+    margin-top: 2rem;
+  }
+}
+
+.description {
+  color: var(--text-neutral-secondary);
+}
+
+.emptyState {
+  color: var(--text-neutral-secondary);
+  font-style: italic;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th,
+  td {
+    padding: 0.5rem 0.75rem;
+    text-align: start;
+    border-bottom: 1px solid var(--borders-neutral-light);
+    vertical-align: middle;
+  }
+
+  th {
+    // application.css paints every th dark slate with white text
+    background-color: transparent;
+    color: var(--text-neutral-secondary);
+    font-weight: 600;
+  }
+
+  .actionCell {
+    // shrink to content so the buttons share the table's right edge
+    width: 1%;
+    text-align: end;
+    white-space: nowrap;
+  }
+}

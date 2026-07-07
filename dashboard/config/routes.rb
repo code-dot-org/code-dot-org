@@ -846,6 +846,8 @@ Dashboard::Application.routes.draw do
 
     post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
+    get '/experiments', to: 'experiments#index'
+
     # Experiments are get requests so that a user can click on a link to join or leave an experiment
     resource :experiments, only: [] do
       get 'set_single_user_experiment/:experiment_name', action: :set_single_user_experiment

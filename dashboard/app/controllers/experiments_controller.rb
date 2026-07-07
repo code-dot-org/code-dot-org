@@ -10,6 +10,25 @@ class ExperimentsController < ApplicationController
     return false
   end
 
+  # GET /experiments
+  # Lists the experiments the current user individually opted into.
+  # Percentage- and section-based experiments are excluded: the user did not
+  # choose those, so there is nothing for them to manage here. Browser-local
+  # experiments live in local storage and are rendered by the page's JS.
+  def index
+    enrolled = SingleUserExperiment.active.where(min_user_id: current_user.id)
+    pilots_by_name = Pilot.where(name: enrolled.map(&:name)).index_by(&:name)
+    @user_experiments = enrolled.map do |experiment|
+      pilot = pilots_by_name[experiment.name]
+      {
+        name: experiment.name,
+        displayName: pilot&.display_name,
+        endAt: experiment.end_at,
+        canLeave: !!pilot&.allow_joining_via_url,
+      }
+    end
+  end
+
   # GET /experiments/set_single_user_experiment/:experiment_name
   def set_single_user_experiment
     experiment_name = params[:experiment_name]
