@@ -64,6 +64,7 @@ VCR.configure do |c|
       User-Agent
       Host
       Content-Type
+      Amz-Sdk-Invocation-Id
     ).each {|h| i.request.headers.delete h}
     # X-Amz-Server-Side-Encryption-Aws-Kms-Key-Id contains the KMS key ARN,
     # which includes our AWS account number; cassettes are committed to a

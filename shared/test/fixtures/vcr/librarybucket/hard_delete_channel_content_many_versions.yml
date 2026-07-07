@@ -4,18 +4,16 @@ http_interactions:
     method: get
     uri: https://cdo-v3-libraries.s3.amazonaws.com/?encoding-type=url&prefix=libraries_test/1/1/&versions
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
-    headers:
-      Content-Length:
-      - '0'
+    headers: {}
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Thu, 26 Sep 2019 23:14:13 GMT
+      - Tue, 07 Jul 2026 19:15:05 GMT
       Content-Type:
       - application/xml
       Transfer-Encoding:
@@ -27,24 +25,21 @@ http_interactions:
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
         <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-libraries</Name><Prefix>libraries_test/1/1/</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
-    http_version: 
-  recorded_at: Thu, 26 Sep 2019 23:14:12 GMT
+  recorded_at: Tue, 07 Jul 2026 19:15:04 GMT
 - request:
     method: get
     uri: https://cdo-v3-libraries.s3.amazonaws.com/?encoding-type=url&prefix=libraries_test/1/1/
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
-    headers:
-      Content-Length:
-      - '0'
+    headers: {}
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Thu, 26 Sep 2019 23:14:13 GMT
+      - Tue, 07 Jul 2026 19:15:05 GMT
       X-Amz-Bucket-Region:
       - us-east-1
       Content-Type:
@@ -58,24 +53,21 @@ http_interactions:
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
         <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-libraries</Name><Prefix>libraries_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
-    http_version: 
-  recorded_at: Thu, 26 Sep 2019 23:14:12 GMT
+  recorded_at: Tue, 07 Jul 2026 19:15:04 GMT
 - request:
     method: get
     uri: https://cdo-v3-libraries.s3.amazonaws.com/?encoding-type=url&prefix=libraries_test/1/1/library.json&versions
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
-    headers:
-      Content-Length:
-      - '0'
+    headers: {}
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Thu, 26 Sep 2019 23:14:13 GMT
+      - Tue, 07 Jul 2026 19:15:06 GMT
       Content-Type:
       - application/xml
       Transfer-Encoding:
@@ -87,8 +79,7 @@ http_interactions:
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
         <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-libraries</Name><Prefix>libraries_test/1/1/library.json</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
-    http_version: 
-  recorded_at: Thu, 26 Sep 2019 23:14:12 GMT
+  recorded_at: Tue, 07 Jul 2026 19:15:05 GMT
 - request:
     method: put
     uri: https://cdo-v3-libraries.s3.amazonaws.com/libraries_test/1/1/library.json
@@ -100,8 +91,10 @@ http_interactions:
       - '0'
       Expect:
       - 100-continue
-      Content-Md5:
-      - h3/0czHPPYJaDBgWsYcuvg==
+      X-Amz-Sdk-Checksum-Algorithm:
+      - CRC32
+      X-Amz-Checksum-Crc32:
+      - rDUVJg==
       Content-Length:
       - '21'
   response:
@@ -110,13 +103,17 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 26 Sep 2019 23:14:13 GMT
+      - Tue, 07 Jul 2026 19:15:06 GMT
       X-Amz-Version-Id:
-      - hc1CBJaZOFF.H7bJQvbmjz55ruVUKoGW
+      - hcnKHxbvs2ikBW1UcDMYMmawY1uTptfq
       X-Amz-Server-Side-Encryption:
       - aws:kms
       Etag:
-      - '"5141f50431884651639350003c1f5d9c"'
+      - '"ebeedcc3c391a520c00db1e7447f8de4"'
+      X-Amz-Checksum-Crc32:
+      - rDUVJg==
+      X-Amz-Checksum-Type:
+      - FULL_OBJECT
       Content-Length:
       - '0'
       Server:
@@ -124,8 +121,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ''
-    http_version: 
-  recorded_at: Thu, 26 Sep 2019 23:14:12 GMT
+  recorded_at: Tue, 07 Jul 2026 19:15:05 GMT
 - request:
     method: put
     uri: https://cdo-v3-libraries.s3.amazonaws.com/libraries_test/1/1/library.json
@@ -137,8 +133,10 @@ http_interactions:
       - '0'
       Expect:
       - 100-continue
-      Content-Md5:
-      - WbkxE59+Q8OJT9O5Z4OMfw==
+      X-Amz-Sdk-Checksum-Algorithm:
+      - CRC32
+      X-Amz-Checksum-Crc32:
+      - DxKwDw==
       Content-Length:
       - '22'
   response:
@@ -147,13 +145,17 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 26 Sep 2019 23:14:13 GMT
+      - Tue, 07 Jul 2026 19:15:06 GMT
       X-Amz-Version-Id:
-      - gWUNtmzpRnQQ2f8S4I.OD26CVJZUmhwY
+      - 6yvkPD.x2aaWF1cJ2Wy.Gt3q9mGZPBGW
       X-Amz-Server-Side-Encryption:
       - aws:kms
       Etag:
-      - '"cdc6b47016480f8226b8dcd40282c61f"'
+      - '"a5114eb97ff3464b0b21520828204992"'
+      X-Amz-Checksum-Crc32:
+      - DxKwDw==
+      X-Amz-Checksum-Type:
+      - FULL_OBJECT
       Content-Length:
       - '0'
       Server:
@@ -161,24 +163,21 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ''
-    http_version: 
-  recorded_at: Thu, 26 Sep 2019 23:14:12 GMT
+  recorded_at: Tue, 07 Jul 2026 19:15:05 GMT
 - request:
     method: get
     uri: https://cdo-v3-libraries.s3.amazonaws.com/?encoding-type=url&prefix=libraries_test/1/1/library.json&versions
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
-    headers:
-      Content-Length:
-      - '0'
+    headers: {}
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Thu, 26 Sep 2019 23:14:13 GMT
+      - Tue, 07 Jul 2026 19:15:06 GMT
       Content-Type:
       - application/xml
       Transfer-Encoding:
@@ -189,25 +188,22 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-libraries</Name><Prefix>libraries_test/1/1/library.json</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>libraries_test/1/1/library.json</Key><VersionId>gWUNtmzpRnQQ2f8S4I.OD26CVJZUmhwY</VersionId><IsLatest>true</IsLatest><LastModified>2019-09-26T23:14:13.000Z</LastModified><ETag>&quot;cdc6b47016480f8226b8dcd40282c61f&quot;</ETag><Size>22</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version><Version><Key>libraries_test/1/1/library.json</Key><VersionId>hc1CBJaZOFF.H7bJQvbmjz55ruVUKoGW</VersionId><IsLatest>false</IsLatest><LastModified>2019-09-26T23:14:13.000Z</LastModified><ETag>&quot;5141f50431884651639350003c1f5d9c&quot;</ETag><Size>21</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
-    http_version: 
-  recorded_at: Thu, 26 Sep 2019 23:14:13 GMT
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-libraries</Name><Prefix>libraries_test/1/1/library.json</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>libraries_test/1/1/library.json</Key><VersionId>6yvkPD.x2aaWF1cJ2Wy.Gt3q9mGZPBGW</VersionId><IsLatest>true</IsLatest><LastModified>2026-07-07T19:15:06.000Z</LastModified><ETag>&quot;a5114eb97ff3464b0b21520828204992&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>22</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID></Owner><StorageClass>STANDARD</StorageClass></Version><Version><Key>libraries_test/1/1/library.json</Key><VersionId>hcnKHxbvs2ikBW1UcDMYMmawY1uTptfq</VersionId><IsLatest>false</IsLatest><LastModified>2026-07-07T19:15:06.000Z</LastModified><ETag>&quot;ebeedcc3c391a520c00db1e7447f8de4&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>21</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+  recorded_at: Tue, 07 Jul 2026 19:15:05 GMT
 - request:
     method: get
     uri: https://cdo-v3-libraries.s3.amazonaws.com/?encoding-type=url&prefix=libraries_test/1/1/&versions
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
-    headers:
-      Content-Length:
-      - '0'
+    headers: {}
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Thu, 26 Sep 2019 23:14:14 GMT
+      - Tue, 07 Jul 2026 19:15:07 GMT
       Content-Type:
       - application/xml
       Transfer-Encoding:
@@ -218,40 +214,30 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-libraries</Name><Prefix>libraries_test/1/1/</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>libraries_test/1/1/library.json</Key><VersionId>gWUNtmzpRnQQ2f8S4I.OD26CVJZUmhwY</VersionId><IsLatest>true</IsLatest><LastModified>2019-09-26T23:14:13.000Z</LastModified><ETag>&quot;cdc6b47016480f8226b8dcd40282c61f&quot;</ETag><Size>22</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version><Version><Key>libraries_test/1/1/library.json</Key><VersionId>hc1CBJaZOFF.H7bJQvbmjz55ruVUKoGW</VersionId><IsLatest>false</IsLatest><LastModified>2019-09-26T23:14:13.000Z</LastModified><ETag>&quot;5141f50431884651639350003c1f5d9c&quot;</ETag><Size>21</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID><DisplayName>site</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
-    http_version: 
-  recorded_at: Thu, 26 Sep 2019 23:14:13 GMT
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-libraries</Name><Prefix>libraries_test/1/1/</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>libraries_test/1/1/library.json</Key><VersionId>6yvkPD.x2aaWF1cJ2Wy.Gt3q9mGZPBGW</VersionId><IsLatest>true</IsLatest><LastModified>2026-07-07T19:15:06.000Z</LastModified><ETag>&quot;a5114eb97ff3464b0b21520828204992&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>22</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID></Owner><StorageClass>STANDARD</StorageClass></Version><Version><Key>libraries_test/1/1/library.json</Key><VersionId>hcnKHxbvs2ikBW1UcDMYMmawY1uTptfq</VersionId><IsLatest>false</IsLatest><LastModified>2026-07-07T19:15:06.000Z</LastModified><ETag>&quot;ebeedcc3c391a520c00db1e7447f8de4&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>21</Size><Owner><ID>cf6bd5437eaccbf2d79d5d40694e94c727ef59eb29caa52acbc32daffeb8e9e4</ID></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>
+  recorded_at: Tue, 07 Jul 2026 19:15:06 GMT
 - request:
     method: post
     uri: https://cdo-v3-libraries.s3.amazonaws.com/?delete
     body:
       encoding: UTF-8
-      string: |
-        <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
-          <Object>
-            <Key>libraries_test/1/1/library.json</Key>
-            <VersionId>gWUNtmzpRnQQ2f8S4I.OD26CVJZUmhwY</VersionId>
-          </Object>
-          <Object>
-            <Key>libraries_test/1/1/library.json</Key>
-            <VersionId>hc1CBJaZOFF.H7bJQvbmjz55ruVUKoGW</VersionId>
-          </Object>
-          <Quiet>true</Quiet>
-        </Delete>
+      string: <Delete xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Object><Key>libraries_test/1/1/library.json</Key><VersionId>6yvkPD.x2aaWF1cJ2Wy.Gt3q9mGZPBGW</VersionId></Object><Object><Key>libraries_test/1/1/library.json</Key><VersionId>hcnKHxbvs2ikBW1UcDMYMmawY1uTptfq</VersionId></Object><Quiet>true</Quiet></Delete>
     headers:
       Expect:
       - 100-continue
-      Content-Md5:
-      - XLI3zEWKTHTLm1BrGvlevA==
+      X-Amz-Sdk-Checksum-Algorithm:
+      - CRC32
+      X-Amz-Checksum-Crc32:
+      - LN7Frw==
       Content-Length:
-      - '349'
+      - '312'
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Thu, 26 Sep 2019 23:14:14 GMT
+      - Tue, 07 Jul 2026 19:15:07 GMT
       Connection:
       - close
       Content-Type:
@@ -265,24 +251,21 @@ http_interactions:
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
         <DeleteResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"></DeleteResult>
-    http_version: 
-  recorded_at: Thu, 26 Sep 2019 23:14:13 GMT
+  recorded_at: Tue, 07 Jul 2026 19:15:06 GMT
 - request:
     method: get
     uri: https://cdo-v3-libraries.s3.amazonaws.com/?encoding-type=url&prefix=libraries_test/1/1/library.json&versions
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
-    headers:
-      Content-Length:
-      - '0'
+    headers: {}
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Thu, 26 Sep 2019 23:14:14 GMT
+      - Tue, 07 Jul 2026 19:15:07 GMT
       Content-Type:
       - application/xml
       Transfer-Encoding:
@@ -294,24 +277,21 @@ http_interactions:
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
         <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-libraries</Name><Prefix>libraries_test/1/1/library.json</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
-    http_version: 
-  recorded_at: Thu, 26 Sep 2019 23:14:13 GMT
+  recorded_at: Tue, 07 Jul 2026 19:15:06 GMT
 - request:
     method: get
     uri: https://cdo-v3-libraries.s3.amazonaws.com/?encoding-type=url&prefix=libraries_test/1/1/
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
-    headers:
-      Content-Length:
-      - '0'
+    headers: {}
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Thu, 26 Sep 2019 23:14:14 GMT
+      - Tue, 07 Jul 2026 19:15:08 GMT
       X-Amz-Bucket-Region:
       - us-east-1
       Content-Type:
@@ -325,24 +305,21 @@ http_interactions:
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
         <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-libraries</Name><Prefix>libraries_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
-    http_version: 
-  recorded_at: Thu, 26 Sep 2019 23:14:13 GMT
+  recorded_at: Tue, 07 Jul 2026 19:15:07 GMT
 - request:
     method: get
     uri: https://cdo-v3-libraries.s3.amazonaws.com/?encoding-type=url&prefix=libraries_test/1/1/library.json&versions
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
-    headers:
-      Content-Length:
-      - '0'
+    headers: {}
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Thu, 26 Sep 2019 23:14:14 GMT
+      - Tue, 07 Jul 2026 19:15:08 GMT
       Content-Type:
       - application/xml
       Transfer-Encoding:
@@ -354,6 +331,5 @@ http_interactions:
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
         <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-libraries</Name><Prefix>libraries_test/1/1/library.json</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListVersionsResult>
-    http_version: 
-  recorded_at: Thu, 26 Sep 2019 23:14:13 GMT
-recorded_with: VCR 3.0.3
+  recorded_at: Tue, 07 Jul 2026 19:15:07 GMT
+recorded_with: VCR 6.2.0
