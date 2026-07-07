@@ -223,7 +223,8 @@
   // Bump each threshold up; preserve the original ~97px gap between the
   // signed-in (hide-mobile) and signed-out (show-small-desktop) variants.
   html[data-brand="codeai"] &,
-  html[data-brand="codeai-next"] & {
+  html[data-brand="codeai-next"] &,
+  html[data-brand="codeai-audit"] & {
     @media screen and (max-width: 1103px) {
       &.show-small-desktop {
         display: none !important;

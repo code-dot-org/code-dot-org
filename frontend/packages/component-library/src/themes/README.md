@@ -44,16 +44,32 @@ primitiveColors.css          Fixed base palette (theme-independent)
     colors.css               Semantic tokens that change per mode and brand
 ```
 
+Until the CodeAI brand cutover, a brand override layer sits on top
+(imported via `brandOverrides.css`, see the header comment there for the
+full picture):
+
+```
+brandLegacyShim.css          CADS token names, mapped to legacy values
+                             (so migrated code renders under legacy brands)
+brandCodeAiNext.css          CADS primitives + semantic tokens, scoped to
+                             [data-brand='codeai-next'] (generated from
+                             primitiveColors_codeAi.css + colors_codeAi.css)
+brandCodeAiNextAliases.css   Legacy token names, mapped to CADS values
+                             (so unmigrated code renders under codeai-next)
+brandCodeAiAudit.css         All-pink tokens for [data-brand='codeai-audit']
+```
+
 ### Selectors
 
-| Selector                                                                | When active              |
-| ----------------------------------------------------------------------- | ------------------------ |
-| `:root, [data-theme='Light']`                                           | Light mode (default)     |
-| `[data-theme='Dark']`                                                   | Dark mode                |
-| `[data-brand='codeai']:root, [data-brand='codeai'][data-theme='Light']` | CodeAI brand, light mode |
-| `[data-brand='codeai'][data-theme='Dark']`                              | CodeAI brand, dark mode  |
+| Selector                                                                           | When active                    |
+| ---------------------------------------------------------------------------------- | ------------------------------ |
+| `:root, [data-theme='Light']`                                                      | Light mode (default)           |
+| `[data-theme='Dark']`                                                              | Dark mode                      |
+| `[data-brand='codeai-next']:root, [data-brand='codeai-next'] [data-theme='Light']` | CodeAI (CADS) ramp, light mode |
+| `[data-brand='codeai-next'] [data-theme='Dark']`                                   | CodeAI (CADS) ramp, dark mode  |
+| `[data-brand='codeai-audit']:root, …`                                              | Pink audit ramp                |
 
-Components should use **semantic** variables (e.g. `var(--background-neutral-primary)`) instead of primitive ones. The correct value is resolved automatically based on the active `data-theme` and `data-brand` attributes.
+Components should use **semantic** variables (e.g. `var(--background-neutral-primary)`) instead of primitive ones. The correct value is resolved automatically based on the active `data-theme` and `data-brand` attributes. Note that the `code` and `codeai` brands both resolve to the legacy (colors.css) ramp; only `codeai-next` carries the CADS ramp until cutover.
 
 ---
 
@@ -96,12 +112,13 @@ document.documentElement.dataset.brand; // 'codeai' | undefined
 
 ### MUI Themes
 
-| Theme         | File                  | Description                                  |
-| ------------- | --------------------- | -------------------------------------------- |
-| `CdoTheme`    | `./code.org/index.ts` | Default Code.org theme with purple palette   |
-| `CodeaiTheme` | `./codeai/index.ts`   | Deep-merges CdoTheme, overrides palette only |
+| Theme              | File                      | Description                                           |
+| ------------------ | ------------------------- | ----------------------------------------------------- |
+| `CdoTheme`         | `./code.org/index.ts`     | Default Code.org theme                                |
+| `CodeaiTheme`      | `./codeai/index.ts`       | CADS brand-purple palette (used for `codeai-next`)    |
+| `CodeaiAuditTheme` | `./codeai-audit/index.ts` | Hot-pink palette pairing with the pink audit CSS ramp |
 
-`CodeaiTheme` inherits all typography and component style overrides from `CdoTheme` via `createTheme(CdoTheme, { palette: ... })`. Only the palette differs.
+`CodeaiTheme` and `CodeaiAuditTheme` inherit all typography and component style overrides from `CdoTheme` via `createTheme(CdoTheme, { palette: ... })`. Only the palette differs.
 
 MUI components access theme values via the standard `useTheme()` hook from `@mui/material/styles`.
 

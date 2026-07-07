@@ -99,6 +99,14 @@ class BrandTest < ActiveSupport::TestCase
     assert_equal 'logo-codeai-inverse.svg', Cdo::Brand.header_logo_filename(request)
   end
 
+  test 'codeai-audit brand resolves and reuses the codeai assets' do
+    DCDO.stubs(:get).with('brand-router-enabled', false).returns(true)
+    request = mock_request(params: {'brand' => 'codeai-audit'})
+    assert_equal Cdo::Brand::BRAND_CODEAI_AUDIT, Cdo::Brand.current_brand_code(request)
+    assert_equal 'CodeAI', Cdo::Brand.legal_name(request)
+    assert_equal 'logo-codeai-inverse.svg', Cdo::Brand.header_logo_filename(request)
+  end
+
   private def mock_request(params: {}, cookies: {})
     request = stub('request')
     request.stubs(:params).returns(params.with_indifferent_access)

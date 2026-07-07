@@ -17,14 +17,19 @@ module Cdo
   class Brand
     # Brand code enum
     #
-    # BRAND_CODE_ORG    Legacy Code.org branding. Default fallback.
-    # BRAND_CODEAI      Launch-ready CodeAI branding. Slated to become default
-    #                   at cutover via the 'default-brand' DCDO key.
-    # BRAND_CODEAI_NEXT Parking lot for in-flight CodeAI branding changes that
-    #                   are not yet ready to launch.
+    # BRAND_CODE_ORG     Legacy Code.org branding. Default fallback.
+    # BRAND_CODEAI       Launch-ready CodeAI branding. Slated to become default
+    #                    at cutover via the 'default-brand' DCDO key.
+    # BRAND_CODEAI_NEXT  Parking lot for in-flight CodeAI branding changes that
+    #                    are not yet ready to launch. Carries the CADS color
+    #                    ramp (component-library-styles/brandCodeAiNext.css).
+    # BRAND_CODEAI_AUDIT Visual auditing tool: every DSCO semantic token
+    #                    renders pink (brandCodeAiAudit.css) so surfaces that
+    #                    bypass the token system stand out. Never a default.
     BRAND_CODE_ORG = 'code'.freeze
     BRAND_CODEAI = 'codeai'.freeze
     BRAND_CODEAI_NEXT = 'codeai-next'.freeze
+    BRAND_CODEAI_AUDIT = 'codeai-audit'.freeze
 
     # Base cookie name for brand persistence (env suffix added by environment_specific_cookie_name)
     BRAND_COOKIE_NAME = 'brand'.freeze
@@ -52,6 +57,15 @@ module Cdo
         trademark_html: '&copy; CodeAI, %{current_year}. CodeAI&reg;, the CODE logo, Hour of Code&reg; and CS Discoveries&reg; are trademarks of CodeAI.'
       },
       BRAND_CODEAI_NEXT => {
+        logo_filename: 'logo-codeai.svg',
+        header_logo_filename: 'logo-codeai-inverse.svg',
+        logo_alt_key: :codeai_logo_alt,
+        favicon: 'favicon-codeai.ico',
+        favicon_svg: 'favicon-codeai.svg',
+        legal_name: 'CodeAI',
+        trademark_html: '&copy; CodeAI, %{current_year}. CodeAI&reg;, the CODE logo, Hour of Code&reg; and CS Discoveries&reg; are trademarks of CodeAI.'
+      },
+      BRAND_CODEAI_AUDIT => {
         logo_filename: 'logo-codeai.svg',
         header_logo_filename: 'logo-codeai-inverse.svg',
         logo_alt_key: :codeai_logo_alt,

@@ -1,0 +1,186 @@
+/* CADS token names under the legacy brands.
+ *
+ * Code migrated to the CADS token schema (colors_codeAi.css) before the
+ * brand cutover must still render under the legacy brands ('code',
+ * 'codeai'), where only the colors.css tokens exist. This file defines
+ * every CADS-only token name in terms of its nearest legacy equivalent.
+ * CADS names that also exist in the legacy schema (most neutrals and
+ * sentiment primaries) are already defined by colors.css and are not
+ * listed.
+ *
+ * This is a best-effort visual bridge, not a design statement:
+ *   - the CADS brand family maps to legacy teal (the legacy brand
+ *     primary); CADS light/mid map to legacy extra-light/light;
+ *   - all CADS disabled-<family> tokens collapse onto the single legacy
+ *     neutral disabled tokens;
+ *   - selected-* and accent mids have no legacy semantic equivalent and
+ *     point at legacy primitives (theme-fixed, commented below);
+ *   - accent-pink maps to legacy strawberry.
+ *
+ * Rows that reference legacy SEMANTIC tokens follow Light/Dark
+ * automatically; rows that reference legacy primitives do not, which is
+ * acceptable for a pre-cutover shim (dark mode ships with the CADS
+ * schema, not the legacy one).
+ *
+ * Under [data-brand='codeai-next'] every one of these names is
+ * re-declared at higher specificity by brandCodeAiNext.css, so this file
+ * is inert there. Delete this file at brand cutover cleanup.
+ *
+ * The [data-theme] selectors exist because custom properties substitute
+ * their var() chains on the declaring element and inherit as resolved
+ * values: without re-declaration on theme-carrying elements, a dark
+ * subtree would inherit light-resolved values from <html>.
+ */
+
+:root,
+[data-theme='Light'],
+[data-theme='Dark'] {
+  /* Backgrounds — alpha scale (dark overrides below) */
+  --background-neutral-alpha-5: var(--neutral-black-alpha-5);
+  --background-neutral-alpha-10: var(--neutral-black-alpha-10);
+  --background-neutral-alpha-20: var(--neutral-black-alpha-20);
+  --background-neutral-alpha-30: var(--neutral-black-alpha-30);
+  --background-neutral-alpha-40: var(--neutral-black-alpha-40);
+  --background-neutral-alpha-50: var(--neutral-black-alpha-50);
+  --background-neutral-alpha-60: var(--neutral-black-alpha-60);
+  --background-neutral-alpha-70: var(--neutral-black-alpha-70);
+  --background-neutral-alpha-80: var(--neutral-black-alpha-80);
+  --background-neutral-alpha-90: var(--neutral-black-alpha-90);
+  --background-neutral-alpha-95: var(--neutral-black-alpha-95);
+
+  /* Backgrounds — brand (legacy brand primary is teal) */
+  --background-brand-primary: var(--background-brand-teal-primary);
+  --background-brand-light: var(--background-brand-teal-extra-light);
+  --background-brand-mid: var(--background-brand-teal-light);
+  --background-brand-strong: var(--background-brand-teal-strong);
+
+  /* Backgrounds — sentiment mid steps (legacy called this step light) */
+  --background-error-mid: var(--background-error-light);
+  --background-warning-mid: var(--background-warning-light);
+  --background-success-mid: var(--background-success-light);
+  --background-info-mid: var(--background-info-light);
+
+  /* Backgrounds — selected state (no legacy equivalent; teal fill) */
+  --background-selected-primary: var(--background-brand-teal-strong);
+  --background-selected-hover: var(
+    --brand-teal-80
+  ); /* primitive: theme-fixed */
+
+  /* Backgrounds — disabled family collapses onto legacy neutral disabled */
+  --background-disabled-brand: var(--background-neutral-disabled);
+  --background-disabled-error: var(--background-neutral-disabled);
+  --background-disabled-info: var(--background-neutral-disabled);
+  --background-disabled-neutral: var(--background-neutral-disabled);
+  --background-disabled-orange: var(--background-neutral-disabled);
+  --background-disabled-pink: var(--background-neutral-disabled);
+  --background-disabled-success: var(--background-neutral-disabled);
+  --background-disabled-warning: var(--background-neutral-disabled);
+
+  /* Backgrounds — accents (pink maps to legacy strawberry) */
+  --background-accent-orange-mid: var(
+    --accent-orange-30
+  ); /* primitive: theme-fixed */
+
+  --background-accent-pink-primary: var(--background-accent-strawberry-primary);
+  --background-accent-pink-light: var(--background-accent-strawberry-light);
+  --background-accent-pink-mid: var(
+    --accent-strawberry-30
+  ); /* primitive: theme-fixed */
+
+  --background-accent-pink-strong: var(--background-accent-strawberry-strong);
+
+  /* Borders — CADS drops the plural */
+  --border-neutral-primary: var(--borders-neutral-primary);
+  --border-neutral-secondary: var(--borders-neutral-strong);
+  --border-neutral-solid: var(--borders-neutral-solid);
+  --border-brand-primary: var(--borders-brand-teal-primary);
+  --border-brand-light: var(--borders-brand-teal-light);
+  --border-brand-mid: var(--brand-teal-20); /* primitive: theme-fixed */
+  --border-brand-strong: var(--borders-brand-teal-strong);
+  --border-error-primary: var(--borders-error-primary);
+  --border-error-light: var(--borders-error-light);
+  --border-error-mid: var(--sentiment-error-30); /* primitive: theme-fixed */
+  --border-error-strong: var(--borders-error-strong);
+  --border-warning-primary: var(--borders-warning-primary);
+  --border-warning-light: var(--borders-warning-light);
+  --border-warning-mid: var(
+    --sentiment-warning-30
+  ); /* primitive: theme-fixed */
+
+  --border-warning-strong: var(--borders-warning-strong);
+  --border-success-primary: var(--borders-success-primary);
+  --border-success-light: var(--borders-success-light);
+  --border-success-mid: var(
+    --sentiment-success-30
+  ); /* primitive: theme-fixed */
+
+  --border-success-strong: var(--borders-success-strong);
+  --border-info-primary: var(--borders-info-primary);
+  --border-info-light: var(--borders-info-light);
+  --border-info-mid: var(
+    --sentiment-information-30
+  ); /* primitive: theme-fixed */
+
+  --border-info-strong: var(--borders-info-strong);
+  --border-selected-primary: var(--borders-brand-teal-strong);
+  --border-selected-hover: var(--brand-teal-80); /* primitive: theme-fixed */
+  --border-disabled-brand: var(--borders-neutral-disabled);
+  --border-disabled-error: var(--borders-neutral-disabled);
+  --border-disabled-info: var(--borders-neutral-disabled);
+  --border-disabled-neutral: var(--borders-neutral-disabled);
+  --border-disabled-orange: var(--borders-neutral-disabled);
+  --border-disabled-pink: var(--borders-neutral-disabled);
+  --border-disabled-success: var(--borders-neutral-disabled);
+  --border-disabled-warning: var(--borders-neutral-disabled);
+
+  /* Accent borders mirror the CADS ramp steps on legacy primitives
+     (theme-fixed); legacy had no semantic accent borders. */
+  --border-accent-orange-primary: var(--accent-orange-50);
+  --border-accent-orange-light: var(--accent-orange-30);
+  --border-accent-orange-mid: var(--accent-orange-30);
+  --border-accent-orange-strong: var(--accent-orange-70);
+  --border-accent-pink-primary: var(--accent-strawberry-50);
+  --border-accent-pink-light: var(--accent-strawberry-30);
+  --border-accent-pink-mid: var(--accent-strawberry-30);
+  --border-accent-pink-strong: var(--accent-strawberry-70);
+
+  /* Text */
+  --text-neutral-primary-inverse: var(--text-neutral-inverse);
+  --text-brand-primary: var(--text-brand-teal-primary);
+  --text-brand-secondary: var(--text-brand-teal-secondary);
+  --text-brand-primary-fixed: var(--text-brand-teal-primary-fixed);
+  --text-selected-primary: var(--text-neutral-inverse);
+  --text-disabled-brand: var(--text-neutral-disabled);
+  --text-disabled-error: var(--text-neutral-disabled);
+  --text-disabled-info: var(--text-neutral-disabled);
+  --text-disabled-neutral: var(--text-neutral-disabled);
+  --text-disabled-neutral-inverse: var(--text-neutral-disabled-inverse);
+  --text-disabled-orange: var(--text-neutral-disabled);
+  --text-disabled-pink: var(--text-neutral-disabled);
+  --text-disabled-success: var(--text-neutral-disabled);
+  --text-disabled-warning: var(--text-neutral-disabled);
+
+  /* Accent text on legacy primitives (theme-fixed); orange sits at the
+     60 step, the darkest orange in legacy text use. */
+  --text-accent-orange-primary: var(--accent-orange-60);
+  --text-accent-orange-strong: var(--accent-orange-80);
+  --text-accent-orange-primary-fixed: var(--accent-orange-60);
+  --text-accent-pink-primary: var(--accent-strawberry-50);
+  --text-accent-pink-strong: var(--accent-strawberry-70);
+  --text-accent-pink-primary-fixed: var(--accent-strawberry-50);
+}
+
+/* Dark: the alpha scale flips to white, mirroring the CADS dark block. */
+[data-theme='Dark'] {
+  --background-neutral-alpha-5: var(--neutral-white-alpha-5);
+  --background-neutral-alpha-10: var(--neutral-white-alpha-10);
+  --background-neutral-alpha-20: var(--neutral-white-alpha-20);
+  --background-neutral-alpha-30: var(--neutral-white-alpha-30);
+  --background-neutral-alpha-40: var(--neutral-white-alpha-40);
+  --background-neutral-alpha-50: var(--neutral-white-alpha-50);
+  --background-neutral-alpha-60: var(--neutral-white-alpha-60);
+  --background-neutral-alpha-70: var(--neutral-white-alpha-70);
+  --background-neutral-alpha-80: var(--neutral-white-alpha-80);
+  --background-neutral-alpha-90: var(--neutral-white-alpha-90);
+  --background-neutral-alpha-95: var(--neutral-white-alpha-95);
+}
