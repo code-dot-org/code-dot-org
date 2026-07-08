@@ -6,15 +6,18 @@
   section {
     margin-top: 2rem;
   }
-}
 
-.description {
-  color: var(--text-neutral-secondary);
-}
+  .description {
+    color: var(--text-neutral-secondary);
+  }
 
-.emptyState {
-  color: var(--text-neutral-secondary);
-  font-style: italic;
+  // outranks MuiTypography-root's margin: 0, which is injected later and
+  // would win at equal specificity
+  .emptyState {
+    margin-top: 1rem;
+    color: var(--text-neutral-secondary);
+    font-style: italic;
+  }
 }
 
 .table {
