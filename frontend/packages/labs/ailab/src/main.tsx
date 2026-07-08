@@ -1,4 +1,3 @@
-import './setAssetPathDev';
 import queryString from 'query-string';
 
 import type {ModelDataToSave, SaveResponse} from './types';
@@ -144,6 +143,7 @@ function setInstructionsKeyStub(
 
 // Initialize the app.
 initAll({
+  assetPath: './',
   mode: mode,
   onContinue: onContinueStub,
   saveTrainedModel: saveTrainedModelStub,

@@ -28,6 +28,7 @@ import {
   findNearestHandleInRadius,
   snapAnchorIfNearby,
 } from '../utils/handleSnap';
+import {isTargetEditable} from '../utils/isTargetEditable';
 import {
   anchorHandleFlowPosition,
   attachEdgeToFreshAnchor,
@@ -79,18 +80,6 @@ function resizeNodeByDelta(
 }
 
 /**
- * Returns true if `target` is a context where text editing/typing is the
- * primary purpose — input, textarea, or contentEditable.
- */
-function isTargetEditable(target: HTMLElement): boolean {
-  return (
-    target.isContentEditable ||
-    target.tagName === 'INPUT' ||
-    target.tagName === 'TEXTAREA'
-  );
-}
-
-/**
  * Read a single-step arrow-key delta. Returns zeros for non-arrow keys.
  */
 function getArrowDelta(key: string) {
@@ -122,7 +111,6 @@ interface UseKeyboardNavigationOptions {
   openToolbar: (entry: TabOrderEntry, options?: {trapFocus?: boolean}) => void;
   copyEntry: (entry: TabOrderEntry) => void;
   cutEntry: (entry: TabOrderEntry) => void;
-  paste: () => void;
   undo: () => void;
   redo: () => void;
   pushSnapshot: () => void;
@@ -181,7 +169,6 @@ export function useKeyboardNavigation({
   openToolbar,
   copyEntry,
   cutEntry,
-  paste,
   undo,
   redo,
   pushSnapshot,
@@ -314,7 +301,8 @@ export function useKeyboardNavigation({
       const entry = focusedEntry ?? lastFocusedEntry;
       if (!entry) return false;
       copyEntry(entry);
-      event.preventDefault();
+      // Don't preventDefault: the keydown's default copy command is what fires
+      // the native 'copy' event that useCopyPaste uses to stamp its marker.
       event.stopPropagation();
       return true;
     },
@@ -336,23 +324,12 @@ export function useKeyboardNavigation({
         }
       }
       cutEntry(entry);
-      event.preventDefault();
+      // Don't preventDefault: the keydown's default cut command is what fires
+      // the native 'cut' event that useCopyPaste uses to stamp its marker.
       event.stopPropagation();
       return true;
     },
     [cutEntry, getNode, lastFocusedEntry]
-  );
-
-  const handlePaste = useCallback(
-    (keyContext: KeyContext): boolean => {
-      const {event} = keyContext;
-      if (event.key !== 'v' || !(event.ctrlKey || event.metaKey)) return false;
-      paste();
-      event.preventDefault();
-      event.stopPropagation();
-      return true;
-    },
-    [paste]
   );
 
   // Undo: Ctrl/Cmd+Z.
@@ -809,7 +786,6 @@ export function useKeyboardNavigation({
 
       if (handleCopy(keyContext)) return;
       if (handleCut(keyContext)) return;
-      if (handlePaste(keyContext)) return;
       if (handleUndo(keyContext)) return;
       if (handleRedo(keyContext)) return;
 
@@ -846,7 +822,6 @@ export function useKeyboardNavigation({
       handleGroupModeKey,
       handleCopy,
       handleCut,
-      handlePaste,
       handleUndo,
       handleRedo,
       handleOpenToolbar,

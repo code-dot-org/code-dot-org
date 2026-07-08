@@ -27,9 +27,9 @@ test.describe('Signing in', () => {
     await signIn.submit();
 
     await waitForHomeUrl(page, 'student');
-    await expect(signIn.headerUserMenu).toBeVisible();
-    await expect(signIn.displayName).toBeVisible();
-    await expect(signIn.displayName).toContainText(name);
+    await expect(signIn.header.userMenu).toBeVisible();
+    await expect(signIn.header.displayName).toBeVisible();
+    await expect(signIn.header.displayName).toContainText(name);
   });
 
   test('Student sign in from studio.code.org in the eu', async ({page}) => {
@@ -47,9 +47,9 @@ test.describe('Signing in', () => {
     await signIn.submit();
 
     await waitForHomeUrl(page, 'student');
-    await expect(signIn.headerUserMenu).toBeVisible();
-    await expect(signIn.displayName).toBeVisible();
-    await expect(signIn.displayName).toContainText(name);
+    await expect(signIn.header.userMenu).toBeVisible();
+    await expect(signIn.header.displayName).toBeVisible();
+    await expect(signIn.header.displayName).toContainText(name);
   });
 
   test('Teacher sign in from studio.code.org', async ({
@@ -71,9 +71,9 @@ test.describe('Signing in', () => {
     await signIn.submit();
 
     await waitForHomeUrl(page, 'teacher');
-    await expect(signIn.headerUserMenu).toBeVisible();
-    await expect(signIn.displayName).toBeVisible();
-    await expect(signIn.displayName).toContainText(name);
+    await expect(signIn.header.userMenu).toBeVisible();
+    await expect(signIn.header.displayName).toBeVisible();
+    await expect(signIn.header.displayName).toContainText(name);
   });
 
   test('Signed-out joining non-picture non-word section from sign in page goes to link account page', async ({

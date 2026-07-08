@@ -70,6 +70,8 @@ export default function CurriculumQuickAssign({
   const [marketingAudience, setMarketingAudience] = useState('');
   const [selectedCourseOffering, setSelectedCourseOffering] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  const [isSelectionAvailableInLocale, setIsSelectionAvailableInLocale] =
+    useState(true);
 
   const participantType = isNewSection
     ? queryParams('participantType')
@@ -111,6 +113,12 @@ export default function CurriculumQuickAssign({
             .filter(Boolean)
         );
 
+        let selectionAvailableInLocale = false;
+        const matchesLocale = versionInfo =>
+          filterLocales.some(locale =>
+            versionInfo.locale_codes.includes(locale)
+          );
+
         // Crawl data and remove any courses / versions that are not available
         // in the requested language.
         for (const levelInfo of Object.values(data)) {
@@ -123,10 +131,16 @@ export default function CurriculumQuickAssign({
               for (const courseInfo of categoryInfo) {
                 // These will be the course info blocks which are a tuple of the id and then metadata.
                 courseInfo.course_versions = courseInfo.course_versions.filter(
-                  ([_, versionInfo]) =>
-                    filterLocales.some(locale =>
-                      versionInfo.locale_codes.includes(locale)
-                    )
+                  ([_, versionInfo]) => {
+                    const inLocale = matchesLocale(versionInfo);
+                    if (versionInfo.id === sectionCourse?.versionId) {
+                      selectionAvailableInLocale = inLocale;
+                      // Always keep the version already assigned to this
+                      // section, even if it isn't offered in the language.
+                      return true;
+                    }
+                    return inLocale;
+                  }
                 );
               }
 
@@ -143,11 +157,16 @@ export default function CurriculumQuickAssign({
                 for (const courseInfo of unitGroupInfo) {
                   // These will be the course info blocks which are a tuple of the id and then metadata.
                   courseInfo.course_versions =
-                    courseInfo.course_versions.filter(([_, versionInfo]) =>
-                      filterLocales.some(locale =>
-                        versionInfo.locale_codes.includes(locale)
-                      )
-                    );
+                    courseInfo.course_versions.filter(([_, versionInfo]) => {
+                      const inLocale = matchesLocale(versionInfo);
+                      if (versionInfo.id === sectionCourse?.versionId) {
+                        selectionAvailableInLocale = inLocale;
+                        // Keep the section's currently assigned version even if
+                        // it isn't offered in the requested language.
+                        return true;
+                      }
+                      return inLocale;
+                    });
                 }
 
                 // Truncate any courses within the unit that aren't matching our filter
@@ -162,6 +181,11 @@ export default function CurriculumQuickAssign({
             }
           }
         }
+
+        setIsSelectionAvailableInLocale(selectionAvailableInLocale);
+      } else {
+        // No locale filter active, so the selection is trivially available.
+        setIsSelectionAvailableInLocale(true);
       }
 
       return data;
@@ -173,6 +197,7 @@ export default function CurriculumQuickAssign({
     locale,
     courseFilters?.currentLocale,
     courseFilters?.language,
+    sectionCourse?.versionId,
   ]);
 
   const getCoursesForAudience = useCallback(
@@ -264,7 +289,7 @@ export default function CurriculumQuickAssign({
       const courseVersionId = sectionCourse.versionId;
       const courseVersion = courseVersions[courseVersionId];
 
-      let targetUnit = courseVersion.units[sectionCourse.unitId];
+      const targetUnit = courseVersion?.units[sectionCourse.unitId];
 
       const updateSectionData = {
         displayName: course.display_name,
@@ -365,6 +390,7 @@ export default function CurriculumQuickAssign({
               }}
               sectionCourse={sectionCourse}
               isNewSection={isNewSection}
+              selectedCourseUnavailable={!isSelectionAvailableInLocale}
             />
           )}
           {marketingAudience && (

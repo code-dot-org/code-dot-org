@@ -1,21 +1,23 @@
+import Link from '@code-dot-org/component-library/link';
+import Modal from '@code-dot-org/component-library/modal';
+import RadioButton from '@code-dot-org/component-library/radioButton';
+import TextField from '@code-dot-org/component-library/textField';
+import {Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import i18n from '@cdo/locale';
 
 import {pegasus} from '../lib/util/urlHelpers';
-import {
-  Field,
-  Header,
-  ConfirmCancelFooter,
-} from '../sharedComponents/SystemDialog/SystemDialog';
-import BaseDialog from '../templates/BaseDialog';
-import color from '../util/color';
 import {isEmail} from '../util/formatValidation';
+
+import styles from './add-parent-email-modal.module.scss';
 
 const STATE_INITIAL = 'initial';
 const STATE_SAVING = 'saving';
 const STATE_UNKNOWN_ERROR = 'unknown-error';
+
+const PARENT_EMAIL_SELECTOR = 'input[name="parentEmail"]';
 
 export default class AddParentEmailModal extends React.Component {
   static propTypes = {
@@ -49,10 +51,16 @@ export default class AddParentEmailModal extends React.Component {
     };
   }
 
+  // The DSCO TextField is a function component and does not forward a ref to
+  // its <input>, so we reach the parent-email node by its name attribute
+  // through the modal content root (not by field order). A content-scoped
+  // querySelector keeps focus working under enzyme's detached mount.
   focusOnError() {
     const {errors} = this.state;
     if (errors.parentEmail) {
-      this.parentEmailInput.focus();
+      const emailInput =
+        this.content && this.content.querySelector(PARENT_EMAIL_SELECTOR);
+      emailInput && emailInput.focus();
     }
   }
 
@@ -69,6 +77,21 @@ export default class AddParentEmailModal extends React.Component {
   };
 
   cancel = () => this.props.handleCancel();
+
+  // Submit on Enter from either email field; save() no-ops when invalid.
+  onKeyDown = event => {
+    if (event.key === 'Enter') {
+      this.save();
+    }
+  };
+
+  // The DSCO Modal close affordances (X button, Esc) route here; ignore them
+  // while a save is in flight, matching the old BaseDialog `uncloseable` prop.
+  handleClose = () => {
+    if (this.state.saveState !== STATE_SAVING) {
+      this.cancel();
+    }
+  };
 
   onSubmitFailure = error => {
     if (error && Object.prototype.hasOwnProperty.call(error, 'serverErrors')) {
@@ -146,156 +169,100 @@ export default class AddParentEmailModal extends React.Component {
     const isFormValid = this.isFormValid(validationErrors);
     const saving = saveState === STATE_SAVING;
     return (
-      <BaseDialog
-        useUpdatedStyles
-        isOpen
-        handleClose={this.cancel}
-        uncloseable={STATE_SAVING === saveState}
-      >
-        <div style={styles.container}>
-          <div>
-            <Header text={i18n.addParentEmailModal_title()} hideBorder={true} />
-            {i18n.addParentEmailModal_subtitle()}
-            <hr />
-          </div>
-          <Field
-            label={i18n.addParentEmailModal_parentEmail_label()}
-            error={validationErrors.parentEmail}
-          >
-            <input
-              type="email"
+      <Modal
+        title={i18n.addParentEmailModal_title()}
+        description={i18n.addParentEmailModal_subtitle()}
+        onClose={this.handleClose}
+        closeLabel={i18n.closeDialog()}
+        customContent={
+          <div ref={el => (this.content = el)} className={styles.form}>
+            <TextField
+              name="parentEmail"
+              inputType="email"
+              label={i18n.addParentEmailModal_parentEmail_label()}
+              errorMessage={validationErrors.parentEmail}
               value={values.parentEmail}
-              disabled={saving}
-              onKeyDown={this.onKeyDown}
               onChange={this.onParentEmailChange}
-              autoComplete="off"
-              maxLength="255"
-              size="255"
-              style={styles.input}
-              ref={el => (this.parentEmailInput = el)}
-            />
-          </Field>
-          <Field
-            label={i18n.addParentEmailModal_confirmedParentEmail_label()}
-            error={validationErrors.confirmedParentEmail}
-          >
-            <input
-              type="email"
-              value={values.confirmedParentEmail}
-              disabled={saving}
               onKeyDown={this.onKeyDown}
-              onChange={this.onConfirmedParentEmailChange}
+              disabled={saving}
               autoComplete="off"
-              maxLength="255"
-              size="255"
-              style={styles.input}
-              ref={el => (this.confirmedParentEmailInput = el)}
+              maxLength={255}
             />
-          </Field>
-          <div style={styles.parentOptInSection}>
-            <div style={styles.parentEmailOptInHeading}>
-              <b>{i18n.addParentEmailModal_emailOptIn_label()}</b>
-              <br /> {i18n.addParentEmailModal_emailOptIn_sublabel()}
-            </div>
-            <div style={styles.parentEmailOptInInput}>
-              <label style={styles.label}>
-                {i18n.addParentEmailModal_emailOptIn_description()}{' '}
-                <a href={pegasus('/privacy')}>
-                  {i18n.changeEmailModal_emailOptIn_privacyPolicy()}
-                </a>
-              </label>
-              <div style={styles.radioSelectors}>
-                <div style={styles.radioButton}>
-                  <input
-                    type="radio"
-                    id="yes"
-                    value={'yes'}
-                    disabled={saving}
-                    checked={values['parentEmailOptIn'] === 'yes'}
+            <TextField
+              name="confirmedParentEmail"
+              inputType="email"
+              label={i18n.addParentEmailModal_confirmedParentEmail_label()}
+              errorMessage={validationErrors.confirmedParentEmail}
+              value={values.confirmedParentEmail}
+              onChange={this.onConfirmedParentEmailChange}
+              onKeyDown={this.onKeyDown}
+              disabled={saving}
+              autoComplete="off"
+              maxLength={255}
+            />
+            <fieldset className={styles.optInSection}>
+              <div className={styles.optInHeading}>
+                <MuiTypography variant="body2" component="div">
+                  <strong>{i18n.addParentEmailModal_emailOptIn_label()}</strong>
+                </MuiTypography>
+                <MuiTypography variant="body3" component="div">
+                  {i18n.addParentEmailModal_emailOptIn_sublabel()}
+                </MuiTypography>
+              </div>
+              <div className={styles.optInBody}>
+                <MuiTypography
+                  variant="body2"
+                  component="div"
+                  className={styles.optInDescription}
+                >
+                  {i18n.addParentEmailModal_emailOptIn_description()}{' '}
+                  <Link href={pegasus('/privacy')} openInNewTab>
+                    {i18n.changeEmailModal_emailOptIn_privacyPolicy()}
+                  </Link>
+                </MuiTypography>
+                <div className={styles.radioGroup}>
+                  <RadioButton
+                    name="parentEmailOptIn"
+                    value="yes"
+                    label={i18n.yes()}
+                    checked={values.parentEmailOptIn === 'yes'}
                     onChange={this.onEmailOptInChange}
-                    style={styles.radio}
-                  />
-                  <label htmlFor="yes" style={styles.label}>
-                    {i18n.yes()}
-                  </label>
-                </div>
-                <div style={styles.radioButton}>
-                  <input
-                    type="radio"
-                    id="no"
-                    value={'no'}
                     disabled={saving}
-                    checked={values['parentEmailOptIn'] === 'no'}
-                    onChange={this.onEmailOptInChange}
-                    style={styles.radio}
                   />
-                  <label htmlFor="no" style={styles.label}>
-                    {i18n.no()}
-                  </label>
+                  <RadioButton
+                    name="parentEmailOptIn"
+                    value="no"
+                    label={i18n.no()}
+                    checked={values.parentEmailOptIn === 'no'}
+                    onChange={this.onEmailOptInChange}
+                    disabled={saving}
+                  />
                 </div>
               </div>
-            </div>
+            </fieldset>
           </div>
-          <ConfirmCancelFooter
-            confirmText={i18n.addParentEmailModal_save()}
-            onConfirm={this.save}
-            onCancel={this.cancel}
-            disableConfirm={saving || !isFormValid}
-            disableCancel={saving}
-          >
-            {saving && <em>{i18n.saving()}</em>}
-            {STATE_UNKNOWN_ERROR === saveState && (
-              <em>{i18n.changeEmailModal_unexpectedError()}</em>
-            )}
-          </ConfirmCancelFooter>
-        </div>
-      </BaseDialog>
+        }
+        primaryButtonProps={{
+          children: i18n.addParentEmailModal_save(),
+          onClick: this.save,
+          disabled: saving || !isFormValid,
+        }}
+        secondaryButtonProps={{
+          children: i18n.cancel(),
+          onClick: this.cancel,
+          disabled: saving,
+        }}
+        customBottomContent={
+          (saving || STATE_UNKNOWN_ERROR === saveState) && (
+            <div className={styles.status}>
+              {saving && <em>{i18n.saving()}</em>}
+              {STATE_UNKNOWN_ERROR === saveState && (
+                <em>{i18n.changeEmailModal_unexpectedError()}</em>
+              )}
+            </div>
+          )
+        }
+      />
     );
   };
 }
-
-const styles = {
-  container: {
-    margin: 20,
-    color: color.charcoal,
-  },
-  parentOptInSection: {
-    border: '1px solid',
-    borderColor: color.charcoal,
-    backgroundColor: color.background_gray,
-    padding: '10px',
-  },
-  parentEmailOptInHeading: {
-    borderColor: color.charcoal,
-    borderTopWidth: 0,
-    borderBottomWidth: 1,
-    borderRightWidth: 0,
-    borderLeftWidth: 0,
-    borderStyle: 'solid',
-    paddingBottom: 10,
-  },
-  parentEmailOptInInput: {
-    display: 'flex',
-    flexDirection: 'row',
-    paddingTop: 10,
-  },
-  radioSelectors: {
-    paddingLeft: 10,
-    paddingRight: 10,
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-  },
-  radioButton: {
-    display: 'flex',
-    justifyContent: 'space-between',
-  },
-  label: {
-    margin: 'auto',
-  },
-  radio: {
-    height: 12,
-    width: 12,
-    margin: 4,
-  },
-};
