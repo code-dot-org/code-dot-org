@@ -306,7 +306,16 @@ const SpriteLab2View: React.FunctionComponent<{
       skipFirstAnimationSave.current = false;
       return;
     }
-    mergeSources({animations: getSerializedAnimationList(animationListState)});
+    // Serialize from the LIVE store, not this commit's snapshot.
+    // compileExternalScene transiently merges a classmate's animations into
+    // the store (merge -> compile -> restore, synchronously), but the merge
+    // commit's passive effect runs after the restore — saving its snapshot
+    // would leak the classmate's costumes into this project's sources.
+    mergeSources({
+      animations: getSerializedAnimationList(
+        getStore().getState().animationList
+      ),
+    });
   }, [animationListState, mergeSources]);
 
   // Run the current program as the live preview. The engine reuses its p5
