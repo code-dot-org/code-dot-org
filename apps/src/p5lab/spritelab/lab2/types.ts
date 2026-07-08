@@ -1,5 +1,3 @@
-import * as BlocklyCore from 'blockly/core';
-
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 
 import {BlocklyLevelProperties, ProjectSources} from '../../../lab2/types';
@@ -65,8 +63,6 @@ export interface SpriteLab2Scene {
 
 // The single ProjectSources.source JSON for a SpriteLab2 project.
 export interface SpriteLab2Source extends ProjectSources {
-  // Code tab Blockly workspace serialization.
-  toolboxDefinition?: BlocklyCore.utils.toolbox.ToolboxInfo;
   // Sprite Lab costumes + backgrounds, classic serialized animationList shape.
   animations?: SerializedAnimationList;
   // Scenes UI variant: per-scene code workspaces. When present, `source`

@@ -39,10 +39,7 @@ interface CodeTabProps {
   sharedBlocks?: BlockDefinition[];
   theme: 'Light' | 'Dark';
   // Persist serialized workspace changes back to project sources.
-  onSourceChange: (
-    source: WorkspaceSerialization,
-    toolbox?: BlocklyCore.utils.toolbox.ToolboxInfo
-  ) => void;
+  onSourceChange: (source: WorkspaceSerialization) => void;
   // Mark the project as edited (first user change).
   onEdit: () => void;
   // Fired on intermediate field edits (e.g. painting pixels in the grid
@@ -93,7 +90,7 @@ const CodeTab = forwardRef<CodeTabHandle, CodeTabProps>(
           const serialized = Blockly.serialization.workspaces.save(
             workspace.current
           ) as WorkspaceSerialization;
-          onSourceChangeRef.current(serialized, toolboxDefinition);
+          onSourceChangeRef.current(serialized);
           onEditRef.current();
         }
       },
@@ -206,7 +203,7 @@ const CodeTab = forwardRef<CodeTabHandle, CodeTabProps>(
         const source = Blockly.serialization.workspaces.save(
           workspace.current
         ) as WorkspaceSerialization;
-        onSourceChangeRef.current(source, toolboxDefinition);
+        onSourceChangeRef.current(source);
         onEditRef.current();
       };
 

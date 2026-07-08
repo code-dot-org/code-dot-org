@@ -582,10 +582,7 @@ const SpriteLab2View: React.FunctionComponent<{
   }, [activeTab, engineReady, runScene]);
 
   const handleSourceChange = useCallback(
-    (
-      source: WorkspaceSerialization,
-      toolbox?: SpriteLab2Source['toolboxDefinition']
-    ) => {
+    (source: WorkspaceSerialization) => {
       if (SCENES_UI_VARIANT) {
         // The workspace edits the active scene. Mirror scenes[0] into the
         // legacy `source` field so the project still opens with the variant
@@ -596,10 +593,9 @@ const SpriteLab2View: React.FunctionComponent<{
         mergeSources({
           scenes: scenesRef.current,
           source: scenesRef.current[0]?.source,
-          toolboxDefinition: toolbox,
         });
       } else {
-        mergeSources({source, toolboxDefinition: toolbox});
+        mergeSources({source});
       }
       // Keep the live preview in sync with the edited code.
       scheduleRun();
