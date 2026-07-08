@@ -86,9 +86,42 @@ export default async function askSpriteLabAi(
     aichatContext
   );
 
-  // The model's reply is the last non-user message.
+  // The model's reply is the last non-user message. A moderated request
+  // (aichat's student-safety filters) comes back with NO assistant message
+  // and the verdict on the user message's status — surface that as an error
+  // instead of handing the parser an empty string.
   const reply = [...messages]
     .reverse()
     .find(message => message.role !== Role.USER);
-  return reply?.chatMessageText ?? '';
+  if (!reply) {
+    const userStatus = messages.find(m => m.role === Role.USER)?.status;
+    if (userStatus === Status.PROFANITY_VIOLATION) {
+      throw new Error(
+        'The AI safety filter blocked this request as inappropriate for the ' +
+          'classroom. Try rephrasing (even words like "rude" can trip it).'
+      );
+    }
+    if (userStatus === Status.PII_VIOLATION) {
+      throw new Error(
+        'The AI safety filter blocked this request because it looked like it ' +
+          'contained personal information. Try rephrasing.'
+      );
+    }
+    throw new Error("The AI didn't answer. Try again.");
+  }
+  if (reply.status !== Status.OK) {
+    if (reply.status === Status.MODEL_RATE_LIMITED) {
+      throw new Error('The AI is busy right now. Try again in a moment.');
+    }
+    if (reply.status === Status.MODEL_TIMEOUT) {
+      throw new Error('The AI took too long to answer. Try again.');
+    }
+    if (reply.status === Status.PROFANITY_VIOLATION) {
+      throw new Error(
+        "The AI's answer was blocked by the safety filter. Try rephrasing."
+      );
+    }
+    throw new Error('The AI request failed. Try again.');
+  }
+  return reply.chatMessageText ?? '';
 }
