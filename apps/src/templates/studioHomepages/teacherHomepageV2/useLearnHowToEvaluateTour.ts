@@ -1,9 +1,12 @@
+import {useCallback} from 'react';
+import Shepherd, {Tour} from 'shepherd.js';
+
 import {createShepherdTour} from '@cdo/apps/sharedComponents/productTour/shepherdTourFactory';
 import useOnboardingTour from '@cdo/apps/sharedComponents/productTour/useOnboardingTour';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 
-import {DemoType} from '../../teacherDashboard/types/teacherSectionTypes';
+import {Section} from '../../teacherDashboard/types/teacherSectionTypes';
 
 import {
   createLearnHowToEvaluateHomepageSteps,
@@ -40,11 +43,16 @@ export const isLearnToEvaluateTourOnSnapshotPage = (): boolean => {
 // Call this on the section progress page to resume the tour after navigation.
 // Runs outside React so it works regardless of render mode.
 export const resumeLearnHowToEvaluateTour = () => {
+  // Read before cancelling — the active tour's cancel handler clears sessionStorage.
   const savedStepId = tryGetSessionStorage(
     LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY,
     ''
   );
   if (!savedStepId) return;
+
+  // Cancel any running tour (e.g. the homepage tour still mounted during SPA
+  // navigation) so we never show two tour popovers simultaneously.
+  Shepherd.activeTour?.cancel();
 
   const tour = createShepherdTour({
     stepClass: 'custom-shepherd-onboarding-container',
@@ -68,15 +76,22 @@ export const resumeLearnHowToEvaluateTour = () => {
   tour.show(startStep.id);
 };
 
-const useLearnHowToEvaluateTour = (demoType: DemoType | null) => {
-  const {tour} = useOnboardingTour({
-    getSteps: tour =>
+const useLearnHowToEvaluateTour = (demoSection: Section | null) => {
+  const demoType = demoSection?.demoType ?? null;
+
+  const getSteps = useCallback(
+    (tour: Tour) =>
       demoType
         ? createLearnHowToEvaluateHomepageSteps(
             tour,
             LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY
           )
         : [],
+    [demoType]
+  );
+
+  const {tour} = useOnboardingTour({
+    getSteps,
     sessionStorageKey: LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY,
   });
 

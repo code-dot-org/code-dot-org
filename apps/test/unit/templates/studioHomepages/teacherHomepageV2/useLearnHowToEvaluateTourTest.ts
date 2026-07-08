@@ -1,5 +1,5 @@
 import {renderHook} from '@testing-library/react-hooks';
-import {Tour} from 'shepherd.js';
+import Shepherd, {Tour} from 'shepherd.js';
 
 import {createShepherdTour} from '@cdo/apps/sharedComponents/productTour/shepherdTourFactory';
 import useLearnHowToEvaluateTour, {
@@ -7,6 +7,7 @@ import useLearnHowToEvaluateTour, {
   recordLearnToEvaluateCompletion,
   LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY,
 } from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useLearnHowToEvaluateTour';
+import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 
@@ -17,6 +18,9 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
 const mockHttpClientPost = HttpClient.post as jest.MockedFunction<
   typeof HttpClient.post
 >;
+
+const demoSectionWithType = (demoType: Section['demoType']) =>
+  ({demoType} as unknown as Section);
 
 jest.mock('@cdo/apps/sharedComponents/productTour/shepherdTourFactory');
 jest.mock('@cdo/apps/sharedComponents/productTour/useOnboardingTour', () =>
@@ -111,6 +115,10 @@ describe('resumeLearnHowToEvaluateTour', () => {
     mockCreateShepherdTour.mockReturnValue(mockTour as unknown as Tour);
   });
 
+  afterEach(() => {
+    Shepherd.activeTour = null;
+  });
+
   it('does nothing when sessionStorage has no step id', () => {
     mockTryGetSessionStorage.mockReturnValue('');
     resumeLearnHowToEvaluateTour();
@@ -177,6 +185,21 @@ describe('resumeLearnHowToEvaluateTour', () => {
     );
     expect(mockHttpClientPost).not.toHaveBeenCalled();
   });
+
+  it('cancels any active Shepherd tour before creating the resumed tour', () => {
+    const savedStepId = 'progress-table-step';
+    (mockTour.steps as {id: string}[]).push({id: savedStepId});
+    mockTryGetSessionStorage.mockReturnValue(savedStepId);
+
+    const cancelMock = jest.fn();
+    (Shepherd as unknown as {activeTour: object}).activeTour = {
+      cancel: cancelMock,
+    };
+
+    resumeLearnHowToEvaluateTour();
+
+    expect(cancelMock).toHaveBeenCalled();
+  });
 });
 
 describe('useLearnHowToEvaluateTour', () => {
@@ -189,7 +212,9 @@ describe('useLearnHowToEvaluateTour', () => {
   });
 
   it('returns a tour object when demoType is provided', () => {
-    const {result} = renderHook(() => useLearnHowToEvaluateTour('high'));
+    const {result} = renderHook(() =>
+      useLearnHowToEvaluateTour(demoSectionWithType('high'))
+    );
     expect(result.current).toBe(mockTour);
   });
 

@@ -28,6 +28,14 @@ The question is not **whether** there will be waiting.
 
 > #### What should the program do *while* it waits?
 
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 12pt; font-weight: bold;">🔎Check my thinking </summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
+    <p>While the program waits for data, it should <b>show a loading message or animation</b> so users know the app is still working instead of frozen.</p>
+
+</div>
+</details>
+
 
 ---
 
@@ -38,8 +46,8 @@ The question is not **whether** there will be waiting.
 <div style="display:inline-block; vertical-align:top;height:320px; width:300px; margin:20px 15px; background-color:#ffffff; color:#000000; padding:20px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.1); text-align:center;">
     <img src="https://images.code.org/d856a99241a595bfcac8d22abcfdbc4f-image-1770911888063.png" 
          alt="timeline showing async programming" style="width: 300px;height:150px;  margin-bottom: 10px;">
-    <p style="font-size: 14pt; font-weight: bold; margin: 0;">Synchronous Programming</p>
-    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Code that <strong>waits for one task to fully finish</strong> before moving on to the next.
+    <p style="font-size: 12pt; font-weight: bold; margin: 0;">Synchronous Programming</p>
+    <p style="font-size: 12pt; line-height: 1.2; margin-top: 10px;">Code that <strong>waits for one task to fully finish</strong> before moving on to the next.
       <br><br>
       Each step blocks the next step..</p>
 </div>
@@ -50,8 +58,8 @@ The question is not **whether** there will be waiting.
 <div style="display:inline-block; vertical-align:top; height:320px; width:300px; margin:20px 15px; background-color:#ffffff; color:#000000; padding:20px; border-radius:10px; box-shadow:2px 2px 8px rgba(0,0,0,0.1); text-align:center;">
     <img src="https://images.code.org/55b6d1a0d9e431bce92e0f9eb621672b-image-1770912258147.png" 
          alt="timeline showing async programming" style="width: 300px; height:150px; margin-bottom: 10px;">
-    <p style="font-size: 14pt; font-weight: bold; margin: 0;">Asynchronous Programming</p>
-    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">  Code that <strong>continues doing other work</strong> while waiting for a task 
+    <p style="font-size: 12pt; font-weight: bold; margin: 0;">Asynchronous Programming</p>
+    <p style="font-size: 12pt; line-height: 1.2; margin-top: 10px;">  Code that <strong>continues doing other work</strong> while waiting for a task 
       (like loading data) to finish.
       <br><br>
       Waiting does not stop everything else.</p>
@@ -69,8 +77,8 @@ The question is not **whether** there will be waiting.
 
  
 
-<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-  <p style="font-size: 14pt; margin-top: 12px; line-height: 140%;">
+<div style="background-color: #e4e2f8; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+  <p style="font-size: 12pt; margin-top: 12px; line-height: 140%;">
     📖 <strong>Systems awareness</strong> is understanding how different parts of a system—like networks, servers, databases, and devices—work together, so you can design software that is reliable, responsive, and efficient.
   </p>
 </div>

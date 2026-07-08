@@ -22,7 +22,7 @@ import {
   asyncLoadCoteacherInvite,
   fetchDemoPresets,
 } from '../../teacherDashboard/teacherSectionsRedux';
-import {DemoType} from '../../teacherDashboard/types/teacherSectionTypes';
+import {Section} from '../../teacherDashboard/types/teacherSectionTypes';
 import CoteacherInviteNotification from '../CoteacherInviteNotification';
 
 import DemoSectionCard from './DemoSectionCard';
@@ -35,9 +35,6 @@ import {SectionList} from './SectionList';
 import TeacherHomepagePopups from './TeacherHomepagePopups';
 import TeacherPromotions from './TeacherPromotions';
 import {TempRebrandBanner} from './tempRebrandBanner/TempRebrandBanner';
-import useCreateSectionTour from './useCreateSectionTour';
-import useLearnHowToEvaluateTour from './useLearnHowToEvaluateTour';
-import useReviewSyllabusTour from './useReviewSyllabusTour';
 
 import styles from './teacherHomepage.module.scss';
 
@@ -60,9 +57,6 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
   const isMiniTutorialEnabled =
     experiments.isEnabled(experiments.ONBOARDING) ||
     DCDO.get('onboarding-enabled', false);
-  const gradesTeaching = useAppSelector(
-    state => state.currentUser.gradesTeaching
-  );
   const sections = useAppSelector(state => state.teacherSections.sections);
   const demoPresetsAreLoaded = useAppSelector(
     state => state.teacherSections.demoPresetsAreLoaded
@@ -71,12 +65,14 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
     state => state.teacherSections.sectionsAreLoaded
   );
 
-  const demoSectionDemoType = React.useMemo<DemoType | null>(() => {
-    const demo = Object.values(sections).find(
-      s => s.demoType !== null && s.demoType !== undefined
+  const demoSection = React.useMemo<Section | null>(() => {
+    return (
+      Object.values(sections).find(
+        s => s.demoType !== null && s.demoType !== undefined
+      ) ?? null
     );
-    return demo?.demoType ?? null;
   }, [sections]);
+  const demoSectionDemoType = demoSection?.demoType ?? null;
 
   const isDemoSectionEnabled = experiments.isEnabled('demo-section');
 

@@ -29476,6 +29476,17 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        ui-test-oceans:
+          lessons:
+            lesson-1:
+              name: Lesson One
+          lesson_groups: {}
+          name: ui-test-oceans
+          title: UI Test Oceans
+          description_audience: ''
+          description_short: UI Test Oceans Unit Short Overview
+          description: UI Test Oceans Unit Teacher Overview
+          student_description: UI Test Oceans Unit Student Overview
         ai-history:
           lessons:
             lesson-1:
@@ -29485,6 +29496,35 @@ en:
           lesson_groups: {}
           name: ai-history
           title: "[DEV] AI History"
+          description_audience: ''
+          description_short: ''
+          description: |-
+            In this short unit, students explore how AI developed from early ideas about machine intelligence into the tools they see today. Students investigate major milestones and eras in AI history, including early rule-based systems, expert systems, AI winters, the shift toward machine learning, deep learning, and modern generative AI. They also examine how people’s ideas, choices, discoveries, and concerns shaped AI’s development, from foundational figures like Alan Turing and John McCarthy to contributors connected to computer vision, AI ethics, bias, and social impact. Across the unit, students use interactive resources, timeline activities, chatbot comparisons, and peer exchange to understand that AI progress is shaped by both technical breakthroughs and human decisions.
+
+            Learning Outcomes: By the end of this unit, students will be able to . . .
+
+            - Describe key milestones and eras in the history of AI.
+            - Explain how AI evolved from rule-based systems toward systems that learn patterns from data.
+            - Discuss how major people, ideas, and discoveries shaped the development of AI.
+            - Explain how people’s choices about goals, data, and risks can influence the development and impact of AI systems.
+
+            This unit is aligned to the AI Ready Skills Certification and is recommended for students preparing for that certification.
+          student_description: |-
+            In this unit, you explore how AI developed from early ideas about machine intelligence into the tools you see today. You learn about major milestones in AI history, compare an early chatbot with a modern AI Tutor, and investigate people whose ideas, discoveries, and concerns shaped the field. Along the way, you see how AI changed from systems that followed rules to systems that learn patterns from data, and how human choices continue to shape what AI can do and how it affects people.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> Learning Outcomes: By the end of this unit, you will be able to . . .
+
+            - Describe key milestones and eras in the history of AI.
+            - Explain how AI evolved from rule-based systems toward systems that learn patterns from data.
+            - Discuss how major people, ideas, and discoveries shaped the development of AI.
+            - Explain how people’s choices about goals, data, and risks can influence the development and impact of AI systems.
+
+            This unit is aligned to the AI Ready Skills Certification and is recommended if you are preparing for that certification.
+        ui-test-mix-move-ai:
+          lessons: {}
+          lesson_groups: {}
+          name: ui-test-mix-move-ai
+          title: UI Test Mix & Move with AI
           description_audience: ''
           description_short: ''
           description: ''

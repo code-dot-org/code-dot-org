@@ -14,6 +14,8 @@ import reducer, {
   setShowResultsDetails,
   setImportedData,
   resetState,
+  setSaveStatus,
+  saveModel,
 } from '../../src/redux';
 
 describe('ailab reducer', () => {
@@ -92,7 +94,10 @@ describe('ailab reducer', () => {
 
     test('ignores a click on the label column during feature selection', () => {
       let state = reducer(initialState, setLabelColumn('lbl'));
-      state = reducer(state, setColumnsByDataType('lbl', ColumnTypes.NUMERICAL));
+      state = reducer(
+        state,
+        setColumnsByDataType('lbl', ColumnTypes.NUMERICAL),
+      );
       state = reducer(state, setCurrentPanel('dataDisplayFeatures'));
       const next = reducer(state, setCurrentColumn('lbl'));
       expect(next.currentColumn).toBeUndefined();
@@ -146,7 +151,10 @@ describe('ailab reducer', () => {
     });
 
     test('selecting a numerical feature records selectedFeatureNumerical', () => {
-      let state = reducer(initialState, setColumnsByDataType('a', ColumnTypes.NUMERICAL));
+      let state = reducer(
+        initialState,
+        setColumnsByDataType('a', ColumnTypes.NUMERICAL),
+      );
       state = reducer(state, setCurrentPanel('dataDisplayFeatures'));
       const next = reducer(state, setCurrentColumn('a'));
       expect(next.instructionsKey).toBe('selectedFeatureNumerical');
@@ -165,6 +173,35 @@ describe('ailab reducer', () => {
       expect(uploaded.instructionsKey).toBe('uploadedDataset');
       const selected = reducer(initialState, setImportedData([], false));
       expect(selected.instructionsKey).toBe('selectedDataset');
+    });
+  });
+
+  // saveModel is a thunk; invoke its inner (dispatch, getState) directly with a
+  // recording dispatch and a stub save callback — no store/middleware needed.
+  describe('saveModel thunk', () => {
+    const runSaveModel = saveResponse => {
+      const state = reducer(initialState, setLabelColumn('a'));
+      const actions = [];
+      const save = (_dataToSave, callback) => callback(saveResponse);
+      saveModel(save)(
+        action => actions.push(action),
+        () => state,
+      );
+      return actions;
+    };
+
+    test('marks the save started, then applies a success response', () => {
+      const actions = runSaveModel({status: 'success'});
+      expect(setSaveStatus.match(actions[0])).toBe(true);
+      expect(actions[0].payload.status).toBe('started');
+      expect(actions[1].payload.status).toBe('success');
+      expect(setCurrentPanel.match(actions[2])).toBe(true);
+      expect(actions[2].payload).toBe('modelSummary');
+    });
+
+    test('an error response returns to the save panel', () => {
+      const actions = runSaveModel({status: 'error'});
+      expect(actions[actions.length - 1].payload).toBe('saveModel');
     });
   });
 });
