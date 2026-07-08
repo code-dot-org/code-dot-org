@@ -3,7 +3,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Button as MuiButton} from '@mui/material';
 import {ReactFlowProvider, useReactFlow} from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
@@ -30,16 +30,21 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import ReactFlowCanvas from './components/ReactFlowCanvas';
-import {ReactFlowSketchLabSources} from './types';
+import {ImageNodeData, ReactFlowSketchLabSources} from './types';
 import {
   convertExcalidrawToReactFlow,
   uploadConvertedDataUrlImages,
 } from './utils/convertExcalidrawSources';
+import {makeBackpackImageImportHandler} from './utils/handleBackpackImageImport';
 import {handleDownloadSketch} from './utils/handleDownloadSketch';
 import {handleSaveToBackpack} from './utils/handleSaveToBackpack';
 import {migrateTriangleHandleIds} from './utils/migrateReactFlowSources';
 
 import styles from './react-flow-sketch-lab-view.module.scss';
+
+// Backpack files whose "+" button can be imported onto the canvas as an image
+// node. Sketch Lab's own Backpack stores PNGs; an <img> renders all of these.
+const SUPPORTED_IMAGE_EXTENSIONS = ['png', 'jpg', 'jpeg', 'gif', 'svg', 'webp'];
 
 export const REACT_FLOW_DEFAULT_SOURCES: ReactFlowSketchLabSources = {
   source: {nodes: [], edges: []},
@@ -68,6 +73,9 @@ function ReactFlowSketchLabViewInner({
 
   const reactFlow = useReactFlow();
   const dialogControl = useDialogControl();
+  // Set by the canvas so the Backpack import handler can add an image node
+  // while reusing the canvas's placement, undo, and focus behavior.
+  const addImageNodeRef = useRef<(data: ImageNodeData) => void>(() => {});
   const currentUserId = useAppSelector(state => state.currentUser.userId);
   const channelId = useAppSelector(state => state.lab.channel?.id) ?? '';
   // The Backpack API redirects to sign-in for signed-out users, so we only
@@ -158,8 +166,8 @@ function ReactFlowSketchLabViewInner({
         isSupportFileName: false,
         newFileName: fileName,
       }),
-      // Sketch Lab doesn't support importing Backpack files into the
-      // project, so these import-related handlers are no-ops.
+      // Importing goes through addFileHandler below, so these callbacks are
+      // unused and stay no-ops.
       saveFileToProject: () => {},
       createNewProjectFile: () => {},
       findIdForFileName: () => undefined,
@@ -174,9 +182,15 @@ function ReactFlowSketchLabViewInner({
           ),
         text: 'Save Sketch to Backpack',
       },
-      supportedFileTypes: [],
+      supportedFileTypes: SUPPORTED_IMAGE_EXTENSIONS,
+      addFileTooltipText: 'Add to sketch',
+      addFileHandler: makeBackpackImageImportHandler({
+        levelName: levelProperties.name,
+        channelId,
+        addImageNode: (data: ImageNodeData) => addImageNodeRef.current(data),
+      }),
     }),
-    [reactFlow, backpackContext, dialogControl]
+    [reactFlow, backpackContext, dialogControl, channelId, levelProperties.name]
   );
 
   // Read sources, converting from Excalidraw if this project was last
@@ -311,6 +325,7 @@ function ReactFlowSketchLabViewInner({
               initialViewport={initialViewport}
               colorMode={colorMode}
               readOnly={readonlyWorkspace}
+              addImageNodeRef={addImageNodeRef}
             />
             {WorkspaceAlert}
           </PanelContainer>
