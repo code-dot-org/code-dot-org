@@ -25,4 +25,15 @@ class Challenge < ApplicationRecord
   }, _prefix: :default
 
   validates :question, presence: true
+
+  # The frontend-facing shape of a challenge.
+  def summarize
+    {
+      id: id,
+      lesson_id: lesson_id,
+      question: question,
+      default_modality: default_modality,
+      whiteboard_starter_image_alt_text: whiteboard_starter_image_alt_text,
+    }
+  end
 end

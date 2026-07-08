@@ -24,7 +24,7 @@
   .paragraph
     Please sign in or create an account:
 
-  #signin
+  #signin.signin-legacy
     = link_to "/users/sign_in?user_return_to=#{request.fullpath}", class: "paragraph" do
       %button= I18n.t('nav.user.signin')
 

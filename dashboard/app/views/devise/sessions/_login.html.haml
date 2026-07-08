@@ -1,39 +1,32 @@
 - content_for :head do
-  :ruby
-    script_data = {userReturnTo: @user_return_to.presence.to_json}
-  %script{src: webpack_asset_path('js/devise/sessions/_login.js'), data: script_data}
+  %script{src: webpack_asset_path('js/devise/sessions/_login.js')}
 
-%h2= t('signin_form.title')
+/ Login errors (e.g. "invalid password") are still delivered via the Rails
+/ flash. show_flashes consumes the flash the first time it is called, so
+/ keeping it here (the view renders before the layout) is what actually
+/ surfaces the error on this page. Flash migration is a separate ticket.
+= show_flashes.html_safe
 
 .flex-container
-  #signin
-    = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
-      = show_flashes.html_safe
-      = f.hidden_field :hashed_email
-
-      / Email
-      .field
-        = label_tag t('signin_form.login_username')
-        - email = @email || ''
-        = f.text_field :login, value: email, autofocus: email == ''
-
-      / Password
-      .field#password_field
-        = f.label :password
-        = f.password_field :password, autofocus: email != ''
-
-        / Forgot password?
-      - if devise_mapping.recoverable?
-        %div.field-aligned.password_help_link
-          = link_to t('auth.forgot_password'), new_password_path(resource_name), id: 'forgot-password'
-
-      / Sign in button
-      %button#signin-button= t('signin_form.submit')
-
-    / Not yet signed up? Sign up
-    - if devise_mapping.registerable?
-      %a#signup-link.field-aligned{href: users_sign_up_account_type_path}
-        %button.neutral-button{:id => 'user_signup'}= t('nav.user.signup')
+  / Left column: page title + sign-in form + sign-up button, one React root
+  / (SignInPage). display:contents makes the component's own root, not this div,
+  / the flex child.
+  #sign-in-page-layout{style: 'display: contents',
+    data: {
+      title: t('signin_form.title'),
+      hashed_email: resource.hashed_email,
+      login_value: (@email || ''),
+      sign_in_path: session_path(resource_name),
+      login_label: t('signin_form.login_username'),
+      password_label: resource.class.human_attribute_name(:password),
+      sign_in_label: t('signin_form.submit'),
+      sign_up_label: t('nav.user.signup'),
+      sign_up_path: users_sign_up_account_type_path,
+      show_sign_up: devise_mapping.registerable?.to_s,
+      forgot_password_path: (new_password_path(resource_name) if devise_mapping.recoverable?),
+      forgot_password_label: t('auth.forgot_password'),
+      user_return_to: @user_return_to.presence,
+    }}
 
   %div.vertical-or
     %hr

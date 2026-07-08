@@ -1,5 +1,6 @@
 import {createFileRoute, notFound} from '@tanstack/react-router';
-import {Suspense} from 'react';
+
+import {Lab} from '@code-dot-org/lab/host';
 
 import {getLabEntrypoint} from '@/modules/labs/router/getLabEntrypoint';
 import {getLabFixtures} from '@/modules/labs/router/getLabFixtures';
@@ -41,8 +42,8 @@ function RouteComponent() {
   const {LabEntrypoint} = Route.useLoaderData();
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Lab>
       <LabEntrypoint />
-    </Suspense>
+    </Lab>
   );
 }

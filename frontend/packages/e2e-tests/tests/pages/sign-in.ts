@@ -44,7 +44,7 @@ export class SignInPage extends BasePage {
   /** Navigate to /users/sign_in and wait for the locale dropdown. */
   async goto(): Promise<void> {
     await this.page.goto('/users/sign_in');
-    await this.waitForLocaleDropdownVisible();
+    await this.footer.waitForLocaleDropdownVisible();
   }
 
   /** Wait for the sign-in form to be present (server-rendered; visible immediately after redirect). */
@@ -99,8 +99,8 @@ export class SignInPage extends BasePage {
         url => url.href.includes('lang=') || !url.pathname.endsWith('/sign_in'),
         {waitUntil: 'domcontentloaded'},
       ),
-      this.localeDropdown.selectOption({label}),
+      this.footer.localeDropdown.selectOption({label}),
     ]);
-    await this.waitForLocaleDropdownVisible();
+    await this.footer.waitForLocaleDropdownVisible();
   }
 }

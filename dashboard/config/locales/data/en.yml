@@ -938,6 +938,8 @@ en:
         pl-aif2-transparency-cues-U4: Transparency Cues
         pl-aif2-making-decions-in-code: Making Decisions in Code
         pl-aif2-debugging-variables: Debugging Variables
+        pl-aif2-displaying-data-UI: 'Displaying Data '
+        pl-aif2-dot-notation-api: Accessing Data in APIs
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
