@@ -35,7 +35,9 @@ namespace :lint do
     end
   end
 
-  # lint python:
+  # lint python: python/ now holds only the Python Lab packages, so this lints
+  # Python Lab. Runs via uv, which is installed in dev, CI, and on daemon EC2
+  # instances (see cdo-python cookbook).
   desc 'Lints Python code.'
   timed_task_with_logging :python do
     Dir.chdir(python_dir) do

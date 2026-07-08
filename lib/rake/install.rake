@@ -40,9 +40,13 @@ namespace :install do
   desc 'Install Dashboard rubygems and setup database.'
   timed_task_with_logging :dashboard do
     if RakeUtils.local_environment?
+      # Set up the Python Lab uv workspace, rooted at python/ (dev + CI have uv
+      # installed).
+      Dir.chdir(python_dir) do
+        RakeUtils.python_venv_install
+      end
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
-        RakeUtils.python_venv_install
 
         if ENV['CI']
           if ENV['CI_JOB'] == 'unit_tests'

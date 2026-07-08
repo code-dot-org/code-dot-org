@@ -207,9 +207,13 @@ module TestRunUtils
 
   def self.run_python_tests
     ChatClient.wrap('python tests') do
-      # Run pytest on every sub-dir in python/ that has a pyproject.toml
-      Dir.glob('python/**/pyproject.toml').map {|file| File.dirname(file)}.each do |dir|
-        PythonVenv.pytest dir
+      # The uv workspace root is python/ (server-side python was retired, so the
+      # workspace no longer lives at the repo root). Run pytest from there on
+      # every package sub-dir that has a pyproject.toml.
+      Dir.chdir(python_dir) do
+        Dir.glob('pythonlab/**/pyproject.toml').map {|file| File.dirname(file)}.each do |dir|
+          PythonVenv.pytest dir
+        end
       end
     end
   end

@@ -1,16 +1,17 @@
 [project]
 name = 'code-dot-org'
 version = '1.0'
-# pydantic-core 2.27.1 uses PyO3 0.22.6 which only supports up to Python 3.13
+# matplotlib/numpy (pulled in by pythonlab_setup) lag the newest CPython by a
+# release, so cap below 3.14 until their wheels catch up.
 requires-python = '>=3.12,<3.14'
 dependencies = [
-  # Register local python packages from /python in 3 places: this list, 
-  # in [tool.uv.sources] and in [tool.uv.workspace]
-  'pycdo',
+  # Register local python packages under python/ in 3 places: this list,
+  # in [tool.uv.sources] and in [tool.uv.workspace].
+  # These are the Python Lab packages; server-side python was retired.
   'neighborhood',
   'pythonlab_setup',
   'unittest_runner',
-  ## Do not add dependencies here, add them to a pyproject.toml in a /python sub-dir ##
+  ## Do not add dependencies here, add them to a pyproject.toml in a sub-dir ##
 ]
 
 [dependency-groups]
@@ -23,17 +24,15 @@ dev = [
 ]
 
 [tool.uv.sources]
-pycdo = { workspace = true }
 neighborhood = { workspace = true }
 pythonlab_setup = { workspace = true }
 unittest_runner = { workspace = true }
 
 [tool.uv.workspace]
 members = [
-  'python/pycdo',
-  'python/pythonlab/pythonlab_setup',
-  'python/pythonlab/unittest_runner',
-  'python/pythonlab/neighborhood',
+  'pythonlab/pythonlab_setup',
+  'pythonlab/unittest_runner',
+  'pythonlab/neighborhood',
 ]
 
 [tool.ruff]

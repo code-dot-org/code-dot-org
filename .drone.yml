@@ -98,7 +98,8 @@ steps:
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:1.23
+    # TEMP(remove-pycall): branch-test image; restore a numbered cdo-ci tag (e.g. 1.25) before merge.
+    image: codedotorg/cdo-ci:remove-pycall
     pull: always
     environment:
       CI_JOB: 'unit_tests'
@@ -224,7 +225,8 @@ steps:
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:1.24
+    # TEMP(remove-pycall): branch-test image; restore a numbered cdo-ci tag (e.g. 1.25) before merge.
+    image: codedotorg/cdo-ci:remove-pycall
     pull: always
     # Share the worker's network namespace so puma on 0.0.0.0:3000 binds
     # on the worker's primary ENI, reachable from Device Farm's Chrome via
@@ -320,7 +322,9 @@ steps:
   # snapshot of the fully-built project and resulting database, but don't
   # actually run the tests.
   - name: prepare-cacheable-build
-    image: codedotorg/cdo-ci:1.23
+    # see: docker/ci/Dockerfile
+    # TEMP(remove-pycall): branch-test image; restore a numbered cdo-ci tag (e.g. 1.25) before merge.
+    image: codedotorg/cdo-ci:remove-pycall
     pull: always
     environment:
       CI_JOB: 'prepare_cacheable_build'
@@ -364,6 +368,6 @@ trigger:
 
 ---
 kind: signature
-hmac: f0e141ca9f4aef68803fc038b9c5f765d8ceb0f1940903fb48b73292ca8131f4
+hmac: b570e6f7bb3ff7bba5b838a9afbc4c32ccf03d73ac89f463ba25f3d7c17d96a8
 
 ...

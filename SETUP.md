@@ -24,7 +24,7 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
      ruby --version     # --> ruby 3.1.7
      node --version     # --> v20.18.3
      git-lfs --version  #  >= git-lfs/3.0
-     uv --version       #  >= 0.5.8
+     uv --version       #  >= 0.5.8 (Python Lab packages)
      ```
 
 1. `git lfs pull`
@@ -268,7 +268,7 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
     1. If your PATH is missing `~/.rbenv/shims`, the next two commands might not work. Edit your .bashrc to include the following line:
        `export PATH="$HOME/.rbenv/bin:~/.rbenv/shims:$PATH"`, then run `source .bashrc` for the change to take effect (as seen in [this github issue](https://github.com/rbenv/rbenv/issues/877)).
     1. `rbenv rehash`
-1. Install uv, which will be used later by `rake install` to install python
+1. Install uv, used by `rake install` to set up the Python Lab packages (python/pythonlab)
     1. `curl -LsSf https://astral.sh/uv/install.sh | sh`
         - alternatively, if you prefer pipx and have it configured path-wise: `pipx install uv`
 1. Enable **corepack** to install **yarn**: `corepack enable`

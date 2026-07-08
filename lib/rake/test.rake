@@ -366,7 +366,7 @@ namespace :test do
     TestRunUtils.run_lib_tests
   end
 
-  desc 'Runs python tests.'
+  desc 'Runs python tests (Python Lab packages).'
   timed_task_with_logging :python do
     TestRunUtils.run_python_tests
   end
@@ -526,25 +526,6 @@ namespace :test do
       end
     end
 
-    desc 'Runs python tests if python might have changed from staging.'
-    task :python do
-      run_tests_if_changed(
-        'python',
-        [
-          'pyproject.toml',
-          'uv.lock',
-          'python/**/*',
-          'lib/cdo/python_venv.py',
-          'Gemfile',
-          'Gemfile.lock',
-          'deployment.rb',
-          'config/**/*',
-        ]
-      ) do
-        TestRunUtils.run_python_tests
-      end
-    end
-
     desc 'Runs lib tests if lib might have changed from staging.'
     timed_task_with_logging :bin do
       run_tests_if_changed(
@@ -559,6 +540,22 @@ namespace :test do
         ]
       ) do
         TestRunUtils.run_bin_tests
+      end
+    end
+
+    desc 'Runs Python Lab tests if python/pythonlab might have changed from staging.'
+    task :python do
+      run_tests_if_changed(
+        'python',
+        [
+          'python/pyproject.toml',
+          'python/uv.lock',
+          'python/.python-version',
+          'python/pythonlab/**/*',
+          'lib/cdo/python_venv.rb',
+        ]
+      ) do
+        TestRunUtils.run_python_tests
       end
     end
 

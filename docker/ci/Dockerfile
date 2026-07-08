@@ -163,7 +163,8 @@ RUN curl -SsL https://github.com/boxboat/fixuid/releases/download/v0.4/fixuid-0.
     mkdir -p /etc/fixuid && \
     printf "user: ${USER}\ngroup: ${GROUP}\n" > /etc/fixuid/config.yml
 
-# install uv for managing our python dependencies
+# install uv, used to run and build the Python Lab packages (python/pythonlab)
+# in CI. Note: server-side python was retired; uv is kept only for Python Lab.
 #
 # By default uv's install.sh will install to the user's homedir and modify the user's PATH.
 # Instead we wish to install uv to /usr/local/bin, which is already in the PATH.

@@ -6,6 +6,8 @@ require_relative '../../lib/cdo/python_venv'
 REPO_DIR = File.expand_path('../../../', __FILE__).freeze
 APPS_DIR = "#{REPO_DIR}/apps".freeze
 FRONTEND_DIR = "#{REPO_DIR}/frontend".freeze
+# python/ now holds only the Python Lab packages (python/pythonlab); the
+# server-side python was retired. Linting python/ therefore lints Python Lab.
 PYTHON_DIR = "#{REPO_DIR}/python".freeze
 SCSS_GLOB = "#{REPO_DIR}/#{YAML.load_file('.scss-lint.yml')['scss_files'] || '*'}".freeze
 
@@ -14,6 +16,12 @@ def filter_eslint_apps(modified_files)
 
   modified_files.select do |f|
     f.start_with?(full_apps_dir) && f.end_with?(".js", ".jsx", ".ts", ".tsx")
+  end
+end
+
+def filter_eslint_shared(modified_files)
+  modified_files.select do |f|
+    f.match(%r{/shared/js/[^/]+.js})
   end
 end
 
