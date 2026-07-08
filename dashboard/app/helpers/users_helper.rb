@@ -511,8 +511,6 @@ module UsersHelper
     include_timestamp:
   )
     sublevel_ids = sublevels.map(&:id)
-    # A sublevel records progress on itself, or, for a migrated predict level,
-    # possibly on its contained level (pre-migration).
     progress_ids_by_sublevel = sublevels.to_h do |sublevel|
       [sublevel.id, sublevel.levels_for_progress.map(&:id)]
     end

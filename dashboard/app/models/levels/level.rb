@@ -880,20 +880,13 @@ class Level < ApplicationRecord
   end
 
   def get_level_for_progress(student = nil, script = nil)
-    # A lab2 predict level records progress on the level itself. Migrated predict
-    # levels still reference a contained level (kept so legacy responses can be
-    # read back), but their progress lives on the level, not the contained level.
     return self if predict_level?
     # https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/app/views/levels/_contained_levels.html.haml#L1
     # We only display our first contained level, display progress for that level.
     contained_levels.first || self
   end
 
-  # The levels that may hold this level's progress, in priority order (preferred
-  # first). Usually a single level. A lab2 predict level migrated from the legacy
-  # contained-level model records new progress on itself, but a student's progress
-  # from before the migration still lives on the contained level, so include
-  # the level itself first, then the contained level as a fallback.
+  # The levels that may hold this level's progress, in priority order.
   def levels_for_progress(student = nil, script = nil)
     return [self,  contained_levels.first] if predict_level? && !contained_levels.empty?
     [get_level_for_progress(student, script)]

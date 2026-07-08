@@ -205,9 +205,6 @@ class BubbleChoice < DSLDefined
         level_path(level.id)
 
       if user_id
-        # A sublevel's attempt may live on the sublevel itself or, for a
-        # contained or migrated predict level, on its contained level.
-        # Take the most recent attempt across them.
         user_level = UserLevel.where(
           level: level.levels_for_progress,
           script: script_level.try(:script),
@@ -334,16 +331,11 @@ class BubbleChoice < DSLDefined
   # @param [Unit]
   # @return [Level]
   private def best_result_sublevel(user, script)
-    # Each sublevel's progress may live on the sublevel itself or, for a
-    # contained or migrated predict level, on its contained level.
     sublevels_for_progress = sublevels.flat_map(&:levels_for_progress)
     ul = user_level_with_best_result(user.user_levels.where(level: sublevels_for_progress, script: script))
     ul&.level
   end
 
-  # max_by(&:best_result) raises when best_result mixes nil and non-nil
-  # (nil <=> Integer is undefined); an unscored attempt sorts as the lowest
-  # result so a scored sublevel still wins.
   private def user_level_with_best_result(user_levels)
     user_levels.max_by {|ul| ul.best_result || -Float::INFINITY}
   end

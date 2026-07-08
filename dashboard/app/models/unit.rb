@@ -604,9 +604,6 @@ class Unit < ApplicationRecord
           TEXT_RESPONSE_TYPES.exclude?(level.contained_levels.first.class)
         is_not_predict_free_response = !level.predict_level? || level.properties.dig('predict_settings', 'questionType') != 'freeResponse'
         next if is_not_contained && is_not_predict_free_response
-        # A migrated predict level may hold a response on the level itself
-        # (post-migration) or on its legacy contained level (pre-migration);
-        # levels_for_progress lists every location a response may live.
         text_response_levels << {
           script_level: script_level,
           levels: level.levels_for_progress
