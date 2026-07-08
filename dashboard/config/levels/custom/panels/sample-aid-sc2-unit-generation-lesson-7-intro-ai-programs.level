@@ -1,0 +1,33 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-06-29T17:06:15.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "panels": [
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-7-intro-ai-programs-9b7567c7-9e04-43f1-a153-4700c40e0ec3",
+        "text": "You've built awesome programs that follow your instructions. But what if your program could also make smart decisions, almost like it has its own brain?",
+        "imageUrl": "https://images.code.org/99ba136c5ca9155f7b1d59e91eec5311-sample-aid-sc2-unit-generation-lesson-7-intro-ai-programs-panel-1-3b0a465a-c12b-47f8-98b4-00353dacd833.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-7-intro-ai-programs-325b4b87-fd10-48d6-85a3-a040dfbfafd3",
+        "text": "That's where **AI classification models** come in! Think of them as super-fast sorters. You give them information, and they predict what category it belongs to.",
+        "imageUrl": "https://images.code.org/788a8d057f55a2646e4ac73db739065b-sample-aid-sc2-unit-generation-lesson-7-intro-ai-programs-panel-2-ba89e8ca-5e66-4dcb-ad6e-e3342c3adb64.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-7-intro-ai-programs-f5848e35-b20b-4244-92e6-9e50c4c4a87f",
+        "text": "Integrating AI into your code isn't just dropping it in. You need to plan! How will your program give information to the AI, and what should it do with the AI's prediction?",
+        "imageUrl": "https://images.code.org/cb5fcb41934c25266f1046a955e9eb6d-sample-aid-sc2-unit-generation-lesson-7-intro-ai-programs-panel-3-288194dd-1ca3-46aa-a1ac-c34b855310a7.png",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "generate_outline": "Introduce the concept of using AI classification models as components within computer programs. Explain at a high level what a classification model does and why planning is important when integrating new technologies like AI."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:06:49 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:06:49 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

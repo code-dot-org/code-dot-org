@@ -24,6 +24,12 @@ into one helper. Don't leave two copies that can drift apart.
 Import the canonical type instead of a parallel shape that will drift — e.g.
 `MultiFileSource`/`AppName` (`lab2/types.ts`), `PanelLayout` (`panels/types.ts`).
 
+## Imports
+
+Prefer `@cdo/apps/...` (aliases `apps/src/`) over relative paths that reach
+past the parent directory. Any `../../` or deeper → use the alias; `./` and a
+single `../` are fine.
+
 ## Named constants over magic numbers
 
 Name magic numbers and structural literals (panel counts, folder layouts,
@@ -37,9 +43,9 @@ subcomponents, hooks, helpers) rather than letting one file sprawl.
 
 ## Use shared helpers; don't hand-roll
 
-Use an existing client/helper instead of re-implementing inline — e.g. aichat
-completions via `aichat/api/client` (cf. `frontend/`'s `DashboardApiClient` for
-Dashboard calls, never a raw `fetch`).
+Use an existing client/helper instead of re-implementing inline — e.g. HTTP
+requests via `@cdo/apps/util/HttpClient` (not a raw `fetch`), or aichat
+completions via `aichat/api/client`.
 
 ## Design for extension
 

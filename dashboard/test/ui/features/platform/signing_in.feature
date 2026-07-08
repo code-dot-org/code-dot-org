@@ -1,5 +1,6 @@
 # @no_mobile
 @single_session
+@playwright
 Feature: Signing in and signing out
 
 Scenario: Student sign in from studio.code.org
