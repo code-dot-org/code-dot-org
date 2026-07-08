@@ -21,12 +21,14 @@
     "test:report": "playwright show-report playwright-report",
     "test:ui": "playwright test --pass-with-no-tests",
     "test:ui:local": "TARGET_URL=http://localhost-studio.code.org:3000 playwright test --project=chromium --pass-with-no-tests",
+    "test:visual:prove": "prove-visual tests/tmp",
     "typecheck": "tsc --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "devDependencies": {
     "@axe-core/playwright": "^4.10.1",
     "@code-dot-org/lint-config": "workspace:*",
+    "@code-dot-org/playwright-support": "workspace:*",
     "@playwright/test": "catalog:",
     "@types/node": "catalog:",
     "eslint": "catalog:",
