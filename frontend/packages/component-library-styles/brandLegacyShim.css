@@ -168,6 +168,47 @@
   --text-accent-pink-primary: var(--accent-strawberry-50);
   --text-accent-pink-strong: var(--accent-strawberry-70);
   --text-accent-pink-primary-fixed: var(--accent-strawberry-50);
+
+  /* CADS-only primitives with no legacy name at all (direct primitive
+     usage is rare and currently unused, but must not fall through to an
+     unresolved var() under this brand). Same-step mapping into the
+     nearest legacy family; legacy's extra "100" step (which CADS dropped)
+     absorbs CADS's "95" step, mirroring the reverse mapping in
+     brandCodeAiNextAliases.css. brand-orange has no legacy brand
+     counterpart, so it maps to legacy's accent-orange; brand-pink maps to
+     accent-strawberry, same as the pink/strawberry semantic mapping
+     above. */
+  --brand-purple-95: var(--brand-purple-100);
+  --brand-orange-5: var(--accent-orange-10);
+  --brand-orange-10: var(--accent-orange-10);
+  --brand-orange-20: var(--accent-orange-20);
+  --brand-orange-30: var(--accent-orange-30);
+  --brand-orange-40: var(--accent-orange-40);
+  --brand-orange-50: var(--accent-orange-50);
+  --brand-orange-60: var(--accent-orange-60);
+  --brand-orange-70: var(--accent-orange-70);
+  --brand-orange-80: var(--accent-orange-80);
+  --brand-orange-90: var(--accent-orange-90);
+  --brand-orange-95: var(--accent-orange-100);
+  --brand-pink-5: var(--accent-strawberry-10);
+  --brand-pink-10: var(--accent-strawberry-10);
+  --brand-pink-20: var(--accent-strawberry-20);
+  --brand-pink-30: var(--accent-strawberry-30);
+  --brand-pink-40: var(--accent-strawberry-40);
+  --brand-pink-50: var(--accent-strawberry-50);
+  --brand-pink-60: var(--accent-strawberry-60);
+  --brand-pink-70: var(--accent-strawberry-70);
+  --brand-pink-80: var(--accent-strawberry-80);
+  --brand-pink-90: var(--accent-strawberry-90);
+  --brand-pink-95: var(--accent-strawberry-100);
+  --sentiment-error-5: var(--sentiment-error-10);
+  --sentiment-error-95: var(--sentiment-error-100);
+  --sentiment-information-5: var(--sentiment-information-10);
+  --sentiment-information-95: var(--sentiment-information-100);
+  --sentiment-success-5: var(--sentiment-success-10);
+  --sentiment-success-95: var(--sentiment-success-100);
+  --sentiment-warning-5: var(--sentiment-warning-10);
+  --sentiment-warning-95: var(--sentiment-warning-100);
 }
 
 /* Dark: the alpha scale flips to white, mirroring the CADS dark block. */

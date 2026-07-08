@@ -1,5 +1,6 @@
 @import 'color.scss';
 @import 'font';
+@import 'brand-selectors';
 
 .user_menu, .create_menu, .help_button {
   user-select: none;
@@ -222,9 +223,7 @@
   // create menu has to collapse sooner to keep the inline nav from wrapping.
   // Bump each threshold up; preserve the original ~97px gap between the
   // signed-in (hide-mobile) and signed-out (show-small-desktop) variants.
-  html[data-brand="codeai"] &,
-  html[data-brand="codeai-next"] &,
-  html[data-brand="codeai-audit"] & {
+  @include codeai-family-brand($ancestor: true) {
     @media screen and (max-width: 1103px) {
       &.show-small-desktop {
         display: none !important;

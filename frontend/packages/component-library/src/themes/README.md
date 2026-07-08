@@ -13,10 +13,10 @@ These two dimensions are orthogonal: any brand can be combined with any mode.
 ┌─────────────────────────────────────────────────────────────┐
 │  createReactRoot() (apps/src/util/createReactRoot.tsx)      │
 │                                                             │
-│  1. Resolves brand from cookie  ──→  brand.ts               │
-│  2. Sets <html data-brand="codeai">  (CSS variable swap)    │
-│  3. Selects MUI theme  ──→  CdoTheme or CodeaiTheme         │
-│  4. Wraps component tree:                                   │
+│  1. Reads brand from <html data-brand>, set server-side      │
+│     by application.html.haml via Cdo::Brand  ──→  brand.ts   │
+│  2. Selects MUI theme  ──→  CdoTheme or CodeaiTheme          │
+│  3. Wraps component tree:                                   │
 │                                                             │
 │     <SiteConfigProvider config={{brand}}>                   │
 │       <MuiThemeProvider theme={theme}>                      │
@@ -77,21 +77,26 @@ Components should use **semantic** variables (e.g. `var(--background-neutral-pri
 
 ### How brand is determined
 
-Brand is resolved at page load in `apps/src/util/brand.ts`:
+Brand resolution happens server-side, in `Cdo::Brand.current_brand_code`
+(`lib/cdo/brand.rb`): DCDO `default-brand` (falling back to `codeai`) unless
+`brand-router-enabled` is on, in which case a `?brand=` URL param or the
+`brand` cookie can override it per request. The result is written to
+`data-brand` on `<html>` by `application.html.haml`.
 
-1. Check the `brand-router-enabled` DCDO flag — if off, always return `'code'` (default).
-2. Read the `brand` cookie (set server-side by `application_controller#persist_brand_params`).
-3. Return `'codeai'` if the cookie matches, otherwise `'code'`.
+`apps/src/util/brand.ts`'s `getCurrentBrand()` just reads that attribute
+client-side, returning one of `'code' | 'codeai' | 'codeai-next' |
+'codeai-audit'`, defaulting to `'codeai'` if the attribute is absent or
+unrecognized.
 
 The brand cookie is set by navigating with `?brand=codeai` and cleared with `?brand-reset=1`.
 
 ### How brand affects rendering
 
-| Mechanism                | What it does                                                    |
-| ------------------------ | --------------------------------------------------------------- |
-| `data-brand` on `<html>` | Activates CSS variable overrides in `colors.css`                |
-| `MuiThemeProvider`       | Swaps between `CdoTheme` and `CodeaiTheme` (palette difference) |
-| `SiteConfigProvider`     | Exposes brand to React components via `useBrand()` hook         |
+| Mechanism                | What it does                                                           |
+| ------------------------ | ---------------------------------------------------------------------- |
+| `data-brand` on `<html>` | Activates the CSS variable overrides in the `brandOverrides.css` layer |
+| `MuiThemeProvider`       | Swaps between `CdoTheme`, `CodeaiTheme`, and `CodeaiAuditTheme`        |
+| `SiteConfigProvider`     | Exposes brand to React components via `useBrand()` hook                |
 
 ### Accessing brand in components
 
@@ -99,7 +104,7 @@ The brand cookie is set by navigating with `?brand=codeai` and cleared with `?br
 import {useBrand} from '@cdo/apps/util/SiteConfigContext';
 
 const MyComponent = () => {
-  const brand = useBrand(); // 'code' | 'codeai'
+  const brand = useBrand(); // 'code' | 'codeai' | 'codeai-next' | 'codeai-audit'
   // ...
 };
 ```
@@ -107,7 +112,7 @@ const MyComponent = () => {
 For non-React code, the brand can be read from the DOM:
 
 ```ts
-document.documentElement.dataset.brand; // 'codeai' | undefined
+document.documentElement.dataset.brand; // 'code' | 'codeai' | 'codeai-next' | 'codeai-audit' | undefined
 ```
 
 ### MUI Themes

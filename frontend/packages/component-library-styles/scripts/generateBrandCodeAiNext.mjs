@@ -12,6 +12,11 @@
  *
  * Run after design re-exports either canonical file:
  *   node scripts/generateBrandCodeAiNext.mjs
+ *
+ * CI freshness check (fails if the committed file doesn't match a fresh
+ * run, e.g. because a canonical file changed without re-running this
+ * script):
+ *   node scripts/generateBrandCodeAiNext.mjs --check
  */
 import {readFileSync, writeFileSync} from 'node:fs';
 import {dirname, join} from 'node:path';
@@ -28,11 +33,16 @@ const read = name => readFileSync(join(pkgDir, name), 'utf8');
 // regardless of stylesheet order; the bare attribute selector covers a
 // data-brand attribute on a non-root element.
 const primitives = read('primitiveColors_codeAi.css').replace(
-  /^:root \{$/m,
+  /^:root \{$/gm,
   `${BRAND}:root,\n${BRAND} {`,
 );
 if (!primitives.includes(BRAND)) {
   throw new Error('primitiveColors_codeAi.css: ":root {" selector not found');
+}
+if (primitives.match(/^:root/m)) {
+  throw new Error(
+    'primitiveColors_codeAi.css: unscoped ":root" selector left after rewrite',
+  );
 }
 
 // Semantics: scope both theme blocks. The Light block must keep working
@@ -64,8 +74,21 @@ const header = `/* GENERATED FILE — do not edit.
 
 `;
 
-writeFileSync(
-  join(pkgDir, 'brandCodeAiNext.css'),
-  header + primitives + '\n' + semantics,
-);
-console.log('wrote brandCodeAiNext.css');
+const output = header + primitives + '\n' + semantics;
+const outPath = join(pkgDir, 'brandCodeAiNext.css');
+
+if (process.argv.includes('--check')) {
+  const committed = readFileSync(outPath, 'utf8');
+  if (committed !== output) {
+    console.error(
+      'brandCodeAiNext.css is stale: it does not match a fresh run of ' +
+        'this generator. Run `node scripts/generateBrandCodeAiNext.mjs` ' +
+        'and commit the result.',
+    );
+    process.exit(1);
+  }
+  console.log('brandCodeAiNext.css is up to date');
+} else {
+  writeFileSync(outPath, output);
+  console.log('wrote brandCodeAiNext.css');
+}

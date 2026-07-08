@@ -1,6 +1,4 @@
-import {createTheme} from '@mui/material';
-
-import CdoTheme from '../code.org';
+import {createBrandTheme} from '../createBrandTheme';
 
 /**
  * CodeAI MUI theme.
@@ -13,15 +11,11 @@ import CdoTheme from '../code.org';
  * Typography and component-level style overrides are inherited from the
  * Code.org theme via deep merge; only the palette differs.
  */
-const theme = createTheme(CdoTheme, {
-  palette: {
-    primary: {
-      main: '#4C42CF', // --brand-purple-50
-      light: '#928CEF', // --brand-purple-30
-      dark: '#3228B7', // --brand-purple-70
-      contrastText: '#FFFFFF',
-    },
-  },
+const theme = createBrandTheme({
+  main: '#4C42CF', // --brand-purple-50
+  light: '#928CEF', // --brand-purple-30
+  dark: '#3228B7', // --brand-purple-70
+  contrastText: '#FFFFFF',
 });
 
 export default theme;

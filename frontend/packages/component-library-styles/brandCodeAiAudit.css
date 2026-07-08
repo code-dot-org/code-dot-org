@@ -122,6 +122,46 @@
   --text-warning-primary: #b02e6c;
   --text-warning-primary-fixed: #b02e6c;
   --text-warning-secondary: #99255d;
+
+  /* CADS-only token names whose brandLegacyShim.css alias points at a raw
+   * legacy primitive rather than one of the legacy semantic tokens above.
+   * Primitives are never touched by this file, so without redeclaring
+   * these names directly they would keep resolving to their real (legacy)
+   * color instead of pink. Keep in sync with brandLegacyShim.css. */
+  --background-neutral-alpha-5: #ff69b40d;
+  --background-neutral-alpha-10: #ff69b41a;
+  --background-neutral-alpha-20: #ff69b433;
+  --background-neutral-alpha-30: #ff69b44d;
+  --background-neutral-alpha-40: #ff69b466;
+  --background-neutral-alpha-50: #ff69b480;
+  --background-neutral-alpha-60: #ff69b499;
+  --background-neutral-alpha-70: #ff69b4b2;
+  --background-neutral-alpha-80: #ff69b4cc;
+  --background-neutral-alpha-90: #ff69b4e5;
+  --background-neutral-alpha-95: #ff69b4f2;
+  --background-selected-hover: #ffd6ec;
+  --background-accent-orange-mid: #ffb3dc;
+  --background-accent-pink-mid: #ffb3dc;
+  --border-brand-mid: #ffb3dc;
+  --border-error-mid: #ffb3dc;
+  --border-warning-mid: #ffb3dc;
+  --border-success-mid: #ffb3dc;
+  --border-info-mid: #ffb3dc;
+  --border-selected-hover: #b02e6c;
+  --border-accent-orange-primary: #ff69b4;
+  --border-accent-orange-light: #fff0f7;
+  --border-accent-orange-mid: #ffb3dc;
+  --border-accent-orange-strong: #b02e6c;
+  --border-accent-pink-primary: #ff69b4;
+  --border-accent-pink-light: #fff0f7;
+  --border-accent-pink-mid: #ffb3dc;
+  --border-accent-pink-strong: #b02e6c;
+  --text-accent-orange-primary: #d63384;
+  --text-accent-orange-primary-fixed: #d63384;
+  --text-accent-orange-strong: #99255d;
+  --text-accent-pink-primary: #d63384;
+  --text-accent-pink-primary-fixed: #d63384;
+  --text-accent-pink-strong: #99255d;
 }
 
 /* Dark theme overrides (ALL pink for visual auditing) */
@@ -234,5 +274,42 @@
   --text-warning-primary: #fff0f7;
   --text-warning-primary-fixed: #ff8fc9;
   --text-warning-secondary: #ffe0ef;
+
+  /* CADS-only token names — see the matching comment in the Light block
+   * above. Kept in sync with brandLegacyShim.css. */
+  --background-neutral-alpha-5: #ff69b40d;
+  --background-neutral-alpha-10: #ff69b41a;
+  --background-neutral-alpha-20: #ff69b433;
+  --background-neutral-alpha-30: #ff69b44d;
+  --background-neutral-alpha-40: #ff69b466;
+  --background-neutral-alpha-50: #ff69b480;
+  --background-neutral-alpha-60: #ff69b499;
+  --background-neutral-alpha-70: #ff69b4b2;
+  --background-neutral-alpha-80: #ff69b4cc;
+  --background-neutral-alpha-90: #ff69b4e5;
+  --background-neutral-alpha-95: #ff69b4f2;
+  --background-selected-hover: #8f2058;
+  --background-accent-orange-mid: #8f2058;
+  --background-accent-pink-mid: #8f2058;
+  --border-brand-mid: #8f2058;
+  --border-error-mid: #8f2058;
+  --border-warning-mid: #8f2058;
+  --border-success-mid: #8f2058;
+  --border-info-mid: #8f2058;
+  --border-selected-hover: #99255d;
+  --border-accent-orange-primary: #ff8fc9;
+  --border-accent-orange-light: #6e1543;
+  --border-accent-orange-mid: #8f2058;
+  --border-accent-orange-strong: #99255d;
+  --border-accent-pink-primary: #ff8fc9;
+  --border-accent-pink-light: #6e1543;
+  --border-accent-pink-mid: #8f2058;
+  --border-accent-pink-strong: #99255d;
+  --text-accent-orange-primary: #fff0f7;
+  --text-accent-orange-primary-fixed: #ff8fc9;
+  --text-accent-orange-strong: #ffe0ef;
+  --text-accent-pink-primary: #fff0f7;
+  --text-accent-pink-primary-fixed: #ff8fc9;
+  --text-accent-pink-strong: #ffe0ef;
 }
 /* stylelint-enable color-hex-length */

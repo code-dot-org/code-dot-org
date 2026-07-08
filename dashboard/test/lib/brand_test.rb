@@ -107,6 +107,14 @@ class BrandTest < ActiveSupport::TestCase
     assert_equal 'logo-codeai-inverse.svg', Cdo::Brand.header_logo_filename(request)
   end
 
+  test 'codeai-audit can never become the default brand, even if DCDO is set to it' do
+    DCDO.stubs(:get).with('default-brand', Cdo::Brand::BRAND_CODEAI).returns(Cdo::Brand::BRAND_CODEAI_AUDIT)
+    assert_equal Cdo::Brand::BRAND_CODEAI, Cdo::Brand.current_brand_code
+
+    DCDO.stubs(:get).with('brand-router-enabled', false).returns(true)
+    assert_equal Cdo::Brand::BRAND_CODEAI, Cdo::Brand.current_brand_code
+  end
+
   private def mock_request(params: {}, cookies: {})
     request = stub('request')
     request.stubs(:params).returns(params.with_indifferent_access)
