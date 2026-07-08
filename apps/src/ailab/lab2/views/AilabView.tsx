@@ -1,10 +1,16 @@
-import ailab from '@code-dot-org/ailab';
-import React, {useEffect} from 'react';
+import ailab, {
+  type InitAllOptions,
+  type SaveResponse,
+  type InstructionsKey,
+} from '@code-dot-org/ailab';
+import React, {useEffect, useMemo, useState} from 'react';
 
+import ailabI18n from '@cdo/apps/ailab/locale';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {LabProps} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {AilabLevelProperties} from '../types';
@@ -15,35 +21,86 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
   levelProperties,
 }) => {
   const dispatch = useAppDispatch();
+  const [dynamicInstructionsKey, setDynamicInstructionsKey] =
+    useState<InstructionsKey>();
+  const dynamicInstructionsMap: {[key: string]: string} = useMemo(
+    () => JSON.parse(levelProperties.dynamicInstructions || '{}'),
+    [levelProperties.dynamicInstructions]
+  );
+
   useEffect(() => {
     const onContinue = () => {
       dispatch(continueOrFinishLesson());
     };
 
-    const setInstructionsKey = (...args: unknown[]) => {
-      // TODO: Configure dynamic instructions.
-      console.log('Set instructions key', ...args);
+    const setInstructionsKey: InitAllOptions['setInstructionsKey'] = (
+      key,
+      options
+    ) => {
+      setDynamicInstructionsKey(key);
+      // Overlay is not shown in Lab2 AI Lab; dismiss immediately.
+      if (options?.showOverlay) {
+        ailab.instructionsDismissed();
+      }
     };
 
-    const saveTrainedModel = async (...args: unknown[]) => {
-      // TODO: Save trained model.
-      console.log('Save trained model', ...args);
+    const saveTrainedModel: InitAllOptions['saveTrainedModel'] = async (
+      dataToSave,
+      callback
+    ) => {
+      try {
+        const response = await HttpClient.post(
+          '/api/v1/ml_models/save',
+          JSON.stringify(dataToSave),
+          true,
+          {'Content-Type': 'application/json'}
+        );
+        const saveResponse = (await response.json()) as SaveResponse;
+        callback(saveResponse);
+      } catch (error) {
+        callback({status: 'error'});
+      }
     };
 
     const logMetric = (eventName: string, details: object) => {
       analyticsReporter.sendEvent(eventName, {details});
     };
 
-    ailab.setAssetPath('/blockly/media/skins/ailab/');
-    ailab.initAll({
-      mode: levelProperties.mode ? JSON.parse(levelProperties.mode) : undefined,
+    ailab.mount({
+      assetPath: '/blockly/media/skins/ailab/',
       onContinue,
       setInstructionsKey,
-      i18n: {},
+      i18n: {}, // TODO: Pass through localization map if necessary
       saveTrainedModel,
       logMetric,
     });
-  }, [levelProperties.mode, dispatch]);
+
+    return () => ailab.unmount();
+  }, [dispatch]);
+
+  // Reload whenever the level changes regardless of if the mode has changed.
+  useEffect(() => {
+    const mode = levelProperties.mode
+      ? JSON.parse(levelProperties.mode)
+      : undefined;
+    ailab.loadLevel(mode);
+  }, [levelProperties.id, levelProperties.mode]);
+
+  const dynamicInstructionsContent = useMemo(() => {
+    if (!dynamicInstructionsKey) {
+      return undefined;
+    }
+    if (dynamicInstructionsMap[dynamicInstructionsKey]) {
+      return dynamicInstructionsMap[dynamicInstructionsKey];
+    } else if (ailabI18n[dynamicInstructionsKey]) {
+      return ailabI18n[dynamicInstructionsKey]();
+    } else {
+      console.warn(
+        `No dynamic instructions available for key ${dynamicInstructionsKey}`
+      );
+      return undefined;
+    }
+  }, [dynamicInstructionsKey, dynamicInstructionsMap]);
 
   return (
     <div id="ailab-lab2" className={styles.ailab} data-notranslate>
@@ -53,6 +110,7 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
         isRunning={false}
         hasRun={false}
         hasEdited={false}
+        dynamicInstructions={dynamicInstructionsContent}
       />
       <div className={styles.divider} />
       <div className={styles.workspace}>

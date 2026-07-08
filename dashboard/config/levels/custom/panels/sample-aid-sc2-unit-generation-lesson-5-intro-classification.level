@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-06-29T17:06:04.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "panels": [
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-5-intro-classification-0324a960-e818-4be3-8b3f-59c127ff1cbd",
+        "text": "Have you ever wondered how computers sort information into different groups? That's what **classification AI** does! It's like having a super-smart organizer for data.",
+        "imageUrl": "https://images.code.org/63a2bcafecc769855712207e4e2b7514-sample-aid-sc2-unit-generation-lesson-5-intro-classification-panel-1-b5ab4375-da2c-4021-bd69-fa6e898478bd.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-5-intro-classification-2e0e37d2-3e06-40b6-be1f-1f3c8b8f4c09",
+        "text": "One common use is identifying spam emails. An AI model can look at an email and classify it as either 'spam' or 'not spam' based on patterns it learned.",
+        "imageUrl": "https://images.code.org/f9efecc852edc1cd1dbbea8fe6d0b69a-sample-aid-sc2-unit-generation-lesson-5-intro-classification-panel-2-120fb0dd-9769-4445-af2c-915060eaa2b5.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-5-intro-classification-90e6f574-72ae-4971-9378-0b4835984b2e",
+        "text": "It can also categorize images! Imagine showing a computer a picture of an animal, and it tells you if it's a *dog*, a *cat*, or a *bird*.",
+        "imageUrl": "https://images.code.org/5d61c9faa866b12c9081e4ca4ac1fb4d-sample-aid-sc2-unit-generation-lesson-5-intro-classification-panel-3-fbb75dbc-8785-4c6c-8192-8e0a61322ca2.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-5-intro-classification-fcbdf72c-a15e-4467-8499-08d9f1b82446",
+        "text": "Classification AI helps us make sense of huge amounts of data by putting things into buckets. It's all about making predictions based on learned patterns!",
+        "imageUrl": "https://images.code.org/fb33c6cbe1b1e7022b9a02d8628f4236-sample-aid-sc2-unit-generation-lesson-5-intro-classification-panel-4-6089425b-e4bd-464d-b871-dae98d549ed3.png",
+        "layout": "text-top-center"
+      }
+    ],
+    "generate_outline": "Introduce classification AI, defining it as categorizing data into predefined groups. Provide simple real-world examples like identifying spam emails, sorting images of animals, or recognizing emotions in text."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:06:43 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:06:44 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

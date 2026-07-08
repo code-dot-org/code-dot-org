@@ -17,6 +17,7 @@ import useReviewSyllabusTour, {
   REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
 } from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useReviewSyllabusTour';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 
@@ -27,6 +28,9 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
 const mockHttpClientPost = HttpClient.post as jest.MockedFunction<
   typeof HttpClient.post
 >;
+
+const demoSectionWithType = (demoType: Section['demoType']) =>
+  ({demoType} as unknown as Section);
 
 jest.mock('@cdo/apps/sharedComponents/productTour/shepherdTourFactory');
 jest.mock('@cdo/apps/sharedComponents/productTour/useOnboardingTour', () =>
@@ -257,14 +261,19 @@ describe('useReviewSyllabusTour', () => {
       );
 
   it('returns a tour object', () => {
-    const {result} = renderHook(() => useReviewSyllabusTour('high'), {
-      wrapper: makeWrapper(),
-    });
+    const {result} = renderHook(
+      () => useReviewSyllabusTour(demoSectionWithType('high')),
+      {
+        wrapper: makeWrapper(),
+      }
+    );
     expect(result.current).toBe(mockTour);
   });
 
   it('saves demoType to sessionStorage on mount', () => {
-    renderHook(() => useReviewSyllabusTour('high'), {wrapper: makeWrapper()});
+    renderHook(() => useReviewSyllabusTour(demoSectionWithType('high')), {
+      wrapper: makeWrapper(),
+    });
     expect(mockTrySetSessionStorage).toHaveBeenCalledWith(
       'reviewSyllabusOnboardingDemoType',
       'high'

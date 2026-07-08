@@ -1,0 +1,1598 @@
+{
+  "script": {
+    "name": "sample-aid-sc2-unit-generation",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "generate_outline": "AI in Your Program\nRegular Unit  |  3 weeks  |  Required in all implementations and options\nUnit Overview\nGenerative AI is everywhere in students' lives, and this unit opens by getting inside how it actually works: students explore how generative AI systems produce text and images by predicting likely next pieces based on patterns in massive training data, building a working mental model they can reason from. With that foundation in place, students design and build block-based programs that incorporate a trained AI classification model as a functional component, making creative decisions about where the model fits, how the program should respond when the model is wrong, and whether the result actually serves the person it was built for. Throughout the unit, students work alongside a generative AI tutor that helps them plan, debug, and think through design decisions, and because they understand how generative AI produces its responses, they can reason about when to trust the tutor, when to push back, and when to ignore it entirely. Students might build an app that settles arguments, delivers a ruling on social situations, or predicts whether something they made would go viral. The creative challenge at the center of the unit is learning that incorporating AI into a program is a design choice with real consequences, and that the best designs keep the end user in view the whole way through.\nPurpose in the Course\n\n\n\nLearning Goals\nBy the end of this unit, students will be able to . . .\nExplain how generative AI systems produce text and image outputs through pattern-based prediction, including how training data shapes what the model can do and where it fails.\nDistinguish between classification models and generative AI models in terms of how they learn, what they produce, and where their outputs can be trusted.\nJustify whether a problem is best solved using procedural instructions, rule-based logic, or a data-informed model.\nPlan a block-based program using flowcharts or pseudocode that incorporates an AI classification model as a functional component.\nBuild a block-based program that uses conditionals and loops to control how the program responds to model outputs, including when the model is wrong.\nDirect a generative AI tutor with specific instructions and context, evaluating its responses based on conceptual understanding of how it produces them.\nRecognize the limitations of generative AI as a tutor, including hallucination, confidence calibration, and gaps in training data.\nEvaluate whether a program serves the people it was designed for, identifying where the AI model's outputs fall short and what would need to change.\nExplain how the design decisions students make when building AI-powered programs reflect the choices made by people who build AI-powered products in the real world, where those choices carry consequences for real users.\nStandards and Competencies\nJustify whether procedural, rule-based, or data-informed approach is best, and decompose accordingly\nMS-ALG-04 Justify whether a problem is best solved using procedural instructions, rule-based logic, data-informed methods, or a combination of these approaches.\nManage 1 Decide whether to use AI systems based on the nature of the task.\nManage 2 Choose an appropriate AI approach for a task by comparing how different AI systems operate and what they are best suited to do\nManage 3 Decompose a problem to determine when and how AI systems should be used to automate or augment tasks \nDesign and write a block-based program that incorporates an AI model\nMS-ALG-02 Model a given algorithm with a flowchart or pseudocode that includes a combination of control structures and procedures.\nEvaluate whether the program serves the people it is meant for\nShape AI 2 Evaluate AI systems using defined criteria, expected outcomes, and user feedback.\nMS-ALG-IM-10 Examine evidence of beneficial and harmful impacts, ethical issues, and biases of algorithms encountered in daily life \nMS-SOC-CE-44 Analyze how workers in different careers use computational thinking to solve real-world problems.\nUse and direct AI tools to support programming (introductory exposure)\nMS-ALG-05 Use an AI tool to generate outputs that assist in solving a computational problem .\nCreate with AI 3 Direct generative AI systems to elicit feedback, refine results and support reflection\nEngage with AI 3 Evaluate whether AI outputs should be accepted, revised or rejected \n\nStandards to Debate / Consider\nClassification-vs-generative distinction \nOur objective: Explain how generative AI systems produce text and image outputs through pattern-based prediction, including how training data shapes what the model can do and where it fails.\nAI Lit Framework:\nManage 2 Choose an appropriate AI approach for a task by comparing how different AI systems operate and what they are best suited to do\nAI Literacy Framework Knowledge Statements:\nThe Nature of AI 1.3 GenAI uses probabilities to generate advanced outputs across various modalities (e.g. text, audio, visuals) but lacks authentic human understanding and intent \nAI's Capabilities and Limitations 3.3 AI systems may produce different outputs in response to the same input, depending on both the input itself and how an AI system is designed to select or prioritise specific features and parameters \nUse and direct AI tools to support programming\nOur objectives: \nDirect a generative AI tutor with specific instructions and context, evaluating its responses based on conceptual understanding of how it produces them.\nRecognize the limitations of generative AI as a tutor, including hallucination, confidence calibration, and gaps in training data.\nAI Literacy Framework:\nEngage with AI 3 Evaluate whether AI outputs should be accepted, revised or rejected \nManage AI 4 Monitor and evaluate AI use throughout a problem-solving process \nReal-world product/consequences framing \nOur objective: Explain how the design decisions students make when building AI-powered programs reflect the choices made by people who build AI-powered products in the real world, where those choices carry consequences for real users.\nCSTA Standards\nMS-ALG-IM-10 Examine evidence of beneficial and harmful impacts, ethical issues, and biases of algorithms encountered in daily life \nMS-SOC-CE-44 Analyze how workers in different careers use computational thinking to solve real-world problems.\nMS-SOC-CE-45 Evaluate how automation in technology can create or replace jobs and change how people work.",
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-06-29 17:18:41 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "sample-aid-sc2-unit-generation"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "sample-aid-sc2-unit-generation"
+      }
+    },
+    {
+      "key": "outlines",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Lessons"
+      },
+      "seeding_key": {
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "what-is-gen-ai",
+      "name": "What is Generative AI?",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "generate_outline": "Students will be introduced to generative artificial intelligence (AI), understanding what it is and seeing examples of its capabilities, such as creating text, images, and other media. They will explore common applications of generative AI in everyday life and discuss the general idea of how these systems produce novel outputs. By the end, students should be able to identify and describe various generative AI tools."
+      },
+      "seeding_key": {
+        "lesson.key": "what-is-gen-ai",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation"
+      }
+    },
+    {
+      "key": "how-gen-ai-learns",
+      "name": "How Generative AI Learns Patterns",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "generate_outline": "This lesson delves into the fundamental mechanism behind generative AI: pattern-based prediction. Students will learn that generative AI systems analyze massive datasets to identify statistical patterns and probabilities, which they then use to predict the most likely next word, pixel, or element. They will understand how these predictions accumulate to form coherent text or images."
+      },
+      "seeding_key": {
+        "lesson.key": "how-gen-ai-learns",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation"
+      }
+    },
+    {
+      "key": "training-data-impact",
+      "name": "The Role of Training Data",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "generate_outline": "Students will explore how the quality and characteristics of training data directly influence what a generative AI model can produce and where its outputs might fall short. They will learn that AI models are only as good as the data they are trained on, and how biases or limitations in the dataset can lead to inaccurate, unfair, or incomplete results. By the end, students should recognize that training data shapes an AI's capabilities and failures."
+      },
+      "seeding_key": {
+        "lesson.key": "training-data-impact",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation"
+      }
+    },
+    {
+      "key": "gen-ai-limitations",
+      "name": "Limitations of Generative AI",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "generate_outline": "This lesson focuses on the inherent limitations of generative AI, such as hallucination (generating false information), confidence calibration (expressing high confidence in incorrect outputs), and gaps due to insufficient or biased training data. Students will learn to critically evaluate generative AI outputs and understand that these tools lack true understanding or intent. They will practice identifying common pitfalls in AI-generated content."
+      },
+      "seeding_key": {
+        "lesson.key": "gen-ai-limitations",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation"
+      }
+    },
+    {
+      "key": "intro-classification-ai",
+      "name": "Introduction to Classification AI",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "generate_outline": "Students will be introduced to classification AI models and understand how they differ from generative AI. They will learn that classification models are designed to categorize data into predefined groups, such as identifying objects in images or sentiments in text, based on patterns learned from labeled training data. By the end, students should be able to distinguish between generative and classification AI and provide examples of classification tasks."
+      },
+      "seeding_key": {
+        "lesson.key": "intro-classification-ai",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation"
+      }
+    },
+    {
+      "key": "problem-solving-approaches",
+      "name": "Choosing the Right Problem-Solving Approach",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "generate_outline": "This lesson teaches students to differentiate between procedural instructions, rule-based logic, and data-informed models (like AI classification) as methods for solving problems. They will analyze various scenarios and justify which approach is most appropriate, considering factors like complexity, predictability, and the availability of data. By the end, students should be able to decide whether a problem is best solved with traditional algorithms or an AI model."
+      },
+      "seeding_key": {
+        "lesson.key": "problem-solving-approaches",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation"
+      }
+    },
+    {
+      "key": "planning-ai-program",
+      "name": "Planning Your AI Program",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+        "generate_outline": "Students will learn to plan block-based programs that integrate an AI classification model. They will use tools like flowcharts or pseudocode to outline the program's logic, focusing on how the AI model's input and output will fit into the overall structure. This lesson emphasizes decomposition and structuring a program before coding, considering the AI as a functional component."
+      },
+      "seeding_key": {
+        "lesson.key": "planning-ai-program",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation"
+      }
+    },
+    {
+      "key": "integrate-classification-ai",
+      "name": "Integrating Classification AI into a Program",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+        "generate_outline": "Students will build a simple block-based program that incorporates a pre-trained AI classification model. They will learn how to send input to the AI model and receive its output, making it a functional part of their program. This lesson focuses on the practical steps of calling an AI service within their coding environment."
+      },
+      "seeding_key": {
+        "lesson.key": "integrate-classification-ai",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation"
+      }
+    },
+    {
+      "key": "respond-ai-outputs",
+      "name": "Responding to AI Outputs: Conditionals & Loops",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+        "generate_outline": "This lesson teaches students how to make their programs react intelligently to the outputs of an AI classification model. Students will use conditional statements (if/else) to implement different behaviors based on the AI's classification and loops to process multiple AI outputs or retries. They will also consider scenarios where the AI model might be incorrect and how the program should handle such instances."
+      },
+      "seeding_key": {
+        "lesson.key": "respond-ai-outputs",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation"
+      }
+    },
+    {
+      "key": "handle-ai-errors",
+      "name": "Handling AI Model Errors and Uncertainty",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+        "generate_outline": "Students will explore strategies for building more robust AI-powered programs by anticipating and managing model errors or uncertain predictions. They will learn techniques like setting confidence thresholds, offering alternative actions, or prompting user clarification when the AI's output is low-confidence or potentially wrong. This lesson emphasizes designing for resilience and user experience in the face of AI imperfections."
+      },
+      "seeding_key": {
+        "lesson.key": "handle-ai-errors",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation"
+      }
+    },
+    {
+      "key": "ai-programming-tutor",
+      "name": "Working with an AI Programming Tutor",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+        "generate_outline": "Students will interact with a generative AI tool designed to assist with programming tasks, such as generating code snippets, debugging, or explaining concepts. They will practice formulating clear prompts and providing sufficient context to get helpful responses from the AI tutor. The goal is to learn how to effectively use AI as a supportive programming resource."
+      },
+      "seeding_key": {
+        "lesson.key": "ai-programming-tutor",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation"
+      }
+    },
+    {
+      "key": "evaluate-ai-tutor",
+      "name": "Critically Evaluating AI Tutor Responses",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+        "generate_outline": "Building on their understanding of generative AI limitations, students will learn to critically evaluate the outputs of their AI programming tutor. They will identify potential issues like hallucinated code, incomplete explanations, or unhelpful suggestions. Students will develop skills to discern when to accept, revise, or reject the AI's advice, fostering a skeptical but informed approach to using AI assistants."
+      },
+      "seeding_key": {
+        "lesson.key": "evaluate-ai-tutor",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation"
+      }
+    },
+    {
+      "key": "user-centered-ai-design",
+      "name": "User-Centered Design for AI Programs",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+        "generate_outline": "This lesson focuses on designing AI-powered programs with the end-user in mind. Students will learn to evaluate whether their program genuinely serves its target audience, considering factors beyond just functionality, such as fairness, usability, and potential negative impacts. They will identify areas where the AI model's outputs might fall short for real users and brainstorm improvements."
+      },
+      "seeding_key": {
+        "lesson.key": "user-centered-ai-design",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation"
+      }
+    },
+    {
+      "key": "test-debug-improve-ai",
+      "name": "Testing, Debugging, and Improving AI Programs",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+        "generate_outline": "Students will engage in an iterative process of testing, debugging, and refining their AI-powered programs. They will learn strategies for identifying when the AI model is performing poorly or causing unexpected program behavior. Through systematic testing and user feedback, students will modify their code and consider adjusting their AI integration to enhance performance and user satisfaction."
+      },
+      "seeding_key": {
+        "lesson.key": "test-debug-improve-ai",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation"
+      }
+    },
+    {
+      "key": "ai-real-world-ethics",
+      "name": "AI's Real-World Impact and Ethical Considerations",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
+      "properties": {
+        "generate_outline": "This lesson examines the broader societal implications of AI, focusing on how design decisions made when building AI-powered products in the real world have significant consequences for users. Students will discuss ethical issues, biases, and the potential for both beneficial and harmful impacts of AI algorithms, connecting their own design choices to real-world scenarios."
+      },
+      "seeding_key": {
+        "lesson.key": "ai-real-world-ethics",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "22c6d1c3-1acd-4ac6-ab03-c0203b9d6f78",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "22c6d1c3-1acd-4ac6-ab03-c0203b9d6f78",
+        "lesson.key": "what-is-gen-ai",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation"
+      }
+    },
+    {
+      "key": "e864bbd5-93bd-4871-bb48-6058c7314576",
+      "position": 1,
+      "properties": {
+        "duration": 0
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e864bbd5-93bd-4871-bb48-6058c7314576",
+        "lesson.key": "how-gen-ai-learns",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation"
+      }
+    },
+    {
+      "key": "b1ff5b27-0f75-4417-9096-9fb624fb6203",
+      "position": 1,
+      "properties": {
+        "duration": 0
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b1ff5b27-0f75-4417-9096-9fb624fb6203",
+        "lesson.key": "training-data-impact",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation"
+      }
+    },
+    {
+      "key": "95d2ed84-e412-4d8d-9975-e543024d96e4",
+      "position": 1,
+      "properties": {
+        "duration": 0
+      },
+      "seeding_key": {
+        "lesson_activity.key": "95d2ed84-e412-4d8d-9975-e543024d96e4",
+        "lesson.key": "gen-ai-limitations",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation"
+      }
+    },
+    {
+      "key": "ac88d09a-a817-4bd1-8f4f-7efeca50d131",
+      "position": 1,
+      "properties": {
+        "duration": 0
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ac88d09a-a817-4bd1-8f4f-7efeca50d131",
+        "lesson.key": "intro-classification-ai",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation"
+      }
+    },
+    {
+      "key": "41ab35f2-6a6b-4e3b-9deb-2c987bb8c83e",
+      "position": 1,
+      "properties": {
+        "duration": 0
+      },
+      "seeding_key": {
+        "lesson_activity.key": "41ab35f2-6a6b-4e3b-9deb-2c987bb8c83e",
+        "lesson.key": "planning-ai-program",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation"
+      }
+    },
+    {
+      "key": "57f77f73-b642-4977-870e-232e3d7e58ea",
+      "position": 1,
+      "properties": {
+        "duration": 0
+      },
+      "seeding_key": {
+        "lesson_activity.key": "57f77f73-b642-4977-870e-232e3d7e58ea",
+        "lesson.key": "handle-ai-errors",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation"
+      }
+    },
+    {
+      "key": "8720a9f2-93d6-4abc-83b8-6a717ca3ff33",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8720a9f2-93d6-4abc-83b8-6a717ca3ff33",
+        "lesson.key": "user-centered-ai-design",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation"
+      }
+    },
+    {
+      "key": "7b635d3c-cddd-47b9-b736-a8575be259fc",
+      "position": 1,
+      "properties": {
+        "duration": 0
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7b635d3c-cddd-47b9-b736-a8575be259fc",
+        "lesson.key": "test-debug-improve-ai",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation"
+      }
+    },
+    {
+      "key": "53906a5c-de9e-47c2-96ce-35516b834b5b",
+      "position": 1,
+      "properties": {
+        "duration": 0
+      },
+      "seeding_key": {
+        "lesson_activity.key": "53906a5c-de9e-47c2-96ce-35516b834b5b",
+        "lesson.key": "ai-real-world-ethics",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "55ce1e60-12e6-4e67-95ec-8bddccb4c067",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "55ce1e60-12e6-4e67-95ec-8bddccb4c067",
+        "lesson_activity.key": "22c6d1c3-1acd-4ac6-ab03-c0203b9d6f78"
+      }
+    },
+    {
+      "key": "2a756589-b8a4-4559-b48e-056cb4b83c52",
+      "position": 1,
+      "properties": {
+        "duration": 0
+      },
+      "seeding_key": {
+        "activity_section.key": "2a756589-b8a4-4559-b48e-056cb4b83c52",
+        "lesson_activity.key": "e864bbd5-93bd-4871-bb48-6058c7314576"
+      }
+    },
+    {
+      "key": "23c7be04-89cb-41b0-b4b0-4193f7887ad3",
+      "position": 1,
+      "properties": {
+        "duration": 0
+      },
+      "seeding_key": {
+        "activity_section.key": "23c7be04-89cb-41b0-b4b0-4193f7887ad3",
+        "lesson_activity.key": "b1ff5b27-0f75-4417-9096-9fb624fb6203"
+      }
+    },
+    {
+      "key": "d53b9c05-a104-4634-ae94-7a0f3d45f6ff",
+      "position": 1,
+      "properties": {
+        "duration": 0
+      },
+      "seeding_key": {
+        "activity_section.key": "d53b9c05-a104-4634-ae94-7a0f3d45f6ff",
+        "lesson_activity.key": "95d2ed84-e412-4d8d-9975-e543024d96e4"
+      }
+    },
+    {
+      "key": "7919e8f5-5a0a-4e69-9357-22fa37585add",
+      "position": 1,
+      "properties": {
+        "duration": 0
+      },
+      "seeding_key": {
+        "activity_section.key": "7919e8f5-5a0a-4e69-9357-22fa37585add",
+        "lesson_activity.key": "ac88d09a-a817-4bd1-8f4f-7efeca50d131"
+      }
+    },
+    {
+      "key": "d21f8a82-4873-4da8-9c2a-f63f6b8750e0",
+      "position": 1,
+      "properties": {
+        "duration": 0
+      },
+      "seeding_key": {
+        "activity_section.key": "d21f8a82-4873-4da8-9c2a-f63f6b8750e0",
+        "lesson_activity.key": "41ab35f2-6a6b-4e3b-9deb-2c987bb8c83e"
+      }
+    },
+    {
+      "key": "8605af88-7755-46e9-96c2-17121e110b6e",
+      "position": 1,
+      "properties": {
+        "duration": 0
+      },
+      "seeding_key": {
+        "activity_section.key": "8605af88-7755-46e9-96c2-17121e110b6e",
+        "lesson_activity.key": "57f77f73-b642-4977-870e-232e3d7e58ea"
+      }
+    },
+    {
+      "key": "0a7bf109-083a-47e5-ab72-d679b509441a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0a7bf109-083a-47e5-ab72-d679b509441a",
+        "lesson_activity.key": "8720a9f2-93d6-4abc-83b8-6a717ca3ff33"
+      }
+    },
+    {
+      "key": "c12c4e52-b20e-401c-b1d0-d25131fb30bf",
+      "position": 1,
+      "properties": {
+        "duration": 0
+      },
+      "seeding_key": {
+        "activity_section.key": "c12c4e52-b20e-401c-b1d0-d25131fb30bf",
+        "lesson_activity.key": "7b635d3c-cddd-47b9-b736-a8575be259fc"
+      }
+    },
+    {
+      "key": "5a89700e-0488-4331-bbea-8845b7599e1a",
+      "position": 1,
+      "properties": {
+        "duration": 0
+      },
+      "seeding_key": {
+        "activity_section.key": "5a89700e-0488-4331-bbea-8845b7599e1a",
+        "lesson_activity.key": "53906a5c-de9e-47c2-96ce-35516b834b5b"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-1-intro-generative-ai"
+        ],
+        "lesson.key": "what-is-gen-ai",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "55ce1e60-12e6-4e67-95ec-8bddccb4c067"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-1-intro-generative-ai"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-2-gen-ai-intro"
+        ],
+        "lesson.key": "how-gen-ai-learns",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "2a756589-b8a4-4559-b48e-056cb4b83c52"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-2-gen-ai-intro"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-3-how-data-trains"
+        ],
+        "lesson.key": "training-data-impact",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "23c7be04-89cb-41b0-b4b0-4193f7887ad3"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-3-how-data-trains"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-3-explore-data-impact"
+        ],
+        "lesson.key": "training-data-impact",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "23c7be04-89cb-41b0-b4b0-4193f7887ad3"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-3-explore-data-impact"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-3-data-biases-limits"
+        ],
+        "lesson.key": "training-data-impact",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "23c7be04-89cb-41b0-b4b0-4193f7887ad3"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-3-data-biases-limits"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-3-analyze-ai-errors"
+        ],
+        "lesson.key": "training-data-impact",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "23c7be04-89cb-41b0-b4b0-4193f7887ad3"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-3-analyze-ai-errors"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-3-data-shapes-ai-summary"
+        ],
+        "lesson.key": "training-data-impact",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "23c7be04-89cb-41b0-b4b0-4193f7887ad3"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-3-data-shapes-ai-summary"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-4-intro-limitations"
+        ],
+        "lesson.key": "gen-ai-limitations",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "d53b9c05-a104-4634-ae94-7a0f3d45f6ff"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-4-intro-limitations"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-4-spot-hallucinations"
+        ],
+        "lesson.key": "gen-ai-limitations",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "d53b9c05-a104-4634-ae94-7a0f3d45f6ff"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-4-spot-hallucinations"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-4-confident-errors-explain"
+        ],
+        "lesson.key": "gen-ai-limitations",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "d53b9c05-a104-4634-ae94-7a0f3d45f6ff"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-4-confident-errors-explain"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-4-debunk-confident-ai"
+        ],
+        "lesson.key": "gen-ai-limitations",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "d53b9c05-a104-4634-ae94-7a0f3d45f6ff"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-4-debunk-confident-ai"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-4-identify-data-flaws"
+        ],
+        "lesson.key": "gen-ai-limitations",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "d53b9c05-a104-4634-ae94-7a0f3d45f6ff"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-4-identify-data-flaws"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-4-critical-evaluation-summary"
+        ],
+        "lesson.key": "gen-ai-limitations",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "d53b9c05-a104-4634-ae94-7a0f3d45f6ff"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-4-critical-evaluation-summary"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-5-intro-classification"
+        ],
+        "lesson.key": "intro-classification-ai",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "7919e8f5-5a0a-4e69-9357-22fa37585add"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-5-intro-classification"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-7-intro-ai-programs"
+        ],
+        "lesson.key": "planning-ai-program",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "d21f8a82-4873-4da8-9c2a-f63f6b8750e0"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-7-intro-ai-programs"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-10-implement-threshold"
+        ],
+        "lesson.key": "handle-ai-errors",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "8605af88-7755-46e9-96c2-17121e110b6e"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-10-implement-threshold"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-10-alternative-actions"
+        ],
+        "lesson.key": "handle-ai-errors",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "8605af88-7755-46e9-96c2-17121e110b6e"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-10-alternative-actions"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-10-design-for-clarification"
+        ],
+        "lesson.key": "handle-ai-errors",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "8605af88-7755-46e9-96c2-17121e110b6e"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-10-design-for-clarification"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-10-resilient-ux-summary"
+        ],
+        "lesson.key": "handle-ai-errors",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "8605af88-7755-46e9-96c2-17121e110b6e"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-10-resilient-ux-summary"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-14-intro-testing"
+        ],
+        "lesson.key": "test-debug-improve-ai",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "c12c4e52-b20e-401c-b1d0-d25131fb30bf"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-14-intro-testing"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-14-observe-ai-behavior"
+        ],
+        "lesson.key": "test-debug-improve-ai",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "c12c4e52-b20e-401c-b1d0-d25131fb30bf"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-14-observe-ai-behavior"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-14-systematic-testing-strategies"
+        ],
+        "lesson.key": "test-debug-improve-ai",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "c12c4e52-b20e-401c-b1d0-d25131fb30bf"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-14-systematic-testing-strategies"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-14-debug-and-modify-code"
+        ],
+        "lesson.key": "test-debug-improve-ai",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "c12c4e52-b20e-401c-b1d0-d25131fb30bf"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-14-debug-and-modify-code"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-14-reconsider-ai-integration"
+        ],
+        "lesson.key": "test-debug-improve-ai",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "c12c4e52-b20e-401c-b1d0-d25131fb30bf"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-14-reconsider-ai-integration"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-14-refine-for-user-satisfaction"
+        ],
+        "lesson.key": "test-debug-improve-ai",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "c12c4e52-b20e-401c-b1d0-d25131fb30bf"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-14-refine-for-user-satisfaction"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-15-intro-societal-impact"
+        ],
+        "lesson.key": "ai-real-world-ethics",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "5a89700e-0488-4331-bbea-8845b7599e1a"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-15-intro-societal-impact"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-15-explore-ai-bias"
+        ],
+        "lesson.key": "ai-real-world-ethics",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "5a89700e-0488-4331-bbea-8845b7599e1a"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-15-explore-ai-bias"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-15-observe-impact-weblab"
+        ],
+        "lesson.key": "ai-real-world-ethics",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "5a89700e-0488-4331-bbea-8845b7599e1a"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-15-observe-impact-weblab"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-15-ethical-design-concepts"
+        ],
+        "lesson.key": "ai-real-world-ethics",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "5a89700e-0488-4331-bbea-8845b7599e1a"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-15-ethical-design-concepts"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-15-mitigate-bias-weblab"
+        ],
+        "lesson.key": "ai-real-world-ethics",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "5a89700e-0488-4331-bbea-8845b7599e1a"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-15-mitigate-bias-weblab"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-15-reflect-ai-consequences"
+        ],
+        "lesson.key": "ai-real-world-ethics",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "5a89700e-0488-4331-bbea-8845b7599e1a"
+      },
+      "level_keys": [
+        "sample-aid-sc2-unit-generation-lesson-15-reflect-ai-consequences"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-1-intro-generative-ai",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-1-intro-generative-ai"
+        ],
+        "lesson.key": "what-is-gen-ai",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "55ce1e60-12e6-4e67-95ec-8bddccb4c067"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-2-gen-ai-intro",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-2-gen-ai-intro"
+        ],
+        "lesson.key": "how-gen-ai-learns",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "2a756589-b8a4-4559-b48e-056cb4b83c52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-3-how-data-trains",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-3-how-data-trains"
+        ],
+        "lesson.key": "training-data-impact",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "23c7be04-89cb-41b0-b4b0-4193f7887ad3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-3-explore-data-impact",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-3-explore-data-impact"
+        ],
+        "lesson.key": "training-data-impact",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "23c7be04-89cb-41b0-b4b0-4193f7887ad3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-3-data-biases-limits",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-3-data-biases-limits"
+        ],
+        "lesson.key": "training-data-impact",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "23c7be04-89cb-41b0-b4b0-4193f7887ad3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-3-analyze-ai-errors",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-3-analyze-ai-errors"
+        ],
+        "lesson.key": "training-data-impact",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "23c7be04-89cb-41b0-b4b0-4193f7887ad3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-3-data-shapes-ai-summary",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-3-data-shapes-ai-summary"
+        ],
+        "lesson.key": "training-data-impact",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "23c7be04-89cb-41b0-b4b0-4193f7887ad3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-4-intro-limitations",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-4-intro-limitations"
+        ],
+        "lesson.key": "gen-ai-limitations",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "d53b9c05-a104-4634-ae94-7a0f3d45f6ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-4-spot-hallucinations",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-4-spot-hallucinations"
+        ],
+        "lesson.key": "gen-ai-limitations",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "d53b9c05-a104-4634-ae94-7a0f3d45f6ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-4-confident-errors-explain",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-4-confident-errors-explain"
+        ],
+        "lesson.key": "gen-ai-limitations",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "d53b9c05-a104-4634-ae94-7a0f3d45f6ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-4-debunk-confident-ai",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-4-debunk-confident-ai"
+        ],
+        "lesson.key": "gen-ai-limitations",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "d53b9c05-a104-4634-ae94-7a0f3d45f6ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-4-identify-data-flaws",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-4-identify-data-flaws"
+        ],
+        "lesson.key": "gen-ai-limitations",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "d53b9c05-a104-4634-ae94-7a0f3d45f6ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-4-critical-evaluation-summary",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-4-critical-evaluation-summary"
+        ],
+        "lesson.key": "gen-ai-limitations",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "d53b9c05-a104-4634-ae94-7a0f3d45f6ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-5-intro-classification",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-5-intro-classification"
+        ],
+        "lesson.key": "intro-classification-ai",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "7919e8f5-5a0a-4e69-9357-22fa37585add"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-7-intro-ai-programs",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-7-intro-ai-programs"
+        ],
+        "lesson.key": "planning-ai-program",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "d21f8a82-4873-4da8-9c2a-f63f6b8750e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-10-implement-threshold",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-10-implement-threshold"
+        ],
+        "lesson.key": "handle-ai-errors",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "8605af88-7755-46e9-96c2-17121e110b6e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-10-alternative-actions",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-10-alternative-actions"
+        ],
+        "lesson.key": "handle-ai-errors",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "8605af88-7755-46e9-96c2-17121e110b6e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-10-design-for-clarification",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-10-design-for-clarification"
+        ],
+        "lesson.key": "handle-ai-errors",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "8605af88-7755-46e9-96c2-17121e110b6e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-10-resilient-ux-summary",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-10-resilient-ux-summary"
+        ],
+        "lesson.key": "handle-ai-errors",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "8605af88-7755-46e9-96c2-17121e110b6e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-14-intro-testing",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-14-intro-testing"
+        ],
+        "lesson.key": "test-debug-improve-ai",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "c12c4e52-b20e-401c-b1d0-d25131fb30bf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-14-observe-ai-behavior",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-14-observe-ai-behavior"
+        ],
+        "lesson.key": "test-debug-improve-ai",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "c12c4e52-b20e-401c-b1d0-d25131fb30bf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-14-systematic-testing-strategies",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-14-systematic-testing-strategies"
+        ],
+        "lesson.key": "test-debug-improve-ai",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "c12c4e52-b20e-401c-b1d0-d25131fb30bf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-14-debug-and-modify-code",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-14-debug-and-modify-code"
+        ],
+        "lesson.key": "test-debug-improve-ai",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "c12c4e52-b20e-401c-b1d0-d25131fb30bf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-14-reconsider-ai-integration",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-14-reconsider-ai-integration"
+        ],
+        "lesson.key": "test-debug-improve-ai",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "c12c4e52-b20e-401c-b1d0-d25131fb30bf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-14-refine-for-user-satisfaction",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-14-refine-for-user-satisfaction"
+        ],
+        "lesson.key": "test-debug-improve-ai",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "c12c4e52-b20e-401c-b1d0-d25131fb30bf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-15-intro-societal-impact",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-15-intro-societal-impact"
+        ],
+        "lesson.key": "ai-real-world-ethics",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "5a89700e-0488-4331-bbea-8845b7599e1a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-15-explore-ai-bias",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-15-explore-ai-bias"
+        ],
+        "lesson.key": "ai-real-world-ethics",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "5a89700e-0488-4331-bbea-8845b7599e1a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-15-observe-impact-weblab",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-15-observe-impact-weblab"
+        ],
+        "lesson.key": "ai-real-world-ethics",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "5a89700e-0488-4331-bbea-8845b7599e1a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-15-ethical-design-concepts",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-15-ethical-design-concepts"
+        ],
+        "lesson.key": "ai-real-world-ethics",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "5a89700e-0488-4331-bbea-8845b7599e1a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-15-mitigate-bias-weblab",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-15-mitigate-bias-weblab"
+        ],
+        "lesson.key": "ai-real-world-ethics",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "5a89700e-0488-4331-bbea-8845b7599e1a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sample-aid-sc2-unit-generation-lesson-15-reflect-ai-consequences",
+        "script_level.level_keys": [
+          "sample-aid-sc2-unit-generation-lesson-15-reflect-ai-consequences"
+        ],
+        "lesson.key": "ai-real-world-ethics",
+        "lesson_group.key": "outlines",
+        "script.name": "sample-aid-sc2-unit-generation",
+        "activity_section.key": "5a89700e-0488-4331-bbea-8845b7599e1a"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

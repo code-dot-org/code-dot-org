@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-06-29T19:38:26.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "panels": [
+      {
+        "key": "test-brendan-intro-web-5a96e418-ca0b-4baa-a94e-2bef6ddc8874",
+        "text": "Have you ever wondered how awesome websites, like your favorite game's homepage or a video streaming site, appear on your screen?",
+        "imageUrl": "https://images.code.org/d78b6ba772d618ae8716096caaaa6ccd-test-brendan-intro-web-panel-1-791ca597-2545-4d3e-bf94-0d4142639e59.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-brendan-intro-web-99999c08-2587-4068-aa7f-a2d88ae87c51",
+        "text": "When you visit a website, your web browser (like Chrome or Safari) works super hard to show you everything, from text and pictures to videos.",
+        "imageUrl": "https://images.code.org/c15013a48e695a4878a6175c1b771320-test-brendan-intro-web-panel-2-cd43f06a-aecf-4b48-9888-5610098538c4.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-brendan-intro-web-0fc64fc1-a760-4e9c-956f-14da5bb5c43a",
+        "text": "But what the browser *sees* isn't a pretty picture. It's actually a special code, like a secret recipe for a chef, or a detailed blueprint for a builder!",
+        "imageUrl": "https://images.code.org/3fd3061d14946c8b116e496d04c9effe-test-brendan-intro-web-panel-3-da905591-c7ec-4cc7-822f-463890229043.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-brendan-intro-web-77400231-c1e2-418b-b5b7-4cebdb0987e3",
+        "text": "This 'recipe' or 'blueprint' is called HTML, which stands for HyperText Markup Language. It tells the browser exactly where everything should go on the page.",
+        "imageUrl": "https://images.code.org/d1b3c76187d77689dc0141a2334149af-test-brendan-intro-web-panel-4-53110988-b468-41ce-81c5-09c7fc9d7569.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "test-brendan-intro-web-fe936908-dff9-4148-a2a6-8b2e38117054",
+        "text": "Just like a chef follows a recipe step-by-step to bake a delicious cake, your browser follows the HTML instructions to beautifully build the web page you see!",
+        "imageUrl": "https://images.code.org/502d0dacb91378d02a9f955e9c97b595-test-brendan-intro-web-panel-5-db37c9bc-d669-4a93-9d2a-c3e55859307e.png",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "generate_outline": "Explain to middle schoolers what a web page is, how web browsers display them, and introduce HTML as the language used to structure web content. Use an analogy like a blueprint or recipe for HTML."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 19:39:18 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 19:39:18 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

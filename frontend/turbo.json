@@ -54,12 +54,12 @@
     },
     "test:ui:ci": {
       "cache": false,
-      "dependsOn": ["^test:ui:ci"],
+      "dependsOn": ["^build", "^test:ui:ci"],
       "env": ["STAGE"]
     },
     "test:ui": {
       "cache": false,
-      "dependsOn": ["^test:ui"],
+      "dependsOn": ["^build", "^test:ui"],
       "env": ["STAGE"]
     },
     "dev": {

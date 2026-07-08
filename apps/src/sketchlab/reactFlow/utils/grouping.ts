@@ -59,7 +59,13 @@ export function groupSelectedNodes(
   const targets = nodes.filter(
     n => selectedIds.includes(n.id) && !n.parentId && !n.data?.locked
   );
-  if (targets.length < 2) return nodes;
+  // Count logical elements: regular nodes count as 1 each; every two
+  // lineAnchor nodes count as one standalone line. A group needs at least 2
+  // logical elements — two anchors alone is just one line, not a group.
+  const anchorCount = targets.filter(n => n.type === 'lineAnchor').length;
+  const logicalCount =
+    targets.length - anchorCount + Math.floor(anchorCount / 2);
+  if (logicalCount < 2) return nodes;
 
   const {minX, minY, maxX, maxY} = computeBounds(targets);
   const groupX = minX - GROUP_PADDING_PX;

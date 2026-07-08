@@ -7,10 +7,6 @@ markdown <<MARKDOWN
 
 We’ve all seen screens like these. Whether it’s a little dinosaur game when the Wi-Fi drops or a **404** message on a website, these screens are a developer’s way of handling a problem.  
 
-
-
----
-
 ## Compare the the examples
 
 Let's consider the **user experience** when a system failure occurs.
@@ -22,9 +18,7 @@ Let's consider the **user experience** when a system failure occurs.
   <img src="https://images.code.org/c7667ed421e814c42f15cfd90f4f8ab6-image-1772645150534.png" alt="Error screen 3" style="max-width: 30%; min-width: 150px; border: 1px solid #ccc; border-radius: 8px;">
 </div>
 
----
-
-## 💬 Reflect
+## Reflect
 
 Look at each of the images and reflect on the prompts:
 
@@ -42,14 +36,10 @@ Look at each of the images and reflect on the prompts:
    - **3** = most trustworthy  
 
 
----
-
-✅ Check your thinking
-
 <div style="background-color: #E6E6E6; border-radius: 8px; padding: 10px; font-size: 14px; margin-top: 10px;">
 
 <details>
-  <summary style= "font-size: 14px;"><b>Open to see one possible analysis</b></summary>
+  <summary style= "font-size: 14px;"><b>💡 Check your thinking</b></summary>
   <p style=" font-size: 14px; margin-top: 10px; line-height: 1.5;">
     As you look across the three screens, the key idea is that <b>how a system fails matters as much as whether it fails</b>.
   </p>
@@ -73,11 +63,10 @@ Look at each of the images and reflect on the prompts:
 
 </div>
 
----
 
-<div style="background-color: #B7E0E5; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px; margin-top: 20px;">
+<div style="background-color: #e4e2f8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px; margin-top: 20px;">
 
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 12pt; ">
 <b> 💡Teacher Tip: </b>Invite students to talk about the <b>"vibe"</b> of each page, not just the words. Is it playful and apologetic, or cold and technical? Ask questions like, “Which screen would you trust with your credit card?” or “Which one feels like the team cared about you as a user?” This language sets up the idea of <b>Human-Centered Reliability</b>—designing systems so that even failures feel predictable, respectful, and safe.
 </p>
 </div>

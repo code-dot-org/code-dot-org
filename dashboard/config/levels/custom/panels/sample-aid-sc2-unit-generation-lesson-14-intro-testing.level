@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-06-29T17:07:03.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "panels": [
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-14-intro-testing-5df78182-418b-48b7-a3f4-aac297b9226c",
+        "text": "Just like any program you write, AI-powered programs need to be thoroughly tested! We have to make sure they work exactly the way we expect.",
+        "imageUrl": "https://images.code.org/8d0e63a9aafad14b588a5dad3d621c1b-sample-aid-sc2-unit-generation-lesson-14-intro-testing-panel-1-eccefa63-a57f-4b8a-a7e2-e35c544e63d0.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-14-intro-testing-61b649b3-6749-4f76-af07-8101e3d4ed21",
+        "text": "But AI models can sometimes behave in unexpected ways or even give wrong answers. What happens when the AI does something we didn't plan for?",
+        "imageUrl": "https://images.code.org/e02dcf40f589155ae58f514dfe1dc179-sample-aid-sc2-unit-generation-lesson-14-intro-testing-panel-2-976c5fa3-cbbf-4db2-b0f4-30b755c380c1.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-14-intro-testing-78781ed3-fe6c-49bb-a4db-6d3486d55427",
+        "text": "That's where debugging for AI programs comes in! We need to investigate and understand *why* the AI made that particular decision or mistake. Was it a tricky input? Bad training data? Or something else entirely?",
+        "imageUrl": "https://images.code.org/205f59d7a27cdd18177a720132a4b029-sample-aid-sc2-unit-generation-lesson-14-intro-testing-panel-3-daa09100-8629-4819-af26-f1bac5ea7f1d.png",
+        "layout": "text-bottom-right"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-14-intro-testing-9a9e051e-502d-40ee-9420-e21294a02abc",
+        "text": "Once we identify the problem, we can refine our AI and program! We fix the issues, test it again, and keep improving it. This cycle of testing, debugging, and refining makes our AI programs better and more reliable.",
+        "imageUrl": "https://images.code.org/a77ff1b3944cca96374af88b4bfdecf4-sample-aid-sc2-unit-generation-lesson-14-intro-testing-panel-4-b66b329e-3def-4ca9-9748-b32207e8f341.png",
+        "layout": "text-top-left"
+      }
+    ],
+    "generate_outline": "Introduce students to the concept that AI-powered programs, like any software, require thorough testing and debugging. Explain why AI models can sometimes behave unexpectedly or perform poorly, and the importance of an iterative refinement process."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:07:43 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:07:43 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

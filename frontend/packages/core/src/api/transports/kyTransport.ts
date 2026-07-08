@@ -50,11 +50,19 @@ export function createKyTransport(opts: {
     return {status: res.status, headers, url};
   }
 
-  async function toApiError(
-    error: HTTPError,
+  async function apiErrorFromResponse(
+    res: Response,
     req: RequestOptions,
   ): Promise<ApiError> {
-    const res = error.response;
+    let body: unknown;
+    try {
+      const contentType = res.headers.get('content-type') ?? '';
+      body = contentType.includes('application/json')
+        ? await res.clone().json()
+        : await res.clone().text();
+    } catch {
+      body = undefined;
+    }
     return new ApiError(
       `Request failed: ${req.method} ${res.url} -> ${res.status}`,
       {
@@ -64,8 +72,16 @@ export function createKyTransport(opts: {
         url: res.url,
         method: req.method,
         headers: res.headers,
+        body,
       },
     );
+  }
+
+  function toApiError(
+    error: HTTPError,
+    req: RequestOptions,
+  ): Promise<ApiError> {
+    return apiErrorFromResponse(error.response, req);
   }
 
   async function doRequest(
@@ -94,11 +110,17 @@ export function createKyTransport(opts: {
         ? req.url.slice(1)
         : req.url;
 
+    // A manual-redirect request resolves to an opaqueredirect (status 0), which
+    // ky treats as an error; disable its throwing and surface real failures below.
+    const isManualRedirect = req.redirect === 'manual';
+
     const kyOpts: KyOptions = {
       method: req.method,
       headers,
       searchParams: buildSearchParams(req.query),
       signal: req.signal,
+      ...(req.redirect && {redirect: req.redirect}),
+      ...(isManualRedirect && {throwHttpErrors: false}),
       ...(hasBody &&
         (isFormData ? {body: req.body as FormData} : {json: req.body})),
     };
@@ -109,6 +131,16 @@ export function createKyTransport(opts: {
       const res = isAbsolute
         ? await ky(input, kyOpts)
         : await instance(input, kyOpts);
+
+      // Server 302'd a manual-redirect request: the action ran, we don't follow
+      // it. Treat as success-empty.
+      if (res.type === 'opaqueredirect') {
+        return {data: undefined, meta: extractMeta(res, res.url)};
+      }
+      if (isManualRedirect && !res.ok) {
+        throw await apiErrorFromResponse(res, req);
+      }
+
       const meta = extractMeta(res, res.url);
 
       let data: unknown;

@@ -1,6 +1,6 @@
 import {expect, test} from '@playwright/test';
 
-import {GdprDialogPage} from '../pages/gdpr-dialog-page';
+import {HomePage} from '../pages/home-page';
 import {
   createEuStudent,
   createUser,
@@ -18,7 +18,8 @@ test.describe('GDPR Dialog - data transfer agreement', () => {
    * @no_mobile
    */
   test('EU user sees the GDPR Dialog on dashboard, opt out', async ({page}) => {
-    const gdpr = new GdprDialogPage(page);
+    const home = new HomePage(page);
+    const gdpr = home.gdprDialog;
 
     await resetSession(page);
     await page.goto('/');
@@ -30,7 +31,7 @@ test.describe('GDPR Dialog - data transfer agreement', () => {
     });
 
     await setCountryOverride(page, {countryCode: 'ES'});
-    await gdpr.goto();
+    await home.goto();
     await expect(gdpr.dialog).toBeVisible();
   });
 
@@ -43,7 +44,8 @@ test.describe('GDPR Dialog - data transfer agreement', () => {
   test("EU user sees the GDPR Dialog on dashboard, opt in, don't show again", async ({
     page,
   }) => {
-    const gdpr = new GdprDialogPage(page);
+    const home = new HomePage(page);
+    const gdpr = home.gdprDialog;
 
     await resetSession(page);
     await page.goto('/');
@@ -54,7 +56,7 @@ test.describe('GDPR Dialog - data transfer agreement', () => {
     });
 
     await setCountryOverride(page, {countryCode: 'ES'});
-    await gdpr.goto();
+    await home.goto();
     await expect(gdpr.dialog).toBeVisible();
 
     // No UI readiness signal after accept — the dialog hides optimistically
@@ -68,8 +70,8 @@ test.describe('GDPR Dialog - data transfer agreement', () => {
     await accepted;
 
     // Reload — dialog must not reappear.
-    await gdpr.goto();
-    await gdpr.waitForSignedIn();
+    await home.goto();
+    await home.header.waitForSignedIn();
     await expect(gdpr.dialog).not.toBeVisible();
   });
 
@@ -82,15 +84,16 @@ test.describe('GDPR Dialog - data transfer agreement', () => {
   test("EU student who accepted on sign up doesn't see the GDPR Dialog", async ({
     page,
   }) => {
-    const gdpr = new GdprDialogPage(page);
+    const home = new HomePage(page);
+    const gdpr = home.gdprDialog;
 
     await resetSession(page);
     await page.goto('/');
     await createEuStudent(page, {name: 'Viktor Krum'});
 
     await setCountryOverride(page, {countryCode: 'ES'});
-    await gdpr.goto();
-    await gdpr.waitForSignedIn();
+    await home.goto();
+    await home.header.waitForSignedIn();
     await expect(gdpr.dialog).not.toBeVisible();
   });
 
@@ -101,7 +104,8 @@ test.describe('GDPR Dialog - data transfer agreement', () => {
    * @no_mobile
    */
   test('GDPR Dialog privacy link works from dashboard', async ({page}) => {
-    const gdpr = new GdprDialogPage(page);
+    const home = new HomePage(page);
+    const gdpr = home.gdprDialog;
 
     await resetSession(page);
     await page.goto('/');
@@ -113,7 +117,7 @@ test.describe('GDPR Dialog - data transfer agreement', () => {
     });
 
     await setCountryOverride(page, {countryCode: 'ES'});
-    await gdpr.goto();
+    await home.goto();
     // Wait for the dialog heading to confirm the dialog is open. #gdpr-dialog is
     // a zero-height React mount point (absolutely positioned modal content), so
     // Playwright sees it as hidden even when the dialog is open. Use the same
@@ -135,7 +139,8 @@ test.describe('GDPR Dialog - data transfer agreement', () => {
    * @no_mobile
    */
   test('Accept, sign out, sign in again, no dialog', async ({page}) => {
-    const gdpr = new GdprDialogPage(page);
+    const home = new HomePage(page);
+    const gdpr = home.gdprDialog;
 
     await resetSession(page);
     await page.goto('/');
@@ -146,7 +151,7 @@ test.describe('GDPR Dialog - data transfer agreement', () => {
     });
 
     await setCountryOverride(page, {countryCode: 'ES'});
-    await gdpr.goto();
+    await home.goto();
     await expect(gdpr.dialog).toBeVisible();
 
     const accepted = page.waitForResponse(
@@ -163,8 +168,8 @@ test.describe('GDPR Dialog - data transfer agreement', () => {
     await page.goto('/');
     await signIn(page, {email, password});
     await setCountryOverride(page, {countryCode: 'ES'});
-    await gdpr.goto();
-    await gdpr.waitForSignedIn();
+    await home.goto();
+    await home.header.waitForSignedIn();
     await expect(gdpr.dialog).not.toBeVisible();
   });
 });

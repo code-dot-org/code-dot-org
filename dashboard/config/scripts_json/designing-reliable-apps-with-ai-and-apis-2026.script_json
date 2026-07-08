@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-29 00:20:11 UTC",
+    "serialized_at": "2026-07-02 15:11:33 UTC",
     "hide_within_course": true,
     "published_state": "in_development",
     "instruction_type": null,
@@ -2783,7 +2783,7 @@
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students design and implement loading, empty, and error states for a web app, test their implementation with a partner, and reflect on how these states support human-centered reliability.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 1 to complete Levels 1-4.\n* **Level 1:** Students use Sketch Lab to design their three states.\n* **Level 2:** Students implement their loading, empty, and error states in Web Lab and test their work.\n* **Level 3:** Students test a partner’s app by forcing the data array to be empty and checking if their \"vibe\" holds up\n* **Level 4:** Students answer reflection questions to demonstrate their understanding of human-centered reliability.\n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are correctly placing their innerHTML updates before the fetch call begins (for the loading state).\n",
         "duration": "20",
         "name": "Human-Centered Reliability ",
-        "progression_name": "Vocab: Human-Centered Reliability",
+        "progression_name": "Human-Centered Reliability",
         "tips": [
           {
             "type": "teachingTip",
@@ -4341,7 +4341,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Vocab: Human-Centered Reliability"
+        "progression": "Human-Centered Reliability"
       },
       "bonus": false,
       "seeding_key": {
@@ -4363,7 +4363,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Vocab: Human-Centered Reliability"
+        "progression": "Human-Centered Reliability"
       },
       "bonus": false,
       "seeding_key": {
@@ -4385,7 +4385,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Vocab: Human-Centered Reliability"
+        "progression": "Human-Centered Reliability"
       },
       "bonus": false,
       "seeding_key": {
@@ -4407,7 +4407,7 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "progression": "Vocab: Human-Centered Reliability"
+        "progression": "Human-Centered Reliability"
       },
       "bonus": false,
       "seeding_key": {

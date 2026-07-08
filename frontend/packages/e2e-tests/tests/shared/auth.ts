@@ -16,6 +16,21 @@ export interface CreateUserOptions {
   name: string;
   /** Defaults to 2. Pass 0 for a "never signed in" account. */
   signInCount?: number;
+  /** Use this email instead of a generated one (lets a caller reference it). */
+  email?: string;
+  /**
+   * POST /users/sign_in after creating. Defaults to true. create_user already
+   * establishes a Devise session, so pass false to skip the redundant Warden
+   * sign-in, which would increment sign_in_count and re-authenticate the
+   * account.
+   */
+  signInAfterCreate?: boolean;
+  /**
+   * Provision via OmniAuth instead of a password. When set, create_user drops
+   * password/password_confirmation and forwards this as the OmniAuth provider
+   * (TestController#create_user's `OmniAuth::AuthHash.new({provider: sso, ...})`).
+   */
+  sso?: 'clever' | 'google_oauth2';
   /** Extra fields merged into the `user` body sent to /api/test/create_user. */
   extraFields?: Record<string, string | number | boolean>;
 }
@@ -32,12 +47,20 @@ export async function resetSession(page: Page): Promise<void> {
  */
 export async function createUser(
   page: Page,
-  {type, name, signInCount = 2, extraFields}: CreateUserOptions,
+  {
+    type,
+    name,
+    signInCount = 2,
+    email: emailOverride,
+    signInAfterCreate = true,
+    sso,
+    extraFields,
+  }: CreateUserOptions,
 ): Promise<UserCredentials> {
   const timestamp = Date.now();
   const rand = Math.floor(Math.random() * 1_000_000);
-  const email = `user${timestamp}_${rand}@test.xx`;
-  const password = `${name}password`;
+  const email = emailOverride ?? `user${timestamp}_${rand}@test.xx`;
+  const password = sso ? undefined : `${name}password`;
   const age = type === 'teacher' ? '21+' : '16';
 
   const {ok, status} = await requestWithCsrf(
@@ -48,8 +71,7 @@ export async function createUser(
       user: {
         user_type: type,
         email,
-        password,
-        password_confirmation: password,
+        ...(password ? {password, password_confirmation: password} : {}),
         name,
         age,
         terms_of_service_version: '1',
@@ -58,6 +80,7 @@ export async function createUser(
         email_preference_form_kind: email,
         email_preference_request_ip: '127.0.0.1',
         email_preference_source: 'ACCOUNT_SIGN_UP',
+        ...(sso ? {sso, uid: `${timestamp}_${rand}`} : {}),
         ...extraFields,
       },
     },
@@ -66,18 +89,19 @@ export async function createUser(
     throw new Error(`create_user failed: ${status}`);
   }
 
-  await signIn(page, {email, password});
+  if (signInAfterCreate && password) {
+    await signIn(page, {email, password});
+  }
 
-  return {email, password, name};
+  return {email, password: password ?? '', name};
 }
 
-/** Create an EU student with data_transfer_agreement pre-accepted. */
+/** Create an EU student (createStudent variant) with data_transfer_agreement pre-accepted. */
 export async function createEuStudent(
   page: Page,
   {name}: {name: string},
 ): Promise<UserCredentials> {
-  return createUser(page, {
-    type: 'student',
+  return createStudent(page, {
     name,
     extraFields: {
       data_transfer_agreement_accepted: true,
@@ -85,6 +109,89 @@ export async function createEuStudent(
       data_transfer_agreement_kind: '0',
       data_transfer_agreement_source: 'ACCOUNT_SIGN_UP',
       data_transfer_agreement_at: new Date().toISOString(),
+    },
+  });
+}
+
+export interface CreateStudentOptions {
+  /** Display name; defaults to "Test Student". */
+  name?: string;
+  /** Age; defaults to '16'. Pass '10' for an under-13 account. */
+  age?: string;
+  /** Sign-in count; defaults to 2. Pass 0 for a "never signed in" account. */
+  signInCount?: number;
+  /** US state code (e.g. 'CO'); sets country_code='US' and marks it user-provided. */
+  usState?: string;
+  /** ISO created_at, e.g. to place the account relative to a policy date. */
+  createdAt?: string;
+  /**
+   * Mark the account as parent-created by pre-populating the student's own
+   * email as the parent-permission email, which lets the student re-enter it
+   * on the CAP lockout page.
+   */
+  parentCreated?: boolean;
+  /** POST /users/sign_in after creating; defaults to true. See createUser. */
+  signInAfterCreate?: boolean;
+  /**
+   * Provision via SSO instead of a password. 'google' maps to the
+   * 'google_oauth2' OmniAuth provider (matching account_steps.rb's
+   * create_user); 'clever' is passed through unchanged.
+   */
+  sso?: 'clever' | 'google';
+  /** Extra fields merged into the create_user body after the derived ones. */
+  extraFields?: Record<string, string | number | boolean>;
+}
+
+/**
+ * Create a student via createUser with student-shaped sugar: age, US state,
+ * created_at, and the parent-created variant (which needs the generated email,
+ * so it is generated here). The base student creator other student helpers
+ * build on. Pass signInAfterCreate:false to keep a "never signed in" account at
+ * sign_in_count 0 and avoid re-authenticating a locked-out account.
+ */
+export async function createStudent(
+  page: Page,
+  {
+    name = 'Test Student',
+    age = '16',
+    signInCount = 2,
+    usState,
+    createdAt,
+    parentCreated = false,
+    signInAfterCreate = true,
+    sso,
+    extraFields,
+  }: CreateStudentOptions = {},
+): Promise<UserCredentials> {
+  const email = `student${Date.now()}_${Math.floor(Math.random() * 1_000_000)}@test.xx`;
+
+  return createUser(page, {
+    type: 'student',
+    name,
+    email,
+    signInCount,
+    signInAfterCreate,
+    sso: sso === 'google' ? 'google_oauth2' : sso,
+    extraFields: {
+      age,
+      ...(createdAt ? {created_at: createdAt} : {}),
+      ...(usState
+        ? {
+            country_code: 'US',
+            us_state: usState,
+            user_provided_us_state: 'true',
+          }
+        : {}),
+      ...(parentCreated
+        ? {
+            parent_email_preference_opt_in_required: '1',
+            parent_email_preference_opt_in: 'no',
+            parent_email_preference_email: email,
+            parent_email_preference_request_ip: '127.0.0.1',
+            parent_email_preference_source: 'ACCOUNT_SIGN_UP',
+          }
+        : {}),
+      ...extraFields,
     },
   });
 }
@@ -105,17 +212,25 @@ export async function signIn(
   }
 }
 
+export type CreateTeacherAssociatedStudentOptions = {
+  studentName: string;
+} & Omit<CreateStudentOptions, 'name' | 'signInAfterCreate' | 'extraFields'>;
+
 /**
  * Create a teacher, open an email-login section, create a student, and enroll
- * the student in that section. The student's session is active on return.
+ * the student in that section. The student's session is active on return; use
+ * the returned teacher credentials with signIn to switch back to the teacher.
  */
 export async function createTeacherAssociatedStudent(
   page: Page,
-  {studentName}: {studentName: string},
-): Promise<{sectionCode: string}> {
+  {studentName, ...studentOpts}: CreateTeacherAssociatedStudentOptions,
+): Promise<{sectionCode: string} & UserCredentials> {
   // createUser signs the teacher in; the /dashboardapi/sections POST needs that
   // session, so reload to pick up the teacher's CSRF token before posting.
-  await createUser(page, {type: 'teacher', name: `Teacher_${studentName}`});
+  const teacher = await createUser(page, {
+    type: 'teacher',
+    name: `Teacher_${studentName}`,
+  });
   await page.goto('/');
 
   const section = await requestWithCsrf(
@@ -134,7 +249,7 @@ export async function createTeacherAssociatedStudent(
 
   // createUser signs the student in, replacing the teacher session; reload to
   // pick up the student's CSRF token before enrolling via /join.
-  await createUser(page, {type: 'student', name: studentName});
+  await createStudent(page, {name: studentName, ...studentOpts});
   await page.goto('/');
 
   const join = await requestWithCsrf(page, 'POST', `/join/${sectionCode}`);
@@ -142,7 +257,7 @@ export async function createTeacherAssociatedStudent(
     throw new Error(`join POST failed: ${join.status}`);
   }
 
-  return {sectionCode};
+  return {sectionCode, ...teacher};
 }
 
 /**

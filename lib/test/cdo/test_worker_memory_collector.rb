@@ -25,6 +25,7 @@ class WorkerMemoryCollectorTest < Minitest::Test
       smaps_pss_kb: 3_427_000,
       smaps_private_dirty_kb: 1_200_000,
       smaps_shared_clean_kb: 800_000,
+      smaps_shared_dirty_kb: 1_500_000,
       proc_vm_rss_kb: 3_500_000
     )
 
@@ -39,6 +40,7 @@ class WorkerMemoryCollectorTest < Minitest::Test
       'WorkerPssKb' => 3_427_000,
       'WorkerPrivateDirtyKb' => 1_200_000,
       'WorkerSharedCleanKb' => 800_000,
+      'WorkerSharedDirtyKb' => 1_500_000,
       'WorkerRssKb' => 3_500_000,
       'HeapLiveSlots' => 2_700_000,
       'OldObjects' => 1_800_000,
@@ -63,6 +65,7 @@ class WorkerMemoryCollectorTest < Minitest::Test
     refute result.key?('WorkerPssKb')
     refute result.key?('WorkerPrivateDirtyKb')
     refute result.key?('WorkerSharedCleanKb')
+    refute result.key?('WorkerSharedDirtyKb')
     refute result.key?('WorkerRssKb')
 
     assert_equal 100, result['HeapLiveSlots']

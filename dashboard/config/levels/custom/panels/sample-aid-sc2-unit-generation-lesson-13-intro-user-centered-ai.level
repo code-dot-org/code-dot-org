@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-06-29T17:06:59.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "panels": [
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-13-intro-user-centered-ai-ee55510d-fc20-481b-a3e0-ed8010c82619",
+        "text": "When we build programs, our first thought is often to make them *work* correctly.",
+        "imageUrl": "https://images.code.org/8ccf8199be4d599c287e52a0b3a660de-sample-aid-sc2-unit-generation-lesson-13-intro-user-centered-ai-panel-1-a00dbe41-e743-4288-95ec-5fffbad40d17.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-13-intro-user-centered-ai-e61494ba-7d74-483b-a7d1-843bda52b4c3",
+        "text": "But when our programs include Artificial Intelligence, there's much more to consider than just technical functionality.",
+        "imageUrl": "https://images.code.org/bb920a9025bef6cda1c186e1d32a97b3-sample-aid-sc2-unit-generation-lesson-13-intro-user-centered-ai-panel-2-5fa12274-c269-491f-81ab-0937fc9104ff.png",
+        "layout": "text-bottom-right"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-13-intro-user-centered-ai-c3ae3754-0bd1-4c9b-b8b1-40113c48424d",
+        "text": "The most important thing to think about? The *people* who will actually use your AI program: the **end-users**.",
+        "imageUrl": "https://images.code.org/4d4ef70b25e12e59d0ef85d8f0b29f25-sample-aid-sc2-unit-generation-lesson-13-intro-user-centered-ai-panel-3-7f23db06-2763-4b2d-ad11-373f2a519b2c.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-13-intro-user-centered-ai-1a56e002-490a-4db0-a895-22917cbab732",
+        "text": "It's not just about if the program *runs*, but how it *feels* to use. Does it genuinely help them? Is it fair? Is it easy and intuitive?",
+        "imageUrl": "https://images.code.org/ee7f4790e3c4049066348885a3a6f303-sample-aid-sc2-unit-generation-lesson-13-intro-user-centered-ai-panel-4-cd0cfc30-8f18-4e31-8356-ac0324f95314.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-13-intro-user-centered-ai-91d75489-4fdf-4bef-965c-2e94cab5faae",
+        "text": "A truly great AI program design always keeps the end-user's experience, needs, and potential impact at the heart of every decision.",
+        "imageUrl": "https://images.code.org/5139822f11547c30d0f008b967973bce-sample-aid-sc2-unit-generation-lesson-13-intro-user-centered-ai-panel-5-78286c74-9deb-4863-8a40-ad87353e2320.png",
+        "layout": "text-top-right"
+      }
+    ],
+    "generate_outline": "Introduce the core concept of designing AI programs with the end-user in mind. Explain why it's crucial to think about the people who will actually use the program, beyond just its technical functionality, and the importance of user experience."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:07:44 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:07:44 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>
