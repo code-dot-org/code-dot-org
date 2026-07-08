@@ -1,4 +1,5 @@
-import {useEffect} from 'react';
+import {useCallback, useEffect} from 'react';
+import Shepherd, {Tour} from 'shepherd.js';
 
 import {createShepherdTour} from '@cdo/apps/sharedComponents/productTour/shepherdTourFactory';
 import useOnboardingTour from '@cdo/apps/sharedComponents/productTour/useOnboardingTour';
@@ -63,6 +64,9 @@ export const resumeReviewSyllabusOnboardingTour = () => {
     }
   }
 
+  // Cancel any running tour so we never show two tour popovers simultaneously.
+  Shepherd.activeTour?.cancel();
+
   const tour = createShepherdTour({
     stepClass: 'custom-shepherd-onboarding-container',
   });
@@ -121,8 +125,8 @@ const useReviewSyllabusTour = (demoSection: Section | null) => {
     }
   }, [demoType, demoPresets]);
 
-  const {tour} = useOnboardingTour({
-    getSteps: tour =>
+  const getSteps = useCallback(
+    (tour: Tour) =>
       demoType
         ? createReviewSyllabusHomepageSteps(
             tour,
@@ -130,6 +134,11 @@ const useReviewSyllabusTour = (demoSection: Section | null) => {
             demoType
           )
         : [],
+    [demoType]
+  );
+
+  const {tour} = useOnboardingTour({
+    getSteps,
     sessionStorageKey: REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
   });
 

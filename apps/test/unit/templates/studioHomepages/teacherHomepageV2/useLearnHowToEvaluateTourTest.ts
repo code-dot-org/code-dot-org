@@ -1,5 +1,5 @@
 import {renderHook} from '@testing-library/react-hooks';
-import {Tour} from 'shepherd.js';
+import Shepherd, {Tour} from 'shepherd.js';
 
 import {createShepherdTour} from '@cdo/apps/sharedComponents/productTour/shepherdTourFactory';
 import useLearnHowToEvaluateTour, {
@@ -115,6 +115,10 @@ describe('resumeLearnHowToEvaluateTour', () => {
     mockCreateShepherdTour.mockReturnValue(mockTour as unknown as Tour);
   });
 
+  afterEach(() => {
+    Shepherd.activeTour = null;
+  });
+
   it('does nothing when sessionStorage has no step id', () => {
     mockTryGetSessionStorage.mockReturnValue('');
     resumeLearnHowToEvaluateTour();
@@ -180,6 +184,21 @@ describe('resumeLearnHowToEvaluateTour', () => {
       ''
     );
     expect(mockHttpClientPost).not.toHaveBeenCalled();
+  });
+
+  it('cancels any active Shepherd tour before creating the resumed tour', () => {
+    const savedStepId = 'progress-table-step';
+    (mockTour.steps as {id: string}[]).push({id: savedStepId});
+    mockTryGetSessionStorage.mockReturnValue(savedStepId);
+
+    const cancelMock = jest.fn();
+    (Shepherd as unknown as {activeTour: object}).activeTour = {
+      cancel: cancelMock,
+    };
+
+    resumeLearnHowToEvaluateTour();
+
+    expect(cancelMock).toHaveBeenCalled();
   });
 });
 
