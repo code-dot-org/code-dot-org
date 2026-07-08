@@ -5,9 +5,18 @@ import {JsonBlockConfig, WorkspaceSerialization} from '@cdo/apps/blockly/types';
  * workspace serialization. Modeled on Music Lab's generateBlocklyJson, but
  * targets Sprite Lab block types and the `next`-chain / statement-input shape.
  *
- * The AI prompt in generateContent.ts is constrained to this vocabulary:
+ * The AI prompt in generateContent.ts is constrained to this vocabulary.
  *
- *   when_run                          program-start hat (first, unindented line)
+ * Event hats (unindented; each starts a new top-level block whose body is the
+ * indented lines below it; when_run must come first):
+ *
+ *   when_run                          program-start hat
+ *   when_key <key>                    gamelab_whenKey (fires once per press)
+ *   while_key <key>                   gamelab_whileKey (fires while held)
+ *   when_touching <a> <b>             gamelab_whenTouching
+ *
+ * Statements:
+ *
  *   repeat <n>                        controls_repeat_ext, body indented
  *   set_background <image>            gamelab_setBackgroundImageAs
  *   make_sprite <costume> <x> <y>     gamelab_makeNewSpriteAnon at a location
@@ -17,6 +26,12 @@ import {JsonBlockConfig, WorkspaceSerialization} from '@cdo/apps/blockly/types';
  *   set_type <costume> <player|environment>  GameDev_setGroup
  *   set_size <costume> <number>       gamelab_setProp "size"
  *   say <costume> <text...>           gamelab_spriteSay
+ *   move <costume> <pixels> <direction>      gamelab_moveInDirection
+ *   jump <small|medium|big>           GameDev_playerJump
+ *   behavior <costume> <name...>      gamelab_addBehaviorSimple + the named
+ *                                     predefined behavior block
+ *   go_to_scene <scene name...>       spritelab2_goToScene; needs the caller's
+ *                                     sceneIdByName map (field stores the id)
  *
  * Indentation defines nesting; sibling statements chain via `next`. Commands
  * that target sprites do so via all-sprites-with-costume, matching the blocks
@@ -25,6 +40,9 @@ import {JsonBlockConfig, WorkspaceSerialization} from '@cdo/apps/blockly/types';
 
 // Standard Blockly statement input name for controls_repeat_ext.
 const REPEAT_BODY_INPUT = 'DO';
+
+// Vertical spacing between top-level hat blocks in the workspace.
+const HAT_SPACING = 160;
 
 // GameDev_gravity's dropdown values by friendly strength name.
 const GRAVITY_VALUES: {[name: string]: string} = {
@@ -39,6 +57,46 @@ const GROUP_VALUES: {[name: string]: string} = {
   environment: '"walls"',
 };
 
+// gamelab_whenKey / gamelab_whileKey KEY dropdown options.
+const KEY_NAMES = ['up', 'down', 'left', 'right', 'space', 'a', 'w', 's', 'd'];
+
+// gamelab_moveInDirection DIRECTION values by friendly direction name.
+const DIRECTION_VALUES: {[name: string]: string} = {
+  up: '"North"',
+  north: '"North"',
+  down: '"South"',
+  south: '"South"',
+  left: '"West"',
+  west: '"West"',
+  right: '"East"',
+  east: '"East"',
+};
+
+// GameDev_playerJump STRENGTH dropdown values by friendly strength name.
+const JUMP_VALUES: {[name: string]: string} = {
+  small: '10',
+  medium: '13',
+  big: '17',
+};
+
+// Predefined behavior block types by normalized friendly name (lowercased,
+// letters only). Keep in sync with PREDEFINED_BEHAVIOR_BLOCKS in setup.ts.
+const BEHAVIOR_BLOCK_TYPES: {[name: string]: string} = {
+  draggable: 'gamelab_draggable',
+  avoidingtargets: 'gamelab_avoidingTargets',
+  followingtargets: 'gamelab_followingTargets',
+  tumbling: 'gamelab_tumbling',
+  patrollingupanddown: 'gamelab_patrollingUpDown',
+  movingleft: 'spritelab2_movingLeft',
+  patrollingleftandright: 'spritelab2_patrollingLeftRight',
+};
+
+export interface GenerateBlocklyJsonOptions {
+  // Scene name (lowercased) -> scene id, for go_to_scene. The block's SCENE
+  // field stores the id; the model only knows names.
+  sceneIdByName?: {[lowerCaseName: string]: string};
+}
+
 interface ScopeFrame {
   // The block new statements at this scope attach to (the hat, or a container).
   container: JsonBlockConfig;
@@ -52,7 +110,8 @@ interface ScopeFrame {
 }
 
 export function generateBlocklyJson(
-  pseudocode: string
+  pseudocode: string,
+  options: GenerateBlocklyJsonOptions = {}
 ): WorkspaceSerialization {
   let counter = 0;
   const nextId = () => `block-${counter++}`;
@@ -87,15 +146,27 @@ export function generateBlocklyJson(
     deletable: false,
     movable: false,
   };
+  const roots: JsonBlockConfig[] = [root];
 
-  // The root hat chains its body via `next`, so its tail starts as itself.
-  const rootFrame: ScopeFrame = {
-    container: root,
-    inputName: null,
-    tail: root,
-    indentation: -1,
+  // Event hats chain their body via `next`, so a hat's tail starts as itself.
+  const scopeStack: ScopeFrame[] = [
+    {container: root, inputName: null, tail: root, indentation: -1},
+  ];
+
+  // Start a new top-level hat: place it below the previous ones and make it
+  // the sole scope, so subsequent indented lines form its body.
+  const startHat = (hat: JsonBlockConfig) => {
+    hat.x = 20;
+    hat.y = 20 + roots.length * HAT_SPACING;
+    roots.push(hat);
+    scopeStack.length = 0;
+    scopeStack.push({
+      container: hat,
+      inputName: null,
+      tail: hat,
+      indentation: -1,
+    });
   };
-  const scopeStack: ScopeFrame[] = [rootFrame];
 
   const attach = (frame: ScopeFrame, block: JsonBlockConfig) => {
     if (frame.tail) {
@@ -120,6 +191,55 @@ export function generateBlocklyJson(
           `'when_run' must be the first, unindented line (line ${i + 1}).`
         );
       }
+      continue;
+    }
+
+    if (command === 'when_key' || command === 'while_key') {
+      if (indentation !== 0) {
+        throw new Error(
+          `'${command}' must be unindented — it starts a new event (line ${
+            i + 1
+          }).`
+        );
+      }
+      const key = (args[0] || '').toLowerCase();
+      if (!KEY_NAMES.includes(key)) {
+        throw new Error(
+          `'${command}' needs one of ${KEY_NAMES.join('/')} (line ${
+            i + 1
+          }): "${line}"`
+        );
+      }
+      startHat({
+        type: command === 'when_key' ? 'gamelab_whenKey' : 'gamelab_whileKey',
+        id: nextId(),
+        fields: {KEY: `"${key}"`},
+      });
+      continue;
+    }
+
+    if (command === 'when_touching') {
+      if (indentation !== 0) {
+        throw new Error(
+          `'when_touching' must be unindented — it starts a new event (line ${
+            i + 1
+          }).`
+        );
+      }
+      const [costumeA, costumeB] = args;
+      if (!costumeA || !costumeB) {
+        throw new Error(
+          `'when_touching' needs two costumes (line ${i + 1}): "${line}"`
+        );
+      }
+      startHat({
+        type: 'gamelab_whenTouching',
+        id: nextId(),
+        inputs: {
+          SPRITE1: spriteInput(costumeA),
+          SPRITE2: spriteInput(costumeB),
+        },
+      });
       continue;
     }
 
@@ -289,6 +409,82 @@ export function generateBlocklyJson(
         });
         break;
       }
+      case 'move': {
+        const [costume, pixelsArg, directionArg] = args;
+        const pixels = parseInt(pixelsArg, 10);
+        const direction = DIRECTION_VALUES[(directionArg || '').toLowerCase()];
+        if (!costume || isNaN(pixels) || !direction) {
+          throw new Error(
+            `'move' needs a costume, pixels, and a direction (line ${
+              i + 1
+            }): "${line}"`
+          );
+        }
+        attach(frame, {
+          type: 'gamelab_moveInDirection',
+          id: nextId(),
+          fields: {DIRECTION: direction},
+          inputs: {SPRITE: spriteInput(costume), DISTANCE: numberInput(pixels)},
+        });
+        break;
+      }
+      case 'jump': {
+        const strength = JUMP_VALUES[(args[0] || '').toLowerCase()];
+        if (!strength) {
+          throw new Error(
+            `'jump' needs small/medium/big (line ${i + 1}): "${line}"`
+          );
+        }
+        attach(frame, {
+          type: 'GameDev_playerJump',
+          id: nextId(),
+          fields: {STRENGTH: strength},
+        });
+        break;
+      }
+      case 'behavior': {
+        const [costume, ...nameWords] = args;
+        // Behavior names are matched letters-only, so "moving left",
+        // "moving-left", and "movingLeft" all resolve.
+        const normalized = nameWords
+          .join('')
+          .toLowerCase()
+          .replace(/[^a-z]/g, '');
+        const behaviorType = BEHAVIOR_BLOCK_TYPES[normalized];
+        if (!costume || !behaviorType) {
+          throw new Error(
+            `'behavior' needs a costume and a known behavior name (line ${
+              i + 1
+            }): "${line}"`
+          );
+        }
+        attach(frame, {
+          type: 'gamelab_addBehaviorSimple',
+          id: nextId(),
+          inputs: {
+            SPRITE: spriteInput(costume),
+            BEHAVIOR: {block: {type: behaviorType, id: nextId()}},
+          },
+        });
+        break;
+      }
+      case 'go_to_scene': {
+        const sceneName = args.join(' ');
+        const sceneId = options.sceneIdByName?.[sceneName.toLowerCase()];
+        if (!sceneId) {
+          throw new Error(
+            `'go_to_scene' names an unknown scene "${sceneName}" (line ${
+              i + 1
+            }).`
+          );
+        }
+        attach(frame, {
+          type: 'spritelab2_goToScene',
+          id: nextId(),
+          fields: {SCENE: sceneId},
+        });
+        break;
+      }
       default:
         // Unknown command: skip leniently rather than break the whole program.
         console.warn(
@@ -300,5 +496,5 @@ export function generateBlocklyJson(
     }
   }
 
-  return {blocks: {blocks: [root]}};
+  return {blocks: {blocks: roots}};
 }

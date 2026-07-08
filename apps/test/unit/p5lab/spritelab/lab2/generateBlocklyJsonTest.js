@@ -122,6 +122,89 @@ describe('SpriteLab2 generateBlocklyJson', () => {
     expect(repeat.next.block.type).toBe('gamelab_setBackgroundImageAs');
   });
 
+  it('starts a new top-level hat for when_key, placed below when_run', () => {
+    const result = generateBlocklyJson(
+      'when_run\n  say owl hi\nwhen_key space\n  say owl pressed'
+    );
+    const roots = result.blocks.blocks;
+    expect(roots).toHaveLength(2);
+    expect(roots[0].type).toBe('when_run');
+    expect(roots[1].type).toBe('gamelab_whenKey');
+    expect(roots[1].fields.KEY).toBe('"space"');
+    expect(roots[1].y).toBeGreaterThan(roots[0].y);
+    expect(roots[0].next.block.fields.SPEECH).toBe('hi');
+    expect(roots[1].next.block.fields.SPEECH).toBe('pressed');
+  });
+
+  it('maps while_key to gamelab_whileKey', () => {
+    const result = generateBlocklyJson(
+      'when_run\nwhile_key right\n  move hero 4 right'
+    );
+    const hat = result.blocks.blocks[1];
+    expect(hat.type).toBe('gamelab_whileKey');
+    expect(hat.fields.KEY).toBe('"right"');
+    const move = hat.next.block;
+    expect(move.type).toBe('gamelab_moveInDirection');
+    expect(move.fields.DIRECTION).toBe('"East"');
+    expect(move.inputs.DISTANCE.block.fields.NUM).toBe(4);
+    expect(move.inputs.SPRITE.block.fields.ANIMATION).toBe('"hero"');
+  });
+
+  it('maps when_touching to gamelab_whenTouching with two sprite inputs', () => {
+    const result = generateBlocklyJson(
+      'when_run\nwhen_touching hero gem\n  say hero You win!'
+    );
+    const hat = result.blocks.blocks[1];
+    expect(hat.type).toBe('gamelab_whenTouching');
+    expect(hat.inputs.SPRITE1.block.fields.ANIMATION).toBe('"hero"');
+    expect(hat.inputs.SPRITE2.block.fields.ANIMATION).toBe('"gem"');
+    expect(hat.next.block.type).toBe('gamelab_spriteSay');
+  });
+
+  it('maps jump strengths to GameDev_playerJump dropdown values', () => {
+    const result = generateBlocklyJson('when_run\nwhen_key space\n  jump big');
+    const jump = result.blocks.blocks[1].next.block;
+    expect(jump.type).toBe('GameDev_playerJump');
+    expect(jump.fields.STRENGTH).toBe('17');
+  });
+
+  it('maps behavior names to predefined behavior blocks, ignoring spacing', () => {
+    const result = generateBlocklyJson(
+      'when_run\n  behavior owl moving left\n  behavior owl patrolling up and down'
+    );
+    const first = result.blocks.blocks[0].next.block;
+    const second = first.next.block;
+    expect(first.type).toBe('gamelab_addBehaviorSimple');
+    expect(first.inputs.BEHAVIOR.block.type).toBe('spritelab2_movingLeft');
+    expect(second.inputs.BEHAVIOR.block.type).toBe('gamelab_patrollingUpDown');
+  });
+
+  it('resolves go_to_scene names to ids via sceneIdByName', () => {
+    const result = generateBlocklyJson('when_run\n  go_to_scene Maker Cave', {
+      sceneIdByName: {'maker cave': 'scene-2'},
+    });
+    const block = result.blocks.blocks[0].next.block;
+    expect(block.type).toBe('spritelab2_goToScene');
+    expect(block.fields.SCENE).toBe('scene-2');
+  });
+
+  it('throws on an unknown scene name or a missing scene map', () => {
+    expect(() =>
+      generateBlocklyJson('when_run\n  go_to_scene Nowhere', {
+        sceneIdByName: {'maker cave': 'scene-2'},
+      })
+    ).toThrow();
+    expect(() =>
+      generateBlocklyJson('when_run\n  go_to_scene Maker Cave')
+    ).toThrow();
+  });
+
+  it('throws on an indented hat or a bad key', () => {
+    expect(() => generateBlocklyJson('when_run\n  when_key space')).toThrow();
+    expect(() => generateBlocklyJson('when_run\nwhen_key q')).toThrow();
+    expect(() => generateBlocklyJson('when_run\nwhen_touching hero')).toThrow();
+  });
+
   it('throws on malformed arguments', () => {
     expect(() => generateBlocklyJson('when_run\n  make_sprite owl')).toThrow();
     expect(() =>
@@ -132,5 +215,12 @@ describe('SpriteLab2 generateBlocklyJson', () => {
     ).toThrow();
     expect(() => generateBlocklyJson('when_run\n  set_size owl big')).toThrow();
     expect(() => generateBlocklyJson('when_run\n  say owl')).toThrow();
+    expect(() =>
+      generateBlocklyJson('when_run\n  move hero fast up')
+    ).toThrow();
+    expect(() => generateBlocklyJson('when_run\n  jump huge')).toThrow();
+    expect(() =>
+      generateBlocklyJson('when_run\n  behavior owl flying')
+    ).toThrow();
   });
 });

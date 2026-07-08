@@ -31,6 +31,15 @@ function getAvailableImageNames(): {costumes: string[]; backgrounds: string[]} {
   return {costumes, backgrounds};
 }
 
+// The project's scene names (for go_to_scene). Empty outside the scenes UI
+// variant, which keeps the command out of the prompt.
+function getSceneNames(): string[] {
+  const scenes = getStore().getState().spriteLab2?.scenes || [];
+  return scenes
+    .map((scene: {name?: string}) => scene.name)
+    .filter(Boolean) as string[];
+}
+
 /**
  * Ask the AI to turn a natural-language request into Sprite Lab pseudocode.
  * Modeled on Music Lab's askAi: FLOW_LAB client type (trusted + longer
@@ -43,7 +52,12 @@ export default async function askSpriteLabAi(
   const newUserMessage: PendingChatMessage = {
     role: Role.USER,
     status: Status.UNKNOWN,
-    chatMessageText: buildPrompt(userPrompt, costumes, backgrounds),
+    chatMessageText: buildPrompt(
+      userPrompt,
+      costumes,
+      backgrounds,
+      getSceneNames()
+    ),
     assets: undefined,
     timestamp: Date.now(),
   };

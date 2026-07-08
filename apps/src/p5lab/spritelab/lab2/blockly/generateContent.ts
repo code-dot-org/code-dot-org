@@ -6,9 +6,20 @@ export const DEFAULT_CONTEXT = `You generate pseudocode for a Sprite Lab program
 
 The stage is 400x400 pixels; x grows right and y grows DOWN, so y=0 is the top
 edge and y=400 is the bottom. Indentation defines nesting (two spaces per
-level). The supported commands are:
+level).
 
-  when_run                        The program-start hat. Always the first, unindented line.
+Event lines are unindented and start a new event; the indented lines below an
+event are its body:
+
+  when_run                        Runs once at the start. Always the first line.
+  when_key <key>                  Runs once each time the key is pressed. Keys:
+                                  up, down, left, right, space, a, w, s, d.
+  while_key <key>                 Runs every frame while the key is held. Same keys.
+  when_touching <a> <b>           Runs when a sprite wearing <a> touches a
+                                  sprite wearing <b>.
+
+Commands (indented under an event):
+
   repeat <n>                      Repeat the indented block of commands <n> times.
   set_background <image>          Set the stage background to a background image.
   make_sprite <costume> <x> <y>   Make one sprite wearing <costume> at (x, y).
@@ -24,11 +35,23 @@ level). The supported commands are:
                                   pixels (100 is typical; the stage is 400).
   say <costume> <text...>         Make sprites with <costume> say the text in a
                                   speech bubble.
+  move <costume> <pixels> <dir>   Move sprites with <costume> by <pixels> in a
+                                  direction: up, down, left, or right.
+  jump <small|medium|big>         Make the player jump. Only works on sprites
+                                  set_type'd to player; use inside a key event.
+  behavior <costume> <name>       Give sprites with <costume> an ongoing
+                                  behavior: draggable, tumbling, moving left,
+                                  patrolling up and down, patrolling left and
+                                  right, avoiding targets, following targets.
+  go_to_scene <scene name>        Stop this scene and start the named scene.
+                                  Only use scene names from the available list;
+                                  if none are listed, never use this command.
 
 Costume and image names must come from the available lists when given; never
 invent names. For a platformer-style program: make_grid the ground/platform
 costume, set_type it to environment, make_sprite the character, set_type it to
-player, and give the character gravity.
+player, give the character gravity, then add while_key left/right movement and
+a when_key space jump.
 
 Example:
 
@@ -41,6 +64,14 @@ when_run
   set_size hero 100
   gravity hero medium
   say hero Let's go!
+while_key right
+  move hero 4 right
+while_key left
+  move hero 4 left
+when_key space
+  jump medium
+when_touching hero gem
+  say hero You win!
 
 Always start with "when_run" on the first line.`;
 
@@ -48,12 +79,13 @@ export const DEFAULT_PROMPT = 'Make a simple scene with a sprite.';
 
 /**
  * Build the full prompt sent to the model: the context (format rules), the
- * project's available costume/background names, and the user's request.
+ * project's available costume/background/scene names, and the user's request.
  */
 export function buildPrompt(
   userPrompt: string,
   costumeNames: string[] = [],
-  backgroundNames: string[] = []
+  backgroundNames: string[] = [],
+  sceneNames: string[] = []
 ): string {
   const parts = [DEFAULT_CONTEXT];
   if (costumeNames.length > 0) {
@@ -64,6 +96,11 @@ export function buildPrompt(
       `Available background images (for set_background): ${backgroundNames.join(
         ', '
       )}`
+    );
+  }
+  if (sceneNames.length > 0) {
+    parts.push(
+      `Available scene names (for go_to_scene): ${sceneNames.join(', ')}`
     );
   }
   parts.push(`Request: ${userPrompt || DEFAULT_PROMPT}`);

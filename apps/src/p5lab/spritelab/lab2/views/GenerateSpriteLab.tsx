@@ -2,11 +2,25 @@ import React, {useCallback, useState} from 'react';
 
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
+import {getStore} from '@cdo/apps/redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import askSpriteLabAi from '../ai/askSpriteLabAi';
 import {generateBlocklyJson} from '../blockly/generateBlocklyJson';
 import {setAiGenerateState} from '../redux/spriteLab2Redux';
+
+// Scene name (lowercased) -> id, so the parser can fill go_to_scene's SCENE
+// field (which stores the id) from the name the model emits.
+function getSceneIdByName(): {[lowerCaseName: string]: string} {
+  const scenes = getStore().getState().spriteLab2?.scenes || [];
+  const map: {[lowerCaseName: string]: string} = {};
+  scenes.forEach((scene: {id?: string; name?: string}) => {
+    if (scene.id && scene.name) {
+      map[scene.name.toLowerCase()] = scene.id;
+    }
+  });
+  return map;
+}
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
@@ -41,7 +55,9 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
     dispatch(setAiGenerateState('generating'));
     try {
       const pseudocode = await askSpriteLabAi(prompt);
-      const source = generateBlocklyJson(pseudocode);
+      const source = generateBlocklyJson(pseudocode, {
+        sceneIdByName: getSceneIdByName(),
+      });
       onCodeGenerated(source);
       setStatus('generated');
       dispatch(setAiGenerateState('generated'));
@@ -71,7 +87,7 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
           <input
             type="text"
             value={prompt}
-            placeholder="e.g. repeat something a few times"
+            placeholder="e.g. make a platformer with a hero"
             onChange={e => setPrompt(e.target.value)}
             disabled={generating}
           />
