@@ -31,6 +31,7 @@ export default class DeleteAnimationDialog extends React.Component {
     }
     return (
       <Modal
+        role="alertdialog"
         title={i18n.deleteAsset({assetType})}
         description={i18n.deleteAssetConfirm({assetType})}
         onClose={this.props.onCancel}
