@@ -272,16 +272,43 @@ $tab-segment-height: $tab-item-height - 2px;
 
 .guideRow {
   display: flex;
-  gap: 6px;
+  gap: 8px;
+
+  // The input and button read as one control pair: same height, radius, and
+  // type size (the native button otherwise renders taller than the input,
+  // with browser chrome).
+  input,
+  button {
+    box-sizing: border-box;
+    height: 36px;
+    border: 1px solid rgb(255 255 255 / 25%);
+    border-radius: 6px;
+    font-size: 14px;
+  }
 
   input {
     flex: 1 1 auto;
-    padding: 4px 6px;
+    min-width: 0;
+    padding: 0 10px;
   }
 
   button {
-    padding: 4px 12px;
+    flex: 0 0 auto;
+    appearance: none;
+    padding: 0 16px;
+    background-color: rgb(255 255 255 / 92%);
+    color: #1b2029;
+    font-weight: 600;
     cursor: pointer;
+
+    &:hover:not(:disabled) {
+      background-color: #fff;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: default;
+    }
   }
 }
 

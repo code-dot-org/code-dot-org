@@ -60,19 +60,18 @@ describe('SpriteLab2 generateBlocklyJson', () => {
     expect(JSON.parse(location.fields.LOCATION)).toEqual({x: 200, y: 150});
   });
 
-  it('maps make_grid to gamelab_makeSpritesGrid with a rectangular 0/1 grid', () => {
+  it('maps make_grid to gamelab_makeSpritesGrid with an XML-wrapped grid', () => {
     const result = generateBlocklyJson(
       'when_run\n  make_grid block 10 011 000'
     );
     const block = result.blocks.blocks[0].next.block;
     expect(block.type).toBe('gamelab_makeSpritesGrid');
     expect(block.fields.ANIMATION_NAME).toBe('"block"');
-    // Short rows are zero-padded to the widest row.
-    expect(block.fields.GRID).toEqual([
-      [1, 0, 0],
-      [0, 1, 1],
-      [0, 0, 0],
-    ]);
+    // The bitmap field round-trips through XML hooks; short rows are
+    // zero-padded to the widest row.
+    expect(block.fields.GRID).toBe(
+      '<field name="GRID">[[1,0,0],[0,1,1],[0,0,0]]</field>'
+    );
   });
 
   it('maps gravity strengths to GameDev_gravity dropdown values', () => {
@@ -136,18 +135,22 @@ describe('SpriteLab2 generateBlocklyJson', () => {
     expect(roots[1].next.block.fields.SPEECH).toBe('pressed');
   });
 
-  it('maps while_key to gamelab_whileKey', () => {
+  it('maps while_key to gamelab_whileKey with its body in the DO input', () => {
     const result = generateBlocklyJson(
-      'when_run\nwhile_key right\n  move hero 4 right'
+      'when_run\nwhile_key right\n  move hero 4 right\n  move hero 1 up'
     );
     const hat = result.blocks.blocks[1];
     expect(hat.type).toBe('gamelab_whileKey');
     expect(hat.fields.KEY).toBe('"right"');
-    const move = hat.next.block;
+    // Loop-style hat: no next chain off the hat itself.
+    expect(hat.next).toBeUndefined();
+    const move = hat.inputs.DO.block;
     expect(move.type).toBe('gamelab_moveInDirection');
     expect(move.fields.DIRECTION).toBe('"East"');
     expect(move.inputs.DISTANCE.block.fields.NUM).toBe(4);
     expect(move.inputs.SPRITE.block.fields.ANIMATION).toBe('"hero"');
+    // Siblings inside the body chain via next as usual.
+    expect(move.next.block.fields.DIRECTION).toBe('"North"');
   });
 
   it('maps when_touching to gamelab_whenTouching with two sprite inputs', () => {
@@ -197,6 +200,45 @@ describe('SpriteLab2 generateBlocklyJson', () => {
     expect(() =>
       generateBlocklyJson('when_run\n  go_to_scene Maker Cave')
     ).toThrow();
+  });
+
+  it('validates image names against the project lists when provided', () => {
+    const options = {
+      costumeNames: ['Hero Cat', 'block'],
+      backgroundNames: ['hills'],
+    };
+    // Valid names load, rewritten to canonical casing; multi-word names match
+    // via longest token-prefix.
+    const ok = generateBlocklyJson(
+      'when_run\n  set_background HILLS\n  make_sprite hero cat 200 100\n  say hero cat hello there',
+      options
+    );
+    const background = ok.blocks.blocks[0].next.block;
+    expect(background.fields.IMG).toBe('"hills"');
+    const sprite = background.next.block;
+    expect(sprite.fields.ANIMATION_NAME).toBe('"Hero Cat"');
+    expect(JSON.parse(sprite.inputs.LOCATION.block.fields.LOCATION)).toEqual({
+      x: 200,
+      y: 100,
+    });
+    const say = sprite.next.block;
+    expect(say.inputs.SPRITE.block.fields.ANIMATION).toBe('"Hero Cat"');
+    expect(say.fields.SPEECH).toBe('hello there');
+    // Invented names throw instead of half-loading.
+    expect(() =>
+      generateBlocklyJson('when_run\n  set_background sunset', options)
+    ).toThrow(/isn't one of this project's background/);
+    expect(() =>
+      generateBlocklyJson('when_run\n  say ghost boo', options)
+    ).toThrow(/isn't one of this project's image/);
+    // A costume used as a background is rejected too.
+    expect(() =>
+      generateBlocklyJson('when_run\n  set_background block', options)
+    ).toThrow();
+    // Without lists, validation is off (backwards compatible).
+    expect(() =>
+      generateBlocklyJson('when_run\n  say ghost boo')
+    ).not.toThrow();
   });
 
   it('throws on an indented hat or a bad key', () => {

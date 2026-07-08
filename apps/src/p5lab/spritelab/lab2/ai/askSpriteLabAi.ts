@@ -12,8 +12,12 @@ import {
 import {buildPrompt} from '../blockly/generateContent';
 
 // The project's costume and background names from the animationList slice, so
-// the model only references images that actually exist.
-function getAvailableImageNames(): {costumes: string[]; backgrounds: string[]} {
+// the model only references images that actually exist. Exported so the
+// generate flow can validate the model's output against the same lists.
+export function getAvailableImageNames(): {
+  costumes: string[];
+  backgrounds: string[];
+} {
   const costumes: string[] = [];
   const backgrounds: string[] = [];
   const animationList = getStore().getState().animationList;

@@ -47,8 +47,11 @@ Commands (indented under an event):
                                   Only use scene names from the available list;
                                   if none are listed, never use this command.
 
-Costume and image names must come from the available lists when given; never
-invent names. For a platformer-style program: make_grid the ground/platform
+Costume and image names must come EXACTLY from the "Available costumes" and
+"Available background images" lists below — never invent a name, and never
+reuse the example's names (hills, block, hero, gem) unless they appear in the
+lists. If no background images are listed, skip set_background. For a
+platformer-style program: make_grid the ground/platform
 costume, set_type it to environment, make_sprite the character, set_type it to
 player, give the character gravity, then add while_key left/right movement and
 a when_key space jump.

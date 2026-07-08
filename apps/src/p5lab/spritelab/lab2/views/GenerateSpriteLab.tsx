@@ -5,7 +5,7 @@ import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import {getStore} from '@cdo/apps/redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import askSpriteLabAi from '../ai/askSpriteLabAi';
+import askSpriteLabAi, {getAvailableImageNames} from '../ai/askSpriteLabAi';
 import {generateBlocklyJson} from '../blockly/generateBlocklyJson';
 import {setAiGenerateState} from '../redux/spriteLab2Redux';
 
@@ -50,13 +50,27 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   const [error, setError] = useState<string | null>(null);
 
   const handleGenerate = useCallback(async () => {
+    // Almost every command needs a costume, and with an empty list the model
+    // invents names that can't validate. Guide instead of half-loading.
+    const {costumes, backgrounds} = getAvailableImageNames();
+    if (costumes.length === 0) {
+      setError(
+        'Your project has no images yet. Make some in the Images tab first, then generate.'
+      );
+      setStatus('error');
+      return;
+    }
     setStatus('generating');
     setError(null);
     dispatch(setAiGenerateState('generating'));
     try {
       const pseudocode = await askSpriteLabAi(prompt);
+      // Validating names here means a bad program throws cleanly instead of
+      // replacing the scene's blocks with a half-loaded one.
       const source = generateBlocklyJson(pseudocode, {
         sceneIdByName: getSceneIdByName(),
+        costumeNames: costumes,
+        backgroundNames: backgrounds,
       });
       onCodeGenerated(source);
       setStatus('generated');

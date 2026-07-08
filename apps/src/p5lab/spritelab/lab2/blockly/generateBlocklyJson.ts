@@ -12,7 +12,9 @@ import {JsonBlockConfig, WorkspaceSerialization} from '@cdo/apps/blockly/types';
  *
  *   when_run                          program-start hat
  *   when_key <key>                    gamelab_whenKey (fires once per press)
- *   while_key <key>                   gamelab_whileKey (fires while held)
+ *   while_key <key>                   gamelab_whileKey (fires while held; a
+ *                                     loop-style hat — body goes in its DO
+ *                                     statement input, it has no next)
  *   when_touching <a> <b>             gamelab_whenTouching
  *
  * Statements:
@@ -95,6 +97,13 @@ export interface GenerateBlocklyJsonOptions {
   // Scene name (lowercased) -> scene id, for go_to_scene. The block's SCENE
   // field stores the id; the model only knows names.
   sceneIdByName?: {[lowerCaseName: string]: string};
+  // The project's costume / background image names. When provided, every name
+  // the pseudocode references is validated (case-insensitively, rewritten to
+  // the canonical casing) and unknown names throw — a name the dropdown
+  // can't validate would otherwise half-load as an "unknown block". Omit to
+  // skip validation.
+  costumeNames?: string[];
+  backgroundNames?: string[];
 }
 
 interface ScopeFrame {
@@ -116,16 +125,72 @@ export function generateBlocklyJson(
   let counter = 0;
   const nextId = () => `block-${counter++}`;
 
-  // Costume/background dropdowns store the quoted name; strip any quotes the
-  // model added and re-quote canonically.
-  const costumeValue = (name: string) => `"${name.replace(/"/g, '')}"`;
+  // Updated each loop iteration so name-validation errors can cite the line.
+  let currentLineNumber = 0;
 
-  // Sprite-type value input: all sprites wearing the given costume.
-  const spriteInput = (costume: string): {block: JsonBlockConfig} => ({
+  // lowercased name -> canonical casing, or null when validation is off.
+  const canonicalNames = (names?: string[]) => {
+    if (!names) {
+      return null;
+    }
+    const map: {[lower: string]: string} = {};
+    names.forEach(n => (map[n.toLowerCase()] = n));
+    return map;
+  };
+  const knownCostumes = canonicalNames(options.costumeNames);
+  const knownBackgrounds = canonicalNames(options.backgroundNames);
+
+  // Dropdowns store the quoted name. Strip any quotes the model added, then
+  // validate against the project's images (when provided): a name the
+  // dropdown can't validate would half-load as an "unknown block".
+  const imageValue = (
+    raw: string,
+    known: {[lower: string]: string} | null,
+    kind: string
+  ) => {
+    const name = raw.replace(/"/g, '');
+    if (known) {
+      const match = known[name.toLowerCase()];
+      if (!match) {
+        throw new Error(
+          `"${name}" isn't one of this project's ${kind}s (line ${currentLineNumber}). Add it in the Images tab or try rephrasing.`
+        );
+      }
+      return `"${match}"`;
+    }
+    return `"${name}"`;
+  };
+  const costumeValue = (raw: string) => imageValue(raw, knownCostumes, 'image');
+  const backgroundValue = (raw: string) =>
+    imageValue(raw, knownBackgrounds, 'background');
+
+  // Take a costume name off the front of a token list, matching the LONGEST
+  // token-prefix against the project's costumes so multi-word names ("Hero
+  // Cat") survive whitespace tokenization. Returns the quoted canonical name
+  // and the remaining tokens. Without a known-name list, takes one token.
+  const takeCostume = (tokens: string[]): [string, string[]] => {
+    if (knownCostumes) {
+      for (let n = Math.min(tokens.length, 6); n >= 1; n--) {
+        const match = knownCostumes[tokens.slice(0, n).join(' ').toLowerCase()];
+        if (match) {
+          return [`"${match}"`, tokens.slice(n)];
+        }
+      }
+      throw new Error(
+        `"${
+          tokens[0] || ''
+        }" isn't one of this project's images (line ${currentLineNumber}). Add it in the Images tab or try rephrasing.`
+      );
+    }
+    return [costumeValue(tokens[0] || ''), tokens.slice(1)];
+  };
+
+  // Sprite-type value input: all sprites wearing the given (quoted) costume.
+  const spriteInput = (quotedCostume: string): {block: JsonBlockConfig} => ({
     block: {
       type: 'gamelab_allSpritesWithAnimation',
       id: nextId(),
-      fields: {ANIMATION: costumeValue(costume)},
+      fields: {ANIMATION: quotedCostume},
     },
   });
 
@@ -154,16 +219,18 @@ export function generateBlocklyJson(
   ];
 
   // Start a new top-level hat: place it below the previous ones and make it
-  // the sole scope, so subsequent indented lines form its body.
-  const startHat = (hat: JsonBlockConfig) => {
+  // the sole scope, so subsequent indented lines form its body. Most hats
+  // chain their body via `next`; loop-style hats (while_key) have no next
+  // connection and take their body in a statement input instead.
+  const startHat = (hat: JsonBlockConfig, bodyInputName: string | null) => {
     hat.x = 20;
     hat.y = 20 + roots.length * HAT_SPACING;
     roots.push(hat);
     scopeStack.length = 0;
     scopeStack.push({
       container: hat,
-      inputName: null,
-      tail: hat,
+      inputName: bodyInputName,
+      tail: bodyInputName ? null : hat,
       indentation: -1,
     });
   };
@@ -180,6 +247,7 @@ export function generateBlocklyJson(
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
+    currentLineNumber = i + 1;
     const indentation = (line.match(/^\s*/)?.[0] || '').length;
     const trimmed = line.trim();
     const [command, ...rest] = trimmed.split(/\s+/);
@@ -210,11 +278,15 @@ export function generateBlocklyJson(
           }): "${line}"`
         );
       }
-      startHat({
-        type: command === 'when_key' ? 'gamelab_whenKey' : 'gamelab_whileKey',
-        id: nextId(),
-        fields: {KEY: `"${key}"`},
-      });
+      startHat(
+        {
+          type: command === 'when_key' ? 'gamelab_whenKey' : 'gamelab_whileKey',
+          id: nextId(),
+          fields: {KEY: `"${key}"`},
+        },
+        // gamelab_whileKey is a loop-style hat: no next connection, body in DO.
+        command === 'while_key' ? 'DO' : null
+      );
       continue;
     }
 
@@ -226,20 +298,24 @@ export function generateBlocklyJson(
           }).`
         );
       }
-      const [costumeA, costumeB] = args;
-      if (!costumeA || !costumeB) {
+      if (args.length < 2) {
         throw new Error(
           `'when_touching' needs two costumes (line ${i + 1}): "${line}"`
         );
       }
-      startHat({
-        type: 'gamelab_whenTouching',
-        id: nextId(),
-        inputs: {
-          SPRITE1: spriteInput(costumeA),
-          SPRITE2: spriteInput(costumeB),
+      const [costumeA, afterA] = takeCostume(args);
+      const [costumeB] = takeCostume(afterA);
+      startHat(
+        {
+          type: 'gamelab_whenTouching',
+          id: nextId(),
+          inputs: {
+            SPRITE1: spriteInput(costumeA),
+            SPRITE2: spriteInput(costumeB),
+          },
         },
-      });
+        null
+      );
       continue;
     }
 
@@ -280,18 +356,24 @@ export function generateBlocklyJson(
             `'set_background' needs an image name (line ${i + 1}): "${line}"`
           );
         }
+        // The image name is the whole rest of the line (names can have spaces).
         attach(frame, {
           type: 'gamelab_setBackgroundImageAs',
           id: nextId(),
-          fields: {IMG: costumeValue(args[0])},
+          fields: {IMG: backgroundValue(args.join(' '))},
         });
         break;
       }
       case 'make_sprite': {
-        const [costume, xArg, yArg] = args;
-        const x = parseInt(xArg, 10);
-        const y = parseInt(yArg, 10);
-        if (!costume || isNaN(x) || isNaN(y)) {
+        if (args.length < 3) {
+          throw new Error(
+            `'make_sprite' needs a costume, x, and y (line ${i + 1}): "${line}"`
+          );
+        }
+        const [costume, restArgs] = takeCostume(args);
+        const x = parseInt(restArgs[0], 10);
+        const y = parseInt(restArgs[1], 10);
+        if (isNaN(x) || isNaN(y)) {
           throw new Error(
             `'make_sprite' needs a costume, x, and y (line ${i + 1}): "${line}"`
           );
@@ -299,7 +381,7 @@ export function generateBlocklyJson(
         attach(frame, {
           type: 'gamelab_makeNewSpriteAnon',
           id: nextId(),
-          fields: {ANIMATION_NAME: costumeValue(costume)},
+          fields: {ANIMATION_NAME: costume},
           inputs: {
             LOCATION: {
               block: {
@@ -313,9 +395,18 @@ export function generateBlocklyJson(
         break;
       }
       case 'make_grid': {
-        const [costume, ...rows] = args;
-        const grid = rows.map(row => [...row].map(c => (c === '1' ? 1 : 0)));
-        if (!costume || grid.length === 0 || grid.some(r => r.length === 0)) {
+        if (args.length < 2) {
+          throw new Error(
+            `'make_grid' needs a costume and rows of 0/1 (line ${
+              i + 1
+            }): "${line}"`
+          );
+        }
+        const [costume, rows] = takeCostume(args);
+        const grid = rows
+          .filter(row => /^[01]+$/.test(row))
+          .map(row => [...row].map(c => (c === '1' ? 1 : 0)));
+        if (grid.length === 0) {
           throw new Error(
             `'make_grid' needs a costume and rows of 0/1 (line ${
               i + 1
@@ -333,18 +424,20 @@ export function generateBlocklyJson(
           type: 'gamelab_makeSpritesGrid',
           id: nextId(),
           fields: {
-            ANIMATION_NAME: costumeValue(costume),
-            // CdoFieldBitmap accepts a plain 2D array at load time, but
-            // JsonBlockConfig's field type doesn't admit arrays.
-            GRID: grid as unknown as number,
+            ANIMATION_NAME: costume,
+            // The bitmap field has no loadState, so field state round-trips
+            // through the XML hooks: a plain array would hit DOMParser and
+            // load as an "unknown block". This matches what workspaces.save
+            // emits for a real grid block.
+            GRID: `<field name="GRID">${JSON.stringify(grid)}</field>`,
           },
         });
         break;
       }
       case 'gravity': {
-        const [costume, strength] = args;
-        const velocity = GRAVITY_VALUES[(strength || '').toLowerCase()];
-        if (!costume || !velocity) {
+        const [costume, restArgs] = takeCostume(args);
+        const velocity = GRAVITY_VALUES[(restArgs[0] || '').toLowerCase()];
+        if (!velocity) {
           throw new Error(
             `'gravity' needs a costume and low/medium/high (line ${
               i + 1
@@ -360,9 +453,9 @@ export function generateBlocklyJson(
         break;
       }
       case 'set_type': {
-        const [costume, kind] = args;
-        const group = GROUP_VALUES[(kind || '').toLowerCase()];
-        if (!costume || !group) {
+        const [costume, restArgs] = takeCostume(args);
+        const group = GROUP_VALUES[(restArgs[0] || '').toLowerCase()];
+        if (!group) {
           throw new Error(
             `'set_type' needs a costume and player/environment (line ${
               i + 1
@@ -378,9 +471,9 @@ export function generateBlocklyJson(
         break;
       }
       case 'set_size': {
-        const [costume, sizeArg] = args;
-        const size = parseInt(sizeArg, 10);
-        if (!costume || isNaN(size)) {
+        const [costume, restArgs] = takeCostume(args);
+        const size = parseInt(restArgs[0], 10);
+        if (isNaN(size)) {
           throw new Error(
             `'set_size' needs a costume and a number (line ${i + 1}): "${line}"`
           );
@@ -395,8 +488,13 @@ export function generateBlocklyJson(
         break;
       }
       case 'say': {
-        const [costume, ...words] = args;
-        if (!costume || words.length === 0) {
+        if (args.length < 2) {
+          throw new Error(
+            `'say' needs a costume and some text (line ${i + 1}): "${line}"`
+          );
+        }
+        const [costume, words] = takeCostume(args);
+        if (words.length === 0) {
           throw new Error(
             `'say' needs a costume and some text (line ${i + 1}): "${line}"`
           );
@@ -410,10 +508,10 @@ export function generateBlocklyJson(
         break;
       }
       case 'move': {
-        const [costume, pixelsArg, directionArg] = args;
-        const pixels = parseInt(pixelsArg, 10);
-        const direction = DIRECTION_VALUES[(directionArg || '').toLowerCase()];
-        if (!costume || isNaN(pixels) || !direction) {
+        const [costume, restArgs] = takeCostume(args);
+        const pixels = parseInt(restArgs[0], 10);
+        const direction = DIRECTION_VALUES[(restArgs[1] || '').toLowerCase()];
+        if (isNaN(pixels) || !direction) {
           throw new Error(
             `'move' needs a costume, pixels, and a direction (line ${
               i + 1
@@ -443,7 +541,14 @@ export function generateBlocklyJson(
         break;
       }
       case 'behavior': {
-        const [costume, ...nameWords] = args;
+        if (args.length < 2) {
+          throw new Error(
+            `'behavior' needs a costume and a known behavior name (line ${
+              i + 1
+            }): "${line}"`
+          );
+        }
+        const [costume, nameWords] = takeCostume(args);
         // Behavior names are matched letters-only, so "moving left",
         // "moving-left", and "movingLeft" all resolve.
         const normalized = nameWords
@@ -451,7 +556,7 @@ export function generateBlocklyJson(
           .toLowerCase()
           .replace(/[^a-z]/g, '');
         const behaviorType = BEHAVIOR_BLOCK_TYPES[normalized];
-        if (!costume || !behaviorType) {
+        if (!behaviorType) {
           throw new Error(
             `'behavior' needs a costume and a known behavior name (line ${
               i + 1
