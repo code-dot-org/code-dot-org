@@ -13,17 +13,18 @@ import LevelNavigation from '@/modules/labs/router/LevelNavigation';
 import {resolveCourseLevel} from '@/modules/labs/router/resolveCourseLevel';
 import queryClient from '@/modules/router/queryClient';
 
-let courseFixturesRegistered = false;
-async function registerCourseFixtures() {
-  if (courseFixturesRegistered) return;
-  courseFixturesRegistered = true;
-  const [{registerMockFixture}, {oceansCourseFixtures}] = await Promise.all([
-    import('@code-dot-org/core/api/mocks'),
-    import('@/modules/labs/oceans/fixtures'),
-  ]);
-  for (const route of oceansCourseFixtures) {
-    registerMockFixture(route);
-  }
+// Lazy, once. Memoizing the promise — rather than a boolean flipped before the
+// await resolves — means concurrent callers await the same in-flight
+// registration instead of racing past a half-set flag.
+const registration: {promise?: Promise<void>} = {};
+function registerCourseFixtures(): Promise<void> {
+  return (registration.promise ??= (async () => {
+    const [{registerMockFixture}, {oceansCourseFixtures}] = await Promise.all([
+      import('@code-dot-org/core/api/mocks'),
+      import('@/modules/labs/oceans/fixtures'),
+    ]);
+    oceansCourseFixtures.forEach(route => registerMockFixture(route));
+  })());
 }
 
 export const Route = createFileRoute(
@@ -79,17 +80,18 @@ export const Route = createFileRoute(
         }),
     });
 
-    let resolved;
-    try {
-      resolved = resolveCourseLevel(
-        structure,
-        levelPropertiesMap,
-        lessonPosition,
-        levelPosition,
-      );
-    } catch {
-      throw notFound();
-    }
+    const resolved = (() => {
+      try {
+        return resolveCourseLevel(
+          structure,
+          levelPropertiesMap,
+          lessonPosition,
+          levelPosition,
+        );
+      } catch {
+        throw notFound();
+      }
+    })();
 
     const LabEntrypoint = getLabEntrypointByAppName(
       resolved.properties.appName,
