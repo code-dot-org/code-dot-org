@@ -2,7 +2,11 @@ import * as BlocklyCore from 'blockly/core';
 
 import * as blockUtils from '@cdo/apps/block_utils';
 import CdoFieldAnimationDropdown from '@cdo/apps/blockly/addons/cdoFieldAnimationDropdown';
-import {BlockDefinition, CustomInputTypes} from '@cdo/apps/blockly/types';
+import {
+  BlockDefinition,
+  CustomInputTypes,
+  WorkspaceSerialization,
+} from '@cdo/apps/blockly/types';
 import * as blocksCommonModule from '@cdo/apps/blocksCommon';
 import {animationSourceUrl} from '@cdo/apps/p5lab/redux/animationList';
 import spritelabBlocks from '@cdo/apps/p5lab/spritelab/blocks';
@@ -202,8 +206,9 @@ export function ensureSceneBlocks(toolboxXml: string): string {
  * for scenes that aren't open in the Code tab (the visible workspace compiles
  * itself). Returns '' for an empty/missing source.
  */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function compileWorkspaceSource(source: any): string {
+export function compileWorkspaceSource(
+  source: WorkspaceSerialization | undefined
+): string {
   if (!source) {
     return '';
   }
@@ -347,8 +352,7 @@ const trimmedCostumePicker = {
     blockly: unknown,
     block: BlocklyCore.Block,
     inputConfig: {name: string; label: string},
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    currentInputRow: any
+    currentInputRow: BlocklyCore.Input
   ) {
     currentInputRow
       .appendField(inputConfig.label)
@@ -376,15 +380,7 @@ export function refreshAnimationDropdownThumbnails(): void {
     block.inputList.forEach(input => {
       input.fieldRow.forEach(field => {
         if (field instanceof CdoFieldAnimationDropdown) {
-          const options = field.getOptions(false);
-          const selected = options.find(o => o[1] === field.getValue());
-          if (selected) {
-            // selectedOption_ drives the rendered thumbnail; re-resolve it
-            // from the fresh options and repaint.
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            (field as any).selectedOption_ = selected;
-            field.forceRerender();
-          }
+          field.refreshSelectedOption();
         }
       });
     });

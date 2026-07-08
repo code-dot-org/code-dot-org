@@ -1,5 +1,7 @@
 import * as BlocklyCore from 'blockly/core';
 
+import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
+
 import {BlocklyLevelProperties, ProjectSources} from '../../../lab2/types';
 
 // The serializable subset of a Sprite Lab animation, mirroring the JSDoc
@@ -58,8 +60,7 @@ export interface SpriteLab2Scene {
   id: string;
   name: string;
   // This scene's Blockly workspace serialization.
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  source?: any;
+  source?: WorkspaceSerialization;
 }
 
 // The single ProjectSources.source JSON for a SpriteLab2 project.

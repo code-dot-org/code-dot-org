@@ -204,7 +204,9 @@ const SpriteLab2View: React.FunctionComponent<{
           {
             id: createUuid(),
             name: 'Scene 1',
-            source: sourcesRef.current.source ?? DEFAULT_SCENE_SOURCE,
+            source:
+              (sourcesRef.current.source as WorkspaceSerialization) ??
+              DEFAULT_SCENE_SOURCE,
           },
         ];
     scenesRef.current = scenes;
@@ -620,9 +622,7 @@ const SpriteLab2View: React.FunctionComponent<{
       }
       activeSceneIdRef.current = sceneId;
       dispatch(setActiveSceneId(sceneId));
-      codeTabRef.current?.loadScene(
-        (scene.source ?? DEFAULT_SCENE_SOURCE) as WorkspaceSerialization
-      );
+      codeTabRef.current?.loadScene(scene.source ?? DEFAULT_SCENE_SOURCE);
       // The preview follows the scene being edited.
       runScene(sceneId);
     },
