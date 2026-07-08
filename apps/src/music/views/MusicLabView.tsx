@@ -330,7 +330,11 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   }
 
   return (
-    <div id="music-lab" className={classNames(moduleStyles.musicLab)}>
+    <div
+      id="music-lab"
+      className={classNames(moduleStyles.musicLab)}
+      data-theme="Dark"
+    >
       <div
         className={classNames(
           moduleStyles.mainContent,
@@ -488,7 +492,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                   appName="music"
                 />
               )}
-              <div role="application" id={blocklyDivId} data-theme="Dark" />
+              <div role="application" id={blocklyDivId} />
               {showAdvancedControls && (
                 <div className={moduleStyles.advancedControlsContainer}>
                   <AdvancedControls />

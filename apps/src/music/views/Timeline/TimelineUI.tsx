@@ -263,7 +263,6 @@ const Timeline: React.FunctionComponent<TimelineProps> = props => {
     <TimelineContext.Provider value={props}>
       <div
         id="timeline"
-        data-theme="Dark"
         aria-label={musicI18n.timelineContainer()}
         className={classNames(
           moduleStyles.timeline,

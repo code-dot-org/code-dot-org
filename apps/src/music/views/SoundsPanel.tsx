@@ -366,11 +366,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
         onKeyDown={handleKeyDown}
       >
         {showSoundFilters && (
-          <div
-            id="sounds-panel-top"
-            className={styles.soundsPanelTop}
-            data-theme="Dark"
-          >
+          <div id="sounds-panel-top" className={styles.soundsPanelTop}>
             <SegmentedButtons
               selectedButtonValue={mode}
               buttons={[

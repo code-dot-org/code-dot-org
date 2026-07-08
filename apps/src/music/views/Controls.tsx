@@ -127,11 +127,7 @@ const Controls: React.FunctionComponent<ControlsProps> = ({
     return isLoading || (isPredictLevel && !hasPredictResponse);
   });
   return (
-    <div
-      id="controls"
-      className={moduleStyles.controlsContainer}
-      data-theme="Dark"
-    >
+    <div id="controls" className={moduleStyles.controlsContainer}>
       <div id="controls-section" className={moduleStyles.section}>
         <button
           id="run-button"

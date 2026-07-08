@@ -253,7 +253,6 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({
     <FocusOn className={styles.focusLock}>
       <div
         className={styles.dialogContainer}
-        data-theme="Dark"
         onKeyDown={event => {
           if (event.key === 'Escape') {
             setPackToDefault();

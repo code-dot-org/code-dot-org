@@ -349,7 +349,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
 
   return (
     <FocusLock>
-      <div className={styles.container} data-theme="Dark">
+      <div className={styles.container}>
         <div className={styles.controlRow}>
           <div className={styles.left}>
             <SimpleDropdown
