@@ -12,8 +12,7 @@ interface BackpackImageImportOptions {
 
 /**
  * Builds the Backpack panel's addFileHandler for Sketch Lab. Re-uploads the
- * chosen Backpack image as a project asset so the sketch stays self-contained,
- * then adds it to the canvas as an image node.
+ * chosen Backpack image as a project asset, then adds it to the canvas as an image node.
  */
 export function makeBackpackImageImportHandler({
   levelName,

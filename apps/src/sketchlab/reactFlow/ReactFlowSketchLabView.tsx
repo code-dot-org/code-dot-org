@@ -42,9 +42,14 @@ import {migrateTriangleHandleIds} from './utils/migrateReactFlowSources';
 
 import styles from './react-flow-sketch-lab-view.module.scss';
 
-// Backpack files whose "+" button can be imported onto the canvas as an image
-// node. Sketch Lab's own Backpack stores PNGs; an <img> renders all of these.
-const SUPPORTED_IMAGE_EXTENSIONS = ['png', 'jpg', 'jpeg', 'gif', 'svg', 'webp'];
+const SUPPORTED_BACKPACK_EXTENSIONS = [
+  'png',
+  'jpg',
+  'jpeg',
+  'gif',
+  'svg',
+  'webp',
+];
 
 export const REACT_FLOW_DEFAULT_SOURCES: ReactFlowSketchLabSources = {
   source: {nodes: [], edges: []},
@@ -170,7 +175,7 @@ function ReactFlowSketchLabViewInner({
         newFileName: fileName,
       }),
       // Importing goes through addFileHandler below, so these callbacks are
-      // unused and stay no-ops.
+      // no-ops.
       saveFileToProject: () => {},
       createNewProjectFile: () => {},
       findIdForFileName: () => undefined,
@@ -185,7 +190,7 @@ function ReactFlowSketchLabViewInner({
           ),
         text: 'Save Sketch to Backpack',
       },
-      supportedFileTypes: SUPPORTED_IMAGE_EXTENSIONS,
+      supportedFileTypes: SUPPORTED_BACKPACK_EXTENSIONS,
       addFileTooltipText: 'Add to sketch',
       addFileHandler: makeBackpackImageImportHandler({
         levelName: levelProperties.name,
