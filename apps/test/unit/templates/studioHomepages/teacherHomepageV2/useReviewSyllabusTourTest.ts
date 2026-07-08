@@ -1,7 +1,7 @@
 import {renderHook} from '@testing-library/react-hooks';
 import React from 'react';
 import {Provider} from 'react-redux';
-import {Tour} from 'shepherd.js';
+import Shepherd, {Tour} from 'shepherd.js';
 
 import {
   getStore,
@@ -110,6 +110,10 @@ describe('resumeReviewSyllabusOnboardingTour', () => {
     mockCreateShepherdTour.mockReturnValue(mockTour as unknown as Tour);
   });
 
+  afterEach(() => {
+    Shepherd.activeTour = null;
+  });
+
   it('does nothing when no step ID is saved in sessionStorage', () => {
     mockTryGetSessionStorage.mockReturnValue('');
     resumeReviewSyllabusOnboardingTour();
@@ -211,6 +215,24 @@ describe('resumeReviewSyllabusOnboardingTour', () => {
       ''
     );
     expect(mockHttpClientPost).not.toHaveBeenCalled();
+  });
+
+  it('cancels any active Shepherd tour before creating the resumed tour', () => {
+    const savedStepId = COURSE_HEADER_STEP_ID;
+    (mockTour.steps as {id: string}[]).push({id: savedStepId});
+
+    mockTryGetSessionStorage
+      .mockReturnValueOnce(savedStepId)
+      .mockReturnValueOnce('high');
+
+    const cancelMock = jest.fn();
+    (Shepherd as unknown as {activeTour: object}).activeTour = {
+      cancel: cancelMock,
+    };
+
+    resumeReviewSyllabusOnboardingTour();
+
+    expect(cancelMock).toHaveBeenCalled();
   });
 });
 
