@@ -1,6 +1,7 @@
 require 'net/http'
 require 'uri'
 require 'json'
+require 'aws-sdk-pricing'
 require 'active_support/core_ext/integer/time'
 
 module AWS
@@ -12,6 +13,10 @@ module AWS
     REQUEST_TIMEOUT = 5
     TOKEN_TTL = 6.hours
 
+    # The Price List Query API is only served from a few endpoints; us-east-1 is
+    # always available regardless of where the instance itself runs.
+    PRICING_ENDPOINT_REGION = 'us-east-1'
+
     def self.instance_id
       return @instance_id if defined?(@instance_id) && @instance_id
       # Fetch metadata and fall back to nil if unreachable
@@ -21,6 +26,43 @@ module AWS
     def self.region
       return @region if defined?(@region) && @region
       @region = fetch_metadata('placement/region')
+    end
+
+    # EC2 instance type of the current instance (e.g. 'm5.xlarge'). nil off EC2.
+    def self.instance_type
+      return @instance_type if defined?(@instance_type) && @instance_type
+      @instance_type = fetch_metadata('instance-type')
+    end
+
+    # Availability Zone of the current instance (e.g. 'us-east-1a'). nil off EC2.
+    def self.availability_zone
+      return @availability_zone if defined?(@availability_zone) && @availability_zone
+      @availability_zone = fetch_metadata('placement/availability-zone')
+    end
+
+    # On-demand list price (USD/hour) for an instance type via the AWS Price List
+    # Query API. Defaults to this instance's own type and region.
+    #
+    # This is a MODELED cost: the Price List API returns published on-demand list
+    # prices and does NOT reflect Savings Plans, Reserved Instances, or Spot, so
+    # it overstates what we actually pay where those discounts apply. It is meant
+    # for a consistent cost-efficiency signal, not billing reconciliation.
+    #
+    # The price for a given (type, region) is effectively constant, so it is
+    # resolved once and memoized. Returns nil if it can't be resolved (off EC2,
+    # missing pricing:GetProducts IAM, unknown type, API error).
+    #
+    # @return [Float, nil]
+    def self.hourly_rate(instance_type: nil, region: nil)
+      instance_type ||= self.instance_type
+      region ||= self.region
+      return nil if instance_type.nil? || region.nil?
+
+      key = [instance_type, region]
+      @hourly_rates ||= {}
+      return @hourly_rates[key] if @hourly_rates.key?(key)
+
+      @hourly_rates[key] = fetch_hourly_rate(instance_type, region)
     end
 
     # Private IPv4 address of the current EC2 instance.
@@ -74,6 +116,51 @@ module AWS
       http.request(request)
     rescue StandardError => exception
       Honeybadger.notify(exception) if defined?(Honeybadger)
+      nil
+    end
+
+    private_class_method def self.pricing_client
+      @pricing_client ||= Aws::Pricing::Client.new(region: PRICING_ENDPOINT_REGION)
+    end
+
+    # Filters narrow the catalog to a single Linux, shared-tenancy, no-bundled-
+    # software, in-use on-demand offering for the type/region.
+    private_class_method def self.fetch_hourly_rate(instance_type, region)
+      response = pricing_client.get_products(
+        service_code: 'AmazonEC2',
+        filters: [
+          {type: 'TERM_MATCH', field: 'instanceType', value: instance_type},
+          {type: 'TERM_MATCH', field: 'regionCode', value: region},
+          {type: 'TERM_MATCH', field: 'operatingSystem', value: 'Linux'},
+          {type: 'TERM_MATCH', field: 'tenancy', value: 'Shared'},
+          {type: 'TERM_MATCH', field: 'preInstalledSw', value: 'NA'},
+          {type: 'TERM_MATCH', field: 'capacitystatus', value: 'Used'}
+        ],
+        max_results: 1
+      )
+
+      product = response.price_list.first
+      return nil unless product
+
+      parse_on_demand_usd(JSON.parse(product))
+    rescue StandardError => exception
+      Honeybadger.notify(exception) if defined?(Honeybadger)
+      nil
+    end
+
+    # Walks terms.OnDemand.*.priceDimensions.*.pricePerUnit.USD and returns the
+    # first positive rate found.
+    private_class_method def self.parse_on_demand_usd(product)
+      on_demand = product.dig('terms', 'OnDemand')
+      return nil unless on_demand
+
+      on_demand.each_value do |term|
+        term.fetch('priceDimensions', {}).each_value do |dimension|
+          usd = dimension.dig('pricePerUnit', 'USD')&.to_f
+          return usd if usd&.positive?
+        end
+      end
+
       nil
     end
   end

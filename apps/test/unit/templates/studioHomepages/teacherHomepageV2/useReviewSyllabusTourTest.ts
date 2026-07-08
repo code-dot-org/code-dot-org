@@ -1,7 +1,7 @@
 import {renderHook} from '@testing-library/react-hooks';
 import React from 'react';
 import {Provider} from 'react-redux';
-import {Tour} from 'shepherd.js';
+import Shepherd, {Tour} from 'shepherd.js';
 
 import {
   getStore,
@@ -17,6 +17,7 @@ import useReviewSyllabusTour, {
   REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
 } from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useReviewSyllabusTour';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 
@@ -27,6 +28,9 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
 const mockHttpClientPost = HttpClient.post as jest.MockedFunction<
   typeof HttpClient.post
 >;
+
+const demoSectionWithType = (demoType: Section['demoType']) =>
+  ({demoType} as unknown as Section);
 
 jest.mock('@cdo/apps/sharedComponents/productTour/shepherdTourFactory');
 jest.mock('@cdo/apps/sharedComponents/productTour/useOnboardingTour', () =>
@@ -104,6 +108,10 @@ describe('resumeReviewSyllabusOnboardingTour', () => {
     mockHttpClientPost.mockResolvedValue(new Response());
     mockTour = makeMockTour();
     mockCreateShepherdTour.mockReturnValue(mockTour as unknown as Tour);
+  });
+
+  afterEach(() => {
+    Shepherd.activeTour = null;
   });
 
   it('does nothing when no step ID is saved in sessionStorage', () => {
@@ -208,6 +216,24 @@ describe('resumeReviewSyllabusOnboardingTour', () => {
     );
     expect(mockHttpClientPost).not.toHaveBeenCalled();
   });
+
+  it('cancels any active Shepherd tour before creating the resumed tour', () => {
+    const savedStepId = COURSE_HEADER_STEP_ID;
+    (mockTour.steps as {id: string}[]).push({id: savedStepId});
+
+    mockTryGetSessionStorage
+      .mockReturnValueOnce(savedStepId)
+      .mockReturnValueOnce('high');
+
+    const cancelMock = jest.fn();
+    (Shepherd as unknown as {activeTour: object}).activeTour = {
+      cancel: cancelMock,
+    };
+
+    resumeReviewSyllabusOnboardingTour();
+
+    expect(cancelMock).toHaveBeenCalled();
+  });
 });
 
 describe('useReviewSyllabusTour', () => {
@@ -235,14 +261,19 @@ describe('useReviewSyllabusTour', () => {
       );
 
   it('returns a tour object', () => {
-    const {result} = renderHook(() => useReviewSyllabusTour('high'), {
-      wrapper: makeWrapper(),
-    });
+    const {result} = renderHook(
+      () => useReviewSyllabusTour(demoSectionWithType('high')),
+      {
+        wrapper: makeWrapper(),
+      }
+    );
     expect(result.current).toBe(mockTour);
   });
 
   it('saves demoType to sessionStorage on mount', () => {
-    renderHook(() => useReviewSyllabusTour('high'), {wrapper: makeWrapper()});
+    renderHook(() => useReviewSyllabusTour(demoSectionWithType('high')), {
+      wrapper: makeWrapper(),
+    });
     expect(mockTrySetSessionStorage).toHaveBeenCalledWith(
       'reviewSyllabusOnboardingDemoType',
       'high'

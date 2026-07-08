@@ -36,38 +36,6 @@ Many apps don’t store all the information they show. Instead, they pull live d
 </p>
 </div>
 
----
-
-##  “Asking for Data”
-
-<img src="https://images.code.org/5f49c06b5874c513ec0055162e10b53c-image-1770743675458.png" alt="simple diagram showing client app sending request to server and receiving response" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
-
-### **What Happens When an App Uses an API?**
-
-When an app uses an API, it’s usually doing something like this:
-
-- The **client app** sends a **request** asking for data  
-- A **server** receives the request  
-- The server sends back a **response** with the data  
-
-This is how apps can show **live, up-to-date information** that changes over time.
-
-<div style="clear:both;"></div>
-
-
----
-
-<div style="background-color: #dccbea; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-<p style="font-size: 12pt; margin-top: 12px; line-height: 120%; margin-bottom: 8px;">
-<strong>📖 Terms to know:</strong>
-</p>
-<p style="font-size: 12pt; line-height: 135%; margin: 0;">
-<strong>Client:</strong> The app asking for data<br>
-<strong>Server:</strong> The service that stores and sends data<br>
-<strong>Request:</strong> A message asking for data<br>
-<strong>Response:</strong> A message that sends data back
-</p>
-</div>
 
 
 
