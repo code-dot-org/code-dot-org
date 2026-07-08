@@ -1,3 +1,2 @@
 # prove-visual ephemeral baselines (cleaned on exit, gitignored as crash safety)
-tests/tmp
-e2e/tmp
+.visual-baselines

@@ -10,11 +10,11 @@ import {resolve} from 'node:path';
  * (see visualProjects) and routes visualCheck to the native screenshot
  * backend.
  *
- * Usage: prove-visual [baselineDir]
- *   baselineDir defaults to e2e/tmp. Pass tests/tmp for packages whose
- *   testDir is ./tests (e.g. e2e-tests).
+ * Baselines land in .visual-baselines/ (matching the snapshotPathTemplate in
+ * visualProjects), so this works identically regardless of each package's
+ * testDir setting.
  */
-const baselineDir = resolve(process.argv[2] ?? 'e2e/tmp');
+const baselineDir = resolve('.visual-baselines');
 const env = {...process.env, VISUAL_PROVIDER: 'playwright'};
 
 try {
