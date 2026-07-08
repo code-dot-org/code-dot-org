@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 
 import {actions, selectors} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
-import color from '@cdo/apps/util/color';
 
 class PauseButton extends React.Component {
   static propTypes = {
@@ -81,16 +80,17 @@ const styles = {
     minWidth: 0,
     padding: 0,
     borderRadius: '100%',
-    backgroundColor: color.white,
+    borderColor: 'var(--borders-neutral-primary)',
+    backgroundColor: 'var(--background-neutral-primary)',
   },
   inactiveColor: {
-    color: '#C7C7C7',
+    color: 'var(--text-neutral-disabled)',
   },
   runningColor: {
-    color: color.cyan,
+    color: 'var(--text-brand-teal-primary)',
   },
   pausedColor: {
-    color: color.orange,
+    color: 'var(--text-warning-primary)',
   },
 };
 

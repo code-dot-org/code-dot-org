@@ -185,14 +185,14 @@ class SpritelabInput extends React.Component {
 
 const styles = {
   container: {
-    background: 'rgba(34, 42, 51, 0.85)',
+    background: 'var(--background-neutral-primary-inverse)',
     textAlign: 'center',
     position: 'absolute',
     bottom: 0,
     width: '100%',
   },
   prompt: {
-    color: 'white',
+    color: 'var(--text-neutral-inverse)',
     fontSize: 15,
   },
   promptText: {
@@ -205,7 +205,7 @@ const styles = {
     whiteSpace: 'nowrap',
   },
   icon: {
-    color: 'white',
+    color: 'var(--text-neutral-inverse)',
   },
   inputRow: {
     padding: 0,
@@ -215,10 +215,16 @@ const styles = {
   inputArea: {
     width: 'calc(100% - 80px)',
     margin: 0,
+    borderColor: 'var(--borders-neutral-primary)',
+    backgroundColor: 'var(--background-neutral-primary)',
+    color: 'var(--text-neutral-primary)',
   },
   submitButton: {
     padding: 4,
     margin: '2px 5px',
+    borderColor: 'var(--background-accent-orange-primary)',
+    backgroundColor: 'var(--background-accent-orange-primary)',
+    color: 'var(--text-neutral-white-fixed)',
   },
   circle: {
     position: 'absolute',
@@ -228,7 +234,7 @@ const styles = {
     fontSize: 11,
   },
   number: {
-    color: 'rgb(34, 42, 51)',
+    color: 'var(--text-neutral-black-fixed)',
     fontSize: 9,
   },
   choiceButton: {
@@ -239,6 +245,9 @@ const styles = {
     textOverflow: 'ellipsis',
     overflow: 'hidden',
     whiteSpace: 'nowrap',
+    borderColor: 'var(--borders-neutral-primary)',
+    backgroundColor: 'var(--background-neutral-primary)',
+    color: 'var(--text-neutral-primary)',
   },
   choiceSpriteContainer: {
     padding: 0,
