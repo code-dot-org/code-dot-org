@@ -63,8 +63,15 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
     setStatus('generating');
     setError(null);
     dispatch(setAiGenerateState('generating'));
+    let pseudocode: string | null = null;
     try {
-      const pseudocode = await askSpriteLabAi(prompt);
+      pseudocode = await askSpriteLabAi(prompt);
+      // Diagnosis breadcrumb: what the model actually said, collapsed so it
+      // doesn't spam the console.
+      console.groupCollapsed('SpriteLab2 AI codegen: pseudocode');
+      console.log('prompt: %s', prompt);
+      console.log(pseudocode);
+      console.groupEnd();
       // Validating names here means a bad program throws cleanly instead of
       // replacing the scene's blocks with a half-loaded one.
       const source = generateBlocklyJson(pseudocode, {
@@ -76,7 +83,14 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
       setStatus('generated');
       dispatch(setAiGenerateState('generated'));
     } catch (e) {
-      setError(e instanceof Error ? e.message : String(e));
+      const message = e instanceof Error ? e.message : String(e);
+      console.groupCollapsed('SpriteLab2 AI codegen: failed — %s', message);
+      console.log('prompt: %s', prompt);
+      console.log(
+        pseudocode ?? '(no pseudocode — the AI request itself failed)'
+      );
+      console.groupEnd();
+      setError(message);
       setStatus('error');
       dispatch(setAiGenerateState('none'));
     }

@@ -2,9 +2,30 @@ import {generateBlocklyJson} from '@cdo/apps/p5lab/spritelab/lab2/blockly/genera
 
 describe('SpriteLab2 generateBlocklyJson', () => {
   it('produces a when_run root hat', () => {
-    const result = generateBlocklyJson('when_run');
+    const result = generateBlocklyJson('when_run\n  repeat 2');
     expect(result.blocks.blocks).toHaveLength(1);
     expect(result.blocks.blocks[0].type).toBe('when_run');
+  });
+
+  it('throws on an empty program instead of silently loading nothing', () => {
+    expect(() => generateBlocklyJson('when_run')).toThrow(/usable commands/);
+    expect(() => generateBlocklyJson('when_run\n  fly_to_the_moon')).toThrow(
+      /usable commands/
+    );
+  });
+
+  it('strips markdown fences and prose before the program', () => {
+    const result = generateBlocklyJson(
+      'Here is your program:\n```\nwhen_run\n  repeat 2\n```'
+    );
+    const repeat = result.blocks.blocks[0].next.block;
+    expect(repeat.type).toBe('controls_repeat_ext');
+  });
+
+  it('throws when the reply has no when_run at all', () => {
+    expect(() => generateBlocklyJson('sorry, I cannot do that')).toThrow(
+      /didn't contain a program/
+    );
   });
 
   it('chains a repeat off when_run with a math_number TIMES input', () => {
@@ -37,10 +58,13 @@ describe('SpriteLab2 generateBlocklyJson', () => {
   });
 
   it('skips unsupported commands leniently', () => {
-    const result = generateBlocklyJson('when_run\n  fly_to_the_moon');
-    // Unknown command is dropped; the root hat is still produced with no body.
-    expect(result.blocks.blocks[0].type).toBe('when_run');
-    expect(result.blocks.blocks[0].next).toBeUndefined();
+    const result = generateBlocklyJson(
+      'when_run\n  fly_to_the_moon\n  repeat 2'
+    );
+    // The unknown command is dropped; the rest of the program still loads.
+    const root = result.blocks.blocks[0];
+    expect(root.type).toBe('when_run');
+    expect(root.next.block.type).toBe('controls_repeat_ext');
   });
 
   it('maps set_background to gamelab_setBackgroundImageAs with a quoted name', () => {

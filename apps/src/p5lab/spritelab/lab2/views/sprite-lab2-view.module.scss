@@ -197,8 +197,10 @@ $tab-segment-height: $tab-item-height - 2px;
 }
 
 .generateError {
-  color: #c00;
-  font-size: 12px;
+  // Legible on the guide's dark panel; the old dark red vanished into it.
+  color: #ff9d9d;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .imagesManager {

@@ -199,10 +199,20 @@ export function generateBlocklyJson(
     block: {type: 'math_number', id: nextId(), fields: {NUM: value}},
   });
 
-  const lines = pseudocode
+  // Models sometimes frame the pseudocode despite instructions — markdown
+  // fences, or a prose preamble. Drop fence lines, then everything before
+  // the first when_run.
+  let lines = pseudocode
     .split('\n')
     .map(line => line.replace(/\s+$/, ''))
-    .filter(line => line.trim() !== '');
+    .filter(line => line.trim() !== '' && !line.trim().startsWith('```'));
+  const firstWhenRun = lines.findIndex(line => line.trim() === 'when_run');
+  if (firstWhenRun === -1) {
+    throw new Error(
+      "The AI's answer didn't contain a program (no when_run). Try rephrasing."
+    );
+  }
+  lines = lines.slice(firstWhenRun);
 
   const root: JsonBlockConfig = {
     type: 'when_run',
@@ -600,6 +610,14 @@ export function generateBlocklyJson(
         );
         break;
     }
+  }
+
+  // A bare when_run (every line skipped or missing) would silently load as
+  // an empty program; surface it instead.
+  if (roots.length === 1 && !root.next) {
+    throw new Error(
+      "The AI didn't produce any usable commands. Try rephrasing your request."
+    );
   }
 
   return {blocks: {blocks: roots}};
