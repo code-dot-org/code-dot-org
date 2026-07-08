@@ -22,7 +22,11 @@ import {
   formatSystemMessages,
 } from './helpers/messageHelpers';
 import {getModel} from './helpers/modelHelpers';
-import {isTextSafe, getImageModerationStatus} from './helpers/safetyHelpers';
+import {
+  isTextSafe,
+  isImageSafe,
+  getImageModerationStatus,
+} from './helpers/safetyHelpers';
 
 /**
  * Performs all the steps necessary to generate a chat response:
@@ -122,6 +126,14 @@ export async function generateChatResponse(
         return {
           response: text,
           status: AiRequestExecutionStatus.FAILURE,
+        };
+      }
+
+      const imageSafe = await isImageSafe(file);
+      if (!imageSafe) {
+        return {
+          response: text,
+          status: AiRequestExecutionStatus.MODEL_IMAGE_FLAGGED,
         };
       }
     }

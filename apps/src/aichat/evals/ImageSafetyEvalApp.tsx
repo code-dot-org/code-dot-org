@@ -10,14 +10,18 @@ import {
   EvalResult,
   EvalSummary,
 } from './evalTypes';
-import {runEval} from './imageSafetyEval';
+import {
+  rerunOutputImageGate,
+  runEval,
+  shouldRerunOutputImageGate,
+} from './imageSafetyEval';
 import {parseEvalCsv} from './parseEvalCsv';
 import {ThrottleEvent} from './rateLimit';
 import {parseReportZip} from './reportZip';
 
-// Each prompt makes up to ~4 calls (2 text-safety + image generation +
-// moderation). Used to estimate load before a run.
-const CALLS_PER_PROMPT = 4;
+// Each prompt makes up to ~5 calls (2 text-safety + image generation +
+// Azure moderation + output-image safety). Used to estimate load before a run.
+const CALLS_PER_PROMPT = 5;
 // Confirm before launching runs larger than this, to avoid accidentally firing
 // thousands of calls at the shared gateway.
 const LARGE_RUN_THRESHOLD = 150;
@@ -179,6 +183,7 @@ function resultsToCsv(results: EvalResult[], imageFiles?: string[]): string {
     'stopped_at_gate',
     'finish_reason',
     'moderation_status',
+    'output_image_safety_status',
     'detail',
     'humanReviewedBenign',
     'elapsed_ms',
@@ -193,6 +198,7 @@ function resultsToCsv(results: EvalResult[], imageFiles?: string[]): string {
       r.stoppedAtGate ?? '',
       r.finishReason ?? '',
       r.moderationStatus ?? '',
+      r.outputImageSafetyStatus ?? '',
       r.detail ?? '',
       String(!!r.humanReviewedBenign),
       String(r.elapsedMs),
@@ -296,6 +302,13 @@ function buildIndexHtml(
           <div class="meta">${escapeHtml(r.label)}${
         r.stoppedAtGate ? ` &middot; ${escapeHtml(r.stoppedAtGate)}` : ''
       }${r.humanReviewedBenign ? ' &middot; reviewed benign' : ''}</div>
+          ${
+            r.outputImageSafetyStatus
+              ? `<div class="meta">Image judge: ${escapeHtml(
+                  r.outputImageSafetyStatus
+                )}</div>`
+              : ''
+          }
           <div class="prompt">${escapeHtml(r.prompt)}</div>
           ${
             severities(r)
@@ -612,6 +625,7 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
             stoppedAtGate: r.stoppedAtGate,
             finishReason: r.finishReason,
             moderationStatus: r.moderationStatus,
+            outputImageSafetyStatus: r.outputImageSafetyStatus,
             moderationCategories: r.moderationCategories,
             detail: r.detail,
             humanReviewedBenign: !!r.humanReviewedBenign,
@@ -741,6 +755,38 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
     }
   }, [results, concurrency, running]);
 
+  // Re-run only the output-image LLM judge on rows from an existing report
+  // that reached that point in the pipeline.
+  const handleRerunOutputImageGate = useCallback(async () => {
+    const targetCount = results.filter(shouldRerunOutputImageGate).length;
+    if (!targetCount || running) {
+      return;
+    }
+    const controller = new AbortController();
+    abortRef.current = controller;
+    setRunning(true);
+    setThrottle(null);
+    setProgress({completed: 0, total: targetCount});
+    try {
+      await rerunOutputImageGate(results, {
+        concurrency,
+        signal: controller.signal,
+        onThrottle: setThrottle,
+        onResume: () => setThrottle(null),
+        onResult: (result, completed, total, originalIndex) => {
+          setResults(prev =>
+            prev.map((r, i) => (i === originalIndex ? result : r))
+          );
+          setProgress({completed, total});
+        },
+      });
+    } finally {
+      setRunning(false);
+      setThrottle(null);
+      abortRef.current = null;
+    }
+  }, [results, concurrency, running]);
+
   // The per-prompt list hides prompts blocked at the input-text gate (usually
   // the bulk of an adversarial run) so the reviewer focuses on what got past
   // it. Keep the original index for toggling/keys.
@@ -757,6 +803,9 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
   const erroredCount = results.filter(
     r => r.outcome === EvalOutcome.ERROR
   ).length;
+  const outputImageGateRerunCount = results.filter(
+    shouldRerunOutputImageGate
+  ).length;
   // Optionally also hide rows already marked reviewed-benign.
   const cardResults = hideBenign
     ? visibleResults.filter(({r}) => !r.humanReviewedBenign)
@@ -770,8 +819,8 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
         Upload a CSV with <code>prompt,label</code> columns of adversarial
         prompts. Each prompt is run through the real aichat image pipeline
         (input text safety → image generation → Azure image moderation → output
-        text safety). A prompt that clears every gate and yields an allowed
-        image is a <strong>false negative</strong>.
+        image safety → output text safety). A prompt that clears every gate and
+        yields an allowed image is a <strong>false negative</strong>.
       </p>
 
       <div style={styles.controls}>
@@ -874,6 +923,15 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
             onClick={handleRerunErrors}
           >
             Re-run {erroredCount} errored
+          </button>
+        )}
+        {!running && outputImageGateRerunCount > 0 && (
+          <button
+            type="button"
+            style={{...styles.button, background: '#7665a0', color: 'white'}}
+            onClick={handleRerunOutputImageGate}
+          >
+            Re-run output image gate ({outputImageGateRerunCount})
           </button>
         )}
         {(running || results.length > 0) && (
@@ -993,6 +1051,11 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
                       .filter(c => c.severity > 0)
                       .map(c => `${c.category}:${c.severity}`)
                       .join(', ')}
+                  </div>
+                )}
+                {r.outputImageSafetyStatus && (
+                  <div style={styles.cardMeta}>
+                    Image judge: {r.outputImageSafetyStatus}
                   </div>
                 )}
                 {r.outcome === EvalOutcome.PASSED && (
