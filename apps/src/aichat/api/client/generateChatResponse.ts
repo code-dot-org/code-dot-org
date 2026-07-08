@@ -113,27 +113,36 @@ export async function generateChatResponse(
     if (file.mediaType.startsWith('image/')) {
       sendLab2AnalyticsEvent(EVENTS.MODEL_OUTPUT_IMAGE_CREATED);
       // Check generated images for safety.
-      const imageModerationStatus = await getImageModerationStatus(
-        file,
-        buildAssetUrl(asset)
-      );
+      const [imageModerationResult, imageSafetyResult] =
+        await Promise.allSettled([
+          getImageModerationStatus(file, buildAssetUrl(asset)),
+          isImageSafe(file),
+        ]);
+      const imageModerationStatus =
+        imageModerationResult.status === 'fulfilled'
+          ? imageModerationResult.value
+          : 'error';
+      const imageSafe =
+        imageSafetyResult.status === 'fulfilled'
+          ? imageSafetyResult.value
+          : undefined;
+
       if (imageModerationStatus === 'flagged') {
         return {
           response: text,
           status: AiRequestExecutionStatus.MODEL_IMAGE_FLAGGED,
         };
-      } else if (imageModerationStatus === 'error') {
-        return {
-          response: text,
-          status: AiRequestExecutionStatus.FAILURE,
-        };
       }
-
-      const imageSafe = await isImageSafe(file);
-      if (!imageSafe) {
+      if (imageSafe === false) {
         return {
           response: text,
           status: AiRequestExecutionStatus.MODEL_IMAGE_FLAGGED,
+        };
+      }
+      if (imageModerationStatus === 'error' || imageSafe === undefined) {
+        return {
+          response: text,
+          status: AiRequestExecutionStatus.FAILURE,
         };
       }
     }
