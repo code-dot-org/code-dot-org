@@ -1,7 +1,8 @@
 class ExperimentsController < ApplicationController
   before_action :authenticate_user!
 
-  # Experiments are get requests so that a user can click on a link to join or leave an experiment
+  # The set/disable actions are GETs so that joining or leaving an experiment
+  # can be a clickable link in an email; see the warnings on each.
 
   # Returns whether the given experiment can be joined (or left) via url.
   # Currently, joining by URL is enabled for pilots where allow_joining_via_url is true
@@ -29,7 +30,21 @@ class ExperimentsController < ApplicationController
     end
   end
 
+  # POST /experiments/leave/:experiment_name
+  # Removes the current user from an experiment they joined. Used by the
+  # /experiments page.
+  def leave
+    experiment_name = params[:experiment_name]
+    return head :forbidden unless can_join_via_url?(experiment_name)
+
+    destroyed = SingleUserExperiment.where(min_user_id: current_user.id, name: experiment_name).destroy_all
+    destroyed.empty? ? head(:not_found) : head(:no_content)
+  end
+
   # GET /experiments/set_single_user_experiment/:experiment_name
+  # WARNING: state-mutating GET, kept only so joining an experiment can be a
+  # clickable link in an email. It redirects and never reports failure to the
+  # caller; do not use it outside those links.
   def set_single_user_experiment
     experiment_name = params[:experiment_name]
 
@@ -51,6 +66,9 @@ class ExperimentsController < ApplicationController
   end
 
   # GET /experiments/disable_single_user_experiment/:experiment_name
+  # WARNING: state-mutating GET, kept only so leaving an experiment can be a
+  # clickable link in an email. It redirects and never reports failure to the
+  # caller; do not use it outside those links — use the POST leave action.
   def disable_single_user_experiment
     experiment_name = params[:experiment_name]
 

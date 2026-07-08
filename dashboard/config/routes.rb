@@ -848,10 +848,13 @@ Dashboard::Application.routes.draw do
 
     get '/experiments', to: 'experiments#index'
 
-    # Experiments are get requests so that a user can click on a link to join or leave an experiment
+    # The set/disable experiment routes are state-mutating GETs, kept only so
+    # they can be clickable links in emails. Use them nowhere else; the
+    # /experiments page leaves experiments via the POST route.
     resource :experiments, only: [] do
       get 'set_single_user_experiment/:experiment_name', action: :set_single_user_experiment
       get 'disable_single_user_experiment/:experiment_name', action: :disable_single_user_experiment
+      post 'leave/:experiment_name', action: :leave
     end
 
     get '/peer_reviews/dashboard', to: 'peer_reviews#dashboard'

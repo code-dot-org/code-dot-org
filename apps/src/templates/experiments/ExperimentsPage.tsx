@@ -2,7 +2,7 @@ import {Typography, Button as MuiButton} from '@mui/material';
 import React, {useCallback, useState} from 'react';
 
 import experiments from '@cdo/apps/util/experiments';
-import i18n from '@cdo/locale';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 import styles from './experimentsPage.module.scss';
 
@@ -42,15 +42,12 @@ const ExperimentsPage: React.FC<ExperimentsPageProps> = ({
   const leaveAccountExperiment = useCallback(async (name: string) => {
     setLeaving(current => [...current, name]);
     try {
-      const response = await fetch(
-        `/experiments/disable_single_user_experiment/${name}`,
-        {credentials: 'same-origin'}
+      await HttpClient.post(`/experiments/leave/${name}`, undefined, true);
+      setAccountExperiments(current =>
+        current.filter(experiment => experiment.name !== name)
       );
-      if (response.ok) {
-        setAccountExperiments(current =>
-          current.filter(experiment => experiment.name !== name)
-        );
-      }
+    } catch {
+      // Leave the row in place; the button re-enables so the user can retry.
     } finally {
       setLeaving(current =>
         current.filter(leavingName => leavingName !== name)
@@ -65,23 +62,24 @@ const ExperimentsPage: React.FC<ExperimentsPageProps> = ({
 
   return (
     <div className={styles.page}>
-      <Typography variant="h1">{i18n.experimentsPageTitle()}</Typography>
+      <Typography variant="h1">My experiments</Typography>
 
       <section>
-        <Typography variant="h2">{i18n.experimentsAccountHeading()}</Typography>
+        <Typography variant="h2">Account experiments</Typography>
         <Typography variant="body2" className={styles.description}>
-          {i18n.experimentsAccountDescription()}
+          Experiments you have joined. They follow your account wherever you
+          sign in.
         </Typography>
         {accountExperiments.length === 0 ? (
           <Typography variant="body2" className={styles.emptyState}>
-            {i18n.experimentsAccountNone()}
+            You haven't joined any experiments.
           </Typography>
         ) : (
           <table className={styles.table}>
             <thead>
               <tr>
-                <th>{i18n.experimentsColumnName()}</th>
-                <th>{i18n.experimentsColumnEndsAt()}</th>
+                <th>Experiment</th>
+                <th>Ends</th>
                 <th />
               </tr>
             </thead>
@@ -106,7 +104,7 @@ const ExperimentsPage: React.FC<ExperimentsPageProps> = ({
                         disabled={leaving.includes(experiment.name)}
                         onClick={() => leaveAccountExperiment(experiment.name)}
                       >
-                        {i18n.experimentsLeave()}
+                        Leave
                       </MuiButton>
                     )}
                   </td>
@@ -118,20 +116,20 @@ const ExperimentsPage: React.FC<ExperimentsPageProps> = ({
       </section>
 
       <section>
-        <Typography variant="h2">{i18n.experimentsBrowserHeading()}</Typography>
+        <Typography variant="h2">Browser experiments</Typography>
         <Typography variant="body2" className={styles.description}>
-          {i18n.experimentsBrowserDescription()}
+          Experiments enabled only in this browser.
         </Typography>
         {browserExperiments.length === 0 ? (
           <Typography variant="body2" className={styles.emptyState}>
-            {i18n.experimentsBrowserNone()}
+            No experiments are enabled in this browser.
           </Typography>
         ) : (
           <table className={styles.table}>
             <thead>
               <tr>
-                <th>{i18n.experimentsColumnName()}</th>
-                <th>{i18n.experimentsColumnExpires()}</th>
+                <th>Experiment</th>
+                <th>Expires</th>
                 <th />
               </tr>
             </thead>
@@ -153,7 +151,7 @@ const ExperimentsPage: React.FC<ExperimentsPageProps> = ({
                       size="small"
                       onClick={() => disableBrowserExperiment(experiment.key)}
                     >
-                      {i18n.experimentsDisable()}
+                      Disable
                     </MuiButton>
                   </td>
                 </tr>

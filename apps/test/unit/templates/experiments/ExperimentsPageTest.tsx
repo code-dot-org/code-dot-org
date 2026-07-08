@@ -8,6 +8,7 @@ import ExperimentsPage, {
 } from '@cdo/apps/templates/experiments/ExperimentsPage';
 import {getCurrentBrand, getMuiThemeForBrand} from '@cdo/apps/util/brand';
 import experiments from '@cdo/apps/util/experiments';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 import '@testing-library/jest-dom';
 
@@ -73,21 +74,36 @@ describe('ExperimentsPage', () => {
     ).toBeInTheDocument();
   });
 
-  it('leaves an account experiment via the disable endpoint', async () => {
-    const fetchSpy = jest
-      .spyOn(window, 'fetch')
+  it('leaves an account experiment via the leave endpoint', async () => {
+    const postSpy = jest
+      .spyOn(HttpClient, 'post')
       .mockResolvedValue({ok: true} as Response);
     renderPage([pilotExperiment]);
 
     await userEvent.click(screen.getByRole('button', {name: 'Leave'}));
 
-    expect(fetchSpy).toHaveBeenCalledWith(
-      '/experiments/disable_single_user_experiment/my-pilot',
-      {credentials: 'same-origin'}
+    expect(postSpy).toHaveBeenCalledWith(
+      '/experiments/leave/my-pilot',
+      undefined,
+      true
     );
     await waitFor(() =>
       expect(screen.queryByText('my-pilot')).not.toBeInTheDocument()
     );
+  });
+
+  it('keeps the row when leaving fails', async () => {
+    jest
+      .spyOn(HttpClient, 'post')
+      .mockRejectedValue(new Error('404 Not Found'));
+    renderPage([pilotExperiment]);
+
+    await userEvent.click(screen.getByRole('button', {name: 'Leave'}));
+
+    await waitFor(() =>
+      expect(screen.getByRole('button', {name: 'Leave'})).toBeEnabled()
+    );
+    expect(screen.getByText('my-pilot')).toBeInTheDocument();
   });
 
   it('disables a browser experiment', async () => {

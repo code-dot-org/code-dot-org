@@ -41,6 +41,41 @@ class ExperimentsControllerTest < ActionController::TestCase
     refute experiments.first[:canLeave]
   end
 
+  test 'leave removes the current user from the experiment' do
+    sign_in(@teacher)
+    SingleUserExperiment.create!(min_user_id: @teacher.id, name: @pilot_name)
+
+    post :leave, params: {experiment_name: @pilot_name}
+    assert_response :no_content
+    assert_empty SingleUserExperiment.where(min_user_id: @teacher.id, name: @pilot_name)
+  end
+
+  test 'leave returns not_found when the user is not in the experiment' do
+    sign_in(@teacher)
+
+    post :leave, params: {experiment_name: @pilot_name}
+    assert_response :not_found
+  end
+
+  test 'leave returns forbidden for experiments not joinable via url' do
+    sign_in(@teacher)
+    SingleUserExperiment.create!(min_user_id: @teacher.id, name: 'not-a-pilot')
+
+    post :leave, params: {experiment_name: 'not-a-pilot'}
+    assert_response :forbidden
+    refute_empty SingleUserExperiment.where(min_user_id: @teacher.id, name: 'not-a-pilot')
+  end
+
+  test 'leave does not remove other users from the experiment' do
+    sign_in(@teacher)
+    SingleUserExperiment.create!(min_user_id: @teacher.id, name: @pilot_name)
+    SingleUserExperiment.create!(min_user_id: @teacher.id + 1, name: @pilot_name)
+
+    post :leave, params: {experiment_name: @pilot_name}
+    assert_response :no_content
+    assert_equal [@teacher.id + 1], SingleUserExperiment.where(name: @pilot_name).pluck(:min_user_id)
+  end
+
   test_redirect_to_sign_in_for(
     :set_single_user_experiment,
     params: -> {{experiment_name: @pilot_name}}
