@@ -275,14 +275,17 @@ $tab-segment-height: $tab-item-height - 2px;
   gap: 8px;
 
   // The input and button read as one control pair: same height, radius, and
-  // type size (the native button otherwise renders taller than the input,
-  // with browser chrome).
+  // type size. The zeroed margin and shadow undo dashboard's global element
+  // styles (button {margin: 5px}, input {margin-bottom: 10px} + inset
+  // shadow), which otherwise knock the pair out of alignment.
   input,
   button {
     box-sizing: border-box;
     height: 36px;
+    margin: 0;
     border: 1px solid rgb(255 255 255 / 25%);
     border-radius: 6px;
+    box-shadow: none;
     font-size: 14px;
   }
 
