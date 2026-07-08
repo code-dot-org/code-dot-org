@@ -96,11 +96,23 @@ $handle-grab-buffer: 10px;
     opacity: 1;
   }
 
-  // Group nodes: transparent background; React Flow provides the focus indicator.
+  // Group nodes: transparent background and no wrapper border — hover/select
+  // indicators are handled by the inner .groupNode div in group-node.module.scss.
   // Override the wrapper background that React Flow injects via CSS variables.
   :global(.react-flow__node-group) {
     background: transparent;
     border: none;
+    outline: none;
+  }
+
+  // React Flow's built-in stylesheet applies box-shadow on hover, selected, and
+  // focus-visible via .selectable.* selectors ([0,3,0]). Nesting inside
+  // .canvasContainer gives [0,4,0], overriding all three cases so only our
+  // inner outline (group-node.module.scss) shows.
+  :global(.react-flow__node-group.selectable:hover),
+  :global(.react-flow__node-group.selectable.selected),
+  :global(.react-flow__node-group.selectable:focus-visible) {
+    box-shadow: none;
   }
 
   // Line anchors are tiny nodes; apply focus ring to the handle itself so it
@@ -158,17 +170,31 @@ $handle-grab-buffer: 10px;
   border-radius: 4px;
 }
 
-// Keyboard group-mode instruction banner shown at the bottom of the canvas.
-.groupModeIndicator {
+// Shared look for the transient banners shown at the bottom of the canvas
+// (group-mode hint, upload error). Each variant sets its own colors.
+%canvas-message {
   background-color: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
-  border: 1px solid var(--borders-brand-teal-primary);
-  border-left: 4px solid var(--borders-brand-teal-primary);
   padding: 8px 16px;
   border-radius: 6px;
   font-size: 13px;
   pointer-events: none;
   user-select: none;
+}
+
+.bannerInfo {
+  @extend %canvas-message;
+
+  color: var(--text-neutral-primary);
+  border: 1px solid var(--borders-brand-teal-primary);
+  border-left: 4px solid var(--borders-brand-teal-primary);
+}
+
+.bannerError {
+  @extend %canvas-message;
+
+  color: var(--text-error-primary);
+  border: 1px solid var(--borders-error-primary);
+  border-left: 4px solid var(--borders-error-primary);
 }
 
 // Drag-to-select overlay drawn on the canvas pane in cursor mode.

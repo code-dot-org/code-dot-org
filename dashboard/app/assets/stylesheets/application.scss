@@ -1879,7 +1879,13 @@ a.download-video {
   max-width: 600px;
 }
 
-#signin,
+// The React sign-in page (apps/src/signIn/) styles itself, so #signin no longer
+// carries these rules. They remain for #change-password (password reset) and
+// for the legacy server-rendered sign-in/sign-up pages still using this markup
+// (existing_account, PD/Foorm logged-out pages), which opt in via .signin-legacy.
+// Don't re-add #signin here: the React page reuses that id as a test hook and
+// must not inherit the legacy form/button styling.
+.signin-legacy,
 #change-password {
   $button-width: 324px;
 
@@ -2405,48 +2411,8 @@ a.download-video {
     margin: 0;
   }
 
-  .section-sign-in {
-    display: flex;
-    align-items: center;
-
-    input {
-      background-color: $neutral_light;
-    }
-
-    input[type=text] {
-      flex-grow: 2;
-      height: 42px;
-      padding-top: 0;
-      padding-bottom: 0;
-      margin: 0;
-    }
-
-    button {
-      @include main-font-semi-bold;
-      padding: 10px 20px;
-      margin-right: 0;
-      background-color: $brand_secondary_default;
-      border: 2px solid $brand_secondary_default;
-      color: $neutral_white;
-
-      &:hover {
-        background-color: $brand_secondary_dark;
-        border-color: $brand_secondary_dark;
-        box-shadow: none;
-      }
-      &:focus {
-        border-color: $brand_primary_default;
-      }
-
-      &:disabled {
-        color: $neutral_white;
-        border-color: $neutral_dark20;
-        background-color: $neutral_dark20;
-        @include box-shadow(none);
-        cursor: not-allowed;
-      }
-    }
-  }
+  // .section-sign-in retired: section-code entry now lives in React
+  // (apps/src/signIn/SectionCodeEntry.tsx).
 
   .oauth-sign-in {
     @include main-font-semi-bold;
