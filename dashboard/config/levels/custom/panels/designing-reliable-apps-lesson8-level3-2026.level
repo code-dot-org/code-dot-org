@@ -10,31 +10,39 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "# Launch Day! \n\nYour new website launches today. But oh no! The API is down and you have been tasked as the crisis manager. \n\nRead through the following scenarios. Then, choose one scenario and code a solution for it in the next level.",
-        "imageUrl": "https://images.code.org/795f46772c991af9986266cfe02971bb-Screenshot 2026-02-12 at 1.17.27 PM.png",
+        "text": "It's Launch Day! Your new website launches today. But oh no! The API is down and you have been tasked as the crisis manager. Read through the following scenarios. Then, choose one scenario and code a solution for it in the next level.",
+        "imageUrl": "https://images.code.org/1253e3f328a43028af81bd6c9fc7fa00-ChatGPT Image Jul 1, 2026, 07_59_52 PM.png",
         "key": "designing-reliable-apps-lesson8-weblab-panel-2025-pilot-4924dc9a-fb44-41bc-bae5-576df2ce68c3",
-        "layout": "text-top-center"
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": false,
+        "typing": true
       },
       {
-        "text": "# Scenario 1: Tech Speak\n\nYou try to load the page and see an error message. If your users see this, they will have no idea what it means!\n",
-        "imageUrl": "https://images.code.org/a29e63d106cc213d6125dc71a3d95274-Screenshot 2026-02-12 at 1.11.20 PM.png",
-        "key": "designing-reliable-apps-lesson8-weblab-panel-2025-pilot-1478fca0-c150-484d-9045-bb4fb8c4bb70"
+        "text": "# Scenario 1: You try to load the page and see an error message. If your users see this, they will have no idea what it means!\n",
+        "imageUrl": "https://images.code.org/f345e2b49623e916eb6977de298fc298-ChatGPT Image Jul 1, 2026, 08_06_30 PM.png",
+        "key": "designing-reliable-apps-lesson8-weblab-panel-2025-pilot-1478fca0-c150-484d-9045-bb4fb8c4bb70",
+        "fadeInOverPrevious": false,
+        "layout": "text-bottom-right",
+        "typing": true
       },
       {
-        "text": "# Scenario 2: Missing Fallback\n\nThere's probably supposed to be an image here...but the only thing loading is an icon and the image name. That can't be right!\n",
-        "imageUrl": "https://images.code.org/89c836c350026fb446a0c68ee6a8d0d7-Screenshot 2026-02-12 at 1.13.51 PM.png",
-        "key": "designing-reliable-apps-lesson8-weblab-panel-2025-pilot-e17e7e1f-1182-4a03-8f5a-db17c53d55a7"
+        "text": "# Scenario 2: There's probably supposed to be an image here...but the only thing loading is an icon and the image name. That can't be right!\n",
+        "imageUrl": "https://images.code.org/2f965583f5c1ad17b10c74b7b3468ad5-ChatGPT Image Jul 1, 2026, 08_16_21 PM.png",
+        "key": "designing-reliable-apps-lesson8-weblab-panel-2025-pilot-e17e7e1f-1182-4a03-8f5a-db17c53d55a7",
+        "layout": "text-bottom-right",
+        "typing": true
       },
       {
-        "text": "# Scenario 3: Should I Refresh?\n\nThe page failed to load, but there's no button to try again. Do I have to reload the entire page for it to work?\n",
-        "imageUrl": "https://images.code.org/664bb6b9071fa96b1d2e53d94727b8e1-Screenshot 2026-02-12 at 1.23.22 PM.png",
+        "text": "# Scenario 3:  The page failed to load, but there's no button to try again. Do I have to reload the entire page for it to work?\n",
+        "imageUrl": "https://images.code.org/a716cab51205bb5c8709daa30b3deefe-ChatGPT Image Jul 1, 2026, 08_18_23 PM.png",
         "key": "designing-reliable-apps-lesson8-weblab-panel-2025-pilot-f45f4b07-c757-4fa4-a6c0-0e3e27b0296b",
-        "layout": "text-top-right"
+        "layout": "text-bottom-right",
+        "typing": true
       }
     ],
     "name_suffix": "_2026",
     "use_links": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-06-23T05:30:34.485+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson8-weblab-panel-2025-pilot_2025-pilo_2026\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson8-weblab-panel-2025-pilot_2025-pilo_2026\"},{\"changed_at\":\"2026-06-23 05:30:37 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-06-23T05:30:34.485+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson8-weblab-panel-2025-pilot_2025-pilo_2026\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson8-weblab-panel-2025-pilot_2025-pilo_2026\"},{\"changed_at\":\"2026-06-23 05:30:37 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-02 00:23:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-07-02 00:24:40 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-07-02 00:25:45 +0000\",\"changed\":[\"panels\",\"display_name\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Panels>
