@@ -887,9 +887,9 @@ class Level < ApplicationRecord
   end
 
   # The levels that may hold this level's progress, in priority order.
-  def levels_for_progress(student = nil, script = nil)
-    return [self,  contained_levels.first] if predict_level? && !contained_levels.empty?
-    [get_level_for_progress(student, script)]
+  def levels_for_progress
+    return [self, contained_levels.first] if predict_level? && !contained_levels.empty?
+    [contained_levels.first || self]
   end
 
   def summarize_for_lesson_show(can_view_teacher_markdown)
