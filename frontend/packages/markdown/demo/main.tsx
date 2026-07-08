@@ -11,7 +11,7 @@ import {ThemeProvider} from '@mui/material';
 import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
 
-import {CdoTheme} from '@code-dot-org/component-library/themes';
+import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 import {injectFontAwesome} from '@code-dot-org/fonts';
 
 import {Demo} from './Demo';
@@ -25,9 +25,13 @@ if (!root) {
   throw new Error('Missing #root element');
 }
 
+// Set data-brand on <html> via devtools (e.g. to 'codeai-next' or
+// 'codeai-audit') and reload to preview this demo under a different brand.
+const theme = getMuiThemeForBrand(document.documentElement.dataset.brand);
+
 createRoot(root).render(
   <StrictMode>
-    <ThemeProvider theme={CdoTheme}>
+    <ThemeProvider theme={theme}>
       <Demo />
     </ThemeProvider>
   </StrictMode>,
