@@ -25,8 +25,7 @@ $border-radius: 4px;
   width: 360px;
 }
 
-// Use a high-specificity selector to take priority over bootstrap
-textarea.textarea {
+.textarea {
   width: -webkit-fill-available;
   resize: none;
   border: 1px solid $neutral_dark;
@@ -53,7 +52,7 @@ textarea.textarea {
 }
 
 .entryContainer {
-  width: calc(50% + 30px);
+  width: 50%;
   background-color: $neutral_light;
   padding: 15px 15px 0 15px;
   border-radius: 5px;

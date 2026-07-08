@@ -185,7 +185,8 @@ const SmallFooter = (props: SmallFooterProps) => {
       fontSize: props.fontSize,
     },
     base: {
-      height: props.rowHeight ? props.rowHeight + 3 : undefined,
+      // subtract top/bottom padding from row height
+      height: props.rowHeight ? props.rowHeight - 6 : undefined,
       alignItems: 'center',
     },
     // Additional styling to base, above.

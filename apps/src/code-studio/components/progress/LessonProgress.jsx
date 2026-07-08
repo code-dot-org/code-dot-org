@@ -264,7 +264,7 @@ const styles = {
     backgroundColor: 'var(--background-neutral-secondary)',
     border: '1px solid var(--borders-neutral-primary)',
     borderRadius: 5,
-    height: 42,
+    height: 40,
     position: 'relative',
     overflow: 'hidden',
   },

@@ -354,11 +354,11 @@ const styles = {
     top: 1,
   },
   left: {
-    width: '59%',
+    width: '60%',
     paddingRight: 20,
   },
   right: {
-    width: '41%',
+    width: '40%',
     padding: '0px 10px 10px 20px',
     borderLeft: 'solid 1px #333',
   },

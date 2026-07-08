@@ -84,7 +84,7 @@ export default class DesignModeHeaders extends React.Component {
       toolboxHeader: {
         display: this.props.isToolboxVisible ? 'flex' : 'none',
         justifyContent: 'space-between',
-        width: 271,
+        width: 270,
         borderLeft: this.props.isRtl ? '1px solid gray' : '',
         borderRight: this.props.isRtl ? '' : '1px solid gray',
         float: this.props.isRtl ? 'right' : 'left',

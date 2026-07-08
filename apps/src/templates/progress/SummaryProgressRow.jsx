@@ -229,9 +229,9 @@ export const styles = {
     borderWidth: 2,
   },
   col1: {
-    width: 241,
-    minWidth: 241,
-    maxWidth: 241,
+    width: 200,
+    minWidth: 200,
+    maxWidth: 200,
     lineHeight: '52px',
     color: 'var(--text-neutral-primary)',
     letterSpacing: -0.11,

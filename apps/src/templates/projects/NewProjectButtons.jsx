@@ -199,8 +199,8 @@ const styles = {
     marginBottom: 10,
   },
   tile: {
-    width: 216,
-    height: 72,
+    width: 214,
+    height: 70,
     border: '1px solid var(--borders-neutral-primary)',
     borderRadius: 2,
     float: 'left',

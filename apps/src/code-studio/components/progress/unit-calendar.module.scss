@@ -1,19 +1,19 @@
 .weekColumn {
-  width: 103px;
-  min-width: 103px;
+  width: 100px;
+  min-width: 100px;
   background-color: var(--background-brand-purple-primary);
   color: var(--text-neutral-white-fixed);
   text-align: center;
   border: 1px solid var(--borders-brand-purple-primary);
   border-collapse: collapse;
-  min-height: 54px;
+  min-height: 50px;
 }
 
 .scheduleColumn {
   border: 1px solid var(--borders-brand-purple-primary);
   border-collapse: collapse;
   display: flex;
-  min-height: 54px;
+  min-height: 50px;
   margin: 0;
 }
 

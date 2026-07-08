@@ -983,7 +983,7 @@ $height-to-width: math.div(434, 477);
 
     .run26 {
       @include scale-x-browser(2);
-      width: 19px;
+      width: 6px;
       height: 34px;
       margin: 16px -3px -18px 23px;
       padding-right: 13px;
@@ -1004,7 +1004,7 @@ $height-to-width: math.div(434, 477);
     & > div {
       margin-top: 4px;
       margin-left: 2px;
-      margin-right: 4px;
+      margin-right: 18px;
     }
 
     .toggle26 {
@@ -1256,10 +1256,6 @@ $height-to-width: math.div(434, 477);
 
 // callout styling
 
-.qtip {
-  max-width: 340px;
-}
-
 .qtip-content {
   color: white;
 }
@@ -1439,7 +1435,7 @@ $height-to-width: math.div(434, 477);
     #score-inner {
       @include scoreboard-background;
       top: -411px;
-      height: 25px;
+      height: 17px;
       float: left;
       position: relative;
       left: -50%;

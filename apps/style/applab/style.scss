@@ -16,7 +16,6 @@ $widget-height: $default-footerless-height;
 div#visualization {
   height: 562.5px;
   width: 400px;
-  box-sizing: content-box;
 }
 
 div#visualization.with_padding {
@@ -240,7 +239,7 @@ div#visualizationResizeBar {
   // If you change this width and height,
   // make sure to update the AdvancedShareOptions.jsx iframe code.
   width: 352px;
-  height: 652px;
+  height: 612px;
   margin: 0 auto;
   padding: 20px 0;
 
@@ -586,7 +585,6 @@ div#visualizationResizeBar {
   .Select-value {
     height: 44px;
     .theme-dropdown-label {
-      height: 44px;
       img {
         width: 36px;
         height: 36px;

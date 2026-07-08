@@ -1,29 +1,29 @@
 = form_with(url: :lti_v1_integrations, method: :post, class: 'lti-integration-form') do |f|
   .row
-    .col-md-8
+    .span8
       .padded-container
         .row
-          .col-md-3.lti-integration-field-label
+          .span3.lti-integration-field-label
             = f.label :name, t('lti.integration.name')
-          .col-md-5
+          .span5
             = f.text_field :name, maxlength: 100, required: true
         .row
-          .col-md-3.lti-integration-field-label
+          .span3.lti-integration-field-label
             = f.label :client_id, t('lti.integration.client_id')
-          .col-md-5
+          .span5
             = f.text_field :client_id, maxlength: 50, required: true
         .row
-          .col-md-3.lti-integration-field-label
+          .span3.lti-integration-field-label
             = f.label :email, t('lti.integration.email')
-          .col-md-5
+          .span5
             = f.email_field :email, maxlength: 255, required: true
         .row
-          .col-md-3.lti-integration-field-label
+          .span3.lti-integration-field-label
             = f.label :lms, t('lti.integration.lms_selector')
-          .col-md-5
+          .span5
             = f.select :lms, form_data[:lms_platforms].map {|p| [p[:name], p[:platform].to_s]}
         .row
-          .col-md-10
+          .span10
             %p
               != I18n.t('lti.integration.form_instructions_3', lms_guides: 'https://support.code.org/hc/en-us/articles/23120014459405-Learning-Management-System-LMS-and-Single-Sign-On-SSO-Integrations-and-Support-for-Code-org', contact_us: SharedConstants::EMAIL_LINKS.CONTACT_US_URL, markdown: true)
 

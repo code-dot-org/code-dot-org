@@ -16,7 +16,6 @@ var testImageAccess = require('./url_test');
 const TAB_NAV_CLASS = '.ui-tabs-nav';
 const MODAL_CLASS_NAME = 'video-modal';
 const MODAL_CLASS = '.' + MODAL_CLASS_NAME;
-const MODAL_DIALOG_CLASS = '.modal-dialog';
 var videos = (module.exports = {});
 
 videos.createVideoWithFallback = function (
@@ -290,7 +289,7 @@ videos.showVideoDialog = function (options, forceShowVideo) {
  * at a 9/16 ratio.
  */
 function resizeVideoPlayer() {
-  let $div = $(MODAL_DIALOG_CLASS);
+  let $div = $(MODAL_CLASS);
   const navBarHeight = $div.find(TAB_NAV_CLASS).outerHeight();
   const screenRatio = 0.8;
   const aspectRatio = 16 / 9;
@@ -308,12 +307,21 @@ function resizeVideoPlayer() {
     containerWidth = maxWidth;
   }
 
-  // Accommodate padding and border
-  containerWidth += getContainerExtraWidth();
-
   // Set the dimensions of the video modal
   $div.height(containerHeight);
   $div.width(containerWidth);
+
+  // The video modal should centered within the inner height of the window
+  // (i.e. window height minus browser chrome)
+  const top = (window.innerHeight - containerHeight) / 2;
+
+  // Standard css hack to center a div within the viewport.
+  $div.css({
+    position: 'fixed',
+    top: top,
+    left: '50%',
+    marginLeft: containerWidth / -2 + 'px',
+  });
 
   // The nav bar will have changed dimensions due to the resizing of the
   // container. We re-calculate the available height for the video to account
@@ -328,21 +336,11 @@ function resizeVideoPlayer() {
  * dimensions.
  */
 function getVideoHeight() {
-  const container = $(MODAL_DIALOG_CLASS);
+  const container = $(MODAL_CLASS);
 
   // Here we get the remaining height of the video's container that isn't taken
   // up by the video navigation options.
   return container.innerHeight() - container.find(TAB_NAV_CLASS).outerHeight();
-}
-
-/**
- * Returns the total horizontal spaced added by the padding and border of the
- * containing element, so we can adjust a couple of manually-defined widths to
- * accommodate the box-sizing change in Bootstrap 3.
- */
-function getContainerExtraWidth() {
-  const container = $(TAB_NAV_CLASS).parent();
-  return container.outerWidth() - container.width();
 }
 
 // Precondition: $('#video') must exist on the DOM before this function is called.
@@ -454,8 +452,7 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
       });
 
       function resizeFallbackPlayer() {
-        const width =
-          $(MODAL_DIALOG_CLASS).innerWidth() - getContainerExtraWidth();
+        const width = $(MODAL_CLASS).innerWidth();
         const height = getVideoHeight();
 
         // Embedded videos don't need to be resized and don't have a container

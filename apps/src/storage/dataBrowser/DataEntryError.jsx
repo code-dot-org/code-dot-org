@@ -27,7 +27,7 @@ class DataEntryError extends React.Component {
 
 const styles = {
   container: {
-    height: 60,
+    height: 40,
     paddingTop: 12,
   },
   visible: {
