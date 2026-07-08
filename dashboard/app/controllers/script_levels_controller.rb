@@ -190,13 +190,14 @@ class ScriptLevelsController < ApplicationController
       first_level = response_levels.first
       if first_level.is_a?(FreeResponse) || first_level.is_a?(Multi) || first_level&.predict_level? || first_level.is_a?(LevelGroup)
         if @level.is_a?(LevelGroup)
+          # A level group can't contain a migrated predict level, so we just return the responses for each level.
           @responses = response_levels.map do |sublevel|
             UserLevel.where(level: sublevel, user: @section&.students)
           end
         else
+          # We have one level, and it could be a migrated predict level, which may have progress
+          # on both the level and its contained level; keep each student's most recent attempt.
           user_levels = UserLevel.where(level: response_levels, user: @section&.students)
-          # A migrated predict level may have progress on both the level and its
-          # contained level; keep each student's most recent attempt.
           user_levels = user_levels.group_by(&:user_id).map {|_, uls| uls.max_by(&:updated_at)} if response_levels.many?
           @responses = [user_levels]
         end
