@@ -5,6 +5,7 @@ import {ReactFlowProvider, useReactFlow} from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
+import {SUPPORTED_IMAGE_EXTENSIONS} from '@cdo/apps/lab2/constants';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
@@ -43,15 +44,6 @@ import {handleSaveToBackpack} from './utils/handleSaveToBackpack';
 import {migrateTriangleHandleIds} from './utils/migrateReactFlowSources';
 
 import styles from './react-flow-sketch-lab-view.module.scss';
-
-const SUPPORTED_BACKPACK_EXTENSIONS = [
-  'png',
-  'jpg',
-  'jpeg',
-  'gif',
-  'svg',
-  'webp',
-];
 
 export const REACT_FLOW_DEFAULT_SOURCES: ReactFlowSketchLabSources = {
   source: {nodes: [], edges: []},
@@ -192,7 +184,7 @@ function ReactFlowSketchLabViewInner({
           ),
         text: 'Save Sketch to Backpack',
       },
-      supportedFileTypes: SUPPORTED_BACKPACK_EXTENSIONS,
+      supportedFileTypes: SUPPORTED_IMAGE_EXTENSIONS,
       addFileTooltipText: 'Add to sketch',
       addFileHandler: makeBackpackImageImportHandler({
         levelName: levelProperties.name,
