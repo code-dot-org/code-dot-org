@@ -139,6 +139,17 @@ class LevelGroup < DSLDefined
     reload
     self.child_levels = []
     new_levels = new_levels_and_texts_by_page.flatten
+
+    # This path creates the parent-child rows directly, bypassing the Level
+    # validation which enforces the UI Test partition elsewhere.
+    unless ui_test?
+      offending = new_levels.select {|level| level.is_a?(Level) && level.ui_test?}
+      if offending.any?
+        raise "level \"#{name}\" is not a UI Test level, so it may not " \
+          "reference UI Test levels: #{offending.map(&:name).join(', ')}"
+      end
+    end
+
     new_levels.each_with_index do |level, level_index|
       ParentLevelsChildLevel.find_or_create_by!(
         parent_level: self,

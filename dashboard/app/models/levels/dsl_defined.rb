@@ -148,14 +148,20 @@ class DSLDefined < Level
     existing_filename.presence || canonical_filename
   end
 
+  # DSL files for UI Test levels (Level.ui_test_name?) live under
+  # test/ui/config/scripts; everything else under config/scripts.
+  def scripts_dir
+    ui_test? ? 'test/ui/config/scripts' : 'config/scripts'
+  end
+
   def existing_filename
-    # Find a file in config/scripts/**/*.[class]* containing the string "name '[name]'"
-    grep_string = "grep -lir \"name '#{name}'\" --include=*.#{self.class.to_s.underscore}* #{Rails.root}/config/scripts --color=never"
+    # Find a file in [scripts_dir]/**/*.[class]* containing the string "name '[name]'"
+    grep_string = "grep -lir \"name '#{name}'\" --include=*.#{self.class.to_s.underscore}* #{Rails.root}/#{scripts_dir} --color=never"
     `#{grep_string}`.chomp
   end
 
   def canonical_filename
-    "config/scripts/#{name.parameterize.underscore}.#{self.class.to_s.underscore}"
+    "#{scripts_dir}/#{name.parameterize.underscore}.#{self.class.to_s.underscore}"
   end
 
   def file_path

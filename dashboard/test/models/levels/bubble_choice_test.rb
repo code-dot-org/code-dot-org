@@ -691,4 +691,33 @@ class BubbleChoiceTest < ActiveSupport::TestCase
     sublevel.save!
     [sublevel, contained]
   end
+
+  test 'a non-UI-Test bubble choice cannot contain UI Test sublevels' do
+    create(:level, name: 'UI Test BubbleChoiceTest sublevel')
+
+    input_dsl = <<~DSL
+      name 'BubbleChoiceTest prod parent'
+
+      sublevels
+      level 'UI Test BubbleChoiceTest sublevel'
+    DSL
+
+    e = assert_raises do
+      BubbleChoice.create_from_level_builder({}, {name: 'BubbleChoiceTest prod parent', dsl_text: input_dsl})
+    end
+    assert_includes e.message, 'UI Test BubbleChoiceTest sublevel'
+
+    # a UI Test parent may contain non-UI-Test sublevels (needed while
+    # ui-test scripts migrate off prod levels)
+    prod_sublevel = create(:level, name: 'BubbleChoiceTest prod sublevel')
+    input_dsl = <<~DSL
+      name 'UI Test BubbleChoiceTest parent'
+
+      sublevels
+      level 'BubbleChoiceTest prod sublevel'
+    DSL
+
+    level = BubbleChoice.create_from_level_builder({}, {name: 'UI Test BubbleChoiceTest parent', dsl_text: input_dsl})
+    assert_equal [prod_sublevel], level.sublevels
+  end
 end

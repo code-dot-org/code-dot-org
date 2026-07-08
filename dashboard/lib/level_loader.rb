@@ -1,9 +1,12 @@
 require 'set'
 
 class LevelLoader
-  # Top-level entry point, called by rake seed:custom_levels
-  def self.load_custom_levels(level_name, root_dir)
-    import_levels(Policies::LevelFiles.level_file_glob(level_name, root_dir))
+  # Top-level entry point, called by rake seed:custom_levels and
+  # seed:custom_levels_ui_tests. With a level_name, the tree (config vs
+  # test/ui/config) is chosen by the name's "UI Test " prefix; without one,
+  # `tree` picks which tree's levels to load (:production or :ui_test).
+  def self.load_custom_levels(level_name, root_dir, tree: nil)
+    import_levels(Policies::LevelFiles.level_file_glob(level_name, root_dir, tree: tree))
   end
 
   #

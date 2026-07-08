@@ -219,7 +219,18 @@ namespace :seed do
   # because the regular course offerings seed task removes any course_offerings records
   # left in the database that do not have a corresponding json file in config/course_offerings.
   # The ui test course offerings must be seeded after so they are not accidentally removed.
-  timed_task_with_logging scripts_ui_tests: SCRIPTS_DEPENDENCIES + [:course_offerings_ui_tests] do
+  # UI test scripts also need the "UI Test " levels from test/ui/config,
+  # seeded after the normal level tasks in SCRIPTS_DEPENDENCIES (ui-test
+  # levels may still reference normal levels during the migration off prod
+  # levels, never the reverse).
+  UI_TEST_SCRIPTS_DEPENDENCIES = SCRIPTS_DEPENDENCIES + [
+    :child_dsls_ui_tests,
+    :custom_levels_ui_tests,
+    :parent_dsls_ui_tests,
+    :course_offerings_ui_tests,
+  ].freeze
+
+  timed_task_with_logging scripts_ui_tests: UI_TEST_SCRIPTS_DEPENDENCIES do
     update_scripts(script_files: UI_TEST_SCRIPTS, incremental: true)
   end
 
@@ -295,12 +306,37 @@ namespace :seed do
     end
   end
 
+  # "UI Test " levels live under test/ui/config and are seeded only for UI
+  # tests, after the normal level tasks (they may reference normal levels
+  # during the transition off prod levels; the reverse is forbidden by
+  # validation). Same child -> custom -> parent ordering as above.
+  UI_TEST_CHILD_DSL_FILES = CHILD_DSL_TYPES.map {|x| Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
+  UI_TEST_PARENT_DSL_FILES = PARENT_DSL_TYPES.map {|x| Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
+
+  timed_task_with_logging child_dsls_ui_tests: :environment do
+    DSLDefined.transaction do
+      parse_dsl_files(UI_TEST_CHILD_DSL_FILES, CHILD_DSL_TYPES)
+    end
+  end
+
+  timed_task_with_logging custom_levels_ui_tests: :environment do
+    LevelLoader.load_custom_levels(nil, CURRICULUM_CONTENT_DIR, tree: :ui_test)
+  end
+
+  timed_task_with_logging parent_dsls_ui_tests: :environment do
+    DSLDefined.transaction do
+      parse_dsl_files(UI_TEST_PARENT_DSL_FILES, PARENT_DSL_TYPES)
+    end
+  end
+
   # Allow developers to seed just one dsl-defined level, e.g.
   # rake seed:single_dsl DSL_FILENAME=k-1_Artistloops_multi1.multi
   # rake seed:single_dsl DSL_FILENAME=csa_unit_6_assessment_2023.level_group
   timed_task_with_logging single_dsl: :environment do
     DSLDefined.transaction do
-      dsl_files = Dir.glob("#{CURRICULUM_CONTENT_DIR}/config/scripts/**/#{ENV.fetch('DSL_FILENAME', nil)}")
+      dsl_files = %w(config/scripts test/ui/config/scripts).flat_map do |scripts_dir|
+        Dir.glob("#{CURRICULUM_CONTENT_DIR}/#{scripts_dir}/**/#{ENV.fetch('DSL_FILENAME', nil)}")
+      end
 
       unless dsl_files.count > 0
         raise 'no matching dsl-defined level files found. please check filename for exact case and spelling.'

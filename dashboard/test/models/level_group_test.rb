@@ -644,4 +644,21 @@ level 'level1_copy2'"
     end
     assert_includes e.message, 'LevelGroup cannot contain level type bubble_choice'
   end
+
+  test 'a non-UI-Test level group cannot contain UI Test levels' do
+    ui_test_sublevel = create(:sublevel, name: 'UI Test LevelGroupTest sublevel')
+
+    prod_level_group = create(:level_group, name: 'LevelGroupTest prod parent')
+    e = assert_raises do
+      prod_level_group.update_levels_and_texts_by_page([[ui_test_sublevel]])
+    end
+    assert_includes e.message, ui_test_sublevel.name
+
+    # a UI Test parent may contain non-UI-Test sublevels (needed while
+    # ui-test scripts migrate off prod levels)
+    prod_sublevel = create(:sublevel, name: 'LevelGroupTest prod sublevel')
+    ui_test_level_group = create(:level_group, name: 'UI Test LevelGroupTest parent')
+    ui_test_level_group.update_levels_and_texts_by_page([[prod_sublevel]])
+    assert_equal [prod_sublevel], ui_test_level_group.reload.all_child_levels
+  end
 end

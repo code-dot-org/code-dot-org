@@ -88,6 +88,8 @@ class Level < ApplicationRecord
   validates :level_num, uniqueness: {case_sensitive: true, scope: :game, conditions: -> {where.not(level_num: ['custom', nil])}}
 
   validate :validate_game, on: [:create, :update]
+  validate :name_change_stays_within_ui_test_partition, on: :update
+  validate :no_ui_test_children_outside_ui_test_levels
 
   after_save {Services::LevelFiles.write_custom_level_file(self)}
   after_destroy {Services::LevelFiles.delete_custom_level_file(self)}
@@ -229,6 +231,21 @@ class Level < ApplicationRecord
   # All custom levels will have a 'custom' level_num, except for DSLDefined levels.
   def custom?
     level_num == 'custom' || is_a?(DSLDefined)
+  end
+
+  UI_TEST_NAME_PREFIX = 'ui test '.freeze
+
+  # "UI Test "-prefixed levels exist only for UI tests. Their definition files
+  # live under test/ui/config rather than config, and they may only be
+  # referenced by ui-test-* units. Detection is by name, never by filename:
+  # the DSL file for "UI Test Foo" is ui_test_foo.<type>. Mirrors the
+  # ui-test- partitioning of course offerings, courses, and units.
+  def self.ui_test_name?(name)
+    name.to_s.downcase.start_with?(UI_TEST_NAME_PREFIX)
+  end
+
+  def ui_test?
+    Level.ui_test_name?(name)
   end
 
   def should_localize?
@@ -453,6 +470,28 @@ class Level < ApplicationRecord
       "and the following characters: !\"&'()+,-.:=?_|"
       errors.add(:name, msg)
     end
+  end
+
+  # A level may not be renamed across the "UI Test " boundary while any
+  # script references it: its definition file would move between config and
+  # test/ui/config, changing which environments seed it out from under the
+  # script.
+  def name_change_stays_within_ui_test_partition
+    return unless name_changed?
+    return if Level.ui_test_name?(name) == Level.ui_test_name?(name_was)
+    return unless script_levels.exists?
+    errors.add(:name, "cannot be renamed across the \"UI Test \" boundary while the level is used by a script")
+  end
+
+  # A non-UI-Test parent may not reference a UI Test child: the parent is
+  # seeded in environments that never load test/ui/config levels, where the
+  # child would not resolve.
+  def no_ui_test_children_outside_ui_test_levels
+    return if ui_test?
+    child_names = Array(contained_level_names) + [try(:project_template_level_name)].compact
+    offending = child_names.select {|child_name| Level.ui_test_name?(child_name)}
+    return if offending.empty?
+    errors.add(:base, "level \"#{name}\" is not a UI Test level, so it may not reference UI Test levels: #{offending.join(', ')}")
   end
 
   # Uses specific knowledge of how the key method is implemented in hopes of

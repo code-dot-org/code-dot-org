@@ -1685,4 +1685,55 @@ class LevelTest < ActiveSupport::TestCase
       end
     end
   end
+
+  test 'ui_test_name? detects the "UI Test " prefix' do
+    assert Level.ui_test_name?('UI Test Some Level')
+    assert Level.ui_test_name?('ui test lowercase')
+    refute Level.ui_test_name?('Some Level')
+    refute Level.ui_test_name?('My UI Test Level')
+    refute Level.ui_test_name?('UI Testless')
+    refute Level.ui_test_name?(nil)
+
+    assert create(:level, name: 'UI Test predicate probe').ui_test?
+    refute create(:level, name: 'Regular predicate probe').ui_test?
+  end
+
+  test 'cannot rename a level across the UI Test boundary while used by a script' do
+    level = create(:level, name: 'LevelTest boundary rename')
+    create(:script_level, levels: [level])
+
+    level.name = 'UI Test LevelTest boundary rename'
+    refute level.valid?
+    assert_includes level.errors.full_messages.first, 'UI Test'
+
+    # renames within the same partition are unaffected
+    level.reload.name = 'LevelTest boundary rename 2'
+    assert level.valid?
+  end
+
+  test 'can rename a level across the UI Test boundary when not used by a script' do
+    level = create(:level, name: 'LevelTest free rename')
+    level.name = 'UI Test LevelTest free rename'
+    assert level.valid?
+  end
+
+  test 'a non-UI-Test level cannot reference UI Test children' do
+    ui_test_child = create(:level, name: 'UI Test LevelTest child')
+
+    level = create(:level, name: 'LevelTest contained parent')
+    level.contained_level_names = [ui_test_child.name]
+    refute level.valid?
+    assert_includes level.errors.full_messages.first, ui_test_child.name
+
+    level = create(:level, name: 'LevelTest template parent')
+    level.project_template_level_name = ui_test_child.name
+    refute level.valid?
+
+    # a UI Test parent may reference non-UI-Test children (needed while
+    # ui-test scripts migrate off prod levels)
+    prod_child = create(:level, name: 'LevelTest prod child')
+    ui_test_parent = create(:level, name: 'UI Test LevelTest parent')
+    ui_test_parent.contained_level_names = [prod_child.name]
+    assert ui_test_parent.valid?
+  end
 end

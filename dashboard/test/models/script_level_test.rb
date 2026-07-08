@@ -1267,6 +1267,35 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal "can only be used on migrated scripts", e.message
   end
 
+  test 'level_keys with UI Test levels are only valid in ui-test-* scripts' do
+    level = create(:level, name: 'UI Test ScriptLevelTest level')
+
+    ui_test_script = create(:script, name: 'ui-test-script-level-test')
+    script_level = create(:script_level, script: ui_test_script, levels: [level])
+    script_level.level_keys = [level.key]
+    assert script_level.valid?
+
+    prod_script = create(:script, name: 'script-level-test-prod')
+    script_level = create(:script_level, script: prod_script)
+    script_level.level_keys = [level.key]
+    refute script_level.valid?
+    assert_includes script_level.errors.full_messages.first, level.name
+  end
+
+  test 'update_levels rejects UI Test levels in non-ui-test scripts' do
+    level = create(:level, name: 'UI Test ScriptLevelTest attach')
+
+    prod_script_level = create(:script_level, script: create(:script, name: 'script-level-attach-prod'))
+    error = assert_raises RuntimeError do
+      prod_script_level.update_levels([{'id' => level.id}])
+    end
+    assert_includes error.message, level.name
+
+    ui_test_script_level = create(:script_level, script: create(:script, name: 'ui-test-script-level-attach'))
+    ui_test_script_level.update_levels([{'id' => level.id}])
+    assert_equal [level], ui_test_script_level.levels.to_a
+  end
+
   private def create_fake_plc_data
     @plc_course_unit = create(:plc_course_unit)
     @plc_script = @plc_course_unit.script

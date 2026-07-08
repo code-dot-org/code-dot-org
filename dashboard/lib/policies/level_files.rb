@@ -1,10 +1,24 @@
 module Policies
   module LevelFiles
+    # Levels whose names carry the "UI Test " prefix (Level.ui_test_name?) are
+    # stored under test/ui/config, everything else under config. The two trees
+    # never overlap: a UI Test level never resolves to config/levels/**, and
+    # vice versa.
+    LEVELS_SUBDIR = {
+      production: 'config/levels',
+      ui_test: 'test/ui/config/levels',
+    }.freeze
+
+    def self.tree_for_name(level_name)
+      Level.ui_test_name?(level_name) ? :ui_test : :production
+    end
+
     # We organize new level files into a `levels` directory to keep them
     # separate from scripts and further organize them by the associated Game if
     # it has one, to avoid packing too many files into a single directory.
     def self.default_level_file_path(level)
-      return Rails.root.join(*['config/levels/custom', level.game&.app, "#{level.name}.level"].compact)
+      subdir = LEVELS_SUBDIR[tree_for_name(level.name)]
+      return Rails.root.join(*[subdir, 'custom', level.game&.app, "#{level.name}.level"].compact)
     end
 
     # Find the file which defines the given level if it exists, or a path to
@@ -31,9 +45,12 @@ module Policies
     end
 
     # Return a glob which can be used either to find the specified level file
-    # by name if provided, or all level files if not.
-    def self.level_file_glob(level_name, root_dir = '.')
-      "#{root_dir}/config/levels/**/#{level_name || '*'}.level"
+    # by name if provided, or all level files if not. With a name, the tree is
+    # selected by the name's prefix; without one, `tree` picks which tree's
+    # levels to enumerate.
+    def self.level_file_glob(level_name, root_dir = '.', tree: nil)
+      tree ||= level_name ? tree_for_name(level_name) : :production
+      "#{root_dir}/#{LEVELS_SUBDIR.fetch(tree)}/**/#{level_name || '*'}.level"
     end
   end
 end

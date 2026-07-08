@@ -72,6 +72,7 @@ class ScriptLevel < ApplicationRecord
   validate :anonymous_must_be_assessment
   validate :validate_activity_section_lesson
   validate :validate_activity_section_position
+  validate :ui_test_levels_only_in_ui_test_scripts
 
   # Make sure we never create a level that is not an assessment, but is anonymous,
   # as in that case it wouldn't actually be treated as anonymous
@@ -91,6 +92,30 @@ class ScriptLevel < ApplicationRecord
     if activity_section && !activity_section_position
       errors.add(:script_level, 'activity_section_position is required when activity_section is present')
     end
+  end
+
+  # "UI Test " levels (Level.ui_test_name?) may only be referenced by
+  # ui-test-* units: their definition files live under test/ui/config, which
+  # the production seed never loads, so any other reference would fail that
+  # seed with "No level found". Checked against the serialized level_keys
+  # property because ScriptSeed's import! runs validations before the HABTM
+  # join rows are imported. The levelbuilder attach path (update_levels)
+  # bypasses validations and carries its own check.
+  def ui_test_levels_only_in_ui_test_scripts
+    # check level_keys first: it is in-memory, while ui_test_script? may load
+    # the unit, and this validation runs for every script_level of every seed.
+    offending = (level_keys || []).select {|level_key| Level.ui_test_name?(level_key)}
+    return if offending.empty?
+    return if ui_test_script?
+    errors.add(
+      :script_level,
+      "UI Test levels may only be used in ui-test-* scripts, " \
+      "but \"#{script&.name}\" references: #{offending.join(', ')}"
+    )
+  end
+
+  def ui_test_script?
+    script&.name&.start_with?('ui-test-')
   end
 
   serialized_attrs %w(
@@ -730,6 +755,16 @@ class ScriptLevel < ApplicationRecord
   def update_levels(levels_data)
     levels = levels_data.map do |level_data|
       Level.find(level_data['id'])
+    end
+
+    # This path writes the levels HABTM rows without running model
+    # validations, so enforce the UI Test partition here as well.
+    unless ui_test_script?
+      offending = levels.select(&:ui_test?)
+      if offending.any?
+        raise "UI Test levels may only be used in ui-test-* scripts, " \
+          "but \"#{script&.name}\" references: #{offending.map(&:name).join(', ')}"
+      end
     end
 
     # Unit levels containing anonymous levels must be assessments.
