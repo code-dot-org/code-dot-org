@@ -79,8 +79,8 @@ export const resumeLearnHowToEvaluateTour = () => {
 const useLearnHowToEvaluateTour = (demoSection: Section | null) => {
   const demoType = demoSection?.demoType ?? null;
 
-  const {tour} = useOnboardingTour({
-    getSteps: tour =>
+  const getSteps = useCallback(
+    (tour: Tour) =>
       demoType
         ? createLearnHowToEvaluateHomepageSteps(
             tour,
