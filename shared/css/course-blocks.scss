@@ -91,13 +91,6 @@
 .courseblock-span11 {  width: 860px;  }
 .courseblock-span12 {  width: 940px;  }
 
-/* copied from bootstrap-sass-2.3.2.2/vendor/assets/stylesheets/bootstrap/_mixins.scss:572 */
-[class*="courseblock-span"] {
-  float: left;
-  min-height: 1px;
-  margin-left: 20px;
-}
-
 .courseblock-tall {
   background-color: white;
   height: 300px;

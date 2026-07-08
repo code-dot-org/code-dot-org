@@ -56,14 +56,14 @@ $ai-modal-border-width: 8px;
   }
 
   max-width: initial !important;
-  width: 826px !important;
-  height: 510px;
+  width: 824px !important;
+  height: 508px;
   padding: 0 !important;
   background-color: $ai-block-color !important;
   border: solid 1px $ai-block-border-color;
 
   .headerArea {
-    width: 100%;
+    width: calc(100% - 2 * $ai-modal-border-width);
     height: 50px;
     background-color: $ai-block-color;
     color: white;

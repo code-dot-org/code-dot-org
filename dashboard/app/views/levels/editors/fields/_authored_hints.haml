@@ -11,7 +11,7 @@
         %input.hint_type{type: 'hidden', value: 'general'}
         %input.tts_url{type: 'hidden', value: 'general'}
         .row
-          .col-md-10
+          .span10
             %input.hint_id{type: 'text', placeholder: 'hint_id'}
             %select.hint_class
               %option{value: 'content'} Content Hint
@@ -20,18 +20,18 @@
             %input.hint_path{type: 'text', placeholder: 'hint_path'}
             = select_tag :hint_video, options_for_select(video_key_choices), {include_blank: true, class: 'hint_video'}
         .row
-          .col-md-5
+          .span5
             %textarea.hint_markdown
-          .col-md-5
+          .span5
             .markdown_preview
         .row
-          .col-md-10
+          .span10
             %button.remove_authored_hint{type: 'button'}
-              %i.gylphicon-trash
+              %i.icon-trash
             %button.move_up{type: 'button'}
-              %i.gylphicon-chevron-up
+              %i.icon-chevron-up
             %button.move_down{type: 'button'}
-              %i.gylphicon-chevron-down
+              %i.icon-chevron-down
         %hr
     #all_authored_hints_editor
     %button#add_authored_hint{type: 'button'} Add a Hint

@@ -43,7 +43,6 @@ class ConfirmDeleteButton extends React.Component {
           handleClose={this.handleClose}
           onCancel={this.handleClose}
           onConfirm={this.handleConfirm}
-          style={{width: '560px'}}
           {...otherProps}
         />
         <button

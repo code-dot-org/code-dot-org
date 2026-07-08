@@ -450,6 +450,7 @@ class ShareAllowedDialog extends React.Component {
 const styles = {
   modal: {
     width: 720,
+    marginLeft: -360,
   },
   abuseStyle: {
     border: '1px solid',
@@ -469,8 +470,8 @@ const styles = {
   thumbnail: {
     float: 'left',
     marginRight: 16,
-    width: 127,
-    height: 127,
+    width: 125,
+    height: 125,
     overflow: 'hidden',
     borderRadius: 2,
     border: '1px solid rgb(187,187,187)',

@@ -125,7 +125,6 @@ export function AssignmentVersionSelector({
       </label>
       <select
         id="assignment-version-year"
-        className="form-control"
         value={selectedCourseVersionId}
         onChange={handleNativeDropdownChange}
         onMouseDown={handleMouseDown}

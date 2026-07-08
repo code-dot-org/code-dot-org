@@ -19,10 +19,8 @@ function createOpenInNewTabButton(parentElement, link) {
  */
 function sizeDialogToViewport(scrollableElementSelector) {
   var viewportHeight = $(window).height();
-  var modalContent = $('.auto-resize-scrollable')
-    .filter(':visible')
-    .find('.modal-content');
-  var scrollableElement = modalContent.find(scrollableElementSelector);
+  var modalDialog = $('.auto-resize-scrollable').filter(':visible');
+  var scrollableElement = modalDialog.find(scrollableElementSelector);
 
   if (scrollableElement.is('iframe')) {
     scrollableElement.css('height', '');
@@ -30,12 +28,12 @@ function sizeDialogToViewport(scrollableElementSelector) {
     scrollableElement.css('max-height', '');
   }
 
-  var dialogSize = modalContent.offset().top + modalContent.height();
+  var dialogSize = modalDialog.offset().top + modalDialog.height();
 
   var desiredSize =
     viewportHeight -
-    parseInt(modalContent.css('padding-bottom'), 10) -
-    parseInt(modalContent.css('margin-bottom'), 10);
+    parseInt(modalDialog.css('padding-bottom'), 10) -
+    parseInt(modalDialog.css('margin-bottom'), 10);
 
   var overflow = dialogSize - desiredSize;
   var scrollableElementHeight = scrollableElement.height() - overflow;
@@ -75,20 +73,17 @@ var LegacyDialog = (module.exports = function (options) {
     .attr('data-dismiss', 'modal');
   this.div = $('<div tabindex="-1"/>').addClass('modal');
 
+  if (options.width) {
+    this.div.css({
+      width: `${options.width}px`,
+      marginLeft: `-${options.width / 2}px`,
+    });
+  }
+
   this.div.addClass('dash_modal');
   if (options.id) {
     this.div.attr('id', options.id);
   }
-
-  var modalDialog = $('<div/>').addClass('modal-dialog');
-  var modalContent = $('<div/>').addClass('modal-content');
-
-  if (options.width) {
-    modalDialog.css({
-      width: `${options.width}px`,
-    });
-  }
-
   var modalBody = $('<div/>').addClass('modal-body');
   modalBody.addClass('dash_modal_body');
 
@@ -98,16 +93,14 @@ var LegacyDialog = (module.exports = function (options) {
       modalHeader.append(closeLink);
       createOpenInNewTabButton(modalHeader, options.link);
     }
-    modalContent.append(modalHeader);
+    this.div.append(modalHeader);
   } else if (close) {
     modalBody.append(closeLink);
     createOpenInNewTabButton(modalBody, options.link);
   }
 
   modalBody.append(body);
-  modalContent.append(modalBody);
-  modalDialog.append(modalContent);
-  this.div.append(modalDialog).appendTo($(document.body));
+  this.div.append(modalBody).appendTo($(document.body));
 
   var resizeCallback;
   if (options.autoResizeScrollableElement) {
