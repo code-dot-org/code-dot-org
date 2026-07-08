@@ -61,6 +61,10 @@
       "cache": false,
       "dependsOn": ["^build", "^test:ui"],
       "passThroughEnv": [
+        "APPLITOOLS_API_KEY",
+        "APPLITOOLS_BATCH_ID",
+        "APPLITOOLS_BATCH_NAME",
+        "APPLITOOLS_BRANCH",
         "HOME",
         "PLAYWRIGHT_BROWSERS_PATH",
         "PLAYWRIGHT_PROVIDER",
