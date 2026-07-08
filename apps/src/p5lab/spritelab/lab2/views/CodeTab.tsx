@@ -99,8 +99,9 @@ const CodeTab = forwardRef<CodeTabHandle, CodeTabProps>(
       },
       loadScene: (source: WorkspaceSerialization) => {
         if (workspace.current) {
-          // workspaces.load replaces the workspace contents (loadCode's
-          // loadBlocksToWorkspace merges into them).
+          // Like loadCode this replaces the workspace contents (core
+          // workspaces.load clears before loading), but without the
+          // save/mark-edited side effects — switching scenes isn't an edit.
           Blockly.serialization.workspaces.load(
             source as object,
             workspace.current
