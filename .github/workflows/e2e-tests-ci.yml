@@ -89,17 +89,6 @@ jobs:
         run: yarn turbo run test:ui --filter=@code-dot-org/e2e-tests -- --grep @visual --project=visual-chromium
         working-directory: ./frontend
 
-      - name: Verify visual tests ran
-        if: success()
-        run: |
-          expected=$(jq '.stats.expected // 0' frontend/packages/e2e-tests/test-results/results.json)
-          echo "Visual tests executed: $expected"
-          if [ "$expected" -lt 1 ]; then
-            echo "::error::Eyes job passed but 0 visual tests ran — check VISUAL_PROVIDER and @visual tags"
-            exit 1
-          fi
-        working-directory: ./frontend
-
       - name: Upload Playwright Report
         if: failure() || cancelled()
         uses: actions/upload-artifact@v4

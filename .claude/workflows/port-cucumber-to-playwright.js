@@ -571,10 +571,11 @@ weaken visual checks. Clean up any leftover .visual-baselines/ artifacts.
 After fixing, re-run prove-visual to confirm. Report passed=true only if it exits 0.`,
     {schema: PROVE_VISUAL_SCHEMA, label: 'prove-visual', phase: 'Heal', model: 'sonnet'},
   )
-  if (proveResult && !proveResult.passed) {
+  if (!proveResult) throw new Error('prove-visual agent was skipped — cannot continue without visual stability confirmation')
+  if (!proveResult.passed) {
     log(`prove-visual failed: ${proveResult.failureDetail ?? 'unknown'}`)
   }
-  if (proveResult?.fixesApplied?.length) {
+  if (proveResult.fixesApplied?.length) {
     log(`prove-visual fixes: ${proveResult.fixesApplied.join('; ')}`)
   }
 }

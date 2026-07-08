@@ -64,25 +64,15 @@ export class OneTrustComponent {
     return this.page.locator(`${selector}[class*='optanon-category-']`);
   }
 
-  /**
-   * Wait until the OneTrust SDK script is present so its classification pass
-   * has had a chance to run. A "not categorized" assertion is expect-zero, so
-   * it passes on the first poll; without this wait it would pass before the SDK
-   * has run at all. In "off" mode the SDK never loads, so the timeout is
-   * tolerated.
-   */
+  /** Wait for the OneTrust SDK script tag to appear in the DOM. */
   async waitForSdkSettled(): Promise<void> {
-    await this.page
-      .waitForFunction(
-        () =>
-          document.querySelector(
-            "script[src*='otBannerSdk'], script[src*='otSDKStub']",
-          ) !== null,
-        undefined,
-        {timeout: 5_000},
-      )
-      .catch(() => {
-        /* SDK absent (off mode) — proceed; the assertion still holds. */
-      });
+    await this.page.waitForFunction(
+      () =>
+        document.querySelector(
+          "script[src*='otBannerSdk'], script[src*='otSDKStub']",
+        ) !== null,
+      undefined,
+      {timeout: 15_000},
+    );
   }
 }
