@@ -22,6 +22,17 @@ export interface SerializedAnimationList {
   propsByKey: {[key: string]: SerializedAnimationProps};
 }
 
+// In-memory animation props (JSDoc `AnimationProps`): serialized props plus
+// the loaded image. dataURI is stripped on save.
+export interface RuntimeAnimationProps extends SerializedAnimationProps {
+  dataURI?: string;
+}
+
+export interface RuntimeAnimationList {
+  orderedKeys: string[];
+  propsByKey: {[key: string]: RuntimeAnimationProps};
+}
+
 // One AI-generated (or otherwise tracked) item shown in the Items tab gallery.
 // The image itself lives in the project asset bucket and, once bridged into the
 // animationList, is an ordinary Sprite Lab costume/background.

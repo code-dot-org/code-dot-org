@@ -4,7 +4,7 @@
 // images are preloaded for the runtime — saved project data is untouched, so
 // it covers existing images too.
 
-import {SerializedAnimationList} from './types';
+import {RuntimeAnimationList} from './types';
 
 const BACKGROUNDS_CATEGORY = 'backgrounds';
 
@@ -70,7 +70,7 @@ export function onTrimsUpdated(listener: () => void): () => void {
  * cropped image as a dataURI. Returns the input unchanged when there's
  * nothing to trim (full-bleed content, fully transparent, or load failure).
  */
-export function trimTransparentBorder(source: string): Promise<string> {
+function trimTransparentBorder(source: string): Promise<string> {
   let cached = trimCache.get(source);
   if (!cached) {
     cached = new Promise<string>(resolve => {
@@ -123,9 +123,9 @@ export function trimTransparentBorder(source: string): Promise<string> {
  * border-trimmed. Backgrounds are left alone (they should fill the canvas).
  */
 export async function trimAnimationListImages(
-  list: SerializedAnimationList
-): Promise<SerializedAnimationList> {
-  const propsByKey: SerializedAnimationList['propsByKey'] = {};
+  list: RuntimeAnimationList
+): Promise<RuntimeAnimationList> {
+  const propsByKey: RuntimeAnimationList['propsByKey'] = {};
   let newTrims = false;
   await Promise.all(
     (list.orderedKeys || []).map(async key => {
@@ -136,24 +136,16 @@ export async function trimAnimationListImages(
       const isBackground = (props.categories || []).includes(
         BACKGROUNDS_CATEGORY
       );
-      // dataURI is where the runtime loads from (external projects put their
-      // sourceUrl there).
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const dataURI = (props as any).dataURI;
-      if (isBackground || !dataURI) {
+      if (isBackground || !props.dataURI) {
         propsByKey[key] = props;
         return;
       }
-      const trimmed = await trimTransparentBorder(dataURI);
+      const trimmed = await trimTransparentBorder(props.dataURI);
       if (props.name && trimmedByName.get(props.name) !== trimmed) {
         trimmedByName.set(props.name, trimmed);
         newTrims = true;
       }
-      propsByKey[key] = {
-        ...props,
-        dataURI: trimmed,
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      } as any;
+      propsByKey[key] = {...props, dataURI: trimmed};
     })
   );
   if (newTrims) {
