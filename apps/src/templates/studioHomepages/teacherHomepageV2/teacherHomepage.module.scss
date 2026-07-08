@@ -56,7 +56,6 @@
   flex-direction: column;
   gap: 16px;
   margin: 0;
-  padding: 0;
 }
 
 // SectionCard
@@ -287,7 +286,7 @@
   flex-direction: row;
   background-color: var(--background-neutral-primary);
   gap: 8px;
-  height: 40px;
+  height: 38px;
   padding: 0 12px;
   align-items: center;
   justify-content: space-between;
@@ -366,7 +365,7 @@
   display: flex;
   flex-direction: row;
   gap: 8px;
-  height: 40px;
+  height: 38px;
   padding: 0 12px;
   align-items: center;
   justify-content: space-between;
@@ -395,10 +394,10 @@
 
 .promotion {
   position: relative;
-  width: 322px;
-  max-width: 322px;
-  min-height: 192px;
-  max-height: 842px;
+  width: 280px;
+  max-width: 280px;
+  min-height: 150px;
+  max-height: 800px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -448,12 +447,12 @@
 
 .promotionImage {
   width: 280px;
-  min-height: 180px;
+  min-height: 160px;
   margin-bottom: 20px;
 }
 
 .promotionPartnerLogo {
-  height: 48px;
+  height: 22px;
   max-width: 100%;
   margin-top: 6px;
   margin-bottom: 20px;
@@ -487,8 +486,8 @@
   border: solid 1px var(--borders-neutral-primary);
   background-color: var(--background-neutral-primary);
   border-radius: 4px;
-  width: 322px;
-  max-width: 322px;
+  width: 280px;
+  max-width: 280px;
   padding: 20px;
   display: flex;
   flex-direction: row;

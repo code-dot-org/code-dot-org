@@ -315,7 +315,7 @@ function Certificate(props) {
                     <input
                       id="name"
                       type="text"
-                      className={classNames(style.nameInput, 'form-control')}
+                      className={style.nameInput}
                       placeholder={i18n.yourName()}
                       ref={nameInputRef}
                     />

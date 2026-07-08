@@ -25,7 +25,7 @@ export default class IntegerTextbox extends React.Component {
     }
 
     const style = {
-      width: 87,
+      width: 75,
       paddingLeft: 8,
       margin: '0 5px',
       backgroundColor: backgroundColor || 'white',

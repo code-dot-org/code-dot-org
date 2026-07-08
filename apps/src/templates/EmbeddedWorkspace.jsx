@@ -59,7 +59,7 @@ export default class EmbeddedWorkspace extends React.Component {
   render() {
     const style = {
       maxHeight: this.state.height,
-      marginBottom: 10,
+      paddingBottom: 10,
       overflow: 'hidden',
     };
 

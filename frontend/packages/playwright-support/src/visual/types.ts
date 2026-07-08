@@ -4,6 +4,8 @@ import type {Locator} from 'playwright/test';
 export interface VisualCheckOptions {
   /** Locators whose regions should be masked during comparison. */
   mask?: Locator[];
+  /** Capture the full page (true, default) or just the viewport (false). */
+  fully?: boolean;
 }
 
 /** Provider-agnostic visual checkpoint function exposed by the fixture. */

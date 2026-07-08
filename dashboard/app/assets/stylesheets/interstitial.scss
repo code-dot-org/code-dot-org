@@ -5,14 +5,14 @@
 #school-info-modal,
 #race-modal {
   text-align: left;
-  top: -10px;
+  top: 20px;
 }
 #terms-modal .modal-content,
 #school-info-modal .modal-content,
 #race-modal .modal-content,
 #student-information-modal .modal-content {
   margin: 0 20px;
-  padding: 0 35px;
+  padding: 0 15px;
 }
 #terms-modal .modal-content p,
 #school-info-modal .modal-content p,
@@ -67,10 +67,6 @@
 }
 #terms-modal .terms-text {
   overflow: hidden;
-}
-
-#race-modal .form-group {
-  margin-bottom: 0;
 }
 
 #terms-modal .terms-checkbox {

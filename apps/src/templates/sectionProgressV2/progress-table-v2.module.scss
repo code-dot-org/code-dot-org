@@ -39,7 +39,7 @@
   flex-direction: row;
 }
 
-$level-cell-width: 53;
+$level-cell-width: 52;
 
 .table {
   width: fit-content;
@@ -83,7 +83,7 @@ $level-cell-width: 53;
   font-size: 16px;
 
   &Student {
-    height: 48px;
+    height: 47px;
     line-height: 47px;
     padding-inline-start: 12px;
     padding-inline-end: 0.5em;
@@ -97,15 +97,15 @@ $level-cell-width: 53;
 
   &Lesson {
     text-align: center;
-    min-width: 53px;
-    max-width: 53px;
-    height: 48px;
+    min-width: 52px;
+    max-width: 52px;
+    height: 47px;
     line-height: 47px !important;
   }
 
   &Metadata {
     text-align: center;
-    height: 29px;
+    height: 28px;
     line-height: 28px;
     font-size: 14px;
   }
@@ -116,7 +116,7 @@ $level-cell-width: 53;
 
   &Level {
     width: $level-cell-width + px;
-    height: 48px;
+    height: 47px;
     color: inherit !important;
     padding: 0;
   }
@@ -238,9 +238,9 @@ $level-cell-width: 53;
   &HeaderCell {
     border: 1px solid var(--borders-neutral-strong);
     margin: 0;
-    height: 44px;
+    height: 42px;
     line-height: 42px;
-    min-width: 54px;
+    min-width: 52px;
     margin-bottom: 32px;
     text-align: center;
     background-color: var(--background-neutral-secondary);
@@ -252,9 +252,9 @@ $level-cell-width: 53;
     @include remove-default-button-styles;
     border: 1px solid var(--borders-neutral-strong);
     margin: 0;
-    height: 44px;
+    height: 42px;
     line-height: 42px;
-    min-width: 54px;
+    min-width: 52px;
     margin-bottom: 32px;
     text-align: center;
     background-color: var(--background-neutral-secondary);
@@ -339,14 +339,13 @@ $level-cell-width: 53;
 
       & .expandedHeaderLevelCell:last-child {
         border-right: 1px solid var(--borders-neutral-strong);
-        width: ($level-cell-width + 1) + px;
       }
     }
 
     &LevelCell {
       width: $level-cell-width + px;
       text-align: center;
-      height: 34px;
+      height: 33px;
       line-height: 32px;
       display: flex;
       flex-direction: row;
@@ -392,7 +391,7 @@ $level-cell-width: 53;
 
       &Inner {
         border-left: 1px solid transparent;
-        width: 53px;
+        width: 52px;
       }
 
       & .assessmentLevelIcon {
@@ -402,7 +401,7 @@ $level-cell-width: 53;
 
     &ExpandedLevelCellFirst {
       border-left: 1px solid var(--borders-neutral-strong);
-      width: 53px;
+      width: 52px;
     }
   }
   &Column {
@@ -495,8 +494,8 @@ $level-cell-width: 53;
   font-size: 14px;
   font-weight: 600;
 
-  height: 48px;
-  width: 100%;
+  height: 47px;
+  width: calc(100% - 20px);
   line-height: 47px;
   padding-inline-start: 12px;
   padding-inline-end: 0.5em;

@@ -60,6 +60,7 @@ export default class ThemeDropdown extends React.Component {
       <div style={styles.outerContainer} className="theme-dropdown">
         <div style={styles.description}>{description}</div>
         <Select
+          className="form-control"
           value={selectedValue}
           onChange={this.handleChange}
           options={renderedOptions}

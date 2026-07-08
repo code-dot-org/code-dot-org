@@ -56,7 +56,7 @@
   - height = level.height || '80'
   - placeholder = level.get_property(:placeholder) || I18n.t('free_response.placeholder')
   - readonly = @view_options.readonly_workspace || (!level.allow_multiple_attempts? && last_attempt.present?)
-  %textarea.response.form-control{id: "level_#{level.id}", placeholder: placeholder, style: "height: #{height}px;", readonly: readonly}= last_attempt
+  %textarea.response{id: "level_#{level.id}", placeholder: placeholder, style: "height: #{height}px;", readonly: readonly}= last_attempt
 
   -# Don't render the dialog partial if we're inside a LevelGroup.
   - show_next_page_link = readonly && !level.submittable?

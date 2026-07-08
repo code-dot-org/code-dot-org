@@ -99,7 +99,7 @@ const styles = {
   },
   libraryHeader: {
     display: 'block',
-    width: 271,
+    width: 270,
     borderRight: '1px solid gray',
     float: 'left',
   },

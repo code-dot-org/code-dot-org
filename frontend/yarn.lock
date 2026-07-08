@@ -1893,6 +1893,7 @@ __metadata:
   dependencies:
     "@axe-core/playwright": "npm:^4.10.1"
     "@code-dot-org/lint-config": "workspace:*"
+    "@code-dot-org/playwright-support": "workspace:*"
     "@playwright/test": "catalog:"
     "@types/node": "catalog:"
     eslint: "catalog:"
