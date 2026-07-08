@@ -1,12 +1,8 @@
 /** @file controls below a dialog to delete animations */
+import Modal from '@code-dot-org/component-library/modal';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Dialog, {
-  Buttons,
-  Cancel,
-  Confirm,
-} from '@cdo/apps/legacySharedComponents/Dialog';
 import i18n from '@cdo/locale';
 
 import {P5LabType} from '../constants';
@@ -20,6 +16,9 @@ export default class DeleteAnimationDialog extends React.Component {
   };
 
   render() {
+    if (!this.props.isOpen) {
+      return null;
+    }
     let assetType;
     switch (this.props.labType) {
       case P5LabType.GAMELAB:
@@ -31,19 +30,21 @@ export default class DeleteAnimationDialog extends React.Component {
         break;
     }
     return (
-      <Dialog
-        isOpen={this.props.isOpen}
-        handleClose={this.props.onCancel}
+      <Modal
         title={i18n.deleteAsset({assetType})}
-        body={i18n.deleteAssetConfirm({assetType})}
-      >
-        <Buttons>
-          <Cancel onClick={this.props.onCancel}>{i18n.cancel()}</Cancel>
-          <Confirm onClick={this.props.onDelete} type="danger">
-            {i18n.delete()}
-          </Confirm>
-        </Buttons>
-      </Dialog>
+        description={i18n.deleteAssetConfirm({assetType})}
+        onClose={this.props.onCancel}
+        closeLabel={i18n.cancel()}
+        primaryButtonProps={{
+          children: i18n.delete(),
+          onClick: this.props.onDelete,
+          color: 'error',
+        }}
+        secondaryButtonProps={{
+          children: i18n.cancel(),
+          onClick: this.props.onCancel,
+        }}
+      />
     );
   }
 }
