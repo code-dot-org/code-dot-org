@@ -65,6 +65,7 @@ class Ability
       AidiffArtifact,
       PracticeProblem,
       UserPracticeProblemAttempt,
+      Challenge,
     ]
     cannot :index, Level
 
@@ -335,6 +336,7 @@ class Ability
       can :create, UserPracticeProblemAttempt
       can [:index, :update, :show], UserPracticeProblemAttempt, user_id: user.id
       can [:index, :show], PracticeProblem
+      can [:index, :show], Challenge
 
       can :show, Rubric
     end

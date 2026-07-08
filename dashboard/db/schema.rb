@@ -2247,6 +2247,21 @@ ActiveRecord::Schema[7.0].define(version: 2026_06_26_143947) do
     t.index ["zip"], name: "index_schools_on_zip"
   end
 
+  create_table "scrapbook_entries", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "script_id"
+    t.integer "level_id"
+    t.string "channel_id"
+    t.string "before_asset_url"
+    t.string "after_asset_url"
+    t.text "entry_text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id", "channel_id"], name: "index_scrapbook_entries_on_user_id_and_channel_id", unique: true
+    t.index ["user_id", "script_id", "level_id"], name: "index_scrapbook_entries_on_user_id_and_script_id_and_level_id", unique: true
+    t.index ["user_id"], name: "index_scrapbook_entries_on_user_id"
+  end
+
   create_table "script_levels", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "script_id", null: false
     t.integer "chapter"
@@ -3018,6 +3033,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_06_26_143947) do
   add_foreign_key "school_infos", "schools"
   add_foreign_key "school_stats_by_years", "schools"
   add_foreign_key "schools", "school_districts"
+  add_foreign_key "scrapbook_entries", "users"
   add_foreign_key "scripts", "unit_groups", column: "original_unit_group_id"
   add_foreign_key "section_instructors", "users", column: "instructor_id"
   add_foreign_key "section_instructors", "users", column: "invited_by_id"
