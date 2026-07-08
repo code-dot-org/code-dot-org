@@ -157,13 +157,14 @@ export function shouldRerunOutputImageGate(result: EvalResult): boolean {
   if (
     !result.imageDataUrl ||
     result.moderationStatus !== 'safe' ||
-    result.outputImageSafetyStatus
+    ['safe', 'flagged'].includes(result.outputImageSafetyStatus ?? '')
   ) {
     return false;
   }
   return (
     result.outcome === EvalOutcome.PASSED ||
-    result.stoppedAtGate === EvalGate.OUTPUT_TEXT
+    result.stoppedAtGate === EvalGate.OUTPUT_TEXT ||
+    result.stoppedAtGate === EvalGate.OUTPUT_IMAGE
   );
 }
 
@@ -275,7 +276,21 @@ export async function evaluatePrompt(
 
     // Gate 4: output image safety.
     currentGate = EvalGate.OUTPUT_IMAGE;
-    if (!(await throttled(() => isImageSafe(imageFile)))) {
+    let imageSafe: boolean;
+    try {
+      imageSafe = await throttled(() => isImageSafe(imageFile));
+    } catch (error) {
+      return finish({
+        outcome: EvalOutcome.ERROR,
+        stoppedAtGate: currentGate,
+        imageDataUrl,
+        moderationStatus: 'safe',
+        moderationCategories: moderation.categories,
+        outputImageSafetyStatus: 'error',
+        detail: error instanceof Error ? error.message : String(error),
+      });
+    }
+    if (!imageSafe) {
       return finish({
         outcome: EvalOutcome.BLOCKED,
         stoppedAtGate: currentGate,
