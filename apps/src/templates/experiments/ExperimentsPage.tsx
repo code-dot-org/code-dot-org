@@ -1,7 +1,7 @@
-import {Typography, Button as MuiButton} from '@mui/material';
+import {Typography, Button as MuiButton, ButtonProps} from '@mui/material';
 import React, {useCallback, useState} from 'react';
 
-import experiments from '@cdo/apps/util/experiments';
+import experiments, {StoredExperiment} from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import styles from './experimentsPage.module.scss';
@@ -11,11 +11,6 @@ export interface ServerExperiment {
   displayName: string | null;
   endAt: string | null;
   canLeave: boolean;
-}
-
-interface BrowserExperiment {
-  key: string;
-  expiration?: number;
 }
 
 interface ExperimentsPageProps {
@@ -29,13 +24,17 @@ const formatDate = (timestamp: string | number) =>
     day: 'numeric',
   });
 
+const ActionButton: React.FC<ButtonProps> = props => (
+  <MuiButton variant="outlined" color="secondary" size="small" {...props} />
+);
+
 const ExperimentsPage: React.FC<ExperimentsPageProps> = ({
   serverExperiments,
 }) => {
   const [accountExperiments, setAccountExperiments] =
     useState(serverExperiments);
   const [browserExperiments, setBrowserExperiments] = useState<
-    BrowserExperiment[]
+    StoredExperiment[]
   >(() => experiments.getLocalStorageExperimentDetails());
   const [leaving, setLeaving] = useState<string[]>([]);
 
@@ -97,15 +96,12 @@ const ExperimentsPage: React.FC<ExperimentsPageProps> = ({
                   </td>
                   <td className={styles.actionCell}>
                     {experiment.canLeave && (
-                      <MuiButton
-                        variant="outlined"
-                        color="secondary"
-                        size="small"
+                      <ActionButton
                         disabled={leaving.includes(experiment.name)}
                         onClick={() => leaveAccountExperiment(experiment.name)}
                       >
                         Leave
-                      </MuiButton>
+                      </ActionButton>
                     )}
                   </td>
                 </tr>
@@ -145,14 +141,11 @@ const ExperimentsPage: React.FC<ExperimentsPageProps> = ({
                       : '—'}
                   </td>
                   <td className={styles.actionCell}>
-                    <MuiButton
-                      variant="outlined"
-                      color="secondary"
-                      size="small"
+                    <ActionButton
                       onClick={() => disableBrowserExperiment(experiment.key)}
                     >
                       Disable
-                    </MuiButton>
+                    </ActionButton>
                   </td>
                 </tr>
               ))}
