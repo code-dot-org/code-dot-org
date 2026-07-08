@@ -34,10 +34,6 @@ test.describe('OneTrust integration', () => {
       await expect(oneTrust.banner).toBeVisible({
         timeout: OT_BANNER_TIMEOUT_MS,
       });
-      await page.addStyleTag({
-        content:
-          '#onetrust-banner-sdk { box-shadow: inset 0 0 0 2px #ff00ff !important; }',
-      });
       await waitForVisualStability(page, oneTrust.banner);
       await visualCheck('onetrust-pop-up-code-org', {fully: false});
     },
