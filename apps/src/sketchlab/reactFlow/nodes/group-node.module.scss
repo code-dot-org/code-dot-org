@@ -2,3 +2,18 @@
   width: 100%;
   height: 100%;
 }
+
+// Hover: dashed ring offset outside the group boundary so it floats with
+// breathing room, not flush against the content.
+:global(.react-flow__node-group:hover) .groupNode {
+  outline: 2px dashed var(--borders-neutral-strong);
+  outline-offset: 4px;
+}
+
+// Selected or keyboard-focused: solid teal ring, same spacing as hover.
+// Declared after hover so it wins when both apply.
+:global(.react-flow__node-group.selected) .groupNode,
+:global(.react-flow__node-group:focus-visible) .groupNode {
+  outline: 2px solid var(--borders-brand-teal-primary);
+  outline-offset: 4px;
+}

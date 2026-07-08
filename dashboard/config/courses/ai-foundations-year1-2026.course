@@ -29,7 +29,7 @@
         "link": "",
         "type": "information",
         "visibility": "Teacher-only",
-        "dismissible": true,
+        "dismissible": false,
         "buttonText": ""
       }
     ],

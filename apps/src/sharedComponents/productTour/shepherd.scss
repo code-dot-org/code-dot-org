@@ -287,7 +287,6 @@ div .quiz-option-correct {
 
 .quiz-feedback {
   margin-top: 12px;
-  min-height: 18px;
   font-family: var(--font-family-main);
   font-size: 14px;
   font-weight: 600;
@@ -308,7 +307,7 @@ div .quiz-option-correct {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
-    padding: 24px;
+    padding: 12px 14px 14px 14px;
     gap: 8px;
   }
 
@@ -326,6 +325,7 @@ div .quiz-option-correct {
   .shepherd-header {
     order: 2;
     flex-shrink: 0;
+    padding: 0 !important;
   }
 
   &.shepherd-has-title .shepherd-content .shepherd-header {

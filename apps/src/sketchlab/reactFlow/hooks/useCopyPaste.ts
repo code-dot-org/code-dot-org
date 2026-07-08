@@ -1,25 +1,30 @@
 import {useReactFlow} from '@xyflow/react';
-import React, {useCallback, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import type {
   SketchlabReactFlowEdge,
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
 import {
   DEFAULT_NODE_HEIGHT,
   DEFAULT_NODE_WIDTH,
   DEFAULT_PASTE_OFFSET_PX,
+  INTERNAL_CLIPBOARD_MARKER,
+  INTERNAL_CLIPBOARD_MIME,
 } from '../constants';
 import type {ClipboardContents} from '../context';
 import type {TabOrderEntry} from '../utils/computeTabOrder';
+import {isTargetEditable} from '../utils/isTargetEditable';
 import {
   anchorHandleFlowPosition,
   createLineAnchorAtHandle,
   getHandleFlowPosition,
   lineAnchorHandleId,
 } from '../utils/lineAnchors';
+import {uploadImageAsset} from '../utils/uploadImageAsset';
 
 interface UseCopyPasteOptions {
   nodes: SketchlabReactFlowNode[];
@@ -31,6 +36,10 @@ interface UseCopyPasteOptions {
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
   pushSnapshot: () => void;
+  canvasContainerRef: React.RefObject<HTMLDivElement>;
+  readOnly: boolean;
+  levelName: string;
+  onImageUploadError: () => void;
 }
 
 // Returns the handle-to-handle horizontal span of a line clipboard's anchor
@@ -53,11 +62,16 @@ export function useCopyPaste({
   setNodes,
   setEdges,
   pushSnapshot,
+  canvasContainerRef,
+  readOnly,
+  levelName,
+  onImageUploadError,
 }: UseCopyPasteOptions) {
   const {deleteElements, screenToFlowPosition} = useReactFlow<
     SketchlabReactFlowNode,
     SketchlabReactFlowEdge
   >();
+  const channelId = useAppSelector(state => state.lab.channel?.id) ?? '';
 
   // Keyboard clipboard. useRef holds data (no re-renders); useState tracks
   // whether anything is available so dependent UI can update.
@@ -72,10 +86,65 @@ export function useCopyPaste({
   const lastDuplicateRef = useRef<ClipboardContents | null>(null);
   const lastDuplicateIdRef = useRef<string | null>(null);
 
+  // Set by an in-app copy/cut so the next native copy/cut event stamps our
+  // marker onto the system clipboard.
+  const pendingMarkerStampRef = useRef(false);
+
   const writeClipboard = useCallback((contents: ClipboardContents) => {
     clipboardRef.current = contents;
     setHasClipboard(true);
+    // Flag the imminent native copy/cut event to stamp our marker onto the
+    // system clipboard.
+    pendingMarkerStampRef.current = true;
   }, []);
+
+  // Stamp our marker onto the system clipboard via a custom MIME type on the
+  // native copy/cut event that follows an in-app copy/cut. Its presence lets the
+  // paste handler know the in-app copy is the most recent clipboard action; an
+  // external copy replaces the whole clipboard, dropping the marker, which
+  // restores paste. The custom type keeps the marker out of text/plain so it
+  // never appears when pasting into another app.
+  useEffect(() => {
+    const stampMarker = (event: ClipboardEvent) => {
+      if (!pendingMarkerStampRef.current) return;
+      pendingMarkerStampRef.current = false;
+      const clipboardData = event.clipboardData;
+      if (!clipboardData) return;
+      clipboardData.setData(INTERNAL_CLIPBOARD_MIME, INTERNAL_CLIPBOARD_MARKER);
+      event.preventDefault();
+    };
+    document.addEventListener('copy', stampMarker);
+    document.addEventListener('cut', stampMarker);
+    return () => {
+      document.removeEventListener('copy', stampMarker);
+      document.removeEventListener('cut', stampMarker);
+    };
+  }, []);
+
+  // Drop a clipboard-pasted image onto the canvas as an ImageNode. Positioned
+  // top-left at the cursor when it's over the canvas, else centered in the viewport.
+  const pasteImage = useCallback(
+    (src: string) => {
+      const mousePos = mousePositionRef.current;
+      const position =
+        mousePos ??
+        screenToFlowPosition({
+          x: window.innerWidth / 2 - DEFAULT_NODE_WIDTH / 2,
+          y: window.innerHeight / 2 - DEFAULT_NODE_HEIGHT / 2,
+        });
+      const newImageNode = {
+        id: createUuid(),
+        type: 'image',
+        data: {src, altText: ''},
+        position,
+        width: DEFAULT_NODE_WIDTH,
+        height: DEFAULT_NODE_HEIGHT,
+      } as SketchlabReactFlowNode;
+      pushSnapshot();
+      setNodes(currentNodes => [...currentNodes, newImageNode]);
+    },
+    [screenToFlowPosition, pushSnapshot, setNodes]
+  );
 
   const buildNodeClipboard = useCallback(
     (nodeId: string): ClipboardContents | null => {
@@ -339,12 +408,65 @@ export function useCopyPaste({
     mousePositionRef.current = null;
   }, []);
 
+  // Native paste while the canvas is focused, with the following precedence:
+  // 1. If we are over an editable element use native paste (allowing copy/paste of text).
+  // 2. If the last clipboard action was an in-app copy, paste the copied element.
+  // 3. If there is a clipboard image, paste it as an ImageNode.
+  // 4. Otherwise, fall back to internal element paste.
+  useEffect(() => {
+    const handlePaste = async (event: ClipboardEvent) => {
+      if (readOnly) return;
+      const container = canvasContainerRef.current;
+      if (!container || !container.contains(document.activeElement)) return;
+      const target = event.target as HTMLElement | null;
+      if (target && isTargetEditable(target)) return;
+
+      event.preventDefault();
+      const internalCopyIsLatest =
+        event.clipboardData?.getData(INTERNAL_CLIPBOARD_MIME) ===
+        INTERNAL_CLIPBOARD_MARKER;
+      const items = event.clipboardData?.items;
+      const imageItem =
+        !internalCopyIsLatest && items
+          ? Array.from(items).find(item => item.type.startsWith('image/'))
+          : undefined;
+
+      if (!imageItem) {
+        paste();
+        return;
+      }
+
+      const file = imageItem.getAsFile();
+      if (!file) return;
+      try {
+        const uploadUrl = await uploadImageAsset(file, {levelName, channelId});
+        if (!uploadUrl) {
+          onImageUploadError();
+          return;
+        }
+        pasteImage(uploadUrl);
+      } catch (error) {
+        console.error('Failed to upload pasted image:', error);
+        onImageUploadError();
+      }
+    };
+    document.addEventListener('paste', handlePaste);
+    return () => document.removeEventListener('paste', handlePaste);
+  }, [
+    canvasContainerRef,
+    readOnly,
+    levelName,
+    channelId,
+    paste,
+    pasteImage,
+    onImageUploadError,
+  ]);
+
   return {
     duplicateNode,
     duplicateLine,
     copyEntry,
     cutEntry,
-    paste,
     hasClipboard,
     handleMouseMove,
     handleMouseLeave,
