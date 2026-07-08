@@ -137,6 +137,5 @@ const styles = {
     paddingBottom: 20,
     width: 970,
     ...fontConstants['main-font-regular'],
-    marginLeft: -500,
   },
 };

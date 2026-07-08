@@ -272,9 +272,7 @@ class LevelDetailsDialog extends Component {
     const hasVideo =
       level.type === 'StandaloneVideo' ||
       (level.type === 'External' && !!level.videoOptions);
-    const levelSpecificStyling = hasVideo
-      ? {width: VIDEO_MODAL_WIDTH, marginLeft: -VIDEO_MODAL_WIDTH / 2}
-      : {};
+    const levelSpecificStyling = hasVideo ? {width: VIDEO_MODAL_WIDTH} : {};
     const baseUrl = level.url || scriptLevel.url;
     const url = `${baseUrl}?no_redirect=1`;
     return (

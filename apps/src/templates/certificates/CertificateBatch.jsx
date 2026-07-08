@@ -1,4 +1,5 @@
 import {Typography} from '@mui/material';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
@@ -112,7 +113,6 @@ export default function CertificateBatch({
             />
           </span>
 
-          <br />
           <form
             action="/print_certificates/batch"
             method="post"
@@ -125,16 +125,14 @@ export default function CertificateBatch({
               name="studentNames"
               rows="8"
               placeholder="John Smith"
-              className={style.textarea}
+              className={classNames(style.textarea, 'form-control')}
               value={studentNames}
               onChange={onChange}
               aria-label={i18n.studentNames()}
             />
-            <br />
             <button type="submit" className={style.submit} id="submit-button">
               {i18n.generateCertificates()}
             </button>
-            <br />
             <hr />
             {i18n.wantBlankCertificateTemplate()}{' '}
             <a href={imageUrl}>{i18n.printOneCertificateHere()}</a>

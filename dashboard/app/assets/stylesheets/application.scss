@@ -36,10 +36,12 @@
 @import "style-constants";
 
 // Bootstrap Variables
-$baseFontFamily: $main-font;
-$headingsFontWeight: $regular-font-weight;
-$btnPrimaryBackground: $orange;
-$btnPrimaryBackgroundHighlight: $orange;
+$font-family-base: $main-font;
+$headings-font-weight: $regular-font-weight;
+$btn-primary-bg: $orange;
+$btn-primary-background-highlight: $orange;
+$code-bg: #f7f7f9;
+$blue: #049cdb;
 
 $selectUserTypeButtonBorderColor: #ccc;
 $selectUserTypeButtonBackgroundColor: #fff;
@@ -52,6 +54,13 @@ $selectUserTypeButtonTextColorSelected: #fff;
 $contrastTealHeader: #00818f;
 
 @import "bootstrap";
+@import "bootstrap/v2-to-v3";
+
+label, input, button, select, textarea {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+}
 
 p,pre,span {
   @include selectable;
@@ -59,7 +68,6 @@ p,pre,span {
 
 body {
   -webkit-tap-highlight-color: transparent;
-  padding: 0;
   font-style: normal;
 }
 
@@ -239,7 +247,7 @@ img.video_thumbnail {
     }
 
     .header_logo {
-      width: 38px;
+      width: 66px;
       padding: 6px 14px;
       margin-top: 0;
     }
@@ -590,6 +598,7 @@ $footer_padding-top: 20px;
 $footer_fullheight: $footer_min_height + $footer_padding-top;
 html, body {
   height: 100%;
+  font-size: 100%;
 }
 .wrapper {
   min-height: 100%;
@@ -652,7 +661,7 @@ html, body {
 
   .container {
     .row {
-      [class*="span"] {
+      [class*="col-md"] {
         html[dir=rtl] & {
           float: right;
           margin-right: 20px;
@@ -1061,9 +1070,6 @@ $default-modal-width: 640px;
     position: absolute;
     top: 50px; // top of the dialog
 
-    width: $default-modal-width;
-    margin-left: -($default-modal-width * 0.5 + 1);
-
     // margin-bottom is reused in JavaScript to determine
     // how close to get to the bottom of the viewport.
     margin-bottom: 25px;
@@ -1074,11 +1080,6 @@ $default-modal-width: 640px;
 
 .modal-body {
   max-height: none;
-}
-
-.dash_modal {
-  width: $default-modal-width;
-  margin-left: -($default-modal-width * 0.5 + 1);
 }
 
 .dash_modal_body {
@@ -1182,8 +1183,8 @@ $default-modal-width: 640px;
   margin-top: -24px;
   padding-top: 14px;
   min-width: 0;
-  max-width: 55px;
-  width: 55px;
+  max-width: 66px;
+  width: 66px;
 
   a:hover {
     background-color: transparent;
@@ -1739,8 +1740,8 @@ html[dir=rtl] .qtip-content {
 a.download-video {
   z-index: 1;
   cursor: pointer;
-  width: 40px;
-  height: 34px;
+  width: 44px;
+  height: 38px;
   font-size: 28px;
   background-color: $neutral_white;
   color: $neutral_dark;
@@ -1886,7 +1887,6 @@ a.download-video {
 // must not inherit the legacy form/button styling.
 .signin-legacy,
 #change-password {
-  $field-width: 310px;
   $button-width: 324px;
 
   min-width: 450px;
@@ -1905,8 +1905,8 @@ a.download-video {
     justify-content: space-between;
 
     input[type=text], input[type=password] {
-      width: $field-width;
-      height: 40px;
+      width: $button-width;
+      height: 42px;
       padding: 0 6px;
     }
     input {
@@ -2223,7 +2223,7 @@ a.download-video {
       display: flex;
       margin-bottom: 20px;
 
-      [class*=span] {
+      [class*="col-md"] {
         align-self: center;
         display: flex;
         .div {
@@ -2558,6 +2558,7 @@ a.download-video {
     border-style: solid;
     border-color: transparent;
     border-width: 6px;
+    box-sizing: content-box;
   }
   .match_questions {
     list-style-type: none;
@@ -2636,7 +2637,7 @@ a.download-video {
     }
   }
   .match_correctmarkscolumn {
-    width: 20px;
+    width: 40px;
     padding-right: 20px;
   }
   .match_correctmarks {
@@ -2773,6 +2774,8 @@ a.download-video {
 
 .container {
   width: $content-width;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .container,
@@ -3179,96 +3182,104 @@ $modal-image-width: 100px;
 $modal-image-margin-gap: 10px;
 $modal-no-icon-gap: 22px;
 
-.modal-content {
-  margin-left: $modal-image-width + $modal-image-margin-gap;
-  html[dir=rtl] & {
-    margin-left: 0;
-    margin-right: $modal-image-width + $modal-image-margin-gap;
-  }
-  &.no-modal-icon {
-    margin-left: $modal-no-icon-gap;
-  }
+.modal-body {
+  .modal-content {
+    margin-left: $modal-image-width + $modal-image-margin-gap;
+    html[dir=rtl] & {
+      margin-left: 0;
+      margin-right: $modal-image-width + $modal-image-margin-gap;
+    }
+    &.no-modal-icon {
+      margin-left: $modal-no-icon-gap;
+    }
 
-  p, pre {
-    line-height: 27px;
-    font-size: 24px;
-    color: $neutral_dark;
-  }
+    p, pre {
+      line-height: 27px;
+      font-size: 24px;
+      color: $neutral_dark;
+    }
 
-  pre {
-    color: $purple;
-  }
-
-  .congrats {
-    @include main-font-semi-bold;
-    font-size: 21px;
-    line-height: 27px;
-  }
-
-  .instructions2 {
-    font-size: 18px;
-    color: $charcoal;
-  }
-
-  .aniGif {
-    display: block;
-    margin: 0 auto 6px auto;
-    position: relative;
-    z-index: -1;
-  }
-
-  .feedback-image {
-    width: 180px;
-    height: auto;
-    margin: 0 15px 0 0;
-    float: left;
-    border: $light_gray;
-    border-style: solid;
-  }
-
-  .feedback-links {
-    margin-top: 15px;
-  }
-
-  .feedback-callout {
-    border: solid;
-    border-radius: 10px;
-    border-color: $red;
-
-    p {
-      margin: 15px;
-      color: $red;
-      padding-right: 20%;
+    pre {
+      color: $purple;
     }
 
     .congrats {
-      font-size: 24px;
+      @include main-font-semi-bold;
+      font-size: 21px;
       line-height: 27px;
     }
 
-    .hint-header {
-      @include main-font-bold;
+    .instructions-markdown p {
+      line-height: 25px;
+      font-size: 16px;
+      color: $neutral_dark;
     }
 
-    .hint-image {
-      float: right;
-      width: 20%;
+    .instructions2 {
+      font-size: 18px;
+      color: $charcoal;
     }
-  }
 
-  .lines-of-code-message {
-    font-size: 20px;
-    line-height: normal;
-    margin: 0 0 8px 0;
-  }
+    .aniGif {
+      display: block;
+      margin: 0 auto 6px auto;
+      position: relative;
+      z-index: -1;
+    }
 
-  .instructions-container {
-    .authored-hints {
-      p, pre {
-        font-size: 18px;
-        line-height: normal;
-        color: $charcoal;
-        margin: 0;
+    .feedback-image {
+      width: 180px;
+      height: auto;
+      margin: 0 15px 0 0;
+      float: left;
+      border: $light_gray;
+      border-style: solid;
+    }
+
+    .feedback-links {
+      margin-top: 15px;
+    }
+
+    .feedback-callout {
+      border: solid;
+      border-radius: 10px;
+      border-color: $red;
+
+      p {
+        margin: 15px;
+        color: $red;
+        padding-right: 20%;
+      }
+
+      .congrats {
+        font-size: 24px;
+        line-height: 27px;
+      }
+
+      .hint-header {
+        @include main-font-bold;
+      }
+
+      .hint-image {
+        float: right;
+        width: 20%;
+      }
+    }
+
+    .lines-of-code-message {
+      font-size: 20px;
+      line-height: normal;
+      margin: 0 0 8px 0;
+    }
+
+    .instructions-container {
+      .authored-hints {
+        p, pre {
+          font-size: 18px;
+          line-height: normal;
+          color: $charcoal;
+          margin: 0;
+        }
       }
     }
   }
@@ -3329,9 +3340,6 @@ h5.dialog-title {
 .modal-content.markdown-instructions-container {
   margin-left: $modal-no-icon-gap;
   margin-right: $modal-no-icon-gap;
-  /*margin-top: 10px;*/
-  margin-bottom: 15px;
-  float: left;
   padding: 0 0 15px 0;
   background-color: $white;
   $outside-margin-side: 15px;
@@ -3631,7 +3639,7 @@ html[data-brand="codeai"], html[data-brand="codeai-next"] {
   color: $white;
   background-color: var(--background-brand-purple-primary);
   padding: 3px;
-  z-index: 100;
+  z-index: 1010; // must be greater than bootstrap's .navbar-static-top (1000)
   cursor: pointer;
   box-shadow: 0 0 7px 2px $shadow;
 }
@@ -4299,7 +4307,7 @@ a {
       display: flex;
       margin-bottom: 20px;
 
-      [class*=span] {
+      [class*="col-md"] {
         align-self: center;
         display: flex;
         .div {
