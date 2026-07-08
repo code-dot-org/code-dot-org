@@ -94,12 +94,6 @@ class Blockly < Level
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
     level_properties = super
     level_properties[:sharedBlocks] = localized_blockly_level_options(script)["sharedBlocks"]
-    # The Blockly toolbox (XML), so Lab2 Blockly labs can render the level's
-    # categories/blocks. Falls back to the level type's default_toolbox_blocks.
-    level_properties[:toolbox] = localized_blockly_level_options(script)["toolbox"]
-    # Helper libraries (e.g. NativeSpriteLab, zGameDev) the lab's interpreter
-    # prepends to user code.
-    level_properties[:helperLibraries] = localized_blockly_level_options(script)["helperLibraries"]
     level_properties[:levelData] = localized_blockly_level_options_for_lab2(script)["levelData"]
     level_properties
   end

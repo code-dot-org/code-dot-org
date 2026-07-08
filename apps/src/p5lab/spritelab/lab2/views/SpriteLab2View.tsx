@@ -734,7 +734,7 @@ const SpriteLab2View: React.FunctionComponent<{
             ref={codeTabRef}
             initialSource={initialWorkspaceSource}
             toolboxDefinition={levelProperties.toolboxDefinition}
-            toolboxXml={levelProperties.toolbox}
+            toolboxXml={levelProperties.toolboxBlocks}
             sharedBlocks={levelProperties.sharedBlocks}
             theme={theme === 'Dark' ? 'Dark' : 'Light'}
             onSourceChange={handleSourceChange}

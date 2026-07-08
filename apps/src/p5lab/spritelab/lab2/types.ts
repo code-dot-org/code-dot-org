@@ -71,8 +71,7 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   guideMode?: 'instructions' | 'aiCodeGenerate';
   aiCodeGenerateAdlib?: string;
   aiCodeGenerateText?: boolean;
-  // The Sprite Lab Blockly toolbox as an XML string (delivered by
-  // Blockly#summarize_for_lab2_properties). Sprite Lab uses XML toolboxes
-  // rather than the JSON toolboxDefinition that other Lab2 Blockly labs use.
-  toolbox?: string;
+  // XML string representation of toolbox blocks.
+  // TODO: deprecate in favor of the JSON toolbox definition.
+  toolboxBlocks?: string;
 }
