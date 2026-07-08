@@ -6,12 +6,14 @@ import {fixtureFactory} from '@code-dot-org/core/api/mocks';
 // validated through the real schema so a fixture can't drift from the contract
 // the API client parses. Lab-specific fields (mode, videoKey, levelData) ride
 // along as overrides — the base schema strips them on parse, wire() keeps them.
+// Mirrors the real /s/:script/lessons/:pos/level_properties payload: the live
+// serializer omits parentLevelLink and exemplarSources, so the fixtures do too
+// (both are optional in the schema). Keeping the fixture faithful means the MSW
+// path and the real-backend path exercise the same shape.
 const baseDefaults = {
   id: 0,
   name: 'stub',
   helpVideos: [],
-  parentLevelLink: null,
-  exemplarSources: null,
   offerBrowserTts: true,
   showExemplarLink: false,
   isAssessment: false,

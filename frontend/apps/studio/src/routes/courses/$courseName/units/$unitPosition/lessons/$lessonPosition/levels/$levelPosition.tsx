@@ -53,18 +53,14 @@ export const Route = createFileRoute(
         }),
     });
 
-    const lesson = structure.lessons.find(l => l.position === lessonPosition);
-    const structureLevel = lesson?.levels.find(
-      l => l.position === levelPosition,
-    );
-    if (!lesson || !structureLevel) {
+    const scriptName = structure.lessons.find(
+      l => l.position === lessonPosition,
+    )?.script_name;
+    if (!scriptName) {
       throw notFound();
     }
-    const scriptName = lesson.script_name;
-    const levelId = parseInt(structureLevel.activeId, 10);
 
-    // Keyed by lesson (levelId omitted) so every level in the lesson shares one
-    // cached fetch; the /s/:scriptName/lessons/:pos endpoint ignores levelId.
+    // Keyed by lesson so every level in the lesson shares one cached fetch.
     const levelPropertiesMap = await queryClient.ensureQueryData({
       queryKey: levelsKeys.properties(
         undefined,
@@ -74,7 +70,6 @@ export const Route = createFileRoute(
       ),
       queryFn: () =>
         DashboardApiClient.levels.getLevelProperties({
-          levelId,
           scriptName,
           lessonPosition,
         }),
