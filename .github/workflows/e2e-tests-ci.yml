@@ -43,7 +43,7 @@ jobs:
           HOME: /root
           # Explicit target: the deployed test env. Repoint at a PR adhoc to gate PR code.
           TARGET_URL: https://test-studio.code.org
-        run: yarn workspace @code-dot-org/e2e-tests test:ui
+        run: yarn turbo run test:ui --filter=@code-dot-org/e2e-tests
         working-directory: ./frontend
 
       - name: Upload Playwright Report
