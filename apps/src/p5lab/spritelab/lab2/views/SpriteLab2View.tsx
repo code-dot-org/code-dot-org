@@ -25,10 +25,10 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
+import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {
   compileWorkspaceSource,
   refreshAnimationDropdownThumbnails,
-  setExternalSceneRefreshHandler,
 } from '../blockly/setup';
 import defaultSources from '../defaultSources.json';
 import {SCENES_UI_VARIANT} from '../experiments';

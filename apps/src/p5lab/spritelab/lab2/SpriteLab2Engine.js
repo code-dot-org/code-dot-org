@@ -6,7 +6,7 @@ import {getStore} from '@cdo/apps/redux';
 
 import SpriteLab from '../SpriteLab';
 
-import {SPRITELAB2_EXTRA_SHARED_BLOCKS} from './blockly/setup';
+import {SPRITELAB2_EXTRA_SHARED_BLOCKS} from './blockly/extraSharedBlocks';
 import {trimAnimationListImages} from './imageTrim';
 
 const NOOP = () => {};
