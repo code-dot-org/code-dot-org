@@ -895,7 +895,7 @@ class Level < ApplicationRecord
   # from before the migration still lives on the contained level, so include
   # the level itself first, then the contained level as a fallback.
   def levels_for_progress(student = nil, script = nil)
-    return [self, *contained_levels] if predict_level? && !contained_levels.empty?
+    return [self,  contained_levels.first] if predict_level? && !contained_levels.empty?
     [get_level_for_progress(student, script)]
   end
 
