@@ -27,16 +27,16 @@ In the *Tap for More* project, students design an interactive explore-style app 
 
 The project extends over multiple class periods following introductory lessons on `async/await`, error handling, and working with JSON data from APIs.
 
----
+
 
 ## What success looks like
 
-> #### **By the end, students will:**
-> - #### Fetch and display live data from an external API
-> - #### Build an explore-style interface with a “Tap for More” detail view
-> - #### Communicate system status using loading indicators, empty states, and error messages
-> - #### Design defensively to keep apps usable when data is delayed, incomplete, or unavailable
-> - #### Reflect on the reliability, ownership, and risks of relying on external data sources
+>  **By the end, students will:**
+> - Fetch and display live data from an external API
+> - Build an explore-style interface with a “Tap for More” detail view
+> - Communicate system status using loading indicators, empty states, and error messages
+> - Design defensively to keep apps usable when data is delayed, incomplete, or unavailable
+> - Reflect on the reliability, ownership, and risks of relying on external data sources
 
 ---
 
