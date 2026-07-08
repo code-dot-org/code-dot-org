@@ -29,7 +29,9 @@ import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClien
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import ReactFlowCanvas from './components/ReactFlowCanvas';
+import ReactFlowCanvas, {
+  SketchLabCanvasHandle,
+} from './components/ReactFlowCanvas';
 import {ImageNodeData, ReactFlowSketchLabSources} from './types';
 import {
   convertExcalidrawToReactFlow,
@@ -78,9 +80,9 @@ function ReactFlowSketchLabViewInner({
 
   const reactFlow = useReactFlow();
   const dialogControl = useDialogControl();
-  // Set by the canvas so the Backpack import handler can add an image node
-  // while reusing the canvas's placement, undo, and focus behavior.
-  const addImageNodeRef = useRef<(data: ImageNodeData) => void>(() => {});
+  // Drives the canvas imperatively so the Backpack import handler can add an
+  // image node while reusing the canvas's placement, undo, and focus behavior.
+  const canvasRef = useRef<SketchLabCanvasHandle>(null);
   const currentUserId = useAppSelector(state => state.currentUser.userId);
   const channelId = useAppSelector(state => state.lab.channel?.id) ?? '';
   // The Backpack API redirects to sign-in for signed-out users, so we only
@@ -195,7 +197,8 @@ function ReactFlowSketchLabViewInner({
       addFileHandler: makeBackpackImageImportHandler({
         levelName: levelProperties.name,
         channelId,
-        addImageNode: (data: ImageNodeData) => addImageNodeRef.current(data),
+        addImageNode: (data: ImageNodeData) =>
+          canvasRef.current?.addImageNode(data),
       }),
     }),
     [reactFlow, backpackContext, dialogControl, channelId, levelProperties.name]
@@ -333,7 +336,7 @@ function ReactFlowSketchLabViewInner({
               initialViewport={initialViewport}
               colorMode={colorMode}
               readOnly={readonlyWorkspace}
-              addImageNodeRef={addImageNodeRef}
+              ref={canvasRef}
             />
             {WorkspaceAlert}
           </PanelContainer>
