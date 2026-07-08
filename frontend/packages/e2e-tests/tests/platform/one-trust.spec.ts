@@ -172,6 +172,8 @@ test.describe('OneTrust integration', () => {
    * Source: dashboard/test/ui/features/platform/one_trust.feature
    * "Embedded projects do not display the OneTrust banner" (@as_student)
    */
+  const LAB2_PROJECTS = new Set(['music', 'weblab2', 'pythonlab']);
+
   for (const projectType of [
     'music',
     'spritelab',
@@ -185,7 +187,13 @@ test.describe('OneTrust integration', () => {
   ]) {
     test(`Embedded projects do not display the OneTrust banner — ${projectType}`, async ({
       page,
+      browserName,
     }) => {
+      // WebKit/Safari crashes on Ubuntu 20.04 in lab2 dev mode.
+      // Fixed in Ubuntu 24.04 — remove when Drone is upgraded.
+      // https://github.com/code-dot-org/code-dot-org/issues/73740
+      test.fixme(LAB2_PROJECTS.has(projectType) && browserName === 'webkit');
+
       const oneTrust = new OneTrustComponent(page);
 
       await resetSession(page);
