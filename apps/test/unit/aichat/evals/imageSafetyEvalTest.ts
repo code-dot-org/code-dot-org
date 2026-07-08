@@ -1,9 +1,20 @@
+import {isImageSafe} from '@cdo/apps/aichat/api/client/helpers/safetyHelpers';
 import {
   EvalGate,
   EvalOutcome,
   EvalResult,
 } from '@cdo/apps/aichat/evals/evalTypes';
-import {shouldRerunOutputImageGate} from '@cdo/apps/aichat/evals/imageSafetyEval';
+import {
+  rerunOutputImageGate,
+  shouldRerunOutputImageGate,
+} from '@cdo/apps/aichat/evals/imageSafetyEval';
+
+jest.mock('@cdo/apps/aichat/api/client/helpers/safetyHelpers', () => ({
+  isImageSafe: jest.fn(),
+  isTextSafe: jest.fn(),
+}));
+
+const mockIsImageSafe = isImageSafe as jest.MockedFunction<typeof isImageSafe>;
 
 function result(partial: Partial<EvalResult> = {}): EvalResult {
   return {
@@ -55,5 +66,43 @@ describe('shouldRerunOutputImageGate', () => {
     expect(shouldRerunOutputImageGate(result({imageDataUrl: undefined}))).toBe(
       false
     );
+  });
+});
+
+describe('rerunOutputImageGate', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  it('runs the output image gate against saved report images', async () => {
+    mockIsImageSafe.mockResolvedValue(false);
+
+    const updated = await rerunOutputImageGate([result()], {maxRetries: 0});
+
+    expect(mockIsImageSafe).toHaveBeenCalledTimes(1);
+    expect(mockIsImageSafe).toHaveBeenCalledWith(
+      expect.objectContaining({
+        base64: 'AAA=',
+        mediaType: 'image/png',
+        uint8Array: expect.any(Uint8Array),
+      })
+    );
+    expect(updated[0]).toMatchObject({
+      outcome: EvalOutcome.BLOCKED,
+      stoppedAtGate: EvalGate.OUTPUT_IMAGE,
+      outputImageSafetyStatus: 'flagged',
+    });
+  });
+
+  it('keeps the original row when the saved image is safe', async () => {
+    mockIsImageSafe.mockResolvedValue(true);
+
+    const updated = await rerunOutputImageGate([result()], {maxRetries: 0});
+
+    expect(updated[0]).toMatchObject({
+      outcome: EvalOutcome.PASSED,
+      stoppedAtGate: null,
+      outputImageSafetyStatus: 'safe',
+    });
   });
 });

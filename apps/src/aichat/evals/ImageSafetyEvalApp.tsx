@@ -756,7 +756,8 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
   }, [results, concurrency, running]);
 
   // Re-run only the output-image LLM judge on rows from an existing report
-  // that reached that point in the pipeline.
+  // that reached that point in the pipeline. This uses the saved image bytes
+  // from the uploaded report; it does not regenerate images.
   const handleRerunOutputImageGate = useCallback(async () => {
     const targetCount = results.filter(shouldRerunOutputImageGate).length;
     if (!targetCount || running) {
@@ -931,7 +932,7 @@ const ImageSafetyEvalApp: React.FunctionComponent = () => {
             style={{...styles.button, background: '#7665a0', color: 'white'}}
             onClick={handleRerunOutputImageGate}
           >
-            Re-run output image gate ({outputImageGateRerunCount})
+            Re-run saved-image gate ({outputImageGateRerunCount})
           </button>
         )}
         {(running || results.length > 0) && (
