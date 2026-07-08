@@ -27,7 +27,7 @@ export async function withPlaywrightCheck(
     await expect(page).toHaveScreenshot(`${name}.png`, {
       animations: 'disabled',
       mask: opts.mask,
-      fullPage: true,
+      fullPage: opts.fully ?? true,
     });
   };
 
