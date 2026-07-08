@@ -22,7 +22,10 @@ import {
   asyncLoadCoteacherInvite,
   fetchDemoPresets,
 } from '../../teacherDashboard/teacherSectionsRedux';
-import {Section} from '../../teacherDashboard/types/teacherSectionTypes';
+import {
+  DemoType,
+  Section,
+} from '../../teacherDashboard/types/teacherSectionTypes';
 import CoteacherInviteNotification from '../CoteacherInviteNotification';
 
 import DemoSectionCard from './DemoSectionCard';
@@ -57,6 +60,9 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
   const isMiniTutorialEnabled =
     experiments.isEnabled(experiments.ONBOARDING) ||
     DCDO.get('onboarding-enabled', false);
+  const gradesTeaching = useAppSelector(
+    state => state.currentUser.gradesTeaching
+  );
   const sections = useAppSelector(state => state.teacherSections.sections);
   const demoPresetsAreLoaded = useAppSelector(
     state => state.teacherSections.demoPresetsAreLoaded
@@ -88,10 +94,6 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
     }
     return null;
   }, [demoSectionDemoType, isDemoSectionEnabled, sections, gradesTeaching]);
-
-  const tour = useCreateSectionTour(gradesTeaching);
-  const reviewSyllabusTour = useReviewSyllabusTour(effectiveDemoType);
-  const learnHowToEvaluateTour = useLearnHowToEvaluateTour(effectiveDemoType);
 
   const teacherName = useAppSelector(state => state.currentUser.displayName);
   const teacherId = useAppSelector(state => state.currentUser.userId);
@@ -389,9 +391,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
                 <>
                   {showOnboardingChecklist && (
                     <OnboardingChecklist
-                      createSectionTour={tour}
-                      reviewSyllabusTour={reviewSyllabusTour}
-                      learnHowToEvaluateTour={learnHowToEvaluateTour}
+                      demoSection={demoSection}
                       demoType={effectiveDemoType!}
                       isHidden={onboardingHidden}
                       onHide={handleHideOnboarding}
@@ -414,9 +414,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
                 <>
                   {showOnboardingChecklist && (
                     <OnboardingChecklist
-                      createSectionTour={tour}
-                      reviewSyllabusTour={reviewSyllabusTour}
-                      learnHowToEvaluateTour={learnHowToEvaluateTour}
+                      demoSection={demoSection}
                       demoType={effectiveDemoType!}
                       isHidden={onboardingHidden}
                       onHide={handleHideOnboarding}
@@ -429,9 +427,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
               <>
                 {showOnboardingChecklist && (
                   <OnboardingChecklist
-                    createSectionTour={tour}
-                    reviewSyllabusTour={reviewSyllabusTour}
-                    learnHowToEvaluateTour={learnHowToEvaluateTour}
+                    demoSection={demoSection}
                     demoType={effectiveDemoType!}
                     isHidden={onboardingHidden}
                     onHide={handleHideOnboarding}
