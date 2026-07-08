@@ -142,12 +142,10 @@ class LevelGroup < DSLDefined
 
     # This path creates the parent-child rows directly, bypassing the Level
     # validation which enforces the UI Test partition elsewhere.
-    unless ui_test?
-      offending = new_levels.select {|level| level.is_a?(Level) && level.ui_test?}
-      if offending.any?
-        raise "level \"#{name}\" is not a UI Test level, so it may not " \
-          "reference UI Test levels: #{offending.map(&:name).join(', ')}"
-      end
+    offending = new_levels.select {|level| level.is_a?(Level) && level.ui_test? != ui_test?}
+    if offending.any?
+      raise "level \"#{name}\" and its child levels must be on the same side " \
+        "of the \"UI Test \" partition; offending children: #{offending.map(&:name).join(', ')}"
     end
 
     new_levels.each_with_index do |level, level_index|

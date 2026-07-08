@@ -89,7 +89,7 @@ class Level < ApplicationRecord
 
   validate :validate_game, on: [:create, :update]
   validate :name_change_stays_within_ui_test_partition, on: :update
-  validate :no_ui_test_children_outside_ui_test_levels
+  validate :children_stay_within_ui_test_partition
 
   after_save {Services::LevelFiles.write_custom_level_file(self)}
   after_destroy {Services::LevelFiles.delete_custom_level_file(self)}
@@ -483,15 +483,22 @@ class Level < ApplicationRecord
     errors.add(:name, "cannot be renamed across the \"UI Test \" boundary while the level is used by a script")
   end
 
-  # A non-UI-Test parent may not reference a UI Test child: the parent is
-  # seeded in environments that never load test/ui/config levels, where the
-  # child would not resolve.
-  def no_ui_test_children_outside_ui_test_levels
-    return if ui_test?
+  # A parent level and its children must be on the same side of the
+  # "UI Test " partition: each side is seeded in environments where the other
+  # side's definition files are never loaded, so a cross-partition child
+  # would not resolve there. (The UI Test parent -> prod child direction is
+  # not strictly unresolvable today, since the ui-test seed still loads both
+  # trees, but the migration helper always clones children, so any mix marks
+  # a half-migrated level.)
+  def children_stay_within_ui_test_partition
     child_names = Array(contained_level_names) + [try(:project_template_level_name)].compact
-    offending = child_names.select {|child_name| Level.ui_test_name?(child_name)}
+    offending = child_names.reject {|child_name| Level.ui_test_name?(child_name) == ui_test?}
     return if offending.empty?
-    errors.add(:base, "level \"#{name}\" is not a UI Test level, so it may not reference UI Test levels: #{offending.join(', ')}")
+    errors.add(
+      :base,
+      "level \"#{name}\" and its child levels must be on the same side " \
+      "of the \"UI Test \" partition; offending children: #{offending.join(', ')}"
+    )
   end
 
   # Uses specific knowledge of how the key method is implemented in hopes of

@@ -103,23 +103,24 @@ def clone_dsl_level(level, new_name)
   level.class.create_from_level_builder({dsl_text: new_text}, level_params)
 end
 
-# Custom levels are cloned via Level#clone_with_name, then any contained or
-# project template level references are cloned recursively and remapped.
+# Custom levels are cloned by dup, with any contained or project template
+# level references cloned recursively first and remapped in the same save
+# (a parent and its children must be on the same side of the partition, so
+# the clone may never exist with the original child names). Mirrors
+# Level#clone_with_name, which cannot be used here for that reason.
 def clone_custom_level(level, new_name)
   contained_names = Array(level.contained_level_names).map {|name| clone_level(Level.find_by_name!(name)).name}
   template_name = level.project_template_level_name && clone_level(Level.find_by_name!(level.project_template_level_name)).name
 
-  clone = level.clone_with_name(new_name)
-
-  update_params = {}
-  update_params[:contained_level_names] = contained_names if contained_names.present?
-  update_params[:project_template_level_name] = template_name if template_name
-  clone.update!(update_params) if update_params.present?
-
-  if level.level_concept_difficulty && clone.level_concept_difficulty.nil?
-    clone.level_concept_difficulty = level.level_concept_difficulty.dup
-    clone.save!
-  end
+  clone = level.dup
+  clone.name = new_name
+  # :published makes write_to_file? true, so the level file gets written
+  clone.published = true
+  clone.audit_log = [{changed_at: Time.now, changed: ["cloned from #{level.name.dump}"], cloned_from: level.name}].to_json
+  clone.contained_level_names = contained_names if contained_names.present?
+  clone.project_template_level_name = template_name if template_name
+  clone.level_concept_difficulty = level.level_concept_difficulty.dup if level.level_concept_difficulty
+  clone.save!
 
   clone
 end
@@ -154,6 +155,8 @@ def main(options)
   end
 end
 
-options = parse_options
-require_rails_env
-main(options)
+if __FILE__ == $0
+  options = parse_options
+  require_rails_env
+  main(options)
+end

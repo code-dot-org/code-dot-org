@@ -311,12 +311,10 @@ class BubbleChoice < DSLDefined
   def setup_sublevels(sublevel_names)
     # This path creates the parent-child rows directly, bypassing the Level
     # validation which enforces the UI Test partition elsewhere.
-    unless ui_test?
-      offending = Array(sublevel_names).select {|sublevel_name| Level.ui_test_name?(sublevel_name)}
-      if offending.any?
-        raise "level \"#{name}\" is not a UI Test level, so it may not " \
-          "reference UI Test levels: #{offending.join(', ')}"
-      end
+    offending = Array(sublevel_names).reject {|sublevel_name| Level.ui_test_name?(sublevel_name) == ui_test?}
+    if offending.any?
+      raise "level \"#{name}\" and its child levels must be on the same side " \
+        "of the \"UI Test \" partition; offending children: #{offending.join(', ')}"
     end
 
     # if our existing sublevels already match the given names, do nothing

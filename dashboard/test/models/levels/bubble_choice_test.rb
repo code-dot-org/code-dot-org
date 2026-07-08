@@ -692,8 +692,9 @@ class BubbleChoiceTest < ActiveSupport::TestCase
     [sublevel, contained]
   end
 
-  test 'a non-UI-Test bubble choice cannot contain UI Test sublevels' do
-    create(:level, name: 'UI Test BubbleChoiceTest sublevel')
+  test 'a bubble choice and its sublevels must be on the same side of the UI Test partition' do
+    ui_test_sublevel = create(:level, name: 'UI Test BubbleChoiceTest sublevel')
+    create(:level, name: 'BubbleChoiceTest prod sublevel')
 
     input_dsl = <<~DSL
       name 'BubbleChoiceTest prod parent'
@@ -707,9 +708,6 @@ class BubbleChoiceTest < ActiveSupport::TestCase
     end
     assert_includes e.message, 'UI Test BubbleChoiceTest sublevel'
 
-    # a UI Test parent may contain non-UI-Test sublevels (needed while
-    # ui-test scripts migrate off prod levels)
-    prod_sublevel = create(:level, name: 'BubbleChoiceTest prod sublevel')
     input_dsl = <<~DSL
       name 'UI Test BubbleChoiceTest parent'
 
@@ -717,7 +715,20 @@ class BubbleChoiceTest < ActiveSupport::TestCase
       level 'BubbleChoiceTest prod sublevel'
     DSL
 
+    e = assert_raises do
+      BubbleChoice.create_from_level_builder({}, {name: 'UI Test BubbleChoiceTest parent', dsl_text: input_dsl})
+    end
+    assert_includes e.message, 'BubbleChoiceTest prod sublevel'
+
+    # same-side sublevels are fine
+    input_dsl = <<~DSL
+      name 'UI Test BubbleChoiceTest parent'
+
+      sublevels
+      level 'UI Test BubbleChoiceTest sublevel'
+    DSL
+
     level = BubbleChoice.create_from_level_builder({}, {name: 'UI Test BubbleChoiceTest parent', dsl_text: input_dsl})
-    assert_equal [prod_sublevel], level.sublevels
+    assert_equal [ui_test_sublevel], level.sublevels
   end
 end
