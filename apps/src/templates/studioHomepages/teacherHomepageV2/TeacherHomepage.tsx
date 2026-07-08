@@ -7,6 +7,7 @@ import DCDO from '@cdo/apps/dcdo';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import LatamGeRegionNotice from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/LatamGeRegionNotice';
 import {detectNetworkAvailability} from '@cdo/apps/util/detectNetworkAvailability';
 import experiments from '@cdo/apps/util/experiments';
@@ -63,6 +64,12 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
     state => state.currentUser.gradesTeaching
   );
   const sections = useAppSelector(state => state.teacherSections.sections);
+  const demoPresetsAreLoaded = useAppSelector(
+    state => state.teacherSections.demoPresetsAreLoaded
+  );
+  const sectionsAreLoaded = useAppSelector(
+    state => state.teacherSections.sectionsAreLoaded
+  );
 
   const demoSectionDemoType = React.useMemo<DemoType | null>(() => {
     const demo = Object.values(sections).find(
@@ -273,6 +280,43 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
     [sections, showHiddenOnly]
   );
 
+  // Show the onboarding checklist at the exact moment section content becomes
+  // visible — either SectionList (real demo section) or DemoSectionCard (pre-creation).
+  const showOnboardingChecklist = React.useMemo(() => {
+    if (
+      !isMiniTutorialEnabled ||
+      !effectiveDemoType ||
+      isLoadingOnboardingHiddenStatus
+    ) {
+      return false;
+    }
+    // Case 1: a real demo section exists and the section list is on screen.
+    if (demoSectionDemoType !== null && numSections > 0) {
+      return true;
+    }
+    // Case 2: the DemoSectionCard is on screen (no real section yet).
+    if (
+      isDemoSectionEnabled &&
+      numSections === 0 &&
+      !showHiddenOnly &&
+      demoPresetsAreLoaded &&
+      sectionsAreLoaded
+    ) {
+      return true;
+    }
+    return false;
+  }, [
+    isMiniTutorialEnabled,
+    effectiveDemoType,
+    isLoadingOnboardingHiddenStatus,
+    demoSectionDemoType,
+    numSections,
+    isDemoSectionEnabled,
+    showHiddenOnly,
+    demoPresetsAreLoaded,
+    sectionsAreLoaded,
+  ]);
+
   const onArchiveToggleChange = (value: ArchivedToggleOption) => {
     const toggleEvent =
       value === 'teaching'
@@ -342,38 +386,66 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
               isForPl={false}
               destructiveLoad={true}
             />
-            {!!isMiniTutorialEnabled &&
-              effectiveDemoType !== null &&
-              !isLoadingOnboardingHiddenStatus && (
-                <OnboardingChecklist
-                  createSectionTour={tour}
-                  reviewSyllabusTour={reviewSyllabusTour}
-                  learnHowToEvaluateTour={learnHowToEvaluateTour}
-                  demoType={effectiveDemoType}
-                  isHidden={onboardingHidden}
-                  onHide={handleHideOnboarding}
-                />
-              )}
             {!isDemoSectionEnabled ? (
               numSections === 0 ? (
                 <EmptyHomepage showHiddenOnly={showHiddenOnly} />
               ) : (
-                <SectionList
-                  showHiddenOnly={showHiddenOnly}
-                  studioUrlPrefix={studioUrlPrefix}
-                />
+                <>
+                  {showOnboardingChecklist && (
+                    <OnboardingChecklist
+                      createSectionTour={tour}
+                      reviewSyllabusTour={reviewSyllabusTour}
+                      learnHowToEvaluateTour={learnHowToEvaluateTour}
+                      demoType={effectiveDemoType!}
+                      isHidden={onboardingHidden}
+                      onHide={handleHideOnboarding}
+                    />
+                  )}
+                  <SectionList
+                    showHiddenOnly={showHiddenOnly}
+                    studioUrlPrefix={studioUrlPrefix}
+                  />
+                </>
               )
             ) : numSections === 0 ? (
               showHiddenOnly ? (
                 <EmptyHomepage showHiddenOnly={showHiddenOnly} />
+              ) : isLoadingOnboardingHiddenStatus ||
+                !demoPresetsAreLoaded ||
+                !sectionsAreLoaded ? (
+                <Spinner size="large" />
               ) : (
-                <DemoSectionCard showHiddenOnly={showHiddenOnly} />
+                <>
+                  {showOnboardingChecklist && (
+                    <OnboardingChecklist
+                      createSectionTour={tour}
+                      reviewSyllabusTour={reviewSyllabusTour}
+                      learnHowToEvaluateTour={learnHowToEvaluateTour}
+                      demoType={effectiveDemoType!}
+                      isHidden={onboardingHidden}
+                      onHide={handleHideOnboarding}
+                    />
+                  )}
+                  <DemoSectionCard showHiddenOnly={showHiddenOnly} />
+                </>
               )
             ) : (
-              <SectionList
-                showHiddenOnly={showHiddenOnly}
-                studioUrlPrefix={studioUrlPrefix}
-              />
+              <>
+                {showOnboardingChecklist && (
+                  <OnboardingChecklist
+                    createSectionTour={tour}
+                    reviewSyllabusTour={reviewSyllabusTour}
+                    learnHowToEvaluateTour={learnHowToEvaluateTour}
+                    demoType={effectiveDemoType!}
+                    isHidden={onboardingHidden}
+                    onHide={handleHideOnboarding}
+                  />
+                )}
+                <SectionList
+                  showHiddenOnly={showHiddenOnly}
+                  studioUrlPrefix={studioUrlPrefix}
+                />
+              </>
             )}
           </div>
           <TeacherPromotions />
