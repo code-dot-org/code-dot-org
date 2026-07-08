@@ -83,7 +83,10 @@ function ReactFlowSketchLabViewInner({
   const backpackContext = useMemo(
     () =>
       currentUserId
-        ? {primaryApi: new BackpackClientApi('sketchlab', null)}
+        ? {
+            primaryApi: new BackpackClientApi('sketchlab', null),
+            secondaryApis: {aichat: new BackpackClientApi('aichat', null)},
+          }
         : null,
     [currentUserId]
   );
