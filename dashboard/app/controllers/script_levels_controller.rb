@@ -181,10 +181,15 @@ class ScriptLevelsController < ApplicationController
     # TODO: If this adds too much to the load time in prod, move it to an API.
     if current_user&.teacher?
       @responses = []
-      # The levels whose responses the summary view shows. A LevelGroup exposes
-      # one response set per sublevel; every other type answers on its own
-      # progress levels.
-      response_levels = @level.is_a?(LevelGroup) ? @level.levels : @level.levels_for_progress
+      # The levels whose responses the summary view shows.
+      response_levels =
+        if @level.is_a?(LevelGroup)
+          @level.levels
+        elsif @level.predict_level?
+          [@level]
+        else
+          [@level.contained_levels.any? ? @level.contained_levels.first : @level]
+        end
 
       # TODO: Change/remove this check as we add support for more level types.
       first_level = response_levels.first
