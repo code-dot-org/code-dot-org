@@ -242,6 +242,41 @@ export const SPRITELAB2_EXTRA_SHARED_BLOCKS = [
     ].join('\n'),
   },
   {
+    name: 'spritelab2_movingWithArrowKeys',
+    pool: 'spritelab2',
+    category: 'Behaviors',
+    config: {
+      func: 'movingWithArrowKeys',
+      blockText: 'moving with arrow keys',
+      returnType: 'Behavior',
+      style: 'behavior_blocks',
+    },
+    // The oceanSetup helper libraries' moving_with_arrow_keys, in the
+    // behavior-factory shape this pool uses. Moves at the sprite's own
+    // speed property, like the classic behavior.
+    helperCode: [
+      'function movingWithArrowKeys() {',
+      '  return {',
+      '    func: function (spriteId) {',
+      '      if (isKeyPressed("up")) {',
+      '        moveInDirection(spriteId, getProp(spriteId, "speed"), "North");',
+      '      }',
+      '      if (isKeyPressed("down")) {',
+      '        moveInDirection(spriteId, getProp(spriteId, "speed"), "South");',
+      '      }',
+      '      if (isKeyPressed("left")) {',
+      '        moveInDirection(spriteId, getProp(spriteId, "speed"), "West");',
+      '      }',
+      '      if (isKeyPressed("right")) {',
+      '        moveInDirection(spriteId, getProp(spriteId, "speed"), "East");',
+      '      }',
+      '    },',
+      "    name: 'moving with arrow keys',",
+      '  };',
+      '}',
+    ].join('\n'),
+  },
+  {
     name: 'spritelab2_patrollingLeftRight',
     pool: 'spritelab2',
     category: 'Behaviors',
@@ -391,6 +426,7 @@ const PREDEFINED_BEHAVIOR_BLOCKS = [
   'gamelab_patrollingUpDown',
   // Lab-owned (see SPRITELAB2_EXTRA_SHARED_BLOCKS).
   'spritelab2_movingLeft',
+  'spritelab2_movingWithArrowKeys',
   'spritelab2_patrollingLeftRight',
 ];
 

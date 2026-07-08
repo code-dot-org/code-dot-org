@@ -41,8 +41,13 @@ Commands (indented under an event):
                                   set_type'd to player; use inside a key event.
   behavior <costume> <name>       Give sprites with <costume> an ongoing
                                   behavior: draggable, tumbling, moving left,
-                                  patrolling up and down, patrolling left and
-                                  right, avoiding targets, following targets.
+                                  moving with arrow keys, patrolling up and
+                                  down, patrolling left and right, avoiding
+                                  targets, following targets. "moving with
+                                  arrow keys" is the easy way to make a
+                                  top-down character the player steers; for a
+                                  side-view platformer prefer while_key
+                                  movement plus gravity and jump.
   go_to_scene <scene name>        Stop this scene and start the named scene.
                                   Only use scene names from the available list;
                                   if none are listed, never use this command.

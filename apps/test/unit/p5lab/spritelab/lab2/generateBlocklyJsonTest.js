@@ -173,13 +173,17 @@ describe('SpriteLab2 generateBlocklyJson', () => {
 
   it('maps behavior names to predefined behavior blocks, ignoring spacing', () => {
     const result = generateBlocklyJson(
-      'when_run\n  behavior owl moving left\n  behavior owl patrolling up and down'
+      'when_run\n  behavior owl moving left\n  behavior owl patrolling up and down\n  behavior owl moving with arrow keys'
     );
     const first = result.blocks.blocks[0].next.block;
     const second = first.next.block;
+    const third = second.next.block;
     expect(first.type).toBe('gamelab_addBehaviorSimple');
     expect(first.inputs.BEHAVIOR.block.type).toBe('spritelab2_movingLeft');
     expect(second.inputs.BEHAVIOR.block.type).toBe('gamelab_patrollingUpDown');
+    expect(third.inputs.BEHAVIOR.block.type).toBe(
+      'spritelab2_movingWithArrowKeys'
+    );
   });
 
   it('resolves go_to_scene names to ids via sceneIdByName', () => {

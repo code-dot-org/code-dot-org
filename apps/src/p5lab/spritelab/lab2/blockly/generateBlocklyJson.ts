@@ -90,6 +90,7 @@ const BEHAVIOR_BLOCK_TYPES: {[name: string]: string} = {
   tumbling: 'gamelab_tumbling',
   patrollingupanddown: 'gamelab_patrollingUpDown',
   movingleft: 'spritelab2_movingLeft',
+  movingwitharrowkeys: 'spritelab2_movingWithArrowKeys',
   patrollingleftandright: 'spritelab2_patrollingLeftRight',
 };
 
