@@ -1,4 +1,36 @@
-import type {MockRoute} from '@code-dot-org/core/api/mocks';
+import {LevelPropertiesBaseSchema} from '@code-dot-org/core/api';
+import type {MockJsonBody, MockRoute} from '@code-dot-org/core/api/mocks';
+import {fixtureFactory} from '@code-dot-org/core/api/mocks';
+
+// Level-properties builders: common wire defaults + per-level overrides,
+// validated through the real schema so a fixture can't drift from the contract
+// the API client parses. Lab-specific fields (mode, videoKey, levelData) ride
+// along as overrides — the base schema strips them on parse, wire() keeps them.
+const baseDefaults = {
+  id: 0,
+  name: 'stub',
+  helpVideos: [],
+  parentLevelLink: null,
+  exemplarSources: null,
+  offerBrowserTts: true,
+  showExemplarLink: false,
+  isAssessment: false,
+};
+const fishLevel = fixtureFactory(LevelPropertiesBaseSchema, {
+  ...baseDefaults,
+  appName: 'fish',
+  type: 'Fish',
+});
+const videoLevel = fixtureFactory(LevelPropertiesBaseSchema, {
+  ...baseDefaults,
+  appName: 'standalone_video',
+  type: 'StandaloneVideo',
+});
+
+// Wrap the level entries into the id-keyed map the endpoint returns; the key is
+// always the entry's own id, so the map can't desync from its contents.
+const lessonMap = (entries: Array<{id: number}>): MockJsonBody =>
+  Object.fromEntries(entries.map(e => [String(e.id), e])) as MockJsonBody;
 
 export const oceansCourseFixtures: MockRoute[] = [
   {
@@ -195,12 +227,12 @@ export const oceansCourseFixtures: MockRoute[] = [
   },
   {
     path: '*/s/oceans/lessons/1/level_properties',
-    respond: {
-      '19423': {
+    respond: lessonMap([
+      videoLevel.wire({
+        id: 19423,
+        name: 'Oceans_Video_Machine_Learning',
         videoKey: 'oceans_machine_learning',
         displayName: 'Video: Machine Learning',
-        name: 'Oceans_Video_Machine_Learning',
-        id: 19423,
         levelData: {
           src: 'https://www.youtube-nocookie.com/embed/KHbwOetbmbs/',
           key: 'oceans_machine_learning',
@@ -211,51 +243,31 @@ export const oceansCourseFixtures: MockRoute[] = [
           enableFallback: true,
           autoplay: false,
         },
-        helpVideos: [],
-        type: 'StandaloneVideo',
-        appName: 'standalone_video',
         finishUrl: '/courses/oceans/units/1/lessons/1/levels/2',
-        offerBrowserTts: true,
-        isAssessment: false,
-      },
-      '19419': {
-        mode: 'fishvtrash',
-        name: 'Oceans_FishVTrash',
+      }),
+      fishLevel.wire({
         id: 19419,
-        helpVideos: [],
-        type: 'Fish',
-        appName: 'fish',
+        name: 'Oceans_FishVTrash',
+        mode: 'fishvtrash',
         finishUrl: '/courses/oceans/units/1/lessons/1/levels/3',
-        offerBrowserTts: true,
-        isAssessment: false,
-      },
-      '19418': {
-        mode: 'creaturesvtrashdemo',
-        name: 'Oceans_CreaturesVTrashDemo',
+      }),
+      fishLevel.wire({
         id: 19418,
-        helpVideos: [],
-        type: 'Fish',
-        appName: 'fish',
+        name: 'Oceans_CreaturesVTrashDemo',
+        mode: 'creaturesvtrashdemo',
         finishUrl: '/courses/oceans/units/1/lessons/1/levels/4',
-        offerBrowserTts: true,
-        isAssessment: false,
-      },
-      '19417': {
-        mode: 'creaturesvtrash',
-        name: 'Oceans_CreaturesVTrash',
+      }),
+      fishLevel.wire({
         id: 19417,
-        helpVideos: [],
-        type: 'Fish',
-        appName: 'fish',
+        name: 'Oceans_CreaturesVTrash',
+        mode: 'creaturesvtrash',
         finishUrl: '/courses/oceans/units/1/lessons/1/levels/5',
-        offerBrowserTts: true,
-        isAssessment: false,
-      },
-      '19425': {
+      }),
+      videoLevel.wire({
+        id: 19425,
+        name: 'Oceans_Video_Training_Data',
         videoKey: 'oceans_training_data',
         displayName: 'Video: Training Data',
-        name: 'Oceans_Video_Training_Data',
-        id: 19425,
         levelData: {
           src: 'https://www.youtube-nocookie.com/embed/x2mRoFNm22g/',
           key: 'oceans_training_data',
@@ -266,29 +278,19 @@ export const oceansCourseFixtures: MockRoute[] = [
           enableFallback: true,
           autoplay: false,
         },
-        helpVideos: [],
-        type: 'StandaloneVideo',
-        appName: 'standalone_video',
         finishUrl: '/courses/oceans/units/1/lessons/1/levels/6',
-        offerBrowserTts: true,
-        isAssessment: false,
-      },
-      '19422': {
-        mode: 'short',
-        name: 'Oceans_Short',
+      }),
+      fishLevel.wire({
         id: 19422,
-        helpVideos: [],
-        type: 'Fish',
-        appName: 'fish',
+        name: 'Oceans_Short',
+        mode: 'short',
         finishUrl: '/courses/oceans/units/1/lessons/1/levels/7',
-        offerBrowserTts: true,
-        isAssessment: false,
-      },
-      '19424': {
+      }),
+      videoLevel.wire({
+        id: 19424,
+        name: 'Oceans_Video_Societal_Implications',
         videoKey: 'oceans_societal_implications',
         displayName: 'Video: Societal Implications',
-        name: 'Oceans_Video_Societal_Implications',
-        id: 19424,
         levelData: {
           src: 'https://www.youtube-nocookie.com/embed/ng4c1g3COfs/',
           key: 'oceans_societal_implications',
@@ -299,24 +301,14 @@ export const oceansCourseFixtures: MockRoute[] = [
           enableFallback: true,
           autoplay: false,
         },
-        helpVideos: [],
-        type: 'StandaloneVideo',
-        appName: 'standalone_video',
         finishUrl: '/courses/oceans/units/1/lessons/1/levels/8',
-        offerBrowserTts: true,
-        isAssessment: false,
-      },
-      '19420': {
-        mode: 'long',
-        name: 'Oceans_Long',
+      }),
+      fishLevel.wire({
         id: 19420,
-        helpVideos: [],
-        type: 'Fish',
-        appName: 'fish',
+        name: 'Oceans_Long',
+        mode: 'long',
         finishUrl: '/api/hour/finish/oceans',
-        offerBrowserTts: true,
-        isAssessment: false,
-      },
-    },
+      }),
+    ]),
   },
 ];
