@@ -82,10 +82,22 @@ jobs:
           APPLITOOLS_BATCH_ID: ${{ github.event.pull_request.head.sha || github.sha }}
           APPLITOOLS_BATCH_NAME: E2E Playwright Eyes Tests
           APPLITOOLS_BRANCH: ${{ github.head_ref || github.ref_name }}
+          PLAYWRIGHT_PROVIDER: github-actions
           PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
           HOME: /root
           TARGET_URL: https://test-studio.code.org
         run: yarn turbo run test:ui --filter=@code-dot-org/e2e-tests -- --grep @visual --project=visual-chromium
+        working-directory: ./frontend
+
+      - name: Verify visual tests ran
+        if: success()
+        run: |
+          expected=$(jq '.stats.expected // 0' frontend/packages/e2e-tests/test-results/results.json)
+          echo "Visual tests executed: $expected"
+          if [ "$expected" -lt 1 ]; then
+            echo "::error::Eyes job passed but 0 visual tests ran — check VISUAL_PROVIDER and @visual tags"
+            exit 1
+          fi
         working-directory: ./frontend
 
       - name: Upload Playwright Report

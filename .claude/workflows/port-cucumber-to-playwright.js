@@ -271,7 +271,7 @@ phase('Dry Run')
 
 const READINESS_SCHEMA = {
   type: 'object',
-  required: ['transitions', 'autonomousContent', 'loadNotes', 'dynamicContent', 'a11yTree'],
+  required: ['transitions', 'autonomousContent', 'loadNotes'],
   properties: {
     transitions: {
       type: 'array',
@@ -545,18 +545,38 @@ phase('Heal')
 // For @eyes ports, run the prove-visual local stability gate first. This generates
 // ephemeral Playwright baselines and repeats 5x to shake out non-deterministic content
 // that needs masking before the test ever touches Applitools.
+const PROVE_VISUAL_SCHEMA = {
+  type: 'object',
+  required: ['passed', 'fixesApplied'],
+  properties: {
+    passed: {type: 'boolean', description: 'true if prove-visual exited 0 after any fixes'},
+    fixesApplied: {
+      type: 'array', items: {type: 'string'},
+      description: 'Descriptions of fixes applied (mask additions, waitForVisualStability calls). Empty if it passed on first try.',
+    },
+    failureDetail: {type: 'string', description: 'If passed is false: which checkpoint(s) flaked and why the fix attempt failed.'},
+  },
+}
+
 if (plan.isEyes) {
   log('Running prove-visual stability gate for @visual tests')
-  await agent(
+  const proveResult = await agent(
     `Run the prove-visual local stability gate for the visual tests. From the repo root:
   cd frontend/packages/e2e-tests && npx prove-visual
 This generates ephemeral native Playwright baselines and re-runs 5x to confirm visual
 determinism. If it fails, the visual check captures non-deterministic content that needs
 masking. Diagnose which element(s) are flaking and fix the spec by adding mask options
 to the visualCheck calls, or adding waitForVisualStability calls. Do NOT remove or
-weaken visual checks. Clean up any leftover .visual-baselines/ artifacts.`,
-    {label: 'prove-visual', phase: 'Heal', model: 'sonnet'},
+weaken visual checks. Clean up any leftover .visual-baselines/ artifacts.
+After fixing, re-run prove-visual to confirm. Report passed=true only if it exits 0.`,
+    {schema: PROVE_VISUAL_SCHEMA, label: 'prove-visual', phase: 'Heal', model: 'sonnet'},
   )
+  if (proveResult && !proveResult.passed) {
+    log(`prove-visual failed: ${proveResult.failureDetail ?? 'unknown'}`)
+  }
+  if (proveResult?.fixesApplied?.length) {
+    log(`prove-visual fixes: ${proveResult.fixesApplied.join('; ')}`)
+  }
 }
 
 const STRESS_SCHEMA = {
