@@ -10,11 +10,11 @@ import {resolve} from 'node:path';
  * (see visualProjects) and routes visualCheck to the native screenshot
  * backend.
  *
- * Invoked from a package that consumes @code-dot-org/playwright-support/visual,
- * via its `test:visual:prove` script — `npx playwright test` resolves the
- * package's own playwright.config.ts from the current working directory.
+ * Usage: prove-visual [baselineDir]
+ *   baselineDir defaults to e2e/tmp. Pass tests/tmp for packages whose
+ *   testDir is ./tests (e.g. e2e-tests).
  */
-const baselineDir = resolve('e2e/tmp');
+const baselineDir = resolve(process.argv[2] ?? 'e2e/tmp');
 const env = {...process.env, VISUAL_PROVIDER: 'playwright'};
 
 try {
