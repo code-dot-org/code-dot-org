@@ -412,7 +412,7 @@ export function useCopyPaste({
   // 1. If we are over an editable element use native paste (allowing copy/paste of text).
   // 2. If the last clipboard action was an in-app copy, paste the copied element.
   // 3. If there is a clipboard image, paste it as an ImageNode.
-  // 4. Otherwise, fall back to internal element paste.
+  // 4. Otherwise, fall back to internal element paste (paste() function).
   useEffect(() => {
     const handlePaste = async (event: ClipboardEvent) => {
       if (readOnly) return;
@@ -431,13 +431,12 @@ export function useCopyPaste({
           ? Array.from(items).find(item => item.type.startsWith('image/'))
           : undefined;
 
-      if (!imageItem) {
+      const file = imageItem?.getAsFile();
+      if (!file) {
         paste();
         return;
       }
 
-      const file = imageItem.getAsFile();
-      if (!file) return;
       try {
         const uploadUrl = await uploadImageAsset(file, {levelName, channelId});
         if (!uploadUrl) {
