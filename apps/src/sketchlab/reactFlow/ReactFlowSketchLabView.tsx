@@ -3,7 +3,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Button as MuiButton} from '@mui/material';
 import {ReactFlowProvider, useReactFlow} from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
-import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import {SUPPORTED_IMAGE_EXTENSIONS} from '@cdo/apps/lab2/constants';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
@@ -30,9 +30,7 @@ import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClien
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import ReactFlowCanvas, {
-  SketchLabCanvasHandle,
-} from './components/ReactFlowCanvas';
+import ReactFlowCanvas from './components/ReactFlowCanvas';
 import {ImageNodeData, ReactFlowSketchLabSources} from './types';
 import {
   convertExcalidrawToReactFlow,
@@ -72,9 +70,15 @@ function ReactFlowSketchLabViewInner({
 
   const reactFlow = useReactFlow();
   const dialogControl = useDialogControl();
-  // Drives the canvas imperatively so the Backpack import handler can add an
-  // image node while reusing the canvas's placement, undo, and focus behavior.
-  const canvasRef = useRef<SketchLabCanvasHandle>(null);
+  // A Backpack image the user asked to import. The canvas watches this prop and
+  // adds it as a node (reusing its placement, undo, and focus behavior), then
+  // clears it via onImageImportConsumed.
+  const [pendingImageImport, setPendingImageImport] =
+    useState<ImageNodeData | null>(null);
+  const clearPendingImageImport = useCallback(
+    () => setPendingImageImport(null),
+    []
+  );
   const currentUserId = useAppSelector(state => state.currentUser.userId);
   const channelId = useAppSelector(state => state.lab.channel?.id) ?? '';
   // The Backpack API redirects to sign-in for signed-out users, so we only
@@ -189,8 +193,7 @@ function ReactFlowSketchLabViewInner({
       addFileHandler: makeBackpackImageImportHandler({
         levelName: levelProperties.name,
         channelId,
-        addImageNode: (data: ImageNodeData) =>
-          canvasRef.current?.addImageNode(data),
+        addImageNode: (data: ImageNodeData) => setPendingImageImport(data),
       }),
     }),
     [reactFlow, backpackContext, dialogControl, channelId, levelProperties.name]
@@ -328,7 +331,8 @@ function ReactFlowSketchLabViewInner({
               initialViewport={initialViewport}
               colorMode={colorMode}
               readOnly={readonlyWorkspace}
-              ref={canvasRef}
+              pendingImageImport={pendingImageImport}
+              onImageImportConsumed={clearPendingImageImport}
             />
             {WorkspaceAlert}
           </PanelContainer>
