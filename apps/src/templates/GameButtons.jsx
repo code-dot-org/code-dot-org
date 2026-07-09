@@ -28,7 +28,7 @@ export const RunButton = props => (
     color="primary"
     className={props.hidden ? 'hide' : ''}
     style={props.style}
-    startIcon={<FontAwesomeV6Icon iconName="play" />}
+    startIcon={props.icon ?? <FontAwesomeV6Icon iconName="play" />}
   >
     {props.runButtonText || msg.runProgram()}
   </MuiButton>
@@ -38,6 +38,7 @@ RunButton.propTypes = {
   hidden: PropTypes.bool,
   style: PropTypes.object,
   runButtonText: PropTypes.string,
+  icon: PropTypes.node,
 };
 RunButton.displayName = 'RunButton';
 
@@ -53,7 +54,7 @@ export const ResetButton = props => (
     color="primary"
     className={props.hidden ? 'hide' : ''}
     style={{display: 'none', ...props.style}}
-    startIcon={<FontAwesomeV6Icon iconName="rotate-right" />}
+    startIcon={props.icon ?? <FontAwesomeV6Icon iconName="rotate-right" />}
   >
     {!props.hideText && msg.resetProgram()}
   </MuiButton>
@@ -63,6 +64,7 @@ ResetButton.propTypes = {
   hidden: PropTypes.bool,
   style: PropTypes.object,
   hideText: PropTypes.bool,
+  icon: PropTypes.node,
 };
 ResetButton.displayName = 'ResetButton';
 
@@ -77,9 +79,13 @@ export const UnconnectedGameButtons = props => (
         <>
           <RunButton
             runButtonText={props.runButtonText}
+            icon={props.runButtonIcon}
             hidden={props.hideRunButton}
           />
-          <ResetButton hidden={props.hideResetButton} />
+          <ResetButton
+            hidden={props.hideResetButton}
+            icon={props.resetButtonIcon}
+          />
         </>
       )}
       {
@@ -97,6 +103,8 @@ UnconnectedGameButtons.propTypes = {
   hideRunButton: PropTypes.bool,
   hideResetButton: PropTypes.bool,
   runButtonText: PropTypes.string,
+  runButtonIcon: PropTypes.node,
+  resetButtonIcon: PropTypes.node,
   nextLevelUrl: PropTypes.string,
   showSkipButton: PropTypes.bool,
   widgetMode: PropTypes.bool,

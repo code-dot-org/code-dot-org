@@ -1,3 +1,4 @@
+import {ThemeProvider} from '@mui/material/styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -5,6 +6,7 @@ import SwipePrompt from '@cdo/apps/templates/SwipePrompt';
 
 import ArrowButtons from '../../templates/ArrowButtons';
 import ProtectedVisualizationDiv from '../../templates/ProtectedVisualizationDiv';
+import minecraftMuiTheme from '../minecraftMuiTheme';
 
 var msg = require('@cdo/locale');
 
@@ -20,21 +22,23 @@ var CraftVisualizationColumn = function (props) {
           <div id="phaser-game" />
         </div>
       </ProtectedVisualizationDiv>
-      <GameButtons>
-        <ArrowButtons />
+      <ThemeProvider theme={minecraftMuiTheme}>
+        <GameButtons>
+          <ArrowButtons />
 
-        {props.showFinishButton && (
-          <div id="right-button-cell">
-            <button
-              type="button"
-              id="finishButton"
-              className="share mc-share-button"
-            >
-              <div>{msg.finish()}</div>
-            </button>
-          </div>
-        )}
-      </GameButtons>
+          {props.showFinishButton && (
+            <div id="right-button-cell">
+              <button
+                type="button"
+                id="finishButton"
+                className="share mc-share-button"
+              >
+                <div>{msg.finish()}</div>
+              </button>
+            </div>
+          )}
+        </GameButtons>
+      </ThemeProvider>
       <BelowVisualization />
     </span>
   );

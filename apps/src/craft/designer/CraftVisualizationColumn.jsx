@@ -1,3 +1,4 @@
+import {ThemeProvider} from '@mui/material/styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -9,6 +10,7 @@ import BelowVisualization from '../../templates/BelowVisualization';
 import {default as GameButtons} from '../../templates/GameButtons';
 import ProtectedVisualizationDiv from '../../templates/ProtectedVisualizationDiv';
 import craftMsg from '../locale';
+import minecraftMuiTheme from '../minecraftMuiTheme';
 
 export default class CraftVisualizationColumn extends React.Component {
   static propTypes = {
@@ -33,21 +35,23 @@ export default class CraftVisualizationColumn extends React.Component {
             )}
           </div>
         </ProtectedVisualizationDiv>
-        <GameButtons>
-          <ArrowButtons />
+        <ThemeProvider theme={minecraftMuiTheme}>
+          <GameButtons>
+            <ArrowButtons />
 
-          {this.props.showFinishButton && (
-            <div id="right-button-cell">
-              <button
-                type="button"
-                id="rightButton"
-                className="share mc-share-button"
-              >
-                <div>{msg.finish()}</div>
-              </button>
-            </div>
-          )}
-        </GameButtons>
+            {this.props.showFinishButton && (
+              <div id="right-button-cell">
+                <button
+                  type="button"
+                  id="rightButton"
+                  className="share mc-share-button"
+                >
+                  <div>{msg.finish()}</div>
+                </button>
+              </div>
+            )}
+          </GameButtons>
+        </ThemeProvider>
         <BelowVisualization />
       </span>
     );
