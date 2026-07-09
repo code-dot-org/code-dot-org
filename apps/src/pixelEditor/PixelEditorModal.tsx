@@ -8,12 +8,7 @@ import React, {
 } from 'react';
 
 import ColorPicker from './ColorPicker';
-import {
-  crispScaleFor,
-  detectPixelGrid,
-  downsampleToGrid,
-  upscaleNearest,
-} from './pixelArt';
+import {crispScaleFor, downsampleToGrid, upscaleNearest} from './pixelArt';
 import {
   BRUSH_SIZES,
   drawCircle,
@@ -105,7 +100,12 @@ interface PixelEditorModalProps {
   title: string;
   // The image to edit (dataURI or URL; must be canvas-readable).
   imageUrl: string;
-  onSave: (dataURI: string) => void;
+  // Physical pixels per art pixel, when the image is known pixel art (e.g.
+  // recorded at generation time). > 1 opens the editor at the image's
+  // LOGICAL resolution. Absent/1 = edit at native resolution; the editor
+  // does no detection of its own.
+  knownPixelGrid?: number;
+  onSave: (dataURI: string, meta: {pixelGridSize?: number}) => void;
   onCancel: () => void;
 }
 
@@ -119,6 +119,7 @@ interface PixelEditorModalProps {
 const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   title,
   imageUrl,
+  knownPixelGrid,
   onSave,
   onCancel,
 }) => {
@@ -127,8 +128,8 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   const [color, setColor] = useState<RGBA>([31, 41, 71, 255]);
   const [loaded, setLoaded] = useState(false);
   const [loadError, setLoadError] = useState(false);
-  // True when the image depicts pixel art (a block grid was detected): the
-  // editor then works at the LOGICAL resolution — one edited pixel is one art
+  // True when the image is known pixel art (knownPixelGrid > 1): the editor
+  // then works at the LOGICAL resolution — one edited pixel is one art
   // pixel — and save re-upscales nearest-neighbor for crisp storage.
   const [pixelMode, setPixelMode] = useState(false);
   // Mirror for the stable repaint callback (which runs on every stroke).
@@ -178,9 +179,9 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
     }
   }, []);
 
-  // Load the image into the backing canvas and size the display. Images that
-  // depict pixel art (a detectable block grid — AI pixel-art output, or our
-  // own normalized assets) are edited at their LOGICAL resolution.
+  // Load the image into the backing canvas and size the display. Images
+  // known to be pixel art (knownPixelGrid > 1, recorded at generation) are
+  // edited at their LOGICAL resolution; everything else edits natively.
   //
   // Decode via fetch + createImageBitmap (native async decode, off the main
   // thread; also skips base64 string handling for dataURIs), falling back to
@@ -202,10 +203,24 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       backing.height = height;
       const ctx = backing.getContext('2d', {willReadFrequently: true});
       ctx?.drawImage(source, 0, 0);
-      const raster = ctx?.getImageData(0, 0, width, height);
-      const grid = raster ? detectPixelGrid(raster) : null;
-      if (raster && grid && (grid.sizeX > 1 || grid.sizeY > 1)) {
-        const logical = downsampleToGrid(raster, grid);
+      // Trust the metadata only when it divides the image cleanly (a resize
+      // elsewhere would otherwise smear the downsample).
+      const grid =
+        knownPixelGrid &&
+        knownPixelGrid > 1 &&
+        width % knownPixelGrid === 0 &&
+        height % knownPixelGrid === 0
+          ? knownPixelGrid
+          : null;
+      const raster = grid ? ctx?.getImageData(0, 0, width, height) : null;
+      if (raster && grid) {
+        const logical = downsampleToGrid(raster, {
+          sizeX: grid,
+          sizeY: grid,
+          offsetX: 0,
+          offsetY: 0,
+          confidence: 1,
+        });
         backing = document.createElement('canvas');
         backing.width = logical.width;
         backing.height = logical.height;
@@ -270,7 +285,7 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
     return () => {
       cancelled = true;
     };
-  }, [imageUrl]);
+  }, [imageUrl, knownPixelGrid]);
 
   // Single-key tool shortcuts (shown in each tool's tooltip). Modifier
   // combos pass through so browser shortcuts keep working.
@@ -492,11 +507,13 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
             0,
             0
           );
-        onSave(out.toDataURL('image/png'));
+        onSave(out.toDataURL('image/png'), {
+          pixelGridSize: crispScaleFor(backing.width, backing.height),
+        });
         return;
       }
     }
-    onSave(backing.toDataURL('image/png'));
+    onSave(backing.toDataURL('image/png'), {});
   }, [onSave, pixelMode]);
 
   // The backdrop appears immediately (the click responds); the panel mounts

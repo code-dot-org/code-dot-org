@@ -1,5 +1,8 @@
 import {generateText} from '@cdo/apps/aiGateway';
-import {normalizePixelArtBlob} from '@cdo/apps/pixelEditor/pixelArt';
+import {
+  crispScaleFor,
+  normalizePixelArtBlob,
+} from '@cdo/apps/pixelEditor/pixelArt';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
@@ -29,14 +32,27 @@ const STYLE_PROMPT: Record<SpriteLab2ItemStyle, string> = {
  * ~10-20px block (the model can't emit small canvases). Normalize: detect the
  * block grid, downsample to true logical resolution, and re-upscale
  * nearest-neighbor — uniform, edge-aligned blocks that the pixel editor can
- * edit at art-pixel granularity. Left unchanged when no grid is detected.
+ * edit at art-pixel granularity. Left unchanged (no grid size) when no grid
+ * is detected. The returned pixelGridSize (physical pixels per art pixel) is
+ * recorded on the animation so the editor never has to re-detect.
  */
-async function normalizeIfPixelArt(blob: Blob): Promise<Blob> {
+async function normalizeIfPixelArt(
+  blob: Blob
+): Promise<{blob: Blob; pixelGridSize?: number}> {
   try {
     const normalized = await normalizePixelArtBlob(blob);
-    return normalized ? normalized.blob : blob;
+    if (!normalized) {
+      return {blob};
+    }
+    return {
+      blob: normalized.blob,
+      pixelGridSize: crispScaleFor(
+        normalized.logicalWidth,
+        normalized.logicalHeight
+      ),
+    };
   } catch {
-    return blob;
+    return {blob};
   }
 }
 
@@ -51,7 +67,13 @@ export async function generateImage(
   prompt: string,
   itemType: SpriteLab2ItemType = 'sprite',
   style: SpriteLab2ItemStyle = 'smooth'
-): Promise<{filename: string; uint8Array: Uint8Array; mediaType: string}> {
+): Promise<{
+  filename: string;
+  uint8Array: Uint8Array;
+  mediaType: string;
+  // Set when pixel-style output was normalized: physical px per art pixel.
+  pixelGridSize?: number;
+}> {
   const styleClause = STYLE_PROMPT[style];
   let fullPrompt = `${prompt}. ${styleClause}`;
   if (itemType === 'sprite') {
@@ -78,14 +100,18 @@ export async function generateImage(
     let outBlob = await removeBackground(rawBlob, {
       soft: style === 'smooth',
     });
+    let pixelGridSize: number | undefined;
     if (style === 'pixel') {
-      outBlob = await normalizeIfPixelArt(outBlob);
+      const normalized = await normalizeIfPixelArt(outBlob);
+      outBlob = normalized.blob;
+      pixelGridSize = normalized.pixelGridSize;
     }
     const transparentBuffer = await outBlob.arrayBuffer();
     return {
       filename: `generated-${createUuid()}.png`,
       uint8Array: new Uint8Array(transparentBuffer),
       mediaType: 'image/png',
+      pixelGridSize,
     };
   }
 
@@ -95,11 +121,12 @@ export async function generateImage(
       {type: imageFile.mediaType}
     );
     const normalized = await normalizeIfPixelArt(rawBlob);
-    const buffer = await normalized.arrayBuffer();
+    const buffer = await normalized.blob.arrayBuffer();
     return {
       filename: `generated-${createUuid()}.png`,
       uint8Array: new Uint8Array(buffer),
       mediaType: 'image/png',
+      pixelGridSize: normalized.pixelGridSize,
     };
   }
 

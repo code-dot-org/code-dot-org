@@ -116,11 +116,8 @@ const GenerateImagePane: React.FunctionComponent = () => {
     setStatus('generating');
     setError(null);
     try {
-      const {filename, uint8Array, mediaType} = await generateImage(
-        prompt,
-        itemType,
-        style
-      );
+      const {filename, uint8Array, mediaType, pixelGridSize} =
+        await generateImage(prompt, itemType, style);
       const url = await uploadAssetToProject(
         channelId,
         filename,
@@ -141,6 +138,9 @@ const GenerateImagePane: React.FunctionComponent = () => {
           frameDelay: 2,
           looping: true,
           categories: itemType === 'background' ? [BACKGROUNDS_CATEGORY] : [],
+          // Recorded once here; the pixel editor trusts this instead of
+          // re-detecting the grid on every open.
+          pixelGridSize,
         }) as unknown as AnyAction
       );
       setName('');
@@ -189,7 +189,7 @@ const GenerateImagePane: React.FunctionComponent = () => {
   const handleEdit = useCallback((key: string) => setEditingKey(key), []);
 
   const handleEditorSave = useCallback(
-    async (dataURI: string) => {
+    async (dataURI: string, meta: {pixelGridSize?: number}) => {
       const key = editingKey;
       const props = editingProps;
       setEditingKey(null);
@@ -240,6 +240,7 @@ const GenerateImagePane: React.FunctionComponent = () => {
             sourceUrl,
             dataURI,
             ...(frameSize ? {frameSize, sourceSize: frameSize} : {}),
+            pixelGridSize: meta.pixelGridSize,
             loadedFromSource: true,
             saved: false,
           },
@@ -355,6 +356,9 @@ const GenerateImagePane: React.FunctionComponent = () => {
           // Edit the ORIGINAL image (untrimmed): trims are a display-time
           // optimization; the animation's pixels are the source of truth.
           imageUrl={editingProps.dataURI || editingProps.sourceUrl || ''}
+          // Recorded at generation time; images without it (legacy, smooth
+          // style) edit at native resolution.
+          knownPixelGrid={editingProps.pixelGridSize}
           onSave={handleEditorSave}
           onCancel={() => setEditingKey(null)}
         />

@@ -128,6 +128,9 @@ function getSerializedAnimationProps(animation) {
     'frameDelay',
     'version',
     'categories',
+    // Pixel-art grid metadata (SpriteLab2 pixel editor): physical pixels per
+    // art pixel. Absent on classic animations and non-pixel-art images.
+    'pixelGridSize',
   ]);
 }
 
