@@ -74,7 +74,6 @@ const GenerateImagePane: React.FunctionComponent = () => {
     try {
       const {filename, uint8Array, mediaType} = await generateImage(
         prompt,
-        channelId,
         itemType,
         style
       );
