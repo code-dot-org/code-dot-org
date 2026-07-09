@@ -10,10 +10,14 @@ import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 import SkipButton from './SkipButton';
 
 export const FinishButton = () => (
-  <button type="button" id="finishButton" className="share">
-    <img src="/blockly/media/1x1.gif" alt="" />
+  <MuiButton
+    id="finishButton"
+    variant="contained"
+    size="medium"
+    color="primary"
+  >
     {msg.finish()}
-  </button>
+  </MuiButton>
 );
 
 export const RunButton = props => (
