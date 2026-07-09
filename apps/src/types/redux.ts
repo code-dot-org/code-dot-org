@@ -39,15 +39,7 @@ import {LegacyLabsState} from '../redux/legacyLabs';
 // in order to make using the slice easier in components.
 // We cannot infer the type of our store because we programmatically add to the store
 // with registerReducers.
-// The classic p5lab locationPicker slice (drives the location-picker block).
-export interface LocationPickerState {
-  mode: string;
-  lastSelection?: {x: number; y: number};
-  requestTime?: number;
-}
-
 export interface RootState {
-  // The classic p5lab animationList slice, in its in-memory shape.
   animationList: RuntimeAnimationList;
   locationPicker: LocationPickerState;
   manageStudents: ManageStudentsState;
@@ -93,6 +85,13 @@ export interface RunState {
   isDebuggerPaused: boolean;
   stepSpeed: number;
   isDebuggingSprites: boolean;
+}
+
+// The classic p5lab locationPicker slice (drives the location-picker block).
+export interface LocationPickerState {
+  mode: string;
+  lastSelection?: {x: number; y: number};
+  requestTime?: number;
 }
 
 // Temporary type definition for the result of
