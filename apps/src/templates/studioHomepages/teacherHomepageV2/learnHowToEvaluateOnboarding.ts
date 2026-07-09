@@ -89,7 +89,7 @@ const buildQuizHtml = (studentNames: string[]): string => {
   return `
   <div class="onboarding-step-content">
     <i class="fa-solid fa-sparkle onboarding-sparkle-icon"></i>
-    <span class="onboarding-step-text">At a glance, you can see which students are cruising and which might be stuck. Look at the status icons — which student appears to be falling behind in their recent lessons?</span>
+    <span class="onboarding-step-text">At a glance, you can see each student's status across recent lessons. Based on the icon key above, which student may benefit from a check-in?</span>
   </div>
   <div class="quiz-options-grid">
     ${buttons}
@@ -113,7 +113,7 @@ export const createLearnHowToEvaluateHomepageSteps = (
         on: 'bottom',
       },
       text: withSparkle(
-        'Once a unit is underway, it’s hard to know at a glance who’s keeping up and who’s slipping. This is where you check. View progress to see where everyone stands.',
+        'Once a unit is underway, students move at different speeds. This is where you can view student progress at a glance once a unit is underway.',
         'Click View progress to continue.'
       ),
       when: {
@@ -199,7 +199,7 @@ export const createLearnHowToEvaluateProgressSteps = (
         on: 'right',
       },
       text: withSparkle(
-        'Seeing a student fall behind is one thing, understanding why is another. The Student Snapshot gives you the full picture.',
+        "Spotting a student's status is one thing, understanding the full story is another. The Student Snapshot gives you that detail. Click Student Snapshot to continue.",
         'Click Student Snapshot to continue.'
       ),
       buttons: [],
@@ -279,7 +279,7 @@ export const createLearnHowToEvaluateProgressSteps = (
       id: AI_FEEDBACK_STEP_ID,
       attachTo: {element: LESSON_FEEDBACK_WIDGET_SELECTOR, on: 'bottom'},
       text: withSparkle(
-        "The Teaching Assistant has already drafted feedback based on this student's work.  Review it, make it yours, and add a resource if they need extra support.  Then send it.  The student will see it the next time they log in."
+        "The Teaching Assistant has already drafted feedback based on this student's work. Review it, revise to make it yours, and add a resource if helpful.  Then send it — the student will see it in their notifications next time they log in."
       ),
       buttons: [nextButton(tour)],
       beforeShowPromise: () =>
