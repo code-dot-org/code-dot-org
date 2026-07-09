@@ -1,3 +1,4 @@
+import * as Observability from '@code-dot-org/core/plugins/observability';
 import {type ModelMessage} from 'ai';
 
 import {generateText} from '@cdo/apps/aiGateway';
@@ -44,6 +45,10 @@ export async function generateChatResponse(
 ) {
   // Check input for safety.
   const userInputSafe = await isTextSafe(newMessage.chatMessageText);
+  Observability.metrics.count('ai-chat.text_moderation', 1, {
+    phase: 'input_filter',
+    result: userInputSafe ? 'ok' : 'flagged',
+  });
   if (!userInputSafe) {
     return {status: AiRequestExecutionStatus.USER_PROFANITY};
   }
@@ -113,6 +118,11 @@ export async function generateChatResponse(
         file,
         buildAssetUrl(asset)
       );
+      Observability.metrics.count('ai-chat.image_moderation', 1, {
+        result: imageModerationStatus,
+        mediaType: file.mediaType,
+        model: modelParameters.selectedModelId,
+      });
       if (imageModerationStatus === 'flagged') {
         return {
           response: text,
@@ -129,6 +139,10 @@ export async function generateChatResponse(
 
   // Check model text output for safety.
   const modelOutputSafe = await isTextSafe(text);
+  Observability.metrics.count('ai-chat.text_moderation', 1, {
+    phase: 'output_filter',
+    result: modelOutputSafe ? 'ok' : 'flagged',
+  });
   if (!modelOutputSafe) {
     return {response: text, status: AiRequestExecutionStatus.MODEL_PROFANITY};
   }
