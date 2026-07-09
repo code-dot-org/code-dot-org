@@ -1,7 +1,7 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
-import {Reducer} from 'redux';
+import {AnyAction, Reducer} from 'redux';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
@@ -17,6 +17,7 @@ import {
   SET_INITIAL_ANIMATION_LIST,
   setInitialAnimationList,
 } from '@cdo/apps/p5lab/redux/animationList';
+import {cancelLocationSelection} from '@cdo/apps/p5lab/redux/locationPicker';
 import {getSerializedAnimationList} from '@cdo/apps/p5lab/shapes';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import pageConstants, {setPageConstants} from '@cdo/apps/redux/pageConstants';
@@ -35,6 +36,7 @@ import {SCENES_UI_VARIANT} from '../experiments';
 import {onTrimsUpdated} from '../imageTrim';
 import spriteLab2Reducer, {
   ExternalSceneOption,
+  resetSpriteLab2,
   setActiveSceneId,
   setActiveTab,
   setExternalScenes,
@@ -200,6 +202,16 @@ const SpriteLab2View: React.FunctionComponent<{
   const activeSceneIdRef = useRef<string | null>(null);
   const sceneMetadata = useAppSelector(state => state.spriteLab2.scenes);
   const activeSceneId = useAppSelector(state => state.spriteLab2.activeSceneId);
+
+  // Lab2 switches levels without a page reload; reset this lab's slice (and
+  // any in-flight location pick) when leaving a level or unmounting. Declared
+  // before the seed effect so on a level switch the reset lands first.
+  useEffect(() => {
+    return () => {
+      dispatch(resetSpriteLab2());
+      dispatch(cancelLocationSelection() as AnyAction);
+    };
+  }, [levelProperties.id, dispatch]);
 
   // Seed the animation list and (scenes variant) the scene lists — local and
   // section-mates' — from saved sources and the section-scenes API BEFORE the
