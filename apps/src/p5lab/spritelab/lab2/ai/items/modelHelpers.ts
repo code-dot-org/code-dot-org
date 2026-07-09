@@ -11,3 +11,7 @@ const googleProvider = createGoogleGenerativeAI({
 export function getImageModel() {
   return googleProvider(AiChatModelIds.GEMINI_2_5_FLASH_IMAGE);
 }
+
+export function getTextModel() {
+  return googleProvider(AiChatModelIds.GEMINI_2_5_FLASH);
+}
