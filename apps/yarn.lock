@@ -11600,7 +11600,6 @@ __metadata:
     grunt-contrib-watch: "npm:^1.1.0"
     grunt-exec: "npm:^3.0.0"
     grunt-newer: "npm:^1.3.0"
-    grunt-notify: "npm:0.4.5"
     grunt-sass: "npm:3.1.0"
     grunt-webpack: "npm:^6.0.0"
     hammerjs: "npm:^2.0.8"
@@ -17995,17 +17994,6 @@ canvg@gabelerner/canvg:
   peerDependencies:
     grunt: ">=0.4.1"
   checksum: 10/e03911a24a5ac0446316065203272a9ffffd886caad24494ac0e11d6303fd966b4eb4dea64cf40b3d9f9d9d0a468860e6962c2e9d3c537034187258d337adb49
-  languageName: node
-  linkType: hard
-
-"grunt-notify@npm:0.4.5":
-  version: 0.4.5
-  resolution: "grunt-notify@npm:0.4.5"
-  dependencies:
-    semver: "npm:^5.1.0"
-    stack-parser: "npm:^0.0.1"
-    which: "npm:^1.2.4"
-  checksum: 10/00bbaa0c0518f00b9c2022e4fb2d335776f50897d11918928606a6c9fb01e944605c340069098250a28e5a16b46aa96df78c144aee2b1565d3a19dd1834c7106
   languageName: node
   linkType: hard
 
@@ -27840,7 +27828,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"semver@npm:2 || 3 || 4 || 5, semver@npm:^5.1.0":
+"semver@npm:2 || 3 || 4 || 5":
   version: 5.3.0
   resolution: "semver@npm:5.3.0"
   bin:
@@ -28618,13 +28606,6 @@ canvg@gabelerner/canvg:
   dependencies:
     minipass: "npm:^7.0.3"
   checksum: 10/453f9a1c241c13f5dfceca2ab7b4687bcff354c3ccbc932f35452687b9ef0ccf8983fd13b8a3baa5844c1a4882d6e3ddff48b0e7fd21d743809ef33b80616d79
-  languageName: node
-  linkType: hard
-
-"stack-parser@npm:^0.0.1":
-  version: 0.0.1
-  resolution: "stack-parser@npm:0.0.1"
-  checksum: 10/e34830aebc52e7dd0de45ea3153fa31a467c5e5a41a3044df83c5d3f250ca78f7ecca3813aebf50ddb1563b50963d4a8b0a6bdeba2b43507d0a968c12376bd6b
   languageName: node
   linkType: hard
 
@@ -32046,7 +32027,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"which@npm:^1.2.1, which@npm:^1.2.4":
+"which@npm:^1.2.1":
   version: 1.2.11
   resolution: "which@npm:1.2.11"
   dependencies:
