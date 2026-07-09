@@ -1,11 +1,11 @@
 import vitest from '@vitest/eslint-plugin';
 import {globalIgnores} from 'eslint/config';
 
-import cdoReactConfig from '@code-dot-org/lint-config/eslint/react.mjs';
+import cdoLabConfig from '@code-dot-org/lint-config/eslint/lab.mjs';
 
 export default [
   globalIgnores(['dist']),
-  ...cdoReactConfig,
+  ...cdoLabConfig,
   // The migrated test suite calls vitest's global APIs (vitest.config sets
   // `globals: true`) from `.test.js` files. The shared vitest eslint config
   // only targets `.test.{ts,tsx}` and supplies the plugin rules but not the

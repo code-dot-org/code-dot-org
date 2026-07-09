@@ -2,6 +2,12 @@
 
 class Policies::DemoSections
   DEMO_TYPES = %i[high middle elementary].freeze
+
+  ARCHIVED_DEMO_TYPE = :archived
+  # ALL demo types including archived.
+  # Use `DEMO_TYPES` for the active demo types that can be created.
+  VALID_DEMO_TYPES = (DEMO_TYPES + [ARCHIVED_DEMO_TYPE]).freeze
+
   ALLTHETHINGS_UNIT_NAME = 'allthethings'
   ALLTHETHINGS_UNIT_GROUP_NAME = 'original-allthethings-course'
 
