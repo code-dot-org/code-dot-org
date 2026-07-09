@@ -1,7 +1,10 @@
 import {useMemo} from 'react';
 
 import {ResponseSchemaSettings} from '@cdo/apps/aichat/types';
-import {formatCopyPasteResponse} from '@cdo/apps/aiTutor/helpers/aiTutorResponseHelpers';
+import {
+  AiTutorCopyPasteResponse,
+  formatCopyPasteResponse,
+} from '@cdo/apps/aiTutor/helpers/aiTutorResponseHelpers';
 
 import {aiTutorResponseJsonSchema} from '../helpers/aiTutorStructuredResponseHelper';
 
@@ -13,16 +16,14 @@ export const useAiTutorResponseSchemaSettings = (): ResponseSchemaSettings => {
   return useMemo(() => {
     return {
       jsonSchema: aiTutorResponseJsonSchema,
-      responseCallback: (response: string) => {
-        try {
-          const jsonResponse = JSON.parse(response);
-          console.log('🤖: AI Tutor response (in jsonSchema callback):', {
-            jsonResponse,
-          });
-          return formatCopyPasteResponse(jsonResponse.answer);
-        } catch {
-          return response;
-        }
+      // Only ever invoked with the already-parsed jsonSchema response --
+      // submitChatContents parses it once, upstream of this callback.
+      jsonSchemaResponseCallback: (response: unknown) => {
+        const jsonResponse = response as {answer: AiTutorCopyPasteResponse};
+        console.log('🤖: AI Tutor response (in jsonSchema callback):', {
+          jsonResponse,
+        });
+        return formatCopyPasteResponse(jsonResponse.answer);
       },
     };
   }, []);
