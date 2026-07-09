@@ -14,6 +14,7 @@ import {getStore} from '@cdo/apps/redux';
 
 import {SCENES_UI_VARIANT} from '../experiments';
 import {getTrimmedThumbnail} from '../imageTrim';
+import {BACKGROUNDS_CATEGORY} from '../types';
 
 import sceneBlockDefinitions from './blockDefinitions';
 import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from './blockDefinitions/goToExternalScene';
@@ -145,7 +146,7 @@ function trimmedCostumeList(): [string, string][] {
   const results: [string, string][] = [];
   animationList.orderedKeys.forEach((key: string) => {
     const animation = animationList.propsByKey[key];
-    if ((animation.categories || []).includes('backgrounds')) {
+    if ((animation.categories || []).includes(BACKGROUNDS_CATEGORY)) {
       return;
     }
     const url =

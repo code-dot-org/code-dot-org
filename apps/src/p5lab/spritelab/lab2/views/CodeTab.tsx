@@ -75,11 +75,10 @@ const CodeTab = forwardRef<CodeTabHandle, CodeTabProps>(
     onSourceChangeRef.current = onSourceChange;
     onEditRef.current = onEdit;
     onIntermediateChangeRef.current = onIntermediateChange;
-    // Read via ref at inject time: initialSource's identity changes on every
-    // save (it's derived from currentSources), and in the scenes variant it's
-    // always scenes[0] — which may not be the scene open in the workspace —
-    // so neither re-injecting nor dance-style diff-reloading on change is
-    // correct here.
+    // Read via ref at inject time only: initialSource's identity changes on
+    // every save (it derives from currentSources), and in the scenes variant
+    // it's always scenes[0], which may not be the scene open in the
+    // workspace.
     const initialSourceRef = useRef(initialSource);
     initialSourceRef.current = initialSource;
 

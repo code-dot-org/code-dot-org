@@ -98,6 +98,9 @@ const DEFAULT_SCENE_SOURCE = defaultSources.source;
 
 const DEFAULT_WORLD_ID = 'world1';
 
+// Debounce between a workspace edit and the live-preview re-run.
+const RUN_DEBOUNCE_MS = 400;
+
 // Sprites come from the Items tab, so a new project starts with no animations.
 const EMPTY_ANIMATION_LIST = {orderedKeys: [], propsByKey: {}};
 
@@ -374,7 +377,7 @@ const SpriteLab2View: React.FunctionComponent<{
     if (runTimer.current) {
       window.clearTimeout(runTimer.current);
     }
-    runTimer.current = window.setTimeout(runProgram, 400);
+    runTimer.current = window.setTimeout(runProgram, RUN_DEBOUNCE_MS);
   }, [runProgram]);
 
   // Scenes UI variant: run one scene's program. The scene open in the Code tab

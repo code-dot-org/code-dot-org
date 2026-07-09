@@ -1,6 +1,9 @@
 // Client for the experimental cross-project scene APIs (scenes UI variant).
 // See dashboard SpriteLab2Controller.
 
+import HttpClient from '@cdo/apps/util/HttpClient';
+
+import {ExternalSceneOption} from './redux/spriteLab2Redux';
 import {SerializedAnimationList, SpriteLab2Scene} from './types';
 
 // One scene in a section-mate's project, as listed by the dropdown.
@@ -38,7 +41,7 @@ export function parseExternalSceneKey(
 // Dropdown options for a set of external scene refs.
 export function toExternalSceneOptions(
   refs: ExternalSceneRef[]
-): {key: string; label: string}[] {
+): ExternalSceneOption[] {
   return refs.map(ref => ({
     key: externalSceneKey(ref.channel, ref.sceneId),
     label: `${ref.sceneName} — ${ref.ownerName} · #${ref.channel.slice(0, 6)}`,
@@ -48,25 +51,19 @@ export function toExternalSceneOptions(
 export async function fetchSectionScenes(
   levelId: number | string
 ): Promise<ExternalSceneRef[]> {
-  const response = await fetch(
+  const {value} = await HttpClient.fetchJson<{scenes?: ExternalSceneRef[]}>(
     `/sprite_lab2/section_scenes?level_id=${levelId}`
   );
-  if (!response.ok) {
-    throw new Error(`section_scenes failed: ${response.status}`);
-  }
-  return (await response.json()).scenes || [];
+  return value.scenes || [];
 }
 
 export async function fetchExternalProject(
   channel: string
 ): Promise<ExternalProject> {
-  const response = await fetch(
+  const {value} = await HttpClient.fetchJson<ExternalProject>(
     `/sprite_lab2/external_scenes?channel=${encodeURIComponent(channel)}`
   );
-  if (!response.ok) {
-    throw new Error(`external_scenes failed: ${response.status}`);
-  }
-  return await response.json();
+  return value;
 }
 
 /**

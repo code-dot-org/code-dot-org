@@ -2,6 +2,7 @@ import {generateText} from '@cdo/apps/aiGateway';
 import {getStore} from '@cdo/apps/redux';
 
 import {buildPrompt} from '../blockly/generateContent';
+import {BACKGROUNDS_CATEGORY} from '../types';
 
 import {getTextModel} from './items/modelHelpers';
 
@@ -20,7 +21,7 @@ export function getAvailableImageNames(): {
     if (!props?.name) {
       return;
     }
-    if ((props.categories || []).includes('backgrounds')) {
+    if ((props.categories || []).includes(BACKGROUNDS_CATEGORY)) {
       backgrounds.push(props.name);
     } else {
       costumes.push(props.name);
@@ -41,9 +42,9 @@ function getSceneNames(): string[] {
 /**
  * Ask the AI to turn a natural-language request into Sprite Lab pseudocode
  * (Gemini 2.5 Flash), straight through the AI Gateway like the levelbuilder
- * generator tools. Returns the generated pseudocode text.
- * Note: the aichat moderation pipeline (profanity/PII verdicts) no longer
- * applies on this path.
+ * generator tools. Returns the generated pseudocode text. Prompt safety is
+ * whatever the gateway enforces; the aichat moderation pipeline is not on
+ * this path.
  */
 export default async function askSpriteLabAi(
   userPrompt: string

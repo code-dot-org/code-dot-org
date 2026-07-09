@@ -1,7 +1,10 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import {SPRITE_LAB2_TABS, SpriteLab2Tab} from '../../redux/spriteLab2Redux';
+import {
+  SPRITE_LAB2_TABS,
+  SpriteLab2Tab,
+} from '@cdo/apps/p5lab/spritelab/lab2/redux/spriteLab2Redux';
 
 import moduleStyles from '../sprite-lab2-view.module.scss';
 

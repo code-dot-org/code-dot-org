@@ -3,6 +3,7 @@ import * as BlocklyCore from 'blockly/core';
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 import {getStore} from '@cdo/apps/redux';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 import SpriteLab from '../SpriteLab';
 
@@ -218,7 +219,7 @@ export default class SpriteLab2Engine extends SpriteLab {
         if (this.studioApp_.libraries[name]) {
           return;
         }
-        const response = await fetch('/libraries/' + name);
+        const response = await HttpClient.get('/libraries/' + name);
         this.studioApp_.libraries[name] = await response.text();
       })
     );

@@ -17,10 +17,9 @@ import {
   uploadAssetToProject,
 } from '../ai/items/itemGeneration';
 import {getTrimmedThumbnail, onTrimsUpdated} from '../imageTrim';
+import {BACKGROUNDS_CATEGORY} from '../types';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
-
-const BACKGROUNDS_CATEGORY = 'backgrounds';
 
 // Read an image's pixel dimensions so the animation's frameSize matches the
 // generated PNG (single frame).

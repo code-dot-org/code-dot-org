@@ -4,9 +4,7 @@
 // images are preloaded for the runtime — saved project data is untouched, so
 // it covers existing images too.
 
-import {RuntimeAnimationList} from './types';
-
-const BACKGROUNDS_CATEGORY = 'backgrounds';
+import {BACKGROUNDS_CATEGORY, RuntimeAnimationList} from './types';
 
 // Alpha above which a pixel counts as content (matches soft-matte fringes
 // without letting near-invisible pixels defeat the trim).
