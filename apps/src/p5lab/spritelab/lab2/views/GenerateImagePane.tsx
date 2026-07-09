@@ -157,6 +157,17 @@ const GenerateImagePane: React.FunctionComponent = () => {
       if (!key || !props) {
         return;
       }
+      // Pixel-art edits can change resolution (logical downsample + crisp
+      // upscale); keep the animation's frame metadata truthful.
+      const frameSize = await new Promise<{x: number; y: number} | null>(
+        resolve => {
+          const img = new Image();
+          img.onload = () =>
+            resolve({x: img.naturalWidth, y: img.naturalHeight});
+          img.onerror = () => resolve(null);
+          img.src = dataURI;
+        }
+      );
       let sourceUrl = dataURI;
       if (channelId) {
         try {
@@ -189,6 +200,7 @@ const GenerateImagePane: React.FunctionComponent = () => {
             ...current.propsByKey[key],
             sourceUrl,
             dataURI,
+            ...(frameSize ? {frameSize, sourceSize: frameSize} : {}),
             loadedFromSource: true,
             saved: false,
           },

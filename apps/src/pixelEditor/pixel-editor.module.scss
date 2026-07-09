@@ -88,6 +88,11 @@
   background-color: currentColor;
 }
 
+// Pixel-art mode: the brush is a hard square, so say so.
+.brushDotSquare {
+  border-radius: 1px;
+}
+
 .canvasArea {
   display: flex;
   align-items: center;

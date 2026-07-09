@@ -3,6 +3,12 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import ColorPicker from './ColorPicker';
 import {
+  crispScaleFor,
+  detectPixelGrid,
+  downsampleToGrid,
+  upscaleNearest,
+} from './pixelArt';
+import {
   BRUSH_SIZES,
   drawCircle,
   floodFill,
@@ -99,6 +105,10 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   const [color, setColor] = useState<RGBA>([31, 41, 71, 255]);
   const [loaded, setLoaded] = useState(false);
   const [loadError, setLoadError] = useState(false);
+  // True when the image depicts pixel art (a block grid was detected): the
+  // editor then works at the LOGICAL resolution — one edited pixel is one art
+  // pixel — and save re-upscales nearest-neighbor for crisp storage.
+  const [pixelMode, setPixelMode] = useState(false);
 
   const displayRef = useRef<HTMLCanvasElement | null>(null);
   // Backing canvas at native image resolution: the single source of truth.
@@ -129,15 +139,40 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
     }
   }, []);
 
-  // Load the image into the backing canvas and size the display.
+  // Load the image into the backing canvas and size the display. Images that
+  // depict pixel art (a detectable block grid — AI pixel-art output, or our
+  // own normalized assets) are edited at their LOGICAL resolution.
   useEffect(() => {
     const img = new Image();
     img.crossOrigin = 'anonymous';
     img.onload = () => {
-      const backing = document.createElement('canvas');
+      let backing = document.createElement('canvas');
       backing.width = img.naturalWidth;
       backing.height = img.naturalHeight;
       backing.getContext('2d')?.drawImage(img, 0, 0);
+      const ctx = backing.getContext('2d');
+      const raster = ctx?.getImageData(0, 0, backing.width, backing.height);
+      const grid = raster ? detectPixelGrid(raster) : null;
+      if (raster && grid && (grid.sizeX > 1 || grid.sizeY > 1)) {
+        const logical = downsampleToGrid(raster, grid);
+        backing = document.createElement('canvas');
+        backing.width = logical.width;
+        backing.height = logical.height;
+        backing
+          .getContext('2d')
+          ?.putImageData(
+            new ImageData(
+              new Uint8ClampedArray(logical.data),
+              logical.width,
+              logical.height
+            ),
+            0,
+            0
+          );
+        setPixelMode(true);
+      } else {
+        setPixelMode(false);
+      }
       backingRef.current = backing;
       const preview = document.createElement('canvas');
       preview.width = backing.width;
@@ -316,8 +351,36 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
     if (!backing) {
       return;
     }
+    if (pixelMode) {
+      // Store crisp: nearest-neighbor upscale of the logical pixels, so the
+      // runtime renders sharply without engine smoothing changes.
+      const ctx = backing.getContext('2d');
+      if (ctx) {
+        const logical = ctx.getImageData(0, 0, backing.width, backing.height);
+        const crisp = upscaleNearest(
+          logical,
+          crispScaleFor(backing.width, backing.height)
+        );
+        const out = document.createElement('canvas');
+        out.width = crisp.width;
+        out.height = crisp.height;
+        out
+          .getContext('2d')
+          ?.putImageData(
+            new ImageData(
+              new Uint8ClampedArray(crisp.data),
+              crisp.width,
+              crisp.height
+            ),
+            0,
+            0
+          );
+        onSave(out.toDataURL('image/png'));
+        return;
+      }
+    }
     onSave(backing.toDataURL('image/png'));
-  }, [onSave]);
+  }, [onSave, pixelMode]);
 
   return (
     <div className={moduleStyles.overlay}>
@@ -356,7 +419,11 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
                 onClick={() => setBrushSize(size)}
               >
                 <span
-                  className={moduleStyles.brushDot}
+                  className={classNames(
+                    moduleStyles.brushDot,
+                    // Cute: square brush swatches when editing pixel art.
+                    pixelMode && moduleStyles.brushDotSquare
+                  )}
                   style={{width: 3 + size * 1.6, height: 3 + size * 1.6}}
                 />
               </button>

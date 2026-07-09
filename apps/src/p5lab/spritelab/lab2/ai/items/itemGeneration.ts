@@ -1,4 +1,5 @@
 import {generateText} from '@cdo/apps/aiGateway';
+import {normalizePixelArtBlob} from '@cdo/apps/pixelEditor/pixelArt';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
@@ -17,9 +18,27 @@ export type SpriteLab2ItemStyle = 'smooth' | 'pixel';
 const STYLE_PROMPT: Record<SpriteLab2ItemStyle, string> = {
   pixel:
     'Render as crisp pixel art with a small, limited color palette and ' +
-    'hard-edged pixels — no anti-aliasing, gradients, or soft shading.',
+    'hard-edged pixels — no anti-aliasing, gradients, or soft shading. ' +
+    'Draw on a strict 64x64 pixel grid: every logical pixel is a uniform ' +
+    '16x16 block, perfectly aligned to the image edges.',
   smooth: 'Render as a smooth, cleanly-shaded illustration.',
 };
+
+/**
+ * Pixel-style output depicts pixel art at ~1024x1024 with one art pixel per
+ * ~10-20px block (the model can't emit small canvases). Normalize: detect the
+ * block grid, downsample to true logical resolution, and re-upscale
+ * nearest-neighbor — uniform, edge-aligned blocks that the pixel editor can
+ * edit at art-pixel granularity. Left unchanged when no grid is detected.
+ */
+async function normalizeIfPixelArt(blob: Blob): Promise<Blob> {
+  try {
+    const normalized = await normalizePixelArtBlob(blob);
+    return normalized ? normalized.blob : blob;
+  } catch {
+    return blob;
+  }
+}
 
 /**
  * Generate an image from a text prompt using gemini-2.5-flash-image, straight
@@ -56,13 +75,30 @@ export async function generateImage(
       [new Uint8Array(imageFile.uint8Array).buffer as ArrayBuffer],
       {type: imageFile.mediaType}
     );
-    const transparentBlob = await removeBackground(rawBlob, {
+    let outBlob = await removeBackground(rawBlob, {
       soft: style === 'smooth',
     });
-    const transparentBuffer = await transparentBlob.arrayBuffer();
+    if (style === 'pixel') {
+      outBlob = await normalizeIfPixelArt(outBlob);
+    }
+    const transparentBuffer = await outBlob.arrayBuffer();
     return {
       filename: `generated-${createUuid()}.png`,
       uint8Array: new Uint8Array(transparentBuffer),
+      mediaType: 'image/png',
+    };
+  }
+
+  if (style === 'pixel') {
+    const rawBlob = new Blob(
+      [new Uint8Array(imageFile.uint8Array).buffer as ArrayBuffer],
+      {type: imageFile.mediaType}
+    );
+    const normalized = await normalizeIfPixelArt(rawBlob);
+    const buffer = await normalized.arrayBuffer();
+    return {
+      filename: `generated-${createUuid()}.png`,
+      uint8Array: new Uint8Array(buffer),
       mediaType: 'image/png',
     };
   }
