@@ -61,11 +61,11 @@
 
 // The design-system tooltip portals to <body> at z-index 10, which is under
 // this modal's overlay (z-index 1100); lift ours above it. The nudge right
-// places the bubble (and its tail) over the image being edited instead of
-// over the dark gap between the toolbar and the canvas.
+// puts the bubble's left edge 4px past the canvas edge, so the tail reads
+// against the image being edited rather than the dark toolbar gap.
 .pixelTooltip {
   z-index: 1200;
-  margin-left: 22px;
+  margin-left: 16px;
 }
 
 .toolButton {
@@ -209,7 +209,8 @@
 .spectrumPopover {
   position: absolute;
   bottom: 0;
-  left: 40px;
+  // Same alignment as the tooltips: left edge 4px past the canvas edge.
+  left: 48px;
   z-index: 10;
   padding: 6px;
   border: 1px solid rgb(255 255 255 / 15%);
