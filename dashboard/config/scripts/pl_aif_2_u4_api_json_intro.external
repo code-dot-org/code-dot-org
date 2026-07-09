@@ -16,12 +16,12 @@ So how does an app “ask” another service for information?
 - What might an app need to “ask for” instead of storing itself?
 - Why might an app use another service instead of building everything on its own?
 
-👉 **What kinds of apps do you use that rely on live, changing information?**
+**What kinds of apps do you use that rely on live, changing information?**
 
 <div style="clear:both;"></div>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 12pt; font-weight: bold;">💡 Check your thinking:</summary>
+    <summary style="font-size: 12pt; font-weight: bold;">🔎 Check your thinking:</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
     <p style="font-size: 12pt;">
 Many apps don’t store all the information they show. Instead, they pull live data from another service, like weather forecasts, maps, or movie times. That means the app has to communicate with another system to request the data and receive it back.
