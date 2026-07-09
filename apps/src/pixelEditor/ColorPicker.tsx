@@ -73,6 +73,23 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
     return () => document.removeEventListener('pointerdown', onPointerDown);
   }, [open]);
 
+  // While the palette is open, Escape closes just the palette: capture phase
+  // + stopPropagation keep the modal's own bubble-phase Escape handler
+  // (which cancels the whole editor) from also firing.
+  useEffect(() => {
+    if (!open) {
+      return;
+    }
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.stopPropagation();
+        setOpen(false);
+      }
+    };
+    document.addEventListener('keydown', onKeyDown, true);
+    return () => document.removeEventListener('keydown', onKeyDown, true);
+  }, [open]);
+
   const pick = useCallback(
     (e: React.PointerEvent<HTMLCanvasElement>) => {
       const canvas = canvasRef.current;

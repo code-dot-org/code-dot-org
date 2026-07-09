@@ -162,7 +162,7 @@ function detectAxisLenient(
 
 // When the style choice already says "pixel art" and detection can't find a
 // trustworthy grid, fall back to the block size the generation prompt asks
-// for (see itemGeneration's STYLE_PROMPT: 16x16 blocks on a 64x64 grid).
+// for (itemGeneration builds its STYLE_PROMPT from this constant).
 export const ASSUMED_BLOCK = 16;
 
 /** Offset that aligns the most edge weight for a FIXED block size. */

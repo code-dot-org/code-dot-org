@@ -1,3 +1,7 @@
+import {
+  useEscapeKeyHandler,
+  useFocusTrap,
+} from '@code-dot-org/component-library/common/hooks';
 import classNames from 'classnames';
 import React, {
   useCallback,
@@ -116,6 +120,31 @@ const DEFAULT_COLOR: RGBA = [31, 41, 71, 255];
 
 // Brush-size swatch dot: rendered edge in px for brush size N.
 const brushDotPx = (size: number) => 3 + size * 1.6;
+
+// Dialog chrome: focus is trapped inside while open (and restored to the
+// trigger on close), Escape cancels. A separate component so the hooks run
+// when the panel mounts — after the image decodes — not when the overlay
+// first appears.
+const DialogChrome: React.FunctionComponent<{
+  title: string;
+  onCancel: () => void;
+  children: React.ReactNode;
+}> = ({title, onCancel, children}) => {
+  const modalRef = useRef<HTMLDivElement>(null);
+  useFocusTrap(modalRef);
+  useEscapeKeyHandler(onCancel);
+  return (
+    <div
+      ref={modalRef}
+      className={moduleStyles.modal}
+      role="dialog"
+      aria-modal="true"
+      aria-label={title}
+    >
+      {children}
+    </div>
+  );
+};
 
 interface PixelEditorModalProps {
   title: string;
@@ -562,7 +591,7 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
 
   return (
     <div className={moduleStyles.overlay}>
-      <div className={moduleStyles.modal}>
+      <DialogChrome title={title} onCancel={onCancel}>
         <div className={moduleStyles.header}>{title}</div>
         <div className={moduleStyles.body}>
           <div className={moduleStyles.toolbar}>
@@ -646,7 +675,7 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
             Save
           </button>
         </div>
-      </div>
+      </DialogChrome>
     </div>
   );
 };

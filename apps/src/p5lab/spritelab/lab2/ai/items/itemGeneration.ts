@@ -1,5 +1,6 @@
 import {generateText} from '@cdo/apps/aiGateway';
 import {
+  ASSUMED_BLOCK,
   crispScaleFor,
   normalizePixelArtBlob,
 } from '@cdo/apps/pixelEditor/pixelArt';
@@ -16,14 +17,22 @@ export type SpriteLab2ItemType = 'sprite' | 'background';
 // anti-aliased cut). See removeBackground's MatteOptions.
 export type SpriteLab2ItemStyle = 'smooth' | 'pixel';
 
-// Tacked onto the prompt so the generated image matches the chosen style. Kept
-// here (not inline) so the sprite and background prompts stay in sync.
+// The model outputs images at roughly this size; with ASSUMED_BLOCK-px
+// blocks, that makes the logical canvas the prompt asks for.
+const MODEL_OUTPUT_PX = 1024;
+const PROMPT_LOGICAL_GRID = MODEL_OUTPUT_PX / ASSUMED_BLOCK;
+
+// Tacked onto the prompt so the generated image matches the chosen style.
+// Kept here (not inline) so the sprite and background prompts stay in sync.
+// The pixel prompt requests the same block size detection falls back to
+// (ASSUMED_BLOCK), so an undetectable grid still matches what was asked for.
 const STYLE_PROMPT: Record<SpriteLab2ItemStyle, string> = {
   pixel:
     'Render as crisp pixel art with a small, limited color palette and ' +
     'hard-edged pixels — no anti-aliasing, gradients, or soft shading. ' +
-    'Draw on a strict 64x64 pixel grid: every logical pixel is a uniform ' +
-    '16x16 block, perfectly aligned to the image edges.',
+    `Draw on a strict ${PROMPT_LOGICAL_GRID}x${PROMPT_LOGICAL_GRID} pixel ` +
+    `grid: every logical pixel is a uniform ${ASSUMED_BLOCK}x` +
+    `${ASSUMED_BLOCK} block, perfectly aligned to the image edges.`,
   smooth: 'Render as a smooth, cleanly-shaded illustration.',
 };
 
