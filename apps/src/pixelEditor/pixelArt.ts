@@ -115,12 +115,16 @@ function detectAxis(
         }
       }
       const score = aligned / total;
-      // Prefer LARGER sizes among near-ties: a true 16px grid also aligns
-      // perfectly to 8px, and we want the coarsest grid that explains the
-      // edges.
-      if (!best || score > best.score + 0.02) {
+      // Prefer LARGER sizes among true ties: a perfect 16px grid also aligns
+      // perfectly to 8px (16-multiples are 8-multiples), so equal scores go
+      // to the coarser grid. But only on >=: real art has flat regions, so a
+      // 2x harmonic scores nearly as well as the true grid (e.g. 0.90 vs
+      // 0.92 on real model output) — a "within epsilon" upgrade jumps to the
+      // harmonic on one axis, fails the squareness check, and rejects a
+      // perfectly good grid.
+      if (!best || score > best.score) {
         best = {size, offset, score};
-      } else if (score >= best.score - 0.02 && size > best.size) {
+      } else if (score >= best.score && size > best.size) {
         best = {size, offset, score};
       }
     }
