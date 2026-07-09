@@ -23,8 +23,11 @@ export default defineConfig({
   },
   build: {
     lib: {
+      // Object-form entry so the fixtures chunk emits at dist/fixtures/index.*
+      // alongside dist/index.* — the `./mocks` export subpath resolves to it.
       entry: {
         index: 'src/index.ts',
+        'fixtures/index': 'src/fixtures/index.ts',
       },
       name: 'accounts',
       formats: ['es', 'cjs'],
