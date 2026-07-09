@@ -210,16 +210,6 @@ const GenerateImagePane: React.FunctionComponent = () => {
         <strong className={moduleStyles.generateHeading}>
           Generate an image with AI
         </strong>
-        <label className={moduleStyles.field}>
-          <span>Description</span>
-          <input
-            type="text"
-            value={prompt}
-            placeholder="e.g. a friendly green dragon"
-            onChange={e => setPrompt(e.target.value)}
-            disabled={generating}
-          />
-        </label>
         <div className={moduleStyles.fieldRow}>
           <label
             className={classNames(moduleStyles.field, moduleStyles.fieldGrow)}
@@ -254,6 +244,20 @@ const GenerateImagePane: React.FunctionComponent = () => {
               <option value="smooth">Smooth</option>
               <option value="pixel">Pixel art</option>
             </select>
+          </label>
+        </div>
+        <div className={moduleStyles.fieldRow}>
+          <label
+            className={classNames(moduleStyles.field, moduleStyles.fieldGrow)}
+          >
+            <span>Description</span>
+            <input
+              type="text"
+              value={prompt}
+              placeholder="e.g. a friendly green dragon"
+              onChange={e => setPrompt(e.target.value)}
+              disabled={generating}
+            />
           </label>
           <MuiButton
             type="button"

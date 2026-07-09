@@ -116,6 +116,9 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
                 pick(e);
               }
             }}
+            // The pick is done when the press ends (a drag can refine the
+            // color first); dismiss the picker.
+            onPointerUp={() => setOpen(false)}
           />
         </div>
       )}
