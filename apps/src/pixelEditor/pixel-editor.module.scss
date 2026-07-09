@@ -92,7 +92,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: auto;
+  // Never scroll: the canvas is bounded below so the whole image is always
+  // visible and editable.
+  overflow: hidden;
   border: 1px solid rgb(255 255 255 / 12%);
   border-radius: 6px;
   // Checkerboard under transparency, matching the lab's soft look.
@@ -117,6 +119,12 @@
 
 .displayCanvas {
   display: block;
+  // The canvas's internal resolution is an integer upscale of the image;
+  // these caps scale the ELEMENT down to fit (aspect preserved, since a
+  // canvas is a replaced element), so any image fits without scrolling.
+  // Pointer mapping uses the rendered rect, so fractional scaling is fine.
+  max-width: min(72vw, 520px);
+  max-height: min(62vh, 520px);
   image-rendering: pixelated;
   cursor: crosshair;
   touch-action: none;
