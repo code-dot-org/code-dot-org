@@ -467,7 +467,7 @@ module.exports = function (grunt) {
     // JS files watched by webpack
     style: {
       files: ['style/**/*.scss', 'style/**/*.sass'],
-      tasks: ['newer:sass', 'notify:sass'],
+      tasks: ['newer:sass'],
       options: {
         interval: DEV_WATCH_INTERVAL,
         interrupt: true,
@@ -475,21 +475,21 @@ module.exports = function (grunt) {
     },
     content: {
       files: ['static/**/*'],
-      tasks: ['newer:copy', 'notify:content'],
+      tasks: ['newer:copy'],
       options: {
         interval: DEV_WATCH_INTERVAL,
       },
     },
     vendor_js: {
       files: ['lib/**/*.js'],
-      tasks: ['newer:copy:lib', 'notify:vendor_js'],
+      tasks: ['newer:copy:lib'],
       options: {
         interval: DEV_WATCH_INTERVAL,
       },
     },
     messages: {
       files: ['i18n/**/*.json'],
-      tasks: ['messages', 'notify:messages'],
+      tasks: ['messages'],
       options: {
         interval: DEV_WATCH_INTERVAL,
       },
@@ -504,15 +504,6 @@ module.exports = function (grunt) {
         logConcurrentOutput: true,
       },
     },
-  };
-
-  config.notify = {
-    'js-build': {options: {message: 'JS build completed.'}},
-    sass: {options: {message: 'SASS build completed.'}},
-    content: {options: {message: 'Content build completed.'}},
-    ejs: {options: {message: 'EJS build completed.'}},
-    messages: {options: {message: 'i18n messages build completed.'}},
-    vendor_js: {options: {message: 'vendor JS copy done.'}},
   };
 
   grunt.initConfig(config);
@@ -622,7 +613,6 @@ module.exports = function (grunt) {
     // exist in our repo. Skip minification in development environment.
     envConstants.DEV ? 'noop' : 'uglify:lib',
     envConstants.DEV ? 'webpack:build' : 'webpack:uglify',
-    'notify:js-build',
     'postbuild',
     envConstants.DEV ? 'noop' : 'newer:copy:unhash',
   ]);
