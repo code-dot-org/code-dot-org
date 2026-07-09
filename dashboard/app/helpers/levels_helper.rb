@@ -20,8 +20,6 @@ module LevelsHelper
     params ||= {}
     if script_level.script.name == Unit::HOC_NAME
       hoc_chapter_path(script_level.chapter, params)
-    elsif script_level.script.name == Unit::UI_TEST_HOC_NAME
-      ui_test_hoc_chapter_path(script_level.chapter, params)
     elsif script_level.script.name == Unit::FLAPPY_NAME
       flappy_chapter_path(script_level.chapter, params)
     elsif params[:puzzle_page]
@@ -53,8 +51,6 @@ module LevelsHelper
     # /courses/.../units/...
     if script_level.script.name == Unit::HOC_NAME
       hoc_chapter_path(script_level.chapter, params)
-    elsif script_level.script.name == Unit::UI_TEST_HOC_NAME
-      ui_test_hoc_chapter_path(script_level.chapter, params)
     elsif script_level.script.name == Unit::FLAPPY_NAME
       flappy_chapter_path(script_level.chapter, params)
     elsif params[:puzzle_page]

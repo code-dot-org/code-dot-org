@@ -1,7 +1,7 @@
 Feature: Clear Puzzle
 
 Background:
-  Given I am on "http://studio.code.org/ui-test-hoc/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/ui-test-csf/units/1/lessons/1/levels/4?noautoplay=true"
   And I wait for the lab page to fully load
   Then element "#runButton" is visible
   And element "#resetButton" is hidden

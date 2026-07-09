@@ -7525,12 +7525,6 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
-        ui-test-hourofcode:
-          title: UI Test Classic Maze
-          description_short: ''
-          description_student: ''
-          description_teacher: ''
-          version_title: ''
         ui-test-oceans:
           title: UI Test Oceans
           description_short: UI Test Oceans Course Short Description

@@ -62,7 +62,7 @@ export class LegacyBlocklyLab extends LessonLevelPage {
 
   /**
    * Navigate to an arbitrary level URL and wait for the lab. For levels whose
-   * shape labLevelUrl does not model — standalone /ui-test-hoc/N paths, or course levels
+   * shape labLevelUrl does not model — standalone /hoc/N paths, or course levels
    * carrying extra query params (e.g. show_callouts). Same wait strategy as
    * gotoLevel; prefer gotoLevel when labLevelUrl can build the URL.
    */
