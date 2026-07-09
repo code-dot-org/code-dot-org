@@ -225,44 +225,6 @@ div.droplet-palette-group-header-selected.orange {
   min-height: 25px;
 }
 
-button.arrow {
-  border: 1px solid #ffa000;
-  background-color: #ffa000;
-  color: #fff;
-  margin: 5px 0;
-  margin-inline-end: 9px;
-  display: none;
-}
-button.arrow > img {
-  opacity: 1;
-  vertical-align: text-bottom;
-}
-button.arrow:disabled {
-  border: 1px solid $neutral_dark20;
-  background-color: $neutral_dark20;
-  color: $neutral_dark20;
-}
-
-#soft-buttons {
-  display: inline-block;
-  vertical-align: top;
-  -webkit-touch-callout: none;
-  &.soft-buttons-compact {
-    margin: 0;
-    button {
-      margin: 0;
-      margin-inline-end: 4px;
-    }
-  }
-  :last-child {
-    margin-inline-end: 0;
-  }
-
-  @supports not (gap: 0 9px) {
-    padding-inline-end: 9px;
-  }
-}
-
 .soft-buttons-1 {
   display: table-cell;
   vertical-align: top;
@@ -593,7 +555,7 @@ input[type="radio"] {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 0 9px;
+  gap: .5rem;
 }
 
 #gameButtons:after {
@@ -1674,9 +1636,6 @@ div.WireframeButtons_active {
     padding: 4px 5%;
     #right-button-cell {
       display: none; /* don't show Finish button in share view */
-    }
-    #soft-buttons button {
-      margin: 5px 1px;
     }
   }
 

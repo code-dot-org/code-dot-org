@@ -25,7 +25,7 @@ class CompletionButton extends Component {
     let divClass = 'share-cell-none';
 
     if (this.props.isProjectLevel) {
-      return <div />;
+      return;
     }
 
     if (this.props.isSubmittable || this.props.isSubmitted) {
