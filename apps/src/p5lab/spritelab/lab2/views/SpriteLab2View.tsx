@@ -287,9 +287,8 @@ const SpriteLab2View: React.FunctionComponent<{
     return () => {
       cancelled = true;
     };
-    // Re-seed only when the level changes.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [levelProperties.id]);
+    // Re-seeds only when the level changes (dispatch is store-stable).
+  }, [levelProperties.id, dispatch]);
 
   // Instantiate the p5.play engine once. Unlike classic Sprite Lab we don't
   // auto-load the legacy default sprite library; SpriteLab2 sprites come from
@@ -320,9 +319,9 @@ const SpriteLab2View: React.FunctionComponent<{
       engineRef.current?.destroy();
       engineRef.current = null;
     };
-    // Re-create the engine only when the level changes.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [levelProperties.id]);
+    // levelProperties' identity changes only on level load, so this
+    // re-creates the engine once per level (same keying as dance).
+  }, [levelProperties]);
 
   // Persist animation-editor changes (costumes/backgrounds added or edited in
   // the Items tab) back to project sources in the classic serialized shape.

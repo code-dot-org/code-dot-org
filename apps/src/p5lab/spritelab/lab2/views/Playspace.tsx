@@ -1,3 +1,4 @@
+import * as BlocklyCore from 'blockly/core';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {AnyAction} from 'redux';
 
@@ -81,11 +82,11 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       setGhostCostume(null);
       return;
     }
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const selected = (Blockly as any).getSelected?.();
+    const selected = BlocklyCore.common.getSelected();
+    const block = selected instanceof BlocklyCore.BlockSvg ? selected : null;
     const costumeValue =
-      selected?.getFieldValue?.('ANIMATION_NAME') ||
-      selected?.getParent?.()?.getFieldValue?.('ANIMATION_NAME');
+      block?.getFieldValue('ANIMATION_NAME') ||
+      block?.getParent()?.getFieldValue('ANIMATION_NAME');
     // Costume field values are quoted names, e.g. '"owl_1"'.
     setGhostCostume(
       typeof costumeValue === 'string'

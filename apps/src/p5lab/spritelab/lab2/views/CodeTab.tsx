@@ -75,6 +75,13 @@ const CodeTab = forwardRef<CodeTabHandle, CodeTabProps>(
     onSourceChangeRef.current = onSourceChange;
     onEditRef.current = onEdit;
     onIntermediateChangeRef.current = onIntermediateChange;
+    // Read via ref at inject time: initialSource's identity changes on every
+    // save (it's derived from currentSources), and in the scenes variant it's
+    // always scenes[0] — which may not be the scene open in the workspace —
+    // so neither re-injecting nor dance-style diff-reloading on change is
+    // correct here.
+    const initialSourceRef = useRef(initialSource);
+    initialSourceRef.current = initialSource;
 
     useImperativeHandle(ref, () => ({
       getCode: () =>
@@ -169,10 +176,10 @@ const CodeTab = forwardRef<CodeTabHandle, CodeTabProps>(
       blocklyDiv.style.height = '100%';
       Blockly.svgResize(workspace.current);
 
-      if (initialSource) {
+      if (initialSourceRef.current) {
         loadBlocksToWorkspace(
           workspace.current as BlocklyCore.WorkspaceSvg,
-          JSON.stringify(initialSource)
+          JSON.stringify(initialSourceRef.current)
         );
       }
 
@@ -213,9 +220,8 @@ const CodeTab = forwardRef<CodeTabHandle, CodeTabProps>(
         workspace.current?.dispose();
         workspace.current = null;
       };
-      // Re-inject only when the level/blocks/theme change, not on every callback
-      // identity change.
-      // eslint-disable-next-line react-hooks/exhaustive-deps
+      // Re-injects only when the level's blocks/toolbox or the theme change;
+      // callbacks and initialSource are read through refs.
     }, [sharedBlocks, toolboxDefinition, toolboxXml, theme]);
 
     return <div id={BLOCKLY_DIV_ID} className={moduleStyles.blocklyDiv} />;
