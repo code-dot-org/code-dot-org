@@ -26460,13 +26460,17 @@ en:
           description_audience: ''
           description_short: ''
           description: |-
-            #### This professional learning module prepares you to teach **Unit 4: Iterating with AI**, a unit where students advance from managing single interactions to processing entire collections of data using iteration and loops.
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 4</span>
 
-            ####**Suggested Time**: 90 minutes
+            This professional learning module prepares you to teach ** Iterating with AI**, a unit where students advance from managing single interactions to processing entire collections of data using iteration and loops.
+
+            **Suggested Time**: 90 minutes
           student_description: |-
-            #### This professional learning module prepares you to teach **Unit 4: Iterating with AI**, a unit where students advance from managing single interactions to processing entire collections of data using iteration and loops.
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 4</span>
 
-            ####**Suggested Time**: 90 minutes
+            This professional learning module prepares you to teach ** Iterating with AI**, a unit where students advance from managing single interactions to processing entire collections of data using iteration and loops.
+
+            **Suggested Time**: 90 minutes
         miniexpress1:
           lessons: {}
           lesson_groups: {}
@@ -29520,6 +29524,43 @@ en:
             - Explain how people’s choices about goals, data, and risks can influence the development and impact of AI systems.
 
             This unit is aligned to the AI Ready Skills Certification and is recommended if you are preparing for that certification.
+        foundations-of-ai-programming-js:
+          lessons:
+            lesson-1:
+              name: Introduction to Web Apps
+            lesson-2:
+              name: Build Your First Web Page with AI
+            lesson-3:
+              name: Intro to CSS
+            lesson-4:
+              name: Accessibility in Design
+            lesson-5:
+              name: Wireframes
+            lesson-6:
+              name: Interactivity in Web Apps
+            lesson-7:
+              name: Making a Button Respond
+            lesson-8:
+              name: Variables and Live Updates
+            lesson-9:
+              name: Writing Reusable Functions
+            lesson-10:
+              name: Making Decisions with If/Else
+            lesson-11:
+              name: Functions with Parameters
+            lesson-12:
+              name: Reactive Logic Project
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: End of Unit Project
+          name: foundations-of-ai-programming-js
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         ui-test-mix-move-ai:
           lessons: {}
           lesson_groups: {}

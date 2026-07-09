@@ -65,7 +65,7 @@ export function visualProjects(options: {browsers?: VisualBrowser[]} = {}) {
     retries: 0,
     fullyParallel: false,
     snapshotPathTemplate:
-      '{testDir}/tmp/baselines/{testFileName}/{arg}-{projectName}-{platform}{ext}',
+      '.visual-baselines/{testFileName}/{arg}-{projectName}-{platform}{ext}',
   }));
 }
 
