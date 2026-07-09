@@ -62,6 +62,7 @@ import TextNode from '../nodes/TextNode';
 import {
   AddNodeRequest,
   CanvasTool,
+  ImageNodeData,
   ReactFlowSketchLabSources,
   SketchLabNode,
 } from '../types';
@@ -122,6 +123,11 @@ export interface ReactFlowCanvasProps {
   initialViewport: SketchlabReactFlowSource['viewport'];
   colorMode: 'light' | 'dark';
   readOnly?: boolean;
+  // A request from the parent view (e.g. Backpack import) to add an image node.
+  // The canvas adds it via its own handleAddNode, then calls
+  // onImageImportConsumed so the same request isn't processed twice.
+  pendingImageImport?: ImageNodeData | null;
+  onImageImportConsumed?: () => void;
 }
 
 export const SKETCHLAB_CONTAINER_CLASS = 'sketchlab-react-flow-container';
@@ -134,6 +140,8 @@ export default function ReactFlowCanvas({
   initialViewport,
   colorMode,
   readOnly = false,
+  pendingImageImport = null,
+  onImageImportConsumed,
 }: ReactFlowCanvasProps) {
   const [nodes, setNodes, onNodesChange] =
     useNodesState<SketchLabNode>(initialNodes);
@@ -765,6 +773,13 @@ export default function ReactFlowCanvas({
       setEdges,
     ]
   );
+
+  useEffect(() => {
+    if (pendingImageImport) {
+      handleAddNode({type: 'image', data: pendingImageImport});
+      onImageImportConsumed?.();
+    }
+  }, [pendingImageImport, handleAddNode, onImageImportConsumed]);
 
   const dragBoxContainerRect = selectionBox
     ? canvasContainerRef.current?.getBoundingClientRect()
