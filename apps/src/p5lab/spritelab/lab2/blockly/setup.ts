@@ -15,7 +15,17 @@ import {getStore} from '@cdo/apps/redux';
 import {SCENES_UI_VARIANT} from '../experiments';
 import {getTrimmedThumbnail} from '../imageTrim';
 
-import {ExternalSceneDropdown} from './externalSceneDropdown';
+import sceneBlockDefinitions from './blockDefinitions';
+import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from './blockDefinitions/goToExternalScene';
+import {
+  FIELD_SCENE_DROPDOWN_TYPE,
+  GO_TO_SCENE_BLOCK_TYPE,
+  SceneDropdown,
+} from './blockDefinitions/goToScene';
+import {
+  ExternalSceneDropdown,
+  FIELD_EXTERNAL_SCENE_DROPDOWN_TYPE,
+} from './externalSceneDropdown';
 import {SPRITELAB2_EXTRA_SHARED_BLOCKS} from './extraSharedBlocks';
 
 // blocksCommon is a plain CommonJS module (exports.install = ...); give it a
@@ -48,76 +58,23 @@ export function setupSpriteLab2BlocklyEnvironment(
   isSetup = true;
 }
 
-// Scenes UI variant: the go-to-scene block. Registered client-side (not in the
-// DB block pool) because its dropdown options are the project's scenes, which
-// only this lab knows.
-export const GO_TO_SCENE_BLOCK_TYPE = 'spritelab2_goToScene';
-
-// Dropdown options for the go-to-scene block: [friendly name, scene id]. The
-// scene id is the source of truth; the name is just the label. Reads the
-// redux mirror so the menu stays current as scenes are added.
-function sceneMenuOptions(): [string, string][] {
-  const scenes = getStore().getState().spriteLab2?.scenes || [];
-  if (scenes.length === 0) {
-    return [['no scenes', '']];
-  }
-  return scenes.map((s: {id: string; name: string}) => [s.name, s.id]);
-}
-
-// Cross-project variant: jump into a scene from a section-mate's project.
-export const GO_TO_EXTERNAL_SCENE_BLOCK_TYPE = 'spritelab2_goToExternalScene';
-
-// Options for the go-to-external-scene block: [label, "<channel>:<sceneId>"].
-// Populated from the section-scenes API into redux before blocks load, and
-// refreshed each time the dropdown is opened (see ExternalSceneDropdown).
-function externalSceneMenuOptions(): [string, string][] {
-  const options = getStore().getState().spriteLab2?.externalScenes || [];
-  if (options.length === 0) {
-    return [['no scenes shared with you', '']];
-  }
-  return options.map((o: {key: string; label: string}) => [o.label, o.key]);
-}
-
 function installSceneBlocks(): void {
   if (Blockly.Blocks[GO_TO_SCENE_BLOCK_TYPE]) {
     return;
   }
-  Blockly.Blocks[GO_TO_SCENE_BLOCK_TYPE] = {
-    init: function (this: BlocklyCore.Block) {
-      this.appendDummyInput()
-        .appendField('go to scene')
-        .appendField(new BlocklyCore.FieldDropdown(sceneMenuOptions), 'SCENE');
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-      this.setStyle('default');
-      this.setTooltip(
-        'Stop this scene and start the chosen one. Its "when run" code runs ' +
-          'after a quick fade from black.'
-      );
-    },
-  };
-  Blockly.getGenerator().forBlock[GO_TO_SCENE_BLOCK_TYPE] = block =>
-    `goToScene(${JSON.stringify(block.getFieldValue('SCENE'))});\n`;
-
-  Blockly.Blocks[GO_TO_EXTERNAL_SCENE_BLOCK_TYPE] = {
-    init: function (this: BlocklyCore.Block) {
-      this.appendDummyInput()
-        .appendField('go to external scene')
-        .appendField(
-          new ExternalSceneDropdown(externalSceneMenuOptions),
-          'SCENE'
-        );
-      this.setPreviousStatement(true);
-      this.setNextStatement(true);
-      this.setStyle('default');
-      this.setTooltip(
-        'Jump into a scene from a classmate’s project (loads their scene ' +
-          'and images, then fades in).'
-      );
-    },
-  };
-  Blockly.getGenerator().forBlock[GO_TO_EXTERNAL_SCENE_BLOCK_TYPE] = block =>
-    `goToExternalScene(${JSON.stringify(block.getFieldValue('SCENE'))});\n`;
+  Blockly.fieldRegistry.register(FIELD_SCENE_DROPDOWN_TYPE, SceneDropdown);
+  Blockly.fieldRegistry.register(
+    FIELD_EXTERNAL_SCENE_DROPDOWN_TYPE,
+    ExternalSceneDropdown
+  );
+  for (const {definition, generator} of sceneBlockDefinitions) {
+    Blockly.Blocks[definition.type] = {
+      init: function (this: BlocklyCore.Block) {
+        this.jsonInit(definition);
+      },
+    };
+    Blockly.getGenerator().forBlock[definition.type] = generator;
+  }
 }
 
 /**
