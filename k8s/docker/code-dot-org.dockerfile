@@ -11,7 +11,7 @@ ARG CODE_DOT_ORG_PEGASUS
 ARG CODE_DOT_ORG_STATIC
 ARG CODE_DOT_ORG_DB_SEED
 ARG CODE_DOT_ORG_CORE
-ARG BUNDLE_JOBS=8
+ARG BUNDLE_JOBS=2
 ARG BUNDLE_WITHOUT=development:test
 ARG SKIP_FRONTEND_BUILD=0
 
@@ -91,9 +91,9 @@ COPY --chown=${UID}:${GID} \
 
 # NOTE: the gem cache path must track .ruby-version: ruby/<major.minor.0>.
 # Update it when bumping Ruby or the mount silently stops caching.
-RUN --mount=type=cache,sharing=locked,uid=${UID},gid=${GID},target=${BUNDLE_PATH}/ruby/3.2.0/cache <<EOF
+RUN --mount=type=cache,id=code-dot-org-bundle-cache,sharing=shared,uid=${UID},gid=${GID},target=${BUNDLE_PATH}/ruby/3.2.0/cache <<EOF
   gem install bundler -v "$(awk '/BUNDLED WITH/{getline; print $1}' Gemfile.lock)" --no-document
-  bundle install --jobs "${BUNDLE_JOBS}" --quiet
+  bundle install --jobs "${BUNDLE_JOBS}"
   bundle exec bootsnap precompile --gemfile
   rm -rf ~/.bundle "${BUNDLE_PATH}"/ruby/*/bundler/gems/*/.git
   find "${BUNDLE_PATH}"/ruby/*/cache -mindepth 1 -exec rm -rf {} +
@@ -146,11 +146,13 @@ COPY --chown=${UID}:${GID} \
   ./apps/eslint \
   ./apps/eslint/
 
-# NOTE: Docker supports `**` globs here, but Skaffold dependency/context handling
-# does not yet, so we use `*` for now.
+# Keep this in sync with frontend/package.json workspaces that apps imports via
+# portal: dependencies. Docker supports **, but Skaffold dependency/context
+# handling does not yet, so list each workspace depth explicitly.
 COPY --chown=${UID}:${GID} \
   --parents \
   ./frontend/packages/*/package.json \
+  ./frontend/packages/labs/*/package.json \
   ./
 
 RUN \
@@ -182,9 +184,15 @@ COPY --chown=${UID}:${GID} --link \
   --from=code-dot-org-bundle-install ${SRC}/.ruby-version ${SRC}/Gemfile ${SRC}/Gemfile.lock \
   ./
 
+COPY --chown=${UID}:${GID} ./dashboard/engines/ ./dashboard/engines/
+
 COPY --chown=${UID}:${GID} --link \
-  --from=code-dot-org-bundle-install ${SRC}/dashboard/engines/ \
-  ./dashboard/engines/
+  --from=code-dot-org-uv-sync ${SRC}/.venv \
+  ${SRC}/.venv
+
+COPY --chown=${UID}:${GID} --link \
+  --from=code-dot-org-uv-sync ${HOME}/.local/share/uv \
+  ${HOME}/.local/share/uv
 
 # grunt exec:generateSharedConstants => bundle exec ./script/generateSharedConstants.rb => (lib/cdo/shared_constants.rb, lib/cdo/shared_constants/**)
 # grunt exec:generateRegionConfigurations => bundle exec ./script/generateRegionConfigurations.rb => (lib/cdo.rb, lib/cdo/global_edition.rb)
@@ -194,8 +202,15 @@ COPY --chown=${UID}:${GID} ./lib/ ./lib/
 # $LOAD_PATH before requiring cdo/i18n (PR #72278).
 COPY --chown=${UID}:${GID} ./deployment.rb ./
 
+# Rails boot for generateStudioRoutes goes through lib/cdo/db.rb, which loads
+# the pegasus static DB model declarations. Keep this as the one pegasus input
+# in the yarn-build stage.
+COPY --chown=${UID}:${GID} --parents ./pegasus/data/static_models.rb ./
+
 # grunt exec:convertScssVars => ./script/convert-scss-variables.js
 COPY --chown=${UID}:${GID} ./shared/css/ ./shared/css/
+COPY --chown=${UID}:${GID} ./shared/fonts/ ./shared/fonts/
+COPY --chown=${UID}:${GID} ./shared/middleware/ ./shared/middleware/
 COPY --chown=${UID}:${GID} --parents ./tools/scripts/convertScssToJs.js ./
 
 # grunt exec:generateRegionConfigurations => bundle exec ./script/generateRegionConfigurations.rb
@@ -204,8 +219,37 @@ COPY --chown=${UID}:${GID} ./config/global_editions/ ./config/global_editions/
 COPY --chown=${UID}:${GID} --parents ./config.yml.erb ./
 COPY --chown=${UID}:${GID} --parents ./config/development.yml.erb ./
 
+# grunt exec:generateStudioRoutes => bundle exec ./script/generateStudioRoutes.rb
+COPY --chown=${UID}:${GID} --parents \
+  ./dashboard/config.ru \
+  ./dashboard/config/application.rb \
+  ./dashboard/config/boot.rb \
+  ./dashboard/config/bundle_gemfile.rb \
+  ./dashboard/config/cable.yml \
+  ./dashboard/config/database.yml \
+  ./dashboard/config/environment.rb \
+  ./dashboard/config/routes.rb \
+  ./
+
+COPY --chown=${UID}:${GID} ./dashboard/config/environments/ ./dashboard/config/environments/
+COPY --chown=${UID}:${GID} ./dashboard/config/initializers/ ./dashboard/config/initializers/
+COPY --chown=${UID}:${GID} ./dashboard/config/routes/ ./dashboard/config/routes/
+COPY --chown=${UID}:${GID} ./dashboard/legacy/middleware/ ./dashboard/legacy/middleware/
+COPY --chown=${UID}:${GID} ./dashboard/lib/ ./dashboard/lib/
+COPY --chown=${UID}:${GID} ./dashboard/app/channels/ ./dashboard/app/channels/
+COPY --chown=${UID}:${GID} ./dashboard/app/controllers/ ./dashboard/app/controllers/
+COPY --chown=${UID}:${GID} ./dashboard/app/dsl/ ./dashboard/app/dsl/
+COPY --chown=${UID}:${GID} ./dashboard/app/helpers/ ./dashboard/app/helpers/
+COPY --chown=${UID}:${GID} ./dashboard/app/jobs/ ./dashboard/app/jobs/
+COPY --chown=${UID}:${GID} ./dashboard/app/mailers/ ./dashboard/app/mailers/
+COPY --chown=${UID}:${GID} ./dashboard/app/models/ ./dashboard/app/models/
+COPY --chown=${UID}:${GID} ./dashboard/app/serializers/ ./dashboard/app/serializers/
+
 # grunt lint-entry-points => apps/script/checkEntryPoints.js => ./dashboard/app/views
 COPY --chown=${UID}:${GID} ./dashboard/app/views/ ./dashboard/app/views/
+
+# Temporary locals.yml used while Rails boots for build-time route generation.
+COPY --chown=${UID}:${GID} ./k8s/docker/locals.rake-build.yml locals.yml
 
 # yarn build resolves @cdo/static and @cdo/i18n aliases at compile time, so
 # reuse those split assets here without reintroducing them from the host context.
@@ -228,7 +272,7 @@ RUN \
   if [ "${SKIP_FRONTEND_BUILD}" = "1" ]; then
     mkdir -p build/package/js build/package/css
   else
-    CI=true yarn build
+    AWS_EC2_METADATA_DISABLED=true SKIP_SCRIPT_PRELOAD=1 CI=true yarn build
   fi
 EOF
 
