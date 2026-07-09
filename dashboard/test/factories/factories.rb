@@ -1266,6 +1266,15 @@ FactoryBot.define do
   factory :project_storage do
   end
 
+  factory :project_storage_geo, class: 'ProjectStorage::Geo' do
+    association :project_storage
+
+    country {Faker::Address.unique.country}
+    state {Faker::Address.unique.state}
+    city {Faker::Address.unique.city}
+    postal_code {Faker::Address.unique.postcode}
+  end
+
   # WARNING: using this factory in new tests may cause other tests, including
   # ProjectsController tests, to fail with: `Mysql2::Error::TimeoutError`
   # See: https://codedotorg.atlassian.net/browse/TEACH-230
@@ -1454,6 +1463,21 @@ FactoryBot.define do
     attempt {{answer: 'a'}}
     correct {false}
     delivery_context_type {SharedConstants::PRACTICE_PROBLEM_DELIVERY_CONTEXT[:AI_TUTOR_LESSON_DEEP_DIVE]}
+  end
+
+  factory :challenge do
+    association :lesson
+    question {'What is 2 + 2?'}
+  end
+
+  factory :challenge_response do
+    association :challenge
+    association :user, factory: :student
+  end
+
+  factory :challenge_response_asset do
+    association :challenge_response
+    asset_type {'whiteboard_image'}
   end
 
   factory :user_lesson_objective_reflection do

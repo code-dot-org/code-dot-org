@@ -334,7 +334,7 @@ class CertificateImage
       'mix_move_hour_of_ai_certificate.png'
     elsif course == ScriptConstants::MUSIC_JAM_2024
       'music_hoc_certificate.png'
-    elsif course == ScriptConstants::OCEANS_NAME
+    elsif [ScriptConstants::OCEANS_NAME, 'ui-test-oceans'].include?(course)
       'oceans_hoc_certificate.png'
     elsif course_type == 'hoc'
       'hour_of_ai_certificate.png'

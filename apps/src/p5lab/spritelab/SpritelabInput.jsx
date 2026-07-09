@@ -185,14 +185,14 @@ class SpritelabInput extends React.Component {
 
 const styles = {
   container: {
-    background: 'rgba(34, 42, 51, 0.85)',
+    background: 'var(--neutral-black-alpha-80)',
     textAlign: 'center',
     position: 'absolute',
     bottom: 0,
     width: '100%',
   },
   prompt: {
-    color: 'white',
+    color: 'var(--text-neutral-white-fixed)',
     fontSize: 15,
   },
   promptText: {
@@ -205,7 +205,7 @@ const styles = {
     whiteSpace: 'nowrap',
   },
   icon: {
-    color: 'white',
+    color: 'var(--text-neutral-white-fixed)',
   },
   inputRow: {
     padding: 0,
@@ -228,7 +228,7 @@ const styles = {
     fontSize: 11,
   },
   number: {
-    color: 'rgb(34, 42, 51)',
+    color: 'var(--text-neutral-primary)',
     fontSize: 9,
   },
   choiceButton: {

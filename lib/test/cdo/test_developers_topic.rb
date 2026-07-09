@@ -214,6 +214,23 @@ class DevelopersTopicTest < Minitest::Test
       Slack.expects(:update_topic).never
       assert_raises {DevelopersTopic.set_dts('no')}
     end
+
+    # Ensure raw mentions '<@U12345>' are not flattened to plaintext '@username';
+    # writing that back permanently breaks dotd_id/dotd_mention. Stub get_topic
+    # to mimic that flattening so this fails if the read is not raw.
+    it 'preserves the linked DOTD mention when setting the DTS status' do
+      Slack.stubs(:get_topic).
+        with('developers', raw: true).
+        returns('DOTD: <@U12345>; DTS: yes')
+      Slack.stubs(:get_topic).
+        with('developers').
+        returns('DOTD: @dave; DTS: yes')
+      Slack.expects(:update_topic).with(
+        'developers',
+        'DOTD: <@U12345>; DTS: no (robo-DTS failed)'
+      )
+      DevelopersTopic.set_dts('no (robo-DTS failed)')
+    end
   end
 
   describe 'set_dtt' do

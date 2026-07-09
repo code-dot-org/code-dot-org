@@ -57,7 +57,7 @@ const SCOUT_SCHEMA = {
   type: 'object',
   required: [
     'architecture', 'featureGroup', 'scenarios', 'targetSpec', 'specAlreadyExists',
-    'workingTreeFoundationPresent', 'stepResolution', 'urlScheme', 'authRequirements',
+    'workingTreeFoundationPresent', 'stepResolution', 'urlScheme', 'authRequirements', 'isEyes',
   ],
   properties: {
     architecture: {
@@ -166,6 +166,10 @@ const SCOUT_SCHEMA = {
       type: 'array', items: {type: 'string'},
       description: 'Provenance: every step-definition file read in full',
     },
+    isEyes: {
+      type: 'boolean',
+      description: 'true if the feature or any scenario carries the @eyes tag',
+    },
     notes: {
       type: 'string',
       description:
@@ -195,6 +199,8 @@ FEATURE FILE (authoritative): ${featureFile}
 
 ─── STEP 1 — Read the feature file in full ────────────────────────────────────
   List every scenario / scenario-outline with its tags (@no_mobile, @no_ci, ...).
+  Check whether the feature or any scenario carries @eyes. If so, set isEyes=true.
+  Eyes tests become @visual in Playwright — the Generate phase handles the conversion.
 
 ─── STEP 2 — Read ALL referenced step definitions IN FULL ─────────────────────
   Step defs live under dashboard/test/ui/features/step_definitions/ (helpers under
@@ -254,6 +260,7 @@ if (plan.specAlreadyExists && !force) {
 log(`Scout: ${plan.architecture}/${plan.featureGroup} · ${plan.scenarios.length} scenario(s) -> ${plan.targetSpec}`)
 const newHelpers = plan.stepResolution.filter(s => s.recommendation === 'NEW')
 if (newHelpers.length) log(`${newHelpers.length} new shared helper(s) recommended`)
+if (plan.isEyes) log('Eyes feature detected — visual testing path active')
 
 // ── Phase 2: Dry Run ──────────────────────────────────────────────────────────
 // Drives a THROWAWAY probe that captures a vanilla Playwright trace AND polls DOM state,
@@ -316,6 +323,41 @@ const READINESS_SCHEMA = {
       type: 'string',
       description: 'Brief: clean capture? gaps (action-less transient only in screencast)? confidence.',
     },
+    dynamicContent: {
+      type: 'object',
+      required: ['domDiffs', 'screenshotDiffs', 'reasonedRisks'],
+      description: 'Dynamic content analysis from dual-load comparison + agent reasoning. ' +
+        'Populated when isEyes is true; empty arrays/string otherwise.',
+      properties: {
+        domDiffs: {
+          type: 'array', items: {type: 'string'},
+          description:
+            'Elements whose text/attributes changed between two page loads, described ' +
+            'semantically (e.g. "header timestamp", "rotating banner text"). Candidates ' +
+            'for mask options in visual checks.',
+        },
+        screenshotDiffs: {
+          type: 'array', items: {type: 'string'},
+          description:
+            'Regions that visually changed between two screenshots of the same page, ' +
+            'described by location and content (e.g. "top-right corner: clock widget"). ' +
+            'Confirms which domDiffs are visually significant.',
+        },
+        reasonedRisks: {
+          type: 'array', items: {type: 'string'},
+          description:
+            'Content the agent REASONS could be dynamic even if it did not change in ' +
+            'two snapshots — e.g. randomized student names, A/B test variants, session-specific ' +
+            'IDs, locale-dependent date formats, ad slots. Include why each is risky.',
+        },
+      },
+    },
+    a11yTree: {
+      type: 'string',
+      description:
+        'Page accessibility tree snapshot serialized as a readable string. Gives Generate ' +
+        'semantic understanding of the page structure for choosing locators by role/name.',
+    },
   },
 }
 
@@ -341,6 +383,7 @@ INPUTS (from Scout):
   Architecture: ${plan.architecture} / ${plan.featureGroup}
   URL scheme:   ${plan.urlScheme}
   Auth:         ${plan.authRequirements}
+  Eyes feature: ${plan.isEyes}
   Scenarios:    ${plan.scenarios.map(s => s.name).join('; ')}
   Target host:  https://test-studio.code.org  (live; always up)
 
@@ -364,6 +407,31 @@ INPUTS (from Scout):
   Execute; confirm a non-trivial trace.zip. If a driving locator is wrong, fix the PROBE
   (its locators are throwaway, never part of your output) and rerun. If a transition is
   too complex to drive in a rough probe, mark it UNCHARACTERIZED in notes rather than faking it.
+
+─── STEP 2b — Dynamic content detection (when Eyes feature is true) ───────────
+  Navigate to the scenario URL TWICE with a 3-second gap. On each load:
+    a) Serialize the DOM body via page.evaluate(() => document.body.innerHTML)
+    b) Take a full-page screenshot (page.screenshot({fullPage: true}))
+  Compare:
+    - DOM diff: identify elements whose text content or key attributes changed
+      between the two loads. Report semantically ("header timestamp changed",
+      "student name differs").
+    - Screenshot diff: compare the two screenshots pixel-by-pixel (overlay
+      or visual inspection). Report regions that visually changed.
+    - Reasoned risks: THINK about what COULD change across runs even if it
+      didn't in these two snapshots — randomized names, session IDs, A/B
+      variants, locale-dependent formats, ad slots, animated elements that
+      may have been at the same frame. Explain WHY each is risky.
+  Delete the screenshots and DOM dumps after analysis — they are throwaway.
+  If Eyes feature is false, return empty arrays for domDiffs, screenshotDiffs,
+  and reasonedRisks.
+
+─── STEP 2c — Accessibility tree capture ──────────────────────────────────────
+  Capture the page's accessibility tree:
+    const a11yTree = await page.accessibility.snapshot();
+  Serialize it as a readable string for downstream consumption. This is always
+  captured regardless of isEyes — it helps Generate choose locators by
+  accessible role/name.
 
 ─── STEP 3 — Analyze: combine three evidence sources ──────────────────────────
   - PROBE DOM POLLS  -> DOM ground-truth (element presence, workspace interactivity,
@@ -396,6 +464,25 @@ log(`Dry Run: ${readiness.transitions.length} transition(s) characterized`)
 // agent definition; this is the per-port brief.
 phase('Generate')
 
+const eyesGuidance = plan.isEyes
+  ? `\nEYES (VISUAL TESTING) GUIDANCE:
+  This is an @eyes feature. In the Playwright port:
+  - Use @visual tag (NOT @eyes) on describe blocks with visual checks:
+    test.describe('...', {tag: '@visual'}, () => { ... })
+  - Import {test, expect} from tests/fixtures.ts (visualCheck is available as a fixture).
+  - Call waitForVisualStability(page) from tests/shared/stability.ts before each
+    visualCheck call. Pass a locator if a specific element needs layout stability.
+  - Map Cucumber eyes steps:
+    "I open my eyes to test X" -> (implicit — visual test created by fixture)
+    "I see no difference for X" -> await visualCheck('x-kebab-name')
+    "I see no difference for X in the current viewport" -> await visualCheck('x-kebab-name', {fully: false})
+    "I close my eyes" -> (implicit — fixture handles teardown)
+  - Use dynamicContent from the dry run to add mask options for elements that change
+    between loads. The reasonedRisks should also inform masking decisions.
+  - The a11yTree is available for understanding page structure and choosing locators by
+    accessible role/name.\n`
+  : ''
+
 const generated = await agent(
   `Port "${featureFile}" to Playwright. Follow your agent instructions (the Code.org
 conventions) exactly — this message is only the per-port brief.
@@ -409,9 +496,10 @@ SCOUT PLAN
   foundationPresent:  ${plan.workingTreeFoundationPresent}
   urlScheme:          ${plan.urlScheme}
   auth:               ${plan.authRequirements}
+  isEyes:             ${plan.isEyes}
   scenarios:          ${JSON.stringify(plan.scenarios)}
   stepResolution:     ${JSON.stringify(plan.stepResolution)}
-
+${eyesGuidance}
 DRY RUN READINESS (wait-strategy guidance only — never implementation)
   ${JSON.stringify(readiness)}
 
@@ -453,6 +541,44 @@ if (!reviewed) throw new Error('review agent was skipped — port not reviewed b
 // owns the gate and the 3-attempt budget; the (vanilla-fork) Healer owns root-cause
 // diagnosis and fixes. On budget exhaustion the Healer marks test.fixme().
 phase('Heal')
+
+// For @eyes ports, run the prove-visual local stability gate first. This generates
+// ephemeral Playwright baselines and repeats 5x to shake out non-deterministic content
+// that needs masking before the test ever touches Applitools.
+const PROVE_VISUAL_SCHEMA = {
+  type: 'object',
+  required: ['passed', 'fixesApplied'],
+  properties: {
+    passed: {type: 'boolean', description: 'true if prove-visual exited 0 after any fixes'},
+    fixesApplied: {
+      type: 'array', items: {type: 'string'},
+      description: 'Descriptions of fixes applied (mask additions, waitForVisualStability calls). Empty if it passed on first try.',
+    },
+    failureDetail: {type: 'string', description: 'If passed is false: which checkpoint(s) flaked and why the fix attempt failed.'},
+  },
+}
+
+if (plan.isEyes) {
+  log('Running prove-visual stability gate for @visual tests')
+  const proveResult = await agent(
+    `Run the prove-visual local stability gate for the visual tests. From the repo root:
+  cd frontend/packages/e2e-tests && npx prove-visual
+This generates ephemeral native Playwright baselines and re-runs 5x to confirm visual
+determinism. If it fails, the visual check captures non-deterministic content that needs
+masking. Diagnose which element(s) are flaking and fix the spec by adding mask options
+to the visualCheck calls, or adding waitForVisualStability calls. Do NOT remove or
+weaken visual checks. Clean up any leftover .visual-baselines/ artifacts.
+After fixing, re-run prove-visual to confirm. Report passed=true only if it exits 0.`,
+    {schema: PROVE_VISUAL_SCHEMA, label: 'prove-visual', phase: 'Heal', model: 'sonnet'},
+  )
+  if (!proveResult) throw new Error('prove-visual agent was skipped — cannot continue without visual stability confirmation')
+  if (!proveResult.passed) {
+    log(`prove-visual failed: ${proveResult.failureDetail ?? 'unknown'}`)
+  }
+  if (proveResult.fixesApplied?.length) {
+    log(`prove-visual fixes: ${proveResult.fixesApplied.join('; ')}`)
+  }
+}
 
 const STRESS_SCHEMA = {
   type: 'object',
@@ -590,10 +716,11 @@ await agent(
       healStatus === 'green'
         ? `Green gate — flip the spec's JSDoc "Migration status: PORTING" to "COMPLETED". ` +
           `Then tag the Cucumber feature so the Cucumber suite skips the now-ported ` +
-          `scenarios: add a feature-level \`@playwright\` tag to ${featureFile}. If the ` +
-          `line directly above the \`Feature:\` keyword is a tag line, append \` @playwright\` ` +
-          `to it (only if not already present); otherwise insert a new \`@playwright\` line ` +
-          `directly above \`Feature:\`. Do NOT change anything else in the feature. Stage it:` +
+          `scenarios: add a feature-level \`@playwright\` tag to ${featureFile}. ` +
+          `Insert \`@playwright\` on its OWN LINE directly above the \`Feature:\` keyword. ` +
+          `If a line directly above \`Feature:\` already contains \`@playwright\`, do nothing. ` +
+          `Do NOT append it to an existing tag line — it must be its own line. ` +
+          `Do NOT change anything else in the feature. Stage it:` +
           `\n     git add ${featureFile}`
         : `Fixme — the healer marked the still-failing test(s) test.fixme(); flip the spec's ` +
           `JSDoc "Migration status: PORTING" to "FIXME" to match (the generator wrote PORTING; ` +

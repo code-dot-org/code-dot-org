@@ -152,7 +152,7 @@ module DevelopersTopic
   # @raise [RuntimeError] If the existing topic does not specify a message.
   private_class_method def self.branch_message(branch)
     prefix = BRANCH_PREFIXES[branch.to_sym]
-    current_topic = Slack.get_topic(get_room_for_branch(branch))
+    current_topic = Slack.get_topic(get_room_for_branch(branch), raw: true)
     unless current_topic.include? prefix
       raise "DevelopersTopic does not specify a message for #{branch}"
     end
@@ -165,10 +165,16 @@ module DevelopersTopic
   # @param message [String] The string to which the branch message should be
   #   set.
   # @raise [RuntimeError] If the existing topic does not specify a message.
+  #
+  # The topic is read raw (raw: true) and written back verbatim except for the
+  # branch's own field. A non-raw read rewrites every '<@U12345>' user mention
+  # into plaintext '@displayname' (Slack.replace_user_links); writing that back
+  # would permanently flatten the DOTD mention that shares the developers-room
+  # topic, breaking DevelopersTopic.dotd_id/dotd_mention for downstream cronjobs.
   private_class_method def self.set_branch_message(branch, message)
     prefix = BRANCH_PREFIXES[branch.to_sym]
     room = get_room_for_branch(branch)
-    current_topic = Slack.get_topic(room)
+    current_topic = Slack.get_topic(room, raw: true)
     old_message = branch_message(branch)
     new_topic = current_topic.gsub "#{prefix}#{old_message}", "#{prefix}#{message}"
     Slack.update_topic room, new_topic

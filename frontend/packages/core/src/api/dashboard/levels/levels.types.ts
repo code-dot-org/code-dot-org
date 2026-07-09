@@ -58,7 +58,7 @@ export type CloneLevelResponse = z.infer<typeof CloneLevelResponseSchema>;
 export type DeleteLevelResponse = z.infer<typeof DeleteLevelResponseSchema>;
 
 export interface UnitLevelPropertiesRequestParams {
-  levelId: number;
+  levelId?: number;
   standaloneProjectType?: never;
   scriptName?: string;
   lessonPosition?: number;

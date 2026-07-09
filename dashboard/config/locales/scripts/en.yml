@@ -29480,6 +29480,17 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        ui-test-oceans:
+          lessons:
+            lesson-1:
+              name: Lesson One
+          lesson_groups: {}
+          name: ui-test-oceans
+          title: UI Test Oceans
+          description_audience: ''
+          description_short: UI Test Oceans Unit Short Overview
+          description: UI Test Oceans Unit Teacher Overview
+          student_description: UI Test Oceans Unit Student Overview
         ai-history:
           lessons:
             lesson-1:
@@ -29546,6 +29557,15 @@ en:
               display_name: End of Unit Project
           name: foundations-of-ai-programming-js
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        ui-test-mix-move-ai:
+          lessons: {}
+          lesson_groups: {}
+          name: ui-test-mix-move-ai
+          title: UI Test Mix & Move with AI
           description_audience: ''
           description_short: ''
           description: ''
