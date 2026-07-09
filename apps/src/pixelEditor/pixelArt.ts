@@ -85,25 +85,21 @@ function edgeHistogram(raster: Raster, axis: 'x' | 'y'): number[] {
   return hist;
 }
 
-/** Best (size, offset) explaining an edge histogram, or null. */
+/** Best (size, offset) explaining an edge histogram, or null when the best
+ * candidate doesn't clear the confidence bar. */
 function detectAxis(
   hist: number[]
 ): {size: number; offset: number; score: number} | null {
-  // Histograms are mostly zeros; iterate just the edges through the
-  // size x offset scan.
-  const edgePositions: number[] = [];
-  const edgeWeights: number[] = [];
-  let total = 0;
-  for (let m = 0; m < hist.length; m++) {
-    if (hist[m]) {
-      edgePositions.push(m);
-      edgeWeights.push(hist[m]);
-      total += hist[m];
-    }
-  }
-  if (total === 0) {
-    return null;
-  }
+  const best = detectAxisLenient(hist);
+  return best && best.score >= MIN_CONFIDENCE ? best : null;
+}
+
+/** Best (size, offset) for a fixed edge list, ungated by confidence. */
+function bestGridForEdges(
+  edgePositions: number[],
+  edgeWeights: number[],
+  total: number
+): {size: number; offset: number; score: number} | null {
   let best: {size: number; offset: number; score: number} | null = null;
   for (let size = MIN_BLOCK; size <= MAX_BLOCK; size++) {
     for (let offset = 0; offset < size; offset++) {
@@ -129,7 +125,92 @@ function detectAxis(
       }
     }
   }
-  return best && best.score >= MIN_CONFIDENCE ? best : null;
+  return best;
+}
+
+/** Ungated per-axis result (size/offset/score), for lenient callers.
+ * Histograms are mostly zeros; iterate just the edges through the
+ * size x offset scan. */
+function detectAxisLenient(
+  hist: number[]
+): {size: number; offset: number; score: number} | null {
+  const edgePositions: number[] = [];
+  const edgeWeights: number[] = [];
+  let total = 0;
+  for (let m = 0; m < hist.length; m++) {
+    if (hist[m]) {
+      edgePositions.push(m);
+      edgeWeights.push(hist[m]);
+      total += hist[m];
+    }
+  }
+  if (total === 0) {
+    return null;
+  }
+  return bestGridForEdges(edgePositions, edgeWeights, total);
+}
+
+// When the style choice already says "pixel art" and detection can't find a
+// trustworthy grid, fall back to the block size the generation prompt asks
+// for (see itemGeneration's STYLE_PROMPT: 16x16 blocks on a 64x64 grid).
+const ASSUMED_BLOCK = 16;
+
+/** Offset that aligns the most edge weight for a FIXED block size. */
+function bestOffsetForSize(hist: number[], size: number): number {
+  let bestOffset = 0;
+  let bestAligned = -1;
+  for (let offset = 0; offset < size; offset++) {
+    let aligned = 0;
+    for (let m = 0; m < hist.length; m++) {
+      if (!hist[m]) {
+        continue;
+      }
+      const rem = (((m - offset) % size) + size) % size;
+      if (rem <= EDGE_TOLERANCE || rem >= size - EDGE_TOLERANCE) {
+        aligned += hist[m];
+      }
+    }
+    if (aligned > bestAligned) {
+      bestAligned = aligned;
+      bestOffset = offset;
+    }
+  }
+  return bestOffset;
+}
+
+/**
+ * Best-attempt grid for an image the USER declared to be pixel art: the
+ * strict detector when it succeeds; otherwise the stronger single axis's
+ * block size applied to both (art pixels are square), with each axis's
+ * offset fitted to that size; otherwise the prompt's assumed block size.
+ * Never returns null — the style choice is the classifier.
+ */
+export function assumePixelGrid(raster: Raster): PixelGrid {
+  const strict = detectPixelGrid(raster);
+  if (strict) {
+    return strict;
+  }
+  const histX = edgeHistogram(raster, 'x');
+  const histY = edgeHistogram(raster, 'y');
+  const bestX = detectAxisLenient(histX);
+  const bestY = detectAxisLenient(histY);
+  const stronger =
+    bestX && bestY
+      ? bestX.score >= bestY.score
+        ? bestX
+        : bestY
+      : bestX || bestY;
+  const size =
+    stronger && stronger.score >= MIN_CONFIDENCE
+      ? stronger.size
+      : ASSUMED_BLOCK;
+  return {
+    sizeX: size,
+    sizeY: size,
+    offsetX: bestOffsetForSize(histX, size),
+    offsetY: bestOffsetForSize(histY, size),
+    confidence: stronger ? Math.min(stronger.score, 1) : 0,
+  };
 }
 
 /**
@@ -275,10 +356,12 @@ function canvasFromRaster(raster: Raster): HTMLCanvasElement {
 }
 
 /**
- * Normalize a blob depicting pixel art: detect its grid, downsample to
- * logical resolution, and re-upscale nearest-neighbor to a crisp, uniform,
- * edge-aligned image. Returns null when no grid was detected (the image is
- * left alone).
+ * Normalize a blob the user declared to be pixel art: find its grid (best
+ * attempt — the style choice is the classifier, so this never bails),
+ * downsample to logical resolution, and re-upscale nearest-neighbor to a
+ * crisp, uniform, edge-aligned image. Imperfect model output (e.g. rows
+ * drifting off-grid) normalizes with some smear rather than being left
+ * un-normalized.
  */
 export async function normalizePixelArtBlob(
   blob: Blob
@@ -292,10 +375,7 @@ export async function normalizePixelArtBlob(
   canvas.getContext('2d', {willReadFrequently: true})?.drawImage(bitmap, 0, 0);
   bitmap.close();
   const raster = rasterFromCanvas(canvas);
-  const grid = detectPixelGrid(raster);
-  if (!grid || (grid.sizeX <= 1 && grid.sizeY <= 1)) {
-    return null;
-  }
+  const grid = assumePixelGrid(raster);
   const logical = downsampleToGrid(raster, grid);
   const crisp = upscaleNearest(
     logical,

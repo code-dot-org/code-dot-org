@@ -1,4 +1,5 @@
 import {
+  assumePixelGrid,
   crispScaleFor,
   detectPixelGrid,
   downsampleToGrid,
@@ -131,6 +132,60 @@ describe('pixelArt', () => {
     expect(big.width).toBe(32);
     const i = (0 * 32 + 3) * 4; // still inside the first logical pixel
     expect(big.data[i]).toBe(raster.data[0]);
+  });
+
+  describe('assumePixelGrid (style choice as classifier)', () => {
+    it('matches the strict detector on clean grids', () => {
+      const raster = blockyRaster(samplePattern(), 12);
+      const grid = assumePixelGrid(raster);
+      expect(grid.sizeX).toBe(12);
+      expect(grid.sizeY).toBe(12);
+    });
+
+    it('applies the stronger axis to both when one axis is noisy', () => {
+      // Clean 10px columns, but every row differs (no vertical grid at all):
+      // like model output whose rows drift off-grid.
+      const width = 120;
+      const height = 120;
+      const palette = [
+        [200, 40, 40],
+        [40, 160, 60],
+        [40, 60, 200],
+      ];
+      const data = new Uint8ClampedArray(width * height * 4);
+      for (let y = 0; y < height; y++) {
+        for (let x = 0; x < width; x++) {
+          const c = palette[(Math.floor(x / 10) + y * 2) % 3];
+          const i = (y * width + x) * 4;
+          data[i] = c[0];
+          data[i + 1] = c[1];
+          data[i + 2] = c[2];
+          data[i + 3] = 255;
+        }
+      }
+      const grid = assumePixelGrid({width, height, data});
+      expect(grid.sizeX).toBe(10);
+      expect(grid.sizeY).toBe(10);
+    });
+
+    it('falls back to the assumed block size on gridless images', () => {
+      const width = 128;
+      const height = 128;
+      const data = new Uint8ClampedArray(width * height * 4);
+      for (let y = 0; y < height; y++) {
+        for (let x = 0; x < width; x++) {
+          const i = (y * width + x) * 4;
+          data[i] = x * 2;
+          data[i + 1] = y * 2;
+          data[i + 2] = 128;
+          data[i + 3] = 255;
+        }
+      }
+      const grid = assumePixelGrid({width, height, data});
+      expect(grid.sizeX).toBe(16);
+      expect(grid.sizeY).toBe(16);
+      expect(grid.confidence).toBeLessThan(0.8);
+    });
   });
 
   it('caps the crisp storage scale', () => {
