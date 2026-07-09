@@ -1,13 +1,10 @@
-import classNames from 'classnames';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
 
 import msg from '@cdo/locale';
-
-import blankImg from '../../static/common_images/1x1.gif';
-import commonStyles from '../commonStyles';
 
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 import SkipButton from './SkipButton';
@@ -19,17 +16,19 @@ export const FinishButton = () => (
   </button>
 );
 
-export const RunButton = Radium(props => (
-  <button
-    type="button"
+export const RunButton = props => (
+  <MuiButton
     id={props.id || 'runButton'}
-    className={classNames(['launch', 'blocklyLaunch', props.hidden && 'hide'])}
+    variant="contained"
+    size="medium"
+    color="primary"
+    className={props.hidden ? 'hide' : ''}
     style={props.style}
+    startIcon={<FontAwesomeV6Icon iconName="play" />}
   >
-    <div>{props.runButtonText || msg.runProgram()}</div>
-    <img src={blankImg} className="run26" alt="" />
-  </button>
-));
+    {props.runButtonText || msg.runProgram()}
+  </MuiButton>
+);
 RunButton.propTypes = {
   id: PropTypes.string,
   hidden: PropTypes.bool,
@@ -42,23 +41,19 @@ RunButton.displayName = 'RunButton';
 // then shown either by passing in style props to override
 // or imperatively by selecting the DOM node by ID
 // elsewhere in our code base (eg, StudioApp)
-export const ResetButton = Radium(props => (
-  <button
-    type="button"
+export const ResetButton = props => (
+  <MuiButton
     id={props.id || 'resetButton'}
-    // See apps/style/common.scss for these class definitions
-    className={classNames([
-      'launch',
-      'blocklyLaunch',
-      props.hideText && 'hideText',
-      props.hidden && 'hide',
-    ])}
-    style={[commonStyles.hidden, props.style]}
+    variant="contained"
+    size="medium"
+    color="primary"
+    className={props.hidden ? 'hide' : ''}
+    style={{display: 'none', ...props.style}}
+    startIcon={<FontAwesomeV6Icon iconName="rotate-right" />}
   >
-    <div>{!props.hideText && msg.resetProgram()}</div>
-    <img src={blankImg} className="reset26" alt="" />
-  </button>
-));
+    {!props.hideText && msg.resetProgram()}
+  </MuiButton>
+);
 ResetButton.propTypes = {
   id: PropTypes.string,
   hidden: PropTypes.bool,
@@ -77,8 +72,8 @@ export const UnconnectedGameButtons = props => (
       {!props.noRunResetButton && (
         <>
           <RunButton
-            hidden={props.hideRunButton}
             runButtonText={props.runButtonText}
+            hidden={props.hideRunButton}
           />
           <ResetButton hidden={props.hideResetButton} />
         </>

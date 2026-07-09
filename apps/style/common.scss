@@ -682,12 +682,6 @@ input[type="radio"] {
   margin-right: 10px;
 }
 
-@media screen and (max-width: 1050px) {
-  #stepButton {
-    min-width: 0;
-  }
-}
-
 #learn {
   h1 {
     margin: 20px 0 0 0;
@@ -1550,11 +1544,6 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 
 .reset26 {
   @include icon26(0, 1);
-}
-
-#stepButton {
-  margin-right: 0;
-  text-align: center;
 }
 
 #share-fail-explanation {
