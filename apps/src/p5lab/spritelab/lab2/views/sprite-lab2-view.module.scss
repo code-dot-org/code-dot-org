@@ -225,7 +225,7 @@ $tab-segment-height: $tab-item-height - 2px;
   flex-direction: column;
   align-items: center;
   gap: 4px;
-  width: 96px;
+  width: 125px;
 
   button {
     cursor: pointer;
@@ -238,8 +238,8 @@ $tab-segment-height: $tab-item-height - 2px;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  width: 80px;
-  height: 80px;
+  width: 104px;
+  height: 104px;
   // It's a button now (click to edit); neutralize global button styles.
   margin: 0;
   padding: 0;
