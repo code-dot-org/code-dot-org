@@ -21,6 +21,9 @@ Feature: After completing the Hour of Code, the player is directed to a congratu
     And I press "button:contains(Submit)" using jQuery
     And I wait to see element with ID "uitest-thanks"
 
+  # api/hour routes hit a stub implementation of contentful for ui-test-
+  # tutorials, so that they can run in CI without contentful access tokens.
+  # See dashboard/engines/hoc_legacy/lib/hoc_legacy/tutorials.rb
   Scenario: Completing UI Test Artist HoC should go to certificate page and generate a certificate
     Given I am on "http://studio.code.org/api/hour/begin/ui-test-artist"
     And I am on "http://studio.code.org/courses/ui-test-artist/units/1/lessons/1/levels/10?noautoplay=true"
