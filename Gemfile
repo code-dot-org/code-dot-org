@@ -78,16 +78,16 @@ gem 'rack_csrf'
 
 # Allow profiling in all environments (including production). It will only be enabled when
 # CDO.rack_mini_profiler_enabled is set. See dashboard/config/initializers/mini_profiler.rb
+gem 'bootsnap', '>= 1.14.0', require: false
 gem 'memory_profiler'
 gem 'rack-mini-profiler'
-gem 'bootsnap', '>= 1.14.0', require: false
 
 gem 'annotaterb', '~> 4.19', group: [:development, :test]
 
 group :development do
   gem 'aws-google', '~> 0.2.3'
-  gem 'web-console', '~> 4.2.0'
   gem 'localhost'
+  gem 'web-console', '~> 4.2.0'
 end
 
 # Rack::Cache middleware used in development/test;
