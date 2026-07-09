@@ -25,8 +25,15 @@ if (!root) {
   throw new Error('Missing #root element');
 }
 
-// Set data-brand on <html> via devtools (e.g. to 'codeai-next' or
-// 'codeai-audit') and reload to preview this demo under a different brand.
+// Preview the demo under a different brand with ?brand=codeai-next or
+// ?brand=codeai-audit, mirroring the server-side brand router's URL param.
+// The attribute must be on <html> before getMuiThemeForBrand runs: the CSS
+// tokens react to [data-brand] whenever it changes, but the MUI theme is
+// chosen once at boot.
+const brand = new URLSearchParams(window.location.search).get('brand');
+if (brand) {
+  document.documentElement.dataset.brand = brand;
+}
 const theme = getMuiThemeForBrand(document.documentElement.dataset.brand);
 
 createRoot(root).render(
