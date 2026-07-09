@@ -12,10 +12,8 @@
  *     alpha proportional to their chroma distance, plus green-spill suppression
  *     to kill the green fringe. This is what smooth/illustrated art wants.
  *
- * The per-pixel decision is factored into keyOutBackground() so it can be unit
- * tested without a canvas; removeBackground() is the thin DOM/canvas wrapper.
- *
- * Adapted from Game2 (origin/game2-initial); the soft matte is new.
+ * keyOutBackground() holds the per-pixel decision (unit-testable without a
+ * canvas); removeBackground() is the thin DOM/canvas wrapper.
  */
 
 export interface MatteOptions {

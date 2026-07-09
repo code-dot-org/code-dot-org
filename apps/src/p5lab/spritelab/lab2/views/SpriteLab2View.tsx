@@ -72,16 +72,13 @@ import moduleStyles from './sprite-lab2-view.module.scss';
 
 const p5labReducers = p5labReducersModule as unknown as Record<string, Reducer>;
 
-// Register the legacy Sprite Lab slices the reused p5.play engine and the image
-// list need. Lab2 shares the global getStore() store, so this gives them the
-// exact store shape they read from. (The classic AnimationTab/Piskel editor and
-// its slices are not used — images come from the AI generator.)
+// Legacy slices the reused engine and image list read from the shared
+// getStore() store. (The classic AnimationTab/Piskel slices aren't used.)
 registerReducers({
   animationList: p5labReducers.animationList,
   textConsole: p5labReducers.textConsole,
   spritelabInputList: p5labReducers.spritelabInputList,
-  // The location-picker block (pin -> click in the playspace to set coords)
-  // reads/writes this slice.
+  // Read/written by the location-picker block.
   locationPicker: p5labReducers.locationPicker,
   runState,
   pageConstants,
@@ -112,10 +109,8 @@ const SpriteLab2View: React.FunctionComponent<{
   const {currentSources, updateSources} = useSources<SpriteLab2Source>();
 
   const activeTab = useAppSelector(state => state.spriteLab2.activeTab);
-  // Once true, the Images tab mounts (clipped when inactive) and stays
-  // mounted, so no visit pays the gallery/editor mount cost. Latches on the
-  // first visit, or earlier: pre-mounted during idle time after the
-  // animation list seeds, so even the FIRST visit is instant.
+  // The Images tab mounts once (idle pre-mount after seeding, or first
+  // visit) and stays mounted clipped, so no visit pays the mount cost.
   const [imagesMounted, setImagesMounted] = useState(false);
   useEffect(() => {
     if (activeTab === 'Images') {
@@ -125,10 +120,8 @@ const SpriteLab2View: React.FunctionComponent<{
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const scriptId = useAppSelector(state => state.progress.scriptId);
-  // Sprite Lab is a Blockly lab, and the animationList logic + engine read
-  // these page constants; seed them since we bypass the legacy StudioApp.init.
-  // Also populate the process-wide AichatContextManager that the aiGateway
-  // image-generation calls read from.
+  // Seed the page constants the animationList logic + engine read (we bypass
+  // StudioApp.init) and the AichatContextManager the aiGateway calls read.
   useEffect(() => {
     AichatContextManager.setContext({
       clientType: AiChatClientTypes.FLOW_LAB,
@@ -145,8 +138,7 @@ const SpriteLab2View: React.FunctionComponent<{
     );
   }, [dispatch, channelId, currentLevelId, scriptId]);
 
-  // This lab owns the full viewport; hide the server-rendered small footer
-  // (language selector + copyright) while it's mounted.
+  // This lab owns the full viewport; hide the server-rendered footer.
   useEffect(() => {
     setFooterVisibility(false);
     return () => setFooterVisibility(true);
@@ -163,10 +155,8 @@ const SpriteLab2View: React.FunctionComponent<{
 
   const mergeSources = useCallback(
     (patch: Partial<SpriteLab2Source>, forceSave = false) => {
-      // Use the updater form: sourcesRef only syncs after a render, so two
-      // merges in quick succession (a code edit and the animation-save
-      // effect, say) would otherwise build on a stale base and silently drop
-      // each other's changes.
+      // Updater form: sourcesRef syncs after render, so two quick merges
+      // would otherwise build on a stale base and drop each other's changes.
       updateSources(prev => ({...prev, ...patch}), forceSave);
     },
     [updateSources]
@@ -176,14 +166,12 @@ const SpriteLab2View: React.FunctionComponent<{
   const codeTabRef = useRef<CodeTabHandle>(null);
   const [engineReady, setEngineReady] = useState(false);
   const [animationsSeeded, setAnimationsSeeded] = useState(false);
-  // Scene-jump transition: the cover blanks the playspace to black the moment
-  // a jump is triggered (held while the target loads); fadeTrigger increments
-  // when the jump lands and Playspace plays the fade-from-black reveal.
+  // Jump transition: the cover blanks the playspace while the target loads;
+  // fadeTrigger increments on landing to play the fade-from-black.
   const [jumpCover, setJumpCover] = useState(false);
   const [fadeTrigger, setFadeTrigger] = useState(0);
 
-  // Pre-mount the Images tab during idle time once the animation list is
-  // seeded, so the first visit doesn't pay the mount cost mid-transition.
+  // Idle pre-mount (see imagesMounted above).
   useEffect(() => {
     if (!animationsSeeded || imagesMounted) {
       return;
@@ -198,17 +186,16 @@ const SpriteLab2View: React.FunctionComponent<{
     return () => window.clearTimeout(handle);
   }, [animationsSeeded, imagesMounted]);
 
-  // Scenes UI variant. Full scenes (with workspace sources) live here and in
-  // project sources; redux mirrors just {id, name} for the selector and the
-  // go-to-scene block's dropdown. scenes[0] is the default scene.
+  // Full scenes live here and in project sources; redux mirrors {id, name}
+  // for the selector and block dropdowns. scenes[0] is the default scene.
   const scenesRef = useRef<SpriteLab2Scene[]>([]);
   const activeSceneIdRef = useRef<string | null>(null);
   const sceneMetadata = useAppSelector(state => state.spriteLab2.scenes);
   const activeSceneId = useAppSelector(state => state.spriteLab2.activeSceneId);
 
-  // Lab2 switches levels without a page reload; reset this lab's slice (and
-  // any in-flight location pick) when leaving a level or unmounting. Declared
-  // before the seed effect so on a level switch the reset lands first.
+  // Lab2 switches levels in place; reset the lab slice and any in-flight
+  // location pick on leave. Declared before the seed effect so on a level
+  // switch the reset lands first.
   useEffect(() => {
     return () => {
       dispatch(resetSpriteLab2());
@@ -216,14 +203,10 @@ const SpriteLab2View: React.FunctionComponent<{
     };
   }, [levelProperties.id, dispatch]);
 
-  // Seed the animation list and (scenes variant) the scene lists — local and
-  // section-mates' — from saved sources and the section-scenes API BEFORE the
-  // Code tab mounts (the Code tab is gated on animationsSeeded below). The
-  // costume/background dropdown fields — and both scene dropdowns — validate
-  // their saved values against the store at block-load time; loading blocks
-  // against empty lists nulls every saved selection. This must be a render
-  // gate, not just dispatch ordering: a child's mount effect (where the
-  // workspace loads blocks) runs before any parent effect.
+  // Seed the animation and scene lists BEFORE the Code tab mounts: dropdown
+  // fields validate saved values against the store at block-load time, and a
+  // child's mount effect runs before any parent effect — hence the
+  // animationsSeeded render gate, not just dispatch ordering.
   useEffect(() => {
     let cancelled = false;
     dispatch(
@@ -255,12 +238,9 @@ const SpriteLab2View: React.FunctionComponent<{
     dispatch(setScenes(scenes.map(s => ({id: s.id, name: s.name}))));
     dispatch(setActiveSceneId(scenes[0].id));
 
-    // Section-mates' scenes for the go-to-external-scene dropdown. The Code
-    // tab only waits for this when saved blocks actually reference external
-    // scenes (their dropdown values validate against the options at block-load
-    // time); otherwise blocks mount immediately and the list arrives in the
-    // background. A slow/hung API must never blank the lab, so the gated path
-    // also times out into placeholder options.
+    // Block mount only waits on the section-scenes fetch when saved blocks
+    // reference external scenes; the gated path times out into placeholder
+    // options so a hung API can't blank the lab.
     const savedExternalKeys = collectSavedExternalKeys(scenes);
     if (savedExternalKeys.length === 0) {
       setAnimationsSeeded(true);
@@ -305,11 +285,8 @@ const SpriteLab2View: React.FunctionComponent<{
     // Re-seeds only when the level changes (dispatch is store-stable).
   }, [levelProperties.id, dispatch]);
 
-  // Instantiate the p5.play engine once. Unlike classic Sprite Lab we don't
-  // auto-load the legacy default sprite library; SpriteLab2 sprites come from
-  // the Images tab (AI generation), so a new project starts with an empty
-  // list. p5 preload then completes immediately instead of blocking on remote
-  // default-sprite assets.
+  // Instantiate the engine once per level. No legacy default-sprite library:
+  // images come from the Images tab, so p5 preload completes immediately.
   useEffect(() => {
     let cancelled = false;
     const savedAnimations =
@@ -338,8 +315,7 @@ const SpriteLab2View: React.FunctionComponent<{
     // re-creates the engine once per level (same keying as dance).
   }, [levelProperties]);
 
-  // Persist animation-editor changes (costumes/backgrounds added or edited in
-  // the Items tab) back to project sources in the classic serialized shape.
+  // Persist Images-tab changes back to sources in the serialized shape.
   const animationListState = useAppSelector(state => state.animationList);
   const skipFirstAnimationSave = useRef(true);
   useEffect(() => {
@@ -348,11 +324,9 @@ const SpriteLab2View: React.FunctionComponent<{
       skipFirstAnimationSave.current = false;
       return;
     }
-    // Serialize from the LIVE store, not this commit's snapshot.
-    // compileExternalScene transiently merges a classmate's animations into
-    // the store (merge -> compile -> restore, synchronously), but the merge
-    // commit's passive effect runs after the restore — saving its snapshot
-    // would leak the classmate's costumes into this project's sources.
+    // Serialize from the LIVE store, not this commit's snapshot: this effect
+    // runs after compileExternalScene's synchronous merge-and-restore, and a
+    // snapshot save would leak the classmate's costumes into sources.
     mergeSources({
       animations: getSerializedAnimationList(
         getStore().getState().animationList
@@ -360,8 +334,7 @@ const SpriteLab2View: React.FunctionComponent<{
     });
   }, [animationListState, mergeSources]);
 
-  // Run the current program as the live preview. The engine reuses its p5
-  // instance across re-runs, so this is cheap and safe to call on every edit.
+  // Run the current program as the live preview (cheap: the engine reuses p5).
   const runProgram = useCallback(() => {
     const engine = engineRef.current;
     if (!engine) {
@@ -380,10 +353,9 @@ const SpriteLab2View: React.FunctionComponent<{
     runTimer.current = window.setTimeout(runProgram, RUN_DEBOUNCE_MS);
   }, [runProgram]);
 
-  // Scenes UI variant: run one scene's program. The scene open in the Code tab
-  // compiles from the live workspace; other scenes compile headless from their
-  // saved sources. Jump transitions (cover + fade) are driven by the engine's
-  // scene-jump lifecycle callbacks, not here — editor/tab switches don't fade.
+  // Run one scene: the open scene compiles from the live workspace, others
+  // headless from saved sources. Cover/fade comes from the engine's jump
+  // callbacks, not here — editor/tab switches don't fade.
   const runScene = useCallback(
     (sceneId: string | null) => {
       const engine = engineRef.current;
@@ -423,15 +395,11 @@ const SpriteLab2View: React.FunctionComponent<{
   const currentExternalProjectRef = useRef<ExternalProject | null>(null);
   const [externalLoading, setExternalLoading] = useState(false);
 
-  // Compile an external scene. Its costume/background dropdowns validate
-  // against the redux animation list at block-load time — and its go-to-scene
-  // dropdowns against the redux scene list — so merge the external project's
-  // animations and scenes in for the (synchronous) compile and restore after.
-  // Uses the RAW reducer action, not the setInitialAnimationList thunk: the
-  // thunk re-fetches every animation's image data on each dispatch, which
-  // turns repeated scene jumps into a memory-eating fetch storm. Restoring
-  // the exact captured state object also keeps selectors reference-equal, so
-  // no effects fire.
+  // The external scene's dropdowns validate against the redux lists at
+  // block-load time, so merge its animations/scenes in for the synchronous
+  // compile and restore after. RAW action, not the thunk — the thunk
+  // re-fetches every image per dispatch (a fetch storm across jumps) — and
+  // restoring the captured state object keeps selectors reference-equal.
   const compileExternalScene = useCallback(
     (scene: SpriteLab2Scene, project: ExternalProject) => {
       const currentAnimations = getStore().getState().animationList;
@@ -510,11 +478,8 @@ const SpriteLab2View: React.FunctionComponent<{
     [dispatch, compileExternalScene]
   );
 
-  // Handle the go-to-external-scene block: fetch the classmate's project
-  // fresh — their scenes may have changed while this lab has been open — and
-  // run the target scene. The last good copy is kept only as a fallback when
-  // the fetch fails. The playspace shows a delayed-fade-in spinner while the
-  // fetch is slow.
+  // Fetch the classmate's project fresh (their scenes may have changed);
+  // the last good copy is only a fetch-failure fallback.
   const runExternalScene = useCallback(
     async (key: string) => {
       const parsed = parseExternalSceneKey(key);
@@ -547,8 +512,8 @@ const SpriteLab2View: React.FunctionComponent<{
   const runExternalProjectSceneRef = useRef(runExternalProjectScene);
   runExternalProjectSceneRef.current = runExternalProjectScene;
 
-  // The go-to-external-scene dropdown re-fetches the section list every time
-  // it opens, so scenes classmates add while this lab is open show up.
+  // The external dropdown re-fetches the section list on every open, so
+  // scenes classmates add while this lab is open show up.
   useEffect(() => {
     if (!SCENES_UI_VARIANT) {
       return;
@@ -567,9 +532,9 @@ const SpriteLab2View: React.FunctionComponent<{
     return () => setExternalSceneRefreshHandler(null);
   }, [levelProperties.id, dispatch]);
 
-  // Start the live preview once the engine is ready, and wire the scene-jump
-  // blocks. A plain go-to-scene inside a running external scene resolves
-  // against that project's scenes, so classmates' multi-scene games work.
+  // Start the live preview once the engine is ready and wire the scene-jump
+  // blocks. Inside a running external scene, go-to-scene resolves against
+  // that project's scenes, so classmates' multi-scene games work.
   useEffect(() => {
     if (engineReady) {
       const engine = engineRef.current;
@@ -589,10 +554,8 @@ const SpriteLab2View: React.FunctionComponent<{
         };
         engine.onGoToExternalScene = (key: string) =>
           runExternalSceneRef.current(key);
-        // Jump transition: black out the playspace the moment a jump block
-        // fires, hold while the target loads, and play the fade-from-black
-        // when it lands (the cover and the fade's opaque first frame swap in
-        // the same commit, so there's no flash).
+        // Cover on jump start, fade on landing; the cover and the fade's
+        // opaque first frame swap in one commit, so there's no flash.
         engine.onSceneJumpStart = () => setJumpCover(true);
         engine.onSceneJumpLand = () => {
           setFadeTrigger(t => t + 1);
@@ -754,10 +717,8 @@ const SpriteLab2View: React.FunctionComponent<{
         ) : undefined
       }
     >
-      {/* Keep the Code tab mounted so the Blockly workspace survives switches.
-          Mount it only after the animation list is seeded: its dropdown fields
-          resolve saved costume/background names against the list at
-          block-load time. */}
+      {/* Kept mounted (clipped) so the workspace survives tab switches;
+          gated on animationsSeeded (see the seed effect). */}
       <div
         className={moduleStyles.codeTabWrapper}
         style={{
@@ -780,11 +741,8 @@ const SpriteLab2View: React.FunctionComponent<{
         )}
       </div>
 
-      {/* The Images tab mounts once (pre-mounted during idle time, or on
-          first visit) and stays mounted behind a clip-path, like the Code
-          tab: mounting the gallery + editor during a switch is expensive
-          enough to eat the guide's height-transition frames, and remounting
-          lost gallery state. */}
+      {/* Kept mounted (clipped) like the Code tab: mounting mid-switch eats
+          the guide's transition frames, and remounting loses gallery state. */}
       {imagesMounted && (
         <div
           className={classNames(moduleStyles.codeTabWrapper)}
@@ -803,9 +761,8 @@ const SpriteLab2View: React.FunctionComponent<{
         </div>
       )}
 
-      {/* The single, persistent playspace: a live preview pinned to the
-          top-right on the Code tab, animating to a large centered view on the
-          Play tab. Always mounted so the engine keeps running. */}
+      {/* Always mounted so the engine keeps running; animates between the
+          Code tab's corner preview and the Play tab's centered view. */}
       <Playspace
         mode={playspaceMode}
         fadeTrigger={fadeTrigger}
@@ -814,10 +771,7 @@ const SpriteLab2View: React.FunctionComponent<{
         getDefaultSpriteSize={getDefaultSpriteSize}
       />
 
-      {/* Lab2 Guide overlay (Music-style), driven by the level's guideMode.
-          The Code tab gets the full guide (instructions + AI generation);
-          the Images tab shows just the instructions, when the level has
-          any. */}
+      {/* Guide overlay: full guide on Code; instructions-only on Images. */}
       {levelProperties.guideMode &&
         (activeTab === 'Code' ||
           (activeTab === 'Images' && !!levelProperties.longInstructions)) && (

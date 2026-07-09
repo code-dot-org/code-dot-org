@@ -36,9 +36,8 @@ export interface RuntimeAnimationList {
   propsByKey: {[key: string]: RuntimeAnimationProps};
 }
 
-// One AI-generated (or otherwise tracked) item shown in the Items tab gallery.
-// The image itself lives in the project asset bucket and, once bridged into the
-// animationList, is an ordinary Sprite Lab costume/background.
+// One Items-tab gallery entry; the image lives in the project asset bucket
+// and, once in the animationList, is an ordinary costume/background.
 export interface SpriteLab2ItemEntry {
   name: string;
   filename: string;
@@ -53,10 +52,8 @@ export interface SpriteLab2World {
   grid: string[][];
 }
 
-// One scene in the scenes UI variant: a named code workspace. The id is the
-// source of truth (the go-to-scene block stores it); the name is the friendly
-// label users see. Scenes share the project-wide image library. scenes[0] is
-// the default scene the Play tab starts at.
+// A named code workspace. The id is the source of truth (the go-to-scene
+// block stores it); scenes[0] is the default scene Play starts at.
 export interface SpriteLab2Scene {
   id: string;
   name: string;

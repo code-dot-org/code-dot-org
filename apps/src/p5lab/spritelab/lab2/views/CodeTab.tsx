@@ -24,10 +24,9 @@ export interface CodeTabHandle {
   // Replace the workspace contents with the given serialization (e.g. from the
   // AI code generator).
   loadCode: (source: WorkspaceSerialization) => void;
-  // Scenes UI variant: swap the workspace to another scene's blocks. Unlike
-  // loadCode this doesn't mark the project edited — switching scenes isn't an
-  // edit. The caller flips its active-scene bookkeeping BEFORE calling so the
-  // change events this fires save under the new scene.
+  // Swap the workspace to another scene's blocks, without marking the project
+  // edited. The caller flips its active-scene bookkeeping BEFORE calling so
+  // the change events this fires save under the new scene.
   loadScene: (source: WorkspaceSerialization) => void;
 }
 
@@ -42,16 +41,14 @@ interface CodeTabProps {
   onSourceChange: (source: WorkspaceSerialization) => void;
   // Mark the project as edited (first user change).
   onEdit: () => void;
-  // Fired on intermediate field edits (e.g. painting pixels in the grid
-  // editor while it's still open), so the live preview can follow along.
-  // These don't serialize/save — the final change on editor close does.
+  // Fired on mid-editor field edits (e.g. grid painting) so the preview can
+  // follow along; the editor-close change event does the save.
   onIntermediateChange?: () => void;
 }
 
 /**
- * The Code tab: a Sprite Lab Blockly workspace we own directly (no StudioApp).
- * The AI generate pane lands in a later phase. Exposes getCode() so the Play
- * tab can run the compiled program.
+ * The Code tab: a Sprite Lab Blockly workspace owned directly (no StudioApp).
+ * Exposes getCode() so the runtime can run the compiled program.
  */
 const CodeTab = forwardRef<CodeTabHandle, CodeTabProps>(
   (
@@ -102,9 +99,8 @@ const CodeTab = forwardRef<CodeTabHandle, CodeTabProps>(
       },
       loadScene: (source: WorkspaceSerialization) => {
         if (workspace.current) {
-          // Like loadCode this replaces the workspace contents (core
-          // workspaces.load clears before loading), but without the
-          // save/mark-edited side effects — switching scenes isn't an edit.
+          // Replaces the contents (load clears first), without loadCode's
+          // save/mark-edited side effects.
           Blockly.serialization.workspaces.load(
             source as object,
             workspace.current
@@ -125,10 +121,8 @@ const CodeTab = forwardRef<CodeTabHandle, CodeTabProps>(
         return;
       }
 
-      // Prefer a JSON toolboxDefinition if present; otherwise use the Sprite Lab
-      // XML toolbox string (Blockly.inject parses XML toolboxes). This gives the
-      // Code tab the full categorized block set, like a standalone Sprite Lab
-      // project.
+      // Prefer a JSON toolboxDefinition; otherwise the classic XML string
+      // (Blockly.inject parses XML toolboxes).
       let toolbox:
         | BlocklyCore.utils.toolbox.ToolboxDefinition
         | string
@@ -137,19 +131,15 @@ const CodeTab = forwardRef<CodeTabHandle, CodeTabProps>(
           ? toolboxDefinition
           : undefined;
       if (!toolbox && toolboxXml) {
-        // Add the full predefined behavior set and (scenes variant) the
-        // go-to-scene block, then drop any blocks the level's toolbox
-        // references that aren't installed in this block pool (so opening a
-        // category never throws).
+        // Add the full behavior set + scene blocks, then drop unregistered
+        // block references so opening a category never throws.
         toolbox = filterToolboxToRegisteredBlocks(
           ensureSceneBlocks(ensurePredefinedBehaviors(toolboxXml))
         );
       }
 
-      // Variable naming (and function/behavior naming) prompts go through
-      // Blockly.customSimpleDialog, which the inject wrapper takes from these
-      // options — creating a variable crashes without one. Same minimal
-      // prompt-based dialog Music Lab uses.
+      // Variable/behavior naming goes through Blockly.customSimpleDialog —
+      // creating a variable crashes without one. Same dialog Music Lab uses.
       const customSimpleDialog = (options: {
         bodyText: string;
         promptPrefill: string;

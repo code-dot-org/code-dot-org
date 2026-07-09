@@ -33,13 +33,9 @@ interface GenerateSpriteLabProps {
 }
 
 /**
- * The Lab2 Guide overlay for Sprite Lab 2, modeled on Music Lab's guideMode.
- * In 'instructions' mode it shows the level's instructions; in
- * 'aiCodeGenerate' mode it shows the instructions (when the level has any)
- * above the AI prompt that generates Sprite Lab blocks
- * (pseudocode -> generateBlocklyJson) and loads them into the Code tab.
- * Content height changes (status/error lines appearing) animate: the Guide's
- * panel is sized by a wrapper whose measured height transitions.
+ * The Lab2 Guide overlay, modeled on Music Lab's guideMode. 'instructions'
+ * shows the level's instructions; 'aiCodeGenerate' adds the AI prompt that
+ * generates blocks (pseudocode -> generateBlocklyJson) into the Code tab.
  */
 const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   guideMode,

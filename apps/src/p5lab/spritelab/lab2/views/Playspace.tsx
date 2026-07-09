@@ -67,11 +67,9 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     isPickingLocation(state.locationPicker)
   );
 
-  // Hover ghost (legacy Sprite Lab behavior): while picking, preview the
-  // sprite being placed at the hovered location. The costume comes from the
-  // selected block — the user just clicked the pin on it — when that block
-  // carries a costume dropdown (e.g. "make new sprite at"); location pickers
-  // on costume-less blocks fall back to crosshair only.
+  // Hover ghost while picking: preview the sprite at the hovered location,
+  // costume from the selected block's dropdown (the user just clicked its
+  // pin); costume-less blocks fall back to crosshair only.
   const [hoverCoords, setHoverCoords] = useState<{x: number; y: number} | null>(
     null
   );
@@ -106,9 +104,8 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     return props ? props.dataURI || props.sourceUrl : null;
   });
 
-  // calculateOffsetCoordinates maps a screen point to the canvas's intrinsic
-  // 400x400 space via getBoundingClientRect vs offsetWidth, so it's correct
-  // despite our CSS transform scaling.
+  // Maps screen points to the intrinsic 400x400 space; correct despite the
+  // CSS transform scaling (getBoundingClientRect vs offsetWidth).
   const coordsFromEvent = useCallback((e: React.PointerEvent) => {
     if (!canvasRef.current) {
       return null;
@@ -143,11 +140,9 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       if (!picking) {
         return;
       }
-      // The click belongs to the location picker alone — don't let it reach
-      // Blockly (or anything else) as a click/deselect too. selectLocation
-      // exits picking mode before the browser fires the trailing click event,
-      // so the click swallow is armed via a ref rather than the (already
-      // stale) picking flag.
+      // Don't let the pick's click reach Blockly as a deselect. The swallow
+      // is armed via a ref: selectLocation exits picking mode before the
+      // browser fires the trailing click event.
       e.stopPropagation();
       e.preventDefault();
       swallowNextClickRef.current = true;
@@ -178,14 +173,10 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     [picking]
   );
 
-  // Only animate the move/scale when going directly between the two visible
-  // placements (Code preview <-> Play). Appearing from or disappearing to a
-  // tab without the playspace (Images/World) should be instant — and so
-  // should the first paint: until the ResizeObserver delivers a measurement,
-  // the transform is computed against a 0x0 overlay, and animating away from
-  // that stale position reads as the box sliding in from the left. The box
-  // stays transparent until measured and quickly fades in at its destination
-  // instead.
+  // Animate the move/scale only between the two visible placements (Code
+  // preview <-> Play); appearing/disappearing is instant. Until the
+  // ResizeObserver delivers a measurement the transform is against a 0x0
+  // overlay, so the box stays transparent and fades in at its destination.
   const measured = size.w > 0 && size.h > 0;
   const wasMeasured = useRef(false);
   const prevMode = useRef<PlayspaceMode>(mode);

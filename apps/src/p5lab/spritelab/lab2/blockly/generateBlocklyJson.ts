@@ -1,43 +1,12 @@
 import {JsonBlockConfig, WorkspaceSerialization} from '@cdo/apps/blockly/types';
 
 /**
- * Convert an indentation-based pseudocode description into a Sprite Lab Blockly
- * workspace serialization. Modeled on Music Lab's generateBlocklyJson, but
- * targets Sprite Lab block types and the `next`-chain / statement-input shape.
- *
- * The AI prompt in generateContent.ts is constrained to this vocabulary.
- *
- * Event hats (unindented; each starts a new top-level block whose body is the
- * indented lines below it; when_run must come first):
- *
- *   when_run                          program-start hat
- *   when_key <key>                    gamelab_whenKey (fires once per press)
- *   while_key <key>                   gamelab_whileKey (fires while held; a
- *                                     loop-style hat — body goes in its DO
- *                                     statement input, it has no next)
- *   when_touching <a> <b>             gamelab_whenTouching
- *
- * Statements:
- *
- *   repeat <n>                        controls_repeat_ext, body indented
- *   set_background <image>            gamelab_setBackgroundImageAs
- *   make_sprite <costume> <x> <y>     gamelab_makeNewSpriteAnon at a location
- *   make_grid <costume> <rows...>     gamelab_makeSpritesGrid; each row is a
- *                                     string of 0/1, top row first
- *   gravity <costume> <low|medium|high>      GameDev_gravity on those sprites
- *   set_type <costume> <player|environment>  GameDev_setGroup
- *   set_size <costume> <number>       gamelab_setProp "size"
- *   say <costume> <text...>           gamelab_spriteSay
- *   move <costume> <pixels> <direction>      gamelab_moveInDirection
- *   jump <small|medium|big>           GameDev_playerJump
- *   behavior <costume> <name...>      gamelab_addBehaviorSimple + the named
- *                                     predefined behavior block
- *   go_to_scene <scene name...>       spritelab2_goToScene; needs the caller's
- *                                     sceneIdByName map (field stores the id)
- *
- * Indentation defines nesting; sibling statements chain via `next`. Commands
- * that target sprites do so via all-sprites-with-costume, matching the blocks
- * in the student toolbox.
+ * Convert indentation-based pseudocode into a Sprite Lab workspace
+ * serialization. The grammar is defined by the AI prompt in generateContent.ts;
+ * keep the two in sync. Modeled on Music Lab's generateBlocklyJson.
+ * Non-obvious shapes: sibling statements chain via `next`; while_key is a
+ * loop-style hat (body in its DO input, no next); sprite-targeting commands go
+ * through all-sprites-with-costume.
  */
 
 // Standard Blockly statement input name for controls_repeat_ext.

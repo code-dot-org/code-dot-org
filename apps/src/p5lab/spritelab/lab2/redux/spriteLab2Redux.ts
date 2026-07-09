@@ -1,13 +1,10 @@
 import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 
-// The full set of tabs for the SpriteLab2 full-screen UI. Items/World arrive in
-// later phases; Code/Play are wired first.
+// The full set of tabs for the SpriteLab2 full-screen UI.
 export const SPRITE_LAB2_TABS = ['Images', 'World', 'Code', 'Play'] as const;
 export type SpriteLab2Tab = (typeof SPRITE_LAB2_TABS)[number];
 
 // AI code-generation lifecycle, modeled on Music's GenerateCode state machine.
-// Only used once the Code-tab AI pane lands (phase 5); declared here so the
-// slice shape is stable.
 export type AiGenerateState =
   | 'none'
   | 'generating'
@@ -16,9 +13,8 @@ export type AiGenerateState =
   | 'editing'
   | 'edited';
 
-// Scene metadata for the scenes UI variant. Full scene data (including each
-// workspace serialization) lives in project sources; this mirror exists so the
-// scene selector and the go-to-scene block's dropdown can read it reactively.
+// Redux mirror of the scenes (full data lives in project sources), so the
+// scene selector and the go-to-scene dropdown can read it reactively.
 export interface SceneMetadata {
   id: string;
   name: string;

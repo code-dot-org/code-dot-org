@@ -1,8 +1,6 @@
-// Trim transparent borders off sprite images at load time, so a sprite's
-// content reaches the edges of its bounding box (AI-generated images often
-// have generous transparent margins after background removal). Applied when
-// images are preloaded for the runtime — saved project data is untouched, so
-// it covers existing images too.
+// Trim transparent borders off sprite images at load time, so content reaches
+// the edges of the bounding box (AI-generated images carry generous margins).
+// Saved project data is untouched.
 
 import {BACKGROUNDS_CATEGORY, RuntimeAnimationList} from './types';
 

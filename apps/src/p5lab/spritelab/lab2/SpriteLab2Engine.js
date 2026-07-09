@@ -13,19 +13,11 @@ import {trimAnimationListImages} from './imageTrim';
 const NOOP = () => {};
 
 /**
- * A stand-in for the StudioApp singleton.
- *
- * The classic p5.play engine (P5Lab/SpriteLab) was built to be driven by
- * StudioApp: it reads the compiled program from studioApp.getCode(), asks it
- * about empty/duplicate blocks before running, and hands it to the
- * JSInterpreter. In Lab2 we own the Blockly workspace and the project lifecycle
- * ourselves, so we satisfy exactly those touch points and nothing else.
- *
- * Coupling points covered (see P5Lab.js execute()/initInterpreter() and
- * JSInterpreter.js): getCode is the program injection seam; hideSource/editor/
- * editCode keep the interpreter off the (nonexistent) droplet/ace editor; the
- * hasUnwanted... and clearAndAttach... stubs let the inherited execute() run
- * unchanged.
+ * Stand-in for the StudioApp singleton: exactly the members the classic
+ * engine touches (see P5Lab execute()/initInterpreter()). getCode is the
+ * program-injection seam; hideSource/editCode/editor keep the interpreter off
+ * the nonexistent droplet/ace editor; the hasUnwanted... and clearAndAttach...
+ * stubs let the inherited execute() run unchanged.
  */
 function makeStudioAppStub(engine) {
   return {
@@ -50,8 +42,7 @@ function makeStudioAppStub(engine) {
   };
 }
 
-// We don't render the on-screen dpad/space controls, but the engine's reset
-// path calls into mobileControls; a no-op satisfies it without the dpad DOM.
+// The engine's reset path calls into mobileControls; there's no dpad DOM here.
 const NOOP_MOBILE_CONTROLS = {init: NOOP, update: NOOP, reset: NOOP};
 
 /**
@@ -68,36 +59,31 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.showMobileControls = NOOP;
     this.debuggerEnabled = false;
     this.userCode = '';
-    // Scenes UI variant: the view sets these to handle the go-to-scene and
-    // go-to-external-scene blocks (it compiles the target scene and re-runs
-    // the program).
+    // Scene-jump handlers, set by the view (it compiles the target and
+    // re-runs).
     this.onGoToScene = null;
     this.onGoToExternalScene = null;
-    // Scene-jump lifecycle, for the view's black cover + fade: start fires
-    // synchronously with the triggering block, land when the target scene's
-    // program starts, cancel when a jump aborts.
+    // Jump lifecycle for the view's cover/fade: start fires with the block,
+    // land when the target scene runs, cancel on abort.
     this.onSceneJumpStart = null;
     this.onSceneJumpLand = null;
     this.onSceneJumpCancel = null;
-    // When set, the next re-runs preload from this serialized animation list
-    // instead of the project's own (used while running an external project's
-    // scenes, whose images live in their animation list).
+    // When set, re-runs preload from this list instead of the project's own
+    // (external scenes carry their own images).
     this.preloadAnimationsOverride = null;
     // Guards against overlapping execute() calls (see runProgram/onP5Setup).
     this.executeInFlight_ = false;
     this.executeStartedAt_ = 0;
     this.rerunAfterExecute_ = false;
-    // True from a scene-jump trigger until the target scene runs (or the jump
-    // is cancelled); repeat triggers are ignored meanwhile.
+    // True from a jump trigger until the target runs; repeat triggers are
+    // ignored meanwhile.
     this.sceneJumpInFlight_ = false;
   }
 
   /**
    * @override
-   * Add the scene-jump command to the library. initInterpreter exposes every
-   * library command as an interpreter global, so the go-to-scene block's
-   * generated `goToScene("id")` lands here. A fresh library is created on every
-   * (re)run, which is also what clears the background and input events between
+   * Adds the scene-jump commands (exposed as interpreter globals). A fresh
+   * library per (re)run is also what clears background/input events between
    * scenes.
    */
   createLibrary(args) {
@@ -107,8 +93,7 @@ export default class SpriteLab2Engine extends SpriteLab {
         return;
       }
       const id = String(sceneId);
-      // Defer a tick: this command runs inside the interpreter, and jumping
-      // scenes tears the interpreter down. Don't saw off the branch mid-step.
+      // Defer a tick: jumping tears down the interpreter this command runs in.
       setTimeout(() => this.onGoToScene && this.onGoToScene(id), 0);
     };
     library.commands.goToExternalScene = sceneKey => {
@@ -125,13 +110,10 @@ export default class SpriteLab2Engine extends SpriteLab {
   }
 
   /**
-   * A scene jump was triggered: stop processing the old scene's events until
-   * the new scene is running. Stopping the tick timer freezes the interpreted
-   * program (events, behaviors), so a "when touching"-style trigger can't
-   * re-fire the jump every frame while an external scene is still being
-   * fetched; the draw loop keeps rendering the last frame under the fade.
-   * Returns false if a jump is already in flight (callers then ignore the
-   * repeat trigger).
+   * Freeze the interpreted program until the new scene runs, so a "when
+   * touching"-style trigger can't re-fire the jump every frame while the
+   * target loads; draw keeps rendering the last frame under the fade.
+   * Returns false if a jump is already in flight.
    */
   beginSceneJump_() {
     if (this.sceneJumpInFlight_) {
@@ -146,9 +128,8 @@ export default class SpriteLab2Engine extends SpriteLab {
   }
 
   /**
-   * The view calls this when a triggered jump can't complete (unknown scene,
-   * failed fetch with no fallback); the old scene resumes. No-op when no jump
-   * is in flight.
+   * A triggered jump can't complete (unknown scene, failed fetch); resume the
+   * old scene. No-op when no jump is in flight.
    */
   cancelSceneJump() {
     if (!this.sceneJumpInFlight_) {
@@ -164,10 +145,8 @@ export default class SpriteLab2Engine extends SpriteLab {
   }
 
   /**
-   * Minimal replacement for P5Lab.init() that skips the StudioApp/project
-   * harness. Sets up the level config the run path reads, fetches helper
-   * libraries (e.g. NativeSpriteLab) the interpreter prepends to user code, and
-   * wires p5.
+   * P5Lab.init() minus the StudioApp/project harness: level config, helper
+   * libraries, p5 wiring.
    * @param {object} levelProperties
    * @returns {Promise}
    */
@@ -186,8 +165,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.level = {
       helperLibraries,
       softButtons: [],
-      // Include the lab's own block additions so their helperCode (e.g. the
-      // moving-left behavior) is prepended to user code like any pool block's.
+      // So the lab-owned behaviors' helperCode is prepended like pool blocks'.
       sharedBlocks: [
         ...(levelProperties.sharedBlocks || []),
         ...SPRITELAB2_EXTRA_SHARED_BLOCKS,
@@ -211,8 +189,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     await this.loadHelperLibraries(helperLibraries);
   }
 
-  // Replicates StudioApp.loadLibrary_: helper-library source is fetched as text
-  // and stashed where initInterpreter expects it (studioApp_.libraries[name]).
+  // Replicates StudioApp.loadLibrary_: source text stashed where
+  // initInterpreter expects it.
   async loadHelperLibraries(names) {
     await Promise.all(
       (names || []).map(async name => {
@@ -238,22 +216,17 @@ export default class SpriteLab2Engine extends SpriteLab {
   }
 
   /**
-   * Set the program and (re)run it as a live preview. The first time this
-   * creates the p5 instance via execute(); afterwards it re-runs inside the
-   * existing p5 (rerun) so we don't tear down and recreate p5 on every code
-   * edit — which both avoids flicker and the stale-preload-callback race that
-   * destroying p5 mid-cycle causes.
+   * Set the program and (re)run it as a live preview. First run creates p5
+   * via execute(); after that it re-runs inside the existing p5 — recreating
+   * p5 per edit flickers and races its own async preload callbacks.
    */
   runProgram(code) {
     if (code !== undefined) {
       this.setCode(code);
     }
-    // While the initial execute()'s async preload is pending, a second
-    // execute() would tear down state the pending preload callback still
-    // runs against (crashing in the interpreter's getScope). Defer: the
-    // in-flight run completes, then re-runs with the latest code. The
-    // timestamp is a safety valve so a run that never completes (e.g. a
-    // parse failure aborted it) can't wedge the engine.
+    // A second execute() while the first's preload is pending crashes the
+    // interpreter (getScope); defer and re-run with the latest code after.
+    // The timestamp keeps an aborted run from wedging the engine.
     if (this.executeInFlight_ && Date.now() - this.executeStartedAt_ < 15000) {
       this.rerunAfterExecute_ = true;
       return;
@@ -269,13 +242,10 @@ export default class SpriteLab2Engine extends SpriteLab {
 
   /**
    * @override
-   * P5Lab.initInterpreter registers command names in the Blockly generator's
-   * reserved-word list, but the generator's nameDB_ only exists after its
-   * first init/workspaceToCode. If the engine's first run beats the Code tab
-   * to compiling anything (a page-load timing race), initInterpreter crashes
-   * on nameDB_.reservedWords and the swallowed execution error leaves the
-   * playspace permanently blank. Initialize the name DB against a throwaway
-   * headless workspace first.
+   * The base method reads the generator's nameDB_, which only exists after a
+   * first init/workspaceToCode; if the engine's first run beats the Code tab
+   * to compiling, it crashes and the playspace stays blank. Init the name DB
+   * on a throwaway workspace first.
    */
   initInterpreter(attachDebugger) {
     if (!Blockly.JavaScript.nameDB_) {
@@ -291,11 +261,9 @@ export default class SpriteLab2Engine extends SpriteLab {
 
   /**
    * @override
-   * Runs when p5's preload phase completes — possibly long after the run that
-   * started it, and (because preload is async) possibly after a teardown left
-   * the interpreter non-runnable. Executing then crashes in the interpreter's
-   * getScope; skip instead. Overlap is also prevented in runProgram — this is
-   * the backstop.
+   * p5's async preload can complete after a teardown left the interpreter
+   * non-runnable; executing then crashes in getScope — skip. (runProgram
+   * prevents overlap; this is the backstop.)
    */
   onP5Setup() {
     const interpreterRunnable =
@@ -315,11 +283,8 @@ export default class SpriteLab2Engine extends SpriteLab {
   }
 
   /**
-   * Re-run the current program inside the already-created p5 instance: refresh
-   * preloaded images, clear sprites, rebuild the interpreter with the latest
-   * code, re-run setup, and keep the draw loop going. Serialized through a
-   * queue so overlapping re-runs (rapid edits, scene jumps) can't interleave
-   * across the preload await.
+   * Re-run the current program inside the existing p5. Serialized through a
+   * queue so overlapping re-runs can't interleave across the preload await.
    */
   rerun() {
     this.rerunQueue_ = (this.rerunQueue_ || Promise.resolve()).then(() =>
@@ -334,14 +299,9 @@ export default class SpriteLab2Engine extends SpriteLab {
       this.execute();
       return;
     }
-    // p5 only preloads project images during the initial execute(); an image
-    // generated since then isn't in p5._predefinedSpriteAnimations, and the
-    // costume/background commands silently no-op on unknown names (e.g. a
-    // scene jump to a "set background" of a new image rendered white). The
-    // preload helper skips entries whose dataURI is already loaded, so this
-    // only fetches what's new. External scenes preload from their own
-    // project's animation list instead. Costume images are border-trimmed on
-    // the way in (cached, so re-runs are free).
+    // Preload images added since the initial execute() — the costume/
+    // background commands silently no-op on unknown names. Already-loaded
+    // entries are skipped and trims are cached, so re-runs are cheap.
     await this.p5Wrapper.preloadSpriteImages(
       await trimAnimationListImages(
         this.preloadAnimationsOverride || getStore().getState().animationList
@@ -352,25 +312,18 @@ export default class SpriteLab2Engine extends SpriteLab {
       this.JSInterpreter.deinitialize();
     }
     this.initInterpreter(false /* attachDebugger */);
-    // The classic engine builds a fresh p5 per run, so CoreLibrary's world-
-    // timer baseline of 0 is correct there. We reuse p5 across re-runs, where
-    // the world clock keeps counting — without a re-baseline, "at time N"
-    // events can never fire again after the first run. Reset (same as the
-    // reset-timer block) so N means "into this run" — and for scene jumps,
-    // "into this scene".
+    // p5 is reused across re-runs, so re-baseline the world clock — without
+    // this, "at time N" events never fire again after the first run.
     if (this.library?.commands?.resetTimer) {
       this.library.commands.resetTimer.call(this.library);
     }
-    // The pending jump has landed once the new interpreter exists. Clear the
-    // gate BEFORE onP5Setup: it executes the new scene's "when run", whose own
-    // scene-jump blocks are legitimate new jumps — with the gate still set
-    // they'd be swallowed as repeats.
+    // Clear the jump gate BEFORE onP5Setup: the new scene's "when run" may
+    // legitimately trigger the next jump.
     const jumpLanded = this.sceneJumpInFlight_;
     this.sceneJumpInFlight_ = false;
     this.onP5Setup();
     this.p5Wrapper.setLoop(true);
-    // Don't restart the tick timer if the new scene's "when run" already
-    // triggered the next jump (which freezes events until it lands).
+    // Stay frozen if "when run" already triggered the next jump.
     if (!this.sceneJumpInFlight_ && !this.isTickTimerRunning()) {
       this.startTickTimer();
     }
@@ -389,16 +342,12 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.stopTickTimer();
   }
 
-  // SpriteLab2 doesn't use the classic fixed background set (backgrounds.json);
-  // backgrounds come from the Items tab. Skip the base class's
-  // preloadBackgrounds() and only preload the project's own sprite images. This
-  // also avoids a p5 preload-count leak: a failed loadImage() during preload
-  // (e.g. a background asset 404) never decrements p5._preloadCount, leaving the
-  // engine stuck in the preload phase forever.
+  // Backgrounds come from the Items tab, not backgrounds.json — and the base
+  // preloadBackgrounds() wedges p5 forever on a failed loadImage (the preload
+  // count never decrements).
   preloadLabAssets() {
-    // Preload wedges are invisible (the playspace just stays an empty box):
-    // whenAnimationsAreReady() waits for every animation's image fetch, and a
-    // single failed asset never resolves it. Surface what it's stuck on.
+    // A single failed image never resolves whenAnimationsAreReady, and the
+    // wedge is invisible; surface what it's stuck on.
     const watchdog = setTimeout(() => {
       const list = getStore().getState().animationList;
       const pending = list.orderedKeys
@@ -417,8 +366,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     );
   }
 
-  // The base preloadSpriteImages_ with costume border-trimming applied to the
-  // list on the way in (see imageTrim.ts).
+  // Base preloadSpriteImages_ with costume border-trimming (imageTrim.ts).
   async preloadTrimmedSpriteImages_() {
     await this.whenAnimationsAreReady();
     return this.p5Wrapper.preloadSpriteImages(
@@ -428,22 +376,16 @@ export default class SpriteLab2Engine extends SpriteLab {
 
   // --- Overrides that sever the global studioApp() singleton ---
 
-  // Sprite Lab has no user-facing console, so the base class surfaces execution
-  // errors via a StudioApp workspace alert. We have no StudioApp; log loudly
-  // instead — the injected error handler's own log lands in a collapsed
-  // console group that's easy to miss, and an execution error here halts the
-  // program (a silently blank playspace otherwise).
+  // The base class surfaces execution errors via StudioApp workspace alerts;
+  // log loudly instead — an execution error halts the program and would
+  // otherwise read as a silently blank playspace.
   reactToExecutionError(msg) {
     console.error('SpriteLab2 execution error (program halted):', msg);
   }
   clearExecutionErrorWorkspaceAlert() {}
 
-  // The classic SpriteLab.reset() ends by calling preview() to render a static
-  // first frame. In the tabbed Lab2 UI we don't want a reset to re-launch the
-  // engine: doing so re-creates p5 and re-runs the interpreter right after
-  // teardown, and a stale async preload callback from the program that was just
-  // stopped then fires executeInterpreter on the discarded interpreter
-  // ("Uncaught (in promise) ... getScope"). Reset should simply stop; Run is
-  // the only thing that launches execution. So preview() is a no-op here.
+  // Classic reset() ends with preview(), re-launching the engine right after
+  // teardown — a stale preload callback then fires on the discarded
+  // interpreter. Reset just stops; runProgram is the only launcher.
   preview() {}
 }

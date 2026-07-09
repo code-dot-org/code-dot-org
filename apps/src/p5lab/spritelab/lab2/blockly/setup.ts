@@ -35,12 +35,9 @@ const blocksCommon = blocksCommonModule as unknown as {
   install: (blockly: unknown, options: object) => void;
 };
 
-// Installs the Sprite Lab block definitions and their JS generators into the
-// global Blockly once per page. This is the StudioApp-free equivalent of the
-// install performed in appMain.js (blocksCommon.install + blocksModule.install).
-// Sprite Lab's own install() also wires up the behavior FunctionEditor and
-// custom procedure blocks, so we rely on it rather than re-registering blocks
-// individually the way dance/blockly/setup.ts does.
+// StudioApp-free equivalent of appMain.js's block install. Relies on Sprite
+// Lab's own install() because it also wires the behavior FunctionEditor and
+// custom procedure blocks.
 let isSetup = false;
 
 export function setupSpriteLab2BlocklyEnvironment(
@@ -79,9 +76,8 @@ function installSceneBlocks(): void {
 }
 
 /**
- * Ensure the toolbox offers the go-to-scene block. It goes at the end of the
- * "Game Design" category when the level has one, since scene jumps are a game
- * mechanic. No-op when the variant is off or the category is absent.
+ * Append the scene blocks to the "Game Design" category. No-op when the
+ * variant is off or the category is absent.
  */
 export function ensureSceneBlocks(toolboxXml: string): string {
   if (!SCENES_UI_VARIANT) {
@@ -114,9 +110,8 @@ export function ensureSceneBlocks(toolboxXml: string): string {
 }
 
 /**
- * Compile a scene's serialized workspace to JS on a headless workspace. Used
- * for scenes that aren't open in the Code tab (the visible workspace compiles
- * itself). Returns '' for an empty/missing source.
+ * Compile a serialized workspace to JS headless (for scenes not open in the
+ * Code tab). Returns '' for an empty/missing source.
  */
 export function compileWorkspaceSource(
   source: WorkspaceSerialization | undefined
@@ -133,10 +128,9 @@ export function compileWorkspaceSource(
   }
 }
 
-// Costume thumbnails for block image fields, preferring the border-trimmed
-// image (see imageTrim.ts) so the sprite's content fills the field instead of
-// floating in its transparent margins. Mirrors the classic costumeList in
-// spritelab/blocks.js otherwise.
+// The classic costumeList (spritelab/blocks.js) with border-trimmed
+// thumbnails, so content fills the field instead of floating in transparent
+// margins.
 function trimmedCostumeList(): [string, string][] {
   const state = getStore().getState();
   const animationList = state.animationList;
@@ -158,8 +152,8 @@ function trimmedCostumeList(): [string, string][] {
   return results.length ? results : [['sprites missing', 'null']];
 }
 
-// The classic costumePicker input type, with trimmed thumbnails. (The
-// animation-mode buttons don't apply here — this lab has no AnimationTab.)
+// The classic costumePicker input type, minus the animation-mode buttons
+// (no AnimationTab here), with trimmed thumbnails.
 const trimmedCostumePicker = {
   addInput(
     blockly: unknown,
@@ -180,9 +174,8 @@ const trimmedCostumePicker = {
 };
 
 /**
- * Refresh the selected-thumbnail image of every costume dropdown on the main
- * workspace, so blocks rendered before an image was trimmed pick up the
- * trimmed thumbnail.
+ * Refresh every costume dropdown's thumbnail, so blocks rendered before an
+ * image was trimmed pick up the trim.
  */
 export function refreshAnimationDropdownThumbnails(): void {
   const workspace = Blockly.getMainWorkspace?.();
@@ -201,10 +194,8 @@ export function refreshAnimationDropdownThumbnails(): void {
 }
 
 /**
- * Installs the level's shared/custom block definitions (the DB-backed Sprite Lab
- * block pool, e.g. GamelabJr) plus the lab's own additions, and returns a map
- * of category -> block type names for toolbox construction. Mirrors
- * dance/blockly/setup.ts installSharedBlocks.
+ * Install the level's DB-backed block pool plus the lab's own additions;
+ * returns category -> block type names. Mirrors dance's installSharedBlocks.
  */
 export function installSharedBlocks(sharedBlocks: BlockDefinition[]): {
   [category: string]: string[];
@@ -223,10 +214,8 @@ export function installSharedBlocks(sharedBlocks: BlockDefinition[]): {
   });
 }
 
-// Sprite Lab's predefined behaviors. Each has a runtime implementation in the
-// NativeSpriteLab helper library and a registered "get behavior" block. A
-// level's toolbox typically only lists a subset (often just draggable), so we
-// surface the full set in the Behaviors category.
+// Predefined behaviors (runtime implementations in NativeSpriteLab or
+// extraSharedBlocks). Levels typically list only a subset; we surface all.
 const PREDEFINED_BEHAVIOR_BLOCKS = [
   'gamelab_draggable',
   'gamelab_avoidingTargets',

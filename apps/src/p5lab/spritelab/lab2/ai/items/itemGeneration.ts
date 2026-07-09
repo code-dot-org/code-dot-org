@@ -5,8 +5,6 @@ import {createUuid} from '@cdo/apps/utils';
 import {getImageModel} from './modelHelpers';
 import {removeBackground} from './removeBackground';
 
-// Adapted from Game2 (origin/game2-initial). SpriteLab2 only generates sprites
-// (costumes) and backgrounds; the Game2 'block' platformer type is dropped.
 export type SpriteLab2ItemType = 'sprite' | 'background';
 
 // Visual style. 'pixel' yields crisp pixel art with hard edges (and a sharp,
