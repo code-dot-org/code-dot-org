@@ -282,6 +282,22 @@ $tab-segment-height: $tab-item-height - 2px;
 
 .guideInstructions {
   line-height: 1.45;
+
+  // Markdown output brings document-level margins; keep it compact inside
+  // the guide, and keep links readable on the dark panel.
+  p,
+  ul,
+  ol {
+    margin: 0 0 6px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: #8ab4f8;
+  }
 }
 
 .guideDivider {

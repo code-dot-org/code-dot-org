@@ -3,6 +3,7 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import Guide from '@cdo/apps/lab2/views/components/guide/Guide';
 import {getStore} from '@cdo/apps/redux';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import askSpriteLabAi, {getAvailableImageNames} from '../ai/askSpriteLabAi';
@@ -115,7 +116,9 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
 
   const generating = status === 'generating';
   const instructionsBlock = instructions && (
-    <div className={moduleStyles.guideInstructions}>{instructions}</div>
+    <div className={moduleStyles.guideInstructions}>
+      <SafeMarkdown markdown={instructions} />
+    </div>
   );
 
   return (
