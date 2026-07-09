@@ -28,10 +28,18 @@ import moduleStyles from './pixel-editor.module.scss';
 
 export type PixelTool = 'pen' | 'eraser' | 'bucket' | 'circle' | 'filledCircle';
 
-const TOOLS: {id: PixelTool; label: string; icon: React.ReactNode}[] = [
+// Each tool has a single-key shortcut; the hover tooltip reads
+// "<label> (<KEY>)".
+const TOOLS: {
+  id: PixelTool;
+  label: string;
+  shortcut: string;
+  icon: React.ReactNode;
+}[] = [
   {
     id: 'pen',
     label: 'Pen',
+    shortcut: 'p',
     icon: (
       <svg viewBox="0 0 16 16" aria-hidden="true">
         <path d="M2 14l1-4 8-8 3 3-8 8-4 1z" />
@@ -41,6 +49,7 @@ const TOOLS: {id: PixelTool; label: string; icon: React.ReactNode}[] = [
   {
     id: 'eraser',
     label: 'Eraser',
+    shortcut: 'e',
     icon: (
       <svg viewBox="0 0 16 16" aria-hidden="true">
         <path d="M6 13L2 9l7-7 5 5-6 6H6zm-1 1h9v1H5v-1z" />
@@ -50,6 +59,7 @@ const TOOLS: {id: PixelTool; label: string; icon: React.ReactNode}[] = [
   {
     id: 'bucket',
     label: 'Fill',
+    shortcut: 'f',
     icon: (
       <svg viewBox="0 0 16 16" aria-hidden="true">
         <path d="M8 1l6 6-6 6-5-5 5-5V1zm5.5 9.5S15 12.4 15 13.5a1.5 1.5 0 0 1-3 0c0-1.1 1.5-3 1.5-3z" />
@@ -59,6 +69,7 @@ const TOOLS: {id: PixelTool; label: string; icon: React.ReactNode}[] = [
   {
     id: 'circle',
     label: 'Circle outline',
+    shortcut: 'c',
     icon: (
       <svg viewBox="0 0 16 16" aria-hidden="true">
         <circle
@@ -75,6 +86,7 @@ const TOOLS: {id: PixelTool; label: string; icon: React.ReactNode}[] = [
   {
     id: 'filledCircle',
     label: 'Solid circle',
+    shortcut: 's',
     icon: (
       <svg viewBox="0 0 16 16" aria-hidden="true">
         <circle cx="8" cy="8" r="7" />
@@ -82,6 +94,10 @@ const TOOLS: {id: PixelTool; label: string; icon: React.ReactNode}[] = [
     ),
   },
 ];
+
+function toolTitle(tool: (typeof TOOLS)[number]): string {
+  return `${tool.label} (${tool.shortcut.toUpperCase()})`;
+}
 
 const MAX_DISPLAY_SIZE = 480;
 
@@ -212,6 +228,29 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
     img.onerror = () => setLoadError(true);
     img.src = imageUrl;
   }, [imageUrl]);
+
+  // Single-key tool shortcuts (shown in each tool's tooltip). Modifier
+  // combos pass through so browser shortcuts keep working.
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.metaKey || e.ctrlKey || e.altKey) {
+        return;
+      }
+      const target = e.target as HTMLElement | null;
+      if (
+        target &&
+        (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA')
+      ) {
+        return;
+      }
+      const match = TOOLS.find(t => t.shortcut === e.key.toLowerCase());
+      if (match) {
+        setTool(match.id);
+      }
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, []);
 
   // The panel (and its canvas) only mounts once the image is ready, so the
   // modal appears in final form instead of resizing as the image decodes.
@@ -433,8 +472,8 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
               <button
                 key={t.id}
                 type="button"
-                title={t.label}
-                aria-label={t.label}
+                title={toolTitle(t)}
+                aria-label={toolTitle(t)}
                 aria-pressed={tool === t.id}
                 className={classNames(
                   moduleStyles.toolButton,
