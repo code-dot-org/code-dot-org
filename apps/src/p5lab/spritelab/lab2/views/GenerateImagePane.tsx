@@ -6,7 +6,9 @@ import {AnyAction} from 'redux';
 import {
   addAnimation,
   deleteAnimation,
+  isNameUnique,
   SET_INITIAL_ANIMATION_LIST,
+  setAnimationName,
 } from '@cdo/apps/p5lab/redux/animationList';
 import PixelEditorModal from '@cdo/apps/pixelEditor/PixelEditorModal';
 import {getStore} from '@cdo/apps/redux';
@@ -125,13 +127,15 @@ const GenerateImagePane: React.FunctionComponent = () => {
         mediaType
       );
       const frameSize = await getImageSize(uint8Array, mediaType);
+      const desiredName = name.trim() || prompt.trim().slice(0, 20);
+      const key = createUuid();
       // Bridge into the animation list: addAnimation fetches sourceUrl, builds
       // the dataURI, and (for Sprite Lab) inserts at the top of the list.
       dispatch(
         // addAnimation is an untyped JS thunk (inferred as Function); cast so
         // the dispatch overloads accept it. redux-thunk runs the function.
-        addAnimation(createUuid(), {
-          name: name.trim() || prompt.trim().slice(0, 20),
+        addAnimation(key, {
+          name: desiredName,
           sourceUrl: url,
           frameSize,
           frameCount: 1,
@@ -143,6 +147,17 @@ const GenerateImagePane: React.FunctionComponent = () => {
           pixelGridSize,
         }) as unknown as AnyAction
       );
+      // The classic thunk unconditionally renames to name_N; take the plain
+      // name back when nothing else uses it (this animation currently holds
+      // the _N name, so the uniqueness check is against the others).
+      if (
+        isNameUnique(
+          desiredName,
+          getStore().getState().animationList.propsByKey
+        )
+      ) {
+        dispatch(setAnimationName(key, desiredName) as unknown as AnyAction);
+      }
       setName('');
       setPrompt('');
     } catch (e) {
