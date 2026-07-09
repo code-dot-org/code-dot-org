@@ -37,8 +37,11 @@ export const useAiTutorResponseSchemaSettings = (
   return useMemo(() => {
     return {
       jsonSchema: aiTutorResponseJsonSchema,
-      responseCallback: (response: string) => {
-        const jsonResponse = JSON.parse(response);
+      // response is already parsed on the gateway path; the legacy Rails-job
+      // path still hands over a raw JSON string that we parse ourselves.
+      responseCallback: (response: unknown) => {
+        const jsonResponse =
+          typeof response === 'string' ? JSON.parse(response) : response;
         console.log('🤖: AI Tutor response (in jsonSchema callback):', {
           jsonResponse,
         });

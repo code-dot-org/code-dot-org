@@ -60,7 +60,7 @@ export const submitChatContents = createAsyncThunk(
       assets?: ChatAsset[];
       analyticsProperties?: AnalyticsProperties;
       userAddedSelectionContext?: UserAddedSelectionContextItem[];
-      responseCallback?: (response: string) => string;
+      responseCallback?: (response: unknown) => string;
       lessonId?: number;
     },
     thunkAPI
@@ -231,10 +231,14 @@ export const submitChatContents = createAsyncThunk(
     messages.forEach(message => {
       if (message.role === Role.ASSISTANT) {
         // Structured-output callbacks only apply to successful model responses.
+        // Prefer the already-parsed structuredOutput (gateway path) over
+        // chatMessageText (a JSON string on the legacy Rails-job path, which
+        // responseCallback parses itself) to avoid a pointless re-parse.
         if (message.status === Status.OK) {
           message.chatMessageText =
-            responseCallback?.(message.chatMessageText) ??
-            message.chatMessageText;
+            responseCallback?.(
+              message.structuredOutput ?? message.chatMessageText
+            ) ?? message.chatMessageText;
         }
         dispatch(addChatEvent(message));
       }

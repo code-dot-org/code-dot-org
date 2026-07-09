@@ -34,7 +34,7 @@ interface UserChatMessageEditorProps {
   chatButtons?: ChatButtonAndKey[];
   hiddenContextCallback?: () => Promise<string>;
   multimodalAvailable?: boolean;
-  responseCallback?: (response: string) => string;
+  responseCallback?: (response: unknown) => string;
   currentLevelId?: string | null;
   sendDisabled?: boolean;
   onMessageSent?: () => void;
