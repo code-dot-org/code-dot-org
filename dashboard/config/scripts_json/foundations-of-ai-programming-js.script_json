@@ -1,0 +1,442 @@
+{
+  "script": {
+    "name": "foundations-of-ai-programming-js",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-07-09 03:23:01 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "foundations-of-ai-programming-js"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "End of Unit Project"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Introduction to Web Apps",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Build Your First Web Page with AI",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Intro to CSS",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Accessibility in Design",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Wireframes",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Interactivity in Web Apps",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Making a Button Respond",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Variables and Live Updates",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Writing Reusable Functions",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Making Decisions with If/Else",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Functions with Parameters",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Reactive Logic Project",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "d7cec99b-f728-4741-a4bc-f2d3ab10f093",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d7cec99b-f728-4741-a4bc-f2d3ab10f093",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "579a96c9-e6bf-472d-8bab-11a72ba1dcf7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "579a96c9-e6bf-472d-8bab-11a72ba1dcf7",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "78ee248f-7233-4803-98a9-588ed29f716e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "78ee248f-7233-4803-98a9-588ed29f716e",
+        "lesson_activity.key": "d7cec99b-f728-4741-a4bc-f2d3ab10f093"
+      }
+    },
+    {
+      "key": "a3ab718b-c282-4a6b-b427-dcbf4b9ff36a",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a3ab718b-c282-4a6b-b427-dcbf4b9ff36a",
+        "lesson_activity.key": "d7cec99b-f728-4741-a4bc-f2d3ab10f093"
+      }
+    },
+    {
+      "key": "a2aed04f-efe6-4941-b21d-a304f0031c1e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a2aed04f-efe6-4941-b21d-a304f0031c1e",
+        "lesson_activity.key": "579a96c9-e6bf-472d-8bab-11a72ba1dcf7"
+      }
+    },
+    {
+      "key": "ae2a36a1-c76a-4ea1-8abc-c80f56c5ec7a",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ae2a36a1-c76a-4ea1-8abc-c80f56c5ec7a",
+        "lesson_activity.key": "579a96c9-e6bf-472d-8bab-11a72ba1dcf7"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson1-level1_2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "a3ab718b-c282-4a6b-b427-dcbf4b9ff36a"
+      },
+      "level_keys": [
+        "foundations-of-ai-programming-js-lesson1-level1_2026"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson2-level1_2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "ae2a36a1-c76a-4ea1-8abc-c80f56c5ec7a"
+      },
+      "level_keys": [
+        "foundations-of-ai-programming-js-lesson2-level1_2026"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson2-level2_2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "ae2a36a1-c76a-4ea1-8abc-c80f56c5ec7a"
+      },
+      "level_keys": [
+        "foundations-of-ai-programming-js-lesson2-level2_2026"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "foundations-of-ai-programming-js-lesson1-level1_2026",
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson1-level1_2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "a3ab718b-c282-4a6b-b427-dcbf4b9ff36a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "foundations-of-ai-programming-js-lesson2-level1_2026",
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson2-level1_2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "ae2a36a1-c76a-4ea1-8abc-c80f56c5ec7a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "foundations-of-ai-programming-js-lesson2-level2_2026",
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson2-level2_2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "ae2a36a1-c76a-4ea1-8abc-c80f56c5ec7a"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

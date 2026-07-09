@@ -76,7 +76,7 @@ Look closely at the JSON example above. <strong>If an app only wanted to show th
 <div style="clear:both;"></div>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 12pt; font-weight: bold;">💡 Check your thinking:</summary>
+    <summary style="font-size: 12pt; font-weight: bold;">🔎 Check your thinking:</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;"><p style="font-size: 12pt;">
 In JSON, data is organized using <strong>key–value pairs</strong>. <br><br>The app can look for the key <strong>"temperature"</strong> and then use the value associated with it (<strong>72</strong>). <br><br>This structure makes it easier for apps to pull out just the specific pieces of data they need.
 </p>

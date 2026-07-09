@@ -54,6 +54,7 @@ const dashboard_prefixes = [
   '/users',
   '/sections',
   '/teacher_dashboard',
+  '/experiments',
 ];
 
 const prefixes = {
