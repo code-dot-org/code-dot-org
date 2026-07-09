@@ -1,11 +1,13 @@
 import {type GeneratedFile} from 'ai';
 
+import {getModel} from '@cdo/apps/aichat/api/client/helpers/modelHelpers';
 import {
   isImageSafe,
   isTextSafe,
 } from '@cdo/apps/aichat/api/client/helpers/safetyHelpers';
 import {generateText} from '@cdo/apps/aiGateway';
 import DCDO from '@cdo/apps/dcdo';
+import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@cdo/apps/aiGateway', () => ({
   generateText: jest.fn(),
@@ -18,10 +20,15 @@ jest.mock('@cdo/apps/dcdo', () => ({
   },
 }));
 
+jest.mock('@cdo/apps/aichat/api/client/helpers/modelHelpers', () => ({
+  getModel: jest.fn(modelId => ({modelId})),
+}));
+
 const mockGenerateText = generateText as jest.MockedFunction<
   typeof generateText
 >;
 const mockDCDOGet = DCDO.get as jest.MockedFunction<typeof DCDO.get>;
+const mockGetModel = getModel as jest.MockedFunction<typeof getModel>;
 
 function mockClassification(classification: string | undefined) {
   mockGenerateText.mockResolvedValue({
@@ -49,6 +56,9 @@ describe('safetyHelpers', () => {
           output: expect.anything(),
           model: expect.anything(),
         })
+      );
+      expect(mockGetModel).toHaveBeenCalledWith(
+        AiChatModelIds.GEMINI_2_5_FLASH
       );
     });
 
@@ -102,6 +112,9 @@ describe('safetyHelpers', () => {
           output: expect.anything(),
           model: expect.anything(),
         })
+      );
+      expect(mockGetModel).toHaveBeenCalledWith(
+        AiChatModelIds.GEMINI_2_5_FLASH
       );
     });
 

@@ -28,13 +28,13 @@ interface SafetyConfig {
 }
 
 const DEFAULT_SAFETY_CONFIG: SafetyConfig = {
-  modelId: AiChatModelIds.CHATGPT,
+  modelId: AiChatModelIds.GEMINI_2_5_FLASH,
   safetySystemPrompt:
     'You are a content filter trying to keep a school teacher out of trouble. Determine if chat text is inappropriate for an American public middle school classroom. Examples of inappropriate content: profanity, swears, illegal behavior, insults, bullying, slurs, sex, violence, racism, sexism, threats, weapons, dirty slang, etc. If text is inappropriate, respond with the single word `INAPPROPRIATE`, otherwise respond with the single word `OK`.',
 };
 
 const DEFAULT_IMAGE_SAFETY_CONFIG: SafetyConfig = {
-  modelId: AiChatModelIds.CHATGPT,
+  modelId: AiChatModelIds.GEMINI_2_5_FLASH,
   safetySystemPrompt:
     'You are a content filter trying to keep a school teacher out of trouble. Determine if the image is inappropriate for an American public middle school classroom. Examples of inappropriate content: profanity or explicit text, illegal behavior, insults, bullying, slurs, racism, sexism, hate symbols, sex, nudity, sexualized content, violence, gore, threats, weapons, dirty slang, drug use, alcohol use, tobacco or vaping, self-harm, other content that would be unsafe or disruptive in class\nIf the image is inappropriate, respond with the single word `INAPPROPRIATE`, otherwise respond with the single word `OK`.',
 };
