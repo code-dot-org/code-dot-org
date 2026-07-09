@@ -11,7 +11,8 @@ import './preview.module.scss';
 import BrandDecorator, {DEFAULT_BRAND} from '../decorators/BrandDecorator';
 
 // Import FontAwesome into the `base` layer (declared below `mui`) so MUI's
-// layered styleOverrides win over FA's base icon rules. See MuiDecorator.
+// layered styleOverrides win over FA's base icon rules. See BrandDecorator,
+// which declares the @layer order.
 const fontAwesomeReady = injectFontAwesome({layer: 'base'});
 
 /**

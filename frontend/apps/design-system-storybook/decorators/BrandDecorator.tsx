@@ -5,7 +5,7 @@ import {
   ThemeProvider,
 } from '@mui/material';
 import {Decorator, StoryContext} from '@storybook/react-vite';
-import {useEffect} from 'storybook/preview-api';
+import {useEffect} from 'react';
 
 import {
   CdoTheme,
