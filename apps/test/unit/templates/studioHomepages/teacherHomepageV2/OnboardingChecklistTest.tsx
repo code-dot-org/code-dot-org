@@ -1,42 +1,93 @@
 import '@testing-library/jest-dom';
-import {fireEvent, render, screen, waitFor} from '@testing-library/react';
+import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 import {Tour} from 'shepherd.js';
 
+import confirmDemoSectionSettings from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/confirmDemoSectionSettings';
 import OnboardingChecklist from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/OnboardingChecklist';
+import useCreateSectionTour from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useCreateSectionTour';
+import useLearnHowToEvaluateTour from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useLearnHowToEvaluateTour';
+import useReviewSyllabusTour from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useReviewSyllabusTour';
+import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   get: jest.fn(),
   post: jest.fn(),
 }));
+jest.mock('@cdo/apps/util/reduxHooks', () => ({
+  useAppSelector: jest.fn(() => undefined),
+}));
+jest.mock(
+  '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useCreateSectionTour',
+  () => ({__esModule: true, default: jest.fn()})
+);
+jest.mock(
+  '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useReviewSyllabusTour',
+  () => ({__esModule: true, default: jest.fn()})
+);
+jest.mock(
+  '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useLearnHowToEvaluateTour',
+  () => ({__esModule: true, default: jest.fn()})
+);
+jest.mock(
+  '@cdo/apps/templates/studioHomepages/teacherHomepageV2/confirmDemoSectionSettings',
+  () => ({__esModule: true, default: jest.fn()})
+);
 
 const mockGet = HttpClient.get as jest.MockedFunction<typeof HttpClient.get>;
 const mockPost = HttpClient.post as jest.MockedFunction<typeof HttpClient.post>;
+const mockUseCreateSectionTour = useCreateSectionTour as jest.MockedFunction<
+  typeof useCreateSectionTour
+>;
+const mockUseReviewSyllabusTour = useReviewSyllabusTour as jest.MockedFunction<
+  typeof useReviewSyllabusTour
+>;
+const mockUseLearnHowToEvaluateTour =
+  useLearnHowToEvaluateTour as jest.MockedFunction<
+    typeof useLearnHowToEvaluateTour
+  >;
+const mockConfirmDemoSectionSettings =
+  confirmDemoSectionSettings as jest.MockedFunction<
+    typeof confirmDemoSectionSettings
+  >;
 
 const makeJsonResponse = (body: unknown) =>
   new Response(JSON.stringify(body), {
     headers: {'Content-Type': 'application/json'},
   });
 
-// A Tour exposes many methods; the checklist only ever calls start(), so we
-// stub just that and cast through unknown.
-const fakeTour = () => ({start: jest.fn()} as unknown as Tour);
+// A Tour exposes many methods; the checklist only ever calls start()/cancel(),
+// so we stub just those and cast through unknown.
+const fakeTour = () =>
+  ({start: jest.fn(), cancel: jest.fn()} as unknown as Tour);
 
 describe('OnboardingChecklist', () => {
+  let createSectionTour: Tour;
+  let reviewSyllabusTour: Tour;
+  let learnHowToEvaluateTour: Tour;
+
   beforeEach(() => {
     jest.clearAllMocks();
     mockGet.mockResolvedValue(makeJsonResponse([]));
     mockPost.mockResolvedValue(new Response());
+
+    createSectionTour = fakeTour();
+    reviewSyllabusTour = fakeTour();
+    learnHowToEvaluateTour = fakeTour();
+    mockUseCreateSectionTour.mockReturnValue(createSectionTour);
+    mockUseReviewSyllabusTour.mockReturnValue(reviewSyllabusTour);
+    mockUseLearnHowToEvaluateTour.mockReturnValue(learnHowToEvaluateTour);
+    // Not stale by default: the staleness dialog stays out of the way and
+    // tours start directly.
+    mockConfirmDemoSectionSettings.mockResolvedValue(false);
   });
 
   function renderComponent(
     overrides: Partial<React.ComponentProps<typeof OnboardingChecklist>> = {}
   ) {
     const props = {
-      createSectionTour: fakeTour(),
-      reviewSyllabusTour: fakeTour(),
-      learnHowToEvaluateTour: fakeTour(),
+      demoSection: null,
       demoType: 'high' as const,
       isHidden: false,
       onHide: jest.fn(),
@@ -69,17 +120,23 @@ describe('OnboardingChecklist', () => {
     expect(props.onHide).toHaveBeenCalledTimes(1);
   });
 
-  it('starts the matching tour when a checklist item is clicked', () => {
-    const {props} = renderComponent();
+  it('starts the matching tour when a checklist item is clicked', async () => {
+    renderComponent();
 
     fireEvent.click(screen.getByText('Create a class section'));
-    expect(props.createSectionTour?.start).toHaveBeenCalledTimes(1);
+    expect(createSectionTour.start).toHaveBeenCalledTimes(1);
 
+    // The syllabus/evaluate tours run through the async staleness gate, so
+    // their start() lands a microtask after the click.
     fireEvent.click(screen.getByText('Review the syllabus'));
-    expect(props.reviewSyllabusTour?.start).toHaveBeenCalledTimes(1);
+    await waitFor(() =>
+      expect(reviewSyllabusTour.start).toHaveBeenCalledTimes(1)
+    );
 
     fireEvent.click(screen.getByText('Learn how to evaluate'));
-    expect(props.learnHowToEvaluateTour?.start).toHaveBeenCalledTimes(1);
+    await waitFor(() =>
+      expect(learnHowToEvaluateTour.start).toHaveBeenCalledTimes(1)
+    );
   });
 
   it('calls HttpClient.post with started_at and demo_type when a tour button is clicked', () => {
@@ -99,8 +156,8 @@ describe('OnboardingChecklist', () => {
     );
   });
 
-  it('starts the correct tour after recording', () => {
-    const {props} = renderComponent({demoType: 'high'});
+  it('starts the correct tour after recording', async () => {
+    renderComponent({demoType: 'high'});
 
     fireEvent.click(screen.getByText('Review the syllabus'));
 
@@ -114,7 +171,7 @@ describe('OnboardingChecklist', () => {
       true,
       {'Content-Type': 'application/json'}
     );
-    expect(props.reviewSyllabusTour?.start).toHaveBeenCalled();
+    await waitFor(() => expect(reviewSyllabusTour.start).toHaveBeenCalled());
   });
 
   it('sends the correct tour name for learn-to-evaluate', () => {
@@ -201,5 +258,96 @@ describe('OnboardingChecklist', () => {
 
     await waitFor(() => expect(consoleErrorSpy).toHaveBeenCalled());
     consoleErrorSpy.mockRestore();
+  });
+
+  describe('when the demo section is stale', () => {
+    const STALENESS_TITLE = 'Your onboarding experience is just one step away';
+    const RESET_ERROR =
+      "We couldn't reset your demo section. Please try again.";
+    const staleDemoSection = {id: 42} as unknown as Section;
+
+    // The mount-time staleness check resolves on a microtask; drain it so
+    // isDemoSectionStale is set before we click a checklist item.
+    const flushMountEffects = () =>
+      act(async () => {
+        await Promise.resolve();
+        await Promise.resolve();
+      });
+
+    beforeEach(() => {
+      mockConfirmDemoSectionSettings.mockResolvedValue(true);
+    });
+
+    it('blocks the syllabus tour behind the dialog instead of starting it', async () => {
+      renderComponent({demoSection: staleDemoSection});
+      await flushMountEffects();
+
+      fireEvent.click(screen.getByText('Review the syllabus'));
+
+      expect(await screen.findByText(STALENESS_TITLE)).not.toBeNull();
+      expect(reviewSyllabusTour.start).not.toHaveBeenCalled();
+    });
+
+    it('does not block the create-section tour', async () => {
+      renderComponent({demoSection: staleDemoSection});
+      await flushMountEffects();
+
+      fireEvent.click(screen.getByText('Create a class section'));
+
+      expect(createSectionTour.start).toHaveBeenCalledTimes(1);
+      expect(screen.queryByText(STALENESS_TITLE)).toBeNull();
+    });
+
+    it('cancels the pending tour and dismisses the dialog on cancel', async () => {
+      renderComponent({demoSection: staleDemoSection});
+      await flushMountEffects();
+
+      fireEvent.click(screen.getByText('Review the syllabus'));
+      fireEvent.click(await screen.findByText('Cancel'));
+
+      expect(reviewSyllabusTour.cancel).toHaveBeenCalledTimes(1);
+      expect(reviewSyllabusTour.start).not.toHaveBeenCalled();
+      expect(screen.queryByText(STALENESS_TITLE)).toBeNull();
+    });
+
+    it('resets the demo section then starts the tour on confirm', async () => {
+      renderComponent({demoSection: staleDemoSection});
+      await flushMountEffects();
+
+      fireEvent.click(screen.getByText('Review the syllabus'));
+      fireEvent.click(await screen.findByText('Reset course assignment'));
+
+      expect(mockPost).toHaveBeenCalledWith(
+        '/api/v1/sections/demo/reset',
+        JSON.stringify({id: 42}),
+        true,
+        {'Content-Type': 'application/json'}
+      );
+      // The tour starts once the reset POST resolves, a microtask later.
+      await waitFor(() =>
+        expect(reviewSyllabusTour.start).toHaveBeenCalledTimes(1)
+      );
+    });
+
+    it('surfaces an error and leaves the tour unstarted when reset fails', async () => {
+      mockPost.mockImplementation((url: string) =>
+        url === '/api/v1/sections/demo/reset'
+          ? Promise.reject(new Error('network error'))
+          : Promise.resolve(new Response())
+      );
+      const consoleErrorSpy = jest
+        .spyOn(console, 'error')
+        .mockImplementation(() => {});
+
+      renderComponent({demoSection: staleDemoSection});
+      await flushMountEffects();
+
+      fireEvent.click(screen.getByText('Review the syllabus'));
+      fireEvent.click(await screen.findByText('Reset course assignment'));
+
+      expect(await screen.findByText(RESET_ERROR)).not.toBeNull();
+      expect(reviewSyllabusTour.start).not.toHaveBeenCalled();
+      consoleErrorSpy.mockRestore();
+    });
   });
 });

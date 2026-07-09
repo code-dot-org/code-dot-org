@@ -15,7 +15,10 @@ import {
 } from '@cdo/apps/aichat/redux/slice';
 import {AssetSource} from '@cdo/apps/aichat/types/assets';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import {
+  START_SOURCES,
+  SUPPORTED_IMAGE_EXTENSIONS,
+} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
@@ -24,7 +27,6 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {WEBLAB2_IMAGE_FILE_TYPES} from '@cdo/apps/weblab2/constants';
 
 import {useStartModeFileRowOptions} from './useStartModeFileRowOptions';
 
@@ -36,7 +38,7 @@ import {useStartModeFileRowOptions} from './useStartModeFileRowOptions';
 const handleFileDownload = async (file: ProjectFile) => {
   try {
     if (
-      WEBLAB2_IMAGE_FILE_TYPES.includes(getFileExtension(file.name)) &&
+      SUPPORTED_IMAGE_EXTENSIONS.includes(getFileExtension(file.name)) &&
       file.url
     ) {
       // File is an image and has a url, so download from browser

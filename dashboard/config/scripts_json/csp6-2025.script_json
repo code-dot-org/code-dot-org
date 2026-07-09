@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-27 16:22:09 UTC",
+    "serialized_at": "2026-07-07 21:23:43 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6460,24 +6460,35 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csp6-2023/resources",
-      "key": "all_resources_5",
+      "url": "/courses/csp-2025/units/6/resources",
+      "key": "all_resources_16",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_5"
+        "resource.key": "all_resources_16"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/csp6-2023/standards",
-      "key": "all_standards_5",
+      "url": "/courses/csp-2025/units/6/standards",
+      "key": "all_standards_16",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards_5"
+        "resource.key": "all_standards_16"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/csp-2025/units/6/vocab",
+      "key": "all_vocabulary_7",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_7"
       }
     },
     {
@@ -7449,13 +7460,19 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources_5",
+        "resource.key": "all_resources_16",
         "script.name": "csp6-2025"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards_5",
+        "resource.key": "all_standards_16",
+        "script.name": "csp6-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_7",
         "script.name": "csp6-2025"
       }
     },
@@ -8667,6 +8684,9 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

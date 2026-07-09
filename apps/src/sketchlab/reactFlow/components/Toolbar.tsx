@@ -2,17 +2,11 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Divider, IconButton, Paper, Tooltip} from '@mui/material';
 import React, {ChangeEvent, useCallback, useId} from 'react';
 
-import {
-  getAppOptionsEditingExemplar,
-  getIsStartMode,
-} from '@cdo/apps/lab2/projects/utils';
 import useHiddenFileInput from '@cdo/apps/util/hooks/useHiddenFileInput';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {createUuid} from '@cdo/apps/utils';
 
-import {ASSET_PATH_PREFIX} from '../constants';
 import {AddNodeRequest, CanvasTool, ShapeType} from '../types';
+import {uploadImageAsset} from '../utils/uploadImageAsset';
 
 import styles from './toolbar.module.scss';
 
@@ -47,30 +41,11 @@ export default function Toolbar({
         return;
       }
 
-      const isStarterAssetOrExemplar = !!(
-        getIsStartMode() || getAppOptionsEditingExemplar()
-      );
-      if (!isStarterAssetOrExemplar && !channelId) {
-        return;
-      }
-
-      const extension = file.name.split('.').pop() ?? 'png';
-      const filename = `${createUuid()}.${extension}`;
-      const uploadUrl = isStarterAssetOrExemplar
-        ? `/level_starter_assets/${encodeURIComponent(
-            levelName
-          )}/uuid/${filename}`
-        : `${ASSET_PATH_PREFIX}/${channelId}/${filename}`;
-
       try {
-        if (isStarterAssetOrExemplar) {
-          const bodyData = new FormData();
-          bodyData.append('files[]', file);
-          await HttpClient.post(uploadUrl, bodyData, true);
-        } else {
-          await HttpClient.put(uploadUrl, file);
+        const uploadUrl = await uploadImageAsset(file, {levelName, channelId});
+        if (!uploadUrl) {
+          return;
         }
-
         onAddNode({
           type: 'image',
           data: {src: uploadUrl, altText: file.name.replace(/\.[^.]+$/, '')},

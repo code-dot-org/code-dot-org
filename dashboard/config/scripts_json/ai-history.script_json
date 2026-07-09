@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-02 05:15:59 UTC",
+    "serialized_at": "2026-07-08 17:25:45 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -35,12 +35,15 @@
   "lessons": [
     {
       "key": "lesson-1",
-      "name": "Lesson 1",
+      "name": "Lesson 1: Milestones and Eras of AI",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "overview": "**How did AI evolve from early rule-based systems into the tools we see today?**\n\nThis lesson introduces major milestones and eras in the history of AI by having students explore an interactive timeline, create a class timeline card, and compare ELIZA with a modern AI Tutor. Students investigate how AI shifted from early questions and rule-based systems toward tools that learn from data, while recognizing that AI progress includes both breakthroughs and limitations.",
+        "preparation": "- Prepare a class timeline space using chart paper, a whiteboard, or wall space. Label it from earliest to most recent so students can post their timeline cards during the activity.\n- Give each student a copy of the Compare Chatbots and AI Milestone Timeline Card activity guides",
+        "student_overview": "**How did AI evolve from early rule-based systems into the tools we see today?**\n\nExplore major milestones in AI history, build a class timeline, and compare ELIZA with a modern AI Tutor to see how AI changed from rule-based systems to tools that learn from data."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -50,12 +53,15 @@
     },
     {
       "key": "lesson-2",
-      "name": "Lesson 2",
+      "name": "Lesson 2: The People Who Shaped AI",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "overview": "**How have people’s ideas, choices, and discoveries shaped the development of AI?**\n\nThis lesson explores the people behind major developments in AI by having students investigate one AI contributor and share their findings through a peer exchange. Students examine how AI was shaped by many kinds of contributions, including foundational ideas, programming tools, datasets, computer vision research, bias research, and critiques of technology’s social impact.",
+        "preparation": "- Give each student a copy of the AI Contributor Profile activity guide",
+        "student_overview": "**How have people’s ideas, choices, and discoveries shaped the development of AI?**\n\nExplore people who helped shape AI, research one contributor, and share what you learned with classmates to see how different ideas, tools, discoveries, and concerns influenced AI history."
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -69,6 +75,8 @@
       "key": "c7f26b77-7b03-4e3b-84a7-975de7927686",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "c7f26b77-7b03-4e3b-84a7-975de7927686",
@@ -78,12 +86,70 @@
       }
     },
     {
-      "key": "1dc558ca-e92a-4b4d-84de-975931abef61",
+      "key": "ec2cc56b-883b-42e0-8c47-43b76872a1a6",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ec2cc56b-883b-42e0-8c47-43b76872a1a6",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ai-history"
+      }
+    },
+    {
+      "key": "960c7395-804d-44b9-b7ad-459f10ffeb87",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "960c7395-804d-44b9-b7ad-459f10ffeb87",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ai-history"
+      }
+    },
+    {
+      "key": "bc1bd58b-6390-4c8f-b152-117682ccff61",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bc1bd58b-6390-4c8f-b152-117682ccff61",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "ai-history"
+      }
+    },
+    {
+      "key": "1dc558ca-e92a-4b4d-84de-975931abef61",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "1dc558ca-e92a-4b4d-84de-975931abef61",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "ai-history"
+      }
+    },
+    {
+      "key": "af03413c-9d3b-4f62-9276-abe108c33e09",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "af03413c-9d3b-4f62-9276-abe108c33e09",
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "ai-history"
@@ -92,36 +158,368 @@
   ],
   "activity_sections": [
     {
-      "key": "f469c84f-8c64-460a-ba08-eadd80757380",
+      "key": "bebd0cb9-3194-4107-8d07-2dff258befb6",
       "position": 1,
       "properties": {
-        "progression_name": "Milestones & Eras of AI"
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students identify how a simple rule-based chatbot can seem intelligent while also noticing its limits.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Instruct students to read through the chatbot conversation with a partner. Then, click through the animated slide to display the prompts.\n- *What makes the chatbot seem intelligent?*\n- *What flaws or limitations do you notice?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should notice that ELIZA-style responses can feel conversational because they echo the user’s words and respond to familiar patterns, but the chatbot does not truly understand the conversation. This prepares students to compare early rule-based AI with later systems that learn from data.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How is the chatbot conversation you saw  different from the way modern AI chatbots seem to respond?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that ELIZA-style chatbots can seem intelligent because they respond to keywords and reuse parts of what the user says, but their responses are extremely limited. Modern AI chatbots often seem more flexible because they can generate more varied responses and respond to a wider range of prompts. Students begin to formulate ideas about the differences between early, rule-based AI and newer systems that learn patterns from large amounts of data.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
-        "activity_section.key": "f469c84f-8c64-460a-ba08-eadd80757380",
+        "activity_section.key": "bebd0cb9-3194-4107-8d07-2dff258befb6",
         "lesson_activity.key": "c7f26b77-7b03-4e3b-84a7-975de7927686"
       }
     },
     {
-      "key": "e45576d5-1416-4161-b180-45ba7ff4b63a",
-      "position": 2,
+      "key": "8d88c36c-290d-4181-b436-008ffa95153f",
+      "position": 1,
       "properties": {
-        "progression_name": "Compare Chatbots"
+        "description": "Now you’re going to explore one milestone in the history of AI. Each of you will focus on one milestone, such as ELIZA, expert systems, AI winters, or transformers. Your job is to find your milestone card, open the details, and use the tabs to identify when it happened, what happened, why it mattered, and how it connects to AI today. Later, you’ll use your activity guide to create a card for our class timeline.\n",
+        "duration": "20",
+        "name": "AI Milestone Timeline Card",
+        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "e45576d5-1416-4161-b180-45ba7ff4b63a",
-        "lesson_activity.key": "c7f26b77-7b03-4e3b-84a7-975de7927686"
+        "activity_section.key": "8d88c36c-290d-4181-b436-008ffa95153f",
+        "lesson_activity.key": "ec2cc56b-883b-42e0-8c47-43b76872a1a6"
+      }
+    },
+    {
+      "key": "1e4a3909-3f96-4d0d-aa4b-c821b4b6ade2",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students use an interactive Web Lab level to explore one AI milestone, create a timeline card, and learn from classmates how different milestones contributed to the evolution of AI.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Assign, or let students choose, an AI milestone.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the AI Milestone Timeline Card and Compare Chatbots Activity Guides.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1 to complete the AI Milestone Research level and fill out their timeline card activity guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Support students in pulling out the most important information from their milestone card rather than copying long sentences. Ask questions like, “What is the main thing that happened in this milestone?” “What changed because of it?” and “How would you explain this to a classmate in one sentence?” Watch for students getting stuck in details that are interesting but not central to the timeline.",
+        "progression_name": "Milestones and Eras of AI",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students that their timeline card should be short and easy for classmates to read during the gallery walk. They do not need every detail from the Web Lab level; they need the clearest explanation of what happened, why it mattered, and how it connects to AI today."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use students’ activity guides to check whether they can identify the key idea of an AI milestone, place it in an approximate time period, and explain how it contributed to the development of AI."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1e4a3909-3f96-4d0d-aa4b-c821b4b6ade2",
+        "lesson_activity.key": "ec2cc56b-883b-42e0-8c47-43b76872a1a6"
+      }
+    },
+    {
+      "key": "f194532a-4df1-48ba-af77-c4a4c0f6d01f",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f194532a-4df1-48ba-af77-c4a4c0f6d01f",
+        "lesson_activity.key": "ec2cc56b-883b-42e0-8c47-43b76872a1a6"
+      }
+    },
+    {
+      "key": "74e2119c-db8c-4aa7-8eec-7d764c2a0421",
+      "position": 4,
+      "properties": {
+        "description": "Now that you’ve completed your timeline card, cut it out and add it to the class timeline. As a class, we’ll organize the cards from earliest to most recent. Then, take a few minutes to walk the timeline and read your classmates’ cards. Look for how AI changed across different eras.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "74e2119c-db8c-4aa7-8eec-7d764c2a0421",
+        "lesson_activity.key": "ec2cc56b-883b-42e0-8c47-43b76872a1a6"
+      }
+    },
+    {
+      "key": "9e09a78d-8d59-4ea6-a8ae-a5d638d438f3",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students cut out their cards, post them on the physical timeline, and briefly review classmates’ cards. Students should identify one milestone they think was a major turning point and mark it with their thoughts, questions, and/or comments using a sticky note.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ask students to justify placement and make connections: “What time period helped you place this?” “Which milestone came before this?” “Where do you see AI shifting from rules toward learning from data?” “Which milestone seems like it made later milestones possible?”\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Keep this quick. Students do not need to read every card. Have them read 3–5 cards, ideally from different eras.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9e09a78d-8d59-4ea6-a8ae-a5d638d438f3",
+        "lesson_activity.key": "ec2cc56b-883b-42e0-8c47-43b76872a1a6"
+      }
+    },
+    {
+      "key": "c79e48e7-9e58-4215-90dd-65c672027efc",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c79e48e7-9e58-4215-90dd-65c672027efc",
+        "lesson_activity.key": "ec2cc56b-883b-42e0-8c47-43b76872a1a6"
+      }
+    },
+    {
+      "key": "8c906ab9-60f2-4f21-bace-4f0257a8686e",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *Where do you see AI changing from mostly following rules to learning from data?*\n- *Which milestone seems like a major turning point? Why?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i>**Discussion Goal:** Students should recognize that AI evolved through multiple turning points. Early AI focused on questions about machine intelligence and rule-based systems, while later systems increasingly learned patterns from data. Students should be able to point to specific milestones, such as expert systems, AI winters, machine learning, deep learning, or transformers, to explain how AI changed over time."
+      },
+      "seeding_key": {
+        "activity_section.key": "8c906ab9-60f2-4f21-bace-4f0257a8686e",
+        "lesson_activity.key": "ec2cc56b-883b-42e0-8c47-43b76872a1a6"
+      }
+    },
+    {
+      "key": "b333e8e9-b072-46e5-aeb1-4d441fbdfcb7",
+      "position": 8,
+      "properties": {
+        "description": "We just looked at the bigger history of how AI changed over time. Now you’ll compare two chatbots directly: ELIZA, an early rule-based chatbot, and AI Tutor, a modern AI chatbot. Your goal is not just to decide which one is “better.” Your goal is to notice how each chatbot responds, where each one seems useful, and where each one has limits.\n",
+        "duration": "15",
+        "name": "Compare Chatbots",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b333e8e9-b072-46e5-aeb1-4d441fbdfcb7",
+        "lesson_activity.key": "ec2cc56b-883b-42e0-8c47-43b76872a1a6"
+      }
+    },
+    {
+      "key": "80cdb622-5b13-4424-85e5-d033daeab051",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students compare an early rule-based chatbot with a modern AI chatbot in order to identify differences in how each tool responds, where each tool has limits, and how chatbot technology has changed over time.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Pair students. In each pair, one student should use ELIZA and the other should use AI Tutor. Partners should agree on the same starting prompts and follow-up prompts.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 2 to complete the chatbot comparison activity with a partner and record responses in their activity guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that partners are using the same prompts in both chatbots so the comparison is fair. Prompt students to look for patterns: “What does ELIZA seem to be doing with your words?” “How is AI Tutor’s response different?” “Where did each chatbot seem helpful, limited, or surprising?”\n",
+        "progression_name": "Compare Chatbots",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to write short notes instead of copying long chatbot responses word for word. The goal is to capture enough of each response to compare the two tools.\n"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use students’ activity guides to check whether they can identify patterns in ELIZA’s responses and explain how the comparison shows a change from rule-based AI toward more flexible modern AI systems.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "80cdb622-5b13-4424-85e5-d033daeab051",
+        "lesson_activity.key": "ec2cc56b-883b-42e0-8c47-43b76872a1a6"
+      }
+    },
+    {
+      "key": "88d2063a-0ced-4007-a8e4-eb525b8870ce",
+      "position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "88d2063a-0ced-4007-a8e4-eb525b8870ce",
+        "lesson_activity.key": "ec2cc56b-883b-42e0-8c47-43b76872a1a6"
+      }
+    },
+    {
+      "key": "59cdab77-2056-452a-be66-50e6cd8a1d08",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What did ELIZA do well?*\n- *Where did it break down?*\n- *What did AI Tutor do differently?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i>**Discussion Goal:** Students should recognize that ELIZA can seem conversational when it echoes the user’s words or responds to familiar patterns, but it breaks down when the conversation requires deeper understanding, context, or specific help. Students should notice that AI Tutor gives more flexible and specific responses, showing how modern AI tools differ from earlier rule-based chatbots.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "59cdab77-2056-452a-be66-50e6cd8a1d08",
+        "lesson_activity.key": "ec2cc56b-883b-42e0-8c47-43b76872a1a6"
+      }
+    },
+    {
+      "key": "998f07c2-5620-49cc-9e51-9bf6df0bf61f",
+      "position": 1,
+      "properties": {
+        "description": "\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Choose a quick response format that fits your classroom. Students might write their response on a notecard, discuss with a partner in a turn and talk, or complete it as an exit ticket."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use students’ responses to see whether they can summarize the big idea of the lesson, use specific examples from the activity, and explain what those examples show about AI history."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "998f07c2-5620-49cc-9e51-9bf6df0bf61f",
+        "lesson_activity.key": "960c7395-804d-44b9-b7ad-459f10ffeb87"
+      }
+    },
+    {
+      "key": "c5f04321-4de4-4b6e-9d9e-e5c45dbbaecd",
+      "position": 1,
+      "properties": {
+        "description": "Today we’re going to think about the people behind technology. We often know the names of apps, products, or companies, but we may not know all the people whose ideas, discoveries, or choices helped make those technologies possible.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c5f04321-4de4-4b6e-9d9e-e5c45dbbaecd",
+        "lesson_activity.key": "bc1bd58b-6390-4c8f-b152-117682ccff61"
+      }
+    },
+    {
+      "key": "2e96401c-acca-4411-8543-be0ad8364e1b",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students recognize that technologies are shaped by many people, even though only some contributors become widely known or remembered.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "2e96401c-acca-4411-8543-be0ad8364e1b",
+        "lesson_activity.key": "bc1bd58b-6390-4c8f-b152-117682ccff61"
+      }
+    },
+    {
+      "key": "d9461342-5535-4419-a754-718ef9f84387",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\nThink of a technology you use, like a phone, video game, app, search engine, or streaming service.\n- Do you know who helped create it?\n- Why do you think some inventors or contributors become famous, while others do not?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should note that they typically recognize the names of products and companies more easily than the people who helped create the technology. They may point to fame coming from leading a company, launching a product, or being connected to a major event or controversy.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Why might it be hard to tell the story of who shaped a technology?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that technologies are usually shaped by many people, not just one inventor or company. Some contributors become more visible because their names are associated with a product, invention, company, or event. Other contributors may be less well known even when their work was important.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "d9461342-5535-4419-a754-718ef9f84387",
+        "lesson_activity.key": "bc1bd58b-6390-4c8f-b152-117682ccff61"
       }
     },
     {
       "key": "da108249-13c0-4e06-8389-5ab5f5bd1136",
       "position": 1,
       "properties": {
-        "progression_name": "Explore AI Contributors"
+        "description": "Each of you will focus on one person who shaped AI or the broader computing and social context around AI. Later, you’ll share what you learned with classmates so the class can build a broader picture of how many different kinds of contributions shaped AI history.\n",
+        "duration": "20",
+        "name": "AI Milestone Timeline Card",
+        "progression_name": "Explore AI Contributors",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "da108249-13c0-4e06-8389-5ab5f5bd1136",
         "lesson_activity.key": "1dc558ca-e92a-4b4d-84de-975931abef61"
+      }
+    },
+    {
+      "key": "dec0c08d-af2b-40f4-a49a-382d3ae082b1",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students investigate one AI contributor, explain how that person shaped AI history, and learn from classmates about other contributors’ ideas, discoveries, and impacts.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "dec0c08d-af2b-40f4-a49a-382d3ae082b1",
+        "lesson_activity.key": "1dc558ca-e92a-4b4d-84de-975931abef61"
+      }
+    },
+    {
+      "key": "87422adb-b51e-4b56-b171-71087165d4fc",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Assign, or let students choose, one AI contributor.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the AI Contributor Profile Activity Guides.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 1 to complete the AI Contributor Profile section of their activity guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Support students in turning the profile information into short, clear notes. Ask: “What is the main contribution?” “What part of AI history does this connect to?” “Why would this person matter in the story of AI?”\n",
+        "progression_name": "Explore AI Contributors",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students not to copy full paragraphs from the Web Lab level. They should write short notes that they can explain to classmates during the peer exchange.\n"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use students’ profiles to check whether they can identify a contributor’s major idea, discovery, or impact and connect it to a larger moment in AI history.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "87422adb-b51e-4b56-b171-71087165d4fc",
+        "lesson_activity.key": "1dc558ca-e92a-4b4d-84de-975931abef61"
+      }
+    },
+    {
+      "key": "df64a95d-224b-43ce-9e57-18b08662fb51",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "df64a95d-224b-43ce-9e57-18b08662fb51",
+        "lesson_activity.key": "1dc558ca-e92a-4b4d-84de-975931abef61"
+      }
+    },
+    {
+      "key": "27d5fc66-8850-4b67-8ac6-74aacd1a0b7d",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the “Prepare for the Peer Exchange” section on page 2 of the activity guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen for whether students can explain their contributor briefly and accurately. Prompt students with: “Can you say that in one sentence?” or “What should a classmate remember about this person?”",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This preparation step helps the peer exchange feel more like students teaching each other, rather than simply copying from each other’s papers.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "27d5fc66-8850-4b67-8ac6-74aacd1a0b7d",
+        "lesson_activity.key": "1dc558ca-e92a-4b4d-84de-975931abef61"
+      }
+    },
+    {
+      "key": "c1ab1e6f-1250-4006-895c-50e91d5eb523",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c1ab1e6f-1250-4006-895c-50e91d5eb523",
+        "lesson_activity.key": "1dc558ca-e92a-4b4d-84de-975931abef61"
+      }
+    },
+    {
+      "key": "380ebcf6-48c5-4212-8890-bdd2ce5c22f8",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students share their contributor with classmates and learn how different people shaped AI through ideas, tools, discoveries, datasets, and concerns about impact.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students move around the room and complete the “Meet the Contributors” table on page 2 of the activity guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Support students in finding classmates with different contributors. Ask follow-up questions like: “How is this contribution different from yours?” “Does this person connect to early AI ideas, computing foundations, data, modern AI, or AI’s social impact?”",
+        "duration": "15",
+        "name": "Meet The Contributors",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students do not need to meet every contributor. The goal is to hear a range of examples, not to rush through all eight names. Encourage students to find contributors connected to different parts of AI history.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "380ebcf6-48c5-4212-8890-bdd2ce5c22f8",
+        "lesson_activity.key": "1dc558ca-e92a-4b4d-84de-975931abef61"
+      }
+    },
+    {
+      "key": "2ea33720-8e48-40fd-950e-81cbaacf8825",
+      "position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2ea33720-8e48-40fd-950e-81cbaacf8825",
+        "lesson_activity.key": "1dc558ca-e92a-4b4d-84de-975931abef61"
+      }
+    },
+    {
+      "key": "c89103f4-20e1-4092-808d-2e4648ae2719",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *Name one contributor, besides your own, who helped shape the ideas, tools, or foundations AI depends on.*\n- *Name one contributor, besides your own, who helped shape modern AI or raised concerns about its impact.*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i>**Discussion Goal:** Students should recognize that AI was shaped by many kinds of contributions, not just one person or invention. Students should use examples from the peer exchange to connect contributors to different parts of AI history, such as early ideas, programming foundations, modern datasets, computer vision, bias research, fairness, and social impact."
+      },
+      "seeding_key": {
+        "activity_section.key": "c89103f4-20e1-4092-808d-2e4648ae2719",
+        "lesson_activity.key": "1dc558ca-e92a-4b4d-84de-975931abef61"
+      }
+    },
+    {
+      "key": "79bb5aaa-bec9-4379-bc52-b2f9c5c98470",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the Question of the Day in their Unit Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Choose a quick response format that fits your classroom. Students might write their response on a notecard, discuss with a partner in a turn and talk, or complete it as an exit ticket."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use students’ responses to see whether they can summarize the big idea of the lesson, use specific examples from the activity, and explain what those examples show about AI history."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "79bb5aaa-bec9-4379-bc52-b2f9c5c98470",
+        "lesson_activity.key": "af03413c-9d3b-4f62-9276-abe108c33e09"
       }
     }
   ],
@@ -132,7 +530,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Milestones & Eras of AI"
+        "progression": "Milestones and Eras of AI"
       },
       "bonus": false,
       "seeding_key": {
@@ -142,7 +540,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "ai-history",
-        "activity_section.key": "f469c84f-8c64-460a-ba08-eadd80757380"
+        "activity_section.key": "1e4a3909-3f96-4d0d-aa4b-c821b4b6ade2"
       },
       "level_keys": [
         "ai-history-lesson1-level1-2026"
@@ -164,7 +562,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "ai-history",
-        "activity_section.key": "e45576d5-1416-4161-b180-45ba7ff4b63a"
+        "activity_section.key": "80cdb622-5b13-4424-85e5-d033daeab051"
       },
       "level_keys": [
         "ai-history-lesson1-level2-2026"
@@ -186,7 +584,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "ai-history",
-        "activity_section.key": "da108249-13c0-4e06-8389-5ab5f5bd1136"
+        "activity_section.key": "87422adb-b51e-4b56-b171-71087165d4fc"
       },
       "level_keys": [
         "ai-history-lesson2-level1-2026"
@@ -203,7 +601,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "ai-history",
-        "activity_section.key": "f469c84f-8c64-460a-ba08-eadd80757380"
+        "activity_section.key": "1e4a3909-3f96-4d0d-aa4b-c821b4b6ade2"
       }
     },
     {
@@ -215,7 +613,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "ai-history",
-        "activity_section.key": "e45576d5-1416-4161-b180-45ba7ff4b63a"
+        "activity_section.key": "80cdb622-5b13-4424-85e5-d033daeab051"
       }
     },
     {
@@ -227,15 +625,173 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "ai-history",
-        "activity_section.key": "da108249-13c0-4e06-8389-5ab5f5bd1136"
+        "activity_section.key": "87422adb-b51e-4b56-b171-71087165d4fc"
       }
     }
   ],
   "resources": [
-
+    {
+      "name": "[EXEMPLAR] AI Contributor Profile",
+      "url": "https://docs.google.com/document/d/1adLvE-bHeMDgn0AV3sBJV87fia8XWg2dTN_cjPcyCyI/edit?usp=sharing",
+      "key": "_exemplar_ai_contributor_profile",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_ai_contributor_profile"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] AI Milestone Timeline Card",
+      "url": "https://docs.google.com/document/d/1gfNq5PzfOKwB2pMBLWqBCaHLggsOzI8H2Dl6jP4LSXI/edit?tab=t.0",
+      "key": "_exemplar_ai_milestone_timeline_card",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_ai_milestone_timeline_card"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Compare Chatbots",
+      "url": "https://docs.google.com/document/d/1y_pNIBaCnJx2wapq9oL-QcGtnTjcUX1e7Q87OMjmjSE/edit?usp=sharing",
+      "key": "_exemplar_compare_chatbots",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_compare_chatbots"
+      }
+    },
+    {
+      "name": "AI Contributor Profile",
+      "url": "https://docs.google.com/document/d/1jP29zqLL_GwjmC7gng1iLSiABhtRPj0vEG3supLolp4/edit?usp=sharing",
+      "key": "ai_contributor_profile",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ai_contributor_profile"
+      }
+    },
+    {
+      "name": "AI Milestone Timeline Card",
+      "url": "https://docs.google.com/document/d/1Hkd0HO4pM56ptINny2djfUFc_b9zg4mCmOn77j_Rsy0/edit?usp=sharing",
+      "key": "ai_milestone_timeline_card",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ai_milestone_timeline_card"
+      }
+    },
+    {
+      "name": "Compare Chatbots",
+      "url": "https://docs.google.com/document/d/10Ip_Qv_GdMwqoxyeXKZ9-HvcVtxfl1oTAqj5tKMNoX4/edit?usp=sharing",
+      "key": "compare_chatbots",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "compare_chatbots"
+      }
+    },
+    {
+      "name": "Milestones and Eras of AI",
+      "url": "https://docs.google.com/presentation/d/19khStzfWaR8rq4HEv4mCMRXqCZ-a1noIA-bLixvAHF0/edit?usp=sharing",
+      "key": "milestones_and_eras_of_ai",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "milestones_and_eras_of_ai"
+      }
+    },
+    {
+      "name": "The People Who Shaped AI",
+      "url": "https://docs.google.com/presentation/d/1rYtKanzz6p7BBdyVisHfJ4yrceS4MdRRtp5iqo7w4KI/edit?usp=sharing",
+      "key": "the_people_who_shaped_ai",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "the_people_who_shaped_ai"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "_exemplar_ai_milestone_timeline_card"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "_exemplar_compare_chatbots"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "ai_milestone_timeline_card"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "compare_chatbots"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "milestones_and_eras_of_ai"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "_exemplar_ai_contributor_profile"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "ai_contributor_profile"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "the_people_who_shaped_ai"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -253,7 +809,46 @@
 
   ],
   "objectives": [
-
+    {
+      "key": "53ba65a4-e8ad-4b3e-b1bf-daea5de7608a",
+      "properties": {
+        "description": "Describe key milestones and eras in the history of AI."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "53ba65a4-e8ad-4b3e-b1bf-daea5de7608a"
+      }
+    },
+    {
+      "key": "59172dbc-c866-4aca-b444-0112ad76aa0e",
+      "properties": {
+        "description": "Explain how AI evolved from rule-based systems toward systems that learn patterns from data."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "59172dbc-c866-4aca-b444-0112ad76aa0e"
+      }
+    },
+    {
+      "key": "72bd961e-0267-417e-967e-31d6e630400e",
+      "properties": {
+        "description": "Discuss how major people, ideas, and discoveries shaped the development of AI."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "72bd961e-0267-417e-967e-31d6e630400e"
+      }
+    },
+    {
+      "key": "fa9a5afe-9c7f-451d-963d-f336de5f762a",
+      "properties": {
+        "description": "Explain how people’s choices about goals, data, and risks can influence the development and impact of AI systems."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "fa9a5afe-9c7f-451d-963d-f336de5f762a"
+      }
+    }
   ],
   "lessons_standards": [
 

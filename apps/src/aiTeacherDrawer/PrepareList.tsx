@@ -24,9 +24,7 @@ const PrepareList: React.FC = () => {
     );
 
   if (activeSections.length === 0) {
-    return (
-      <div className={styles.emptyState}>No active sections found.</div>
-    );
+    return <div className={styles.emptyState}>No active sections found.</div>;
   }
 
   return (

@@ -20,7 +20,7 @@ export default function MultiElementSelectionToolbar({
     >
       <div className={styles.body}>
         <Button
-          onClick={onGroup}
+          onClick={() => onGroup()}
           aria-label="Group selected elements"
           color="secondary"
           variant="outlined"

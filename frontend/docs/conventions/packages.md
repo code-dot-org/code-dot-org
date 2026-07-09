@@ -117,6 +117,10 @@ in Studio:
   fixtures loader
 - `apps/studio/package.json` — adds the workspace dependency
 
+The generator also prompts for an optional CODEOWNERS entry (blank to skip);
+when given, it appends an owner line for `frontend/packages/labs/<name>/` to
+`.github/CODEOWNERS`.
+
 The lab is then reachable at `/app/projects/<name>/:channelId/edit`.
 
 ### Mock fixtures (MSW mode)
@@ -179,6 +183,34 @@ createRoot(document.getElementById('root')!).render(
 The standalone `index.html` shall include a development-safe
 `<meta name="app-config" content='{"observability":{"provider":"none"}}' />`
 stub so observability-enabled labs initialize cleanly outside Rails.
+
+### End-to-end tests
+
+Each lab is generated with a Playwright e2e suite:
+
+- `playwright.config.ts` — Chromium functional project (`@visual` excluded) plus
+  `visualProjects()` from `@code-dot-org/playwright-support`; auto-starts
+  `yarn dev`, `TARGET_URL` env override for remote targets
+- `e2e/poms/LabPage.ts` — base Page Object (heading locator + `goto`/`load`); extend per feature
+- `e2e/smoke.spec.ts` — verifies the root heading renders and no unhandled JS errors occur on load
+- `e2e/fixtures/visual.ts` — `createVisualTest({appName})`; the `test`/`expect` that `@visual` specs import
+- `e2e/visual.spec.ts` — a seed `@visual` checkpoint of the initial render
+
+Run locally: `yarn test:ui` (functional only; reuses an already-running `yarn dev` at port 5173).
+Run in CI: `yarn test:ui:ci` (spins up its own server via `webServer`).
+
+Visual regression rides on `@code-dot-org/playwright-support`: writing a
+`visualCheck()` is the only opt-in. No baselines are committed —
+`yarn test:visual:prove` checks determinism locally against ephemeral
+snapshots, and CI diffs against Applitools. Visual projects are chromium-only
+by default; widen with `visualProjects({browsers})`.
+
+The generator also creates `.github/workflows/<name>-ci.yml` (two jobs: `build`
+via `turbo release:dryrun` and `e2e` via Playwright in the pinned container, with
+`VISUAL_PROVIDER=applitools` + `APPLITOOLS_API_KEY` so `@visual` tests diff against
+Eyes) and updates `frontend-ci.yml` with a `paths-filter` output, filter entry,
+conditional job (passing `playwright-image-tag`), and `teardown.needs` entry for
+the new lab.
 
 ## Runtime config
 

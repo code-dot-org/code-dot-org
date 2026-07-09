@@ -113,15 +113,17 @@ const SectionPodcastCard: React.FC<SectionPodcastCardProps> = ({
         preload="auto"
         onCanPlay={() => setAudioStatus('ready')}
         onError={() => setAudioStatus('unavailable')}
-        onDurationChange={() =>
-          setDuration(audioRef.current?.duration || 0)
-        }
-        onTimeUpdate={() =>
-          setCurrentTime(audioRef.current?.currentTime || 0)
-        }
+        onDurationChange={() => setDuration(audioRef.current?.duration || 0)}
+        onTimeUpdate={() => setCurrentTime(audioRef.current?.currentTime || 0)}
         onEnded={() => setIsPlaying(false)}
       >
-        <track kind="captions" label="English captions" src="" srcLang="en" default />
+        <track
+          kind="captions"
+          label="English captions"
+          src=""
+          srcLang="en"
+          default
+        />
       </audio>
       {audioStatus === 'unavailable' ? (
         <span className={styles.unavailable}>Podcast not yet available.</span>

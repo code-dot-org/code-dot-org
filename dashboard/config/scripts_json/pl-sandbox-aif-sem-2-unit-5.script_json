@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-01 21:17:55 UTC",
+    "serialized_at": "2026-07-08 16:31:58 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -288,6 +288,28 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "What is an API? (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-API-JSON-intro2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "4d771bdd-4b14-497d-8242-18db5bb3efbc"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-API-JSON-intro2"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "pl-aif-2-U5-JSON"
         ],
@@ -308,9 +330,9 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
-      "activity_section_position": 3,
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "progression": "What is an API? (15 min)"
@@ -330,9 +352,9 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 8,
-      "activity_section_position": 4,
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "progression": "What is an API? (15 min)"
@@ -352,9 +374,9 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 9,
-      "activity_section_position": 5,
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "progression": "What is an API? (15 min)"
@@ -371,31 +393,6 @@
       },
       "level_keys": [
         "pl-aif2-u5-pokemon-generate-weblab"
-      ]
-    },
-    {
-      "chapter": 10,
-      "position": 10,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "pl-aif-2-U5-API-Calll-POkemon-panel"
-        ],
-        "progression": "What is an API? (15 min)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "pl-aif-2-U5-API-Calll-POkemon-panel"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-5",
-        "activity_section.key": "4d771bdd-4b14-497d-8242-18db5bb3efbc"
-      },
-      "level_keys": [
-        "pl-aif-2-U5-API-Calll-POkemon-panel"
       ]
     },
     {
@@ -529,6 +526,28 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Getting Data Online (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-promise-chain-interactive"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "bf61b007-61d0-4778-90fc-930cbec114bc"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-promise-chain-interactive"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 17,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "pl-aif-2-U5-trace-a-promise-weblab"
         ],
@@ -549,9 +568,9 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 17,
-      "activity_section_position": 5,
+      "chapter": 18,
+      "position": 18,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -574,9 +593,9 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 18,
-      "activity_section_position": 6,
+      "chapter": 19,
+      "position": 19,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "progression": "Getting Data Online (15 min)"
@@ -596,9 +615,9 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 19,
-      "activity_section_position": 7,
+      "chapter": 20,
+      "position": 20,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "progression": "Getting Data Online (15 min)"
@@ -618,8 +637,8 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 20,
+      "chapter": 21,
+      "position": 21,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -640,8 +659,8 @@
       ]
     },
     {
-      "chapter": 21,
-      "position": 21,
+      "chapter": 22,
+      "position": 22,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -662,8 +681,8 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 22,
+      "chapter": 23,
+      "position": 23,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -684,8 +703,8 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 23,
+      "chapter": 24,
+      "position": 24,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -694,7 +713,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl-aif2-U5-dotnotaion-weblab"
+          "pl-aif2-u5-api-dot-notation-pet-weblab"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -702,12 +721,12 @@
         "activity_section.key": "f75738cd-ac40-478a-aade-eca00a07dac0"
       },
       "level_keys": [
-        "pl-aif2-U5-dotnotaion-weblab"
+        "pl-aif2-u5-api-dot-notation-pet-weblab"
       ]
     },
     {
-      "chapter": 24,
-      "position": 24,
+      "chapter": 25,
+      "position": 25,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -728,8 +747,8 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 25,
+      "chapter": 26,
+      "position": 26,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -750,8 +769,8 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 26,
+      "chapter": 27,
+      "position": 27,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -772,8 +791,8 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 27,
+      "chapter": 28,
+      "position": 28,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -794,8 +813,8 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 28,
+      "chapter": 29,
+      "position": 29,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -804,7 +823,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "plaif-2-U5-music-app-weblab"
+          "pl-aif2-u5-music-app-api-weblab"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -812,12 +831,12 @@
         "activity_section.key": "a259e062-4bdd-43ac-ad2f-676a806ef188"
       },
       "level_keys": [
-        "plaif-2-U5-music-app-weblab"
+        "pl-aif2-u5-music-app-api-weblab"
       ]
     },
     {
-      "chapter": 29,
-      "position": 29,
+      "chapter": 30,
+      "position": 30,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -838,9 +857,31 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 30,
+      "chapter": 31,
+      "position": 31,
       "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Catching Problems (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-try-catch-define"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "034d1f92-6e99-4959-b13c-1184aafc69b7"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-try-catch-define"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 32,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "progression": "Catching Problems (10 min)"
@@ -860,9 +901,9 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 31,
-      "activity_section_position": 3,
+      "chapter": 33,
+      "position": 33,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "progression": "Catching Problems (10 min)"
@@ -870,7 +911,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl=aif-2-U5- try-catch-weblab"
+          "pl-aif2-u5-try-catch-weblab"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -878,13 +919,13 @@
         "activity_section.key": "034d1f92-6e99-4959-b13c-1184aafc69b7"
       },
       "level_keys": [
-        "pl=aif-2-U5- try-catch-weblab"
+        "pl-aif2-u5-try-catch-weblab"
       ]
     },
     {
-      "chapter": 32,
-      "position": 32,
-      "activity_section_position": 4,
+      "chapter": 34,
+      "position": 34,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "progression": "Catching Problems (10 min)"
@@ -904,9 +945,9 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 33,
-      "activity_section_position": 5,
+      "chapter": 35,
+      "position": 35,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "progression": "Catching Problems (10 min)"
@@ -926,8 +967,8 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 34,
+      "chapter": 36,
+      "position": 36,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -948,8 +989,8 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 35,
+      "chapter": 37,
+      "position": 37,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -970,8 +1011,8 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 36,
+      "chapter": 38,
+      "position": 38,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -980,7 +1021,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl-aif-2-U5-app-shell-weblab"
+          "pl=aif2-u5-create-app-shell"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -988,13 +1029,35 @@
         "activity_section.key": "83febae5-1619-47b6-ad18-17eaf24b1a84"
       },
       "level_keys": [
-        "pl-aif-2-U5-app-shell-weblab"
+        "pl=aif2-u5-create-app-shell"
       ]
     },
     {
-      "chapter": 37,
-      "position": 37,
+      "chapter": 39,
+      "position": 39,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrapping Up (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-wrap-up-project"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "f559dc70-5bb7-462b-bc01-e21bf3dc674b"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-wrap-up-project"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 40,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "progression": "Wrapping Up (5 min)"
@@ -1014,9 +1077,9 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 38,
-      "activity_section_position": 2,
+      "chapter": 41,
+      "position": 41,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "progression": "Wrapping Up (5 min)"
@@ -1036,9 +1099,9 @@
       ]
     },
     {
-      "chapter": 39,
-      "position": 39,
-      "activity_section_position": 3,
+      "chapter": 42,
+      "position": 42,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "progression": "Wrapping Up (5 min)"
@@ -1055,6 +1118,28 @@
       },
       "level_keys": [
         "pl-aif-2-U5-final-level"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 43,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrapping Up (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-padlet-embed"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "f559dc70-5bb7-462b-bc01-e21bf3dc674b"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-padlet-embed"
       ]
     }
   ],
@@ -1121,6 +1206,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "pl-aif-2-U4-API-JSON-intro2",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-API-JSON-intro2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "4d771bdd-4b14-497d-8242-18db5bb3efbc"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "pl-aif-2-U5-JSON",
         "script_level.level_keys": [
           "pl-aif-2-U5-JSON"
@@ -1160,18 +1257,6 @@
         "level.key": "pl-aif2-u5-pokemon-generate-weblab",
         "script_level.level_keys": [
           "pl-aif2-u5-pokemon-generate-weblab"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "pl-sandbox-aif-sem-2-unit-5",
-        "activity_section.key": "4d771bdd-4b14-497d-8242-18db5bb3efbc"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "pl-aif-2-U5-API-Calll-POkemon-panel",
-        "script_level.level_keys": [
-          "pl-aif-2-U5-API-Calll-POkemon-panel"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1232,6 +1317,18 @@
         "level.key": "pl-aif-2-U5-promise-chain",
         "script_level.level_keys": [
           "pl-aif-2-U5-promise-chain"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "bf61b007-61d0-4778-90fc-930cbec114bc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-promise-chain-interactive",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-promise-chain-interactive"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1325,9 +1422,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-aif2-U5-dotnotaion-weblab",
+        "level.key": "pl-aif2-u5-api-dot-notation-pet-weblab",
         "script_level.level_keys": [
-          "pl-aif2-U5-dotnotaion-weblab"
+          "pl-aif2-u5-api-dot-notation-pet-weblab"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1385,9 +1482,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "plaif-2-U5-music-app-weblab",
+        "level.key": "pl-aif2-u5-music-app-api-weblab",
         "script_level.level_keys": [
-          "plaif-2-U5-music-app-weblab"
+          "pl-aif2-u5-music-app-api-weblab"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1409,6 +1506,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "pl-aif-2-U5-try-catch-define",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-try-catch-define"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "034d1f92-6e99-4959-b13c-1184aafc69b7"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "pl-aif2-U5-try-catch-video",
         "script_level.level_keys": [
           "pl-aif2-U5-try-catch-video"
@@ -1421,9 +1530,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl=aif-2-U5- try-catch-weblab",
+        "level.key": "pl-aif2-u5-try-catch-weblab",
         "script_level.level_keys": [
-          "pl=aif-2-U5- try-catch-weblab"
+          "pl-aif2-u5-try-catch-weblab"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1481,14 +1590,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-aif-2-U5-app-shell-weblab",
+        "level.key": "pl=aif2-u5-create-app-shell",
         "script_level.level_keys": [
-          "pl-aif-2-U5-app-shell-weblab"
+          "pl=aif2-u5-create-app-shell"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-5",
         "activity_section.key": "83febae5-1619-47b6-ad18-17eaf24b1a84"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-wrap-up-project",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-wrap-up-project"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "f559dc70-5bb7-462b-bc01-e21bf3dc674b"
       }
     },
     {
@@ -1520,6 +1641,18 @@
         "level.key": "pl-aif-2-U5-final-level",
         "script_level.level_keys": [
           "pl-aif-2-U5-final-level"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "f559dc70-5bb7-462b-bc01-e21bf3dc674b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-padlet-embed",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-padlet-embed"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

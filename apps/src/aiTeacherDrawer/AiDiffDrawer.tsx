@@ -14,8 +14,8 @@ import AiDiffWorkSpace from './AiDiffWorkspace';
 import BottomNav from './BottomNav';
 import {DRAWER_WIDTH, DRAWER_WIDTH_WELCOME} from './constants';
 import HomeScreen from './HomeScreen';
-import PrepareList from './PrepareList';
 import NotificationList from './notifications/NotificationList';
+import PrepareList from './PrepareList';
 import {Context} from './types';
 import AiDiffWelcome from './welcome/AiDiffWelcome';
 

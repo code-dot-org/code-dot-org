@@ -3,7 +3,7 @@ require 'metrics/events'
 class Api::V1::SectionsController < Api::V1::JSONApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
-  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :create_demo, :presets, :update, :check_demo_section_staleness, :reset_demo_section, :require_captcha, :assigned_essential_ai_dependency]
+  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :create_demo, :presets, :update, :check_demo_section_staleness, :reset_demo_section, :require_captcha, :assigned_essential_ai_dependency, :suggested_lessons]
   before_action :get_course_and_unit, only: [:create, :update]
 
   skip_before_action :verify_authenticity_token, only: [:update]
@@ -466,6 +466,33 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       )
     end
     render json: data
+  end
+
+  # GET /api/v1/sections/suggested_lessons
+  # Returns suggested lesson data for every active student section belonging to
+  # the current user, keyed by section id.
+  def suggested_lessons
+    return head :forbidden unless current_user
+
+    active_sections = current_user.sections_instructed.where(hidden: false, participant_type: 'student')
+
+    result = active_sections.each_with_object({}) do |section, hash|
+      if section.suggested_lesson_stale? && section.script.present?
+        section.compute_suggested_lesson
+        section.reload
+      end
+
+      data = section.suggested_lesson
+      if data && (lesson = Lesson.find_by(id: data['lesson_id']))
+        data = data.merge(
+          'name' => lesson.localized_title,
+          'url' => script_lesson_path(lesson.script, lesson)
+        )
+      end
+      hash[section.id] = data
+    end
+
+    render json: result
   end
 
   private def find_follower

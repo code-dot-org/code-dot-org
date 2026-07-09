@@ -1,3 +1,7 @@
+import {extensions as mimeToExtensions} from 'mime-types';
+
+import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
+
 import {AppName, ProjectType} from './types';
 
 export const SOURCE_FILE = 'main.json';
@@ -53,3 +57,7 @@ export enum FontSize {
 }
 
 export const INITIAL_VERSION_ID = 'initial-version';
+
+export const SUPPORTED_IMAGE_EXTENSIONS = SafeAndSupportedImageTypes.flatMap(
+  mime => (mimeToExtensions[mime] ?? []).filter(ext => ext !== 'jpe')
+);
