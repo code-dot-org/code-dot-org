@@ -23,4 +23,23 @@ class ChallengeResponse < ApplicationRecord
   belongs_to :challenge
   belongs_to :user
   has_many :challenge_response_assets, dependent: :destroy
+
+  # The frontend-facing shape of a response and its assets.
+  # @param assets_for_upload [Boolean] when true, each asset carries a presigned
+  #   upload URL (used right after create); otherwise a presigned download URL.
+  def summarize(assets_for_upload: false)
+    {
+      id: id,
+      challenge_id: challenge_id,
+      user_id: user_id,
+      student_text: student_text,
+      transcript: transcript,
+      student_feedback: student_feedback,
+      evaluation_result: evaluation_result,
+      is_final: is_final,
+      evaluated_at: evaluated_at,
+      created_at: created_at,
+      assets: challenge_response_assets.map {|asset| asset.summarize(upload: assets_for_upload)},
+    }
+  end
 end
