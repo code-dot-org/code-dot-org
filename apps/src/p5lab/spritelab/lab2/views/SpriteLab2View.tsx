@@ -764,14 +764,20 @@ const SpriteLab2View: React.FunctionComponent<{
       />
 
       {/* Lab2 Guide overlay (Music-style), driven by the level's guideMode.
-          Only shown on the Code tab. */}
-      {levelProperties.guideMode && activeTab === 'Code' && (
-        <GenerateSpriteLab
-          guideMode={levelProperties.guideMode}
-          instructions={levelProperties.longInstructions}
-          onCodeGenerated={handleCodeGenerated}
-        />
-      )}
+          The Code tab gets the full guide (instructions + AI generation);
+          the Images tab shows just the instructions, when the level has
+          any. */}
+      {levelProperties.guideMode &&
+        (activeTab === 'Code' ||
+          (activeTab === 'Images' && !!levelProperties.longInstructions)) && (
+          <GenerateSpriteLab
+            guideMode={
+              activeTab === 'Code' ? levelProperties.guideMode : 'instructions'
+            }
+            instructions={levelProperties.longInstructions}
+            onCodeGenerated={handleCodeGenerated}
+          />
+        )}
     </TabShell>
   );
 };

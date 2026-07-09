@@ -265,11 +265,30 @@ $tab-segment-height: $tab-item-height - 2px;
   white-space: nowrap;
 }
 
+// Sized wrapper around .guideBody: an explicit pixel height (kept in sync
+// with the body's natural height via a ResizeObserver) is transitionable,
+// where height: auto is not. Content is clipped mid-transition.
+.guideAnimator {
+  overflow: hidden;
+  transition: height 0.25s ease;
+}
+
 .guideBody {
   display: flex;
   flex-direction: column;
   gap: 6px;
   font-size: 14px;
+}
+
+.guideInstructions {
+  line-height: 1.45;
+}
+
+.guideDivider {
+  width: 100%;
+  margin: 2px 0;
+  border: none;
+  border-top: 1px solid rgb(255 255 255 / 20%);
 }
 
 .guideRow {
