@@ -1,5 +1,6 @@
 import {Typography} from '@mui/material';
-import {createFileRoute, notFound} from '@tanstack/react-router';
+import {createFileRoute, notFound, useRouter} from '@tanstack/react-router';
+import {useCallback} from 'react';
 
 import {
   DashboardApiClient,
@@ -12,6 +13,9 @@ import {getLabEntrypointByAppName} from '@/modules/labs/router/getLabEntrypointB
 import LevelNavigation from '@/modules/labs/router/LevelNavigation';
 import {resolveCourseLevel} from '@/modules/labs/router/resolveCourseLevel';
 import queryClient from '@/modules/router/queryClient';
+// Register fish/standalone_video level kinds before the loader fetches level
+// properties, so per-level fields (mode, displayName) survive the parse.
+import '@/modules/labs/oceans/levelKinds';
 
 // Lazy, once. Memoizing the promise — rather than a boolean flipped before the
 // await resolves — means concurrent callers await the same in-flight
@@ -105,6 +109,28 @@ export const Route = createFileRoute(
 
 function CourseLevelRoute() {
   const {resolved, LabEntrypoint} = Route.useLoaderData();
+  const router = useRouter();
+
+  const onContinue = useCallback(async () => {
+    await DashboardApiClient.activities.reportMilestone({
+      userId: 0,
+      scriptLevelId: resolved.scriptLevelId,
+      levelId: resolved.levelId,
+      result: true,
+    });
+
+    const nextLevel = resolved.levels.find(
+      l => l.position === resolved.position + 1,
+    );
+    if (nextLevel) {
+      router.navigate({to: nextLevel.path});
+    } else {
+      const finishUrl = resolved.properties.finishUrl ?? resolved.finishLink;
+      if (finishUrl) {
+        window.location.href = finishUrl;
+      }
+    }
+  }, [resolved, router]);
 
   return (
     <>
@@ -117,7 +143,7 @@ function CourseLevelRoute() {
         levelPropertiesMap={{[String(resolved.levelId)]: resolved.properties}}
       >
         {LabEntrypoint ? (
-          <LabEntrypoint />
+          <LabEntrypoint onContinue={onContinue} />
         ) : (
           // h1: this is the only heading visible when no lab entrypoint exists.
           <Typography variant="h6" component="h1" sx={{p: 4}}>

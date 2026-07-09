@@ -1,22 +1,35 @@
 import {Box} from '@mui/material';
 
+import {useLevelProperties} from '@code-dot-org/lab/contexts';
 import OceansLab from '@code-dot-org/oceans-lab';
 import '@code-dot-org/oceans-lab/styles.css';
+
+import type {LabEntrypointProps} from '@/modules/labs/router/getLabEntrypointByAppName';
 
 /**
  * Studio entry point for the AI for Oceans lab.
  *
  * Wraps OceansLab in a CSS-only responsive shell that mirrors the FishView
  * curriculum-path layout: 16:9 box, clamped between 320 px and 1280 px,
- * proportional base font size.  The sizing rules live in oceans-lab's CSS;
- * vite library mode emits them to dist/oceans-lab.css and we import that
- * subpath explicitly so studio's bundle picks them up.
+ * proportional base font size. The sizing rules live in oceans-lab's CSS.
+ *
+ * The per-level `mode` (fishvtrash, creaturesvtrash, ...) is read from the
+ * level properties, which carry it once `fish` is registered as a level kind
+ * (see `levelKinds.ts`).
  */
-export default function OceansContainer() {
+export default function OceansContainer({onContinue}: LabEntrypointProps) {
+  const levelProperties = useLevelProperties();
+  // OceansLab accepts AppModeValue (a string union); the level properties
+  // `mode` field carries the same values.
+  const appMode = levelProperties?.mode as Parameters<
+    typeof OceansLab
+  >[0]['appMode'];
+  const guides = (levelProperties?.guides as string) ?? undefined;
+
   return (
     <Box className="oceans-lab-shell">
       <Box className="oceans-lab-frame">
-        <OceansLab />
+        <OceansLab appMode={appMode} guides={guides} onContinue={onContinue} />
       </Box>
     </Box>
   );
