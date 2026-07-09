@@ -95,7 +95,7 @@ function toolTitle(tool: (typeof TOOLS)[number]): string {
   return `${tool.label} (${tool.shortcut.toUpperCase()})`;
 }
 
-const MAX_DISPLAY_SIZE = 480;
+const MAX_DISPLAY_SIZE = 640;
 
 interface PixelEditorModalProps {
   title: string;
@@ -321,6 +321,10 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   // modal appears in final form instead of resizing as the image decodes.
   // Layout effect: the canvas must be sized and painted BEFORE the browser
   // paints the newly-mounted panel, or its first frame flashes default-sized.
+  // The RENDERED size fills the modal's available vertical space (the modal
+  // widens to match, aspect preserved); the internal resolution is an
+  // integer upscale for crisp strokes, with image-rendering: pixelated
+  // covering the fractional remainder.
   useLayoutEffect(() => {
     if (!loaded) {
       return;
@@ -330,6 +334,16 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
     if (display && backing) {
       display.width = backing.width * scaleRef.current;
       display.height = backing.height * scaleRef.current;
+      const aspect = backing.width / backing.height;
+      let cssH = Math.min(window.innerHeight * 0.68, 720);
+      let cssW = cssH * aspect;
+      const maxW = Math.min(window.innerWidth * 0.76, 900);
+      if (cssW > maxW) {
+        cssW = maxW;
+        cssH = cssW / aspect;
+      }
+      display.style.width = `${Math.round(cssW)}px`;
+      display.style.height = `${Math.round(cssH)}px`;
       repaint();
     }
   }, [loaded, repaint]);

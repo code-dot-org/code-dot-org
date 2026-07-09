@@ -133,12 +133,10 @@
 
 .displayCanvas {
   display: block;
-  // The canvas's internal resolution is an integer upscale of the image;
-  // these caps scale the ELEMENT down to fit (aspect preserved, since a
-  // canvas is a replaced element), so any image fits without scrolling.
-  // Pointer mapping uses the rendered rect, so fractional scaling is fine.
-  max-width: min(72vw, 520px);
-  max-height: min(62vh, 520px);
+  // Rendered size is set in JS (fills the modal's available vertical space,
+  // aspect preserved, viewport-bounded); the internal resolution is an
+  // integer upscale of the image. Pointer mapping uses the rendered rect,
+  // so fractional scaling is fine; pixelated keeps it crisp.
   image-rendering: pixelated;
   cursor: crosshair;
   touch-action: none;

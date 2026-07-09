@@ -17,13 +17,19 @@ export interface PixelGrid {
   // Where the first grid line falls (0 = grid aligned to the image edge).
   offsetX: number;
   offsetY: number;
-  // Fraction of detected color edges that sit on grid lines (0..1).
+  // Lift over chance of the edge alignment (0..1): how much better the grid
+  // explains the color edges than a random grid of the same size would.
   confidence: number;
 }
 
 const MIN_BLOCK = 4;
 const MAX_BLOCK = 64;
-const MIN_CONFIDENCE = 0.8;
+// Confidence is LIFT over chance, not raw alignment: with +/-1px tolerance a
+// 4px grid matches 75% of positions by pure chance (raw alignment scores
+// near 0.75 on anything), while a real 11px grid at 0.92 raw is (0.92 -
+// 0.27) / (1 - 0.27) = 0.89 lift. Raw scores made degenerate small blocks
+// win on real model output.
+const MIN_CONFIDENCE = 0.6;
 // Edges within this many pixels of a grid line count as aligned (diffusion
 // output smudges block borders by a pixel or so).
 const EDGE_TOLERANCE = 1;
@@ -110,14 +116,17 @@ function bestGridForEdges(
           aligned += edgeWeights[e];
         }
       }
-      const score = aligned / total;
+      const raw = aligned / total;
+      // Lift over chance: how much better than a random grid of this size.
+      const chance = Math.min(1, (2 * EDGE_TOLERANCE + 1) / size);
+      const score = chance >= 1 ? 0 : (raw - chance) / (1 - chance);
       // Prefer LARGER sizes among true ties: a perfect 16px grid also aligns
-      // perfectly to 8px (16-multiples are 8-multiples), so equal scores go
-      // to the coarser grid. But only on >=: real art has flat regions, so a
-      // 2x harmonic scores nearly as well as the true grid (e.g. 0.90 vs
-      // 0.92 on real model output) — a "within epsilon" upgrade jumps to the
-      // harmonic on one axis, fails the squareness check, and rejects a
-      // perfectly good grid.
+      // perfectly to 8px (16-multiples are 8-multiples), so equal raw scores
+      // go to the coarser grid — and the coarser grid's lift is higher
+      // anyway. But only on >=: real art has flat regions, so a 2x harmonic
+      // scores nearly as well as the true grid — a "within epsilon" upgrade
+      // jumps to the harmonic on one axis, fails the squareness check, and
+      // rejects a perfectly good grid.
       if (!best || score > best.score) {
         best = {size, offset, score};
       } else if (score >= best.score && size > best.size) {
