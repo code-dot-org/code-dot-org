@@ -603,24 +603,14 @@ class ScriptLevelsController < ApplicationController
 
     readonly_view_options if @level.channel_backed? && params[:version].present?
 
-    if DCDO.get('script_level_fallback_responses_cache_disabled', false)
-      @@fallback_responses = {} if defined?(@@fallback_responses) && @@fallback_responses.present?
-      @fallback_response = present_level_fallback_response
-    else
-      @@fallback_responses ||= {}
-      @fallback_response = @@fallback_responses[@script_level.id] ||= present_level_fallback_response
-    end
+    @fallback_response = {
+      success: milestone_response(script_level: @script_level, level: @level, solved?: true, unit_group: @unit_group),
+      failure: milestone_response(script_level: @script_level, level: @level, solved?: false),
+    }
 
     @next_level_link = @script_level.next_level_or_redirect_path_for_user(current_user, unit_group_unit: @unit_group_unit)
 
     render 'levels/show', formats: [:html]
-  end
-
-  private def present_level_fallback_response
-    {
-      success: milestone_response(script_level: @script_level, level: @level, solved?: true, unit_group: @unit_group),
-      failure: milestone_response(script_level: @script_level, level: @level, solved?: false),
-    }
   end
 
   # Don't try to generate the CSRF token for forms on this page because it's cached.
