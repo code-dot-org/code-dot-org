@@ -588,8 +588,8 @@ const SpriteLab2View: React.FunctionComponent<{
     (source: WorkspaceSerialization) => {
       if (SCENES_UI_VARIANT) {
         // The workspace edits the active scene. Scenes are the single source
-        // of truth: the top-level `source` field is no longer written (the
-        // variant-off read path falls back to scenes[0] instead).
+        // of truth: only `scenes` is written; the variant-off read path
+        // falls back to scenes[0].
         scenesRef.current = scenesRef.current.map(s =>
           s.id === activeSceneIdRef.current ? {...s, source} : s
         );

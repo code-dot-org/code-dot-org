@@ -1,4 +1,5 @@
 import {
+  ASSUMED_BLOCK,
   assumePixelGrid,
   crispScaleFor,
   detectPixelGrid,
@@ -36,24 +37,49 @@ function blockyRaster(logical, blockSize, offset = 0) {
   return {width, height, data};
 }
 
+// Three well-separated colors; adjacent palette indices always differ enough
+// to register as an edge.
+const PALETTE = [
+  [200, 40, 40],
+  [40, 160, 60],
+  [40, 60, 200],
+];
+
 // An 8x8 logical pattern where every pair of adjacent pixels (both axes)
 // differs: index changes by 1 mod 3 horizontally and 2 mod 3 vertically,
 // so every grid line produces a color edge.
 function samplePattern() {
-  const palette = [
-    [200, 40, 40],
-    [40, 160, 60],
-    [40, 60, 200],
-  ];
   const rows = [];
   for (let y = 0; y < 8; y++) {
     const row = [];
     for (let x = 0; x < 8; x++) {
-      row.push(palette[(x + y * 2) % 3]);
+      row.push(PALETTE[(x + y * 2) % 3]);
     }
     rows.push(row);
   }
   return rows;
+}
+
+// Build a raster with colorAt(x, y) -> [r, g, b] deciding each pixel.
+function rasterFrom(width, height, colorAt) {
+  const data = new Uint8ClampedArray(width * height * 4);
+  for (let y = 0; y < height; y++) {
+    for (let x = 0; x < width; x++) {
+      const [r, g, b] = colorAt(x, y);
+      const i = (y * width + x) * 4;
+      data[i] = r;
+      data[i + 1] = g;
+      data[i + 2] = b;
+      data[i + 3] = 255;
+    }
+  }
+  return {width, height, data};
+}
+
+// A smooth 128x128 gradient: no color edge anywhere clears the detector's
+// threshold, so there is no grid to find.
+function gradientRaster() {
+  return rasterFrom(128, 128, (x, y) => [x * 2, y * 2, 128]);
 }
 
 describe('pixelArt', () => {
@@ -85,19 +111,7 @@ describe('pixelArt', () => {
   });
 
   it('returns null for smooth gradients', () => {
-    const width = 128;
-    const height = 128;
-    const data = new Uint8ClampedArray(width * height * 4);
-    for (let y = 0; y < height; y++) {
-      for (let x = 0; x < width; x++) {
-        const i = (y * width + x) * 4;
-        data[i] = x * 2;
-        data[i + 1] = y * 2;
-        data[i + 2] = 128;
-        data[i + 3] = 255;
-      }
-    }
-    expect(detectPixelGrid({width, height, data})).toBeNull();
+    expect(detectPixelGrid(gradientRaster())).toBeNull();
   });
 
   it('downsamples to the logical resolution and round-trips values', () => {
@@ -134,7 +148,7 @@ describe('pixelArt', () => {
     expect(big.data[i]).toBe(raster.data[0]);
   });
 
-  describe('assumePixelGrid (style choice as classifier)', () => {
+  describe('assumePixelGrid (user chose pixel style, so always find a grid)', () => {
     it('matches the strict detector on clean grids', () => {
       const raster = blockyRaster(samplePattern(), 12);
       const grid = assumePixelGrid(raster);
@@ -145,50 +159,25 @@ describe('pixelArt', () => {
     it('applies the stronger axis to both when one axis is noisy', () => {
       // Clean 10px columns, but every row differs (no vertical grid at all):
       // like model output whose rows drift off-grid.
-      const width = 120;
-      const height = 120;
-      const palette = [
-        [200, 40, 40],
-        [40, 160, 60],
-        [40, 60, 200],
-      ];
-      const data = new Uint8ClampedArray(width * height * 4);
-      for (let y = 0; y < height; y++) {
-        for (let x = 0; x < width; x++) {
-          const c = palette[(Math.floor(x / 10) + y * 2) % 3];
-          const i = (y * width + x) * 4;
-          data[i] = c[0];
-          data[i + 1] = c[1];
-          data[i + 2] = c[2];
-          data[i + 3] = 255;
-        }
-      }
-      const grid = assumePixelGrid({width, height, data});
+      const raster = rasterFrom(120, 120, (x, y) => [
+        ...PALETTE[(Math.floor(x / 10) + y * 2) % 3],
+      ]);
+      const grid = assumePixelGrid(raster);
       expect(grid.sizeX).toBe(10);
       expect(grid.sizeY).toBe(10);
     });
 
     it('falls back to the assumed block size on gridless images', () => {
-      const width = 128;
-      const height = 128;
-      const data = new Uint8ClampedArray(width * height * 4);
-      for (let y = 0; y < height; y++) {
-        for (let x = 0; x < width; x++) {
-          const i = (y * width + x) * 4;
-          data[i] = x * 2;
-          data[i + 1] = y * 2;
-          data[i + 2] = 128;
-          data[i + 3] = 255;
-        }
-      }
-      const grid = assumePixelGrid({width, height, data});
-      expect(grid.sizeX).toBe(16);
-      expect(grid.sizeY).toBe(16);
-      expect(grid.confidence).toBeLessThan(0.8);
+      const grid = assumePixelGrid(gradientRaster());
+      expect(grid.sizeX).toBe(ASSUMED_BLOCK);
+      expect(grid.sizeY).toBe(ASSUMED_BLOCK);
+      // A gradient yields no edges at all, so there is nothing to score.
+      expect(grid.confidence).toBe(0);
     });
   });
 
   it('caps the crisp storage scale', () => {
+    // crispScaleFor = clamp(floor(640 / longSide), 1, 8).
     expect(crispScaleFor(8, 8)).toBe(8);
     expect(crispScaleFor(64, 64)).toBe(8);
     expect(crispScaleFor(93, 93)).toBe(6);

@@ -131,17 +131,21 @@ export function compileWorkspaceSource(
   }
 }
 
-// Shown when the project has no matching images yet: an intentional
-// "add an image" tile instead of the classic broken-thumbnail fallback
-// (Blockly dropdowns cannot have zero options). The 'null' value generates
-// the same no-op code as that fallback.
+// The neutral-gray design-token value, copied because an SVG data URI can't
+// read CSS variables.
+const EMPTY_TILE_STROKE = '#a0a6b2';
+
+// Shown when the project has no matching images yet: an "add an image" tile
+// (Blockly dropdowns cannot have zero options). Selecting it generates the
+// no-op value `null`.
 const EMPTY_IMAGE_OPTION: [string, string][] = [
   [
     'data:image/svg+xml,' +
       encodeURIComponent(
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">' +
           '<rect x="4" y="6" width="32" height="28" rx="3" fill="none"' +
-          ' stroke="#a0a6b2" stroke-width="2" stroke-dasharray="4 3"/>' +
+          ` stroke="${EMPTY_TILE_STROKE}" stroke-width="2"` +
+          ' stroke-dasharray="4 3"/>' +
           '</svg>'
       ),
     'null',
@@ -158,27 +162,36 @@ const MAKE_IMAGE_BUTTONS = [
   },
 ];
 
+type AnimationKind = 'costume' | 'background';
+
+// Thumbnail sizes in the dropdown grid, matching classic blocks.js.
+const THUMBNAIL_SIZE: Record<AnimationKind, number> = {
+  costume: 32,
+  background: 40,
+};
+
 // Thumbnail options for one kind of animation. Costumes prefer the
 // border-trimmed image (see imageTrim.ts) so the sprite's content fills the
 // field instead of floating in its transparent margins. Mirrors the classic
 // costumeList/backgroundList in spritelab/blocks.js otherwise.
-function animationOptions(backgrounds: boolean): [string, string][] {
+function animationOptions(kind: AnimationKind): [string, string][] {
   const state = getStore().getState();
   const animationList = state.animationList;
   if (!animationList) {
     return EMPTY_IMAGE_OPTION;
   }
+  const wantBackgrounds = kind === 'background';
   const results: [string, string][] = [];
   animationList.orderedKeys.forEach((key: string) => {
     const animation = animationList.propsByKey[key];
-    if (
-      (animation.categories || []).includes(BACKGROUNDS_CATEGORY) !==
-      backgrounds
-    ) {
+    const isBackground = (animation.categories || []).includes(
+      BACKGROUNDS_CATEGORY
+    );
+    if (isBackground !== wantBackgrounds) {
       return;
     }
     const url =
-      (backgrounds ? undefined : getTrimmedThumbnail(animation.name)) ||
+      (wantBackgrounds ? undefined : getTrimmedThumbnail(animation.name)) ||
       animation.sourceUrl ||
       animationSourceUrl(key, animation, state.pageConstants?.channelId);
     results.push([url, `"${animation.name}"`]);
@@ -189,7 +202,7 @@ function animationOptions(backgrounds: boolean): [string, string][] {
 // The classic costumePicker/backgroundPicker input types, with lab2's empty
 // state and Images-tab button. (The classic animation-mode buttons don't
 // apply here — this lab has no AnimationTab.)
-function animationPicker(backgrounds: boolean, thumbnailSize: number) {
+function animationPicker(kind: AnimationKind) {
   return {
     addInput(
       blockly: unknown,
@@ -201,9 +214,9 @@ function animationPicker(backgrounds: boolean, thumbnailSize: number) {
         .appendField(inputConfig.label)
         .appendField(
           new CdoFieldAnimationDropdown(
-            () => animationOptions(backgrounds),
-            thumbnailSize,
-            thumbnailSize,
+            () => animationOptions(kind),
+            THUMBNAIL_SIZE[kind],
+            THUMBNAIL_SIZE[kind],
             MAKE_IMAGE_BUTTONS
           ),
           inputConfig.name
@@ -251,10 +264,10 @@ export function installSharedBlocks(sharedBlocks: BlockDefinition[]): {
     customInputTypes: {
       ...(spritelabBlocks.customInputTypes as unknown as CustomInputTypes),
       // Lab2 pickers: trim-aware costume thumbnails (backgrounds stay
-      // untrimmed, at the classic 40px), an intentional empty state, and a
-      // button to the Images tab. Sizes match classic blocks.js.
-      costumePicker: animationPicker(false, 32),
-      backgroundPicker: animationPicker(true, 40),
+      // untrimmed), an intentional empty state, and a button to the
+      // Images tab.
+      costumePicker: animationPicker('costume'),
+      backgroundPicker: animationPicker('background'),
     } as unknown as CustomInputTypes,
   });
 }

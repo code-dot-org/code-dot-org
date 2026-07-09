@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import React, {useCallback, useEffect, useState} from 'react';
 import {AnyAction} from 'redux';
 
+import {dataURIToSourceSize} from '@cdo/apps/imageUtils';
 import {
   addAnimation,
   deleteAnimation,
@@ -213,15 +214,8 @@ const GenerateImagePane: React.FunctionComponent = () => {
       }
       // Pixel-art edits can change resolution (logical downsample + crisp
       // upscale); keep the animation's frame metadata truthful.
-      const frameSize = await new Promise<{x: number; y: number} | null>(
-        resolve => {
-          const img = new Image();
-          img.onload = () =>
-            resolve({x: img.naturalWidth, y: img.naturalHeight});
-          img.onerror = () => resolve(null);
-          img.src = dataURI;
-        }
-      );
+      const frameSize: {x: number; y: number} | null =
+        await dataURIToSourceSize(dataURI).catch(() => null);
       let sourceUrl = dataURI;
       if (channelId) {
         try {

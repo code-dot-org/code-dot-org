@@ -1,9 +1,12 @@
 // Self-contained styles for the pixel editor modal. Dark theme to sit
 // comfortably over Lab2's full-screen labs.
 
+$border-subtle: rgb(255 255 255 / 12%);
+
 .overlay {
   position: fixed;
   inset: 0;
+  // Above the Lab2 shell chrome (tab bar, guide panel).
   z-index: 1100;
   display: flex;
   align-items: center;
@@ -16,7 +19,7 @@
   flex-direction: column;
   max-width: calc(100vw - 32px);
   max-height: calc(100vh - 32px);
-  border: 1px solid rgb(255 255 255 / 12%);
+  border: 1px solid $border-subtle;
   border-radius: 10px;
   background-color: #333a47;
   box-shadow: 0 12px 40px rgb(0 0 0 / 45%);
@@ -40,7 +43,7 @@
 
 .header {
   padding: 12px 16px;
-  border-bottom: 1px solid rgb(255 255 255 / 12%);
+  border-bottom: 1px solid $border-subtle;
   font-size: 15px;
   font-weight: 600;
 }
@@ -112,7 +115,7 @@
   background-color: currentColor;
 }
 
-// Pixel-art mode: the brush is a hard square, so say so.
+// Pixel-mode swatches are square because the brush stamps hard squares.
 .brushDotSquare {
   border-radius: 1px;
 }
@@ -124,7 +127,7 @@
   // Never scroll: the canvas is bounded below so the whole image is always
   // visible and editable.
   overflow: hidden;
-  border: 1px solid rgb(255 255 255 / 12%);
+  border: 1px solid $border-subtle;
   border-radius: 6px;
   // The transparency checkerboard is painted INTO the display canvas (so it
   // can align with the art-pixel grid); the surround stays quiet.
@@ -152,7 +155,7 @@
   gap: 8px;
   justify-content: flex-end;
   padding: 12px 16px;
-  border-top: 1px solid rgb(255 255 255 / 12%);
+  border-top: 1px solid $border-subtle;
 
   button {
     box-sizing: border-box;
@@ -179,6 +182,8 @@
 }
 
 .savePrimary {
+  // !important: the page's global button CSS (background/box-shadow) has
+  // higher effective specificity inside the modal and bleeds in without it.
   border-color: transparent;
   background-color: rgb(255 255 255 / 92%) !important;
   color: #1b2029 !important;
@@ -207,7 +212,8 @@
 .spectrumPopover {
   position: absolute;
   bottom: 0;
-  // Same alignment as the tooltips: left edge 4px past the canvas edge.
+  // Same 4px-past-the-canvas-edge alignment as .pixelTooltip (the why lives
+  // there); the two offsets move together with the toolbar/body-gap metrics.
   left: 48px;
   z-index: 10;
   padding: 6px;

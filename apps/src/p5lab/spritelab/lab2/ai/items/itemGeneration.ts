@@ -90,43 +90,29 @@ export async function generateImage(
     throw new Error('No image was generated');
   }
 
-  if (itemType === 'sprite') {
-    // Remove the green background (flood-fill from top-left) and output PNG.
-    // Pixel art gets a sharp 1-bit cut; smooth art gets a feathered matte.
-    const rawBlob = new Blob(
+  // One processing pipeline: sprites get the green background removed
+  // (flood-fill from top-left; pixel art a sharp 1-bit cut, smooth art a
+  // feathered matte), pixel style gets grid-normalized, and any processed
+  // image comes back as PNG. A smooth background passes through as-is.
+  if (itemType === 'sprite' || style === 'pixel') {
+    let blob = new Blob(
       [new Uint8Array(imageFile.uint8Array).buffer as ArrayBuffer],
       {type: imageFile.mediaType}
     );
-    let outBlob = await removeBackground(rawBlob, {
-      soft: style === 'smooth',
-    });
+    if (itemType === 'sprite') {
+      blob = await removeBackground(blob, {soft: style === 'smooth'});
+    }
     let pixelGridSize: number | undefined;
     if (style === 'pixel') {
-      const normalized = await normalizeIfPixelArt(outBlob);
-      outBlob = normalized.blob;
+      const normalized = await normalizeIfPixelArt(blob);
+      blob = normalized.blob;
       pixelGridSize = normalized.pixelGridSize;
     }
-    const transparentBuffer = await outBlob.arrayBuffer();
     return {
       filename: `generated-${createUuid()}.png`,
-      uint8Array: new Uint8Array(transparentBuffer),
+      uint8Array: new Uint8Array(await blob.arrayBuffer()),
       mediaType: 'image/png',
       pixelGridSize,
-    };
-  }
-
-  if (style === 'pixel') {
-    const rawBlob = new Blob(
-      [new Uint8Array(imageFile.uint8Array).buffer as ArrayBuffer],
-      {type: imageFile.mediaType}
-    );
-    const normalized = await normalizeIfPixelArt(rawBlob);
-    const buffer = await normalized.blob.arrayBuffer();
-    return {
-      filename: `generated-${createUuid()}.png`,
-      uint8Array: new Uint8Array(buffer),
-      mediaType: 'image/png',
-      pixelGridSize: normalized.pixelGridSize,
     };
   }
 

@@ -1,12 +1,15 @@
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
+import PixelTooltip from './PixelTooltip';
 import {RGBA} from './tools';
 
 import moduleStyles from './pixel-editor.module.scss';
 
 const SPECTRUM_WIDTH = 240;
 const SPECTRUM_HEIGHT = 150;
+// Gradient stops across the hue axis; enough that adjacent stops differ by
+// 30 degrees of hue and the interpolation error is invisible.
+const HUE_STOPS = 12;
 
 /**
  * Paint the full color range into one rectangle: hue left-to-right, running
@@ -18,8 +21,8 @@ function paintSpectrum(canvas: HTMLCanvasElement) {
     return;
   }
   const hue = ctx.createLinearGradient(0, 0, canvas.width, 0);
-  for (let i = 0; i <= 12; i++) {
-    hue.addColorStop(i / 12, `hsl(${(i / 12) * 360}, 100%, 50%)`);
+  for (let i = 0; i <= HUE_STOPS; i++) {
+    hue.addColorStop(i / HUE_STOPS, `hsl(${(i / HUE_STOPS) * 360}, 100%, 50%)`);
   }
   ctx.fillStyle = hue;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -111,19 +114,9 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
         // alignment line and would cover its colors.
         swatchButton
       ) : (
-        <WithTooltip
-          tooltipProps={{
-            tooltipId: 'pixel-color-tooltip',
-            text: 'Color',
-            size: 's',
-            direction: 'onRight',
-            className: moduleStyles.pixelTooltip,
-          }}
-          hideDelayMs={10}
-          hideOnFirstLeave={true}
-        >
+        <PixelTooltip tooltipId="pixel-color-tooltip" text="Color">
           {swatchButton}
-        </WithTooltip>
+        </PixelTooltip>
       )}
       {open && (
         <div className={moduleStyles.spectrumPopover}>

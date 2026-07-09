@@ -27,8 +27,8 @@ const MAX_BLOCK = 64;
 // Confidence is LIFT over chance, not raw alignment: with +/-1px tolerance a
 // 4px grid matches 75% of positions by pure chance (raw alignment scores
 // near 0.75 on anything), while a real 11px grid at 0.92 raw is (0.92 -
-// 0.27) / (1 - 0.27) = 0.89 lift. Raw scores made degenerate small blocks
-// win on real model output.
+// 0.27) / (1 - 0.27) = 0.89 lift. Raw alignment lets degenerate small
+// blocks win on real model output; lift doesn't.
 const MIN_CONFIDENCE = 0.6;
 // Edges within this many pixels of a grid line count as aligned (diffusion
 // output smudges block borders by a pixel or so).
@@ -40,20 +40,23 @@ const EDGE_THRESHOLD = 90;
 
 // Detection doesn't need every scanline: block edges span the whole image,
 // so sampling every 4th line keeps the histogram's shape at a quarter of the
-// work. Never sample fewer than 32 lines (tiny images just scan them all).
+// work. Images too small to yield MIN_SAMPLED_LINES at that stride scan
+// every line.
 const SCANLINE_STRIDE = 4;
+const MIN_SAMPLED_LINES = 32;
 
 /**
  * Histogram of color-edge positions along one axis: result[i] counts how many
  * sampled lines have a strong color change between position i-1 and i.
- * Written as two specialized allocation-free loops — this runs over megapixel
- * images on the path between click and modal.
+ * Hot path: runs over megapixel images between click and modal open; kept
+ * allocation-free.
  */
 function edgeHistogram(raster: Raster, axis: 'x' | 'y'): number[] {
   const {width, height, data} = raster;
   const hist = new Array(axis === 'x' ? width : height).fill(0);
   const cross = axis === 'x' ? height : width;
-  const step = cross >= 32 * SCANLINE_STRIDE ? SCANLINE_STRIDE : 1;
+  const step =
+    cross >= MIN_SAMPLED_LINES * SCANLINE_STRIDE ? SCANLINE_STRIDE : 1;
   if (axis === 'x') {
     for (let y = 0; y < height; y += step) {
       let j = y * width * 4;
@@ -120,13 +123,11 @@ function bestGridForEdges(
       // Lift over chance: how much better than a random grid of this size.
       const chance = Math.min(1, (2 * EDGE_TOLERANCE + 1) / size);
       const score = chance >= 1 ? 0 : (raw - chance) / (1 - chance);
-      // Prefer LARGER sizes among true ties: a perfect 16px grid also aligns
-      // perfectly to 8px (16-multiples are 8-multiples), so equal raw scores
-      // go to the coarser grid — and the coarser grid's lift is higher
-      // anyway. But only on >=: real art has flat regions, so a 2x harmonic
-      // scores nearly as well as the true grid — a "within epsilon" upgrade
-      // jumps to the harmonic on one axis, fails the squareness check, and
-      // rejects a perfectly good grid.
+      // Prefer LARGER sizes among ties: a perfect 16px grid also aligns
+      // perfectly to 8px (16-multiples are 8-multiples), and the coarser
+      // grid's lift is higher anyway. Exact ties only: flat art regions let
+      // a 2x harmonic score within a whisker of the true grid, and taking
+      // the harmonic on one axis fails the squareness check.
       if (!best || score > best.score) {
         best = {size, offset, score};
       } else if (score >= best.score && size > best.size) {
@@ -162,7 +163,7 @@ function detectAxisLenient(
 // When the style choice already says "pixel art" and detection can't find a
 // trustworthy grid, fall back to the block size the generation prompt asks
 // for (see itemGeneration's STYLE_PROMPT: 16x16 blocks on a 64x64 grid).
-const ASSUMED_BLOCK = 16;
+export const ASSUMED_BLOCK = 16;
 
 /** Offset that aligns the most edge weight for a FIXED block size. */
 function bestOffsetForSize(hist: number[], size: number): number {
@@ -259,16 +260,17 @@ function cellBounds(length: number, size: number, offset: number): number[] {
     bounds.push(b);
   }
   bounds.push(length);
-  // Detection tolerates ±1px on the offset, which can leave 1-2px sliver
-  // cells at the edges; merge those into their neighbor (real partial cells
-  // from a crop are bigger and survive).
+  // Detection tolerates ±EDGE_TOLERANCE on the offset, which can leave
+  // sliver cells up to twice that at the edges; merge those into their
+  // neighbor (real partial cells from a crop are bigger and survive).
+  const maxSliver = 2 * EDGE_TOLERANCE;
   if (
     bounds.length > 2 &&
-    bounds[bounds.length - 1] - bounds[bounds.length - 2] <= 2
+    bounds[bounds.length - 1] - bounds[bounds.length - 2] <= maxSliver
   ) {
     bounds.splice(bounds.length - 2, 1);
   }
-  if (bounds.length > 2 && bounds[1] - bounds[0] <= 2) {
+  if (bounds.length > 2 && bounds[1] - bounds[0] <= maxSliver) {
     bounds.splice(1, 1);
   }
   return bounds;
@@ -325,15 +327,20 @@ export function upscaleNearest(raster: Raster, factor: number): Raster {
   return {width: outW, height: outH, data: out};
 }
 
-/**
- * The integer factor we upscale logical pixel art by for storage: big enough
- * to render sharply at playspace sizes without engine smoothing changes,
- * bounded so assets stay reasonable.
- */
+// Storage upscale: aim for roughly CRISP_TARGET_PX on the long side (sharp
+// at playspace sizes without engine smoothing changes), capped at
+// MAX_CRISP_SCALE so assets stay reasonable.
+const CRISP_TARGET_PX = 640;
+const MAX_CRISP_SCALE = 8;
+
+/** The integer factor logical pixel art is upscaled by for storage. */
 export function crispScaleFor(logicalW: number, logicalH: number): number {
   return Math.max(
     1,
-    Math.min(8, Math.floor(640 / Math.max(logicalW, logicalH)))
+    Math.min(
+      MAX_CRISP_SCALE,
+      Math.floor(CRISP_TARGET_PX / Math.max(logicalW, logicalH))
+    )
   );
 }
 
@@ -369,8 +376,8 @@ function canvasFromRaster(raster: Raster): HTMLCanvasElement {
  * attempt — the style choice is the classifier, so this never bails),
  * downsample to logical resolution, and re-upscale nearest-neighbor to a
  * crisp, uniform, edge-aligned image. Imperfect model output (e.g. rows
- * drifting off-grid) normalizes with some smear rather than being left
- * un-normalized.
+ * drifting off-grid) normalizes with minor smearing along the drifted rows
+ * rather than being left un-normalized.
  */
 export async function normalizePixelArtBlob(
   blob: Blob

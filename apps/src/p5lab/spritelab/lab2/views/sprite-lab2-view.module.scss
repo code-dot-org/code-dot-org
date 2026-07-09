@@ -1,3 +1,5 @@
+@use '../quiet-button.scss' as buttons;
+
 .tabShell {
   display: flex;
   flex-direction: column;
@@ -232,22 +234,7 @@ $tab-segment-height: $tab-item-height - 2px;
 // Compact, quiet delete: the image is the star of the card. (Scoped by
 // class — a bare `.imageCard button` would also hit the thumbnail button.)
 .deleteButton {
-  box-sizing: border-box;
-  height: 22px;
-  margin: 0;
-  padding: 0 10px;
-  border: 1px solid var(--borders-neutral-primary);
-  border-radius: 4px;
-  background: none;
-  box-shadow: none;
-  color: var(--text-neutral-secondary);
-  font-size: 11px;
-  cursor: pointer;
-
-  &:hover {
-    color: var(--text-neutral-primary);
-    border-color: var(--text-neutral-secondary);
-  }
+  @include buttons.quiet-button(22px, 11px);
 }
 
 .imageThumb {
@@ -257,7 +244,7 @@ $tab-segment-height: $tab-item-height - 2px;
   box-sizing: border-box;
   width: 104px;
   height: 104px;
-  // It's a button now (click to edit); neutralize global button styles.
+  // The thumb is a button (click to edit); neutralize global button styles.
   margin: 0;
   padding: 0;
   background-color: transparent;

@@ -1,4 +1,3 @@
-import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React, {
   useCallback,
@@ -10,6 +9,7 @@ import React, {
 
 import ColorPicker from './ColorPicker';
 import {crispScaleFor, downsampleToGrid, upscaleNearest} from './pixelArt';
+import PixelTooltip from './PixelTooltip';
 import {
   BRUSH_SIZES,
   drawCircle,
@@ -95,7 +95,27 @@ function toolTitle(tool: (typeof TOOLS)[number]): string {
   return `${tool.label} (${tool.shortcut.toUpperCase()})`;
 }
 
+// Internal display-canvas resolution: integer upscale of the backing image,
+// as large as fits this budget. The rendered (CSS) size is independent: the
+// canvas fills this fraction of the viewport, capped, aspect preserved.
 const MAX_DISPLAY_SIZE = 640;
+const CSS_HEIGHT_VIEWPORT_FRACTION = 0.68;
+const MAX_CSS_HEIGHT_PX = 720;
+const CSS_WIDTH_VIEWPORT_FRACTION = 0.76;
+const MAX_CSS_WIDTH_PX = 900;
+
+// Transparency checkerboard: cell size in display px outside pixel mode, the
+// smallest legible cell in pixel mode (art-pixel cells are grouped up to it),
+// and the tint drawn over the white base.
+const CHECKER_CELL_PX = 16;
+const MIN_CHECKER_CELL_PX = 4;
+const CHECKER_COLOR = 'rgb(128 128 128 / 16%)';
+
+// Dark navy ink.
+const DEFAULT_COLOR: RGBA = [31, 41, 71, 255];
+
+// Brush-size swatch dot: rendered edge in px for brush size N.
+const brushDotPx = (size: number) => 3 + size * 1.6;
 
 interface PixelEditorModalProps {
   title: string;
@@ -126,12 +146,10 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
 }) => {
   const [tool, setTool] = useState<PixelTool>('pen');
   const [brushSize, setBrushSize] = useState(BRUSH_SIZES[1]);
-  const [color, setColor] = useState<RGBA>([31, 41, 71, 255]);
+  const [color, setColor] = useState<RGBA>(DEFAULT_COLOR);
   const [loaded, setLoaded] = useState(false);
   const [loadError, setLoadError] = useState(false);
-  // True when the image is known pixel art (knownPixelGrid > 1): the editor
-  // then works at the LOGICAL resolution — one edited pixel is one art
-  // pixel — and save re-upscales nearest-neighbor for crisp storage.
+  // Editing at the image's logical resolution (see knownPixelGrid).
   const [pixelMode, setPixelMode] = useState(false);
   // Mirror for the stable repaint callback (which runs on every stroke).
   const pixelModeRef = useRef(false);
@@ -166,9 +184,9 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
     ctx.fillRect(0, 0, display.width, display.height);
     const scale = scaleRef.current;
     const cell = pixelModeRef.current
-      ? scale * Math.max(1, Math.ceil(4 / scale))
-      : 16;
-    ctx.fillStyle = 'rgb(128 128 128 / 16%)';
+      ? scale * Math.max(1, Math.ceil(MIN_CHECKER_CELL_PX / scale))
+      : CHECKER_CELL_PX;
+    ctx.fillStyle = CHECKER_COLOR;
     for (let y = 0; y * cell < display.height; y++) {
       for (let x = y % 2; x * cell < display.width; x += 2) {
         ctx.fillRect(x * cell, y * cell, cell, cell);
@@ -180,14 +198,14 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
     }
   }, []);
 
-  // Load the image into the backing canvas and size the display. Images
-  // known to be pixel art (knownPixelGrid > 1, recorded at generation) are
-  // edited at their LOGICAL resolution; everything else edits natively.
+  // Load the image into the backing canvas (at logical resolution when
+  // knownPixelGrid applies) and size the display.
   //
   // Decode via fetch + createImageBitmap (native async decode, off the main
   // thread; also skips base64 string handling for dataURIs), falling back to
-  // an Image element if either is unavailable. All canvases whose pixels we
-  // read back get willReadFrequently, keeping them CPU-side — reading a
+  // an Image element if either is unavailable. Raw fetch because HttpClient
+  // is JSON-only — there's no blob path. All canvases whose pixels we read
+  // back get willReadFrequently, keeping them CPU-side — reading a
   // GPU-backed canvas stalls on readback.
   useEffect(() => {
     let cancelled = false;
@@ -317,14 +335,11 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
     return () => window.removeEventListener('keydown', onKeyDown);
   }, []);
 
-  // The panel (and its canvas) only mounts once the image is ready, so the
-  // modal appears in final form instead of resizing as the image decodes.
-  // Layout effect: the canvas must be sized and painted BEFORE the browser
-  // paints the newly-mounted panel, or its first frame flashes default-sized.
-  // The RENDERED size fills the modal's available vertical space (the modal
-  // widens to match, aspect preserved); the internal resolution is an
-  // integer upscale for crisp strokes, with image-rendering: pixelated
-  // covering the fractional remainder.
+  // Layout effect: size and paint the canvas BEFORE the browser paints the
+  // newly-mounted panel, or its first frame flashes default-sized. The
+  // rendered size fills the viewport allowance (aspect preserved, the modal
+  // sizes to match); image-rendering: pixelated covers the fractional
+  // remainder over the integer-upscaled internal resolution.
   useLayoutEffect(() => {
     if (!loaded) {
       return;
@@ -335,9 +350,15 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       display.width = backing.width * scaleRef.current;
       display.height = backing.height * scaleRef.current;
       const aspect = backing.width / backing.height;
-      let cssH = Math.min(window.innerHeight * 0.68, 720);
+      let cssH = Math.min(
+        window.innerHeight * CSS_HEIGHT_VIEWPORT_FRACTION,
+        MAX_CSS_HEIGHT_PX
+      );
       let cssW = cssH * aspect;
-      const maxW = Math.min(window.innerWidth * 0.76, 900);
+      const maxW = Math.min(
+        window.innerWidth * CSS_WIDTH_VIEWPORT_FRACTION,
+        MAX_CSS_WIDTH_PX
+      );
       if (cssW > maxW) {
         cssW = maxW;
         cssH = cssW / aspect;
@@ -510,10 +531,8 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       const ctx = backing.getContext('2d');
       if (ctx) {
         const logical = ctx.getImageData(0, 0, backing.width, backing.height);
-        const crisp = upscaleNearest(
-          logical,
-          crispScaleFor(backing.width, backing.height)
-        );
+        const crispScale = crispScaleFor(backing.width, backing.height);
+        const crisp = upscaleNearest(logical, crispScale);
         const out = document.createElement('canvas');
         out.width = crisp.width;
         out.height = crisp.height;
@@ -528,9 +547,7 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
             0,
             0
           );
-        onSave(out.toDataURL('image/png'), {
-          pixelGridSize: crispScaleFor(backing.width, backing.height),
-        });
+        onSave(out.toDataURL('image/png'), {pixelGridSize: crispScale});
         return;
       }
     }
@@ -550,17 +567,10 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
         <div className={moduleStyles.body}>
           <div className={moduleStyles.toolbar}>
             {TOOLS.map(t => (
-              <WithTooltip
+              <PixelTooltip
                 key={t.id}
-                tooltipProps={{
-                  tooltipId: `pixel-tool-${t.id}-tooltip`,
-                  text: toolTitle(t),
-                  size: 's',
-                  direction: 'onRight',
-                  className: moduleStyles.pixelTooltip,
-                }}
-                hideDelayMs={10}
-                hideOnFirstLeave={true}
+                tooltipId={`pixel-tool-${t.id}-tooltip`}
+                text={toolTitle(t)}
               >
                 <button
                   type="button"
@@ -574,21 +584,14 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
                 >
                   {t.icon}
                 </button>
-              </WithTooltip>
+              </PixelTooltip>
             ))}
             <div className={moduleStyles.toolbarDivider} />
             {BRUSH_SIZES.map((size, index) => (
-              <WithTooltip
+              <PixelTooltip
                 key={size}
-                tooltipProps={{
-                  tooltipId: `pixel-brush-${size}-tooltip`,
-                  text: `Brush size ${size} (${index + 1})`,
-                  size: 's',
-                  direction: 'onRight',
-                  className: moduleStyles.pixelTooltip,
-                }}
-                hideDelayMs={10}
-                hideOnFirstLeave={true}
+                tooltipId={`pixel-brush-${size}-tooltip`}
+                text={`Brush size ${size} (${index + 1})`}
               >
                 <button
                   type="button"
@@ -603,13 +606,12 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
                   <span
                     className={classNames(
                       moduleStyles.brushDot,
-                      // Cute: square brush swatches when editing pixel art.
                       pixelMode && moduleStyles.brushDotSquare
                     )}
-                    style={{width: 3 + size * 1.6, height: 3 + size * 1.6}}
+                    style={{width: brushDotPx(size), height: brushDotPx(size)}}
                   />
                 </button>
-              </WithTooltip>
+              </PixelTooltip>
             ))}
             <div className={moduleStyles.toolbarDivider} />
             <ColorPicker color={color} onChange={setColor} />
