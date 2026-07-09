@@ -1,8 +1,9 @@
+import Modal from '@code-dot-org/component-library/modal';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import Dialog, {Body} from '@cdo/apps/legacySharedComponents/Dialog';
+import i18n from '@cdo/locale';
 
 import {hideAnimationJson} from './actions';
 
@@ -21,12 +22,24 @@ class AnimationJsonViewer extends React.Component {
   };
 
   render() {
+    if (!this.props.isOpen) {
+      return null;
+    }
     return (
-      <Dialog isOpen={this.props.isOpen} handleClose={this.props.handleClose}>
-        <Body>
-          <pre style={style.pre}>{this.props.content}</pre>
-        </Body>
-      </Dialog>
+      <Modal
+        title="Animation JSON"
+        onClose={this.props.handleClose}
+        closeLabel={i18n.closeDialog()}
+        customContent={
+          <pre id="dsco-dialog-description" style={style.pre}>
+            {this.props.content}
+          </pre>
+        }
+        primaryButtonProps={{
+          children: i18n.closeDialog(),
+          onClick: this.props.handleClose,
+        }}
+      />
     );
   }
 }
