@@ -199,7 +199,7 @@ class Section < ApplicationRecord
 
   serialized_attrs %w(code_review_expires_at suggested_lesson)
 
-  SUGGESTED_LESSON_TTL = 1.hour
+  SUGGESTED_LESSON_TTL = 1.minute
   SUGGESTED_LESSON_PASSING_THRESHOLD = ActivityConstants::MINIMUM_PASS_RESULT
 
   def suggested_lesson_stale?
@@ -225,7 +225,8 @@ class Section < ApplicationRecord
 
     last_completed_lesson = nil
     finished_unit = true
-    unit.lessons.each do |lesson|
+    numbered_lessons = unit.lessons.select(&:numbered_lesson?)
+    numbered_lessons.each do |lesson|
       required_sls = lesson.script_levels.reject(&:bonus)
       next if required_sls.empty?
 
@@ -249,7 +250,7 @@ class Section < ApplicationRecord
       end
     end
 
-    lessons = unit.lessons.to_a
+    lessons = numbered_lessons
     next_lesson = if last_completed_lesson
                     lessons[lessons.index(last_completed_lesson) + 1]
                   else

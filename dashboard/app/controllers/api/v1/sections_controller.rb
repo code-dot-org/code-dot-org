@@ -461,7 +461,8 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     if data && (lesson = Lesson.find_by(id: data['lesson_id']))
       data = data.merge(
         'name' => lesson.localized_title,
-        'url' => script_lesson_path(lesson.script, lesson)
+        'url' => script_lesson_path(lesson.script, lesson),
+        'podcast_url' => "/ai_lesson_summary_podcasts/show?lesson_id=#{lesson.id}"
       )
     end
     render json: data

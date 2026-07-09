@@ -1614,9 +1614,10 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal fresh_timestamp, json_response['timestamp']
     assert_equal lesson.localized_title, json_response['name']
     assert json_response['url'].present?
+    assert_equal "/ai_lesson_summary_podcasts/show?lesson_id=#{lesson.id}", json_response['podcast_url']
   end
 
-  test 'get suggested_lesson omits name and url when lesson is not found' do
+  test 'get suggested_lesson omits name, url, and podcast_url when lesson is not found' do
     fresh_timestamp = Time.now.utc.iso8601
     @section.update!(suggested_lesson: {'lesson_id' => -1, 'timestamp' => fresh_timestamp})
     sign_in @teacher
@@ -1625,6 +1626,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal(-1, json_response['lesson_id'])
     assert_nil json_response['name']
     assert_nil json_response['url']
+    assert_nil json_response['podcast_url']
   end
 
   test 'get suggested_lesson computes when data is absent and section has script' do

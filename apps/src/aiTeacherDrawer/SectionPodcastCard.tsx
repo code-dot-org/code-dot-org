@@ -9,6 +9,7 @@ interface SuggestedLesson {
   lesson_id?: number;
   name?: string;
   url?: string;
+  podcast_url?: string;
   completed_unit?: boolean;
 }
 
@@ -51,27 +52,12 @@ const SectionPodcastCard: React.FC<SectionPodcastCardProps> = ({
       });
   }, [sectionId]);
 
-  // Re-register audio events whenever the lesson (and thus the audio src) changes.
+  // Reset playback state when the suggested lesson changes.
   useEffect(() => {
-    const audio = audioRef.current;
-    if (!audio) return;
-    const onTimeUpdate = () => setCurrentTime(audio.currentTime);
-    const onDurationChange = () => setDuration(audio.duration || 0);
-    const onEnded = () => setIsPlaying(false);
-    const onCanPlay = () => setAudioStatus('ready');
-    const onError = () => setAudioStatus('unavailable');
-    audio.addEventListener('timeupdate', onTimeUpdate);
-    audio.addEventListener('durationchange', onDurationChange);
-    audio.addEventListener('ended', onEnded);
-    audio.addEventListener('canplay', onCanPlay);
-    audio.addEventListener('error', onError);
-    return () => {
-      audio.removeEventListener('timeupdate', onTimeUpdate);
-      audio.removeEventListener('durationchange', onDurationChange);
-      audio.removeEventListener('ended', onEnded);
-      audio.removeEventListener('canplay', onCanPlay);
-      audio.removeEventListener('error', onError);
-    };
+    setAudioStatus('loading');
+    setCurrentTime(0);
+    setDuration(0);
+    setIsPlaying(false);
   }, [lesson?.lesson_id]);
 
   const togglePlay = useCallback(() => {
@@ -123,8 +109,17 @@ const SectionPodcastCard: React.FC<SectionPodcastCardProps> = ({
       )}
       <audio
         ref={audioRef}
-        src={`/ai_lesson_summary_podcasts/show?lesson_id=${lesson.lesson_id}`}
+        src={lesson.podcast_url}
         preload="auto"
+        onCanPlay={() => setAudioStatus('ready')}
+        onError={() => setAudioStatus('unavailable')}
+        onDurationChange={() =>
+          setDuration(audioRef.current?.duration || 0)
+        }
+        onTimeUpdate={() =>
+          setCurrentTime(audioRef.current?.currentTime || 0)
+        }
+        onEnded={() => setIsPlaying(false)}
       >
         <track kind="captions" label="English captions" src="" srcLang="en" default />
       </audio>
