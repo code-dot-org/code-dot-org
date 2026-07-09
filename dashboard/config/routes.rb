@@ -227,6 +227,7 @@ Dashboard::Application.routes.draw do
           get 'available_participant_types'
           get 'require_captcha'
           get 'assigned_essential_ai_dependency'
+          get 'suggested_lessons'
         end
         collection do
           get 'demo/presets', action: 'presets', as: 'presets'
@@ -846,10 +847,15 @@ Dashboard::Application.routes.draw do
 
     post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
-    # Experiments are get requests so that a user can click on a link to join or leave an experiment
+    get '/experiments', to: 'experiments#index'
+
+    # The set/disable experiment routes are state-mutating GETs, kept only so
+    # they can be clickable links in emails. Use them nowhere else; the
+    # /experiments page leaves experiments via the POST route.
     resource :experiments, only: [] do
       get 'set_single_user_experiment/:experiment_name', action: :set_single_user_experiment
       get 'disable_single_user_experiment/:experiment_name', action: :disable_single_user_experiment
+      post 'leave/:experiment_name', action: :leave
     end
 
     get '/peer_reviews/dashboard', to: 'peer_reviews#dashboard'
@@ -1452,6 +1458,8 @@ Dashboard::Application.routes.draw do
     resources :practice_problems, only: [:index, :show]
 
     resources :challenges, only: [:index, :show]
+    resources :challenge_responses, only: [:create, :show]
+    resources :challenge_response_assets, only: [:show]
 
     resources :aidiff_exit_tickets, only: [:index, :update, :create, :show]
     resources :aidiff_lesson_hooks, only: [:index, :update, :create, :show]
