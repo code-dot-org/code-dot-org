@@ -1,5 +1,11 @@
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react';
 
 import ColorPicker from './ColorPicker';
 import {
@@ -178,22 +184,32 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       preview.width = backing.width;
       preview.height = backing.height;
       previewRef.current = preview;
-      const scale = Math.max(
+      scaleRef.current = Math.max(
         1,
         Math.floor(MAX_DISPLAY_SIZE / Math.max(backing.width, backing.height))
       );
-      scaleRef.current = scale;
-      const display = displayRef.current;
-      if (display) {
-        display.width = backing.width * scale;
-        display.height = backing.height * scale;
-      }
       setLoaded(true);
-      repaint();
     };
     img.onerror = () => setLoadError(true);
     img.src = imageUrl;
-  }, [imageUrl, repaint]);
+  }, [imageUrl]);
+
+  // The panel (and its canvas) only mounts once the image is ready, so the
+  // modal appears in final form instead of resizing as the image decodes.
+  // Layout effect: the canvas must be sized and painted BEFORE the browser
+  // paints the newly-mounted panel, or its first frame flashes default-sized.
+  useLayoutEffect(() => {
+    if (!loaded) {
+      return;
+    }
+    const display = displayRef.current;
+    const backing = backingRef.current;
+    if (display && backing) {
+      display.width = backing.width * scaleRef.current;
+      display.height = backing.height * scaleRef.current;
+      repaint();
+    }
+  }, [loaded, repaint]);
 
   // Map a pointer event to backing-canvas pixel coordinates.
   const toPixel = useCallback((e: React.PointerEvent<HTMLCanvasElement>) => {
@@ -381,6 +397,12 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
     }
     onSave(backing.toDataURL('image/png'));
   }, [onSave, pixelMode]);
+
+  // The backdrop appears immediately (the click responds); the panel mounts
+  // only once the image is decoded and measured, arriving in final form.
+  if (!loaded && !loadError) {
+    return <div className={moduleStyles.overlay} />;
+  }
 
   return (
     <div className={moduleStyles.overlay}>
