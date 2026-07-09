@@ -30,6 +30,8 @@ import {
 } from './externalSceneDropdown';
 import {SPRITELAB2_EXTRA_SHARED_BLOCKS} from './extraSharedBlocks';
 
+import moduleStyles from './image-dropdown.module.scss';
+
 // blocksCommon is a plain CommonJS module (exports.install = ...); give it a
 // minimal typed view.
 const blocksCommon = blocksCommonModule as unknown as {
@@ -140,8 +142,6 @@ const EMPTY_IMAGE_OPTION: [string, string][] = [
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">' +
           '<rect x="4" y="6" width="32" height="28" rx="3" fill="none"' +
           ' stroke="#a0a6b2" stroke-width="2" stroke-dasharray="4 3"/>' +
-          '<path d="M20 14v12M14 20h12" stroke="#a0a6b2" stroke-width="2"' +
-          ' stroke-linecap="round"/>' +
           '</svg>'
       ),
     'null',
@@ -154,6 +154,7 @@ const MAKE_IMAGE_BUTTONS = [
   {
     text: 'Make an image',
     action: () => getStore().dispatch(setActiveTab('Images')),
+    className: moduleStyles.makeImageButton,
   },
 ];
 
