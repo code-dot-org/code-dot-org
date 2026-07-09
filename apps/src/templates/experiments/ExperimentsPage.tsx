@@ -64,6 +64,49 @@ const ExperimentsPage: React.FC<ExperimentsPageProps> = ({
       <Typography variant="h1">My experiments</Typography>
 
       <section>
+        <Typography variant="h2">Browser experiments</Typography>
+        <Typography variant="body2" className={styles.description}>
+          Experiments enabled only in this browser.
+        </Typography>
+        {browserExperiments.length === 0 ? (
+          <Typography variant="body2" className={styles.emptyState}>
+            No experiments are enabled in this browser.
+          </Typography>
+        ) : (
+          <table className={styles.table}>
+            <thead>
+              <tr>
+                <th>Experiment</th>
+                <th>Expires</th>
+                <th />
+              </tr>
+            </thead>
+            <tbody>
+              {browserExperiments.map(experiment => (
+                <tr key={experiment.key}>
+                  <td>
+                    <code>{experiment.key}</code>
+                  </td>
+                  <td>
+                    {experiment.expiration
+                      ? formatDate(experiment.expiration)
+                      : '—'}
+                  </td>
+                  <td className={styles.actionCell}>
+                    <ActionButton
+                      onClick={() => disableBrowserExperiment(experiment.key)}
+                    >
+                      Disable
+                    </ActionButton>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
+      </section>
+
+      <section>
         <Typography variant="h2">Account experiments</Typography>
         <Typography variant="body2" className={styles.description}>
           Experiments you have joined. They follow your account wherever you
@@ -103,49 +146,6 @@ const ExperimentsPage: React.FC<ExperimentsPageProps> = ({
                         Leave
                       </ActionButton>
                     )}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        )}
-      </section>
-
-      <section>
-        <Typography variant="h2">Browser experiments</Typography>
-        <Typography variant="body2" className={styles.description}>
-          Experiments enabled only in this browser.
-        </Typography>
-        {browserExperiments.length === 0 ? (
-          <Typography variant="body2" className={styles.emptyState}>
-            No experiments are enabled in this browser.
-          </Typography>
-        ) : (
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>Experiment</th>
-                <th>Expires</th>
-                <th />
-              </tr>
-            </thead>
-            <tbody>
-              {browserExperiments.map(experiment => (
-                <tr key={experiment.key}>
-                  <td>
-                    <code>{experiment.key}</code>
-                  </td>
-                  <td>
-                    {experiment.expiration
-                      ? formatDate(experiment.expiration)
-                      : '—'}
-                  </td>
-                  <td className={styles.actionCell}>
-                    <ActionButton
-                      onClick={() => disableBrowserExperiment(experiment.key)}
-                    >
-                      Disable
-                    </ActionButton>
                   </td>
                 </tr>
               ))}
