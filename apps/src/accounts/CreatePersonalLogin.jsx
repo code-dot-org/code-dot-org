@@ -117,6 +117,11 @@ export default function CreatePersonalLogin({
           onSubmit={handleSubmit}
           className={classNames(styles.form, {[styles.dimmed]: disabled})}
         >
+          {/* Rails routes /users/upgrade as PATCH only. The legacy
+              form_for(current_user) emitted this _method override automatically
+              because the user is a persisted record; replicate it so the native
+              POST is rewritten to PATCH and reaches registrations#upgrade. */}
+          <input type="hidden" name="_method" value="patch" />
           <RailsAuthenticityToken />
           <input
             type="hidden"

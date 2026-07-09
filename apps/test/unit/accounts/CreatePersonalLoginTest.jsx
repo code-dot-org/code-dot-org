@@ -61,6 +61,11 @@ describe('CreatePersonalLogin', () => {
     expect(form).toHaveAttribute('id', 'edit_user_create_personal_account');
     expect(form).toHaveAttribute('action', '/users/upgrade');
     expect(form).toHaveAttribute('method', 'post');
+    // /users/upgrade is routed as PATCH only; the POST must carry Rails' method
+    // override so it is rewritten to PATCH and reaches registrations#upgrade.
+    expect(document.querySelector('input[name="_method"]')).toHaveValue(
+      'patch'
+    );
     expect(
       document.getElementById('edit_user_create_personal_account_description')
     ).toBeInTheDocument();
