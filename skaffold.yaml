@@ -197,6 +197,16 @@ profiles:
 # For details, see: ./k8s/mimic/README.md
 - name: mimic
   patches:
+    - op: replace
+      path: /build/artifacts/0/custom/buildCommand
+      value: |
+        k8s/bin/docker-buildx -f k8s/docker/code-dot-org.dockerfile \
+          --target runtime \
+          --build-arg CODE_DOT_ORG_CORE="$CODE_DOT_ORG_CORE" \
+          --build-arg CODE_DOT_ORG_DB_SEED="$CODE_DOT_ORG_DB_SEED" \
+          --build-arg CODE_DOT_ORG_PEGASUS="$CODE_DOT_ORG_PEGASUS" \
+          --build-arg CODE_DOT_ORG_STATIC="$CODE_DOT_ORG_STATIC" \
+          --build-arg SKIP_FRONTEND_BUILD=1
     # Create the k8s/mimic/cdo-no-symlinks dir to serve as the build context for the
     # mimic docker build. This is just a copy of k8s/mimic/code-dot-org, but symlinks
     # have been replaced by copies of the real files, because docker doesn't follow

@@ -74,5 +74,5 @@ If you get an errors like:
 
 You need to manually re-run:
 ```
-k8s/mimic/bin/create-cdo-no-symlinks.sh
+k8s/mimic/bin/update-cdo-no-symlinks.sh
 ```
