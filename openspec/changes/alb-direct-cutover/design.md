@@ -18,8 +18,9 @@ TLS cert into cdo-nginx only `unless load_balancer`.
 - Adhoc topology byte-for-byte unchanged.
 
 **Non-Goals:**
-- Re-architecting adhoc TLS (nginx stays; any future adhoc change is its
-  own proposal).
+- Re-architecting adhoc TLS. nginx stays at this point in the sequence;
+  the follow-on `adhoc-puma-tls` change moves adhoc to Puma-terminated
+  TLS and retires nginx there too.
 - Deleting the cdo-nginx cookbook (still needed by adhoc).
 - Renaming the `/run/unicorn` runtime directory (follow-up nicety, LB
   envs no longer use it after this change).
