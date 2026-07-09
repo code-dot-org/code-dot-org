@@ -60,9 +60,12 @@
 }
 
 // The design-system tooltip portals to <body> at z-index 10, which is under
-// this modal's overlay (z-index 1100); lift ours above it.
+// this modal's overlay (z-index 1100); lift ours above it. The nudge right
+// places the bubble (and its tail) over the image being edited instead of
+// over the dark gap between the toolbar and the canvas.
 .pixelTooltip {
   z-index: 1200;
+  margin-left: 22px;
 }
 
 .toolButton {
