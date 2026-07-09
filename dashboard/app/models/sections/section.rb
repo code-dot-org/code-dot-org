@@ -199,7 +199,7 @@ class Section < ApplicationRecord
 
   serialized_attrs %w(code_review_expires_at suggested_lesson)
 
-  SUGGESTED_LESSON_TTL = 1.minute
+  SUGGESTED_LESSON_TTL = 1.hour
   SUGGESTED_LESSON_PASSING_THRESHOLD = ActivityConstants::MINIMUM_PASS_RESULT
 
   def suggested_lesson_stale?
