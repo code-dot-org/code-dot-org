@@ -30,6 +30,7 @@ import {Weblab2State} from '@cdo/apps/weblab2/weblab2Redux';
 
 import {DanceState} from '../dance/danceRedux';
 import {SpriteLab2State} from '../p5lab/spritelab/lab2/redux/spriteLab2Redux';
+import {RuntimeAnimationList} from '../p5lab/spritelab/lab2/types';
 import {BlocklyState} from '../redux/blockly';
 import {LegacyLabsState} from '../redux/legacyLabs';
 
@@ -38,14 +39,6 @@ import {LegacyLabsState} from '../redux/legacyLabs';
 // in order to make using the slice easier in components.
 // We cannot infer the type of our store because we programmatically add to the store
 // with registerReducers.
-// The classic p5lab animationList slice (orderedKeys + propsByKey). Typed
-// loosely here since the runtime animation props carry many fields.
-export interface AnimationListState {
-  orderedKeys: string[];
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  propsByKey: {[key: string]: any};
-}
-
 // The classic p5lab locationPicker slice (drives the location-picker block).
 export interface LocationPickerState {
   mode: string;
@@ -54,7 +47,8 @@ export interface LocationPickerState {
 }
 
 export interface RootState {
-  animationList: AnimationListState;
+  // The classic p5lab animationList slice, in its in-memory shape.
+  animationList: RuntimeAnimationList;
   locationPicker: LocationPickerState;
   manageStudents: ManageStudentsState;
   aichat: AichatState;
