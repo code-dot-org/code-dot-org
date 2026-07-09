@@ -107,12 +107,14 @@ const SpriteLab2View: React.FunctionComponent<{
   const {currentSources, updateSources} = useSources<SpriteLab2Source>();
 
   const activeTab = useAppSelector(state => state.spriteLab2.activeTab);
-  // Latches true on the first Images visit; the tab stays mounted (clipped)
-  // afterwards so revisits don't pay the gallery/editor mount cost.
-  const [imagesVisited, setImagesVisited] = useState(false);
+  // Once true, the Images tab mounts (clipped when inactive) and stays
+  // mounted, so no visit pays the gallery/editor mount cost. Latches on the
+  // first visit, or earlier: pre-mounted during idle time after the
+  // animation list seeds, so even the FIRST visit is instant.
+  const [imagesMounted, setImagesMounted] = useState(false);
   useEffect(() => {
     if (activeTab === 'Images') {
-      setImagesVisited(true);
+      setImagesMounted(true);
     }
   }, [activeTab]);
   const channelId = useAppSelector(state => state.lab.channel?.id);
@@ -174,6 +176,22 @@ const SpriteLab2View: React.FunctionComponent<{
   // when the jump lands and Playspace plays the fade-from-black reveal.
   const [jumpCover, setJumpCover] = useState(false);
   const [fadeTrigger, setFadeTrigger] = useState(0);
+
+  // Pre-mount the Images tab during idle time once the animation list is
+  // seeded, so the first visit doesn't pay the mount cost mid-transition.
+  useEffect(() => {
+    if (!animationsSeeded || imagesMounted) {
+      return;
+    }
+    if (typeof window.requestIdleCallback === 'function') {
+      const handle = window.requestIdleCallback(() => setImagesMounted(true), {
+        timeout: 3000,
+      });
+      return () => window.cancelIdleCallback(handle);
+    }
+    const handle = window.setTimeout(() => setImagesMounted(true), 1500);
+    return () => window.clearTimeout(handle);
+  }, [animationsSeeded, imagesMounted]);
 
   // Scenes UI variant. Full scenes (with workspace sources) live here and in
   // project sources; redux mirrors just {id, name} for the selector and the
@@ -748,11 +766,12 @@ const SpriteLab2View: React.FunctionComponent<{
         )}
       </div>
 
-      {/* Keep the Images tab mounted after its first visit (same clip-path
-          trick as the Code tab): remounting the gallery + editor on every
-          switch is expensive enough to eat the guide's height-transition
-          frames, and it loses scroll position. */}
-      {imagesVisited && (
+      {/* The Images tab mounts once (pre-mounted during idle time, or on
+          first visit) and stays mounted behind a clip-path, like the Code
+          tab: mounting the gallery + editor during a switch is expensive
+          enough to eat the guide's height-transition frames, and remounting
+          lost gallery state. */}
+      {imagesMounted && (
         <div
           className={classNames(moduleStyles.codeTabWrapper)}
           style={{
