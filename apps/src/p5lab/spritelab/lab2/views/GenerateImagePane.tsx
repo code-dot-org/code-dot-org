@@ -315,7 +315,11 @@ const GenerateImagePane: React.FunctionComponent = () => {
             <div className={moduleStyles.imageName} title={props?.name}>
               {props?.name}
             </div>
-            <button type="button" onClick={() => handleDelete(key)}>
+            <button
+              type="button"
+              className={moduleStyles.deleteButton}
+              onClick={() => handleDelete(key)}
+            >
               Delete
             </button>
           </div>

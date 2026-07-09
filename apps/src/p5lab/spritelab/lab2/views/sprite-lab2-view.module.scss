@@ -211,8 +211,9 @@ $tab-segment-height: $tab-item-height - 2px;
 .imageGallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  padding: 12px;
+  // Generous row spacing so the cards read as rows, not a dense grid.
+  gap: 28px 14px;
+  padding: 28px 16px 24px;
 }
 
 .galleryEmpty {
@@ -224,12 +225,28 @@ $tab-segment-height: $tab-item-height - 2px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   width: 125px;
+}
 
-  button {
-    cursor: pointer;
-    font-size: 12px;
+// Compact, quiet delete: the image is the star of the card. (Scoped by
+// class — a bare `.imageCard button` would also hit the thumbnail button.)
+.deleteButton {
+  box-sizing: border-box;
+  height: 22px;
+  margin: 0;
+  padding: 0 10px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+  background: none;
+  box-shadow: none;
+  color: var(--text-neutral-secondary);
+  font-size: 11px;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--text-neutral-primary);
+    border-color: var(--text-neutral-secondary);
   }
 }
 
