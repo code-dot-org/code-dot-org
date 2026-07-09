@@ -34,26 +34,44 @@ const EDGE_THRESHOLD = 90;
 
 /**
  * Histogram of color-edge positions along one axis: result[i] counts how many
- * lines have a strong color change between position i-1 and i.
+ * lines have a strong color change between position i-1 and i. Written as two
+ * specialized allocation-free loops — this runs over every pixel of
+ * megapixel images, on the path between click and modal.
  */
 function edgeHistogram(raster: Raster, axis: 'x' | 'y'): number[] {
   const {width, height, data} = raster;
-  const main = axis === 'x' ? width : height;
-  const cross = axis === 'x' ? height : width;
-  const hist = new Array(main).fill(0);
-  for (let c = 0; c < cross; c++) {
-    for (let m = 1; m < main; m++) {
-      const [x, y] = axis === 'x' ? [m, c] : [c, m];
-      const [px, py] = axis === 'x' ? [m - 1, c] : [c, m - 1];
-      const i = (y * width + x) * 4;
-      const j = (py * width + px) * 4;
-      const diff =
-        Math.abs(data[i] - data[j]) +
-        Math.abs(data[i + 1] - data[j + 1]) +
-        Math.abs(data[i + 2] - data[j + 2]) +
-        Math.abs(data[i + 3] - data[j + 3]);
-      if (diff > EDGE_THRESHOLD) {
-        hist[m]++;
+  const hist = new Array(axis === 'x' ? width : height).fill(0);
+  if (axis === 'x') {
+    for (let y = 0; y < height; y++) {
+      let j = y * width * 4;
+      for (let x = 1; x < width; x++) {
+        const i = j + 4;
+        const diff =
+          Math.abs(data[i] - data[j]) +
+          Math.abs(data[i + 1] - data[j + 1]) +
+          Math.abs(data[i + 2] - data[j + 2]) +
+          Math.abs(data[i + 3] - data[j + 3]);
+        if (diff > EDGE_THRESHOLD) {
+          hist[x]++;
+        }
+        j = i;
+      }
+    }
+  } else {
+    const stride = width * 4;
+    for (let x = 0; x < width; x++) {
+      let j = x * 4;
+      for (let y = 1; y < height; y++) {
+        const i = j + stride;
+        const diff =
+          Math.abs(data[i] - data[j]) +
+          Math.abs(data[i + 1] - data[j + 1]) +
+          Math.abs(data[i + 2] - data[j + 2]) +
+          Math.abs(data[i + 3] - data[j + 3]);
+        if (diff > EDGE_THRESHOLD) {
+          hist[y]++;
+        }
+        j = i;
       }
     }
   }
@@ -64,7 +82,18 @@ function edgeHistogram(raster: Raster, axis: 'x' | 'y'): number[] {
 function detectAxis(
   hist: number[]
 ): {size: number; offset: number; score: number} | null {
-  const total = hist.reduce((a, b) => a + b, 0);
+  // Histograms are mostly zeros; iterate just the edges through the
+  // size x offset scan.
+  const edgePositions: number[] = [];
+  const edgeWeights: number[] = [];
+  let total = 0;
+  for (let m = 0; m < hist.length; m++) {
+    if (hist[m]) {
+      edgePositions.push(m);
+      edgeWeights.push(hist[m]);
+      total += hist[m];
+    }
+  }
   if (total === 0) {
     return null;
   }
@@ -72,13 +101,10 @@ function detectAxis(
   for (let size = MIN_BLOCK; size <= MAX_BLOCK; size++) {
     for (let offset = 0; offset < size; offset++) {
       let aligned = 0;
-      for (let m = 0; m < hist.length; m++) {
-        if (!hist[m]) {
-          continue;
-        }
-        const rem = (((m - offset) % size) + size) % size;
+      for (let e = 0; e < edgePositions.length; e++) {
+        const rem = (((edgePositions[e] - offset) % size) + size) % size;
         if (rem <= EDGE_TOLERANCE || rem >= size - EDGE_TOLERANCE) {
-          aligned += hist[m];
+          aligned += edgeWeights[e];
         }
       }
       const score = aligned / total;
