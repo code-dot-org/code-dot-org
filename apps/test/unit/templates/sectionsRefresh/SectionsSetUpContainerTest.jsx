@@ -309,7 +309,7 @@ describe('SectionsSetUpContainer', () => {
       expect(screen.getByRole('checkbox', {name: '12'})).not.toBeChecked();
 
       // Simulate async /api/v1/users/current response landing.
-      act(() => {
+      await act(async () => {
         getStore().dispatch(
           setInitialData({
             id: 1,
@@ -335,7 +335,7 @@ describe('SectionsSetUpContainer', () => {
       expect(screen.getByRole('checkbox', {name: '5'})).toBeChecked();
 
       // gradesTeaching data arrives with different grades.
-      act(() => {
+      await act(async () => {
         getStore().dispatch(
           setInitialData({
             id: 1,

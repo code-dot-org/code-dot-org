@@ -5,6 +5,7 @@ import {ReactFlowProvider, useReactFlow} from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
+import {SUPPORTED_IMAGE_EXTENSIONS} from '@cdo/apps/lab2/constants';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
@@ -30,11 +31,12 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import ReactFlowCanvas from './components/ReactFlowCanvas';
-import {ReactFlowSketchLabSources} from './types';
+import {ImageNodeData, ReactFlowSketchLabSources} from './types';
 import {
   convertExcalidrawToReactFlow,
   uploadConvertedDataUrlImages,
 } from './utils/convertExcalidrawSources';
+import {makeBackpackImageImportHandler} from './utils/handleBackpackImageImport';
 import {handleDownloadSketch} from './utils/handleDownloadSketch';
 import {handleSaveToBackpack} from './utils/handleSaveToBackpack';
 import {migrateTriangleHandleIds} from './utils/migrateReactFlowSources';
@@ -68,6 +70,15 @@ function ReactFlowSketchLabViewInner({
 
   const reactFlow = useReactFlow();
   const dialogControl = useDialogControl();
+  // A Backpack image the user asked to import. The canvas watches this prop and
+  // adds it as a node (reusing its placement, undo, and focus behavior), then
+  // clears it via onImageImportConsumed.
+  const [pendingImageImport, setPendingImageImport] =
+    useState<ImageNodeData | null>(null);
+  const clearPendingImageImport = useCallback(
+    () => setPendingImageImport(null),
+    []
+  );
   const currentUserId = useAppSelector(state => state.currentUser.userId);
   const channelId = useAppSelector(state => state.lab.channel?.id) ?? '';
   // The Backpack API redirects to sign-in for signed-out users, so we only
@@ -75,7 +86,10 @@ function ReactFlowSketchLabViewInner({
   const backpackContext = useMemo(
     () =>
       currentUserId
-        ? {primaryApi: new BackpackClientApi('sketchlab', null)}
+        ? {
+            primaryApi: new BackpackClientApi('sketchlab', null),
+            secondaryApis: {aichat: new BackpackClientApi('aichat', null)},
+          }
         : null,
     [currentUserId]
   );
@@ -158,8 +172,8 @@ function ReactFlowSketchLabViewInner({
         isSupportFileName: false,
         newFileName: fileName,
       }),
-      // Sketch Lab doesn't support importing Backpack files into the
-      // project, so these import-related handlers are no-ops.
+      // Importing goes through addFileHandler below, so these callbacks are
+      // no-ops.
       saveFileToProject: () => {},
       createNewProjectFile: () => {},
       findIdForFileName: () => undefined,
@@ -174,9 +188,15 @@ function ReactFlowSketchLabViewInner({
           ),
         text: 'Save Sketch to Backpack',
       },
-      supportedFileTypes: [],
+      supportedFileTypes: SUPPORTED_IMAGE_EXTENSIONS,
+      addFileTooltipText: 'Add to sketch',
+      addFileHandler: makeBackpackImageImportHandler({
+        levelName: levelProperties.name,
+        channelId,
+        addImageNode: (data: ImageNodeData) => setPendingImageImport(data),
+      }),
     }),
-    [reactFlow, backpackContext, dialogControl]
+    [reactFlow, backpackContext, dialogControl, channelId, levelProperties.name]
   );
 
   // Read sources, converting from Excalidraw if this project was last
@@ -311,6 +331,8 @@ function ReactFlowSketchLabViewInner({
               initialViewport={initialViewport}
               colorMode={colorMode}
               readOnly={readonlyWorkspace}
+              pendingImageImport={pendingImageImport}
+              onImageImportConsumed={clearPendingImageImport}
             />
             {WorkspaceAlert}
           </PanelContainer>

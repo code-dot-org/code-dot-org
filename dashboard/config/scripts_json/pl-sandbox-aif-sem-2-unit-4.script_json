@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-02 17:32:36 UTC",
+    "serialized_at": "2026-07-08 20:23:51 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -40,8 +40,8 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
-        "overview": "#### **By the end of this professional learning module, you will be able to:**\n\n* #### Explain how iteration and loops work\n* #### Implement loops in JavaScript to create interactive features such as filters, searches, and views\n* #### Guide students in using AI-generated scaffolds responsibly, emphasizing accountability for both data choices and code.",
-        "student_overview": "#### **By the end of this professional learning module, you will be able to:**\n\n* #### Explain how iteration and loops work\n* #### Implement loops in JavaScript to create interactive features such as filters, searches, and views\n* #### Guide students in using AI-generated scaffolds responsibly, emphasizing accountability for both data choices and code."
+        "overview": " **By the end of this professional learning module, you will be able to:**\n\n* Explain how iteration and loops work\n*Implement loops in JavaScript to create interactive features such as filters, searches, and views\n* Guide students in using AI-generated scaffolds responsibly, emphasizing accountability for both data choices and code.",
+        "student_overview": " **By the end of this professional learning module, you will be able to:**\n\n* Explain how iteration and loops work\n*Implement loops in JavaScript to create interactive features such as filters, searches, and views\n* Guide students in using AI-generated scaffolds responsibly, emphasizing accountability for both data choices and code."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",

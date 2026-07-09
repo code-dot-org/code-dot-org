@@ -88,7 +88,8 @@ const buildQuizHtml = (
 ): string =>
   `<div class="onboarding-step-content">` +
   `<i class="fa-solid fa-sparkle onboarding-sparkle-icon"></i>` +
-  `<span class="onboarding-step-text">When you're prepping a lesson, you don't have time to review every single level — and you don't need to. CodeAI highlights the levels most worth your attention. For Lesson ${lesson}, which level would you prioritize reviewing?</span>` +
+  `<span class="onboarding-step-text">If you're only reviewing one level, CodeAI recommends the Check for Understanding level — look for the purple checkmark — because it offers a quick snapshot of student readiness. Where would you look in this lesson to quickly assess student learning?
+</span>` +
   `</div>` +
   `<div class="quiz-options-grid">` +
   options
@@ -137,7 +138,7 @@ const createLessonResourcesStep = (
     on: 'bottom',
   },
   text: withSparkle(
-    'Ready to dig into this lesson? The lesson plan, slide decks, and student activity guides are one click away. Plus you can save your own materials alongside them.'
+    'Ready to dig into this lesson? The lesson plan with slide decks, and student activity guides are one click away.'
   ),
   buttons: [nextButton(tour)],
   beforeShowPromise: () =>
@@ -209,7 +210,7 @@ const createHomepageSteps = (
         on: 'bottom',
       },
       text: withSparkle(
-        "Before you assign anything to students, it helps to know what's coming. The Jump to menu gets you straight to the syllabus for your assigned unit.",
+        "The Jump to menu gets you straight to the syllabus for your assigned unit. Get a sense of what's coming with your course.",
         'Click the dropdown menu to take a look.'
       ),
       advanceOn: {
@@ -225,7 +226,7 @@ const createHomepageSteps = (
         on: 'right',
       },
       text: withSparkle(
-        'Your assigned unit is right at the top. Click it to see the full lesson breakdown before your students do.',
+        'Your assigned unit is here. Click the unit name at the top to see the full lesson breakdown.',
         'Click the unit name to continue.'
       ),
       beforeShowPromise: () =>
