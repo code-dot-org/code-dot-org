@@ -24,6 +24,30 @@ module Minitest::Assertions
   include ActiveSupport::Testing::Assertions
 end
 
+# AWS documentation placeholder account, used in place of our real account
+# number so that account numbers are never committed to this public repository.
+# See https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-identifiers.html
+DUMMY_AWS_ACCOUNT_ID = '123456789012'.freeze
+
+# If +value+ is an ARN, return it with its account number replaced by the dummy
+# account; otherwise return +value+ unchanged. Parses with the AWS SDK's ARN
+# parser rather than a regular expression.
+def obfuscate_arn_account_id(value)
+  return value unless value.is_a?(String) && Aws::ARNParser.arn?(value)
+  arn = Aws::ARNParser.parse(value)
+  Aws::ARN.new(
+    partition: arn.partition,
+    service: arn.service,
+    region: arn.region,
+    account_id: DUMMY_AWS_ACCOUNT_ID,
+    resource: arn.resource
+  ).to_s
+rescue Aws::Errors::InvalidARNError
+  # arn? only checks for the "arn:" prefix, so a malformed value can still fail
+  # to parse. Leave anything unparseable untouched.
+  value
+end
+
 VCR.configure do |c|
   c.cassette_library_dir = File.expand_path 'fixtures/vcr', __dir__
   c.allow_http_connections_when_no_cassette = true
@@ -40,11 +64,23 @@ VCR.configure do |c|
       User-Agent
       Host
       Content-Type
+      Amz-Sdk-Invocation-Id
     ).each {|h| i.request.headers.delete h}
+    # X-Amz-Server-Side-Encryption-Aws-Kms-Key-Id contains the KMS key ARN,
+    # which includes our AWS account number; cassettes are committed to a
+    # public repository, so drop it.
     %w(
       X-Amz-Request-Id
       X-Amz-Id-2
+      X-Amz-Server-Side-Encryption-Aws-Kms-Key-Id
     ).each {|h| i.response.headers.delete h}
+    # Any remaining header whose value is an ARN still embeds our AWS account
+    # number; replace it with the documentation placeholder account.
+    [i.request, i.response].each do |part|
+      part.headers.each_value do |values|
+        values.map! {|v| obfuscate_arn_account_id(v)}
+      end
+    end
   end
 end
 
