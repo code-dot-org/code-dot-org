@@ -102,6 +102,8 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
           direction: 'onRight',
           className: moduleStyles.pixelTooltip,
         }}
+        hideDelayMs={10}
+        hideOnFirstLeave={true}
       >
         <button
           type="button"

@@ -288,8 +288,9 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
     };
   }, [imageUrl, knownPixelGrid]);
 
-  // Single-key tool shortcuts (shown in each tool's tooltip). Modifier
-  // combos pass through so browser shortcuts keep working.
+  // Single-key shortcuts (shown in the tooltips): letters pick tools, digits
+  // 1-4 pick brush sizes. Modifier combos pass through so browser shortcuts
+  // keep working.
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.metaKey || e.ctrlKey || e.altKey) {
@@ -305,6 +306,11 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       const match = TOOLS.find(t => t.shortcut === e.key.toLowerCase());
       if (match) {
         setTool(match.id);
+        return;
+      }
+      const digit = parseInt(e.key, 10);
+      if (digit >= 1 && digit <= BRUSH_SIZES.length) {
+        setBrushSize(BRUSH_SIZES[digit - 1]);
       }
     };
     window.addEventListener('keydown', onKeyDown);
@@ -539,6 +545,8 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
                   direction: 'onRight',
                   className: moduleStyles.pixelTooltip,
                 }}
+                hideDelayMs={10}
+                hideOnFirstLeave={true}
               >
                 <button
                   type="button"
@@ -555,20 +563,22 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
               </WithTooltip>
             ))}
             <div className={moduleStyles.toolbarDivider} />
-            {BRUSH_SIZES.map(size => (
+            {BRUSH_SIZES.map((size, index) => (
               <WithTooltip
                 key={size}
                 tooltipProps={{
                   tooltipId: `pixel-brush-${size}-tooltip`,
-                  text: `Brush size ${size}`,
+                  text: `Brush size ${size} (${index + 1})`,
                   size: 's',
                   direction: 'onRight',
                   className: moduleStyles.pixelTooltip,
                 }}
+                hideDelayMs={10}
+                hideOnFirstLeave={true}
               >
                 <button
                   type="button"
-                  aria-label={`Brush size ${size}`}
+                  aria-label={`Brush size ${size} (${index + 1})`}
                   aria-pressed={brushSize === size}
                   className={classNames(
                     moduleStyles.toolButton,
