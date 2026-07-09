@@ -545,7 +545,6 @@ html[dir="rtl"] div#visualizationResizeBar {
 }
 
 /* Buttons */
-button,
 label.img-upload {
   margin: 5px;
   padding: 10px;
@@ -554,126 +553,6 @@ label.img-upload {
   font-size: large;
   background-color: #eee;
   color: $black;
-}
-button.launch {
-  border: 1px solid $orange;
-  background-color: $orange;
-  color: $white;
-  font-size: large;
-  min-width: 96px;
-  margin-left: 0;
-  margin-right: 10px;
-
-  /* Can't use "text-align: start" due to IE. */
-  text-align: left;
-}
-button.launch[disabled] {
-  pointer-events: none;
-}
-html[dir="RTL"] button.launch {
-  text-align: right;
-}
-button.launch > img {
-  opacity: 1;
-  vertical-align: text-bottom;
-}
-button.blocklyLaunch {
-  display: inline-block;
-  &.hide {
-    display: none;
-  }
-
-  border: 1px solid $orange;
-  background-color: $orange;
-
-  @media screen and (min-width: 1051px) {
-    min-width: 111px;
-  }
-  padding: 7px 10px 7px 6px;
-
-  /* Can't use "text-align: start" due to IE. */
-  text-align: left;
-  img {
-    float: left;
-    margin-top: 0;
-    margin-left: 6px;
-  }
-  div {
-    text-align: left;
-    margin-top: 3px;
-    margin-right: 4px;
-    float: right;
-    padding: 0;
-    margin-left: 6px;
-
-    @media screen and (min-width: 1051px) {
-      min-width: 45px;
-    }
-  }
-  html[dir="RTL"] & {
-    margin-right: 0;
-  }
-
-  &#resetButton {
-    border: 1px solid $brand_secondary_default;
-    background-color: $brand_secondary_default;
-
-    &:hover {
-      background-color: $brand_secondary_dark;
-      border-color: $brand_secondary_dark;
-      box-shadow: none;
-    }
-  }
-
-  &.hideText {
-    width: 42px;
-    height: 42px;
-    min-width: 0;
-    padding: 7px;
-
-    img {
-      margin-left: 2px;
-      margin-top: -2px;
-    }
-  }
-}
-
-button.share {
-  border: 1px solid #ffa000;
-  background-color: #ffa000;
-  color: $white;
-  margin-left: 0;
-  margin-right: 0;
-}
-button.share:focus {
-  outline-style: none;
-}
-button:hover > img {
-  opacity: 1;
-}
-button:hover {
-  box-shadow: 2px 2px 5px $shadow;
-}
-button.disabled,
-button[disabled="disabled"],
-button:disabled {
-  border: 1px solid #c7c7c7;
-  background-color: #c7c7c7;
-  box-shadow: none;
-  &:hover {
-    box-shadow: none;
-  }
-}
-button.disabled:hover > img {
-  opacity: 0.6;
-}
-button.disabled {
-  display: none;
-}
-button.notext {
-  font-size: 10%;
-}
-label.img-upload {
   display: inline-block;
   vertical-align: middle;
 }
