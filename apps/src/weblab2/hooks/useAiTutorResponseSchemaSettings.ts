@@ -16,6 +16,7 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {
   acceptRejectAnswerTypes,
+  AiTutorAcceptRejectResponse,
   aiTutorResponseJsonSchema,
   formatAcceptRejectResponse,
   getMergedAiTutorCodeWithSource,
@@ -37,11 +38,12 @@ export const useAiTutorResponseSchemaSettings = (
   return useMemo(() => {
     return {
       jsonSchema: aiTutorResponseJsonSchema,
-      // response is already parsed on the gateway path; the legacy Rails-job
-      // path still hands over a raw JSON string that we parse ourselves.
-      responseCallback: (response: unknown) => {
-        const jsonResponse =
-          typeof response === 'string' ? JSON.parse(response) : response;
+      // Only ever invoked with the already-parsed jsonSchema response --
+      // submitChatContents parses it once, upstream of this callback.
+      jsonSchemaResponseCallback: (response: unknown) => {
+        const jsonResponse = response as {
+          answer: AiTutorAcceptRejectResponse;
+        };
         console.log('🤖: AI Tutor response (in jsonSchema callback):', {
           jsonResponse,
         });

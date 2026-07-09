@@ -1,9 +1,10 @@
 export interface ResponseSchemaSettings {
   jsonSchema: JsonObjectSchema;
-  // Receives the parsed structured output directly on the gateway path, or
-  // a raw JSON string on the legacy Rails-job path (which never parses it
-  // itself) -- implementations should JSON.parse when given a string.
-  responseCallback: (response: unknown) => string;
+  // Only ever invoked for a jsonSchema-configured session, so it always
+  // receives the parsed structured output -- never a raw string. Parsing
+  // (both paths' string forms) happens once, at the call site in
+  // submitChatContents, not here.
+  jsonSchemaResponseCallback: (response: unknown) => string;
 }
 
 export interface JsonObjectSchema {

@@ -60,7 +60,7 @@ export const submitChatContents = createAsyncThunk(
       assets?: ChatAsset[];
       analyticsProperties?: AnalyticsProperties;
       userAddedSelectionContext?: UserAddedSelectionContextItem[];
-      responseCallback?: (response: unknown) => string;
+      jsonSchemaResponseCallback?: (response: unknown) => string;
       lessonId?: number;
     },
     thunkAPI
@@ -76,7 +76,7 @@ export const submitChatContents = createAsyncThunk(
       clientType,
       analyticsProperties,
       userAddedSelectionContext,
-      responseCallback,
+      jsonSchemaResponseCallback,
       lessonId,
     } = newUserMessageInput;
 
@@ -230,15 +230,23 @@ export const submitChatContents = createAsyncThunk(
     dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
     messages.forEach(message => {
       if (message.role === Role.ASSISTANT) {
-        // Structured-output callbacks only apply to successful model responses.
-        // Prefer the already-parsed structuredOutput (gateway path) over
-        // chatMessageText (a JSON string on the legacy Rails-job path, which
-        // responseCallback parses itself) to avoid a pointless re-parse.
-        if (message.status === Status.OK) {
-          message.chatMessageText =
-            responseCallback?.(
-              message.structuredOutput ?? message.chatMessageText
-            ) ?? message.chatMessageText;
+        // jsonSchemaResponseCallback only applies to successful model
+        // responses, and is only ever set for a jsonSchema-configured
+        // session -- so it always gets parsed JSON, never a bare string.
+        // structuredOutput is already parsed (gateway path); the legacy
+        // Rails-job path never has a parsed form, so parse chatMessageText
+        // here once, rather than pushing that split onto every callback.
+        if (message.status === Status.OK && jsonSchemaResponseCallback) {
+          try {
+            const parsedResponse =
+              message.structuredOutput ?? JSON.parse(message.chatMessageText);
+            message.chatMessageText =
+              jsonSchemaResponseCallback(parsedResponse);
+          } catch (err) {
+            // Model didn't return valid JSON despite the schema -- keep the
+            // raw text rather than losing the response to a crashed thunk.
+            console.error('Failed to parse structured chat response', err);
+          }
         }
         dispatch(addChatEvent(message));
       }

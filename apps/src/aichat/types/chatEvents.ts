@@ -59,8 +59,8 @@ export interface CompletedChatMessage extends BaseChatMessage {
   /**
    * Already-parsed structured output, when the request used a JSON schema
    * (gateway path only -- the legacy path never has a parsed form to offer).
-   * A responseCallback receives this directly instead of re-parsing
-   * chatMessageText when it's present.
+   * submitChatContents parses this (or chatMessageText, when absent) once
+   * before calling jsonSchemaResponseCallback.
    */
   structuredOutput?: unknown;
   /**
