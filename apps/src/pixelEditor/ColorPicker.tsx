@@ -1,3 +1,4 @@
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {RGBA} from './tools';
@@ -93,14 +94,25 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
 
   return (
     <div ref={rootRef} className={moduleStyles.colorPicker}>
-      <button
-        type="button"
-        className={moduleStyles.swatch}
-        style={{backgroundColor: `rgb(${color[0]}, ${color[1]}, ${color[2]})`}}
-        onClick={() => setOpen(o => !o)}
-        aria-label="Choose color"
-        title="Color"
-      />
+      <WithTooltip
+        tooltipProps={{
+          tooltipId: 'pixel-color-tooltip',
+          text: 'Color',
+          size: 's',
+          direction: 'onRight',
+          className: moduleStyles.pixelTooltip,
+        }}
+      >
+        <button
+          type="button"
+          className={moduleStyles.swatch}
+          style={{
+            backgroundColor: `rgb(${color[0]}, ${color[1]}, ${color[2]})`,
+          }}
+          onClick={() => setOpen(o => !o)}
+          aria-label="Choose color"
+        />
+      </WithTooltip>
       {open && (
         <div className={moduleStyles.spectrumPopover}>
           <canvas

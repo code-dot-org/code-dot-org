@@ -1,3 +1,4 @@
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React, {
   useCallback,
@@ -529,44 +530,62 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
         <div className={moduleStyles.body}>
           <div className={moduleStyles.toolbar}>
             {TOOLS.map(t => (
-              <button
+              <WithTooltip
                 key={t.id}
-                type="button"
-                title={toolTitle(t)}
-                aria-label={toolTitle(t)}
-                aria-pressed={tool === t.id}
-                className={classNames(
-                  moduleStyles.toolButton,
-                  tool === t.id && moduleStyles.toolActive
-                )}
-                onClick={() => setTool(t.id)}
+                tooltipProps={{
+                  tooltipId: `pixel-tool-${t.id}-tooltip`,
+                  text: toolTitle(t),
+                  size: 's',
+                  direction: 'onRight',
+                  className: moduleStyles.pixelTooltip,
+                }}
               >
-                {t.icon}
-              </button>
+                <button
+                  type="button"
+                  aria-label={toolTitle(t)}
+                  aria-pressed={tool === t.id}
+                  className={classNames(
+                    moduleStyles.toolButton,
+                    tool === t.id && moduleStyles.toolActive
+                  )}
+                  onClick={() => setTool(t.id)}
+                >
+                  {t.icon}
+                </button>
+              </WithTooltip>
             ))}
             <div className={moduleStyles.toolbarDivider} />
             {BRUSH_SIZES.map(size => (
-              <button
+              <WithTooltip
                 key={size}
-                type="button"
-                title={`Brush size ${size}`}
-                aria-label={`Brush size ${size}`}
-                aria-pressed={brushSize === size}
-                className={classNames(
-                  moduleStyles.toolButton,
-                  brushSize === size && moduleStyles.toolActive
-                )}
-                onClick={() => setBrushSize(size)}
+                tooltipProps={{
+                  tooltipId: `pixel-brush-${size}-tooltip`,
+                  text: `Brush size ${size}`,
+                  size: 's',
+                  direction: 'onRight',
+                  className: moduleStyles.pixelTooltip,
+                }}
               >
-                <span
+                <button
+                  type="button"
+                  aria-label={`Brush size ${size}`}
+                  aria-pressed={brushSize === size}
                   className={classNames(
-                    moduleStyles.brushDot,
-                    // Cute: square brush swatches when editing pixel art.
-                    pixelMode && moduleStyles.brushDotSquare
+                    moduleStyles.toolButton,
+                    brushSize === size && moduleStyles.toolActive
                   )}
-                  style={{width: 3 + size * 1.6, height: 3 + size * 1.6}}
-                />
-              </button>
+                  onClick={() => setBrushSize(size)}
+                >
+                  <span
+                    className={classNames(
+                      moduleStyles.brushDot,
+                      // Cute: square brush swatches when editing pixel art.
+                      pixelMode && moduleStyles.brushDotSquare
+                    )}
+                    style={{width: 3 + size * 1.6, height: 3 + size * 1.6}}
+                  />
+                </button>
+              </WithTooltip>
             ))}
             <div className={moduleStyles.toolbarDivider} />
             <ColorPicker color={color} onChange={setColor} />

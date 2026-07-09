@@ -59,6 +59,12 @@
   align-items: center;
 }
 
+// The design-system tooltip portals to <body> at z-index 10, which is under
+// this modal's overlay (z-index 1100); lift ours above it.
+.pixelTooltip {
+  z-index: 1200;
+}
+
 .toolButton {
   display: flex;
   align-items: center;
