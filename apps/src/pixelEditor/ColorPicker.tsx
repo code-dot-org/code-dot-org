@@ -92,29 +92,39 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
     [onChange]
   );
 
+  const swatchButton = (
+    <button
+      type="button"
+      className={moduleStyles.swatch}
+      style={{
+        backgroundColor: `rgb(${color[0]}, ${color[1]}, ${color[2]})`,
+      }}
+      onClick={() => setOpen(o => !o)}
+      aria-label="Choose color"
+    />
+  );
+
   return (
     <div ref={rootRef} className={moduleStyles.colorPicker}>
-      <WithTooltip
-        tooltipProps={{
-          tooltipId: 'pixel-color-tooltip',
-          text: 'Color',
-          size: 's',
-          direction: 'onRight',
-          className: moduleStyles.pixelTooltip,
-        }}
-        hideDelayMs={10}
-        hideOnFirstLeave={true}
-      >
-        <button
-          type="button"
-          className={moduleStyles.swatch}
-          style={{
-            backgroundColor: `rgb(${color[0]}, ${color[1]}, ${color[2]})`,
+      {open ? (
+        // No tooltip while the palette is open: the bubble sits on the same
+        // alignment line and would cover its colors.
+        swatchButton
+      ) : (
+        <WithTooltip
+          tooltipProps={{
+            tooltipId: 'pixel-color-tooltip',
+            text: 'Color',
+            size: 's',
+            direction: 'onRight',
+            className: moduleStyles.pixelTooltip,
           }}
-          onClick={() => setOpen(o => !o)}
-          aria-label="Choose color"
-        />
-      </WithTooltip>
+          hideDelayMs={10}
+          hideOnFirstLeave={true}
+        >
+          {swatchButton}
+        </WithTooltip>
+      )}
       {open && (
         <div className={moduleStyles.spectrumPopover}>
           <canvas
