@@ -107,6 +107,14 @@ const SpriteLab2View: React.FunctionComponent<{
   const {currentSources, updateSources} = useSources<SpriteLab2Source>();
 
   const activeTab = useAppSelector(state => state.spriteLab2.activeTab);
+  // Latches true on the first Images visit; the tab stays mounted (clipped)
+  // afterwards so revisits don't pay the gallery/editor mount cost.
+  const [imagesVisited, setImagesVisited] = useState(false);
+  useEffect(() => {
+    if (activeTab === 'Images') {
+      setImagesVisited(true);
+    }
+  }, [activeTab]);
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const scriptId = useAppSelector(state => state.progress.scriptId);
@@ -740,8 +748,18 @@ const SpriteLab2View: React.FunctionComponent<{
         )}
       </div>
 
-      {activeTab === 'Images' && (
-        <div className={classNames(moduleStyles.codeTabWrapper)}>
+      {/* Keep the Images tab mounted after its first visit (same clip-path
+          trick as the Code tab): remounting the gallery + editor on every
+          switch is expensive enough to eat the guide's height-transition
+          frames, and it loses scroll position. */}
+      {imagesVisited && (
+        <div
+          className={classNames(moduleStyles.codeTabWrapper)}
+          style={{
+            clipPath: activeTab === 'Images' ? 'none' : 'inset(100%)',
+            pointerEvents: activeTab === 'Images' ? 'auto' : 'none',
+          }}
+        >
           <ItemsTab />
         </div>
       )}
