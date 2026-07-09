@@ -237,9 +237,24 @@ $tab-segment-height: $tab-item-height - 2px;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
   width: 80px;
   height: 80px;
+  // It's a button now (click to edit); neutralize global button styles.
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+  cursor: pointer;
   border: 1px solid var(--borders-neutral-primary);
+  // Hover: grow subtly (like Music Lab's album covers) instead of the
+  // global button > img dim-until-hover treatment.
+  transition: transform 0.15s ease;
+
+  &:hover {
+    z-index: 1;
+    transform: scale(1.12);
+  }
   // Subtle checkerboard: enough to signal transparency without competing
   // with the sprite (translucent grey works on light and dark themes).
   $check: rgb(128 128 128 / 16%);
@@ -254,6 +269,9 @@ $tab-segment-height: $tab-item-height - 2px;
   img {
     max-width: 100%;
     max-height: 100%;
+    // Full quality always: undo the global `button > img` dimming (class +
+    // element outranks the global's two elements).
+    opacity: 1;
   }
 }
 

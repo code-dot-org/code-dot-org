@@ -1,0 +1,204 @@
+// Self-contained styles for the pixel editor modal. Dark theme to sit
+// comfortably over Lab2's full-screen labs.
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0 0 0 / 55%);
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100vh - 32px);
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 10px;
+  background-color: #333a47;
+  box-shadow: 0 12px 40px rgb(0 0 0 / 45%);
+  color: #f0f2f6;
+}
+
+.header {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgb(255 255 255 / 12%);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.body {
+  display: flex;
+  gap: 12px;
+  min-height: 0;
+  padding: 12px;
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+}
+
+.toolButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 34px;
+  height: 34px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: none;
+  color: #cdd3de;
+  cursor: pointer;
+
+  svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+  }
+
+  &:hover {
+    background-color: rgb(255 255 255 / 8%);
+  }
+}
+
+.toolActive {
+  border-color: rgb(255 255 255 / 35%);
+  background-color: rgb(255 255 255 / 14%);
+  color: #fff;
+}
+
+.toolbarDivider {
+  width: 22px;
+  height: 1px;
+  margin: 4px 0;
+  background-color: rgb(255 255 255 / 15%);
+}
+
+.brushDot {
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+.canvasArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 6px;
+  // Checkerboard under transparency, matching the lab's soft look.
+  background-color: #fff;
+  background-image: linear-gradient(
+      45deg,
+      rgb(128 128 128 / 16%) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgb(128 128 128 / 16%) 75%
+    ),
+    linear-gradient(
+      45deg,
+      rgb(128 128 128 / 16%) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgb(128 128 128 / 16%) 75%
+    );
+  background-position: 0 0, 8px 8px;
+  background-size: 16px 16px;
+}
+
+.displayCanvas {
+  display: block;
+  image-rendering: pixelated;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+.loadError {
+  padding: 40px;
+  color: #ff9d9d;
+}
+
+.footer {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  padding: 12px 16px;
+  border-top: 1px solid rgb(255 255 255 / 12%);
+
+  button {
+    box-sizing: border-box;
+    height: 34px;
+    margin: 0;
+    padding: 0 18px;
+    border: 1px solid rgb(255 255 255 / 25%);
+    border-radius: 6px;
+    background: none;
+    box-shadow: none;
+    color: #f0f2f6;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover:not(:disabled) {
+      background-color: rgb(255 255 255 / 8%);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+  }
+}
+
+.savePrimary {
+  border-color: transparent;
+  background-color: rgb(255 255 255 / 92%) !important;
+  color: #1b2029 !important;
+  font-weight: 600;
+
+  &:hover:not(:disabled) {
+    background-color: #fff !important;
+  }
+}
+
+.colorPicker {
+  position: relative;
+}
+
+.swatch {
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  border: 2px solid rgb(255 255 255 / 60%);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.spectrumPopover {
+  position: absolute;
+  bottom: 0;
+  left: 40px;
+  z-index: 10;
+  padding: 6px;
+  border: 1px solid rgb(255 255 255 / 15%);
+  border-radius: 8px;
+  background-color: #262c36;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 45%);
+
+  canvas {
+    display: block;
+    border-radius: 4px;
+    cursor: crosshair;
+    touch-action: none;
+  }
+}

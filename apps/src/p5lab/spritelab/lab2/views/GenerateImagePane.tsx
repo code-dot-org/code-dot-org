@@ -6,7 +6,10 @@ import {AnyAction} from 'redux';
 import {
   addAnimation,
   deleteAnimation,
+  SET_INITIAL_ANIMATION_LIST,
 } from '@cdo/apps/p5lab/redux/animationList';
+import PixelEditorModal from '@cdo/apps/pixelEditor/PixelEditorModal';
+import {getStore} from '@cdo/apps/redux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
@@ -16,7 +19,11 @@ import {
   SpriteLab2ItemType,
   uploadAssetToProject,
 } from '../ai/items/itemGeneration';
-import {getTrimmedThumbnail, onTrimsUpdated} from '../imageTrim';
+import {
+  getTrimmedThumbnail,
+  onTrimsUpdated,
+  trimAnimationListImages,
+} from '../imageTrim';
 import {BACKGROUNDS_CATEGORY} from '../types';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
@@ -132,6 +139,69 @@ const GenerateImagePane: React.FunctionComponent = () => {
     [dispatch]
   );
 
+  // Pixel editor: clicking a gallery image opens it in the modal; Save
+  // uploads the edited PNG as a fresh project asset (new filename, so
+  // nothing caches the old pixels) and points the animation at it. Without
+  // a channel the dataURI itself is stored as the source, which persists in
+  // project sources.
+  const [editingKey, setEditingKey] = useState<string | null>(null);
+  const editingProps = editingKey
+    ? images.find(i => i.key === editingKey)?.props
+    : undefined;
+
+  const handleEditorSave = useCallback(
+    async (dataURI: string) => {
+      const key = editingKey;
+      const props = editingProps;
+      setEditingKey(null);
+      if (!key || !props) {
+        return;
+      }
+      let sourceUrl = dataURI;
+      if (channelId) {
+        try {
+          const base64 = dataURI.split(',')[1];
+          const bytes = Uint8Array.from(atob(base64), c => c.charCodeAt(0));
+          const safeName = (props.name || 'image')
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, '_');
+          sourceUrl = await uploadAssetToProject(
+            channelId,
+            `${safeName}_${Date.now()}.png`,
+            bytes,
+            'image/png'
+          );
+        } catch {
+          // Fall back to embedding the dataURI as the source.
+        }
+      }
+      // Update via the raw list-replace action rather than editAnimation:
+      // the classic EDIT_ANIMATION reducer forces sourceUrl to null (it
+      // expects the legacy animation-save service to upload later), which
+      // would strand the edit in memory — Lab2 sources persist sourceUrl,
+      // not dataURI.
+      const current = getStore().getState().animationList;
+      const updated = {
+        orderedKeys: current.orderedKeys,
+        propsByKey: {
+          ...current.propsByKey,
+          [key]: {
+            ...current.propsByKey[key],
+            sourceUrl,
+            dataURI,
+            loadedFromSource: true,
+            saved: false,
+          },
+        },
+      };
+      dispatch({type: SET_INITIAL_ANIMATION_LIST, animationList: updated});
+      // Recompute this image's trimmed thumbnail (cached by source; fires
+      // onTrimsUpdated, refreshing the gallery and block dropdowns).
+      trimAnimationListImages(updated);
+    },
+    [editingKey, editingProps, channelId, dispatch]
+  );
+
   const generating = status === 'generating';
 
   return (
@@ -209,7 +279,12 @@ const GenerateImagePane: React.FunctionComponent = () => {
         )}
         {images.map(({key, props}) => (
           <div key={key} className={moduleStyles.imageCard}>
-            <div className={moduleStyles.imageThumb}>
+            <button
+              type="button"
+              className={moduleStyles.imageThumb}
+              title={`Edit ${props?.name || 'image'}`}
+              onClick={() => setEditingKey(key)}
+            >
               {(props?.dataURI || props?.sourceUrl) && (
                 <img
                   src={
@@ -220,7 +295,7 @@ const GenerateImagePane: React.FunctionComponent = () => {
                   alt={props?.name || 'image'}
                 />
               )}
-            </div>
+            </button>
             <div className={moduleStyles.imageName} title={props?.name}>
               {props?.name}
             </div>
@@ -230,6 +305,17 @@ const GenerateImagePane: React.FunctionComponent = () => {
           </div>
         ))}
       </div>
+
+      {editingProps && (
+        <PixelEditorModal
+          title={`Edit ${editingProps.name}`}
+          // Edit the ORIGINAL image (untrimmed): trims are a display-time
+          // optimization; the animation's pixels are the source of truth.
+          imageUrl={editingProps.dataURI || editingProps.sourceUrl || ''}
+          onSave={handleEditorSave}
+          onCancel={() => setEditingKey(null)}
+        />
+      )}
     </div>
   );
 };
