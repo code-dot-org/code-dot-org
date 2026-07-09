@@ -14,6 +14,7 @@ import {getStore} from '@cdo/apps/redux';
 
 import {SCENES_UI_VARIANT} from '../experiments';
 import {getTrimmedThumbnail} from '../imageTrim';
+import {setActiveTab} from '../redux/spriteLab2Redux';
 import {BACKGROUNDS_CATEGORY} from '../types';
 
 import sceneBlockDefinitions from './blockDefinitions';
@@ -128,50 +129,90 @@ export function compileWorkspaceSource(
   }
 }
 
-// The classic costumeList (spritelab/blocks.js) with border-trimmed
-// thumbnails, so content fills the field instead of floating in transparent
-// margins.
-function trimmedCostumeList(): [string, string][] {
+// Shown when the project has no matching images yet: an intentional
+// "add an image" tile instead of the classic broken-thumbnail fallback
+// (Blockly dropdowns cannot have zero options). The 'null' value generates
+// the same no-op code as that fallback.
+const EMPTY_IMAGE_OPTION: [string, string][] = [
+  [
+    'data:image/svg+xml,' +
+      encodeURIComponent(
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">' +
+          '<rect x="4" y="6" width="32" height="28" rx="3" fill="none"' +
+          ' stroke="#a0a6b2" stroke-width="2" stroke-dasharray="4 3"/>' +
+          '<path d="M20 14v12M14 20h12" stroke="#a0a6b2" stroke-width="2"' +
+          ' stroke-linecap="round"/>' +
+          '</svg>'
+      ),
+    'null',
+  ],
+];
+
+// One button below the image grid: jump to the Images tab, where images are
+// made. Doubles as the empty state's affordance.
+const MAKE_IMAGE_BUTTONS = [
+  {
+    text: 'Make an image',
+    action: () => getStore().dispatch(setActiveTab('Images')),
+  },
+];
+
+// Thumbnail options for one kind of animation. Costumes prefer the
+// border-trimmed image (see imageTrim.ts) so the sprite's content fills the
+// field instead of floating in its transparent margins. Mirrors the classic
+// costumeList/backgroundList in spritelab/blocks.js otherwise.
+function animationOptions(backgrounds: boolean): [string, string][] {
   const state = getStore().getState();
   const animationList = state.animationList;
-  if (!animationList || animationList.orderedKeys.length === 0) {
-    return [['sprites missing', 'null']];
+  if (!animationList) {
+    return EMPTY_IMAGE_OPTION;
   }
   const results: [string, string][] = [];
   animationList.orderedKeys.forEach((key: string) => {
     const animation = animationList.propsByKey[key];
-    if ((animation.categories || []).includes(BACKGROUNDS_CATEGORY)) {
+    if (
+      (animation.categories || []).includes(BACKGROUNDS_CATEGORY) !==
+      backgrounds
+    ) {
       return;
     }
     const url =
-      getTrimmedThumbnail(animation.name) ||
+      (backgrounds ? undefined : getTrimmedThumbnail(animation.name)) ||
       animation.sourceUrl ||
       animationSourceUrl(key, animation, state.pageConstants?.channelId);
     results.push([url, `"${animation.name}"`]);
   });
-  return results.length ? results : [['sprites missing', 'null']];
+  return results.length ? results : EMPTY_IMAGE_OPTION;
 }
 
-// The classic costumePicker input type, minus the animation-mode buttons
-// (no AnimationTab here), with trimmed thumbnails.
-const trimmedCostumePicker = {
-  addInput(
-    blockly: unknown,
-    block: BlocklyCore.Block,
-    inputConfig: {name: string; label: string},
-    currentInputRow: BlocklyCore.Input
-  ) {
-    currentInputRow
-      .appendField(inputConfig.label)
-      .appendField(
-        new CdoFieldAnimationDropdown(trimmedCostumeList, 32, 32, undefined),
-        inputConfig.name
-      );
-  },
-  generateCode(block: BlocklyCore.Block, arg: {name: string}) {
-    return block.getFieldValue(arg.name);
-  },
-};
+// The classic costumePicker/backgroundPicker input types, with lab2's empty
+// state and Images-tab button. (The classic animation-mode buttons don't
+// apply here — this lab has no AnimationTab.)
+function animationPicker(backgrounds: boolean, thumbnailSize: number) {
+  return {
+    addInput(
+      blockly: unknown,
+      block: BlocklyCore.Block,
+      inputConfig: {name: string; label: string},
+      currentInputRow: BlocklyCore.Input
+    ) {
+      currentInputRow
+        .appendField(inputConfig.label)
+        .appendField(
+          new CdoFieldAnimationDropdown(
+            () => animationOptions(backgrounds),
+            thumbnailSize,
+            thumbnailSize,
+            MAKE_IMAGE_BUTTONS
+          ),
+          inputConfig.name
+        );
+    },
+    generateCode(block: BlocklyCore.Block, arg: {name: string}) {
+      return block.getFieldValue(arg.name);
+    },
+  };
+}
 
 /**
  * Refresh every costume dropdown's thumbnail, so blocks rendered before an
@@ -208,8 +249,11 @@ export function installSharedBlocks(sharedBlocks: BlockDefinition[]): {
     ],
     customInputTypes: {
       ...(spritelabBlocks.customInputTypes as unknown as CustomInputTypes),
-      // Trim-aware costume thumbnails (backgrounds stay untrimmed).
-      costumePicker: trimmedCostumePicker,
+      // Lab2 pickers: trim-aware costume thumbnails (backgrounds stay
+      // untrimmed, at the classic 40px), an intentional empty state, and a
+      // button to the Images tab. Sizes match classic blocks.js.
+      costumePicker: animationPicker(false, 32),
+      backgroundPicker: animationPicker(true, 40),
     } as unknown as CustomInputTypes,
   });
 }
