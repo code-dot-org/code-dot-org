@@ -115,6 +115,8 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   // editor then works at the LOGICAL resolution — one edited pixel is one art
   // pixel — and save re-upscales nearest-neighbor for crisp storage.
   const [pixelMode, setPixelMode] = useState(false);
+  // Mirror for the stable repaint callback (which runs on every stroke).
+  const pixelModeRef = useRef(false);
 
   const displayRef = useRef<HTMLCanvasElement | null>(null);
   // Backing canvas at native image resolution: the single source of truth.
@@ -126,7 +128,11 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   const lastPointRef = useRef<{x: number; y: number} | null>(null);
   const circleCenterRef = useRef<{x: number; y: number} | null>(null);
 
-  // Composite backing (+ preview while dragging a circle) to the display.
+  // Composite the transparency checkerboard, the backing, and (while
+  // dragging a circle) the preview to the display. The checker lives in the
+  // canvas so it aligns with the image: in pixel mode one checker cell is one
+  // art pixel (grouped to stay legible at tiny zooms), matching how dedicated
+  // pixel editors show transparency.
   const repaint = useCallback(() => {
     const display = displayRef.current;
     const backing = backingRef.current;
@@ -138,7 +144,18 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       return;
     }
     ctx.imageSmoothingEnabled = false;
-    ctx.clearRect(0, 0, display.width, display.height);
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, display.width, display.height);
+    const scale = scaleRef.current;
+    const cell = pixelModeRef.current
+      ? scale * Math.max(1, Math.ceil(4 / scale))
+      : 16;
+    ctx.fillStyle = 'rgb(128 128 128 / 16%)';
+    for (let y = 0; y * cell < display.height; y++) {
+      for (let x = y % 2; x * cell < display.width; x += 2) {
+        ctx.fillRect(x * cell, y * cell, cell, cell);
+      }
+    }
     ctx.drawImage(backing, 0, 0, display.width, display.height);
     if (previewRef.current) {
       ctx.drawImage(previewRef.current, 0, 0, display.width, display.height);
@@ -176,8 +193,10 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
             0
           );
         setPixelMode(true);
+        pixelModeRef.current = true;
       } else {
         setPixelMode(false);
+        pixelModeRef.current = false;
       }
       backingRef.current = backing;
       const preview = document.createElement('canvas');

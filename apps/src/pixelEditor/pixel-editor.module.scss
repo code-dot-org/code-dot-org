@@ -117,24 +117,9 @@
   overflow: hidden;
   border: 1px solid rgb(255 255 255 / 12%);
   border-radius: 6px;
-  // Checkerboard under transparency, matching the lab's soft look.
-  background-color: #fff;
-  background-image: linear-gradient(
-      45deg,
-      rgb(128 128 128 / 16%) 25%,
-      transparent 25%,
-      transparent 75%,
-      rgb(128 128 128 / 16%) 75%
-    ),
-    linear-gradient(
-      45deg,
-      rgb(128 128 128 / 16%) 25%,
-      transparent 25%,
-      transparent 75%,
-      rgb(128 128 128 / 16%) 75%
-    );
-  background-position: 0 0, 8px 8px;
-  background-size: 16px 16px;
+  // The transparency checkerboard is painted INTO the display canvas (so it
+  // can align with the art-pixel grid); the surround stays quiet.
+  background-color: #2b313d;
 }
 
 .displayCanvas {
