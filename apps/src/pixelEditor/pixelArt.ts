@@ -32,17 +32,24 @@ const EDGE_TOLERANCE = 1;
 // edge. High enough to ignore compression noise, low enough for palette art.
 const EDGE_THRESHOLD = 90;
 
+// Detection doesn't need every scanline: block edges span the whole image,
+// so sampling every 4th line keeps the histogram's shape at a quarter of the
+// work. Never sample fewer than 32 lines (tiny images just scan them all).
+const SCANLINE_STRIDE = 4;
+
 /**
  * Histogram of color-edge positions along one axis: result[i] counts how many
- * lines have a strong color change between position i-1 and i. Written as two
- * specialized allocation-free loops — this runs over every pixel of
- * megapixel images, on the path between click and modal.
+ * sampled lines have a strong color change between position i-1 and i.
+ * Written as two specialized allocation-free loops — this runs over megapixel
+ * images on the path between click and modal.
  */
 function edgeHistogram(raster: Raster, axis: 'x' | 'y'): number[] {
   const {width, height, data} = raster;
   const hist = new Array(axis === 'x' ? width : height).fill(0);
+  const cross = axis === 'x' ? height : width;
+  const step = cross >= 32 * SCANLINE_STRIDE ? SCANLINE_STRIDE : 1;
   if (axis === 'x') {
-    for (let y = 0; y < height; y++) {
+    for (let y = 0; y < height; y += step) {
       let j = y * width * 4;
       for (let x = 1; x < width; x++) {
         const i = j + 4;
@@ -59,7 +66,7 @@ function edgeHistogram(raster: Raster, axis: 'x' | 'y'): number[] {
     }
   } else {
     const stride = width * 4;
-    for (let x = 0; x < width; x++) {
+    for (let x = 0; x < width; x += step) {
       let j = x * 4;
       for (let y = 1; y < height; y++) {
         const i = j + stride;

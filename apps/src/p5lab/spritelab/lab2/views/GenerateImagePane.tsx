@@ -28,6 +28,44 @@ import {BACKGROUNDS_CATEGORY} from '../types';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
+interface GalleryCardProps {
+  animKey: string;
+  name?: string;
+  thumb?: string;
+  onEdit: (key: string) => void;
+  onDelete: (key: string) => void;
+}
+
+// Memoized: opening/closing the editor modal re-renders the pane, and
+// without this every card (thumbnail img and all) re-renders with it —
+// most of dev-mode's click-to-modal latency. The thumb string is computed
+// by the parent so trim updates still flow through as a changed prop.
+const GalleryCard = React.memo<GalleryCardProps>(
+  ({animKey, name, thumb, onEdit, onDelete}) => (
+    <div className={moduleStyles.imageCard}>
+      <button
+        type="button"
+        className={moduleStyles.imageThumb}
+        title={`Edit ${name || 'image'}`}
+        onClick={() => onEdit(animKey)}
+      >
+        {thumb && <img src={thumb} alt={name || 'image'} />}
+      </button>
+      <div className={moduleStyles.imageName} title={name}>
+        {name}
+      </div>
+      <button
+        type="button"
+        className={moduleStyles.deleteButton}
+        onClick={() => onDelete(animKey)}
+      >
+        Delete
+      </button>
+    </div>
+  )
+);
+GalleryCard.displayName = 'GalleryCard';
+
 // Read an image's pixel dimensions so the animation's frameSize matches the
 // generated PNG (single frame).
 function getImageSize(
@@ -148,6 +186,7 @@ const GenerateImagePane: React.FunctionComponent = () => {
   const editingProps = editingKey
     ? images.find(i => i.key === editingKey)?.props
     : undefined;
+  const handleEdit = useCallback((key: string) => setEditingKey(key), []);
 
   const handleEditorSave = useCallback(
     async (dataURI: string) => {
@@ -294,35 +333,19 @@ const GenerateImagePane: React.FunctionComponent = () => {
           </div>
         )}
         {images.map(({key, props}) => (
-          <div key={key} className={moduleStyles.imageCard}>
-            <button
-              type="button"
-              className={moduleStyles.imageThumb}
-              title={`Edit ${props?.name || 'image'}`}
-              onClick={() => setEditingKey(key)}
-            >
-              {(props?.dataURI || props?.sourceUrl) && (
-                <img
-                  src={
-                    getTrimmedThumbnail(props?.name) ||
-                    props.dataURI ||
-                    props.sourceUrl
-                  }
-                  alt={props?.name || 'image'}
-                />
-              )}
-            </button>
-            <div className={moduleStyles.imageName} title={props?.name}>
-              {props?.name}
-            </div>
-            <button
-              type="button"
-              className={moduleStyles.deleteButton}
-              onClick={() => handleDelete(key)}
-            >
-              Delete
-            </button>
-          </div>
+          <GalleryCard
+            key={key}
+            animKey={key}
+            name={props?.name}
+            thumb={
+              getTrimmedThumbnail(props?.name) ||
+              props?.dataURI ||
+              props?.sourceUrl ||
+              undefined
+            }
+            onEdit={handleEdit}
+            onDelete={handleDelete}
+          />
         ))}
       </div>
 
