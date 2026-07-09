@@ -68,6 +68,7 @@ class DCDOBase < DynamicConfigBase
       'sketchlab-s3-image-storage': DCDO.get('sketchlab-s3-image-storage', true),
       'brand-router-enabled': DCDO.get('brand-router-enabled', false),
       'ai-gateway-enabled': DCDO.get('ai-gateway-enabled', true),
+      'aichat-output-image-safety-enabled': DCDO.get('aichat-output-image-safety-enabled', true),
       'frontend-observability-enabled': DCDO.get('frontend-observability-enabled', false),
       'browser-events-enabled': DCDO.get('browser-events-enabled', true),
       'onboarding-enabled': DCDO.get('onboarding-enabled', false),

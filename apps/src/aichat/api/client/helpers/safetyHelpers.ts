@@ -2,6 +2,7 @@ import {type GeneratedFile, type ModelMessage, Output} from 'ai';
 import z from 'zod/v3';
 
 import {generateText} from '@cdo/apps/aiGateway';
+import DCDO from '@cdo/apps/dcdo';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {moderateImage} from '@cdo/apps/util/moderateImage';
@@ -37,6 +38,9 @@ const DEFAULT_IMAGE_SAFETY_CONFIG: SafetyConfig = {
   safetySystemPrompt:
     'You are a content filter trying to keep a school teacher out of trouble. Determine if the image is inappropriate for an American public middle school classroom. Examples of inappropriate content: profanity or explicit text, illegal behavior, insults, bullying, slurs, racism, sexism, hate symbols, sex, nudity, sexualized content, violence, gore, threats, weapons, dirty slang, drug use, alcohol use, tobacco or vaping, self-harm, other content that would be unsafe or disruptive in class\nIf the image is inappropriate, respond with the single word `INAPPROPRIATE`, otherwise respond with the single word `OK`.',
 };
+
+const OUTPUT_IMAGE_SAFETY_ENABLED_DCDO_KEY =
+  'aichat-output-image-safety-enabled';
 
 function validateSafetyClassification(classification?: string): void {
   if (classification !== 'OK' && classification !== 'INAPPROPRIATE') {
@@ -74,6 +78,10 @@ export async function isImageSafe(
   file: GeneratedFile,
   customSafetyConfig?: Partial<SafetyConfig>
 ): Promise<boolean> {
+  if (DCDO.get(OUTPUT_IMAGE_SAFETY_ENABLED_DCDO_KEY, true) === false) {
+    return true;
+  }
+
   const safetyConfig = {
     ...DEFAULT_IMAGE_SAFETY_CONFIG,
     ...customSafetyConfig,

@@ -5,14 +5,23 @@ import {
   isTextSafe,
 } from '@cdo/apps/aichat/api/client/helpers/safetyHelpers';
 import {generateText} from '@cdo/apps/aiGateway';
+import DCDO from '@cdo/apps/dcdo';
 
 jest.mock('@cdo/apps/aiGateway', () => ({
   generateText: jest.fn(),
 }));
 
+jest.mock('@cdo/apps/dcdo', () => ({
+  __esModule: true,
+  default: {
+    get: jest.fn(),
+  },
+}));
+
 const mockGenerateText = generateText as jest.MockedFunction<
   typeof generateText
 >;
+const mockDCDOGet = DCDO.get as jest.MockedFunction<typeof DCDO.get>;
 
 function mockClassification(classification: string | undefined) {
   mockGenerateText.mockResolvedValue({
@@ -23,6 +32,7 @@ function mockClassification(classification: string | undefined) {
 describe('safetyHelpers', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    mockDCDOGet.mockReturnValue(true);
   });
 
   describe('isTextSafe', () => {
@@ -99,6 +109,18 @@ describe('safetyHelpers', () => {
       mockClassification('INAPPROPRIATE');
 
       await expect(isImageSafe(file)).resolves.toBe(false);
+    });
+
+    it('returns true without calling the gateway when disabled by DCDO', async () => {
+      mockDCDOGet.mockReturnValue(false);
+
+      await expect(isImageSafe(file)).resolves.toBe(true);
+
+      expect(mockDCDOGet).toHaveBeenCalledWith(
+        'aichat-output-image-safety-enabled',
+        true
+      );
+      expect(mockGenerateText).not.toHaveBeenCalled();
     });
   });
 });
