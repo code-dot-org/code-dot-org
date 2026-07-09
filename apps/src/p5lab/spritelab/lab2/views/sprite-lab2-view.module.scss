@@ -452,12 +452,9 @@ $tab-segment-height: $tab-item-height - 2px;
   height: 400px;
   transform-origin: 0 0;
   background: var(--background-neutral-secondary);
-  // A hairline seam so a white game canvas reads against a white page in
-  // light mode. A shadow, not a border: the 400x400 box geometry that the
-  // transform and pointer math rely on stays untouched.
-  box-shadow: 0 0 0 1px var(--borders-neutral-primary);
-  // Transitions are set inline: transform only animates between the two
-  // visible placements; opacity fades the box in on appearance.
+  // Transitions, and the preview-only hairline seam, are set inline:
+  // transform only animates between the two visible placements; opacity
+  // fades the box in on appearance.
 }
 
 .playspaceCanvas {
