@@ -1,9 +1,9 @@
-Feature: Hour of Code progress is saved on client side when puzzles are solved and shows up in the bubbles on the header
+Feature: Progress is saved on client side when puzzles are solved and shows up in the bubbles on the header
 
 Background:
   Given I am on "http://studio.code.org/courses/ui-test-csf/units/1/reset"
 
-Scenario: Solving puzzle 4, proceeding to puzzle 5, verifying that puzzle 4 appears as solved
+Scenario: Solving a puzzle marks it perfect in the header and unit overview, and reset clears the saved progress and code
   Given I am on "http://studio.code.org/courses/ui-test-csf/units/1/lessons/1/levels/4?noautoplay=true"
   And I wait for the lab page to fully load
   And I've initialized the workspace with two move forward blocks
@@ -35,7 +35,7 @@ Scenario: Solving puzzle 4, proceeding to puzzle 5, verifying that puzzle 4 appe
   And I wait for the lab page to fully load
   And element "g[data-id=\'startBlock\'] g[data-id=\'moveForward\']" does not exist
 
-Scenario: Failing at puzzle 4, refreshing puzzle 4, bubble should show up as attempted
+Scenario: Failing a puzzle and reloading marks it attempted in the header and unit overview
   Given I am on "http://studio.code.org/courses/ui-test-csf/units/1/lessons/1/levels/4?noautoplay=true"
   And I wait for the lab page to fully load
   And I press "runButton"
@@ -47,7 +47,7 @@ Scenario: Failing at puzzle 4, refreshing puzzle 4, bubble should show up as att
   And I verify progress for lesson 1 level 4 is "attempted"
 
 @no_mobile
-Scenario: Go to puzzle 6, see video, go somewhere else, return to puzzle 6, should not see video, comes back on link
+Scenario: Video modal is shown once and does not reappear when returning to the puzzle
   Given I am on "http://studio.code.org/courses/ui-test-csf/units/1/lessons/1/levels/6?noautoplay=true"
   Then I wait until element ".video-modal" is visible
   Then I close the dialog
@@ -59,7 +59,7 @@ Scenario: Go to puzzle 6, see video, go somewhere else, return to puzzle 6, shou
   And I wait for the lab page to fully load
   Then I click selector ".reference_area a:last"
 
-Scenario: Go to puzzle 7, see callouts, go somewhere else, return to puzzle 7, should not see callouts
+Scenario: Callout is shown once and does not reappear when returning to the puzzle
   Given I am on "http://studio.code.org/courses/ui-test-csf/units/1/lessons/1/levels/7?noautoplay=true"
   And I wait for the lab page to fully load
   Then element ".qtip-content:contains('Blocks that are grey')" is visible

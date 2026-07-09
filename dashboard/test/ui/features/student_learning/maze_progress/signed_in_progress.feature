@@ -1,7 +1,7 @@
 @as_student
-Feature: Hour of Code tests for users that are signed in
+Feature: Progress tests for users that are signed in
 
-Scenario:
+Scenario: Solving a puzzle marks it perfect in the header and unit overview, and level source persists across a client-side reset
   Given I am on "http://studio.code.org/courses/ui-test-csf/units/1/lessons/1/levels/4?noautoplay=true"
   And I wait for the lab page to fully load
   And I've initialized the workspace with two move forward blocks
@@ -28,7 +28,7 @@ Scenario:
   And I wait for the lab page to fully load
   And block "moveForward" is child of block "startBlock"
 
-Scenario: Failing at puzzle 5, refreshing puzzle 5, bubble should show up as attempted
+Scenario: Failing a puzzle and reloading marks it attempted in the header
   Given I am on "http://studio.code.org/courses/ui-test-csf/units/1/lessons/1/levels/5?noautoplay=true"
   And I wait for the lab page to fully load
   And I press "runButton"
@@ -49,7 +49,7 @@ Scenario: Progress on the server that is not on the client
   And I verify progress for lesson 1 level 5 is "attempted"
 
 @no_mobile
-Scenario: Go to puzzle 6, see video, go somewhere else, return to puzzle 6, should not see video
+Scenario: Video modal is shown once and does not reappear when returning to the puzzle
   Given I am on "http://studio.code.org/courses/ui-test-csf/units/1/lessons/1/levels/6"
   And I wait for the lab page to fully load
   Then I wait until element ".video-modal" is visible
@@ -57,7 +57,7 @@ Scenario: Go to puzzle 6, see video, go somewhere else, return to puzzle 6, shou
   Then I am on "http://studio.code.org/courses/ui-test-csf/units/1/lessons/1/levels/7"
   Then I am on "http://studio.code.org/courses/ui-test-csf/units/1/lessons/1/levels/6"
 
-Scenario: Go to puzzle 7, see callouts, go somewhere else, return to puzzle 7, should not see callouts
+Scenario: Callout is shown once and does not reappear when returning to the puzzle
   Given I am on "http://studio.code.org/courses/ui-test-csf/units/1/lessons/1/levels/7?noautoplay=true"
   And I wait for the lab page to fully load
   Then element ".qtip-content:contains('Blocks that are grey')" is visible
