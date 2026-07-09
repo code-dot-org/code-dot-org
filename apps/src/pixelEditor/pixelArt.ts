@@ -276,7 +276,9 @@ export async function normalizePixelArtBlob(
   const canvas = document.createElement('canvas');
   canvas.width = bitmap.width;
   canvas.height = bitmap.height;
-  canvas.getContext('2d')?.drawImage(bitmap, 0, 0);
+  // willReadFrequently keeps the canvas CPU-side: we immediately read every
+  // pixel back, and readback from a GPU-backed canvas stalls.
+  canvas.getContext('2d', {willReadFrequently: true})?.drawImage(bitmap, 0, 0);
   bitmap.close();
   const raster = rasterFromCanvas(canvas);
   const grid = detectPixelGrid(raster);

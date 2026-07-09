@@ -181,16 +181,28 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   // Load the image into the backing canvas and size the display. Images that
   // depict pixel art (a detectable block grid — AI pixel-art output, or our
   // own normalized assets) are edited at their LOGICAL resolution.
+  //
+  // Decode via fetch + createImageBitmap (native async decode, off the main
+  // thread; also skips base64 string handling for dataURIs), falling back to
+  // an Image element if either is unavailable. All canvases whose pixels we
+  // read back get willReadFrequently, keeping them CPU-side — reading a
+  // GPU-backed canvas stalls on readback.
   useEffect(() => {
-    const img = new Image();
-    img.crossOrigin = 'anonymous';
-    img.onload = () => {
+    let cancelled = false;
+    const finish = (
+      source: CanvasImageSource,
+      width: number,
+      height: number
+    ) => {
+      if (cancelled) {
+        return;
+      }
       let backing = document.createElement('canvas');
-      backing.width = img.naturalWidth;
-      backing.height = img.naturalHeight;
-      backing.getContext('2d')?.drawImage(img, 0, 0);
-      const ctx = backing.getContext('2d');
-      const raster = ctx?.getImageData(0, 0, backing.width, backing.height);
+      backing.width = width;
+      backing.height = height;
+      const ctx = backing.getContext('2d', {willReadFrequently: true});
+      ctx?.drawImage(source, 0, 0);
+      const raster = ctx?.getImageData(0, 0, width, height);
       const grid = raster ? detectPixelGrid(raster) : null;
       if (raster && grid && (grid.sizeX > 1 || grid.sizeY > 1)) {
         const logical = downsampleToGrid(raster, grid);
@@ -198,7 +210,7 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
         backing.width = logical.width;
         backing.height = logical.height;
         backing
-          .getContext('2d')
+          .getContext('2d', {willReadFrequently: true})
           ?.putImageData(
             new ImageData(
               new Uint8ClampedArray(logical.data),
@@ -218,6 +230,8 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       const preview = document.createElement('canvas');
       preview.width = backing.width;
       preview.height = backing.height;
+      // The circle preview is also read back per pointer-move.
+      preview.getContext('2d', {willReadFrequently: true});
       previewRef.current = preview;
       scaleRef.current = Math.max(
         1,
@@ -225,8 +239,37 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       );
       setLoaded(true);
     };
-    img.onerror = () => setLoadError(true);
-    img.src = imageUrl;
+    const loadViaImage = () => {
+      const img = new Image();
+      img.crossOrigin = 'anonymous';
+      img.onload = () => finish(img, img.naturalWidth, img.naturalHeight);
+      img.onerror = () => {
+        if (!cancelled) {
+          setLoadError(true);
+        }
+      };
+      img.src = imageUrl;
+    };
+    if (typeof createImageBitmap === 'function') {
+      fetch(imageUrl)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`fetch ${response.status}`);
+          }
+          return response.blob();
+        })
+        .then(blob => createImageBitmap(blob))
+        .then(bitmap => {
+          finish(bitmap, bitmap.width, bitmap.height);
+          bitmap.close();
+        })
+        .catch(loadViaImage);
+    } else {
+      loadViaImage();
+    }
+    return () => {
+      cancelled = true;
+    };
   }, [imageUrl]);
 
   // Single-key tool shortcuts (shown in each tool's tooltip). Modifier
