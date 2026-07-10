@@ -1,11 +1,48 @@
 @use '../quiet-button.scss' as buttons;
 
+// The ResourcePanel (full column, or just its sidebar rail under the guide)
+// sits beside the tab shell.
+.labRow {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+
+  .tabShell {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+// Full-panel width when the instructions column shows (no guide), like
+// dance's instructionsArea.
+.instructionsArea {
+  flex: 0;
+  min-width: 25%;
+}
+
+// Between the ResourcePanel and the workspace, like dance.
+.divider {
+  width: 1px;
+  height: 100%;
+  background-color: var(--background-neutral-quaternary);
+}
+
 .tabShell {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
   min-height: 0;
+}
+
+// Tab controls in the PanelContainer header: segmented buttons + the scenes
+// variant's selector.
+.tabControls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  height: 100%;
 }
 
 // One outer height for every tab item — plain tabs and the Code+scene group —
@@ -83,34 +120,9 @@ $tab-segment-height: $tab-item-height - 2px;
   background: var(--background-neutral-primary);
 }
 
+// DSCO dropdown in the header; just bound its width against long scene names.
 .sceneSelect {
-  height: $tab-segment-height;
   max-width: 160px;
-  margin: 0;
-  // Native (appearance: auto) selects paint their own UA box when disabled,
-  // which read as a stray grey pill. Take over rendering entirely: no
-  // appearance, our own chevron, and disabled = the same content dimmed.
-  appearance: none;
-  padding: 0 26px 0 10px;
-  border: none;
-  border-left: 1px solid var(--borders-neutral-primary);
-  border-radius: 0 4px 0 0;
-  background: transparent
-    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' fill='none' stroke='%23888' stroke-width='1.5'/></svg>")
-    no-repeat right 9px center;
-  color: var(--text-neutral-primary);
-  // Match the tab buttons.
-  font-size: 14px;
-  cursor: pointer;
-
-  &:disabled {
-    opacity: 0.4;
-    // Disabled controls swallow clicks entirely; let them fall through so
-    // clicking the dropdown area activates the Code tab (see tabGroup).
-    pointer-events: none;
-    // Chrome re-applies a UA background-color on :disabled; keep ours.
-    background-color: transparent;
-  }
 }
 
 .tabContent {

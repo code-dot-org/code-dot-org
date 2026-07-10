@@ -1,6 +1,7 @@
-import classNames from 'classnames';
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import React from 'react';
 
+import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {
   SPRITE_LAB2_TABS,
   SpriteLab2Tab,
@@ -16,17 +17,17 @@ interface TabShellProps {
   // Tabs to show at all. Defaults to every tab; the scenes UI variant drops
   // World entirely rather than disabling it.
   visibleTabs?: readonly SpriteLab2Tab[];
-  // Rendered in the tab bar immediately after the Code button (the scenes
+  // Rendered in the header immediately after the tab buttons (the scenes
   // variant puts the scene selector there).
   codeTabExtra?: React.ReactNode;
   children: React.ReactNode;
 }
 
 /**
- * The full-screen tab chrome for SpriteLab2: a button bar plus the active
- * tab's content. The Code tab is kept mounted by the parent (behind a
- * clip-path) so its Blockly workspace survives tab switches; the bar here only
- * tracks which tab is visible.
+ * The workspace chrome for SpriteLab2: a PanelContainer whose header holds
+ * the tab controls (segmented buttons), so its bar aligns with the
+ * ResourcePanel's. The Code tab is kept mounted by the parent (behind a
+ * clip-path) so its Blockly workspace survives tab switches.
  */
 const TabShell: React.FunctionComponent<TabShellProps> = ({
   activeTab,
@@ -37,55 +38,31 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
   children,
 }) => {
   return (
-    <div className={moduleStyles.tabShell}>
-      <div className={moduleStyles.tabBar} role="tablist">
-        {SPRITE_LAB2_TABS.filter(tab => visibleTabs.includes(tab)).map(tab => {
-          const enabled = enabledTabs.includes(tab);
-          const button = (
-            <button
-              type="button"
-              role="tab"
-              aria-selected={activeTab === tab}
-              disabled={!enabled}
-              className={classNames(
-                moduleStyles.tab,
-                activeTab === tab && moduleStyles.tabActive
-              )}
-              onClick={() => onTabChange(tab)}
-            >
-              {tab}
-            </button>
-          );
-          // The Code tab and its extra (the scene selector) read as one
-          // segmented control: the group carries the active-tab background,
-          // the pieces inside are transparent.
-          if (tab === 'Code' && codeTabExtra) {
-            return (
-              <div
-                key={tab}
-                className={classNames(
-                  moduleStyles.tabGroup,
-                  activeTab === 'Code' && moduleStyles.tabGroupActive
-                )}
-                // The whole group is the Code tab's click target: the scene
-                // selector is disabled (pointer-events: none) on other tabs,
-                // so clicks on it land here and activate the tab.
-                onClick={() => {
-                  if (activeTab !== 'Code' && enabled) {
-                    onTabChange('Code');
-                  }
-                }}
-              >
-                {button}
-                {codeTabExtra}
-              </div>
-            );
-          }
-          return <React.Fragment key={tab}>{button}</React.Fragment>;
-        })}
-      </div>
+    <PanelContainer
+      id="spritelab2-workspace"
+      className={moduleStyles.tabShell}
+      headerContent="Sprite Lab"
+      leftHeaderContent={
+        <div className={moduleStyles.tabControls}>
+          <SegmentedButtons
+            size="xs"
+            buttons={SPRITE_LAB2_TABS.filter(tab =>
+              visibleTabs.includes(tab)
+            ).map(tab => ({
+              label: tab,
+              ariaLabel: tab,
+              value: tab,
+              disabled: !enabledTabs.includes(tab),
+            }))}
+            selectedButtonValue={activeTab}
+            onChange={value => onTabChange(value as SpriteLab2Tab)}
+          />
+          {codeTabExtra}
+        </div>
+      }
+    >
       <div className={moduleStyles.tabContent}>{children}</div>
-    </div>
+    </PanelContainer>
   );
 };
 
