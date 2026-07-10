@@ -476,20 +476,35 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
 
     active_sections = current_user.sections_instructed.where(hidden: false, participant_type: 'student')
 
-    result = active_sections.each_with_object({}) do |section, hash|
+    # Collect lesson IDs up front so we can batch the S3 existence checks,
+    # avoiding one round-trip per section when multiple sections share a lesson.
+    section_data = active_sections.map do |section|
       if section.suggested_lesson_stale? && section.script.present?
         section.compute_suggested_lesson
         section.reload
       end
+      [section.id, section.suggested_lesson]
+    end
 
-      data = section.suggested_lesson
-      if data && (lesson = Lesson.find_by(id: data['lesson_id']))
+    lesson_ids = section_data.filter_map {|_, data| data&.dig('lesson_id')}.uniq
+    lessons_by_id = Lesson.where(id: lesson_ids).index_by(&:id)
+
+    bucket = AWS::S3.user_content_bucket
+    podcast_exists = lesson_ids.each_with_object({}) do |lesson_id, memo|
+      key = "podcasts/lesson_#{lesson_id}_podcast.mp3"
+      memo[lesson_id] = AWS::S3.exists_in_bucket(bucket, key)
+    end
+
+    result = section_data.each_with_object({}) do |(section_id, data), hash|
+      if data && (lesson = lessons_by_id[data['lesson_id']])
+        podcast_url = podcast_exists[lesson.id] ? "/ai_lesson_summary_podcasts/show?lesson_id=#{lesson.id}" : nil
         data = data.merge(
           'name' => lesson.localized_title,
-          'url' => script_lesson_path(lesson.script, lesson)
+          'url' => script_lesson_path(lesson.script, lesson),
+          'podcast_url' => podcast_url
         )
       end
-      hash[section.id] = data
+      hash[section_id] = data
     end
 
     render json: result

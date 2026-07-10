@@ -1,53 +1,114 @@
-.listContainer {
+.container {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 16px;
-  overflow-y: auto;
-  flex: 1;
+  padding: 20px 16px 16px;
 }
 
-.emptyState {
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1b1464;
+  margin: 0 0 24px;
+}
+
+.datePickerSection {
+  margin-bottom: 16px;
+}
+
+.datePickerLabel {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.datePicker {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex: 1;
-  padding: 32px 16px;
-  color: var(--text-neutral-secondary);
-  font-size: 0.875rem;
-  text-align: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border: 1px solid var(--borders-neutral-primary, #d4dae1);
+  border-radius: 8px;
+  background: var(--background-neutral-primary, #fff);
+  font-size: 1rem;
+  cursor: default;
+  user-select: none;
 }
 
-.card {
+.sectionGroup {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  margin-bottom: 16px;
+}
+
+.sectionRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   padding: 12px;
+  border: 1px solid var(--borders-neutral-primary, #d4dae1);
+  border-radius: 8px;
+  background: var(--background-neutral-primary, #fff);
+  cursor: pointer;
+
+  &:hover {
+    background: var(--background-neutral-secondary, #f8f9fa);
+  }
+}
+
+.sectionName {
+  flex: 1;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.podcastRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 12px;
   border: 1px solid var(--borders-neutral-primary, #d4dae1);
   border-radius: 8px;
   background: var(--background-neutral-primary, #fff);
 }
 
-.cardTitle {
-  font-weight: 700;
-}
-
-.cardSubtitle {
-  color: var(--text-neutral-secondary);
-  font-size: 0.75rem;
-}
-
-.player {
+.playButton {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
   display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-top: 8px;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--borders-neutral-primary, #d4dae1);
+  border-radius: 4px;
+  background: var(--background-neutral-primary, #fff);
+  cursor: pointer;
+  color: var(--text-neutral-primary, #1f2d3d);
+
+  &:hover:not(:disabled) {
+    background: var(--background-neutral-secondary, #f8f9fa);
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+.timestamp {
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  color: var(--text-neutral-primary, #1f2d3d);
+  min-width: 84px;
 }
 
 .progressTrack {
-  height: 4px;
+  flex: 1;
+  height: 6px;
   background: var(--borders-neutral-primary, #d4dae1);
-  border-radius: 2px;
+  border-radius: 3px;
   cursor: pointer;
   position: relative;
 
@@ -59,46 +120,25 @@
 
 .progressFill {
   height: 100%;
-  background: var(--text-info-primary, #0094ca);
-  border-radius: 2px;
+  background: #3c3fa0;
+  border-radius: 3px;
 }
 
-.playerRow {
+.completedIcon {
+  flex-shrink: 0;
+  color: #00a862;
+  font-size: 1.25rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 8px;
 }
 
-.timestamp {
-  font-size: 0.6875rem;
-  color: var(--text-neutral-secondary);
-  min-width: 32px;
-}
-
-.playButton {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px 8px;
-  border-radius: 4px;
+.emptyState {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-neutral-primary);
-
-  &:hover:not(:disabled) {
-    background: var(--background-neutral-tertiary, #f5f5f5);
-  }
-
-  &:disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
-  }
-}
-
-.unavailable {
-  font-size: 0.75rem;
+  flex: 1;
+  padding: 32px 16px;
   color: var(--text-neutral-secondary);
-  margin-top: 4px;
+  font-size: 0.875rem;
+  text-align: center;
 }

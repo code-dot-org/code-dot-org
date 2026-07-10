@@ -1,15 +1,15 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
-import HttpClient from '@cdo/apps/util/HttpClient';
+import SectionAvatar from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/sectionAvatars/SectionAvatar';
 
 import styles from './prepare-list.module.scss';
 
-interface SuggestedLesson {
+export interface SuggestedLesson {
   lesson_id?: number;
   name?: string;
   url?: string;
-  podcast_url?: string;
+  podcast_url?: string | null;
   completed_unit?: boolean;
 }
 
@@ -22,43 +22,33 @@ function formatTime(seconds: number): string {
 }
 
 interface SectionPodcastCardProps {
-  sectionId: number;
   sectionName: string;
+  avatarColor: number;
+  avatarEmoji: number;
+  // undefined = suggested_lessons fetch still in flight
+  lesson: SuggestedLesson | null | undefined;
 }
 
 const SectionPodcastCard: React.FC<SectionPodcastCardProps> = ({
-  sectionId,
   sectionName,
+  avatarColor,
+  avatarEmoji,
+  lesson,
 }) => {
-  const [lesson, setLesson] = useState<SuggestedLesson | null>(null);
-  const [lessonLoading, setLessonLoading] = useState(true);
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isCompleted, setIsCompleted] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [audioStatus, setAudioStatus] = useState<AudioStatus>('loading');
 
   useEffect(() => {
-    HttpClient.fetchJson<SuggestedLesson | null>(
-      `/api/v1/sections/${sectionId}/suggested_lesson`
-    )
-      .then(response => {
-        setLesson(response?.value ?? null);
-        setLessonLoading(false);
-      })
-      .catch(() => {
-        setLesson(null);
-        setLessonLoading(false);
-      });
-  }, [sectionId]);
-
-  // Reset playback state when the suggested lesson changes.
-  useEffect(() => {
-    setAudioStatus('loading');
+    setAudioStatus(lesson?.podcast_url ? 'loading' : 'unavailable');
     setCurrentTime(0);
     setDuration(0);
     setIsPlaying(false);
-  }, [lesson?.lesson_id]);
+    setIsCompleted(false);
+  }, [lesson?.lesson_id, lesson?.podcast_url]);
 
   const togglePlay = useCallback(() => {
     const audio = audioRef.current;
@@ -74,9 +64,14 @@ const SectionPodcastCard: React.FC<SectionPodcastCardProps> = ({
   const handleProgressClick = useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {
       const rect = e.currentTarget.getBoundingClientRect();
-      const pct = (e.clientX - rect.left) / rect.width;
+      const pct = Math.max(
+        0,
+        Math.min(1, (e.clientX - rect.left) / rect.width)
+      );
       if (audioRef.current && duration) {
-        audioRef.current.currentTime = pct * duration;
+        const newTime = pct * duration;
+        audioRef.current.currentTime = newTime;
+        setCurrentTime(newTime);
       }
     },
     [duration]
@@ -84,51 +79,33 @@ const SectionPodcastCard: React.FC<SectionPodcastCardProps> = ({
 
   const progress = duration ? (currentTime / duration) * 100 : 0;
 
-  if (lessonLoading) {
-    return (
-      <div className={styles.card}>
-        <span className={styles.cardTitle}>{sectionName}</span>
-      </div>
-    );
-  }
-
-  if (!lesson?.lesson_id) {
-    return (
-      <div className={styles.card}>
-        <span className={styles.cardTitle}>{sectionName}</span>
-        <span className={styles.cardSubtitle}>No suggested lesson.</span>
-      </div>
-    );
-  }
+  // podcast_url is server-verified: truthy means the file exists in S3.
+  // Render the podcast row immediately (play button disabled until canplay)
+  // so there is no layout shift when audio becomes ready.
+  const hasPodcast = !!lesson?.podcast_url;
 
   return (
-    <div className={styles.card}>
-      <span className={styles.cardTitle}>{sectionName}</span>
-      {lesson.name && (
-        <span className={styles.cardSubtitle}>{lesson.name}</span>
-      )}
-      <audio
-        ref={audioRef}
-        src={lesson.podcast_url}
-        preload="auto"
-        onCanPlay={() => setAudioStatus('ready')}
-        onError={() => setAudioStatus('unavailable')}
-        onDurationChange={() => setDuration(audioRef.current?.duration || 0)}
-        onTimeUpdate={() => setCurrentTime(audioRef.current?.currentTime || 0)}
-        onEnded={() => setIsPlaying(false)}
-      >
-        <track
-          kind="captions"
-          label="English captions"
-          src=""
-          srcLang="en"
-          default
-        />
-      </audio>
-      {audioStatus === 'unavailable' ? (
-        <span className={styles.unavailable}>Podcast not yet available.</span>
-      ) : (
-        <div className={styles.player}>
+    <div className={styles.sectionGroup}>
+      <div className={styles.sectionRow}>
+        <SectionAvatar color={avatarColor} emoji={avatarEmoji} size="xs" />
+        <span className={styles.sectionName}>{sectionName}</span>
+        <FontAwesomeV6Icon iconName="chevron-right" />
+      </div>
+      {hasPodcast && (
+        <div className={styles.podcastRow}>
+          <button
+            type="button"
+            className={styles.playButton}
+            onClick={togglePlay}
+            disabled={audioStatus !== 'ready'}
+            aria-label={isPlaying ? 'Pause' : 'Play'}
+          >
+            <FontAwesomeV6Icon iconName={isPlaying ? 'pause' : 'play'} />
+          </button>
+          <span className={styles.timestamp}>
+            {formatTime(currentTime)} /{' '}
+            {duration ? formatTime(duration) : '--:--'}
+          </span>
           <div
             className={styles.progressTrack}
             onClick={handleProgressClick}
@@ -144,21 +121,36 @@ const SectionPodcastCard: React.FC<SectionPodcastCardProps> = ({
               style={{width: `${progress}%`}}
             />
           </div>
-          <div className={styles.playerRow}>
-            <span className={styles.timestamp}>{formatTime(currentTime)}</span>
-            <button
-              type="button"
-              className={styles.playButton}
-              onClick={togglePlay}
-              disabled={audioStatus !== 'ready'}
-              aria-label={isPlaying ? 'Pause' : 'Play'}
-            >
-              <FontAwesomeV6Icon iconName={isPlaying ? 'pause' : 'play'} />
-            </button>
-            <span className={styles.timestamp}>
-              {duration ? formatTime(duration) : '--:--'}
+          {isCompleted && (
+            <span className={styles.completedIcon}>
+              <FontAwesomeV6Icon iconName="circle-check" />
             </span>
-          </div>
+          )}
+          <audio
+            ref={audioRef}
+            src={lesson.podcast_url!}
+            preload="auto"
+            onCanPlay={() => setAudioStatus('ready')}
+            onError={() => setAudioStatus('unavailable')}
+            onDurationChange={() =>
+              setDuration(audioRef.current?.duration || 0)
+            }
+            onTimeUpdate={() =>
+              setCurrentTime(audioRef.current?.currentTime || 0)
+            }
+            onEnded={() => {
+              setIsPlaying(false);
+              setIsCompleted(true);
+            }}
+          >
+            <track
+              kind="captions"
+              label="English captions"
+              src=""
+              srcLang="en"
+              default
+            />
+          </audio>
         </div>
       )}
     </div>
