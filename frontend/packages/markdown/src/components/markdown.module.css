@@ -7,3 +7,9 @@
   flex-direction: column;
   gap: 0.5rem;
 }
+
+/* Keep images within the content width (e.g. the narrow resource panel) instead
+ * of overflowing it. */
+.markdownContainer img {
+  max-width: 100%;
+}

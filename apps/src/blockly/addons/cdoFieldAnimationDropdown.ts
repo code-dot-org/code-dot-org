@@ -36,4 +36,17 @@ export default class CdoFieldAnimationDropdown extends CdoFieldImageDropdown {
 
     return isValueValid ? newValue : null;
   }
+
+  /**
+   * Re-resolve the rendered thumbnail from freshly generated options, for
+   * menus whose option images can change after the field first renders.
+   */
+  refreshSelectedOption() {
+    // Regenerate the options cache, then re-set the current value:
+    // FieldDropdown.doValueUpdate_ re-resolves the private selectedOption
+    // (which drives the rendered image) from the cached options.
+    this.getOptions(false);
+    this.setValue(this.getValue());
+    this.forceRerender();
+  }
 }
