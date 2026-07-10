@@ -1,0 +1,237 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-07-09T16:17:36.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Try to complete as many AI Design Challenges as you can! Expand each challenge for more information and tips for each challenge. \r\n\r\n:::details [**Challenge 1: Revise the page content**]\r\n\r\nCan you figure out how to change your webpage to a different topic of your choice?\r\n- What is your page about?\r\n- What sections or components should it include?\r\n\r\n:::\r\n\r\n:::details [**Challenge 2: Style it**]\r\n\r\nCan you figure out how to change the CSS to give your page a different color scheme or visual style?\r\n- A new color theme\r\n- A different visual style (modern, bold, simple, etc)\r\n\r\n:::\r\n\r\n:::details [**Challenge 3: Add images**]\r\n\r\nCan you figure out how to add images from the `images` folder in the file panel?\r\n- Use image file names\r\n- Tell AI where to place them\r\n\r\n:::\r\n\r\n:::details [**Challenge 4: Design for the user**]\r\n\r\nSam uses your app outside in bright sunlight. \r\n\r\nCan you figure out how to improve the page so it works better for Sam?\r\n- Think about readability and contrast\r\n- Make buttons and text easy to see\r\n\r\n:::\r\n\r\n:::details [**Challenge 5: Experiment like a Designer**]\r\n\r\nCan you ask the AI to make a major design change to your page?\r\n\r\nTry:\r\n- Changing the layout\r\n- Turning your images into gallery cards\r\n- Adding a new section\r\n- Redesigning the page style\r\n\r\n:::\r\n",
+    "teacher_markdown": "**Students may try to edit the code directly**  \r\n- Some students may click into the HTML or CSS and try to make changes themselves. Gently redirect them to use AI by asking: *“Can you ask the AI to make that change instead?”* The goal is to guide AI, not write code.\r\n\r\n**Students may use vague prompts and get poor results**  \r\n- Students may type short prompts like “change it” or “make it better.” Encourage them to be more specific by asking: *“What exactly do you want the page to look like?”* Remind them that clearer prompts lead to better results.\r\n\r\n**Students may accept AI output without reviewing it**  \r\n- Students may quickly accept changes without checking the result. Prompt them to preview and reflect first: *“Does this match what you expected?”* Reinforce that they are responsible for deciding whether the AI’s output is good enough.\r\n\r\n\r\n",
+    "submittable": "true",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0",
+          "open": false
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>WebLab Explorer</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n    <header>\n        <nav>\n            <div class=\"logo\">\n                <img src=\"/images/computer.png\" alt=\"Computer and monitor\">\n            </div>\n            <ul class=\"nav-links\">\n                <li><a href=\"#\">Home</a></li>\n                <li><a href=\"#\">About</a></li>\n            </ul>\n        </nav>\n    </header>\n\n    <main>\n        <h1>Hello World</h1>\n        <p>Click around and see what you can figure out about WebLab.</p>\n    </main>\n\n    <footer>\n        <p>&copy; 2026 Student Sandbox</p>\n    </footer>\n</body>\n</html>  ",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": "body {\n  margin: 0;\n  font-family: sans-serif;\n  background-color: #f9f9f9;\n  color: #333;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  height: 100vh;\n  text-align: center;\n}\n\nheader {\n  position: absolute;\n  top: 0;\n  width: 100%;\n  background: white;\n  border-bottom: 1px solid #ddd;\n  padding: 10px 0;\n}\n\nnav {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  max-width: 800px;\n  margin: 0 auto;\n  padding: 0 20px;\n}\n\n.logo img {\n  height: 30px;\n}\n\n.nav-links {\n  list-style: none;\n  display: flex;\n  gap: 20px;\n  margin: 0;\n  padding: 0;\n}\n\n.nav-links a {\n  text-decoration: none;\n  color: #666;\n  font-weight: bold;\n}\n\nh1 {\n  font-size: 3rem;\n  margin-bottom: 10px;\n  color: #222;\n}\n\np {\n  font-size: 1.2rem;\n  color: #555;\n}\n\nfooter {\n  position: absolute;\n  bottom: 20px;\n  font-size: 0.8rem;\n  color: #999;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "computer.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/9bfffa7a-f761-469e-8ac5-45aa3b0a43d2.png",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "orange_tabby.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/c06f84be-eca1-4df0-a9f7-4365ef6708bb.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "basil.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/90daddd8-7be2-4f21-8c16-3a775ef8d6f7.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "super_plumber.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/2b84fada-8635-4422-b4a4-acccef3f7706.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "black_cat.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/1808b9d2-e6a7-40a5-a6bf-89d72a8ba77e.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "cucumber.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/2f4e4ea2-d503-4324-9df4-66546309b1f7.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "space.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/a909dc3d-e56a-4dc6-9c5d-576d9022fa41.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "tomato.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/900b24a3-ce06-4ec3-b923-669f5256eded.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "zelda.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/c10a4c13-7110-4dc4-9c36-cfd4f27ccf03.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "12": {
+          "id": "12",
+          "name": "calico_cat.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/bcc67c99-c95e-4537-acd2-5a12c80e4f01.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "13": {
+          "id": "13",
+          "name": "namibia_desert.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/c439eff4-7aa1-406d-a5e2-25a9a1c68d10.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "14": {
+          "id": "14",
+          "name": "vietnam_sea.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/057ca5f5-c9ce-4a4a-9302-fd140c388262.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "15": {
+          "id": "15",
+          "name": "himeji_castle.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/585589e5-4b3b-415b-998d-14c2f3a16aac.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "16": {
+          "id": "16",
+          "name": "fence_dog.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/3f1503a5-ed83-4048-a046-1b1a4e2949ca.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "17": {
+          "id": "17",
+          "name": "relaxo_stuffed_animal.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/2bdfe2b8-b244-418b-9e11-b7b529944095.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "18": {
+          "id": "18",
+          "name": "paris_sunset.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/de571063-c653-41c1-b9a0-bc1513b8aae4.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "19": {
+          "id": "19",
+          "name": "brown_dog.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/b1b06925-9c76-4785-aa45-b1de866494be.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "20": {
+          "id": "20",
+          "name": "pokemon_stuffed_animal.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/a34452c2-15fb-49cf-b34a-9c7ba69d2960.jpg",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "project_template_level_name": "foundations-of-ai-programming-js-lesson2-template_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "encrypted_exemplar_sources": "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\nqrBtd50rG0tru1CSVl5OPizBdVPVPMdRUQ==\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-09T16:17:36.402+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-level2-challenges_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-level2-challenges_2026\"},{\"changed_at\":\"2026-07-09 16:17:59 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>
