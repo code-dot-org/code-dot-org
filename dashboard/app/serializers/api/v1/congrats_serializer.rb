@@ -69,7 +69,7 @@ class Api::V1::CongratsSerializer
   end
 
   private def course_type
-    @course_type ||= CertificateMetadata.course_type(@course_name)
+    @course_type ||= CertificateImage.course_type(@course_name)
   end
 
   private def hoc_tutorial?

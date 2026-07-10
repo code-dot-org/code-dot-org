@@ -13,7 +13,7 @@ class Api::V1::CertificatesController < ApplicationController
 
     I18n.with_locale(locale) do
       unit_or_unit_group = CurriculumHelper.find_matching_unit_or_unit_group(params[:course])
-      template_filename = CertificateMetadata.certificate_template_for(params[:course])
+      template_filename = CertificateImage.certificate_template_for(params[:course])
 
       unless unit_or_unit_group
         response.headers['Cache-Control'] = UNKNOWN_COURSE_CACHE_CONTROL
@@ -21,9 +21,9 @@ class Api::V1::CertificatesController < ApplicationController
           localizedTitle: I18n.t('certificates.one_hour_of_code'),
           unitGroupTitle: nil,
           templateFilename: template_filename,
-          courseType: CertificateMetadata.course_type(params[:course]),
+          courseType: CertificateImage.course_type(params[:course]),
           durationHours: nil,
-          prefilledTitle: CertificateMetadata.prefilled_title_course?(params[:course]),
+          prefilledTitle: CertificateImage.prefilled_title_course?(params[:course]),
         }
       end
 
@@ -46,9 +46,9 @@ class Api::V1::CertificatesController < ApplicationController
         localizedTitle: unit_or_unit_group.localized_title,
         unitGroupTitle: unit_group_title,
         templateFilename: template_filename,
-        courseType: CertificateMetadata.course_type(params[:course]),
+        courseType: CertificateImage.course_type(params[:course]),
         durationHours: duration_hours,
-        prefilledTitle: CertificateMetadata.prefilled_title_course?(params[:course]),
+        prefilledTitle: CertificateImage.prefilled_title_course?(params[:course]),
       }
     end
   end
