@@ -183,8 +183,8 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
             projectManager || Lab2Registry.getInstance().getProjectManager()
           )?.save(newSources, forceSave);
 
-          // Check not started state here to avoid an unnecessary
-          // computation on the source change.
+          // If sources have changed in a way that is meaningful for progress reporting,
+          // optionally notify callers and send a 'started' report if the level is not yet tried.
           if (checkSourcesChangedForProgressReport?.(prev, newSources)) {
             onMeaningfulSourceChangeRef.current?.();
             if (currentLevelStatusRef.current === LevelStatus.not_tried) {
