@@ -161,6 +161,17 @@ export async function generateChatResponse(
         mediaType: file.mediaType,
         model: modelParameters.selectedModelId,
       });
+      if (imageSafetyResult !== undefined) {
+        Observability.metrics.count('ai-chat.image_llm_safety_judge', 1, {
+          result:
+            imageSafetyResult.status === 'fulfilled'
+              ? imageSafetyResult.value
+                ? 'ok'
+                : 'flagged'
+              : 'error',
+          mediaType: file.mediaType,
+        });
+      }
       if (imageModerationStatus === 'flagged') {
         return {
           response: responseText,
