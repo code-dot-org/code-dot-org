@@ -248,6 +248,62 @@ describe('OnboardingChecklist', () => {
     expect(reviewButton).not.toContainHTML('circle-check');
   });
 
+  describe('when all three tours are completed', () => {
+    const ALL_TOURS = [
+      'view_syllabus',
+      'learn_to_evaluate',
+      'create_class_section',
+    ];
+
+    it('shows the celebration state instead of the checklist', async () => {
+      mockGet.mockResolvedValue(makeJsonResponse(ALL_TOURS));
+
+      renderComponent();
+
+      await waitFor(() =>
+        expect(screen.queryByText("You're all set!")).not.toBeNull()
+      );
+      expect(screen.queryByText('Where should we start?')).toBeNull();
+      expect(screen.queryByText('Review the syllabus')).toBeNull();
+    });
+
+    it('calls onHide when "Complete onboarding" is clicked', async () => {
+      mockGet.mockResolvedValue(makeJsonResponse(ALL_TOURS));
+      const {props} = renderComponent();
+
+      await waitFor(() =>
+        expect(screen.queryByText('Complete onboarding')).not.toBeNull()
+      );
+      fireEvent.click(screen.getByText('Complete onboarding'));
+
+      expect(props.onHide).toHaveBeenCalledTimes(1);
+    });
+
+    it('hides the "Hide onboarding" button in the celebration state', async () => {
+      mockGet.mockResolvedValue(makeJsonResponse(ALL_TOURS));
+
+      renderComponent();
+
+      await waitFor(() =>
+        expect(screen.queryByText("You're all set!")).not.toBeNull()
+      );
+      expect(screen.queryByText('Hide onboarding')).toBeNull();
+    });
+  });
+
+  it('does not show the celebration state when only some tours are completed', async () => {
+    mockGet.mockResolvedValue(
+      makeJsonResponse(['view_syllabus', 'learn_to_evaluate'])
+    );
+
+    renderComponent();
+
+    await waitFor(() => expect(mockGet).toHaveBeenCalled());
+
+    expect(screen.queryByText("You're all set!")).toBeNull();
+    expect(screen.queryByText('Where should we start?')).not.toBeNull();
+  });
+
   it('does not throw when the completion fetch fails', async () => {
     mockGet.mockRejectedValue(new Error('network error'));
     const consoleErrorSpy = jest
