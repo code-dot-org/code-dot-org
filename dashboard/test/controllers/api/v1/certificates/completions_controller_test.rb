@@ -96,6 +96,61 @@ class Api::V1::CertificatesCompletionsControllerTest < ActionController::TestCas
         )
       end
     end
+
+    context 'with a partially completed multi-unit course' do
+      let(:user) {create(:student)}
+      let(:course_version) {create(:course_version, :with_unit_group)}
+      let(:unit_group) {course_version.content_root}
+      let(:course_name) {unit_group.name}
+      let(:units) {create_list(:unit, 3)}
+
+      before do
+        units.each_with_index do |unit, index|
+          create(:unit_group_unit, unit_group: unit_group, script: unit, position: index + 1)
+        end
+        units.first(2).each do |unit|
+          create(:user_script, user: user, script: unit, completed_at: Time.current)
+        end
+      end
+
+      it 'returns one certificate for each completed unit' do
+        _get_completion
+
+        _(response.status).must_equal 200
+        _(response_body['certificates'].pluck('courseName')).must_equal(
+          units.first(2).map(&:name)
+        )
+      end
+    end
+
+    context 'with a next-course recommendation' do
+      let(:course_version) {create(:course_version, :with_single_unit_course)}
+      let(:course_name) {course_version.content_root.name}
+      let(:next_unit) {create(:unit)}
+
+      before do
+        Policies::ScriptActivity.stubs(:can_view_congrats_page?).returns(true)
+        ScriptConstants.stubs(:csf_next_course_recommendation).
+          with(course_name).
+          returns(next_unit.name)
+      end
+
+      it 'normalizes the recommendation contract' do
+        _get_completion
+
+        _(response.status).must_equal 200
+        _(response_body['courseKind']).must_equal 'other'
+        _(response_body['recommendations']).must_equal [
+          {
+            'actionLabel' => 'Start course',
+            'description' => next_unit.localized_description,
+            'imageUrl' => nil,
+            'path' => "/s/#{next_unit.name}",
+            'title' => next_unit.localized_title,
+          }
+        ]
+      end
+    end
   end
 
   private def response_body
