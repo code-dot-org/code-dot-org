@@ -1,5 +1,6 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import classNames from 'classnames';
+import {cloneDeep} from 'lodash';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {AnyAction, Reducer} from 'redux';
 
@@ -211,7 +212,11 @@ const SpriteLab2View: React.FunctionComponent<{
     let cancelled = false;
     dispatch(
       setInitialAnimationList(
-        sourcesRef.current.animations || EMPTY_ANIMATION_LIST,
+        // Deep-cloned: project sources are Immer-frozen (they live in the
+        // lab2 redux slice) and the legacy thunk normalizes its argument IN
+        // PLACE — mutating a frozen object throws in strict-mode production
+        // bundles and the animation list never seeds.
+        cloneDeep(sourcesRef.current.animations || EMPTY_ANIMATION_LIST),
         // No v3 migration; the engine never runs the legacy share path.
         undefined as unknown as object,
         true /* isSpriteLab */
