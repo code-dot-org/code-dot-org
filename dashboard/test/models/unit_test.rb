@@ -1347,6 +1347,25 @@ class UnitTest < ActiveSupport::TestCase
     assert_empty unit.text_response_levels
   end
 
+  test 'migrated predict level lists both itself and its contained level in text_response_levels' do
+    unit = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: unit)
+    lesson = create(:lesson, script: unit, lesson_group: lesson_group)
+    contained_level = create(:free_response, name: 'Migrated Predict Contained Free Response')
+    level = create(
+      :javalab,
+      properties: {
+        predict_settings: {isPredictLevel: true, questionType: 'freeResponse'},
+        contained_level_names: [contained_level.name]
+      }
+    )
+    create(:script_level, script: unit, lesson: lesson, levels: [level])
+
+    # A response may live on the level itself (post-migration) or on the
+    # contained level (pre-migration), so both must be searched.
+    assert_equal [level, contained_level], unit.text_response_levels.first[:levels]
+  end
+
   test 'logged_out_age_13_required?' do
     unit = create(:script, :in_single_unit_course, login_required: false)
     lesson_group = create(:lesson_group, script: unit)

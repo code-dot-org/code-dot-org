@@ -1293,6 +1293,45 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal contained_level_1, level_for_progress
   end
 
+  test "get_level_for_progress returns the level itself for a predict level even when it has contained levels" do
+    student = create(:student)
+
+    contained_level = create(:multi, name: 'predict contained level')
+
+    level = create(:level, name: 'predict level with contained', properties: {predict_settings: {isPredictLevel: true}})
+    level.contained_level_names = [contained_level.name]
+    level.save!
+    script_level = create(:script_level, levels: [level])
+
+    level_for_progress = level.get_level_for_progress(student, script_level.script)
+    assert_equal level, level_for_progress
+  end
+
+  test "levels_for_progress returns just the level for a plain level" do
+    level = create(:level, name: 'plain level for progress')
+    assert_equal [level], level.levels_for_progress
+  end
+
+  test "levels_for_progress returns the contained level for a non-predict contained level" do
+    contained_level = create(:multi, name: 'non-predict contained')
+    level = create(:level, name: 'level with non-predict contained')
+    level.contained_level_names = [contained_level.name]
+    level.save!
+
+    assert_equal [contained_level], level.levels_for_progress
+  end
+
+  test "levels_for_progress returns the level then its contained level for a migrated predict level" do
+    contained_level = create(:multi, name: 'migrated predict contained')
+    level = create(:level, name: 'migrated predict level', properties: {predict_settings: {isPredictLevel: true}})
+    level.contained_level_names = [contained_level.name]
+    level.save!
+
+    # The level itself is preferred (new progress); the contained level is the
+    # fallback for progress recorded before migration.
+    assert_equal [level, contained_level], level.levels_for_progress
+  end
+
   test "summarize_for_lesson_show does not include teacher markdown if can_view_teacher_markdown is false" do
     summary = @custom_level.summarize_for_lesson_show(false)
     refute summary.key?('teacherMarkdown')
