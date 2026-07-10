@@ -2,9 +2,7 @@
 
 require_relative '../config/environment'
 
-scripts_map = {
-  'allthethings' => 'allthethings',
-}
+scripts_map = {}
 
 @course_offerings = {}
 @course_versions = {}

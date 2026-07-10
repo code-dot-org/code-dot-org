@@ -351,6 +351,12 @@ class SectionsControllerTest < ActionController::TestCase
   end
 
   test 'retrieve_lessons_for_dropdown returns demo preset lesson links for a demo type' do
+    # In the test environment, demo presets resolve to the allthethings unit
+    # and unit group (see Policies::DemoSections.curriculum_names).
+    allthethings_unit = create(:unit, :with_levels, name: Policies::DemoSections::ALLTHETHINGS_UNIT_NAME)
+    allthethings_unit.lessons.first.update!(has_lesson_plan: true)
+    create(:unit_group_unit, position: 1, script: allthethings_unit, unit_group: create(:unit_group, name: Policies::DemoSections::ALLTHETHINGS_UNIT_GROUP_NAME))
+
     sign_in @teacher
 
     get :retrieve_lessons_for_dropdown, params: {id: 'high'}
