@@ -1,12 +1,10 @@
 /** @file Renders error dialogs in sequence, given a stack of errors */
+import Dialog from '@code-dot-org/component-library/dialog';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import msg from '@cdo/locale';
 
 import * as animationActions from './redux/animationList';
@@ -30,9 +28,9 @@ class ErrorDialogStack extends React.Component {
     this.props.dismissError();
   }
 
-  handleReloadChoice(key) {
+  handleReloadChoice = () => {
     location.reload();
-  }
+  };
 
   render() {
     if (this.props.errors.length === 0) {
@@ -46,48 +44,55 @@ class ErrorDialogStack extends React.Component {
         ? this.props.animationList.propsByKey[error.error_cause].name
         : '';
 
+    if (error.error_type === 'anim_load') {
+      return (
+        <Dialog
+          title={error.message}
+          customContent={
+            <>
+              <p id="dsco-dialog-description">
+                {msg.errorLoadingAnimation({animationName: animationName})}
+              </p>
+              <p>
+                {msg.contactWithoutEmail()}{' '}
+                <a
+                  href={pegasus('/contact')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://code.org/contact
+                </a>
+                .
+              </p>
+            </>
+          }
+          primaryButtonProps={{
+            children: msg.reloadPage(),
+            onClick: this.handleReloadChoice,
+          }}
+          secondaryButtonProps={
+            error.error_cause
+              ? {
+                  children: msg.delete() + ' "' + animationName + '"',
+                  onClick: () => this.handleDeleteChoice(error.error_cause),
+                  color: 'error',
+                }
+              : undefined
+          }
+        />
+      );
+    }
+
     return (
-      <BaseDialog
-        isOpen
-        uncloseable={error.error_type === 'anim_load'}
-        hideCloseButton={error.error_type === 'anim_load'}
-        handleClose={this.props.dismissError}
-      >
-        <h1>{error.message}</h1>
-        {/* If this is the result of animation load failure, display additional
-            information and choice to reload the page or delete the animation */}
-        {error.error_type === 'anim_load' && (
-          <div>
-            <p>{msg.errorLoadingAnimation({animationName: animationName})}</p>
-            <p>
-              {msg.contactWithoutEmail()}{' '}
-              <a
-                href={pegasus('/contact')}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                https://code.org/contact
-              </a>
-              .
-            </p>
-            <DialogFooter>
-              {error.error_cause && (
-                <Button
-                  __useDeprecatedTag
-                  text={msg.delete() + ' "' + animationName + '"'}
-                  onClick={() => this.handleDeleteChoice(error.error_cause)}
-                  color="red"
-                />
-              )}
-              <Button
-                __useDeprecatedTag
-                text={msg.reloadPage()}
-                onClick={() => this.handleReloadChoice(error.error_cause)}
-              />
-            </DialogFooter>
-          </div>
-        )}
-      </BaseDialog>
+      <Dialog
+        title={error.message}
+        onClose={this.props.dismissError}
+        closeLabel={msg.dialogOK()}
+        primaryButtonProps={{
+          children: msg.dialogOK(),
+          onClick: this.props.dismissError,
+        }}
+      />
     );
   }
 }
