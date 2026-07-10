@@ -11,6 +11,8 @@ import React, {
   useState,
 } from 'react';
 
+import HttpClient from '@cdo/apps/util/HttpClient';
+
 import ColorPicker from './ColorPicker';
 import {crispScaleFor, downsampleToGrid, upscaleNearest} from './pixelArt';
 import PixelTooltip from './PixelTooltip';
@@ -228,14 +230,10 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   }, []);
 
   // Load the image into the backing canvas (at logical resolution when
-  // knownPixelGrid applies) and size the display.
-  //
-  // Decode via fetch + createImageBitmap (native async decode, off the main
-  // thread; also skips base64 string handling for dataURIs), falling back to
-  // an Image element if either is unavailable. Raw fetch because HttpClient
-  // is JSON-only — there's no blob path. All canvases whose pixels we read
-  // back get willReadFrequently, keeping them CPU-side — reading a
-  // GPU-backed canvas stalls on readback.
+  // knownPixelGrid applies) and size the display. Decode via
+  // createImageBitmap (native async decode, off the main thread), falling
+  // back to an Image element. Canvases we read back get willReadFrequently
+  // to stay CPU-side — GPU readback stalls.
   useEffect(() => {
     let cancelled = false;
     const finish = (
@@ -314,13 +312,8 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       img.src = imageUrl;
     };
     if (typeof createImageBitmap === 'function') {
-      fetch(imageUrl)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error(`fetch ${response.status}`);
-          }
-          return response.blob();
-        })
+      HttpClient.get(imageUrl)
+        .then(response => response.blob())
         .then(blob => createImageBitmap(blob))
         .then(bitmap => {
           finish(bitmap, bitmap.width, bitmap.height);
