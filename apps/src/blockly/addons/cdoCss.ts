@@ -94,6 +94,12 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
     .blocklyPath:focus {
       outline: none;
     }
+    .blocklyToolbox {
+      background-color: var(--background-neutral-tertiary) !important;
+    }
+    .blocklyToolboxCategoryLabel {
+      color: var(--text-neutral-primary) !important;
+    }
     `
   );
 }
