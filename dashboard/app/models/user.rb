@@ -269,6 +269,7 @@ class User < ApplicationRecord
     signup_sources_tracking
     has_dismissed_personalization_alert
     grades_teaching
+    teacher_onboarding_hidden
   )
 
   attr_accessor(
@@ -304,6 +305,8 @@ class User < ApplicationRecord
   has_many :lesson_insights, foreign_key: 'student_id', dependent: :destroy
 
   has_many :user_practice_problem_attempts, dependent: :destroy
+
+  has_many :challenge_responses, dependent: :destroy
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 

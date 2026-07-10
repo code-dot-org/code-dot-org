@@ -42,6 +42,7 @@ const CODE_STUDIO_ENTRIES = {
   'curriculum_catalog/index': './src/sites/studio/pages/curriculum_catalog/index.js',
   'data_docs/index': './src/sites/studio/pages/data_docs/index.js',
   'data_docs/show': './src/sites/studio/pages/data_docs/show.js',
+  'experiments/index': './src/sites/studio/pages/experiments/index.js',
   'lessons/show': './src/sites/studio/pages/lessons/show.js',
   'lessons/student_lesson_plan': './src/sites/studio/pages/lessons/student_lesson_plan.js',
   'lessons/tutor': './src/sites/studio/pages/lessons/tutor.js',
@@ -131,6 +132,7 @@ const CODE_STUDIO_ENTRIES = {
 
 // prettier-ignore
 const INTERNAL_ENTRIES = {
+  'ai_iteration/image_safety_eval': './src/sites/studio/pages/ai_iteration/image_safety_eval.js',
   'ai_iteration/tools': './src/sites/studio/pages/ai_iteration/tools.js',
   'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
   'blocks/index': './src/sites/studio/pages/blocks/index.js',

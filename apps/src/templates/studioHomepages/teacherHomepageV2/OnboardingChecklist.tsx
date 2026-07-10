@@ -1,11 +1,23 @@
+import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography, Button as MuiButton} from '@mui/material';
+import Snackbar from '@mui/material/Snackbar';
 import React from 'react';
 import {Tour} from 'shepherd.js';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {DemoType} from '../../teacherDashboard/types/teacherSectionTypes';
+import {
+  DemoType,
+  Section,
+} from '../../teacherDashboard/types/teacherSectionTypes';
+
+import confirmDemoSectionSettings from './confirmDemoSectionSettings';
+import DemoSectionStalenessDialog from './DemoSectionStalenessDialog';
+import useCreateSectionTour from './useCreateSectionTour';
+import useLearnHowToEvaluateTour from './useLearnHowToEvaluateTour';
+import useReviewSyllabusTour from './useReviewSyllabusTour';
 
 import styles from './teacherHomepage.module.scss';
 
@@ -29,22 +41,32 @@ const recordTourStart = (tourName: string, demoType: DemoType) => {
 };
 
 interface OnboardingChecklistProps {
-  createSectionTour: Tour | null;
-  reviewSyllabusTour: Tour | null;
-  learnHowToEvaluateTour: Tour | null;
+  demoSection: Section | null;
   demoType: DemoType;
+  isHidden: boolean;
+  onHide: () => void;
 }
 
 const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
-  createSectionTour,
-  reviewSyllabusTour,
-  learnHowToEvaluateTour,
+  demoSection,
   demoType,
+  isHidden,
+  onHide,
 }) => {
-  const [isHidden, setIsHidden] = React.useState(false);
+  const gradesTeaching = useAppSelector(
+    state => state.currentUser.gradesTeaching
+  );
+  const createSectionTour = useCreateSectionTour(gradesTeaching);
+  const reviewSyllabusTour = useReviewSyllabusTour(demoSection);
+  const learnHowToEvaluateTour = useLearnHowToEvaluateTour(demoSection);
+
   const [completedTourNames, setCompletedTourNames] = React.useState<
     Set<string>
   >(new Set());
+  const [pendingTour, setPendingTour] = React.useState<Tour | null>(null);
+  const [resetFailed, setResetFailed] = React.useState(false);
+
+  const stalenessCheck = React.useRef<Promise<boolean>>(Promise.resolve(false));
 
   React.useEffect(() => {
     HttpClient.get('/dashboardapi/v1/user_product_tours', true)
@@ -55,66 +77,167 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
       );
   }, []);
 
+  const demoSectionId = demoSection?.id;
+
+  React.useEffect(() => {
+    stalenessCheck.current = confirmDemoSectionSettings(demoSectionId);
+  }, [demoSectionId]);
+
+  const startTourOrBlock = async (tour: Tour | null) => {
+    if (await stalenessCheck.current) {
+      setPendingTour(tour);
+    } else {
+      tour?.start();
+    }
+  };
+
   const handleButtonClick = (tourName: string) => {
     recordTourStart(tourName, demoType);
     if (tourName === 'create_class_section') {
       createSectionTour?.start();
     } else if (tourName === 'view_syllabus') {
-      reviewSyllabusTour?.start();
+      startTourOrBlock(reviewSyllabusTour);
     } else if (tourName === 'learn_to_evaluate') {
-      learnHowToEvaluateTour?.start();
+      startTourOrBlock(learnHowToEvaluateTour);
     }
   };
+
+  const handleStalenessCancel = () => {
+    pendingTour?.cancel();
+    setPendingTour(null);
+  };
+
+  const handleStalenessReset = () => {
+    const tour = pendingTour;
+    setPendingTour(null);
+    if (!demoSection) {
+      return;
+    }
+    HttpClient.post(
+      '/api/v1/sections/demo/reset',
+      JSON.stringify({id: demoSection.id}),
+      true,
+      {'Content-Type': 'application/json'}
+    )
+      .then(() => {
+        stalenessCheck.current = Promise.resolve(false);
+        tour?.start();
+      })
+      .catch(err => {
+        console.error('Failed to reset demo section:', err);
+        setResetFailed(true);
+      });
+  };
+
+  const allToursCompleted = CHECKLIST_ITEMS.every(({id}) =>
+    completedTourNames.has(id)
+  );
 
   if (isHidden) {
     return null;
   }
 
   return (
-    <div className={styles.onboardingChecklistOuter}>
-      <div className={styles.onboardingChecklistInner}>
-        <div className={styles.onboardingChecklistInnerContent}>
-          <Typography variant="h4" gutterBottom>
-            <span className={styles.gradientIcon}>
-              <FontAwesomeV6Icon iconName="sparkle" iconStyle="solid" />
-            </span>
-            Where should we start?
-          </Typography>
-          <Typography variant="body2">
-            Teaching Assistant can help you get started with CodeAI
-          </Typography>
-          <div className={styles.onboardingChecklistButtons}>
-            {CHECKLIST_ITEMS.map(({id, label}) => (
-              <MuiButton
-                key={id}
-                variant="outlined"
-                color="secondary"
-                className={styles.onboardingChecklistButton}
-                onClick={() => handleButtonClick(id)}
-                type="button"
-              >
-                {completedTourNames.has(id) && (
-                  <span className={styles.onboardingChecklistCheckIcon}>
-                    <FontAwesomeV6Icon
-                      iconName="circle-check"
-                      iconStyle="solid"
-                    />
+    <>
+      {pendingTour && (
+        <DemoSectionStalenessDialog
+          onCancel={handleStalenessCancel}
+          onReset={handleStalenessReset}
+        />
+      )}
+      <Snackbar
+        open={resetFailed}
+        autoHideDuration={6000}
+        onClose={() => setResetFailed(false)}
+        anchorOrigin={{vertical: 'top', horizontal: 'center'}}
+      >
+        <Alert
+          type="danger"
+          size="m"
+          text="We couldn't reset your demo section. Please try again."
+          onClose={() => setResetFailed(false)}
+        />
+      </Snackbar>
+      <div
+        className={`${styles.onboardingChecklistOuter}${
+          allToursCompleted
+            ? ` ${styles.onboardingChecklistOuterCelebration}`
+            : ''
+        }`}
+      >
+        <div className={styles.onboardingChecklistInner}>
+          <div className={styles.onboardingChecklistInnerContent}>
+            {allToursCompleted ? (
+              <div className={styles.onboardingChecklistCelebration}>
+                <span
+                  aria-hidden="true"
+                  className={styles.onboardingCelebrationEmoji}
+                >
+                  🎉
+                </span>
+                <Typography variant="h4" gutterBottom>
+                  You're all set!
+                </Typography>
+                <Typography variant="body2" gutterBottom>
+                  You've explored some of the teacher tools available with
+                  CodeAI. As you continue to use CodeAI, your Teaching Assistant
+                  is always available to answer questions, modify course
+                  materials, provide professional learning and more.
+                </Typography>
+                <MuiButton
+                  type="button"
+                  variant="outlined"
+                  color="tertiary"
+                  onClick={onHide}
+                >
+                  Complete onboarding
+                </MuiButton>
+              </div>
+            ) : (
+              <>
+                <Typography variant="h4">
+                  <span className={styles.gradientIcon}>
+                    <FontAwesomeV6Icon iconName="sparkle" iconStyle="solid" />
                   </span>
-                )}
-                {label}
-              </MuiButton>
-            ))}
+                  Where should we start?
+                </Typography>
+                <Typography variant="body2" gutterBottom>
+                  Teaching Assistant can help you get started with CodeAI
+                </Typography>
+                <div className={styles.onboardingChecklistButtons}>
+                  {CHECKLIST_ITEMS.map(({id, label}) => (
+                    <MuiButton
+                      key={id}
+                      variant="outlined"
+                      color="secondary"
+                      className={styles.onboardingChecklistButton}
+                      onClick={() => handleButtonClick(id)}
+                      type="button"
+                      size="small"
+                    >
+                      {completedTourNames.has(id) && (
+                        <span className={styles.onboardingChecklistCheckIcon}>
+                          <FontAwesomeV6Icon
+                            iconName="circle-check"
+                            iconStyle="solid"
+                          />
+                        </span>
+                      )}
+                      {label}
+                    </MuiButton>
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         </div>
+        {!allToursCompleted && (
+          <MuiButton type="button" onClick={onHide} color="tertiary">
+            Hide onboarding
+          </MuiButton>
+        )}
       </div>
-      <MuiButton
-        type="button"
-        onClick={() => setIsHidden(true)}
-        color="tertiary"
-      >
-        Hide onboarding
-      </MuiButton>
-    </div>
+    </>
   );
 };
 

@@ -709,10 +709,18 @@ module Cdo
           nil
         end
 
+        # A view's data is known current as of `executed_at` after either operation: CREATE fully
+        # materializes it from scratch, REFRESH incrementally brings it up to date. DROP does not
+        # (the view has no data). Both must count toward the freshness/duration metrics below, or a
+        # routine re-provision (CREATE) makes a view look never-refreshed until its next REFRESH,
+        # which can be up to a day away on the daily post-DMS-export refresh cadence.
+        FRESHENING_OPERATIONS = %w[CREATE REFRESH].freeze
+
         # @param rows [Array<ViewStatusRow>]
         # @param now [Time] reference time for "seconds since last refresh".
         # @return [Hash] :error_views (rows + :condition), :stale_views, :total,
-        #   :max_seconds_since_last_refresh (nil if no refresh seen), :max_refresh_duration_seconds (nil).
+        #   :max_seconds_since_last_refresh (nil if no CREATE/REFRESH seen),
+        #   :max_refresh_duration_seconds (nil, same condition).
         def self.view_status_summary(rows, now:)
           error_views = rows.filter_map do |row|
             condition = error_condition_for(row)
@@ -722,11 +730,11 @@ module Cdo
           stale_views = rows.select(&:is_stale)
 
           refresh_ages = rows.filter_map do |row|
-            next unless row.operation == 'REFRESH' && row.executed_at
+            next unless FRESHENING_OPERATIONS.include?(row.operation) && row.executed_at
             (now - row.executed_at).to_i
           end
           refresh_durations = rows.filter_map do |row|
-            row.duration_seconds if row.operation == 'REFRESH' && row.duration_seconds
+            row.duration_seconds if FRESHENING_OPERATIONS.include?(row.operation) && row.duration_seconds
           end
 
           {

@@ -32,7 +32,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-25 18:22:01 UTC",
+    "serialized_at": "2026-07-07 21:26:13 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1356,24 +1356,24 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csp9-2023/resources",
-      "key": "all_resources_8",
+      "url": "/courses/csp-2025/units/9/resources",
+      "key": "all_resources_19",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_8"
+        "resource.key": "all_resources_19"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/csp9-2023/standards",
-      "key": "all_standards_8",
+      "url": "/courses/csp-2025/units/9/standards",
+      "key": "all_standards_19",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards_8"
+        "resource.key": "all_standards_19"
       }
     },
     {
@@ -1733,13 +1733,13 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources_8",
+        "resource.key": "all_resources_19",
         "script.name": "csp9-2025"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards_8",
+        "resource.key": "all_standards_19",
         "script.name": "csp9-2025"
       }
     },
@@ -2101,6 +2101,9 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

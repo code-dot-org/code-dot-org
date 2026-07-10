@@ -54,7 +54,7 @@ Feature: Student pairing
     And I join the section
     Given I create a student named "Thing_Two"
     And I join the section
-    Given I am on "http://studio.code.org/courses/starwars/units/1/lessons/1/levels/5"
+    Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/24/levels/7"
     And I wait for the lab page to fully load
     Then I initiate pairing
     And I verify the user menu shows "Thing_One" and "Thing_Two" are in a pairing group

@@ -4,7 +4,6 @@ Feature: Views the pages on the teacher dashboard that are untested elsewhere
     Given I am on "http://studio.code.org/home"
     Given I use a cookie to mock the DCDO key "ai-tutor-teacher-nav-v2" as "false"
 
-  @properties_encryption_key
   Scenario: Viewing teacher dashboard pages
     Given I am on "http://studio.code.org"
     Given I create an authorized teacher-associated student named "Sally"

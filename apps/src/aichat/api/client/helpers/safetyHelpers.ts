@@ -50,7 +50,7 @@ export async function isTextSafe(
     model: getModel(safetyConfig.modelId),
   });
 
-  const classification = response.output.classification;
+  const classification = response.output?.classification;
   if (!['OK', 'INAPPROPRIATE'].includes(classification)) {
     throw new Error('Invalid classification value: ' + classification);
   }

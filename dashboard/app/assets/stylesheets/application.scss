@@ -27,7 +27,6 @@
  *= require user-menu
  *= require buttons
  *= require course-blocks
- *= require details-polyfill
  *= require warning-banner
  */
 
@@ -113,6 +112,11 @@ h3 {
 hr {
   border-color: $teal;
   border-bottom: none;
+}
+
+// Account edit page: neutral section dividers instead of the brand teal above.
+hr.account-section-divider {
+  border-color: var(--borders-neutral-strong);
 }
 
 #classroom-sections hr {
@@ -1865,46 +1869,6 @@ a.download-video {
   margin: 10px 0;
 }
 
-#signinsection {
-  ul.students, ul.pictures {
-    margin-left: 0;
-  }
-
-  ul.students li,
-  ul.pictures li {
-    list-style-type: none;
-    border: 1px solid $lighter_gray;
-    border-radius: 5px;
-    background-color: $lightest_gray;
-    float: left;
-    margin: 5px;
-    padding: 5px;
-    cursor: pointer;
-  }
-
-  ul.students li:hover,
-  ul.pictures li:hover {
-    background-color: $light_yellow;
-  }
-
-  ul.students li.selected,
-  ul.pictures li.selected {
-    background-color: $yellow;
-  }
-
-  #pairing_checkbox {
-    margin: 5px 0;
-    label {
-      font-size: 17.5px;
-    }
-    label, input {
-      margin: 5px;
-      display: inline-block;
-      vertical-align: middle;
-    }
-  }
-}
-
 .flex-container {
   display: flex;
   justify-content: space-between;
@@ -1914,7 +1878,13 @@ a.download-video {
   max-width: 600px;
 }
 
-#signin,
+// The React sign-in page (apps/src/signIn/) styles itself, so #signin no longer
+// carries these rules. They remain for #change-password (password reset) and
+// for the legacy server-rendered sign-in/sign-up pages still using this markup
+// (existing_account, PD/Foorm logged-out pages), which opt in via .signin-legacy.
+// Don't re-add #signin here: the React page reuses that id as a test hook and
+// must not inherit the legacy form/button styling.
+.signin-legacy,
 #change-password {
   $field-width: 310px;
   $button-width: 324px;
@@ -2441,48 +2411,8 @@ a.download-video {
     margin: 0;
   }
 
-  .section-sign-in {
-    display: flex;
-    align-items: center;
-
-    input {
-      background-color: $neutral_light;
-    }
-
-    input[type=text] {
-      flex-grow: 2;
-      height: 40px;
-      padding-top: 0;
-      padding-bottom: 0;
-      margin: 0;
-    }
-
-    button {
-      @include main-font-semi-bold;
-      padding: 10px 20px;
-      margin-right: 0;
-      background-color: $brand_secondary_default;
-      border: 2px solid $brand_secondary_default;
-      color: $neutral_white;
-
-      &:hover {
-        background-color: $brand_secondary_dark;
-        border-color: $brand_secondary_dark;
-        box-shadow: none;
-      }
-      &:focus {
-        border-color: $brand_primary_default;
-      }
-
-      &:disabled {
-        color: $neutral_white;
-        border-color: $neutral_dark20;
-        background-color: $neutral_dark20;
-        @include box-shadow(none);
-        cursor: not-allowed;
-      }
-    }
-  }
+  // .section-sign-in retired: section-code entry now lives in React
+  // (apps/src/signIn/SectionCodeEntry.tsx).
 
   .oauth-sign-in {
     @include main-font-semi-bold;
@@ -3699,7 +3629,7 @@ html[data-brand="codeai"], html[data-brand="codeai-next"] {
   top: 0;
   right: 0;
   color: $white;
-  background-color: $light_purple;
+  background-color: var(--background-brand-purple-primary);
   padding: 3px;
   z-index: 100;
   cursor: pointer;
@@ -4451,4 +4381,23 @@ a {
 
 .cm-editor {
   height: 100%;
+}
+
+// @see https://github.com/code-dot-org/code-dot-org/commit/3a5ecdffd3ea400182896aa031d9d70b77eba2b1#diff-12c03faea22f2ff4ab3508193ed80cd058cce54ef3e6708ce46703c29b92511cR3-R28
+details {
+  summary {
+    cursor: pointer;
+
+    // Supports `<summary><h1>Title</h1><p>See more</p></summary>` idiom often used by level builders
+    h1 {
+      display: inline;
+      margin-right: 10px;
+    }
+
+    &:hover {
+      // Include hover effect on mouseover
+      background: $lightest_gray;
+      cursor: pointer;
+    }
+  }
 }

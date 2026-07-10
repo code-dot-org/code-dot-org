@@ -208,8 +208,14 @@ export function stopJavaCode(): void {
 }
 
 export function sendJavaConsoleInput(input: string): void {
+  sendTypedInputMessage(InputMessageType.SYSTEM_IN, input);
+}
+
+// Relay an input message of a given type back to Javabuilder.
+export function sendTypedInputMessage(
+  messageType: string,
+  message: string
+): void {
   if (!activeConnection) return;
-  activeConnection.sendMessage(
-    JSON.stringify({messageType: InputMessageType.SYSTEM_IN, message: input})
-  );
+  activeConnection.sendMessage(JSON.stringify({messageType, message}));
 }

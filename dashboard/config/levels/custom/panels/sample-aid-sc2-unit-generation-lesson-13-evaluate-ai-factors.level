@@ -1,0 +1,51 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-06-29T17:07:44.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "panels": [
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-13-evaluate-ai-factors-e822b6f8-77f2-4ac8-ba4f-283bbf8200b8",
+        "text": "Building on our last discussion, it's not enough for an AI program to just exist. We need to evaluate if it truly *serves* its users well.",
+        "imageUrl": "https://images.code.org/3581a52939ee11e57d1778bdbc77333b-sample-aid-sc2-unit-generation-lesson-13-evaluate-ai-factors-panel-1-8329a50c-b37d-4df3-9791-ad9c3c6fb8bb.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-13-evaluate-ai-factors-e475c643-da2d-4144-979e-bab2eced1276",
+        "text": "First, let's consider **Fairness**. Does your AI program treat everyone equally? Does it have hidden biases that might disadvantage certain groups?",
+        "imageUrl": "https://images.code.org/1e5f499e27051dd214651d15dfca0c88-sample-aid-sc2-unit-generation-lesson-13-evaluate-ai-factors-panel-2-9a5749c7-e2e0-44fb-8005-51275b62501a.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-13-evaluate-ai-factors-21eaccbe-d148-4db5-a9e0-ff6e9c085efb",
+        "text": "For example, if an AI that recommends jobs mostly suggests jobs for boys, even when girls are equally qualified, that's unfair. We need to ensure the data used to train it is diverse and representative.",
+        "imageUrl": "https://images.code.org/d691ad6cbf62bb16d6e386ca60900d8e-sample-aid-sc2-unit-generation-lesson-13-evaluate-ai-factors-panel-3-b543672e-b41d-45a0-960c-d514f94d80c6.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-13-evaluate-ai-factors-3d2acf43-fc14-41b5-a73c-01aa24353adb",
+        "text": "Next, **Usability**. Is your AI program easy and intuitive for everyone to use? Does it adapt to different needs and abilities?",
+        "imageUrl": "https://images.code.org/6c2fee6eed1ab65fa96cd5dd4a914cfa-sample-aid-sc2-unit-generation-lesson-13-evaluate-ai-factors-panel-4-a935daaa-448e-4544-8073-3a387849c887.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-13-evaluate-ai-factors-4012504b-e7c5-4787-a521-3964c8a35a2c",
+        "text": "Imagine an AI smart speaker that only understands one accent. That wouldn't be very usable for a lot of people! Good design means making it accessible and clear for a wide range of users.",
+        "imageUrl": "https://images.code.org/2c3c5770fbf4a2629727e64407d6744c-sample-aid-sc2-unit-generation-lesson-13-evaluate-ai-factors-panel-5-831c4f41-cfdb-4b4e-a79a-234611669668.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-13-evaluate-ai-factors-1af09261-7b27-456e-b71f-b59fccc3897b",
+        "text": "Finally, **Potential Negative Impacts**. Could your AI program accidentally cause harm or create unintended problems for users or society?",
+        "imageUrl": "https://images.code.org/63fd90364f23a68f05e27c511c5fd8c9-sample-aid-sc2-unit-generation-lesson-13-evaluate-ai-factors-panel-6-25acba73-7333-449e-83f6-5aa83123b39b.png",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "generate_outline": "Explore the key factors for evaluating whether an AI program truly serves its target audience. Discuss fairness, usability, and potential negative impacts, providing simple, relatable examples for each."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:08:35 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:08:35 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

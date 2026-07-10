@@ -1511,7 +1511,7 @@
             },
             "data": {
               "text": "\n",
-              "fontColor": "#1971c2",
+              "fontColor": "var(--sketchlab-stroke-blue)",
               "fontSize": "large",
               "showHandles": false,
               "textAlign": "left"

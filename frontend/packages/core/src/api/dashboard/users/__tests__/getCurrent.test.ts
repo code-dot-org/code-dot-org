@@ -3,7 +3,7 @@ import {describe, it, expect, vi} from 'vitest';
 import {ZodError} from 'zod';
 
 import {getCurrent} from '../getCurrent';
-import type {CurrentUserResponseSignedIn} from '../currentUserTypes';
+import type {CurrentUserResponseSignedIn} from '../users.types';
 
 const SIGNED_IN_RESPONSE: CurrentUserResponseSignedIn = {
   is_signed_in: true,

@@ -1,7 +1,7 @@
 @no_mobile
 @no_safari
-@no_device_farm
-
+@no_firefox
+@cloudfront_key
 Feature: Mix & Move with AI
 Scenario: Dancer, music, dance
 
@@ -9,7 +9,7 @@ Scenario: Dancer, music, dance
   ### Create a dancer
   ###
 
-  Given I am on "http://studio.code.org/courses/mix-move-ai-2025/units/1/lessons/1/levels/3"
+  Given I am on "http://studio.code.org/courses/ui-test-mix-move-ai/units/1/lessons/1/levels/3"
   And I rotate to landscape
 
   # Generate.

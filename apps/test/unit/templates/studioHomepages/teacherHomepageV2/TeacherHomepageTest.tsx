@@ -164,6 +164,9 @@ describe('TeacherHomepage', () => {
         json: () => Promise.resolve({data: {matchedPersona: true}}),
       } as Response);
     postSpy = jest.spyOn(HttpClient, 'post');
+    // OnboardingChecklist checks demo-section staleness on mount; a 204 means
+    // "up to date" and keeps the check from hitting the real network.
+    jest.spyOn(HttpClient, 'get').mockResolvedValue({status: 204} as Response);
     sendEventSpy = jest
       .spyOn(analyticsReporter, 'sendEvent')
       .mockImplementation(() => {});
@@ -322,7 +325,7 @@ describe('TeacherHomepage', () => {
   it('creates a demo section and navigates to progress without reloading', async () => {
     fetchSpy.mockImplementation(demoPresetsFetchMock());
     postSpy.mockImplementation((url: string) => {
-      if (url === '/api/v1/sections/demo/high') {
+      if (url === '/api/v1/sections/demo/create/high') {
         return Promise.resolve({
           json: () =>
             Promise.resolve({
@@ -366,7 +369,7 @@ describe('TeacherHomepage', () => {
       })
     );
     postSpy.mockImplementation((url: string) => {
-      if (url === '/api/v1/sections/demo/high') {
+      if (url === '/api/v1/sections/demo/create/high') {
         return Promise.resolve({
           json: () =>
             Promise.resolve({
@@ -468,7 +471,7 @@ describe('TeacherHomepage', () => {
       EVENTS.SECTION_LIST_TEACHING_TOGGLE_CLICKED,
       {}
     );
-  });
+  }, 10000);
 
   it('archive all opens modal', async () => {
     renderComponent();

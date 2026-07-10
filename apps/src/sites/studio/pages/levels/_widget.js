@@ -29,7 +29,6 @@ export function showInstructionsDialog() {
       markdown={appOptions.level.longInstructions}
     />
   );
-  $('details').details();
 }
 
 function setupWidgetLevel() {

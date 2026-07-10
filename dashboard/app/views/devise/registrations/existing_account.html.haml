@@ -1,7 +1,7 @@
 %h1
   = I18n.t('auth.existing_account.account_exists', email: params[:email])
 
-#signin
+#signin.signin-legacy
 
   %p
     = I18n.t('auth.existing_account.sign_in', provider: I18n.t(params[:provider], scope: "auth"))

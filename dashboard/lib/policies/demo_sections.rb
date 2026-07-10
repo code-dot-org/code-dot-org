@@ -2,6 +2,12 @@
 
 class Policies::DemoSections
   DEMO_TYPES = %i[high middle elementary].freeze
+
+  ARCHIVED_DEMO_TYPE = :archived
+  # ALL demo types including archived.
+  # Use `DEMO_TYPES` for the active demo types that can be created.
+  VALID_DEMO_TYPES = (DEMO_TYPES + [ARCHIVED_DEMO_TYPE]).freeze
+
   ALLTHETHINGS_UNIT_NAME = 'allthethings'
   ALLTHETHINGS_UNIT_GROUP_NAME = 'original-allthethings-course'
 
@@ -112,6 +118,26 @@ class Policies::DemoSections
     }
   end
 
+  # Only checks fields important for onboarding.
+  def self.section_matches_preset?(section)
+    preset = get_preset(section.demo_type)
+    return false unless preset
+
+    unit = resolve_unit(preset[:unit_name])
+    unit_group = resolve_unit_group(preset[:unit_group_name])
+    return false unless unit && unit_group
+
+    section.script_id == unit.id &&
+      section.course_id == unit_group.id &&
+      section_roster_matches_preset?(section)
+  end
+
+  # True if the demo section's roster exactly matches the preset.
+  def self.section_roster_matches_preset?(section)
+    section.followers.pluck(:student_user_id).to_set ==
+      demo_student_ids(section.demo_type).to_set
+  end
+
   def self.preset_views_for_all_types
     DEMO_TYPES.each_with_object({}) do |demo_type, views|
       view = preset_view(demo_type)
@@ -194,8 +220,6 @@ class Policies::DemoSections
   end
 
   private_class_method(
-    :resolve_unit,
-    :resolve_unit_group,
     :curriculum_names,
     :adhoc_curriculum_overrides
   )

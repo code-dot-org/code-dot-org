@@ -1,5 +1,23 @@
 @import 'shepherd.js/dist/css/shepherd.css';
 @import 'color.scss';
+@import '@code-dot-org/component-library-styles/variables.scss';
+
+// Keep Shepherd below our modal stack ($zindex-modal-backdrop, $zindex-modal)
+// so dialogs that open during a tour appear on top.
+.shepherd-element {
+  z-index: $zindex-modal-backdrop - 2;
+}
+
+.shepherd-modal-overlay-container {
+  z-index: $zindex-modal-backdrop - 5;
+}
+
+// Opt-in for steps that attach to an element inside an open modal.
+// Add 'tour-step-above-modal' to the step's `classes` to restore
+// the step above the modal stack.
+.shepherd-element.tour-step-above-modal {
+  z-index: $zindex-popover;
+}
 
 .tour-step-highlight {
   position: relative !important;
@@ -269,7 +287,6 @@ div .quiz-option-correct {
 
 .quiz-feedback {
   margin-top: 12px;
-  min-height: 18px;
   font-family: Figtree, sans-serif;
   font-size: 14px;
   font-weight: 600;
@@ -290,7 +307,7 @@ div .quiz-option-correct {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
-    padding: 24px;
+    padding: 12px 14px 14px 14px;
     gap: 8px;
   }
 
@@ -308,6 +325,7 @@ div .quiz-option-correct {
   .shepherd-header {
     order: 2;
     flex-shrink: 0;
+    padding: 0 !important;
   }
 
   &.shepherd-has-title .shepherd-content .shepherd-header {

@@ -87,6 +87,31 @@ class UsersHelperTest < ActionView::TestCase
     assert_in_delta 66.67, percent_complete_total(script, user)
   end
 
+  # A predict level migrated from the legacy contained-level model keeps its
+  # contained_level_names. Progress recorded before migration lives on the
+  # contained level, but should still surface as the parent level's progress.
+  def test_summarize_user_progress_migrated_predict_reads_legacy_contained_progress
+    user = create(:user)
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+
+    contained = create(:multi, name: 'legacy predict contained')
+    level = create(:level, type: 'Javalab', name: 'migrated predict in script', properties: {predict_settings: {isPredictLevel: true}})
+    level.contained_level_names = [contained.name]
+    level.save!
+    create(:script_level, script: script, levels: [level], lesson: lesson)
+
+    # Pre-migration progress was recorded against the contained level.
+    create(:user_level, user: user, script: script, level: contained, best_result: ActivityConstants::BEST_PASS_RESULT)
+
+    progress = summarize_user_progress(script, user)[:progress]
+    assert_equal(
+      {status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT},
+      progress[level.id]
+    )
+  end
+
   def test_summarize_user_progress_with_pages
     user = create(:user)
     script = create(:script, :in_single_unit_course)
@@ -189,6 +214,31 @@ class UsersHelperTest < ActionView::TestCase
       completed: false
     }
     assert_equal expected_summary, summarize_user_progress(script, user)
+  end
+
+  # A bubble choice sublevel that is a migrated predict level keeps its
+  # contained_level_names; legacy progress on the contained level should surface
+  # for both the sublevel and the parent bubble choice.
+  def test_summarize_user_progress_with_bubble_choice_migrated_predict_sublevel
+    user = create(:user)
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+
+    contained = create(:multi, name: 'bc predict contained')
+    predict_sublevel = create(:level, type: 'Javalab', name: 'bc migrated predict sublevel', properties: {predict_settings: {isPredictLevel: true}})
+    predict_sublevel.contained_level_names = [contained.name]
+    predict_sublevel.save!
+    level = create(:bubble_choice_level, sublevels: [predict_sublevel])
+    create(:script_level, script: script, levels: [level], lesson: lesson)
+
+    # Pre-migration progress was recorded against the contained level.
+    create(:user_level, user: user, level: contained, script: script, best_result: ActivityConstants::BEST_PASS_RESULT)
+
+    progress = summarize_user_progress(script, user)[:progress]
+    expected = {status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT}
+    assert_equal expected, progress[predict_sublevel.id]
+    assert_equal expected, progress[level.id]
   end
 
   def test_summarize_user_progress_with_locked
@@ -526,6 +576,31 @@ class UsersHelperTest < ActionView::TestCase
     assert_equal 2, coteacher.sections_instructed.count
     assert_equal destination_teacher.id, section.user.id
     assert_equal destination_teacher.id, section_instructor2.instructor.id
+  end
+
+  def test_move_sections_and_destroy_source_user_skips_conflicting_demo_sections
+    # Both source and destination already own a demo section with the same demo_type.
+    # The transfer must not raise RecordInvalid; the source demo section is dropped.
+    source_teacher = create(:teacher)
+    destination_teacher = create(:teacher)
+    demo_type = 'ai_tutor'
+    _source_demo = create(:section, user: source_teacher, demo_type: demo_type)
+    dest_demo = create(:section, user: destination_teacher, demo_type: demo_type)
+    regular_section = create(:section, user: source_teacher)
+
+    result = move_sections_and_destroy_source_user(
+      source_user: source_teacher,
+      destination_user: destination_teacher,
+      takeover_type: 'oauth',
+      provider: 'google_oauth2'
+    )
+
+    assert result, 'expected successful merge'
+    assert_equal destination_teacher.id, regular_section.reload.user_id
+    assert_equal destination_teacher.id, dest_demo.reload.user_id
+    # Source was destroyed; destination still has exactly 2 sections (dest_demo + regular)
+    assert_equal 2, Section.where(user: destination_teacher).count
+    assert_raises(ActiveRecord::RecordNotFound) {User.find(source_teacher.id)}
   end
 
   describe '.account_linking_lock_reason' do

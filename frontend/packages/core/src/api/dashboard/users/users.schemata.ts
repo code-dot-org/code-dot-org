@@ -1,53 +1,69 @@
-import {z} from 'zod';
 import camelcaseKeys from 'camelcase-keys';
+import {z} from 'zod';
 
-export const UserTypes = ['student', 'teacher'] as const;
+/** Zod schema for a signed-out `/api/v1/users/current` response. */
+export const CurrentUserResponseSignedOutSchema = z.object({
+  is_signed_in: z.literal(false),
+});
 
-export const SignedInCurrentUserSchema = z
-  .object({
-    id: z.number(),
-    username: z.string(),
-    display_name: z.string(),
-    user_type: z.enum(UserTypes),
-    is_signed_in: z.literal(true),
-    short_name: z.string(),
-    is_verified_instructor: z.boolean(),
-    is_lti: z.boolean(),
-    mute_music: z.boolean(),
-    under_13: z.boolean(),
-    over_21: z.boolean(),
-    sort_by_family_name: z.boolean(),
-    ai_rubrics_disabled: z.boolean(),
-    progress_table_v2_closed_beta: z.boolean(),
-    has_seen_progress_table_v2_invitation: z.boolean(),
-    has_seen_homepage_welcome: z.boolean(),
-    has_dismissed_personalization_alert: z.boolean(),
-    date_progress_table_invitation_last_delayed: z.string(),
-    child_account_compliance_state: z.string(),
-    country_code: z.string(),
-    us_state_code: z.string(),
-    age: z.number(),
-    in_section: z.boolean().nullable(),
-    created_at: z.string(),
-    has_seen_ai_assessments_announcement: z.boolean(),
-    ai_differentiation_enabled: z.boolean(),
-    has_completed_ai_differentiation_welcome: z.boolean(),
-    educator_role: z.string(),
-    sharing_disabled: z.boolean(),
-    ai_tutor_enabled_for_pilot: z.boolean(),
-  })
-  .transform(data => camelcaseKeys(data, {deep: true}));
+/** Zod schema for a signed-in `/api/v1/users/current` response. */
+export const CurrentUserResponseSignedInSchema = z.object({
+  is_signed_in: z.literal(true),
 
-export const SignedOutCurrentUserSchema = z
-  .object({
-    is_signed_in: z.literal(false),
-  })
-  .transform(data => camelcaseKeys(data, {deep: true}));
+  // Identity
+  id: z.number(),
+  username: z.string(),
+  display_name: z.string(),
+  short_name: z.string(),
+  user_type: z.enum(['student', 'teacher', 'admin']),
 
-export const CurrentUserSchema = z.union([
-  SignedInCurrentUserSchema,
-  SignedOutCurrentUserSchema,
+  // Personalization / role signals
+  is_verified_instructor: z.boolean(),
+  is_levelbuilder: z.boolean(),
+  educator_role: z.string().nullable(),
+  grades_teaching: z.array(z.string()),
+
+  // Privacy / compliance signals
+  under_13: z.boolean(),
+  over_21: z.boolean(),
+  age: z.union([z.string(), z.number()]).nullable(),
+  country_code: z.string().nullable(),
+  us_state_code: z.string().nullable(),
+  child_account_compliance_state: z.string().nullable(),
+  sharing_disabled: z.boolean().nullable(),
+
+  // Preferences
+  mute_music: z.boolean(),
+  sort_by_family_name: z.boolean(),
+  has_seen_homepage_welcome: z.boolean(),
+  has_dismissed_personalization_alert: z.boolean(),
+
+  // AI gating
+  ai_chat_access_level: z.union([z.string(), z.number()]),
+  ai_rubrics_disabled: z.boolean().nullable(),
+  ai_differentiation_enabled: z.boolean(),
+  has_seen_ai_assessments_announcement: z.boolean(),
+  has_completed_ai_differentiation_welcome: z.boolean(),
+
+  // Session context
+  is_lti: z.boolean(),
+  // boolean for students (whether they're in a section); null for non-students.
+  in_section: z.boolean().nullable(),
+  created_at: z.string(),
+});
+
+/** Discriminated union schema for all `/api/v1/users/current` response shapes. */
+export const CurrentUserResponseSchema = z.discriminatedUnion('is_signed_in', [
+  CurrentUserResponseSignedOutSchema,
+  CurrentUserResponseSignedInSchema,
 ]);
+
+// camelCase projection of the current-user response. Discriminate on
+// is_signed_in before camelCasing so a bad field surfaces a targeted error,
+// not an opaque union failure.
+export const CurrentUserSchema = CurrentUserResponseSchema.transform(data =>
+  camelcaseKeys(data, {deep: true}),
+);
 
 export const SignedInResponseSchema = z.object({
   is_signed_in: z.boolean(),
@@ -77,34 +93,34 @@ export const ContactDetailsSchema = z
   })
   .transform(data => camelcaseKeys(data, {deep: true}));
 
-export const DonorTeacherBannerDetailsTeacherSchema = z
-  .object({
-    user_type: z.literal('teacher'),
-    teacher_first_name: z.string().nullable(),
-    teacher_second_name: z.string().nullable(),
-    teacher_email: z.string().nullable(),
-    nces_school_id: z.string().nullable(),
-    school_name: z.string().nullable(),
-    school_address_1: z.string().nullable(),
-    school_address_2: z.string().nullable(),
-    school_address_3: z.string().nullable(),
-    school_city: z.string().nullable(),
-    school_state: z.string().nullable(),
-    school_zip: z.string().nullable(),
-    afe_high_needs: z.boolean().nullable(),
-  })
-  .transform(data => camelcaseKeys(data, {deep: true}));
+export const DonorTeacherBannerDetailsTeacherSchema = z.object({
+  user_type: z.literal('teacher'),
+  teacher_first_name: z.string().nullable(),
+  teacher_second_name: z.string().nullable(),
+  teacher_email: z.string().nullable(),
+  nces_school_id: z.string().nullable(),
+  school_name: z.string().nullable(),
+  school_address_1: z.string().nullable(),
+  school_address_2: z.string().nullable(),
+  school_address_3: z.string().nullable(),
+  school_city: z.string().nullable(),
+  school_state: z.string().nullable(),
+  school_zip: z.string().nullable(),
+  afe_high_needs: z.boolean().nullable(),
+});
 
-export const DonorTeacherBannerDetailsStudentSchema = z
-  .object({
-    user_type: z.literal('student'),
-  })
-  .transform(data => camelcaseKeys(data, {deep: true}));
+export const DonorTeacherBannerDetailsStudentSchema = z.object({
+  user_type: z.literal('student'),
+});
 
-export const DonorTeacherBannerDetailsSchema = z.union([
-  DonorTeacherBannerDetailsTeacherSchema,
-  DonorTeacherBannerDetailsStudentSchema,
-]);
+// Discriminate on user_type before camelCasing so a malformed payload fails on
+// the discriminant, not as an opaque union mismatch.
+export const DonorTeacherBannerDetailsSchema = z
+  .discriminatedUnion('user_type', [
+    DonorTeacherBannerDetailsTeacherSchema,
+    DonorTeacherBannerDetailsStudentSchema,
+  ])
+  .transform(data => camelcaseKeys(data, {deep: true}));
 
 export const CurrentPermissionsSchema = z.object({
   permissions: z.array(z.string()),
@@ -121,3 +137,68 @@ export const HasDismissedPersonalizationAlertSchema = z
     has_dismissed_personalization_alert: z.boolean(),
   })
   .transform(data => camelcaseKeys(data, {deep: true}));
+
+// --- My Account settings (GET /api/v1/users/me/settings) ---
+
+const AuthenticationOptionSchema = z.object({
+  credential_type: z.string(),
+  email: z.string().nullable(),
+});
+
+// Age / US-state dropdown choices, served from the Rails source of truth
+// (User::AGE_DROPDOWN_OPTIONS, User.us_state_dropdown_options) so the client
+// doesn't duplicate them.
+const DropdownOptionSchema = z.object({value: z.string(), text: z.string()});
+
+// Wire (snake_case) shape of GET /api/v1/users/me/settings, transformed to the
+// camelCase model the page consumes.
+export const UserSettingsResponseSchema = z
+  .object({
+    user_type: z.enum(['student', 'teacher']),
+    given_name: z.string().nullable(),
+    family_name: z.string().nullable(),
+    display_name: z.string(),
+    username: z.string().nullable(),
+    email: z.string().nullable(),
+    has_password: z.boolean(),
+    can_edit_email: z.boolean(),
+    can_edit_password: z.boolean(),
+    should_see_add_password_form: z.boolean(),
+    should_see_edit_email_link: z.boolean(),
+    authentication_options: z.array(AuthenticationOptionSchema),
+    can_change_user_type: z.boolean(),
+    can_delete_own_account: z.boolean(),
+    // Nullable on read (a student may have neither yet); the server requires
+    // them for students on save, and a blank save surfaces the server's error.
+    age: z.union([z.number(), z.string()]).nullable(),
+    us_state: z.string().nullable(),
+    parent_email: z.string().nullable(),
+    dependent_students_count: z.number(),
+    age_options: z.array(DropdownOptionSchema),
+    us_state_options: z.array(DropdownOptionSchema),
+  })
+  .transform(r => ({
+    userType: r.user_type,
+    givenName: r.given_name,
+    familyName: r.family_name,
+    displayName: r.display_name,
+    username: r.username,
+    email: r.email,
+    hasPassword: r.has_password,
+    canEditEmail: r.can_edit_email,
+    canEditPassword: r.can_edit_password,
+    shouldSeeAddPasswordForm: r.should_see_add_password_form,
+    shouldSeeEditEmailLink: r.should_see_edit_email_link,
+    authenticationOptions: r.authentication_options.map(option => ({
+      credentialType: option.credential_type,
+      email: option.email,
+    })),
+    canChangeUserType: r.can_change_user_type,
+    canDeleteOwnAccount: r.can_delete_own_account,
+    age: r.age,
+    usState: r.us_state,
+    parentEmail: r.parent_email,
+    dependentStudentsCount: r.dependent_students_count,
+    ageOptions: r.age_options,
+    usStateOptions: r.us_state_options,
+  }));

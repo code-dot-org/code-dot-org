@@ -7,7 +7,7 @@ timed_task_with_logging :prepare_dbs do
   with_rack_env(:test) do
     Dir.chdir(pegasus_dir) do
       puts "Migrating #{CDO.pegasus_db_name} database..."
-      RakeUtils.rake 'db:ensure_created', 'db:migrate', 'seed:migrate'
+      RakeUtils.rake 'db:ensure_created', 'db:migrate'
     end
   end
 end

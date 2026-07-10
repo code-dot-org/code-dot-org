@@ -163,7 +163,7 @@ def parse_options
         options.first_run_local = 'true'
       end
       opts.on("--device-farm", "Use AWS Device Farm instead of SauceLabs for remote browser testing. " \
-                               "Requires CDO.device_farm_desktop_project_arn (desktop configs) " \
+                               "Requires CDO.device_farm_desktop_project_id (desktop configs) " \
                                "and/or CDO.device_farm_mobile_project_arn (mobile configs) to be set. " \
                                "Note: Device Farm cannot reach localhost on development machines -- " \
                                "use a public domain (e.g. via ngrok)."
@@ -803,6 +803,7 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@dashboard_db_access') unless options.dashboard_db_access
   arguments += skip_tag('@properties_encryption_key') if CDO.properties_encryption_key.blank?
   arguments += skip_tag('@cloudfront_key') if CDO.cloudfront_key_pair_id.blank?
+  arguments += skip_tag('@contentful_key') if CDO.contentful_cs_for_all_access_token.blank?
   arguments
 end
 

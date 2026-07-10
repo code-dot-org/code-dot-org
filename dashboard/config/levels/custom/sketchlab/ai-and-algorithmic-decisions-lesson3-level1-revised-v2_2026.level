@@ -51,7 +51,7 @@
               "shapeType": "circle",
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-pink)",
-              "strokeColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
               "showHandles": false
             },
             "measured": {
@@ -78,7 +78,7 @@
               "shapeType": "circle",
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-green)",
-              "strokeColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
               "showHandles": false
             },
             "measured": {
@@ -105,7 +105,7 @@
               "shapeType": "circle",
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-blue)",
-              "strokeColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
               "showHandles": false
             },
             "measured": {
@@ -132,7 +132,7 @@
               "shapeType": "circle",
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-yellow)",
-              "strokeColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
               "showHandles": false
             },
             "measured": {
@@ -159,7 +159,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-pink)",
-              "strokeColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
               "showHandles": false,
               "locked": true
             },
@@ -206,7 +206,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-green)",
-              "strokeColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
               "showHandles": false,
               "locked": true
             },
@@ -234,7 +234,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-blue)",
-              "strokeColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
               "showHandles": false,
               "locked": true
             },
@@ -262,7 +262,7 @@
               "shapeType": "rectangle",
               "label": "",
               "backgroundColor": "var(--sketchlab-bg-yellow)",
-              "strokeColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
               "showHandles": false,
               "locked": true
             },

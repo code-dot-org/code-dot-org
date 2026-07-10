@@ -1,16 +1,23 @@
 import {faSpinner} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import type React from 'react';
+import {type ReactNode, useEffect} from 'react';
 
 import {styles} from './constants';
+import {reportPanelView} from './helpers/metrics';
 import {
   isSaveComplete,
   shouldDisplaySaveStatus,
 } from './helpers/navigationValidation';
 import {shallowEqual, useAppDispatch, useAppSelector} from './hooks';
 import I18n from './i18n';
-import {getPanelButtons, setCurrentPanel} from './redux';
-import type {PrevNextButtons, SaveResponseData} from './types';
+import {getPanelButtons, saveModel, setCurrentPanel} from './redux';
+import type {
+  InstructionsKey,
+  Panel,
+  PrevNextButtons,
+  SaveResponseData,
+  SaveTrainedModel,
+} from './types';
 import ColumnInspector from './UIComponents/ColumnInspector';
 import DataCard from './UIComponents/DataCard';
 import DataDisplay from './UIComponents/DataDisplay';
@@ -24,8 +31,8 @@ import TrainModel from './UIComponents/TrainModel';
 
 interface PanelButtonsProps {
   panelButtons: PrevNextButtons;
-  currentPanel: string;
-  setCurrentPanel: (panel: string) => void;
+  currentPanel: Panel;
+  setCurrentPanel: (panel: Panel) => void;
   onContinue: () => void;
   startSaveTrainedModel: () => void;
   saveStatus: string;
@@ -150,7 +157,7 @@ const PanelButtons = ({
 };
 
 interface BodyContainerProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const BodyContainer = ({children}: BodyContainerProps) => {
@@ -158,7 +165,7 @@ const BodyContainer = ({children}: BodyContainerProps) => {
 };
 
 interface ContainerLeftProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const ContainerLeft = ({children}: ContainerLeftProps) => {
@@ -170,7 +177,7 @@ const ContainerLeft = ({children}: ContainerLeftProps) => {
 };
 
 interface ContainerRightProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const ContainerRight = ({children}: ContainerRightProps) => {
@@ -182,16 +189,23 @@ const ContainerRight = ({children}: ContainerRightProps) => {
 };
 
 interface ContainerFullWidthProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const ContainerFullWidth = ({children}: ContainerFullWidthProps) => {
   return <div style={styles.panelContainerFullWidth}>{children}</div>;
 };
 
-interface AppProps {
+export interface AppProps {
+  /** Called when advancing to the next level. */
   onContinue: () => void;
-  startSaveTrainedModel: () => void;
+  /** Persist a trained model; invokes `callback` with the save result. */
+  saveTrainedModel: SaveTrainedModel;
+  /** Optional callback invoked when the instructions key changes. */
+  setInstructionsKey?: (
+    key: InstructionsKey,
+    options: {showOverlay?: boolean} | null,
+  ) => void;
 }
 
 // getPanelButtons builds a fresh {prev, next} each call (and reads I18n for
@@ -200,13 +214,27 @@ interface AppProps {
 const panelButtonsEqual = (a: PrevNextButtons, b: PrevNextButtons) =>
   shallowEqual(a.prev, b.prev) && shallowEqual(a.next, b.next);
 
-const App = ({onContinue, startSaveTrainedModel}: AppProps) => {
+const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
   const dispatch = useAppDispatch();
   const panelButtons = useAppSelector(getPanelButtons, panelButtonsEqual);
   const currentPanel = useAppSelector(state => state.currentPanel);
   const resultsPhase = useAppSelector(state => state.resultsPhase);
   const saveStatus = useAppSelector(state => state.saveStatus);
   const saveResponseData = useAppSelector(state => state.saveResponseData);
+  const instructionsKey = useAppSelector(state => state.instructionsKey);
+  const showOverlay = useAppSelector(state => state.showOverlay);
+
+  // Notify the consumer of instructions key changes when they occur.
+  useEffect(() => {
+    if (instructionsKey) {
+      setInstructionsKey?.(instructionsKey, {showOverlay});
+    }
+  }, [instructionsKey, showOverlay]);
+
+  // Report panel view on every panel change.
+  useEffect(() => {
+    reportPanelView(currentPanel);
+  }, [currentPanel]);
 
   return (
     <div style={styles.app}>
@@ -283,7 +311,7 @@ const App = ({onContinue, startSaveTrainedModel}: AppProps) => {
         currentPanel={currentPanel}
         setCurrentPanel={panel => dispatch(setCurrentPanel(panel))}
         onContinue={onContinue}
-        startSaveTrainedModel={startSaveTrainedModel}
+        startSaveTrainedModel={() => dispatch(saveModel(saveTrainedModel))}
         saveStatus={saveStatus}
         saveResponseData={saveResponseData}
         isSaveComplete={isSaveComplete}

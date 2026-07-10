@@ -139,7 +139,7 @@ still on the TODO list. Differences from legacy use:
 - Run button enabled at mount — Java has no client-side runtime to warm
   up, so `setLoadedCodeEnvironment(true)` dispatches in a `useEffect`.
 - Utilizes Lab2 resource panel, which gives us instructions, version history,
-  and committing a named version for free.
+  backpack, and committing a named version for free.
 - Can create/edit start sources and exemplars.
 - Validation (student run path): a level with validation files shows the
   Lab2 Validate button; clicking it runs the level's tests on Javabuilder
@@ -151,8 +151,8 @@ still on the TODO list. Differences from legacy use:
 - Support for theater (image + audio playback): a `theater` `csaViewMode`
   level renders the generated image and plays its audio in the Lab2 preview
   panel, with run / reset wired up. Shares the new `apps/src/miniApps/theater/`
-  mini-app with a Lab2 `TheaterPreview` wrapper, mirroring neighborhood. The
-  `GET_IMAGE` photo prompter is deferred (see To Dos).
+  mini-app with a Lab2 `TheaterPreview` wrapper, mirroring neighborhood. 
+  Also supports the prompter, with a button over the preview.
 - Image and audio assets (`png jpg jpeg gif wav mp3`): uploadable via the
   codebridge file browser in both student and start mode, displayed
   inline for images, stripped into `assetUrls` server-side for
@@ -165,17 +165,19 @@ still on the TODO list. Differences from legacy use:
   (`Javalab#clear_lab2_starter_assets`, called from
   `levels_controller#update_start_code`) so assets a levelbuilder
   deleted cannot re-seed from it.
+- Lab2 predict settings can be added to a level that uses_lab2. A legacy level
+  can migrate its settings via the `bin/oneoff/migrate_contained_levels_to_predict.rb`
+  script (see script for details). That script will write the old contained level
+  settings into the new predict level format. The script has not yet been run for
+  all existing levels, but can run on an entire folder if desired.
+  When loading predict levels, we will check for student responses stored on the contained
+  level and fall back to that response, if it exists, so student data
+  is not lost in a migration.
 
 ## To Dos
-- **Theater photo prompter** — the `GET_IMAGE` signal (crosshair overlay +
-  photo upload) is stubbed with a console notice; the core theater mini-app
-  (image + audio playback) is supported.
-- **Backpack**
 - **Captcha dialog** on `AuthorizerSignalType.CAPTCHA`.
 - **Code review**.
-- **Contained levels (predict levels)** — Java Lab uses the old 'contained levels'
-  version of predict levels. We will need to support converting these levels
-  to the lab2 predict level setup.
+- **Teacher feedback** populate teacher feedback in resource panel.
 - **Decommissioning the legacy bundle**. `apps/src/javalab/` stays
   until parity is reached and all production levels have flipped
   `uses_lab2`.

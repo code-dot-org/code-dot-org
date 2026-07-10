@@ -11568,7 +11568,6 @@ __metadata:
     css-loader: "npm:^6.2.0"
     dapjs: "npm:^2.3.0"
     dedent: "npm:^1.5.1"
-    details-element-polyfill: "https://github.com/javan/details-element-polyfill"
     ejs: "npm:^3.1.10"
     enzyme: "npm:^3.9.0"
     eslint: "npm:^8.56.0"
@@ -11601,7 +11600,6 @@ __metadata:
     grunt-contrib-watch: "npm:^1.1.0"
     grunt-exec: "npm:^3.0.0"
     grunt-newer: "npm:^1.3.0"
-    grunt-notify: "npm:0.4.5"
     grunt-sass: "npm:3.1.0"
     grunt-webpack: "npm:^6.0.0"
     hammerjs: "npm:^2.0.8"
@@ -11710,7 +11708,6 @@ __metadata:
     react-typist: "npm:^2.0.5"
     react-virtualized: "npm:^9.18.5"
     react-virtualized-select: "npm:^3.0.1"
-    react-with-context: "npm:^2.0.0"
     reactabular-sticky: "npm:^8.14.0"
     reactabular-table: "npm:^8.14.0"
     reactabular-virtualized: "npm:^8.18.0"
@@ -13397,7 +13394,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"create-react-class@npm:^15.5.1, create-react-class@npm:^15.5.x, create-react-class@npm:^15.6.0":
+"create-react-class@npm:^15.5.1, create-react-class@npm:^15.5.x":
   version: 15.6.3
   resolution: "create-react-class@npm:15.6.3"
   dependencies:
@@ -14406,13 +14403,6 @@ canvg@gabelerner/canvg:
   version: 1.2.0
   resolution: "destroy@npm:1.2.0"
   checksum: 10/0acb300b7478a08b92d810ab229d5afe0d2f4399272045ab22affa0d99dbaf12637659411530a6fcd597a9bdac718fc94373a61a95b4651bbc7b83684a565e38
-  languageName: node
-  linkType: hard
-
-"details-element-polyfill@https://github.com/javan/details-element-polyfill":
-  version: 1.1.0
-  resolution: "details-element-polyfill@https://github.com/javan/details-element-polyfill.git#commit=25f3fa9b42c2dbe59e45cd0778ee7c425263d9c1"
-  checksum: 10/2892c90f924ef304a4d89a008894875e6249310f0b442cefd3326c04b88cbc421864cae20a649b9748c1d65cbfaa9b46c5bbb32ba9a2ef80b6cf68c6e5334797
   languageName: node
   linkType: hard
 
@@ -18004,17 +17994,6 @@ canvg@gabelerner/canvg:
   peerDependencies:
     grunt: ">=0.4.1"
   checksum: 10/e03911a24a5ac0446316065203272a9ffffd886caad24494ac0e11d6303fd966b4eb4dea64cf40b3d9f9d9d0a468860e6962c2e9d3c537034187258d337adb49
-  languageName: node
-  linkType: hard
-
-"grunt-notify@npm:0.4.5":
-  version: 0.4.5
-  resolution: "grunt-notify@npm:0.4.5"
-  dependencies:
-    semver: "npm:^5.1.0"
-    stack-parser: "npm:^0.0.1"
-    which: "npm:^1.2.4"
-  checksum: 10/00bbaa0c0518f00b9c2022e4fb2d335776f50897d11918928606a6c9fb01e944605c340069098250a28e5a16b46aa96df78c144aee2b1565d3a19dd1834c7106
   languageName: node
   linkType: hard
 
@@ -26362,29 +26341,6 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"react-with-context@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "react-with-context@npm:2.0.0"
-  dependencies:
-    "@types/react": "npm:^16.0.7"
-    react: "npm:^15.6.2"
-  checksum: 10/b51c3995737837640960c34b559e0cc5389d3de6bb5be072371efd72fcd48bd580dcfc1458719212079256d7ba0c9fed37fc5fce3d26c8b1c6e761969c00cd7d
-  languageName: node
-  linkType: hard
-
-"react@npm:^15.6.2":
-  version: 15.6.2
-  resolution: "react@npm:15.6.2"
-  dependencies:
-    create-react-class: "npm:^15.6.0"
-    fbjs: "npm:^0.8.9"
-    loose-envify: "npm:^1.1.0"
-    object-assign: "npm:^4.1.0"
-    prop-types: "npm:^15.5.10"
-  checksum: 10/8c55337715dc20a12393f1381bafd9a2d2452d7245ccfb5ea2bc1181c2dde4cc6b6319e1ae56fdffe58f3f9e7da95f0e6b45c79e7982789378b8eafa41a6016f
-  languageName: node
-  linkType: hard
-
 "react@npm:^16.8.0 || ^17.0.0 || ^18.0.0":
   version: 18.2.0
   resolution: "react@npm:18.2.0"
@@ -27872,7 +27828,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"semver@npm:2 || 3 || 4 || 5, semver@npm:^5.1.0":
+"semver@npm:2 || 3 || 4 || 5":
   version: 5.3.0
   resolution: "semver@npm:5.3.0"
   bin:
@@ -28650,13 +28606,6 @@ canvg@gabelerner/canvg:
   dependencies:
     minipass: "npm:^7.0.3"
   checksum: 10/453f9a1c241c13f5dfceca2ab7b4687bcff354c3ccbc932f35452687b9ef0ccf8983fd13b8a3baa5844c1a4882d6e3ddff48b0e7fd21d743809ef33b80616d79
-  languageName: node
-  linkType: hard
-
-"stack-parser@npm:^0.0.1":
-  version: 0.0.1
-  resolution: "stack-parser@npm:0.0.1"
-  checksum: 10/e34830aebc52e7dd0de45ea3153fa31a467c5e5a41a3044df83c5d3f250ca78f7ecca3813aebf50ddb1563b50963d4a8b0a6bdeba2b43507d0a968c12376bd6b
   languageName: node
   linkType: hard
 
@@ -32078,7 +32027,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"which@npm:^1.2.1, which@npm:^1.2.4":
+"which@npm:^1.2.1":
   version: 1.2.11
   resolution: "which@npm:1.2.11"
   dependencies:

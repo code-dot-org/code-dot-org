@@ -110,12 +110,7 @@ export default class BackpackClientApi {
     onSuccess?: (filenames: string[]) => void
   ): Promise<string[]> {
     try {
-      // Only fetch channel id if we don't yet have it. Javalab includes backpack channel_id
-      // in appOptions but lab2 labs (e.g., pythonlab) do not use appOptions.
       if (!this.channelId) {
-        if (this.appType === 'javalab') {
-          throw new Error('Missing backpack channel id for javalab');
-        }
         await this.fetchChannelId();
       }
       const response = await HttpClient.fetchJson<FileMetadata[]>(

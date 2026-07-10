@@ -19,9 +19,8 @@ export const REVIEW_SYLLABUS_ONBOARDING_STEP_KEY =
 const DROPDOWN_BUTTON_ID = 'go-to-lesson-dropdown-button';
 const FIRST_DROPDOWN_ITEM_SELECTOR = '#go-to-lesson-dropdown ul li:first-child';
 const ALL_DROPDOWN_ITEMS_SELECTOR = '#go-to-lesson-dropdown ul li';
-const UNIT_BREADCRUMB_SELECTOR = '.unit-breadcrumb';
-const UNIT_BREADCRUMB_LINK_SELECTOR = '.unit-breadcrumb a';
-export const UNIT_BREADCRUMB_STEP_ID = 'unit-breadcrumb-step';
+const COURSE_HEADER_SELECTOR = '#unit-overview-page-header';
+export const COURSE_HEADER_STEP_ID = 'unit-overview-page-step';
 
 const waitForElement = (
   selector: string,
@@ -89,7 +88,8 @@ const buildQuizHtml = (
 ): string =>
   `<div class="onboarding-step-content">` +
   `<i class="fa-solid fa-sparkle onboarding-sparkle-icon"></i>` +
-  `<span class="onboarding-step-text">When you're prepping a lesson, you don't have time to review every single level — and you don't need to. CodeAI highlights the levels most worth your attention. For Lesson ${lesson}, which level would you prioritize reviewing?</span>` +
+  `<span class="onboarding-step-text">If you're only reviewing one level, CodeAI recommends the Check for Understanding level — look for the purple checkmark — because it offers a quick snapshot of student readiness. Where would you look in this lesson to quickly assess student learning?
+</span>` +
   `</div>` +
   `<div class="quiz-options-grid">` +
   options
@@ -111,17 +111,21 @@ const createTeacherResourcesStep = (
 ): StepOptions => ({
   id: 'teacher-resources-dropdown',
   attachTo: {
-    element: '#teacher-resources-dropdown',
-    on: 'bottom',
+    element: '#teacher-resources-dropdown-dropdown-button',
+    on: 'right',
   },
   text: withSparkle(
     "If admin asks what standards you're covering or you need a refresher before starting something new, the implementation guides, standards alignment, and how-tos are all here."
   ),
   buttons: [nextButton(tour)],
   beforeShowPromise: controller
-    ? () => waitForElement('#teacher-resources-dropdown', controller.signal)
+    ? () =>
+        waitForElement(
+          '#teacher-resources-dropdown-dropdown-button',
+          controller.signal
+        )
     : undefined,
-  when: highlightAttachedElement('#teacher-resources-dropdown'),
+  when: highlightAttachedElement('#teacher-resources-dropdown-dropdown-button'),
 });
 
 const createLessonResourcesStep = (
@@ -134,7 +138,7 @@ const createLessonResourcesStep = (
     on: 'bottom',
   },
   text: withSparkle(
-    'Ready to dig into this lesson? The lesson plan, slide decks, and student activity guides are one click away. Plus you can save your own materials alongside them.'
+    'Ready to dig into this lesson? The lesson plan with slide decks, and student activity guides are one click away.'
   ),
   buttons: [nextButton(tour)],
   beforeShowPromise: () =>
@@ -169,62 +173,20 @@ const createQuizStep = (
 const createBreadcrumbStep = (
   tour: Tour,
   controller: AbortController
-): StepOptions => {
-  let breadcrumbClickHandler: ((e: Event) => void) | null = null;
-
-  return {
-    id: UNIT_BREADCRUMB_STEP_ID,
-    attachTo: {
-      element: UNIT_BREADCRUMB_SELECTOR,
-      on: 'bottom',
-    },
-    text: withSparkle(
-      'The Course page is where you can map out what students will learn, lesson by lesson. Need to zoom out and see the bigger picture for the full course? Click the course name above the unit header.'
-    ),
-    buttons: [nextButton(tour)],
-    beforeShowPromise: () =>
-      waitForElement(UNIT_BREADCRUMB_SELECTOR, controller.signal),
-    // No advanceOn: we prevent default on the anchor click so the celebration
-    // popup can appear before navigation, then let the tour buttons decide
-    // where to go.
-    when: {
-      show() {
-        document
-          .querySelector(UNIT_BREADCRUMB_SELECTOR)
-          ?.classList.add('tour-step-highlight');
-
-        breadcrumbClickHandler = (e: Event) => {
-          e.preventDefault();
-          document
-            .querySelector(UNIT_BREADCRUMB_SELECTOR)
-            ?.classList.remove('tour-step-highlight');
-          if (breadcrumbClickHandler !== null) {
-            document
-              .querySelector(UNIT_BREADCRUMB_LINK_SELECTOR)
-              ?.removeEventListener('click', breadcrumbClickHandler);
-          }
-          breadcrumbClickHandler = null;
-          tour.next();
-        };
-
-        document
-          .querySelector(UNIT_BREADCRUMB_LINK_SELECTOR)
-          ?.addEventListener('click', breadcrumbClickHandler);
-      },
-      hide() {
-        document
-          .querySelector(UNIT_BREADCRUMB_SELECTOR)
-          ?.classList.remove('tour-step-highlight');
-        if (breadcrumbClickHandler !== null) {
-          document
-            .querySelector(UNIT_BREADCRUMB_LINK_SELECTOR)
-            ?.removeEventListener('click', breadcrumbClickHandler);
-          breadcrumbClickHandler = null;
-        }
-      },
-    },
-  };
-};
+): StepOptions => ({
+  id: COURSE_HEADER_STEP_ID,
+  attachTo: {
+    element: COURSE_HEADER_SELECTOR,
+    on: 'bottom',
+  },
+  text: withSparkle(
+    'The Course page is where you can map out what students will learn, lesson by lesson. Need to zoom out and see the bigger picture for the full course? Click the course name above the unit header.'
+  ),
+  buttons: [nextButton(tour)],
+  beforeShowPromise: () =>
+    waitForElement(COURSE_HEADER_SELECTOR, controller.signal),
+  when: highlightAttachedElement(COURSE_HEADER_SELECTOR),
+});
 
 // ── Homepage steps ─────────────────────────────────────────────────────────────
 
@@ -248,7 +210,7 @@ const createHomepageSteps = (
         on: 'bottom',
       },
       text: withSparkle(
-        "Before you assign anything to students, it helps to know what's coming. The Jump to menu gets you straight to the syllabus for your assigned unit.",
+        "The Jump to menu gets you straight to the syllabus for your assigned unit. Get a sense of what's coming with your course.",
         'Click the dropdown menu to take a look.'
       ),
       advanceOn: {
@@ -264,7 +226,7 @@ const createHomepageSteps = (
         on: 'right',
       },
       text: withSparkle(
-        'Your assigned unit is right at the top. Click it to see the full lesson breakdown before your students do.',
+        'Your assigned unit is here. Click the unit name at the top to see the full lesson breakdown.',
         'Click the unit name to continue.'
       ),
       beforeShowPromise: () =>
@@ -325,7 +287,7 @@ export const createReviewSyllabusHomepageSteps = (
       return createHomepageSteps(
         tour,
         sessionStorageKey,
-        UNIT_BREADCRUMB_STEP_ID
+        COURSE_HEADER_STEP_ID
       );
     case 'elementary':
       return createHomepageSteps(

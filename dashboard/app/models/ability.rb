@@ -65,6 +65,9 @@ class Ability
       AidiffArtifact,
       PracticeProblem,
       UserPracticeProblemAttempt,
+      Challenge,
+      ChallengeResponse,
+      ChallengeResponseAsset,
     ]
     cannot :index, Level
 
@@ -209,12 +212,18 @@ class Ability
         can :manage, User do |u|
           user.students.include?(u) && !Policies::DemoSections.demo_student?(u.id)
         end
+        can :read, User do |u|
+          user.students.include?(u) && Policies::DemoSections.demo_student?(u.id)
+        end
         can [:create, :get_feedback_from_teacher], TeacherFeedback do |feedback|
           user.students.exists?(id: feedback.student_id)
         end
         can :manage, Follower
         can :manage, UserLevel do |user_level|
           !user.students.where(id: user_level.user_id).empty? && !Policies::DemoSections.demo_student?(user_level.user_id)
+        end
+        can :read, UserLevel do |user_level|
+          !user.students.where(id: user_level.user_id).empty? && Policies::DemoSections.demo_student?(user_level.user_id)
         end
         can :read, Plc::UserCourseEnrollment, user_id: user.id
         can :view_level_solutions, Unit do |script|
@@ -329,6 +338,18 @@ class Ability
       can :create, UserPracticeProblemAttempt
       can [:index, :update, :show], UserPracticeProblemAttempt, user_id: user.id
       can [:index, :show], PracticeProblem
+      can [:index, :show], Challenge
+
+      # Students create and read their own challenge responses; teachers read
+      # their students' responses (and assets).
+      can :create, ChallengeResponse
+      can :read, ChallengeResponse do |challenge_response|
+        challenge_response.user_id == user.id || user.students.exists?(id: challenge_response.user_id)
+      end
+      can :read, ChallengeResponseAsset do |asset|
+        response = asset.challenge_response
+        response.user_id == user.id || user.students.exists?(id: response.user_id)
+      end
 
       can :show, Rubric
     end
@@ -416,6 +437,15 @@ class Ability
 
     if user.persisted? && (user.can_use_ai_iteration_tools? || user.can_access_student_work?)
       can [:tools], :ai_iteration
+    end
+
+    # The image-safety eval drives the live aichat image pipeline (gateway image
+    # generation + Azure moderation). Restricted to admins (not levelbuilders).
+    # Admins are migrated google-oauth teachers, so they satisfy
+    # teacher_can_access_aichat? and the /ai_gateway/access_token endpoint will
+    # still issue them tokens.
+    if user.persisted? && user.admin?
+      can [:image_safety_eval], :ai_iteration
     end
 
     if user.persisted? && user.can_access_student_work?

@@ -100,6 +100,8 @@ export const createHomepageSteps = (
   // hide() can clean up if the step is dismissed without a click (e.g. cancel).
   let loginClickHandler: (() => void) | null = null;
   let sectionTypeButtons: Element[] = [];
+  // Watches for the AddSectionDialog to close without a login type selection.
+  let dialogDismissObserver: MutationObserver | null = null;
 
   return [
     {
@@ -131,6 +133,7 @@ export const createHomepageSteps = (
           ? 'Personal logins work best for high school classes. Students can use their email address to sign in and reset their password if they forget it.'
           : "Secret words work best for middle school classes. They're simple enough to remember, no email account required. Select a login method to continue."
       ),
+      classes: 'custom-shepherd-step-container tour-step-above-modal',
       beforeShowPromise: () => waitForElement(loginSelector, controller.signal),
       // No advanceOn: this is the last homepage step, so tour.next() would fire
       // tour.complete() and clear sessionStorage before the page navigates to
@@ -138,19 +141,23 @@ export const createHomepageSteps = (
       // next page's first step so resumeCreateSectionOnboardingTour resumes there.
       when: {
         show() {
-          document
-            .querySelector(loginSelector)
-            ?.classList.add('tour-step-highlight');
+          const loginEl = document.querySelector(loginSelector);
+          loginEl?.classList.add('tour-step-highlight');
 
           sectionTypeButtons = Object.values(LOGIN_SELECTORS)
             .map(sel => document.querySelector(sel))
             .filter((el): el is Element => el !== null);
 
           loginClickHandler = () => {
+            // Tear down the dismiss observer before navigating so it doesn't
+            // misfire on the DOM teardown that follows.
+            dialogDismissObserver?.disconnect();
+            dialogDismissObserver = null;
             trySetSessionStorage(sessionStorageKey, SECTIONS_NEW_FIRST_STEP_ID);
             sectionTypeButtons.forEach(el =>
               el.removeEventListener('click', loginClickHandler!)
             );
+            loginClickHandler = null;
             // Dismiss the tooltip immediately so it doesn't float while the
             // page navigates. hide() does not fire cancel/complete, so
             // sessionStorage is preserved for the next page to resume from.
@@ -160,8 +167,30 @@ export const createHomepageSteps = (
           sectionTypeButtons.forEach(el =>
             el.addEventListener('click', loginClickHandler!)
           );
+
+          // Cancel the tour if the dialog is dismissed without a login type
+          // selection (Cancel button, Escape key, backdrop click, etc.).
+          // loginClickHandler being non-null means no selection was made.
+          if (loginEl) {
+            dialogDismissObserver = new MutationObserver(() => {
+              if (
+                !document.body.contains(loginEl) &&
+                loginClickHandler !== null
+              ) {
+                dialogDismissObserver?.disconnect();
+                dialogDismissObserver = null;
+                tour.cancel();
+              }
+            });
+            dialogDismissObserver.observe(document.body, {
+              childList: true,
+              subtree: true,
+            });
+          }
         },
         hide() {
+          dialogDismissObserver?.disconnect();
+          dialogDismissObserver = null;
           document
             .querySelector(loginSelector)
             ?.classList.remove('tour-step-highlight');
