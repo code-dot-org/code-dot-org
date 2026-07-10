@@ -6,8 +6,17 @@ describe AWS::EC2 do
 
   # Reset memoized variables to ensure fresh metadata lookups
   before do
+    @aws_ec2_metadata_disabled = ENV.delete('AWS_EC2_METADATA_DISABLED')
     [:@instance_id, :@region, :@account_id, :@local_ipv4, :@instance_type, :@availability_zone, :@hourly_rates].each do |var|
       described_class.remove_instance_variable(var) if described_class.instance_variable_defined?(var)
+    end
+  end
+
+  after do
+    if @aws_ec2_metadata_disabled.nil?
+      ENV.delete('AWS_EC2_METADATA_DISABLED')
+    else
+      ENV['AWS_EC2_METADATA_DISABLED'] = @aws_ec2_metadata_disabled
     end
   end
 
@@ -36,6 +45,24 @@ describe AWS::EC2 do
         # To test that the code handles a failure, we simulate http_request
         # returning nil (which is what it does when it catches a StandardError).
         described_class.stubs(:http_request).returns(nil)
+
+        _(described_class.instance_id).must_be_nil
+      end
+    end
+
+    context 'when EC2 metadata is disabled' do
+      it 'returns nil without making a request' do
+        ENV['AWS_EC2_METADATA_DISABLED'] = 'true'
+        described_class.expects(:http_request).never
+
+        _(described_class.instance_id).must_be_nil
+      end
+    end
+
+    context 'when running in development' do
+      it 'returns nil without making a request' do
+        CDO.stubs(:rack_env?).with(:development).returns(true)
+        described_class.expects(:http_request).never
 
         _(described_class.instance_id).must_be_nil
       end

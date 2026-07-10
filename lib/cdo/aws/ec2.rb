@@ -87,6 +87,8 @@ module AWS
     end
 
     private_class_method def self.fetch_metadata(path)
+      return nil if metadata_disabled?
+
       token = fetch_token
       return nil unless token # IMDSv2 requires a token; fail if not obtained
 
@@ -117,6 +119,11 @@ module AWS
     rescue StandardError => exception
       Honeybadger.notify(exception) if defined?(Honeybadger)
       nil
+    end
+
+    private_class_method def self.metadata_disabled?
+      ENV['AWS_EC2_METADATA_DISABLED'].to_s.casecmp('true').zero? ||
+        (defined?(CDO) && CDO.respond_to?(:rack_env?) && CDO.rack_env?(:development))
     end
 
     private_class_method def self.pricing_client
