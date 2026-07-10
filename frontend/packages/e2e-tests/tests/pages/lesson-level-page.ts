@@ -14,9 +14,17 @@ export class LessonLevelPage extends BasePage {
   /** Lesson-progress strip; one bubble link per level. */
   readonly lessonProgress: Locator;
 
+  /**
+   * The whole lesson header block: title, save-status timestamp, progress
+   * bubbles. Mask this in visual checks — bubble state and the relative
+   * timestamp change run to run.
+   */
+  readonly lessonHeaderInfo: Locator;
+
   constructor(page: Page) {
     super(page);
     this.lessonProgress = page.locator('.header_level .react_stage');
+    this.lessonHeaderInfo = page.locator('.header_level');
   }
 
   /** Progress bubble for a 1-based level number (see progress.rb header_bubble_selector). */
