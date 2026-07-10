@@ -88,9 +88,7 @@ experiments.getLocalStorageExperiments_ = function () {
     const jsonList = localStorage.getItem(STORAGE_KEY);
     const storedExperiments = jsonList ? JSON.parse(jsonList) : [];
     const now = Date.now();
-    // Drop duplicate keys along with expired entries; setEnabled used to
-    // write duplicates (fixed in #72854) and they persist in storage until
-    // rewritten here.
+    // Storage may contain duplicate keys; keep the first live entry for each.
     const seenKeys = new Set();
     const enabledExperiments = storedExperiments.filter(experiment => {
       const enabled =
