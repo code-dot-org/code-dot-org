@@ -1,16 +1,18 @@
 import {
   drawCircle,
   floodFill,
+  Raster,
+  RGBA,
   stamp,
   stampLine,
 } from '@cdo/apps/pixelEditor/tools';
 
 // A blank raster (transparent black), like a fresh ImageData.
-function makeRaster(width, height) {
+function makeRaster(width: number, height: number): Raster {
   return {width, height, data: new Uint8ClampedArray(width * height * 4)};
 }
 
-function pixel(raster, x, y) {
+function pixel(raster: Raster, x: number, y: number): number[] {
   const i = (y * raster.width + x) * 4;
   return [
     raster.data[i],
@@ -20,7 +22,7 @@ function pixel(raster, x, y) {
   ];
 }
 
-function countOpaque(raster) {
+function countOpaque(raster: Raster): number {
   let count = 0;
   for (let i = 3; i < raster.data.length; i += 4) {
     if (raster.data[i] > 0) {
@@ -30,8 +32,8 @@ function countOpaque(raster) {
   return count;
 }
 
-const RED = [255, 0, 0, 255];
-const BLUE = [0, 0, 255, 255];
+const RED: RGBA = [255, 0, 0, 255];
+const BLUE: RGBA = [0, 0, 255, 255];
 
 describe('pixelEditor tools', () => {
   describe('stamp', () => {

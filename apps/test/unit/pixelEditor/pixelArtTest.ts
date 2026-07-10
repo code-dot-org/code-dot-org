@@ -5,6 +5,9 @@ import {
   downsampleToGrid,
   upscaleNearest,
 } from '@cdo/apps/pixelEditor/pixelArt';
+import {Raster} from '@cdo/apps/pixelEditor/tools';
+
+type RGB = [number, number, number];
 
 // The caller-supplied fallback for assumePixelGrid (callers pass their
 // prompt's block size; the tests just need a fixed value).
@@ -13,7 +16,7 @@ const FALLBACK_BLOCK = 16;
 // Build a raster depicting logical pixel art: each logical pixel becomes a
 // blockSize x blockSize physical block, shifted by the given offset (the
 // leading partial block repeats the first row/column, like a crop would).
-function blockyRaster(logical, blockSize, offset = 0) {
+function blockyRaster(logical: RGB[][], blockSize: number, offset = 0): Raster {
   const lh = logical.length;
   const lw = logical[0].length;
   const width = lw * blockSize + offset;
@@ -42,7 +45,7 @@ function blockyRaster(logical, blockSize, offset = 0) {
 
 // Three well-separated colors; adjacent palette indices always differ enough
 // to register as an edge.
-const PALETTE = [
+const PALETTE: RGB[] = [
   [200, 40, 40],
   [40, 160, 60],
   [40, 60, 200],
@@ -51,10 +54,10 @@ const PALETTE = [
 // An 8x8 logical pattern where every pair of adjacent pixels (both axes)
 // differs: index changes by 1 mod 3 horizontally and 2 mod 3 vertically,
 // so every grid line produces a color edge.
-function samplePattern() {
-  const rows = [];
+function samplePattern(): RGB[][] {
+  const rows: RGB[][] = [];
   for (let y = 0; y < 8; y++) {
-    const row = [];
+    const row: RGB[] = [];
     for (let x = 0; x < 8; x++) {
       row.push(PALETTE[(x + y * 2) % 3]);
     }
@@ -64,7 +67,11 @@ function samplePattern() {
 }
 
 // Build a raster with colorAt(x, y) -> [r, g, b] deciding each pixel.
-function rasterFrom(width, height, colorAt) {
+function rasterFrom(
+  width: number,
+  height: number,
+  colorAt: (x: number, y: number) => RGB
+): Raster {
   const data = new Uint8ClampedArray(width * height * 4);
   for (let y = 0; y < height; y++) {
     for (let x = 0; x < width; x++) {
@@ -90,27 +97,27 @@ describe('pixelArt', () => {
     const raster = blockyRaster(samplePattern(), 12);
     const grid = detectPixelGrid(raster);
     expect(grid).not.toBeNull();
-    expect(grid.sizeX).toBe(12);
-    expect(grid.sizeY).toBe(12);
-    expect(grid.offsetX).toBe(0);
-    expect(grid.offsetY).toBe(0);
+    expect(grid!.sizeX).toBe(12);
+    expect(grid!.sizeY).toBe(12);
+    expect(grid!.offsetX).toBe(0);
+    expect(grid!.offsetY).toBe(0);
   });
 
   it('detects an offset grid', () => {
     const raster = blockyRaster(samplePattern(), 10, 4);
     const grid = detectPixelGrid(raster);
     expect(grid).not.toBeNull();
-    expect(grid.sizeX).toBe(10);
-    expect(grid.sizeY).toBe(10);
+    expect(grid!.sizeX).toBe(10);
+    expect(grid!.sizeY).toBe(10);
     // Edge tolerance allows the offset to land within a pixel of the truth.
-    expect(Math.abs(grid.offsetX - 4)).toBeLessThanOrEqual(1);
+    expect(Math.abs(grid!.offsetX - 4)).toBeLessThanOrEqual(1);
   });
 
   it('prefers the coarsest grid that explains the edges', () => {
     // 16px blocks also align to an 8px grid; detection should report 16.
     const raster = blockyRaster(samplePattern(), 16);
     const grid = detectPixelGrid(raster);
-    expect(grid.sizeX).toBe(16);
+    expect(grid!.sizeX).toBe(16);
   });
 
   it('returns null for smooth gradients', () => {
@@ -121,7 +128,7 @@ describe('pixelArt', () => {
     const logical = samplePattern();
     const raster = blockyRaster(logical, 12);
     const grid = detectPixelGrid(raster);
-    const small = downsampleToGrid(raster, grid);
+    const small = downsampleToGrid(raster, grid!);
     expect(small.width).toBe(8);
     expect(small.height).toBe(8);
     for (let y = 0; y < 8; y++) {
@@ -137,7 +144,7 @@ describe('pixelArt', () => {
   it('handles offset grids when downsampling (partial edge cells)', () => {
     const raster = blockyRaster(samplePattern(), 10, 4);
     const grid = detectPixelGrid(raster);
-    const small = downsampleToGrid(raster, grid);
+    const small = downsampleToGrid(raster, grid!);
     // 8 full blocks + the leading partial cell from the offset.
     expect(small.width).toBe(9);
     expect(small.height).toBe(9);
@@ -162,9 +169,11 @@ describe('pixelArt', () => {
     it('applies the stronger axis to both when one axis is noisy', () => {
       // Clean 10px columns, but every row differs (no vertical grid at all):
       // like model output whose rows drift off-grid.
-      const raster = rasterFrom(120, 120, (x, y) => [
-        ...PALETTE[(Math.floor(x / 10) + y * 2) % 3],
-      ]);
+      const raster = rasterFrom(
+        120,
+        120,
+        (x, y) => PALETTE[(Math.floor(x / 10) + y * 2) % 3]
+      );
       const grid = assumePixelGrid(raster, FALLBACK_BLOCK);
       expect(grid.sizeX).toBe(10);
       expect(grid.sizeY).toBe(10);
