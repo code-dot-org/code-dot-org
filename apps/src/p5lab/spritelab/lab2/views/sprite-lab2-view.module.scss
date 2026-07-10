@@ -1,3 +1,5 @@
+@use '../quiet-button.scss' as buttons;
+
 .tabShell {
   display: flex;
   flex-direction: column;
@@ -211,8 +213,9 @@ $tab-segment-height: $tab-item-height - 2px;
 .imageGallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  padding: 12px;
+  // Generous row spacing so the cards read as rows, not a dense grid.
+  gap: 28px 14px;
+  padding: 28px 16px 24px;
 }
 
 .galleryEmpty {
@@ -224,22 +227,38 @@ $tab-segment-height: $tab-item-height - 2px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  width: 96px;
+  gap: 6px;
+  width: 125px;
+}
 
-  button {
-    cursor: pointer;
-    font-size: 12px;
-  }
+// Compact, quiet delete: the image is the star of the card. (Scoped by
+// class — a bare `.imageCard button` would also hit the thumbnail button.)
+.deleteButton {
+  @include buttons.quiet-button(22px, 11px);
 }
 
 .imageThumb {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80px;
-  height: 80px;
+  box-sizing: border-box;
+  width: 104px;
+  height: 104px;
+  // The thumb is a button (click to edit); neutralize global button styles.
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+  cursor: pointer;
   border: 1px solid var(--borders-neutral-primary);
+  // Hover: grow subtly (like Music Lab's album covers) instead of the
+  // global button > img dim-until-hover treatment.
+  transition: transform 0.15s ease;
+
+  &:hover {
+    z-index: 1;
+    transform: scale(1.12);
+  }
   // Subtle checkerboard: enough to signal transparency without competing
   // with the sprite (translucent grey works on light and dark themes).
   $check: rgb(128 128 128 / 16%);
@@ -254,6 +273,9 @@ $tab-segment-height: $tab-item-height - 2px;
   img {
     max-width: 100%;
     max-height: 100%;
+    // Full quality always: undo the global `button > img` dimming (class +
+    // element outranks the global's two elements).
+    opacity: 1;
   }
 }
 
@@ -430,8 +452,9 @@ $tab-segment-height: $tab-item-height - 2px;
   height: 400px;
   transform-origin: 0 0;
   background: var(--background-neutral-secondary);
-  // Transitions are set inline: transform only animates between the two
-  // visible placements; opacity fades the box in on appearance.
+  // Transitions, and the preview-only hairline seam, are set inline:
+  // transform only animates between the two visible placements; opacity
+  // fades the box in on appearance.
 }
 
 .playspaceCanvas {
