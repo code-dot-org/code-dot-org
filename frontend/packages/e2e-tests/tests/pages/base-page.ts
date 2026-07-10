@@ -3,6 +3,7 @@ import {expect, type Locator, type Page} from '@playwright/test';
 import {FooterComponent} from '../components/footer';
 import {GdprDialogComponent} from '../components/gdpr-dialog';
 import {HeaderComponent} from '../components/header';
+import {OneTrustComponent} from '../components/one-trust';
 import {StudentInfoModalComponent} from '../components/student-info-modal';
 
 /** Base for every page object — home for the UI common to all pages. */
@@ -21,12 +22,16 @@ export class BasePage {
   /** Student-information interstitial — a global overlay that can appear on any page. */
   readonly studentInfoModal: StudentInfoModalComponent;
 
+  /** OneTrust cookie-consent banner and SDK script tags. */
+  readonly oneTrust: OneTrustComponent;
+
   constructor(page: Page) {
     this.page = page;
     this.header = new HeaderComponent(page);
     this.footer = new FooterComponent(page);
     this.gdprDialog = new GdprDialogComponent(page);
     this.studentInfoModal = new StudentInfoModalComponent(page);
+    this.oneTrust = new OneTrustComponent(page);
   }
 
   /**

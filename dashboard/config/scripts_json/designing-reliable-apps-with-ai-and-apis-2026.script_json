@@ -21,8 +21,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-02 15:11:33 UTC",
-    "hide_within_course": true,
+    "serialized_at": "2026-07-08 19:15:30 UTC",
+    "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -281,7 +281,7 @@
       "relative_position": 11,
       "properties": {
         "overview": "**How can I build an app that shows real data and still feels dependable to the user?**\n\nThis project guides students through building an Explore-Style web app that fetches live data from an external API and reveals additional details through user interaction. Students implement async and await, attach event listeners, and render dynamic content based on API responses. They strengthen their apps with loading, error, and empty states to ensure the interface remains clear and trustworthy. AI functions as a collaborative debugging and refinement partner, with students documenting their logic and demonstrating ownership through code comments and a professional README.",
-        "preparation": "- Print copies of the Explore-Style  Project Planning Guide to students (one for each student)",
+        "preparation": "- Provide copies of the Explore-Style Project Rubric to students (one for each student)",
         "student_overview": "**How can I build an app that shows real data and still feels dependable to the user?**\n\nIn this project, you build an Explore-Style app that displays live API data and lets users click to reveal more information. You will use async and await, add interactive features, and design loading, error, and empty states so your app never feels broken. You will also use AI to help plan, debug, and refine your code while documenting how your app works and where its data comes from."
       },
       "seeding_key": {
@@ -744,7 +744,8 @@
       "key": "8e6aec25-e6a8-4676-8d48-d476a4a53b3c",
       "position": 1,
       "properties": {
-        "name": "New Level Progression"
+        "duration": 45,
+        "name": "Day 1"
       },
       "seeding_key": {
         "lesson_activity.key": "8e6aec25-e6a8-4676-8d48-d476a4a53b3c",
@@ -754,22 +755,8 @@
       }
     },
     {
-      "key": "8e785d6a-388e-4d22-aea2-950a1648d1a5",
-      "position": 2,
-      "properties": {
-        "duration": 45,
-        "name": "Day 1"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "8e785d6a-388e-4d22-aea2-950a1648d1a5",
-        "lesson.key": "Lesson 11: Explore-Style App Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026"
-      }
-    },
-    {
       "key": "e3727832-a9eb-41e0-b060-5494387f5091",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 45,
         "name": "Day 2"
@@ -783,7 +770,7 @@
     },
     {
       "key": "2cdcb59e-93d2-4254-a90d-d80439cce9a4",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 45,
         "name": "Day 3"
@@ -797,7 +784,7 @@
     },
     {
       "key": "5a1417f7-5aa4-4549-b61f-18316e2c47bb",
-      "position": 5,
+      "position": 4,
       "properties": {
         "duration": 45,
         "name": "Day 4"
@@ -811,7 +798,7 @@
     },
     {
       "key": "3c0d17cf-644d-48eb-8e3c-68f16ee73794",
-      "position": 6,
+      "position": 5,
       "properties": {
         "duration": 45,
         "name": "Day 5"
@@ -3027,11 +3014,66 @@
       }
     },
     {
-      "key": "158eff7c-3b7a-4ce9-8200-ad4a49adba85",
+      "key": "0453b4e4-4767-42d0-ad11-2a582c4c5290",
       "position": 1,
       "properties": {
-        "description": "1. Explore and Choose Your API\n2. Sketch Your Card Layout (modify to say save to your backpack)\n3. Build and Validate Your Dynamic List\n4. CFU - Data & Layout Reflection (New) ",
-        "progression_name": "Milestone 1"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts.\n* *What makes an app feel fast and responsive?*\n* *What makes an app feel broken or confusing?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students begin thinking about responsiveness, feedback, and user trust — which sets up async + loading states.\n\n\n\n\n",
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "0453b4e4-4767-42d0-ad11-2a582c4c5290",
+        "lesson_activity.key": "8e6aec25-e6a8-4676-8d48-d476a4a53b3c"
+      }
+    },
+    {
+      "key": "27a0127e-9dd5-4d85-a1da-1fb62283effe",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk students through the simplified project goals. Explain that their app must fetch live data from an API, render it dynamically, add interactive reveal features, and clearly communicate loading, error, and empty states. Emphasize that reliability and user trust are central to the project — their design decisions should ensure the app never feels frozen, broken, or confusing.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Explore-Style App Project Rubric.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify that success involves more than just making the app work. Listen for themes like reliable API integration, clear interaction design, effective loading and error handling, thoughtful documentation, and intentional AI use. Students should recognize that a strong project demonstrates both technical accuracy and user trust.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the milestone structure of the project. Explain that the Explore-Style App Project is divided into four milestones, each with its own goals and deliverables. Use the visual roadmap to preview the journey students will take — from choosing an API to handling edge cases.\n\n\n\n",
+        "duration": "35",
+        "name": "Activity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students that milestones help them manage time and track progress, just like in real design and development projects. Encourage them to think of each milestone as a \"checkpoint\" to reflect on what's working, what needs improvement, and how their design aligns with their user and purpose.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "27a0127e-9dd5-4d85-a1da-1fb62283effe",
+        "lesson_activity.key": "8e6aec25-e6a8-4676-8d48-d476a4a53b3c"
+      }
+    },
+    {
+      "key": "bf94228b-5674-4665-8d63-025f28d18e44",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that today’s focus is Milestone 1: Connect to an API & Build Your Dynamic List. Students will choose an API, test the endpoint, identify meaningful fields, and render a working dynamic list using async and await. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Share the deliverables so they understand what must be completed by the end of the milestone.\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to note any deliverables that feel exciting or challenging. This helps you gauge where support may be needed. Remind students that Milestone 1 focuses on building a reliable API connection and rendering live data correctly — not on styling or advanced features yet. The priority is a working fetch, clear field choices, and a functional dynamic list.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bf94228b-5674-4665-8d63-025f28d18e44",
+        "lesson_activity.key": "8e6aec25-e6a8-4676-8d48-d476a4a53b3c"
+      }
+    },
+    {
+      "key": "158eff7c-3b7a-4ce9-8200-ad4a49adba85",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to complete Levels 1–4.\n* **Level 1:** Students choose and test an API, then identify 2–4 key fields.\n* **Level 2:** Students sketch their card layout and save it to their Backpack.\n* **Level 3:** Students build and validate a dynamic list using async/await and .map().\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, ask guiding questions such as:\n- Which API are you using, and why did you choose it?\n- What fields will appear in your summary card?\n- Does your JSON response match the fields you plan to display?\n- Where does async and await fit into your fetch logic?\n\nUse these check-ins to confirm students are testing their API connection and planning their data flow before layering on additional features.\n",
+        "progression_name": "Milestone 1",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to inspect the JSON carefully and sketch their card layout before focusing on full implementation. Understanding the structure first will prevent undefined errors later.\n\nSet expectations for pacing. Milestone 1 can typically be completed by the end of class or early next class. Emphasize that a working API connection and clean dynamic list matter more than visual polish at this stage.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "158eff7c-3b7a-4ce9-8200-ad4a49adba85",
@@ -3039,149 +3081,22 @@
       }
     },
     {
-      "key": "d0ce46ea-82f5-4b1d-acaa-8840364b1816",
-      "position": 2,
-      "properties": {
-        "description": "5. Add Reveal Interaction\n6. Completed Level: designing-reliable-apps-lesson11-level5-2026\n7. Debug Interaction Flow\n8. CFU - Reflection\n",
-        "progression_name": "Milestone 2"
-      },
-      "seeding_key": {
-        "activity_section.key": "d0ce46ea-82f5-4b1d-acaa-8840364b1816",
-        "lesson_activity.key": "8e6aec25-e6a8-4676-8d48-d476a4a53b3c"
-      }
-    },
-    {
-      "key": "4e36693c-187a-4e36-9c1c-f0a5d894633e",
-      "position": 3,
-      "properties": {
-        "description": "8. Design a Status Message\n9. Build Status States\n10. Completed Level: designing-reliable-apps-lesson11-level9-2026\n11. Run a Reliability Test \n12. CFU - Milestone 3 Reflection\n",
-        "progression_name": "Milestone 3"
-      },
-      "seeding_key": {
-        "activity_section.key": "4e36693c-187a-4e36-9c1c-f0a5d894633e",
-        "lesson_activity.key": "8e6aec25-e6a8-4676-8d48-d476a4a53b3c"
-      }
-    },
-    {
-      "key": "455a64d2-2da2-42e1-a3a6-262c5b5e67af",
-      "position": 4,
-      "properties": {
-        "description": "12. Write Your README\n13. Comment Your Code\n14. CFU - Final Reflection",
-        "progression_name": "Milestone 4"
-      },
-      "seeding_key": {
-        "activity_section.key": "455a64d2-2da2-42e1-a3a6-262c5b5e67af",
-        "lesson_activity.key": "8e6aec25-e6a8-4676-8d48-d476a4a53b3c"
-      }
-    },
-    {
-      "key": "380573c4-4aef-4f09-aaf2-b6accd6d1004",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts.\n- *What makes an app feel fast and responsive?*\n- *What makes an app feel broken or confusing?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students begin thinking about responsiveness, feedback, and user trust — which sets up async + loading states.",
-        "duration": "5",
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "activity_section.key": "380573c4-4aef-4f09-aaf2-b6accd6d1004",
-        "lesson_activity.key": "8e785d6a-388e-4d22-aea2-950a1648d1a5"
-      }
-    },
-    {
-      "key": "a0f16eda-0a5d-494f-a8e1-e11f6c4e11ab",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Explore-Style App Project Planning Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk students through the simplified project goals. Explain that their app must fetch live data from an API, render it dynamically, add interactive reveal features, and clearly communicate loading, error, and empty states. Emphasize that reliability and user trust are central to the project — their design decisions should ensure the app never feels frozen, broken, or confusing.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on the last two pages of the project planning guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify that success involves more than just making the app work. Listen for themes like reliable API integration, clear interaction design, effective loading and error handling, thoughtful documentation, and intentional AI use. Students should recognize that a strong project demonstrates both technical accuracy and user trust.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the milestone structure of the project. Explain that the Explore-Style App Project is divided into four milestones, each with its own goals and deliverables. Use the visual roadmap to preview the journey students will take — from choosing an API to handling edge cases.",
-        "duration": "35",
-        "name": "Activity",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Remind students that milestones help them manage time and track progress, just like in real design and development projects. Encourage them to think of each milestone as a \"checkpoint\" to reflect on what's working, what needs improvement, and how their design aligns with their user and purpose."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "a0f16eda-0a5d-494f-a8e1-e11f6c4e11ab",
-        "lesson_activity.key": "8e785d6a-388e-4d22-aea2-950a1648d1a5"
-      }
-    },
-    {
-      "key": "09c8c4ff-2670-4631-a719-3dd465d92009",
-      "position": 3,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "09c8c4ff-2670-4631-a719-3dd465d92009",
-        "lesson_activity.key": "8e785d6a-388e-4d22-aea2-950a1648d1a5"
-      }
-    },
-    {
-      "key": "7da55644-5e19-41e6-ae6c-73e009e63335",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that today’s focus is Milestone 1: Connect to an API & Build Your Dynamic List. Students will choose an API, test the endpoint, identify meaningful fields, and render a working dynamic list using async and await. Direct students to open their Explore-Style App Project Guide and locate the Milestone 1 section. Have them read through the Goals and Deliverables so they understand what must be completed by the end of the milestone.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Encourage students to highlight or note any deliverables that feel exciting or challenging. This helps you gauge where support may be needed. Remind students that Milestone 1 focuses on building a reliable API connection and rendering live data correctly — not on styling or advanced features yet. The priority is a working fetch, clear field choices, and a functional dynamic list."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "7da55644-5e19-41e6-ae6c-73e009e63335",
-        "lesson_activity.key": "8e785d6a-388e-4d22-aea2-950a1648d1a5"
-      }
-    },
-    {
-      "key": "7babcac1-34b9-4402-b989-b30b31fd9526",
+      "key": "fe43b0a4-c5f5-4c13-a28f-21487a1854fc",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to begin Milestone 1: Connect to an API & Build Your Dynamic List. Students should use the support tools to choose and test an API, inspect the JSON structure, select meaningful fields, and plan their card layout before fully building their render logic.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work in the hub, ask guiding questions such as:\n- Which API are you using, and why did you choose it?\n- What fields will appear in your summary card?\n- Does your JSON response match the fields you plan to display?\n- Where does async and await fit into your fetch logic?\n\nUse these check-ins to confirm students are testing their API connection and planning their data flow before layering on additional features.",
-        "progression_name": "Milestone 1",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Encourage students to inspect the JSON carefully and sketch their card layout before focusing on full implementation. Understanding the structure first will prevent undefined errors later."
-          },
-          {
-            "type": "teachingTip",
-            "markdown": "Set expectations for pacing. Milestone 1 can typically be completed by the end of class or early next class. Emphasize that a working API connection and clean dynamic list matter more than visual polish at this stage."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "7babcac1-34b9-4402-b989-b30b31fd9526",
-        "lesson_activity.key": "8e785d6a-388e-4d22-aea2-950a1648d1a5"
-      }
-    },
-    {
-      "key": "696ca64f-84d0-4c56-b0c5-1e2d67dbfd80",
-      "position": 6,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "696ca64f-84d0-4c56-b0c5-1e2d67dbfd80",
-        "lesson_activity.key": "8e785d6a-388e-4d22-aea2-950a1648d1a5"
-      }
-    },
-    {
-      "key": "21d522e9-fe2f-48c3-8b9a-05eced3bfaca",
-      "position": 7,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 1 Reflection section in their project planning guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner.",
-        "duration": "5",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 11, Level 4 to complete the Milestone 1 Reflection. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner. \n",
         "name": "Wrap Up",
+        "progression_name": "Milestone 1 Reflection",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If time permits, invite a few volunteers to share aloud or conduct a quick pair-and-share to close."
+            "markdown": "If time permits, invite a few volunteers to share aloud or conduct a quick pair-and-share to close.\n"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "21d522e9-fe2f-48c3-8b9a-05eced3bfaca",
-        "lesson_activity.key": "8e785d6a-388e-4d22-aea2-950a1648d1a5"
+        "activity_section.key": "fe43b0a4-c5f5-4c13-a28f-21487a1854fc",
+        "lesson_activity.key": "8e6aec25-e6a8-4676-8d48-d476a4a53b3c"
       }
     },
     {
@@ -3201,7 +3116,7 @@
       "key": "0cdd884e-826d-4fdd-a27a-19e95201a4ef",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 2 of the project. Explain that today students will focus on completing Milestone 1 and starting work on Milestone 2. Direct students to open their Explore-Style App Project Guide and locate the Milestone 1 and 2 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to finish any remaining Milestone 1 work in Level 1 if needed, then move to Level 2 to begin Milestone 2. Explain that today they will shift from building a static dynamic list to making their app interactive. The focus is adding a clear trigger button, attaching event listeners, and planning how additional details will be revealed. Emphasize that they should start simple: get one card interaction working correctly before expanding to the full set.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task and progressing toward a complete first draft. Ask check-in questions like:\n- Where is your “See More” or “Reveal” button placed on the card?\n- How does your click event know which card was selected?\n- What happens when you click one card — does only that card update?\n- Are you toggling hidden content or fetching additional detail data?\n- Does your reveal improve clarity, or does it make the layout confusing?\n\nRemind students that their interaction should be intentional and predictable. If multiple cards update at once or nothing happens, guide them to trace the flow: click → event listener → reveal logic → render. Encourage them to debug using console.log before adding complexity.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 2 of the project. Explain that today students will focus on completing Milestone 1 and starting work on Milestone 2. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Deliverables for each milestone so they understand what to prioritize during work time.\n\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to finish any remaining Milestone 1 work if needed, then move to Level 5 to begin Milestone 2 by completing levels 5 and 6. Explain that today they will shift from building a static dynamic list to making their app interactive. The focus is adding a clear trigger button, attaching event listeners, and planning how additional details will be revealed. Emphasize that they should start simple: get one card interaction working correctly before expanding to the full set.\n* **Level 5:** Students add a reveal button and interaction so each card can show more details without reloading the page.\n* **Level 6:** Students test and debug the reveal flow so the correct details appear for the correct card.\n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task and progressing toward a complete first draft. Ask check-in questions like:\n- Where is your “See More” or “Reveal” button placed on the card?\n- How does your click event know which card was selected?\n- What happens when you click one card — does only that card update?\n- Are you toggling hidden content or fetching additional detail data?\n- Does your reveal improve clarity, or does it make the layout confusing?\n\nRemind students that their interaction should be intentional and predictable. If multiple cards update at once or nothing happens, guide them to trace the flow: click → event listener → reveal logic → render. Encourage them to debug using console.log before adding complexity.",
         "duration": "35",
         "name": "Activity",
         "progression_name": "Milestone 2"
@@ -3212,21 +3127,22 @@
       }
     },
     {
-      "key": "e2a7ddc7-17db-40da-ae3e-5543efbe84bc",
+      "key": "c453dbd3-0c98-46dd-9ca6-daf8ac5de8e7",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 2 Reflection section in their project planning guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students write and discuss, listen for reflections that explain how their reveal interaction improves (or complicates) the user experience. Encourage students to think about whether their button placement, reveal behavior, and detail layout make information clearer or more confusing. Prompt them to identify one specific improvement they would make to strengthen clarity or interaction flow.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 11, Level 7 to complete the Milestone 2 Reflection. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner. \n",
         "duration": "5",
         "name": "Wrap Up",
+        "progression_name": "Milestone 2 Reflection",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If time permits, invite a few students to share one interaction decision that improved usability. Emphasize that designing clear, predictable interactions is a key part of building trustworthy apps. Recognizing how small choices — like button labels or reveal timing — affect the user experience shows growing design awareness."
+            "markdown": "If time permits, invite a few volunteers to share aloud or conduct a quick pair-and-share to close.\n"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "e2a7ddc7-17db-40da-ae3e-5543efbe84bc",
+        "activity_section.key": "c453dbd3-0c98-46dd-9ca6-daf8ac5de8e7",
         "lesson_activity.key": "e3727832-a9eb-41e0-b060-5494387f5091"
       }
     },
@@ -3247,7 +3163,7 @@
       "key": "683e012d-fece-43ca-a030-8eeafeb031f8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks for Day 3. Explain that today students will wrap up Milestone 2 and begin Milestone 3. Direct students to open their Explore-Style App Project Guide and locate the Milestone 2 and 3 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the goal for Day 3. Explain that today students will wrap up Milestone 2 and begin Milestone 3. Direct students to review the Goal for Milestone 3 so they understand what to prioritize during work time.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the deliverables for Day 3. \n",
         "duration": "35",
         "name": "Activity",
         "progression_name": "Milestone 3",
@@ -3264,9 +3180,34 @@
       }
     },
     {
-      "key": "324eb827-54a5-47db-85aa-c6381e30c023",
+      "key": "d96f2f85-1522-4243-8cbe-2834ba9d567f",
       "position": 3,
       "properties": {
+        "description": "8. Design a Status Message\n9. Build Status States\n10. Completed Level: designing-reliable-apps-lesson11-level9-2026\n11. Run a Reliability Test \n12. CFU - Milestone 3 Reflection\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete any remaining Milestone 2 interaction work if needed, then move to Lesson 11, Level 8 to begin work on Milestone 3. Explain that today’s focus is strengthening their app so it never looks frozen or broken. Students will add loading states, implement try/catch error handling, design clear status messages, and test how their app behaves when something goes wrong. Emphasize that professional apps are not defined by never failing — they are defined by how clearly they handle failure.\n* **Level 8:** Students design loading, error, and empty state messages in SketchLab.\n* **Level 9:** Students build loading, error, and empty states into their app.\n* **Level 10:** Students test broken, empty, and loading scenarios to make sure the app does not feel frozen or broken.\n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are actively implementing and testing defensive features. Ask guiding questions such as:\n- What does the user see immediately after they click a button?\n- Where does your loading state appear?\n- What happens if the API request fails?\n- Does your error message clearly explain what happened?\n- What happens if the API returns zero results?\n- Have you intentionally broken your URL to test your error handling?",
+        "progression_name": "Milestone 3",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Reinforce that testing failure is a professional habit, not a mistake. Encourage students to intentionally break their app to see how it responds — change the API URL, simulate empty results, or slow down the request. Remind them that strong developers assume things will fail and design for clarity when they do. Emphasize that an app that communicates clearly during loading or errors builds more trust than one that silently breaks.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d96f2f85-1522-4243-8cbe-2834ba9d567f",
+        "lesson_activity.key": "2cdcb59e-93d2-4254-a90d-d80439cce9a4"
+      }
+    },
+    {
+      "key": "324eb827-54a5-47db-85aa-c6381e30c023",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students pair up or form small groups and TAG one to two peers' projects. They can leave feedback on sticky notes (digital or paper) directly at their peer's workspace. Emphasize that this is not a final critique — it's a chance to gather early insights as part of Milestone 3. \n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may be at different points when it's time for peer review. Reassure them that work doesn't need to be complete to be reviewed — feedback during the process helps improve the final product.\n\nReinforce the mindset that design and development are iterative, and peer feedback offers new perspectives and guidance. \n\nIf time allows, invite a few students to share one piece of feedback they received that will guide their next steps.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "324eb827-54a5-47db-85aa-c6381e30c023",
@@ -3274,40 +3215,13 @@
       }
     },
     {
-      "key": "11941638-ac22-4ab6-8ee4-9437521a059d",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete any remaining Milestone 2 interaction work if needed, then move into Milestone 3. Explain that today’s focus is strengthening their app so it never looks frozen or broken. Students will add loading states, implement try/catch error handling, design clear status messages, and test how their app behaves when something goes wrong. Emphasize that professional apps are not defined by never failing — they are defined by how clearly they handle failure.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are actively implementing and testing defensive features. Ask guiding questions such as:\n- What does the user see immediately after they click a button?\n- Where does your loading state appear?\n- What happens if the API request fails?\n- Does your error message clearly explain what happened?\n- What happens if the API returns zero results?\n- Have you intentionally broken your URL to test your error handling?",
-        "progression_name": "Milestone 3",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Reinforce that testing failure is a professional habit, not a mistake. Encourage students to intentionally break their app to see how it responds — change the API URL, simulate empty results, or slow down the request. Remind them that strong developers assume things will fail and design for clarity when they do. Emphasize that an app that communicates clearly during loading or errors builds more trust than one that silently breaks."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "11941638-ac22-4ab6-8ee4-9437521a059d",
-        "lesson_activity.key": "2cdcb59e-93d2-4254-a90d-d80439cce9a4"
-      }
-    },
-    {
-      "key": "c785fb4a-ee2f-47ea-a506-e8274434132e",
+      "key": "b9ba4306-ceb9-4138-b637-84ce81270a00",
       "position": 5,
       "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "c785fb4a-ee2f-47ea-a506-e8274434132e",
-        "lesson_activity.key": "2cdcb59e-93d2-4254-a90d-d80439cce9a4"
-      }
-    },
-    {
-      "key": "b9ba4306-ceb9-4138-b637-84ce81270a00",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 3 Reflection section in their project planning guide. Let students know they can continue to add on to this reflection as they continue to make progress on Milestone 3 and conduct more testing.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 11, Level 11 to complete the Milestone 3 Reflection. Let students know they can continue to add on to this reflection as they continue to make progress on Milestone 3 and conduct more testing.\n",
         "duration": "5",
-        "name": "Wrap Up"
+        "name": "Wrap Up",
+        "progression_name": "Milestone 3 Reflection"
       },
       "seeding_key": {
         "activity_section.key": "b9ba4306-ceb9-4138-b637-84ce81270a00",
@@ -3328,22 +3242,22 @@
       }
     },
     {
-      "key": "4aa86e96-1183-4bb6-9f1f-41a76f7f1670",
+      "key": "3408ba3d-680a-4bfd-9d86-db0989aa8480",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 4 of the project. Explain that today students will focus on Milestones 3 and 4. Direct students to open their Explore-Style App Project Guide and locate the Milestone 3 and 4 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to wrap up any remaining Milestone 3 reliability work if needed, then move into Milestone 4. Explain that today’s focus is preparing their app for handoff and submission. Students will create a clear README.md, add meaningful comments explaining their async and error handling logic, and clean up their code. Emphasize that this milestone is about ownership — making sure someone else could understand, maintain, and trust their work.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are documenting and refining their projects thoughtfully. Ask guiding questions such as:\n- Does your README clearly explain what your app does and who it’s for?\n- Have you included a working link to your API source?\n- Do your comments explain why the code works, not just what it does?\n- If someone new read your async function, would they understand the flow?\n- Have you removed unnecessary console.log statements? Does your final version run without visible errors?",
+        "description": "12. Write Your README\n13. Comment Your Code\n14. CFU - Final Reflection\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Goal for Day 4 of the project. Explain that today students will focus on Milestones 3 and 4. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the deliverables to complete for Day 4 of the project so students understand what to prioritize during work time.\n\n\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to wrap up any remaining Milestone 3 reliability work if needed, then move to Lesson 11, Level 12 to begin work on Milestone 4 . Explain that today’s focus is preparing their app for handoff and submission. Students will create a clear README.md, add meaningful comments explaining their async and error handling logic, and clean up their code. Emphasize that this milestone is about ownership — making sure someone else could understand, maintain, and trust their work.\n* **Level 12**: Students write a README that explains the app’s purpose, how to use it, and the API source.\n* **Level 13:** Students add comments explaining their async fetch, event listener, try/catch, and status state logic.\n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are documenting and refining their projects thoughtfully. Ask guiding questions such as:\n- Does your README clearly explain what your app does and who it’s for?\n- Have you included a working link to your API source?\n- Do your comments explain why the code works, not just what it does?\n- If someone new read your async function, would they understand the flow?\n- Have you removed unnecessary console.log statements? Does your final version run without visible errors?",
         "duration": "35",
         "name": "Activity",
         "progression_name": "Milestone 4",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Frame this as release preparation. Professional developers document their work and clean their code before shipping. Remind students that clear comments and a well-written README demonstrate real understanding. Ownership means being able to explain your decisions, your defensive design, and how your app depends on external APIs."
+            "markdown": "Frame this as release preparation. Professional developers document their work and clean their code before shipping. Remind students that clear comments and a well-written README demonstrate real understanding. Ownership means being able to explain your decisions, your defensive design, and how your app depends on external APIs.\n"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "4aa86e96-1183-4bb6-9f1f-41a76f7f1670",
+        "activity_section.key": "3408ba3d-680a-4bfd-9d86-db0989aa8480",
         "lesson_activity.key": "5a1417f7-5aa4-4549-b61f-18316e2c47bb"
       }
     },
@@ -3361,13 +3275,13 @@
       "key": "52d032be-5b6a-463f-b496-3ddc6d1932ad",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to revisit the Milestone 4 Reflection section in their project planning guide and add to what they wrote previously. They should update their reflection with any final revisions they made, improvements to clarity or documentation, and insights about ownership and reliability. Encourage them to include specific examples from their app.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to revisit Lesson 11, Level 11 to add on to the Milestone 3 Reflection. They should update their reflection with any final revisions they made, improvements to clarity or documentation, and insights about ownership and reliability. Encourage them to include specific examples from their app.\n",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Remind students that refining their reflection after another round of revision mirrors how professional developers document progress. Encourage them to identify what changed, what improved, and what they understand more clearly now. Highlight that strong reflections include concrete examples — such as how they clarified their async logic, improved an error message, or revised their README — rather than general statements."
+            "markdown": "Remind students that refining their reflection after another round of revision mirrors how professional developers document progress. Encourage them to identify what changed, what improved, and what they understand more clearly now. Highlight that strong reflections include concrete examples — such as how they clarified their async logic, improved an error message, or revised their README — rather than general statements.\n"
           }
         ]
       },
@@ -3393,13 +3307,13 @@
       "key": "391631ff-fbed-4ccc-8cbb-5201cf069f90",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks for Day 5. Explain that today students will finalize Milestone 4 by polishing their documentation, reviewing their code for clarity, and preparing their app for presentation. Direct students to check their Explore-Style App Project Guide and confirm they have completed all Milestone 4 deliverables before showcasing their work.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks for Day 5. Explain that today students will finalize Milestone 4 by polishing their documentation, reviewing their code for clarity, and preparing their app for presentation. \n",
         "duration": "30",
         "name": "Activity",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Encourage students to test their app one final time before presenting. Remind them to check for unusual edge cases, empty results, and loading or error behavior. Make sure their README is complete, their API link works, and their comments clearly explain their logic."
+            "markdown": "Encourage students to test their app one final time before presenting. Remind them to check for unusual edge cases, empty results, and loading or error behavior. Make sure their README is complete, their API link works, and their comments clearly explain their logic.\n"
           }
         ]
       },
@@ -3422,7 +3336,7 @@
       "key": "7aa79703-cbf3-4dc3-b1e8-ed2b06599363",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to the last two pages of their Explore-Style App Project Guide, where the project rubric is located. Have students review each category carefully and mark where they believe their project currently falls. Encourage honest self-assessment — the goal is to recognize strengths and identify areas for growth as intentional developers.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are thoughtfully evaluating each rubric row rather than rushing through it. Encourage them to pay close attention to:\n- API Integration & Async Logic — Does their fetch flow work reliably and clearly?\n- Dynamic Rendering & Interaction — Does the reveal interaction behave predictably?\n- Defensive Design & Reliability — Do loading, error, and empty states work consistently?\n- Documentation & Code Quality — Is their README clear? Are their comments meaningful?\n\nPrompt students to support their self-ratings with specific evidence from their app.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to review their Explore-Style App Project Rubric. Have students review each category carefully and mark where they believe their project currently falls. Encourage honest self-assessment — the goal is to recognize strengths and identify areas for growth as intentional developers.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are thoughtfully evaluating each rubric row rather than rushing through it. Encourage them to pay close attention to:\n- API Integration & Async Logic — Does their fetch flow work reliably and clearly?\n- Dynamic Rendering & Interaction — Does the reveal interaction behave predictably?\n- Defensive Design & Reliability — Do loading, error, and empty states work consistently?\n- Documentation & Code Quality — Is their README clear? Are their comments meaningful?\n\nPrompt students to support their self-ratings with specific evidence from their app.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3449,7 +3363,7 @@
       "key": "5c408645-578f-461e-b473-a5bc0b2eafe4",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4 to complete their Explore-Style App Projects. Explain that this is their final dedicated work time before submission and presentation. Today’s focus is prioritizing improvements based on their self-assessment and peer feedback. Emphasize that they should make intentional, high-impact refinements rather than trying to change everything at once. Remind students to submit their projects at the end of the allotted time.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**Direct students to Level 12 and 13 to complete their Explore-Style App Projects. Explain that this is their final dedicated work time before submission and presentation. Today’s focus is prioritizing improvements based on their self-assessment and peer feedback. Emphasize that they should make intentional, high-impact refinements rather than trying to change everything at once. Remind students to submit their projects at the end of the allotted time.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -3517,11 +3431,12 @@
       "key": "59b3eed6-56da-4d02-989e-00577b7b8c66",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Final Reflection and Final Self-Check sections in their Explore-Style App Project Guide. Explain that this step helps them consolidate what they learned about:\n- Integrating and managing live API data\n- Designing clear and predictable interactions\n- Implementing loading, error, and empty states\n- Writing meaningful documentation and comments\n- Using AI intentionally and evaluating its suggestions\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students write, encourage them to reference concrete moments from their project, such as:\n- A bug they discovered while testing an edge case\n- A change they made to improve clarity or reliability\n- How they improved their loading or error messages\n- How they revised or clarified their async logic\n- How they evaluated, modified, or rejected an AI suggestion\n\nProbe with questions like:\n- What changed in your app between Milestone 1 and Milestone 4?\n- How did your approach to debugging evolve?\n- What decision most improved user trust?\n- What part of your app best shows ownership?\n\nIf students finish early, invite them to help a peer reflect or revisit the rubric one more time.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 11, Level 14 to complete the Final Reflection. Explain that this step helps them consolidate what they learned about:\n- Integrating and managing live API data\n- Designing clear and predictable interactions\n- Implementing loading, error, and empty states\n- Writing meaningful documentation and comments\n- Using AI intentionally and evaluating its suggestions\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students write, encourage them to reference concrete moments from their project, such as:\n- A bug they discovered while testing an edge case\n- A change they made to improve clarity or reliability\n- How they improved their loading or error messages\n- How they revised or clarified their async logic\n- How they evaluated, modified, or rejected an AI suggestion\n\nProbe with questions like:\n- What changed in your app between Milestone 1 and Milestone 4?\n- How did your approach to debugging evolve?\n- What decision most improved user trust?\n- What part of your app best shows ownership?\n\nIf students finish early, invite them to help a peer reflect or revisit the rubric one more time.",
+        "progression_name": "Final Reflection",
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "- The Project Planning Guide, Milestone evidence, and Final Reflection can be used as assessment for the Process, Iteration, and AI Use rubric row, as they document student growth, debugging decisions, and evaluation of AI suggestions.\n- The Final Reflection also provides evidence for Defensive Design & Reliability, since students explain how their loading, error, and empty states strengthen clarity and user trust.\n- Code excerpts and screenshots from Milestones 1–3 can serve as evidence for API Integration & Async Logic, Dynamic Rendering & Interaction, and Documentation & Code Quality, depending on what students choose to annotate and highlight in their submission."
+            "markdown": "- Each Milestone and the Final Reflection can be used as assessment for the Process, Iteration, and AI Use rubric row, as they document student growth, debugging decisions, and evaluation of AI suggestions.\n\n- The Final Reflection also provides evidence for Defensive Design & Reliability, since students explain how their loading, error, and empty states strengthen clarity and user trust.\n\n- Code excerpts and screenshots from Milestones 1–3 can serve as evidence for API Integration & Async Logic, Dynamic Rendering & Interaction, and Documentation & Code Quality, depending on what students choose to annotate and highlight in their submission.\n"
           }
         ]
       },
@@ -3537,18 +3452,6 @@
       },
       "seeding_key": {
         "activity_section.key": "a97ff105-8bd2-4d68-8b19-e160d74f46c5",
-        "lesson_activity.key": "3c0d17cf-644d-48eb-8e3c-68f16ee73794"
-      }
-    },
-    {
-      "key": "b8cea995-6ac4-42a3-be42-6b9c2550d9ee",
-      "position": 13,
-      "properties": {
-        "name": "End of Lesson Survey",
-        "progression_name": "End of Lesson Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "b8cea995-6ac4-42a3-be42-6b9c2550d9ee",
         "lesson_activity.key": "3c0d17cf-644d-48eb-8e3c-68f16ee73794"
       }
     },
@@ -4602,10 +4505,10 @@
     {
       "chapter": 48,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Milestone 1"
+        "progression": "Milestone 1 Reflection"
       },
       "bonus": false,
       "seeding_key": {
@@ -4615,7 +4518,7 @@
         "lesson.key": "Lesson 11: Explore-Style App Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "158eff7c-3b7a-4ce9-8200-ad4a49adba85"
+        "activity_section.key": "fe43b0a4-c5f5-4c13-a28f-21487a1854fc"
       },
       "level_keys": [
         "designing-reliable-apps-lesson11-level4-2026"
@@ -4637,7 +4540,7 @@
         "lesson.key": "Lesson 11: Explore-Style App Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "d0ce46ea-82f5-4b1d-acaa-8840364b1816"
+        "activity_section.key": "0cdd884e-826d-4fdd-a27a-19e95201a4ef"
       },
       "level_keys": [
         "designing-reliable-apps-lesson11-level5-2026"
@@ -4659,7 +4562,7 @@
         "lesson.key": "Lesson 11: Explore-Style App Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "d0ce46ea-82f5-4b1d-acaa-8840364b1816"
+        "activity_section.key": "0cdd884e-826d-4fdd-a27a-19e95201a4ef"
       },
       "level_keys": [
         "designing-reliable-apps-lesson11-level6-2026"
@@ -4668,10 +4571,10 @@
     {
       "chapter": 51,
       "position": 7,
-      "activity_section_position": 3,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Milestone 2"
+        "progression": "Milestone 2 Reflection"
       },
       "bonus": false,
       "seeding_key": {
@@ -4681,7 +4584,7 @@
         "lesson.key": "Lesson 11: Explore-Style App Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "d0ce46ea-82f5-4b1d-acaa-8840364b1816"
+        "activity_section.key": "c453dbd3-0c98-46dd-9ca6-daf8ac5de8e7"
       },
       "level_keys": [
         "designing-reliable-apps-lesson11-level7-2026"
@@ -4703,7 +4606,7 @@
         "lesson.key": "Lesson 11: Explore-Style App Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "4e36693c-187a-4e36-9c1c-f0a5d894633e"
+        "activity_section.key": "d96f2f85-1522-4243-8cbe-2834ba9d567f"
       },
       "level_keys": [
         "designing-reliable-apps-lesson11-level8-2026"
@@ -4725,7 +4628,7 @@
         "lesson.key": "Lesson 11: Explore-Style App Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "4e36693c-187a-4e36-9c1c-f0a5d894633e"
+        "activity_section.key": "d96f2f85-1522-4243-8cbe-2834ba9d567f"
       },
       "level_keys": [
         "designing-reliable-apps-lesson11-level9-2026"
@@ -4747,7 +4650,7 @@
         "lesson.key": "Lesson 11: Explore-Style App Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "4e36693c-187a-4e36-9c1c-f0a5d894633e"
+        "activity_section.key": "d96f2f85-1522-4243-8cbe-2834ba9d567f"
       },
       "level_keys": [
         "designing-reliable-apps-lesson11-level10-2026"
@@ -4756,10 +4659,10 @@
     {
       "chapter": 55,
       "position": 11,
-      "activity_section_position": 4,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Milestone 3"
+        "progression": "Milestone 3 Reflection"
       },
       "bonus": false,
       "seeding_key": {
@@ -4769,7 +4672,7 @@
         "lesson.key": "Lesson 11: Explore-Style App Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "4e36693c-187a-4e36-9c1c-f0a5d894633e"
+        "activity_section.key": "b9ba4306-ceb9-4138-b637-84ce81270a00"
       },
       "level_keys": [
         "designing-reliable-apps-lesson11-level11-2026"
@@ -4791,7 +4694,7 @@
         "lesson.key": "Lesson 11: Explore-Style App Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "455a64d2-2da2-42e1-a3a6-262c5b5e67af"
+        "activity_section.key": "3408ba3d-680a-4bfd-9d86-db0989aa8480"
       },
       "level_keys": [
         "designing-reliable-apps-lesson11-level12-2026"
@@ -4813,7 +4716,7 @@
         "lesson.key": "Lesson 11: Explore-Style App Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "455a64d2-2da2-42e1-a3a6-262c5b5e67af"
+        "activity_section.key": "3408ba3d-680a-4bfd-9d86-db0989aa8480"
       },
       "level_keys": [
         "designing-reliable-apps-lesson11-level13-2026"
@@ -4822,10 +4725,10 @@
     {
       "chapter": 58,
       "position": 14,
-      "activity_section_position": 3,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Milestone 4"
+        "progression": "Final Reflection"
       },
       "bonus": false,
       "seeding_key": {
@@ -4835,7 +4738,7 @@
         "lesson.key": "Lesson 11: Explore-Style App Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "455a64d2-2da2-42e1-a3a6-262c5b5e67af"
+        "activity_section.key": "59b3eed6-56da-4d02-989e-00577b7b8c66"
       },
       "level_keys": [
         "designing-reliable-apps-lesson11-level14-2026"
@@ -4843,116 +4746,6 @@
     },
     {
       "chapter": 59,
-      "position": 15,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Milestone 1"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson11-level1-hub-test_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 11: Explore-Style App Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "7babcac1-34b9-4402-b989-b30b31fd9526"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson11-level1-hub-test_2025-pilot_2026"
-      ]
-    },
-    {
-      "chapter": 60,
-      "position": 16,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Milestone 2"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson11-milestone2-test_2025-pilot_2025-_2026"
-        ],
-        "lesson.key": "Lesson 11: Explore-Style App Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "0cdd884e-826d-4fdd-a27a-19e95201a4ef"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson11-milestone2-test_2025-pilot_2025-_2026"
-      ]
-    },
-    {
-      "chapter": 61,
-      "position": 17,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Milestone 3"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson11-milestone3-test_2025-pilot_2025-_2026"
-        ],
-        "lesson.key": "Lesson 11: Explore-Style App Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "11941638-ac22-4ab6-8ee4-9437521a059d"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson11-milestone3-test_2025-pilot_2025-_2026"
-      ]
-    },
-    {
-      "chapter": 62,
-      "position": 18,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Milestone 4"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson11-milestone4-test_2025-pilot_2025-_2026"
-        ],
-        "lesson.key": "Lesson 11: Explore-Style App Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "4aa86e96-1183-4bb6-9f1f-41a76f7f1670"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson11-milestone4-test_2025-pilot_2025-_2026"
-      ]
-    },
-    {
-      "chapter": 63,
-      "position": 19,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "End of Lesson Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson11-pilot-survey_2026"
-        ],
-        "lesson.key": "Lesson 11: Explore-Style App Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "b8cea995-6ac4-42a3-be42-6b9c2550d9ee"
-      },
-      "level_keys": [
-        "designing-reliable-apps-lesson11-pilot-survey_2026"
-      ]
-    },
-    {
-      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5548,7 +5341,7 @@
         "lesson.key": "Lesson 11: Explore-Style App Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "158eff7c-3b7a-4ce9-8200-ad4a49adba85"
+        "activity_section.key": "fe43b0a4-c5f5-4c13-a28f-21487a1854fc"
       }
     },
     {
@@ -5560,7 +5353,7 @@
         "lesson.key": "Lesson 11: Explore-Style App Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "d0ce46ea-82f5-4b1d-acaa-8840364b1816"
+        "activity_section.key": "0cdd884e-826d-4fdd-a27a-19e95201a4ef"
       }
     },
     {
@@ -5572,7 +5365,7 @@
         "lesson.key": "Lesson 11: Explore-Style App Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "d0ce46ea-82f5-4b1d-acaa-8840364b1816"
+        "activity_section.key": "0cdd884e-826d-4fdd-a27a-19e95201a4ef"
       }
     },
     {
@@ -5584,7 +5377,7 @@
         "lesson.key": "Lesson 11: Explore-Style App Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "d0ce46ea-82f5-4b1d-acaa-8840364b1816"
+        "activity_section.key": "c453dbd3-0c98-46dd-9ca6-daf8ac5de8e7"
       }
     },
     {
@@ -5596,7 +5389,7 @@
         "lesson.key": "Lesson 11: Explore-Style App Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "4e36693c-187a-4e36-9c1c-f0a5d894633e"
+        "activity_section.key": "d96f2f85-1522-4243-8cbe-2834ba9d567f"
       }
     },
     {
@@ -5608,7 +5401,7 @@
         "lesson.key": "Lesson 11: Explore-Style App Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "4e36693c-187a-4e36-9c1c-f0a5d894633e"
+        "activity_section.key": "d96f2f85-1522-4243-8cbe-2834ba9d567f"
       }
     },
     {
@@ -5620,7 +5413,7 @@
         "lesson.key": "Lesson 11: Explore-Style App Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "4e36693c-187a-4e36-9c1c-f0a5d894633e"
+        "activity_section.key": "d96f2f85-1522-4243-8cbe-2834ba9d567f"
       }
     },
     {
@@ -5632,7 +5425,7 @@
         "lesson.key": "Lesson 11: Explore-Style App Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "4e36693c-187a-4e36-9c1c-f0a5d894633e"
+        "activity_section.key": "b9ba4306-ceb9-4138-b637-84ce81270a00"
       }
     },
     {
@@ -5644,7 +5437,7 @@
         "lesson.key": "Lesson 11: Explore-Style App Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "455a64d2-2da2-42e1-a3a6-262c5b5e67af"
+        "activity_section.key": "3408ba3d-680a-4bfd-9d86-db0989aa8480"
       }
     },
     {
@@ -5656,7 +5449,7 @@
         "lesson.key": "Lesson 11: Explore-Style App Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "455a64d2-2da2-42e1-a3a6-262c5b5e67af"
+        "activity_section.key": "3408ba3d-680a-4bfd-9d86-db0989aa8480"
       }
     },
     {
@@ -5668,67 +5461,7 @@
         "lesson.key": "Lesson 11: Explore-Style App Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "455a64d2-2da2-42e1-a3a6-262c5b5e67af"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson11-level1-hub-test_2025-pilot_2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson11-level1-hub-test_2025-pilot_2026"
-        ],
-        "lesson.key": "Lesson 11: Explore-Style App Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "7babcac1-34b9-4402-b989-b30b31fd9526"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson11-milestone2-test_2025-pilot_2025-_2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson11-milestone2-test_2025-pilot_2025-_2026"
-        ],
-        "lesson.key": "Lesson 11: Explore-Style App Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "0cdd884e-826d-4fdd-a27a-19e95201a4ef"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson11-milestone3-test_2025-pilot_2025-_2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson11-milestone3-test_2025-pilot_2025-_2026"
-        ],
-        "lesson.key": "Lesson 11: Explore-Style App Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "11941638-ac22-4ab6-8ee4-9437521a059d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson11-milestone4-test_2025-pilot_2025-_2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson11-milestone4-test_2025-pilot_2025-_2026"
-        ],
-        "lesson.key": "Lesson 11: Explore-Style App Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "4aa86e96-1183-4bb6-9f1f-41a76f7f1670"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "designing-reliable-apps-lesson11-pilot-survey_2026",
-        "script_level.level_keys": [
-          "designing-reliable-apps-lesson11-pilot-survey_2026"
-        ],
-        "lesson.key": "Lesson 11: Explore-Style App Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "designing-reliable-apps-with-ai-and-apis-2026",
-        "activity_section.key": "b8cea995-6ac4-42a3-be42-6b9c2550d9ee"
+        "activity_section.key": "59b3eed6-56da-4d02-989e-00577b7b8c66"
       }
     },
     {
@@ -5905,7 +5638,7 @@
     },
     {
       "name": "Explore-Style App Project",
-      "url": "https://docs.google.com/presentation/d/1qlFTnIOcvSPL8whBTQtPm6jF1jorz-3JkLXrvx1VDa0/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1HcMTAunodrNnp6TxJKIwBANM3xR0OLRFVP7qLGlduxQ/edit?slide=id.gca418c6afa_0_1070#slide=id.gca418c6afa_0_1070",
       "key": "explore-style_app_project",
       "properties": {
         "audience": "Teacher",
@@ -5918,18 +5651,18 @@
       }
     },
     {
-      "name": "Explore-Style App Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1lJ9OhCHJ1cnw-5zf52wXEWOT560Qb-F6-UE8rrA3W7k/edit?usp=sharing",
-      "key": "explore-style_app_project_planning_guide",
+      "name": "Explore-Style App Project Rubric",
+      "url": "https://docs.google.com/document/d/1l6pJPSq-yiPTfh4CVBb2MlalJARJhCz3xNy3tavPcNc/edit?usp=sharing",
+      "key": "explore-style_app_project_rubric",
       "properties": {
         "audience": "Student",
         "curriculum_category": "curriculum",
         "embeddability_type": "embed_and_resource_dropdown",
         "include_in_pdf": true,
-        "type": "Activity Guide"
+        "type": "Handout"
       },
       "seeding_key": {
-        "resource.key": "explore-style_app_project_planning_guide"
+        "resource.key": "explore-style_app_project_rubric"
       }
     },
     {
@@ -6161,7 +5894,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 11: Explore-Style App Project",
-        "resource.key": "explore-style_app_project_planning_guide"
+        "resource.key": "explore-style_app_project_rubric"
       }
     },
     {

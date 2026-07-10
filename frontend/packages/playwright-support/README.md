@@ -68,8 +68,8 @@ test('@visual initial render', async ({page, visualCheck}) => {
   so `@visual` tests diff against Eyes automatically. Writing a `visualCheck` is
   the only opt-in; no `@visual` tests means no checkpoints (and no cost).
 - **Local:** `yarn test:visual:prove` runs the `prove-visual` bin — it generates
-  throwaway native baselines under `e2e/tmp`, re-runs the visual projects 5x to
-  confirm determinism, then deletes them. Add `e2e/tmp` to `.gitignore`.
+  throwaway native baselines under `.visual-baselines/`, re-runs the visual projects 5x to
+  confirm determinism, then deletes them. Add `.visual-baselines` to `.gitignore`.
 - **`yarn test:ui`** (plain `playwright test`) runs the functional projects
   only; visual projects register only when `VISUAL_PROVIDER` is set.
 

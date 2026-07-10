@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-## Parsing JSON
+# Parsing JSON
 
 To use data from a file or API in your app, you first need to turn it into something JavaScript can work with.
 
@@ -15,16 +15,14 @@ When we parse JSON, we turn the raw data into JavaScript objects usable by our p
 </p>
 </div>
 
----
-
-## Why parse first?
+## Why Parse First?
 
 It’s important to parse the JSON data before designing and coding the app because you need to understand what information is available (and how it’s organized) before deciding what to display.
 
 
-## Example: One Card, One JSON Object
+### **Example: One Card, One JSON Object**
 
-Here is an example of a single JSON object. A JSON object stores information in **key–value pairs**, where each piece of data has a label (called a key) and a value.
+A JSON object stores information in **key–value pairs**, where each piece of data has a label (called a key) and a value.
 
 Notice it contains multiple keys with different types of values, including text (strings), numbers, and an array.
 
@@ -56,33 +54,31 @@ Notice it contains multiple keys with different types of values, including text 
 
 </div>
 
-<p style = "font-size:14pt;">Even though this object includes several keys, an app might only display a few of them on a card (like <strong>track</strong>, <strong>artist</strong>, and <strong>image_url</strong>) and leave others (like <strong>popularity</strong> or <strong>genres</strong>) for sorting, filtering, or a details page.</p>
+<p style = "font-size:12pt;">Even though this object includes several keys, an app might only display a few of them on a card (like <strong>track</strong>, <strong>artist</strong>, and <strong>image_url</strong>) and leave others (like <strong>popularity</strong> or <strong>genres</strong>) for sorting, filtering, or a details page.</p>
 
+---
 
+## Quick Check
 
-<h3>✅<b>Check Your Understanding</b></h3>
-
-<p style="font-size: 14pt; line-height: 1.4;">
+<p style="font-size: 12pt; line-height: 1.4;">
 A single JSON object can contain lots of keys, but an app usually chooses only some of them to display.
 This example app shows the <strong>image</strong>, <strong>track</strong>, and <strong>artist</strong>.
 </p>
 
-<p style="font-size: 14pt; line-height: 1.4;">
+<p style="font-size: 12pt; line-height: 1.4;">
 <strong>Question:</strong> Which keys from the JSON object are <em>not</em> shown in the app, and why might the app choose to leave them out?
 </p>
 
 <details style="background-color: #f2f2f2; border-radius: 10px; padding: 12px 16px; margin: 15px 0;">
-  <summary style="cursor: pointer; font-weight: 600; font-size: 14pt;">
-    🔍 Click to reveal the answer
+  <summary style="cursor: pointer; font-weight: 600; font-size: 12pt;">
+    🔍 Check your thinking
   </summary>
 
-  <p style="margin-top: 12px; font-size: 14pt; line-height: 1.4;">
+  <p style="margin-top: 12px; font-size: 12pt; line-height: 1.4;">
     The keys <strong>popularity</strong> and <strong>genres</strong> are not shown in the app. The app might leave them out to keep the card simple and focused, or save those details for a different feature—like sorting/filtering, or a “more info” screen.
   </p>
 </details>
 
----
-## Next up
-You will design a card or table in sketch lab using an API with keys. 
+
 
 MARKDOWN

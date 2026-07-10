@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-08 03:04:37 UTC",
+    "serialized_at": "2026-07-09 16:15:34 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -325,7 +325,17 @@
       "key": "998f07c2-5620-49cc-9e51-9bf6df0bf61f",
       "position": 1,
       "properties": {
-        "description": "\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the Question of the Day in their Unit Guide."
+        "description": "\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Choose a quick response format that fits your classroom. Students might write their response on a notecard, discuss with a partner in a turn and talk, or complete it as an exit ticket."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use students’ responses to see whether they can summarize the big idea of the lesson, use specific examples from the activity, and explain what those examples show about AI history."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "998f07c2-5620-49cc-9e51-9bf6df0bf61f",
@@ -495,7 +505,17 @@
       "key": "79bb5aaa-bec9-4379-bc52-b2f9c5c98470",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the Question of the Day in their Unit Guide."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the Question of the Day in their Unit Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Choose a quick response format that fits your classroom. Students might write their response on a notecard, discuss with a partner in a turn and talk, or complete it as an exit ticket."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use students’ responses to see whether they can summarize the big idea of the lesson, use specific examples from the activity, and explain what those examples show about AI history."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "79bb5aaa-bec9-4379-bc52-b2f9c5c98470",
@@ -831,7 +851,55 @@
     }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-IM-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-ET-40"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-HI-38"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-IM-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-ET-41"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-HI-38"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-HU-43"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

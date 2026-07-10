@@ -940,6 +940,7 @@ en:
         pl-aif2-debugging-variables: Debugging Variables
         pl-aif2-displaying-data-UI: 'Displaying Data '
         pl-aif2-dot-notation-api: Accessing Data in APIs
+        pl-aif2-u5-try-catch: Try and Catch Blocks
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
