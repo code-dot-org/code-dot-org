@@ -1145,7 +1145,6 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'summarize: section with both a course and a script' do
-    # TODO: TEACH-1788 This test will probably need to be updated when we update fixtures
     # Use an existing script so that it has a translation
     script = @jigsaw_unit
     unit_group = create(:unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family')

@@ -1226,10 +1226,7 @@ class LevelTest < ActiveSupport::TestCase
       "StarWarsGrid", "Studio", "TextCompression", "TextMatch", "Unplugged",
       "Vigenere", "Weblab", "Weblab2"
     ]
-    scripts = [
-      "All scripts", "artist", "flappy",
-      "frozen", "hourofcode", "playlab", "starwars"
-    ]
+    scripts = ["All scripts"]
     assert (scripts - search_options[:scriptOptions].map {|option| option[0]}).empty?
     assert (["Any owner"] - search_options[:ownerOptions].map {|option| option[0]}).empty?
   end

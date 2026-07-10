@@ -143,14 +143,14 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'get_script_level_by_relative_position_and_puzzle_position returns nil when not found' do
-    artist = Unit.find_by_name('artist')
-    assert artist.get_script_level_by_relative_position_and_puzzle_position(11, 1, false).nil?
+    unit = create(:unit, :with_levels)
+    assert unit.get_script_level_by_relative_position_and_puzzle_position(11, 1, false).nil?
   end
 
   test 'get_from_cache uses cache' do
     # We test the cache using name lookups...
-    flappy = Unit.find_by_name('flappy')
-    frozen = Unit.find_by_name('frozen')
+    flappy = create(:unit, name: 'flappy')
+    frozen = create(:unit, name: 'frozen')
     # ...and ID lookups.
     flappy_id = flappy.id
     frozen_id = frozen.id
@@ -464,12 +464,12 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'banner image' do
-    assert_nil Unit.find_by_name('flappy').banner_image
-    assert_nil Unit.find_by_name('csf1').banner_image
+    assert_nil create(:unit).banner_image
+    assert_nil @csf_unit.banner_image
   end
 
   test 'old_professional_learning_course?' do
-    refute Unit.find_by_name('flappy').old_professional_learning_course?
+    refute create(:unit).old_professional_learning_course?
     old_pl_course_unit = create(:plc_course_unit, :with_course_name).script
     assert old_pl_course_unit.old_professional_learning_course?
   end

@@ -55,6 +55,13 @@ class AbilityTest < ActiveSupport::TestCase
     # facilitator, beta course.
     @old_pl_course_unit = create(:plc_course_unit, :with_course_name).script
 
+    # Equivalent of the old 'flappy' fixture: an HOC tutorial unit in a stable
+    # student-facing course, readable by everyone (but not by admins, who can
+    # read nothing).
+    @hoc_tutorial_unit = create(:script, name: 'flappy').tap do |script|
+      create(:hoc_course, unit: script, name: 'flappy', family_name: 'flappy', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    end
+
     @in_development_unit_group = create(:unit_group, published_state: 'in_development')
     @in_development_script = create(:script).tap do |script|
       @in_development_lesson = create(:lesson, script: script, has_lesson_plan: true)
@@ -78,7 +85,7 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Activity)
     assert ability.can?(:read, Section)
     refute ability.can?(:read, @old_pl_course_unit) # old PL courses are facilitator-audience only
-    assert ability.can?(:read, Unit.find_by_name('flappy'))
+    assert ability.can?(:read, @hoc_tutorial_unit)
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -115,7 +122,7 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Activity)
     assert ability.can?(:read, Section)
     assert ability.can?(:read, @old_pl_course_unit)
-    assert ability.can?(:read, Unit.find_by_name('flappy'))
+    assert ability.can?(:read, @hoc_tutorial_unit)
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -152,7 +159,7 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Activity)
     assert ability.can?(:read, Section)
     assert ability.can?(:read, @old_pl_course_unit)
-    assert ability.can?(:read, Unit.find_by_name('flappy'))
+    assert ability.can?(:read, @hoc_tutorial_unit)
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -189,7 +196,7 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Activity)
     refute ability.can?(:read, Section)
     refute ability.can?(:read, @old_pl_course_unit) # old PL courses are facilitator-audience only
-    assert ability.can?(:read, Unit.find_by_name('flappy'))
+    assert ability.can?(:read, @hoc_tutorial_unit)
 
     refute ability.can?(:read, @in_development_script)
     assert ability.can?(:read, @public_teacher_to_student_unit)
@@ -233,7 +240,7 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Activity)
     refute ability.can?(:read, Section)
     refute ability.can?(:read, @old_pl_course_unit) # old PL courses are facilitator-audience only
-    assert ability.can?(:read, Unit.find_by_name('flappy'))
+    assert ability.can?(:read, @hoc_tutorial_unit)
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     refute ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -270,7 +277,7 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Activity)
     assert ability.can?(:read, Section)
     refute ability.can?(:read, @old_pl_course_unit) # old PL courses are facilitator-audience only
-    assert ability.can?(:read, Unit.find_by_name('flappy'))
+    assert ability.can?(:read, @hoc_tutorial_unit)
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -314,7 +321,7 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, Section)
 
     assert ability.can?(:read, @old_pl_course_unit)
-    assert ability.can?(:read, Unit.find_by_name('flappy'))
+    assert ability.can?(:read, @hoc_tutorial_unit)
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -359,7 +366,7 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Activity)
     assert ability.can?(:read, Section)
     assert ability.can?(:read, @old_pl_course_unit)
-    assert ability.can?(:read, Unit.find_by_name('flappy'))
+    assert ability.can?(:read, @hoc_tutorial_unit)
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -400,7 +407,7 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, Section)
 
     assert ability.can?(:read, @old_pl_course_unit)
-    assert ability.can?(:read, Unit.find_by_name('flappy'))
+    assert ability.can?(:read, @hoc_tutorial_unit)
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
@@ -447,7 +454,7 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.cannot?(:destroy, Level)
     assert ability.cannot?(:destroy, Activity)
     assert ability.cannot?(:read, @old_pl_course_unit)
-    assert ability.cannot?(:read, Unit.find_by_name('flappy'))
+    assert ability.cannot?(:read, @hoc_tutorial_unit)
 
     assert ability.cannot?(:read, @public_teacher_to_student_unit)
     assert ability.cannot?(:read, @public_facilitator_to_teacher_unit)
@@ -494,7 +501,7 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, Section)
 
     assert ability.can?(:read, @old_pl_course_unit)
-    assert ability.can?(:read, Unit.find_by_name('flappy'))
+    assert ability.can?(:read, @hoc_tutorial_unit)
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)

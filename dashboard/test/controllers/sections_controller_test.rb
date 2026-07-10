@@ -4,6 +4,10 @@ class SectionsControllerTest < ActionController::TestCase
   include Minitest::RSpecMocks
 
   setup_all do
+    # The page header falls back to the hourofcode unit (Unit.hoc_2014_unit),
+    # so full page renders need it to exist.
+    create_hourofcode_unit_and_levels
+
     @teacher = create(:teacher)
 
     @word_section = create(:section, user: @teacher, login_type: 'word')
@@ -14,7 +18,15 @@ class SectionsControllerTest < ActionController::TestCase
 
     @regular_section = create(:section, user: @teacher, login_type: 'email')
 
-    @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: Unit.flappy_unit.id, course_id: Unit.flappy_unit.original_unit_group_id)
+    # Equivalent of the old 'flappy' fixture: an HOC tutorial unit in a stable
+    # single-unit course, both named 'flappy'. The name has a static i18n
+    # translation ("Flappy Code") which the dropdown assertions rely on.
+    @flappy_unit = create(:script, :with_levels, name: 'flappy')
+    @flappy_unit.lessons.first.update!(has_lesson_plan: true)
+    create(:hoc_course, unit: @flappy_unit, name: 'flappy', family_name: 'flappy', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    @flappy_unit.reload
+
+    @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: @flappy_unit.id, course_id: @flappy_unit.original_unit_group_id)
     @flappy_user_1 = create(:follower, section: @flappy_section).student_user
   end
 

@@ -835,6 +835,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'cached_find' do
+    create_hourofcode_unit_and_levels
     script_level = ScriptLevel.cache_find(Unit.hoc_2014_unit.script_levels[0].id)
     assert_equal(Unit.hoc_2014_unit.script_levels[0], script_level)
 

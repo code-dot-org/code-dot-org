@@ -5,6 +5,10 @@ class ApiControllerTest < ActionController::TestCase
   include Minitest::RSpecMocks
 
   setup_all do
+    # Sections without an assigned script fall back to the hourofcode unit
+    # (ApiController#load_script -> Unit.hoc_2014_unit), so it must exist.
+    create_hourofcode_unit_and_levels
+
     @teacher = create(:teacher)
 
     @teacher_other = create(:teacher)
