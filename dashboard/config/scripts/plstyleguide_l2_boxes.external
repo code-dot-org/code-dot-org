@@ -23,7 +23,7 @@ markdown <<MARKDOWN
 </div>
 ```
 
-<div style="background-color: #048899; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+<div style="background-color: #E4E2F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
     <p style="font-size: 14pt; font-weight: bold; margin: 0;">Block Quote</p>
     <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Donec scelerisque nisi ut convallis tincidunt.
@@ -31,7 +31,7 @@ markdown <<MARKDOWN
 </div>
 
 ```html
-<div style="background-color: #048899; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+<div style="background-color: #E4E2F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
     <p style="font-size: 14pt; font-weight: bold; margin: 0;">Block Quote</p>
     <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Donec scelerisque nisi ut convallis tincidunt.
@@ -39,7 +39,7 @@ markdown <<MARKDOWN
 </div>
 ```
 
-<div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+<div style="background-color: #ACA8EA; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
     <p style="font-size: 14pt; font-weight: bold; margin: 0;">Block Quote</p>
     <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Donec scelerisque nisi ut convallis tincidunt.
@@ -47,7 +47,7 @@ markdown <<MARKDOWN
 </div>
 
 ```html
-<div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+<div style="background-color: #ACA8EA; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
     <p style="font-size: 14pt; font-weight: bold; margin: 0;">Block Quote</p>
     <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Donec scelerisque nisi ut convallis tincidunt.
@@ -55,7 +55,7 @@ markdown <<MARKDOWN
 </div>
 ```
 
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+<div style="background-color: #4C42CF; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
     <p style="font-size: 14pt; font-weight: bold; margin: 0;">Block Quote</p>
     <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Donec scelerisque nisi ut convallis tincidunt.
@@ -63,59 +63,10 @@ markdown <<MARKDOWN
 </div>
 
 ```html
-<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+<div style="background-color: #4C42CF; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
     <p style="font-size: 14pt; font-weight: bold; margin: 0;">Block Quote</p>
     <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Donec scelerisque nisi ut convallis tincidunt.
     </p>
-</div>
-```
-
-<div style="background-color: #8148B2; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    <p style="font-size: 14pt; font-weight: bold; margin: 0;">Block Quote</p>
-    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Donec scelerisque nisi ut convallis tincidunt.
-    </p>
-</div>
-
-```html
-<div style="background-color: #8148B2; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    <p style="font-size: 14pt; font-weight: bold; margin: 0;">Block Quote</p>
-    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Donec scelerisque nisi ut convallis tincidunt.
-    </p>
-</div>
-```
-
-<div style="background-color: #DECEEA; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    <p style="font-size: 14pt; font-weight: bold; margin: 0;">Block Quote</p>
-    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Donec scelerisque nisi ut convallis tincidunt.
-    </p>
-</div>
-
-```html
-<div style="background-color: #DECEEA; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    <p style="font-size: 14pt; font-weight: bold; margin: 0;">Block Quote</p>
-    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Donec scelerisque nisi ut convallis tincidunt.
-    </p>
-</div>
-```
-
-<div style="background-color: #603E7E; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    <p style="font-size: 14pt; font-weight: bold; margin: 0;">Block Quote</p>
-    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Donec scelerisque nisi ut convallis tincidunt.
-    </p>
-</div>
-
-```html
-<div style="background-color: #603E7E; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
-    <p style="font-size: 14pt; font-weight: bold; margin: 0;">Block Quote</p>
-    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Donec scelerisque nisi ut convallis tincidunt.
-    </p>
-</div>
-```
+</div>```
 MARKDOWN

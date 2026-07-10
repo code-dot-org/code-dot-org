@@ -160,7 +160,9 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
         onAssetUploaded={onAssetUploaded}
         onAssetRemoved={onAssetRemoved}
         hideModelChangeMessage={true}
-        responseCallback={aiTutorResponseSchemaSettings?.responseCallback}
+        jsonSchemaResponseCallback={
+          aiTutorResponseSchemaSettings?.jsonSchemaResponseCallback
+        }
         hasInstructionsDrawer={hasInstructionsDrawer}
         lessonId={lessonId}
         disabledState={disabledState}

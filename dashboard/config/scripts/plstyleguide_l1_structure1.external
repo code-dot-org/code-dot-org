@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 Generally, organizing information on a grid allows for the user's focus to be on the content, rather than its structure.
 
-<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 100%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 100%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 	<p style="font-size: 14pt; font-weight: bold; margin: 0;">💡 Design Tip</p>
 	<p style="font-size: 12pt; margin-top: 12px; line-height: 120%;"><b>The benefits of working on a grid are simple: clarity, efficiency, economy, and continuity.</b></p>
 	<p style="font-size: 12pt; margin-top: 12px; line-height: 120%;">Before anything else, a grid introduces systematic order to a layout, distinguishing types of information and easing a user's navigation through them. Using a grid permits a designer to lay out enormous amounts of information...in substantially less time because many design considerations have been addressed in building the grid's structure.</p>

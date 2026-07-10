@@ -11,7 +11,6 @@ function gameDevLoop() {
 
   edgesCollide({group: 'players'});
   gravity({group: 'players'}, GRAVITY);
-  console.log(World.allSprites);
 }
 
 other.push(gameDevLoop);
