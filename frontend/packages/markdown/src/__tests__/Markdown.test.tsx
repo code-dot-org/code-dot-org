@@ -14,6 +14,7 @@ import {
   expandableImages,
   externalLinks,
   inlineStyles,
+  lenientHeadings,
   visualCodeBlock,
   vocabularyDefinition,
 } from '../extensions';
@@ -66,6 +67,12 @@ describe('Markdown', () => {
   it('reads from children when content is absent', () => {
     const html = renderToStaticMarkup(<Markdown>{'plain text'}</Markdown>);
     expect(html).toContain('plain text');
+  });
+
+  it('renders --- as a design-system divider', () => {
+    const html = render('above\n\n---\n\nbelow');
+    // The DSCO Divider renders an <hr> carrying its (hashed) module class.
+    expect(html).toMatch(/<hr[^>]*class="[^"]*divider/);
   });
 
   describe('localization wrappers', () => {
@@ -531,6 +538,55 @@ describe('Markdown', () => {
     });
   });
 
+  describe('lenientHeadings', () => {
+    it('renders a heading when the space after the # is missing', () => {
+      const html = render('###Build a sequence', [lenientHeadings]);
+      expect(html).toContain('<h3');
+      expect(html).toContain('Build a sequence');
+      expect(html).not.toContain('###');
+    });
+
+    it('maps the number of #s to the heading level', () => {
+      expect(render('#One', [lenientHeadings])).toContain('<h1');
+      expect(render('####Four', [lenientHeadings])).toContain('<h4');
+    });
+
+    it('keeps following inline content, e.g. an icon (with inlineStyles)', () => {
+      // The real curriculum shape: an icon immediately after the #s.
+      const html = render('###<i class="fa-list-check"></i> Build a sequence', [
+        lenientHeadings,
+        inlineStyles,
+      ]);
+      expect(html).toContain('<h3');
+      expect(html).toContain('fa-list-check');
+      expect(html).toContain('Build a sequence');
+    });
+
+    it('leaves well-formed headings unchanged', () => {
+      const html = render('### Spaced heading', [lenientHeadings]);
+      expect(html).toContain('<h3');
+      expect(html).toContain('Spaced heading');
+    });
+
+    it('leaves seven or more #s as a paragraph', () => {
+      const html = render('#######Seven', [lenientHeadings]);
+      expect(html).not.toMatch(/<h[1-6]/);
+      expect(html).toContain('#######Seven');
+    });
+
+    it('does not touch #-prefixed lines inside a code block', () => {
+      const html = render('```\n#include <stdio.h>\n```', [lenientHeadings]);
+      expect(html).not.toMatch(/<h[1-6]/);
+      expect(html).toContain('#include');
+    });
+
+    it('leaves the malformed heading as text when not enabled', () => {
+      const html = render('###Build a sequence');
+      expect(html).not.toContain('<h3');
+      expect(html).toContain('###');
+    });
+  });
+
   describe('localization', () => {
     afterEach(() => vi.restoreAllMocks());
 
@@ -551,6 +607,23 @@ describe('Markdown', () => {
       expect(html).toContain('HELLO WORLD');
       expect(html).toContain('data-notranslate="true"');
       expect(html).not.toContain('data-isolate');
+    });
+
+    it('hides a non-phrasing element from the translator and restores it', () => {
+      // rehypeLocalize stashes anything outside its inline allowlist behind a
+      // <code> placeholder the translator ignores, then restores it verbatim.
+      const widget: MarkdownExtension = {
+        name: 'widget',
+        sanitizeSchema: {tagNames: ['widget']},
+      };
+      const seen = activateLocalization();
+      const html = render('Press <widget></widget> now', [widget]);
+      // the translator never saw the stashed element...
+      expect(seen.join('')).not.toContain('<widget');
+      // ...just a <code> placeholder (which the translator leaves untouched)
+      expect(seen.join('')).toMatch(/<code[^>]*data-localize-token/);
+      // ...but the output preserves the original
+      expect(html).toContain('<widget');
     });
 
     it('renames <code> for translation and restores it', () => {
