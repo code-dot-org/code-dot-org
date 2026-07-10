@@ -67,17 +67,20 @@ const CountdownRing: FC<CountdownRingProps> = ({
 
 interface VideoRecorderProps {
   onRecordingChange: (hasRecording: boolean) => void;
+  recordedUrl: string | null;
+  setRecordedUrl: React.Dispatch<React.SetStateAction<string | null>>;
   timeLimitSeconds?: number;
   disabled?: boolean;
 }
 
 const VideoRecorder: FC<VideoRecorderProps> = ({
   onRecordingChange,
+  recordedUrl,
+  setRecordedUrl,
   timeLimitSeconds = 30,
-  disabled,
+  disabled = false,
 }) => {
   const [recordingState, setRecordingState] = useState<RecordingState>('idle');
-  const [recordedUrl, setRecordedUrl] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [timeRemaining, setTimeRemaining] = useState(timeLimitSeconds);
 
