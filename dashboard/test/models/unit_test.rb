@@ -470,7 +470,8 @@ class UnitTest < ActiveSupport::TestCase
 
   test 'old_professional_learning_course?' do
     refute Unit.find_by_name('flappy').old_professional_learning_course?
-    assert Unit.find_by_name('ECSPD').old_professional_learning_course?
+    old_pl_course_unit = create(:plc_course_unit, :with_course_name).script
+    assert old_pl_course_unit.old_professional_learning_course?
   end
 
   test 'get_unit_resources_pdf_url returns nil if no resources in script or lessons' do
@@ -1696,7 +1697,7 @@ class UnitTest < ActiveSupport::TestCase
 
   test "unit_names_by_curriculum_umbrella returns the correct unit names" do
     assert_equal(
-      ["20-hour", @csf_unit.name, @csf_unit_2019.name],
+      [@csf_unit.name, @csf_unit_2019.name],
       Unit.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSF)
     )
     assert_equal(

@@ -9,6 +9,15 @@ class SectionTest < ActiveSupport::TestCase
     @section = create(:section, teacher: @teacher)
 
     @default_attrs = {user: @teacher, name: 'test-section'}
+
+    # Equivalent of the old 'jigsaw' fixture: a single-unit course whose unit and
+    # course both use the name 'jigsaw'. That name has static i18n translations
+    # ("Jigsaw"), so the localized titles and /courses/jigsaw paths asserted below
+    # resolve the same way they did against the fixture.
+    @jigsaw_unit = create(:unit, name: 'jigsaw')
+    @jigsaw_course = create(:single_unit_course, name: 'jigsaw', family_name: 'jigsaw', unit: @jigsaw_unit)
+    CourseOffering.add_course_offering(@jigsaw_course)
+    @jigsaw_unit.reload
   end
 
   test "sections are soft-deleted" do
@@ -538,7 +547,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'concise_summarize: section with a single-unit course assigned' do
     # Use an existing script so that it has a translation
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
 
     Timecop.freeze(Time.zone.now) do
       section = create(:section, script: script, unit_group: script.get_original_unit_group)
@@ -586,7 +595,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'concise_summarize: section with a coteacher' do
     # Use an existing script so that it has a translation
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
     CourseOffering.add_course_offering(script.original_unit_group)
 
     Timecop.freeze(Time.zone.now) do
@@ -640,7 +649,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'concise_summarize: section with both a course and a script' do
     # Use an existing script so that it has a translation
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
     unit_group = create(:unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family')
     create(:unit_group_unit, unit_group: unit_group, script: script, position: 1)
     CourseOffering.add_course_offering(unit_group)
@@ -837,7 +846,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'selected_section_summarize: section with a script assigned' do
     # Use an existing script so that it has a translation
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
 
     Timecop.freeze(Time.zone.now) do
       section = create(:section, script: script, unit_group: script.get_original_unit_group)
@@ -1007,7 +1016,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'summarize: section with a script assigned' do
     # Use an existing script so that it has a translation
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
 
     Timecop.freeze(Time.zone.now) do
       section = create(:section, script: script, unit_group: script.get_original_unit_group)
@@ -1069,7 +1078,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'summarize: section with a coteacher' do
     # Use an existing script so that it has a translation
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
     CourseOffering.add_course_offering(script.original_unit_group)
 
     Timecop.freeze(Time.zone.now) do
@@ -1138,7 +1147,7 @@ class SectionTest < ActiveSupport::TestCase
   test 'summarize: section with both a course and a script' do
     # TODO: TEACH-1788 This test will probably need to be updated when we update fixtures
     # Use an existing script so that it has a translation
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
     unit_group = create(:unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family')
     create(:unit_group_unit, unit_group: unit_group, script: script, position: 1)
     CourseOffering.add_course_offering(unit_group)
@@ -1388,7 +1397,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'any_student_has_progress? returns true if student has progress on unit assigned to section' do
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
     unit_group = create(:unit_group, :stable, name: 'somecourse', version_year: '1991', family_name: 'some-family')
     create(:unit_group_unit, unit_group: unit_group, script: script, position: 1)
     CourseOffering.add_course_offering(unit_group)
@@ -1402,7 +1411,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'any_student_has_progress? returns true if student has progress on unit not assigned to section' do
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
     unit_group = create(:unit_group, :stable, name: 'somecourse', version_year: '1991', family_name: 'some-family')
     create(:unit_group_unit, unit_group: unit_group, script: script, position: 1)
     CourseOffering.add_course_offering(unit_group)
@@ -1629,7 +1638,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'section grants access to AI Chat when DCDO flag enabled' do
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
     unit_group = create(:unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family')
     create(:unit_group_unit, unit_group: unit_group, script: script, position: 1)
     section = create(:section, unit_group: unit_group)

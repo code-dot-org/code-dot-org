@@ -885,6 +885,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     )
     assert_equal "/flappy/5", build_script_level_path(flappy_level)
 
+    # A normal (non-legacy-routed) script: /jigsaw/3 is recognized as chapter
+    # routing, but build_script_level_path emits the canonical /s/ path.
+    jigsaw_unit = create(:script, name: Unit::JIGSAW_NAME)
+    jigsaw_lesson = create(:lesson, script: jigsaw_unit, relative_position: '1', absolute_position: 1)
+    3.times {|i| create(:script_level, script: jigsaw_unit, lesson: jigsaw_lesson, chapter: i + 1)}
     jigsaw_level = ScriptLevel.find_by(script_id: Unit.get_from_cache(Unit::JIGSAW_NAME).id, chapter: 3)
     assert_routing(
       {method: "get", path: "http://#{CDO.dashboard_hostname}/jigsaw/3"},

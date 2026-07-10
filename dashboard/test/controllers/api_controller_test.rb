@@ -1221,16 +1221,15 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get section level progress with specific script" do
-    script = Unit.find_by_name('algebra')
     get :section_level_progress, params: {
       section_id: @section.id,
-      script_id: script.id
+      script_id: @script.id
     }
     assert_response :success
   end
 
   test "should get paginated section level progress with specific script" do
-    script = Unit.find_by_name('algebra')
+    script = @script
 
     get :section_level_progress, params: {section_id: @section.id, script_id: script.id, page: 1, per: 2}
     assert_response :success
