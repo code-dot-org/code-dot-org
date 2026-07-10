@@ -8,6 +8,8 @@ import ChallengeBox from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivi
 // render path; add behavior-specific cases as content lands.
 describe('ChallengeBox', () => {
   it('renders without crashing', () => {
-    expect(() => render(<ChallengeBox />)).not.toThrow();
+    expect(() =>
+      render(<ChallengeBox lessonId={1} lessonName={'test'} />)
+    ).not.toThrow();
   });
 });
