@@ -70,6 +70,8 @@ interface SourcesContainerProps extends LabProps {
     prevSources: ProjectSources,
     newSources: ProjectSources
   ) => boolean;
+  /** Called whenever checkSourcesChangedForProgressReport returns true. */
+  onMeaningfulSourceChange?: () => void;
 }
 
 /**
@@ -82,6 +84,7 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
   children,
   projectManager,
   checkSourcesChangedForProgressReport,
+  onMeaningfulSourceChange,
 }) => {
   const [currentSources, setCurrentSources] = useState<ProjectSources>(
     () => getInitialSources(levelProperties, initialSources) || defaultSources
@@ -111,6 +114,9 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
   currentLevelStatusRef.current = currentLevelStatus;
 
   const dispatch = useAppDispatch();
+
+  const onMeaningfulSourceChangeRef = useRef(onMeaningfulSourceChange);
+  onMeaningfulSourceChangeRef.current = onMeaningfulSourceChange;
 
   const reinitializeSources = useCallback(
     (sources: ProjectSources, save: boolean = false) => {
@@ -179,11 +185,11 @@ const SourcesContainer: React.FC<SourcesContainerProps> = ({
 
           // Check not started state here to avoid an unnecessary
           // computation on the source change.
-          if (
-            currentLevelStatusRef.current === LevelStatus.not_tried &&
-            checkSourcesChangedForProgressReport?.(prev, newSources)
-          ) {
-            dispatch(sendStartedReportIfNotStarted(levelProperties.appName));
+          if (checkSourcesChangedForProgressReport?.(prev, newSources)) {
+            onMeaningfulSourceChangeRef.current?.();
+            if (currentLevelStatusRef.current === LevelStatus.not_tried) {
+              dispatch(sendStartedReportIfNotStarted(levelProperties.appName));
+            }
           }
         }
 
