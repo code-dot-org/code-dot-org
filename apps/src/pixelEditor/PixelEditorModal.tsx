@@ -1,7 +1,4 @@
-import {
-  useEscapeKeyHandler,
-  useFocusTrap,
-} from '@code-dot-org/component-library/common/hooks';
+import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import classNames from 'classnames';
 import React, {
   useCallback,
@@ -16,6 +13,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import ColorPicker from './ColorPicker';
 import {crispScaleFor, downsampleToGrid, upscaleNearest} from './pixelArt';
 import PixelTooltip from './PixelTooltip';
+import {PixelTool, TOOLS, toolTitle} from './toolDefinitions';
 import {
   BRUSH_SIZES,
   drawCircle,
@@ -27,79 +25,6 @@ import {
 } from './tools';
 
 import moduleStyles from './pixel-editor.module.scss';
-
-export type PixelTool = 'pen' | 'eraser' | 'bucket' | 'circle' | 'filledCircle';
-
-// Each tool has a single-key shortcut; the hover tooltip reads
-// "<label> (<KEY>)".
-const TOOLS: {
-  id: PixelTool;
-  label: string;
-  shortcut: string;
-  icon: React.ReactNode;
-}[] = [
-  {
-    id: 'pen',
-    label: 'Pen',
-    shortcut: 'p',
-    icon: (
-      <svg viewBox="0 0 16 16" aria-hidden="true">
-        <path d="M2 14l1-4 8-8 3 3-8 8-4 1z" />
-      </svg>
-    ),
-  },
-  {
-    id: 'eraser',
-    label: 'Eraser',
-    shortcut: 'e',
-    icon: (
-      <svg viewBox="0 0 16 16" aria-hidden="true">
-        <path d="M6 13L2 9l7-7 5 5-6 6H6zm-1 1h9v1H5v-1z" />
-      </svg>
-    ),
-  },
-  {
-    id: 'bucket',
-    label: 'Fill',
-    shortcut: 'f',
-    icon: (
-      <svg viewBox="0 0 16 16" aria-hidden="true">
-        <path d="M8 1l6 6-6 6-5-5 5-5V1zm5.5 9.5S15 12.4 15 13.5a1.5 1.5 0 0 1-3 0c0-1.1 1.5-3 1.5-3z" />
-      </svg>
-    ),
-  },
-  {
-    id: 'circle',
-    label: 'Circle outline',
-    shortcut: 'c',
-    icon: (
-      <svg viewBox="0 0 16 16" aria-hidden="true">
-        <circle
-          cx="8"
-          cy="8"
-          r="6"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-        />
-      </svg>
-    ),
-  },
-  {
-    id: 'filledCircle',
-    label: 'Solid circle',
-    shortcut: 's',
-    icon: (
-      <svg viewBox="0 0 16 16" aria-hidden="true">
-        <circle cx="8" cy="8" r="7" />
-      </svg>
-    ),
-  },
-];
-
-function toolTitle(tool: (typeof TOOLS)[number]): string {
-  return `${tool.label} (${tool.shortcut.toUpperCase()})`;
-}
 
 // Internal display-canvas resolution: integer upscale of the backing image,
 // as large as fits this budget. The rendered (CSS) size is independent: the
@@ -122,31 +47,6 @@ const DEFAULT_COLOR: RGBA = [31, 41, 71, 255];
 
 // Brush-size swatch dot: rendered edge in px for brush size N.
 const brushDotPx = (size: number) => 3 + size * 1.6;
-
-// Dialog chrome: focus is trapped inside while open (and restored to the
-// trigger on close), Escape cancels. A separate component so the hooks run
-// when the panel mounts — after the image decodes — not when the overlay
-// first appears.
-const DialogChrome: React.FunctionComponent<{
-  title: string;
-  onCancel: () => void;
-  children: React.ReactNode;
-}> = ({title, onCancel, children}) => {
-  const modalRef = useRef<HTMLDivElement>(null);
-  useFocusTrap(modalRef);
-  useEscapeKeyHandler(onCancel);
-  return (
-    <div
-      ref={modalRef}
-      className={moduleStyles.modal}
-      role="dialog"
-      aria-modal="true"
-      aria-label={title}
-    >
-      {children}
-    </div>
-  );
-};
 
 interface PixelEditorModalProps {
   title: string;
@@ -576,15 +476,23 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
     onSave(backing.toDataURL('image/png'), {});
   }, [onSave, pixelMode]);
 
-  // The backdrop appears immediately (the click responds); the panel mounts
-  // only once the image is decoded and measured, arriving in final form.
   if (!loaded && !loadError) {
-    return <div className={moduleStyles.overlay} />;
+    return null;
   }
 
   return (
-    <div className={moduleStyles.overlay}>
-      <DialogChrome title={title} onCancel={onCancel}>
+    // display: contents host, so the editor's panel styles win over
+    // CustomDialog's via parent-selector specificity (never load order).
+    <div className={moduleStyles.dialogHost}>
+      <CustomDialog
+        aria-label={title}
+        onClose={onCancel}
+        mode="dark"
+        className={moduleStyles.modal}
+      >
+        <span id="dsco-dialog-description" className={moduleStyles.srOnly}>
+          Draw on the image with the toolbar's tools, then save or cancel.
+        </span>
         <div className={moduleStyles.header}>{title}</div>
         <div className={moduleStyles.body}>
           <div className={moduleStyles.toolbar}>
@@ -668,7 +576,7 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
             Save
           </button>
         </div>
-      </DialogChrome>
+      </CustomDialog>
     </div>
   );
 };

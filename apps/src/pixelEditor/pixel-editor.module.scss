@@ -3,18 +3,14 @@
 
 $border-subtle: rgb(255 255 255 / 12%);
 
-.overlay {
-  position: fixed;
-  inset: 0;
-  // Above the Lab2 shell chrome (tab bar, guide panel).
-  z-index: 1100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(0 0 0 / 55%);
+// Wraps CustomDialog without affecting layout; the parent selector gives the
+// panel styles below higher specificity than CustomDialog's own class
+// (stylesheet order must not matter).
+.dialogHost {
+  display: contents;
 }
 
-.modal {
+.dialogHost .modal {
   display: flex;
   flex-direction: column;
   max-width: calc(100vw - 32px);
@@ -27,6 +23,16 @@ $border-subtle: rgb(255 255 255 / 12%);
   // The panel mounts already at its final size (after the image decodes);
   // a quick scale-fade makes that arrival feel deliberate.
   animation: modal-enter 0.14s ease-out;
+}
+
+// Screen-reader-only text (the dialog description CustomDialog expects).
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 @keyframes modal-enter {
@@ -63,9 +69,10 @@ $border-subtle: rgb(255 255 255 / 12%);
 }
 
 // The design-system tooltip portals to <body> at z-index 10, which is under
-// this modal's overlay (z-index 1100); lift ours above it. The nudge right
-// puts the bubble's left edge 4px past the canvas edge, so the tail reads
-// against the image being edited rather than the dark toolbar gap.
+// CustomDialog's overlay ($zindex-modal-backdrop, 1040); lift ours above it.
+// The nudge right puts the bubble's left edge 4px past the canvas edge, so
+// the tail reads against the image being edited rather than the dark toolbar
+// gap.
 .pixelTooltip {
   z-index: 1200;
   margin-left: 16px;
