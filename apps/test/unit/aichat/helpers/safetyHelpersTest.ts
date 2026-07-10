@@ -130,7 +130,7 @@ describe('safetyHelpers', () => {
       await expect(isImageSafe(file)).resolves.toBe(true);
 
       expect(mockDCDOGet).toHaveBeenCalledWith(
-        'aichat-output-image-safety-enabled',
+        'aichat-output-image-llm-safety-judge-enabled',
         true
       );
       expect(mockGenerateText).not.toHaveBeenCalled();

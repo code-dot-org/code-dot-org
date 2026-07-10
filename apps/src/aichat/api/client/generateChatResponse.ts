@@ -26,6 +26,7 @@ import {
   isTextSafe,
   isImageSafe,
   getImageModerationStatus,
+  isOutputImageLlmSafetyJudgeEnabled,
 } from './helpers/safetyHelpers';
 
 /**
@@ -113,19 +114,26 @@ export async function generateChatResponse(
     if (file.mediaType.startsWith('image/')) {
       sendLab2AnalyticsEvent(EVENTS.MODEL_OUTPUT_IMAGE_CREATED);
       // Check generated images for safety.
+      const imageSafetyChecks: [
+        ReturnType<typeof getImageModerationStatus>,
+        ReturnType<typeof isImageSafe>?
+      ] = [getImageModerationStatus(file, buildAssetUrl(asset))];
+      if (isOutputImageLlmSafetyJudgeEnabled()) {
+        imageSafetyChecks.push(isImageSafe(file));
+      }
       const [imageModerationResult, imageSafetyResult] =
-        await Promise.allSettled([
-          getImageModerationStatus(file, buildAssetUrl(asset)),
-          isImageSafe(file),
-        ]);
+        await Promise.allSettled(imageSafetyChecks);
       const imageModerationStatus =
         imageModerationResult.status === 'fulfilled'
           ? imageModerationResult.value
           : 'error';
-      const imageSafe =
-        imageSafetyResult.status === 'fulfilled'
-          ? imageSafetyResult.value
-          : undefined;
+      let imageSafe: boolean | undefined = true;
+      if (imageSafetyResult !== undefined) {
+        imageSafe =
+          imageSafetyResult.status === 'fulfilled'
+            ? imageSafetyResult.value
+            : undefined;
+      }
 
       if (imageModerationStatus === 'flagged') {
         return {

@@ -39,13 +39,20 @@ const DEFAULT_IMAGE_SAFETY_CONFIG: SafetyConfig = {
     'You are a content filter trying to keep a school teacher out of trouble. Determine if the image is inappropriate for an American public middle school classroom. Examples of inappropriate content: profanity or explicit text, illegal behavior, insults, bullying, slurs, racism, sexism, hate symbols, sex, nudity, sexualized content, violence, gore, threats, weapons, dirty slang, drug use, alcohol use, tobacco or vaping, self-harm, other content that would be unsafe or disruptive in class\nIf the image is inappropriate, respond with the single word `INAPPROPRIATE`, otherwise respond with the single word `OK`.',
 };
 
-const OUTPUT_IMAGE_SAFETY_ENABLED_DCDO_KEY =
-  'aichat-output-image-safety-enabled';
+const OUTPUT_IMAGE_LLM_SAFETY_JUDGE_ENABLED_DCDO_KEY =
+  'aichat-output-image-llm-safety-judge-enabled';
 
-function validateSafetyClassification(classification?: string): void {
+function isValidAndPassingClassification(classification?: string): boolean {
   if (classification !== 'OK' && classification !== 'INAPPROPRIATE') {
     throw new Error('Invalid classification value: ' + classification);
   }
+  return classification === 'OK';
+}
+
+export function isOutputImageLlmSafetyJudgeEnabled(): boolean {
+  return (
+    DCDO.get(OUTPUT_IMAGE_LLM_SAFETY_JUDGE_ENABLED_DCDO_KEY, true) !== false
+  );
 }
 
 /**
@@ -66,9 +73,7 @@ export async function isTextSafe(
     model: getModel(safetyConfig.modelId),
   });
 
-  const classification = response.output?.classification;
-  validateSafetyClassification(classification);
-  return classification === 'OK';
+  return isValidAndPassingClassification(response.output?.classification);
 }
 
 /**
@@ -78,7 +83,7 @@ export async function isImageSafe(
   file: GeneratedFile,
   customSafetyConfig?: Partial<SafetyConfig>
 ): Promise<boolean> {
-  if (DCDO.get(OUTPUT_IMAGE_SAFETY_ENABLED_DCDO_KEY, true) === false) {
+  if (!isOutputImageLlmSafetyJudgeEnabled()) {
     return true;
   }
 
@@ -110,9 +115,7 @@ export async function isImageSafe(
     model: getModel(safetyConfig.modelId),
   });
 
-  const classification = response.output?.classification;
-  validateSafetyClassification(classification);
-  return classification === 'OK';
+  return isValidAndPassingClassification(response.output?.classification);
 }
 
 export async function getImageModerationStatus(
