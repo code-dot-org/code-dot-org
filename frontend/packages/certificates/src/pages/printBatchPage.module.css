@@ -1,0 +1,41 @@
+.page {
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 16px;
+  width: 100%;
+}
+
+.instructions {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.certificate {
+  break-after: page;
+  break-inside: avoid;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+.certificate img {
+  display: block;
+  width: 100%;
+}
+
+@media print {
+  .page {
+    margin: 0;
+    max-width: none;
+    padding: 0;
+  }
+
+  .instructions {
+    display: none;
+  }
+
+  /* One sheet per certificate, but no trailing blank page after the last. */
+  .certificate:last-child {
+    break-after: auto;
+  }
+}

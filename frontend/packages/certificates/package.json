@@ -1,0 +1,92 @@
+{
+  "name": "@code-dot-org/certificates",
+  "version": "0.0.0",
+  "private": true,
+  "description": "CodeAI certificate rendering package",
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/certificates/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/packages/certificates"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "preview": "vite preview",
+    "test": "vitest --run",
+    "test:ui": "playwright test",
+    "test:visual:prove": "prove-visual",
+    "typecheck": "tsc --noEmit"
+  },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "stylelint": {
+    "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
+  },
+  "dependencies": {
+    "@code-dot-org/component-library": "workspace:*",
+    "@code-dot-org/core": "workspace:*",
+    "@fontsource/noto-serif": "^5.2.6",
+    "react-dom-confetti": "^0.2.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@code-dot-org/component-library-styles": "workspace:*",
+    "@code-dot-org/fonts": "workspace:*",
+    "@code-dot-org/lint-config": "workspace:*",
+    "@code-dot-org/playwright-support": "workspace:*",
+    "@emotion/react": "catalog:",
+    "@emotion/styled": "catalog:",
+    "@mui/material": "catalog:",
+    "@testing-library/dom": "catalog:",
+    "@testing-library/jest-dom": "catalog:",
+    "@testing-library/react": "catalog:",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
+    "classnames": "catalog:",
+    "eslint": "catalog:",
+    "eslint-plugin-react-hooks": "catalog:",
+    "jsdom": "catalog:",
+    "ky": "catalog:",
+    "msw": "^2.11.2",
+    "playwright": "catalog:",
+    "prettier": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "swiper": "^11.0.5",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:",
+    "vite-plugin-externalize-deps": "catalog:",
+    "vitest": "catalog:"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
+    "@mui/material": "^7.0.0",
+    "react": "^18 || ^19",
+    "react-dom": "^18 || ^19",
+    "swiper": "^11.0.5"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
+  }
+}

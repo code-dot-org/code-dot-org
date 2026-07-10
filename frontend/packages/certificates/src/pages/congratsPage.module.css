@@ -1,0 +1,61 @@
+.page {
+  display: grid;
+  gap: 16px;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 24px;
+  width: 100%;
+}
+
+.backLink {
+  align-items: center;
+  display: inline-flex;
+  gap: 8px;
+  justify-self: start;
+}
+
+.content {
+  align-items: start;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(0, 3fr) minmax(280px, 2fr);
+}
+
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.certificates {
+  min-width: 0;
+}
+
+.panel {
+  background: var(--background-neutral-secondary, #f5f5f5);
+  display: grid;
+  gap: 12px;
+  padding: 24px;
+}
+
+.section {
+  display: grid;
+  gap: 8px;
+}
+
+.card {
+  align-items: start;
+  border: 1px solid var(--border-neutral-primary, #d3d3d3);
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+}
+
+.card img {
+  max-width: 320px;
+  width: 40%;
+}
+
+.subheading {
+  margin: 0;
+}

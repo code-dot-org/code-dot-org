@@ -9,15 +9,53 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as CongratsRouteImport } from './routes/congrats'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as Print_certificatesBatchRouteImport } from './routes/print_certificates/batch'
+import { Route as Print_certificatesEncodedParamsRouteImport } from './routes/print_certificates/$encodedParams'
+import { Route as CertificatesBlankRouteImport } from './routes/certificates/blank'
+import { Route as CertificatesBatchRouteImport } from './routes/certificates/batch'
+import { Route as CertificatesEncodedParamsRouteImport } from './routes/certificates/$encodedParams'
 import { Route as ProjectsLabTypeChannelIdEditRouteImport } from './routes/projects/$labType/$channelId/edit'
 import { Route as CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRouteImport } from './routes/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition'
 
+const CongratsRoute = CongratsRouteImport.update({
+  id: '/congrats',
+  path: '/congrats',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const Print_certificatesBatchRoute = Print_certificatesBatchRouteImport.update({
+  id: '/print_certificates/batch',
+  path: '/print_certificates/batch',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Print_certificatesEncodedParamsRoute =
+  Print_certificatesEncodedParamsRouteImport.update({
+    id: '/print_certificates/$encodedParams',
+    path: '/print_certificates/$encodedParams',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CertificatesBlankRoute = CertificatesBlankRouteImport.update({
+  id: '/certificates/blank',
+  path: '/certificates/blank',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CertificatesBatchRoute = CertificatesBatchRouteImport.update({
+  id: '/certificates/batch',
+  path: '/certificates/batch',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CertificatesEncodedParamsRoute =
+  CertificatesEncodedParamsRouteImport.update({
+    id: '/certificates/$encodedParams',
+    path: '/certificates/$encodedParams',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ProjectsLabTypeChannelIdEditRoute =
   ProjectsLabTypeChannelIdEditRouteImport.update({
     id: '/projects/$labType/$channelId/edit',
@@ -35,17 +73,35 @@ const CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPosition
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/congrats': typeof CongratsRoute
+  '/certificates/$encodedParams': typeof CertificatesEncodedParamsRoute
+  '/certificates/batch': typeof CertificatesBatchRoute
+  '/certificates/blank': typeof CertificatesBlankRoute
+  '/print_certificates/$encodedParams': typeof Print_certificatesEncodedParamsRoute
+  '/print_certificates/batch': typeof Print_certificatesBatchRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
   '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition': typeof CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/congrats': typeof CongratsRoute
+  '/certificates/$encodedParams': typeof CertificatesEncodedParamsRoute
+  '/certificates/batch': typeof CertificatesBatchRoute
+  '/certificates/blank': typeof CertificatesBlankRoute
+  '/print_certificates/$encodedParams': typeof Print_certificatesEncodedParamsRoute
+  '/print_certificates/batch': typeof Print_certificatesBatchRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
   '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition': typeof CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/congrats': typeof CongratsRoute
+  '/certificates/$encodedParams': typeof CertificatesEncodedParamsRoute
+  '/certificates/batch': typeof CertificatesBatchRoute
+  '/certificates/blank': typeof CertificatesBlankRoute
+  '/print_certificates/$encodedParams': typeof Print_certificatesEncodedParamsRoute
+  '/print_certificates/batch': typeof Print_certificatesBatchRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
   '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition': typeof CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute
 }
@@ -53,33 +109,99 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/congrats'
+    | '/certificates/$encodedParams'
+    | '/certificates/batch'
+    | '/certificates/blank'
+    | '/print_certificates/$encodedParams'
+    | '/print_certificates/batch'
     | '/projects/$labType/$channelId/edit'
     | '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/congrats'
+    | '/certificates/$encodedParams'
+    | '/certificates/batch'
+    | '/certificates/blank'
+    | '/print_certificates/$encodedParams'
+    | '/print_certificates/batch'
     | '/projects/$labType/$channelId/edit'
     | '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition'
   id:
     | '__root__'
     | '/'
+    | '/congrats'
+    | '/certificates/$encodedParams'
+    | '/certificates/batch'
+    | '/certificates/blank'
+    | '/print_certificates/$encodedParams'
+    | '/print_certificates/batch'
     | '/projects/$labType/$channelId/edit'
     | '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CongratsRoute: typeof CongratsRoute
+  CertificatesEncodedParamsRoute: typeof CertificatesEncodedParamsRoute
+  CertificatesBatchRoute: typeof CertificatesBatchRoute
+  CertificatesBlankRoute: typeof CertificatesBlankRoute
+  Print_certificatesEncodedParamsRoute: typeof Print_certificatesEncodedParamsRoute
+  Print_certificatesBatchRoute: typeof Print_certificatesBatchRoute
   ProjectsLabTypeChannelIdEditRoute: typeof ProjectsLabTypeChannelIdEditRoute
   CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute: typeof CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/congrats': {
+      id: '/congrats'
+      path: '/congrats'
+      fullPath: '/congrats'
+      preLoaderRoute: typeof CongratsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/print_certificates/batch': {
+      id: '/print_certificates/batch'
+      path: '/print_certificates/batch'
+      fullPath: '/print_certificates/batch'
+      preLoaderRoute: typeof Print_certificatesBatchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/print_certificates/$encodedParams': {
+      id: '/print_certificates/$encodedParams'
+      path: '/print_certificates/$encodedParams'
+      fullPath: '/print_certificates/$encodedParams'
+      preLoaderRoute: typeof Print_certificatesEncodedParamsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/certificates/blank': {
+      id: '/certificates/blank'
+      path: '/certificates/blank'
+      fullPath: '/certificates/blank'
+      preLoaderRoute: typeof CertificatesBlankRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/certificates/batch': {
+      id: '/certificates/batch'
+      path: '/certificates/batch'
+      fullPath: '/certificates/batch'
+      preLoaderRoute: typeof CertificatesBatchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/certificates/$encodedParams': {
+      id: '/certificates/$encodedParams'
+      path: '/certificates/$encodedParams'
+      fullPath: '/certificates/$encodedParams'
+      preLoaderRoute: typeof CertificatesEncodedParamsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projects/$labType/$channelId/edit': {
@@ -101,6 +223,12 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CongratsRoute: CongratsRoute,
+  CertificatesEncodedParamsRoute: CertificatesEncodedParamsRoute,
+  CertificatesBatchRoute: CertificatesBatchRoute,
+  CertificatesBlankRoute: CertificatesBlankRoute,
+  Print_certificatesEncodedParamsRoute: Print_certificatesEncodedParamsRoute,
+  Print_certificatesBatchRoute: Print_certificatesBatchRoute,
   ProjectsLabTypeChannelIdEditRoute: ProjectsLabTypeChannelIdEditRoute,
   CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute:
     CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute,

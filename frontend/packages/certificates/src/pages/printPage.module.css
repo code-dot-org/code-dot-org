@@ -1,0 +1,25 @@
+.page {
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 25px 16px 16px;
+  width: 100%;
+}
+
+.certificate {
+  margin: 0 auto;
+  max-width: 960px;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+@media print {
+  .page {
+    margin: 0;
+    max-width: none;
+    padding: 0;
+  }
+
+  .certificate {
+    max-width: none;
+  }
+}
