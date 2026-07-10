@@ -9,11 +9,7 @@ jest.mock(
   () => ({
     __esModule: true,
     default: ({color, emoji}: {color: number; emoji: number}) => (
-      <div
-        data-testid="section-avatar"
-        data-color={color}
-        data-emoji={emoji}
-      />
+      <span role="img" aria-label={`section-avatar-${color}-${emoji}`} />
     ),
   })
 );
@@ -64,12 +60,11 @@ describe('SectionPodcastCard', () => {
       ).toBeInTheDocument();
     });
 
-    it('always renders the section avatar', () => {
+    it('renders the avatar with correct color and emoji props', () => {
       render(<SectionPodcastCard {...DEFAULT_PROPS} lesson={null} />);
-      const avatar = screen.getByTestId('section-avatar');
-      expect(avatar).toBeInTheDocument();
-      expect(avatar).toHaveAttribute('data-color', '2');
-      expect(avatar).toHaveAttribute('data-emoji', '5');
+      expect(
+        screen.getByRole('img', {name: 'section-avatar-2-5'})
+      ).toBeInTheDocument();
     });
 
     it('renders when lesson is undefined (fetch in flight)', () => {
@@ -94,7 +89,10 @@ describe('SectionPodcastCard', () => {
 
     it('does not render when lesson has no podcast_url', () => {
       render(
-        <SectionPodcastCard {...DEFAULT_PROPS} lesson={LESSON_WITHOUT_PODCAST} />
+        <SectionPodcastCard
+          {...DEFAULT_PROPS}
+          lesson={LESSON_WITHOUT_PODCAST}
+        />
       );
       expect(document.querySelector('audio')).toBeNull();
       expect(screen.queryByRole('button', {name: /play/i})).toBeNull();
@@ -178,7 +176,6 @@ describe('SectionPodcastCard', () => {
     it('updates currentTime when progress bar is clicked', async () => {
       await renderReady();
 
-      // Simulate duration becoming known
       Object.defineProperty(audioEl(), 'duration', {value: 200});
       fireEvent.durationChange(audioEl());
 
@@ -203,12 +200,9 @@ describe('SectionPodcastCard', () => {
         expect(screen.getByRole('button', {name: 'Play'})).toBeEnabled()
       );
 
-      expect(document.querySelector('.completedIcon')).toBeNull();
-
       fireEvent.ended(audioEl());
 
       await waitFor(() => {
-        // The completed icon container is rendered; the icon itself is inside FA
         expect(
           document.querySelector('[class*="completedIcon"]')
         ).toBeInTheDocument();

@@ -4,6 +4,7 @@ import React from 'react';
 
 import PrepareList from '@cdo/apps/aiTeacherDrawer/PrepareList';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 jest.mock('@cdo/apps/util/HttpClient');
 
@@ -15,23 +16,16 @@ jest.mock(
   '@cdo/apps/templates/studioHomepages/teacherHomepageV2/sectionAvatars/SectionAvatar',
   () => ({
     __esModule: true,
-    default: () => <div data-testid="section-avatar" />,
+    default: () => <span role="img" aria-label="section-avatar" />,
   })
 );
 
-const mockDispatch = jest.fn();
-
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
-  useAppDispatch: () => mockDispatch,
+  useAppDispatch: () => jest.fn(),
   useAppSelector: jest.fn(),
 }));
 
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-const SECTION_STATE_EMPTY = {
-  sectionIds: [],
-  sections: {},
-};
+const SECTION_STATE_EMPTY = {sectionIds: [], sections: {}};
 
 function makeSectionsState(
   sections: {
@@ -109,9 +103,7 @@ describe('PrepareList', () => {
       ])
     );
     render(<PrepareList />);
-    expect(
-      screen.queryByText('Period 1: Intro to CS')
-    ).not.toBeInTheDocument();
+    expect(screen.queryByText('Period 1: Intro to CS')).not.toBeInTheDocument();
     expect(screen.getByText('Period 2: Game Design')).toBeInTheDocument();
   });
 
