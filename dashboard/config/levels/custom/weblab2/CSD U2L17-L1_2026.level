@@ -6,7 +6,7 @@
   "user_id": 19378,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# Making a Multi-page Site\r\n\r\n\r\n\r\nA web site should include more than one web page, and they should connect to each other.   Here's an example of a project with multiple pages that are connected by hyperlinks (the blue underlined words that take you to another page when you click on them).\r\n\r\n# Do This\r\n1) Use the inspector tool to see the code that creates the hyperlinks on the top of index.html.\r\n* Discuss with your partner how you think that code works.\r\n",
+    "long_instructions": "# Making a Multi-page Site\r\n\r\n\r\n\r\nA web site should include more than one web page, and they should connect to each other.   Here's an example of a project with multiple pages that are connected by hyperlinks (the blue underlined words that take you to another page when you click on them).\r\n\r\n# Do This\r\n1) Use Inspect elements to see the code that creates the hyperlinks at the top of `index.html`.\r\n* Discuss with your partner how you think that code works.\r\n",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "disable_edit_run_for_submission": "false",

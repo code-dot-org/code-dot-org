@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "display_name": "Debug - Pseudo-classes",
-    "long_instructions": "# Debugging Pseudo-classes\r\n\r\nHelp! Gloria is trying to style the hyperlink so that the font gets larger and has a different color when you hover over it. But it isn't working. Please help her by finding and fixing the bugs!\r\n\r\nWhat I expected to happen  |\t What happened instead\r\n----------|----------------\r\n**The link has a different style when you hover over and click on it.** | _Nothing_\r\n\r\n\r\n# Do This\r\n\r\n1. Find and fix any bugs so that the hover and active pseudo-classes will work appropriately!\r\n\r\n**Don't forget to click \"Refresh and Save\" to see if everything is working as expected.**",
+    "long_instructions": "# Debugging Pseudo-classes\r\n\r\nHelp! Gloria is trying to style the hyperlink so that the font gets larger and has a different color when you hover over it. But it isn't working. Please help her by finding and fixing the bugs!\r\n\r\nWhat I expected to happen  |\t What happened instead\r\n----------|----------------\r\n**The link has a different style when you hover over and click on it.** | _Nothing_\r\n\r\n\r\n# Do This\r\n\r\n1. Find and fix any bugs so that the hover and active pseudo-classes will work appropriately!\r\n\r\n**Use the preview to see if everything is working as expected.**",
     "bubble_choice_description": "Debug the selectors when styling links with pseudo-classes",
     "thumbnail_url": "https://images.code.org/abda76a0c7802d5308b94fcc6b939aa5-debug3.png",
     "submittable": "false",
