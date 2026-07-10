@@ -1170,9 +1170,9 @@ Dashboard::Application.routes.draw do
 
         namespace :certificates do
           resources :courses, only: :show, param: :course
+          resource :viewer, only: :show
+          resource :completion, only: :show
         end
-        get 'certificates/user_info', to: 'certificates#user_info', defaults: {format: 'json'}
-        get 'certificates/congrats', to: 'certificates#congrats', defaults: {format: 'json'}
         get 'regional_partners/capacity', to: 'regional_partners#capacity'
         get 'regional_partners/enrolled', to: 'regional_partners#enrolled'
 
