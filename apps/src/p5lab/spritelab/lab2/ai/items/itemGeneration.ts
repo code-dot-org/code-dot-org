@@ -1,13 +1,12 @@
 import {generateText} from '@cdo/apps/aiGateway';
 import {
-  ASSUMED_BLOCK,
   crispScaleFor,
   normalizePixelArtBlob,
 } from '@cdo/apps/pixelEditor/pixelArt';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
-import {getImageModel} from './modelHelpers';
+import {ASSUMED_BLOCK, getImageModel, MODEL_OUTPUT_PX} from './modelHelpers';
 import {removeBackground} from './removeBackground';
 
 export type SpriteLab2ItemType = 'sprite' | 'background';
@@ -17,9 +16,7 @@ export type SpriteLab2ItemType = 'sprite' | 'background';
 // anti-aliased cut). See removeBackground's MatteOptions.
 export type SpriteLab2ItemStyle = 'smooth' | 'pixel';
 
-// The model outputs images at roughly this size; with ASSUMED_BLOCK-px
-// blocks, that makes the logical canvas the prompt asks for.
-const MODEL_OUTPUT_PX = 1024;
+// The logical canvas the prompt asks for: model output size over block size.
 const PROMPT_LOGICAL_GRID = MODEL_OUTPUT_PX / ASSUMED_BLOCK;
 
 // Tacked onto the prompt so the generated image matches the chosen style.
@@ -49,7 +46,7 @@ async function normalizeIfPixelArt(
   blob: Blob
 ): Promise<{blob: Blob; pixelGridSize?: number}> {
   try {
-    const normalized = await normalizePixelArtBlob(blob);
+    const normalized = await normalizePixelArtBlob(blob, ASSUMED_BLOCK);
     if (!normalized) {
       return {blob};
     }

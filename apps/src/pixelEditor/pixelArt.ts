@@ -160,11 +160,6 @@ function detectAxisLenient(
   return bestGridForEdges(edgePositions, edgeWeights, total);
 }
 
-// When the style choice already says "pixel art" and detection can't find a
-// trustworthy grid, fall back to the block size the generation prompt asks
-// for (itemGeneration builds its STYLE_PROMPT from this constant).
-export const ASSUMED_BLOCK = 16;
-
 /** Offset that aligns the most edge weight for a FIXED block size. */
 function bestOffsetForSize(hist: number[], size: number): number {
   let bestOffset = 0;
@@ -192,10 +187,14 @@ function bestOffsetForSize(hist: number[], size: number): number {
  * Best-attempt grid for an image the USER declared to be pixel art: the
  * strict detector when it succeeds; otherwise the stronger single axis's
  * block size applied to both (art pixels are square), with each axis's
- * offset fitted to that size; otherwise the prompt's assumed block size.
- * Never returns null — the style choice is the classifier.
+ * offset fitted to that size; otherwise the caller's fallbackBlockSize
+ * (typically what the generation prompt asked for). Never returns null —
+ * the style choice is the classifier.
  */
-export function assumePixelGrid(raster: Raster): PixelGrid {
+export function assumePixelGrid(
+  raster: Raster,
+  fallbackBlockSize: number
+): PixelGrid {
   const strict = detectPixelGrid(raster);
   if (strict) {
     return strict;
@@ -213,7 +212,7 @@ export function assumePixelGrid(raster: Raster): PixelGrid {
   const size =
     stronger && stronger.score >= MIN_CONFIDENCE
       ? stronger.size
-      : ASSUMED_BLOCK;
+      : fallbackBlockSize;
   return {
     sizeX: size,
     sizeY: size,
@@ -380,7 +379,8 @@ function canvasFromRaster(raster: Raster): HTMLCanvasElement {
  * rather than being left un-normalized.
  */
 export async function normalizePixelArtBlob(
-  blob: Blob
+  blob: Blob,
+  fallbackBlockSize: number
 ): Promise<{blob: Blob; logicalWidth: number; logicalHeight: number} | null> {
   const bitmap = await createImageBitmap(blob);
   const canvas = document.createElement('canvas');
@@ -391,7 +391,7 @@ export async function normalizePixelArtBlob(
   canvas.getContext('2d', {willReadFrequently: true})?.drawImage(bitmap, 0, 0);
   bitmap.close();
   const raster = rasterFromCanvas(canvas);
-  const grid = assumePixelGrid(raster);
+  const grid = assumePixelGrid(raster, fallbackBlockSize);
   const logical = downsampleToGrid(raster, grid);
   const crisp = upscaleNearest(
     logical,

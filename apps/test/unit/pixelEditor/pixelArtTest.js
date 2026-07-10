@@ -1,11 +1,14 @@
 import {
-  ASSUMED_BLOCK,
   assumePixelGrid,
   crispScaleFor,
   detectPixelGrid,
   downsampleToGrid,
   upscaleNearest,
 } from '@cdo/apps/pixelEditor/pixelArt';
+
+// The caller-supplied fallback for assumePixelGrid (callers pass their
+// prompt's block size; the tests just need a fixed value).
+const FALLBACK_BLOCK = 16;
 
 // Build a raster depicting logical pixel art: each logical pixel becomes a
 // blockSize x blockSize physical block, shifted by the given offset (the
@@ -151,7 +154,7 @@ describe('pixelArt', () => {
   describe('assumePixelGrid (user chose pixel style, so always find a grid)', () => {
     it('matches the strict detector on clean grids', () => {
       const raster = blockyRaster(samplePattern(), 12);
-      const grid = assumePixelGrid(raster);
+      const grid = assumePixelGrid(raster, FALLBACK_BLOCK);
       expect(grid.sizeX).toBe(12);
       expect(grid.sizeY).toBe(12);
     });
@@ -162,15 +165,15 @@ describe('pixelArt', () => {
       const raster = rasterFrom(120, 120, (x, y) => [
         ...PALETTE[(Math.floor(x / 10) + y * 2) % 3],
       ]);
-      const grid = assumePixelGrid(raster);
+      const grid = assumePixelGrid(raster, FALLBACK_BLOCK);
       expect(grid.sizeX).toBe(10);
       expect(grid.sizeY).toBe(10);
     });
 
-    it('falls back to the assumed block size on gridless images', () => {
-      const grid = assumePixelGrid(gradientRaster());
-      expect(grid.sizeX).toBe(ASSUMED_BLOCK);
-      expect(grid.sizeY).toBe(ASSUMED_BLOCK);
+    it('falls back to the caller-supplied block size on gridless images', () => {
+      const grid = assumePixelGrid(gradientRaster(), FALLBACK_BLOCK);
+      expect(grid.sizeX).toBe(FALLBACK_BLOCK);
+      expect(grid.sizeY).toBe(FALLBACK_BLOCK);
       // A gradient yields no edges at all, so there is nothing to score.
       expect(grid.confidence).toBe(0);
     });
