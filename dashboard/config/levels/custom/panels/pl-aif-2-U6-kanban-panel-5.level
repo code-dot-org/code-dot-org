@@ -11,19 +11,19 @@
     "panels": [
       {
         "text": "#Utilizing the Kanban Board\n## What it is: \nThe Kanban board is a visual project management tool that manages tasks and priorities, tracking exactly what the team is working on right now and what comes next.\n",
-        "imageUrl": "https://images.code.org/7e3f10208ba7bb3327bffc1d7f9b412c-Kanban.png",
+        "imageUrl": "https://images.code.org/32ce507e4e02aec41482cdccd8401a4f-kanban.png",
         "key": "pl-aif-2-U6-kanban-panel-5-5663616e-1f64-4990-b65d-0ccc79283d79",
         "layout": "text-bottom-right"
       },
       {
         "text": "## How it Works: \nThe board is divided into \"To Do,\" \"In Progress,\" and \"Done\" columns. \n\nStudents break down their milestone goals into actionable task cards (using sticky notes) and move them across the board as work progresses.\n",
-        "imageUrl": "https://images.code.org/dea2b8ca605612c0ae6917354298a961-Kanban (1).png",
+        "imageUrl": "https://images.code.org/95122ebebdd08fd64f2439541dc8cbce-kanban (3).png",
         "key": "pl-aif-2-U6-kanban-panel-5-41a299d5-7ae4-4aa7-b7e0-9cae22651eb7",
         "layout": "text-bottom-right"
       },
       {
         "text": "##Keeping the Flow: \nTask cards are not written in stone. \n\nAn essential part of the process is teaching students that rewriting, splitting, or removing task cards based on testing is a sign of progress, not falling behind. \n\nGood task cards should be specific, actionable, and small enough to be completed in one class period.\n",
-        "imageUrl": "https://images.code.org/c5cea6eabafd9d004b7c06e3b2b0a722-Kanban (2).png",
+        "imageUrl": "https://images.code.org/05952de542df4a32e2df97ebc938dae7-kanban (1).png",
         "key": "pl-aif-2-U6-kanban-panel-5-156d1969-391c-475e-bb3d-e00602b04dac",
         "layout": "text-bottom-right"
       },
@@ -52,8 +52,9 @@
         "layout": "text-bottom-right"
       }
     ],
-    "name_suffix": "_2025-pilot"
+    "name_suffix": "_2025-pilot",
+    "use_links": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-04-15T14:38:16.065+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U5-steps-music-app-panal\\\"\"],\"cloned_from\":\"pl-aif-2-U5-steps-music-app-panal\"},{\"changed_at\":\"2026-04-21 16:31:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-04-21 16:32:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-15T14:38:16.065+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U5-steps-music-app-panal\\\"\"],\"cloned_from\":\"pl-aif-2-U5-steps-music-app-panal\"},{\"changed_at\":\"2026-04-21 16:31:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-04-21 16:32:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-07-09 20:03:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Panels>
