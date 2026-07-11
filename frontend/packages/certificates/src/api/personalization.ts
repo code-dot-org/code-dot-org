@@ -1,9 +1,16 @@
+import {z} from 'zod';
+
 import {DashboardApiClient, ensureCsrfToken} from '@code-dot-org/core/api';
 
-import type {HocPersonalizationResponse} from '@/certificate/model/certificateTypes';
-import {HocPersonalizationResponseSchema} from '@/lib/schemas';
-
 const {transport} = DashboardApiClient;
+
+const HocPersonalizationResponseSchema = z.object({
+  certificate_sent: z.boolean().optional(),
+  name: z.string().nullish(),
+});
+type HocPersonalizationResponse = z.infer<
+  typeof HocPersonalizationResponseSchema
+>;
 
 /** PATCH /api/hour/certificates/:session_id with write-once semantics. */
 export async function personalizeHocCertificate(

@@ -1,0 +1,17 @@
+.cards {
+  display: grid;
+  gap: 16px;
+}
+
+.card {
+  align-items: start;
+  border: 1px solid var(--border-neutral-primary, #d3d3d3);
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+}
+
+.card img {
+  max-width: 320px;
+  width: 40%;
+}

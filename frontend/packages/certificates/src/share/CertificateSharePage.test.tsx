@@ -5,7 +5,8 @@ import {afterEach, vi} from 'vitest';
 import {localization} from '@code-dot-org/core/plugins/localization';
 
 import {server} from '../../dev/msw/server';
-import {CertificateSharePage, downloadBlob} from '../pages/SharePage';
+
+import {CertificateSharePage, downloadBlob} from './CertificateSharePage';
 
 const mayaEncodedParams =
   'eyJuYW1lIjoiTWF5YSDXqdec15XXnSIsImNvdXJzZSI6Im9jZWFucyIsImRvbm9yIjoiQ29kZS5vcmcifQ==';
@@ -44,6 +45,25 @@ it('renders the certificate canvas plus the real-text name and course', async ()
   expect(screen.getByRole('button', {name: 'Share'})).toBeVisible();
 });
 
+it('does not request completion data on the share page', async () => {
+  const completionRequest = vi.fn();
+  server.use(
+    http.get('*/api/v1/certificates/completion', () => {
+      completionRequest();
+      return HttpResponse.json({
+        certificates: [],
+        courseKind: 'hour_of_code',
+        recommendations: [],
+      });
+    }),
+  );
+
+  render(<CertificateSharePage encodedParams={mayaEncodedParams} />);
+
+  await screen.findByRole('button', {name: 'Print'});
+  expect(completionRequest).not.toHaveBeenCalled();
+});
+
 it('renders an error state, never a blank certificate, on undecodable params', async () => {
   render(<CertificateSharePage encodedParams="%%%not-base64%%%" />);
 
@@ -71,12 +91,11 @@ it('personalizes client-side without a session id', async () => {
 
 it('shows the account-name alert and disables actions on PL without a name', async () => {
   server.use(
-    http.get('*/api/v1/certificates/user_info', () =>
+    http.get('*/api/v1/certificates/viewer', () =>
       HttpResponse.json({
-        csrfToken: 'csrf-token',
-        under13: false,
-        userName: null,
-        userType: 'teacher',
+        allowedShareTargets: ['facebook', 'x', 'linkedin'],
+        canBulkPrint: true,
+        certificateName: null,
       }),
     ),
   );
@@ -128,12 +147,11 @@ it('renders social share links for adults', async () => {
 it('hides all social share links for under-13 users', async () => {
   vi.stubGlobal('Image', AutoLoadImage);
   server.use(
-    http.get('*/api/v1/certificates/user_info', () =>
+    http.get('*/api/v1/certificates/viewer', () =>
       HttpResponse.json({
-        csrfToken: 'csrf-token',
-        under13: true,
-        userName: null,
-        userType: 'student',
+        allowedShareTargets: [],
+        canBulkPrint: false,
+        certificateName: null,
       }),
     ),
   );

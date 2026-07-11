@@ -1,13 +1,11 @@
 import {useCallback, useEffect, useRef, useState} from 'react';
 import type {MutableRefObject} from 'react';
 
+import type {CertificateCourse} from '@/api/courses';
 import {useCertificateFontReady} from '@/certificate/canvas/certificateFonts';
 import {renderCertificateToCanvas} from '@/certificate/canvas/exportCertificateCanvas';
 import {resolveTemplateLayout} from '@/certificate/model/certificateLayouts';
-import type {
-  CertificateCourseInfo,
-  CertificateParams,
-} from '@/certificate/model/certificateTypes';
+import type {CertificateParams} from '@/certificate/model/certificateTypes';
 import {CertificateTemplatePicture} from '@/certificate/template/CertificateTemplatePicture';
 
 export function CertificateCanvasPreview({
@@ -16,7 +14,7 @@ export function CertificateCanvasPreview({
   params,
   templateImageRef,
 }: {
-  courseInfo: CertificateCourseInfo;
+  courseInfo: CertificateCourse;
   /** Fires after each completed canvas draw (fonts and template resolved). */
   onRendered?: () => void;
   params: CertificateParams;

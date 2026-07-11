@@ -1,7 +1,5 @@
-import type {
-  CertificateCongratsResponse,
-  CertificateCourseInfo,
-} from '@/certificate/model/certificateTypes';
+import type {CertificateCompletion} from '@/api/completion';
+import type {CertificateCourse} from '@/api/courses';
 
 import type {CertificateScenario} from './router';
 
@@ -65,56 +63,49 @@ export const routeScenarios: CertificateScenario[] = [
   },
 ];
 
-export const courseInfoFixtures: Record<string, CertificateCourseInfo> = {
+export const courseInfoFixtures: Record<string, CertificateCourse> = {
   'coursea-2025': {
-    courseType: 'other',
+    courseKind: 'other',
     localizedTitle: 'Course A',
     prefilledTitle: false,
+    resolution: 'matched',
     templateFilename: 'blank_certificate.png',
     unitGroupTitle: null,
   },
   hourofcode: {
-    courseType: 'hoc',
+    courseKind: 'hoc',
     localizedTitle: 'Hour of Code',
     prefilledTitle: true,
+    resolution: 'hour_of_code_fallback',
     templateFilename: 'hour_of_ai_certificate.png',
     unitGroupTitle: null,
   },
   oceans: {
-    courseType: 'hoc',
+    courseKind: 'hoc',
     localizedTitle: 'AI for Oceans',
     prefilledTitle: true,
+    resolution: 'matched',
     templateFilename: 'oceans_hoc_certificate.png',
     unitGroupTitle: null,
   },
   'self-paced-pl': {
-    courseType: 'pl',
+    courseKind: 'pl',
     durationHours: 2.5,
     localizedTitle: 'Self-Paced Professional Learning',
     prefilledTitle: false,
+    resolution: 'matched',
     templateFilename: 'self_paced_pl_certificate.png',
     unitGroupTitle: 'Professional Learning',
   },
 };
 
-export const congratsFixture: CertificateCongratsResponse = {
-  assignableCourseSuggestions: [],
+export const completionFixture: CertificateCompletion = {
   certificates: [
     {
       courseName: 'oceans',
       coursePath: '/s/oceans',
-      courseTitle: 'AI for Oceans',
     },
   ],
-  csrfToken: 'test-csrf-token',
-  isHocTutorial: true,
-  isK5PlCourse: false,
-  isPlCourse: false,
-  nextCourseDescription: null,
-  nextCourseScriptName: null,
-  nextCourseTitle: null,
-  sections: [],
-  under13: false,
-  userName: 'Amina 🌍',
-  userType: 'teacher',
+  courseKind: 'hour_of_code',
+  recommendations: [],
 };

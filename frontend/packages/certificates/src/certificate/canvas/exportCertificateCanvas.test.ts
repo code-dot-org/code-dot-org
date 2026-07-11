@@ -6,9 +6,10 @@ import {
 } from './exportCertificateCanvas';
 
 const hocCourseInfo = {
-  courseType: 'hoc' as const,
+  courseKind: 'hoc' as const,
   localizedTitle: 'AI for Oceans',
   prefilledTitle: false,
+  resolution: 'matched' as const,
   templateFilename: 'blank_certificate.png',
 };
 

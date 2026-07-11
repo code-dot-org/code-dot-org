@@ -29,7 +29,7 @@ function RouteComponent() {
 
   return (
     <Suspense fallback={<div>Loading certificates...</div>}>
-      <CertificateCongratsPage s={s} sessionId={i} />
+      <CertificateCongratsPage encodedCourse={s} sessionId={i} />
     </Suspense>
   );
 }

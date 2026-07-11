@@ -4,8 +4,8 @@ import {z} from 'zod';
 
 import Alert from '@code-dot-org/component-library/alert';
 
+import type {CertificateCourse} from '@/api/courses';
 import {exportCertificateBlob} from '@/certificate/canvas/exportCertificateCanvas';
-import type {CertificateCourseInfo} from '@/certificate/model/certificateTypes';
 import {loadTemplateImage} from '@/certificate/template/loadCertificateTemplate';
 import {readShellCertificateData} from '@/lib/shellData';
 
@@ -31,7 +31,7 @@ interface BatchCertificate {
  * than holding 30 live canvases (iOS canvas-memory cap; design D1).
  */
 function useBatchCertificateImages(
-  courseInfo: CertificateCourseInfo | null,
+  courseInfo: CertificateCourse | null,
   courseName: string,
   names: string[],
 ): {certificates: BatchCertificate[] | null; error: boolean} {

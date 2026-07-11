@@ -1,16 +1,13 @@
 import {useEffect, useState} from 'react';
 
-import type {CertificateCourseInfo} from '@/certificate/model/certificateTypes';
-import {fetchCourseInfo} from '@/lib/api';
+import {fetchCertificateCourse, type CertificateCourse} from '@/api/courses';
 import {getPageLocale} from '@/localization/certificateLocale';
 
 export function useCourseInfo(course: string | null): {
-  courseInfo: CertificateCourseInfo | null;
+  courseInfo: CertificateCourse | null;
   error: boolean;
 } {
-  const [courseInfo, setCourseInfo] = useState<CertificateCourseInfo | null>(
-    null,
-  );
+  const [courseInfo, setCourseInfo] = useState<CertificateCourse | null>(null);
   const [error, setError] = useState(false);
 
   useEffect(() => {
@@ -22,7 +19,7 @@ export function useCourseInfo(course: string | null): {
     // eslint-disable-next-line react-hooks/set-state-in-effect -- resetting stale course data synchronously when `course` changes is the intended behavior, not incidental cascading state.
     setCourseInfo(null);
     setError(false);
-    fetchCourseInfo(getPageLocale(), course)
+    fetchCertificateCourse(course, getPageLocale())
       .then(info => {
         if (!cancelled) {
           setCourseInfo(info);

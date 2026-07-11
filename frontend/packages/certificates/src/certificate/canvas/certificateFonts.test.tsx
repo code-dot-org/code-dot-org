@@ -47,9 +47,10 @@ it('gates canvas drawing until the certificate font resolves', async () => {
   render(
     <CertificateCanvasPreview
       courseInfo={{
-        courseType: 'hoc',
+        courseKind: 'hoc',
         localizedTitle: 'AI for Oceans',
         prefilledTitle: false,
+        resolution: 'matched',
         templateFilename: 'blank_certificate.png',
       }}
       params={{course: 'oceans', name: 'أمينة 李'}}
@@ -73,9 +74,10 @@ it('labels the canvas with the student and course text', async () => {
   render(
     <CertificateCanvasPreview
       courseInfo={{
-        courseType: 'hoc',
+        courseKind: 'hoc',
         localizedTitle: 'AI for Oceans',
         prefilledTitle: false,
+        resolution: 'matched',
         templateFilename: 'blank_certificate.png',
       }}
       params={{course: 'oceans', name: 'أمينة 李'}}

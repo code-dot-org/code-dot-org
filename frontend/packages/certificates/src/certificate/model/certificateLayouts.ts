@@ -1,7 +1,6 @@
-import type {
-  CertificateCourseInfo,
-  CertificateParams,
-} from './certificateTypes';
+import type {CertificateCourse} from '@/api/courses';
+
+import type {CertificateParams} from './certificateTypes';
 
 export interface CertificateTextLayout {
   boxHeight: number;
@@ -186,7 +185,7 @@ export function resolveNameLayout(
   return layout.name;
 }
 
-export function resolveTitleLayouts(courseInfo: CertificateCourseInfo): {
+export function resolveTitleLayouts(courseInfo: CertificateCourse): {
   oneTitle?: CertificateTextLayout;
   twoTitles?: CertificateTwoTitleLayout;
 } {

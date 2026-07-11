@@ -35,7 +35,7 @@ const LOCALIZE_TO_I18N_LOCALES: Readonly<Record<string, string>> = {
 };
 
 /**
- * Locale for the course_info API path. LocalizeJS owns the page locale when
+ * Locale for the public course API. LocalizeJS owns the page locale when
  * present; otherwise fall back to the Rails-set document language.
  */
 export function getPageLocale(): string {

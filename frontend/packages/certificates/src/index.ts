@@ -1,8 +1,8 @@
-export {CertificateSharePage} from './pages/SharePage';
+export {CertificateSharePage} from './share/CertificateSharePage';
 export {CertificatePrintPage} from './pages/PrintPage';
 export {CertificateBatchPage} from './pages/BatchPage';
 export {CertificatePrintBatchPage} from './pages/PrintBatchPage';
-export {CertificateCongratsPage} from './pages/CongratsPage';
+export {CertificateCongratsPage} from './congrats/CertificateCongratsPage';
 export {CertificateCanvasPreview} from './certificate/canvas/CertificateCanvasPreview';
 export {
   certificateTemplateLayouts,
@@ -21,12 +21,18 @@ export {
   renderCertificateToCanvas,
 } from './certificate/canvas/exportCertificateCanvas';
 export {personalizeHocCertificate} from './api/personalization';
-export {fetchCongrats, fetchCourseInfo} from './lib/api';
+export {fetchCertificateCourse, type CertificateCourse} from './api/courses';
+export {
+  fetchCertificateCompletion,
+  type CertificateCompletion,
+  type CertificateCompletionEntry,
+  type CertificateRecommendation,
+} from './api/completion';
+export {
+  fetchCertificateViewer,
+  type CertificateViewer,
+  type ShareTarget,
+} from './api/viewer';
 export {fitCertificateText} from './certificate/canvas/fitCertificateText';
 export {resolveCertificateRenderableTexts} from './certificate/model/certificateRenderModel';
-export type {
-  CertificateCongratsEntry,
-  CertificateCongratsResponse,
-  CertificateCourseInfo,
-  CertificateParams,
-} from './certificate/model/certificateTypes';
+export type {CertificateParams} from './certificate/model/certificateTypes';

@@ -5,27 +5,24 @@ import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import {personalizeHocCertificate} from '@/api/personalization';
+import {fetchCertificateViewer, type CertificateViewer} from '@/api/viewer';
 import {CertificateCanvasPreview} from '@/certificate/canvas/CertificateCanvasPreview';
 import {exportCertificateBlob} from '@/certificate/canvas/exportCertificateCanvas';
-import type {
-  CertificateParams,
-  CertificateUserInfo,
-} from '@/certificate/model/certificateTypes';
+import type {CertificateParams} from '@/certificate/model/certificateTypes';
 import {loadTemplateImage} from '@/certificate/template/loadCertificateTemplate';
-import {ANALYTICS_EVENTS, sendAnalyticsEvent} from '@/lib/analytics';
-import {fetchCertificateUserInfo} from '@/lib/api';
 import {
   decodeCertificateParams,
   encodeCertificateParams,
 } from '@/routing/certificateParams';
+import {SocialShareButtons} from '@/sharing/SocialShareButtons';
 
-import {BackToFrontConfetti} from './BackToFrontConfetti';
-import {NameRequiredAlert} from './NameRequiredAlert';
-import {PersonalizeForm} from './PersonalizeForm';
-import styles from './sharePage.module.css';
+import {useCourseInfo} from '../pages/useCourseInfo';
+import {BackToFrontConfetti} from '../personalization/BackToFrontConfetti';
+import {NameRequiredAlert} from '../personalization/NameRequiredAlert';
+import {PersonalizeForm} from '../personalization/PersonalizeForm';
+
 import '../print.css';
-import {SocialShareButtons} from './SocialShareButtons';
-import {useCourseInfo} from './useCourseInfo';
+import styles from './certificateSharePage.module.css';
 
 export interface CertificateSharePageProps {
   /** Absent on /certificates/blank, which shows the Hour of Code certificate. */
@@ -34,8 +31,8 @@ export interface CertificateSharePageProps {
   sessionId?: string;
 }
 
-interface UserState {
-  data: CertificateUserInfo | null;
+interface ViewerState {
+  data: CertificateViewer | null;
   loaded: boolean;
 }
 
@@ -71,26 +68,27 @@ export function CertificateSharePage({
   const {courseInfo, error: courseInfoError} = useCourseInfo(
     decodedParams?.course ?? null,
   );
-  const [user, setUser] = useState<UserState>({data: null, loaded: false});
+  const [viewer, setViewer] = useState<ViewerState>({
+    data: null,
+    loaded: false,
+  });
   const [personalizedName, setPersonalizedName] = useState<string>();
   const [manuallyPersonalized, setManuallyPersonalized] = useState(false);
   const [actionError, setActionError] = useState(false);
   const [templateImageElement, setTemplateImageElement] =
     useState<HTMLImageElement | null>(null);
 
-  // User fields gate social buttons and the PL account-name rule. The private
-  // response also supplies the CSRF token omitted from cacheable shells.
   useEffect(() => {
     let cancelled = false;
-    fetchCertificateUserInfo()
+    fetchCertificateViewer()
       .then(data => {
         if (!cancelled) {
-          setUser({data, loaded: true});
+          setViewer({data, loaded: true});
         }
       })
       .catch(() => {
         if (!cancelled) {
-          setUser({data: null, loaded: true});
+          setViewer({data: null, loaded: true});
         }
       });
 
@@ -99,15 +97,16 @@ export function CertificateSharePage({
     };
   }, []);
 
-  const isPlCourse = courseInfo?.courseType === 'pl';
-  const isHocTutorial = courseInfo?.courseType === 'hoc';
-  const userName = user.data?.userName ?? undefined;
-  const nameRequired = isPlCourse && user.loaded && !userName;
+  const isPlCourse = courseInfo?.courseKind === 'pl';
+  const isHocTutorial = courseInfo?.courseKind === 'hoc';
+  const certificateName = viewer.data?.certificateName ?? undefined;
+  const nameRequired = isPlCourse && viewer.loaded && !certificateName;
   // PL certificates always use the account name (no manual input).
-  const personalized = manuallyPersonalized || (isPlCourse && !!userName);
+  const personalized =
+    manuallyPersonalized || (isPlCourse && !!certificateName);
 
   const displayName = isPlCourse
-    ? userName
+    ? certificateName
     : (personalizedName ?? decodedParams?.name);
   const renderParams = useMemo<CertificateParams | null>(
     () =>
@@ -167,6 +166,7 @@ export function CertificateSharePage({
     });
   };
 
+  // Browser analytics waits for shared core support: code-dot-org/code-dot-org#73791.
   const handleDownload = async () => {
     if (!renderParams) {
       return;
@@ -175,7 +175,6 @@ export function CertificateSharePage({
     try {
       const blob = await exportJpeg(renderParams);
       downloadBlob(blob, `${encodeCertificateParams(renderParams)}.jpg`);
-      sendAnalyticsEvent(ANALYTICS_EVENTS.CERTIFICATE_DOWNLOADED);
     } catch {
       setActionError(true);
     }
@@ -195,10 +194,6 @@ export function CertificateSharePage({
       } else {
         downloadBlob(blob, `${encodeCertificateParams(renderParams)}.jpg`);
       }
-
-      sendAnalyticsEvent(ANALYTICS_EVENTS.CERTIFICATE_SHARED, {
-        platform: 'web-share',
-      });
     } catch {
       setActionError(true);
     }
@@ -281,13 +276,12 @@ export function CertificateSharePage({
             Share your achievement with others and encourage them to
             participate.
           </Typography>
-          {user.loaded && user.data && !nameRequired && (
+          {viewer.loaded && viewer.data && !nameRequired && (
             <SocialShareButtons
-              isPlCourse={isPlCourse}
+              allowedShareTargets={viewer.data.allowedShareTargets}
+              isProfessionalLearning={isPlCourse}
               onPrint={() => window.print()}
               shareUrl={shareUrl}
-              under13={user.data.under13}
-              userType={user.data.userType}
             />
           )}
         </div>

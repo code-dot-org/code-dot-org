@@ -1,3 +1,4 @@
+import type {CertificateCourse} from '@/api/courses';
 import {loadCertificateFont} from '@/certificate/canvas/certificateFonts';
 import {
   fitCertificateText,
@@ -8,10 +9,7 @@ import {
   resolveCertificateRenderableTexts,
   type CertificateRenderableText,
 } from '@/certificate/model/certificateRenderModel';
-import type {
-  CertificateCourseInfo,
-  CertificateParams,
-} from '@/certificate/model/certificateTypes';
+import type {CertificateParams} from '@/certificate/model/certificateTypes';
 
 export type CertificateExportMimeType =
   | 'image/jpeg'
@@ -96,7 +94,7 @@ export function renderCertificateToCanvas({
   templateImage,
 }: {
   canvasFactory?: CanvasFactory;
-  courseInfo: CertificateCourseInfo;
+  courseInfo: CertificateCourse;
   params: CertificateParams;
   templateImage: CanvasImageSource;
 }): HTMLCanvasElement {
@@ -160,7 +158,7 @@ export async function exportCertificateBlob({
   templateImage,
 }: {
   canvasFactory?: CanvasFactory;
-  courseInfo: CertificateCourseInfo;
+  courseInfo: CertificateCourse;
   mimeType: CertificateExportMimeType;
   params: CertificateParams;
   quality?: number;

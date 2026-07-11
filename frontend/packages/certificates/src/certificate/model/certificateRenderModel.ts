@@ -1,3 +1,4 @@
+import type {CertificateCourse} from '@/api/courses';
 import {
   positionTextLayout,
   resolveNameLayout,
@@ -5,10 +6,7 @@ import {
   resolveTitleLayouts,
   type PositionedTextLayout,
 } from '@/certificate/model/certificateLayouts';
-import type {
-  CertificateCourseInfo,
-  CertificateParams,
-} from '@/certificate/model/certificateTypes';
+import type {CertificateParams} from '@/certificate/model/certificateTypes';
 
 export interface CertificateRenderableText extends PositionedTextLayout {
   id: string;
@@ -39,7 +37,7 @@ function buildRenderableText(
 }
 
 export function resolveCertificateRenderableTexts(
-  courseInfo: CertificateCourseInfo,
+  courseInfo: CertificateCourse,
   params: CertificateParams,
 ): CertificateRenderableText[] {
   const templateLayout = resolveTemplateLayout(courseInfo.templateFilename);

@@ -1,65 +1,43 @@
 import {Button, IconButton} from '@mui/material';
-import {useEffect, useState, type MouseEvent} from 'react';
+import type {MouseEvent} from 'react';
 
-import {checkIfURLIsBlocked} from '@code-dot-org/component-library/common/helpers';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {localization} from '@code-dot-org/core/plugins/localization';
 
-import {ANALYTICS_EVENTS, sendAnalyticsEvent} from '@/lib/analytics';
+import type {ShareTarget} from '@/api/viewer';
 
+import {useSocialShareAvailability} from './socialShareAvailability';
 import styles from './socialShareButtons.module.css';
 
-/**
- * Reachability gate carried over from legacy SocialShare.jsx: each network's
- * button renders only when its favicon loads (school filters often block the
- * whole origin).
- */
-function useReachable(faviconUrl: string): boolean {
-  const [reachable, setReachable] = useState(false);
-
-  useEffect(() => {
-    let mounted = true;
-    checkIfURLIsBlocked(faviconUrl).then(blocked => {
-      if (mounted) {
-        setReachable(!blocked);
-      }
-    });
-
-    return () => {
-      mounted = false;
-    };
-  }, [faviconUrl]);
-
-  return reachable;
-}
-
 export interface SocialShareButtonsProps {
-  isPlCourse: boolean;
+  allowedShareTargets: readonly ShareTarget[];
+  isProfessionalLearning: boolean;
   /** Print in place when set; otherwise link out via printHref. */
   onPrint?: () => void;
   printHref?: string;
   /** Absolute URL of the certificate share page. */
   shareUrl: string;
-  under13: boolean;
-  userType?: 'teacher' | 'student' | null;
 }
 
 /**
  * Social share-link buttons with legacy query semantics (SocialShare.jsx):
  * Facebook `u`, Twitter `url` + `related=codeorg` + text, LinkedIn `url`
- * (PL courses only); all hidden for under-13 users. Print always renders.
+ * (PL courses only). Server-derived capabilities control visibility.
  */
 export function SocialShareButtons({
-  isPlCourse,
+  allowedShareTargets,
+  isProfessionalLearning,
   onPrint,
   printHref,
   shareUrl,
-  under13,
-  userType,
 }: SocialShareButtonsProps) {
-  const facebookAvailable = useReachable('https://facebook.com/favicon.ico');
-  const twitterAvailable = useReachable('https://x.com/favicon.ico');
-  const linkedinAvailable = useReachable(
+  const facebookAvailable = useSocialShareAvailability(
+    'https://facebook.com/favicon.ico',
+  );
+  const twitterAvailable = useSocialShareAvailability(
+    'https://x.com/favicon.ico',
+  );
+  const linkedinAvailable = useSocialShareAvailability(
     'https://www.linkedin.com/favicon.ico',
   );
 
@@ -77,11 +55,7 @@ export function SocialShareButtons({
     {url: shareUrl},
   )}`;
 
-  const onShare = (event: MouseEvent<HTMLAnchorElement>, platform: string) => {
-    if (userType === 'teacher') {
-      sendAnalyticsEvent(ANALYTICS_EVENTS.CERTIFICATE_SHARED, {platform});
-    }
-
+  const onShare = (event: MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
     window.open(
       event.currentTarget.href,
@@ -92,25 +66,27 @@ export function SocialShareButtons({
 
   return (
     <div className={styles.container}>
-      {!under13 && isPlCourse && linkedinAvailable && (
-        <IconButton
-          aria-label="Share to LinkedIn"
-          className={styles.linkedin}
-          href={linkedinShareUrl}
-          onClick={event => onShare(event, 'linkedin')}
-          rel="noopener noreferrer"
-          size="small"
-          target="_blank"
-        >
-          <FontAwesomeV6Icon iconFamily="brands" iconName="linkedin" />
-        </IconButton>
-      )}
-      {!under13 && facebookAvailable && (
+      {allowedShareTargets.includes('linkedin') &&
+        isProfessionalLearning &&
+        linkedinAvailable && (
+          <IconButton
+            aria-label="Share to LinkedIn"
+            className={styles.linkedin}
+            href={linkedinShareUrl}
+            onClick={onShare}
+            rel="noopener noreferrer"
+            size="small"
+            target="_blank"
+          >
+            <FontAwesomeV6Icon iconFamily="brands" iconName="linkedin" />
+          </IconButton>
+        )}
+      {allowedShareTargets.includes('facebook') && facebookAvailable && (
         <IconButton
           aria-label="Share to Facebook"
           className={styles.facebook}
           href={facebookShareUrl}
-          onClick={event => onShare(event, 'facebook')}
+          onClick={onShare}
           rel="noopener noreferrer"
           size="small"
           target="_blank"
@@ -118,12 +94,12 @@ export function SocialShareButtons({
           <FontAwesomeV6Icon iconFamily="brands" iconName="facebook" />
         </IconButton>
       )}
-      {!under13 && twitterAvailable && (
+      {allowedShareTargets.includes('x') && twitterAvailable && (
         <IconButton
           aria-label="Share to Twitter"
           className={styles.twitter}
           href={twitterShareUrl}
-          onClick={event => onShare(event, 'twitter')}
+          onClick={onShare}
           rel="noopener noreferrer"
           size="small"
           target="_blank"

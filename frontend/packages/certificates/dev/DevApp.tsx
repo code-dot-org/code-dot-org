@@ -1,10 +1,10 @@
 import {useDeferredValue, useEffect, useState} from 'react';
 
+import {CertificateCongratsPage} from '@/congrats/CertificateCongratsPage';
 import {CertificateBatchPage} from '@/pages/BatchPage';
-import {CertificateCongratsPage} from '@/pages/CongratsPage';
 import {CertificatePrintBatchPage} from '@/pages/PrintBatchPage';
 import {CertificatePrintPage} from '@/pages/PrintPage';
-import {CertificateSharePage} from '@/pages/SharePage';
+import {CertificateSharePage} from '@/share/CertificateSharePage';
 
 import {matchCertificateRoute, type CertificateRouteMatch} from './router';
 import {batchDefaultNames, routeScenarios} from './scenarios';
@@ -149,7 +149,7 @@ export function DevApp() {
     case 'congrats':
       return (
         <CertificateCongratsPage
-          s={routeMatch.search.get('s') ?? undefined}
+          encodedCourse={routeMatch.search.get('s') ?? undefined}
           sessionId={routeMatch.search.get('i') ?? undefined}
         />
       );
