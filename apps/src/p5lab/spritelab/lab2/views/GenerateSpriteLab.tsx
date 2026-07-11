@@ -10,6 +10,8 @@ import askSpriteLabAi, {getAvailableImageNames} from '../ai/askSpriteLabAi';
 import {generateBlocklyJson} from '../blockly/generateBlocklyJson';
 import {setAiGenerateState} from '../redux/spriteLab2Redux';
 
+import GenerateImageForm from './GenerateImageForm';
+
 import moduleStyles from './sprite-lab2-view.module.scss';
 
 // Scene name (lowercased) -> id, so the parser can fill go_to_scene's SCENE
@@ -26,7 +28,7 @@ function getSceneIdByName(): {[lowerCaseName: string]: string} {
 }
 
 interface GenerateSpriteLabProps {
-  guideMode: 'instructions' | 'aiCodeGenerate';
+  guideMode: 'instructions' | 'aiCodeGenerate' | 'aiImageGenerate';
   instructions?: string;
   // Load AI-generated blocks into the Code workspace.
   onCodeGenerated: (source: WorkspaceSerialization) => void;
@@ -35,7 +37,8 @@ interface GenerateSpriteLabProps {
 /**
  * The Lab2 Guide overlay, modeled on Music Lab's guideMode. 'instructions'
  * shows the level's instructions; 'aiCodeGenerate' adds the AI prompt that
- * generates blocks (pseudocode -> generateBlocklyJson) into the Code tab.
+ * generates blocks (pseudocode -> generateBlocklyJson) into the Code tab;
+ * 'aiImageGenerate' hosts the Images tab's generation form instead.
  */
 const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   guideMode,
@@ -127,6 +130,16 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
           {guideMode === 'instructions' ? (
             instructionsBlock ||
             'Build a program in the Code tab, then press Run.'
+          ) : guideMode === 'aiImageGenerate' ? (
+            <>
+              {instructionsBlock && (
+                <>
+                  {instructionsBlock}
+                  <hr className={moduleStyles.guideDivider} />
+                </>
+              )}
+              <GenerateImageForm />
+            </>
           ) : (
             <>
               {instructionsBlock && (
