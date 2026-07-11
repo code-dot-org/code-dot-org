@@ -1,7 +1,7 @@
 import {DashboardApiClient, ensureCsrfToken} from '@code-dot-org/core/api';
 
+import type {HocPersonalizationResponse} from '@/certificate/model/certificateTypes';
 import {HocPersonalizationResponseSchema} from '@/lib/schemas';
-import type {HocPersonalizationResponse} from '@/lib/types';
 
 const {transport} = DashboardApiClient;
 

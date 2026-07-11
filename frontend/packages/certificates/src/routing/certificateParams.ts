@@ -1,4 +1,4 @@
-import type {CertificateParams} from './types';
+import type {CertificateParams} from '@/certificate/model/certificateTypes';
 
 function normalizeBase64Url(value: string): string {
   const paddingLength = (4 - (value.length % 4)) % 4;

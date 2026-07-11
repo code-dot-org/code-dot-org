@@ -1,4 +1,7 @@
-import type {CertificateCourseInfo, CertificateParams} from './lib/types';
+import type {
+  CertificateCourseInfo,
+  CertificateParams,
+} from './certificateTypes';
 
 export interface CertificateTextLayout {
   boxHeight: number;

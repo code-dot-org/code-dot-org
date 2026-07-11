@@ -1,11 +1,17 @@
-import {resolveTemplateLayout} from '@/layout';
-import {loadCertificateFont} from '@/lib/certificateFonts';
-import {fitCertificateText, type TextMeasurer} from '@/lib/fitting';
+import {loadCertificateFont} from '@/certificate/canvas/certificateFonts';
+import {
+  fitCertificateText,
+  type TextMeasurer,
+} from '@/certificate/canvas/fitCertificateText';
+import {resolveTemplateLayout} from '@/certificate/model/certificateLayouts';
 import {
   resolveCertificateRenderableTexts,
   type CertificateRenderableText,
-} from '@/lib/renderModel';
-import type {CertificateCourseInfo, CertificateParams} from '@/lib/types';
+} from '@/certificate/model/certificateRenderModel';
+import type {
+  CertificateCourseInfo,
+  CertificateParams,
+} from '@/certificate/model/certificateTypes';
 
 export type CertificateExportMimeType =
   | 'image/jpeg'
@@ -70,16 +76,15 @@ function drawRenderableText(
   context.textAlign = 'center';
   context.textBaseline = 'middle';
 
-  const lineHeight = resolveLineHeightPx(context.measureText('Hg'), fontSizePx);
-  const blockHeight = lineHeight * fittedText.lines.length;
+  const blockHeight = fittedText.lineHeight * fittedText.lines.length;
   const firstLineCenterY =
-    renderableText.centerY - blockHeight / 2 + lineHeight / 2;
+    renderableText.centerY - blockHeight / 2 + fittedText.lineHeight / 2;
 
   fittedText.lines.forEach((line, index) => {
     context.fillText(
       line,
       renderableText.centerX,
-      firstLineCenterY + index * lineHeight,
+      firstLineCenterY + index * fittedText.lineHeight,
     );
   });
 }

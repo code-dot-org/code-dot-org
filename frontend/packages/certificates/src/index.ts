@@ -3,27 +3,30 @@ export {CertificatePrintPage} from './pages/PrintPage';
 export {CertificateBatchPage} from './pages/BatchPage';
 export {CertificatePrintBatchPage} from './pages/PrintBatchPage';
 export {CertificateCongratsPage} from './pages/CongratsPage';
-export {CertificateCanvasPreview} from './components/CertificateCanvasPreview';
+export {CertificateCanvasPreview} from './certificate/canvas/CertificateCanvasPreview';
 export {
   certificateTemplateLayouts,
   positionTextLayout,
   resolveNameLayout,
   resolveTemplateLayout,
   resolveTitleLayouts,
-} from './layout';
-export {decodeCertificateParams, encodeCertificateParams} from './lib/base64';
+} from './certificate/model/certificateLayouts';
+export {
+  decodeCertificateParams,
+  encodeCertificateParams,
+} from './routing/certificateParams';
 export {
   canvasToBlob,
   exportCertificateBlob,
   renderCertificateToCanvas,
-} from './lib/exportCanvas';
+} from './certificate/canvas/exportCertificateCanvas';
 export {personalizeHocCertificate} from './api/personalization';
 export {fetchCongrats, fetchCourseInfo} from './lib/api';
-export {fitCertificateText} from './lib/fitting';
-export {resolveCertificateRenderableTexts} from './lib/renderModel';
+export {fitCertificateText} from './certificate/canvas/fitCertificateText';
+export {resolveCertificateRenderableTexts} from './certificate/model/certificateRenderModel';
 export type {
   CertificateCongratsEntry,
   CertificateCongratsResponse,
   CertificateCourseInfo,
   CertificateParams,
-} from './lib/types';
+} from './certificate/model/certificateTypes';

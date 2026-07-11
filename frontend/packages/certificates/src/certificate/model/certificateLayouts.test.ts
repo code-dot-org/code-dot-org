@@ -2,7 +2,7 @@ import {
   certificateTemplateLayouts,
   positionTextLayout,
   resolveNameLayout,
-} from '../layout';
+} from './certificateLayouts';
 
 it('contains every currently emitted template filename', () => {
   expect(Object.keys(certificateTemplateLayouts).sort()).toEqual([

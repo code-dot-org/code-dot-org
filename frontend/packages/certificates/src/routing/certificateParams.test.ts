@@ -1,4 +1,4 @@
-import {decodeCertificateParams} from '../lib/base64';
+import {decodeCertificateParams} from './certificateParams';
 
 it('rejects malformed UTF-8 instead of replacing invalid bytes', () => {
   const bytes = [

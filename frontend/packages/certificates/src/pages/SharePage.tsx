@@ -5,13 +5,19 @@ import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import {personalizeHocCertificate} from '@/api/personalization';
-import {CertificateCanvasPreview} from '@/components/CertificateCanvasPreview';
+import {CertificateCanvasPreview} from '@/certificate/canvas/CertificateCanvasPreview';
+import {exportCertificateBlob} from '@/certificate/canvas/exportCertificateCanvas';
+import type {
+  CertificateParams,
+  CertificateUserInfo,
+} from '@/certificate/model/certificateTypes';
+import {loadTemplateImage} from '@/certificate/template/loadCertificateTemplate';
 import {ANALYTICS_EVENTS, sendAnalyticsEvent} from '@/lib/analytics';
 import {fetchCertificateUserInfo} from '@/lib/api';
-import {decodeCertificateParams, encodeCertificateParams} from '@/lib/base64';
-import {exportCertificateBlob} from '@/lib/exportCanvas';
-import {loadTemplateImage} from '@/lib/templateImage';
-import type {CertificateParams, CertificateUserInfo} from '@/lib/types';
+import {
+  decodeCertificateParams,
+  encodeCertificateParams,
+} from '@/routing/certificateParams';
 
 import {BackToFrontConfetti} from './BackToFrontConfetti';
 import {NameRequiredAlert} from './NameRequiredAlert';

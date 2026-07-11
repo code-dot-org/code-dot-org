@@ -2,9 +2,9 @@ import {useCallback, useMemo, useRef} from 'react';
 
 import Alert from '@code-dot-org/component-library/alert';
 
-import {CertificateCanvasPreview} from '@/components/CertificateCanvasPreview';
-import {decodeCertificateParams} from '@/lib/base64';
-import type {CertificateParams} from '@/lib/types';
+import {CertificateCanvasPreview} from '@/certificate/canvas/CertificateCanvasPreview';
+import type {CertificateParams} from '@/certificate/model/certificateTypes';
+import {decodeCertificateParams} from '@/routing/certificateParams';
 
 import styles from './printPage.module.css';
 import '../print.css';

@@ -1,9 +1,9 @@
 import {render, screen, waitFor} from '@testing-library/react';
 import {vi} from 'vitest';
 
-import {CertificateCanvasPreview} from '../components/CertificateCanvasPreview';
-import {loadCertificateFont} from '../lib/certificateFonts';
-import * as exportCanvas from '../lib/exportCanvas';
+import {CertificateCanvasPreview} from './CertificateCanvasPreview';
+import {loadCertificateFont} from './certificateFonts';
+import * as exportCanvas from './exportCertificateCanvas';
 
 it('awaits document.fonts.load for the certificate face', async () => {
   const load = vi.fn(() => Promise.resolve([] as FontFace[]));

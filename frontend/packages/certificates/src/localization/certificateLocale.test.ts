@@ -2,7 +2,7 @@ import {afterEach, vi} from 'vitest';
 
 import {localization} from '@code-dot-org/core/plugins/localization';
 
-import {getPageLocale} from '../lib/locale';
+import {getPageLocale} from './certificateLocale';
 
 afterEach(() => {
   vi.restoreAllMocks();

@@ -1,7 +1,7 @@
 import type {
   CertificateCongratsResponse,
   CertificateCourseInfo,
-} from '@/lib/types';
+} from '@/certificate/model/certificateTypes';
 
 import type {CertificateScenario} from './router';
 

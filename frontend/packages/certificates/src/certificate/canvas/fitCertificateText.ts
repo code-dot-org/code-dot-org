@@ -7,6 +7,7 @@ export type TextMeasurer = (text: string, fontSize: number) => TextMeasurement;
 
 export interface FittedText {
   fontSize: number;
+  lineHeight: number;
   lines: string[];
   scale: number;
 }
@@ -111,7 +112,7 @@ export function fitCertificateText({
 }): FittedText {
   const normalizedText = text.trim();
   if (!normalizedText) {
-    return {fontSize, lines: [], scale: 1};
+    return {fontSize, lineHeight: 0, lines: [], scale: 1};
   }
 
   const maxWidth = boxWidth * 3;
@@ -129,10 +130,10 @@ export function fitCertificateText({
     );
   }
 
-  const blockHeight = lines.reduce(
-    (sum, line) => sum + measureText(line, fontSize).height,
-    0,
+  const lineHeight = Math.max(
+    ...lines.map(line => measureText(line, fontSize).height),
   );
+  const blockHeight = lines.length * lineHeight;
   const blockWidth = Math.max(
     ...lines.map(line => measureText(line, fontSize).width),
   );
@@ -144,5 +145,10 @@ export function fitCertificateText({
       ? Math.min(boxWidth / blockWidth, boxHeight / blockHeight)
       : 1;
 
-  return {fontSize: fontSize * scale, lines, scale};
+  return {
+    fontSize: fontSize * scale,
+    lineHeight: lineHeight * scale,
+    lines,
+    scale,
+  };
 }

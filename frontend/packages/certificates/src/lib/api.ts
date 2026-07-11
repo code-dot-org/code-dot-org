@@ -1,15 +1,16 @@
 import {DashboardApiClient} from '@code-dot-org/core/api';
 
+import type {
+  CertificateCongratsResponse,
+  CertificateCourseInfo,
+  CertificateUserInfo,
+} from '@/certificate/model/certificateTypes';
+
 import {
   CertificateCongratsResponseSchema,
   CertificateCourseInfoSchema,
   CertificateUserInfoSchema,
 } from './schemas';
-import type {
-  CertificateCongratsResponse,
-  CertificateCourseInfo,
-  CertificateUserInfo,
-} from './types';
 
 const {transport} = DashboardApiClient;
 

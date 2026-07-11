@@ -4,8 +4,11 @@ import {
   resolveTemplateLayout,
   resolveTitleLayouts,
   type PositionedTextLayout,
-} from '@/layout';
-import type {CertificateCourseInfo, CertificateParams} from '@/lib/types';
+} from '@/certificate/model/certificateLayouts';
+import type {
+  CertificateCourseInfo,
+  CertificateParams,
+} from '@/certificate/model/certificateTypes';
 
 export interface CertificateRenderableText extends PositionedTextLayout {
   id: string;

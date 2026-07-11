@@ -2,10 +2,10 @@ import {Button, Typography} from '@mui/material';
 import {useMemo, useState} from 'react';
 import {z} from 'zod';
 
-import {CertificateCanvasPreview} from '@/components/CertificateCanvasPreview';
-import {encodeCertificateParams} from '@/lib/base64';
+import {CertificateCanvasPreview} from '@/certificate/canvas/CertificateCanvasPreview';
+import type {CertificateParams} from '@/certificate/model/certificateTypes';
 import {readShellCertificateData} from '@/lib/shellData';
-import type {CertificateParams} from '@/lib/types';
+import {encodeCertificateParams} from '@/routing/certificateParams';
 
 import styles from './batchPage.module.css';
 import {useCourseInfo} from './useCourseInfo';

@@ -3,7 +3,7 @@ import {afterEach, vi} from 'vitest';
 import {
   exportCertificateBlob,
   renderCertificateToCanvas,
-} from '../lib/exportCanvas';
+} from './exportCertificateCanvas';
 
 const hocCourseInfo = {
   courseType: 'hoc' as const,

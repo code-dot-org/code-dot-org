@@ -1,4 +1,4 @@
-import {fitCertificateText, type TextMeasurer} from '../lib/fitting';
+import {fitCertificateText, type TextMeasurer} from './fitCertificateText';
 
 // Approximates real font metrics: character width and height scale with
 // fontSize, matching how a real TextMetrics bounding box behaves.
@@ -20,6 +20,7 @@ it('keeps short names at the template point size', () => {
 
   expect(fitted.lines).toEqual(['Ada']);
   expect(fitted.fontSize).toBe(68);
+  expect(fitted.lineHeight).toBe(68 * 1.2);
   expect(fitted.scale).toBe(1);
 });
 
@@ -136,6 +137,19 @@ it('does not shrink text for height alone when width already fits (width-gated)'
   expect(fitted.fontSize).toBe(62);
 });
 
+it('uses line-box height when shrinking a wrapped block', () => {
+  const fitted = fitCertificateText({
+    boxHeight: 60,
+    boxWidth: 100,
+    fontSize: 20,
+    measureText: buildMeasurer(1, 2),
+    text: 'alpha beta gamma delta epsilon zeta eta theta',
+  });
+
+  expect(fitted.lines.length).toBeGreaterThan(1);
+  expect(fitted.lineHeight * fitted.lines.length).toBeLessThanOrEqual(60);
+});
+
 it('returns an empty payload for blank names', () => {
   expect(
     fitCertificateText({
@@ -147,6 +161,7 @@ it('returns an empty payload for blank names', () => {
     }),
   ).toEqual({
     fontSize: 68,
+    lineHeight: 0,
     lines: [],
     scale: 1,
   });

@@ -1,8 +1,6 @@
 import type {Ref} from 'react';
 
-function getTemplateImageUrl(templateFilename: string): string {
-  return `/blockly/media/certificates/${templateFilename}`;
-}
+import {getTemplateImageUrl} from './loadCertificateTemplate';
 
 function getTemplateImageMimeType(templateFilename: string): string {
   if (templateFilename.endsWith('.jpg')) {

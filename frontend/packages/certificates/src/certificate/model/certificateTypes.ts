@@ -7,7 +7,7 @@ import type {
   CertificateCourseInfoSchema,
   CertificateUserInfoSchema,
   HocPersonalizationResponseSchema,
-} from './schemas';
+} from '@/lib/schemas';
 
 export interface CertificateParams {
   course: string;

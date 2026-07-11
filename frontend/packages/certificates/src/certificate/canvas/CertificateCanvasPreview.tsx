@@ -1,11 +1,14 @@
 import {useCallback, useEffect, useRef, useState} from 'react';
 import type {MutableRefObject} from 'react';
 
-import {CertificateTemplatePicture} from '@/components/CertificateTemplatePicture';
-import {resolveTemplateLayout} from '@/layout';
-import {useCertificateFontReady} from '@/lib/certificateFonts';
-import {renderCertificateToCanvas} from '@/lib/exportCanvas';
-import type {CertificateCourseInfo, CertificateParams} from '@/lib/types';
+import {useCertificateFontReady} from '@/certificate/canvas/certificateFonts';
+import {renderCertificateToCanvas} from '@/certificate/canvas/exportCertificateCanvas';
+import {resolveTemplateLayout} from '@/certificate/model/certificateLayouts';
+import type {
+  CertificateCourseInfo,
+  CertificateParams,
+} from '@/certificate/model/certificateTypes';
+import {CertificateTemplatePicture} from '@/certificate/template/CertificateTemplatePicture';
 
 export function CertificateCanvasPreview({
   courseInfo,

@@ -1,8 +1,8 @@
 import {useEffect, useState} from 'react';
 
+import type {CertificateCourseInfo} from '@/certificate/model/certificateTypes';
 import {fetchCourseInfo} from '@/lib/api';
-import {getPageLocale} from '@/lib/locale';
-import type {CertificateCourseInfo} from '@/lib/types';
+import {getPageLocale} from '@/localization/certificateLocale';
 
 export function useCourseInfo(course: string | null): {
   courseInfo: CertificateCourseInfo | null;

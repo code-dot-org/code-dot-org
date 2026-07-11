@@ -4,10 +4,10 @@ import {z} from 'zod';
 
 import Alert from '@code-dot-org/component-library/alert';
 
-import {exportCertificateBlob} from '@/lib/exportCanvas';
+import {exportCertificateBlob} from '@/certificate/canvas/exportCertificateCanvas';
+import type {CertificateCourseInfo} from '@/certificate/model/certificateTypes';
+import {loadTemplateImage} from '@/certificate/template/loadCertificateTemplate';
 import {readShellCertificateData} from '@/lib/shellData';
-import {loadTemplateImage} from '@/lib/templateImage';
-import type {CertificateCourseInfo} from '@/lib/types';
 
 import styles from './printBatchPage.module.css';
 import '../print.css';
