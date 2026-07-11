@@ -35,10 +35,3 @@
   display: grid;
   gap: 12px;
 }
-
-.textarea {
-  font: inherit;
-  min-height: 180px;
-  padding: 12px;
-  width: 100%;
-}

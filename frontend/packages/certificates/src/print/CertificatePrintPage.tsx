@@ -6,9 +6,10 @@ import {CertificateCanvasPreview} from '@/certificate/canvas/CertificateCanvasPr
 import type {CertificateParams} from '@/certificate/model/certificateTypes';
 import {decodeCertificateParams} from '@/routing/certificateParams';
 
-import styles from './printPage.module.css';
-import '../print.css';
-import {useCourseInfo} from './useCourseInfo';
+import {useCourseInfo} from '../pages/useCourseInfo';
+
+import './certificatePrint.css';
+import styles from './certificatePrintPage.module.css';
 
 /**
  * /print_certificates/:encoded_params — the certificate alone, sized for a

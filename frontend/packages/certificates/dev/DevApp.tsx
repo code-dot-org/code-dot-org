@@ -1,13 +1,12 @@
 import {useDeferredValue, useEffect, useState} from 'react';
 
+import {CertificateBatchPage} from '@/batch/CertificateBatchPage';
 import {CertificateCongratsPage} from '@/congrats/CertificateCongratsPage';
-import {CertificateBatchPage} from '@/pages/BatchPage';
-import {CertificatePrintBatchPage} from '@/pages/PrintBatchPage';
-import {CertificatePrintPage} from '@/pages/PrintPage';
+import {CertificatePrintPage} from '@/print/CertificatePrintPage';
 import {CertificateSharePage} from '@/share/CertificateSharePage';
 
 import {matchCertificateRoute, type CertificateRouteMatch} from './router';
-import {batchDefaultNames, routeScenarios} from './scenarios';
+import {routeScenarios} from './scenarios';
 
 const cardStyle = {
   background: '#fffdf6',
@@ -107,12 +106,6 @@ function HomePage({navigate}: {navigate: (url: string) => void}) {
   );
 }
 
-/** Seeds the shell data attribute the Rails-hydrated batch routes provide. */
-function withShellData(data: unknown, page: JSX.Element): JSX.Element {
-  document.documentElement.dataset.certificate = JSON.stringify(data);
-  return page;
-}
-
 export function DevApp() {
   const [routeMatch, navigate] = useRouteMatch();
 
@@ -133,19 +126,7 @@ export function DevApp() {
         <CertificatePrintPage encodedParams={routeMatch.encodedParams ?? ''} />
       );
     case 'batch':
-      return withShellData(
-        {
-          courseName: 'hourofcode',
-          courseTitle: 'Hour of Code',
-          studentNames: batchDefaultNames,
-        },
-        <CertificateBatchPage />,
-      );
-    case 'print-batch':
-      return withShellData(
-        {courseName: 'hourofcode', studentNames: batchDefaultNames},
-        <CertificatePrintBatchPage />,
-      );
+      return <CertificateBatchPage />;
     case 'congrats':
       return (
         <CertificateCongratsPage

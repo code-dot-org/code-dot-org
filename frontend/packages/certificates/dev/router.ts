@@ -7,7 +7,6 @@ export type CertificateRouteKind =
   | 'blank'
   | 'batch'
   | 'print'
-  | 'print-batch'
   | 'congrats'
   | 'not-found';
 
@@ -40,10 +39,6 @@ export function matchCertificateRoute(
 
   if (normalizedPath === '/certificates/batch') {
     return {kind: 'batch', search: new URLSearchParams(search)};
-  }
-
-  if (normalizedPath === '/print_certificates/batch') {
-    return {kind: 'print-batch', search: new URLSearchParams(search)};
   }
 
   if (normalizedPath === '/congrats') {

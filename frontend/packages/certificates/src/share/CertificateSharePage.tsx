@@ -21,7 +21,7 @@ import {BackToFrontConfetti} from '../personalization/BackToFrontConfetti';
 import {NameRequiredAlert} from '../personalization/NameRequiredAlert';
 import {PersonalizeForm} from '../personalization/PersonalizeForm';
 
-import '../print.css';
+import '../print/certificatePrint.css';
 import styles from './certificateSharePage.module.css';
 
 export interface CertificateSharePageProps {

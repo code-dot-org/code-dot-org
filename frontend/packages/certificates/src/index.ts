@@ -1,7 +1,6 @@
 export {CertificateSharePage} from './share/CertificateSharePage';
-export {CertificatePrintPage} from './pages/PrintPage';
-export {CertificateBatchPage} from './pages/BatchPage';
-export {CertificatePrintBatchPage} from './pages/PrintBatchPage';
+export {CertificateBatchPage} from './batch/CertificateBatchPage';
+export {CertificatePrintPage} from './print/CertificatePrintPage';
 export {CertificateCongratsPage} from './congrats/CertificateCongratsPage';
 export {CertificateCanvasPreview} from './certificate/canvas/CertificateCanvasPreview';
 export {

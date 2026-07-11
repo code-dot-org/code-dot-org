@@ -9,7 +9,6 @@ export const defaultEncodedParams =
 export const utf8EncodedParams =
   'eyJuYW1lIjoiWm_DqyDmnY4g8J-miiIsImNvdXJzZSI6Im9jZWFucyIsImRvbm9yIjoiQ29kZS5vcmcifQ';
 
-export const batchDefaultNames = ['Alice', 'Bob', 'Charlie'];
 export const batchUtf8Names = ['Amina 🌍', 'Zoë 李 🦊', 'أمينة 🚀', 'Марія'];
 
 export const routeScenarios: CertificateScenario[] = [
@@ -48,12 +47,6 @@ export const routeScenarios: CertificateScenario[] = [
     kind: 'print',
     notes: 'UTF-8 and emoji print route parity case.',
     url: `/print_certificates/${utf8EncodedParams}`,
-  },
-  {
-    id: 'print-batch-default',
-    kind: 'print-batch',
-    notes: 'Batch print route seeded with default names.',
-    url: '/print_certificates/batch',
   },
   {
     id: 'congrats-default',

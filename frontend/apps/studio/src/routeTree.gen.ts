@@ -11,7 +11,6 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as CongratsRouteImport } from './routes/congrats'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as Print_certificatesBatchRouteImport } from './routes/print_certificates/batch'
 import { Route as Print_certificatesEncodedParamsRouteImport } from './routes/print_certificates/$encodedParams'
 import { Route as CertificatesBlankRouteImport } from './routes/certificates/blank'
 import { Route as CertificatesBatchRouteImport } from './routes/certificates/batch'
@@ -27,11 +26,6 @@ const CongratsRoute = CongratsRouteImport.update({
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Print_certificatesBatchRoute = Print_certificatesBatchRouteImport.update({
-  id: '/print_certificates/batch',
-  path: '/print_certificates/batch',
   getParentRoute: () => rootRouteImport,
 } as any)
 const Print_certificatesEncodedParamsRoute =
@@ -78,7 +72,6 @@ export interface FileRoutesByFullPath {
   '/certificates/batch': typeof CertificatesBatchRoute
   '/certificates/blank': typeof CertificatesBlankRoute
   '/print_certificates/$encodedParams': typeof Print_certificatesEncodedParamsRoute
-  '/print_certificates/batch': typeof Print_certificatesBatchRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
   '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition': typeof CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute
 }
@@ -89,7 +82,6 @@ export interface FileRoutesByTo {
   '/certificates/batch': typeof CertificatesBatchRoute
   '/certificates/blank': typeof CertificatesBlankRoute
   '/print_certificates/$encodedParams': typeof Print_certificatesEncodedParamsRoute
-  '/print_certificates/batch': typeof Print_certificatesBatchRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
   '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition': typeof CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute
 }
@@ -101,7 +93,6 @@ export interface FileRoutesById {
   '/certificates/batch': typeof CertificatesBatchRoute
   '/certificates/blank': typeof CertificatesBlankRoute
   '/print_certificates/$encodedParams': typeof Print_certificatesEncodedParamsRoute
-  '/print_certificates/batch': typeof Print_certificatesBatchRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
   '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition': typeof CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute
 }
@@ -114,7 +105,6 @@ export interface FileRouteTypes {
     | '/certificates/batch'
     | '/certificates/blank'
     | '/print_certificates/$encodedParams'
-    | '/print_certificates/batch'
     | '/projects/$labType/$channelId/edit'
     | '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition'
   fileRoutesByTo: FileRoutesByTo
@@ -125,7 +115,6 @@ export interface FileRouteTypes {
     | '/certificates/batch'
     | '/certificates/blank'
     | '/print_certificates/$encodedParams'
-    | '/print_certificates/batch'
     | '/projects/$labType/$channelId/edit'
     | '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition'
   id:
@@ -136,7 +125,6 @@ export interface FileRouteTypes {
     | '/certificates/batch'
     | '/certificates/blank'
     | '/print_certificates/$encodedParams'
-    | '/print_certificates/batch'
     | '/projects/$labType/$channelId/edit'
     | '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition'
   fileRoutesById: FileRoutesById
@@ -148,7 +136,6 @@ export interface RootRouteChildren {
   CertificatesBatchRoute: typeof CertificatesBatchRoute
   CertificatesBlankRoute: typeof CertificatesBlankRoute
   Print_certificatesEncodedParamsRoute: typeof Print_certificatesEncodedParamsRoute
-  Print_certificatesBatchRoute: typeof Print_certificatesBatchRoute
   ProjectsLabTypeChannelIdEditRoute: typeof ProjectsLabTypeChannelIdEditRoute
   CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute: typeof CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute
 }
@@ -167,13 +154,6 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/print_certificates/batch': {
-      id: '/print_certificates/batch'
-      path: '/print_certificates/batch'
-      fullPath: '/print_certificates/batch'
-      preLoaderRoute: typeof Print_certificatesBatchRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/print_certificates/$encodedParams': {
@@ -228,7 +208,6 @@ const rootRouteChildren: RootRouteChildren = {
   CertificatesBatchRoute: CertificatesBatchRoute,
   CertificatesBlankRoute: CertificatesBlankRoute,
   Print_certificatesEncodedParamsRoute: Print_certificatesEncodedParamsRoute,
-  Print_certificatesBatchRoute: Print_certificatesBatchRoute,
   ProjectsLabTypeChannelIdEditRoute: ProjectsLabTypeChannelIdEditRoute,
   CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute:
     CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute,

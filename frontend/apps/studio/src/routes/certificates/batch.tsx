@@ -9,13 +9,37 @@ const CertificateBatchPage = lazy(() =>
 
 export const Route = createFileRoute('/certificates/batch')({
   component: RouteComponent,
+  validateSearch: search => ({
+    // `course` is the legacy base64-encoded course name.
+    courseName:
+      typeof search.course === 'string'
+        ? decodeCourseName(search.course)
+        : undefined,
+  }),
 });
 
 function RouteComponent() {
-  // The page reads the Rails-hydrated #vite-root data-certificate attribute.
+  const {courseName} = Route.useSearch();
+
   return (
     <Suspense fallback={<div>Loading certificate batch...</div>}>
-      <CertificateBatchPage />
+      <CertificateBatchPage courseName={courseName} />
     </Suspense>
   );
+}
+
+function decodeCourseName(value: string): string {
+  try {
+    const normalized = value.replace(/-/g, '+').replace(/_/g, '/');
+    const padded = normalized.padEnd(
+      normalized.length + ((4 - (normalized.length % 4)) % 4),
+      '=',
+    );
+    const bytes = Uint8Array.from(atob(padded), character =>
+      character.charCodeAt(0),
+    );
+    return new TextDecoder('utf-8', {fatal: true}).decode(bytes);
+  } catch {
+    return '';
+  }
 }

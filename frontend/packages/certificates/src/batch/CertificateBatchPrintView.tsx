@@ -1,25 +1,14 @@
 import {Button, Typography} from '@mui/material';
 import {useEffect, useState} from 'react';
-import {z} from 'zod';
 
 import Alert from '@code-dot-org/component-library/alert';
 
 import type {CertificateCourse} from '@/api/courses';
 import {exportCertificateBlob} from '@/certificate/canvas/exportCertificateCanvas';
 import {loadTemplateImage} from '@/certificate/template/loadCertificateTemplate';
-import {readShellCertificateData} from '@/lib/shellData';
 
-import styles from './printBatchPage.module.css';
-import '../print.css';
-import {useCourseInfo} from './useCourseInfo';
-
-// Server-side cap on POSTed studentNames; defended here too.
-const MAX_BATCH_NAMES = 30;
-
-const printBatchShellDataSchema = z.object({
-  courseName: z.string(),
-  studentNames: z.array(z.string()),
-});
+import '../print/certificatePrint.css';
+import styles from './certificateBatchPrintView.module.css';
 
 interface BatchCertificate {
   name: string;
@@ -31,9 +20,9 @@ interface BatchCertificate {
  * than holding 30 live canvases (iOS canvas-memory cap; design D1).
  */
 function useBatchCertificateImages(
-  courseInfo: CertificateCourse | null,
+  courseInfo: CertificateCourse,
   courseName: string,
-  names: string[],
+  names: readonly string[],
 ): {certificates: BatchCertificate[] | null; error: boolean} {
   const [certificates, setCertificates] = useState<BatchCertificate[] | null>(
     null,
@@ -41,10 +30,6 @@ function useBatchCertificateImages(
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    if (!courseInfo) {
-      return;
-    }
-
     let cancelled = false;
     const urls: string[] = [];
 
@@ -74,6 +59,7 @@ function useBatchCertificateImages(
 
       setCertificates(rendered);
     })().catch(() => {
+      urls.forEach(url => URL.revokeObjectURL(url));
       if (!cancelled) {
         setError(true);
       }
@@ -88,27 +74,18 @@ function useBatchCertificateImages(
   return {certificates, error};
 }
 
-/** /print_certificates/batch — Rails-hydrated POST target; one page per name. */
-export function CertificatePrintBatchPage() {
-  const [shellData] = useState(
-    () =>
-      readShellCertificateData(printBatchShellDataSchema) ?? {
-        courseName: 'hourofcode',
-        studentNames: [],
-      },
-  );
-  const [names] = useState(() =>
-    (shellData.studentNames ?? [])
-      .map(name => name.trim())
-      .filter(Boolean)
-      .slice(0, MAX_BATCH_NAMES),
-  );
-  const {courseInfo, error: courseInfoError} = useCourseInfo(
-    shellData.courseName,
-  );
+export function CertificateBatchPrintView({
+  courseInfo,
+  courseName,
+  names,
+}: {
+  courseInfo: CertificateCourse;
+  courseName: string;
+  names: readonly string[];
+}) {
   const {certificates, error: renderError} = useBatchCertificateImages(
     courseInfo,
-    shellData.courseName,
+    courseName,
     names,
   );
 
@@ -136,13 +113,13 @@ export function CertificatePrintBatchPage() {
             Print
           </Button>
         </div>
-        {(courseInfoError || renderError) && (
+        {renderError && (
           <Alert
             text="Something went wrong preparing the certificates. Refresh the page to try again."
             type="danger"
           />
         )}
-        {!certificates && !courseInfoError && !renderError && (
+        {!certificates && !renderError && (
           <Typography variant="body2">
             Preparing {names.length} certificate
             {names.length === 1 ? '' : 's'}...
