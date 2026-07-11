@@ -4,6 +4,13 @@
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1'}
     = csp_meta_tag
     %meta{name: 'app-config', content: observability_config(CDO.frontend_studio_sentry_dsn)}
+    - if @certificate_social_metadata
+      %meta{name: 'twitter:card', content: 'summary_large_image'}
+      %meta{property: 'og:type', content: 'website'}
+      %meta{property: 'og:title', content: @certificate_social_metadata[:title]}
+      %meta{name: 'twitter:title', content: @certificate_social_metadata[:title]}
+      %meta{property: 'og:image', content: @certificate_social_metadata[:image]}
+      %meta{name: 'twitter:image', content: @certificate_social_metadata[:image]}
     = vite_client_tag
     = vite_react_refresh_tag
 

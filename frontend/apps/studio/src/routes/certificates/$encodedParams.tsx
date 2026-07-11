@@ -8,12 +8,13 @@ const CertificateSharePage = lazy(() =>
 );
 
 interface ShareSearch {
-  i?: string;
+  sessionId?: string;
 }
 
 function validateSearch(search: Record<string, unknown>): ShareSearch {
   return {
-    i: typeof search.i === 'string' ? search.i : undefined,
+    // `i` is the legacy Hour of Code activity session ID.
+    sessionId: typeof search.i === 'string' ? search.i : undefined,
   };
 }
 
@@ -24,11 +25,14 @@ export const Route = createFileRoute('/certificates/$encodedParams')({
 
 function RouteComponent() {
   const {encodedParams} = Route.useParams();
-  const {i} = Route.useSearch();
+  const {sessionId} = Route.useSearch();
 
   return (
-    <Suspense fallback={<div>Loading certificate...</div>}>
-      <CertificateSharePage encodedParams={encodedParams} sessionId={i} />
+    <Suspense fallback={null}>
+      <CertificateSharePage
+        encodedParams={encodedParams}
+        sessionId={sessionId}
+      />
     </Suspense>
   );
 }

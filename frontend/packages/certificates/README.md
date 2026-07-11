@@ -2,8 +2,7 @@
 
 CodeAI certificate rendering package.
 
-This package is the `3.1` scaffold for the OpenSpec change
-`replace-certificate-rendering`. It provides:
+It provides:
 
 - a standalone Vite dev server
 - canonical certificate route fixtures
@@ -22,5 +21,4 @@ The standalone server serves the certificate route families directly:
 - `/certificates/blank`
 - `/certificates/batch`
 - `/print_certificates/:encodedParams`
-- `/print_certificates/batch`
 - `/congrats`

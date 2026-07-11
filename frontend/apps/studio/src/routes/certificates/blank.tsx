@@ -13,7 +13,7 @@ export const Route = createFileRoute('/certificates/blank')({
 
 function RouteComponent() {
   return (
-    <Suspense fallback={<div>Loading certificate...</div>}>
+    <Suspense fallback={null}>
       <CertificateSharePage />
     </Suspense>
   );

@@ -8,14 +8,16 @@ const CertificateCongratsPage = lazy(() =>
 );
 
 interface CongratsSearch {
-  i?: string;
-  s?: string;
+  encodedCourse?: string;
+  sessionId?: string;
 }
 
 function validateSearch(search: Record<string, unknown>): CongratsSearch {
   return {
-    i: typeof search.i === 'string' ? search.i : undefined,
-    s: typeof search.s === 'string' ? search.s : undefined,
+    // `s` is the legacy base64-encoded completed course name.
+    encodedCourse: typeof search.s === 'string' ? search.s : undefined,
+    // `i` is the legacy Hour of Code activity session ID.
+    sessionId: typeof search.i === 'string' ? search.i : undefined,
   };
 }
 
@@ -25,11 +27,14 @@ export const Route = createFileRoute('/congrats')({
 });
 
 function RouteComponent() {
-  const {i, s} = Route.useSearch();
+  const {encodedCourse, sessionId} = Route.useSearch();
 
   return (
-    <Suspense fallback={<div>Loading certificates...</div>}>
-      <CertificateCongratsPage encodedCourse={s} sessionId={i} />
+    <Suspense fallback={null}>
+      <CertificateCongratsPage
+        encodedCourse={encodedCourse}
+        sessionId={sessionId}
+      />
     </Suspense>
   );
 }

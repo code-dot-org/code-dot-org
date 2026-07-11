@@ -22,7 +22,7 @@ function RouteComponent() {
   const {courseName} = Route.useSearch();
 
   return (
-    <Suspense fallback={<div>Loading certificate batch...</div>}>
+    <Suspense fallback={null}>
       <CertificateBatchPage courseName={courseName} />
     </Suspense>
   );

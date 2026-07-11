@@ -15,7 +15,7 @@ function RouteComponent() {
   const {encodedParams} = Route.useParams();
 
   return (
-    <Suspense fallback={<div>Loading certificate...</div>}>
+    <Suspense fallback={null}>
       <CertificatePrintPage encodedParams={encodedParams} />
     </Suspense>
   );

@@ -2,7 +2,7 @@ import {defineConfig, devices} from 'playwright/test';
 
 import {visualProjects} from '@code-dot-org/playwright-support/visual';
 
-const BASE_URL = process.env.TARGET_URL ?? 'http://localhost:5173';
+const BASE_URL = process.env.TARGET_URL ?? 'http://127.0.0.1:5173';
 
 export default defineConfig({
   testDir: './e2e',
@@ -32,7 +32,7 @@ export default defineConfig({
     ...visualProjects(),
   ],
   webServer: {
-    command: 'yarn dev --port 5173',
+    command: 'yarn dev --host 127.0.0.1 --port 5173',
     url: BASE_URL,
     reuseExistingServer: !process.env.CI,
     timeout: 60_000,
