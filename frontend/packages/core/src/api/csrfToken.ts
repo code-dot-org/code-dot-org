@@ -46,3 +46,15 @@ export async function refreshCsrfToken(transport: Transport): Promise<void> {
     logger.debug('csrf token refresh failed', {error});
   }
 }
+
+/** Ensures the next mutating request can receive an authenticity token. */
+export async function ensureCsrfToken(transport: Transport): Promise<void> {
+  if (resolveCsrfToken()) {
+    return;
+  }
+
+  await refreshCsrfToken(transport);
+  if (!resolveCsrfToken()) {
+    throw new Error('Unable to resolve a CSRF token');
+  }
+}

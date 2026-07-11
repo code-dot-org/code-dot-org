@@ -6,7 +6,12 @@ export {DashboardApiClient};
 export * from './client';
 export * from './contexts';
 export * from './bootstrapApiClient';
-export {setSpaCsrfToken, getSpaCsrfToken, refreshCsrfToken} from './csrfToken';
+export {
+  ensureCsrfToken,
+  getSpaCsrfToken,
+  refreshCsrfToken,
+  setSpaCsrfToken,
+} from './csrfToken';
 export {default as QueryClientProvider} from './QueryClientProvider';
 export {createQueryClient} from './createQueryClient';
 export * from './transports';

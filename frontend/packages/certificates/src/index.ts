@@ -17,11 +17,8 @@ export {
   exportCertificateBlob,
   renderCertificateToCanvas,
 } from './lib/exportCanvas';
-export {
-  fetchCongrats,
-  fetchCourseInfo,
-  personalizeHocCertificate,
-} from './lib/api';
+export {personalizeHocCertificate} from './api/personalization';
+export {fetchCongrats, fetchCourseInfo} from './lib/api';
 export {fitCertificateText} from './lib/fitting';
 export {resolveCertificateRenderableTexts} from './lib/renderModel';
 export type {

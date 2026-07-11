@@ -4,9 +4,10 @@ import {useEffect, useMemo, useState} from 'react';
 import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
+import {personalizeHocCertificate} from '@/api/personalization';
 import {CertificateCanvasPreview} from '@/components/CertificateCanvasPreview';
 import {ANALYTICS_EVENTS, sendAnalyticsEvent} from '@/lib/analytics';
-import {fetchCertificateUserInfo, personalizeHocCertificate} from '@/lib/api';
+import {fetchCertificateUserInfo} from '@/lib/api';
 import {decodeCertificateParams, encodeCertificateParams} from '@/lib/base64';
 import {exportCertificateBlob} from '@/lib/exportCanvas';
 import {loadTemplateImage} from '@/lib/templateImage';
@@ -132,15 +133,7 @@ export function CertificateSharePage({
     }
 
     try {
-      if (!user.data?.csrfToken) {
-        throw new Error('Certificate personalization requires a CSRF token');
-      }
-
-      const response = await personalizeHocCertificate(
-        sessionId,
-        name,
-        user.data.csrfToken,
-      );
+      const response = await personalizeHocCertificate(sessionId, name);
       if (response.certificate_sent) {
         setPersonalizedName(response.name ?? name);
         setManuallyPersonalized(true);

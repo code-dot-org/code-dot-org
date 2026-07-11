@@ -153,7 +153,7 @@ it('hides all social share links for under-13 users', async () => {
   ).not.toBeInTheDocument();
 });
 
-it('PATCHes HOC personalization with the private CSRF token', async () => {
+it('fetches a CSRF token before PATCHing HOC personalization', async () => {
   let csrfHeader: string | null = null;
   server.use(
     http.patch('*/api/hour/certificates/:sessionId', async ({request}) => {

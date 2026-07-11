@@ -5,8 +5,9 @@ import Alert from '@code-dot-org/component-library/alert';
 import Carousel from '@code-dot-org/component-library/carousel';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
+import {personalizeHocCertificate} from '@/api/personalization';
 import {CertificateCanvasPreview} from '@/components/CertificateCanvasPreview';
-import {fetchCongrats, personalizeHocCertificate} from '@/lib/api';
+import {fetchCongrats} from '@/lib/api';
 import {encodeCertificateParams} from '@/lib/base64';
 import type {
   CertificateCongratsEntry,
@@ -153,11 +154,7 @@ export function CertificateCongratsPage({
     }
 
     try {
-      const response = await personalizeHocCertificate(
-        sessionId,
-        name,
-        data.csrfToken,
-      );
+      const response = await personalizeHocCertificate(sessionId, name);
       if (response.certificate_sent) {
         setPersonalizedName(response.name ?? name);
         setManuallyPersonalized(true);
