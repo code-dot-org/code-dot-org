@@ -6,7 +6,7 @@ import {CertificateCanvasPreview} from '@/certificate/canvas/CertificateCanvasPr
 import type {CertificateParams} from '@/certificate/model/certificateTypes';
 import {decodeCertificateParams} from '@/routing/certificateParams';
 
-import {useCourseInfo} from '../pages/useCourseInfo';
+import {useCertificateCourse} from '../api/useCertificateCourse';
 
 import './certificatePrint.css';
 import styles from './certificatePrintPage.module.css';
@@ -37,7 +37,9 @@ export function CertificatePrintPage({encodedParams}: {encodedParams: string}) {
     }
   }, [encodedParams]);
 
-  const {courseInfo, error} = useCourseInfo(decodedParams?.course ?? null);
+  const {courseInfo, error} = useCertificateCourse(
+    decodedParams?.course ?? null,
+  );
 
   if (!decodedParams) {
     return (

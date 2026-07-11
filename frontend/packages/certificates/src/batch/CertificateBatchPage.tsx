@@ -8,7 +8,7 @@ import {CertificateCanvasPreview} from '@/certificate/canvas/CertificateCanvasPr
 import type {CertificateParams} from '@/certificate/model/certificateTypes';
 import {encodeCertificateParams} from '@/routing/certificateParams';
 
-import {useCourseInfo} from '../pages/useCourseInfo';
+import {useCertificateCourse} from '../api/useCertificateCourse';
 
 import {CertificateBatchEditor} from './CertificateBatchEditor';
 import styles from './certificateBatchPage.module.css';
@@ -22,7 +22,7 @@ export function CertificateBatchPage({
   const [names, setNames] = useState<readonly string[] | null>(null);
   const [viewer, setViewer] = useState<CertificateViewer | null>(null);
   const [viewerError, setViewerError] = useState(false);
-  const {courseInfo, error: courseError} = useCourseInfo(courseName);
+  const {courseInfo, error: courseError} = useCertificateCourse(courseName);
   const previewParams = useMemo<CertificateParams>(
     () => ({course: courseName}),
     [courseName],

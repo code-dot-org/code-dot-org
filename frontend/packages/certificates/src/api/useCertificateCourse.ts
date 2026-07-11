@@ -3,7 +3,7 @@ import {useEffect, useState} from 'react';
 import {fetchCertificateCourse, type CertificateCourse} from '@/api/courses';
 import {getPageLocale} from '@/localization/certificateLocale';
 
-export function useCourseInfo(course: string | null): {
+export function useCertificateCourse(course: string | null): {
   courseInfo: CertificateCourse | null;
   error: boolean;
 } {

@@ -16,7 +16,7 @@ import {
 } from '@/routing/certificateParams';
 import {SocialShareButtons} from '@/sharing/SocialShareButtons';
 
-import {useCourseInfo} from '../pages/useCourseInfo';
+import {useCertificateCourse} from '../api/useCertificateCourse';
 import {BackToFrontConfetti} from '../personalization/BackToFrontConfetti';
 import {NameRequiredAlert} from '../personalization/NameRequiredAlert';
 import {PersonalizeForm} from '../personalization/PersonalizeForm';
@@ -65,7 +65,7 @@ export function CertificateSharePage({
     }
   }, [encodedParams]);
 
-  const {courseInfo, error: courseInfoError} = useCourseInfo(
+  const {courseInfo, error: courseInfoError} = useCertificateCourse(
     decodedParams?.course ?? null,
   );
   const [viewer, setViewer] = useState<ViewerState>({

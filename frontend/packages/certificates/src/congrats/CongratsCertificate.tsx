@@ -6,7 +6,7 @@ import {CertificateCanvasPreview} from '@/certificate/canvas/CertificateCanvasPr
 import type {CertificateParams} from '@/certificate/model/certificateTypes';
 import {encodeCertificateParams} from '@/routing/certificateParams';
 
-import {useCourseInfo} from '../pages/useCourseInfo';
+import {useCertificateCourse} from '../api/useCertificateCourse';
 
 import styles from './certificateCongratsPage.module.css';
 
@@ -17,7 +17,7 @@ export function CongratsCertificate({
   entry: CertificateCompletionEntry;
   name?: string;
 }) {
-  const {courseInfo} = useCourseInfo(entry.courseName);
+  const {courseInfo} = useCertificateCourse(entry.courseName);
   const sharePath = `/certificates/${encodeCertificateParams({
     course: entry.courseName,
     ...(name ? {name} : {}),
