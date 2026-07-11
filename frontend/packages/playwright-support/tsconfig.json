@@ -2,7 +2,9 @@
   "extends": "@code-dot-org/lint-config/typescript/tsconfig.vite.node.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "lib": ["ES2023", "DOM"]
+    // DOM types for the in-page page.evaluate closures (src/visual/index.ts);
+    // the package's own code runs in node.
+    "lib": ["ES2023", "DOM", "DOM.Iterable"]
   },
   "include": ["src"]
 }

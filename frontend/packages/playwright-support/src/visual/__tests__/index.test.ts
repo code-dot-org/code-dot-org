@@ -1,6 +1,25 @@
+import type {Page} from 'playwright/test';
 import {afterEach, describe, expect, it} from 'vitest';
 
-import {visualProjects} from '../index';
+import {assertWebfontsLoaded, visualProjects} from '../index';
+
+describe('assertWebfontsLoaded', () => {
+  // evaluate is called twice: fonts.ready, then the errored-family list.
+  const fakePage = (errored: string[]): Page => {
+    const results: unknown[] = [undefined, errored];
+    return {evaluate: async () => results.shift()} as unknown as Page;
+  };
+
+  it('passes when no webfont errored', async () => {
+    await expect(assertWebfontsLoaded(fakePage([]))).resolves.toBeUndefined();
+  });
+
+  it('fails when a webfont errored', async () => {
+    await expect(assertWebfontsLoaded(fakePage(['Noto Sans']))).rejects.toThrow(
+      /webfonts failed to load/,
+    );
+  });
+});
 
 describe('visualProjects', () => {
   const original = process.env.VISUAL_PROVIDER;

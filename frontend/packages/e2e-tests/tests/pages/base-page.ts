@@ -5,6 +5,7 @@ import {GdprDialogComponent} from '../components/gdpr-dialog';
 import {HeaderComponent} from '../components/header';
 import {OneTrustComponent} from '../components/one-trust';
 import {StudentInfoModalComponent} from '../components/student-info-modal';
+import {settle} from '../shared/stability';
 
 /** Base for every page object — home for the UI common to all pages. */
 export class BasePage {
@@ -32,6 +33,16 @@ export class BasePage {
     this.gdprDialog = new GdprDialogComponent(page);
     this.studentInfoModal = new StudentInfoModalComponent(page);
     this.oneTrust = new OneTrustComponent(page);
+  }
+
+  /**
+   * Ready the page for a screenshot: settle fonts and paint. Pages with
+   * post-load motion override this with waits on their specific moving
+   * elements. Webfont *failure* is not this method's concern — the visualCheck
+   * fixture refuses to capture a page whose fonts errored.
+   */
+  async waitForVisualStability(): Promise<void> {
+    await settle(this.page);
   }
 
   /**

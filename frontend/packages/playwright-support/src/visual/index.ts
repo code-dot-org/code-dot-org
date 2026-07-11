@@ -1,4 +1,4 @@
-import {devices, expect, test as base} from 'playwright/test';
+import {devices, expect, test as base, type Page} from 'playwright/test';
 
 import {withApplitoolsCheck} from './applitools';
 import {withPlaywrightCheck} from './playwright';
@@ -8,6 +8,26 @@ import type {VisualCheck, VisualTestConfig} from './types';
 const PROVIDER = (process.env.VISUAL_PROVIDER ?? 'playwright') as
   | 'playwright'
   | 'applitools';
+
+/**
+ * Refuse to capture a page whose webfonts failed to load: it renders with
+ * fallback metrics — a lookalike layout that diffs against a real-font
+ * baseline. Failing lets a retry's fresh load refetch the fonts instead of
+ * shipping the lookalike to the comparison. document.fonts.check() cannot
+ * detect this — a locally installed family reports available while the
+ * webfont is unloaded — so the gate is FontFace status, after fonts settle.
+ */
+export async function assertWebfontsLoaded(page: Page): Promise<void> {
+  await page.evaluate(() => document.fonts.ready.then(() => undefined));
+  const erroredFonts = await page.evaluate(() => [
+    ...new Set(
+      [...document.fonts].filter(f => f.status === 'error').map(f => f.family),
+    ),
+  ]);
+  if (erroredFonts.length > 0) {
+    throw new Error(`webfonts failed to load: ${erroredFonts.join(', ')}`);
+  }
+}
 
 /**
  * Build a Playwright `test` extended with a provider-agnostic `visualCheck`
@@ -21,10 +41,16 @@ const PROVIDER = (process.env.VISUAL_PROVIDER ?? 'playwright') as
 export function createVisualTest(config: VisualTestConfig) {
   const test = base.extend<{visualCheck: VisualCheck}>({
     visualCheck: async ({page}, use, testInfo) => {
+      // Gate every capture on webfont success, whichever backend runs it.
+      const guardedUse = (check: VisualCheck) =>
+        use(async (name, opts) => {
+          await assertWebfontsLoaded(page);
+          await check(name, opts);
+        });
       if (PROVIDER === 'applitools') {
-        await withApplitoolsCheck(page, testInfo, use, config.appName);
+        await withApplitoolsCheck(page, testInfo, guardedUse, config.appName);
       } else {
-        await withPlaywrightCheck(page, testInfo, use);
+        await withPlaywrightCheck(page, testInfo, guardedUse);
       }
     },
   });

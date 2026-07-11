@@ -47,6 +47,15 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   /** Inline feedback panel rendered below the instructions after an incorrect solution. */
   readonly inlineFeedback: Locator;
 
+  /**
+   * StudioApp's visualization region (the game rendering area), for masking in
+   * visual tests: game content randomizes per load. Matches the shared
+   * #visualization container AND any app canvas known to overflow it — maze's
+   * #svgMaze exceeds the container by 2px, and that unmasked sliver alone
+   * flakes a capture — so a mask paints every matched box.
+   */
+  readonly visualization: Locator;
+
   constructor(page: Page) {
     super(page);
     this.instructionsTab = page.locator('.uitest-instructionsTab');
@@ -60,6 +69,7 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     this.inlineFeedback = page.locator(
       '.uitest-topInstructions-inline-feedback',
     );
+    this.visualization = page.locator('#visualization, #svgMaze');
   }
 
   /**
@@ -156,6 +166,31 @@ export class LegacyBlocklyLab extends LessonLevelPage {
       const transform = block.transform.baseVal.getItem(0);
       return {x: transform.matrix.e, y: transform.matrix.f};
     }, blockId);
+  }
+
+  /**
+   * For a legacy lab, "visually stable" means warm-rendered — so this wait,
+   * unusually, RELOADS the page. Legacy labs bake measurements at render time
+   * and never re-measure: Blockly turns text metrics into block geometry, and
+   * the CSF instructions panel stores its JS-measured height. A cold render's
+   * layout therefore depends on fetch timing — externally-localized content
+   * can pull in any font face, so the set of races is not enumerable — and
+   * even a fully settled cold layout differs from a warm one. Re-rendering
+   * with every asset cached is the only content- and locale-agnostic way to
+   * pin a single canonical layout; it costs one extra (warm, cheap) boot,
+   * paid only by visual tests. After the reload: settle fonts and paint, then
+   * wait out the panel's post-boot expand — jQuery timers, invisible to
+   * document.getAnimations(), so watch the panel's box itself.
+   */
+  override async waitForVisualStability(): Promise<void> {
+    // First pass settles the discovery render — in particular its font
+    // fetches, so the reload below renders with every face cached.
+    await super.waitForVisualStability();
+    await this.page.reload({waitUntil: 'domcontentloaded'});
+    await this.waitForReady();
+    // Second pass settles the capture render.
+    await super.waitForVisualStability();
+    await waitUntilStable(this.instructionsPanel);
   }
 
   /** Switch locale via the global dropdown; wait for the lab to reload. */
