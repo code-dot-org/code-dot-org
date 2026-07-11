@@ -162,13 +162,12 @@ export async function generateChatResponse(
         model: modelParameters.selectedModelId,
       });
       if (imageSafetyResult !== undefined) {
+        let imageSafetyJudgeStatus: 'ok' | 'flagged' | 'error' = 'error';
+        if (imageSafe !== undefined) {
+          imageSafetyJudgeStatus = imageSafe ? 'ok' : 'flagged';
+        }
         Observability.metrics.count('ai-chat.image_llm_safety_judge', 1, {
-          result:
-            imageSafetyResult.status === 'fulfilled'
-              ? imageSafetyResult.value
-                ? 'ok'
-                : 'flagged'
-              : 'error',
+          result: imageSafetyJudgeStatus,
           mediaType: file.mediaType,
         });
       }
