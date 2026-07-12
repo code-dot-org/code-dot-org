@@ -1,0 +1,32 @@
+# cdo-spike-e-full: full-repo devcontainer. Copied verbatim from the
+# devcontainer-spike worktree's proven locals.yml (in-container 3306/6379,
+# zero-AWS-credential seed path). See that worktree for provenance notes.
+
+db_writer: 'mysql://root:password@127.0.0.1:3306/'
+db_endpoint_writer: '127.0.0.1:3306'
+db_credential_admin:
+  username: root
+  password: password
+db_endpoint_proxy_reporting: '127.0.0.1:3306'
+db_endpoint_proxy_reader: '127.0.0.1:3306'
+db_credential_reader:
+  username: root
+  password: password
+db_endpoint_proxy_writer: '127.0.0.1:3306'
+db_credential_writer:
+  username: root
+  password: password
+
+redis_url: 'redis://127.0.0.1:6379/0'
+
+aws_s3_endpoint: http://127.0.0.1:33993
+aws_s3_access_key_id: local-development
+aws_s3_secret_access_key: allstudents
+aws_s3_emulated: true
+
+cloudfront_key_pair_id: localoverride
+cloudfront_private_key: localoverride
+slack_bot_token: localoverride
+properties_encryption_key: ''
+
+use_my_apps: true
