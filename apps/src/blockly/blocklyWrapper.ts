@@ -13,12 +13,10 @@ import {
   SETTABLE_PROPERTIES,
   WORKSPACE_EVENTS,
 } from '@cdo/apps/blockly/constants';
-import DCDO from '@cdo/apps/dcdo';
 import {MetricEvent} from '@cdo/apps/metrics/events';
 import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 import styleConstants from '@cdo/apps/styleConstants';
-import experiments from '@cdo/apps/util/experiments';
 import * as utils from '@cdo/apps/utils';
 
 import {START_BLOCKS} from '../constants';
@@ -50,12 +48,7 @@ import initializeBlocklyXml, {
   removeInvisibleBlocks,
   removeStaticCallBlocks,
 } from './addons/cdoXml';
-import {
-  overrideOptionWeight,
-  registerAllContextMenuItems,
-  unregisterCrossTabPluginOptions,
-  WeightOptions,
-} from './addons/contextMenu';
+import {registerAllContextMenuItems} from './addons/contextMenu';
 import registerLogicCompareMutator from './addons/extensions/logic_compare';
 import FunctionEditor from './addons/functionEditor';
 import {filterFunctionArgVariables} from './addons/plusMinusBlocks/advancedProcedures';
@@ -697,29 +690,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
 
     if (options.noFunctionBlockFrame) {
       workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;
-    }
-
-    if (
-      options.enableKeyboardNavigation ||
-      experiments.isEnabledAllowingQueryString(
-        experiments.BLOCKLY_KEYBOARD_NAVIGATION
-      ) ||
-      DCDO.get('blockly-keyboard-navigation', false)
-    ) {
-      unregisterCrossTabPluginOptions();
-      BlocklyCore.keyboardNavigationController.setIsActive(true);
-      // Re-order keyboard-nav context menu options to match our weight scheme.
-      const navMenuWeights: Record<string, WeightOptions> = {
-        blockCutFromContextMenu: WeightOptions.CUT,
-        blockCopyFromContextMenu: WeightOptions.COPY,
-        blockPasteFromContextMenu: WeightOptions.PASTE,
-        move: WeightOptions.MOVE,
-        edit: WeightOptions.EDIT,
-        move_comment: WeightOptions.MOVE_COMMENT,
-      };
-      for (const [option, weight] of Object.entries(navMenuWeights)) {
-        overrideOptionWeight(option, weight);
-      }
     }
 
     // Typically, we need to handle disabling blocks that are not connected to an

@@ -242,7 +242,6 @@ export interface ExtendedBlocklyOptions extends BlocklyCore.BlocklyOptions {
   showUnusedBlocks: boolean | undefined;
   analyticsData: AnalyticsData;
   isJigsaw: boolean;
-  enableKeyboardNavigation: boolean;
   showBlockHelp: boolean;
 }
 
