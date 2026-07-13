@@ -23,18 +23,6 @@
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",
   "properties": {
-    "announcements": [
-      {
-        "key": "05b8bce0-8349-4e97-af22-b3c1386ad939",
-        "notice": "Units 4-6 Coming Soon!",
-        "details": "Units 4-6 are currently getting some polish and will be available after July 10! ",
-        "link": "",
-        "type": "bullhorn",
-        "visibility": "Teacher and student",
-        "dismissible": true,
-        "buttonText": ""
-      }
-    ],
     "family_name": "teaching-designing-and-building-with-ai",
     "has_verified_resources": true,
     "version_year": "2026"

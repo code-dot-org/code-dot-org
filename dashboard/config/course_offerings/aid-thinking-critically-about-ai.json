@@ -4,7 +4,7 @@
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Standalone Unit",
-  "marketing_initiative": "CSD",
+  "marketing_initiative": "AID",
   "grade_levels": "6,7,8",
   "header": "teacher_led",
   "image": null,
@@ -17,7 +17,5 @@
   "published_date": "2026-03-09 05:00:00 UTC",
   "self_paced_pl_course_offering_key": null,
   "ai_teaching_assistant_available": false,
-  "facilitator_course_permissions": [
-
-  ]
+  "facilitator_course_permissions": []
 }

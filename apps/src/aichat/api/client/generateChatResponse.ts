@@ -1,3 +1,4 @@
+import * as Observability from '@code-dot-org/core/plugins/observability';
 import {jsonSchema, Output, type ModelMessage} from 'ai';
 
 import {generateText} from '@cdo/apps/aiGateway';
@@ -44,6 +45,10 @@ export async function generateChatResponse(
 ) {
   // Check input for safety.
   const userInputSafe = await isTextSafe(newMessage.chatMessageText);
+  Observability.metrics.count('ai-chat.text_moderation', 1, {
+    phase: 'input_filter',
+    result: userInputSafe ? 'ok' : 'flagged',
+  });
   if (!userInputSafe) {
     return {status: AiRequestExecutionStatus.USER_PROFANITY};
   }
@@ -125,11 +130,22 @@ export async function generateChatResponse(
     assets.push(asset);
     if (file.mediaType.startsWith('image/')) {
       sendLab2AnalyticsEvent(EVENTS.MODEL_OUTPUT_IMAGE_CREATED);
-      // Check generated images for safety.
+      const assetUrl = buildAssetUrl(asset);
+
+      Observability.logger.info('ai-chat.image_generated', {
+        assetUrl,
+        mediaType: file.mediaType,
+        model: modelParameters.selectedModelId,
+      });
       const imageModerationStatus = await getImageModerationStatus(
         file,
-        buildAssetUrl(asset)
+        assetUrl
       );
+      Observability.metrics.count('ai-chat.image_moderation', 1, {
+        result: imageModerationStatus,
+        mediaType: file.mediaType,
+        model: modelParameters.selectedModelId,
+      });
       if (imageModerationStatus === 'flagged') {
         return {
           response: responseText,
@@ -146,6 +162,10 @@ export async function generateChatResponse(
 
   // Check model text output for safety.
   const modelOutputSafe = await isTextSafe(responseText);
+  Observability.metrics.count('ai-chat.text_moderation', 1, {
+    phase: 'output_filter',
+    result: modelOutputSafe ? 'ok' : 'flagged',
+  });
   if (!modelOutputSafe) {
     return {
       response: responseText,

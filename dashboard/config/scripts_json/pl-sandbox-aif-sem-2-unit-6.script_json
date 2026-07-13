@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-09 21:23:02 UTC",
+    "serialized_at": "2026-07-10 18:31:25 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -464,7 +464,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl-aif2-u6-sample-project"
+          "pl-aif2-U6-Final-project-Sample"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -472,7 +472,7 @@
         "activity_section.key": "a5682e1c-59a4-4802-ba4e-c2628b91b608"
       },
       "level_keys": [
-        "pl-aif2-u6-sample-project"
+        "pl-aif2-U6-Final-project-Sample"
       ]
     },
     {
@@ -725,9 +725,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-aif2-u6-sample-project",
+        "level.key": "pl-aif2-U6-Final-project-Sample",
         "script_level.level_keys": [
-          "pl-aif2-u6-sample-project"
+          "pl-aif2-U6-Final-project-Sample"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
