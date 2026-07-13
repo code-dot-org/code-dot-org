@@ -113,6 +113,10 @@ function CourseLevelRoute() {
 
   const onContinue = useCallback(async () => {
     await DashboardApiClient.activities.reportMilestone({
+      // `userId` is a required positional segment of the milestone route that
+      // the controller never reads — identity comes from `current_user`
+      // (session). Pass 0, matching legacy `progressRedux`, so the real id is
+      // never exposed in a network intercept. Dropping the segment is a follow-up.
       userId: 0,
       scriptLevelId: resolved.scriptLevelId,
       levelId: resolved.levelId,
