@@ -43,7 +43,9 @@ test.describe('Sketch Lab React Flow canvas', () => {
   test('The canvas passes a WCAG AA scan', async ({page}) => {
     const lab = new SketchLab(page);
 
-    await lab.gotoLevel();
+    // Level 2 starts with representative content (shapes, text, an image,
+    // edges), so the scan covers real node markup, not just the empty canvas.
+    await lab.gotoLevel({lesson: 54, level: 2});
 
     expect(
       await analyze(page, {include: lab.rootSelector, tags: WCAG_AA_TAGS}),
