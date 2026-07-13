@@ -100,6 +100,9 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
     .blocklyToolboxCategoryLabel {
       color: var(--text-neutral-primary) !important;
     }
+    .blocklyFlyoutBackground {
+      fill: var(--background-neutral-tertiary) !important;
+    }
     `
   );
 }
