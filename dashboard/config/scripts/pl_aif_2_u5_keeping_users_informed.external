@@ -122,7 +122,7 @@ Explore the screen design below and answer the questions to guide your thinking.
 <div style="clear:both;"></div>
 
 <br>
-<div style="background-color: #e4e2f8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+<div style="background-color: #e4e2f8; border-radius: 10px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
 <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 12px;">
 <b> 💡Teacher Tip: </b>An empty state isn’t the same as an error state. A good empty state tells the user why there is no data being displayed. An error state communicates that something went wrong and the user will need to try again.
