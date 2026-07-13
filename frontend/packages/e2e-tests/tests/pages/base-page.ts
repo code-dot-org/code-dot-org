@@ -61,11 +61,7 @@ export class BasePage {
     );
   }
 
-  /**
-   * Switch Global Edition region via the ?ge_region=<code> override, which the
-   * Rails Global Edition middleware honors on any path, then confirm the region
-   * took effect on the resulting page.
-   */
+  /** Switch the current page's Global Edition region via ?ge_region= override. */
   async switchToGlobalEditionRegion(regionCode: string): Promise<void> {
     const url = new URL(this.page.url());
     url.searchParams.set('ge_region', regionCode);
@@ -74,15 +70,21 @@ export class BasePage {
   }
 
   /** Navigate to a path, optionally within a Global Edition region. */
-  protected async navigate(
-    path: string,
-    {region}: {region?: string} = {},
-  ): Promise<void> {
-    const url = new URL(region ? `/${region}${path}` : path, 'http://_');
-    if (region) url.searchParams.set('ge_region', region);
+  async goto({
+    path,
+    globalRegion,
+  }: {
+    path: string;
+    globalRegion?: string;
+  }): Promise<void> {
+    const url = new URL(
+      globalRegion ? `/${globalRegion}${path}` : path,
+      'http://_',
+    );
+    if (globalRegion) url.searchParams.set('ge_region', globalRegion);
     await this.page.goto(`${url.pathname}${url.search}`);
-    if (region) {
-      await expect(this.globalEditionRegionHtml(region)).toBeVisible();
+    if (globalRegion) {
+      await expect(this.globalEditionRegionHtml(globalRegion)).toBeVisible();
     }
   }
 

@@ -70,9 +70,9 @@ export class SignInPage extends BasePage {
   }
 
   /** Navigate to /users/sign_in, optionally in a Global Edition region. */
-  async goto({region}: {region?: string} = {}): Promise<void> {
-    await this.navigate('/users/sign_in', {region});
-    if (!region) await this.footer.waitForLocaleDropdownVisible();
+  async goto({globalRegion}: {globalRegion?: string} = {}): Promise<void> {
+    await super.goto({path: '/users/sign_in', globalRegion});
+    if (!globalRegion) await this.footer.waitForLocaleDropdownVisible();
   }
 
   /** Wait for the sign-in form to be present (server-rendered; visible immediately after redirect). */

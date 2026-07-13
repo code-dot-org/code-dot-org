@@ -5,26 +5,17 @@ import {waitForVisualStability} from '../../shared/stability';
 test.describe('Global Edition - Farsi MVP - Sign In page', () => {
   test.skip(
     ({browserName}) => browserName !== 'chromium',
-    'Source feature is @chrome-only; firefox/webkit hit a GE-redirect cookie race (ge_region cookie not applied on the 302 follow, so the server renders the root region instead of /fa)',
+    'firefox/webkit hit a GE-redirect cookie race (ge_region cookie not applied on the 302 follow)',
   );
 
   /**
    * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/global_edition/fa/sign_in_page.feature
-   * "I see the Farsi MVP Sign In page"
-   *
-   * Split into a content-assertions test and a @visual snapshot test. The
-   * source scenario is entirely @eyes-gated, so porting it as a single test
-   * would carry only the @visual tag; playwright.config.ts's grepInvert
-   * (functional projects) then excludes 100% of this file's tests, and a
-   * direct per-file invocation of the browser-matrix stress gate hits
-   * "No tests found" instead of running (or cleanly skipping). Splitting
-   * keeps the same assertions but gives the file a non-@visual test so it
-   * always has content under chromium/firefox/webkit.
+   * Scenario: I see the Farsi MVP Sign In page
    */
   test('I see the Farsi MVP Sign In page', async ({page}) => {
     const signIn = new SignInPage(page);
-    await signIn.goto({region: 'fa'});
+    await signIn.goto({globalRegion: 'fa'});
 
     await expect(signIn.heading).toContainText(
       'دارای حساب کاربری هستید؟ وارد سیستم شوید',
@@ -74,14 +65,14 @@ test.describe('Global Edition - Farsi MVP - Sign In page', () => {
   /**
    * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/platform/global_edition/fa/sign_in_page.feature
-   * "I see the Farsi MVP Sign In page" — the @eyes screenshot-diff portion.
+   * Scenario: I see the Farsi MVP Sign In page
    */
   test(
     'I see the Farsi MVP Sign In page — visual snapshot',
     {tag: ['@visual']},
     async ({page, visualCheck}) => {
       const signIn = new SignInPage(page);
-      await signIn.goto({region: 'fa'});
+      await signIn.goto({globalRegion: 'fa'});
       await expect(signIn.heading).toBeVisible();
 
       await waitForVisualStability(page, signIn.mainContent);
