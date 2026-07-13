@@ -95,8 +95,9 @@ RUN --mount=type=cache,id=code-dot-org-bundle-cache,sharing=shared,uid=${UID},gi
   gem install bundler -v "$(awk '/BUNDLED WITH/{getline; print $1}' Gemfile.lock)" --no-document
   bundle install --jobs "${BUNDLE_JOBS}"
   bundle exec bootsnap precompile --gemfile
+  # The gem cache is a BuildKit cache mount and is not committed to the image.
+  # Retain it so canceled or invalidated builds do not download every gem again.
   rm -rf ~/.bundle "${BUNDLE_PATH}"/ruby/*/bundler/gems/*/.git
-  find "${BUNDLE_PATH}"/ruby/*/cache -mindepth 1 -exec rm -rf {} +
 EOF
 
 ################################################################################
