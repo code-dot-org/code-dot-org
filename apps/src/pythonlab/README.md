@@ -35,9 +35,6 @@ isolation goal Web Lab 2 already solves for student HTML/JS (see
   the compiler -- not just a naming convention -- rejects a message used
   in the wrong direction.
 
-`pyodideWebWorker.ts` itself is unaware of any of this -- it only talks
-to whatever page creates it, same as before.
-
 ## How to run locally
 
 Like Web Lab 2, the sandbox iframe needs a service worker, which

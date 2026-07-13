@@ -28,9 +28,6 @@ const setUpPyodideWorker = () => {
     )
   );
 
-  // This sandbox has no Redux store, console, or metrics reporter of its own -- all
-  // pyodideWebWorker.ts messages (sysout, syserr, run_complete, updated_source, etc.)
-  // are relayed unchanged for pyodideSandboxManager.ts to handle.
   worker.onmessage = event => {
     window.parent.postMessage(event.data, outerOrigin);
   };
