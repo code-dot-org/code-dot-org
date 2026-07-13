@@ -14,26 +14,6 @@ export async function settle(page: Page): Promise<void> {
   );
 }
 
-/** Wait for images inside the locator to load (or fail); box-stability alone misses still-loading photos. */
-async function waitForImagesLoaded(locator: Locator): Promise<void> {
-  await locator.evaluate(async root => {
-    const loaded = Promise.all(
-      Array.from(root.querySelectorAll('img')).map(img =>
-        img.complete
-          ? Promise.resolve()
-          : new Promise<void>(resolve => {
-              img.addEventListener('load', () => resolve(), {once: true});
-              img.addEventListener('error', () => resolve(), {once: true});
-            }),
-      ),
-    );
-    await Promise.race([
-      loaded,
-      new Promise<void>(resolve => setTimeout(resolve, 10_000)),
-    ]);
-  });
-}
-
 /**
  * Resolve once the locator's box stops moving. Playwright's built-in 2-frame
  * stability is too brief to outlast a longer scroll/reflow that splits clicks.
@@ -60,7 +40,6 @@ export async function waitForVisualStability(
 ): Promise<void> {
   await settle(page);
   if (locator) {
-    await waitForImagesLoaded(locator);
     await waitUntilStable(locator);
   }
 }
