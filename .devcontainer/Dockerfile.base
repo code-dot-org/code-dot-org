@@ -141,9 +141,9 @@ RUN cd /tmp/frontend && yarn install --immutable && rm -rf /tmp/frontend
 # 2. Install browser binary as cdo user (writes to ~/.cache/ms-playwright)
 # 3. Symlink to /usr/local/bin as root for CHROME_BIN
 USER root
-RUN npx playwright install-deps chromium
+RUN npx playwright@1.59.1 install-deps chromium
 USER ${USERNAME}
-RUN npx playwright install chromium
+RUN npx playwright@1.59.1 install chromium
 USER root
 RUN CHROME=$(find /home/cdo/.cache/ms-playwright -name "chrome" -path "*/chrome-linux*/chrome" -type f | head -1) \
   && if [ -n "$CHROME" ]; then ln -sf "$CHROME" /usr/local/bin/chromium; fi

@@ -65,9 +65,9 @@ RUN cd /tmp/frontend && yarn install --immutable && rm -rf /tmp/frontend
 
 # Playwright Chromium for e2e tests — install deps as root, browser as cdo user.
 USER root
-RUN npx playwright install-deps chromium
+RUN npx playwright@1.59.1 install-deps chromium
 USER ${USERNAME}
-RUN npx playwright install chromium
+RUN npx playwright@1.59.1 install chromium
 USER root
 RUN CHROME=$(find /home/cdo/.cache/ms-playwright -name "chrome" -path "*/chrome-linux*/chrome" -type f | head -1) \
   && if [ -n "$CHROME" ]; then ln -sf "$CHROME" /usr/local/bin/chromium; fi

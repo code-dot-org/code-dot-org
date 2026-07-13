@@ -33,8 +33,8 @@ bootstrap_apps() {
      git -C /code-dot-org rev-parse HEAD >/dev/null 2>&1; then
     echo "entrypoint: downloading apps package from S3..."
     cd /code-dot-org
-    bundle exec rake package:apps:update 2>&1 | tail -3 || true
-    bundle exec rake package:apps:symlink 2>&1 | tail -3 || \
+    bundle exec rake package:apps:update 2>&1 || true
+    bundle exec rake package:apps:symlink 2>&1 || \
       echo "entrypoint: apps bootstrap skipped (S3 package not available for this commit)"
   fi
 }
@@ -63,8 +63,8 @@ auto_migrate() {
   fi
 
   echo "entrypoint: pending migrations detected, running db:migrate..."
-  bundle exec rake db:migrate 2>&1 | tail -3
-  RAILS_ENV=test bundle exec rake db:migrate 2>&1 | tail -3
+  bundle exec rake db:migrate 2>&1 || echo "entrypoint: dev db:migrate had errors (may be non-fatal)"
+  RAILS_ENV=test bundle exec rake db:migrate 2>&1 || echo "entrypoint: test db:migrate had errors (may be non-fatal)"
   echo "entrypoint: migrations complete"
 }
 

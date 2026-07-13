@@ -37,7 +37,8 @@ HAS_GIT=$(docker run --rm -v "$VOLUME_NAME":/repo alpine sh -c \
 if [ "$HAS_GIT" = "yes" ]; then
   echo "init-repo-volume: volume already has a clone, fetching latest..."
   docker run --rm -v "$VOLUME_NAME":/repo --entrypoint sh alpine/git:latest -c \
-    "cd /repo && git fetch origin 2>&1 | tail -3"
+    "git config --global --add safe.directory /repo && cd /repo && git fetch origin" \
+    || echo "init-repo-volume: warning: fetch failed (may be offline)"
 else
   echo "init-repo-volume: cloning repository into volume (one-time, ~2 min)..."
   docker run --rm \
