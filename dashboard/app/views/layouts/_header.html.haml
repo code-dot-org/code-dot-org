@@ -7,12 +7,6 @@
   # as a fixture).
   script = local_assigns[:script] || Unit.get_from_cache(Unit::HOC_NAME, raise_exceptions: false)
   script_level = local_assigns[:script_level]
-
-  # A script_level only makes sense in the context of its unit. No known page
-  # renders the header with a script_level but no script; require callers to
-  # pass script explicitly rather than silently relying on the hourofcode
-  # fallback above.
-  raise ArgumentError, 'script_level was provided without script' if script_level && !local_assigns[:script]
   level = local_assigns[:level]
   lesson = local_assigns[:lesson]
 
