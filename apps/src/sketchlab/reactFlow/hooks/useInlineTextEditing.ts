@@ -77,7 +77,7 @@ export function useInlineTextEditing({
       return;
     }
     const suppressFocusFromMouse = (event: MouseEvent) => {
-      if (isEditing) {
+      if (editable.isContentEditable) {
         return;
       }
       event.preventDefault();
@@ -88,7 +88,7 @@ export function useInlineTextEditing({
     editable.addEventListener('mousedown', suppressFocusFromMouse);
     return () =>
       editable.removeEventListener('mousedown', suppressFocusFromMouse);
-  }, [isEditing]);
+  }, []);
 
   const handleKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLDivElement>) => {
