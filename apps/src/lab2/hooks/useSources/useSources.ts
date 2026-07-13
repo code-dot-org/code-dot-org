@@ -8,12 +8,14 @@ import {
   START_SOURCES,
   TOOLBOX_BLOCKS,
 } from '@cdo/apps/lab2/constants';
+import {setChannel as setChannelAction} from '@cdo/apps/lab2/lab2Redux';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import ProjectManagerFactory from '@cdo/apps/lab2/projects/ProjectManagerFactory';
 import {getSourcesStoreForApp} from '@cdo/apps/lab2/projects/sourcesStoreForApp';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import type {
   BlocklyLevelProperties,
+  Channel,
   LevelProperties,
   ProjectSources,
   ProjectVersion,
@@ -29,7 +31,7 @@ const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
 const isLevelEditMode = isStartMode || isToolboxMode;
 
-interface UseSourcesInput<T extends ProjectSources> {
+export interface UseSourcesInput<T extends ProjectSources> {
   /** Level properties for the current level */
   levelProperties: LevelProperties;
   /**
@@ -46,7 +48,7 @@ interface UseSourcesInput<T extends ProjectSources> {
   includeVersionHistory?: boolean;
 }
 
-interface UseSourcesOutput<T extends ProjectSources> {
+export interface UseSourcesOutput<T extends ProjectSources> {
   /** If a load is in progress. */
   isLoading: boolean;
   /** If the current sources are editable. */
@@ -55,6 +57,13 @@ interface UseSourcesOutput<T extends ProjectSources> {
   hasEdited: boolean;
   /** The current project sources. */
   currentSources: T | undefined;
+  /** The project channel (once loaded). */
+  channel: Channel | undefined;
+  /**
+   * The ProjectManager for the current project, once created.
+   * This is primarily exposed so a consumer may register it with the Lab2Registry if needed.
+   */
+  projectManager: ProjectManager | null;
   /** Update the current project sources. Accepts the new sources, or an updater function. */
   updateSources: (
     newSourcesOrUpdater: T | ((prev: T | undefined) => T),
@@ -111,13 +120,19 @@ export default function useSources<T extends ProjectSources>({
   const [currentVersion, setCurrentVersion] = useState<string>();
   const [hasEdited, setHasEdited] = useState(false);
   const [loadError, setLoadError] = useState<Error>();
+  const [channel, setChannel] = useState<Channel>();
 
-  const isOwner = projectManagerRef.current?.getLastChannel()?.isOwner;
+  const isOwner = channel?.isOwner;
 
-  // Editable if the current user is the project owner and we are not viewing and old version.
+  // Editable if the current user is the project owner, the project isn't
+  // frozen or a widget view, and we are not viewing an old version. Level
+  // edit mode is always editable.
   const isEditable =
+    isLevelEditMode ||
     (!isLoading &&
       isOwner &&
+      !channel?.frozen &&
+      !levelProperties.widgetView &&
       (!includeVersionHistory ||
         versionList.find(v => v.versionId === currentVersion)?.isLatest)) ||
     false;
@@ -141,6 +156,7 @@ export default function useSources<T extends ProjectSources>({
       setCurrentVersion(undefined);
       setHasEdited(false);
       setLoadError(undefined);
+      setChannel(undefined);
       await projectManagerRef.current?.cleanUp();
       if (isCancelled()) return;
 
@@ -175,6 +191,10 @@ export default function useSources<T extends ProjectSources>({
         (getInitialSources(levelProperties, projectAndSources?.sources) as T) ||
           defaultSources
       );
+      setChannel(projectAndSources?.channel);
+      // Some components (including non-Lab2 areas like the header) read state.lab.channel directly
+      // so we need to set it here. Prefer to read channel from this hook via the consuming lab within lab components.
+      dispatch(setChannelAction(projectAndSources?.channel));
 
       // No project; return early.
       if (!projectManagerRef.current) return;
@@ -223,7 +243,7 @@ export default function useSources<T extends ProjectSources>({
       newSourcesOrUpdater: T | ((prev: T | undefined) => T),
       forceSave = false
     ) => {
-      if (!projectManagerRef.current || !isEditable) return;
+      if (!isEditable) return;
       // Resolve updaters against the ref, not state: state lags a render, so
       // two quick partial updates would build on the same stale base and
       // drop each other's fields.
@@ -360,6 +380,8 @@ export default function useSources<T extends ProjectSources>({
     isEditable,
     hasEdited,
     currentSources,
+    channel,
+    projectManager: projectManagerRef.current,
     updateSources,
     patchSources,
     startOver,

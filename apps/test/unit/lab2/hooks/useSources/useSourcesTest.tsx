@@ -4,9 +4,10 @@ import {Provider} from 'react-redux';
 import {Store} from 'redux';
 
 import useSources from '@cdo/apps/lab2/hooks/useSources';
+import {setChannel} from '@cdo/apps/lab2/lab2Redux';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import ProjectManagerFactory from '@cdo/apps/lab2/projects/ProjectManagerFactory';
-import {LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
+import {Channel, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import {
   getStore,
   registerReducers,
@@ -48,6 +49,7 @@ const LEVEL_TWO: LevelProperties = {...LEVEL_ONE, id: 2, name: 'Level Two'};
 
 const DEFAULT_SOURCES: TestSources = {source: 'default'};
 const SAVED_SOURCES: TestSources = {source: 'saved'};
+const OWNED_CHANNEL = {isOwner: true} as Channel;
 
 function createFakeProjectManager(
   overrides: {[key: string]: jest.Mock} = {}
@@ -55,7 +57,7 @@ function createFakeProjectManager(
   return {
     load: jest
       .fn()
-      .mockResolvedValue({sources: SAVED_SOURCES, channel: {isOwner: true}}),
+      .mockResolvedValue({sources: SAVED_SOURCES, channel: OWNED_CHANNEL}),
     save: jest.fn(),
     cleanUp: jest.fn().mockResolvedValue(undefined),
     flushSave: jest.fn().mockResolvedValue(undefined),
@@ -120,8 +122,17 @@ describe('useSources', () => {
 
       expect(result.current.isLoading).toBe(false);
       expect(result.current.currentSources).toEqual(SAVED_SOURCES);
+      expect(result.current.channel).toEqual(OWNED_CHANNEL);
       expect(result.current.isEditable).toBe(true);
       expect(result.current.hasEdited).toBe(false);
+    });
+
+    it('publishes the channel to redux on load (transition bridge)', async () => {
+      const dispatchSpy = jest.spyOn(store, 'dispatch');
+      renderUseSources();
+      await flush();
+
+      expect(dispatchSpy).toHaveBeenCalledWith(setChannel(OWNED_CHANNEL));
     });
 
     it('falls back to defaultSources when the project has none', async () => {
@@ -193,8 +204,9 @@ describe('useSources', () => {
     });
 
     it('ignores updates when the viewer is not the project owner', async () => {
-      (fakeManager.getLastChannel as jest.Mock).mockReturnValue({
-        isOwner: false,
+      (fakeManager.load as jest.Mock).mockResolvedValue({
+        sources: SAVED_SOURCES,
+        channel: {isOwner: false},
       });
       const {result} = renderUseSources();
       await flush();
@@ -203,6 +215,30 @@ describe('useSources', () => {
       act(() => result.current.updateSources({source: 'edited'}));
 
       expect(result.current.currentSources).toEqual(SAVED_SOURCES);
+      expect(fakeManager.save).not.toHaveBeenCalled();
+    });
+
+    it('ignores updates in widget view', async () => {
+      const {result} = renderUseSources({...LEVEL_ONE, widgetView: true});
+      await flush();
+
+      expect(result.current.isEditable).toBe(false);
+      act(() => result.current.updateSources({source: 'edited'}));
+
+      expect(fakeManager.save).not.toHaveBeenCalled();
+    });
+
+    it('ignores updates when the project is frozen', async () => {
+      (fakeManager.load as jest.Mock).mockResolvedValue({
+        sources: SAVED_SOURCES,
+        channel: {isOwner: true, frozen: true},
+      });
+      const {result} = renderUseSources();
+      await flush();
+
+      expect(result.current.isEditable).toBe(false);
+      act(() => result.current.updateSources({source: 'edited'}));
+
       expect(fakeManager.save).not.toHaveBeenCalled();
     });
   });
