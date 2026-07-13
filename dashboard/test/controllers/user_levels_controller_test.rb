@@ -239,6 +239,89 @@ class UserLevelsControllerTest < ActionController::TestCase
     assert_nil body['data']
   end
 
+  test "teacher can get their student's level source data" do
+    follower = create(:follower)
+    student = follower.student_user
+    teacher = follower.user
+    sign_in teacher
+
+    script = create(:unit, :in_single_unit_course)
+    level = create(:level)
+    level_source_data = 'student level source'
+    level_source = create(:level_source, level: level, data: level_source_data)
+    create(:user_level, user: student, best_result: 100, script: script,
+      level: level, level_source: level_source
+)
+
+    get :get_level_source, params: {script_id: script.id, level_id: level.id, user_id: student.id}
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal level_source_data, body['data']
+  end
+
+  test "teacher gets nil data for student who has not responded" do
+    follower = create(:follower)
+    student = follower.student_user
+    teacher = follower.user
+    sign_in teacher
+
+    script = create(:unit, :in_single_unit_course)
+    level = create(:level)
+
+    get :get_level_source, params: {script_id: script.id, level_id: level.id, user_id: student.id}
+    assert_response :success
+    assert_nil JSON.parse(response.body)['data']
+  end
+
+  test "teacher cannot get level source data for a user who is not their student" do
+    teacher = create(:teacher)
+    sign_in teacher
+    other_student = create(:student)
+
+    script = create(:unit, :in_single_unit_course)
+    level = create(:level)
+    level_source = create(:level_source, level: level, data: 'private')
+    create(:user_level, user: other_student, best_result: 100, script: script,
+      level: level, level_source: level_source
+)
+
+    get :get_level_source, params: {script_id: script.id, level_id: level.id, user_id: other_student.id}
+    assert_response :forbidden
+  end
+
+  test "student cannot get another student's level source data" do
+    student = create(:student)
+    sign_in student
+    other_student = create(:student)
+
+    script = create(:unit, :in_single_unit_course)
+    level = create(:level)
+    level_source = create(:level_source, level: level, data: 'private')
+    create(:user_level, user: other_student, best_result: 100, script: script,
+      level: level, level_source: level_source
+)
+
+    get :get_level_source, params: {script_id: script.id, level_id: level.id, user_id: other_student.id}
+    assert_response :forbidden
+  end
+
+  test "teacher reads student's migrated predict response from contained level" do
+    follower = create(:follower)
+    student = follower.student_user
+    teacher = follower.user
+    sign_in teacher
+
+    script = create(:unit, :in_single_unit_course)
+    contained = create(:level, type: "Multi")
+    parent = create(:level, type: "Javalab", properties: {predict_settings: {isPredictLevel: true}, contained_level_names: [contained.name]})
+    level_source = create(:level_source, level: contained, data: "0")
+    create(:user_level, user: student, best_result: 30, script: script, level: contained, level_source: level_source)
+
+    get :get_level_source, params: {script_id: script.id, level_id: parent.id, user_id: student.id}
+    assert_response :success
+    assert_equal "0", JSON.parse(response.body)["data"]
+  end
+
   test "teacher can get their section respose summary" do
     teacher = create(:teacher)
     sign_in teacher
