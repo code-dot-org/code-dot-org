@@ -1800,6 +1800,24 @@ class SectionTest < ActiveSupport::TestCase
     assert section.reload.suggested_lesson['timestamp'].present?
   end
 
+  test 'compute_suggested_lesson skips unnumbered lessons (lockable, no lesson plan)' do
+    unit = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: unit)
+    pre_assessment = create(:lesson, script: unit, lesson_group: lesson_group, lockable: true, has_lesson_plan: false)
+    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
+    sl_pre = create(:script_level, lesson: pre_assessment, script: unit)
+    create(:script_level, lesson: lesson1, script: unit)
+    section = create(:section, teacher: @teacher, script: unit)
+    student = create(:follower, section: section).student_user
+
+    # Student passed the pre-assessment but not lesson1
+    create(:user_level, user: student, level: sl_pre.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+
+    section.compute_suggested_lesson
+    # Should suggest lesson1, not the lesson after the pre-assessment
+    assert_equal lesson1.id, section.reload.suggested_lesson['lesson_id']
+  end
+
   test 'compute_suggested_lesson does not advance with only 2 of 10 students completing a lesson' do
     unit, lesson1, _lesson2, sl1, _sl2, section, students = build_suggested_lesson_section_with_students(10)
     students.first(2).each do |student|
