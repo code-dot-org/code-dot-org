@@ -1,0 +1,59 @@
+name 'pl-aif-2-U5-sync-async-code-chef_pl'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Synchronous vs. Asynchronous
+
+<img src="https://images.code.org/6f13673a0ca38964117b3ad1e8261040-image-1771342723588.png" alt="cartoon image of chef flipping a pancake" width="250px" style="border-radius:10px; float:right; margin: 0 0 0px 20px;">
+
+In real programs, some tasks happen immediately, while others take time.
+
+The question is not whether waiting happens.  
+The real question is: **What does the program do while it waits?**
+
+In this activity, we’ll compare two patterns:
+- **Synchronous (blocking):** Tasks happen one at a time, in order.
+- **Asynchronous (non-blocking):** Some tasks are scheduled to finish later, allowing other work to continue.
+
+
+<div style="clear:both;"></div>
+
+
+---
+
+## Predict 
+
+Complete the following activity to compare synchronous verses aynchrounous output. 
+
+<iframe 
+  src="https://amandadennard-dotcom.github.io/Unit5AIF2/order-the-kitchen.html" 
+  width="100%" 
+  height="900" 
+  style="border:none; border-radius:12px;" 
+  title="Order the Kitchen: Sync vs Async prediction challenge">
+</iframe>
+
+---
+
+## 🕒 How the Milliseconds Make It Asynchronous
+
+The numbers inside `setTimeout` (like 2000, 3000, 5000) represent **milliseconds**.
+
+- 1000 milliseconds = 1 second  
+- 2000 = 2 seconds  
+- 5000 = 5 seconds  
+
+When the code runs, JavaScript does **not** stop and wait.
+
+**Instead:**
+- 1. It schedules the task to run later.
+- 2. It continues executing the rest of the code immediately.
+- 3. When the timer finishes, the scheduled task is added back into the queue to run.
+
+That’s why the chef pours orange juice and places the ticket on the counter *before* the toast pops even though the toast code appears earlier in the file.
+
+The order of completion depends on the timer, not the position in the code.
+
+
+MARKDOWN
