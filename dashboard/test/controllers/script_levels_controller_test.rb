@@ -886,7 +886,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     )
     assert_equal "/flappy/5", build_script_level_path(flappy_level)
 
-    # A normal (non-legacy-routed) script: /jigsaw/3 is recognized as chapter
+    # special case for jigsaw routing: /jigsaw/3 is recognized as chapter
     # routing, but build_script_level_path emits the canonical /s/ path.
     jigsaw_unit = create(:script, name: Unit::JIGSAW_NAME)
     jigsaw_lesson = create(:lesson, script: jigsaw_unit, relative_position: '1', absolute_position: 1)

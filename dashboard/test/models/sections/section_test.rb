@@ -10,10 +10,6 @@ class SectionTest < ActiveSupport::TestCase
 
     @default_attrs = {user: @teacher, name: 'test-section'}
 
-    # Equivalent of the old 'jigsaw' fixture: a single-unit course whose unit and
-    # course both use the name 'jigsaw'. That name has static i18n translations
-    # ("Jigsaw"), so the localized titles and /courses/jigsaw paths asserted below
-    # resolve the same way they did against the fixture.
     @jigsaw_unit = create(:unit, name: 'jigsaw')
     @jigsaw_course = create(:single_unit_course, name: 'jigsaw', family_name: 'jigsaw', unit: @jigsaw_unit)
     CourseOffering.add_course_offering(@jigsaw_course)

@@ -49,15 +49,8 @@ class AbilityTest < ActiveSupport::TestCase
       @pl_pilot_course_script_level = create(:script_level, script: script)
     end
 
-    # Equivalent of the old 'ECSPD' fixture: a unit belonging to an old-style
-    # professional learning course (Unit#old_professional_learning_course?).
-    # generate_plc_objects configures its unit group as a plc_reviewer /
-    # facilitator, beta course.
     @old_pl_course_unit = create(:plc_course_unit, :with_course_name).script
 
-    # Equivalent of the old 'flappy' fixture: an HOC tutorial unit in a stable
-    # student-facing course, readable by everyone (but not by admins, who can
-    # read nothing).
     @hoc_tutorial_unit = create(:script, name: 'flappy').tap do |script|
       create(:hoc_course, unit: script, name: 'flappy', family_name: 'flappy', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     end

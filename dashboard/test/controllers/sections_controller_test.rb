@@ -18,9 +18,6 @@ class SectionsControllerTest < ActionController::TestCase
 
     @regular_section = create(:section, user: @teacher, login_type: 'email')
 
-    # Equivalent of the old 'flappy' fixture: an HOC tutorial unit in a stable
-    # single-unit course, both named 'flappy'. The name has a static i18n
-    # translation ("Flappy Code") which the dropdown assertions rely on.
     @flappy_unit = create(:script, :with_levels, name: 'flappy')
     @flappy_unit.lessons.first.update!(has_lesson_plan: true)
     create(:hoc_course, unit: @flappy_unit, name: 'flappy', family_name: 'flappy', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
