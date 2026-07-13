@@ -1,22 +1,11 @@
+import {getOuterOrigin} from '@cdo/apps/util/codeprojectsPreviewOrigin';
+
 import {AWAITING_INPUT, SENDING_INPUT} from '../pythonHelpers/constants';
 
 import {
   FromPyodideSandboxMessage,
   PyodideSandboxAwaitingInputMessage,
 } from './constants';
-
-// Mirrors apps/src/weblab2/htmlPreview/InnerHTMLPreview.tsx's computation of its own
-// parent origin, since this sandbox is served from the same preview.codeprojects.org
-// subdomain family.
-const getOuterOrigin = () => {
-  const regex = /[^.]+\.preview\.([^.]+)\.codeprojects\.org/;
-  const match = location.hostname.match(regex);
-  const environment = match && match[1] ? `${match[1]}-` : '';
-  const port =
-    'localhost-' === environment && location.port ? `:${location.port}` : '';
-  const cdn = environment.includes('adhoc') ? 'cdn-' : '';
-  return `${location.protocol}//${environment}studio.${cdn}code.org${port}`;
-};
 
 export const outerOrigin = getOuterOrigin();
 
