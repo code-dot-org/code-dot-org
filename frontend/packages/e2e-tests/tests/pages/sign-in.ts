@@ -31,27 +31,19 @@ export class SignInPage extends BasePage {
   /** Main content landmark — scope for the region's visual check. */
   readonly mainContent: Locator;
 
-  /**
-   * "Want to try coding without signing in?" section heading
-   * (#code_without_signing_in). Locale-agnostic (id-based); its own text is
-   * one of the strings under test.
-   */
+  /** "Want to try coding without signing in?" heading. Id-based: text varies by locale. */
   readonly codeWithoutSigningInHeading: Locator;
 
-  /**
-   * "Continue with Google" OAuth button. Locale-agnostic (id-based): its
-   * label is the very text under test, so locating it by that label would be
-   * a tautology; the id ties the locator to the google_oauth2 provider form.
-   */
+  /** Google OAuth button. Id-based: label is the text under test. */
   readonly googleSignInButton: Locator;
 
-  /** "Continue with Microsoft" OAuth button. Same id-based reasoning as {@link googleSignInButton}. */
+  /** Microsoft OAuth button. Id-based: label is the text under test. */
   readonly microsoftSignInButton: Locator;
 
-  /** "Continue with Facebook" OAuth button. Same id-based reasoning as {@link googleSignInButton}. */
+  /** Facebook OAuth button. Id-based: label is the text under test. */
   readonly facebookSignInButton: Locator;
 
-  /** "Continue with Clever" OAuth button. Same id-based reasoning as {@link googleSignInButton}. */
+  /** Clever OAuth button. Id-based: label is the text under test. */
   readonly cleverSignInButton: Locator;
 
   constructor(page: Page) {
