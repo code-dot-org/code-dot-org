@@ -32,6 +32,8 @@ interface GenerateSpriteLabProps {
   instructions?: string;
   // Load AI-generated blocks into the Code workspace.
   onCodeGenerated: (source: WorkspaceSerialization) => void;
+  // For 'aiImageGenerate': the project channel generated assets upload to.
+  channelId?: string;
 }
 
 /**
@@ -44,6 +46,7 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   guideMode,
   instructions,
   onCodeGenerated,
+  channelId,
 }) => {
   const dispatch = useAppDispatch();
   const [prompt, setPrompt] = useState('');
@@ -138,7 +141,7 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
                   <hr className={moduleStyles.guideDivider} />
                 </>
               )}
-              <GenerateImageForm />
+              <GenerateImageForm channelId={channelId} />
             </>
           ) : (
             <>

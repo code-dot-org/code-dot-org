@@ -59,8 +59,7 @@ GalleryCard.displayName = 'GalleryCard';
 
 /**
  * The Images tab: the project's image gallery (delete, click-to-edit via the
- * pixel editor). Generation lives in the Guide (GenerateImageForm), which
- * bridges results into the animation list this gallery renders.
+ * pixel editor).
  */
 const GenerateImagePane: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();

@@ -155,9 +155,8 @@ $tab-segment-height: $tab-item-height - 2px;
 .imageGallery {
   display: flex;
   flex-wrap: wrap;
-  // Generous row spacing so the cards read as rows, not a dense grid. The
-  // large bottom padding lets the last row scroll clear of the Guide overlay
-  // (which now hosts the generation form).
+  // Generous row spacing so the cards read as rows, not a dense grid; the
+  // bottom padding lets the last row scroll clear of the Guide overlay.
   gap: 28px 14px;
   padding: 28px 16px 220px;
 }
@@ -323,18 +322,14 @@ $tab-segment-height: $tab-item-height - 2px;
   }
 }
 
-// The image form's own column: vertical rhythm matching the 8px horizontal
-// gaps of its rows (the guide body's default 6px reads tighter than the
-// row-internal spacing).
+// Vertical gap matching the rows' horizontal gaps.
 .guideForm {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-// The image form's labeled field stacks (Name / Type / Style). Same control
-// family as .guideRow; labels sit above their controls, quiet against the
-// guide's dark panel.
+// Labeled field stacks: label above its control.
 .guideFields {
   display: flex;
   gap: 8px;

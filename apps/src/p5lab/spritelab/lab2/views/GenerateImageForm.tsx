@@ -7,7 +7,7 @@ import {
   setAnimationName,
 } from '@cdo/apps/p5lab/redux/animationList';
 import {getStore} from '@cdo/apps/redux';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
 import {
@@ -45,9 +45,15 @@ function getImageSize(
  * project's asset bucket, and bridges it into the animation list so it
  * becomes an ordinary costume/background.
  */
-const GenerateImageForm: React.FunctionComponent = () => {
+interface GenerateImageFormProps {
+  // The project channel generated assets upload to.
+  channelId?: string;
+}
+
+const GenerateImageForm: React.FunctionComponent<GenerateImageFormProps> = ({
+  channelId,
+}) => {
   const dispatch = useAppDispatch();
-  const channelId = useAppSelector(state => state.lab.channel?.id);
 
   const [name, setName] = useState('');
   const [prompt, setPrompt] = useState('');
