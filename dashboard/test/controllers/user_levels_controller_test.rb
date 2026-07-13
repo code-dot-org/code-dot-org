@@ -305,6 +305,17 @@ class UserLevelsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test "get level source for a nonexistent user_id is forbidden, not an error" do
+    teacher = create(:teacher)
+    sign_in teacher
+
+    script = create(:unit, :in_single_unit_course)
+    level = create(:level)
+
+    get :get_level_source, params: {script_id: script.id, level_id: level.id, user_id: 0}
+    assert_response :forbidden
+  end
+
   test "teacher reads student's migrated predict response from contained level" do
     follower = create(:follower)
     student = follower.student_user

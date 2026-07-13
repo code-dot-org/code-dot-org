@@ -52,8 +52,8 @@ class UserLevelsController < ApplicationController
     # A teacher viewing a student's work passes the student's user_id; only
     # that student's teacher may read it. Without a user_id, read the current
     # user's own most recent attempt.
-    if params[:user_id]
-      user = User.find(params[:user_id])
+    if params[:user_id].present?
+      user = User.find_by(id: params[:user_id])
       return head :forbidden unless user&.student_of?(current_user)
     else
       user = current_user
