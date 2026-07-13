@@ -14,7 +14,7 @@ const simple: LabFixture = {
   levelProperties: {
     '1': createLevelPropertyFixture<OceansLevelPropertiesInput>({
       id: 1,
-      appName: 'oceans',
+      appName: 'fish',
       type: 'Oceans',
       name: 'AI for Oceans: Fish vs Trash',
       // Oceans-specific activity configuration.
