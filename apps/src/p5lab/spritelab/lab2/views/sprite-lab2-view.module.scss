@@ -1,7 +1,5 @@
 @use '../quiet-button.scss' as buttons;
 
-// The ResourcePanel (full column, or just its sidebar rail under the guide)
-// sits beside the tab shell.
 .labRow {
   display: flex;
   width: 100%;
@@ -14,14 +12,12 @@
   }
 }
 
-// Full-panel width when the instructions column shows (no guide), like
-// dance's instructionsArea.
+// Instructions column width when the full panel shows (no guide).
 .instructionsArea {
   flex: 0;
   min-width: 25%;
 }
 
-// Between the ResourcePanel and the workspace, like dance.
 .divider {
   width: 1px;
   height: 100%;

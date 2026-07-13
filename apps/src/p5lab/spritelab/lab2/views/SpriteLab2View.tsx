@@ -7,6 +7,7 @@ import {AnyAction, Reducer} from 'redux';
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
+import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {LabProps} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import setFooterVisibility from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/Footer/setFooterVisibility';
@@ -123,11 +124,11 @@ const SpriteLab2View: React.FunctionComponent<{
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const scriptId = useAppSelector(state => state.progress.scriptId);
-  // The sidebar-only ResourcePanel (shown with the guide) reads these.
   const isRunning = useAppSelector(state => state.runState.isRunning);
   const hasRun = useAppSelector(state => state.spriteLab2.hasRun);
   const hasEdited = useAppSelector(state => state.spriteLab2.hasEdited);
   const blocklySettings = useBlocklySettings();
+  const themeSetting = useThemeSetting('spritelab');
   // Seed the page constants the animationList logic + engine read (we bypass
   // StudioApp.init) and the AichatContextManager the aiGateway calls read.
   useEffect(() => {
@@ -709,18 +710,15 @@ const SpriteLab2View: React.FunctionComponent<{
 
   return (
     <div className={moduleStyles.labRow}>
-      {/* With the guide the instructions live in the overlay, so the panel
-          contributes just its sidebar rail; otherwise the full panel shows
-          the instructions column (like dance). */}
       <ResourcePanel
         levelProperties={levelProperties}
         isRunning={isRunning}
         hasRun={hasRun}
         hasEdited={hasEdited}
-        settings={blocklySettings}
-        className={
-          !levelProperties.guideMode ? moduleStyles.instructionsArea : ''
-        }
+        settings={[...blocklySettings, themeSetting]}
+        className={classNames(
+          !levelProperties.guideMode && moduleStyles.instructionsArea
+        )}
         sidebarOnly={!!levelProperties.guideMode}
       />
       <div className={moduleStyles.divider} />
