@@ -4,13 +4,32 @@ class LessonsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
   include Minitest::RSpecMocks
 
+  # Avoid invoking the expensive `store_translations` operation before every test
+  setup_all do
+    @script_name = 'unit-1'
+    @script_title = 'Unit Display Name'
+    custom_i18n = {
+      'data' => {
+        'script' => {
+          'name' => {
+            @script_name => {
+              'title' => @script_title
+            }
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations 'en-US', custom_i18n
+  end
+
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     # stub writes so that we dont actually make updates to filesystem
     File.stubs(:write)
 
-    @script = create(:script, name: 'unit-1')
+    @script = create(:script, name: @script_name)
     @course = create(:single_unit_course, unit: @script)
     lesson_group = create(:lesson_group, script: @script)
     @lesson = create(
@@ -31,22 +50,8 @@ class LessonsControllerTest < ActionController::TestCase
       has_lesson_plan: false,
     )
 
-    @script_title = 'Unit Display Name'
     @lesson_name = 'Lesson Display Name'
 
-    custom_i18n = {
-      'data' => {
-        'script' => {
-          'name' => {
-            @script.name => {
-              'title' => @script_title
-            }
-          }
-        }
-      }
-    }
-
-    I18n.backend.store_translations 'en-US', custom_i18n
     assert_equal @script_title, @lesson.script.localized_title
 
     @update_params = {
