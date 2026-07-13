@@ -1,5 +1,6 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import classNames from 'classnames';
+import {cloneDeep} from 'lodash';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {AnyAction, Reducer} from 'redux';
 
@@ -211,7 +212,11 @@ const SpriteLab2View: React.FunctionComponent<{
     let cancelled = false;
     dispatch(
       setInitialAnimationList(
-        sourcesRef.current.animations || EMPTY_ANIMATION_LIST,
+        // Deep-cloned: project sources are Immer-frozen (they live in the
+        // lab2 redux slice) and the legacy thunk normalizes its argument IN
+        // PLACE — mutating a frozen object throws in strict-mode production
+        // bundles and the animation list never seeds.
+        cloneDeep(sourcesRef.current.animations || EMPTY_ANIMATION_LIST),
         // No v3 migration; the engine never runs the legacy share path.
         undefined as unknown as object,
         true /* isSpriteLab */
@@ -587,16 +592,13 @@ const SpriteLab2View: React.FunctionComponent<{
   const handleSourceChange = useCallback(
     (source: WorkspaceSerialization) => {
       if (SCENES_UI_VARIANT) {
-        // The workspace edits the active scene. Mirror scenes[0] into the
-        // legacy `source` field so the project still opens with the variant
-        // off.
+        // The workspace edits the active scene. Scenes are the single source
+        // of truth: only `scenes` is written; the variant-off read path
+        // falls back to scenes[0].
         scenesRef.current = scenesRef.current.map(s =>
           s.id === activeSceneIdRef.current ? {...s, source} : s
         );
-        mergeSources({
-          scenes: scenesRef.current,
-          source: scenesRef.current[0]?.source,
-        });
+        mergeSources({scenes: scenesRef.current});
       } else {
         mergeSources({source});
       }
@@ -691,13 +693,12 @@ const SpriteLab2View: React.FunctionComponent<{
     []
   );
 
-  // Scenes variant: the workspace opens on the default scene's blocks (the
-  // seed effect makes scenes[0] active before the Code tab mounts).
-  const initialWorkspaceSource = SCENES_UI_VARIANT
-    ? ((currentSources.scenes?.[0]?.source ?? currentSources.source) as
-        | WorkspaceSerialization
-        | undefined)
-    : (currentSources.source as WorkspaceSerialization | undefined);
+  // The workspace opens on the default scene's blocks (the seed effect makes
+  // scenes[0] active before the Code tab mounts). Scenes are the source of
+  // truth in either mode; the top-level `source` is only a fallback for
+  // projects saved before scenes existed.
+  const initialWorkspaceSource = (currentSources.scenes?.[0]?.source ??
+    currentSources.source) as WorkspaceSerialization | undefined;
 
   return (
     <TabShell

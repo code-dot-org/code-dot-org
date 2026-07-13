@@ -1,11 +1,6 @@
 import * as BlocklyCore from 'blockly/core';
 
-import {CdoFieldImageDropdown} from './cdoFieldImageDropdown';
-
-interface ButtonConfig {
-  text: string;
-  action: () => void;
-}
+import {ButtonConfig, CdoFieldImageDropdown} from './cdoFieldImageDropdown';
 
 export default class CdoFieldAnimationDropdown extends CdoFieldImageDropdown {
   constructor(

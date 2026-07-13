@@ -325,6 +325,26 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal 0, summary[:partnerCount]
   end
 
+  test 'teacher panel summarize reads legacy contained progress for a migrated predict level' do
+    student = create(:student)
+    teacher = create(:teacher)
+    section = create(:section, teacher: teacher)
+    section.students << student
+
+    contained = create(:multi, name: 'teacher panel legacy contained')
+    level = create(:level, type: 'Javalab', name: 'teacher panel migrated predict', properties: {predict_settings: {isPredictLevel: true}})
+    level.contained_level_names = [contained.name]
+    level.save!
+    sl = create_script_level_with_ancestors({levels: [level]})
+
+    # Pre-migration progress was recorded against the contained level.
+    create(:user_level, user: student, level: contained, script_id: sl.script.id, best_result: ActivityConstants::BEST_PASS_RESULT)
+
+    summary = sl.summarize_for_teacher_panel(student, teacher)
+    assert_equal LEVEL_STATUS.perfect, summary[:status]
+    assert summary[:passed]
+  end
+
   test 'teacher panel summarize with progress on this level in another script' do
     student = create(:student)
     teacher = create(:teacher)
