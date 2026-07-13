@@ -11,9 +11,11 @@ import {useDispatch, useSelector} from 'react-redux';
 import reduxSlice, {setCount} from './reduxSlice';
 import type {SlicesState, StoreWithState} from './types';
 
+// `StoreWithState<unknown, S>` reduces to exactly `{getState(): S}`:
+// Omit over `unknown` contributes no keys, so only the getState overlay
+// remains to match against.
 export type StateFor<TExtendedStore> =
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  TExtendedStore extends StoreWithState<any, infer S> ? S : never;
+  TExtendedStore extends StoreWithState<unknown, infer S> ? S : never;
 
 /**
  * The app-wide combined reducer, seeded with the built-in redux slice.
@@ -71,8 +73,9 @@ export function createInjectableStore(): MockStore<[typeof reduxSlice]> {
  */
 export function injectSlices<
   TSlices extends readonly SliceLike[],
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  TExtendedStore extends StoreWithState<any, any>,
+  // The constraint reduces to `{getState(): unknown}`, which any store
+  // satisfies; it exists so StateFor can extract the state type.
+  TExtendedStore extends StoreWithState<unknown, unknown>,
 >(
   slices: TSlices,
   store: TExtendedStore,
