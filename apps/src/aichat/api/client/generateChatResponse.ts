@@ -177,6 +177,8 @@ export async function generateChatResponse(
         Observability.metrics.count('ai-chat.image_llm_safety_judge', 1, {
           result: imageSafetyJudgeStatus,
           mediaType: file.mediaType,
+          // Note: This is the model that generated the image, not the model that judged it.
+          model: modelParameters.selectedModelId,
         });
       }
       if (imageModerationStatus === 'flagged') {
