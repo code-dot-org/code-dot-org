@@ -4,10 +4,10 @@
 
 import {createSlice} from '@reduxjs/toolkit';
 import type {PayloadAction, ThunkAction, UnknownAction} from '@reduxjs/toolkit';
-import {beforeEach, describe, expect, expectTypeOf, it} from 'vitest';
+import {describe, expect, expectTypeOf, it, vi} from 'vitest';
 
-import reduxSlice, {setCount} from '../reduxSlice';
-import {createInjectableStore, injectSlices, storeHooks} from '../store';
+import reduxSlice from '../reduxSlice';
+import {injectSlices, storeHooks} from '../store';
 import type {MockStore, StateFor} from '../store';
 import type {SlicesState} from '../types';
 
@@ -46,31 +46,38 @@ const sliceC = createSlice({
   },
 });
 
-// A fresh store per test isolates *state*; the slice registry is shared
-// module-wide (one root reducer), so tests must not assume absolute
-// reducerCount values — counting has its own order-independent test below.
-const makeStore = createInjectableStore;
-
-type RootStore = ReturnType<typeof makeStore>;
+// The app store is a singleton and injection accumulates in module state, so
+// each runtime test imports a fresh copy of the module instead of creating a
+// per-test store.
+async function freshModule() {
+  vi.resetModules();
+  const store = await import('../store');
+  const {setCount} = await import('../reduxSlice');
+  return {...store, setCount};
+}
 
 describe('injectSlices', () => {
-  let store: RootStore;
-  beforeEach(() => {
-    store = makeStore();
-  });
-
-  it('places each slice under its name and keeps the built-in redux slice', () => {
-    const injected = injectSlices([sliceA, sliceB] as const, store);
+  it('places each slice under its name and keeps the built-in redux slice', async () => {
+    const {injectSlices} = await freshModule();
+    const injected = injectSlices([sliceA, sliceB] as const);
 
     const state = injected.getState();
     expect(state.a).toEqual({value: 0});
     expect(state.b).toEqual({label: 'none'});
-    // The built-in slice is present; exact counting is pinned separately.
-    expect(state.redux.reducerCount).toBeGreaterThanOrEqual(2);
+    // The built-in slice tracks how many slices have been injected.
+    expect(state.redux).toEqual({reducerCount: 2});
   });
 
-  it('dispatches reach the injected slices', () => {
-    const injected = injectSlices([sliceA, sliceB] as const, store);
+  it('returns the app store itself', async () => {
+    const mod = await freshModule();
+    const injected = mod.injectSlices([sliceA] as const);
+    // One store: injection widens the type, not the identity.
+    expect(injected).toBe(mod.default);
+  });
+
+  it('dispatches reach the injected slices', async () => {
+    const {injectSlices} = await freshModule();
+    const injected = injectSlices([sliceA, sliceB] as const);
 
     injected.dispatch(sliceA.actions.setA(42));
     injected.dispatch(sliceB.actions.setB('hello'));
@@ -80,72 +87,52 @@ describe('injectSlices', () => {
     expect(state.b.label).toBe('hello');
   });
 
-  it('preserves existing slice state when injecting another slice later', () => {
-    const withA = injectSlices([sliceA] as const, store);
+  it('preserves existing slice state when injecting another slice later', async () => {
+    const {injectSlices} = await freshModule();
+    const withA = injectSlices([sliceA] as const);
     withA.dispatch(sliceA.actions.setA(7));
     expect(withA.getState().a.value).toBe(7);
+    expect(withA.getState().redux.reducerCount).toBe(1);
 
-    const withAB = injectSlices([sliceB] as const, withA);
+    // Layering onto an already-widened store type supplies both type
+    // arguments: the slices tuple, then the prior store type.
+    const withAB = injectSlices<readonly [typeof sliceB], typeof withA>([
+      sliceB,
+    ] as const);
     // sliceA's state survives the later injection
     expect(withAB.getState().a.value).toBe(7);
     // newly added slice gets its initial state
     expect(withAB.getState().b).toEqual({label: 'none'});
+    // and the count accumulates across calls
+    expect(withAB.getState().redux.reducerCount).toBe(2);
   });
 
-  it('built-in redux slice keeps responding to actions after injection', () => {
-    const injected = injectSlices([sliceA] as const, store);
+  it('built-in redux slice keeps responding to actions after injection', async () => {
+    const {injectSlices, setCount} = await freshModule();
+    const injected = injectSlices([sliceA] as const);
     injected.dispatch(setCount(41));
     expect(injected.getState().redux.reducerCount).toBe(41);
   });
 
-  it('fresh stores share the reducer registry with isolated state', () => {
-    const first = injectSlices([sliceA] as const, makeStore());
-    first.dispatch(sliceA.actions.setA(42));
-
-    // A second store sees sliceA's reducer (shared root reducer) but not
-    // the first store's state.
-    const second = injectSlices([sliceA] as const, makeStore());
-    expect(second.getState().a.value).toBe(0);
-    expect(first.getState().a.value).toBe(42);
-  });
-
-  it('reducerCount tracks distinct slices injected app-wide', () => {
-    // Injecting an empty tuple just syncs the count into this store,
-    // giving an order-independent baseline.
-    const before = injectSlices([] as const, makeStore()).getState().redux
-      .reducerCount;
-
-    const sliceX = createSlice({
-      name: 'count-x',
-      initialState: {v: 0},
-      reducers: {},
-    });
-    const sliceY = createSlice({
-      name: 'count-y',
-      initialState: {v: 0},
-      reducers: {},
-    });
-
-    const injected = injectSlices([sliceX, sliceY] as const, makeStore());
-    expect(injected.getState().redux.reducerCount).toBe(before + 2);
-
-    // Re-injection doesn't double-count.
-    const again = injectSlices([sliceX] as const, makeStore());
-    expect(again.getState().redux.reducerCount).toBe(before + 2);
-  });
-
-  it('re-injecting a slice replaces its reducer without dropping siblings', () => {
-    const withAB = injectSlices([sliceA, sliceB] as const, store);
+  it('re-injecting a slice replaces its reducer without dropping siblings', async () => {
+    const {injectSlices} = await freshModule();
+    const withAB = injectSlices([sliceA, sliceB] as const);
     withAB.dispatch(sliceA.actions.setA(11));
     withAB.dispatch(sliceB.actions.setB('keep me'));
 
     // Re-inject sliceA alongside a new sliceC. sliceB's reducer must remain
-    // wired up (the store's combined reducer carries it forward) so its
-    // state survives.
-    const withABC = injectSlices([sliceA, sliceC] as const, withAB);
+    // wired up (the shared root reducer carries it forward) so its state
+    // survives.
+    const withABC = injectSlices<
+      readonly [typeof sliceA, typeof sliceC],
+      typeof withAB
+    >([sliceA, sliceC] as const);
 
     expect(withABC.getState().b).toEqual({label: 'keep me'});
     expect(withABC.getState().c).toEqual({count: 0});
+
+    // Re-injection doesn't double-count: a, b, c — not a, b, a, c.
+    expect(withABC.getState().redux.reducerCount).toBe(3);
 
     // And sliceA still responds — its reducer reference was replaced but
     // identity doesn't matter, only that dispatches still mutate state.
@@ -160,7 +147,8 @@ describe('injectSlices', () => {
 // hazard they guard against is `SlicesState` silently collapsing (e.g. to
 // `unknown` or `Record<string, ...>`) when someone re-tightens the constraint
 // or simplifies the structural extraction. Downstream packages would still
-// build but lose their per-slice keys.
+// build but lose their per-slice keys. They run against the statically
+// imported module instance, separate from the runtime tests' fresh copies.
 describe('redux module type surface', () => {
   // The `{} as T` casts let us pin generic resolutions without constructing
   // real values; only the type position matters to `expectTypeOf`.
@@ -198,18 +186,28 @@ describe('redux module type surface', () => {
     }>();
   });
 
-  it('injectSlices return widens the store state with the new slices', () => {
-    const injected = injectSlices([sliceA, sliceB] as const, makeStore());
+  it('injectSlices widens the store state, layering via explicit generics', () => {
+    const injected = injectSlices([sliceA, sliceB] as const);
     expectTypeOf(injected.getState()).branded.toEqualTypeOf<{
       redux: {reducerCount: number};
       a: {value: number};
       b: {label: string};
     }>();
+
+    const layered = injectSlices<readonly [typeof sliceC], typeof injected>([
+      sliceC,
+    ] as const);
+    expectTypeOf(layered.getState()).branded.toEqualTypeOf<{
+      redux: {reducerCount: number};
+      a: {value: number};
+      b: {label: string};
+      c: {count: number};
+    }>();
   });
 
-  it('storeHooks derives hook typings from the given store', () => {
-    const injected = injectSlices([sliceA] as const, makeStore());
-    const hooks = storeHooks(injected);
+  it('storeHooks derives hook typings from the given store type', () => {
+    type Injected = MockStore<[typeof reduxSlice, typeof sliceA]>;
+    const hooks = storeHooks<Injected>();
     // The selector's state parameter carries the injected shape.
     expectTypeOf(hooks.useAppSelector)
       .parameter(0)
@@ -221,14 +219,14 @@ describe('redux module type surface', () => {
   });
 
   it('storeHooks dispatch accepts thunks over the widened state', () => {
-    const injected = injectSlices([sliceA] as const, makeStore());
-    const hooks = storeHooks(injected);
+    type Injected = MockStore<[typeof reduxSlice, typeof sliceA]>;
+    const hooks = storeHooks<Injected>();
     // A thunk typed against the *injected* state must be dispatchable —
     // TStore['dispatch'] alone would only accept thunks over the
     // pre-injection state.
     const thunk: ThunkAction<
       void,
-      StateFor<typeof injected>,
+      StateFor<Injected>,
       undefined,
       UnknownAction
     > = () => {};
