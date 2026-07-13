@@ -103,6 +103,13 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
     .blocklyFlyoutBackground {
       fill: var(--background-neutral-tertiary) !important;
     }
+    .blocklyScrollbarHandle {
+      fill: var(--background-neutral-quinary) !important;
+    }
+    .blocklyDropDownDiv {
+      background-color: var(--background-neutral-primary) !important;
+      border-color: var(--borders-neutral-primary) !important;
+    }
     `
   );
 }
