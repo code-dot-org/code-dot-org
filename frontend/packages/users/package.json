@@ -18,6 +18,11 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
+    },
+    "./redux": {
+      "types": "./dist/redux/index.d.ts",
+      "import": "./dist/redux/index.mjs",
+      "require": "./dist/redux/index.cjs"
     }
   },
   "scripts": {
@@ -37,7 +42,8 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "dependencies": {
-    "@code-dot-org/core": "workspace:*"
+    "@code-dot-org/core": "workspace:*",
+    "@reduxjs/toolkit": "catalog:"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.1",
