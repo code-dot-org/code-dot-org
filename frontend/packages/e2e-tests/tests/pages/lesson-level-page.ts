@@ -16,8 +16,7 @@ export class LessonLevelPage extends BasePage {
 
   /**
    * The whole lesson header block: title, save-status timestamp, progress
-   * bubbles. Mask this in visual checks — bubble state and the relative
-   * timestamp change run to run.
+   * bubbles.
    */
   readonly lessonHeaderInfo: Locator;
 
