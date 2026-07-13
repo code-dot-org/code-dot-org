@@ -193,15 +193,12 @@ export class SketchLab extends LessonLevelPage {
 
   /**
    * Pick a background color for the selected shape from its style toolbar.
-   * The color rows (Background, Border, Color) are the toolbar's only
-   * dialog-popup triggers, in that order; the trigger button itself has no
-   * aria-label (a11y gap: named via aria-labelledby), so target it by its
-   * aria-haspopup attribute. Swatches do have stable accessible names.
+   * The trigger's accessible name is its row label plus the current value
+   * (via aria-labelledby, e.g. "Background Clear"), so match on the prefix.
    */
   async setBackgroundColor(colorName: string): Promise<void> {
     await this.styleToolbar
-      .locator("button[aria-haspopup='dialog']")
-      .first()
+      .getByRole('button', {name: /^Background/})
       .click();
     await this.page
       .getByRole('button', {name: `Background: ${colorName}`})

@@ -6,8 +6,7 @@ import {cssColorMatchesVar} from '../shared/colors';
 /**
  * Net-new coverage (no Cucumber source): the Sketch Lab React Flow canvas —
  * rendering, adding each node type, connecting nodes, and changing a shape's
- * background color. Backed by "allthethings sketchlab 1" (lesson 54, level 1),
- * seeded with no start_sources so every test begins on an empty canvas.
+ * background color.
  */
 
 const SHAPE_TYPES: SketchLabShapeType[] = [
