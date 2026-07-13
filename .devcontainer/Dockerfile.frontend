@@ -1,0 +1,72 @@
+# syntax=docker/dockerfile:1
+#
+# cdo-dev-frontend: slim image for frontend-only development.
+# Ruby (for pre-commit hooks) + Node + Yarn cache. No gems, no MySQL, no Python.
+# ~2.5 GB vs ~5 GB for cdo-dev-base.
+
+FROM ruby:3.2.11-slim-bookworm
+
+ARG UID=1000
+ARG GID=1000
+ARG USERNAME=cdo
+
+ENV LANG=C.UTF-8 \
+    AWS_EC2_METADATA_DISABLED=true
+
+SHELL ["/bin/bash", "-euxo", "pipefail", "-c"]
+
+RUN apt-get update -qq \
+  && apt-get install -y -qq --no-install-recommends \
+       ca-certificates curl git git-lfs procps \
+  && rm -rf /var/lib/apt/lists/*
+
+# Node 20 from NodeSource
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
+  && apt-get install -y -qq --no-install-recommends nodejs \
+  && rm -rf /var/lib/apt/lists/*
+
+# Corepack + Yarn 4.12.0
+ENV COREPACK_HOME=/opt/corepack
+RUN corepack enable \
+  && corepack prepare yarn@4.12.0 --activate \
+  && mkdir -p /opt/corepack && chmod -R a+rX /opt/corepack
+
+RUN groupadd -g ${GID} ${USERNAME} 2>/dev/null || true \
+  && useradd --create-home --no-log-init -u ${UID} -g ${GID} -s /bin/bash ${USERNAME} 2>/dev/null || true \
+  && mkdir -p /code-dot-org /opt/yarn-cache \
+  && chown ${UID}:${GID} /code-dot-org /opt/yarn-cache
+
+USER ${USERNAME}
+WORKDIR /code-dot-org
+
+# Warm Yarn Berry global cache (frontend/ only — apps/ has enableGlobalCache: false)
+ENV YARN_GLOBAL_FOLDER=/opt/yarn-cache
+
+COPY --chown=${UID}:${GID} frontend/package.json frontend/yarn.lock frontend/.yarnrc.yml /tmp/frontend/
+COPY --chown=${UID}:${GID} frontend/turbo.json /tmp/frontend/turbo.json
+COPY --chown=${UID}:${GID} frontend/apps/design-system-storybook/package.json /tmp/frontend/apps/design-system-storybook/package.json
+COPY --chown=${UID}:${GID} frontend/apps/studio/package.json /tmp/frontend/apps/studio/package.json
+COPY --chown=${UID}:${GID} frontend/packages/changelogs/package.json /tmp/frontend/packages/changelogs/package.json
+COPY --chown=${UID}:${GID} frontend/packages/component-library/package.json /tmp/frontend/packages/component-library/package.json
+COPY --chown=${UID}:${GID} frontend/packages/component-library-styles/package.json /tmp/frontend/packages/component-library-styles/package.json
+COPY --chown=${UID}:${GID} frontend/packages/core/package.json /tmp/frontend/packages/core/package.json
+COPY --chown=${UID}:${GID} frontend/packages/e2e-tests/package.json /tmp/frontend/packages/e2e-tests/package.json
+COPY --chown=${UID}:${GID} frontend/packages/fonts/package.json /tmp/frontend/packages/fonts/package.json
+COPY --chown=${UID}:${GID} frontend/packages/labs/ailab/package.json /tmp/frontend/packages/labs/ailab/package.json
+COPY --chown=${UID}:${GID} frontend/packages/labs/base/package.json /tmp/frontend/packages/labs/base/package.json
+COPY --chown=${UID}:${GID} frontend/packages/labs/music/package.json /tmp/frontend/packages/labs/music/package.json
+COPY --chown=${UID}:${GID} frontend/packages/labs/oceans/package.json /tmp/frontend/packages/labs/oceans/package.json
+COPY --chown=${UID}:${GID} frontend/packages/lint-config/package.json /tmp/frontend/packages/lint-config/package.json
+COPY --chown=${UID}:${GID} frontend/packages/markdown/package.json /tmp/frontend/packages/markdown/package.json
+COPY --chown=${UID}:${GID} frontend/packages/playwright-support/package.json /tmp/frontend/packages/playwright-support/package.json
+COPY --chown=${UID}:${GID} frontend/packages/users/package.json /tmp/frontend/packages/users/package.json
+
+RUN cd /tmp/frontend && yarn install --immutable && rm -rf /tmp/frontend
+
+RUN git config --global --add safe.directory /code-dot-org
+
+COPY --chown=root:root --chmod=755 .devcontainer/scripts/entrypoint.sh /usr/local/bin/entrypoint.sh
+
+WORKDIR /code-dot-org
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+CMD ["bash"]

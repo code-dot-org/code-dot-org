@@ -26,8 +26,19 @@
 Rake::Task['db:migrate'].enhance do
   next unless Rails.env.development?
 
-  require 'cdo/aws/redshift/materialized_view_manager'
-  Rails.application.eager_load!
+  begin
+    require 'cdo/aws/redshift/materialized_view_manager'
+  rescue LoadError => exception
+    warn "[AnalyticsExportable] Skipping post-migrate DDL template regeneration: #{exception.message}"
+    next
+  end
+
+  begin
+    Rails.application.eager_load!
+  rescue NameError => exception
+    warn "[AnalyticsExportable] Skipping post-migrate DDL template regeneration (eager_load): #{exception.message}"
+    next
+  end
 
   # Regenerate the Zero ETL materialized-view SQL ERB templates so a migration that reshapes an
   # exported table surfaces the pending view change as a committable `.sql.erb` diff. We deliberately

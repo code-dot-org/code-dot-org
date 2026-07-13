@@ -1,0 +1,29 @@
+{
+  "name": "code-dot-org (frontend)",
+  "dockerComposeFile": [
+    "docker-compose.frontend.yml"
+  ],
+  "service": "app",
+  "workspaceFolder": "/code-dot-org/frontend",
+  "remoteUser": "cdo",
+  "initializeCommand": ".devcontainer/scripts/init-repo-volume.sh",
+  "postStartCommand": "/usr/local/bin/entrypoint.sh true",
+  "forwardPorts": [
+    3036,
+    3000,
+    6006,
+    3306
+  ],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "rebornix.Ruby"
+      ]
+    }
+  }
+}

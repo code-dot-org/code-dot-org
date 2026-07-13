@@ -1,0 +1,160 @@
+# syntax=docker/dockerfile:1
+#
+# cdo-dev-base: toolchain image for code-dot-org development sandboxes.
+# Contains Ruby, gems, Python/uv, Node, Yarn caches. No repo tree, no MySQL.
+# Lockfile-keyed layers: gem/yarn layers rebuild only when their lockfile changes.
+
+FROM ruby:3.2.11-slim-bookworm AS base
+
+ARG UID=1000
+ARG GID=1000
+ARG USERNAME=cdo
+
+ENV LANG=C.UTF-8 \
+    AWS_EC2_METADATA_DISABLED=true \
+    BUNDLE_PATH=/opt/bundle \
+    BUNDLE_WITHOUT=staging:test:production:levelbuilder \
+    UV_PROJECT_ENVIRONMENT=/opt/venv
+
+SHELL ["/bin/bash", "-euxo", "pipefail", "-c"]
+
+# --- apt: empirically minimized against SETUP.md ---
+# Each package proven in by a specific build/runtime failure.
+# gnupg/wget/dirmngr/lsb-release kept through NodeSource install, purged after.
+RUN --mount=type=cache,target=/var/cache/apt,sharing=locked <<'EOF'
+  mkdir -p /root/.gnupg && chmod 700 /root/.gnupg
+  apt-get update -qq
+  apt-get install -y -qq --no-install-recommends \
+    build-essential ca-certificates curl git git-lfs pkg-config \
+    libssl-dev zlib1g-dev libmagickwand-dev imagemagick \
+    redis-tools sudo procps \
+    wget gnupg dirmngr lsb-release
+
+  # MySQL client libs: repo.mysql.com has no arm64 packages for bookworm,
+  # so use arch-conditional install. On amd64: MySQL Community packages
+  # (exact server/client ABI match). On arm64: Debian's default packages
+  # (MariaDB client libs, wire-compatible with MySQL 8.0).
+  if [ "$(dpkg --print-architecture)" = "amd64" ]; then
+    wget -q https://dev.mysql.com/get/mysql-apt-config_0.8.33-1_all.deb -O /tmp/mysql-apt-config.deb
+    echo "mysql-apt-config mysql-apt-config/select-server select mysql-8.0" | debconf-set-selections
+    DEBIAN_FRONTEND=noninteractive dpkg -i /tmp/mysql-apt-config.deb
+    gpg --no-default-keyring --keyring /usr/share/keyrings/mysql-apt-config.gpg \
+      --keyserver keyserver.ubuntu.com --recv-keys B7B3B788A8D3785C
+    apt-get update -qq
+    DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends \
+      libmysqlclient-dev mysql-community-client
+  else
+    apt-get install -y -qq --no-install-recommends \
+      default-libmysqlclient-dev default-mysql-client
+  fi
+
+  # Node 20 from NodeSource (Rails boot needs ExecJS runtime).
+  curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+  apt-get install -y -qq --no-install-recommends nodejs
+
+  # Purge bootstrap-only packages now that MySQL repo and NodeSource are set up.
+  apt-get purge -y -qq wget gnupg dirmngr lsb-release
+  apt-get autoremove -y -qq
+  rm -rf /var/lib/apt/lists/* /tmp/mysql-apt-config.deb
+EOF
+
+# Node corepack + Yarn 4.12.0
+ENV COREPACK_HOME=/opt/corepack
+RUN corepack enable \
+  && corepack prepare yarn@4.12.0 --activate \
+  && mkdir -p /opt/corepack && chmod -R a+rX /opt/corepack
+
+RUN groupadd -g ${GID} ${USERNAME} 2>/dev/null || true \
+  && useradd --create-home --no-log-init -u ${UID} -g ${GID} -s /bin/bash ${USERNAME} 2>/dev/null || true \
+  && gem install bundler -v 2.5.17 --silent \
+  && mkdir -p /code-dot-org /opt/bundle /opt/venv /opt/bundle/ruby/3.2.0/cache/bundler/git \
+  && chown -R ${UID}:${GID} /code-dot-org /opt/bundle /opt/venv
+
+USER ${USERNAME}
+WORKDIR /code-dot-org
+
+# --- gems (layer keyed to Gemfile.lock) ---
+COPY --chown=${UID}:${GID} .ruby-version Gemfile Gemfile.lock ./
+COPY --chown=${UID}:${GID} dashboard/engines/cdo_contentful/cdo_contentful.gemspec dashboard/engines/cdo_contentful/cdo_contentful.gemspec
+COPY --chown=${UID}:${GID} dashboard/engines/cdo_contentful/lib/cdo_contentful/version.rb dashboard/engines/cdo_contentful/lib/cdo_contentful/version.rb
+COPY --chown=${UID}:${GID} dashboard/engines/hoc_legacy/hoc_legacy.gemspec dashboard/engines/hoc_legacy/hoc_legacy.gemspec
+COPY --chown=${UID}:${GID} dashboard/engines/observability/observability.gemspec dashboard/engines/observability/observability.gemspec
+COPY --chown=${UID}:${GID} dashboard/engines/observability/lib/observability/version.rb dashboard/engines/observability/lib/observability/version.rb
+
+# Persist BUNDLE_PATH in the user's global bundle config (~/.bundle/config)
+# so RakeUtils.bundle_install (which uses Bundler.with_unbundled_env, clearing
+# all BUNDLE_* env vars) still resolves gems from /opt/bundle.
+RUN bundle config set --global path /opt/bundle \
+  && bundle install --jobs 16
+
+# Spring fix: install bundle-resolved versions of default gems into Ruby's
+# default gem dir so Spring (which loads gems pre-Bundler) finds the same
+# versions Bundler expects. Without this, BUNDLE_PATH=/opt/bundle creates
+# a second copy and Spring activates the older default gem first.
+USER root
+RUN ruby -e ' \
+  require "bundler"; \
+  lockfile = Bundler::LockfileParser.new(File.read("Gemfile.lock")); \
+  defaults = Hash[Gem::Specification.select(&:default_gem?).map { |s| [s.name, s.version] }]; \
+  lockfile.specs.each do |spec| \
+    next unless defaults[spec.name] && defaults[spec.name] != spec.version; \
+    system("gem install #{spec.name} -v #{spec.version} -i #{Gem.default_dir} --no-document") \
+  end \
+'
+RUN mkdir -p /opt/yarn-cache && chown ${UID}:${GID} /opt/yarn-cache
+USER ${USERNAME}
+
+# --- python/uv (layer keyed to uv.lock) ---
+ENV PATH=/home/${USERNAME}/.local/bin:$PATH
+COPY --chown=${UID}:${GID} pyproject.toml uv.lock .python-version ./
+COPY --chown=${UID}:${GID} python/ python/
+
+RUN curl -LsSf https://astral.sh/uv/install.sh | sh \
+  && uv sync --frozen --quiet
+
+# --- yarn cache warm (layer keyed to yarn.lock files) ---
+ENV YARN_GLOBAL_FOLDER=/opt/yarn-cache
+
+COPY --chown=${UID}:${GID} frontend/package.json frontend/yarn.lock frontend/.yarnrc.yml /tmp/frontend/
+COPY --chown=${UID}:${GID} frontend/turbo.json /tmp/frontend/turbo.json
+COPY --chown=${UID}:${GID} frontend/apps/design-system-storybook/package.json /tmp/frontend/apps/design-system-storybook/package.json
+COPY --chown=${UID}:${GID} frontend/apps/studio/package.json /tmp/frontend/apps/studio/package.json
+COPY --chown=${UID}:${GID} frontend/packages/changelogs/package.json /tmp/frontend/packages/changelogs/package.json
+COPY --chown=${UID}:${GID} frontend/packages/component-library/package.json /tmp/frontend/packages/component-library/package.json
+COPY --chown=${UID}:${GID} frontend/packages/component-library-styles/package.json /tmp/frontend/packages/component-library-styles/package.json
+COPY --chown=${UID}:${GID} frontend/packages/core/package.json /tmp/frontend/packages/core/package.json
+COPY --chown=${UID}:${GID} frontend/packages/e2e-tests/package.json /tmp/frontend/packages/e2e-tests/package.json
+COPY --chown=${UID}:${GID} frontend/packages/fonts/package.json /tmp/frontend/packages/fonts/package.json
+COPY --chown=${UID}:${GID} frontend/packages/labs/ailab/package.json /tmp/frontend/packages/labs/ailab/package.json
+COPY --chown=${UID}:${GID} frontend/packages/labs/base/package.json /tmp/frontend/packages/labs/base/package.json
+COPY --chown=${UID}:${GID} frontend/packages/labs/music/package.json /tmp/frontend/packages/labs/music/package.json
+COPY --chown=${UID}:${GID} frontend/packages/labs/oceans/package.json /tmp/frontend/packages/labs/oceans/package.json
+COPY --chown=${UID}:${GID} frontend/packages/lint-config/package.json /tmp/frontend/packages/lint-config/package.json
+COPY --chown=${UID}:${GID} frontend/packages/markdown/package.json /tmp/frontend/packages/markdown/package.json
+COPY --chown=${UID}:${GID} frontend/packages/playwright-support/package.json /tmp/frontend/packages/playwright-support/package.json
+COPY --chown=${UID}:${GID} frontend/packages/users/package.json /tmp/frontend/packages/users/package.json
+
+RUN cd /tmp/frontend && yarn install --immutable && rm -rf /tmp/frontend
+
+# Playwright Chromium — used by both Playwright e2e tests and Karma integration tests.
+# 1. Install OS deps as root (needs apt-get)
+# 2. Install browser binary as cdo user (writes to ~/.cache/ms-playwright)
+# 3. Symlink to /usr/local/bin as root for CHROME_BIN
+USER root
+RUN npx playwright install-deps chromium
+USER ${USERNAME}
+RUN npx playwright install chromium
+USER root
+RUN CHROME=$(find /home/cdo/.cache/ms-playwright -name "chrome" -path "*/chrome-linux*/chrome" -type f | head -1) \
+  && if [ -n "$CHROME" ]; then ln -sf "$CHROME" /usr/local/bin/chromium; fi
+ENV CHROME_BIN=/usr/local/bin/chromium
+USER ${USERNAME}
+
+# Trust the repo volume regardless of ownership (clone runs as root, container as cdo)
+RUN git config --global --add safe.directory /code-dot-org
+
+COPY --chown=root:root --chmod=755 .devcontainer/scripts/entrypoint.sh /usr/local/bin/entrypoint.sh
+
+WORKDIR /code-dot-org
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+CMD ["bash"]

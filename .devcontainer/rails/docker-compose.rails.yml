@@ -1,0 +1,32 @@
+# Rails persona: app + db + redis.
+# The repo lives in a Docker volume (full clone, not a host bind-mount).
+# initializeCommand populates the volume; compose just mounts it.
+
+services:
+  app:
+    image: ${CDO_DEV_BASE_IMAGE:-cdo-dev-base:latest}
+    stdin_open: true
+    init: true
+    tty: true
+    working_dir: /code-dot-org
+    volumes:
+      - cdo-repo:/code-dot-org
+    tmpfs:
+      - /code-dot-org/dashboard/tmp:size=512m,uid=1000,gid=1000
+      - /code-dot-org/dashboard/log:size=256m,uid=1000,gid=1000
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    extra_hosts:
+      - "localhost-studio.code.org:127.0.0.1"
+    environment:
+      - RAILS_ENV=development
+      - AWS_EC2_METADATA_DISABLED=true
+    ports:
+      - "${CDO_RAILS_PORT:-3000}:3000"
+
+volumes:
+  cdo-repo:
+    name: ${CDO_REPO_VOLUME:-cdo-repo}

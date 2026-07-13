@@ -6,7 +6,7 @@ class Clients::LtiDynamicRegistrationClient
   end
 
   def make_registration_request
-    body = Policies::Lti::DYNAMIC_REGISTRATION_CONFIG.to_json
+    body = Policies::Lti.dynamic_registration_config.to_json
     headers = {
       'Content-Type' => 'application/json',
       'Authorization' => "Bearer #{@registration_token}"

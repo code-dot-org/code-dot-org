@@ -1,0 +1,21 @@
+{
+  "name": "code-dot-org (frontend-mock)",
+  "dockerComposeFile": ["docker-compose.frontend-mock.yml"],
+  "service": "app",
+  "workspaceFolder": "/code-dot-org/frontend",
+  "remoteUser": "cdo",
+  "initializeCommand": ".devcontainer/scripts/init-repo-volume.sh",
+  "postStartCommand": "/usr/local/bin/entrypoint.sh true",
+  "forwardPorts": [3036, 6006],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}
