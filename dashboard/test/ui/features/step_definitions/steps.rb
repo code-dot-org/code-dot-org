@@ -575,7 +575,13 @@ rescue
 end
 
 When /^I press the edit button on a function call named "([^"]*)"$/ do |text|
-  @browser.execute_script("$('.blocklyDraggable:contains(#{text})').find('.blocklyIconGroup:contains(edit)').first().simulate('drag', function(){})")
+  @browser.execute_script(<<~JS)
+    var el = $('.blocklyDraggable:contains(#{text})').find('.blocklyIconGroup:contains(edit)').first()[0];
+    if (!el) return;
+    var opts = {bubbles: true, cancelable: true, pointerId: 1, pointerType: 'mouse', isPrimary: true};
+    el.dispatchEvent(new PointerEvent('pointerdown', opts));
+    document.dispatchEvent(new PointerEvent('pointerup', opts));
+  JS
 end
 
 When /^I press a button with xpath "([^"]*)"$/ do |xpath|
