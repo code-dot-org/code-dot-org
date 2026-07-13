@@ -1495,7 +1495,6 @@ class Unit < ApplicationRecord
   end
 
   def summarize_for_rollup(user = nil, unit_group_unit: nil)
-    puts "unit_group_unit: #{unit_group_unit.inspect}"
     link_path = script_path(self)
     if Policies::Courses.modularity_enabled? && unit_group_unit
       link_path = course_unit_path(unit_group_unit.unit_group, unit_group_unit.position)
