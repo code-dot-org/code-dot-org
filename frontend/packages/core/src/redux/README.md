@@ -10,33 +10,39 @@ everything else is injected by whoever needs it.
   plus its actions from a `./redux` sub-path:
   `@code-dot-org/users/redux`, `@code-dot-org/progress/redux`, and so on.
 - A host — typically a lab's `redux/store.ts` — injects the slices it needs
-  into the shared store and exports the result:
+  and exports the widened store:
 
 ```ts
-import {
-  default as defaultStore,
-  injectSlices,
-  storeHooks,
-} from '@code-dot-org/core/redux';
+import {injectSlices, storeHooks} from '@code-dot-org/core/redux';
 import {currentUserSlice} from '@code-dot-org/users/redux';
 
 import mySlice from './mySlice';
 
-const store = injectSlices([currentUserSlice, mySlice], defaultStore);
+const store = injectSlices([currentUserSlice, mySlice]);
 
-export const {useAppDispatch, useAppSelector} = storeHooks(store);
+export const {useAppDispatch, useAppSelector} = storeHooks<typeof store>();
 export default store;
 ```
 
-`injectSlices` returns the same store object with `getState` widened to
-include the injected slices. Hosts layer: a lab package can inject its slice
-into the store exported by another host (music injects `musicSlice` into the
-lab-base store) and the state type accumulates.
+`injectSlices` operates on the app store — there is exactly one — and
+returns it with `getState` widened to include the injected slices. Hosts
+layer: a lab package injecting on top of a store type another host already
+widened supplies both type arguments explicitly, slices tuple first:
+
+```ts
+import {default as labStore} from '@code-dot-org/lab/redux';
+
+const store = injectSlices<[typeof musicSlice], typeof labStore>([musicSlice]);
+```
+
+Both type arguments are required in that form: TypeScript does not
+partially infer type arguments, so a lone explicit store type would
+silently collapse the slices tuple type instead of inferring it.
 
 Do not use react-redux's bare `useSelector`/`useDispatch`, and do not export
 globally typed hooks from a shared package — hooks typed anywhere other than
-against the final store lie about the state shape. `storeHooks(store)` is the
-one sanctioned way to get typed hooks.
+against the final store lie about the state shape. `storeHooks<typeof
+store>()` is the one sanctioned way to get typed hooks.
 
 ## Typing across packages
 
@@ -58,15 +64,11 @@ it, so packages never need types-only sub-path exports for their slices.
 
 ## Mechanics
 
-- There is one root reducer for the whole app: a `combineSlices` reducer
-  seeded with the built-in `redux` slice. Every store this module creates
-  shares it, so an injected slice's reducer is live in all of them; state
-  remains per-store. `injectSlices` adds each slice's reducer under its
-  `name`, then dispatches on the given store to materialize the new state
-  immediately (bare `inject` defers it to the next action).
-- Stores must come from this module (the default export or
-  `createInjectableStore()`); a store built on any other reducer never sees
-  the injections.
+- There is one root reducer and one store for the whole app. The reducer is
+  a `combineSlices` reducer seeded with the built-in `redux` slice;
+  `injectSlices` adds each slice's reducer under its `name`, then dispatches
+  to materialize the new state immediately (bare `inject` defers it to the
+  next action).
 - The built-in slice records `reducerCount` — the number of distinct slices
   injected so far — as a debugging surface.
 - Slices are matched structurally (`{name, reducer, getInitialState}`), not
@@ -74,9 +76,14 @@ it, so packages never need types-only sub-path exports for their slices.
 
 ## Tests
 
-`createInjectableStore()` returns a fresh, correctly typed store — use it
-instead of casting a raw `configureStore` result. Fresh stores isolate
-state, not the slice registry: slices injected by an earlier test are still
-wired in a later test's store (with their initial state), so don't assert
-on the absence of another test's slice or on absolute `reducerCount`
-values.
+Injection accumulates in module state (the store is a singleton), so tests
+isolate by importing a fresh copy of the module per test:
+
+```ts
+async function freshModule() {
+  vi.resetModules();
+  return await import('@code-dot-org/core/redux');
+}
+```
+
+See `__tests__/injectSlices.test.ts` for the pattern.
