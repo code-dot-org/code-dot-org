@@ -13,17 +13,46 @@ export class SignInPage extends BasePage {
   /** Password input. */
   private readonly passwordInput: Locator;
 
-  /** Sign-in submit button (#signin-button). */
-  private readonly signInButton: Locator;
+  /** Sign-in submit button (#signin-button). Locale-agnostic (id-based). */
+  readonly signInButton: Locator;
 
   /** Section code input (#section_code). */
   private readonly sectionCodeInput: Locator;
 
-  /** "Go" button in the section sign-in form. */
-  private readonly sectionSignInButton: Locator;
+  /** "Go" button in the section sign-in form. Its label is untranslated in every locale. */
+  readonly sectionSignInButton: Locator;
 
   /** "Create an account" link on the logged-out / link-account page. */
   readonly createAccountLink: Locator;
+
+  /** Sign-in heading ("Have an account already? Sign in"). */
+  readonly heading: Locator;
+
+  /** Main content landmark — scope for the region's visual check. */
+  readonly mainContent: Locator;
+
+  /**
+   * "Want to try coding without signing in?" section heading
+   * (#code_without_signing_in). Locale-agnostic (id-based); its own text is
+   * one of the strings under test.
+   */
+  readonly codeWithoutSigningInHeading: Locator;
+
+  /**
+   * "Continue with Google" OAuth button. Locale-agnostic (id-based): its
+   * label is the very text under test, so locating it by that label would be
+   * a tautology; the id ties the locator to the google_oauth2 provider form.
+   */
+  readonly googleSignInButton: Locator;
+
+  /** "Continue with Microsoft" OAuth button. Same id-based reasoning as {@link googleSignInButton}. */
+  readonly microsoftSignInButton: Locator;
+
+  /** "Continue with Facebook" OAuth button. Same id-based reasoning as {@link googleSignInButton}. */
+  readonly facebookSignInButton: Locator;
+
+  /** "Continue with Clever" OAuth button. Same id-based reasoning as {@link googleSignInButton}. */
+  readonly cleverSignInButton: Locator;
 
   constructor(page: Page) {
     super(page);
@@ -39,6 +68,13 @@ export class SignInPage extends BasePage {
     this.createAccountLink = page.getByRole('link', {
       name: 'Create an account',
     });
+    this.heading = page.getByRole('heading', {level: 2});
+    this.mainContent = page.getByRole('main');
+    this.codeWithoutSigningInHeading = page.locator('#code_without_signing_in');
+    this.googleSignInButton = page.locator('#google_oauth2-sign-in');
+    this.microsoftSignInButton = page.locator('#microsoft_v2_auth-sign-in');
+    this.facebookSignInButton = page.locator('#facebook-sign-in');
+    this.cleverSignInButton = page.locator('#clever-sign-in');
   }
 
   /** Navigate to /users/sign_in and wait for the locale dropdown. */
@@ -102,5 +138,24 @@ export class SignInPage extends BasePage {
       this.footer.localeDropdown.selectOption({label}),
     ]);
     await this.footer.waitForLocaleDropdownVisible();
+  }
+
+  /** A link by its visible text, scoped to the sign-in form (#signin). Locale-agnostic. */
+  linkInSignInForm(text: string): Locator {
+    return this.signInForm.getByRole('link', {name: text});
+  }
+
+  /**
+   * A "try it without signing in" course tile link by its visible text
+   * (heading + description). Locale-agnostic. The CSS scope
+   * (#code_without_signing_in + .row) is needed because the same course
+   * titles can recur elsewhere on the page (e.g. nav); it mirrors the
+   * source's own structural selector for this section.
+   */
+  quickStartLink(text: string): Locator {
+    return this.page
+      .locator('#code_without_signing_in + .row')
+      .getByRole('link')
+      .filter({hasText: text});
   }
 }
