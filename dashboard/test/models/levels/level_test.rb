@@ -1216,6 +1216,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test "get search options" do
+    unit = create(:script)
     search_options = Level.search_options
     assert_equal search_options[:levelOptions].map {|option| option[0]}, [
       "All types", "Aichat", "Ailab", "Applab", "Artist", "Blockly", "Bounce", "BubbleChoice",
@@ -1226,7 +1227,7 @@ class LevelTest < ActiveSupport::TestCase
       "StarWarsGrid", "Studio", "TextCompression", "TextMatch", "Unplugged",
       "Vigenere", "Weblab", "Weblab2"
     ]
-    scripts = ["All scripts"]
+    scripts = ["All scripts", unit.name]
     assert (scripts - search_options[:scriptOptions].map {|option| option[0]}).empty?
     assert (["Any owner"] - search_options[:ownerOptions].map {|option| option[0]}).empty?
   end
