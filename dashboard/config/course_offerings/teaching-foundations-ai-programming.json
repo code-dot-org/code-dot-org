@@ -2,7 +2,7 @@
   "key": "teaching-foundations-ai-programming",
   "display_name": "Teaching Foundations of AI Programming",
   "is_featured": false,
-  "assignable": true,
+  "assignable": false,
   "curriculum_type": "Professional Learning",
   "marketing_initiative": "AIF",
   "grade_levels": "9,10,11,12",

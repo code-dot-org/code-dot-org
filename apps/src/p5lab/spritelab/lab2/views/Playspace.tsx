@@ -237,8 +237,16 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           // Fade in on appearance (first measurement or hidden -> visible);
           // slide only between the two visible placements.
           opacity: measured && mode !== 'hidden' ? 1 : 0,
+          // Hairline seam so a white game canvas reads against a white page
+          // in light mode — corner preview only; it fades out with the slide
+          // to Play. A shadow, not a border, so the 400x400 geometry the
+          // transform and pointer math rely on stays untouched.
+          boxShadow:
+            mode === 'play'
+              ? '0 0 0 1px transparent'
+              : '0 0 0 1px var(--borders-neutral-primary)',
           transition: animate
-            ? 'transform 0.45s ease, opacity 0.18s ease-in'
+            ? 'transform 0.45s ease, opacity 0.18s ease-in, box-shadow 0.45s ease'
             : 'opacity 0.18s ease-in',
           // Interactive in Play, and while picking a location (so the preview
           // can be clicked even on the Code tab).

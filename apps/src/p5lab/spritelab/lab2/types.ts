@@ -17,6 +17,8 @@ export interface SerializedAnimationProps {
   frameDelay: number;
   version?: string;
   categories?: string[];
+  // Physical pixels per art pixel; absent on non-pixel-art animations.
+  pixelGridSize?: number;
 }
 
 // Mirrors the JSDoc `SerializedAnimationList` typedef in p5lab/shapes.js.
