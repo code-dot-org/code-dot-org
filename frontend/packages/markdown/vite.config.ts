@@ -3,6 +3,7 @@ import type {OutputOptions} from 'rollup';
 import {defineConfig} from 'vite';
 import dts from 'vite-plugin-dts';
 import {externalizeDeps} from 'vite-plugin-externalize-deps';
+import {libInjectCss} from 'vite-plugin-lib-inject-css';
 
 /**
  * Get Rollup output configuration.
@@ -22,6 +23,14 @@ function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
+    // Automatically inject CSS imports for each chunk that uses styles, so
+    // consumers get the markdown styles by importing the component — without
+    // this, the built JS only references the (hashed) class names and the
+    // emitted `.css` files are never loaded, so nothing is styled in the host
+    // app. Matches the component-library setup; the consumer's bundler owns
+    // when/how the CSS loads (package `sideEffects` keeps the imports from
+    // being tree-shaken).
+    libInjectCss(),
     // Generate Typescript declaration files using the Vite default tsconfig
     dts({
       tsconfigPath: './tsconfig.json',

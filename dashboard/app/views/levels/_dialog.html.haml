@@ -2,7 +2,7 @@
 - app = local_assigns[:app]
 
 - unless app == 'external'
-  .buttons{class: @level.properties['submittable'] == 'true' ? 'submittable' : nil}
+  .buttons
     - if local_assigns[:previous_page_button]
       %a.btn.btn-lg.btn-primary.previousPageButton
         =t('previous_page')

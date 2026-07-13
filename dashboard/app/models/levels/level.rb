@@ -880,9 +880,16 @@ class Level < ApplicationRecord
   end
 
   def get_level_for_progress(student = nil, script = nil)
+    return self if predict_level?
     # https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/app/views/levels/_contained_levels.html.haml#L1
     # We only display our first contained level, display progress for that level.
     contained_levels.first || self
+  end
+
+  # The levels that may hold this level's progress, in priority order.
+  def levels_for_progress
+    return [self, contained_levels.first] if predict_level? && !contained_levels.empty?
+    [contained_levels.first || self]
   end
 
   def summarize_for_lesson_show(can_view_teacher_markdown)

@@ -1,0 +1,58 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-07-11T03:10:25.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Closing Time",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "[SAM]:  ..We survived. WE SURVIVED. Do you know how many scoops I just did?? I didn't look at the window ONCE.",
+        "imageUrl": "",
+        "key": "undefined-e0a9bcf5-aa9e-443d-a879-725e04f602e9",
+        "typing": true,
+        "layout": "text-bottom-center",
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "[SAM]: You know what you actually did today? You gave an AI a goal, tools, and rules. You watched it mess up, figured out why, and fixed it.",
+        "imageUrl": "",
+        "key": "undefined-0c3cc5e2-306f-4680-a231-81a4c98f04fd",
+        "layout": "text-bottom-center",
+        "typing": true,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "[SAM]: That's not just an ice cream thing. That's a real job now. People who build and train AI agents do exactly what you did this hour.",
+        "imageUrl": "",
+        "key": "undefined-5ea2ca70-9731-48d5-8da0-199f0863e0d3",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "[SAM]: ...Same time tomorrow? Because I've been thinking. This shop could use an agent for social media. And inventory ordering. And—",
+        "imageUrl": "",
+        "key": "undefined-8823d531-5f2b-49fe-b76e-6f7a4c0a5204",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "[SAM]: Okay okay, go home. But seriously — nice work today.",
+        "imageUrl": "",
+        "key": "undefined-7b46e7f5-ca1e-4332-a4c3-fba6bd9b9c34",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-center"
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-11T03:10:25.917+00:00\",\"changed\":[\"cloned from \\\"thescoop-panels-level5\\\"\"],\"cloned_from\":\"thescoop-panels-level5\"},{\"changed_at\":\"2026-07-11 03:12:06 +0000\",\"changed\":[\"display_name\",\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Panels>

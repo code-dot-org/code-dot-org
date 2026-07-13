@@ -1,4 +1,5 @@
-import {type ModelMessage} from 'ai';
+import * as Observability from '@code-dot-org/core/plugins/observability';
+import {jsonSchema, Output, type ModelMessage} from 'ai';
 
 import {generateText} from '@cdo/apps/aiGateway';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -44,6 +45,10 @@ export async function generateChatResponse(
 ) {
   // Check input for safety.
   const userInputSafe = await isTextSafe(newMessage.chatMessageText);
+  Observability.metrics.count('ai-chat.text_moderation', 1, {
+    phase: 'input_filter',
+    result: userInputSafe ? 'ok' : 'flagged',
+  });
   if (!userInputSafe) {
     return {status: AiRequestExecutionStatus.USER_PROFANITY};
   }
@@ -59,12 +64,29 @@ export async function generateChatResponse(
     messages.push(await formatChatMessage(message, buildAssetUrl));
   }
 
+  // Structured-output schema, when the caller (e.g. weblab2/pythonlab AI
+  // Tutor) requested one via modelParameters.responseJsonSchema. jsonSchema()
+  // adapts the raw JSON Schema document into the shape Output.object expects,
+  // matching the pattern used by isTextSafe() and the levelbuilder generators.
+  const outputSchema = modelParameters.responseJsonSchema
+    ? Output.object({schema: jsonSchema(modelParameters.responseJsonSchema)})
+    : undefined;
+
   // Generate a response with the model.
-  const {text, files, finishReason, response} = await generateText({
+  const {text, files, finishReason, response, output} = await generateText({
     model: getModel(modelParameters.selectedModelId),
     messages,
     temperature: modelParameters.temperature,
+    ...(outputSchema && {output: outputSchema}),
   });
+
+  // chatMessageText has to stay a string (rendering, storage, non-schema
+  // messages all depend on that) even when a schema was used, so keep a
+  // stringified fallback for the non-SUCCESS return paths below and for
+  // storage. On SUCCESS we additionally return the already-parsed `output`
+  // itself (see structuredOutput below) so a jsonSchemaResponseCallback
+  // doesn't have to JSON.parse a string we just serialized from the same data.
+  const responseText = outputSchema ? JSON.stringify(output) : text;
 
   if (['content-filter', 'other'].includes(finishReason)) {
     // Gemini stores moderation information in a non-standard place so we need to dig into the raw HTTP body.
@@ -88,7 +110,7 @@ export async function generateChatResponse(
   const assets: ChatAsset[] = [];
   for (const file of files) {
     if (file.uint8Array.length === 0) {
-      return {response: text, status: AiRequestExecutionStatus.FAILURE};
+      return {response: responseText, status: AiRequestExecutionStatus.FAILURE};
     }
     let asset: ChatAsset;
     try {
@@ -108,19 +130,30 @@ export async function generateChatResponse(
     assets.push(asset);
     if (file.mediaType.startsWith('image/')) {
       sendLab2AnalyticsEvent(EVENTS.MODEL_OUTPUT_IMAGE_CREATED);
-      // Check generated images for safety.
+      const assetUrl = buildAssetUrl(asset);
+
+      Observability.logger.info('ai-chat.image_generated', {
+        assetUrl,
+        mediaType: file.mediaType,
+        model: modelParameters.selectedModelId,
+      });
       const imageModerationStatus = await getImageModerationStatus(
         file,
-        buildAssetUrl(asset)
+        assetUrl
       );
+      Observability.metrics.count('ai-chat.image_moderation', 1, {
+        result: imageModerationStatus,
+        mediaType: file.mediaType,
+        model: modelParameters.selectedModelId,
+      });
       if (imageModerationStatus === 'flagged') {
         return {
-          response: text,
+          response: responseText,
           status: AiRequestExecutionStatus.MODEL_IMAGE_FLAGGED,
         };
       } else if (imageModerationStatus === 'error') {
         return {
-          response: text,
+          response: responseText,
           status: AiRequestExecutionStatus.FAILURE,
         };
       }
@@ -128,10 +161,25 @@ export async function generateChatResponse(
   }
 
   // Check model text output for safety.
-  const modelOutputSafe = await isTextSafe(text);
+  const modelOutputSafe = await isTextSafe(responseText);
+  Observability.metrics.count('ai-chat.text_moderation', 1, {
+    phase: 'output_filter',
+    result: modelOutputSafe ? 'ok' : 'flagged',
+  });
   if (!modelOutputSafe) {
-    return {response: text, status: AiRequestExecutionStatus.MODEL_PROFANITY};
+    return {
+      response: responseText,
+      status: AiRequestExecutionStatus.MODEL_PROFANITY,
+    };
   }
 
-  return {response: text, assets, status: AiRequestExecutionStatus.SUCCESS};
+  return {
+    response: responseText,
+    // Already-parsed structured output, when a schema was used. Lets
+    // submitChatContents hand jsonSchemaResponseCallback the real object
+    // instead of making it re-parse responseText.
+    structuredOutput: outputSchema ? output : undefined,
+    assets,
+    status: AiRequestExecutionStatus.SUCCESS,
+  };
 }

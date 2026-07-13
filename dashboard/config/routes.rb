@@ -681,6 +681,12 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    get '/scrapbook', to: 'scrapbook#show'
+    # :token is an urlsafe-base64 signed token (no dots/slashes), so it needs no
+    # constraint. It carries the image's identity and authorization, letting an
+    # <img> tag load the image without relying on the session cookie.
+    get '/scrapbook/images/:token', to: 'scrapbook#image'
+
     get '/beta', to: redirect('/')
 
     get '/hoc/reset', to: 'script_levels#reset', script_id: Unit::HOC_NAME, as: 'hoc_reset'
@@ -1118,6 +1124,9 @@ Dashboard::Application.routes.draw do
 
     namespace :api do
       namespace :v1 do
+        resources :scrapbook_entries, only: [:create, :index, :destroy] do
+          post :image, on: :collection
+        end
         concerns :api_v1_pd_routes
         concerns :section_api_routes
 
@@ -1437,6 +1446,10 @@ Dashboard::Application.routes.draw do
     post '/aichat_events/log_chat_event', to: 'aichat_events#log_chat_event'
     post '/aichat_events/submit_teacher_feedback', to: 'aichat_events#submit_teacher_feedback'
     get '/aichat_events/chat_history', to: 'aichat_events#chat_history'
+
+    # Lab2 Sprite Lab scenes UI variant: cross-project scene jumps.
+    get '/sprite_lab2/section_scenes', to: 'sprite_lab2#section_scenes'
+    get '/sprite_lab2/external_scenes', to: 'sprite_lab2#external_scenes'
 
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 

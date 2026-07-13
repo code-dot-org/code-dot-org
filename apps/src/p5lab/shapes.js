@@ -68,6 +68,8 @@ export const CurrentAnimations = PropTypes.shape({
  * @property {bool} looping
  * @property {number} frameDelay
  * @property {string} [version] - S3 version key
+ * @property {number} [pixelGridSize] - Physical pixels per art pixel;
+ *           absent on classic animations and non-pixel-art images.
  */
 const serializedAnimationPropsShape = {
   name: PropTypes.string.isRequired,
@@ -77,6 +79,7 @@ const serializedAnimationPropsShape = {
   looping: PropTypes.bool.isRequired,
   frameDelay: PropTypes.number.isRequired,
   version: PropTypes.string,
+  pixelGridSize: PropTypes.number,
 };
 
 /**
@@ -128,6 +131,7 @@ function getSerializedAnimationProps(animation) {
     'frameDelay',
     'version',
     'categories',
+    'pixelGridSize',
   ]);
 }
 
