@@ -132,10 +132,8 @@ export class SketchLab extends LessonLevelPage {
    * Nudge the currently-focused node right with the arrow key until it fully
    * clears `other`'s bounding box (plus a margin). Adding a node auto-focuses
    * it, so this needs no click of its own. Arrow-key movement
-   * (useKeyboardNavigation.ts) sidesteps two mouse-drag pitfalls: the node's
-   * centered label steals a mousedown into text-edit mode, and — since new
-   * nodes stagger only 20px apart — while the two still overlap, the topmost
-   * one can swallow mouse input meant for a handle underneath it.
+   * (useKeyboardNavigation.ts) avoids moving the wrong node in case
+   * nodes are overlapping.
    */
   async nudgeFocusedNodeClearOf(
     node: Locator,
