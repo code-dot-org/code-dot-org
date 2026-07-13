@@ -10,6 +10,7 @@ import {
 } from '@cdo/apps/lab2/constants';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import ProjectManagerFactory from '@cdo/apps/lab2/projects/ProjectManagerFactory';
+import {getSourcesStoreForApp} from '@cdo/apps/lab2/projects/sourcesStoreForApp';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import type {
   BlocklyLevelProperties,
@@ -31,7 +32,11 @@ const isLevelEditMode = isStartMode || isToolboxMode;
 interface UseSourcesInput<T extends ProjectSources> {
   /** Level properties for the current level */
   levelProperties: LevelProperties;
-  /** Default project sources, used if there are no start sources on the level (or when editing start sources). */
+  /**
+   * Default project sources, used if there are no start sources on the level (or when editing start sources).
+   * Note: Must be referentially stable (e.g. a module constant or memoized); a fresh object every render will
+   * re-trigger loading.
+   */
   defaultSources: T;
   /** Standalone project channel (project) ID, if this is a standalone project */
   standaloneChannelId?: string;
@@ -50,8 +55,13 @@ interface UseSourcesOutput<T extends ProjectSources> {
   hasEdited: boolean;
   /** The current project sources. */
   currentSources: T | undefined;
-  /** Update the current project sources. */
-  updateSources: (newSources: T, forceSave?: boolean) => void;
+  /** Update the current project sources. Accepts the new sources, or an updater function. */
+  updateSources: (
+    newSourcesOrUpdater: T | ((prev: T | undefined) => T),
+    forceSave?: boolean
+  ) => void;
+  /** Shallow-merge a patch into the latest sources. */
+  patchSources: (patch: Partial<T>, forceSave?: boolean) => void;
   /** Reset the project sources to the start sources. */
   startOver: () => void;
   /** Error that occurred during loading sources, if any. */
@@ -90,6 +100,13 @@ export default function useSources<T extends ProjectSources>({
 
   const [isLoading, setIsLoading] = useState(false);
   const [currentSources, setCurrentSources] = useState<T>();
+  // Synchronous mirror of currentSources: written concurrently with
+  // setCurrentSources so updater-form updates and getSources always see the latest value.
+  const currentSourcesRef = useRef<T>();
+  const setSources = useCallback((sources: T | undefined) => {
+    currentSourcesRef.current = sources;
+    setCurrentSources(sources);
+  }, []);
   const [versionList, setVersionList] = useState<ProjectVersion[]>([]);
   const [currentVersion, setCurrentVersion] = useState<string>();
   const [hasEdited, setHasEdited] = useState(false);
@@ -109,61 +126,84 @@ export default function useSources<T extends ProjectSources>({
    * Loads project data and version list (if needed) for current level/user.
    * This is meant to be called whenever the level or view as user changes.
    */
-  const loadProject = useCallback(async () => {
-    const {usesProjects, id, isProjectLevel} = levelProperties;
-    if (!usesProjects) {
-      return;
-    }
-    // Clear out existing data.
-    setCurrentSources(undefined);
-    setVersionList([]);
-    setCurrentVersion(undefined);
-    setHasEdited(false);
-    setLoadError(undefined);
-    await projectManagerRef.current?.cleanUp();
+  const loadProject = useCallback(
+    // isCancelled returns true when a newer load supersedes this one (e.g. level
+    // change mid-load); checked after every await so a slow stale load can't
+    // resurrect the previous level's sources or double-attach callbacks.
+    async (isCancelled: () => boolean = () => false) => {
+      const {usesProjects, id, isProjectLevel} = levelProperties;
+      if (!usesProjects) {
+        return;
+      }
+      // Clear out existing data.
+      setSources(undefined);
+      setVersionList([]);
+      setCurrentVersion(undefined);
+      setHasEdited(false);
+      setLoadError(undefined);
+      await projectManagerRef.current?.cleanUp();
+      if (isCancelled()) return;
 
-    // Set up new Project Manager, unless we're in level edit mode.
-    if (!isLevelEditMode) {
-      projectManagerRef.current = standaloneChannelId
-        ? ProjectManagerFactory.getProjectManager(
-            standaloneChannelId,
-            isProjectLevel || false
-          )
-        : await ProjectManagerFactory.getProjectManagerForLevel(
-            id,
-            isProjectLevel || false,
-            userId || undefined,
-            scriptId || undefined
-          );
-    }
+      // Set up new Project Manager, unless we're in level edit mode.
+      if (!isLevelEditMode) {
+        const sourcesStore = getSourcesStoreForApp(levelProperties.appName);
+        // TODO: the lab2Redux thunk also passes isShareView into
+        // getProjectManager, currently only used for thumbnail.
+        const projectManager = standaloneChannelId
+          ? ProjectManagerFactory.getProjectManager(
+              standaloneChannelId,
+              isProjectLevel || false,
+              undefined,
+              sourcesStore
+            )
+          : await ProjectManagerFactory.getProjectManagerForLevel(
+              id,
+              isProjectLevel || false,
+              userId || undefined,
+              scriptId || undefined,
+              sourcesStore
+            );
+        // Return early if cancelled; the new load will own the ref.
+        if (isCancelled()) return;
+        projectManagerRef.current = projectManager;
+      }
 
-    // Load and set initial project sources (even if we don't have a project).
-    const projectAndSources = await projectManagerRef.current?.load();
-    setCurrentSources(
-      (getInitialSources(levelProperties, projectAndSources?.sources) as T) ||
-        defaultSources
-    );
+      // Load and set initial project sources (even if we don't have a project).
+      const projectAndSources = await projectManagerRef.current?.load();
+      if (isCancelled()) return;
+      setSources(
+        (getInitialSources(levelProperties, projectAndSources?.sources) as T) ||
+          defaultSources
+      );
 
-    // No project; return early.
-    if (!projectManagerRef.current) return;
+      // No project; return early.
+      if (!projectManagerRef.current) return;
 
-    // Load project versions, if needed.
-    if (includeVersionHistory) {
-      await refreshVersionList(projectManagerRef.current);
-    }
-    setProjectCallbacks(projectManagerRef.current, dispatch);
-  }, [
-    levelProperties,
-    defaultSources,
-    standaloneChannelId,
-    userId,
-    scriptId,
-    includeVersionHistory,
-    dispatch,
-  ]);
+      // Load project versions, if needed.
+      if (includeVersionHistory) {
+        await refreshVersionList(projectManagerRef.current, isCancelled);
+        if (isCancelled()) return;
+      }
+      setProjectCallbacks(projectManagerRef.current, dispatch);
+    },
+    [
+      levelProperties,
+      defaultSources,
+      standaloneChannelId,
+      userId,
+      scriptId,
+      includeVersionHistory,
+      dispatch,
+      setSources,
+    ]
+  );
 
-  const refreshVersionList = async (projectManager: ProjectManager) => {
+  const refreshVersionList = async (
+    projectManager: ProjectManager,
+    isCancelled: () => boolean = () => false
+  ) => {
     const versionList = await projectManager.getVersionList(true);
+    if (isCancelled()) return;
     setVersionList(versionList);
     const latestVersion =
       versionList.find(v => v.isLatest)?.versionId || INITIAL_VERSION_ID;
@@ -172,27 +212,41 @@ export default function useSources<T extends ProjectSources>({
 
   const reinitializeSources = useCallback(
     (sources: T | undefined) => {
-      setCurrentSources(sources);
+      setSources(sources);
       onReinitialize?.();
     },
-    [onReinitialize]
+    [setSources, onReinitialize]
   );
 
   const updateSources = useCallback(
-    (newSources: T, forceSave = false) => {
+    (
+      newSourcesOrUpdater: T | ((prev: T | undefined) => T),
+      forceSave = false
+    ) => {
       if (!projectManagerRef.current || !isEditable) return;
-      setCurrentSources(prev => {
-        // Perform a deep equality check to prevent unnecessary re-renders
-        if (isEqual(prev, newSources)) {
-          return prev;
-        }
-        setHasEdited(true);
-        return newSources;
-      });
-
+      // Resolve updaters against the ref, not state: state lags a render, so
+      // two quick partial updates would build on the same stale base and
+      // drop each other's fields.
+      const newSources =
+        typeof newSourcesOrUpdater === 'function'
+          ? newSourcesOrUpdater(currentSourcesRef.current)
+          : newSourcesOrUpdater;
+      // Deep equality check to prevent unnecessary re-renders and saves.
+      if (isEqual(currentSourcesRef.current, newSources)) {
+        return;
+      }
+      setSources(newSources);
+      setHasEdited(true);
       projectManagerRef.current?.save(newSources, forceSave);
     },
-    [setCurrentSources, isEditable]
+    [setSources, isEditable]
+  );
+
+  const patchSources = useCallback(
+    (patch: Partial<T>, forceSave = false) => {
+      updateSources(prev => ({...prev, ...patch} as T), forceSave);
+    },
+    [updateSources]
   );
 
   const startOver = useCallback(() => {
@@ -272,11 +326,27 @@ export default function useSources<T extends ProjectSources>({
   );
 
   useEffect(() => {
+    let cancelled = false;
     setIsLoading(true);
-    loadProject()
-      .catch(setLoadError)
-      .finally(() => setIsLoading(false));
+    loadProject(() => cancelled)
+      .catch(error => {
+        if (!cancelled) setLoadError(error);
+      })
+      .finally(() => {
+        if (!cancelled) setIsLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
   }, [loadProject]);
+
+  // Clean up on unmount.
+  useEffect(
+    () => () => {
+      projectManagerRef.current?.cleanUp();
+    },
+    []
+  );
 
   useEffect(() => {
     dispatch(clearHeader());
@@ -291,6 +361,7 @@ export default function useSources<T extends ProjectSources>({
     hasEdited,
     currentSources,
     updateSources,
+    patchSources,
     startOver,
     loadError,
     versionList,
