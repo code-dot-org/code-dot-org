@@ -167,7 +167,7 @@ describe('createShepherdTour — anchor-watching MutationObserver', () => {
     expect(api.cancelMock).not.toHaveBeenCalled();
   });
 
-  it('removes all tour-step-highlight elements from the DOM when the tour is cancelled', () => {
+  it('removes the tour-step-highlight class from all highlighted elements when the tour is cancelled', () => {
     const elA = document.createElement('div');
     elA.classList.add('tour-step-highlight');
     const elB = document.createElement('div');

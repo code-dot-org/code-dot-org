@@ -27,7 +27,6 @@ let registerActiveTour: (tour: FakeTour) => void;
 
 beforeEach(() => {
   jest.resetModules();
-  jest.mock('shepherd.js', () => ({__esModule: true, default: {}}));
   registerActiveTour = (
     require('@cdo/apps/sharedComponents/productTour/activeTourTracker') as {
       registerActiveTour: (tour: FakeTour) => void;

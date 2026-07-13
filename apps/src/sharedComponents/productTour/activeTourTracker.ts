@@ -1,4 +1,4 @@
-import {Tour} from 'shepherd.js';
+import type {Tour} from 'shepherd.js';
 
 // At most one tour should run at a time. This module tracks the currently
 // active tour and cancels it when a new one starts.
