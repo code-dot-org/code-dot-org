@@ -12,8 +12,6 @@ services:
       timeout: 3s
       retries: 30
       start_period: 5s
-    ports:
-      - "${CDO_DB_PORT:-13306}:3306"
     ulimits:
       nofile:
         soft: 65536
