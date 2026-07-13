@@ -1,0 +1,10 @@
+.whiteboardPlaceholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+  border: 2px dashed var(--border-neutral, #ccc);
+  border-radius: 8px;
+  color: var(--text-neutral-secondary, #666);
+  font-style: italic;
+}

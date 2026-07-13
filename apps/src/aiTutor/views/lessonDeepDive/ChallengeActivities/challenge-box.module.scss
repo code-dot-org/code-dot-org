@@ -1,0 +1,21 @@
+.challengeToggle {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+
+  button {
+    padding: 6px 16px;
+    background-color: transparent;
+    border: 1px solid #9657c7;
+    border-radius: 8px;
+    color: #9657c7;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    &.active {
+      background-color: #9657c7;
+      color: #fff;
+    }
+  }
+}
