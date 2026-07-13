@@ -25,6 +25,12 @@ export interface CreateUserOptions {
    * account.
    */
   signInAfterCreate?: boolean;
+  /**
+   * Provision via OmniAuth instead of a password. When set, create_user drops
+   * password/password_confirmation and forwards this as the OmniAuth provider
+   * (TestController#create_user's `OmniAuth::AuthHash.new({provider: sso, ...})`).
+   */
+  sso?: 'clever' | 'google_oauth2';
   /** Extra fields merged into the `user` body sent to /api/test/create_user. */
   extraFields?: Record<string, string | number | boolean>;
 }
@@ -47,13 +53,14 @@ export async function createUser(
     signInCount = 2,
     email: emailOverride,
     signInAfterCreate = true,
+    sso,
     extraFields,
   }: CreateUserOptions,
 ): Promise<UserCredentials> {
   const timestamp = Date.now();
   const rand = Math.floor(Math.random() * 1_000_000);
   const email = emailOverride ?? `user${timestamp}_${rand}@test.xx`;
-  const password = `${name}password`;
+  const password = sso ? undefined : `${name}password`;
   const age = type === 'teacher' ? '21+' : '16';
 
   const {ok, status} = await requestWithCsrf(
@@ -64,8 +71,7 @@ export async function createUser(
       user: {
         user_type: type,
         email,
-        password,
-        password_confirmation: password,
+        ...(password ? {password, password_confirmation: password} : {}),
         name,
         age,
         terms_of_service_version: '1',
@@ -74,6 +80,7 @@ export async function createUser(
         email_preference_form_kind: email,
         email_preference_request_ip: '127.0.0.1',
         email_preference_source: 'ACCOUNT_SIGN_UP',
+        ...(sso ? {sso, uid: `${timestamp}_${rand}`} : {}),
         ...extraFields,
       },
     },
@@ -82,11 +89,11 @@ export async function createUser(
     throw new Error(`create_user failed: ${status}`);
   }
 
-  if (signInAfterCreate) {
+  if (signInAfterCreate && password) {
     await signIn(page, {email, password});
   }
 
-  return {email, password, name};
+  return {email, password: password ?? '', name};
 }
 
 /** Create an EU student (createStudent variant) with data_transfer_agreement pre-accepted. */
@@ -125,6 +132,12 @@ export interface CreateStudentOptions {
   parentCreated?: boolean;
   /** POST /users/sign_in after creating; defaults to true. See createUser. */
   signInAfterCreate?: boolean;
+  /**
+   * Provision via SSO instead of a password. 'google' maps to the
+   * 'google_oauth2' OmniAuth provider (matching account_steps.rb's
+   * create_user); 'clever' is passed through unchanged.
+   */
+  sso?: 'clever' | 'google';
   /** Extra fields merged into the create_user body after the derived ones. */
   extraFields?: Record<string, string | number | boolean>;
 }
@@ -146,6 +159,7 @@ export async function createStudent(
     createdAt,
     parentCreated = false,
     signInAfterCreate = true,
+    sso,
     extraFields,
   }: CreateStudentOptions = {},
 ): Promise<UserCredentials> {
@@ -157,6 +171,7 @@ export async function createStudent(
     email,
     signInCount,
     signInAfterCreate,
+    sso: sso === 'google' ? 'google_oauth2' : sso,
     extraFields: {
       age,
       ...(createdAt ? {created_at: createdAt} : {}),

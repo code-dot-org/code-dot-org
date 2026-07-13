@@ -1,4 +1,5 @@
 @no_mobile
+@playwright
 Feature: Child Account Policy Lockout Phase
   Scenario: Student account Under-13 in Colorado created before CAP start cannot change age and state
   Given I am on "http://studio.code.org"

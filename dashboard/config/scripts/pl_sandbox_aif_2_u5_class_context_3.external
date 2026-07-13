@@ -19,7 +19,7 @@ Teachers serve as guides supporting **design thinking, encouraging responsible A
     
 <div style="background-color: #FFFFFF; border-radius: 20px; color: #000000; width: 90%; padding: 10px;">
         <h3 style="margin: 0;"><b>Role of the Teacher</b></h3>
-        <p style="color: black; line-height: 1.25; font-size: 18px; margin: 5px 0 0 0;">
+        <p style="color: black; line-height: 1.25; font-size: 12pt; margin: 5px 0 0 0;">
             All lessons within the unit are intended to be <strong>facilitated by a teacher</strong>. These lessons are <strong>not designed as self-paced experiences for students</strong> to work through at their own pace.
         </p>
     </div>
@@ -30,17 +30,90 @@ Teachers serve as guides supporting **design thinking, encouraging responsible A
 ## Unit Length and Format
 
 **Total Duration:** Approximately 3 weeks
+
 **Structure:** Eleven 45-minute lessons and one 5-day culminating project
 
-# ****Update image - calendar not posted yet**
-<img src="https://images.code.org/64f9fd216d8674befc3da54e558ff1fc-image-1768411220399.png" alt="lesson calandar for unit 4" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+<table style="border-collapse:separate; border-spacing:4px; border:2px solid #7B3FC7; margin:20px auto; font-family:Arial, sans-serif;">
+
+  <!-- Week 1 -->
+  <tr>
+    <td style="background:#7B3FC7; color:white; font-weight:bold; text-align:center; padding:18px 14px; min-width:70px;">
+      Week 1
+    </td>
+
+  <td style="border:1px solid #69A7D8; padding:10px; text-align:center; width:140px;">
+      <strong>Lesson 1</strong><br>
+      Where Data Comes From
+    </td>
+
+  <td style="border:1px solid #69A7D8; padding:10px; text-align:center; width:140px;">
+      <strong>Lesson 2</strong><br>
+      Why Apps Wait
+    </td>
+
+  <td style="border:1px solid #69A7D8; padding:10px; text-align:center; width:140px;">
+      <strong>Lesson 3</strong><br>
+      Getting Data Online
+    </td>
+
+  <td style="border:1px solid #69A7D8; padding:10px; text-align:center; width:140px;">
+      <strong>Lesson 4</strong><br>
+      Making Steps Clear
+    </td>
+
+  <td style="border:1px solid #69A7D8; padding:10px; text-align:center; width:140px;">
+      <strong>Lesson 5</strong><br>
+      Making Sense of Data
+    </td>
+  </tr>
+
+  <!-- Week 2 -->
+  <tr>
+    <td style="background:#7B3FC7; color:white; font-weight:bold; text-align:center; padding:18px 14px;">
+      Week 2
+    </td>
+
+  <td style="border:1px solid #69A7D8; padding:10px; text-align:center;">
+      <strong>Lesson 6</strong><br>
+      Showing Data on the Page
+    </td>
+
+  <td style="border:1px solid #69A7D8; padding:10px; text-align:center;">
+      <strong>Lesson 7</strong><br>
+      When Things Break
+    </td>
+
+   <td style="border:1px solid #69A7D8; padding:10px; text-align:center;">
+      <strong>Lesson 8</strong><br>
+      Catching Problems
+    </td>
+
+  <td style="border:1px solid #69A7D8; padding:10px; text-align:center;">
+      <strong>Lesson 9</strong><br>
+      Keeping Users Informed
+    </td>
+
+  <td style="border:1px solid #69A7D8; padding:10px; text-align:center;">
+      <strong>Lesson 10</strong><br>
+      Local vs Live Data
+    </td>
+  </tr>
+
+  <!-- Week 3 -->
+  <tr>
+    <td style="background:#7B3FC7; color:white; font-weight:bold; text-align:center; padding:18px 14px;">
+      Week 3
+    </td>
+
+  <td colspan="5" style="border:1px solid #69A7D8; padding:14px; text-align:center;">
+      <strong>Lesson 11:</strong> Explore-Style App Project
+    </td>
+  </tr>
+
+</table>
 
 
-
-
-## Next up
-
-Let's begin with the end in mind and take a look at the final project. 
+ 
 
 
 MARKDOWN

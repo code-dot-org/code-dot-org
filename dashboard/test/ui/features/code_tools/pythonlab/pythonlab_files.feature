@@ -1,6 +1,4 @@
 @no_mobile
-# Our minimum version of Safari does not support web workers
-@no_safari
 Feature: Python Lab manage files and folders
 
 Background:

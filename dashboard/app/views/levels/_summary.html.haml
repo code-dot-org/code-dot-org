@@ -2,6 +2,10 @@
   levels =
     if @level.is_a?(LevelGroup)
       @level.levels
+    elsif @level.predict_level?
+      # A predict level presents its own question, even when it still has a
+      # legacy contained level from before migration.
+      [@level]
     else
       [@level.contained_levels.any? ? @level.contained_levels.first : @level]
     end

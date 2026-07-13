@@ -1,4 +1,4 @@
-import {test as base} from '@playwright/test';
+import {createVisualTest} from '@code-dot-org/playwright-support/visual';
 
 import {
   createUser,
@@ -25,7 +25,9 @@ interface Fixtures {
   dcdo: Dcdo;
 }
 
-export const test = base.extend<Fixtures>({
+const visual = createVisualTest({appName: 'Code.org E2E Playwright'});
+
+export const test = visual.test.extend<Fixtures>({
   signInAsNewUser: async ({page}, use) => {
     await use(async options => {
       await resetSession(page);
@@ -42,4 +44,8 @@ export const test = base.extend<Fixtures>({
   },
 });
 
-export {expect} from '@playwright/test';
+export const {expect} = visual;
+export type {
+  VisualCheck,
+  VisualCheckOptions,
+} from '@code-dot-org/playwright-support/visual';

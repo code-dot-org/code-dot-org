@@ -128,6 +128,32 @@ module Cdo
         }
       )
       @metrics_reporter.start
+
+      start_instance_cost_collector
+    end
+
+    # Publish this instance's modeled compute cost as a per-minute rate. The rate
+    # is constant over the instance's life, so a coarse 60s cadence is plenty.
+    # No-op off EC2 or when the price can't be resolved (so local/dev stays quiet).
+    def self.start_instance_cost_collector
+      require 'cdo/aws/ec2'
+
+      instance_type = AWS::EC2.instance_type
+      hourly_rate = AWS::EC2.hourly_rate
+      return if hourly_rate.nil?
+
+      require 'cdo/instance_cost_collector'
+      @cost_reporter ||= Cdo::InstanceCostCollector.new(
+        cost_per_minute: hourly_rate / 60.0,
+        namespace: 'App Server',
+        interval: 60,
+        resolution: 60,
+        dimensions: {
+          Host: CDO.dashboard_hostname,
+          InstanceType: instance_type
+        }
+      )
+      @cost_reporter.start
     end
 
     # Prefork RSS is the copy-on-write baseline every worker forks from, hence the ceiling on

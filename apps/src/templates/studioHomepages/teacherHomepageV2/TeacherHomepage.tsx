@@ -7,6 +7,7 @@ import DCDO from '@cdo/apps/dcdo';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import LatamGeRegionNotice from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/LatamGeRegionNotice';
 import {detectNetworkAvailability} from '@cdo/apps/util/detectNetworkAvailability';
 import experiments from '@cdo/apps/util/experiments';
@@ -21,7 +22,10 @@ import {
   asyncLoadCoteacherInvite,
   fetchDemoPresets,
 } from '../../teacherDashboard/teacherSectionsRedux';
-import {DemoType} from '../../teacherDashboard/types/teacherSectionTypes';
+import {
+  DemoType,
+  Section,
+} from '../../teacherDashboard/types/teacherSectionTypes';
 import CoteacherInviteNotification from '../CoteacherInviteNotification';
 
 import DemoSectionCard from './DemoSectionCard';
@@ -29,13 +33,11 @@ import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
 import LogoTransition from './LogoTransition';
 import OnboardingChecklist from './OnboardingChecklist';
+import {pickDemoType} from './pickDemoType';
 import {SectionList} from './SectionList';
 import TeacherHomepagePopups from './TeacherHomepagePopups';
 import TeacherPromotions from './TeacherPromotions';
 import {TempRebrandBanner} from './tempRebrandBanner/TempRebrandBanner';
-import useCreateSectionTour from './useCreateSectionTour';
-import useLearnHowToEvaluateTour from './useLearnHowToEvaluateTour';
-import useReviewSyllabusTour from './useReviewSyllabusTour';
 
 import styles from './teacherHomepage.module.scss';
 
@@ -62,18 +64,36 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
     state => state.currentUser.gradesTeaching
   );
   const sections = useAppSelector(state => state.teacherSections.sections);
+  const demoPresetsAreLoaded = useAppSelector(
+    state => state.teacherSections.demoPresetsAreLoaded
+  );
+  const sectionsAreLoaded = useAppSelector(
+    state => state.teacherSections.sectionsAreLoaded
+  );
 
-  const demoSectionDemoType = React.useMemo<DemoType | null>(() => {
-    const demo = Object.values(sections).find(
-      s => s.demoType !== null && s.demoType !== undefined
+  const demoSection = React.useMemo<Section | null>(() => {
+    return (
+      Object.values(sections).find(
+        s => s.demoType !== null && s.demoType !== undefined
+      ) ?? null
     );
-    return demo?.demoType ?? null;
   }, [sections]);
+  const demoSectionDemoType = demoSection?.demoType ?? null;
 
-  const tour = useCreateSectionTour(gradesTeaching);
-  const reviewSyllabusTour = useReviewSyllabusTour(demoSectionDemoType);
-  const learnHowToEvaluateTour = useLearnHowToEvaluateTour(demoSectionDemoType);
   const isDemoSectionEnabled = experiments.isEnabled('demo-section');
+
+  // When no real demo section exists yet but the DemoSectionCard is shown
+  // (isDemoSectionEnabled + no sections created), infer the demo type from
+  // the teacher's grades so the onboarding checklist appears.
+  const effectiveDemoType = React.useMemo<DemoType | null>(() => {
+    if (demoSectionDemoType !== null) {
+      return demoSectionDemoType;
+    }
+    if (isDemoSectionEnabled && Object.keys(sections).length === 0) {
+      return pickDemoType(gradesTeaching);
+    }
+    return null;
+  }, [demoSectionDemoType, isDemoSectionEnabled, sections, gradesTeaching]);
 
   const teacherName = useAppSelector(state => state.currentUser.displayName);
   const teacherId = useAppSelector(state => state.currentUser.userId);
@@ -258,6 +278,43 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
     [sections, showHiddenOnly]
   );
 
+  // Show the onboarding checklist at the exact moment section content becomes
+  // visible — either SectionList (real demo section) or DemoSectionCard (pre-creation).
+  const showOnboardingChecklist = React.useMemo(() => {
+    if (
+      !isMiniTutorialEnabled ||
+      !effectiveDemoType ||
+      isLoadingOnboardingHiddenStatus
+    ) {
+      return false;
+    }
+    // Case 1: a real demo section exists and the section list is on screen.
+    if (demoSectionDemoType !== null && numSections > 0) {
+      return true;
+    }
+    // Case 2: the DemoSectionCard is on screen (no real section yet).
+    if (
+      isDemoSectionEnabled &&
+      numSections === 0 &&
+      !showHiddenOnly &&
+      demoPresetsAreLoaded &&
+      sectionsAreLoaded
+    ) {
+      return true;
+    }
+    return false;
+  }, [
+    isMiniTutorialEnabled,
+    effectiveDemoType,
+    isLoadingOnboardingHiddenStatus,
+    demoSectionDemoType,
+    numSections,
+    isDemoSectionEnabled,
+    showHiddenOnly,
+    demoPresetsAreLoaded,
+    sectionsAreLoaded,
+  ]);
+
   const onArchiveToggleChange = (value: ArchivedToggleOption) => {
     const toggleEvent =
       value === 'teaching'
@@ -327,38 +384,60 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
               isForPl={false}
               destructiveLoad={true}
             />
-            {!!isMiniTutorialEnabled &&
-              demoSectionDemoType !== null &&
-              !isLoadingOnboardingHiddenStatus && (
-                <OnboardingChecklist
-                  createSectionTour={tour}
-                  reviewSyllabusTour={reviewSyllabusTour}
-                  learnHowToEvaluateTour={learnHowToEvaluateTour}
-                  demoType={demoSectionDemoType}
-                  isHidden={onboardingHidden}
-                  onHide={handleHideOnboarding}
-                />
-              )}
             {!isDemoSectionEnabled ? (
               numSections === 0 ? (
                 <EmptyHomepage showHiddenOnly={showHiddenOnly} />
               ) : (
-                <SectionList
-                  showHiddenOnly={showHiddenOnly}
-                  studioUrlPrefix={studioUrlPrefix}
-                />
+                <>
+                  {showOnboardingChecklist && (
+                    <OnboardingChecklist
+                      demoSection={demoSection}
+                      demoType={effectiveDemoType!}
+                      isHidden={onboardingHidden}
+                      onHide={handleHideOnboarding}
+                    />
+                  )}
+                  <SectionList
+                    showHiddenOnly={showHiddenOnly}
+                    studioUrlPrefix={studioUrlPrefix}
+                  />
+                </>
               )
             ) : numSections === 0 ? (
               showHiddenOnly ? (
                 <EmptyHomepage showHiddenOnly={showHiddenOnly} />
+              ) : isLoadingOnboardingHiddenStatus ||
+                !demoPresetsAreLoaded ||
+                !sectionsAreLoaded ? (
+                <Spinner size="large" />
               ) : (
-                <DemoSectionCard showHiddenOnly={showHiddenOnly} />
+                <>
+                  {showOnboardingChecklist && (
+                    <OnboardingChecklist
+                      demoSection={demoSection}
+                      demoType={effectiveDemoType!}
+                      isHidden={onboardingHidden}
+                      onHide={handleHideOnboarding}
+                    />
+                  )}
+                  <DemoSectionCard showHiddenOnly={showHiddenOnly} />
+                </>
               )
             ) : (
-              <SectionList
-                showHiddenOnly={showHiddenOnly}
-                studioUrlPrefix={studioUrlPrefix}
-              />
+              <>
+                {showOnboardingChecklist && (
+                  <OnboardingChecklist
+                    demoSection={demoSection}
+                    demoType={effectiveDemoType!}
+                    isHidden={onboardingHidden}
+                    onHide={handleHideOnboarding}
+                  />
+                )}
+                <SectionList
+                  showHiddenOnly={showHiddenOnly}
+                  studioUrlPrefix={studioUrlPrefix}
+                />
+              </>
             )}
           </div>
           <TeacherPromotions />

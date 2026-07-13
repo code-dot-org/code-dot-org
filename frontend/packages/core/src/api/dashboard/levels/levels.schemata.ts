@@ -50,6 +50,7 @@ export const LevelPropertiesBaseSchema = z.object({
   parentLevelLink: z
     .string()
     .nullable()
+    .optional()
     .transform(value => value ?? undefined),
   longInstructions: z.string().optional(),
   shortInstructions: z.string().optional(),
@@ -63,6 +64,7 @@ export const LevelPropertiesBaseSchema = z.object({
   exemplarSources: z
     .union([ProjectSourcesSchema, MultiFileSourceSchema])
     .nullable()
+    .optional()
     .transform(value => value ?? undefined),
   hideVersionHistory: z.boolean().optional(),
   aiTutorAvailable: z.boolean().optional(),
@@ -80,8 +82,11 @@ export const LevelPropertiesBaseSchema = z.object({
   finishDialog: z.string().optional(),
   offerBrowserTts: z.boolean().nullable(),
   useSecondaryFinishButton: z.boolean().optional(),
-  // Legacy
-  helpVideos: z.array(z.string()).default([]),
+  // Legacy. Curriculum videos come back as strings for most levels but as
+  // objects ({src, key, name, thumbnail, ...}) on standalone-video levels.
+  helpVideos: z
+    .array(z.union([z.string(), z.record(z.string(), z.unknown())]))
+    .default([]),
   baseAssetUrl: z.string().default('/blockly/'),
   showExemplarLink: z
     .boolean()
