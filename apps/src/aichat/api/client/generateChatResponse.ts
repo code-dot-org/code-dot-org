@@ -135,11 +135,19 @@ export async function generateChatResponse(
     assets.push(asset);
     if (file.mediaType.startsWith('image/')) {
       sendLab2AnalyticsEvent(EVENTS.MODEL_OUTPUT_IMAGE_CREATED);
+      const assetUrl = buildAssetUrl(asset);
+
+      Observability.logger.info('ai-chat.image_generated', {
+        assetUrl,
+        mediaType: file.mediaType,
+        model: modelParameters.selectedModelId,
+      });
+
       // Check generated images for safety.
       const imageSafetyChecks: [
         ReturnType<typeof getImageModerationStatus>,
         ReturnType<typeof isImageSafe>?
-      ] = [getImageModerationStatus(file, buildAssetUrl(asset))];
+      ] = [getImageModerationStatus(file, assetUrl)];
       if (isOutputImageLlmSafetyJudgeEnabled()) {
         imageSafetyChecks.push(isImageSafe(file));
       }

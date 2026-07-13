@@ -1,0 +1,55 @@
+name 'pl-aif-2-U4-display-obj-cards_pl'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Displaying Objects as Cards
+
+Many apps display information as cards that combine text, images, and ratings into something users can quickly scan. But real-world data is often messy. Some fields may be missing, incomplete, or even **null.**
+
+When this happens, programmers and designers must decide what to show instead and those choices can influence how users understand and trust the information they see.
+
+## Why Websites Do This
+
+Below are two versions of the same card. One includes a missing value.
+
+Websites don’t usually leave empty or broken-looking fields on the screen. Instead, they often substitute a default value so the interface still feels complete and usable even when the data is imperfect.
+
+<div style="display:flex; justify-content:center; gap:36px; font-family:Arial, sans-serif; margin:24px 0;">
+
+  <div style="text-align:center;">
+    <div style="font-size:30px; font-weight:700; margin-bottom:18px; color:#111827;">Card A</div>
+
+  <div style="width:250px; min-height:310px; border:3px solid #6b7280; background:#ffffff; padding:28px 18px; box-sizing:border-box;">
+      <img src="https://images.code.org/93113371d45f964fbe653122d4ddbe5f-image-1781109610369.png" alt="Kyle Blake" style="width:125px; height:125px; border-radius:50%; border:2px solid #d1d5db; object-fit:cover; margin:0 auto 18px auto; display:block;">
+
+  <div style="font-size:18px; font-weight:700; color:#374151; margin-bottom:8px;">Kyle Blake</div>
+      <div style="font-size:15px; color:#6b7280; margin-bottom:10px;">Catering Manager</div>
+      <div style="font-size:14px; color:#111827; margin-bottom:10px;">Email: kyle.blake@burgerbros.com</div>
+      <div style="font-size:14px; color:#6b7280;">Managerial Staff</div>
+    </div>
+  </div>
+
+  <div style="text-align:center;">
+    <div style="font-size:30px; font-weight:700; margin-bottom:18px; color:#111827;">Card B</div>
+
+  <div style="width:250px; min-height:325px; border:3px solid #6b7280; background:#ffffff; padding:28px 18px; box-sizing:border-box;">
+      <div style="width:125px; height:125px; border-radius:50%; background:#9ca3af; margin:0 auto 18px auto;"></div>
+
+  <div style="font-size:18px; font-weight:700; color:#374151; margin-bottom:8px;">David Yang-Blake</div>
+      <div style="font-size:15px; color:#6b7280; margin-bottom:10px;">Catering Manager</div>
+      <div style="font-size:14px; color:#111827; margin-bottom:10px;">david.yangblake@burgerbros.com</div>
+      <div style="font-size:14px; color:#6b7280;">VIP Client Services</div>
+    </div>
+  </div>
+
+</div>
+
+<div style="background-color:#e4e2f8; border-radius:10px; padding:15px; margin:20px auto; max-width:85%; box-sizing:border-box;">
+  <p style="font-size:14pt; margin:0; line-height:1.4;">
+    📖 A <strong>fallback value</strong> is a default value shown when data is missing or null.
+  </p>
+</div>
+
+
+MARKDOWN

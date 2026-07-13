@@ -20,7 +20,12 @@ const ACCOUNT_DETAILS_TAB = 'account-details';
 // (legacy parity). Educator Profile is hidden for students.
 const TAB_META = [
   {value: ACCOUNT_DETAILS_TAB, text: 'Account Details'},
-  {value: 'educator-profile', text: 'Educator Profile', disabled: true, educatorOnly: true},
+  {
+    value: 'educator-profile',
+    text: 'Educator Profile',
+    disabled: true,
+    educatorOnly: true,
+  },
   {value: 'communications', text: 'Communications', disabled: true},
   {value: 'integrations', text: 'Integrations', disabled: true},
 ];
