@@ -9,7 +9,7 @@ The pyodide web worker (`pyodideWebWorker.ts`) and the service worker that
 makes blocking `input()` calls work (`inputServiceWorker.js`) both run
 inside a hidden iframe on a dedicated `pyodide-sandbox.preview.codeprojects.org`
 subdomain, not on `studio.code.org`. `codeprojects.org` is a wholly
-separate registrable domain from `code.org`, so student Python execution
+separate domain from `code.org`, so student Python execution
 never has access to studio.code.org's cookies or session -- the same
 isolation goal Web Lab 2 already solves for student HTML/JS (see
 `apps/src/weblab2/README.md`).
@@ -34,6 +34,9 @@ isolation goal Web Lab 2 already solves for student HTML/JS (see
   two separate enums (rather than one enum with directional prefixes) so
   the compiler -- not just a naming convention -- rejects a message used
   in the wrong direction.
+
+`pyodideWebWorker.ts` itself is unaware of any of this -- it only talks
+to whatever page creates it
 
 ## How to run locally
 
