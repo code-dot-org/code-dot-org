@@ -53,16 +53,23 @@ install_hooks() {
 
 auto_migrate() {
   # Auto-apply pending migrations if Rails and a DB are available.
-  # The baked DB image may be behind HEAD's migrations.
+  # Uses a lightweight MySQL query instead of booting Rails (saves ~60s).
   [ -f /code-dot-org/dashboard/Rakefile ] || return 0
-  command -v bundle >/dev/null 2>&1 || return 0
+  command -v mysql >/dev/null 2>&1 || return 0
 
   cd /code-dot-org/dashboard
-  if bundle exec rails runner "exit(ActiveRecord::Migration.check_pending! rescue 1)" 2>/dev/null; then
+
+  # Count migration files vs schema_migrations rows without booting Rails.
+  local file_count dir_count
+  file_count=$(ls db/migrate/*.rb 2>/dev/null | wc -l)
+  dir_count=$(mysql -h "${DB_HOST:-db}" -u root -ppassword -N -e \
+    "SELECT COUNT(*) FROM dashboard_development.schema_migrations" 2>/dev/null || echo 0)
+
+  if [ "$file_count" = "$dir_count" ] 2>/dev/null; then
     return 0
   fi
 
-  echo "entrypoint: pending migrations detected, running db:migrate..."
+  echo "entrypoint: pending migrations detected ($file_count files vs $dir_count applied), running db:migrate..."
   bundle exec rake db:migrate 2>&1 || echo "entrypoint: dev db:migrate had errors (may be non-fatal)"
   RAILS_ENV=test bundle exec rake db:migrate 2>&1 || echo "entrypoint: test db:migrate had errors (may be non-fatal)"
   echo "entrypoint: migrations complete"
