@@ -23,6 +23,14 @@ const SHAPE_TYPES: SketchLabShapeType[] = [
 const BACKGROUND_BLUE_VAR = '--sketchlab-bg-blue';
 
 test.describe('Sketch Lab React Flow canvas', () => {
+  // WebKit/Safari crashes on Ubuntu 20.04 in lab2 dev mode.
+  // Fixed in Ubuntu 24.04 — remove when Drone is upgraded.
+  // https://github.com/code-dot-org/code-dot-org/issues/73740
+  test.fixme(
+    ({browserName}) => browserName === 'webkit',
+    'WebKit/Safari crashes on Ubuntu 20.04 in lab2 dev mode (#73740)',
+  );
+
   test('Loading the level renders an empty canvas and its tools', async ({
     page,
   }) => {
