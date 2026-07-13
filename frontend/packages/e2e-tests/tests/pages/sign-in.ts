@@ -31,27 +31,19 @@ export class SignInPage extends BasePage {
   /** Main content landmark — scope for the region's visual check. */
   readonly mainContent: Locator;
 
-  /**
-   * "Want to try coding without signing in?" section heading
-   * (#code_without_signing_in). Locale-agnostic (id-based); its own text is
-   * one of the strings under test.
-   */
+  /** "Want to try coding?" heading (#code_without_signing_in). Id-based: its text is under test. */
   readonly codeWithoutSigningInHeading: Locator;
 
-  /**
-   * "Continue with Google" OAuth button. Locale-agnostic (id-based): its
-   * label is the very text under test, so locating it by that label would be
-   * a tautology; the id ties the locator to the google_oauth2 provider form.
-   */
+  /** Google OAuth button (#google_oauth2-sign-in). Id-based: label is the text under test. */
   readonly googleSignInButton: Locator;
 
-  /** "Continue with Microsoft" OAuth button. Same id-based reasoning as {@link googleSignInButton}. */
+  /** Microsoft OAuth button (#microsoft_v2_auth-sign-in). Id-based: label is the text under test. */
   readonly microsoftSignInButton: Locator;
 
-  /** "Continue with Facebook" OAuth button. Same id-based reasoning as {@link googleSignInButton}. */
+  /** Facebook OAuth button (#facebook-sign-in). Id-based: label is the text under test. */
   readonly facebookSignInButton: Locator;
 
-  /** "Continue with Clever" OAuth button. Same id-based reasoning as {@link googleSignInButton}. */
+  /** Clever OAuth button (#clever-sign-in). Id-based: label is the text under test. */
   readonly cleverSignInButton: Locator;
 
   constructor(page: Page) {
@@ -68,7 +60,7 @@ export class SignInPage extends BasePage {
     this.createAccountLink = page.getByRole('link', {
       name: 'Create an account',
     });
-    this.heading = page.getByRole('heading', {level: 2});
+    this.heading = page.getByRole('heading', {level: 2}).first();
     this.mainContent = page.getByRole('main');
     this.codeWithoutSigningInHeading = page.locator('#code_without_signing_in');
     this.googleSignInButton = page.locator('#google_oauth2-sign-in');
@@ -145,13 +137,7 @@ export class SignInPage extends BasePage {
     return this.signInForm.getByRole('link', {name: text});
   }
 
-  /**
-   * A "try it without signing in" course tile link by its visible text
-   * (heading + description). Locale-agnostic. The CSS scope
-   * (#code_without_signing_in + .row) is needed because the same course
-   * titles can recur elsewhere on the page (e.g. nav); it mirrors the
-   * source's own structural selector for this section.
-   */
+  /** Course tile link in "try without signing in" section; CSS scope avoids ambiguity with nav links. */
   quickStartLink(text: string): Locator {
     return this.page
       .locator('#code_without_signing_in + .row')

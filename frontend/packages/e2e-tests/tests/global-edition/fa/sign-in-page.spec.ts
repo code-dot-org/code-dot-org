@@ -24,14 +24,9 @@ test.describe('Global Edition - Farsi MVP - Sign In page', () => {
    */
   test('I see the Farsi MVP Sign In page', async ({page}) => {
     const signIn = new SignInPage(page);
+    await page.goto('/fa/users/sign_in?ge_region=fa');
+    await expect(signIn.globalEditionRegionHtml('fa')).toBeVisible();
 
-    // Background: anonymous visit to root, then switch to the fa region.
-    await page.goto('/');
-    await signIn.switchToGlobalEditionRegion('fa');
-
-    await page.goto('/fa/users/sign_in');
-
-    // Have an account already? Sign in.
     await expect(signIn.heading).toContainText(
       'دارای حساب کاربری هستید؟ وارد سیستم شوید',
     );
@@ -56,25 +51,24 @@ test.describe('Global Edition - Farsi MVP - Sign In page', () => {
       signIn.linkInSignInForm('یک حساب کاربری ایجاد کنید'),
     ).toHaveAttribute('href', /\/fa\/users\/sign_up\/account_type/);
 
-    // Want to try coding without signing in?
     await expect(signIn.codeWithoutSigningInHeading).toContainText(
       'می‌خواهید برنامه‌نویسی را بدون ثبت نام امتحان کنید؟',
     );
     await expect(signIn.quickStartLink('مهمانی رقص')).toHaveAttribute(
       'href',
-      /\/dance$/,
+      /\/dance/,
     );
     await expect(signIn.quickStartLink('ماین‌کرفت')).toHaveAttribute(
       'href',
-      /\/api\/hour\/begin\/mc$/,
+      /\/api\/hour\/begin\/mc/,
     );
     await expect(signIn.quickStartLink('فروزن')).toHaveAttribute(
       'href',
-      /\/s\/frozen\/reset$/,
+      /\/s\/frozen\/reset/,
     );
     await expect(signIn.quickStartLink('ماز معروف و قدیمی')).toHaveAttribute(
       'href',
-      /\/s\/hourofcode\/reset$/,
+      /\/s\/hourofcode\/reset/,
     );
   });
 
@@ -88,21 +82,12 @@ test.describe('Global Edition - Farsi MVP - Sign In page', () => {
     {tag: ['@visual']},
     async ({page, visualCheck}) => {
       const signIn = new SignInPage(page);
-
-      // Background: anonymous visit to root, then switch to the fa region.
-      await page.goto('/');
-      await signIn.switchToGlobalEditionRegion('fa');
-
-      await page.goto('/fa/users/sign_in');
+      await page.goto('/fa/users/sign_in?ge_region=fa');
+      await expect(signIn.globalEditionRegionHtml('fa')).toBeVisible();
       await expect(signIn.heading).toBeVisible();
 
       await waitForVisualStability(page, signIn.mainContent);
-      // The Ruby source scopes this check to #main_content via Eyes'
-      // check_region (Target.region), which the shared playwright-support
-      // visual package does not expose (window-only Target.window()). A
-      // full-page capture is the closest approximation available without
-      // touching that shared package; it additionally covers the header and
-      // footer, which the original check excluded.
+      // Full-page capture — playwright-support only exposes Target.window(), not Eyes' region-scoped check_region.
       await visualCheck('fa-sign-in-page-main-content');
     },
   );

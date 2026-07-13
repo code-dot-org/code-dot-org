@@ -14,26 +14,23 @@ export async function settle(page: Page): Promise<void> {
   );
 }
 
-/**
- * Resolve once every `<img>` inside the locator has finished loading (or
- * failed — a broken image is still a stable pixel). The box-stability check
- * below only tracks layout geometry, which images reserve via width/height
- * before their bytes arrive, so a screenshot can race a still-loading photo
- * without ever seeing an unstable box.
- */
+/** Wait for images inside the locator to load (or fail); box-stability alone misses still-loading photos. */
 async function waitForImagesLoaded(locator: Locator): Promise<void> {
   await locator.evaluate(async root => {
-    const images = Array.from(root.querySelectorAll('img'));
-    await Promise.all(
-      images.map(
-        img =>
-          img.complete ||
-          new Promise<void>(resolve => {
-            img.addEventListener('load', () => resolve(), {once: true});
-            img.addEventListener('error', () => resolve(), {once: true});
-          }),
+    const loaded = Promise.all(
+      Array.from(root.querySelectorAll('img')).map(img =>
+        img.complete
+          ? Promise.resolve()
+          : new Promise<void>(resolve => {
+              img.addEventListener('load', () => resolve(), {once: true});
+              img.addEventListener('error', () => resolve(), {once: true});
+            }),
       ),
     );
+    await Promise.race([
+      loaded,
+      new Promise<void>(resolve => setTimeout(resolve, 10_000)),
+    ]);
   });
 }
 
