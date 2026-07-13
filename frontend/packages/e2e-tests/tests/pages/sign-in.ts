@@ -69,10 +69,10 @@ export class SignInPage extends BasePage {
     this.cleverSignInButton = page.locator('#clever-sign-in');
   }
 
-  /** Navigate to /users/sign_in and wait for the locale dropdown. */
-  async goto(): Promise<void> {
-    await this.page.goto('/users/sign_in');
-    await this.footer.waitForLocaleDropdownVisible();
+  /** Navigate to /users/sign_in, optionally in a Global Edition region. */
+  async goto({region}: {region?: string} = {}): Promise<void> {
+    await this.navigate('/users/sign_in', {region});
+    if (!region) await this.footer.waitForLocaleDropdownVisible();
   }
 
   /** Wait for the sign-in form to be present (server-rendered; visible immediately after redirect). */

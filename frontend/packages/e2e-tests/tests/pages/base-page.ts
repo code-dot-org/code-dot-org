@@ -73,6 +73,19 @@ export class BasePage {
     await expect(this.globalEditionRegionHtml(regionCode)).toBeVisible();
   }
 
+  /** Navigate to a path, optionally within a Global Edition region. */
+  protected async navigate(
+    path: string,
+    {region}: {region?: string} = {},
+  ): Promise<void> {
+    const url = new URL(region ? `/${region}${path}` : path, 'http://_');
+    if (region) url.searchParams.set('ge_region', region);
+    await this.page.goto(`${url.pathname}${url.search}`);
+    if (region) {
+      await expect(this.globalEditionRegionHtml(region)).toBeVisible();
+    }
+  }
+
   /**
    * The root <html> element when the given Global Edition region is active.
    * Rails sets data-ge-region on <html> on every page, so this is page-agnostic

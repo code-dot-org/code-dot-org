@@ -24,8 +24,7 @@ test.describe('Global Edition - Farsi MVP - Sign In page', () => {
    */
   test('I see the Farsi MVP Sign In page', async ({page}) => {
     const signIn = new SignInPage(page);
-    await page.goto('/fa/users/sign_in?ge_region=fa');
-    await expect(signIn.globalEditionRegionHtml('fa')).toBeVisible();
+    await signIn.goto({region: 'fa'});
 
     await expect(signIn.heading).toContainText(
       'دارای حساب کاربری هستید؟ وارد سیستم شوید',
@@ -82,8 +81,7 @@ test.describe('Global Edition - Farsi MVP - Sign In page', () => {
     {tag: ['@visual']},
     async ({page, visualCheck}) => {
       const signIn = new SignInPage(page);
-      await page.goto('/fa/users/sign_in?ge_region=fa');
-      await expect(signIn.globalEditionRegionHtml('fa')).toBeVisible();
+      await signIn.goto({region: 'fa'});
       await expect(signIn.heading).toBeVisible();
 
       await waitForVisualStability(page, signIn.mainContent);
