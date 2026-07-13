@@ -130,10 +130,16 @@ export async function generateChatResponse(
     assets.push(asset);
     if (file.mediaType.startsWith('image/')) {
       sendLab2AnalyticsEvent(EVENTS.MODEL_OUTPUT_IMAGE_CREATED);
-      // Check generated images for safety.
+      const assetUrl = buildAssetUrl(asset);
+
+      Observability.logger.info('ai-chat.image_generated', {
+        assetUrl,
+        mediaType: file.mediaType,
+        model: modelParameters.selectedModelId,
+      });
       const imageModerationStatus = await getImageModerationStatus(
         file,
-        buildAssetUrl(asset)
+        assetUrl
       );
       Observability.metrics.count('ai-chat.image_moderation', 1, {
         result: imageModerationStatus,
