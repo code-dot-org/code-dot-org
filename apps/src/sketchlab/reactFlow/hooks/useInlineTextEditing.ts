@@ -1,5 +1,5 @@
 import {useReactFlow} from '@xyflow/react';
-import React, {useCallback, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {usePushSnapshot, useSketchLabReadOnly} from '../context';
 import {REACT_FLOW_SELECTOR} from '../reactFlowSelectors';
@@ -67,6 +67,26 @@ export function useInlineTextEditing({
     }
     updateNodeData(id, {[field]: newValue});
   }, [isEditing, updateNodeData, id, field, pushSnapshot]);
+
+  // Editing starts on double-click or keyboard Enter (which focuses the
+  // editable), not on a plain mousedown. On a plain mousedown, send focus
+  // to the node wrapper, as a click anywhere else on the node would.
+  useEffect(() => {
+    const editable = editableRef.current;
+    if (!editable) {
+      return;
+    }
+    const suppressFocusFromMouse = (event: MouseEvent) => {
+      if (isEditing) {
+        return;
+      }
+      event.preventDefault();
+      editable.closest<HTMLElement>(REACT_FLOW_SELECTOR.node)?.focus();
+    };
+    editable.addEventListener('mousedown', suppressFocusFromMouse);
+    return () =>
+      editable.removeEventListener('mousedown', suppressFocusFromMouse);
+  }, [isEditing]);
 
   const handleKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLDivElement>) => {
