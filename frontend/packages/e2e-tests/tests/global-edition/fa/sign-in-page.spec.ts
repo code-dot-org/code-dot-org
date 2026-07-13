@@ -87,8 +87,9 @@ test.describe('Global Edition - Farsi MVP - Sign In page', () => {
       await expect(signIn.heading).toBeVisible();
 
       await waitForVisualStability(page, signIn.mainContent);
-      // Full-page capture — playwright-support only exposes Target.window(), not Eyes' region-scoped check_region.
-      await visualCheck('fa-sign-in-page-main-content');
+      await visualCheck('fa-sign-in-page-main-content', {
+        region: signIn.mainContent,
+      });
     },
   );
 });
