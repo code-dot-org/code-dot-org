@@ -38,6 +38,12 @@ test.describe('Sketch Lab React Flow canvas', () => {
     await expect(lab.addButton('Add image')).toBeVisible();
     await expect(lab.nodes).toHaveCount(0);
     await expect(lab.edges).toHaveCount(0);
+  });
+
+  test('The canvas passes a WCAG AA scan', async ({page}) => {
+    const lab = new SketchLab(page);
+
+    await lab.gotoLevel();
 
     expect(
       await analyze(page, {include: lab.rootSelector, tags: WCAG_AA_TAGS}),
