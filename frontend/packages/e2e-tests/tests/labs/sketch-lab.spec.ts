@@ -113,7 +113,7 @@ test.describe('Sketch Lab React Flow canvas', () => {
     await expect
       .poll(() =>
         cssColorMatchesVar({
-          locator: lab.shapePaintElement(lab.shapeNode('circle')),
+          locator: lab.shapePaintElement('circle'),
           colorProperty: 'fill',
           cssVar: BACKGROUND_BLUE_VAR,
         }),
@@ -143,7 +143,7 @@ test.describe('Sketch Lab React Flow canvas', () => {
       await expect
         .poll(() =>
           cssColorMatchesVar({
-            locator: lab.shapePaintElement(lab.shapeNode('circle')),
+            locator: lab.shapePaintElement('circle'),
             colorProperty: 'fill',
             cssVar: BACKGROUND_BLUE_VAR,
           }),

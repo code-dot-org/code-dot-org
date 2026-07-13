@@ -91,11 +91,15 @@ export class SketchLab extends LessonLevelPage {
   }
 
   /**
-   * The SVG paint element inside a shape node. Background and border colors
-   * land here as inline fill/stroke (ShapeNode.tsx), not on the node root.
+   * The SVG paint element inside a non-rectangle shape node. Background and
+   * border colors land here as inline fill/stroke (ShapeNode.tsx), not on the
+   * node root. Rectangles paint via a CSS-module div with background-color
+   * and have no SVG.
    */
-  shapePaintElement(node: Locator): Locator {
-    return node.locator('svg rect, svg ellipse, svg polygon');
+  shapePaintElement(
+    shapeType: Exclude<SketchLabShapeType, 'rectangle'>,
+  ): Locator {
+    return this.shapeNode(shapeType).locator('svg ellipse, svg polygon');
   }
 
   /**
