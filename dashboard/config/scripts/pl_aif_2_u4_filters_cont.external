@@ -23,12 +23,12 @@ A <strong>filter bubble</strong> can happen when a feed mostly shows content tha
 
 Below are two versions of a feed. One shows the active filters. One does not.
 
-👉 Which design feels more trustworthy? Why?
+**Which design feels more trustworthy? Why?**
 
 <div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center; margin-top:10px;">
 
   <div style="background:#ffffff; border:1px solid #ddd; border-radius:12px; padding:14px; width:340px;">
-    <div style="font-size:12pt; font-weight:bold; margin-bottom:8px;">Version 1: Filters Shown</div>
+    <div style="font-size:12pt; font-weight:bold; margin-bottom:8px;">Version 1</div>
 
   <div style="background:#dccbea; border:1px solid #8c52ba; border-radius:10px; padding:10px; font-size:12pt; margin-bottom:10px;">
       <strong>Active filters:</strong> Following • Education • Last 7 days<br>
@@ -49,7 +49,7 @@ Below are two versions of a feed. One shows the active filters. One does not.
   </div>
 
   <div style="background:#ffffff; border:1px solid #ddd; border-radius:12px; padding:14px; width:340px;">
-    <div style="font-size:12pt; font-weight:bold; margin-bottom:8px;">Version 2: Filters Hidden</div>
+    <div style="font-size:12pt; font-weight:bold; margin-bottom:8px;">Version 2</div>
 
   <div style="background:#dccbea; border:1px solid #8c52ba; border-radius:10px; padding:10px; font-size:12pt; margin-bottom:10px;">
       <strong>For You</strong><br>
@@ -74,7 +74,7 @@ Below are two versions of a feed. One shows the active filters. One does not.
 <br>
 
 <details style="background-color:#ececec; padding:10px; margin-bottom:10px; border:1px solid transparent; border-radius:5px;">
-  <summary style="font-size:12pt; font-weight:bold;">💡 Check your thinking:</summary>
+  <summary style="font-size:12pt; font-weight:bold;">🔎 Check your thinking:</summary>
 
   <div style="margin-top:20px; margin-left:20px; margin-right:20px; margin-bottom:40px;">
     <p style="font-size:12pt; line-height:1.45; margin:0;">
