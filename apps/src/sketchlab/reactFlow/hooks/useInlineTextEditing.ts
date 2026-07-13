@@ -81,7 +81,9 @@ export function useInlineTextEditing({
         return;
       }
       event.preventDefault();
-      editable.closest<HTMLElement>(REACT_FLOW_SELECTOR.node)?.focus();
+      editable
+        .closest<HTMLElement>(REACT_FLOW_SELECTOR.node)
+        ?.focus({preventScroll: true});
     };
     editable.addEventListener('mousedown', suppressFocusFromMouse);
     return () =>
