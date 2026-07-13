@@ -103,7 +103,7 @@ profiles:
           --build-arg CODE_DOT_ORG_DB_SEED="$CODE_DOT_ORG_DB_SEED" \
           --build-arg CODE_DOT_ORG_PEGASUS="$CODE_DOT_ORG_PEGASUS" \
           --build-arg CODE_DOT_ORG_STATIC="$CODE_DOT_ORG_STATIC" \
-          --build-arg BUNDLE_WITHOUT=test
+          --build-arg BUNDLE_WITHOUT=test:production:staging:levelbuilder
     - op: add
       path: /deploy/helm/releases/0/valuesFiles/-
       value: k8s/helm/development.values.yaml
