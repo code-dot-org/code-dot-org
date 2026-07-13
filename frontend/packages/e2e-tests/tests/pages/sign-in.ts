@@ -31,19 +31,27 @@ export class SignInPage extends BasePage {
   /** Main content landmark — scope for the region's visual check. */
   readonly mainContent: Locator;
 
-  /** "Want to try coding?" heading (#code_without_signing_in). Id-based: its text is under test. */
+  /**
+   * "Want to try coding without signing in?" section heading
+   * (#code_without_signing_in). Locale-agnostic (id-based); its own text is
+   * one of the strings under test.
+   */
   readonly codeWithoutSigningInHeading: Locator;
 
-  /** Google OAuth button (#google_oauth2-sign-in). Id-based: label is the text under test. */
+  /**
+   * "Continue with Google" OAuth button. Locale-agnostic (id-based): its
+   * label is the very text under test, so locating it by that label would be
+   * a tautology; the id ties the locator to the google_oauth2 provider form.
+   */
   readonly googleSignInButton: Locator;
 
-  /** Microsoft OAuth button (#microsoft_v2_auth-sign-in). Id-based: label is the text under test. */
+  /** "Continue with Microsoft" OAuth button. Same id-based reasoning as {@link googleSignInButton}. */
   readonly microsoftSignInButton: Locator;
 
-  /** Facebook OAuth button (#facebook-sign-in). Id-based: label is the text under test. */
+  /** "Continue with Facebook" OAuth button. Same id-based reasoning as {@link googleSignInButton}. */
   readonly facebookSignInButton: Locator;
 
-  /** Clever OAuth button (#clever-sign-in). Id-based: label is the text under test. */
+  /** "Continue with Clever" OAuth button. Same id-based reasoning as {@link googleSignInButton}. */
   readonly cleverSignInButton: Locator;
 
   constructor(page: Page) {
@@ -137,7 +145,13 @@ export class SignInPage extends BasePage {
     return this.signInForm.getByRole('link', {name: text});
   }
 
-  /** Course tile link in "try without signing in" section; CSS scope avoids ambiguity with nav links. */
+  /**
+   * A "try it without signing in" course tile link by its visible text
+   * (heading + description). Locale-agnostic. The CSS scope
+   * (#code_without_signing_in + .row) is needed because the same course
+   * titles can recur elsewhere on the page (e.g. nav); it mirrors the
+   * source's own structural selector for this section.
+   */
   quickStartLink(text: string): Locator {
     return this.page
       .locator('#code_without_signing_in + .row')
