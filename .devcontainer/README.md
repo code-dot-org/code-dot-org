@@ -138,8 +138,9 @@ git push origin my-feature
 ```
 
 ### Database GUI tools
-MySQL is forwarded to the host on port 3306. Connect TablePlus/DBeaver to
-`localhost:3306` with user `root`, password `password`.
+MySQL is forwarded to the host on port 13306 (avoids collision with host
+MySQL on 3306). Connect TablePlus/DBeaver to `localhost:13306` with user
+`root`, password `password`. Override with `CDO_DB_PORT=3306` if preferred.
 
 ## Known limitations
 

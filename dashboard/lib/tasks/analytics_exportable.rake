@@ -29,14 +29,14 @@ Rake::Task['db:migrate'].enhance do
   begin
     require 'cdo/aws/redshift/materialized_view_manager'
   rescue LoadError => exception
-    warn "[AnalyticsExportable] Skipping post-migrate DDL template regeneration: #{exception.message}"
+    warn "[devcontainer] Skipping Redshift DDL regeneration (no AWS credentials)" if ENV['AWS_EC2_METADATA_DISABLED']
     next
   end
 
   begin
     Rails.application.eager_load!
   rescue NameError => exception
-    warn "[AnalyticsExportable] Skipping post-migrate DDL template regeneration (eager_load): #{exception.message}"
+    warn "[devcontainer] Skipping Redshift DDL regeneration (no AWS credentials)" if ENV['AWS_EC2_METADATA_DISABLED']
     next
   end
 
