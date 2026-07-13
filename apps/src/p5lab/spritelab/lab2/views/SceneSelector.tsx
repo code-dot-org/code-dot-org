@@ -1,4 +1,3 @@
-import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import React, {useCallback} from 'react';
 
 import {SceneMetadata} from '../redux/spriteLab2Redux';
@@ -19,10 +18,10 @@ interface SceneSelectorProps {
 }
 
 /**
- * Scene picker in the workspace header (scenes UI variant): choose which
- * scene's code workspace is open in the Code tab, or create a new scene via
- * the option at the bottom. Scene names are labels only; the ids underneath
- * are the source of truth.
+ * Scene picker in the tab bar (scenes UI variant): choose which scene's code
+ * workspace is open in the Code tab, or create a new scene via the option at
+ * the bottom. Scene names are labels only; the ids underneath are the source
+ * of truth.
  */
 const SceneSelector: React.FunctionComponent<SceneSelectorProps> = ({
   scenes,
@@ -50,20 +49,20 @@ const SceneSelector: React.FunctionComponent<SceneSelectorProps> = ({
   );
 
   return (
-    <SimpleDropdown
-      name="spritelab2-scene"
+    <select
       className={moduleStyles.sceneSelect}
-      items={[
-        ...scenes.map(scene => ({value: scene.id, text: scene.name})),
-        {value: NEW_SCENE_VALUE, text: '＋ New scene…'},
-      ]}
-      selectedValue={activeSceneId ?? ''}
+      value={activeSceneId ?? ''}
       onChange={handleChange}
       disabled={disabled}
-      labelText="Scene"
-      isLabelVisible={false}
-      size="xs"
-    />
+      aria-label="Scene"
+    >
+      {scenes.map(scene => (
+        <option key={scene.id} value={scene.id}>
+          {scene.name}
+        </option>
+      ))}
+      <option value={NEW_SCENE_VALUE}>＋ New scene…</option>
+    </select>
   );
 };
 
