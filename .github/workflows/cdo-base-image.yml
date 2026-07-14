@@ -1,0 +1,133 @@
+# Gate and publish the cdo-base image (docker/base/).
+#
+# Gate: the same Dockerfile must build on docker AND podman (dual-engine
+# policy, see docker/base/README.md), on amd64 and arm64. smoke-test.sh is
+# the enforcement mechanism for the image's runtime contract. Gate runs on
+# PRs touching docker/base/ and pushes nothing.
+#
+# Publish (staging pushes, weekly cron, manual dispatch): native per-arch
+# builds pushed to GHCR, then stitched into one multi-platform manifest —
+# the same pattern as k8s-skaffold-build.yml + k8s-stitch-multiplatform-image.yml.
+# The weekly cron exists to pick up ruby-slim and apt security updates; it
+# produces different bytes for the same git sha, hence the date tag.
+#
+# Deferred, deliberately: untagged-manifest cleanup, provenance
+# attestations, mirroring upstream bases into GHCR, ECR pull-through cache
+# for prod consumers.
+
+name: cdo-base-image
+
+on:
+  pull_request:
+    paths:
+      - 'docker/base/**'
+      - '.github/workflows/cdo-base-image.yml'
+  push:
+    branches: [staging]
+    paths:
+      - 'docker/base/**'
+      - '.github/workflows/cdo-base-image.yml'
+  schedule:
+    - cron: '0 4 * * 0' # weekly freshness rebuild, Sunday 4am UTC
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  IMAGE: ghcr.io/${{ github.repository_owner }}/cdo-base
+
+jobs:
+  gate:
+    name: gate (${{ matrix.engine }}, ${{ matrix.arch }})
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { engine: docker, arch: amd64, runs-on: ubuntu-24.04 }
+          - { engine: podman, arch: amd64, runs-on: ubuntu-24.04 }
+          - { engine: docker, arch: arm64, runs-on: ubuntu-24.04-arm }
+          - { engine: podman, arch: arm64, runs-on: ubuntu-24.04-arm }
+    runs-on: ${{ matrix.runs-on }}
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout docker/base only
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: docker/base
+
+      - name: Build with ${{ matrix.engine }}
+        run: ${{ matrix.engine }} build -t cdo-base:gate docker/base/
+
+      - name: Smoke test
+        run: ./docker/base/smoke-test.sh cdo-base:gate ${{ matrix.engine }}
+
+  build-push:
+    name: push (${{ matrix.arch }})
+    if: github.event_name != 'pull_request'
+    needs: gate
+    strategy:
+      matrix:
+        include:
+          - { arch: amd64, runs-on: ubuntu-24.04 }
+          - { arch: arm64, runs-on: ubuntu-24.04-arm }
+    runs-on: ${{ matrix.runs-on }}
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout docker/base only
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: docker/base
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@e468171a9de216ec08956ac3ada2f0791b6bd435 # v3.11.1
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      # provenance disabled: attestation manifests complicate the imagetools
+      # stitch and multiply untagged versions; revisit with the cleanup job.
+      - name: Build and push per-arch image
+        uses: docker/build-push-action@263435318d21b8e681c14492fe198d362a7d2c83 # v6.18.0
+        with:
+          context: docker/base
+          push: true
+          provenance: false
+          tags: ${{ env.IMAGE }}:git-${{ github.sha }}-${{ matrix.arch }}
+          cache-from: type=registry,ref=${{ env.IMAGE }}:buildcache-${{ matrix.arch }}
+          cache-to: type=registry,ref=${{ env.IMAGE }}:buildcache-${{ matrix.arch }},mode=max
+
+  stitch:
+    name: stitch multi-platform manifest
+    if: github.event_name != 'pull_request'
+    needs: build-push
+    runs-on: ubuntu-24.04
+    permissions:
+      packages: write
+    steps:
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Stitch and tag (latest, git sha, date)
+        run: |
+          docker buildx imagetools create \
+            -t "$IMAGE:git-${{ github.sha }}" \
+            -t "$IMAGE:latest" \
+            -t "$IMAGE:$(date -u +%Y-%m-%d)" \
+            "$IMAGE:git-${{ github.sha }}-amd64" \
+            "$IMAGE:git-${{ github.sha }}-arm64"
+
+      - name: Inspect published manifest
+        run: docker buildx imagetools inspect "$IMAGE:latest"

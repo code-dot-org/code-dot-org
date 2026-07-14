@@ -28,3 +28,17 @@ avoid anything that needs a BuildKit-only frontend (`COPY --parents`,
 
     ./docker/base/smoke-test.sh cdo-base:test docker
     ./docker/base/smoke-test.sh cdo-base:test podman
+
+## CI and published image
+
+`.github/workflows/cdo-base-image.yml` enforces the dual-engine policy on
+every PR touching this directory: a 2x2 gate builds and smoke-tests with
+docker and podman on amd64 and arm64. On staging pushes and a weekly cron
+(security refresh of ruby-slim + apt), it publishes a multi-platform image:
+
+    ghcr.io/code-dot-org/cdo-base:latest
+    ghcr.io/code-dot-org/cdo-base:git-<sha>
+    ghcr.io/code-dot-org/cdo-base:<YYYY-MM-DD>
+
+The date tag is the immutable name — the weekly cron rebuilds the same git
+sha with different bytes. Consumers should pin by digest.
