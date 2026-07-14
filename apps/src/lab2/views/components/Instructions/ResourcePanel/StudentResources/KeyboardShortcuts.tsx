@@ -26,7 +26,7 @@ const KeyboardShortcuts: React.FC<KeyboardShortcutsProps> = ({shortcuts}) => {
       </Typography>
       {Object.entries(shortcuts).map(([category, entries]) => (
         <div key={category} className={styles.category}>
-          <Typography variant="overline3" className={styles.categoryHeading}>
+          <Typography variant="overline2" className={styles.categoryHeading}>
             {category}
           </Typography>
           <dl className={styles.shortcutList}>
