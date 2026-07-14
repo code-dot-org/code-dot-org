@@ -785,6 +785,56 @@ class ScriptLevelTest < ActiveSupport::TestCase
                  script_level.next_level_or_redirect_path_for_user(student, unit_group_unit: script_level.script.original_unit_group_unit)
   end
 
+  # For lessons with Tutor+ available (AIF/AID), the end of lesson goes to the
+  # lesson deep dive instead of the unit overview / dialog redirect.
+  test 'next_level_or_redirect_path_for_user goes to lesson tutor at end of tutor-available lesson' do
+    student = create(:student)
+    student.stubs(:has_pilot_experiment?).returns true
+    script_level = create_script_level_with_ancestors({})
+    script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
+    lesson = script_level.lesson
+    lesson.stubs(:lesson_tutor_available?).returns true
+    lesson.stubs(:lesson_tutor_path).returns('/s/foo/lessons/1/tutor')
+    assert_equal '/s/foo/lessons/1/tutor',
+                 script_level.next_level_or_redirect_path_for_user(student, unit_group_unit: script_level.script.original_unit_group_unit)
+  end
+
+  # Tutor takes precedence over lesson extras for tutor-available lessons.
+  test 'next_level_or_redirect_path_for_user prefers lesson tutor over lesson extras at end of lesson' do
+    student = create(:student)
+    student.stubs(:has_pilot_experiment?).returns true
+    script_level = create_script_level_with_ancestors({})
+    script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
+    script_level.script.stubs(:lesson_extras_available).returns true
+    lesson = script_level.lesson
+    lesson.stubs(:lesson_tutor_available?).returns true
+    lesson.stubs(:lesson_tutor_path).returns('/s/foo/lessons/1/tutor')
+    assert_equal '/s/foo/lessons/1/tutor',
+                 script_level.next_level_or_redirect_path_for_user(student, unit_group_unit: script_level.script.original_unit_group_unit)
+  end
+
+  # Tutor navigation only applies at the end of a lesson, not mid-lesson.
+  test 'next_level_or_redirect_path_for_user goes to next level mid-lesson even if tutor available' do
+    script = create(:script, :in_single_unit_course, name: 'tutorscript')
+    script.stubs(:show_unit_overview_between_lessons?).returns true
+    lesson_group = create(:lesson_group, script: script)
+
+    levels = create_list(:level, 2)
+
+    script_levels = levels.map.with_index(1) do |level, pos|
+      lesson = create(:lesson, script: script, absolute_position: pos, lesson_group: lesson_group)
+      create(:script_level, script: script, lesson: lesson, position: pos, chapter: pos, levels: [level])
+    end
+
+    script_levels[0].stubs(:end_of_lesson?).returns false
+    script_levels[0].lesson.stubs(:lesson_tutor_available?).returns true
+
+    student = create(:student)
+    student.stubs(:has_pilot_experiment?).returns true
+
+    assert_equal script_levels[1].path, script_levels[0].next_level_or_redirect_path_for_user(student)
+  end
+
   # For script where show_unit_overview_between_lessons? == true
   test 'next_level_or_redirect_path_for_user returns to next level if not end of lesson' do
     script = create(:script, :in_single_unit_course, name: 'script1')
