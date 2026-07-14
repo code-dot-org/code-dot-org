@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "true",
-    "long_instructions": "# Machine learning apps\r\n\r\n##### After learning how to build machine learning models in AI Lab, students will learn how to use their models to create apps in App Lab. The app to the left is an example app that uses a machine learning model to recommend books based on interests. \r\n\r\n# Do this\r\n* ##### Click on the orange \"Run\" button to try the book recommender app.\r\n* ##### Follow the instructions in the app to see what see what book the app recommends based on your interests. \r\n* ##### Run the app a few times selecting different interests and notice how the app's predictions change. \r\n* ##### When you are finished, click on the orange \"Finish\" button below the app to move to the next activity. \r\n",
+    "long_instructions": "# Machine learning apps\r\n\r\n##### After learning how to build machine learning models in AI Lab, students will learn how to use their models to create apps in App Lab. The app to the left is an example app that uses a machine learning model to recommend books based on interests. \r\n\r\n# Do this\r\n* ##### Click on the purple \"Run\" button to try the book recommender app.\r\n* ##### Follow the instructions in the app to see what see what book the app recommends based on your interests. \r\n* ##### Run the app a few times selecting different interests and notice how the app's predictions change. \r\n* ##### When you are finished, click on the purple \"Finish\" button below the app to move to the next activity. \r\n",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

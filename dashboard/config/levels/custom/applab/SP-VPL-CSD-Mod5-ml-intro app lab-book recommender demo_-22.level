@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "true",
-    "long_instructions": "# Machine learning apps\r\n\r\n##### After students learn how to import their machine learning models into App Lab, they will customize the design of their apps. The app to the left is a book recommender app that uses the machine learning model that you imported in an earlier level.   \r\n\r\n# Do this\r\n* ##### Click on the orange \"Run\" button to try the book recommender app.\r\n* ##### Follow the instructions in the app to see what book the app recommends based on your interests. \r\n* ##### Run the app a few times selecting different interests and notice how the app's predictions change. \r\n* ##### When you are finished, click on the orange \"Finish\" button below the app to move to the next activity. \r\n",
+    "long_instructions": "# Machine learning apps\r\n\r\n##### After students learn how to import their machine learning models into App Lab, they will customize the design of their apps. The app to the left is a book recommender app that uses the machine learning model that you imported in an earlier level.   \r\n\r\n# Do this\r\n* ##### Click on the purple \"Run\" button to try the book recommender app.\r\n* ##### Follow the instructions in the app to see what book the app recommends based on your interests. \r\n* ##### Run the app a few times selecting different interests and notice how the app's predictions change. \r\n* ##### When you are finished, click on the purple \"Finish\" button below the app to move to the next activity. \r\n",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

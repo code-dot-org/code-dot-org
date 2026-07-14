@@ -54,7 +54,7 @@
     "debugger_disabled": "true",
     "pause_animations_by_default": "false",
     "callout_json": "[]",
-    "long_instructions": "# Resources in Game Lab\r\n\r\nA big part of using Game Lab is understanding position. Remember you can always turn on the grid or hover with the mouse to help find the x and y position you want.\r\n\r\n# Do This\r\n\r\n* Explore the resources in the \"Help and Tips\" tab located directly above these instructions. \r\n* Hover over the block in the toolbox, then click \"See Examples\" to open the code documentation.\r\n* When you are finished exploring, click the orange \"Run\" under the preview section on the left hand side of the screen. Then click the \"Finish\" button. ",
+    "long_instructions": "# Resources in Game Lab\r\n\r\nA big part of using Game Lab is understanding position. Remember you can always turn on the grid or hover with the mouse to help find the x and y position you want.\r\n\r\n# Do This\r\n\r\n* Explore the resources in the \"Help and Tips\" tab located directly above these instructions. \r\n* Hover over the block in the toolbox, then click \"See Examples\" to open the code documentation.\r\n* When you are finished exploring, click the purple \"Run\" under the preview section on the left hand side of the screen. Then click the \"Finish\" button. ",
     "display_name": "Use resources in Game Lab",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",

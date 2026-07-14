@@ -216,7 +216,7 @@
     "makerlab_enabled": "false",
     "widget_mode": "false",
     "libraries_enabled": "false",
-    "long_instructions": "# Processing\r\n\r\n#### In lesson 6, students will learn about types of processing as they experiment with sample apps. \r\n\r\n#### **4 types of processing:**\r\n\r\n* If/then \r\n* Finding a match \r\n* Counting\r\n* Comparing\r\n\r\n#### **Processing** - the thinking work computers do to turn input into output\r\n\r\n# Sample App: Is it Your Birthday?\r\n\r\n\r\n#### Press the orange \"Run\" button to try out this app that tells you whether or not it is your birthday.\r\n\r\n1. What types of processing is the app using?\r\n\r\n2. How does the app turn input into output? \r\n\r\n***\r\n#### *Click on the \"For Teachers Only\" tab to check you answers to the questions above.*\r\n\r\n\r\n",
+    "long_instructions": "# Processing\r\n\r\n#### In lesson 6, students will learn about types of processing as they experiment with sample apps. \r\n\r\n#### **4 types of processing:**\r\n\r\n* If/then \r\n* Finding a match \r\n* Counting\r\n* Comparing\r\n\r\n#### **Processing** - the thinking work computers do to turn input into output\r\n\r\n# Sample App: Is it Your Birthday?\r\n\r\n\r\n#### Press the purple \"Run\" button to try out this app that tells you whether or not it is your birthday.\r\n\r\n1. What types of processing is the app using?\r\n\r\n2. How does the app turn input into output? \r\n\r\n***\r\n#### *Click on the \"For Teachers Only\" tab to check you answers to the questions above.*\r\n\r\n\r\n",
     "display_name": "Pet Chooser App",
     "parent_level_id": 23130,
     "name_suffix": "_25",

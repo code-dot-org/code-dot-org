@@ -216,7 +216,7 @@
     "makerlab_enabled": "false",
     "widget_mode": "false",
     "libraries_enabled": "false",
-    "long_instructions": "# Is it Your Birthday?\r\n\r\n\r\nTry out this app that tells you whether or not it is your birthday.\r\n\r\n1. What input does this app use?\r\n\r\n2. What output does it display?\r\n\r\n3. How does it decide which output message to display?\r\n\r\n***\r\n*To start using the app, press the orange \"Run\" button.*",
+    "long_instructions": "# Is it Your Birthday?\r\n\r\n\r\nTry out this app that tells you whether or not it is your birthday.\r\n\r\n1. What input does this app use?\r\n\r\n2. What output does it display?\r\n\r\n3. How does it decide which output message to display?\r\n\r\n***\r\n*To start using the app, press the purple \"Run\" button.*",
     "display_name": "Pet Chooser App",
     "parent_level_id": 23130,
     "name_suffix": "_2025",

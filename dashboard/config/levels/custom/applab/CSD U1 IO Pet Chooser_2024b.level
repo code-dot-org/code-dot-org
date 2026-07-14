@@ -216,7 +216,7 @@
     "makerlab_enabled": "false",
     "widget_mode": "false",
     "libraries_enabled": "false",
-    "long_instructions": "# Pet Chooser\r\n\r\nTry playing this pet chooser app a few times.\r\n\r\n* What are the inputs?\r\n* What are the outputs?\r\n\r\n***\r\n*To start using the app, press the orange \"Run\" button.*",
+    "long_instructions": "# Pet Chooser\r\n\r\nTry playing this pet chooser app a few times.\r\n\r\n* What are the inputs?\r\n* What are the outputs?\r\n\r\n***\r\n*To start using the app, press the purple \"Run\" button.*",
     "display_name": "Pet Chooser App",
     "parent_level_id": 22985,
     "name_suffix": "_2024b",
