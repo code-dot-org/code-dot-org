@@ -8,7 +8,13 @@ import {registerLevelKindSchema} from '@code-dot-org/core/api';
 // the lab. Register them here and import this module eagerly from the course
 // route — the lazily-loaded lab chunk registers too late, after the loader has
 // already fetched and parsed level properties.
-registerLevelKindSchema('fish', z.object({mode: z.string().optional()}));
+// `mode` and `guides` are both per-level fields in the legacy lab
+// (apps/src/fish/Fish.js: `const {mode, guides} = this.level`), fed to
+// @code-dot-org/ml-activities. Register both so they survive the parse.
+registerLevelKindSchema(
+  'fish',
+  z.object({mode: z.string().optional(), guides: z.string().optional()}),
+);
 registerLevelKindSchema(
   'standalone_video',
   z.object({displayName: z.string().optional()}),

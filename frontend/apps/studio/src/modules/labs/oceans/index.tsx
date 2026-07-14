@@ -18,13 +18,14 @@ import type {LabEntrypointProps} from '@/modules/labs/router/getLabEntrypointByA
  * (see `levelKinds.ts`).
  */
 export default function OceansContainer({onContinue}: LabEntrypointProps) {
-  const levelProperties = useLevelProperties();
-  // OceansLab accepts AppModeValue (a string union); the level properties
-  // `mode` field carries the same values.
-  const appMode = levelProperties?.mode as Parameters<
-    typeof OceansLab
-  >[0]['appMode'];
-  const guides = (levelProperties?.guides as string) ?? undefined;
+  // `mode`/`guides` are fish-kind fields (see levelKinds.ts) absent from the
+  // base properties type, so read them as untrusted values and narrow.
+  const props = useLevelProperties() as Record<string, unknown> | undefined;
+  const appMode =
+    typeof props?.mode === 'string'
+      ? (props.mode as Parameters<typeof OceansLab>[0]['appMode'])
+      : undefined;
+  const guides = typeof props?.guides === 'string' ? props.guides : undefined;
 
   return (
     <Box className="oceans-lab-shell">

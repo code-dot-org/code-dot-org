@@ -11,7 +11,10 @@ import {Lab} from '@code-dot-org/lab/host';
 
 import {getLabEntrypointByAppName} from '@/modules/labs/router/getLabEntrypointByAppName';
 import LevelNavigation from '@/modules/labs/router/LevelNavigation';
-import {resolveCourseLevel} from '@/modules/labs/router/resolveCourseLevel';
+import {
+  CourseLevelNotFoundError,
+  resolveCourseLevel,
+} from '@/modules/labs/router/resolveCourseLevel';
 import queryClient from '@/modules/router/queryClient';
 // Register fish/standalone_video level kinds before the loader fetches level
 // properties, so per-level fields (mode, displayName) survive the parse.
@@ -87,8 +90,13 @@ export const Route = createFileRoute(
           lessonPosition,
           levelPosition,
         );
-      } catch {
-        throw notFound();
+      } catch (error) {
+        // Only a genuine position-not-found becomes a 404; unexpected errors
+        // (bugs, malformed data) propagate instead of masquerading as notFound.
+        if (error instanceof CourseLevelNotFoundError) {
+          throw notFound();
+        }
+        throw error;
       }
     })();
 
@@ -112,27 +120,38 @@ function CourseLevelRoute() {
   const router = useRouter();
 
   const onContinue = useCallback(async () => {
-    await DashboardApiClient.activities.reportMilestone({
-      // `userId` is a required positional segment of the milestone route that
-      // the controller never reads — identity comes from `current_user`
-      // (session). Pass 0, matching legacy `progressRedux`, so the real id is
-      // never exposed in a network intercept. Dropping the segment is a follow-up.
-      userId: 0,
-      scriptLevelId: resolved.scriptLevelId,
-      levelId: resolved.levelId,
-      result: true,
-    });
+    try {
+      await DashboardApiClient.activities.reportMilestone({
+        // `userId` is a required positional segment of the milestone route that
+        // the controller never reads — identity comes from `current_user`
+        // (session). Pass 0, matching legacy `progressRedux`, so the real id is
+        // never exposed in a network intercept. Dropping the segment is a follow-up.
+        userId: 0,
+        scriptLevelId: resolved.scriptLevelId,
+        levelId: resolved.levelId,
+        result: true,
+      });
+    } catch {
+      // Progress is best-effort: legacy ignores milestone failures and advances
+      // regardless, so a failed report must not strand the user on the level.
+    }
 
-    const nextLevel = resolved.levels.find(
-      l => l.position === resolved.position + 1,
+    // Next level by array order — the same source LevelNavigation uses, so the
+    // Continue button and the Next-level link never disagree.
+    const currentIndex = resolved.levels.findIndex(
+      l => l.position === resolved.position,
     );
+    const nextLevel = resolved.levels[currentIndex + 1];
     if (nextLevel) {
       router.navigate({to: nextLevel.path});
     } else {
-      const finishUrl = resolved.properties.finishUrl ?? resolved.finishLink;
-      if (finishUrl) {
-        window.location.href = finishUrl;
-      }
+      // Last level: the server-provided finish link (parity), else the script
+      // overview — so Continue is never a silent no-op.
+      const finishUrl =
+        resolved.properties.finishUrl ??
+        resolved.finishLink ??
+        `/s/${resolved.scriptName}`;
+      window.location.href = finishUrl;
     }
   }, [resolved, router]);
 
