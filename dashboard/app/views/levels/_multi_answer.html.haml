@@ -1,8 +1,8 @@
 - if height == 'auto' || height.blank?
   - button_height = 'auto'
 - else
-  -# accommodate padding and borders in height
-  - button_height = "#{height.to_i + 22}px"
+  -# accommodate padding in height
+  - button_height = "#{height.to_i + 10}px"
 
 / Show the correct answer to authorized teachers
 - if Policies::InlineAnswer.visible_for_script_level?(current_user, @script_level)
