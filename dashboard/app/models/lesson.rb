@@ -516,6 +516,7 @@ class Lesson < ApplicationRecord
       vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_edit),
       programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_edit),
       objectives: objectives.sort_by(&:description).map(&:summarize_for_edit),
+      tutorVideos: JSONVideo.joins(:objectives).where(objectives: {lesson_id: id}).distinct.map {|v| v.summarize_for_lesson_edit(self)},
       standards: lesson_standards.map(&:summarize_for_lesson_edit),
       frameworks: Framework.all.map(&:summarize_for_lesson_edit),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_edit),
