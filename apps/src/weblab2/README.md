@@ -23,8 +23,3 @@ By default on localhost we use a fixed prefix for the preview url because otherw
 If you want to use the channel id based prefix, use the flag ?weblab2-full-urls=true or ?enableExperiments=weblab2-full-urls (only works on localhost, otherwise we always use the full url).
 
 Note that another side effect of this issue is drone tests that rely on the preview won't work, because drone runs a "localhost" version of the app.
-
-Python Lab's pyodide sandbox (`apps/src/pythonlab/README.md`) relies on this same
-`preview.codeprojects.org` mechanism and Chrome flag workaround for the same reason
-(isolating student code execution from studio.code.org's cookies/session), so if you're
-adding a local hostname to the flag for one, you likely want the other's too.
