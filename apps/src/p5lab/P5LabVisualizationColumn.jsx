@@ -236,6 +236,9 @@ class P5LabVisualizationColumn extends React.Component {
   componentDidUpdate(prevProps) {
     if (this.props.pickingLocation && !prevProps.pickingLocation) {
       this.releaseEphemeralFocus = takeEphemeralBlocklyFocus(this.divGameLab);
+      if (!this.releaseEphemeralFocus && this.divGameLab) {
+        this.divGameLab.focus();
+      }
       this.seedCrosshairForPickerOpen();
     } else if (!this.props.pickingLocation && prevProps.pickingLocation) {
       if (this.releaseEphemeralFocus) {
