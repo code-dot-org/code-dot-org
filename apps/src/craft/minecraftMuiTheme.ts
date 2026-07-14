@@ -19,12 +19,12 @@ import {createTheme, Theme} from '@mui/material/styles';
 
 // Light top-left edge, heavy bottom-right shade; inverted when pressed.
 const BEVEL =
-  'inset -4px -4px 0 rgba(0, 0, 0, 0.35), inset 4px 4px 0 rgba(255, 255, 255, 0.25)';
+  'inset -2px -2px 0 rgba(0, 0, 0, 0.35), inset 2px 2px 0 rgba(255, 255, 255, 0.25)';
 const BEVEL_PRESSED =
-  'inset 4px 4px 0 rgba(0, 0, 0, 0.35), inset -4px -4px 0 rgba(255, 255, 255, 0.15)';
+  'inset 2px 2px 0 rgba(0, 0, 0, 0.35), inset -2px -2px 0 rgba(255, 255, 255, 0.15)';
 // Muted bevel so disabled buttons keep their shape without popping.
 const BEVEL_DISABLED =
-  'inset -4px -4px 0 rgba(0, 0, 0, 0.35), inset 4px 4px 0 rgba(255, 255, 255, 0.22)';
+  'inset -2px -2px 0 rgba(0, 0, 0, 0.35), inset 2px 2px 0 rgba(255, 255, 255, 0.22)';
 
 const MINECRAFT_CHROME = {
   borderRadius: 0,
