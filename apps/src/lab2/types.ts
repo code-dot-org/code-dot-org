@@ -408,6 +408,12 @@ export interface Lab2EntryPoint {
    * An array of themes that the lab supports.
    */
   themes: Theme[];
+  /**
+   * The lab loads and saves its own project (via the useSources hook). The
+   * framework skips its project setup for this lab — no framework
+   * ProjectManager and no initialSources in redux; only level data is set.
+   */
+  managesOwnProject?: boolean;
 }
 
 export type LevelData =
