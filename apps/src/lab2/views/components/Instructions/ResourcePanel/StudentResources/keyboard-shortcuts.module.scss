@@ -1,0 +1,51 @@
+.sectionHeading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  margin: 16px 0 8px;
+}
+
+.category {
+  margin-bottom: 12px;
+}
+
+.categoryHeading {
+  color: var(--text-neutral-secondary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.shortcutList {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.shortcutRow {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.shortcutKeys {
+  flex: 0 0 auto;
+  margin: 0;
+
+  kbd {
+    display: inline-block;
+    padding: 2px 6px;
+    background: var(--background-neutral-secondary);
+    border: 1px solid var(--borders-neutral-primary);
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+}
+
+.shortcutExplanation {
+  margin: 0;
+  color: var(--text-neutral-secondary);
+}

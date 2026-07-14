@@ -62,6 +62,7 @@ import DisclaimerButton from './Footer/DisclaimerButton';
 import ResourcePanelExtraLinks from './Footer/ResourcePanelExtraLinks';
 import setFooterVisibility from './Footer/setFooterVisibility';
 import SettingsPanel from './Footer/SettingsPanel';
+import {KeyboardShortcutCategories} from './StudentResources/KeyboardShortcuts';
 import StudentResourcesPanel from './StudentResources/StudentResourcesPanel';
 import {Tabs} from './types';
 import ValidationPanel, {
@@ -144,6 +145,8 @@ type ResourcePanelProps = InstructionsProps & {
   rightHeaderContent?: React.ReactNode;
   includeFooterSpacing?: boolean;
   settings?: Setting[];
+  /** Keyboard shortcuts to display in the student Resources tab, by category. */
+  shortcuts?: KeyboardShortcutCategories;
   versionHistoryProps?: VersionHistoryProps;
   aiTutorMultimodalEnabled?: boolean;
   aiTutorChatButtonData?: ChatButtonData[];
@@ -178,6 +181,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   rightHeaderContent,
   includeFooterSpacing = true,
   settings,
+  shortcuts,
   versionHistoryProps,
   aiTutorMultimodalEnabled,
   aiTutorChatButtonData,
@@ -409,11 +413,17 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       );
     }
 
-    if (levelTours.length > 0 || otherAvailableTours.length > 0) {
+    const hasShortcuts = !!shortcuts && Object.keys(shortcuts).length > 0;
+    if (
+      levelTours.length > 0 ||
+      otherAvailableTours.length > 0 ||
+      hasShortcuts
+    ) {
       tabMap[Tabs.StudentResources] = (
         <StudentResourcesPanel
           levelTours={levelTours}
           otherAvailableTours={otherAvailableTours}
+          shortcuts={shortcuts}
         />
       );
     }
@@ -438,6 +448,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isUserTeacher,
     levelTours,
     otherAvailableTours,
+    shortcuts,
     aiTutorMultimodalEnabled,
     levelName,
     channelId,
