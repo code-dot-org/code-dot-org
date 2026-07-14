@@ -13,11 +13,20 @@ and tzdata. Runs as the non-root `cdo` user (uid/gid 1000) with workdir
 ## Dual-engine policy
 
 This one Dockerfile MUST build on both Docker and Podman from the same
-source. Do not fork per-engine files. Floor: Podman >= 5.4 / buildah >= 1.38.
-Use only features buildah supports natively — heredoc `RUN`, cache mounts,
-`COPY --chown`/`--chmod`. Podman ignores `# syntax=` frontend directives, so
-avoid anything that needs a BuildKit-only frontend (`COPY --parents`,
-`COPY --link`).
+source. Do not fork per-engine files. Floor: Podman >= 4.9 / buildah >= 1.33
+(what Ubuntu 24.04 LTS and GitHub Actions runners ship). Podman ignores
+`# syntax=` frontend directives, so only features buildah supports natively
+at that floor are allowed: cache mounts, `COPY --chown`/`--chmod`.
+
+Known engine divergences, learned the hard way (the CI gate caught both):
+
+- No heredoc `RUN <<EOF` — podman 4.9's parser treats each heredoc line as
+  a Dockerfile instruction.
+- No reliance on `SHELL` — the OCI image format (podman's default) does not
+  support it and podman silently ignores it, so `-e` semantics set via
+  SHELL hold on docker but not podman. Use an explicit `set -eux` in each
+  RUN instead.
+- No `COPY --parents` / `COPY --link` (BuildKit frontend features).
 
 ## Build
 

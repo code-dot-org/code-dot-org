@@ -9,36 +9,30 @@ ARG \
 
 ENV LANG=C.UTF-8
 
-# -euxc so a failing command inside a RUN <<EOF heredoc aborts the layer
-# rather than silently continuing to the next line.
-SHELL ["/bin/sh", "-euxc"]
-
-RUN <<EOF
-  apt-get -qq update
-  export DEBIAN_FRONTEND=noninteractive
-  apt-get -qq -y install --no-install-recommends \
-    ca-certificates \
-    curl \
-    default-mysql-client \
-    imagemagick \
-    libjemalloc2 \
-    locales \
-    tzdata \
-    > /dev/null
-
-  # Preload jemalloc via a stable path. The package installs an
-  # arch-qualified name under /usr/lib/<arch>-linux-gnu; symlink it to a
-  # fixed location so LD_PRELOAD is arch-independent.
-  ln -s /usr/lib/$(uname -m)-linux-gnu/libjemalloc.so.2 /usr/local/lib/libjemalloc.so.2
-
-  groupadd -g ${GID} ${USERNAME}
-  useradd --system --create-home --no-log-init -s /bin/sh -u ${UID} -g ${GID} ${USERNAME}
-
-  mkdir -p ${SRC}
-  chown ${UID}:${GID} ${SRC}
-
-  rm -rf /var/lib/apt/lists/*
-EOF
+# No heredoc, no SHELL: podman 4.9 (Ubuntu 24.04 LTS, GHA runners) cannot
+# parse RUN <<EOF, and OCI image format ignores SHELL entirely — so -e
+# semantics must come from an explicit `set -eux` to hold on both engines.
+#
+# jemalloc: the package installs an arch-qualified name under
+# /usr/lib/<arch>-linux-gnu; symlink to a fixed path so LD_PRELOAD is
+# arch-independent.
+RUN set -eux \
+  && apt-get -qq update \
+  && DEBIAN_FRONTEND=noninteractive apt-get -qq -y install --no-install-recommends \
+       ca-certificates \
+       curl \
+       default-mysql-client \
+       imagemagick \
+       libjemalloc2 \
+       locales \
+       tzdata \
+       > /dev/null \
+  && ln -s "/usr/lib/$(uname -m)-linux-gnu/libjemalloc.so.2" /usr/local/lib/libjemalloc.so.2 \
+  && groupadd -g "${GID}" "${USERNAME}" \
+  && useradd --system --create-home --no-log-init -s /bin/sh -u "${UID}" -g "${GID}" "${USERNAME}" \
+  && mkdir -p "${SRC}" \
+  && chown "${UID}:${GID}" "${SRC}" \
+  && rm -rf /var/lib/apt/lists/*
 
 ENV HOME=/home/${USERNAME}
 ENV LD_PRELOAD=/usr/local/lib/libjemalloc.so.2
