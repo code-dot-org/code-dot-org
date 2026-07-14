@@ -1,9 +1,4 @@
 !!!
--# data-brand activates the brand-scoped design tokens loaded by this app's
--# entry (component-library-styles/brandOverrides.css); without it,
--# ?brand=codeai-next / codeai-audit QA silently falls back to legacy colors.
--# This shell renders with layout: false, so application.html.haml does not
--# set the attribute for us.
 %html{data: {brand: Cdo::Brand.current_brand_code(request)}}
   %head
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1'}
