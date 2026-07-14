@@ -39,6 +39,25 @@ describe('TutorDeepDiveEditor', () => {
     expect(wrapper.text()).toContain('First video');
   });
 
+  it('lists the associated objective descriptions, not the audience', () => {
+    const wrapper = mount(<TutorDeepDiveEditor {...defaultProps} />);
+    // objective descriptions are resolved from ids and listed
+    expect(wrapper.find('tbody li').map(li => li.text())).toEqual([
+      'Objective one',
+    ]);
+    // audience column has been removed
+    expect(wrapper.text()).not.toContain('Student');
+  });
+
+  it('shows "None" when a video has no associated objectives', () => {
+    const video = {...defaultProps.initialVideos[0], objectiveIds: []};
+    const wrapper = mount(
+      <TutorDeepDiveEditor {...defaultProps} initialVideos={[video]} />
+    );
+    expect(wrapper.find('tbody li').length).toBe(0);
+    expect(wrapper.find('tbody').text()).toContain('None');
+  });
+
   it('renders an empty state with no videos', () => {
     const wrapper = mount(
       <TutorDeepDiveEditor {...defaultProps} initialVideos={[]} />

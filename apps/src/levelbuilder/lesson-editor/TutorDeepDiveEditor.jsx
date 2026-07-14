@@ -11,7 +11,11 @@ import TutorVideoDialog from './TutorVideoDialog';
 // immediately against the /json_videos endpoints rather than riding the lesson
 // SaveBar — a video carries an uploaded file and has a lifecycle independent of
 // the lesson's other fields.
-export default function TutorDeepDiveEditor({lessonId, objectives, initialVideos}) {
+export default function TutorDeepDiveEditor({
+  lessonId,
+  objectives,
+  initialVideos,
+}) {
   const [videos, setVideos] = useState(initialVideos);
   const [dialogOpen, setDialogOpen] = useState(false);
   const [editingVideo, setEditingVideo] = useState(null);
@@ -70,34 +74,49 @@ export default function TutorDeepDiveEditor({lessonId, objectives, initialVideos
       .catch(err => window.alert(`Failed to remove video: ${err}`));
   };
 
+  // Resolve a video's objective ids to their descriptions for display.
+  const objectiveDescriptionsById = new Map(
+    objectives.map(o => [o.id, o.description])
+  );
+
   return (
     <div>
       <h3>Videos</h3>
-      <table style={{width: '100%'}}>
+      <table style={styles.table}>
         <thead>
           <tr>
-            <th style={{width: '20%'}}>Key</th>
-            <th style={{width: '45%'}}>Description</th>
-            <th style={{width: '15%'}}>Audience</th>
-            <th style={{width: '10%'}}>Objectives</th>
-            <th style={{width: '10%'}}>Actions</th>
+            <th style={{...styles.cell, width: '20%'}}>Key</th>
+            <th style={{...styles.cell, width: '40%'}}>Description</th>
+            <th style={{...styles.cell, width: '30%'}}>Objectives</th>
+            <th style={{...styles.cell, width: '10%'}}>Actions</th>
           </tr>
         </thead>
         <tbody>
           {videos.length === 0 ? (
             <tr>
-              <td colSpan={5} style={styles.empty}>
+              <td colSpan={4} style={{...styles.cell, ...styles.empty}}>
                 No videos yet.
               </td>
             </tr>
           ) : (
             videos.map(video => (
               <tr key={video.key}>
-                <td>{video.key}</td>
-                <td>{video.description}</td>
-                <td>{video.audience}</td>
-                <td>{(video.objectiveIds || []).length}</td>
-                <td>
+                <td style={styles.cell}>{video.key}</td>
+                <td style={styles.cell}>{video.description}</td>
+                <td style={styles.cell}>
+                  {(video.objectiveIds || []).length === 0 ? (
+                    <em style={styles.empty}>None</em>
+                  ) : (
+                    <ul style={styles.objectiveList}>
+                      {video.objectiveIds.map(id => (
+                        <li key={id}>
+                          {objectiveDescriptionsById.get(id) || `#${id}`}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </td>
+                <td style={styles.cell}>
                   <button
                     type="button"
                     style={styles.actionButton}
@@ -137,6 +156,8 @@ export default function TutorDeepDiveEditor({lessonId, objectives, initialVideos
         onClose={() => setDialogOpen(false)}
         onSaved={handleSaved}
       />
+      <h3>Practice Problems</h3>
+      <p>Coming soon!</p>
     </div>
   );
 }
@@ -148,6 +169,16 @@ TutorDeepDiveEditor.propTypes = {
 };
 
 const styles = {
+  table: {
+    width: '100%',
+    borderCollapse: 'collapse',
+  },
+  cell: {
+    border: '1px solid #ccc',
+    padding: 7,
+    textAlign: 'left',
+    verticalAlign: 'top',
+  },
   empty: {
     fontStyle: 'italic',
     color: '#555',
@@ -158,6 +189,10 @@ const styles = {
     border: 'none',
     cursor: 'pointer',
     padding: 5,
+  },
+  objectiveList: {
+    margin: 0,
+    paddingLeft: 18,
   },
   addButton: {
     background: '#eee',
