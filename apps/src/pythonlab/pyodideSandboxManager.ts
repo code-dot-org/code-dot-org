@@ -18,6 +18,7 @@ import {ConsoleSignalType} from '@cdo/apps/miniApps/neighborhood/constants';
 import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {getStore} from '@cdo/apps/redux';
+import {getInnerEnvironment} from '@cdo/apps/util/codeprojectsPreviewOrigin';
 import {createUuid} from '@cdo/apps/utils';
 
 import {
@@ -85,14 +86,8 @@ let {writeConsoleMessage, writePartialLine} = getMessageHandlers(
 // execution never has access to studio.code.org's cookies/session. See
 // apps/src/pythonlab/sandbox/pyodideWorkerManager.ts, which owns the actual worker, and
 // apps/src/pythonlab/README.md for the full architecture.
-// Mirrors the environment-stripping logic in apps/src/weblab2/htmlPreview/HTMLPreview.tsx
-// so the sandbox resolves to the same environment (dev/adhoc/prod) as the current page.
 const getSandboxOrigin = () => {
-  const re = /([-.]?studio)?\.?(cdn-)?code.org/i;
-  const environmentKey = location.hostname.replace(re, '');
-  const subdomain = environmentKey.length > 0 ? `${environmentKey}.` : '';
-  const isLocalhost = environmentKey === 'localhost';
-  const port = isLocalhost && location.port ? `:${location.port}` : '';
+  const {subdomain, port} = getInnerEnvironment();
   return `${location.protocol}//pyodide-sandbox.preview.${subdomain}codeprojects.org${port}`;
 };
 
