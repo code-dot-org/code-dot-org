@@ -1465,6 +1465,21 @@ FactoryBot.define do
     delivery_context_type {SharedConstants::PRACTICE_PROBLEM_DELIVERY_CONTEXT[:AI_TUTOR_LESSON_DEEP_DIVE]}
   end
 
+  factory :challenge do
+    association :lesson
+    question {'What is 2 + 2?'}
+  end
+
+  factory :challenge_response do
+    association :challenge
+    association :user, factory: :student
+  end
+
+  factory :challenge_response_asset do
+    association :challenge_response
+    asset_type {'whiteboard_image'}
+  end
+
   factory :user_lesson_objective_reflection do
     association(:student, factory: :student)
     objective

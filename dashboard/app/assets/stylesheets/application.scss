@@ -23,6 +23,7 @@
  * Shared
  *= require fonts/barlow-semi-condensed
  *= require fonts/figtree
+ *= require fonts/geist
  *= require fonts/noto-sans
  *= require user-menu
  *= require buttons
@@ -1878,7 +1879,13 @@ a.download-video {
   max-width: 600px;
 }
 
-#signin,
+// The React sign-in page (apps/src/signIn/) styles itself, so #signin no longer
+// carries these rules. They remain for #change-password (password reset) and
+// for the legacy server-rendered sign-in/sign-up pages still using this markup
+// (existing_account, PD/Foorm logged-out pages), which opt in via .signin-legacy.
+// Don't re-add #signin here: the React page reuses that id as a test hook and
+// must not inherit the legacy form/button styling.
+.signin-legacy,
 #change-password {
   $field-width: 310px;
   $button-width: 324px;
@@ -2405,48 +2412,8 @@ a.download-video {
     margin: 0;
   }
 
-  .section-sign-in {
-    display: flex;
-    align-items: center;
-
-    input {
-      background-color: $neutral_light;
-    }
-
-    input[type=text] {
-      flex-grow: 2;
-      height: 40px;
-      padding-top: 0;
-      padding-bottom: 0;
-      margin: 0;
-    }
-
-    button {
-      @include main-font-semi-bold;
-      padding: 10px 20px;
-      margin-right: 0;
-      background-color: $brand_secondary_default;
-      border: 2px solid $brand_secondary_default;
-      color: $neutral_white;
-
-      &:hover {
-        background-color: $brand_secondary_dark;
-        border-color: $brand_secondary_dark;
-        box-shadow: none;
-      }
-      &:focus {
-        border-color: $brand_primary_default;
-      }
-
-      &:disabled {
-        color: $neutral_white;
-        border-color: $neutral_dark20;
-        background-color: $neutral_dark20;
-        @include box-shadow(none);
-        cursor: not-allowed;
-      }
-    }
-  }
+  // .section-sign-in retired: section-code entry now lives in React
+  // (apps/src/signIn/SectionCodeEntry.tsx).
 
   .oauth-sign-in {
     @include main-font-semi-bold;
@@ -2820,8 +2787,8 @@ a.download-video {
 .bubble-choice {
   #markdown.teacher {
     max-width: 1000px;
-    border: 5px solid $cyan;
-    background-color: $lightest_cyan;
+    border: 5px solid var(--borders-info-primary);
+    background-color: var(--background-info-extra-light);
     border-radius: 5px;
     margin: 10px auto;
     .level-group-content & {
@@ -2835,12 +2802,13 @@ a.download-video {
       font-size: 18px;
       line-height: 18px;
       @include main-font-bold;
-      color: $white;
-      background: $cyan;
+      color: var(--text-neutral-white-fixed);
+      background: var(--background-info-primary);
       margin: 0;
     }
     p {
       font-size: 13px;
+      color: var(--text-neutral-primary);
     }
   }
 
@@ -2996,14 +2964,42 @@ a.download-video {
 
 .previousPageButton {
   margin-right: 5px;
+  background-color: var(--background-neutral-primary);
+  border-color: var(--borders-neutral-primary);
+  color: var(--text-neutral-primary);
+  background-image: none;
+
+  &:hover {
+    background-color: var(--background-neutral-tertiary);
+    color: var(--text-border-neutral-primary);
+  }
 }
 
-.buttons.submittable {
-  .submitButton, .unsubmitButton {
-    border-color: $purple;
-    background-color: $purple;
-    color: $white;
-    background-image: none;
+.nextPageButton {
+  border-color: var(--borders-brand-purple-primary);
+  background-color: var(--background-brand-purple-primary);
+  color: var(--text-neutral-white-fixed);
+  background-image: none;
+
+  &:hover {
+    background-color: var(--background-brand-purple-strong);
+    border-color: var(--borders-brand-purple-strong);
+  }
+}
+
+.submitButton, .unsubmitButton {
+  border-color: var(--borders-brand-purple-primary);
+  background-color: var(--background-brand-purple-primary);
+  color: var(--text-neutral-white-fixed);
+  background-image: none;
+
+  &:hover {
+    background-color: var(--background-brand-purple-strong);
+    border-color: var(--borders-brand-purple-strong);
+  }
+
+  &:disabled {
+    background-color: var(--background-brand-purple-primary);
   }
 }
 
@@ -3068,6 +3064,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
       width: calc(100% - #{$multi-left-margin});
       font-size: 16px;
       line-height: 24px;
+      color: var(--text-neutral-primary);
     }
 
     // The block of answers.
@@ -3084,6 +3081,13 @@ $information-desktop: "only screen and (min-width: 1024px)";
     .answerbutton {
       clear: both;
       margin-left: $multi-left-margin;
+      color: var(--text-neutral-primary);
+      background-color: transparent;
+      background-image: none;
+      border: none;
+      padding: 5px;
+      margin: 5px;
+      box-shadow: none;
     }
   }
 
@@ -3112,6 +3116,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
       float: left;
       font-size: 16px;
       line-height: 24px;
+      color: var(--text-neutral-primary);
 
       @media #{$information-tablet-tall} {
         margin-left: $multi-left-margin;
@@ -3146,8 +3151,12 @@ $information-desktop: "only screen and (min-width: 1024px)";
       margin-right: 15px;
       padding-left: 10px;
       padding-right: 20px;
-      padding-top: 10px;
-      padding-bottom: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      background-color: transparent;
+      background-image: none;
+      box-shadow: none;
+      border: none;
     }
   }
 

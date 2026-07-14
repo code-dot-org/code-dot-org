@@ -1,3 +1,4 @@
+import {QueryClientProvider} from '@tanstack/react-query';
 import {RouterProvider} from '@tanstack/react-router';
 import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
@@ -9,6 +10,7 @@ import {injectFontAwesome} from '@code-dot-org/fonts';
 
 import {enableMocks} from '@/modules/mocks/enableMocks';
 import router from '@/modules/router';
+import queryClient from '@/modules/router/queryClient';
 
 // This root element is added to the page in dashboard/app/views/frontend_studio/index.html.haml via rails_vite
 const mount = document.getElementById('vite-root');
@@ -30,7 +32,9 @@ if (mount) {
 
   root.render(
     <StrictMode>
-      <RouterProvider router={router} />
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+      </QueryClientProvider>
     </StrictMode>,
   );
 }

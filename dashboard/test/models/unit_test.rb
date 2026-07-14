@@ -1347,6 +1347,25 @@ class UnitTest < ActiveSupport::TestCase
     assert_empty unit.text_response_levels
   end
 
+  test 'migrated predict level lists both itself and its contained level in text_response_levels' do
+    unit = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: unit)
+    lesson = create(:lesson, script: unit, lesson_group: lesson_group)
+    contained_level = create(:free_response, name: 'Migrated Predict Contained Free Response')
+    level = create(
+      :javalab,
+      properties: {
+        predict_settings: {isPredictLevel: true, questionType: 'freeResponse'},
+        contained_level_names: [contained_level.name]
+      }
+    )
+    create(:script_level, script: unit, lesson: lesson, levels: [level])
+
+    # A response may live on the level itself (post-migration) or on the
+    # contained level (pre-migration), so both must be searched.
+    assert_equal [level, contained_level], unit.text_response_levels.first[:levels]
+  end
+
   test 'logged_out_age_13_required?' do
     unit = create(:script, :in_single_unit_course, login_required: false)
     lesson_group = create(:lesson_group, script: unit)
@@ -2618,6 +2637,30 @@ class UnitTest < ActiveSupport::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     assert_raises(RuntimeError) {unit.update_lesson_outlines([{'name' => 'A'}])}
     assert_raises(RuntimeError) {unit.update_lesson_outlines([{'key' => 'a'}])}
+  end
+
+  test 'lesson_tutor_available? is true for AIF and AID student courses' do
+    %w[AIF AID].each_with_index do |initiative, i|
+      unit_group = create(:single_unit_course, :with_course_offering, family_name: "ai-tutor-#{i}", version_year: '2026')
+      unit_group.course_version.course_offering.update!(marketing_initiative: initiative)
+      assert unit_group.first_unit.lesson_tutor_available?, "expected #{initiative} course to offer the lesson tutor"
+    end
+  end
+
+  test 'lesson_tutor_available? is false for non-AI course offerings' do
+    unit_group = create(:single_unit_course, :with_course_offering, family_name: 'not-ai', version_year: '2026')
+    unit_group.course_version.course_offering.update!(marketing_initiative: 'CSD')
+    refute unit_group.first_unit.lesson_tutor_available?
+  end
+
+  test 'lesson_tutor_available? is false for PL courses even with an AI marketing initiative' do
+    unit_group = create(:single_unit_course, :pl_course, :with_course_offering, family_name: 'ai-pl', version_year: '2026')
+    unit_group.course_version.course_offering.update!(marketing_initiative: 'AIF')
+    refute unit_group.first_unit.lesson_tutor_available?
+  end
+
+  test 'lesson_tutor_available? is false for a unit with no course version' do
+    refute create(:unit).lesson_tutor_available?
   end
 
   private def has_unlaunched_unit?(units)

@@ -1412,21 +1412,33 @@ module Cdo
             assert_equal 1, summary[:stale_views].length
           end
 
-          it 'reports total and the max age / duration across REFRESH rows only' do
+          it 'reports total and the max age / duration across CREATE and REFRESH rows, ignoring DROP' do
             rows = [
               status_row(executed_at: now - 100, duration_seconds: 3.0),
               status_row(executed_at: now - 3600, duration_seconds: 42.0),
-              status_row(operation: 'CREATE', executed_at: now - 999_999, duration_seconds: nil)
+              status_row(operation: 'CREATE', executed_at: now - 999_999, duration_seconds: 7.0),
+              status_row(operation: 'DROP', executed_at: now - 10_000_000, duration_seconds: 1.0)
             ]
             summary = MaterializedViewManager.view_status_summary(rows, now: now)
-            assert_equal 3, summary[:total]
-            assert_equal 3600, summary[:max_seconds_since_last_refresh]
+            assert_equal 4, summary[:total]
+            assert_equal 999_999, summary[:max_seconds_since_last_refresh]
             assert_equal 42.0, summary[:max_refresh_duration_seconds]
           end
 
-          it 'returns nil age/duration when no REFRESH has been observed' do
+          it 'takes the max age/duration across a mix of CREATE and REFRESH rows' do
+            rows = [
+              status_row(operation: 'REFRESH', executed_at: now - 100, duration_seconds: 42.0),
+              status_row(operation: 'CREATE', executed_at: now - 50, duration_seconds: 3.0)
+            ]
+            summary = MaterializedViewManager.view_status_summary(rows, now: now)
+            assert_equal 100, summary[:max_seconds_since_last_refresh]
+            assert_equal 42.0, summary[:max_refresh_duration_seconds]
+          end
+
+          it 'returns nil age/duration when no CREATE/REFRESH has been observed (view missing or dropped)' do
             summary = MaterializedViewManager.view_status_summary(
-              [status_row(operation: 'CREATE', duration_seconds: nil)], now: now
+              [status_row(operation: nil, status: '(no recent)', executed_at: nil, duration_seconds: nil, state: nil, is_stale: nil)],
+              now: now
             )
             assert_nil summary[:max_seconds_since_last_refresh]
             assert_nil summary[:max_refresh_duration_seconds]
@@ -1489,7 +1501,9 @@ module Cdo
           end
 
           it 'skips nil-valued metrics rather than emitting them' do
-            MaterializedViewManager.stubs(:view_status).returns([status_row(operation: 'CREATE', duration_seconds: nil)])
+            MaterializedViewManager.stubs(:view_status).returns(
+              [status_row(operation: nil, status: '(no recent)', executed_at: nil, duration_seconds: nil, state: nil, is_stale: nil)]
+            )
             metrics = capture_metrics do
               MaterializedViewManager.emit_view_status_metrics(
                 client: client, environment_type: :test, models: [Object.new], now: Time.now

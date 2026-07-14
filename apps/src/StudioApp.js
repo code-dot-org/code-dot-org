@@ -22,6 +22,7 @@ import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/l
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import localization from '@cdo/apps/localization';
+import {localizeSource} from '@cdo/apps/localization/localizeSource';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
@@ -2031,8 +2032,70 @@ StudioApp.prototype.setConfigValues_ = function (config) {
     config.level.lastAttempt = '';
   }
 
-  this.startBlocks_ =
-    config.level.lastAttempt || config.level.startBlocks || '';
+  // For applab, the starter source is JavaScript text rather than
+  // blockly XML. Walk its AST for string literals (and `+` concatenation
+  // chains) and rewrite them with their localized equivalents before
+  // the lab initializes. lastAttempt is intentionally NOT touched — once
+  // a student has edited the program, their text shouldn't be rewritten
+  // on reload. Element ids declared in the starter HTML are referenced
+  // by the starter JS via getElementById and friends; translating those
+  // literals would break the runtime lookup, so they're collected from
+  // startHtml and passed in as exclusions.
+  const collectStartHtmlIds = () => {
+    const ids = new Set();
+    if (config.level.startHtml) {
+      new DOMParser()
+        .parseFromString(config.level.startHtml, 'text/html')
+        .querySelectorAll('[id]')
+        .forEach(el => ids.add(el.id));
+    }
+    return ids;
+  };
+  // Applab API functions whose string arguments at the given positions
+  // are semantic identifiers (event types, property names, and the
+  // dataset/table/column/key/model names of the data API) and must not
+  // be translated. Position 0 (ids) is already covered by the startHtml
+  // exclusion above for most of these, but positions 1+ aren't, so the
+  // applab API calls need this slot-level map. Extend as more functions
+  // surface.
+  //
+  // The data API entries are the boundary between user code and stored
+  // data: the table/column/key/model names are matched by exact English
+  // spelling at runtime, so a translated literal would no longer resolve.
+  // Slots holding records/searchParams/testValues are objects rather than
+  // string literals (their keys are object-literal property keys, which
+  // the localizer already skips), so only the name slots are listed here.
+  const applabExcludeCallArgs = {
+    onEvent: [1],
+    setProperty: [1],
+    getProperty: [1],
+    // Datablock storage: first arg is the table name.
+    createRecord: [0],
+    readRecords: [0],
+    updateRecord: [0],
+    deleteRecord: [0],
+    getColumn: [0, 1], // (table, column)
+    getKeyValue: [0],
+    setKeyValue: [0],
+    drawChartFromRecords: [0],
+    // ML: prediction model name + id, and feature-pair key.
+    getPrediction: [0, 1], // (modelName, modelId)
+    addPair: [1], // (object, key, value)
+  };
+  // Lines whose translated content would break the level's runtime
+  // logic — typically data tables keyed on the English spelling of
+  // each entry. The whole line is left untouched.
+  const applabExcludeLinePrefixes = ['var acceptWords', 'var rejectWords'];
+  const startBlocks =
+    config.app === 'applab' && config.level.startBlocks
+      ? localizeSource(config.level.startBlocks, {
+          labels: ['applab-startBlocks'],
+          exclude: collectStartHtmlIds(),
+          excludeCallArgs: applabExcludeCallArgs,
+          excludeLinesStartingWith: applabExcludeLinePrefixes,
+        })
+      : config.level.startBlocks;
+  this.startBlocks_ = config.level.lastAttempt || startBlocks || '';
   this.vizAspectRatio = config.vizAspectRatio || 1.0;
   this.nativeVizWidth = config.nativeVizWidth || DEFAULT_VISUALIZATION_WIDTH;
 

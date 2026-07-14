@@ -7513,9 +7513,21 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        ui-test-mix-move-ai:
+          title: ui-test-mix-move-ai
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
         artificial-intelligence-foundations-india-2025:
           title: artificial-intelligence-foundations-india-2025
           description_short: ''
           description_student: ''
           description_teacher: ''
+          version_title: ''
+        ui-test-oceans:
+          title: UI Test Oceans
+          description_short: UI Test Oceans Course Short Description
+          description_student: UI Test Oceans Course Student Description
+          description_teacher: UI Test Oceans Course Teacher Description
           version_title: ''

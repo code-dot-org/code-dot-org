@@ -595,6 +595,19 @@
   align-items: center;
 }
 
+.onboardingChecklistOuterCelebration {
+  margin-bottom: 24px;
+}
+
+.onboardingChecklistCelebration {
+  width: 70%;
+}
+
+.onboardingCelebrationEmoji {
+  font-size: 3rem;
+  line-height: 1;
+}
+
 // Drawer Component
 .drawer :global(.MuiDrawer-paperAnchorBottom) {
   display: flex;

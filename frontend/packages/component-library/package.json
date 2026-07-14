@@ -215,6 +215,14 @@
       "import": "./dist/fontAwesomeV6Icon/index.mjs",
       "require": "./dist/fontAwesomeV6Icon/index.js"
     },
+    "./form": {
+      "types": {
+        "import": "./dist/form/index.d.ts",
+        "require": "./dist/form/index.d.ts"
+      },
+      "import": "./dist/form/index.mjs",
+      "require": "./dist/form/index.js"
+    },
     "./formFieldWrapper": {
       "types": {
         "import": "./dist/formFieldWrapper/index.d.ts",

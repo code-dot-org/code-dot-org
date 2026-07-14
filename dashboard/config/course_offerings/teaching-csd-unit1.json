@@ -2,7 +2,7 @@
   "key": "teaching-csd-unit1",
   "display_name": "Teaching Problem Solving and Computing",
   "is_featured": false,
-  "assignable": true,
+  "assignable": false,
   "curriculum_type": "Professional Learning",
   "marketing_initiative": "CSD",
   "grade_levels": "6,7,8,9,10",

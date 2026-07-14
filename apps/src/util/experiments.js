@@ -79,6 +79,9 @@ experiments.EXCALIDRAW = 'excalidraw';
 // subdomain, isolated from studio.code.org's cookies/session, instead of directly
 // on studio.code.org.
 experiments.PYTHONLAB_SEPARATE_DOMAIN = 'pythonlab-separate-domain';
+// Student scrapbook entrypoint + "My scrapbook" dropdown link.
+// Enable with ?student-scrapbook=true or ?enableExperiments=student-scrapbook.
+experiments.STUDENT_SCRAPBOOK = 'student-scrapbook';
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.
@@ -120,6 +123,17 @@ experiments.getStoredExperiments_ = function () {
 
 experiments.getEnabledExperiments = function () {
   return this.getStoredExperiments_().map(experiment => experiment.key);
+};
+
+/**
+ * Returns the experiments enabled in this browser via local storage (the kind
+ * setEnabled manages), along with the metadata we store for them. Does not
+ * include user experiments mirrored into the _experiments cookie at sign-in.
+ * @returns {Array<{key: string, expiration?: number}>} expiration is ms since
+ *   epoch, present only for temporarily-enabled experiments.
+ */
+experiments.getLocalStorageExperimentDetails = function () {
+  return this.getLocalStorageExperiments_();
 };
 
 experiments.setEnabled = function (key, shouldEnable, expiration = undefined) {

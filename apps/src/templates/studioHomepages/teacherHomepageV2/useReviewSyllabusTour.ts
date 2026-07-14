@@ -1,4 +1,5 @@
-import {useEffect} from 'react';
+import {useCallback, useEffect} from 'react';
+import Shepherd, {Tour} from 'shepherd.js';
 
 import {createShepherdTour} from '@cdo/apps/sharedComponents/productTour/shepherdTourFactory';
 import useOnboardingTour from '@cdo/apps/sharedComponents/productTour/useOnboardingTour';
@@ -6,7 +7,10 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 
-import {DemoType} from '../../teacherDashboard/types/teacherSectionTypes';
+import {
+  DemoType,
+  Section,
+} from '../../teacherDashboard/types/teacherSectionTypes';
 
 import {
   createReviewSyllabusHomepageSteps,
@@ -60,6 +64,9 @@ export const resumeReviewSyllabusOnboardingTour = () => {
     }
   }
 
+  // Cancel any running tour so we never show two tour popovers simultaneously.
+  Shepherd.activeTour?.cancel();
+
   const tour = createShepherdTour({
     stepClass: 'custom-shepherd-onboarding-container',
   });
@@ -84,7 +91,9 @@ export const resumeReviewSyllabusOnboardingTour = () => {
   tour.show(startStep.id);
 };
 
-const useReviewSyllabusTour = (demoType: DemoType | null) => {
+const useReviewSyllabusTour = (demoSection: Section | null) => {
+  const demoType = demoSection?.demoType ?? null;
+
   const demoPresets = useAppSelector(
     state => state.teacherSections.demoPresets
   );
@@ -116,8 +125,8 @@ const useReviewSyllabusTour = (demoType: DemoType | null) => {
     }
   }, [demoType, demoPresets]);
 
-  const {tour} = useOnboardingTour({
-    getSteps: tour =>
+  const getSteps = useCallback(
+    (tour: Tour) =>
       demoType
         ? createReviewSyllabusHomepageSteps(
             tour,
@@ -125,6 +134,11 @@ const useReviewSyllabusTour = (demoType: DemoType | null) => {
             demoType
           )
         : [],
+    [demoType]
+  );
+
+  const {tour} = useOnboardingTour({
+    getSteps,
     sessionStorageKey: REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
   });
 
