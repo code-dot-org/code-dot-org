@@ -15,6 +15,7 @@ export enum ToPyodideSandboxMessage {
 export enum FromPyodideSandboxMessage {
   READY = 'ready',
   SERVICE_WORKER_UNAVAILABLE = 'service_worker_unavailable',
+  SERVICE_WORKER_REGISTRATION_FAILED = 'service_worker_registration_failed',
   AWAITING_INPUT = 'awaiting_input',
 }
 
@@ -35,4 +36,9 @@ export interface PyodideSandboxSendingInputMessage {
 export interface PyodideSandboxAwaitingInputMessage {
   type: FromPyodideSandboxMessage.AWAITING_INPUT;
   id: string;
+}
+
+export interface PyodideSandboxServiceWorkerRegistrationFailedMessage {
+  type: FromPyodideSandboxMessage.SERVICE_WORKER_REGISTRATION_FAILED;
+  error: string;
 }

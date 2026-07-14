@@ -5,6 +5,7 @@ import {AWAITING_INPUT, SENDING_INPUT} from '../pythonHelpers/constants';
 import {
   FromPyodideSandboxMessage,
   PyodideSandboxAwaitingInputMessage,
+  PyodideSandboxServiceWorkerRegistrationFailedMessage,
 } from './constants';
 
 export const outerOrigin = getOuterOrigin();
@@ -51,11 +52,15 @@ const registerServiceWorker = async () => {
     });
   } catch (error) {
     console.error(`Registration failed with ${error}`);
-    // Log that we failed to register the service worker.
-    window.parent.postMessage(
-      {type: FromPyodideSandboxMessage.SERVICE_WORKER_UNAVAILABLE},
-      outerOrigin
-    );
+    // Log that we failed to register the service worker. Reported as a distinct
+    // message type from SERVICE_WORKER_UNAVAILABLE above, so the outer manager can
+    // tell an unexpected registration failure (error) apart from the browser simply
+    // not supporting service workers at all (warning).
+    const message: PyodideSandboxServiceWorkerRegistrationFailedMessage = {
+      type: FromPyodideSandboxMessage.SERVICE_WORKER_REGISTRATION_FAILED,
+      error: error instanceof Error ? error.message : String(error),
+    };
+    window.parent.postMessage(message, outerOrigin);
     return;
   }
 

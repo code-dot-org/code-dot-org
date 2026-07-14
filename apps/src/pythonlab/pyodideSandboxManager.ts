@@ -232,6 +232,14 @@ const setUpPyodideSandbox = () => {
             .getMetricsReporter()
             .logWarning('Service worker unavailable');
           break;
+        case FromPyodideSandboxMessage.SERVICE_WORKER_REGISTRATION_FAILED:
+          sandboxServiceWorkerUnavailable = true;
+          Lab2Registry.getInstance()
+            .getMetricsReporter()
+            .logError('Failed to register input service worker', undefined, {
+              error: event.data.error,
+            });
+          break;
         case FromPyodideSandboxMessage.AWAITING_INPUT:
           lastInputId = event.data.id;
           break;
