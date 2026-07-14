@@ -457,7 +457,7 @@ $sidebar-tooltip-z-index: 2010;
 //body text three
 .chatListChatItemPrimary {
   color: var(--text-neutral-primary) !important;
-  font-family: Figtree, sans-serif !important;
+  font-family: var(--font-family-main) !important;
   font-size: var(--font-size-body-sm) !important;
   line-height: 1.54 !important;
   text-overflow: ellipsis;
@@ -468,7 +468,7 @@ $sidebar-tooltip-z-index: 2010;
 .chatListChatItemPrimarySelected {
   font-weight: 600 !important;
   color: var(--text-neutral-primary) !important;
-  font-family: Figtree, sans-serif !important;
+  font-family: var(--font-family-main) !important;
   font-size: var(--font-size-body-sm) !important;
   line-height: 1.54 !important;
   text-overflow: ellipsis;
@@ -483,7 +483,7 @@ $sidebar-tooltip-z-index: 2010;
 
 .chatListChatItemSecondary {
   color: var(--text-neutral-tertiary) !important;
-  font-family: Figtree, sans-serif !important;
+  font-family: var(--font-family-main) !important;
   font-size: 0.688rem !important;
   line-height: 1.64 !important;
   text-overflow: ellipsis;
@@ -747,7 +747,7 @@ $sidebar-tooltip-z-index: 2010;
     font-feature-settings: 'liga' off, 'clig' off;
 
     /* Body/Body 1 - ExtraStrong */
-    font-family: var(--font-family-body, Figtree);
+    font-family: var(--font-family-body);
     font-size: var(--font-size-body-lg, 20px);
     font-style: normal;
     font-weight: 700;
