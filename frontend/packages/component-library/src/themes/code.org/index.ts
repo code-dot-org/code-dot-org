@@ -5,7 +5,7 @@ export type * from './muiAugmentation';
 import {
   NOTO_FONT,
   BARLOW_FONT,
-  FIGTREE_FONT,
+  GEIST_FONT,
   createFontStack,
 } from './constants/fonts';
 import {STYLE_OVERRIDES} from './styleOverrides';
@@ -14,7 +14,7 @@ const theme = createTheme({
   cssVariables: true,
   components: STYLE_OVERRIDES,
   typography: {
-    fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
+    fontFamily: createFontStack(GEIST_FONT, NOTO_FONT),
     h1: {
       fontFamily: createFontStack(BARLOW_FONT, NOTO_FONT),
       fontSize: '3rem', // 48px
@@ -40,43 +40,43 @@ const theme = createTheme({
       lineHeight: 1.32,
     },
     h5: {
-      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
+      fontFamily: createFontStack(GEIST_FONT, NOTO_FONT),
       fontSize: '1.25rem', // 20px
       fontWeight: 600,
       lineHeight: 1.4,
     },
     h6: {
-      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
+      fontFamily: createFontStack(GEIST_FONT, NOTO_FONT),
       fontSize: '1rem', // 16px
       fontWeight: 600,
       lineHeight: 1.48,
     },
     body1: {
-      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
+      fontFamily: createFontStack(GEIST_FONT, NOTO_FONT),
       fontSize: '1.25rem', // 20px
       fontWeight: 400,
       lineHeight: 1.4,
     },
     body2: {
-      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
+      fontFamily: createFontStack(GEIST_FONT, NOTO_FONT),
       fontSize: '1rem', // 16px
       fontWeight: 400,
       lineHeight: 1.48,
     },
     body3: {
-      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
+      fontFamily: createFontStack(GEIST_FONT, NOTO_FONT),
       fontSize: '0.875rem',
       fontWeight: 400,
       lineHeight: 1.54,
     },
     body4: {
-      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
+      fontFamily: createFontStack(GEIST_FONT, NOTO_FONT),
       fontSize: '0.813rem',
       fontWeight: 400,
       lineHeight: 1.64,
     },
     overline1: {
-      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
+      fontFamily: createFontStack(GEIST_FONT, NOTO_FONT),
       fontSize: '0.875rem', // 14px
       fontWeight: 600,
       letterSpacing: '0.04rem', // 0.64px
@@ -84,7 +84,7 @@ const theme = createTheme({
       textTransform: 'uppercase',
     },
     overline2: {
-      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
+      fontFamily: createFontStack(GEIST_FONT, NOTO_FONT),
       fontSize: '0.813rem', // 13px
       fontWeight: 600,
       letterSpacing: '0.04rem', // 0.64px
@@ -92,7 +92,7 @@ const theme = createTheme({
       textTransform: 'uppercase',
     },
     overline3: {
-      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
+      fontFamily: createFontStack(GEIST_FONT, NOTO_FONT),
       fontSize: '0.688rem', // 11px
       fontWeight: 600,
       letterSpacing: '0.04rem', // 0.64px
@@ -100,7 +100,7 @@ const theme = createTheme({
       textTransform: 'uppercase',
     },
     figcaption: {
-      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
+      fontFamily: createFontStack(GEIST_FONT, NOTO_FONT),
       fontSize: '0.875rem', // 14px
       fontWeight: 600,
       lineHeight: 1.54,
@@ -114,25 +114,25 @@ const theme = createTheme({
     },
     // Label typography variants for form labels and breadcrumbs
     label1: {
-      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
+      fontFamily: createFontStack(GEIST_FONT, NOTO_FONT),
       fontSize: '1rem', // 16px
       fontWeight: 600,
       lineHeight: 1.48,
     },
     label2: {
-      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
+      fontFamily: createFontStack(GEIST_FONT, NOTO_FONT),
       fontSize: '0.875rem', // 14px
       fontWeight: 600,
       lineHeight: 1.54,
     },
     label3: {
-      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
+      fontFamily: createFontStack(GEIST_FONT, NOTO_FONT),
       fontSize: '0.75rem', // 12px
       fontWeight: 600,
       lineHeight: 1.64,
     },
     label4: {
-      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
+      fontFamily: createFontStack(GEIST_FONT, NOTO_FONT),
       fontSize: '0.625rem', // 10px
       fontWeight: 600,
       lineHeight: 1.8,
