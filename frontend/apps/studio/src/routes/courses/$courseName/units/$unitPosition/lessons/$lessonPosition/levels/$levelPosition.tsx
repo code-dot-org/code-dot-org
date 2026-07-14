@@ -114,6 +114,10 @@ export const Route = createFileRoute(
 
     return {resolved, LabEntrypoint};
   },
+  // Preserve the whole query string. The oceans lab reads its own URL flags
+  // (?guide, ?testFreeze, ?tts) straight from location.search, so we must not
+  // strip to a known subset — pass search through untouched.
+  validateSearch: (search: Record<string, unknown>) => search,
   component: CourseLevelRoute,
   notFoundComponent: () => (
     // h1: this is the only heading on the page when the not-found state renders.
@@ -132,16 +136,16 @@ function CourseLevelRoute() {
       await DashboardApiClient.activities.reportMilestone({
         // `userId` is a required positional segment of the milestone route that
         // the controller never reads — identity comes from `current_user`
-        // (session). Pass 0, matching legacy `progressRedux`, so the real id is
-        // never exposed in a network intercept. Dropping the segment is a follow-up.
+        // (session). Pass 0 so the real id is never exposed in a network
+        // intercept. Dropping the segment from the route is a follow-up.
         userId: 0,
         scriptLevelId: resolved.scriptLevelId,
         levelId: resolved.levelId,
         result: true,
       });
     } catch {
-      // Progress is best-effort: legacy ignores milestone failures and advances
-      // regardless, so a failed report must not strand the user on the level.
+      // Progress is best-effort: a failed report must not strand the user, so
+      // fall through to navigation regardless.
     }
 
     const dest = nextDestination(resolved);

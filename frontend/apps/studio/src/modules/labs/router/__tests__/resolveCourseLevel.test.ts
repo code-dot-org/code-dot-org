@@ -7,7 +7,7 @@ import {
   oceansScriptStructure,
   videoLevel,
 } from '../../oceans/fixtures';
-import type {ResolvedCourseLevel} from '../resolveCourseLevel';
+import type {ContinueContext} from '../resolveCourseLevel';
 import {
   CourseLevelNotFoundError,
   nextDestination,
@@ -131,54 +131,49 @@ describe('resolveCourseLevel', () => {
   });
 });
 
-// Builds only the fields nextDestination reads. Cast so the fixture stays
-// agnostic to fields other properties of ResolvedCourseLevel carry.
-function resolvedFixture(
-  overrides: Partial<ResolvedCourseLevel> = {},
-): ResolvedCourseLevel {
+function continueContext(
+  overrides: Partial<ContinueContext> = {},
+): ContinueContext {
   return {
-    levelId: 1,
-    scriptLevelId: 's1',
     position: 1,
-    totalLevels: 3,
     scriptName: 'oceans',
-    properties: {} as ResolvedCourseLevel['properties'],
-    // Positions are intentionally non-contiguous (1, 2, 4) to prove the next
-    // level is chosen by array order, not by `position + 1`.
+    properties: {},
+    // Non-contiguous positions (1, 2, 4) prove the next level is chosen by
+    // array order, not by `position + 1`.
     levels: [
-      {position: 1, levelId: 1, scriptLevelId: 's1', path: '/l1'},
-      {position: 2, levelId: 2, scriptLevelId: 's2', path: '/l2'},
-      {position: 4, levelId: 4, scriptLevelId: 's4', path: '/l4'},
+      {position: 1, path: '/l1'},
+      {position: 2, path: '/l2'},
+      {position: 4, path: '/l4'},
     ],
     ...overrides,
-  } as ResolvedCourseLevel;
+  };
 }
 
 describe('nextDestination', () => {
   it('advances to the next level in array order', () => {
-    expect(nextDestination(resolvedFixture({position: 1}))).toEqual({
+    expect(nextDestination(continueContext({position: 1}))).toEqual({
       to: '/l2',
     });
   });
 
   it('uses array order, not position arithmetic, across a gap', () => {
     // position 2 has no position-3 sibling; the next entry is position 4.
-    expect(nextDestination(resolvedFixture({position: 2}))).toEqual({
+    expect(nextDestination(continueContext({position: 2}))).toEqual({
       to: '/l4',
     });
   });
 
   it('on the last level, finishes via properties.finishUrl', () => {
-    const resolved = resolvedFixture({
+    const resolved = continueContext({
       position: 4,
       finishLink: '/lesson-finish',
-      properties: {finishUrl: '/finish'} as ResolvedCourseLevel['properties'],
+      properties: {finishUrl: '/finish'},
     });
     expect(nextDestination(resolved)).toEqual({href: '/finish'});
   });
 
   it('falls back to the lesson finishLink when finishUrl is absent', () => {
-    const resolved = resolvedFixture({
+    const resolved = continueContext({
       position: 4,
       finishLink: '/lesson-finish',
     });
@@ -186,7 +181,7 @@ describe('nextDestination', () => {
   });
 
   it('falls back to the script overview when neither is set', () => {
-    expect(nextDestination(resolvedFixture({position: 4}))).toEqual({
+    expect(nextDestination(continueContext({position: 4}))).toEqual({
       href: '/s/oceans',
     });
   });

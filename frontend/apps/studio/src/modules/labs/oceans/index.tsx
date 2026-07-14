@@ -1,4 +1,5 @@
 import {Box} from '@mui/material';
+import {useSearch} from '@tanstack/react-router';
 
 import {useLevelProperties} from '@code-dot-org/lab/contexts';
 import OceansLab from '@code-dot-org/oceans-lab';
@@ -18,18 +19,19 @@ import type {LabEntrypointProps} from '@/modules/labs/router/getLabEntrypointByA
  * (see `levelKinds.ts`).
  */
 export default function OceansContainer({onContinue}: LabEntrypointProps) {
-  // `mode`/`guides` are fish-kind fields (see levelKinds.ts) absent from the
-  // base properties type, so read them as untrusted values and narrow.
-  const props = useLevelProperties() as Record<string, unknown> | undefined;
+  // `mode`/`guides` are fish-kind fields (see levelKinds.ts) that the base
+  // properties type doesn't model; useLevelProperties returns them as unknown,
+  // so narrow to string.
+  const props = useLevelProperties();
   const appMode =
     typeof props?.mode === 'string'
       ? (props.mode as Parameters<typeof OceansLab>[0]['appMode'])
       : undefined;
   const guides = typeof props?.guides === 'string' ? props.guides : undefined;
-  // Text-to-speech locale is a URL param, not a level field — parity with
-  // apps/src/fish/Fish.js (`const textToSpeechLocale = queryParams('tts')`).
+  // Text-to-speech locale comes from the URL, not the level.
+  const search = useSearch({strict: false});
   const textToSpeechLocale =
-    new URLSearchParams(window.location.search).get('tts') ?? undefined;
+    typeof search.tts === 'string' ? search.tts : undefined;
 
   return (
     <Box className="oceans-lab-shell">

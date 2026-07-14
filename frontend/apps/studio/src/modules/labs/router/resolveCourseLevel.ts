@@ -72,6 +72,15 @@ export function resolveCourseLevel(
   };
 }
 
+/** The fields {@link nextDestination} reads from a resolved level. */
+export interface ContinueContext {
+  position: number;
+  scriptName: string;
+  finishLink?: string;
+  properties: {finishUrl?: string};
+  levels: readonly {position: number; path: string}[];
+}
+
 /**
  * Where "Continue" goes from a resolved level: the next level in array order
  * (the same source LevelNavigation uses, so the two never disagree), or — on
@@ -79,7 +88,7 @@ export function resolveCourseLevel(
  * so Continue is never a silent no-op.
  */
 export function nextDestination(
-  resolved: ResolvedCourseLevel,
+  resolved: ContinueContext,
 ): {to: string} | {href: string} {
   const currentIndex = resolved.levels.findIndex(
     l => l.position === resolved.position,
