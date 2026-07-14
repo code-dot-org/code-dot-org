@@ -63,6 +63,8 @@ function createFakeProjectManager(
     flushSave: jest.fn().mockResolvedValue(undefined),
     getLastChannel: jest.fn().mockReturnValue({isOwner: true}),
     getVersionList: jest.fn().mockResolvedValue([]),
+    createCommit: jest.fn().mockResolvedValue(undefined),
+    loadSources: jest.fn().mockResolvedValue(SAVED_SOURCES),
     addSaveStartListener: jest.fn(),
     addSaveSuccessListener: jest.fn(),
     addSaveNoopListener: jest.fn(),
@@ -91,7 +93,10 @@ describe('useSources', () => {
     restoreRedux();
   });
 
-  const renderUseSources = (levelProperties: LevelProperties = LEVEL_ONE) => {
+  const renderUseSources = (
+    levelProperties: LevelProperties = LEVEL_ONE,
+    includeVersionHistory = false
+  ) => {
     // renderHook passes initialProps to the wrapper too, hence the prop type.
     const wrapper = ({
       children,
@@ -104,6 +109,7 @@ describe('useSources', () => {
         useSources<TestSources>({
           levelProperties: props.levelProperties,
           defaultSources: DEFAULT_SOURCES,
+          includeVersionHistory,
         }),
       {wrapper, initialProps: {levelProperties}}
     );
@@ -328,6 +334,70 @@ describe('useSources', () => {
       unmount();
 
       expect(fakeManager.cleanUp).toHaveBeenCalled();
+    });
+  });
+
+  describe('version history', () => {
+    it('is editable when the project has no versions yet', async () => {
+      const {result} = renderUseSources(LEVEL_ONE, true);
+      await flush();
+
+      expect(result.current.versionList).toEqual([]);
+      expect(result.current.isEditable).toBe(true);
+    });
+
+    it('is editable when viewing the latest version, not an older one', async () => {
+      (fakeManager.getVersionList as jest.Mock).mockResolvedValue([
+        {versionId: 'v1', isLatest: false},
+        {versionId: 'v2', isLatest: true},
+      ]);
+      const {result} = renderUseSources(LEVEL_ONE, true);
+      await flush();
+      expect(result.current.currentVersion).toBe('v2');
+      expect(result.current.isEditable).toBe(true);
+
+      await act(async () => result.current.previewVersion('v1'));
+
+      expect(result.current.isEditable).toBe(false);
+    });
+
+    it('createCommit delegates to the manager and refreshes versions', async () => {
+      const {result} = renderUseSources(LEVEL_ONE, true);
+      await flush();
+      (fakeManager.getVersionList as jest.Mock).mockClear();
+
+      await act(async () => result.current.createCommit('  a commit  '));
+
+      expect(fakeManager.createCommit).toHaveBeenCalledWith('a commit');
+      expect(fakeManager.getVersionList).toHaveBeenCalled();
+      expect(result.current.isLoading).toBe(false);
+    });
+
+    it('createCommit resets loading when the manager rejects', async () => {
+      // e.g. the project has no saved version to attach the commit to.
+      (fakeManager.createCommit as jest.Mock).mockRejectedValue(
+        new Error('Cannot create a commit: the project has no saved version')
+      );
+      const {result} = renderUseSources(LEVEL_ONE, true);
+      await flush();
+
+      await act(async () => {
+        await expect(result.current.createCommit('a commit')).rejects.toThrow(
+          'no saved version'
+        );
+      });
+
+      expect(result.current.isLoading).toBe(false);
+    });
+
+    it('createCommit with a blank description is a no-op', async () => {
+      const {result} = renderUseSources(LEVEL_ONE, true);
+      await flush();
+
+      await act(async () => result.current.createCommit('   '));
+
+      expect(fakeManager.createCommit).not.toHaveBeenCalled();
+      expect(result.current.isLoading).toBe(false);
     });
   });
 

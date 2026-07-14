@@ -21,7 +21,6 @@ import type {
   ProjectVersion,
 } from '@cdo/apps/lab2/types';
 import getInitialSources from '@cdo/apps/lab2/utils/getInitialSources';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import configureHeader from './configureHeader';
@@ -83,11 +82,11 @@ export interface UseSourcesOutput<T extends ProjectSources> {
   /** The ID of the current version. */
   currentVersion: string | undefined;
   /** Preview (read-only) a specific version of the project. */
-  previewVersion: (version: string) => void;
+  previewVersion: (version: string) => Promise<void>;
   /** Restore a specific version of the project, to make it the current version. */
-  restoreVersion: (version: string) => void;
+  restoreVersion: (version: string) => Promise<void>;
   /** Create a new commit with the given description. Creates and saves a new project version. */
-  createCommit: (description: string) => void;
+  createCommit: (description: string) => Promise<void>;
 }
 
 /**
@@ -124,6 +123,12 @@ export default function useSources<T extends ProjectSources>({
 
   const isOwner = channel?.isOwner;
 
+  // With version history, editable only while viewing the latest version; a
+  // project with no versions yet (or none flagged latest) counts as latest.
+  const latestVersionId = versionList.find(v => v.isLatest)?.versionId;
+  const isViewingLatestVersion =
+    !latestVersionId || currentVersion === latestVersionId;
+
   // Editable if the current user is the project owner, the project isn't
   // frozen or a widget view, and we are not viewing an old version. Level
   // edit mode is always editable.
@@ -133,9 +138,20 @@ export default function useSources<T extends ProjectSources>({
       isOwner &&
       !channel?.frozen &&
       !levelProperties.widgetView &&
-      (!includeVersionHistory ||
-        versionList.find(v => v.versionId === currentVersion)?.isLatest)) ||
+      (!includeVersionHistory || isViewingLatestVersion)) ||
     false;
+
+  const refreshVersionList = async (
+    projectManager: ProjectManager,
+    isCancelled: () => boolean = () => false
+  ) => {
+    const versionList = await projectManager.getVersionList(true);
+    if (isCancelled()) return;
+    setVersionList(versionList);
+    const latestVersion =
+      versionList.find(v => v.isLatest)?.versionId || INITIAL_VERSION_ID;
+    setCurrentVersion(latestVersion);
+  };
 
   /**
    * Loads project data and version list (if needed) for current level/user.
@@ -187,14 +203,16 @@ export default function useSources<T extends ProjectSources>({
       // Load and set initial project sources (even if we don't have a project).
       const projectAndSources = await projectManagerRef.current?.load();
       if (isCancelled()) return;
-      setSources(
-        (getInitialSources(levelProperties, projectAndSources?.sources) as T) ||
-          defaultSources
-      );
+      // Set channel before sources; in case updates are received without batching, channel is expected to be
+      // defined when sources are.
       setChannel(projectAndSources?.channel);
       // Some components (including non-Lab2 areas like the header) read state.lab.channel directly
       // so we need to set it here. Prefer to read channel from this hook via the consuming lab within lab components.
       dispatch(setChannelAction(projectAndSources?.channel));
+      setSources(
+        (getInitialSources(levelProperties, projectAndSources?.sources) as T) ||
+          defaultSources
+      );
 
       // No project; return early.
       if (!projectManagerRef.current) return;
@@ -217,18 +235,6 @@ export default function useSources<T extends ProjectSources>({
       setSources,
     ]
   );
-
-  const refreshVersionList = async (
-    projectManager: ProjectManager,
-    isCancelled: () => boolean = () => false
-  ) => {
-    const versionList = await projectManager.getVersionList(true);
-    if (isCancelled()) return;
-    setVersionList(versionList);
-    const latestVersion =
-      versionList.find(v => v.isLatest)?.versionId || INITIAL_VERSION_ID;
-    setCurrentVersion(latestVersion);
-  };
 
   const reinitializeSources = useCallback(
     (sources: T | undefined) => {
@@ -290,11 +296,14 @@ export default function useSources<T extends ProjectSources>({
       if (!includeVersionHistory || !projectManagerRef.current) return;
 
       setIsLoading(true);
-      await projectManagerRef.current.flushSave();
-      const sources = await projectManagerRef.current.loadSources(version);
-      reinitializeSources(sources as T | undefined);
-      setCurrentVersion(version);
-      setIsLoading(false);
+      try {
+        await projectManagerRef.current.flushSave();
+        const sources = await projectManagerRef.current.loadSources(version);
+        reinitializeSources(sources as T | undefined);
+        setCurrentVersion(version);
+      } finally {
+        setIsLoading(false);
+      }
     },
     [includeVersionHistory, reinitializeSources]
   );
@@ -304,12 +313,15 @@ export default function useSources<T extends ProjectSources>({
       if (!includeVersionHistory || !projectManagerRef.current) return;
 
       setIsLoading(true);
-      await projectManagerRef.current.flushSave();
-      const sources = await projectManagerRef.current.restoreSources(version);
-      reinitializeSources(sources as T | undefined);
-      await refreshVersionList(projectManagerRef.current);
-      setHasEdited(false);
-      setIsLoading(false);
+      try {
+        await projectManagerRef.current.flushSave();
+        const sources = await projectManagerRef.current.restoreSources(version);
+        reinitializeSources(sources as T | undefined);
+        await refreshVersionList(projectManagerRef.current);
+        setHasEdited(false);
+      } finally {
+        setIsLoading(false);
+      }
     },
     [includeVersionHistory, reinitializeSources]
   );
@@ -318,29 +330,18 @@ export default function useSources<T extends ProjectSources>({
     async (description: string) => {
       if (!includeVersionHistory || !projectManagerRef.current || !isEditable)
         return;
+      const comment = description.trim();
+      if (!comment) return;
 
       setIsLoading(true);
-      await projectManagerRef.current.flushSave(/* forceNewVersion */ true);
-      const comment = description.trim();
-      const newVersionId = projectManagerRef.current.getCurrentVersionId();
-
-      if (!comment || !newVersionId) return; // TODO: Handle no version ID.
-
-      const payload = {
-        storage_id: projectManagerRef.current.getChannelId(),
-        version_id: newVersionId,
-        comment,
-      };
-
-      // TODO: Should this be inside ProjectManager?
-      await HttpClient.post('/project_commits', JSON.stringify(payload), true, {
-        'Content-Type': 'application/json; charset=UTF-8',
-      });
-      // Set this boolean to true so if any updates occur, a new version is created and this version remains intact and is not overwritten.
-      projectManagerRef.current.setForceNewVersion(true);
-      await refreshVersionList(projectManagerRef.current);
-      setHasEdited(false);
-      setIsLoading(false);
+      try {
+        await projectManagerRef.current.createCommit(comment);
+        await refreshVersionList(projectManagerRef.current);
+        setHasEdited(false);
+      } finally {
+        // Every exit (including a createCommit rejection) resets loading.
+        setIsLoading(false);
+      }
     },
     [includeVersionHistory, isEditable]
   );
