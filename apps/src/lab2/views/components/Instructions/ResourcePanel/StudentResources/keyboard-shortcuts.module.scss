@@ -6,38 +6,35 @@
   margin: 0 0 8px;
 }
 
-.category {
-  margin-bottom: 12px;
+.shortcutTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
 }
 
 .categoryHeading {
-  color: var(--text-neutral-secondary);
-  display: block;
-  margin-bottom: 4px;
-}
-
-.shortcutList {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.shortcutRow {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 2px 10px;
+  text-align: left;
 }
 
 .shortcutKeys {
-  flex: 0 0 auto;
-  margin: 0;
+  // Shrink the key column to its content so the description gets the rest.
+  width: 1%;
+  white-space: nowrap;
+  text-align: left;
+  vertical-align: top;
+  // Override the app's global <th> styling (grey fill, white text), which
+  // otherwise renders the key chip unreadable.
+  background: transparent;
+  color: var(--text-neutral-primary);
+  font-weight: normal;
+  border: 1px solid var(--borders-neutral-primary);
+  padding: 6px 8px;
 
   kbd {
     display: inline-block;
     padding: 2px 6px;
     background: var(--background-neutral-secondary);
+    color: var(--text-neutral-primary);
     border: 1px solid var(--borders-neutral-primary);
     border-radius: 4px;
     font-family: monospace;
@@ -47,10 +44,8 @@
 }
 
 .shortcutExplanation {
-  // Claim at least half the row; when the key combo needs more than the other
-  // half, this can't fit beside it and wraps to a full-width line below.
-  flex: 1 1 auto;
-  min-width: 50%;
-  margin: 0;
-  color: var(--text-neutral-secondary);
+  vertical-align: top;
+  color: var(--text-neutral-primary);
+  border: 1px solid var(--borders-neutral-primary);
+  padding: 6px 8px;
 }

@@ -25,23 +25,27 @@ const KeyboardShortcuts: React.FC<KeyboardShortcutsProps> = ({shortcuts}) => {
         <strong>Keyboard shortcuts</strong>
       </Typography>
       {Object.entries(shortcuts).map(([category, entries]) => (
-        <div key={category} className={styles.category}>
-          <Typography variant="overline2" className={styles.categoryHeading}>
-            {category}
-          </Typography>
-          <dl className={styles.shortcutList}>
+        <table key={category} className={styles.shortcutTable}>
+          <caption>
+            <Typography variant="overline3" className={styles.categoryHeading}>
+              {category}
+            </Typography>
+          </caption>
+          <tbody>
             {entries.map(({shortcut, explanation}) => (
-              <div key={shortcut} className={styles.shortcutRow}>
-                <dt className={styles.shortcutKeys}>
+              <tr key={shortcut}>
+                <th scope="row" className={styles.shortcutKeys}>
                   <kbd>{shortcut}</kbd>
-                </dt>
-                <dd className={styles.shortcutExplanation}>
-                  <Typography variant="body4">{explanation}</Typography>
-                </dd>
-              </div>
+                </th>
+                <td className={styles.shortcutExplanation}>
+                  <Typography variant="body4" component="span">
+                    {explanation}
+                  </Typography>
+                </td>
+              </tr>
             ))}
-          </dl>
-        </div>
+          </tbody>
+        </table>
       ))}
     </div>
   );

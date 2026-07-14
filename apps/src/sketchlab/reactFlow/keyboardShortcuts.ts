@@ -9,8 +9,12 @@ import {KeyboardShortcutCategories} from '@cdo/apps/lab2/views/components/Instru
 export const SKETCH_LAB_KEYBOARD_SHORTCUTS: KeyboardShortcutCategories = {
   Navigation: [
     {
-      shortcut: 'Tab / Shift + Tab',
-      explanation: 'Move focus between elements',
+      shortcut: 'Tab',
+      explanation: 'Move focus between elements (forward)',
+    },
+    {
+      shortcut: 'Shift + Tab',
+      explanation: 'Move focus between elements (backward)',
     },
   ],
   'Move & resize': [
