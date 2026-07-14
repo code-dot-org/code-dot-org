@@ -26,11 +26,20 @@ export default function OceansContainer({onContinue}: LabEntrypointProps) {
       ? (props.mode as Parameters<typeof OceansLab>[0]['appMode'])
       : undefined;
   const guides = typeof props?.guides === 'string' ? props.guides : undefined;
+  // Text-to-speech locale is a URL param, not a level field — parity with
+  // apps/src/fish/Fish.js (`const textToSpeechLocale = queryParams('tts')`).
+  const textToSpeechLocale =
+    new URLSearchParams(window.location.search).get('tts') ?? undefined;
 
   return (
     <Box className="oceans-lab-shell">
       <Box className="oceans-lab-frame">
-        <OceansLab appMode={appMode} guides={guides} onContinue={onContinue} />
+        <OceansLab
+          appMode={appMode}
+          guides={guides}
+          textToSpeechLocale={textToSpeechLocale}
+          onContinue={onContinue}
+        />
       </Box>
     </Box>
   );
