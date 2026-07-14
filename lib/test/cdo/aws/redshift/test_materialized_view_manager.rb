@@ -1445,6 +1445,81 @@ module Cdo
           end
         end
 
+        describe '.summarize_view_status' do
+          def status_row(**opts)
+            defaults = {
+              model_name: 'User', table_name: 'users', view_type: 'non_pii',
+              operation: 'REFRESH', executed_at: Time.now, duration_seconds: 5.0,
+              statement_id: 'id-1', status: 'FINISHED', db_user: 'etl_client',
+              is_stale: false, state: 1, state_description: nil, error: nil
+            }
+            ViewStatusRow.new(**defaults.merge(opts))
+          end
+
+          it 'tallies status counts, expected/orphan split, and groups failures by error' do
+            rows = [
+              status_row(status: 'FINISHED'),
+              status_row(status: 'FINISHED', error: 'Schema "x" does not exist', table_name: 'levels'),
+              status_row(status: 'FAILED', error: 'Schema "x" does not exist', table_name: 'scripts'),
+              status_row(model_name: MaterializedViewManager::ORPHAN_MODEL_NAME, status: 'FINISHED', table_name: 'old_table')
+            ]
+            summary = MaterializedViewManager.summarize_view_status(rows)
+
+            assert_equal({'FINISHED' => 3, 'FAILED' => 1}, summary[:by_status])
+            assert_equal 3, summary[:expected]
+            assert_equal 1, summary[:orphan]
+            assert_equal ['Schema "x" does not exist'], summary[:failures_by_error].keys
+            assert_equal 2, summary[:failures_by_error]['Schema "x" does not exist'].length
+          end
+
+          it 'reports empty tallies for an empty row set' do
+            summary = MaterializedViewManager.summarize_view_status([])
+            assert_empty summary[:by_status]
+            assert_equal 0, summary[:expected]
+            assert_equal 0, summary[:orphan]
+            assert_empty summary[:failures_by_error]
+          end
+        end
+
+        describe '.view_status_to_csv' do
+          def status_row(**opts)
+            defaults = {
+              model_name: 'User', table_name: 'users', view_type: 'non_pii',
+              operation: 'REFRESH', executed_at: Time.parse('2026-07-13T12:00:00Z'), duration_seconds: 5.27,
+              statement_id: 'id-1', status: 'FINISHED', db_user: 'etl_client',
+              is_stale: false, state: 1, state_description: nil, error: nil
+            }
+            ViewStatusRow.new(**defaults.merge(opts))
+          end
+
+          it 'emits a header row matching VIEW_STATUS_CSV_HEADERS' do
+            parsed = CSV.parse(MaterializedViewManager.view_status_to_csv([]))
+            assert_equal [MaterializedViewManager::VIEW_STATUS_CSV_HEADERS], parsed
+          end
+
+          it 'has the same number of values as headers, so columns never silently shift' do
+            values = MaterializedViewManager.view_status_csv_values(status_row)
+            assert_equal MaterializedViewManager::VIEW_STATUS_CSV_HEADERS.length, values.length
+          end
+
+          it 'serializes a row: iso8601 timestamp, rounded duration, stringified boolean' do
+            csv = MaterializedViewManager.view_status_to_csv([status_row])
+            row = CSV.parse(csv, headers: true).first
+
+            assert_equal 'User', row['model']
+            assert_equal 'users', row['mysql_table_name']
+            assert_equal '2026-07-13T12:00:00Z', row['operation_executed_at']
+            assert_equal '5.3', row['operation_duration_seconds']
+            assert_equal 'false', row['view_is_stale']
+          end
+
+          it 'leaves is_stale blank (not "false") when it is nil' do
+            csv = MaterializedViewManager.view_status_to_csv([status_row(is_stale: nil)])
+            row = CSV.parse(csv, headers: true).first
+            assert_nil row['view_is_stale']
+          end
+        end
+
         describe '.emit_view_status_metrics' do
           let(:client) {mock('redshift_client')}
 
