@@ -105,9 +105,7 @@ const cssLayerOrder = (
   <GlobalStyles styles="@layer theme, base, mui, components, utilities;" />
 );
 
-// data-brand is set server-side via Cdo::Brand before this bundle loads, and
-// doesn't change without a full page reload, so it's safe to read once here
-// rather than re-resolving per render.
+/** Root layout: applies the CDO MUI theme and Bootstrap providers to all routes. */
 const theme = getMuiThemeForBrand(document.documentElement.dataset.brand);
 
 /** Root layout: applies the brand's MUI theme and Bootstrap providers to all routes. */
