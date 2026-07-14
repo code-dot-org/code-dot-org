@@ -1,3 +1,4 @@
+@playwright
 Feature: Block auto-layout
 Background:
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/7/levels/2?noautoplay=true"

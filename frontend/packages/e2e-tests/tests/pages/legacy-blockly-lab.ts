@@ -3,8 +3,20 @@ import {expect, type Locator, type Page} from '@playwright/test';
 import {AuthoredHintsComponent} from '../components/authored-hints';
 import {CalloutsComponent} from '../components/callouts';
 import {labLevelUrl, type LabLevelUrlParams} from '../shared/routes';
+import {waitUntilStable} from '../shared/stability';
 
 import {LessonLevelPage} from './lesson-level-page';
+
+declare global {
+  /** Blockly's test-only globals, exposed on window by legacy labs. */
+  interface Window {
+    Blockly?: {mainBlockSpace: {clear(): void}};
+    __TestInterface?: {
+      arrangeBlockPosition(blocksXml: string, options: object): string;
+      loadBlocks(blocksXml: string): void;
+    };
+  }
+}
 
 /** Base for legacy Blockly labs (maze, artist, flappy, ...). */
 export class LegacyBlocklyLab extends LessonLevelPage {
@@ -103,6 +115,47 @@ export class LegacyBlocklyLab extends LessonLevelPage {
       'opacity',
       '1',
     );
+  }
+
+  /** Clear the workspace, then arrange and load the given blocks XML via the lab's test-only interface. */
+  async loadArrangedBlocksXml(blocksXml: string): Promise<void> {
+    await expect
+      .poll(() =>
+        this.page.evaluate(() => Boolean(window.Blockly?.mainBlockSpace)),
+      )
+      .toBe(true);
+
+    await this.page.evaluate((xml: string) => {
+      const {Blockly, __TestInterface} = window;
+      if (!Blockly || !__TestInterface) {
+        throw new Error('Blockly test globals unavailable');
+      }
+      Blockly.mainBlockSpace.clear();
+      __TestInterface.loadBlocks(__TestInterface.arrangeBlockPosition(xml, {}));
+    }, blocksXml);
+  }
+
+  /** A block's rendered SVG group, keyed by its Blockly block id. */
+  blockLocator(blockId: string): Locator {
+    return this.page.locator(`.blocklySvg [data-id="${blockId}"]`);
+  }
+
+  /**
+   * A block's workspace offset from its SVG translate transform. Auto-layout can
+   * nudge a block over a few frames after it attaches, so wait for it to settle.
+   */
+  async blockOffset(blockId: string): Promise<{x: number; y: number}> {
+    await waitUntilStable(this.blockLocator(blockId));
+    return this.page.evaluate((id: string) => {
+      const block = document.querySelector<SVGGElement>(
+        `.blocklySvg [data-id="${id}"]`,
+      );
+      if (!block) {
+        throw new Error(`Blockly block ${id} was not found`);
+      }
+      const transform = block.transform.baseVal.getItem(0);
+      return {x: transform.matrix.e, y: transform.matrix.f};
+    }, blockId);
   }
 
   /** Switch locale via the global dropdown; wait for the lab to reload. */
