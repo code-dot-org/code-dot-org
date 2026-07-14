@@ -46,6 +46,13 @@ export const Route = createFileRoute(
     const unitPosition = parseInt(params.unitPosition, 10);
     const lessonPosition = parseInt(lessonPosStr, 10);
     const levelPosition = parseInt(levelPosStr, 10);
+    if (
+      !Number.isInteger(unitPosition) ||
+      !Number.isInteger(lessonPosition) ||
+      !Number.isInteger(levelPosition)
+    ) {
+      throw notFound();
+    }
 
     if (import.meta.env.VITE_API_MODE === 'msw') {
       await registerCourseFixtures();
