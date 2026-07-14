@@ -74,6 +74,12 @@ describe('aggregateResults', () => {
       errored: 0,
       passed: 2,
     });
+    expect(byGate[EvalGate.OUTPUT_IMAGE]).toMatchObject({
+      entered: 2,
+      blocked: 0,
+      errored: 0,
+      passed: 2,
+    });
     expect(byGate[EvalGate.OUTPUT_TEXT]).toMatchObject({
       entered: 2,
       blocked: 0,

@@ -11,7 +11,9 @@ describe('InternationalOptInTest', () => {
       workshopCourse: ['workshopCourse'],
       emailOptIn: ['emailOptIn'],
       legalOptIn: ['legalOptIn'],
-      workshopOrganizer: ['workshopOrganizer'],
+      workshopOrganizer: {
+        afghanistan: ['CodeAI', 'My organizer is not listed'],
+      },
       colombianSchoolData: {
         department: {
           municipality: {
@@ -47,6 +49,24 @@ describe('InternationalOptInTest', () => {
       chileanSchoolId: 'School ID',
     },
   };
+
+  describe('supported country interface', () => {
+    it('enables free-text school fields and includes CodeAI as an organizer', () => {
+      const wrapper = mount(<InternationalOptIn {...defaultProps} />);
+
+      act(() => {
+        wrapper.setState({data: {schoolCountry: 'Afghanistan'}});
+      });
+
+      expect(wrapper.find('input#schoolCity').prop('disabled')).toBe(false);
+      expect(wrapper.find('input#schoolName').prop('disabled')).toBe(false);
+      expect(
+        wrapper
+          .find('select#workshopOrganizer option')
+          .map(option => option.prop('value'))
+      ).toEqual(['', 'CodeAI', 'My organizer is not listed']);
+    });
+  });
 
   describe('Colombian school interface', () => {
     it('requires you to select a country before enabling school name and city inputs', () => {

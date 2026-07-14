@@ -21,7 +21,14 @@ end
 
 When(/^I click block "([^"]*)"$/) do |block|
   id_selector = get_id_selector
-  @browser.execute_script("$(\".blocklySvg [#{id_selector}='#{get_block_id(block)}']\").simulate( 'drag', {handle: 'corner', dx: 0, dy: 0, moves: 5});")
+  selector = ".blocklySvg [#{id_selector}='#{get_block_id(block)}']"
+  @browser.execute_script(<<~JS)
+    var el = $("#{selector}")[0];
+    if (!el) return;
+    var opts = {bubbles: true, cancelable: true, pointerId: 1, pointerType: 'mouse', isPrimary: true};
+    el.dispatchEvent(new PointerEvent('pointerdown', opts));
+    document.dispatchEvent(new PointerEvent('pointerup', opts));
+  JS
 end
 
 # This helps click on a field in Blockly. It always picks the first element from the list generated
@@ -272,11 +279,59 @@ Then(/^the project matches my memorized code$/) do
 end
 
 Then(/^I click toolbox block with selector "(.*?)"$/) do |selector|
-  script = "
-    $('#{selector}').simulate('pointerdown')
-    $('#{selector}').simulate('pointerup')
-  "
-  @browser.execute_script(script)
+  @browser.execute_script(<<~JS)
+    (function() {
+      var el = $(#{selector.to_json}).filter(function() {
+        return $(this).parents(':hidden').length === 0;
+      })[0];
+      if (!el) return;
+      var rect = el.getBoundingClientRect();
+      var cx = rect.left + rect.width / 2;
+      var cy = rect.top + rect.height / 2;
+      el.dispatchEvent(new PointerEvent('pointerdown', {
+        bubbles: true, cancelable: true,
+        clientX: cx, clientY: cy,
+        pointerId: 1, pointerType: 'mouse', isPrimary: true
+      }));
+      el.dispatchEvent(new PointerEvent('pointerup', {
+        bubbles: true, cancelable: true,
+        clientX: cx, clientY: cy,
+        pointerId: 1, pointerType: 'mouse', isPrimary: true
+      }));
+    })();
+  JS
+end
+
+BLOCKLY_TOOLBOX_CATEGORY_LABEL_SELECTOR = ".blocklyToolbox:visible > .blocklyToolboxCategoryGroup > .blocklyToolboxCategoryContainer:nth-child(%d) > .blocklyToolboxCategory .blocklyToolboxCategoryLabel"
+
+Then /^toolbox category (\d+) has "([^"]*)" text from key "((?:[^"\\]|\\.)*)"$/ do |index, language, loc_key|
+  element_has_i18n_text(BLOCKLY_TOOLBOX_CATEGORY_LABEL_SELECTOR % index.to_i, language, loc_key)
+end
+
+# Blockly 13 toolbox categories respond to `pointerdown` (not `click`), so we must
+# dispatch a real PointerEvent rather than using native .click() or jQuery simulate.
+When(/^I click toolbox category selector "(.*?)"$/) do |selector|
+  @browser.execute_script(<<~JS)
+    (function() {
+      var el = $(#{selector.to_json}).filter(function() {
+        return $(this).parents(':hidden').length === 0;
+      })[0];
+      if (!el) return;
+      var rect = el.getBoundingClientRect();
+      var cx = rect.left + rect.width / 2;
+      var cy = rect.top + rect.height / 2;
+      el.dispatchEvent(new PointerEvent('pointerdown', {
+        bubbles: true, cancelable: true,
+        clientX: cx, clientY: cy,
+        pointerId: 1, pointerType: 'mouse', isPrimary: true
+      }));
+      document.dispatchEvent(new PointerEvent('pointerup', {
+        bubbles: true, cancelable: true,
+        clientX: cx, clientY: cy,
+        pointerId: 1, pointerType: 'mouse', isPrimary: true
+      }));
+    })();
+  JS
 end
 
 Then(/^I click block field that is number (.*?) in the list of blocks and number (.*?) in the field row$/) do |n1, n2|
@@ -293,7 +348,7 @@ end
 
 Then(/^the function editor workspace has (\d+) blocks$/) do |n|
   script = "return Blockly.getFunctionEditorWorkspace().getAllBlocks().length"
-  expect(@browser.execute_script(script)).to eq(n)
+  expect(@browser.execute_script(script)).to eq(n.to_i)
 end
 
 def current_block_xml
