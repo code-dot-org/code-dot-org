@@ -65,6 +65,7 @@ function createFakeProjectManager(
     getVersionList: jest.fn().mockResolvedValue([]),
     createCommit: jest.fn().mockResolvedValue(undefined),
     loadSources: jest.fn().mockResolvedValue(SAVED_SOURCES),
+    restoreSources: jest.fn().mockResolvedValue(SAVED_SOURCES),
     addSaveStartListener: jest.fn(),
     addSaveSuccessListener: jest.fn(),
     addSaveNoopListener: jest.fn(),
@@ -95,7 +96,13 @@ describe('useSources', () => {
 
   const renderUseSources = (
     levelProperties: LevelProperties = LEVEL_ONE,
-    includeVersionHistory = false
+    options: {
+      includeVersionHistory?: boolean;
+      computeHasEdited?: (
+        prev: TestSources | undefined,
+        next: TestSources
+      ) => boolean;
+    } = {}
   ) => {
     // renderHook passes initialProps to the wrapper too, hence the prop type.
     const wrapper = ({
@@ -109,7 +116,7 @@ describe('useSources', () => {
         useSources<TestSources>({
           levelProperties: props.levelProperties,
           defaultSources: DEFAULT_SOURCES,
-          includeVersionHistory,
+          ...options,
         }),
       {wrapper, initialProps: {levelProperties}}
     );
@@ -249,6 +256,23 @@ describe('useSources', () => {
     });
   });
 
+  describe('computeHasEdited', () => {
+    it('lets the lab decide which changes count as edits', async () => {
+      const {result} = renderUseSources(LEVEL_ONE, {
+        computeHasEdited: (prev, next) => prev?.source !== next.source,
+      });
+      await flush();
+
+      // An exempt change (e.g. viewport-only) saves without marking edited.
+      act(() => result.current.patchSources({extra: 'viewport'}));
+      expect(fakeManager.save).toHaveBeenCalled();
+      expect(result.current.hasEdited).toBe(false);
+
+      act(() => result.current.patchSources({source: 'edited'}));
+      expect(result.current.hasEdited).toBe(true);
+    });
+  });
+
   describe('patchSources', () => {
     it('shallow-merges patches into the latest sources', async () => {
       const {result} = renderUseSources();
@@ -339,7 +363,9 @@ describe('useSources', () => {
 
   describe('version history', () => {
     it('is editable when the project has no versions yet', async () => {
-      const {result} = renderUseSources(LEVEL_ONE, true);
+      const {result} = renderUseSources(LEVEL_ONE, {
+        includeVersionHistory: true,
+      });
       await flush();
 
       expect(result.current.versionList).toEqual([]);
@@ -351,7 +377,9 @@ describe('useSources', () => {
         {versionId: 'v1', isLatest: false},
         {versionId: 'v2', isLatest: true},
       ]);
-      const {result} = renderUseSources(LEVEL_ONE, true);
+      const {result} = renderUseSources(LEVEL_ONE, {
+        includeVersionHistory: true,
+      });
       await flush();
       expect(result.current.currentVersion).toBe('v2');
       expect(result.current.isEditable).toBe(true);
@@ -362,7 +390,9 @@ describe('useSources', () => {
     });
 
     it('createCommit delegates to the manager and refreshes versions', async () => {
-      const {result} = renderUseSources(LEVEL_ONE, true);
+      const {result} = renderUseSources(LEVEL_ONE, {
+        includeVersionHistory: true,
+      });
       await flush();
       (fakeManager.getVersionList as jest.Mock).mockClear();
 
@@ -378,7 +408,9 @@ describe('useSources', () => {
       (fakeManager.createCommit as jest.Mock).mockRejectedValue(
         new Error('Cannot create a commit: the project has no saved version')
       );
-      const {result} = renderUseSources(LEVEL_ONE, true);
+      const {result} = renderUseSources(LEVEL_ONE, {
+        includeVersionHistory: true,
+      });
       await flush();
 
       await act(async () => {
@@ -390,8 +422,28 @@ describe('useSources', () => {
       expect(result.current.isLoading).toBe(false);
     });
 
+    it('restoring or committing a version does not reset hasEdited', async () => {
+      (fakeManager.getVersionList as jest.Mock).mockResolvedValue([
+        {versionId: 'v1', isLatest: true},
+      ]);
+      const {result} = renderUseSources(LEVEL_ONE, {
+        includeVersionHistory: true,
+      });
+      await flush();
+      act(() => result.current.updateSources({source: 'edited'}));
+      expect(result.current.hasEdited).toBe(true);
+
+      await act(async () => result.current.createCommit('a commit'));
+      expect(result.current.hasEdited).toBe(true);
+
+      await act(async () => result.current.restoreVersion('v1'));
+      expect(result.current.hasEdited).toBe(true);
+    });
+
     it('createCommit with a blank description is a no-op', async () => {
-      const {result} = renderUseSources(LEVEL_ONE, true);
+      const {result} = renderUseSources(LEVEL_ONE, {
+        includeVersionHistory: true,
+      });
       await flush();
 
       await act(async () => result.current.createCommit('   '));

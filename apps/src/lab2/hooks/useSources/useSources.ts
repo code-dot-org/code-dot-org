@@ -43,6 +43,8 @@ export interface UseSourcesInput<T extends ProjectSources> {
   standaloneChannelId?: string;
   /** Optional callback called when sources are reinitialized (i.e. start over, restoring a version), as opposed to edited directly. */
   onReinitialize?: () => void;
+  /** Optionally decide whether an update counts as a user edit for hasEdited */
+  computeHasEdited?: (prev: T | undefined, next: T) => boolean;
   /** Whether to include version history functionality (previewing, restoring, committing versions) */
   includeVersionHistory?: boolean;
 }
@@ -52,7 +54,7 @@ export interface UseSourcesOutput<T extends ProjectSources> {
   isLoading: boolean;
   /** If the current sources are editable. */
   isEditable: boolean;
-  /** If the user has updated the most recently loaded sources. Reset when reloading sources or restoring a version. */
+  /** If the user has updated sources since the level loaded. */
   hasEdited: boolean;
   /** The current project sources. */
   currentSources: T | undefined;
@@ -99,12 +101,16 @@ export default function useSources<T extends ProjectSources>({
   defaultSources,
   standaloneChannelId,
   onReinitialize,
+  computeHasEdited,
   includeVersionHistory = false,
 }: UseSourcesInput<T>): UseSourcesOutput<T> {
   const dispatch = useAppDispatch();
   const userId = useAppSelector(state => state.progress.viewAsUserId);
   const scriptId = useAppSelector(state => state.progress.scriptId);
   const projectManagerRef = useRef<ProjectManager | null>(null);
+  // Latest callback without making it a dependency of updateSources.
+  const computeHasEditedRef = useRef(computeHasEdited);
+  computeHasEditedRef.current = computeHasEdited;
 
   const [isLoading, setIsLoading] = useState(false);
   const [currentSources, setCurrentSources] = useState<T>();
@@ -253,16 +259,19 @@ export default function useSources<T extends ProjectSources>({
       // Resolve updaters against the ref, not state: state lags a render, so
       // two quick partial updates would build on the same stale base and
       // drop each other's fields.
+      const prevSources = currentSourcesRef.current;
       const newSources =
         typeof newSourcesOrUpdater === 'function'
-          ? newSourcesOrUpdater(currentSourcesRef.current)
+          ? newSourcesOrUpdater(prevSources)
           : newSourcesOrUpdater;
       // Deep equality check to prevent unnecessary re-renders and saves.
-      if (isEqual(currentSourcesRef.current, newSources)) {
+      if (isEqual(prevSources, newSources)) {
         return;
       }
       setSources(newSources);
-      setHasEdited(true);
+      if (computeHasEditedRef.current?.(prevSources, newSources) ?? true) {
+        setHasEdited(true);
+      }
       projectManagerRef.current?.save(newSources, forceSave);
     },
     [setSources, isEditable]
@@ -318,7 +327,6 @@ export default function useSources<T extends ProjectSources>({
         const sources = await projectManagerRef.current.restoreSources(version);
         reinitializeSources(sources as T | undefined);
         await refreshVersionList(projectManagerRef.current);
-        setHasEdited(false);
       } finally {
         setIsLoading(false);
       }
@@ -337,7 +345,6 @@ export default function useSources<T extends ProjectSources>({
       try {
         await projectManagerRef.current.createCommit(comment);
         await refreshVersionList(projectManagerRef.current);
-        setHasEdited(false);
       } finally {
         // Every exit (including a createCommit rejection) resets loading.
         setIsLoading(false);
