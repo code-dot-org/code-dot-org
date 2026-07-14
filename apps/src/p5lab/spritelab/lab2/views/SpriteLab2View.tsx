@@ -717,7 +717,8 @@ const SpriteLab2View: React.FunctionComponent<{
         hasEdited={hasEdited}
         settings={[...blocklySettings, themeSetting]}
         className={classNames(
-          !levelProperties.guideMode && moduleStyles.instructionsArea
+          !levelProperties.guideMode && moduleStyles.instructionsArea,
+          !!levelProperties.guideMode && moduleStyles.resourceSidebar
         )}
         sidebarOnly={!!levelProperties.guideMode}
       />

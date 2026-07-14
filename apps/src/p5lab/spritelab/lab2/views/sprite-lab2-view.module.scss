@@ -229,6 +229,14 @@ $tab-segment-height: $tab-item-height - 2px;
   font-weight: 600;
 }
 
+// Sidebar-only resource panel (guide-based instructions): no instruction
+// tabs render inside the nav, so its top border would read as a stray line.
+.resourceSidebar {
+  :global(#resource-panel-tabs) {
+    border-top: 0;
+  }
+}
+
 .imagesManager {
   display: flex;
   flex-direction: column;
