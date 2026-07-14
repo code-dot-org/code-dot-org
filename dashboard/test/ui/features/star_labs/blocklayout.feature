@@ -5,13 +5,13 @@ Background:
 
 Scenario: Auto-placing malformed start blocks
   When I've initialized the workspace with an auto-positioned flappy puzzle with extra newlines
-  Then block "whenClick" is near offset "16, 118"
-  And block "whenCollideGround" is near offset "16, 264"
+  Then block "whenClick" is near offset "16, 88"
+  And block "whenCollideGround" is near offset "16, 186"
 
 Scenario: Auto-placing blocks
   When I've initialized the workspace with an auto-positioned flappy puzzle
-  Then block "whenClick" is near offset "16, 118"
-  And block "whenCollideGround" is near offset "16, 264"
+  Then block "whenClick" is near offset "16, 88"
+  And block "whenCollideGround" is near offset "16, 186"
 
 Scenario: Auto-placing blocks with XML positioning
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/5/levels/4?noautoplay=true"
@@ -19,7 +19,7 @@ Scenario: Auto-placing blocks with XML positioning
 
   When I've initialized the workspace with a manually-positioned playlab puzzle
 
-  Then block "whenUp" is near offset "20, 224"
-  And block "whenDown" is near offset "16, 326"
+  Then block "whenUp" is near offset "20, 162"
+  And block "whenDown" is near offset "16, 233"
   And block "whenLeft" is near offset "20, 22"
-  And block "whenRight" is near offset "16, 122"
+  And block "whenRight" is near offset "16, 92"
