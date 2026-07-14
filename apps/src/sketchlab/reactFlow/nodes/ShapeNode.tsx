@@ -181,7 +181,7 @@ function ShapeNode({
           />
         )}
 
-        {/* Text label: click or enter to start editing */}
+        {/* Text label: double-click or Enter to start editing */}
         <div
           ref={labelRef}
           className={classNames(
