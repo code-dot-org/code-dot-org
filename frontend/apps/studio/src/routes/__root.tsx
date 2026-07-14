@@ -105,10 +105,9 @@ const cssLayerOrder = (
   <GlobalStyles styles="@layer theme, base, mui, components, utilities;" />
 );
 
-/** Root layout: applies the CDO MUI theme and Bootstrap providers to all routes. */
 const theme = getMuiThemeForBrand(document.documentElement.dataset.brand);
 
-/** Root layout: applies the brand's MUI theme and Bootstrap providers to all routes. */
+/** Root layout: applies the CDO MUI theme and Bootstrap providers to all routes. */
 function RootLayout() {
   return (
     <QueryClientProvider client={queryClient}>
