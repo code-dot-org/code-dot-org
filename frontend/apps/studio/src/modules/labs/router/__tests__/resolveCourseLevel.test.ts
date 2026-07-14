@@ -7,7 +7,12 @@ import {
   oceansScriptStructure,
   videoLevel,
 } from '../../oceans/fixtures';
-import {resolveCourseLevel} from '../resolveCourseLevel';
+import type {ResolvedCourseLevel} from '../resolveCourseLevel';
+import {
+  CourseLevelNotFoundError,
+  nextDestination,
+  resolveCourseLevel,
+} from '../resolveCourseLevel';
 
 // Level properties for the levels these tests resolve, built from the shared
 // oceans fixture factories in parsed shape (what the API client returns). The
@@ -107,5 +112,82 @@ describe('resolveCourseLevel', () => {
     expect(() =>
       resolveCourseLevel(oceansScriptStructure, sparse, 1, 2),
     ).toThrow(/level.*19419/i);
+  });
+
+  it('throws CourseLevelNotFoundError (not a bare Error) so the loader can narrow', () => {
+    const sparse: LevelPropertiesMap = {
+      '19423': videoLevel.parsed({id: 19423, name: 'V'}),
+    };
+
+    expect(() =>
+      resolveCourseLevel(oceansScriptStructure, LEVEL_PROPERTIES, 99, 1),
+    ).toThrow(CourseLevelNotFoundError);
+    expect(() =>
+      resolveCourseLevel(oceansScriptStructure, LEVEL_PROPERTIES, 1, 99),
+    ).toThrow(CourseLevelNotFoundError);
+    expect(() =>
+      resolveCourseLevel(oceansScriptStructure, sparse, 1, 2),
+    ).toThrow(CourseLevelNotFoundError);
+  });
+});
+
+// Builds only the fields nextDestination reads. Cast so the fixture stays
+// agnostic to fields other properties of ResolvedCourseLevel carry.
+function resolvedFixture(
+  overrides: Partial<ResolvedCourseLevel> = {},
+): ResolvedCourseLevel {
+  return {
+    levelId: 1,
+    scriptLevelId: 's1',
+    position: 1,
+    totalLevels: 3,
+    scriptName: 'oceans',
+    properties: {} as ResolvedCourseLevel['properties'],
+    // Positions are intentionally non-contiguous (1, 2, 4) to prove the next
+    // level is chosen by array order, not by `position + 1`.
+    levels: [
+      {position: 1, levelId: 1, scriptLevelId: 's1', path: '/l1'},
+      {position: 2, levelId: 2, scriptLevelId: 's2', path: '/l2'},
+      {position: 4, levelId: 4, scriptLevelId: 's4', path: '/l4'},
+    ],
+    ...overrides,
+  } as ResolvedCourseLevel;
+}
+
+describe('nextDestination', () => {
+  it('advances to the next level in array order', () => {
+    expect(nextDestination(resolvedFixture({position: 1}))).toEqual({
+      to: '/l2',
+    });
+  });
+
+  it('uses array order, not position arithmetic, across a gap', () => {
+    // position 2 has no position-3 sibling; the next entry is position 4.
+    expect(nextDestination(resolvedFixture({position: 2}))).toEqual({
+      to: '/l4',
+    });
+  });
+
+  it('on the last level, finishes via properties.finishUrl', () => {
+    const resolved = resolvedFixture({
+      position: 4,
+      finishLink: '/lesson-finish',
+      properties: {finishUrl: '/finish'} as ResolvedCourseLevel['properties'],
+    });
+    expect(nextDestination(resolved)).toEqual({href: '/finish'});
+  });
+
+  it('falls back to the lesson finishLink when finishUrl is absent', () => {
+    const resolved = resolvedFixture({
+      position: 4,
+      finishLink: '/lesson-finish',
+    });
+    expect(nextDestination(resolved)).toEqual({href: '/lesson-finish'});
+  });
+
+  it('falls back to the script overview when neither is set', () => {
+    expect(nextDestination(resolvedFixture({position: 4}))).toEqual({
+      href: '/s/oceans',
+    });
   });
 });

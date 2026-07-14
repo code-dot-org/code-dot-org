@@ -13,6 +13,7 @@ import {getLabEntrypointByAppName} from '@/modules/labs/router/getLabEntrypointB
 import LevelNavigation from '@/modules/labs/router/LevelNavigation';
 import {
   CourseLevelNotFoundError,
+  nextDestination,
   resolveCourseLevel,
 } from '@/modules/labs/router/resolveCourseLevel';
 import queryClient from '@/modules/router/queryClient';
@@ -143,22 +144,11 @@ function CourseLevelRoute() {
       // regardless, so a failed report must not strand the user on the level.
     }
 
-    // Next level by array order — the same source LevelNavigation uses, so the
-    // Continue button and the Next-level link never disagree.
-    const currentIndex = resolved.levels.findIndex(
-      l => l.position === resolved.position,
-    );
-    const nextLevel = resolved.levels[currentIndex + 1];
-    if (nextLevel) {
-      router.navigate({to: nextLevel.path});
+    const dest = nextDestination(resolved);
+    if ('to' in dest) {
+      router.navigate({to: dest.to});
     } else {
-      // Last level: the server-provided finish link (parity), else the script
-      // overview — so Continue is never a silent no-op.
-      const finishUrl =
-        resolved.properties.finishUrl ??
-        resolved.finishLink ??
-        `/s/${resolved.scriptName}`;
-      window.location.href = finishUrl;
+      window.location.href = dest.href;
     }
   }, [resolved, router]);
 

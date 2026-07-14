@@ -71,3 +71,27 @@ export function resolveCourseLevel(
     levels,
   };
 }
+
+/**
+ * Where "Continue" goes from a resolved level: the next level in array order
+ * (the same source LevelNavigation uses, so the two never disagree), or — on
+ * the last level — the lesson finish link, falling back to the script overview
+ * so Continue is never a silent no-op.
+ */
+export function nextDestination(
+  resolved: ResolvedCourseLevel,
+): {to: string} | {href: string} {
+  const currentIndex = resolved.levels.findIndex(
+    l => l.position === resolved.position,
+  );
+  const nextLevel = resolved.levels[currentIndex + 1];
+  if (nextLevel) {
+    return {to: nextLevel.path};
+  }
+  return {
+    href:
+      resolved.properties.finishUrl ??
+      resolved.finishLink ??
+      `/s/${resolved.scriptName}`,
+  };
+}
