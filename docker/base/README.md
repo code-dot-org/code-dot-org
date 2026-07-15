@@ -54,3 +54,12 @@ versions (superseded buildcache manifests):
 
 The date tag is the immutable name — the weekly cron rebuilds the same git
 sha with different bytes. Consumers should pin by digest.
+
+Published layers are zstd-compressed (plain zstd, not zstd:chunked) with
+OCI media types, force-compressed so the whole chain is uniformly zstd.
+zstd decompresses several times faster than gzip, which is where per-job
+pulls on ephemeral CI runners spend their time. Pull floor: Docker >= 23 /
+containerd >= 1.5 / any recent podman — older engines fail the pull with
+`archive/tar: invalid tar header` rather than degrading. The stitch job
+asserts the published media types, so a config regression fails the
+publish run instead of silently reverting to gzip.
