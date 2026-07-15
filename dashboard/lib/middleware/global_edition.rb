@@ -183,8 +183,10 @@ module Middleware
         Cdo::GlobalEdition.current_region = new_region
         ::I18n.locale = region_locale = resolve_locale_for(new_region)
 
-        response.set_cdo_cookie(REGION_KEY, new_region, priority: :high) unless cookie_region == new_region
-        response.set_cdo_cookie(LOCALE_KEY, region_locale)               unless cookie_locale == region_locale
+        unless response.publicly_cacheable?
+          response.set_cdo_cookie(REGION_KEY, new_region, priority: :high) unless cookie_region == new_region
+          response.set_cdo_cookie(LOCALE_KEY, region_locale)               unless cookie_locale == region_locale
+        end
       end
 
       private def existing_route?

@@ -1,0 +1,14 @@
+.form {
+  display: grid;
+  gap: 8px;
+}
+
+.inputRow {
+  align-items: flex-end;
+  display: flex;
+  gap: 12px;
+}
+
+.inputRow > :first-child {
+  flex: 1;
+}

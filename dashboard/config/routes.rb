@@ -1176,6 +1176,12 @@ Dashboard::Application.routes.draw do
         get 'schools/:id', to: 'schools#show', defaults: {format: 'json'}
         get 'regional_partners/:school_district_id/:course', to: 'regional_partners#for_school_district_and_course', defaults: {format: 'json'}
         get 'regional_partners', to: 'regional_partners#index', defaults: {format: 'json'}
+
+        namespace :certificates do
+          resources :courses, only: :show, param: :course
+          resource :viewer, only: :show
+          resource :completion, only: :show
+        end
         get 'regional_partners/capacity', to: 'regional_partners#capacity'
         get 'regional_partners/enrolled', to: 'regional_partners#enrolled'
 

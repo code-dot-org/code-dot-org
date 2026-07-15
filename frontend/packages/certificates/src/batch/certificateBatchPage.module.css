@@ -1,0 +1,37 @@
+.page {
+  display: grid;
+  gap: 16px;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 24px;
+  width: 100%;
+}
+
+.content {
+  align-items: start;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(0, 3fr) minmax(280px, 2fr);
+}
+
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.preview {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+
+.editor {
+  display: grid;
+  gap: 8px;
+}
+
+.editor form {
+  display: grid;
+  gap: 12px;
+}

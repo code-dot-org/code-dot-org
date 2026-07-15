@@ -16,6 +16,13 @@ module Rack
       end
     end
 
+    # Public responses must not acquire per-request cookies while unwinding
+    # through outer middleware. Such cookies prevent a shared cache entry and
+    # can be replayed with a cached response.
+    def publicly_cacheable?
+      get_header('Cache-Control').to_s.split(',').map(&:strip).include?('public')
+    end
+
     # Sets or deletes a CDO domain cookie with long-term persistence.
     #
     # This method configures cookies to be accessible across the entire root domain

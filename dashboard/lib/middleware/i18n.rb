@@ -42,7 +42,9 @@ module Middleware
           ::I18n.locale = request_locale || Cdo::I18n::DEFAULT_LOCALE
 
           response = Rack::Response[*app.call(env)]
-          response.set_cdo_cookie(LOCALE_COOKIE_KEY, request_locale) if request_locale && request_locale != cookie_locale
+          if !response.publicly_cacheable? && request_locale && request_locale != cookie_locale
+            response.set_cdo_cookie(LOCALE_COOKIE_KEY, request_locale)
+          end
         end
 
         response.finish

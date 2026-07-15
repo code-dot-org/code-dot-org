@@ -2,6 +2,7 @@
 import {afterEach, describe, expect, it, vi} from 'vitest';
 
 import {
+  ensureCsrfToken,
   getSpaCsrfToken,
   refreshCsrfToken,
   resolveCsrfToken,
@@ -84,5 +85,37 @@ describe('refreshCsrfToken', () => {
     await refreshCsrfToken(transportWithHeaders({}, true));
 
     expect(getSpaCsrfToken()).toBe('keep');
+  });
+});
+
+describe('ensureCsrfToken', () => {
+  it('uses a shell meta token without fetching', async () => {
+    setMeta('meta-token');
+    const transport = transportWithHeaders({'csrf-token': 'fetched-token'});
+
+    await ensureCsrfToken(transport);
+
+    expect(transport.requestWithMeta).not.toHaveBeenCalled();
+    expect(resolveCsrfToken()).toBe('meta-token');
+  });
+
+  it('fetches and stores a token when the shell has none', async () => {
+    const transport = transportWithHeaders({'csrf-token': 'fetched-token'});
+
+    await ensureCsrfToken(transport);
+
+    expect(transport.requestWithMeta).toHaveBeenCalledWith({
+      method: 'GET',
+      url: '/get_token',
+    });
+    expect(resolveCsrfToken()).toBe('fetched-token');
+  });
+
+  it('rejects when no token can be resolved', async () => {
+    const transport = transportWithHeaders({});
+
+    await expect(ensureCsrfToken(transport)).rejects.toThrow(
+      'Unable to resolve a CSRF token',
+    );
   });
 });

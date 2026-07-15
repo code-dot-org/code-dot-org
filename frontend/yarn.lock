@@ -1728,6 +1728,55 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@code-dot-org/certificates@workspace:*, @code-dot-org/certificates@workspace:packages/certificates":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/certificates@workspace:packages/certificates"
+  dependencies:
+    "@code-dot-org/component-library": "workspace:*"
+    "@code-dot-org/component-library-styles": "workspace:*"
+    "@code-dot-org/core": "workspace:*"
+    "@code-dot-org/fonts": "workspace:*"
+    "@code-dot-org/lint-config": "workspace:*"
+    "@code-dot-org/playwright-support": "workspace:*"
+    "@emotion/react": "catalog:"
+    "@emotion/styled": "catalog:"
+    "@fontsource/noto-serif": "npm:^5.2.6"
+    "@mui/material": "catalog:"
+    "@testing-library/dom": "catalog:"
+    "@testing-library/jest-dom": "catalog:"
+    "@testing-library/react": "catalog:"
+    "@types/node": "catalog:"
+    "@types/react": "catalog:"
+    "@types/react-dom": "catalog:"
+    "@vitejs/plugin-react": "catalog:"
+    classnames: "catalog:"
+    eslint: "catalog:"
+    eslint-plugin-react-hooks: "catalog:"
+    jsdom: "catalog:"
+    ky: "catalog:"
+    msw: "npm:^2.11.2"
+    playwright: "catalog:"
+    prettier: "catalog:"
+    react: "catalog:"
+    react-dom: "catalog:"
+    react-dom-confetti: "npm:^0.2.0"
+    swiper: "npm:^11.0.5"
+    typescript: "catalog:"
+    vite: "catalog:"
+    vite-plugin-dts: "catalog:"
+    vite-plugin-externalize-deps: "catalog:"
+    vitest: "catalog:"
+    zod: "npm:^4.3.6"
+  peerDependencies:
+    "@emotion/react": ^11.0.0
+    "@emotion/styled": ^11.0.0
+    "@mui/material": ^7.0.0
+    react: ^18 || ^19
+    react-dom: ^18 || ^19
+    swiper: ^11.0.5
+  languageName: unknown
+  linkType: soft
+
 "@code-dot-org/changelogs@workspace:*, @code-dot-org/changelogs@workspace:packages/changelogs":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/changelogs@workspace:packages/changelogs"
@@ -2183,6 +2232,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/studio@workspace:apps/studio"
   dependencies:
+    "@code-dot-org/certificates": "workspace:*"
     "@code-dot-org/component-library": "workspace:*"
     "@code-dot-org/component-library-styles": "workspace:*"
     "@code-dot-org/core": "workspace:*"
@@ -3666,6 +3716,13 @@ __metadata:
   version: 5.1.1
   resolution: "@fontsource/noto-sans-tc@npm:5.1.1"
   checksum: 10c0/78657cf4c08cfdb311d94e6558d51df3d6042cc1dde625fd6c6b5e5975c7b27e7fd3933b1d14c3a335f5e6f33f39a6cba015732bedb4b1d58f3d55d451bd306e
+  languageName: node
+  linkType: hard
+
+"@fontsource/noto-serif@npm:^5.2.6":
+  version: 5.2.9
+  resolution: "@fontsource/noto-serif@npm:5.2.9"
+  checksum: 10c0/a98d78dd56319969af1f31f2f202f6ac9713db609dd92c9f15ed0e3555b09028f08ee022a859fbec45f87e98b4fe8ed9372d2ed8a182a8bfbcdd74839034a286
   languageName: node
   linkType: hard
 
@@ -11183,6 +11240,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dom-confetti@npm:0.2.2":
+  version: 0.2.2
+  resolution: "dom-confetti@npm:0.2.2"
+  checksum: 10c0/39831a8646df57b9efeba605b825c3edc39ff39e74de4595ecbbfc0dd35f07278a04df700629efc9cb27e56991004b3a27f5765669435509f5e8360b99b12c26
+  languageName: node
+  linkType: hard
+
 "dom-helpers@npm:^5.0.1":
   version: 5.2.1
   resolution: "dom-helpers@npm:5.2.1"
@@ -17588,6 +17652,39 @@ __metadata:
   languageName: node
   linkType: hard
 
+"msw@npm:^2.11.2":
+  version: 2.15.0
+  resolution: "msw@npm:2.15.0"
+  dependencies:
+    "@inquirer/confirm": "npm:^6.0.11"
+    "@mswjs/interceptors": "npm:^0.41.3"
+    "@open-draft/deferred-promise": "npm:^3.0.0"
+    "@types/statuses": "npm:^2.0.6"
+    cookie: "npm:^1.1.1"
+    graphql: "npm:^16.13.2"
+    headers-polyfill: "npm:^5.0.1"
+    is-node-process: "npm:^1.2.0"
+    outvariant: "npm:^1.4.3"
+    path-to-regexp: "npm:^6.3.0"
+    picocolors: "npm:^1.1.1"
+    rettime: "npm:^0.11.11"
+    statuses: "npm:^2.0.2"
+    strict-event-emitter: "npm:^0.5.1"
+    tough-cookie: "npm:^6.0.1"
+    type-fest: "npm:^5.5.0"
+    until-async: "npm:^3.0.2"
+    yargs: "npm:^17.7.2"
+  peerDependencies:
+    typescript: ">= 4.8.x"
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  bin:
+    msw: cli/index.js
+  checksum: 10c0/0d3dbf1b062a82b3711ff195e10ffd9e6f2a5e337b4a0f08cabdb8d0b96c5c0c057f1cdcb67da14c356612554ea463fb5ad8f9c618b5ac009fc4eee43a83c94e
+  languageName: node
+  linkType: hard
+
 "msw@npm:^2.7.0":
   version: 2.14.6
   resolution: "msw@npm:2.14.6"
@@ -19423,6 +19520,17 @@ __metadata:
     resolve: "npm:^1.22.1"
     strip-indent: "npm:^4.0.0"
   checksum: 10c0/25e2dd48957c52749cf44bdcf172f3b47d42d8bb8c51000bceb136ff018cbe0a78610d04f12d8bbb882df0d86884e8d05b1d7a1cc39586de356ef5bb9fceab71
+  languageName: node
+  linkType: hard
+
+"react-dom-confetti@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "react-dom-confetti@npm:0.2.0"
+  dependencies:
+    dom-confetti: "npm:0.2.2"
+  peerDependencies:
+    react: "*"
+  checksum: 10c0/0001bc4b42c776c13f94e626437b64acca25febdcff5ffb2f049f8e103a245d446eea028beb08433c177bdb7120b99f608bd02f8d5d5efc789e0719ecde7db23
   languageName: node
   linkType: hard
 
