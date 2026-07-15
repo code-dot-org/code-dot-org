@@ -43,7 +43,8 @@ jobs:
           HOME: /root
           # Explicit target: the deployed test env. Repoint at a PR adhoc to gate PR code.
           TARGET_URL: https://test-studio.code.org
-        run: yarn turbo run test:ui --filter=@code-dot-org/e2e-tests
+        # Chromium only, matching the legacy Drone Chrome-only lane.
+        run: yarn turbo run test:ui --filter=@code-dot-org/e2e-tests -- --project=chromium
         working-directory: ./frontend
 
       - name: Upload Playwright Report
