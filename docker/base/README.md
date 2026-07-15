@@ -18,7 +18,8 @@ source. Do not fork per-engine files. Floor: Podman >= 4.9 / buildah >= 1.33
 `# syntax=` frontend directives, so only features buildah supports natively
 at that floor are allowed: cache mounts, `COPY --chown`/`--chmod`.
 
-Known engine divergences, learned the hard way (the CI gate caught both):
+Known engine divergences, learned the hard way (the CI smoke test caught
+both):
 
 - No heredoc `RUN <<EOF` — podman 4.9's parser treats each heredoc line as
   a Dockerfile instruction.
@@ -41,9 +42,11 @@ Known engine divergences, learned the hard way (the CI gate caught both):
 ## CI and published image
 
 `.github/workflows/cdo-base-image.yml` enforces the dual-engine policy on
-every PR touching this directory: a 2x2 gate builds and smoke-tests with
-docker and podman on amd64 and arm64. On staging pushes and a weekly cron
-(security refresh of ruby-slim + apt), it publishes a multi-platform image:
+every PR touching this directory: a 2x2 matrix builds and runs
+smoke-test.sh with docker and podman on amd64 and arm64. On staging pushes
+touching this directory and a weekly cron (security refresh of ruby-slim +
+apt), it publishes a multi-platform image and deletes untagged package
+versions (superseded buildcache manifests):
 
     ghcr.io/code-dot-org/cdo-base:latest
     ghcr.io/code-dot-org/cdo-base:git-<sha>

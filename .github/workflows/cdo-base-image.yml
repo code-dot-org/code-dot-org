@@ -1,19 +1,19 @@
-# Gate and publish the cdo-base image (docker/base/).
+# Build, smoke-test, and publish the cdo-base image (docker/base/).
 #
-# Gate: the same Dockerfile must build on docker AND podman (dual-engine
-# policy, see docker/base/README.md), on amd64 and arm64. smoke-test.sh is
-# the enforcement mechanism for the image's runtime contract. Gate runs on
-# PRs touching docker/base/ and pushes nothing.
+# Smoke test: the same Dockerfile must build on docker AND podman
+# (dual-engine policy, see docker/base/README.md) on amd64 and arm64;
+# smoke-test.sh asserts the image's runtime contract. Runs on PRs touching
+# docker/base/ and pushes nothing.
 #
-# Publish (staging pushes, weekly cron, manual dispatch): native per-arch
-# builds pushed to GHCR, then stitched into one multi-platform manifest —
-# the same pattern as k8s-skaffold-build.yml + k8s-stitch-multiplatform-image.yml.
-# The weekly cron exists to pick up ruby-slim and apt security updates; it
-# produces different bytes for the same git sha, hence the date tag.
+# Publish (staging pushes touching docker/base/, weekly cron, manual
+# dispatch): per-arch native builds pushed to GHCR, stitched into one
+# multi-platform manifest. The weekly cron picks up ruby-slim and apt
+# security updates; it produces different bytes for the same git sha,
+# hence the date tag.
 #
-# Deferred, deliberately: untagged-manifest cleanup, provenance
-# attestations, mirroring upstream bases into GHCR, ECR pull-through cache
-# for prod consumers.
+# Cleanup: deletes untagged package versions (superseded buildcache
+# manifests). Safe because every manifest a live tag references is itself
+# tagged (git-<sha>-<arch>).
 
 name: cdo-base-image
 
@@ -39,8 +39,8 @@ env:
   IMAGE: ghcr.io/${{ github.repository_owner }}/cdo-base
 
 jobs:
-  gate:
-    name: gate (${{ matrix.engine }}, ${{ matrix.arch }})
+  smoke-test:
+    name: smoke-test (${{ matrix.engine }}, ${{ matrix.arch }})
     strategy:
       fail-fast: false
       matrix:
@@ -59,15 +59,15 @@ jobs:
           sparse-checkout: docker/base
 
       - name: Build with ${{ matrix.engine }}
-        run: ${{ matrix.engine }} build -t cdo-base:gate docker/base/
+        run: ${{ matrix.engine }} build -t cdo-base:smoke docker/base/
 
       - name: Smoke test
-        run: ./docker/base/smoke-test.sh cdo-base:gate ${{ matrix.engine }}
+        run: ./docker/base/smoke-test.sh cdo-base:smoke ${{ matrix.engine }}
 
   build-push:
     name: push (${{ matrix.arch }})
     if: github.event_name != 'pull_request'
-    needs: gate
+    needs: smoke-test
     strategy:
       matrix:
         include:
@@ -93,8 +93,8 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      # provenance disabled: attestation manifests complicate the imagetools
-      # stitch and multiply untagged versions; revisit with the cleanup job.
+      # provenance disabled: attestation manifests would be untagged (the
+      # cleanup job would delete them) and complicate the imagetools stitch.
       - name: Build and push per-arch image
         uses: docker/build-push-action@263435318d21b8e681c14492fe198d362a7d2c83 # v6.18.0
         with:
@@ -131,3 +131,18 @@ jobs:
 
       - name: Inspect published manifest
         run: docker buildx imagetools inspect "$IMAGE:latest"
+
+  cleanup:
+    name: delete untagged package versions
+    if: github.event_name != 'pull_request'
+    needs: stitch
+    runs-on: ubuntu-24.04
+    permissions:
+      packages: write
+    steps:
+      - name: Delete untagged cdo-base versions
+        uses: actions/delete-package-versions@v5
+        with:
+          package-name: cdo-base
+          package-type: container
+          delete-only-untagged-versions: 'true'
