@@ -1,3 +1,8 @@
+import {
+  INSTRUCTIONS_KEYS,
+  type InstructionsKey,
+  type Mode,
+} from '@code-dot-org/ailab';
 import {Output} from 'ai';
 import z from 'zod/v3';
 
@@ -13,26 +18,6 @@ import {
 
 import {AILAB_DATASETS} from './datasets';
 
-// Closed set of dynamic_instructions slots the AI Lab UI reads. Any
-// key outside this set is dropped by the editor.
-const AILAB_STEP_KEYS = [
-  'selectDataset',
-  'uploadedDataset',
-  'selectedDataset',
-  'dataDisplayLabel',
-  'dataDisplayFeatures',
-  'selectedFeatureNumerical',
-  'selectedFeatureCategorical',
-  'trainModel',
-  'generateResults',
-  'results',
-  'resultsDetails',
-  'saveModel',
-  'modelSummary',
-] as const;
-
-type AilabStepKey = (typeof AILAB_STEP_KEYS)[number];
-
 const datasetIdEnum = z.enum(
   AILAB_DATASETS.map(d => d.id) as unknown as [string, ...string[]]
 );
@@ -44,16 +29,6 @@ const ailabModeSchema = z.object({
   hideSelectLabel: z
     .boolean()
     .describe('Hide the Pick Label screen when true.'),
-  hideSpecifyColumns: z
-    .boolean()
-    .describe('Hide the Pick Columns screen when true.'),
-  hideSelectTrainer: z
-    .boolean()
-    .describe('Hide the Pick Trainer screen when true.'),
-  hideChooseReserve: z
-    .boolean()
-    .describe('Hide the Reserve Data screen when true.'),
-  hideModelCard: z.boolean().describe('Hide the Model Card screen when true.'),
   hideSave: z.boolean().describe('Hide the Save screen when true.'),
   hideInstructionsOverlay: z
     .boolean()
@@ -67,6 +42,8 @@ const ailabModeSchema = z.object({
       'Minimum accuracy (0-100) the student must reach before the level can advance. null leaves no requirement.'
     ),
 });
+
+type AilabPlanMode = z.infer<typeof ailabModeSchema>;
 
 const ailabPlanSchema = Output.object({
   schema: z.object({
@@ -83,7 +60,7 @@ const ailabPlanSchema = Output.object({
     dynamicInstructions: z
       .object(
         Object.fromEntries(
-          AILAB_STEP_KEYS.map(key => [
+          INSTRUCTIONS_KEYS.map(key => [
             key,
             z
               .string()
@@ -92,13 +69,19 @@ const ailabPlanSchema = Output.object({
                   'when the corresponding screen is hidden via mode flags.'
               ),
           ])
-        ) as Record<AilabStepKey, z.ZodString>
+        ) as Record<InstructionsKey, z.ZodString>
       )
       .describe(
         'Per-screen stub instructions. Keys map 1:1 to ML pipeline screens.'
       ),
   }),
 });
+
+interface AilabPlan {
+  longInstructions: string;
+  mode: AilabPlanMode;
+  dynamicInstructions: Record<InstructionsKey, string>;
+}
 
 export interface AilabGeneration {
   longInstructions: string;
@@ -182,51 +165,29 @@ export async function generateAilabLevel(
     prompt,
     output: ailabPlanSchema,
   });
-  const plan = response.output as {
-    longInstructions: string;
-    mode: {
-      datasetId: string;
-      hideSelectLabel: boolean;
-      hideSpecifyColumns: boolean;
-      hideSelectTrainer: boolean;
-      hideChooseReserve: boolean;
-      hideModelCard: boolean;
-      hideSave: boolean;
-      hideInstructionsOverlay: boolean;
-      requireAccuracy: number | null;
-    };
-    dynamicInstructions: Record<AilabStepKey, string>;
-  };
+  const plan = response.output as AilabPlan;
   logResponse(PROMPT_TAGS.AILAB_PLAN, plan, planContext);
   if (!plan.longInstructions?.trim()) {
     throw new Error('Model returned no instructions');
   }
 
-  // The AI Lab editor stores mode + dynamic_instructions as JSON
-  // strings; build the record then stringify at the save boundary.
-  // editor would write — datasets is an array of one in nearly every
-  // existing level — and stringify on the way out.
-  const modeRecord: Record<string, unknown> = {
+  const mode: Mode = {
     datasets: [plan.mode.datasetId],
     hideSelectLabel: plan.mode.hideSelectLabel,
-    hideSpecifyColumns: plan.mode.hideSpecifyColumns,
-    hideSelectTrainer: plan.mode.hideSelectTrainer,
-    hideChooseReserve: plan.mode.hideChooseReserve,
-    hideModelCard: plan.mode.hideModelCard,
     hideSave: plan.mode.hideSave,
     hideInstructionsOverlay: plan.mode.hideInstructionsOverlay,
+    ...(plan.mode.requireAccuracy !== null
+      ? {requireAccuracy: plan.mode.requireAccuracy}
+      : {}),
   };
-  if (plan.mode.requireAccuracy !== null) {
-    modeRecord.requireAccuracy = plan.mode.requireAccuracy;
-  }
 
-  const visibleScreens = AILAB_STEP_KEYS.filter(
+  const visibleScreens = INSTRUCTIONS_KEYS.filter(
     key => (plan.dynamicInstructions[key] || '').trim() !== ''
   );
 
   return {
     longInstructions: plan.longInstructions.trim(),
-    mode: JSON.stringify(modeRecord, null, 2),
+    mode: JSON.stringify(mode, null, 2),
     dynamicInstructions: JSON.stringify(plan.dynamicInstructions, null, 2),
     summary: `dataset=${plan.mode.datasetId}; screens=${
       visibleScreens.join(',') || '(none)'

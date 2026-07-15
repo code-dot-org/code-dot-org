@@ -1,18 +1,7 @@
-import manifest from '../../../../../frontend/packages/labs/ailab/public/datasets-manifest.json';
+import {type Dataset, getDatasets} from '@code-dot-org/ailab';
 
-export interface AilabDataset {
-  id: string;
-  name: string;
-  isToy?: boolean;
-}
+export type AilabDataset = Dataset;
 
-// Single source of truth: the manifest the AI Lab package itself reads
-// at runtime. Re-imported here so the lesson generator's dataset enum
-// tracks the same list without drift.
-export const AILAB_DATASETS: AilabDataset[] = manifest.datasets.map(d => ({
-  id: d.id as string,
-  name: d.name as string,
-  isToy: 'isToy' in d ? Boolean(d.isToy) : undefined,
-}));
-
-export type AilabDatasetId = string;
+// Read the AI Lab package's own dataset list so the lesson generator's
+// dataset enum tracks the same catalogue without drift.
+export const AILAB_DATASETS: AilabDataset[] = getDatasets();
