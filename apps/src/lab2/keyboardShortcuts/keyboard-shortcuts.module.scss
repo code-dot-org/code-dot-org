@@ -1,7 +1,16 @@
+// With 2+ categories, flow the tables into two height-balanced columns so the
+// dialog reads as a compact reference rather than one tall list.
+.multiColumn {
+  column-count: 2;
+  column-gap: 24px;
+}
+
 .shortcutTable {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 16px;
+  // Keep each category table whole rather than splitting across columns.
+  break-inside: avoid;
 }
 
 .categoryHeading {

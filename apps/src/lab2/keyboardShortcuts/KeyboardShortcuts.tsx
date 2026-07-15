@@ -10,9 +10,10 @@ interface KeyboardShortcutsProps {
 }
 
 const KeyboardShortcuts: React.FC<KeyboardShortcutsProps> = ({shortcuts}) => {
+  const categories = Object.entries(shortcuts);
   return (
-    <div>
-      {Object.entries(shortcuts).map(([category, entries]) => (
+    <div className={categories.length >= 2 ? styles.multiColumn : undefined}>
+      {categories.map(([category, entries]) => (
         <table key={category} className={styles.shortcutTable}>
           <caption>
             <Typography variant="overline3" className={styles.categoryHeading}>
