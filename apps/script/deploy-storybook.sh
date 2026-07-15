@@ -42,7 +42,7 @@ cp -RL fonts $DIR_TO_DEPLOY
 # but Dashboard's compiled CSS references fonts using root-relative `/fonts/*` URLs.
 # Rewrite them as `../fonts/` so they resolve within the deployed Storybook site.
 echo "Fixing font URLs for GitHub Pages"
-perl -pi -e "s#url\\(([\"']?)/fonts/#url(\$1../fonts/#g" $DIR_TO_DEPLOY/css/application.css
+sed -i -E "s#url\\(([\"']?)/fonts/#url(\\1../fonts/#g" "$DIR_TO_DEPLOY/css/application.css"
 
 echo "Pushing to github... cloning gh-pages branch"
 # Clone the gh-pages branch to /tmp/pages
