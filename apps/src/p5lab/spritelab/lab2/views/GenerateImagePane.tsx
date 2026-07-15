@@ -11,7 +11,9 @@ import {
   SET_INITIAL_ANIMATION_LIST,
   setAnimationName,
 } from '@cdo/apps/p5lab/redux/animationList';
-import PixelEditorModal from '@cdo/apps/pixelEditor/PixelEditorModal';
+import PixelEditorModal, {
+  PixelEditorSaveMeta,
+} from '@cdo/apps/pixelEditor/PixelEditorModal';
 import {getStore} from '@cdo/apps/redux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
@@ -205,7 +207,7 @@ const GenerateImagePane: React.FunctionComponent = () => {
   const handleEdit = useCallback((key: string) => setEditingKey(key), []);
 
   const handleEditorSave = useCallback(
-    async (dataURI: string, meta: {pixelGridSize?: number}) => {
+    async (dataURI: string, meta: PixelEditorSaveMeta) => {
       const key = editingKey;
       const props = editingProps;
       setEditingKey(null);
@@ -250,6 +252,9 @@ const GenerateImagePane: React.FunctionComponent = () => {
             dataURI,
             ...(frameSize ? {frameSize, sourceSize: frameSize} : {}),
             pixelGridSize: meta.pixelGridSize,
+            // Serialized with the animation, so the editor's recent-colors
+            // row follows the project.
+            recentColors: meta.recentColors,
             loadedFromSource: true,
             saved: false,
           },
@@ -368,7 +373,7 @@ const GenerateImagePane: React.FunctionComponent = () => {
           // Recorded at generation time; images without it (legacy, smooth
           // style) edit at native resolution.
           knownPixelGrid={editingProps.pixelGridSize}
-          imageKey={editingKey ?? undefined}
+          initialRecentColors={editingProps.recentColors}
           onSave={handleEditorSave}
           onCancel={() => setEditingKey(null)}
         />

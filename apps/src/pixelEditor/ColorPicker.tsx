@@ -39,7 +39,7 @@ function paintSpectrum(canvas: HTMLCanvasElement) {
 interface ColorPickerProps {
   color: RGBA;
   onChange: (color: RGBA) => void;
-  // Recently used colors, most recent first; shown as one row above the
+  // Recently used colors, most recent first; shown as one row under the
   // spectrum, after the permanent transparent swatch.
   recentColors?: RGBA[];
 }
@@ -153,6 +153,23 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
       )}
       {open && (
         <div className={moduleStyles.spectrumPopover}>
+          <canvas
+            ref={canvasRef}
+            width={SPECTRUM_WIDTH}
+            height={SPECTRUM_HEIGHT}
+            onPointerDown={e => {
+              e.currentTarget.setPointerCapture(e.pointerId);
+              pick(e);
+            }}
+            onPointerMove={e => {
+              if (e.buttons & 1) {
+                pick(e);
+              }
+            }}
+            // The pick is done when the press ends (a drag can refine the
+            // color first); dismiss the picker.
+            onPointerUp={() => setOpen(false)}
+          />
           <div className={moduleStyles.recentRow}>
             <button
               type="button"
@@ -175,23 +192,6 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
               />
             ))}
           </div>
-          <canvas
-            ref={canvasRef}
-            width={SPECTRUM_WIDTH}
-            height={SPECTRUM_HEIGHT}
-            onPointerDown={e => {
-              e.currentTarget.setPointerCapture(e.pointerId);
-              pick(e);
-            }}
-            onPointerMove={e => {
-              if (e.buttons & 1) {
-                pick(e);
-              }
-            }}
-            // The pick is done when the press ends (a drag can refine the
-            // color first); dismiss the picker.
-            onPointerUp={() => setOpen(false)}
-          />
         </div>
       )}
     </div>

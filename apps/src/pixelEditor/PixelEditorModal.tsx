@@ -65,11 +65,9 @@ const UNDO_BYTE_BUDGET = 16 * 1024 * 1024;
 const MIN_UNDO_DEPTH = 4;
 const MAX_UNDO_DEPTH = 30;
 
-// Recently used colors, shown as one row in the color picker. Persisted per
-// image in localStorage so they survive reopening the editor.
+// Recently used colors, shown as one row in the color picker. The caller
+// seeds them and persists the updated list handed back on save.
 const RECENT_COLORS_MAX = 8;
-const recentColorsStorageKey = (imageKey: string) =>
-  `pixelEditor.recentColors.${imageKey}`;
 
 const SHAPE_TOOLS: ReadonlySet<PixelTool> = new Set([
   'circle',
@@ -81,6 +79,14 @@ const SHAPE_TOOLS: ReadonlySet<PixelTool> = new Set([
 // Brush-size swatch dot: rendered edge in px for brush size N.
 const brushDotPx = (size: number) => 3 + size * 1.6;
 
+export interface PixelEditorSaveMeta {
+  pixelGridSize?: number;
+  // Recently used colors after this session, most recent first; the caller
+  // persists them (e.g. in the image's project data) and seeds them back via
+  // initialRecentColors next time.
+  recentColors?: RGBA[];
+}
+
 interface PixelEditorModalProps {
   title: string;
   // The image to edit (dataURI or URL; must be canvas-readable).
@@ -90,10 +96,9 @@ interface PixelEditorModalProps {
   // LOGICAL resolution. Absent/1 = edit at native resolution; the editor
   // does no detection of its own.
   knownPixelGrid?: number;
-  // Stable identity for this image (e.g. the animation key); keys the
-  // per-image recent-colors persistence. Absent = recents are session-only.
-  imageKey?: string;
-  onSave: (dataURI: string, meta: {pixelGridSize?: number}) => void;
+  // Seed for the recently-used-colors row (see PixelEditorSaveMeta).
+  initialRecentColors?: RGBA[];
+  onSave: (dataURI: string, meta: PixelEditorSaveMeta) => void;
   onCancel: () => void;
 }
 
@@ -110,7 +115,7 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   title,
   imageUrl,
   knownPixelGrid,
-  imageKey,
+  initialRecentColors,
   onSave,
   onCancel,
 }) => {
@@ -143,43 +148,22 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   const [historyVersion, setHistoryVersion] = useState(0);
 
   // Recently used colors, most recent first (transparent excluded: it has a
-  // permanent swatch of its own in the picker).
-  const [recentColors, setRecentColors] = useState<RGBA[]>(() => {
-    if (!imageKey) {
-      return [];
-    }
-    try {
-      const stored = localStorage.getItem(recentColorsStorageKey(imageKey));
-      return stored ? (JSON.parse(stored) as RGBA[]) : [];
-    } catch {
-      return [];
-    }
-  });
-  const recordColorUse = useCallback(
-    (used: RGBA) => {
-      if (used[3] === 0) {
-        return;
-      }
-      setRecentColors(prev => {
-        const next = [
-          used,
-          ...prev.filter(c => !c.every((v, i) => v === used[i])),
-        ].slice(0, RECENT_COLORS_MAX);
-        if (imageKey) {
-          try {
-            localStorage.setItem(
-              recentColorsStorageKey(imageKey),
-              JSON.stringify(next)
-            );
-          } catch {
-            // Quota/privacy-mode failures just lose persistence.
-          }
-        }
-        return next;
-      });
-    },
-    [imageKey]
+  // permanent swatch of its own in the picker). Handed back on save for the
+  // caller to persist.
+  const [recentColors, setRecentColors] = useState<RGBA[]>(
+    () => initialRecentColors ?? []
   );
+  const recordColorUse = useCallback((used: RGBA) => {
+    if (used[3] === 0) {
+      return;
+    }
+    setRecentColors(prev =>
+      [used, ...prev.filter(c => !c.every((v, i) => v === used[i]))].slice(
+        0,
+        RECENT_COLORS_MAX
+      )
+    );
+  }, []);
 
   // Snapshot the backing before a mutating operation. Memory-bounded: total
   // snapshot bytes stay under UNDO_BYTE_BUDGET (large images keep fewer
@@ -654,6 +638,12 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       }
       drawingRef.current = false;
       lastPointRef.current = null;
+      if (tool === 'eyedropper') {
+        // The pick is final on release (a drag samples continuously until
+        // then); hand the pen back so the picked color is immediately usable.
+        setTool('pen');
+        return;
+      }
       const backing = backingRef.current;
       const preview = previewRef.current;
       if (
@@ -719,12 +709,15 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
             0,
             0
           );
-        onSave(out.toDataURL('image/png'), {pixelGridSize: crispScale});
+        onSave(out.toDataURL('image/png'), {
+          pixelGridSize: crispScale,
+          recentColors,
+        });
         return;
       }
     }
-    onSave(backing.toDataURL('image/png'), {});
-  }, [onSave, pixelMode]);
+    onSave(backing.toDataURL('image/png'), {recentColors});
+  }, [onSave, pixelMode, recentColors]);
 
   // historyVersion re-renders this component whenever the stacks change; the
   // stacks themselves live in refs.
@@ -798,61 +791,57 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
                 </button>
               </PixelTooltip>
             ))}
-            <div className={moduleStyles.toolbarDivider} />
             <ColorPicker
               color={color}
               onChange={setColor}
               recentColors={recentColors}
             />
-          </div>
-          <div className={moduleStyles.canvasColumn}>
-            <div className={moduleStyles.canvasArea}>
-              {loadError ? (
-                <div className={moduleStyles.loadError}>
-                  This image couldn't be loaded for editing.
-                </div>
-              ) : (
-                <canvas
-                  ref={displayRef}
-                  className={moduleStyles.displayCanvas}
-                  onPointerDown={handlePointerDown}
-                  onPointerMove={handlePointerMove}
-                  onPointerUp={handlePointerUp}
-                  onPointerCancel={handlePointerUp}
-                />
-              )}
-            </div>
-            <div className={moduleStyles.historyRow}>
-              <PixelTooltip tooltipId="pixel-undo-tooltip" text="Undo (Ctrl+Z)">
-                <button
-                  type="button"
-                  aria-label="Undo (Ctrl+Z)"
-                  className={moduleStyles.toolButton}
-                  disabled={!canUndo}
-                  onClick={undo}
-                >
-                  <svg viewBox="0 0 16 16" aria-hidden="true">
-                    <path d="M6 3L2 7l4 4V8.5h4a3 3 0 0 1 0 6H7v2h3a5 5 0 0 0 0-10H6V3z" />
-                  </svg>
-                </button>
-              </PixelTooltip>
-              <PixelTooltip
-                tooltipId="pixel-redo-tooltip"
-                text="Redo (Ctrl+Shift+Z)"
+            <div className={moduleStyles.toolbarDivider} />
+            <PixelTooltip tooltipId="pixel-undo-tooltip" text="Undo (Ctrl+Z)">
+              <button
+                type="button"
+                aria-label="Undo (Ctrl+Z)"
+                className={moduleStyles.toolButton}
+                disabled={!canUndo}
+                onClick={undo}
               >
-                <button
-                  type="button"
-                  aria-label="Redo (Ctrl+Shift+Z)"
-                  className={moduleStyles.toolButton}
-                  disabled={!canRedo}
-                  onClick={redo}
-                >
-                  <svg viewBox="0 0 16 16" aria-hidden="true">
-                    <path d="M10 3l4 4-4 4V8.5H6a3 3 0 0 0 0 6h3v2H6a5 5 0 0 1 0-10h4V3z" />
-                  </svg>
-                </button>
-              </PixelTooltip>
-            </div>
+                <svg viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M6 3L2 7l4 4V8.5h4a3 3 0 0 1 0 6H7v2h3a5 5 0 0 0 0-10H6V3z" />
+                </svg>
+              </button>
+            </PixelTooltip>
+            <PixelTooltip
+              tooltipId="pixel-redo-tooltip"
+              text="Redo (Ctrl+Shift+Z)"
+            >
+              <button
+                type="button"
+                aria-label="Redo (Ctrl+Shift+Z)"
+                className={moduleStyles.toolButton}
+                disabled={!canRedo}
+                onClick={redo}
+              >
+                <svg viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M10 3l4 4-4 4V8.5H6a3 3 0 0 0 0 6h3v2H6a5 5 0 0 1 0-10h4V3z" />
+                </svg>
+              </button>
+            </PixelTooltip>
+          </div>
+          <div className={moduleStyles.canvasArea}>
+            {loadError ? (
+              <div className={moduleStyles.loadError}>
+                This image couldn't be loaded for editing.
+              </div>
+            ) : (
+              <canvas
+                ref={displayRef}
+                className={moduleStyles.displayCanvas}
+                onPointerDown={handlePointerDown}
+                onPointerMove={handlePointerMove}
+                onPointerUp={handlePointerUp}
+                onPointerCancel={handlePointerUp}
+              />
+            )}
           </div>
         </div>
         <div className={moduleStyles.footer}>

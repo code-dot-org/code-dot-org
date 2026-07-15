@@ -19,6 +19,9 @@ export interface SerializedAnimationProps {
   categories?: string[];
   // Physical pixels per art pixel; absent on non-pixel-art animations.
   pixelGridSize?: number;
+  // Pixel-editor recently-used colors ([r,g,b,a] rows, most recent first);
+  // absent until the image is edited there.
+  recentColors?: [number, number, number, number][];
 }
 
 // Mirrors the JSDoc `SerializedAnimationList` typedef in p5lab/shapes.js.

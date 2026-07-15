@@ -61,11 +61,14 @@ $border-subtle: rgb(255 255 255 / 12%);
   padding: 12px;
 }
 
+// Two columns; TOOLS order pairs them (pen/fill, erase/eyedrop, circles,
+// rectangles), the four brush sizes make two more rows, undo/redo the last.
 .toolbar {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 34px);
   gap: 4px;
-  align-items: center;
+  align-content: start;
+  justify-items: center;
 }
 
 // The design-system tooltip portals to <body> at z-index 10, which is under
@@ -116,9 +119,10 @@ $border-subtle: rgb(255 255 255 / 12%);
 }
 
 .toolbarDivider {
-  width: 22px;
+  grid-column: 1 / -1;
+  justify-self: stretch;
   height: 1px;
-  margin: 4px 0;
+  margin: 4px 6px;
   background-color: rgb(255 255 255 / 15%);
 }
 
@@ -130,20 +134,6 @@ $border-subtle: rgb(255 255 255 / 12%);
 // Pixel-mode swatches are square because the brush stamps hard squares.
 .brushDotSquare {
   border-radius: 1px;
-}
-
-.canvasColumn {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  min-height: 0;
-}
-
-// Undo/redo, right-aligned under the image.
-.historyRow {
-  display: flex;
-  gap: 4px;
-  justify-content: flex-end;
 }
 
 .canvasArea {
@@ -220,8 +210,14 @@ $border-subtle: rgb(255 255 255 / 12%);
   }
 }
 
+// Spans both toolbar columns; the popover offset below is measured from its
+// full-row width.
 .colorPicker {
+  display: flex;
   position: relative;
+  grid-column: 1 / -1;
+  justify-content: center;
+  justify-self: stretch;
 }
 
 .swatch {
@@ -245,11 +241,12 @@ $border-subtle: rgb(255 255 255 / 12%);
     0 0 / 10px 10px;
 }
 
-// The recently-used row: transparent first, then most-recent colors.
+// The recently-used row, under the spectrum: transparent first, then
+// most-recent colors.
 .recentRow {
   display: flex;
   gap: 4px;
-  margin-bottom: 6px;
+  margin-top: 6px;
 }
 
 .recentSwatch {
@@ -272,8 +269,9 @@ $border-subtle: rgb(255 255 255 / 12%);
   position: absolute;
   bottom: 0;
   // Same 4px-past-the-canvas-edge alignment as .pixelTooltip (the why lives
-  // there); the two offsets move together with the toolbar/body-gap metrics.
-  left: 48px;
+  // there): the picker row spans the full toolbar width, so 100% + the 12px
+  // body gap + 4px lands just inside the image.
+  left: calc(100% + 16px);
   z-index: 10;
   padding: 6px;
   border: 1px solid rgb(255 255 255 / 15%);
