@@ -735,7 +735,15 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
         <span id="dsco-dialog-description" className={moduleStyles.srOnly}>
           Draw on the image with the toolbar's tools, then save or cancel.
         </span>
-        <div className={moduleStyles.header}>{title}</div>
+        {/* Tabbable so the dialog's focus trap lands here on open (the
+            WAI-ARIA dialog pattern's title-as-initial-focus): its
+            first-focusable would otherwise be the pen button, whose
+            focus-triggered tooltip then appears unprompted — positioned
+            against the still-animating (scaled) modal — and lingers. */}
+        {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
+        <div className={moduleStyles.header} tabIndex={0}>
+          {title}
+        </div>
         <div className={moduleStyles.body}>
           <div className={moduleStyles.toolbar}>
             <div className={moduleStyles.toolGrid}>

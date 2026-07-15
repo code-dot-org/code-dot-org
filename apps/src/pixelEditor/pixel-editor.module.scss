@@ -83,6 +83,10 @@ $border-subtle: rgb(255 255 255 / 12%);
 // the tail reads against the image being edited rather than the dark toolbar
 // gap.
 .pixelTooltip {
+  // Absolute from the first paint: WithTooltip measures the bubble BEFORE
+  // positioning it, and an unpositioned bubble measures at body width,
+  // which derails the first show's viewport-fit logic.
+  position: absolute;
   z-index: 1200;
   margin-left: 16px;
 }
@@ -107,6 +111,13 @@ $border-subtle: rgb(255 255 255 / 12%);
   background: none;
   color: #cdd3de;
   cursor: pointer;
+
+  // WithTooltip anchors its bubble to the innermost element under the
+  // pointer at enter time; keep that anchor the button itself, or the
+  // bubble shifts by the icon/button difference depending on entry path.
+  > * {
+    pointer-events: none;
+  }
 
   svg {
     width: 16px;
