@@ -14,9 +14,7 @@ class ProjectStorage::AnonymousGeoRecordingJob < ApplicationJob
 
   # Redis outages can affect many project creations at once.
   # Jittered delay to avoid retrying a large batch together.
-  retry_on Redis::CannotConnectError, wait: ->(_) {30.minutes + rand(30.minutes)}, attempts: 2 do |job, error|
-    job.report_exception(error)
-  end
+  retry_on Redis::CannotConnectError, wait: ->(_) {30.minutes + rand(30.minutes)}, attempts: 2
 
   # @param project_storage_id [Integer] the ID of the ProjectStorage record (user_project_storage_ids.id)
   # @param ip_address [String] the IP address used to look up geolocation data
