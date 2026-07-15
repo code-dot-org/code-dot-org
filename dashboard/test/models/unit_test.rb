@@ -2640,23 +2640,6 @@ class UnitTest < ActiveSupport::TestCase
     assert_raises(RuntimeError) {unit.update_lesson_outlines([{'key' => 'a'}])}
   end
 
-  test 'hoc_2014_unit returns the hourofcode unit when it is seeded' do
-    hourofcode = create(:script, name: Unit::HOC_NAME)
-    assert_equal hourofcode, Unit.hoc_2014_unit
-  end
-
-  test 'hoc_2014_unit falls back to ui-test-hourofcode in dev/test when hourofcode is not seeded' do
-    ui_test_hoc = create(:script, name: Unit::UI_TEST_HOC_NAME)
-    assert_equal ui_test_hoc, Unit.hoc_2014_unit
-  end
-
-  test 'hoc_2014_unit does not fall back to ui-test-hourofcode in production' do
-    create(:script, name: Unit::UI_TEST_HOC_NAME)
-    with_rack_env(:production) do
-      assert_raises(ActiveRecord::RecordNotFound) {Unit.hoc_2014_unit}
-    end
-  end
-
   test 'lesson_tutor_available? is true for AIF and AID student courses' do
     %w[AIF AID].each_with_index do |initiative, i|
       unit_group = create(:single_unit_course, :with_course_offering, family_name: "ai-tutor-#{i}", version_year: '2026')

@@ -311,11 +311,7 @@ class Unit < ApplicationRecord
   )
 
   def self.hoc_2014_unit
-    # hourofcode is not seeded in ui test environments, so fall back to
-    # the ui-test-hourofcode fixture in development and test. In production,
-    # the "not found" error is raised without checking for the fixture.
-    Unit.get_from_cache(Unit::HOC_NAME, raise_exceptions: !rack_env?(:development, :test)) ||
-      Unit.get_from_cache(Unit::UI_TEST_HOC_NAME)
+    Unit.get_from_cache(Unit::HOC_NAME)
   end
 
   def self.starwars_unit
