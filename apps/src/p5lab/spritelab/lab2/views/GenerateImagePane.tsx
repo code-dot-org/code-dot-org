@@ -368,6 +368,7 @@ const GenerateImagePane: React.FunctionComponent = () => {
           // Recorded at generation time; images without it (legacy, smooth
           // style) edit at native resolution.
           knownPixelGrid={editingProps.pixelGridSize}
+          imageKey={editingKey ?? undefined}
           onSave={handleEditorSave}
           onCancel={() => setEditingKey(null)}
         />

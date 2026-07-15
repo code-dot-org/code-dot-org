@@ -1,6 +1,14 @@
 import React from 'react';
 
-export type PixelTool = 'pen' | 'eraser' | 'bucket' | 'circle' | 'filledCircle';
+export type PixelTool =
+  | 'pen'
+  | 'eraser'
+  | 'bucket'
+  | 'eyedropper'
+  | 'circle'
+  | 'filledCircle'
+  | 'rect'
+  | 'filledRect';
 
 // Each tool has a single-key shortcut; the hover tooltip reads
 // "<label> (<KEY>)".
@@ -41,6 +49,16 @@ export const TOOLS: {
     ),
   },
   {
+    id: 'eyedropper',
+    label: 'Eyedropper',
+    shortcut: 'i',
+    icon: (
+      <svg viewBox="0 0 16 16" aria-hidden="true">
+        <path d="M14.6 1.4a2.4 2.4 0 0 0-3.4 0L9.5 3.1l-.8-.8-1.4 1.4.8.8-5.6 5.6L2 13.5l-.7 1.2 1.2-.7 3.4-.5 5.6-5.6.8.8 1.4-1.4-.8-.8 1.7-1.7a2.4 2.4 0 0 0 0-3.4zM5.3 12.2l-2 .3.3-2 5.3-5.3 1.7 1.7-5.3 5.3z" />
+      </svg>
+    ),
+  },
+  {
     id: 'circle',
     label: 'Circle outline',
     shortcut: 'c',
@@ -64,6 +82,34 @@ export const TOOLS: {
     icon: (
       <svg viewBox="0 0 16 16" aria-hidden="true">
         <circle cx="8" cy="8" r="7" />
+      </svg>
+    ),
+  },
+  {
+    id: 'rect',
+    label: 'Rectangle outline',
+    shortcut: 'r',
+    icon: (
+      <svg viewBox="0 0 16 16" aria-hidden="true">
+        <rect
+          x="2"
+          y="3"
+          width="12"
+          height="10"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+        />
+      </svg>
+    ),
+  },
+  {
+    id: 'filledRect',
+    label: 'Solid rectangle',
+    shortcut: 'b',
+    icon: (
+      <svg viewBox="0 0 16 16" aria-hidden="true">
+        <rect x="1" y="2" width="14" height="12" />
       </svg>
     ),
   },

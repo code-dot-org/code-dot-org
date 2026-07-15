@@ -1,7 +1,8 @@
+import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import PixelTooltip from './PixelTooltip';
-import {RGBA} from './tools';
+import {RGBA, TRANSPARENT} from './tools';
 
 import moduleStyles from './pixel-editor.module.scss';
 
@@ -38,6 +39,9 @@ function paintSpectrum(canvas: HTMLCanvasElement) {
 interface ColorPickerProps {
   color: RGBA;
   onChange: (color: RGBA) => void;
+  // Recently used colors, most recent first; shown as one row above the
+  // spectrum, after the permanent transparent swatch.
+  recentColors?: RGBA[];
 }
 
 /**
@@ -48,6 +52,7 @@ interface ColorPickerProps {
 const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
   color,
   onChange,
+  recentColors = [],
 }) => {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement | null>(null);
@@ -112,17 +117,28 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
     [onChange]
   );
 
+  const isTransparent = color[3] === 0;
   const swatchButton = (
     <button
       type="button"
-      className={moduleStyles.swatch}
-      style={{
-        backgroundColor: `rgb(${color[0]}, ${color[1]}, ${color[2]})`,
-      }}
+      className={classNames(
+        moduleStyles.swatch,
+        isTransparent && moduleStyles.swatchTransparent
+      )}
+      style={
+        isTransparent
+          ? undefined
+          : {backgroundColor: `rgb(${color[0]}, ${color[1]}, ${color[2]})`}
+      }
       onClick={() => setOpen(o => !o)}
       aria-label="Choose color"
     />
   );
+
+  const pickAndClose = (picked: RGBA) => {
+    onChange(picked);
+    setOpen(false);
+  };
 
   return (
     <div ref={rootRef} className={moduleStyles.colorPicker}>
@@ -137,6 +153,28 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
       )}
       {open && (
         <div className={moduleStyles.spectrumPopover}>
+          <div className={moduleStyles.recentRow}>
+            <button
+              type="button"
+              className={classNames(
+                moduleStyles.recentSwatch,
+                moduleStyles.swatchTransparent
+              )}
+              aria-label="Transparent"
+              title="Transparent"
+              onClick={() => pickAndClose(TRANSPARENT)}
+            />
+            {recentColors.map((c, i) => (
+              <button
+                key={`${c.join('-')}-${i}`}
+                type="button"
+                className={moduleStyles.recentSwatch}
+                style={{backgroundColor: `rgb(${c[0]}, ${c[1]}, ${c[2]})`}}
+                aria-label={`Recent color ${i + 1}`}
+                onClick={() => pickAndClose([c[0], c[1], c[2], 255])}
+              />
+            ))}
+          </div>
           <canvas
             ref={canvasRef}
             width={SPECTRUM_WIDTH}

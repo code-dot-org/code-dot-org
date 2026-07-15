@@ -99,8 +99,13 @@ $border-subtle: rgb(255 255 255 / 12%);
     fill: currentColor;
   }
 
-  &:hover {
+  &:hover:not(:disabled) {
     background-color: rgb(255 255 255 / 8%);
+  }
+
+  &:disabled {
+    opacity: 0.35;
+    cursor: default;
   }
 }
 
@@ -125,6 +130,20 @@ $border-subtle: rgb(255 255 255 / 12%);
 // Pixel-mode swatches are square because the brush stamps hard squares.
 .brushDotSquare {
   border-radius: 1px;
+}
+
+.canvasColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 0;
+}
+
+// Undo/redo, right-aligned under the image.
+.historyRow {
+  display: flex;
+  gap: 4px;
+  justify-content: flex-end;
 }
 
 .canvasArea {
@@ -214,6 +233,39 @@ $border-subtle: rgb(255 255 255 / 12%);
   border: 2px solid rgb(255 255 255 / 60%);
   border-radius: 6px;
   cursor: pointer;
+}
+
+// A small checkerboard stands in for "no color" on transparent swatches.
+.swatchTransparent {
+  background:
+    repeating-conic-gradient(
+      rgb(160 166 178) 0% 25%,
+      rgb(255 255 255) 0% 50%
+    )
+    0 0 / 10px 10px;
+}
+
+// The recently-used row: transparent first, then most-recent colors.
+.recentRow {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.recentSwatch {
+  box-sizing: border-box;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgb(255 255 255 / 45%);
+  border-radius: 4px;
+  box-shadow: none;
+  cursor: pointer;
+
+  &:hover {
+    border-color: rgb(255 255 255 / 90%);
+  }
 }
 
 .spectrumPopover {
