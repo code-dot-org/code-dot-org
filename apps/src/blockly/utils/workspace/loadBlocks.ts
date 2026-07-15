@@ -38,6 +38,14 @@ export function loadBlocksToWorkspace(
     loadHiddenDefinitionBlocksToWorkspace(hiddenDefinitionSource);
   }
   Blockly.serialization.workspaces.load(mainSource, workspace);
+  // Loading only queues each block's render (initBlock calls queueRender), so
+  // block sizes and positions are not applied to the DOM until a later animation
+  // frame. positionBlocksOnWorkspace reads those values synchronously via
+  // getTopBlocks(SORT_BY_POSITION), getRelativeToSurfaceXY, and getHeightWidth, so
+  // it must run after the queued renders complete. Flush them first; otherwise the
+  // position sort ties (all blocks read as (0,0)) and falls back to insertion order,
+  // which varies by browser depending on how the render/font-measurement race lands.
+  BlocklyCore.renderManagement.triggerQueuedRenders(workspace);
   positionBlocksOnWorkspace(workspace);
   Blockly.hasLoadedBlocks = true;
 
