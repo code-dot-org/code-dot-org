@@ -2,25 +2,16 @@ import {linter, Diagnostic} from '@codemirror/lint';
 import {HTMLHint} from 'htmlhint';
 import {Ruleset} from 'htmlhint/types';
 
-// Note: this is the default ruleset, copied here to make it easier to make
-// updates.
 const htmlRuleset: Ruleset = {
-  'tagname-lowercase': true,
-  'attr-lowercase': true,
   'attr-value-double-quotes': true,
-  'doctype-first': true,
-  'tag-pair': true,
   'spec-char-escape': true,
-  'id-unique': true,
-  'src-not-empty': true,
-  'attr-no-duplication': true,
-  'title-require': true,
+  'tag-pair': true,
 };
 
-export const htmlLinter = linter(view => {
-  const errors = HTMLHint.verify(view.state.doc.toString(), htmlRuleset);
+export const getHtmlLintDiagnostics = (source: string): Diagnostic[] => {
+  const errors = HTMLHint.verify(source, htmlRuleset);
   const diagnostics: Diagnostic[] = [];
-  const docLines = view.state.doc.toString().split('\n');
+  const docLines = source.split('\n');
   errors.forEach(error => {
     let errorIndex = 0;
     for (let i = 0; i < error.line - 1; i++) {
@@ -35,4 +26,8 @@ export const htmlLinter = linter(view => {
     });
   });
   return diagnostics;
+};
+
+export const htmlLinter = linter(view => {
+  return getHtmlLintDiagnostics(view.state.doc.toString());
 });

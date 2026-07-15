@@ -24,6 +24,7 @@ import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {htmlLinter} from '@cdo/apps/weblab2/htmlLinter';
 
 import {
   editableFileType,
@@ -152,6 +153,9 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
         };
 
         extensions.push(linter(esLint(new eslint.Linter(), config)));
+        extensions.push(lintGutter());
+      } else if (fileExt === 'html') {
+        extensions.push(htmlLinter);
         extensions.push(lintGutter());
       } else if (fileExt === 'css') {
         // Add css color picker and remove white outline from color indicator.
