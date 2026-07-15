@@ -1,3 +1,4 @@
+import Modal from '@code-dot-org/component-library/modal';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -22,6 +23,7 @@ export default class VersionHistory extends React.Component {
     useFilesApi: PropTypes.bool.isRequired,
     selectedVersion: PropTypes.string,
     isReadOnly: PropTypes.bool.isRequired,
+    onClose: PropTypes.func.isRequired,
   };
 
   /**
@@ -237,15 +239,23 @@ export default class VersionHistory extends React.Component {
     }
 
     return (
-      <div className="modal-content" style={{margin: 0}}>
-        <MuiTypography variant="h5" className="dialog-title">
-          {title}
-        </MuiTypography>
-        {body}
-        <MuiTypography variant="body2" className="caption-text">
-          {this.state.statusMessage}
-        </MuiTypography>
-      </div>
+      <Modal
+        title={title}
+        onClose={this.props.onClose}
+        closeLabel={i18n.closeDialog()}
+        customContent={
+          <div>
+            {body}
+            <MuiTypography variant="body2" className="caption-text">
+              {this.state.statusMessage}
+            </MuiTypography>
+          </div>
+        }
+        primaryButtonProps={{
+          children: i18n.closeDialog(),
+          onClick: this.props.onClose,
+        }}
+      />
     );
   }
 }
