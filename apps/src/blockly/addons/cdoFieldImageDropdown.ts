@@ -9,9 +9,10 @@ import {
   getUpdatedOptionsFromConfig,
 } from './cdoFieldDropdown';
 
-interface ButtonConfig {
+export interface ButtonConfig {
   text: string;
   action: () => void;
+  className?: string;
 }
 
 // Note that this class *does not* inherit from CdoFieldDropdown
@@ -124,6 +125,9 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
       this.buttons_.forEach(button => {
         const buttonElement = document.createElement('BUTTON');
         buttonElement.innerHTML = button.text;
+        if (button.className) {
+          buttonElement.className = button.className;
+        }
         buttonElement.addEventListener('click', button.action);
         buttonElement.addEventListener('click', () =>
           Blockly.DropDownDiv.hideIfOwner(this, true)

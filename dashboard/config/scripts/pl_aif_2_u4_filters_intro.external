@@ -16,7 +16,7 @@ Imagine two teachers, Ms. Rivera and Mr. Chen, open the same app during lunch to
 
 They type the same search: “AI projects for beginners” …but their feeds look very different.
 
-<div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center; margin-top:10px;"> <div style="background:#ffffff; border:1px solid #ddd; border-radius:12px; padding:14px; width:340px; box-shadow:0 2px 8px rgba(0,0,0,0.08);"> <div style="font-size:14pt; font-weight:bold; margin-bottom:8px;">Feed A (Ms. Rivera)</div> <div style="font-size:13pt; color:#555; margin-bottom:10px;">Mostly upbeat “AI makes teaching easier” content</div>
+<div style="display:flex; gap:16px; flex-wrap:wrap; justify-content:center; margin-top:10px;"> <div style="background:#ffffff; border:1px solid #ddd; border-radius:12px; padding:14px; width:340px; box-shadow:0 2px 8px rgba(0,0,0,0.08);"> <div style="font-size:14pt; font-weight:bold; margin-bottom:8px;">Feed A (Ms. Rivera)</div> 
 
 <div style="background:#f7f7f7; border-radius:10px; padding:10px; margin-bottom:10px;">
   <div style="font-weight:bold; font-size:13pt;">🎥 “5 AI tools for lesson planning”</div>
@@ -34,7 +34,7 @@ They type the same search: “AI projects for beginners” …but their feeds lo
 </div>
 
 
-</div> <div style="background:#ffffff; border:1px solid #ddd; border-radius:12px; padding:14px; width:340px; box-shadow:0 2px 8px rgba(0,0,0,0.08);"> <div style="font-size:14pt; font-weight:bold; margin-bottom:8px;">Feed B (Mr. Chen)</div> <div style="font-size:13pt; color:#555; margin-bottom:10px;">More critical “AI risks and harms” content</div>
+</div> <div style="background:#ffffff; border:1px solid #ddd; border-radius:12px; padding:14px; width:340px; box-shadow:0 2px 8px rgba(0,0,0,0.08);"> <div style="font-size:14pt; font-weight:bold; margin-bottom:8px;">Feed B (Mr. Chen)</div> 
 
 <div style="background:#f7f7f7; border-radius:10px; padding:10px; margin-bottom:10px;">
   <div style="font-weight:bold;font-size:13pt;">⚠️ “Bias in AI grading tools”</div>
@@ -53,41 +53,42 @@ They type the same search: “AI projects for beginners” …but their feeds lo
 
 </div> </div> 
 
+---
 
-## Discuss: What do filters change?
+## Reflect: What do filters change?
 
 **Take a moment to compare the two feeds.**
 
 <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:12px;margin:20px 0;">
 
   <div style="background-color:#F5F7F8;border-radius:10px;padding:14px;">
-    <p style="font-size:14pt;font-weight:bold;margin:0 0 8px 0;">1. What is emphasized?</p>
-    <p style="font-size:13pt;line-height:1.4;margin:0;">What ideas about AI show up most often in each feed?</p>
+    <p style="font-size:12pt;font-weight:bold;margin:0 0 8px 0;">1. What is emphasized?</p>
+    <p style="font-size:12pt;line-height:1.4;margin:0;">What ideas about AI show up most often in each feed?</p>
   </div>
 
   <div style="background-color:#F5F7F8;border-radius:10px;padding:14px;">
-    <p style="font-size:14pt;font-weight:bold;margin:0 0 8px 0;">2. What is missing?</p>
-    <p style="font-size:13pt;line-height:1.4;margin:0;">What important perspectives might each teacher not see?</p>
+    <p style="font-size:12pt;font-weight:bold;margin:0 0 8px 0;">2. What is missing?</p>
+    <p style="font-size:12pt;line-height:1.4;margin:0;">What important perspectives might each teacher not see?</p>
   </div>
 
   <div style="background-color:#F5F7F8;border-radius:10px;padding:14px;">
-    <p style="font-size:14pt;font-weight:bold;margin:0 0 8px 0;">3. What might change?</p>
-    <p style="font-size:13pt;line-height:1.4;margin:0;">How could each feed influence what the teacher believes or does next?</p>
+    <p style="font-size:12pt;font-weight:bold;margin:0 0 8px 0;">3. What might change?</p>
+    <p style="font-size:12pt;line-height:1.4;margin:0;">How could each feed influence what the teacher believes or does next?</p>
   </div>
 
 </div>
 
-<details style="background-color:#FFFFFF;padding:12px;margin-bottom:10px;border:1px solid #D9E3E5;border-radius:8px;box-shadow:2px 2px 8px rgba(0,0,0,0.06);">
-  <summary style="font-size:16px;font-weight:bold;">💡 Check your thinking</summary>
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+  <summary style="font-size:14px;font-weight:bold;">🔎 Check your thinking</summary>
 
   <div style="margin-top:14px;">
-    <p style="font-size:13pt;line-height:1.45;margin:0;">
+    <p style="font-size:12pt;line-height:1.45;margin:0;">
       Filters can make some ideas feel more common, trustworthy, or important than others. Feed A may make AI feel useful and low-risk, while Feed B may make AI feel risky or concerning. Both feeds leave out context. Algorithms often filter based on signals like clicks, likes, watch time, shares, follows, location, and what similar users engage with.
     </p>
   </div>
 </details>
 
-<div style="background-color:#e4e2f8; border-radius:10px; padding:14px; margin:18px auto; max-width:85%; box-sizing:border-box;"> <p style="font-size:14pt; margin:0; line-height:130%;">💡 <strong>Key idea:</strong> Filters can shape what you learn, what you believe is “normal,” and what options you think exist.</p> </div>
+<div style="background-color:#e4e2f8; border-radius:10px; padding:14px; margin:18px auto; max-width:85%; box-sizing:border-box;"> <p style="font-size:12pt; margin:0; line-height:130%;">💡 <strong>Key idea:</strong> Filters can shape what you learn, what you believe is “normal,” and what options you think exist.</p> </div>
 
 
 

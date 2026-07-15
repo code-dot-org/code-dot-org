@@ -1614,9 +1614,10 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal fresh_timestamp, json_response['timestamp']
     assert_equal lesson.localized_title, json_response['name']
     assert json_response['url'].present?
+    assert_equal "/ai_lesson_summary_podcasts/show?lesson_id=#{lesson.id}", json_response['podcast_url']
   end
 
-  test 'get suggested_lesson omits name and url when lesson is not found' do
+  test 'get suggested_lesson omits name, url, and podcast_url when lesson is not found' do
     fresh_timestamp = Time.now.utc.iso8601
     @section.update!(suggested_lesson: {'lesson_id' => -1, 'timestamp' => fresh_timestamp})
     sign_in @teacher
@@ -1625,6 +1626,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal(-1, json_response['lesson_id'])
     assert_nil json_response['name']
     assert_nil json_response['url']
+    assert_nil json_response['podcast_url']
   end
 
   test 'get suggested_lesson computes when data is absent and section has script' do
@@ -1711,6 +1713,87 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   test 'get suggested_lesson returns 403 for unauthenticated user' do
     get :suggested_lesson, params: {id: @section.id}
     assert_response :forbidden
+  end
+
+  # GET /api/v1/sections/suggested_lessons
+
+  test 'suggested_lessons returns 403 for unauthenticated user' do
+    get :suggested_lessons
+    assert_response :forbidden
+  end
+
+  test 'suggested_lessons returns empty object when teacher has no sections' do
+    sign_in create(:teacher)
+    get :suggested_lessons
+    assert_response :success
+    assert_equal({}, json_response)
+  end
+
+  test 'suggested_lessons returns nil for a section with no script' do
+    sign_in @teacher
+    get :suggested_lessons
+    assert_response :success
+    assert_nil json_response[@section.id.to_s]
+  end
+
+  test 'suggested_lessons computes and returns data for active student sections' do
+    section, student, _lesson1, lesson2, sl1, _sl2 = setup_suggested_lesson_section
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: section.script.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+
+    sign_in @teacher
+    get :suggested_lessons
+    assert_response :success
+    result = json_response[section.id.to_s]
+    assert_equal lesson2.id, result['lesson_id']
+    assert result['name'].present?
+    assert result['url'].present?
+    assert result['timestamp'].present?
+  end
+
+  test 'suggested_lessons returns fresh stored data without recomputing' do
+    section, _student, _lesson1, lesson2, _sl1, _sl2 = setup_suggested_lesson_section
+    fresh_timestamp = Time.now.utc.iso8601
+    section.update!(suggested_lesson: {'lesson_id' => lesson2.id, 'timestamp' => fresh_timestamp})
+
+    sign_in @teacher
+    get :suggested_lessons
+    assert_response :success
+    result = json_response[section.id.to_s]
+    assert_equal lesson2.id, result['lesson_id']
+    assert_equal fresh_timestamp, result['timestamp']
+  end
+
+  test 'suggested_lessons excludes hidden sections' do
+    section, student, _lesson1, _lesson2, sl1, _sl2 = setup_suggested_lesson_section
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: section.script.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    section.update!(hidden: true)
+
+    sign_in @teacher
+    get :suggested_lessons
+    assert_response :success
+    assert_nil json_response[section.id.to_s]
+  end
+
+  test 'suggested_lessons excludes teacher-participant sections' do
+    teacher_section = create(:section, :teacher_participants, user: @teacher)
+
+    sign_in @teacher
+    get :suggested_lessons
+    assert_response :success
+    assert_nil json_response[teacher_section.id.to_s]
+  end
+
+  test 'suggested_lessons returns multiple sections' do
+    section1, student1, _l1, lesson1b, sl1a, _sl1b = setup_suggested_lesson_section
+    section2, student2, _l2, lesson2b, sl2a, _sl2b = setup_suggested_lesson_section
+    create(:user_level, user: student1, level: sl1a.oldest_active_level, script_id: section1.script.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    create(:user_level, user: student2, level: sl2a.oldest_active_level, script_id: section2.script.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+
+    sign_in @teacher
+    get :suggested_lessons
+    assert_response :success
+    assert_equal lesson1b.id, json_response[section1.id.to_s]['lesson_id']
+    assert_equal lesson2b.id, json_response[section2.id.to_s]['lesson_id']
   end
 
   test 'valid_course_offerings includes only published courses' do

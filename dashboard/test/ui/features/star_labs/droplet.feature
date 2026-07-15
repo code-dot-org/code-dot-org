@@ -16,7 +16,7 @@ Feature: Droplet levels work as expected
 
     And I press keys ":down" for element ".ace_text-input"
     And the Droplet ACE text is "butto"
-    And there is a Tooltipster tooltip with text "button(id, text)"
+    And there is a Tooltipster tooltip with text 'button("id", "text")'
 
     And I press keys ":down" for element ".ace_text-input"
     And there is a Tooltipster tooltip with text "radioButton"

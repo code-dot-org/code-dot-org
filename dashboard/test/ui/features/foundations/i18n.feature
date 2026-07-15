@@ -10,15 +10,15 @@ Scenario: HoC tutorial in Spanish
   Then element ".csf-top-instructions p" has "es-MX" text from key "data.level.instructions.maze_2_14"
 
 Scenario: Frozen tutorial in Spanish
-  Given I am on "http://studio.code.org/courses/frozen/units/1/lessons/1/levels/2/lang/es-MX"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/3/levels/10/lang/es-MX"
   And I wait for the lab page to fully load
-  Then element ".csf-top-instructions p" has "es-MX" text from key "data.short_instructions.frozen perpendicular"
+  Then element ".csf-top-instructions p" has "es-MX" text from key "data.short_instructions.frozen square loop 3x"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
-  Then element ".csf-top-instructions p" has "es-MX" text from key "data.short_instructions.frozen perpendicular"
+  Then element ".csf-top-instructions p" has "es-MX" text from key "data.short_instructions.frozen square loop 3x"
 
 Scenario: Minecraft:Agent tutorial in Spanish
-  Given I am on "http://studio.code.org/courses/hero/units/1/lessons/1/levels/1/lang/es-MX"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/25/levels/7/lang/es-MX"
   And I wait for the lab page to fully load
   Then element "#toggleButton" is visible
   And I click selector "#toggleButton"
@@ -28,13 +28,13 @@ Scenario: Minecraft:Agent tutorial in Spanish
 Scenario: Toolbox Categories in Spanish
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/45/levels/4/lang/es-MX"
   And I wait for the lab page to fully load
-  Then element "#blockly-1" has "es-MX" text from key "data.block_categories.Events"
-  Then element "#blockly-2" has "es-MX" text from key "data.block_categories.Text"
-  Then element "#blockly-3" has "es-MX" text from key "data.block_categories.Variables"
-  Then element "#blockly-4" has "es-MX" text from key "data.block_categories.Effects"
-  Then element "#blockly-5" has "es-MX" text from key "data.block_categories.Sprites"
-  Then element "#blockly-6" has "es-MX" text from key "data.block_categories.Functions"
-  Then element "#blockly-7" has "es-MX" text from key "data.block_categories.Variables"
+  Then toolbox category 1 has "es-MX" text from key "data.block_categories.Events"
+  Then toolbox category 2 has "es-MX" text from key "data.block_categories.Text"
+  Then toolbox category 3 has "es-MX" text from key "data.block_categories.Variables"
+  Then toolbox category 4 has "es-MX" text from key "data.block_categories.Effects"
+  Then toolbox category 5 has "es-MX" text from key "data.block_categories.Sprites"
+  Then toolbox category 6 has "es-MX" text from key "data.block_categories.Functions"
+  Then toolbox category 7 has "es-MX" text from key "data.block_categories.Variables"
 
 Scenario: Translated function names in Spanish
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/4/levels/6/lang/es-MX"
@@ -54,17 +54,16 @@ Scenario: HoC tutorial in Portuguese
   And element "#resetButton" is hidden
   Then element ".csf-top-instructions p" has "pt-BR" text from key "data.level.instructions.maze_2_14"
 
-@no_ci
 Scenario: Frozen tutorial in Portuguese
-  Given I am on "http://studio.code.org/courses/frozen/units/1/lessons/1/levels/2/lang/pt-br"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/3/levels/10/lang/pt-br"
   And I wait for the lab page to fully load
-  Then element ".csf-top-instructions p" has "pt-BR" text from key "data.short_instructions.frozen perpendicular"
+  Then element ".csf-top-instructions p" has "pt-BR" text from key "data.short_instructions.frozen square loop 3x"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
-  Then element ".csf-top-instructions p" has "pt-BR" text from key "data.short_instructions.frozen perpendicular"
+  Then element ".csf-top-instructions p" has "pt-BR" text from key "data.short_instructions.frozen square loop 3x"
 
 Scenario: Minecraft:Agent tutorial in Portuguese
-  Given I am on "http://studio.code.org/courses/hero/units/1/lessons/1/levels/1/lang/pt-br"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/25/levels/7/lang/pt-br"
   And I wait for the lab page to fully load
   Then element "#toggleButton" is visible
   And I click selector "#toggleButton"
@@ -74,13 +73,13 @@ Scenario: Minecraft:Agent tutorial in Portuguese
 Scenario: Toolbox Categories in Portuguese
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/45/levels/4/lang/pt-br"
   And I wait for the lab page to fully load
-  Then element "#blockly-1" has "pt-BR" text from key "data.block_categories.Events"
-  Then element "#blockly-2" has "pt-BR" text from key "data.block_categories.Text"
-  Then element "#blockly-3" has "pt-BR" text from key "data.block_categories.Variables"
-  Then element "#blockly-4" has "pt-BR" text from key "data.block_categories.Effects"
-  Then element "#blockly-5" has "pt-BR" text from key "data.block_categories.Sprites"
-  Then element "#blockly-6" has "pt-BR" text from key "data.block_categories.Functions"
-  Then element "#blockly-7" has "pt-BR" text from key "data.block_categories.Variables"
+  Then toolbox category 1 has "pt-BR" text from key "data.block_categories.Events"
+  Then toolbox category 2 has "pt-BR" text from key "data.block_categories.Text"
+  Then toolbox category 3 has "pt-BR" text from key "data.block_categories.Variables"
+  Then toolbox category 4 has "pt-BR" text from key "data.block_categories.Effects"
+  Then toolbox category 5 has "pt-BR" text from key "data.block_categories.Sprites"
+  Then toolbox category 6 has "pt-BR" text from key "data.block_categories.Functions"
+  Then toolbox category 7 has "pt-BR" text from key "data.block_categories.Variables"
 
 Scenario: Translated function names in Portuguese
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/4/levels/6/lang/pt-BR"
@@ -101,15 +100,15 @@ Scenario: HoC tutorial in Arabic (RTL)
   Then element ".csf-top-instructions p" has "ar-SA" text from key "data.level.instructions.maze_2_14"
 
 Scenario: Frozen tutorial in Arabic (RTL)
-  Given I am on "http://studio.code.org/courses/frozen/units/1/lessons/1/levels/2/lang/ar-sa"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/3/levels/10/lang/ar-sa"
   And I wait for the lab page to fully load
-  Then element ".csf-top-instructions p" has "ar-SA" text from key "data.short_instructions.frozen perpendicular"
+  Then element ".csf-top-instructions p" has "ar-SA" text from key "data.short_instructions.frozen square loop 3x"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
-  Then element ".csf-top-instructions p" has "ar-SA" text from key "data.short_instructions.frozen perpendicular"
+  Then element ".csf-top-instructions p" has "ar-SA" text from key "data.short_instructions.frozen square loop 3x"
 
 Scenario: Minecraft:Agent tutorial in Arabic (RTL)
-  Given I am on "http://studio.code.org/courses/hero/units/1/lessons/1/levels/1/lang/ar-sa"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/25/levels/7/lang/ar-sa"
   And I wait for the lab page to fully load
   Then element "#toggleButton" is visible
   And I click selector "#toggleButton"
@@ -129,13 +128,13 @@ Scenario: Translated function names in Arabic
 Scenario: Toolbox Categories in Arabic (RTL)
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/45/levels/4/lang/ar-sa"
   And I wait for the lab page to fully load
-  Then element "#blockly-1" has "ar-SA" text from key "data.block_categories.Events"
-  Then element "#blockly-2" has "ar-SA" text from key "data.block_categories.Text"
-  Then element "#blockly-3" has "ar-SA" text from key "data.block_categories.Variables"
-  Then element "#blockly-4" has "ar-SA" text from key "data.block_categories.Effects"
-  Then element "#blockly-5" has "ar-SA" text from key "data.block_categories.Sprites"
-  Then element "#blockly-6" has "ar-SA" text from key "data.block_categories.Functions"
-  Then element "#blockly-7" has "ar-SA" text from key "data.block_categories.Variables"
+  Then toolbox category 1 has "ar-SA" text from key "data.block_categories.Events"
+  Then toolbox category 2 has "ar-SA" text from key "data.block_categories.Text"
+  Then toolbox category 3 has "ar-SA" text from key "data.block_categories.Variables"
+  Then toolbox category 4 has "ar-SA" text from key "data.block_categories.Effects"
+  Then toolbox category 5 has "ar-SA" text from key "data.block_categories.Sprites"
+  Then toolbox category 6 has "ar-SA" text from key "data.block_categories.Functions"
+  Then toolbox category 7 has "ar-SA" text from key "data.block_categories.Variables"
 
 Scenario: Pixelation Widget long and short instructions in Spanish
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/17/levels/2/lang/es-MX"

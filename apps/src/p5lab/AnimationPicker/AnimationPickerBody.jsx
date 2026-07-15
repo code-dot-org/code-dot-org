@@ -1,4 +1,5 @@
 /** Body of the animation picker dialog */
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -10,7 +11,6 @@ import Button from '@cdo/apps/legacySharedComponents/Button.jsx';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import SearchBar from '@cdo/apps/sharedComponents/SearchBar.jsx';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
-import color from '@cdo/apps/util/color';
 import msg from '@cdo/locale';
 
 import ScrollableList from '../AnimationTab/ScrollableList.jsx';
@@ -20,7 +20,6 @@ import AnimationPickerListItem, {
   getCategory,
 } from './AnimationPickerListItem.jsx';
 import AnimationUploadButton from './AnimationUploadButton.jsx';
-import * as dialogStyles from './styles';
 
 import style from './animation-picker-body.module.scss';
 
@@ -255,9 +254,9 @@ export default class AnimationPickerBody extends React.Component {
             color={Button.ButtonColor.brandSecondaryDefault}
           />
         )}
-        <h1 style={dialogStyles.title}>
+        <Typography variant="h4" component="h1" className={style.title}>
           {!animationJsonMode && msg.animationPicker_title({assetType})}
-        </h1>
+        </Typography>
         {uploadsEnabled && (
           <WarningLabel>{msg.animationPicker_warning()}</WarningLabel>
         )}
@@ -335,7 +334,7 @@ export default class AnimationPickerBody extends React.Component {
 }
 
 export const WarningLabel = ({children}) => (
-  <span style={{color: color.red}}>{children}</span>
+  <span className={style.warning}>{children}</span>
 );
 WarningLabel.propTypes = {
   children: PropTypes.node,

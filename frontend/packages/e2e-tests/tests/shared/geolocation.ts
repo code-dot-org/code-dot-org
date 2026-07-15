@@ -1,6 +1,6 @@
 import type {Page} from '@playwright/test';
 
-import {cookieDomain} from './dcdo';
+import {cookieDomain} from './cookies';
 
 /** Cookie name used by Rack::GeolocationOverride middleware. */
 const GEO_COOKIE_NAME = 'GeolocationOverride';

@@ -90,7 +90,7 @@ const procedureCallerOnChangeMixin = {
     return (
       defBlock &&
       defBlock.type === this.defType_ &&
-      JSON.stringify(defBlock.getVars()) ===
+      JSON.stringify(defBlock.getVarModels().map(m => m.getId())) ===
         JSON.stringify(this.paramsFromSerializedState_)
     );
   },

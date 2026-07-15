@@ -225,13 +225,18 @@ class Section < ApplicationRecord
 
     last_completed_lesson = nil
     finished_unit = true
-    unit.lessons.each do |lesson|
+    numbered_lessons = unit.lessons.select(&:numbered_lesson?)
+    checked_last_lesson = false
+    threshold = [section_students.size / 2.0, 3].min
+
+    numbered_lessons.reverse_each do |lesson|
       required_sls = lesson.script_levels.reject(&:bonus)
       next if required_sls.empty?
 
-      completed_count = section_students.count do |student|
+      completed_count = 0
+      section_students.each do |student|
         passing_ids = passing_level_ids_by_student[student.id] || Set.new
-        required_sls.all? do |sl|
+        next unless required_sls.all? do |sl|
           level = sl.oldest_active_level
           if level.is_a?(BubbleChoice)
             level.sublevels.any? {|sub| passing_ids.include?(sub.id)}
@@ -239,17 +244,21 @@ class Section < ApplicationRecord
             passing_ids.include?(level.id)
           end
         end
+        completed_count += 1
+        break if completed_count >= threshold
       end
 
-      if completed_count >= section_students.size / 2.0
+      met = completed_count >= threshold
+      finished_unit = met unless checked_last_lesson
+      checked_last_lesson = true
+
+      if met
         last_completed_lesson = lesson
-        finished_unit = true
-      else
-        finished_unit = false
+        break
       end
     end
 
-    lessons = unit.lessons.to_a
+    lessons = numbered_lessons
     next_lesson = if last_completed_lesson
                     lessons[lessons.index(last_completed_lesson) + 1]
                   else

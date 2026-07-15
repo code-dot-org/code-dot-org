@@ -10,7 +10,12 @@ import {
   StyledEngineProvider,
   ThemeProvider,
 } from '@mui/material';
-import {createRootRoute, Outlet, useRouter} from '@tanstack/react-router';
+import {
+  createRootRoute,
+  HeadContent,
+  Outlet,
+  useRouter,
+} from '@tanstack/react-router';
 import {TanStackRouterDevtools} from '@tanstack/react-router-devtools';
 import {useCallback} from 'react';
 
@@ -96,6 +101,7 @@ const cssLayerOrder = (
 function RootLayout() {
   return (
     <StyledEngineProvider enableCssLayer>
+      <HeadContent />
       {cssLayerOrder}
       <ThemeProvider theme={CdoTheme}>
         {responsiveFloorStyles}
@@ -113,6 +119,21 @@ function RootLayout() {
  * eliminating the useEffect bootstrap pattern and StrictMode double-fetch.
  */
 export const Route = createRootRoute({
+  // Declared here, not in the Rails haml or index.html, so it covers every serving mode.
+  head: () => ({
+    links: [
+      {
+        rel: 'icon',
+        type: 'image/svg+xml',
+        href: `${import.meta.env.BASE_URL}favicon.svg`,
+      },
+      {
+        rel: 'icon',
+        href: `${import.meta.env.BASE_URL}favicon.ico`,
+        sizes: '32x32',
+      },
+    ],
+  }),
   beforeLoad: async () => ({auth: await fetchAuthOutcome()}),
   component: RootLayout,
 });

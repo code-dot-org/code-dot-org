@@ -3,10 +3,7 @@ import {
   ObservableProcedureModel,
   ProcedureBase,
 } from '@blockly/block-shareable-procedures';
-import {
-  ScrollBlockDragger,
-  ScrollOptions,
-} from '@blockly/plugin-scroll-options';
+import {ScrollOptions} from '@blockly/plugin-scroll-options';
 import * as BlocklyCore from 'blockly/core';
 
 import {flyoutCategory as behaviorsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/behaviorBlocks';
@@ -29,9 +26,9 @@ import {getUserTheme, setThemeAndRenderBlocks} from '../utils';
 
 import CdoConnectionChecker from './cdoConnectionChecker';
 import {frameSizes} from './cdoConstants';
-import {initializeAdditionalWorkspace} from './cdoKeyboardNavigation';
 import CdoMetricsManager from './cdoMetricsManager';
 import {initializeScrollbarPair} from './cdoScrollbar';
+import {CdoScrollBlockDragger} from './cdoScrollBlockDragger';
 import CdoTrashcan from './cdoTrashcan';
 import {removeIdsFromBlocks} from './cdoXml';
 import {
@@ -92,7 +89,7 @@ export default class FunctionEditor {
       },
       plugins: {
         metricsManager: CdoMetricsManager,
-        blockDragger: ScrollBlockDragger,
+        blockDragger: CdoScrollBlockDragger,
         connectionChecker: CdoConnectionChecker,
       },
       readOnly: options.readOnly,
@@ -168,7 +165,6 @@ export default class FunctionEditor {
 
     const functionEditorTrashcan = new CdoTrashcan(this.editorWorkspace);
     functionEditorTrashcan.init();
-    initializeAdditionalWorkspace(this.editorWorkspace);
     // Set primary workspace to be active (until a function is shown).
     Blockly.common.setMainWorkspace(this.primaryWorkspace);
   }

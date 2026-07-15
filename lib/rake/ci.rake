@@ -158,8 +158,8 @@ namespace :ci do
       Cdo::SauceConnect.start_sauce_connect(dump_logs: true, verbose: true)
     end
 
-    # In order for Device Farm to reach localhost, the Device Farm project
-    # (set in DEVICE_FARM_DESKTOP_PROJECT_ARN) must live in the same VPC as the
+    # In order for Device Farm to reach localhost, the Device Farm project (set
+    # in CDO.device_farm_desktop_project_id) must live in the same VPC as the
     # drone workers and belong to the DeviceFarmToDroneWorker security group.
     # This works because:
     # - the ui-tests step in .drone.yml runs in `network_mode: host`, making
