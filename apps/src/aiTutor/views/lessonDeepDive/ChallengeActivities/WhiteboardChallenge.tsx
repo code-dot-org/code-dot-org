@@ -19,10 +19,10 @@ const DEFAULT_SOURCES: ReactFlowSketchLabSources = {
 };
 
 // The subset of ChallengeResponse#summarize(assets_for_upload: true) we
-// consume: the presigned S3 URL to PUT the whiteboard image to.
+// consume: the asset id to PUT the whiteboard image bytes to.
 interface CreatedChallengeResponse {
   id: number;
-  assets: {id: number; asset_type: string; upload_url?: string}[];
+  assets: {id: number; asset_type: string}[];
 }
 
 // The canvas's element toolbars read the component-library ThemeContext,
@@ -70,7 +70,8 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
     sources.source.nodes.length > 0;
 
   // Snapshot the canvas as a PNG, create the challenge response, and PUT
-  // the image to the presigned S3 URL the server returns.
+  // the image bytes to the asset upload endpoint (which stores them in S3
+  // server-side; the bucket has no CORS rules for direct browser PUTs).
   const handleSubmit = async () => {
     if (challengeId === null) {
       return;
@@ -95,16 +96,18 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
       );
       const created: CreatedChallengeResponse = await response.json();
 
-      const uploadUrl = created.assets.find(
+      const assetId = created.assets.find(
         asset => asset.asset_type === 'whiteboard_image'
-      )?.upload_url;
-      if (!uploadUrl) {
-        throw new Error('The server did not return an upload URL.');
+      )?.id;
+      if (assetId === undefined) {
+        throw new Error('The server did not return a whiteboard asset.');
       }
-      // Presigned S3 URL: plain PUT, no Rails authenticity token.
-      await HttpClient.put(uploadUrl, blob, false, {
-        'Content-Type': 'image/png',
-      });
+      await HttpClient.put(
+        `/challenge_response_assets/${assetId}/upload`,
+        blob,
+        true, // useAuthenticityToken
+        {'Content-Type': 'image/png'}
+      );
 
       submitCallback(true);
     } catch (error) {

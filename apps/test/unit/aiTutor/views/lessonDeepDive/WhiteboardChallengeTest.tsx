@@ -49,9 +49,7 @@ const snapshot = createSketchSnapshotBlob as jest.Mock;
 const fakeBlob = new Blob(['png-bytes'], {type: 'image/png'});
 const createdResponse = {
   id: 7,
-  assets: [
-    {id: 9, asset_type: 'whiteboard_image', upload_url: 'https://s3/upload'},
-  ],
+  assets: [{id: 9, asset_type: 'whiteboard_image'}],
 };
 
 describe('WhiteboardChallenge', () => {
@@ -119,9 +117,12 @@ describe('WhiteboardChallenge', () => {
       true,
       {'Content-Type': 'application/json'}
     );
-    expect(put).toHaveBeenCalledWith('https://s3/upload', fakeBlob, false, {
-      'Content-Type': 'image/png',
-    });
+    expect(put).toHaveBeenCalledWith(
+      '/challenge_response_assets/9/upload',
+      fakeBlob,
+      true,
+      {'Content-Type': 'image/png'}
+    );
   });
 
   it('shows an error and stays submittable when the capture fails', async () => {
