@@ -551,7 +551,7 @@ class JsDebugger extends React.Component {
           )}
           <PaneButton
             id="clear-console-header"
-            iconClass="fa-solid fa-eraser"
+            iconProps={{iconName: 'eraser', iconStyle: 'solid'}}
             label={i18n.debugClearButton()}
             headerHasFocus={hasFocus}
             isRtl={false}
@@ -559,7 +559,7 @@ class JsDebugger extends React.Component {
           />
           {isRunning && canShowDebugSprites && (
             <PaneButton
-              iconClass="fa-solid fa-bug"
+              iconProps={{iconName: 'bug', iconStyle: 'solid'}}
               label={i18n.debugSpritesOff()}
               headerHasFocus={hasFocus}
               isRtl={false}

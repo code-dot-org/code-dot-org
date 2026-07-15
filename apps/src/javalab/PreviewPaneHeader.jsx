@@ -51,16 +51,6 @@ export default function PreviewPaneHeader({
         className={'pane-header-section pane-header-section-right'}
         style={{overflowX: 'visible'}}
       >
-        {/* TODO: Uncomment fullscreen button when we are ready to implement fullscreen.
-        <PaneButton
-          headerHasFocus
-          iconClass={isFullscreen ? 'fa-solid fa-compress' : 'fa-solid fa-up-down-left-right'}
-          onClick={() => {}}
-          label=""
-          isRtl={false}
-          style={styles.transparent}
-        />
-       */}
         {showAssetManagerButton && (
           <PaneButton
             headerHasFocus
@@ -70,7 +60,7 @@ export default function PreviewPaneHeader({
                 recordingFileType: RecordingFileType.WAV,
               })
             }
-            iconClass="fa-solid fa-upload"
+            iconProps={{iconName: 'upload', iconStyle: 'solid'}}
             label={i18n.manageAssets()}
             isRtl={false}
             isDisabled={disableAssetManagerButton}

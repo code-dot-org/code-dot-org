@@ -56,8 +56,12 @@ class ShowCodeButton extends Component {
     return (
       <PaneButton
         id="show-code-header"
-        iconClass={this.props.showingBlocks ? 'fa-solid fa-code' : ''}
-        icon={this.props.showingBlocks ? null : blocksGlyphIcon}
+        iconProps={
+          this.props.showingBlocks
+            ? {iconName: 'code', iconStyle: 'solid'}
+            : undefined
+        }
+        icon={this.props.showingBlocks ? undefined : blocksGlyphIcon}
         label={
           this.props.showingBlocks
             ? this.props.showCodeLabel

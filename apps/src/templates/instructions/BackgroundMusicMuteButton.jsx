@@ -65,10 +65,10 @@ function BackgroundMusicMuteButton({
     <PaneButton
       id={className}
       headerHasFocus={true}
-      iconClass={
+      iconProps={
         isBackgroundMusicMuted
-          ? 'fa-solid fa-volume-xmark'
-          : 'fa-solid fa-music'
+          ? {iconName: 'volume-xmark', iconStyle: 'solid'}
+          : {iconName: 'music', iconStyle: 'solid'}
       }
       label={
         isBackgroundMusicMuted
