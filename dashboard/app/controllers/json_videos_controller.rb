@@ -122,7 +122,7 @@ class JSONVideosController < ApplicationController
     return unless params.key?(:objective_ids)
     # The client sends an empty-string marker so an otherwise-empty selection
     # still reaches the server (Rails drops empty array params); drop it here.
-    chosen = Objective.where(id: Array(params[:objective_ids]).reject(&:blank?))
+    chosen = Objective.where(id: Array(params[:objective_ids]).compact_blank)
     lesson = Lesson.find_by(id: params[:lesson_id])
     video.objectives =
       if lesson
