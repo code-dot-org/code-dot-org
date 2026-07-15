@@ -151,29 +151,6 @@ export default class VersionHistory extends React.Component {
               {i18n.versionHistory_clearProgress_templateLevelWarning()}
             </MuiTypography>
           )}
-          <MuiButton
-            type="button"
-            color="error"
-            size="small"
-            variant="contained"
-            id="start-over-button"
-            style={{marginLeft: 0}}
-            onClick={this.onClearPuzzle}
-          >
-            {i18n.versionHistory_clearProgress_confirm()}
-          </MuiButton>
-          <MuiButton
-            type="button"
-            color="secondary"
-            size="small"
-            variant="outlined"
-            id="again-button"
-            className={styles.cancelButton}
-            style={{float: 'right'}}
-            onClick={this.onCancelClearPuzzle}
-          >
-            {i18n.versionHistory_clearProgress_cancel()}
-          </MuiButton>
         </div>
       );
     } else {
@@ -238,6 +215,26 @@ export default class VersionHistory extends React.Component {
       );
     }
 
+    const primaryButtonProps = this.state.confirmingClearPuzzle
+      ? {
+          id: 'start-over-button',
+          color: 'error',
+          children: i18n.versionHistory_clearProgress_confirm(),
+          onClick: this.onClearPuzzle,
+        }
+      : {
+          children: i18n.closeDialog(),
+          onClick: this.props.onClose,
+        };
+    const secondaryButtonProps = this.state.confirmingClearPuzzle
+      ? {
+          id: 'again-button',
+          className: styles.cancelButton,
+          children: i18n.versionHistory_clearProgress_cancel(),
+          onClick: this.onCancelClearPuzzle,
+        }
+      : undefined;
+
     return (
       <Modal
         title={title}
@@ -251,10 +248,8 @@ export default class VersionHistory extends React.Component {
             </MuiTypography>
           </div>
         }
-        primaryButtonProps={{
-          children: i18n.closeDialog(),
-          onClick: this.props.onClose,
-        }}
+        primaryButtonProps={primaryButtonProps}
+        secondaryButtonProps={secondaryButtonProps}
       />
     );
   }
