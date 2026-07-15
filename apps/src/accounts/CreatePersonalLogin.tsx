@@ -1,7 +1,6 @@
 import TextField from '@code-dot-org/component-library/textField';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
-import PropTypes from 'prop-types';
 import React, {useRef} from 'react';
 
 import {hashEmail} from '@cdo/apps/code-studio/hashEmail';
@@ -22,6 +21,34 @@ const UPGRADE_URL = '/users/upgrade';
 // DSCO TextField requires an onChange handler. These fields are uncontrolled
 // (submitted natively by the browser), so a single shared no-op suffices.
 const noop = () => {};
+
+interface CreatePersonalLoginProps {
+  /** Whether linking a new personal account is currently permitted. When
+   * false, the form is dimmed/disabled and the lock overlay is shown. */
+  linkingEnabled?: boolean;
+  /** Under-13 branch: render a username + parent-email instead of an email. */
+  noEmail?: boolean;
+  secretWordAccount?: boolean;
+  /** current_user.age from Rails; null/undefined when unknown. */
+  userAge?: number | null;
+  hashedEmail?: string;
+  heading: string;
+  description: string;
+  enterNewLoginInfo: string;
+  usernameLabel?: string;
+  /** Inline markdown (link included) for the personal-email field label. */
+  emailLabelMarkdown?: string;
+  passwordLabel: string;
+  passwordConfirmationLabel: string;
+  confirmSecretWordsHeading?: string;
+  secretWordsLabel?: string;
+  enterParentEmailHeading?: string;
+  parentEmailLabel?: string;
+  termsMarkdown?: string;
+  emailNoteMarkdown?: string;
+  submitLabel?: string;
+  lockIconSrc?: string;
+}
 
 /**
  * "Create personal login" section of the account edit page. Renders a native
@@ -62,9 +89,9 @@ export default function CreatePersonalLogin({
   emailNoteMarkdown,
   submitLabel,
   lockIconSrc,
-}) {
-  const formRef = useRef(null);
-  const hashedEmailRef = useRef(null);
+}: CreatePersonalLoginProps) {
+  const formRef = useRef<HTMLFormElement>(null);
+  const hashedEmailRef = useRef<HTMLInputElement>(null);
   const disabled = !linkingEnabled;
 
   const handleSubmit = () => {
@@ -74,7 +101,7 @@ export default function CreatePersonalLogin({
       // The under-13 branch renders a username, not an email — nothing to hash.
       return;
     }
-    const emailInput = formRef.current?.querySelector(
+    const emailInput = formRef.current?.querySelector<HTMLInputElement>(
       'input[name="user[email]"]'
     );
     if (!emailInput) {
@@ -82,7 +109,9 @@ export default function CreatePersonalLogin({
     }
     const email = emailInput.value.toLowerCase().trim();
     if (email !== '' && EMAIL_REGEX.test(email)) {
-      hashedEmailRef.current.value = hashEmail(email);
+      if (hashedEmailRef.current) {
+        hashedEmailRef.current.value = hashEmail(email);
+      }
       // Never transmit the plaintext email for under-13 (or age-unknown) users.
       // Mutate the DOM node directly so the cleared value is what the native
       // submit serializes; a React state update would not flush in time.
@@ -93,6 +122,15 @@ export default function CreatePersonalLogin({
       }
     }
   };
+
+  // TextField types `label` as string, but FormFieldWrapper (and the DOM)
+  // accept a ReactNode; the email label is inline markdown containing a link.
+  // Render the node and cast to satisfy the narrower-than-runtime prop type.
+  // (Widening TextField's label to ReactNode in the component library would be
+  // a reasonable follow-up.)
+  const emailLabel = (
+    <SafeMarkdown unwrapped markdown={emailLabelMarkdown || ''} />
+  ) as unknown as string;
 
   return (
     <div>
@@ -148,7 +186,7 @@ export default function CreatePersonalLogin({
             <TextField
               name="user[email]"
               inputType="email"
-              label={<SafeMarkdown unwrapped markdown={emailLabelMarkdown} />}
+              label={emailLabel}
               autoComplete="off"
               maxLength={255}
               disabled={disabled}
@@ -208,12 +246,12 @@ export default function CreatePersonalLogin({
               )}
               <SafeMarkdown
                 className={styles.legalText}
-                markdown={termsMarkdown}
+                markdown={termsMarkdown || ''}
               />
               {!noEmail && (
                 <SafeMarkdown
                   className={styles.legalText}
-                  markdown={emailNoteMarkdown}
+                  markdown={emailNoteMarkdown || ''}
                 />
               )}
               <div>
@@ -238,26 +276,3 @@ export default function CreatePersonalLogin({
     </div>
   );
 }
-
-CreatePersonalLogin.propTypes = {
-  linkingEnabled: PropTypes.bool,
-  noEmail: PropTypes.bool,
-  secretWordAccount: PropTypes.bool,
-  userAge: PropTypes.number,
-  hashedEmail: PropTypes.string,
-  heading: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  enterNewLoginInfo: PropTypes.string.isRequired,
-  usernameLabel: PropTypes.string,
-  emailLabelMarkdown: PropTypes.string,
-  passwordLabel: PropTypes.string.isRequired,
-  passwordConfirmationLabel: PropTypes.string.isRequired,
-  confirmSecretWordsHeading: PropTypes.string,
-  secretWordsLabel: PropTypes.string,
-  enterParentEmailHeading: PropTypes.string,
-  parentEmailLabel: PropTypes.string,
-  termsMarkdown: PropTypes.string,
-  emailNoteMarkdown: PropTypes.string,
-  submitLabel: PropTypes.string,
-  lockIconSrc: PropTypes.string,
-};
