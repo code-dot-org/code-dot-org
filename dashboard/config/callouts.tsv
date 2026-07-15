@@ -25,14 +25,12 @@ Undraggable HoC	hourofcode	2_8	Maze	gray_block_explanation	.blocklyUndeletable	{
 Undraggable HoC	hourofcode	2_8	Maze	gray_block_explanation	[data-id='undeletableRepeat']	{"position": {"my": "top middle", "at": "bottom middle"}}
 Show Code HoC	hourofcode	2_13	Maze	show_code_explanation	#show-code-header	{"position": {"my": "center right", "at": "center left"}}
 Instructions HoC	hourofcode	2_14	Maze	instructions_repeat_explanation	#prompt	{"position": {"my": "bottom left", "at": "top center"}}
-Drag Blocks HoC	ui-test-hourofcode	2_2	Maze	drag_blocks	[block-id='1']	{"position": {"my": "top left", "at": "bottom right", "adjust": {"x": 22, "y":60}}, "style": { "classes": "no-tip" }}
-Drag Blocks HoC	ui-test-hourofcode	2_2	Maze	drag_blocks	[data-id='moveForward']	{"position": {"my": "top left", "at": "bottom right", "adjust": {"x": 22, "y":60}}, "style": { "classes": "no-tip" }}
-Run HoC	ui-test-hourofcode	2_2	Maze	run	#runButton
-Watch Video Again HoC	ui-test-hourofcode	2_5	Maze	watch_again	[data-key='loop_times']	{"position": {"my": "bottom left", "at": "top right"}}
-Undraggable HoC	ui-test-hourofcode	2_8	Maze	gray_block_explanation	.blocklyUndeletable	{"position": {"my": "top middle", "at": "bottom middle"}}
-Undraggable HoC	ui-test-hourofcode	2_8	Maze	gray_block_explanation	[data-id='undeletableRepeat']	{"position": {"my": "top middle", "at": "bottom middle"}}
-Show Code HoC	ui-test-hourofcode	2_13	Maze	show_code_explanation	#show-code-header	{"position": {"my": "center right", "at": "center left"}}
-Instructions HoC	ui-test-hourofcode	2_14	Maze	instructions_repeat_explanation	#prompt	{"position": {"my": "bottom left", "at": "top center"}}
+Drag Blocks UI Test CSF	ui-test-csf	2_2	Maze	drag_blocks	[block-id='1']	{"position": {"my": "top left", "at": "bottom right", "adjust": {"x": 22, "y":60}}, "style": { "classes": "no-tip" }}
+Drag Blocks UI Test CSF	ui-test-csf	2_2	Maze	drag_blocks	[data-id='moveForward']	{"position": {"my": "top left", "at": "bottom right", "adjust": {"x": 22, "y":60}}, "style": { "classes": "no-tip" }}
+Run UI Test CSF	ui-test-csf	2_2	Maze	run	#runButton
+Watch Video Again UI Test CSF	ui-test-csf	2_5	Maze	watch_again	[data-key='loop_times']	{"position": {"my": "bottom left", "at": "top right"}}
+Undraggable UI Test CSF	ui-test-csf	2_8	Maze	gray_block_explanation	.blocklyUndeletable	{"position": {"my": "top middle", "at": "bottom middle"}}
+Undraggable UI Test CSF	ui-test-csf	2_8	Maze	gray_block_explanation	[data-id='undeletableRepeat']	{"position": {"my": "top middle", "at": "bottom middle"}}
 Playlab_drag_say	playlab	playlab_1	Studio	playlab_drag_say	[block-id='2']	{"position": {"my": "top left", "at": "bottom left", "adjust": {"x": 22, "y":4}} }
 Playlab_drag_say	playlab	playlab_1	Studio	playlab_drag_say	[data-id='whenRun']	{"position": {"my": "top left", "at": "bottom left", "adjust": {"x": 22, "y":4}} }
 Playlab_use_twice	playlab	playlab_2	Studio	playlab_use_twice	[block-id='1']	{"position": {"my": "top left", "at": "bottom left", "adjust": {"x": 62, "y":0}} }

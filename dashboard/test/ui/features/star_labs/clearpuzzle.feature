@@ -1,8 +1,11 @@
 Feature: Clear Puzzle
 
 Background:
-  Given I am on "http://studio.code.org/ui-test-hoc/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/ui-test-csf/units/1/lessons/1/levels/4?noautoplay=true"
   And I wait for the lab page to fully load
+  # The signed-out reminder renders on course level pages (it never did on
+  # /hoc pages) and overlaps the pane header buttons.
+  And I dismiss the login reminder
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
 
