@@ -139,6 +139,9 @@ test.describe('Sketch Lab React Flow canvas', () => {
       await page.mouse.move(0, 0);
       await visualCheck('nodes added', {mask: [lab.lessonHeaderInfo]});
 
+      // The full-window capture above can clear the canvas selection, so
+      // re-select the circle before changing its background.
+      await lab.selectShape('circle');
       await lab.setBackgroundColor('Blue');
       await expect
         .poll(() =>
