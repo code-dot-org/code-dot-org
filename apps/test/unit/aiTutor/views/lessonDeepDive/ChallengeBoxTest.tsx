@@ -17,8 +17,7 @@ jest.mock('@cdo/apps/sketchlab/reactFlow/components/ReactFlowCanvas', () => {
   const React = require('react');
   return {
     __esModule: true,
-    default: () =>
-      React.createElement('div', {'data-testid': 'react-flow-canvas'}),
+    default: () => React.createElement('div', null, 'Whiteboard canvas stub'),
   };
 });
 
@@ -80,13 +79,15 @@ describe('ChallengeBox', () => {
     render(<ChallengeBox lessonId={42} />);
 
     // Whiteboard is the default modality.
-    expect(screen.getByTestId('react-flow-canvas')).toBeInTheDocument();
+    expect(screen.getByText('Whiteboard canvas stub')).toBeInTheDocument();
 
     fireEvent.click(screen.getByRole('button', {name: 'Video'}));
 
     // jsdom has no navigator.mediaDevices, so the video challenge settles
     // into its camera-unavailable error state.
-    expect(screen.queryByTestId('react-flow-canvas')).not.toBeInTheDocument();
+    expect(
+      screen.queryByText('Whiteboard canvas stub')
+    ).not.toBeInTheDocument();
     await waitFor(() =>
       expect(
         screen.getByText(/Camera recording is not available/)
