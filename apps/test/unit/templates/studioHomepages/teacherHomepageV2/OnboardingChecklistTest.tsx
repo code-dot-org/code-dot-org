@@ -8,8 +8,13 @@ import OnboardingChecklist from '@cdo/apps/templates/studioHomepages/teacherHome
 import useCreateSectionTour from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useCreateSectionTour';
 import useLearnHowToEvaluateTour from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useLearnHowToEvaluateTour';
 import useReviewSyllabusTour from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useReviewSyllabusTour';
+import {
+  createDemoSection,
+  DemoSectionCreationError,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   get: jest.fn(),
@@ -17,6 +22,7 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
 }));
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
   useAppSelector: jest.fn(() => undefined),
+  useAppDispatch: jest.fn(),
 }));
 jest.mock(
   '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useCreateSectionTour',
@@ -34,9 +40,20 @@ jest.mock(
   '@cdo/apps/templates/studioHomepages/teacherHomepageV2/confirmDemoSectionSettings',
   () => ({__esModule: true, default: jest.fn()})
 );
+// Keep the real DemoSectionCreationError class (the component checks
+// `instanceof` it) and only stub the thunk creator itself.
+jest.mock('@cdo/apps/templates/teacherDashboard/teacherSectionsRedux', () => ({
+  ...jest.requireActual(
+    '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux'
+  ),
+  createDemoSection: jest.fn(),
+}));
 
 const mockGet = HttpClient.get as jest.MockedFunction<typeof HttpClient.get>;
 const mockPost = HttpClient.post as jest.MockedFunction<typeof HttpClient.post>;
+const mockUseAppDispatch = useAppDispatch as jest.MockedFunction<
+  typeof useAppDispatch
+>;
 const mockUseCreateSectionTour = useCreateSectionTour as jest.MockedFunction<
   typeof useCreateSectionTour
 >;
@@ -51,6 +68,9 @@ const mockConfirmDemoSectionSettings =
   confirmDemoSectionSettings as jest.MockedFunction<
     typeof confirmDemoSectionSettings
   >;
+const mockCreateDemoSection = createDemoSection as jest.MockedFunction<
+  typeof createDemoSection
+>;
 
 const makeJsonResponse = (body: unknown) =>
   new Response(JSON.stringify(body), {
@@ -66,6 +86,7 @@ describe('OnboardingChecklist', () => {
   let createSectionTour: Tour;
   let reviewSyllabusTour: Tour;
   let learnHowToEvaluateTour: Tour;
+  let mockDispatch: jest.Mock;
 
   beforeEach(() => {
     jest.clearAllMocks();
@@ -81,6 +102,21 @@ describe('OnboardingChecklist', () => {
     // Not stale by default: the staleness dialog stays out of the way and
     // tours start directly.
     mockConfirmDemoSectionSettings.mockResolvedValue(false);
+
+    // Most tests render with demoSection: null, which routes the
+    // syllabus/evaluate buttons through ensureDemoSection(). Default to a
+    // successful creation so those tests behave as if a section already
+    // existed unless a test overrides mockDispatch itself.
+    mockDispatch = jest.fn();
+    mockUseAppDispatch.mockReturnValue(mockDispatch);
+    mockDispatch.mockResolvedValue({id: 99} as unknown as Section);
+    mockCreateDemoSection.mockImplementation(
+      demoType =>
+        ({
+          type: 'MOCK_CREATE_DEMO_SECTION',
+          demoType,
+        } as unknown as ReturnType<typeof createDemoSection>)
+    );
   });
 
   function renderComponent(
@@ -404,6 +440,111 @@ describe('OnboardingChecklist', () => {
       expect(await screen.findByText(RESET_ERROR)).not.toBeNull();
       expect(reviewSyllabusTour.start).not.toHaveBeenCalled();
       consoleErrorSpy.mockRestore();
+    });
+  });
+
+  describe('when there is no demo section yet', () => {
+    const CREATION_ERROR =
+      "Couldn't create your practice section. Please try again.";
+
+    it('creates a demo section before starting the syllabus tour', async () => {
+      renderComponent({demoSection: null, demoType: 'middle'});
+
+      fireEvent.click(screen.getByText('Review the syllabus'));
+
+      expect(mockCreateDemoSection).toHaveBeenCalledWith('middle');
+      await waitFor(() =>
+        expect(reviewSyllabusTour.start).toHaveBeenCalledTimes(1)
+      );
+    });
+
+    it('creates a demo section before starting the evaluate tour', async () => {
+      renderComponent({demoSection: null, demoType: 'middle'});
+
+      fireEvent.click(screen.getByText('Learn how to evaluate'));
+
+      expect(mockCreateDemoSection).toHaveBeenCalledWith('middle');
+      await waitFor(() =>
+        expect(learnHowToEvaluateTour.start).toHaveBeenCalledTimes(1)
+      );
+    });
+
+    it('does not create a demo section for the create-section tour', () => {
+      renderComponent({demoSection: null});
+
+      fireEvent.click(screen.getByText('Create a class section'));
+
+      expect(createSectionTour.start).toHaveBeenCalledTimes(1);
+      expect(mockDispatch).not.toHaveBeenCalled();
+    });
+
+    it('shows a creation error and leaves the tour unstarted when creation rejects', async () => {
+      mockDispatch.mockRejectedValue(
+        new DemoSectionCreationError(
+          'generic',
+          "Couldn't create your practice section."
+        )
+      );
+      const consoleErrorSpy = jest
+        .spyOn(console, 'error')
+        .mockImplementation(() => {});
+
+      renderComponent({demoSection: null});
+
+      fireEvent.click(screen.getByText('Review the syllabus'));
+
+      expect(await screen.findByText(CREATION_ERROR)).not.toBeNull();
+      expect(reviewSyllabusTour.start).not.toHaveBeenCalled();
+      // The thunk already logs DemoSectionCreationError itself; the
+      // component shouldn't log it a second time.
+      expect(consoleErrorSpy).not.toHaveBeenCalledWith(
+        'Failed to create demo section:',
+        expect.anything()
+      );
+      consoleErrorSpy.mockRestore();
+    });
+
+    it('logs and shows a creation error when creation fails unexpectedly', async () => {
+      mockDispatch.mockRejectedValue(new Error('network error'));
+      const consoleErrorSpy = jest
+        .spyOn(console, 'error')
+        .mockImplementation(() => {});
+
+      renderComponent({demoSection: null});
+
+      fireEvent.click(screen.getByText('Learn how to evaluate'));
+
+      expect(await screen.findByText(CREATION_ERROR)).not.toBeNull();
+      expect(learnHowToEvaluateTour.start).not.toHaveBeenCalled();
+      expect(consoleErrorSpy).toHaveBeenCalledWith(
+        'Failed to create demo section:',
+        expect.any(Error)
+      );
+      consoleErrorSpy.mockRestore();
+    });
+
+    it('shows a creation error when the created section has no id', async () => {
+      mockDispatch.mockResolvedValue(undefined);
+
+      renderComponent({demoSection: null});
+
+      fireEvent.click(screen.getByText('Review the syllabus'));
+
+      expect(await screen.findByText(CREATION_ERROR)).not.toBeNull();
+      expect(reviewSyllabusTour.start).not.toHaveBeenCalled();
+    });
+
+    it('does not create a demo section when one already exists', async () => {
+      const existingSection = {id: 7} as unknown as Section;
+      renderComponent({demoSection: existingSection});
+
+      fireEvent.click(screen.getByText('Review the syllabus'));
+
+      await waitFor(() =>
+        expect(reviewSyllabusTour.start).toHaveBeenCalledTimes(1)
+      );
+      expect(mockDispatch).not.toHaveBeenCalled();
+      expect(mockCreateDemoSection).not.toHaveBeenCalled();
     });
   });
 });
