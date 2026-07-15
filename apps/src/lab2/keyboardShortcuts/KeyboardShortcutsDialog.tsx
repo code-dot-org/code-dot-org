@@ -2,6 +2,8 @@ import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import {Typography} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
+import {isTargetEditable} from '@cdo/apps/util/isTargetEditable';
+
 import {AppName} from '../types';
 
 import KeyboardShortcuts from './KeyboardShortcuts';
@@ -11,20 +13,6 @@ import styles from './keyboard-shortcuts-listener.module.scss';
 
 interface KeyboardShortcutsDialogProps {
   appName: AppName;
-}
-
-// True when the event target is a text-editing context (input, textarea, or
-// contentEditable), where the user is typing and `/` should insert a character
-// rather than open the popover.
-function isEditableTarget(target: EventTarget | null): boolean {
-  if (!(target instanceof HTMLElement)) {
-    return false;
-  }
-  return (
-    target.isContentEditable ||
-    target.tagName === 'INPUT' ||
-    target.tagName === 'TEXTAREA'
-  );
 }
 
 /**
@@ -49,7 +37,7 @@ const KeyboardShortcutsDialog: React.FC<KeyboardShortcutsDialogProps> = ({
         event.metaKey ||
         event.altKey ||
         event.defaultPrevented ||
-        isEditableTarget(event.target)
+        isTargetEditable(event.target)
       ) {
         return;
       }

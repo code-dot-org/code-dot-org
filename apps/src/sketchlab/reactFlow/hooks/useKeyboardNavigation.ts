@@ -5,6 +5,7 @@ import {
   SketchlabReactFlowEdge,
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
+import {isTargetEditable} from '@cdo/apps/util/isTargetEditable';
 
 import {
   DEFAULT_NODE_HEIGHT,
@@ -28,7 +29,6 @@ import {
   findNearestHandleInRadius,
   snapAnchorIfNearby,
 } from '../utils/handleSnap';
-import {isTargetEditable} from '../utils/isTargetEditable';
 import {
   anchorHandleFlowPosition,
   attachEdgeToFreshAnchor,

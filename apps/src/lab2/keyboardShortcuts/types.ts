@@ -1,5 +1,4 @@
 export interface KeyboardShortcut {
-  /** The key combination, e.g. "Arrow keys", "Ctrl / Cmd + Z", "[". */
   shortcut: string;
   explanation: string;
 }

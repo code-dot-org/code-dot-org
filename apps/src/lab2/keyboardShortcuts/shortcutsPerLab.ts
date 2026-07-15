@@ -3,8 +3,8 @@ import {AppName} from '../types';
 import {KeyboardShortcutCategories} from './types';
 
 /**
- * Keyboard shortcuts to surface for each lab, keyed by app name (mirroring
- * ToursPerLab). A lab with an entry here gets the Resources-tab hint and the
+ * Keyboard shortcuts to surface for each lab, keyed by app name.
+ * A lab with an entry here gets the Resources-tab hint and the
  * `/`-triggered shortcuts popover automatically. The bindings themselves live
  * in each lab's own key handling; this is only the human-readable listing.
  */
