@@ -739,11 +739,12 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
         <div className={moduleStyles.body}>
           <div className={moduleStyles.toolbar}>
             <div className={moduleStyles.toolGrid}>
-              {TOOLS.map(t => (
+              {TOOLS.map((t, index) => (
                 <PixelTooltip
                   key={t.id}
                   tooltipId={`pixel-tool-${t.id}-tooltip`}
                   text={toolTitle(t)}
+                  fromLeftColumn={index % 2 === 0}
                 >
                   <button
                     type="button"
@@ -765,6 +766,7 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
                   key={size}
                   tooltipId={`pixel-brush-${size}-tooltip`}
                   text={`Brush size ${size} (${index + 1})`}
+                  fromLeftColumn={index % 2 === 0}
                 >
                   <button
                     type="button"
@@ -797,7 +799,11 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
               />
             </div>
             <div className={moduleStyles.historyRow}>
-              <PixelTooltip tooltipId="pixel-undo-tooltip" text="Undo (Ctrl+Z)">
+              <PixelTooltip
+                tooltipId="pixel-undo-tooltip"
+                text="Undo (Ctrl+Z)"
+                fromLeftColumn
+              >
                 <button
                   type="button"
                   aria-label="Undo (Ctrl+Z)"

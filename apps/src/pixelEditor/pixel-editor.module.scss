@@ -87,6 +87,12 @@ $border-subtle: rgb(255 255 255 / 12%);
   margin-left: 16px;
 }
 
+// Left-column triggers sit one column (34px + 4px gap) further from the
+// canvas; the extra nudge puts their bubbles on the same x as the rest.
+.pixelTooltipLeftColumn {
+  margin-left: 54px;
+}
+
 .toolButton {
   display: flex;
   align-items: center;
