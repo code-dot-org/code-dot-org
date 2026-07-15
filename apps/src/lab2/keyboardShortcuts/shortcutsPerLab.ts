@@ -3,12 +3,6 @@ import {AppName} from '../types';
 import {KeyboardShortcutCategories} from './types';
 
 /**
- * Keyboard shortcuts to surface for each lab, keyed by app name.
- * A lab with an entry here gets the Resources-tab hint and the
- * `/`-triggered shortcuts popover automatically. The bindings themselves live
- * in each lab's own key handling; this is only the human-readable listing.
- */
-/**
  * Returns a lab's shortcut listing, but only when it has at least one
  * category. Callers gate on the truthiness of the result, so an entry with no
  * categories is treated the same as no entry at all.
@@ -20,6 +14,12 @@ export function getLabShortcuts(
   return shortcuts && Object.keys(shortcuts).length > 0 ? shortcuts : undefined;
 }
 
+/**
+ * Keyboard shortcuts to surface for each lab, keyed by app name.
+ * A lab with an entry here gets the Resources-tab hint and the
+ * `/`-triggered shortcuts popover automatically. The bindings themselves live
+ * in each lab's own key handling; this is only the human-readable listing.
+ */
 export const ShortcutsPerLab: Partial<
   Record<AppName, KeyboardShortcutCategories>
 > = {
@@ -63,6 +63,11 @@ export const ShortcutsPerLab: Partial<
       },
       {shortcut: 'Ctrl / Cmd + Z', explanation: 'Undo'},
       {shortcut: 'Ctrl / Cmd + Y', explanation: 'Redo'},
+    ],
+  },
+  pythonlab: {
+    Editor: [
+      {shortcut: 'Ctrl / Cmd + F', explanation: 'Open find/replace menu'},
     ],
   },
 };
