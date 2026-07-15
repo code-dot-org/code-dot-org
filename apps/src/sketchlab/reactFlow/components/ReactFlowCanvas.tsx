@@ -2,6 +2,7 @@ import {
   addEdge,
   Background,
   type IsValidConnection,
+  type OnBeforeDelete,
   type OnEdgesChange,
   type OnNodesChange,
   Panel,
@@ -67,7 +68,11 @@ import {
   SketchLabNode,
 } from '../types';
 import {canCreateConnection} from '../utils/connectionRules';
-import {groupSelectedNodes, ungroupNode} from '../utils/grouping';
+import {
+  expandGroupDeletion,
+  groupSelectedNodes,
+  ungroupNode,
+} from '../utils/grouping';
 import {createLineAnchorAtHandle} from '../utils/lineAnchors';
 import {defaultLineEdgeFields} from '../utils/lineEdges';
 
@@ -447,6 +452,20 @@ export default function ReactFlowCanvas({
       closeToolbar();
     },
     [pushSnapshot, setNodes, closeToolbar]
+  );
+
+  // Deleting a group must also delete its children. React Flow's cascade only
+  // reaches *deletable* children, and grouped children are deletable:false (see
+  // useDisplayElements), so without this a deleted group leaves its children
+  // orphaned with a dangling parentId. Runs for both the Delete key and
+  // deleteElements (cut), which share this path.
+  const handleBeforeDelete: OnBeforeDelete<
+    SketchLabNode,
+    SketchlabReactFlowEdge
+  > = useCallback(
+    async ({nodes: nodesToDelete, edges: edgesToDelete}) =>
+      expandGroupDeletion(nodesToDelete, edgesToDelete, nodes, edges),
+    [nodes, edges]
   );
 
   const {
@@ -868,6 +887,7 @@ export default function ReactFlowCanvas({
                     {...grabModeProps}
                     onPaneClick={handlePaneClick}
                     onConnect={onConnect}
+                    onBeforeDelete={handleBeforeDelete}
                     onNodesDelete={handleElementsDeleted}
                     onEdgesDelete={handleElementsDeleted}
                     onNodeDragStart={handleNodeDragStart}
