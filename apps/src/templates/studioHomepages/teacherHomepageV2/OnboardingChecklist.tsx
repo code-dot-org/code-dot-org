@@ -129,6 +129,10 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
       });
   };
 
+  const allToursCompleted = CHECKLIST_ITEMS.every(({id}) =>
+    completedTourNames.has(id)
+  );
+
   if (isHidden) {
     return null;
   }
@@ -154,46 +158,84 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
           onClose={() => setResetFailed(false)}
         />
       </Snackbar>
-      <div className={styles.onboardingChecklistOuter}>
+      <div
+        className={`${styles.onboardingChecklistOuter}${
+          allToursCompleted
+            ? ` ${styles.onboardingChecklistOuterCelebration}`
+            : ''
+        }`}
+      >
         <div className={styles.onboardingChecklistInner}>
           <div className={styles.onboardingChecklistInnerContent}>
-            <Typography variant="h4">
-              <span className={styles.gradientIcon}>
-                <FontAwesomeV6Icon iconName="sparkle" iconStyle="solid" />
-              </span>
-              Where should we start?
-            </Typography>
-            <Typography variant="body2" gutterBottom>
-              Teaching Assistant can help you get started with CodeAI
-            </Typography>
-            <div className={styles.onboardingChecklistButtons}>
-              {CHECKLIST_ITEMS.map(({id, label}) => (
-                <MuiButton
-                  key={id}
-                  variant="outlined"
-                  color="secondary"
-                  className={styles.onboardingChecklistButton}
-                  onClick={() => handleButtonClick(id)}
-                  type="button"
-                  size="small"
+            {allToursCompleted ? (
+              <div className={styles.onboardingChecklistCelebration}>
+                <span
+                  aria-hidden="true"
+                  className={styles.onboardingCelebrationEmoji}
                 >
-                  {completedTourNames.has(id) && (
-                    <span className={styles.onboardingChecklistCheckIcon}>
-                      <FontAwesomeV6Icon
-                        iconName="circle-check"
-                        iconStyle="solid"
-                      />
-                    </span>
-                  )}
-                  {label}
+                  🎉
+                </span>
+                <Typography variant="h4" gutterBottom>
+                  You're all set!
+                </Typography>
+                <Typography variant="body2" gutterBottom>
+                  You've explored some of the teacher tools available with
+                  CodeAI. As you continue to use CodeAI, your Teaching Assistant
+                  is always available to answer questions, modify course
+                  materials, provide professional learning and more.
+                </Typography>
+                <MuiButton
+                  type="button"
+                  variant="outlined"
+                  color="tertiary"
+                  onClick={onHide}
+                >
+                  Complete onboarding
                 </MuiButton>
-              ))}
-            </div>
+              </div>
+            ) : (
+              <>
+                <Typography variant="h4">
+                  <span className={styles.gradientIcon}>
+                    <FontAwesomeV6Icon iconName="sparkle" iconStyle="solid" />
+                  </span>
+                  Where should we start?
+                </Typography>
+                <Typography variant="body2" gutterBottom>
+                  Teaching Assistant can help you get started with CodeAI
+                </Typography>
+                <div className={styles.onboardingChecklistButtons}>
+                  {CHECKLIST_ITEMS.map(({id, label}) => (
+                    <MuiButton
+                      key={id}
+                      variant="outlined"
+                      color="secondary"
+                      className={styles.onboardingChecklistButton}
+                      onClick={() => handleButtonClick(id)}
+                      type="button"
+                      size="small"
+                    >
+                      {completedTourNames.has(id) && (
+                        <span className={styles.onboardingChecklistCheckIcon}>
+                          <FontAwesomeV6Icon
+                            iconName="circle-check"
+                            iconStyle="solid"
+                          />
+                        </span>
+                      )}
+                      {label}
+                    </MuiButton>
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         </div>
-        <MuiButton type="button" onClick={onHide} color="tertiary">
-          Hide onboarding
-        </MuiButton>
+        {!allToursCompleted && (
+          <MuiButton type="button" onClick={onHide} color="tertiary">
+            Hide onboarding
+          </MuiButton>
+        )}
       </div>
     </>
   );

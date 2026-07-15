@@ -2657,4 +2657,46 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :success
     assert_includes @response.body, "data-allow-embeds='true'"
   end
+
+  test 'summary view collects predict responses from the level and its legacy contained level' do
+    contained = create(:level, type: 'Multi', name: 'summary predict contained')
+    level = create(:level, type: 'Javalab', name: 'summary predict level', properties: {predict_settings: {isPredictLevel: true}, contained_level_names: [contained.name]})
+    unit = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: unit)
+    lesson = create(:lesson, script: unit, lesson_group: lesson_group, absolute_position: 1, relative_position: '1')
+    script_level = create(:script_level, script: unit, lesson: lesson, levels: [level])
+
+    # One student answered before migration (on the contained level), one
+    # after (on the level itself), and one both; for the last only the newer
+    # response should be included.
+    legacy_student = create(:follower, section: @section).student_user
+    both_student = create(:follower, section: @section).student_user
+
+    legacy_source = create(:level_source, level: contained, data: 'legacy answer')
+    new_source = create(:level_source, level: level, data: 'new answer')
+
+    create(:user_level, user: legacy_student, level: contained, script: unit, level_source: legacy_source)
+    create(:user_level, user: @student, level: level, script: unit, level_source: new_source)
+    create(:user_level, user: both_student, level: contained, script: unit, level_source: legacy_source).
+      update_column(:updated_at, 1.day.ago)
+    create(:user_level, user: both_student, level: level, script: unit, level_source: new_source)
+
+    sign_in @teacher
+    get :show, params: {
+      course_course_name: unit.reload.original_unit_group.name,
+      unit_position: 1,
+      lesson_position: 1,
+      id: script_level.position,
+      view: 'summary'
+    }
+    assert_response :success
+
+    responses = assigns(:responses)
+    assert_equal 1, responses.length
+    by_user = responses.first.index_by(&:user_id)
+    assert_equal 3, by_user.length
+    assert_equal 'legacy answer', by_user[legacy_student.id].level_source.data
+    assert_equal 'new answer', by_user[@student.id].level_source.data
+    assert_equal 'new answer', by_user[both_student.id].level_source.data
+  end
 end

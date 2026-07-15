@@ -87,6 +87,31 @@ class UsersHelperTest < ActionView::TestCase
     assert_in_delta 66.67, percent_complete_total(script, user)
   end
 
+  # A predict level migrated from the legacy contained-level model keeps its
+  # contained_level_names. Progress recorded before migration lives on the
+  # contained level, but should still surface as the parent level's progress.
+  def test_summarize_user_progress_migrated_predict_reads_legacy_contained_progress
+    user = create(:user)
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+
+    contained = create(:multi, name: 'legacy predict contained')
+    level = create(:level, type: 'Javalab', name: 'migrated predict in script', properties: {predict_settings: {isPredictLevel: true}})
+    level.contained_level_names = [contained.name]
+    level.save!
+    create(:script_level, script: script, levels: [level], lesson: lesson)
+
+    # Pre-migration progress was recorded against the contained level.
+    create(:user_level, user: user, script: script, level: contained, best_result: ActivityConstants::BEST_PASS_RESULT)
+
+    progress = summarize_user_progress(script, user)[:progress]
+    assert_equal(
+      {status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT},
+      progress[level.id]
+    )
+  end
+
   def test_summarize_user_progress_with_pages
     user = create(:user)
     script = create(:script, :in_single_unit_course)
@@ -189,6 +214,31 @@ class UsersHelperTest < ActionView::TestCase
       completed: false
     }
     assert_equal expected_summary, summarize_user_progress(script, user)
+  end
+
+  # A bubble choice sublevel that is a migrated predict level keeps its
+  # contained_level_names; legacy progress on the contained level should surface
+  # for both the sublevel and the parent bubble choice.
+  def test_summarize_user_progress_with_bubble_choice_migrated_predict_sublevel
+    user = create(:user)
+    script = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+
+    contained = create(:multi, name: 'bc predict contained')
+    predict_sublevel = create(:level, type: 'Javalab', name: 'bc migrated predict sublevel', properties: {predict_settings: {isPredictLevel: true}})
+    predict_sublevel.contained_level_names = [contained.name]
+    predict_sublevel.save!
+    level = create(:bubble_choice_level, sublevels: [predict_sublevel])
+    create(:script_level, script: script, levels: [level], lesson: lesson)
+
+    # Pre-migration progress was recorded against the contained level.
+    create(:user_level, user: user, level: contained, script: script, best_result: ActivityConstants::BEST_PASS_RESULT)
+
+    progress = summarize_user_progress(script, user)[:progress]
+    expected = {status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT}
+    assert_equal expected, progress[predict_sublevel.id]
+    assert_equal expected, progress[level.id]
   end
 
   def test_summarize_user_progress_with_locked

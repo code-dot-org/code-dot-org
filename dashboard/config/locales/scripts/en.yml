@@ -26462,7 +26462,7 @@ en:
           description: |-
             <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 4</span>
 
-            This professional learning module prepares you to teach ** Iterating with AI**, a unit where students advance from managing single interactions to processing entire collections of data using iteration and loops.
+            This professional learning module prepares you to teach **Iterating with AI**, a unit where students advance from managing single interactions to processing entire collections of data using iteration and loops.
 
             **Suggested Time**: 90 minutes
           student_description: |-
@@ -26949,13 +26949,17 @@ en:
           description_audience: ''
           description_short: ''
           description: |-
-            #### This professional learning module prepares you to teach a **Unit 5: Designing Reliable Apps with AI and APIs** where students expand their understanding of web apps by connecting them to external data sources through APIs.
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 5</span>
 
-            #### **Suggested Time: 90 minutes**
+            This professional learning module prepares you to teach  **Designing Reliable Apps with AI and APIs** where students expand their understanding of web apps by connecting them to external data sources through APIs.
+
+            **Suggested Time:** 90 minutes
           student_description: |-
-            #### This professional learning module prepares you to teach a **Unit 5: Designing Reliable Apps with AI and APIs** where students expand their understanding of web apps by connecting them to external data sources through APIs.
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 5</span>
 
-            #### **Suggested Time: 90 minutes**
+            This professional learning module prepares you to teach  **Designing Reliable Apps with AI and APIs** where students expand their understanding of web apps by connecting them to external data sources through APIs.
+
+            **Suggested Time:** 90 minutes
         self-paced-pl-ai-101-v2-mod2:
           lessons:
             lesson-1:
@@ -28336,13 +28340,15 @@ en:
           description_audience: ''
           description_short: ''
           description: |-
-            #### This professional learning module prepares you to teach a **Unit 6: Web Apps with AI Capstone Project** where students synthesize their learning to design and build a complete web app with a clear purpose and audience.
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 6</span>
 
-            #### **Suggested Time: 30 minutes**
+            This professional learning module prepares you to teach  **Web Apps with AI Capstone Project** where students synthesize their learning to design and build a complete web app with a clear purpose and audience.
+
+            **Suggested Time: 30 minutes**
           student_description: |-
-            #### This professional learning module prepares you to teach a **Unit 6: Web Apps with AI Capstone Project** where students synthesize their learning to design and build a complete web app with a clear purpose and audience.
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 6</span>
 
-            #### **Suggested Time: 30 minutes**
+            This professional learning module prepares you to teach  **Web Apps with AI Capstone Project** where students synthesize their learning to design and build a complete web app with a clear purpose and audience.
         self-paced-pl-teaching-web-dev-2026:
           lessons: {}
           lesson_groups: {}
@@ -28607,29 +28613,59 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-iterating-with-ai-2026
-          title: 'Preparing to Teach: Iterating with AI'
+          title: 'Teaching Iterating with AI '
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 4</span>
+
+            Designed to support instruction for **Iterating with AI**, this professional learning module helps you guide students as they progress from managing single interactions to processing entire collections of data using iteration and loops.
+
+            **Suggested Time**: 90 minutes
+          student_description: |-
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 4</span>
+
+            Designed to support instruction for **Iterating with AI**, this professional learning module helps you guide students as they progress from managing single interactions to processing entire collections of data using iteration and loops.
+
+            **Suggested Time**: 90 minutes
         self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-designing-reliable-apps-with-ai-and-apis-2026
-          title: 'Preparing to Teach: Designing Reliable Apps with AI and APIs'
+          title: Teaching Designing Reliable Apps with AI and APIs
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 5</span>
+
+            This professional learning module prepares you to teach  **Designing Reliable Apps with AI and APIs** where students expand their understanding of web apps by connecting them to external data sources through APIs.
+
+            **Suggested Time:** 90 minutes
+          student_description: |-
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 5</span>
+
+            This professional learning module prepares you to teach  **Designing Reliable Apps with AI and APIs** where students expand their understanding of web apps by connecting them to external data sources through APIs.
+
+            **Suggested Time:** 90 minutes
         self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026
-          title: 'Web Apps with AI Capstone Project: Professional Learning Module'
+          title: Teaching Web Apps with AI Capstone Project
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 6</span>
+
+            Prepare to teach the  **Web Apps with AI Capstone Project**, where students bring together everything they've learned to design and build a complete web app with a clear purpose and audience.
+
+            **Suggested Time: 30 minutes**
+          student_description: |-
+            <span style="display:inline-block; font-size:11px; font-weight:500; background:#EEEDFE; color:#3C3489; border:0.5px solid #ccc; border-radius:6px; padding:2px 8px; margin-bottom:10px;">Unit 6</span>
+
+            Prepare to teach the  **Web Apps with AI Capstone Project**, where students bring together everything they've learned to design and build a complete web app with a clear purpose and audience.
+
+            **Suggested Time: 30 minutes**
         pl-facilitators-tools-ai-enabled-classroom-fac-2026:
           lessons: {}
           lesson_groups: {}
@@ -29556,7 +29592,7 @@ en:
             lessonGroup-3:
               display_name: End of Unit Project
           name: foundations-of-ai-programming-js
-          title: ''
+          title: Foundations of AI Programming (JavaScript)
           description_audience: ''
           description_short: ''
           description: ''
@@ -29566,6 +29602,40 @@ en:
           lesson_groups: {}
           name: ui-test-mix-move-ai
           title: UI Test Mix & Move with AI
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        joi-agentic-ai:
+          lessons:
+            lesson-1:
+              name: First Day at The Scoop
+            lesson-2:
+              name: The Empty Freezer
+            lesson-3:
+              name: Keys to the Register
+            lesson-4:
+              name: Human Problems
+            lesson-5:
+              name: The 3PM Rush
+            lesson-6:
+              name: Closing Time
+          lesson_groups: {}
+          name: joi-agentic-ai
+          title: 'The Scoop: Build Your First AI Agent '
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        cody-playground:
+          lessons:
+            lesson-1:
+              name: Lesson 1
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Data Sci w/Python
+          name: cody-playground
+          title: Cody's Playground
           description_audience: ''
           description_short: ''
           description: ''

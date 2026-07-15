@@ -16,7 +16,7 @@ Both allow users to filter results, but they do it differently.
 <div style="background:#ececec; border-radius:12px; padding:16px; margin:18px auto; max-width:85%;">
 
   <p style="font-size:12pt; margin-top:0;">
-    💡 <strong>Look at each retail website’s filtering system.</strong>
+    <strong>Look at each retail website’s filtering system.</strong>
   </p>
 
   <ul>
@@ -96,7 +96,7 @@ Both allow users to filter results, but they do it differently.
 <br>
 
 <details style="background-color:#ececec;padding:12px;margin-bottom:10px;border:1px solid #D9E3E5;border-radius:8px;box-shadow:2px 2px 8px rgba(0,0,0,0.06);">
-  <summary style="font-size:12pt; font-weight:bold;">🔍 Check your thinking</summary>
+  <summary style="font-size:12pt; font-weight:bold;">🔎 Check your thinking</summary>
 
 <div style="margin-top:12px; line-height:140%;">
 
@@ -134,8 +134,8 @@ Both allow users to filter results, but they do it differently.
       That same user may struggle on Website 2, not because the items don’t exist, but because the filters don’t.
     </p>
 
- <p style="font-size:12pt; margin-bottom:0;">
-      <strong>👉</strong> Filters don’t just show things, they also exclude things.
+ <p style="font-size:12pt; margin-bottom:0;"><b>
+      Filters don’t just show things, they also exclude things.</b>
     </p>
 
 

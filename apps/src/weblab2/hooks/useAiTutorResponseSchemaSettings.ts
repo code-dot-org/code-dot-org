@@ -16,6 +16,7 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {
   acceptRejectAnswerTypes,
+  AiTutorAcceptRejectResponse,
   aiTutorResponseJsonSchema,
   formatAcceptRejectResponse,
   getMergedAiTutorCodeWithSource,
@@ -37,8 +38,12 @@ export const useAiTutorResponseSchemaSettings = (
   return useMemo(() => {
     return {
       jsonSchema: aiTutorResponseJsonSchema,
-      responseCallback: (response: string) => {
-        const jsonResponse = JSON.parse(response);
+      // Only ever invoked with the already-parsed jsonSchema response --
+      // submitChatContents parses it once, upstream of this callback.
+      jsonSchemaResponseCallback: (response: unknown) => {
+        const jsonResponse = response as {
+          answer: AiTutorAcceptRejectResponse;
+        };
         console.log('🤖: AI Tutor response (in jsonSchema callback):', {
           jsonResponse,
         });

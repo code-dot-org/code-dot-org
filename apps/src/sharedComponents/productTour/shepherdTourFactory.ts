@@ -2,6 +2,7 @@ import {offset} from '@floating-ui/dom';
 import Shepherd, {StepOptions, Tour} from 'shepherd.js';
 
 import '@cdo/apps/sharedComponents/productTour/shepherd.scss';
+import {registerActiveTour} from '@cdo/apps/sharedComponents/productTour/activeTourTracker';
 import {scrollIntoViewIfNeeded} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 
 interface CreateShepherdTourOptions {
@@ -81,7 +82,14 @@ export const createShepherdTour = ({
   });
 
   tour.on('complete', stopWatchingAnchor);
-  tour.on('cancel', stopWatchingAnchor);
+  tour.on('cancel', () => {
+    stopWatchingAnchor();
+    document
+      .querySelectorAll('.tour-step-highlight')
+      .forEach(el => el.classList.remove('tour-step-highlight'));
+  });
+
+  registerActiveTour(tour);
 
   return tour;
 };
