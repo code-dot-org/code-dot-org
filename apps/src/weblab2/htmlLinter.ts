@@ -2,8 +2,8 @@ import {linter, Diagnostic} from '@codemirror/lint';
 import {HTMLHint} from 'htmlhint';
 import {Ruleset} from 'htmlhint/types';
 
-// This is a minimal rulset primarily used to provide feedback to students & teachers
-// in the Web Lab 2-based Web Development unit which previously used Bramble and slowparse
+// While this ruleset applies to all usages of WebLab2, it's addition was initially motivated by
+// an attempt at feature parity with the OG Web Development unit which previously used Bramble and slowparse
 // Additional rules can be added as needed, see: https://github.com/code-dot-org/code-dot-org/pull/73857
 const htmlRuleset: Ruleset = {
   'attr-value-double-quotes': true,
