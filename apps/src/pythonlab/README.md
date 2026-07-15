@@ -20,15 +20,15 @@ isolation goal Web Lab 2 already solves for student HTML/JS (see
   console output, and metrics reporting -- nothing in the sandbox has
   access to any of that. It manages the sandbox iframe only and never
   touches the `Worker` itself.
-- `sandbox/pyodideWorkerManager.ts` (runs inside the iframe, on the
-  sandbox subdomain) manages the actual `Worker` -- creating it,
+- `sandbox/pyodideSandboxWorkerManager.ts` (runs inside the iframe, on
+  the sandbox subdomain) manages the actual `Worker` -- creating it,
   restarting it, and dispatching messages from `pyodideSandboxManager.ts`
   to it. It only relays results back up via `postMessage`; it contains no
   business logic of its own.
 - `sandbox/pyodideSandboxHelpers.ts` holds the sandbox's supporting
   plumbing -- computing its own origin and registering/using the input
-  service worker -- kept separate so `pyodideWorkerManager.ts` reads as
-  the message dispatch loop it actually is.
+  service worker -- kept separate so `pyodideSandboxWorkerManager.ts`
+  reads as the message dispatch loop it actually is.
 - `sandbox/constants.ts` defines the `postMessage` contract shared by
   both sides: `ToPyodideSandboxMessage` and `FromPyodideSandboxMessage`,
   two separate enums (rather than one enum with directional prefixes) so

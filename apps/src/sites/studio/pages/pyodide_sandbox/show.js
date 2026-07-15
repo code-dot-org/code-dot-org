@@ -1,1 +1,1 @@
-import '@cdo/apps/pythonlab/sandbox/pyodideWorkerManager';
+import '@cdo/apps/pythonlab/sandbox/pyodideSandboxWorkerManager';
