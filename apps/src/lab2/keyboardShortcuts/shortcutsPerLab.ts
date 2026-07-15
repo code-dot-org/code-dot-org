@@ -31,12 +31,6 @@ export const ShortcutsPerLab: Partial<
         explanation: 'Move focus between elements (backward)',
       },
     ],
-    'Move & resize': [
-      {shortcut: 'Arrow keys', explanation: 'Move the focused element'},
-      {shortcut: '[ / ]', explanation: 'Shrink or grow the focused shape'},
-      {shortcut: 'Shift + [ / ]', explanation: 'Resize width only'},
-      {shortcut: 'Alt / Opt + [ / ]', explanation: 'Resize height only'},
-    ],
     Editing: [
       {shortcut: 'Enter', explanation: 'Edit the focused element'},
       {shortcut: 'E', explanation: 'Open the element toolbar'},
@@ -51,6 +45,12 @@ export const ShortcutsPerLab: Partial<
       {shortcut: 'G', explanation: 'Enter group mode or create the group'},
       {shortcut: 'Enter', explanation: 'Add or remove the focused element'},
       {shortcut: 'Esc', explanation: 'Cancel group mode'},
+    ],
+    'Move & resize': [
+      {shortcut: 'Arrow keys', explanation: 'Move the focused element'},
+      {shortcut: '[ / ]', explanation: 'Shrink or grow the focused shape'},
+      {shortcut: 'Shift + [ / ]', explanation: 'Resize width only'},
+      {shortcut: 'Alt / Opt + [ / ]', explanation: 'Resize height only'},
     ],
     'Clipboard & history': [
       {shortcut: 'Ctrl / Cmd + C', explanation: 'Copy'},
