@@ -1,10 +1,8 @@
-.whiteboardPlaceholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 320px;
-  border: 2px dashed var(--border-neutral, #ccc);
+// Excalidraw sizes itself to its parent, so the pane needs an
+// explicit height.
+.whiteboardPane {
+  height: 55vh;
+  min-height: 360px;
   border-radius: 8px;
-  color: var(--text-neutral-secondary, #666);
-  font-style: italic;
+  overflow: hidden;
 }

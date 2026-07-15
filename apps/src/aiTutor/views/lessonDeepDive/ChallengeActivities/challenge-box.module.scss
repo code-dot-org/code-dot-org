@@ -1,7 +1,46 @@
+.challengeLayout {
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+}
+
+// Left quarter: activity instructions from the Challenge model.
+.sidebar {
+  flex: 1;
+  min-width: 0;
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+}
+
+.sidebarHeading {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-neutral-primary);
+}
+
+.instructionsText {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--text-neutral-primary);
+}
+
+// Right three quarters: the active challenge pane with the
+// modality toggle underneath it.
+.activityColumn {
+  flex: 3;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 .challengeToggle {
   display: flex;
+  justify-content: center;
   gap: 8px;
-  margin-bottom: 16px;
+  margin-top: 16px;
 
   button {
     padding: 6px 16px;
