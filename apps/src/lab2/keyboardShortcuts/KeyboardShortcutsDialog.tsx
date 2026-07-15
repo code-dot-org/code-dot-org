@@ -7,7 +7,7 @@ import {isTargetEditable} from '@cdo/apps/util/isTargetEditable';
 import {AppName} from '../types';
 
 import KeyboardShortcuts from './KeyboardShortcuts';
-import {ShortcutsPerLab} from './shortcutsPerLab';
+import {getLabShortcuts} from './shortcutsPerLab';
 
 import styles from './keyboard-shortcuts-listener.module.scss';
 
@@ -23,7 +23,7 @@ interface KeyboardShortcutsDialogProps {
 const KeyboardShortcutsDialog: React.FC<KeyboardShortcutsDialogProps> = ({
   appName,
 }) => {
-  const shortcuts = ShortcutsPerLab[appName];
+  const shortcuts = getLabShortcuts(appName);
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {

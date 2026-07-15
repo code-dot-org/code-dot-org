@@ -8,6 +8,18 @@ import {KeyboardShortcutCategories} from './types';
  * `/`-triggered shortcuts popover automatically. The bindings themselves live
  * in each lab's own key handling; this is only the human-readable listing.
  */
+/**
+ * Returns a lab's shortcut listing, but only when it has at least one
+ * category. Callers gate on the truthiness of the result, so an entry with no
+ * categories is treated the same as no entry at all.
+ */
+export function getLabShortcuts(
+  appName: AppName
+): KeyboardShortcutCategories | undefined {
+  const shortcuts = ShortcutsPerLab[appName];
+  return shortcuts && Object.keys(shortcuts).length > 0 ? shortcuts : undefined;
+}
+
 export const ShortcutsPerLab: Partial<
   Record<AppName, KeyboardShortcutCategories>
 > = {

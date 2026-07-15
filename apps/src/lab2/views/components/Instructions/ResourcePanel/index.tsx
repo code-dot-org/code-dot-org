@@ -14,7 +14,7 @@ import {ChatAsset} from '@cdo/apps/aichat/types/assets';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
-import {ShortcutsPerLab} from '@cdo/apps/lab2/keyboardShortcuts/shortcutsPerLab';
+import {getLabShortcuts} from '@cdo/apps/lab2/keyboardShortcuts/shortcutsPerLab';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {
   isTourAvailableOnLevel,
@@ -410,7 +410,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       );
     }
 
-    const shortcuts = ShortcutsPerLab[levelProperties.appName as AppName];
+    const shortcuts = getLabShortcuts(levelProperties.appName as AppName);
     if (
       levelTours.length > 0 ||
       otherAvailableTours.length > 0 ||

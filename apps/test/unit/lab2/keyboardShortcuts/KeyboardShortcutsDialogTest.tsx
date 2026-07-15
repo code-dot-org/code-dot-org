@@ -5,9 +5,10 @@ import React from 'react';
 import KeyboardShortcutsDialog from '@cdo/apps/lab2/keyboardShortcuts/KeyboardShortcutsDialog';
 
 jest.mock('@cdo/apps/lab2/keyboardShortcuts/shortcutsPerLab', () => ({
-  ShortcutsPerLab: {
-    sketchlab: {General: [{shortcut: 'Tab', explanation: 'Move focus'}]},
-  },
+  getLabShortcuts: (appName: string) =>
+    appName === 'sketchlab'
+      ? {General: [{shortcut: 'Tab', explanation: 'Move focus'}]}
+      : undefined,
 }));
 
 describe('KeyboardShortcutsDialog', () => {

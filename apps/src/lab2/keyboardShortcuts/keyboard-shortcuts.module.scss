@@ -12,14 +12,14 @@
 }
 
 .categoryHeading {
-  text-align: left;
+  text-align: start;
 }
 
 .shortcutKeys {
   // Shrink the key column to its content so the description gets the rest.
   width: 1%;
   white-space: nowrap;
-  text-align: left;
+  text-align: start;
   vertical-align: top;
   background: transparent;
   color: var(--text-neutral-primary);
@@ -29,10 +29,9 @@
 
   kbd {
     display: inline-block;
-    padding: 2px 6px;
-    background: var(--background-neutral-secondary);
-    color: var(--text-neutral-primary);
-    border: 1px solid var(--borders-neutral-primary);
+    padding: 2px 4px;
+    background: var(--background-neutral-tertiary);
+    color: var(--text-neutral-secondary);
     border-radius: 4px;
     font-family: monospace;
     font-size: 12px;
