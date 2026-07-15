@@ -638,6 +638,13 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       }
       drawingRef.current = false;
       lastPointRef.current = null;
+      if (tool === 'eyedropper') {
+        // The pick is final on release (a drag samples continuously until
+        // then); hand the pen back so the picked color is immediately
+        // usable.
+        setTool('pen');
+        return;
+      }
       const backing = backingRef.current;
       const preview = previewRef.current;
       if (
