@@ -93,10 +93,15 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
   // tour so the tour has a real section ID to work with. A freshly created
   // section is never stale, so we skip the staleness check in that case.
   const ensureDemoSection = async (): Promise<boolean> => {
-    if (demoSection) return true;
+    if (demoSection?.id) return true;
     setCreationError(false);
     try {
-      await dispatch(createDemoSection(demoType));
+      const section = await dispatch(createDemoSection(demoType));
+      if (!section?.id) {
+        setCreationError(true);
+        return false;
+      }
+      stalenessCheck.current = Promise.resolve(false);
       return true;
     } catch (error) {
       if (!(error instanceof DemoSectionCreationError)) {
