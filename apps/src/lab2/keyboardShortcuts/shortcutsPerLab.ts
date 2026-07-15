@@ -65,9 +65,4 @@ export const ShortcutsPerLab: Partial<
       {shortcut: 'Ctrl / Cmd + Y', explanation: 'Redo'},
     ],
   },
-  pythonlab: {
-    Editor: [
-      {shortcut: 'Ctrl / Cmd + F', explanation: 'Open find/replace menu'},
-    ],
-  },
 };
