@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'cdo/db'
 require 'cdo/geocoder'
 
 # Records geolocation data for anonymous project storage records.
@@ -22,6 +23,23 @@ class ProjectStorage::AnonymousGeoRecordingJob < ApplicationJob
   # @param ip_address [String] the IP address used to look up geolocation data
   def perform(project_storage_id, ip_address)
     project_storage = ProjectStorage.find_by(id: project_storage_id)
+
+    # Temporary logs for detecting missing project storage records.
+    if project_storage.nil?
+      # rubocop:disable CustomCops/DashboardDbUsage
+      exists_in_sequel_connection = DASHBOARD_DB[:user_project_storage_ids].where(id: project_storage_id).any?
+      # rubocop:enable CustomCops/DashboardDbUsage
+      CDO.log.info(
+        "[ProjectStorage::AnonymousGeoRecordingJob]: project_storage #{project_storage_id.inspect} " \
+        "not found, exists in the sequel connection: #{exists_in_sequel_connection.inspect}"
+      )
+    elsif project_storage.user_id.present?
+      CDO.log.info(
+        "[ProjectStorage::AnonymousGeoRecordingJob]: project_storage #{project_storage_id.inspect} " \
+        "has user_id=#{project_storage.user_id.inspect}"
+      )
+    end
+
     return if project_storage.nil? || project_storage.user_id.present?
     return if ProjectStorage::Geo.exists?(project_storage:)
 
