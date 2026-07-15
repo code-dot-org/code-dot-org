@@ -23,7 +23,7 @@ export const ShortcutsPerLab: Partial<
       {shortcut: 'Arrow keys', explanation: 'Move the focused element'},
       {shortcut: '[ / ]', explanation: 'Shrink or grow the focused shape'},
       {shortcut: 'Shift + [ / ]', explanation: 'Resize width only'},
-      {shortcut: 'Alt + [ / ]', explanation: 'Resize height only'},
+      {shortcut: 'Alt / Option + [ / ]', explanation: 'Resize height only'},
     ],
     Editing: [
       {shortcut: 'Enter', explanation: 'Edit the focused element'},

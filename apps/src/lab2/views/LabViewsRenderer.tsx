@@ -16,7 +16,7 @@ import useRequiredContext from '@cdo/apps/util/hooks/useRequiredContext';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {lab2EntryPoints} from '../../../lab2EntryPoints';
-import KeyboardShortcutsListener from '../keyboardShortcuts/KeyboardShortcutsListener';
+import KeyboardShortcutsDialog from '../keyboardShortcuts/KeyboardShortcutsDialog';
 
 import NoExemplarPage from './components/NoExemplarPage';
 import ExtraLinks from './ExtraLinks';
@@ -115,7 +115,7 @@ const LabViewsRenderer: React.FunctionComponent = () => {
           {!queryHideExtraLinks && showExtraLinksButton && (
             <ExtraLinks levelId={levelProperties.id} />
           )}
-          <KeyboardShortcutsListener appName={currentAppName} />
+          <KeyboardShortcutsDialog appName={currentAppName} />
         </div>
       </ExtraLinksButtonContext.Provider>
     </ProgressContainer>

@@ -9,7 +9,7 @@ import {ShortcutsPerLab} from './shortcutsPerLab';
 
 import styles from './keyboard-shortcuts-listener.module.scss';
 
-interface KeyboardShortcutsListenerProps {
+interface KeyboardShortcutsDialogProps {
   appName: AppName;
 }
 
@@ -32,7 +32,7 @@ function isEditableTarget(target: EventTarget | null): boolean {
  * that has an entry in ShortcutsPerLab. Mounted once per lab2 level (see
  * LabViewsRenderer).
  */
-const KeyboardShortcutsListener: React.FC<KeyboardShortcutsListenerProps> = ({
+const KeyboardShortcutsDialog: React.FC<KeyboardShortcutsDialogProps> = ({
   appName,
 }) => {
   const shortcuts = ShortcutsPerLab[appName];
@@ -90,4 +90,4 @@ const KeyboardShortcutsListener: React.FC<KeyboardShortcutsListenerProps> = ({
   );
 };
 
-export default KeyboardShortcutsListener;
+export default KeyboardShortcutsDialog;
