@@ -20,4 +20,7 @@ jobs:
       # Literal, not ${{ env.* }}: the env context is unavailable in a reusable
       # workflow's `with:`. Keep in lockstep with frontend-ci.yml's pin.
       playwright-image-tag: 'v1.59.1-noble'
+      # DTT is post-deploy and fire-and-forget, off the PR critical path, so it
+      # runs the full engine matrix. The PR lane keeps the Chromium-only default.
+      playwright-projects: '--project=chromium --project=firefox --project=webkit'
     secrets: inherit
