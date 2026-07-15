@@ -7,7 +7,7 @@
   "user_id": 19378,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "*This level follows a video that you may have watched with your class. If you missed the video, you can watch it [here](https://youtu.be/auv10y-dN4s).*\r\n\r\n# Debug: Pink Tags\r\n\r\n\r\nSomeone has submitted a bug report on this web page.  Can you fix the bug?\r\n![](https://images.code.org/d661035ebb4ff85cb7199e3dca3ba70a-image-1767512963412.png)\r\n \r\n# Do this\r\n1) Find and fix the problem that is causing the bug.",
+    "long_instructions": "*This level follows a video that you may have watched with your class. If you missed the video, you can watch it [here](https://youtu.be/auv10y-dN4s).*\r\n\r\n# Debug: Fix the Errors\r\n\r\n\r\nSomeone has submitted a bug report on this web page.  Can you fix the bug?\r\n![](https://images.code.org/d661035ebb4ff85cb7199e3dca3ba70a-image-1767512963412.png)\r\n \r\n# Do this\r\n1) Find and fix the problem that is causing the bug.",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "disable_edit_run_for_submission": "false",
