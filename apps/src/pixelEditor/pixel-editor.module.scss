@@ -61,9 +61,15 @@ $border-subtle: rgb(255 255 255 / 12%);
   padding: 12px;
 }
 
-// Two columns; TOOLS order pairs them (pen/fill, erase/eyedrop, circles,
-// rectangles), the four brush sizes make two more rows, undo/redo the last.
+// The tool grid at the top, undo/redo pushed to the bottom of the column.
 .toolbar {
+  display: flex;
+  flex-direction: column;
+}
+
+// Two columns; TOOLS order pairs them (pen/fill, erase/eyedrop, circles,
+// rectangles), then the four brush sizes as two more rows, then the color.
+.toolGrid {
   display: grid;
   grid-template-columns: repeat(2, 34px);
   gap: 4px;
@@ -122,7 +128,7 @@ $border-subtle: rgb(255 255 255 / 12%);
   grid-column: 1 / -1;
   justify-self: stretch;
   height: 1px;
-  margin: 4px 6px;
+  margin: 4px 0;
   background-color: rgb(255 255 255 / 15%);
 }
 
@@ -134,6 +140,15 @@ $border-subtle: rgb(255 255 255 / 12%);
 // Pixel-mode swatches are square because the brush stamps hard squares.
 .brushDotSquare {
   border-radius: 1px;
+}
+
+// Undo/redo, anchored to the bottom of the toolbar column.
+.historyRow {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  margin-top: auto;
+  padding-top: 8px;
 }
 
 .canvasArea {

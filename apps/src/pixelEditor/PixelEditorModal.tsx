@@ -638,12 +638,6 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       }
       drawingRef.current = false;
       lastPointRef.current = null;
-      if (tool === 'eyedropper') {
-        // The pick is final on release (a drag samples continuously until
-        // then); hand the pen back so the picked color is immediately usable.
-        setTool('pen');
-        return;
-      }
       const backing = backingRef.current;
       const preview = previewRef.current;
       if (
@@ -744,88 +738,95 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
         <div className={moduleStyles.header}>{title}</div>
         <div className={moduleStyles.body}>
           <div className={moduleStyles.toolbar}>
-            {TOOLS.map(t => (
-              <PixelTooltip
-                key={t.id}
-                tooltipId={`pixel-tool-${t.id}-tooltip`}
-                text={toolTitle(t)}
-              >
-                <button
-                  type="button"
-                  aria-label={toolTitle(t)}
-                  aria-pressed={tool === t.id}
-                  className={classNames(
-                    moduleStyles.toolButton,
-                    tool === t.id && moduleStyles.toolActive
-                  )}
-                  onClick={() => setTool(t.id)}
+            <div className={moduleStyles.toolGrid}>
+              {TOOLS.map(t => (
+                <PixelTooltip
+                  key={t.id}
+                  tooltipId={`pixel-tool-${t.id}-tooltip`}
+                  text={toolTitle(t)}
                 >
-                  {t.icon}
-                </button>
-              </PixelTooltip>
-            ))}
-            <div className={moduleStyles.toolbarDivider} />
-            {BRUSH_SIZES.map((size, index) => (
-              <PixelTooltip
-                key={size}
-                tooltipId={`pixel-brush-${size}-tooltip`}
-                text={`Brush size ${size} (${index + 1})`}
-              >
-                <button
-                  type="button"
-                  aria-label={`Brush size ${size} (${index + 1})`}
-                  aria-pressed={brushSize === size}
-                  className={classNames(
-                    moduleStyles.toolButton,
-                    brushSize === size && moduleStyles.toolActive
-                  )}
-                  onClick={() => setBrushSize(size)}
-                >
-                  <span
+                  <button
+                    type="button"
+                    aria-label={toolTitle(t)}
+                    aria-pressed={tool === t.id}
                     className={classNames(
-                      moduleStyles.brushDot,
-                      pixelMode && moduleStyles.brushDotSquare
+                      moduleStyles.toolButton,
+                      tool === t.id && moduleStyles.toolActive
                     )}
-                    style={{width: brushDotPx(size), height: brushDotPx(size)}}
-                  />
+                    onClick={() => setTool(t.id)}
+                  >
+                    {t.icon}
+                  </button>
+                </PixelTooltip>
+              ))}
+              <div className={moduleStyles.toolbarDivider} />
+              {BRUSH_SIZES.map((size, index) => (
+                <PixelTooltip
+                  key={size}
+                  tooltipId={`pixel-brush-${size}-tooltip`}
+                  text={`Brush size ${size} (${index + 1})`}
+                >
+                  <button
+                    type="button"
+                    aria-label={`Brush size ${size} (${index + 1})`}
+                    aria-pressed={brushSize === size}
+                    className={classNames(
+                      moduleStyles.toolButton,
+                      brushSize === size && moduleStyles.toolActive
+                    )}
+                    onClick={() => setBrushSize(size)}
+                  >
+                    <span
+                      className={classNames(
+                        moduleStyles.brushDot,
+                        pixelMode && moduleStyles.brushDotSquare
+                      )}
+                      style={{
+                        width: brushDotPx(size),
+                        height: brushDotPx(size),
+                      }}
+                    />
+                  </button>
+                </PixelTooltip>
+              ))}
+              <div className={moduleStyles.toolbarDivider} />
+              <ColorPicker
+                color={color}
+                onChange={setColor}
+                recentColors={recentColors}
+              />
+            </div>
+            <div className={moduleStyles.historyRow}>
+              <PixelTooltip tooltipId="pixel-undo-tooltip" text="Undo (Ctrl+Z)">
+                <button
+                  type="button"
+                  aria-label="Undo (Ctrl+Z)"
+                  className={moduleStyles.toolButton}
+                  disabled={!canUndo}
+                  onClick={undo}
+                >
+                  <svg viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M6 3L2 7l4 4V8.5h4a3 3 0 0 1 0 6H7v2h3a5 5 0 0 0 0-10H6V3z" />
+                  </svg>
                 </button>
               </PixelTooltip>
-            ))}
-            <ColorPicker
-              color={color}
-              onChange={setColor}
-              recentColors={recentColors}
-            />
-            <div className={moduleStyles.toolbarDivider} />
-            <PixelTooltip tooltipId="pixel-undo-tooltip" text="Undo (Ctrl+Z)">
-              <button
-                type="button"
-                aria-label="Undo (Ctrl+Z)"
-                className={moduleStyles.toolButton}
-                disabled={!canUndo}
-                onClick={undo}
+              <PixelTooltip
+                tooltipId="pixel-redo-tooltip"
+                text="Redo (Ctrl+Shift+Z)"
               >
-                <svg viewBox="0 0 16 16" aria-hidden="true">
-                  <path d="M6 3L2 7l4 4V8.5h4a3 3 0 0 1 0 6H7v2h3a5 5 0 0 0 0-10H6V3z" />
-                </svg>
-              </button>
-            </PixelTooltip>
-            <PixelTooltip
-              tooltipId="pixel-redo-tooltip"
-              text="Redo (Ctrl+Shift+Z)"
-            >
-              <button
-                type="button"
-                aria-label="Redo (Ctrl+Shift+Z)"
-                className={moduleStyles.toolButton}
-                disabled={!canRedo}
-                onClick={redo}
-              >
-                <svg viewBox="0 0 16 16" aria-hidden="true">
-                  <path d="M10 3l4 4-4 4V8.5H6a3 3 0 0 0 0 6h3v2H6a5 5 0 0 1 0-10h4V3z" />
-                </svg>
-              </button>
-            </PixelTooltip>
+                <button
+                  type="button"
+                  aria-label="Redo (Ctrl+Shift+Z)"
+                  className={moduleStyles.toolButton}
+                  disabled={!canRedo}
+                  onClick={redo}
+                >
+                  <svg viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M10 3l4 4-4 4V8.5H6a3 3 0 0 0 0 6h3v2H6a5 5 0 0 1 0-10h4V3z" />
+                  </svg>
+                </button>
+              </PixelTooltip>
+            </div>
           </div>
           <div className={moduleStyles.canvasArea}>
             {loadError ? (
