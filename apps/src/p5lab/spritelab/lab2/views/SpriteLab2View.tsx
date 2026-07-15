@@ -6,7 +6,10 @@ import {AnyAction, Reducer} from 'redux';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
+import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
+import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {LabProps} from '@cdo/apps/lab2/types';
+import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import setFooterVisibility from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/Footer/setFooterVisibility';
 import SourcesContainer, {
   useSources,
@@ -121,6 +124,11 @@ const SpriteLab2View: React.FunctionComponent<{
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const scriptId = useAppSelector(state => state.progress.scriptId);
+  const isRunning = useAppSelector(state => state.runState.isRunning);
+  const hasRun = useAppSelector(state => state.spriteLab2.hasRun);
+  const hasEdited = useAppSelector(state => state.spriteLab2.hasEdited);
+  const blocklySettings = useBlocklySettings();
+  const themeSetting = useThemeSetting('spritelab');
   // Seed the page constants the animationList logic + engine read (we bypass
   // StudioApp.init) and the AichatContextManager the aiGateway calls read.
   useEffect(() => {
@@ -701,90 +709,107 @@ const SpriteLab2View: React.FunctionComponent<{
     currentSources.source) as WorkspaceSerialization | undefined;
 
   return (
-    <TabShell
-      activeTab={activeTab}
-      onTabChange={handleTabChange}
-      enabledTabs={ENABLED_TABS}
-      visibleTabs={ENABLED_TABS}
-      codeTabExtra={
-        SCENES_UI_VARIANT && animationsSeeded ? (
-          <SceneSelector
-            scenes={sceneMetadata}
-            activeSceneId={activeSceneId}
-            disabled={activeTab !== 'Code'}
-            onSelectScene={handleSelectScene}
-            onCreateScene={handleCreateScene}
-          />
-        ) : undefined
-      }
-    >
-      {/* Kept mounted (clipped) so the workspace survives tab switches;
-          gated on animationsSeeded (see the seed effect). */}
-      <div
-        className={moduleStyles.codeTabWrapper}
-        style={{
-          clipPath: activeTab === 'Code' ? 'none' : 'inset(100%)',
-          pointerEvents: activeTab === 'Code' ? 'auto' : 'none',
-        }}
-      >
-        {animationsSeeded && (
-          <CodeTab
-            ref={codeTabRef}
-            initialSource={initialWorkspaceSource}
-            toolboxDefinition={levelProperties.toolboxDefinition}
-            toolboxXml={levelProperties.toolboxBlocks}
-            sharedBlocks={levelProperties.sharedBlocks}
-            theme={theme === 'Dark' ? 'Dark' : 'Light'}
-            onSourceChange={handleSourceChange}
-            onEdit={handleEdit}
-            onIntermediateChange={scheduleRun}
-          />
+    <div className={moduleStyles.labRow}>
+      <ResourcePanel
+        levelProperties={levelProperties}
+        isRunning={isRunning}
+        hasRun={hasRun}
+        hasEdited={hasEdited}
+        settings={[...blocklySettings, themeSetting]}
+        className={classNames(
+          !levelProperties.guideMode && moduleStyles.instructionsArea,
+          !!levelProperties.guideMode && moduleStyles.resourceSidebar
         )}
-      </div>
-
-      {/* Kept mounted (clipped) like the Code tab: mounting mid-switch eats
-          the guide's transition frames, and remounting loses gallery state. */}
-      {imagesMounted && (
+        sidebarOnly={!!levelProperties.guideMode}
+      />
+      <div className={moduleStyles.divider} />
+      <TabShell
+        activeTab={activeTab}
+        onTabChange={handleTabChange}
+        enabledTabs={ENABLED_TABS}
+        visibleTabs={ENABLED_TABS}
+        codeTabExtra={
+          SCENES_UI_VARIANT && animationsSeeded ? (
+            <SceneSelector
+              scenes={sceneMetadata}
+              activeSceneId={activeSceneId}
+              disabled={activeTab !== 'Code'}
+              onSelectScene={handleSelectScene}
+              onCreateScene={handleCreateScene}
+            />
+          ) : undefined
+        }
+      >
+        {/* Kept mounted (clipped) so the workspace survives tab switches;
+          gated on animationsSeeded (see the seed effect). */}
         <div
-          className={classNames(moduleStyles.codeTabWrapper)}
+          className={moduleStyles.codeTabWrapper}
           style={{
-            clipPath: activeTab === 'Images' ? 'none' : 'inset(100%)',
-            pointerEvents: activeTab === 'Images' ? 'auto' : 'none',
+            clipPath: activeTab === 'Code' ? 'none' : 'inset(100%)',
+            pointerEvents: activeTab === 'Code' ? 'auto' : 'none',
           }}
         >
-          <ItemsTab />
+          {animationsSeeded && (
+            <CodeTab
+              ref={codeTabRef}
+              initialSource={initialWorkspaceSource}
+              toolboxDefinition={levelProperties.toolboxDefinition}
+              toolboxXml={levelProperties.toolboxBlocks}
+              sharedBlocks={levelProperties.sharedBlocks}
+              theme={theme === 'Dark' ? 'Dark' : 'Light'}
+              onSourceChange={handleSourceChange}
+              onEdit={handleEdit}
+              onIntermediateChange={scheduleRun}
+            />
+          )}
         </div>
-      )}
 
-      {!SCENES_UI_VARIANT && activeTab === 'World' && (
-        <div className={classNames(moduleStyles.codeTabWrapper)}>
-          <WorldTab grid={worldGrid} onGridChange={handleWorldGridChange} />
-        </div>
-      )}
-
-      {/* Always mounted so the engine keeps running; animates between the
-          Code tab's corner preview and the Play tab's centered view. */}
-      <Playspace
-        mode={playspaceMode}
-        fadeTrigger={fadeTrigger}
-        covered={jumpCover}
-        loading={externalLoading}
-        getDefaultSpriteSize={getDefaultSpriteSize}
-      />
-
-      {/* Guide overlay: full guide on Code; instructions-only on Images. */}
-      {levelProperties.guideMode &&
-        (activeTab === 'Code' ||
-          (activeTab === 'Images' && !!levelProperties.longInstructions)) && (
-          <GenerateSpriteLab
-            guideMode={
-              activeTab === 'Code' ? levelProperties.guideMode : 'instructions'
-            }
-            instructions={levelProperties.longInstructions}
-            onCodeGenerated={handleCodeGenerated}
-          />
+        {/* Kept mounted (clipped) like the Code tab: mounting mid-switch eats
+          the guide's transition frames, and remounting loses gallery state. */}
+        {imagesMounted && (
+          <div
+            className={classNames(moduleStyles.codeTabWrapper)}
+            style={{
+              clipPath: activeTab === 'Images' ? 'none' : 'inset(100%)',
+              pointerEvents: activeTab === 'Images' ? 'auto' : 'none',
+            }}
+          >
+            <ItemsTab />
+          </div>
         )}
-    </TabShell>
+
+        {!SCENES_UI_VARIANT && activeTab === 'World' && (
+          <div className={classNames(moduleStyles.codeTabWrapper)}>
+            <WorldTab grid={worldGrid} onGridChange={handleWorldGridChange} />
+          </div>
+        )}
+
+        {/* Always mounted so the engine keeps running; animates between the
+          Code tab's corner preview and the Play tab's centered view. */}
+        <Playspace
+          mode={playspaceMode}
+          fadeTrigger={fadeTrigger}
+          covered={jumpCover}
+          loading={externalLoading}
+          getDefaultSpriteSize={getDefaultSpriteSize}
+        />
+
+        {/* Guide overlay: full guide on Code; instructions-only on Images. */}
+        {levelProperties.guideMode &&
+          (activeTab === 'Code' ||
+            (activeTab === 'Images' && !!levelProperties.longInstructions)) && (
+            <GenerateSpriteLab
+              guideMode={
+                activeTab === 'Code'
+                  ? levelProperties.guideMode
+                  : 'instructions'
+              }
+              instructions={levelProperties.longInstructions}
+              onCodeGenerated={handleCodeGenerated}
+            />
+          )}
+      </TabShell>
+    </div>
   );
 };
 
