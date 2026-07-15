@@ -1,10 +1,13 @@
-import React, {useEffect, useRef} from 'react';
+import {CustomDialog} from '@code-dot-org/component-library/dialog';
+import {Typography} from '@mui/material';
+import React, {useEffect, useState} from 'react';
 
 import {AppName} from '../types';
-import {DialogType, useDialogControl} from '../views/dialogs';
 
 import KeyboardShortcuts from './KeyboardShortcuts';
 import {ShortcutsPerLab} from './shortcutsPerLab';
+
+import styles from './keyboard-shortcuts-listener.module.scss';
 
 interface KeyboardShortcutsListenerProps {
   appName: AppName;
@@ -26,22 +29,19 @@ function isEditableTarget(target: EventTarget | null): boolean {
 
 /**
  * Opens a keyboard-shortcuts popover when the user presses `/`, for any lab
- * that has an entry in ShortcutsPerLab. Renders nothing. Mounted once per lab2
- * level (see LabViewsRenderer) as a descendant of the dialog provider.
+ * that has an entry in ShortcutsPerLab. Mounted once per lab2 level (see
+ * LabViewsRenderer).
  */
 const KeyboardShortcutsListener: React.FC<KeyboardShortcutsListenerProps> = ({
   appName,
 }) => {
-  const dialogControl = useDialogControl();
-  // Prevents a second `/` from stacking another dialog while one is open.
-  const isOpenRef = useRef(false);
+  const shortcuts = ShortcutsPerLab[appName];
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const shortcuts = ShortcutsPerLab[appName];
-    if (!shortcuts) {
+    if (!shortcuts || isOpen) {
       return;
     }
-
     const handleKeyDown = (event: KeyboardEvent) => {
       if (
         event.key !== '/' ||
@@ -49,30 +49,45 @@ const KeyboardShortcutsListener: React.FC<KeyboardShortcutsListenerProps> = ({
         event.metaKey ||
         event.altKey ||
         event.defaultPrevented ||
-        isOpenRef.current ||
         isEditableTarget(event.target)
       ) {
         return;
       }
       event.preventDefault();
-      isOpenRef.current = true;
-      dialogControl
-        .showDialog({
-          type: DialogType.GenericDialog,
-          title: 'Keyboard shortcuts',
-          bodyComponent: <KeyboardShortcuts shortcuts={shortcuts} />,
-          useModal: true,
-        })
-        .finally(() => {
-          isOpenRef.current = false;
-        });
+      setIsOpen(true);
     };
-
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [appName, dialogControl]);
+  }, [shortcuts, isOpen]);
 
-  return null;
+  if (!shortcuts || !isOpen) {
+    return null;
+  }
+
+  return (
+    <CustomDialog
+      onClose={() => setIsOpen(false)}
+      closeLabel="Close keyboard shortcuts"
+      aria-label="Keyboard shortcuts"
+    >
+      <div className={styles.dialog}>
+        <Typography variant="h4" className={styles.title}>
+          Keyboard shortcuts
+        </Typography>
+        <div
+          id="dsco-dialog-description"
+          className={styles.body}
+          role="region"
+          aria-label="Available keyboard shortcuts"
+          // A scrollable region must be focusable to be keyboard-scrollable.
+          // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+          tabIndex={0}
+        >
+          <KeyboardShortcuts shortcuts={shortcuts} />
+        </div>
+      </div>
+    </CustomDialog>
+  );
 };
 
 export default KeyboardShortcutsListener;
