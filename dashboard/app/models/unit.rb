@@ -608,10 +608,9 @@ class Unit < ApplicationRecord
           TEXT_RESPONSE_TYPES.exclude?(level.contained_levels.first.class)
         is_not_predict_free_response = !level.predict_level? || level.properties.dig('predict_settings', 'questionType') != 'freeResponse'
         next if is_not_contained && is_not_predict_free_response
-        text_response_level = level.predict_level? ? level : level.contained_levels.first
         text_response_levels << {
           script_level: script_level,
-          levels: [text_response_level]
+          levels: level.levels_for_progress
         }
       end
     end
@@ -1957,6 +1956,14 @@ class Unit < ApplicationRecord
   def pl_course?(unit_group: get_original_unit_group)
     unit_group ||= get_professional_learning_course if old_professional_learning_course?
     unit_group&.pl_course?
+  end
+
+  # The lesson tutor deep dive is scoped to the AI Foundations (AIF) and AI
+  # Discovery (AID) student curricula. PL/facilitator courses are excluded even
+  # if they carry an AI marketing initiative.
+  def lesson_tutor_available?
+    return false if pl_course?
+    !!get_course_version&.course_offering&.ai_initiative?
   end
 
   # returns true if the user is a levelbuilder, or a teacher with any pilot

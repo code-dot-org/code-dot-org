@@ -143,14 +143,14 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'get_script_level_by_relative_position_and_puzzle_position returns nil when not found' do
-    artist = Unit.find_by_name('artist')
-    assert artist.get_script_level_by_relative_position_and_puzzle_position(11, 1, false).nil?
+    unit = create(:unit, :with_levels)
+    assert unit.get_script_level_by_relative_position_and_puzzle_position(11, 1, false).nil?
   end
 
   test 'get_from_cache uses cache' do
     # We test the cache using name lookups...
-    flappy = Unit.find_by_name('flappy')
-    frozen = Unit.find_by_name('frozen')
+    flappy = create(:unit, name: 'flappy')
+    frozen = create(:unit, name: 'frozen')
     # ...and ID lookups.
     flappy_id = flappy.id
     frozen_id = frozen.id
@@ -464,13 +464,14 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'banner image' do
-    assert_nil Unit.find_by_name('flappy').banner_image
-    assert_nil Unit.find_by_name('csf1').banner_image
+    assert_nil create(:unit).banner_image
+    assert_nil @csf_unit.banner_image
   end
 
   test 'old_professional_learning_course?' do
-    refute Unit.find_by_name('flappy').old_professional_learning_course?
-    assert Unit.find_by_name('ECSPD').old_professional_learning_course?
+    refute create(:unit).old_professional_learning_course?
+    old_pl_course_unit = create(:plc_course_unit, :with_course_name).script
+    assert old_pl_course_unit.old_professional_learning_course?
   end
 
   test 'get_unit_resources_pdf_url returns nil if no resources in script or lessons' do
@@ -1347,6 +1348,25 @@ class UnitTest < ActiveSupport::TestCase
     assert_empty unit.text_response_levels
   end
 
+  test 'migrated predict level lists both itself and its contained level in text_response_levels' do
+    unit = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: unit)
+    lesson = create(:lesson, script: unit, lesson_group: lesson_group)
+    contained_level = create(:free_response, name: 'Migrated Predict Contained Free Response')
+    level = create(
+      :javalab,
+      properties: {
+        predict_settings: {isPredictLevel: true, questionType: 'freeResponse'},
+        contained_level_names: [contained_level.name]
+      }
+    )
+    create(:script_level, script: unit, lesson: lesson, levels: [level])
+
+    # A response may live on the level itself (post-migration) or on the
+    # contained level (pre-migration), so both must be searched.
+    assert_equal [level, contained_level], unit.text_response_levels.first[:levels]
+  end
+
   test 'logged_out_age_13_required?' do
     unit = create(:script, :in_single_unit_course, login_required: false)
     lesson_group = create(:lesson_group, script: unit)
@@ -1696,7 +1716,7 @@ class UnitTest < ActiveSupport::TestCase
 
   test "unit_names_by_curriculum_umbrella returns the correct unit names" do
     assert_equal(
-      ["20-hour", @csf_unit.name, @csf_unit_2019.name],
+      [@csf_unit.name, @csf_unit_2019.name],
       Unit.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSF)
     )
     assert_equal(
@@ -2621,21 +2641,44 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'hoc_2014_unit returns the hourofcode unit when it is seeded' do
-    assert_equal Unit::HOC_NAME, Unit.hoc_2014_unit.name
+    hourofcode = create(:script, name: Unit::HOC_NAME)
+    assert_equal hourofcode, Unit.hoc_2014_unit
   end
 
   test 'hoc_2014_unit falls back to ui-test-hourofcode in dev/test when hourofcode is not seeded' do
-    Unit.find_by(name: Unit::HOC_NAME).delete
     ui_test_hoc = create(:script, name: Unit::UI_TEST_HOC_NAME)
     assert_equal ui_test_hoc, Unit.hoc_2014_unit
   end
 
   test 'hoc_2014_unit does not fall back to ui-test-hourofcode in production' do
-    Unit.find_by(name: Unit::HOC_NAME).delete
     create(:script, name: Unit::UI_TEST_HOC_NAME)
     with_rack_env(:production) do
       assert_raises(ActiveRecord::RecordNotFound) {Unit.hoc_2014_unit}
     end
+  end
+
+  test 'lesson_tutor_available? is true for AIF and AID student courses' do
+    %w[AIF AID].each_with_index do |initiative, i|
+      unit_group = create(:single_unit_course, :with_course_offering, family_name: "ai-tutor-#{i}", version_year: '2026')
+      unit_group.course_version.course_offering.update!(marketing_initiative: initiative)
+      assert unit_group.first_unit.lesson_tutor_available?, "expected #{initiative} course to offer the lesson tutor"
+    end
+  end
+
+  test 'lesson_tutor_available? is false for non-AI course offerings' do
+    unit_group = create(:single_unit_course, :with_course_offering, family_name: 'not-ai', version_year: '2026')
+    unit_group.course_version.course_offering.update!(marketing_initiative: 'CSD')
+    refute unit_group.first_unit.lesson_tutor_available?
+  end
+
+  test 'lesson_tutor_available? is false for PL courses even with an AI marketing initiative' do
+    unit_group = create(:single_unit_course, :pl_course, :with_course_offering, family_name: 'ai-pl', version_year: '2026')
+    unit_group.course_version.course_offering.update!(marketing_initiative: 'AIF')
+    refute unit_group.first_unit.lesson_tutor_available?
+  end
+
+  test 'lesson_tutor_available? is false for a unit with no course version' do
+    refute create(:unit).lesson_tutor_available?
   end
 
   private def has_unlaunched_unit?(units)

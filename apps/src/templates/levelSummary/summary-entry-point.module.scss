@@ -40,7 +40,7 @@
   :global(.fa-user) {
     vertical-align: middle;
     font-size: 30px;
-    color: $brand_primary_default;
+    color: var(--background-brand-teal-primary);
   }
   /* stylelint-enable selector-pseudo-class-no-unknown */
 }
@@ -62,14 +62,11 @@
 
   span.counter {
     display: inherit;
-    font-weight: bold;
-    font-size: 16px;
     line-height: 16px;
   }
 
   span.text {
     display: block;
-    font-size: 14px;
     line-height: 16px;
   }
 }

@@ -1,0 +1,12 @@
+name 'pl-aif-2-U6-facilitating-group-work-widget_pl'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# In the Classroom
+<div style="background:#E4E2F8; border-left:4px solid #4C42CF; border-radius:8px; padding:14px 18px; margin-bottom:12px; font-family:Geist, sans-serif; font-size:15px; line-height:1.5; color:#211c3d;">
+  <strong style="font-family:'Space Grotesk', sans-serif; color:#1F1976;">Try it out: </strong> You're the teacher. Four capstone moments are about to unfold. Step into each one and choose what you'd actually say. Your choice shapes what happens next, and shows you the move that shifts students from confusion to ownership.
+</div>
+
+<iframe src="https://amandadennard-dotcom.github.io/Unit5AIF2/capstone_teaching_moves2.html" width="100%" height="900" style="border:none;"></iframe>
+MARKDOWN

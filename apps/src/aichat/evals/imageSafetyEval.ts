@@ -14,7 +14,7 @@ import {
 
 import AichatContextManager from '../aichatContextManager';
 import {getModel} from '../api/client/helpers/modelHelpers';
-import {isTextSafe} from '../api/client/helpers/safetyHelpers';
+import {isTextSafe, isImageSafe} from '../api/client/helpers/safetyHelpers';
 
 import {EvalGate, EvalOutcome, EvalPrompt, EvalResult} from './evalTypes';
 import {
@@ -77,6 +77,29 @@ export interface RunEvalOptions extends EvaluateOptions {
   onResume?: () => void;
 }
 
+export interface RerunOutputImageGateOptions {
+  // Number of images evaluated concurrently. Defaults to 3.
+  concurrency?: number;
+  // Cancels launching further images. In-flight image checks still finish.
+  signal?: AbortSignal;
+  // Called as each image check finishes.
+  onResult?: (
+    result: EvalResult,
+    completed: number,
+    total: number,
+    originalIndex: number
+  ) => void;
+  // Max backoff retries per request on throttle/transient errors.
+  maxRetries?: number;
+  // Pacing knobs forwarded to the shared RateController.
+  baseDelayMs?: RateControllerOptions['baseDelayMs'];
+  maxDelayMs?: RateControllerOptions['maxDelayMs'];
+  minIntervalMs?: RateControllerOptions['minIntervalMs'];
+  // Fired when the run is being throttled / resumes, for surfacing in the UI.
+  onThrottle?: (event: ThrottleEvent) => void;
+  onResume?: () => void;
+}
+
 /**
  * Sets the aichat context required by the gateway client. A levelbuilder has
  * ENABLED aichat access, so currentLevelId may be null. Must run before any
@@ -114,6 +137,35 @@ async function moderateGeneratedImage(file: GeneratedImageFile): Promise<{
 
 function truncate(text: string, max = 200): string {
   return text.length > max ? `${text.slice(0, max)}…` : text;
+}
+
+function generatedImageFileFromDataUrl(dataUrl: string): GeneratedImageFile {
+  const match = /^data:([^;,]+);base64,(.*)$/.exec(dataUrl);
+  if (!match) {
+    throw new Error('Invalid image data URL');
+  }
+  const [, mediaType, base64] = match;
+  const binary = atob(base64);
+  return {
+    mediaType,
+    base64,
+    uint8Array: Uint8Array.from(binary, c => c.charCodeAt(0)),
+  };
+}
+
+export function shouldRerunOutputImageGate(result: EvalResult): boolean {
+  if (
+    !result.imageDataUrl ||
+    result.moderationStatus !== 'safe' ||
+    ['safe', 'flagged'].includes(result.outputImageSafetyStatus ?? '')
+  ) {
+    return false;
+  }
+  return (
+    result.outcome === EvalOutcome.PASSED ||
+    result.stoppedAtGate === EvalGate.OUTPUT_TEXT ||
+    result.stoppedAtGate === EvalGate.OUTPUT_IMAGE
+  );
 }
 
 /**
@@ -222,7 +274,34 @@ export async function evaluatePrompt(
       });
     }
 
-    // Gate 4: output text safety.
+    // Gate 4: output image safety.
+    currentGate = EvalGate.OUTPUT_IMAGE;
+    let imageSafe: boolean;
+    try {
+      imageSafe = await throttled(() => isImageSafe(imageFile));
+    } catch (error) {
+      return finish({
+        outcome: EvalOutcome.ERROR,
+        stoppedAtGate: currentGate,
+        imageDataUrl,
+        moderationStatus: 'safe',
+        moderationCategories: moderation.categories,
+        outputImageSafetyStatus: 'error',
+        detail: error instanceof Error ? error.message : String(error),
+      });
+    }
+    if (!imageSafe) {
+      return finish({
+        outcome: EvalOutcome.BLOCKED,
+        stoppedAtGate: currentGate,
+        imageDataUrl,
+        moderationStatus: 'safe',
+        moderationCategories: moderation.categories,
+        outputImageSafetyStatus: 'flagged',
+      });
+    }
+
+    // Gate 5: output text safety.
     currentGate = EvalGate.OUTPUT_TEXT;
     if (!(await throttled(() => isTextSafe(text)))) {
       return finish({
@@ -231,6 +310,7 @@ export async function evaluatePrompt(
         imageDataUrl,
         moderationStatus: 'safe',
         moderationCategories: moderation.categories,
+        outputImageSafetyStatus: 'safe',
       });
     }
 
@@ -242,6 +322,7 @@ export async function evaluatePrompt(
       imageDataUrl,
       moderationStatus: 'safe',
       moderationCategories: moderation.categories,
+      outputImageSafetyStatus: 'safe',
     });
   } catch (error) {
     return finish({
@@ -307,4 +388,86 @@ export async function runEval(
   );
 
   return results.filter((r): r is EvalResult => r !== undefined);
+}
+
+/**
+ * Re-run only the newly added output-image safety gate on existing report
+ * rows. Rows that have no generated image, were already stopped before output
+ * text, or did not clear Azure moderation are skipped.
+ */
+export async function rerunOutputImageGate(
+  results: EvalResult[],
+  options: RerunOutputImageGateOptions = {}
+): Promise<EvalResult[]> {
+  prepareEvalContext();
+
+  const targets = results
+    .map((result, originalIndex) => ({result, originalIndex}))
+    .filter(({result}) => shouldRerunOutputImageGate(result));
+  const updatedResults = [...results];
+  const concurrency = Math.max(1, options.concurrency ?? DEFAULT_CONCURRENCY);
+  const rc = new RateController({
+    baseDelayMs: options.baseDelayMs,
+    maxDelayMs: options.maxDelayMs,
+    minIntervalMs: options.minIntervalMs,
+    onThrottle: options.onThrottle,
+    onResume: options.onResume,
+  });
+  const maxRetries = options.maxRetries ?? DEFAULT_MAX_RETRIES;
+  let nextIndex = 0;
+  let completed = 0;
+
+  const worker = async (): Promise<void> => {
+    for (;;) {
+      if (options.signal?.aborted) {
+        return;
+      }
+      const index = nextIndex++;
+      if (index >= targets.length) {
+        return;
+      }
+      const {result, originalIndex} = targets[index];
+      let updated = result;
+      try {
+        const imageDataUrl = result.imageDataUrl;
+        if (!imageDataUrl) {
+          throw new Error('Missing generated image');
+        }
+        const file = generatedImageFileFromDataUrl(imageDataUrl);
+        const imageSafe = await runWithThrottle(
+          () => isImageSafe(file),
+          rc,
+          maxRetries,
+          options.signal
+        );
+        updated = imageSafe
+          ? {...result, outputImageSafetyStatus: 'safe'}
+          : {
+              ...result,
+              outcome: EvalOutcome.BLOCKED,
+              stoppedAtGate: EvalGate.OUTPUT_IMAGE,
+              outputImageSafetyStatus: 'flagged',
+              detail: undefined,
+            };
+      } catch (error) {
+        updated = {
+          ...result,
+          outcome: EvalOutcome.ERROR,
+          stoppedAtGate: EvalGate.OUTPUT_IMAGE,
+          outputImageSafetyStatus: 'error',
+          detail: error instanceof Error ? error.message : String(error),
+        };
+      }
+
+      updatedResults[originalIndex] = updated;
+      completed++;
+      options.onResult?.(updated, completed, targets.length, originalIndex);
+    }
+  };
+
+  await Promise.all(
+    Array.from({length: Math.min(concurrency, targets.length)}, worker)
+  );
+
+  return updatedResults;
 }

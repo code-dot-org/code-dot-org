@@ -227,6 +227,7 @@ Dashboard::Application.routes.draw do
           get 'available_participant_types'
           get 'require_captcha'
           get 'assigned_essential_ai_dependency'
+          get 'suggested_lessons'
         end
         collection do
           get 'demo/presets', action: 'presets', as: 'presets'
@@ -680,6 +681,12 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    get '/scrapbook', to: 'scrapbook#show'
+    # :token is an urlsafe-base64 signed token (no dots/slashes), so it needs no
+    # constraint. It carries the image's identity and authorization, letting an
+    # <img> tag load the image without relying on the session cookie.
+    get '/scrapbook/images/:token', to: 'scrapbook#image'
+
     get '/beta', to: redirect('/')
 
     get '/hoc/reset', to: 'script_levels#reset', script_id: Unit::HOC_NAME, as: 'hoc_reset'
@@ -846,10 +853,15 @@ Dashboard::Application.routes.draw do
 
     post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
-    # Experiments are get requests so that a user can click on a link to join or leave an experiment
+    get '/experiments', to: 'experiments#index'
+
+    # The set/disable experiment routes are state-mutating GETs, kept only so
+    # they can be clickable links in emails. Use them nowhere else; the
+    # /experiments page leaves experiments via the POST route.
     resource :experiments, only: [] do
       get 'set_single_user_experiment/:experiment_name', action: :set_single_user_experiment
       get 'disable_single_user_experiment/:experiment_name', action: :disable_single_user_experiment
+      post 'leave/:experiment_name', action: :leave
     end
 
     get '/peer_reviews/dashboard', to: 'peer_reviews#dashboard'
@@ -1112,6 +1124,9 @@ Dashboard::Application.routes.draw do
 
     namespace :api do
       namespace :v1 do
+        resources :scrapbook_entries, only: [:create, :index, :destroy] do
+          post :image, on: :collection
+        end
         concerns :api_v1_pd_routes
         concerns :section_api_routes
 
@@ -1432,6 +1447,10 @@ Dashboard::Application.routes.draw do
     post '/aichat_events/submit_teacher_feedback', to: 'aichat_events#submit_teacher_feedback'
     get '/aichat_events/chat_history', to: 'aichat_events#chat_history'
 
+    # Lab2 Sprite Lab scenes UI variant: cross-project scene jumps.
+    get '/sprite_lab2/section_scenes', to: 'sprite_lab2#section_scenes'
+    get '/sprite_lab2/external_scenes', to: 'sprite_lab2#external_scenes'
+
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 
     resources :ai_interaction_feedback, only: [:create]
@@ -1452,6 +1471,8 @@ Dashboard::Application.routes.draw do
     resources :practice_problems, only: [:index, :show]
 
     resources :challenges, only: [:index, :show]
+    resources :challenge_responses, only: [:create, :show]
+    resources :challenge_response_assets, only: [:show]
 
     resources :aidiff_exit_tickets, only: [:index, :update, :create, :show]
     resources :aidiff_lesson_hooks, only: [:index, :update, :create, :show]

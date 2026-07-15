@@ -32,3 +32,14 @@ export async function waitUntilStable(locator: Locator): Promise<void> {
     expect(settled, 'element still moving or not laid out').toBe(true);
   }).toPass({intervals: [120], timeout: 5_000});
 }
+
+/** Settle fonts and paint, then optionally await layout stability on a locator. */
+export async function waitForVisualStability(
+  page: Page,
+  locator?: Locator,
+): Promise<void> {
+  await settle(page);
+  if (locator) {
+    await waitUntilStable(locator);
+  }
+}

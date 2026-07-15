@@ -3,6 +3,11 @@ require 'base64'
 
 class CertificatesControllerTest < ActionController::TestCase
   setup_all do
+    # Production always has the hourofcode course; create it so the batch
+    # default is exercised both with it present and, via
+    # destroy_hourofcode_course, absent.
+    create_hourofcode_unit_and_levels
+
     @teacher = create(:teacher)
     @teacher.freeze
   end
@@ -103,8 +108,8 @@ class CertificatesControllerTest < ActionController::TestCase
 
   # Simulate an environment (e.g. UI tests) with no hourofcode course.
   # find_matching_course_version resolves via the UnitGroup, so destroying it
-  # is enough. The hourofcode Unit is left in place for the layout header,
-  # which resolves Unit.hoc_2014_unit independently of the code under test.
+  # is enough; clear the unit's original_unit_group FK first so the destroy
+  # succeeds.
   def destroy_hourofcode_course
     Unit.find_by_name('hourofcode').update_column(:original_unit_group_id, nil)
     UnitGroup.find_by_name('hourofcode').destroy

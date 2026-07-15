@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-29 17:04:46 UTC",
+    "serialized_at": "2026-07-09 22:30:17 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -628,6 +628,24 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground"
       }
+    },
+    {
+      "key": "Lesson 1: Welcome to Web Apps",
+      "name": "Lesson 1: Welcome to Web Apps",
+      "absolute_position": 32,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 32,
+      "properties": {
+        "overview": "**How do web apps shape our daily lives?**\n\nIn this lesson, students build and test a paper prototype of a web app, then compare their designs with classmates. What they discover is the fun part: without any instructions, most groups make surprisingly similar choices about where to put things. That's the lesson's central insight — layout patterns aren't random, they're intentional design decisions that designers make to guide how users think and move. Students leave with names for the structural components they've been using all along and an early sense that they've already been thinking like designers.",
+        "preparation": "- Print copies of the Paper App Prototype Activity Guides (1 per student)\n- Print and cut mystery component sets (1 per pair)\n- Print copies of the Unit Guides (1 per student)\n- Provide tape or glue (1 per pair)",
+        "student_overview": "**How do web apps shape our daily lives?**\n\nHave you ever opened a brand new app and immediately knew where to look for the menu? Or tapped exactly where you expected a button to be? Today you're going to find out why by building your own app out of paper. You'll design a layout, test it with a classmate, and probably discover something surprising along the way: the choices you make on your own look a lot like the apps you already love. That's not a coincidence. That's design."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Welcome to Web Apps",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground"
+      }
     }
   ],
   "lesson_activities": [
@@ -951,6 +969,48 @@
       "seeding_key": {
         "lesson_activity.key": "889092de-266a-4959-8ef5-177592f16b97",
         "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground"
+      }
+    },
+    {
+      "key": "6768bf25-6bfc-4f2b-b4b6-843d3b90e9e6",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6768bf25-6bfc-4f2b-b4b6-843d3b90e9e6",
+        "lesson.key": "Lesson 1: Welcome to Web Apps",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground"
+      }
+    },
+    {
+      "key": "c19a3fa5-78fa-43e6-bfbe-8629abaab316",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c19a3fa5-78fa-43e6-bfbe-8629abaab316",
+        "lesson.key": "Lesson 1: Welcome to Web Apps",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground"
+      }
+    },
+    {
+      "key": "dc83194f-456f-4893-b7c5-bbb6e8478807",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dc83194f-456f-4893-b7c5-bbb6e8478807",
+        "lesson.key": "Lesson 1: Welcome to Web Apps",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "angelina-playground"
       }
@@ -1697,6 +1757,252 @@
       "seeding_key": {
         "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b",
         "lesson_activity.key": "889092de-266a-4959-8ef5-177592f16b97"
+      }
+    },
+    {
+      "key": "f364599a-23d5-4fe1-a0b8-dd223501fddd",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** The goal is to help students recognize that Web Apps are interactive systems defined by their structure and response, regardless of how they are accessed. It shifts their focus from \"software icons\" to the design patterns (like menus and buttons) that make those apps usable across different devices.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students a moment to jot down their responses. Have students share with a partner and then call on a few volunteers to share with the class. As students respond, write key verbs on the board (e.g., message, buy, upload, search, post, edit).\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen for students mentioning specific actions like \"ordering food,\" \"checking grades,\" or messaging friends\" rather than app names. If students get stuck, prompt with: \"Could you still search? Still message? Still buy something?\"",
+        "name": "The App-Less Day"
+      },
+      "seeding_key": {
+        "activity_section.key": "f364599a-23d5-4fe1-a0b8-dd223501fddd",
+        "lesson_activity.key": "6768bf25-6bfc-4f2b-b4b6-843d3b90e9e6"
+      }
+    },
+    {
+      "key": "89e9b876-4c46-4394-91b4-cddf1090bc53",
+      "position": 2,
+      "properties": {
+        "description": "Notice that even without installing an app, you still expect to message, search, post, or buy. That's because what matters isn't the icon, it's the interaction.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students focus on the app itself, redirect with: \"What are you actually doing in that app?\" or \"What action are you trying to complete.\""
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "89e9b876-4c46-4394-91b4-cddf1090bc53",
+        "lesson_activity.key": "6768bf25-6bfc-4f2b-b4b6-843d3b90e9e6"
+      }
+    },
+    {
+      "key": "8a8af676-87d4-4ee7-977e-eb540b6ae85c",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8a8af676-87d4-4ee7-977e-eb540b6ae85c",
+        "lesson_activity.key": "6768bf25-6bfc-4f2b-b4b6-843d3b90e9e6"
+      }
+    },
+    {
+      "key": "6753bea4-7ab7-4627-9689-5b4700e19e4a",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the AI-Generated Design Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *web app*. Emphasize the word \"respond\" and connect it to the verbs students just shared."
+      },
+      "seeding_key": {
+        "activity_section.key": "6753bea4-7ab7-4627-9689-5b4700e19e4a",
+        "lesson_activity.key": "6768bf25-6bfc-4f2b-b4b6-843d3b90e9e6"
+      }
+    },
+    {
+      "key": "b17c73c1-2ccc-419b-8c7c-74dc1affc205",
+      "position": 5,
+      "properties": {
+        "description": "Notice you didn't say \"open Instagram.\" You said things like message, search, and post. A web app isn't just information. It responds to your actions. Today, we're going to look at how those responses are intentionally designed and how web apps affect our lives.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b17c73c1-2ccc-419b-8c7c-74dc1affc205",
+        "lesson_activity.key": "6768bf25-6bfc-4f2b-b4b6-843d3b90e9e6"
+      }
+    },
+    {
+      "key": "c84a91b5-224b-4e6b-b6c6-946e59d3a040",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "c84a91b5-224b-4e6b-b6c6-946e59d3a040",
+        "lesson_activity.key": "6768bf25-6bfc-4f2b-b4b6-843d3b90e9e6"
+      }
+    },
+    {
+      "key": "42c273e6-fdaa-4c95-b9d5-6a9f37d89578",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Help students discover that web pages are intentionally structured and that visible parts work together to support user interaction.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a set of the mystery components and a blank sheet of paper.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students choose one app purpose.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students arrange the mystery components on a blank sheet of paper to create an app layout. They should:\n1. Arrange all components on their paper.\n1. Write on the components to show what they are – for example, if a component has a button, what is the name of that button? If there is a heading, what does it say?\n1. For every button or interactive element, draw an arrow and write what the app does in response – for example, opens the menu or shows a dog's bio in a pop-up window.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Pair each group with another pair. Instruct one group to act as users while the other acts as their app.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Watch for whether students are thinking in actions and responses. Listen for moments where a tester says, \"What happens when I click this?\" If an app has no clear response, prompt designers to add one. Encourage students to think in terms of: User action → App response.",
+        "duration": "20",
+        "name": "Paper App Prototype",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If groups finish early, ask: \"Did the app actually help you complete the goal?\", \"Where did you get stuck?\", or \"What did you expect to happen that didn't?\""
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "42c273e6-fdaa-4c95-b9d5-6a9f37d89578",
+        "lesson_activity.key": "c19a3fa5-78fa-43e6-bfbe-8629abaab316"
+      }
+    },
+    {
+      "key": "ce09f4b6-c46f-46a0-ad54-2e0cf5501ba0",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ce09f4b6-c46f-46a0-ad54-2e0cf5501ba0",
+        "lesson_activity.key": "c19a3fa5-78fa-43e6-bfbe-8629abaab316"
+      }
+    },
+    {
+      "key": "2db265eb-0a79-4d76-84f2-3fd54c566d3d",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have pairs first meet with a group that chose the same app and discuss the questions in their activity guide. Then have them meet with a group that chose a different app and discuss the same questions.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As you walk around, listen for students noticing similar component placement, especially elements placed at the top or grouped together. Pay attention to moments where a user taps something and the app doesn't respond. If groups get stuck, prompt them by asking what surprised them, whether they noticed anything showing up in similar locations, or what happened when someone tried to use the layout.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time is limited, prioritize the same-app comparison — that's where pattern recognition is strongest and the \"design is intentional\" insight usually emerges."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2db265eb-0a79-4d76-84f2-3fd54c566d3d",
+        "lesson_activity.key": "c19a3fa5-78fa-43e6-bfbe-8629abaab316"
+      }
+    },
+    {
+      "key": "374d574a-9ed6-4114-a521-c1473f32390f",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "374d574a-9ed6-4114-a521-c1473f32390f",
+        "lesson_activity.key": "c19a3fa5-78fa-43e6-bfbe-8629abaab316"
+      }
+    },
+    {
+      "key": "12250dd6-979d-46f0-a43a-0c2473b589c3",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have pairs meet with a group that chose a different app and discuss the same questions.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What did you notice about where most groups placed their components?*\n- *Why do you think so many layouts looked similar?*\n- *When testing, what happened if a user clicked something the app hadn't planned for?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to recognize that their layouts were not random. Even without instructions, many groups placed components in similar locations and expected certain parts to respond when clicked. Students should begin to realize that web app structure follows shared design patterns and that interaction only works when those parts are intentionally planned."
+      },
+      "seeding_key": {
+        "activity_section.key": "12250dd6-979d-46f0-a43a-0c2473b589c3",
+        "lesson_activity.key": "c19a3fa5-78fa-43e6-bfbe-8629abaab316"
+      }
+    },
+    {
+      "key": "00ddd11a-cf17-4234-9978-d9dc88fb55e6",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Introduce pattern recognition and common components that make up web apps.",
+        "duration": "10",
+        "name": "Common App Components"
+      },
+      "seeding_key": {
+        "activity_section.key": "00ddd11a-cf17-4234-9978-d9dc88fb55e6",
+        "lesson_activity.key": "c19a3fa5-78fa-43e6-bfbe-8629abaab316"
+      }
+    },
+    {
+      "key": "064c4588-d838-435b-b162-5d3df4d2120d",
+      "position": 7,
+      "properties": {
+        "description": "What you just noticed has a name. In design and in computer science, we call this pattern recognition — spotting recurring structures that tell us something about how a system works. You weren't given instructions about where to put the navigation bar. You just knew. That's because you've seen it in the same place hundreds of times, and your brain learned the pattern. Designers use this skill when they study what works across different sites. And AI uses it too — it learns patterns from data the same way you learn patterns from experience. We'll come back to this idea throughout the unit.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "064c4588-d838-435b-b162-5d3df4d2120d",
+        "lesson_activity.key": "c19a3fa5-78fa-43e6-bfbe-8629abaab316"
+      }
+    },
+    {
+      "key": "4e518bc2-6071-4a2d-a656-87dcf5a3ee17",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *pattern recognition*. Point to the three layouts on the slide and ask students to identify what matched across all of them."
+      },
+      "seeding_key": {
+        "activity_section.key": "4e518bc2-6071-4a2d-a656-87dcf5a3ee17",
+        "lesson_activity.key": "c19a3fa5-78fa-43e6-bfbe-8629abaab316"
+      }
+    },
+    {
+      "key": "8bb71a06-92ae-4edb-b33f-1654ae85f3d9",
+      "position": 9,
+      "properties": {
+        "description": "Many of you placed this strip across the top in very similar ways. No one told you to do that. That's because you've already learned how web apps are structured just by using them. You've been thinking like designers — even if you didn't know the technical terms yet.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8bb71a06-92ae-4edb-b33f-1654ae85f3d9",
+        "lesson_activity.key": "c19a3fa5-78fa-43e6-bfbe-8629abaab316"
+      }
+    },
+    {
+      "key": "96827f72-a6bb-4cf0-ab81-881f30c5a43c",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click to reveal the first component name: Navigation Bar. Point to where it appeared in student prototypes and on the example page. Explain that it is the menu across the top of a webpage that helps users move between pages or sections and is often referred to as a nav bar.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click to reveal the next component name: Hero Section. Point to where it appeared in student prototypes and on the example page. Explain that it is the large banner near the top that introduces the main idea, with a heading, short text, and usually a \"call to action\" button.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click to reveal the next component name: Gallery Cards. Point to where it appeared in student prototypes and on the example page. Explain that these are the boxes that group related information, each with a picture, title, and short description.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click to reveal the final component name: Footer. Point to where it appeared in student prototypes and on the example page. Explain that this is the strip at the bottom that often includes contact info or copyright details.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1 to match the web app component to its description.",
+        "progression_name": "Check for Understanding",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "This level gives an immediate read on whether students can match and apply the four component names."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "96827f72-a6bb-4cf0-ab81-881f30c5a43c",
+        "lesson_activity.key": "c19a3fa5-78fa-43e6-bfbe-8629abaab316"
+      }
+    },
+    {
+      "key": "0424051a-01e7-41a3-a3dc-b0ccf9568185",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the Question of the Day in their Unit Guide.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that web apps shape our daily lives because they are interactive systems built around shared design patterns. These patterns allow us to quickly understand how to navigate, search, buy, post, and communicate. Students should understand that web apps are intentionally structured by designers to support specific actions and responses — and that this structure influences how we think, move, and make decisions online.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As students share, reinforce these connections explicitly:\n- Web apps shape our lives because they respond to what we do — they aren't just pages, they are systems.\n- We navigate quickly because designers use shared layout patterns (like navigation at the top and grouped content).\n- When structure changes, our experience changes.\n- Behind every web app is a team of humans making decisions about how it should look, feel, and function"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0424051a-01e7-41a3-a3dc-b0ccf9568185",
+        "lesson_activity.key": "dc83194f-456f-4893-b7c5-bbb6e8478807"
+      }
+    },
+    {
+      "key": "d2764059-dcdd-4665-9e86-47872ce8edc5",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d2764059-dcdd-4665-9e86-47872ce8edc5",
+        "lesson_activity.key": "dc83194f-456f-4893-b7c5-bbb6e8478807"
+      }
+    },
+    {
+      "key": "0560663e-26ed-47bf-8610-17d856cc9d05",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Think about an app you use every day. Who do you think made the decisions about how it looks and works?*\n- *What would you want to know about how that happened?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is a baseline prompt, not a comprehension check. Students don't need to get the \"right\" answer. Listen for what they already believe: some may say developers, some may say the company, some may say AI. Surface those ideas without correcting them. The goal is to capture where students are starting from — especially any assumptions that AI makes these decisions on its own — so those ideas can be revisited at the end of the unit.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.",
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "0560663e-26ed-47bf-8610-17d856cc9d05",
+        "lesson_activity.key": "dc83194f-456f-4893-b7c5-bbb6e8478807"
       }
     }
   ],
@@ -5917,6 +6223,28 @@
       "level_keys": [
         "states of matter matching"
       ]
+    },
+    {
+      "chapter": 172,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson1-level1_2026-cfu_js_2026"
+        ],
+        "lesson.key": "Lesson 1: Welcome to Web Apps",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "96827f72-a6bb-4cf0-ab81-881f30c5a43c"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson1-level1_2026-cfu_js_2026"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -7971,13 +8299,63 @@
         "script.name": "angelina-playground",
         "activity_section.key": "59eadfd3-43bd-4608-ae74-8763daf78b0b"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson1-level1_2026-cfu_js_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson1-level1_2026-cfu_js_2026"
+        ],
+        "lesson.key": "Lesson 1: Welcome to Web Apps",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "angelina-playground",
+        "activity_section.key": "96827f72-a6bb-4cf0-ab81-881f30c5a43c"
+      }
     }
   ],
   "resources": [
-
+    {
+      "name": "[KEY] AI-Generated Design Unit Guide",
+      "url": "https://docs.google.com/document/d/1wSc_2IjW_waULYQCyeD6XR-8azoO21FOf5BXgP4PnJc/edit?usp=sharing",
+      "key": "_key_ai-generated_design_unit_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai-generated_design_unit_guide"
+      }
+    },
+    {
+      "name": "AI-Generated Design Unit Guide",
+      "url": "https://docs.google.com/document/d/1Znt4C-uU4F-fVcYYlwx6qD3XcGqky9nbDbV84Kzqu5g/edit?usp=sharing",
+      "key": "ai-generated_design_unit_guide",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ai-generated_design_unit_guide"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Welcome to Web Apps",
+        "resource.key": "_key_ai-generated_design_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Welcome to Web Apps",
+        "resource.key": "ai-generated_design_unit_guide"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -7995,10 +8373,42 @@
 
   ],
   "objectives": [
-
+    {
+      "key": "4e404f44-e373-403d-955b-4487056ba0be",
+      "properties": {
+        "description": "Recognize common structural design patterns in web apps you use daily."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Welcome to Web Apps",
+        "objective.key": "4e404f44-e373-403d-955b-4487056ba0be"
+      }
+    },
+    {
+      "key": "8ec838be-5259-48eb-a7d4-768c05dffd4b",
+      "properties": {
+        "description": "Explain how intentional layout decisions shape user behavior and interaction."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Welcome to Web Apps",
+        "objective.key": "8ec838be-5259-48eb-a7d4-768c05dffd4b"
+      }
+    }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Welcome to Web Apps",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-IM-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Welcome to Web Apps",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-VD-16"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

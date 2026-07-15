@@ -24,6 +24,30 @@ module Minitest::Assertions
   include ActiveSupport::Testing::Assertions
 end
 
+# AWS documentation placeholder account, used in place of our real account
+# number so that account numbers are never committed to this public repository.
+# See https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-identifiers.html
+DUMMY_AWS_ACCOUNT_ID = '123456789012'.freeze
+
+# If +value+ is an ARN, return it with its account number replaced by the dummy
+# account; otherwise return +value+ unchanged. Parses with the AWS SDK's ARN
+# parser rather than a regular expression.
+def obfuscate_arn_account_id(value)
+  return value unless value.is_a?(String) && Aws::ARNParser.arn?(value)
+  arn = Aws::ARNParser.parse(value)
+  Aws::ARN.new(
+    partition: arn.partition,
+    service: arn.service,
+    region: arn.region,
+    account_id: DUMMY_AWS_ACCOUNT_ID,
+    resource: arn.resource
+  ).to_s
+rescue Aws::Errors::InvalidARNError
+  # arn? only checks for the "arn:" prefix, so a malformed value can still fail
+  # to parse. Leave anything unparseable untouched.
+  value
+end
+
 VCR.configure do |c|
   c.cassette_library_dir = File.expand_path 'fixtures/vcr', __dir__
   c.allow_http_connections_when_no_cassette = true
@@ -40,24 +64,53 @@ VCR.configure do |c|
       User-Agent
       Host
       Content-Type
+      Amz-Sdk-Invocation-Id
     ).each {|h| i.request.headers.delete h}
+    # X-Amz-Server-Side-Encryption-Aws-Kms-Key-Id contains the KMS key ARN,
+    # which includes our AWS account number; cassettes are committed to a
+    # public repository, so drop it.
     %w(
       X-Amz-Request-Id
       X-Amz-Id-2
+      X-Amz-Server-Side-Encryption-Aws-Kms-Key-Id
     ).each {|h| i.response.headers.delete h}
+    # Any remaining header whose value is an ARN still embeds our AWS account
+    # number; replace it with the documentation placeholder account.
+    [i.request, i.response].each do |part|
+      part.headers.each_value do |values|
+        values.map! {|v| obfuscate_arn_account_id(v)}
+      end
+    end
   end
 end
 
-# Truncate database tables to ensure repeatable tests.
-DASHBOARD_TEST_TABLES = %w(channel_tokens user_project_storage_ids projects project_commits code_review_comments code_reviews).freeze
-DASHBOARD_TEST_TABLES.each do |table|
-  # rubocop:disable CustomCops/DashboardDbUsage
-  DASHBOARD_DB[table.to_sym].delete
-  # rubocop:enable CustomCops/DashboardDbUsage
-end.freeze
+# Dashboard tables emptied before each test to ensure repeatable tests.
+DASHBOARD_TEST_TABLES = %w(channel_tokens project_storage_geos user_project_storage_ids projects project_commits code_review_comments code_reviews).freeze
 
 module SetupTest
+  # Empty the dashboard tables used by these tests and reset their
+  # AUTO_INCREMENT counters. The counters matter because auto-increment ids
+  # are embedded in the S3 paths recorded in VCR cassettes
+  # ("<dir>/<storage_id>/<project_id>/..."), so each test must start from
+  # identical counter values or playback will not match. Rolling back a transaction
+  # does not rewind the AUTO_INCREMENT counter, hence the explicit reset.
+  def self.reset_dashboard_test_tables
+    DASHBOARD_TEST_TABLES.each do |table|
+      # rubocop:disable CustomCops/DashboardDbUsage
+      DASHBOARD_DB[table.to_sym].delete
+      DASHBOARD_DB.execute("ALTER TABLE `#{table}` AUTO_INCREMENT = 1")
+      # rubocop:enable CustomCops/DashboardDbUsage
+    end
+  end
+
   def around(&block)
+    # Reset table state before the test rather than after: cleanup placed
+    # after the test body is skipped when the test fails or errors, and a
+    # single skipped reset drifts the auto-increment ids for every
+    # subsequent test in the process, which VCR then rejects as unrecorded
+    # HTTP requests.
+    SetupTest.reset_dashboard_test_tables
+
     random = Random.new(0)
     # 4 test wrappers:
     # VCR (record/replay HTTP interactions)
@@ -110,24 +163,27 @@ module SetupTest
           # rubocop:enable CustomCops/PreferMochaStubsToMinitestStub
         end
       end
-
-      # Return connection validation to default settings.
-      PEGASUS_DB.pool.connection_validation_timeout = 3600
-      DASHBOARD_DB.pool.connection_validation_timeout = 3600
       # rubocop:enable CustomCops/PegasusDbUsage
       # rubocop:enable CustomCops/DashboardDbUsage
     end
+  ensure
+    # Return connection validation to default settings. The pool only
+    # responds to this once the connection_validator extension has loaded,
+    # which the test may have failed before reaching.
+    # rubocop:disable CustomCops/PegasusDbUsage
+    # rubocop:disable CustomCops/DashboardDbUsage
+    [PEGASUS_DB, DASHBOARD_DB].each do |db|
+      db.pool.connection_validation_timeout = 3600 if db.pool.respond_to?(:connection_validation_timeout=)
+    end
+    # rubocop:enable CustomCops/PegasusDbUsage
+    # rubocop:enable CustomCops/DashboardDbUsage
 
     # Cached S3-client objects contain AWS credentials,
     # so reset them to ensure that they are not reused across tests.
     BucketHelper.s3_client = nil if defined?(BucketHelper)
     AWS::S3.s3 = nil
-
-    # Reset AUTO_INCREMENT, since it is unaffected by transaction rollback.
-    DASHBOARD_TEST_TABLES.each do |table|
-      # rubocop:disable CustomCops/DashboardDbUsage
-      DASHBOARD_DB.execute("ALTER TABLE `#{table}` AUTO_INCREMENT = 1")
-      # rubocop:enable CustomCops/DashboardDbUsage
-    end
   end
 end
+
+# Also reset at load, for tests that read these tables without SetupTest.
+SetupTest.reset_dashboard_test_tables

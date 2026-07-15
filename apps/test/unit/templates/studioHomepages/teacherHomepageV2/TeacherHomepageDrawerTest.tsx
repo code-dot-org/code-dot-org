@@ -104,6 +104,9 @@ describe('TeacherHomepageDrawer', () => {
     fetchSpy.mockImplementation((url: string) => {
       return Promise.resolve({value: mockResult, response: new Response()});
     });
+    // OnboardingChecklist checks demo-section staleness on mount; a 204 means
+    // "up to date" and keeps the check from hitting the real network.
+    jest.spyOn(HttpClient, 'get').mockResolvedValue({status: 204} as Response);
   });
 
   afterEach(() => {

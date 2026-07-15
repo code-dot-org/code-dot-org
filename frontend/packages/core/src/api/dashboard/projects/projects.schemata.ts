@@ -13,6 +13,7 @@ export const AppNames = [
   'aichat',
   'bubble_choice',
   'dance',
+  'fish',
   'music',
   'panels',
   'pythonlab',

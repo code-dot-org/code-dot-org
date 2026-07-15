@@ -1,3 +1,4 @@
+export * from './activities';
 export * from './auth';
 export * from './channels';
 export * from './courses';

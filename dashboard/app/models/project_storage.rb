@@ -28,4 +28,9 @@ class ProjectStorage < ApplicationRecord
 
   belongs_to :user, optional: true
   has_many :projects, inverse_of: :project_storage
+  has_one :geo,
+          class_name: 'ProjectStorage::Geo',
+          foreign_key: :storage_id,
+          inverse_of: :project_storage,
+          dependent: :destroy
 end

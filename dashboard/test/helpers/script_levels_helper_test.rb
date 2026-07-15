@@ -12,6 +12,15 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     create(:section, user: @teacher, script: script)
     @section = create(:section, user: @teacher, script: script)
     create(:follower, section: @section, student_user: @student)
+
+    # HOC tutorial URLs are derived from the unit name, so these tests need
+    # units with the exact tutorial names.
+    # HOC_2013_NAME ('Hour of Code') needs skip_name_format_validation because
+    # of its legacy spaces-and-capitals name.
+    [Unit::HOC_2013_NAME, Unit::FROZEN_NAME, Unit::STARWARS_NAME, Unit::ARTIST_NAME].each do |name|
+      create(:script, name: name, skip_name_format_validation: true)
+    end
+    setup_script_cache
   end
 
   test 'tracking_pixel_url' do

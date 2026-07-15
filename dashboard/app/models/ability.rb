@@ -66,6 +66,8 @@ class Ability
       PracticeProblem,
       UserPracticeProblemAttempt,
       Challenge,
+      ChallengeResponse,
+      ChallengeResponseAsset,
     ]
     cannot :index, Level
 
@@ -337,6 +339,17 @@ class Ability
       can [:index, :update, :show], UserPracticeProblemAttempt, user_id: user.id
       can [:index, :show], PracticeProblem
       can [:index, :show], Challenge
+
+      # Students create and read their own challenge responses; teachers read
+      # their students' responses (and assets).
+      can :create, ChallengeResponse
+      can :read, ChallengeResponse do |challenge_response|
+        challenge_response.user_id == user.id || user.students.exists?(id: challenge_response.user_id)
+      end
+      can :read, ChallengeResponseAsset do |asset|
+        response = asset.challenge_response
+        response.user_id == user.id || user.students.exists?(id: response.user_id)
+      end
 
       can :show, Rubric
     end
