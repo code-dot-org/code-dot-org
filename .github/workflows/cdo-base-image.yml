@@ -9,7 +9,9 @@
 # dispatch): per-arch native builds pushed to GHCR, stitched into one
 # multi-platform manifest. The weekly cron picks up ruby-slim and apt
 # security updates; it produces different bytes for the same git sha,
-# hence the date tag.
+# hence the date tag. Layers are published zstd-compressed with OCI
+# media types (pull floor: docker >= 23 / containerd >= 1.5); the
+# stitch job asserts this so a config regression fails the run.
 #
 # Cleanup: deletes untagged package versions (superseded buildcache
 # manifests). Safe because every manifest a live tag references is itself
@@ -95,12 +97,20 @@ jobs:
 
       # provenance disabled: attestation manifests would be untagged (the
       # cleanup job would delete them) and complicate the imagetools stitch.
+      #
+      # zstd layers: several times faster to decompress than gzip, which is
+      # what per-job pulls on ephemeral CI runners spend their time on.
+      # Pull floor: docker >= 23 / containerd >= 1.5 — older engines fail
+      # the pull outright. force-compression converts the layers inherited
+      # from ruby-slim too; without it, cache-restored layers pass through
+      # in whatever compression they were stored with and the output mix
+      # would depend on cache state.
       - name: Build and push per-arch image
         uses: docker/build-push-action@263435318d21b8e681c14492fe198d362a7d2c83 # v6.18.0
         with:
           context: docker/base
-          push: true
           provenance: false
+          outputs: type=image,push=true,oci-mediatypes=true,compression=zstd,compression-level=19,force-compression=true
           tags: ${{ env.IMAGE }}:git-${{ github.sha }}-${{ matrix.arch }}
           cache-from: type=registry,ref=${{ env.IMAGE }}:buildcache-${{ matrix.arch }}
           cache-to: type=registry,ref=${{ env.IMAGE }}:buildcache-${{ matrix.arch }},mode=max
@@ -131,6 +141,22 @@ jobs:
 
       - name: Inspect published manifest
         run: docker buildx imagetools inspect "$IMAGE:latest"
+
+      # Guards the exporter config above: every layer must be zstd with
+      # OCI media types. A silent fallback to gzip would still pull fine
+      # on modern engines, so only an explicit check catches it.
+      - name: Verify zstd layer media types
+        run: |
+          set -eu
+          for arch in amd64 arm64; do
+            manifest=$(docker buildx imagetools inspect --raw "$IMAGE:git-${{ github.sha }}-$arch")
+            if ! grep -q 'application/vnd.oci.image.layer.v1.tar+zstd' <<<"$manifest"; then
+              echo "::error::$arch manifest has no zstd layers"; exit 1
+            fi
+            if grep -q 'tar+gzip' <<<"$manifest"; then
+              echo "::error::$arch manifest still contains gzip layers"; exit 1
+            fi
+          done
 
   cleanup:
     name: delete untagged package versions
