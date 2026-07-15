@@ -15,6 +15,7 @@ import {
 
 import confirmDemoSectionSettings from './confirmDemoSectionSettings';
 import DemoSectionStalenessDialog from './DemoSectionStalenessDialog';
+import JitOnboardingSurveyContainer from './JitOnboardingSurveyContainer';
 import useCreateSectionTour from './useCreateSectionTour';
 import useLearnHowToEvaluateTour from './useLearnHowToEvaluateTour';
 import useReviewSyllabusTour from './useReviewSyllabusTour';
@@ -65,6 +66,9 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
   >(new Set());
   const [pendingTour, setPendingTour] = React.useState<Tour | null>(null);
   const [resetFailed, setResetFailed] = React.useState(false);
+  const [jitSurveyProps, setJitSurveyProps] = React.useState<string | null>(
+    null
+  );
 
   const stalenessCheck = React.useRef<Promise<boolean>>(Promise.resolve(false));
 
@@ -74,6 +78,18 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
       .then(names => setCompletedTourNames(new Set(names)))
       .catch(err =>
         console.error('Failed to fetch tour completion status:', err)
+      );
+  }, []);
+
+  React.useEffect(() => {
+    HttpClient.fetchJson<{props: string}>('/form/test_2/configuration')
+      .then(result => {
+        if (result.value?.props) {
+          setJitSurveyProps(result.value.props);
+        }
+      })
+      .catch(err =>
+        console.error('Failed to fetch JIT onboarding survey:', err)
       );
   }, []);
 
@@ -168,31 +184,39 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
         <div className={styles.onboardingChecklistInner}>
           <div className={styles.onboardingChecklistInnerContent}>
             {allToursCompleted ? (
-              <div className={styles.onboardingChecklistCelebration}>
-                <span
-                  aria-hidden="true"
-                  className={styles.onboardingCelebrationEmoji}
-                >
-                  🎉
-                </span>
-                <Typography variant="h4" gutterBottom>
-                  You're all set!
-                </Typography>
-                <Typography variant="body2" gutterBottom>
-                  You've explored some of the teacher tools available with
-                  CodeAI. As you continue to use CodeAI, your Teaching Assistant
-                  is always available to answer questions, modify course
-                  materials, provide professional learning and more.
-                </Typography>
-                <MuiButton
-                  type="button"
-                  variant="outlined"
-                  color="tertiary"
-                  onClick={onHide}
-                >
-                  Complete onboarding
-                </MuiButton>
-              </div>
+              <>
+                <div className={styles.onboardingChecklistCelebration}>
+                  <span
+                    aria-hidden="true"
+                    className={styles.onboardingCelebrationEmoji}
+                  >
+                    🎉
+                  </span>
+                  <Typography variant="h4" gutterBottom>
+                    You're all set!
+                  </Typography>
+                  <Typography variant="body2" gutterBottom>
+                    You've explored some of the teacher tools available with
+                    CodeAI. As you continue to use CodeAI, your Teaching
+                    Assistant is always available to answer questions, modify
+                    course materials, provide professional learning and more.
+                  </Typography>
+                  <MuiButton
+                    type="button"
+                    variant="outlined"
+                    color="tertiary"
+                    onClick={onHide}
+                  >
+                    Complete onboarding
+                  </MuiButton>
+                </div>
+                {jitSurveyProps && (
+                  <JitOnboardingSurveyContainer
+                    surveyProps={jitSurveyProps}
+                    onCompleteCallback={onHide}
+                  />
+                )}
+              </>
             ) : (
               <>
                 <Typography variant="h4">

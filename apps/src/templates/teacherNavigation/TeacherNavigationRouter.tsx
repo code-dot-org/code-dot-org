@@ -93,10 +93,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   );
   const selectedSection = useAppSelector(selectedSectionSelector);
 
-  const anyStudentHasProgress = React.useMemo(
-    () => (selectedSection ? selectedSection.anyStudentHasProgress : true),
-    [selectedSection]
-  );
+  const anyStudentHasProgress = true;
 
   const showAiChatSettings = React.useMemo(
     () => !!selectedSection,
