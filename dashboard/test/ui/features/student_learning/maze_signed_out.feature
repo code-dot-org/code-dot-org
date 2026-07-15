@@ -1,4 +1,4 @@
-Feature: Progress is saved on client side when puzzles are solved and shows up in the bubbles on the header
+Feature: Maze level tests for users that are signed out
 
 # The maze puzzles live at URL levels 4-7 of ui-test-csf lesson 1. The
 # progress steps ("for level N") index rendered bubbles, which exclude the

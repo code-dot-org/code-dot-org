@@ -1,5 +1,5 @@
 @as_student
-Feature: Progress tests for users that are signed in
+Feature: Maze level tests for users that are signed in
 
 # The maze puzzles live at URL levels 4-7 of ui-test-csf lesson 1. The
 # progress steps ("for level N") index rendered bubbles, which exclude the
