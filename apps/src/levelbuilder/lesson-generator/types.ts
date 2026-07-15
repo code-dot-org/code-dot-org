@@ -53,11 +53,109 @@ export const BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES: readonly LabType[] = [
   'sketchlab',
 ];
 
+// Per-lab prose used to compose outline prompts and enum descriptions.
+// The outline AI is only asked to place lab types listed here; adding a
+// new lab means adding a row (plus the runtime pieces in ai/ and
+// SUPPORTED_LAB_TYPES). Kept close to the type union so the two evolve
+// together.
+export interface LabTypePromptInfo {
+  // Prompt-bullet label ("Panels", "Web Lab 2", …).
+  promptLabel: string;
+  // Prompt-bullet body — one or more lines. Included verbatim as bullet
+  // continuation lines under promptLabel.
+  promptDescription: string[];
+  // Phrase used in the "Choose X for …" summary line.
+  chooseFor: string;
+}
+
+export const LAB_TYPE_INFO: Record<LabType, LabTypePromptInfo> = {
+  panels: {
+    promptLabel: 'Panels',
+    promptDescription: [
+      'a short comic-strip-like sequence used for narrative, introduction,',
+      'framing, or summarising. No coding.',
+    ],
+    chooseFor: 'explanation/narrative',
+  },
+  weblab2: {
+    promptLabel: 'Weblab2',
+    promptDescription: [
+      'a hands-on HTML/CSS/JS exercise where the student edits starter',
+      'code.',
+    ],
+    chooseFor: 'web-coding practice',
+  },
+  ailab: {
+    promptLabel: 'Ailab',
+    promptDescription: [
+      'a guided ML pipeline where the student picks a dataset, picks',
+      'features, trains a model, and inspects accuracy. Use this only when',
+      'the lesson is about data, machine learning, bias in data, or model',
+      'evaluation — not for general coding.',
+    ],
+    chooseFor: 'ML pipeline practice',
+  },
+  aichat: {
+    promptLabel: 'Aichat',
+    promptDescription: [
+      'a chat-with-an-LLM level. Pick a preset via aichatPreset: "explore"',
+      'for free-form chat with a persona bot, "tutor" for a skill-guiding',
+      'bot, "evaluation" for a bot that evaluates the student\'s work,',
+      '"domainExpert" for a subject-constrained bot, "botBuilder" when the',
+      'student designs their own bot.',
+    ],
+    chooseFor: 'talking-to-AI practice',
+  },
+  sketchlab: {
+    promptLabel: 'Sketchlab',
+    promptDescription: [
+      'an open-ended drawing / annotation level on a blank canvas. Use for',
+      'diagramming, marking-up, or free-form visual reflection. Content',
+      'will be a STUB: only the instructions are generated, the sketch',
+      'canvas itself is left blank for the student to draw.',
+    ],
+    chooseFor: 'drawing / annotation exercises',
+  },
+  multi: {
+    promptLabel: 'Multi',
+    promptDescription: [
+      'a multiple-choice question. Use as a quick check-for-understanding',
+      'after a concept has been introduced. Content will be a STUB the',
+      'curriculum author rewrites.',
+    ],
+    chooseFor: 'short formative assessments',
+  },
+  match: {
+    promptLabel: 'Match',
+    promptDescription: [
+      'a matching exercise. Use to connect related concepts, terms-to-',
+      'definitions, etc. Content will be a STUB.',
+    ],
+    chooseFor: 'short formative assessments',
+  },
+  bubbleChoice: {
+    promptLabel: 'BubbleChoice',
+    promptDescription: [
+      'a picker page where the student picks one of 2-6 sublevel',
+      'activities to try. Use when the lesson wants to offer parallel',
+      'options (e.g. "pick a project theme") rather than a single linear',
+      'step. REQUIRED: emit a `sublevels` array with 2-6 entries in the',
+      'order the student sees them.',
+    ],
+    chooseFor: 'student choice between parallel activities',
+  },
+};
+
 const LAB_TYPE_BY_RAILS: Record<string, LabType> = Object.fromEntries(
   (Object.entries(RAILS_TYPE_BY_LAB) as [LabType, string][]).map(
     ([lab, sti]) => [sti, lab]
   )
 );
+
+// "one, two, three" — for lab-type list phrases in prompts and describes.
+export function formatLabTypeList(labs: readonly LabType[]): string {
+  return labs.map(t => `"${t}"`).join(', ');
+}
 
 // ScriptLevel#summarize_for_lesson_edit returns level.type as the Rails
 // STI name; look it up in the inverted RAILS_TYPE_BY_LAB map. Case-

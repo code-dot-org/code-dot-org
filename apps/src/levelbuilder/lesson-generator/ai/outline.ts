@@ -12,6 +12,8 @@ import {
 } from '../../curriculum-generator/ai/shared';
 import {
   BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES,
+  formatLabTypeList,
+  LAB_TYPE_INFO,
   LabType,
   SUPPORTED_LAB_TYPES,
 } from '../types';
@@ -37,7 +39,9 @@ const sublevelSchema = z.object({
       'Short kebab-case identifier unique within the bubble choice parent, e.g. "art" or "music". No prefix; that is added separately.'
     ),
   labType: sublevelLabTypeEnum.describe(
-    'One of "panels", "weblab2", "ailab", "aichat", "sketchlab". Nested bubbleChoice is not allowed, and multi/match make poor bubble-choice options.'
+    `One of ${formatLabTypeList(
+      BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES
+    )}. Nested bubbleChoice is not allowed, and multi/match make poor bubble-choice options.`
   ),
   description: z
     .string()
@@ -62,7 +66,9 @@ const lessonOutlineSchema = Output.object({
               'Short kebab-case identifier unique within the lesson, e.g. "intro-1" or "build-form". No prefix; that is added separately.'
             ),
           labType: supportedLabTypeEnum.describe(
-            '"panels" for narrative / explanation panels with overlay text on illustrations. "weblab2" for hands-on HTML/CSS/JS coding levels. "ailab" for guided machine-learning levels where the student picks a dataset, picks features, trains a model, and inspects the result. "aichat" for chat-with-an-LLM levels (set `aichatPreset` to pick which preset to use). "sketchlab" for open-ended drawing / annotation levels on a blank canvas.'
+            `One of ${formatLabTypeList(
+              SUPPORTED_LAB_TYPES
+            )}. See the prompt for what each is used for.`
           ),
           description: z
             .string()
@@ -113,6 +119,34 @@ export interface OutlineLevel {
 
 // ctx.targetProject shapes the plan toward a specific final-app
 // destination when set.
+// Prompt-side lab-type bullets, derived from LAB_TYPE_INFO so they can't
+// drift from the union. BubbleChoice adds a suffix line naming the
+// allowed sublevel types.
+function labTypeBullets(): string[] {
+  return SUPPORTED_LAB_TYPES.flatMap(labType => {
+    const info = LAB_TYPE_INFO[labType];
+    const first = `  - ${info.promptLabel}: ${info.promptDescription[0]}`;
+    const rest = info.promptDescription.slice(1).map(line => `    ${line}`);
+    const suffix =
+      labType === 'bubbleChoice'
+        ? [
+            `    Sublevel labType is limited to ${formatLabTypeList(
+              BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES
+            )}.`,
+          ]
+        : [];
+    return [first, ...rest, ...suffix];
+  });
+}
+
+// "Choose X for Y, ..." summary, in SUPPORTED_LAB_TYPES order.
+function chooseForSummary(): string {
+  return SUPPORTED_LAB_TYPES.map(
+    labType =>
+      `${LAB_TYPE_INFO[labType].promptLabel} for ${LAB_TYPE_INFO[labType].chooseFor}`
+  ).join(', ');
+}
+
 export async function generateLessonOutline(
   ctx: LessonContext
 ): Promise<OutlineLevel[]> {
@@ -123,51 +157,12 @@ export async function generateLessonOutline(
     'outline. Break the outline below into a sequence of',
     '2 to 8 levels that, in order, take the student through the learning',
     'experience. Each level is one of:',
-    '  - Panels: a short comic-strip-like sequence used for narrative,',
-    '    introduction, framing, or summarising. No coding.',
-    '  - Weblab2: a hands-on HTML/CSS/JS exercise where the student edits',
-    '    starter code.',
-    '  - Ailab: a guided ML pipeline where the student picks a dataset,',
-    '    picks features, trains a model, and inspects accuracy. Use this',
-    '    only when the lesson is about data, machine learning, bias in',
-    '    data, or model evaluation — not for general coding.',
-    '  - Aichat: a chat-with-an-LLM level. Pick a preset via aichatPreset:',
-    '    "explore" for free-form chat with a persona bot, "tutor" for a',
-    '    skill-guiding bot, "evaluation" for a bot that evaluates the',
-    '    student\'s work, "domainExpert" for a subject-constrained bot,',
-    '    "botBuilder" when the student designs their own bot.',
-    '  - Sketchlab: an open-ended drawing / annotation level on a blank',
-    '    canvas. Use for diagramming, marking-up, or free-form visual',
-    '    reflection. Content will be a STUB: only the instructions are',
-    '    generated, the sketch canvas itself is left blank for the',
-    '    student to draw.',
-    '  - Multi: a multiple-choice question. Use as a quick check-for-',
-    '    understanding after a concept has been introduced. Content will',
-    '    be a STUB the curriculum author rewrites.',
-    '  - Match: a matching exercise. Use to connect related concepts,',
-    '    terms-to-definitions, etc. Content will be a STUB.',
-    '  - BubbleChoice: a picker page where the student picks one of 2-6',
-    '    sublevel activities to try. Use when the lesson wants to offer',
-    '    parallel options (e.g. "pick a project theme") rather than a',
-    '    single linear step. REQUIRED: emit a `sublevels` array with 2-6',
-    '    entries in the order the student sees them. Sublevel labType is',
-    '    limited to panels/weblab2/ailab/aichat/sketchlab.',
+    ...labTypeBullets(),
     '',
-    'Choose Panels for explanation/narrative, Weblab2 for web-coding',
-    'practice, Ailab for ML pipeline practice, Aichat for talking-to-AI',
-    'practice, Sketchlab for drawing / annotation exercises, Multi/Match',
-    'for short formative assessments, and BubbleChoice when the lesson',
-    'benefits from student choice. A typical lesson alternates: Panels',
-    'intro -> practice -> assessment -> Panels reflection, but you can',
-    'deviate when the outline asks. Never open with an assessment — pair',
-    'it with a concept the student has already seen.',
-    '',
-    'For each level, return:',
-    '  - id: a short kebab-case identifier (e.g. "intro-1", "build-form")',
-    '  - labType: "panels" or "weblab2"',
-    '  - description: a 1-3 sentence description of what the level should',
-    '    teach or do. This becomes the AI prompt that builds the actual',
-    '    level content, so be concrete.',
+    `Choose ${chooseForSummary()}. A typical lesson alternates: Panels intro`,
+    '-> practice -> assessment -> Panels reflection, but you can deviate',
+    'when the outline asks. Never open with an assessment — pair it with a',
+    'concept the student has already seen.',
     ...(ctx.unitOutline
       ? [
           '',
