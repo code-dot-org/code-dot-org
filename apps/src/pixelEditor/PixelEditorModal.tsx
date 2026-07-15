@@ -251,6 +251,27 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
     }
   }, []);
 
+  // Abandon any in-progress stroke or shape drag. Losing the window
+  // mid-press swallows the pointerup (and pointercancel isn't reliably
+  // fired), so without this, returning to the editor keeps painting with
+  // no button held.
+  const cancelInteraction = useCallback(() => {
+    if (!drawingRef.current) {
+      return;
+    }
+    drawingRef.current = false;
+    lastPointRef.current = null;
+    shapeStartRef.current = null;
+    const preview = previewRef.current;
+    preview?.getContext('2d')?.clearRect(0, 0, preview.width, preview.height);
+    repaint();
+  }, [repaint]);
+
+  useEffect(() => {
+    window.addEventListener('blur', cancelInteraction);
+    return () => window.removeEventListener('blur', cancelInteraction);
+  }, [cancelInteraction]);
+
   const undo = useCallback(() => {
     const previous = undoStackRef.current.pop();
     if (!previous) {
@@ -590,6 +611,12 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       if (!drawingRef.current) {
         return;
       }
+      if ((e.buttons & 1) === 0) {
+        // The press ended somewhere we couldn't see it (window switch mid
+        // stroke); a buttonless move must not paint.
+        cancelInteraction();
+        return;
+      }
       const p = toPixel(e);
       const backing = backingRef.current;
       const preview = previewRef.current;
@@ -628,7 +655,16 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
         );
       }
     },
-    [tool, brushSize, color, toPixel, withRaster, drawShape, pickColorAt]
+    [
+      tool,
+      brushSize,
+      color,
+      toPixel,
+      withRaster,
+      drawShape,
+      pickColorAt,
+      cancelInteraction,
+    ]
   );
 
   const handlePointerUp = useCallback(
