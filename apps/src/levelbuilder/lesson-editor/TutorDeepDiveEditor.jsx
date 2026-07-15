@@ -3,6 +3,8 @@ import React, {useState} from 'react';
 
 import TutorVideoDialog from './TutorVideoDialog';
 
+import moduleStyles from './tutorDeepDiveEditor.module.scss';
+
 // Authoring surface for a lesson's AI Tutor "deep dive" content. Videos are
 // managed here today; practice problems will slot in as a sibling panel within
 // the same collapsible section without restructuring.
@@ -82,32 +84,32 @@ export default function TutorDeepDiveEditor({
   return (
     <div>
       <h3>Videos</h3>
-      <table style={styles.table}>
+      <table className={moduleStyles.table}>
         <thead>
           <tr>
-            <th style={{...styles.cell, width: '20%'}}>Key</th>
-            <th style={{...styles.cell, width: '40%'}}>Description</th>
-            <th style={{...styles.cell, width: '30%'}}>Objectives</th>
-            <th style={{...styles.cell, width: '10%'}}>Actions</th>
+            <th>Key</th>
+            <th>Description</th>
+            <th>Objectives</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
           {videos.length === 0 ? (
             <tr>
-              <td colSpan={4} style={{...styles.cell, ...styles.empty}}>
+              <td colSpan={4} className={moduleStyles.empty}>
                 No videos yet.
               </td>
             </tr>
           ) : (
             videos.map(video => (
               <tr key={video.key}>
-                <td style={styles.cell}>{video.key}</td>
-                <td style={styles.cell}>{video.description}</td>
-                <td style={styles.cell}>
+                <td>{video.key}</td>
+                <td>{video.description}</td>
+                <td>
                   {(video.objectiveIds || []).length === 0 ? (
-                    <em style={styles.empty}>None</em>
+                    <em className={moduleStyles.empty}>None</em>
                   ) : (
-                    <ul style={styles.objectiveList}>
+                    <ul className={moduleStyles.objectiveList}>
                       {video.objectiveIds.map(id => (
                         <li key={id}>
                           {objectiveDescriptionsById.get(id) || `#${id}`}
@@ -116,10 +118,10 @@ export default function TutorDeepDiveEditor({
                     </ul>
                   )}
                 </td>
-                <td style={styles.cell}>
+                <td>
                   <button
                     type="button"
-                    style={styles.actionButton}
+                    className={moduleStyles.actionButton}
                     aria-label={`Edit ${video.key}`}
                     onClick={() => openEdit(video)}
                   >
@@ -127,7 +129,7 @@ export default function TutorDeepDiveEditor({
                   </button>
                   <button
                     type="button"
-                    style={styles.actionButton}
+                    className={moduleStyles.actionButton}
                     aria-label={`Remove ${video.key}`}
                     onClick={() => handleRemove(video)}
                   >
@@ -139,13 +141,12 @@ export default function TutorDeepDiveEditor({
           )}
         </tbody>
       </table>
-      <button type="button" onClick={openAdd} style={styles.addButton}>
-        <i
-          className="fa-solid fa-plus"
-          style={{marginRight: 7}}
-          aria-hidden="true"
-        />{' '}
-        Add Video
+      <button
+        type="button"
+        onClick={openAdd}
+        className={moduleStyles.addButton}
+      >
+        <i className="fa-solid fa-plus" aria-hidden="true" /> Add Video
       </button>
 
       <TutorVideoDialog
@@ -166,43 +167,4 @@ TutorDeepDiveEditor.propTypes = {
   lessonId: PropTypes.number.isRequired,
   objectives: PropTypes.arrayOf(PropTypes.object).isRequired,
   initialVideos: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
-
-const styles = {
-  table: {
-    width: '100%',
-    borderCollapse: 'collapse',
-  },
-  cell: {
-    border: '1px solid #ccc',
-    padding: 7,
-    textAlign: 'left',
-    verticalAlign: 'top',
-  },
-  empty: {
-    fontStyle: 'italic',
-    color: '#555',
-    padding: 7,
-  },
-  actionButton: {
-    background: 'none',
-    border: 'none',
-    cursor: 'pointer',
-    padding: 5,
-  },
-  objectiveList: {
-    margin: 0,
-    paddingLeft: 18,
-  },
-  addButton: {
-    background: '#eee',
-    border: '1px solid #ddd',
-    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
-    borderRadius: 3,
-    fontSize: 14,
-    padding: 7,
-    textAlign: 'center',
-    marginTop: 10,
-    marginLeft: 0,
-  },
 };
