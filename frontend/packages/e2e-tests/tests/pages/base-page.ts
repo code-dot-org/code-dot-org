@@ -81,14 +81,17 @@ export class BasePage {
     path: string;
     globalRegion?: string;
   }): Promise<void> {
-    const target = globalRegion ? `/${globalRegion}${path}` : path;
-    const search = globalRegion
-      ? `?${new URLSearchParams({ge_region: globalRegion})}`
-      : '';
-    await this.page.goto(`${target}${search}`);
-    if (globalRegion) {
-      await expect(this.globalEditionRegionHtml(globalRegion)).toBeVisible();
+    if (!globalRegion) {
+      await this.page.goto(path);
+      return;
     }
+    // A fresh context drops the ge_region Set-Cookie on the 302 redirect
+    // follow unless the origin has been visited once first. Warm up with a
+    // plain root navigation, set+confirm the region, then land on the target.
+    await this.page.goto('/');
+    await this.switchToGlobalEditionRegion(globalRegion);
+    await this.page.goto(`/${globalRegion}${path}`);
+    await expect(this.globalEditionRegionHtml(globalRegion)).toBeVisible();
   }
 
   /**
