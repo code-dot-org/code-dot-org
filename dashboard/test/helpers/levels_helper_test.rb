@@ -755,6 +755,8 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal '/hoc/1', build_script_level_path(script_level, unit_group_unit: unit_group_unit)
     # Deprecated /s/ path (no unit_group_unit, e.g. header progress bubbles).
     assert_equal '/hoc/1', build_script_level_path(script_level)
+    # Extra params must survive the chapter dispatch as a query string.
+    assert_equal '/hoc/1?noautoplay=true', build_script_level_path(script_level, noautoplay: true)
   end
 
   test 'build_script_level_path uses names for bonus levels to support cross-environment links' do
