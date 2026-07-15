@@ -905,15 +905,9 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
             generatedOutput = {match: matchResult};
           } else if (spec.labType === 'bubbleChoice' && bubbleChoicePlan) {
             // Parent DSL was written by createOrFindLevel / the reused-
-            // level PATCH; still owing are the parent's stub notes and
-            // each sublevel's picker-facing fields.
+            // level PATCH; still owing are each sublevel's picker-facing
+            // fields (thumbnail, display_name, teaser).
             setStage('saving-properties');
-            appendLog(`Saving instructions for "${levelName}"…`);
-            await updateLevelProperty(
-              level.id,
-              'long_instructions',
-              bubbleChoicePlan.longInstructions
-            );
             for (let s = 0; s < bubbleChoiceSublevelLevels.length; s++) {
               const sub = bubbleChoiceSublevelLevels[s];
               const subPlan = bubbleChoicePlan.sublevels[s];

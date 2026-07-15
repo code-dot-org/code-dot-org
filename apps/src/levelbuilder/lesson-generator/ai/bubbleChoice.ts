@@ -66,13 +66,6 @@ const bubbleChoicePlanSchema = Output.object({
         'Markdown blurb shown beneath the title, framing the choice for ' +
           'the student. Real copy (not a stub); 1-3 short paragraphs.'
       ),
-    longInstructions: z
-      .string()
-      .describe(
-        'STUB ONLY. Format as a single literal `TODOs:` line followed by ' +
-          '4-8 markdown bullets, each bare content (no `TODO:` prefix on ' +
-          'the bullet). The curriculum author writes the final prose later.'
-      ),
     sublevels: z
       .array(sublevelPlanSchema)
       .describe(
@@ -91,7 +84,6 @@ export interface BubbleChoiceSublevelPlan {
 export interface BubbleChoiceGeneration {
   displayName: string;
   description: string;
-  longInstructions: string;
   // Same length + order as the members array passed in.
   sublevels: BubbleChoiceSublevelPlan[];
   summary: string;
@@ -120,8 +112,6 @@ export async function generateBubbleChoiceLevel(
     '  - displayName: 2-6 word title shown at the top of the picker.',
     '  - description: 1-3 short markdown paragraphs framing the choice',
     '    for the student. Real student-facing prose (not a stub).',
-    '  - longInstructions: STUB only. Single literal `TODOs:` line then',
-    '    4-8 bare-content bullets. Curriculum author writes final prose.',
     '  - sublevels: EXACTLY one entry per input member below, in the same',
     '    order. Each entry has displayName (2-5 word Title Case title shown',
     '    on the bubble; do not echo the internal level name),',
@@ -169,7 +159,6 @@ export async function generateBubbleChoiceLevel(
   const plan = response.output as {
     displayName: string;
     description: string;
-    longInstructions: string;
     sublevels: BubbleChoiceSublevelPlan[];
   };
   logResponse(PROMPT_TAGS.BUBBLE_CHOICE_PLAN, plan, logContext);
@@ -179,9 +168,6 @@ export async function generateBubbleChoiceLevel(
   }
   if (!plan.description?.trim()) {
     throw new Error('Model returned no description');
-  }
-  if (!plan.longInstructions?.trim()) {
-    throw new Error('Model returned no instructions');
   }
   if (
     !Array.isArray(plan.sublevels) ||
@@ -196,7 +182,6 @@ export async function generateBubbleChoiceLevel(
   return {
     displayName: plan.displayName.trim(),
     description: plan.description.trim(),
-    longInstructions: plan.longInstructions.trim(),
     sublevels: plan.sublevels.map(s => ({
       displayName: s.displayName.trim(),
       bubbleChoiceDescription: s.bubbleChoiceDescription.trim(),
