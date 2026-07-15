@@ -1,5 +1,3 @@
-// With 2+ categories, flow the tables into two height-balanced columns so the
-// dialog reads as a compact reference rather than one tall list.
 .multiColumn {
   column-count: 2;
   column-gap: 24px;
@@ -23,8 +21,6 @@
   white-space: nowrap;
   text-align: left;
   vertical-align: top;
-  // Override the app's global <th> styling (grey fill, white text), which
-  // otherwise renders the key chip unreadable.
   background: transparent;
   color: var(--text-neutral-primary);
   font-weight: normal;

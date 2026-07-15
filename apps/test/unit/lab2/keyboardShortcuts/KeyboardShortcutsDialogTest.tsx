@@ -4,7 +4,6 @@ import React from 'react';
 
 import KeyboardShortcutsDialog from '@cdo/apps/lab2/keyboardShortcuts/KeyboardShortcutsDialog';
 
-// Only 'sketchlab' has an entry; other labs have none.
 jest.mock('@cdo/apps/lab2/keyboardShortcuts/shortcutsPerLab', () => ({
   ShortcutsPerLab: {
     sketchlab: {General: [{shortcut: 'Tab', explanation: 'Move focus'}]},
