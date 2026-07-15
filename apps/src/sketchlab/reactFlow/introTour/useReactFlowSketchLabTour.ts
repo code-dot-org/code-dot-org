@@ -3,53 +3,60 @@ import {useEffect, useMemo, useState} from 'react';
 
 import useLab2ProductTour from '@cdo/apps/lab2/hooks/useLab2ProductTour';
 import {TriggerSource} from '@cdo/apps/lab2/productTours/constants';
-import {createSketchlabTourSteps} from '@cdo/apps/lab2/productTours/excalidrawSketchLabTourSteps';
 import {
   ProductTour,
   ProductTourConfigurations,
   isTourEnabledOnLevel,
 } from '@cdo/apps/lab2/productTours/productToursPerLab';
+import {createReactFlowSketchLabTourSteps} from '@cdo/apps/lab2/productTours/reactFlowSketchLabTourSteps';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import useStartTourWhenAvailable from '@cdo/apps/sharedComponents/productTour/useStartTourWhenAvailable';
-import {SKETCHLAB_ONBOARDING_TOUR_SEEN} from '@cdo/apps/sketchlab/constants';
+import {SKETCHLAB_REACTFLOW_ONBOARDING_TOUR_SEEN} from '@cdo/apps/sketchlab/constants';
 import {tryGetLocalStorage} from '@cdo/apps/utils';
+
+const flowName =
+  ProductTourConfigurations[ProductTour.SketchlabIntroReactFlow].metricName;
 
 const onTourStart = () =>
   sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_STARTED, {
-    flowName: ProductTourConfigurations[ProductTour.SketchlabIntro].metricName,
+    flowName,
     triggerSource: TriggerSource.Auto,
   });
 
 const onTourComplete = () =>
   sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_COMPLETED, {
-    flowName: ProductTourConfigurations[ProductTour.SketchlabIntro].metricName,
+    flowName,
     triggerSource: TriggerSource.Auto,
   });
 
 const onTourCancel = (stepIndex: number) =>
   sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_EXIT, {
-    flowName: ProductTourConfigurations[ProductTour.SketchlabIntro].metricName,
+    flowName,
     step: stepIndex.toString(),
     triggerSource: TriggerSource.Auto,
   });
 
-interface UseSketchlabTourParams {
+interface UseReactFlowSketchLabTourParams {
   levelProperties: LevelProperties;
 }
 
-const useSketchlabTour = ({levelProperties}: UseSketchlabTourParams) => {
-  // Wait for the Excalidraw toolbar to be fully rendered before starting the tour.
+const useReactFlowSketchLabTour = ({
+  levelProperties,
+}: UseReactFlowSketchLabTourParams) => {
+  // Wait for the toolbar to render before starting; steps attach to its buttons.
   const [isToolbarReady, setIsToolbarReady] = useState(false);
   useEffect(() => {
-    const tourSeen = tryGetLocalStorage(SKETCHLAB_ONBOARDING_TOUR_SEEN, 'no');
+    const tourSeen = tryGetLocalStorage(
+      SKETCHLAB_REACTFLOW_ONBOARDING_TOUR_SEEN,
+      'no'
+    );
     if (tourSeen === 'yes') {
       return;
     }
     const checkToolbarReady = () => {
-      const toolbarElements = document.querySelectorAll('label.ToolIcon');
-      if (toolbarElements.length > 0) {
+      if (document.querySelector('button[aria-label="Add rectangle"]')) {
         setIsToolbarReady(true);
         return true;
       }
@@ -82,11 +89,14 @@ const useSketchlabTour = ({levelProperties}: UseSketchlabTourParams) => {
   );
 
   const {tour} = useLab2ProductTour({
-    getSteps: createSketchlabTourSteps,
-    localStorageKey: SKETCHLAB_ONBOARDING_TOUR_SEEN,
+    getSteps: createReactFlowSketchLabTourSteps,
+    localStorageKey: SKETCHLAB_REACTFLOW_ONBOARDING_TOUR_SEEN,
     tourAvailable:
       isToolbarReady &&
-      isTourEnabledOnLevel(ProductTour.SketchlabIntro, levelProperties),
+      isTourEnabledOnLevel(
+        ProductTour.SketchlabIntroReactFlow,
+        levelProperties
+      ),
     onStart: onTourStart,
     onComplete: onTourComplete,
     onCancel: onTourCancel,
@@ -96,4 +106,4 @@ const useSketchlabTour = ({levelProperties}: UseSketchlabTourParams) => {
   useStartTourWhenAvailable(tour);
 };
 
-export default useSketchlabTour;
+export default useReactFlowSketchLabTour;

@@ -21,6 +21,7 @@ import {
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
+import {hasActiveTour} from '@cdo/apps/sharedComponents/productTour/activeTourTracker';
 import {createUuid} from '@cdo/apps/utils';
 
 import {
@@ -531,6 +532,9 @@ export default function ReactFlowCanvas({
   // don't dismiss it.
   useEffect(() => {
     if (!openToolbarTarget) return;
+    // The onboarding tour moves focus into its own popup to point at the
+    // element toolbar; don't treat that as the user leaving the element.
+    if (hasActiveTour()) return;
     // If the user is actively interacting with the toolbar (mouse or keyboard
     // focus inside it), keep it open regardless of where the focus-tracking
     // state currently points.

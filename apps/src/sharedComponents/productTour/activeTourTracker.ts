@@ -18,3 +18,8 @@ export const registerActiveTour = (tour: Tour): void => {
   tour.on('complete', clear);
   tour.on('cancel', clear);
 };
+
+// True while a product tour is running. Lets guided UI (e.g. Sketch Lab's
+// element toolbars) suppress focus-driven auto-close behavior that would
+// otherwise fight the tour when it moves focus into its own popup.
+export const hasActiveTour = (): boolean => activeTour !== null;
