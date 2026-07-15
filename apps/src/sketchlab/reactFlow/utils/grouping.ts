@@ -128,19 +128,19 @@ export function expandGroupDeletion<
     return {nodes: nodesToDelete, edges: edgesToDelete};
   }
 
-  const finalNodes = [...nodesToDelete, ...orphanedChildren];
-  const finalNodeIds = new Set(finalNodes.map(node => node.id));
+  const finalNodesToDelete = [...nodesToDelete, ...orphanedChildren];
+  const finalNodeIds = new Set(finalNodesToDelete.map(node => node.id));
   const finalEdgeIds = new Set(edgesToDelete.map(edge => edge.id));
-  const finalEdges = [...edgesToDelete];
+  const finalEdgesToDelete = [...edgesToDelete];
   for (const edge of allEdges) {
     if (
       !finalEdgeIds.has(edge.id) &&
       (finalNodeIds.has(edge.source) || finalNodeIds.has(edge.target))
     ) {
-      finalEdges.push(edge);
+      finalEdgesToDelete.push(edge);
     }
   }
-  return {nodes: finalNodes, edges: finalEdges};
+  return {nodes: finalNodesToDelete, edges: finalEdgesToDelete};
 }
 
 /**
