@@ -62,9 +62,9 @@ export class LegacyBlocklyLab extends LessonLevelPage {
 
   /**
    * Navigate to an arbitrary level URL and wait for the lab. For levels whose
-   * shape labLevelUrl does not model — standalone /ui-test-hoc/N paths, or course levels
-   * carrying extra query params (e.g. show_callouts). Same wait strategy as
-   * gotoLevel; prefer gotoLevel when labLevelUrl can build the URL.
+   * shape labLevelUrl does not model, e.g. course levels carrying extra query
+   * params (show_callouts). Same wait strategy as gotoLevel; prefer gotoLevel
+   * when labLevelUrl can build the URL.
    */
   async gotoLevelUrl(url: string): Promise<void> {
     await this.page.goto(url, {waitUntil: 'domcontentloaded'});
