@@ -56,7 +56,7 @@ class ErrorDialogStack extends React.Component {
               </p>
               <p>
                 {msg.contactWithoutEmail()}{' '}
-                <Link href={pegasus('/contact')} openInNewTab external>
+                <Link href={pegasus('/contact')} openInNewTab external size="s">
                   https://code.org/contact
                 </Link>
                 .
