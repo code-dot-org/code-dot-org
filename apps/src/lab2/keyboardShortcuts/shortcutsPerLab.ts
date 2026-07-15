@@ -28,15 +28,17 @@ export const ShortcutsPerLab: Partial<
     Editing: [
       {shortcut: 'Enter', explanation: 'Edit the focused element'},
       {shortcut: 'E', explanation: 'Open the element toolbar'},
-      {shortcut: 'Esc', explanation: 'Finish editing or cancel'},
+      {shortcut: 'Esc', explanation: 'Finish editing'},
     ],
     Connecting: [
       {shortcut: 'C', explanation: 'Start or cancel a connection'},
       {shortcut: 'Enter', explanation: 'Connect to the focused element'},
+      {shortcut: 'Esc', explanation: 'Cancel connection'},
     ],
     Grouping: [
       {shortcut: 'G', explanation: 'Enter group mode or create the group'},
       {shortcut: 'Enter', explanation: 'Add or remove the focused element'},
+      {shortcut: 'Esc', explanation: 'Cancel group mode'},
     ],
     'Clipboard & history': [
       {shortcut: 'Ctrl / Cmd + C', explanation: 'Copy'},
