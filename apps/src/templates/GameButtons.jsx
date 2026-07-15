@@ -27,7 +27,35 @@ export const RunButton = props => (
     size="medium"
     color="primary"
     className={props.hidden ? 'hide' : ''}
-    style={props.style}
+    sx={{
+      ...(props.style || {}),
+      backgroundColor: 'var(--background-accent-orange-primary)',
+      color: 'var(--text-neutral-white-fixed)',
+      '&:hover, &.force-hover, &[data-force-hover="true"]': {
+        backgroundColor: 'var(--accent-orange-70)',
+        color: 'var(--text-neutral-white-fixed)',
+      },
+      '&:focus, a&:focus': {
+        color: 'var(--text-neutral-white-fixed)',
+      },
+      '&:active, a&:active': {
+        color: 'var(--text-neutral-white-fixed)',
+      },
+      '&.Mui-disabled': {
+        backgroundColor: 'var(--background-neutral-octonary)',
+        color: 'var(--text-neutral-white-fixed)',
+      },
+      '&.MuiButton-loading': {
+        backgroundColor: 'var(--background-neutral-white-fixed)',
+        color: 'var(--text-neutral-white-fixed)',
+      },
+      '&.MuiButton-loading:not(:has(.MuiButton-icon))': {
+        color: 'transparent',
+      },
+      '&.MuiButton-loading i': {
+        color: 'var(--text-neutral-primary)',
+      },
+    }}
     startIcon={props.icon ?? <FontAwesomeV6Icon iconName="play" />}
   >
     {props.runButtonText || msg.runProgram()}
