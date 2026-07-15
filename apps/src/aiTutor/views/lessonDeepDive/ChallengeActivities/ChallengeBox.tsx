@@ -84,6 +84,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({lessonId}) => {
       <div className={styles.activityColumn}>
         {challengeType === 'whiteboard' ? (
           <WhiteboardChallenge
+            challengeId={challenge?.id ?? null}
             submitted={submitted}
             submitCallback={setSubmitted}
           />
