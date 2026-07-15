@@ -130,7 +130,7 @@
         {
           "type": "rating",
           "name": "comfort_ability_to_teach",
-          "title": "After completing this module, I feel more comfortable in my ability to teach Code.org’s {module} curriculum than I did before starting this professional learning experience.",
+          "title": "After completing this module, I feel more comfortable in my ability to teach CodeAI’s {module} curriculum than I did before starting this professional learning experience.",
           "natalia_comment": "NOTE: set the {module} variable in the simple survey configuration to pass-through the value you want to appear in the survey (eg. computer vision)",
           "rateCount": 7,
           "rateMax": 7,
@@ -231,7 +231,7 @@
         {
           "type": "radiogroup",
           "name": "first_self_paced_pl",
-          "title": "Is this your first time taking a Code.org self-paced professional learning experience?",
+          "title": "Is this your first time taking a CodeAI self-paced professional learning experience?",
           "choices": [
             {
               "value": "yes",
@@ -327,7 +327,7 @@
         {
           "type": "rating",
           "name": "know_what_students_learn",
-          "title": "After completing this professional learning experience, I understand what my students will learn in Code.org's {module} curriculum.",
+          "title": "After completing this professional learning experience, I understand what my students will learn in CodeAI's {module} curriculum.",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Strongly disagree",
@@ -336,7 +336,7 @@
         {
           "type": "rating",
           "name": "know_what_students_learn_module",
-          "title": "After completing this professional learning experience, I understand what my students will learn in Code.org's {module} unit.",
+          "title": "After completing this professional learning experience, I understand what my students will learn in CodeAI's {module} unit.",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Strongly disagree",
@@ -350,7 +350,7 @@
           "choices": [
             {
               "value": "better_understand_module",
-              "text": "Better understand Code.org's {module} curriculum"
+              "text": "Better understand CodeAI's {module} curriculum"
             },
             {
               "value": "learn_content_module",
@@ -418,7 +418,7 @@
             },
             {
               "value": "task_in_platform",
-              "text": "Trying a task or activity in the Code.org platform."
+              "text": "Trying a task or activity in the CodeAI platform."
             },
             {
               "value": "making_a_plan_for_teaching",
@@ -430,7 +430,7 @@
             },
             {
               "value": "forum_participation",
-              "text": "Sharing strategies in the Code.org forum."
+              "text": "Sharing strategies in the CodeAI forum."
             },
             {
               "value": "video_content",
@@ -451,26 +451,26 @@
         {
           "type": "radiogroup",
           "name": "permission_to_quote",
-          "title": "I give Code.org permission to quote my written comments from this survey for use on social media, promotional materials, and other communications.",
+          "title": "I give CodeAI permission to quote my written comments from this survey for use on social media, promotional materials, and other communications.",
           "choices": [
             {
               "value": "yes",
-              "text": "Yes, I give Code.org permission to quote me and use my name."
+              "text": "Yes, I give CodeAI permission to quote me and use my name."
             },
             {
               "value": "yes_anon",
-              "text": "Yes, I give Code.org permission to quote me, but I want to be anonymous."
+              "text": "Yes, I give CodeAI permission to quote me, but I want to be anonymous."
             },
             {
               "value": "no",
-              "text": "No, I do not give Code.org my permission."
+              "text": "No, I do not give CodeAI my permission."
             }
           ]
         },
         {
           "type": "checkbox",
           "name": "pl_to_support_growth_teacher_cs",
-          "title": "How could Code.org continue to support your growth as a computer science teacher?",
+          "title": "How could CodeAI continue to support your growth as a computer science teacher?",
           "choices": [
             {
               "value": "cs_concepts",
@@ -511,7 +511,7 @@
         {
           "type": "rating",
           "name": "plan_to_teach",
-          "title": "Are you planning to teach Code.org's {module} content?",
+          "title": "Are you planning to teach CodeAI's {module} content?",
           "natalia_comment": "NOTE: set the {curriculum} variable in the simple survey configuration to pass-through the value you want to appear in the survey (eg. computer vision)",
           "rateCount": 7,
           "rateMax": 7,
@@ -570,7 +570,7 @@
         {
           "type": "comment",
           "name": "self_paced_pl_other_feedback",
-          "title": "Do you have any feedback about this module that you would like to share with the Code.org team?"
+          "title": "Do you have any feedback about this module that you would like to share with the CodeAI team?"
         },
         {
           "type": "rating",
