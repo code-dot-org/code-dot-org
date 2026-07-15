@@ -1,4 +1,3 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
 import React from 'react';
 
@@ -22,18 +21,25 @@ const StudentResourcesPanel: React.FC<StudentResourcesPanelProps> = ({
 }) => {
   const hasTours = levelTours.length > 0 || otherAvailableTours.length > 0;
   const hasShortcuts = !!shortcuts && Object.keys(shortcuts).length > 0;
-  return (
-    <div className={styles.panel}>
-      {hasTours && (
+
+  const sections: {key: string; node: React.ReactNode}[] = [];
+  if (hasTours) {
+    sections.push({
+      key: 'walkthroughs',
+      node: (
         <GuidedWalkthroughs
           levelTours={levelTours}
           otherAvailableTours={otherAvailableTours}
         />
-      )}
-      {hasShortcuts && (
+      ),
+    });
+  }
+  if (hasShortcuts) {
+    sections.push({
+      key: 'shortcuts',
+      node: (
         <div>
           <Typography variant="body3" className={styles.shortcutsHintHeading}>
-            <FontAwesomeV6Icon iconName="keyboard" />
             <strong>Keyboard shortcuts</strong>
           </Typography>
           <Typography variant="body4">
@@ -41,7 +47,22 @@ const StudentResourcesPanel: React.FC<StudentResourcesPanelProps> = ({
             available shortcuts in this lab.
           </Typography>
         </div>
-      )}
+      ),
+    });
+  }
+
+  return (
+    <div className={styles.panel}>
+      {sections.map(({key, node}, index) => (
+        <div
+          key={key}
+          className={
+            index < sections.length - 1 ? styles.sectionDivider : undefined
+          }
+        >
+          {node}
+        </div>
+      ))}
     </div>
   );
 };
