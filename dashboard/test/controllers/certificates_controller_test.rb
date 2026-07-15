@@ -81,7 +81,8 @@ class CertificatesControllerTest < ActionController::TestCase
     assert_response :success
     expected_image_url = CDO.studio_url('/blockly/media/certificates/hour_of_ai_certificate.png')
     response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
-    assert_equal 'hourofcode', response_data['courseName']
+    assert_nil response_data['courseName']
+    assert_equal I18n.t('certificate_hour_of_code'), response_data['courseTitle']
     assert_equal expected_image_url, response_data['imageUrl']
   end
 
@@ -100,39 +101,43 @@ class CertificatesControllerTest < ActionController::TestCase
     assert_equal expected_image_url, response_data['imageUrl']
   end
 
-  # Simulate a UI test environment with no hourofcode course.
-  def stub_ui_test_hoc
-    Unit.find_by_name('hourofcode').destroy
+  # Simulate an environment (e.g. UI tests) with no hourofcode course.
+  # find_matching_course_version resolves via the UnitGroup, so destroying it
+  # is enough. The hourofcode Unit is left in place for the layout header,
+  # which resolves Unit.hoc_2014_unit independently of the code under test.
+  def destroy_hourofcode_course
+    Unit.find_by_name('hourofcode').update_column(:original_unit_group_id, nil)
     UnitGroup.find_by_name('hourofcode').destroy
-    ui_test_hoc_unit = create(:script, name: Unit::UI_TEST_HOC_NAME)
-    ui_test_hoc_course = create(:single_unit_course, unit: ui_test_hoc_unit, name: Unit::UI_TEST_HOC_NAME)
-    create(:course_version, content_root: ui_test_hoc_course)
   end
 
-  test 'batch page without a course param falls back to ui-test-hourofcode when hourofcode is unavailable in dev/test' do
-    stub_ui_test_hoc
+  test 'batch page renders the default hoc certificate when hourofcode is not seeded' do
+    destroy_hourofcode_course
     sign_in @teacher
     get :batch
     assert_response :success
+    expected_image_url = CDO.studio_url('/blockly/media/certificates/hour_of_ai_certificate.png')
     response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
-    assert_equal Unit::UI_TEST_HOC_NAME, response_data['courseName']
+    assert_nil response_data['courseName']
+    assert_equal I18n.t('certificate_hour_of_code'), response_data['courseTitle']
+    assert_equal expected_image_url, response_data['imageUrl']
   end
 
-  test 'batch page does not fall back to ui-test-hourofcode in production' do
-    stub_ui_test_hoc
+  test 'batch page default does not depend on rack env when hourofcode is not seeded' do
+    destroy_hourofcode_course
     sign_in @teacher
     with_rack_env(:production) do
       get :batch
     end
-    assert_response :bad_request
-    assert_equal 'invalid course name: "hourofcode"', JSON.parse(response.body)['message']
+    assert_response :success
+    response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
+    assert_equal I18n.t('certificate_hour_of_code'), response_data['courseTitle']
   end
 
-  test 'batch page does not fall back when a course param is provided' do
-    stub_ui_test_hoc
+  test 'batch page rejects an explicitly requested course that is not seeded' do
+    destroy_hourofcode_course
     sign_in @teacher
-    get :batch, params: {course: Base64.urlsafe_encode64('hourofcode')}
-    assert_response :bad_request
-    assert_equal 'invalid course name: "hourofcode"', JSON.parse(response.body)['message']
+    assert_raises(ActiveRecord::RecordNotFound) do
+      get :batch, params: {course: Base64.urlsafe_encode64('hourofcode')}
+    end
   end
 end
