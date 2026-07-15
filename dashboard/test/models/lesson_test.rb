@@ -1498,4 +1498,33 @@ class LessonTest < ActiveSupport::TestCase
     refute_nil summary[:lessonEditPath]
     assert_equal summary[:lessonEditPath].sub(%r{/edit\z}, '/generate'), summary[:lessonGeneratePath]
   end
+
+  test 'lesson_tutor_available? is true for a lesson with a lesson plan in an AIF/AID course' do
+    unit = ai_course_unit('AIF')
+    lesson = create(:lesson, script: unit, has_lesson_plan: true)
+    assert lesson.lesson_tutor_available?
+    assert_equal "#{lesson.get_uncached_show_path}/tutor", lesson.summarize[:lessonTutorPath]
+  end
+
+  test 'lesson_tutor_available? is false for a lesson without a lesson plan' do
+    unit = ai_course_unit('AIF')
+    lesson = create(:lesson, script: unit, has_lesson_plan: false)
+    refute lesson.lesson_tutor_available?
+    assert_nil lesson.summarize[:lessonTutorPath]
+  end
+
+  test 'lesson_tutor_available? is false for a lesson in a non-AI course' do
+    unit = ai_course_unit('CSD')
+    lesson = create(:lesson, script: unit, has_lesson_plan: true)
+    refute lesson.lesson_tutor_available?
+    assert_nil lesson.summarize[:lessonTutorPath]
+  end
+
+  # Builds the single unit of a course whose offering has the given marketing
+  # initiative, so lessons created on it inherit that course's tutor eligibility.
+  private def ai_course_unit(marketing_initiative)
+    unit_group = create(:single_unit_course, :with_course_offering, family_name: "ai-course-#{marketing_initiative.downcase}", version_year: '2026')
+    unit_group.course_version.course_offering.update!(marketing_initiative: marketing_initiative)
+    unit_group.first_unit
+  end
 end

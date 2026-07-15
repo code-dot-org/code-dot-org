@@ -31,6 +31,7 @@ import {
   MIN_ZOOM,
   SAVE_DEBOUNCE_MS,
   SKETCHLAB_TOOLBAR_PANEL_CLASS,
+  TRANSIENT_MESSAGE_DURATION_MS,
 } from '../constants';
 import {
   AnchorDraggingProvider,
@@ -51,6 +52,7 @@ import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
 import {useLineEdgeDrag} from '../hooks/useLineEdgeDrag';
 import {useNodeDrag} from '../hooks/useNodeDrag';
 import {useTabOrder} from '../hooks/useTabOrder';
+import {useTransientMessage} from '../hooks/useTransientMessage';
 import {useUndoHistory} from '../hooks/useUndoHistory';
 import GroupNode from '../nodes/GroupNode';
 import ImageNode from '../nodes/ImageNode';
@@ -60,6 +62,7 @@ import TextNode from '../nodes/TextNode';
 import {
   AddNodeRequest,
   CanvasTool,
+  ImageNodeData,
   ReactFlowSketchLabSources,
   SketchLabNode,
 } from '../types';
@@ -85,6 +88,9 @@ const NODE_TYPES = {
 // Offset added per new node so they don't stack exactly on top of each other.
 const NEW_NODE_STAGGER_PX = 20;
 const FOCUS_DELAY_MS = 100;
+
+const GROUP_MODE_HINT =
+  'Tab to move — Enter to select/deselect — G to group — Esc to cancel';
 
 // Fallbacks for edges that don't specify type/style, kept in sync with the
 // fields a new line gets. markerEnd is intentionally omitted so edges saved
@@ -117,6 +123,11 @@ export interface ReactFlowCanvasProps {
   initialViewport: SketchlabReactFlowSource['viewport'];
   colorMode: 'light' | 'dark';
   readOnly?: boolean;
+  // A request from the parent view (e.g. Backpack import) to add an image node.
+  // The canvas adds it via its own handleAddNode, then calls
+  // onImageImportConsumed so the same request isn't processed twice.
+  pendingImageImport?: ImageNodeData | null;
+  onImageImportConsumed?: () => void;
 }
 
 export const SKETCHLAB_CONTAINER_CLASS = 'sketchlab-react-flow-container';
@@ -129,6 +140,8 @@ export default function ReactFlowCanvas({
   initialViewport,
   colorMode,
   readOnly = false,
+  pendingImageImport = null,
+  onImageImportConsumed,
 }: ReactFlowCanvasProps) {
   const [nodes, setNodes, onNodesChange] =
     useNodesState<SketchLabNode>(initialNodes);
@@ -284,23 +297,36 @@ export default function ReactFlowCanvas({
     return count;
   }, [nodes, edges]);
 
-  const [groupModeError, setGroupModeError] = useState<string | null>(null);
-  const groupModeErrorTimerRef = useRef<ReturnType<typeof setTimeout> | null>(
-    null
+  const [groupModeError, showGroupModeError] = useTransientMessage(
+    TRANSIENT_MESSAGE_DURATION_MS
   );
   const handleCannotGroup = useCallback(
     (msg: string) => {
       announceGroupMode(msg);
-      setGroupModeError(msg);
-      if (groupModeErrorTimerRef.current)
-        clearTimeout(groupModeErrorTimerRef.current);
-      groupModeErrorTimerRef.current = setTimeout(
-        () => setGroupModeError(null),
-        2000
-      );
+      showGroupModeError(msg);
     },
-    [announceGroupMode]
+    [announceGroupMode, showGroupModeError]
   );
+
+  const [imageUploadError, showImageUploadError] = useTransientMessage(
+    TRANSIENT_MESSAGE_DURATION_MS
+  );
+  const handleImageUploadError = useCallback(() => {
+    const message = 'Could not upload image. Please try again.';
+    announceGroupMode(message);
+    showImageUploadError(message);
+  }, [announceGroupMode, showImageUploadError]);
+
+  // One banner at a time, highest priority first: an upload error, then a
+  // group-mode error, then the group-mode hint while group mode is active.
+  const banner: {message: string; variant: 'info' | 'error'} | null =
+    imageUploadError
+      ? {message: imageUploadError, variant: 'error'}
+      : groupModeError
+      ? {message: groupModeError, variant: 'info'}
+      : isGroupMode
+      ? {message: GROUP_MODE_HINT, variant: 'info'}
+      : null;
 
   const handlePaneClick = useCallback(() => {
     canvasContainerRef.current?.focus();
@@ -355,10 +381,19 @@ export default function ReactFlowCanvas({
     duplicateLine,
     copyEntry,
     cutEntry,
-    paste,
     handleMouseMove: copyPasteMouseMove,
     handleMouseLeave: copyPasteMouseLeave,
-  } = useCopyPaste({nodes, edges, setNodes, setEdges, pushSnapshot});
+  } = useCopyPaste({
+    nodes,
+    edges,
+    setNodes,
+    setEdges,
+    pushSnapshot,
+    canvasContainerRef,
+    readOnly,
+    levelName,
+    onImageUploadError: handleImageUploadError,
+  });
 
   const clipboardContextValue = useMemo(
     () => ({duplicateNode, duplicateLine}),
@@ -454,7 +489,6 @@ export default function ReactFlowCanvas({
       openToolbar,
       copyEntry,
       cutEntry,
-      paste,
       undo: handleUndo,
       redo: handleRedo,
       pushSnapshot,
@@ -740,6 +774,13 @@ export default function ReactFlowCanvas({
     ]
   );
 
+  useEffect(() => {
+    if (pendingImageImport) {
+      handleAddNode({type: 'image', data: pendingImageImport});
+      onImageImportConsumed?.();
+    }
+  }, [pendingImageImport, handleAddNode, onImageImportConsumed]);
+
   const dragBoxContainerRect = selectionBox
     ? canvasContainerRef.current?.getBoundingClientRect()
     : null;
@@ -864,13 +905,16 @@ export default function ReactFlowCanvas({
                       onGroupNodes={handleGroupNodes}
                       onUngroupNode={handleUngroupNode}
                     />
-                    {isGroupMode && (
+                    {banner && (
                       <Panel
                         position="bottom-center"
-                        className={styles.groupModeIndicator}
+                        className={
+                          banner.variant === 'error'
+                            ? styles.bannerError
+                            : styles.bannerInfo
+                        }
                       >
-                        {groupModeError ??
-                          'Tab to move — Enter to select/deselect — G to group — Esc to cancel'}
+                        {banner.message}
                       </Panel>
                     )}
                     <Background />

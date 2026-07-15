@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2026-07-10T19:01:48.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "pl-aif2-u5-try-catch",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28811,
+    "name_suffix": "_pl",
+    "encrypted": "false",
+    "long_instructions": "\r\n## Activity Preview \r\n\r\nIn the next level, you will install a safety net to code using `try` and `catch` blocks. \r\n\r\nThe video below walks you through the activity. Watch the video to get prepared to complete the activity on your own. "
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-07-10T19:01:48.447+00:00\",\"changed\":[\"cloned from \\\"pl-aif2-U5-try-catch-video\\\"\"],\"cloned_from\":\"pl-aif2-U5-try-catch-video\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

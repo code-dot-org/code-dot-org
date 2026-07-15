@@ -1,3 +1,6 @@
+import {useCallback} from 'react';
+import Shepherd, {Tour} from 'shepherd.js';
+
 import {createShepherdTour} from '@cdo/apps/sharedComponents/productTour/shepherdTourFactory';
 import useOnboardingTour from '@cdo/apps/sharedComponents/productTour/useOnboardingTour';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -29,6 +32,10 @@ export const resumeCreateSectionOnboardingTour = () => {
   );
   if (!savedStepId) return;
 
+  // Cancel any running tour (e.g. the homepage tour still mounted during SPA
+  // navigation) so we never show two tour popovers simultaneously.
+  Shepherd.activeTour?.cancel();
+
   const tour = createShepherdTour({
     stepClass: 'custom-shepherd-onboarding-container',
   });
@@ -49,13 +56,18 @@ export const resumeCreateSectionOnboardingTour = () => {
 };
 
 const useCreateSectionTour = (gradesTeaching: string[] | null | undefined) => {
-  const {tour} = useOnboardingTour({
-    getSteps: tour =>
+  const getSteps = useCallback(
+    (tour: Tour) =>
       createHomepageSteps(
         tour,
         gradesTeaching,
         CREATE_SECTION_ONBOARDING_STEP_KEY
       ),
+    [gradesTeaching]
+  );
+
+  const {tour} = useOnboardingTour({
+    getSteps,
     sessionStorageKey: CREATE_SECTION_ONBOARDING_STEP_KEY,
   });
 

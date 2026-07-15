@@ -1,11 +1,4 @@
 @font-face {
-  font-family: Geist;
-  font-style: normal;
-  font-weight: 400;
-  src: url('/fonts/Geist/Geist-VariableFont_wght.ttf') format('truetype'), local('?');
-}
-
-@font-face {
   font-family: 'Space Grotesk';
   font-style: normal;
   font-weight: 500;
@@ -34,7 +27,7 @@
 }
 
 .heroBannerSection p {
-  font-family: Geist, sans-serif;
+  font-family: var(--font-family-main);
 }
 
 .bannerWrapper .dismissButtonStyle {

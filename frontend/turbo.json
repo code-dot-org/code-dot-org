@@ -60,7 +60,18 @@
     "test:ui": {
       "cache": false,
       "dependsOn": ["^build", "^test:ui"],
-      "env": ["STAGE"]
+      "passThroughEnv": [
+        "APPLITOOLS_API_KEY",
+        "APPLITOOLS_BATCH_ID",
+        "APPLITOOLS_BATCH_NAME",
+        "APPLITOOLS_BRANCH",
+        "HOME",
+        "PLAYWRIGHT_BROWSERS_PATH",
+        "PLAYWRIGHT_PROVIDER",
+        "STAGE",
+        "TARGET_URL",
+        "VISUAL_PROVIDER"
+      ]
     },
     "dev": {
       "cache": false,

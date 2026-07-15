@@ -1,0 +1,530 @@
+{
+  "script": {
+    "name": "joi-agentic-ai",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-07-11 03:10:36 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "joi-agentic-ai"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "joi-agentic-ai"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "First Day at The Scoop",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "Students meet Sam, the owner of The Scoop ice cream shop, and the shop's new AI agent — which has a big problem: it makes things up. Yesterday it told a customer the shop sells pizza. Students learn why AI invents answers when it can't look things up, then write their first rule and give the agent its first tool (check_menu) so it can check what the shop actually sells before answering customers.",
+        "student_overview": "It's your first day at The Scoop ice cream shop — and the shop's AI has a problem. Yesterday it told a customer we sell pizza. (We don't.) Find out why AI makes stuff up, then write your first rule and give it its first tool so it stops inventing the menu."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "joi-agentic-ai"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "The Empty Freezer",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "The agent is honest now, but it just told a customer \"yes!\" about a flavor that sold out an hour ago. Students discover the difference between the menu (what the shop sells — never changes) and the freezer (what's in stock right now — changes all day). They add two new tools (check_freezer, suggest_item) and update their rules so the agent checks both — and offers a backup flavor instead of just saying no, because nobody leaves The Scoop without a scoop.",
+        "student_overview": "Uh oh. The AI just promised a customer mango sorbet... and we ran out an hour ago. The menu says what we sell. The freezer says what we have. Teach your agent to check both — and to always offer a backup flavor, because nobody leaves The Scoop without a scoop."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "joi-agentic-ai"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Keys to the Register",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "overview": "Sam takes a leap of faith and lets the agent use the register. Students learn that this tool is different: the others just look things up, but take_order takes real action with real consequences. The focus is sequencing — students figure out what the agent must check, and in what order, before it ever commits an order. Get it wrong, and the agent sells sundaes the shop can't make.",
+        "student_overview": "Big moment: Sam is letting your agent use the register. But this tool is different — it takes REAL orders. One wrong move and it's selling sundaes we can't make. Figure out what your agent needs to check, and in what order, before it rings anything up."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "joi-agentic-ai"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Human Problems",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "overview": "A customer with a nut allergy asks a question none of the agent's tools can answer — and students learn that the worst thing an AI can do in that moment is guess. Some problems need a real person. Students unlock notify_sam and write rules that teach the agent judgment: when to handle a question itself, and when to get a human. But careful — if it texts Sam about every little thing, no ice cream gets scooped.",
+        "student_overview": "A customer just asked if the cookie dough has nuts in it — they're allergic. Your agent has no tool for that. Should it guess? NO WAY. Teach your agent the most important skill yet: knowing when to handle it, and when to get a human."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "joi-agentic-ai"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "The 3PM Rush",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "overview": "Two school buses. The hottest day of the year. Sam goes full scoop mode and hands the window entirely to the agent. There are no new tools and no new rules in this lesson — everything students built in Lessons 1–4 gets tested at once by a rush of customers hitting every situation: off-menu requests, sold-out flavors, big orders, an allergy question, and one curveball. This is the payoff level: if students built well, their agent handles it all.",
+        "student_overview": "Two school buses just pulled up. It's the hottest day of the year. Sam is going full scoop mode, and the window belongs to YOUR agent now. No new tools. No new rules. Everything you built gets tested at once. Good luck."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "joi-agentic-ai"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Closing Time",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "overview": "The rush is over and the shop survived. Students step back and name what they actually did this hour: they gave an AI a goal, tools, and rules — then watched it fail, figured out why, and fixed it. That loop is a real job in the AI industry today. Students reflect on their agent, share their final rule set, and get a peek at what's next: a whole world of agents beyond the order window.",
+        "student_overview": "You survived the rush! Time to look at what you actually did today — because it turns out training an AI agent is a real job, and you just did it. Wrap up, show off your agent, and see what's next."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "joi-agentic-ai"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "937aa18a-d4b6-43d9-aea6-dfe5b9ab2d73",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "937aa18a-d4b6-43d9-aea6-dfe5b9ab2d73",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "joi-agentic-ai"
+      }
+    },
+    {
+      "key": "389f9bec-de23-41c1-97f6-88ff9c930400",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "389f9bec-de23-41c1-97f6-88ff9c930400",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "joi-agentic-ai"
+      }
+    },
+    {
+      "key": "7a156553-0e04-4703-ae55-8c0a7291d2da",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7a156553-0e04-4703-ae55-8c0a7291d2da",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "joi-agentic-ai"
+      }
+    },
+    {
+      "key": "9ab75704-f382-44fa-930d-40dcdbb18aff",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9ab75704-f382-44fa-930d-40dcdbb18aff",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "joi-agentic-ai"
+      }
+    },
+    {
+      "key": "eebe58b8-b5a1-483c-b1d8-7441554a3bba",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "eebe58b8-b5a1-483c-b1d8-7441554a3bba",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "joi-agentic-ai"
+      }
+    },
+    {
+      "key": "3dd780f3-5331-4ffd-9e8a-e3ef41a80f10",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3dd780f3-5331-4ffd-9e8a-e3ef41a80f10",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "joi-agentic-ai"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "6781752d-bc52-46a3-9985-3a61248586f4",
+      "position": 1,
+      "properties": {
+        "progression_name": " First Day at The Scoop"
+      },
+      "seeding_key": {
+        "activity_section.key": "6781752d-bc52-46a3-9985-3a61248586f4",
+        "lesson_activity.key": "937aa18a-d4b6-43d9-aea6-dfe5b9ab2d73"
+      }
+    },
+    {
+      "key": "0cb2b995-66c8-447a-829e-0c9a76d7ccd0",
+      "position": 1,
+      "properties": {
+        "progression_name": "The Empty Freezer"
+      },
+      "seeding_key": {
+        "activity_section.key": "0cb2b995-66c8-447a-829e-0c9a76d7ccd0",
+        "lesson_activity.key": "389f9bec-de23-41c1-97f6-88ff9c930400"
+      }
+    },
+    {
+      "key": "25cd3a9e-291c-4559-9648-b56a6b7c4160",
+      "position": 1,
+      "properties": {
+        "progression_name": "Keys to the Register"
+      },
+      "seeding_key": {
+        "activity_section.key": "25cd3a9e-291c-4559-9648-b56a6b7c4160",
+        "lesson_activity.key": "7a156553-0e04-4703-ae55-8c0a7291d2da"
+      }
+    },
+    {
+      "key": "07396c6d-9ec5-40df-ae1f-4f95f1bb9b73",
+      "position": 1,
+      "properties": {
+        "progression_name": "Human Problems"
+      },
+      "seeding_key": {
+        "activity_section.key": "07396c6d-9ec5-40df-ae1f-4f95f1bb9b73",
+        "lesson_activity.key": "9ab75704-f382-44fa-930d-40dcdbb18aff"
+      }
+    },
+    {
+      "key": "335effc7-817e-4ec8-9106-958f7522aaad",
+      "position": 1,
+      "properties": {
+        "progression_name": "The 3PM Rush"
+      },
+      "seeding_key": {
+        "activity_section.key": "335effc7-817e-4ec8-9106-958f7522aaad",
+        "lesson_activity.key": "eebe58b8-b5a1-483c-b1d8-7441554a3bba"
+      }
+    },
+    {
+      "key": "a0935a40-2aff-42fd-82c1-d53fe1de90e9",
+      "position": 1,
+      "properties": {
+        "progression_name": "Closing Time"
+      },
+      "seeding_key": {
+        "activity_section.key": "a0935a40-2aff-42fd-82c1-d53fe1de90e9",
+        "lesson_activity.key": "3dd780f3-5331-4ffd-9e8a-e3ef41a80f10"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": " First Day at The Scoop"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "thescoop-panels-level1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "joi-agentic-ai",
+        "activity_section.key": "6781752d-bc52-46a3-9985-3a61248586f4"
+      },
+      "level_keys": [
+        "thescoop-panels-level1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Empty Freezer"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "thescoop-panels-level2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "joi-agentic-ai",
+        "activity_section.key": "0cb2b995-66c8-447a-829e-0c9a76d7ccd0"
+      },
+      "level_keys": [
+        "thescoop-panels-level2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Keys to the Register"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "thescoop-panels-level3"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "joi-agentic-ai",
+        "activity_section.key": "25cd3a9e-291c-4559-9648-b56a6b7c4160"
+      },
+      "level_keys": [
+        "thescoop-panels-level3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Human Problems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "thescoop-panels-level4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "joi-agentic-ai",
+        "activity_section.key": "07396c6d-9ec5-40df-ae1f-4f95f1bb9b73"
+      },
+      "level_keys": [
+        "thescoop-panels-level4"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The 3PM Rush"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "thescoop-panels-level5"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "joi-agentic-ai",
+        "activity_section.key": "335effc7-817e-4ec8-9106-958f7522aaad"
+      },
+      "level_keys": [
+        "thescoop-panels-level5"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Closing Time"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "thescoop-panels-level6"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "joi-agentic-ai",
+        "activity_section.key": "a0935a40-2aff-42fd-82c1-d53fe1de90e9"
+      },
+      "level_keys": [
+        "thescoop-panels-level6"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "thescoop-panels-level1",
+        "script_level.level_keys": [
+          "thescoop-panels-level1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "joi-agentic-ai",
+        "activity_section.key": "6781752d-bc52-46a3-9985-3a61248586f4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "thescoop-panels-level2",
+        "script_level.level_keys": [
+          "thescoop-panels-level2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "joi-agentic-ai",
+        "activity_section.key": "0cb2b995-66c8-447a-829e-0c9a76d7ccd0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "thescoop-panels-level3",
+        "script_level.level_keys": [
+          "thescoop-panels-level3"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "joi-agentic-ai",
+        "activity_section.key": "25cd3a9e-291c-4559-9648-b56a6b7c4160"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "thescoop-panels-level4",
+        "script_level.level_keys": [
+          "thescoop-panels-level4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "joi-agentic-ai",
+        "activity_section.key": "07396c6d-9ec5-40df-ae1f-4f95f1bb9b73"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "thescoop-panels-level5",
+        "script_level.level_keys": [
+          "thescoop-panels-level5"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "joi-agentic-ai",
+        "activity_section.key": "335effc7-817e-4ec8-9106-958f7522aaad"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "thescoop-panels-level6",
+        "script_level.level_keys": [
+          "thescoop-panels-level6"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "joi-agentic-ai",
+        "activity_section.key": "a0935a40-2aff-42fd-82c1-d53fe1de90e9"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}
