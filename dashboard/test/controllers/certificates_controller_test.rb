@@ -3,6 +3,10 @@ require 'base64'
 
 class CertificatesControllerTest < ActionController::TestCase
   setup_all do
+    # The page header falls back to the hourofcode unit (Unit.hoc_2014_unit),
+    # so full page renders need it to exist.
+    create_hourofcode_unit_and_levels
+
     @teacher = create(:teacher)
     @teacher.freeze
   end
