@@ -1,7 +1,7 @@
 <Sketchlab>
   <config><![CDATA[{
   "game_id": 75,
-  "created_at": "2025-09-20T19:37:43.000Z",
+  "created_at": "2025-09-22T09:37:14.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -29,14 +29,7 @@
             "measured": {
               "width": 160,
               "height": 120
-            },
-            "selected": false,
-            "domAttributes": {
-              "tabIndex": 0
-            },
-            "draggable": false,
-            "connectable": false,
-            "deletable": false
+            }
           },
           {
             "id": "f117052e-995c-42f9-9cbb-7712c6c759cd",
@@ -58,10 +51,6 @@
               "height": 69
             },
             "dragging": false,
-            "selected": true,
-            "domAttributes": {
-              "tabIndex": 0
-            },
             "width": 118,
             "height": 69,
             "resizing": false
@@ -88,6 +77,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-09-19 13:07:30 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"ben+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-19 22:40:23 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-19 22:43:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-19 22:43:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-29 18:16:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-09-19 13:07:30 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"ben+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-19 22:40:23 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-19 22:43:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-19 22:43:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-29 18:16:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-13 17:02:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-13 18:47:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>
