@@ -31,6 +31,9 @@ const KeyboardShortcutsDialog: React.FC<KeyboardShortcutsDialogProps> = ({
       return;
     }
     const handleKeyDown = (event: KeyboardEvent) => {
+      // Only trigger the dialog when the `/` key is pressed without any modifier keys
+      // except shift, the event has not already been claimed elsewhere, and the current
+      // target isn't editable.
       if (
         event.key !== '/' ||
         event.ctrlKey ||

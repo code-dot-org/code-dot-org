@@ -48,9 +48,9 @@ export const ShortcutsPerLab: Partial<
     ],
     'Move & resize': [
       {shortcut: 'Arrow keys', explanation: 'Move the focused element'},
-      {shortcut: '[ / ]', explanation: 'Shrink or grow the focused shape'},
-      {shortcut: 'Shift + [ / ]', explanation: 'Resize width only'},
-      {shortcut: 'Alt / Opt + [ / ]', explanation: 'Resize height only'},
+      {shortcut: '[ or ]', explanation: 'Shrink or grow the focused shape'},
+      {shortcut: 'Shift + [ or ]', explanation: 'Resize width only'},
+      {shortcut: 'Alt / Opt + [ or ]', explanation: 'Resize height only'},
     ],
     'Clipboard & history': [
       {shortcut: 'Ctrl / Cmd + C', explanation: 'Copy'},
