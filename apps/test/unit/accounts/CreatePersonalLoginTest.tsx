@@ -1,9 +1,12 @@
 import '@testing-library/jest-dom';
 import {fireEvent, render, screen} from '@testing-library/react';
-import md5 from 'md5';
 import React from 'react';
 
 import CreatePersonalLogin from '@cdo/apps/accounts/CreatePersonalLogin';
+// hashEmail is the actual hashing the component uses; asserting against it
+// verifies the email is normalized + hashed into the hidden field end-to-end
+// (and avoids depending on the untyped `md5` package directly).
+import {hashEmail} from '@cdo/apps/code-studio/hashEmail';
 
 // A fully-populated set of props for the linking-enabled, has-email branch.
 // Individual tests override the state flags to exercise the other branches.
@@ -31,7 +34,9 @@ const defaultProps = {
   lockIconSrc: '/assets/auth/lock.svg',
 };
 
-const renderComponent = (props = {}) =>
+type Props = Partial<typeof defaultProps>;
+
+const renderComponent = (props: Props = {}) =>
   render(<CreatePersonalLogin {...defaultProps} {...props} />);
 
 const getEmailField = () => screen.getByLabelText(/Personal email address/);
@@ -40,7 +45,8 @@ const queryEmailField = () => screen.queryByLabelText(/Personal email address/);
 // off the document (document.querySelector is not one of the restricted RTL
 // anti-patterns, unlike container.querySelector / getByTestId).
 const hashedEmailValue = () =>
-  document.querySelector('input[name="user[hashed_email]"]').value;
+  document.querySelector<HTMLInputElement>('input[name="user[hashed_email]"]')
+    ?.value;
 
 describe('CreatePersonalLogin', () => {
   beforeEach(() => {
@@ -75,7 +81,7 @@ describe('CreatePersonalLogin', () => {
   });
 
   describe('when linking is disabled', () => {
-    const lockedProps = {linkingEnabled: false};
+    const lockedProps: Props = {linkingEnabled: false};
 
     it('disables the inputs and shows the lock overlay', () => {
       renderComponent(lockedProps);
@@ -106,7 +112,7 @@ describe('CreatePersonalLogin', () => {
   });
 
   describe('when linking is enabled for an under-13 (noEmail) account', () => {
-    const under13Props = {noEmail: true, userAge: 10};
+    const under13Props: Props = {noEmail: true, userAge: 10};
 
     it('renders username + parent-email fields and the noEmail hidden input', () => {
       renderComponent(under13Props);
@@ -142,7 +148,9 @@ describe('CreatePersonalLogin', () => {
 
   describe('on submit', () => {
     const submitForm = () => {
-      const form = screen.getByRole('button', {name: 'Submit'}).closest('form');
+      const form = screen
+        .getByRole('button', {name: 'Submit'})
+        .closest('form') as HTMLFormElement;
       // The component intentionally does not preventDefault (this is a
       // full-page POST); stop the default here so jsdom does not attempt to
       // navigate.
@@ -157,7 +165,7 @@ describe('CreatePersonalLogin', () => {
       });
       submitForm();
 
-      expect(hashedEmailValue()).toBe(md5('test@example.com'));
+      expect(hashedEmailValue()).toBe(hashEmail('test@example.com'));
     });
 
     it('keeps the plaintext email for users 13 and older', () => {
@@ -173,7 +181,7 @@ describe('CreatePersonalLogin', () => {
       fireEvent.change(getEmailField(), {target: {value: 'kid@example.com'}});
       submitForm();
 
-      expect(hashedEmailValue()).toBe(md5('kid@example.com'));
+      expect(hashedEmailValue()).toBe(hashEmail('kid@example.com'));
       expect(getEmailField()).toHaveValue('');
     });
 
