@@ -141,6 +141,32 @@ export default class CdoConstantsProvider extends BlocklyCore.blockRendering
     this.ROUND_INPUT_OUTPUT = this.makeRoundInputConn();
   }
 
+  /**
+   * Pin the block-text row metrics to Geist's line box instead of the value
+   * Blockly derives at renderer init.
+   *
+   * The base implementation measures a `line-height: normal` DOM span
+   * (`dom.measureFontMetrics`) and caches the result. That measurement races
+   * the Geist webfont load: when the renderer initializes before the font is
+   * ready, a fallback font's taller metrics get cached, inflating every block's
+   * height and drifting block offsets from run to run. This flaked
+   * `star_labs/blocklayout.feature` and, in production, sized blocks from
+   * whichever font won the race. Deriving the height from Geist's known metrics
+   * makes block layout deterministic regardless of font-load timing, with no
+   * first-paint gate and no re-layout.
+   */
+  protected setFontConstants_(theme: BlocklyCore.Theme): void {
+    super.setFontConstants_(theme);
+    // Geist's rendered line-height:normal is ~1.28x the font size and its
+    // ascent ~1.005x (the OS/2 typo metric of 1.30em over-predicts the value
+    // browsers actually round to). These reproduce Blockly's own measurement --
+    // 19/15, 27/21, 41/32 -- at the 11/16/24pt sizes the default, high-contrast,
+    // and jigsaw themes use. FIELD_TEXT_FONTSIZE is in pt; convert to px @96dpi.
+    const fontSizePx = (this.FIELD_TEXT_FONTSIZE * 4) / 3;
+    this.FIELD_TEXT_HEIGHT = Math.round(1.28 * fontSizePx);
+    this.FIELD_TEXT_BASELINE = Math.round(1.005 * fontSizePx);
+  }
+
   protected generateSecondaryColour_(inputColour: string): string {
     if (Blockly.isDarkTheme) {
       return (
