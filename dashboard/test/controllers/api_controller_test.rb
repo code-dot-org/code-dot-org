@@ -6,7 +6,7 @@ class ApiControllerTest < ActionController::TestCase
 
   setup_all do
     # Sections without an assigned script fall back to the hourofcode unit
-    # (ApiController#load_script -> Unit.hoc_2014_unit), so it must exist.
+    # (ApiController#load_script), so several tests below rely on it existing.
     create_hourofcode_unit_and_levels
 
     @teacher = create(:teacher)
@@ -106,7 +106,7 @@ class ApiControllerTest < ActionController::TestCase
     get :section_text_responses, params: {section_id: @section.id}
     assert_response :success
 
-    # we fall back to hoc_2014_unit, which has no text_response levels
+    # we fall back to the hourofcode unit, which has no text_response levels
     assert_equal '[]', @response.body
   end
 
@@ -2270,5 +2270,76 @@ class ApiControllerTest < ActionController::TestCase
     level_source = create(:level_source)
     create(:user_level, level: level, user: student, script: script, level_source: level_source)
     # UserLevel.create!(level_id: level.id, user_id: student.id, script_id: script.id, level_source: level_source)
+  end
+end
+
+# ApiController#load_script falls back to the hourofcode unit for a section with
+# no assigned script or course. Production always seeds hourofcode, but UI-test
+# environments no longer do, so the section endpoints that rely on the fallback
+# must tolerate the default unit being absent (load_script yields nil) rather
+# than 500. This class runs with the hourofcode unit unseeded (the unit-test DB
+# has no fixture units, so absence is simply not creating it).
+class ApiControllerDefaultScriptTest < ActionController::TestCase
+  tests ApiController
+  include Devise::Test::ControllerHelpers
+
+  setup do
+    # These tests hinge on whether the hourofcode unit exists in the DB; keep the
+    # unit cache out of the picture so get_from_cache reflects the DB directly,
+    # regardless of how the suite is run (spring/CI disable caching; a plain
+    # `rails test` does not).
+    Unit.stubs(:should_cache?).returns(false)
+
+    @teacher = create(:teacher)
+    # A section with no assigned script or course, so Section#default_script is
+    # nil and load_script consults the hourofcode default.
+    @section = create(:section, user: @teacher, login_type: 'word')
+    @student = create(:student)
+    create(:follower, section: @section, student_user: @student)
+    sign_in @teacher
+  end
+
+  test 'lockable_state omits sections whose default script is unseeded' do
+    get :lockable_state
+    assert_response :success
+    assert_equal({}, JSON.parse(@response.body))
+  end
+
+  test 'section_level_progress returns an empty page when the default script is unseeded' do
+    get :section_level_progress, params: {section_id: @section.id}
+    assert_response :success
+    data = JSON.parse(@response.body)
+    assert_empty data['student_progress']
+    assert_empty data['student_last_updates']
+  end
+
+  test 'teacher_panel_progress returns bad_request when the default script is unseeded' do
+    get :teacher_panel_progress, params: {section_id: @section.id}
+    assert_response :bad_request
+  end
+
+  test 'section_text_responses returns no responses when the default script is unseeded' do
+    get :section_text_responses, params: {section_id: @section.id}
+    assert_response :success
+    assert_equal '[]', @response.body
+  end
+
+  test 'the section endpoints resolve the hourofcode default when it is seeded' do
+    create_hourofcode_unit_and_levels
+
+    get :section_text_responses, params: {section_id: @section.id}
+    assert_response :success
+    # hourofcode has no text-response levels.
+    assert_equal '[]', @response.body
+
+    get :section_level_progress, params: {section_id: @section.id}
+    assert_response :success
+    # With the default resolved, the section's one student is summarized.
+    assert_equal 1, JSON.parse(@response.body)['student_progress'].keys.length
+
+    get :lockable_state
+    assert_response :success
+    # hourofcode has no lockable lessons, but the section is now present.
+    assert_includes JSON.parse(@response.body).keys, @section.id.to_s
   end
 end
