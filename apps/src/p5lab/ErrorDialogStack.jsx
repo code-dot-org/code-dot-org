@@ -1,6 +1,7 @@
 /** @file Renders error dialogs in sequence, given a stack of errors */
 import Dialog from '@code-dot-org/component-library/dialog';
 import Link from '@code-dot-org/component-library/link';
+import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -51,16 +52,20 @@ class ErrorDialogStack extends React.Component {
           title={error.message}
           customContent={
             <div style={{textAlign: 'center'}}>
-              <p id="dsco-dialog-description">
+              <Typography
+                variant="body3"
+                component="p"
+                id="dsco-dialog-description"
+              >
                 {msg.errorLoadingAnimation({animationName: animationName})}
-              </p>
-              <p>
+              </Typography>
+              <Typography variant="body3" component="p">
                 {msg.contactWithoutEmail()}{' '}
                 <Link href={pegasus('/contact')} openInNewTab external size="s">
                   https://code.org/contact
                 </Link>
                 .
-              </p>
+              </Typography>
             </div>
           }
           primaryButtonProps={{
@@ -84,9 +89,14 @@ class ErrorDialogStack extends React.Component {
       <Dialog
         title="Error"
         customContent={
-          <p id="dsco-dialog-description" style={{textAlign: 'center'}}>
+          <Typography
+            variant="body3"
+            component="p"
+            id="dsco-dialog-description"
+            style={{textAlign: 'center'}}
+          >
             {error.message}
-          </p>
+          </Typography>
         }
         onClose={this.props.dismissError}
         closeLabel={msg.dialogOK()}
