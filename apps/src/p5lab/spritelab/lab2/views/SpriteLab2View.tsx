@@ -813,9 +813,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 };
 
 // Container that handles loading sources and wiring project manager, and the hands off to the inner view.
-const SpriteLab2Container: React.FunctionComponent<{
-  levelProperties: SpriteLab2LevelProperties;
-}> = ({levelProperties}) => {
+const SpriteLab2Container: React.FunctionComponent<
+  LabProps<SpriteLab2LevelProperties, SpriteLab2Source>
+> = ({levelProperties}) => {
   const dispatch = useAppDispatch();
   const {currentSources, patchSources, channel, projectManager, loadError} =
     useSources<SpriteLab2Source>({
@@ -853,13 +853,4 @@ const SpriteLab2Container: React.FunctionComponent<{
   );
 };
 
-export default (
-  props: LabProps<SpriteLab2LevelProperties, SpriteLab2Source>
-) => {
-  return (
-    <SpriteLab2Container
-      key={props.levelProperties.id}
-      levelProperties={props.levelProperties}
-    />
-  );
-};
+export default SpriteLab2Container;
