@@ -2,6 +2,30 @@
   background-color: var(--background-neutral-primary);
   height: 100%;
   overflow-y: auto;
-  padding: 12px;
+  padding: 10px;
   box-sizing: border-box;
+  // gap separates the walkthroughs and shortcuts sections without adding
+  // leading space when only one of them renders.
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+// Divider between stacked sections when the panel shows more than one.
+.sectionDivider {
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--borders-neutral-primary);
+}
+
+.shortcutsHintHeading {
+  font-weight: bold;
+  margin: 0 0 8px;
+}
+
+.shortcutsHintKey {
+  padding: 2px 4px;
+  background: var(--background-neutral-tertiary);
+  color: var(--text-neutral-secondary);
+  border-radius: 4px;
+  font-family: monospace;
 }

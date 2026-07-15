@@ -5,6 +5,7 @@ import type {
   SketchlabReactFlowEdge,
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
+import {isTargetEditable} from '@cdo/apps/util/isTargetEditable';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
@@ -17,7 +18,6 @@ import {
 } from '../constants';
 import type {ClipboardContents} from '../context';
 import type {TabOrderEntry} from '../utils/computeTabOrder';
-import {isTargetEditable} from '../utils/isTargetEditable';
 import {
   anchorHandleFlowPosition,
   createLineAnchorAtHandle,
