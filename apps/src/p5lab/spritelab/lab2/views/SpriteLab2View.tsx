@@ -108,8 +108,6 @@ const EMPTY_ANIMATION_LIST = {orderedKeys: [], propsByKey: {}};
 
 interface SpriteLab2ViewProps {
   levelProperties: SpriteLab2LevelProperties;
-  // Loaded project sources + writers. SpriteLab2Container renders this view
-  // only after sources load, so currentSources is always defined here.
   currentSources: SpriteLab2Source;
   patchSources: UseSourcesOutput<SpriteLab2Source>['patchSources'];
   channelId?: string;
@@ -814,9 +812,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
 };
 
-// Owns project loading/saving (the framework skips its project setup for
-// this lab — see managesOwnProject on the entry point) and mounts the view
-// once sources have loaded.
+// Container that handles loading sources and wiring project manager, and the hands off to the inner view.
 const SpriteLab2Container: React.FunctionComponent<{
   levelProperties: SpriteLab2LevelProperties;
 }> = ({levelProperties}) => {
@@ -828,9 +824,7 @@ const SpriteLab2Container: React.FunctionComponent<{
       includeVersionHistory: true,
     });
 
-  // Bridge during transition: the code-studio header (project rename/share)
-  // reaches the project manager through Lab2Registry; deprecate once it
-  // takes the manager from the lab.
+  // Set the project manager in the registry for external components that need it (e.g. header).
   useEffect(() => {
     if (projectManager) {
       Lab2Registry.getInstance().setProjectManager(projectManager);
