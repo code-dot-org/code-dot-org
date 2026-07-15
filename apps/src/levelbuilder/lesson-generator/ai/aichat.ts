@@ -1,7 +1,11 @@
 import {Output} from 'ai';
 import z from 'zod/v3';
 
-import {Visibility} from '@cdo/apps/aichatLab/types/customizations';
+import {ModelParameters} from '@cdo/apps/aichat/types/model';
+import {
+  FieldVisibilities,
+  Visibility,
+} from '@cdo/apps/aichatLab/types/customizations';
 import {LevelAichatSettings} from '@cdo/apps/aichatLab/types/levelProperties';
 import {generateText} from '@cdo/apps/aiGateway';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
@@ -14,27 +18,26 @@ import {
   PROMPT_TAGS,
 } from '../../curriculum-generator/ai/shared';
 
-// Presets fix every field except the prompts (systemPrompt +
-// levelSystemPrompt) and, for Bot Builder, the model card — those are
-// AI-generated per level. Fields mirror LevelAichatSettings;
-// responseJsonSchema is omitted because no shipped preset varies it.
+// Presets fix every field of LevelAichatSettings except the prompts
+// (systemPrompt + levelSystemPrompt) and, for Bot Builder, the model card
+// — those are AI-generated per level. responseJsonSchema is omitted
+// because no shipped preset varies it.
+type PresetDefaultKey = 'selectedModelId' | 'temperature';
+type PresetVisibilityKey =
+  | 'selectedModelId'
+  | 'temperature'
+  | 'systemPrompt'
+  | 'retrievalContexts'
+  | 'modelCardInfo';
+
 export interface AichatPreset {
   id: AichatPresetId;
   label: string;
   description: string;
-  defaults: {
-    selectedModelId: LevelAichatSettings['initialCustomizations']['selectedModelId'];
-    temperature: number;
-  };
-  visibilities: {
-    selectedModelId: Visibility;
-    temperature: Visibility;
-    systemPrompt: Visibility;
-    retrievalContexts: Visibility;
-    modelCardInfo: Visibility;
-  };
-  hidePresentationPanel: boolean;
-  multimodalEnabled: boolean;
+  defaults: Pick<ModelParameters, PresetDefaultKey>;
+  visibilities: Pick<FieldVisibilities, PresetVisibilityKey>;
+  hidePresentationPanel: LevelAichatSettings['hidePresentationPanel'];
+  multimodalEnabled: NonNullable<LevelAichatSettings['multimodalEnabled']>;
   promptForModelCard: boolean;
 }
 
