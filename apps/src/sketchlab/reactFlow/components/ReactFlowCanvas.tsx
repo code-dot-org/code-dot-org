@@ -454,11 +454,8 @@ export default function ReactFlowCanvas({
     [pushSnapshot, setNodes, closeToolbar]
   );
 
-  // Deleting a group must also delete its children. React Flow's cascade only
-  // reaches *deletable* children, and grouped children are deletable:false (see
-  // useDisplayElements), so without this a deleted group leaves its children
-  // orphaned with a dangling parentId. Runs for both the Delete key and
-  // deleteElements (cut), which share this path.
+  // Ensure delete on a group will delete all group elements.
+  // Runs on both delete (via keystroke or button) and cut.
   const handleBeforeDelete: OnBeforeDelete<
     SketchLabNode,
     SketchlabReactFlowEdge

@@ -104,14 +104,10 @@ export function groupSelectedNodes(
 /**
  * Expands a pending deletion so removing a group also removes its children.
  *
- * React Flow's cascade delete only propagates to *deletable* children, but
+ * React Flow's cascade delete only propagates to deletable children, but
  * grouped children are marked deletable:false (so a user can't delete one
- * child out of a group). The two rules collide: deleting a group would remove
- * only the group node and leave its children orphaned with a dangling
- * parentId. This re-adds each deleted group's children, plus any edges whose
- * endpoints are being removed, so no dangling nodes or edges survive. Intended
- * as a React Flow `onBeforeDelete` handler, which both the Delete key and
- * `deleteElements` (cut) route through.
+ * child out of a group). This re-adds each deleted group's children, plus any edges whose
+ * endpoints are being removed, so no dangling nodes or edges survive.
  */
 export function expandGroupDeletion<
   E extends {id: string; source: string; target: string}
