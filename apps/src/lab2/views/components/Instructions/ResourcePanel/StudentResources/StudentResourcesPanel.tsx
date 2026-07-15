@@ -1,11 +1,11 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography} from '@mui/material';
 import React from 'react';
 
+import {KeyboardShortcutCategories} from '@cdo/apps/lab2/keyboardShortcuts/types';
 import {ProductTourConfig} from '@cdo/apps/lab2/productTours/productToursPerLab';
 
 import GuidedWalkthroughs from './GuidedWalkthroughs';
-import KeyboardShortcuts, {
-  KeyboardShortcutCategories,
-} from './KeyboardShortcuts';
 
 import styles from './student-resources-panel.module.scss';
 
@@ -30,7 +30,18 @@ const StudentResourcesPanel: React.FC<StudentResourcesPanelProps> = ({
           otherAvailableTours={otherAvailableTours}
         />
       )}
-      {hasShortcuts && <KeyboardShortcuts shortcuts={shortcuts} />}
+      {hasShortcuts && (
+        <div>
+          <Typography variant="body3" className={styles.shortcutsHintHeading}>
+            <FontAwesomeV6Icon iconName="keyboard" />
+            <strong>Keyboard shortcuts</strong>
+          </Typography>
+          <Typography variant="body4">
+            Press <kbd className={styles.shortcutsHintKey}>/</kbd> to see
+            available shortcuts in this lab.
+          </Typography>
+        </div>
+      )}
     </div>
   );
 };

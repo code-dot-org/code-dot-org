@@ -12,7 +12,7 @@ jest.mock(
 );
 
 describe('StudentResourcesPanel', () => {
-  it('renders the shortcuts section when only shortcuts are provided', () => {
+  it('renders the shortcuts hint when shortcuts are provided', () => {
     render(
       <StudentResourcesPanel
         levelTours={[]}
@@ -22,11 +22,17 @@ describe('StudentResourcesPanel', () => {
     );
     expect(screen.getByText('Keyboard shortcuts')).toBeInTheDocument();
     expect(
+      screen.getByText(/available shortcuts in this lab/)
+    ).toBeInTheDocument();
+    // The hint points at the `/` key, but not the full shortcut table.
+    expect(screen.getByText('/')).toBeInTheDocument();
+    expect(screen.queryByText('Move focus')).not.toBeInTheDocument();
+    expect(
       screen.queryByText('Guided walkthroughs stub')
     ).not.toBeInTheDocument();
   });
 
-  it('omits the shortcuts section when no shortcuts are provided', () => {
+  it('omits the shortcuts hint when no shortcuts are provided', () => {
     render(<StudentResourcesPanel levelTours={[]} otherAvailableTours={[]} />);
     expect(screen.queryByText('Keyboard shortcuts')).not.toBeInTheDocument();
   });

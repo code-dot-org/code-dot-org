@@ -14,6 +14,7 @@ import {ChatAsset} from '@cdo/apps/aichat/types/assets';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
+import {ShortcutsPerLab} from '@cdo/apps/lab2/keyboardShortcuts/shortcutsPerLab';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {
   isTourAvailableOnLevel,
@@ -62,7 +63,6 @@ import DisclaimerButton from './Footer/DisclaimerButton';
 import ResourcePanelExtraLinks from './Footer/ResourcePanelExtraLinks';
 import setFooterVisibility from './Footer/setFooterVisibility';
 import SettingsPanel from './Footer/SettingsPanel';
-import {KeyboardShortcutCategories} from './StudentResources/KeyboardShortcuts';
 import StudentResourcesPanel from './StudentResources/StudentResourcesPanel';
 import {Tabs} from './types';
 import ValidationPanel, {
@@ -145,8 +145,6 @@ type ResourcePanelProps = InstructionsProps & {
   rightHeaderContent?: React.ReactNode;
   includeFooterSpacing?: boolean;
   settings?: Setting[];
-  /** Keyboard shortcuts to display in the student Resources tab, by category. */
-  shortcuts?: KeyboardShortcutCategories;
   versionHistoryProps?: VersionHistoryProps;
   aiTutorMultimodalEnabled?: boolean;
   aiTutorChatButtonData?: ChatButtonData[];
@@ -181,7 +179,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   rightHeaderContent,
   includeFooterSpacing = true,
   settings,
-  shortcuts,
   versionHistoryProps,
   aiTutorMultimodalEnabled,
   aiTutorChatButtonData,
@@ -413,11 +410,11 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       );
     }
 
-    const hasShortcuts = !!shortcuts && Object.keys(shortcuts).length > 0;
+    const shortcuts = ShortcutsPerLab[levelProperties.appName as AppName];
     if (
       levelTours.length > 0 ||
       otherAvailableTours.length > 0 ||
-      hasShortcuts
+      !!shortcuts
     ) {
       tabMap[Tabs.StudentResources] = (
         <StudentResourcesPanel
@@ -448,7 +445,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     isUserTeacher,
     levelTours,
     otherAvailableTours,
-    shortcuts,
     aiTutorMultimodalEnabled,
     levelName,
     channelId,

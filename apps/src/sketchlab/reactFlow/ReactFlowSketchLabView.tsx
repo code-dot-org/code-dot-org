@@ -31,7 +31,6 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import ReactFlowCanvas from './components/ReactFlowCanvas';
-import {SKETCH_LAB_KEYBOARD_SHORTCUTS} from './keyboardShortcuts';
 import {ImageNodeData, ReactFlowSketchLabSources} from './types';
 import {
   convertExcalidrawToReactFlow,
@@ -260,7 +259,6 @@ function ReactFlowSketchLabViewInner({
             hasRun={hasRun}
             hasEdited={false}
             settings={[useThemeSetting('sketchlab')]}
-            shortcuts={SKETCH_LAB_KEYBOARD_SHORTCUTS}
             versionHistoryProps={{
               startSources:
                 (levelProperties?.templateSources as ProjectSources) ||

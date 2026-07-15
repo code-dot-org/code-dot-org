@@ -2,9 +2,8 @@ import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
-import KeyboardShortcuts, {
-  KeyboardShortcutCategories,
-} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/StudentResources/KeyboardShortcuts';
+import KeyboardShortcuts from '@cdo/apps/lab2/keyboardShortcuts/KeyboardShortcuts';
+import {KeyboardShortcutCategories} from '@cdo/apps/lab2/keyboardShortcuts/types';
 
 const SHORTCUTS: KeyboardShortcutCategories = {
   Navigation: [{shortcut: 'Tab', explanation: 'Move focus between elements'}],
@@ -15,7 +14,7 @@ const SHORTCUTS: KeyboardShortcutCategories = {
 };
 
 describe('KeyboardShortcuts', () => {
-  it('renders a heading for each category', () => {
+  it('renders a caption for each category', () => {
     render(<KeyboardShortcuts shortcuts={SHORTCUTS} />);
     expect(screen.getByText('Navigation')).toBeInTheDocument();
     expect(screen.getByText('Move & resize')).toBeInTheDocument();

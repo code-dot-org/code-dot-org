@@ -10,3 +10,22 @@
   flex-direction: column;
   gap: 16px;
 }
+
+.shortcutsHintHeading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  margin: 0 0 8px;
+}
+
+.shortcutsHintKey {
+  display: inline-block;
+  padding: 2px 6px;
+  background: var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 12px;
+}
