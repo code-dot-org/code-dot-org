@@ -828,7 +828,7 @@ export default function ReactFlowCanvas({
     edgesFocusable: !isGrabMode,
     onNodeClick: isGrabMode ? undefined : handleNodeClick,
     onEdgeClick: isGrabMode ? undefined : handleEdgeClick,
-    deleteKeyCode: !readOnly && !isGrabMode ? 'Delete' : null,
+    deleteKeyCode: !readOnly && !isGrabMode ? ['Delete', 'Backspace'] : null,
   };
 
   return (
