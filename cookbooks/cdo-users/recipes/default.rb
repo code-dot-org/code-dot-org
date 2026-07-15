@@ -5,6 +5,66 @@
 
 require 'chef/user'
 require 'chef/client'
+require 'etc'
+require 'shellwords'
+
+# The chef group records the users managed by the previous converge.
+previously_managed_users = begin
+  Etc.getgrnam('chef').mem
+rescue ArgumentError
+  []
+end
+
+removed_user_safelist = %w[root ubuntu].freeze
+(previously_managed_users - node['cdo-users'].keys).each do |user_name|
+  next if removed_user_safelist.include?(user_name)
+
+  begin
+    passwd_entry = Etc.getpwnam(user_name)
+  rescue ArgumentError
+    next
+  end
+  next if passwd_entry.uid < 1000
+
+  home_directory = passwd_entry.dir
+  archive_directory = '/var/backups/removed-users'
+  archive_path = File.join(archive_directory, "#{user_name}-home.tar.gz")
+  archive_record = "#{user_name} #{home_directory} #{archive_path}"
+
+  directory "removed user backups for #{user_name}" do
+    path archive_directory
+    owner 'root'
+    group 'root'
+    mode '0700'
+  end
+
+  execute "archive home directory for #{user_name}" do
+    command "tar -czf #{Shellwords.escape(archive_path)} -C #{Shellwords.escape(File.dirname(home_directory))} -- #{Shellwords.escape(File.basename(home_directory))}"
+    only_if {File.directory?(home_directory)}
+    not_if {File.exist?(archive_path)}
+  end
+
+  execute "record archived user #{user_name}" do
+    command "printf '%s\\n' #{Shellwords.escape(archive_record)} >> /home/archived-users.txt"
+    not_if "grep -Fqx -- #{Shellwords.escape(archive_record)} /home/archived-users.txt"
+  end
+
+  user user_name do
+    action :remove
+    manage_home true
+    force true
+  end
+
+  group user_name do
+    action :remove
+    only_if do
+      Etc.getgrnam(user_name)
+      true
+    rescue ArgumentError
+      false
+    end
+  end
+end
 
 chef_gem("aws-sdk-ec2") {compile_time true}
 require 'aws-sdk-ec2'
