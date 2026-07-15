@@ -105,8 +105,8 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
 
     assert_equal 'adhoc-high-unit', high_preset[:unit_name]
     assert_equal 'adhoc-high-course', high_preset[:unit_group_name]
-    assert_equal 'csd2-2026', middle_preset[:unit_name]
-    assert_equal 'csd-2026', middle_preset[:unit_group_name]
+    assert_equal 'web-development-2026', middle_preset[:unit_name]
+    assert_equal 'ai-discoveries-2026', middle_preset[:unit_group_name]
   end
 
   test 'get_preset ignores malformed adhoc curriculum config' do
