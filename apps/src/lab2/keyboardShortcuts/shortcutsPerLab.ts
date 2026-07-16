@@ -56,10 +56,9 @@ export const ShortcutsPerLab: Partial<
       {shortcut: 'Ctrl / Cmd + C', explanation: 'Copy'},
       {shortcut: 'Ctrl / Cmd + X', explanation: 'Cut'},
       {shortcut: 'Ctrl / Cmd + V', explanation: 'Paste'},
-      {shortcut: 'Delete', explanation: 'Windows: Delete the selected element'},
       {
-        shortcut: 'Fn + Delete',
-        explanation: 'Mac: Delete the selected element',
+        shortcut: 'Delete / Backspace',
+        explanation: 'Delete the selected element',
       },
       {shortcut: 'Ctrl / Cmd + Z', explanation: 'Undo'},
       {shortcut: 'Ctrl / Cmd + Y', explanation: 'Redo'},
