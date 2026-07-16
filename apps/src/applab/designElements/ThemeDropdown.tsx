@@ -4,20 +4,23 @@ import {useDropdownContext} from '@code-dot-org/component-library/common/context
 import {CustomDropdown} from '@code-dot-org/component-library/dropdown';
 import {Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
-import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
-import applabMsg from '@cdo/applab/locale';
-
 import {themeOptionsForSelect} from '../constants';
+import applabMsg from '../locale';
 
 import moduleStyles from './theme-dropdown.module.scss';
+
+export interface ThemeMenuProps {
+  selectedValue: string;
+  onSelect: (value: string) => void;
+}
 
 // Rendered as a child of CustomDropdown so useDropdownContext resolves to
 // the provider CustomDropdown wraps itself in; calling it from ThemeDropdown's
 // level would reach a different context and the menu would not close on
 // select (see the workaround comment in aiTeacherDrawer/AiDiffChatHeader.tsx).
-function ThemeMenu({selectedValue, onSelect}) {
+function ThemeMenu({selectedValue, onSelect}: ThemeMenuProps) {
   const {setActiveDropdownName} = useDropdownContext();
 
   return (
@@ -41,7 +44,9 @@ function ThemeMenu({selectedValue, onSelect}) {
               alt={applabMsg.iconForTheme({selectedTheme: themeOption.option})}
             />
             <MuiTypography variant="body3" component="span">
-              {applabMsg[`designElementTheme_${themeOption.option}`]()}
+              {applabMsg[
+                `designElementTheme_${themeOption.option}` as keyof typeof applabMsg
+              ]()}
             </MuiTypography>
           </button>
         </li>
@@ -50,19 +55,20 @@ function ThemeMenu({selectedValue, onSelect}) {
   );
 }
 
-ThemeMenu.propTypes = {
-  selectedValue: PropTypes.string.isRequired,
-  onSelect: PropTypes.func.isRequired,
-};
+export interface ThemeDropdownProps {
+  initialValue: string;
+  handleChange: (value: string) => void;
+  description?: string;
+}
 
-export default function ThemeDropdown({
+export const ThemeDropdown = ({
   initialValue,
   handleChange,
   description,
-}) {
+}: ThemeDropdownProps) => {
   const [selectedValue, setSelectedValue] = useState(initialValue);
 
-  const onSelect = value => {
+  const onSelect = (value: string) => {
     handleChange(value);
     setSelectedValue(value);
   };
@@ -73,17 +79,15 @@ export default function ThemeDropdown({
       className={moduleStyles.themeDropdown}
       size="s"
       styleAsFormField={true}
-      labelText={description}
-      selectedValueText={applabMsg[`designElementTheme_${selectedValue}`]()}
+      labelText={description || ''}
+      selectedValueText={applabMsg[
+        `designElementTheme_${selectedValue}` as keyof typeof applabMsg
+      ]()}
       aria-label={description}
     >
       <ThemeMenu selectedValue={selectedValue} onSelect={onSelect} />
     </CustomDropdown>
   );
-}
-
-ThemeDropdown.propTypes = {
-  initialValue: PropTypes.string.isRequired,
-  handleChange: PropTypes.func.isRequired,
-  description: PropTypes.string,
 };
+
+export default ThemeDropdown;
