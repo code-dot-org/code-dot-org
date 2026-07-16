@@ -63,7 +63,7 @@ export const createReactFlowSketchLabTourSteps = (
       id: 'grab-select-tools',
       attachTo: {element: TOOLBAR_GROUP.selectionTools, on: 'right'},
       title: 'Grab and select tools',
-      text: 'Use the select tool to click on elements. Use the hand tool to move the canvas around. Looking for keyboard navigation? Try pressing / after you finish the tour.',
+      text: "Use the select tool to click on elements. Use the hand tool to move the canvas around. Looking for keyboard navigation? Try pressing '/' after you finish the tour.",
       buttons: [nextButton(tour)],
       floatingUIOptions: {
         middleware: [offset(12)],
@@ -148,7 +148,8 @@ export const createReactFlowSketchLabTourSteps = (
       attachTo: {element: SHAPE_TOOLBAR, on: 'left'},
       title: 'Style your shape',
       text: 'Whenever an element is selected, its toolbar appears. Use it to change colors, styling, or rotation. You can also duplicate the element, send it to the front or back of the canvas, or delete it.',
-      buttons: [backButton(tour), nextButton(tour)],
+      // Trying to go back here gets you into a weird state since you've already added a shape, so only allow next.
+      buttons: [nextButton(tour)],
       floatingUIOptions: {
         middleware: [offset(12)],
       },
