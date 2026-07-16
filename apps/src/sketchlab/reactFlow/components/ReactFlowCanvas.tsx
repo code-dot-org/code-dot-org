@@ -2,6 +2,7 @@ import {
   addEdge,
   Background,
   type IsValidConnection,
+  type OnBeforeDelete,
   type OnEdgesChange,
   type OnNodesChange,
   Panel,
@@ -67,7 +68,11 @@ import {
   SketchLabNode,
 } from '../types';
 import {canCreateConnection} from '../utils/connectionRules';
-import {groupSelectedNodes, ungroupNode} from '../utils/grouping';
+import {
+  expandGroupDeletion,
+  groupSelectedNodes,
+  ungroupNode,
+} from '../utils/grouping';
 import {createLineAnchorAtHandle} from '../utils/lineAnchors';
 import {defaultLineEdgeFields} from '../utils/lineEdges';
 
@@ -449,6 +454,17 @@ export default function ReactFlowCanvas({
     [pushSnapshot, setNodes, closeToolbar]
   );
 
+  // Ensure delete on a group will delete all group elements.
+  // Runs on both delete (via keystroke or button) and cut.
+  const handleBeforeDelete: OnBeforeDelete<
+    SketchLabNode,
+    SketchlabReactFlowEdge
+  > = useCallback(
+    async ({nodes: nodesToDelete, edges: edgesToDelete}) =>
+      expandGroupDeletion(nodesToDelete, edgesToDelete, nodes, edges),
+    [nodes, edges]
+  );
+
   const {
     selectionBox,
     pendingSelectedIds,
@@ -809,7 +825,7 @@ export default function ReactFlowCanvas({
     edgesFocusable: !isGrabMode,
     onNodeClick: isGrabMode ? undefined : handleNodeClick,
     onEdgeClick: isGrabMode ? undefined : handleEdgeClick,
-    deleteKeyCode: !readOnly && !isGrabMode ? 'Delete' : null,
+    deleteKeyCode: !readOnly && !isGrabMode ? ['Delete', 'Backspace'] : null,
   };
 
   return (
@@ -868,6 +884,7 @@ export default function ReactFlowCanvas({
                     {...grabModeProps}
                     onPaneClick={handlePaneClick}
                     onConnect={onConnect}
+                    onBeforeDelete={handleBeforeDelete}
                     onNodesDelete={handleElementsDeleted}
                     onEdgesDelete={handleElementsDeleted}
                     onNodeDragStart={handleNodeDragStart}
