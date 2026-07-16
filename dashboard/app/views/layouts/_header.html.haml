@@ -1,7 +1,11 @@
 :ruby
   require 'cdo/language_dir'
 
-  script = local_assigns[:script] || Unit.hoc_2014_unit
+  # The hourofcode fallback is only consulted when a script_level is present
+  # (see should_show_progress below); don't raise on plain pages if the
+  # hourofcode unit does not exist (e.g. in tests, which no longer provide it
+  # as a fixture).
+  script = local_assigns[:script] || Unit.get_from_cache(Unit::HOC_NAME, raise_exceptions: false)
   script_level = local_assigns[:script_level]
   level = local_assigns[:level]
   lesson = local_assigns[:lesson]
