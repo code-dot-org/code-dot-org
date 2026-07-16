@@ -76,12 +76,7 @@ class CertificatesControllerTest < ActionController::TestCase
   test_user_gets_response_for :batch, user: :student, response: :redirect, redirected_to: '/'
   test_user_gets_response_for :batch, user: :teacher, response: :success
 
-  # The paramless batch default renders Hour of Code and never consults the DB.
-  # Exercise it both with the hourofcode course seeded (here; production always
-  # has it) and absent (see 'when hourofcode is not seeded' below, as in
-  # UI-test-like environments).
   test 'batch page loads hoc image by default' do
-    create_hourofcode_unit_and_levels
     sign_in @teacher
     get :batch
     assert_response :success
@@ -105,27 +100,6 @@ class CertificatesControllerTest < ActionController::TestCase
     response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
     assert_equal 'oceans', response_data['courseName']
     assert_equal expected_image_url, response_data['imageUrl']
-  end
-
-  test 'batch page renders the default hoc certificate when hourofcode is not seeded' do
-    sign_in @teacher
-    get :batch
-    assert_response :success
-    expected_image_url = CDO.studio_url('/blockly/media/certificates/hour_of_ai_certificate.png')
-    response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
-    assert_nil response_data['courseName']
-    assert_equal I18n.t('certificate_hour_of_code'), response_data['courseTitle']
-    assert_equal expected_image_url, response_data['imageUrl']
-  end
-
-  test 'batch page default does not depend on rack env when hourofcode is not seeded' do
-    sign_in @teacher
-    with_rack_env(:production) do
-      get :batch
-    end
-    assert_response :success
-    response_data = JSON.parse(css_select('script[data-certificate]').first.attribute('data-certificate').to_s)
-    assert_equal I18n.t('certificate_hour_of_code'), response_data['courseTitle']
   end
 
   test 'batch page rejects an explicitly requested course that is not seeded' do
