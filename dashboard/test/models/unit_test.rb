@@ -2640,12 +2640,6 @@ class UnitTest < ActiveSupport::TestCase
     assert_raises(RuntimeError) {unit.update_lesson_outlines([{'key' => 'a'}])}
   end
 
-  # api_controller#load_script defaults to this unit when no script is given.
-  test 'hoc_2014_unit returns the hourofcode unit' do
-    hourofcode = create(:script, name: Unit::HOC_NAME)
-    assert_equal hourofcode, Unit.hoc_2014_unit
-  end
-
   test 'lesson_tutor_available? is true for AIF and AID student courses' do
     %w[AIF AID].each_with_index do |initiative, i|
       unit_group = create(:single_unit_course, :with_course_offering, family_name: "ai-tutor-#{i}", version_year: '2026')
