@@ -66,4 +66,9 @@ describe('scrollIntoViewIfNeeded', () => {
     scrollIntoViewIfNeeded(el);
     expect(el.scrollIntoView).toHaveBeenCalledWith({block: 'center'});
   });
+
+  // Shepherd passes undefined for a centered step that has no attachTo target.
+  it('does nothing when the element is undefined', () => {
+    expect(() => scrollIntoViewIfNeeded(undefined)).not.toThrow();
+  });
 });

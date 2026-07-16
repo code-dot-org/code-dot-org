@@ -42,7 +42,7 @@ export const createReactFlowSketchLabTourSteps = (
     {
       id: 'sketchlab-welcome',
       title: 'Welcome to Sketch Lab',
-      text: 'Sketch Lab is a place to make diagrams and bring your ideas to life.',
+      text: 'Sketch Lab is a place where you can sketch your ideas with shapes, images and text.',
       buttons: [nextButton(tour)],
       floatingUIOptions: {
         middleware: [offset(12)],
