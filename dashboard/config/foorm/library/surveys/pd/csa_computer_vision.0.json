@@ -11,7 +11,7 @@
             {
               "type": "html",
               "name": "intro",
-              "html": "<h1>Your Experience Teaching Code.org's Software Engineering and Computer Vision Module</h1>\n<p><h2>Chapter 1: GitHub and Copilot || Lesson 2: Intro to GitHub</h2></n>\n<p><span style='font-size: 12pt;'>The purpose of this survey is to understand your experience and perceptions after teaching this lesson.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
+              "html": "<h1>Your Experience Teaching CodeAI's Software Engineering and Computer Vision Module</h1>\n<p><h2>Chapter 1: GitHub and Copilot || Lesson 2: Intro to GitHub</h2></n>\n<p><span style='font-size: 12pt;'>The purpose of this survey is to understand your experience and perceptions after teaching this lesson.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
             },
             {
               "type": "radiogroup",
@@ -190,7 +190,7 @@
             {
               "type": "html",
               "name": "intro",
-              "html": "<h1>Your Experience Teaching Code.org's Software Engineering and Computer Vision Module</h1>\n<p><h2>Chapter 1: GitHub and Copilot || Lesson 3: Intro to Copilot</h2></n>\n<p><span style='font-size: 12pt;'>The purpose of this survey is to understand your experience and perceptions after teaching this lesson.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
+              "html": "<h1>Your Experience Teaching CodeAI's Software Engineering and Computer Vision Module</h1>\n<p><h2>Chapter 1: GitHub and Copilot || Lesson 3: Intro to Copilot</h2></n>\n<p><span style='font-size: 12pt;'>The purpose of this survey is to understand your experience and perceptions after teaching this lesson.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
             },
             {
               "type": "radiogroup",
@@ -396,7 +396,7 @@
             {
               "type": "html",
               "name": "intro",
-              "html": "<h1>Your Experience Teaching Code.org's Software Engineering and Computer Vision Module</h1>\n<p><h2>Chapter 1: GitHub and Copilot || Lesson 4: Build with Copilot</h2></n>\n<p><span style='font-size: 12pt;'>The purpose of this survey is to understand your experience and perceptions after teaching this lesson.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
+              "html": "<h1>Your Experience Teaching CodeAI's Software Engineering and Computer Vision Module</h1>\n<p><h2>Chapter 1: GitHub and Copilot || Lesson 4: Build with Copilot</h2></n>\n<p><span style='font-size: 12pt;'>The purpose of this survey is to understand your experience and perceptions after teaching this lesson.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
             },
             {
               "type": "radiogroup",
@@ -629,7 +629,7 @@
             {
               "type": "html",
               "name": "intro",
-              "html": "<h1>Your Experience Teaching Code.org's Software Engineering and Computer Vision Module</h1>\n<p><h2>Chapter 2: Computer Vision || Lesson 5: Intro to AI Models</h2></n>\n<p><span style='font-size: 12pt;'>The purpose of this survey is to understand your experience and perceptions after teaching this lesson.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
+              "html": "<h1>Your Experience Teaching CodeAI's Software Engineering and Computer Vision Module</h1>\n<p><h2>Chapter 2: Computer Vision || Lesson 5: Intro to AI Models</h2></n>\n<p><span style='font-size: 12pt;'>The purpose of this survey is to understand your experience and perceptions after teaching this lesson.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
             },
             {
               "type": "radiogroup",
@@ -808,7 +808,7 @@
             {
               "type": "html",
               "name": "intro",
-              "html": "<h1>Your Experience Teaching Code.org's Software Engineering and Computer Vision Module</h1>\n<p><h2>Chapter 2: Computer Vision || Lesson 6: Training Your Model</h2></n>\n<p><span style='font-size: 12pt;'>The purpose of this survey is to understand your experience and perceptions after teaching this lesson.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
+              "html": "<h1>Your Experience Teaching CodeAI's Software Engineering and Computer Vision Module</h1>\n<p><h2>Chapter 2: Computer Vision || Lesson 6: Training Your Model</h2></n>\n<p><span style='font-size: 12pt;'>The purpose of this survey is to understand your experience and perceptions after teaching this lesson.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
             },
             {
               "type": "radiogroup",
@@ -987,7 +987,7 @@
             {
               "type": "html",
               "name": "intro",
-              "html": "<h1>Your Experience Teaching Code.org's Software Engineering and Computer Vision Module</h1>\n<p><h2>Chapter 2: Computer Vision || Lesson 7: Using Your Model</h2></n>\n<p><span style='font-size: 12pt;'>The purpose of this survey is to understand your experience and perceptions after teaching this lesson.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
+              "html": "<h1>Your Experience Teaching CodeAI's Software Engineering and Computer Vision Module</h1>\n<p><h2>Chapter 2: Computer Vision || Lesson 7: Using Your Model</h2></n>\n<p><span style='font-size: 12pt;'>The purpose of this survey is to understand your experience and perceptions after teaching this lesson.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
             },
             {
               "type": "radiogroup",
@@ -1166,7 +1166,7 @@
             {
               "type": "html",
               "name": "survey_preamble_header_and_text",
-              "html": "<h1>Welcome to Code.org's Software Engineering and Computer Vision's {survey_variable_name}</h1>\n\n<p><strong>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about your experience teaching our curriculum.</strong></p>\n<p>The purpose of this survey is to understand your experience teaching Code.org's Software Engineering and Computer Vision module to inform how it can be improved.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org to improve our curriculum and programs.</li>\n</ul>\n<p>This survey should take <strong>less than 5 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
+              "html": "<h1>Welcome to CodeAI's Software Engineering and Computer Vision's {survey_variable_name}</h1>\n\n<p><strong>CodeAI relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about your experience teaching our curriculum.</strong></p>\n<p>The purpose of this survey is to understand your experience teaching CodeAI's Software Engineering and Computer Vision module to inform how it can be improved.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by CodeAI to improve our curriculum and programs.</li>\n</ul>\n<p>This survey should take <strong>less than 5 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
             }
           ]
         },
@@ -1178,7 +1178,7 @@
             {
               "type": "html",
               "name": "survey_preamble_header_and_text",
-              "html": "<h1>Welcome to Code.org's Software Engineering and Computer Vision - Post-Module Teacher Survey</h1>\n\n<p><strong>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about your experience teaching our curriculum.</strong></p>\n<p>The purpose of this survey is to understand your experience teaching Code.org's Software Engineering and Computer Vision module to inform how it can be improved.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org to improve our curriculum and programs.</li>\n</ul>\n<p>This survey should take <strong>less than 5 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
+              "html": "<h1>Welcome to CodeAI's Software Engineering and Computer Vision - Post-Module Teacher Survey</h1>\n\n<p><strong>CodeAI relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about your experience teaching our curriculum.</strong></p>\n<p>The purpose of this survey is to understand your experience teaching CodeAI's Software Engineering and Computer Vision module to inform how it can be improved.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by CodeAI to improve our curriculum and programs.</li>\n</ul>\n<p>This survey should take <strong>less than 5 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
             }
           ]
         },
@@ -1190,7 +1190,7 @@
             {
               "type": "html",
               "name": "intro",
-              "html": "<h1>Your Experience Teaching Code.org's Software Engineering and Computer Vision Module</h1>\n<p><span style='font-size: 12pt;'>The purpose of this survey is to understand your experience, perceptions, and your learning after participating in this module.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
+              "html": "<h1>Your Experience Teaching CodeAI's Software Engineering and Computer Vision Module</h1>\n<p><span style='font-size: 12pt;'>The purpose of this survey is to understand your experience, perceptions, and your learning after participating in this module.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
             },
             {
               "type": "checkbox",
@@ -1265,7 +1265,7 @@
               "type": "radiogroup",
               "name": "cdo_csa",
               "visibleIf": "{lessons_taught_checkbox} anyof ['lesson_2']",
-              "title": "Prior to teaching this module, were your students using Code.org's CSA curriculum and JavaLab tools?",
+              "title": "Prior to teaching this module, were your students using CodeAI's CSA curriculum and JavaLab tools?",
               "choices": [
                 {
                   "value": "yes",
@@ -1654,7 +1654,7 @@
             {
               "type": "html",
               "name": "section_curriculum_feedback",
-              "html": "<h2>Your Feedback and Impressions About Code.org's Software Engineering and Computer Vision Module</h2>"
+              "html": "<h2>Your Feedback and Impressions About CodeAI's Software Engineering and Computer Vision Module</h2>"
             },
             {
               "type": "radiogroup",
@@ -1851,14 +1851,14 @@
             {
               "type": "comment",
               "name": "other_feedback_FR",
-              "title": "Is there anything else you’d like to tell us about your experience teaching Code.org's Software Engineering and Computer Vision module?",
+              "title": "Is there anything else you’d like to tell us about your experience teaching CodeAI's Software Engineering and Computer Vision module?",
               "cols": 60,
               "rows": 3
             },
             {
               "type": "radiogroup",
               "name": "permission",
-              "title": "I give Code.org permission to quote my written feedback from this survey for use on social media, promotional materials, and other communications.",
+              "title": "I give CodeAI permission to quote my written feedback from this survey for use on social media, promotional materials, and other communications.",
               "choices": [
                 {
                   "value": "yes_with_name",
@@ -1877,7 +1877,7 @@
             {
               "type": "radiogroup",
               "name": "can_contact",
-              "title": "Would you be open to participate in a follow-up discussion to provide direct feedback about Code.org's curriculum?",
+              "title": "Would you be open to participate in a follow-up discussion to provide direct feedback about CodeAI's curriculum?",
               "choices": [
                 {
                   "value": "yes",
@@ -1893,7 +1893,7 @@
               "type": "text",
               "name": "contact_email",
               "visibleIf": "{can_contact} = 'yes'",
-              "title": "Please enter the email address where we can contact you to gather additional feedback about Code.org's curriculum."
+              "title": "Please enter the email address where we can contact you to gather additional feedback about CodeAI's curriculum."
             }
           ]
         },
@@ -1905,7 +1905,7 @@
             {
               "type": "html",
               "name": "survey_preamble_header_and_text",
-              "html": "<h1>Welcome to Code.org's Software Engineering and Computer Vision - Pre-Module Teacher Survey</h1>\n\n<p><strong>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about your experience teaching our curriculum.</strong></p>\n<p>The purpose of this survey is to understand better who our teachers are, their motivation to teach Code.org's Software Engineering and Computer Vision module, and their previous experience with this content and tools.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org to improve our curriculum and programs.</li>\n</ul>\n<p>This survey should take <strong>less than 5 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
+              "html": "<h1>Welcome to CodeAI's Software Engineering and Computer Vision - Pre-Module Teacher Survey</h1>\n\n<p><strong>CodeAI relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about your experience teaching our curriculum.</strong></p>\n<p>The purpose of this survey is to understand better who our teachers are, their motivation to teach CodeAI's Software Engineering and Computer Vision module, and their previous experience with this content and tools.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by CodeAI to improve our curriculum and programs.</li>\n</ul>\n<p>This survey should take <strong>less than 5 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
             }
           ]
         },
@@ -2254,7 +2254,7 @@
             {
               "type": "html",
               "name": "section5_teaching_context",
-              "html": "<h2>Teaching Context</h2>\n<p><span style='font-size: 12pt;'>The purpose of this section of the survey is to understand our teachers' motivation to teach Code.org's Software Engineering and Computer Vision module, and their previous experience with this content and tools.</span></p>\n"
+              "html": "<h2>Teaching Context</h2>\n<p><span style='font-size: 12pt;'>The purpose of this section of the survey is to understand our teachers' motivation to teach CodeAI's Software Engineering and Computer Vision module, and their previous experience with this content and tools.</span></p>\n"
             },
             {
               "type": "radiogroup",
