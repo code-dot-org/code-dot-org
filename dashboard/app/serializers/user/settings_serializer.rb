@@ -4,7 +4,7 @@
 # failed_attempts, locked_at, IPs, or admin flags. Field visibility (student
 # email masking, edit-affordance gating) is computed server-side, not the client.
 class User::SettingsSerializer
-  def initialize(user, country_code: nil)
+  def initialize(user, country_code:)
     @user = user
     @country_code = country_code
   end
