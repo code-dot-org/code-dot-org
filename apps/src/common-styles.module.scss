@@ -9,8 +9,8 @@
 
 .darkHeader {
   height: style-constants.$workspace-headers-height;
-  background-color: color.$neutral_dark;
-  color: color.$neutral_white;
+  background-color: var(--background-neutral-primary-inverse);
+  color: var(--text-neutral-white-fixed);
   overflow-y: hidden;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -18,12 +18,12 @@
   user-select: none;
 
   &Unfocused {
-    background-color: color.$neutral_dark;
-    color: color.$neutral_white;
+    background-color: var(--background-neutral-primary-inverse);
+    color: var(--text-neutral-white-fixed);
 
     button {
       span {
-        color: color.$neutral_dark;
+        color: var(--text-neutral-primary);
       }
     }
   }

@@ -25,8 +25,8 @@
 }
 
 .sidebarContainer {
-  width: 242px;
-  flex: 0 0 242px;
+  width: 260px;
+  flex: 0 0 260px;
   background-color: var(--background-neutral-secondary);
   height: auto;
 
@@ -54,7 +54,7 @@
 
 .sectionDropdown {
   padding-left: 16px;
-  width: 210px;
+  width: 228px;
 }
 
 .optionIcon {
@@ -76,6 +76,12 @@
   margin-right: 10px;
   color: var(--text-error-primary-fixed);
   font-size: 1rem;
+}
+
+.navTag {
+  // Pull the badge closer to the label than the sidebarOption's 12px gap.
+  margin-inline-start: -6px;
+  flex-shrink: 0;
 }
 
 .sidebarOption {
