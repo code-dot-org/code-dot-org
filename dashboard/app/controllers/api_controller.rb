@@ -215,8 +215,7 @@ class ApiController < ApplicationController
         section_id: section.id,
         section_name: section.name,
         ai_chat_access_level: section.ai_chat_access_level,
-        # A nil script (the request named no script and the section has no
-        # assigned unit) has no lockable lessons.
+        # A nil script has no lockable lessons.
         lessons: (script&.lessons || []).each_with_object({}) do |lesson, lesson_hash|
           lesson_state = lesson.lockable_state(section.students)
           lesson_hash[lesson.id] = lesson_state unless lesson_state.nil?
@@ -259,9 +258,6 @@ class ApiController < ApplicationController
     section = load_section
     script = load_script(section)
 
-    # A nil script (the request named no script and the section has no assigned
-    # unit) leaves nothing to summarize progress against; no shipped client
-    # requests this endpoint without a script_id.
     return head :bad_request unless script
 
     # Clients are seeing requests time out for large sections as we attempt to
@@ -303,9 +299,6 @@ class ApiController < ApplicationController
     section = load_section
     script = load_script(section)
 
-    # A nil script (the request named no script and the section has no assigned
-    # unit) has no levels or lessons to resolve against, so treat it like the
-    # other unresolvable-input cases below.
     return head :bad_request unless script
 
     if params[:level_id]
@@ -572,8 +565,6 @@ class ApiController < ApplicationController
   def section_text_responses
     section = load_section
     script = load_script(section)
-    # No resolvable script (the request named no script and the section has no
-    # assigned unit) means no text responses to return.
     return render(json: []) unless script
     # TODO: TEACH-2042 default to original unit group unit if the unit is not part of the assigned course
     # If unit_group_unit is nil, it returns the /s/ url instead of the correct /courses/ url
@@ -741,10 +732,6 @@ class ApiController < ApplicationController
   private def load_script(section = nil)
     script_id = params[:script_id] if params[:script_id].present?
     script_id ||= section.default_script.try(:id)
-    # nil when the request names no script and the section has no assigned
-    # unit; the section endpoints treat that as an ordinary empty state.
-    # (Until 2026 this fell back to the hourofcode unit, but no shipped client
-    # could observe that default producing anything but an empty response.)
     Unit.get_from_cache(script_id) if script_id
   end
 end
