@@ -43,8 +43,7 @@ export type FontSizeValue = (typeof FONT_SIZE_OPTIONS)[number]['value'];
 export type FontSize = FontSizeValue | number;
 
 // Font-family presets. We store the stable `value` key on the node and resolve
-// it to a `css` stack at render time, so persisted data stays compact and the
-// stacks can change without a migration. Every stack but Sans relies on fonts
+// it to a `css` stack at render time. Every stack but Sans relies on fonts
 // the OS ships (none are bundled), so glyphs vary by device; each ends in a
 // generic family so text still renders in the right category everywhere.
 export const FONT_FAMILY_OPTIONS = [
@@ -63,7 +62,7 @@ export const FONT_FAMILY_OPTIONS = [
   {
     value: 'draw',
     label: 'Draw',
-    css: "'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive",
+    css: "'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', fantasy",
   },
 ] as const;
 

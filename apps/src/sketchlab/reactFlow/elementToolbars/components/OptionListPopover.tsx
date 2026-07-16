@@ -17,8 +17,6 @@ export interface OptionListItem<T extends string | number> {
   icon?: string;
   iconStyle?: 'solid' | 'regular';
   iconFamily?: 'kit';
-  // Inline style for the label text, e.g. rendering a font option in its own
-  // typeface as a live preview.
   labelStyle?: React.CSSProperties;
 }
 
