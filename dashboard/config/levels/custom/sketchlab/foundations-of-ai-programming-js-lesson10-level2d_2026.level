@@ -1,0 +1,1168 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-07-13T20:30:18.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\n1. Create a flowchart to model your own scenario.\r\n\r\n2. Save your flowchart to your **Backpack**.\r\n\r\n---\r\n\r\n### Example Scenario: Shopping Cart\r\n\r\n- If the user adds at least one item, display the notification badge with the current item total.\r\n- If the user has no items in their cart, hide the badge.",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "hH2DAUooIAO0vXh9hMv5S",
+            "type": "shape",
+            "position": {
+              "x": 1472.1612613808134,
+              "y": -880.6177798903891
+            },
+            "style": {
+              "width": 820.8000488281249,
+              "height": 816.0000305175777
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-purple)",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "measured": {
+              "width": 821,
+              "height": 816
+            },
+            "zIndex": -2
+          },
+          {
+            "id": "Bai414pWxTjKhQUOPfvMf",
+            "type": "shape",
+            "position": {
+              "x": 1022.6336923023989,
+              "y": -2194.7415628281824
+            },
+            "style": {
+              "width": 405.99998474121094,
+              "height": 634.999942779541
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "locked": true
+            },
+            "measured": {
+              "width": 414,
+              "height": 559
+            },
+            "dragging": false,
+            "zIndex": -1,
+            "width": 414,
+            "height": 559,
+            "resizing": false
+          },
+          {
+            "id": "FtgHojQj0r-NGEdWG3qwn",
+            "type": "shape",
+            "position": {
+              "x": 1115.9966429453027,
+              "y": -1987.65817227439
+            },
+            "style": {
+              "width": 192.80010986328122,
+              "height": 70.4000244140625
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Process",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 193,
+              "height": 70
+            }
+          },
+          {
+            "id": "zkSEJggB5H41vAfSHlkfy",
+            "type": "shape",
+            "position": {
+              "x": 1063.9965513925683,
+              "y": -1881.4581448085696
+            },
+            "style": {
+              "width": 202.4000244140625,
+              "height": 175.99996948242188
+            },
+            "data": {
+              "shapeType": "diamond",
+              "label": "Decision",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 202,
+              "height": 176
+            }
+          },
+          {
+            "id": "ShdFCxEhX5czohTMarVgm",
+            "type": "shape",
+            "position": {
+              "x": 1111.9965208749902,
+              "y": -2093.6581264980227
+            },
+            "style": {
+              "width": 198.39996337890625,
+              "height": 84.79998779296875
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "Start / End",
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 198,
+              "height": 85
+            }
+          },
+          {
+            "id": "ZOBGIFjYik4_rmRsTXfaS",
+            "type": "text",
+            "position": {
+              "x": 1068.6336312672427,
+              "y": -2176.4082714565193
+            },
+            "data": {
+              "text": "Flowchart Components ",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false,
+              "locked": true
+            },
+            "measured": {
+              "width": 254,
+              "height": 46
+            }
+          },
+          {
+            "id": "yKrKGz6XJ0YVeZHCRJyAl",
+            "type": "shape",
+            "position": {
+              "x": 1470.6922756376696,
+              "y": -2198.1714146023673
+            },
+            "style": {
+              "width": 1880.0001525878893,
+              "height": 1228.0001068115228
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "measured": {
+              "width": 1880,
+              "height": 1228
+            }
+          },
+          {
+            "id": "8oCi9FdX4b1qwt-t9szdG",
+            "type": "shape",
+            "position": {
+              "x": 1693.1095086286714,
+              "y": -711.1627259193004
+            },
+            "style": {
+              "width": 192.80010986328122,
+              "height": 85
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "User adds \n`Hawaiian shirt` \nto cart",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 311,
+              "height": 85
+            },
+            "width": 311,
+            "height": 85,
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "McFE1K1B6hPIr4g31ZgHp",
+            "type": "shape",
+            "position": {
+              "x": 1654.2951041575325,
+              "y": -423.55571572189695
+            },
+            "style": {
+              "width": 386.6180947548282,
+              "height": 175.99996948242188
+            },
+            "data": {
+              "shapeType": "diamond",
+              "label": "Is\ntotalPrice > 50\n",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 387,
+              "height": 176
+            },
+            "dragging": false
+          },
+          {
+            "id": "qlBV88RTuhf7W4W_L-7SG",
+            "type": "shape",
+            "position": {
+              "x": 1720.2695482373153,
+              "y": -855.6490138787436
+            },
+            "style": {
+              "width": 198.39996337890625,
+              "height": 84.79998779296875
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "Start Online\nShopping",
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 258,
+              "height": 89
+            },
+            "width": 258,
+            "height": 89,
+            "resizing": false
+          },
+          {
+            "id": "Mt_aglExI-SgcyRjW1iPJ",
+            "type": "shape",
+            "position": {
+              "x": 1701.2994455610014,
+              "y": -547.8661512647313
+            },
+            "style": {
+              "width": 192.80010986328122,
+              "height": 85
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Function to \ncalculate Total \nPrice",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 285,
+              "height": 87
+            },
+            "width": 285,
+            "height": 87,
+            "resizing": false,
+            "dragging": false
+          },
+          {
+            "id": "J74rgIGp6UGdmSgGjoWTH",
+            "type": "shape",
+            "position": {
+              "x": 1559.870839255198,
+              "y": -197.5804892948654
+            },
+            "style": {
+              "width": 192.80010986328122,
+              "height": 70.4000244140625
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Free Shipping!",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 217,
+              "height": 90
+            },
+            "width": 217,
+            "height": 90,
+            "resizing": false
+          },
+          {
+            "id": "vrco96t5fb3aOyVwob9K1",
+            "type": "shape",
+            "position": {
+              "x": 1899.299375806537,
+              "y": -201.00909560066884
+            },
+            "style": {
+              "width": 192.80010986328122,
+              "height": 70.4000244140625
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "User pays shipping",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large"
+            },
+            "measured": {
+              "width": 221,
+              "height": 96
+            },
+            "width": 221,
+            "height": 96,
+            "resizing": false
+          },
+          {
+            "id": "0_fgPOPFKkFqlOXYeAqI8",
+            "type": "text",
+            "position": {
+              "x": 1511.9827811831535,
+              "y": -577.709167752942
+            },
+            "data": {
+              "text": "Example",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": "large",
+              "showHandles": false
+            },
+            "measured": {
+              "width": 101,
+              "height": 46
+            }
+          },
+          {
+            "id": "d084920f-9aba-40a4-a827-ef990ed84cab",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1277.0633187672427,
+              "y": -1707.741528495907
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "7c9c8a44-0958-4667-8b1e-244078d144ed",
+            "type": "lineAnchor",
+            "position": {
+              "x": 1321.0633340260317,
+              "y": -1874.7415361253015
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "dea69974-1fe5-40d3-88ee-562e47f3a423",
+            "type": "text",
+            "data": {
+              "text": "Use dots on shapes to create connectors"
+            },
+            "position": {
+              "x": 1310.6336870950345,
+              "y": -1822.2884360077232
+            },
+            "measured": {
+              "width": 110,
+              "height": 123
+            },
+            "dragging": false,
+            "width": 110,
+            "height": 123,
+            "resizing": false
+          },
+          {
+            "id": "779ff79f-7aa1-46ea-9c5e-5d45bea0c584",
+            "type": "text",
+            "data": {
+              "text": "Yes",
+              "showHandles": false
+            },
+            "position": {
+              "x": 1705.2616870950344,
+              "y": -261.1084360077233
+            },
+            "measured": {
+              "width": 57,
+              "height": 38
+            },
+            "dragging": false
+          },
+          {
+            "id": "6bcb17c0-cbb8-4767-bc76-9363c8abf088",
+            "type": "text",
+            "data": {
+              "text": "No",
+              "showHandles": false
+            },
+            "position": {
+              "x": 1921.2616870950344,
+              "y": -264.3269203827233
+            },
+            "measured": {
+              "width": 57,
+              "height": 38
+            },
+            "dragging": false
+          }
+        ],
+        "edges": [
+          {
+            "id": "a6166bbb-c68b-498c-9983-300b0d885e8c",
+            "source": "d084920f-9aba-40a4-a827-ef990ed84cab",
+            "target": "7c9c8a44-0958-4667-8b1e-244078d144ed",
+            "type": "straight",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "87558414-9fce-4ec9-870c-a4ce8c0fc3a5",
+            "source": "McFE1K1B6hPIr4g31ZgHp",
+            "target": "J74rgIGp6UGdmSgGjoWTH",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "1c5ab5e7-e88b-446b-a3c7-c0d1039c21a2",
+            "source": "Mt_aglExI-SgcyRjW1iPJ",
+            "target": "McFE1K1B6hPIr4g31ZgHp",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "d2031e51-6ef3-45af-990b-1ff13476bac8",
+            "source": "8oCi9FdX4b1qwt-t9szdG",
+            "target": "Mt_aglExI-SgcyRjW1iPJ",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "2d295400-e008-4077-b92a-9da8c4ad3f64",
+            "source": "qlBV88RTuhf7W4W_L-7SG",
+            "target": "8oCi9FdX4b1qwt-t9szdG",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "source": "McFE1K1B6hPIr4g31ZgHp",
+            "sourceHandle": "bottom-source",
+            "target": "vrco96t5fb3aOyVwob9K1",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            },
+            "id": "xy-edge__McFE1K1B6hPIr4g31ZgHpbottom-source-vrco96t5fb3aOyVwob9K1top-target"
+          }
+        ],
+        "viewport": {
+          "x": -491.4789368351336,
+          "y": 1275.2958130614916,
+          "zoom": 0.5565488559496535
+        }
+      }
+    },
+    "display_name": "Choose Your Own Scenario",
+    "bubble_choice_description": "Create a flowchart for your own scenario. ",
+    "thumbnail_url": "https://images.code.org/1c6c44de7140845be4df066516add379-Screenshot 2026-04-14 at 5.21.08 PM.png",
+    "exemplar_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "SO1uGidt_JIWQHOH7wQKt",
+            "type": "shape",
+            "position": {
+              "x": -549.5015901838021,
+              "y": -275.77572592478055
+            },
+            "style": {
+              "width": 405.99998474121094,
+              "height": 634.999942779541
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "measured": {
+              "width": 406,
+              "height": 635
+            },
+            "zIndex": -1
+          },
+          {
+            "id": "8X-BnVzSA4EoPsgs50OQ2",
+            "type": "shape",
+            "position": {
+              "x": -448.56832704089834,
+              "y": -64.69233537098808
+            },
+            "style": {
+              "width": 192.80010986328122,
+              "height": 70.4000244140625
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Process",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 20
+            },
+            "measured": {
+              "width": 193,
+              "height": 70
+            }
+          },
+          {
+            "id": "QjOnV8D59UzNBuIdEDVIM",
+            "type": "shape",
+            "position": {
+              "x": -500.5684185936327,
+              "y": 41.50769209483224
+            },
+            "style": {
+              "width": 202.4000244140625,
+              "height": 175.99996948242188
+            },
+            "data": {
+              "shapeType": "diamond",
+              "label": "Decision",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 20
+            },
+            "measured": {
+              "width": 202,
+              "height": 176
+            }
+          },
+          {
+            "id": "-_duDvXgU-Ctt-bkpxJu7",
+            "type": "shape",
+            "position": {
+              "x": -452.56844911121084,
+              "y": -170.6922895946209
+            },
+            "style": {
+              "width": 198.39996337890625,
+              "height": 84.79998779296875
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "Start / End",
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 20
+            },
+            "measured": {
+              "width": 198,
+              "height": 85
+            }
+          },
+          {
+            "id": "WW2Yxn2vYNLhC9XzSHLwc",
+            "type": "text",
+            "position": {
+              "x": -495.5016512189584,
+              "y": -250.77570685129422
+            },
+            "data": {
+              "text": "Flowchart Components ",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 28,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 319,
+              "height": 54
+            }
+          },
+          {
+            "id": "E-J-i8ZMOVy0h_rkSUrMH",
+            "type": "shape",
+            "position": {
+              "x": -82.86462835795665,
+              "y": -273.4425146172031
+            },
+            "style": {
+              "width": 1880.0001525878893,
+              "height": 1228.0001068115228
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "measured": {
+              "width": 1880,
+              "height": 1228
+            },
+            "dragging": false,
+            "zIndex": -2
+          },
+          {
+            "id": "ZEUO_CCfuO0tkWX0USowM",
+            "type": "text",
+            "position": {
+              "x": 764.1238164750382,
+              "y": -251.37250376504596
+            },
+            "data": {
+              "text": "Your Workspace",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 28,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 221,
+              "height": 54
+            }
+          },
+          {
+            "id": "LNRN7Z69j88q4TKyv1pKk",
+            "type": "shape",
+            "position": {
+              "x": 381.2388986767503,
+              "y": -146.82607208408155
+            },
+            "style": {
+              "width": 997.5055626182444,
+              "height": 991.6721748494739
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)"
+            },
+            "measured": {
+              "width": 998,
+              "height": 992
+            },
+            "dragging": false,
+            "zIndex": -4
+          },
+          {
+            "id": "cVPvLFd41ZuM8v6P5ytwa",
+            "type": "shape",
+            "position": {
+              "x": 691.6765667414722,
+              "y": 60.333221275822865
+            },
+            "style": {
+              "width": 234.3069817510491,
+              "height": 103.29918101686826
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Favorites count is\nset to 0",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 24.305689651027826
+            },
+            "measured": {
+              "width": 234,
+              "height": 103
+            }
+          },
+          {
+            "id": "L60LkKU4_3eH5cCLUwLEE",
+            "type": "shape",
+            "position": {
+              "x": 582.1289006001514,
+              "y": 404.8591066172654
+            },
+            "style": {
+              "width": 469.8509712291261,
+              "height": 218.84834612244285
+            },
+            "data": {
+              "shapeType": "diamond",
+              "label": "Is\n\n",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 24.305689651027826
+            },
+            "measured": {
+              "width": 470,
+              "height": 219
+            },
+            "zIndex": -3
+          },
+          {
+            "id": "UBDXelCsG5k33UbY2pnLc",
+            "type": "shape",
+            "position": {
+              "x": 695.5169138421049,
+              "y": -125.65997410532172
+            },
+            "style": {
+              "width": 241.11239683314906,
+              "height": 103.05610928534233
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "Go to \nwebsite",
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 24.305689651027826
+            },
+            "measured": {
+              "width": 241,
+              "height": 103
+            }
+          },
+          {
+            "id": "6RRucFdAwKIJS-4qn1YV8",
+            "type": "shape",
+            "position": {
+              "x": 699.1991010433047,
+              "y": 253.55234764048294
+            },
+            "style": {
+              "width": 234.3069817510491,
+              "height": 102
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "User clicks heart \nbutton",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 24.305689651027826
+            },
+            "measured": {
+              "width": 234,
+              "height": 102
+            }
+          },
+          {
+            "id": "tBuxAiXHQZHbhAsv_KD9U",
+            "type": "shape",
+            "position": {
+              "x": 499.0751133630682,
+              "y": 674.0804922769541
+            },
+            "style": {
+              "width": 234.3069817510491,
+              "height": 102
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Fill in heart and \nadd one to \nfavoritesCount",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 24.305689651027826
+            },
+            "measured": {
+              "width": 234,
+              "height": 102
+            }
+          },
+          {
+            "id": "SSyj0MjWCpBP0Fp_n-kIm",
+            "type": "shape",
+            "position": {
+              "x": 913.0890852008316,
+              "y": 669.9137602367333
+            },
+            "style": {
+              "width": 234.3069817510491,
+              "height": 132
+            },
+            "data": {
+              "shapeType": "rectangle",
+              "label": "Remove fill from \nheart and \nsubtract one from\nfavoritesCount",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 24.305689651027826
+            },
+            "measured": {
+              "width": 234,
+              "height": 132
+            }
+          },
+          {
+            "id": "ymb29PX0VcgtzL_jEMN8O",
+            "type": "text",
+            "position": {
+              "x": 442.38923792038577,
+              "y": 212.1160079740863
+            },
+            "data": {
+              "text": "Model",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 34.02796551143896,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 113,
+              "height": 62
+            }
+          },
+          {
+            "id": "iEXxn2uHdN9OeqJmvVY4I",
+            "type": "shape",
+            "position": {
+              "x": 1025.9671323840948,
+              "y": -60.63277671376309
+            },
+            "style": {
+              "width": 286.12810701599943,
+              "height": 117.29418384021795
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "favorites",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 24.305689651027826
+            },
+            "measured": {
+              "width": 286,
+              "height": 117
+            }
+          },
+          {
+            "id": "qAuxGjjfELfF8OBfvtmpg",
+            "type": "text",
+            "position": {
+              "x": 718.683434243032,
+              "y": 502.05595689438417
+            },
+            "data": {
+              "text": "favorites set \nto true?",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 28.832460948025982,
+              "showHandles": false
+            },
+            "measured": {
+              "width": 185,
+              "height": 93
+            }
+          },
+          {
+            "id": "HAmml3CTh4T2_bH293MJN",
+            "type": "shape",
+            "position": {
+              "x": 1035.1115094329784,
+              "y": 110.50596604833308
+            },
+            "style": {
+              "width": 301.7771620535868,
+              "height": 117.29418384021795
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "favoritesCount",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 24.305689651027826
+            },
+            "measured": {
+              "width": 302,
+              "height": 117
+            }
+          },
+          {
+            "id": "oS3zum_spHBzV96Xt4OZJ",
+            "type": "shape",
+            "position": {
+              "x": -453.5776697941735,
+              "y": 244.4745140642832
+            },
+            "style": {
+              "width": 231.15911762042447,
+              "height": 72.99037364781316
+            },
+            "data": {
+              "shapeType": "circle",
+              "label": "Variable",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 20
+            },
+            "measured": {
+              "width": 231,
+              "height": 73
+            }
+          },
+          {
+            "id": "4eb7c953-5cd6-456f-b84d-8b3f5377ceba",
+            "type": "lineAnchor",
+            "position": {
+              "x": -245.5016512189584,
+              "y": 213.22430840749485
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "source"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          },
+          {
+            "id": "9bb3aa7a-f99b-4476-acf7-8577ed6d88c6",
+            "type": "lineAnchor",
+            "position": {
+              "x": -201.50163596016932,
+              "y": 46.224300778100314
+            },
+            "style": {
+              "width": 10,
+              "height": 10
+            },
+            "data": {
+              "lineAnchorRole": "target"
+            },
+            "measured": {
+              "width": 10,
+              "height": 10
+            }
+          }
+        ],
+        "edges": [
+          {
+            "id": "e24247d8-644f-4161-a176-bf413f53403b",
+            "source": "4eb7c953-5cd6-456f-b84d-8b3f5377ceba",
+            "target": "9bb3aa7a-f99b-4476-acf7-8577ed6d88c6",
+            "type": "straight",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "cabb46b7-896b-4888-bb5b-adb4c4363476",
+            "source": "L60LkKU4_3eH5cCLUwLEE",
+            "target": "SSyj0MjWCpBP0Fp_n-kIm",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "61fedfb3-d48f-402c-aca6-1518da0c53ab",
+            "source": "L60LkKU4_3eH5cCLUwLEE",
+            "target": "tBuxAiXHQZHbhAsv_KD9U",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "47b30929-41a4-40a8-8b1e-a310af314cc2",
+            "source": "6RRucFdAwKIJS-4qn1YV8",
+            "target": "L60LkKU4_3eH5cCLUwLEE",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "f5a3dea8-2904-4cfc-9503-2ca474c665be",
+            "source": "cVPvLFd41ZuM8v6P5ytwa",
+            "target": "6RRucFdAwKIJS-4qn1YV8",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "b1a7f686-1668-4074-b4fa-72f244b19791",
+            "source": "UBDXelCsG5k33UbY2pnLc",
+            "target": "cVPvLFd41ZuM8v6P5ytwa",
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "1b03873b-a622-473c-9679-79cdb6427b1b",
+            "source": "cVPvLFd41ZuM8v6P5ytwa",
+            "target": "iEXxn2uHdN9OeqJmvVY4I",
+            "sourceHandle": "right-source",
+            "targetHandle": "left-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "36d472d0-a025-4281-9a4d-c0833edef017",
+            "source": "cVPvLFd41ZuM8v6P5ytwa",
+            "target": "HAmml3CTh4T2_bH293MJN",
+            "sourceHandle": "right-source",
+            "targetHandle": "left-target",
+            "markerEnd": {
+              "type": "arrowclosed"
+            }
+          },
+          {
+            "id": "fb4be253-a63f-4bc8-b3c0-c295576bc08e",
+            "source": "cVPvLFd41ZuM8v6P5ytwa",
+            "target": "6RRucFdAwKIJS-4qn1YV8",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 1
+            },
+            "zIndex": 1,
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target"
+          },
+          {
+            "id": "baf0d869-5f1b-43de-a0d9-81973b2aa027",
+            "source": "6RRucFdAwKIJS-4qn1YV8",
+            "target": "L60LkKU4_3eH5cCLUwLEE",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 1
+            },
+            "zIndex": 2,
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target"
+          },
+          {
+            "id": "afa2d244-8eb1-4ea6-991f-30381296bf41",
+            "source": "L60LkKU4_3eH5cCLUwLEE",
+            "target": "SSyj0MjWCpBP0Fp_n-kIm",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 1
+            },
+            "zIndex": 2,
+            "sourceHandle": "bottom-source",
+            "targetHandle": "top-target"
+          },
+          {
+            "id": "2b21176e-6a08-434c-b0db-b6ada5e4b1cd",
+            "source": "L60LkKU4_3eH5cCLUwLEE",
+            "target": "tBuxAiXHQZHbhAsv_KD9U",
+            "type": "straight",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 1
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 1
+            },
+            "zIndex": 3,
+            "targetHandle": "top-target",
+            "sourceHandle": "bottom-source"
+          }
+        ],
+        "viewport": {
+          "x": 390.4019322203684,
+          "y": 318.4794318445713,
+          "zoom": 0.7047872340425532
+        }
+      }
+    },
+    "name_suffix": "_-js-2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-13T20:30:17.994+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson5-level1e_-js-2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson5-level1e_-js-2026\"},{\"changed_at\":\"2026-07-13 20:30:20 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Sketchlab>

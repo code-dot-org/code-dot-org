@@ -6,11 +6,15 @@ import {AnyAction, Reducer} from 'redux';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
+import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
+import useSources, {UseSourcesOutput} from '@cdo/apps/lab2/hooks/useSources';
+import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
+import {setPageError} from '@cdo/apps/lab2/lab2Redux';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {LabProps} from '@cdo/apps/lab2/types';
+import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import setFooterVisibility from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/Footer/setFooterVisibility';
-import SourcesContainer, {
-  useSources,
-} from '@cdo/apps/lab2/views/SourcesContainer';
+import Loading from '@cdo/apps/lab2/views/Loading';
 // p5lab/reducers is a CommonJS bundle of all the classic Sprite Lab slices;
 // pull the ones the engine and image list need by key.
 import * as p5labReducersModule from '@cdo/apps/p5lab/reducers';
@@ -103,12 +107,21 @@ const RUN_DEBOUNCE_MS = 400;
 // Sprites come from the Items tab, so a new project starts with no animations.
 const EMPTY_ANIMATION_LIST = {orderedKeys: [], propsByKey: {}};
 
-const SpriteLab2View: React.FunctionComponent<{
+interface SpriteLab2ViewProps {
   levelProperties: SpriteLab2LevelProperties;
-}> = ({levelProperties}) => {
+  currentSources: SpriteLab2Source;
+  patchSources: UseSourcesOutput<SpriteLab2Source>['patchSources'];
+  channelId?: string;
+}
+
+const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
+  levelProperties,
+  currentSources,
+  patchSources,
+  channelId,
+}) => {
   const {theme} = useTheme();
   const dispatch = useAppDispatch();
-  const {currentSources, updateSources} = useSources<SpriteLab2Source>();
 
   const activeTab = useAppSelector(state => state.spriteLab2.activeTab);
   // The Images tab mounts once (idle pre-mount after seeding, or first
@@ -119,9 +132,13 @@ const SpriteLab2View: React.FunctionComponent<{
       setImagesMounted(true);
     }
   }, [activeTab]);
-  const channelId = useAppSelector(state => state.lab.channel?.id);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const scriptId = useAppSelector(state => state.progress.scriptId);
+  const isRunning = useAppSelector(state => state.runState.isRunning);
+  const hasRun = useAppSelector(state => state.spriteLab2.hasRun);
+  const hasEdited = useAppSelector(state => state.spriteLab2.hasEdited);
+  const blocklySettings = useBlocklySettings();
+  const themeSetting = useThemeSetting('spritelab');
   // Seed the page constants the animationList logic + engine read (we bypass
   // StudioApp.init) and the AichatContextManager the aiGateway calls read.
   useEffect(() => {
@@ -150,19 +167,9 @@ const SpriteLab2View: React.FunctionComponent<{
   // thumbnail; refresh the costume dropdowns as trims land.
   useEffect(() => onTrimsUpdated(refreshAnimationDropdownThumbnails), []);
 
-  const sourcesRef = useRef(currentSources);
-  useEffect(() => {
-    sourcesRef.current = currentSources;
-  }, [currentSources]);
-
-  const mergeSources = useCallback(
-    (patch: Partial<SpriteLab2Source>, forceSave = false) => {
-      // Updater form: sourcesRef syncs after render, so two quick merges
-      // would otherwise build on a stale base and drop each other's changes.
-      updateSources(prev => ({...prev, ...patch}), forceSave);
-    },
-    [updateSources]
-  );
+  // Sources as of level load: seeding and engine creation are once-per-level
+  // (the container remounts this view per level, after sources load).
+  const initialSources = useRef(currentSources).current;
 
   const engineRef = useRef<SpriteLab2Engine | null>(null);
   const codeTabRef = useRef<CodeTabHandle>(null);
@@ -217,7 +224,7 @@ const SpriteLab2View: React.FunctionComponent<{
         // lab2 redux slice) and the legacy thunk normalizes its argument IN
         // PLACE — mutating a frozen object throws in strict-mode production
         // bundles and the animation list never seeds.
-        cloneDeep(sourcesRef.current.animations || EMPTY_ANIMATION_LIST),
+        cloneDeep(initialSources.animations || EMPTY_ANIMATION_LIST),
         // No v3 migration; the engine never runs the legacy share path.
         undefined as unknown as object,
         true /* isSpriteLab */
@@ -228,14 +235,14 @@ const SpriteLab2View: React.FunctionComponent<{
       return;
     }
     // Migrate single-workspace projects to one scene on first open.
-    const scenes: SpriteLab2Scene[] = sourcesRef.current.scenes?.length
-      ? sourcesRef.current.scenes
+    const scenes: SpriteLab2Scene[] = initialSources.scenes?.length
+      ? initialSources.scenes
       : [
           {
             id: createUuid(),
             name: 'Scene 1',
             source:
-              (sourcesRef.current.source as WorkspaceSerialization) ??
+              (initialSources.source as WorkspaceSerialization) ??
               DEFAULT_SCENE_SOURCE,
           },
         ];
@@ -288,15 +295,15 @@ const SpriteLab2View: React.FunctionComponent<{
     return () => {
       cancelled = true;
     };
-    // Re-seeds only when the level changes (dispatch is store-stable).
-  }, [levelProperties.id, dispatch]);
+    // Re-seeds only when the level changes (dispatch is store-stable,
+    // initialSources is a ref-captured constant).
+  }, [levelProperties.id, dispatch, initialSources]);
 
   // Instantiate the engine once per level. No legacy default-sprite library:
   // images come from the Images tab, so p5 preload completes immediately.
   useEffect(() => {
     let cancelled = false;
-    const savedAnimations =
-      sourcesRef.current.animations || EMPTY_ANIMATION_LIST;
+    const savedAnimations = initialSources.animations || EMPTY_ANIMATION_LIST;
 
     const setup = async () => {
       const engine = new SpriteLab2Engine(savedAnimations);
@@ -319,7 +326,7 @@ const SpriteLab2View: React.FunctionComponent<{
     };
     // levelProperties' identity changes only on level load, so this
     // re-creates the engine once per level (same keying as dance).
-  }, [levelProperties]);
+  }, [levelProperties, initialSources]);
 
   // Persist Images-tab changes back to sources in the serialized shape.
   const animationListState = useAppSelector(state => state.animationList);
@@ -333,12 +340,12 @@ const SpriteLab2View: React.FunctionComponent<{
     // Serialize from the LIVE store, not this commit's snapshot: this effect
     // runs after compileExternalScene's synchronous merge-and-restore, and a
     // snapshot save would leak the classmate's costumes into sources.
-    mergeSources({
+    patchSources({
       animations: getSerializedAnimationList(
         getStore().getState().animationList
       ),
     });
-  }, [animationListState, mergeSources]);
+  }, [animationListState, patchSources]);
 
   // Run the current program as the live preview (cheap: the engine reuses p5).
   const runProgram = useCallback(() => {
@@ -599,14 +606,14 @@ const SpriteLab2View: React.FunctionComponent<{
         scenesRef.current = scenesRef.current.map(s =>
           s.id === activeSceneIdRef.current ? {...s, source} : s
         );
-        mergeSources({scenes: scenesRef.current});
+        patchSources({scenes: scenesRef.current});
       } else {
-        mergeSources({source});
+        patchSources({source});
       }
       // Keep the live preview in sync with the edited code.
       scheduleRun();
     },
-    [mergeSources, scheduleRun]
+    [patchSources, scheduleRun]
   );
 
   const handleEdit = useCallback(() => {
@@ -639,13 +646,13 @@ const SpriteLab2View: React.FunctionComponent<{
         source: DEFAULT_SCENE_SOURCE,
       };
       scenesRef.current = [...scenesRef.current, scene];
-      mergeSources({scenes: scenesRef.current});
+      patchSources({scenes: scenesRef.current});
       dispatch(
         setScenes(scenesRef.current.map(s => ({id: s.id, name: s.name})))
       );
       handleSelectScene(scene.id);
     },
-    [dispatch, mergeSources, handleSelectScene]
+    [dispatch, patchSources, handleSelectScene]
   );
 
   // World grid (rudimentary, single world for now). Persisted to sources but
@@ -657,12 +664,12 @@ const SpriteLab2View: React.FunctionComponent<{
     createEmptyGrid();
   const handleWorldGridChange = useCallback(
     (grid: string[][]) => {
-      mergeSources({
+      patchSources({
         worlds: [{id: DEFAULT_WORLD_ID, grid}],
         activeWorldId: DEFAULT_WORLD_ID,
       });
     },
-    [mergeSources]
+    [patchSources]
   );
 
   // AI-generated blocks load into the Code tab; switch there so the user sees
@@ -702,103 +709,149 @@ const SpriteLab2View: React.FunctionComponent<{
     currentSources.source) as WorkspaceSerialization | undefined;
 
   return (
-    <TabShell
-      activeTab={activeTab}
-      onTabChange={handleTabChange}
-      enabledTabs={ENABLED_TABS}
-      visibleTabs={ENABLED_TABS}
-      codeTabExtra={
-        SCENES_UI_VARIANT && animationsSeeded ? (
-          <SceneSelector
-            scenes={sceneMetadata}
-            activeSceneId={activeSceneId}
-            disabled={activeTab !== 'Code'}
-            onSelectScene={handleSelectScene}
-            onCreateScene={handleCreateScene}
-          />
-        ) : undefined
-      }
-    >
-      {/* Kept mounted (clipped) so the workspace survives tab switches;
-          gated on animationsSeeded (see the seed effect). */}
-      <div
-        className={moduleStyles.codeTabWrapper}
-        style={{
-          clipPath: activeTab === 'Code' ? 'none' : 'inset(100%)',
-          pointerEvents: activeTab === 'Code' ? 'auto' : 'none',
-        }}
-      >
-        {animationsSeeded && (
-          <CodeTab
-            ref={codeTabRef}
-            initialSource={initialWorkspaceSource}
-            toolboxDefinition={levelProperties.toolboxDefinition}
-            toolboxXml={levelProperties.toolboxBlocks}
-            sharedBlocks={levelProperties.sharedBlocks}
-            theme={theme === 'Dark' ? 'Dark' : 'Light'}
-            onSourceChange={handleSourceChange}
-            onEdit={handleEdit}
-            onIntermediateChange={scheduleRun}
-          />
+    <div className={moduleStyles.labRow}>
+      <ResourcePanel
+        levelProperties={levelProperties}
+        isRunning={isRunning}
+        hasRun={hasRun}
+        hasEdited={hasEdited}
+        settings={[...blocklySettings, themeSetting]}
+        className={classNames(
+          !levelProperties.guideMode && moduleStyles.instructionsArea,
+          !!levelProperties.guideMode && moduleStyles.resourceSidebar
         )}
-      </div>
-
-      {/* Kept mounted (clipped) like the Code tab: mounting mid-switch eats
-          the guide's transition frames, and remounting loses gallery state. */}
-      {imagesMounted && (
+        sidebarOnly={!!levelProperties.guideMode}
+      />
+      <div className={moduleStyles.divider} />
+      <TabShell
+        activeTab={activeTab}
+        onTabChange={handleTabChange}
+        enabledTabs={ENABLED_TABS}
+        visibleTabs={ENABLED_TABS}
+        codeTabExtra={
+          SCENES_UI_VARIANT && animationsSeeded ? (
+            <SceneSelector
+              scenes={sceneMetadata}
+              activeSceneId={activeSceneId}
+              disabled={activeTab !== 'Code'}
+              onSelectScene={handleSelectScene}
+              onCreateScene={handleCreateScene}
+            />
+          ) : undefined
+        }
+      >
+        {/* Kept mounted (clipped) so the workspace survives tab switches;
+          gated on animationsSeeded (see the seed effect). */}
         <div
-          className={classNames(moduleStyles.codeTabWrapper)}
+          className={moduleStyles.codeTabWrapper}
           style={{
-            clipPath: activeTab === 'Images' ? 'none' : 'inset(100%)',
-            pointerEvents: activeTab === 'Images' ? 'auto' : 'none',
+            clipPath: activeTab === 'Code' ? 'none' : 'inset(100%)',
+            pointerEvents: activeTab === 'Code' ? 'auto' : 'none',
           }}
         >
-          <ItemsTab />
+          {animationsSeeded && (
+            <CodeTab
+              ref={codeTabRef}
+              initialSource={initialWorkspaceSource}
+              toolboxDefinition={levelProperties.toolboxDefinition}
+              toolboxXml={levelProperties.toolboxBlocks}
+              sharedBlocks={levelProperties.sharedBlocks}
+              theme={theme === 'Dark' ? 'Dark' : 'Light'}
+              onSourceChange={handleSourceChange}
+              onEdit={handleEdit}
+              onIntermediateChange={scheduleRun}
+            />
+          )}
         </div>
-      )}
 
-      {!SCENES_UI_VARIANT && activeTab === 'World' && (
-        <div className={classNames(moduleStyles.codeTabWrapper)}>
-          <WorldTab grid={worldGrid} onGridChange={handleWorldGridChange} />
-        </div>
-      )}
-
-      {/* Always mounted so the engine keeps running; animates between the
-          Code tab's corner preview and the Play tab's centered view. */}
-      <Playspace
-        mode={playspaceMode}
-        fadeTrigger={fadeTrigger}
-        covered={jumpCover}
-        loading={externalLoading}
-        getDefaultSpriteSize={getDefaultSpriteSize}
-      />
-
-      {/* Guide overlay: full guide on Code; instructions-only on Images. */}
-      {levelProperties.guideMode &&
-        (activeTab === 'Code' ||
-          (activeTab === 'Images' && !!levelProperties.longInstructions)) && (
-          <GenerateSpriteLab
-            guideMode={
-              activeTab === 'Code' ? levelProperties.guideMode : 'instructions'
-            }
-            instructions={levelProperties.longInstructions}
-            onCodeGenerated={handleCodeGenerated}
-          />
+        {/* Kept mounted (clipped) like the Code tab: mounting mid-switch eats
+          the guide's transition frames, and remounting loses gallery state. */}
+        {imagesMounted && (
+          <div
+            className={classNames(moduleStyles.codeTabWrapper)}
+            style={{
+              clipPath: activeTab === 'Images' ? 'none' : 'inset(100%)',
+              pointerEvents: activeTab === 'Images' ? 'auto' : 'none',
+            }}
+          >
+            <ItemsTab />
+          </div>
         )}
-    </TabShell>
+
+        {!SCENES_UI_VARIANT && activeTab === 'World' && (
+          <div className={classNames(moduleStyles.codeTabWrapper)}>
+            <WorldTab grid={worldGrid} onGridChange={handleWorldGridChange} />
+          </div>
+        )}
+
+        {/* Always mounted so the engine keeps running; animates between the
+          Code tab's corner preview and the Play tab's centered view. */}
+        <Playspace
+          mode={playspaceMode}
+          fadeTrigger={fadeTrigger}
+          covered={jumpCover}
+          loading={externalLoading}
+          getDefaultSpriteSize={getDefaultSpriteSize}
+        />
+
+        {/* Guide overlay: full guide on Code; instructions-only on Images. */}
+        {levelProperties.guideMode &&
+          (activeTab === 'Code' ||
+            (activeTab === 'Images' && !!levelProperties.longInstructions)) && (
+            <GenerateSpriteLab
+              guideMode={
+                activeTab === 'Code'
+                  ? levelProperties.guideMode
+                  : 'instructions'
+              }
+              instructions={levelProperties.longInstructions}
+              onCodeGenerated={handleCodeGenerated}
+            />
+          )}
+      </TabShell>
+    </div>
   );
 };
 
-export default (
-  props: LabProps<SpriteLab2LevelProperties, SpriteLab2Source>
-) => {
+// Container that handles loading sources and wiring project manager, and the hands off to the inner view.
+const SpriteLab2Container: React.FunctionComponent<
+  LabProps<SpriteLab2LevelProperties, SpriteLab2Source>
+> = ({levelProperties}) => {
+  const dispatch = useAppDispatch();
+  const {currentSources, patchSources, channel, projectManager, loadError} =
+    useSources<SpriteLab2Source>({
+      levelProperties,
+      defaultSources,
+      includeVersionHistory: true,
+    });
+
+  // Set the project manager in the registry for external components that need it (e.g. header).
+  useEffect(() => {
+    if (projectManager) {
+      Lab2Registry.getInstance().setProjectManager(projectManager);
+    }
+    return () => Lab2Registry.getInstance().clearProjectManager();
+  }, [projectManager]);
+
+  useEffect(() => {
+    if (loadError) {
+      dispatch(
+        setPageError({errorMessage: 'Error loading project', error: loadError})
+      );
+    }
+  }, [loadError, dispatch]);
+
+  if (!currentSources) {
+    return <Loading isLoading={true} />;
+  }
   return (
-    <SourcesContainer
-      {...props}
-      defaultSources={defaultSources}
-      key={props.levelProperties.id}
-    >
-      <SpriteLab2View levelProperties={props.levelProperties} />
-    </SourcesContainer>
+    <SpriteLab2View
+      levelProperties={levelProperties}
+      currentSources={currentSources}
+      patchSources={patchSources}
+      channelId={channel?.id}
+    />
   );
 };
+
+export default SpriteLab2Container;
