@@ -17,6 +17,9 @@ export interface OptionListItem<T extends string | number> {
   icon?: string;
   iconStyle?: 'solid' | 'regular';
   iconFamily?: 'kit';
+  // Inline style for the label text, e.g. rendering a font option in its own
+  // typeface as a live preview.
+  labelStyle?: React.CSSProperties;
 }
 
 interface OptionListPopoverProps<T extends string | number> {
@@ -85,6 +88,7 @@ export default function OptionListPopover<T extends string | number>({
             <ListItemText className={styles.optionListLabel} disableTypography>
               <Typography
                 variant="body4"
+                style={option.labelStyle}
                 className={classNames({
                   [styles.optionListLabelSelected]: isSelected,
                 })}
