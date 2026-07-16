@@ -793,20 +793,21 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           getDefaultSpriteSize={getDefaultSpriteSize}
         />
 
-        {/* Guide overlay: full guide on Code; instructions-only on Images. */}
-        {levelProperties.guideMode &&
-          (activeTab === 'Code' ||
-            (activeTab === 'Images' && !!levelProperties.longInstructions)) && (
-            <GenerateSpriteLab
-              guideMode={
-                activeTab === 'Code'
-                  ? levelProperties.guideMode
-                  : 'instructions'
-              }
-              instructions={levelProperties.longInstructions}
-              onCodeGenerated={handleCodeGenerated}
-            />
-          )}
+        {/* The image form always shows on Images; codegen only when the
+          level asks for it. */}
+        {((activeTab === 'Code' && !!levelProperties.guideMode) ||
+          activeTab === 'Images') && (
+          <GenerateSpriteLab
+            guideMode={
+              activeTab === 'Images'
+                ? 'aiImageGenerate'
+                : levelProperties.guideMode!
+            }
+            instructions={levelProperties.longInstructions}
+            onCodeGenerated={handleCodeGenerated}
+            channelId={channelId}
+          />
+        )}
       </TabShell>
     </div>
   );
