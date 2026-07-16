@@ -31,7 +31,7 @@ const renderContainer = (props = {}) =>
 const mockFetchResponse = () =>
   Promise.resolve({ok: true, json: () => Promise.resolve({})});
 
-describe.skip('SectionsSetUpContainer', () => {
+describe('SectionsSetUpContainer', () => {
   let fetchSpy;
 
   beforeEach(() => {
