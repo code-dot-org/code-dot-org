@@ -32,7 +32,7 @@ export const RunButton = props => (
       backgroundColor: 'var(--background-accent-orange-primary)',
       color: 'var(--text-neutral-white-fixed)',
       '&:hover, &.force-hover, &[data-force-hover="true"]': {
-        backgroundColor: 'var(--accent-orange-70)',
+        backgroundColor: 'var(--background-accent-orange-strong)',
         color: 'var(--text-neutral-white-fixed)',
       },
       '&:focus, a&:focus': {
