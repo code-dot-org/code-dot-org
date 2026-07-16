@@ -38,6 +38,17 @@ export const createReactFlowSketchLabTourSteps = (
   // advance itself once the user drops a shape on the canvas.
   let shapeToolbarObserver: MutationObserver | null = null;
 
+  const stopWatchingForShapeToolbar = () => {
+    shapeToolbarObserver?.disconnect();
+    shapeToolbarObserver = null;
+  };
+
+  // The step's hide() runs on step-to-step navigation, but cancel/complete
+  // tear steps down via destroy() with no hide event, so the observer would
+  // keep watching the whole document. Clean up on those events too.
+  tour.on('complete', stopWatchingForShapeToolbar);
+  tour.on('cancel', stopWatchingForShapeToolbar);
+
   return [
     {
       id: 'sketchlab-welcome',
@@ -106,6 +117,11 @@ export const createReactFlowSketchLabTourSteps = (
       buttons: [backButton(tour)],
       when: {
         show() {
+          // If the toolbar is already visible, advance right away.
+          if (document.querySelector(SHAPE_TOOLBAR)) {
+            tour.next();
+            return;
+          }
           shapeToolbarObserver = new MutationObserver(() => {
             if (document.querySelector(SHAPE_TOOLBAR)) {
               // Advance when the shape toolbar shows up.
@@ -118,8 +134,7 @@ export const createReactFlowSketchLabTourSteps = (
           });
         },
         hide() {
-          shapeToolbarObserver?.disconnect();
-          shapeToolbarObserver = null;
+          stopWatchingForShapeToolbar();
         },
       },
       floatingUIOptions: {
@@ -150,7 +165,7 @@ export const createReactFlowSketchLabTourSteps = (
       id: 'zoom-controls',
       attachTo: {element: TOOLBAR_GROUP.zoom, on: 'left'},
       title: 'Zoom controls',
-      text: 'Your can zoom in and out here, or use zoom to fit to frame your whole sketch on screen.',
+      text: 'You can zoom in and out here, or use zoom to fit to frame your whole sketch on screen.',
       buttons: [backButton(tour), doneButton(tour)],
       floatingUIOptions: {
         middleware: [offset(12)],

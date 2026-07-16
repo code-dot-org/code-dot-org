@@ -4,22 +4,34 @@ import type {Tour} from 'shepherd.js';
 // active tour and cancels it when a new one starts.
 let activeTour: Tour | null = null;
 
+const listeners = new Set<() => void>();
+const notify = () => listeners.forEach(listener => listener());
+
 export const registerActiveTour = (tour: Tour): void => {
   tour.on('start', () => {
     if (activeTour && activeTour !== tour) {
       activeTour.cancel();
     }
     activeTour = tour;
+    notify();
   });
 
   const clear = () => {
-    if (activeTour === tour) activeTour = null;
+    if (activeTour === tour) {
+      activeTour = null;
+      notify();
+    }
   };
   tour.on('complete', clear);
   tour.on('cancel', clear);
 };
 
-// True while a product tour is running. Lets guided UI (e.g. Sketch Lab's
-// element toolbars) suppress focus-driven auto-close behavior that would
-// otherwise fight the tour when it moves focus into its own popup.
 export const hasActiveTour = (): boolean => activeTour !== null;
+
+// Subscribe to changes in whether a tour is active.
+export const subscribeToActiveTour = (listener: () => void): (() => void) => {
+  listeners.add(listener);
+  return () => {
+    listeners.delete(listener);
+  };
+};
