@@ -5,6 +5,7 @@ import type {
   SketchlabReactFlowEdge,
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
+import {isTargetEditable} from '@cdo/apps/util/isTargetEditable';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
@@ -17,7 +18,6 @@ import {
 } from '../constants';
 import type {ClipboardContents} from '../context';
 import type {TabOrderEntry} from '../utils/computeTabOrder';
-import {isTargetEditable} from '../utils/isTargetEditable';
 import {
   anchorHandleFlowPosition,
   createLineAnchorAtHandle,
@@ -334,11 +334,9 @@ export function useCopyPaste({
           const contents = buildGroupClipboard(entry.id);
           if (!contents) return;
           writeClipboard(contents);
-          // Delete the group and its children explicitly; React Flow does not cascade-delete children.
-          const children = nodes.filter(n => n.parentId === entry.id);
-          deleteElements({
-            nodes: [{id: entry.id}, ...children.map(n => ({id: n.id}))],
-          });
+          // The canvas's onBeforeDelete handler expands this to the group's
+          // children.
+          deleteElements({nodes: [{id: entry.id}]});
         } else {
           const contents = buildNodeClipboard(entry.id);
           if (!contents) return;
