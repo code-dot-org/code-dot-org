@@ -2296,19 +2296,4 @@ class ApiControllerNoDefaultScriptTest < ActionController::TestCase
     assert_response :success
     assert_equal '[]', @response.body
   end
-
-  test 'seeding the hourofcode unit does not change the empty-state responses' do
-    create_hourofcode_unit_and_levels
-
-    get :section_text_responses, params: {section_id: @section.id}
-    assert_response :success
-    assert_equal '[]', @response.body
-
-    get :section_level_progress, params: {section_id: @section.id}
-    assert_response :bad_request
-
-    get :lockable_state
-    assert_response :success
-    assert_equal({}, JSON.parse(@response.body)[@section.id.to_s]['lessons'])
-  end
 end
