@@ -1,6 +1,7 @@
 // Globals used in this file:
 //   Blockly
 
+import Link from '@code-dot-org/component-library/link';
 import Modal from '@code-dot-org/component-library/modal';
 import $ from 'jquery';
 import QRCode from 'qrcode.react';
@@ -37,6 +38,8 @@ import ChallengeDialog from './templates/ChallengeDialog';
 import CodeWritten from './templates/feedback/CodeWritten';
 import GeneratedCode from './templates/feedback/GeneratedCode';
 import {createHiddenPrintWindow} from './utils';
+
+import showCodeStyles from './showCodeModal.module.scss';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -1066,15 +1069,7 @@ FeedbackUtils.prototype.getGeneratedCodeString_ = function () {
 FeedbackUtils.prototype.getGeneratedCodeProperties = function (options) {
   options = options || {};
 
-  const codeInfoMsgParams = {
-    berkeleyLink:
-      "<a href='http://bjc.berkeley.edu/' target='_blank'>Berkeley</a>",
-    harvardLink:
-      "<a href='https://cs50.harvard.edu/' target='_blank'>Harvard</a>",
-  };
-
   const {message, shortMessage} = this.getGeneratedCodeDescriptions_(
-    codeInfoMsgParams,
     options.generatedCodeDescription
   );
   const code = this.studioApp_.polishGeneratedCodeString(
@@ -1090,13 +1085,11 @@ FeedbackUtils.prototype.getGeneratedCodeProperties = function (options) {
 
 /**
  * Generates explanation of what code is.
- * @param {Object} codeInfoMsgParams - params for generatedCodeInfo msg function
  * @param {String} [generatedCodeDescription] - optional description to use
  *        instead of the default
- * @returns {string}
+ * @returns {{message: React.ReactNode, shortMessage: React.ReactNode}}
  */
 FeedbackUtils.prototype.getGeneratedCodeDescriptions_ = function (
-  codeInfoMsgParams,
   generatedCodeDescription
 ) {
   if (this.studioApp_.editCode) {
@@ -1113,9 +1106,31 @@ FeedbackUtils.prototype.getGeneratedCodeDescriptions_ = function (
     };
   }
 
+  const berkeley = (
+    <Link href="http://bjc.berkeley.edu/" openInNewTab external>
+      Berkeley
+    </Link>
+  );
+  const harvard = (
+    <Link href="https://cs50.harvard.edu/" openInNewTab external>
+      Harvard
+    </Link>
+  );
   return {
-    message: msg.generatedCodeInfo(codeInfoMsgParams),
-    shortMessage: msg.shortGeneratedCodeInfo(codeInfoMsgParams),
+    message: (
+      <>
+        Even top universities teach block-based coding (e.g., {berkeley},{' '}
+        {harvard}). But under the hood, the blocks you have assembled can also
+        be shown in JavaScript, the world's most widely used coding language:
+      </>
+    ),
+    shortMessage: (
+      <>
+        Even top universities teach block-based coding (e.g., {berkeley},{' '}
+        {harvard}). The blocks you use can also be shown in JavaScript, the most
+        widely used coding language:
+      </>
+    ),
   };
 };
 
@@ -1143,12 +1158,17 @@ FeedbackUtils.prototype.showGeneratedCode = function (appStrings) {
       title={msg.showCodeHeader()}
       onClose={close}
       closeLabel={msg.closeDialog()}
+      className={showCodeStyles.showCodeModal}
       customContent={
         <GeneratedCode
           message={generatedCodeProperties.message}
           code={generatedCodeProperties.code}
           style={{marginTop: 0}}
-          codeStyle={{maxHeight: 340, margin: 0}}
+          codeStyle={{
+            maxHeight: 340,
+            margin: 0,
+            backgroundColor: 'var(--background-neutral-tertiary)',
+          }}
         />
       }
       primaryButtonProps={{
