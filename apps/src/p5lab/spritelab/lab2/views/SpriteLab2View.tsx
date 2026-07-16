@@ -67,7 +67,7 @@ import GenerateSpriteLab from './GenerateSpriteLab';
 import ItemsTab from './ItemsTab';
 import Playspace, {PlayspaceMode} from './Playspace';
 import SceneSelector from './SceneSelector';
-import useCodeWorkspace, {BLOCKLY_DIV_ID} from './useCodeWorkspace';
+import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
 import WorldTab from './WorldTab';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
@@ -230,7 +230,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   // Seed the animation list BEFORE the workspace injects: dropdown fields
   // validate saved values against the store at block-load time — hence the
-  // animationsSeeded gate on useCodeWorkspace, not just dispatch ordering.
+  // animationsSeeded gate on useBlocklyWorkspace, not just dispatch ordering.
   useEffect(() => {
     let cancelled = false;
     dispatch(
@@ -343,7 +343,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     });
   }, [animationListState, patchSources]);
 
-  const {getCode, loadSource, subscribeToChanges} = useCodeWorkspace({
+  const {getCode, loadCode, subscribeToChanges} = useBlocklyWorkspace({
     enabled: animationsSeeded,
     toolboxDefinition: levelProperties.toolboxDefinition,
     toolboxXml: levelProperties.toolboxBlocks,
@@ -667,9 +667,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       id: activeScene.id,
       source: activeScene.source,
     };
-    loadSource(activeScene.source ?? DEFAULT_SCENE_SOURCE);
+    loadCode(activeScene.source ?? DEFAULT_SCENE_SOURCE);
     runLocalScene(activeScene);
-  }, [animationsSeeded, activeScene, loadSource, runLocalScene]);
+  }, [animationsSeeded, activeScene, loadCode, runLocalScene]);
 
   const handleSelectScene = useCallback(
     (sceneId: string) => {

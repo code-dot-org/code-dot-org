@@ -17,7 +17,7 @@ import {
 
 export const BLOCKLY_DIV_ID = 'spritelab2-blockly-div';
 
-interface UseCodeWorkspaceOptions {
+interface UseBlocklyWorkspaceOptions {
   enabled: boolean;
   toolboxDefinition?: BlocklyCore.utils.toolbox.ToolboxInfo;
   // XML string toolbox format. TODO: switch new levels over to JSON.
@@ -26,11 +26,11 @@ interface UseCodeWorkspaceOptions {
   theme: 'Light' | 'Dark';
 }
 
-interface UseCodeWorkspaceResult {
+interface UseBlocklyWorkspaceResult {
   /** Compile the workspace to JavaScript for the runtime; null before inject. */
   getCode: () => string | null;
   /** Load code into the workspace. */
-  loadSource: (source: WorkspaceSerialization) => void;
+  loadCode: (source: WorkspaceSerialization) => void;
   /**
    * Register the change listeners:
    * - onWorkspaceChange fires with the serialized workspace after a user edit.
@@ -46,13 +46,13 @@ interface UseCodeWorkspaceResult {
 /**
  * A Sprite Lab Blockly workspace rendered into the BLOCKLY_DIV_ID div the caller mounts.
  */
-export default function useCodeWorkspace({
+export default function useBlocklyWorkspace({
   enabled,
   toolboxDefinition,
   toolboxXml,
   sharedBlocks,
   theme,
-}: UseCodeWorkspaceOptions): UseCodeWorkspaceResult {
+}: UseBlocklyWorkspaceOptions): UseBlocklyWorkspaceResult {
   const workspaceRef = useRef<BlocklyCore.WorkspaceSvg | null>(null);
   // Theme changes apply at runtime (below); a ref keeps the inject effect
   // from re-injecting on theme change while still injecting with the
@@ -195,7 +195,7 @@ export default function useCodeWorkspace({
     []
   );
 
-  const loadSource = useCallback((source: WorkspaceSerialization) => {
+  const loadCode = useCallback((source: WorkspaceSerialization) => {
     const workspace = workspaceRef.current;
     if (!workspace) {
       return;
@@ -225,5 +225,5 @@ export default function useCodeWorkspace({
     []
   );
 
-  return {getCode, loadSource, subscribeToChanges};
+  return {getCode, loadCode, subscribeToChanges};
 }
