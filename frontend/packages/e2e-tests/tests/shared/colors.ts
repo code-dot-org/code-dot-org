@@ -1,37 +1,39 @@
 import {type Locator} from '@playwright/test';
 
-interface CssColorMatchesVarOptions {
-  locator: Locator;
+/** A computed color property paired with the CSS custom property it should resolve to. */
+export interface ColorVarMatch {
   /** A color-valued computed property, e.g. 'background-color'. */
-  colorProperty: string;
+  property: string;
   /** A CSS custom property, e.g. '--background-success-primary'. */
   cssVar: string;
 }
 
 /**
- * Whether `locator`'s computed `colorProperty` equals the resolved value of
- * `cssVar`. Playwright cannot compare a computed style against a variable —
- * getComputedStyle returns the resolved value, not the var that produced it —
- * so resolve the var via a probe in the element's own theme context and compare
- * rgb() to rgb().
+ * Whether every match holds: `locator`'s computed `property` equals the resolved
+ * value of its `cssVar`. getComputedStyle returns resolved values, not the vars
+ * that produced them, so resolve each var via a probe in the element's own theme
+ * context and compare rgb() to rgb() — all pairs in a single evaluate.
  */
-export async function cssColorMatchesVar({
+export async function cssColorsMatchVars({
   locator,
-  colorProperty,
-  cssVar,
-}: CssColorMatchesVarOptions): Promise<boolean> {
-  return locator.evaluate(
-    (el, {colorProperty, cssVar}) => {
+  matches,
+}: {
+  locator: Locator;
+  matches: ColorVarMatch[];
+}): Promise<boolean> {
+  return locator.evaluate((el, pairs) => {
+    const resolve = (cssVar: string): string => {
       const probe = document.createElement('span');
       el.appendChild(probe);
       probe.style.color = `var(${cssVar})`;
-      const expected = window.getComputedStyle(probe).color;
+      const value = window.getComputedStyle(probe).color;
       probe.remove();
-      const actual = window
-        .getComputedStyle(el)
-        .getPropertyValue(colorProperty);
-      return actual === expected;
-    },
-    {colorProperty, cssVar},
-  );
+      return value;
+    };
+    const style = window.getComputedStyle(el);
+    return pairs.every(
+      ({property, cssVar}) =>
+        style.getPropertyValue(property) === resolve(cssVar),
+    );
+  }, matches);
 }

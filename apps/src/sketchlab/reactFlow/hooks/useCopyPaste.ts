@@ -334,11 +334,9 @@ export function useCopyPaste({
           const contents = buildGroupClipboard(entry.id);
           if (!contents) return;
           writeClipboard(contents);
-          // Delete the group and its children explicitly; React Flow does not cascade-delete children.
-          const children = nodes.filter(n => n.parentId === entry.id);
-          deleteElements({
-            nodes: [{id: entry.id}, ...children.map(n => ({id: n.id}))],
-          });
+          // The canvas's onBeforeDelete handler expands this to the group's
+          // children.
+          deleteElements({nodes: [{id: entry.id}]});
         } else {
           const contents = buildNodeClipboard(entry.id);
           if (!contents) return;

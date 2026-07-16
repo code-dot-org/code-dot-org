@@ -7,6 +7,7 @@ import {
 } from '@applitools/eyes-playwright';
 import type {Page, TestInfo} from 'playwright/test';
 
+import {settle} from './stability';
 import type {VisualCheck} from './types';
 
 /**
@@ -93,6 +94,7 @@ export async function withApplitoolsCheck(
   await eyes.open(page, appName, testInfo.title);
 
   const check: VisualCheck = async (name, opts = {}) => {
+    await settle(page);
     const fully = opts.fully ?? true;
     const target = opts.region
       ? Target.region(opts.region)

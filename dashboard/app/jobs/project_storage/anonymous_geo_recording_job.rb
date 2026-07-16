@@ -9,7 +9,7 @@ require 'cdo/geocoder'
 # which uses the first IP captured during account creation.
 # To mirror that behavior for signed-out users, this job records only the first IP seen for each `storage_id`.
 class ProjectStorage::AnonymousGeoRecordingJob < ApplicationJob
-  queue_as :low_priority
+  queue_as CDO.active_job_queues[:low_priority]
 
   discard_on ActiveRecord::RecordNotUnique
 
