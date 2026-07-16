@@ -121,8 +121,8 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
   };
 
   const handleButtonClick = async (tourName: string) => {
-    recordTourStart(tourName, demoType);
     if (!(await ensureDemoSection())) return;
+    recordTourStart(tourName, demoType);
     if (tourName === 'create_class_section') {
       createSectionTour?.start();
     } else if (tourName === 'view_syllabus') {
