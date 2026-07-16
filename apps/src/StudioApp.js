@@ -757,16 +757,18 @@ StudioApp.prototype.alertIfCompletedWhilePairing = function (config) {
 
 StudioApp.prototype.getSettingsHandler = function () {
   return () => {
-    const contentDiv = document.createElement('div');
-    const dialog = this.createModalDialog({
-      contentDiv: contentDiv,
-      id: 'settings-modal',
-    });
-
-    createReactRoot(React.createElement(SettingsModal), contentDiv, {
-      legacyReactDomRender: true,
-    });
-    dialog.show();
+    const container = document.createElement('div');
+    container.id = 'settings-modal';
+    document.body.appendChild(container);
+    const close = () => {
+      ReactDOM.unmountComponentAtNode(container);
+      container.remove();
+    };
+    createReactRoot(
+      React.createElement(SettingsModal, {onClose: close}),
+      container,
+      {legacyReactDomRender: true}
+    );
   };
 };
 

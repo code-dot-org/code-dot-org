@@ -56,7 +56,6 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "devDependencies": {
-    "@fontsource-variable/figtree": "^5.1.2",
     "@fontsource-variable/noto-sans": "^5.1.1",
     "@fontsource-variable/noto-sans-arabic": "^5.1.1",
     "@fontsource-variable/noto-sans-armenian": "^5.1.1",
