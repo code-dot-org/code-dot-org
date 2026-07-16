@@ -1,9 +1,11 @@
 // Globals used in this file:
 //   Blockly
 
+import Modal from '@code-dot-org/component-library/modal';
 import $ from 'jquery';
 import QRCode from 'qrcode.react';
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 import {
   blockLimitExceeded,
@@ -1124,40 +1126,38 @@ FeedbackUtils.prototype.getGeneratedCodeDescriptions_ = function (
  *        to display instead of the usual show code description
  */
 FeedbackUtils.prototype.showGeneratedCode = function (appStrings) {
-  var codeDiv = document.createElement('div');
-
   var generatedCodeProperties = this.getGeneratedCodeProperties({
     generatedCodeDescription: appStrings && appStrings.generatedCodeDescription,
   });
 
+  var container = document.createElement('div');
+  container.id = 'showCodeModal';
+  document.body.appendChild(container);
+  var close = function () {
+    ReactDOM.unmountComponentAtNode(container);
+    container.remove();
+  };
+
   createReactRoot(
-    <div>
-      <GeneratedCode
-        message={generatedCodeProperties.message}
-        code={generatedCodeProperties.code}
-      />
-      <DialogButtons ok={true} />
-    </div>,
-    codeDiv,
-    {
-      legacyReactDomRender: true,
-    }
+    <Modal
+      title={msg.showCodeHeader()}
+      onClose={close}
+      closeLabel={msg.closeDialog()}
+      customContent={
+        <GeneratedCode
+          message={generatedCodeProperties.message}
+          code={generatedCodeProperties.code}
+        />
+      }
+      primaryButtonProps={{
+        id: 'ok-button',
+        children: msg.dialogOK(),
+        onClick: close,
+      }}
+    />,
+    container,
+    {legacyReactDomRender: true}
   );
-
-  var dialog = this.createModalDialog({
-    contentDiv: codeDiv,
-    icon: this.studioApp_.icon,
-    defaultBtnSelector: '#ok-button',
-  });
-
-  var okayButton = codeDiv.querySelector('#ok-button');
-  if (okayButton) {
-    dom.addClickTouchEvent(okayButton, function () {
-      dialog.hide();
-    });
-  }
-
-  dialog.show();
 };
 
 /**
