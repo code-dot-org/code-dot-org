@@ -1,5 +1,7 @@
 import CloseButton from '@code-dot-org/component-library/closeButton';
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {ProjectFile} from '@codebridge/types';
 import {getFileIconNameAndStyle} from '@codebridge/utils';
 import {useSortable} from '@dnd-kit/sortable';
@@ -18,6 +20,7 @@ import {
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
+import FocusVisibleOnly from '@cdo/apps/lab2/views/components/FocusVisibleOnly';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -59,6 +62,10 @@ const FileTab = ({file, isDragging = false, onKeyDown}: FileTabProps) => {
   const isAiTutorVersion = useAppSelector(
     state => state.lab2Project.viewingAiTutorVersion
   );
+
+  // useTheme returns undefined when outside a ThemeProvider — Tooltip falls
+  // back to its default CSS vars in that case.
+  const {theme} = useTheme(true);
 
   const {
     attributes,
@@ -132,21 +139,33 @@ const FileTab = ({file, isDragging = false, onKeyDown}: FileTabProps) => {
   return (
     <div className={className} ref={setNodeRef} style={dndStyle}>
       {/* Drag handle stops here — CloseButton is a sibling, not nested, to avoid WCAG nested interactive controls violation */}
-      <div
-        ref={labelRef}
-        className={moduleStyles.label}
-        onClick={() => handleOnClick(file.id)}
-        {...attributes}
-        {...listeners}
-        onKeyDown={handleLabelKeyDown}
+      <WithTooltip
+        tooltipProps={{
+          tooltipId: `file-tab-reorder-hint-${file.id}`,
+          direction: 'onBottom',
+          size: 'xs',
+          text: 'Press M to reorder · Esc to cancel',
+          'data-theme': theme,
+        }}
       >
-        <FontAwesomeV6Icon
-          iconName={iconName}
-          iconStyle={iconStyle}
-          className={iconClassName}
-        />
-        <Typography variant="body4">{file.name}</Typography>
-      </div>
+        <FocusVisibleOnly>
+          <div
+            ref={labelRef}
+            className={moduleStyles.label}
+            onClick={() => handleOnClick(file.id)}
+            {...attributes}
+            {...listeners}
+            onKeyDown={handleLabelKeyDown}
+          >
+            <FontAwesomeV6Icon
+              iconName={iconName}
+              iconStyle={iconStyle}
+              className={iconClassName}
+            />
+            <Typography variant="body4">{file.name}</Typography>
+          </div>
+        </FocusVisibleOnly>
+      </WithTooltip>
       <CloseButton
         onClick={() => dispatch(closeFileThunk(file.id))}
         color={'light'}

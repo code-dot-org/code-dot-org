@@ -1,5 +1,8 @@
-.codeEditorWrapper {
-  position: relative;
+// WithTooltip's TooltipOverlay defaults to width: fit-content, which would
+// collapse the editor container. Force it to fill its parent so CodeMirror
+// keeps the full editor area.
+.editorTooltipOverlay {
+  width: 100%;
   height: 100%;
 }
 
@@ -11,36 +14,4 @@
   :global(.cm-mergeView) {
     height: 100%;
   }
-}
-
-// Floating shortcut hint, shown when the editor scroller has keyboard focus.
-// Hidden by default; CSS :has() reveals it when .cm-scroller (rendered by
-// CodeMirror inside .codeEditorContainer) matches :focus-visible. Inverse
-// colors match the design-system tooltip, and the top-center position keeps
-// it from landing on top of code the user is about to read.
-.keyboardHint {
-  display: none;
-  position: absolute;
-  top: 0.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  pointer-events: none;
-  padding: 0.25rem 0.625rem;
-  border-radius: 0.25rem;
-  background-color: var(--background-neutral-black-fixed);
-  color: var(--text-neutral-white-fixed);
-  font-size: 0.75rem;
-  line-height: 1.25;
-  white-space: nowrap;
-  box-shadow:
-    0 8px 12px 0 rgb(0 0 0 / 0.12),
-    0 0 12px 0 rgb(0 0 0 / 0.12);
-  max-width: calc(100% - 1rem);
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.codeEditorWrapper:has(:global(.cm-scroller):focus-visible) .keyboardHint {
-  display: block;
 }

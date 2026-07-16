@@ -1,12 +1,5 @@
 @use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
 
-// Positioning context for the absolutely-placed .keyboardHint that floats
-// just below the tab row. .fileTabs itself can't host the hint because its
-// overflow-x:auto computes overflow-y to clip, which would hide the hint.
-.fileTabsWrapper {
-  position: relative;
-}
-
 .fileTabs {
   display: flex;
   justify-content: flex-start;
@@ -27,35 +20,6 @@
     border-radius: variables.$default-border-radius;
     z-index: 10; // Ensure outline is visible above outline in aiTutorVersionActive
   }
-}
-
-// Shortcut hint, shown only when a tab's drag-handle label has keyboard
-// focus — not when its close button is focused, since M-to-reorder is bound
-// to the label (via dnd-kit listeners), not the close button. Floats just
-// below the tab row, anchored to the right, so the focused tab can't end up
-// underneath it.
-.keyboardHint {
-  display: none;
-  position: absolute;
-  top: 100%;
-  inset-inline-end: 0.5rem;
-  margin-top: 0.25rem;
-  z-index: 11;
-  pointer-events: none;
-  padding: 0.125rem 0.5rem;
-  border-radius: 0.25rem;
-  background-color: var(--background-neutral-black-fixed);
-  color: var(--text-neutral-white-fixed);
-  font-size: 0.75rem;
-  line-height: 1.25;
-  white-space: nowrap;
-  box-shadow:
-    0 8px 12px 0 rgb(0 0 0 / 0.12),
-    0 0 12px 0 rgb(0 0 0 / 0.12);
-}
-
-.fileTabsWrapper:has(.label:focus-visible) .keyboardHint {
-  display: block;
 }
 
 .fileTab {

@@ -1,4 +1,5 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {autocompletion} from '@codemirror/autocomplete';
 import {MergeView} from '@codemirror/merge';
 import {Compartment, EditorState, Extension} from '@codemirror/state';
@@ -14,6 +15,7 @@ import {
   setEditorFontSizeLoaded,
 } from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {AppName} from '@cdo/apps/lab2/types';
+import FocusVisibleOnly from '@cdo/apps/lab2/views/components/FocusVisibleOnly';
 import i18n from '@cdo/apps/pythonlab/locale';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import experiments from '@cdo/apps/util/experiments';
@@ -367,19 +369,26 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   }
 
   return (
-    <div className={moduleStyles.codeEditorWrapper}>
-      <div
-        ref={editorRef}
-        className={classNames(
-          'codemirror-container',
-          moduleStyles.codeEditorContainer
-        )}
-      />
-      {/* CSS-controlled: visible only when .cm-scroller has :focus-visible. */}
-      <div className={moduleStyles.keyboardHint} aria-hidden="true">
-        Enter to edit · Esc to exit · Arrows to scroll
-      </div>
-    </div>
+    <WithTooltip
+      tooltipOverlayClassName={moduleStyles.editorTooltipOverlay}
+      tooltipProps={{
+        tooltipId: 'code-editor-keyboard-hint',
+        direction: 'onTop',
+        size: 'xs',
+        text: 'Enter to edit · Esc to exit · Arrows to scroll',
+        'data-theme': theme,
+      }}
+    >
+      <FocusVisibleOnly>
+        <div
+          ref={editorRef}
+          className={classNames(
+            'codemirror-container',
+            moduleStyles.codeEditorContainer
+          )}
+        />
+      </FocusVisibleOnly>
+    </WithTooltip>
   );
 };
 
