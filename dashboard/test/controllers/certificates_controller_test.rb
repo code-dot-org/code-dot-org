@@ -3,16 +3,12 @@ require 'base64'
 
 class CertificatesControllerTest < ActionController::TestCase
   setup_all do
-    # Production always has the hourofcode course; create it so the batch
-    # default is exercised both with it present and, via
-    # destroy_hourofcode_course, absent.
-    create_hourofcode_unit_and_levels
-
     @teacher = create(:teacher)
     @teacher.freeze
   end
 
   test 'can show given name and course' do
+    create_hourofcode_unit_and_levels
     data = {name: 'student', course: 'hourofcode'}
     encoded_params = Base64.urlsafe_encode64(data.to_json)
     get :show, params: {encoded_params: encoded_params}
@@ -80,7 +76,12 @@ class CertificatesControllerTest < ActionController::TestCase
   test_user_gets_response_for :batch, user: :student, response: :redirect, redirected_to: '/'
   test_user_gets_response_for :batch, user: :teacher, response: :success
 
+  # The paramless batch default renders Hour of Code and never consults the DB.
+  # Exercise it both with the hourofcode course seeded (here; production always
+  # has it) and absent (see 'when hourofcode is not seeded' below, as in
+  # UI-test-like environments).
   test 'batch page loads hoc image by default' do
+    create_hourofcode_unit_and_levels
     sign_in @teacher
     get :batch
     assert_response :success
@@ -106,17 +107,7 @@ class CertificatesControllerTest < ActionController::TestCase
     assert_equal expected_image_url, response_data['imageUrl']
   end
 
-  # Simulate an environment (e.g. UI tests) with no hourofcode course.
-  # find_matching_course_version resolves via the UnitGroup, so destroying it
-  # is enough; clear the unit's original_unit_group FK first so the destroy
-  # succeeds.
-  def destroy_hourofcode_course
-    Unit.find_by_name('hourofcode').update_column(:original_unit_group_id, nil)
-    UnitGroup.find_by_name('hourofcode').destroy
-  end
-
   test 'batch page renders the default hoc certificate when hourofcode is not seeded' do
-    destroy_hourofcode_course
     sign_in @teacher
     get :batch
     assert_response :success
@@ -128,7 +119,6 @@ class CertificatesControllerTest < ActionController::TestCase
   end
 
   test 'batch page default does not depend on rack env when hourofcode is not seeded' do
-    destroy_hourofcode_course
     sign_in @teacher
     with_rack_env(:production) do
       get :batch
@@ -139,7 +129,6 @@ class CertificatesControllerTest < ActionController::TestCase
   end
 
   test 'batch page rejects an explicitly requested course that is not seeded' do
-    destroy_hourofcode_course
     sign_in @teacher
     assert_raises(ActiveRecord::RecordNotFound) do
       get :batch, params: {course: Base64.urlsafe_encode64('hourofcode')}
