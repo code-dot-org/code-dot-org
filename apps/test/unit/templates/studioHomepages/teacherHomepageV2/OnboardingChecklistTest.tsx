@@ -179,20 +179,24 @@ describe('OnboardingChecklist', () => {
     );
   });
 
-  it('calls HttpClient.post with started_at and demo_type when a tour button is clicked', () => {
+  it('calls HttpClient.post with started_at and demo_type when a tour button is clicked', async () => {
     renderComponent({demoType: 'elementary'});
 
     fireEvent.click(screen.getByText('Create a class section'));
 
-    expect(mockPost).toHaveBeenCalledWith(
-      '/dashboardapi/v1/user_product_tours',
-      JSON.stringify({
-        tour_name: 'create_class_section',
-        started_at: true,
-        properties: {demo_type: 'elementary'},
-      }),
-      true,
-      {'Content-Type': 'application/json'}
+    // recordTourStart() only runs after ensureDemoSection() resolves, so the
+    // post lands a microtask after the click.
+    await waitFor(() =>
+      expect(mockPost).toHaveBeenCalledWith(
+        '/dashboardapi/v1/user_product_tours',
+        JSON.stringify({
+          tour_name: 'create_class_section',
+          started_at: true,
+          properties: {demo_type: 'elementary'},
+        }),
+        true,
+        {'Content-Type': 'application/json'}
+      )
     );
   });
 
@@ -201,33 +205,37 @@ describe('OnboardingChecklist', () => {
 
     fireEvent.click(screen.getByText('Review the syllabus'));
 
-    expect(mockPost).toHaveBeenCalledWith(
-      '/dashboardapi/v1/user_product_tours',
-      JSON.stringify({
-        tour_name: 'view_syllabus',
-        started_at: true,
-        properties: {demo_type: 'high'},
-      }),
-      true,
-      {'Content-Type': 'application/json'}
+    await waitFor(() =>
+      expect(mockPost).toHaveBeenCalledWith(
+        '/dashboardapi/v1/user_product_tours',
+        JSON.stringify({
+          tour_name: 'view_syllabus',
+          started_at: true,
+          properties: {demo_type: 'high'},
+        }),
+        true,
+        {'Content-Type': 'application/json'}
+      )
     );
     await waitFor(() => expect(reviewSyllabusTour.start).toHaveBeenCalled());
   });
 
-  it('sends the correct tour name for learn-to-evaluate', () => {
+  it('sends the correct tour name for learn-to-evaluate', async () => {
     renderComponent({demoType: 'middle'});
 
     fireEvent.click(screen.getByText('Learn how to evaluate'));
 
-    expect(mockPost).toHaveBeenCalledWith(
-      '/dashboardapi/v1/user_product_tours',
-      JSON.stringify({
-        tour_name: 'learn_to_evaluate',
-        started_at: true,
-        properties: {demo_type: 'middle'},
-      }),
-      true,
-      {'Content-Type': 'application/json'}
+    await waitFor(() =>
+      expect(mockPost).toHaveBeenCalledWith(
+        '/dashboardapi/v1/user_product_tours',
+        JSON.stringify({
+          tour_name: 'learn_to_evaluate',
+          started_at: true,
+          properties: {demo_type: 'middle'},
+        }),
+        true,
+        {'Content-Type': 'application/json'}
+      )
     );
   });
 
