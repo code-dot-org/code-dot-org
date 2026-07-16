@@ -1147,6 +1147,8 @@ FeedbackUtils.prototype.showGeneratedCode = function (appStrings) {
         <GeneratedCode
           message={generatedCodeProperties.message}
           code={generatedCodeProperties.code}
+          style={{marginTop: 0}}
+          codeStyle={{maxHeight: 340, margin: 0}}
         />
       }
       primaryButtonProps={{

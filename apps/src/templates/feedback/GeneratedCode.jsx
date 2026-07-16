@@ -8,6 +8,7 @@ export default class GeneratedCode extends React.Component {
     message: PropTypes.string.isRequired,
     code: PropTypes.string.isRequired,
     style: PropTypes.object,
+    codeStyle: PropTypes.object,
   };
 
   render() {
@@ -18,7 +19,7 @@ export default class GeneratedCode extends React.Component {
         </div>
 
         {/* code container should be LTR even in RTL mode */}
-        <pre className="generatedCode" dir="ltr">
+        <pre className="generatedCode" dir="ltr" style={this.props.codeStyle}>
           {this.props.code}
         </pre>
       </div>
