@@ -353,11 +353,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   // getCode from useCodeWorkspace, via a ref: the run callbacks are declared
   // before the hook call but only invoked after render.
-  // The Code tab's Blockly workspace. Called above the run machinery so
-  // getCode is in scope for it; edits arrive via subscribeToChanges below.
-  const {getCode, loadCode, loadScene, subscribeToChanges} = useCodeWorkspace({
+  // The Code tab's Blockly workspace, injected empty exactly once (theme
+  // applies at runtime) — all content loads flow through the reconcile
+  // effect. Called above the run machinery so getCode is in scope for it;
+  // edits arrive via subscribeToChanges below.
+  const {getCode, loadSource, subscribeToChanges} = useCodeWorkspace({
     enabled: animationsSeeded,
-    source: activeScene.source ?? DEFAULT_SCENE_SOURCE,
     toolboxDefinition: levelProperties.toolboxDefinition,
     toolboxXml: levelProperties.toolboxBlocks,
     sharedBlocks: levelProperties.sharedBlocks,
@@ -626,14 +627,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
   }, [activeTab, engineReady, runScene, activeSceneId, scenes]);
 
-  // Persist a workspace edit. Updater form: composes with concurrent field
-  // writes (e.g. the animations patch) instead of overwriting them.
-  const handleWorkspaceChange = useCallback(
+  // Persist a source into the active scene. Updater form: composes with
+  // concurrent field writes (e.g. the animations patch) instead of
+  // overwriting them. Only `scenes` is written; the variant-off read path
+  // falls back to scenes[0].
+  const writeActiveSceneSource = useCallback(
     (source: WorkspaceSerialization) => {
       if (SCENES_UI_VARIANT) {
-        // The workspace edits the active scene. Scenes are the single source
-        // of truth: only `scenes` is written; the variant-off read path
-        // falls back to scenes[0].
         updateSources(prev => {
           const sources = prev ?? currentSources;
           return {
@@ -646,10 +646,31 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       } else {
         updateSources(prev => ({...(prev ?? currentSources), source}));
       }
+    },
+    [updateSources, currentSources, activeSceneId]
+  );
+
+  // What the workspace currently displays, as {scene id, source object}.
+  // The reconcile effect loads the workspace only when the committed active
+  // scene diverges from this — user edits mark themselves synced at emit
+  // time, so the workspace is never reloaded with its own output. Starts
+  // unsynced: the first reconcile after inject does the initial load, the
+  // same path as every other load.
+  const workspaceSyncedRef = useRef<{
+    id: string | null;
+    source: WorkspaceSerialization | undefined;
+  }>({id: null, source: undefined});
+
+  // A user edit: the workspace already displays this content; persist it
+  // and refresh the preview.
+  const handleWorkspaceChange = useCallback(
+    (source: WorkspaceSerialization) => {
+      workspaceSyncedRef.current = {id: activeSceneId, source};
+      writeActiveSceneSource(source);
       // Keep the live preview in sync with the edited code.
       scheduleRun();
     },
-    [updateSources, currentSources, activeSceneId, scheduleRun]
+    [activeSceneId, writeActiveSceneSource, scheduleRun]
   );
 
   // Deliver user edits into the save/preview pipeline; intermediate field
@@ -659,20 +680,27 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [subscribeToChanges, handleWorkspaceChange, scheduleRun]
   );
 
-  // The editor and preview follow the active scene: on change, load its
-  // blocks into the workspace and run it. Edge-detected on the id because
-  // activeScene's identity changes on every edit (scenes is rebuilt), and
-  // content edits must not reload the workspace. On mount the workspace
-  // inject + engine-ready effects cover the load and first run.
-  const prevActiveSceneIdRef = useRef(activeScene.id);
+  // Reconcile the workspace with the committed active scene: load and run on
+  // the initial load, a scene switch, AI generation, or any other write that
+  // didn't come from the workspace itself (compared by identity — user edits
+  // mark themselves synced at emit time). Gated on animationsSeeded so it
+  // never stamps itself synced before the workspace exists; when the gate
+  // opens, the inject effect has already run (the hook is called above).
   useEffect(() => {
-    if (prevActiveSceneIdRef.current === activeScene.id) {
+    if (!animationsSeeded) {
       return;
     }
-    prevActiveSceneIdRef.current = activeScene.id;
-    loadScene(activeScene.source ?? DEFAULT_SCENE_SOURCE);
+    const synced = workspaceSyncedRef.current;
+    if (synced.id === activeScene.id && synced.source === activeScene.source) {
+      return;
+    }
+    workspaceSyncedRef.current = {
+      id: activeScene.id,
+      source: activeScene.source,
+    };
+    loadSource(activeScene.source ?? DEFAULT_SCENE_SOURCE);
     runLocalScene(activeScene);
-  }, [activeScene, loadScene, runLocalScene]);
+  }, [animationsSeeded, activeScene, loadSource, runLocalScene]);
 
   // Scenes variant: switch which scene's workspace is open in the Code tab.
   // The active-scene effect does the load + run.
@@ -696,7 +724,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         const sources = prev ?? currentSources;
         return {...sources, scenes: [...getScenes(sources), scene]};
       });
-      // Both state updates land in one commit, so the active-scene effect
+      // Both state updates land in one commit, so the reconcile effect
       // sees the new scene in the derived list.
       setActiveSceneId(scene.id);
     },
@@ -720,14 +748,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [patchSources]
   );
 
-  // AI-generated blocks load into the Code tab; switch there so the user sees
-  // them. loadCode emits onWorkspaceChange, which persists and previews.
+  // AI-generated blocks write to the active scene's source; the reconcile
+  // effect loads them into the workspace and runs them. Switch to the Code
+  // tab so the user sees them.
   const handleCodeGenerated = useCallback(
     (source: WorkspaceSerialization) => {
-      loadCode(source);
+      writeActiveSceneSource(source);
       dispatch(setActiveTab('Code'));
     },
-    [loadCode, dispatch]
+    [writeActiveSceneSource, dispatch]
   );
 
   // The playspace persists across tabs (the engine keeps running), so switching

@@ -5,6 +5,7 @@ import cdoDark from '@cdo/apps/blockly/themes/cdoDark';
 import cdoTheme from '@cdo/apps/blockly/themes/cdoTheme';
 import {BlockDefinition, WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {loadBlocksToWorkspace} from '@cdo/apps/blockly/utils/workspace/loadBlocks';
+import {setThemeAndRenderBlocks} from '@cdo/apps/blockly/utils/workspace/themes';
 
 import {
   ensurePredefinedBehaviors,
@@ -20,8 +21,6 @@ interface UseCodeWorkspaceOptions {
   // Inject only once the animation/scene stores are seeded: dropdown fields
   // validate saved values against the store at block-load time.
   enabled: boolean;
-  // What the workspace shows: the active scene's source. Loaded on (re)inject.
-  source?: WorkspaceSerialization;
   toolboxDefinition?: BlocklyCore.utils.toolbox.ToolboxInfo;
   // Sprite Lab toolbox as an XML string (the classic Sprite Lab toolbox format).
   toolboxXml?: string;
@@ -32,12 +31,9 @@ interface UseCodeWorkspaceOptions {
 interface UseCodeWorkspaceResult {
   // Compile the workspace to JavaScript for the runtime; null before inject.
   getCode: () => string | null;
-  // Replace the workspace contents (e.g. from the AI code generator) and emit
-  // the workspace-normalized serialization through the change subscription.
-  loadCode: (source: WorkspaceSerialization) => void;
-  // Swap the workspace to another scene's blocks. Doesn't save or mark
-  // edited; the caller owns active-scene bookkeeping.
-  loadScene: (source: WorkspaceSerialization) => void;
+  // Replace the workspace contents. Doesn't emit or save — sources own the
+  // content being loaded; the caller reconciles.
+  loadSource: (source: WorkspaceSerialization) => void;
   // Register the change listeners; returns an unsubscribe (call from an
   // effect). onWorkspaceChange fires with the serialized workspace after a
   // user edit (programmatic loads don't fire it). onIntermediateChange fires
@@ -55,17 +51,23 @@ interface UseCodeWorkspaceResult {
  */
 export default function useCodeWorkspace({
   enabled,
-  source,
   toolboxDefinition,
   toolboxXml,
   sharedBlocks,
   theme,
 }: UseCodeWorkspaceOptions): UseCodeWorkspaceResult {
   const workspaceRef = useRef<BlocklyCore.WorkspaceSvg | null>(null);
-  // Suppress the change listener during programmatic loads: those events
-  // aren't user edits, and attributing them needs no bookkeeping if they
-  // never fire.
-  const programmaticLoadRef = useRef(false);
+  // Theme changes apply at runtime (below); a ref keeps the inject effect
+  // from re-injecting on theme change while still injecting with the
+  // current theme.
+  const themeRef = useRef(theme);
+  themeRef.current = theme;
+  // Loads in flight, so the change listener can tell load-generated events
+  // from user edits. Blockly delivers events asynchronously in fire order,
+  // so each load's events are suppressed until its trailing
+  // FINISHED_LOADING marker arrives (a counter, not a boolean: loads can
+  // stack before delivery).
+  const pendingLoadsRef = useRef(0);
   // Listeners arrive via subscribeToChanges (not options) so the hook can be
   // called before the machinery that consumes getCode. Held in refs so the
   // subscription outlives re-injects.
@@ -73,9 +75,6 @@ export default function useCodeWorkspace({
     () => {}
   );
   const onIntermediateChangeRef = useRef<(() => void) | undefined>(undefined);
-  // The latest source, read at (re)inject time without re-injecting on change.
-  const sourceRef = useRef(source);
-  sourceRef.current = source;
 
   // Inject the workspace once enabled; re-injects only when the level's
   // blocks/toolbox or the theme change.
@@ -126,7 +125,7 @@ export default function useCodeWorkspace({
 
     workspaceRef.current = Blockly.inject(blocklyDiv, {
       toolbox,
-      theme: theme === 'Dark' ? cdoDark : cdoTheme,
+      theme: themeRef.current === 'Dark' ? cdoDark : cdoTheme,
       trashcan: true,
       customSimpleDialog,
     } as BlocklyCore.BlocklyOptions);
@@ -137,16 +136,12 @@ export default function useCodeWorkspace({
     blocklyDiv.style.height = '100%';
     Blockly.svgResize(workspaceRef.current);
 
-    // Load before attaching the listener, so the initial load doesn't emit.
-    if (sourceRef.current) {
-      loadBlocksToWorkspace(
-        workspaceRef.current as BlocklyCore.WorkspaceSvg,
-        JSON.stringify(sourceRef.current)
-      );
-    }
-
     const onChange = (e: BlocklyCore.Events.Abstract) => {
-      if (programmaticLoadRef.current) {
+      if (pendingLoadsRef.current > 0) {
+        if (e.type === BlocklyCore.Events.FINISHED_LOADING) {
+          // This load's event stream is over.
+          pendingLoadsRef.current--;
+        }
         return;
       }
       // Mid-editor field edits (grid painting): follow along in the preview
@@ -184,7 +179,20 @@ export default function useCodeWorkspace({
       workspaceRef.current?.dispose();
       workspaceRef.current = null;
     };
-  }, [enabled, sharedBlocks, toolboxDefinition, toolboxXml, theme]);
+  }, [enabled, sharedBlocks, toolboxDefinition, toolboxXml]);
+
+  // Theme changes apply at runtime — the workspace is injected once and
+  // never rebuilt, so the caller's reconcile only ever loads content.
+  useEffect(() => {
+    const workspace = workspaceRef.current;
+    if (workspace) {
+      setThemeAndRenderBlocks(
+        workspace,
+        theme === 'Dark' ? cdoDark : cdoTheme,
+        workspace.getTheme()
+      );
+    }
+  }, [theme]);
 
   const getCode = useCallback(
     () =>
@@ -194,34 +202,19 @@ export default function useCodeWorkspace({
     []
   );
 
-  const loadCode = useCallback((source: WorkspaceSerialization) => {
+  const loadSource = useCallback((source: WorkspaceSerialization) => {
     const workspace = workspaceRef.current;
     if (!workspace) {
       return;
     }
-    programmaticLoadRef.current = true;
+    pendingLoadsRef.current++;
     try {
       loadBlocksToWorkspace(workspace, JSON.stringify(source));
-    } finally {
-      programmaticLoadRef.current = false;
-    }
-    // Persist what the workspace made of the loaded code, not the input.
-    onWorkspaceChangeRef.current(
-      Blockly.serialization.workspaces.save(workspace) as WorkspaceSerialization
-    );
-  }, []);
-
-  const loadScene = useCallback((source: WorkspaceSerialization) => {
-    const workspace = workspaceRef.current;
-    if (!workspace) {
-      return;
-    }
-    programmaticLoadRef.current = true;
-    try {
-      // Replaces the contents (load clears first).
-      Blockly.serialization.workspaces.load(source as object, workspace);
-    } finally {
-      programmaticLoadRef.current = false;
+    } catch (e) {
+      // No FINISHED_LOADING will come; a wedged counter would suppress
+      // all future edits.
+      pendingLoadsRef.current--;
+      throw e;
     }
   }, []);
 
@@ -240,5 +233,5 @@ export default function useCodeWorkspace({
     []
   );
 
-  return {getCode, loadCode, loadScene, subscribeToChanges};
+  return {getCode, loadSource, subscribeToChanges};
 }
