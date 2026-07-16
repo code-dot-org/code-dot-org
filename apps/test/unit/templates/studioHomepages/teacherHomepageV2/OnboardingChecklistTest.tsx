@@ -119,6 +119,10 @@ describe('OnboardingChecklist', () => {
     );
   });
 
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
   function renderComponent(
     overrides: Partial<React.ComponentProps<typeof OnboardingChecklist>> = {}
   ) {
@@ -229,14 +233,16 @@ describe('OnboardingChecklist', () => {
 
   it('does not throw when the tour start POST fails', async () => {
     mockPost.mockRejectedValue(new Error('network error'));
-    jest.spyOn(console, 'error').mockImplementation(() => {});
+    const consoleErrorSpy = jest
+      .spyOn(console, 'error')
+      .mockImplementation(() => {});
 
     renderComponent();
 
     fireEvent.click(screen.getByText('Create a class section'));
 
     await Promise.resolve();
-    expect(console.error).toHaveBeenCalled();
+    expect(consoleErrorSpy).toHaveBeenCalled();
   });
 
   it('shows no check icons when no tours are completed', async () => {
@@ -349,7 +355,6 @@ describe('OnboardingChecklist', () => {
     renderComponent();
 
     await waitFor(() => expect(consoleErrorSpy).toHaveBeenCalled());
-    consoleErrorSpy.mockRestore();
   });
 
   describe('when the demo section is stale', () => {
@@ -431,9 +436,7 @@ describe('OnboardingChecklist', () => {
           ? Promise.reject(new Error('network error'))
           : Promise.resolve(new Response())
       );
-      const consoleErrorSpy = jest
-        .spyOn(console, 'error')
-        .mockImplementation(() => {});
+      jest.spyOn(console, 'error').mockImplementation(() => {});
 
       renderComponent({demoSection: staleDemoSection});
       await flushMountEffects();
@@ -443,7 +446,6 @@ describe('OnboardingChecklist', () => {
 
       expect(await screen.findByText(RESET_ERROR)).not.toBeNull();
       expect(reviewSyllabusTour.start).not.toHaveBeenCalled();
-      consoleErrorSpy.mockRestore();
     });
   });
 
@@ -491,9 +493,7 @@ describe('OnboardingChecklist', () => {
           "Couldn't create your practice section."
         )
       );
-      const consoleErrorSpy = jest
-        .spyOn(console, 'error')
-        .mockImplementation(() => {});
+      jest.spyOn(console, 'error').mockImplementation(() => {});
 
       renderComponent({demoSection: null});
 
@@ -501,7 +501,6 @@ describe('OnboardingChecklist', () => {
 
       expect(await screen.findByText(CREATION_ERROR)).not.toBeNull();
       expect(createSectionTour.start).not.toHaveBeenCalled();
-      consoleErrorSpy.mockRestore();
     });
 
     it('shows a creation error and leaves the tour unstarted when creation rejects', async () => {
@@ -527,7 +526,6 @@ describe('OnboardingChecklist', () => {
         'Failed to create demo section:',
         expect.anything()
       );
-      consoleErrorSpy.mockRestore();
     });
 
     it('logs and shows a creation error when creation fails unexpectedly', async () => {
@@ -546,7 +544,6 @@ describe('OnboardingChecklist', () => {
         'Failed to create demo section:',
         expect.any(Error)
       );
-      consoleErrorSpy.mockRestore();
     });
 
     it('shows a creation error when the created section has no id', async () => {
