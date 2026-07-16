@@ -77,10 +77,10 @@ describe('MyInformation age/state dropdowns', () => {
 
 describe('MyInformation gender', () => {
   it('renders an optional gender field for a student', () => {
-    renderSection(STUDENT, {gender: 'Nonbinary'});
+    renderSection(STUDENT, {gender: 'Example gender'});
     expect(
       screen.getByRole('textbox', {name: 'Gender (optional)'}),
-    ).toHaveValue('Nonbinary');
+    ).toHaveValue('Example gender');
   });
 
   it('omits gender for a teacher', () => {

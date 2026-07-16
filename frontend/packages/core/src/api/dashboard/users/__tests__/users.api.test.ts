@@ -86,12 +86,12 @@ describe('createUsersApi mutations target the right routes', () => {
 
   it('updateProfile maps gender to gender_student_input', async () => {
     const {api, request} = fakeTransport();
-    await api.updateProfile({gender: 'Nonbinary'});
+    await api.updateProfile({gender: 'Example gender'});
     expect(request).toHaveBeenCalledWith(
       expect.objectContaining({
         method: 'PATCH',
         url: '/dashboardapi/users',
-        body: {user: {gender_student_input: 'Nonbinary'}},
+        body: {user: {gender_student_input: 'Example gender'}},
       }),
     );
   });

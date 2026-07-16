@@ -74,11 +74,11 @@ class Api::V1::Users::SettingsControllerTest < ActionDispatch::IntegrationTest
       end
 
       it 'round-trips the student gender input' do
-        user.update!(gender_student_input: 'Nonbinary')
+        user.update!(gender_student_input: 'Example gender')
 
         get_settings
 
-        _(body['gender']).must_equal 'Nonbinary'
+        _(body['gender']).must_equal 'Example gender'
       end
     end
 

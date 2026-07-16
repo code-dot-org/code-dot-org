@@ -135,7 +135,7 @@ const student: UsersScenario = {
     can_delete_own_account: true,
     age: 14,
     us_state: 'WA',
-    gender: 'Nonbinary',
+    gender: 'Example gender',
     is_usa: true,
     parent_email: 'parent@example.com',
     dependent_students_count: 0,
