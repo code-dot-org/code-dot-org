@@ -35,11 +35,14 @@ describe('visualProjects', () => {
     ]);
   });
 
-  it('tags every project with the @visual grep and disables retries', () => {
+  it('tags every project with the @visual grep and inherits config retries', () => {
     process.env.VISUAL_PROVIDER = 'playwright';
     for (const project of visualProjects({browsers: ['chromium', 'firefox']})) {
       expect(project.grep).toEqual(/@visual/);
-      expect(project.retries).toBe(0);
+      // No own `retries`: the project inherits the config's value, so a lost
+      // font/render race retries like the functional project rather than
+      // reddening the job on first miss.
+      expect('retries' in project).toBe(false);
     }
   });
 });
