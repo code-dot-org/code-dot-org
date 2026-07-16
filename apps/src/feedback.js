@@ -1152,7 +1152,6 @@ FeedbackUtils.prototype.showGeneratedCode = function (appStrings) {
         />
       }
       primaryButtonProps={{
-        id: 'ok-button',
         children: msg.dialogOK(),
         onClick: close,
       }}
