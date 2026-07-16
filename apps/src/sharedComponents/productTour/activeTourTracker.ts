@@ -9,11 +9,12 @@ const notify = () => listeners.forEach(listener => listener());
 
 export const registerActiveTour = (tour: Tour): void => {
   tour.on('start', () => {
-    if (activeTour && activeTour !== tour) {
-      activeTour.cancel();
-    }
+    const previousTour = activeTour;
     activeTour = tour;
     notify();
+    if (previousTour && previousTour !== tour) {
+      previousTour.cancel();
+    }
   });
 
   const clear = () => {

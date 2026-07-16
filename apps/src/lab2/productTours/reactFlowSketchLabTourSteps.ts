@@ -119,11 +119,13 @@ export const createReactFlowSketchLabTourSteps = (
         show() {
           // If the toolbar is already visible, advance right away.
           if (document.querySelector(SHAPE_TOOLBAR)) {
+            stopWatchingForShapeToolbar();
             tour.next();
             return;
           }
           shapeToolbarObserver = new MutationObserver(() => {
             if (document.querySelector(SHAPE_TOOLBAR)) {
+              stopWatchingForShapeToolbar();
               // Advance when the shape toolbar shows up.
               tour.next();
             }
