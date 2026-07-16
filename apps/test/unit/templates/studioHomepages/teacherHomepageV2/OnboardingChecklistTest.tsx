@@ -160,10 +160,10 @@ describe('OnboardingChecklist', () => {
     renderComponent();
 
     fireEvent.click(screen.getByText('Create a class section'));
-    expect(createSectionTour.start).toHaveBeenCalledTimes(1);
+    await waitFor(() =>
+      expect(createSectionTour.start).toHaveBeenCalledTimes(1)
+    );
 
-    // The syllabus/evaluate tours run through the async staleness gate, so
-    // their start() lands a microtask after the click.
     fireEvent.click(screen.getByText('Review the syllabus'));
     await waitFor(() =>
       expect(reviewSyllabusTour.start).toHaveBeenCalledTimes(1)
@@ -386,7 +386,11 @@ describe('OnboardingChecklist', () => {
 
       fireEvent.click(screen.getByText('Create a class section'));
 
-      expect(createSectionTour.start).toHaveBeenCalledTimes(1);
+      // demoSection already has an id, so ensureDemoSection() short-circuits,
+      // but it's still an async function and yields a microtask before start().
+      await waitFor(() =>
+        expect(createSectionTour.start).toHaveBeenCalledTimes(1)
+      );
       expect(screen.queryByText(STALENESS_TITLE)).toBeNull();
     });
 
@@ -469,13 +473,35 @@ describe('OnboardingChecklist', () => {
       );
     });
 
-    it('does not create a demo section for the create-section tour', () => {
+    it('creates a demo section before starting the create-section tour', async () => {
+      renderComponent({demoSection: null, demoType: 'middle'});
+
+      fireEvent.click(screen.getByText('Create a class section'));
+
+      expect(mockCreateDemoSection).toHaveBeenCalledWith('middle');
+      await waitFor(() =>
+        expect(createSectionTour.start).toHaveBeenCalledTimes(1)
+      );
+    });
+
+    it('shows a creation error and leaves the create-section tour unstarted when creation rejects', async () => {
+      mockDispatch.mockRejectedValue(
+        new DemoSectionCreationError(
+          'generic',
+          "Couldn't create your practice section."
+        )
+      );
+      const consoleErrorSpy = jest
+        .spyOn(console, 'error')
+        .mockImplementation(() => {});
+
       renderComponent({demoSection: null});
 
       fireEvent.click(screen.getByText('Create a class section'));
 
-      expect(createSectionTour.start).toHaveBeenCalledTimes(1);
-      expect(mockDispatch).not.toHaveBeenCalled();
+      expect(await screen.findByText(CREATION_ERROR)).not.toBeNull();
+      expect(createSectionTour.start).not.toHaveBeenCalled();
+      consoleErrorSpy.mockRestore();
     });
 
     it('shows a creation error and leaves the tour unstarted when creation rejects', async () => {
@@ -542,6 +568,19 @@ describe('OnboardingChecklist', () => {
 
       await waitFor(() =>
         expect(reviewSyllabusTour.start).toHaveBeenCalledTimes(1)
+      );
+      expect(mockDispatch).not.toHaveBeenCalled();
+      expect(mockCreateDemoSection).not.toHaveBeenCalled();
+    });
+
+    it('does not create a demo section for the create-section tour when one already exists', async () => {
+      const existingSection = {id: 7} as unknown as Section;
+      renderComponent({demoSection: existingSection});
+
+      fireEvent.click(screen.getByText('Create a class section'));
+
+      await waitFor(() =>
+        expect(createSectionTour.start).toHaveBeenCalledTimes(1)
       );
       expect(mockDispatch).not.toHaveBeenCalled();
       expect(mockCreateDemoSection).not.toHaveBeenCalled();
