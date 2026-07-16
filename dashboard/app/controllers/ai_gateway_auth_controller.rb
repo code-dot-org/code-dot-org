@@ -45,6 +45,14 @@ class AiGatewayAuthController < ApplicationController
       return render status: :forbidden, json: {user_type: current_user.user_type, error: AichatRequestsController::MODEL_REGION_BLOCKED_ERROR}
     end
 
+    safety_checks_disabled = ActiveModel::Type::Boolean.new.cast(aichat_context[:disableSafetyChecks]) == true
+    if safety_checks_disabled && !current_user.can_disable_aichat_safety_checks?
+      return render status: :forbidden, json: {
+        error: 'safety_checks_bypass_not_permitted',
+        message: 'Requested an AI Gateway token with content-safety checks disabled, but the current user does not have permission to disable them.',
+      }
+    end
+
     # Resolve the Turnstile mode once. Both the claim and the response field
     # below come from this single value.
     enforcement_mode = turnstile_enforcement_mode
@@ -57,12 +65,6 @@ class AiGatewayAuthController < ApplicationController
     issued_at_time = (Time.now - 5.seconds).to_i
     # expire token in 1 minute
     expiration_time = (Time.now + 1.minute).to_i
-
-    # The client may request the safety-check bypass, but only the server
-    # decides whether to grant it. Default (missing/unrecognized/denied
-    # request) is false -- safety checks stay on.
-    safety_checks_disabled = ActiveModel::Type::Boolean.new.cast(aichat_context[:disableSafetyChecks]) == true &&
-      current_user.can_disable_aichat_safety_checks?
 
     token = JWT.encode(
       {

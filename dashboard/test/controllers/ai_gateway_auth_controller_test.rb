@@ -85,10 +85,18 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     assert_equal true, claims[:safety_checks_disabled]
   end
 
-  test 'non-levelbuilder requesting the safety-check bypass does not get it granted' do
-    claims = mint_and_capture_claims(user: @authorized_teacher, disable_safety_checks: true)
+  test 'non-levelbuilder requesting the safety-check bypass is forbidden and gets no token' do
+    sign_in(@authorized_teacher)
+    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(false)
+    params = @params.deep_dup
+    params[:aichatContext][:disableSafetyChecks] = true
 
-    assert_equal false, claims[:safety_checks_disabled]
+    post :get_access_token, params: params, as: :json
+
+    assert_response :forbidden
+    response_json = JSON.parse(response.body)
+    assert_equal 'safety_checks_bypass_not_permitted', response_json['error']
+    assert_nil response_json['token']
   end
 
   test 'levelbuilder not requesting the bypass does not get it by default' do
