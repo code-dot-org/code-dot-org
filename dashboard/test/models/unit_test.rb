@@ -1062,7 +1062,7 @@ class UnitTest < ActiveSupport::TestCase
     assert_equal 'https://example.com/handout', untouched[:url]
 
     # Summarized in its original context, the rollup url is unchanged.
-    original_ugu = unit.unit_group_units.find {|ugu| ugu.unit_group_id == original_group.id}
+    original_ugu = unit.unit_group_units.find {|ugu| ugu.unit_group == original_group}
     original_summary = unit.summarize(true, nil, false, 'en-US', unit_group_unit: original_ugu)
     original_rollup = original_summary[:teacher_resources].find {|r| r[:name] == 'All Resources'}
     assert_equal "/courses/#{original_group.name}/units/3/resources", original_rollup[:url]
