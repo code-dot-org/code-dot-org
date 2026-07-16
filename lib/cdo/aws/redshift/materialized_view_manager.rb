@@ -1,3 +1,4 @@
+require 'csv'
 require 'digest'
 require 'erb'
 require 'fileutils'
@@ -683,7 +684,7 @@ module Cdo
           orphan_fqns.each do |fqn|
             prefix = schema_prefixes.find {|p| fqn.start_with?(p)}
             orphan_table = prefix ? fqn.delete_prefix(prefix) : fqn
-            rows << build_row.call('(orphan)', orphan_table, fqn)
+            rows << build_row.call(ORPHAN_MODEL_NAME, orphan_table, fqn)
           end
 
           rows
@@ -744,6 +745,74 @@ module Cdo
             max_seconds_since_last_refresh: refresh_ages.max,
             max_refresh_duration_seconds: refresh_durations.max
           }
+        end
+
+        # `model_name` value `view_status` assigns to a row for a view present in Redshift but not
+        # produced by any current model (an orphan left behind after a model stopped exporting).
+        ORPHAN_MODEL_NAME = '(orphan)'.freeze
+
+        # Ordered column headers for `view_status_to_csv`. Kept in lockstep with the value order in
+        # `view_status_csv_values`; a test asserts the two stay the same length.
+        VIEW_STATUS_CSV_HEADERS = %w[
+          model
+          mysql_table_name
+          view_type
+          most_recent_operation
+          operation_executed_at
+          operation_duration_seconds
+          redshift_statement_id
+          operation_status
+          redshift_db_user
+          view_is_stale
+          view_state
+          view_state_description
+          error
+        ].freeze
+
+        # A light tally of `view_status` rows for human-readable (CLI / log) reporting — distinct from
+        # `view_status_summary`, which computes the CloudWatch error/stale/freshness metrics.
+        # @param rows [Array<ViewStatusRow>]
+        # @return [Hash] :by_status (status => count), :expected (non-orphan row count),
+        #   :orphan (orphan row count), :failures_by_error (error message => [rows]).
+        def self.summarize_view_status(rows)
+          {
+            by_status: rows.each_with_object(Hash.new(0)) {|row, counts| counts[row.status] += 1},
+            expected: rows.count {|row| row.model_name != ORPHAN_MODEL_NAME},
+            orphan: rows.count {|row| row.model_name == ORPHAN_MODEL_NAME},
+            failures_by_error: rows.select(&:error).group_by(&:error)
+          }
+        end
+
+        # Serializes `view_status` rows to a CSV string: a `VIEW_STATUS_CSV_HEADERS` header row
+        # followed by one row per view.
+        # @param rows [Array<ViewStatusRow>]
+        # @return [String] CSV text
+        def self.view_status_to_csv(rows)
+          CSV.generate do |csv|
+            csv << VIEW_STATUS_CSV_HEADERS
+            rows.each {|row| csv << view_status_csv_values(row)}
+          end
+        end
+
+        # One row's CSV values, ordered to match `VIEW_STATUS_CSV_HEADERS`.
+        # @param row [ViewStatusRow]
+        # @return [Array]
+        def self.view_status_csv_values(row)
+          [
+            row.model_name,
+            row.table_name,
+            row.view_type,
+            row.operation,
+            row.executed_at&.iso8601,
+            row.duration_seconds&.round(1),
+            row.statement_id,
+            row.status,
+            row.db_user,
+            row.is_stale&.to_s,
+            row.state,
+            row.state_description,
+            row.error
+          ]
         end
 
         # Computes `view_status` for the given models, emits CloudWatch metrics (one set per
