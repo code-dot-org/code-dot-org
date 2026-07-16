@@ -45,8 +45,7 @@ export const MIN_ZOOM = 0.1;
 export const SKETCHLAB_TOOLBAR_PANEL_CLASS = 'sketchlab-toolbar-panel';
 
 // data-* attribute the onboarding tour targets to highlight a set of related
-// buttons as one unit. Values stay stable across renders, unlike the
-// useId()-based per-button ids.
+// buttons as one unit.
 export const TOUR_GROUP_ATTR = 'data-tour-group';
 export const TOUR_GROUP = {
   selectionTools: 'selection-tools',
