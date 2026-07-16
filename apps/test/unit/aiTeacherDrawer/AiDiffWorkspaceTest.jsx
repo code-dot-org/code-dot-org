@@ -136,7 +136,7 @@ const defaultChatResponse = {
   message_id: 42,
 };
 
-describe.skip('AiDiffWorkspace', () => {
+describe('AiDiffWorkspace', () => {
   let fetchJsonStub;
   let postStub;
 
