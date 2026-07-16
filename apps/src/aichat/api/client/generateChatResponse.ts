@@ -23,7 +23,12 @@ import {
   formatSystemMessages,
 } from './helpers/messageHelpers';
 import {getModel} from './helpers/modelHelpers';
-import {isTextSafe, getImageModerationStatus} from './helpers/safetyHelpers';
+import {
+  isTextSafe,
+  isImageSafe,
+  getImageModerationStatus,
+  isOutputImageLlmSafetyJudgeEnabled,
+} from './helpers/safetyHelpers';
 
 /**
  * Performs all the steps necessary to generate a chat response:
@@ -137,21 +142,58 @@ export async function generateChatResponse(
         mediaType: file.mediaType,
         model: modelParameters.selectedModelId,
       });
-      const imageModerationStatus = await getImageModerationStatus(
-        file,
-        assetUrl
-      );
+
+      // Check generated images for safety.
+      const imageSafetyChecks: [
+        ReturnType<typeof getImageModerationStatus>,
+        ReturnType<typeof isImageSafe>?
+      ] = [getImageModerationStatus(file, assetUrl)];
+      if (isOutputImageLlmSafetyJudgeEnabled()) {
+        imageSafetyChecks.push(isImageSafe(file));
+      }
+      const [imageModerationResult, imageSafetyResult] =
+        await Promise.allSettled(imageSafetyChecks);
+      const imageModerationStatus =
+        imageModerationResult.status === 'fulfilled'
+          ? imageModerationResult.value
+          : 'error';
+      let imageSafe: boolean | undefined = true;
+      if (imageSafetyResult !== undefined) {
+        imageSafe =
+          imageSafetyResult.status === 'fulfilled'
+            ? imageSafetyResult.value
+            : undefined;
+      }
       Observability.metrics.count('ai-chat.image_moderation', 1, {
         result: imageModerationStatus,
         mediaType: file.mediaType,
         model: modelParameters.selectedModelId,
       });
+      if (imageSafetyResult !== undefined) {
+        let imageSafetyJudgeStatus: 'ok' | 'flagged' | 'error' = 'error';
+        if (imageSafe !== undefined) {
+          imageSafetyJudgeStatus = imageSafe ? 'ok' : 'flagged';
+        }
+        Observability.metrics.count('ai-chat.image_llm_safety_judge', 1, {
+          result: imageSafetyJudgeStatus,
+          mediaType: file.mediaType,
+          // Note: This is the model that generated the image, not the model that judged it.
+          model: modelParameters.selectedModelId,
+        });
+      }
       if (imageModerationStatus === 'flagged') {
         return {
           response: responseText,
           status: AiRequestExecutionStatus.MODEL_IMAGE_FLAGGED,
         };
-      } else if (imageModerationStatus === 'error') {
+      }
+      if (imageSafe === false) {
+        return {
+          response: responseText,
+          status: AiRequestExecutionStatus.MODEL_IMAGE_FLAGGED,
+        };
+      }
+      if (imageModerationStatus === 'error' || imageSafe === undefined) {
         return {
           response: responseText,
           status: AiRequestExecutionStatus.FAILURE,

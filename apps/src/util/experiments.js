@@ -61,8 +61,6 @@ experiments.WEBLAB2_FULL_URLS = 'weblab2-full-urls';
 experiments.ACCEPT_REJECT_UNIFIED_DIFF = 'accept-reject-unified-diff';
 // Show split diff view in Code Editor.
 experiments.ACCEPT_REJECT_SPLIT_DIFF = 'accept-reject-split-diff';
-// Enable the new teacher dashboard student snapshot page and features
-experiments.STUDENT_SNAPSHOT = 'student-snapshot';
 // Show the lesson/<lesson_id>/tutor page as a home for a AI Tutor+
 experiments.LESSON_TUTOR = 'lesson-tutor';
 // Enable Onboarding experiments

@@ -23,6 +23,7 @@
  * Shared
  *= require fonts/barlow-semi-condensed
  *= require fonts/figtree
+ *= require fonts/geist
  *= require fonts/noto-sans
  *= require user-menu
  *= require buttons
@@ -34,6 +35,7 @@
 @import "font";
 @import "mixins";
 @import "style-constants";
+@import "brand-selectors";
 
 // Bootstrap Variables
 $font-family-base: $main-font;
@@ -1193,7 +1195,7 @@ $default-modal-width: 640px;
 
 // CodeAI logo is rectangular (~5.9:1), so the square-logo offsets above
 // don't apply. Center it vertically inside the 50px header instead.
-html[data-brand="codeai"], html[data-brand="codeai-next"] {
+@include codeai-family-brand {
   .header-wrapper .header .header_logo,
   .header_logo {
     width: auto;
@@ -3666,7 +3668,7 @@ $width: 400px;
   }
 }
 
-html[data-brand="codeai"], html[data-brand="codeai-next"] {
+@include codeai-family-brand {
   #main-logo #logo-img {
     // aspect ratio of logo-codeai-inverse.svg (viewBox="0 0 591.15 100");
     // reserves ~130px wide before fetch, preventing horizontal CLS.

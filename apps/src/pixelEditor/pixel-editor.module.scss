@@ -61,11 +61,20 @@ $border-subtle: rgb(255 255 255 / 12%);
   padding: 12px;
 }
 
+// The tool grid at the top, undo/redo pushed to the bottom of the column.
 .toolbar {
   display: flex;
   flex-direction: column;
+}
+
+// Two columns; TOOLS order pairs them (pen/fill, erase/eyedrop, circles,
+// rectangles), then the four brush sizes as two more rows, then the color.
+.toolGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 34px);
   gap: 4px;
-  align-items: center;
+  align-content: start;
+  justify-items: center;
 }
 
 // The design-system tooltip portals to <body> at z-index 10, which is under
@@ -74,8 +83,18 @@ $border-subtle: rgb(255 255 255 / 12%);
 // the tail reads against the image being edited rather than the dark toolbar
 // gap.
 .pixelTooltip {
+  // Absolute from the first paint: WithTooltip measures the bubble BEFORE
+  // positioning it, and an unpositioned bubble measures at body width,
+  // which derails the first show's viewport-fit logic.
+  position: absolute;
   z-index: 1200;
   margin-left: 16px;
+}
+
+// Left-column triggers sit one column (34px + 4px gap) further from the
+// canvas; the extra nudge puts their bubbles on the same x as the rest.
+.pixelTooltipLeftColumn {
+  margin-left: 54px;
 }
 
 .toolButton {
@@ -93,14 +112,24 @@ $border-subtle: rgb(255 255 255 / 12%);
   color: #cdd3de;
   cursor: pointer;
 
-  svg {
-    width: 16px;
-    height: 16px;
-    fill: currentColor;
+  // WithTooltip anchors its bubble to the innermost element under the
+  // pointer at enter time; keep that anchor the button itself, or the
+  // bubble shifts by the icon/button difference depending on entry path.
+  > * {
+    pointer-events: none;
   }
 
-  &:hover {
+  i {
+    font-size: 15px;
+  }
+
+  &:hover:not(:disabled) {
     background-color: rgb(255 255 255 / 8%);
+  }
+
+  &:disabled {
+    opacity: 0.35;
+    cursor: default;
   }
 }
 
@@ -111,7 +140,8 @@ $border-subtle: rgb(255 255 255 / 12%);
 }
 
 .toolbarDivider {
-  width: 22px;
+  grid-column: 1 / -1;
+  justify-self: stretch;
   height: 1px;
   margin: 4px 0;
   background-color: rgb(255 255 255 / 15%);
@@ -125,6 +155,15 @@ $border-subtle: rgb(255 255 255 / 12%);
 // Pixel-mode swatches are square because the brush stamps hard squares.
 .brushDotSquare {
   border-radius: 1px;
+}
+
+// Undo/redo, anchored to the bottom of the toolbar column.
+.historyRow {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  margin-top: auto;
+  padding-top: 8px;
 }
 
 .canvasArea {
@@ -201,13 +240,27 @@ $border-subtle: rgb(255 255 255 / 12%);
   }
 }
 
+// Spans both toolbar columns; the popover offset below is measured from its
+// full-row width.
 .colorPicker {
+  display: flex;
   position: relative;
+  grid-column: 1 / -1;
+  justify-self: stretch;
+
+  // WithTooltip inserts a wrapper between the row and the swatch button;
+  // stretch through it so the swatch fills the toolbar width. (The absolute
+  // popover is out of flow and unaffected.)
+  > * {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
 }
 
 .swatch {
   box-sizing: border-box;
-  width: 30px;
+  // Fills the toolbar's width (the picker row spans both columns).
+  width: 100%;
   height: 30px;
   margin: 0;
   padding: 0;
@@ -216,12 +269,47 @@ $border-subtle: rgb(255 255 255 / 12%);
   cursor: pointer;
 }
 
+// A small checkerboard stands in for "no color" on transparent swatches.
+.swatchTransparent {
+  background:
+    repeating-conic-gradient(
+      rgb(160 166 178) 0% 25%,
+      rgb(255 255 255) 0% 50%
+    )
+    0 0 / 10px 10px;
+}
+
+// The recently-used row, under the spectrum: transparent first, then
+// most-recent colors.
+.recentRow {
+  display: flex;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.recentSwatch {
+  box-sizing: border-box;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgb(255 255 255 / 45%);
+  border-radius: 4px;
+  box-shadow: none;
+  cursor: pointer;
+
+  &:hover {
+    border-color: rgb(255 255 255 / 90%);
+  }
+}
+
 .spectrumPopover {
   position: absolute;
   bottom: 0;
   // Same 4px-past-the-canvas-edge alignment as .pixelTooltip (the why lives
-  // there); the two offsets move together with the toolbar/body-gap metrics.
-  left: 48px;
+  // there): the picker row spans the full toolbar width, so 100% + the 12px
+  // body gap + 4px lands just inside the image.
+  left: calc(100% + 16px);
   z-index: 10;
   padding: 6px;
   border: 1px solid rgb(255 255 255 / 15%);

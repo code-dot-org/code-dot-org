@@ -92,10 +92,11 @@ export async function withApplitoolsCheck(
 
   await eyes.open(page, appName, testInfo.title);
 
-  /** Capture the current window; opts.mask becomes Eyes ignoreRegions. */
   const check: VisualCheck = async (name, opts = {}) => {
     const fully = opts.fully ?? true;
-    const target = Target.window().fully(fully);
+    const target = opts.region
+      ? Target.region(opts.region)
+      : Target.window().fully(fully);
     if (opts.mask && opts.mask.length > 0) {
       target.ignoreRegions(...opts.mask);
     }

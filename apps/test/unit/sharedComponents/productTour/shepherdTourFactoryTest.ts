@@ -167,6 +167,25 @@ describe('createShepherdTour — anchor-watching MutationObserver', () => {
     expect(api.cancelMock).not.toHaveBeenCalled();
   });
 
+  it('removes the tour-step-highlight class from all highlighted elements when the tour is cancelled', () => {
+    const elA = document.createElement('div');
+    elA.classList.add('tour-step-highlight');
+    const elB = document.createElement('div');
+    elB.classList.add('tour-step-highlight', 'some-other-class');
+    document.body.appendChild(elA);
+    document.body.appendChild(elB);
+
+    api.fireTourEvent('show');
+    api.fireTourEvent('cancel');
+
+    expect(elA.classList.contains('tour-step-highlight')).toBe(false);
+    expect(elB.classList.contains('tour-step-highlight')).toBe(false);
+    expect(elB.classList.contains('some-other-class')).toBe(true);
+
+    elA.remove();
+    elB.remove();
+  });
+
   it('replaces the previous observer when a new step shows', async () => {
     // First step: anchor A in DOM → observer watching A.
     api.fireTourEvent('show');

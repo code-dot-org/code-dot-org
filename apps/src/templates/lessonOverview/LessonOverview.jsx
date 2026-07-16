@@ -20,7 +20,6 @@ import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonN
 import {lessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import color from '@cdo/apps/util/color';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import {linkWithQueryParams} from '@cdo/apps/utils';
 import {DefaultLocale} from '@cdo/generated-scripts/sharedConstants';
@@ -31,6 +30,8 @@ import FontAwesome from '../../legacySharedComponents/FontAwesome';
 
 import LessonStandards from './LessonStandards';
 import StyledCodeBlock from './StyledCodeBlock';
+
+import styles from './lesson-plan.module.scss';
 
 const ResourceActions = {
   PRINT: 'print',
@@ -148,21 +149,21 @@ class LessonOverview extends Component {
     return (
       <div className="lesson-overview">
         <div className="lesson-overview-header">
-          <div style={styles.header}>
+          <div className={styles.header}>
             <a
               href={linkWithQueryParams(lesson.unit.link)}
-              style={styles.navLink}
+              className={styles.navLink}
             >
               {`< ${lesson.unit.displayName}`}
             </a>
-            <div style={styles.dropdowns}>
-              <div style={{marginRight: 5}}>
+            <div className={styles.dropdowns}>
+              <div className={styles.printDropdown}>
                 <DropdownButton
                   color={Button.ButtonColor.gray}
                   customText={
                     <div>
-                      <FontAwesome icon="print" style={styles.icon} />
-                      <span style={styles.customText}>
+                      <FontAwesome icon="print" className={styles.printIcon} />
+                      <span className={styles.customText}>
                         {i18n.printingOptions()}
                       </span>
                     </div>
@@ -183,11 +184,11 @@ class LessonOverview extends Component {
         )}
         <h1 className="uitest-lesson-title">{lesson.title}</h1>
         <h2>{i18n.minutesLabel({number: lesson.duration})}</h2>
-        <div style={styles.frontPage}>
-          <div style={styles.left}>
+        <div className={styles.frontPage}>
+          <div className={styles.left}>
             {lesson.overview && (
               <div>
-                <h2 style={styles.titleNoTopMargin}>{i18n.overview()}</h2>
+                <h2 className={styles.titleNoTopMargin}>{i18n.overview()}</h2>
                 <EnhancedSafeMarkdown
                   markdown={lesson.overview}
                   expandableImages
@@ -214,14 +215,14 @@ class LessonOverview extends Component {
             )}
             {lesson.standards.length > 0 && (
               <div>
-                <div style={styles.standardsHeaderAndButton}>
+                <div className={styles.standardsHeaderAndButton}>
                   <h2>{i18n.standards()}</h2>
                   {lesson.courseVersionStandardsUrl && (
                     <Button
                       __useDeprecatedTag
                       color={Button.ButtonColor.gray}
                       href={lesson.courseVersionStandardsUrl}
-                      style={{marginLeft: 50}}
+                      className={styles.fullCourseAlignmentButton}
                       target="_blank"
                       text={i18n.fullCourseAlignment()}
                     />
@@ -239,10 +240,10 @@ class LessonOverview extends Component {
             <h2>{i18n.agenda()}</h2>
             <LessonAgenda activities={this.props.activities} />
           </div>
-          <div style={styles.right}>
+          <div className={styles.right}>
             {lesson.objectives.length > 0 && (
               <div>
-                <h2 style={styles.titleNoTopMargin}>{i18n.objectives()}</h2>
+                <h2 className={styles.titleNoTopMargin}>{i18n.objectives()}</h2>
                 <h5>{i18n.objectivesSubheading()}</h5>
                 <ul>
                   {lesson.objectives.map(objective => (
@@ -265,7 +266,7 @@ class LessonOverview extends Component {
             {Object.keys(lesson.resources).length > 0 && (
               <div id="resource-section">
                 <h2>{i18n.links()}</h2>
-                <div style={styles.copyResourceWarningArea}>
+                <div className={styles.copyResourceWarningArea}>
                   <SafeMarkdown markdown={i18n.copyResourcesWarning()} />
                 </div>
                 {lesson.resources['Teacher'] && (
@@ -300,7 +301,7 @@ class LessonOverview extends Component {
 
             {lesson.vocabularies.length > 0 && (
               <div>
-                <h2 style={styles.titleNoTopMargin}>{i18n.vocabulary()}</h2>
+                <h2 className={styles.titleNoTopMargin}>{i18n.vocabulary()}</h2>
                 <ul>
                   {lesson.vocabularies.map(vocab => (
                     <li key={vocab.key}>
@@ -314,7 +315,9 @@ class LessonOverview extends Component {
             )}
             {lesson.programmingExpressions.length > 0 && (
               <div id="unit-test-introduced-code">
-                <h2 style={styles.titleNoTopMargin}>{i18n.introducedCode()}</h2>
+                <h2 className={styles.titleNoTopMargin}>
+                  {i18n.introducedCode()}
+                </h2>
                 <ul>
                   {lesson.programmingExpressions.map(expression => (
                     <li key={expression.name}>
@@ -335,64 +338,6 @@ class LessonOverview extends Component {
     );
   }
 }
-
-const styles = {
-  frontPage: {
-    display: 'flex',
-    flexDirection: 'row',
-    marginTop: 40,
-  },
-  customText: {
-    margin: '0px 2px',
-  },
-  icon: {
-    margin: '0px 2px',
-    fontSize: 16,
-    // we want our icon text to be a different size than our button text, which
-    // requires we manually offset to get it centered properly
-    position: 'relative',
-    top: 1,
-  },
-  left: {
-    width: '59%',
-    paddingRight: 20,
-  },
-  right: {
-    width: '41%',
-    padding: '0px 10px 10px 20px',
-    borderLeft: 'solid 1px #333',
-  },
-  header: {
-    margin: '10px 0px',
-    display: 'flex',
-    justifyContent: 'space-between',
-  },
-  navLink: {
-    fontSize: 14,
-    lineHeight: '22px',
-    color: color.purple,
-    margin: '10px 0px',
-  },
-  copyResourceWarningArea: {
-    color: '#8a6d3b',
-    backgroundColor: '#fcf8e3',
-    border: '2px solid #f5e79e',
-    borderRadius: 4,
-    padding: '10px 10px 0px 10px',
-  },
-  titleNoTopMargin: {
-    marginTop: 0,
-  },
-  dropdowns: {
-    display: 'flex',
-    justifyContent: 'flex-end',
-  },
-  standardsHeaderAndButton: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-};
 
 export const UnconnectedLessonOverview = LessonOverview;
 

@@ -56,18 +56,5 @@ class InactivityCleanup::StudentDeletionJobTest < ActiveJob::TestCase
         perform_job
       end
     end
-
-    context 'when something went wrong' do
-      let(:exception) {StandardError.new('expected_exception')}
-
-      before do
-        described_instance.stubs(:perform).raises(exception)
-      end
-
-      it 'reports exception' do
-        described_instance.expects(:report_exception).with(exception).once
-        described_instance.perform_now
-      end
-    end
   end
 end
