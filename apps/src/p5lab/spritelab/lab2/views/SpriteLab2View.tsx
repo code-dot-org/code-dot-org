@@ -39,7 +39,9 @@ import {
 import defaultSources from '../defaultSources.json';
 import {SCENES_UI_VARIANT} from '../experiments';
 import {onTrimsUpdated} from '../imageTrim';
-import reseedablePageConstants from '../redux/reseedablePageConstants';
+import reseedablePageConstants, {
+  RESET_PAGE_CONSTANTS,
+} from '../redux/reseedablePageConstants';
 import spriteLab2Reducer, {
   ExternalSceneOption,
   resetSpriteLab2,
@@ -141,6 +143,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const themeSetting = useThemeSetting('spritelab');
   // Seed the page constants the animationList logic + engine read (we bypass
   // StudioApp.init) and the AichatContextManager the aiGateway calls read.
+  // The cleanup resets the slice: the legacy reducer forbids changing a key
+  // once set, and React's cleanup-before-effect guarantee means every seed
+  // lands on a fresh slice — including the next level's, after an in-place
+  // level switch.
   useEffect(() => {
     AichatContextManager.setContext({
       clientType: AiChatClientTypes.FLOW_LAB,
@@ -155,6 +161,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         channelId,
       })
     );
+    return () => {
+      dispatch({type: RESET_PAGE_CONSTANTS});
+    };
   }, [dispatch, channelId, currentLevelId, scriptId]);
 
   // This lab owns the full viewport; hide the server-rendered footer.
