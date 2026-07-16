@@ -357,11 +357,16 @@
 <%    unless rack_env?(:adhoc) -%>
       BackupRetentionPeriod: !Ref DBBackupRetention
 <%    end -%>
-      # Temporarily enable on adhocs to test.
-<%    if rack_env?(:production) || rack_env?(:test) || rack_env?(:adhoc) -%>
+      # Database Insights + Enhanced Monitoring settings.
+<%    insights = {mode: 'standard', retention: 7, monitoring_interval: 60}
+      insights = {mode: 'advanced', retention: 465, monitoring_interval: 1} if rack_env?(:production)
+      if rack_env?(:production) || rack_env?(:test) || rack_env?(:adhoc) -%>
       PerformanceInsightsEnabled: true
-      PerformanceInsightsRetentionPeriod: 465
-      DatabaseInsightsMode: advanced
+      DatabaseInsightsMode: <%=insights[:mode]%>
+      PerformanceInsightsRetentionPeriod: <%=insights[:retention]%>
+      MonitoringInterval: <%=insights[:monitoring_interval]%>
+      # rds-monitoring-role was provisioned manually in 2015.
+      MonitoringRoleArn: !Sub "arn:aws:iam::${AWS::AccountId}:role/rds-monitoring-role"
 <%    end -%>
 <%    DB_INSTANCE_RANGE.each do |i| %>
   Aurora<%=i%>:
