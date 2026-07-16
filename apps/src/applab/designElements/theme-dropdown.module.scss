@@ -1,9 +1,10 @@
-.themeDropdown {
-  width: 100% !important;
+// Doubled to increase specificity vs. the normal custom-dropdown styling.
+.themeDropdown.themeDropdown {
+  width: 100%;
   margin-bottom: 8px;
 
   button {
-    height: 3rem !important;
+    height: 3rem;
   }
 }
 
