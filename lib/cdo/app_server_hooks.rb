@@ -67,6 +67,8 @@ module Cdo
           )
         end
       end
+
+      publish_prefork_memory_metric
     end
 
     def self.before_worker_boot(host:, worker_index: nil)
@@ -126,6 +128,62 @@ module Cdo
         }
       )
       @metrics_reporter.start
+
+      start_instance_cost_collector
     end
+
+    # Publish this instance's modeled compute cost as a per-minute rate. The rate
+    # is constant over the instance's life, so a coarse 60s cadence is plenty.
+    # No-op off EC2 or when the price can't be resolved (so local/dev stays quiet).
+    def self.start_instance_cost_collector
+      require 'cdo/aws/ec2'
+
+      instance_type = AWS::EC2.instance_type
+      hourly_rate = AWS::EC2.hourly_rate
+      return if hourly_rate.nil?
+
+      require 'cdo/instance_cost_collector'
+      @cost_reporter ||= Cdo::InstanceCostCollector.new(
+        cost_per_minute: hourly_rate / 60.0,
+        namespace: 'App Server',
+        interval: 60,
+        resolution: 60,
+        dimensions: {
+          Host: CDO.dashboard_hostname,
+          InstanceType: instance_type
+        }
+      )
+      @cost_reporter.start
+    end
+
+    # Prefork RSS is the copy-on-write baseline every worker forks from, hence the ceiling on
+    # per-worker CoW erosion. Runs in the master's fork path, so failures are swallowed rather
+    # than allowed to abort forking.
+    def self.publish_prefork_memory_metric
+      return unless CDO.rack_env?(:production) || CDO.test_system? || CDO.rack_env?(:adhoc)
+
+      config = DCDO.get('worker_memory_metrics', {})
+      return unless (config['interval_seconds'] || 0).to_i > 0
+
+      rss_kb = Cdo::ProcessMemory.snapshot_kb[:proc_vm_rss_kb]
+      return unless rss_kb
+
+      require 'cdo/aws/metrics'
+      dimensions = {Host: CDO.dashboard_hostname}
+      if config['per_instance']
+        require 'cdo/aws/ec2'
+        instance_id = AWS::EC2.instance_id
+        dimensions[:InstanceId] = instance_id if instance_id
+      end
+
+      Cdo::Metrics.put('App Server', 'PreforkRssKb', rss_kb, dimensions)
+    rescue StandardError => exception
+      CDO.log.warn(
+        'event=puma_prefork_memory_metric_failed ' \
+          "error_class=#{exception.class} " \
+          "error_message=#{exception.message.inspect}"
+      )
+    end
+    private_class_method :publish_prefork_memory_metric
   end
 end

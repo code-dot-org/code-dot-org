@@ -1,6 +1,7 @@
 import {isEqual, omit} from 'lodash';
 import React from 'react';
 
+import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import {
   LabProps,
   LevelProperties,
@@ -33,6 +34,8 @@ export default function SketchlabView(props: LabProps<LevelProperties>) {
   const useExcalidraw = experiments.isEnabledAllowingQueryString(
     experiments.EXCALIDRAW
   );
+
+  const logLevelActivity = useLevelActivityMetrics(props.levelProperties);
   const defaultSources = useExcalidraw
     ? DEFAULT_SOURCES
     : REACT_FLOW_DEFAULT_SOURCES;
@@ -66,6 +69,7 @@ export default function SketchlabView(props: LabProps<LevelProperties>) {
       defaultSources={defaultSources}
       key={props.levelProperties.id}
       checkSourcesChangedForProgressReport={sourcesChanged}
+      onMeaningfulSourceChange={useExcalidraw ? undefined : logLevelActivity}
     >
       <InnerView levelProperties={props.levelProperties} />
     </SourcesContainer>

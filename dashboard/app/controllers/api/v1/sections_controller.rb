@@ -3,7 +3,7 @@ require 'metrics/events'
 class Api::V1::SectionsController < Api::V1::JSONApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
-  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :create_demo, :presets, :update, :check_demo_section_staleness, :reset_demo_section, :require_captcha, :assigned_essential_ai_dependency]
+  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :create_demo, :presets, :update, :check_demo_section_staleness, :reset_demo_section, :require_captcha, :assigned_essential_ai_dependency, :suggested_lessons]
   before_action :get_course_and_unit, only: [:create, :update]
 
   skip_before_action :verify_authenticity_token, only: [:update]
@@ -461,10 +461,53 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     if data && (lesson = Lesson.find_by(id: data['lesson_id']))
       data = data.merge(
         'name' => lesson.localized_title,
-        'url' => script_lesson_path(lesson.script, lesson)
+        'url' => script_lesson_path(lesson.script, lesson),
+        'podcast_url' => "/ai_lesson_summary_podcasts/show?lesson_id=#{lesson.id}"
       )
     end
     render json: data
+  end
+
+  # GET /api/v1/sections/suggested_lessons
+  # Returns suggested lesson data for every active student section belonging to
+  # the current user, keyed by section id.
+  def suggested_lessons
+    return head :forbidden unless current_user
+
+    active_sections = current_user.sections_instructed.where(hidden: false, participant_type: 'student')
+
+    # Collect lesson IDs up front so we can batch the S3 existence checks,
+    # avoiding one round-trip per section when multiple sections share a lesson.
+    section_data = active_sections.map do |section|
+      if section.suggested_lesson_stale? && section.script.present?
+        section.compute_suggested_lesson
+        section.reload
+      end
+      [section.id, section.suggested_lesson]
+    end
+
+    lesson_ids = section_data.filter_map {|_, data| data&.dig('lesson_id')}.uniq
+    lessons_by_id = Lesson.where(id: lesson_ids).index_by(&:id)
+
+    bucket = AWS::S3.user_content_bucket
+    podcast_exists = lesson_ids.each_with_object({}) do |lesson_id, memo|
+      key = "podcasts/lesson_#{lesson_id}_podcast.mp3"
+      memo[lesson_id] = AWS::S3.exists_in_bucket(bucket, key)
+    end
+
+    result = section_data.each_with_object({}) do |(section_id, data), hash|
+      if data && (lesson = lessons_by_id[data['lesson_id']])
+        podcast_url = podcast_exists[lesson.id] ? "/ai_lesson_summary_podcasts/show?lesson_id=#{lesson.id}" : nil
+        data = data.merge(
+          'name' => lesson.localized_title,
+          'url' => script_lesson_path(lesson.script, lesson),
+          'podcast_url' => podcast_url
+        )
+      end
+      hash[section_id] = data
+    end
+
+    render json: result
   end
 
   private def find_follower

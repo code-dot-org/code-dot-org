@@ -1,0 +1,77 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-07-10T19:01:42.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "require_edit_to_continue": "true",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "buildJavaScript"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <title>Pet Data Viewer</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n\n  <header>\n    <h1>Pet Data Viewer</h1>\n    <p>Help reunite lost pets with their families. Browse animals recently found in your area.</p>\n  </header>\n\n  <main>\n    <button id=\"fetchButton\">\n      <svg class=\"paw-icon\" viewBox=\"0 0 24 24\" fill=\"white\">\n        <ellipse cx=\"12\" cy=\"15\" rx=\"5.2\" ry=\"4.6\"/>\n        <ellipse cx=\"5.2\" cy=\"9\" rx=\"2.1\" ry=\"2.6\"/>\n        <ellipse cx=\"9.8\" cy=\"5.2\" rx=\"2.1\" ry=\"2.6\"/>\n        <ellipse cx=\"14.2\" cy=\"5.2\" rx=\"2.1\" ry=\"2.6\"/>\n        <ellipse cx=\"18.8\" cy=\"9\" rx=\"2.1\" ry=\"2.6\"/>\n      </svg>\n      Get a pet\n    </button>\n    <ul id=\"dataOutput\"></ul>\n  </main>\n\n  <script src=\"helpers.js\"></script>\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;\n  background-color: #FFF8EC;\n  background-image: radial-gradient(#F3D9B1 1.5px, transparent 1.5px);\n  background-size: 28px 28px;\n  color: #4A3728;\n  padding: 32px 20px;\n  line-height: 1.4;\n  min-height: 100vh;\n}\n\nheader {\n  max-width: 480px;\n  margin: 0 auto 28px;\n  text-align: center;\n}\n\nheader h1 {\n  font-size: 2rem;\n  font-weight: 800;\n  color: #B5651D;\n  margin-bottom: 6px;\n  letter-spacing: -0.01em;\n}\n\nheader p {\n  color: #8C7560;\n  font-size: 0.95rem;\n}\n\nmain {\n  max-width: 480px;\n  margin: 0 auto;\n}\n\nbutton {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 8px;\n  margin: 0 auto 28px;\n  padding: 14px 28px;\n  font-size: 1rem;\n  font-weight: 700;\n  color: white;\n  background-color: #E8954A;\n  border: none;\n  border-radius: 100px;\n  cursor: pointer;\n  box-shadow: 0 4px 0 #B5651D;\n  transition: transform 0.1s ease, box-shadow 0.1s ease;\n}\n\nbutton:hover {\n  background-color: #DE8538;\n}\n\nbutton:active {\n  transform: translateY(3px);\n  box-shadow: 0 1px 0 #B5651D;\n}\n\n.paw-icon {\n  width: 18px;\n  height: 18px;\n  flex-shrink: 0;\n}\n\n#dataOutput {\n  list-style: none;\n}\n\n.status-text {\n  text-align: center;\n  color: #8C7560;\n  font-style: italic;\n  padding: 20px;\n}\n\n.pet-item {\n  position: relative;\n  background: #FFFDF8;\n  border: 2px dashed #E8B978;\n  border-radius: 16px;\n  padding: 20px 22px 20px 64px;\n  margin-bottom: 16px;\n}\n\n.pet-item::before {\n  content: \"\";\n  position: absolute;\n  left: 18px;\n  top: 50%;\n  transform: translateY(-50%);\n  width: 32px;\n  height: 32px;\n  background-color: #F3D9B1;\n  border-radius: 50%;\n  background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23B5651D'%3E%3Cellipse cx='12' cy='15' rx='5.2' ry='4.6'/%3E%3Cellipse cx='5.2' cy='9' rx='2.1' ry='2.6'/%3E%3Cellipse cx='9.8' cy='5.2' rx='2.1' ry='2.6'/%3E%3Cellipse cx='14.2' cy='5.2' rx='2.1' ry='2.6'/%3E%3Cellipse cx='18.8' cy='9' rx='2.1' ry='2.6'/%3E%3C/svg%3E\");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: 18px 18px;\n}\n\n.pet-breed {\n  font-size: 1.2rem;\n  font-weight: 800;\n  color: #4A3728;\n  margin-bottom: 6px;\n}\n\n.pet-color,\n.pet-address {\n  font-size: 0.88rem;\n  color: #8C7560;\n}\n\n.pet-color {\n  margin-bottom: 2px;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "helpers.js",
+          "contents": "// Shows a status message in the dataOutput list.\nconst showStatus = (message) => {\n  const dataOutput = document.getElementById(\"dataOutput\");\n  dataOutput.innerHTML = \"\";\n\n  const status = document.createElement(\"p\");\n  status.className = \"status-text\";\n  status.textContent = message;\n\n  dataOutput.appendChild(status);\n};\n\n// Builds a list item element showing a pet's color, breed, and address.\nconst createListItem = (color, breed, address) => {\n  const li = document.createElement(\"li\");\n  li.className = \"pet-item\";\n\n  const breedLine = document.createElement(\"p\");\n  breedLine.className = \"pet-breed\";\n  breedLine.textContent = breed;\n\n  const colorLine = document.createElement(\"p\");\n  colorLine.className = \"pet-color\";\n  colorLine.textContent = \"Color: \" + color;\n\n  const addressLine = document.createElement(\"p\");\n  addressLine.className = \"pet-address\";\n  addressLine.textContent = \"Found: \" + address;\n\n  li.appendChild(breedLine);\n  li.appendChild(colorLine);\n  li.appendChild(addressLine);\n\n  return li;\n};\n\n// Adds a list item to the dataOutput list in the page.\nconst addItemToUI = (listItem) => {\n  const dataOutput = document.getElementById(\"dataOutput\");\n  dataOutput.appendChild(listItem);\n};\n\n// Builds a pet list item and adds it to the page, replacing any status message.\nconst displayPet = (color, breed, address) => {\n  const dataOutput = document.getElementById(\"dataOutput\");\n  dataOutput.innerHTML = \"\";\n\n  const listItem = createListItem(color, breed, address);\n  addItemToUI(listItem);\n};",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "script.js",
+          "contents": "const API_URL = \"https://data.austintexas.gov/api/v3/views/pyqf-r2dc/query.json\";\n\nconst fetchPets = async () => {\n  showStatus(\"Fetching furry friends...\");\n\n  const response = await fetch(API_URL);\n  const pets = await response.json();\n  const firstPet = pets[0];\n\n  let breed = \"\";\n  let color = \"\";\n  let address = \"\";\n\n\n  displayPet(color, breed, address);\n};\n\ndocument.getElementById(\"fetchButton\").addEventListener(\"click\", () => {\n  fetchPets();\n});",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "4"
+      ]
+    },
+    "name_suffix": "_pl"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-10T19:01:42.642+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson5-template_2026\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson5-template_2026\"}]"
+}]]></config>
+</Weblab2>

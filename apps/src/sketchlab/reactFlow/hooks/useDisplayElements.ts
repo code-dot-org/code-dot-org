@@ -26,7 +26,7 @@ interface UseDisplayElementsOptions {
     event: React.MouseEvent,
     edge: SketchlabReactFlowEdge
   ) => void;
-  multiSelectedNodeIds: Set<string>;
+  multiSelectedNodeIds: ReadonlySet<string>;
 }
 
 export function useDisplayElements({

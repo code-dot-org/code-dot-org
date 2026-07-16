@@ -1,0 +1,61 @@
+{
+  "ownerKind": "lesson",
+  "ownerId": 8504314,
+  "slides": [
+    {
+      "key": "1088258d-f9f5-4e91-b285-8700daaf2c17",
+      "description": "Introduce the role of a Site Reliability Engineer (SRE). Define SRE as the practice of ensuring software systems are reliable, available, and performant. Explain how the role blends software engineering principles with operations.",
+      "panel": {
+        "key": "a1bf3525-4498-485c-b03e-0b6dde2fd076",
+        "text": "Have you ever wondered who keeps your favorite apps running smoothly? Today, we're diving into the world of **Site Reliability Engineering (SRE)**. SREs combine software engineering with operations to ensure systems are super **reliable**, always **available**, and performing at their best!",
+        "imageUrl": "https://images.code.org/5c9dfaec4ec21390e6a4cf2c02d9bd76-When Things Break-slide-panel-1-d6dc29c3-7175-4ab3-bbf2-fd1e7b2ef497.png",
+        "layout": "text-bottom-center",
+        "teacherNote": "Before showing this slide, ask students what happens when an app crashes or slows down, and who they think is responsible for fixing it. Emphasize that SRE is about proactive prevention and quick resolution, blending code and infrastructure knowledge."
+      }
+    },
+    {
+      "key": "3ec55520-e22e-41f6-a5ee-9a50ba8f2765",
+      "description": "Explain the critical importance of SREs in modern digital services. Discuss how user expectations for constant availability and smooth performance drive the need for this role. Emphasize their impact on preventing outages and minimizing downtime.",
+      "panel": {
+        "key": "d499893d-3f2a-419f-bde9-a09696cd340c",
+        "text": "Why are SREs so important? In our digital world, we expect apps and websites to *always* work perfectly and instantly! SREs are the superheroes who ensure our favorite online services never let us down, proactively preventing frustrating crashes and keeping everything running smoothly for everyone.",
+        "imageUrl": "https://images.code.org/af0e7593c96cd9413c8d8faa819463d8-When Things Break-slide-panel-2-226293ed-747b-4f46-a57c-7c2e5b1553d0.png",
+        "layout": "text-bottom-left",
+        "teacherNote": "Before showing this slide, ask students to share an experience where a favorite app or game stopped working unexpectedly. Discuss how that felt and what the impact was. Emphasize that SREs are critical for both user satisfaction and for businesses to operate, ensuring those frustrations are rare."
+      }
+    },
+    {
+      "key": "8877fc13-48e8-481c-b291-2ba1e5974a3f",
+      "description": "Outline the key tasks and responsibilities of an SRE. Include monitoring system health, automating operational processes, responding to incidents and debugging, and continuously improving system architecture for reliability.",
+      "panel": {
+        "key": "c990719e-134e-441f-b173-f0cba214efb9",
+        "text": "So, what do these SRE superheroes actually *do* day-to-day?\nThey're constantly **monitoring** systems to catch problems early,\n**automating** repetitive tasks to make things faster,\n**responding to incidents** to fix issues quickly,\nand always **improving** how systems are built to make them even stronger and more reliable!",
+        "imageUrl": "https://images.code.org/865b3b22cb190d481e5365d15ed0bf12-When Things Break-slide-panel-3-8f1f11eb-4f5f-404c-9f80-a7417cb7678f.png",
+        "layout": "text-top-left",
+        "teacherNote": "Before showing, ask students to imagine they are responsible for an important online game – what kind of jobs would they need to do every day to make sure it never goes down? After the slide, discuss how these SRE tasks are both about fixing problems (reactive) and preventing them (proactive). Emphasize that 'improving architecture' is about making the underlying design better so problems are less likely to happen."
+      }
+    },
+    {
+      "key": "7559fb62-c298-4265-82c1-67fca564dbef",
+      "description": "Describe how Site Reliability Engineers utilize Artificial Intelligence (AI) in their work. Focus on AI's ability to predict potential failures, automate aspects of incident response, and provide deeper insights into system performance data.",
+      "panel": {
+        "key": "c5c0df1a-700d-45e8-bd69-b99637a82462",
+        "text": "Even SRE superheroes need a little help! That's where **Artificial Intelligence (AI)** comes in. AI helps SREs predict problems *before* they happen, automatically fix minor issues, and understand vast amounts of system data to make everything run even smoother and smarter.",
+        "imageUrl": "https://images.code.org/f04ca9d2f1d36bd14b6fced64e197eab-When Things Break-slide-panel-4-3a8d8132-b019-4182-9999-e83e0e03f3d3.png",
+        "layout": "text-top-center",
+        "teacherNote": "Before showing this slide, ask students if they use AI in any apps they know (e.g., predictive text, recommendations). Connect this to how AI can predict problems in complex systems. After the slide, discuss how AI assists, rather than replaces, human SREs by handling repetitive tasks and providing data insights, allowing SREs to focus on more complex problem-solving and innovation."
+      }
+    },
+    {
+      "key": "bfc9d341-708c-4c74-a1a6-b58504a0f81f",
+      "description": "Transition to the lesson's activity. Inform students that they will be acting as Site Reliability Engineers for this lesson. Set the expectation that they will identify and address real-world application failure scenarios.",
+      "panel": {
+        "key": "b3339c2d-2a08-404a-b32f-18bbe00677e3",
+        "text": "Now that we've explored the world of SREs, it's *your* turn! For this lesson, you'll become **Site Reliability Engineers** yourselves. Get ready to put on your SRE hats and dive into real-world application failure scenarios, identifying problems and bringing systems back to life!",
+        "imageUrl": "https://images.code.org/86381656764a22863fb92221298ecd5e-When Things Break-slide-panel-5-7b52dc72-23e8-4e1b-a145-e5299903b658.png",
+        "layout": "text-bottom-center",
+        "teacherNote": "Before showing this slide, ensure all materials for the SRE activity (e.g., scenario cards, problem descriptions, tools if applicable) are prepared and easily accessible. Explain that this is the practical application part of the lesson. Encourage students to fully embrace the SRE role, think critically, and collaborate to diagnose and address the system issues presented in the scenarios."
+      }
+    }
+  ]
+}

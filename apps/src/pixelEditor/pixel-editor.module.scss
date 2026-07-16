@@ -1,0 +1,326 @@
+// Self-contained styles for the pixel editor modal. Dark theme to sit
+// comfortably over Lab2's full-screen labs.
+
+$border-subtle: rgb(255 255 255 / 12%);
+
+// Wraps CustomDialog without affecting layout; the parent selector gives the
+// panel styles below higher specificity than CustomDialog's own class
+// (stylesheet order must not matter).
+.dialogHost {
+  display: contents;
+}
+
+.dialogHost .modal {
+  display: flex;
+  flex-direction: column;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100vh - 32px);
+  border: 1px solid $border-subtle;
+  border-radius: 10px;
+  background-color: #333a47;
+  box-shadow: 0 12px 40px rgb(0 0 0 / 45%);
+  color: #f0f2f6;
+  // The panel mounts already at its final size (after the image decodes);
+  // a quick scale-fade makes that arrival feel deliberate.
+  animation: modal-enter 0.14s ease-out;
+}
+
+// Screen-reader-only text (the dialog description CustomDialog expects).
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@keyframes modal-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.header {
+  padding: 12px 16px;
+  border-bottom: 1px solid $border-subtle;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.body {
+  display: flex;
+  gap: 12px;
+  min-height: 0;
+  padding: 12px;
+}
+
+// The tool grid at the top, undo/redo pushed to the bottom of the column.
+.toolbar {
+  display: flex;
+  flex-direction: column;
+}
+
+// Two columns; TOOLS order pairs them (pen/fill, erase/eyedrop, circles,
+// rectangles), then the four brush sizes as two more rows, then the color.
+.toolGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 34px);
+  gap: 4px;
+  align-content: start;
+  justify-items: center;
+}
+
+// The design-system tooltip portals to <body> at z-index 10, which is under
+// CustomDialog's overlay ($zindex-modal-backdrop, 1040); lift ours above it.
+// The nudge right puts the bubble's left edge 4px past the canvas edge, so
+// the tail reads against the image being edited rather than the dark toolbar
+// gap.
+.pixelTooltip {
+  // Absolute from the first paint: WithTooltip measures the bubble BEFORE
+  // positioning it, and an unpositioned bubble measures at body width,
+  // which derails the first show's viewport-fit logic.
+  position: absolute;
+  z-index: 1200;
+  margin-left: 16px;
+}
+
+// Left-column triggers sit one column (34px + 4px gap) further from the
+// canvas; the extra nudge puts their bubbles on the same x as the rest.
+.pixelTooltipLeftColumn {
+  margin-left: 54px;
+}
+
+.toolButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 34px;
+  height: 34px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: none;
+  color: #cdd3de;
+  cursor: pointer;
+
+  // WithTooltip anchors its bubble to the innermost element under the
+  // pointer at enter time; keep that anchor the button itself, or the
+  // bubble shifts by the icon/button difference depending on entry path.
+  > * {
+    pointer-events: none;
+  }
+
+  i {
+    font-size: 15px;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: rgb(255 255 255 / 8%);
+  }
+
+  &:disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+}
+
+.toolActive {
+  border-color: rgb(255 255 255 / 35%);
+  background-color: rgb(255 255 255 / 14%);
+  color: #fff;
+}
+
+.toolbarDivider {
+  grid-column: 1 / -1;
+  justify-self: stretch;
+  height: 1px;
+  margin: 4px 0;
+  background-color: rgb(255 255 255 / 15%);
+}
+
+.brushDot {
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+// Pixel-mode swatches are square because the brush stamps hard squares.
+.brushDotSquare {
+  border-radius: 1px;
+}
+
+// Undo/redo, anchored to the bottom of the toolbar column.
+.historyRow {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.canvasArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // Never scroll: the canvas is bounded below so the whole image is always
+  // visible and editable.
+  overflow: hidden;
+  border: 1px solid $border-subtle;
+  border-radius: 6px;
+  // The transparency checkerboard is painted INTO the display canvas (so it
+  // can align with the art-pixel grid); the surround stays quiet.
+  background-color: #2b313d;
+}
+
+.displayCanvas {
+  display: block;
+  // Rendered size is set in JS (fills the modal's available vertical space,
+  // aspect preserved, viewport-bounded); the internal resolution is an
+  // integer upscale of the image. Pointer mapping uses the rendered rect,
+  // so fractional scaling is fine; pixelated keeps it crisp.
+  image-rendering: pixelated;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+.loadError {
+  padding: 40px;
+  color: #ff9d9d;
+}
+
+.footer {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  padding: 12px 16px;
+  border-top: 1px solid $border-subtle;
+
+  button {
+    box-sizing: border-box;
+    height: 34px;
+    margin: 0;
+    padding: 0 18px;
+    border: 1px solid rgb(255 255 255 / 25%);
+    border-radius: 6px;
+    background: none;
+    box-shadow: none;
+    color: #f0f2f6;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover:not(:disabled) {
+      background-color: rgb(255 255 255 / 8%);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+  }
+}
+
+.savePrimary {
+  // !important: the page's global button CSS (background/box-shadow) has
+  // higher effective specificity inside the modal and bleeds in without it.
+  border-color: transparent;
+  background-color: rgb(255 255 255 / 92%) !important;
+  color: #1b2029 !important;
+  font-weight: 600;
+
+  &:hover:not(:disabled) {
+    background-color: #fff !important;
+  }
+}
+
+// Spans both toolbar columns; the popover offset below is measured from its
+// full-row width.
+.colorPicker {
+  display: flex;
+  position: relative;
+  grid-column: 1 / -1;
+  justify-self: stretch;
+
+  // WithTooltip inserts a wrapper between the row and the swatch button;
+  // stretch through it so the swatch fills the toolbar width. (The absolute
+  // popover is out of flow and unaffected.)
+  > * {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}
+
+.swatch {
+  box-sizing: border-box;
+  // Fills the toolbar's width (the picker row spans both columns).
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  border: 2px solid rgb(255 255 255 / 60%);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+// A small checkerboard stands in for "no color" on transparent swatches.
+.swatchTransparent {
+  background:
+    repeating-conic-gradient(
+      rgb(160 166 178) 0% 25%,
+      rgb(255 255 255) 0% 50%
+    )
+    0 0 / 10px 10px;
+}
+
+// The recently-used row, under the spectrum: transparent first, then
+// most-recent colors.
+.recentRow {
+  display: flex;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.recentSwatch {
+  box-sizing: border-box;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgb(255 255 255 / 45%);
+  border-radius: 4px;
+  box-shadow: none;
+  cursor: pointer;
+
+  &:hover {
+    border-color: rgb(255 255 255 / 90%);
+  }
+}
+
+.spectrumPopover {
+  position: absolute;
+  bottom: 0;
+  // Same 4px-past-the-canvas-edge alignment as .pixelTooltip (the why lives
+  // there): the picker row spans the full toolbar width, so 100% + the 12px
+  // body gap + 4px lands just inside the image.
+  left: calc(100% + 16px);
+  z-index: 10;
+  padding: 6px;
+  border: 1px solid rgb(255 255 255 / 15%);
+  border-radius: 8px;
+  background-color: #262c36;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 45%);
+
+  canvas {
+    display: block;
+    border-radius: 4px;
+    cursor: crosshair;
+    touch-action: none;
+  }
+}

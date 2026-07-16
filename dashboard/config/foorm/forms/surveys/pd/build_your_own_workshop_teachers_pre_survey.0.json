@@ -1,5 +1,5 @@
 {
-  "title": "Pre-Workshop Survey for Code.org's Professional Learning",
+  "title": "Pre-Workshop Survey for CodeAI's Professional Learning",
   "logoPosition": "right",
   "pages": [
     {
@@ -110,8 +110,8 @@
             {
               "category": "readiness_expectations",
               "value": "confindent_use_cdo_resources",
-              "text": "I am confident using the Code.org platform and resources.",
-              "shortText": "Confident using Code.org (%)"
+              "text": "I am confident using the CodeAI platform and resources.",
+              "shortText": "Confident using CodeAI (%)"
             },
             {
               "category": "readiness_expectations",
@@ -131,7 +131,7 @@
         {
           "type": "html",
           "name": "thank_you",
-          "html": "<h2><strong>Thank You!</strong></h3>\n<p><span style='font-size: 12pt;'>Thanks from Code.org for your time, thoughts, and passion for teaching.</span>&nbsp;</p>"
+          "html": "<h2><strong>Thank You!</strong></h3>\n<p><span style='font-size: 12pt;'>Thanks from CodeAI for your time, thoughts, and passion for teaching.</span>&nbsp;</p>"
         }
       ]
     }

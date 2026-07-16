@@ -1,8 +1,9 @@
+import Alert from '@code-dot-org/component-library/alert';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {RadioButton} from '@code-dot-org/component-library/radioButton';
 import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useCallback} from 'react';
+import React, {useCallback, useMemo} from 'react';
 
 import {PredictQuestionType} from '@cdo/apps/lab2/levelEditors/types';
 import {
@@ -35,7 +36,24 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
   const {predictSettings, appName} = levelProperties;
   const predictResponse = useAppSelector(state => state.predictLevel.response);
   const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
+  const hasSubmittedResponse = useAppSelector(
+    state => state.predictLevel.hasSubmittedResponse
+  );
+  const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
+  const studentsInSection = useAppSelector(
+    state => state.teacherSections.selectedStudents
+  );
   const dispatch = useAppDispatch();
+
+  const viewedStudentName = useMemo(() => {
+    if (viewAsUserId === null) {
+      return undefined;
+    }
+    return studentsInSection?.find(student => student.id === viewAsUserId)
+      ?.name;
+  }, [viewAsUserId, studentsInSection]);
+
+  const showNotSubmittedBanner = viewAsUserId !== null && !hasSubmittedResponse;
 
   const onSubmitAnswer = useCallback(() => {
     if (appName) {
@@ -74,6 +92,16 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
 
   return (
     <div className={className}>
+      {showNotSubmittedBanner && (
+        <Alert
+          className={moduleStyles.notSubmittedBanner}
+          text={`${
+            viewedStudentName ?? 'This student'
+          } has not submitted a response`}
+          type="info"
+          size="xs"
+        />
+      )}
       <div className={moduleStyles.predictQuestionContainer}>
         {predictSettings.questionType === PredictQuestionType.FreeResponse ? (
           <textarea

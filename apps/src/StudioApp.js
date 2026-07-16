@@ -22,6 +22,7 @@ import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/l
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import localization from '@cdo/apps/localization';
+import {localizeSource} from '@cdo/apps/localization/localizeSource';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
@@ -39,7 +40,6 @@ import msg from '@cdo/locale';
 
 import annotationList from './acemode/annotationList';
 import * as aceMode from './acemode/mode-javascript_codeorg';
-import getAchievements from './achievements';
 import * as assetPrefix from './assetManagement/assetPrefix';
 import AuthoredHints from './authoredHints';
 import * as blockUtils from './block_utils';
@@ -72,12 +72,6 @@ import {configCircuitPlayground, configMicrobit} from './maker/dropletConfig';
 import './polyfills';
 import puzzleRatingUtils from './puzzleRatingUtils';
 import {getStore} from './redux';
-import {
-  setAchievements,
-  setBlockLimit,
-  setFeedbackData,
-  showFeedback,
-} from './redux/feedback';
 import {
   determineInstructionsConstants,
   setFeedback,
@@ -763,16 +757,18 @@ StudioApp.prototype.alertIfCompletedWhilePairing = function (config) {
 
 StudioApp.prototype.getSettingsHandler = function () {
   return () => {
-    const contentDiv = document.createElement('div');
-    const dialog = this.createModalDialog({
-      contentDiv: contentDiv,
-      id: 'settings-modal',
-    });
-
-    createReactRoot(React.createElement(SettingsModal), contentDiv, {
-      legacyReactDomRender: true,
-    });
-    dialog.show();
+    const container = document.createElement('div');
+    container.id = 'settings-modal';
+    document.body.appendChild(container);
+    const close = () => {
+      ReactDOM.unmountComponentAtNode(container);
+      container.remove();
+    };
+    createReactRoot(
+      React.createElement(SettingsModal, {onClose: close}),
+      container,
+      {legacyReactDomRender: true}
+    );
   };
 };
 
@@ -1713,47 +1709,6 @@ StudioApp.prototype.displayFeedback = function (options) {
     options.feedbackType = TestResults.EDIT_BLOCKS;
   }
 
-  if (experiments.isEnabled(experiments.BUBBLE_DIALOG)) {
-    const {response, preventDialog, feedbackType, feedbackImage} = options;
-
-    const newFinishDialogApps = {
-      turtle: true,
-      karel: true,
-      maze: true,
-      studio: true,
-      flappy: true,
-      bounce: true,
-    };
-    const hasNewFinishDialog = newFinishDialogApps[this.config.app];
-
-    if (hasNewFinishDialog && !this.hasContainedLevels) {
-      const store = getStore();
-      const generatedCodeProperties = this.feedback_.getGeneratedCodeProperties(
-        this.config.appStrings
-      );
-      const studentCode = {
-        message: generatedCodeProperties.shortMessage,
-        code: generatedCodeProperties.code,
-      };
-      const canShare = !this.disableSocialShare && !options.disableSocialShare;
-      store.dispatch(
-        setFeedbackData({
-          isChallenge: this.config.isChallengeLevel,
-          isPerfect: feedbackType >= TestResults.MINIMUM_OPTIMAL_RESULT,
-          blocksUsed: this.feedback_.getNumCountableBlocks(),
-          displayFunometer: response && response.puzzle_ratings_enabled,
-          studentCode,
-          feedbackImage: canShare && feedbackImage,
-        })
-      );
-      store.dispatch(setAchievements(getAchievements(store.getState())));
-      if (this.shouldDisplayFeedbackDialog_(preventDialog, feedbackType)) {
-        store.dispatch(showFeedback());
-        this.onFeedback(options);
-        return;
-      }
-    }
-  }
   options.onContinue = this.onContinue;
   options.backToPreviousLevel = this.backToPreviousLevel;
   options.isUS = this.isUS;
@@ -2068,12 +2023,6 @@ StudioApp.prototype.setConfigValues_ = function (config) {
 
   this.appMsg = config.appMsg;
   this.IDEAL_BLOCK_NUM = config.level.ideal || Infinity;
-  if (experiments.isEnabled(experiments.BUBBLE_DIALOG)) {
-    // This seems to break levels that start in the animation/costume tab.
-    // If this feature comes out from behind the experiment, make sure not to
-    // regress those levels.
-    getStore().dispatch(setBlockLimit(this.IDEAL_BLOCK_NUM));
-  }
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
   this.recommendedBlocks_ = config.level.recommendedBlocks || [];
@@ -2085,8 +2034,70 @@ StudioApp.prototype.setConfigValues_ = function (config) {
     config.level.lastAttempt = '';
   }
 
-  this.startBlocks_ =
-    config.level.lastAttempt || config.level.startBlocks || '';
+  // For applab, the starter source is JavaScript text rather than
+  // blockly XML. Walk its AST for string literals (and `+` concatenation
+  // chains) and rewrite them with their localized equivalents before
+  // the lab initializes. lastAttempt is intentionally NOT touched — once
+  // a student has edited the program, their text shouldn't be rewritten
+  // on reload. Element ids declared in the starter HTML are referenced
+  // by the starter JS via getElementById and friends; translating those
+  // literals would break the runtime lookup, so they're collected from
+  // startHtml and passed in as exclusions.
+  const collectStartHtmlIds = () => {
+    const ids = new Set();
+    if (config.level.startHtml) {
+      new DOMParser()
+        .parseFromString(config.level.startHtml, 'text/html')
+        .querySelectorAll('[id]')
+        .forEach(el => ids.add(el.id));
+    }
+    return ids;
+  };
+  // Applab API functions whose string arguments at the given positions
+  // are semantic identifiers (event types, property names, and the
+  // dataset/table/column/key/model names of the data API) and must not
+  // be translated. Position 0 (ids) is already covered by the startHtml
+  // exclusion above for most of these, but positions 1+ aren't, so the
+  // applab API calls need this slot-level map. Extend as more functions
+  // surface.
+  //
+  // The data API entries are the boundary between user code and stored
+  // data: the table/column/key/model names are matched by exact English
+  // spelling at runtime, so a translated literal would no longer resolve.
+  // Slots holding records/searchParams/testValues are objects rather than
+  // string literals (their keys are object-literal property keys, which
+  // the localizer already skips), so only the name slots are listed here.
+  const applabExcludeCallArgs = {
+    onEvent: [1],
+    setProperty: [1],
+    getProperty: [1],
+    // Datablock storage: first arg is the table name.
+    createRecord: [0],
+    readRecords: [0],
+    updateRecord: [0],
+    deleteRecord: [0],
+    getColumn: [0, 1], // (table, column)
+    getKeyValue: [0],
+    setKeyValue: [0],
+    drawChartFromRecords: [0],
+    // ML: prediction model name + id, and feature-pair key.
+    getPrediction: [0, 1], // (modelName, modelId)
+    addPair: [1], // (object, key, value)
+  };
+  // Lines whose translated content would break the level's runtime
+  // logic — typically data tables keyed on the English spelling of
+  // each entry. The whole line is left untouched.
+  const applabExcludeLinePrefixes = ['var acceptWords', 'var rejectWords'];
+  const startBlocks =
+    config.app === 'applab' && config.level.startBlocks
+      ? localizeSource(config.level.startBlocks, {
+          labels: ['applab-startBlocks'],
+          exclude: collectStartHtmlIds(),
+          excludeCallArgs: applabExcludeCallArgs,
+          excludeLinesStartingWith: applabExcludeLinePrefixes,
+        })
+      : config.level.startBlocks;
+  this.startBlocks_ = config.level.lastAttempt || startBlocks || '';
   this.vizAspectRatio = config.vizAspectRatio || 1.0;
   this.nativeVizWidth = config.nativeVizWidth || DEFAULT_VISUALIZATION_WIDTH;
 

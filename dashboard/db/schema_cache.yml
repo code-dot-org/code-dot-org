@@ -5833,6 +5833,43 @@ columns:
     comment: 
   - *26
   - *27
+  project_storage_geos:
+  - *9
+  - *43
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: country
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: state
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: city
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: postal_code
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
+  - *12
+  - *13
   projects:
   - *5
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -6705,6 +6742,45 @@ columns:
     default_function: 
     collation: utf8mb3_unicode_ci
     comment: 
+  scrapbook_entries:
+  - *9
+  - *18
+  - *16
+  - *6
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: channel_id
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: before_asset_url
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: after_asset_url
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: entry_text
+    sql_type_metadata: *11
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
+  - *12
+  - *13
   script_levels:
   - *5
   - *40
@@ -9130,6 +9206,7 @@ primary_keys:
   programming_expressions: id
   programming_methods: id
   project_commits: id
+  project_storage_geos: id
   projects: id
   puzzle_ratings: id
   queued_account_purges: id
@@ -9147,6 +9224,7 @@ primary_keys:
   - school_id
   - school_year
   schools: 
+  scrapbook_entries: id
   script_levels: id
   scripts: id
   scripts_resources: 
@@ -9374,6 +9452,7 @@ data_sources:
   programming_expressions: true
   programming_methods: true
   project_commits: true
+  project_storage_geos: true
   projects: true
   puzzle_ratings: true
   queued_account_purges: true
@@ -9389,6 +9468,7 @@ data_sources:
   school_infos: true
   school_stats_by_years: true
   schools: true
+  scrapbook_entries: true
   script_levels: true
   scripts: true
   scripts_resources: true
@@ -14077,6 +14157,20 @@ indexes:
     type: 
     using: :btree
     comment: 
+  project_storage_geos:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: project_storage_geos
+    name: index_project_storage_geos_on_storage_id
+    unique: true
+    columns:
+    - storage_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
   projects:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: projects
@@ -14533,6 +14627,49 @@ indexes:
     where: 
     type: :fulltext
     using: 
+    comment: 
+  scrapbook_entries:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: scrapbook_entries
+    name: index_scrapbook_entries_on_user_id_and_script_id_and_level_id
+    unique: true
+    columns:
+    - user_id
+    - script_id
+    - level_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: scrapbook_entries
+    name: index_scrapbook_entries_on_user_id_and_channel_id
+    unique: true
+    columns:
+    - user_id
+    - channel_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: scrapbook_entries
+    name: index_scrapbook_entries_on_user_id
+    unique: false
+    columns:
+    - user_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
     comment: 
   script_levels:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
@@ -16239,7 +16376,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20260626120000
+version: 20260626143947
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

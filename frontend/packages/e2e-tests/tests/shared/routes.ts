@@ -5,6 +5,8 @@ export interface LabLevelUrlParams {
   level: number;
   /** Suppress level video autoplay. On by default — nearly every scenario wants it. */
   noautoplay?: boolean;
+  /** Show level callouts (qTip tooltips). Emitted as ?show_callouts=1. */
+  showCallouts?: boolean;
   /** Force a UI locale. Emitted as a /lang/<code> path segment, which Rails rewrites to ?lang=<code>. */
   lang?: string;
 }
@@ -21,14 +23,31 @@ export function labLevelUrl({
   lesson,
   level,
   noautoplay = true,
+  showCallouts = false,
   lang,
 }: LabLevelUrlParams): string {
   const query = new URLSearchParams();
   if (noautoplay) {
     query.set('noautoplay', 'true');
   }
+  if (showCallouts) {
+    query.set('show_callouts', '1');
+  }
   const queryString = query.toString();
   const langSegment = lang ? `/lang/${lang}` : '';
   const path = `/courses/${course}/units/${unit}/lessons/${lesson}/levels/${level}${langSegment}`;
   return queryString ? `${path}?${queryString}` : path;
+}
+
+export interface UnitOverviewUrlParams {
+  course?: string;
+  unit?: number;
+}
+
+/** Build a relative URL for a unit overview page. */
+export function unitOverviewUrl({
+  course = 'allthethingscourse',
+  unit = 1,
+}: UnitOverviewUrlParams = {}): string {
+  return `/courses/${course}/units/${unit}`;
 }

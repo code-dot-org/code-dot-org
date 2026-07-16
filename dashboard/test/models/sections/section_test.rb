@@ -9,6 +9,11 @@ class SectionTest < ActiveSupport::TestCase
     @section = create(:section, teacher: @teacher)
 
     @default_attrs = {user: @teacher, name: 'test-section'}
+
+    @jigsaw_unit = create(:unit, name: 'jigsaw')
+    @jigsaw_course = create(:single_unit_course, name: 'jigsaw', family_name: 'jigsaw', unit: @jigsaw_unit)
+    CourseOffering.add_course_offering(@jigsaw_course)
+    @jigsaw_unit.reload
   end
 
   test "sections are soft-deleted" do
@@ -538,7 +543,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'concise_summarize: section with a single-unit course assigned' do
     # Use an existing script so that it has a translation
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
 
     Timecop.freeze(Time.zone.now) do
       section = create(:section, script: script, unit_group: script.get_original_unit_group)
@@ -586,7 +591,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'concise_summarize: section with a coteacher' do
     # Use an existing script so that it has a translation
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
     CourseOffering.add_course_offering(script.original_unit_group)
 
     Timecop.freeze(Time.zone.now) do
@@ -640,7 +645,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'concise_summarize: section with both a course and a script' do
     # Use an existing script so that it has a translation
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
     unit_group = create(:unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family')
     create(:unit_group_unit, unit_group: unit_group, script: script, position: 1)
     CourseOffering.add_course_offering(unit_group)
@@ -837,7 +842,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'selected_section_summarize: section with a script assigned' do
     # Use an existing script so that it has a translation
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
 
     Timecop.freeze(Time.zone.now) do
       section = create(:section, script: script, unit_group: script.get_original_unit_group)
@@ -1007,7 +1012,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'summarize: section with a script assigned' do
     # Use an existing script so that it has a translation
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
 
     Timecop.freeze(Time.zone.now) do
       section = create(:section, script: script, unit_group: script.get_original_unit_group)
@@ -1069,7 +1074,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'summarize: section with a coteacher' do
     # Use an existing script so that it has a translation
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
     CourseOffering.add_course_offering(script.original_unit_group)
 
     Timecop.freeze(Time.zone.now) do
@@ -1136,9 +1141,8 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'summarize: section with both a course and a script' do
-    # TODO: TEACH-1788 This test will probably need to be updated when we update fixtures
     # Use an existing script so that it has a translation
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
     unit_group = create(:unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family')
     create(:unit_group_unit, unit_group: unit_group, script: script, position: 1)
     CourseOffering.add_course_offering(unit_group)
@@ -1388,7 +1392,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'any_student_has_progress? returns true if student has progress on unit assigned to section' do
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
     unit_group = create(:unit_group, :stable, name: 'somecourse', version_year: '1991', family_name: 'some-family')
     create(:unit_group_unit, unit_group: unit_group, script: script, position: 1)
     CourseOffering.add_course_offering(unit_group)
@@ -1402,7 +1406,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'any_student_has_progress? returns true if student has progress on unit not assigned to section' do
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
     unit_group = create(:unit_group, :stable, name: 'somecourse', version_year: '1991', family_name: 'some-family')
     create(:unit_group_unit, unit_group: unit_group, script: script, position: 1)
     CourseOffering.add_course_offering(unit_group)
@@ -1629,7 +1633,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'section grants access to AI Chat when DCDO flag enabled' do
-    script = Unit.find_by_name('jigsaw')
+    script = @jigsaw_unit
     unit_group = create(:unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family')
     create(:unit_group_unit, unit_group: unit_group, script: script, position: 1)
     section = create(:section, unit_group: unit_group)
@@ -1800,6 +1804,42 @@ class SectionTest < ActiveSupport::TestCase
     assert section.reload.suggested_lesson['timestamp'].present?
   end
 
+  test 'compute_suggested_lesson skips unnumbered lessons (lockable, no lesson plan)' do
+    unit = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: unit)
+    pre_assessment = create(:lesson, script: unit, lesson_group: lesson_group, lockable: true, has_lesson_plan: false)
+    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
+    sl_pre = create(:script_level, lesson: pre_assessment, script: unit)
+    create(:script_level, lesson: lesson1, script: unit)
+    section = create(:section, teacher: @teacher, script: unit)
+    student = create(:follower, section: section).student_user
+
+    # Student passed the pre-assessment but not lesson1
+    create(:user_level, user: student, level: sl_pre.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+
+    section.compute_suggested_lesson
+    # Should suggest lesson1, not the lesson after the pre-assessment
+    assert_equal lesson1.id, section.reload.suggested_lesson['lesson_id']
+  end
+
+  test 'compute_suggested_lesson does not advance with only 2 of 10 students completing a lesson' do
+    unit, lesson1, _lesson2, sl1, _sl2, section, students = build_suggested_lesson_section_with_students(10)
+    students.first(2).each do |student|
+      create(:user_level, user: student, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    end
+    section.compute_suggested_lesson
+    assert_equal lesson1.id, section.reload.suggested_lesson['lesson_id']
+  end
+
+  test 'compute_suggested_lesson advances with exactly 3 of 10 students completing a lesson' do
+    unit, _lesson1, lesson2, sl1, _sl2, section, students = build_suggested_lesson_section_with_students(10)
+    students.first(3).each do |student|
+      create(:user_level, user: student, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    end
+    section.compute_suggested_lesson
+    assert_equal lesson2.id, section.reload.suggested_lesson['lesson_id']
+  end
+
   private def build_suggested_lesson_section
     unit = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: unit)
@@ -1810,5 +1850,12 @@ class SectionTest < ActiveSupport::TestCase
     section = create(:section, teacher: @teacher, script: unit)
     student = create(:follower, section: section).student_user
     [unit, lesson1, lesson2, sl1, sl2, section, student]
+  end
+
+  private def build_suggested_lesson_section_with_students(count)
+    unit, lesson1, lesson2, sl1, sl2, section, first_student = build_suggested_lesson_section
+    students = [first_student]
+    (count - 1).times {students << create(:follower, section: section).student_user}
+    [unit, lesson1, lesson2, sl1, sl2, section, students]
   end
 end

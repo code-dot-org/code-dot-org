@@ -37,49 +37,27 @@ export default class ChangeUserTypeController {
   constructor(form, initialUserType) {
     this.form = form;
     this.initialUserType = initialUserType;
-    this.dropdown = form.find('#change-user-type_user_user_type');
-    this.button = form.find('#change-user-type-button');
-    this.status = form.find('#change-user-type-status');
-
-    // Attach handlers
-    this.dropdown.change(e => this.onUserTypeDropdownChange(e.target.value));
-    this.button.click(this.onChangeUserTypeButtonClick);
-
-    // Set initial state
-    this.onUserTypeDropdownChange(initialUserType);
   }
 
   /**
-   * Enable or disable the submit button for changing user type based on
-   * whether the selected user type is actually different than the user's
-   * current type.
+   * Called by the React ChangeUserTypeSection when the user confirms a new
+   * account type. Sets the hidden user_type field, then either opens the
+   * email-confirmation modal (when upgrading to teacher) or submits directly.
+   *
    * @param {string} selectedType
+   * @return {Promise|undefined} a submission Promise for the direct-submit
+   *   (teacher->student) path, so the section can show saving/error state;
+   *   undefined when the modal is opened instead.
    */
-  onUserTypeDropdownChange = selectedType => {
-    this.button.prop('disabled', selectedType === this.initialUserType);
-  };
+  handleConfirm = selectedType => {
+    this.form.find('#change-user-type_user_user_type').val(selectedType);
 
-  onChangeUserTypeButtonClick = e => {
-    // Email confirmation is required when changing from a student account
-    // to a teacher account.
-    const needEmailConfirmation = this.dropdown.val() === 'teacher';
-    if (needEmailConfirmation) {
+    // Email confirmation is required when changing to a teacher account.
+    if (selectedType === 'teacher') {
       this.showChangeUserTypeModal();
-    } else {
-      // Must submit before disabling fields or they'll be omitted from the form.
-      const promise = this.submitUserTypeChange({});
-      this.dropdown.prop('disabled', true);
-      this.button.prop('disabled', true);
-      this.status.text(i18n.saving());
-      // Note: this.submitPromise is exposed as a property for testing.
-      this.submitPromise = promise.catch(err => {
-        this.dropdown.prop('disabled', false);
-        this.button.prop('disabled', false);
-        this.status.text(i18n.changeUserTypeModal_unexpectedError());
-      });
+      return undefined;
     }
-
-    e.preventDefault();
+    return this.submitUserTypeChange({});
   };
 
   showChangeUserTypeModal() {

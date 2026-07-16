@@ -1,0 +1,567 @@
+@use '../quiet-button.scss' as buttons;
+
+.labRow {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+
+  .tabShell {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+// Instructions column width when the full panel shows (no guide).
+.instructionsArea {
+  flex: 0;
+  min-width: 25%;
+}
+
+.divider {
+  width: 1px;
+  height: 100%;
+  background-color: var(--background-neutral-quaternary);
+}
+
+.tabShell {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+// One outer height for every tab item — plain tabs and the Code+scene group —
+// so the bar reads as a row of equal boxes (border-box: height includes the
+// 1px outlines).
+$tab-item-height: 34px;
+
+.tabBar {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 4px;
+  padding: 6px 8px;
+  // Design-system tokens so the chrome is legible in both Light and Dark.
+  background: var(--background-neutral-secondary);
+  border-bottom: 1px solid var(--borders-neutral-primary);
+}
+
+.tab {
+  height: $tab-item-height;
+  padding: 0 16px;
+  // A subtle outline gives every tab item the same "button" structure, so
+  // the Code+scene segmented group reads coherently next to plain tabs.
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px 4px 0 0;
+  background: transparent;
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+  font-size: 14px;
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+}
+
+.tabActive {
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  font-weight: 600;
+}
+
+// The Code tab + scene picker as one segmented control (scenes UI variant):
+// the group carries the tab pill's shape and active background; the button
+// and select inside are transparent segments split by a divider. Both
+// segments get the same explicit height so their text shares a centerline.
+// Segments sit inside the group's 1px outline.
+$tab-segment-height: $tab-item-height - 2px;
+
+.tabGroup {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: $tab-item-height;
+  // The whole group activates the Code tab when it isn't active.
+  cursor: pointer;
+  // The group carries the single outline; the segments inside are borderless
+  // except for the divider between them.
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px 4px 0 0;
+
+  .tab {
+    height: $tab-segment-height;
+    border: none;
+    border-radius: 4px 0 0 0;
+  }
+
+  // The group paints the active background so both segments share it.
+  .tabActive {
+    background: transparent;
+  }
+}
+
+.tabGroupActive {
+  background: var(--background-neutral-primary);
+}
+
+.sceneSelect {
+  height: $tab-segment-height;
+  max-width: 160px;
+  margin: 0;
+  // Native (appearance: auto) selects paint their own UA box when disabled,
+  // which read as a stray grey pill. Take over rendering entirely: no
+  // appearance, our own chevron, and disabled = the same content dimmed.
+  appearance: none;
+  padding: 0 26px 0 10px;
+  border: none;
+  border-left: 1px solid var(--borders-neutral-primary);
+  border-radius: 0 4px 0 0;
+  background: transparent
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' fill='none' stroke='%23888' stroke-width='1.5'/></svg>")
+    no-repeat right 9px center;
+  color: var(--text-neutral-primary);
+  // Match the tab buttons.
+  font-size: 14px;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.4;
+    // Disabled controls swallow clicks entirely; let them fall through so
+    // clicking the dropdown area activates the Code tab (see tabGroup).
+    pointer-events: none;
+    // Chrome re-applies a UA background-color on :disabled; keep ours.
+    background-color: transparent;
+  }
+}
+
+.tabContent {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+// Code tab is kept mounted; the parent toggles visibility with clip-path so the
+// Blockly workspace and flyout SVG keep their real dimensions across switches.
+.codeTabWrapper {
+  position: absolute;
+  inset: 0;
+}
+
+.blocklyDiv {
+  width: 100%;
+  height: 100%;
+}
+
+.itemsTab {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: auto;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+}
+
+.generateError {
+  // Legible on the guide's dark panel; the old dark red vanished into it.
+  color: #ff9d9d;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+// Sidebar-only resource panel (guide-based instructions): no instruction
+// tabs render inside the nav, so its top border would read as a stray line.
+.resourceSidebar {
+  :global(#resource-panel-tabs) {
+    border-top: 0;
+  }
+}
+
+.imagesManager {
+  display: flex;
+  flex-direction: column;
+}
+
+.imageGallery {
+  display: flex;
+  flex-wrap: wrap;
+  // Generous row spacing so the cards read as rows, not a dense grid; the
+  // bottom padding lets the last row scroll clear of the Guide overlay.
+  gap: 28px 14px;
+  padding: 28px 16px 220px;
+}
+
+.galleryEmpty {
+  color: var(--text-neutral-secondary);
+  font-size: 13px;
+}
+
+.imageCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 125px;
+}
+
+// Compact, quiet delete: the image is the star of the card. (Scoped by
+// class — a bare `.imageCard button` would also hit the thumbnail button.)
+.deleteButton {
+  @include buttons.quiet-button(22px, 11px);
+}
+
+.imageThumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 104px;
+  height: 104px;
+  // The thumb is a button (click to edit); neutralize global button styles.
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+  cursor: pointer;
+  border: 1px solid var(--borders-neutral-primary);
+  // Hover: grow subtly (like Music Lab's album covers) instead of the
+  // global button > img dim-until-hover treatment.
+  transition: transform 0.15s ease;
+
+  &:hover {
+    z-index: 1;
+    transform: scale(1.12);
+  }
+  // Subtle checkerboard: enough to signal transparency without competing
+  // with the sprite (translucent grey works on light and dark themes).
+  $check: rgb(128 128 128 / 16%);
+
+  background-image: linear-gradient(45deg, $check 25%, transparent 25%),
+    linear-gradient(-45deg, $check 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, $check 75%),
+    linear-gradient(-45deg, transparent 75%, $check 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    // Full quality always: undo the global `button > img` dimming (class +
+    // element outranks the global's two elements).
+    opacity: 1;
+  }
+}
+
+.imageName {
+  max-width: 100%;
+  overflow: hidden;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Sized wrapper around .guideBody: an explicit pixel height (kept in sync
+// with the body's natural height via a ResizeObserver) is transitionable,
+// where height: auto is not. Content is clipped mid-transition.
+.guideAnimator {
+  overflow: hidden;
+  transition: height 0.25s ease;
+}
+
+.guideBody {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.guideInstructions {
+  line-height: 1.45;
+
+  // Markdown output brings document-level margins; keep it compact inside
+  // the guide, and keep links readable on the dark panel.
+  p,
+  ul,
+  ol {
+    margin: 0 0 6px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: #8ab4f8;
+  }
+}
+
+.guideDivider {
+  width: 100%;
+  margin: 2px 0;
+  border: none;
+  border-top: 1px solid rgb(255 255 255 / 20%);
+}
+
+// Shared metrics for the guide's form controls. All controls in the guide
+// read as one family: same height, radius, and type size. The zeroed margin
+// and shadow undo dashboard's global element styles (button {margin: 5px},
+// input {margin-bottom: 10px} + inset shadow), which otherwise knock rows
+// out of alignment.
+@mixin guide-control {
+  box-sizing: border-box;
+  height: 36px;
+  margin: 0;
+  border: 1px solid rgb(255 255 255 / 25%);
+  border-radius: 6px;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.guideRow {
+  display: flex;
+  gap: 8px;
+
+  input,
+  button {
+    @include guide-control;
+  }
+
+  input {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 0 10px;
+  }
+
+  button {
+    flex: 0 0 auto;
+    appearance: none;
+    padding: 0 16px;
+    background-color: rgb(255 255 255 / 92%);
+    color: #1b2029;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover:not(:disabled) {
+      background-color: #fff;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: default;
+    }
+  }
+}
+
+// Vertical gap matching the rows' horizontal gaps.
+.guideForm {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+// Labeled field stacks: label above its control.
+.guideFields {
+  display: flex;
+  gap: 8px;
+
+  label {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 3px;
+    margin: 0;
+    color: rgb(255 255 255 / 70%);
+    font-size: 12px;
+  }
+
+  input,
+  select {
+    @include guide-control;
+
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  select {
+    // Native selects ignore height on some platforms without an explicit
+    // appearance reset; padding keeps the arrow clear of the text.
+    padding: 0 6px;
+  }
+
+  label.guideFieldGrow {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}
+
+.worldTab {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: 8px;
+  gap: 8px;
+  overflow: auto;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+}
+
+.worldPalette {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+
+  button {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+  }
+}
+
+.brushActive {
+  outline: 2px solid #1565c0;
+}
+
+.brushSwatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--borders-neutral-strong);
+}
+
+.worldGrid {
+  display: grid;
+  width: min(100%, 480px);
+  aspect-ratio: 1;
+  border: 1px solid var(--borders-neutral-strong);
+  user-select: none;
+}
+
+.worldCell {
+  border: 1px solid var(--borders-neutral-primary);
+  cursor: pointer;
+
+  &:hover {
+    outline: 1px solid var(--borders-neutral-strong);
+    outline-offset: -1px;
+  }
+}
+
+// The persistent playspace overlay: spans the tab content area; lets clicks
+// through to the content beneath (e.g. the Blockly workspace) except over the
+// box itself.
+.playspaceOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+// Fixed 400x400 (the engine canvas size); positioned via a transform so it can
+// animate between the corner preview and the centered play view.
+.playspaceBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  transform-origin: 0 0;
+  background: var(--background-neutral-secondary);
+  // Transitions, and the preview-only hairline seam, are set inline:
+  // transform only animates between the two visible placements; opacity
+  // fades the box in on appearance.
+}
+
+.playspaceCanvas {
+  width: 400px;
+  height: 400px;
+}
+
+// Location-picker hover ghost: the sprite being placed, previewed at the
+// hovered spot.
+.locationGhost {
+  position: absolute;
+  opacity: 0.6;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+// Scene-jump transition (scenes UI variant): sceneCover blanks the canvas the
+// instant a jump triggers and holds while the target loads; sceneFade takes
+// over when it lands and fades out, revealing the new scene.
+.sceneCover {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  pointer-events: none;
+}
+
+.sceneFade {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  opacity: 0;
+  animation: scene-fade-in 0.45s ease-out;
+  pointer-events: none;
+}
+
+@keyframes scene-fade-in {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+// Loading an external scene: a dimming overlay + spinner that fades in only
+// after a delay, so fast loads never flash it (the Lab2 loading pattern).
+.sceneLoading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(0 0 0 / 55%);
+  opacity: 0;
+  animation: scene-loading-fade-in 0.4s ease-in 1.5s both;
+  pointer-events: none;
+}
+
+.sceneLoadingSpinner {
+  width: 48px;
+  height: 48px;
+  border: 5px solid rgb(255 255 255 / 30%);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: scene-loading-spin 0.9s linear infinite;
+}
+
+@keyframes scene-loading-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scene-loading-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+

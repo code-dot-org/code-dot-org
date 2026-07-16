@@ -2,6 +2,7 @@ import {
   addEdge,
   Background,
   type IsValidConnection,
+  type OnBeforeDelete,
   type OnEdgesChange,
   type OnNodesChange,
   Panel,
@@ -31,6 +32,7 @@ import {
   MIN_ZOOM,
   SAVE_DEBOUNCE_MS,
   SKETCHLAB_TOOLBAR_PANEL_CLASS,
+  TRANSIENT_MESSAGE_DURATION_MS,
 } from '../constants';
 import {
   AnchorDraggingProvider,
@@ -44,12 +46,14 @@ import CornerToolbarPanel from '../elementToolbars/components/CornerToolbarPanel
 import {DEFAULT_STROKE_COLOR} from '../elementToolbars/toolbarPalettes';
 import {useCopyPaste} from '../hooks/useCopyPaste';
 import {useDisplayElements} from '../hooks/useDisplayElements';
+import {useDragSelection} from '../hooks/useDragSelection';
 import {useElementClickHandlers} from '../hooks/useElementClickHandlers';
 import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
 import {useLineEdgeDrag} from '../hooks/useLineEdgeDrag';
 import {useNodeDrag} from '../hooks/useNodeDrag';
 import {useTabOrder} from '../hooks/useTabOrder';
+import {useTransientMessage} from '../hooks/useTransientMessage';
 import {useUndoHistory} from '../hooks/useUndoHistory';
 import GroupNode from '../nodes/GroupNode';
 import ImageNode from '../nodes/ImageNode';
@@ -59,11 +63,16 @@ import TextNode from '../nodes/TextNode';
 import {
   AddNodeRequest,
   CanvasTool,
+  ImageNodeData,
   ReactFlowSketchLabSources,
   SketchLabNode,
 } from '../types';
 import {canCreateConnection} from '../utils/connectionRules';
-import {groupSelectedNodes, ungroupNode} from '../utils/grouping';
+import {
+  expandGroupDeletion,
+  groupSelectedNodes,
+  ungroupNode,
+} from '../utils/grouping';
 import {createLineAnchorAtHandle} from '../utils/lineAnchors';
 import {defaultLineEdgeFields} from '../utils/lineEdges';
 
@@ -84,6 +93,9 @@ const NODE_TYPES = {
 // Offset added per new node so they don't stack exactly on top of each other.
 const NEW_NODE_STAGGER_PX = 20;
 const FOCUS_DELAY_MS = 100;
+
+const GROUP_MODE_HINT =
+  'Tab to move — Enter to select/deselect — G to group — Esc to cancel';
 
 // Fallbacks for edges that don't specify type/style, kept in sync with the
 // fields a new line gets. markerEnd is intentionally omitted so edges saved
@@ -116,6 +128,11 @@ export interface ReactFlowCanvasProps {
   initialViewport: SketchlabReactFlowSource['viewport'];
   colorMode: 'light' | 'dark';
   readOnly?: boolean;
+  // A request from the parent view (e.g. Backpack import) to add an image node.
+  // The canvas adds it via its own handleAddNode, then calls
+  // onImageImportConsumed so the same request isn't processed twice.
+  pendingImageImport?: ImageNodeData | null;
+  onImageImportConsumed?: () => void;
 }
 
 export const SKETCHLAB_CONTAINER_CLASS = 'sketchlab-react-flow-container';
@@ -128,6 +145,8 @@ export default function ReactFlowCanvas({
   initialViewport,
   colorMode,
   readOnly = false,
+  pendingImageImport = null,
+  onImageImportConsumed,
 }: ReactFlowCanvasProps) {
   const [nodes, setNodes, onNodesChange] =
     useNodesState<SketchLabNode>(initialNodes);
@@ -283,23 +302,36 @@ export default function ReactFlowCanvas({
     return count;
   }, [nodes, edges]);
 
-  const [groupModeError, setGroupModeError] = useState<string | null>(null);
-  const groupModeErrorTimerRef = useRef<ReturnType<typeof setTimeout> | null>(
-    null
+  const [groupModeError, showGroupModeError] = useTransientMessage(
+    TRANSIENT_MESSAGE_DURATION_MS
   );
   const handleCannotGroup = useCallback(
     (msg: string) => {
       announceGroupMode(msg);
-      setGroupModeError(msg);
-      if (groupModeErrorTimerRef.current)
-        clearTimeout(groupModeErrorTimerRef.current);
-      groupModeErrorTimerRef.current = setTimeout(
-        () => setGroupModeError(null),
-        2000
-      );
+      showGroupModeError(msg);
     },
-    [announceGroupMode]
+    [announceGroupMode, showGroupModeError]
   );
+
+  const [imageUploadError, showImageUploadError] = useTransientMessage(
+    TRANSIENT_MESSAGE_DURATION_MS
+  );
+  const handleImageUploadError = useCallback(() => {
+    const message = 'Could not upload image. Please try again.';
+    announceGroupMode(message);
+    showImageUploadError(message);
+  }, [announceGroupMode, showImageUploadError]);
+
+  // One banner at a time, highest priority first: an upload error, then a
+  // group-mode error, then the group-mode hint while group mode is active.
+  const banner: {message: string; variant: 'info' | 'error'} | null =
+    imageUploadError
+      ? {message: imageUploadError, variant: 'error'}
+      : groupModeError
+      ? {message: groupModeError, variant: 'info'}
+      : isGroupMode
+      ? {message: GROUP_MODE_HINT, variant: 'info'}
+      : null;
 
   const handlePaneClick = useCallback(() => {
     canvasContainerRef.current?.focus();
@@ -354,10 +386,19 @@ export default function ReactFlowCanvas({
     duplicateLine,
     copyEntry,
     cutEntry,
-    paste,
-    handleMouseMove,
-    handleMouseLeave,
-  } = useCopyPaste({nodes, edges, setNodes, setEdges, pushSnapshot});
+    handleMouseMove: copyPasteMouseMove,
+    handleMouseLeave: copyPasteMouseLeave,
+  } = useCopyPaste({
+    nodes,
+    edges,
+    setNodes,
+    setEdges,
+    pushSnapshot,
+    canvasContainerRef,
+    readOnly,
+    levelName,
+    onImageUploadError: handleImageUploadError,
+  });
 
   const clipboardContextValue = useMemo(
     () => ({duplicateNode, duplicateLine}),
@@ -372,24 +413,37 @@ export default function ReactFlowCanvas({
     setNodeOrEdgeFocused
   );
 
-  const handleGroupNodes = useCallback(() => {
-    const selectedIds = [...multiSelectedNodeIds];
-    const groupId = createUuid();
-    pushSnapshot();
-    setNodes(current => groupSelectedNodes(selectedIds, current, groupId));
-    clearSelection();
-    closeToolbar();
-    announceGroupMode('Group created.');
-    setTimeout(() => focusEntry({type: 'node', id: groupId}), 0);
-  }, [
-    multiSelectedNodeIds,
-    pushSnapshot,
-    setNodes,
-    clearSelection,
-    closeToolbar,
-    announceGroupMode,
-    focusEntry,
-  ]);
+  const handleGroupNodes = useCallback(
+    (explicitIds?: Set<string>) => {
+      const selectedIds = [...(explicitIds ?? multiSelectedNodeIds)];
+      if (selectedIds.length === 0) return;
+      const groupId = createUuid();
+
+      // groupSelectedNodes returns the input unchanged when the selection
+      // doesn't meet the minimum threshold (e.g. a single standalone line).
+      // Pre-check so pushSnapshot / announce / focus don't fire when no group
+      // is actually created. The updater re-runs against authoritative current
+      // state in case nodes changed between this render and the flush.
+      if (groupSelectedNodes(selectedIds, nodes, groupId) === nodes) return;
+
+      pushSnapshot();
+      setNodes(current => groupSelectedNodes(selectedIds, current, groupId));
+      clearSelection();
+      closeToolbar();
+      announceGroupMode('Group created.');
+      setTimeout(() => focusEntry({type: 'node', id: groupId}), 0);
+    },
+    [
+      multiSelectedNodeIds,
+      nodes,
+      pushSnapshot,
+      setNodes,
+      clearSelection,
+      closeToolbar,
+      announceGroupMode,
+      focusEntry,
+    ]
+  );
 
   const handleUngroupNode = useCallback(
     (groupId: string) => {
@@ -399,6 +453,46 @@ export default function ReactFlowCanvas({
     },
     [pushSnapshot, setNodes, closeToolbar]
   );
+
+  // Ensure delete on a group will delete all group elements.
+  // Runs on both delete (via keystroke or button) and cut.
+  const handleBeforeDelete: OnBeforeDelete<
+    SketchLabNode,
+    SketchlabReactFlowEdge
+  > = useCallback(
+    async ({nodes: nodesToDelete, edges: edgesToDelete}) =>
+      expandGroupDeletion(nodesToDelete, edgesToDelete, nodes, edges),
+    [nodes, edges]
+  );
+
+  const {
+    selectionBox,
+    pendingSelectedIds,
+    dragSelectMouseDown,
+    dragSelectMouseMove,
+    dragSelectMouseUp,
+    dragSelectMouseLeave,
+  } = useDragSelection({
+    nodes,
+    edges,
+    isGrabMode: canvasTool === 'grab',
+    readOnly,
+    screenToFlowPosition,
+    onGroupNodes: handleGroupNodes,
+  });
+
+  const handleMouseMove = useCallback(
+    (event: React.MouseEvent<HTMLDivElement>) => {
+      copyPasteMouseMove(event);
+      dragSelectMouseMove(event);
+    },
+    [copyPasteMouseMove, dragSelectMouseMove]
+  );
+
+  const handleMouseLeave = useCallback(() => {
+    copyPasteMouseLeave();
+    dragSelectMouseLeave();
+  }, [copyPasteMouseLeave, dragSelectMouseLeave]);
 
   const {connectingFrom, connectAnnouncement, handleKeyDown} =
     useKeyboardNavigation({
@@ -411,7 +505,6 @@ export default function ReactFlowCanvas({
       openToolbar,
       copyEntry,
       cutEntry,
-      paste,
       undo: handleUndo,
       redo: handleRedo,
       pushSnapshot,
@@ -520,7 +613,9 @@ export default function ReactFlowCanvas({
     grabMode: isGrabMode,
     focusEntry,
     handleEdgeMouseDown,
-    multiSelectedNodeIds,
+    multiSelectedNodeIds: selectionBox
+      ? pendingSelectedIds
+      : multiSelectedNodeIds,
   });
 
   // Debounced save: sync ReactFlow state back to project sources.
@@ -695,6 +790,30 @@ export default function ReactFlowCanvas({
     ]
   );
 
+  useEffect(() => {
+    if (pendingImageImport) {
+      handleAddNode({type: 'image', data: pendingImageImport});
+      onImageImportConsumed?.();
+    }
+  }, [pendingImageImport, handleAddNode, onImageImportConsumed]);
+
+  const dragBoxContainerRect = selectionBox
+    ? canvasContainerRef.current?.getBoundingClientRect()
+    : null;
+  const dragBoxStyle: React.CSSProperties | null =
+    selectionBox && dragBoxContainerRect
+      ? {
+          left:
+            Math.min(selectionBox.startX, selectionBox.endX) -
+            dragBoxContainerRect.left,
+          top:
+            Math.min(selectionBox.startY, selectionBox.endY) -
+            dragBoxContainerRect.top,
+          width: Math.abs(selectionBox.endX - selectionBox.startX),
+          height: Math.abs(selectionBox.endY - selectionBox.startY),
+        }
+      : null;
+
   // All ReactFlow props that differ between cursor and grab mode, collected in
   // one place so the grab mode contract is visible at a glance.
   const grabModeProps = {
@@ -706,7 +825,7 @@ export default function ReactFlowCanvas({
     edgesFocusable: !isGrabMode,
     onNodeClick: isGrabMode ? undefined : handleNodeClick,
     onEdgeClick: isGrabMode ? undefined : handleEdgeClick,
-    deleteKeyCode: !readOnly && !isGrabMode ? 'Delete' : null,
+    deleteKeyCode: !readOnly && !isGrabMode ? ['Delete', 'Backspace'] : null,
   };
 
   return (
@@ -738,7 +857,9 @@ export default function ReactFlowCanvas({
                   onKeyDownCapture={handleKeyDown}
                   onFocusCapture={handleFocusCapture}
                   onBlur={handleContainerBlur}
+                  onMouseDown={dragSelectMouseDown}
                   onMouseMove={handleMouseMove}
+                  onMouseUp={dragSelectMouseUp}
                   onMouseLeave={handleMouseLeave}
                 >
                   {!readOnly && (
@@ -763,6 +884,7 @@ export default function ReactFlowCanvas({
                     {...grabModeProps}
                     onPaneClick={handlePaneClick}
                     onConnect={onConnect}
+                    onBeforeDelete={handleBeforeDelete}
                     onNodesDelete={handleElementsDeleted}
                     onEdgesDelete={handleElementsDeleted}
                     onNodeDragStart={handleNodeDragStart}
@@ -777,9 +899,10 @@ export default function ReactFlowCanvas({
                     defaultViewport={initialViewport}
                     fitView={!initialViewport}
                     colorMode={colorMode}
-                    // We implement our own shift+click multi-selection; disable
-                    // React Flow's built-in so it doesn't fight our selection state.
+                    // We implement our own shift+click multi-selection and
+                    // drag-to-select; disable React Flow's built-in versions.
                     multiSelectionKeyCode={null}
+                    selectionKeyCode={null}
                     proOptions={{hideAttribution: true}}
                     // Even though we manage tab order, we keep React Flow's keyboard A11y on because
                     // it manages things like moving nodes with arrow keys.
@@ -799,13 +922,16 @@ export default function ReactFlowCanvas({
                       onGroupNodes={handleGroupNodes}
                       onUngroupNode={handleUngroupNode}
                     />
-                    {isGroupMode && (
+                    {banner && (
                       <Panel
                         position="bottom-center"
-                        className={styles.groupModeIndicator}
+                        className={
+                          banner.variant === 'error'
+                            ? styles.bannerError
+                            : styles.bannerInfo
+                        }
                       >
-                        {groupModeError ??
-                          'Tab to move — Enter to select/deselect — G to group — Esc to cancel'}
+                        {banner.message}
                       </Panel>
                     )}
                     <Background />
@@ -817,6 +943,13 @@ export default function ReactFlowCanvas({
                       isReadOnly={readOnly}
                     />
                   </ReactFlow>
+                  {dragBoxStyle && (
+                    <div
+                      aria-hidden="true"
+                      className={styles.dragSelectionBox}
+                      style={dragBoxStyle}
+                    />
+                  )}
                 </div>
               </FocusTrap>
             </AnchorDraggingProvider>

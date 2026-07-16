@@ -1,6 +1,6 @@
 {
   "logoPosition": "right",
-  "title": "Post-Workshop Survey for Code.org's Professional Development Facilitators - Custom PD Workshop",
+  "title": "Post-Workshop Survey for CodeAI's Professional Development Facilitators - Custom PD Workshop",
   "pages": [
     {
       "name": "page1",
@@ -8,12 +8,12 @@
         {
           "type": "html",
           "name": "intro_text",
-          "html": "<p><strong>Thank you for facilitating a Custom Code.org professional development workshop!</strong></p><p>After leading your custom workshop, we ask that you please take&nbsp;<strong>3 minutes</strong> to share some feedback about your workshop experience as a facilitator.</p><p>In the event that Code.org shares feedback with workshop organizers, we will do our best to anonymize your responses.</p></li></ul>"
+          "html": "<p><strong>Thank you for facilitating a Custom CodeAI professional development workshop!</strong></p><p>After leading your custom workshop, we ask that you please take&nbsp;<strong>3 minutes</strong> to share some feedback about your workshop experience as a facilitator.</p><p>In the event that CodeAI shares feedback with workshop organizers, we will do our best to anonymize your responses.</p></li></ul>"
         },
         {
           "type": "html",
           "name": "workshop_info_section_intro",
-          "html": "<h2><strong>Your Code.org Custom Workshop</strong></h2>\n<p></p><b><h3><font size=3>Please fill in the details about the Code.org Custom PD workshop you facilitated.</p>"
+          "html": "<h2><strong>Your CodeAI Custom Workshop</strong></h2>\n<p></p><b><h3><font size=3>Please fill in the details about the CodeAI Custom PD workshop you facilitated.</p>"
         },
         {
           "type": "radiogroup",
@@ -160,12 +160,12 @@
         {
           "type": "html",
           "name": "experience_section_intro",
-          "html": "<h2><strong>Your Experience Facilitating Code.org Custom PD Workshops</strong></h2>\n<p></p><b><h3><font size=3>The following section includes questions to helps us understand your experience facilitating custom PD workshops focused on {pd_content} and how we at Code.org can support you better.</p>"
+          "html": "<h2><strong>Your Experience Facilitating CodeAI Custom PD Workshops</strong></h2>\n<p></p><b><h3><font size=3>The following section includes questions to helps us understand your experience facilitating custom PD workshops focused on {pd_content} and how we at CodeAI can support you better.</p>"
         },
         {
           "type": "rating",
           "name": "intent_to_repeat",
-          "title": "After facilitating this Code.org custom PD workshop, are you interested in facilitating a Code.org custom PD workshop again?",
+          "title": "After facilitating this CodeAI custom PD workshop, are you interested in facilitating a CodeAI custom PD workshop again?",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Not interested at all",
@@ -174,7 +174,7 @@
         {
           "type": "comment",
           "name": "intent_to_repeat_comment",
-          "title": "If you would like to, please use this space to share any thoughts about whether you are interested in facilitating a Code.org custom PD workshop again.",
+          "title": "If you would like to, please use this space to share any thoughts about whether you are interested in facilitating a CodeAI custom PD workshop again.",
           "rows": 2
         },
         {
@@ -217,7 +217,7 @@
         {
           "type": "rating",
           "name": "resources_helpful",
-          "title": "Did the resources and guidance provided by Code.org help you feel set up for success at facilitating this workshop?",
+          "title": "Did the resources and guidance provided by CodeAI help you feel set up for success at facilitating this workshop?",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Not helpful at all",
@@ -285,7 +285,7 @@
         {
           "type": "html",
           "name": "thank_you",
-          "html": "<h2><strong>Thank You!</strong></h3>\n<p><span style='font-size: 12pt;'>Thanks from Code.org for your time, thoughts, and commitment to expand Computer Science education.</span>&nbsp;</p>"
+          "html": "<h2><strong>Thank You!</strong></h3>\n<p><span style='font-size: 12pt;'>Thanks from CodeAI for your time, thoughts, and commitment to expand Computer Science education.</span>&nbsp;</p>"
         }
       ]
     }

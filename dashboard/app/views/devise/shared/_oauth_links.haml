@@ -9,14 +9,21 @@
     %br/
 
   - if controller_name == 'sessions'
-    %h6= t('join_section.code.instructions_short')
-    = form_tag(student_user_new_path, method: :get, class: 'section-sign-in') do
-      = text_field_tag :section_code, params[:section_code], placeholder: t('join_section.code.placeholder')
-      %button= 'Go'
+    / Section-code entry (React). Mounted by devise/sessions/_login.js.
+    #section-code-entry-mount{
+      data: {
+        section_code_label: t('join_section.code.instructions_short'),
+        section_code_placeholder: t('join_section.code.placeholder'),
+        default_section_code: (params[:section_code] || ''),
+        go_label: 'Go',
+        form_action: student_user_new_path,
+      }
+    }
 
   - if devise_mapping.omniauthable?
     - unless Rails.env.production?
-      %strong
+      / display:block is required so the vertical margin applies (strong is inline).
+      %strong{style: 'display: block; margin-block: 0.5rem'}
         Hi! If you are having trouble with OAuth features on
         = "#{Rails.env},"
         consult the "Developer OAuth Setup on Localhost" doc in the Engineering drive folder

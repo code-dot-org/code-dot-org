@@ -1,0 +1,32 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-06-29T19:40:27.000Z",
+  "level_num": "custom",
+  "user_id": 574,
+  "properties": {
+    "require_edit_to_continue": true,
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "bf1632d4-0162-4dc1-84a1-59736de84772": {
+          "id": "bf1632d4-0162-4dc1-84a1-59736de84772",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n</head>\n<body>\n  <!-- All the visible content of your web page will go here! -->\n</body>\n</html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "bf1632d4-0162-4dc1-84a1-59736de84772"
+      ]
+    },
+    "long_instructions": "Welcome back! In the last levels, we learned that HTML is like a blueprint for building web pages and that the `<head>` section holds important information *about* the page.\r\n\r\nNow, let's give our web page a proper name! The `<title>` tag is used to define the title of the web page, which appears in the browser's tab or window title bar.\r\n\r\n1.  Open the `index.html` file.\r\n2.  Inside the `<head>` section, add a `<title>` tag. Make sure it's placed between the `<head>` and `</head>` tags.\r\n3.  Between the opening `<title>` and closing `</title>` tags, type an engaging title for your pet fish page. For example, you could use \"My Awesome Pet Fish Page\" or \"[Your Fish's Name]'s Home Page\".\r\n4.  After saving your changes, check your browser tab to see your new page title!",
+    "generate_outline": "Students should add a <title> tag to their index.html file, placing it inside the <head> section. The title should be something engaging like 'My Awesome Pet Fish Page' or '[Fish Name]'s Home Page'."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 19:40:34 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 19:40:35 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 19:41:15 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

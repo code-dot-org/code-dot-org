@@ -3,28 +3,26 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Structured Datasets
+# Inspecting Datasets
 
-Arrays and objects work together to create structured datasets. An array stores the full collection of data, while each object represents one record with related information stored as key-value pairs. This mirrors how data is organized in spreadsheets, databases, and APIs.
+Before students begin analyzing a dataset, they need time to simply explore it. This initial observation helps students become familiar with the information before they start looking for patterns or drawing conclusions.
 
-<img src="https://images.code.org/d6df6b77273f9067ddc00b6dbddf5c07-image-1766165351780.png" alt="javascript code for a helper function to get index" width="500px" style="border-radius:10px; float:right; margin: 40px 0 20px 20px;">
+As you preview the pet adoption dataset, think about what students might notice first and how you can encourage productive discussion without immediately pointing out specific patterns.
 
+<img src="https://images.code.org/e23d839d37a715208d9070fded96fa6d-image-1784052190269.png" alt="javascript code for a helper function to get index" width="400" style="border-radius:10px; float:right; margin: 0px 0 20px 20px;">
 
-## Clean vs. Messy Data
+## Guide Thinking
 
-Using helper functions like `getItemByIndex` or `getItemById` helps clarify whether the data is clean or messy because they force you to define what “valid” data access looks like. 
+As you examine the dataset, consider questions like:
 
-These functions make it easier to catch issues early, such as:
+- What information is included for each pet?
+- What observations might students make on their own?
+- What questions could students ask about the data?
+- How might you encourage students to look beyond the first few records?
 
-- Invalid indexes or missing IDs
+<div style="clear:both;"></div>
 
-- Unexpected input values
+### **Looking Ahead**
 
-When a helper function returns null, it signals that something doesn’t match expectations, making it easier to debug and improve data reliability before problems spread through the program.
-
----
-
-## Next up
-
-Practice cleaning up a dataset! 
+In the next level, you'll take a closer look at the pet adoption dataset to identify patterns, missing information, and uneven representation that can influence how people—and AI systems—interpret the data.
 MARKDOWN

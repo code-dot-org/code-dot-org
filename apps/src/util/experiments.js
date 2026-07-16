@@ -61,8 +61,6 @@ experiments.WEBLAB2_FULL_URLS = 'weblab2-full-urls';
 experiments.ACCEPT_REJECT_UNIFIED_DIFF = 'accept-reject-unified-diff';
 // Show split diff view in Code Editor.
 experiments.ACCEPT_REJECT_SPLIT_DIFF = 'accept-reject-split-diff';
-// Enable the new teacher dashboard student snapshot page and features
-experiments.STUDENT_SNAPSHOT = 'student-snapshot';
 // Show the lesson/<lesson_id>/tutor page as a home for a AI Tutor+
 experiments.LESSON_TUTOR = 'lesson-tutor';
 // Enable Onboarding experiments
@@ -75,13 +73,9 @@ experiments.USE_AI_GATEWAY = 'useAiGateway';
 experiments.ENABLE_SPEECH_TO_TEXT = 'enable-speech-to-text';
 // Legacy version of Sketch Lab. This should be removed once the new version is fully stable.
 experiments.EXCALIDRAW = 'excalidraw';
-
-/**
- * This was a gamified version of the finish dialog, built in 2018,
- * but never fully shipped.
- * See github.com/code-dot-org/code-dot-org/pull/19557
- */
-experiments.BUBBLE_DIALOG = 'bubbleDialog';
+// Student scrapbook entrypoint + "My scrapbook" dropdown link.
+// Enable with ?student-scrapbook=true or ?enableExperiments=student-scrapbook.
+experiments.STUDENT_SCRAPBOOK = 'student-scrapbook';
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.
@@ -123,6 +117,17 @@ experiments.getStoredExperiments_ = function () {
 
 experiments.getEnabledExperiments = function () {
   return this.getStoredExperiments_().map(experiment => experiment.key);
+};
+
+/**
+ * Returns the experiments enabled in this browser via local storage (the kind
+ * setEnabled manages), along with the metadata we store for them. Does not
+ * include user experiments mirrored into the _experiments cookie at sign-in.
+ * @returns {Array<{key: string, expiration?: number}>} expiration is ms since
+ *   epoch, present only for temporarily-enabled experiments.
+ */
+experiments.getLocalStorageExperimentDetails = function () {
+  return this.getLocalStorageExperiments_();
 };
 
 experiments.setEnabled = function (key, shouldEnable, expiration = undefined) {

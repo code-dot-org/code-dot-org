@@ -1,15 +1,12 @@
-import {createRoot} from 'react-dom/client';
+import {createRoot, type Root} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
-import App from './App';
+import App, {type AppProps} from './App';
+import {getAssetPath, setAssetPath} from './assetPath';
 import {TestDataLocations} from './constants';
 import {parseCSV} from './csvReaderWrapper';
 import type {Dataset} from './datasetManifest';
 import {getDatasets} from './datasetManifest';
-import {
-  type InstructionsKey,
-  setInstructionsKeyCallback,
-} from './helpers/instructions';
 import {setMetricsLogger} from './helpers/metrics';
 import I18n from './i18n';
 import {parseJSON} from './jsonReaderWrapper';
@@ -18,73 +15,82 @@ import {
   setCurrentPanel,
   setSelectedCSV,
   setSelectedJSON,
-  setSaveStatus,
   setReserveLocation,
   setInstructionsDismissed,
   setInstructionsEnabled,
-  getTrainedModelDataToSave,
+  resetState,
 } from './redux';
 import {store} from './store';
-import type {Mode, ModelDataToSave, SaveResponse} from './types';
+import train from './train';
+import type {Mode} from './types';
 
-// Re-export the consumer-facing asset-path setter from the package entry so
-// embedders get the whole public API (`initAll`, `instructionsDismissed`,
-// `setAssetPath`) from a single import.
-export {setAssetPath} from './assetPath';
+let root: Root | undefined;
 
-let saveTrainedModel:
-  | ((
-      dataToSave: ModelDataToSave,
-      callback: (response: SaveResponse) => void,
-    ) => void)
-  | null
-  | undefined = null;
-let onContinue: (() => void) | null | undefined = null;
-
-export interface InitAllOptions {
+export interface MountOptions extends AppProps {
+  /** Base path the consumer serves the lab's datasets/images from. */
+  assetPath: string;
   i18n?: Record<string, string>;
-  mode?: Mode;
-  onContinue?: () => void;
-  saveTrainedModel?: (
-    dataToSave: ModelDataToSave,
-    callback: (response: SaveResponse) => void,
-  ) => void;
   logMetric?: (eventName: string, details: Record<string, unknown>) => void;
-  setInstructionsKey?: (
-    key: InstructionsKey,
-    options: {showOverlay?: boolean} | null,
-  ) => void;
+}
+
+export interface InitAllOptions extends MountOptions {
+  mode?: Mode;
 }
 
 /**
- * @param {Object} options.i18n Optional. Object where each method returns the locale relevant
- * string to display. If this is not defined, an English string will be provided.
+ * Render the lab and wire the session-scoped consumer callbacks. Idempotent:
+ * once mounted, further calls are ignored.
+ *
+ * @param {Object} options.i18n Optional. Object where each method returns the
+ * locale relevant string to display. If undefined, English strings are used.
  */
-export const initAll = function (options: InitAllOptions): void {
+export const mount = function (options: MountOptions): void {
+  if (root) {
+    console.warn(
+      'ailab already mounted; ignoring subsequent calls to mount().',
+    );
+    return;
+  }
+  setAssetPath(options.assetPath);
   I18n.initI18n(options.i18n);
-  // Handle an optional mode.
-  const mode = options && options.mode;
-  onContinue = options && options.onContinue;
-  saveTrainedModel = options && options.saveTrainedModel;
   if (options.logMetric) {
     setMetricsLogger(options.logMetric);
   }
-  if (options && options.setInstructionsKey) {
-    setInstructionsKeyCallback(options.setInstructionsKey);
-    store.dispatch(setInstructionsEnabled(true));
-  }
-  store.dispatch(setMode(mode as Mode));
-  processMode(mode);
+  // Dispatching early so instructions enabled state is set before processMode().
+  store.dispatch(setInstructionsEnabled(!!options.setInstructionsKey));
 
-  const root = createRoot(document.getElementById('root')!);
+  root = createRoot(document.getElementById('root')!);
   root.render(
     <Provider store={store}>
-      <App
-        onContinue={onContinue!}
-        startSaveTrainedModel={startSaveTrainedModel}
-      />
+      <App {...options} />
     </Provider>,
   );
+};
+
+/**
+ * Tears down the lab.
+ */
+export const unmount = function (): void {
+  root?.unmount();
+  root = undefined;
+};
+
+/**
+ * Prepare the lab for a level. Call this once per level after mount().
+ */
+export const loadLevel = function (mode?: Mode): void {
+  store.dispatch(resetState());
+  train.reset();
+  store.dispatch(setMode(mode));
+  processMode(mode);
+};
+
+/**
+ * Mount the lab and load its initial level data in one call.
+ */
+export const initAll = function (options: InitAllOptions): void {
+  mount(options);
+  loadLevel(options.mode);
 };
 
 export const instructionsDismissed = function (): void {
@@ -93,8 +99,7 @@ export const instructionsDismissed = function (): void {
 
 // Process an optional mode.
 const processMode = (mode: Mode | undefined): void => {
-  const assetPath = (global as unknown as Record<string, string>)
-    .__ml_playground_asset_public_path__;
+  const assetPath = getAssetPath();
   let panelSet = false;
 
   if (mode) {
@@ -105,6 +110,9 @@ const processMode = (mode: Mode | undefined): void => {
       })[0];
       store.dispatch(setSelectedCSV(assetPath + item.path));
       store.dispatch(setSelectedJSON(assetPath + item.metadataPath));
+      // TODO - Fix race condition: parseCSV and parseJSON dispatch into the store 
+      // directly and are fire-and-forget, so an in-flight load from a prior 
+      // level/dataset can resolve after a newer loadLevel and clobber state.
       parseCSV(assetPath + item.path, true, false);
 
       // Also retrieve model metadata and set column data types.
@@ -117,35 +125,17 @@ const processMode = (mode: Mode | undefined): void => {
       }
       panelSet = true;
     }
-
-    if (mode.randomizeTestData) {
-      store.dispatch(setReserveLocation(TestDataLocations.RANDOM));
-    }
   }
+
+  const reserveLocation = mode?.randomizeTestData
+    ? TestDataLocations.RANDOM
+    : TestDataLocations.END;
+  store.dispatch(setReserveLocation(reserveLocation));
 
   if (!panelSet) {
     store.dispatch(setCurrentPanel('selectDataset'));
   }
 };
 
-// Do the asynchronous save of a model.
-// TODO: In the RTK migration, fold this into a thunk action so the payload is
-// composed from getState() in the thunk body and App can simply dispatch it,
-// rather than the store being reached into here.
-const startSaveTrainedModel = (): void => {
-  const dataToSave = getTrainedModelDataToSave(store.getState());
-  store.dispatch(setSaveStatus('started'));
-  saveTrainedModel!(dataToSave, (response: SaveResponse) => {
-    store.dispatch(setSaveStatus(response.status, response.data));
-    if (response.status === 'success') {
-      store.dispatch(setCurrentPanel('modelSummary'));
-    } else {
-      store.dispatch(setCurrentPanel('saveModel'));
-      console.log('Save data', response.data);
-    }
-  });
-};
-
 // Export a few types.
-export {type SaveResponse, type ModelDataToSave} from './types';
-export {type InstructionsKey} from './helpers/instructions';
+export type {SaveResponse, ModelDataToSave, InstructionsKey} from './types';

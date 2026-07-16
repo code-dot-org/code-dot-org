@@ -1,0 +1,73 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-07-13T20:29:13.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n<head>\n    <title>Temperature Logic</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n\n    <div class=\"container\">\n        <h1>Fashion Thermometer</h1>\n        \n        <div class=\"thermometer\">\n            <div id=\"mercury\"></div>\n        </div>\n\n        <h2 id=\"message\">Wear pants.</h2>\n        \n        <p>Temperature: <span id=\"temp-number\">60</span>°F</p>\n        <input type=\"range\" id=\"slider\" min=\"0\" max=\"100\" value=\"60\">\n    </div>\n\n    <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "contents": "// Link HTML elements to JS variables\nconst slider = document.getElementById(\"slider\");\nconst mercury = document.getElementById(\"mercury\");\nconst message = document.getElementById(\"message\");\nconst tempNumber = document.getElementById(\"temp-number\");\n\n// Define the function\nconst updateThermometer = () => {\n    // Get the current number from the slider\n    let temperature = slider.value;\n\n    // Update the text and the red bar height\n    tempNumber.innerText = temperature;\n    mercury.style.height = temperature + \"%\";\n\n    // Conditional Logic\n    if (temperature > 70) {\n        message.innerText = \"Put on shorts!\";\n        message.style.color = \"orange\";\n        document.body.style.backgroundColor = \"#ff7e5f\"; // Warm Orange\n    } else {\n        message.innerText = \"Wear pants.\";\n        message.style.color = \"blue\";\n        document.body.style.backgroundColor = \"#70a1ff\"; // Cool Blue\n    }\n};\n\n// Tell the slider to call the updateThermometer function\nslider.addEventListener(\"input\", updateThermometer);",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "contents": "/* Basic Page Setup */\nbody {\n    font-family: sans-serif;\n    text-align: center;\n    background-color: #f0f0f0;\n    padding: 20px;\n}\n\n/* A white box to hold our app */\n.container {\n    background: white;\n    padding: 20px;\n    border-radius: 10px;\n    max-width: 400px; /* Limits width on big screens */\n    margin: auto;     /* Centers the box on the screen */\n}\n\n/* The Thermometer \"Tube\" */\n.thermometer {\n    width: 40px;\n    height: 200px;\n    background-color: #ddd;\n    border: 3px solid black;\n    border-radius: 20px;\n    margin: 20px auto; /* Centers the thermometer */\n    \n    /* This makes the red part grow from the bottom */\n    display: flex;\n    flex-direction: column-reverse;\n    overflow: hidden;\n}\n\n/* The \"Mercury\" (the red part) */\n#mercury {\n    width: 100%;\n    height: 60%; /* This is what the JS will change */\n    background-color: red;\n}\n\n/* The Slider */\n#slider {\n    width: 100%;\n}",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2"
+      ]
+    },
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\n1.  Move the slider to test the cases you wrote down. \r\n2.  Hack the code by making changes to the `script.js` file. Find the section labeled `Conditional Logic` and customize the colors, message, and more.\r\n3.  Try it out! Test the slider to see your changes take effect.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "example",
+        "explainCode",
+        "testCase"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "teacher_markdown": "## **Teacher Tips**\r\n\r\n### **Students may think the condition runs only once**\r\n\r\nSome students may assume the `if` statement runs when the page loads and then stays fixed. Encourage them to move the slider and observe how the condition is checked each time the value changes.\r\n\r\nRelevant code:\r\n```javascript\r\nslider.addEventListener(\"input\", updateThermometer);\r\n```\r\n\r\n```javascript\r\nif (temperature > 70) {\r\n  ...\r\n} else {\r\n  ...\r\n}\r\n```\r\n\r\nAsk: **\"When does the program decide which message to show?\"**\r\n\r\n---\r\n\r\n### **Students may change the output but not the condition**\r\n\r\nStudents often focus on changing the message or colors without understanding what triggers those changes. Encourage them to experiment with the threshold by asking: **\"What would happen if you changed `70` to `50`?\"**\r\n\r\nRelevant code:\r\n```javascript\r\nif (temperature > 70) {\r\n    message.innerText = \"Put on shorts!\";\r\n    message.style.color = \"orange\";\r\n}\r\n```\r\n\r\nThis helps students connect the condition to the resulting behavior.\r\n\r\n---\r\n\r\n### **Students may think every change needs to happen in both branches**\r\n\r\nWhen customizing the app, students may edit only the `if` block and wonder why the app reverts to old behavior at lower temperatures. Help them notice that the program has two possible paths.\r\n\r\nRelevant code:\r\n```javascript\r\nif (temperature > 70) {\r\n    message.innerText = \"Put on shorts!\";\r\n    message.style.color = \"orange\";\r\n} else {\r\n    message.innerText = \"Wear pants.\";\r\n    message.style.color = \"blue\";\r\n}\r\n```\r\n\r\nAsk: **\"What should happen when the temperature is above the threshold? What should happen when it's below it?\"**",
+    "name_suffix": "_-js-2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-13T20:29:13.155+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson5-level1-explore_-js-2026\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson5-level1-explore_-js-2026\"},{\"changed_at\":\"2026-07-13 20:29:18 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

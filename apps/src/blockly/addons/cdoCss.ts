@@ -94,6 +94,22 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
     .blocklyPath:focus {
       outline: none;
     }
+    .blocklyToolbox {
+      background-color: var(--background-neutral-tertiary) !important;
+    }
+    .blocklyToolboxCategoryLabel {
+      color: var(--text-neutral-primary) !important;
+    }
+    .blocklyFlyoutBackground {
+      fill: var(--background-neutral-tertiary) !important;
+    }
+    .blocklyScrollbarHandle {
+      fill: var(--background-neutral-quinary) !important;
+    }
+    .blocklyDropDownDiv {
+      background-color: var(--background-neutral-primary) !important;
+      border-color: var(--borders-neutral-primary) !important;
+    }
     `
   );
 }

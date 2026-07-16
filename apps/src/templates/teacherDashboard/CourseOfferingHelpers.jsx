@@ -70,6 +70,9 @@ export const translatedCourseOfferingDurationsWithTime = {
 
 export const translatedCourseOfferingMarketingInitiatives = {
   aif: i18n.marketingInitiativeAIF(),
+  // AID was added after we stopped translating strings in en_us.json, so adding it as plaintext here.
+  // Keeping other strings as functions so as not to lose our existing translations.
+  aid: 'AI Discoveries',
   csa: i18n.marketingInitiativeCSA(),
   csc: i18n.marketingInitiativeCSC(),
   csd: i18n.marketingInitiativeCSD(),
