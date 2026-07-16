@@ -259,16 +259,10 @@ class ApiController < ApplicationController
     section = load_section
     script = load_script(section)
 
-    # No resolvable script (the request named no script and the section has no
-    # assigned unit) means there is no progress to summarize; return an empty
-    # page.
-    unless script
-      return render json: {
-        student_progress: {},
-        student_last_updates: {},
-        pagination: {total_pages: 0, page: 0, per: 0}
-      }
-    end
+    # A nil script (the request named no script and the section has no assigned
+    # unit) leaves nothing to summarize progress against; no shipped client
+    # requests this endpoint without a script_id.
+    return head :bad_request unless script
 
     # Clients are seeing requests time out for large sections as we attempt to
     # send back all of this data. Allow them to instead request paginated data

@@ -1161,7 +1161,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test 'section_level_progress response should not be cached by the browser' do
-    get :section_level_progress, params: {section_id: @section.id, page: 1, per: 2}
+    get :section_level_progress, params: {section_id: @section.id, script_id: @script.id, page: 1, per: 2}
     assert_response :success
     assert_match "no-store", response.headers["Cache-Control"]
   end
@@ -2248,7 +2248,8 @@ end
 
 # ApiController#load_script resolves the script_id param, then the section's
 # assigned unit; when neither is present it returns nil, and the section
-# endpoints render an empty state. (Until 2026 load_script instead fell back
+# endpoints render an empty state or reject the request. (Until 2026
+# load_script instead fell back
 # to the hourofcode unit; no shipped client could observe that default
 # producing anything but these same empty responses.) These tests pin the
 # empty-state responses, and that they do not depend on the hourofcode unit
@@ -2280,12 +2281,9 @@ class ApiControllerNoDefaultScriptTest < ActionController::TestCase
     assert_equal({}, data[@section.id.to_s]['lessons'])
   end
 
-  test 'section_level_progress returns an empty page for a section with no script' do
+  test 'section_level_progress returns bad_request for a section with no script' do
     get :section_level_progress, params: {section_id: @section.id}
-    assert_response :success
-    data = JSON.parse(@response.body)
-    assert_empty data['student_progress']
-    assert_empty data['student_last_updates']
+    assert_response :bad_request
   end
 
   test 'teacher_panel_progress returns bad_request for a section with no script' do
@@ -2307,8 +2305,7 @@ class ApiControllerNoDefaultScriptTest < ActionController::TestCase
     assert_equal '[]', @response.body
 
     get :section_level_progress, params: {section_id: @section.id}
-    assert_response :success
-    assert_empty JSON.parse(@response.body)['student_progress']
+    assert_response :bad_request
 
     get :lockable_state
     assert_response :success
