@@ -194,14 +194,22 @@ export class SketchLab extends LessonLevelPage {
   }
 
   /**
+   * Click a shape node to select it, and wait for its style toolbar. A
+   * full-window visual capture between steps can clear the canvas selection,
+   * unmounting the style toolbar, so re-select before touching it.
+   */
+  async selectShape(shapeType: SketchLabShapeType): Promise<void> {
+    await this.shapeNode(shapeType).last().click();
+    await expect(this.styleToolbar).toBeVisible();
+  }
+
+  /**
    * Pick a background color for the selected shape from its style toolbar.
    * The trigger's accessible name is its row label plus the current value
    * (via aria-labelledby, e.g. "Background Clear"), so match on the prefix.
    */
   async setBackgroundColor(colorName: string): Promise<void> {
-    await this.styleToolbar
-      .getByRole('button', {name: /^Background/})
-      .click();
+    await this.styleToolbar.getByRole('button', {name: /^Background/}).click();
     await this.page
       .getByRole('button', {name: `Background: ${colorName}`})
       .click();

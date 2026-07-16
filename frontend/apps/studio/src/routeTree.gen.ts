@@ -10,12 +10,18 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as UsersEditRouteImport } from './routes/users/edit'
 import { Route as ProjectsLabTypeChannelIdEditRouteImport } from './routes/projects/$labType/$channelId/edit'
 import { Route as CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRouteImport } from './routes/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UsersEditRoute = UsersEditRouteImport.update({
+  id: '/users/edit',
+  path: '/users/edit',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjectsLabTypeChannelIdEditRoute =
@@ -35,17 +41,20 @@ const CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPosition
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/users/edit': typeof UsersEditRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
   '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition': typeof CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/users/edit': typeof UsersEditRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
   '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition': typeof CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/users/edit': typeof UsersEditRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
   '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition': typeof CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute
 }
@@ -53,22 +62,26 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/users/edit'
     | '/projects/$labType/$channelId/edit'
     | '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/users/edit'
     | '/projects/$labType/$channelId/edit'
     | '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition'
   id:
     | '__root__'
     | '/'
+    | '/users/edit'
     | '/projects/$labType/$channelId/edit'
     | '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  UsersEditRoute: typeof UsersEditRoute
   ProjectsLabTypeChannelIdEditRoute: typeof ProjectsLabTypeChannelIdEditRoute
   CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute: typeof CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute
 }
@@ -80,6 +93,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/users/edit': {
+      id: '/users/edit'
+      path: '/users/edit'
+      fullPath: '/users/edit'
+      preLoaderRoute: typeof UsersEditRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projects/$labType/$channelId/edit': {
@@ -101,6 +121,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  UsersEditRoute: UsersEditRoute,
   ProjectsLabTypeChannelIdEditRoute: ProjectsLabTypeChannelIdEditRoute,
   CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute:
     CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute,
