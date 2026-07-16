@@ -10,6 +10,7 @@ import MyInformation from '../MyInformation';
 // lists; the student fixture carries the values the dropdown tests select.
 const STUDENT = {
   userType: 'student',
+  isUsa: true,
   ageOptions: [
     {value: '14', text: '14'},
     {value: '21+', text: '21+'},
@@ -30,6 +31,7 @@ function renderSection(
         name: 'Sam',
         age: '',
         us_state: '',
+        gender: '',
         ...values,
       }}
     >
@@ -64,6 +66,28 @@ describe('MyInformation age/state dropdowns', () => {
     expect(
       screen.getByRole('textbox', {name: 'Last name'}),
     ).toBeInTheDocument();
+  });
+
+  it('hides the State field for a non-US student but keeps age', () => {
+    renderSection({...STUDENT, isUsa: false} as UserSettings);
+    expect(screen.queryByRole('combobox', {name: 'State'})).toBeNull();
+    expect(screen.getByRole('combobox', {name: 'Age'})).toBeInTheDocument();
+  });
+});
+
+describe('MyInformation gender', () => {
+  it('renders an optional gender field for a student', () => {
+    renderSection(STUDENT, {gender: 'Nonbinary'});
+    expect(
+      screen.getByRole('textbox', {name: 'Gender (optional)'}),
+    ).toHaveValue('Nonbinary');
+  });
+
+  it('omits gender for a teacher', () => {
+    renderSection(TEACHER, {family_name: 'Lovelace'});
+    expect(
+      screen.queryByRole('textbox', {name: 'Gender (optional)'}),
+    ).toBeNull();
   });
 });
 

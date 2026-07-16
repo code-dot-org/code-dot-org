@@ -14,6 +14,7 @@ export default function MyInformation({settings}: SectionProps) {
   const displayName = useField('name');
   const age = useField('age');
   const usState = useField('us_state');
+  const gender = useField('gender');
 
   // Disabled placeholder: shows "Select …" while unset, but can't be re-selected
   // to blank a value. Age and (US-student) state are required — and a blank age
@@ -89,15 +90,28 @@ export default function MyInformation({settings}: SectionProps) {
                 styleAsFormField
               />
             </Field>
+            {/* US-state is collected only for students in the USA. */}
+            {settings.isUsa && (
+              <Field>
+                <SimpleDropdown
+                  name="us_state"
+                  labelText="State"
+                  items={usStateItems}
+                  selectedValue={usState.value}
+                  onChange={event => usState.onChange(event.target.value)}
+                  errorMessage={usState.errors[0]}
+                  styleAsFormField
+                />
+              </Field>
+            )}
             <Field>
-              <SimpleDropdown
-                name="us_state"
-                labelText="State"
-                items={usStateItems}
-                selectedValue={usState.value}
-                onChange={event => usState.onChange(event.target.value)}
-                errorMessage={usState.errors[0]}
-                styleAsFormField
+              <TextField
+                label="Gender (optional)"
+                name="gender"
+                value={gender.value}
+                onChange={event => gender.onChange(event.target.value)}
+                errorMessage={gender.errors[0]}
+                aria-invalid={gender.errors.length > 0 || undefined}
               />
             </Field>
           </>

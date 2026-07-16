@@ -4,8 +4,9 @@
 # failed_attempts, locked_at, IPs, or admin flags. Field visibility (student
 # email masking, edit-affordance gating) is computed server-side, not the client.
 class User::SettingsSerializer
-  def initialize(user)
+  def initialize(user, is_usa: nil)
     @user = user
+    @is_usa = is_usa
   end
 
   def as_json(*)
@@ -30,6 +31,12 @@ class User::SettingsSerializer
       can_delete_own_account: user.can_delete_own_account?,
       age: user.age,
       us_state: user.us_state,
+      # The raw gender string the student entered, round-tripped so the free-text
+      # field re-renders what they typed. Only the student view surfaces it.
+      gender: user.gender_student_input,
+      # Whether the request resolves to the USA; the client gates the US-state
+      # field on it. Computed by the controller (needs request geo), not here.
+      is_usa: @is_usa,
       # Student-only "For Parents and Guardians" value; absent when unset.
       parent_email: user.parent_email.presence,
       dependent_students_count: dependent_students_count,

@@ -47,6 +47,7 @@ export default function UsersDetailsForm({settings}: {settings: UserSettings}) {
       ...(dirty.username !== undefined && {username: dirty.username}),
       ...(dirty.age !== undefined && {age: dirty.age}),
       ...(dirty.us_state !== undefined && {usState: dirty.us_state}),
+      ...(dirty.gender !== undefined && {gender: dirty.gender}),
     };
 
     try {
