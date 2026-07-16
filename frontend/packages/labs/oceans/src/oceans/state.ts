@@ -192,6 +192,7 @@ export const setState = function (
  * @returns The merged state.
  */
 export const setInitialState = function (newState: Partial<State>): State {
+  clearInterval(state.guideTypingTimer);
   return setStateInternal({...initialState, ...newState});
 };
 
@@ -219,6 +220,7 @@ export const setSetStateCallback = (callback: () => void): void => {
 
 /** Resets state to initial values without firing the callback. */
 export const resetState = (): State => {
+  clearInterval(state.guideTypingTimer);
   state = {...initialState};
   return state;
 };
