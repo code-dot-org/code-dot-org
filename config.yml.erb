@@ -679,6 +679,15 @@ active_job_queues:
   :default: :default
   :mailers: :mailers
   :mailjet: :mailjet
+  :low_priority: :low_priority
+
+# Delayed Job priority per ActiveJob queue. Lower numbers run first.
+# See dashboard/config/initializers/delayed_job_config.rb.
+active_job_queue_priorities:
+  :mailers: -10
+  :mailjet: -10
+  :default: 0
+  :low_priority: 10
 
 # ActiveJob Queue Adapter
 active_job_queue_adapter: :delayed_job
