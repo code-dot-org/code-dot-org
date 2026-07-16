@@ -1,0 +1,64 @@
+.themeDropdown {
+  width: 100% !important;
+  margin-bottom: 8px;
+}
+
+.menu {
+  // The theme list is long; cap the menu height so it scrolls
+  // (the old react-select menu was capped at 70vh).
+  max-height: 60vh;
+  overflow-y: auto;
+  min-width: 220px;
+}
+
+// Option styling follows the library's own dropdownMenuItem convention
+// (see component-library/src/dropdown/customDropdown.module.scss): hover is
+// neutral-tertiary, the selected item is teal with white text.
+.option {
+  // Reset button appearance
+  background: none;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  text-decoration: none;
+  box-shadow: none;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: var(--text-neutral-primary);
+  padding: 0.25rem 1rem;
+
+  img {
+    width: 36px;
+    height: 36px;
+  }
+
+  span {
+    color: inherit;
+    margin-bottom: 0;
+    flex-grow: 1;
+    text-align: start;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--background-neutral-tertiary);
+    box-shadow: none;
+  }
+}
+
+.selectedOption {
+  background-color: var(--background-brand-teal-primary);
+
+  span {
+    color: var(--text-neutral-white-fixed);
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--background-brand-teal-primary);
+  }
+}

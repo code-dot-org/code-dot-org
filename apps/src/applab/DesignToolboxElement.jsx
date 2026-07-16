@@ -18,8 +18,7 @@ export default class DesignToolboxElement extends React.Component {
   render() {
     const styles = {
       outerContainer: {
-        // The icon images are 120px wide and depend on this width for scaling.
-        width: 120,
+        width: '6rem',
         display: 'inline-block',
         textAlign: 'center',
         paddingBottom: 15,
