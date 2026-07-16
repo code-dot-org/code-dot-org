@@ -47,7 +47,19 @@
   -# AddParentEmailController / RemoveParentEmailController attach to the
   -# Update/Remove links it renders (by id), so it is mounted before they're
   -# constructed in edit.js.
-  #add-parent-email{data: {heading: t('user.for_parents_and_guardians'), intro: t('user.link_a_parent_email'), email_label: t('user.parent_guardian_email_label'), current_email: (current_user.parent_email.presence || t('user.none')), update_label: t('user.update_email'), has_parent_email: current_user.parent_email&.present?, or_label: t('or'), remove_label: t('user.remove_parent_email_label'), note: t('user.only_one_parent_email_supported_warning')}}
+  #add-parent-email{
+    data: {
+      heading: t('user.for_parents_and_guardians'),
+      intro: t('user.link_a_parent_email'),
+      email_label: t('user.parent_guardian_email_label'),
+      current_email: current_user.parent_email.presence || t('user.none'),
+      update_label: t('user.update_email'),
+      has_parent_email: current_user.parent_email.present?.to_s,
+      or_label: t('or'),
+      remove_label: t('user.remove_parent_email_label'),
+      note: t('user.only_one_parent_email_supported_warning'),
+    }
+  }
 
 - if current_user.teacher? && Policies::Lti.lti?(current_user)
   %div#lti-sync-settings{
@@ -155,7 +167,12 @@
 
 -# Mount point for React DeleteAccount component. Renders either the delete UI
 -# or, for teacher-managed accounts, a notice that deletion isn't permitted.
-#delete-account{data: {can_delete: current_user.can_delete_own_account?, managed_note: t('user.delete_text_teacher_managed_note')}}
+#delete-account{
+  data: {
+    can_delete: current_user.can_delete_own_account?.to_s,
+    managed_note: t('user.delete_text_teacher_managed_note'),
+  }
+}
 
 -# Hidden form used to asynchronously submit an email change to Rails with the
 -# appropriate authenticity tokens.  See ChangeEmailModal.jsx for more details.

@@ -19,6 +19,7 @@ import {
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
 
+import {lab2EntryPoints} from '../../lab2EntryPoints';
 import {
   setProjectUpdatedAt,
   setProjectUpdatedError,
@@ -154,6 +155,18 @@ export const setUpWithLevel = createAsyncThunk<
       return;
     }
 
+    // If the lab loads and saves its own project (the useSources hook), skip
+    // the framework's project setup and just set the level data.
+    if (lab2EntryPoints[levelProperties.appName]?.managesOwnProject) {
+      setProjectAndLevelData(
+        {levelProperties},
+        thunkAPI.signal.aborted,
+        thunkAPI.dispatch,
+        thunkAPI.getState
+      );
+      return;
+    }
+
     // If we are in a block edit mode or are editing or viewing exemplars,
     // we don't use a channel id.
     // We can skip creating a project manager and just set the level data.
@@ -172,7 +185,11 @@ export const setUpWithLevel = createAsyncThunk<
     // We only can load predict responses if we have a script id.
     if (levelProperties.predictSettings?.isPredictLevel && payload.scriptId) {
       const predictResponse =
-        (await getPredictResponse(payload.levelId, payload.scriptId)) || '';
+        (await getPredictResponse(
+          payload.levelId,
+          payload.scriptId,
+          payload.userId
+        )) || '';
       thunkAPI.dispatch(setLoadedPredictResponse(predictResponse));
     } else {
       // If this isn't a predict level, reset the response to an empty string

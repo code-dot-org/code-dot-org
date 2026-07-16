@@ -24,11 +24,18 @@ export async function withPlaywrightCheck(
   }
 
   const check: VisualCheck = async (name, opts = {}) => {
-    await expect(page).toHaveScreenshot(`${name}.png`, {
-      animations: 'disabled',
-      mask: opts.mask,
-      fullPage: opts.fully ?? true,
-    });
+    if (opts.region) {
+      await expect(opts.region).toHaveScreenshot(`${name}.png`, {
+        animations: 'disabled',
+        mask: opts.mask,
+      });
+    } else {
+      await expect(page).toHaveScreenshot(`${name}.png`, {
+        animations: 'disabled',
+        mask: opts.mask,
+        fullPage: opts.fully ?? true,
+      });
+    }
   };
 
   await use(check);

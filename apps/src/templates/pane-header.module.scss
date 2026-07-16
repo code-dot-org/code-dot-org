@@ -15,8 +15,8 @@
   cursor: pointer;
   float: right;
   overflow: hidden;
-  color: color.$neutral_dark;
-  background-color: color.$neutral_white;
+  color: var(--text-neutral-primary);
+  background-color: var(--background-neutral-primary);
   margin: 3px 3px 3px 0;
   height: 24px;
   border-radius: 4px;
@@ -26,20 +26,20 @@
 
   &:hover {
     box-shadow: none;
-    background-color: color.$neutral_dark10;
+    background-color: var(--background-neutral-tertiary);
   }
 
   &:disabled {
-    background-color: color.$light_gray;
+    background-color: var(--background-neutral-disabled);
     cursor: default;
     border: 0;
     &:hover {
-      background-color: color.$light_gray;
+      background-color: var(--background-neutral-disabled);
     }
   }
 
   span {
-    color: color.$neutral_dark;
+    color: var(--text-neutral-primary);
     font-size: 13px;
   }
 
@@ -69,19 +69,19 @@
   }
 
   &Unfocused {
-    background-color: color.$neutral_white;
+    background-color: var(--background-neutral-primary);
   }
 
   &Pressed {
-    background-color: color.$white;
-    color: color.$purple;
+    background-color: var(--background-neutral-white-fixed);
+    color: var(--text-brand-purple-primary);
     &:hover {
-      color: color.$white;
+      color: var(--text-neutral-white-fixed);
     }
   }
 
   &Disabled {
-    background-color: color.$light_gray;
+    background-color: var(--background-neutral-disabled);
     cursor: default;
   }
 

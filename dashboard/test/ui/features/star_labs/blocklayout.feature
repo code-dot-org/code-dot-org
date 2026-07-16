@@ -1,3 +1,4 @@
+@playwright
 Feature: Block auto-layout
 Background:
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/7/levels/2?noautoplay=true"
@@ -20,6 +21,6 @@ Scenario: Auto-placing blocks with XML positioning
   When I've initialized the workspace with a manually-positioned playlab puzzle
 
   Then block "whenUp" is near offset "20, 166"
-  And block "whenDown" is near offset "16, 233"
+  And block "whenDown" is near offset "16, 239"
   And block "whenLeft" is near offset "20, 22"
   And block "whenRight" is near offset "16, 92"

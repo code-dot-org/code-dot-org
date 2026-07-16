@@ -1,0 +1,39 @@
+import {render, screen} from '@testing-library/react';
+import '@testing-library/jest-dom';
+import React from 'react';
+
+import StudentResourcesPanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/StudentResources/StudentResourcesPanel';
+
+// GuidedWalkthroughs pulls in shepherd.js and analytics; stub it so these
+// tests exercise only the panel's section-gating logic.
+jest.mock(
+  '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/StudentResources/GuidedWalkthroughs',
+  () => () => <div>Guided walkthroughs stub</div>
+);
+
+describe('StudentResourcesPanel', () => {
+  it('renders the shortcuts hint when shortcuts are provided', () => {
+    render(
+      <StudentResourcesPanel
+        levelTours={[]}
+        otherAvailableTours={[]}
+        shortcuts={{Navigation: [{shortcut: 'Tab', explanation: 'Move focus'}]}}
+      />
+    );
+    expect(screen.getByText('Keyboard shortcuts')).toBeInTheDocument();
+    expect(
+      screen.getByText(/available shortcuts in this lab/)
+    ).toBeInTheDocument();
+    // The hint points at the `/` key, but not the full shortcut table.
+    expect(screen.getByText('/')).toBeInTheDocument();
+    expect(screen.queryByText('Move focus')).not.toBeInTheDocument();
+    expect(
+      screen.queryByText('Guided walkthroughs stub')
+    ).not.toBeInTheDocument();
+  });
+
+  it('omits the shortcuts hint when no shortcuts are provided', () => {
+    render(<StudentResourcesPanel levelTours={[]} otherAvailableTours={[]} />);
+    expect(screen.queryByText('Keyboard shortcuts')).not.toBeInTheDocument();
+  });
+});
