@@ -4,6 +4,9 @@
   color: var(--text-neutral-white-fixed);
   display: flex;
   flex-direction: row;
+  height: 1.875rem;
+  gap: .125rem;
+  padding-inline-end: .125rem;
 }
 
 .paneSection {

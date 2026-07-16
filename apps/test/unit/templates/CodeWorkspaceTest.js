@@ -51,7 +51,7 @@ describe('CodeWorkspace', () => {
 
     workspace.find(ShowCodeToggle).simulate('click');
     let counter = workspace.find('#blockCounter');
-    expect(counter).to.have.style('display', 'inline-block');
+    expect(counter).to.have.style('display', 'flex');
   });
 
   it('onToggleShowCode does not display blocks for levels with enableShowBlockCount=false', () => {

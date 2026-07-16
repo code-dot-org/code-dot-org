@@ -59,7 +59,10 @@ export default class DesignModeHeaders extends React.Component {
       <button
         className="hide-toolbox-icon"
         type="button"
-        style={[commonStyles.hidden, this.chevronStyle(!this.props.isRtl)]}
+        style={{
+          ...commonStyles.hidden,
+          ...this.chevronStyle(!this.props.isRtl),
+        }}
         onClick={this.onToggleToolbox}
       >
         <i className="fa-solid fa-circle-chevron-right" />
@@ -71,7 +74,7 @@ export default class DesignModeHeaders extends React.Component {
     return (
       <button
         type="button"
-        style={[commonStyles.hidden, this.chevronStyle(this.props.isRtl)]}
+        style={{...commonStyles.hidden, ...this.chevronStyle(this.props.isRtl)}}
         className="show-toolbox-icon"
       >
         <i className="fa-solid fa-circle-chevron-right" />

@@ -114,7 +114,6 @@ class CodeWorkspace extends React.Component {
       autogenerateML,
     } = this.props;
     const showSettingsCog = withSettingsCog && !readonlyWorkspace;
-    const textStyle = showSettingsCog ? {paddingLeft: '2em'} : undefined;
     const chevronStyle = {
       ...styles.chevronButton,
       ...(runModeIndicators && isRunning ? styles.runningIcon : {}),
@@ -144,9 +143,14 @@ class CodeWorkspace extends React.Component {
               <i className="fa-solid fa-circle-chevron-right" />
             </button>
           </span>
-          <span style={textStyle}>
+          <MuiTypography
+            variant="body4"
+            sx={{
+              color: 'var(--text-neutral-white-fixed)',
+            }}
+          >
             {editCode ? i18n.toolboxHeaderDroplet() : i18n.toolboxHeader()}
-          </span>
+          </MuiTypography>
           <span>{settingsCog}</span>
         </PaneSection>
         <PaneSection
@@ -174,7 +178,7 @@ class CodeWorkspace extends React.Component {
 
   onToggleShowCode = usingBlocks => {
     this.blockCounterEl.style.display =
-      usingBlocks && studioApp().enableShowBlockCount ? 'inline-block' : 'none';
+      usingBlocks && studioApp().enableShowBlockCount ? '' : 'none';
   };
 
   // The workspace alert will be displayed at the bottom of codeTextbox if editCode is
@@ -218,7 +222,7 @@ class CodeWorkspace extends React.Component {
             style={{
               alignItems: 'center',
               flex: '1 1 0',
-              gap: '.5rem',
+              gap: '0.5rem',
               display: 'flex',
               flexDirection: 'row',
               justifyContent: 'center',
@@ -247,14 +251,17 @@ class CodeWorkspace extends React.Component {
               ref={el => (this.blockCounterEl = el)}
               sx={{
                 color: 'var(--text-neutral-white-fixed)',
+                display: 'flex',
+                flexDirection: 'row',
+                gap: 1,
               }}
             >
-              <span>: </span>
+              <span>-</span>
               <ProtectedStatefulDiv
                 id="blockUsed"
                 className="block-counter-default"
               />
-              <span> / </span>
+              <span>/</span>
               <span id="idealBlockNumber" />
               <span>{' ' + i18n.blocks()}</span>
             </MuiTypography>
