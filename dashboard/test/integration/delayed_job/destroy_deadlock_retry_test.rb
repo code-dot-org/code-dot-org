@@ -7,7 +7,7 @@ class DelayedJobDestroyDeadlockRetryTest < ActionDispatch::IntegrationTest
   self.pre_loaded_fixtures = false
 
   class TestJob < ::ApplicationJob
-    disable_test_adapter
+    self.queue_adapter = :delayed_job
 
     class_attribute :perform_count, default: 0
 
@@ -27,12 +27,9 @@ class DelayedJobDestroyDeadlockRetryTest < ActionDispatch::IntegrationTest
   let(:deletion_deadlock_error) {ActiveRecord::Deadlocked.new('deletion deadlock test')}
 
   around do |test|
-    original_delay_jobs = Delayed::Worker.delay_jobs
-    Delayed::Worker.delay_jobs = true
-
+    TestJob.disable_test_adapter
     test.call
   ensure
-    Delayed::Worker.delay_jobs = original_delay_jobs
     TestJob.reset
     delayed_job.destroy!
   end
