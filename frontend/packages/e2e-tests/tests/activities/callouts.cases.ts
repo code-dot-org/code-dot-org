@@ -37,24 +37,24 @@ export const CALLOUT_TARGET_TEST_CASES: CalloutTargetTestCase[] = [
   },
   {
     title:
-      'callout 1 (run button) has correct content and is dismissable via run button on ui-test-csf level 4',
-    url: labLevelUrl({course: 'ui-test-csf', lesson: 1, level: 4}),
+      'callout 1 (run button) has correct content and is dismissable via run button on ui-test-maze level 1',
+    url: labLevelUrl({course: 'ui-test-maze', lesson: 1, level: 1}),
     calloutId: 1,
     text: 'Hit "Run" to try your program',
     closeTarget: '#runButton',
   },
   {
     title:
-      'callout 0 (moveForward) has correct content and is dismissable via moveForward block on ui-test-csf level 4',
-    url: labLevelUrl({course: 'ui-test-csf', lesson: 1, level: 4}),
+      'callout 0 (moveForward) has correct content and is dismissable via moveForward block on ui-test-maze level 1',
+    url: labLevelUrl({course: 'ui-test-maze', lesson: 1, level: 1}),
     calloutId: 0,
     text: 'Drag a "move" block and snap it below the other block',
     closeTarget: "[data-id='moveForward']",
   },
   {
     title:
-      'callout 0 (grey block) has correct content and is dismissable via g element on ui-test-csf level 7',
-    url: labLevelUrl({course: 'ui-test-csf', lesson: 1, level: 7}),
+      'callout 0 (grey block) has correct content and is dismissable via g element on ui-test-maze level 4',
+    url: labLevelUrl({course: 'ui-test-maze', lesson: 1, level: 4}),
     calloutId: 0,
     text: "Blocks that are grey can't be deleted. Can you solve the puzzle anyway?",
     closeTarget: 'g',
@@ -64,8 +64,8 @@ export const CALLOUT_TARGET_TEST_CASES: CalloutTargetTestCase[] = [
 export const CALLOUT_CLOSE_BUTTON_TEST_CASES: CalloutCloseButtonTestCase[] = [
   {
     title:
-      'callout 0 has correct content and is dismissable via x-button on ui-test-csf level 6',
-    url: labLevelUrl({course: 'ui-test-csf', lesson: 1, level: 6}),
+      'callout 0 has correct content and is dismissable via x-button on ui-test-maze level 3',
+    url: labLevelUrl({course: 'ui-test-maze', lesson: 1, level: 3}),
     calloutId: 0,
     text: 'Click here to watch the video again',
   },

@@ -1,7 +1,7 @@
 Feature: Clear Puzzle
 
 Background:
-  Given I am on "http://studio.code.org/courses/ui-test-csf/units/1/lessons/1/levels/4?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/ui-test-maze/units/1/lessons/1/levels/1?noautoplay=true"
   And I wait for the lab page to fully load
   And I dismiss the login reminder
   Then element "#runButton" is visible
