@@ -1,6 +1,28 @@
 .themeDropdown {
   width: 100% !important;
   margin-bottom: 8px;
+
+  button {
+    height: 3rem !important;
+  }
+}
+
+// Selected value shown in the closed control: theme preview icon + name.
+.selectedValue {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  vertical-align: middle;
+
+  img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  span {
+    flex: 1 1 0;
+    text-align: center;
+  }
 }
 
 .menu {

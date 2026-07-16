@@ -73,6 +73,14 @@ export const ThemeDropdown = ({
     setSelectedValue(value);
   };
 
+  const selectedOption = themeOptionsForSelect.find(
+    themeOption => themeOption.option === selectedValue
+  );
+  const selectedName =
+    applabMsg[
+      `designElementTheme_${selectedValue}` as keyof typeof applabMsg
+    ]();
+
   return (
     <CustomDropdown
       name="design-toolbox-theme"
@@ -80,9 +88,13 @@ export const ThemeDropdown = ({
       size="s"
       styleAsFormField={true}
       labelText={description || ''}
-      selectedValueText={applabMsg[
-        `designElementTheme_${selectedValue}` as keyof typeof applabMsg
-      ]()}
+      selectedValueText={
+        <span className={moduleStyles.selectedValue}>
+          {/* decorative: the theme name follows */}
+          {selectedOption && <img src={selectedOption.icon} alt="" />}
+          <span>{selectedName}</span>
+        </span>
+      }
       aria-label={description}
     >
       <ThemeMenu selectedValue={selectedValue} onSelect={onSelect} />

@@ -13,10 +13,14 @@ const DEFAULT_PROPS = {
 const getTrigger = () => screen.getByRole('button', {name: 'Theme'});
 
 describe('ThemeDropdown', () => {
-  it('shows the selected theme name in the closed control', () => {
+  it('shows the selected theme name and preview icon in the closed control', () => {
     render(<ThemeDropdown {...DEFAULT_PROPS} />);
 
     expect(getTrigger()).toHaveTextContent('Citrus');
+    expect(getTrigger().querySelector('img')).toHaveAttribute(
+      'src',
+      expect.stringContaining('citrus.png')
+    );
   });
 
   it('calls handleChange with the option value and updates the selection', () => {
@@ -29,5 +33,9 @@ describe('ThemeDropdown', () => {
     expect(handleChangeSpy).toHaveBeenCalledTimes(1);
     expect(handleChangeSpy).toHaveBeenCalledWith('bubblegum');
     expect(getTrigger()).toHaveTextContent('Bubblegum');
+    expect(getTrigger().querySelector('img')).toHaveAttribute(
+      'src',
+      expect.stringContaining('bubblegum.png')
+    );
   });
 });
