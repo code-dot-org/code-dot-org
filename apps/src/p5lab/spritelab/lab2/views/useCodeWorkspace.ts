@@ -18,27 +18,25 @@ import {
 export const BLOCKLY_DIV_ID = 'spritelab2-blockly-div';
 
 interface UseCodeWorkspaceOptions {
-  // Inject only once the animation/scene stores are seeded: dropdown fields
-  // validate saved values against the store at block-load time.
   enabled: boolean;
   toolboxDefinition?: BlocklyCore.utils.toolbox.ToolboxInfo;
-  // Sprite Lab toolbox as an XML string (the classic Sprite Lab toolbox format).
+  // XML string toolbox format. TODO: switch new levels over to JSON.
   toolboxXml?: string;
   sharedBlocks?: BlockDefinition[];
   theme: 'Light' | 'Dark';
 }
 
 interface UseCodeWorkspaceResult {
-  // Compile the workspace to JavaScript for the runtime; null before inject.
+  /** Compile the workspace to JavaScript for the runtime; null before inject. */
   getCode: () => string | null;
-  // Replace the workspace contents. Doesn't emit or save — sources own the
-  // content being loaded; the caller reconciles.
+  /** Load code into the workspace. */
   loadSource: (source: WorkspaceSerialization) => void;
-  // Register the change listeners; returns an unsubscribe (call from an
-  // effect). onWorkspaceChange fires with the serialized workspace after a
-  // user edit (programmatic loads don't fire it). onIntermediateChange fires
-  // on mid-editor field edits (e.g. grid painting), which don't serialize
-  // until the editor closes.
+  /**
+   * Register the change listeners:
+   * - onWorkspaceChange fires with the serialized workspace after a user edit.
+   * - onIntermediateChange fires on mid-editor field edits (e.g. grid painting),
+   * which don't serialize until the editor closes.
+   */
   subscribeToChanges: (
     onWorkspaceChange: (source: WorkspaceSerialization) => void,
     onIntermediateChange?: () => void
@@ -46,8 +44,7 @@ interface UseCodeWorkspaceResult {
 }
 
 /**
- * A Sprite Lab Blockly workspace owned directly (no StudioApp), rendered into
- * the BLOCKLY_DIV_ID div the caller mounts.
+ * A Sprite Lab Blockly workspace rendered into the BLOCKLY_DIV_ID div the caller mounts.
  */
 export default function useCodeWorkspace({
   enabled,
@@ -62,11 +59,7 @@ export default function useCodeWorkspace({
   // current theme.
   const themeRef = useRef(theme);
   themeRef.current = theme;
-  // Loads in flight, so the change listener can tell load-generated events
-  // from user edits. Blockly delivers events asynchronously in fire order,
-  // so each load's events are suppressed until its trailing
-  // FINISHED_LOADING marker arrives (a counter, not a boolean: loads can
-  // stack before delivery).
+  // Tracks workspace loads (as opposed to user edits).
   const pendingLoadsRef = useRef(0);
   // Listeners arrive via subscribeToChanges (not options) so the hook can be
   // called before the machinery that consumes getCode. Held in refs so the
@@ -211,8 +204,7 @@ export default function useCodeWorkspace({
     try {
       loadBlocksToWorkspace(workspace, JSON.stringify(source));
     } catch (e) {
-      // No FINISHED_LOADING will come; a wedged counter would suppress
-      // all future edits.
+      // Decrement the counter if there was an error.
       pendingLoadsRef.current--;
       throw e;
     }

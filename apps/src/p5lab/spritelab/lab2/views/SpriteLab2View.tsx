@@ -348,7 +348,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     toolboxDefinition: levelProperties.toolboxDefinition,
     toolboxXml: levelProperties.toolboxBlocks,
     sharedBlocks: levelProperties.sharedBlocks,
-    theme: theme === 'Dark' ? 'Dark' : 'Light',
+    theme,
   });
 
   // Run the current program as the live preview (cheap: the engine reuses p5).
