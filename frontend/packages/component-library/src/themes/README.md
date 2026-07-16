@@ -71,6 +71,36 @@ brandCodeAiAudit.css         All-pink tokens for [data-brand='codeai-audit']
 
 Components should use **semantic** variables (e.g. `var(--background-neutral-primary)`) instead of primitive ones. The correct value is resolved automatically based on the active `data-theme` and `data-brand` attributes. Note that the `code` and `codeai` brands both resolve to the legacy (colors.css) ramp; only `codeai-next` carries the CADS ramp until cutover.
 
+### Component-level brand overrides
+
+The token bridge substitutes values token-for-token, so a component whose
+legacy tokens map cleanly onto CADS ones needs no changes. When the CADS
+design for a component diverges structurally — different shape, border,
+typography treatment, or a different token than the bridge's global mapping
+picks — add a brand-scoped block at the bottom of the component's SCSS
+module (see `tags/tags.module.scss` for the reference example):
+
+```scss
+[data-brand='codeai-next'] {
+  .myComponent {
+    background: var(--background-brand-light);
+    border: 1px solid var(--border-brand-mid);
+  }
+}
+```
+
+Rules for these blocks:
+
+- Scope on `[data-brand='codeai-next']` so every legacy brand renders
+  byte-identically until cutover. At cutover the selector is deleted, not
+  the declarations.
+- Reference **CADS semantic tokens** only (the names in
+  `colors_codeAi.css`). They are theme-aware under `codeai-next`, so Dark
+  mode needs no extra rules; do not hardcode hex values or reach for
+  primitives.
+- `[data-brand]` sits on `<html>`, above any CSS module, so the attribute
+  selector composes with local class names without `:global`.
+
 ---
 
 ## Brand System

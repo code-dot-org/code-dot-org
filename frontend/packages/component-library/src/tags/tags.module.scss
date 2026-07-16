@@ -92,3 +92,36 @@
     }
   }
 }
+
+// CodeAI (CADS) brand overrides.
+// The token bridge (brandCodeAiNextAliases.css) can only substitute values
+// token-for-token; it cannot express per-component redesigns. The CADS tag
+// is one of those: a bordered, small-radius chip on the brand-light fill
+// with a sentence-case label — where the bridge would render the legacy
+// pill shape on the brand-mid fill. Components in that situation carry a
+// block like this one, scoped to [data-brand='codeai-next'] so every legacy
+// brand renders exactly as before.
+// Only CADS *semantic* tokens here (defined per-theme in
+// component-library-styles/brandCodeAiNext.css) — Dark mode then comes from
+// the tokens, with no [data-theme] rules needed. Weight and family need no
+// override: the label already inherits semi-bold Geist via
+// --font-family-main.
+[data-brand='codeai-next'] {
+  .tags {
+    .tag {
+      background: var(--background-brand-light);
+      border: 1px solid var(--border-brand-mid);
+      // No CADS shape ramp is defined in code yet; the fallback carries the
+      // value until --shape-sm lands, then the token takes over.
+      border-radius: var(--shape-sm, 0.375rem);
+      color: var(--text-brand-secondary);
+
+      span {
+        // CADS tags use the Label style, not an overline.
+        text-transform: none;
+        letter-spacing: normal;
+        text-align: center;
+      }
+    }
+  }
+}
