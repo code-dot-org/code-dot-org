@@ -147,9 +147,8 @@ interface KeyContext {
  * Keyboard-driven edge creation and canvas key handling.
  *
  * Press "c" on a focused node to enter connect mode, Tab to cycle through
- * candidate target nodes, Enter to create the edge. Escape or "c" again
- * cancels. "[" and "]" resize the focused node by adjusting its width and
- * height by the keyboard resize step.
+ * candidate target nodes, Enter or "c" to create the edge. Escape cancels.
+ * "[" and "]" resize the focused node by adjusting its width and height by the keyboard resize step.
  * Also handles Tab-based navigation in normal mode and Enter to
  * activate a node's editable content.
  *
