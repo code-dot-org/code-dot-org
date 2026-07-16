@@ -27,8 +27,12 @@ class DelayedJobDestroyDeadlockRetryTest < ActionDispatch::IntegrationTest
   let(:deletion_deadlock_error) {ActiveRecord::Deadlocked.new('deletion deadlock test')}
 
   around do |test|
+    original_delay_jobs = Delayed::Worker.delay_jobs
+    Delayed::Worker.delay_jobs = true
+
     test.call
   ensure
+    Delayed::Worker.delay_jobs = original_delay_jobs
     TestJob.reset
     delayed_job.destroy!
   end
