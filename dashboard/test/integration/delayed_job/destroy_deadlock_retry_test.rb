@@ -20,8 +20,8 @@ class DelayedJobDestroyDeadlockRetryTest < ActionDispatch::IntegrationTest
     end
   end
 
-  let!(:active_job) {TestJob.perform_later}
-  let!(:delayed_job) {Delayed::Job.find(active_job.provider_job_id)}
+  let(:active_job) {TestJob.perform_later}
+  let(:delayed_job) {Delayed::Job.find(active_job.provider_job_id)}
 
   let(:deletion_deadlock_count) {1}
   let(:deletion_deadlock_error) {ActiveRecord::Deadlocked.new('deletion deadlock test')}
