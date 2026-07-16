@@ -5,7 +5,7 @@ import React, {ChangeEvent, useCallback, useId} from 'react';
 import useHiddenFileInput from '@cdo/apps/util/hooks/useHiddenFileInput';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {SHAPE_DISPLAY_LABEL, TOUR_GROUP, TOUR_GROUP_ATTR} from '../constants';
+import {TOUR_GROUP, TOUR_GROUP_ATTR} from '../constants';
 import {AddNodeRequest, CanvasTool, ShapeType} from '../types';
 import {uploadImageAsset} from '../utils/uploadImageAsset';
 
@@ -152,9 +152,9 @@ export default function Toolbar({
           </IconButton>
         </Tooltip>
 
-        <Tooltip title={`Add ${SHAPE_DISPLAY_LABEL.diamond}`} placement="right">
+        <Tooltip title="Add diamond" placement="right">
           <IconButton
-            aria-label={`Add ${SHAPE_DISPLAY_LABEL.diamond}`}
+            aria-label="Add diamond"
             id={`${uid}-diamond`}
             onClick={() => addShape('diamond')}
             size="small"

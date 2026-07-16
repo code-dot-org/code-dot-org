@@ -2,12 +2,7 @@ import {NodeResizer, type NodeProps} from '@xyflow/react';
 import classNames from 'classnames';
 import React, {memo, useMemo} from 'react';
 
-import {
-  DEFAULT_ROTATION,
-  MIN_NODE_HEIGHT,
-  MIN_NODE_WIDTH,
-  SHAPE_DISPLAY_LABEL,
-} from '../constants';
+import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {
   fontSizePx,
   DEFAULT_TEXT_ALIGN,
@@ -129,7 +124,6 @@ function ShapeNode({
   const isCircle = shapeType === 'circle';
   const isTriangle = shapeType === 'triangle';
   const isDiamond = shapeType === 'diamond';
-  const shapeLabel = SHAPE_DISPLAY_LABEL[shapeType];
 
   const rectangleStyle: React.CSSProperties = useMemo(() => {
     const style: React.CSSProperties = {};
@@ -161,7 +155,7 @@ function ShapeNode({
   return (
     <div
       className={styles.shapeNode}
-      aria-label={`${shapeLabel} shape: ${label}`}
+      aria-label={`${shapeType} shape: ${label}`}
       onDoubleClick={startEditing}
       {...hoverHandlers}
     >
@@ -208,7 +202,7 @@ function ShapeNode({
           tabIndex={-1}
           role="textbox"
           aria-multiline={true}
-          aria-label={`${shapeLabel} label${isEditing ? ' (editing)' : ''}`}
+          aria-label={`${shapeType} label${isEditing ? ' (editing)' : ''}`}
         >
           {label}
         </div>

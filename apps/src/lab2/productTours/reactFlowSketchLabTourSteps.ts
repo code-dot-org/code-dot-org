@@ -40,6 +40,15 @@ export const createReactFlowSketchLabTourSteps = (
 
   return [
     {
+      id: 'sketchlab-welcome',
+      title: 'Welcome to Sketch Lab',
+      text: 'Sketch Lab is a place to make diagrams and bring your ideas to life.',
+      buttons: [nextButton(tour)],
+      floatingUIOptions: {
+        middleware: [offset(12)],
+      },
+    },
+    {
       id: 'grab-select-tools',
       attachTo: {element: TOOLBAR_GROUP.selectionTools, on: 'right'},
       title: 'Grab and select tools',
@@ -53,7 +62,7 @@ export const createReactFlowSketchLabTourSteps = (
       id: 'shape-tools',
       attachTo: {element: TOOLBAR_GROUP.shapeTools, on: 'right'},
       title: 'Shapes',
-      text: 'These buttons add shapes (rectangle, triangle, circle, and diamond) to your canvas. You can double click or press enter on a shape to add text.',
+      text: 'These buttons add shapes to your canvas. You can double click or press enter on a shape to add text.',
       buttons: [backButton(tour), nextButton(tour)],
       floatingUIOptions: {
         middleware: [offset(12)],
@@ -73,7 +82,7 @@ export const createReactFlowSketchLabTourSteps = (
       id: 'arrow-tool',
       attachTo: {element: TOOLBAR_BUTTON.addArrow, on: 'right'},
       title: 'Arrow',
-      text: 'Add an arrow to connect elements. Arrows can be unattached, or you can drag either end onto a shape, text or image to connect elements on the canvas.',
+      text: 'Add an arrow to your canvas. Arrows can be unattached, or you can drag either end onto a shape, text or image to connect elements on the canvas.',
       buttons: [backButton(tour), nextButton(tour)],
       floatingUIOptions: {
         middleware: [offset(12)],
@@ -83,7 +92,7 @@ export const createReactFlowSketchLabTourSteps = (
       id: 'image-tool',
       attachTo: {element: TOOLBAR_BUTTON.addImage, on: 'right'},
       title: 'Image',
-      text: 'Upload an image here to drop it onto the canvas.',
+      text: 'Upload an image to drop it onto the canvas.',
       buttons: [backButton(tour), nextButton(tour)],
       floatingUIOptions: {
         middleware: [offset(12)],
@@ -121,7 +130,7 @@ export const createReactFlowSketchLabTourSteps = (
       id: 'shape-toolbar',
       attachTo: {element: SHAPE_TOOLBAR, on: 'left'},
       title: 'Style your shape',
-      text: 'Whenever a shape is selected, this toolbar appears. Use it to change the fill and border colors, size, rotation, and text styling.',
+      text: 'Whenever an element is selected, its toolbar appears. Use it to change colors, styling, or rotation. You can also duplicate the element, send it to the front or back of the canvas, or delete it.',
       buttons: [backButton(tour), nextButton(tour)],
       floatingUIOptions: {
         middleware: [offset(12)],
@@ -131,7 +140,7 @@ export const createReactFlowSketchLabTourSteps = (
       id: 'undo-redo',
       attachTo: {element: TOOLBAR_GROUP.undoRedo, on: 'left'},
       title: 'Undo and redo',
-      text: 'You can go backwards and forwards in your history with the undo and redo buttons.',
+      text: 'You can go backward and forward in your history with the undo and redo buttons.',
       buttons: [backButton(tour), nextButton(tour)],
       floatingUIOptions: {
         middleware: [offset(12)],

@@ -1,5 +1,3 @@
-import {ShapeType} from './types';
-
 export const DEFAULT_NODE_WIDTH = 160;
 export const DEFAULT_NODE_HEIGHT = 120;
 
@@ -8,16 +6,6 @@ export const MIN_NODE_HEIGHT = 60;
 
 // Default rotation in degrees.
 export const DEFAULT_ROTATION = 0;
-
-// User-facing name for each shape. The 'diamond' backend identifier is kept for
-// stored sources and Excalidraw conversion, but the UI calls it a rhombus,
-// which names the shape more accurately.
-export const SHAPE_DISPLAY_LABEL: Record<ShapeType, string> = {
-  rectangle: 'rectangle',
-  triangle: 'triangle',
-  circle: 'circle',
-  diamond: 'rhombus',
-};
 
 export const KEYBOARD_RESIZE_STEP = 20;
 export const KEYBOARD_MOVE_STEP = 10;
