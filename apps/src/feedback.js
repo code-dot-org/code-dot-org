@@ -39,8 +39,6 @@ import CodeWritten from './templates/feedback/CodeWritten';
 import GeneratedCode from './templates/feedback/GeneratedCode';
 import {createHiddenPrintWindow} from './utils';
 
-import showCodeStyles from './showCodeModal.module.scss';
-
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
 const UNCOUNTED_BLOCK_TYPES = ['draw_colour', 'alpha', 'comment'];
@@ -1158,7 +1156,6 @@ FeedbackUtils.prototype.showGeneratedCode = function (appStrings) {
       title={msg.showCodeHeader()}
       onClose={close}
       closeLabel={msg.closeDialog()}
-      className={showCodeStyles.showCodeModal}
       customContent={
         <GeneratedCode
           message={generatedCodeProperties.message}

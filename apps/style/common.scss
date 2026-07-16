@@ -1277,6 +1277,26 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     overflow: scroll;
     max-height: 400px;
     margin: 12px 0;
+
+    // Chrome (>=v121), Edge, Firefox
+    scrollbar-color: var(--background-neutral-quinary)
+      var(--background-neutral-tertiary);
+
+    // Safari / older WebKit
+    &::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+      background: var(--background-neutral-tertiary);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--background-neutral-quinary);
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-corner {
+      background: var(--background-neutral-tertiary);
+    }
   }
 }
 
