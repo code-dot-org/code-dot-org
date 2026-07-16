@@ -53,7 +53,7 @@ export const createReactFlowSketchLabTourSteps = (
       id: 'shape-tools',
       attachTo: {element: TOOLBAR_GROUP.shapeTools, on: 'right'},
       title: 'Shapes',
-      text: 'These buttons add shapes (rectangle, triangle, circle, and rhombus) to your canvas. You can double click or press enter on a shape to add text.',
+      text: 'These buttons add shapes (rectangle, triangle, circle, and diamond) to your canvas. You can double click or press enter on a shape to add text.',
       buttons: [backButton(tour), nextButton(tour)],
       floatingUIOptions: {
         middleware: [offset(12)],
