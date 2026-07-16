@@ -278,6 +278,10 @@ export interface SerializedLevel {
   // levels in the lesson.
   type?: string;
   generateOutline?: string | null;
+  // Aichat levels only: the AICHAT_PRESET_IDS id used at generation
+  // time. Persisted so the /generate page can re-select the preset
+  // dropdown on reload; treat an unknown id as "reset to default".
+  generateAichatPreset?: string | null;
   // Populated for BubbleChoice parents by script_level.rb; each entry
   // is a nested SerializedLevel for one sublevel in picker order.
   sublevels?: SerializedLevel[];

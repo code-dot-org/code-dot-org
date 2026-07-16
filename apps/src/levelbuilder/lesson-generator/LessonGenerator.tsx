@@ -439,6 +439,11 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
           'long_instructions',
           result.longInstructions
         );
+        await updateLevelProperty(
+          subLevelId,
+          'generate_aichat_preset',
+          presetId
+        );
       } else if (sub.labType === 'sketchlab') {
         const result = await generateSketchlabLevel(subCtx);
         log(`Saving instructions for sublevel "${subName}"…`);
@@ -865,6 +870,14 @@ const LessonGenerator: React.FC<LessonGeneratorProps> = ({lesson}) => {
               level.id,
               'long_instructions',
               result.longInstructions
+            );
+            // Persist the preset id so reopening /generate can re-select
+            // the preset dropdown. buildInitialState guards against an
+            // unknown id (i.e. a preset that has since been removed).
+            await updateLevelProperty(
+              level.id,
+              'generate_aichat_preset',
+              presetId
             );
             generatedOutput = {aichat: result};
           } else if (spec.labType === 'sketchlab') {

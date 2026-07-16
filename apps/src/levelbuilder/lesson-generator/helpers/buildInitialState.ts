@@ -1,5 +1,6 @@
 import {createUuid} from '@cdo/apps/utils';
 
+import {AICHAT_PRESET_IDS} from '../ai/aichat';
 import {
   BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES,
   ExistingLessonData,
@@ -9,6 +10,18 @@ import {
   SerializedScriptLevel,
   SUPPORTED_LAB_TYPES,
 } from '../types';
+
+// Round-trip helper: on reload we may see a persisted preset id that no
+// longer exists in AICHAT_PRESET_IDS (removed, renamed). Treat that as
+// "reset to default" rather than passing an unknown id down the UI.
+function restoreAichatPreset(
+  raw: string | null | undefined
+): string | undefined {
+  if (!raw) return undefined;
+  return (AICHAT_PRESET_IDS as readonly string[]).includes(raw)
+    ? raw
+    : undefined;
+}
 
 const newLevelSpec = (): LevelSpec => ({
   key: createUuid(),
@@ -108,6 +121,9 @@ export function buildInitialState(lesson: ExistingLessonData): InitialState {
         generate: labType !== undefined && !level.generateOutline,
         existing: {activityIndex, sectionIndex, scriptLevel},
         unsupportedType: labType === undefined ? level.type : undefined,
+        ...(labType === 'aichat'
+          ? {aichatPreset: restoreAichatPreset(level.generateAichatPreset)}
+          : {}),
       };
       if (labType === 'bubbleChoice' && Array.isArray(level.sublevels)) {
         const parentPrefix = level.name + '-';
@@ -137,6 +153,9 @@ export function buildInitialState(lesson: ExistingLessonData): InitialState {
               supportedSubLabType === undefined
                 ? sub.type ?? '(unknown)'
                 : undefined,
+            ...(supportedSubLabType === 'aichat'
+              ? {aichatPreset: restoreAichatPreset(sub.generateAichatPreset)}
+              : {}),
           };
         });
       }

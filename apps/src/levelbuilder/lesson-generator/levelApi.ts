@@ -143,6 +143,7 @@ export async function updateExemplarSources(
 export type LevelProperty =
   | 'long_instructions'
   | 'generate_outline'
+  | 'generate_aichat_preset'
   | 'panels'
   | 'mode'
   | 'dynamic_instructions'

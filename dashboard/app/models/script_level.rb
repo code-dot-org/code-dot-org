@@ -484,6 +484,7 @@ class ScriptLevel < ApplicationRecord
         # Recorded by the AI lesson generator; surfaced here so the
         # /generate page can re-populate the prompt for an existing level.
         generateOutline: level.try(:generate_outline),
+        generateAichatPreset: level.try(:generate_aichat_preset),
       }
       if level.is_a?(BubbleChoice)
         entry[:sublevels] = level.sublevels.map do |sub|
@@ -493,6 +494,7 @@ class ScriptLevel < ApplicationRecord
             url: edit_level_path(id: sub.id),
             type: sub.type,
             generateOutline: sub.try(:generate_outline),
+            generateAichatPreset: sub.try(:generate_aichat_preset),
           }
         end
       end
