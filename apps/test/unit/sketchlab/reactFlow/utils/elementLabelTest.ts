@@ -167,7 +167,7 @@ describe('getEdgeLabel', () => {
   it('treats an anchor source paired with a real target node correctly', () => {
     const map = nodeMap(anchorNode('a1'), shapeNode('n1', 'diamond'));
     expect(getEdgeLabel(edge('e1', 'a1', 'n1'), map)).toBe(
-      'Line from line endpoint to diamond'
+      'Line from line endpoint to rhombus'
     );
   });
 });

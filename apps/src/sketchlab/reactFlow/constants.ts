@@ -1,3 +1,5 @@
+import {ShapeType} from './types';
+
 export const DEFAULT_NODE_WIDTH = 160;
 export const DEFAULT_NODE_HEIGHT = 120;
 
@@ -6,6 +8,16 @@ export const MIN_NODE_HEIGHT = 60;
 
 // Default rotation in degrees.
 export const DEFAULT_ROTATION = 0;
+
+// User-facing name for each shape. The 'diamond' backend identifier is kept for
+// stored sources and Excalidraw conversion, but the UI calls it a rhombus,
+// which names the shape more accurately.
+export const SHAPE_DISPLAY_LABEL: Record<ShapeType, string> = {
+  rectangle: 'rectangle',
+  triangle: 'triangle',
+  circle: 'circle',
+  diamond: 'rhombus',
+};
 
 export const KEYBOARD_RESIZE_STEP = 20;
 export const KEYBOARD_MOVE_STEP = 10;
@@ -43,6 +55,17 @@ export const MIN_ZOOM = 0.1;
 
 // Stable class used by focus and pointer-down handlers.
 export const SKETCHLAB_TOOLBAR_PANEL_CLASS = 'sketchlab-toolbar-panel';
+
+// data-* attribute the onboarding tour targets to highlight a set of related
+// buttons as one unit. Values stay stable across renders, unlike the
+// useId()-based per-button ids.
+export const TOUR_GROUP_ATTR = 'data-tour-group';
+export const TOUR_GROUP = {
+  selectionTools: 'selection-tools',
+  shapeTools: 'shape-tools',
+  undoRedo: 'undo-redo',
+  zoom: 'zoom',
+} as const;
 
 // Padding (px) added around child nodes when computing initial group bounds.
 // This is consistent with the padding used by React Flow's built-in group node.

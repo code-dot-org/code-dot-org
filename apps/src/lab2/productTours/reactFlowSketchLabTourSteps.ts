@@ -1,3 +1,4 @@
+import {offset} from '@floating-ui/dom';
 import {type StepOptions, type Tour} from 'shepherd.js';
 
 import {
@@ -5,23 +6,29 @@ import {
   doneButton,
   nextButton,
 } from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
+import {
+  TOUR_GROUP,
+  TOUR_GROUP_ATTR,
+} from '@cdo/apps/sketchlab/reactFlow/constants';
 
-// aria-labels the React Flow toolbar and canvas controls render on their
-// buttons. Tour steps attach to these rather than the unstable useId()-based
-// ids so a copy or markup tweak in Toolbar.tsx surfaces here as a broken step.
 const TOOLBAR_BUTTON = {
-  select: 'button[aria-label="Select tool"]',
-  addRectangle: 'button[aria-label="Add rectangle"]',
   addText: 'button[aria-label="Add text"]',
   addArrow: 'button[aria-label="Add arrow"]',
   addImage: 'button[aria-label="Add image"]',
-  undo: 'button[aria-label="Undo"]',
-  zoomIn: 'button[aria-label="Zoom in"]',
+  addRectangle: 'button[aria-label="Add rectangle"]',
 } as const;
 
-// The per-shape toolbar that opens when a shape node is selected. Adding a
-// shape auto-selects it and opens this toolbar, which is how the interactive
-// step below knows the user completed the task.
+// Wrappers around related buttons, so a step highlights the whole set it
+// describes rather than one button. Toolbar.tsx / CanvasControls.tsx render
+// these attributes.
+const groupSelector = (group: string) => `[${TOUR_GROUP_ATTR}="${group}"]`;
+const TOOLBAR_GROUP = {
+  selectionTools: groupSelector(TOUR_GROUP.selectionTools),
+  shapeTools: groupSelector(TOUR_GROUP.shapeTools),
+  undoRedo: groupSelector(TOUR_GROUP.undoRedo),
+  zoom: groupSelector(TOUR_GROUP.zoom),
+} as const;
+
 const SHAPE_TOOLBAR = '[role="toolbar"][aria-label="Shape style"]';
 
 export const createReactFlowSketchLabTourSteps = (
@@ -34,17 +41,23 @@ export const createReactFlowSketchLabTourSteps = (
   return [
     {
       id: 'grab-select-tools',
-      attachTo: {element: TOOLBAR_BUTTON.select, on: 'right'},
+      attachTo: {element: TOOLBAR_GROUP.selectionTools, on: 'right'},
       title: 'Grab and select tools',
-      text: 'Use the select tool to click elements or drag a box to select several at once. Use the hand tool below to pan around the canvas.',
+      text: 'Use the select tool to click on elements. Use the hand tool to move the canvas around. Looking for keyboard navigation? Try pressing / after you finish the tour.',
       buttons: [nextButton(tour)],
+      floatingUIOptions: {
+        middleware: [offset(12)],
+      },
     },
     {
       id: 'shape-tools',
-      attachTo: {element: TOOLBAR_BUTTON.addRectangle, on: 'right'},
+      attachTo: {element: TOOLBAR_GROUP.shapeTools, on: 'right'},
       title: 'Shapes',
-      text: 'These buttons add shapes (rectangle, triangle, circle, and diamond) for building diagrams and layouts.',
+      text: 'These buttons add shapes (rectangle, triangle, circle, and rhombus) to your canvas. You can double click or press enter on a shape to add text.',
       buttons: [backButton(tour), nextButton(tour)],
+      floatingUIOptions: {
+        middleware: [offset(12)],
+      },
     },
     {
       id: 'text-tool',
@@ -52,13 +65,19 @@ export const createReactFlowSketchLabTourSteps = (
       title: 'Text',
       text: 'Add a text box to label parts of your sketch or add notes.',
       buttons: [backButton(tour), nextButton(tour)],
+      floatingUIOptions: {
+        middleware: [offset(12)],
+      },
     },
     {
       id: 'arrow-tool',
       attachTo: {element: TOOLBAR_BUTTON.addArrow, on: 'right'},
       title: 'Arrow',
-      text: 'Add an arrow to connect elements. Drag either end onto a shape, text or image to connect elements on the canvas.',
+      text: 'Add an arrow to connect elements. Arrows can be unattached, or you can drag either end onto a shape, text or image to connect elements on the canvas.',
       buttons: [backButton(tour), nextButton(tour)],
+      floatingUIOptions: {
+        middleware: [offset(12)],
+      },
     },
     {
       id: 'image-tool',
@@ -66,17 +85,21 @@ export const createReactFlowSketchLabTourSteps = (
       title: 'Image',
       text: 'Upload an image here to drop it onto the canvas.',
       buttons: [backButton(tour), nextButton(tour)],
+      floatingUIOptions: {
+        middleware: [offset(12)],
+      },
     },
     {
       id: 'add-a-shape',
       attachTo: {element: TOOLBAR_BUTTON.addRectangle, on: 'right'},
       title: 'Try adding a shape',
-      text: 'Click here to add a rectangle to the canvas.',
-      buttons: [backButton(tour), nextButton(tour)],
+      text: 'Your turn! Click on the rectangle button to add a new rectangle to the canvas.',
+      buttons: [backButton(tour)],
       when: {
         show() {
           shapeToolbarObserver = new MutationObserver(() => {
             if (document.querySelector(SHAPE_TOOLBAR)) {
+              // Advance when the shape toolbar shows up.
               tour.next();
             }
           });
@@ -90,6 +113,9 @@ export const createReactFlowSketchLabTourSteps = (
           shapeToolbarObserver = null;
         },
       },
+      floatingUIOptions: {
+        middleware: [offset(12)],
+      },
     },
     {
       id: 'shape-toolbar',
@@ -97,20 +123,29 @@ export const createReactFlowSketchLabTourSteps = (
       title: 'Style your shape',
       text: 'Whenever a shape is selected, this toolbar appears. Use it to change the fill and border colors, size, rotation, and text styling.',
       buttons: [backButton(tour), nextButton(tour)],
+      floatingUIOptions: {
+        middleware: [offset(12)],
+      },
     },
     {
       id: 'undo-redo',
-      attachTo: {element: TOOLBAR_BUTTON.undo, on: 'left'},
+      attachTo: {element: TOOLBAR_GROUP.undoRedo, on: 'left'},
       title: 'Undo and redo',
-      text: 'Made a mistake? Undo and redo buttons are here.',
+      text: 'You can go backwards and forwards in your history with the undo and redo buttons.',
       buttons: [backButton(tour), nextButton(tour)],
+      floatingUIOptions: {
+        middleware: [offset(12)],
+      },
     },
     {
       id: 'zoom-controls',
-      attachTo: {element: TOOLBAR_BUTTON.zoomIn, on: 'left'},
+      attachTo: {element: TOOLBAR_GROUP.zoom, on: 'left'},
       title: 'Zoom controls',
       text: 'Your can zoom in and out here, or use zoom to fit to frame your whole sketch on screen.',
       buttons: [backButton(tour), doneButton(tour)],
+      floatingUIOptions: {
+        middleware: [offset(12)],
+      },
     },
   ];
 };
