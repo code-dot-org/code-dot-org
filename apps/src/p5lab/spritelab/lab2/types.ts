@@ -1,5 +1,6 @@
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {BlocklyLevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
+import {RGBA} from '@cdo/apps/pixelEditor/tools';
 
 // The animation-list category marking an image as a background rather than a
 // costume.
@@ -19,9 +20,9 @@ export interface SerializedAnimationProps {
   categories?: string[];
   // Physical pixels per art pixel; absent on non-pixel-art animations.
   pixelGridSize?: number;
-  // Pixel-editor recently-used colors ([r,g,b,a] rows, most recent first);
-  // absent until the image is edited there.
-  recentColors?: [number, number, number, number][];
+  // Pixel-editor recently-used colors, most recent first; absent until the
+  // image is edited there.
+  recentColors?: RGBA[];
 }
 
 // Mirrors the JSDoc `SerializedAnimationList` typedef in p5lab/shapes.js.

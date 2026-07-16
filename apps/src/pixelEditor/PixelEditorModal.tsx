@@ -1,4 +1,5 @@
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {
   useCallback,
@@ -862,9 +863,7 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
                   disabled={!canUndo}
                   onClick={undo}
                 >
-                  <svg viewBox="0 0 16 16" aria-hidden="true">
-                    <path d="M6 3L2 7l4 4V8.5h4a3 3 0 0 1 0 6H7v2h3a5 5 0 0 0 0-10H6V3z" />
-                  </svg>
+                  <FontAwesomeV6Icon iconName="rotate-left" />
                 </button>
               </PixelTooltip>
               <PixelTooltip
@@ -878,9 +877,7 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
                   disabled={!canRedo}
                   onClick={redo}
                 >
-                  <svg viewBox="0 0 16 16" aria-hidden="true">
-                    <path d="M10 3l4 4-4 4V8.5H6a3 3 0 0 0 0 6h3v2H6a5 5 0 0 1 0-10h4V3z" />
-                  </svg>
+                  <FontAwesomeV6Icon iconName="rotate-right" />
                 </button>
               </PixelTooltip>
             </div>
