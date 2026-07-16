@@ -1,3 +1,5 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography as MuiTypography} from '@mui/material';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -7,7 +9,7 @@ import library from './designElements/library';
 
 export default class DesignToolboxElement extends React.Component {
   static propTypes = {
-    imageUrl: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,
     elementType: PropTypes.string.isRequired,
     handleDragStart: PropTypes.func.isRequired,
@@ -38,13 +40,20 @@ export default class DesignToolboxElement extends React.Component {
           data-element-type={this.props.elementType}
           className="new-design-element"
         >
-          <img
-            src={this.props.imageUrl}
-            className="design-element-image"
-            style={styles.image}
-            alt={this.props.desc}
-          />
-          <div>{this.props.desc}</div>
+          <MuiTypography
+            variant="body1"
+            sx={{
+              color: 'var(--text-brand-purple-primary)',
+              fontSize: '2rem',
+            }}
+          >
+            <FontAwesomeV6Icon
+              iconName={this.props.icon}
+              iconStyle="solid"
+              alt={this.props.desc}
+            />
+          </MuiTypography>
+          <MuiTypography variant="body3">{this.props.desc}</MuiTypography>
         </div>
       </div>
     );

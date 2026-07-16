@@ -1,3 +1,4 @@
+import {Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -5,8 +6,6 @@ import applabMsg from '@cdo/applab/locale';
 
 import ThemeDropdown from './designElements/ThemeDropdown';
 import DesignToolboxElement from './DesignToolboxElement';
-
-const IMAGE_BASE_URL = '/blockly/media/applab/design_toolbox/';
 
 export default class DesignToolbox extends React.Component {
   static propTypes = {
@@ -43,81 +42,83 @@ export default class DesignToolbox extends React.Component {
           description={applabMsg.designElementTheme()}
           key={this.props.themeValue}
         />
-        <p>{applabMsg.designToolboxDescription()}</p>
+        <MuiTypography variant="body3">
+          {applabMsg.designToolboxDescription()}
+        </MuiTypography>
         <DesignToolboxElement
-          imageUrl={IMAGE_BASE_URL + 'button.png'}
+          icon="hand-pointer"
           desc={applabMsg.designElement_button()}
           elementType={'BUTTON'}
           handleDragStart={this.props.handleDragStart}
         />
         <DesignToolboxElement
-          imageUrl={IMAGE_BASE_URL + 'input.png'}
+          icon="i-cursor"
           desc={applabMsg.designElement_textInput()}
           elementType={'TEXT_INPUT'}
           handleDragStart={this.props.handleDragStart}
         />
         <DesignToolboxElement
-          imageUrl={IMAGE_BASE_URL + 'label.png'}
+          icon="font"
           desc={applabMsg.designElement_label()}
           elementType={'LABEL'}
           handleDragStart={this.props.handleDragStart}
         />
         <DesignToolboxElement
-          imageUrl={IMAGE_BASE_URL + 'dropdown.png'}
+          icon="square-caret-down"
           desc={applabMsg.designElement_dropdown()}
           elementType={'DROPDOWN'}
           handleDragStart={this.props.handleDragStart}
         />
         <DesignToolboxElement
-          imageUrl={IMAGE_BASE_URL + 'radio.png'}
+          icon="circle-dot"
           desc={applabMsg.designElement_radioButton()}
           elementType={'RADIO_BUTTON'}
           handleDragStart={this.props.handleDragStart}
         />
         <DesignToolboxElement
-          imageUrl={IMAGE_BASE_URL + 'checkbox.png'}
+          icon="square-check"
           desc={applabMsg.designElement_checkbox()}
           elementType={'CHECKBOX'}
           handleDragStart={this.props.handleDragStart}
         />
         <DesignToolboxElement
-          imageUrl={IMAGE_BASE_URL + 'image.png'}
+          icon="image"
           desc={applabMsg.designElement_image()}
           elementType={'IMAGE'}
           handleDragStart={this.props.handleDragStart}
         />
         <DesignToolboxElement
-          imageUrl={IMAGE_BASE_URL + 'canvas.png'}
+          icon="paintbrush"
           desc={applabMsg.designElement_canvas()}
           elementType={'CANVAS'}
           handleDragStart={this.props.handleDragStart}
         />
         <DesignToolboxElement
-          imageUrl={IMAGE_BASE_URL + 'screen.png'}
+          icon="mobile-screen"
           desc={applabMsg.designElement_screen()}
           elementType={'SCREEN'}
           handleDragStart={this.props.handleDragStart}
         />
         <DesignToolboxElement
-          imageUrl={IMAGE_BASE_URL + 'textarea.png'}
+          icon="align-left"
           desc={applabMsg.designElement_textArea()}
           elementType={'TEXT_AREA'}
           handleDragStart={this.props.handleDragStart}
         />
         <DesignToolboxElement
-          imageUrl={IMAGE_BASE_URL + 'chart.png'}
+          icon="chart-column"
           desc={applabMsg.designElement_chart()}
           elementType={'CHART'}
           handleDragStart={this.props.handleDragStart}
         />
         <DesignToolboxElement
-          imageUrl={IMAGE_BASE_URL + 'slider.png'}
+          icon="sliders"
           desc={applabMsg.designElement_slider()}
           elementType={'SLIDER'}
           handleDragStart={this.props.handleDragStart}
         />
         <DesignToolboxElement
-          imageUrl={IMAGE_BASE_URL + 'camera.png'}
+          icon="camera"
           desc={applabMsg.designElement_photoSelect()}
           elementType={'PHOTO_SELECT'}
           handleDragStart={this.props.handleDragStart}
