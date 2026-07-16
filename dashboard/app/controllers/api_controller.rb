@@ -210,15 +210,14 @@ class ApiController < ApplicationController
     data = current_user.sections_instructed.each_with_object({}) do |section, section_hash|
       next if section.hidden
       script = load_script(section)
-      # Skip sections whose script can't be resolved (only reachable when the
-      # hourofcode default is unseeded).
-      next unless script
 
       section_hash[section.id] = {
         section_id: section.id,
         section_name: section.name,
         ai_chat_access_level: section.ai_chat_access_level,
-        lessons: script.lessons.each_with_object({}) do |lesson, lesson_hash|
+        # A nil script (the request named no script and the section has no
+        # assigned unit) has no lockable lessons.
+        lessons: (script&.lessons || []).each_with_object({}) do |lesson, lesson_hash|
           lesson_state = lesson.lockable_state(section.students)
           lesson_hash[lesson.id] = lesson_state unless lesson_state.nil?
         end
@@ -260,8 +259,9 @@ class ApiController < ApplicationController
     section = load_section
     script = load_script(section)
 
-    # No resolvable script (only reachable when the hourofcode default is
-    # unseeded) means there is no progress to summarize; return an empty page.
+    # No resolvable script (the request named no script and the section has no
+    # assigned unit) means there is no progress to summarize; return an empty
+    # page.
     unless script
       return render json: {
         student_progress: {},
@@ -309,9 +309,9 @@ class ApiController < ApplicationController
     section = load_section
     script = load_script(section)
 
-    # A nil script (only reachable when the hourofcode default is unseeded) has
-    # no levels or lessons to resolve against, so treat it like the other
-    # unresolvable-input cases below.
+    # A nil script (the request named no script and the section has no assigned
+    # unit) has no levels or lessons to resolve against, so treat it like the
+    # other unresolvable-input cases below.
     return head :bad_request unless script
 
     if params[:level_id]
@@ -578,8 +578,8 @@ class ApiController < ApplicationController
   def section_text_responses
     section = load_section
     script = load_script(section)
-    # No resolvable script (only reachable when the hourofcode default is
-    # unseeded) means no text responses to return.
+    # No resolvable script (the request named no script and the section has no
+    # assigned unit) means no text responses to return.
     return render(json: []) unless script
     # TODO: TEACH-2042 default to original unit group unit if the unit is not part of the assigned course
     # If unit_group_unit is nil, it returns the /s/ url instead of the correct /courses/ url
@@ -747,12 +747,10 @@ class ApiController < ApplicationController
   private def load_script(section = nil)
     script_id = params[:script_id] if params[:script_id].present?
     script_id ||= section.default_script.try(:id)
-    script = Unit.get_from_cache(script_id) if script_id
-    # hourofcode is the product default when the request names no script and the
-    # section has no assigned unit. Tolerate its absence (yield nil rather than
-    # raise) so callers can treat a missing default as an ordinary empty state;
-    # in production hourofcode is always present, so this is a no-op there.
-    script ||= Unit.get_from_cache(Unit::HOC_NAME, raise_exceptions: false)
-    script
+    # nil when the request names no script and the section has no assigned
+    # unit; the section endpoints treat that as an ordinary empty state.
+    # (Until 2026 this fell back to the hourofcode unit, but no shipped client
+    # could observe that default producing anything but an empty response.)
+    Unit.get_from_cache(script_id) if script_id
   end
 end
