@@ -70,6 +70,8 @@ export const CurrentAnimations = PropTypes.shape({
  * @property {string} [version] - S3 version key
  * @property {number} [pixelGridSize] - Physical pixels per art pixel;
  *           absent on classic animations and non-pixel-art images.
+ * @property {number[][]} [recentColors] - Pixel-editor recently-used colors
+ *           ([r,g,b,a] rows, most recent first); absent until edited there.
  */
 const serializedAnimationPropsShape = {
   name: PropTypes.string.isRequired,
@@ -80,6 +82,7 @@ const serializedAnimationPropsShape = {
   frameDelay: PropTypes.number.isRequired,
   version: PropTypes.string,
   pixelGridSize: PropTypes.number,
+  recentColors: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
 };
 
 /**
@@ -132,6 +135,7 @@ function getSerializedAnimationProps(animation) {
     'version',
     'categories',
     'pixelGridSize',
+    'recentColors',
   ]);
 }
 

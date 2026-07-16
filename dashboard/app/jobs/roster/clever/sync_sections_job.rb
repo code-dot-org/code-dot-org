@@ -3,8 +3,6 @@
 module Roster
   module Clever
     class SyncSectionsJob < ApplicationJob
-      rescue_from StandardError, with: :report_exception
-
       def perform(teacher_id:)
         teacher = Teacher.find(teacher_id)
 
