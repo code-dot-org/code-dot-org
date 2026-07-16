@@ -1,7 +1,7 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import classNames from 'classnames';
 import {cloneDeep} from 'lodash';
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {AnyAction, Reducer} from 'redux';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
@@ -13,7 +13,6 @@ import {setPageError} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {LabProps} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
-import setFooterVisibility from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/Footer/setFooterVisibility';
 import Loading from '@cdo/apps/lab2/views/Loading';
 // p5lab/reducers is a CommonJS bundle of all the classic Sprite Lab slices;
 // pull the ones the engine and image list need by key.
@@ -42,10 +41,8 @@ import {onTrimsUpdated} from '../imageTrim';
 import spriteLab2Reducer, {
   ExternalSceneOption,
   resetSpriteLab2,
-  setActiveSceneId,
   setActiveTab,
   setExternalScenes,
-  setHasEdited,
   setScenes,
   SpriteLab2Tab,
 } from '../redux/spriteLab2Redux';
@@ -65,12 +62,12 @@ import {
 } from '../types';
 import {createEmptyGrid} from '../world/gridConstants';
 
-import CodeTab, {CodeTabHandle} from './CodeTab';
 import TabShell from './components/TabShell';
 import GenerateSpriteLab from './GenerateSpriteLab';
 import ItemsTab from './ItemsTab';
 import Playspace, {PlayspaceMode} from './Playspace';
 import SceneSelector from './SceneSelector';
+import useCodeWorkspace, {BLOCKLY_DIV_ID} from './useCodeWorkspace';
 import WorldTab from './WorldTab';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
@@ -98,6 +95,25 @@ const ENABLED_TABS: readonly SpriteLab2Tab[] = SCENES_UI_VARIANT
 // A new scene starts as a bare "when run" workspace.
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
 
+// Projects saved before scenes existed keep their code in the top-level
+// `source`; expose it as an implicit single scene. Stable id, not a uuid:
+// this derivation runs per render, and the id persists on the first write.
+const DEFAULT_SCENE_ID = 'scene-1';
+
+function getScenes(sources: SpriteLab2Source): SpriteLab2Scene[] {
+  if (sources.scenes?.length) {
+    return sources.scenes;
+  }
+  return [
+    {
+      id: DEFAULT_SCENE_ID,
+      name: 'Scene 1',
+      source: (sources.source ??
+        DEFAULT_SCENE_SOURCE) as WorkspaceSerialization,
+    },
+  ];
+}
+
 const DEFAULT_WORLD_ID = 'world1';
 
 // Debounce between a workspace edit and the live-preview re-run.
@@ -109,15 +125,19 @@ const EMPTY_ANIMATION_LIST = {orderedKeys: [], propsByKey: {}};
 interface SpriteLab2ViewProps {
   levelProperties: SpriteLab2LevelProperties;
   currentSources: SpriteLab2Source;
+  updateSources: UseSourcesOutput<SpriteLab2Source>['updateSources'];
   patchSources: UseSourcesOutput<SpriteLab2Source>['patchSources'];
   channelId?: string;
+  hasEdited: boolean;
 }
 
 const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   levelProperties,
   currentSources,
+  updateSources,
   patchSources,
   channelId,
+  hasEdited,
 }) => {
   const {theme} = useTheme();
   const dispatch = useAppDispatch();
@@ -135,7 +155,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const scriptId = useAppSelector(state => state.progress.scriptId);
   const isRunning = useAppSelector(state => state.runState.isRunning);
   const hasRun = useAppSelector(state => state.spriteLab2.hasRun);
-  const hasEdited = useAppSelector(state => state.spriteLab2.hasEdited);
   const blocklySettings = useBlocklySettings();
   const themeSetting = useThemeSetting('spritelab');
   // Seed the page constants the animationList logic + engine read (we bypass
@@ -156,12 +175,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     );
   }, [dispatch, channelId, currentLevelId, scriptId]);
 
-  // This lab owns the full viewport; hide the server-rendered footer.
-  useEffect(() => {
-    setFooterVisibility(false);
-    return () => setFooterVisibility(true);
-  }, []);
-
   // Blocks rendered before an image finished trimming show the untrimmed
   // thumbnail; refresh the costume dropdowns as trims land.
   useEffect(() => onTrimsUpdated(refreshAnimationDropdownThumbnails), []);
@@ -171,7 +184,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const initialSources = useRef(currentSources).current;
 
   const engineRef = useRef<SpriteLab2Engine | null>(null);
-  const codeTabRef = useRef<CodeTabHandle>(null);
   const [engineReady, setEngineReady] = useState(false);
   const [animationsSeeded, setAnimationsSeeded] = useState(false);
   // Jump transition: the cover blanks the playspace while the target loads;
@@ -194,12 +206,23 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     return () => window.clearTimeout(handle);
   }, [animationsSeeded, imagesMounted]);
 
-  // Full scenes live here and in project sources; redux mirrors {id, name}
-  // for the selector and block dropdowns. scenes[0] is the default scene.
-  const scenesRef = useRef<SpriteLab2Scene[]>([]);
-  const activeSceneIdRef = useRef<string | null>(null);
-  const sceneMetadata = useAppSelector(state => state.spriteLab2.scenes);
-  const activeSceneId = useAppSelector(state => state.spriteLab2.activeSceneId);
+  const scenes = useMemo(() => getScenes(currentSources), [currentSources]);
+  const sceneMetadata = useMemo(
+    () => scenes.map(s => ({id: s.id, name: s.name})),
+    [scenes]
+  );
+  const [activeSceneId, setActiveSceneId] = useState<string | null>(
+    () => scenes[0].id
+  );
+  const activeScene = scenes.find(s => s.id === activeSceneId) ?? scenes[0];
+
+  // Redux mirrors {id, name} for the scene dropdowns and the AI prompt
+  // (non-React readers).
+  useEffect(() => {
+    if (SCENES_UI_VARIANT) {
+      dispatch(setScenes(sceneMetadata));
+    }
+  }, [sceneMetadata, dispatch]);
 
   // Lab2 switches levels in place; reset the lab slice and any in-flight
   // location pick on leave. Declared before the seed effect so on a level
@@ -211,18 +234,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     };
   }, [levelProperties.id, dispatch]);
 
-  // Seed the animation and scene lists BEFORE the Code tab mounts: dropdown
-  // fields validate saved values against the store at block-load time, and a
-  // child's mount effect runs before any parent effect — hence the
-  // animationsSeeded render gate, not just dispatch ordering.
+  // Seed the animation list BEFORE the workspace injects: dropdown fields
+  // validate saved values against the store at block-load time — hence the
+  // animationsSeeded gate on useCodeWorkspace, not just dispatch ordering.
   useEffect(() => {
     let cancelled = false;
     dispatch(
       setInitialAnimationList(
-        // Deep-cloned: project sources are Immer-frozen (they live in the
-        // lab2 redux slice) and the legacy thunk normalizes its argument IN
-        // PLACE — mutating a frozen object throws in strict-mode production
-        // bundles and the animation list never seeds.
+        // Deep-cloned: the legacy thunk normalizes its argument IN PLACE,
+        // and this object belongs to the sources state.
         cloneDeep(initialSources.animations || EMPTY_ANIMATION_LIST),
         // No v3 migration; the engine never runs the legacy share path.
         undefined as unknown as object,
@@ -233,27 +253,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       setAnimationsSeeded(true);
       return;
     }
-    // Migrate single-workspace projects to one scene on first open.
-    const scenes: SpriteLab2Scene[] = initialSources.scenes?.length
-      ? initialSources.scenes
-      : [
-          {
-            id: createUuid(),
-            name: 'Scene 1',
-            source:
-              (initialSources.source as WorkspaceSerialization) ??
-              DEFAULT_SCENE_SOURCE,
-          },
-        ];
-    scenesRef.current = scenes;
-    activeSceneIdRef.current = scenes[0].id;
-    dispatch(setScenes(scenes.map(s => ({id: s.id, name: s.name}))));
-    dispatch(setActiveSceneId(scenes[0].id));
-
-    // Block mount only waits on the section-scenes fetch when saved blocks
-    // reference external scenes; the gated path times out into placeholder
-    // options so a hung API can't blank the lab.
-    const savedExternalKeys = collectSavedExternalKeys(scenes);
+    // Workspace injection only waits on the section-scenes fetch when saved
+    // blocks reference external scenes; the gated path times out into
+    // placeholder options so a hung API can't blank the lab.
+    const savedExternalKeys = collectSavedExternalKeys(
+      getScenes(initialSources)
+    );
     if (savedExternalKeys.length === 0) {
       setAnimationsSeeded(true);
       fetchSectionScenes(levelProperties.id)
@@ -346,6 +351,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     });
   }, [animationListState, patchSources]);
 
+  // getCode from useCodeWorkspace, via a ref: the run callbacks are declared
+  // before the hook call but only invoked after render.
+  // The Code tab's Blockly workspace. Called above the run machinery so
+  // getCode is in scope for it; edits arrive via subscribeToChanges below.
+  const {getCode, loadCode, loadScene, subscribeToChanges} = useCodeWorkspace({
+    enabled: animationsSeeded,
+    source: activeScene.source ?? DEFAULT_SCENE_SOURCE,
+    toolboxDefinition: levelProperties.toolboxDefinition,
+    toolboxXml: levelProperties.toolboxBlocks,
+    sharedBlocks: levelProperties.sharedBlocks,
+    theme: theme === 'Dark' ? 'Dark' : 'Light',
+  });
+
   // Run the current program as the live preview (cheap: the engine reuses p5).
   const runProgram = useCallback(() => {
     const engine = engineRef.current;
@@ -353,8 +371,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     dispatch(setIsRunning(true));
-    engine.runProgram(codeTabRef.current?.getCode() || '');
-  }, [dispatch]);
+    engine.runProgram(getCode() ?? '');
+  }, [dispatch, getCode]);
 
   // Debounce re-runs so we don't restart the program on every keystroke/drag.
   const runTimer = useRef<number>();
@@ -368,14 +386,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // Run one scene: the open scene compiles from the live workspace, others
   // headless from saved sources. Cover/fade comes from the engine's jump
   // callbacks, not here — editor/tab switches don't fade.
-  const runScene = useCallback(
-    (sceneId: string | null) => {
+  const runLocalScene = useCallback(
+    (scene: SpriteLab2Scene) => {
       const engine = engineRef.current;
-      const scene = scenesRef.current.find(s => s.id === sceneId);
-      if (!engine || !scene) {
-        // If a jump triggered this, resume the old scene instead of leaving
-        // it frozen.
-        engineRef.current?.cancelSceneJump();
+      if (!engine) {
         return;
       }
       // Running a local scene leaves any external-project context behind.
@@ -383,10 +397,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       engine.preloadAnimationsOverride = null;
       let code = '';
       try {
+        const live = scene.id === activeSceneId ? getCode() : null;
         code =
-          scene.id === activeSceneIdRef.current && codeTabRef.current
-            ? codeTabRef.current.getCode()
-            : compileWorkspaceSource(scene.source ?? DEFAULT_SCENE_SOURCE);
+          live ?? compileWorkspaceSource(scene.source ?? DEFAULT_SCENE_SOURCE);
       } catch (e) {
         // A scene that fails to compile shouldn't kill the jump entirely;
         // run it as an empty scene.
@@ -395,10 +408,22 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       dispatch(setIsRunning(true));
       engine.runProgram(code);
     },
-    [dispatch]
+    [dispatch, activeSceneId, getCode]
   );
-  const runSceneRef = useRef(runScene);
-  runSceneRef.current = runScene;
+
+  const runScene = useCallback(
+    (sceneId: string | null) => {
+      const scene = scenes.find(s => s.id === sceneId);
+      if (!scene) {
+        // If a jump triggered this, resume the old scene instead of leaving
+        // it frozen.
+        engineRef.current?.cancelSceneJump();
+        return;
+      }
+      runLocalScene(scene);
+    },
+    [scenes, runLocalScene]
+  );
 
   // --- External scenes (cross-project jumps) ---
   const externalProjectsRef = useRef(new Map<string, ExternalProject>());
@@ -428,10 +453,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           ...currentAnimations.propsByKey,
         },
       };
-      const currentSceneMetadata = scenesRef.current.map(s => ({
-        id: s.id,
-        name: s.name,
-      }));
+      const currentSceneMetadata = sceneMetadata;
       dispatch({type: SET_INITIAL_ANIMATION_LIST, animationList: merged});
       // Dedupe: the external project can be the user's own (a jump back into
       // this project), and duplicate ids break the selector's list rendering.
@@ -454,7 +476,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         dispatch(setScenes(currentSceneMetadata));
       }
     },
-    [dispatch]
+    [dispatch, sceneMetadata]
   );
 
   const runExternalProjectScene = useCallback(
@@ -519,10 +541,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     },
     [runExternalProjectScene]
   );
-  const runExternalSceneRef = useRef(runExternalScene);
-  runExternalSceneRef.current = runExternalScene;
-  const runExternalProjectSceneRef = useRef(runExternalProjectScene);
-  runExternalProjectSceneRef.current = runExternalProjectScene;
 
   // The external dropdown re-fetches the section list on every open, so
   // scenes classmates add while this lab is open show up.
@@ -534,7 +552,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       const refs = await fetchSectionScenes(levelProperties.id);
       const options = toExternalSceneOptions(refs);
       const known = new Set(options.map(o => o.key));
-      collectSavedExternalKeys(scenesRef.current).forEach(key => {
+      collectSavedExternalKeys(scenes).forEach(key => {
         if (!known.has(key)) {
           options.push({key, label: `(unavailable) #${key.slice(0, 10)}`});
         }
@@ -542,39 +560,51 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       dispatch(setExternalScenes(options));
     });
     return () => setExternalSceneRefreshHandler(null);
-  }, [levelProperties.id, dispatch]);
+  }, [levelProperties.id, dispatch, scenes]);
 
-  // Start the live preview once the engine is ready and wire the scene-jump
-  // blocks. Inside a running external scene, go-to-scene resolves against
-  // that project's scenes, so classmates' multi-scene games work.
+  // Wire the scene-jump blocks; reassigned whenever the callbacks' inputs
+  // change (assignment is cheap and idempotent). Inside a running external
+  // scene, go-to-scene resolves against that project's scenes, so
+  // classmates' multi-scene games work.
+  useEffect(() => {
+    const engine = engineRef.current;
+    if (!engineReady || !engine) {
+      return;
+    }
+    engine.onGoToScene = (sceneId: string) => {
+      if (scenes.some(s => s.id === sceneId)) {
+        runScene(sceneId);
+        return;
+      }
+      const external = currentExternalProjectRef.current;
+      if (external && external.scenes.some(s => s.id === sceneId)) {
+        runExternalProjectScene(external, sceneId);
+        return;
+      }
+      // Unknown scene id: resume the old scene rather than staying frozen.
+      engine.cancelSceneJump();
+    };
+    engine.onGoToExternalScene = runExternalScene;
+    // Cover on jump start, fade on landing; the cover and the fade's
+    // opaque first frame swap in one commit, so there's no flash.
+    engine.onSceneJumpStart = () => setJumpCover(true);
+    engine.onSceneJumpLand = () => {
+      setFadeTrigger(t => t + 1);
+      setJumpCover(false);
+    };
+    engine.onSceneJumpCancel = () => setJumpCover(false);
+  }, [
+    engineReady,
+    scenes,
+    runScene,
+    runExternalScene,
+    runExternalProjectScene,
+  ]);
+
+  // Start the live preview once the engine is ready (runProgram is stable,
+  // so this doesn't re-run the program on unrelated renders).
   useEffect(() => {
     if (engineReady) {
-      const engine = engineRef.current;
-      if (engine) {
-        engine.onGoToScene = (sceneId: string) => {
-          if (scenesRef.current.some(s => s.id === sceneId)) {
-            runSceneRef.current(sceneId);
-            return;
-          }
-          const external = currentExternalProjectRef.current;
-          if (external && external.scenes.some(s => s.id === sceneId)) {
-            runExternalProjectSceneRef.current(external, sceneId);
-            return;
-          }
-          // Unknown scene id: resume the old scene rather than staying frozen.
-          engine.cancelSceneJump();
-        };
-        engine.onGoToExternalScene = (key: string) =>
-          runExternalSceneRef.current(key);
-        // Cover on jump start, fade on landing; the cover and the fade's
-        // opaque first frame swap in one commit, so there's no flash.
-        engine.onSceneJumpStart = () => setJumpCover(true);
-        engine.onSceneJumpLand = () => {
-          setFadeTrigger(t => t + 1);
-          setJumpCover(false);
-        };
-        engine.onSceneJumpCancel = () => setJumpCover(false);
-      }
       runProgram();
     }
   }, [engineReady, runProgram]);
@@ -590,51 +620,69 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     if (activeTab === 'Play') {
-      runScene(scenesRef.current[0]?.id ?? null);
+      runScene(scenes[0]?.id ?? null);
     } else if (activeTab === 'Code') {
-      runScene(activeSceneIdRef.current);
+      runScene(activeSceneId);
     }
-  }, [activeTab, engineReady, runScene]);
+  }, [activeTab, engineReady, runScene, activeSceneId, scenes]);
 
-  const handleSourceChange = useCallback(
+  // Persist a workspace edit. Updater form: composes with concurrent field
+  // writes (e.g. the animations patch) instead of overwriting them.
+  const handleWorkspaceChange = useCallback(
     (source: WorkspaceSerialization) => {
       if (SCENES_UI_VARIANT) {
         // The workspace edits the active scene. Scenes are the single source
         // of truth: only `scenes` is written; the variant-off read path
         // falls back to scenes[0].
-        scenesRef.current = scenesRef.current.map(s =>
-          s.id === activeSceneIdRef.current ? {...s, source} : s
-        );
-        patchSources({scenes: scenesRef.current});
+        updateSources(prev => {
+          const sources = prev ?? currentSources;
+          return {
+            ...sources,
+            scenes: getScenes(sources).map(s =>
+              s.id === activeSceneId ? {...s, source} : s
+            ),
+          };
+        });
       } else {
-        patchSources({source});
+        updateSources(prev => ({...(prev ?? currentSources), source}));
       }
       // Keep the live preview in sync with the edited code.
       scheduleRun();
     },
-    [patchSources, scheduleRun]
+    [updateSources, currentSources, activeSceneId, scheduleRun]
   );
 
-  const handleEdit = useCallback(() => {
-    dispatch(setHasEdited(true));
-  }, [dispatch]);
+  // Deliver user edits into the save/preview pipeline; intermediate field
+  // edits (which don't serialize) just re-run the preview.
+  useEffect(
+    () => subscribeToChanges(handleWorkspaceChange, scheduleRun),
+    [subscribeToChanges, handleWorkspaceChange, scheduleRun]
+  );
+
+  // The editor and preview follow the active scene: on change, load its
+  // blocks into the workspace and run it. Edge-detected on the id because
+  // activeScene's identity changes on every edit (scenes is rebuilt), and
+  // content edits must not reload the workspace. On mount the workspace
+  // inject + engine-ready effects cover the load and first run.
+  const prevActiveSceneIdRef = useRef(activeScene.id);
+  useEffect(() => {
+    if (prevActiveSceneIdRef.current === activeScene.id) {
+      return;
+    }
+    prevActiveSceneIdRef.current = activeScene.id;
+    loadScene(activeScene.source ?? DEFAULT_SCENE_SOURCE);
+    runLocalScene(activeScene);
+  }, [activeScene, loadScene, runLocalScene]);
 
   // Scenes variant: switch which scene's workspace is open in the Code tab.
-  // Flip the active-scene bookkeeping first — loading blocks fires change
-  // events, and handleSourceChange must attribute them to the new scene.
+  // The active-scene effect does the load + run.
   const handleSelectScene = useCallback(
     (sceneId: string) => {
-      const scene = scenesRef.current.find(s => s.id === sceneId);
-      if (!scene || sceneId === activeSceneIdRef.current) {
-        return;
+      if (scenes.some(s => s.id === sceneId)) {
+        setActiveSceneId(sceneId);
       }
-      activeSceneIdRef.current = sceneId;
-      dispatch(setActiveSceneId(sceneId));
-      codeTabRef.current?.loadScene(scene.source ?? DEFAULT_SCENE_SOURCE);
-      // The preview follows the scene being edited.
-      runScene(sceneId);
     },
-    [dispatch, runScene]
+    [scenes]
   );
 
   const handleCreateScene = useCallback(
@@ -644,14 +692,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         name,
         source: DEFAULT_SCENE_SOURCE,
       };
-      scenesRef.current = [...scenesRef.current, scene];
-      patchSources({scenes: scenesRef.current});
-      dispatch(
-        setScenes(scenesRef.current.map(s => ({id: s.id, name: s.name})))
-      );
-      handleSelectScene(scene.id);
+      updateSources(prev => {
+        const sources = prev ?? currentSources;
+        return {...sources, scenes: [...getScenes(sources), scene]};
+      });
+      // Both state updates land in one commit, so the active-scene effect
+      // sees the new scene in the derived list.
+      setActiveSceneId(scene.id);
     },
-    [dispatch, patchSources, handleSelectScene]
+    [updateSources, currentSources]
   );
 
   // World grid (rudimentary, single world for now). Persisted to sources but
@@ -672,13 +721,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
 
   // AI-generated blocks load into the Code tab; switch there so the user sees
-  // them.
+  // them. loadCode emits onWorkspaceChange, which persists and previews.
   const handleCodeGenerated = useCallback(
     (source: WorkspaceSerialization) => {
-      codeTabRef.current?.loadCode(source);
+      loadCode(source);
       dispatch(setActiveTab('Code'));
     },
-    [dispatch]
+    [loadCode, dispatch]
   );
 
   // The playspace persists across tabs (the engine keeps running), so switching
@@ -699,13 +748,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     () => engineRef.current?.library?.defaultSpriteSize || 100,
     []
   );
-
-  // The workspace opens on the default scene's blocks (the seed effect makes
-  // scenes[0] active before the Code tab mounts). Scenes are the source of
-  // truth in either mode; the top-level `source` is only a fallback for
-  // projects saved before scenes existed.
-  const initialWorkspaceSource = (currentSources.scenes?.[0]?.source ??
-    currentSources.source) as WorkspaceSerialization | undefined;
 
   return (
     <div className={moduleStyles.labRow}>
@@ -749,17 +791,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           }}
         >
           {animationsSeeded && (
-            <CodeTab
-              ref={codeTabRef}
-              initialSource={initialWorkspaceSource}
-              toolboxDefinition={levelProperties.toolboxDefinition}
-              toolboxXml={levelProperties.toolboxBlocks}
-              sharedBlocks={levelProperties.sharedBlocks}
-              theme={theme === 'Dark' ? 'Dark' : 'Light'}
-              onSourceChange={handleSourceChange}
-              onEdit={handleEdit}
-              onIntermediateChange={scheduleRun}
-            />
+            <div id={BLOCKLY_DIV_ID} className={moduleStyles.blocklyDiv} />
           )}
         </div>
 
@@ -813,17 +845,33 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
 };
 
+// A user edit is a change to the code-bearing fields. Animation/world
+// patches (e.g. AI image generation) don't flip the progression gate.
+// Identity compare works: writes preserve untouched field identities.
+const computeHasEdited = (
+  prev: SpriteLab2Source | undefined,
+  next: SpriteLab2Source
+) => !prev || prev.scenes !== next.scenes || prev.source !== next.source;
+
 // Container that handles loading sources and wiring project manager, and the hands off to the inner view.
 const SpriteLab2Container: React.FunctionComponent<
   LabProps<SpriteLab2LevelProperties, SpriteLab2Source>
 > = ({levelProperties}) => {
   const dispatch = useAppDispatch();
-  const {currentSources, patchSources, channel, projectManager, loadError} =
-    useSources<SpriteLab2Source>({
-      levelProperties,
-      defaultSources,
-      includeVersionHistory: true,
-    });
+  const {
+    currentSources,
+    updateSources,
+    patchSources,
+    channel,
+    projectManager,
+    loadError,
+    hasEdited,
+  } = useSources<SpriteLab2Source>({
+    levelProperties,
+    defaultSources,
+    includeVersionHistory: true,
+    computeHasEdited,
+  });
 
   // Set the project manager in the registry for external components that need it (e.g. header).
   useEffect(() => {
@@ -848,8 +896,10 @@ const SpriteLab2Container: React.FunctionComponent<
     <SpriteLab2View
       levelProperties={levelProperties}
       currentSources={currentSources}
+      updateSources={updateSources}
       patchSources={patchSources}
       channelId={channel?.id}
+      hasEdited={hasEdited}
     />
   );
 };
