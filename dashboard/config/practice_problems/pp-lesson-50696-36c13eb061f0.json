@@ -1,0 +1,27 @@
+{
+  "key": "pp-lesson-50696-36c13eb061f0",
+  "problem_type": "match",
+  "active": true,
+  "problem_text": "Match the following terms with their definitions.",
+  "solution": [
+    {
+      "option": "Probability",
+      "correct": "The likelihood of a specific outcome."
+    },
+    {
+      "option": "Abstraction",
+      "correct": "Focusing on important information."
+    },
+    {
+      "option": "Artificial Intelligence (AI)",
+      "correct": "Technology that mimics human intelligence."
+    },
+    {
+      "option": "Prompt",
+      "correct": "Instruction that guides AI's response."
+    }
+  ],
+  "objective_keys": [
+    "e7aaaee4-eef2-421b-92b2-c67b43f1bfe7"
+  ]
+}

@@ -1,0 +1,184 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th,
+  td {
+    padding: 7px;
+    border: 1px solid var(--borders-neutral-light, #ccc);
+    text-align: left;
+    vertical-align: top;
+  }
+}
+
+.empty {
+  padding: 7px;
+  color: var(--text-neutral-secondary, #555);
+  font-style: italic;
+}
+
+.actionButton {
+  padding: 5px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.buttonRow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 10px;
+
+  .addButton {
+    margin-top: 0;
+  }
+}
+
+.typePicker {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  margin: 12px 0;
+
+  .addButton {
+    margin-top: 0;
+  }
+}
+
+// Matches the "Add Video" button in tutorDeepDiveEditor.module.scss.
+.addButton {
+  margin-top: 10px;
+  margin-left: 0;
+  padding: 7px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background: #eee;
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+
+  i {
+    margin-right: 7px;
+  }
+}
+
+.objectiveList {
+  margin: 0;
+  padding-left: 18px;
+}
+
+// --- Preview ---
+
+.preview {
+  padding: 12px;
+  border: 1px solid var(--borders-neutral-light, #ccc);
+  border-radius: 4px;
+}
+
+.previewQuestion {
+  margin-bottom: 10px;
+}
+
+.optionList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+}
+
+.correctMark {
+  color: var(--text-success-primary, #1a7f37);
+}
+
+.orderedList {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.category {
+  margin-bottom: 8px;
+}
+
+// --- Editor ---
+
+.field {
+  display: block;
+  margin: 12px 0;
+}
+
+.textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--borders-neutral-light, #ccc);
+  border-radius: 4px;
+}
+
+.editorRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+}
+
+.editorRow input[type='text'] {
+  flex: 1;
+  border: 1px solid var(--borders-neutral-light, #ccc);
+  border-radius: 4px;
+}
+
+.objectives {
+  margin: 12px 0;
+  padding: 10px;
+  border: 1px solid var(--borders-neutral-light, #ccc);
+  border-radius: 4px;
+}
+
+.objectiveCheckboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+// --- Review carousel ---
+
+.dialogTitle {
+  margin-top: 10px;
+}
+
+.reviewHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  margin-top: 10px;
+}
+
+.reviewActions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.reviewNav {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.error {
+  color: var(--text-error-primary, #c00);
+}
+
+.hint {
+  color: var(--text-neutral-secondary, #555);
+}

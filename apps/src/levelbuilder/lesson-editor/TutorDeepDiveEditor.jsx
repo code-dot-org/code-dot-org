@@ -1,22 +1,24 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
+import PracticeProblemsPanel from './practiceProblems/PracticeProblemsPanel';
 import TutorVideoDialog from './TutorVideoDialog';
 
 import moduleStyles from './tutorDeepDiveEditor.module.scss';
 
-// Authoring surface for a lesson's AI Tutor "deep dive" content. Videos are
-// managed here today; practice problems will slot in as a sibling panel within
-// the same collapsible section without restructuring.
+// Authoring surface for a lesson's AI Tutor "deep dive" content: videos and
+// practice problems, each in its own panel within the same collapsible
+// section.
 //
 // Unlike the redux-backed pickers on this page, this section saves each item
-// immediately against the /json_videos endpoints rather than riding the lesson
-// SaveBar — a video carries an uploaded file and has a lifecycle independent of
-// the lesson's other fields.
+// immediately against the /json_videos and /practice_problems endpoints rather
+// than riding the lesson SaveBar — items have a lifecycle (file upload, AI
+// generation) independent of the lesson's other fields.
 export default function TutorDeepDiveEditor({
   lessonId,
   objectives,
   initialVideos,
+  initialPracticeProblems,
 }) {
   const [videos, setVideos] = useState(initialVideos);
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -157,8 +159,12 @@ export default function TutorDeepDiveEditor({
         onClose={() => setDialogOpen(false)}
         onSaved={handleSaved}
       />
-      <h3>Practice Problems</h3>
-      <p>Coming soon!</p>
+
+      <PracticeProblemsPanel
+        lessonId={lessonId}
+        objectives={objectives}
+        initialProblems={initialPracticeProblems || []}
+      />
     </div>
   );
 }
@@ -167,4 +173,5 @@ TutorDeepDiveEditor.propTypes = {
   lessonId: PropTypes.number.isRequired,
   objectives: PropTypes.arrayOf(PropTypes.object).isRequired,
   initialVideos: PropTypes.arrayOf(PropTypes.object).isRequired,
+  initialPracticeProblems: PropTypes.arrayOf(PropTypes.object),
 };
