@@ -1,9 +1,5 @@
 Feature: Maze level tests for users that are signed out
 
-# The maze puzzles are levels 1-4 of ui-test-maze lesson 1. The course has no
-# bonus level, so a puzzle's URL level number and its rendered progress bubble
-# ("for level N") line up in the header and unit overview.
-
 Background:
   Given I am on "http://studio.code.org/courses/ui-test-maze/units/1/reset"
 

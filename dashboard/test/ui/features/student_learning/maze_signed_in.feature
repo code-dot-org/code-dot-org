@@ -1,10 +1,6 @@
 @as_student
 Feature: Maze level tests for users that are signed in
 
-# The maze puzzles are levels 1-4 of ui-test-maze lesson 1. The course has no
-# bonus level, so a puzzle's URL level number and its rendered progress bubble
-# ("for level N") line up in the header and unit overview.
-
 Scenario: Solving a puzzle marks it perfect in the header and unit overview, and level source persists across a client-side reset
   Given I am on "http://studio.code.org/courses/ui-test-maze/units/1/lessons/1/levels/1?noautoplay=true"
   And I wait for the lab page to fully load
