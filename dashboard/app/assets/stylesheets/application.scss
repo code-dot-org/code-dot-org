@@ -23,6 +23,7 @@
  * Shared
  *= require fonts/barlow-semi-condensed
  *= require fonts/figtree
+ *= require fonts/geist
  *= require fonts/noto-sans
  *= require user-menu
  *= require buttons
@@ -34,6 +35,7 @@
 @import "font";
 @import "mixins";
 @import "style-constants";
+@import "brand-selectors";
 
 // Bootstrap Variables
 $baseFontFamily: $main-font;
@@ -1192,7 +1194,7 @@ $default-modal-width: 640px;
 
 // CodeAI logo is rectangular (~5.9:1), so the square-logo offsets above
 // don't apply. Center it vertically inside the 50px header instead.
-html[data-brand="codeai"], html[data-brand="codeai-next"] {
+@include codeai-family-brand {
   .header-wrapper .header .header_logo,
   .header_logo {
     width: auto;
@@ -2786,8 +2788,8 @@ a.download-video {
 .bubble-choice {
   #markdown.teacher {
     max-width: 1000px;
-    border: 5px solid $cyan;
-    background-color: $lightest_cyan;
+    border: 5px solid var(--borders-info-primary);
+    background-color: var(--background-info-extra-light);
     border-radius: 5px;
     margin: 10px auto;
     .level-group-content & {
@@ -2801,12 +2803,13 @@ a.download-video {
       font-size: 18px;
       line-height: 18px;
       @include main-font-bold;
-      color: $white;
-      background: $cyan;
+      color: var(--text-neutral-white-fixed);
+      background: var(--background-info-primary);
       margin: 0;
     }
     p {
       font-size: 13px;
+      color: var(--text-neutral-primary);
     }
   }
 
@@ -2962,14 +2965,42 @@ a.download-video {
 
 .previousPageButton {
   margin-right: 5px;
+  background-color: var(--background-neutral-primary);
+  border-color: var(--borders-neutral-primary);
+  color: var(--text-neutral-primary);
+  background-image: none;
+
+  &:hover {
+    background-color: var(--background-neutral-tertiary);
+    color: var(--text-border-neutral-primary);
+  }
 }
 
-.buttons.submittable {
-  .submitButton, .unsubmitButton {
-    border-color: $purple;
-    background-color: $purple;
-    color: $white;
-    background-image: none;
+.nextPageButton {
+  border-color: var(--borders-brand-purple-primary);
+  background-color: var(--background-brand-purple-primary);
+  color: var(--text-neutral-white-fixed);
+  background-image: none;
+
+  &:hover {
+    background-color: var(--background-brand-purple-strong);
+    border-color: var(--borders-brand-purple-strong);
+  }
+}
+
+.submitButton, .unsubmitButton {
+  border-color: var(--borders-brand-purple-primary);
+  background-color: var(--background-brand-purple-primary);
+  color: var(--text-neutral-white-fixed);
+  background-image: none;
+
+  &:hover {
+    background-color: var(--background-brand-purple-strong);
+    border-color: var(--borders-brand-purple-strong);
+  }
+
+  &:disabled {
+    background-color: var(--background-brand-purple-primary);
   }
 }
 
@@ -3034,6 +3065,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
       width: calc(100% - #{$multi-left-margin});
       font-size: 16px;
       line-height: 24px;
+      color: var(--text-neutral-primary);
     }
 
     // The block of answers.
@@ -3050,6 +3082,13 @@ $information-desktop: "only screen and (min-width: 1024px)";
     .answerbutton {
       clear: both;
       margin-left: $multi-left-margin;
+      color: var(--text-neutral-primary);
+      background-color: transparent;
+      background-image: none;
+      border: none;
+      padding: 5px;
+      margin: 5px;
+      box-shadow: none;
     }
   }
 
@@ -3078,6 +3117,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
       float: left;
       font-size: 16px;
       line-height: 24px;
+      color: var(--text-neutral-primary);
 
       @media #{$information-tablet-tall} {
         margin-left: $multi-left-margin;
@@ -3112,8 +3152,12 @@ $information-desktop: "only screen and (min-width: 1024px)";
       margin-right: 15px;
       padding-left: 10px;
       padding-right: 20px;
-      padding-top: 10px;
-      padding-bottom: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      background-color: transparent;
+      background-image: none;
+      box-shadow: none;
+      border: none;
     }
   }
 
@@ -3616,7 +3660,7 @@ $width: 400px;
   }
 }
 
-html[data-brand="codeai"], html[data-brand="codeai-next"] {
+@include codeai-family-brand {
   #main-logo #logo-img {
     // aspect ratio of logo-codeai-inverse.svg (viewBox="0 0 591.15 100");
     // reserves ~130px wide before fetch, preventing horizontal CLS.

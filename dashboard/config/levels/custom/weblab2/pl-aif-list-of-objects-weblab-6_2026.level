@@ -1,5 +1,6 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-03-24T03:58:03.000Z",
   "level_num": "custom",
@@ -30,49 +31,163 @@
       "files": {
         "1": {
           "id": "1",
-          "name": "index.html",
-          "language": "html",
-          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>School Supply Tracker</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n\n  <div class=\"app-container\">\n    <header>\n      <h1>Supply Tracker</h1>\n      <p>Manage inventory by index.</p>\n    </header>\n\n    <section class=\"control-panel\">\n      <div class=\"card\">\n        <h2>Check Supply</h2>\n        <label>Index:</label>\n        <input type=\"number\" id=\"checkIndexInput\" placeholder=\"0\">\n        <button id=\"checkBtn\">Get Item</button>\n        <p class=\"result-display\" id=\"checkResult\">...</p>\n      </div>\n\n      <div class=\"card\">\n        <h2>Update Location</h2>\n        <label>Index:</label>\n        <input type=\"number\" id=\"updateIndexInput\" placeholder=\"0\">\n        <label>New Location:</label>\n        <input type=\"text\" id=\"locationInput\" placeholder=\"e.g. Cabinet B\">\n        <button id=\"updateBtn\">Update</button>\n        <p class=\"result-display\" id=\"updateResult\">...</p>\n      </div>\n    </section>\n  </div>\n\n</body>\n</html>",
-          "active": false,
-          "folderId": "0"
+          "name": "prompt.md",
+          "contents": "Add your changes to prompt.md",
+          "folderId": "0",
+          "active": false
         },
         "2": {
           "id": "2",
-          "name": "style.css",
-          "language": "css",
-          "contents": "/* style.css */\n:root {\n  --primary: #6C63FF;\n  --secondary: #3F3D56;\n  --bg: #F9FAFB;\n  --card-bg: #FFFFFF;\n  --text: #1F2937;\n  --border: #E5E7EB;\n}\n\nbody {\n  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n  background-color: var(--bg);\n  color: var(--text);\n  margin: 0;\n  padding: 20px;\n  display: flex;\n  justify-content: center;\n}\n\n.app-container {\n  max-width: 600px;\n  width: 100%;\n}\n\nheader {\n  text-align: center;\n  margin-bottom: 30px;\n}\n\nh1 {\n  color: var(--primary);\n  margin-bottom: 5px;\n}\n\n.control-panel {\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n}\n\n.card {\n  background: var(--card-bg);\n  padding: 20px;\n  border-radius: 8px;\n  border: 1px solid var(--border);\n  box-shadow: 0 2px 4px rgba(0,0,0,0.05);\n}\n\nlabel {\n  display: block;\n  font-size: 0.9rem;\n  margin-bottom: 5px;\n  margin-top: 10px;\n  font-weight: bold;\n}\n\ninput {\n  width: 100%;\n  padding: 8px;\n  border: 1px solid var(--border);\n  border-radius: 4px;\n  box-sizing: border-box;\n}\n\nbutton {\n  background-color: var(--primary);\n  color: white;\n  border: none;\n  padding: 10px 20px;\n  border-radius: 4px;\n  cursor: pointer;\n  margin-top: 15px;\n  width: 100%;\n  font-size: 1rem;\n}\n\nbutton:hover {\n  background-color: #5a52d5;\n}\n\n.result-display {\n  margin-top: 15px;\n  padding: 10px;\n  background-color: #F3F4F6;\n  border-radius: 4px;\n  font-family: monospace;\n  min-height: 20px;\n}",
-          "folderId": "0",
-          "active": false
-        },
-        "3": {
-          "id": "3",
-          "name": "script.js",
-          "language": "js",
-          "contents": "// DOM Elements\nconst checkBtn = document.querySelector(\"#checkBtn\");\nconst checkIndexInput = document.querySelector(\"#checkIndexInput\");\nconst checkResult = document.querySelector(\"#checkResult\");\n\nconst updateBtn = document.querySelector(\"#updateBtn\");\nconst updateIndexInput = document.querySelector(\"#updateIndexInput\");\nconst locationInput = document.querySelector(\"#locationInput\");\nconst updateResult = document.querySelector(\"#updateResult\");\n\n\nlet supplies = [];\n\n\nconst getItemByIndex = (index) => {\n  \n};\n\n\nconst updateLocationByIndex = (index, newLocation) => {\n  \n};\n\n// --- Event Listeners (Do not change these) ---\n\ncheckBtn.addEventListener(\"click\", () => {\n  const index = Number(checkIndexInput.value);\n  const item = getItemByIndex(index);\n  \n  if (item) {\n    checkResult.textContent = `Found: ${item.name} at ${item.location}`;\n  } else {\n    checkResult.textContent = \"Error: No item found at that index.\";\n  }\n});\n\nupdateBtn.addEventListener(\"click\", () => {\n  const index = Number(updateIndexInput.value);\n  const loc = locationInput.value;\n  \n  updateLocationByIndex(index, loc);\n  updateResult.textContent = `Update attempted for index ${index}.`;\n});",
+          "name": "data.js",
+          "contents": "const animal = {\n    name: \"Buddy\",\n    species: \"Dog\",\n    breed: \"Golden Retriever\",\n    image: \"https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&q=80&w=400\",\n    age: 3,\n    gender: \"Male\",\n    color: \"Golden\",\n    status: \"Available\",\n    bio: \"Friendly and loves to play fetch. Great with kids and other dogs!\"\n}",
           "folderId": "0",
           "active": true
         },
-        "4": {
-          "id": "4",
-          "name": "reflection.md",
-          "language": "md",
-          "contents": "What pattern do you notice in each object?\n\n",
+        "5": {
+          "id": "5",
+          "name": "siamese_cat.jpg",
+          "contents": "",
           "folderId": "0",
+          "url": "/level_starter_assets/pl-aif-list-of-objects-weblab-6_2026/uuid/d9cd5fb4-3b33-45c1-a905-e4a78ee6c9c2.jpg",
+          "type": "support",
           "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "pitt_bull_dog.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/pl-aif-list-of-objects-weblab-6_2026/uuid/7c1fe7fc-ad52-4f31-b9ea-add676893dd2.png",
+          "type": "support",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "golden_retriever_dog.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/pl-aif-list-of-objects-weblab-6_2026/uuid/7f4ad5fb-7c6a-49fa-bcec-153cc31841d9.png",
+          "type": "support",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "doodle_dog.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/pl-aif-list-of-objects-weblab-6_2026/uuid/2d082250-8c78-404f-9387-a992b12f05c9.jpg",
+          "type": "support",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "chiuaua_dog.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/pl-aif-list-of-objects-weblab-6_2026/uuid/7eae5707-8de7-4b54-9ed3-e80ca59b2347.png",
+          "type": "support",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "white_cat.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/pl-aif-list-of-objects-weblab-6_2026/uuid/95f7047c-d6ee-4507-bf7e-109ed18c804a.png",
+          "type": "support",
+          "active": false
+        },
+        "12": {
+          "id": "12",
+          "name": "tuxedo_cat.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/pl-aif-list-of-objects-weblab-6_2026/uuid/b8bb507a-eafd-4b2e-82e8-a78f1769a0c6.jpg",
+          "type": "support",
+          "active": false
+        },
+        "13": {
+          "id": "13",
+          "name": "pomeranian_dog.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/pl-aif-list-of-objects-weblab-6_2026/uuid/a388847b-ae17-4950-998a-4656a1233687.png",
+          "type": "support",
+          "active": false
+        },
+        "14": {
+          "id": "14",
+          "name": "boxer_dog.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/pl-aif-list-of-objects-weblab-6_2026/uuid/990d97a0-ab78-4c78-b174-22b5287b4834.png",
+          "type": "support",
+          "active": false
+        },
+        "18": {
+          "id": "18",
+          "name": "style.css",
+          "contents": "@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');\n\n:root {\n  --primary: #8b5cf6; /* Modern Violet */\n  --primary-gradient: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);\n  --bg: #f1f5f9;\n  --card-bg: #ffffff;\n  --text-main: #0f172a;\n  --text-light: #64748b;\n  --radius-lg: 20px;\n  --radius-md: 12px;\n  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);\n  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);\n  --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);\n}\n\nbody {\n  font-family: 'Outfit', sans-serif;\n  background-color: var(--bg);\n  color: var(--text-main);\n  margin: 0;\n  padding: 0;\n  line-height: 1.5;\n}\n\n/* Hero Header */\nheader {\n  background: var(--primary-gradient);\n  color: white;\n  padding: 4rem 1rem 6rem; /* Extra padding at bottom for overlap */\n  text-align: center;\n}\n\nheader h1 {\n  margin: 0;\n  font-size: 3.5rem;\n  font-weight: 700;\n  letter-spacing: -0.05em;\n}\n\nheader p {\n  font-size: 1.25rem;\n  opacity: 0.9;\n  font-weight: 300;\n  margin-top: 0.5rem;\n}\n\n/* Main Container overlapping the header */\n.container {\n  max-width: 1200px;\n  margin: -4rem auto 3rem; /* Negative top margin pulls cards over the header */\n  padding: 0 1.5rem;\n  position: relative;\n  z-index: 10;\n}\n\n/* Grid Layout */\n#pet-grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));\n  gap: 2.5rem;\n}\n\n/* Card Styling */\n.pet-card {\n  background-color: var(--card-bg);\n  border-radius: var(--radius-lg);\n  overflow: hidden;\n  box-shadow: var(--shadow-md);\n  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);\n  display: flex;\n  flex-direction: column;\n}\n\n.pet-card:hover {\n  transform: translateY(-8px);\n  box-shadow: var(--shadow-hover);\n}\n\n.image-container {\n  position: relative;\n  width: 100%;\n  height: 260px;\n}\n\n.pet-image {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  background-color: #e2e8f0;\n}\n\n/* Floating Status Badge */\n.pet-status {\n  position: absolute;\n  top: 1.25rem;\n  right: 1.25rem;\n  font-size: 0.75rem;\n  padding: 0.5rem 1rem;\n  border-radius: 999px;\n  font-weight: 700;\n  text-transform: uppercase;\n  letter-spacing: 0.05em;\n  box-shadow: var(--shadow-sm);\n  backdrop-filter: blur(8px); /* Modern frosted glass effect */\n}\n\n/* Dynamic Badge Colors */\n.status-available { background-color: rgba(220, 252, 231, 0.9); color: #166534; }\n.status-pending { background-color: rgba(254, 240, 138, 0.9); color: #854d0e; }\n.status-adopted { background-color: rgba(241, 245, 249, 0.9); color: #475569; }\n.status-default { background-color: rgba(224, 231, 255, 0.9); color: #4338ca; }\n\n.pet-content {\n  padding: 2rem;\n  flex-grow: 1;\n  display: flex;\n  flex-direction: column;\n}\n\n.pet-name {\n  margin: 0 0 1.5rem 0;\n  font-size: 2rem;\n  font-weight: 700;\n  color: var(--text-main);\n  letter-spacing: -0.02em;\n}\n\n/* Modern Stats Grid */\n.pet-stats {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 0.75rem;\n  margin-bottom: 1.5rem;\n}\n\n.stat-item {\n  background-color: var(--bg);\n  padding: 0.75rem;\n  border-radius: var(--radius-md);\n  font-size: 0.9rem;\n  color: var(--text-light);\n  display: flex;\n  flex-direction: column;\n}\n\n.stat-item strong {\n  color: var(--text-main);\n  font-size: 0.7rem;\n  text-transform: uppercase;\n  letter-spacing: 0.05em;\n  margin-bottom: 0.25rem;\n}\n\n.pet-bio {\n  font-size: 1rem;\n  color: var(--text-light);\n  line-height: 1.6;\n  margin-top: auto;\n  padding-top: 1.5rem;\n  border-top: 1px solid #e2e8f0;\n}",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        },
+        "19": {
+          "id": "19",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Paws & Hearts Rescue</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n\n  <header>\n    <h1>Paws & Hearts Rescue</h1>\n    <p>Find your new best friend today.</p>\n  </header>\n\n  <div class=\"container\">\n    <div id=\"pet-grid\">\n      </div>\n  </div>\n\n  <script src=\"data.js\"></script>\n  \n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        },
+        "20": {
+          "id": "20",
+          "name": "script.js",
+          "contents": "document.addEventListener(\"DOMContentLoaded\", () => {\n  const grid = document.getElementById(\"pet-grid\");\n\n  // Fallback placeholder image URL\n  const placeholderImg = \"https://placehold.co/400x300/e2e8f0/475569?text=No+Image+Available\";\n\n  // Check if 'animals' array exists (in case they broke data.js)\n  if (typeof animals === 'undefined' || !Array.isArray(animals)) {\n    // Inject a styled error message that gets pushed down to the grey background\n    grid.innerHTML = `\n      <div style=\"grid-column: 1/-1; margin-top: 6rem; background-color: #fee2e2; border: 1px solid #fca5a5; color: #b91c1c; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: var(--shadow-sm);\">\n        <h3 style=\"margin: 0 0 0.5rem 0; font-size: 1.5rem;\">⚠️ Data Error</h3>\n        <p style=\"margin: 0; font-size: 1.1rem;\">Could not find the <strong>'animals'</strong> array. Please check your <em>data.js</em> file!</p>\n      </div>\n    `;\n    return;\n  }\n\n  // Map over the array to create an array of HTML strings\n  const cardsHTML = animals.map(animal => {\n    // Handle Fallbacks for missing data\n    const img = animal.image || placeholderImg;\n    const name = animal.name || \"Unknown Name\";\n    const species = animal.species || \"Unavailable\";\n    const breed = animal.breed || \"Unavailable\";\n    const age = animal.age !== undefined ? animal.age : \"Unavailable\";\n    const gender = animal.gender || \"Unavailable\";\n    const color = animal.color || \"Unavailable\"; \n    const status = animal.status || \"Status Unknown\";\n    const bio = animal.bio || \"No biography available at this time.\";\n\n    // Determine the badge color class based on the status text\n    let badgeClass = \"status-default\";\n    const statusLower = status.toLowerCase();\n    \n    if (statusLower.includes(\"available\")) {\n      badgeClass = \"status-available\";\n    } else if (statusLower.includes(\"pending\")) {\n      badgeClass = \"status-pending\";\n    } else if (statusLower.includes(\"adopted\")) {\n      badgeClass = \"status-adopted\";\n    }\n\n    // Return the HTML string for this specific card using the modern layout\n    return `\n      <div class=\"pet-card\">\n        <div class=\"image-container\">\n          <img src=\"${img}\" alt=\"${name}\" class=\"pet-image\">\n          <span class=\"pet-status ${badgeClass}\">${status}</span>\n        </div>\n        <div class=\"pet-content\">\n          <h2 class=\"pet-name\">${name}</h2>\n          \n          <div class=\"pet-stats\">\n            <div class=\"stat-item\">\n              <strong>Species</strong>\n              <span>${species}</span>\n            </div>\n            <div class=\"stat-item\">\n              <strong>Breed</strong>\n              <span>${breed}</span>\n            </div>\n            <div class=\"stat-item\">\n              <strong>Age</strong>\n              <span>${age}</span>\n            </div>\n            <div class=\"stat-item\">\n              <strong>Gender</strong>\n              <span>${gender}</span>\n            </div>\n          </div>\n          \n          <div class=\"pet-bio\">\n            ${bio}\n          </div>\n        </div>\n      </div>\n    `;\n  }).join(''); // Join the array of HTML strings into one single string\n\n  // Inject the final string into the grid all at once\n  grid.innerHTML = cardsHTML;\n});",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
         }
       },
       "openFiles": [
         "1",
         "2",
-        "3",
-        "4"
+        "5",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "18",
+        "19",
+        "20"
       ]
     },
     "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrWCAxWj7bhVJrdUvEy\nnAj9VwIfatz0cdK4+3TfWvT/p2el9FNg+dkJsyUGxLVcWnnQqx8mTVjigxYp\nSn472K7JsdrRWQSGzbWZXi13iCHHi5fcGCrG0Hfb0LzSNJb/TTDCYP1hcIvp\nse5NfphU5X769dyvbuS+UG+yrPWi1elTy1ozWQ0+m0J39CKMMpMSuHo+820m\nspX5axFjAl9c2W6ZUF5+OFfVJ3f3lFjx1PHaJMigHwdf6C9fWIYVi1rWDsPJ\nc8L8/2+UqXWG+bGH3Zb9poi6a3YvKnFMWX5XyNFVyf+SHPLADw+zOl2ShEw6\n83C02IN2TRw4STxezzBZsUY7jNbYVIpqzLdk1HXnbSNhuBYeXVtCRmc3tdMd\n0sYohuQJ5CfLvRScduCOyFfCjNT3+keBNhsNoo/InVPzFC5htAfffyVP4pJf\nw4vkDT8vnViGUak50mU728gLZr6oMj+wE7zjXOKKAc2pcPR+YBuv+/ZEOmPE\nyjmYO477QP9GgDXA5f9CLcyPh/rIkZ/d8cpLHQ26RHB6kHRctd1VjgAbYEHr\nhAZDNlrG1tIIY+b6kxx9mvm5SZ+QQZn0a9247OWcQb3kHSK6Vy5S0eFHd0ae\nXm1FA0SMeaUy6GX+FpD1xadX7pk/V+3I62+G6yeaFx4rERyuX9IKw2t7bNfe\n91Fjl/HmduraYjCz49aUCsBUosvjLfydq5UhI4LfksGrVKMbZjP9QbMOPqxF\nGeN26vrCzI5xYmG/ciaxXel+S3OrIoLjbp8J7NaCP6W5x+ab/0sYlX15+EXH\n2WFFGndqAU7JpyrmTm55BFfrb96VQCieM0LsZ2dsDmwTiHZ52P1A/uq6mxY6\nml6SqNPE4kDoKuLRLKOXnrvZga+7Jtufmr5vCYjNoU2BqRPp1G+3eVoyvwVB\nki5xAEdPZsCVeH8pLANKU+AMcjAo2fMCBTXnnjMZcWi+tkTWqUlS0GV/x02d\nNidXwV5Tt5U3esABJxXZ1eAdYBmYkX2diYrdvso02Qaj0OsQ50tow7VAMxV7\nF9rOW9DPsTkFQt6uSu8vUe7FnZG3EPFPoASE7GoM+MKeqy3E3TsGBKk8Ts/q\n+iTmbqURMOLHINq/oDITK741LG2JXog9r7W06hB5VK3SK4yxZoEu+meyFe+c\nu8XwkTNzVppDIqcTlck5agllIPI+UnTXKEPFCnelGm+vepVT3SNVKbPQd7xX\nYw317Dv3R8myzMi3V9Zlv4wab+PEqztx/YBdJPLmeW3wk4qzRZlLk0g83MhJ\nKISELu3anlWpOvIIKKTTbwb/qNx2OyCJDu03d049Txodevphsg0GGeWG06we\npJeUz6kqC4mpptEZXkij4XvmOKqosax9RmQylLgykfc8RyMmrkuSoTf3bfLj\nZF0fdGXr/qk6QSm2jVkuTMIIgpwCHw319LfmktcjdZS1XG/wzd/TvObtWJwZ\n6dJiWEdFUT34Y5MPHHmels+b3sBn9ihb+YQiBvJ+efRIfMIhDnRYUz3demzX\n4rIx5Yp743e/VUg7SIp9KpfEg8bmvPtDDCYqkqWUswsosDlOTQpY8P4B67Dq\n6bgVkHElNOPiuvijt4LDH/Vj7JoU8Id51y/80sOygJT0WslBthk476r4uTXR\ncISaCF88k89peP++8fh65DzecVVJXWJbuqhYz/Sga8P+buTia3+UYiZxQnSU\nTdmyWXT6WPOOhfdJTubWREp27LT3rXM/76ezbz2B3jGETz4YE/oXYm6Rlw6w\nxK1M8Rx8O1Ts6njLoJilejwlgaMRULROEvbAv0PuizCzBCywkFbirRxfBk00\nHcbgevt1WOwfTxThkLtz5prfEkfXuYVZAZT7LW8cRgJhbmrwp+724j6raRCH\nEa0WjTotYGfx1Iu0lsjDlCfrZUUp41asAgXhmP+znyGJuNlle1dmt+U48ZwP\nZm4b8KvV6WFlJCMggNUJuiuljQo7GSj7sgxaPVYi3en1PBzYIoiIq3H4fwxe\nQC9Bxekxld3U39rAcuG0C1nJzcQRb6eyoH5PEbMkakBHAZ/EEDTvd7tsQM2W\n7O57k6TTlBmm1EBYB1exAkzmKvdao90T0wrkEq/frWNOCEnXEVU7XQDcLWxI\nLTGVtzMeeqo/SPk/XFPr68F5HQGjKt6bgfB6Zd0B9VbFgq/Q4I9AyoGpOOcl\nfUn41Yt2Dwb8Y4oLsIqFKzQpbFUwgPN9qhCoHd8v+S7yxitXm2itTX7KLEVZ\n5mZ0Zx/5H6N0Dalg9R1ONvX8uY9oTKsWyrXoXEq46zPB7LF2iFy+RBtpuGa/\nwhkw5ToMdaaZgSexRJzvJkTUIRa+TUsbI2q2mbiM7W6rv9+7GsYd1p2lAUsw\n9txmg9gXaU2/j/o+R6UicdNw4rhbYRJpLyDQuHk7e+iZ2URCp+/b1RbGVuXk\nWOC+iUn5MAZMfPb0sHxBenKeCJP3njta0vzOaS+++b9m9/M9KD7nT57TgZMf\n2VLWAtURdkIP8G3DlRMbq3j0CSYpKHABSsRjcA12Ac/m6kcfFklIaHDdKOhq\nlSSLrfYHWSgLjYjy/oMFtj4CunexmqnWjWgqDWk/drM2ddni+AGQTdTzf5Kz\nOsYJYig8GmBT3beDMqhpPdNyHCLpVRZNFkAETw1VkBGUjh66lIAn2Vl867lr\nXUz6jY0kGmp+M2wlwFvs8jwQaHlrOu0jPX8VDma83AIlOf06dbOw4lfUxtgq\n2NQbMeEas6dfI+36pZX/ZVZAijh1tQ6ZiZEI7Cj8FFgOw6s1P/jJBtdxkwya\nw7Wc7wvxnpzg8C2aEFGm6hJDIXLEs7Og6XVSBulS5Kfi7MMec1WpWpAT9K2p\ndz43s8o+B4C7ixlp/c9AHZdn+6lNJ0b1bBmIia/fnG5zeWyt0ilLsAMaYCo1\n4YCaGA8nt/mf1gTsEPY4qMuFxxfwxMdwhwRlELOXs2V9yH5ssEKgqsR92tTH\nHe3TwCh8/YzKhA+inZiqGq/vKhl9YSFqdUnvN5/QkzAzr8ig6NP9uKF9iEMu\ntdrCqJJvzans82aqwspSzPiyfM2jjPkXH/BCvh6ms5de4/RvFowTI1jzKq/w\neit8CqEZE70unqqW2oSrWcqYX8kMnyp43+U1mBT/Ckn0vwzyUOaZzROK8o8W\n6QJLHJKgG5enKgxJQjL2YG0GitprrEiEZR6+aTvdj8AF3u/QrZ0vaLIrqmj7\nul9EsG5X7tIe8L1zemUlxeE3tNiiSpkRkgfgvP+yo1hECdc4BC9MnwRClP/S\nYFtCg7AhX9pfI/CsrjSip93eXlQFtWw3JSlZEAJiE5lpS7V8uv5dZx5p22ul\nitLMWEyWwc6M0D2aSe9+x2SNAyQ8eyWHhQJKavD7C3p7SzvcAjrxtiK/REz9\nAG3cUWsLS666iNgPDikcD65N2XRVTfhpDSua+UAzJez5S5zxpPi9KTPknRwB\n2U20oIWQuKHYm/6SY4mqPEAP+GO1Wxt4ZM/TgSp9W80ynwnZXh2GtzlJIY4F\nP0x38/TcC/em5ZS0i67QU97wJLxh1lmBLhxfnHm7yUnkjfzRI5DQ4sLCNlDY\nIhy+25xG6C0V+Z0KS/B8S2gjfXFn/P3NoAF1dZt+VKLL0TaYkCoohRgPdDHQ\noE9RtjYglIlGs/Pm2lEQsKeaekDV9wCF7L6+FhOZJhZH17T3eKO1G1LuTG0P\nl5bQpAjQdo0Hvtcirl26oEh9IglkcJ2MhbngpABLFyWEJwjkdU2wPlV0yQbB\n/Ng7mn/jiG/a/S0ZDqrEvd3wNO+PvRu8dLUQja/koS6QUN7s3aP/AX7Vjg7R\ns7Nes/wxRyU5qwImjDzvp06gSCbGPqfTgFP/QsNhne7H9AE8Tp5NM+Mjmh55\nbWgdpfAWJKN98ihDLmPZ/h19KEFYCf4v/d8LgCSnnoudqxjlZyZuhveFYgAZ\nYKjhoe41cP9ij+VQg7EdYgSy4h3b5wPXte0CicTJ00bI6XUBfcgScPofmIOm\nP9IY0fNLQotmtYYf/Mm01WFPb4hyILZkHmMOFHb/dBSUIrJv1UTGczPJVMtj\nicproHQZ74GUTUyBbf8M2VV2H7XLhWRuJ55lN/QMSOJmo01Lz+zpny64kIP0\nUvAKNFGF6vwy8n8gjjCr92mS9Dp8RnN4DGENbyC4ajvCGm7jdLYXc06mMp25\nSjO5IUg7KPuelcyhcjt9BqjmFZ0QHNZZhGIyGOJo1Udr57XWvqeTci27urKT\nSiWkSpxrp29v0ZHfAt6iWAl5OYnptGbKHQcmWOO+SDGzCK4Y5fwkBdlW8ea8\nFibjGljnnXpulvkeFpuzN2CMvysPcA7jdRgYM7An0Qx8b1PBMCh03tUkh3pE\nIZNDmufoDUoRDe8B7dJwL1cp9t0PY6bz5XYQm4ZkTLYzegeFYCPTNhv4oePt\nyqCWJo5lzNoFegKIT1svaauaWsxDaUOY2VzqNxPuiKwZGutS9m+GDIrKFAnA\nW7XD1zU9FzOiyQ0IggjTOxMUleOpZA9HbGXGresVjhEHRHPc5xWwqML6N+z3\nWKLxNouCJwkgWSJl0x3YQ8+dp1thJbrn5SFLFwYgo4rbKkrMEZHLUtjQ7V+s\ndBB5DbZlN7rhgSvPTq8ritAlLJiAcGVmlrWwlDlQrBcc7biBajgYHqDFnk5o\nDwOtc0Gd0QK29cUQ3knDrOKHw1jN8/bf1Zy6UevAANtyXSrDp2UYPv8vEo+0\n30cTv2MmF8SC1sd11gEB+j8g0DA5Db0IVK4i3pVSUZYZgTx7dZaI6Xb2nU7u\n1fcDdduwxaFkybQK4xbMuBl0wc0S1juNORYFtvVXXlgDCAxDuYwB9dA8kx82\nc7xej0N/nlBHyCapws0ImG461f4gRXfwDtIDkq3haExJufBOockrS/ksby/r\nvgyiR2iuIo+COCXboZHj7/isNv6HG5UyDhY+RSQaI0Kp3iXRCRX2aoKC/9bW\n90F7h8xJgRlUbt+auJjkSg8cgqMPSUjnEXrIfttTsk8k9Y+jfvbZu/2tJwB2\nvEGYmMwqCFMJ9Wrre/qADO3o2nT5XdKl0JfrhLfoR7IF3AHhFKBT+mAbWyJy\nYRU+nf8ARD3ry0h+itatIL9wriRHzk3FvwiaR2OhgFNiXJjbhXFS5537Zct8\nC0e2xkXzsHfgCOD4HPX1Pi0j8IanYDzyBFAG/Mt4oLhXtbGC4fTQaxShJyPc\nPImVcgFmIxn8/ijIoVZR7OjUedP3unzmUuDdSeluwc8mpIOljIZu4njIEN1f\nwiIiLtkM6IlLZM6uIfrcFtAbCHYzl2MG8i/+ZaXaUh7KNRFXSV5l4jL+dEht\nGidy7IrA0ldmizHJwVnKN/IDHN1qFwWHETwt71HGtrSYsql1L+V2jCagvNaa\nWXg8wukEnaupi5a7DjXoihl57V9NBNzCKhSSVGkG4fSMc9PSz8WRc6Yvy7tB\nWoNgKi9RqI2CdUA0DV+qixCv5MQS9tOGuN1az73jx6IoOz/FfmGmzzygxFwQ\neMIgudWCRDvQYpownx5RWwr78jQIbvNItGpdx/782YUFMbd5Kx6SKEB5UVo2\nmi24RMQnPlyxP2NKOEkgBO3gD+8A8cn2XbKSND5Oovix1n7M6et8EAXBAdCx\nV4hRslX+XjAobtDDCxfVvWp/U3Li1Ghe5Dhd94F6K7PX8wh1ivvRarz7mXUP\nIOqjKsTrYbHJjxThnFuejrjQ8WDdylaNfTk8VF8mLGuk+2xoUeyHskeOoik1\nxBOBNqiId9NiRvxwdHh7rw5Ssk3wtdNMfJnXzAQZEWaTeJ+hFSkAPpnVwhL8\nKS+NDK6G04yUAgzYFgrJ68ILqxy5zpQfBoS41KLf0rXS4P1P3tCa7uVG2e8n\nHfeYmFC8RIfDJlSwv0NdXQI1/sDFmyOUdd9Vd0iCL1Vo1BHpc+C/qbHc35RR\n5zCmfZcZx+kRCHnJnuJwH8GobsHOgfIEHmKBkolKfyS8P4/XrX5GTJbNaaRI\nAjH0kgz4d127NY2xZYDP8XinLhOC3hQfJ98OWYVgvAAwNQoLIpa6YoKiiWQJ\nmU9ry6H7Yt6ezZJfcNjiYia+8XTyzVn6FDlhzWjrhjt8IF2p1WnM96uhIJFt\ngvDoSeGlD//7EwC8h56Jm8GU1ZJZY0q03hLpIrMJvH65xqdrIeuoo+x3IN2Z\nYVt/10OSKk8ppBkSEjuZ5xjmn8NXvi0BTLpI4x2AJ0kK5id27iffwgjosD5e\n91T+TSSMTSfTVkws9j9fsEX5rFtpvR3k5Cott4IAudYonK/uOZ6fOn35wIgq\n38H/zWCymQML3jH5QAh6phXFb7ZkgKXDNRvWfcBepRF4+ygvmuoNY1VN8qEK\n3/6nPy6PVB5jU5yxhnYrG5OUMmXjSsIlW2/gRYggOTrS3adJ5tVrQVkxyOG0\njJHXNG0x1B+AWUI/lyhjBefkKdNOBlqapoDor/h0GZH7\n",
-    "long_instructions": "# Lists of Objects\r\n\r\n1.  **PROMPT (Generate Data)**\r\n    * Ask AI: *\"Generate an array of 5 objects for school supplies (id, name, location, isAvailable).\"*\r\n    * Paste the array into the empty `supplies` variable.\r\n\r\n2.  **ANALYZE (Verify)**\r\n    * Look at the structure of the array of objects.\r\n    * As AI questions you are wondering about. For example, “What do the brackets and braces mean?”\r\n\r\n3.  **INTEGRATE**\r\n\t* **Get Item**\r\n    \t* In `getItemByIndex`, write code to return `supplies[index]`.\r\n    \t* *Challenge:* Return `null` if the index is invalid (< 0 or too high).\r\n\r\n---\r\n\r\n::: details [**🔎 Feeling stuck? Show me how.**]\r\n![](https://images.code.org/d6df6b77273f9067ddc00b6dbddf5c07-image-1766165351780.png)\r\n*To make code larger, adjust the instructions panel.*\r\n:::\r\n\r\n---\r\n4. **Update Item**\r\n    \t* In `updateLocationByIndex`, get the item using your function.\r\n    \t* If the item exists, update `item.location`.\r\n    * **Test:** Use the \"Update\" panel, then verify the change using \"Check Supply\".\r\n\r\n---\r\n\r\n::: details [**🔎 Feeling stuck? Show me how.**]\r\n![](https://images.code.org/40ef1e285a1be878be892c87a53c64a6-image-1766165600004.png)\r\n*To make code larger, adjust the instructions panel.*\r\n:::\r\n\r\n---\r\n\r\n5. **REFLECT**\r\n\t* In `reflection.md` respond to the question: \"What pattern do you notice in each object?\r\n",
-    "name_suffix": "_2026"
+    "long_instructions": "## Analyze Patterns\r\n\r\n### Do This:\r\n\r\n1. Look through the `animals` array.\r\n2. Count how many animals of each `species` appear.\r\n3. Look at the `gender` field across the dataset.\r\n4. Compare the `bio` field across animals.\r\n\r\n### **Reflect:**\r\n- Which type of animal appears most often?\r\n- Which type appears least?\r\n- What patterns do you notice in the gender of the animals?\r\n- Which animals have more detailed bios? Which have less?",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "buildJavaScript",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-24T03:58:03.648+00:00\",\"changed\":[\"cloned from \\\"pl-aif-list-of-objects-weblab-6\\\"\"],\"cloned_from\":\"pl-aif-list-of-objects-weblab-6\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-24T03:58:03.648+00:00\",\"changed\":[\"cloned from \\\"pl-aif-list-of-objects-weblab-6\\\"\"],\"cloned_from\":\"pl-aif-list-of-objects-weblab-6\"},{\"changed_at\":\"2026-07-14 17:08:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-07-14 17:09:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-07-14 17:32:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-07-14 17:37:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-07-14 17:39:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-07-14 17:39:06 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-07-14 17:39:08 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-07-14 17:39:35 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Weblab2>

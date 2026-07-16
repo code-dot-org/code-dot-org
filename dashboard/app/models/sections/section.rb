@@ -225,10 +225,11 @@ class Section < ApplicationRecord
 
     last_completed_lesson = nil
     finished_unit = true
+    numbered_lessons = unit.lessons.select(&:numbered_lesson?)
     checked_last_lesson = false
     threshold = [section_students.size / 2.0, 3].min
 
-    unit.lessons.reverse_each do |lesson|
+    numbered_lessons.reverse_each do |lesson|
       required_sls = lesson.script_levels.reject(&:bonus)
       next if required_sls.empty?
 
@@ -257,7 +258,7 @@ class Section < ApplicationRecord
       end
     end
 
-    lessons = unit.lessons.to_a
+    lessons = numbered_lessons
     next_lesson = if last_completed_lesson
                     lessons[lessons.index(last_completed_lesson) + 1]
                   else

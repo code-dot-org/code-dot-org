@@ -13,6 +13,7 @@ import instructions, {
   setCodeReviewEnabledForLevel,
   setTaRubric,
 } from '@cdo/apps/redux/instructions';
+import ScrapbookButton from '@cdo/apps/scrapbook/ScrapbookButton';
 import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
@@ -89,6 +90,21 @@ function initPage() {
       );
     }
   };
+
+  const scrapbookMountPoint = document.getElementById(
+    'scrapbook-button-mount-point'
+  );
+  if (scrapbookMountPoint) {
+    createReactRoot(
+      <Provider store={getStore()}>
+        <ScrapbookButton />
+      </Provider>,
+      scrapbookMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
+    );
+  }
 
   if (hasScriptData('script[data-rubricdata]')) {
     const rubricData = getScriptData('rubricdata');

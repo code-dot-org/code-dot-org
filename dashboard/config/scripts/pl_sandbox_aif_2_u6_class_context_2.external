@@ -32,8 +32,31 @@ Teachers serve as guides supporting **design thinking, encouraging responsible A
 **Total Duration:** Approximately 2 weeks
 **Structure:** 10 days structred capstone project
 
+<table style="border-collapse:separate; border-spacing:4px; border:2px solid #7B3FC7; margin:20px auto; font-family:Arial, sans-serif;">
 
-<img src="https://images.code.org/c089a1b337eaeb996ef66189c6fab281-image-1776695464260.png" alt="lesson calandar for unit 4" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+  <!-- Week 1 -->
+  <tr>
+    <td style="background:#7B3FC7; color:white; font-weight:bold; text-align:center; padding:18px 16px; min-width:70px;">
+      Week 1
+    </td>
+
+  <td style="border:1px solid #69A7D8; padding:16px 24px; text-align:center; min-width:450px;">
+      Unit 6 - Web Apps with AI Capstone Project
+    </td>
+  </tr>
+
+  <!-- Week 2 -->
+  <tr>
+    <td style="background:#7B3FC7; color:white; font-weight:bold; text-align:center; padding:18px 16px;">
+      Week 2
+    </td>
+
+   <td style="border:1px solid #69A7D8; padding:16px 24px; text-align:center;">
+      Unit 6 - Web Apps with AI Capstone Project
+    </td>
+  </tr>
+
+</table>
 
 
 

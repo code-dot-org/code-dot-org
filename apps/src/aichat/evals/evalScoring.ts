@@ -125,5 +125,6 @@ export const GATE_LABELS: Record<EvalGate, string> = {
   [EvalGate.INPUT_TEXT]: 'Input text safety',
   [EvalGate.GENERATION]: 'Image generation',
   [EvalGate.IMAGE_MODERATION]: 'Image moderation',
+  [EvalGate.OUTPUT_IMAGE]: 'Output image safety',
   [EvalGate.OUTPUT_TEXT]: 'Output text safety',
 };

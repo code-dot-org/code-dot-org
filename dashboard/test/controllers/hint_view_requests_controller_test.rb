@@ -21,7 +21,7 @@ class HintViewRequestsControllerTest < ActionController::TestCase
     sign_in @student
 
     params = {
-      script_id: 1,
+      script_id: create(:script).id,
       level_id: create(:level).id,
       feedback_type: 1,
       feedback_xml: '',
@@ -44,7 +44,7 @@ class HintViewRequestsControllerTest < ActionController::TestCase
     session[:pairing_section_id] = section.id
 
     params = {
-      script_id: 1,
+      script_id: create(:script).id,
       level_id: create(:level).id,
       feedback_type: 1,
       feedback_xml: '',
