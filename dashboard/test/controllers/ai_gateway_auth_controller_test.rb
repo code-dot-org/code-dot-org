@@ -20,13 +20,15 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     assert_equal true, decoded_token_payload['safety_checks_disabled']
   end
 
-  test 'non-levelbuilder requesting the safety-check bypass does not get it granted' do
+  test 'non-levelbuilder requesting the safety-check bypass is forbidden and gets no token' do
     teacher = create(:authorized_teacher)
     sign_in(teacher)
     post :get_access_token, params: {aichatContext: {clientType: 'ai-chat-lab', disableSafetyChecks: true}}
 
-    assert_response :success
-    assert_equal false, decoded_token_payload['safety_checks_disabled']
+    assert_response :forbidden
+    response_json = JSON.parse(@response.body)
+    assert_equal 'safety_checks_bypass_not_permitted', response_json['error']
+    assert_nil response_json['token']
   end
 
   test 'levelbuilder not requesting the bypass does not get it by default' do
