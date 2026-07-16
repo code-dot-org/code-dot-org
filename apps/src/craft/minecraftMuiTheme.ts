@@ -28,7 +28,7 @@ const BEVEL_DISABLED =
 
 const MINECRAFT_CHROME = {
   borderRadius: 0,
-  border: '2px solid var(--neutral-base-black)',
+  border: '2px solid var(--borders-neutral-solid)',
   boxShadow: BEVEL,
   transition: 'none',
   imageRendering: 'pixelated',
