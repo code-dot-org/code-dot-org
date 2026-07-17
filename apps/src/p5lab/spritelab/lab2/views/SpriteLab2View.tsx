@@ -607,20 +607,17 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const writeActiveSceneSource = useCallback(
     (source: WorkspaceSerialization) => {
       if (SCENES_UI_VARIANT) {
-        updateSources(prev => {
-          const sources = prev ?? currentSources;
-          return {
-            ...sources,
-            scenes: getScenes(sources).map(s =>
-              s.id === activeSceneId ? {...s, source} : s
-            ),
-          };
-        });
+        updateSources(prev => ({
+          ...prev,
+          scenes: getScenes(prev).map(s =>
+            s.id === activeSceneId ? {...s, source} : s
+          ),
+        }));
       } else {
-        updateSources(prev => ({...(prev ?? currentSources), source}));
+        updateSources(prev => ({...prev, source}));
       }
     },
-    [updateSources, currentSources, activeSceneId]
+    [updateSources, activeSceneId]
   );
 
   // A user edit: the workspace already displays this content; persist it
@@ -676,15 +673,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         name,
         source: DEFAULT_SCENE_SOURCE,
       };
-      updateSources(prev => {
-        const sources = prev ?? currentSources;
-        return {...sources, scenes: [...getScenes(sources), scene]};
-      });
+      updateSources(prev => ({...prev, scenes: [...getScenes(prev), scene]}));
       // Both state updates land in one commit, so the reconcile effect
       // sees the new scene in the derived list.
       setActiveSceneId(scene.id);
     },
-    [updateSources, currentSources]
+    [updateSources]
   );
 
   // World grid (rudimentary, single world for now). Persisted to sources but
