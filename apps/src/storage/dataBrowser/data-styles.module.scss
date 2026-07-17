@@ -2,7 +2,6 @@
  * @file Styles shared by various react components in the applab data browser.
  */
 
-@import 'color';
 @import '@code-dot-org/component-library-styles/font';
 
 $row-height: 45px;
@@ -16,24 +15,24 @@ $max-cell-width: 350px;
 
 .cell {
   padding: $cell-padding;
-  border: 1px solid gray;
+  border: 1px solid var(--borders-neutral-strong);
   font-size: 14px;
   max-width: $max-cell-width;
   overflow: hidden;
 
   &.addButton {
-    background-color: $lightest_teal;
+    background-color: var(--background-brand-teal-extra-light);
   }
 
   &.editButton {
-    background-color: $lightest_teal;
+    background-color: var(--background-brand-teal-extra-light);
     width: $edit-button-cell-width;
   }
 }
 
 .headerCell {
-  background-color: $teal;
-  border: 1px solid gray;
+  background-color: var(--background-brand-teal-primary);
+  border: 1px solid var(--borders-neutral-strong);
   max-width: $max-cell-width;
   padding: 6px 10px;
   white-space: nowrap;
@@ -41,7 +40,7 @@ $max-cell-width: 350px;
 
 .link {
   @include main-font-bold;
-  color: $purple;
+  color: var(--text-brand-purple-primary);
   cursor: pointer;
 }
 
@@ -60,18 +59,18 @@ $max-cell-width: 350px;
   }
 
   &White {
-    background-color: white;
-    color: black;
+    background-color: var(--background-neutral-white-fixed);
+    color: var(--text-neutral-primary);
   }
 
   &Red {
-    background-color: $bootstrap_button_red;
-    color: white;
+    background-color: var(--background-error-primary);
+    color: var(--text-neutral-white-fixed);
   }
 
   &Blue {
-    background-color: $bootstrap_button_blue;
-    color: white;
+    background-color: var(--background-brand-teal-primary);
+    color: var(--text-neutral-white-fixed);
 
     &Save {
       margin-right: 10px;
@@ -81,14 +80,14 @@ $max-cell-width: 350px;
 
   &Gray {
     margin-left: 5px;
-    background-color: $background_gray;
+    background-color: var(--background-neutral-secondary);
   }
 }
 
 .input {
   width: calc(100% - 14px);
   height: 20px;
-  border: 1px solid gray;
+  border: 1px solid var(--borders-neutral-strong);
   border-radius: 5px;
   padding: 4px 6px;
 }

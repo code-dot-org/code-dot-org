@@ -4,7 +4,6 @@ import React from 'react';
 import msg from '@cdo/locale';
 
 import SafeMarkdown from '../../templates/SafeMarkdown';
-import color from '../../util/color';
 
 class DataEntryError extends React.Component {
   static propTypes = {
@@ -31,7 +30,7 @@ const styles = {
     paddingTop: 12,
   },
   visible: {
-    background: color.lighter_yellow,
+    background: 'var(--background-warning-light)',
     paddingLeft: 12,
     paddingRight: 12,
     paddingBottom: 0,
