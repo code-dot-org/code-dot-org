@@ -1,7 +1,10 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
+import TextField from '@code-dot-org/component-library/textField';
+import {Box, IconButton as MuiIconButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import color from '../../util/color';
 import * as utils from '../../utils';
 
 import * as elementUtils from './elementUtils';
@@ -99,75 +102,70 @@ export default class PropertyRow extends React.Component {
   };
 
   render() {
-    const idRowStyle = Object.assign(
-      {},
-      rowStyle.container,
-      rowStyle.maxWidth,
-      {
-        backgroundColor: color.light_purple,
-        paddingBottom: 10,
-      }
-    );
-    const inputStyle = Object.assign({}, rowStyle.input, {
-      backgroundColor: this.state.isValidValue ? null : '#ffcccc',
-    });
-
-    let inputElement;
-    if (this.props.isMultiLine) {
-      inputElement = (
-        <textarea
-          className="form-control"
-          value={this.state.value}
-          onChange={this.handleChangeInternal}
-          style={{marginBottom: 18}}
-        />
-      );
-    } else {
-      let value = this.state.value;
-      // Number input will throw an error if we set its value to NaN.
-      // Fallback to empty string.
-      if (this.props.isNumber && isNaN(value)) {
-        value = '';
-      }
-
-      inputElement = (
-        <input
-          type={this.props.isNumber ? 'number' : undefined}
-          value={value}
-          onChange={this.handleChangeInternal}
-          onBlur={this.props.isIdRow ? this.onIdRowBlur : null}
-          style={inputStyle}
-        />
-      );
-    }
-
-    const lockStyle = {
-      marginLeft: '5px',
+    const idRowStyle = {
+      ...rowStyle.container,
+      backgroundColor: 'var(--background-brand-purple-light)',
+      paddingBottom: 10,
     };
 
-    let lockIcon;
-    // state is either locked/unlocked or undefined (no icon)
-    if (this.props.lockState) {
-      const lockClass =
-        'fa fa-' +
-        (this.props.lockState === LockState.LOCKED ? 'lock' : 'unlock');
-      lockIcon = (
-        <i
-          className={lockClass}
-          style={lockStyle}
-          onClick={this.handleClickLock}
-        />
-      );
-    }
+    const buttonStyle = {
+      marginTop: '1.375rem',
+      height: '2rem',
+      width: '2rem',
+    };
 
     return (
-      <div style={this.props.isIdRow ? idRowStyle : rowStyle.container}>
-        <div style={rowStyle.description}>{this.props.desc}</div>
-        <div>
-          {inputElement}
-          {lockIcon}
-        </div>
-      </div>
+      <Box style={this.props.isIdRow ? idRowStyle : rowStyle.container}>
+        {this.props.isMultiLine ? (
+          <FormFieldWrapper color="black" size="s" label={this.props.desc}>
+            <textarea
+              name={''}
+              value={this.state.value}
+              onChange={this.handleChangeInternal}
+              style={{
+                boxSizing: 'border-box',
+                width: '100%',
+              }}
+            />
+          </FormFieldWrapper>
+        ) : (
+          <>
+            <TextField
+              name={''}
+              label={this.props.desc}
+              inputType={this.props.isNumber ? 'number' : undefined}
+              value={
+                this.props.isNumber && isNaN(this.state.value)
+                  ? ''
+                  : this.state.value
+              }
+              onChange={this.handleChangeInternal}
+              size="s"
+              style={{width: '100%'}}
+            />
+            {this.props.lockState && (
+              <MuiIconButton
+                aria-label="Lock the field"
+                variant="outlined"
+                color="secondary"
+                size="extraSmall"
+                type="button"
+                style={buttonStyle}
+                onClick={this.handleClickLock}
+              >
+                <FontAwesomeV6Icon
+                  iconStyle="solid"
+                  iconName={
+                    this.props.lockState === LockState.LOCKED
+                      ? 'lock'
+                      : 'unlock'
+                  }
+                />
+              </MuiIconButton>
+            )}
+          </>
+        )}
+      </Box>
     );
   }
 }

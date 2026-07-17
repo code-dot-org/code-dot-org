@@ -1,3 +1,5 @@
+import TextField from '@code-dot-org/component-library/textField';
+import {Box, IconButton as MuiIconButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ColorPicker from 'react-color';
@@ -65,26 +67,42 @@ export default class ColorPickerPropertyRow extends React.Component {
   render() {
     const buttonStyle = {
       backgroundColor: this.state.colorPickerText,
-      verticalAlign: 'top',
+      marginTop: '1.375rem',
+      height: '2rem',
+      width: '2rem',
     };
     let colorPicker = this.state.displayColorPicker ? (
-      <ColorPicker
-        ref="colorPicker"
-        color={this.state.colorPickerText}
-        onChangeComplete={this.handleColorChange}
-      />
+      <Box style={rowStyle.container}>
+        <ColorPicker
+          ref="colorPicker"
+          color={this.state.colorPickerText}
+          onChangeComplete={this.handleColorChange}
+        />
+      </Box>
     ) : null;
     return (
-      <div style={rowStyle.container}>
-        <div style={rowStyle.description}>{this.props.desc}</div>
-        <div>
-          <input
+      <Box
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 1,
+        }}
+      >
+        <Box style={rowStyle.container}>
+          <TextField
+            name={''}
+            label={this.props.desc}
             value={this.state.colorPickerText}
             onChange={e => this.setState({colorPickerText: e.target.value})}
             onBlur={e => this.changeElementColor(e.target.value)}
-            style={rowStyle.input}
+            size="s"
+            style={{width: '100%'}}
           />
-          <button
+          <MuiIconButton
+            aria-label="Open color picker"
+            variant="outlined"
+            color="secondary"
+            size="extraSmall"
             ref="button"
             type="button"
             className={
@@ -93,9 +111,9 @@ export default class ColorPickerPropertyRow extends React.Component {
             style={buttonStyle}
             onClick={this.toggleColorPicker}
           />
-          {colorPicker}
-        </div>
-      </div>
+        </Box>
+        {colorPicker}
+      </Box>
     );
   }
 }

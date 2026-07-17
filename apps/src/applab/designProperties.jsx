@@ -6,8 +6,6 @@ import React from 'react';
 
 import applabMsg from '@cdo/applab/locale';
 
-import color from '../util/color';
-
 import CopyElementToScreenButton from './designElements/CopyElementToScreenButton';
 import DeleteElementButton from './designElements/DeleteElementButton';
 import DuplicateElementButton from './designElements/DuplicateElementButton';
@@ -74,8 +72,8 @@ export default class DesignProperties extends React.Component {
     const isOnlyScreen = isScreen && onlyOneScreen;
 
     const tabHeight = 35;
-    const borderColor = color.lighter_gray;
-    const bgColor = color.lightest_gray;
+    const borderColor = 'var(--border-neutral-secondary)';
+    const bgColor = 'var(--background-neutral-secondary)';
 
     // Diagram of how tabs outlines are drawn. 'x' represents solid border.
     // '-' and '|' represent no border.
@@ -155,9 +153,6 @@ export default class DesignProperties extends React.Component {
       },
       tabLabel: {
         lineHeight: tabHeight + 'px',
-        WebkitUserSelect: 'none',
-        MozUserSelect: 'none',
-        msUserSelect: 'none',
         userSelect: 'none',
       },
       workspaceBody: {
@@ -204,9 +199,9 @@ export default class DesignProperties extends React.Component {
             className="hover-pointer"
             onClick={this.handleTabClick.bind(this, TabType.PROPERTIES)}
           >
-            <span style={styles.tabLabel}>
+            <MuiTypography variant="body4" sx={styles.tabLabel}>
               {applabMsg.designWorkspace_propertiesTab()}
-            </span>
+            </MuiTypography>
           </div>
           <div
             id="eventsTab"
@@ -218,9 +213,9 @@ export default class DesignProperties extends React.Component {
             className="hover-pointer"
             onClick={this.handleTabClick.bind(this, TabType.EVENTS)}
           >
-            <span style={styles.tabLabel}>
+            <MuiTypography variant="body4" sx={styles.tabLabel}>
               {applabMsg.designWorkspace_eventsTab()}
-            </span>
+            </MuiTypography>
           </div>
           <div id="emptyTab" style={styles.emptyTab}>
             <SimpleDropdown
@@ -258,6 +253,7 @@ export default class DesignProperties extends React.Component {
             <div key={key}>
               <Box
                 sx={{
+                  backgroundColor: 'var(--background-neutral-secondary)',
                   display: 'flex',
                   flexDirection: 'column',
                   float: this.props.isRtl ? 'left' : 'right',

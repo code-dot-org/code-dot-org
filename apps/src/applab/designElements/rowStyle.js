@@ -24,10 +24,9 @@ export var enumInput = {
 export var container = {
   paddingLeft: 20,
   marginBottom: 8,
-};
-
-export var maxWidth = {
-  maxWidth: 265,
+  display: 'flex',
+  flexDirection: 'row',
+  gap: '.5rem',
 };
 
 export var description = {
