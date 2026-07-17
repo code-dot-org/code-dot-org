@@ -1,8 +1,24 @@
 import {expect, test} from '@playwright/test';
 
 import {LegacyBlocklyLab} from '../../pages/legacy-blockly-lab';
+import {analyze, WCAG_AA_TAGS} from '../../shared/axe';
 
 import {LOSING_ARTIST_BLOCKS, WINNING_ARTIST_BLOCKS} from './blocks';
+
+// Pre-existing WCAG AA debt on the loaded artist lab, locked as a regression
+// baseline (rule id -> failing node count), scoped to the main content landmark
+// so shared header/footer chrome does not count:
+//   aria-required-children: the Blockly block canvas (g[role="listbox"],
+//     aria-label "blocks") holds role="figure" block children, which are not
+//     valid children of a listbox.
+//   color-contrast: the Run button's label — white (#ffffff) on orange
+//     (#ffa400) is 1.98:1, under the 4.5:1 AA minimum.
+// settle() makes the counts deterministic across chromium/firefox/webkit. A new
+// violation, or a fixed one, breaks the test: re-baseline it.
+const EXPECTED_VIOLATIONS: Record<string, number> = {
+  'aria-required-children': 1,
+  'color-contrast': 1,
+};
 
 test.describe('Playing the Artist Game', () => {
   let artist: LegacyBlocklyLab;
@@ -69,4 +85,16 @@ test.describe('Playing the Artist Game', () => {
     await expect(artist.runButton).toBeVisible();
     await expect(artist.resetButton).toBeHidden();
   });
+
+  test(
+    'Artist lab has no unexpected accessibility violations',
+    {tag: '@no_mobile'},
+    async ({page}) => {
+      // #main_content is the <main> landmark every page carries (BasePage
+      // scopes mainContent to it too); it excludes shared header/footer chrome.
+      expect(
+        await analyze(page, {include: '#main_content', tags: WCAG_AA_TAGS}),
+      ).toEqual(EXPECTED_VIOLATIONS);
+    },
+  );
 });
