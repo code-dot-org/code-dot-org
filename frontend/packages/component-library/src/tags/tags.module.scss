@@ -120,14 +120,7 @@
         // CADS tags use the Label style, not an overline.
         text-transform: none;
         letter-spacing: normal;
-      }
-
-      // CloseButton's default color variant pins its own neutral color
-      // (with hover/active shades), so the closable tag's close icon would
-      // stay gray; make it follow the tag's brand color instead. Revisit
-      // once design specifies a CADS hover state for it.
-      button {
-        color: inherit;
+        color: var(--text-brand-secondary);
       }
     }
   }
