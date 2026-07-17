@@ -11,8 +11,6 @@ import {connect} from 'react-redux';
 
 import applabMsg from '@cdo/applab/locale';
 
-import style from './copy-element-to-screen-button.module.scss';
-
 /**
  * A duplicate button that helps replicate elements
  */
@@ -39,7 +37,7 @@ const CopyElementToScreenButton = ({
   };
 
   return (
-    <div className={style.main}>
+    <div>
       <MuiButton
         id="copy-to-screen"
         variant="outlined"
