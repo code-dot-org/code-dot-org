@@ -2,9 +2,7 @@
    Figma "number" collection. Unlike the color tokens these are mode- and
    brand-invariant, so they sit at :root with no [data-brand]/[data-theme]
    scoping: the names are new, nothing legacy references them, and they
-   need no promotion at brand cutover. (The Figma export wraps them in
-   [data-theme='CodeAI'] — that is the variable-collection name, not a
-   runtime selector.) */
+   need no promotion at brand cutover. */
 :root {
   --shape-sm: 0.375rem;
   --shape-md: 0.5rem;
