@@ -350,6 +350,8 @@ class Ability
         response = asset.challenge_response
         response.user_id == user.id || user.students.exists?(id: response.user_id)
       end
+      # Only the response's owner uploads asset bytes.
+      can :upload, ChallengeResponseAsset, challenge_response: {user_id: user.id}
 
       can :show, Rubric
     end

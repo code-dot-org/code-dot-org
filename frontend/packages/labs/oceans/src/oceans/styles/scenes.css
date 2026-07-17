@@ -11,18 +11,6 @@
  * font-size cascade established in oceansLab.css.
  */
 
-/*
- * Reset box-sizing inside the React UI overlay.  CssBaseline (and most
- * modern resets) set border-box globally; the lab's %-based padding /
- * height inside #container-react assumes content-box (matching the
- * curriculum path's Rails-default behaviour).  Re-scope locally rather
- * than fighting the host.
- */
-#container-react,
-#container-react * {
-  box-sizing: content-box;
-}
-
 :root {
   /* Was colors.js.  Kept in lockstep with src/oceans/styles/colors.js,
    * which is still the only colour source for code paths that need a JS

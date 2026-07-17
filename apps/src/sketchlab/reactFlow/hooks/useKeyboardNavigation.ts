@@ -147,9 +147,8 @@ interface KeyContext {
  * Keyboard-driven edge creation and canvas key handling.
  *
  * Press "c" on a focused node to enter connect mode, Tab to cycle through
- * candidate target nodes, Enter to create the edge. Escape or "c" again
- * cancels. "[" and "]" resize the focused node by adjusting its width and
- * height by the keyboard resize step.
+ * candidate target nodes, Enter or "c" to create the edge. Escape cancels.
+ * "[" and "]" resize the focused node by adjusting its width and height by the keyboard resize step.
  * Also handles Tab-based navigation in normal mode and Enter to
  * activate a node's editable content.
  *
@@ -379,23 +378,25 @@ export function useKeyboardNavigation({
     [connectingFrom, nodes, openToolbar]
   );
 
-  const handleConnectToggle = useCallback(
+  const handleConnectKey = useCallback(
     (keyContext: KeyContext): boolean => {
       const {event, focusedNodeId} = keyContext;
       if (event.key !== 'c') return false;
       if (connectingFrom) {
-        event.preventDefault();
-        cancelConnect();
-        return true;
-      }
-      if (focusedNodeId) {
+        // A second "c" completes the connection to the focused target, like Enter.
+        if (focusedNodeId && focusedNodeId !== connectingFrom) {
+          event.preventDefault();
+          event.stopPropagation();
+          completeConnect(focusedNodeId);
+        }
+      } else if (focusedNodeId) {
         event.preventDefault();
         startConnect(focusedNodeId);
       }
       // Always consume "c" so it never falls through to other handlers.
       return true;
     },
-    [connectingFrom, cancelConnect, startConnect]
+    [connectingFrom, startConnect, completeConnect]
   );
 
   const handleConnectComplete = useCallback(
@@ -791,7 +792,7 @@ export function useKeyboardNavigation({
 
       if (handleOpenToolbar(keyContext)) return;
       if (handleGroupModeEnter(keyContext)) return;
-      if (handleConnectToggle(keyContext)) return;
+      if (handleConnectKey(keyContext)) return;
       if (handleConnectComplete(keyContext)) return;
 
       // All further interactions require an unlocked element, if an element is focused.
@@ -826,7 +827,7 @@ export function useKeyboardNavigation({
       handleRedo,
       handleOpenToolbar,
       handleGroupModeEnter,
-      handleConnectToggle,
+      handleConnectKey,
       handleConnectComplete,
       handleArrowMove,
       handleResize,

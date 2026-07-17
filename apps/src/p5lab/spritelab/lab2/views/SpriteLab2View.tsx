@@ -25,7 +25,7 @@ import {
 import {cancelLocationSelection} from '@cdo/apps/p5lab/redux/locationPicker';
 import {getSerializedAnimationList} from '@cdo/apps/p5lab/shapes';
 import {getStore, registerReducers} from '@cdo/apps/redux';
-import pageConstants, {setPageConstants} from '@cdo/apps/redux/pageConstants';
+import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import runState, {setIsRunning} from '@cdo/apps/redux/runState';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
@@ -39,6 +39,9 @@ import {
 import defaultSources from '../defaultSources.json';
 import {SCENES_UI_VARIANT} from '../experiments';
 import {onTrimsUpdated} from '../imageTrim';
+import reseedablePageConstants, {
+  RESET_PAGE_CONSTANTS,
+} from '../redux/reseedablePageConstants';
 import spriteLab2Reducer, {
   ExternalSceneOption,
   resetSpriteLab2,
@@ -86,7 +89,7 @@ registerReducers({
   // Read/written by the location-picker block.
   locationPicker: p5labReducers.locationPicker,
   runState,
-  pageConstants,
+  pageConstants: reseedablePageConstants,
   spriteLab2: spriteLab2Reducer,
 });
 
@@ -154,6 +157,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         channelId,
       })
     );
+    return () => {
+      dispatch({type: RESET_PAGE_CONSTANTS});
+    };
   }, [dispatch, channelId, currentLevelId, scriptId]);
 
   // This lab owns the full viewport; hide the server-rendered footer.
