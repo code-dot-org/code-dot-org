@@ -33,10 +33,35 @@ class ChallengeResponseAsset < ApplicationRecord
     "challenge_response_assets/#{challenge_response_id}/#{id}"
   end
 
-  # Presigned URL the client PUTs the asset bytes to. Used right after create,
-  # before the object exists in S3.
-  def presigned_upload_url
-    AWS::S3.presigned_upload_url(AWS::S3.user_content_bucket, s3_key, expires_in: URL_EXPIRY.to_i)
+  # Accepted upload content types per asset_type.
+  CONTENT_TYPES = {
+    'whiteboard_image' => %w[image/png image/jpeg],
+    'video' => %w[video/webm video/mp4],
+    'audio' => %w[audio/webm audio/mpeg],
+  }.freeze
+
+  # Upper bound on uploaded asset bytes. Uploads stream through dashboard
+  # (the user-content bucket has no CORS rules, so the browser cannot PUT
+  # to S3 directly). Whiteboard PNGs are capped client-side at 2048px; the
+  # headroom is for future video/audio assets. A class method (not a
+  # constant) so tests can stub it.
+  def self.max_upload_bytes
+    50.megabytes
+  end
+
+  def accepts_content_type?(content_type)
+    CONTENT_TYPES.fetch(asset_type, []).include?(content_type)
+  end
+
+  # Stores the asset bytes at this asset's S3 key.
+  def upload(data, content_type:)
+    AWS::S3.upload_to_bucket(
+      AWS::S3.user_content_bucket,
+      s3_key,
+      data,
+      no_random: true,
+      content_type: content_type
+    )
   end
 
   # Presigned URL the client GETs the asset bytes from.
@@ -44,12 +69,12 @@ class ChallengeResponseAsset < ApplicationRecord
     AWS::S3.presigned_download_url(AWS::S3.user_content_bucket, s3_key, expires_in: URL_EXPIRY.to_i)
   end
 
-  # @param upload [Boolean] when true, include an upload URL (object not yet in
-  #   S3); otherwise include a download URL.
+  # @param upload [Boolean] when true, the asset was just created and its
+  #   bytes are not in S3 yet, so no download URL is included. The client
+  #   uploads the bytes via PUT /challenge_response_assets/:id/upload.
   def summarize(upload: false)
     summary = {id: id, asset_type: asset_type}
-    summary[upload ? :upload_url : :download_url] =
-      upload ? presigned_upload_url : presigned_download_url
+    summary[:download_url] = presigned_download_url unless upload
     summary
   end
 end

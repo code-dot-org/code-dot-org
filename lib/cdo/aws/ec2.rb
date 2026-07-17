@@ -115,7 +115,7 @@ module AWS
 
       http.request(request)
     rescue StandardError => exception
-      Honeybadger.notify(exception) if defined?(Honeybadger)
+      Observability::Errors.capture_exception(exception) if defined?(Observability::Errors)
       nil
     end
 
@@ -144,7 +144,7 @@ module AWS
 
       parse_on_demand_usd(JSON.parse(product))
     rescue StandardError => exception
-      Honeybadger.notify(exception) if defined?(Honeybadger)
+      Observability::Errors.capture_exception(exception) if defined?(Observability::Errors)
       nil
     end
 

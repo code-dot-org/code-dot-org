@@ -1906,7 +1906,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/fonts@workspace:packages/fonts"
   dependencies:
-    "@fontsource-variable/figtree": "npm:^5.1.2"
     "@fontsource-variable/noto-sans": "npm:^5.1.1"
     "@fontsource-variable/noto-sans-arabic": "npm:^5.1.1"
     "@fontsource-variable/noto-sans-armenian": "npm:^5.1.1"
@@ -3485,13 +3484,6 @@ __metadata:
     "@fastify/forwarded": "npm:^3.0.0"
     ipaddr.js: "npm:^2.1.0"
   checksum: 10c0/d9167e848086cb66a0ae8b008eb6a79e9ae0e17c3e8697a3a22b23152376e22843bea6642a2c07eba5460faa786ebda6157dfa6537ac7b733f758428cd51988b
-  languageName: node
-  linkType: hard
-
-"@fontsource-variable/figtree@npm:^5.1.2":
-  version: 5.1.2
-  resolution: "@fontsource-variable/figtree@npm:5.1.2"
-  checksum: 10c0/c0a4d0d0e9a46ad0ff3b48ec63804ffe712383d384e422e35de6ab9bb213b490e2772d04cca652413336d438a17a30f310e11a962302b5b075019599653e3687
   languageName: node
   linkType: hard
 
