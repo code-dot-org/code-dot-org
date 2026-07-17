@@ -639,8 +639,12 @@ class Section < ApplicationRecord
   # Provides some information about a section. This is consumed by our SectionsAsStudentTable
   # React component on the student homepage.
   # This provides all information in `selected_section_summarize` and `concise_summarize` as well as additional fields.
-  def summarize(include_students: true)
-    ActiveRecord::Base.connected_to(role: :reading) do
+  #
+  # role: defaults to :reading (replica), but callers that just wrote data this same request
+  # (e.g. right after Section#add_student) should pass :writing to read their own write back
+  # from the primary, since the replica may not have caught up yet.
+  def summarize(include_students: true, role: :reading)
+    ActiveRecord::Base.connected_to(role: role) do
       base_url = CDO.studio_url('/teacher_dashboard/sections/')
 
       course_version_name =
