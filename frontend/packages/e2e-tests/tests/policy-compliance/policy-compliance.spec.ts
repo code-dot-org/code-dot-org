@@ -8,8 +8,29 @@ import {
   createUser,
   resetSession,
 } from '../shared/auth';
+import {analyze, WCAG_AA_TAGS} from '../shared/axe';
 import {setCountryOverride} from '../shared/geolocation';
 import {expectElementHasI18nText} from '../shared/i18n';
+
+// Pre-existing WCAG AA debt on the CAP lockout surfaces this feature owns,
+// locked as a regression baseline: scope -> {rule id -> failing node count}.
+// Each scan is folded into the scenario that already loads the surface (per the
+// docs-a11y convention) and scoped to the feature's own mount, excluding the
+// shared header/footer chrome. A new or fixed violation breaks the test and
+// prompts a re-baseline. Counts measured against test-studio, deterministic
+// across chromium/firefox/webkit after settle(). Sibling lockout-phase.spec.ts
+// already covers #account-information; these three surfaces are unique here.
+// lockoutPanelForm (#lockout-panel-form) and manageLinkedAccounts
+// (#manage-linked-accounts) are clean today — the empty map locks that in and
+// fails if any violation appears. personalLoginForm
+// (#edit_user_create_personal_account) ships one serious color-contrast
+// failure: the greyed section heading (.MuiTypography-h6), #cacbcd on #f0f2f5 =
+// 1.44:1 (needs 4.5:1), dimmed while the form is gated.
+const EXPECTED_VIOLATIONS: Record<string, Record<string, number>> = {
+  lockoutPanelForm: {},
+  manageLinkedAccounts: {},
+  personalLoginForm: {'color-contrast': 1},
+};
 
 // CO lockout date pinned into the past so every CO account sits in the all-user
 // lockout phase. Mirrors cap_steps.rb's @cap_lockout_date and the CO default in
@@ -71,6 +92,13 @@ test.describe('Policy Compliance', () => {
 
       await expect(lockout.panelForm).toBeVisible();
       await expect(lockout.permissionStatus).toContainText('Not Submitted');
+
+      expect(
+        await analyze(page, {
+          include: '#lockout-panel-form',
+          tags: WCAG_AA_TAGS,
+        }),
+      ).toEqual(EXPECTED_VIOLATIONS.lockoutPanelForm);
     },
   );
 
@@ -141,6 +169,15 @@ test.describe('Policy Compliance', () => {
       await expect(accountEdit.manageLinkedAccountsSection).toBeVisible();
       await expect(accountEdit.googleConnectButton).toBeDisabled();
 
+      // Scan the linked-accounts section in its locked state, before the nag
+      // modal is dismissed or the request submitted.
+      expect(
+        await analyze(page, {
+          include: '#manage-linked-accounts',
+          tags: WCAG_AA_TAGS,
+        }),
+      ).toEqual(EXPECTED_VIOLATIONS.manageLinkedAccounts);
+
       await expect(lockout.linkedAccountsForm).toBeVisible();
       // The site-wide nag modal duplicates this form's fields under the same
       // accessible names and mounts asynchronously; dismiss it first so it
@@ -187,6 +224,13 @@ test.describe('Policy Compliance', () => {
         locale: 'en-US',
         key: 'user.create_personal_login_state_required',
       });
+
+      expect(
+        await analyze(page, {
+          include: '#edit_user_create_personal_account',
+          tags: WCAG_AA_TAGS,
+        }),
+      ).toEqual(EXPECTED_VIOLATIONS.personalLoginForm);
 
       await accountEdit.usStateSelect.selectOption({label: 'Alabama'});
       await accountEdit.submitUpdateButton.click();
