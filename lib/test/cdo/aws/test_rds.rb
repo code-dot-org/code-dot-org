@@ -240,4 +240,117 @@ class TestRDS < Minitest::Test
     end
     assert_equal 'cluster_id is required', empty_exception.message
   end
+
+  def test_parse_data_filter_splits_comma_separated_rules
+    assert_equal(
+      ['include: db.*', 'exclude: db.t1', 'exclude: db.t2'],
+      Cdo::RDS.parse_data_filter('include: db.*, exclude: db.t1, exclude: db.t2')
+    )
+  end
+
+  def test_parse_data_filter_returns_empty_for_blank_input
+    assert_empty Cdo::RDS.parse_data_filter(nil)
+    assert_empty Cdo::RDS.parse_data_filter('')
+  end
+
+  def test_reconcile_zero_etl_filters_migrates_a_blanket_include_and_stale_exclude
+    result = Cdo::RDS.reconcile_zero_etl_filters(
+      'include: pegasus_test.*, include: dashboard_prod.*, exclude: dashboard_prod.old_table',
+      'include: dashboard_prod.*, exclude: dashboard_prod.no_pk',
+      db_name: 'dashboard_prod'
+    )
+    assert_equal ['exclude: dashboard_prod.no_pk'], result[:to_add]
+    assert_equal ['exclude: dashboard_prod.old_table'], result[:to_remove]
+    assert_includes result[:reconciled_filter], 'include: pegasus_test.*'
+    refute_includes result[:reconciled_filter], 'old_table'
+    # The broad include must stay ahead of the exclude that narrows it (Maxwell precedence).
+    filter = result[:reconciled_filter]
+    assert filter.index('include: dashboard_prod.*') < filter.index('exclude: dashboard_prod.no_pk')
+  end
+
+  def test_reconcile_zero_etl_filters_preserves_other_database_rules_untouched
+    result = Cdo::RDS.reconcile_zero_etl_filters(
+      'include: pegasus_test.*, include: dashboard_prod.*',
+      'include: dashboard_prod.*',
+      db_name: 'dashboard_prod'
+    )
+    assert_empty result[:to_add]
+    assert_empty result[:to_remove]
+    assert_includes result[:reconciled_filter], 'include: pegasus_test.*'
+  end
+
+  def test_reconcile_zero_etl_filters_reports_matching_rules_as_unchanged
+    result = Cdo::RDS.reconcile_zero_etl_filters(
+      'include: dashboard_prod.*, exclude: dashboard_prod.no_pk',
+      'include: dashboard_prod.*, exclude: dashboard_prod.no_pk',
+      db_name: 'dashboard_prod'
+    )
+    assert_empty result[:to_add]
+    assert_empty result[:to_remove]
+    assert_equal ['exclude: dashboard_prod.no_pk', 'include: dashboard_prod.*'], result[:unchanged]
+  end
+
+  def test_update_zero_etl_integration_applies_the_reconciled_filter
+    integration = stub(data_filter: 'include: dashboard_test.*, exclude: dashboard_test.old_table')
+    rds_client = mock('rds_client')
+    rds_client.expects(:describe_integrations).
+      with(integration_identifier: 'arn:integration').returns(stub(integrations: [integration]))
+    rds_client.expects(:modify_integration).with do |args|
+      args[:integration_identifier] == 'arn:integration' &&
+        args[:data_filter].include?('exclude: dashboard_test.no_pk') &&
+        !args[:data_filter].include?('old_table')
+    end
+
+    result = Cdo::RDS.update_zero_etl_integration!(
+      integration_arn: 'arn:integration',
+      desired_data_filter: 'include: dashboard_test.*, exclude: dashboard_test.no_pk',
+      db_name: 'dashboard_test',
+      rds_client: rds_client
+    )
+    assert_equal ['exclude: dashboard_test.no_pk'], result[:to_add]
+    assert_equal ['exclude: dashboard_test.old_table'], result[:to_remove]
+  end
+
+  def test_update_zero_etl_integration_does_not_modify_on_dry_run
+    integration = stub(data_filter: 'include: dashboard_test.*')
+    rds_client = mock('rds_client')
+    rds_client.expects(:describe_integrations).returns(stub(integrations: [integration]))
+    rds_client.expects(:modify_integration).never
+
+    Cdo::RDS.update_zero_etl_integration!(
+      integration_arn: 'arn:integration',
+      desired_data_filter: 'include: dashboard_test.*, exclude: dashboard_test.no_pk',
+      db_name: 'dashboard_test',
+      dry_run: true,
+      rds_client: rds_client
+    )
+  end
+
+  def test_update_zero_etl_integration_does_not_modify_when_no_changes
+    integration = stub(data_filter: 'include: dashboard_test.*')
+    rds_client = mock('rds_client')
+    rds_client.expects(:describe_integrations).returns(stub(integrations: [integration]))
+    rds_client.expects(:modify_integration).never
+
+    Cdo::RDS.update_zero_etl_integration!(
+      integration_arn: 'arn:integration',
+      desired_data_filter: 'include: dashboard_test.*',
+      db_name: 'dashboard_test',
+      rds_client: rds_client
+    )
+  end
+
+  def test_update_zero_etl_integration_raises_when_integration_not_found
+    rds_client = mock('rds_client')
+    rds_client.expects(:describe_integrations).returns(stub(integrations: []))
+
+    assert_raises(ArgumentError) do
+      Cdo::RDS.update_zero_etl_integration!(
+        integration_arn: 'arn:missing',
+        desired_data_filter: 'include: dashboard_test.*',
+        db_name: 'dashboard_test',
+        rds_client: rds_client
+      )
+    end
+  end
 end
