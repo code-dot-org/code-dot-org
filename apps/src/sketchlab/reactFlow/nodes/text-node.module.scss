@@ -3,21 +3,18 @@
   outline: none;
   width: 100%;
   height: 100%;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  transition: border-color 0.15s;
-  // Ensure handles stay at the node boundary, not pushed by flex content.
   box-sizing: border-box;
 
-  &:hover {
+  // Hover border lives on the rotated layer so it turns with the node.
+  &:hover .rotatable {
     border-color: var(--borders-neutral-strong);
   }
 }
 
-// Rotatable layer holding the visible text, the selection box + resize
-// handles, and the connection handles, so all of them rotate together. Outer
-// .textNode keeps the hover border upright. Filling the node absolutely (with
-// the text padding applied here) keeps the selection box at the node boundary.
+// Rotatable layer holding the visible text, the hover border, the selection
+// box + resize handles, and the connection handles, so all of them rotate
+// together. Filling the node absolutely (with the text padding applied here)
+// keeps the border and selection box at the node boundary.
 .rotatable {
   position: absolute;
   inset: 0;
@@ -27,6 +24,15 @@
   align-items: center;
   justify-content: center;
   transform-origin: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: border-color 0.15s;
+}
+
+// Keyboard focus ring on the rotated wrapper so it turns with the node.
+:global(.react-flow__node-text:focus-visible) .rotatable {
+  outline: 2px solid var(--borders-brand-teal-primary);
+  outline-offset: 2px;
 }
 
 .text {
