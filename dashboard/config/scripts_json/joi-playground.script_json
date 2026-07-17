@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-29 00:19:55 UTC",
+    "serialized_at": "2026-07-16 20:33:02 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -49,7 +49,7 @@
     },
     {
       "key": "lesson-2",
-      "name": "Other",
+      "name": "Technical Interview",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -75,6 +75,18 @@
         "lesson_group.key": "",
         "script.name": "joi-playground"
       }
+    },
+    {
+      "key": "256ff5f8-1cd5-49ad-925f-b38888d61af6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "256ff5f8-1cd5-49ad-925f-b38888d61af6",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "joi-playground"
+      }
     }
   ],
   "activity_sections": [
@@ -86,6 +98,18 @@
       "seeding_key": {
         "activity_section.key": "4f9233f1-6c51-44a3-b0f4-d80f01a4aee8",
         "lesson_activity.key": "709803fe-32f6-440e-b282-907ad101c251"
+      }
+    },
+    {
+      "key": "cabff993-9f23-4d17-951c-fc18b1a1c359",
+      "position": 1,
+      "properties": {
+        "name": "Pick an IDE",
+        "progression_name": "IDE Selection"
+      },
+      "seeding_key": {
+        "activity_section.key": "cabff993-9f23-4d17-951c-fc18b1a1c359",
+        "lesson_activity.key": "256ff5f8-1cd5-49ad-925f-b38888d61af6"
       }
     }
   ],
@@ -209,6 +233,28 @@
       "level_keys": [
         "aif-cyber-l2-app5"
       ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "IDE Selection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "technical-interview-ide-seletion"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "cabff993-9f23-4d17-951c-fc18b1a1c359"
+      },
+      "level_keys": [
+        "technical-interview-ide-seletion"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -271,6 +317,18 @@
         "script.name": "joi-playground",
         "activity_section.key": "4f9233f1-6c51-44a3-b0f4-d80f01a4aee8"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "technical-interview-ide-seletion",
+        "script_level.level_keys": [
+          "technical-interview-ide-seletion"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "cabff993-9f23-4d17-951c-fc18b1a1c359"
+      }
     }
   ],
   "resources": [
@@ -301,6 +359,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [
