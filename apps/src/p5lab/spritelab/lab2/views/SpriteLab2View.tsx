@@ -143,10 +143,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const themeSetting = useThemeSetting('spritelab');
   // Seed the page constants the animationList logic + engine read (we bypass
   // StudioApp.init) and the AichatContextManager the aiGateway calls read.
-  // The cleanup resets the slice: the legacy reducer forbids changing a key
-  // once set, and React's cleanup-before-effect guarantee means every seed
-  // lands on a fresh slice — including the next level's, after an in-place
-  // level switch.
   useEffect(() => {
     AichatContextManager.setContext({
       clientType: AiChatClientTypes.FLOW_LAB,
