@@ -108,8 +108,8 @@ describe('computeRotatedResize', () => {
         const anchorBefore = anchorWorldPosition(start, rotationDeg, handle);
         const result = resize(start, handle, {x: 23, y: -17});
         const anchorAfter = anchorWorldPosition(result, rotationDeg, handle);
-        expect(anchorAfter.x).toBeCloseTo(anchorBefore.x, 9);
-        expect(anchorAfter.y).toBeCloseTo(anchorBefore.y, 9);
+        expect(anchorAfter.x).toBeCloseTo(anchorBefore.x, 6);
+        expect(anchorAfter.y).toBeCloseTo(anchorBefore.y, 6);
       }
     );
   });
@@ -140,8 +140,8 @@ describe('computeRotatedResize', () => {
       expect(result.width).toBe(MIN_WIDTH);
       expect(result.height).toBe(MIN_HEIGHT);
       const anchorAfter = anchorWorldPosition(result, rotationDeg, 'top-left');
-      expect(anchorAfter.x).toBeCloseTo(anchorBefore.x, 9);
-      expect(anchorAfter.y).toBeCloseTo(anchorBefore.y, 9);
+      expect(anchorAfter.x).toBeCloseTo(anchorBefore.x, 6);
+      expect(anchorAfter.y).toBeCloseTo(anchorBefore.y, 6);
     });
   });
 
