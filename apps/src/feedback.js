@@ -1105,12 +1105,12 @@ FeedbackUtils.prototype.getGeneratedCodeDescriptions_ = function (
   }
 
   const berkeley = (
-    <Link href="http://bjc.berkeley.edu/" openInNewTab external>
+    <Link href="http://bjc.berkeley.edu/" openInNewTab external size="s">
       Berkeley
     </Link>
   );
   const harvard = (
-    <Link href="https://cs50.harvard.edu/" openInNewTab external>
+    <Link href="https://cs50.harvard.edu/" openInNewTab external size="s">
       Harvard
     </Link>
   );
@@ -1161,11 +1161,6 @@ FeedbackUtils.prototype.showGeneratedCode = function (appStrings) {
           message={generatedCodeProperties.message}
           code={generatedCodeProperties.code}
           style={{marginTop: 0}}
-          codeStyle={{
-            maxHeight: 340,
-            margin: 0,
-            backgroundColor: 'var(--background-neutral-tertiary)',
-          }}
         />
       }
       primaryButtonProps={{

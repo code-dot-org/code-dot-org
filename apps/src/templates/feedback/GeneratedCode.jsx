@@ -7,20 +7,21 @@ export default class GeneratedCode extends React.Component {
     message: PropTypes.node,
     code: PropTypes.string.isRequired,
     style: PropTypes.object,
-    codeStyle: PropTypes.object,
   };
 
   render() {
     return (
       <div className="generated-code-container" style={this.props.style}>
         {this.props.message && (
-          <Typography variant="body2" component="p">
-            {this.props.message}
-          </Typography>
+          <div className="generatedCodeMessage">
+            <Typography variant="body3" component="p">
+              {this.props.message}
+            </Typography>
+          </div>
         )}
 
         {/* code container should be LTR even in RTL mode */}
-        <pre className="generatedCode" dir="ltr" style={this.props.codeStyle}>
+        <pre className="generatedCode" dir="ltr">
           {this.props.code}
         </pre>
       </div>

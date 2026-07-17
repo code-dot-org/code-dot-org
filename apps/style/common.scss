@@ -1275,8 +1275,9 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   .generatedCode {
     font-size: 14px;
     overflow: scroll;
-    max-height: 400px;
-    margin: 12px 0;
+    max-height: 340px;
+    margin: 0;
+    background-color: var(--background-neutral-tertiary);
 
     // Chrome (>=v121), Edge, Firefox
     scrollbar-color: var(--background-neutral-quinary)

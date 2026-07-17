@@ -17,7 +17,7 @@ describe('GeneratedCode', () => {
 
   it('renders message inside a Typography element', () => {
     expect(wrapper).to.containMatchingElement(
-      <Typography variant="body2" component="p">
+      <Typography variant="body3" component="p">
         Test message
       </Typography>
     );
