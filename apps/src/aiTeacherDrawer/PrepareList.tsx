@@ -1,17 +1,34 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
 import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import SectionPodcastCard, {SuggestedLesson} from './SectionPodcastCard';
+import SectionPodcastCard, {
+  SuggestedLesson,
+  SuggestedLessonEntry,
+} from './SectionPodcastCard';
 
 import styles from './prepare-list.module.scss';
 
-function formatDate(date: Date): string {
-  return date.toLocaleDateString('en-US', {
+const COMING_UP = 'coming_up';
+
+interface SectionLessonData extends SuggestedLesson {
+  history?: SuggestedLessonEntry[];
+  coming_up?: SuggestedLesson | null;
+}
+
+function localISODate(d: Date): string {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+
+function formatDate(isoDate: string): string {
+  const [y, mo, d] = isoDate.split('-').map(Number);
+  return new Date(y, mo - 1, d).toLocaleDateString('en-US', {
     month: 'long',
     day: 'numeric',
     year: 'numeric',
@@ -21,18 +38,20 @@ function formatDate(date: Date): string {
 const PrepareList: React.FC = () => {
   const dispatch = useAppDispatch();
   const sections = useAppSelector(state => state.teacherSections);
-  // undefined value = fetch in flight; null = fetched, no lesson for section
   const [suggestedLessons, setSuggestedLessons] = useState<Record<
     number,
-    SuggestedLesson | null
+    SectionLessonData | null
   > | null>(null);
+
+  const todayISO = useMemo(() => localISODate(new Date()), []);
+  const [selectedDate, setSelectedDate] = useState<string>(todayISO);
 
   useEffect(() => {
     dispatch(asyncLoadSectionData());
   }, [dispatch]);
 
   useEffect(() => {
-    HttpClient.fetchJson<Record<number, SuggestedLesson | null>>(
+    HttpClient.fetchJson<Record<number, SectionLessonData | null>>(
       '/api/v1/sections/suggested_lessons'
     )
       .then(response => setSuggestedLessons(response?.value ?? {}))
@@ -46,15 +65,51 @@ const PrepareList: React.FC = () => {
         !!s && !s.hidden && s.participantType === 'student'
     );
 
+  const hasComingUp = useMemo(
+    () =>
+      !!suggestedLessons &&
+      Object.values(suggestedLessons).some(d => d?.coming_up),
+    [suggestedLessons]
+  );
+
+  const availableDates = useMemo(() => {
+    const dateSet = new Set([todayISO]);
+    if (suggestedLessons) {
+      Object.values(suggestedLessons).forEach(data => {
+        data?.history?.forEach(entry => dateSet.add(entry.date));
+      });
+    }
+    const dates = Array.from(dateSet).sort();
+    return hasComingUp ? [...dates, COMING_UP] : dates;
+  }, [suggestedLessons, todayISO, hasComingUp]);
+
+  function lessonForDate(
+    data: SectionLessonData | null | undefined
+  ): SuggestedLesson | null | undefined {
+    if (data === undefined) return undefined;
+    if (data === null) return null;
+    if (selectedDate === COMING_UP) return data.coming_up ?? null;
+    if (selectedDate === todayISO) return data;
+    return data.history?.find(e => e.date === selectedDate) ?? null;
+  }
+
   return (
     <div className={styles.container}>
       <h2 className={styles.heading}>Prepare</h2>
       <div className={styles.datePickerSection}>
         <span className={styles.datePickerLabel}>Show prep content for</span>
-        <div className={styles.datePicker}>
-          <span>{formatDate(new Date())}</span>
-          <FontAwesomeV6Icon iconName="chevron-down" />
-        </div>
+        <select
+          className={styles.datePicker}
+          value={selectedDate}
+          onChange={e => setSelectedDate(e.target.value)}
+          aria-label="Select date"
+        >
+          {availableDates.map(date => (
+            <option key={date} value={date}>
+              {date === COMING_UP ? 'Coming up' : formatDate(date)}
+            </option>
+          ))}
+        </select>
       </div>
       {activeSections.length === 0 ? (
         <div className={styles.emptyState}>No active sections found.</div>
@@ -65,7 +120,9 @@ const PrepareList: React.FC = () => {
             sectionName={section.name}
             avatarColor={section.avatar_color ?? 0}
             avatarEmoji={section.avatar_emoji ?? 0}
-            lesson={suggestedLessons ? suggestedLessons[section.id] : undefined}
+            lesson={lessonForDate(
+              suggestedLessons ? suggestedLessons[section.id] : undefined
+            )}
           />
         ))
       )}

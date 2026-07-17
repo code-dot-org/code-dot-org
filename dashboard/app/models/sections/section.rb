@@ -197,14 +197,16 @@ class Section < ApplicationRecord
     participant_type != Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
   end
 
-  serialized_attrs %w(code_review_expires_at suggested_lesson)
+  serialized_attrs %w(code_review_expires_at suggested_lesson suggested_lesson_history)
 
-  SUGGESTED_LESSON_TTL = 1.hour
+  SUGGESTED_LESSON_TTL = 1.minute
   SUGGESTED_LESSON_PASSING_THRESHOLD = ActivityConstants::MINIMUM_PASS_RESULT
+  SUGGESTED_LESSON_HISTORY_MAX_DAYS = 10
 
   def suggested_lesson_stale?
     data = suggested_lesson
     return true if data.nil?
+    return true if suggested_lesson_history.nil?
     timestamp = data['timestamp']
     return true if timestamp.blank?
     Time.parse(timestamp.to_s) < SUGGESTED_LESSON_TTL.ago
@@ -265,13 +267,19 @@ class Section < ApplicationRecord
                     lessons.first
                   end
 
-    update!(
-      suggested_lesson: if finished_unit
-                          {'completed_unit' => true, 'timestamp' => Time.now.utc.iso8601}
-                        else
-                          {'lesson_id' => next_lesson.id, 'timestamp' => Time.now.utc.iso8601}
-                        end
-    )
+    new_value = if finished_unit
+                  {'completed_unit' => true, 'timestamp' => Time.now.utc.iso8601}
+                else
+                  {'lesson_id' => next_lesson.id, 'timestamp' => Time.now.utc.iso8601}
+                end
+
+    today = Time.zone.today.iso8601
+    cutoff = (Time.zone.today - SUGGESTED_LESSON_HISTORY_MAX_DAYS).iso8601
+    history = (suggested_lesson_history || []).
+      reject {|entry| entry['date'] == today || entry['date'] < cutoff}
+    history << new_value.merge('date' => today)
+
+    update!(suggested_lesson: new_value, suggested_lesson_history: history)
   end
 
   # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.

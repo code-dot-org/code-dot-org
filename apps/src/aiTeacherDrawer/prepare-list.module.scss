@@ -7,7 +7,7 @@
 .heading {
   font-size: 2rem;
   font-weight: 700;
-  color: #1b1464;
+  color: var(--text-neutral-primary);
   margin: 0 0 24px;
 }
 
@@ -23,16 +23,14 @@
 }
 
 .datePicker {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 14px;
+  width: 100%;
+  padding: 0 24px 0 8px;
   border: 1px solid var(--borders-neutral-primary, #d4dae1);
   border-radius: 8px;
   background: var(--background-neutral-primary, #fff);
   font-size: 1rem;
-  cursor: default;
-  user-select: none;
+  cursor: pointer;
+  box-sizing: border-box;
 }
 
 .sectionGroup {
@@ -57,10 +55,22 @@
   }
 }
 
-.sectionName {
+.sectionInfo {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionName {
   font-weight: 700;
   font-size: 1rem;
+  line-height: 1.3;
+}
+
+.lessonName {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--text-neutral-secondary);
   line-height: 1.3;
 }
 
@@ -120,13 +130,13 @@
 
 .progressFill {
   height: 100%;
-  background: #3c3fa0;
+  background: var(--background-brand-purple-primary);
   border-radius: 3px;
 }
 
 .completedIcon {
   flex-shrink: 0;
-  color: #00a862;
+  color: var(--text-success-primary);
   font-size: 1.25rem;
   display: flex;
   align-items: center;
