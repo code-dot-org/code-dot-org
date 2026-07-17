@@ -147,3 +147,13 @@ export async function uploadAssetToProject(
   });
   return url;
 }
+
+/**
+ * Delete a project asset by its /v3/assets URL (the shape uploadAssetToProject
+ * returns). Used to reclaim an image no longer referenced by any animation
+ * after an edit or delete. Callers treat it as best-effort — a failed cleanup
+ * shouldn't surface to the student — so it's fire-and-forget at the call site.
+ */
+export async function deleteAssetFromProject(url: string): Promise<void> {
+  await HttpClient.delete(url, true);
+}

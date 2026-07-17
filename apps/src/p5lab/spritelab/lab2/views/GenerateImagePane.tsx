@@ -12,7 +12,10 @@ import PixelEditorModal, {
 import {getStore} from '@cdo/apps/redux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {uploadAssetToProject} from '../ai/items/itemGeneration';
+import {
+  deleteAssetFromProject,
+  uploadAssetToProject,
+} from '../ai/items/itemGeneration';
 import {
   getTrimmedThumbnail,
   onTrimsUpdated,
@@ -82,14 +85,40 @@ const GenerateImagePane: React.FunctionComponent = () => {
   const [, setTrimVersion] = useState(0);
   useEffect(() => onTrimsUpdated(() => setTrimVersion(v => v + 1)), []);
 
+  // Reclaim a superseded image asset. Guards keep it safe: only this
+  // project's own uploaded assets (never library images, absolute URLs, or
+  // inline dataURIs), and only when no image still points at it (a duplicate
+  // can share one). Best-effort — a failed cleanup never disrupts the edit or
+  // delete. Known tradeoff: restoring an older project version shows a broken
+  // image for anything deleted since (as in App Lab).
+  const deleteUnreferencedAsset = useCallback(
+    (url?: string) => {
+      if (!channelId || !url || !url.startsWith(`/v3/assets/${channelId}/`)) {
+        return;
+      }
+      const stillUsed = Object.values(
+        getStore().getState().animationList.propsByKey
+      ).some(p => (p as {sourceUrl?: string} | undefined)?.sourceUrl === url);
+      if (stillUsed) {
+        return;
+      }
+      deleteAssetFromProject(url).catch(() => undefined);
+    },
+    [channelId]
+  );
+
   const handleDelete = useCallback(
     (key: string) => {
+      const removedUrl =
+        getStore().getState().animationList.propsByKey[key]?.sourceUrl;
       dispatch(
         // deleteAnimation is an untyped JS thunk; cast for dispatch.
         deleteAnimation(key, true /* isSpriteLab */) as unknown as AnyAction
       );
+      // The removal already happened; reclaim the asset if unreferenced now.
+      deleteUnreferencedAsset(removedUrl);
     },
-    [dispatch]
+    [dispatch, deleteUnreferencedAsset]
   );
 
   // Pixel editor: clicking a gallery image opens it in the modal; Save
@@ -111,6 +140,8 @@ const GenerateImagePane: React.FunctionComponent = () => {
       if (!key || !props) {
         return;
       }
+      // The asset this edit replaces; cleaned up once the new one is in place.
+      const previousUrl = props.sourceUrl;
       // Pixel-art edits can change resolution (logical downsample + crisp
       // upscale); keep the animation's frame metadata truthful.
       const frameSize: {x: number; y: number} | null =
@@ -161,8 +192,10 @@ const GenerateImagePane: React.FunctionComponent = () => {
       // Recompute this image's trimmed thumbnail (cached by source; fires
       // onTrimsUpdated, refreshing the gallery and block dropdowns).
       trimAnimationListImages(updated);
+      // The image now points at the fresh asset; drop the old one.
+      deleteUnreferencedAsset(previousUrl);
     },
-    [editingKey, editingProps, channelId, dispatch]
+    [editingKey, editingProps, channelId, dispatch, deleteUnreferencedAsset]
   );
 
   return (
