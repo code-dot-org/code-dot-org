@@ -19,37 +19,45 @@ const theme = createTheme({
       fontFamily: createFontStack(SPACE_GROTESK_FONT, NOTO_FONT),
       fontSize: '3rem', // 48px
       fontWeight: 600,
-      lineHeight: 1.16,
+      lineHeight: 1.08,
+      letterSpacing: '-0.03rem',
+      marginBottom: '0.5em',
     },
     h2: {
       fontFamily: createFontStack(SPACE_GROTESK_FONT, NOTO_FONT),
-      fontSize: '2.125rem', // 34px
+      fontSize: '2.375rem', // 38px
       fontWeight: 600,
-      lineHeight: 1.24,
+      lineHeight: 1.05,
+      letterSpacing: '-0.03rem',
+      marginBottom: '0.5em',
     },
     h3: {
       fontFamily: createFontStack(GEIST_FONT, NOTO_FONT),
       fontSize: '1.75rem', // 28px
       fontWeight: 600,
-      lineHeight: 1.28,
+      lineHeight: 1.29,
+      marginBottom: '0.5em',
     },
     h4: {
       fontFamily: createFontStack(GEIST_FONT, NOTO_FONT),
       fontSize: '1.5rem', // 24px
       fontWeight: 600,
-      lineHeight: 1.32,
+      lineHeight: 1.33,
+      marginBottom: '0.5em',
     },
     h5: {
+      fontFamily: createFontStack(GEIST_FONT, NOTO_FONT),
+      fontSize: '1.375rem', // 22px
+      fontWeight: 600,
+      lineHeight: 1.36,
+      marginBottom: '0.5em',
+    },
+    h6: {
       fontFamily: createFontStack(GEIST_FONT, NOTO_FONT),
       fontSize: '1.25rem', // 20px
       fontWeight: 600,
       lineHeight: 1.4,
-    },
-    h6: {
-      fontFamily: createFontStack(GEIST_FONT, NOTO_FONT),
-      fontSize: '1rem', // 16px
-      fontWeight: 600,
-      lineHeight: 1.48,
+      marginBottom: '0.5em',
     },
     body1: {
       fontFamily: createFontStack(GEIST_FONT, NOTO_FONT),
