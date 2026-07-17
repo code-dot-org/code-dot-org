@@ -1,8 +1,8 @@
 @font-face {
-  font-family: 'Space Grotesk';
+  font-family: 'Space Grotesk Medium';
   font-style: normal;
   font-weight: 500;
-  src: url('/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf') format('truetype'), local('?');
+  src: url('/fonts/SpaceGrotesk/SpaceGrotesk-Medium.woff2') format('woff2');
 }
 
 .bannerWrapper {
@@ -23,7 +23,7 @@
 }
 
 .heading {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Space Grotesk Medium', sans-serif;
 }
 
 .heroBannerSection p {

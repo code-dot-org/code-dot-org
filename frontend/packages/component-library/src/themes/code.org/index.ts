@@ -4,7 +4,7 @@ export type * from './muiAugmentation';
 
 import {
   NOTO_FONT,
-  BARLOW_FONT,
+  SPACE_GROTESK_FONT,
   GEIST_FONT,
   createFontStack,
 } from './constants/fonts';
@@ -16,25 +16,25 @@ const theme = createTheme({
   typography: {
     fontFamily: createFontStack(GEIST_FONT, NOTO_FONT),
     h1: {
-      fontFamily: createFontStack(BARLOW_FONT, NOTO_FONT),
+      fontFamily: createFontStack(SPACE_GROTESK_FONT, NOTO_FONT),
       fontSize: '3rem', // 48px
       fontWeight: 600,
       lineHeight: 1.16,
     },
     h2: {
-      fontFamily: createFontStack(BARLOW_FONT, NOTO_FONT),
+      fontFamily: createFontStack(SPACE_GROTESK_FONT, NOTO_FONT),
       fontSize: '2.125rem', // 34px
       fontWeight: 600,
       lineHeight: 1.24,
     },
     h3: {
-      fontFamily: createFontStack(BARLOW_FONT, NOTO_FONT),
+      fontFamily: createFontStack(GEIST_FONT, NOTO_FONT),
       fontSize: '1.75rem', // 28px
       fontWeight: 600,
       lineHeight: 1.28,
     },
     h4: {
-      fontFamily: createFontStack(BARLOW_FONT, NOTO_FONT),
+      fontFamily: createFontStack(GEIST_FONT, NOTO_FONT),
       fontSize: '1.5rem', // 24px
       fontWeight: 600,
       lineHeight: 1.32,
