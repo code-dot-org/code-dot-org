@@ -39,6 +39,13 @@ test.describe('Documentation Landing Page', () => {
       await expect(docs.mainContent).toBeVisible();
       await expect(docs.mainContent).toContainText('IDEs');
       await expect(docs.mainContent).toContainText('Sprite Lab');
+
+      expect(
+        await analyze(page, {
+          include: docs.mainContentSelector,
+          tags: WCAG_AA_TAGS,
+        }),
+      ).toEqual(EXPECTED_VIOLATIONS.landingPage);
     },
   );
 
@@ -59,35 +66,6 @@ test.describe('Documentation Landing Page', () => {
       await expect(docs.pageContent).toContainText('UI controls');
       await expect(docs.pageContent).toContainText('onEvent');
       await expect(docs.navBar).toContainText('UI controls');
-    },
-  );
-
-  test(
-    'Documentation landing page has no unexpected accessibility violations',
-    {tag: ['@no_mobile']},
-    async ({page}) => {
-      const docs = new DocumentationPage(page);
-
-      await docs.gotoLandingPage();
-      await expect(docs.mainContent).toBeVisible();
-
-      expect(
-        await analyze(page, {
-          include: docs.mainContentSelector,
-          tags: WCAG_AA_TAGS,
-        }),
-      ).toEqual(EXPECTED_VIOLATIONS.landingPage);
-    },
-  );
-
-  test(
-    'Applab documentation sidebar has no unexpected accessibility violations',
-    {tag: ['@no_mobile']},
-    async ({page}) => {
-      const docs = new DocumentationPage(page);
-
-      await docs.gotoProgrammingEnvironmentDocs('applab');
-      await expect(docs.navBar).toBeVisible();
 
       expect(
         await analyze(page, {include: docs.navBarSelector, tags: WCAG_AA_TAGS}),
