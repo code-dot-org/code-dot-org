@@ -24,7 +24,6 @@ const FreeResponse: FC<PracticeFreeResponseProps> = ({
 
   return (
     <div>
-      <div className={styles.questionText}>{'DUMMY PROBLEM TEXT HERE'}</div>
       <VideoRecorder onRecordingChange={setHasRecording} disabled={submitted} />
       <button
         type="button"

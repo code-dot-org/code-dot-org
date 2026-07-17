@@ -1,7 +1,7 @@
 import Link from '@code-dot-org/component-library/link';
 import TextField from '@code-dot-org/component-library/textField';
 import {Button as MuiButton} from '@mui/material';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -63,9 +63,12 @@ const SignInForm: React.FunctionComponent<SignInFormProps> = ({
   const [login, setLogin] = useState(loginValue || '');
   const [password, setPassword] = useState('');
 
+  const loginRef = useRef<HTMLInputElement>(null);
+  const passwordRef = useRef<HTMLInputElement>(null);
+
   // Match the legacy autofocus behavior: focus the login field when there is
-  // no pre-filled email, otherwise focus the password field. Done via an
-  // effect rather than the autoFocus prop (which jsx-a11y disallows).
+  // no pre-filled email, otherwise focus the password field. Done via a ref in
+  // an effect rather than the autoFocus prop (which jsx-a11y disallows).
   const emailPrefilled = (loginValue || '') !== '';
 
   useEffect(() => {
@@ -75,8 +78,8 @@ const SignInForm: React.FunctionComponent<SignInFormProps> = ({
   }, [userReturnTo]);
 
   useEffect(() => {
-    const id = emailPrefilled ? PASSWORD_FIELD_ID : LOGIN_FIELD_ID;
-    document.getElementById(id)?.focus();
+    const field = emailPrefilled ? passwordRef : loginRef;
+    field.current?.focus();
   }, [emailPrefilled]);
 
   // Preserve the legacy submit behavior from devise/sessions/new.js: clear
@@ -107,6 +110,7 @@ const SignInForm: React.FunctionComponent<SignInFormProps> = ({
 
           <TextField
             id={LOGIN_FIELD_ID}
+            ref={loginRef}
             className={style.field}
             required
             name="user[login]"
@@ -117,6 +121,7 @@ const SignInForm: React.FunctionComponent<SignInFormProps> = ({
           />
           <TextField
             id={PASSWORD_FIELD_ID}
+            ref={passwordRef}
             className={style.field}
             required
             name="user[password]"
