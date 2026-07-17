@@ -219,10 +219,13 @@ end
 When /^I close the dialog$/ do
   # Add a wait to closing dialog because it's sometimes animated, now.
   # Legacy BaseDialog renders `#x-close`; DSCO CustomDialog renders a button
-  # with `aria-label="Close"`. Close whichever is present.
+  # with `aria-label="Close"`. Both may coexist in the DOM (legacy dialogs
+  # stay mounted after being hidden), so match only the visible one.
   script = <<~JS
-    var el = document.getElementById('x-close') ||
-             document.querySelector('[role="dialog"] button[aria-label="Close"]');
+    var candidates = Array.from(document.querySelectorAll(
+      '#x-close, [role="dialog"] button[aria-label="Close"]'
+    ));
+    var el = candidates.find(function (n) { return n.offsetParent !== null; });
     if (el) { el.click(); }
     return !!el;
   JS
