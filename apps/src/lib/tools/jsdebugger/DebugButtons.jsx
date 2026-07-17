@@ -2,6 +2,8 @@
  * A react component for rendering a set of buttons that control what the
  * interpreter/debugger are doing. i.e. step in/out/over code and pause/continue
  */
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -9,6 +11,8 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 
 import {actions, selectors} from './redux';
+
+import moduleStyles from './DebugButtons.module.scss';
 
 export default connect(
   state => ({
@@ -66,94 +70,86 @@ export default connect(
           className="debug-commands"
           style={this.props.style}
         >
-          <div id="debug-buttons">
+          <div
+            id="debug-buttons"
+            className={moduleStyles.debugButtonsContainer}
+          >
             {
               ' ' /* Explicitly insert whitespace so that this behaves like our ejs file*/
             }
-            <button
-              type="button"
+            <MuiButton
               id="pauseButton"
-              className="debugger_button"
+              variant="contained"
+              color="primary"
+              size="extraSmall"
+              startIcon={<FontAwesomeV6Icon iconName="pause" />}
               onClick={this.togglePause}
-              style={{display: canRunNext ? 'none' : 'inline-block'}}
+              style={{display: canRunNext ? 'none' : 'inline-flex'}}
               disabled={!isAttached}
+              className={moduleStyles.debuggerButton}
             >
-              <img
-                src="/blockly/media/1x1.gif"
-                className="pause-btn icon21"
-                alt=""
-              />
               {i18n.pause()}
-            </button>
+            </MuiButton>
             {
               ' ' /* Explicitly insert whitespace so that this behaves like our ejs file*/
             }
-            <button
-              type="button"
+            <MuiButton
               id="continueButton"
-              className="debugger_button"
+              variant="contained"
+              color="primary"
+              size="extraSmall"
+              startIcon={<FontAwesomeV6Icon iconName="play" />}
               onClick={this.togglePause}
-              style={{display: canRunNext ? 'inline-block' : 'none'}}
+              style={{display: canRunNext ? 'inline-flex' : 'none'}}
+              className={moduleStyles.debuggerButton}
             >
-              <img
-                src="/blockly/media/1x1.gif"
-                className="continue-btn icon21"
-                alt=""
-              />
               {i18n.continue()}
-            </button>
+            </MuiButton>
             {
               ' ' /* Explicitly insert whitespace so that this behaves like our ejs file*/
             }
-            <button
-              type="button"
+            <MuiButton
               id="stepOverButton"
-              className="debugger_button"
+              variant="contained"
+              color="primary"
+              size="extraSmall"
+              startIcon={<FontAwesomeV6Icon iconName="forward-step" />}
               onClick={this.stepOver}
               disabled={!isPaused || !isAttached || isEditWhileRun}
               title={isEditWhileRun ? i18n.editDuringRunMessage() : undefined}
+              className={moduleStyles.debuggerButton}
             >
-              <img
-                src="/blockly/media/1x1.gif"
-                className="step-over-btn icon21"
-                alt=""
-              />
               {i18n.stepOver()}
-            </button>
-
-            <button
-              type="button"
+            </MuiButton>
+            <MuiButton
               id="stepOutButton"
-              className="debugger_button"
+              variant="contained"
+              color="primary"
+              size="extraSmall"
+              startIcon={<FontAwesomeV6Icon iconName="turn-up" />}
               onClick={this.stepOut}
               disabled={!isPaused || !isAttached || isEditWhileRun}
               title={isEditWhileRun ? i18n.editDuringRunMessage() : undefined}
+              className={moduleStyles.debuggerButton}
             >
-              <img
-                src="/blockly/media/1x1.gif"
-                className="step-out-btn icon21"
-                alt=""
-              />
               {i18n.stepOut()}
-            </button>
+            </MuiButton>
             {
               ' ' /* Explicitly insert whitespace so that this behaves like our ejs file*/
             }
-            <button
-              type="button"
+            <MuiButton
               id="stepInButton"
-              className="debugger_button"
+              variant="contained"
+              color="primary"
+              size="extraSmall"
+              startIcon={<FontAwesomeV6Icon iconName="turn-down" />}
               onClick={this.stepIn}
               disabled={(!isPaused && isAttached) || isEditWhileRun}
               title={isEditWhileRun ? i18n.editDuringRunMessage() : undefined}
+              className={moduleStyles.debuggerButton}
             >
-              <img
-                src="/blockly/media/1x1.gif"
-                className="step-in-btn icon21"
-                alt=""
-              />
               {i18n.stepIn()}
-            </button>
+            </MuiButton>
           </div>
         </div>
       );
