@@ -18,11 +18,11 @@ test.describe('Markdown rendering across the website', () => {
     // extraDetailsTag lives inside the collapsed #cool-list <details>, so it
     // is attached but not visible until the list is expanded below.
     await expect(level.extraDetailsTag).toBeAttached();
-    await expect(level.coolList).toHaveJSProperty('open', false);
+    await expect(level.coolList).not.toHaveAttribute('open');
 
     await level.toggleCoolList();
 
-    await expect(level.coolList).toHaveJSProperty('open', true);
+    await expect(level.coolList).toHaveAttribute('open', '');
   });
 
   /**
@@ -51,7 +51,7 @@ test.describe('Markdown rendering across the website', () => {
       // apps/src/maze/Visualization.jsx) even though it carries no signal
       // for this check (markdown-in-instructions rendering).
       await visualCheck('K1 embedded blockly', {
-        mask: [lab.lessonHeaderInfo, lab.gameVisualization],
+        mask: [lab.lessonHeaderInfo, lab.visualization],
       });
     },
   );

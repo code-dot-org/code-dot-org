@@ -45,7 +45,7 @@ export class LegacyBlocklyLab extends LessonLevelPage {
    * can render mid-transition when the screenshot is taken, so visual checks
    * that don't care about the exact playfield frame should mask this.
    */
-  readonly gameVisualization: Locator;
+  readonly visualization: Locator;
 
   constructor(page: Page) {
     super(page);
@@ -61,7 +61,7 @@ export class LegacyBlocklyLab extends LessonLevelPage {
       '.uitest-topInstructions-inline-feedback',
     );
     this.congratsMessage = page.locator('.congrats');
-    this.gameVisualization = page.locator('#visualization');
+    this.visualization = page.locator('#visualization');
   }
 
   /**
