@@ -71,7 +71,9 @@ export function useCopyPaste({
     SketchlabReactFlowNode,
     SketchlabReactFlowEdge
   >();
-  const channelId = useAppSelector(state => state.lab.channel?.id) ?? '';
+  // The lab slice is absent outside lab2 (e.g. the AI Tutor challenge
+  // whiteboard), so guard the whole chain.
+  const channelId = useAppSelector(state => state.lab?.channel?.id) ?? '';
 
   // Keyboard clipboard. useRef holds data (no re-renders); useState tracks
   // whether anything is available so dependent UI can update.

@@ -1104,6 +1104,29 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_redirected_to root_path
   end
 
+  test "reset for hoc when not logged in clears client state and redirects back through /hoc/1" do
+    create_hourofcode_unit_and_levels
+    client_state.set_level_progress(create(:script_level), 10)
+    refute client_state.level_progress_is_empty_for_test
+
+    get :reset, params: {script_id: Unit::HOC_NAME}
+    assert_response 200
+    assert_template 'levels/reset_and_redirect'
+    # The redirect target must flow through the hoc chapter dispatch in
+    # build_script_level_path, not the /s/ form.
+    assert_equal '/hoc/1', assigns(:redirect_path)
+
+    assert client_state.level_progress_is_empty_for_test
+    refute session['warden.user.user.key']
+  end
+
+  test "reset for hoc when logged in redirects to /hoc/1" do
+    create_hourofcode_unit_and_levels
+    sign_in(create(:user))
+    get :reset, params: {script_id: Unit::HOC_NAME}
+    assert_redirected_to '/hoc/1'
+  end
+
   test "show with the reset param should reset session when not logged in" do
     client_state.set_level_progress(create(:script_level), 10)
     refute client_state.level_progress_is_empty_for_test

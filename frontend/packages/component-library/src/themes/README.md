@@ -125,6 +125,8 @@ document.documentElement.dataset.brand; // 'code' | 'codeai' | 'codeai-next' | '
 
 `CodeaiTheme` and `CodeaiAuditTheme` inherit all typography and component style overrides from `CdoTheme` via `createTheme(CdoTheme, { palette: ... })`. Only the palette differs.
 
+Entry points under `frontend/` (which cannot import `apps/src/util/brand.ts`) select the MUI theme with `getMuiThemeForBrand(document.documentElement.dataset.brand)`, exported from this package. Every entry point that loads `brandOverrides.css` should also call this, so CSS tokens and MUI palette-driven components stay in sync under the same brand — see `frontend/apps/studio/src/routes/__root.tsx` and `frontend/packages/markdown/demo/main.tsx`.
+
 MUI components access theme values via the standard `useTheme()` hook from `@mui/material/styles`.
 
 ---

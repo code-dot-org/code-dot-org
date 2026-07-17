@@ -15,7 +15,17 @@ import '@code-dot-org/oceans-lab/styles.css';
 export default function OceansContainer() {
   return (
     <Box className="oceans-lab-shell">
-      <Box className="oceans-lab-frame">
+      <Box
+        className="oceans-lab-frame"
+        // CssBaseline inherits border-box globally; oceans layout assumes content-box.
+        // Word buttons are the exception — their %-based widths need border-box.
+        sx={{
+          '& #container-react': {boxSizing: 'content-box'},
+          '& .ocean-word-button--2col, & .ocean-word-button--3col': {
+            boxSizing: 'border-box',
+          },
+        }}
+      >
         <OceansLab />
       </Box>
     </Box>

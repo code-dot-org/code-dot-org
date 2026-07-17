@@ -1,5 +1,5 @@
 !!!
-%html
+%html{data: {brand: Cdo::Brand.current_brand_code(request)}}
   %head
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1'}
     = csrf_meta_tags
