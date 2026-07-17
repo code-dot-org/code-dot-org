@@ -34,6 +34,12 @@ test.describe('OneTrust integration', () => {
       await expect(oneTrust.banner).toBeVisible({
         timeout: OT_BANNER_TIMEOUT_MS,
       });
+      // OneTrust moves focus to the banner a beat after rendering it, drawing
+      // a 1px focus outline the baseline includes; capture only after that
+      // focus lands or the outline races the screenshot.
+      await expect(oneTrust.banner).toBeFocused({
+        timeout: OT_BANNER_TIMEOUT_MS,
+      });
       await waitForVisualStability(page, oneTrust.banner);
       await visualCheck('onetrust-pop-up-code-org', {fully: false});
     },
