@@ -25,6 +25,10 @@ import {
 } from './excalidrawColorTheme';
 import {uploadBase64ToUrl} from './uploadBase64ToUrl';
 
+// This is the last piece of functionality that relies on the @excalidraw package.
+// If we ever decide to stop supporting migrating from excalidraw, we can remove
+// the @excalidraw dependency from the repo.
+
 function shapeTypeFor(el: ExcalidrawElement): ShapeType | null {
   if (el.type === 'rectangle') return 'rectangle';
   if (el.type === 'diamond') return 'diamond';
