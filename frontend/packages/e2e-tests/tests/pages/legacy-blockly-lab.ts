@@ -47,6 +47,9 @@ export class LegacyBlocklyLab extends LessonLevelPage {
    */
   readonly visualization: Locator;
 
+  /** Continue button on the shared feedback/congrats dialog, rendered for all legacy Blockly labs. */
+  readonly continueButton: Locator;
+
   constructor(page: Page) {
     super(page);
     this.instructionsTab = page.locator('.uitest-instructionsTab');
@@ -62,6 +65,7 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     );
     this.congratsMessage = page.locator('.congrats');
     this.visualization = page.locator('#visualization');
+    this.continueButton = page.locator('#continue-button');
   }
 
   /**
@@ -215,5 +219,15 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   /** Click Run to execute the current workspace program. */
   async run(): Promise<void> {
     await this.runButton.click();
+  }
+
+  /** Click Continue on the post-run feedback dialog; typically triggers a real navigation to the next level. */
+  async continue(): Promise<void> {
+    await this.continueButton.click();
+  }
+
+  /** Click Reset to clear the run result and return the workspace to its pre-run state. */
+  async reset(): Promise<void> {
+    await this.resetButton.click();
   }
 }
