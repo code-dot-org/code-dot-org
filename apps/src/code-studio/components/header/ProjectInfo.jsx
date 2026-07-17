@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -6,6 +5,7 @@ import {connect} from 'react-redux';
 import {possibleHeaders} from '../../headerRedux';
 
 import LevelBuilderSaveButton from './LevelBuilderSaveButton';
+import measureRenderedWidth from './measureRenderedWidth';
 import MinimalProjectHeader from './MinimalProjectHeader';
 import ProjectBackedHeader from './ProjectBackedHeader';
 import ProjectHeader from './ProjectHeader';
@@ -27,8 +27,11 @@ class ProjectInfo extends React.Component {
   };
 
   getFullWidth() {
-    const component = $(this.refs.projectInfo);
-    return component.length > 0 ? component.width() : 0;
+    // The trailing button (Remix) has a 1px border sitting flush against the
+    // clip edge below. Round the measured width up and add a pixel of slack so
+    // that border always clears the overflow:hidden edge, rather than relying
+    // on the rounding HeaderMiddle happens to apply to the reported width.
+    return Math.ceil(measureRenderedWidth(this.refs.projectInfo)) + 1;
   }
 
   setDesiredWidth() {
