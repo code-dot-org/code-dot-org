@@ -1,7 +1,7 @@
 import {expect, test} from '../fixtures';
 import {SketchLab, type SketchLabShapeType} from '../pages/sketch-lab';
 import {analyze, WCAG_AA_TAGS} from '../shared/axe';
-import {cssColorMatchesVar} from '../shared/colors';
+import {cssColorsMatchVars} from '../shared/colors';
 
 /**
  * Net-new coverage (no Cucumber source): the Sketch Lab React Flow canvas —
@@ -112,10 +112,9 @@ test.describe('Sketch Lab React Flow canvas', () => {
 
     await expect
       .poll(() =>
-        cssColorMatchesVar({
+        cssColorsMatchVars({
           locator: lab.shapePaintElement('circle'),
-          colorProperty: 'fill',
-          cssVar: BACKGROUND_BLUE_VAR,
+          matches: [{property: 'fill', cssVar: BACKGROUND_BLUE_VAR}],
         }),
       )
       .toBe(true);
@@ -145,10 +144,9 @@ test.describe('Sketch Lab React Flow canvas', () => {
       await lab.setBackgroundColor('Blue');
       await expect
         .poll(() =>
-          cssColorMatchesVar({
+          cssColorsMatchVars({
             locator: lab.shapePaintElement('circle'),
-            colorProperty: 'fill',
-            cssVar: BACKGROUND_BLUE_VAR,
+            matches: [{property: 'fill', cssVar: BACKGROUND_BLUE_VAR}],
           }),
         )
         .toBe(true);
