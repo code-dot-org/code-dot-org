@@ -23,7 +23,9 @@ export default function Toolbar({
   canvasTool,
   onSetCanvasTool,
 }: ToolbarProps) {
-  const channelId = useAppSelector(state => state.lab.channel?.id) ?? '';
+  // The lab slice is absent outside lab2 (e.g. the AI Tutor challenge
+  // whiteboard), so guard the whole chain.
+  const channelId = useAppSelector(state => state.lab?.channel?.id) ?? '';
   // Use a stable ID prefix for accessibility.
   const uid = useId();
 
