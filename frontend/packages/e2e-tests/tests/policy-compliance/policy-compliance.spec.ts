@@ -1,3 +1,5 @@
+import {type Page} from '@playwright/test';
+
 import {expect, test} from '../fixtures';
 import {AccountEditPage} from '../pages/account-edit-page';
 import {LockoutPage} from '../pages/lockout-page';
@@ -59,6 +61,26 @@ const LOCKED_STUDENT = {
   // re-authenticated.
   signInAfterCreate: false,
 } as const;
+
+/**
+ * Submit a parental-permission request from an inline lockout form and simulate
+ * the parent approving it. Shared by the two /users/edit unlock flows, which are
+ * otherwise identical here. The nag modal shadows the inline form's parent-email
+ * field and can intercept clicks with its backdrop, so it is dismissed first;
+ * keeping that in one place means neither scenario can forget it.
+ */
+async function submitAndAcceptParentalRequest(
+  page: Page,
+  lockout: LockoutPage,
+): Promise<void> {
+  await lockout.parentalPermissionNagModal.dismissIfShown();
+  await expect(lockout.permissionStatus).toContainText('Not Submitted');
+  await lockout.fillParentEmail('parent@example.com');
+  await expect(lockout.submitButton).toBeEnabled();
+  await lockout.submit();
+  await expect(lockout.permissionStatus).toContainText('Pending');
+  await acceptParentalRequest(page);
+}
 
 test.describe('Policy Compliance', () => {
   test.beforeEach(async ({page, dcdo}) => {
@@ -179,18 +201,7 @@ test.describe('Policy Compliance', () => {
       ).toEqual(EXPECTED_VIOLATIONS.manageLinkedAccounts);
 
       await expect(lockout.linkedAccountsForm).toBeVisible();
-      // The site-wide nag modal duplicates this form's fields under the same
-      // accessible names and mounts asynchronously; dismiss it first so it
-      // can't intercept clicks meant for the inline form below.
-      await accountEdit.parentalPermissionNagModal.dismissIfShown();
-      await expect(lockout.permissionStatus).toContainText('Not Submitted');
-      await lockout.fillParentEmail('parent@example.com');
-      await expect(lockout.submitButton).toBeEnabled();
-
-      await lockout.submit();
-      await expect(lockout.permissionStatus).toContainText('Pending');
-
-      await acceptParentalRequest(page);
+      await submitAndAcceptParentalRequest(page, lockout);
 
       await page.goto('/users/edit');
       await expect(accountEdit.manageLinkedAccountsSection).toBeVisible();
@@ -306,18 +317,7 @@ test.describe('Policy Compliance', () => {
 
       await page.goto('/users/edit');
       await expect(lockout.linkedAccountsForm).toBeVisible();
-      // The site-wide nag modal duplicates this form's fields under the same
-      // accessible names and mounts asynchronously; dismiss it first so it
-      // can't intercept clicks meant for the inline form below.
-      await accountEdit.parentalPermissionNagModal.dismissIfShown();
-      await expect(lockout.permissionStatus).toContainText('Not Submitted');
-      await lockout.fillParentEmail('parent@example.com');
-      await expect(lockout.submitButton).toBeEnabled();
-
-      await lockout.submit();
-      await expect(lockout.permissionStatus).toContainText('Pending');
-
-      await acceptParentalRequest(page);
+      await submitAndAcceptParentalRequest(page, lockout);
 
       await page.goto('/users/edit');
       await expect(accountEdit.personalLoginForm).toBeVisible();

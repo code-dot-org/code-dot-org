@@ -32,12 +32,13 @@ export interface CreateUserOptions {
    */
   sso?: 'clever' | 'google_oauth2';
   /**
-   * Extra fields merged into the `user` body sent to /api/test/create_user.
-   * A field set to `undefined` overrides an earlier value and drops the key
-   * from the JSON body entirely (JSON.stringify omits undefined values) —
-   * used by createStudent's `sponsored` option to omit email/password.
+   * Omit email/password/password_confirmation from the create_user body, for
+   * teacher-managed accounts that have no personal credentials (provider is set
+   * via extraFields). Also skips the post-create sign-in.
    */
-  extraFields?: Record<string, string | number | boolean | undefined>;
+  omitCredentials?: boolean;
+  /** Extra fields merged into the `user` body sent to /api/test/create_user. */
+  extraFields?: Record<string, string | number | boolean>;
 }
 
 /** Clear the session (cookies) so the next createUser/signIn starts clean. */
@@ -59,6 +60,7 @@ export async function createUser(
     email: emailOverride,
     signInAfterCreate = true,
     sso,
+    omitCredentials = false,
     extraFields,
   }: CreateUserOptions,
 ): Promise<UserCredentials> {
@@ -75,8 +77,10 @@ export async function createUser(
     {
       user: {
         user_type: type,
-        email,
-        ...(password ? {password, password_confirmation: password} : {}),
+        ...(omitCredentials ? {} : {email}),
+        ...(password && !omitCredentials
+          ? {password, password_confirmation: password}
+          : {}),
         name,
         age,
         terms_of_service_version: '1',
@@ -94,7 +98,7 @@ export async function createUser(
     throw new Error(`create_user failed: ${status}`);
   }
 
-  if (signInAfterCreate && password) {
+  if (signInAfterCreate && password && !omitCredentials) {
     await signIn(page, {email, password});
   }
 
@@ -183,8 +187,10 @@ export async function createStudent(
     name,
     email,
     signInCount,
-    // Sponsored accounts have no password to sign in with.
-    signInAfterCreate: signInAfterCreate && !sponsored,
+    signInAfterCreate,
+    // Sponsored accounts carry no personal email/password; omitting them also
+    // skips the post-create sign-in.
+    omitCredentials: sponsored,
     sso: sso === 'google' ? 'google_oauth2' : sso,
     extraFields: {
       age,
@@ -205,14 +211,7 @@ export async function createStudent(
             parent_email_preference_source: 'ACCOUNT_SIGN_UP',
           }
         : {}),
-      ...(sponsored
-        ? {
-            email: undefined,
-            password: undefined,
-            password_confirmation: undefined,
-            provider: 'sponsored',
-          }
-        : {}),
+      ...(sponsored ? {provider: 'sponsored'} : {}),
       ...extraFields,
     },
   });
