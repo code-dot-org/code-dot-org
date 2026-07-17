@@ -111,8 +111,6 @@
     .tag {
       background: var(--background-brand-light);
       border: 1px solid var(--border-brand-mid);
-      // No CADS shape ramp is defined in code yet; the fallback carries the
-      // value until --shape-sm lands, then the token takes over.
       border-radius: var(--shape-sm, 0.375rem);
       color: var(--text-brand-secondary);
 

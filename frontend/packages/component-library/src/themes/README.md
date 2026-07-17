@@ -100,6 +100,11 @@ Rules for these blocks:
   primitives.
 - `[data-brand]` sits on `<html>`, above any CSS module, so the attribute
   selector composes with local class names without `:global`.
+- The CADS shape (`--shape-*`) and spacing (`--spacing-p-*`) ramps are the
+  exception to brand scoping: they are brand- and mode-invariant, defined
+  at `:root` in `component-library-styles/shapeAndSpacingVariables.css`.
+  Reference them with a fallback (e.g. `var(--shape-sm, 0.375rem)`) for
+  surfaces that don't load the token entry points.
 
 ---
 
