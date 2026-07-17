@@ -20,7 +20,7 @@ export interface SerializedAnimationProps {
   categories?: string[];
   // Physical pixels per art pixel; absent on non-pixel-art animations.
   pixelGridSize?: number;
-  // Pixel-editor recently-used colors, most recent first; absent until the
+  // Pixel-editor recently-used colors, in first-seen order; absent until the
   // image is edited there.
   recentColors?: RGBA[];
 }
