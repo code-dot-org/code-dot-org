@@ -98,7 +98,7 @@ export default connect(
               variant="contained"
               color="primary"
               size="extraSmall"
-              startIcon={<FontAwesomeV6Icon iconName="play" />}
+              startIcon={<FontAwesomeV6Icon iconName="right" />}
               onClick={this.togglePause}
               style={{display: canRunNext ? 'inline-flex' : 'none'}}
               className={moduleStyles.debuggerButton}
@@ -113,7 +113,7 @@ export default connect(
               variant="contained"
               color="primary"
               size="extraSmall"
-              startIcon={<FontAwesomeV6Icon iconName="forward-step" />}
+              startIcon={<FontAwesomeV6Icon iconName="right-to-line" />}
               onClick={this.stepOver}
               disabled={!isPaused || !isAttached || isEditWhileRun}
               title={isEditWhileRun ? i18n.editDuringRunMessage() : undefined}

@@ -108,10 +108,10 @@ $debug-header-border-width: 1px;
 
   .watch-variable,
   .watch-separator {
-    color: purple;
+    color: var(--text-brand-purple-primary);
   }
   .watch-unavailable {
-    color: red;
+    color: var(--text-error-primary);
   }
 }
 
