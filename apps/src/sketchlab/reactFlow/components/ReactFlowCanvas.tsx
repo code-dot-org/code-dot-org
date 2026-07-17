@@ -355,8 +355,8 @@ export default function ReactFlowCanvas({
 
   // Intercept React Flow's change callbacks to push undo snapshots before
   // delete. Drag is handled by handleNodeDragStart, and resize by
-  // RotatedNodeResizer, each snapshotting at drag start. Adds that bypass
-  // onNodesChange (direct setNodes calls) are handled at their call sites.
+  // RotatedNodeResizer. Adds that bypass onNodesChange (direct setNodes calls)
+  // are handled at their call sites.
   const handleNodesChange: OnNodesChange<SketchLabNode> = useCallback(
     changes => {
       const hasDelete = changes.some(change => change.type === 'remove');

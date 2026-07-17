@@ -187,7 +187,7 @@ describe('resizeCursorForHandle', () => {
     expect(resizeCursorForHandle('bottom-right', 90)).toBe('nesw-resize');
   });
 
-  it('quantizes to the nearest 45 degrees', () => {
+  it('rounds to the nearest 45 degrees', () => {
     expect(resizeCursorForHandle('top', 22)).toBe('ns-resize');
     expect(resizeCursorForHandle('top', 23)).toBe('nesw-resize');
     expect(resizeCursorForHandle('top', 338)).toBe('ns-resize');

@@ -67,8 +67,7 @@ $handle-grab-buffer: 10px;
 
   // Focus outline for keyboard navigation, matching the component library
   // pattern. Shape/text/image nodes draw their own focus ring on the rotated
-  // wrapper (see the *-node.module.scss files) so it turns with the node;
-  // group nodes and line anchors provide their own indicators.
+  // wrapper so it turns with the node; group nodes and line anchors provide their own indicators.
   :global(.react-flow__edge:focus-visible) {
     outline: 2px solid var(--borders-brand-teal-primary);
     outline-offset: 2px;

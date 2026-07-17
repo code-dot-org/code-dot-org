@@ -53,8 +53,7 @@ const DEGREES_TO_RADIANS = Math.PI / 180;
  * Resize a node that is rotated about its center, keeping the point opposite
  * the dragged handle (corner, or edge midpoint for edge handles) fixed in
  * flow space. Pointer motion is mapped onto the node's own rotated axes, so
- * dragging e.g. the visually-bottom handle of a 90°-rotated node changes its
- * height, as the user expects.
+ * dragging behaves in a logical way relative to the node's orientation.
  *
  * `pointerDelta` is the total pointer movement since the drag started, in
  * flow coordinates. Using the total delta (rather than accumulating
@@ -144,7 +143,7 @@ const CURSOR_STEP_DEG = 45;
 
 /**
  * Resize cursor for a handle on a rotated node, so the cursor's direction
- * matches the handle's on-screen position (quantized to 45°).
+ * matches the handle's on-screen position (rounded to the nearest 45°).
  */
 export function resizeCursorForHandle(
   handle: ResizeHandlePosition,

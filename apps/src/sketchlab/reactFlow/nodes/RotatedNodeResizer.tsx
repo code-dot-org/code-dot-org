@@ -23,9 +23,6 @@ import styles from './rotated-node-resizer.module.scss';
 
 interface RotatedNodeResizerProps {
   isVisible: boolean;
-  // Degrees. Rendered inside the node's rotated wrapper, so the box and
-  // handles rotate via CSS; this value only feeds the resize math and
-  // cursor orientation.
   rotation: number;
   minWidth?: number;
   minHeight?: number;
@@ -74,6 +71,8 @@ function RotatedNodeResizer({
       event: React.PointerEvent<HTMLDivElement>,
       handle: ResizeHandlePosition
     ) => {
+      // Reject any non-primary pointer event (ex. second finger on a touch screen),
+      // any non-left click mouse event (button 0), or when we don't have a nodeId.
       if (!event.isPrimary || event.button !== 0 || !nodeId) {
         return;
       }
