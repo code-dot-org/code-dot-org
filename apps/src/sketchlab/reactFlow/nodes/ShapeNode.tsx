@@ -10,6 +10,7 @@ import {
 } from '../elementToolbars/toolbarPalettes';
 import {useConnectionHandleVisibility} from '../hooks/useConnectionHandleVisibility';
 import {useInlineTextEditing} from '../hooks/useInlineTextEditing';
+import {useRotatedHandleInternals} from '../hooks/useRotatedHandleInternals';
 import {REACT_FLOW_INTERACTION_CLASS} from '../reactFlowSelectors';
 import {ShapeNodeType, ShapeType} from '../types';
 
@@ -160,6 +161,7 @@ function ShapeNode({
     () => ({transform: `rotate(${rotation}deg)`}),
     [rotation]
   );
+  useRotatedHandleInternals(rotation);
 
   return (
     <div
@@ -216,13 +218,13 @@ function ShapeNode({
           minWidth={MIN_NODE_WIDTH}
           minHeight={MIN_NODE_HEIGHT}
         />
-      </div>
 
-      <ConnectionHandles
-        visible={showHandles}
-        isConnectable={isConnectable}
-        shapeType={shapeType}
-      />
+        <ConnectionHandles
+          visible={showHandles}
+          isConnectable={isConnectable}
+          shapeType={shapeType}
+        />
+      </div>
     </div>
   );
 }

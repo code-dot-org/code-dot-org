@@ -6,9 +6,9 @@
   color: var(--text-neutral-primary);
 }
 
-// Rotatable layer holding the visual content (shape + label) and the
-// selection box + resize handles, so they rotate together. The toolbar and
-// ConnectionHandles sit outside so edge attachment stays axis-aligned.
+// Rotatable layer holding the visual content (shape + label), the selection
+// box + resize handles, and the connection handles, so all of them rotate
+// together. The toolbar sits outside since it stays upright.
 .rotatable {
   position: absolute;
   inset: 0;

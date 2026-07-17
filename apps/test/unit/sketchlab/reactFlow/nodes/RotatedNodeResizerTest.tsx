@@ -66,7 +66,7 @@ describe('RotatedNodeResizer', () => {
     });
   });
 
-  it('rotates the wrapper containing both content and resizer', () => {
+  it('rotates the wrapper containing content, resizer, and connection handles', () => {
     const {container} = renderShapeFlow({
       selected: true,
       data: {shapeType: 'rectangle', label: 'Box', rotation: 45},
@@ -74,5 +74,10 @@ describe('RotatedNodeResizer', () => {
     const rotatable = container.querySelector<HTMLElement>('.rotatable');
     expect(rotatable?.style.transform).toBe('rotate(45deg)');
     expect(rotatable?.querySelector('.resizer')).not.toBeNull();
+    // Connection handles must live inside the rotated wrapper so they rotate
+    // with the node rather than staying axis-aligned.
+    expect(
+      rotatable?.querySelector('.react-flow__handle')
+    ).not.toBeNull();
   });
 });

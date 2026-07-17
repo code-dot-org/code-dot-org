@@ -14,10 +14,10 @@
   }
 }
 
-// Rotatable layer holding the visible text and the selection box + resize
-// handles, so they rotate together. Outer .textNode keeps the hover border
-// and connection handles axis-aligned. Filling the node absolutely (with the
-// text padding applied here) keeps the selection box at the node boundary.
+// Rotatable layer holding the visible text, the selection box + resize
+// handles, and the connection handles, so all of them rotate together. Outer
+// .textNode keeps the hover border upright. Filling the node absolutely (with
+// the text padding applied here) keeps the selection box at the node boundary.
 .rotatable {
   position: absolute;
   inset: 0;

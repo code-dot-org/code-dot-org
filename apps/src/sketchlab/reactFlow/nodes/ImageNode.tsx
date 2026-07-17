@@ -3,6 +3,7 @@ import React, {memo, useMemo} from 'react';
 
 import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {useConnectionHandleVisibility} from '../hooks/useConnectionHandleVisibility';
+import {useRotatedHandleInternals} from '../hooks/useRotatedHandleInternals';
 import {ImageNodeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
@@ -21,6 +22,7 @@ function ImageNode({data, selected, isConnectable}: NodeProps<ImageNodeType>) {
     () => ({transform: `rotate(${rotation}deg)`}),
     [rotation]
   );
+  useRotatedHandleInternals(rotation);
 
   return (
     <div className={styles.imageNode} {...hoverHandlers}>
@@ -38,9 +40,12 @@ function ImageNode({data, selected, isConnectable}: NodeProps<ImageNodeType>) {
           minWidth={MIN_NODE_WIDTH}
           minHeight={MIN_NODE_HEIGHT}
         />
-      </div>
 
-      <ConnectionHandles visible={showHandles} isConnectable={isConnectable} />
+        <ConnectionHandles
+          visible={showHandles}
+          isConnectable={isConnectable}
+        />
+      </div>
     </div>
   );
 }

@@ -10,6 +10,7 @@ import {
 } from '../elementToolbars/toolbarPalettes';
 import {useConnectionHandleVisibility} from '../hooks/useConnectionHandleVisibility';
 import {useInlineTextEditing} from '../hooks/useInlineTextEditing';
+import {useRotatedHandleInternals} from '../hooks/useRotatedHandleInternals';
 import {REACT_FLOW_INTERACTION_CLASS} from '../reactFlowSelectors';
 import {TextNodeType} from '../types';
 
@@ -54,6 +55,7 @@ function TextNode({
     () => ({transform: `rotate(${rotation}deg)`}),
     [rotation]
   );
+  useRotatedHandleInternals(rotation);
 
   return (
     <div
@@ -90,9 +92,12 @@ function TextNode({
           minWidth={MIN_NODE_WIDTH}
           minHeight={MIN_NODE_HEIGHT}
         />
-      </div>
 
-      <ConnectionHandles visible={showHandles} isConnectable={isConnectable} />
+        <ConnectionHandles
+          visible={showHandles}
+          isConnectable={isConnectable}
+        />
+      </div>
     </div>
   );
 }
