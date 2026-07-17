@@ -45,6 +45,7 @@ export default class OptionsSelectRow extends React.Component {
             onChange={this.handleChangeInternal}
             style={{
               boxSizing: 'border-box',
+              margin: 0,
               width: '100%',
             }}
           />

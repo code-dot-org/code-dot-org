@@ -16,16 +16,14 @@ class DuplicateElementButton extends React.Component {
 
   render() {
     return (
-      <div>
-        <MuiButton
-          variant="outlined"
-          color="secondary"
-          size="small"
-          onClick={this.handleDuplicate}
-        >
-          {commonMsg.duplicate()}
-        </MuiButton>
-      </div>
+      <MuiButton
+        variant="outlined"
+        color="secondary"
+        size="small"
+        onClick={this.handleDuplicate}
+      >
+        {commonMsg.duplicate()}
+      </MuiButton>
     );
   }
 }

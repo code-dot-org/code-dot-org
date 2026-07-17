@@ -1,119 +1,88 @@
-import throttle from 'lodash/debounce';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  Button as MuiButton,
+  Typography as MuiTypography,
+  Menu,
+  MenuItem,
+} from '@mui/material';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
 import applabMsg from '@cdo/applab/locale';
-
-import commonStyles from '../../commonStyles';
-import PopUpMenu from '../../sharedComponents/PopUpMenu';
 
 import style from './copy-element-to-screen-button.module.scss';
 
 /**
  * A duplicate button that helps replicate elements
  */
-class CopyElementToScreenButton extends React.Component {
-  static propTypes = {
-    // From connect
-    currentScreenId: PropTypes.string.isRequired,
+const CopyElementToScreenButton = ({
+  currentScreenId,
+  handleCopyElementToScreen,
+  screenIds,
+}) => {
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
 
-    // Passed explicitly
-    handleCopyElementToScreen: PropTypes.func.isRequired,
-    screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
-  };
-
-  state = {
-    opened: false,
-    menuTop: 0, // location of dropdown menu
-    menuLeft: 0,
-    currWindowWidth: window.innerWidth, // used to calculate location of menu on resize
-  };
-
-  // Overrides base class implementation
-  setState(newState) {
-    if (newState.opened && !this.resizeListener) {
-      this.resizeListener = throttle(this.updateMenuLocation, 50);
-      window.addEventListener('resize', this.resizeListener);
-      let loc = this.getMenuLocation();
-      newState.menuTop = loc.menuTop;
-      newState.menuLeft = loc.menuLeft;
-    } else if (!newState.opened && this.resizeListener) {
-      window.removeEventListener('resize', this.resizeListener);
-      this.resizeListener = null;
-    }
-    super.setState(newState);
-  }
-
-  getMenuLocation() {
-    const rect = this.element.firstChild.getBoundingClientRect();
-    return {
-      menuTop: rect.bottom + window.pageYOffset,
-      menuLeft: rect.left + window.pageXOffset,
-    };
-  }
-
-  updateMenuLocation = () => {
-    this.setState(this.getMenuLocation());
-  };
-
-  handleDropdownClick = event => {
+  const handleDropdownClick = event => {
     event.stopPropagation();
-    this.setState({opened: !this.state.opened});
+    setAnchorEl(event.currentTarget);
   };
 
-  handleMenuClick = screenId => {
-    this.closeMenu();
-    this.props.handleCopyElementToScreen(screenId);
+  const handleMenuClick = screenId => {
+    setAnchorEl(null);
+    handleCopyElementToScreen(screenId);
   };
 
-  closeMenu() {
-    this.state.opened && this.setState({opened: false});
-  }
-
-  onClose = () => {
-    this.closeMenu();
+  const onClose = () => {
+    setAnchorEl(null);
   };
 
-  render() {
-    const targetPoint = {top: this.state.menuTop, left: this.state.menuLeft};
-    const otherScreens = this.props.screenIds
-      .filter(screenId => screenId !== this.props.currentScreenId)
-      .map(screenId => (
-        <PopUpMenu.Item
-          key={screenId}
-          onClick={() => this.handleMenuClick(screenId)}
-        >
-          {screenId}
-        </PopUpMenu.Item>
-      ));
+  return (
+    <div className={style.main}>
+      <MuiButton
+        id="copy-to-screen"
+        variant="outlined"
+        color="secondary"
+        size="small"
+        aria-controls={open ? 'basic-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+        onClick={handleDropdownClick}
+        endIcon={
+          <FontAwesomeV6Icon iconName="chevron-down" iconStyle="solid" />
+        }
+      >
+        {applabMsg.designWorkspace_copyToScreenButton()}
+      </MuiButton>
+      <Menu
+        anchorEl={anchorEl}
+        open={open}
+        onClose={onClose}
+        MenuListProps={{
+          'aria-labelledby': 'copy-to-screen',
+        }}
+      >
+        {screenIds
+          .filter(screenId => screenId !== currentScreenId)
+          .map(screenId => (
+            <MenuItem onClick={() => handleMenuClick(screenId)} key={screenId}>
+              <MuiTypography variant="label3">{screenId}</MuiTypography>
+            </MenuItem>
+          ))}
+      </Menu>
+    </div>
+  );
+};
 
-    return (
-      <div className={style.main} ref={element => (this.element = element)}>
-        <button
-          type="button"
-          style={{...commonStyles.button}}
-          className={style.copyElementToScreenButton}
-          onClick={this.handleDropdownClick}
-        >
-          {applabMsg.designWorkspace_copyToScreenButton()}
-          <i className="fa-solid fa-chevron-down" />
-        </button>
-        {this.state.opened && (
-          <PopUpMenu
-            isOpen={this.state.opened}
-            targetPoint={targetPoint}
-            offset={{x: 0, y: 0}}
-            onClose={this.onClose}
-            className={style.menu}
-          >
-            {otherScreens}
-          </PopUpMenu>
-        )}
-      </div>
-    );
-  }
-}
+CopyElementToScreenButton.propTypes = {
+  // From connect
+  currentScreenId: PropTypes.string.isRequired,
+
+  // Passed explicitly
+  handleCopyElementToScreen: PropTypes.func.isRequired,
+  screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 
 export default connect(function propsFromStore(state) {
   return {

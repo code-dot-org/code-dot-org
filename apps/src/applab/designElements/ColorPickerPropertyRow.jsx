@@ -82,7 +82,7 @@ export default class ColorPickerPropertyRow extends React.Component {
     ) : null;
     return (
       <Box
-        style={{
+        sx={{
           display: 'flex',
           flexDirection: 'column',
           gap: 1,
