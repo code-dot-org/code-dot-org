@@ -11,8 +11,7 @@ export class DocumentationPage extends BasePage {
   readonly navBar: Locator;
   readonly pageContent: Locator;
 
-  /** axe's include takes a CSS selector, not the inherited mainContent locator. */
-  readonly mainSelector = '#main_content';
+  /** axe's include() needs a CSS string, not the navBar locator. */
   readonly navBarSelector = '.nav-bar';
 
   constructor(page: Page) {

@@ -33,7 +33,10 @@ export class BasePage {
    * The main content landmark (#main_content) from the application layout —
    * present on every page and the "skip to main content" link target. Scope
    * page content to this to exclude global overlays (header, OneTrust, etc.).
+   * The raw selector is exposed too: axe's include() needs a CSS string, not
+   * the locator.
    */
+  readonly mainContentSelector = '#main_content';
   readonly mainContent: Locator;
 
   constructor(page: Page) {
@@ -46,7 +49,7 @@ export class BasePage {
     this.parentalPermissionNagModal = new ParentalPermissionNagModalComponent(
       page,
     );
-    this.mainContent = page.locator('#main_content');
+    this.mainContent = page.locator(this.mainContentSelector);
   }
 
   /**
