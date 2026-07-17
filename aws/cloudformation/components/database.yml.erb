@@ -360,7 +360,8 @@
       # Database Insights + Enhanced Monitoring settings.
 <%    insights = {mode: 'standard', retention: 7, monitoring_interval: 60}
       insights = {mode: 'advanced', retention: 465, monitoring_interval: 1} if rack_env?(:production)
-      if rack_env?(:production) || rack_env?(:test) || rack_env?(:adhoc) -%>
+      if rack_env?(:production, :test)
+-%>
       PerformanceInsightsEnabled: true
       DatabaseInsightsMode: <%=insights[:mode]%>
       PerformanceInsightsRetentionPeriod: <%=insights[:retention]%>
