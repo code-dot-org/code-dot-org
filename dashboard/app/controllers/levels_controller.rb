@@ -514,6 +514,8 @@ class LevelsController < ApplicationController
       elsif @type_class == Weblab2
         @game = Game.weblab2
         @widget2_ids = get_widget2_ids
+      elsif @type_class == Quiz
+        @game = Game.quiz
       end
       @level = @type_class.new
       render :edit

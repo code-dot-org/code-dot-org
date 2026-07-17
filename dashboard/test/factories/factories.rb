@@ -1081,6 +1081,32 @@ FactoryBot.define do
     level_num {'custom'}
   end
 
+  factory :quiz, parent: :level, class: Quiz do
+    game {Game.quiz}
+    level_num {'custom'}
+  end
+
+  factory :quiz_question, class: QuizQuestion do
+    question_type {'radiogroup'}
+    survey_element do
+      {
+        'title' => 'What number will be output?',
+        'choices' => [
+          {'value' => 'A', 'text' => '10'},
+          {'value' => 'B', 'text' => '100'},
+        ],
+        'correctAnswer' => 'B',
+      }
+    end
+  end
+
+  factory :quiz_level_question, class: QuizLevelQuestion do
+    level
+    quiz_question
+    page_number {0}
+    position {0}
+  end
+
   factory :aichat, parent: :level, class: Aichat do
     game {Game.aichat}
     level_num {'custom'}

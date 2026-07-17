@@ -439,6 +439,7 @@ Dashboard::Application.routes.draw do
         post 'add_skill'
         post 'remove_skill'
       end
+      resources :quiz_responses, only: [:create]
     end
 
     post 'level_assets/upload', to: 'level_assets#upload'

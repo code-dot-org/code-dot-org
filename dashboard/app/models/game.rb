@@ -213,6 +213,10 @@ class Game < ApplicationRecord
     @@game_bubble_choice ||= find_by_name("BubbleChoice")
   end
 
+  def self.quiz
+    @@game_quiz ||= find_by_name('Quiz')
+  end
+
   def unplugged?
     app == UNPLUG
   end
@@ -371,6 +375,7 @@ class Game < ApplicationRecord
     Panels:panels
     Weblab2:weblab2
     Sketchlab:sketchlab
+    Quiz:quiz
   )
 
   def self.setup

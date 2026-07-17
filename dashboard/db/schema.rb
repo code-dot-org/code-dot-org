@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_06_26_143947) do
+ActiveRecord::Schema[7.0].define(version: 2026_07_16_120000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -2065,6 +2065,38 @@ ActiveRecord::Schema[7.0].define(version: 2026_06_26_143947) do
     t.index ["user_id"], name: "index_queued_account_purges_on_user_id", unique: true
   end
 
+  create_table "quiz_level_questions", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "level_id", null: false
+    t.bigint "quiz_question_id", null: false
+    t.integer "page_number", default: 0, null: false
+    t.integer "position", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["level_id", "page_number", "position"], name: "index_quiz_level_questions_on_level_page_position"
+    t.index ["level_id"], name: "index_quiz_level_questions_on_level_id"
+    t.index ["quiz_question_id"], name: "index_quiz_level_questions_on_quiz_question_id"
+  end
+
+  create_table "quiz_questions", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "question_type", null: false
+    t.json "survey_element", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "quiz_responses", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "level_id", null: false
+    t.integer "user_id", null: false
+    t.integer "script_id"
+    t.json "response_data", null: false
+    t.datetime "submitted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["level_id", "user_id", "created_at"], name: "index_quiz_responses_on_level_user_created"
+    t.index ["level_id"], name: "index_quiz_responses_on_level_id"
+    t.index ["user_id"], name: "index_quiz_responses_on_user_id"
+  end
+
   create_table "reference_guides", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.string "key", null: false
     t.bigint "course_version_id", null: false
@@ -3026,6 +3058,10 @@ ActiveRecord::Schema[7.0].define(version: 2026_06_26_143947) do
   add_foreign_key "plc_learning_modules", "stages"
   add_foreign_key "project_storage_geos", "user_project_storage_ids", column: "storage_id"
   add_foreign_key "queued_account_purges", "users"
+  add_foreign_key "quiz_level_questions", "levels"
+  add_foreign_key "quiz_level_questions", "quiz_questions"
+  add_foreign_key "quiz_responses", "levels"
+  add_foreign_key "quiz_responses", "users"
   add_foreign_key "rubric_ai_evaluations", "rubrics"
   add_foreign_key "rubric_ai_evaluations", "users"
   add_foreign_key "rubric_ai_evaluations", "users", column: "requester_id"
