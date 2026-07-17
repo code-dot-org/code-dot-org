@@ -31,6 +31,7 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import ReactFlowCanvas from './components/ReactFlowCanvas';
+import useReactFlowSketchLabTour from './introTour/useReactFlowSketchLabTour';
 import {ImageNodeData, ReactFlowSketchLabSources} from './types';
 import {
   convertExcalidrawToReactFlow,
@@ -63,6 +64,8 @@ function ReactFlowSketchLabViewInner({
   } = useSources<ReactFlowSketchLabSources>();
 
   const readonlyWorkspace = useAppSelector(isReadOnlyWorkspace);
+
+  useReactFlowSketchLabTour({levelProperties});
 
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
   const {theme} = useTheme();
